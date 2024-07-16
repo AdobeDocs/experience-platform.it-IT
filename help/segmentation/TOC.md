@@ -45,7 +45,7 @@ ht-degree: 43%
    - [Ignora aggiornamento vincoli di tempo annuale](ui/ignore-year.md)
    - [Refactoring di vincoli temporali](ui/segment-refactoring.md)
    - Corrispondenza segmento {#segment-match}
-      - [Panoramica di Segment Match](ui/segment-match/overview.md)
+      - [Panoramica sulla corrispondenza dei segmenti](ui/segment-match/overview.md)
       - [Risoluzione dei problemi](ui/segment-match/troubleshooting.md)
 - [Rispetto del consenso](consents.md)
 - [Segmentazione di più entità](multi-entity-segmentation.md)

@@ -13,4 +13,4 @@ ht-degree: 0%
 
 # Riferimento SQL di Query Service
 
-[!DNL Query Service] consente di utilizzare SQL ANSI standard per `SELECT` istruzioni e altri comandi limitati. [!DNL Query Service] non include le funzionalità Data Definition Language o Data Manipulation Language. I dati interrogati tramite il servizio provengono da [!DNL Experience Data Lake], che contiene set di dati in gran parte immutabili.
+[!DNL Query Service] consente di utilizzare SQL ANSI standard per istruzioni `SELECT` e altri comandi limitati. [!DNL Query Service] non include le funzionalità Data Definition Language o Data Manipulation Language. I dati interrogati tramite il servizio provengono da [!DNL Experience Data Lake], che contiene set di dati in gran parte immutabili.

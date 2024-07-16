@@ -14,9 +14,9 @@ ht-degree: 5%
 
 # Creare uno spazio dei nomi personalizzato nell’API del servizio Identity
 
-Utilizzo di [!DNL Identity Namespace] API, puoi creare uno spazio dei nomi di identità personalizzato che sarà disponibile solo per la tua organizzazione.
+Utilizzando l&#39;API [!DNL Identity Namespace], puoi creare uno spazio dei nomi di identità personalizzato che sarà disponibile solo per la tua organizzazione.
 
-Per raccomandazioni sulla creazione di spazi dei nomi personalizzati, consulta [Domande frequenti sul servizio Identity](../troubleshooting-guide.md).
+Per raccomandazioni sulla creazione di spazi dei nomi personalizzati, consulta [la documentazione delle domande frequenti sul servizio Identity](../troubleshooting-guide.md).
 
 >[!NOTE]
 >
@@ -64,4 +64,4 @@ curl -X POST \
 
 ## Passaggi successivi
 
-Procedi all’esercitazione successiva per [elencare l’ID nativo di un’identità](./list-native-id.md)
+Procedi all&#39;esercitazione successiva per [elencare l&#39;ID nativo di un&#39;identità](./list-native-id.md)

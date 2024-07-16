@@ -12,27 +12,27 @@ ht-degree: 0%
 
 # Gestione utenti
 
-Se desideri visualizzare i dettagli utente e i ruoli a cui sono assegnati, seleziona la **[!UICONTROL Utenti]** scheda.
+Se desideri visualizzare i dettagli utente e i ruoli a cui sono assegnati, seleziona la scheda **[!UICONTROL Utenti]**.
 
-![Pagina Utenti visualizzata con [!UICONTROL Utenti] scheda evidenziata.](../../images/flac-ui/flac-users-tab.png)
+![Pagina Utenti visualizzata con la scheda [!UICONTROL Utenti] evidenziata.](../../images/flac-ui/flac-users-tab.png)
 
 Viene visualizzato un elenco di utenti. Seleziona dall’elenco l’utente che desideri visualizzare. In alternativa, utilizza la barra di ricerca per cercare l’utente immettendo il suo nome o indirizzo e-mail.
 
 La scheda dei dettagli fornisce una panoramica dell’utente. Nella panoramica vengono visualizzati il nome degli utenti, il tipo di account, l’e-mail, l’ID di autenticazione, le informazioni di contatto e i dettagli della posizione.
 
-![Pagina dei dettagli utente con [!UICONTROL Dettagli] e il profilo utente evidenziato.](../../images/flac-ui/flac-users-details.png)
+![Pagina dei dettagli utente con [!UICONTROL Scheda Dettagli] e profilo utente evidenziato.](../../images/flac-ui/flac-users-details.png)
 
-Seleziona la **[!UICONTROL Ruoli]** per visualizzare i ruoli a cui l&#39;utente è assegnato.
+Seleziona la scheda **[!UICONTROL Ruoli]** per visualizzare i ruoli a cui l&#39;utente è assegnato.
 
-![Pagina Ruoli visualizzata con [!UICONTROL Ruoli] scheda e ruolo evidenziati.](../../images/flac-ui/flac-users-roles.png)
+![Pagina Ruoli visualizzata con la scheda [!UICONTROL Ruoli] evidenziata.](../../images/flac-ui/flac-users-roles.png)
 
-## Controllo degli accessi a sviluppatori e API con autorizzazioni Experienci Platform
+## Controllo degli accessi a sviluppatori e API con autorizzazioni Experience Platform
 
 >[!NOTE]
 >
 >Solo gli amministratori di sistema possono visualizzare e gestire le credenziali API in Autorizzazioni.
 
-La transizione alle autorizzazioni Adobe Experience Platform prevede passaggi aggiuntivi da completare per il flusso di lavoro API per sviluppatori che in precedenza si basava sui ruoli. Consulta la guida su [Autenticazione API](../../../landing/api-authentication.md) per ulteriori informazioni.
+La transizione alle autorizzazioni Adobe Experience Platform prevede passaggi aggiuntivi da completare per il flusso di lavoro API per sviluppatori che in precedenza si basava sui ruoli. Per ulteriori informazioni, consulta la guida sull&#39;[autenticazione API](../../../landing/api-authentication.md).
 
 Il video seguente ha lo scopo di illustrare le credenziali di sviluppatori e API.
 
@@ -40,4 +40,4 @@ Il video seguente ha lo scopo di illustrare le credenziali di sviluppatori e API
 
 ## Passaggi successivi
 
-Ora hai imparato a visualizzare i dettagli utente e i ruoli a cui sono attualmente aggiunti. Per ulteriori informazioni sul controllo degli accessi basato su attributi, vedere [panoramica sul controllo degli accessi basato su attributi](../overview.md).
+Ora hai imparato a visualizzare i dettagli utente e i ruoli a cui sono attualmente aggiunti. Per ulteriori informazioni sul controllo degli accessi basato su attributi, vedere la [panoramica sul controllo degli accessi basato su attributi](../overview.md).

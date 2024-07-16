@@ -11,13 +11,13 @@ ht-degree: 0%
 
 # Visualizza dashboard configurati
 
-Se nell’organizzazione sono disponibili più dashboard in Adobe Experience Platform, puoi esaminarne l’inventario nell’interfaccia utente.
+Se nell’organizzazione sono disponibili più dashboard in Adobe Experience Platform, puoi esaminare l’inventario dei dashboard nell’interfaccia utente.
 
-Per visualizzare le dashboard configurate dalla tua organizzazione, seleziona **[!UICONTROL Dashboard]** nel menu di navigazione a sinistra, quindi seleziona la **[!UICONTROL Sfoglia]** scheda.
+Per visualizzare i dashboard configurati dalla tua organizzazione, seleziona **[!UICONTROL Dashboard]** nel menu di navigazione a sinistra, quindi seleziona la scheda **[!UICONTROL Sfoglia]**.
 
-Un elenco di tutte le dashboard disponibili nell’istanza Platform viene visualizzato nella sezione [!UICONTROL Sfoglia] scheda. Sono incluse dashboard integrate create dall’organizzazione e configurate tramite applicazioni di terze parti.
+Nella scheda [!UICONTROL Sfoglia] viene visualizzato un elenco di tutte le dashboard disponibili nell&#39;istanza Platform. Sono incluse dashboard integrate create dall’organizzazione e configurate tramite applicazioni di terze parti.
 
-![La scheda Sfoglia nella sezione delle dashboard dell’interfaccia utente.](./images/inventory/browse-tab.png)
+![Scheda Sfoglia nella sezione dashboard dell&#39;interfaccia utente.](./images/inventory/browse-tab.png)
 
 È possibile visualizzare un singolo dashboard selezionando il nome del dashboard dall&#39;elenco.
 
@@ -27,4 +27,4 @@ Se questa opzione è selezionata, il dashboard viene aperto nell’interfaccia u
 
 ## Creare dashboard personalizzati
 
-Le dashboard di Adobe Experience Platform consentono di creare e gestire dashboard personalizzate in cui creare, aggiungere e modificare widget personalizzati per visualizzare metriche chiave rilevanti per la tua organizzazione. Consulta la [guida alle dashboard definite dall’utente](./user-defined-dashboards.md) per istruzioni complete sulla creazione e la configurazione di dashboard personalizzati.
+Le dashboard di Adobe Experience Platform consentono di creare e gestire dashboard personalizzate in cui creare, aggiungere e modificare widget personalizzati per visualizzare metriche chiave rilevanti per la tua organizzazione. Per istruzioni complete sulla creazione e la configurazione di dashboard personalizzati, consulta la [guida alle dashboard definite dall&#39;utente](./user-defined-dashboards.md).

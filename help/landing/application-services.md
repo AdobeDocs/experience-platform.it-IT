@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # Documentazione delle applicazioni
 
-Adobe ha creato diverse applicazioni sopra Experienci Platform. Puoi trovare la documentazione relativa a queste applicazioni utilizzando i collegamenti seguenti:
+Adobe ha creato diverse applicazioni sopra Experience Platform. Puoi trovare la documentazione relativa a queste applicazioni utilizzando i collegamenti seguenti:
 
 * [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=it)
 * [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html)
@@ -20,6 +20,6 @@ Adobe ha creato diverse applicazioni sopra Experienci Platform. Puoi trovare la 
 * [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](../rtcdp/overview.md)
 * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html)
 
-Il video seguente descrive i casi di utilizzo di ogni applicazione basata su Experienci Platform.
+Il video seguente descrive i casi di utilizzo di ogni applicazione basata su Experience Platform.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32554/?learn=on)

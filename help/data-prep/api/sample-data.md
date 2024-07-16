@@ -5,23 +5,23 @@ title: Endpoint API dati di esempio
 description: Puoi utilizzare l’endpoint "/samples" nell’API di Adobe Experience Platform per recuperare, creare, aggiornare e convalidare a livello di programmazione i dati di esempio per la mappatura.
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '399'
-ht-degree: 7%
+source-wordcount: '405'
+ht-degree: 6%
 
 ---
 
 
 # Endpoint di dati di esempio
 
-È possibile utilizzare dati di esempio durante la creazione di uno schema per il set di mappatura. È possibile utilizzare `/samples` nell’API di preparazione dati per recuperare, creare e aggiornare in modo programmatico i dati di esempio.
+È possibile utilizzare dati di esempio durante la creazione di uno schema per il set di mappatura. È possibile utilizzare l&#39;endpoint `/samples` nell&#39;API di preparazione dati per recuperare, creare e aggiornare a livello di programmazione i dati di esempio.
 
 ## Elencare dati di esempio
 
-Per recuperare un elenco di tutti i dati di mappatura di esempio per la tua organizzazione, devi effettuare una richiesta GET al `/samples` endpoint.
+È possibile recuperare un elenco di tutti i dati di esempio di mappatura per l&#39;organizzazione effettuando una richiesta GET all&#39;endpoint `/samples`.
 
 **Formato API**
 
-Il `/samples` l’endpoint supporta diversi parametri di query per aiutare a filtrare i risultati. Attualmente, è necessario includere sia `start` e `limit` come parte della richiesta.
+L&#39;endpoint `/samples` supporta diversi parametri di query per filtrare i risultati. Al momento, è necessario includere entrambi i parametri `start` e `limit` come parte della richiesta.
 
 ```http
 GET /samples?limit={LIMIT}&start={START}
@@ -29,8 +29,8 @@ GET /samples?limit={LIMIT}&start={START}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{LIMIT}` | **Obbligatorio**. Specifica il numero di dati di esempio di mappatura restituiti. |
-| `{START}` | **Obbligatorio**. Specifica l&#39;offset delle pagine dei risultati. Per ottenere la prima pagina dei risultati, imposta il valore su `start=0`. |
+| `{LIMIT}` | **Richiesto**. Specifica il numero di dati di esempio di mappatura restituiti. |
+| `{START}` | **Richiesto**. Specifica l&#39;offset delle pagine dei risultati. Per ottenere la prima pagina dei risultati, impostare il valore su `start=0`. |
 
 **Richiesta**
 
@@ -81,12 +81,12 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `sampleData` |  |
-| `sampleType` |  |
+| `sampleData` | |
+| `sampleType` | |
 
 ## Creare dati di esempio
 
-Per creare dati di esempio, devi effettuare una richiesta POST al `/samples` endpoint.
+È possibile creare dati di esempio effettuando una richiesta POST all&#39;endpoint `/samples`.
 
 ```http
 POST /samples
@@ -127,7 +127,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 
 ## Creare dati di esempio caricando un file
 
-Per creare dati di esempio utilizzando un file, devi effettuare una richiesta POST al `/samples/upload` endpoint.
+È possibile creare dati di esempio utilizzando un file effettuando una richiesta POST all&#39;endpoint `/samples/upload`.
 
 **Formato API**
 
@@ -166,7 +166,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 
 ## Cercare un oggetto dati di esempio specifico
 
-Per cercare un oggetto specifico di dati di esempio, devi fornire il relativo ID nel percorso di una richiesta GET al `/samples` endpoint.
+Per cercare un oggetto specifico di dati di esempio, devi fornire il relativo ID nel percorso di una richiesta GET all&#39;endpoint `/samples`.
 
 **Formato API**
 
@@ -207,7 +207,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con le info
 
 ## Aggiorna dati di esempio
 
-Per aggiornare un oggetto dati di esempio specifico, devi fornire il relativo ID nel percorso di una richiesta PUT a `/samples` endpoint.
+È possibile aggiornare un oggetto dati di esempio specifico fornendo il relativo ID nel percorso di una richiesta PUT all&#39;endpoint `/samples`.
 
 **Formato API**
 

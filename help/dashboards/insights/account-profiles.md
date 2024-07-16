@@ -7,19 +7,19 @@ exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
 source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
 source-wordcount: '549'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 # Informazioni sul profilo account
 
-[Profili account](../../rtcdp/accounts/account-profile-overview.md) vengono utilizzati per consolidare le informazioni sull’account da varie fonti, inclusi più canali di marketing e sistemi organizzativi. Questa visualizzazione unificata consente una comprensione completa degli account dei clienti, migliorando le campagne di marketing B2B. Le informazioni derivate dall’analisi del modello dati rendono i dati B2B di Adobe Real-time Customer Data Platform più accessibili, comprensibili e di impatto per il processo decisionale.
+[I profili account](../../rtcdp/accounts/account-profile-overview.md) vengono utilizzati per consolidare le informazioni sull&#39;account da varie origini, inclusi più canali di marketing e sistemi organizzativi. Questa visualizzazione unificata consente una comprensione completa degli account dei clienti, migliorando le campagne di marketing B2B. Le informazioni derivate dall’analisi del modello dati rendono i dati B2B di Adobe Real-time Customer Data Platform più accessibili, comprensibili e di impatto per il processo decisionale.
 
 Grazie all’accesso al linguaggio SQL che potenzia le tue conoscenze, potrai comprendere meglio i dati B2B e generare informazioni riutilizzabili personalizzate per esplorare ulteriormente le informazioni sull’account del cliente. Trasforma i dati non elaborati in nuove informazioni fruibili utilizzando l’SQL esistente del modello dati di Real-Time CDP come ispirazione per creare query per le tue esigenze aziendali specifiche.
 
 <!-- Add link to new generate insights with SQL workflow doc after April release.-->
 
-Le informazioni seguenti sono tutte disponibili per l&#39;utilizzo come parte del [Dashboard dei profili account](../guides/account-profiles.md) o un [dashboard personalizzato](../user-defined-dashboards.md). Consulta la [panoramica sulla personalizzazione](../customize/overview.md) per istruzioni su come personalizzare il dashboard o [creare e modificare nuovi widget](../customize/custom-widgets.md) nella libreria widget e [dashboard definito dall&#39;utente](../user-defined-dashboards.md#create-widget).
+Tutte le informazioni seguenti sono disponibili per l&#39;utilizzo come parte del [dashboard dei profili account](../guides/account-profiles.md) o di un [dashboard personalizzato](../user-defined-dashboards.md). Consulta la [panoramica sulla personalizzazione](../customize/overview.md) per istruzioni su come personalizzare il dashboard o [creare e modificare nuovi widget](../customize/custom-widgets.md) nella libreria di widget e [dashboard definito dall&#39;utente](../user-defined-dashboards.md#create-widget).
 
 ## Profili account aggiunti {#account-profiles-added}
 
@@ -287,4 +287,4 @@ Una volta letto questo documento, sarai in grado di comprendere il codice SQL ch
 
 <!-- Add link above Learn how to [generate insights with SQL](). after April release -->
 
-Puoi anche leggere e comprendere il codice SQL che genera informazioni approfondite per [Profili](./profiles.md), [Tipi di pubblico](./audiences.md), e [Destinazioni](./destinations.md) dashboard.
+È inoltre possibile leggere e comprendere l&#39;istruzione SQL che genera informazioni approfondite per le dashboard [Profili](./profiles.md), [Tipi di pubblico](./audiences.md) e [Destinazioni](./destinations.md).

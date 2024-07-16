@@ -16,11 +16,11 @@ ht-degree: 2%
 
 ## Chiamate API di esempio
 
-Nelle sezioni seguenti vengono esaminate le chiamate che è possibile effettuare utilizzando `/queries` endpoint nella [!DNL Query Service] API. Ogni chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
+Nelle sezioni seguenti vengono esaminate le chiamate che è possibile effettuare utilizzando l&#39;endpoint `/queries` nell&#39;API [!DNL Query Service]. Ogni chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
 
 ### Recuperare un elenco di query
 
-Per recuperare un elenco di tutte le query per l’organizzazione, effettua una richiesta GET al `/queries` endpoint.
+Per recuperare un elenco di tutte le query per l&#39;organizzazione, eseguire una richiesta GET all&#39;endpoint `/queries`.
 
 **Formato API**
 
@@ -31,19 +31,19 @@ GET /queries?{QUERY_PARAMETERS}
 
 - `{QUERY_PARAMETERS}`: (*Facoltativo*) Parametri aggiunti al percorso della richiesta che configurano i risultati restituiti nella risposta. È possibile includere più parametri, separati da e commerciali (`&`). I parametri disponibili sono elencati di seguito.
 
-**Parametri di query**
+**Parametri query**
 
 Di seguito è riportato un elenco dei parametri di query disponibili per l&#39;elenco delle query. Tutti questi parametri sono facoltativi. Effettuando una chiamata a questo endpoint senza parametri, verranno recuperate tutte le query disponibili per la tua organizzazione.
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `orderby` | Specifica il campo in base al quale ordinare i risultati. I campi supportati sono `created` e `updated`. Ad esempio: `orderby=created` I risultati verranno ordinati in base alla creazione in ordine crescente. Aggiunta di un `-` prima della creazione (`orderby=-created`) ordinerà gli elementi in base a quelli creati in ordine decrescente. |
+| `orderby` | Specifica il campo in base al quale ordinare i risultati. I campi supportati sono `created` e `updated`. Ad esempio, `orderby=created` ordinerà i risultati in base alla creazione in ordine crescente. L&#39;aggiunta di un `-` prima della creazione (`orderby=-created`) ordinerà gli elementi in base alla creazione in ordine decrescente. |
 | `limit` | Specifica il limite di dimensioni della pagina per controllare il numero di risultati inclusi in una pagina. (*Valore predefinito: 20*) |
-| `start` | Specifica una marca temporale in formato ISO per ordinare i risultati. Se non viene specificata una data di inizio, la chiamata API restituirà prima la query creata più datata, quindi continuerà a elencare i risultati più recenti.<br> Le marche temporali ISO consentono diversi livelli di granularità in data e ora. Le marche temporali ISO di base hanno il formato di: `2020-09-07` per esprimere la data del 7 settembre 2020. Un esempio più complesso sarebbe scritto come `2022-11-05T08:15:30-05:00` e corrisponde al 5 novembre 2022, 8:15:30:00, ora standard USA orientale. È possibile fornire un fuso orario con scostamento UTC ed è indicato dal suffisso &quot;Z&quot; (`2020-01-01T01:01:01Z`). Se non viene fornito alcun fuso orario, per impostazione predefinita viene impostato su zero. |
-| `property` | Filtra i risultati in base ai campi. I filtri **deve** essere HTML in escape. Le virgole vengono utilizzate per combinare più set di filtri. I campi supportati sono `created`, `updated`, `state`, e `id`. L’elenco degli operatori supportati è `>` (maggiore di), `<` (minore di), `>=` (maggiore o uguale a), `<=` (minore o uguale a), `==` (uguale a), `!=` (diverso da), e `~` (contiene). Ad esempio: `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` restituirà tutte le query con l’ID specificato. |
-| `excludeSoftDeleted` | Indica se deve essere inclusa una query che è stata eliminata temporaneamente. Ad esempio: `excludeSoftDeleted=false` will **include** query soft eliminate. (*Booleano, valore predefinito: true*) |
-| `excludeHidden` | Indica se devono essere visualizzate le query non guidate dall&#39;utente. Se questo valore è impostato su false, **include** query non guidate dall&#39;utente, come le definizioni CURSOR, FETCH o query di metadati. (*Booleano, valore predefinito: true*) |
-| `isPrevLink` | Il `isPrevLink` parametro query utilizzato per la paginazione. I risultati della chiamata API sono ordinati in base al loro `created` timestamp e `orderby` proprietà. Durante la navigazione nelle pagine dei risultati, `isPrevLink` è impostato su true quando si esegue il paging all&#39;indietro. Inverte l’ordine della query. Consulta i collegamenti &quot;successivo&quot; e &quot;precedente&quot; come esempi. |
+| `start` | Specifica una marca temporale in formato ISO per ordinare i risultati. Se non viene specificata una data di inizio, la chiamata API restituirà prima la query creata più datata, quindi continuerà a elencare i risultati più recenti.<br> Le marche temporali ISO consentono diversi livelli di granularità in data e ora. I timestamp ISO di base assumono il formato di: `2020-09-07` per esprimere la data 7 settembre 2020. Un esempio più complesso verrebbe scritto come `2022-11-05T08:15:30-05:00` e corrisponde al 5 novembre 2022, 8:15:30, ora standard orientale USA. È possibile fornire un fuso orario con scostamento UTC ed è indicato dal suffisso &quot;Z&quot; (`2020-01-01T01:01:01Z`). Se non viene fornito alcun fuso orario, per impostazione predefinita viene impostato su zero. |
+| `property` | Filtra i risultati in base ai campi. I filtri **devono** avere escape HTML. Le virgole vengono utilizzate per combinare più set di filtri. I campi supportati sono `created`, `updated`, `state` e `id`. L&#39;elenco degli operatori supportati è `>` (maggiore di), `<` (minore di), `>=` (maggiore o uguale a), `<=` (minore o uguale a), `==` (uguale a), `!=` (diverso da) e `~` (contiene). Ad esempio, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` restituirà tutte le query con l&#39;ID specificato. |
+| `excludeSoftDeleted` | Indica se deve essere inclusa una query che è stata eliminata temporaneamente. Ad esempio, `excludeSoftDeleted=false` **includerà** query eliminate temporaneamente. (*Booleano, valore predefinito: true*) |
+| `excludeHidden` | Indica se devono essere visualizzate le query non guidate dall&#39;utente. Se questo valore è impostato su false, **includerà** query non guidate dall&#39;utente, ad esempio le definizioni CURSOR, FETCH o query di metadati. (*Booleano, valore predefinito: true*) |
+| `isPrevLink` | Il parametro di query `isPrevLink` viene utilizzato per l&#39;impaginazione. I risultati della chiamata API sono ordinati in base alla marca temporale `created` e alla proprietà `orderby`. Durante la navigazione nelle pagine dei risultati, `isPrevLink` è impostato su true quando si esegue il paging all&#39;indietro. Inverte l’ordine della query. Consulta i collegamenti &quot;successivo&quot; e &quot;precedente&quot; come esempi. |
 
 **Richiesta**
 
@@ -120,7 +120,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elen
 
 ### Creare una query
 
-Per creare una nuova query, devi eseguire una richiesta POST al `/queries` endpoint.
+È possibile creare una nuova query effettuando una richiesta POST all&#39;endpoint `/queries`.
 
 **Formato API**
 
@@ -173,14 +173,14 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
 | `sql` | La query SQL da creare. |
 | `name` | Nome della query SQL. |
 | `description` | Descrizione della query SQL. |
-| `queryParameters` | Associazione di valori chiave per sostituire eventuali valori con parametri nell&#39;istruzione SQL. È solo obbligatorio **se** si stanno utilizzando sostituzioni di parametri all&#39;interno dell&#39;istruzione SQL fornita. Su queste coppie chiave-valore non verrà eseguito alcun controllo del tipo di valore. |
+| `queryParameters` | Associazione di valori chiave per sostituire eventuali valori con parametri nell&#39;istruzione SQL. È necessario solo **se** si stanno utilizzando sostituzioni di parametri all&#39;interno del codice SQL fornito. Su queste coppie chiave-valore non verrà eseguito alcun controllo del tipo di valore. |
 | `templateId` | L’identificatore univoco di una query preesistente. È possibile fornire questa istruzione anziché un&#39;istruzione SQL. |
 | `insertIntoParameters` | (Facoltativo) Se questa proprietà è definita, la query verrà convertita in una query INSERT INTO. |
 | `ctasParameters` | (Facoltativo) Se questa proprietà è definita, questa query verrà convertita in una query CTAS. |
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce lo stato HTTP 202 (Accepted) con i dettagli della query appena creata. Una volta che la query è stata attivata ed eseguita correttamente, il `state` cambierà da `SUBMITTED` a `SUCCESS`.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 202 (Accepted) con i dettagli della query appena creata. Una volta completata l&#39;attivazione della query ed eseguita correttamente, `state` cambierà da `SUBMITTED` a `SUCCESS`.
 
 ```json
 {
@@ -223,11 +223,11 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 202 (Accepted) 
 
 >[!NOTE]
 >
->Puoi utilizzare il valore di `_links.cancel` a [annullare la query creata](#cancel-a-query).
+>È possibile utilizzare il valore di `_links.cancel` per [annullare la query creata](#cancel-a-query).
 
 ### Recuperare una query per ID
 
-Per recuperare informazioni dettagliate su una query specifica, effettua una richiesta GET al `/queries` e fornendo i `id` nel percorso della richiesta.
+Per recuperare informazioni dettagliate su una query specifica, eseguire una richiesta GET all&#39;endpoint `/queries` e specificare il valore `id` della query nel percorso della richiesta.
 
 **Formato API**
 
@@ -237,7 +237,7 @@ GET /queries/{QUERY_ID}
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{QUERY_ID}` | Il `id` valore della query da recuperare. |
+| `{QUERY_ID}` | Valore `id` della query da recuperare. |
 
 **Richiesta**
 
@@ -294,11 +294,11 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 
 >[!NOTE]
 >
->Puoi utilizzare il valore di `_links.cancel` a [annullare la query creata](#cancel-a-query).
+>È possibile utilizzare il valore di `_links.cancel` per [annullare la query creata](#cancel-a-query).
 
 ### Annullare o eliminare temporaneamente una query
 
-È possibile richiedere l&#39;annullamento o l&#39;eliminazione temporanea di una query specificata effettuando una richiesta PATCH al `/queries` e fornendo i `id` nel percorso della richiesta.
+È possibile richiedere l&#39;annullamento o l&#39;eliminazione temporanea di una query specificata effettuando una richiesta PATCH all&#39;endpoint `/queries` e fornendo il valore `id` della query nel percorso della richiesta.
 
 **Formato API**
 
@@ -308,7 +308,7 @@ PATCH /queries/{QUERY_ID}
 
 | Parametro | Descrizione |
 | -------- | ----------- |
-| `{QUERY_ID}` | Il `id` valore della query su cui desideri eseguire l’operazione. |
+| `{QUERY_ID}` | Valore `id` della query su cui si desidera eseguire l&#39;operazione. |
 
 
 **Richiesta**

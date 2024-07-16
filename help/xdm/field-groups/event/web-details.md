@@ -11,19 +11,19 @@ ht-degree: 3%
 
 ---
 
-# [!UICONTROL Dettagli web] gruppo di campi schema
+# [!UICONTROL Dettagli Web] gruppo di campi schema
 
 >[!NOTE]
 >
->I nomi di diversi gruppi di campi dello schema sono stati modificati. Vedi il documento su [aggiornamenti nome gruppo di campi](../name-updates.md) per ulteriori informazioni.
+>I nomi di diversi gruppi di campi dello schema sono stati modificati. Per ulteriori informazioni, consulta il documento sugli aggiornamenti del nome del gruppo di campi [](../name-updates.md).
 
-[!UICONTROL Dettagli web] è un gruppo di campi di schema standard per [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md), utilizzato per descrivere informazioni relative a eventi di dettagli web come interazione, dettagli della pagina e referrer.
+[!UICONTROL Dettagli Web] è un gruppo di campi dello schema standard per la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md), utilizzato per descrivere informazioni relative a eventi di dettagli Web come interazione, dettagli della pagina e referrer.
 
 ![](../../images/field-groups/web-details.png)
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
-| `web` | [Informazioni web](../../data-types/web-information.md) | Descrive i clic sui collegamenti, i dettagli della pagina web, le informazioni sul referente e i dettagli del browser. |
+| `web` | [Informazioni Web](../../data-types/web-information.md) | Descrive i clic sui collegamenti, i dettagli della pagina web, le informazioni sul referente e i dettagli del browser. |
 
 {style="table-layout:auto"}
 

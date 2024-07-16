@@ -1,7 +1,8 @@
 ---
 title: edgeDomain
 description: Determina il dominio principale a cui desideri inviare i dati.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+exl-id: 6beb5116-cd23-42fd-934c-5cf84d1d7153
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 1%
@@ -10,24 +11,24 @@ ht-degree: 1%
 
 # `edgeDomain`
 
-Il `edgeDomain` consente di modificare il dominio in cui l’SDK web invia i dati. Questa proprietà viene spesso utilizzata dalle organizzazioni che utilizzano [cookie di prima parte](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=it). I dati vengono inviati al dominio dell’organizzazione, quindi un record CNAME li inoltra ad Adobe.
+La proprietà `edgeDomain` consente di modificare il dominio in cui l&#39;SDK Web invia i dati. Questa proprietà viene spesso utilizzata dalle organizzazioni che utilizzano [cookie di prime parti](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=it). I dati vengono inviati al dominio dell’organizzazione, quindi un record CNAME li inoltra ad Adobe.
 
-La tua organizzazione determina il valore corretto per questa proprietà durante la configurazione [cookie di prima parte](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=it). A questo scopo, un’organizzazione utilizza in genere un sottodominio dedicato. Ad esempio, se utilizzi il dominio `example.com`, puoi impostare i cookie di prime parti su `data.example.com`.
+La tua organizzazione determina il valore corretto per questa proprietà durante la configurazione di [cookie di prime parti](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=it). A questo scopo, un’organizzazione utilizza in genere un sottodominio dedicato. Se ad esempio si utilizza il dominio `example.com`, è possibile impostare cookie di prime parti in `data.example.com`.
 
 ## Configurare un dominio edge tramite l’estensione tag Web SDK
 
-Imposta il **[!UICONTROL Dominio Edge]** campo di testo quando [configurazione dell’estensione tag](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+Imposta il campo di testo **[!UICONTROL Dominio Edge]** durante la [configurazione dell&#39;estensione tag](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
-1. Accedi a [experience.adobe.com](https://experience.adobe.com) utilizzando le credenziali di Adobe ID.
-1. Accedi a **[!UICONTROL Raccolta dati]** > **[!UICONTROL Tag]**.
+1. Accedi a [experience.adobe.com](https://experience.adobe.com) utilizzando le credenziali Adobe ID.
+1. Passa a **[!UICONTROL Raccolta dati]** > **[!UICONTROL Tag]**.
 1. Seleziona la proprietà tag desiderata.
-1. Accedi a **[!UICONTROL Estensioni]**, quindi fai clic su **[!UICONTROL Configura]** il [!UICONTROL Adobe Experience Platform Web SDK] Card.
-1. Individuare il campo di testo **[!UICONTROL Dominio Edge]**, quindi inserisci il valore desiderato.
-1. Clic **[!UICONTROL Salva]**, quindi pubblica le modifiche.
+1. Passa a **[!UICONTROL Estensioni]**, quindi fai clic su **[!UICONTROL Configura]** nella scheda [!UICONTROL Adobe Experience Platform Web SDK].
+1. Individua il campo di testo **[!UICONTROL dominio Edge]**, quindi immetti il valore desiderato.
+1. Fai clic su **[!UICONTROL Salva]**, quindi pubblica le modifiche.
 
-## Configurare un dominio edge utilizzando la libreria JavaScript dell’SDK Web
+## Configurare un dominio Edge tramite la libreria JavaScript dell’SDK Web
 
-Imposta il `edgeDomain` stringa durante l&#39;esecuzione di `configure` comando. Se ometti questa proprietà durante la configurazione dell’SDK, per impostazione predefinita viene `edge.adobedc.net`. Imposta questo valore se desideri escludere il dominio a cui l’SDK Web invia i dati.
+Impostare la stringa `edgeDomain` durante l&#39;esecuzione del comando `configure`. Se si omette questa proprietà durante la configurazione dell&#39;SDK, per impostazione predefinita viene impostato su `edge.adobedc.net`. Imposta questo valore se desideri escludere il dominio a cui l’SDK Web invia i dati.
 
 ```js
 alloy("configure", {

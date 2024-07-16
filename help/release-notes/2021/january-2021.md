@@ -7,14 +7,14 @@ author: ens60013
 exl-id: 6fb92e35-922c-47ba-8cf4-44edd92acfa1
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '716'
+source-wordcount: '718'
 ht-degree: 27%
 
 ---
 
 # Note sulla versione di Adobe Experience Platform
 
-**Data di rilascio: 27 gennaio 2021**
+**Data di rilascio: giovedì 27 gennaio 2021**
 
 Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
@@ -31,9 +31,9 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Funzioni espressione regolare | [!DNL Data Prep] Mapper ora supporta la corrispondenza e l’estrazione di parte del campo di input in base alle espressioni regolari. |
+| Funzioni espressione regolare | [!DNL Data Prep] Mapper ora supporta la corrispondenza e l&#39;estrazione di parte del campo di input in base alle espressioni regolari. |
 
-Per ulteriori informazioni, vedere [[!DNL Data Prep] panoramica](../../data-prep/home.md).
+Per ulteriori informazioni, vedere la [[!DNL Data Prep] panoramica](../../data-prep/home.md).
 
 ## Destinazioni {#destinations}
 
@@ -43,15 +43,15 @@ Per ulteriori informazioni, vedere [[!DNL Data Prep] panoramica](../../data-prep
 
 | Destinazione | Descrizione |
 | ----------- | ----------- |
-| [!DNL Azure Blob] | [!DNL Azure Blob] è la soluzione di archiviazione di oggetti di Microsoft per il cloud. |
+| [!DNL Azure Blob] | [!DNL Azure Blob] è la soluzione di archiviazione oggetti di Microsoft per il cloud. |
 
 **Nuove funzioni**
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Corrispondenza ID avanzata | Miglioramenti alle funzionalità di audience match rate (tasso di corrispondenza del pubblico) in [!DNL Facebook Custom Audiences] e [!DNL Google Customer Match], aggiungendo il supporto per la corrispondenza di identità aggiuntiva, ad esempio ID esterni, numeri di telefono e ID del dispositivo mobile. Per ulteriori informazioni, consulta la seguente documentazione: <ul><li>[Destinazione facebook](../../destinations/catalog/social/facebook.md)</li><li>[Destinazione Customer Match di Google](../../destinations/catalog/advertising/google-customer-match.md)</li><li>[Attiva i dati del pubblico nelle destinazioni di esportazione di segmenti di streaming](../../destinations/ui/activate-segment-streaming-destinations.md)</li></ul> |
+| Corrispondenza ID avanzata | Sono state migliorate le funzionalità di frequenza di corrispondenza del pubblico in [!DNL Facebook Custom Audiences] e [!DNL Google Customer Match], aggiungendo il supporto per la corrispondenza di identità aggiuntiva, ad esempio ID esterni, numeri di telefono e ID di dispositivi mobili. Per ulteriori informazioni, consulta la seguente documentazione: <ul><li>[Destinazione Facebook](../../destinations/catalog/social/facebook.md)</li><li>[Destinazione Customer Match Google](../../destinations/catalog/advertising/google-customer-match.md)</li><li>[Attiva i dati del pubblico nelle destinazioni di esportazione dei segmenti di streaming](../../destinations/ui/activate-segment-streaming-destinations.md)</li></ul> |
 
-Per ulteriori informazioni, visita [panoramica sulle destinazioni](../../destinations/home.md).
+Per ulteriori informazioni, visita la [panoramica delle destinazioni](../../destinations/home.md).
 
 ## Profilo cliente in tempo reale {#profile}
 
@@ -61,10 +61,10 @@ Adobe Experience Platform ti consente di promuovere esperienze coordinate, coere
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Elimina set di dati dall’archivio profili | Quando elimini un set di dati dal Data Lake di Experience Platform, questo viene eliminato automaticamente anche dall’archivio Profili. Non è più necessario utilizzare l’endpoint API dei processi del sistema di profili per effettuare una richiesta di eliminazione al fine di eliminare esplicitamente il set di dati dall’archivio profili. Per ulteriori informazioni, vedere [guida dell’endpoint API dei processi di sistema del profilo](../../profile/api/profile-system-jobs.md). |
-| Conteggio stimato dello spazio dei nomi ID per un dato segmento | Per i conteggi dei profili stimati, l’API di anteprima ora riporta:<ul><li>Numero totale di profili stimati in un segmento per un dato spazio dei nomi.</li><li>Numero totale di profili stimati nello schema di unione profili per un dato spazio dei nomi.</li></ul>Per ulteriori informazioni, consulta [guida dell’endpoint API per l’anteprima del profilo](../../profile/api/preview-sample-status.md). |
+| Elimina set di dati dall’archivio profili | Quando elimini un set di dati dal Data Lake di Experience Platform, questo viene eliminato automaticamente anche dall’archivio Profili. Non è più necessario utilizzare l’endpoint API dei processi del sistema di profili per effettuare una richiesta di eliminazione al fine di eliminare esplicitamente il set di dati dall’archivio profili. Per ulteriori informazioni, consulta la [guida dell&#39;endpoint API dei processi di sistema ](../../profile/api/profile-system-jobs.md). |
+| Conteggio stimato dello spazio dei nomi ID per un dato segmento | Per i conteggi dei profili stimati, l’API di anteprima ora riporta:<ul><li>Numero totale di profili stimati in un segmento per un dato spazio dei nomi.</li><li>Numero totale di profili stimati nello schema di unione profili per un dato spazio dei nomi.</li></ul>Per ulteriori informazioni, consulta la [guida dell&#39;endpoint API di anteprima del profilo](../../profile/api/preview-sample-status.md). |
 
-Per ulteriori informazioni su Real-Time Customer Profile, inclusi tutorial e best practice per l’utilizzo di [!DNL Profile] , per iniziare leggi il [Panoramica del profilo cliente in tempo reale](../../profile/home.md).
+Per ulteriori informazioni su Real-Time Customer Profile, inclusi tutorial e best practice per l&#39;utilizzo dei dati di [!DNL Profile], leggere la [Panoramica sul profilo cliente in tempo reale](../../profile/home.md).
 
 ## [!DNL Sources] {#sources}
 
@@ -76,10 +76,10 @@ Experience Platform fornisce un’API RESTful e un’interfaccia utente interatt
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Miglioramenti al connettore di origine Adobe Audience Manager | Ora puoi filtrare e selezionare singoli segmenti di prime parti dall’Audience Manager per acquisirli in Platform, nonché filtrare le caratteristiche di prime parti. Guarda il tutorial su [creazione di un connettore di origine di Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) per ulteriori informazioni. |
-| [!DNL Google BigQuery] miglioramenti al connettore di origine | È ora possibile acquisire file di dimensioni superiori a 10 GB in un’unica esecuzione del flusso utilizzando [!DNL BigQuery] connettore di origine. Consulta la [[!DNL BigQuery] panoramica del connettore di origine](../../sources/connectors/databases/bigquery.md) per ulteriori informazioni. |
-| Supporto per tipi di dati complessi per gli archivi cloud | Ora è possibile acquisire tipi di dati complessi, ad esempio array in file JSON, quando si utilizza un connettore di origine dell’archiviazione cloud. Consulta i tutorial sulla creazione di un flusso di dati di archiviazione cloud [nell’interfaccia utente](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) o [utilizzando [!DNL Flow Service] API](../../sources/tutorials/api/collect/cloud-storage.md) per ulteriori informazioni. |
-| Supporto per l&#39;autenticazione basata su chiave dell&#39;entità servizio per [!DNL Microsoft Dynamics] sorgente | Ora puoi eseguire l’autenticazione al tuo [!DNL Dynamics] utilizzando una chiave dell&#39;entità servizio come alternativa all&#39;autenticazione basata su password. Consulta la [[!DNL Dynamics] panoramica del connettore di origine](../../sources/connectors/crm/ms-dynamics.md) per ulteriori informazioni. |
-| Supporto dell’interfaccia utente per i separatori personalizzati nelle origini di archiviazione cloud | È ora possibile impostare un delimitatore di colonna personalizzato, ad esempio una virgola (`,`), scheda (`\t`) o una pipe (`|`), per raccogliere i file delimitati nell’interfaccia utente. Guarda il tutorial su [creazione di un flusso di dati con un connettore di origine dell’archiviazione cloud](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) per ulteriori informazioni |
+| Miglioramenti al connettore di origine Adobe Audience Manager | Ora puoi filtrare e selezionare singoli segmenti di prime parti dall’Audience Manager per acquisirli in Platform, nonché filtrare le caratteristiche di prime parti. Per ulteriori informazioni, vedere l&#39;esercitazione sulla [creazione di un connettore di origine Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md). |
+| Miglioramenti al connettore di origine [!DNL Google BigQuery] | È ora possibile acquisire file di dimensioni superiori a 10 GB in un&#39;unica esecuzione del flusso utilizzando il connettore di origine [!DNL BigQuery]. Per ulteriori informazioni, vedere [[!DNL BigQuery] panoramica del connettore di origine](../../sources/connectors/databases/bigquery.md). |
+| Supporto per tipi di dati complessi per gli archivi cloud | Ora è possibile acquisire tipi di dati complessi, ad esempio array in file JSON, quando si utilizza un connettore di origine dell’archiviazione cloud. Per ulteriori informazioni, consulta i tutorial sulla creazione di un flusso di dati nell&#39;archiviazione cloud [ nell&#39;interfaccia utente](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) o [utilizzando l&#39; [!DNL Flow Service] API](../../sources/tutorials/api/collect/cloud-storage.md). |
+| Supporto per l&#39;autenticazione basata su chiave dell&#39;entità servizio per l&#39;origine [!DNL Microsoft Dynamics] | È ora possibile eseguire l&#39;autenticazione nell&#39;account [!DNL Dynamics] utilizzando una chiave dell&#39;entità servizio in alternativa all&#39;autenticazione basata su password. Per ulteriori informazioni, vedere [[!DNL Dynamics] panoramica del connettore di origine](../../sources/connectors/crm/ms-dynamics.md). |
+| Supporto dell’interfaccia utente per i separatori personalizzati nelle origini di archiviazione cloud | È ora possibile impostare un delimitatore di colonna personalizzato, ad esempio una virgola (`,`), una tabulazione (`\t`) o una barra verticale (`|`), per raccogliere i file delimitati nell&#39;interfaccia utente. Per ulteriori informazioni, consulta il tutorial su [creazione di un flusso di dati con un connettore di origine dell&#39;archiviazione cloud](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) |
 
-Per ulteriori informazioni sulle origini, consulta [panoramica sulle origini](../../sources/home.md).
+Per ulteriori informazioni sulle origini, vedere [panoramica delle origini](../../sources/home.md).

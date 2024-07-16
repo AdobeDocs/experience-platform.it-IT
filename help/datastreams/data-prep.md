@@ -17,7 +17,7 @@ Tutti i dati inviati da una pagina web devono arrivare ad Experience Platform co
 
 1. Riformattare il livello dati in XDM sulla pagina web stessa.
 2. Utilizza la funzionalità Tag elementi dati nativi per riformattare in XDM il formato di livello dati esistente di una pagina web.
-3. Riformattare il formato del livello dati esistente di una pagina web in XDM tramite la rete Edge, utilizzando la preparazione dati per la raccolta dati.
+3. Riformattare il formato del livello dati esistente di una pagina web in XDM tramite l’Edge Network, utilizzando la preparazione dati per la raccolta dati.
 
 Questa guida si concentra sulla terza opzione.
 
@@ -25,14 +25,14 @@ Questa guida si concentra sulla terza opzione.
 
 Esistono due casi di utilizzo in cui la preparazione dei dati per la raccolta dei dati è utile:
 
-1. Il sito web dispone di un livello dati ben formato, gestito e mantenuto ed è preferibile inviarlo direttamente alla rete Edge anziché utilizzare la manipolazione JavaScript per convertirlo in XDM sulla pagina (tramite elementi dati Tag o tramite manipolazione JavaScript manuale).
+1. Il sito web ha un livello di dati ben formato, gestito e mantenuto ed è preferibile inviarlo direttamente all’Edge Network invece di utilizzare la manipolazione di JavaScript per convertirlo in XDM sulla pagina (tramite elementi dati Tag o tramite la manipolazione manuale di JavaScript).
 2. Sul sito viene distribuito un sistema di assegnazione tag diverso dai tag.
 
-## Inviare un livello dati esistente alla rete Edge tramite Web SDK {#send-datalayer-via-websdk}
+## Inviare un livello dati esistente all’Edge Network tramite Web SDK {#send-datalayer-via-websdk}
 
-Il livello dati esistente deve essere inviato utilizzando [`data`](/help/web-sdk/commands/sendevent/data.md) oggetto all&#39;interno del `sendEvent` comando.
+Il livello dati esistente deve essere inviato utilizzando l&#39;oggetto [`data`](/help/web-sdk/commands/sendevent/data.md) nel comando `sendEvent`.
 
-Se utilizzi i Tag, devi utilizzare **[!UICONTROL Dati]** campo del **[!UICONTROL Invia evento]** tipo di azione, come descritto nella [Documentazione dell’estensione tag SDK per web](/help/tags/extensions/client/web-sdk/action-types.md).
+Se utilizzi Tag, devi utilizzare il campo **[!UICONTROL Dati]** del tipo di azione **[!UICONTROL Invia evento]**, come descritto nella [documentazione sull&#39;estensione tag di Web SDK](/help/tags/extensions/client/web-sdk/action-types.md).
 
 Il resto di questa guida si concentrerà su come mappare il livello dati agli standard XDM dopo che è stato inviato da WebSDK.
 
@@ -54,7 +54,7 @@ Per una dimostrazione rapida del processo di preparazione dei dati per la raccol
 
 Dopo aver completato la configurazione di base per uno stream di dati, seleziona **[!UICONTROL Salva e Aggiungi mappatura]** e verrà visualizzato il passaggio **[!UICONTROL Seleziona dati]**. Da qui, devi fornire un oggetto JSON di esempio che rappresenta la struttura dei dati che intendi inviare a Platform.
 
-Per acquisire proprietà direttamente dal livello dati, l’oggetto JSON deve avere una singola proprietà principale `data`. Le sottoproprietà del `data` L’oggetto deve quindi essere costruito in modo da essere mappato sulle proprietà del livello dati che desideri acquisire. Seleziona la sezione seguente per visualizzare un esempio di oggetto JSON formattato correttamente con una radice `data`.
+Per acquisire proprietà direttamente dal livello dati, l’oggetto JSON deve avere una singola proprietà principale `data`. Le sottoproprietà dell&#39;oggetto `data` devono quindi essere costruite in modo da eseguire il mapping alle proprietà del livello dati che si desidera acquisire. Seleziona la sezione seguente per visualizzare un esempio di oggetto JSON formattato correttamente con una radice `data`.
 
 +++File JSON di esempio con radice `data`
 
@@ -164,12 +164,12 @@ Per acquisire proprietà da un elemento dati di un oggetto XDM, all’oggetto JS
 
 Viene visualizzato il passaggio di **[!UICONTROL mappatura]**, consentendoti di mappare i campi nei dati di origine su quelli dello schema dell’evento di destinazione in Platform. Da qui puoi configurare la mappatura in due modi:
 
-* [Creare regole di mappatura](#create-mapping) per questo flusso di dati attraverso un processo manuale.
+* [Crea regole di mappatura](#create-mapping) per questo flusso di dati tramite un processo manuale.
 * [Importare regole di mappatura](#import-mapping) da un flusso di dati esistente.
 
 ### Creare regole di mappatura {#create-mapping}
 
-Per creare una regola di mappatura, seleziona **[!UICONTROL Aggiungi nuova mappatura]**.
+Per creare una regola di mapping, selezionare **[!UICONTROL Aggiungi nuovo mapping]**.
 
 ![Aggiunta di una nuova mappatura.](assets/data-prep/add-new-mapping.png)
 
@@ -179,17 +179,17 @@ Seleziona l’icona della sorgente (![Icona sorgente](assets/data-prep/source-ic
 
 Quindi, seleziona l’icona dello schema (![Icona dello schema](assets/data-prep/schema-icon.png)) per aprire una finestra di dialogo simile per lo schema dell’evento di destinazione. Scegli il campo in cui mappare i dati prima di confermare con **[!UICONTROL Seleziona]**.
 
-![Seleziona il campo da mappare nello schema di destinazione.](assets/data-prep/target-mapping.png)
+![Selezione del campo da mappare nello schema di destinazione.](assets/data-prep/target-mapping.png)
 
 Viene visualizzata di nuovo la pagina della mappatura con la mappatura di campi completata. La sezione **[!UICONTROL Avanzamento della mappatura]** viene aggiornata per riflettere il numero totale di campi mappati correttamente.
 
-![Campo mappato correttamente con avanzamento riflesso.](assets/data-prep/field-mapped.png)
+![Il campo è stato mappato correttamente con l&#39;avanzamento riflesso.](assets/data-prep/field-mapped.png)
 
 >[!TIP]
 >
 >Per mappare un array di oggetti (nel campo di origine) su un array di oggetti diversi (nel campo di destinazione), aggiungi `[*]` dopo il nome dell’array nei percorsi dei campi di origine e di destinazione, come illustrato di seguito.
 >
->![Mappatura di oggetti array.](assets/data-prep/array-object-mapping.png)
+>![Mappatura oggetto array.](assets/data-prep/array-object-mapping.png)
 
 ### Importare regole di mappatura esistenti {#import-mapping}
 
@@ -201,7 +201,7 @@ Se in precedenza hai creato un flusso di dati, puoi riutilizzarne le regole di m
 
 Per iniziare, seleziona **[!UICONTROL Importa mappatura]**.
 
-![Pulsante Importa mappatura selezionato.](assets/data-prep/import-mapping-button.png)
+![Pulsante Importa mapping selezionato.](assets/data-prep/import-mapping-button.png)
 
 Nella finestra di dialogo visualizzata, seleziona lo stream di dati di cui desideri importare le regole di mappatura. Una volta scelto lo stream di dati, seleziona **[!UICONTROL Anteprima]**.
 

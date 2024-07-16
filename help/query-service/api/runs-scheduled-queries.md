@@ -16,11 +16,11 @@ ht-degree: 3%
 
 ## Chiamate API di esempio
 
-Ora che sai quali intestazioni utilizzare, puoi iniziare a effettuare chiamate al [!DNL Query Service] API. Le sezioni seguenti descrivono le varie chiamate API che puoi effettuare utilizzando [!DNL Query Service] API. Ogni chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
+Ora che sai quali intestazioni utilizzare, puoi iniziare ad effettuare chiamate all&#39;API [!DNL Query Service]. Le sezioni seguenti descrivono le varie chiamate API che è possibile effettuare utilizzando l&#39;API [!DNL Query Service]. Ogni chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
 
 ### Recuperare un elenco di tutte le esecuzioni per una query pianificata specificata
 
-È possibile recuperare un elenco di tutte le esecuzioni per una query pianificata specifica, indipendentemente dal fatto che siano attualmente in esecuzione o già completate. A tale scopo, invia una richiesta GET al `/schedules/{SCHEDULE_ID}/runs` endpoint, dove `{SCHEDULE_ID}` è il `id` valore della query pianificata di cui si desidera recuperare le esecuzioni.
+È possibile recuperare un elenco di tutte le esecuzioni per una query pianificata specifica, indipendentemente dal fatto che siano attualmente in esecuzione o già completate. A tale scopo, eseguire una richiesta GET all&#39;endpoint `/schedules/{SCHEDULE_ID}/runs`, dove `{SCHEDULE_ID}` è il valore `id` della query pianificata di cui si desidera recuperare le esecuzioni.
 
 **Formato API**
 
@@ -31,19 +31,19 @@ GET /schedules/{SCHEDULE_ID}/runs?{QUERY_PARAMETERS}
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | Il `id` valore della query pianificata da recuperare. |
+| `{SCHEDULE_ID}` | Valore `id` della query pianificata da recuperare. |
 | `{QUERY_PARAMETERS}` | (*Facoltativo*) Parametri aggiunti al percorso della richiesta che configurano i risultati restituiti nella risposta. È possibile includere più parametri, separati da e commerciali (`&`). I parametri disponibili sono elencati di seguito. |
 
-**Parametri di query**
+**Parametri query**
 
 Di seguito è riportato un elenco dei parametri di query disponibili per l&#39;elenco delle esecuzioni per una query pianificata specificata. Tutti questi parametri sono facoltativi. Se si effettua una chiamata a questo endpoint senza parametri, verranno recuperate tutte le esecuzioni disponibili per la query pianificata specificata.
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `orderby` | Specifica il campo in base al quale ordinare i risultati. I campi supportati sono `created` e `updated`. Ad esempio: `orderby=created` I risultati verranno ordinati in base alla creazione in ordine crescente. Aggiunta di un `-` prima della creazione (`orderby=-created`) ordinerà gli elementi in base a quelli creati in ordine decrescente. |
+| `orderby` | Specifica il campo in base al quale ordinare i risultati. I campi supportati sono `created` e `updated`. Ad esempio, `orderby=created` ordinerà i risultati in base alla creazione in ordine crescente. L&#39;aggiunta di un `-` prima della creazione (`orderby=-created`) ordinerà gli elementi in base alla creazione in ordine decrescente. |
 | `limit` | Specifica il limite di dimensioni della pagina per controllare il numero di risultati inclusi in una pagina. (*Valore predefinito: 20*) |
-| `start` | Specifica una marca temporale in formato ISO per ordinare i risultati. Se non viene specificata una data di inizio, la chiamata API restituirà prima le esecuzioni più vecchie, quindi continuerà a elencare i risultati più recenti<br> Le marche temporali ISO consentono diversi livelli di granularità in data e ora. Le marche temporali ISO di base hanno il formato di: `2020-09-07` per esprimere la data del 7 settembre 2020. Un esempio più complesso sarebbe scritto come `2022-11-05T08:15:30-05:00` e corrisponde al 5 novembre 2022, 8:15:30:00, ora standard USA orientale. È possibile fornire un fuso orario con scostamento UTC ed è indicato dal suffisso &quot;Z&quot; (`2020-01-01T01:01:01Z`). Se non viene fornito alcun fuso orario, per impostazione predefinita viene impostato su zero. |
-| `property` | Filtra i risultati in base ai campi. I filtri **deve** essere HTML in escape. Le virgole vengono utilizzate per combinare più set di filtri. I campi supportati sono `created`, `state`, e `externalTrigger`. L’elenco degli operatori supportati è `>` (maggiore di), `<` (minore di), e  `==` (uguale a), e `!=` (diverso da). Ad esempio: `externalTrigger==true,state==SUCCESS,created>2019-04-20T13:37:00Z` restituirà tutte le esecuzioni create, riuscite e create manualmente dopo il 20 aprile 2019. |
+| `start` | Specifica una marca temporale in formato ISO per ordinare i risultati. Se non viene specificata alcuna data di inizio, la chiamata API restituirà prima le esecuzioni meno recenti, quindi continuerà a elencare i risultati più recenti<br> Le marche temporali ISO consentono diversi livelli di granularità nella data e nell&#39;ora. I timestamp ISO di base assumono il formato di: `2020-09-07` per esprimere la data 7 settembre 2020. Un esempio più complesso verrebbe scritto come `2022-11-05T08:15:30-05:00` e corrisponde al 5 novembre 2022, 8:15:30, ora standard orientale USA. È possibile fornire un fuso orario con scostamento UTC ed è indicato dal suffisso &quot;Z&quot; (`2020-01-01T01:01:01Z`). Se non viene fornito alcun fuso orario, per impostazione predefinita viene impostato su zero. |
+| `property` | Filtra i risultati in base ai campi. I filtri **devono** avere escape HTML. Le virgole vengono utilizzate per combinare più set di filtri. I campi supportati sono `created`, `state` e `externalTrigger`. L&#39;elenco degli operatori supportati è `>` (maggiore di), `<` (minore di), `==` (uguale a) e `!=` (diverso da). Ad esempio, `externalTrigger==true,state==SUCCESS,created>2019-04-20T13:37:00Z` restituirà tutte le esecuzioni create, riuscite e create manualmente dopo il 20 aprile 2019. |
 
 **Richiesta**
 
@@ -149,11 +149,11 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elen
 
 >[!NOTE]
 >
->Puoi utilizzare il valore di `_links.cancel` a [interrompere un&#39;esecuzione per una query pianificata specificata](#immediately-stop-a-run-for-a-specific-scheduled-query).
+>È possibile utilizzare il valore di `_links.cancel` per [interrompere un&#39;esecuzione per una query pianificata specificata](#immediately-stop-a-run-for-a-specific-scheduled-query).
 
 ### Attiva immediatamente un&#39;esecuzione per una query pianificata specifica
 
-Puoi attivare immediatamente un’esecuzione per una query pianificata specificata effettuando una richiesta POST al `/schedules/{SCHEDULE_ID}/runs` endpoint, dove `{SCHEDULE_ID}` è il `id` valore della query pianificata di cui desideri attivare l’esecuzione.
+È possibile attivare immediatamente un&#39;esecuzione per una query pianificata specificata effettuando una richiesta POST all&#39;endpoint `/schedules/{SCHEDULE_ID}/runs`, dove `{SCHEDULE_ID}` è il valore `id` della query pianificata di cui si desidera attivare l&#39;esecuzione.
 
 **Formato API**
 
@@ -184,7 +184,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 202 (Accepted) 
 
 ### Recuperare i dettagli di un&#39;esecuzione per una query pianificata specifica
 
-Per recuperare i dettagli di un’esecuzione per una query pianificata specifica, effettua una richiesta GET al `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` e fornendo sia l’ID della query pianificata che l’esecuzione nel percorso della richiesta.
+È possibile recuperare i dettagli di un&#39;esecuzione per una query pianificata specifica effettuando una richiesta di GET all&#39;endpoint `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` e fornendo sia l&#39;ID della query pianificata che l&#39;esecuzione nel percorso della richiesta.
 
 **Formato API**
 
@@ -194,8 +194,8 @@ GET /schedules/{SCHEDULE_ID}/runs/{RUN_ID}
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | Il `id` valore della query pianificata di cui si desidera recuperare i dettagli. |
-| `{RUN_ID}` | Il `id` valore dell’esecuzione da recuperare. |
+| `{SCHEDULE_ID}` | Valore `id` della query pianificata di cui si desidera recuperare i dettagli. |
+| `{RUN_ID}` | Il valore `id` dell&#39;esecuzione che si desidera recuperare. |
 
 **Richiesta**
 
@@ -245,7 +245,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 
 ### Interrompere immediatamente l&#39;esecuzione di una query pianificata specifica
 
-Per interrompere immediatamente l’esecuzione di una query pianificata specifica, invia una richiesta PATCH al `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` e fornendo sia l’ID della query pianificata che l’esecuzione nel percorso della richiesta.
+È possibile interrompere immediatamente un&#39;esecuzione per una query pianificata specifica effettuando una richiesta PATCH all&#39;endpoint `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` e fornendo sia l&#39;ID della query pianificata che l&#39;esecuzione nel percorso della richiesta.
 
 **Formato API**
 
@@ -255,8 +255,8 @@ PATCH /schedules/{SCHEDULE_ID}/runs/{RUN_ID}
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | Il `id` valore della query pianificata di cui si desidera recuperare i dettagli. |
-| `{RUN_ID}` | Il `id` valore dell’esecuzione da recuperare. |
+| `{SCHEDULE_ID}` | Valore `id` della query pianificata di cui si desidera recuperare i dettagli. |
+| `{RUN_ID}` | Il valore `id` dell&#39;esecuzione che si desidera recuperare. |
 
 **Richiesta**
 

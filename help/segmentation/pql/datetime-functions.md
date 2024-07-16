@@ -1,22 +1,22 @@
 ---
 solution: Experience Platform
-title: Funzioni data e ora PQL
-description: Le funzioni di data e ora vengono utilizzate per eseguire operazioni di data e ora sui valori in PQL (Profile Query Language).
+title: Funzioni data e ora di PQL
+description: Le funzioni di data e ora vengono utilizzate per eseguire operazioni di data e ora sui valori in Profile Query Language (PQL).
 exl-id: 8cbffcb6-1c25-454f-8f02-eca602318e5e
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '485'
-ht-degree: 4%
+source-wordcount: '493'
+ht-degree: 2%
 
 ---
 
 # Funzioni data e ora
 
-Le funzioni di data e ora vengono utilizzate per eseguire operazioni di data e ora su valori compresi in [!DNL Profile Query Language] (PQL) Ulteriori informazioni su altre funzioni PQL sono disponibili nella [[!DNL Profile Query Language] panoramica](./overview.md).
+Le funzioni di data e ora vengono utilizzate per eseguire operazioni di data e ora sui valori compresi in [!DNL Profile Query Language] (PQL). Ulteriori informazioni sulle altre funzioni di PQL sono disponibili nella [[!DNL Profile Query Language] panoramica](./overview.md).
 
 ## Mese corrente
 
-Il `currentMonth` restituisce il mese corrente come numero intero.
+La funzione `currentMonth` restituisce il mese corrente come numero intero.
 
 **Formato**
 
@@ -34,7 +34,7 @@ person.birthMonth = currentMonth()
 
 ## Ottieni mese
 
-Il `getMonth` funzione restituisce il mese, come numero intero, in base a una data marca temporale.
+La funzione `getMonth` restituisce il mese come numero intero in base a una data marca temporale.
 
 **Formato**
 
@@ -44,7 +44,7 @@ Il `getMonth` funzione restituisce il mese, come numero intero, in base a una da
 
 **Esempio**
 
-La seguente query PQL verifica se il mese di nascita della persona è giugno.
+La query PQL seguente verifica se il mese di nascita della persona è giugno.
 
 ```sql
 person.birthdate.getMonth() = 6
@@ -52,7 +52,7 @@ person.birthdate.getMonth() = 6
 
 ## Anno corrente
 
-Il `currentYear` funzione restituisce l’anno corrente come numero intero.
+La funzione `currentYear` restituisce l&#39;anno corrente come numero intero.
 
 **Formato**
 
@@ -70,7 +70,7 @@ product.saleYear = currentYear()
 
 ## Ottieni anno
 
-Il `getYear` funzione restituisce l’anno, come numero intero, in base a una data marca temporale.
+La funzione `getYear` restituisce l&#39;anno, sotto forma di numero intero, in base a una data marca temporale.
 
 **Formato**
 
@@ -80,7 +80,7 @@ Il `getYear` funzione restituisce l’anno, come numero intero, in base a una da
 
 **Esempio**
 
-La seguente query PQL verifica se l’anno di nascita della persona cade nel 1991, 1992, 1993, 1994 o 1995.
+La seguente query di PQL verifica se l’anno di nascita della persona cade nel 1991, 1992, 1993, 1994 o 1995.
 
 ```sql
 person.birthday.getYear() in [1991, 1992, 1993, 1994, 1995]
@@ -88,7 +88,7 @@ person.birthday.getYear() in [1991, 1992, 1993, 1994, 1995]
 
 ## Giorno del mese corrente
 
-Il `currentDayOfMonth` funzione restituisce il giorno corrente del mese come numero intero.
+La funzione `currentDayOfMonth` restituisce il giorno corrente del mese come numero intero.
 
 **Formato**
 
@@ -98,7 +98,7 @@ currentDayOfMonth()
 
 **Esempio**
 
-La query PQL seguente verifica se il giorno di nascita della persona corrisponde al giorno corrente del mese.
+La query PQL seguente verifica se il giorno di nascita della persona corrisponde al giorno del mese corrente.
 
 ```sql
 person.birthDay = currentDayOfMonth()
@@ -106,7 +106,7 @@ person.birthDay = currentDayOfMonth()
 
 ## Ottieni giorno del mese
 
-Il `getDayOfMonth` funzione restituisce il giorno, come numero intero, in base a una data marca temporale.
+La funzione `getDayOfMonth` restituisce il giorno come numero intero in base a una data marca temporale.
 
 **Formato**
 
@@ -124,11 +124,11 @@ product.sale.getDayOfMonth() <= 15
 
 ## Si verifica
 
-Il `occurs` confronta la funzione di marca temporale specificata con un periodo di tempo fisso.
+La funzione `occurs` confronta la funzione data/ora specificata con un periodo di tempo fisso.
 
 **Formato**
 
-Il `occurs` può essere scritta utilizzando uno dei seguenti formati:
+La funzione `occurs` può essere scritta utilizzando uno dei seguenti formati:
 
 ```sql
 {TIMESTAMP} occurs {COMPARISON} {INTEGER} {TIME_UNIT} {DIRECTION} {TIME}
@@ -139,15 +139,15 @@ Il `occurs` può essere scritta utilizzando uno dei seguenti formati:
 
 | Argomento | Descrizione |
 | --------- | ----------- |
-| `{COMPARISON}` | Un operatore di confronto. Può essere uno dei seguenti operatori: `>`, `>=`, `<`, `<=`, `=`, `!=`. Ulteriori informazioni sulle funzioni di confronto sono disponibili nella [documento sulle funzioni di confronto](./comparison-functions.md). |
+| `{COMPARISON}` | Un operatore di confronto. Può essere uno qualsiasi dei seguenti operatori: `>`, `>=`, `<`, `<=`, `=`, `!=`. Ulteriori informazioni sulle funzioni di confronto sono disponibili nel documento [funzioni di confronto](./comparison-functions.md). |
 | `{INTEGER}` | Un numero intero non negativo. |
 | `{TIME_UNIT}` | Unità di tempo. Può essere una delle seguenti parole: `millisecond(s)`, `second(s)`, `minute(s)`, `hour(s)`, `day(s)`, `week(s)`, `month(s)`, `year(s)`, `decade(s)`, `century`, `centuries`, `millennium`, `millennia`. |
 | `{DIRECTION}` | Preposizione che descrive quando confrontare la data con. Può essere una delle seguenti parole: `before`, `after`, `from`. |
-| `{TIME}` | Può essere un valore letterale di marca temporale (`today`, `now`, `yesterday`, `tomorrow`), un&#39;unità di tempo relativa (una delle `this`, `last`, o `next` seguito da un&#39;unità di tempo), o un attributo timestamp. |
+| `{TIME}` | Può essere un valore letterale di marca temporale (`today`, `now`, `yesterday`, `tomorrow`), un&#39;unità di tempo relativa (una di `this`, `last` o `next` seguita da un&#39;unità di tempo) o un attributo di marca temporale. |
 
 >[!NOTE]
 >
->Uso della parola `on` è facoltativo. È lì per migliorare la leggibilità di alcune combinazioni, come `timestamp occurs on date(2019,12,31)`.
+>L&#39;utilizzo della parola `on` è facoltativo. È possibile migliorarne la leggibilità per alcune combinazioni, ad esempio `timestamp occurs on date(2019,12,31)`.
 
 **Esempio**
 
@@ -157,15 +157,15 @@ La query PQL seguente verifica se l&#39;articolo è stato venduto la settimana s
 product.saleDate occurs last week
 ```
 
-La query PQL seguente verifica se un articolo è stato venduto tra l’8 gennaio 2015 e il 1 luglio 2017.
+La seguente query di PQL verifica se un articolo è stato venduto tra l’8 gennaio 2015 e il 1 luglio 2017.
 
 ```sql
 product.saleDate occurs between date(2015, 1, 8) and date(2017, 7, 1)
 ```
 
-## Subito
+## Ora
 
-`now` è una parola riservata che rappresenta la marca temporale dell’esecuzione PQL.
+`now` è una parola riservata che rappresenta la marca temporale dell&#39;esecuzione di PQL.
 
 **Esempio**
 
@@ -177,7 +177,7 @@ product.saleDate occurs = 3 hours before now
 
 ## Oggi
 
-`today` è una parola riservata che rappresenta la marca temporale dell’inizio del giorno dell’esecuzione PQL.
+`today` è una parola riservata che rappresenta il timestamp dell&#39;inizio del giorno dell&#39;esecuzione di PQL.
 
 **Esempio**
 
@@ -189,4 +189,4 @@ person.birthday occurs = 3 days before today
 
 ## Passaggi successivi
 
-Dopo aver appreso le funzioni di data e ora, puoi utilizzarle all’interno delle query PQL. Per ulteriori informazioni su altre funzioni PQL, leggere [Panoramica sulla lingua delle query di profilo](./overview.md).
+Dopo aver appreso le funzioni di data e ora, puoi utilizzarle all’interno delle query PQL. Per ulteriori informazioni su altre funzioni di PQL, leggere la [panoramica di Profile Query Language](./overview.md).

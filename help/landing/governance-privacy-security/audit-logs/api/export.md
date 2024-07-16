@@ -4,14 +4,14 @@ description: Scopri come esportare gli eventi di audit in Experience Platform ut
 exl-id: 76c5de76-e391-4258-afd8-ddb2c8a9443f
 source-git-commit: c7887391481def872c40dd6ed1193bf562b9d0cf
 workflow-type: tm+mt
-source-wordcount: '157'
-ht-degree: 6%
+source-wordcount: '158'
+ht-degree: 4%
 
 ---
 
 # Esportare un elenco di eventi di audit
 
-Per recuperare i dati degli eventi, devi effettuare una richiesta GET al `/audit/export` endpoint, specificando gli eventi da recuperare nel payload.
+È possibile recuperare i dati degli eventi effettuando una richiesta GET all&#39;endpoint `/audit/export`, specificando gli eventi da recuperare nel payload.
 
 **Formato API**
 
@@ -41,4 +41,4 @@ curl -X POST \
 
 **Risposta**
 
-I risultati vengono generati in un file CSV per l’esportazione. In caso di esito positivo, la risposta restituisce HTTP 307 senza corpo di risposta. Un collegamento al file di esportazione è disponibile nella sezione `Location` intestazione di risposta.
+I risultati vengono generati in un file CSV per l’esportazione. In caso di esito positivo, la risposta restituisce HTTP 307 senza corpo di risposta. Nell&#39;intestazione di risposta `Location` è disponibile un collegamento al file di esportazione.

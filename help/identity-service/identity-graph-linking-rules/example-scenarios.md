@@ -28,7 +28,7 @@ Esistono casi in cui si possono verificare più accessi su un singolo dispositiv
 | Chiosco pubblico | I viaggiatori che si registrano in aeroporto utilizzando il proprio ID fedeltà per effettuare il check-in delle borse e stampare le carte d’imbarco. |
 | Call center | Il personale del call center accede a un singolo dispositivo per conto dei clienti che chiamano l’assistenza clienti per risolvere i problemi. |
 
-![shared-devices](../images/identity-settings/shared-devices.png)
+![dispositivi condivisi](../images/identity-settings/shared-devices.png)
 
 In questi casi, dal punto di vista del grafico, senza limiti abilitati, un singolo ECID sarà collegato a più ID del sistema di gestione delle relazioni con i clienti.
 
@@ -41,7 +41,7 @@ Con le regole di collegamento del grafico delle identità, puoi:
 
 Ci sono anche esempi di utenti che forniscono valori falsi come numeri di telefono e/o indirizzi e-mail al momento della registrazione. In questi casi, se i limiti non sono abilitati, le identità relative a telefono/e-mail finiranno per essere collegate a più ID CRM diversi.
 
-![invalid-email-phone](../images/identity-settings/invalid-email-phone.png)
+![email-phone non valido](../images/identity-settings/invalid-email-phone.png)
 
 Con le regole di collegamento del grafico delle identità, puoi:
 
@@ -58,7 +58,7 @@ In alcuni casi, valori di identità errati e non univoci vengono acquisiti nel s
 
 Queste identità possono causare i seguenti grafici, in cui più ID del sistema di gestione delle relazioni con i clienti vengono uniti insieme all’identità &quot;errata&quot;:
 
-![bad-data](../images/identity-settings/bad-data.png)
+![dati errati](../images/identity-settings/bad-data.png)
 
 Con le regole di collegamento del grafico delle identità puoi configurare l’ID del sistema di gestione delle relazioni con i clienti come identificatore univoco per evitare la compressione del profilo indesiderata dovuta a questo tipo di dati.
 

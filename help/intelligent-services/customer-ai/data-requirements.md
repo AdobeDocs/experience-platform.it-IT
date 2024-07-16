@@ -8,7 +8,7 @@ description: Scopri di più sugli eventi, gli input e gli output richiesti utili
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
 source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
 workflow-type: tm+mt
-source-wordcount: '2484'
+source-wordcount: '2505'
 ht-degree: 1%
 
 ---
@@ -26,9 +26,9 @@ Di seguito sono riportati i passaggi per creare modelli di propensione e identif
 
 2. Assegnare priorità ai casi d’uso: quali sono le priorità più alte per l’azienda?
 
-3. Creare modelli in Customer AI: guarda questo [tutorial rapido](https://experienceleague.adobe.com/docs/platform-learn/tutorials/intelligent-services/configure-customer-ai.html?lang=it) e fai riferimento al nostro [Guida all’interfaccia utente](../customer-ai/user-guide/configure.md) un processo dettagliato per la creazione di un modello.
+3. Crea modelli in IA per l&#39;analisi dei clienti: guarda questa [esercitazione rapida](https://experienceleague.adobe.com/docs/platform-learn/tutorials/intelligent-services/configure-customer-ai.html?lang=it) e fai riferimento alla [guida dell&#39;interfaccia utente](../customer-ai/user-guide/configure.md) per un processo dettagliato per la creazione di un modello.
 
-4. [Creare segmenti](../customer-ai/user-guide/create-segment.md) utilizzo dei risultati del modello.
+4. [Crea segmenti](../customer-ai/user-guide/create-segment.md) utilizzando i risultati del modello.
 
 5. Intraprendere azioni aziendali mirate in base a questi segmenti. Monitora i risultati e ripeti le azioni da migliorare.
 
@@ -36,10 +36,10 @@ Di seguito sono riportati alcuni esempi di configurazioni per il primo modello. 
 
 | Passaggio | Definizione | Esempio |
 | ---- | ------ | ------- |
-| Configurazione | Specifica le informazioni di base sul modello. | **Nome**: modello di propensione all’acquisto della matita <br> **Tipo di modello**: Conversione |
-| Seleziona dati | Specifica i set di dati utilizzati per generare il modello. | **Set di dati**: set di dati di Adobe Analytics <br> **Identità**: assicurati che la colonna Identity per ogni set di dati sia impostata come identità comune. |
-| Definisci obiettivo | Definisci l’obiettivo, la popolazione idonea, gli eventi personalizzati e gli attributi del profilo. | **Obiettivo di previsione**: Seleziona `commerce.purchases.value` è uguale a matita <br> **Finestra Risultato**: 30 giorni. |
-| Imposta opzioni | Imposta la pianificazione per l’aggiornamento del modello e abilita i punteggi per il profilo | **Pianificazione**: Settimanale <br> **Abilita per profilo**: questo deve essere abilitato affinché l’output del modello possa essere utilizzato nella segmentazione. |
+| Configurazione | Specifica le informazioni di base sul modello. | **Nome**: modello propensione all&#39;acquisto della matita <br> **Tipo di modello**: conversione |
+| Seleziona dati | Specifica i set di dati utilizzati per generare il modello. | **Set di dati**: set di dati Adobe Analytics <br> **Identità**: verificare che la colonna Identity per ogni set di dati sia impostata come identità comune. |
+| Definisci obiettivo | Definisci l’obiettivo, la popolazione idonea, gli eventi personalizzati e gli attributi del profilo. | **Obiettivo di previsione**: selezionare `commerce.purchases.value` equivale a matita <br> **Finestra risultati**: 30 giorni. |
+| Imposta opzioni | Imposta la pianificazione per l’aggiornamento del modello e abilita i punteggi per il profilo | **Pianificazione**: <br> settimanali **Attiva per profilo**: è necessario abilitarlo affinché l&#39;output del modello possa essere utilizzato nella segmentazione. |
 
 ## Panoramica dei dati {#data-overview}
 
@@ -47,16 +47,16 @@ Le sezioni seguenti descrivono i diversi eventi richiesti, input e output utiliz
 
 IA per l’analisi dei clienti funziona analizzando i seguenti set di dati per prevedere i punteggi di propensione di abbandono (quando è probabile che un cliente smetta di utilizzare il prodotto) o conversione (quando è probabile che un cliente effettui un acquisto):
 
-- Dati di Adobe Analytics utilizzando [Connettore di origine di Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
-- Adobe Audience Manager dati utilizzando [Connettore sorgente in Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)
-- [Set di dati di Experience Event](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html)
-- [Set di dati di Consumer Experience Event](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html#cee-schema)
+- Dati di Adobe Analytics tramite il [connettore di origine di Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
+- Dati Adobe Audience Manager tramite il [connettore di origine Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)
+- [Set di dati evento esperienza](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html)
+- [Set di dati evento esperienza del consumatore](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html#cee-schema)
 
-Puoi aggiungere più set di dati da origini diverse se ciascuno di essi condivide lo stesso tipo di identità (spazio dei nomi), ad esempio un ECID. Per ulteriori informazioni sull’aggiunta di più set di dati, consulta [Guida utente di Customer AI](../customer-ai/user-guide/configure.md).
+Puoi aggiungere più set di dati da origini diverse se ciascuno di essi condivide lo stesso tipo di identità (spazio dei nomi), ad esempio un ECID. Per ulteriori informazioni sull&#39;aggiunta di più set di dati, visita la [guida utente di IA per l&#39;analisi dei clienti](../customer-ai/user-guide/configure.md).
 
 >[!IMPORTANT]
 >
->I connettori sorgente richiedono fino a quattro settimane per la retrocompilazione dei dati. Se hai impostato di recente un connettore, è necessario verificare che il set di dati abbia la lunghezza minima dei dati richiesta per IA per l’analisi dei clienti. Rivedi il [dati storici](#data-requirements) per verificare di disporre di dati sufficienti per l’obiettivo predittivo.
+>I connettori Source richiedono fino a quattro settimane per la retrocompilazione dei dati. Se hai impostato di recente un connettore, è necessario verificare che il set di dati abbia la lunghezza minima dei dati richiesta per IA per l’analisi dei clienti. Rivedi la sezione [dati storici](#data-requirements) per verificare di disporre di dati sufficienti per l&#39;obiettivo di previsione.
 
 La tabella seguente illustra alcuni termini comuni utilizzati in questo documento:
 
@@ -65,15 +65,15 @@ La tabella seguente illustra alcuni termini comuni utilizzati in questo document
 | [Experience Data Model (XDM)](../../xdm/home.md) | XDM è il framework fondamentale che consente a Adobe Experience Cloud, con tecnologia Adobe Experience Platform, di inviare il messaggio giusto alla persona giusta, sul canale giusto, nel momento esatto giusto. Platform utilizza il sistema XDM per organizzare i dati in un modo che ne semplifica l’utilizzo per i servizi Platform. |
 | [Schema XDM](../../xdm/schema/composition.md) | Experience Platform utilizza gli schemi per descrivere la struttura dei dati in modo coerente e riutilizzabile. Definendo i dati in modo coerente tra i sistemi, diventa più semplice mantenere un significato e quindi ottenere valore dai dati. Prima di poter acquisire i dati in Platform, è necessario comporre uno schema per descrivere la struttura dei dati e fornire vincoli al tipo di dati che possono essere contenuti all’interno di ciascun campo. Gli schemi sono costituiti da una classe XDM di base e da zero o più gruppi di campi schema. |
 | [Classe XDM](../../xdm/schema/field-constraints.md) | Tutti gli schemi XDM descrivono dati che possono essere classificati come `Experience Event`. Il comportamento dei dati di uno schema è definito dalla classe dello schema, che viene assegnata a uno schema al momento della creazione. Le classi XDM descrivono il minor numero di proprietà che uno schema deve contenere per rappresentare un particolare comportamento di dati. |
-| [Gruppi di campi](../../xdm/schema/composition.md) | Componente che definisce uno o più campi in uno schema. I gruppi di campi impongono il modo in cui i loro campi vengono visualizzati nella gerarchia dello schema e pertanto presentano la stessa struttura in ogni schema in cui sono inclusi. I gruppi di campi sono compatibili solo con classi specifiche, identificate dalle rispettive `meta:intendedToExtend` attributo. |
+| [Gruppi di campi](../../xdm/schema/composition.md) | Componente che definisce uno o più campi in uno schema. I gruppi di campi impongono il modo in cui i loro campi vengono visualizzati nella gerarchia dello schema e pertanto presentano la stessa struttura in ogni schema in cui sono inclusi. I gruppi di campi sono compatibili solo con classi specifiche, identificate dal relativo attributo `meta:intendedToExtend`. |
 | [Tipo di dati](../../xdm/schema/composition.md) | Componente che può anche fornire uno o più campi per uno schema. Tuttavia, a differenza dei gruppi di campi, i tipi di dati non sono vincolati a una particolare classe. Questo rende i tipi di dati un’opzione più flessibile per descrivere strutture di dati comuni riutilizzabili in più schemi con classi potenzialmente diverse. I tipi di dati descritti in questo documento sono supportati dagli schemi CEE e Adobe Analytics. |
-| [Profilo cliente in tempo reale](../../profile/home.md) | Real-time Customer Profile fornisce un profilo consumer centralizzato per una gestione mirata e personalizzata delle esperienze. Ogni profilo contiene dati aggregati in tutti i sistemi, nonché resoconti con marca temporale utilizzabili di eventi che hanno coinvolto l’individuo che si sono verificati in qualsiasi sistema utilizzato con Experienci Platform. |
+| [Profilo cliente in tempo reale](../../profile/home.md) | Real-time Customer Profile fornisce un profilo consumer centralizzato per una gestione mirata e personalizzata delle esperienze. Ogni profilo contiene dati aggregati in tutti i sistemi, nonché resoconti con marca temporale utilizzabili di eventi che hanno coinvolto l’individuo che si sono verificati in qualsiasi sistema utilizzato con Experience Platform. |
 
 ## Dati di input di IA per l’analisi dei clienti {#customer-ai-input-data}
 
 Per i set di dati di input, come Adobe Analytics e Adobe Audience Manager, i rispettivi connettori di origine mappano direttamente gli eventi in questi gruppi di campi standard (Commerce, Web, Application e Search) per impostazione predefinita durante il processo di connessione. La tabella seguente mostra i campi evento nei gruppi di campi standard predefiniti per IA per l’analisi dei clienti.
 
-Per ulteriori informazioni sulla mappatura dei dati di Adobe Analytics o di Audienci Manager, consulta l’Audience Manager Mappature dei campi di Analytics [guida alle mappature dei campi](../../sources/connectors/adobe-applications/mapping/audience-manager.md).
+Per ulteriori informazioni sulla mappatura dei dati di Adobe Analytics o di Audience Manager, consulta la guida alle mappature dei campi di Analytics o l&#39;Audience Manager [guida alle mappature dei campi](../../sources/connectors/adobe-applications/mapping/audience-manager.md).
 
 Puoi utilizzare gli schemi XDM di Experience Event o Consumer Experience Event per set di dati di input che non vengono compilati tramite uno dei connettori precedenti. Durante il processo di creazione dello schema è possibile aggiungere altri gruppi di campi XDM. I gruppi di campi possono essere forniti per Adobe, come i gruppi di campi standard o i gruppi di campi personalizzati, che corrispondono alla rappresentazione dei dati in Platform.
 
@@ -91,7 +91,7 @@ Gli Eventi di esperienza vengono utilizzati per determinare i vari comportamenti
 
 IA per l’analisi dei clienti utilizza gli eventi in questi quattro gruppi di campi standard per impostazione predefinita: Commerce, Web, Application e Search. Non è necessario disporre di dati per ogni evento nei gruppi di campi standard elencati di seguito, ma per alcuni scenari sono richiesti determinati eventi. Se sono disponibili eventi nei gruppi di campi standard, si consiglia di includerli nello schema. Ad esempio, se desideri creare un modello di IA per l’analisi dei clienti per prevedere gli eventi di acquisto, è utile disporre di dati dai gruppi di campi Commerce e Dettagli pagina web.
 
-Per visualizzare un gruppo di campi nell’interfaccia utente di Platform, seleziona la **[!UICONTROL Schemi]** nella barra a sinistra, quindi seleziona il pulsante **[!UICONTROL Gruppi di campi]** scheda.
+Per visualizzare un gruppo di campi nell&#39;interfaccia utente di Platform, seleziona la scheda **[!UICONTROL Schemi]** nella barra a sinistra, quindi la scheda **[!UICONTROL Gruppi di campi]**.
 
 | Gruppo di campi | Tipo di evento | Percorso campo XDM |
 | --- | --- | --- |
@@ -102,7 +102,7 @@ Per visualizzare un gruppo di campi nell’interfaccia utente di Platform, selez
 |  | productListRemovals | <li> `commerce.productListRemovals.value` </li> <li> `productListItems.SKU` </li> |
 |  | productListOpens | <li> `commerce.productListOpens.value` </li> <li> `productListItems.SKU` </li> |
 |  | productViews | <li> `commerce.productViews.value` </li> <li> `productListItems.SKU` </li> |
-| [!UICONTROL Dettagli web] | webVisit | `web.webPageDetails.name` |
+| [!UICONTROL Dettagli Web] | webVisit | `web.webPageDetails.name` |
 |  | webInteraction | `web.webInteraction.linkClicks.value` |
 | [!UICONTROL Dettagli applicazione] | applicationCloses | <li> `application.applicationCloses.value` </li> <li> `application.name` </li> |
 |  | applicationCrashed | <li> `application.crashes.value` </li> <li> `application.name` </li> |
@@ -111,13 +111,13 @@ Per visualizzare un gruppo di campi nell’interfaccia utente di Platform, selez
 |  | applicationInstalls | <li> application.installs.value </li> <li> `application.name` </li> |
 |  | applicationLaunches | <li> application.launches.value </li> <li> `application.name` </li> |
 |  | applicationUpgrades | <li> application.upgrades.value </li> <li> `application.name` </li> |
-| [!UICONTROL Dettagli di ricerca] | ricerca | `search.keywords` |
+| [!UICONTROL Dettagli ricerca] | ricerca | `search.keywords` |
 
-Inoltre, IA per l’analisi dei clienti può utilizzare i dati di abbonamento per generare modelli di abbandono migliori. I dati di abbonamento sono necessari per ogni profilo utilizzando [[!UICONTROL Abbonamento]](../../xdm/data-types/subscription.md) formato del tipo di dati. La maggior parte dei campi è facoltativa. Tuttavia, per un modello di abbandono ottimale, si consiglia vivamente di fornire dati per il maggior numero possibile di campi, ad esempio: `startDate`, `endDate`e ogni altro dettaglio pertinente. Rivolgiti al team del tuo account per ulteriore supporto su questa funzione.
+Inoltre, IA per l’analisi dei clienti può utilizzare i dati di abbonamento per generare modelli di abbandono migliori. I dati della sottoscrizione sono necessari per ogni profilo che utilizza il formato del tipo di dati [[!UICONTROL Sottoscrizione]](../../xdm/data-types/subscription.md). La maggior parte dei campi è facoltativa. Tuttavia, per un modello di abbandono ottimale, è consigliabile fornire i dati per il maggior numero possibile di campi, ad esempio `startDate`, `endDate` e qualsiasi altro dettaglio rilevante. Rivolgiti al team del tuo account per ulteriore supporto su questa funzione.
 
 ### Aggiunta di eventi personalizzati e attributi di profilo {#add-custom-events}
 
-Se disponi di informazioni da includere oltre a quelle predefinite [campi evento standard](#standard-events) utilizzato da Customer AI, puoi utilizzare [configurazione evento personalizzata](./user-guide/configure.md#custom-events) per migliorare i dati utilizzati dal modello.
+Se disponi di informazioni da includere oltre ai [campi evento standard](#standard-events) predefiniti utilizzati da IA analisi clienti, puoi utilizzare la [configurazione evento personalizzata](./user-guide/configure.md#custom-events) per migliorare i dati utilizzati dal modello.
 
 #### Quando utilizzare eventi personalizzati
 
@@ -143,9 +143,9 @@ Di seguito sono riportati alcuni esempi di eventi personalizzati specifici del s
 
 | Settore | Eventi personalizzati |
 | --- | --- |
-| Vendita al dettaglio | Transazione in-store<br>Iscriviti alla carta club<br>Clip coupon mobile. |
-| Intrattenimento | Iscrizione alla stagione di acquisto <br> Trasmetti video. |
-| Ricettività | Effettuare la prenotazione del ristorante <br> Acquista punti fedeltà. |
+| Vendita al dettaglio | Transazione in-store<br>Iscriviti alla carta del club<br>Ritaglia coupon mobile. |
+| Intrattenimento | Acquista l&#39;iscrizione alla stagione <br> Video in streaming. |
+| Ricettività | Effettuare la prenotazione del ristorante <br> Acquistare punti fedeltà. |
 | Viaggi | Aggiungi informazioni sul viaggiatore conosciuto Acquista miglia. |
 | Comunicazioni | Piano di aggiornamento/downgrade/annullamento. |
 
@@ -185,7 +185,7 @@ Per decidere la durata minima richiesta dei dati esistenti nel sistema:
 
    - Dati richiesti = 60 giorni + 30 giorni = 90 giorni
 
-- Desideri prevedere se è probabile che l’utente acquisti un orologio nei prossimi 7 giorni **senza** fornendo una popolazione ammissibile esplicita. In questo caso, la popolazione ammissibile viene considerata automaticamente &quot;coloro che hanno avuto attività negli ultimi 45 giorni&quot; e la finestra di risultato è di 7 giorni.
+- Vuoi prevedere se è probabile che l&#39;utente acquisti un orologio nei prossimi 7 giorni **senza** fornire una popolazione idonea esplicita. In questo caso, la popolazione ammissibile viene considerata automaticamente &quot;coloro che hanno avuto attività negli ultimi 45 giorni&quot; e la finestra di risultato è di 7 giorni.
 
    - Intervallo di lookback di idoneità = 45 giorni
 
@@ -207,9 +207,9 @@ Anche se IA per l’analisi dei clienti richiede un periodo di tempo minimo per 
 
 ## Dati di output di IA per l’analisi dei clienti {#customer-ai-output-data}
 
-IA per l’analisi dei clienti genera diversi attributi per singoli profili ritenuti idonei. Esistono due modi per utilizzare il punteggio (output) in base al provisioning. Se disponi di un set di dati abilitato per Real-time Customer Profile, puoi sfruttare le informazioni provenienti da Real-time Customer Profile in [Generatore di segmenti](../../segmentation/ui/segment-builder.md). Se non hai un set di dati abilitato per il profilo, puoi [scaricare l’output di Customer AI](./user-guide/download-scores.md) set di dati disponibile nel data lake.
+IA per l’analisi dei clienti genera diversi attributi per singoli profili ritenuti idonei. Esistono due modi per utilizzare il punteggio (output) in base al provisioning. Se disponi di un set di dati abilitato per Real-time Customer Profile, puoi sfruttare le informazioni provenienti da Real-time Customer Profile nel [Generatore di segmenti](../../segmentation/ui/segment-builder.md). Se non disponi di un set di dati abilitato per il profilo, puoi [scaricare l&#39;output di IA per l&#39;analisi dei clienti](./user-guide/download-scores.md) set di dati disponibile nel data lake.
 
-Puoi trovare il set di dati di output in Platform **Set di dati** Workspace. Tutti i set di dati di output di IA per l’analisi dei clienti iniziano con il nome **Punteggi di Customer AI - NAME_OF_APP**. Analogamente, tutti gli schemi di output di IA per l’analisi dei clienti iniziano con il nome **Schema di IA per l’analisi dei clienti - Name_of_app**.
+Puoi trovare il set di dati di output nell&#39;area di lavoro **Set di dati** di Platform. Tutti i set di dati di output di IA per l&#39;analisi dei clienti iniziano con il nome **Punteggi di IA per l&#39;analisi dei clienti - NAME_OF_APP**. Analogamente, tutti gli schemi di output di IA per l&#39;analisi dei clienti iniziano con il nome **Schema di IA per l&#39;analisi dei clienti - Name_of_app**.
 
 ![Nome dei set di dati di output in Customer AI](./images/user-guide/cai-schema-name-of-app.png)
 
@@ -226,4 +226,4 @@ La tabella seguente descrive i vari attributi trovati nell’output di Customer 
 
 ## Passaggi successivi {#next-steps}
 
-Una volta preparati i dati e assicurati che tutte le credenziali e gli schemi siano presenti, fai riferimento a [Configurare un’istanza di Customer AI](./user-guide/configure.md) guida, che illustra un tutorial dettagliato per creare un’istanza di Customer AI.
+Dopo aver preparato i dati e aver verificato che tutte le credenziali e gli schemi siano presenti, consulta la [guida Configurare un&#39;istanza di IA per l&#39;analisi dei clienti](./user-guide/configure.md), che illustra una procedura dettagliata per la creazione di un&#39;istanza di IA per l&#39;analisi dei clienti.

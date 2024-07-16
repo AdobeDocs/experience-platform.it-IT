@@ -19,15 +19,15 @@ Questo documento fornisce una serie di istruzioni per creare un modello di proge
 
 ## Introduzione
 
-Gli esempi SQL illustrati in questo documento richiedono una conoscenza approfondita delle funzionalità di blocco anonimo e snapshot. Si consiglia di leggere il [query di blocco anonime di esempio](./anonymous-block.md) e anche la [clausola snapshot](../sql/syntax.md#snapshot-clause) documentazione.
+Gli esempi SQL illustrati in questo documento richiedono una conoscenza approfondita delle funzionalità di blocco anonimo e snapshot. Si consiglia di leggere la documentazione [query di blocco anonime di esempio](./anonymous-block.md) e la documentazione [clausola snapshot](../sql/syntax.md#snapshot-clause).
 
-Per informazioni su qualsiasi terminologia utilizzata in questa guida, consulta la [Guida alla sintassi SQL](../sql/syntax.md).
+Per informazioni su qualsiasi terminologia utilizzata in questa guida, fare riferimento alla [guida alla sintassi SQL](../sql/syntax.md).
 
 ## Caricamento incrementale dei dati
 
 I passaggi seguenti mostrano come creare e caricare i dati in modo incrementale utilizzando gli snapshot e la funzione di blocco anonimo. Il modello struttura può essere utilizzato come modello per la propria sequenza di query.
 
-1. Creare un `checkpoint_log` tabella per tenere traccia dello snapshot più recente utilizzato per elaborare correttamente i dati. Tabella di tracciamento (`checkpoint_log` in questo esempio) deve prima essere inizializzato in `null` per elaborare in modo incrementale un set di dati.
+1. Creare una tabella `checkpoint_log` per tenere traccia dello snapshot più recente utilizzato per elaborare correttamente i dati. La tabella di rilevamento (`checkpoint_log` in questo esempio) deve prima essere inizializzata in `null` per elaborare in modo incrementale un set di dati.
 
    ```SQL
    DROP TABLE IF EXISTS checkpoint_log;
@@ -40,7 +40,7 @@ I passaggi seguenti mostrano come creare e caricare i dati in modo incrementale 
       WHERE false;
    ```
 
-1. Popolare il `checkpoint_log` con un record vuoto per il set di dati che richiede l’elaborazione incrementale. `DIM_TABLE_ABC` è il set di dati da elaborare nell’esempio seguente. Alla prima trasformazione `DIM_TABLE_ABC`, il `last_snapshot_id` è inizializzato come `null`. Questo consente di elaborare l’intero set di dati la prima volta e in modo incrementale in seguito.
+1. Popolare la tabella `checkpoint_log` con un record vuoto per il set di dati che richiede l&#39;elaborazione incrementale. `DIM_TABLE_ABC` è il set di dati da elaborare nell&#39;esempio seguente. Alla prima elaborazione di `DIM_TABLE_ABC`, `last_snapshot_id` è inizializzato come `null`. Questo consente di elaborare l’intero set di dati la prima volta e in modo incrementale in seguito.
 
    ```SQL
    INSERT INTO
@@ -52,17 +52,17 @@ I passaggi seguenti mostrano come creare e caricare i dati in modo incrementale 
          CURRENT_TIMESTAMP process_timestamp;
    ```
 
-1. Quindi, inizializza `DIM_TABLE_ABC_Incremental` per contenere l&#39;output elaborato da `DIM_TABLE_ABC`. Blocco anonimo in **obbligatorio** La sezione di esecuzione dell&#39;esempio SQL seguente, come descritto nei passaggi da uno a quattro, viene eseguita in sequenza per elaborare i dati in modo incrementale.
+1. Inizializzare quindi `DIM_TABLE_ABC_Incremental` per contenere l&#39;output elaborato da `DIM_TABLE_ABC`. Il blocco anonimo nella sezione di esecuzione **required** dell&#39;esempio SQL seguente, come descritto nei passaggi da uno a quattro, viene eseguito in sequenza per elaborare i dati in modo incrementale.
 
-   1. Imposta il `from_snapshot_id` che indica da dove inizia l’elaborazione. Il `from_snapshot_id` nell’esempio viene interrogato da `checkpoint_log` tabella da utilizzare con `DIM_TABLE_ABC`. Nell&#39;esecuzione iniziale, l&#39;ID snapshot sarà `null` ciò significa che verrà elaborato l’intero set di dati.
-   1. Imposta il `to_snapshot_id` come ID snapshot corrente della tabella di origine (`DIM_TABLE_ABC`). Nell’esempio, questa viene eseguita dalla tabella dei metadati della tabella di origine.
-   1. Utilizza il `CREATE` parola chiave da creare `DIM_TABLE_ABC_Incremenal` come tabella di destinazione. La tabella di destinazione salva in modo permanente i dati elaborati dal set di dati di origine (`DIM_TABLE_ABC`). In questo modo i dati elaborati dalla tabella di origine tra `from_snapshot_id` e `to_snapshot_id`, da aggiungere in modo incrementale alla tabella di destinazione.
-   1. Aggiornare il `checkpoint_log` tabella con `to_snapshot_id` per i dati di origine che `DIM_TABLE_ABC` elaborato correttamente.
-   1. Se una delle query eseguite in sequenza del blocco anonimo ha esito negativo, il **facoltativo** viene eseguita la sezione delle eccezioni. Questo restituisce un errore e termina il processo.
+   1. Imposta `from_snapshot_id` che indica da dove inizia l&#39;elaborazione. Viene eseguita una query per `from_snapshot_id` nell&#39;esempio dalla tabella `checkpoint_log` per l&#39;utilizzo con `DIM_TABLE_ABC`. All&#39;esecuzione iniziale, l&#39;ID snapshot sarà `null`, il che significa che l&#39;intero set di dati verrà elaborato.
+   1. Imposta `to_snapshot_id` come ID snapshot corrente della tabella di origine (`DIM_TABLE_ABC`). Nell’esempio, questa viene eseguita dalla tabella dei metadati della tabella di origine.
+   1. Utilizzare la parola chiave `CREATE` per creare `DIM_TABLE_ABC_Incremenal` come tabella di destinazione. La tabella di destinazione mantiene i dati elaborati dal set di dati di origine (`DIM_TABLE_ABC`). Ciò consente di aggiungere in modo incrementale alla tabella di destinazione i dati elaborati dalla tabella di origine tra `from_snapshot_id` e `to_snapshot_id`.
+   1. Aggiornare la tabella `checkpoint_log` con `to_snapshot_id` per i dati di origine elaborati correttamente da `DIM_TABLE_ABC`.
+   1. Se una delle query eseguite in sequenza del blocco anonimo non riesce, viene eseguita la sezione dell&#39;eccezione **optional**. Questo restituisce un errore e termina il processo.
 
    >[!NOTE]
    >
-   >Il `history_meta('source table name')` è un metodo pratico utilizzato per accedere alle istantanee disponibili in un set di dati.
+   >`history_meta('source table name')` è un metodo pratico utilizzato per ottenere l&#39;accesso allo snapshot disponibile in un set di dati.
 
    ```SQL
    $$ BEGIN
@@ -90,11 +90,11 @@ I passaggi seguenti mostrano come creare e caricare i dati in modo incrementale 
    $$;
    ```
 
-1. Utilizza la logica di caricamento dati incrementale nell’esempio di blocco anonimo seguente per consentire a tutti i nuovi dati dal set di dati di origine (dal timestamp più recente) di essere elaborati e aggiunti alla tabella di destinazione a una cadenza regolare. Nell’esempio, i dati diventano `DIM_TABLE_ABC` verrà elaborato e aggiunto a `DIM_TABLE_ABC_incremental`.
+1. Utilizza la logica di caricamento dati incrementale nell’esempio di blocco anonimo seguente per consentire a tutti i nuovi dati dal set di dati di origine (dal timestamp più recente) di essere elaborati e aggiunti alla tabella di destinazione a una cadenza regolare. Nell&#39;esempio, le modifiche dei dati a `DIM_TABLE_ABC` verranno elaborate e aggiunte a `DIM_TABLE_ABC_incremental`.
 
    >[!NOTE]
    >
-   > `_ID` è la chiave primaria in entrambi `DIM_TABLE_ABC_Incremental` e `SELECT history_meta('DIM_TABLE_ABC')`.
+   > `_ID` è la chiave primaria in `DIM_TABLE_ABC_Incremental` e `SELECT history_meta('DIM_TABLE_ABC')`.
 
    ```SQL
    $$ BEGIN
@@ -128,9 +128,9 @@ Questa logica può essere applicata a qualsiasi tabella per eseguire caricamenti
 
 >[!IMPORTANT]
 >
->Scadenza metadati snapshot dopo **due** giorni. Uno snapshot scaduto invalida la logica dello script fornito in precedenza.
+>I metadati dello snapshot scadono dopo **due** giorni. Uno snapshot scaduto invalida la logica dello script fornito in precedenza.
 
-Per risolvere il problema di un ID di snapshot scaduto, inserisci il seguente comando all’inizio del blocco anonimo. La seguente riga di codice sostituisce la `@from_snapshot_id` con la prima versione disponibile `snapshot_id` dai metadati.
+Per risolvere il problema di un ID di snapshot scaduto, inserisci il seguente comando all’inizio del blocco anonimo. La seguente riga di codice sostituisce `@from_snapshot_id` con il primo `snapshot_id` disponibile dai metadati.
 
 ```SQL
 SET resolve_fallback_snapshot_on_failure=true;
@@ -166,4 +166,4 @@ $$;
 
 ## Passaggi successivi
 
-Una volta letto questo documento, sarai in grado di comprendere meglio come utilizzare le funzioni di blocco e istantanea anonime per eseguire caricamenti incrementali e di applicare questa logica alle tue query specifiche. Per informazioni generali sull’esecuzione delle query, consulta la sezione [guida all’esecuzione delle query in Query Service](../best-practices/writing-queries.md).
+Una volta letto questo documento, sarai in grado di comprendere meglio come utilizzare le funzioni di blocco e istantanea anonime per eseguire caricamenti incrementali e di applicare questa logica alle tue query specifiche. Per informazioni generali sull&#39;esecuzione delle query, leggere la [guida sull&#39;esecuzione delle query in Query Service](../best-practices/writing-queries.md).

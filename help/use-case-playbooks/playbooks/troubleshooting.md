@@ -22,11 +22,11 @@ Durante la creazione di un&#39;istanza di un playbook, è possibile che venga vi
 
 ![Risoluzione dei problemi](/help/use-case-playbooks/assets/playbooks/troubleshooting/troubleshooting-ajo.png)
 
-Questo perché i playbook Journey Optimizer creano messaggi per i canali e-mail, push e SMS. Leggi le [introduzione](/help/use-case-playbooks/playbooks/get-started.md#configure-sandbox-and-channel-surfaces-in-journey-optimizer) per configurare le diverse superfici.
+Questo perché i playbook Journey Optimizer creano messaggi per i canali e-mail, push e SMS. Per configurare le diverse superfici, leggere la guida [guida introduttiva](/help/use-case-playbooks/playbooks/get-started.md#configure-sandbox-and-channel-surfaces-in-journey-optimizer).
 
 ## Stato *non riuscito* durante la creazione di una nuova istanza {#status-failed}
 
-Se durante il tentativo di creazione di un&#39;istanza viene visualizzato un messaggio di errore, è possibile che l&#39;amministratore non abbia concesso le autorizzazioni utente necessarie. Un playbook contiene molte risorse diverse e l’utente ha bisogno delle autorizzazioni per crearle per poter creare correttamente l’istanza del playbook. Consulta la [autorizzazioni](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) sezione di questa guida sulla configurazione delle autorizzazioni.
+Se durante il tentativo di creazione di un&#39;istanza viene visualizzato un messaggio di errore, è possibile che l&#39;amministratore non abbia concesso le autorizzazioni utente necessarie. Un playbook contiene molte risorse diverse e l’utente ha bisogno delle autorizzazioni per crearle per poter creare correttamente l’istanza del playbook. Consulta la sezione [autorizzazioni](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) di questa guida sulla configurazione delle autorizzazioni.
 
 ## Errore di importazione {#import-failure}
 

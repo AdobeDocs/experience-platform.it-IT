@@ -5,8 +5,8 @@ description: Gestisci la customer experience collegando i tuoi dati in Platform 
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
 source-git-commit: 461545b7d06a4c54fb4037cf1eb2ba44dd6ee7b9
 workflow-type: tm+mt
-source-wordcount: '231'
-ht-degree: 12%
+source-wordcount: '224'
+ht-degree: 9%
 
 ---
 
@@ -20,14 +20,14 @@ Gestisci la customer experience collegando i tuoi dati in Adobe Experience Platf
 
 Attualmente, Platform supporta le destinazioni di Adobe elencate di seguito.
 
-Per comprendere la differenza tra connessioni ed estensioni, consulta [Connessioni](../../destination-types.md#connections) nella pagina Tipi e categorie di destinazione.
+Per comprendere la differenza tra connessioni ed estensioni, vedere [Connessioni](../../destination-types.md#connections) nella pagina Tipi e categorie di destinazione.
 
 ### Connessioni
 
 * [Connessione Adobe Advertising Cloud DSP](/help/destinations/catalog/advertising/adobe-advertising-cloud-connection.md)
 * [Connessione Adobe Campaign](../email-marketing/adobe-campaign.md)
 * [Connessione Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md)
-* [Pubblico Experience Cloud (Beta)](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
+* [(Beta) Experience Cloud di tipi di pubblico](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
 * [Connessione Marketo Engage](/help/destinations/catalog/adobe/marketo-engage.md)
 * [Connessione Marketo Measure Ultimate](/help/destinations/catalog/adobe/marketo-measure-ultimate.md)
 
@@ -35,10 +35,10 @@ Per comprendere la differenza tra connessioni ed estensioni, consulta [Connessio
 
 * [Estensione Adobe Advertising Cloud](../advertising/adobe-advertising-cloud.md)
 * [Estensione Adobe Analytics](../analytics/adobe-analytics.md)
-* [Estensione Adobe Media Analytics for Audio and Video](../analytics/adobe-video-analytics.md)
+* [Estensione Adobe Medium Analytics for Audio and Video](../analytics/adobe-video-analytics.md)
 * [Estensione Adobe Target](../personalization/adobe-target.md)
 * [Estensione Adobe Target v2](../personalization/adobe-target-v2.md)
-* [Estensione Audienci Manager DIL](../data-management/aam-dil-extension.md)
+* [Estensione Audience Manager DIL](../data-management/aam-dil-extension.md)
 * [Estensione del servizio Experience Cloud ID](../personalization/adobe-ecid.md)
 * [Estensione Marketo](../email/marketo.md)
 * [Estensione Marketo Munchkin](../email/marketo-munchkin.md)
@@ -46,6 +46,6 @@ Per comprendere la differenza tra connessioni ed estensioni, consulta [Connessio
 
 ## Experience Platform di condivisione del pubblico
 
-Utilizza la funzionalità di condivisione del pubblico Experienci Platform per condividere i tipi di pubblico Experienci Platform in altre destinazioni di Adobe. Per ulteriori informazioni, consulta la pagina seguente (si apre nel portale della documentazione di Audienci Manager):
+Utilizza la funzionalità di condivisione del pubblico Experience Platform per condividere i tipi di pubblico Experience Platform in altre destinazioni di Adobe. Per ulteriori informazioni, consulta la pagina seguente (si apre nel portale della documentazione di Audience Manager):
 
-* [Condivisione del pubblico di Experienci Platform con Adobe Audience Manager, Adobe Advertising Cloud e Adobe Target tramite l’integrazione dei servizi core](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+* [Experience Platform di condivisione del pubblico con Adobe Audience Manager, Adobe Advertising Cloud e Adobe Target tramite l&#39;integrazione dei servizi core](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)

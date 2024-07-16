@@ -5,11 +5,11 @@ exl-id: dbdd1c88-5c54-46be-9824-2f15cce3d160
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
 source-wordcount: '1052'
-ht-degree: 71%
+ht-degree: 70%
 
 ---
 
-# Tipi di evento per estensioni web
+# Tipi di eventi per le estensioni web
 
 >[!NOTE]
 >
@@ -27,7 +27,7 @@ Questo documento illustra come definire i tipi di evento per un’estensione web
 
 I tipi di evento sono definiti dalle estensioni e in genere sono costituiti dai seguenti elementi:
 
-1. A [visualizza](./views.md) mostrate nell’interfaccia di Experience Platform e nell’interfaccia di Data Collection, che consentono agli utenti di modificare le impostazioni per l’evento.
+1. Una [visualizzazione](./views.md) nell&#39;interfaccia utente di Experience Platform e nell&#39;interfaccia utente di Data Collection che consente agli utenti di modificare le impostazioni per l&#39;evento.
 2. Modulo libreria emesso all’interno della libreria runtime dei tag per interpretare le impostazioni e controllare che si verifichi una determinata attività.
 
 `module.exports` accetta sia i parametri `settings` che quelli `trigger`. Questo consente di personalizzare il tipo evento.
@@ -105,9 +105,9 @@ trigger({
 
 ## Rispetto dell’ordine delle regole
 
-I tag consentono agli utenti di ordinare le regole. Ad esempio, un utente crea due regole che utilizzano entrambe il tipo di evento per la modifica dell’orientamento, e desidera personalizzare l’ordine in cui queste si attivano. Supponendo che l’utente di Adobe Experience Platform specifichi il valore dell’ordine `2` per l’evento di modifica dell’orientamento nella regola A e un valore dell’ordine pari a `1` per l’evento di modifica dell’orientamento nella regola B. Questo indica che quando l’orientamento cambia su un dispositivo mobile, la regola B deve essere attivata prima della regola A (le regole vengono attivate in ordine, dal valore più basso a quello più alto).
+I tag consentono agli utenti di ordinare le regole. Ad esempio, un utente crea due regole che utilizzano entrambe il tipo di evento per la modifica dell’orientamento, e desidera personalizzare l’ordine in cui queste si attivano. Supponiamo che l&#39;utente di Adobe Experience Platform specifichi un valore di ordine di `2` per l&#39;evento di modifica dell&#39;orientamento nella regola A e un valore di ordine di `1` per l&#39;evento di modifica dell&#39;orientamento nella regola B. Questo indica che quando l’orientamento cambia su un dispositivo mobile, la regola B deve essere attivata prima della regola A (le regole vengono attivate in ordine, dal valore più basso a quello più alto).
 
-Come già detto, la funzione esportata nel modulo dell’evento verrà chiamata una volta per ogni regola configurata per l’utilizzo di quel tipo di evento. Ogni volta che viene chiamata la funzione esportata, viene passata una funzione `trigger` univoca associata a una regola specifica. Nello scenario appena descritto, la funzione esportata verrà chiamata una volta con un `trigger` funzione associata alla regola B e quindi di nuovo con `trigger` funzione associata alla regola A. La regola B viene prima perché l’utente le ha assegnato un valore di ordine inferiore rispetto alla regola A. Quando il modulo libreria rileva una modifica di orientamento, è importante chiamare `trigger` nello stesso ordine in cui sono state fornite al modulo libreria.
+Come già detto, la funzione esportata nel modulo dell’evento verrà chiamata una volta per ogni regola configurata per l’utilizzo di quel tipo di evento. Ogni volta che viene chiamata la funzione esportata, viene passata una funzione `trigger` univoca associata a una regola specifica. Nello scenario appena descritto, la funzione esportata verrà chiamata una volta con una funzione `trigger` associata alla regola B e di nuovo con una funzione `trigger` associata alla regola A. La regola B viene prima perché l&#39;utente le ha assegnato un valore di ordine inferiore rispetto alla regola A. Quando il modulo libreria rileva una modifica di orientamento, è importante chiamare le funzioni `trigger` nello stesso ordine in cui sono state fornite al modulo libreria.
 
 Nell’esempio di codice riportato di seguito, osserva che quando viene rilevata una modifica di orientamento, le funzioni di attivazione vengono chiamate nello stesso ordine in cui sono state fornite alla funzione esportata:
 

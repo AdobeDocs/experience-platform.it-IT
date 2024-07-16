@@ -4,14 +4,14 @@ description: I set di dati di esempio di Query Service consentono di eseguire qu
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
 source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '643'
 ht-degree: 0%
 
 ---
 
 # Esempi di set di dati
 
-Adobe Experience Platform Query Service fornisce set di dati di esempio come parte delle sue funzionalità di elaborazione delle query approssimative. I set di dati di esempio vengono creati con campioni casuali uniformi da quelli esistenti [!DNL Azure Data Lake Storage] (ADLS) utilizzando solo una percentuale di record rispetto all’originale. Questa percentuale è nota come tasso di campionamento. La regolazione della frequenza di campionamento per controllare il bilanciamento tra precisione e tempo di elaborazione consente di eseguire query esplorative sui big data con tempi di elaborazione notevolmente ridotti a scapito della precisione delle query.
+Adobe Experience Platform Query Service fornisce set di dati di esempio come parte delle sue funzionalità di elaborazione delle query approssimative. I set di dati di esempio vengono creati con campioni casuali uniformi dai set di dati [!DNL Azure Data Lake Storage] (ADLS) esistenti utilizzando solo una percentuale di record dell&#39;originale. Questa percentuale è nota come tasso di campionamento. La regolazione della frequenza di campionamento per controllare il bilanciamento tra precisione e tempo di elaborazione consente di eseguire query esplorative sui big data con tempi di elaborazione notevolmente ridotti a scapito della precisione delle query.
 
 Poiché molti utenti non hanno bisogno di una risposta esatta per un’operazione di aggregazione su un set di dati, l’esecuzione di una query approssimativa per restituire una risposta approssimativa è più efficiente per le query esplorative su set di dati di grandi dimensioni. Poiché i set di dati di esempio contengono solo una percentuale dei dati del set di dati originale, consente di scambiare la precisione delle query per ottenere un tempo di risposta migliore. In fase di lettura, Query Service deve analizzare un numero inferiore di righe, il che produce risultati più rapidamente rispetto alle query sull’intero set di dati.
 
@@ -26,19 +26,19 @@ Per facilitare la gestione degli esempi per l’elaborazione approssimativa dell
 
 ## Introduzione {#get-started}
 
-Per utilizzare le funzionalità di elaborazione delle query approssimative di creazione ed eliminazione descritte in questo documento, è necessario impostare il flag di sessione su `true`. Dalla riga di comando dell&#39;editor di query o del client PSQL immettere `SET aqp=true;` comando.
+Per utilizzare le funzionalità di elaborazione delle query approssimative di creazione ed eliminazione descritte in questo documento, è necessario impostare il flag di sessione su `true`. Dalla riga di comando dell&#39;editor di query o del client PSQL immettere il comando `SET aqp=true;`.
 
 >[!NOTE]
 >
 >Devi abilitare il flag di sessione ogni volta che accedi a Platform.
 
-![Editor query con il comando SET aqp=true; evidenziato.](../images/essential-concepts/set-session-flag.png)
+![Editor query con il comando &#39;SET aqp=true;&#39; evidenziato.](../images/essential-concepts/set-session-flag.png)
 
 ## Creare un esempio di set di dati casuale uniforme {#create-a-sample}
 
-Utilizza il `ANALYZE TABLE <table_name> TABLESAMPLE SAMPLERATE x` con un nome di set di dati per creare un campione casuale uniforme da tale set di dati.
+Utilizzare il comando `ANALYZE TABLE <table_name> TABLESAMPLE SAMPLERATE x` con un nome di set di dati per creare un campione casuale uniforme da tale set di dati.
 
-La frequenza di campionamento è la percentuale di record estratti dal set di dati originale. È possibile controllare la frequenza di campionamento utilizzando `TABLESAMPLE SAMPLERATE` parole chiave. In questo esempio, il valore di 5,0 equivale a una frequenza di campionamento del 50%. Un valore di 2,5 equivarrebbe al 25% e così via.
+La frequenza di campionamento è la percentuale di record estratti dal set di dati originale. È possibile controllare la frequenza di campionamento utilizzando le parole chiave `TABLESAMPLE SAMPLERATE`. In questo esempio, il valore di 5,0 equivale a una frequenza di campionamento del 50%. Un valore di 2,5 equivarrebbe al 25% e così via.
 
 >[!IMPORTANT]
 >
@@ -68,11 +68,11 @@ ANALYZE TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestam
 ANALYZE TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9') AND (product.name = "product1" OR product.name = "product2")) SAMPLERATE 10;
 ```
 
-Negli esempi forniti, il nome della tabella è `large_table`, la condizione del filtro nella tabella originale è `month(to_timestamp(timestamp)) in ('8', '9')`e la frequenza di campionamento è (X% dei dati filtrati), in questo caso `10`.
+Negli esempi forniti, il nome della tabella è `large_table`, la condizione del filtro nella tabella originale è `month(to_timestamp(timestamp)) in ('8', '9')` e la frequenza di campionamento è (X% dei dati filtrati), in questo caso `10`.
 
 ## Visualizza l’elenco degli esempi {#view-list-of-samples}
 
-Utilizza il `sample_meta()` per visualizzare l&#39;elenco dei campioni associati a una tabella ADLS.
+Utilizzare la funzione `sample_meta()` per visualizzare l&#39;elenco dei campioni associati a una tabella ADLS.
 
 ```sql
 SELECT sample_meta('example_dataset_name')
@@ -89,7 +89,7 @@ L’elenco degli esempi di set di dati viene visualizzato nel formato dell’ese
 
 ## Eseguire una query sul set di dati di esempio {#query-sample-datasets}
 
-Utilizza il `{EXAMPLE_DATASET_NAME}` per eseguire query dirette sulle tabelle di esempio. In alternativa, aggiungi `WITHAPPROXIMATE` parola chiave alla fine di una query e Query Service utilizza automaticamente l’esempio creato più di recente.
+Utilizzare `{EXAMPLE_DATASET_NAME}` per eseguire query dirette sulle tabelle di esempio. In alternativa, aggiungi la parola chiave `WITHAPPROXIMATE` alla fine di una query e Query Service utilizza automaticamente l’esempio creato più di recente.
 
 ```sql
 SELECT * FROM example_dataset_name WITHAPPROXIMATE;

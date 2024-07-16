@@ -4,51 +4,51 @@ description: Scopri come collegare un database Phoenix a Adobe Experience Platfo
 exl-id: b69d9593-06fe-4fff-88a9-7860e4e45eb7
 source-git-commit: efffd6ce1ed541ce20ee6500e42165465f2fa6a0
 workflow-type: tm+mt
-source-wordcount: '549'
-ht-degree: 5%
+source-wordcount: '547'
+ht-degree: 2%
 
 ---
 
-# Creare un [!DNL Phoenix] connessione di base tramite [!DNL Flow Service] API
+# Creare una connessione di base [!DNL Phoenix] utilizzando l&#39;API [!DNL Flow Service]
 
 Una connessione di base rappresenta la connessione autenticata tra un&#39;origine e Adobe Experience Platform.
 
-Questo tutorial descrive come creare una connessione di base e collegare [!DNL Phoenix] account a Adobe Experience Platform utilizzando [!DNL Flow Service] API.
+Questo tutorial illustra i passaggi necessari per creare una connessione di base e connettere l&#39;account [!DNL Phoenix] a Adobe Experience Platform utilizzando l&#39;API [!DNL Flow Service].
 
 ## Introduzione
 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Experience Platform:
 
-* [Sorgenti](../../../../home.md): Experienci Platform consente di acquisire dati da varie origini, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Experienci Platform.
-* [Sandbox](../../../../../sandboxes/home.md): Experienci Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Experienci Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Origini](../../../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Experience Platform.
+* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Experience Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per connettersi correttamente a [!DNL Phoenix] utilizzando [!DNL Flow Service] API.
+Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per connettersi correttamente a [!DNL Phoenix] utilizzando l&#39;API [!DNL Flow Service].
 
 ### Raccogli le credenziali richieste
 
-Per connettersi è necessario fornire le seguenti credenziali di autenticazione [!DNL Phoenix] da Experience Platform.
+Per connettere l&#39;account [!DNL Phoenix] a Experience Platform, è necessario fornire le credenziali di autenticazione seguenti.
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
-| `host` | Indirizzo IP o nome host del [!DNL Phoenix] server. |
-| `username` | Nome utente utilizzato per accedere a [!DNL Phoenix] Server. |
+| `host` | Indirizzo IP o nome host del server [!DNL Phoenix]. |
+| `username` | Nome utente utilizzato per accedere al server [!DNL Phoenix]. |
 | `password` | La password corrispondente all’utente. |
-| `port` | La porta TCP che [!DNL Phoenix] il server utilizza per l&#39;ascolto delle connessioni client. Se ci si connette a [!DNL Azure HDInsights], quindi specificare la porta come 443. Se questo parametro non viene specificato, il valore predefinito è 8765. |
-| `httpPath` | L’URL parziale corrispondente al [!DNL Phoenix] server. Specifica /hbasephoenix0 se si utilizza [!DNL Azure] Cluster HDInsight. |
+| `port` | Porta TCP utilizzata dal server [!DNL Phoenix] per l&#39;ascolto delle connessioni client. Se ci si connette a [!DNL Azure HDInsights], specificare la porta come 443. Se questo parametro non viene specificato, il valore predefinito è 8765. |
+| `httpPath` | URL parziale corrispondente al server [!DNL Phoenix]. Specificare /hbasephoenix0 se si utilizza il cluster HDInsights [!DNL Azure]. |
 | `enableSsl` | Valore booleano. Specifica se le connessioni al server sono crittografate tramite SSL. |
-| `connectionSpec.id` | La specifica di connessione restituisce le proprietà del connettore di un&#39;origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di origine. ID della specifica di connessione per [!DNL Phoenix] è: `102706fb-a5cd-42ee-afe0-bc42f017ff43` |
+| `connectionSpec.id` | La specifica di connessione restituisce le proprietà del connettore di un&#39;origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di origine. ID della specifica di connessione per [!DNL Phoenix]: `102706fb-a5cd-42ee-afe0-bc42f017ff43` |
 
-Per ulteriori informazioni su come iniziare, consulta [questo documento Phoenix](https://python-phoenixdb.readthedocs.io/en/latest/api.html).
+Per ulteriori informazioni su come iniziare, fare riferimento a [questo documento Phoenix](https://python-phoenixdb.readthedocs.io/en/latest/api.html).
 
 ### Utilizzo delle API di Platform
 
-Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida su [introduzione alle API di Platform](../../../../../landing/api-guide.md).
+Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida in [guida introduttiva alle API di Platform](../../../../../landing/api-guide.md).
 
-## Crea una connessione di base
+## Creare una connessione di base
 
 Una connessione di base mantiene le informazioni tra l’origine e Platform, incluse le credenziali di autenticazione dell’origine, lo stato corrente della connessione e l’ID univoco della connessione di base. L’ID della connessione di base consente di esplorare e navigare tra i file dall’interno dell’origine e identificare gli elementi specifici che desideri acquisire, comprese le informazioni relative ai tipi di dati e ai formati.
 
-Per creare una connessione di base, effettuare una richiesta POST al `/connections` endpoint durante la fornitura del [!DNL Phoenix] credenziali di autenticazione nel corpo della richiesta.
+Per creare una connessione di base, effettuare una richiesta POST all&#39;endpoint `/connections` fornendo le credenziali di autenticazione [!DNL Phoenix] nel corpo della richiesta.
 
 **Formato API**
 
@@ -91,13 +91,13 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --------- | ----------- |
-| `auth.params.host` | L’host del [!DNL Phoenix] server. |
-| `auth.params.username` | Il nome utente associato al tuo [!DNL Phoenix] connessione. |
-| `auth.params.password` | La password associata al tuo [!DNL Phoenix] connessione. |
-| `auth.params.port` | La porta TCP per [!DNL Phoenix] connessione. |
-| `auth.params.httpPath` | Percorso http parziale per [!DNL Phoenix] connessione. |
+| `auth.params.host` | Host del server [!DNL Phoenix]. |
+| `auth.params.username` | Il nome utente associato alla connessione [!DNL Phoenix]. |
+| `auth.params.password` | La password associata alla connessione [!DNL Phoenix]. |
+| `auth.params.port` | Porta TCP per la connessione [!DNL Phoenix]. |
+| `auth.params.httpPath` | Percorso HTTP parziale per la connessione [!DNL Phoenix]. |
 | `auth.params.enableSsl` | Il valore booleano che specifica se le connessioni al server sono crittografate utilizzando SSL. |
-| `connectionSpec.id` | Il [!DNL Phoenix] ID specifica di connessione: `102706fb-a5cd-42ee-afe0-bc42f017ff43`. |
+| `connectionSpec.id` | ID della specifica di connessione [!DNL Phoenix]: `102706fb-a5cd-42ee-afe0-bc42f017ff43`. |
 
 **Risposta**
 
@@ -112,7 +112,7 @@ In caso di esito positivo, la risposta restituisce i dettagli della connessione 
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato una [!DNL Phoenix] connessione di base tramite [!DNL Flow Service] API. Puoi utilizzare questo ID connessione di base nelle seguenti esercitazioni:
+Seguendo questa esercitazione, è stata creata una connessione di base [!DNL Phoenix] utilizzando l&#39;API [!DNL Flow Service]. Puoi utilizzare questo ID connessione di base nelle seguenti esercitazioni:
 
-* [Esplora la struttura e il contenuto delle tabelle di dati utilizzando [!DNL Flow Service] API](../../explore/tabular.md)
-* [Crea un flusso di dati per portare i dati del database su Platform utilizzando [!DNL Flow Service] API](../../collect/database-nosql.md)
+* [Esplora la struttura e il contenuto delle tabelle dati utilizzando l&#39;API  [!DNL Flow Service] ](../../explore/tabular.md)
+* [Crea un flusso di dati per portare i dati del database in Platform utilizzando l&#39;API  [!DNL Flow Service] ](../../collect/database-nosql.md)

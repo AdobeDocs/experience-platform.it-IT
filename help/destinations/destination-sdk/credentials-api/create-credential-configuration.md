@@ -4,8 +4,8 @@ title: Creare una configurazione delle credenziali
 exl-id: 9844c9c5-d2dc-4d4b-ae93-759bf23b87fa
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '559'
-ht-degree: 8%
+source-wordcount: '564'
+ht-degree: 6%
 
 ---
 
@@ -15,31 +15,31 @@ ht-degree: 8%
 >
 >**Endpoint API**: `platform.adobe.io/data/core/activation/authoring/credentials`
 
-Questa pagina esemplifica la richiesta API e il payload che puoi utilizzare per creare una configurazione di credenziali utilizzando `/authoring/credentials` Endpoint API
+Questa pagina esemplifica la richiesta API e il payload che è possibile utilizzare per creare una configurazione delle credenziali utilizzando l&#39;endpoint API `/authoring/credentials`.
 
-## Quando utilizzare il `/credentials` Endpoint API {#when-to-use}
+## Quando utilizzare l&#39;endpoint API `/credentials` {#when-to-use}
 
 >[!IMPORTANT]
 >
->Nella maggior parte dei casi, ***non*** devono utilizzare `/credentials` Endpoint API È invece possibile configurare le informazioni di autenticazione per la destinazione tramite `customerAuthenticationConfigurations` parametri di `/destinations` endpoint.
+>Nella maggior parte dei casi, ***non*** deve utilizzare l&#39;endpoint API `/credentials`. È invece possibile configurare le informazioni di autenticazione per la destinazione tramite i parametri `customerAuthenticationConfigurations` dell&#39;endpoint `/destinations`.
 > 
->Letto [Configurazione autenticazione cliente](../functionality/destination-configuration/customer-authentication.md) per informazioni dettagliate sui tipi di autenticazione supportati.
+>Leggi [Configurazione autenticazione cliente](../functionality/destination-configuration/customer-authentication.md) per informazioni dettagliate sui tipi di autenticazione supportati.
 
-Utilizzare questo endpoint API per creare una configurazione di credenziali solo se esiste un sistema di autenticazione globale tra Adobe e la piattaforma di destinazione e [!DNL Platform] Il cliente non deve fornire credenziali di autenticazione per connettersi alla destinazione. In questo caso, è necessario creare una configurazione delle credenziali utilizzando `/credentials` Endpoint API
+Utilizzare questo endpoint API per creare una configurazione di credenziali solo se è presente un sistema di autenticazione globale tra Adobe e la piattaforma di destinazione e il cliente [!DNL Platform] non deve fornire credenziali di autenticazione per connettersi alla destinazione. In questo caso, è necessario creare una configurazione delle credenziali utilizzando l&#39;endpoint API `/credentials`.
 
-Quando si utilizza un sistema di autenticazione globale, è necessario impostare `"authenticationRule":"PLATFORM_AUTHENTICATION"` nel [consegna di destinazione](../functionality/destination-configuration/destination-delivery.md) configurazione, quando [creazione di una nuova configurazione di destinazione](../authoring-api/destination-configuration/create-destination-configuration.md).
+Quando si utilizza un sistema di autenticazione globale, è necessario impostare `"authenticationRule":"PLATFORM_AUTHENTICATION"` nella configurazione [consegna di destinazione](../functionality/destination-configuration/destination-delivery.md), durante la [creazione di una nuova configurazione di destinazione](../authoring-api/destination-configuration/create-destination-configuration.md).
 
 >[!IMPORTANT]
 >
->Tutti i nomi e i valori dei parametri supportati da Destination SDK sono **distinzione maiuscole/minuscole**. Per evitare errori di distinzione tra maiuscole e minuscole, utilizza i nomi e i valori dei parametri esattamente come mostrato nella documentazione.
+>Tutti i nomi e i valori dei parametri supportati da Destination SDK sono **con distinzione tra maiuscole e minuscole**. Per evitare errori di distinzione tra maiuscole e minuscole, utilizza i nomi e i valori dei parametri esattamente come mostrato nella documentazione.
 
 ## Guida introduttiva alle operazioni API per le credenziali {#get-started}
 
-Prima di continuare, controlla [guida introduttiva](../getting-started.md) per informazioni importanti che è necessario conoscere per effettuare correttamente chiamate all’API, tra cui come ottenere l’autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
+Prima di continuare, consulta la [guida introduttiva](../getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
 
 ## Creare una configurazione di credenziali {#create}
 
-È possibile creare una nuova configurazione delle credenziali eseguendo una `POST` richiesta al `/authoring/credentials` endpoint.
+È possibile creare una nuova configurazione delle credenziali effettuando una richiesta `POST` all&#39;endpoint `/authoring/credentials`.
 
 **Formato API**
 
@@ -55,7 +55,7 @@ Seleziona ciascuna scheda di seguito per visualizzare il payload corrispondente.
 
 >[!TAB Base]
 
-**Creare una configurazione di base delle credenziali**
+**Creare una configurazione delle credenziali di base**
 
 +++Richiesta
 
@@ -94,7 +94,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 
 >[!TAB Amazon S3]
 
-**Creare un [!DNL Amazon S3] configurazione credenziali**
+**Crea una configurazione delle credenziali [!DNL Amazon S3]**
 
 +++**Richiesta**
 
@@ -116,8 +116,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 | Parametro | Tipo | Descrizione |
 | -------- | ----------- | ----------- |
-| `accessId` | Stringa | [!DNL Amazon S3] ID accesso |
-| `secretKey` | Stringa | [!DNL Amazon S3] chiave segreta |
+| `accessId` | Stringa | ID di accesso [!DNL Amazon S3] |
+| `secretKey` | Stringa | Chiave segreta [!DNL Amazon S3] |
 
 {style="table-layout:auto"}
 
@@ -168,7 +168,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 
 >[!TAB Archiviazione Azure Data Lake]
 
-**Creare un [!DNL Azure Data Lake Storage] configurazione credenziali**
+**Crea una configurazione delle credenziali [!DNL Azure Data Lake Storage]**
 
 +++Richiesta
 
@@ -209,7 +209,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 
 >[!TAB Archiviazione BLOB di Azure]
 
-**Creare un [!DNL Azure Blob Storage] configurazione credenziali**
+**Crea una configurazione delle credenziali [!DNL Azure Blob Storage]**
 
 +++Richiesta
 
@@ -246,8 +246,8 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 
 ## Gestione degli errori API {#error-handling}
 
-Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Fai riferimento a [Codici di stato API](../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
+Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
 
 ## Passaggi successivi {#next-steps}
 
-Dopo aver letto questo documento, ora sai quando utilizzare l’endpoint delle credenziali e come impostare una configurazione delle credenziali utilizzando `/authoring/credentials` Lettura endpoint API [come utilizzare Destination SDK per configurare la destinazione](../guides/configure-destination-instructions.md) per capire in che modo questo passaggio si inserisce nel processo di configurazione della destinazione.
+Dopo aver letto questo documento, sai quando utilizzare l&#39;endpoint delle credenziali e come impostare una configurazione delle credenziali utilizzando l&#39;endpoint API `/authoring/credentials`. Leggi [come utilizzare Destination SDK per configurare la destinazione](../guides/configure-destination-instructions.md) per capire in che modo questo passaggio si inserisce nel processo di configurazione della destinazione.

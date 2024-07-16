@@ -11,13 +11,13 @@ ht-degree: 1%
 
 ---
 
-# [!UICONTROL Consenso IAB TCF 2.0] gruppo di campi per gli schemi di profilo
+# [!UICONTROL IAB TCF 2.0 Consenso] gruppo di campi per gli schemi di profilo
 
 >[!NOTE]
 >
->Questo documento descrive [!UICONTROL Consenso IAB TCF 2.0] gruppo di campi dello schema per la classe Profilo individuale XDM. Per il gruppo di campi previsto per la classe ExperienceEvent XDM, consulta i seguenti [documento](../event/iab.md) invece.
+>Questo documento descrive il gruppo di campi dello schema [!UICONTROL Consenso IAB TCF 2.0] per la classe XDM Individual Profile. Per il gruppo di campi previsto per la classe ExperienceEvent XDM, fai riferimento al seguente [documento](../event/iab.md).
 
-[!UICONTROL Consenso IAB TCF 2.0] è un gruppo di campi di schema standard per [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) utilizzato per acquisire una serie con marca temporale di stringhe di consenso IAB, al fine di monitorare i modelli di modifica del consenso nel tempo.
+[!UICONTROL IAB TCF 2.0 Consent] è un gruppo di campi di schema standard per la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) utilizzata per acquisire una serie di stringhe di consenso IAB con marca temporale, al fine di monitorare i modelli di modifica del consenso nel tempo.
 
 ![](../../images/field-groups/iab-profile.png)
 
@@ -27,7 +27,7 @@ ht-degree: 1%
 
 {style="table-layout:auto"}
 
-Il seguente codice JSON illustra la struttura del `identityPrivacyInfo` mappa.
+Il seguente JSON illustra la struttura della mappa `identityPrivacyInfo`.
 
 ```json
 {
@@ -50,15 +50,15 @@ Il seguente codice JSON illustra la struttura del `identityPrivacyInfo` mappa.
 }
 ```
 
-Come mostrato nell’esempio, ogni chiave a livello di radice di `xdm:identityPrivacyInfo` corrisponde a uno spazio dei nomi di identità riconosciuto da Identity Service. A sua volta, ogni proprietà dello spazio dei nomi deve avere almeno una sottoproprietà la cui chiave corrisponde al valore di identità corrispondente del cliente per quello spazio dei nomi. In questo esempio, il cliente è identificato da un ID Experience Cloud (`ECID`) valore di `13782522493631189`.
+Come illustrato nell&#39;esempio, ogni chiave a livello di radice di `xdm:identityPrivacyInfo` corrisponde a uno spazio dei nomi di identità riconosciuto da Identity Service. A sua volta, ogni proprietà dello spazio dei nomi deve avere almeno una sottoproprietà la cui chiave corrisponde al valore di identità corrispondente del cliente per quello spazio dei nomi. In questo esempio, il cliente è identificato con un valore ID Experience Cloud (`ECID`) di `13782522493631189`.
 
 >[!NOTE]
 >
 >Mentre l’esempio precedente utilizza una singola coppia spazio dei nomi/valore per rappresentare l’identità del cliente, puoi aggiungere chiavi aggiuntive per altri spazi dei nomi e ogni spazio dei nomi può avere più valori di identità, ciascuno con il proprio set di preferenze di consenso TCF.
 
-Per ogni valore di identità, un `identityIABConsent` deve essere fornita la proprietà, che fornisce il valore di consenso TCF per l’identità. Il valore di questa proprietà deve essere conforme al [[!UICONTROL Stringa di consenso] tipo di dati](../../data-types/consent-string.md).
+Per ogni valore di identità, è necessario specificare una proprietà `identityIABConsent` che fornisce il valore di consenso TCF per l&#39;identità. Il valore di questa proprietà deve essere conforme al tipo di dati [[!UICONTROL Stringa di consenso]](../../data-types/consent-string.md).
 
-Consulta la guida su [Supporto IAB TCF 2.0 in Platform](../../../landing/governance-privacy-security/consent/iab/overview.md) per ulteriori informazioni sul caso d’uso di questo gruppo di campi. Per ulteriori dettagli sul gruppo di campi stesso, consulta l’archivio XDM pubblico:
+Per ulteriori informazioni sul caso d&#39;uso di questo gruppo di campi, consulta la guida sul supporto di [IAB TCF 2.0 in Platform](../../../landing/governance-privacy-security/consent/iab/overview.md). Per ulteriori dettagli sul gruppo di campi stesso, consulta l’archivio XDM pubblico:
 
 * [Esempio compilato](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.example.1.json)
 * [Schema completo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.schema.json)

@@ -9,7 +9,7 @@ exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
 source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
 source-wordcount: '1817'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -17,13 +17,13 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->I limiti descritti in questo documento rappresentano le modifiche abilitate da Real-time Customer Data Platform B2B Edition. Per un elenco completo dei limiti predefiniti per Real-Time CDP B2B Edition, combinare questi limiti con i limiti generali di Adobe Experience Platform descritti nel [guardrail per la documentazione dei dati di Real-Time Customer Profile](../profile/guardrails.md).
+>I limiti descritti in questo documento rappresentano le modifiche abilitate da Real-time Customer Data Platform B2B Edition. Per un elenco completo dei limiti predefiniti per Real-Time CDP B2B Edition, combina questi limiti con i limiti generali di Adobe Experience Platform descritti nella [documentazione sui guardrail per i dati del profilo cliente in tempo reale](../profile/guardrails.md).
 
-Real-time Customer Data Platform B2B Edition consente di fornire esperienze cross-channel personalizzate basate su informazioni comportamentali e attributi del cliente sotto forma di profili cliente in tempo reale e profili account. Per supportare questo nuovo approccio ai profili, Experienci Platform utilizza un modello di dati ibridi altamente denormalizzati che differisce dal modello tradizionale di dati relazionali.
+Real-time Customer Data Platform B2B Edition consente di fornire esperienze cross-channel personalizzate basate su informazioni comportamentali e attributi del cliente sotto forma di profili cliente in tempo reale e profili account. Per supportare questo nuovo approccio ai profili, Experience Platform utilizza un modello di dati ibridi altamente denormalizzati che differisce dal modello tradizionale di dati relazionali.
 
 >[!IMPORTANT]
 >
->Controllare i diritti di licenza nell&#39;ordine di vendita e i corrispondenti [Descrizione del prodotto](https://helpx.adobe.com/it/legal/product-descriptions.html) sui limiti di utilizzo effettivi oltre a questa pagina di guardrail.
+>Controlla i diritti di licenza nell&#39;ordine di vendita e la corrispondente [descrizione del prodotto](https://helpx.adobe.com/it/legal/product-descriptions.html) sui limiti di utilizzo effettivi, oltre a questa pagina di guardrail.
 
 Questo documento fornisce i limiti predefiniti di utilizzo e tasso per aiutarti a modellare i tuoi dati per ottenere prestazioni di sistema ottimali. Durante l’esame dei seguenti guardrail, si presume che i dati siano stati modellati correttamente. In caso di domande su come modellare i dati, contatta il rappresentante del servizio clienti.
 
@@ -37,7 +37,7 @@ In questo documento sono disponibili due tipi di limiti predefiniti:
 
 | Tipo di guardrail | Descrizione |
 | -------------- | ----------- |
-| **Guardrail delle prestazioni (limite morbido)** | I guardrail di prestazioni sono limiti di utilizzo relativi all’ambito dei tuoi casi d’uso. Quando si superano i guardrail delle prestazioni, è possibile che si verifichi un peggioramento delle prestazioni e della latenza. L’Adobe non è responsabile di tale degrado delle prestazioni. I clienti che superano costantemente il limite di prestazioni possono scegliere di concedere licenze aggiuntive per evitare il degrado delle prestazioni. |
+| **Guardrail delle prestazioni (limite software)** | I guardrail di prestazioni sono limiti di utilizzo relativi all’ambito dei tuoi casi d’uso. Quando si superano i guardrail delle prestazioni, è possibile che si verifichi un peggioramento delle prestazioni e della latenza. L’Adobe non è responsabile di tale degrado delle prestazioni. I clienti che superano costantemente il limite di prestazioni possono scegliere di concedere licenze aggiuntive per evitare il degrado delle prestazioni. |
 | **Guardrail applicati dal sistema (limite rigido)** | I guardrail applicati dal sistema vengono applicati dall’interfaccia utente o dall’API di Real-Time CDP. Questi sono i limiti che non puoi superare, poiché l’interfaccia utente e l’API ti impediranno di farlo o restituiranno un errore. |
 
 >[!INFO]
@@ -46,37 +46,37 @@ In questo documento sono disponibili due tipi di limiti predefiniti:
 
 ## Limiti del modello dati
 
-Le seguenti protezioni forniscono i limiti consigliati per la modellazione dei dati Profilo cliente in tempo reale. Per ulteriori informazioni sulle entità primarie e sulle entità dimensione, consulta la sezione su [tipi di entità](#entity-types) nell&#39;appendice.
+Le seguenti protezioni forniscono i limiti consigliati per la modellazione dei dati Profilo cliente in tempo reale. Per ulteriori informazioni sulle entità primarie e sulle entità dimensione, vedere la sezione relativa ai [tipi di entità](#entity-types) nell&#39;appendice.
 
 ### Guardrail dell’entità primaria
 
 >[!NOTE]
 >
->I limiti del modello dati descritti in questa sezione rappresentano le modifiche abilitate da Real-time Customer Data Platform B2B Edition. Per un elenco completo dei limiti predefiniti per Real-Time CDP B2B Edition, combinare questi limiti con i limiti generali di Adobe Experience Platform descritti nel [guardrail per la documentazione dei dati di Real-Time Customer Profile](../profile/guardrails.md).
+>I limiti del modello dati descritti in questa sezione rappresentano le modifiche abilitate da Real-time Customer Data Platform B2B Edition. Per un elenco completo dei limiti predefiniti per Real-Time CDP B2B Edition, combina questi limiti con i limiti generali di Adobe Experience Platform descritti nella [documentazione sui guardrail per i dati del profilo cliente in tempo reale](../profile/guardrails.md).
 
 | Guardrail | Limite | Tipo limite | Descrizione |
 | --------- | ----- | ---------- | ----------- |
-| Set di dati di classe XDM standard di Real-Time CDP B2B Edition | 60 | Guardrail delle prestazioni | Si consiglia un massimo di 60 set di dati che sfruttano le classi standard Experience Data Model (XDM) fornite da Real-Time CDP B2B Edition. Per un elenco completo delle classi XDM standard per i casi di utilizzo B2B, consulta [schemi nella documentazione di Real-Time CDP B2B Edition](schemas/b2b.md). <br/><br/>*Nota: a causa della natura del modello di dati ibridi denormalizzati di Experienci Platform, la maggior parte dei clienti non supera questo limite. Per domande su come modellare i dati o per ulteriori informazioni sui limiti personalizzati, contatta il rappresentante dell’assistenza clienti.* |
+| Set di dati di classe XDM standard di Real-Time CDP B2B Edition | 60 | Guardrail delle prestazioni | Si consiglia un massimo di 60 set di dati che sfruttano le classi standard Experience Data Model (XDM) fornite da Real-Time CDP B2B Edition. Per un elenco completo delle classi XDM standard per i casi d&#39;uso B2B, consulta [gli schemi nella documentazione dell&#39;edizione B2B di Real-Time CDP](schemas/b2b.md). <br/><br/>*Nota: a causa della natura del modello di dati ibridi denormalizzati di Experience Platform, la maggior parte dei clienti non supera questo limite. Per domande su come modellare i dati o per ulteriori informazioni sui limiti personalizzati, contatta il rappresentante dell&#39;Assistenza clienti.* |
 | Conteggio delle identità per un singolo account in un grafico delle identità | 50 | Guardrail delle prestazioni | Il numero massimo di identità in un grafico delle identità per un singolo account è 50. Tutti i profili con più di 50 identità sono esclusi da segmentazione, esportazioni e ricerche. |
 | Relazioni legacy tra più entità | 20 | Guardrail delle prestazioni | Si consiglia di definire un massimo di 20 relazioni tra più entità tra entità principali ed entità dimensione. Non è consigliabile eseguire mapping di relazioni aggiuntivi finché non viene rimossa o disabilitata una relazione esistente. |
-| Relazioni molti-a-uno per classe XDM | 2 | Guardrail delle prestazioni | Si consiglia un massimo di 2 relazioni molti-a-uno definite per classe XDM. Non è consigliabile creare una relazione aggiuntiva finché non viene rimossa o disabilitata una relazione esistente. Per i passaggi su come creare una relazione tra due schemi, consulta l’esercitazione su [definizione delle relazioni tra schemi B2B](../xdm/tutorials/relationship-b2b.md). |
+| Relazioni molti-a-uno per classe XDM | 2 | Guardrail delle prestazioni | Si consiglia un massimo di 2 relazioni molti-a-uno definite per classe XDM. Non è consigliabile creare una relazione aggiuntiva finché non viene rimossa o disabilitata una relazione esistente. Per i passaggi su come creare una relazione tra due schemi, consulta l&#39;esercitazione su [definizione delle relazioni tra schemi B2B](../xdm/tutorials/relationship-b2b.md). |
 
 ### guardrail entità Dimension
 
 >[!NOTE]
 >
->I limiti del modello dati descritti in questa sezione rappresentano le modifiche abilitate da Real-time Customer Data Platform B2B Edition. Per un elenco completo dei limiti predefiniti per Real-Time CDP B2B Edition, combinare questi limiti con i limiti generali di Adobe Experience Platform descritti nel [guardrail per la documentazione dei dati di Real-Time Customer Profile](../profile/guardrails.md).
+>I limiti del modello dati descritti in questa sezione rappresentano le modifiche abilitate da Real-time Customer Data Platform B2B Edition. Per un elenco completo dei limiti predefiniti per Real-Time CDP B2B Edition, combina questi limiti con i limiti generali di Adobe Experience Platform descritti nella [documentazione sui guardrail per i dati del profilo cliente in tempo reale](../profile/guardrails.md).
 
 | Guardrail | Limite | Tipo limite | Descrizione |
 | --------- | ----- | ---------- | ----------- |
-| Nessuna relazione legacy nidificata | 0 | Guardrail delle prestazioni | Non creare una relazione tra due[!DNL XDM Individual Profile] schemi. La creazione di relazioni è **non** consigliato per tutti gli schemi che non fanno parte di [!DNL Profile] schema di unione. |
-| Solo gli oggetti B2B possono partecipare a relazioni molti-a-uno | 0 | Guarddrail imposto dal sistema | Il sistema supporta solo relazioni molti-a-uno tra oggetti B2B. Per ulteriori informazioni sulle relazioni molti-a-uno, consulta l’esercitazione su [definizione delle relazioni tra schemi B2B](../xdm/tutorials/relationship-b2b.md). |
+| Nessuna relazione legacy nidificata | 0 | Guardrail delle prestazioni | Non creare una relazione tra due schemi diversi da [!DNL XDM Individual Profile]. La creazione di relazioni è **non** consigliata per gli schemi che non fanno parte dello schema di unione [!DNL Profile]. |
+| Solo gli oggetti B2B possono partecipare a relazioni molti-a-uno | 0 | Guarddrail imposto dal sistema | Il sistema supporta solo relazioni molti-a-uno tra oggetti B2B. Per ulteriori informazioni sulle relazioni molti-a-uno, consulta l&#39;esercitazione su [definizione delle relazioni tra schemi B2B](../xdm/tutorials/relationship-b2b.md). |
 | Profondità massima delle relazioni nidificate tra oggetti B2B | 3 | Guarddrail imposto dal sistema | La profondità massima delle relazioni nidificate tra oggetti B2B è 3. Ciò significa che in uno schema con annidamento elevato non dovrebbe esistere una relazione tra oggetti B2B nidificati a più di 3 livelli di profondità. |
 | Schema singolo per ogni entità dimensione | 1 | Guarddrail imposto dal sistema | Ogni entità dimensione deve avere un singolo schema. Il tentativo di utilizzare le entità dimensione create da più schemi può influire sui risultati della segmentazione. È previsto che entità di dimensione diverse abbiano schemi separati. |
 
 ## Limiti di dimensione dei dati
 
-I seguenti guardrail si riferiscono alle dimensioni dei dati e forniscono i limiti consigliati per i dati che possono essere acquisiti, memorizzati e interrogati come previsto. Per ulteriori informazioni sulle entità primarie e sulle entità dimensione, consulta la sezione su [tipi di entità](#entity-types) nell&#39;appendice.
+I seguenti guardrail si riferiscono alle dimensioni dei dati e forniscono i limiti consigliati per i dati che possono essere acquisiti, memorizzati e interrogati come previsto. Per ulteriori informazioni sulle entità primarie e sulle entità dimensione, vedere la sezione relativa ai [tipi di entità](#entity-types) nell&#39;appendice.
 
 >[!INFO]
 >
@@ -86,7 +86,7 @@ I seguenti guardrail si riferiscono alle dimensioni dei dati e forniscono i limi
 
 >[!NOTE]
 >
->I limiti di dimensione dei dati descritti in questa sezione rappresentano le modifiche abilitate da Real-time Customer Data Platform B2B Edition. Per un elenco completo dei limiti predefiniti per Real-Time CDP B2B Edition, combinare questi limiti con i limiti generali di Adobe Experience Platform descritti nel [guardrail per la documentazione dei dati di Real-Time Customer Profile](../profile/guardrails.md).
+>I limiti di dimensione dei dati descritti in questa sezione rappresentano le modifiche abilitate da Real-time Customer Data Platform B2B Edition. Per un elenco completo dei limiti predefiniti per Real-Time CDP B2B Edition, combina questi limiti con i limiti generali di Adobe Experience Platform descritti nella [documentazione sui guardrail per i dati del profilo cliente in tempo reale](../profile/guardrails.md).
 
 | Guardrail | Limite | Tipo limite | Descrizione |
 | --------- | ----- | ---------- | ----------- |
@@ -96,7 +96,7 @@ I seguenti guardrail si riferiscono alle dimensioni dei dati e forniscono i limi
 
 >[!NOTE]
 >
->I limiti di dimensione dei dati descritti in questa sezione rappresentano le modifiche abilitate da Real-time Customer Data Platform B2B Edition. Per un elenco completo dei limiti predefiniti per Real-Time CDP B2B Edition, combinare questi limiti con i limiti generali di Adobe Experience Platform descritti nel [guardrail per la documentazione dei dati di Real-Time Customer Profile](../profile/guardrails.md).
+>I limiti di dimensione dei dati descritti in questa sezione rappresentano le modifiche abilitate da Real-time Customer Data Platform B2B Edition. Per un elenco completo dei limiti predefiniti per Real-Time CDP B2B Edition, combina questi limiti con i limiti generali di Adobe Experience Platform descritti nella [documentazione sui guardrail per i dati del profilo cliente in tempo reale](../profile/guardrails.md).
 
 | Guardrail | Limite | Tipo limite | Descrizione |
 | --------- | ----- | ---------- | ----------- |
@@ -106,11 +106,11 @@ I seguenti guardrail si riferiscono alle dimensioni dei dati e forniscono i limi
 
 ## Guardrail di segmentazione
 
-I guardrail descritti in questa sezione si riferiscono al numero e alla natura dei tipi di pubblico che un’organizzazione può creare in Experienci Platform, nonché alla mappatura e all’attivazione dei tipi di pubblico nelle destinazioni.
+I guardrail descritti in questa sezione si riferiscono al numero e alla natura dei tipi di pubblico che un’organizzazione può creare in Experience Platform, nonché alla mappatura e all’attivazione dei tipi di pubblico nelle destinazioni.
 
 >[!NOTE]
 >
->I limiti di segmentazione descritti in questa sezione rappresentano le modifiche abilitate da Real-time Customer Data Platform B2B Edition. Per un elenco completo dei limiti predefiniti per Real-Time CDP B2B Edition, combinare questi limiti con i limiti generali di Adobe Experience Platform descritti nel [guardrail per la documentazione dei dati di Real-Time Customer Profile](../profile/guardrails.md).
+>I limiti di segmentazione descritti in questa sezione rappresentano le modifiche abilitate da Real-time Customer Data Platform B2B Edition. Per un elenco completo dei limiti predefiniti per Real-Time CDP B2B Edition, combina questi limiti con i limiti generali di Adobe Experience Platform descritti nella [documentazione sui guardrail per i dati del profilo cliente in tempo reale](../profile/guardrails.md).
 
 | Guardrail | Limite | Tipo limite | Descrizione |
 | --------- | ----- | ---------- | ----------- |
@@ -118,7 +118,7 @@ I guardrail descritti in questa sezione si riferiscono al numero e alla natura d
 
 ## Passaggi successivi
 
-I limiti descritti in questo documento rappresentano le modifiche abilitate da Real-time Customer Data Platform B2B Edition. Per un elenco completo dei limiti predefiniti per Real-Time CDP B2B Edition, combinare questi limiti con i limiti generali di Adobe Experience Platform descritti nel [guardrail per la documentazione dei dati di Real-Time Customer Profile](../profile/guardrails.md).
+I limiti descritti in questo documento rappresentano le modifiche abilitate da Real-time Customer Data Platform B2B Edition. Per un elenco completo dei limiti predefiniti per Real-Time CDP B2B Edition, combina questi limiti con i limiti generali di Adobe Experience Platform descritti nella [documentazione sui guardrail per i dati del profilo cliente in tempo reale](../profile/guardrails.md).
 
 ## Appendice
 
@@ -126,22 +126,22 @@ Questa sezione fornisce ulteriori dettagli sui limiti riportati in questo docume
 
 ### Tipi di entità
 
-Il [!DNL Profile] il modello dati store è costituito da due tipi di entità core: [entità principali](#primary-entity) e [entità dimensione](#dimension-entity).
+Il modello dati dell&#39;archivio [!DNL Profile] è costituito da due tipi di entità di base: [entità primarie](#primary-entity) e [entità dimensionali](#dimension-entity).
 
 #### Entità primaria
 
-Un’entità primaria, o entità di profilo, unisce i dati per formare una &quot;singola sorgente di verità&quot; per un individuo. Questi dati unificati vengono rappresentati utilizzando la cosiddetta &quot;visualizzazione unione&quot;. Una vista unione aggrega i campi di tutti gli schemi che implementano la stessa classe in un unico schema di unione. Schema di unione per [!DNL Real-Time Customer Profile] è un modello di dati ibridi denormalizzati che funge da contenitore per tutti gli attributi del profilo e gli eventi comportamentali.
+Un’entità primaria, o entità di profilo, unisce i dati per formare una &quot;singola sorgente di verità&quot; per un individuo. Questi dati unificati vengono rappresentati utilizzando la cosiddetta &quot;visualizzazione unione&quot;. Una vista unione aggrega i campi di tutti gli schemi che implementano la stessa classe in un unico schema di unione. Lo schema di unione per [!DNL Real-Time Customer Profile] è un modello di dati ibridi denormalizzati che funge da contenitore per tutti gli attributi di profilo e gli eventi comportamentali.
 
-Gli attributi indipendenti dal tempo, noti anche come &quot;dati record&quot;, vengono modellati utilizzando [!DNL XDM Individual Profile], mentre i dati delle serie temporali, noti anche come &quot;dati evento&quot;, vengono modellati utilizzando [!DNL XDM ExperienceEvent]. Quando i dati di record e serie temporali vengono acquisiti in Adobe Experience Platform, si attiva [!DNL Real-Time Customer Profile] per iniziare ad acquisire i dati abilitati per il relativo utilizzo. Più interazioni e dettagli vengono acquisiti, più solidi saranno i singoli profili.
+Gli attributi indipendenti dal tempo, noti anche come &quot;dati record&quot;, vengono modellati utilizzando [!DNL XDM Individual Profile], mentre i dati della serie temporale, noti anche come &quot;dati evento&quot;, vengono modellati utilizzando [!DNL XDM ExperienceEvent]. Quando i dati dei record e delle serie temporali vengono acquisiti in Adobe Experience Platform, attiva [!DNL Real-Time Customer Profile] per iniziare ad acquisire i dati abilitati per il relativo utilizzo. Più interazioni e dettagli vengono acquisiti, più solidi saranno i singoli profili.
 
-![Un’infografica che illustra le differenze tra i dati dei record e i dati delle serie temporali.](../profile/images/guardrails/profile-entity.png)
+![Un&#39;infografica che illustra le differenze tra i dati dei record e i dati della serie temporale.](../profile/images/guardrails/profile-entity.png)
 
 #### Entità Dimension
 
 Anche se l’archivio dati profilo che gestisce i dati profilo non è un archivio relazionale, Profilo consente l’integrazione con entità dimensionali di piccole dimensioni per creare tipi di pubblico in modo semplificato e intuitivo. Questa integrazione è nota come [segmentazione con più entità](../segmentation/multi-entity-segmentation.md).
 
-La tua organizzazione può anche definire classi XDM per descrivere elementi diversi dai singoli utenti, ad esempio store, prodotti o proprietà. Questi non[!DNL XDM Individual Profile] gli schemi sono denominati &quot;entità dimensione&quot; (anche note come &quot;entità di ricerca&quot;) e non contengono dati di serie temporali. Gli schemi che rappresentano entità dimensione sono collegati alle entità profilo tramite l’utilizzo di [relazioni tra schemi](../xdm/tutorials/relationship-ui.md).
+La tua organizzazione può anche definire classi XDM per descrivere elementi diversi dai singoli utenti, ad esempio store, prodotti o proprietà. Questi schemi non [!DNL XDM Individual Profile] sono denominati &quot;entità dimensione&quot; (note anche come &quot;entità di ricerca&quot;) e non contengono dati di serie temporali. Gli schemi che rappresentano entità dimensione sono collegati alle entità profilo tramite l&#39;utilizzo di [relazioni schema](../xdm/tutorials/relationship-ui.md).
 
 Le entità di Dimension forniscono dati di ricerca che facilitano e semplificano le definizioni dei segmenti con più entità e devono essere sufficientemente piccole da consentire al motore di segmentazione di caricare l’intero set di dati in memoria per un’elaborazione ottimale (ricerca rapida dei punti).
 
-![Un’infografica che mostra che un’entità profilo è composta da entità dimensione.](../profile/images/guardrails/profile-and-dimension-entities.png)
+![Infografica che mostra che un&#39;entità profilo è composta da entità dimensione.](../profile/images/guardrails/profile-and-dimension-entities.png)

@@ -20,7 +20,7 @@ I motori sono le basi dei modelli di apprendimento automatico in Data Science Wo
 
 >[!TIP]
 >
->Se non disponi di un URL Docker, visita il [Creare pacchetti di file di origine in una ricetta](../models-recipes/package-source-files-recipe.md) tutorial per una procedura dettagliata sulla creazione di un URL host Docker.
+>Se non disponi di un URL Docker, visita l&#39;esercitazione [Package source files into a ricetta](../models-recipes/package-source-files-recipe.md) per una procedura dettagliata sulla creazione di un URL host Docker.
 
 Le credenziali del Registro di sistema Docker sono necessarie per caricare un pacchetto di file di composizione, inclusi l’URL host Docker, il nome utente e la password. Per cercare queste informazioni, effettua la seguente richiesta GET:
 
@@ -42,11 +42,11 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce un payload contenente i dettagli del registro Docker, incluso l’URL Docker (`host`), nome utente (`username`) e password (`password`).
+In caso di esito positivo, la risposta restituisce un payload contenente i dettagli del registro Docker, inclusi l&#39;URL Docker (`host`), il nome utente (`username`) e la password (`password`).
 
 >[!NOTE]
 >
->La password Docker cambia ogni volta che `{ACCESS_TOKEN}` viene aggiornato.
+>La password Docker viene modificata ogni volta che `{ACCESS_TOKEN}` viene aggiornato.
 
 ```json
 {
@@ -104,7 +104,7 @@ curl -X POST \
 
 **Richiedi PySpark/Scala**
 
-Quando si effettua una richiesta per le ricette PySpark, il `executionType` e `type` è &quot;PySpark&quot;. Quando si effettua una richiesta per le ricette Scala, il `executionType` e `type` è &quot;Spark&quot;. L’esempio di ricetta Scala che segue utilizza Spark:
+Quando si effettua una richiesta per le ricette PySpark, `executionType` e `type` sono &quot;PySpark&quot;. Quando si effettua una richiesta per le ricette Scala, `executionType` e `type` sono &quot;Spark&quot;. L’esempio di ricetta Scala che segue utilizza Spark:
 
 ```shell
 curl -X POST \
@@ -143,7 +143,7 @@ curl -X POST \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce un payload contenente i dettagli del motore appena creato, compreso il relativo identificatore univoco (`id`). L’esempio di risposta che segue è per un motore Python. Tutte le risposte del motore seguono questo formato:
+In caso di esito positivo, la risposta restituisce un payload contenente i dettagli del motore appena creato, incluso il relativo identificatore univoco (`id`). L’esempio di risposta che segue è per un motore Python. Tutte le risposte del motore seguono questo formato:
 
 ```json
 {
@@ -214,18 +214,18 @@ curl -X POST \
 | Proprietà | Descrizione |
 | --- | --- |
 | `type` | Tipo di esecuzione del motore. Questo valore corrisponde alla lingua su cui viene generata l’immagine Docker. Il valore può essere impostato su Spark o PySpark. |
-| `algorithm` | L’algoritmo utilizzato, imposta questo valore su `fp` (tubazione di feature). |
+| `algorithm` | Algoritmo in uso. Impostare questo valore su `fp` (pipeline delle funzionalità). |
 | `name` | Il nome desiderato per il motore della pipeline di funzioni. La ricetta corrispondente a questo motore erediterà questo valore per essere visualizzato nell’interfaccia utente come nome della ricetta. |
 | `description` | Descrizione facoltativa del motore. La ricetta corrispondente a questo motore erediterà questo valore per essere visualizzato nell’interfaccia utente come descrizione della ricetta. Questa proprietà è obbligatoria. Se non si desidera fornire una descrizione, impostarne il valore su una stringa vuota. |
 | `mlLibrary` | Campo richiesto per la creazione di motori per le ricette PySpark e Scala. Questo campo deve essere impostato su `databricks-spark`. |
 | `artifacts.default.image.location` | Percorso dell’immagine Docker. È supportato solo Azure ACR o Dockerhub pubblico (non autenticato). |
 | `artifacts.default.image.executionType` | Tipo di esecuzione del motore. Questo valore corrisponde alla lingua su cui viene generata l’immagine Docker. Può essere &quot;Spark&quot; o &quot;PySpark&quot;. |
 | `artifacts.default.image.packagingType` | Il tipo di imballaggio del motore. Questo valore deve essere impostato su `docker`. |
-| `artifacts.default.defaultMLInstanceConfigs` | Il tuo `pipeline.json` parametri del file di configurazione. |
+| `artifacts.default.defaultMLInstanceConfigs` | Parametri del file di configurazione `pipeline.json`. |
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce un payload contenente i dettagli del motore di pipeline delle funzioni appena creato, compreso il relativo identificatore univoco (`id`). La risposta di esempio seguente è per un motore di pipeline di funzioni PySpark.
+In caso di esito positivo, la risposta restituisce un payload contenente i dettagli del motore di pipeline delle funzionalità appena creato, incluso il relativo identificatore univoco (`id`). La risposta di esempio seguente è per un motore di pipeline di funzioni PySpark.
 
 ```json
 {
@@ -254,7 +254,7 @@ In caso di esito positivo, la risposta restituisce un payload contenente i detta
 
 ## Recuperare un elenco di motori
 
-È possibile recuperare un elenco di motori eseguendo una singola richiesta di GET. Per filtrare i risultati, puoi specificare i parametri di query nel percorso della richiesta. Per un elenco delle query disponibili, consulta la sezione dell’appendice su [parametri di query per il recupero delle risorse](./appendix.md#query).
+È possibile recuperare un elenco di motori eseguendo una singola richiesta di GET. Per filtrare i risultati, puoi specificare i parametri di query nel percorso della richiesta. Per un elenco delle query disponibili, consulta la sezione dell&#39;appendice sui [parametri di query per il recupero delle risorse](./appendix.md#query).
 
 **Formato API**
 
@@ -387,7 +387,7 @@ Puoi modificare e aggiornare un motore esistente sovrascrivendo le relative prop
 
 >[!NOTE]
 >
->Per garantire il successo di questa richiesta PUT, si consiglia di eseguire prima una richiesta GET a [recuperare il motore per ID](#retrieve-specific). Quindi, modifica e aggiorna l’oggetto JSON restituito e applica l’intero oggetto JSON modificato come payload per la richiesta PUT.
+>Per garantire il successo di questa richiesta PUT, si consiglia di eseguire prima una richiesta GET per [recuperare il motore per ID](#retrieve-specific). Quindi, modifica e aggiorna l’oggetto JSON restituito e applica l’intero oggetto JSON modificato come payload per la richiesta PUT.
 
 La seguente chiamata API di esempio aggiornerà il nome e la descrizione di un motore mentre inizialmente disponi di queste proprietà:
 

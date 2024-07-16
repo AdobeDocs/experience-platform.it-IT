@@ -13,7 +13,7 @@ ht-degree: 8%
 
 # Nozioni di base sulla composizione dello schema
 
-Scopri gli schemi Experience Data Model (XDM) e gli elementi di base, i principi e le best practice per la composizione di schemi in Adobe Experience Platform. Per informazioni generali su XDM e su come viene utilizzato in [!DNL Platform], vedere [Panoramica del sistema XDM](../home.md).
+Scopri gli schemi Experience Data Model (XDM) e gli elementi di base, i principi e le best practice per la composizione di schemi in Adobe Experience Platform. Per informazioni generali su XDM e sul suo utilizzo in [!DNL Platform], consulta la [Panoramica del sistema XDM](../home.md).
 
 ## Informazioni sugli schemi {#understanding-schemas}
 
@@ -21,32 +21,32 @@ Uno schema è un set di regole che rappresentano e convalidano la struttura e il
 
 Oltre a descrivere la struttura dei dati, gli schemi applicano vincoli e aspettative ai dati in modo che possano essere convalidati durante gli spostamenti tra sistemi diversi. Queste definizioni standard consentono di interpretare i dati in modo coerente, indipendentemente dall’origine, ed eliminano la necessità di traduzione tra le applicazioni.
 
-Experienci Platform mantiene questa normalizzazione semantica utilizzando gli schemi. Gli schemi sono il metodo standard per descrivere i dati in Experience Platform che consentono il riutilizzo di tutti i dati conformi agli schemi in un’organizzazione senza conflitti o anche la condivisione tra più organizzazioni.
+Experience Platform mantiene questa normalizzazione semantica utilizzando gli schemi. Gli schemi sono il metodo standard per descrivere i dati in Experience Platform che consentono il riutilizzo di tutti i dati conformi agli schemi in un’organizzazione senza conflitti o anche la condivisione tra più organizzazioni.
 
-Gli schemi XDM sono ideali per memorizzare grandi quantità di dati complessi in un formato autonomo. Consulta le sezioni relative a [oggetti incorporati](#embedded) e [big data](#big-data) nell’appendice di questo documento per ulteriori informazioni su come XDM esegue questa operazione.
+Gli schemi XDM sono ideali per memorizzare grandi quantità di dati complessi in un formato autonomo. Consulta le sezioni su [oggetti incorporati](#embedded) e [big data](#big-data) nell&#39;appendice di questo documento per ulteriori informazioni su come XDM esegue questa operazione.
 
-### Flussi di lavoro basati su schema in Experienci Platform {#schema-based-workflows}
+### Flussi di lavoro basati su schema in Experience Platform {#schema-based-workflows}
 
 La standardizzazione è un concetto chiave alla base dell&#39;Experience Platform. XDM, guidato da Adobe, è un tentativo di standardizzare i dati sull’esperienza del cliente e definire schemi standard per la gestione della customer experience.
 
-L’infrastruttura su cui è costruito l’Experience Platform, nota come [!DNL XDM System], semplifica i flussi di lavoro basati su schema e include [!DNL Schema Registry], [!DNL Schema Editor], metadati di schema e modelli di consumo del servizio. Consulta la [Panoramica del sistema XDM](../home.md) per ulteriori informazioni.
+L&#39;infrastruttura su cui viene generato l&#39;Experience Platform, nota come [!DNL XDM System], semplifica i flussi di lavoro basati su schema e include [!DNL Schema Registry], [!DNL Schema Editor], i metadati dello schema e i modelli di consumo del servizio. Per ulteriori informazioni, consulta la [Panoramica del sistema XDM](../home.md).
 
-L’utilizzo degli schemi in Experienci Platform offre diversi vantaggi chiave. In primo luogo, gli schemi consentono una migliore governance dei dati e la loro minimizzazione, il che è particolarmente importante con le normative sulla privacy. In secondo luogo, la creazione di schemi con i componenti standard di Adobe consente di ottenere informazioni predefinite e l’utilizzo di servizi AI/ML con personalizzazioni minime. Infine, gli schemi forniscono l’infrastruttura necessaria per condividere informazioni approfondite sui dati e orchestrare in modo efficiente.
+L’utilizzo degli schemi in Experience Platform offre diversi vantaggi chiave. In primo luogo, gli schemi consentono una migliore governance dei dati e la loro minimizzazione, il che è particolarmente importante con le normative sulla privacy. In secondo luogo, la creazione di schemi con i componenti standard di Adobe consente di ottenere informazioni predefinite e l’utilizzo di servizi AI/ML con personalizzazioni minime. Infine, gli schemi forniscono l’infrastruttura necessaria per condividere informazioni approfondite sui dati e orchestrare in modo efficiente.
 
 ## Pianificazione dello schema {#planning}
 
 Il primo passaggio nella creazione di uno schema consiste nel determinare il concetto, o oggetto reale, che si sta tentando di acquisire all’interno dello schema. Dopo aver identificato il concetto che si sta tentando di descrivere, iniziare a pianificare lo schema pensando ad aspetti quali il tipo di dati, i potenziali campi di identità e l&#39;evoluzione futura dello schema.
 
-### Comportamenti dei dati in Experienci Platform {#data-behaviors}
+### Comportamenti dei dati in Experience Platform {#data-behaviors}
 
-I dati da utilizzare in Experienci Platform sono raggruppati in due tipi di comportamento:
+I dati da utilizzare in Experience Platform sono raggruppati in due tipi di comportamento:
 
-* **Registra dati**: fornisce informazioni sugli attributi di un oggetto. Un soggetto potrebbe essere un&#39;organizzazione o un individuo.
-* **Dati delle serie temporali**: fornisce un’istantanea del sistema nel momento in cui un oggetto record ha eseguito un’azione, direttamente o indirettamente.
+* **Dati record**: fornisce informazioni sugli attributi di un oggetto. Un soggetto potrebbe essere un&#39;organizzazione o un individuo.
+* **Dati della serie temporale**: fornisce un&#39;istantanea del sistema nel momento in cui è stata eseguita un&#39;azione direttamente o indirettamente da un oggetto record.
 
 Tutti gli schemi XDM descrivono dati che possono essere classificati come record o serie temporali. Il comportamento dei dati di uno schema è definito dalla classe dello schema, che viene assegnata a uno schema al momento della creazione. Le classi XDM sono descritte più avanti in questo documento.
 
-Sia gli schemi di record che quelli di serie temporali contengono una mappa di identità (`xdm:identityMap`). Questo campo contiene la rappresentazione dell’identità di un soggetto, tratta dai campi contrassegnati come &quot;Identità&quot; come descritto nella sezione successiva.
+Sia gli schemi record che le serie temporali contengono una mappa di identità (`xdm:identityMap`). Questo campo contiene la rappresentazione dell’identità di un soggetto, tratta dai campi contrassegnati come &quot;Identità&quot; come descritto nella sezione successiva.
 
 ### [!UICONTROL Identità] {#identity}
 
@@ -55,30 +55,30 @@ Sia gli schemi di record che quelli di serie temporali contengono una mappa di i
 >title="Identità negli schemi"
 >abstract="Le identità sono campi chiave di uno schema che possono essere utilizzati per identificare un soggetto, ad esempio un indirizzo e-mail o un ID di marketing. Questi campi vengono utilizzati per creare il grafo delle identità per ogni singolo utente e generare profili cliente. Per ulteriori informazioni sulle identità negli schemi, consulta la documentazione."
 
-Gli schemi vengono utilizzati per acquisire i dati in Experienci Platform. Questi dati possono essere utilizzati in più servizi per creare una singola vista unificata di una singola entità. Pertanto, durante la progettazione di schemi per le identità dei clienti, è importante considerare quali campi possono essere utilizzati per identificare un soggetto, indipendentemente da dove possono provenire i dati.
+Gli schemi vengono utilizzati per acquisire i dati in Experience Platform. Questi dati possono essere utilizzati in più servizi per creare una singola vista unificata di una singola entità. Pertanto, durante la progettazione di schemi per le identità dei clienti, è importante considerare quali campi possono essere utilizzati per identificare un soggetto, indipendentemente da dove possono provenire i dati.
 
-Per facilitare questo processo, i campi chiave all’interno degli schemi possono essere contrassegnati come identità. Al momento dell’acquisizione dei dati, i dati contenuti in tali campi vengono inseriti nel file &quot;[!UICONTROL Grafico delle identità]&quot; per quell’individuo. È quindi possibile accedere ai dati del grafico tramite [[!DNL Real-Time Customer Profile]](../../profile/home.md) e altri servizi di Experience Platform per fornire una visualizzazione combinata di ogni singolo cliente.
+Per facilitare questo processo, i campi chiave all’interno degli schemi possono essere contrassegnati come identità. Al momento dell&#39;acquisizione dei dati, i dati contenuti in tali campi vengono inseriti nel &quot;[!UICONTROL grafo identità]&quot; dell&#39;utente. È quindi possibile accedere ai dati del grafico da [[!DNL Real-Time Customer Profile]](../../profile/home.md) e da altri servizi di Experience Platform per fornire una visualizzazione combinata di ogni singolo cliente.
 
-Campi comunemente contrassegnati come &quot;[!UICONTROL Identità]&quot; include: indirizzo e-mail, numero di telefono, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=it), ID CRM o altri campi ID univoci. Considera eventuali identificatori univoci specifici per la tua organizzazione, in quanto potrebbero essere validi&quot;.[!UICONTROL Identità]&quot;.
+I campi comunemente contrassegnati come &quot;[!UICONTROL Identità]&quot; includono: indirizzo e-mail, numero di telefono, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=it), ID CRM o altri campi ID univoci. Considera eventuali identificatori univoci specifici dell&#39;organizzazione, in quanto potrebbero essere validi anche per i campi &quot;[!UICONTROL Identity]&quot;.
 
-È importante considerare le identità dei clienti durante la fase di pianificazione dello schema per garantire che i dati vengano raccolti per creare il profilo più solido possibile. Per ulteriori informazioni su come le informazioni sulle identità possono aiutarti a fornire esperienze digitali ai tuoi clienti, consulta [Panoramica del servizio Identity](../../identity-service/home.md). Consulta il documento sulle best practice per la modellazione dei dati per [suggerimenti sull’utilizzo delle identità durante la creazione di uno schema](./best-practices.md#data-validation-fields).
+È importante considerare le identità dei clienti durante la fase di pianificazione dello schema per garantire che i dati vengano raccolti per creare il profilo più solido possibile. Per ulteriori informazioni su come le informazioni sulle identità possono aiutarti a fornire esperienze digitali ai tuoi clienti, consulta la [Panoramica del servizio Identity](../../identity-service/home.md). Consulta il documento sulle best practice per la modellazione dati per [suggerimenti sull&#39;utilizzo delle identità durante la creazione di uno schema](./best-practices.md#data-validation-fields).
 
 Esistono due modi per inviare dati di identità a Platform:
 
-1. Aggiunta di descrittori di identità ai singoli campi tramite [Interfaccia utente dell’editor schema](../ui/fields/identity.md) o utilizzando [API del registro dello schema](../api/descriptors.md#create)
-1. Utilizzo di un [`identityMap` campo](#identityMap)
+1. Aggiunta di descrittori di identità ai singoli campi tramite l&#39;[interfaccia utente dell&#39;editor di schemi](../ui/fields/identity.md) o utilizzando l&#39;[API del Registro di sistema dello schema](../api/descriptors.md#create)
+1. Utilizzo di un campo [`identityMap`](#identityMap)
 
 #### `identityMap` {#identityMap}
 
 `identityMap` è un campo di tipo mappa che descrive i vari valori di identità di un individuo, insieme ai relativi spazi dei nomi associati. Questo campo può essere utilizzato per fornire informazioni sull’identità per gli schemi, anziché definire valori di identità all’interno della struttura dello schema stesso.
 
-L&#39;inconveniente principale dell&#39;utilizzo `identityMap` è che le identità diventano incorporate nei dati e diventano meno visibili di conseguenza. Se acquisisci dati non elaborati, devi invece definire singoli campi di identità all’interno della struttura dello schema effettiva.
+L&#39;inconveniente principale dell&#39;utilizzo di `identityMap` è che le identità diventano incorporate nei dati e di conseguenza meno visibili. Se acquisisci dati non elaborati, devi invece definire singoli campi di identità all’interno della struttura dello schema effettiva.
 
 >[!NOTE]
 >
->Uno schema che utilizza `identityMap` può essere utilizzato come schema di origine in una relazione, ma non come schema di riferimento. Questo perché tutti gli schemi di riferimento devono avere un’identità visibile che può essere mappata in un campo di riferimento all’interno dello schema di origine. Fai riferimento alla guida dell’interfaccia utente su [relazioni](../tutorials/relationship-ui.md) per ulteriori informazioni sui requisiti degli schemi di origine e di riferimento.
+>Uno schema che utilizza `identityMap` può essere utilizzato come schema di origine in una relazione, ma non come schema di riferimento. Questo perché tutti gli schemi di riferimento devono avere un’identità visibile che può essere mappata in un campo di riferimento all’interno dello schema di origine. Per ulteriori informazioni sui requisiti degli schemi di origine e di riferimento, consulta la guida dell&#39;interfaccia utente in [relazioni](../tutorials/relationship-ui.md).
 
-Tuttavia, le mappe di identità possono essere utili se per uno schema è presente un numero variabile di identità o se si inseriscono dati da origini che memorizzano le identità (ad esempio [!DNL Airship] o Adobe Audience Manager). Inoltre, le mappe di identità sono necessarie se utilizzi il [SDK di Adobe Experience Platform Mobile](https://developer.adobe.com/client-sdks/home/).
+Tuttavia, le mappe di identità possono essere utili se per uno schema è presente un numero variabile di identità o se si desidera inserire dati da origini che memorizzano le identità (ad esempio [!DNL Airship] o Adobe Audience Manager). Inoltre, le mappe di identità sono necessarie se si utilizza [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/home/).
 
 Di seguito è riportato un esempio di mappa di identità semplice:
 
@@ -109,21 +109,21 @@ Di seguito è riportato un esempio di mappa di identità semplice:
 }
 ```
 
-Come mostrato nell’esempio precedente, ogni chiave nel `identityMap` l&#39;oggetto rappresenta uno spazio dei nomi di identità. Il valore di ogni chiave è una matrice di oggetti, che rappresenta i valori di identità (`id`) per il rispettivo namespace. Consulta la sezione [!DNL Identity Service] documentazione per un [elenco degli spazi dei nomi di identità standard](../../identity-service/troubleshooting-guide.md#standard-namespaces) riconosciuto dalle applicazioni Adobe.
+Come illustrato nell&#39;esempio precedente, ogni chiave nell&#39;oggetto `identityMap` rappresenta uno spazio dei nomi di identità. Il valore di ogni chiave è una matrice di oggetti che rappresenta i valori di identità (`id`) per il rispettivo spazio dei nomi. Consulta la documentazione di [!DNL Identity Service] per un [elenco di spazi dei nomi di identità standard](../../identity-service/troubleshooting-guide.md#standard-namespaces) riconosciuti dalle applicazioni Adobe.
 
 >[!NOTE]
 >
->Valore booleano per specificare se si tratta di un&#39;identità primaria (`primary`) può essere fornito anche per ogni valore di identità. Devi solo impostare le identità primarie per gli schemi da utilizzare in [!DNL Real-Time Customer Profile]. Consulta la sezione su [schemi di unione](#union) per ulteriori informazioni.
+>Per ogni valore di identità è inoltre possibile specificare un valore booleano per specificare se si tratta di un&#39;identità primaria (`primary`). È sufficiente impostare le identità primarie per gli schemi da utilizzare in [!DNL Real-Time Customer Profile]. Per ulteriori informazioni, consulta la sezione sugli [schemi di unione](#union).
 
 ### Principi di evoluzione dello schema {#evolution}
 
 Con l’evolversi della natura delle esperienze digitali, devono evolversi anche gli schemi utilizzati per rappresentarle. Uno schema ben progettato è quindi in grado di adattarsi ed evolvere secondo necessità, senza causare modifiche distruttive alle versioni precedenti dello schema.
 
-Poiché mantenere la compatibilità con le versioni precedenti è fondamentale per l’evoluzione dello schema, Experienci Platform applica un principio di controllo delle versioni puramente additivo. Questo principio garantisce che eventuali revisioni allo schema risultino solo in aggiornamenti e modifiche non distruttivi. In altre parole, **le modifiche di interruzione non sono supportate.**
+Poiché mantenere la compatibilità con le versioni precedenti è fondamentale per l’evoluzione dello schema, Experience Platform applica un principio di controllo delle versioni puramente additivo. Questo principio garantisce che eventuali revisioni allo schema risultino solo in aggiornamenti e modifiche non distruttivi. In altre parole, **le modifiche che causano interruzioni non sono supportate.**
 
 >[!NOTE]
 >
->Puoi introdurre una modifica che interrompe il funzionamento di uno schema solo se non è ancora stato utilizzato per acquisire i dati in Experienci Platform e non è stato abilitato per l’utilizzo in Real-Time Customer Profile. Tuttavia, dopo aver utilizzato lo schema in [!DNL Platform], deve rispettare i criteri di controllo delle versioni aggiuntivi.
+>Puoi introdurre una modifica che interrompe il funzionamento di uno schema solo se non è ancora stato utilizzato per acquisire i dati in Experience Platform e non è stato abilitato per l’utilizzo in Real-Time Customer Profile. Tuttavia, una volta utilizzato in [!DNL Platform], lo schema deve rispettare i criteri di controllo delle versioni aggiuntivi.
 
 La tabella seguente suddivide le modifiche supportate durante la modifica di schemi, gruppi di campi e tipi di dati:
 
@@ -131,15 +131,15 @@ La tabella seguente suddivide le modifiche supportate durante la modifica di sch
 | --- | --- |
 | <ul><li>Aggiunta di nuovi campi alla risorsa</li><li>Impostazione di un campo obbligatorio come facoltativo</li><li>Introduzione di nuovi campi obbligatori*</li><li>Modifica del nome visualizzato e della descrizione della risorsa</li><li>Abilitazione dello schema per la partecipazione al profilo</li></ul> | <ul><li>Rimozione dei campi definiti in precedenza</li><li>Ridenominazione o ridefinizione di campi esistenti</li><li>Rimozione o limitazione dei valori di campo precedentemente supportati</li><li>Spostamento dei campi esistenti in una posizione diversa nella struttura</li><li>Eliminazione dello schema</li><li>Disabilitazione dello schema dalla partecipazione al profilo</li></ul> |
 
-\**Consulta la sezione seguente per considerazioni importanti su [impostazione di nuovi campi obbligatori](#post-ingestion-required-fields).*
+\**Fare riferimento alla sezione seguente per importanti considerazioni relative all&#39;impostazione di [nuovi campi obbligatori](#post-ingestion-required-fields).*
 
 ### Campi obbligatori
 
-I singoli campi dello schema possono essere [contrassegnato come obbligatorio](../ui/fields/required.md), il che significa che qualsiasi record acquisito deve contenere dati in tali campi per superare la convalida. Ad esempio, l’impostazione del campo di identità principale di uno schema come richiesto può contribuire a garantire che tutti i record acquisiti partecipino a Real-Time Customer Profile. Allo stesso modo, l’impostazione di un campo marca temporale come richiesto garantisce che tutti gli eventi delle serie temporali siano conservati in modo cronologico.
+I singoli campi dello schema possono essere [contrassegnati come obbligatori](../ui/fields/required.md), il che significa che qualsiasi record acquisito deve contenere i dati in tali campi per superare la convalida. Ad esempio, l’impostazione del campo di identità principale di uno schema come richiesto può contribuire a garantire che tutti i record acquisiti partecipino a Real-Time Customer Profile. Allo stesso modo, l’impostazione di un campo marca temporale come richiesto garantisce che tutti gli eventi delle serie temporali siano conservati in modo cronologico.
 
 >[!IMPORTANT]
 >
->A prescindere dal fatto che un campo schema sia obbligatorio o meno, Platform non accetta `null` o valori vuoti per qualsiasi campo acquisito. Se non è presente alcun valore per un particolare campo in un record o in un evento, la chiave per tale campo deve essere esclusa dal payload di acquisizione.
+>A prescindere dal fatto che un campo schema sia obbligatorio o meno, Platform non accetta `null` o valori vuoti per nessun campo acquisito. Se non è presente alcun valore per un particolare campo in un record o in un evento, la chiave per tale campo deve essere esclusa dal payload di acquisizione.
 
 #### Impostazione dei campi come richiesto dopo l’acquisizione {#post-ingestion-required-fields}
 
@@ -148,20 +148,20 @@ Se un campo è stato utilizzato per acquisire i dati e non è stato originariame
 Quando imposti un campo precedentemente facoltativo come richiesto, tieni presente quanto segue:
 
 1. Se esegui una query sui dati storici e scrivi i risultati in un nuovo set di dati, alcune righe non riusciranno perché contengono valori nulli per il campo richiesto.
-1. Se il campo partecipa a [Profilo cliente in tempo reale](../../profile/home.md) e i dati vengono esportati prima di impostarli come richiesto, per alcuni profili potrebbero essere nulli.
-1. Puoi utilizzare l’API Schema Registry per visualizzare un registro delle modifiche con marca temporale per tutte le risorse XDM in Platform, compresi i nuovi campi obbligatori. Consulta la guida sulla [endpoint del registro di controllo](../api/audit-log.md) per ulteriori informazioni.
+1. Se il campo fa parte di [Real-Time Customer Profile](../../profile/home.md) e si esportano dati prima di impostarlo come necessario, per alcuni profili potrebbe essere null.
+1. Puoi utilizzare l’API Schema Registry per visualizzare un registro delle modifiche con marca temporale per tutte le risorse XDM in Platform, compresi i nuovi campi obbligatori. Per ulteriori informazioni, consulta la guida dell&#39;[endpoint del registro di controllo](../api/audit-log.md).
 
 ### Schemi e acquisizione di dati
 
-Per acquisire i dati in Experienci Platform, è necessario prima creare un set di dati. I set di dati sono i blocchi predefiniti per la trasformazione e il tracciamento dei dati per [[!DNL Catalog Service]](../../catalog/home.md)e generalmente rappresentano tabelle o file che contengono dati acquisiti. Tutti i set di dati si basano su schemi XDM esistenti, che forniscono vincoli per ciò che i dati acquisiti devono contenere e per come devono essere strutturati. Consulta la panoramica su [Acquisizione dei dati Adobe Experience Platform](../../ingestion/home.md) per ulteriori informazioni.
+Per acquisire i dati in Experience Platform, è necessario prima creare un set di dati. I set di dati sono i blocchi predefiniti per la trasformazione e il tracciamento dei dati per [[!DNL Catalog Service]](../../catalog/home.md) e in genere rappresentano tabelle o file che contengono dati acquisiti. Tutti i set di dati si basano su schemi XDM esistenti, che forniscono vincoli per ciò che i dati acquisiti devono contenere e per come devono essere strutturati. Per ulteriori informazioni, consulta la panoramica su [Acquisizione dati Adobe Experience Platform](../../ingestion/home.md).
 
 ## Blocchi predefiniti di uno schema {#schema-building-blocks}
 
-In Experienci Platform viene utilizzato un approccio di composizione in cui i blocchi predefiniti standard vengono combinati per creare schemi. Questo approccio promuove la riutilizzabilità dei componenti esistenti e favorisce la standardizzazione nel settore per supportare schemi e componenti dei fornitori in [!DNL Platform].
+In Experience Platform viene utilizzato un approccio di composizione in cui i blocchi predefiniti standard vengono combinati per creare schemi. Questo approccio promuove la riutilizzabilità dei componenti esistenti e favorisce la standardizzazione nel settore per supportare schemi e componenti dei fornitori in [!DNL Platform].
 
 Gli schemi vengono composti utilizzando la seguente formula:
 
-**Gruppo campi classe + schema; = schema XDM**
+**Gruppo campi classe + schema;ast; = Schema XDM**
 
 &amp;ast;Uno schema è composto da una classe e da zero o più gruppi di campi dello schema. Ciò significa che è possibile comporre uno schema di set di dati senza utilizzare affatto i gruppi di campi.
 
@@ -179,15 +179,15 @@ Gli schemi vengono composti utilizzando la seguente formula:
 
 La composizione di uno schema inizia assegnando una classe. Le classi definiscono gli aspetti comportamentali dei dati che lo schema conterrà (record o serie temporali). Inoltre, le classi descrivono il minor numero di proprietà comuni che tutti gli schemi basati su tale classe dovrebbero includere e forniscono un modo per unire più set di dati compatibili.
 
-La classe di uno schema determina quali gruppi di campi sono idonei per l’utilizzo in tale schema. Questo argomento è trattato più dettagliatamente nella [sezione successiva](#field-group).
+La classe di uno schema determina quali gruppi di campi sono idonei per l’utilizzo in tale schema. Questo argomento viene discusso più dettagliatamente nella [sezione successiva](#field-group).
 
-Adobe fornisce diverse classi XDM standard (&quot;core&quot;). Due di queste classi, [!DNL XDM Individual Profile] e [!DNL XDM ExperienceEvent], sono necessari per quasi tutti i processi della piattaforma a valle. Oltre a queste classi principali, puoi anche creare classi personalizzate per descrivere casi d’uso più specifici per la tua organizzazione. Le classi personalizzate vengono definite da un’organizzazione quando non sono disponibili classi core definite da Adobi per descrivere un caso d’uso univoco.
+Adobe fornisce diverse classi XDM standard (&quot;core&quot;). Due di queste classi, [!DNL XDM Individual Profile] e [!DNL XDM ExperienceEvent], sono necessarie per quasi tutti i processi di Platform downstream. Oltre a queste classi principali, puoi anche creare classi personalizzate per descrivere casi d’uso più specifici per la tua organizzazione. Le classi personalizzate vengono definite da un’organizzazione quando non sono disponibili classi core definite da Adobi per descrivere un caso d’uso univoco.
 
 La schermata seguente illustra come le classi sono rappresentate nell’interfaccia utente di Platform. Poiché lo schema di esempio visualizzato non contiene gruppi di campi, tutti i campi visualizzati vengono forniti dalla classe dello schema ([!UICONTROL Profilo individuale XDM]).
 
-![Il [!UICONTROL Profilo individuale XDM] nell’Editor di schema.](../images/schema-composition/class.png)
+![Il [!UICONTROL Profilo individuale XDM] all&#39;interno dell&#39;Editor di schema.](../images/schema-composition/class.png)
 
-Per l’elenco più aggiornato delle classi XDM standard disponibili, consulta [archivio XDM ufficiale](https://github.com/adobe/xdm/tree/master/components/classes). In alternativa, consulta la guida su [esplorazione dei componenti XDM](../ui/explore.md) se preferisci visualizzare le risorse nell’interfaccia utente.
+Per l&#39;elenco più aggiornato delle classi XDM standard disponibili, fare riferimento al [archivio XDM ufficiale](https://github.com/adobe/xdm/tree/master/components/classes). In alternativa, se preferisci visualizzare le risorse nell&#39;interfaccia utente, consulta la guida su [esplorazione dei componenti XDM](../ui/explore.md).
 
 ### Gruppo di campi {#field-group}
 
@@ -207,21 +207,21 @@ I gruppi di campi definiscono con quali classi sono compatibili, in base al comp
 
 L&#39;Experience Platform include molti Adobi di campi standard, consentendo ai fornitori di definire gruppi di campi per i propri utenti e ai singoli utenti di definire gruppi di campi per concetti specifici.
 
-Ad esempio, per acquisire dettagli quali &quot;[!UICONTROL Nome]&quot; e &quot;[!UICONTROL Indirizzo abitazione]&quot; per il tuo &quot;[!UICONTROL Membri fedeltà]&quot;, è possibile utilizzare gruppi di campi standard che definiscono tali concetti comuni. Tuttavia, concetti più specifici dell’organizzazione (ad esempio dettagli del programma fedeltà personalizzato o attributi di prodotto) che potrebbero non essere coperti dai gruppi di campi standard. In questo caso, è necessario definire un proprio gruppo di campi per acquisire queste informazioni.
+Ad esempio, per acquisire dettagli quali &quot;[!UICONTROL Nome]&quot; e &quot;[!UICONTROL Indirizzo principale]&quot; per lo schema &quot;[!UICONTROL Membri fedeltà]&quot;, è possibile utilizzare gruppi di campi standard che definiscono tali concetti comuni. Tuttavia, concetti più specifici dell’organizzazione (ad esempio dettagli del programma fedeltà personalizzato o attributi di prodotto) che potrebbero non essere coperti dai gruppi di campi standard. In questo caso, è necessario definire un proprio gruppo di campi per acquisire queste informazioni.
 
 >[!NOTE]
 >
->Si consiglia vivamente di utilizzare i gruppi di campi standard ogni volta che è possibile negli schemi, in quanto questi campi sono implicitamente compresi dai servizi Experienci Platform e forniscono maggiore coerenza quando vengono utilizzati in [!DNL Platform] componenti.
+>Si consiglia vivamente di utilizzare i gruppi di campi standard ogni volta che è possibile negli schemi, poiché questi campi sono implicitamente compresi dai servizi Experience Platform e forniscono maggiore coerenza quando vengono utilizzati tra [!DNL Platform] componenti.
 >
->I campi forniti dai componenti standard (come &quot;Nome&quot; e &quot;Indirizzo e-mail&quot;) contengono connotazioni aggiunte oltre i tipi di campi scalari di base. Dicono [!DNL Platform] che tutti i campi che condividono lo stesso tipo di dati si comportano allo stesso modo. È affidabile che questo comportamento sia coerente indipendentemente da dove provengono i dati o in cui [!DNL Platform] servizio in cui vengono utilizzati i dati.
+>I campi forniti dai componenti standard (come &quot;Nome&quot; e &quot;Indirizzo e-mail&quot;) contengono connotazioni aggiunte oltre i tipi di campi scalari di base. Comunicano a [!DNL Platform] che tutti i campi che condividono lo stesso tipo di dati si comportano allo stesso modo. Questo comportamento è affidabile per essere coerente indipendentemente da dove provengono i dati o in quale servizio [!DNL Platform] vengono utilizzati i dati.
 
 Gli schemi sono composti da &quot;zero o più&quot; gruppi di campi, pertanto puoi comporre uno schema valido senza utilizzare alcun gruppo di campi.
 
 La schermata seguente illustra come i gruppi di campi sono rappresentati nell’interfaccia utente di Platform. Un singolo gruppo di campi ([!UICONTROL Dettagli demografici]) viene aggiunto a uno schema in questo esempio, che fornisce un raggruppamento di campi alla struttura dello schema.
 
-![Editor di schema con [!UICONTROL Dettagli demografici] gruppo di campi evidenziato in uno schema di esempio.](../images/schema-composition/field-group.png)
+![Editor schema con il gruppo di campi [!UICONTROL Dettagli demografici] evidenziato in uno schema di esempio.](../images/schema-composition/field-group.png)
 
-Per l’elenco più aggiornato dei gruppi di campi XDM standard disponibili, fai riferimento a [archivio XDM ufficiale](https://github.com/adobe/xdm/tree/master/components/fieldgroups). In alternativa, consulta la guida su [esplorazione dei componenti XDM](../ui/explore.md) se preferisci visualizzare le risorse nell’interfaccia utente.
+Per l&#39;elenco più aggiornato dei gruppi di campi XDM standard disponibili, fare riferimento al [archivio XDM ufficiale](https://github.com/adobe/xdm/tree/master/components/fieldgroups). In alternativa, se preferisci visualizzare le risorse nell&#39;interfaccia utente, consulta la guida su [esplorazione dei componenti XDM](../ui/explore.md).
 
 ### Tipo di dati {#data-type}
 
@@ -231,17 +231,17 @@ I tipi di dati vengono utilizzati come tipi di campi di riferimento nelle classi
 >
 >Se un campo è definito come tipo di dati specifico, non è possibile creare lo stesso campo con un tipo di dati diverso in un altro schema. Questo vincolo si applica a tutto il tenant dell’organizzazione.
 
-Experience Platform fornisce una serie di tipi di dati comuni come parte del [!DNL Schema Registry] sostenere l’uso di modelli standard per descrivere strutture di dati comuni. Questo è spiegato più dettagliatamente nel [Esercitazioni del registro di schema](../tutorials/create-schema-api.md) e diventeranno più chiari mentre segui i passaggi per definire i tipi di dati.
+In Experience Platform sono disponibili diversi tipi di dati comuni come parte di [!DNL Schema Registry] per supportare l&#39;utilizzo di modelli standard per la descrizione di strutture di dati comuni. Questo è spiegato più dettagliatamente nelle [esercitazioni del registro degli schemi](../tutorials/create-schema-api.md) e diventerà più chiaro man mano che si seguono i passaggi per definire i tipi di dati.
 
-La schermata seguente illustra come i tipi di dati vengono rappresentati nell’interfaccia utente di Platform. Uno dei campi forniti da [!UICONTROL Dettagli demografici] il gruppo di campi utilizza il carattere &quot;[!UICONTROL Oggetto]&quot;tipo di dati, come indicato dal testo che segue il carattere barra verticale (`|`) accanto al nome del campo. Questo particolare tipo di dati fornisce diversi sottocampi che si riferiscono al nome di una singola persona, un costrutto che può essere riutilizzato per altri campi in cui è necessario acquisire il nome di una persona.
+La schermata seguente illustra come i tipi di dati vengono rappresentati nell’interfaccia utente di Platform. Uno dei campi forniti dal gruppo di campi [!UICONTROL Dettagli demografici] utilizza il tipo di dati &quot;[!UICONTROL Oggetto]&quot;, come indicato dal testo che segue il carattere barra verticale (`|`) accanto al nome del campo. Questo particolare tipo di dati fornisce diversi sottocampi che si riferiscono al nome di una singola persona, un costrutto che può essere riutilizzato per altri campi in cui è necessario acquisire il nome di una persona.
 
-![Un diagramma nell&#39;Editor schema per una singola persona con l&#39;oggetto Nome completo e gli attributi evidenziati.](../images/schema-composition/data-type.png)
+![Diagramma nell&#39;Editor schema per una singola persona con l&#39;oggetto Nome completo e gli attributi evidenziati.](../images/schema-composition/data-type.png)
 
-Per l’elenco più aggiornato dei tipi di dati XDM standard disponibili, consulta [archivio XDM ufficiale](https://github.com/adobe/xdm/tree/master/components/datatypes). In alternativa, consulta la guida su [esplorazione dei componenti XDM](../ui/explore.md) se preferisci visualizzare le risorse nell’interfaccia utente.
+Per l&#39;elenco più aggiornato dei tipi di dati XDM standard disponibili, fare riferimento al [archivio XDM ufficiale](https://github.com/adobe/xdm/tree/master/components/datatypes). In alternativa, se preferisci visualizzare le risorse nell&#39;interfaccia utente, consulta la guida su [esplorazione dei componenti XDM](../ui/explore.md).
 
 ### Campo {#field}
 
-Un campo è il blocco predefinito più semplice di uno schema. I campi forniscono vincoli relativi al tipo di dati che possono contenere definendo un tipo di dati specifico. Questi tipi di dati di base definiscono un singolo campo, mentre [tipi di dati](#data-type) precedentemente menzionato consente di definire più sottocampi e di riutilizzare la stessa struttura a più campi in vari schemi. Pertanto, oltre a definire il &quot;tipo di dati&quot; di un campo come uno dei tipi di dati definiti nel Registro di sistema, Experienci Platform supporta anche i seguenti tipi scalari di base:
+Un campo è il blocco predefinito più semplice di uno schema. I campi forniscono vincoli relativi al tipo di dati che possono contenere definendo un tipo di dati specifico. Questi tipi di dati di base definiscono un singolo campo, mentre i [tipi di dati](#data-type) precedentemente menzionati ti consentono di definire più sottocampi e di riutilizzare la stessa struttura a più campi in vari schemi. Pertanto, oltre a definire il &quot;tipo di dati&quot; di un campo come uno dei tipi di dati definiti nel Registro di sistema, Experience Platform supporta anche i seguenti tipi scalari di base:
 
 * Stringa
 * Intero
@@ -252,7 +252,7 @@ Un campo è il blocco predefinito più semplice di uno schema. I campi forniscon
 
 >[!TIP]
 >
->Consulta la [appendice](#objects-v-freeform) per informazioni sui pro e i contro dell’utilizzo di campi in formato libero su campi di tipo oggetto.
+>Per informazioni sui pro e i contro dell&#39;utilizzo di campi in formato libero su campi di tipo oggetto, vedere l&#39;[appendice](#objects-v-freeform).
 
 Gli intervalli validi di questi tipi scalari possono essere ulteriormente vincolati a determinati pattern, formati, minimi/massimi o valori predefiniti. Utilizzando questi vincoli, è possibile rappresentare un&#39;ampia gamma di tipi di campo più specifici, tra cui:
 
@@ -266,55 +266,55 @@ Gli intervalli validi di questi tipi scalari possono essere ulteriormente vincol
 
 >[!NOTE]
 >
->Il tipo di campo &quot;map&quot; consente di usare dati di coppia chiave-valore, inclusi più valori per una singola chiave. Le mappe si trovano nelle classi XDM standard e nei gruppi di campi, ma puoi anche definire mappe personalizzate. Consulta l’esercitazione API su [definizione di campi mappa personalizzati](../tutorials/custom-fields-api.md#custom-maps) oppure la guida su [definizione dei campi mappa nell’interfaccia utente](../ui/fields/map.md) per ulteriori informazioni.
+>Il tipo di campo &quot;map&quot; consente di usare dati di coppia chiave-valore, inclusi più valori per una singola chiave. Le mappe si trovano nelle classi XDM standard e nei gruppi di campi, ma puoi anche definire mappe personalizzate. Per ulteriori informazioni, consulta l&#39;esercitazione API su [definizione dei campi mappa personalizzati](../tutorials/custom-fields-api.md#custom-maps) o la guida su [definizione dei campi mappa nell&#39;interfaccia utente](../ui/fields/map.md).
 
 ## Esempio di composizione {#composition-example}
 
-Gli schemi vengono creati utilizzando un modello di composizione e rappresentano il formato e la struttura dei dati in cui acquisire i dati [!DNL Platform]. Come indicato in precedenza, questi schemi sono composti da una classe e da zero o più gruppi di campi compatibili con tale classe.
+Gli schemi vengono creati utilizzando un modello di composizione e rappresentano il formato e la struttura dei dati da acquisire in [!DNL Platform]. Come indicato in precedenza, questi schemi sono composti da una classe e da zero o più gruppi di campi compatibili con tale classe.
 
-Ad esempio, uno schema che descrive gli acquisti effettuati in un negozio al dettaglio potrebbe essere denominato &quot;[!UICONTROL Memorizza transazioni]&quot;. Lo schema implementa [!DNL XDM ExperienceEvent] classe combinata con lo standard [!UICONTROL Commerce] gruppo di campi e un gruppo definito dall&#39;utente [!UICONTROL Informazioni prodotto] gruppo di campi.
+Ad esempio, uno schema che descrive gli acquisti effettuati in un punto vendita al dettaglio potrebbe essere denominato &quot;[!UICONTROL Transazioni store]&quot;. Lo schema implementa la classe [!DNL XDM ExperienceEvent] combinata con il gruppo di campi [!UICONTROL Commerce] standard e un gruppo di campi [!UICONTROL Informazioni prodotto] definito dall&#39;utente.
 
-È possibile chiamare un altro schema che tiene traccia del traffico del sito web &quot;[!UICONTROL Visite web]&quot;. Inoltre, implementa [!DNL XDM ExperienceEvent] ma questa volta combina lo standard [!UICONTROL Web] gruppo di campi.
+Un altro schema che tiene traccia del traffico del sito Web potrebbe essere denominato &quot;[!UICONTROL Visite Web]&quot;. Implementa anche la classe [!DNL XDM ExperienceEvent], ma questa volta combina il gruppo di campi [!UICONTROL Web] standard.
 
-Il diagramma seguente mostra questi schemi e i campi con il contributo di ciascun gruppo di campi. Contiene anche due schemi basati su [!DNL XDM Individual Profile] , inclusa la classe &quot;[!UICONTROL Membri fedeltà]&quot; menzionato in precedenza in questa guida.
+Il diagramma seguente mostra questi schemi e i campi con il contributo di ciascun gruppo di campi. Contiene inoltre due schemi basati sulla classe [!DNL XDM Individual Profile], incluso lo schema &quot;[!UICONTROL Membri fedeltà]&quot; menzionato in precedenza in questa guida.
 
-![Un diagramma di flusso costituito da quattro schemi e dai gruppi di campi che vi contribuiscono.](../images/schema-composition/composition.png)
+![Diagramma di flusso costituito da quattro schemi e dai gruppi di campi che vi contribuiscono.](../images/schema-composition/composition.png)
 
 ### Unione {#union}
 
-Experienci Platform consente di comporre schemi per casi d’uso specifici, ma ti consente anche di visualizzare un’&quot;unione&quot; di schemi per un tipo di classe specifico. Il diagramma precedente mostra due schemi basati sulla classe ExperienceEvent XDM e due schemi basati su [!DNL XDM Individual Profile] classe. L’unione, illustrata di seguito, aggrega i campi di tutti gli schemi che condividono la stessa classe ([!DNL XDM ExperienceEvent] e [!DNL XDM Individual Profile], rispettivamente).
+Experience Platform consente di comporre schemi per casi d’uso specifici, ma ti consente anche di visualizzare un’&quot;unione&quot; di schemi per un tipo di classe specifico. Il diagramma precedente mostra due schemi basati sulla classe ExperienceEvent XDM e due schemi basati sulla classe [!DNL XDM Individual Profile]. L&#39;unione mostrata di seguito aggrega i campi di tutti gli schemi che condividono la stessa classe ([!DNL XDM ExperienceEvent] e [!DNL XDM Individual Profile], rispettivamente).
 
-![Un diagramma di flusso dello schema di unione che mostra i campi che li compongono.](../images/schema-composition/union.png)
+![Diagramma di flusso dello schema di unione che mostra i campi che li compongono.](../images/schema-composition/union.png)
 
-Attivando uno schema da utilizzare con [!DNL Real-Time Customer Profile], è incluso nell’unione per quel tipo di classe. [!DNL Profile] fornisce profili solidi e centralizzati di attributi cliente e un account con marca temporale per ogni evento che il cliente ha avuto in qualsiasi sistema integrato con [!DNL Platform]. [!DNL Profile] utilizza la visualizzazione unione per rappresentare questi dati e fornire una visualizzazione olistica di ogni singolo cliente.
+Attivando uno schema da utilizzare con [!DNL Real-Time Customer Profile], viene incluso nell&#39;unione per quel tipo di classe. [!DNL Profile] offre profili solidi e centralizzati degli attributi del cliente e un account con marca temporale per ogni evento che il cliente ha avuto in qualsiasi sistema integrato con [!DNL Platform]. [!DNL Profile] utilizza la visualizzazione unione per rappresentare questi dati e fornire una visualizzazione olistica di ogni singolo cliente.
 
 Per ulteriori informazioni sull&#39;utilizzo di [!DNL Profile], vedere [Panoramica del profilo cliente in tempo reale](../../profile/home.md).
 
 ## Mappatura dei file di dati su schemi XDM {#mapping-datafiles}
 
-Tutti i file di dati acquisiti in Experienci Platform devono essere conformi alla struttura di uno schema XDM. Per ulteriori informazioni su come formattare i file di dati per rispettare le gerarchie XDM (inclusi i file di esempio), consulta il documento su [esempio di trasformazioni ETL](../../etl/transformations.md). Per informazioni generali sull’acquisizione di file di dati in Experienci Platform, consulta la sezione [panoramica dell’acquisizione batch](../../ingestion/batch-ingestion/overview.md).
+Tutti i file di dati acquisiti in Experience Platform devono essere conformi alla struttura di uno schema XDM. Per ulteriori informazioni su come formattare i file di dati per rispettare le gerarchie XDM (inclusi i file di esempio), consulta il documento su [trasformazioni ETL di esempio](../../etl/transformations.md). Per informazioni generali sull&#39;acquisizione di file di dati in Experience Platform, consulta la [panoramica sull&#39;acquisizione batch](../../ingestion/batch-ingestion/overview.md).
 
 ## Schemi per tipi di pubblico esterni
 
 Se stai inserendo in Platform tipi di pubblico da sistemi esterni, devi utilizzare i seguenti componenti per acquisirli negli schemi:
 
-* [[!UICONTROL Definizione del segmento] classe](../classes/segment-definition.md): utilizza questa classe standard per acquisire gli attributi chiave di una definizione di segmento esterna.
-* [[!UICONTROL Dettagli sull’iscrizione al segmento] gruppo di campi](../field-groups/profile/segmentation.md): aggiungi questo gruppo di campi al tuo [!UICONTROL Profilo individuale XDM] schema per associare profili cliente a tipi di pubblico specifici.
+* [[!UICONTROL Definizione segmento] classe](../classes/segment-definition.md): utilizzare questa classe standard per acquisire gli attributi chiave di una definizione segmento esterna.
+* [[!UICONTROL Dettagli sull&#39;iscrizione al segmento] gruppo di campi](../field-groups/profile/segmentation.md): aggiungi questo gruppo di campi allo schema [!UICONTROL Profilo individuale XDM] per associare i profili dei clienti a tipi di pubblico specifici.
 
 ## Passaggi successivi
 
-Ora che conosci le nozioni di base sulla composizione dello schema, puoi iniziare a esplorare e creare schemi utilizzando [!DNL Schema Registry].
+Ora che hai compreso le nozioni di base sulla composizione dello schema, puoi iniziare a esplorare e creare schemi utilizzando [!DNL Schema Registry].
 
 Per esaminare la struttura delle due classi XDM di base e dei relativi gruppi di campi compatibili di uso comune, consulta la seguente documentazione di riferimento:
 
 * [[!DNL XDM Individual Profile]](../classes/individual-profile.md)
 * [[!DNL XDM ExperienceEvent]](../classes/experienceevent.md)
 
-Il [!DNL Schema Registry] viene utilizzato per accedere a [!DNL Schema Library] in Adobe Experience Platform e fornisce un’interfaccia utente e un’API RESTful da cui tutte le risorse libreria disponibili sono accessibili. Il [!DNL Schema Library] contiene le risorse di settore definite da Adobe, le risorse fornitore definite da partner Experienci Platform e le classi, i gruppi di campi, i tipi di dati e gli schemi composti dai membri dell&#39;organizzazione.
+[!DNL Schema Registry] viene utilizzato per accedere a [!DNL Schema Library] in Adobe Experience Platform e fornisce un&#39;interfaccia utente e un&#39;API RESTful da cui tutte le risorse della libreria disponibili sono accessibili. [!DNL Schema Library] contiene le risorse del settore definite da Adobe, le risorse del fornitore definite dai partner Experience Platform e le classi, i gruppi di campi, i tipi di dati e gli schemi composti dai membri dell&#39;organizzazione.
 
-Per iniziare a comporre lo schema utilizzando l’interfaccia utente, segui insieme alla [Esercitazione sull’editor di schemi](../tutorials/create-schema-ui.md) per creare lo schema &quot;Membri fedeltà&quot; menzionato in questo documento.
+Per iniziare a comporre lo schema utilizzando l&#39;interfaccia utente, seguire l&#39;esercitazione [Schema Editor](../tutorials/create-schema-ui.md) per creare lo schema &quot;Membri fedeltà&quot; menzionato in questo documento.
 
-Per iniziare a utilizzare [!DNL Schema Registry] API, inizia leggendo il [Guida per gli sviluppatori API del Registro di schema](../api/getting-started.md). Dopo aver letto la guida per sviluppatori, segui i passaggi descritti nell’esercitazione su [creazione di uno schema tramite l’API Schema Registry](../tutorials/create-schema-api.md).
+Per iniziare a utilizzare l&#39;API [!DNL Schema Registry], leggere la [Guida per gli sviluppatori dell&#39;API del registro degli schemi](../api/getting-started.md). Dopo aver letto la guida per gli sviluppatori, segui i passaggi descritti nell&#39;esercitazione su [creazione di uno schema tramite l&#39;API Schema Registry](../tutorials/create-schema-api.md).
 
 ## Appendice
 
@@ -356,7 +356,7 @@ Di seguito sono elencati i pro e i contro dell’utilizzo di oggetti su campi in
 **Contro**:
 
 * I campi diventano più nidificati.
-* Quando si utilizza [Servizio query Adobe Experience Platform](../../query-service/home.md), è necessario fornire stringhe di riferimento più lunghe per i campi di query nidificati negli oggetti.
+* Quando si utilizza [Adobe Experience Platform Query Service](../../query-service/home.md), è necessario fornire stringhe di riferimento più lunghe ai campi di query nidificati negli oggetti.
 
 #### Campi in formato libero
 
@@ -364,7 +364,7 @@ Di seguito sono elencati i pro e i contro dell’utilizzo di campi in formato li
 
 **Pro**:
 
-* I campi in formato libero vengono creati direttamente sotto l’oggetto principale dello schema (`_tenantId`), aumentando la visibilità.
+* I campi in formato libero vengono creati direttamente sotto l&#39;oggetto principale dello schema (`_tenantId`), aumentando la visibilità.
 * Le stringhe di riferimento per i campi in formato libero tendono a essere più brevi quando si utilizza Query Service.
 
 **Contro**:

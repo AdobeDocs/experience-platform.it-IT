@@ -7,8 +7,8 @@ description: Adobe Experience Platform offre diversi servizi e strumenti che ti 
 exl-id: de0836a4-7bc2-4f9c-95a9-c01dd9e2b03f
 source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '303'
-ht-degree: 11%
+source-wordcount: '278'
+ht-degree: 1%
 
 ---
 
@@ -22,14 +22,14 @@ L’integrazione tra IA per l’analisi dei clienti e Governance dei dati di Ado
 
 Le etichette di utilizzo dei dati e i criteri creati sui set di dati utilizzati da Platform possono essere visualizzati nel flusso di lavoro di configurazione di Customer AI. Queste etichette interrompono o avvisano gli utenti che utilizzano campi con etichetta.
 
-Questa integrazione consente di gestire la conformità in modo più efficiente. Gli amministratori di dati della tua organizzazione possono impostare criteri per limitare l’utilizzo. Di conseguenza, puoi utilizzare dati conformi ai criteri definiti dagli amministratori dei dati. Leggi la documentazione su [Etichette e criteri](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/data-governance.html?lang=it) per ulteriori informazioni.
+Questa integrazione consente di gestire la conformità in modo più efficiente. Gli amministratori dei dati della tua organizzazione possono impostare criteri per limitare l’utilizzo. Di conseguenza, puoi utilizzare dati conformi ai criteri definiti dagli amministratori dei dati. Per ulteriori informazioni, consulta la documentazione su [Etichette e criteri](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/data-governance.html).
 
 ## Criterio di consenso {#consent-policy}
 
-IA per l’analisi dei clienti rispetta le preferenze di consenso. Una volta [configurare e abilitare i criteri di consenso](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=it#consent-policy), IA per l’analisi dei clienti rispetterà i dati sul consenso raccolti da te. Per il punteggio del modello nelle esecuzioni successive del modello vengono utilizzati solo i dati consentiti. I nuovi punteggi sostituiranno i punteggi precedenti e possono essere utilizzati nella segmentazione. Questa funzione è attualmente disponibile solo per i clienti di HealthCare Shield e per i clienti di Privacy and Security Shield.
+IA per l’analisi dei clienti rispetta le preferenze di consenso. Dopo aver [configurato e abilitato i criteri di consenso](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=it#consent-policy), IA per l&#39;analisi dei clienti rispetterà i dati di consenso raccolti da te. Per il punteggio del modello nelle esecuzioni successive del modello vengono utilizzati solo i dati consentiti. I nuovi punteggi sostituiranno i punteggi precedenti e possono essere utilizzati nella segmentazione. Questa funzione è attualmente disponibile solo per i clienti di HealthCare Shield e per i clienti di Privacy and Security Shield.
 
 Ulteriori informazioni su questa funzione sono disponibili qui:
 
-[Guida introduttiva di Customer AI](../../customer-ai/getting-started.md)
+[Guida introduttiva di IA per l&#39;analisi dei clienti](../../customer-ai/getting-started.md)
 [Adobe Experience Platform e applicazioni](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html)
-[Diagrammi dell’architettura Adobe Experience Cloud](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/experience-cloud.html?lang=it)
+[Diagrammi architettura Adobe Experience Cloud](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/experience-cloud.html?lang=it)

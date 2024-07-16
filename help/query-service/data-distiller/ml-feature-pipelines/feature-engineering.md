@@ -4,27 +4,27 @@ description: Scopri come trasformare i dati in Adobe Experience Platform in funz
 exl-id: 7fe017c9-ec46-42af-ac8f-734c4c6e24b5
 source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
-source-wordcount: '1161'
-ht-degree: 14%
+source-wordcount: '1140'
+ht-degree: 12%
 
 ---
 
 # Funzioni di ingegnere per l’apprendimento automatico
 
-Questo documento illustra come trasformare i dati in Adobe Experience Platform in **funzioni**, o variabili, che possono essere utilizzate da un modello di apprendimento automatico. Questo processo è denominato **ingegneria delle funzioni**. Utilizza Data Distiller per calcolare le funzioni ML su larga scala e condividerle con il tuo ambiente di apprendimento automatico. Ciò comporta quanto segue:
+In questo documento viene illustrato come trasformare i dati in Adobe Experience Platform in **funzionalità** o variabili utilizzabili da un modello di apprendimento automatico. Questo processo è denominato **ingegneria delle funzionalità**. Utilizza Data Distiller per calcolare le funzioni ML su larga scala e condividerle con il tuo ambiente di apprendimento automatico. Ciò comporta quanto segue:
 
 1. Creare un modello di query per definire le etichette di destinazione e le feature da calcolare per il modello
 2. Eseguire la query e memorizzare i risultati in un set di dati di formazione
 
 ## Definire i dati di apprendimento {#define-training-data}
 
-L’esempio seguente illustra una query per derivare i dati di formazione da un set di dati Experience Events per un modello al fine di prevedere la propensione di un utente ad abbonarsi a una newsletter. Gli eventi di abbonamento sono rappresentati dal tipo di evento `web.formFilledOut`, e altri eventi comportamentali nel set di dati vengono utilizzati per derivare funzioni a livello di profilo per prevedere le sottoscrizioni.
+L’esempio seguente illustra una query per derivare i dati di formazione da un set di dati Experience Events per un modello al fine di prevedere la propensione di un utente ad abbonarsi a una newsletter. Gli eventi di abbonamento sono rappresentati dal tipo di evento `web.formFilledOut` e altri eventi comportamentali nel set di dati vengono utilizzati per derivare funzionalità a livello di profilo per prevedere gli abbonamenti.
 
 ### Etichette per query positive e negative {#query-positive-and-negative-labels}
 
 Un set di dati completo per l’addestramento di un modello di apprendimento automatico (supervisionato) include una variabile target o un’etichetta che rappresenta il risultato da prevedere e un set di funzioni o variabili esplicative utilizzate per descrivere i profili di esempio utilizzati per addestrare il modello.
 
-In questo caso, l’etichetta è una variabile denominata `subscriptionOccurred` è uguale a 1 se il profilo utente ha un evento con tipo `web.formFilledOut` e 0 in caso contrario. La query seguente restituisce un set di 50.000 utenti dal set di dati degli eventi, inclusi tutti gli utenti con etichette positive (`subscriptionOccurred = 1`) più un utente selezionato in modo casuale con etichette negative per completare la dimensione del campione di 50.000 utenti. In questo modo i dati di formazione includono esempi positivi e negativi da cui il modello può imparare.
+In questo caso, l&#39;etichetta è una variabile denominata `subscriptionOccurred` che è uguale a 1 se il profilo utente ha un evento con tipo `web.formFilledOut` e a 0 in caso contrario. La query seguente restituisce un set di 50.000 utenti dal set di dati degli eventi, inclusi tutti gli utenti con etichette positive (`subscriptionOccurred = 1`) più un set di utenti selezionati in modo casuale con etichette negative per completare la dimensione del campione di 50.000 utenti. In questo modo i dati di formazione includono esempi positivi e negativi da cui il modello può imparare.
 
 ```python
 from aepp import queryservice
@@ -70,12 +70,12 @@ Numero di classi: 50000
 
 Con una query appropriata puoi raccogliere gli eventi nel set di dati in funzioni numeriche significative che possono essere utilizzate per addestrare un modello di tendenza. Di seguito sono riportati alcuni eventi di esempio:
 
-- **Numero di e-mail** inviati a scopo di marketing e ricevuti dall’utente.
-- Parte di queste e-mail che erano **aperto**.
-- Parte di queste e-mail in cui l’utente **selezionato** il collegamento.
-- **Numero di prodotti** che sono stati visualizzati.
+- **Numero di e-mail** inviate per scopi di marketing e ricevute dall&#39;utente.
+- Parte di queste e-mail aperte ****.
+- Parte di queste e-mail in cui l&#39;utente **ha selezionato** il collegamento.
+- **Numero di prodotti** visualizzati.
 - Numero di **proposte con cui si è interagito**.
-- Numero di **proposte che sono state respinte**.
+- Numero di **proposte ignorate**.
 - Numero di **collegamenti selezionati**.
 - Numero di minuti tra due e-mail consecutive ricevute.
 - Numero di minuti tra due e-mail consecutive aperte.
@@ -148,11 +148,11 @@ df_features.head()
 
 |   | userId | emailsReceived | emailsOpened | e-mailClic | productsViewed | propositionInteracts | propositionIgnorato | webLinkClicks | minutes_Since_emailSent | minutes_Since_emailOpened | minutes_Since_emailClick | minutes_Since_productView | minutes_Since_propositionInteract | minutes_Since_propositionDismiss | minutes_Since_linkClick |
 | --- |    --- |    ---   |  ---  |   ---  |   ---  |  ---  |  ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   --- | 
-| 0 | 01102546977582484968046916668339306826 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | NaN | NaN | NaN | NaN | Nessuna | NaN |
-| 1 | 01102546977582484968046916668339306826 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | NaN | NaN | NaN | NaN | Nessuna | NaN |
-| 2 | 01102546977582484968046916668339306826 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | NaN | NaN | NaN | NaN | Nessuna | NaN |
-| 3 | 01102546977582484968046916668339306826 | 3 | 1 | 0 | 0 | 0 | 0 | 0 | 540.0 | 0.0 | NaN | NaN | NaN | Nessuna | NaN |
-| 4 | 01102546977582484968046916668339306826 | 3 | 2 | 0 | 0 | 0 | 0 | 0 | 588.0 | 0.0 | NaN | NaN | NaN | Nessuna | NaN |
+| 0 | 01102546977582484968046916668339306826 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Nessuna | NaN |
+| 1 | 01102546977582484968046916668339306826 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Nessuna | NaN |
+| 2 | 01102546977582484968046916668339306826 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Nessuna | NaN |
+| 3 | 01102546977582484968046916668339306826 | 3 | 1 | 0 | 0 | 0 | 0 | 0 | 540,0 | 0,0 | NaN | NaN | NaN | Nessuna | NaN |
+| 4 | 01102546977582484968046916668339306826 | 3 | 2 | 0 | 0 | 0 | 0 | 0 | 588,0 | 0,0 | NaN | NaN | NaN | Nessuna | NaN |
 
 {style="table-layout:auto"}
 
@@ -231,11 +231,11 @@ df_training_set.head()
 
 |  | userId | eventType | timestamp | subscriptionOccurred | emailsReceived | emailsOpened | e-mailClic | productsViewed | propositionInteracts | propositionIgnorato | webLinkClicks | minutes_Since_emailSent | minutes_Since_emailOpened | minutes_Since_emailClick | minutes_Since_productView | minutes_Since_propositionInteract | minutes_Since_propositionDismiss | minutes_Since_linkClick | random_row_number_for_user |
 | ---  |  --- |   ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---   | ---  |  ---  |  ---  |  --- |    
-| 0 | 02554909162592418347780983091131567290 | directMarketing.emailSent | 2023-06-17 13:44:59.086 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | NaN | NaN | NaN | NaN | Nessuna | NaN | 1 |
-| 1 | 01130334080340815140184601481559659945 | directMarketing.emailOpened | 2023-06-19 06:01:55.366 | 0 | 1 | 3 | 0 | 1 | 0 | 0 | 0 | 1921.0 | 0.0 | NaN | 1703.0 | NaN | Nessuna | NaN | 1 |
-| 2 | 01708961660028351393477273586554010192 | web.formFilledOut | 2023-06-19 18:36:49.083 | 1 | 1 | 2 | 2 | 0 | 0 | 0 | 0 | 2365.0 | 26.0 | 1.0 | NaN | NaN | Nessuna | NaN | 7 |
-| 3 | 01809182902320674899156240602124740853 | directMarketing.emailSent | 2023-06-21 19:17:12.535 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | NaN | NaN | NaN | NaN | Nessuna | NaN | 1 |
-| 4 | 03441761949943678951106193028739001197 | directMarketing.emailSent | 2023-06-21 21:58:29.482 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | NaN | NaN | NaN | NaN | Nessuna | NaN | 1 |
+| 0 | 02554909162592418347780983091131567290 | directMarketing.emailSent | 17/06/2023 13/0}59,086:44: | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Nessuna | NaN | 1 |
+| 1 | 01130334080340815140184601481559659945 | directMarketing.emailOpened | 2023-06-19 06:01:55,366 | 0 | 1 | 3 | 0 | 1 | 0 | 0 | 0 | 1921,0 | 0,0 | NaN | 1703,0 | NaN | Nessuna | NaN | 1 |
+| 2 | 01708961660028351393477273586554010192 | web.formFilledOut | 19/06/2023 18/0}49,083:36: | 1 | 1 | 2 | 2 | 0 | 0 | 0 | 0 | 2365,0 | 26,0 | 1,0 | NaN | NaN | Nessuna | NaN | 7 |
+| 3 | 01809182902320674899156240602124740853 | directMarketing.emailSent | 2023-06-21 19:17:12.535 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Nessuna | NaN | 1 |
+| 4 | 03441761949943678951106193028739001197 | directMarketing.emailSent | 21/06/2023 21/0}29,482:58: | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Nessuna | NaN | 1 |
 
 {style="table-layout:auto"}
 
@@ -246,9 +246,9 @@ df_training_set.head()
 Per farlo, è necessario apportare alcune modifiche alla query del set di apprendimento:
 
 - Aggiungi la logica per creare un nuovo set di dati di apprendimento, se non esiste, e in caso contrario inserisci le nuove etichette e funzioni nel set di dati di apprendimento esistente. Ciò richiede una serie di due versioni della query del set di apprendimento:
-   - Innanzitutto, utilizzando `CREATE TABLE IF NOT EXISTS {table_name} AS` dichiarazione
-   - Quindi, utilizzando `INSERT INTO {table_name}` istruzione per il caso in cui il set di dati di formazione esiste già
-- Aggiungi un `SNAPSHOT BETWEEN $from_snapshot_id AND $to_snapshot_id` per limitare la query ai dati evento aggiunti entro un intervallo specificato. Il `$` il prefisso degli ID snapshot indica che si tratta di variabili che verranno passate quando viene eseguito il modello di query.
+   - Utilizzare innanzitutto l&#39;istruzione `CREATE TABLE IF NOT EXISTS {table_name} AS`
+   - Quindi, utilizzando l’istruzione `INSERT INTO {table_name}` per il caso in cui il set di dati di formazione esiste già
+- Aggiungere un&#39;istruzione `SNAPSHOT BETWEEN $from_snapshot_id AND $to_snapshot_id` per limitare la query ai dati evento aggiunti entro un intervallo specificato. Il prefisso `$` sugli ID snapshot indica che si tratta di variabili che verranno passate quando viene eseguito il modello di query.
 
 L’applicazione di tali modifiche determina la seguente query:
 
@@ -484,4 +484,4 @@ Query completed successfully in 473.8 seconds
 
 ## Passaggi successivi:
 
-Leggendo questo documento hai imparato a trasformare i dati in Adobe Experience Platform in funzioni o variabili che possono essere utilizzate da un modello di apprendimento automatico. Il passaggio successivo nella creazione di pipeline di funzioni da Experienci Platform per alimentare modelli personalizzati nell’ambiente di apprendimento automatico è [esportare i set di dati delle funzioni](./export-data.md).
+Leggendo questo documento hai imparato a trasformare i dati in Adobe Experience Platform in funzioni o variabili che possono essere utilizzate da un modello di apprendimento automatico. Il passaggio successivo nella creazione di pipeline di funzionalità da Experience Platform per alimentare modelli personalizzati nell&#39;ambiente di apprendimento automatico è [esportare set di dati di funzionalità](./export-data.md).

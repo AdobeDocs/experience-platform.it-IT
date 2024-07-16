@@ -7,20 +7,20 @@ exl-id: fb02b6b4-255b-442f-895c-600022231a1c
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '262'
-ht-degree: 4%
+ht-degree: 11%
 
 ---
 
-# [!UICONTROL Identità] tipo di dati
+# Tipo di dati [!UICONTROL Identity]
 
-[!UICONTROL Identità] è un tipo di dati XDM standard utilizzato per distinguere chiaramente le persone che interagiscono con le esperienze digitali. L’identità è stabilita da un provider di identità, a cui a sua volta si fa riferimento in una `namespace` attributo. All’interno di ogni `namespace`, l’identità è univoca.
+[!UICONTROL Identity] è un tipo di dati XDM standard utilizzato per distinguere chiaramente le persone che interagiscono con le esperienze digitali. L&#39;identità è stabilita da un provider di identità, a cui si fa riferimento in un attributo `namespace`. In ogni `namespace`, l&#39;identità è univoca.
 
 <img src="../images/data-types/identity.png" width="550" /><br />
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
-| `namespace` | Oggetto | Oggetto contenente un singolo campo stringa (`code`), che indica lo spazio dei nomi associato al `id` attributo. |
-| `authenticatedState` | Stringa | Lo stato di autenticazione per questa identità al momento dell’evento esperienza osservato. Consulta la [appendice](#authenticatedState) per i valori e le definizioni accettati. |
+| `namespace` | Oggetto | Oggetto contenente un singolo campo stringa (`code`), che indica lo spazio dei nomi associato all&#39;attributo `id` fornito. |
+| `authenticatedState` | Stringa | Lo stato di autenticazione per questa identità al momento dell’evento esperienza osservato. Per informazioni sui valori e le definizioni accettati, vedere [appendice](#authenticatedState). |
 | `id` | Stringa | L’identità del consumatore nel relativo spazio dei nomi. |
 | `primary` | Booleano | Indica se si tratta dell’identità primaria dell’individuo. Ogni individuo può avere una sola identità primaria. |
 | `xid` | Stringa | Se presente, questo valore rappresenta un identificatore per più spazi dei nomi che è univoco tra tutti gli identificatori relativi allo spazio dei nomi in tutti gli spazi dei nomi. |
@@ -34,11 +34,11 @@ Per ulteriori dettagli sul tipo di dati, consulta l’archivio XDM pubblico:
 
 ## Appendice
 
-La sezione seguente contiene informazioni aggiuntive sulle [!UICONTROL Identità] tipo di dati.
+La sezione seguente contiene informazioni aggiuntive sul tipo di dati [!UICONTROL Identity].
 
 ## Valori accettati per authenticatedState {#authenticatedState}
 
-La tabella seguente illustra i valori accettati per `authenticatedState` e il significato associato:
+Nella tabella seguente vengono illustrati i valori accettati per `authenticatedState` e i relativi significati associati:
 
 | Valore | Descrizione |
 | --- | --- |

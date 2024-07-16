@@ -1,24 +1,24 @@
 ---
 title: sendMediaEvent
 description: Scopri come utilizzare il comando sendMediaEvent per tenere traccia delle sessioni multimediali in Web SDK.
-source-git-commit: 83d3de67e7680369dc890f58b16d9668058e221c
+exl-id: a38626fd-4810-40a0-8893-e98136634fac
+source-git-commit: 57d42d88ec9a93744450a2a352590ab57d9e5bb7
 workflow-type: tm+mt
 source-wordcount: '763'
 ht-degree: 0%
 
 ---
 
-
 # `sendMediaEvent`
 
-Il `sendMediaEvent` il comando fa parte del Web SDK `streamingMedia` componente. Puoi utilizzare questo componente per raccogliere i dati relativi alle sessioni multimediali sul tuo sito web. Consulta la `streamingMedia` [documentazione](configure/streamingmedia.md) per scoprire come configurare questo componente.
+Il comando `sendMediaEvent` fa parte del componente Web SDK `streamingMedia`. Puoi utilizzare questo componente per raccogliere i dati relativi alle sessioni multimediali sul tuo sito web. Per informazioni su come configurare questo componente, consulta la `streamingMedia` [documentazione](configure/streamingmedia.md).
 
-Utilizza il `sendMediaEvent` comando per tenere traccia di riproduzioni, pause, completamenti, aggiornamenti dello stato del lettore e altri eventi correlati.
+Utilizza il comando `sendMediaEvent` per tenere traccia di riproduzioni, pause, completamenti, aggiornamenti dello stato del lettore e altri eventi correlati.
 
 Web SDK può gestire gli eventi multimediali in base al tipo di tracciamento della sessione multimediale:
 
-* **Gestione degli eventi per le sessioni con tracciamento automatico**. In questa modalità non è necessario trasmettere il `sessionID` all’evento multimediale o al valore della testina di riproduzione. L’SDK per web gestirà automaticamente questo problema, in base all’ID del lettore fornito e al `getPlayerDetails` funzione di callback fornita all’avvio della sessione multimediale.
-* **Gestione degli eventi per le sessioni tracciate manualmente**. In questa modalità è necessario trasmettere `sessionID` all’evento multimediale, insieme al valore della testina di riproduzione (valore intero). Se necessario, puoi anche trasmettere i dettagli dei dati relativi alla qualità dell’esperienza.
+* **Gestione eventi per sessioni con tracciamento automatico**. In questa modalità non è necessario passare `sessionID` all&#39;evento multimediale o al valore della testina di riproduzione. L&#39;SDK Web gestirà automaticamente questo problema in base all&#39;ID del lettore fornito e alla funzione di callback `getPlayerDetails` fornita all&#39;avvio della sessione multimediale.
+* **Gestione degli eventi per le sessioni monitorate manualmente**. In questa modalità devi passare `sessionID` all&#39;evento multimediale, insieme al valore della testina di riproduzione (valore intero). Se necessario, puoi anche trasmettere i dettagli dei dati relativi alla qualità dell’esperienza.
 
 ## Gestire gli eventi multimediali per tipo {#handle-by-type}
 
@@ -27,11 +27,11 @@ Seleziona le schede seguenti per visualizzare esempi di gestione del tipo di eve
 
 ### Play {#play}
 
-Il `media.play` Il tipo di evento viene utilizzato per tenere traccia dell’avvio della riproduzione di contenuti multimediali. Questo evento deve essere inviato quando il lettore passa allo stato &quot;riproduzione&quot; da un altro stato. Altri stati da cui il lettore passa alla &quot;riproduzione&quot; includono &quot;buffering&quot;, ripresa da &quot;in pausa&quot;, ripristino da un errore o riproduzione automatica.
+Il tipo di evento `media.play` viene utilizzato per tenere traccia dell&#39;avvio della riproduzione multimediale. Questo evento deve essere inviato quando il lettore passa allo stato &quot;riproduzione&quot; da un altro stato. Altri stati da cui il lettore passa alla &quot;riproduzione&quot; includono &quot;buffering&quot;, ripresa da &quot;in pausa&quot;, ripristino da un errore o riproduzione automatica.
 
 >[!BEGINTABS]
 
->[!TAB Tracciamento automatico delle sessioni]
+>[!TAB Tracciamento automatico della sessione]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -63,11 +63,11 @@ sessionPromise.then(sessionID => {
 
 ### Pausa {#pause}
 
-Il `media.pauseStart` Il tipo di evento viene utilizzato per tenere traccia di quando una riproduzione multimediale viene messa in pausa. Questo evento deve essere inviato quando l’utente preme **[!UICONTROL Pausa]**. Non esiste un tipo di evento di ripresa. Una ripresa viene dedotta quando si invia un `media.play` evento dopo un `media.pauseStart`.
+Il tipo di evento `media.pauseStart` viene utilizzato per tenere traccia di quando una riproduzione multimediale viene messa in pausa. Questo evento deve essere inviato quando l&#39;utente preme **[!UICONTROL Pausa]**. Non esiste un tipo di evento di ripresa. La ripresa viene dedotta quando si invia un evento `media.play` dopo un evento `media.pauseStart`.
 
 >[!BEGINTABS]
 
->[!TAB Tracciamento automatico delle sessioni]
+>[!TAB Tracciamento automatico della sessione]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -99,11 +99,11 @@ sessionPromise.then(sessionID => {
 
 ### Errore {#error}
 
-Il `media.error` Il tipo di evento viene utilizzato per tenere traccia di quando si verifica un errore durante la riproduzione di contenuti multimediali. Questo evento deve essere inviato quando si verifica un errore.
+Il tipo di evento `media.error` viene utilizzato per tenere traccia di quando si verifica un errore durante la riproduzione di contenuti multimediali. Questo evento deve essere inviato quando si verifica un errore.
 
 >[!BEGINTABS]
 
->[!TAB Tracciamento automatico delle sessioni]
+>[!TAB Tracciamento automatico della sessione]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -145,11 +145,11 @@ sessionPromise.then(sessionID => {
 
 ### Avvio dell’interruzione pubblicitaria {#ad-break-start}
 
-Il `media.adBreakStart` Il tipo di evento viene utilizzato per tenere traccia dell’avvio di un’interruzione pubblicitaria. Questo evento deve essere inviato all’avvio di un’interruzione pubblicitaria.
+Il tipo di evento `media.adBreakStart` viene utilizzato per tenere traccia dell&#39;avvio di un&#39;interruzione pubblicitaria. Questo evento deve essere inviato all’avvio di un’interruzione pubblicitaria.
 
 >[!BEGINTABS]
 
->[!TAB Tracciamento automatico delle sessioni]
+>[!TAB Tracciamento automatico della sessione]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -193,11 +193,11 @@ sessionPromise.then(sessionID => {
 
 ### Interruzione annuncio completata {#ad-break-complete}
 
-Il `media.adBreakComplete` Il tipo di evento viene utilizzato per tenere traccia del completamento di un’interruzione pubblicitaria. Questo evento deve essere inviato al termine di un’interruzione pubblicitaria.
+Il tipo di evento `media.adBreakComplete` viene utilizzato per tenere traccia del completamento di un&#39;interruzione pubblicitaria. Questo evento deve essere inviato al termine di un’interruzione pubblicitaria.
 
 >[!BEGINTABS]
 
->[!TAB Tracciamento automatico delle sessioni]
+>[!TAB Tracciamento automatico della sessione]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -229,11 +229,11 @@ sessionPromise.then(sessionID => {
 
 ### Inizio annuncio {#ad-start}
 
-Il `media.adStart` Il tipo di evento viene utilizzato per tenere traccia dell’avvio di un annuncio. Questo evento deve essere inviato all&#39;avvio di un annuncio.
+Il tipo di evento `media.adStart` viene utilizzato per tenere traccia dell&#39;avvio di un annuncio. Questo evento deve essere inviato all&#39;avvio di un annuncio.
 
 >[!BEGINTABS]
 
->[!TAB Tracciamento automatico delle sessioni]
+>[!TAB Tracciamento automatico della sessione]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -319,11 +319,11 @@ sessionPromise.then(sessionID => {
 
 ### Annuncio completato {#ad-complete}
 
-Il `media.adComplete` Il tipo di evento viene utilizzato per tenere traccia del completamento di un annuncio. Questo evento deve essere inviato al completamento di un annuncio.
+Il tipo di evento `media.adComplete` viene utilizzato per tenere traccia del completamento di un annuncio. Questo evento deve essere inviato al completamento di un annuncio.
 
 >[!BEGINTABS]
 
->[!TAB Tracciamento automatico delle sessioni]
+>[!TAB Tracciamento automatico della sessione]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -355,11 +355,11 @@ sessionPromise.then(sessionID => {
 
 ### Salta annuncio {#ad-skip}
 
-Il `media.adSkip` Il tipo di evento viene utilizzato per tenere traccia di quando un annuncio viene saltato. Questo evento deve essere inviato quando un annuncio viene saltato.
+Il tipo di evento `media.adSkip` viene utilizzato per tenere traccia di quando un annuncio viene saltato. Questo evento deve essere inviato quando un annuncio viene saltato.
 
 >[!BEGINTABS]
 
->[!TAB Tracciamento automatico delle sessioni]
+>[!TAB Tracciamento automatico della sessione]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -391,11 +391,11 @@ sessionPromise.then(sessionID => {
 
 ### Inizio capitolo {#chapter-start}
 
-Il `media.chapterStart` Il tipo di evento viene utilizzato per tenere traccia dell’avvio di un capitolo. Questo evento deve essere inviato all&#39;avvio di un capitolo.
+Il tipo di evento `media.chapterStart` viene utilizzato per tenere traccia dell&#39;avvio di un capitolo. Questo evento deve essere inviato all&#39;avvio di un capitolo.
 
 >[!BEGINTABS]
 
->[!TAB Tracciamento automatico delle sessioni]
+>[!TAB Tracciamento automatico della sessione]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -469,11 +469,11 @@ sessionPromise.then(sessionID => {
 
 ### Capitolo completato {#chapter-complete}
 
-Il `media.chapterComplete` Il tipo di evento viene utilizzato per tenere traccia del completamento di un capitolo. Questo evento deve essere inviato al completamento di un capitolo.
+Il tipo di evento `media.chapterComplete` viene utilizzato per tenere traccia del completamento di un capitolo. Questo evento deve essere inviato al completamento di un capitolo.
 
 >[!BEGINTABS]
 
->[!TAB Tracciamento automatico delle sessioni]
+>[!TAB Tracciamento automatico della sessione]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -505,11 +505,11 @@ sessionPromise.then(sessionID => {
 
 ### Salta capitolo {#chapter-skip}
 
-Il `media.chapterSkip` Il tipo di evento viene utilizzato per tenere traccia di quando un capitolo viene saltato. Questo evento deve essere inviato quando un capitolo viene saltato.
+Il tipo di evento `media.chapterSkip` viene utilizzato per tenere traccia di quando un capitolo viene saltato. Questo evento deve essere inviato quando un capitolo viene saltato.
 
 >[!BEGINTABS]
 
->[!TAB Tracciamento automatico delle sessioni]
+>[!TAB Tracciamento automatico della sessione]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -541,11 +541,11 @@ sessionPromise.then(sessionID => {
 
 ### Avvio buffer {#buffer-start}
 
-Il `media.bufferStart` Il tipo di evento viene utilizzato per tenere traccia dell’avvio del buffering. Questo evento deve essere inviato all’avvio del buffering. Non esiste `bufferResume` tipo di evento. A `bufferResume` viene dedotto quando si invia un evento di riproduzione dopo `bufferStart`.
+Il tipo di evento `media.bufferStart` viene utilizzato per tenere traccia dell&#39;avvio del buffering. Questo evento deve essere inviato all’avvio del buffering. Nessun tipo di evento `bufferResume`. Viene dedotto un `bufferResume` quando si invia un evento di riproduzione dopo `bufferStart`.
 
 >[!BEGINTABS]
 
->[!TAB Tracciamento automatico delle sessioni]
+>[!TAB Tracciamento automatico della sessione]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -577,11 +577,11 @@ sessionPromise.then(sessionID => {
 
 ### Modifica bitrate {#bitrate-change}
 
-Il `media.bitrateChange` Il tipo di evento viene utilizzato per tenere traccia delle modifiche del bitrate. Questo evento deve essere inviato quando il bitrate cambia.
+Il tipo di evento `media.bitrateChange` viene utilizzato per tenere traccia di quando il bitrate cambia. Questo evento deve essere inviato quando il bitrate cambia.
 
 >[!BEGINTABS]
 
->[!TAB Tracciamento automatico delle sessioni]
+>[!TAB Tracciamento automatico della sessione]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -626,11 +626,11 @@ sessionPromise.then(sessionID => {
 
 ### Aggiornamenti dello stato {#state-updates}
 
-Il `media.stateUpdate` il tipo di evento viene utilizzato per tenere traccia di quando lo stato del lettore cambia. Questo evento deve essere inviato quando cambia lo stato del lettore.
+Il tipo di evento `media.stateUpdate` viene utilizzato per tenere traccia di quando lo stato del lettore cambia. Questo evento deve essere inviato quando cambia lo stato del lettore.
 
 >[!BEGINTABS]
 
->[!TAB Tracciamento automatico delle sessioni]
+>[!TAB Tracciamento automatico della sessione]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -684,13 +684,13 @@ sessionPromise.then(sessionID => {
 
 ### Fine sessione {#session-end}
 
-Il `media.sessionEnd` Il tipo di evento viene utilizzato per notificare al backend di Media Analytics di chiudere immediatamente la sessione quando l’utente abbandona la visualizzazione del contenuto ed è improbabile che ritorni.
+Il tipo di evento `media.sessionEnd` viene utilizzato per notificare al backend di Media Analytics di chiudere immediatamente la sessione quando l’utente abbandona la visualizzazione del contenuto ed è improbabile che ritorni.
 
-Se non invii un `sessionEnd` una sessione abbandonata si interrompe se non vengono ricevuti eventi per 10 minuti o se non si verifica alcun movimento dell’indicatore di riproduzione per 30 minuti. La sessione viene eliminata automaticamente.
+Se non invii un evento `sessionEnd`, si verifica il timeout di una sessione abbandonata dopo che non sono stati ricevuti eventi per 10 minuti o quando non si verifica alcun movimento dell&#39;indicatore di riproduzione per 30 minuti. La sessione viene eliminata automaticamente.
 
 >[!BEGINTABS]
 
->[!TAB Tracciamento automatico delle sessioni]
+>[!TAB Tracciamento automatico della sessione]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -722,11 +722,11 @@ sessionPromise.then(sessionID => {
 
 ### Sessione completata {#session-complete}
 
-Il `media.sessionComplete` tipo di evento utilizzato per tenere traccia del completamento di una sessione multimediale. Questo evento deve essere inviato quando viene raggiunta la fine del contenuto principale.
+Il tipo di evento `media.sessionComplete` viene utilizzato per tenere traccia del completamento di una sessione multimediale. Questo evento deve essere inviato quando viene raggiunta la fine del contenuto principale.
 
 >[!BEGINTABS]
 
->[!TAB Tracciamento automatico delle sessioni]
+>[!TAB Tracciamento automatico della sessione]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -754,6 +754,3 @@ sessionPromise.then(sessionID => {
 ```
 
 >[!ENDTABS]
-
-
-

@@ -15,8 +15,8 @@ ht-degree: 0%
 
 L’interfaccia utente di Adobe Experience Platform fornisce una dashboard attraverso la quale è possibile visualizzare informazioni importanti sulle destinazioni attive dell’organizzazione, acquisite durante uno snapshot giornaliero.
 
-Per istruzioni dettagliate su come accedere e interagire con la dashboard delle destinazioni nell’interfaccia utente di, nonché per ulteriori informazioni sulle metriche disponibili visualizzate nella dashboard, visita [guida del dashboard destinazioni](../dashboards/guides/destinations.md).
+Per istruzioni dettagliate su come accedere e interagire con il dashboard delle destinazioni nell&#39;interfaccia utente, nonché per ulteriori informazioni sulle metriche disponibili visualizzate nel dashboard, visita la [guida del dashboard delle destinazioni](../dashboards/guides/destinations.md).
 
-Per una panoramica di tutte le funzioni della dashboard in Experience Platform, leggi [panoramica delle dashboard](../../dashboards/home.md).
+Per una panoramica di tutte le funzionalità del dashboard in Experience Platform, leggi la [panoramica dei dashboard](../../dashboards/home.md).
 
 ![](images/destinations-dashboard/dashboard-overview.png)

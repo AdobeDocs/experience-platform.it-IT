@@ -16,11 +16,11 @@ ht-degree: 3%
 
 ## Chiamata API di esempio
 
-La sezione seguente illustra la chiamata API che è possibile effettuare utilizzando [!DNL Query Service] API. La chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
+La sezione seguente illustra la chiamata API che è possibile effettuare utilizzando l&#39;API [!DNL Query Service]. La chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
 
 ### Richiedi parametri di connessione
 
-Puoi recuperare i parametri di connessione effettuando una richiesta GET al `/connection_parameters` endpoint. Per ulteriori informazioni sui client che utilizzano i parametri di connessione per connettersi tramite il servizio interattivo, consulta la documentazione su [Client Query Service](../clients/overview.md).
+È possibile recuperare i parametri di connessione effettuando una richiesta GET all&#39;endpoint `/connection_parameters`. Per ulteriori informazioni sui client che utilizzano i parametri di connessione per connettersi tramite il servizio interattivo, leggere la documentazione su [Client di Query Service](../clients/overview.md).
 
 **Formato API**
 

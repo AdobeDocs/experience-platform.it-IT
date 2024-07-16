@@ -16,19 +16,19 @@ ht-degree: 15%
 
 Le sandbox in Adobe Experience Platform forniscono ambienti di sviluppo isolati che consentono di testare le funzioni, eseguire esperimenti e creare configurazioni personalizzate senza influire sull’ambiente di produzione.
 
-Questa guida per gli sviluppatori descrive i passaggi necessari per utilizzare l’API Sandbox per gestire le sandbox in Experienci Platform e include esempi di chiamate API per eseguire varie operazioni.
+Questa guida per gli sviluppatori descrive i passaggi necessari per utilizzare l’API Sandbox per gestire le sandbox in Experience Platform e include esempi di chiamate API per eseguire varie operazioni.
 
 ## Prerequisiti
 
-Per gestire le sandbox per la tua organizzazione, devi disporre delle autorizzazioni di amministrazione delle sandbox. Gli utenti senza autorizzazioni di accesso possono utilizzare solo [endpoint sandbox disponibile](./available.md) per elencare le sandbox attive per l’utente corrente. Consulta la [panoramica sul controllo degli accessi](../../access-control/home.md) per ulteriori informazioni su come assegnare le autorizzazioni sandbox, ad Experience Platform.
+Per gestire le sandbox per la tua organizzazione, devi disporre delle autorizzazioni di amministrazione delle sandbox. Gli utenti senza autorizzazioni di accesso possono utilizzare solo l&#39;[endpoint sandbox disponibile](./available.md) per elencare le sandbox attive per l&#39;utente corrente. Per ulteriori informazioni su come assegnare le autorizzazioni sandbox, ad Experience Platform, consulta la [panoramica sul controllo degli accessi](../../access-control/home.md).
 
 ### Lettura delle chiamate API di esempio
 
-Questa guida fornisce esempi di chiamate API per illustrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere esempi di chiamate API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di Experience Platform.
+Questa guida fornisce esempi di chiamate API per illustrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere le chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di Experience Platform.
 
 ### Raccogliere i valori per le intestazioni richieste
 
-Questa guida richiede di aver completato [tutorial sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en) per effettuare correttamente chiamate alle API di Platform. Il completamento del tutorial di autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di Experienci Platform, come mostrato di seguito:
+Questa guida richiede di aver completato l&#39;[esercitazione sull&#39;autenticazione](https://www.adobe.com/go/platform-api-authentication-en) per poter effettuare correttamente le chiamate alle API di Platform. Il completamento del tutorial di autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di Experience Platform, come mostrato di seguito:
 
 * Autorizzazione: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`

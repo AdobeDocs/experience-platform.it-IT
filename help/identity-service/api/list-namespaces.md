@@ -33,7 +33,7 @@ curl -X GET \
 
 **Risposta**
 
-La risposta include un array di oggetti, ognuno dei quali rappresenta uno spazio dei nomi disponibile. Namespace con &quot;[!UICONTROL personalizzato]&quot;valore di&quot;[!UICONTROL false]&quot; sono spazi dei nomi standard, mentre quelli con &quot;[!UICONTROL personalizzato]&quot;valore di&quot;[!UICONTROL true]&quot; sono spazi dei nomi creati dalla tua organizzazione.
+La risposta include un array di oggetti, ognuno dei quali rappresenta uno spazio dei nomi disponibile. Gli spazi dei nomi con valore &quot;[!UICONTROL custom]&quot; di &quot;[!UICONTROL false]&quot; sono spazi dei nomi standard, mentre quelli con valore &quot;[!UICONTROL custom]&quot; di &quot;[!UICONTROL true]&quot; sono spazi dei nomi creati dalla tua organizzazione.
 
 >[!NOTE]
 >
@@ -79,4 +79,4 @@ La risposta include un array di oggetti, ognuno dei quali rappresenta uno spazio
 
 ## Passaggi successivi
 
-Procedi all’esercitazione successiva per [creare uno spazio dei nomi personalizzato](./create-custom-namespace.md)
+Procedi all&#39;esercitazione successiva per [creare uno spazio dei nomi personalizzato](./create-custom-namespace.md)

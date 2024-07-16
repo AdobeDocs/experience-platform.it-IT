@@ -11,11 +11,11 @@ ht-degree: 0%
 
 # Tag Experience Platform (Cina)
 
-Quando si utilizza un’ [Host gestito da Adobe](./hosts/managed-by-adobe-host.md) per distribuire le risorse dei tag Adobe Experience Platform sul sito web, queste risorse vengono distribuite tra varie reti CDN (content delivery network) in tutto il mondo per offrire la velocità di download più rapida. Tuttavia, alcune aree richiedono che tutte le risorse del sito web vengano replicate e ospitate su un server all’interno di tale area.
+Quando si utilizza un [host gestito da Adobe](./hosts/managed-by-adobe-host.md) per distribuire le risorse dei tag Adobe Experience Platform sul sito Web, queste risorse vengono distribuite tra varie reti CDN (Content Delivery Network) in tutto il mondo per offrire la velocità di download più elevata. Tuttavia, alcune aree richiedono che tutte le risorse del sito web vengano replicate e ospitate su un server all’interno di tale area.
 
-Per tenere conto di ciò, i tag in Experienci Platform forniscono una funzione Experience Platform di Tag (Cina) che consente di distribuire contenuto a queste aree speciali.
+Per tenere conto di ciò, i tag in Experience Platform forniscono una funzione Experience Platform di Tag (Cina) che consente di distribuire contenuto a queste aree speciali.
 
-Il supporto per i tag Experience Platform (Cina) è una funzione a pagamento e deve essere acquistato dalla tua organizzazione per abilitarla e utilizzarla. Questa guida illustra come configurare e utilizzare questa funzione nell’interfaccia utente di Experienci Platform o di Data Collection dopo l’acquisto.
+Il supporto per i tag Experience Platform (Cina) è una funzione a pagamento e deve essere acquistato dalla tua organizzazione per abilitarla e utilizzarla. Questa guida illustra come configurare e utilizzare questa funzione nell’interfaccia utente di Experience Platform o di Data Collection dopo l’acquisto.
 
 ## Abilitare i tag Experience Platform (Cina) per la tua organizzazione
 
@@ -27,20 +27,20 @@ Una volta abilitati i tag di Experience Platform (Cina), ciò non significa che 
 
 >[!IMPORTANT]
 >
->Le librerie create prima di abilitare i tag in Cina continueranno a funzionare così come sono oggi. Questo vale anche per le librerie non gestite da Adobe, in quanto [ambienti archiviati](./environments.md#archive) utilizza solo URL relativi per i percorsi delle risorse. Tieni presente che dopo aver abilitato Experienci Platform Tags (Cina), tutte le librerie create che non sono gestite da Adobe si comportano come se la funzione Tag in Cina non fosse abilitata.
+>Le librerie create prima di abilitare i tag in Cina continueranno a funzionare così come sono oggi. Questo vale anche per le librerie non gestite da Adobe, in quanto [gli ambienti archiviati](./environments.md#archive) utilizzano solo URL relativi per i percorsi delle risorse. Tieni presente che dopo aver abilitato Experience Platform Tags (Cina), tutte le librerie create che non sono gestite da Adobe si comportano come se la funzione Tag in Cina non fosse abilitata.
 
 Dopo aver abilitato i tag in Cina e ricostruito le librerie che desideri utilizzare dalle nuove aree di hosting, puoi recuperare i nuovi codici di incorporamento delle aree di hosting da aggiungere ai siti web.
 
 >[!NOTE]
 >
->Il codice di incorporamento della libreria elencato in [!UICONTROL Standard] l&#39;area di hosting continuerà a funzionare così come è, così come eventuali codici di incorporamento Page Top (Inizio pagina) o Page Bottom (Fine pagina) già presenti sui tuoi siti web.
+>Il codice di incorporamento della libreria elencato nell&#39;area di hosting [!UICONTROL Standard] continuerà a funzionare così com&#39;è, così come qualsiasi codice di incorporamento Page Top (Inizio pagina) o Page Bottom (Fine pagina) già presente nei tuoi siti Web.
 
-Visita il **[!UICONTROL Ambienti]** o visualizzare le istruzioni di installazione dell’ambiente dalla schermata modifica libreria per trovare i nuovi codici da incorporare. Ogni nuova area di hosting supportata viene visualizzata dopo il [!UICONTROL Standard] regione di hosting (utilizzata per le aree del mondo che sono supportate senza tag Experienci Platform (Cina)). La schermata seguente mostra un codice da incorporare per l’area geografica Cina, che utilizza `.cn` come dominio di primo livello (TLD).
+Visita la pagina **[!UICONTROL Ambienti]** o visualizza le istruzioni di installazione dell&#39;ambiente dalla schermata di modifica della libreria per trovare i nuovi codici da incorporare. Ogni nuova area di hosting supportata viene visualizzata dopo l&#39;area di hosting [!UICONTROL Standard] (utilizzata per le aree del mondo che sono supportate senza tag Experience Platform (Cina)). La schermata seguente mostra un codice di incorporamento per l&#39;area geografica Cina, che utilizza `.cn` come dominio di primo livello (TLD).
 
-![Codice di incorporamento per l’area geografica Cina](../../images/ui/publishing/premium-cdn/embed-codes.png)
+![Codice di incorporamento per l&#39;area geografica Cina](../../images/ui/publishing/premium-cdn/embed-codes.png)
 
-Scegli il codice di incorporamento appropriato per la pagina web e incollalo all’interno del `<head>` del documento. Per ulteriori informazioni sull’utilizzo dei codici di incorporamento per installare le librerie di tag, consulta [guida all’interfaccia utente degli ambienti](./environments.md#installation).
+Scegliere il codice di incorporamento appropriato per la pagina Web e incollarlo nel tag `<head>` del documento. Per ulteriori informazioni sull&#39;utilizzo dei codici di incorporamento per installare le librerie di tag, consulta la [guida dell&#39;interfaccia utente degli ambienti](./environments.md#installation).
 
 ## Passaggi successivi
 
-Questa guida illustra come abilitare e installare la funzione Tag Experienci Platform (Cina) per l’implementazione dei tag. Per ulteriori informazioni sull’installazione e il test delle librerie di tag nelle proprietà web e mobili, consulta [panoramica sulla pubblicazione](./overview.md).
+Questa guida illustra come abilitare e installare la funzione Tag Experienci Platform (Cina) per l’implementazione dei tag. Per ulteriori informazioni sull&#39;installazione e la verifica delle librerie di tag nelle proprietà Web e mobile, consulta la [panoramica sulla pubblicazione](./overview.md).

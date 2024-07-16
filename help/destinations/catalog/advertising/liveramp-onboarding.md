@@ -10,27 +10,27 @@ ht-degree: 3%
 
 ---
 
-# [!DNL LiveRamp - Onboarding] connessione {#liveramp-onboarding}
+# Connessione [!DNL LiveRamp - Onboarding] {#liveramp-onboarding}
 
-Utilizza il [!DNL LiveRamp - Onboarding] connessione ai tipi di pubblico onboarding da Adobe Real-time Customer Data Platform a [!DNL LiveRamp Connect].
+Utilizza la connessione [!DNL LiveRamp - Onboarding] per integrare i tipi di pubblico da Adobe Real-time Customer Data Platform a [!DNL LiveRamp Connect].
 
 ## Casi d’uso {#use-cases}
 
-Per aiutarti a capire meglio come e quando utilizzare il [!DNL LiveRamp - Onboarding] destinazione: ecco un caso d’uso di esempio che i clienti di Adobe Experience Platform possono risolvere utilizzando questa destinazione.
+Per aiutarti a capire meglio come e quando utilizzare la destinazione [!DNL LiveRamp - Onboarding], ecco un esempio di caso d&#39;uso che i clienti Adobe Experience Platform possono risolvere utilizzando questa destinazione.
 
-In qualità di esperto di marketing, voglio inviare tipi di pubblico da Adobe Experience Platform alle identità onboarding in [!DNL LiveRamp Connect] in modo da poter eseguire il targeting degli utenti su dispositivi mobili, open web, social e [!DNL CTV] piattaforme, utilizzando [!DNL Ramp ID] identificatore.
+In qualità di addetto al marketing, desidero inviare tipi di pubblico da Adobe Experience Platform alle identità onboarding in [!DNL LiveRamp Connect] in modo da poter indirizzare gli utenti su piattaforme mobili, open web, social e [!DNL CTV], utilizzando l&#39;identificatore [!DNL Ramp ID].
 
 ## Prerequisiti {#prerequisites}
 
-Il [!DNL LiveRamp - Onboarding] connessione esporta file tramite [SFTP di LiveRamp](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html) archiviazione.
+La connessione [!DNL LiveRamp - Onboarding] esporta i file utilizzando l&#39;archiviazione SFTP](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html) di [LiveRamp.
 
-Prima di poter inviare dati da Experience Platform a [!DNL LiveRamp - Onboarding], è necessario [!DNL LiveRamp] credenziali. Contatta il tuo [!DNL LiveRamp] per ottenere le credenziali, se non le si dispone già.
+Prima di poter inviare dati da Experience Platform a [!DNL LiveRamp - Onboarding], sono necessarie le credenziali [!DNL LiveRamp]. Rivolgiti al tuo rappresentante [!DNL LiveRamp] per ottenere le tue credenziali, se non le hai già.
 
 ## Identità supportate {#supported-identities}
 
-[!DNL LiveRamp - Onboarding] supporta l’attivazione di identità come identificatori basati su PII, identificatori noti e ID personalizzati, descritti nella sezione [Documentazione di LiveRamp](https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#known-identifiers).
+[!DNL LiveRamp - Onboarding] supporta l&#39;attivazione di identità quali identificatori basati su PII, identificatori noti e ID personalizzati, descritti nella [documentazione LiveRamp ufficiale](https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#known-identifiers).
 
-In [passaggio di mappatura](#map) del flusso di lavoro di attivazione, devi definire le mappature target come attributi personalizzati.
+Nel [passaggio di mappatura](#map) del flusso di lavoro di attivazione, è necessario definire le mappature di destinazione come attributi personalizzati.
 
 ## Tipi di pubblico supportati {#supported-audiences}
 
@@ -38,8 +38,8 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 
 | Origine pubblico | Supportato | Descrizione |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati dall’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md). |
-| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
+| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite il servizio di segmentazione [Experience Platform](../../../segmentation/home.md). |
+| Caricamenti personalizzati | ✓ | Tipi di pubblico [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -49,8 +49,8 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
-| Tipo di esportazione | **[!UICONTROL Esportazione pubblico]** | Stai esportando tutti i membri di un pubblico con gli identificatori (nome, numero di telefono o altri) utilizzati in [!DNL LiveRamp - Onboarding] destinazione. |
-| Frequenza di esportazione | **[!UICONTROL Batch giornaliero]** | Poiché i profili vengono aggiornati in Experience Platform in base alla valutazione del pubblico, i profili (identità) vengono aggiornati una volta al giorno a valle della piattaforma di destinazione. Ulteriori informazioni su [destinazioni basate su file batch](/help/destinations/destination-types.md#file-based). |
+| Tipo di esportazione | **[!UICONTROL Esportazione pubblico]** | Stai esportando tutti i membri di un pubblico con gli identificatori (nome, numero di telefono o altri) utilizzati nella destinazione [!DNL LiveRamp - Onboarding]. |
+| Frequenza di esportazione | **[!UICONTROL Batch giornaliero]** | Poiché i profili vengono aggiornati in Experience Platform in base alla valutazione del pubblico, i profili (identità) vengono aggiornati una volta al giorno a valle della piattaforma di destinazione. Ulteriori informazioni sulle [destinazioni basate su file batch](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -58,41 +58,41 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 >[!IMPORTANT]
 > 
->Per connettersi alla destinazione, è necessario **[!UICONTROL Visualizza destinazioni]** e **[!UICONTROL Gestire le destinazioni]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>Per connettersi alla destinazione, sono necessarie le **[!UICONTROL Destinazioni visualizzazione]** e le **[!UICONTROL Autorizzazioni di gestione delle destinazioni]** [per il controllo degli accessi](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Per connettersi a questa destinazione, seguire i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
+Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
 
 ### Autenticarsi nella destinazione {#authenticate}
 
-Per autenticare nella destinazione, compila i campi obbligatori e seleziona **[!UICONTROL Connetti alla destinazione]**.
+Per eseguire l&#39;autenticazione nella destinazione, compilare i campi obbligatori e selezionare **[!UICONTROL Connetti alla destinazione]**.
 
 **Autenticazione SFTP con password** {#sftp-password}
 
-![Schermata di esempio che mostra come autenticare nella destinazione utilizzando SFTP con password](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-password.png)
+![Schermata di esempio che mostra come eseguire l&#39;autenticazione nella destinazione tramite SFTP con password](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-password.png)
 
-* **[!UICONTROL Porta]**: porta utilizzata per [!DNL LiveRamp - Onboarding] percorso di archiviazione.  Utilizza la porta corrispondente alla tua posizione geografica, come descritto di seguito:
-   * **[!UICONTROL NA]**: porta di utilizzo `22`
-   * **[!UICONTROL AU]**: porta di utilizzo `2222`
-* **[!UICONTROL Nome utente]**: nome utente per il [!DNL LiveRamp - Onboarding] percorso di archiviazione.
-* **[!UICONTROL Password]**: password per il [!DNL LiveRamp - Onboarding] percorso di archiviazione.
-* **[!UICONTROL Chiave di crittografia PGP/GPG]**: in alternativa, puoi allegare la chiave pubblica in formato RSA per aggiungere la crittografia ai file esportati. Visualizza un esempio di chiave di crittografia formattata correttamente nell’immagine seguente.
-  ![Immagine che mostra un esempio di chiave PGP formattata correttamente nell’interfaccia utente](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
-* **[!UICONTROL ID sottochiave]**:Se si fornisce una chiave di crittografia, è necessario fornire anche una crittografia **[!UICONTROL ID sottochiave]**. Consulta la [!DNL LiveRamp] [documentazione sulla crittografia](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) per scoprire come ottenere l’ID della sottochiave.
+* **[!UICONTROL Porta]**: la porta utilizzata per il percorso di archiviazione [!DNL LiveRamp - Onboarding].  Utilizza la porta corrispondente alla tua posizione geografica, come descritto di seguito:
+   * **[!UICONTROL NA]**: utilizzare la porta `22`
+   * **[!UICONTROL AU]**: Usa porta `2222`
+* **[!UICONTROL Nome utente]**: il nome utente per il percorso di archiviazione [!DNL LiveRamp - Onboarding].
+* **[!UICONTROL Password]**: password per il percorso di archiviazione [!DNL LiveRamp - Onboarding].
+* **[!UICONTROL Chiave di crittografia PGP/GPG]**: è possibile allegare la chiave pubblica in formato RSA per aggiungere la crittografia ai file esportati. Visualizza un esempio di chiave di crittografia formattata correttamente nell’immagine seguente.
+  ![Immagine che mostra un esempio di chiave PGP formattata correttamente nell&#39;interfaccia utente](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
+* **[!UICONTROL ID sottochiave]**:Se si fornisce una chiave di crittografia, è necessario fornire anche un **[!UICONTROL ID sottochiave]** di crittografia. Per informazioni su come ottenere l&#39;ID della sottochiave, consulta la [!DNL LiveRamp] [documentazione sulla crittografia](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key).
 
-**SFTP con autenticazione della chiave SSH** {#sftp-ssh}
+**SFTP con autenticazione con chiave SSH** {#sftp-ssh}
 
 ![Schermata di esempio che mostra come autenticare nella destinazione utilizzando la chiave SSH](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-ssh.png)
 
-* **[!UICONTROL Porta]**: porta utilizzata per [!DNL LiveRamp - Onboarding] percorso di archiviazione.  Utilizza la porta corrispondente alla tua posizione geografica, come descritto di seguito:
-   * **[!UICONTROL UE]**: porta di utilizzo `4222`
-* **[!UICONTROL Nome utente]**: nome utente per il [!DNL LiveRamp - Onboarding] percorso di archiviazione.
-* **[!UICONTROL Chiave SSH]**: privato [!DNL SSH] chiave utilizzata per accedere al [!DNL LiveRamp - Onboarding] percorso di archiviazione. La chiave privata deve essere formattata come [!DNL Base64]Stringa con codifica -e non deve essere protetta da password.
+* **[!UICONTROL Porta]**: la porta utilizzata per il percorso di archiviazione [!DNL LiveRamp - Onboarding].  Utilizza la porta corrispondente alla tua posizione geografica, come descritto di seguito:
+   * **[!UICONTROL EU]**: usa porta `4222`
+* **[!UICONTROL Nome utente]**: il nome utente per il percorso di archiviazione [!DNL LiveRamp - Onboarding].
+* **[!UICONTROL Chiave SSH]**: la chiave [!DNL SSH] privata utilizzata per accedere al percorso di archiviazione [!DNL LiveRamp - Onboarding]. La chiave privata deve essere formattata come stringa con codifica [!DNL Base64] e non deve essere protetta da password.
 
-   * Per collegare [!DNL SSH] chiave per [!DNL LiveRamp - Onboarding] server, è necessario inviare un ticket tramite [!DNL LiveRamp]e fornisce la chiave pubblica. Per ulteriori informazioni, consulta [Documentazione di LiveRamp](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html#upload-with-an-sftp-client).
+   * Per connettere la chiave [!DNL SSH] al server [!DNL LiveRamp - Onboarding], è necessario inviare un ticket tramite il portale di supporto tecnico di [!DNL LiveRamp] e fornire la chiave pubblica. Ulteriori informazioni sono disponibili nella [documentazione di LiveRamp](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html#upload-with-an-sftp-client).
 
-* **[!UICONTROL Chiave di crittografia PGP/GPG]**: in alternativa, puoi allegare la chiave pubblica in formato RSA per aggiungere la crittografia ai file esportati. Visualizza un esempio di chiave di crittografia formattata correttamente nell’immagine seguente.
-  ![Immagine che mostra un esempio di chiave PGP formattata correttamente nell’interfaccia utente](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
-* **[!UICONTROL ID sottochiave]**:Se si fornisce una chiave di crittografia, è necessario fornire anche una crittografia **[!UICONTROL ID sottochiave]**. Consulta la [!DNL LiveRamp] [documentazione sulla crittografia](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) per scoprire come ottenere l’ID della sottochiave.
+* **[!UICONTROL Chiave di crittografia PGP/GPG]**: è possibile allegare la chiave pubblica in formato RSA per aggiungere la crittografia ai file esportati. Visualizza un esempio di chiave di crittografia formattata correttamente nell’immagine seguente.
+  ![Immagine che mostra un esempio di chiave PGP formattata correttamente nell&#39;interfaccia utente](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
+* **[!UICONTROL ID sottochiave]**:Se si fornisce una chiave di crittografia, è necessario fornire anche un **[!UICONTROL ID sottochiave]** di crittografia. Per informazioni su come ottenere l&#39;ID della sottochiave, consulta la [!DNL LiveRamp] [documentazione sulla crittografia](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key).
 
 ### Inserire i dettagli della destinazione {#destination-details}
 
@@ -104,46 +104,46 @@ Per autenticare nella destinazione, compila i campi obbligatori e seleziona **[!
 
 Per configurare i dettagli per la destinazione, compila i campi obbligatori e facoltativi seguenti. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 
-![Schermata dell’interfaccia utente di Platform che mostra come inserire i dettagli per la destinazione](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-destination-details.png)
+![Schermata dell&#39;interfaccia utente di Platform che mostra come compilare i dettagli per la destinazione](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-destination-details.png)
 
-* **[!UICONTROL Nome]**: nome con cui riconoscerai questa destinazione in futuro.
-* **[!UICONTROL Descrizione]**: descrizione che ti aiuterà a identificare questa destinazione in futuro.
-* **[!UICONTROL Regione]**: area geografica per l’istanza dell’archiviazione SFTP LiveRamp.
-* **[!UICONTROL Percorso cartella]**: percorso di [!DNL LiveRamp] `uploads` sottocartella che ospiterà i file esportati. Il `uploads` il prefisso viene aggiunto automaticamente al percorso della cartella. [!DNL LiveRamp] consiglia di creare una sottocartella dedicata per le consegne da Adobe Real-Time CDP per mantenere i file separati da tutti gli altri feed esistenti e garantire il corretto funzionamento di tutta l’automazione.
-   * Ad esempio, se desideri esportare i file in `uploads/my_export_folder`, digitare `my_export_folder` nel **[!UICONTROL Percorso cartella]** campo.
-* **[!UICONTROL Formato di compressione]**: seleziona il tipo di compressione che Experience Platform deve utilizzare per i file esportati. Le opzioni disponibili sono **[!UICONTROL GZIP]** o **[!UICONTROL Nessuno]**.
+* **[!UICONTROL Nome]**: un nome con cui riconoscerai questa destinazione in futuro.
+* **[!UICONTROL Descrizione]**: una descrizione che ti aiuterà a identificare questa destinazione in futuro.
+* **[!UICONTROL Area geografica]**: area geografica per l&#39;istanza dell&#39;archiviazione SFTP LiveRamp.
+* **[!UICONTROL Percorso cartella]**: percorso della sottocartella [!DNL LiveRamp] `uploads` che ospiterà i file esportati. Il prefisso `uploads` viene aggiunto automaticamente al percorso della cartella. [!DNL LiveRamp] consiglia di creare una sottocartella dedicata per le consegne da Adobe Real-Time CDP per mantenere i file separati da altri feed esistenti e garantire il corretto funzionamento di tutte le attività di automazione.
+   * Se ad esempio si desidera esportare i file in `uploads/my_export_folder`, digitare `my_export_folder` nel campo **[!UICONTROL Percorso cartella]**.
+* **[!UICONTROL Formato di compressione]**: selezionare il tipo di compressione che Experience Platform deve utilizzare per i file esportati. Le opzioni disponibili sono **[!UICONTROL GZIP]** o **[!UICONTROL None]**.
 
 ### Abilita avvisi {#enable-alerts}
 
-Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati verso la tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento agli avvisi sulle destinazioni tramite l’interfaccia utente](../../ui/alerts.md).
+Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati verso la tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento a destinazioni avvisi tramite l&#39;interfaccia utente](../../ui/alerts.md).
 
-Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
+Dopo aver fornito i dettagli per la connessione di destinazione, seleziona **[!UICONTROL Avanti]**.
 
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 
->Per attivare i dati, è necessario **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>Per attivare i dati, è necessario **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attiva destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizza segmenti]** [Autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Letto [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](/help/destinations/ui/activate-batch-profile-destinations.md) per istruzioni sull’attivazione dei tipi di pubblico in questa destinazione.
+Per istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione, leggi [Attiva dati pubblico per esportare i profili in batch](/help/destinations/ui/activate-batch-profile-destinations.md).
 
 ### Pianificazione {#scheduling}
 
-In [!UICONTROL Pianificazione] crea una pianificazione di esportazione per ogni pubblico, con le impostazioni mostrate di seguito.
+Nel passaggio [!UICONTROL Pianificazione], crea una pianificazione di esportazione per ogni pubblico, con le impostazioni mostrate di seguito.
 
-* **[!UICONTROL Opzioni di esportazione file]**: [!UICONTROL Esporta file completi]. [Esportazioni file incrementali](../../ui/activate-batch-profile-destinations.md#export-incremental-files) non sono attualmente supportati per [!DNL LiveRamp] destinazione.
-* **[!UICONTROL Frequenza]**: [!UICONTROL Giornaliero]
-* **[!UICONTROL Data]**: seleziona l’ora di inizio e di fine dell’esportazione come desideri.
+* **[!UICONTROL Opzioni di esportazione file]**: [!UICONTROL Esporta file completi]. [Le esportazioni di file incrementali](../../ui/activate-batch-profile-destinations.md#export-incremental-files) non sono attualmente supportate per la destinazione [!DNL LiveRamp].
+* **[!UICONTROL Frequenza]**: [!UICONTROL Giornaliera]
+* **[!UICONTROL Data]**: seleziona l&#39;ora di inizio e di fine dell&#39;esportazione come preferisci.
 
-![Schermata dell’interfaccia utente di Platform che mostra il passaggio di pianificazione del pubblico.](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
+![Schermata dell&#39;interfaccia utente di Platform che mostra il passaggio di pianificazione del pubblico.](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
 
-Il nome del file esportato non è attualmente configurabile dall&#39;utente. Tutti i file esportati in [!DNL LiveRamp - Onboarding] La destinazione viene automaticamente denominata in base al seguente modello:
+Il nome del file esportato non è attualmente configurabile dall&#39;utente. Tutti i file esportati nella destinazione [!DNL LiveRamp - Onboarding] vengono denominati automaticamente in base al seguente modello:
 
 `%ORGANIZATION_NAME%_%DESTINATION%_%DESTINATION_INSTANCE_ID%_%DATETIME%`
 
-![Schermata dell’interfaccia utente di Platform che mostra il modello di nome file esportato.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-file-name.png)
+![Schermata dell&#39;interfaccia utente di Platform che mostra il modello di nome file esportato.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-file-name.png)
 
-Ad esempio, il nome di un file esportato per un’organizzazione denominata [!DNL Luma] potrebbe assomigliare a questo:
+Ad esempio, il nome di un file esportato per un&#39;organizzazione denominata [!DNL Luma] potrebbe essere simile al seguente:
 
 ```json
 Luma_LiveRamp_52137231-4a99-442d-804c-39a09ddd005d_20230330_153857.csv
@@ -151,43 +151,43 @@ Luma_LiveRamp_52137231-4a99-442d-804c-39a09ddd005d_20230330_153857.csv
 
 ### Mappare attributi e identità {#map}
 
-In **[!UICONTROL Mappatura]** passaggio, puoi selezionare gli attributi e le identità da esportare per i profili.
+Nel passaggio **[!UICONTROL Mappatura]**, puoi selezionare gli attributi e le identità da esportare per i profili.
 
 >[!IMPORTANT]
 >
->Questa destinazione supporta l’attivazione di uno spazio dei nomi dell’identità di origine per ogni flusso di attivazione. Se devi esportare più spazi dei nomi di identità, come `Email` e `Phone`, è necessario [creare un flusso di attivazione separato](../../ui/activate-batch-profile-destinations.md) per ogni identità.
+>Questa destinazione supporta l’attivazione di uno spazio dei nomi dell’identità di origine per ogni flusso di attivazione. Se devi esportare più spazi dei nomi di identità, come `Email` e `Phone`, devi [creare un flusso di attivazione separato](../../ui/activate-batch-profile-destinations.md) per ogni identità.
 
-In **[!UICONTROL Mappatura]** passaggio, il **[!UICONTROL Campo di destinazione]** la mappatura definisce il nome dell’intestazione di colonna nel file CSV esportato. Puoi modificare le intestazioni di colonna CSV nel file esportato con qualsiasi nome descrittivo, fornendo un nome personalizzato per il file **[!UICONTROL Campo di destinazione]**.
+Nel passaggio **[!UICONTROL Mappatura]**, la mappatura **[!UICONTROL Campo di destinazione]** definisce il nome dell&#39;intestazione di colonna nel file CSV esportato. È possibile modificare le intestazioni di colonna CSV nel file esportato con qualsiasi nome descrittivo desiderato, fornendo un nome personalizzato per il **[!UICONTROL campo di destinazione]**.
 
 >[!IMPORTANT]
 >
->Per eventuali modifiche apportate ai campi di destinazione dopo la consegna iniziale del file a [!DNL LiveRamp], notifica il tuo [!DNL LiveRamp] team dell’account o [invia un ticket al supporto LiveRamp](https://docs.liveramp.com/connect/en/considerations-when-uploading-the-first-file-to-an-audience.html#creating-a-support-case) per garantire che le modifiche vengano applicate al processo di automazione.
+>Per qualsiasi modifica apportata ai campi di destinazione dopo la consegna iniziale del file a [!DNL LiveRamp], invia una notifica al team dell&#39;account [!DNL LiveRamp] o [invia un ticket al supporto LiveRamp](https://docs.liveramp.com/connect/en/considerations-when-uploading-the-first-file-to-an-audience.html#creating-a-support-case) per garantire che le modifiche vengano applicate al processo di automazione.
 
-1. In **[!UICONTROL Mappatura]** passaggio, seleziona **[!UICONTROL Aggiungi nuova mappatura]**. Viene visualizzata una nuova riga di mappatura.
+1. Nel passaggio **[!UICONTROL Mapping]**, seleziona **[!UICONTROL Aggiungi nuovo mapping]**. Viene visualizzata una nuova riga di mappatura.
 
-   ![Experience Platform di schermate dell’interfaccia utente che mostrano la schermata Mappatura.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-add-new-mapping.png)
+   ![Screeshot dell&#39;interfaccia utente di Experience Platform che mostra la schermata Mappatura.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-add-new-mapping.png)
 
-2. In **[!UICONTROL Seleziona campo di origine]** finestra, scegli la **[!UICONTROL Seleziona attributi]** e selezionare l&#39;attributo XDM da mappare, oppure scegliere il **[!UICONTROL Seleziona lo spazio dei nomi dell’identità]** e seleziona un’identità da mappare alla destinazione.
+2. Nella finestra **[!UICONTROL Seleziona campo di origine]**, scegli la categoria **[!UICONTROL Seleziona attributi]** e seleziona l&#39;attributo XDM da mappare, oppure scegli la categoria **[!UICONTROL Seleziona spazio dei nomi identità]** e seleziona un&#39;identità da mappare alla destinazione.
 
-   ![Experience Platform di schermate dell’interfaccia utente che mostrano la schermata Mappatura sorgente.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-source-mapping.png)
+   ![Screeshot dell&#39;interfaccia utente di Experience Platform che mostra la schermata di mappatura dell&#39;origine.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-source-mapping.png)
 
-3. In **[!UICONTROL Seleziona campo di destinazione]** immettere il nome dell&#39;attributo che si desidera associare al campo di origine selezionato. Il nome dell’attributo qui definito si rifletterà nel file CSV esportato come intestazione di colonna.
+3. Nella finestra **[!UICONTROL Seleziona campo di destinazione]**, immettere il nome dell&#39;attributo a cui si desidera mappare il campo di origine selezionato. Il nome dell’attributo qui definito si rifletterà nel file CSV esportato come intestazione di colonna.
 
-   ![Experience Platform di schermate dell’interfaccia utente che mostrano la schermata Mappatura target.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-target-mapping.png)
+   ![Screeshot dell&#39;interfaccia utente di Experience Platform che mostra la schermata di mappatura di destinazione.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-target-mapping.png)
 
-   È inoltre possibile immettere il nome dell&#39;attributo digitandolo direttamente nel **[!UICONTROL Campo di destinazione]**.
+   È inoltre possibile immettere il nome dell&#39;attributo digitandolo direttamente nel **[!UICONTROL campo di destinazione]**.
 
-   ![Experience Platform di schermate dell’interfaccia utente che mostrano la schermata Mappatura target.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-target-field.png)
+   ![Screeshot dell&#39;interfaccia utente di Experience Platform che mostra la schermata di mappatura di destinazione.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-target-field.png)
 
-Dopo aver aggiunto tutte le mappature desiderate, seleziona **[!UICONTROL Successivo]** e terminare il flusso di lavoro di attivazione.
+Dopo aver aggiunto tutte le mappature desiderate, seleziona **[!UICONTROL Avanti]** e completa il flusso di lavoro di attivazione.
 
 ## Dati esportati / Convalida esportazione dati {#exported-data}
 
-I dati vengono esportati in [!DNL LiveRamp - Onboarding] percorso di archiviazione configurato come file CSV.
+I dati vengono esportati nel percorso di archiviazione [!DNL LiveRamp - Onboarding] configurato come file CSV.
 
-I file esportati hanno una dimensione massima di 10 milioni di righe. Experience Platform genera più file per consegna se il pubblico selezionato supera i 10 milioni di righe. Se prevedi di superare il limite di file singolo, contatta il tuo [!DNL LiveRamp] e chiedere loro di configurare l’acquisizione batch per te.
+I file esportati hanno una dimensione massima di 10 milioni di righe. Experience Platform genera più file per consegna se il pubblico selezionato supera i 10 milioni di righe. Se prevedi di superare il limite per i singoli file, contatta il rappresentante [!DNL LiveRamp] e chiedi loro di configurare l&#39;acquisizione batch.
 
-Durante l&#39;esportazione di file in [!DNL LiveRamp - Onboarding] di destinazione, Platform genera un file CSV per ogni [ID criterio di unione](../../../profile/merge-policies/overview.md).
+Durante l&#39;esportazione dei file nella destinazione [!DNL LiveRamp - Onboarding], Platform genera un file CSV per ogni [ID del criterio di unione](../../../profile/merge-policies/overview.md).
 
 Ad esempio, prendiamo in considerazione i seguenti tipi di pubblico:
 
@@ -211,7 +211,7 @@ I profili inclusi nei file esportati possono corrispondere a uno dei seguenti st
 * `Expired`: il profilo non è più qualificato per il pubblico, ma lo è già stato in passato.
 * `""`(stringa vuota): il profilo non è mai qualificato per il pubblico.
 
-Ad esempio, un file CSV esportato con `email` , due tipi di pubblico provenienti dall&#39;Experience Platform [Servizio di segmentazione](../../../segmentation/home.md), e uno [importato](../../../segmentation/ui/audience-portal.md#import-audience) pubblico esterno, potrebbe presentarsi così:
+Ad esempio, un file CSV esportato con un attributo `email`, due tipi di pubblico provenienti dall&#39;Experience Platform [Servizio di segmentazione](../../../segmentation/home.md) e un pubblico esterno [importato](../../../segmentation/ui/audience-portal.md#import-audience) potrebbe essere simile al seguente:
 
 ```csv
 email,ups_aa2e3d98-974b-4f8b-9507-59f65b6442df,ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e
@@ -223,29 +223,29 @@ abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
 
-Nell’esempio precedente, il `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` e `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` descrivono i tipi di pubblico provenienti dal servizio di segmentazione, mentre `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` descrive un pubblico importato in Platform come [caricamento personalizzato](../../../segmentation/ui/audience-portal.md#import-audience).
+Nell&#39;esempio precedente, le sezioni `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` e `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` descrivono i tipi di pubblico provenienti dal servizio di segmentazione, mentre `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` descrive un pubblico importato in Platform come [caricamento personalizzato](../../../segmentation/ui/audience-portal.md#import-audience).
 
-Poiché Platform genera un file CSV per ogni [ID criterio di unione](../../../profile/merge-policies/overview.md), genera anche un flusso di dati separato eseguito per ogni ID del criterio di unione.
+Dal momento che Platform genera un file CSV per ogni [ID del criterio di unione](../../../profile/merge-policies/overview.md), genera anche un flusso di dati separato per ogni ID del criterio di unione.
 
-Ciò significa che **[!UICONTROL Identità attivate]** e **[!UICONTROL Profili ricevuti]** metriche in [il flusso di dati viene eseguito](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) Le pagine vengono aggregate per ogni gruppo di tipi di pubblico che utilizzano lo stesso criterio di unione, anziché essere visualizzate per ogni pubblico.
+Ciò significa che le metriche **[!UICONTROL Identità attivate]** e **[!UICONTROL Profili ricevuti]** nella pagina [esecuzioni del flusso di dati](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) sono aggregate per ogni gruppo di tipi di pubblico che utilizzano lo stesso criterio di unione, anziché essere visualizzate per ogni pubblico.
 
-In seguito alla generazione del flusso di dati per un gruppo di tipi di pubblico che utilizzano lo stesso criterio di unione, i nomi dei tipi di pubblico non vengono visualizzati in [dashboard di monitoraggio](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations).
+In seguito alla generazione del flusso di dati per un gruppo di tipi di pubblico che utilizzano lo stesso criterio di unione, i nomi dei tipi di pubblico non vengono visualizzati nel [dashboard di monitoraggio](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations).
 
-![Screeshot dell’interfaccia utente di Experience Platform che mostra la metrica delle identità attivate.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-metrics.png)
+![Screeshot dell&#39;interfaccia utente di Experience Platform che mostra la metrica delle identità attivate.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-metrics.png)
 
 ## Caricare i dati esportati su LiveRamp {#upload-to-liveramp}
 
-Dopo che i dati sono stati esportati correttamente in [!DNL LiveRamp - Onboarding] archiviazione, devi caricare i dati in [!DNL LiveRamp] piattaforma.
+Dopo l&#39;esportazione dei dati nell&#39;archivio [!DNL LiveRamp - Onboarding], è necessario caricare i dati nella piattaforma [!DNL LiveRamp].
 
-Per ulteriori informazioni su come caricare i file da [!DNL LiveRamp - Onboarding] archiviazione in un [!DNL LiveRamp] pubblico, consulta la seguente documentazione: [Considerazioni durante il caricamento del primo file in un pubblico](https://docs.liveramp.com/connect/en/considerations-when-uploading-the-first-file-to-an-audience.html#considerations-when-uploading-the-first-file-to-an-audience).
+Per ulteriori informazioni su come caricare i file dall&#39;archivio [!DNL LiveRamp - Onboarding] a un pubblico [!DNL LiveRamp], consulta la seguente documentazione: [Considerazioni durante il caricamento del primo file a un pubblico](https://docs.liveramp.com/connect/en/considerations-when-uploading-the-first-file-to-an-audience.html#considerations-when-uploading-the-first-file-to-an-audience).
 
 ## Utilizzo dei dati e governance {#data-usage-governance}
 
-Tutti [!DNL Adobe Experience Platform] le destinazioni sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] applica la governance dei dati, leggi [Panoramica sulla governance dei dati](/help/data-governance/home.md).
+Tutte le destinazioni [!DNL Adobe Experience Platform] sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] applica la governance dei dati, leggere la [Panoramica sulla governance dei dati](/help/data-governance/home.md).
 
 ## Risorse aggiuntive {#additional-resources}
 
-Per ulteriori dettagli su come configurare [!DNL LiveRamp - Onboarding] di archiviazione, vedere [documentazione ufficiale](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html).
+Per ulteriori dettagli su come configurare l&#39;archiviazione [!DNL LiveRamp - Onboarding], vedere la [documentazione ufficiale](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html).
 
 ## Changelog {#changelog}
 

@@ -4,8 +4,8 @@ description: Scopri l’estensione tag Common Analytics in Adobe Experience Plat
 exl-id: 9eeb4589-df90-4356-b927-b2c29c32370b
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 86%
+source-wordcount: '399'
+ht-degree: 82%
 
 ---
 
@@ -32,7 +32,7 @@ Non è richiesta alcuna configurazione aggiuntiva a livello di estensione.
 Per utilizzare i plug-in forniti in questa estensione, devi innanzitutto inizializzare quelli che intendi utilizzare nella rispettiva regola.
 
 1. Crea una nuova regola.
-1. Aggiungi l’evento Core - Library Loaded (Page Top) (Core - Libreria caricato (parte superiore della pagina)).
+1. Aggiungi l’evento Core - Library Loaded (Page Top) (Core - Libreria caricata (Inizio pagina)).
 1. Utilizza uno dei metodi di inizializzazione indicati di seguito.
 
 ## Tipi di azioni dell’estensione Common Analytics Plugins
@@ -50,7 +50,7 @@ L’estensione Common Analytics Plugins fornisce le azioni seguenti:
 >
 >Anche se questa azione è la più semplice da implementare, Adobe Consulting consiglia di non utilizzarla in quanto aumenta il peso del plug-in.
 
-Con questa azione puoi selezionare ogni plug-in da includere nell’implementazione e salvare le modifiche. Seleziona tutti i plug-in che intendi usare nell’implementazione.
+Con questa azione puoi selezionare ogni plug-in da includere nell’implementazione e salvare le modifiche. Seleziona tutti i componenti che intendi utilizzare durante l’implementazione.
 
 ### Inizializza plug-in
 
@@ -71,4 +71,4 @@ Nell’estensione Common Analytics Plugins sono disponibili i seguenti elementi 
 
 >[!NOTE]
 >
->Per ulteriori informazioni sui plug-in di cui sopra, consulta la [Documentazione di Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html?lang=it).
+>Per ulteriori informazioni sui plug-in di cui sopra, consulta la [documentazione di Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html?lang=it).

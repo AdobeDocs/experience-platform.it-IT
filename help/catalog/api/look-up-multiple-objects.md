@@ -13,11 +13,11 @@ ht-degree: 2%
 
 # Cercare più oggetti catalogo
 
-Se desideri visualizzare più oggetti specifici, invece di effettuare una richiesta per oggetto, [!DNL Catalog] fornisce una semplice scelta rapida per richiedere più oggetti dello stesso tipo. Puoi utilizzare una singola richiesta GET per restituire più oggetti specifici includendo un elenco separato da virgole di ID.
+Se si desidera visualizzare più oggetti specifici, anziché eseguire una richiesta per oggetto, [!DNL Catalog] fornisce una semplice scelta rapida per richiedere più oggetti dello stesso tipo. Puoi utilizzare una singola richiesta GET per restituire più oggetti specifici includendo un elenco separato da virgole di ID.
 
 >[!NOTE]
 >
->Anche quando si richiedono [!DNL Catalog] oggetti, è comunque consigliabile `properties` parametro di query per restituire solo le proprietà necessarie.
+>Anche quando si richiedono oggetti [!DNL Catalog] specifici, è comunque consigliabile `properties` parametro di query per restituire solo le proprietà necessarie.
 
 **Formato API**
 
@@ -28,7 +28,7 @@ GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}?properties={PROPERTY_1},{PROPERTY
 
 | Parametro | Descrizione |
 | -------- | ----------- |
-| `{OBJECT_TYPE}` | Il tipo di [!DNL Catalog] oggetto da recuperare. Gli oggetti validi sono: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | Tipo di oggetto [!DNL Catalog] da recuperare. Gli oggetti validi sono: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{ID}` | Identificatore di uno degli oggetti specifici che si desidera recuperare. |
 
 **Richiesta**
@@ -46,11 +46,11 @@ curl -X GET \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce un elenco dei set di dati specificati, contenenti solo le proprietà richieste (`name`, `description`, e `files`) per ciascuno di essi.
+In caso di esito positivo, la risposta restituisce un elenco dei set di dati specificati, contenenti solo le proprietà richieste (`name`, `description` e `files`) per ciascuno di essi.
 
 >[!NOTE]
 >
->Se un oggetto restituito non contiene una o più delle proprietà richieste indicate dal `properties` , la risposta restituisce solo le proprietà richieste che include, come mostrato nella ***`Sample Dataset 3`*** e ***`Sample Dataset 4`*** di seguito.
+>Se un oggetto restituito non contiene una o più delle proprietà richieste indicate dalla query `properties`, la risposta restituisce solo le proprietà richieste incluse, come illustrato di seguito in ***`Sample Dataset 3`*** e ***`Sample Dataset 4`***.
 
 ```json
 {

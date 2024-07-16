@@ -1,6 +1,6 @@
 ---
 title: Panoramica sugli stream di dati
-description: Scopri come i flussi di dati consentono di collegare l’integrazione lato client dell’SDK Experienci Platform con prodotti Adobe e destinazioni di terze parti.
+description: Scopri come i flussi di dati consentono di collegare l’integrazione lato client dell’SDK Experience Platform con prodotti Adobe e destinazioni di terze parti.
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
 source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
@@ -11,7 +11,7 @@ ht-degree: 77%
 
 # Panoramica sugli stream di dati
 
-Un flusso di dati rappresenta la configurazione lato server quando si implementano gli SDK Web e Mobile di Adobe Experience Platform. Mentre il [`configure`](/help/web-sdk/commands/configure/overview.md) nell&#39;SDK controlla gli elementi che devono essere gestiti sul client (come il `edgeDomain`), gli stream di dati gestiscono tutte le altre configurazioni dell’SDK. Quando viene inviata una richiesta ad Adobe Experience Platform Edge Network, il `edgeConfigId` viene utilizzato per fare riferimento allo stream di dati. Questo consente di aggiornare la configurazione lato server senza dover apportare modifiche al codice sul sito web.
+Un flusso di dati rappresenta la configurazione lato server quando si implementano gli SDK Web e Mobile di Adobe Experience Platform. Mentre il comando [`configure`](/help/web-sdk/commands/configure/overview.md) nell&#39;SDK controlla gli elementi che devono essere gestiti sul client (ad esempio `edgeDomain`), gli stream di dati gestiscono tutte le altre configurazioni per l&#39;SDK. Quando viene inviata una richiesta ad Adobe Experience Platform Edge Network, il `edgeConfigId` viene utilizzato per fare riferimento allo stream di dati. Questo consente di aggiornare la configurazione lato server senza dover apportare modifiche al codice sul sito web.
 
 Puoi creare e gestire gli stream di dati selezionando **[!UICONTROL Stream di dati]** nell’area di navigazione a sinistra all’interno dell’interfaccia utente di Adobe Experience Platform o di Raccolta dati.
 
@@ -57,7 +57,7 @@ Se uno schema viene utilizzato in uno stream di dati esistente con servizi non c
 
 ### Registri di audit
 
-In Experience Platform, le attività dello stream di dati possono essere monitorate sotto forma di registri di audit. I registri di audit indicano **chi** eseguito **cosa** azione, e **quando**, insieme ad altri dati contestuali che possono aiutarti a risolvere i problemi relativi ai flussi di dati per aiutare la tua azienda a rispettare le politiche aziendali di gestione dei dati e i requisiti normativi.
+In Experience Platform, le attività dello stream di dati possono essere monitorate sotto forma di registri di audit. I registri di controllo indicano **chi** ha eseguito un&#39;azione di **cosa** e **quando**, insieme ad altri dati contestuali che possono aiutarti a risolvere i problemi relativi agli stream di dati per aiutare la tua azienda a rispettare i criteri di gestione dei dati aziendali e i requisiti normativi.
 
 Ogni volta che un utente crea, aggiorna o elimina uno stream di dati, viene creato un registro di audit per registrare l’azione. Lo stesso si verifica ogni volta che un utente crea, aggiorna o elimina una mappatura tramite la [Preparazione dei dati per la raccolta dati](./data-prep.md). Indipendentemente dal fatto che si sia trattato di uno stream di dati o di una mappatura aggiornata, il registro di audit risultante è categorizzato nel tipo di risorsa [!UICONTROL Stream di dati].
 

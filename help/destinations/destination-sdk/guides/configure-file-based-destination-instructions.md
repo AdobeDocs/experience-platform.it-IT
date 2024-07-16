@@ -13,21 +13,21 @@ ht-degree: 1%
 
 ## Panoramica {#overview}
 
-Questa pagina descrive come utilizzare le informazioni in [Opzioni di configurazione nell’SDK delle destinazioni](../functionality/configuration-options.md) e in altri documenti di riferimento API e funzionalità Destination SDK per configurare un [destinazione basata su file](../../destination-types.md#file-based). I passaggi sono disposti in ordine sequenziale di seguito.
+In questa pagina viene descritto come utilizzare le informazioni in [Opzioni di configurazione nell&#39;SDK delle destinazioni](../functionality/configuration-options.md) e in altre funzionalità di Destination SDK e documenti di riferimento API per configurare una [destinazione basata su file](../../destination-types.md#file-based). I passaggi sono disposti in ordine sequenziale di seguito.
 
 ## Prerequisiti {#prerequisites}
 
-Prima di procedere con i passaggi illustrati di seguito, leggere la [Destination SDK introduzione](../getting-started.md) per informazioni su come ottenere le credenziali di autenticazione Adobe I/O necessarie e altri prerequisiti per lavorare con le API Destination SDK.
+Prima di passare ai passaggi illustrati di seguito, leggere la pagina della [guida introduttiva](../getting-started.md) di Destination SDK per informazioni su come ottenere le credenziali di autenticazione Adobe I/O necessarie e altri prerequisiti per l&#39;utilizzo delle API Destination SDK.
 
 ## Passaggi per utilizzare le opzioni di configurazione in Destination SDK per impostare la destinazione {#steps}
 
-![Passaggi illustrati per l’utilizzo degli endpoint Destination SDK](../assets/guides/destination-sdk-steps-batch.png)
+![Passaggi illustrati per l&#39;utilizzo degli endpoint Destination SDK](../assets/guides/destination-sdk-steps-batch.png)
 
 ## Passaggio 1: creare una configurazione di server e file {#create-server-file-configuration}
 
-Inizia per [creazione di un server e configurazione di file](../authoring-api/destination-server/create-destination-server.md) utilizzando `/destinations-server` endpoint.
+Iniziare [creando una configurazione di file e server](../authoring-api/destination-server/create-destination-server.md) utilizzando l&#39;endpoint `/destinations-server`.
 
-Di seguito è riportato un esempio di configurazione per un [!DNL Amazon S3] destinazione. Per ulteriori dettagli sui campi utilizzati nella configurazione e per configurare altri tipi di destinazioni basate su file, vedi le corrispondenti [configurazioni server](../functionality/destination-server/server-specs.md).
+Di seguito è riportata una configurazione di esempio per una destinazione [!DNL Amazon S3]. Per ulteriori dettagli sui campi utilizzati nella configurazione e per configurare altri tipi di destinazioni basate su file, vedere le [configurazioni server corrispondenti](../functionality/destination-server/server-specs.md).
 
 **Formato API**
 
@@ -114,9 +114,9 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 ## Passaggio 2: creare la configurazione di destinazione {#create-destination-configuration}
 
-Di seguito è riportato un esempio di configurazione di destinazione, creata utilizzando `/destinations` Endpoint API
+Di seguito è riportato un esempio di configurazione di destinazione, creata utilizzando l&#39;endpoint API `/destinations`.
 
-Per connettere il server e la configurazione di file dal passaggio 1 a questa configurazione di destinazione, aggiungere `instance ID` della configurazione del server e dei file come `destinationServerId` qui.
+Per connettere la configurazione del server e del file dal passaggio 1 a questa configurazione di destinazione, aggiungere `instance ID` della configurazione del server e del file come `destinationServerId` qui.
 
 **Formato API**
 
@@ -255,7 +255,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## Passaggio 3: creare la configurazione dei metadati del pubblico {#create-audience-metadata-configuration}
 
-Per alcune destinazioni, Destination SDK richiede la configurazione di una configurazione di metadati di pubblico per creare, aggiornare o eliminare in modo programmatico i tipi di pubblico nella destinazione. Fai riferimento a [Gestione dei metadati del pubblico](../functionality/audience-metadata-management.md) per informazioni su quando è necessario impostare questa configurazione e su come eseguire questa operazione.
+Per alcune destinazioni, Destination SDK richiede la configurazione di una configurazione di metadati di pubblico per creare, aggiornare o eliminare in modo programmatico i tipi di pubblico nella destinazione. Consulta [Gestione dei metadati del pubblico](../functionality/audience-metadata-management.md) per informazioni su quando devi configurare questa configurazione e su come farlo.
 
 Se utilizzi una configurazione di metadati di pubblico, devi collegarla alla configurazione di destinazione creata nel passaggio 2. Aggiungi l&#39;ID istanza della configurazione dei metadati del pubblico alla configurazione di destinazione come `audienceTemplateId`.
 
@@ -396,11 +396,11 @@ Se utilizzi una configurazione di metadati di pubblico, devi collegarla alla con
 
 ## Passaggio 4: configurare l’autenticazione {#set-up-authentication}
 
-A seconda che tu specifichi `"authenticationRule": "CUSTOMER_AUTHENTICATION"` o `"authenticationRule": "PLATFORM_AUTHENTICATION"` nella configurazione di destinazione precedente, puoi impostare l&#39;autenticazione per la destinazione utilizzando `/destination` o `/credentials` endpoint.
+A seconda che si specifichi `"authenticationRule": "CUSTOMER_AUTHENTICATION"` o `"authenticationRule": "PLATFORM_AUTHENTICATION"` nella configurazione di destinazione precedente, è possibile impostare l&#39;autenticazione per la destinazione utilizzando l&#39;endpoint `/destination` o `/credentials`.
 
 >[!NOTE]
 >
->`CUSTOMER_AUTHENTICATION` è la più comune delle due regole di autenticazione ed è quella da utilizzare se richiedi agli utenti di fornire una forma di autenticazione alla destinazione prima di poter impostare una connessione ed esportare dati.
+>`CUSTOMER_AUTHENTICATION` è la più comune delle due regole di autenticazione ed è quella da utilizzare se si richiede agli utenti di fornire una forma di autenticazione alla destinazione prima di poter impostare una connessione ed esportare dati.
 
 * Se hai selezionato `"authenticationRule": "CUSTOMER_AUTHENTICATION"` nella configurazione di destinazione, consulta le sezioni seguenti per i tipi di autenticazione supportati da Destination SDK per le destinazioni basate su file:
 
@@ -411,17 +411,17 @@ A seconda che tu specifichi `"authenticationRule": "CUSTOMER_AUTHENTICATION"` o 
    * [Autenticazione SFTP con chiave SSH](../functionality/destination-configuration/customer-authentication.md#sftp-ssh)
    * [Autenticazione SFTP con password](../functionality/destination-configuration/customer-authentication.md#sftp-password)
 
-* Se hai selezionato `"authenticationRule": "PLATFORM_AUTHENTICATION"`, fare riferimento a [documentazione API per la configurazione delle credenziali](../credentials-api/create-credential-configuration.md#when-to-use).
+* Se hai selezionato `"authenticationRule": "PLATFORM_AUTHENTICATION"`, consulta la [documentazione API per la configurazione delle credenziali](../credentials-api/create-credential-configuration.md#when-to-use).
 
 
 ## Passaggio 5: testare la destinazione {#test-destination}
 
-Dopo aver impostato la destinazione utilizzando gli endpoint di configurazione nei passaggi precedenti, puoi utilizzare [strumento di test di destinazione](../testing-api/batch-destinations/file-based-destination-testing-overview.md) per testare l’integrazione tra Adobe Experience Platform e la tua destinazione.
+Dopo aver configurato la destinazione utilizzando gli endpoint di configurazione nei passaggi precedenti, puoi utilizzare lo [strumento di test della destinazione](../testing-api/batch-destinations/file-based-destination-testing-overview.md) per testare l&#39;integrazione tra Adobe Experience Platform e la destinazione.
 
 Come parte del processo di test della destinazione, devi utilizzare l’interfaccia utente di Experience Platform per creare tipi di pubblico, che attiverai nella destinazione. Per istruzioni su come creare un pubblico in Experience Platform, consulta le due risorse seguenti:
 
 * [Creare un pubblico - pagina della documentazione](/help/segmentation/ui/audience-portal.md#create-audience)
-* [Creazione di un pubblico - procedura dettagliata per i video](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
+* [Creare un pubblico - procedura dettagliata per i video](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## Passaggio 6: Publish la tua destinazione {#publish-destination}
 
@@ -429,7 +429,7 @@ Come parte del processo di test della destinazione, devi utilizzare l’interfac
 >
 >Questo passaggio non è necessario se stai creando una destinazione privata per il tuo utilizzo e non stai cercando di pubblicarla nel catalogo delle destinazioni affinché altri clienti la possano utilizzare.
 
-Dopo aver configurato e testato la destinazione, utilizza [API di pubblicazione della destinazione](../publishing-api/create-publishing-request.md) per inviare la configurazione all&#39;Adobe per la revisione.
+Dopo aver configurato e testato la destinazione, utilizza l&#39;[API di pubblicazione della destinazione](../publishing-api/create-publishing-request.md) per inviare la configurazione ad Adobe per la revisione.
 
 ## Passaggio 7: documentare la destinazione {#document-destination}
 
@@ -437,7 +437,7 @@ Dopo aver configurato e testato la destinazione, utilizza [API di pubblicazione 
 >
 >Questo passaggio non è necessario se stai creando una destinazione privata per il tuo utilizzo e non stai cercando di pubblicarla nel catalogo delle destinazioni affinché altri clienti la possano utilizzare.
 
-Se si è un fornitore di software indipendente (ISV) o un integratore di sistemi (SI) che crea un [integrazione di produzione](../overview.md#productized-custom-integrations), utilizza [processo di documentazione self-service](../docs-framework/documentation-instructions.md) per creare una pagina di documentazione del prodotto per la destinazione in [catalogo delle destinazioni di Experience Platform](/help/destinations/catalog/overview.md).
+Se sei un fornitore di software indipendente (ISV) o un integratore di sistemi (SI) che sta creando una [integrazione prodotta](../overview.md#productized-custom-integrations), utilizza la [procedura di documentazione self-service](../docs-framework/documentation-instructions.md) per creare una pagina di documentazione del prodotto per la tua destinazione nel [catalogo delle destinazioni di Experience Platform](/help/destinations/catalog/overview.md).
 
 ## Passaggio 8: invia la destinazione per la revisione di Adobe {#submit-for-review}
 
@@ -445,4 +445,4 @@ Se si è un fornitore di software indipendente (ISV) o un integratore di sistemi
 >
 >Questo passaggio non è necessario se stai creando una destinazione privata per il tuo utilizzo e non stai cercando di pubblicarla nel catalogo delle destinazioni affinché altri clienti la possano utilizzare.
 
-Infine, prima che la destinazione possa essere pubblicata nel catalogo di Experienci Platform e visibile a tutti i clienti di Experienci Platform, devi inviare ufficialmente la destinazione per la revisione di Adobi. Informazioni complete su come [invia per la revisione una destinazione prodotta creata con Destination SDK](../guides/submit-destination.md).
+Infine, prima che la destinazione possa essere pubblicata nel catalogo di Experienci Platform e visibile a tutti i clienti di Experienci Platform, devi inviare ufficialmente la destinazione per la revisione di Adobi. Trova informazioni complete su come [inviare per la revisione una destinazione prodotta creata in Destination SDK](../guides/submit-destination.md).

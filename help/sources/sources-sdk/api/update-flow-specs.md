@@ -10,21 +10,21 @@ ht-degree: 2%
 
 ---
 
-# Aggiornare le specifiche di flusso utilizzando [!DNL Flow Service] API
+# Aggiornare le specifiche di flusso utilizzando l&#39;API [!DNL Flow Service]
 
 Dopo aver generato un nuovo ID della specifica di connessione, devi aggiungerlo a una specifica di flusso per creare un flusso di dati.
 
-Le specifiche di flusso contengono informazioni che definiscono un flusso, inclusi gli ID di connessione di origine e di destinazione supportati, le specifiche di trasformazione da applicare ai dati e i parametri di programmazione necessari per generare un flusso. È possibile modificare le specifiche di flusso utilizzando `/flowSpecs` endpoint.
+Le specifiche di flusso contengono informazioni che definiscono un flusso, inclusi gli ID di connessione di origine e di destinazione supportati, le specifiche di trasformazione da applicare ai dati e i parametri di programmazione necessari per generare un flusso. È possibile modificare le specifiche di flusso utilizzando l&#39;endpoint `/flowSpecs`.
 
-Il documento seguente descrive come recuperare e aggiornare le specifiche di flusso utilizzando [!DNL Flow Service] API per origini self-service (SDK batch).
+Nel documento seguente vengono descritti i passaggi necessari per recuperare e aggiornare le specifiche di flusso mediante l&#39;API [!DNL Flow Service] per Self-Serve Sources (Batch SDK).
 
 ## Introduzione
 
-Prima di continuare, controlla [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida per la lettura delle chiamate API di esempio di questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experienci Platform.
+Prima di continuare, consulta la [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e per le informazioni importanti sulle intestazioni necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
 
 ## Cercare una specifica di flusso {#lookup}
 
-Origini create con `generic-rest-extension` tutti i modelli utilizzano `RestStorageToAEP` specifica di flusso. Questa specifica di flusso può essere recuperata effettuando una richiesta di GET al `/flowSpecs/` e fornendo il `flowSpec.id` di `6499120c-0b15-42dc-936e-847ea3c24d72`.
+Tutte le origini create con il modello `generic-rest-extension` utilizzano la specifica di flusso `RestStorageToAEP`. Questa specifica di flusso può essere recuperata effettuando una richiesta di GET all&#39;endpoint `/flowSpecs/` e fornendo `flowSpec.id` di `6499120c-0b15-42dc-936e-847ea3c24d72`.
 
 **Formato API**
 
@@ -34,7 +34,7 @@ GET /flowSpecs/6499120c-0b15-42dc-936e-847ea3c24d72
 
 **Richiesta**
 
-La seguente richiesta recupera `6499120c-0b15-42dc-936e-847ea3c24d72` specifica di connessione.
+La richiesta seguente recupera la specifica di connessione `6499120c-0b15-42dc-936e-847ea3c24d72`.
 
 ```shell
 curl -X GET \
@@ -237,7 +237,7 @@ In caso di esito positivo, la risposta restituisce i dettagli della specifica di
 
 >[!IMPORTANT]
 >
->È necessario aggiornare l’elenco di `sourceConnectionSpecIds` della specifica di flusso che corrisponde a una nuova origine ogni volta che viene creata una nuova origine. In questo modo la nuova origine sarà supportata da una specifica di flusso esistente, consentendo di completare il processo di creazione del flusso di dati con la nuova origine.
+>È necessario aggiornare l&#39;elenco di `sourceConnectionSpecIds` della specifica di flusso che corrisponde a una nuova origine ogni volta che viene creata una nuova origine. In questo modo la nuova origine sarà supportata da una specifica di flusso esistente, consentendo di completare il processo di creazione del flusso di dati con la nuova origine.
 
 **Formato API**
 
@@ -429,7 +429,7 @@ PUT -X GET \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce i dettagli della specifica di flusso sottoposta a query, incluso l’elenco aggiornato di `sourceConnectionSpecIds`.
+In caso di esito positivo, la risposta restituisce i dettagli della specifica di flusso sottoposta a query, incluso l&#39;elenco aggiornato di `sourceConnectionSpecIds`.
 
 ```json
 {
@@ -610,4 +610,4 @@ In caso di esito positivo, la risposta restituisce i dettagli della specifica di
 
 ## Passaggi successivi
 
-Aggiungendo la nuova specifica di connessione alla specifica di flusso appropriata, è ora possibile procedere alla verifica e all&#39;invio della nuova origine. Consulta la guida su [verifica e invio di una nuova origine](./submit.md) per ulteriori informazioni.
+Aggiungendo la nuova specifica di connessione alla specifica di flusso appropriata, è ora possibile procedere alla verifica e all&#39;invio della nuova origine. Per ulteriori informazioni, consulta la guida su [verifica e invio di una nuova origine](./submit.md).

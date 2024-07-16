@@ -2,11 +2,11 @@
 audience: user
 user-guide-title: Guida ai tag unificati in Adobe Experience Platform
 breadcrumb-title: Guida ai tag unificati
-user-guide-description: Utilizza i tag unificati per gestire le tassonomie dei metadati. Scopri come creare categorie e tag di tag.
+user-guide-description: Utilizza i tag unificati per gestire le tassonomie dei metadati. Scopri come creare tag e categorie di tag.
 source-git-commit: cc8e7074eafae11887486b0cec54154d96eb5a5c
 workflow-type: tm+mt
 source-wordcount: '45'
-ht-degree: 42%
+ht-degree: 82%
 
 ---
 

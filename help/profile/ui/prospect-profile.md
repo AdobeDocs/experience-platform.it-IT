@@ -5,30 +5,30 @@ type: Documentation
 exl-id: 194d25d6-88ae-4a7a-9b79-39120bced5c7
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '399'
-ht-degree: 7%
+source-wordcount: '400'
+ht-degree: 1%
 
 ---
 
-# Profili potenziali
+# Profili potenziale cliente
 
-Adobe Experience Platform ti consente di promuovere esperienze coordinate, coerenti e pertinenti per la tua clientela, indipendentemente da dove e quando interagisce con il tuo marchio.
+Adobe Experience Platform ti consente di offrire ai tuoi clienti esperienze coordinate, coerenti e pertinenti, indipendentemente da dove e quando interagiscono con il tuo marchio.
 
 I profili potenziali vengono utilizzati per rappresentare persone che non si sono ancora impegnate con la tua azienda ma a cui desideri rivolgerti. Con i profili di potenziali clienti, puoi integrare i profili dei clienti con attributi di partner di terze parti affidabili.
 
 ## Sfogliare {#browse}
 
-Per accedere ai profili di potenziali clienti, seleziona **[!UICONTROL Profili]** nel **[!UICONTROL Prospettive]** sezione.
+Per accedere ai profili di prospect, selezionare **[!UICONTROL Profili]** nella sezione **[!UICONTROL Prospect]**.
 
-Il **[!UICONTROL Sfoglia]** viene visualizzata. Viene visualizzato un elenco di tutti i profili potenziali per l’organizzazione.
+Viene visualizzata la pagina **[!UICONTROL Sfoglia]**. Viene visualizzato un elenco di tutti i profili potenziali per l’organizzazione.
 
-![Il [!UICONTROL Profili] viene evidenziato, visualizzando il [!UICONTROL Sfoglia] pagina per i profili di potenziali clienti.](../images/prospect-profile/browse-profiles.png)
+![Il pulsante [!UICONTROL Profili] è evidenziato e visualizza la pagina [!UICONTROL Sfoglia] per i profili prospect.](../images/prospect-profile/browse-profiles.png)
 
 >[!IMPORTANT]
 >
->Anche se la maggior parte della funzionalità di navigazione tra i profili dei clienti e i profili dei potenziali clienti è la stessa, **non può** sfoglia i profili prospect per criterio di unione. Questo perché i profili di potenziali clienti sono gestiti automaticamente da un criterio di unione basato sul tempo progettato dal sistema. Ulteriori informazioni sui criteri di unione sono disponibili nella sezione [panoramica dei criteri di unione](../merge-policies/overview.md).
+>Anche se la maggior parte della funzionalità di navigazione tra i profili cliente e i profili cliente è la stessa, **non è possibile** sfogliare i profili cliente per criterio di unione. Questo perché i profili di potenziali clienti sono gestiti automaticamente da un criterio di unione basato sul tempo progettato dal sistema. Ulteriori informazioni sui criteri di unione sono disponibili nella [panoramica dei criteri di unione](../merge-policies/overview.md).
 
-Per ulteriori informazioni sulla navigazione nei profili, consulta [sezione Sfoglia della guida utente del profilo](./user-guide.md#browse-identity).
+Per ulteriori informazioni sulla navigazione nei profili, leggere la sezione [Sfoglia della guida utente del profilo](./user-guide.md#browse-identity).
 
 ## Dettagli del profilo del potenziale cliente {#profile-details}
 
@@ -36,30 +36,30 @@ Per ulteriori informazioni sulla navigazione nei profili, consulta [sezione Sfog
 >
 >Un profilo potenziale scadrà automaticamente dopo 25 giorni di permanenza in Adobe Experience Platform.
 
-Per visualizzare ulteriori informazioni su un profilo potenziale specifico, selezionare un profilo nel [!UICONTROL Sfoglia] pagina.
+Per visualizzare ulteriori informazioni su un profilo di prospect specifico, selezionare un profilo nella pagina [!UICONTROL Sfoglia].
 
-![Un profilo potenziale viene evidenziato nella pagina Sfoglia.](../images/prospect-profile/select-specific-profile.png)
+![Nella pagina Sfoglia è evidenziato un profilo prospect.](../images/prospect-profile/select-specific-profile.png)
 
 Vengono visualizzate le informazioni sul profilo del prospect, inclusi gli attributi associati al profilo e l’iscrizione al pubblico.
 
 ![Viene visualizzata la pagina dei dettagli del profilo del prospect.](../images/prospect-profile/profile-details.png)
 
-Per ulteriori informazioni su queste schede, leggere [sezione Dettagli profilo della guida utente del profilo](./user-guide.md#profile-detail).
+Per ulteriori informazioni su queste schede, leggere la sezione [view Profile details (Visualizza dettagli profilo) della guida utente Profile](./user-guide.md#profile-detail).
 
-Puoi anche visualizzare tutti gli attributi in formato JSON selezionando **[!UICONTROL Visualizza JSON]**.
+È inoltre possibile visualizzare tutti gli attributi in formato JSON selezionando **[!UICONTROL Visualizza JSON]**.
 
-![Il [!UICONTROL Visualizza JSON] nella pagina dei dettagli del profilo del prospect.](../images/prospect-profile/profile-select-view-json.png)
+![Il pulsante [!UICONTROL Visualizza JSON] è evidenziato nella pagina dei dettagli del profilo del prospect.](../images/prospect-profile/profile-select-view-json.png)
 
-Il [!UICONTROL Visualizza JSON] viene visualizzata. Gli attributi del profilo potenziale vengono ora visualizzati in formato JSON.
+Viene visualizzata la finestra di dialogo [!UICONTROL Visualizza JSON]. Gli attributi del profilo potenziale vengono ora visualizzati in formato JSON.
 
-![Gli attributi del profilo del prospect vengono visualizzati in formato JSON.](../images/prospect-profile/profile-view-json.png)
+![Gli attributi del profilo del prospect sono visualizzati in formato JSON.](../images/prospect-profile/profile-view-json.png)
 
 ## Casi d’uso consigliati {#use-cases}
 
-Per informazioni su come utilizzare la funzionalità dei profili di potenziale cliente in Experienci Platform in combinazione con altre funzionalità di Platform, consulta la seguente documentazione sul caso d’uso:
+Per informazioni su come utilizzare la funzionalità dei profili di potenziale cliente in Experience Platform in combinazione con altre funzionalità di Platform, consulta la seguente documentazione sul caso d’uso:
 
 - [Coinvolgi e acquisisci nuovi clienti tramite la funzionalità di ricerca di potenziali clienti](../../rtcdp/partner-data/prospecting.md)
 
 ## Passaggi successivi
 
-Dopo aver letto questa guida, ora capisci come i profili potenziali possono essere utilizzati in Adobe Experience Platform. Per scoprire come questi profili potenziali possono essere utilizzati nei tipi di pubblico, leggi la sezione [guida di prospect audiences](../../segmentation/ui/prospect-audience.md).
+Dopo aver letto questa guida, ora capisci come i profili potenziali possono essere utilizzati in Adobe Experience Platform. Per scoprire come questi profili di prospect possono essere utilizzati nei tipi di pubblico, consulta la [guida dei tipi di pubblico di prospect](../../segmentation/ui/prospect-audience.md).

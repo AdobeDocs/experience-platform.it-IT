@@ -4,7 +4,7 @@ description: Scopri l’oggetto di contesto e il ruolo che svolge nell’interaz
 exl-id: 04e4e369-687e-4b46-9d24-18a97a218555
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
-source-wordcount: '747'
+source-wordcount: '729'
 ht-degree: 97%
 
 ---
@@ -42,7 +42,7 @@ Da non confondere con una richiesta del dispositivo client, `request` è un ogge
 logger.log(context.arc.request)
 ```
 
-L&#39;oggetto `request` ha due proprietà di livello principale: `body` e `head`. La proprietà `body` contiene informazioni su Experience Data Model (XDM) e può essere esaminata in Adobe Experience Platform Debugger quando si passa a **[!UICONTROL Launch]** e si seleziona la scheda **[!UICONTROL Edge Trace]**.
+L’oggetto `request` ha due proprietà di livello principale: `body` e `head`. La proprietà `body` contiene informazioni su Experience Data Model (XDM) e può essere esaminata in Adobe Experience Platform Debugger quando si passa a **[!UICONTROL Launch]** e si seleziona la scheda **[!UICONTROL Edge Trace]**.
 
 ### [!DNL ruleStash] {#rulestash}
 

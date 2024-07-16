@@ -29,7 +29,7 @@ Cosa troverai in questa documentazione di guida:
 
 ## Panoramica {#overview}
 
-[!UICONTROL Playbook di casi d’uso] ti aiuta a superare il problema quando inizi a usare Real-Time CDP o Adobe Journey Optimizer, potresti non sapere esattamente con cosa iniziare o come creare le risorse giuste per ottenere i casi di utilizzo desiderati. I playbook basati su casi d’uso possono aiutarti:
+[!UICONTROL Playbook di casi d&#39;uso] può aiutarti a superare il problema quando inizi a usare Real-Time CDP o Adobe Journey Optimizer quando potresti non sapere esattamente con cosa iniziare o come creare le risorse giuste per ottenere i casi d&#39;uso desiderati. I playbook basati su casi d’uso possono aiutarti:
 
 * Esempi di casi d’uso
 * Creazione di risorse diverse da utilizzare, testare e promuovere in produzione quando sono pronte.
@@ -40,7 +40,7 @@ Ogni playbook include informazioni sul caso d’uso specifico che risolve.
 
 Ad esempio, se selezioni un playbook Real-Time CDP, l’obiettivo potrebbe essere quello di generare un pubblico da mappare su una destinazione per eseguire una campagna di marketing. Se selezioni un playbook di Adobe Journey Optimizer, l’obiettivo potrebbe essere quello di creare un percorso cliente all’interno del prodotto e inviare messaggi pertinenti alla clientela.
 
-Crea un’istanza di un playbook per generare risorse specifiche, come schemi, tipi di pubblico o percorsi, personalizzate in base al tuo caso d’uso e riutilizzabili in Experienci Platform. Lo scopo di questi oggetti è quello di aiutarti a comprendere tutte le risorse necessarie per implementare un caso d’uso specifico. Non contengono dati e vengono create in sandbox di sviluppo. Inizia a utilizzare queste risorse o apportarvi modifiche prima di utilizzarle e condividerle con il tuo team in Real-Time CDP o Journey Optimizer. Promuovi le risorse desiderate dalla sandbox di ispirazione a una sandbox di sviluppo e poi ancora a una sandbox di produzione.
+Crea un’istanza di un playbook per generare risorse specifiche, come schemi, tipi di pubblico o percorsi, personalizzate in base al tuo caso d’uso e riutilizzabili in Experience Platform. Lo scopo di questi oggetti è quello di aiutarti a comprendere tutte le risorse necessarie per implementare un caso d’uso specifico. Non contengono dati e vengono create in sandbox di sviluppo. Inizia a utilizzare queste risorse o apportarvi modifiche prima di utilizzarle e condividerle con il tuo team in Real-Time CDP o Journey Optimizer. Promuovi le risorse desiderate dalla sandbox di ispirazione a una sandbox di sviluppo e poi ancora a una sandbox di produzione.
 
 ### Panoramica video
 
@@ -50,11 +50,11 @@ Guarda questo video per scoprire come individuare, creare, pubblicare e risolver
 
 ## Disponibilità {#availability}
 
-Alcuni [!UICONTROL Playbook di casi d’uso] sono personalizzati per i casi di utilizzo di Real-Time CDP, mentre altri sono più adatti per i clienti che utilizzano Journey Optimizer. Sfoglia il catalogo per trovare i playbook più adatti al tuo prodotto e caso d’uso. Per ulteriori informazioni su Real-Time CDP e Journey Optimizer, consulta [Adobe di descrizioni del prodotto](https://helpx.adobe.com/it/legal/product-descriptions.html).
+Alcuni [!UICONTROL Playbook di casi d&#39;uso] sono personalizzati per i casi d&#39;uso di Real-Time CDP, mentre altri sono più adatti per i clienti che usano Journey Optimizer. Sfoglia il catalogo per trovare i playbook più adatti al tuo prodotto e caso d’uso. Ulteriori informazioni su Real-Time CDP e Journey Optimizer sono disponibili nelle [descrizioni dei prodotti di Adobe](https://helpx.adobe.com/it/legal/product-descriptions.html).
 
 ## Guide dell’interfaccia utente {#ui-guides}
 
-Dopo aver deciso il playbook da utilizzare, selezionalo dall’interfaccia utente e inizia a utilizzarlo. Leggi le guide dell’interfaccia utente su [come scegliere il playbook giusto da una selezione](/help/use-case-playbooks/playbooks/choose.md) per te e [come creare, condividere e riutilizzare le istanze del playbook](/help/use-case-playbooks/playbooks/create-share-reuse.md) per informazioni complete su come creare istanze e sfruttare al meglio un playbook. Per scoprire come promuovere varie risorse, dalla sandbox di ispirazione ad altre sandbox di sviluppo e quindi alla produzione, leggi la documentazione su [consapevolezza dei dati](/help/use-case-playbooks/playbooks/data-awareness.md).
+Dopo aver deciso il playbook da utilizzare, selezionalo dall’interfaccia utente e inizia a utilizzarlo. Leggi le guide dell&#39;interfaccia utente su [come scegliere il playbook più adatto da una selezione](/help/use-case-playbooks/playbooks/choose.md) e [come creare, condividere e riutilizzare le istanze del playbook](/help/use-case-playbooks/playbooks/create-share-reuse.md) per informazioni complete su come creare le istanze e sfruttare al meglio un playbook. Per scoprire come promuovere varie risorse dalla sandbox di ispirazione ad altre sandbox di sviluppo e quindi alla produzione, leggi la documentazione su [data awareness](/help/use-case-playbooks/playbooks/data-awareness.md).
 
 ## Risoluzione dei problemi e limitazioni note {#trouble-shooting-known-limitations}
 

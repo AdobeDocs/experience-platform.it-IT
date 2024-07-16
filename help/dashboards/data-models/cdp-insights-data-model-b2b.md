@@ -13,11 +13,11 @@ ht-degree: 0%
 
 # Edizione B2B del modello dati di Real-time Customer Data Platform Insights
 
-Il modello dati Real-time Customer Data Platform Insights per la versione B2B espone i modelli di dati e le istruzioni SQL che alimentano le informazioni per [profili account](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-overview). Puoi personalizzare questi modelli di query SQL per creare rapporti Real-Time CDP per i casi d’uso di marketing B2B e indicatori di prestazioni chiave (KPI, Key Performance Indicator). Queste informazioni possono quindi essere utilizzate come widget personalizzati per le dashboard.
+Il modello dati di Real-time Customer Data Platform Insights per l&#39;edizione B2B espone i modelli di dati e le istruzioni SQL che alimentano le informazioni per [profili account](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-overview). Puoi personalizzare questi modelli di query SQL per creare rapporti Real-Time CDP per i casi d’uso di marketing B2B e indicatori di prestazioni chiave (KPI, Key Performance Indicator). Queste informazioni possono quindi essere utilizzate come widget personalizzati per le dashboard.
 
 >[!AVAILABILITY]
 >
->Questa funzionalità è disponibile per i clienti che hanno acquistato il pacchetto Real-Time CDP Prime e Ultimate. Consulta la documentazione su [Edizioni Real-Time CDP](../../rtcdp/overview.md#rtcdp-editions) per ulteriori informazioni, o contatta il rappresentante del tuo Adobe.
+>Questa funzionalità è disponibile per i clienti che hanno acquistato il pacchetto Real-Time CDP Prime e Ultimate. Per ulteriori informazioni, consulta la documentazione sulle [edizioni Real-Time CDP](../../rtcdp/overview.md#rtcdp-editions) disponibili oppure contatta il tuo rappresentante di Adobe.
 
 <!-- 
 See the query accelerated store reporting insights documentation to learn [how to build a reporting insights data model through Query Service for use with accelerated store data and user-defined dashboards](../../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md).
@@ -48,17 +48,17 @@ Il modello Profilo account è costituito da otto set di dati:
 
 Il diagramma seguente mostra i campi di dati rilevanti in ciascun set di dati, il loro tipo di dati e le chiavi esterne che collegano i set di dati.
 
-![Diagramma relazionale dell’entità per il modello Profilo conto.](../images/data-models/account-profile-model.png)
+![Diagramma relazionale dell&#39;entità per il modello del profilo account.](../images/data-models/account-profile-model.png)
 
 #### Il nuovo caso d’uso account per settore {#accounts-by-industry}
 
-Logica utilizzata per [!UICONTROL Nuovi account per settore] insight restituisce i primi cinque settori in base al loro numero di profili di account e alle loro dimensioni relative l’uno rispetto all’altro. Consulta la [[!UICONTROL Nuovi account per settore] documentazione widget](../guides/account-profiles.md#accounts-by-industry) per ulteriori informazioni.
+La logica utilizzata per [!UICONTROL Nuovi account per settore] insight restituisce i primi cinque settori in base al numero di profili di account e alle loro dimensioni relative tra loro. Per ulteriori informazioni, consulta la [[!UICONTROL documentazione dei nuovi account per settore] widget](../guides/account-profiles.md#accounts-by-industry).
 
 >[!TIP]
 >
 >È possibile personalizzare questa query SQL per restituire un numero maggiore o minore di quello dei primi cinque settori.
 
-SQL che genera il codice [!UICONTROL Nuovi account per settore] per ulteriori informazioni, consulta la sezione comprimibile di seguito.
+L&#39;istruzione SQL che genera i [!UICONTROL nuovi account per settore] approfondimenti è visualizzata nella sezione comprimibile seguente.
 
 Query +++SQL
 
@@ -97,9 +97,9 @@ LIMIT 5000;
 
 #### Caso di utilizzo: Nuovi account per tipo {#accounts-by-type}
 
-Logica utilizzata per [!UICONTROL Nuovi account per tipo] insight restituisce il raggruppamento numerico dei conti per il loro tipo. Questa informazione può essere utile per guidare la strategia e le operazioni aziendali, incluse le strategie di allocazione delle risorse o di marketing. Consulta la [[!UICONTROL Nuovi account per tipo] documentazione widget](../guides/account-profiles.md#accounts-by-type) per ulteriori informazioni.
+La logica utilizzata per [!UICONTROL Nuovi account per tipo] insight restituisce il raggruppamento numerico degli account per il relativo tipo. Questa informazione può essere utile per guidare la strategia e le operazioni aziendali, incluse le strategie di allocazione delle risorse o di marketing. Per ulteriori informazioni, consulta la [[!UICONTROL documentazione dei nuovi account per tipo] widget](../guides/account-profiles.md#accounts-by-type).
 
-SQL che genera il codice [!UICONTROL Nuovi account per tipo] per ulteriori informazioni, consulta la sezione comprimibile di seguito.
+L&#39;istruzione SQL che genera l&#39;approfondimento [!UICONTROL Nuovi account per tipo] è visualizzata nella sezione comprimibile seguente.
 
 Query +++SQL
 
@@ -132,4 +132,4 @@ Il modello Opportunity è costituito da sette set di dati:
 
 Il diagramma seguente mostra i campi di dati rilevanti in ogni set di dati.
 
-![Diagramma relazionale di entità per il modello di opportunità.](../images/data-models/opportunity-model.png)
+![Diagramma relazionale dell&#39;entità per il modello di opportunità.](../images/data-models/opportunity-model.png)

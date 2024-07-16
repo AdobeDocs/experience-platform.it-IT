@@ -5,7 +5,7 @@ exl-id: 762a9960-e7a5-4796-80c7-ef745157cc04
 source-git-commit: d4baf6cfaa772e5d46cef470fb35818c7af868b1
 workflow-type: tm+mt
 source-wordcount: '1139'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -15,11 +15,11 @@ Le informazioni derivate dall’analisi del modello dati rendono i dati di Adobe
 
 Comprendi le informazioni sulla destinazione accedendo all’SQL che le alimenta, quindi genera informazioni personalizzate per esplorare ulteriormente l’attivazione dei dati da Adobe Experience Platform alle piattaforme di destinazione. Trasforma i dati non elaborati in nuove informazioni fruibili utilizzando l’SQL esistente del modello dati di Real-Time CDP come ispirazione per creare query per le tue esigenze aziendali specifiche.
 
-Consulta la [Visualizza documentazione SQL](../view-sql.md) per ulteriori informazioni su come adattare le istruzioni SQL degli approfondimenti direttamente tramite l’interfaccia utente di Platform.
+Per ulteriori informazioni su come adattare l&#39;istruzione SQL delle informazioni direttamente tramite l&#39;interfaccia utente di Platform, vedere la [Visualizza documentazione SQL](../view-sql.md).
 
-Le informazioni seguenti sono tutte disponibili per l&#39;utilizzo come parte del [Dashboard delle destinazioni](../guides/destinations.md) o un personalizzato [dashboard definito dall&#39;utente](../user-defined-dashboards.md). Consulta la [panoramica sulla personalizzazione](../customize/overview.md) per istruzioni su come personalizzare il dashboard o [creare e modificare nuovi widget](../customize/custom-widgets.md) nella libreria widget e [dashboard definito dall&#39;utente](../user-defined-dashboards.md#create-widget).
+Tutte le informazioni seguenti sono disponibili per l&#39;utilizzo come parte del [dashboard delle destinazioni](../guides/destinations.md) o di un [dashboard personalizzato definito dall&#39;utente](../user-defined-dashboards.md). Consulta la [panoramica sulla personalizzazione](../customize/overview.md) per istruzioni su come personalizzare il dashboard o [creare e modificare nuovi widget](../customize/custom-widgets.md) nella libreria di widget e [dashboard definito dall&#39;utente](../user-defined-dashboards.md#create-widget).
 
-## Pubblico attivato {#activated-audiences}
+## Tipi di pubblico attivati {#activated-audiences}
 
 Domande a cui questa informazione ha risposto:
 
@@ -48,7 +48,7 @@ WHERE
 
 +++
 
-Consulta la [Documentazione dei widget di tipi di pubblico attivati](../guides/destinations.md#activated-audiences) per informazioni sull’aspetto e le funzionalità di questa informazione.
+Consulta la [documentazione sui widget dei tipi di pubblico attivati](../guides/destinations.md#activated-audiences) per informazioni sull&#39;aspetto e le funzionalità di questa informazione.
 
 ## Tipi di pubblico attivati su tutte le destinazioni {#activated-audiences-across-all-destinations}
 
@@ -71,7 +71,7 @@ WHERE
 
 +++
 
-Consulta la [Documentazione dei tipi di pubblico attivati su tutte le destinazioni dei widget](../guides/destinations.md#activated-audiences-across-all-destinations) per informazioni sull’aspetto e le funzionalità di questa informazione.
+Per informazioni sull&#39;aspetto e le funzionalità di questa informazione, consulta la [documentazione sui tipi di pubblico attivati per tutti i widget di destinazioni](../guides/destinations.md#activated-audiences-across-all-destinations).
 
 ## Destinazioni attive per piattaforma di destinazione {#active-destinations-by-destination-platform}
 
@@ -96,7 +96,7 @@ SELECT destination_platform_name AS Destination_Platform_Name,
 
 +++
 
-Consulta la [Documentazione delle destinazioni attive per widget piattaforma di destinazione](../guides/destinations.md#active-destinations-by-destination-platform) per informazioni sull’aspetto e le funzionalità di questa informazione.
+Per informazioni sull&#39;aspetto e le funzionalità di questa informazione, consulta la [documentazione delle destinazioni attive per widget piattaforma di destinazione](../guides/destinations.md#active-destinations-by-destination-platform).
 
 ## Tendenza delle dimensioni del pubblico {#audience-size-trend}
 
@@ -142,7 +142,7 @@ SELECT d.destination_name,
 
 +++
 
-Consulta la [Documentazione del widget tendenza dimensione pubblico](../guides/destinations.md#audience-size-trend) per informazioni sull’aspetto e le funzionalità di questa informazione.
+Consulta la [documentazione del widget tendenza dimensioni pubblico](../guides/destinations.md#audience-size-trend) per informazioni sull&#39;aspetto e le funzionalità di questa informazione.
 
 ## Segmenti di pubblico comuni {#common-audiences}
 
@@ -214,7 +214,7 @@ SELECT k.destination_name1,
 
 +++
 
-Consulta la [Documentazione del widget Tipi di pubblico comuni](../guides/destinations.md#common-audiences) per informazioni sull’aspetto e le funzionalità di questa informazione.
+Consulta la [documentazione sui widget Tipi di pubblico comuni](../guides/destinations.md#common-audiences) per informazioni sull&#39;aspetto e le funzionalità di questa informazione.
 
 ## Stato della destinazione {#destination-status}
 
@@ -238,7 +238,7 @@ FROM qsaccel.profile_agg.adwh_dim_destination;
 
 +++
 
-Consulta la [Documentazione del widget di stato della destinazione](../guides/destinations.md#destination-status) per informazioni sull’aspetto e le funzionalità di questa informazione.
+Per informazioni sull&#39;aspetto e le funzionalità di questa informazione, consulta la [documentazione del widget di stato della destinazione](../guides/destinations.md#destination-status).
 
 ## Conteggio delle destinazioni {#destinations-count}
 
@@ -256,7 +256,7 @@ SELECT count(destination_id) AS total_number_of_destinations
 
 +++
 
-Consulta la [Documentazione del widget di conteggio delle destinazioni](../guides/destinations.md#destinations-count) per informazioni sull’aspetto e le funzionalità di questa informazione.
+Consulta la [documentazione del widget Conteggio destinazioni](../guides/destinations.md#destinations-count) per informazioni sull&#39;aspetto e le funzionalità di questa informazione.
 
 ## Integrità del pubblico mappato {#mapped-audience-health}
 
@@ -325,9 +325,9 @@ SELECT destination_name,
 
 +++
 
-Consulta la [Documentazione del widget di integrità del pubblico mappato](../guides/destinations.md#mapped-audience-health) per informazioni sull’aspetto e le funzionalità di questa informazione.
+Per informazioni sull&#39;aspetto e le funzionalità di questa informazione, consulta la [documentazione mappata sui widget di integrità del pubblico](../guides/destinations.md#mapped-audience-health).
 
-## Pubblico mappato {#mapped-audiences}
+## Tipi di pubblico mappato {#mapped-audiences}
 
 Domande a cui questa informazione ha risposto:
 
@@ -345,7 +345,7 @@ WHERE destination_id = 1458738325;
 
 +++
 
-Consulta la [Documentazione dei widget Pubblico mappato](../guides/destinations.md#mapped-audiences) per informazioni sull’aspetto e le funzionalità di questa informazione.
+Consulta la [documentazione sui widget dei tipi di pubblico mappati](../guides/destinations.md#mapped-audiences) per informazioni sull&#39;aspetto e le funzionalità di questa informazione.
 
 <!-- Commented out until the Jan release as the SQL IS MISSING:
 ## Mapped audiences by identity {#mapped-audiences-by-identity}
@@ -393,7 +393,7 @@ SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
 
 +++
 
-Consulta la [Documentazione dei widget delle destinazioni più utilizzate](../guides/destinations.md#most-used-destinations) per informazioni sull’aspetto e le funzionalità di questa informazione.
+Consulta la [documentazione sulle destinazioni più utilizzate](../guides/destinations.md#most-used-destinations) per informazioni sull&#39;aspetto e le funzionalità di questa informazione.
 
 ## Tipi di pubblico attivati di recente {#recently-activated-audiences}
 
@@ -424,7 +424,7 @@ LIMIT
 
 +++
 
-Consulta la [Documentazione dei widget di tipi di pubblico attivati di recente](../guides/destinations.md#recently-activated-audiences) per informazioni sull’aspetto e le funzionalità di questa informazione.
+Consulta la [documentazione sui widget dei tipi di pubblico attivati di recente](../guides/destinations.md#recently-activated-audiences) per informazioni sull&#39;aspetto e le funzionalità di questa informazione.
 
 ## Tipi di pubblico attivati di recente per destinazione {#recently-activated-audiences-by-destination}
 
@@ -455,7 +455,7 @@ SELECT c.destination_name,
 
 +++
 
-Consulta la [Documentazione dei tipi di pubblico attivati di recente per widget di destinazione](../guides/destinations.md#recently-activated-audiences-by-destination) per informazioni sull’aspetto e le funzionalità di questa informazione.
+Consulta la [documentazione sui tipi di pubblico attivati di recente dal widget di destinazione](../guides/destinations.md#recently-activated-audiences-by-destination) per informazioni sull&#39;aspetto e le funzionalità di questa informazione.
 
 ## Destinazioni create di recente {#recently-created-destinations}
 
@@ -484,7 +484,7 @@ LIMIT
 
 +++
 
-Consulta la [Documentazione del widget destinazioni create di recente](../guides/destinations.md#recently-created-destinations) per informazioni sull’aspetto e le funzionalità di questa informazione.
+Consulta la [documentazione sulle destinazioni create di recente](../guides/destinations.md#recently-created-destinations) per informazioni sull&#39;aspetto e le funzionalità di questa informazione.
 
 <!-- Commented out until the Jan release as SQL MISSING FROM WIKI:
 
@@ -511,6 +511,6 @@ See the [Unmapped audiences by identity widget documentation](../guides/destinat
 
 Una volta letto questo documento, potrai comprendere le istruzioni SQL che generano informazioni approfondite sul dashboard e quali sono le domande più comuni che vengono risolte dall’analisi. Ora puoi modificare e ripetere queste query SQL per generare informazioni personalizzate.
 
-Consulta la [Visualizza documentazione SQL](../view-sql.md) per ulteriori informazioni su come adattare le istruzioni SQL degli approfondimenti direttamente tramite l’interfaccia utente di Platform.
+Per ulteriori informazioni su come adattare l&#39;istruzione SQL delle informazioni direttamente tramite l&#39;interfaccia utente di Platform, vedere la [Visualizza documentazione SQL](../view-sql.md).
 
-Puoi anche leggere e comprendere il codice SQL che genera informazioni approfondite per [Profili](./profiles.md), [Profili account](./account-profiles.md) e [Tipi di pubblico](./audiences.md) dashboard.
+È inoltre possibile leggere e comprendere l&#39;istruzione SQL che genera informazioni approfondite per i [profili](./profiles.md), [profili account](./account-profiles.md) e [tipi di pubblico](./audiences.md) dashboard.

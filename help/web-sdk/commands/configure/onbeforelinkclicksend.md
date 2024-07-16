@@ -14,11 +14,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Questo callback è obsoleto. Utilizzare [`filterClickDetails`](clickcollection.md) invece.
+>Questo callback è obsoleto. Utilizza invece [`filterClickDetails`](clickcollection.md).
 
-Il `onBeforeLinkClickSend` callback consente di registrare una funzione JavaScript che può modificare i dati di tracciamento dei collegamenti inviati immediatamente prima che tali dati vengano inviati ad Adobe. Questo callback consente di manipolare `xdm` o `data` , inclusa la possibilità di aggiungere, modificare o rimuovere elementi. Puoi anche annullare completamente l’invio di dati in modo condizionale, ad esempio con il traffico bot lato client rilevato. È supportato dall’SDK web 2.15.0 o versione successiva.
+Il callback `onBeforeLinkClickSend` consente di registrare una funzione di JavaScript che può modificare i dati di tracciamento dei collegamenti inviati immediatamente prima dell&#39;invio dei dati ad Adobe. Questo callback consente di manipolare l&#39;oggetto `xdm` o `data`, inclusa la possibilità di aggiungere, modificare o rimuovere elementi. Puoi anche annullare completamente l’invio di dati in modo condizionale, ad esempio con il traffico bot lato client rilevato. È supportato dall’SDK web 2.15.0 o versione successiva.
 
-Questo callback viene eseguito solo quando [`clickCollectionEnabled`](clickcollectionenabled.md) è abilitato e [`filterClickDetails`](clickcollection.md) non contiene una funzione registrata. Se `clickCollectionEnabled` è disabilitato o se `filterClickDetails` contiene una funzione registrata, quindi il callback non viene eseguito. Se `onBeforeEventSend` e `onBeforeLinkClickSend` entrambi contengono funzioni registrate, `onBeforeLinkClickSend` viene eseguito per primo.
+Questo callback viene eseguito solo quando [`clickCollectionEnabled`](clickcollectionenabled.md) è abilitato e [`filterClickDetails`](clickcollection.md) non contiene una funzione registrata. Se `clickCollectionEnabled` è disabilitato o se `filterClickDetails` contiene una funzione registrata, il callback non viene eseguito. Se `onBeforeEventSend` e `onBeforeLinkClickSend` contengono entrambi funzioni registrate, `onBeforeLinkClickSend` viene eseguito per primo.
 
 >[!WARNING]
 >
@@ -26,26 +26,26 @@ Questo callback viene eseguito solo quando [`clickCollectionEnabled`](clickcolle
 
 ## Configurare prima del collegamento fai clic su Invia callback utilizzando l’estensione tag Web SDK {#tag-extension}
 
-Seleziona la **[!UICONTROL Fornisci su prima del collegamento clic evento invia codice di callback]** quando [configurazione dell’estensione tag](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Questo pulsante apre una finestra modale in cui puoi inserire il codice desiderato.
+Seleziona il pulsante **[!UICONTROL Fornisci prima del collegamento, invia codice di callback dell&#39;evento clic]** quando [configura l&#39;estensione tag](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Questo pulsante apre una finestra modale in cui puoi inserire il codice desiderato.
 
-1. Accedi a [experience.adobe.com](https://experience.adobe.com) utilizzando le credenziali di Adobe ID.
-1. Accedi a **[!UICONTROL Raccolta dati]** > **[!UICONTROL Tag]**.
+1. Accedi a [experience.adobe.com](https://experience.adobe.com) utilizzando le credenziali Adobe ID.
+1. Passa a **[!UICONTROL Raccolta dati]** > **[!UICONTROL Tag]**.
 1. Seleziona la proprietà tag desiderata.
-1. Accedi a **[!UICONTROL Estensioni]**, quindi fai clic su **[!UICONTROL Configura]** il [!UICONTROL Adobe Experience Platform Web SDK] Card.
-1. Scorri verso il basso fino a [!UICONTROL Raccolta dati] , quindi selezionare la casella di controllo **[!UICONTROL Abilita raccolta dati di clic]**.
-1. Seleziona il pulsante etichettato **[!UICONTROL Fornisci su prima del collegamento clic evento invia codice di callback]**.
+1. Passa a **[!UICONTROL Estensioni]**, quindi fai clic su **[!UICONTROL Configura]** nella scheda [!UICONTROL Adobe Experience Platform Web SDK].
+1. Scorri verso il basso fino alla sezione [!UICONTROL Raccolta dati], quindi seleziona la casella di controllo **[!UICONTROL Abilita raccolta dati su clic]**.
+1. Selezionare il pulsante con l&#39;etichetta **[!UICONTROL Fornisci prima del collegamento codice di callback di invio evento clic]**.
 1. Questo pulsante apre una finestra modale con un editor di codice. Inserisci il codice desiderato, quindi fai clic su **[!UICONTROL Salva]** per chiudere la finestra modale.
-1. Clic **[!UICONTROL Salva]** in impostazioni estensione, pubblica le modifiche.
+1. Fai clic su **[!UICONTROL Salva]** in Impostazioni estensione, quindi pubblica le modifiche.
 
 Nell’editor di codice puoi accedere alle seguenti variabili:
 
 * **`content.clickedElement`**: elemento DOM su cui è stato fatto clic.
-* **`content.xdm`**: payload XDM per l’evento.
-* **`content.data`**: payload dell’oggetto dati per l’evento.
-* **`return true`**: chiude immediatamente il callback con i valori della variabile corrente. Il `onBeforeEventSend` callback eseguito se contiene una funzione registrata.
-* **`return false`**: chiudi immediatamente il callback e interrompi l’invio di dati all’Adobe. Il `onBeforeEventSend` callback non eseguito.
+* **`content.xdm`**: payload XDM per l&#39;evento.
+* **`content.data`**: payload dell&#39;oggetto dati per l&#39;evento.
+* **`return true`**: uscire immediatamente dal callback con i valori della variabile corrente. Il callback `onBeforeEventSend` viene eseguito se contiene una funzione registrata.
+* **`return false`**: uscire immediatamente dal callback e interrompere l&#39;invio di dati all&#39;Adobe. Il callback `onBeforeEventSend` non è eseguito.
 
-Qualsiasi variabile definita al di fuori di `content` possono essere utilizzati, ma non sono inclusi nel payload inviato ad Adobe.
+È possibile utilizzare qualsiasi variabile definita al di fuori di `content`, ma non è inclusa nel payload inviato a Adobe.
 
 ```js
 // Set an already existing value to something else
@@ -65,11 +65,11 @@ content.xdm._experience.analytics.customDimensions.eVars.eVar1 = content.clicked
 if(content.xdm.web?.webInteraction?.type === "other") content.xdm.web.webInteraction.type = "download";
 ```
 
-Simile a [`onBeforeEventSend`](onbeforeeventsend.md), è possibile `return true` per completare immediatamente la funzione, oppure `return false` per interrompere l’invio di dati ad Adobe. Se interrompi l’invio di dati in `onBeforeLinkClickSend` quando entrambi `onBeforeEventSend` e `onBeforeLinkClickSend` contengono funzioni registrate, `onBeforeEventSend` La funzione non viene eseguita.
+Analogamente a [`onBeforeEventSend`](onbeforeeventsend.md), è possibile `return true` per completare immediatamente la funzione o `return false` per interrompere l&#39;invio di dati all&#39;Adobe. Se si interrompe l&#39;invio di dati in `onBeforeLinkClickSend` quando sia `onBeforeEventSend` che `onBeforeLinkClickSend` contengono funzioni registrate, la funzione `onBeforeEventSend` non viene eseguita.
 
 ## Configurare su prima del collegamento fare clic su Invia callback utilizzando la libreria JavaScript dell&#39;SDK Web {#library}
 
-Registra il `onBeforeLinkClickSend` callback durante l&#39;esecuzione di `configure` comando. È possibile modificare il `content` nome variabile a qualsiasi valore desiderato modificando la variabile di parametro all&#39;interno della funzione in linea.
+Registra il callback `onBeforeLinkClickSend` durante l&#39;esecuzione del comando `configure`. È possibile modificare il nome della variabile `content` in qualsiasi valore desiderato modificando la variabile di parametro all&#39;interno della funzione in linea.
 
 ```js
 alloy("configure", {

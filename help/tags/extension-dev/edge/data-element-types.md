@@ -23,7 +23,7 @@ Questo documento illustra come definire i tipi di elementi dati per un’estensi
 
 >[!IMPORTANT]
 >
->Se stai sviluppando un&#39;estensione web, consulta la guida su [tipi di elementi dati per le estensioni web](../web/data-element-types.md) invece.
+>Se stai sviluppando un&#39;estensione Web, consulta invece la guida sui [tipi di elementi dati per le estensioni Web](../web/data-element-types.md).
 >
 >In questo documento si presuppone che tu abbia familiarità con i moduli libreria e sul modo in cui vengono integrati nelle estensioni Edge. Per un&#39;introduzione, vedere la panoramica sulla [formattazione del modulo libreria](./format.md) prima di tornare a questa guida.
 

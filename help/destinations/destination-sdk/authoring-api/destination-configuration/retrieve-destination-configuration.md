@@ -4,26 +4,26 @@ title: Recuperare una configurazione di destinazione
 exl-id: aaf4cfa0-3e90-4fcc-b506-b84ff62b3027
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '365'
-ht-degree: 3%
+source-wordcount: '367'
+ht-degree: 1%
 
 ---
 
 # Recuperare una configurazione di destinazione
 
-Questa pagina esemplifica la richiesta API e il payload che è possibile utilizzare per recuperare informazioni su una configurazione di destinazione esistente, utilizzando `/authoring/destination` Endpoint API
+Questa pagina esemplifica la richiesta API e il payload che è possibile utilizzare per recuperare informazioni su una configurazione di destinazione esistente, utilizzando l&#39;endpoint API `/authoring/destination`.
 
 >[!IMPORTANT]
 >
->Tutti i nomi e i valori dei parametri supportati da Destination SDK sono **distinzione maiuscole/minuscole**. Per evitare errori di distinzione tra maiuscole e minuscole, utilizza i nomi e i valori dei parametri esattamente come mostrato nella documentazione.
+>Tutti i nomi e i valori dei parametri supportati da Destination SDK sono **con distinzione tra maiuscole e minuscole**. Per evitare errori di distinzione tra maiuscole e minuscole, utilizza i nomi e i valori dei parametri esattamente come mostrato nella documentazione.
 
 ## Guida introduttiva alle operazioni API di configurazione di destinazione {#get-started}
 
-Prima di continuare, controlla [guida introduttiva](../../getting-started.md) per informazioni importanti che è necessario conoscere per effettuare correttamente chiamate all’API, tra cui come ottenere l’autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
+Prima di continuare, consulta la [guida introduttiva](../../getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
 
 ## Recuperare una configurazione di destinazione {#retrieve}
 
-È possibile recuperare un [esistente](create-destination-configuration.md) configurazione di destinazione effettuando una `GET` richiesta al `/authoring/destination` endpoint.
+È possibile recuperare una configurazione di destinazione [esistente](create-destination-configuration.md) effettuando una richiesta `GET` all&#39;endpoint `/authoring/destination`.
 
 >[!TIP]
 >
@@ -38,13 +38,13 @@ Utilizza il seguente formato API per recuperare tutte le configurazioni di desti
 GET /authoring/destinations
 ```
 
-Utilizza il seguente formato API per recuperare una configurazione di destinazione specifica, definita da `{INSTANCE_ID}` parametro.
+Utilizzare il seguente formato API per recuperare una configurazione di destinazione specifica, definita dal parametro `{INSTANCE_ID}`.
 
 ```http
 GET /authoring/destinations/{INSTANCE_ID}
 ```
 
-Le due richieste seguenti recuperano tutte le configurazioni di destinazione per l’organizzazione IMS o una configurazione di destinazione specifica, a seconda che venga passato o meno il `INSTANCE_ID` nella richiesta.
+Le due richieste seguenti recuperano tutte le configurazioni di destinazione per l’organizzazione IMS o una configurazione di destinazione specifica, a seconda che si trasmetta o meno il parametro `INSTANCE_ID` nella richiesta.
 
 Seleziona ciascuna scheda di seguito per visualizzare il payload corrispondente.
 
@@ -66,7 +66,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++Risposta
 
-In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elenco di configurazioni di destinazione a cui hai accesso, in base al [!DNL IMS Org ID] e il nome della sandbox che hai utilizzato. Uno `instanceId` corrisponde a una configurazione di destinazione.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elenco delle configurazioni di destinazione a cui hai accesso, in base a [!DNL IMS Org ID] e al nome della sandbox utilizzato. Un `instanceId` corrisponde a una configurazione di destinazione.
 
 ```json
 {
@@ -194,7 +194,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++Risposta
 
-In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i dettagli della configurazione di destinazione corrispondenti al `{INSTANCE_ID}` fornite nella chiamata.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i dettagli della configurazione di destinazione corrispondenti al `{INSTANCE_ID}` fornito nella chiamata.
 
 ```json
 {
@@ -306,11 +306,11 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 
 ## Gestione degli errori API {#error-handling}
 
-Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Fai riferimento a [Codici di stato API](../../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
+Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](../../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
 
 ## Passaggi successivi
 
-Dopo aver letto questo documento, ora sai come recuperare una configurazione di destinazione tramite la Destination SDK `/authoring/destinations` Endpoint API
+Dopo aver letto questo documento, ora sai come recuperare una configurazione di destinazione tramite l&#39;endpoint API Destination SDK `/authoring/destinations`.
 
 Per ulteriori informazioni su cosa è possibile fare con questo endpoint, consulta i seguenti articoli:
 

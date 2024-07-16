@@ -4,7 +4,7 @@ description: Scopri come aggiungere annotazioni testuali a determinate risorse t
 exl-id: 14d6b6a1-3bd0-4181-8181-e6b35c197a44
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '310'
 ht-degree: 94%
 
 ---

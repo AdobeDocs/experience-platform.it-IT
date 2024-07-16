@@ -8,14 +8,14 @@ role: User
 source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '136'
-ht-degree: 31%
+ht-degree: 34%
 
 ---
 
 
 # Adobe Intelligent Services {#intelligent-services}
 
-- [Panoramica di Intelligent Services](home.md)
+- [Panoramica su Intelligent Services](home.md)
 - [Preparare i dati da utilizzare in Intelligent Services](data-preparation.md)
 - Attribution AI {#attribution-ai}
    - [Panoramica](attribution-ai/overview.md)
@@ -32,18 +32,18 @@ ht-degree: 31%
       - [Criteri di governance](attribution-ai/aai-data-governance/governance-policies.md)
    - [Analizzare i punteggi utilizzando Query Service](attribution-ai/aai-query-service.md)
    - [Risoluzione dei problemi di errore](attribution-ai/troubleshooting.md)
-- Assegnazione di tag ai contenuti {#content-commerce-ai}
+- Assegnazione tag contenuto {#content-commerce-ai}
    - [Panoramica](content-commerce-ai/overview.md)
    - [Introduzione](content-commerce-ai/getting-started.md)
-   - API per l’assegnazione tag dei contenuti{#api}
+   - API di assegnazione tag contenuto{#api}
       - [Assegnazione di tag colore](content-commerce-ai/api/color-tagging.md)
       - [Assegnazione tag parole chiave](content-commerce-ai/api/keyword-tagging.md)
       - [Presenza di testo e riconoscimento ottico dei caratteri](content-commerce-ai/api/optical-character-recognition.md)
-- IA per l’analisi dei clienti {#customer-ai}
+- IA per l&#39;analisi dei clienti {#customer-ai}
    - [Panoramica](customer-ai/overview.md)
    - [Guida introduttiva ad IA per l’analisi dei clienti](customer-ai/getting-started.md)
    - [Requisiti dei dati](customer-ai/data-requirements.md)
-   - Guide dell’interfaccia utente{#user-guide}
+   - Guide dell&#39;interfaccia utente{#user-guide}
       - [Configurare un’istanza](customer-ai/user-guide/configure.md)
       - [Scopri informazioni](customer-ai/user-guide/discover-insights.md)
       - [Creare segmenti utilizzando i punteggi di Customer AI](customer-ai/user-guide/create-segment.md)
@@ -55,4 +55,4 @@ ht-degree: 31%
       - [Chiavi gestite dal cliente](customer-ai/cai-data-governance/customer-managed-keys.md)
       - [Governance dei dati](customer-ai/cai-data-governance/data-governance.md)
       - [Criteri di governance](customer-ai/cai-data-governance/governance-policies.md)
-- [Note sulla versione della piattaforma](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Note sulla versione della piattaforma](https://experienceleague.adobe.com/it/docs/experience-platform/release-notes/latest)

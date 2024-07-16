@@ -15,4 +15,4 @@ ht-degree: 24%
 
 Le destinazioni sono integrazioni preconfigurate con piattaforme di destinazione che consentono l’attivazione fluida dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 
-Per una panoramica più dettagliata delle destinazioni, compreso un elenco delle destinazioni disponibili e i collegamenti ai tutorial, leggi [documentazione sulle destinazioni](../../destinations/home.md).
+Per una panoramica più dettagliata delle destinazioni, incluso un elenco delle destinazioni disponibili e i collegamenti ai tutorial, consulta la [documentazione sulle destinazioni](../../destinations/home.md).

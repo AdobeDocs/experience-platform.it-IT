@@ -6,34 +6,34 @@ type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
 source-git-commit: af705b8a77b2ea15b44b97ed3f1f2c5aa7433eb1
 workflow-type: tm+mt
-source-wordcount: '3550'
-ht-degree: 6%
+source-wordcount: '3524'
+ht-degree: 4%
 
 ---
 
-# Esportare i set di dati utilizzando [!DNL Flow Service API]
+# Esporta i set di dati utilizzando [!DNL Flow Service API]
 
 >[!AVAILABILITY]
 >
 >* Questa funzionalità è disponibile per i clienti che hanno acquistato il pacchetto Real-Time CDP Prime e Ultimate, Adobe Journey Optimizer o il Customer Journey Analytics. Per ulteriori informazioni, contatta il rappresentante del tuo Adobe.
 
-Questo articolo spiega il flusso di lavoro necessario per utilizzare [!DNL Flow Service API] per esportare [set di dati](/help/catalog/datasets/overview.md) da Adobe Experience Platform alla posizione di archiviazione cloud preferita, ad esempio [!DNL Amazon S3], posizioni SFTP o [!DNL Google Cloud Storage].
+Questo articolo spiega il flusso di lavoro necessario per utilizzare [!DNL Flow Service API] per esportare [set di dati](/help/catalog/datasets/overview.md) da Adobe Experience Platform nel percorso di archiviazione cloud preferito, ad esempio [!DNL Amazon S3], percorsi SFTP o [!DNL Google Cloud Storage].
 
 >[!TIP]
 >
->Per esportare i set di dati, puoi anche utilizzare l’interfaccia utente di Experienci Platform. Leggi le [esercitazione sull’interfaccia utente per esportare i set di dati](/help/destinations/ui/export-datasets.md) per ulteriori informazioni.
+>Per esportare i set di dati, puoi anche utilizzare l’interfaccia utente di Experience Platform. Per ulteriori informazioni, consulta l&#39;esercitazione sull&#39;interfaccia utente [esporta set di dati](/help/destinations/ui/export-datasets.md).
 
 ## Set di dati disponibili per l’esportazione {#datasets-to-export}
 
 I set di dati che puoi esportare dipendono dall’applicazione di Experience Platform (Real-Time CDP, Adobe Journey Optimizer), dal livello (Prime o Ultimate) ed eventuali componenti aggiuntivi acquistati (ad esempio, Data Distiller).
 
-Consulta la sezione [tabella nella pagina dei tutorial dell’interfaccia utente](/help/destinations/ui/export-datasets.md#datasets-to-export) per capire quali set di dati puoi esportare.
+Per informazioni sui set di dati da esportare, consulta la tabella [nella pagina delle esercitazioni dell&#39;interfaccia utente](/help/destinations/ui/export-datasets.md#datasets-to-export).
 
 ## Destinazioni supportati {#supported-destinations}
 
 Al momento, puoi esportare i set di dati nelle destinazioni di archiviazione cloud evidenziate nella schermata ed elencate di seguito.
 
-![Destinazioni che supportano le esportazioni di set di dati](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
+![Destinazioni che supportano le esportazioni dei set di dati](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
 
 * [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
 * [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
@@ -44,52 +44,52 @@ Al momento, puoi esportare i set di dati nelle destinazioni di archiviazione clo
 
 ## Introduzione {#get-started}
 
-![Panoramica: i passaggi per creare una destinazione ed esportare i set di dati](../assets/api/export-datasets/export-datasets-api-workflow-get-started.png)
+![Panoramica - i passaggi per creare una destinazione ed esportare i set di dati](../assets/api/export-datasets/export-datasets-api-workflow-get-started.png)
 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md): tutti i dati acquisiti correttamente in Adobe Experience Platform vengono mantenuti all’interno del [!DNL Data Lake] come set di dati. Un set di dati è un costrutto di archiviazione e gestione per una raccolta di dati, in genere una tabella, che contiene uno schema (colonne) e dei campi (righe). I set di dati contengono anche metadati che descrivono vari aspetti dei dati memorizzati.
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che permettono di suddividere un singolo [!DNL Platform] in ambienti virtuali separati, per facilitare lo sviluppo e l’evoluzione delle applicazioni di esperienza digitale.
+* [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md): tutti i dati correttamente acquisiti in Adobe Experience Platform vengono mantenuti all&#39;interno di [!DNL Data Lake] come set di dati. Un set di dati è un costrutto di archiviazione e gestione per una raccolta di dati, in genere una tabella, che contiene uno schema (colonne) e dei campi (righe). I set di dati contengono anche metadati che descrivono vari aspetti dei dati memorizzati.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza [!DNL Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per esportare i set di dati nelle destinazioni di archiviazione cloud in Platform.
 
-### Autorizzazioni necessarie {#permissions}
+### Autorizzazioni richieste {#permissions}
 
-Per esportare i set di dati, è necessario **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Visualizzare i set di dati]**, e **[!UICONTROL Gestire e attivare le destinazioni dei set di dati]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
+Per esportare i set di dati, è necessario **[!UICONTROL Visualizzare le destinazioni]**, **[!UICONTROL Visualizzare i set di dati]** e **[!UICONTROL Gestire e attivare le destinazioni dei set di dati]** [accedere alle autorizzazioni di controllo](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Per assicurarti di disporre delle autorizzazioni necessarie per esportare i set di dati e che la destinazione supporti l’esportazione dei set di dati, sfoglia il catalogo delle destinazioni. Se una destinazione ha **[!UICONTROL Attiva]** o un **[!UICONTROL Esportare i set di dati]** , quindi si dispone delle autorizzazioni appropriate.
+Per assicurarti di disporre delle autorizzazioni necessarie per esportare i set di dati e che la destinazione supporti l’esportazione dei set di dati, sfoglia il catalogo delle destinazioni. Se una destinazione dispone di un controllo **[!UICONTROL Attiva]** o **[!UICONTROL Esporta set di dati]**, si dispone delle autorizzazioni appropriate.
 
 ### Lettura delle chiamate API di esempio {#reading-sample-api-calls}
 
-Questo tutorial fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere gli esempi di chiamate API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi.di [!DNL Experience Platform].
+Questo tutorial fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform].
 
 ### Raccogli i valori per le intestazioni obbligatorie e facoltative {#gather-values-headers}
 
-Per effettuare chiamate a [!DNL Platform] , devi prima completare le [tutorial sull’autenticazione di Experience Platform](https://www.adobe.com/go/platform-api-authentication-en). Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
+Per effettuare chiamate alle API [!DNL Platform], devi prima completare l&#39;[esercitazione di autenticazione Experience Platform](https://www.adobe.com/go/platform-api-authentication-en). Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
 
 * Autorizzazione: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-Risorse in [!DNL Experience Platform] può essere isolato in specifiche sandbox virtuali. Nelle richieste a [!DNL Platform] API, puoi specificare il nome e l’ID della sandbox in cui verrà eseguita l’operazione. Si tratta di parametri facoltativi.
+Le risorse in [!DNL Experience Platform] possono essere isolate in specifiche sandbox virtuali. Nelle richieste alle API [!DNL Platform], puoi specificare il nome e l&#39;ID della sandbox in cui verrà eseguita l&#39;operazione. Si tratta di parametri facoltativi.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulle sandbox in [!DNL Experience Platform], vedere [documentazione di panoramica sulla sandbox](../../sandboxes/home.md).
+>Per ulteriori informazioni sulle sandbox in [!DNL Experience Platform], consulta la [documentazione di panoramica sulle sandbox](../../sandboxes/home.md).
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione di tipo multimediale aggiuntiva:
 
-* Content-Type: `application/json`
+* Tipo di contenuto: `application/json`
 
 ### Documentazione di riferimento API {#api-reference-documentation}
 
-Questa esercitazione contiene la documentazione di riferimento per tutte le operazioni API. Consulta la sezione [[!DNL Flow Service] - Documentazione API per le destinazioni sul sito web di Adobe Developer](https://developer.adobe.com/experience-platform-apis/references/destinations/). È consigliabile utilizzare questa esercitazione e la documentazione di riferimento API in parallelo.
+Questa esercitazione contiene la documentazione di riferimento per tutte le operazioni API. Consulta la documentazione sulle API di destinazione [[!DNL Flow Service]  sul sito Web Adobe Developer](https://developer.adobe.com/experience-platform-apis/references/destinations/). È consigliabile utilizzare questa esercitazione e la documentazione di riferimento API in parallelo.
 
 ### Glossario {#glossary}
 
-Per le descrizioni dei termini che incontrerai in questa esercitazione API, leggi [sezione glossario](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) della documentazione di riferimento API.
+Per le descrizioni dei termini che incontrerai in questa esercitazione API, leggi la [sezione del glossario](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) della documentazione di riferimento API.
 
 ### Raccogli le specifiche di connessione e di flusso per la destinazione desiderata {#gather-connection-spec-flow-spec}
 
@@ -107,7 +107,7 @@ Prima di avviare il flusso di lavoro per esportare un set di dati, identifica la
 
 {style="table-layout:auto"}
 
-È necessario disporre di questi ID per creare vari [!DNL Flow Service] entità. È inoltre necessario fare riferimento a parti del [!DNL Connection Spec] per impostare determinate entità in modo da poter recuperare [!DNL Connection Spec] da [!DNL Flow Service APIs]. Vedi gli esempi seguenti di recupero delle specifiche di connessione per tutte le destinazioni nella tabella:
+Questi ID sono necessari per creare varie entità [!DNL Flow Service]. È inoltre necessario fare riferimento a parti di [!DNL Connection Spec] per impostare alcune entità in modo da poter recuperare [!DNL Connection Spec] da [!DNL Flow Service APIs]. Vedi gli esempi seguenti di recupero delle specifiche di connessione per tutte le destinazioni nella tabella:
 
 >[!BEGINTABS]
 
@@ -115,7 +115,7 @@ Prima di avviare il flusso di lavoro per esportare un set di dati, identifica la
 
 **Richiesta**
 
-+++Recupero [!DNL connection spec] per [!DNL Amazon S3]
++++Recupera [!DNL connection spec] per [!DNL Amazon S3]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/4fce964d-3f37-408f-9778-e597338a21ee' \
@@ -149,7 +149,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Richiesta**
 
-+++Recupero [!DNL connection spec] per [!DNL Azure Blob Storage]
++++Recupera [!DNL connection spec] per [!DNL Azure Blob Storage]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/6d6b59bf-fb58-4107-9064-4d246c0e5bb2' \
@@ -183,7 +183,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Richiesta**
 
-+++Recupero [!DNL connection spec] per [!DNL Azure Data Lake Gen 2(ADLS Gen2])
++++Recupera [!DNL connection spec] per [!DNL Azure Data Lake Gen 2(ADLS Gen2])
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/be2c3209-53bc-47e7-ab25-145db8b873e1' \
@@ -213,11 +213,11 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 +++
 
->[!TAB Data Landing Zone (DLZ)]
+>[!TAB Zona di destinazione dati(DLZ)]
 
 **Richiesta**
 
-+++Recupero [!DNL connection spec] per [!DNL Data Landing Zone(DLZ)]
++++Recupera [!DNL connection spec] per [!DNL Data Landing Zone(DLZ)]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/10440537-2a7b-4583-ac39-ed38d4b848e8' \
@@ -247,11 +247,11 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 +++
 
->[!TAB Archiviazione cloud Google]
+>[!TAB Google Cloud Storage]
 
 **Richiesta**
 
-+++Recupero [!DNL connection spec] per [!DNL Google Cloud Storage]
++++Recupera [!DNL connection spec] per [!DNL Google Cloud Storage]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/c5d93acb-ea8b-4b14-8f53-02138444ae99' \
@@ -285,7 +285,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Richiesta**
 
-+++Recupero [!DNL connection spec] per SFTP
++++Recupera [!DNL connection spec] per SFTP
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/36965a81-b1c6-401b-99f8-22508f1e6a26' \
@@ -317,11 +317,11 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 >[!ENDTABS]
 
-Segui i passaggi seguenti per impostare un flusso di dati su una destinazione di archiviazione cloud. Per alcuni passaggi, le richieste e le risposte differiscono tra le varie destinazioni dell’archiviazione cloud. In questi casi, utilizza le schede nella pagina per recuperare le richieste e le risposte specifiche della destinazione a cui desideri connettere ed esportare i set di dati. Assicurati di utilizzare il corretto [!DNL connection spec] e [!DNL flow spec] per la destinazione che stai configurando.
+Segui i passaggi seguenti per impostare un flusso di dati su una destinazione di archiviazione cloud. Per alcuni passaggi, le richieste e le risposte differiscono tra le varie destinazioni dell’archiviazione cloud. In questi casi, utilizza le schede nella pagina per recuperare le richieste e le risposte specifiche della destinazione a cui desideri connettere ed esportare i set di dati. Assicurarsi di utilizzare [!DNL connection spec] e [!DNL flow spec] corretti per la destinazione che si sta configurando.
 
 ## Recuperare un elenco di set di dati {#retrieve-list-of-available-datasets}
 
-![Diagramma che mostra il passaggio 1 nel flusso di lavoro dell’esportazione dei set di dati](../assets/api/export-datasets/export-datasets-api-workflow-retrieve-datasets.png)
+![Diagramma che mostra il passaggio 1 nel flusso di lavoro per l&#39;esportazione dei set di dati](../assets/api/export-datasets/export-datasets-api-workflow-retrieve-datasets.png)
 
 Per recuperare un elenco di set di dati idonei per l’attivazione, inizia effettuando una chiamata API all’endpoint seguente.
 
@@ -340,7 +340,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 --header 'Authorization: Bearer {ACCESS_TOKEN}'
 ```
 
-Tieni presente che per recuperare i set di dati idonei, [!DNL connection spec] L’ID utilizzato nell’URL della richiesta deve essere l’ID della specifica di connessione all’origine del data lake, `23598e46-f560-407b-88d5-ea6207e49db0`, e i due parametri di query `outputField=datasets` e `outputType=activationDatasets` deve essere specificato. Tutti gli altri parametri di query sono quelli standard supportati dal [API Catalog Service](https://developer.adobe.com/experience-platform-apis/references/catalog/).
+Per recuperare i set di dati idonei, l&#39;ID [!DNL connection spec] utilizzato nell&#39;URL della richiesta deve essere l&#39;ID della specifica di connessione all&#39;origine del data lake, `23598e46-f560-407b-88d5-ea6207e49db0`, e devono essere specificati i due parametri di query `outputField=datasets` e `outputType=activationDatasets`. Tutti gli altri parametri di query sono quelli standard supportati dall&#39;[API Catalog Service](https://developer.adobe.com/experience-platform-apis/references/catalog/).
 
 +++
 
@@ -427,11 +427,11 @@ Tieni presente che per recuperare i set di dati idonei, [!DNL connection spec] L
 
 Una risposta corretta contiene un elenco di set di dati idonei per l’attivazione. Questi set di dati possono essere utilizzati durante la costruzione della connessione di origine nel passaggio successivo.
 
-Per informazioni sui vari parametri di risposta per ciascun set di dati restituito, consulta [Documentazione per gli sviluppatori API per i set di dati](https://developer.adobe.com/experience-platform-apis/references/catalog/#tag/Datasets/operation/listDatasets).
+Per informazioni sui vari parametri di risposta per ogni set di dati restituito, consulta la [documentazione per gli sviluppatori API dei set di dati](https://developer.adobe.com/experience-platform-apis/references/catalog/#tag/Datasets/operation/listDatasets).
 
 ## Creare una connessione sorgente {#create-source-connection}
 
-![Diagramma che mostra il passaggio 2 nel flusso di lavoro dell’esportazione dei set di dati](../assets/api/export-datasets/export-datasets-api-workflow-create-source-connection.png)
+![Diagramma che mostra il passaggio 2 nel flusso di lavoro per l&#39;esportazione dei set di dati](../assets/api/export-datasets/export-datasets-api-workflow-create-source-connection.png)
 
 Dopo aver recuperato l’elenco dei set di dati da esportare, puoi creare una connessione di origine utilizzando tali ID.
 
@@ -488,26 +488,26 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!ENDSHADEBOX]
 
-In caso di esito positivo, la risposta restituisce l’ID (`id`) della connessione sorgente appena creata e un `etag`. Prendi nota dell’ID della connessione sorgente in quanto sarà necessario in un secondo momento durante la creazione del flusso di dati.
+In caso di esito positivo, la risposta restituisce l&#39;ID (`id`) della connessione di origine appena creata e un `etag`. Prendi nota dell’ID della connessione sorgente in quanto sarà necessario in un secondo momento durante la creazione del flusso di dati.
 
 Ricorda inoltre che:
 
-* La connessione di origine creata in questo passaggio deve essere collegata a un flusso di dati affinché i relativi set di dati possano essere attivati in una destinazione. Consulta la [creare un flusso di dati](#create-dataflow) per informazioni su come collegare una connessione sorgente a un flusso di dati.
+* La connessione di origine creata in questo passaggio deve essere collegata a un flusso di dati affinché i relativi set di dati possano essere attivati in una destinazione. Consulta la sezione [creare un flusso di dati](#create-dataflow) per informazioni su come collegare una connessione di origine a un flusso di dati.
 * Gli ID dei set di dati di una connessione di origine non possono essere modificati dopo la creazione. Se devi aggiungere o rimuovere set di dati da una connessione di origine, devi creare una nuova connessione di origine e collegare l’ID della nuova connessione di origine al flusso di dati.
 
 ## Creare una connessione di base (di destinazione) {#create-base-connection}
 
-![Diagramma che mostra il passaggio 3 nel flusso di lavoro dell’esportazione dei set di dati](../assets/api/export-datasets/export-datasets-api-workflow-create-base-connection.png)
+![Diagramma che mostra il passaggio 3 nel flusso di lavoro per l&#39;esportazione dei set di dati](../assets/api/export-datasets/export-datasets-api-workflow-create-base-connection.png)
 
-Una connessione di base memorizza in modo sicuro le credenziali nella destinazione. A seconda del tipo di destinazione, le credenziali necessarie per l’autenticazione a fronte di tale destinazione possono variare. Per trovare questi parametri di autenticazione, recupera prima [!DNL connection spec] per la destinazione desiderata come descritto nella sezione [Raccogli le specifiche di connessione e le specifiche di flusso](#gather-connection-spec-flow-spec) e poi guardate la `authSpec` della risposta. Fai riferimento alle schede seguenti per `authSpec` di tutte le destinazioni supportate.
+Una connessione di base memorizza in modo sicuro le credenziali nella destinazione. A seconda del tipo di destinazione, le credenziali necessarie per l’autenticazione a fronte di tale destinazione possono variare. Per trovare questi parametri di autenticazione, recupera [!DNL connection spec] per la destinazione desiderata come descritto nella sezione [Raccogli le specifiche di connessione e le specifiche di flusso](#gather-connection-spec-flow-spec), quindi controlla `authSpec` della risposta. Fai riferimento alle schede seguenti per le proprietà `authSpec` di tutte le destinazioni supportate.
 
 >[!BEGINTABS]
 
 >[!TAB Amazon S3]
 
-+++[!DNL Amazon S3] - [!DNL Connection spec] mostra [!DNL auth spec]
++++[!DNL Amazon S3] - [!DNL Connection spec] visualizzazione di [!DNL auth spec]
 
-Prendi nota della riga evidenziata con commenti in linea nella [!DNL connection spec] L’esempio seguente, che fornisce informazioni aggiuntive su dove trovare i parametri di autenticazione nella sezione [!DNL connection spec].
+Annotare la riga evidenziata con i commenti in linea nell&#39;esempio [!DNL connection spec] seguente, che forniscono informazioni aggiuntive su dove trovare i parametri di autenticazione in [!DNL connection spec].
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -552,9 +552,9 @@ Prendi nota della riga evidenziata con commenti in linea nella [!DNL connection 
 
 >[!TAB Archiviazione BLOB di Azure]
 
-+++[!DNL Azure Blob Storage] - [!DNL Connection spec] mostra [!DNL auth spec]
++++[!DNL Azure Blob Storage] - [!DNL Connection spec] visualizzazione di [!DNL auth spec]
 
-Prendi nota della riga evidenziata con commenti in linea nella [!DNL connection spec] L’esempio seguente, che fornisce informazioni aggiuntive su dove trovare i parametri di autenticazione nella sezione [!DNL connection spec].
+Annotare la riga evidenziata con i commenti in linea nell&#39;esempio [!DNL connection spec] seguente, che forniscono informazioni aggiuntive su dove trovare i parametri di autenticazione in [!DNL connection spec].
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -593,9 +593,9 @@ Prendi nota della riga evidenziata con commenti in linea nella [!DNL connection 
 
 >[!TAB Azure Data Lake Gen 2 (ADLS Gen2)]
 
-+++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection spec] mostra [!DNL auth spec]
++++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection spec] visualizzazione di [!DNL auth spec]
 
-Prendi nota della riga evidenziata con commenti in linea nella [!DNL connection spec] L’esempio seguente, che fornisce informazioni aggiuntive su dove trovare i parametri di autenticazione nella sezione [!DNL connection spec].
+Annotare la riga evidenziata con i commenti in linea nell&#39;esempio [!DNL connection spec] seguente, che forniscono informazioni aggiuntive su dove trovare i parametri di autenticazione in [!DNL connection spec].
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -647,13 +647,13 @@ Prendi nota della riga evidenziata con commenti in linea nella [!DNL connection 
 +++
 
 
->[!TAB Data Landing Zone (DLZ)]
+>[!TAB Zona di destinazione dati(DLZ)]
 
-+++[!DNL Data Landing Zone(DLZ)] - [!DNL Connection spec] mostra [!DNL auth spec]
++++[!DNL Data Landing Zone(DLZ)] - [!DNL Connection spec] visualizzazione di [!DNL auth spec]
 
 >[!NOTE]
 >
->La destinazione della Data Landing Zone non richiede un’ [!DNL auth spec].
+>La destinazione della zona di destinazione dati non richiede [!DNL auth spec].
 
 ```json
 {
@@ -669,11 +669,11 @@ Prendi nota della riga evidenziata con commenti in linea nella [!DNL connection 
 
 +++
 
->[!TAB Archiviazione cloud Google]
+>[!TAB Google Cloud Storage]
 
-+++[!DNL Google Cloud Storage] - [!DNL Connection spec] mostra [!DNL auth spec]
++++[!DNL Google Cloud Storage] - [!DNL Connection spec] visualizzazione di [!DNL auth spec]
 
-Prendi nota della riga evidenziata con commenti in linea nella [!DNL connection spec] L’esempio seguente, che fornisce informazioni aggiuntive su dove trovare i parametri di autenticazione nella sezione [!DNL connection spec].
+Annotare la riga evidenziata con i commenti in linea nell&#39;esempio [!DNL connection spec] seguente, che forniscono informazioni aggiuntive su dove trovare i parametri di autenticazione in [!DNL connection spec].
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -716,13 +716,13 @@ Prendi nota della riga evidenziata con commenti in linea nella [!DNL connection 
 
 >[!TAB SFTP]
 
-+++SFTP - [!DNL Connection spec] mostra [!DNL auth spec]
++++SFTP - [!DNL Connection spec] visualizzazione di [!DNL auth spec]
 
 >[!NOTE]
 >
->La destinazione SFTP contiene due elementi separati nel [!DNL auth spec], in quanto supporta sia l’autenticazione tramite password che tramite chiave SSH.
+>La destinazione SFTP contiene due elementi separati in [!DNL auth spec], in quanto supporta sia l&#39;autenticazione tramite password che tramite chiave SSH.
 
-Prendi nota della riga evidenziata con commenti in linea nella [!DNL connection spec] L’esempio seguente, che fornisce informazioni aggiuntive su dove trovare i parametri di autenticazione nella sezione [!DNL connection spec].
+Annotare la riga evidenziata con i commenti in linea nell&#39;esempio [!DNL connection spec] seguente, che forniscono informazioni aggiuntive su dove trovare i parametri di autenticazione in [!DNL connection spec].
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -806,7 +806,7 @@ Prendi nota della riga evidenziata con commenti in linea nella [!DNL connection 
 
 >[!ENDTABS]
 
-Utilizzando le proprietà specificate nella specifica di autenticazione (ad es. `authSpec` dalla risposta) puoi creare una connessione di base con le credenziali richieste, specifiche per ciascun tipo di destinazione, come illustrato negli esempi seguenti:
+Utilizzando le proprietà specificate nella specifica di autenticazione (ovvero `authSpec` dalla risposta) è possibile creare una connessione di base con le credenziali richieste, specifiche per ogni tipo di destinazione, come illustrato negli esempi seguenti:
 
 >[!BEGINTABS]
 
@@ -818,7 +818,7 @@ Utilizzando le proprietà specificate nella specifica di autenticazione (ad es. 
 
 >[!TIP]
 >
->Per informazioni su come ottenere le credenziali di autenticazione richieste, fare riferimento a [autentica nella destinazione](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) sezione della pagina della documentazione di destinazione di Amazon S3.
+>Per informazioni su come ottenere le credenziali di autenticazione richieste, consulta la sezione [autentica nella destinazione](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) della pagina di documentazione della destinazione Amazon S3.
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
 
@@ -850,7 +850,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Risposta**
 
-+++[!DNL Amazon S3] Risposta di connessione di base
++++[!DNL Amazon S3] risposta connessione di base
 
 ```json
 {
@@ -869,7 +869,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Per informazioni su come ottenere le credenziali di autenticazione richieste, fare riferimento a [autentica nella destinazione](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) sezione della pagina della documentazione di destinazione dell’archiviazione BLOB di Azure.
+>Per informazioni su come ottenere le credenziali di autenticazione richieste, consulta la sezione [autentica nella destinazione](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) della pagina della documentazione della destinazione di archiviazione BLOB di Azure.
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
 
@@ -900,7 +900,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Risposta**
 
-+++[!DNL Azure Blob Storage] - Risposta di connessione di base
++++[!DNL Azure Blob Storage] - Risposta connessione di base
 
 ```json
 {
@@ -919,7 +919,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Per informazioni su come ottenere le credenziali di autenticazione richieste, fare riferimento a [autentica nella destinazione](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) sezione della pagina della documentazione di destinazione di Azure Data Lake Gen 2 (ADLS Gen2).
+>Per informazioni su come ottenere le credenziali di autenticazione richieste, fare riferimento alla sezione [autentica nella destinazione](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) della pagina della documentazione di destinazione di Azure Data Lake Gen 2(ADLS Gen2).
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
 
@@ -953,7 +953,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Risposta**
 
-+++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - Risposta di connessione di base
++++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - Risposta connessione di base
 
 ```json
 {
@@ -964,7 +964,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Data Landing Zone (DLZ)]
+>[!TAB Zona di destinazione dati(DLZ)]
 
 **Richiesta**
 
@@ -972,7 +972,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Non sono richieste credenziali di autenticazione per la destinazione Data Landing Zone. Per ulteriori informazioni, consulta [autentica nella destinazione](/help/destinations/catalog/cloud-storage/data-landing-zone.md#authenticate) sezione della pagina di documentazione della destinazione Data Landing Zone.
+>Non sono richieste credenziali di autenticazione per la destinazione Data Landing Zone. Per ulteriori informazioni, consulta la sezione [autentica nella destinazione](/help/destinations/catalog/cloud-storage/data-landing-zone.md#authenticate) della pagina di documentazione della destinazione Data Landing Zone.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -991,7 +991,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Risposta**
 
-+++[!DNL Data Landing Zone] - Risposta di connessione di base
++++[!DNL Data Landing Zone] - Risposta connessione di base
 
 ```json
 {
@@ -1002,7 +1002,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Archiviazione cloud Google]
+>[!TAB Google Cloud Storage]
 
 **Richiesta**
 
@@ -1010,7 +1010,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Per informazioni su come ottenere le credenziali di autenticazione richieste, fare riferimento a [autentica nella destinazione](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#authenticate) sezione della pagina della documentazione di destinazione di Google Cloud Storage.
+>Per informazioni su come ottenere le credenziali di autenticazione richieste, consulta la sezione [autentica nella destinazione](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#authenticate) della pagina della documentazione di destinazione di Google Cloud Storage.
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
 
@@ -1042,7 +1042,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Risposta**
 
-+++[!DNL Google Cloud Storage] - Risposta di connessione di base
++++[!DNL Google Cloud Storage] - Risposta connessione di base
 
 ```json
 {
@@ -1061,7 +1061,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Per informazioni su come ottenere le credenziali di autenticazione richieste, fare riferimento a [autentica nella destinazione](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) sezione della pagina della documentazione della destinazione SFTP.
+>Per informazioni su come ottenere le credenziali di autenticazione richieste, consulta la sezione [autentica nella destinazione](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) della pagina della documentazione della destinazione SFTP.
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
 
@@ -1096,7 +1096,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Per informazioni su come ottenere le credenziali di autenticazione richieste, fare riferimento a [autentica nella destinazione](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) sezione della pagina della documentazione della destinazione SFTP.
+>Per informazioni su come ottenere le credenziali di autenticazione richieste, consulta la sezione [autentica nella destinazione](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) della pagina della documentazione della destinazione SFTP.
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
 
@@ -1146,13 +1146,13 @@ Prendi nota dell’ID di connessione dalla risposta. Questo ID sarà richiesto n
 
 ## Creare una connessione di destinazione {#create-target-connection}
 
-![Diagramma che mostra il passaggio 4 nel flusso di lavoro dell’esportazione dei set di dati](../assets/api/export-datasets/export-datasets-api-workflow-create-target-connection.png)
+![Diagramma che mostra il passaggio 4 nel flusso di lavoro per l&#39;esportazione dei set di dati](../assets/api/export-datasets/export-datasets-api-workflow-create-target-connection.png)
 
-Successivamente, devi creare una connessione di destinazione in cui sono memorizzati i parametri di esportazione per i set di dati. I parametri di esportazione includono la posizione, il formato del file, la compressione e altri dettagli. Consulta la sezione `targetSpec` proprietà fornite nella specifica di connessione della destinazione per comprendere le proprietà supportate per ciascun tipo di destinazione. Fai riferimento alle schede seguenti per `targetSpec` di tutte le destinazioni supportate.
+Successivamente, devi creare una connessione di destinazione in cui sono memorizzati i parametri di esportazione per i set di dati. I parametri di esportazione includono la posizione, il formato del file, la compressione e altri dettagli. Per informazioni sulle proprietà supportate per ciascun tipo di destinazione, fare riferimento alle proprietà `targetSpec` fornite nella specifica di connessione della destinazione. Fai riferimento alle schede seguenti per le proprietà `targetSpec` di tutte le destinazioni supportate.
 
 >[!WARNING]
 >
->Le esportazioni in file JSON sono supportate solo in modalità compressa. Esporta in [!DNL Parquet] i file sono supportati in modalità compressa e non compressa.
+>Le esportazioni in file JSON sono supportate solo in modalità compressa. Le esportazioni in file [!DNL Parquet] sono supportate in modalità compressa e non compressa.
 
 >[!BEGINTABS]
 
@@ -1160,7 +1160,7 @@ Successivamente, devi creare una connessione di destinazione in cui sono memoriz
 
 +++[!DNL Amazon S3] - [!DNL Connection spec] visualizzazione dei parametri di connessione di destinazione
 
-Osserva le righe evidenziate con i commenti in linea nella [!DNL connection spec] l&#39;esempio seguente, che fornisce informazioni aggiuntive su dove trovare [!DNL target spec] parametri nella specifica di connessione. Puoi vedere anche nell’esempio seguente quali parametri di destinazione sono *non* applicabile alle destinazioni di esportazione dei set di dati.
+Prendere nota delle righe evidenziate con commenti in linea nell&#39;esempio [!DNL connection spec] seguente, che forniscono informazioni aggiuntive su dove trovare i parametri [!DNL target spec] nella specifica di connessione. Puoi anche vedere nell&#39;esempio seguente quali parametri di destinazione sono *not* applicabili alle destinazioni di esportazione dei set di dati.
 
 ```json {line-numbers="true" start-line="1" highlight="10,41,56"}
 {
@@ -1246,7 +1246,7 @@ Osserva le righe evidenziate con i commenti in linea nella [!DNL connection spec
 
 +++[!DNL Azure Blob Storage] - [!DNL Connection spec] visualizzazione dei parametri di connessione di destinazione
 
-Osserva le righe evidenziate con i commenti in linea nella [!DNL connection spec] l&#39;esempio seguente, che fornisce informazioni aggiuntive su dove trovare [!DNL target spec] parametri nella specifica di connessione. Puoi vedere anche nell’esempio seguente quali parametri di destinazione sono *non* applicabile alle destinazioni di esportazione dei set di dati.
+Prendere nota delle righe evidenziate con commenti in linea nell&#39;esempio [!DNL connection spec] seguente, che forniscono informazioni aggiuntive su dove trovare i parametri [!DNL target spec] nella specifica di connessione. Puoi anche vedere nell&#39;esempio seguente quali parametri di destinazione sono *not* applicabili alle destinazioni di esportazione dei set di dati.
 
 ```json {line-numbers="true" start-line="1" highlight="10,29,44"}
 {
@@ -1321,7 +1321,7 @@ Osserva le righe evidenziate con i commenti in linea nella [!DNL connection spec
 
 +++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection spec] visualizzazione dei parametri di connessione di destinazione
 
-Osserva le righe evidenziate con i commenti in linea nella [!DNL connection spec] l&#39;esempio seguente, che fornisce informazioni aggiuntive su dove trovare [!DNL target spec] parametri nella specifica di connessione. Puoi vedere anche nell’esempio seguente quali parametri di destinazione sono *non* applicabile alle destinazioni di esportazione dei set di dati.
+Prendere nota delle righe evidenziate con commenti in linea nell&#39;esempio [!DNL connection spec] seguente, che forniscono informazioni aggiuntive su dove trovare i parametri [!DNL target spec] nella specifica di connessione. Puoi anche vedere nell&#39;esempio seguente quali parametri di destinazione sono *not* applicabili alle destinazioni di esportazione dei set di dati.
 
 ```json {line-numbers="true" start-line="1" highlight="10,22,37"}
 {
@@ -1383,11 +1383,11 @@ Osserva le righe evidenziate con i commenti in linea nella [!DNL connection spec
 
 +++
 
->[!TAB Data Landing Zone (DLZ)]
+>[!TAB Zona di destinazione dati(DLZ)]
 
 +++[!DNL Data Landing Zone(DLZ)] - [!DNL Connection spec] visualizzazione dei parametri di connessione di destinazione
 
-Osserva le righe evidenziate con i commenti in linea nella [!DNL connection spec] l&#39;esempio seguente, che fornisce informazioni aggiuntive su dove trovare [!DNL target spec] parametri nella specifica di connessione. Puoi vedere anche nell’esempio seguente quali parametri di destinazione sono *non* applicabile alle destinazioni di esportazione dei set di dati.
+Prendere nota delle righe evidenziate con commenti in linea nell&#39;esempio [!DNL connection spec] seguente, che forniscono informazioni aggiuntive su dove trovare i parametri [!DNL target spec] nella specifica di connessione. Puoi anche vedere nell&#39;esempio seguente quali parametri di destinazione sono *not* applicabili alle destinazioni di esportazione dei set di dati.
 
 ```json {line-numbers="true" start-line="1" highlight="9,21,36"}
 "items": [
@@ -1448,11 +1448,11 @@ Osserva le righe evidenziate con i commenti in linea nella [!DNL connection spec
 
 +++
 
->[!TAB Archiviazione cloud Google]
+>[!TAB Google Cloud Storage]
 
 +++[!DNL Google Cloud Storage] - [!DNL Connection spec] visualizzazione dei parametri di connessione di destinazione
 
-Osserva le righe evidenziate con i commenti in linea nella [!DNL connection spec] l&#39;esempio seguente, che fornisce informazioni aggiuntive su dove trovare [!DNL target spec] parametri nella specifica di connessione. Puoi vedere anche nell’esempio seguente quali parametri di destinazione sono *non* applicabile alle destinazioni di esportazione dei set di dati.
+Prendere nota delle righe evidenziate con commenti in linea nell&#39;esempio [!DNL connection spec] seguente, che forniscono informazioni aggiuntive su dove trovare i parametri [!DNL target spec] nella specifica di connessione. Puoi anche vedere nell&#39;esempio seguente quali parametri di destinazione sono *not* applicabili alle destinazioni di esportazione dei set di dati.
 
 ```json {line-numbers="true" start-line="1" highlight="10,29,44"}
 {
@@ -1526,7 +1526,7 @@ Osserva le righe evidenziate con i commenti in linea nella [!DNL connection spec
 
 +++SFTP - [!DNL Connection spec] visualizzazione dei parametri di connessione di destinazione
 
-Osserva le righe evidenziate con i commenti in linea nella [!DNL connection spec] l&#39;esempio seguente, che fornisce informazioni aggiuntive su dove trovare [!DNL target spec] parametri nella specifica di connessione. Puoi vedere anche nell’esempio seguente quali parametri di destinazione sono *non* applicabile alle destinazioni di esportazione dei set di dati.
+Prendere nota delle righe evidenziate con commenti in linea nell&#39;esempio [!DNL connection spec] seguente, che forniscono informazioni aggiuntive su dove trovare i parametri [!DNL target spec] nella specifica di connessione. Puoi anche vedere nell&#39;esempio seguente quali parametri di destinazione sono *not* applicabili alle destinazioni di esportazione dei set di dati.
 
 ```json {line-numbers="true" start-line="1" highlight="10,22,37"}
 {
@@ -1603,8 +1603,8 @@ Utilizzando la specifica di cui sopra, puoi creare una richiesta di connessione 
 
 >[!TIP]
 >
->Per informazioni su come ottenere i parametri di destinazione richiesti, fare riferimento al [compila i dettagli della destinazione](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) sezione del [!DNL Amazon S3] pagina della documentazione di destinazione.
->Per altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
+>Per informazioni su come ottenere i parametri di destinazione richiesti, fare riferimento alla sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) della pagina di documentazione della destinazione [!DNL Amazon S3].
+>Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
 
@@ -1656,8 +1656,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Per informazioni su come ottenere i parametri di destinazione richiesti, fare riferimento al [compila i dettagli della destinazione](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) sezione del [!DNL Azure Blob Storage] pagina della documentazione di destinazione.
->Per altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
+>Per informazioni su come ottenere i parametri di destinazione richiesti, fare riferimento alla sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) della pagina di documentazione della destinazione [!DNL Azure Blob Storage].
+>Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
 
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
@@ -1710,8 +1710,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Per informazioni su come ottenere i parametri di destinazione richiesti, fare riferimento al [compila i dettagli della destinazione](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) sezione di Azure [!DNL Data Lake Gen 2(ADLS Gen2)] pagina della documentazione di destinazione.
->Per altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
+>Per informazioni su come ottenere i parametri di destinazione richiesti, fare riferimento alla sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) della pagina della documentazione di destinazione di Azure [!DNL Data Lake Gen 2(ADLS Gen2)].
+>Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
 
@@ -1754,7 +1754,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Data Landing Zone (DLZ)]
+>[!TAB Zona di destinazione dati(DLZ)]
 
 **Richiesta**
 
@@ -1762,8 +1762,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Per informazioni su come ottenere i parametri di destinazione richiesti, fare riferimento al [compila i dettagli della destinazione](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) sezione del [!DNL Data Landing Zone] pagina della documentazione di destinazione.
->Per altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
+>Per informazioni su come ottenere i parametri di destinazione richiesti, fare riferimento alla sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) della pagina di documentazione della destinazione [!DNL Data Landing Zone].
+>Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
 
@@ -1806,7 +1806,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Archiviazione cloud Google]
+>[!TAB Google Cloud Storage]
 
 **Richiesta**
 
@@ -1814,8 +1814,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Per informazioni su come ottenere i parametri di destinazione richiesti, fare riferimento al [compila i dettagli della destinazione](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) sezione del [!DNL Google Cloud Storage] pagina della documentazione di destinazione.
->Per altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
+>Per informazioni su come ottenere i parametri di destinazione richiesti, fare riferimento alla sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) della pagina di documentazione della destinazione [!DNL Google Cloud Storage].
+>Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
 
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
@@ -1868,8 +1868,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Per informazioni su come ottenere i parametri di destinazione richiesti, fare riferimento al [compila i dettagli della destinazione](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) sezione della pagina della documentazione della destinazione SFTP.
->Per altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
+>Per informazioni su come ottenere i parametri di destinazione richiesti, consulta la sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) della pagina di documentazione della destinazione SFTP.
+>Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
 
@@ -1916,9 +1916,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 Prendi nota dell’ID connessione di Target dalla risposta. Questo ID sarà necessario nel passaggio successivo quando crei il flusso di dati per esportare i set di dati.
 
-## Crea un flusso di dati {#create-dataflow}
+## Creare un flusso di dati {#create-dataflow}
 
-![Diagramma che mostra il passaggio 5 nel flusso di lavoro dell’esportazione dei set di dati](../assets/api/export-datasets/export-datasets-api-workflow-set-up-dataflow.png)
+![Diagramma che mostra il passaggio 5 nel flusso di lavoro per l&#39;esportazione dei set di dati](../assets/api/export-datasets/export-datasets-api-workflow-set-up-dataflow.png)
 
 L’ultimo passaggio nella configurazione di destinazione consiste nell’impostare un flusso di dati. Un flusso di dati unisce entità create in precedenza e fornisce inoltre opzioni per la configurazione della pianificazione di esportazione del set di dati. Per creare il flusso di dati, utilizza i payload riportati di seguito, a seconda della destinazione di archiviazione cloud desiderata, e sostituisci gli ID entità dei passaggi precedenti.
 
@@ -1928,7 +1928,7 @@ L’ultimo passaggio nella configurazione di destinazione consiste nell’impost
 
 **Richiesta**
 
-+++Crea flusso di dati del set di dati su [!DNL Amazon S3] destinazione - Richiesta
++++Crea flusso di dati del set di dati nella destinazione [!DNL Amazon S3] - Richiesta
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
 
@@ -1981,7 +1981,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Richiesta**
 
-+++Crea flusso di dati del set di dati su [!DNL Azure Blob Storage] destinazione - Richiesta
++++Crea flusso di dati del set di dati nella destinazione [!DNL Azure Blob Storage] - Richiesta
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
 
@@ -2034,7 +2034,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Richiesta**
 
-+++Crea flusso di dati del set di dati su [!DNL Azure Data Lake Gen 2(ADLS Gen2)] destinazione - Richiesta
++++Crea flusso di dati del set di dati nella destinazione [!DNL Azure Data Lake Gen 2(ADLS Gen2)] - Richiesta
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
 
@@ -2083,11 +2083,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Data Landing Zone (DLZ)]
+>[!TAB Zona di destinazione dati(DLZ)]
 
 **Richiesta**
 
-+++Crea flusso di dati del set di dati su [!DNL Data Landing Zone] destinazione - Richiesta
++++Crea flusso di dati del set di dati nella destinazione [!DNL Data Landing Zone] - Richiesta
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
 
@@ -2136,11 +2136,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Archiviazione cloud Google]
+>[!TAB Google Cloud Storage]
 
 **Richiesta**
 
-+++Crea flusso di dati del set di dati su [!DNL Google Cloud Storage] destinazione - Richiesta
++++Crea flusso di dati del set di dati nella destinazione [!DNL Google Cloud Storage] - Richiesta
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
 
@@ -2248,7 +2248,7 @@ Prendi nota dell’ID del flusso di dati dalla risposta. Questo ID sarà necessa
 
 ## Ottenere l’esecuzione del flusso di dati {#get-dataflow-runs}
 
-![Diagramma che mostra il passaggio 6 nel flusso di lavoro dell’esportazione dei set di dati](../assets/api/export-datasets/export-datasets-api-workflow-validate-dataflow.png)
+![Diagramma che mostra il passaggio 6 nel flusso di lavoro per l&#39;esportazione dei set di dati](../assets/api/export-datasets/export-datasets-api-workflow-validate-dataflow.png)
 
 Per verificare le esecuzioni di un flusso di dati, utilizza l’API Esecuzioni flusso di dati:
 
@@ -2321,11 +2321,11 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 >[!ENDSHADEBOX]
 
-Puoi trovare informazioni sulla funzione [vari parametri restituiti dal flusso di dati eseguono l’API](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns) nella documentazione di riferimento API.
+Nella documentazione di riferimento API sono disponibili informazioni sui [vari parametri restituiti dal flusso di dati esegue l&#39;API](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns).
 
 ## Verificare l’esportazione del set di dati {#verify}
 
-Durante l’esportazione dei set di dati, Experienci Platform crea un’ `.json` o `.parquet` nel percorso di archiviazione fornito. Si prevede che un nuovo file venga depositato nel percorso di archiviazione in base alla pianificazione di esportazione fornita quando [creazione di un flusso di dati](#create-dataflow).
+Durante l&#39;esportazione dei set di dati, Experience Platform crea un file `.json` o `.parquet` nel percorso di archiviazione fornito. Prevedi che un nuovo file venga depositato nel percorso di archiviazione in base alla pianificazione di esportazione fornita quando [crei un flusso di dati](#create-dataflow).
 
 In Experience Platform viene creata una struttura di cartelle nel percorso di archiviazione specificato, in cui vengono depositati i file del set di dati esportati. Per ogni esportazione viene creata una nuova cartella, seguendo il modello riportato di seguito:
 
@@ -2335,20 +2335,20 @@ Il nome di file predefinito viene generato in modo casuale e garantisce che i no
 
 ### File di set di dati di esempio {#sample-files}
 
-La presenza di questi file nel percorso di archiviazione conferma la riuscita dell’esportazione. Per comprendere come sono strutturati i file esportati, puoi scaricare un esempio [file .parquet](../assets/common/part-00000-tid-253136349007858095-a93bcf2e-d8c5-4dd6-8619-5c662e261097-672704-1-c000.parquet) o [file .json](../assets/common/part-00000-tid-4172098795867639101-0b8c5520-9999-4cff-bdf5-1f32c8c47cb9-451986-1-c000.json).
+La presenza di questi file nel percorso di archiviazione conferma la riuscita dell’esportazione. Per comprendere la struttura dei file esportati, è possibile scaricare un file [.parquet di esempio](../assets/common/part-00000-tid-253136349007858095-a93bcf2e-d8c5-4dd6-8619-5c662e261097-672704-1-c000.parquet) o [.json](../assets/common/part-00000-tid-4172098795867639101-0b8c5520-9999-4cff-bdf5-1f32c8c47cb9-451986-1-c000.json).
 
 #### File di set di dati compressi {#compressed-dataset-files}
 
-Nel passaggio a [creare una connessione di destinazione](#create-target-connection), puoi selezionare i file del set di dati esportati da comprimere.
+Nel passaggio per [creare una connessione di destinazione](#create-target-connection), puoi selezionare i file del set di dati esportati da comprimere.
 
 Quando vengono compressi, si noti la differenza di formato tra i due tipi di file:
 
-* Durante l’esportazione di file JSON compressi, il formato del file esportato è `json.gz`
-* Quando si esportano file parquet compressi, il formato di file esportato è `gz.parquet`
+* Durante l&#39;esportazione di file JSON compressi, il formato del file esportato è `json.gz`
+* Durante l&#39;esportazione di file parquet compressi, il formato del file esportato è `gz.parquet`
 
 ## Gestione degli errori API {#api-error-handling}
 
-Gli endpoint API in questa esercitazione seguono i principi generali dei messaggi di errore API di Experience Platform. Fai riferimento a [Codici di stato API](/help/landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](/help/landing/troubleshooting.md#request-header-errors) per ulteriori informazioni sull’interpretazione delle risposte di errore, consulta la guida alla risoluzione dei problemi di Platform.
+Gli endpoint API in questa esercitazione seguono i principi generali dei messaggi di errore API di Experience Platform. Per ulteriori informazioni sull&#39;interpretazione delle risposte di errore, consultare [codici di stato API](/help/landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](/help/landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
 
 ## Passaggi successivi {#next-steps}
 

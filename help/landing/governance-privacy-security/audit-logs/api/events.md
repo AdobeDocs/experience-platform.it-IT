@@ -5,21 +5,21 @@ exl-id: c365b6d8-0432-41a5-9a07-44a995f69b7d
 source-git-commit: c7887391481def872c40dd6ed1193bf562b9d0cf
 workflow-type: tm+mt
 source-wordcount: '474'
-ht-degree: 9%
+ht-degree: 2%
 
 ---
 
 # Endpoint “audit_events”
 
-I registri di audit vengono utilizzati per fornire dettagli sull’attività dell’utente per vari servizi e funzionalità. Ogni azione registrata contiene metadati che indicano il tipo di azione, la data e l’ora, l’ID e-mail dell’utente che l’ha eseguita ed eventuali attributi aggiuntivi relativi al tipo di azione. Il `/audit/events` endpoint nella [!DNL Audit Query] API consente di recuperare in modo programmatico i dati evento per l’attività dell’organizzazione in [!DNL Platform].
+I registri di audit vengono utilizzati per fornire dettagli sull’attività dell’utente per vari servizi e funzionalità. Ogni azione registrata contiene metadati che indicano il tipo di azione, la data e l’ora, l’ID e-mail dell’utente che l’ha eseguita e altri attributi relativi al tipo di azione. L&#39;endpoint `/audit/events` nell&#39;API [!DNL Audit Query] consente di recuperare in modo programmatico i dati evento per l&#39;attività dell&#39;organizzazione in [!DNL Platform].
 
 ## Introduzione
 
-L’endpoint API utilizzato in questa guida fa parte del [[!DNL Audit Query] API](https://developer.adobe.com/experience-platform-apis/references/audit-query/). Prima di continuare, controlla [guida introduttiva](./getting-started.md) per collegamenti alla documentazione correlata, una guida per la lettura delle chiamate API di esempio di questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a [!DNL Experience Platform] API.
+L&#39;endpoint API utilizzato in questa guida fa parte dell&#39;[[!DNL Audit Query] API](https://developer.adobe.com/experience-platform-apis/references/audit-query/). Prima di continuare, consulta la [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni necessarie per effettuare correttamente le chiamate a qualsiasi API [!DNL Experience Platform].
 
 ## Elencare eventi di audit
 
-Per recuperare i dati degli eventi, devi effettuare una richiesta GET al `/audit/events` endpoint, specificando gli eventi da recuperare nel payload.
+È possibile recuperare i dati degli eventi effettuando una richiesta GET all&#39;endpoint `/audit/events`, specificando gli eventi da recuperare nel payload.
 
 **Formato API**
 
@@ -27,7 +27,7 @@ Per recuperare i dati degli eventi, devi effettuare una richiesta GET al `/audit
 GET /audit/events
 ```
 
-Il [!DNL Audit Query] L’API supporta l’utilizzo di parametri di query per visualizzare e filtrare i risultati quando si elencano gli eventi.
+L&#39;API [!DNL Audit Query] supporta l&#39;utilizzo di parametri di query per la pagina e il filtro dei risultati durante l&#39;elenco degli eventi.
 
 | Parametro | Descrizione |
 | --- | --- |

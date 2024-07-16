@@ -16,13 +16,13 @@ ht-degree: 3%
 
 ## Chiamate API di esempio
 
-Le sezioni seguenti descrivono le varie chiamate API che è possibile effettuare utilizzando [!DNL Query Service] API. Ogni chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
+Le sezioni seguenti descrivono le varie chiamate API che è possibile effettuare utilizzando l&#39;API [!DNL Query Service]. Ogni chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
 
-Consulta la [Documentazione dei modelli di query dell’interfaccia utente](../ui/query-templates.md) per informazioni sulla creazione di modelli tramite l’interfaccia utente di Experienci Platform.
+Per informazioni sulla creazione di modelli tramite l&#39;interfaccia utente di Experience Platform, vedere la [documentazione dei modelli di query dell&#39;interfaccia utente](../ui/query-templates.md).
 
 ### Recuperare un elenco di modelli di query
 
-Per recuperare un elenco di tutti i modelli di query per l’organizzazione, effettua una richiesta GET al `/query-templates` endpoint.
+Per recuperare un elenco di tutti i modelli di query per l&#39;organizzazione, eseguire una richiesta GET all&#39;endpoint `/query-templates`.
 
 **Formato API**
 
@@ -35,16 +35,16 @@ GET /query-templates?{QUERY_PARAMETERS}
 | -------- | ----------- |
 | `{QUERY_PARAMETERS}` | (*Facoltativo*) Parametri aggiunti al percorso della richiesta che configurano i risultati restituiti nella risposta. È possibile includere più parametri, separati da e commerciali (`&`). I parametri disponibili sono elencati di seguito. |
 
-**Parametri di query**
+**Parametri query**
 
 Di seguito è riportato un elenco dei parametri di query disponibili per l&#39;elenco dei modelli di query. Tutti questi parametri sono facoltativi. Effettuando una chiamata a questo endpoint senza parametri, verranno recuperati tutti i modelli di query disponibili per la tua organizzazione.
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `orderby` | Specifica il campo in base al quale ordinare i risultati. I campi supportati sono `created` e `updated`. Ad esempio: `orderby=created` I risultati verranno ordinati in base alla creazione in ordine crescente. Aggiunta di un `-` prima della creazione (`orderby=-created`) ordinerà gli elementi in base a quelli creati in ordine decrescente. |
+| `orderby` | Specifica il campo in base al quale ordinare i risultati. I campi supportati sono `created` e `updated`. Ad esempio, `orderby=created` ordinerà i risultati in base alla creazione in ordine crescente. L&#39;aggiunta di un `-` prima della creazione (`orderby=-created`) ordinerà gli elementi in base alla creazione in ordine decrescente. |
 | `limit` | Specifica il limite di dimensioni della pagina per controllare il numero di risultati inclusi in una pagina. (*Valore predefinito: 20*) |
-| `start` | Specifica una marca temporale in formato ISO per ordinare i risultati. Se non viene specificata alcuna data di inizio, la chiamata API restituirà prima i modelli creati più datati, quindi continuerà a elencare i risultati più recenti.<br> Le marche temporali ISO consentono diversi livelli di granularità in data e ora. Le marche temporali ISO di base hanno il formato di: `2020-09-07` per esprimere la data del 7 settembre 2020. Un esempio più complesso sarebbe scritto come `2022-11-05T08:15:30-05:00` e corrisponde al 5 novembre 2022, 8:15:30:00, ora standard USA orientale. È possibile fornire un fuso orario con scostamento UTC ed è indicato dal suffisso &quot;Z&quot; (`2020-01-01T01:01:01Z`). Se non viene fornito alcun fuso orario, per impostazione predefinita viene impostato su zero. |
-| `property` | Filtra i risultati in base ai campi. I filtri **deve** essere HTML in escape. Le virgole vengono utilizzate per combinare più set di filtri. I campi supportati sono `name` e `userId`. L’unico operatore supportato è `==` (uguale a) Ad esempio: `name==my_template` restituirà tutti i modelli di query con il nome `my_template`. |
+| `start` | Specifica una marca temporale in formato ISO per ordinare i risultati. Se non viene specificata alcuna data di inizio, la chiamata API restituirà prima i modelli creati più datati, quindi continuerà a elencare i risultati più recenti.<br> Le marche temporali ISO consentono diversi livelli di granularità in data e ora. I timestamp ISO di base assumono il formato di: `2020-09-07` per esprimere la data 7 settembre 2020. Un esempio più complesso verrebbe scritto come `2022-11-05T08:15:30-05:00` e corrisponde al 5 novembre 2022, 8:15:30, ora standard orientale USA. È possibile fornire un fuso orario con scostamento UTC ed è indicato dal suffisso &quot;Z&quot; (`2020-01-01T01:01:01Z`). Se non viene fornito alcun fuso orario, per impostazione predefinita viene impostato su zero. |
+| `property` | Filtra i risultati in base ai campi. I filtri **devono** avere escape HTML. Le virgole vengono utilizzate per combinare più set di filtri. I campi supportati sono `name` e `userId`. L&#39;unico operatore supportato è `==` (uguale a). Ad esempio, `name==my_template` restituirà tutti i modelli di query con il nome `my_template`. |
 
 **Richiesta**
 
@@ -109,11 +109,11 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elen
 
 >[!NOTE]
 >
->Puoi utilizzare il valore di `_links.delete` a [eliminare il modello di query](#delete-a-specified-query-template).
+>È possibile utilizzare il valore di `_links.delete` per [eliminare il modello di query](#delete-a-specified-query-template).
 
 ### Creare un modello di query
 
-Per creare un modello di query, devi effettuare una richiesta POST al `/query-templates` endpoint.
+È possibile creare un modello di query effettuando una richiesta POST all&#39;endpoint `/query-templates`.
 
 **Formato API**
 
@@ -140,9 +140,9 @@ curl -X POST https://platform.adobe.io/data/foundation/query/query-templates
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `sql` | La query SQL da creare. È possibile utilizzare SQL standard o un parametro sostitutivo. Per utilizzare la sostituzione di un parametro nel codice SQL, è necessario anteporre alla chiave del parametro una `$`. Ad esempio: `$key`e forniscono i parametri utilizzati nelle coppie di valori chiave SQL come JSON nel `queryParameters` campo. I valori qui passati saranno i parametri predefiniti utilizzati nel modello. Se desideri ignorare questi parametri, devi sostituirli nella richiesta POST. |
+| `sql` | La query SQL da creare. È possibile utilizzare SQL standard o un parametro sostitutivo. Per utilizzare una sostituzione dei parametri nel codice SQL, è necessario anteporre la chiave del parametro a `$`. Ad esempio, `$key`, e forniscono i parametri utilizzati in SQL come coppie di valori chiave JSON nel campo `queryParameters`. I valori qui passati saranno i parametri predefiniti utilizzati nel modello. Se desideri ignorare questi parametri, devi sostituirli nella richiesta POST. |
 | `name` | Nome del modello di query. |
-| `queryParameters` | Associazione di valori chiave per sostituire eventuali valori con parametri nell&#39;istruzione SQL. È solo obbligatorio **se** si stanno utilizzando sostituzioni di parametri all&#39;interno dell&#39;istruzione SQL fornita. Su queste coppie chiave-valore non verrà eseguito alcun controllo del tipo di valore. |
+| `queryParameters` | Associazione di valori chiave per sostituire eventuali valori con parametri nell&#39;istruzione SQL. È necessario solo **se** si stanno utilizzando sostituzioni di parametri all&#39;interno del codice SQL fornito. Su queste coppie chiave-valore non verrà eseguito alcun controllo del tipo di valore. |
 
 **Risposta**
 
@@ -176,11 +176,11 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 202 (Accettato)
 
 >[!NOTE]
 >
->Puoi utilizzare il valore di `_links.delete` a [eliminare il modello di query](#delete-a-specified-query-template).
+>È possibile utilizzare il valore di `_links.delete` per [eliminare il modello di query](#delete-a-specified-query-template).
 
 ### Recuperare un modello di query specificato
 
-Per recuperare un modello di query specifico, effettua una richiesta GET al `/query-templates/{TEMPLATE_ID}` e fornendo l’ID del modello di query nel percorso della richiesta.
+È possibile recuperare un modello di query specifico effettuando una richiesta di GET all&#39;endpoint `/query-templates/{TEMPLATE_ID}` e fornendo l&#39;ID del modello di query nel percorso della richiesta.
 
 **Formato API**
 
@@ -190,7 +190,7 @@ GET /query-templates/{TEMPLATE_ID}
 
 | Proprietà | Descrizione |
 | -------- | ----------- | 
-| `{TEMPLATE_ID}` | Il `id` valore del modello di query da recuperare. |
+| `{TEMPLATE_ID}` | Valore `id` del modello di query che si desidera recuperare. |
 
 **Richiesta**
 
@@ -234,11 +234,11 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 
 >[!NOTE]
 >
->Puoi utilizzare il valore di `_links.delete` a [eliminare il modello di query](#delete-a-specified-query-template).
+>È possibile utilizzare il valore di `_links.delete` per [eliminare il modello di query](#delete-a-specified-query-template).
 
 ### Aggiornare un modello di query specificato
 
-Per aggiornare un modello di query specifico, devi eseguire una richiesta PUT al `/query-templates/{TEMPLATE_ID}` e fornendo l’ID del modello di query nel percorso della richiesta.
+È possibile aggiornare un modello di query specifico effettuando una richiesta PUT all&#39;endpoint `/query-templates/{TEMPLATE_ID}` e fornendo l&#39;ID del modello di query nel percorso della richiesta.
 
 **Formato API**
 
@@ -248,13 +248,13 @@ PUT /query-templates/{TEMPLATE_ID}
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{TEMPLATE_ID}` | Il `id` valore del modello di query da recuperare. |
+| `{TEMPLATE_ID}` | Valore `id` del modello di query che si desidera recuperare. |
 
 **Richiesta**
 
 >[!NOTE]
 >
->La richiesta PUT richiede la compilazione sia del campo sql che del campo name e **sovrascrivi** il contenuto corrente del modello di query.
+>La richiesta PUT richiede la compilazione sia del campo sql che del campo name e **sovrascrive** il contenuto corrente del modello di query.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
@@ -273,9 +273,9 @@ curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `sql` | La query SQL da creare. È possibile utilizzare SQL standard o un parametro sostitutivo. Per utilizzare la sostituzione di un parametro nel codice SQL, è necessario anteporre alla chiave del parametro una `$`. Ad esempio: `$key`e forniscono i parametri utilizzati nelle coppie di valori chiave SQL come JSON nel `queryParameters` campo. I valori qui passati saranno i parametri predefiniti utilizzati nel modello. Se desideri ignorare questi parametri, devi sostituirli nella richiesta POST. |
+| `sql` | La query SQL da creare. È possibile utilizzare SQL standard o un parametro sostitutivo. Per utilizzare una sostituzione dei parametri nel codice SQL, è necessario anteporre la chiave del parametro a `$`. Ad esempio, `$key`, e forniscono i parametri utilizzati in SQL come coppie di valori chiave JSON nel campo `queryParameters`. I valori qui passati saranno i parametri predefiniti utilizzati nel modello. Se desideri ignorare questi parametri, devi sostituirli nella richiesta POST. |
 | `name` | Nome del modello di query. |
-| `queryParameters` | Associazione di valori chiave per sostituire eventuali valori con parametri nell&#39;istruzione SQL. È solo obbligatorio **se** si stanno utilizzando sostituzioni di parametri all&#39;interno dell&#39;istruzione SQL fornita. Su queste coppie chiave-valore non verrà eseguito alcun controllo del tipo di valore. |
+| `queryParameters` | Associazione di valori chiave per sostituire eventuali valori con parametri nell&#39;istruzione SQL. È necessario solo **se** si stanno utilizzando sostituzioni di parametri all&#39;interno del codice SQL fornito. Su queste coppie chiave-valore non verrà eseguito alcun controllo del tipo di valore. |
 
 **Risposta**
 
@@ -310,11 +310,11 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 202 (Accepted) 
 
 >[!NOTE]
 >
->Puoi utilizzare il valore di `_links.delete` a [eliminare il modello di query](#delete-a-specified-query-template).
+>È possibile utilizzare il valore di `_links.delete` per [eliminare il modello di query](#delete-a-specified-query-template).
 
 ### Eliminare un modello di query specificato
 
-Per eliminare un modello di query specifico, devi effettuare una richiesta DELETE al `/query-templates/{TEMPLATE_ID}` e fornendo l’ID del modello di query nel percorso della richiesta.
+È possibile eliminare un modello di query specifico effettuando una richiesta DELETE a `/query-templates/{TEMPLATE_ID}` e fornendo l&#39;ID del modello di query nel percorso della richiesta.
 
 **Formato API**
 
@@ -324,7 +324,7 @@ DELETE /query-templates/{TEMPLATE_ID}
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{TEMPLATE_ID}` | Il `id` valore del modello di query da recuperare. |
+| `{TEMPLATE_ID}` | Valore `id` del modello di query che si desidera recuperare. |
 
 **Richiesta**
 

@@ -13,13 +13,13 @@ ht-degree: 0%
 
 # Scadenze degli eventi esperienza
 
-In Adobe Experience Platform, puoi configurare i tempi di scadenza per tutti gli eventi esperienza acquisiti in un set di dati abilitato per [Profilo cliente in tempo reale](./home.md). Questo ti consente di rimuovere automaticamente dall’archivio profili i dati che non sono più validi o utili per i tuoi casi d’uso.
+In Adobe Experience Platform puoi configurare i tempi di scadenza per tutti gli eventi esperienza acquisiti in un set di dati abilitato per [Profilo cliente in tempo reale](./home.md). Questo ti consente di rimuovere automaticamente dall’archivio profili i dati che non sono più validi o utili per i tuoi casi d’uso.
 
 Le scadenze degli eventi esperienza non possono essere configurate tramite l’interfaccia utente o le API di Platform. Al contrario, devi contattare il supporto per abilitare le scadenze degli eventi esperienza nei set di dati richiesti.
 
 >[!IMPORTANT]
 >
->Le scadenze degli eventi esperienza non devono essere confuse con le scadenze dei set di dati, che eliminano l’intero set di dati dopo il raggiungimento della data di scadenza. Questi vengono configurati manualmente tramite [Igiene dei dati Adobe Experience Platform](../hygiene/home.md).
+>Le scadenze degli eventi esperienza non devono essere confuse con le scadenze dei set di dati, che eliminano l’intero set di dati dopo il raggiungimento della data di scadenza. Questi sono configurati manualmente tramite [Igiene dei dati di Adobe Experience Platform](../hygiene/home.md).
 
 ## Processo di scadenza automatizzato
 
@@ -30,7 +30,7 @@ Dopo aver abilitato le scadenze degli eventi esperienza in un set di dati abilit
 
 >[!WARNING]
 >
->Una volta applicati, tutti i dati precedenti al numero di giorni assegnati dal valore di scadenza sono **eliminato definitivamente** e non possono essere ripristinati.
+>Una volta applicati, i dati precedenti al numero di giorni assegnati dal valore di scadenza sono **eliminati in modo permanente** e non possono essere ripristinati.
 
 Ad esempio, se applicassi un valore di scadenza di 30 giorni il 15 maggio, si verificherebbero i seguenti passaggi:
 
@@ -54,26 +54,26 @@ La scadenza dei dati di Experience Event e la scadenza dei dati del profilo pseu
 
 #### Granularità
 
-La scadenza dei dati di Experience Event funziona su un **set di dati** livello. Di conseguenza, ogni set di dati può avere un’impostazione di scadenza dati diversa.
+La scadenza dei dati di Experience Event funziona a un livello di **set di dati**. Di conseguenza, ogni set di dati può avere un’impostazione di scadenza dati diversa.
 
-La scadenza dei dati del profilo pseudonimo funziona su una **sandbox** livello. Di conseguenza, la scadenza dei dati influirà su tutti i profili nella sandbox.
+La scadenza dei dati del profilo pseudonimo funziona a un livello **sandbox**. Di conseguenza, la scadenza dei dati influirà su tutti i profili nella sandbox.
 
 #### Tipi di identità
 
-La scadenza dei dati dell’evento esperienza rimuove gli eventi **solo** in base alla marca temporale del record evento. Gli spazi dei nomi delle identità inclusi sono **ignorato** a scopo di scadenza.
+La scadenza dei dati dell&#39;evento esperienza rimuove gli eventi **solo** in base alla marca temporale del record evento. Gli spazi dei nomi di identità inclusi sono **ignorati** a scopo di scadenza.
 
-Scadenza dati profilo pseudonimo **solo** considera i profili con grafici di identità contenenti spazi dei nomi di identità selezionati dal cliente, ad esempio `ECID`, `AAID`, o altri tipi di cookie. Se il profilo contiene **qualsiasi** spazio dei nomi di identità aggiuntivo **non** nell’elenco selezionato del cliente, il profilo **non** essere soppressa.
+Scadenza dati profilo pseudonimo **only** considera i profili con grafici di identità contenenti spazi dei nomi di identità selezionati dal cliente, ad esempio `ECID`, `AAID` o altri tipi di cookie. Se il profilo contiene **qualsiasi** spazio dei nomi di identità aggiuntivo **not** nell&#39;elenco selezionato del cliente, il profilo **not** verrà eliminato.
 
 #### Elementi rimossi
 
-Scadenza dati evento esperienza **solo** rimuove eventi e non **non** rimuovere i dati della classe di profilo. I dati della classe profilo vengono rimossi solo quando tutti i dati vengono rimossi in **tutto** set di dati e sono **no** record della classe di profilo rimanenti per il profilo.
+La scadenza dei dati di Experience Event **only** rimuove gli eventi e **not** rimuove i dati della classe di profilo. I dati della classe profilo vengono rimossi solo quando tutti i dati vengono rimossi in **tutti** i set di dati e sono presenti **nessun** record della classe profilo rimanenti per il profilo.
 
-La scadenza dei dati del profilo pseudonimo rimuove **entrambi** record di eventi e profili. Di conseguenza, verranno rimossi anche i dati della classe di profilo.
+La scadenza dei dati del profilo pseudonimo rimuove **sia** record evento che record profilo. Di conseguenza, verranno rimossi anche i dati della classe di profilo.
 
 ### In che modo la scadenza dei dati di profilo pseudonimo può essere utilizzata insieme alla scadenza dei dati di Experience Event?
 
 La scadenza dei dati del profilo pseudonimo e la scadenza dei dati dell’evento esperienza possono essere utilizzate per completarsi a vicenda.
 
-Dovresti **sempre** imposta la scadenza dei dati Experience Event nei set di dati, in base alle tue esigenze di conservazione dei dati sui tuoi clienti noti. Una volta impostata la scadenza dei dati di Experience Event, puoi utilizzare la scadenza dei dati di profilo pseudonimo per rimuovere automaticamente i profili pseudonimi. In genere, il periodo di scadenza dei dati per i profili pseudonimi è inferiore al periodo di scadenza dei dati per gli eventi esperienza.
+Devi **sempre** impostare la scadenza dei dati Experience Event nei set di dati in base alle tue esigenze di conservazione dei dati sui tuoi clienti noti. Una volta impostata la scadenza dei dati di Experience Event, puoi utilizzare la scadenza dei dati di profilo pseudonimo per rimuovere automaticamente i profili pseudonimi. In genere, il periodo di scadenza dei dati per i profili pseudonimi è inferiore al periodo di scadenza dei dati per gli eventi esperienza.
 
 Per un caso d’uso tipico, puoi impostare la scadenza dei dati Experience Event in base ai valori dei dati utente noti e impostare la scadenza dei dati del profilo pseudonimo su una durata molto più breve per limitare l’impatto dei profili pseudonimi sulla conformità della licenza di Platform.

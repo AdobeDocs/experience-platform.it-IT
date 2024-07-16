@@ -4,7 +4,7 @@ description: Questo documento fornisce una panoramica sull’utilizzo di Query S
 exl-id: fc9dbc5c-874a-41a9-9b60-c926f3fd6e76
 source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
-source-wordcount: '899'
+source-wordcount: '909'
 ht-degree: 5%
 
 ---
@@ -23,9 +23,9 @@ Questo documento fornisce una panoramica e alcuni esempi dettagliati delle query
 
 Poiché parte di questo processo richiede la formazione di un modello di apprendimento automatico, il presente documento presuppone una conoscenza operativa di uno o più ambienti di apprendimento automatico.
 
-Questo esempio utilizza [!DNL Jupyter Notebook] come ambiente di sviluppo. Sebbene siano disponibili molte opzioni, [!DNL Jupyter Notebook] è consigliata in quanto si tratta di un&#39;applicazione web open-source con requisiti di calcolo ridotti. Può essere [scaricato dal sito ufficiale](https://jupyter.org/).
+In questo esempio viene utilizzato [!DNL Jupyter Notebook] come ambiente di sviluppo. Sebbene siano disponibili molte opzioni, [!DNL Jupyter Notebook] è consigliato in quanto si tratta di un&#39;applicazione Web open-source con requisiti di calcolo ridotti. Può essere [scaricato dal sito ufficiale](https://jupyter.org/).
 
-## Utilizzare [!DNL Query Service] per definire una soglia per l’attività bot
+## Usa [!DNL Query Service] per definire una soglia per l&#39;attività bot
 
 I due attributi utilizzati per estrarre i dati per il rilevamento di bot sono:
 
@@ -34,7 +34,7 @@ I due attributi utilizzati per estrarre i dati per il rilevamento di bot sono:
 
 >[!NOTE]
 >
->L&#39;uso di `mcid` si trova ancora nei riferimenti allo spazio dei nomi dell’ID visitatore Experience Cloud, come illustrato nell’esempio seguente.
+>L&#39;utilizzo di `mcid` è ancora presente nei riferimenti spazio dei nomi all&#39;ID visitatore Experience Cloud, come illustrato nell&#39;esempio seguente.
 
 L’istruzione SQL seguente fornisce un esempio iniziale per identificare l’attività bot. L’istruzione presuppone che, se un visitatore esegue 50 clic in un minuto, l’utente sia un bot.
 
@@ -49,7 +49,7 @@ WHERE  enduserids._experience.mcid NOT IN (SELECT enduserids._experi
                                            HAVING Count(*) > 50);  
 ```
 
-L’espressione filtra gli ECID (`mcid`) di tutti i visitatori che raggiungono la soglia ma non risolvono i picchi di traffico da altri intervalli.
+L&#39;espressione filtra gli ECID (`mcid`) di tutti i visitatori che soddisfano la soglia ma non risolve i picchi di traffico da altri intervalli.
 
 ## Migliorare il rilevamento di bot con l’apprendimento automatico
 
@@ -57,7 +57,7 @@ L’istruzione SQL iniziale può essere perfezionata per diventare una query di 
 
 L’istruzione di esempio viene espansa da un minuto con un massimo di 60 clic, per includere periodi di cinque minuti e 30 minuti con un numero di clic rispettivamente di 300 e 1800.
 
-L’istruzione di esempio raccoglie il numero massimo di clic per ogni ECID (`mcid`) per le varie durate. L’istruzione iniziale è stata estesa per includere periodi di un minuto (60 secondi), 5 minuti (300 secondi) e un’ora (1800 secondi).
+L&#39;istruzione di esempio raccoglie il numero massimo di clic per ogni ECID (`mcid`) nelle varie durate. L’istruzione iniziale è stata estesa per includere periodi di un minuto (60 secondi), 5 minuti (300 secondi) e un’ora (1800 secondi).
 
 ```sql
 SELECT table_count_1_min.mcid AS id, 
@@ -116,11 +116,11 @@ Il risultato di questa espressione potrebbe essere simile alla tabella fornita d
 
 ## Identificare nuove soglie di picco utilizzando l’apprendimento automatico
 
-Quindi, esporta il set di dati di query risultante in formato CSV e importalo in [!DNL Jupyter Notebook]. Da tale ambiente, puoi addestrare un modello di apprendimento automatico utilizzando le librerie di apprendimento automatico correnti. Per ulteriori informazioni, consulta la guida alla risoluzione dei problemi [come esportare i dati da [!DNL Query Service] in formato CSV](../troubleshooting-guide.md#export-csv)
+Esportare quindi il set di dati di query risultante in formato CSV e importarlo in [!DNL Jupyter Notebook]. Da tale ambiente, puoi addestrare un modello di apprendimento automatico utilizzando le librerie di apprendimento automatico correnti. Consulta la guida alla risoluzione dei problemi per ulteriori dettagli su [come esportare dati da [!DNL Query Service] in formato CSV](../troubleshooting-guide.md#export-csv)
 
-Le soglie di picco ad hoc inizialmente stabilite non sono basate sui dati e quindi mancano di precisione. I modelli di apprendimento automatico possono essere utilizzati per addestrare parametri come soglie. Di conseguenza, puoi aumentare l’efficienza delle query riducendo il numero di `GROUP BY` parole chiave rimuovendo le funzionalità non necessarie.
+Le soglie di picco ad hoc inizialmente stabilite non sono basate sui dati e quindi mancano di precisione. I modelli di apprendimento automatico possono essere utilizzati per addestrare parametri come soglie. Di conseguenza, è possibile aumentare l&#39;efficienza delle query riducendo il numero di `GROUP BY` parole chiave rimuovendo le funzionalità non necessarie.
 
-In questo esempio viene utilizzata la libreria di apprendimento automatico Scikit-Learn, installata per impostazione predefinita con [!DNL Jupyter Notebook]. Viene importata anche la libreria di pandas per utilizzarla qui. I seguenti comandi vengono immessi in [!DNL Jupyter Notebook].
+In questo esempio viene utilizzata la libreria di apprendimento automatico Scikit-Learn installata per impostazione predefinita con [!DNL Jupyter Notebook]. Viene importata anche la libreria di pandas per utilizzarla qui. I seguenti comandi sono immessi in [!DNL Jupyter Notebook].
 
 ```shell
 import pandas as ps
@@ -163,12 +163,12 @@ Model Accuracy: 0.99935
 
 I risultati per il modello mostrato nell&#39;esempio precedente sono accurati oltre il 99%.
 
-Poiché il classificatore dell’albero decisionale può essere addestrato utilizzando i dati provenienti da [!DNL Query Service] con una cadenza regolare e utilizzando query pianificate, puoi garantire l’integrità dei dati filtrando le attività bot con un elevato grado di precisione. Utilizzando i parametri derivati dal modello di apprendimento automatico, le query originali possono essere aggiornate con i parametri altamente precisi creati dal modello.
+Poiché il classificatore dell&#39;albero decisionale può essere addestrato utilizzando i dati di [!DNL Query Service] su una cadenza regolare utilizzando query pianificate, è possibile garantire l&#39;integrità dei dati filtrando le attività bot con un elevato grado di precisione. Utilizzando i parametri derivati dal modello di apprendimento automatico, le query originali possono essere aggiornate con i parametri altamente precisi creati dal modello.
 
 Il modello di esempio ha determinato con un elevato grado di precisione che qualsiasi visitatore con più di 130 interazioni in cinque minuti è un bot. Queste informazioni possono ora essere utilizzate per perfezionare il filtro bot per le query SQL.
 
 ## Passaggi successivi
 
-La lettura di questo documento consente di comprendere meglio come utilizzare [!DNL Query Service] e l’apprendimento automatico per determinare e filtrare l’attività bot.
+La lettura di questo documento consente di comprendere meglio come utilizzare [!DNL Query Service] e l&#39;apprendimento automatico per determinare e filtrare le attività bot.
 
-Altri documenti che dimostrano i vantaggi di [!DNL Query Service] per informazioni aziendali strategiche della tua organizzazione: [caso di utilizzo: browse abbandonato](./abandoned-browse.md) esempio.
+Altri documenti che dimostrano i vantaggi di [!DNL Query Service] per le informazioni aziendali strategiche della tua organizzazione sono l&#39;esempio di [caso d&#39;uso abbandonato](./abandoned-browse.md).

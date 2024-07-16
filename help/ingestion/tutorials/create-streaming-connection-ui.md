@@ -14,8 +14,8 @@ ht-degree: 0%
 
 # Creare una connessione in streaming tramite l’interfaccia utente
 
-Per avviare lo streaming dei dati in [!DNL Experience Platform], devi innanzitutto creare una connessione HTTP in streaming. Quando crei una connessione in streaming, devi fornire dettagli chiave come l’origine dei dati in streaming e se intendi inviare dati da un’origine attendibile (autenticata) o non attendibile (non autenticata).
+Per avviare lo streaming dei dati in [!DNL Experience Platform], è necessario innanzitutto creare una connessione HTTP in streaming. Quando crei una connessione in streaming, devi fornire dettagli chiave come l’origine dei dati in streaming e se intendi inviare dati da un’origine attendibile (autenticata) o non attendibile (non autenticata).
 
-Dopo aver registrato una connessione in streaming, avrai un URL univoco che può essere utilizzato per inviare dati a [!DNL Platform].
+Dopo aver registrato una connessione in streaming, si disporrà di un URL univoco che può essere utilizzato per inviare dati a [!DNL Platform].
 
-Per informazioni su come creare una connessione in streaming, leggi [Guida dell’interfaccia utente sorgente dell’API HTTP](../../sources/tutorials/ui/create/streaming/http.md).
+Per informazioni su come creare una connessione in streaming, leggere la [guida dell&#39;interfaccia utente di origine API HTTP](../../sources/tutorials/ui/create/streaming/http.md).

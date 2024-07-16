@@ -14,15 +14,15 @@ ht-degree: 4%
 
 # Endpoint di gestione sandbox
 
-Le sandbox in Adobe Experience Platform forniscono ambienti di sviluppo isolati che consentono di testare le funzioni, eseguire esperimenti e creare configurazioni personalizzate senza influire sull’ambiente di produzione. Il `/sandboxes` endpoint nella [!DNL Sandbox] API consente di gestire in modo programmatico le sandbox in Platform.
+Le sandbox in Adobe Experience Platform forniscono ambienti di sviluppo isolati che consentono di testare le funzioni, eseguire esperimenti e creare configurazioni personalizzate senza influire sull’ambiente di produzione. L&#39;endpoint `/sandboxes` nell&#39;API [!DNL Sandbox] consente di gestire in modo programmatico le sandbox in Platform.
 
 ## Introduzione
 
-L’endpoint API utilizzato in questa guida fa parte del [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox). Prima di continuare, controlla [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida per la lettura delle chiamate API di esempio di questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experienci Platform.
+L&#39;endpoint API utilizzato in questa guida fa parte dell&#39;[[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox). Prima di continuare, consulta la [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e per le informazioni importanti sulle intestazioni necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
 
 ## Recuperare un elenco di sandbox {#list}
 
-Per elencare tutte le sandbox appartenenti alla tua organizzazione (attive o meno), devi effettuare una richiesta GET al `/sandboxes` endpoint.
+Per elencare tutte le sandbox appartenenti alla tua organizzazione (attive o meno), devi eseguire una richiesta GET all&#39;endpoint `/sandboxes`.
 
 **Formato API**
 
@@ -32,7 +32,7 @@ GET /sandboxes?{QUERY_PARAMS}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | Parametri di query facoltativi in base ai quali filtrare i risultati. Consulta la sezione su [parametri di query](./appendix.md#query) per ulteriori informazioni. |
+| `{QUERY_PARAMS}` | Parametri di query facoltativi in base ai quali filtrare i risultati. Per ulteriori informazioni, vedere la sezione relativa ai [parametri di query](./appendix.md#query). |
 
 **Richiesta**
 
@@ -47,7 +47,7 @@ curl -X GET \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce un elenco di sandbox appartenenti alla tua organizzazione, inclusi dettagli quali `name`, `title`, `state`, e `type`.
+In caso di esito positivo, la risposta restituisce un elenco di sandbox appartenenti all&#39;organizzazione, inclusi dettagli quali `name`, `title`, `state` e `type`.
 
 ```json
 {
@@ -130,14 +130,14 @@ In caso di esito positivo, la risposta restituisce un elenco di sandbox apparten
 | --- | --- |
 | `name` | Nome della sandbox. Questa proprietà viene utilizzata a scopo di ricerca nelle chiamate API. |
 | `title` | Nome visualizzato della sandbox. |
-| `state` | Lo stato di elaborazione corrente della sandbox. Lo stato di una sandbox può essere uno dei seguenti: <br/><ul><li>`creating`: la sandbox è stata creata ma è ancora in fase di provisioning da parte del sistema.</li><li>`active`: la sandbox viene creata e attivata.</li><li>`failed`: a causa di un errore, non è stato possibile eseguire il provisioning della sandbox da parte del sistema ed è disabilitata.</li><li>`deleted`: la sandbox è stata disabilitata manualmente.</li></ul> |
-| `type` | Il tipo di sandbox. I tipi di sandbox attualmente supportati includono `development` e `production`. |
+| `state` | Lo stato di elaborazione corrente della sandbox. Lo stato di una sandbox può essere uno dei seguenti: <br/><ul><li>`creating`: la sandbox è stata creata, ma è ancora in corso il provisioning da parte del sistema.</li><li>`active`: la sandbox è stata creata ed è attiva.</li><li>`failed`: a causa di un errore, non è stato possibile eseguire il provisioning della sandbox da parte del sistema ed è disabilitato.</li><li>`deleted`: Sandbox disabilitata manualmente.</li></ul> |
+| `type` | Il tipo di sandbox. I tipi di sandbox attualmente supportati sono `development` e `production`. |
 | `isDefault` | Una proprietà booleana che indica se questa sandbox è la sandbox di produzione predefinita per l’organizzazione. |
 | `eTag` | Identificatore di una versione specifica della sandbox. Utilizzato per il controllo delle versioni e l’efficienza della memorizzazione nella cache, questo valore viene aggiornato ogni volta che viene apportata una modifica alla sandbox. |
 
 ## Cercare una sandbox {#lookup}
 
-Per cercare una singola sandbox, devi eseguire una richiesta GET che includa la `name` nel percorso della richiesta.
+Per cercare una singola sandbox, devi eseguire una richiesta GET che includa la proprietà `name` della sandbox nel percorso della richiesta.
 
 **Formato API**
 
@@ -147,7 +147,7 @@ GET /sandboxes/{SANDBOX_NAME}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{SANDBOX_NAME}` | Il `name` della sandbox che desideri cercare. |
+| `{SANDBOX_NAME}` | La proprietà `name` della sandbox da cercare. |
 
 **Richiesta**
 
@@ -163,7 +163,7 @@ curl -X GET \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce i dettagli della sandbox, compresi i relativi `name`, `title`, `state`, e `type`.
+In caso di esito positivo, la risposta restituisce i dettagli della sandbox, inclusi `name`, `title`, `state` e `type`.
 
 ```json
 {
@@ -185,8 +185,8 @@ In caso di esito positivo, la risposta restituisce i dettagli della sandbox, com
 | --- | --- |
 | `name` | Nome della sandbox. Questa proprietà viene utilizzata a scopo di ricerca nelle chiamate API. |
 | `title` | Nome visualizzato della sandbox. |
-| `state` | Lo stato di elaborazione corrente della sandbox. Lo stato di una sandbox può essere uno dei seguenti: <ul><li>**creazione**: la sandbox è stata creata ma è ancora in fase di provisioning da parte del sistema.</li><li>**attivo**: la sandbox viene creata e attivata.</li><li>**non riuscito**: a causa di un errore, non è stato possibile eseguire il provisioning della sandbox da parte del sistema ed è disabilitata.</li><li>**eliminato**: la sandbox è stata disabilitata manualmente.</li></ul> |
-| `type` | Il tipo di sandbox. I tipi di sandbox attualmente supportati includono: `development` e `production`. |
+| `state` | Lo stato di elaborazione corrente della sandbox. Lo stato di una sandbox può essere uno dei seguenti: <ul><li>**creazione**: la sandbox è stata creata, ma è ancora in fase di provisioning da parte del sistema.</li><li>**active**: la sandbox è stata creata ed è attiva.</li><li>**non riuscito**: a causa di un errore, non è stato possibile eseguire il provisioning della sandbox da parte del sistema ed è disabilitato.</li><li>**eliminato**: sandbox disabilitata manualmente.</li></ul> |
+| `type` | Il tipo di sandbox. I tipi di sandbox attualmente supportati sono: `development` e `production`. |
 | `isDefault` | Una proprietà booleana che indica se questa sandbox è la sandbox predefinita per l’organizzazione. In genere si tratta della sandbox di produzione. |
 | `eTag` | Identificatore di una versione specifica della sandbox. Utilizzato per il controllo delle versioni e l’efficienza della memorizzazione nella cache, questo valore viene aggiornato ogni volta che viene apportata una modifica alla sandbox. |
 
@@ -194,13 +194,13 @@ In caso di esito positivo, la risposta restituisce i dettagli della sandbox, com
 
 >[!NOTE]
 >
->Quando crei una nuova sandbox, devi prima aggiungerla al tuo profilo di prodotto in [Adobe Admin Console](https://adminconsole.adobe.com/) prima di iniziare a utilizzare la nuova sandbox. Consulta la documentazione su [gestione delle autorizzazioni per un profilo di prodotto](../../access-control/ui/permissions.md) per informazioni su come effettuare il provisioning di una sandbox per un profilo di prodotto.
+>Quando viene creata una nuova sandbox, devi prima aggiungere la nuova sandbox al tuo profilo di prodotto in [Adobe Admin Console](https://adminconsole.adobe.com/) prima di poter iniziare a utilizzare la nuova sandbox. Per informazioni su come eseguire il provisioning di una sandbox per un profilo di prodotto, consulta la documentazione su [gestione delle autorizzazioni per un profilo di prodotto](../../access-control/ui/permissions.md).
 
-Per creare una nuova sandbox di sviluppo o produzione, devi effettuare una richiesta POST al `/sandboxes` endpoint.
+Per creare una nuova sandbox di sviluppo o produzione, devi eseguire una richiesta POST all&#39;endpoint `/sandboxes`.
 
 ### Creare una sandbox di sviluppo
 
-Per creare una sandbox di sviluppo, devi fornire una `type` attributo con valore `development` nel payload della richiesta.
+Per creare una sandbox di sviluppo, devi fornire un attributo `type` con il valore `development` nel payload della richiesta.
 
 **Formato API**
 
@@ -234,7 +234,7 @@ curl -X POST \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce i dettagli della sandbox appena creata, mostrando che il relativo `state` è &quot;creazione&quot;.
+In caso di esito positivo, la risposta restituisce i dettagli della sandbox appena creata, mostrando che il relativo `state` è in fase di &quot;creazione&quot;.
 
 ```json
 {
@@ -248,11 +248,11 @@ In caso di esito positivo, la risposta restituisce i dettagli della sandbox appe
 
 >[!NOTE]
 >
->Il provisioning delle sandbox richiede all’incirca 30 secondi dal sistema, dopodiché `state` diventerà &quot;attivo&quot; o &quot;non riuscito&quot;.
+>Il provisioning delle sandbox richiede circa 30 secondi dal sistema, dopo di che i relativi `state` diventeranno &quot;attivi&quot; o &quot;non riusciti&quot;.
 
 ### Creare una sandbox di produzione
 
-Per creare una sandbox di produzione, devi fornire una `type` attributo con valore `production` nel payload della richiesta.
+Per creare una sandbox di produzione, devi fornire un attributo `type` con il valore di `production` nel payload della richiesta.
 
 **Formato API**
 
@@ -287,7 +287,7 @@ curl -X POST \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce i dettagli della sandbox appena creata, mostrando che il relativo `state` è &quot;creazione&quot;.
+In caso di esito positivo, la risposta restituisce i dettagli della sandbox appena creata, mostrando che il relativo `state` è in fase di &quot;creazione&quot;.
 
 ```json
 {
@@ -301,15 +301,15 @@ In caso di esito positivo, la risposta restituisce i dettagli della sandbox appe
 
 >[!NOTE]
 >
->Il provisioning delle sandbox richiede all’incirca 30 secondi dal sistema, dopodiché `state` diventerà &quot;attivo&quot; o &quot;non riuscito&quot;.
+>Il provisioning delle sandbox richiede circa 30 secondi dal sistema, dopo di che i relativi `state` diventeranno &quot;attivi&quot; o &quot;non riusciti&quot;.
 
 ## Aggiornare una sandbox {#put}
 
-Per aggiornare uno o più campi in una sandbox, devi eseguire una richiesta PATCH che includa i `name` nel percorso della richiesta e nella proprietà da aggiornare nel payload della richiesta.
+Per aggiornare uno o più campi in una sandbox, devi eseguire una richiesta PATCH che includa il `name` della sandbox nel percorso della richiesta e la proprietà da aggiornare nel payload della richiesta.
 
 >[!NOTE]
 >
->Attualmente solo di una sandbox `title` può essere aggiornata.
+>Attualmente è possibile aggiornare solo la proprietà `title` di una sandbox.
 
 **Formato API**
 
@@ -319,11 +319,11 @@ PATCH /sandboxes/{SANDBOX_NAME}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{SANDBOX_NAME}` | Il `name` della sandbox da aggiornare. |
+| `{SANDBOX_NAME}` | La proprietà `name` della sandbox da aggiornare. |
 
 **Richiesta**
 
-La richiesta seguente aggiorna il `title` proprietà della sandbox denominata &quot;acme&quot;.
+La richiesta seguente aggiorna la proprietà `title` della sandbox denominata &quot;acme&quot;.
 
 ```shell
 curl -X PATCH \
@@ -353,7 +353,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 (OK) con i 
 
 ## Ripristinare una sandbox {#reset}
 
-Le sandbox dispongono di una funzione di &quot;ripristino di fabbrica&quot; che elimina tutte le risorse non predefinite da una sandbox. Per reimpostare una sandbox, effettua una richiesta PUT che include i `name` nel percorso della richiesta.
+Le sandbox dispongono di una funzione di &quot;ripristino di fabbrica&quot; che elimina tutte le risorse non predefinite da una sandbox. Per reimpostare una sandbox, devi eseguire una richiesta PUT che includa nel percorso della richiesta il valore `name` della sandbox.
 
 **Formato API**
 
@@ -363,8 +363,8 @@ PUT /sandboxes/{SANDBOX_NAME}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{SANDBOX_NAME}` | Il `name` della sandbox da reimpostare. |
-| `validationOnly` | Un parametro opzionale che consente di eseguire un controllo pre-volo sull’operazione di ripristino della sandbox senza effettuare la richiesta effettiva. Imposta questo parametro su `validationOnly=true` per verificare se la sandbox che stai per ripristinare contiene dati di condivisione di Adobe Analytics, Adobe Audience Manager o segmenti. |
+| `{SANDBOX_NAME}` | La proprietà `name` della sandbox da reimpostare. |
+| `validationOnly` | Un parametro opzionale che consente di eseguire un controllo pre-volo sull’operazione di ripristino della sandbox senza effettuare la richiesta effettiva. Imposta questo parametro su `validationOnly=true` per verificare se la sandbox che stai per reimpostare contiene dati di condivisione di segmenti, Adobe Analytics o Adobe Audience Manager. |
 
 **Richiesta**
 
@@ -392,7 +392,7 @@ curl -X PUT \
 >
 >Una volta reimpostata la sandbox, il provisioning da parte del sistema richiede circa 30 secondi.
 
-In caso di esito positivo, la risposta restituisce i dettagli della sandbox aggiornata, mostrando che il relativo `state` è &quot;resetting&quot; (ripristino).
+In caso di esito positivo, la risposta restituisce i dettagli della sandbox aggiornata, mostrando che il relativo `state` è &quot;resettato&quot;.
 
 ```json
 {
@@ -405,7 +405,7 @@ In caso di esito positivo, la risposta restituisce i dettagli della sandbox aggi
 }
 ```
 
-La sandbox di produzione predefinita e tutte le sandbox di produzione create dall’utente non possono essere reimpostate se il grafico delle identità ospitato al suo interno è utilizzato anche da Adobe Analytics per [Analisi multidispositivo (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=it) o se il grafo delle identità ospitato al suo interno è utilizzato anche da Adobe Audience Manager per [Destinazioni basate su persone (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=it) funzionalità.
+La sandbox di produzione predefinita e tutte le sandbox di produzione create dall&#39;utente non possono essere reimpostate se il grafo delle identità ospitato al suo interno è utilizzato anche da Adobe Analytics per la funzione [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=it) oppure se il grafo delle identità ospitato al suo interno è utilizzato anche da Adobe Audience Manager per la funzione [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=it).
 
 Di seguito è riportato un elenco di possibili eccezioni che potrebbero impedire la reimpostazione di una sandbox:
 
@@ -432,7 +432,7 @@ Di seguito è riportato un elenco di possibili eccezioni che potrebbero impedire
 }
 ```
 
-Puoi procedere con il ripristino di una sandbox di produzione utilizzata per la condivisione bidirezionale dei segmenti con [!DNL Audience Manager] o [!DNL Audience Core Service] aggiungendo il `ignoreWarnings` parametro della richiesta.
+È possibile procedere alla reimpostazione di una sandbox di produzione utilizzata per la condivisione bidirezionale dei segmenti con [!DNL Audience Manager] o [!DNL Audience Core Service] aggiungendo il parametro `ignoreWarnings` alla richiesta.
 
 **Formato API**
 
@@ -442,8 +442,8 @@ PUT /sandboxes/{SANDBOX_NAME}?ignoreWarnings=true
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{SANDBOX_NAME}` | Il `name` della sandbox da reimpostare. |
-| `ignoreWarnings` | Un parametro opzionale che consente di saltare il controllo di convalida e forzare il ripristino di una sandbox di produzione utilizzata per la condivisione bidirezionale dei segmenti con [!DNL Audience Manager] o [!DNL Audience Core Service]. Questo parametro non può essere applicato a una sandbox di produzione predefinita. |
+| `{SANDBOX_NAME}` | La proprietà `name` della sandbox da reimpostare. |
+| `ignoreWarnings` | Parametro facoltativo che consente di ignorare il controllo di convalida e forzare la reimpostazione di una sandbox di produzione utilizzata per la condivisione bidirezionale dei segmenti con [!DNL Audience Manager] o [!DNL Audience Core Service]. Questo parametro non può essere applicato a una sandbox di produzione predefinita. |
 
 **Richiesta**
 
@@ -463,7 +463,7 @@ curl -X PUT \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce i dettagli della sandbox aggiornata, mostrando che il relativo `state` è &quot;resetting&quot; (ripristino).
+In caso di esito positivo, la risposta restituisce i dettagli della sandbox aggiornata, mostrando che il relativo `state` è &quot;resettato&quot;.
 
 ```json
 {
@@ -482,11 +482,11 @@ In caso di esito positivo, la risposta restituisce i dettagli della sandbox aggi
 >
 >Non è possibile eliminare la sandbox di produzione predefinita.
 
-Per eliminare una sandbox, devi eseguire una richiesta DELETE che includa la `name` nel percorso della richiesta.
+Per eliminare una sandbox, devi eseguire una richiesta DELETE che includa nel percorso della richiesta il valore `name` della sandbox.
 
 >[!NOTE]
 >
->Con questa chiamata API vengono aggiornati i `status` su &quot;deleted&quot; e la disattiva. Le richieste GET possono comunque recuperare i dettagli della sandbox anche dopo la sua eliminazione.
+>Con questa chiamata API, la proprietà `status` della sandbox viene aggiornata a &quot;eliminata&quot; e disattivata. Le richieste GET possono comunque recuperare i dettagli della sandbox anche dopo la sua eliminazione.
 
 **Formato API**
 
@@ -496,9 +496,9 @@ DELETE /sandboxes/{SANDBOX_NAME}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{SANDBOX_NAME}` | Il `name` della sandbox da eliminare. |
-| `validationOnly` | Parametro facoltativo che consente di eseguire un controllo preliminare sull’operazione di eliminazione sandbox senza effettuare la richiesta effettiva. Imposta questo parametro su `validationOnly=true` per verificare se la sandbox che stai per ripristinare contiene dati di condivisione di Adobe Analytics, Adobe Audience Manager o segmenti. |
-| `ignoreWarnings` | Un parametro opzionale che consente di saltare il controllo di convalida e di forzare l’eliminazione di una sandbox di produzione creata dall’utente e utilizzata per la condivisione bidirezionale dei segmenti con [!DNL Audience Manager] o [!DNL Audience Core Service]. Questo parametro non può essere applicato a una sandbox di produzione predefinita. |
+| `{SANDBOX_NAME}` | `name` della sandbox da eliminare. |
+| `validationOnly` | Parametro facoltativo che consente di eseguire un controllo preliminare sull’operazione di eliminazione sandbox senza effettuare la richiesta effettiva. Imposta questo parametro su `validationOnly=true` per verificare se la sandbox che stai per reimpostare contiene dati di condivisione di segmenti, Adobe Analytics o Adobe Audience Manager. |
+| `ignoreWarnings` | Parametro facoltativo che consente di ignorare il controllo di convalida e forzare l&#39;eliminazione di una sandbox di produzione creata dall&#39;utente e utilizzata per la condivisione bidirezionale dei segmenti con [!DNL Audience Manager] o [!DNL Audience Core Service]. Questo parametro non può essere applicato a una sandbox di produzione predefinita. |
 
 **Richiesta**
 
@@ -514,7 +514,7 @@ curl -X DELETE \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce i dettagli aggiornati della sandbox, mostrando che il relativo `state` è &quot;cancellato&quot;.
+In caso di esito positivo, la risposta restituisce i dettagli aggiornati della sandbox, mostrando che il relativo `state` è &quot;eliminato&quot;.
 
 ```json
 {

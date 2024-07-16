@@ -10,20 +10,20 @@ ht-degree: 1%
 
 ---
 
-# Guardrail per [!DNL Identity Service] dati
+# Guardrail per dati [!DNL Identity Service]
 
-Questo documento fornisce informazioni sui limiti di utilizzo e di tariffa per [!DNL Identity Service] dati per ottimizzare l’utilizzo del grafo delle identità. Durante l’esame dei seguenti guardrail, si presume che i dati siano stati modellati correttamente. In caso di domande su come modellare i dati, contatta il rappresentante del servizio clienti.
+In questo documento vengono fornite informazioni sui limiti di utilizzo e di frequenza per i dati di [!DNL Identity Service] per ottimizzare l&#39;utilizzo del grafo delle identità. Durante l’esame dei seguenti guardrail, si presume che i dati siano stati modellati correttamente. In caso di domande su come modellare i dati, contatta il rappresentante del servizio clienti.
 
 >[!IMPORTANT]
 >
->Controllare i diritti di licenza nell&#39;ordine di vendita e i corrispondenti [Descrizione del prodotto](https://helpx.adobe.com/it/legal/product-descriptions.html) sui limiti di utilizzo effettivi oltre a questa pagina di guardrail.
+>Controlla i diritti di licenza nell&#39;ordine di vendita e la corrispondente [descrizione del prodotto](https://helpx.adobe.com/it/legal/product-descriptions.html) sui limiti di utilizzo effettivi, oltre a questa pagina di guardrail.
 
 ## Introduzione
 
 I seguenti servizi di Experience Platform sono coinvolti nella modellazione dei dati di identità:
 
-* [Identità](home.md): collega le identità da diverse origini dati durante l’acquisizione in Platform.
-* [[!DNL Real-Time Customer Profile]](../profile/home.md): crea profili di consumatori unificati utilizzando dati provenienti da più origini.
+* [Identità](home.md): identità Bridge da diverse origini dati acquisite in Platform.
+* [[!DNL Real-Time Customer Profile]](../profile/home.md): creare profili consumer unificati utilizzando dati provenienti da più origini.
 
 ## Limiti del modello dati
 
@@ -35,7 +35,7 @@ La tabella seguente illustra i limiti statici applicati ai dati di identità.
 
 | Guardrail | Limite | Note |
 | --- | --- | --- |
-| Numero di identità in un grafico | 50 | Quando un grafico con 50 identità collegate viene aggiornato, Identity Service applica un meccanismo &quot;first in first out&quot; ed elimina l’identità meno recente per fare spazio all’identità più recente per questo grafico (**Nota**: Real-Time Customer Profile non viene modificato). L’eliminazione si basa sul tipo di identità e sulla marca temporale. Il limite viene applicato a livello di sandbox. Per ulteriori informazioni, consulta la sezione su [informazioni sulla logica di eliminazione](#deletion-logic). |
+| Numero di identità in un grafico | 50 | Quando viene aggiornato un grafico con 50 identità collegate, Identity Service applica un meccanismo &quot;first in first out&quot; ed elimina l&#39;identità meno recente per fare spazio all&#39;identità più recente per questo grafico (**Nota**: Real-Time Customer Profile non è interessato). L’eliminazione si basa sul tipo di identità e sulla marca temporale. Il limite viene applicato a livello di sandbox. Per ulteriori informazioni, leggere la sezione relativa a [informazioni sulla logica di eliminazione](#deletion-logic). |
 | Numero di collegamenti a un’identità per un’acquisizione batch singola | 50 | Un singolo batch può contenere identità anomale che causano unioni di grafici indesiderate. Per evitare questo problema, il servizio Identity non acquisisce le identità già collegate a 50 o più identità. |
 | Numero di identità in un record XDM | 20 | Il numero minimo di record XDM richiesti è due. |
 | Numero di spazi dei nomi personalizzati | Nessuna | Non esistono limiti al numero di spazi dei nomi personalizzati che è possibile creare. |
@@ -56,7 +56,7 @@ La tabella seguente illustra le regole esistenti da seguire per garantire la cor
 
 ### Acquisizione dello spazio dei nomi dell’identità
 
-A partire dal 31 marzo 2023, il servizio Identity bloccherà l’acquisizione di Adobe Analytics ID (AAID) per i nuovi clienti. Questa identità viene generalmente acquisita tramite [Origine Adobe Analytics](../sources/connectors/adobe-applications/analytics.md) e [Origine Adobe Audience Manager](../sources//connectors/adobe-applications/audience-manager.md) ed è ridondante perché l’ECID rappresenta lo stesso browser web. Se desideri modificare questa configurazione predefinita, contatta il team del tuo account di Adobe.
+A partire dal 31 marzo 2023, il servizio Identity bloccherà l’acquisizione di Adobe Analytics ID (AAID) per i nuovi clienti. Questa identità viene generalmente acquisita tramite l&#39;[origine Adobe Analytics](../sources/connectors/adobe-applications/analytics.md) e l&#39;[origine Adobe Audience Manager](../sources//connectors/adobe-applications/audience-manager.md) ed è ridondante perché l&#39;ECID rappresenta lo stesso browser Web. Se desideri modificare questa configurazione predefinita, contatta il team del tuo account di Adobe.
 
 ## Informazioni sulla logica di eliminazione quando viene aggiornato un grafico delle identità alla capacità {#deletion-logic}
 
@@ -98,14 +98,14 @@ Quando questa funzione sarà disponibile, i grafici che superano il limite di 50
 L’eliminazione avviene solo per i dati presenti nel servizio Identity e non per il profilo cliente in tempo reale.
 
 * Questo comportamento potrebbe di conseguenza creare più profili con un singolo ECID, perché l’ECID non fa più parte del grafo delle identità.
-* Per rimanere all’interno dei numeri di iscrizione al pubblico indirizzabile, si consiglia di abilitare [scadenza dati profilo pseudonimo](../profile/pseudonymous-profiles.md) per eliminare i vecchi profili.
+* Per rimanere entro i tuoi numeri di adesione al pubblico indirizzabile, ti consigliamo di abilitare [scadenza dati profilo pseudonimo](../profile/pseudonymous-profiles.md) per eliminare i vecchi profili.
 
 #### Real-Time Customer Profile e Web SDK: eliminazione dell’identità primaria
 
 Se desideri mantenere gli eventi autenticati rispetto all’ID del sistema di gestione delle relazioni con i clienti, ti consigliamo di modificare gli ID primari da ECID a CRM. Leggi i seguenti documenti per i passaggi su come implementare questa modifica:
 
-* [Configurare la mappa di identità per i tag di Experience Platform](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
-* [Dati di identità in Experienci Platform Web SDK](../web-sdk/identity/overview.md#using-identitymap)
+* [Configura la mappa delle identità per i tag di Experience Platform](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
+* [Dati di identità in Experience Platform Web SDK](../web-sdk/identity/overview.md#using-identitymap)
 
 ### Scenari di esempio
 
@@ -113,14 +113,14 @@ Se desideri mantenere gli eventi autenticati rispetto all’ID del sistema di ge
 
 *Note diagramma:*
 
-* `t` = marca temporale.
-* Il valore di una marca temporale corrisponde all’attualità di una determinata identità. Ad esempio: `t1` rappresenta la prima identità collegata (più vecchia) e `t51` rappresenterebbe l’identità collegata più recente.
+* `t` = timestamp.
+* Il valore di una marca temporale corrisponde all’attualità di una determinata identità. Ad esempio, `t1` rappresenta la prima identità collegata (la più vecchia) e `t51` rappresenta l&#39;identità collegata più recente.
 
-In questo esempio, prima che il grafico a sinistra possa essere aggiornato con una nuova identità, Identity Service elimina prima l’identità esistente con la marca temporale più vecchia. Tuttavia, poiché l’identità meno recente è un ID dispositivo, Identity Service ignora tale identità fino a quando non arriva allo spazio dei nomi con un tipo più alto nell’elenco di priorità di eliminazione, che in questo caso è `ecid-3`. Una volta rimossa l’identità meno recente con un tipo di priorità di eliminazione più elevato, il grafico viene quindi aggiornato con un nuovo collegamento, `ecid-51`.
+In questo esempio, prima che il grafico a sinistra possa essere aggiornato con una nuova identità, Identity Service elimina prima l’identità esistente con la marca temporale più vecchia. Tuttavia, poiché l’identità meno recente è un ID dispositivo, Identity Service ignora tale identità finché non arriva allo spazio dei nomi con un tipo più alto nell’elenco delle priorità di eliminazione, che in questo caso è `ecid-3`. Una volta rimossa l&#39;identità meno recente con un tipo di priorità di eliminazione superiore, il grafico viene aggiornato con un nuovo collegamento, `ecid-51`.
 
-* Nel raro caso in cui vi siano due identità con la stessa marca temporale e lo stesso tipo di identità, Identity Service ordinerà gli ID in base a [XID](./api/list-native-id.md) ed eseguirne la cancellazione.
+* Nel raro caso in cui siano presenti due identità con la stessa marca temporale e lo stesso tipo di identità, Identity Service ordinerà gli ID in base a [XID](./api/list-native-id.md) ed eseguirà l&#39;eliminazione.
 
-![Un esempio dell’identità più vecchia che viene eliminata per contenere l’identità più recente](./images/graph-limits-v3.png)
+![Esempio dell&#39;identità meno recente da eliminare per l&#39;identità più recente](./images/graph-limits-v3.png)
 
 #### Esempio 2: &quot;suddivisione del grafico&quot;
 
@@ -130,10 +130,10 @@ In questo esempio, prima che il grafico a sinistra possa essere aggiornato con u
 
 *Note diagramma:*
 
-* Il diagramma seguente presuppone che `timestamp=50`, 50 identità esistono nel grafico delle identità.
-* `(...)` indica le altre identità già collegate all’interno del grafico.
+* Il diagramma seguente presuppone che in `timestamp=50` esistano 50 identità nel grafico delle identità.
+* `(...)` indica le altre identità già collegate all&#39;interno del grafico.
 
-In questo esempio, ECID:32110 viene acquisito e collegato a un grafico di grandi dimensioni in `timestamp=51`, superando quindi il limite di 50 identità.
+In questo esempio, ECID:32110 viene acquisito e collegato a un grafico di grandi dimensioni in `timestamp=51`, superando il limite di 50 identità.
 
 ![](./images/guardrails/before-split.png)
 
@@ -159,12 +159,12 @@ In seguito all’eliminazione di ECID:35577, vengono eliminati anche i bordi che
 
 *Note diagramma:*
 
-* Il diagramma seguente presuppone che `timestamp=50`, 50 identità esistono nel grafico delle identità.
-* `(...)` indica le altre identità già collegate all’interno del grafico.
+* Il diagramma seguente presuppone che in `timestamp=50` esistano 50 identità nel grafico delle identità.
+* `(...)` indica le altre identità già collegate all&#39;interno del grafico.
 
 In virtù della logica di eliminazione, alcune identità &quot;hub&quot; possono anche essere eliminate. Queste identità hub si riferiscono a nodi collegati a diverse identità singole che altrimenti verrebbero scollegate.
 
-Nell’esempio seguente, ECID:21011 viene acquisito e collegato al grafico in `timestamp=51`, superando quindi il limite di 50 identità.
+Nell’esempio seguente, ECID:21011 viene acquisito e collegato al grafo in `timestamp=51`, superando quindi il limite di 50 identità.
 
 ![](./images/guardrails/hub-and-spoke-start.png)
 
@@ -173,7 +173,7 @@ Nell’esempio seguente, ECID:21011 viene acquisito e collegato al grafico in `t
 Di conseguenza, Identity Service elimina l’identità meno recente solo dal grafo delle identità, che in questo caso è ECID:35577. L’eliminazione di ECID:35577 comporta anche l’eliminazione dei seguenti elementi:
 
 * Il collegamento tra ID CRM: 60013 e l’ECID:35577 ora eliminato, risultante in uno scenario di suddivisione del grafico.
-* IDFA: 32110, IDFA: 02383, e le altre identità rappresentate da `(...)`. Queste identità vengono eliminate perché singolarmente non sono collegate ad altre identità e pertanto non possono essere rappresentate in un grafico.
+* IDFA: 32110, IDFA: 02383 e le identità rimanenti rappresentate da `(...)`. Queste identità vengono eliminate perché singolarmente non sono collegate ad altre identità e pertanto non possono essere rappresentate in un grafico.
 
 ![](./images/guardrails/hub-and-spoke-process.png)
 
@@ -187,15 +187,15 @@ Infine, il processo di eliminazione produce due grafici più piccoli.
 
 ## Passaggi successivi
 
-Per ulteriori informazioni su, consulta la seguente documentazione [!DNL Identity Service]:
+Per ulteriori informazioni su [!DNL Identity Service], vedere la seguente documentazione:
 
 * [Panoramica di [!DNL Identity Service]](home.md)
 * [Visualizzatore del grafico delle identità](features/identity-graph-viewer.md)
 
-Consulta la seguente documentazione per ulteriori informazioni su altri guardrail dei servizi Experienci Platform, informazioni sulla latenza end-to-end e informazioni sulle licenze dai documenti di descrizione del prodotto Real-Time CDP:
+Consulta la seguente documentazione per ulteriori informazioni su altri guardrail dei servizi Experience Platform, informazioni sulla latenza end-to-end e informazioni sulle licenze dai documenti di descrizione del prodotto Real-Time CDP:
 
 * [Guardrail Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [Diagrammi di latenza end-to-end](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) per vari servizi di Experience Platform.
-* [Real-time Customer Data Platform (versione B2C - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Diagrammi di latenza end-to-end](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) per vari servizi Experience Platform.
+* [Real-time Customer Data Platform (Edizione B2C - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
 * [Real-time Customer Data Platform (B2P - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
 * [Real-time Customer Data Platform (B2B - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

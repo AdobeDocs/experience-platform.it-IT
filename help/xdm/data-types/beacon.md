@@ -7,21 +7,21 @@ exl-id: a3767c8d-a009-49b4-81a4-b084b6e5101a
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '233'
-ht-degree: 4%
+ht-degree: 17%
 
 ---
 
-# [!UICONTROL Beacon] tipo di dati
+# Tipo di dati [!UICONTROL Beacon]
 
-[!UICONTROL Beacon] è un tipo di dati XDM standard che descrive il dispositivo wireless che comunica informazioni di identità alle applicazioni mobili quando i dispositivi mobili rientrano nel raggio d’azione.
+[!UICONTROL Beacon] è un tipo di dati XDM standard che descrive il dispositivo wireless che comunica le informazioni di identità alle applicazioni mobili quando i dispositivi mobili rientrano nell&#39;intervallo.
 
 <img src="../images/data-types/beacon.png" width="450" /><br />
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
-| `beaconMajor` | Doppio | I valori principali identificano e distinguono un gruppo e valori interi senza segno compresi tra 1 e 65.535. |
+| `beaconMajor` | Doppio | I valori maggiori identificano e distinguono un gruppo e valori interi senza segno compresi tra 1 e 65.535. |
 | `beaconMinor` | Doppio | I valori minori identificano e distinguono un individuo e valori interi senza segno compresi tra 1 e 65.535. |
-| `proximity` | Stringa | Distanza stimata dal beacon. Consulta la [appendice](#proximity) per i valori e le definizioni accettati. |
+| `proximity` | Stringa | Distanza stimata dal beacon. Per informazioni sui valori e le definizioni accettati, vedere [appendice](#proximity). |
 | `proximityUUID` | Stringa | Un UUID (Universally Unique Identifier) di prossimità è un tipo di identificatore utilizzato per distinguere i beacon nella tua rete da tutti gli altri beacon in reti che non puoi controllare. L’UUID di prossimità è configurato in un beacon per essere trasmesso a dispositivi mobili entro il raggio di portata al fine di identificare i beacon di un’organizzazione. |
 
 {style="table-layout:auto"}
@@ -33,11 +33,11 @@ Per ulteriori dettagli sul tipo di dati, consulta l’archivio XDM pubblico:
 
 ## Appendice
 
-La sezione seguente contiene informazioni aggiuntive sulle [!UICONTROL Beacon] tipo di dati.
+La sezione seguente contiene informazioni aggiuntive sul tipo di dati [!UICONTROL Beacon].
 
 ## Valori accettati per prossimità {#proximity}
 
-La tabella seguente illustra i valori accettati per `proximity` e il significato associato:
+Nella tabella seguente vengono illustrati i valori accettati per `proximity` e i relativi significati associati:
 
 | Valore | Descrizione |
 | --- | --- |

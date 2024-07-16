@@ -13,23 +13,23 @@ ht-degree: 0%
 
 Utilizza i modelli di metadati del pubblico per creare, aggiornare o eliminare in modo programmatico i tipi di pubblico nella tua destinazione. Adobe fornisce un modello estensibile di metadati per il pubblico, che puoi configurare in base alle specifiche della tua API di marketing. Dopo aver definito, testato e inviato la configurazione, questa verrà utilizzata da Adobe per strutturare le chiamate API alla destinazione.
 
-È possibile configurare la funzionalità descritta in questo documento utilizzando `/authoring/audience-templates` Endpoint API Letto [creare un modello di metadati](../metadata-api/create-audience-template.md) per un elenco completo delle operazioni che è possibile eseguire sull&#39;endpoint.
+È possibile configurare la funzionalità descritta in questo documento utilizzando l&#39;endpoint API `/authoring/audience-templates`. Leggi [crea un modello di metadati](../metadata-api/create-audience-template.md) per un elenco completo delle operazioni che puoi eseguire sull&#39;endpoint.
 
 ## Quando utilizzare l’endpoint di gestione dei metadati dell’audience {#when-to-use}
 
-A seconda della configurazione API, potrebbe essere necessario utilizzare o meno l’endpoint di gestione dei metadati dell’audience durante la configurazione della destinazione in Experienci Platform. Utilizza il diagramma dell’albero decisionale seguente per capire quando utilizzare l’endpoint dei metadati del pubblico e come configurare un modello di metadati del pubblico per la tua destinazione.
+A seconda della configurazione API, potrebbe essere necessario utilizzare o meno l’endpoint di gestione dei metadati dell’audience durante la configurazione della destinazione in Experience Platform. Utilizza il diagramma dell’albero decisionale seguente per capire quando utilizzare l’endpoint dei metadati del pubblico e come configurare un modello di metadati del pubblico per la tua destinazione.
 
-![Diagramma dell’albero decisionale](../assets/functionality/audience-metadata-decision-tree.png)
+![Diagramma dell&#39;albero delle decisioni](../assets/functionality/audience-metadata-decision-tree.png)
 
 ## Casi d’uso supportati dalla gestione dei metadati dell’audience {#use-cases}
 
-Con il supporto dei metadati del pubblico in Destination SDK, quando configuri la destinazione di Experience Platform, puoi offrire agli utenti di Platform una di più opzioni quando mappano e attivano i tipi di pubblico nella destinazione. Puoi controllare le opzioni disponibili per l’utente tramite i parametri nella sezione [Configurazione dei metadati del pubblico](../functionality/destination-configuration/audience-metadata-configuration.md) della configurazione di destinazione.
+Con il supporto dei metadati del pubblico in Destination SDK, quando configuri la destinazione di Experience Platform, puoi offrire agli utenti di Platform una di più opzioni quando mappano e attivano i tipi di pubblico nella destinazione. Puoi controllare le opzioni disponibili per l&#39;utente tramite i parametri nella sezione [Configurazione metadati pubblico](../functionality/destination-configuration/audience-metadata-configuration.md) della configurazione di destinazione.
 
 ### Caso d’uso 1: disponi di un’API di terze parti e gli utenti non devono immettere ID di mappatura
 
-Se disponi di un endpoint API per creare/aggiornare/eliminare tipi di pubblico o tipi di pubblico, puoi utilizzare i modelli di metadati del pubblico per configurare Destination SDK in modo che corrisponda alle specifiche dell’endpoint creazione/aggiornamento/eliminazione del pubblico. Experienci Platform può creare, aggiornare o eliminare a livello di programmazione tipi di pubblico e sincronizzare nuovamente i metadati con Experienci Platform.
+Se disponi di un endpoint API per creare/aggiornare/eliminare tipi di pubblico o tipi di pubblico, puoi utilizzare i modelli di metadati del pubblico per configurare Destination SDK in modo che corrisponda alle specifiche dell’endpoint creazione/aggiornamento/eliminazione del pubblico. Experience Platform può creare, aggiornare o eliminare a livello di programmazione tipi di pubblico e sincronizzare nuovamente i metadati con Experience Platform.
 
-Quando si attivano dei tipi di pubblico nella destinazione nell&#39;interfaccia utente di Experienci Platform, gli utenti non devono compilare manualmente un campo ID di mappatura pubblico nel flusso di lavoro di attivazione.
+Quando si attivano dei tipi di pubblico nella destinazione nell&#39;interfaccia utente di Experience Platform, gli utenti non devono compilare manualmente un campo ID di mappatura pubblico nel flusso di lavoro di attivazione.
 
 ### Caso d’uso 2: gli utenti devono prima creare un’audience nella destinazione e devono inserire manualmente l’ID della mappatura
 
@@ -45,7 +45,7 @@ Se il sistema di destinazione accetta l&#39;ID pubblico Experience Platform, puo
 
 Per supportare i casi d’uso elencati sopra, Adobe fornisce un modello generico che può essere personalizzato per adattarsi alle specifiche API.
 
-È possibile utilizzare il modello generico per [creare un nuovo modello di pubblico](../metadata-api/create-audience-template.md) se l’API supporta:
+Puoi utilizzare il modello generico per [creare un nuovo modello di pubblico](../metadata-api/create-audience-template.md) se l&#39;API supporta:
 
 * I metodi HTTP: POST, GET, PUT, DELETE, PATCH
 * Tipi di autenticazione: OAuth 1, OAuth 2 con token di aggiornamento, OAuth 2 con token bearer
@@ -57,7 +57,7 @@ Se necessario, il team di progettazione Adobe può collaborare con te per espand
 
 Questa sezione include tre esempi di configurazioni di metadati di pubblico generici, come riferimento, insieme alle descrizioni delle sezioni principali della configurazione. Osserva come l’URL, le intestazioni, la richiesta e il corpo della risposta differiscono tra le tre configurazioni di esempio. Ciò è dovuto alle diverse specifiche delle tre piattaforme di esempio nell’API di marketing.
 
-In alcuni esempi, i campi macro come `{{authData.accessToken}}` o `{{segment.name}}` sono utilizzati nell’URL e in altri esempi vengono utilizzati nelle intestazioni o nel corpo della richiesta. Dipende davvero dalle specifiche API di marketing.
+Si noti che in alcuni esempi i campi macro come `{{authData.accessToken}}` o `{{segment.name}}` vengono utilizzati nell&#39;URL, mentre in altri esempi vengono utilizzati nelle intestazioni o nel corpo della richiesta. Dipende davvero dalle specifiche API di marketing.
 
 | Sezione modello | Descrizione |
 |--- |--- |
@@ -521,21 +521,21 @@ In alcuni esempi, i campi macro come `{{authData.accessToken}}` o `{{segment.nam
 }
 ```
 
-Trova descrizioni di tutti i parametri nel modello in [Creare un modello di pubblico](../metadata-api/create-audience-template.md) Riferimento API.
+Trova le descrizioni di tutti i parametri nel modello nel riferimento API [Crea un modello di pubblico](../metadata-api/create-audience-template.md).
 
 ## Macro utilizzate nei modelli di metadati del pubblico {#macros}
 
-Per trasmettere informazioni quali ID pubblico, token di accesso, messaggi di errore e altro ancora tra Experienci Platform e l’API, i modelli di pubblico includono macro che è possibile utilizzare. Di seguito è riportata una descrizione delle macro utilizzate nei tre esempi di configurazione riportati in questa pagina:
+Per trasmettere informazioni quali ID pubblico, token di accesso, messaggi di errore e altro ancora tra Experience Platform e l’API, i modelli di pubblico includono macro che è possibile utilizzare. Di seguito è riportata una descrizione delle macro utilizzate nei tre esempi di configurazione riportati in questa pagina:
 
 | Macro | Descrizione |
 |--- |--- |
-| `{{segment.alias}}` | Consente di accedere all’alias del pubblico in Experienci Platform. |
-| `{{segment.name}}` | Consente di accedere al nome del pubblico in Experienci Platform. |
-| `{{segment.id}}` | Consente di accedere all’ID del pubblico in Experienci Platform. |
+| `{{segment.alias}}` | Consente di accedere all’alias del pubblico in Experience Platform. |
+| `{{segment.name}}` | Consente di accedere al nome del pubblico in Experience Platform. |
+| `{{segment.id}}` | Consente di accedere all’ID del pubblico in Experience Platform. |
 | `{{customerData.accountId}}` | Ti consente di accedere al campo ID account configurato nella configurazione di destinazione. |
 | `{{oauth2ServiceAccessToken}}` | Consente di generare dinamicamente un token di accesso in base alla configurazione OAuth 2. |
-| `{{authData.accessToken}}` | Ti consente di passare il token di accesso all’endpoint API. Utilizzare `{{authData.accessToken}}` se in Experienci Platform si desidera utilizzare token senza scadenza per la connessione alla destinazione, altrimenti utilizza `{{oauth2ServiceAccessToken}}` per generare un token di accesso. |
-| `{{body.segments[0].segment.id}}` | Restituisce l’identificatore univoco del pubblico creato come valore della chiave `externalAudienceId`. |
-| `{{error.message}}` | Restituisce un messaggio di errore che verrà mostrato agli utenti nell’interfaccia utente di Experienci Platform. |
+| `{{authData.accessToken}}` | Ti consente di passare il token di accesso all’endpoint API. Utilizza `{{authData.accessToken}}` se Experience Platform deve utilizzare token senza scadenza per la connessione alla destinazione, altrimenti utilizza `{{oauth2ServiceAccessToken}}` per generare un token di accesso. |
+| `{{body.segments[0].segment.id}}` | Restituisce l&#39;identificatore univoco del pubblico creato come valore della chiave `externalAudienceId`. |
+| `{{error.message}}` | Restituisce un messaggio di errore che verrà mostrato agli utenti nell’interfaccia utente di Experience Platform. |
 
 {style="table-layout:auto"}

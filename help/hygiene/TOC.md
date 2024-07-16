@@ -25,6 +25,6 @@ ht-degree: 64%
    * [Panoramica](./api/overview.md)
    * [Scadenze dei set di dati](./api/dataset-expiration.md)
    * [Eliminazioni record](./api/jobs.md)
-   * [Eliminazioni record (Beta)](./api/workorder.md)
+   * [(Beta) Eliminazioni record](./api/workorder.md)
    * [Quota](./api/quota.md)
 * [Best practice](./best-practices.md)

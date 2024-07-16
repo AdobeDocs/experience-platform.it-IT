@@ -11,13 +11,13 @@ ht-degree: 3%
 
 ---
 
-# [!UICONTROL Dettagli di marketing della campagna] gruppo di campi schema
+# [!UICONTROL Dettagli marketing campagna] gruppo di campi schema
 
 >[!NOTE]
 >
->I nomi di diversi gruppi di campi dello schema sono stati modificati. Vedi il documento su [aggiornamenti nome gruppo di campi](../name-updates.md) per ulteriori informazioni.
+>I nomi di diversi gruppi di campi dello schema sono stati modificati. Per ulteriori informazioni, consulta il documento sugli aggiornamenti del nome del gruppo di campi [](../name-updates.md).
 
-[!UICONTROL Dettagli di marketing della campagna] è un gruppo di campi di schema standard per [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md), utilizzato per descrivere le informazioni della campagna di marketing come il gruppo della campagna, il nome e il codice di tracciamento.
+[!UICONTROL Dettagli marketing campagna] è un gruppo di campi di schema standard per la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md), utilizzato per descrivere informazioni sulla campagna di marketing come gruppo di campagne, nome e codice di tracciamento.
 
 ![](../../images/field-groups/campaign-marketing-details.png)
 

@@ -6,16 +6,16 @@ title: Notifiche esecuzione flusso
 exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '786'
+source-wordcount: '770'
 ht-degree: 1%
 
 ---
 
 # Notifiche di esecuzione del flusso
 
-Adobe Experience Platform consente di acquisire dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] servizi. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
+Adobe Experience Platform consente di acquisire dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi [!DNL Platform]. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 
-[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) viene utilizzato per raccogliere e centralizzare i dati dei clienti da diverse origini in [!DNL Platform]. Il servizio fornisce un’interfaccia utente e un’API RESTful da cui tutte le sorgenti supportate sono collegabili.
+[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie origini diverse in [!DNL Platform]. Il servizio fornisce un’interfaccia utente e un’API RESTful da cui tutte le sorgenti supportate sono collegabili.
 
 Con Eventi di Adobe I/O, puoi abbonarti agli eventi e utilizzare i webhook per ricevere notifiche sullo stato delle esecuzioni del flusso. Queste notifiche contengono informazioni sul successo dell’esecuzione del flusso o sugli errori che hanno contribuito al suo errore.
 
@@ -23,23 +23,22 @@ Questo documento descrive come abbonarsi a eventi, registrare webhook e ricevere
 
 ## Introduzione
 
-Questa esercitazione presuppone che sia già stata creata almeno una connessione di origine di cui si desidera monitorare l&#39;esecuzione del flusso. Se non hai ancora configurato una connessione sorgente, inizia visitando il [panoramica sulle origini](./home.md) per configurare l&#39;origine desiderata prima di tornare a questa guida.
+Questa esercitazione presuppone che sia già stata creata almeno una connessione di origine di cui si desidera monitorare l&#39;esecuzione del flusso. Se non hai ancora configurato una connessione di origine, inizia visitando la [panoramica origini](./home.md) per configurare l&#39;origine desiderata prima di tornare a questa guida.
 
-Questo documento richiede anche una buona conoscenza dei webhook e di come collegarli da un’applicazione all’altra. Consulta la sezione [[!DNL I/O Events] documentazione](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) per un’introduzione ai webhook.
+Questo documento richiede anche una buona conoscenza dei webhook e di come collegarli da un’applicazione all’altra. Per un&#39;introduzione ai webhook, consulta la [[!DNL I/O Events] documentazione](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md).
 
 ## Registrare un webhook per le notifiche di esecuzione del flusso
 
-Per ricevere le notifiche di esecuzione del flusso, è necessario utilizzare la console Adobe Developer per registrare un webhook nel [!DNL Experience Platform] integrazione.
+Per ricevere le notifiche di esecuzione del flusso, è necessario utilizzare Adobe Developer Console per registrare un webhook nell&#39;integrazione [!DNL Experience Platform].
 
-Segui l’esercitazione su [abbonamento a notifiche [!DNL I/O Event]](../observability/alerts/subscribe.md) per i passaggi dettagliati su come eseguire questa operazione.
+Segui l&#39;esercitazione su [abbonarti alle notifiche [!DNL I/O Event]](../observability/alerts/subscribe.md) per i passaggi dettagliati su come eseguire questa operazione.
 
 >[!IMPORTANT]
 >
->Durante il processo di abbonamento, assicurati di selezionare **[!UICONTROL Notifiche della piattaforma]** come provider di eventi e selezionare le sottoscrizioni di eventi seguenti:
+>Durante il processo di sottoscrizione, assicurarsi di selezionare **[!UICONTROL Notifiche piattaforma]** come provider di eventi e selezionare le sottoscrizioni di eventi seguenti:
 >
->* **[!UICONTROL Esecuzione del flusso dell&#39;origine Experience Platform completata]**
->* **[!UICONTROL Esecuzione del flusso dell&#39;origine Experience Platform non riuscita]**
-
+>* **[!UICONTROL Esecuzione del flusso Experience Platform Source completata]**
+>* **[!UICONTROL Esecuzione del flusso Experience Platform Source non riuscita]**
 
 ## Ricevi notifiche di esecuzione del flusso
 
@@ -53,7 +52,7 @@ Una notifica restituisce informazioni quali il numero di processi di acquisizion
 
 ### Operazione riuscita
 
-In caso di esito positivo, la risposta restituisce un set di `metrics` che definiscono le caratteristiche di un flusso specifico e `activities` che delineano la modalità di trasformazione dei dati.
+In caso di esito positivo, la risposta restituisce un set di `metrics` che definiscono le caratteristiche di un&#39;esecuzione di flusso specifica e `activities` che delineano il modo in cui i dati vengono trasformati.
 
 ```json
 {
@@ -312,11 +311,11 @@ La seguente risposta è un esempio di esecuzione di un flusso non riuscita, con 
 
 >[!NOTE]
 >
->Consulta la [appendice](#errors) per ulteriori informazioni sui messaggi di errore.
+>Per ulteriori informazioni sui messaggi di errore, vedere [appendice](#errors).
 
 ## Passaggi successivi
 
-Ora puoi abbonarti a eventi che ti consentono di ricevere notifiche in tempo reale sui tuoi stati di esecuzione del flusso. Per ulteriori informazioni sulle esecuzioni e sulle origini del flusso, vedere [panoramica sulle origini](./home.md).
+Ora puoi abbonarti a eventi che ti consentono di ricevere notifiche in tempo reale sui tuoi stati di esecuzione del flusso. Per ulteriori informazioni sulle esecuzioni e sulle origini del flusso, vedere [panoramica delle origini](./home.md).
 
 ## Appendice
 
@@ -324,9 +323,9 @@ Le sezioni seguenti forniscono informazioni aggiuntive sull’utilizzo delle not
 
 ### Informazioni sui messaggi di errore {#errors}
 
-Possono verificarsi errori di acquisizione quando i dati vengono copiati dall’origine o quando i dati copiati vengono elaborati in [!DNL Platform]. Per ulteriori informazioni su errori specifici, consulta la tabella seguente.
+Gli errori di acquisizione possono verificarsi quando i dati vengono copiati dall&#39;origine o quando i dati copiati vengono elaborati in [!DNL Platform]. Per ulteriori informazioni su errori specifici, consulta la tabella seguente.
 
 | Errore | Descrizione |
 | ---------- | ----------- |
 | `CONNECTOR-1001-500` | Si è verificato un errore durante la copia dei dati da un&#39;origine. |
-| `CONNECTOR-2001-500` | Si è verificato un errore durante l&#39;elaborazione dei dati copiati in [!DNL Platform]. Questo errore può riguardare l’analisi, la convalida o la trasformazione. |
+| `CONNECTOR-2001-500` | Errore durante l&#39;elaborazione dei dati copiati in [!DNL Platform]. Questo errore può riguardare l’analisi, la convalida o la trasformazione. |

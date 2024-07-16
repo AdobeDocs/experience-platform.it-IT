@@ -6,8 +6,8 @@ description: Adobe Experience Platform offre diversi servizi e strumenti che ti 
 exl-id: 1ab5a436-c5dd-4e7a-aba1-549f0613f224
 source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
-source-wordcount: '855'
-ht-degree: 8%
+source-wordcount: '857'
+ht-degree: 7%
 
 ---
 
@@ -31,7 +31,7 @@ La governance dei dati è un concetto essenziale che si intreccia con ogni funzi
 
 In qualità di servizio di Platform, la governance dei dati di Adobe Experience Platform consente di gestire i dati dei clienti e garantire la conformità alle normative, alle restrizioni e alle politiche applicabili all’utilizzo dei dati. Svolge un ruolo chiave all’interno di Experience Platform a vari livelli, tra cui l’etichettatura dell’utilizzo dei dati, i criteri di utilizzo dei dati, l’applicazione dei criteri e la derivazione dei dati.
 
-Consulta la [Panoramica sulla governance dei dati](../../data-governance/home.md) per ulteriori informazioni.
+Per ulteriori informazioni, vedere [Panoramica sulla governance dei dati](../../data-governance/home.md).
 
 ### Catalogo e set di dati {#catalog}
 
@@ -39,7 +39,7 @@ Catalog Service è il sistema di registrazione per la posizione e la derivazione
 
 Il catalogo organizza i dati acquisiti in set di dati, con ogni set di dati contenente metadati che possono essere utilizzati per etichettare e classificare i dati in esso contenuti.
 
-Consulta la [Panoramica di Catalog Service](../../catalog/home.md) per ulteriori informazioni sul servizio. Per informazioni su come gestire i set di dati in Experience Platform, consulta la [panoramica dei set di dati](../../catalog/datasets/overview.md).
+Per ulteriori informazioni sul servizio, vedere [Panoramica del servizio catalogo](../../catalog/home.md). Per informazioni su come gestire i set di dati in Experience Platform, consulta la [panoramica dei set di dati](../../catalog/datasets/overview.md).
 
 ## Privacy {#privacy}
 
@@ -51,15 +51,15 @@ Le normative legali sulla privacy, come il Regolamento generale sulla protezione
 
 Adobe Experience Platform Privacy Service fornisce un’API RESTful e un’interfaccia utente per facilitare la gestione di queste richieste. Con Privacy Service puoi inviare richieste di accesso o cancellazione di dati privati o personali dei clienti dalle applicazioni Adobe Experience Cloud, facilitando la conformità automatica alle normative legali e organizzative sulla privacy.
 
-Consulta la [Panoramica di Privacy Service](../../privacy-service/home.md) per ulteriori informazioni.
+Per ulteriori informazioni, consulta la [panoramica di Privacy Service](../../privacy-service/home.md).
 
 ### Elaborazione del consenso {#consent}
 
 Molte normative legali sulla privacy hanno introdotto requisiti per il consenso attivo e specifico in materia di raccolta dati, personalizzazione e altri casi d’uso di marketing. Al fine di soddisfare questi requisiti, Experience Platform consente di acquisire informazioni sul consenso nei profili dei singoli clienti e di utilizzare tali preferenze come fattore determinante nel modo in cui i dati di ciascun cliente vengono utilizzati nei flussi di lavoro della piattaforma a valle.
 
-Per informazioni su come elaborare i dati di consenso e preferenze del cliente utilizzando lo standard di Adobe, consulta la panoramica su [elaborazione del consenso in Experience Platform](./consent/adobe/overview.md).
+Per informazioni su come elaborare i dati relativi al consenso e alle preferenze del cliente utilizzando lo standard Adobe, consulta la panoramica sull&#39;elaborazione del consenso [nell&#39;Experience Platform](./consent/adobe/overview.md).
 
-Per informazioni su come elaborare i dati sul consenso dei clienti in conformità con IAB Transparency and Consent Framework (TCF) 2.0, consulta la panoramica su [Supporto IAB TCF 2.0 in Platform](./consent/iab/overview.md).
+Per informazioni su come elaborare i dati sul consenso dei clienti in conformità con IAB Transparency and Consent Framework (TCF) 2.0, consulta la panoramica sul supporto di [IAB TCF 2.0 in Platform](./consent/iab/overview.md).
 
 ## Sicurezza {#security}
 
@@ -67,13 +67,13 @@ L&#39;integrità e la sicurezza dei dati sono indispensabili per l&#39;azienda e
 
 ### Crittografia dei dati
 
-Tutti i dati di Platform sono crittografati in transito e a riposo. Vedi il documento su [crittografia dei dati in Platform](./encryption.md) per ulteriori informazioni.
+Tutti i dati di Platform sono crittografati in transito e a riposo. Per ulteriori informazioni, consulta il documento sulla crittografia dei dati [ in Platform](./encryption.md).
 
 ### Controllo degli accessi {#access-control}
 
 Experience Platform utilizza Adobe Admin Console per fornire il controllo dell’accesso basato sui ruoli per varie funzionalità di Platform. Questa funzionalità sfrutta i profili di prodotto di Admin Console, che collegano gli utenti con autorizzazioni e sandbox.
 
-Consulta la [panoramica sul controllo degli accessi](../../access-control/home.md) per ulteriori informazioni.
+Per ulteriori informazioni, vedere [panoramica sul controllo degli accessi](../../access-control/home.md).
 
 ### Sandbox {#sandboxes}
 

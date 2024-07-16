@@ -50,4 +50,4 @@ Puoi anche calcolare le metriche aziendali come attributo derivato e utilizzarle
 
 ## Passaggi successivi e casi d’uso
 
-La lettura di questo documento consente di comprendere meglio in che modo i set di dati derivati da Query Service facilitano casi d’uso complessi per massimizzare l’utilità dei dati. Quindi, dovresti leggere [caso di utilizzo di attributi derivati basati su decile](../../use-cases/deciles-use-case.md) per vedere come questa funzione viene applicata in uno scenario reale.
+La lettura di questo documento consente di comprendere meglio in che modo i set di dati derivati da Query Service facilitano casi d’uso complessi per massimizzare l’utilità dei dati. Successivamente, leggere il caso d&#39;uso dell&#39;attributo derivato basato su [decile](../../use-cases/deciles-use-case.md) per vedere come questa funzione viene applicata in uno scenario reale.

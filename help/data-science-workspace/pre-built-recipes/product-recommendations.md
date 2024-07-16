@@ -6,7 +6,7 @@ description: La ricetta Product Recommendations ti consente di fornire consigli 
 exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '466'
 ht-degree: 3%
 
 ---
@@ -25,14 +25,14 @@ La ricetta Product Recommendations utilizza l’apprendimento automatico per ana
 
 ## Come si inizia?
 
-Per iniziare, segui l’esercitazione di Adobe Experience Platform Lab (consulta il collegamento Lab di seguito). Questa esercitazione ti mostrerà come creare la ricetta Product Recommendations in un notebook Jupyter seguendo [da blocco appunti a ricetta](../jupyterlab/create-a-model.md) e implementazione della ricetta in [!DNL Experience Platform] [!DNL Data Science Workspace].
+Per iniziare, segui l’esercitazione di Adobe Experience Platform Lab (consulta il collegamento Lab di seguito). Questa esercitazione ti mostrerà come creare la ricetta del Recommendations di prodotto in un Jupyter Notebook seguendo il flusso di lavoro [dal notebook alla ricetta](../jupyterlab/create-a-model.md) e implementando la ricetta in [!DNL Experience Platform] [!DNL Data Science Workspace].
 
 * [Lab: prevedere il futuro con Data Science Workspace](https://expleague.azureedge.net/labs/L777/index.html)
-* [Risorse di laboratorio](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources)
+* [Risorse lab](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources)
 
 ## Schema dati
 
-Questa ricetta utilizza personalizzati [Schemi XDM](../../xdm/schema/field-dictionary.md) per modellare i dati di input e output:
+Questa ricetta utilizza [schemi XDM](../../xdm/schema/field-dictionary.md) personalizzati per modellare i dati di input e output:
 
 ### Schema dati di input
 

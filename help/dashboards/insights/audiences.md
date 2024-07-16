@@ -5,7 +5,7 @@ exl-id: 99624234-c4e1-44bb-9567-505bc0c4723e
 source-git-commit: 34eb9151cc6bb8551553b0a8427e58871acb4dbb
 workflow-type: tm+mt
 source-wordcount: '1124'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -15,11 +15,11 @@ Le informazioni derivate dall’analisi del modello dati rendono i dati di Adobe
 
 Comprendi le informazioni sul pubblico accedendo all’SQL che li alimenta, quindi genera le tue informazioni per esplorare ulteriormente le identità e i profili che compongono i tipi di pubblico. Trasforma i dati non elaborati in nuove informazioni fruibili utilizzando l’SQL esistente del modello dati di Real-Time CDP come ispirazione per creare query per le tue esigenze aziendali specifiche.
 
-Consulta la [Visualizza documentazione SQL](../view-sql.md) per ulteriori informazioni su come adattare le istruzioni SQL degli approfondimenti direttamente tramite l’interfaccia utente di Platform.
+Per ulteriori informazioni su come adattare l&#39;istruzione SQL delle informazioni direttamente tramite l&#39;interfaccia utente di Platform, vedere la [Visualizza documentazione SQL](../view-sql.md).
 
-Le informazioni seguenti sono tutte disponibili per l&#39;utilizzo come parte del [Dashboard dei tipi di pubblico](../guides/audiences.md) o un personalizzato [dashboard definito dall&#39;utente](../user-defined-dashboards.md). Consulta la [panoramica sulla personalizzazione](../customize/overview.md) per istruzioni su come personalizzare il dashboard o [creare e modificare nuovi widget](../customize/custom-widgets.md) nella libreria widget e [dashboard definito dall&#39;utente](../user-defined-dashboards.md#create-widget).
+Tutte le informazioni seguenti sono disponibili per l&#39;utilizzo come parte del [dashboard Tipi di pubblico](../guides/audiences.md) o di un [dashboard definito dall&#39;utente](../user-defined-dashboards.md) personalizzato. Consulta la [panoramica sulla personalizzazione](../customize/overview.md) per istruzioni su come personalizzare il dashboard o [creare e modificare nuovi widget](../customize/custom-widgets.md) nella libreria di widget e [dashboard definito dall&#39;utente](../user-defined-dashboards.md#create-widget).
 
-Le informazioni seguenti sono tutte disponibili per l&#39;utilizzo come parte del [Dashboard dei tipi di pubblico](../guides/audiences.md) o un dashboard personalizzato.
+Tutte le informazioni seguenti sono disponibili per l&#39;utilizzo come parte del [dashboard Tipi di pubblico](../guides/audiences.md) o di un dashboard personalizzato.
 
 ## Rapporto di sovrapposizione pubblico {#audience-overlap-report}
 
@@ -86,7 +86,7 @@ SELECT source_segment_name,
 
 +++
 
-Consulta la [Documentazione del widget del rapporto di sovrapposizione pubblico](../guides/audiences.md#audience-overlap-report) per informazioni sull’aspetto e le funzionalità di questa informazione.
+Per informazioni sull&#39;aspetto e le funzionalità di questa informazione, consulta la [documentazione sui widget per report di sovrapposizione pubblico](../guides/audiences.md#audience-overlap-report).
 
 ## Sovrapposizione del pubblico {#audience-overlap}
 
@@ -133,9 +133,9 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-Consulta la [Documentazione del widget di sovrapposizione pubblico](../guides/audiences.md#audience-overlap) per informazioni sull’aspetto e le funzionalità di questa informazione.
+Consulta la [documentazione sui widget di sovrapposizione pubblico](../guides/audiences.md#audience-overlap) per informazioni sull&#39;aspetto e le funzionalità di questa informazione.
 
-## Tendenza di modifica della dimensione del pubblico {#audience-size-change-trend}
+## Tendenza dimensione del pubblico {#audience-size-change-trend}
 
 Domande a cui questa informazione ha risposto:
 
@@ -174,7 +174,7 @@ SELECT date_key,
 
 +++
 
-Consulta la [Documentazione del widget tendenza modifica dimensione pubblico](../guides/audiences.md#audience-size-change-trend) per informazioni sull’aspetto e le funzionalità di questa informazione.
+Per informazioni sull&#39;aspetto e le funzionalità di questa informazione, consulta la [documentazione del widget di tendenza per la modifica delle dimensioni del pubblico](../guides/audiences.md#audience-size-change-trend).
 
 ## Tendenza dimensione pubblico per identità {#audience-size-trend-by-identity}
 
@@ -207,7 +207,7 @@ SELECT sum(count_of_profiles) AS identities,
 
 +++
 
-Consulta la [Documentazione della tendenza delle dimensioni del pubblico per widget identità](../guides/audiences.md#audience-size-trend-by-identity) per informazioni sull’aspetto e le funzionalità di questa informazione.
+Per informazioni sull&#39;aspetto e sulle funzionalità di questa informazione, consulta la [documentazione sulle tendenze delle dimensioni del pubblico in base al widget identità](../guides/audiences.md#audience-size-trend-by-identity).
 
 ## Tendenza delle dimensioni del pubblico {#audience-size-trend}
 
@@ -238,7 +238,7 @@ SELECT date_key,
 
 +++
 
-Consulta la [Documentazione del widget tendenza dimensione pubblico](../guides/audiences.md#audience-size-trend) per informazioni sull’aspetto e le funzionalità di questa informazione.
+Consulta la [documentazione del widget tendenza dimensioni pubblico](../guides/audiences.md#audience-size-trend) per informazioni sull&#39;aspetto e le funzionalità di questa informazione.
 
 ## Dimensione del pubblico {#audience-size}
 
@@ -266,9 +266,9 @@ WHERE
 
 +++
 
-Consulta la [Documentazione del widget dimensione pubblico](../guides/audiences.md#audience-size) per informazioni sull’aspetto e le funzionalità di questa informazione.
+Consulta la [documentazione sul widget dimensione pubblico](../guides/audiences.md#audience-size) per informazioni sull&#39;aspetto e le funzionalità di questa informazione.
 
-## Distribuzione dei punteggi in IA per l’analisi dei clienti {#customer-ai-distribution-of-scores}
+## Distribuzione dei punteggi tramite IA analisi clienti {#customer-ai-distribution-of-scores}
 
 Domande a cui questa informazione ha risposto:
 
@@ -409,9 +409,9 @@ SELECT b.model_name,
 
 +++
 
-Consulta la [Documentazione del widget Distribuzione di punteggi in IA per l’analisi dei clienti](../guides/audiences.md#customer-ai-distribution-of-scores) per informazioni sull’aspetto e le funzionalità di questa informazione.
+Per informazioni sull&#39;aspetto e le funzionalità di questa informazione, consulta la [documentazione sulla distribuzione dei punteggi da parte di IA per l&#39;analisi dei clienti](../guides/audiences.md#customer-ai-distribution-of-scores).
 
-## Riepilogo punteggio di Customer AI {#customer-ai-scoring-summary}
+## Riepilogo del punteggio di IA per l’analisi dei clienti {#customer-ai-scoring-summary}
 
 Domande a cui questa informazione ha risposto:
 
@@ -454,13 +454,13 @@ SELECT model_name,
 
 +++
 
-Consulta la [Documentazione del widget di riepilogo del punteggio di IA per l’analisi dei clienti](../guides/audiences.md#customer-ai-scoring-summary) per informazioni sull’aspetto e le funzionalità di questa informazione.
+Per informazioni sull&#39;aspetto e le funzionalità di questa informazione, consulta la [documentazione del widget di riepilogo del punteggio di Customer AI](../guides/audiences.md#customer-ai-scoring-summary).
 
 ## Sovrapposizione di identità {#identity-overlap}
 
 Domande a cui questa informazione ha risposto:
 
-- Qual è l’intersezione comune tra [!UICONTROL Tipo di identità A] e [!UICONTROL Tipo di identità B] per un pubblico filtrato?
+- Qual è l&#39;intersezione comune tra [!UICONTROL Tipo di identità A] e [!UICONTROL Tipo di identità B] per un pubblico filtrato?
 - Come posso perfezionare i tipi di pubblico dei clienti in base alla sovrapposizione di tipi di identità specifici, per migliorare le strategie di marketing mirate?
 - Quali insight possono essere ottenuti valutando le prestazioni della campagna all’interno delle aree intersecanti?
 - In base a queste informazioni, come possono essere ottimizzate le future attività di marketing?
@@ -514,7 +514,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-Consulta la [Documentazione del widget di sovrapposizione identità](../guides/audiences.md#identity-overlap) per informazioni sull’aspetto e le funzionalità di questa informazione.
+Per informazioni sull&#39;aspetto e le funzionalità di questa informazione, consulta la [documentazione sui widget di sovrapposizione identità](../guides/audiences.md#identity-overlap).
 
 ## Profili per identità {#profiles-by-identity}
 
@@ -542,7 +542,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-Consulta la [Documentazione dei profili per widget identità](../guides/audiences.md#profiles-by-identity) per informazioni sull’aspetto e le funzionalità di questa informazione.
+Per informazioni sull&#39;aspetto e le funzionalità di questa informazione, consulta la [documentazione sui profili per widget identità](../guides/audiences.md#profiles-by-identity).
 
 ## Attivazioni pianificate {#scheduled-activations}
 
@@ -577,12 +577,12 @@ SELECT p.destination_platform ,
 
 +++
 
-Consulta la [Documentazione del widget attivazioni pianificate](../guides/audiences.md#scheduled-activations) per informazioni sull’aspetto e le funzionalità di questa informazione.
+Per informazioni sull&#39;aspetto e le funzionalità di questa informazione, consulta la [documentazione sulle attivazioni pianificate](../guides/audiences.md#scheduled-activations).
 
 ## Passaggi successivi
 
 Una volta letto questo documento, potrai comprendere le istruzioni SQL che generano informazioni approfondite sul dashboard e quali sono le domande più comuni che vengono risolte dall’analisi. Ora puoi modificare e ripetere le istruzioni SQL per generare informazioni personalizzate.
 
-Consulta la [Visualizza documentazione SQL](../view-sql.md) per ulteriori informazioni su come adattare le istruzioni SQL degli approfondimenti direttamente tramite l’interfaccia utente di Platform.
+Per ulteriori informazioni su come adattare l&#39;istruzione SQL delle informazioni direttamente tramite l&#39;interfaccia utente di Platform, vedere la [Visualizza documentazione SQL](../view-sql.md).
 
-Puoi anche leggere e comprendere il codice SQL che genera informazioni approfondite per [Profili](./profiles.md), [Profili account](./account-profiles.md) e [Destinazioni](./destinations.md) dashboard.
+È inoltre possibile leggere e comprendere l&#39;istruzione SQL che genera informazioni approfondite per le dashboard [Profili](./profiles.md), [Profili account](./account-profiles.md) e [Destinazioni](./destinations.md).

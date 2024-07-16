@@ -13,7 +13,7 @@ ht-degree: 1%
 
 # SDK per authoring modelli
 
-L’SDK per l’authoring dei modelli consente di sviluppare ricette di apprendimento automatico personalizzate e pipeline di funzioni che possono essere utilizzate in [!DNL Adobe Experience Platform] Data Science Workspace, che fornisce modelli implementabili in [!DNL PySpark] e [!DNL Spark (Scala)].
+L&#39;SDK per l&#39;authoring dei modelli consente di sviluppare ricette di apprendimento automatico personalizzate e pipeline di funzioni che possono essere utilizzate in [!DNL Adobe Experience Platform] Data Science Workspace, fornendo modelli implementabili in [!DNL PySpark] e [!DNL Spark (Scala)].
 
 Questo documento fornisce informazioni sulle varie classi presenti nell’SDK di authoring dei modelli.
 
@@ -29,7 +29,7 @@ Nella tabella seguente vengono descritti i metodi astratti di una classe PySpark
     <thead>
         <tr>
             <th>Metodo e descrizione</th>
-            <th>Parametri</th>
+            <th>Elemento “parameters”</th>
         </tr>
     </thead>
     <tbody>
@@ -51,13 +51,13 @@ Nella tabella seguente vengono descritti i metodi astratti di una classe PySpark
 
 **Scintilla**
 
-Nella tabella seguente vengono descritti i metodi astratti di un [!DNL Spark] Classe Data Loader:
+Nella tabella seguente vengono descritti i metodi astratti di una classe del caricatore dati [!DNL Spark]:
 
 <table>
     <thead>
         <tr>
             <th>Metodo e descrizione</th>
-            <th>Parametri</th>
+            <th>Elemento “parameters”</th>
         </tr>
     </thead>
     <tbody>
@@ -76,9 +76,9 @@ Nella tabella seguente vengono descritti i metodi astratti di un [!DNL Spark] Cl
     </tbody>
 </table>
 
-### Caricare dati da un [!DNL Platform] set di dati {#load-data-from-a-platform-dataset}
+### Carica dati da un set di dati [!DNL Platform] {#load-data-from-a-platform-dataset}
 
-L’esempio seguente recupera [!DNL Platform] e restituisce un DataFrame, dove l’ID del set di dati (`datasetId`) è una proprietà definita nel file di configurazione.
+L&#39;esempio seguente recupera i dati [!DNL Platform] per ID e restituisce un DataFrame, dove l&#39;ID del set di dati (`datasetId`) è una proprietà definita nel file di configurazione.
 
 **PySpark**
 
@@ -193,17 +193,17 @@ class MyDataLoader extends DataLoader {
 
 ## DataSaver {#datasaver}
 
-La classe DataSaver incapsula qualsiasi elemento correlato all&#39;archiviazione dei dati di output, inclusi quelli derivanti dall&#39;assegnazione di punteggi o dalla progettazione di funzionalità. I Data Savers estendono la classe astratta `DataSaver` e devono eseguire l&#39;override del metodo astratto `save`.
+La classe DataSaver incapsula qualsiasi elemento correlato all&#39;archiviazione dei dati di output, inclusi quelli derivanti dall&#39;assegnazione di punteggi o dalla progettazione di funzionalità. I Data Savers estendono la classe astratta `DataSaver` e devono sostituire il metodo astratto `save`.
 
 **PySpark**
 
-Nella tabella seguente vengono descritti i metodi astratti di un [!DNL PySpark] Classe Data Saver:
+Nella tabella seguente vengono descritti i metodi astratti di una classe Data Saver [!DNL PySpark]:
 
 <table>
     <thead>
         <tr>
             <th>Metodo e descrizione</th>
-            <th>Parametri</th>
+            <th>Elemento “parameters”</th>
         </tr>
     </thead>
     <tbody>
@@ -225,13 +225,13 @@ Nella tabella seguente vengono descritti i metodi astratti di un [!DNL PySpark] 
 
 **Scintilla (Scala)**
 
-Nella tabella seguente vengono descritti i metodi astratti di un [!DNL Spark] Classe Data Saver:
+Nella tabella seguente vengono descritti i metodi astratti di una classe Data Saver [!DNL Spark]:
 
 <table>
     <thead>
         <tr>
             <th>Metodo e descrizione</th>
-            <th>Parametri</th>
+            <th>Elemento “parameters”</th>
         </tr>
     </thead>
     <tbody>
@@ -250,14 +250,14 @@ Nella tabella seguente vengono descritti i metodi astratti di un [!DNL Spark] Cl
     </tbody>
 </table>
 
-### Salva dati in un [!DNL Platform] set di dati {#save-data-to-a-platform-dataset}
+### Salva dati in un set di dati [!DNL Platform] {#save-data-to-a-platform-dataset}
 
-Per memorizzare i dati su una [!DNL Platform] set di dati, le proprietà devono essere fornite o definite nel file di configurazione:
+Per archiviare i dati in un set di dati [!DNL Platform], le proprietà devono essere specificate o definite nel file di configurazione:
 
-- Un valore valido [!DNL Platform] ID del set di dati in cui verranno memorizzati i dati
+- ID del set di dati [!DNL Platform] valido in cui verranno archiviati i dati
 - ID tenant appartenente alla tua organizzazione
 
-Negli esempi seguenti vengono memorizzati i dati (`prediction`) su una [!DNL Platform] set di dati, in cui l’ID del set di dati (`datasetId`) e ID tenant (`tenantId`) sono proprietà definite nel file di configurazione.
+Negli esempi seguenti i dati (`prediction`) vengono archiviati in un set di dati [!DNL Platform], dove l&#39;ID del set di dati (`datasetId`) e l&#39;ID tenant (`tenantId`) sono proprietà definite nel file di configurazione.
 
 
 **PySpark**
@@ -393,7 +393,7 @@ class ScoringDataSaver extends DataSaver {
 
 ## DatasetTransformer {#datasettransformer}
 
-La classe DatasetTransformer modifica e trasforma la struttura di un set di dati. Il [!DNL Sensei Machine Learning Runtime] non richiede la definizione di questo componente, che viene implementato in base alle tue esigenze.
+La classe DatasetTransformer modifica e trasforma la struttura di un set di dati. [!DNL Sensei Machine Learning Runtime] non richiede la definizione di questo componente e viene implementato in base alle tue esigenze.
 
 Per quanto riguarda una pipeline di funzioni, i trasformatori di set di dati possono essere utilizzati in collaborazione con una feature pipeline factory per preparare i dati per la progettazione di funzioni.
 
@@ -405,7 +405,7 @@ Nella tabella seguente vengono descritti i metodi di classe di una classe trasfo
     <thead>
         <tr>
             <th>Metodo e descrizione</th>
-            <th>Parametri</th>
+            <th>Elemento “parameters”</th>
         </tr>
     </thead>
     <tbody>
@@ -427,13 +427,13 @@ Nella tabella seguente vengono descritti i metodi di classe di una classe trasfo
 
 **Scintilla (Scala)**
 
-Nella tabella seguente vengono descritti i metodi astratti di un [!DNL Spark] classe trasformatore set di dati:
+Nella tabella seguente vengono descritti i metodi astratti di una classe di trasformazione del set di dati [!DNL Spark]:
 
 <table>
     <thead>
         <tr>
             <th>Metodo e descrizione</th>
-            <th>Parametri</th>
+            <th>Elemento “parameters”</th>
         </tr>
     </thead>
     <tbody>
@@ -464,7 +464,7 @@ Nella tabella seguente vengono descritti i metodi di classe di una FeaturePipeli
     <thead>
         <tr>
             <th>Metodo e descrizione</th>
-            <th>Parametri</th>
+            <th>Elemento “parameters”</th>
         </tr>
     </thead>
     <tbody>
@@ -498,13 +498,13 @@ Nella tabella seguente vengono descritti i metodi di classe di una FeaturePipeli
 
 **Scintilla (Scala)**
 
-Nella tabella seguente vengono descritti i metodi di classe di un [!DNL Spark] FeaturePipelineFactory:
+Nella tabella seguente vengono descritti i metodi di classe di FeaturePipelineFactory [!DNL Spark]:
 
 <table>
     <thead>
         <tr>
             <th>Metodo e descrizione</th>
-            <th>Parametri</th>
+            <th>Elemento “parameters”</th>
         </tr>
     </thead>
     <tbody>
@@ -536,7 +536,7 @@ Nella tabella seguente vengono descritti i metodi di classe di un [!DNL Spark] F
 
 ## PipelineFactory {#pipelinefactory}
 
-La classe PipelineFactory racchiude metodi e definizioni per l&#39;apprendimento e il punteggio dei modelli, in cui la logica di apprendimento e gli algoritmi sono definiti sotto forma di [!DNL Spark] Pipeline.
+La classe PipelineFactory incapsula i metodi e le definizioni per l&#39;apprendimento e il punteggio del modello, in cui la logica di addestramento e gli algoritmi sono definiti sotto forma di pipeline [!DNL Spark].
 
 **PySpark**
 
@@ -546,7 +546,7 @@ Nella tabella seguente vengono descritti i metodi di classe di PySpark PipelineF
     <thead>
         <tr>
             <th>Metodo e descrizione</th>
-            <th>Parametri</th>
+            <th>Elemento “parameters”</th>
         </tr>
     </thead>
     <tbody>
@@ -607,13 +607,13 @@ Nella tabella seguente vengono descritti i metodi di classe di PySpark PipelineF
 
 **Scintilla (Scala)**
 
-Nella tabella seguente vengono descritti i metodi di classe di un [!DNL Spark] PipelineFactory:
+Nella tabella seguente vengono descritti i metodi di classe di una pipelineFactory [!DNL Spark]:
 
 <table>
     <thead>
         <tr>
             <th>Metodo e descrizione</th>
-            <th>Parametri</th>
+            <th>Elemento “parameters”</th>
         </tr>
     </thead>
     <tbody>
@@ -655,7 +655,7 @@ Nella tabella seguente vengono descritti i metodi di classe di un oggetto PySpar
     <thead>
         <tr>
             <th>Metodo e descrizione</th>
-            <th>Parametri</th>
+            <th>Elemento “parameters”</th>
         </tr>
     </thead>
     <tbody>
@@ -691,13 +691,13 @@ Nella tabella seguente vengono descritti i metodi di classe di un oggetto PySpar
 
 **Scintilla (Scala)**
 
-Nella tabella seguente vengono descritti i metodi di classe di un [!DNL Spark] Valore MLE:
+Nella tabella seguente vengono descritti i metodi di classe di un MLEvaluator [!DNL Spark]:
 
 <table>
     <thead>
         <tr>
             <th>Metodo e descrizione</th>
-            <th>Parametri</th>
+            <th>Elemento “parameters”</th>
         </tr>
     </thead>
     <tbody>

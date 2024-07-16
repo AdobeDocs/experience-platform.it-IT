@@ -6,7 +6,7 @@ description: Questo documento fornisce le risposte alle domande più frequenti s
 exl-id: ec553e53-664b-4e18-abb1-4e4063fdd2c9
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1618'
+source-wordcount: '1631'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ Questo documento fornisce le risposte alle domande più frequenti sulle normativ
 
 >[!NOTE]
 >
->Le definizioni dei vari termini utilizzati nel presente documento sono reperibili nella [terminologia delle normative sulla privacy](terminology.md) guida.
+>Le definizioni dei vari termini utilizzati in questo documento sono disponibili nella [guida alla terminologia del regolamento sulla privacy](terminology.md).
 
 ## Domande generali
 
@@ -25,7 +25,7 @@ Le seguenti domande si riferiscono a tutte le normative sulla privacy supportate
 
 ### Quali sono gli effetti delle normative sulla privacy supportate?
 
-Il [normative sulla privacy supportate dall’Experience Cloud](./overview.md) si applica a tutte le organizzazioni che memorizzano ed elaborano i dati personali dei cittadini all&#39;interno delle rispettive giurisdizioni, indipendentemente dalla posizione geografica dell&#39;organizzazione.
+Le [normative sulla privacy supportate dall&#39;Experience Cloud](./overview.md) si applicano a tutte le organizzazioni che memorizzano ed elaborano i dati personali dei cittadini all&#39;interno delle rispettive giurisdizioni, indipendentemente dalla posizione geografica dell&#39;organizzazione.
 
 ### Cosa costituiscono i dati personali?
 
@@ -51,15 +51,15 @@ Anche se le normative sulla privacy coprono un&#39;ampia serie di informazioni p
 
 ### Qual è la differenza tra un titolare del trattamento e un responsabile del trattamento dei dati?
 
-A **titolare del trattamento** è l&#39;entità che determina le finalità, le condizioni e i mezzi del trattamento dei dati personali, mentre **elaboratore dati** è un’entità che tratta dati personali per conto del titolare del trattamento.
+Un **titolare del trattamento** è l&#39;entità che determina le finalità, le condizioni e i mezzi del trattamento dei dati personali, mentre il **responsabile del trattamento** è un&#39;entità che tratta i dati personali per conto del titolare del trattamento.
 
-A **titolare del trattamento** è la persona o l’organizzazione che ha il potere e la responsabilità di prendere decisioni in merito alla raccolta, all’utilizzo o alla divulgazione di dati personali. A **elaboratore dati** è la persona o l’organizzazione che opera in relazione alla raccolta, all’utilizzo o alla divulgazione dei dati personali e alla direzione del titolare del trattamento.
+Un **titolare del trattamento** è la persona o l&#39;organizzazione che ha il potere e la responsabilità di prendere decisioni relative alla raccolta, all&#39;utilizzo o alla divulgazione di dati personali. L&#39;**incaricato del trattamento dei dati** è la persona o l&#39;organizzazione che opera in relazione alla raccolta, all&#39;utilizzo o alla divulgazione dei dati personali e alla direzione del titolare del trattamento.
 
 ### Qual è la differenza tra consenso esplicito e non ambiguo dell’interessato?
 
-**Consenso esplicito** si riferisce a uno standard di consenso che implica un&#39;indicazione specifica, informata e inequivocabile, orale o scritta, dei desideri dell&#39;interessato. In parole povere, la persona interessata deve letteralmente ed esplicitamente dire &quot;Io consenso&quot; o &quot;Io accetto&quot; affinché il consenso possa essere considerato esplicito. Inoltre, la revoca del consenso deve essere tanto facile quanto la sua concessione.
+**Il consenso esplicito** si riferisce a uno standard di consenso che implica un&#39;indicazione specifica, informata e inequivocabile dei desideri dell&#39;interessato in forma orale o scritta. In parole povere, la persona interessata deve letteralmente ed esplicitamente dire &quot;Io consenso&quot; o &quot;Io accetto&quot; affinché il consenso possa essere considerato esplicito. Inoltre, la revoca del consenso deve essere tanto facile quanto la sua concessione.
 
-**Consenso univoco (implicito)** si riferisce al consenso che non è stato dato esplicitamente dalla persona interessata, ma è comunque di natura inequivocabile. Ad esempio, durante il processo di iscrizione al sito web di un’azienda, viene comunicato che fornendo un indirizzo e-mail, l’interessato acconsente alla ricezione di e-mail su offerte speciali. Se l’interessato legge l’avviso, l’azione positiva consistente nell’inserire l’e-mail è sufficiente per essere considerata un consenso inequivocabile.
+**Il consenso non ambiguo (implicito)** si riferisce al consenso non esplicitamente fornito dall&#39;interessato, ma è comunque di natura non ambigua. Ad esempio, durante il processo di iscrizione al sito web di un’azienda, viene comunicato che fornendo un indirizzo e-mail, l’interessato acconsente alla ricezione di e-mail su offerte speciali. Se l’interessato legge l’avviso, l’azione positiva consistente nell’inserire l’e-mail è sufficiente per essere considerata un consenso inequivocabile.
 
 Per molte normative come il RGPD è necessario il consenso esplicito per il trattamento dei dati personali sensibili, dove è sufficiente il solo consenso esplicito. Per i dati non sensibili, tuttavia, è accettabile un consenso inequivocabile (implicito).
 
@@ -107,7 +107,7 @@ Se le operazioni sui dati dell’organizzazione rientrano nelle giurisdizioni le
 
 ### Come posso supportare le richieste sulla privacy dei consumatori se mantengo i dati coperti dalle normative sulla privacy?
 
-Dopo aver adottato le misure necessarie per autenticare i consumatori che rientrano nelle giurisdizioni legali appropriate, Adobe Experience Platform Privacy Service ti consente di inviare richieste sulla privacy dei consumatori ad applicazioni Experienci Cloud compatibili. Consulta la [[!DNL Privacy Service] panoramica](../home.md) per ulteriori informazioni. Per informazioni su come le tue applicazioni per Experienci Cloud possono soddisfare le richieste relative alla privacy, consulta la guida su [Applicazioni Privacy Service e Experience Cloud](../experience-cloud-apps.md).
+Dopo aver adottato le misure necessarie per autenticare i consumatori che rientrano nelle giurisdizioni legali appropriate, Adobe Experience Platform Privacy Service ti consente di inviare richieste sulla privacy dei consumatori ad applicazioni Experienci Cloud compatibili. Per ulteriori informazioni, vedere [[!DNL Privacy Service] panoramica](../home.md). Per informazioni su come le tue applicazioni Experience Cloud particolari possono soddisfare le richieste di privacy, consulta la guida su [applicazioni Privacy Service e Experience Cloud](../experience-cloud-apps.md).
 
 >[!NOTE]
 >
@@ -121,8 +121,8 @@ Le seguenti domande riguardano specificamente il CCPA.
 
 Secondo la definizione del CCPA, i seguenti ruoli si applicano ad Adobe e ai suoi clienti:
 
-* I clienti Adobi (la parte che richiede la raccolta e l&#39;utilizzo delle informazioni personali dei residenti della California) sarebbero considerati **Aziende**.
-* Adobe, nel suo ruolo di fornitura del servizio, sarebbe considerato **Provider di servizi**.
+* I clienti Adobi (la parte che richiede la raccolta e l&#39;utilizzo di informazioni personali dai residenti della California) sarebbero considerati un **Business**.
+* Adobe: nel ruolo di fornitura del servizio, verrà considerato un **provider di servizi**.
 
 In qualità di fornitore di servizi, Adobe raccoglie ed elabora informazioni personali per conto dell&#39;azienda ed è contrattualmente vincolato a utilizzare tali informazioni solo per le finalità specifiche stabilite nell&#39;accordo.
 
@@ -142,7 +142,7 @@ Le seguenti domande si riferiscono specificamente al RGPD.
 
 ### Qual è la differenza tra un regolamento e una direttiva?
 
-A **regolamento** è un atto legislativo vincolante e deve essere applicato nella sua interezza in tutta l&#39;UE. A **direttiva** è un atto legislativo che stabilisce un obiettivo che tutti i paesi dell&#39;UE devono raggiungere, ma spetta ai singoli paesi decidere come farlo.
+Un **regolamento** è un atto legislativo vincolante e deve essere applicato in tutta l&#39;UE. Una **direttiva** è un atto legislativo che stabilisce un obiettivo che tutti i paesi dell&#39;UE devono raggiungere, ma spetta ai singoli paesi decidere come farlo.
 
 È importante notare che il RGPD è un regolamento, a differenza della legislazione precedente (la direttiva sulla protezione dei dati), che è una direttiva.
 

@@ -6,32 +6,32 @@ description: Questo documento fornisce le risposte alle domande più frequenti s
 exl-id: c299c0c4-dbee-4e6d-8af4-2446444bed69
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '406'
 ht-degree: 0%
 
 ---
 
 # Guida alla risoluzione dei problemi del controllo degli accessi
 
-Questo documento fornisce le risposte alle domande più frequenti sul controllo degli accessi in Adobe Experience Platform. Per domande e risoluzione dei problemi relativi ad altri [!DNL Platform] servizi, fare riferimento al [Guida alla risoluzione dei problemi di Experience Platform](../landing/troubleshooting.md).
+Questo documento fornisce le risposte alle domande più frequenti sul controllo degli accessi in Adobe Experience Platform. Per domande e risoluzione dei problemi relativi ad altri servizi [!DNL Platform], fare riferimento alla [guida alla risoluzione dei problemi di Experience Platform](../landing/troubleshooting.md).
 
-[!DNL Experience Platform] sfrutta i profili di prodotto in [Adobe Admin Console](https://adminconsole.adobe.com) per fornire un controllo dell’accesso basato sui ruoli, collegare gli utenti con autorizzazioni e sandbox.  Consulta la [panoramica sul controllo degli accessi](home.md) per ulteriori informazioni.
+[!DNL Experience Platform] sfrutta i profili di prodotto in [Adobe Admin Console](https://adminconsole.adobe.com) per fornire il controllo degli accessi basato sui ruoli, collegando gli utenti con autorizzazioni e sandbox.  Per ulteriori informazioni, vedere [panoramica sul controllo degli accessi](home.md).
 
 ## Dove posso trovare le mie autorizzazioni di accesso correnti?
 
-Se sei un amministratore di sistema, un amministratore di prodotto o un amministratore del profilo di prodotto della tua organizzazione, puoi visualizzare il tuo profilo di prodotto assegnato e le autorizzazioni che fornisce all’interno di Adobe Admin Console. Consulta la [guida utente al controllo degli accessi](./ui/overview.md) per istruzioni su come navigare in [!DNL Admin Console] per visualizzare le autorizzazioni di un profilo di prodotto.
+Se sei un amministratore di sistema, un amministratore di prodotto o un amministratore del profilo di prodotto della tua organizzazione, puoi visualizzare il tuo profilo di prodotto assegnato e le autorizzazioni che fornisce all’interno di Adobe Admin Console. Per istruzioni su come esplorare [!DNL Admin Console] per visualizzare le autorizzazioni di un profilo di prodotto, consulta la [guida utente per il controllo degli accessi](./ui/overview.md).
 
-Se non sei un amministratore, puoi comunque visualizzare le autorizzazioni di accesso correnti inviando una richiesta a `/acl/effective-policies` nell’API di controllo degli accessi. Consulta la sezione &quot;Visualizzare i criteri effettivi&quot; in [guida per gli sviluppatori sul controllo degli accessi](./api/effective-policies.md) per ulteriori informazioni.
+Se non sei un amministratore, puoi comunque visualizzare le autorizzazioni di accesso correnti inviando una richiesta all&#39;endpoint `/acl/effective-policies` nell&#39;API di controllo degli accessi. Per ulteriori informazioni, vedere la sezione &quot;View effective policies&quot; nella [guida per gli sviluppatori del controllo degli accessi](./api/effective-policies.md).
 
-## Alcune funzioni di [!DNL Platform] Interfaccia utente non disponibile. In che modo l’accesso a queste funzioni è controllato dalle autorizzazioni?
+## Alcune funzionalità nell&#39;interfaccia utente di [!DNL Platform] non sono disponibili. In che modo l’accesso a queste funzioni è controllato dalle autorizzazioni?
 
-Se non disponi delle autorizzazioni di accesso per un particolare [!DNL Platform] , tale funzione sarà nascosta o disattivata nella [!DNL Experience Platform] UI. Ad esempio, per visualizzare il &quot;[!UICONTROL Profili]&quot;, è necessario disporre della scheda &quot;[!UICONTROL Visualizza profili]&quot; o &quot;[!UICONTROL Gestisci profili]&quot; autorizzazioni. Contatta l’amministratore se hai bisogno di autorizzazioni aggiuntive per [!DNL Experience Platform] funzionalità.
+Se non si dispone delle autorizzazioni di accesso per una caratteristica [!DNL Platform] specifica, tale caratteristica verrà nascosta o disattivata nell&#39;interfaccia utente [!DNL Experience Platform]. Ad esempio, per visualizzare la scheda &quot;[!UICONTROL Profili]&quot; è necessario disporre delle autorizzazioni &quot;[!UICONTROL Visualizza profili]&quot; o &quot;[!UICONTROL Gestisci profili]&quot;. Contattare l&#39;amministratore se sono necessarie ulteriori autorizzazioni per le funzionalità di [!DNL Experience Platform].
 
 ## Come vengono raggruppate le autorizzazioni e quale gruppo contiene l’autorizzazione che desidero utilizzare?
 
-Le autorizzazioni sono raggruppate e suddivise in categorie in base al [!DNL Platform] le funzionalità a cui si applicano (come [!DNL Data Management] e [!DNL Profile Management]). Per un elenco completo delle autorizzazioni disponibili e dei gruppi a cui appartengono, vedere [sezione autorizzazioni](home.md#permissions) nella panoramica del controllo degli accessi.
+Le autorizzazioni sono raggruppate e classificate in base alle funzionalità [!DNL Platform] a cui si applicano (ad esempio [!DNL Data Management] e [!DNL Profile Management]). Per un elenco completo delle autorizzazioni disponibili e dei gruppi a cui appartengono, vedere la sezione [autorizzazioni](home.md#permissions) nella panoramica del controllo di accesso.
 
-Consulta la [panoramica sul controllo degli accessi](home.md) per ulteriori informazioni su come fornire il controllo degli accessi basato sui ruoli.
+Per ulteriori informazioni su come fornire il controllo degli accessi basato sui ruoli, vedere la [panoramica sul controllo degli accessi](home.md).
 
 ## Cosa succede alle autorizzazioni dopo la migrazione da Adobe IO a Business ID?
 

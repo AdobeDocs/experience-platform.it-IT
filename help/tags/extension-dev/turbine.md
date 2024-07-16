@@ -47,7 +47,7 @@ console.log(turbine.buildInfo.turbineBuildDate);
 console.log(turbine.environment.stage);
 ```
 
-`turbine.environment` è un oggetto che contiene informazioni sull’ambiente in cui viene distribuita la libreria.
+`turbine.environment` è un oggetto contenente informazioni sull&#39;ambiente in cui viene distribuita la libreria.
 
 ```js
 {
@@ -59,7 +59,7 @@ console.log(turbine.environment.stage);
 | Proprietà | Descrizione |
 | --- | --- |
 | `id` | ID dell’ambiente. |
-| `stage` | L&#39;ambiente per il quale è stata generata la libreria. I valori possibili sono `development`, `staging`, e `production`. |
+| `stage` | L&#39;ambiente per il quale è stata generata la libreria. I valori possibili sono `development`, `staging` e `production`. |
 
 {style="table-layout:auto"}
 
@@ -119,7 +119,7 @@ Utility di registrazione utilizzata per registrare i messaggi nella console. I m
 * `logger.warn(message: string)`: registra un messaggio di avvertenza nella console.
 * `logger.error(message: string)`: registra un messaggio di errore nella console.
 * `logger.debug(message: string)`: registra un messaggio di debug nella console. (Visibile solo se la registrazione `verbose` è abilitata nella console del browser.)
-* `logger.deprecation(message: string)`: registra un messaggio di avviso nella console indipendentemente dal fatto che l’utente abbia abilitato o meno il debug dei tag.
+* `logger.deprecation(message: string)`: registra un messaggio di avvertenza nella console indipendentemente dal fatto che l&#39;utente abbia abilitato o meno il debug dei tag.
 
 ## `onDebugChanged`
 

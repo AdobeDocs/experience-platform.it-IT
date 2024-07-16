@@ -4,7 +4,7 @@ description: Scopri l’estensione tag per il tracciamento di video BrightCove i
 exl-id: d27eff21-2abf-4495-8382-08cab32742e0
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '908'
+source-wordcount: '898'
 ht-degree: 95%
 
 ---
@@ -94,9 +94,9 @@ Devono essere inclusi i seguenti oggetti di estensione video:
       * Una prop/eVar per l’elemento dati **Video Name** (ad esempio: eVar10)
       * Una prop/eVar per l’elemento dati **Video Duration** (ad esempio: eVar11)
       * Una prop/eVar per l’elemento dati **Current Video Place** (ad esempio: eVar12)
+
    1. L’azione “Send beacon” di Analytics (`s.tl`)
    1. L’azione “Clear variables” di Analytics
-
 
 >[!TIP]
 >

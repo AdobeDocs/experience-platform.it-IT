@@ -8,7 +8,7 @@ role: User,Developer,Admin
 source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '90'
-ht-degree: 41%
+ht-degree: 44%
 
 ---
 
@@ -30,12 +30,12 @@ ht-degree: 41%
    * [Panoramica](enforcement/overview.md)
    * [Applicazione automatica](enforcement/auto-enforcement.md)
    * [Imposizione basata su API](enforcement/api-enforcement.md)
-* API del servizio criteri {#api}
+* API servizio criteri {#api}
    * [Panoramica](api/overview.md)
    * [Introduzione](api/getting-started.md)
    * [Etichette](api/labels.md)
    * [Criteri](api/policies.md)
-   * [Azioni di marketing](api/marketing-actions.md)
+   * [Azioni marketing](api/marketing-actions.md)
    * [Valutazione](api/evaluation.md)
 * [Riferimento API](https://www.adobe.io/experience-platform-apis/references/policy-service/)
-* [Note sulla versione della piattaforma](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Note sulla versione della piattaforma](https://experienceleague.adobe.com/it/docs/experience-platform/release-notes/latest)

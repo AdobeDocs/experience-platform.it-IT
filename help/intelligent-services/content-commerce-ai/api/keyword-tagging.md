@@ -6,8 +6,8 @@ description: Il servizio di assegnazione tag parole chiave, quando viene fornito
 exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
 source-git-commit: 7c8c1d69f4c4e0a1374603d541b634ac7f64ab38
 workflow-type: tm+mt
-source-wordcount: '447'
-ht-degree: 5%
+source-wordcount: '444'
+ht-degree: 6%
 
 ---
 
@@ -42,7 +42,7 @@ La richiesta seguente estrae parole chiave da un documento in base ai parametri 
 
 Per ulteriori informazioni sui parametri di input mostrati, consulta la tabella seguente il payload di esempio.
 
-Questo [pdf di esempio](../pdf-files/simple-text.pdf) file è stato utilizzato nell&#39;esempio riportato in questo documento.
+Questo file [pdf](../pdf-files/simple-text.pdf) di esempio è stato utilizzato nell&#39;esempio mostrato in questo documento.
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
@@ -97,18 +97,18 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 | `last_semantic_unit_type` | Restituisce solo le unità semantiche fino al livello specificato nella risposta gerarchica. &quot;key_phrase&quot; restituisce solo frasi chiave, &quot;linked_entity&quot; restituisce solo frasi chiave e le entità collegate corrispondenti e &quot;concept&quot; restituisce frasi chiave, entità collegate e concetti. | No |
 | `entity_types` | Tipi di entità da restituire come frasi chiave. | No |
 
-**Oggetto Document**
+**Oggetto documento**
 
-| Nome | Tipo di dati | Obbligatorio | Impostazione predefinita | Valori | Descrizione |
+| Nome | Tipo di dati | Obbligatorio | Predefinito | Valori | Descrizione |
 | -----| --------- | -------- | ------- | ------ | ----------- |
-| `repo:path` | string | - | - | - | URL preceduto del documento da cui estrarre le frasi chiave. |
-| `sensei:repoType` | string | - | - | HTTPS | Tipo di repository in cui viene archiviato il documento. |
-| `sensei:multipart_field_name` | string | - | - | - | Utilizzare questa opzione quando si passa il documento come argomento multipart anziché utilizzare URL prefirmati. |
-| `dc:format` | string | Sì | - | &quot;text/plain&quot;,<br>&quot;application/pdf&quot;<br>&quot;text/pdf&quot;,<br>&quot;text/html&quot;,<br>&quot;text/rtf&quot;<br>&quot;application/rtf&quot;<br>&quot;application/msword&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.wordprocessingml.document&quot;,<br>&quot;application/mspowerpoint&quot;<br>&quot;application/vnd.ms-powerpoint&quot;<br>&quot;application/vnd.openxmlformats-officedocument.presentationml.presentation&quot; | La codifica del documento viene verificata in base ai tipi di codifica di input consentiti prima dell&#39;elaborazione. |
+| `repo:path` | stringa | - | - | - | URL preceduto del documento da cui estrarre le frasi chiave. |
+| `sensei:repoType` | stringa | - | - | HTTPS | Tipo di repository in cui viene archiviato il documento. |
+| `sensei:multipart_field_name` | stringa | - | - | - | Utilizzare questa opzione quando si passa il documento come argomento multipart anziché utilizzare URL prefirmati. |
+| `dc:format` | stringa | Sì | - | &quot;text/plain&quot;,<br>&quot;application/pdf&quot;,<br>&quot;text/pdf&quot;,<br>&quot;text/html&quot;,<br>&quot;text/rtf&quot;,<br>&quot;application/rtf&quot;,<br>&quot;application/msword&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.wordprocessingml.document&quot;,<br>&quot;application/mspowerpoint&quot;,<br>&quot;application/vnd.ms-powerpoint&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.presentationml.presentation&quot; | La codifica del documento viene verificata in base ai tipi di codifica di input consentiti prima dell&#39;elaborazione. |
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce un oggetto JSON contenente parole chiave estratte nel `response` array.
+In caso di esito positivo, la risposta restituisce un oggetto JSON contenente parole chiave estratte nell&#39;array `response`.
 
 ```json
 {

@@ -4,8 +4,8 @@ description: Scopri come effettuare chiamate all’endpoint /extension_packages 
 exl-id: a91c6f32-6c72-4118-a43f-2bd8ef50709f
 source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
-source-wordcount: '939'
-ht-degree: 70%
+source-wordcount: '930'
+ht-degree: 68%
 
 ---
 
@@ -25,31 +25,31 @@ Un pacchetto di estensione appartiene all’[azienda](./companies.md) dello svil
 
 L’endpoint utilizzato in questa guida fa parte dell’[API di Reactor](https://www.adobe.io/experience-platform-apis/references/reactor/). Prima di continuare, consulta la [guida introduttiva](../getting-started.md) per informazioni importanti su come eseguire l’autenticazione nell’API.
 
-Oltre a capire come effettuare chiamate all’API di Reactor, è anche importante comprendere come viene `status` e `availability` gli attributi influiscono sulle azioni che è possibile eseguire su di esso. Queste sono spiegate nelle sezioni seguenti.
+Oltre a comprendere come effettuare chiamate all’API di Reactor, è importante comprendere in che modo gli attributi `status` e `availability` di un pacchetto di estensione influiscono sulle azioni eseguibili su di esso. Queste sono spiegate nelle sezioni seguenti.
 
 ### Stato
 
-I pacchetti di estensione hanno tre stati potenziali: `pending`, `succeeded`, e `failed`.
+I pacchetti di estensione hanno tre stati potenziali: `pending`, `succeeded` e `failed`.
 
 | Stato | Descrizione |
 | --- | --- |
-| `pending` | Quando viene creato un pacchetto di estensione, i relativi `status` è impostato su `pending`. Questo indica che il sistema ha ricevuto le informazioni per il pacchetto di estensione e che inizierà l’elaborazione. Pacchetti di estensione con lo stato `pending` non sono disponibili per l’uso. |
-| `succeeded` | Lo stato di un pacchetto di estensione si aggiorna su `succeeded` se l’elaborazione viene completata correttamente. |
-| `failed` | Lo stato di un pacchetto di estensione si aggiorna su `failed` se l’elaborazione non viene completata correttamente. Un pacchetto di estensione con lo stato `failed` può essere aggiornato fino a quando l’elaborazione non riesce. Pacchetti di estensione con lo stato `failed` non sono disponibili per l’uso. |
+| `pending` | Quando viene creato un pacchetto di estensione, `status` è impostato su `pending`. Questo indica che il sistema ha ricevuto le informazioni per il pacchetto di estensione e che inizierà l’elaborazione. I pacchetti di estensione con stato `pending` non sono disponibili per l&#39;utilizzo. |
+| `succeeded` | Lo stato di un pacchetto di estensione viene aggiornato a `succeeded` se l&#39;elaborazione viene completata correttamente. |
+| `failed` | Lo stato di un pacchetto di estensione viene aggiornato a `failed` se l&#39;elaborazione non viene completata correttamente. Un pacchetto di estensione con stato `failed` può essere aggiornato fino alla riuscita dell&#39;elaborazione. I pacchetti di estensione con stato `failed` non sono disponibili per l&#39;utilizzo. |
 
 ### Disponibilità
 
-Esistono livelli di disponibilità per un pacchetto di estensione: `development`, `private`, e `public`.
+Livelli di disponibilità per un pacchetto di estensione: `development`, `private` e `public`.
 
 | Disponibilità | Descrizione |
 | --- | --- |
-| `development` | Un pacchetto di estensione in `development` è visibile e disponibile solo per l’azienda che lo possiede. Inoltre, può essere utilizzato solo su proprietà configurate per lo sviluppo di estensioni. |
-| `private` | A `private` il pacchetto di estensione è visibile solo all’azienda che lo possiede e può essere installato solo sulle proprietà di cui è proprietaria l’azienda. |
-| `public` | A `public` il pacchetto di estensione è visibile e disponibile per tutte le società e proprietà. |
+| `development` | Un pacchetto di estensione in `development` è visibile e disponibile solo per l&#39;azienda proprietaria. Inoltre, può essere utilizzato solo su proprietà configurate per lo sviluppo di estensioni. |
+| `private` | Un pacchetto di estensione `private` è visibile solo alla società proprietaria e può essere installato solo sulle proprietà di proprietà della società. |
+| `public` | Un pacchetto di estensione `public` è visibile e disponibile per tutte le società e proprietà. |
 
 >[!NOTE]
 >
->Quando viene creato un pacchetto di estensione, `availability` è impostato su `development`. Al termine del test, puoi effettuare la transizione del pacchetto di estensione in `private` o `public`.
+>Quando viene creato un pacchetto di estensione, `availability` è impostato su `development`. Al termine del test, è possibile eseguire la transizione del pacchetto di estensione a `private` o `public`.
 
 ## Recuperare un elenco di pacchetti di estensione {#list}
 

@@ -10,30 +10,30 @@ ht-degree: 2%
 
 ---
 
-# [!DNL Airship Attributes] connessione {#airship-attributes-destination}
+# Connessione [!DNL Airship Attributes] {#airship-attributes-destination}
 
 ## Panoramica {#overview}
 
-[!DNL Airship] è la piattaforma leader di Customer Engagement che ti aiuta a fornire messaggi omnicanale significativi e personalizzati ai tuoi utenti in ogni fase del ciclo di vita del cliente.
+[!DNL Airship] è la principale piattaforma di Customer Engagement e ti aiuta a fornire messaggi omnicanale significativi e personalizzati ai tuoi utenti in ogni fase del ciclo di vita del cliente.
 
-Questa integrazione trasmette i dati del profilo di Adobe in [!DNL Airship] as [Attributi](https://docs.airship.com/guides/audience/attributes/) per il targeting o l’attivazione.
+Questa integrazione trasmette i dati del profilo di Adobe in [!DNL Airship] come [Attributi](https://docs.airship.com/guides/audience/attributes/) per il targeting o l&#39;attivazione.
 
-Per ulteriori informazioni su [!DNL Airship], vedere [Documenti dirigibili](https://docs.airship.com).
+Per ulteriori informazioni su [!DNL Airship], consulta i [documenti dirigibili](https://docs.airship.com).
 
 >[!TIP]
 >
->Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti da [!DNL Airship] team. Per eventuali richieste di informazioni o richieste di aggiornamento, contattatele direttamente all&#39;indirizzo [support.airship.com](https://support.airship.com/).
+>Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti dal team [!DNL Airship]. Per eventuali richieste di informazioni o richieste di aggiornamento, contattaci direttamente all&#39;indirizzo [support.airship.com](https://support.airship.com/).
 
 ## Prerequisiti {#prerequisites}
 
 Prima di poter inviare i tipi di pubblico a [!DNL Airship], è necessario:
 
-* Abilitare gli attributi nel [!DNL Airship] progetto.
+* Abilitare gli attributi nel progetto [!DNL Airship].
 * Genera un token Bearer per l’autenticazione.
 
 >[!TIP]
 >
->Creare un [!DNL Airship] account tramite [questo collegamento di abbonamento](https://go.airship.eu/accounts/register/plan/starter/) se non lo hai già fatto.
+>Se non lo hai già fatto, crea un account [!DNL Airship] tramite [questo collegamento per la registrazione](https://go.airship.eu/accounts/register/plan/starter/).
 
 ## Tipi di pubblico supportati {#supported-audiences}
 
@@ -41,8 +41,8 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 
 | Origine pubblico | Supportato | Descrizione |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati dall’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md). |
-| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
+| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite il servizio di segmentazione [Experience Platform](../../../segmentation/home.md). |
+| Caricamenti personalizzati | ✓ | Tipi di pubblico [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -53,89 +53,89 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
 | Tipo di esportazione | **[!UICONTROL Basato su profilo]** | Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome) e/o identità, in base alla mappatura dei campi. |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni sulle [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## Abilita attributi {#enable-attributes}
 
-Gli attributi del profilo Adobe Experience Platform sono simili a [!DNL Airship] e possono essere facilmente mappati l’uno sull’altro in Platform utilizzando lo strumento di mappatura illustrato più avanti in questa pagina.
+Gli attributi del profilo di Adobe Experience Platform sono simili agli attributi [!DNL Airship] e possono essere facilmente mappati gli uni agli altri in Platform utilizzando lo strumento di mappatura illustrato di seguito in questa pagina.
 
-[!DNL Airship] i progetti hanno diversi attributi predefiniti e predefiniti. Se disponi di un attributo personalizzato, devi definirlo in [!DNL Airship] prima. Consulta [Impostazione e gestione degli attributi](https://docs.airship.com/tutorials/audience/attributes/) per i dettagli.
+[!DNL Airship] progetti hanno diversi attributi predefiniti e predefiniti. Se hai un attributo personalizzato, devi prima definirlo in [!DNL Airship]. Per ulteriori informazioni, vedere [Configurazione e gestione degli attributi](https://docs.airship.com/tutorials/audience/attributes/).
 
 ## Genera token Bearer {#bearer-token}
 
-Vai a **[!UICONTROL Impostazioni]** &quot; **[!UICONTROL API e integrazioni]** nel [Cruscotto del dirigibile](https://go.airship.com) e seleziona **[!UICONTROL Token]** nel menu di sinistra.
+Vai a **[!UICONTROL Impostazioni]**&quot; **[!UICONTROL API e integrazioni]** nel [Dashboard per dirigibili](https://go.airship.com) e seleziona **[!UICONTROL Token]** nel menu a sinistra.
 
-Clic **[!UICONTROL Crea token]**.
+Fai clic su **[!UICONTROL Crea token]**.
 
 Specifica un nome descrittivo per il token, ad esempio &quot;Destinazione attributi Adobi&quot;, e seleziona &quot;Tutti gli accessi&quot; per il ruolo.
 
-Clic **[!UICONTROL Crea token]** e salva i dettagli come confidenziali.
+Fai clic su **[!UICONTROL Crea token]** e salva i dettagli come riservati.
 
 ## Casi d’uso {#use-cases}
 
-Per aiutarti a capire meglio come e quando utilizzare il [!DNL Airship Attributes] destinazione: di seguito sono riportati alcuni casi di utilizzo esemplificativi che i clienti di Adobe Experience Platform possono risolvere utilizzando questa destinazione.
+Per capire meglio come e quando utilizzare la destinazione [!DNL Airship Attributes], ecco alcuni esempi di casi d&#39;uso che i clienti Adobe Experience Platform possono risolvere utilizzando questa destinazione.
 
 ### #1 del caso d’uso
 
-Sfrutta i dati di profilo raccolti in Adobe Experience Platform per la personalizzazione del messaggio e contenuti avanzati in qualsiasi [!DNL Airship]canali di. Ad esempio, sfruttare [!DNL Experience Platform] dati di profilo per impostare gli attributi di posizione in [!DNL Airship]. In questo modo, un marchio di hotel potrà visualizzare per ogni utente un&#39;immagine che indica la posizione più vicina all&#39;hotel.
+Sfrutta i dati di profilo raccolti in Adobe Experience Platform per la personalizzazione del messaggio e contenuti avanzati in qualsiasi canale di [!DNL Airship]. Ad esempio, sfrutta i dati del profilo [!DNL Experience Platform] per impostare gli attributi di posizione in [!DNL Airship]. In questo modo, un marchio di hotel potrà visualizzare per ogni utente un&#39;immagine che indica la posizione più vicina all&#39;hotel.
 
 ### #2 del caso d’uso
 
-Sfruttare gli attributi di Adobe Experience Platform per arricchire ulteriormente [!DNL Airship] e combinarli con l’SDK o [!DNL Airship] dati predittivi. Ad esempio, un rivenditore può creare un pubblico con lo stato di fedeltà e i dati sulla posizione (attributi da Platform) e [!DNL Airship] si prevede che abbandoneranno i dati per inviare messaggi altamente mirati agli utenti con status di fidelizzazione all’oro che vivono a Las Vegas, NV, e hanno un’alta probabilità di abbandono.
+Sfrutta gli attributi di Adobe Experience Platform per arricchire ulteriormente i profili [!DNL Airship] e combinarli con l&#39;SDK o con i dati predittivi [!DNL Airship]. Ad esempio, un rivenditore può creare un pubblico con lo stato di fedeltà e i dati sulla posizione (attributi da Platform) e [!DNL Airship] prevede di abbandonarli per inviare messaggi altamente mirati agli utenti con lo stato di fedeltà all&#39;oro che vivono a Las Vegas, NV, e hanno un&#39;alta probabilità di abbandono.
 
 ## Connettersi alla destinazione {#connect}
 
 >[!IMPORTANT]
 > 
->Per connettersi alla destinazione, è necessario **[!UICONTROL Visualizza destinazioni]** e **[!UICONTROL Gestire le destinazioni]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>Per connettersi alla destinazione, sono necessarie le **[!UICONTROL Destinazioni visualizzazione]** e le **[!UICONTROL Autorizzazioni di gestione delle destinazioni]** [per il controllo degli accessi](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Per connettersi a questa destinazione, seguire i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
+Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
 
 ### Autenticarsi nella destinazione {#authenticate}
 
-Per autenticare nella destinazione, compila i campi obbligatori e seleziona **[!UICONTROL Connetti alla destinazione]**.
+Per eseguire l&#39;autenticazione nella destinazione, compilare i campi obbligatori e selezionare **[!UICONTROL Connetti alla destinazione]**.
 
-* **[!UICONTROL Token Bearer]**: il token Bearer generato da [!DNL Airship] dashboard.
+* **[!UICONTROL Token Bearer]**: il token Bearer generato dal dashboard [!DNL Airship].
 
 ### Inserire i dettagli della destinazione {#destination-details}
 
 Per configurare i dettagli per la destinazione, compila i campi obbligatori e facoltativi seguenti. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 
-* **[!UICONTROL Nome]**: inserisci un nome che ti aiuterà a identificare questa destinazione.
-* **[!UICONTROL Descrizione]**: inserisci una descrizione per questa destinazione.
-* **[!UICONTROL Dominio]**: seleziona un centro dati statunitense o dell’UE, a seconda di quale [!DNL Airship] data center applicabile a questa destinazione.
+* **[!UICONTROL Nome]**: immettere un nome che consenta di identificare la destinazione.
+* **[!UICONTROL Descrizione]**: immettere una descrizione per questa destinazione.
+* **[!UICONTROL Dominio]**: selezionare un data center statunitense o dell&#39;UE, a seconda del data center [!DNL Airship] applicabile a questa destinazione.
 
 ### Abilita avvisi {#enable-alerts}
 
-Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati verso la tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento agli avvisi sulle destinazioni tramite l’interfaccia utente](../../ui/alerts.md).
+Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati verso la tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento a destinazioni avvisi tramite l&#39;interfaccia utente](../../ui/alerts.md).
 
-Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
+Dopo aver fornito i dettagli per la connessione di destinazione, seleziona **[!UICONTROL Avanti]**.
 
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 
->* Per attivare i dati, è necessario **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
->* Per esportare *identità*, è necessario **[!UICONTROL Visualizza grafico delle identità]** [autorizzazione per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
+>* Per attivare i dati, è necessario **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attiva destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizza segmenti]** [Autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL Visualizza grafo identità]** [Controllo di accesso](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 
-Consulta [Attiva i dati del pubblico nelle destinazioni di esportazione del pubblico in streaming](../../ui/activate-segment-streaming-destinations.md) per istruzioni sull’attivazione dei tipi di pubblico in questa destinazione.
+Per istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione, consulta [Attivare i dati del pubblico nelle destinazioni di esportazione del pubblico in streaming](../../ui/activate-segment-streaming-destinations.md).
 
 ## Considerazioni sulla mappatura {#mapping-considerations}
 
-[!DNL Airship] gli attributi possono essere impostati su un canale, che rappresenta un’istanza del dispositivo, ad esempio iPhone, oppure su un utente con nome, che mappa tutti i dispositivi di un utente su un identificatore comune, ad esempio un ID cliente. Se nello schema sono presenti indirizzi e-mail di testo normale (senza hash) come identità principale, seleziona il campo e-mail nel tuo **[!UICONTROL Attributi Source]** e mappare su [!DNL Airship] utente con nome nella colonna di destra in **[!UICONTROL Identità di destinazione]**, come illustrato di seguito.
+Gli attributi [!DNL Airship] possono essere impostati su un canale, che rappresenta un&#39;istanza del dispositivo, ad esempio iPhone, oppure su un utente con nome, che mappa tutti i dispositivi di un utente su un identificatore comune, ad esempio un ID cliente. Se nello schema sono presenti indirizzi e-mail di testo normale (senza hash) come identità principale, seleziona il campo e-mail in **[!UICONTROL Attributi Source]** e mappali all&#39;utente denominato [!DNL Airship] nella colonna di destra in **[!UICONTROL Identità Target]**, come illustrato di seguito.
 
-![Mappatura utente denominato](../../assets/catalog/mobile-engagement/airship/mapping.png)
+![Mapping utente denominato](../../assets/catalog/mobile-engagement/airship/mapping.png)
 
 Per gli identificatori che devono essere mappati su un canale, ovvero un dispositivo, mappa sul canale appropriato in base alla sorgente. Le immagini seguenti mostrano come vengono create due mappature:
 
-* IDFA iOS Advertising ID in un [!DNL Airship] Canale iOS
-* Adobe `fullName` attribuire a [!DNL Airship] Attributo &quot;Nome completo&quot;
+* ID Advertising IDFA iOS in un canale iOS [!DNL Airship]
+* Attributo Adobe `fullName` all&#39;attributo &quot;Full Name&quot; di [!DNL Airship]
 
 >[!NOTE]
 >
->Utilizza il nome descrittivo visualizzato in [!DNL Airship] quando si seleziona il campo di destinazione per la mappatura degli attributi.
+>Utilizza il nome descrittivo visualizzato nel dashboard [!DNL Airship] quando selezioni il campo di destinazione per la mappatura degli attributi.
 
 **Identità mappa**
 
@@ -164,4 +164,4 @@ Verifica mappatura:
 
 ## Utilizzo dei dati e governance {#data-usage-governance}
 
-Tutti [!DNL Adobe Experience Platform] le destinazioni sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] applica la governance dei dati, consulta la sezione [Panoramica sulla governance dei dati](../../../data-governance/home.md).
+Tutte le destinazioni [!DNL Adobe Experience Platform] sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] applica la governance dei dati, vedi [Panoramica sulla governance dei dati](../../../data-governance/home.md).

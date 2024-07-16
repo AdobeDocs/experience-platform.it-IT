@@ -13,16 +13,16 @@ exl-id: b3f84ed8-09e8-470e-b5e2-944a4eaf147b
 source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
 workflow-type: tm+mt
 source-wordcount: '101'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
-# Panoramica sugli schemi unione
+# Panoramica sugli schemi di unione
 
-Questo video offre informazioni di base sugli schemi di unione in Adobe Experience Platform e illustra come esplorare uno schema di unione utilizzando l’interfaccia utente di Platform. Per ulteriori informazioni sugli schemi di unione, visitare il sito Web [guida dell’interfaccia utente degli schemi di unione](../ui/union-schema.md).
+Questo video offre informazioni di base sugli schemi di unione in Adobe Experience Platform e illustra come esplorare uno schema di unione utilizzando l’interfaccia utente di Platform. Per ulteriori informazioni sugli schemi unione, consulta la [guida dell&#39;interfaccia utente degli schemi unione](../ui/union-schema.md).
 
 >[!NOTE]
 >
->L’interfaccia utente di Experience Platform viene aggiornata frequentemente e potrebbe essere cambiata dopo la registrazione del video. Per informazioni aggiornate, fare riferimento al [guida dell’interfaccia utente degli schemi di unione](../ui/union-schema.md).
+>L’interfaccia utente di Experience Platform viene aggiornata frequentemente e potrebbe essere cambiata dopo la registrazione del video. Per informazioni aggiornate, consulta la [guida dell&#39;interfaccia utente degli schemi di unione](../ui/union-schema.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/329940?quality=12&learn=on&captions=eng)

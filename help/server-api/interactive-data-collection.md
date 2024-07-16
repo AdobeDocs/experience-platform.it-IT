@@ -17,9 +17,9 @@ Gli endpoint di raccolta dati interattivi ricevono un singolo evento e vengono u
 
 >[!IMPORTANT]
 >
->Il `/interact` L’endpoint è progettato principalmente per essere utilizzato dagli SDK Experienci Platform. Questo endpoint è soggetto a cambiamenti aggiuntivi e il suo comportamento può evolvere senza preavviso. Ad esempio, nuovi elementi potrebbero essere aggiunti al payload di risposta in futuro.
+>L&#39;endpoint `/interact` è progettato principalmente per essere utilizzato dagli SDK Experience Platform. Questo endpoint è soggetto a cambiamenti aggiuntivi e il suo comportamento può evolvere senza preavviso. Ad esempio, nuovi elementi potrebbero essere aggiunti al payload di risposta in futuro.
 
-La risposta del server include uno o più `Handle` come mostrato di seguito.
+La risposta del server include uno o più oggetti `Handle`, come illustrato di seguito.
 
 ## Esempio di chiamata API
 
@@ -71,7 +71,7 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 
 ### Risposta {#response}
 
-Una risposta corretta restituisce lo stato HTTP `200 OK`, con uno o più `Handle` a seconda dei servizi edge in tempo reale abilitati nella configurazione dello stream di dati.
+In caso di esito positivo, la risposta restituisce lo stato HTTP `200 OK`, con uno o più oggetti `Handle`, a seconda dei servizi edge in tempo reale abilitati nella configurazione dello stream di dati.
 
 ```json
 {

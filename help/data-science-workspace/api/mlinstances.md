@@ -14,13 +14,13 @@ ht-degree: 3%
 
 # Endpoint MLInstance
 
-Un&#39;istanza MLI è un accoppiamento di un&#39;istanza esistente [Motore](./engines.md) con un set appropriato di configurazioni che definisce eventuali parametri di formazione, parametri di punteggio o configurazioni di risorse hardware.
+Un MLInstance è un accoppiamento di un [motore](./engines.md) esistente con un set di configurazioni appropriato che definisce eventuali parametri di formazione, parametri di punteggio o configurazioni di risorse hardware.
 
 ## Creare un&#39;istanza MLI {#create-an-mlinstance}
 
-Per creare un’istanza MLInstance, devi eseguire una richiesta POST e fornire un payload di richiesta costituito da un ID motore valido (`{ENGINE_ID}`) e un set appropriato di configurazioni predefinite.
+È possibile creare un&#39;istanza MLI eseguendo una richiesta POST e fornendo un payload di richiesta costituito da un ID motore valido (`{ENGINE_ID}`) e da un set appropriato di configurazioni predefinite.
 
-Se l’ID motore fa riferimento a un PySpark o a un motore Spark, puoi configurare la quantità di risorse di calcolo, ad esempio il numero di core o la quantità di memoria. Se si fa riferimento a un motore Python, è possibile scegliere se utilizzare una CPU o una GPU a scopo di formazione e punteggio. Consultare le sezioni dell&#39;appendice su [Configurazioni delle risorse PySpark e Spark](./appendix.md#resource-config) e [Configurazioni CPU e GPU Python](./appendix.md#cpu-gpu-config) per ulteriori informazioni.
+Se l’ID motore fa riferimento a un PySpark o a un motore Spark, puoi configurare la quantità di risorse di calcolo, ad esempio il numero di core o la quantità di memoria. Se si fa riferimento a un motore Python, è possibile scegliere se utilizzare una CPU o una GPU a scopo di formazione e punteggio. Per ulteriori informazioni, consulta le sezioni dell&#39;appendice sulle [configurazioni delle risorse PySpark e Spark](./appendix.md#resource-config) e [configurazioni della CPU e della GPU Python](./appendix.md#cpu-gpu-config).
 
 **Formato API**
 
@@ -130,7 +130,7 @@ In caso di esito positivo, la risposta restituisce un payload contenente i detta
 
 ## Recuperare un elenco di istanze MLI
 
-Per recuperare un elenco di MLInstance, esegui una singola richiesta GET. Per filtrare i risultati, puoi specificare i parametri di query nel percorso della richiesta. Per un elenco delle query disponibili, consulta la sezione dell’appendice su [parametri di query per il recupero delle risorse](./appendix.md#query).
+Per recuperare un elenco di MLInstance, esegui una singola richiesta GET. Per filtrare i risultati, puoi specificare i parametri di query nel percorso della richiesta. Per un elenco delle query disponibili, consulta la sezione dell&#39;appendice sui [parametri di query per il recupero delle risorse](./appendix.md#query).
 
 **Formato API**
 
@@ -142,7 +142,7 @@ GET /mlInstances?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{QUERY_PARAMETER}` | Uno dei [parametri di query disponibili](./appendix.md#query) utilizzato per filtrare i risultati. |
+| `{QUERY_PARAMETER}` | Uno dei [parametri di query disponibili](./appendix.md#query) utilizzati per filtrare i risultati. |
 | `{VALUE}` | Valore per il parametro di query precedente. |
 
 **Richiesta**
@@ -275,7 +275,7 @@ Puoi aggiornare un’istanza MLI esistente sovrascrivendo le relative proprietà
 
 >[!TIP]
 >
->Per garantire il successo di questa richiesta PUT, si consiglia di eseguire prima una richiesta GET a [recuperare l’istanza MLI per ID](#retrieve-specific). Quindi, modifica e aggiorna l’oggetto JSON restituito e applica l’intero oggetto JSON modificato come payload per la richiesta PUT.
+>Per garantire il successo di questa richiesta PUT, si consiglia di eseguire prima una richiesta GET per [recuperare l&#39;istanza MLInstance tramite ID](#retrieve-specific). Quindi, modifica e aggiorna l’oggetto JSON restituito e applica l’intero oggetto JSON modificato come payload per la richiesta PUT.
 
 La seguente chiamata API di esempio aggiornerà i parametri di formazione e punteggio di un’istanza MLI durante l’utilizzo iniziale di queste proprietà:
 

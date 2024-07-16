@@ -13,28 +13,28 @@ ht-degree: 3%
 
 # Endpoint &quot;segment jobs&quot;
 
-Un processo di segmentazione è un processo asincrono che crea un segmento di pubblico su richiesta. Fa riferimento a un [definizione del segmento](./segment-definitions.md), nonché qualsiasi [criteri di unione](../../profile/api/merge-policies.md) controllo della modalità [!DNL Real-Time Customer Profile] unisce attributi sovrapposti tra i frammenti di profilo. Al termine di un processo di segmentazione, puoi raccogliere varie informazioni sul segmento, ad esempio eventuali errori che si sono verificati durante l’elaborazione e le dimensioni finali del pubblico.
+Un processo di segmentazione è un processo asincrono che crea un segmento di pubblico su richiesta. Fa riferimento a una [definizione segmento](./segment-definitions.md), nonché a qualsiasi [criterio di unione](../../profile/api/merge-policies.md) che controlla come [!DNL Real-Time Customer Profile] unisce attributi sovrapposti nei frammenti di profilo. Al termine di un processo di segmentazione, puoi raccogliere varie informazioni sul segmento, ad esempio eventuali errori che si sono verificati durante l’elaborazione e le dimensioni finali del pubblico.
 
 Questa guida fornisce informazioni utili per comprendere meglio i processi dei segmenti e include chiamate API di esempio per eseguire azioni di base utilizzando l’API.
 
 ## Introduzione
 
-Gli endpoint utilizzati in questa guida fanno parte del [!DNL Adobe Experience Platform Segmentation Service] API. Prima di continuare, controlla [guida introduttiva](./getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all’API, incluse le intestazioni richieste e la lettura di esempi di chiamate API.
+Gli endpoint utilizzati in questa guida fanno parte dell&#39;API [!DNL Adobe Experience Platform Segmentation Service]. Prima di continuare, consulta la [guida introduttiva](./getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all&#39;API, incluse le intestazioni richieste e la lettura delle chiamate API di esempio.
 
 ## Recuperare un elenco di processi di segmentazione {#retrieve-list}
 
-Per recuperare un elenco di tutti i processi di segmentazione per la tua organizzazione, devi effettuare una richiesta GET al `/segment/jobs` endpoint.
+Per recuperare un elenco di tutti i processi dei segmenti per l&#39;organizzazione, eseguire una richiesta GET all&#39;endpoint `/segment/jobs`.
 
 **Formato API**
 
-Il `/segment/jobs` l’endpoint supporta diversi parametri di query per aiutare a filtrare i risultati. Anche se questi parametri sono facoltativi, si consiglia vivamente di utilizzarli per ridurre i costi generali. Effettuando una chiamata a questo endpoint senza parametri, verranno recuperati tutti i processi di esportazione disponibili per la tua organizzazione. È possibile includere più parametri, separati da e commerciali (`&`).
+L&#39;endpoint `/segment/jobs` supporta diversi parametri di query per filtrare i risultati. Anche se questi parametri sono facoltativi, si consiglia vivamente di utilizzarli per ridurre i costi generali. Effettuando una chiamata a questo endpoint senza parametri, verranno recuperati tutti i processi di esportazione disponibili per la tua organizzazione. È possibile includere più parametri, separati da e commerciali (`&`).
 
 ```http
 GET /segment/jobs
 GET /segment/jobs?{QUERY_PARAMETERS}
 ```
 
-**Parametri di query**
+**Parametri query**
 
 | Parametro | Descrizione | Esempio |
 | --------- | ----------- | ------- |
@@ -42,7 +42,7 @@ GET /segment/jobs?{QUERY_PARAMETERS}
 | `limit` | Specifica il numero di processi di segmento restituiti per pagina. | `limit=20` |
 | `status` | Filtra i risultati in base allo stato. I valori supportati sono NEW, QUEUED, PROCESSING, SUCCESSEDED, FAILED, CANCELING, CANCELED | `status=NEW` |
 | `sort` | Ordina i processi segmento restituiti. È scritto nel formato `[attributeName]:[desc|asc]`. | `sort=creationTime:desc` |
-| `property` | Filtra i processi di segmentazione e ottiene corrispondenze esatte per il filtro specificato. Può essere scritto in uno dei seguenti formati: <ul><li>`[jsonObjectPath]==[value]` : filtro sulla chiave oggetto</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` - filtro all&#39;interno dell&#39;array</li></ul> | `property=segments~segmentId==workInUS` |
+| `property` | Filtra i processi di segmentazione e ottiene corrispondenze esatte per il filtro specificato. Può essere scritto in uno dei seguenti formati: <ul><li>`[jsonObjectPath]==[value]` - filtro sulla chiave oggetto</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` - filtro all&#39;interno dell&#39;array</li></ul> | `property=segments~segmentId==workInUS` |
 
 **Richiesta**
 
@@ -58,9 +58,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elenco di processi di segmento per l’organizzazione specificata come JSON. Tuttavia, la risposta sarà diversa, a seconda del numero di definizioni di segmento all’interno del processo di segmentazione.
 
-**Meno di o uguale a 1500 definizioni di segmento nel processo di segmentazione**
+**Definizioni di segmenti minori o uguali a 1500 nel processo di segmentazione**
 
-Se nel processo di segmentazione vengono eseguite meno di 1500 definizioni di segmento, all’interno di verrà visualizzato un elenco completo di tutte le definizioni di segmento `children.segments` attributo.
+Se nel processo di segmentazione vengono eseguite meno di 1500 definizioni di segmento, nell&#39;attributo `children.segments` verrà visualizzato un elenco completo di tutte le definizioni di segmento.
 
 >[!NOTE]
 >
@@ -168,7 +168,7 @@ Se nel processo di segmentazione vengono eseguite meno di 1500 definizioni di se
 
 **Più di 1500 definizioni di segmenti**
 
-Se nel processo di segmentazione vengono eseguite più di 1500 definizioni di segmento, il `children.segments` verrà visualizzato l&#39;attributo `*`, che indica che tutte le definizioni dei segmenti vengono valutate.
+Se nel processo di segmentazione vengono eseguite più di 1500 definizioni di segmento, l&#39;attributo `children.segments` visualizzerà `*`, indicando che tutte le definizioni di segmento sono in fase di valutazione.
 
 >[!NOTE]
 >
@@ -278,7 +278,7 @@ Se nel processo di segmentazione vengono eseguite più di 1500 definizioni di se
 
 ## Crea un nuovo processo di segmentazione {#create}
 
-Per creare un nuovo processo di segmentazione, devi effettuare una richiesta POST al `/segment/jobs` e includendo nel corpo l’ID della definizione del segmento da cui desideri creare un nuovo pubblico.
+Per creare un nuovo processo di segmentazione, devi eseguire una richiesta POST all&#39;endpoint `/segment/jobs` e includere nel corpo l&#39;ID della definizione del segmento da cui desideri creare un nuovo pubblico.
 
 **Formato API**
 
@@ -288,7 +288,7 @@ POST /segment/jobs
 
 Quando crei un nuovo processo di segmentazione, la richiesta e la risposta variano a seconda del numero di definizioni di segmento all’interno del processo di segmentazione.
 
-**Meno di o uguale a 1500 definizioni di segmento nel processo di segmentazione**
+**Definizioni di segmenti minori o uguali a 1500 nel processo di segmentazione**
 
 **Richiesta**
 
@@ -308,7 +308,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `segmentId` | ID della definizione del segmento per cui desideri creare un processo di segmentazione. Queste definizioni dei segmenti possono appartenere a diversi criteri di unione. Ulteriori informazioni sulle definizioni dei segmenti sono disponibili nella sezione [guida dell’endpoint di definizione del segmento](./segment-definitions.md). |
+| `segmentId` | ID della definizione del segmento per cui desideri creare un processo di segmentazione. Queste definizioni dei segmenti possono appartenere a diversi criteri di unione. Ulteriori informazioni sulle definizioni dei segmenti sono disponibili nella [guida dell&#39;endpoint di definizione dei segmenti](./segment-definitions.md). |
 
 **Risposta**
 
@@ -417,7 +417,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 
 >[!NOTE]
 >
->Anche se è possibile creare un processo di segmentazione con più di 1500 definizioni di segmenti, **altamente non consigliato**.
+>Anche se è possibile creare un processo di segmentazione con più di 1500 definizioni di segmenti, si tratta di **operazione non consigliata**.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
@@ -441,7 +441,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `schema.name` | Nome dello schema per le definizioni dei segmenti. |
-| `segments.segmentId` | Quando si esegue un processo di segmentazione con più di 1500 segmenti, è necessario trasmettere `*` come ID del segmento per indicare che desideri eseguire un processo di segmentazione con tutti i segmenti. |
+| `segments.segmentId` | Quando si esegue un processo di segmentazione con più di 1500 segmenti, è necessario passare `*` come ID segmento per indicare che si desidera eseguire un processo di segmentazione con tutti i segmenti. |
 
 **Risposta**
 
@@ -528,11 +528,11 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 | `id` | Identificatore di sola lettura generato dal sistema per il processo di segmentazione appena creato. |
 | `status` | Lo stato corrente del processo di segmentazione. Poiché il processo di segmentazione è stato appena creato, lo stato sarà sempre `NEW`. |
 | `segments` | Oggetto contenente informazioni sulle definizioni dei segmenti per cui è in esecuzione questo processo di segmentazione. |
-| `segments.segment.id` | Il `*` significa che questo processo di segmentazione è in esecuzione per tutte le definizioni di segmenti all’interno dell’organizzazione. |
+| `segments.segment.id` | `*` significa che questo processo di segmentazione è in esecuzione per tutte le definizioni di segmenti all&#39;interno della tua organizzazione. |
 
 ## Recuperare un processo di segmento specifico {#get}
 
-Per recuperare informazioni dettagliate su un processo di segmentazione specifico, effettua una richiesta di GET al `/segment/jobs` e fornendo l’ID del processo di segmentazione da recuperare nel percorso della richiesta.
+Per recuperare informazioni dettagliate su un processo di segmentazione specifico, effettua una richiesta di GET all&#39;endpoint `/segment/jobs` e fornisci l&#39;ID del processo di segmentazione da recuperare nel percorso della richiesta.
 
 **Formato API**
 
@@ -542,7 +542,7 @@ GET /segment/jobs/{SEGMENT_JOB_ID}
 
 | Proprietà | Descrizione |
 | -------- | ----------- | 
-| `{SEGMENT_JOB_ID}` | Il `id` valore del processo di segmentazione che desideri recuperare. |
+| `{SEGMENT_JOB_ID}` | Il valore `id` del processo di segmentazione che si desidera recuperare. |
 
 **Richiesta**
 
@@ -558,9 +558,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 
 In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informazioni dettagliate sul processo di segmentazione specificato.  Tuttavia, la risposta varia a seconda del numero di definizioni di segmento all’interno del processo di segmentazione.
 
-**Meno di o uguale a 1500 definizioni di segmento nel processo di segmentazione**
+**Definizioni di segmenti minori o uguali a 1500 nel processo di segmentazione**
 
-Se nel processo di segmentazione vengono eseguite meno di 1500 definizioni di segmento, all’interno di verrà visualizzato un elenco completo di tutte le definizioni di segmento `children.segments` attributo.
+Se nel processo di segmentazione vengono eseguite meno di 1500 definizioni di segmento, nell&#39;attributo `children.segments` verrà visualizzato un elenco completo di tutte le definizioni di segmento.
 
 ```json
 {
@@ -624,7 +624,7 @@ Se nel processo di segmentazione vengono eseguite meno di 1500 definizioni di se
 
 **Più di 1500 definizioni di segmenti**
 
-Se nel processo di segmentazione vengono eseguite più di 1500 definizioni di segmento, il `children.segments` verrà visualizzato l&#39;attributo `*`, che indica che tutte le definizioni dei segmenti vengono valutate.
+Se nel processo di segmentazione vengono eseguite più di 1500 definizioni di segmento, l&#39;attributo `children.segments` visualizzerà `*`, indicando che tutte le definizioni di segmento sono in fase di valutazione.
 
 ```json
 {
@@ -713,7 +713,7 @@ Se nel processo di segmentazione vengono eseguite più di 1500 definizioni di se
 
 ## Processi di recupero in blocco dei segmenti {#bulk-get}
 
-Per recuperare informazioni dettagliate su più processi di segmentazione, effettua una richiesta POST al `/segment/jobs/bulk-get` endpoint e fornitura di  `id` valori dei processi di segmentazione nel corpo della richiesta.
+Per recuperare informazioni dettagliate su più processi di segmentazione, effettua una richiesta POST all&#39;endpoint `/segment/jobs/bulk-get` e fornisci i valori `id` dei processi di segmentazione nel corpo della richiesta.
 
 **Formato API**
 
@@ -744,7 +744,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce lo stato HTTP 207 con i processi di segmento richiesti. Tuttavia, il valore del `children.segments` L’attributo varia se il processo di segmentazione è in esecuzione per più di 1500 definizioni di segmento.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 207 con i processi di segmento richiesti. Tuttavia, il valore dell&#39;attributo `children.segments` varia se il processo di segmentazione è in esecuzione per più di 1500 definizioni di segmenti.
 
 >[!NOTE]
 >
@@ -806,7 +806,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 207 con i proce
 
 ## Annullare o eliminare un processo di segmento specifico {#delete}
 
-Per eliminare un processo di segmentazione specifico, devi effettuare una richiesta DELETE al `/segment/jobs` e fornendo l’ID del processo di segmentazione da eliminare nel percorso della richiesta.
+Per eliminare un processo di segmentazione specifico, devi eseguire una richiesta DELETE all&#39;endpoint `/segment/jobs` e fornire l&#39;ID del processo di segmentazione da eliminare nel percorso della richiesta.
 
 >[!NOTE]
 >
@@ -820,7 +820,7 @@ DELETE /segment/jobs/{SEGMENT_JOB_ID}
 
 | Proprietà | Descrizione |
 | -------- | ----------- | 
-| `{SEGMENT_JOB_ID}` | Il `id` valore del processo di segmentazione da eliminare. |
+| `{SEGMENT_JOB_ID}` | Valore `id` del processo di segmentazione da eliminare. |
 
 **Richiesta**
 

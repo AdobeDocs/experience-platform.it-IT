@@ -13,31 +13,31 @@ ht-degree: 0%
 
 Gli attributi dell’interfaccia utente definiscono gli elementi visivi che Adobe deve visualizzare per la scheda di destinazione nell’interfaccia utente di Adobe Experience Platform, ad esempio un logo, un collegamento alla pagina della documentazione, una descrizione della destinazione e la relativa categoria e tipo.
 
-Per capire dove questo componente si inserisce in un’integrazione creata con Destination SDK, consulta il diagramma riportato di seguito. [opzioni di configurazione](../configuration-options.md) oppure consulta le seguenti pagine di panoramica sulla configurazione di destinazione:
+Per capire dove questo componente si inserisce in un&#39;integrazione creata con Destination SDK, consulta il diagramma nella documentazione delle [opzioni di configurazione](../configuration-options.md) oppure vedi le seguenti pagine di panoramica sulla configurazione di destinazione:
 
 * [Utilizzare Destination SDK per configurare una destinazione di streaming](../../guides/configure-destination-instructions.md#create-destination-configuration)
 * [Utilizzare Destination SDK per configurare una destinazione basata su file](../../guides/configure-file-based-destination-instructions.md#create-destination-configuration)
 
-Quando [creazione di una destinazione](../../authoring-api/destination-configuration/create-destination-configuration.md) attraverso la Destination SDK, `uiAttributes` definisce le seguenti proprietà visive della scheda di destinazione:
+Quando [crei una destinazione](../../authoring-api/destination-configuration/create-destination-configuration.md) tramite Destination SDK, la sezione `uiAttributes` definisce le seguenti proprietà visive della scheda di destinazione:
 
-* L&#39;URL della pagina di documentazione di destinazione in [catalogo di destinazione](../../../catalog/overview.md).
+* URL della pagina della documentazione di destinazione nel [catalogo di destinazione](../../../catalog/overview.md).
 * La categoria in cui la destinazione sarà visibile nell’interfaccia utente di Platform.
 * La frequenza di esportazione dei dati per la destinazione.
 * Il tipo di connessione di destinazione, ad esempio Amazon S3, BLOB di Azure e così via.
 * L’URL in cui hai ospitato l’icona da visualizzare nella scheda del catalogo delle destinazioni.
 
-Puoi configurare gli attributi dell’interfaccia utente tramite `/authoring/destinations` endpoint. Consulta le seguenti pagine di riferimento API per esempi dettagliati di chiamate API, in cui puoi configurare i componenti mostrati in questa pagina.
+È possibile configurare gli attributi dell&#39;interfaccia utente tramite l&#39;endpoint `/authoring/destinations`. Consulta le seguenti pagine di riferimento API per esempi dettagliati di chiamate API, in cui puoi configurare i componenti mostrati in questa pagina.
 
 * [Creare una configurazione di destinazione](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [Aggiornare una configurazione di destinazione](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-Questo articolo descrive tutti gli attributi supportati dell’interfaccia utente che puoi utilizzare per la tua destinazione e mostra cosa vedranno i clienti nell’interfaccia utente di Experienci Platform.
+Questo articolo descrive tutti gli attributi supportati dell’interfaccia utente che puoi utilizzare per la tua destinazione e mostra cosa vedranno i clienti nell’interfaccia utente di Experience Platform.
 
-![Schermata dell’interfaccia utente che mostra gli attributi dell’interfaccia utente nell’interfaccia di Experience Platform](../../assets/functionality/destination-configuration/ui-attributes.png)
+![Schermata dell&#39;interfaccia utente che mostra gli attributi dell&#39;interfaccia utente nell&#39;interfaccia Experience Platform](../../assets/functionality/destination-configuration/ui-attributes.png)
 
 >[!IMPORTANT]
 >
->Tutti i nomi e i valori dei parametri supportati da Destination SDK sono **distinzione maiuscole/minuscole**. Per evitare errori di distinzione tra maiuscole e minuscole, utilizza i nomi e i valori dei parametri esattamente come mostrato nella documentazione.
+>Tutti i nomi e i valori dei parametri supportati da Destination SDK sono **con distinzione tra maiuscole e minuscole**. Per evitare errori di distinzione tra maiuscole e minuscole, utilizza i nomi e i valori dei parametri esattamente come mostrato nella documentazione.
 
 ## Tipi di integrazione supportati {#supported-integration-types}
 
@@ -62,13 +62,13 @@ Consulta la tabella seguente per informazioni dettagliate sui tipi di integrazio
 
 ### `documentationLink` {#documentation-link}
 
-`documentationLink` è un parametro stringa che fa riferimento alla pagina della documentazione in [Catalogo delle destinazioni](../../../catalog/overview.md) per la tua destinazione. Ogni destinazione prodotta in Adobe Experience Platform deve avere una pagina di documentazione corrispondente. [Scopri come creare una pagina della documentazione di destinazione](../../docs-framework/documentation-instructions.md) per la tua destinazione. Tieni presente che questo non è richiesto per le destinazioni private/personalizzate.
+`documentationLink` è un parametro di stringa che fa riferimento alla pagina della documentazione nel [Catalogo destinazioni](../../../catalog/overview.md) per la tua destinazione. Ogni destinazione prodotta in Adobe Experience Platform deve avere una pagina di documentazione corrispondente. [Scopri come creare una pagina della documentazione di destinazione](../../docs-framework/documentation-instructions.md) per la tua destinazione. Tieni presente che questo non è richiesto per le destinazioni private/personalizzate.
 
-Utilizza il seguente formato: `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, dove `YOURDESTINATION` è il nome della destinazione. Per una destinazione chiamata Moviestar, puoi utilizzare `http://www.adobe.com/go/destinations-moviestar-en`.
+Utilizzare il seguente formato: `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, dove `YOURDESTINATION` è il nome della destinazione. Per una destinazione denominata Moviestar, si utilizza `http://www.adobe.com/go/destinations-moviestar-en`.
 
-Gli utenti possono visualizzare e visitare il collegamento alla documentazione dalla pagina del catalogo delle destinazioni nell’interfaccia utente di. Devono passare alla scheda di destinazione, quindi selezionare **[!UICONTROL Altre azioni]**, e quindi **[!UICONTROL Visualizza documentazione]**, come illustrato nell&#39;immagine seguente.
+Gli utenti possono visualizzare e visitare il collegamento alla documentazione dalla pagina del catalogo delle destinazioni nell’interfaccia utente di. Devono passare alla scheda di destinazione, quindi selezionare **[!UICONTROL Altre azioni]** e **[!UICONTROL Visualizza documentazione]**, come illustrato nell&#39;immagine seguente.
 
-![Immagine dell’interfaccia utente che mostra la posizione del collegamento alla documentazione.](../../assets/functionality/destination-configuration/ui-attributes-doc-link.png)
+![Immagine dell&#39;interfaccia utente che mostra il percorso del collegamento alla documentazione.](../../assets/functionality/destination-configuration/ui-attributes-doc-link.png)
 
 >[!NOTE]
 >
@@ -76,43 +76,43 @@ Gli utenti possono visualizzare e visitare il collegamento alla documentazione d
 
 ### `category` {#category}
 
-`category` è un parametro stringa che fa riferimento alla categoria assegnata alla tua destinazione in Adobe Experience Platform. Per ulteriori informazioni, consulta [Categorie di destinazione](../../../destination-types.md). Utilizza uno dei seguenti valori: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`.
+`category` è un parametro di stringa che fa riferimento alla categoria assegnata alla tua destinazione in Adobe Experience Platform. Per ulteriori informazioni, leggere [Categorie di destinazione](../../../destination-types.md). Utilizzare uno dei valori seguenti: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`.
 
 Gli utenti possono visualizzare l’elenco delle categorie di destinazione sul lato sinistro della schermata nel catalogo di destinazione, come illustrato nell’immagine seguente.
 
-![Immagine dell&#39;interfaccia utente che mostra la posizione della categoria di destinazione.](../../assets/functionality/destination-configuration/ui-attributes-category.png)
+![Immagine dell&#39;interfaccia utente che mostra il percorso della categoria di destinazione.](../../assets/functionality/destination-configuration/ui-attributes-category.png)
 
 ### `connectionType` {#connection-type}
 
 `connectionType` è un parametro di stringa che fa riferimento al tipo di connessione, a seconda della destinazione. Valori supportati: <ul><li>`Server-to-server`</li><li>`Cloud storage`</li><li>`Azure Blob`</li><li>`Azure Data Lake Storage`</li><li>`S3`</li><li>`SFTP`</li><li>`DLZ`</li></ul>
 
-Gli utenti possono visualizzare il tipo di connessione di destinazione nel [Sfoglia](../../../ui/destinations-workspace.md#browse) dell’area di lavoro destinazioni.
+Gli utenti possono visualizzare il tipo di connessione di destinazione nella scheda [Sfoglia](../../../ui/destinations-workspace.md#browse) dell&#39;area di lavoro delle destinazioni.
 
-![Immagine dell’interfaccia utente che mostra la posizione del tipo di connessione nell’interfaccia utente.](../../assets/functionality/destination-configuration/ui-attributes-connection.png)
+![Immagine dell&#39;interfaccia utente che mostra il percorso del tipo di connessione nell&#39;interfaccia utente.](../../assets/functionality/destination-configuration/ui-attributes-connection.png)
 
 ### `frequency` {#frequency}
 
-`frequency` è un parametro stringa che fa riferimento al tipo di esportazione dei dati supportato dalla destinazione. Imposta su `Streaming` per integrazioni basate su API, oppure `Batch` quando si esportano file nelle destinazioni.
+`frequency` è un parametro di stringa che fa riferimento al tipo di esportazione dei dati supportato dalla destinazione. Impostato su `Streaming` per le integrazioni basate su API, oppure su `Batch` quando si esportano file nelle destinazioni.
 
-Gli utenti possono visualizzare il tipo di frequenza nel **[!UICONTROL Il flusso di dati viene eseguito]** di ogni connessione di destinazione.
+Gli utenti possono visualizzare il tipo di frequenza nella pagina **[!UICONTROL Il flusso di dati viene eseguito]** di ogni connessione di destinazione.
 
-![Immagine dell’interfaccia utente che mostra la posizione del tipo di frequenza nell’interfaccia utente.](../../assets/functionality/destination-configuration/ui-attributes-frequency.png)
+![Immagine dell&#39;interfaccia utente che mostra la posizione del tipo di frequenza nell&#39;interfaccia utente.](../../assets/functionality/destination-configuration/ui-attributes-frequency.png)
 
 ### `isBeta` {#isbeta}
 
 Se la destinazione che stai creando con Destination SDK sarà disponibile per un numero limitato di clienti, puoi contrassegnare la scheda di destinazione dal catalogo di destinazione come versione beta.
 
-A questo scopo, puoi utilizzare `isBeta: "true"` nella sezione degli attributi dell’interfaccia utente della configurazione di destinazione per contrassegnare la scheda di destinazione in modo appropriato.
+A questo scopo, puoi utilizzare il parametro `isBeta: "true"` nella sezione degli attributi dell&#39;interfaccia utente della configurazione di destinazione per contrassegnare la scheda di destinazione in modo appropriato.
 
-![Immagine dell’interfaccia utente che mostra una scheda di destinazione contrassegnata come beta.](../../assets/functionality/destination-configuration/ui-attributes-isbeta.png)
+![Immagine dell&#39;interfaccia utente che mostra una scheda di destinazione contrassegnata come beta.](../../assets/functionality/destination-configuration/ui-attributes-isbeta.png)
 
 ### `icon` {#icon}
 
 È possibile aggiungere un&#39;icona del logo alla destinazione, come illustrato nell&#39;immagine seguente.
 
-![Immagine dell’interfaccia utente che mostra la posizione dell’icona.](../../assets/functionality/destination-configuration/ui-attributes-icon.png)
+![Immagine dell&#39;interfaccia utente che mostra il percorso dell&#39;icona.](../../assets/functionality/destination-configuration/ui-attributes-icon.png)
 
-Per aggiungere un logo alla scheda di destinazione, devi condividere l’immagine desiderata con il team di Adobi quando [invia la destinazione per la revisione](../../guides/submit-destination.md#logo).
+Per aggiungere un logo alla scheda di destinazione, devi condividere l&#39;immagine desiderata con il team di Adobi quando [invii la destinazione per la revisione](../../guides/submit-destination.md#logo).
 
 ## Passaggi successivi {#next-steps}
 

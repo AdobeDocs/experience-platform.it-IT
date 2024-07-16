@@ -11,16 +11,16 @@ ht-degree: 4%
 
 # [!UICONTROL Medicinale] classe
 
-In Experience Data Model (XDM), la [!UICONTROL Medicinale] La classe acquisisce il set minimo di proprietà che definiscono una sostanza utilizzata per il trattamento medico, in particolare un medicinale o un farmaco.
+In Experience Data Model (XDM), la classe [!UICONTROL Medicinale] acquisisce l&#39;insieme minimo di proprietà che definiscono una sostanza utilizzata per il trattamento medico, in particolare un medicinale o un farmaco.
 
-![Struttura delle classi](../images/classes/medication.png)
+![Struttura di classe](../images/classes/medication.png)
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
-| `_id` | [!UICONTROL Stringa] | Identificatore di stringa univoco generato dal sistema per il record. Questo campo viene utilizzato per tenere traccia dell’univocità di un singolo record, evitare la duplicazione dei dati e cercare tale record nei servizi a valle.<br><br>Poiché questo campo è generato dal sistema, durante l’inserimento dei dati non viene fornito un valore esplicito. Tuttavia, se lo desideri, puoi comunque fornire valori ID univoci. |
+| `_id` | [!UICONTROL Stringa] | Identificatore di stringa univoco generato dal sistema per il record. Questo campo viene utilizzato per tenere traccia dell’univocità di un singolo record, evitare la duplicazione dei dati e cercare tale record nei servizi a valle.<br><br>Poiché questo campo è generato dal sistema, durante l&#39;inserimento dei dati non verrà fornito un valore esplicito. Tuttavia, se lo desideri, puoi comunque fornire valori ID univoci. |
 | `medicationId` | [!UICONTROL Stringa] | Identificatore univoco del medicinale. |
 | `medicationName` | [!UICONTROL Stringa] | Nome del medicinale. |
 
 {style="table-layout:auto"}
 
-La classe può essere estesa con [[!UICONTROL Medicinale sanitario] gruppo di campi](../field-groups/medication/healthcare-medication.md) per descrivere ulteriori dettagli sul medicinale o sul medicinale.
+La classe può essere estesa con il gruppo di campi [[!UICONTROL Medicina sanitaria]](../field-groups/medication/healthcare-medication.md) per descrivere ulteriori dettagli sul medicinale o sul farmaco.

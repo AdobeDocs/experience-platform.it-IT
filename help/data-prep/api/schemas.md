@@ -5,8 +5,8 @@ title: Endpoint API per gli schemi
 description: Puoi utilizzare l’endpoint "/schemas" nell’API di Adobe Experience Platform per recuperare, creare e aggiornare in modo programmatico gli schemi da utilizzare con Mapper in Platform.
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '611'
-ht-degree: 5%
+source-wordcount: '616'
+ht-degree: 4%
 
 ---
 
@@ -14,19 +14,19 @@ ht-degree: 5%
 
 # Endpoint &quot;schema&quot;
 
-Gli schemi possono essere utilizzati con Mapper per garantire che i dati acquisiti in Adobe Experience Platform corrispondano a quelli che desideri acquisire. È possibile utilizzare `/schemas` per creare, elencare e ottenere schemi personalizzati da utilizzare con Mapper in Platform a livello di programmazione.
+Gli schemi possono essere utilizzati con Mapper per garantire che i dati acquisiti in Adobe Experience Platform corrispondano a quelli che desideri acquisire. È possibile utilizzare l&#39;endpoint `/schemas` per creare, elencare e ottenere schemi personalizzati a livello di programmazione da utilizzare con Mapper in Platform.
 
 >[!NOTE]
 >
->Gli schemi creati utilizzando questo endpoint vengono utilizzati esclusivamente con i set di mappatura e mappatura. Per creare schemi accessibili da altri servizi Platform, leggi la sezione [Guida per gli sviluppatori del registro dello schema](../../xdm/api/schemas.md).
+>Gli schemi creati utilizzando questo endpoint vengono utilizzati esclusivamente con i set di mappatura e mappatura. Per creare schemi accessibili da altri servizi Platform, leggere la [Guida per gli sviluppatori del registro degli schemi](../../xdm/api/schemas.md).
 
 ## Ottieni tutti gli schemi
 
-Per recuperare un elenco di tutti gli schemi mapper disponibili per la tua organizzazione, effettua una richiesta GET al `/schemas` endpoint.
+È possibile recuperare un elenco di tutti gli schemi Mapper disponibili per l&#39;organizzazione effettuando una richiesta GET all&#39;endpoint `/schemas`.
 
 **Formato API**
 
-Il `/schemas` l’endpoint supporta diversi parametri di query per aiutarti a filtrare i risultati. Anche se la maggior parte di questi parametri sono facoltativi, si consiglia vivamente di utilizzarli per ridurre i costi operativi. Tuttavia, è necessario includere entrambi `start` e `limit` come parte della richiesta. È possibile includere più parametri, separati da e commerciali (`&`).
+L&#39;endpoint `/schemas` supporta diversi parametri di query che consentono di filtrare i risultati. Anche se la maggior parte di questi parametri sono facoltativi, si consiglia vivamente di utilizzarli per ridurre i costi operativi. Tuttavia, è necessario includere entrambi i parametri `start` e `limit` come parte della richiesta. È possibile includere più parametri, separati da e commerciali (`&`).
 
 ```http
 GET /schemas?limit={LIMIT}&start={START}
@@ -36,10 +36,10 @@ GET /schemas?limit={LIMIT}&start={START}&orderBy={ORDER_BY}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{LIMIT}` | **Obbligatorio**. Specifica il numero di schemi restituiti. |
-| `{START}` | **Obbligatorio**. Specifica l&#39;offset delle pagine dei risultati. Per ottenere la prima pagina dei risultati, imposta il valore su `start=0`. |
+| `{LIMIT}` | **Richiesto**. Specifica il numero di schemi restituiti. |
+| `{START}` | **Richiesto**. Specifica l&#39;offset delle pagine dei risultati. Per ottenere la prima pagina dei risultati, impostare il valore su `start=0`. |
 | `{NAME}` | Filtra lo schema in base al nome. |
-| `{ORDER_BY}` | Ordina l’ordine dei risultati. I campi supportati sono `modifiedDate` e `createdDate`. Puoi anteporre la proprietà con `+` o `-` per ordinarlo rispettivamente in ordine crescente o decrescente. |
+| `{ORDER_BY}` | Ordina l’ordine dei risultati. I campi supportati sono `modifiedDate` e `createdDate`. È possibile anteporre alla proprietà `+` o `-` per ordinarla rispettivamente in ordine crescente o decrescente. |
 
 **Richiesta**
 
@@ -130,9 +130,9 @@ La seguente risposta restituisce lo stato HTTP 200 con un elenco degli schemi ri
 }
 ```
 
-## Creare uno schema
+## Crea uno schema
 
-Per creare uno schema in base al quale eseguire la convalida, devi effettuare una richiesta POST al `/schemas` endpoint. Esistono tre modi per creare uno schema: inviare un [Schema JSON](https://json-schema.org/), utilizzando dati di esempio o facendo riferimento a uno schema XDM esistente.
+Per creare uno schema in base al quale eseguire la convalida, eseguire una richiesta POST all&#39;endpoint `/schemas`. Esistono tre modi per creare uno schema: inviare uno [schema JSON](https://json-schema.org/), utilizzare dati di esempio o fare riferimento a uno schema XDM esistente.
 
 ```http
 POST /schemas
@@ -142,7 +142,7 @@ POST /schemas
 
 **Richiesta**
 
-La richiesta seguente ti consente di creare uno schema inviando un [Schema JSON](https://json-schema.org/).
+La richiesta seguente ti consente di creare uno schema inviando uno [schema JSON](https://json-schema.org/).
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
@@ -269,7 +269,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 | -------- | ----------- |
 | `name` | Nome dello schema che si desidera creare. |
 | `schemaRef.id` | ID dello schema a cui si sta facendo riferimento. |
-| `schemaRef.contentType` | Determina il formato di risposta dello schema di riferimento. Ulteriori informazioni su questo campo sono disponibili nella sezione [guida per gli sviluppatori del registro dello schema](../../xdm/api/schemas.md#lookup) |
+| `schemaRef.contentType` | Determina il formato di risposta dello schema di riferimento. Ulteriori informazioni su questo campo sono disponibili nella [guida per gli sviluppatori del Registro di sistema](../../xdm/api/schemas.md#lookup) |
 
 **Risposta**
 
@@ -334,7 +334,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 
 ## Recuperare uno schema specifico
 
-Per recuperare informazioni su uno schema specifico, effettua una richiesta GET al `/schemas` e fornendo l’ID dello schema da recuperare nel percorso della richiesta.
+Per recuperare informazioni su uno schema specifico, eseguire una richiesta GET all&#39;endpoint `/schemas` e specificare l&#39;ID dello schema da recuperare nel percorso della richiesta.
 
 **Formato API**
 

@@ -10,16 +10,16 @@ ht-degree: 7%
 
 ---
 
-# [!UICONTROL Transazione] tipo di dati
+# Tipo di dati [!UICONTROL Transazione]
 
-[!UICONTROL Transazione] è un tipo di dati standard Experience Data Model (XDM) che descrive i dettagli di una transazione monetaria.
+[!UICONTROL Transaction] è un tipo di dati XDM (Experience Data Model) standard che descrive i dettagli di una transazione monetaria.
 
-![Struttura delle transazioni](../images/data-types/transaction.png)
+![Struttura transazione](../images/data-types/transaction.png)
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
 | `transactionAmount` | [[!UICONTROL Valuta]](./currency.md) | Descrive l&#39;importo della valuta scambiata nell&#39;ambito della transazione. |
-| `transactionDate` | [!UICONTROL DateTime] | Timestamp del momento in cui si è verificata la transazione. |
+| `transactionDate` | [!UICONTROL DataOra] | Timestamp del momento in cui si è verificata la transazione. |
 | `transactionId` | [!UICONTROL Stringa] | Identificatore univoco della transazione. |
 | `transactionType` | [!UICONTROL Stringa] | Tipo di transazione utilizzato dal visitatore. |
 

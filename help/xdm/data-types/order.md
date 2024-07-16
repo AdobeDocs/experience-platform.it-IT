@@ -11,20 +11,20 @@ ht-degree: 13%
 
 ---
 
-# [!UICONTROL Ordine] tipo di dati
+# Tipo di dati [!UICONTROL Ordine]
 
-[!UICONTROL Ordine] è un tipo di dati Experience Data Model (XDM) standard che descrive l’ordine effettuato per un elenco di prodotti.
+[!UICONTROL Ordine] è un tipo di dati XDM (Experience Data Model) standard che descrive l&#39;ordine effettuato per un elenco di prodotti.
 
-![Un diagramma del [!UICONTROL Ordine] tipo di dati.](../images/data-types/order.png)
+![Diagramma del tipo di dati [!UICONTROL Order].](../images/data-types/order.png)
 
 | Nome visualizzato | Proprietà | Tipo di dati | Descrizione |
 |-------------------------|-------------------------|-----------|------------------------------------------------------------------------------------------------------------------|
 | ID acquisto | `purchaseID` | Stringa | Un identificatore univoco assegnato dal venditore per questo acquisto o contratto. Non c&#39;è garanzia che l&#39;ID sia univoco perché l&#39;ID è definito dal venditore. |
 | Numero dell’ordine d’acquisto | `purchaseOrderNumber` | Stringa | Identificatore univoco assegnato dall’acquirente a questo acquisto o contratto. |
-| Elenco dei pagamenti | `payments` | Array di [[!UICONTROL Voci di pagamento]](./payment-item.md) | Elenco dei pagamenti per questo ordine. I pagamenti sono descritti in dettaglio nella [!UICONTROL Voci di pagamento] specifica. |
-| Elenco rimborsi | `refunds` | Array di [[!UICONTROL Voci di rimborso]](./refund-item.md) | Elenco dei rimborsi per questo ordine. Le restituzioni sono indicate nel dettaglio [!UICONTROL Voci di rimborso] specifica. |
-| Informazioni di ritorno | `returns` | [[!UICONTROL Informazioni di ritorno]](./return.md) | RMA (Return Merchandise Authorization) rilasciato. Le restituzioni sono descritte in dettaglio [!UICONTROL Informazioni di ritorno] specifica. |
-| Valuta | `currencyCode` | Stringa | Il codice valuta ISO 4217 utilizzato per i totali dell’ordine. Alcuni esempi includono `USD` e `EUR`. Tutte le varianti devono corrispondere al pattern `^[A-Z]{3}$`. |
+| Elenco dei pagamenti | `payments` | Array di [[!UICONTROL elementi di pagamento]](./payment-item.md) | Elenco dei pagamenti per questo ordine. I pagamenti sono descritti in dettaglio nella specifica [!UICONTROL Elementi di pagamento]. |
+| Elenco rimborsi | `refunds` | Array di [[!UICONTROL Elementi di rimborso]](./refund-item.md) | Elenco dei rimborsi per questo ordine. I rimborsi sono descritti in dettaglio nella specifica [!UICONTROL Elementi di rimborso]. |
+| Informazioni di ritorno | `returns` | [[!UICONTROL Informazioni restituite]](./return.md) | RMA (Return Merchandise Authorization) rilasciato. Le restituzioni sono dettagliate nella specifica [!UICONTROL Informazioni sulla restituzione]. |
+| Valuta | `currencyCode` | Stringa | Il codice valuta ISO 4217 utilizzato per i totali dell’ordine. Gli esempi includono `USD` e `EUR`. Tutte le istanze devono corrispondere al pattern `^[A-Z]{3}$`. |
 | Importo imposta | `taxAmount` | Numero | Importo dell&#39;imposta pagato dall&#39;acquirente come parte del pagamento finale. |
 | Importo sconto | `discountAmount` | Numero | Differenza tra il prezzo regolare e il prezzo speciale applicato all’intero ordine, anziché ai singoli prodotti. |
 | Totale prezzo | `priceTotal` | Numero | Il prezzo totale di questo ordine dopo l’applicazione di tutti gli sconti e le tasse. |

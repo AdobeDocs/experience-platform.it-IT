@@ -4,8 +4,8 @@ description: Scopri come convalidare, caricare e testare l’estensione in Adobe
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
 source-git-commit: 9b99ec5e526fcbe34a41d3ce397b34a9b4105819
 workflow-type: tm+mt
-source-wordcount: '2382'
-ht-degree: 94%
+source-wordcount: '2362'
+ht-degree: 91%
 
 ---
 
@@ -39,7 +39,7 @@ Un esempio specifico è il file del logo: aggiungi una riga `"iconPath": "exampl
 
 Per utilizzare l’API o strumenti per riga di comando, è necessario un account tecnico per Adobe I/O. Devi creare l’account tecnico nella console I/O e quindi utilizzare lo strumento Uploader per caricare il pacchetto di estensione.
 
-Per informazioni sulla creazione di un account tecnico da utilizzare con i tag in Adobe Experience Platform, consulta [Guida introduttiva all’API di Reactor](../../api/getting-started.md) guida.
+Per informazioni sulla creazione di un account tecnico da utilizzare con i tag in Adobe Experience Platform, consulta la [guida introduttiva all’API di Reactor](../../api/getting-started.md).
 
 >[!IMPORTANT]
 >
@@ -74,7 +74,7 @@ Il pacchetto dell’estensione verrà quindi caricato e lo strumento Uploader ti
 
 >[!NOTE]
 >
->Durante il caricamento o l&#39;applicazione di patch, il pacchetto dell&#39;estensione viene posto in uno stato &quot;in sospeso&quot; mentre il sistema lo estrae in modo asincrono e lo implementa. Durante questo processo, puoi controllare lo stato dell’ID `extension_package` utilizzando l’API e nell’interfaccia utente di Nel catalogo verrà visualizzata una scheda di estensioni contrassegnata come In sospeso.
+>Durante il caricamento o l&#39;applicazione di patch, il pacchetto dell&#39;estensione viene posto in uno stato &quot;in sospeso&quot; mentre il sistema lo estrae in modo asincrono e lo implementa. Durante questo processo, è possibile eseguire il polling dell&#39;ID `extension_package` per il relativo stato utilizzando l&#39;API e nell&#39;interfaccia utente. Nel catalogo verrà visualizzata una scheda di estensioni contrassegnata come In sospeso.
 
 >[!NOTE]
 >
@@ -82,7 +82,7 @@ Il pacchetto dell’estensione verrà quindi caricato e lo strumento Uploader ti
 
 ## Creare una proprietà di sviluppo {#property}
 
-Dopo aver effettuato l’accesso all’interfaccia utente e aver selezionato **[!UICONTROL Tag]** nel menu di navigazione a sinistra, [!UICONTROL Proprietà] viene visualizzata la schermata. Una proprietà è un contenitore per i tag da distribuire e può essere utilizzata in uno o più siti.
+Dopo aver effettuato l&#39;accesso all&#39;interfaccia utente e aver selezionato **[!UICONTROL Tag]** nel menu di navigazione a sinistra, viene visualizzata la schermata [!UICONTROL Proprietà]. Una proprietà è un contenitore per i tag da distribuire e può essere utilizzata in uno o più siti.
 
 ![](../images/getting-started/properties-screen.png)
 
@@ -142,7 +142,7 @@ Le estensioni possono definire i tipi di elementi dati necessari per il funziona
 
 Quando un utente seleziona l’estensione dal menu a discesa **Estensione**, il menu a discesa **Tipo di elemento dati** viene compilato con i tipi di elemento dati fornito dall’estensione. L’utente può quindi mappare ogni elemento dati al relativo valore sorgente. Gli elementi dati possono essere utilizzati quando si creano regole nell’evento di modifica dell’elemento dati o nell’evento Codice personalizzato per attivare una regola da eseguire. Un elemento dati può essere utilizzato anche nella Condizione elemento dati o in altre Condizioni, Eccezioni o Azioni in una regola.
 
-Una volta creato l’elemento dati (impostandone la mappatura), gli utenti possono fare riferimento ai dati sorgente semplicemente facendo riferimento a tale elemento dati. Se la sorgente del valore cambia (in seguito alla riprogettazione del sito, ecc.) gli utenti dovranno aggiornare la mappatura solo una volta nell’interfaccia di e tutti gli elementi dati riceveranno automaticamente il nuovo valore sorgente.
+Una volta creato l’elemento dati (impostandone la mappatura), gli utenti possono fare riferimento ai dati sorgente semplicemente facendo riferimento a tale elemento dati. Se la sorgente del valore cambia (in seguito alla riprogettazione del sito, ecc.) gli utenti devono aggiornare la mappatura solo una volta nell’interfaccia utente e tutti gli elementi dati riceveranno automaticamente il nuovo valore sorgente.
 
 ### Regole
 
@@ -200,7 +200,7 @@ Le istruzioni di installazione sono disponibili nella scheda Ambienti. Questa pa
 
 ![](../images/getting-started/launch-installation-instructions.png)
 
-Il **Istruzioni di installazione Web** viene visualizzata la finestra di dialogo per l’ambiente di sviluppo. Seleziona l’icona Copia per copiare l’intero tag `<script>`.
+Viene visualizzata la finestra di dialogo **Istruzioni di installazione Web** per l&#39;ambiente di sviluppo. Seleziona l’icona Copia per copiare l’intero tag `<script>`.
 
 ![](../images/getting-started/launch-installation-instructions-dialogue.png)
 
@@ -217,7 +217,7 @@ L’obiettivo di questo test è quello di verificare la funzionalità della libr
 
 Se occorre apportare delle modifiche al pacchetto di estensione, il processo di iterazione è simile a quello di sviluppo.
 
-1. Apporta le modifiche al codice nel progetto..
+1. Apporta le modifiche al codice nel progetto.
 1. Convalida le modifiche con lo strumento Sandbox.
 1. Utilizza lo strumento Packager per creare un nuovo pacchetto .zip.
 1. Utilizza lo strumento Uploader per caricare il nuovo pacchetto .zip. Il processo segue le stesse istruzioni riportate per il caricamento iniziale. Tuttavia, poiché esiste già un pacchetto di estensione con tale nome in modalità di sviluppo, questo nuovo pacchetto sovrascrive la versione precedente invece di crearne una nuova.
@@ -226,6 +226,6 @@ Se occorre apportare delle modifiche al pacchetto di estensione, il processo di 
    >
    >Gli argomenti possono essere passati sulla riga di comando per risparmiare tempo, evitando di immettere più volte le credenziali. Per ulteriori informazioni, consulta la [documentazione sullo strumento Uploader di Reactor](https://www.npmjs.com/package/@adobe/reactor-uploader).
 1. Quando si aggiorna un pacchetto esistente, il passaggio di installazione può essere saltato.
-1. Modifica le risorse: se la configurazione di uno dei componenti dell’estensione è stata modificata, dovrai aggiornare tali risorse nell’interfaccia utente di 
+1. Modifica le risorse: se la configurazione di uno dei componenti dell’estensione è stata modificata, dovrai aggiornare tali risorse nell’interfaccia utente.
 1. Aggiungi le modifiche più recenti alla libreria e procedi di nuovo alla sua generazione.
 1. Completa un altro ciclo di test.

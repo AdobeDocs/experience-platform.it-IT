@@ -1,12 +1,12 @@
 ---
 solution: Experience Platform
-title: Panoramica sull’origine del Marketing Cloud Salesforce
+title: Panoramica di Salesforce Marketing Cloud Source
 description: Scopri come collegare il Marketing Cloud Salesforce a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
 last-substantial-update: 2023-05-25T00:00:00Z
 source-git-commit: bc37d41d0f7b0ff0cf4d52242f41467f2891d613
 workflow-type: tm+mt
-source-wordcount: '334'
+source-wordcount: '322'
 ht-degree: 0%
 
 ---
@@ -15,38 +15,38 @@ ht-degree: 0%
 
 Adobe Experience Platform consente di acquisire i dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 
-Experienci Platform fornisce supporto per l’acquisizione di dati da sistemi di automazione del marketing di terze parti. Il supporto per i provider di automazione marketing include [!DNL Salesforce Marketing Cloud].
+Experience Platform fornisce supporto per l’acquisizione di dati da sistemi di automazione del marketing di terze parti. Il supporto per i provider di automazione marketing include [!DNL Salesforce Marketing Cloud].
 
 ## Prerequisiti
 
-Prima di collegare il [!DNL Salesforce Marketing Cloud] da sorgente a Platform, è necessario assicurarsi che i seguenti **ambiti di autorizzazione** dispongono del provisioning per [!DNL Salesforce Marketing Cloud] combinazione di ID client e segreto client:
+Prima di poter connettere l&#39;origine [!DNL Salesforce Marketing Cloud] a Platform, è necessario assicurarsi che sia stato eseguito il provisioning dei seguenti **ambiti di autorizzazione** per l&#39;ID client [!DNL Salesforce Marketing Cloud] e la combinazione di segreto client:
 
 * `campaign_read`
 * `list_and_subscribers_read`
 
-Puoi richiedere gli ambiti effettuando una chiamata al `v2/userinfo` risorsa del [!DNL Salesforce Marketing Cloud] API. Consulta la [[!DNL Salesforce Marketing Cloud] Documento Ambiti di autorizzazione dell’integrazione API](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/data-access-permissions.html>) per informazioni su come richiedere e confrontare gli ambiti.
+È possibile richiedere ambiti effettuando una chiamata alla risorsa `v2/userinfo` dell&#39;API [!DNL Salesforce Marketing Cloud]. Per istruzioni su come richiedere e confrontare gli ambiti, consulta il documento [[!DNL Salesforce Marketing Cloud] Ambiti di autorizzazione dell&#39;integrazione API](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/data-access-permissions.html>).
 
-Per ulteriori informazioni sugli ambiti, incluso un elenco delle autorizzazioni e dei comportamenti correlati, consulta [[!DNL Salesforce Marketing Cloud] Documento REST API](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rest-permissions-and-scopes.html>).
+Per ulteriori informazioni sugli ambiti, incluso un elenco delle autorizzazioni e dei comportamenti correlati, vedere questo [[!DNL Salesforce Marketing Cloud] documento REST API](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rest-permissions-and-scopes.html>).
 
 >[!IMPORTANT]
 >
->L’acquisizione di oggetti personalizzati non è attualmente supportata da [!DNL Salesforce Marketing Cloud] integrazione sorgente.
+>L&#39;acquisizione di oggetti personalizzati non è attualmente supportata dall&#39;integrazione di origine [!DNL Salesforce Marketing Cloud].
 
 ## ELENCO CONSENTITI di indirizzo IP
 
-Prima di utilizzare i connettori di origine, è necessario aggiungere un elenco di indirizzi IP a un elenco consentiti. La mancata aggiunta all’elenco consentiti degli indirizzi IP specifici per l’area geografica potrebbe causare errori o prestazioni non ottimali durante l’utilizzo delle origini. Consulta la [ELENCO CONSENTITI di indirizzo IP](../../ip-address-allow-list.md) per ulteriori informazioni.
+Prima di utilizzare i connettori di origine, è necessario aggiungere un elenco di indirizzi IP a un elenco consentiti. La mancata aggiunta all’elenco consentiti degli indirizzi IP specifici per l’area geografica potrebbe causare errori o prestazioni non ottimali durante l’utilizzo delle origini. Per ulteriori informazioni, vedere la pagina [elenco consentiti indirizzo IP](../../ip-address-allow-list.md).
 
-## Connetti [!DNL Salesforce Marketing Cloud] alla piattaforma utilizzando le API
+## Connetti [!DNL Salesforce Marketing Cloud] a Platform tramite API
 
-La documentazione seguente fornisce informazioni sulle modalità di connessione [!DNL Salesforce Marketing Cloud] alla piattaforma che utilizza le API:
+La documentazione seguente fornisce informazioni su come connettere [!DNL Salesforce Marketing Cloud] a Platform tramite API:
 
 * [Creare una connessione di base al Marketing Cloud Salesforce utilizzando l’API del servizio Flow](../../tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
 * [Esplorare le tabelle di dati utilizzando l’API del servizio Flusso](../../tutorials/api/explore/tabular.md)
 * [Creare un flusso di dati per un’origine di automazione marketing utilizzando l’API del servizio Flusso](../../tutorials/api/collect/marketing-automation.md)
 
-## Connetti [!DNL Salesforce Marketing Cloud] a Platform tramite l’interfaccia utente
+## Connetti [!DNL Salesforce Marketing Cloud] a Platform tramite l&#39;interfaccia utente
 
-La documentazione seguente fornisce informazioni sulle modalità di connessione [!DNL Salesforce Marketing Cloud] a Platform utilizzando l’interfaccia utente:
+La documentazione seguente fornisce informazioni su come connettere [!DNL Salesforce Marketing Cloud] a Platform tramite l&#39;interfaccia utente:
 
 * [Creare una connessione sorgente del Marketing Cloud Salesforce nell’interfaccia utente](../../tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
 * [Creare un flusso di dati per una connessione sorgente dell’automazione marketing nell’interfaccia utente](../../tutorials/ui/dataflow/marketing-automation.md)

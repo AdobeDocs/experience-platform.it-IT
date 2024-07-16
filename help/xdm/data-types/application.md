@@ -11,9 +11,9 @@ ht-degree: 1%
 
 ---
 
-# [!UICONTROL Applicazione] tipo di dati
+# Tipo di dati [!UICONTROL Applicazione]
 
-[!UICONTROL Applicazione] è un tipo di dati Experience Data Model (XDM) standard che descrive i dettagli relativi alle interazioni generate da un’applicazione. Un’applicazione si riferisce a un’esperienza software, ad esempio un’applicazione mobile o desktop che può essere installata, eseguita, chiusa o disinstallata da un utente finale. Le proprietà di questo tipo di dati non sono intese a descrivere agenti come chatbot, plug-in basati su browser o altre esperienze che non si applicano alle applicazioni.
+[!UICONTROL Applicazione] è un tipo di dati XDM (Experience Data Model) standard che descrive i dettagli relativi alle interazioni generate da un&#39;applicazione. Un’applicazione si riferisce a un’esperienza software, ad esempio un’applicazione mobile o desktop che può essere installata, eseguita, chiusa o disinstallata da un utente finale. Le proprietà di questo tipo di dati non sono intese a descrivere agenti come chatbot, plug-in basati su browser o altre esperienze che non si applicano alle applicazioni.
 
 <img src="../images/data-types/application.PNG" width="500" /><br />
 
@@ -28,7 +28,7 @@ ht-degree: 1%
 | `upgrades` | [[!UICONTROL Misura]](./measure.md) | Contiene dati sull&#39;aggiornamento di un&#39;applicazione installata in precedenza. Viene attivato al primo avvio dopo un aggiornamento. |
 | `id` | Stringa | Identificatore univoco dell’applicazione. |
 | `name` | Stringa | Nome dell&#39;applicazione. |
-| `userPerspective` | Stringa | Il rapporto prospettico o fisico tra l’utente e l’app o il brand nel momento in cui si è verificato un evento. Comprendere il punto di vista dell’utente in relazione all’app aiuta a generare accuratamente le sessioni, in quanto la maggior parte delle volte non vorrai includerle `background` e `detached` come parte di una sessione &quot;attiva&quot;. Il valore di questa proprietà deve essere uguale a uno dei valori enum elencati di seguito. <li> `foreground`: l’utente e l’app interagiscono direttamente tra loro. </li> <li> `background`: l’app e l’utente interagiscono indirettamente l’uno con l’altro. Ad esempio, l’app può misurare un valore e aggiornarlo mentre lo schermo è bloccato o un’altra app viene utilizzata in primo piano.  </li> <li> `detached`: staccato significa che l’evento era correlato all’app ma non proveniva direttamente dall’app, ad esempio l’invio di un’e-mail o di una notifica push da un sistema esterno. |
+| `userPerspective` | Stringa | Il rapporto prospettico o fisico tra l’utente e l’app o il brand nel momento in cui si è verificato un evento. Comprendere la prospettiva dell&#39;utente in relazione all&#39;app aiuta a generare accuratamente le sessioni, in quanto la maggior parte delle volte non è necessario includere `background` e `detached` eventi come parte di una sessione &quot;attiva&quot;. Il valore di questa proprietà deve essere uguale a uno dei valori enum elencati di seguito. <li> `foreground`: l&#39;utente e l&#39;app interagiscono direttamente tra loro. </li> <li> `background`: l&#39;app e l&#39;utente interagiscono indirettamente l&#39;uno con l&#39;altro. Ad esempio, l’app può misurare un valore e aggiornarlo mentre lo schermo è bloccato o un’altra app viene utilizzata in primo piano.  </li> <li> `detached`: scollegato significa che l&#39;evento era correlato all&#39;app ma non proveniva direttamente dall&#39;app, ad esempio l&#39;invio di un&#39;e-mail o di una notifica push da un sistema esterno. |
 | `version` | Stringa | Versione dell’applicazione. |
 
 {style="table-layout:auto"}

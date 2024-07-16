@@ -5,7 +5,7 @@ exl-id: 09961b8e-f736-4fcc-ac53-88b55cca7d55
 source-git-commit: 2b6700b2c19b591cf4e60006e64ebd63b87bdb2a
 workflow-type: tm+mt
 source-wordcount: '631'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Questa pagina presuppone che il criterio di unione utilizzi il grafo delle identità. Per ulteriori informazioni sui criteri di unione in Real-Time Customer Profile, consulta la documentazione su [criteri di unione e unione di identità](../profile/merge-policies/overview.md#identity-stitching).
+>Questa pagina presuppone che il criterio di unione utilizzi il grafo delle identità. Per ulteriori informazioni sui criteri di unione in Real-Time Customer Profile, consulta la documentazione su [criteri di unione e unione delle identità](../profile/merge-policies/overview.md#identity-stitching).
 
 Anche se è possibile utilizzare in tandem Identity Service e Real-Time Customer Profile, le due funzioni di Adobe Experience Platform non sono intrinsecamente le stesse.
 
@@ -42,9 +42,9 @@ Leggi i passaggi seguenti per comprendere meglio il processo di creazione di un 
 * Innanzitutto, il profilo cliente in tempo reale fa riferimento a un grafico delle identità e recupera tutte le identità.
 * Successivamente, il profilo recupera i frammenti di profilo con identità primarie nel grafico delle identità.
 * In caso di esito positivo, Profile than unisce tutti gli eventi e gli attributi esistenti.
-   * Se sono presenti informazioni sugli attributi in conflitto, gli attributi verranno scelti in base al metodo di unione. Per ulteriori informazioni, leggere [panoramica dei criteri di unione](../profile/merge-policies/overview.md).
+   * Se sono presenti informazioni sugli attributi in conflitto, gli attributi verranno scelti in base al metodo di unione. Per ulteriori informazioni, leggere la [panoramica dei criteri di unione](../profile/merge-policies/overview.md).
 
-![Un diagramma di flusso che descrive il funzionamento dell’unione di profili e servizi Identity.](./images/merge-profile-process.png)
+![Grafico di flusso che descrive il funzionamento dell&#39;unione di profili e servizi Identity.](./images/merge-profile-process.png)
 
 ## Designare un campo come identità
 

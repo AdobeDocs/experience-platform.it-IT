@@ -6,26 +6,26 @@ description: L’endpoint /fieldgroups nell’API Schema Registry consente di ge
 exl-id: d26257e4-c7d5-4bff-b555-7a2997c88c74
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '1195'
-ht-degree: 4%
+source-wordcount: '1197'
+ht-degree: 3%
 
 ---
 
 # Endpoint &quot;schema field groups&quot;
 
-I gruppi di campi dello schema sono componenti riutilizzabili che definiscono uno o più campi che rappresentano un concetto particolare, ad esempio una singola persona, un indirizzo postale o un ambiente di browser web. I gruppi di campi sono destinati a essere inclusi come parte di uno schema che implementa una classe compatibile, a seconda del comportamento dei dati che rappresentano (record o serie temporali). Il `/fieldgroups` endpoint nella [!DNL Schema Registry] API consente di gestire in modo programmatico i gruppi di campi all’interno dell’applicazione Experience.
+I gruppi di campi dello schema sono componenti riutilizzabili che definiscono uno o più campi che rappresentano un concetto particolare, ad esempio una singola persona, un indirizzo postale o un ambiente di browser web. I gruppi di campi sono destinati a essere inclusi come parte di uno schema che implementa una classe compatibile, a seconda del comportamento dei dati che rappresentano (record o serie temporali). L&#39;endpoint `/fieldgroups` nell&#39;API [!DNL Schema Registry] consente di gestire in modo programmatico i gruppi di campi all&#39;interno dell&#39;applicazione Experience.
 
 ## Introduzione
 
-L’endpoint utilizzato in questa guida fa parte dell’[[!DNL Schema Registry] API di ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Prima di continuare, controlla [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida per la lettura delle chiamate API di esempio di questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
+L&#39;endpoint utilizzato in questa guida fa parte dell&#39;[[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Prima di continuare, consulta la [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e per le informazioni importanti sulle intestazioni necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
 
 ## Recuperare un elenco di gruppi di campi {#list}
 
-Puoi elencare tutti i gruppi di campi sotto `global` o `tenant` mediante una richiesta GET a `/global/fieldgroups` o `/tenant/fieldgroups`, rispettivamente.
+È possibile elencare tutti i gruppi di campi nel contenitore `global` o `tenant` effettuando una richiesta di GET rispettivamente a `/global/fieldgroups` o `/tenant/fieldgroups`.
 
 >[!NOTE]
 >
->Quando si elencano le risorse, il registro dello schema limita il set di risultati a 300 elementi. Per restituire risorse oltre questo limite, è necessario utilizzare i parametri di paging. È inoltre consigliabile utilizzare parametri di query aggiuntivi per filtrare i risultati e ridurre il numero di risorse restituite. Consulta la sezione su [parametri di query](./appendix.md#query) nel documento dell’appendice per ulteriori informazioni.
+>Quando si elencano le risorse, il registro dello schema limita il set di risultati a 300 elementi. Per restituire risorse oltre questo limite, è necessario utilizzare i parametri di paging. È inoltre consigliabile utilizzare parametri di query aggiuntivi per filtrare i risultati e ridurre il numero di risorse restituite. Per ulteriori informazioni, vedere la sezione relativa ai [parametri di query](./appendix.md#query) nel documento dell&#39;appendice.
 
 **Formato API**
 
@@ -35,14 +35,14 @@ GET /{CONTAINER_ID}/fieldgroups?{QUERY_PARAMS}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{CONTAINER_ID}` | Contenitore da cui recuperare i gruppi di campi: `global` per Adobi di gruppi di campi creati, oppure `tenant` per gruppi di campi di proprietà dell’organizzazione. |
-| `{QUERY_PARAMS}` | Parametri di query facoltativi in base ai quali filtrare i risultati. Consulta la [documento dell&#39;appendice](./appendix.md#query) per un elenco dei parametri disponibili. |
+| `{CONTAINER_ID}` | Contenitore da cui recuperare i gruppi di campi: `global` per i gruppi di campi creati dall&#39;Adobe o `tenant` per i gruppi di campi di proprietà dell&#39;organizzazione. |
+| `{QUERY_PARAMS}` | Parametri di query facoltativi in base ai quali filtrare i risultati. Per un elenco dei parametri disponibili, vedere il [documento di appendice](./appendix.md#query). |
 
 {style="table-layout:auto"}
 
 **Richiesta**
 
-La richiesta seguente recupera un elenco di gruppi di campi dalla `tenant` contenitore, utilizzando un `orderby` parametro di query per ordinare i gruppi di campi in base al rispettivo `title` attributo.
+La richiesta seguente recupera un elenco di gruppi di campi dal contenitore `tenant`, utilizzando un parametro di query `orderby` per ordinare i gruppi di campi in base al loro attributo `title`.
 
 ```shell
 curl -X GET \
@@ -54,18 +54,18 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Il formato della risposta dipende da `Accept` intestazione inviata nella richiesta. I seguenti elementi `Accept` le intestazioni sono disponibili per l&#39;elenco dei gruppi di campi:
+Il formato della risposta dipende dall&#39;intestazione `Accept` inviata nella richiesta. Le seguenti intestazioni `Accept` sono disponibili per l&#39;elenco dei gruppi di campi:
 
-| `Accept` intestazione | Descrizione |
+| Intestazione `Accept` | Descrizione |
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Restituisce un breve riepilogo di ciascuna risorsa. Questa è l’intestazione consigliata per l’elenco delle risorse. (Limite: 300) |
-| `application/vnd.adobe.xed+json` | Restituisce il gruppo di campi JSON completo per ogni risorsa, con originale `$ref` e `allOf` incluso. (Limite: 300) |
+| `application/vnd.adobe.xed+json` | Restituisce il gruppo di campi JSON completo per ogni risorsa, inclusi `$ref` e `allOf` originali. (Limite: 300) |
 
 {style="table-layout:auto"}
 
 **Risposta**
 
-La richiesta precedente utilizzava `application/vnd.adobe.xed-id+json` `Accept` , pertanto la risposta include solo il `title`, `$id`, `meta:altId`, e `version` attributi per ciascun gruppo di campi. Utilizzo dell&#39;altro `Accept` intestazione (`application/vnd.adobe.xed+json`) restituisce tutti gli attributi di ciascun gruppo di campi. Seleziona la scheda appropriata `Accept` a seconda delle informazioni richieste nella risposta.
+La richiesta precedente ha utilizzato l&#39;intestazione `application/vnd.adobe.xed-id+json` `Accept`, pertanto la risposta include solo gli attributi `title`, `$id`, `meta:altId` e `version` per ogni gruppo di campi. L&#39;utilizzo dell&#39;altra intestazione `Accept` (`application/vnd.adobe.xed+json`) restituisce tutti gli attributi di ciascun gruppo di campi. Selezionare l&#39;intestazione `Accept` appropriata in base alle informazioni richieste nella risposta.
 
 ```json
 {
@@ -121,14 +121,14 @@ GET /{CONTAINER_ID}/fieldgroups/{FIELD_GROUP_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{CONTAINER_ID}` | Contenitore che ospita il gruppo di campi che desideri recuperare: `global` per un gruppo di campi creato da un Adobe o `tenant` per un gruppo di campi di proprietà dell’organizzazione. |
-| `{FIELD_GROUP_ID}` | Il `meta:altId` o con codifica URL `$id` del gruppo di campi che si desidera cercare. |
+| `{CONTAINER_ID}` | Il contenitore che ospita il gruppo di campi che si desidera recuperare: `global` per un gruppo di campi creato da un Adobe o `tenant` per un gruppo di campi di proprietà dell&#39;organizzazione. |
+| `{FIELD_GROUP_ID}` | `meta:altId` o `$id` con codifica URL del gruppo di campi che si desidera cercare. |
 
 {style="table-layout:auto"}
 
 **Richiesta**
 
-La richiesta seguente recupera un gruppo di campi in base al suo `meta:altId` valore fornito nel percorso.
+La richiesta seguente recupera un gruppo di campi in base al valore `meta:altId` fornito nel percorso.
 
 ```shell
 curl -X GET \
@@ -140,21 +140,21 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Il formato della risposta dipende da `Accept` intestazione inviata nella richiesta. Tutte le richieste di ricerca richiedono un `version` essere inclusi nel `Accept` intestazione. I seguenti elementi `Accept` le intestazioni sono disponibili:
+Il formato della risposta dipende dall&#39;intestazione `Accept` inviata nella richiesta. Tutte le richieste di ricerca richiedono l&#39;inclusione di `version` nell&#39;intestazione `Accept`. Sono disponibili le seguenti `Accept` intestazioni:
 
-| `Accept` intestazione | Descrizione |
+| Intestazione `Accept` | Descrizione |
 | ------- | ------------ |
-| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | Raw con `$ref` e `allOf`, ha titoli e descrizioni. |
-| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` e `allOf` risolto, con titoli e descrizioni. |
-| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Raw con `$ref` e `allOf`, senza titoli o descrizioni. |
-| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` e `allOf` risolto, nessun titolo o descrizione. |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` e `allOf` risolto, inclusi i descrittori. |
+| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | Raw con `$ref` e `allOf`, con titoli e descrizioni. |
+| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` e `allOf` risolti, con titoli e descrizioni. |
+| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Raw con `$ref` e `allOf`, nessun titolo o descrizione. |
+| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` e `allOf` risolti, nessun titolo o descrizione. |
+| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` e `allOf` risolti, descrittori inclusi. |
 
 {style="table-layout:auto"}
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce i dettagli del gruppo di campi. I campi restituiti dipendono dal `Accept` intestazione inviata nella richiesta. Sperimenta con diversi `Accept` intestazioni per confrontare le risposte e determinare quale intestazione è più adatta al tuo caso d’uso.
+In caso di esito positivo, la risposta restituisce i dettagli del gruppo di campi. I campi restituiti dipendono dall&#39;intestazione `Accept` inviata nella richiesta. Prova a confrontare le risposte con intestazioni `Accept` diverse e a determinare quale sia il migliore per il tuo caso d&#39;uso.
 
 ```json
 {
@@ -215,9 +215,9 @@ In caso di esito positivo, la risposta restituisce i dettagli del gruppo di camp
 }
 ```
 
-## Crea un gruppo di campi {#create}
+## Creare un gruppo di campi {#create}
 
-Puoi definire un gruppo di campi personalizzato sotto `tenant` effettuando una richiesta POST.
+È possibile definire un gruppo di campi personalizzato sotto il contenitore `tenant` effettuando una richiesta POST.
 
 **Formato API**
 
@@ -227,11 +227,11 @@ POST /tenant/fieldgroups
 
 **Richiesta**
 
-Quando si definisce un nuovo gruppo di campi, questo deve includere `meta:intendedToExtend` attributo, elencando `$id` delle classi con cui il gruppo di campi è compatibile. In questo esempio, il gruppo di campi è compatibile con `Property` classe definita in precedenza. I campi personalizzati devono essere nidificati in `_{TENANT_ID}` (come mostrato nell’esempio) per evitare conflitti con campi simili forniti da classi e altri gruppi di campi.
+Quando si definisce un nuovo gruppo di campi, deve includere un attributo `meta:intendedToExtend`, elencando `$id` delle classi con cui il gruppo di campi è compatibile. In questo esempio, il gruppo di campi è compatibile con una classe `Property` definita in precedenza. I campi personalizzati devono essere nidificati in `_{TENANT_ID}` (come mostrato nell&#39;esempio) per evitare conflitti con campi simili forniti da classi e altri gruppi di campi.
 
 >[!NOTE]
 >
->Per informazioni dettagliate su come definire diversi tipi di campi da includere nel gruppo di campi, vedere la guida [definizione dei campi personalizzati nell’API](../tutorials/custom-fields-api.md#define-fields).
+>Per informazioni dettagliate su come definire diversi tipi di campi da includere nel gruppo di campi, vedere la guida alla [definizione di campi personalizzati nell&#39;API](../tutorials/custom-fields-api.md#define-fields).
 
 ```SHELL
 curl -X POST \
@@ -300,7 +300,7 @@ curl -X POST \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce lo stato HTTP 201 (Creato) e un payload contenente i dettagli del gruppo di campi appena creato, tra cui `$id`, `meta:altId`, e `version`. Questi valori sono di sola lettura e sono assegnati dal [!DNL Schema Registry].
+In caso di esito positivo, la risposta restituisce lo stato HTTP 201 (Creato) e un payload contenente i dettagli del gruppo di campi appena creato, inclusi `$id`, `meta:altId` e `version`. Questi valori sono di sola lettura e sono assegnati da [!DNL Schema Registry].
 
 ```JSON
 {
@@ -384,15 +384,15 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 201 (Creato) e 
 }
 ```
 
-Esecuzione di una richiesta di GET a [elenca tutti i gruppi di campi](#list) nel contenitore tenant ora includerebbe il gruppo di campi Dettagli proprietà, oppure puoi [eseguire una richiesta di ricerca (GET)](#lookup) utilizzando la codifica URL `$id` URI per visualizzare direttamente il nuovo gruppo di campi.
+Se si esegue una richiesta di [elencare tutti i GET di campi](#list) nel contenitore tenant, il gruppo di campi Dettagli proprietà sarà ora incluso oppure sarà possibile [eseguire una richiesta di ricerca (GET)](#lookup) utilizzando l&#39;URI `$id` codificato dall&#39;URL per visualizzare direttamente il nuovo gruppo di campi.
 
 ## Aggiornare un gruppo di campi {#put}
 
-Puoi sostituire un intero gruppo di campi tramite un’operazione PUT, essenzialmente riscrivendo la risorsa. Quando si aggiorna un gruppo di campi tramite una richiesta PUT, il corpo deve includere tutti i campi necessari quando [creazione di un nuovo gruppo di campi](#create) in una richiesta POST.
+Puoi sostituire un intero gruppo di campi tramite un’operazione PUT, essenzialmente riscrivendo la risorsa. Quando si aggiorna un gruppo di campi tramite una richiesta PUT, il corpo deve includere tutti i campi necessari per [la creazione di un nuovo gruppo di campi](#create) in una richiesta POST.
 
 >[!NOTE]
 >
->Se desideri aggiornare solo una parte di un gruppo di campi invece di sostituirlo completamente, consulta la sezione su [aggiornamento di una parte di un gruppo di campi](#patch).
+>Se desideri aggiornare solo una parte di un gruppo di campi invece di sostituirlo completamente, consulta la sezione sull&#39;[aggiornamento di una parte di un gruppo di campi](#patch).
 
 **Formato API**
 
@@ -402,13 +402,13 @@ PUT /tenant/fieldgroups/{FIELD_GROUP_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{FIELD_GROUP_ID}` | Il `meta:altId` o con codifica URL `$id` del gruppo di campi che si desidera riscrivere. |
+| `{FIELD_GROUP_ID}` | `meta:altId` o `$id` con codifica URL del gruppo di campi che si desidera riscrivere. |
 
 {style="table-layout:auto"}
 
 **Richiesta**
 
-La richiesta seguente riscrive un gruppo di campi esistente, aggiungendo un nuovo `propertyCountry` campo.
+La richiesta seguente riscrive un gruppo di campi esistente, aggiungendo un nuovo campo `propertyCountry`.
 
 ```SHELL
 curl -X PUT \
@@ -573,11 +573,11 @@ In caso di esito positivo, la risposta restituisce i dettagli del gruppo di camp
 
 ## Aggiornare una parte di un gruppo di campi {#patch}
 
-È possibile aggiornare una parte di un gruppo di campi utilizzando una richiesta PATCH. Il [!DNL Schema Registry] supporta tutte le operazioni Patch JSON standard, tra cui `add`, `remove`, e `replace`. Per ulteriori informazioni sulla patch JSON, vedi [Guida di base sulle API](../../landing/api-fundamentals.md#json-patch).
+È possibile aggiornare una parte di un gruppo di campi utilizzando una richiesta PATCH. [!DNL Schema Registry] supporta tutte le operazioni Patch JSON standard, inclusi `add`, `remove` e `replace`. Per ulteriori informazioni sulla patch JSON, consulta la [guida delle API fondamentali](../../landing/api-fundamentals.md#json-patch).
 
 >[!NOTE]
 >
->Se desideri sostituire un’intera risorsa con nuovi valori invece di aggiornare singoli campi, consulta la sezione su [sostituzione di un gruppo di campi con un’operazione PUT](#put).
+>Se desideri sostituire un&#39;intera risorsa con nuovi valori invece di aggiornare singoli campi, consulta la sezione relativa alla [sostituzione di un gruppo di campi con un&#39;operazione PUT](#put).
 
 **Formato API**
 
@@ -587,15 +587,15 @@ PATCH /tenant/fieldgroups/{FIELD_GROUP_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{FIELD_GROUP_ID}` | Codifica URL `$id` URI o `meta:altId` del gruppo di campi che si desidera aggiornare. |
+| `{FIELD_GROUP_ID}` | URI `$id` con codifica URL o `meta:altId` del gruppo di campi che si desidera aggiornare. |
 
 {style="table-layout:auto"}
 
 **Richiesta**
 
-L’esempio di richiesta seguente aggiorna la `description` di un gruppo di campi esistente e aggiunge un nuovo `propertyCity` campo.
+La richiesta di esempio seguente aggiorna il `description` di un gruppo di campi esistente e aggiunge un nuovo campo `propertyCity`.
 
-Il corpo della richiesta è un array e ogni oggetto elencato rappresenta una modifica specifica di un singolo campo. Ogni oggetto include l&#39;operazione da eseguire (`op`), campo in cui deve essere eseguita l&#39;operazione (`path`) e quali informazioni devono essere incluse in tale operazione (`value`).
+Il corpo della richiesta è un array e ogni oggetto elencato rappresenta una modifica specifica di un singolo campo. Ogni oggetto include l&#39;operazione da eseguire (`op`), il campo in cui deve essere eseguita l&#39;operazione (`path`) e le informazioni da includere nell&#39;operazione (`value`).
 
 ```SHELL
 curl -X PATCH \
@@ -625,7 +625,7 @@ curl -X PATCH \
 
 **Risposta**
 
-La risposta mostra che entrambe le operazioni sono state eseguite correttamente. Il `description` è stato aggiornato, e `propertyCountry` è stato aggiunto in `definitions`.
+La risposta mostra che entrambe le operazioni sono state eseguite correttamente. `description` è stato aggiornato e `propertyCountry` aggiunto in `definitions`.
 
 ```JSON
 {
@@ -726,7 +726,7 @@ DELETE /tenant/fieldgroups/{FIELD_GROUP_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{FIELD_GROUP_ID}` | Codifica URL `$id` URI o `meta:altId` del gruppo di campi che si desidera eliminare. |
+| `{FIELD_GROUP_ID}` | URI `$id` con codifica URL o `meta:altId` del gruppo di campi che si desidera eliminare. |
 
 {style="table-layout:auto"}
 
@@ -745,4 +745,4 @@ curl -X DELETE \
 
 In caso di esito positivo, la risposta restituisce lo stato HTTP 204 (nessun contenuto) e un corpo vuoto.
 
-È possibile confermare l’eliminazione tentando un [richiesta di ricerca (GET)](#lookup) al gruppo di campi. Dovrai includere un `Accept` nella richiesta, ma dovrebbe ricevere lo stato HTTP 404 (Non trovato) perché il gruppo di campi è stato rimosso dal registro degli schemi.
+È possibile confermare l&#39;eliminazione tentando una [richiesta di ricerca](#lookup) nel GET di campi. È necessario includere un&#39;intestazione `Accept` nella richiesta, ma dovrebbe ricevere lo stato HTTP 404 (Non trovato) perché il gruppo di campi è stato rimosso dal registro degli schemi.

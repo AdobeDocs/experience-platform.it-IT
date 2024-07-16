@@ -10,11 +10,11 @@ exl-id: f59bf52a-13fe-4b84-81d6-518b9b081151
 source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
 workflow-type: tm+mt
 source-wordcount: '77'
-ht-degree: 0%
+ht-degree: 9%
 
 ---
 
-# Esperienza del cliente basata su Experience Platform
+# Una customer experience offerta da Experience Platform
 
 Scopri come Experience Platform crea un’esperienza ricca, rilevante e in tempo reale per i clienti guardando questo video che segue un’esperienza ipotetica creata con Platform, dal punto di vista di un cliente.
 

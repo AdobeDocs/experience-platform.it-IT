@@ -14,30 +14,30 @@ ht-degree: 0%
 
 # Creare segmenti di clienti con punteggi previsti
 
-Al termine di un’esecuzione di previsione, i punteggi di propensione previsti vengono utilizzati automaticamente dai profili. L’arricchimento dei profili con i punteggi di IA per l’analisi dei clienti consente di creare segmenti di clienti per trovare tipi di pubblico in base ai loro punteggi di tendenza. Questa sezione descrive i passaggi da seguire per creare segmenti con il Generatore di segmenti. Per un tutorial più completo sulla creazione dei segmenti, consulta [Guida utente di Segment Builder](../../../segmentation/ui/segment-builder.md).
+Al termine di un’esecuzione di previsione, i punteggi di propensione previsti vengono utilizzati automaticamente dai profili. L’arricchimento dei profili con i punteggi di IA per l’analisi dei clienti consente di creare segmenti di clienti per trovare tipi di pubblico in base ai loro punteggi di tendenza. Questa sezione descrive i passaggi da seguire per creare segmenti con il Generatore di segmenti. Per un&#39;esercitazione più efficace sulla creazione dei segmenti, consulta la [guida utente di Segment Builder](../../../segmentation/ui/segment-builder.md).
 
 >[!IMPORTANT]
 >
 >Per utilizzare questo metodo, è necessario abilitare Real-Time Customer Profile per il set di dati.
 
-Nell’interfaccia utente di Platform, fai clic su **[!UICONTROL Segmenti]** nel menu di navigazione a sinistra, quindi fai clic su **[!UICONTROL Crea segmento]**.
+Nell&#39;interfaccia utente di Platform, fare clic su **[!UICONTROL Segmenti]** nell&#39;area di navigazione a sinistra, quindi fare clic su **[!UICONTROL Crea segmento]**.
 
 ![](../images/user-guide/segments_new.png)
 
-Il **Generatore di segmenti** viene visualizzato. Da sinistra **[!UICONTROL Campi]** e sotto **[!UICONTROL Attributi]** , fare clic sulla cartella denominata **[!UICONTROL Profilo individuale XDM]** quindi fai clic sulla cartella con il namespace della tua organizzazione. La cartella denominata **[!UICONTROL IA per l’analisi dei clienti]** contiene i risultati delle esecuzioni delle previsioni e sono denominati in base all’istanza a cui appartengono i punteggi. Fai clic su una cartella di istanze per accedere ai risultati dell’istanza desiderata.
+Viene visualizzato il **Generatore di segmenti**. Dalla colonna sinistra **[!UICONTROL Campi]** e nella scheda **[!UICONTROL Attributi]**, fai clic sulla cartella denominata **[!UICONTROL Profilo individuale XDM]**, quindi fai clic sulla cartella con lo spazio dei nomi della tua organizzazione. La cartella denominata **[!UICONTROL IA per l&#39;analisi dei clienti]** contiene i risultati delle esecuzioni delle previsioni e prende il nome dall&#39;istanza a cui appartengono i punteggi. Fai clic su una cartella di istanze per accedere ai risultati dell’istanza desiderata.
 
 ![](../images/user-guide/results_new.png)
 
-Situato al centro del Generatore di segmenti, trascina e rilascia il file **[!UICONTROL Punteggio]** attributo su *area di lavoro generatore regole* per definire una regola.
+Situato al centro del Generatore di segmenti, trascina l&#39;attributo **[!UICONTROL Punteggio]** nell&#39;area di lavoro del *generatore di regole* per definire una regola.
 
-Sotto la mano destra *Proprietà segmento* , fornisci un nome per il segmento.
+Nella colonna *Proprietà segmento* a destra, specifica un nome per il segmento.
 
 ![](../images/user-guide/properties_new.png)
 
-Sopra la mano sinistra *Campi* , fare clic sul pulsante **ingranaggio** e seleziona un&#39;icona *Criterio di unione* dal menu a discesa. Clic **[!UICONTROL Salva]** per creare il segmento.
+Sopra la colonna *Fields* a sinistra, fai clic sull&#39;icona **gear** e seleziona un *criterio di unione* dal menu a discesa. Fai clic su **[!UICONTROL Salva]** per creare il segmento.
 
 ![](../images/user-guide/merge_policy_new.png)
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai trovato correttamente i tipi di pubblico in base ai loro punteggi di tendenza utilizzando il Generatore di segmenti. Ora puoi indirizzare il pubblico attivandolo nelle destinazioni. Consulta la [panoramica sulle destinazioni](../../../destinations/home.md) per ulteriori informazioni.
+Seguendo questa esercitazione, hai trovato correttamente i tipi di pubblico in base ai loro punteggi di tendenza utilizzando il Generatore di segmenti. Ora puoi indirizzare il pubblico attivandolo nelle destinazioni. Per ulteriori informazioni, consulta la [panoramica delle destinazioni](../../../destinations/home.md).

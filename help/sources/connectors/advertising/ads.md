@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;Google Ads;google ads
-title: Panoramica sull’origine di Google Ads
+title: Panoramica di Google Ads Source
 description: Scopri come collegare Google Ads a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 1f6257e0-213c-4723-a240-511c11c5833c
 source-git-commit: ce3dabe4ab08a41e581b97b74b3abad352e3267c
@@ -10,27 +10,27 @@ ht-degree: 0%
 
 ---
 
-# [!DNL Google Ads] sorgente
+# Origine [!DNL Google Ads]
 
 >[!WARNING]
 >
->Il [!DNL Google Ads] origine temporaneamente non disponibile. Adobe sta lavorando per risolvere i problemi con questa origine.
+>Origine [!DNL Google Ads] temporaneamente non disponibile. Adobe sta lavorando per risolvere i problemi con questa origine.
 
 >[!NOTE]
 >
->Il [!DNL Google Ads] sorgente in versione beta. Consulta la [Panoramica sulle origini](../../home.md#terms-and-conditions) per ulteriori informazioni sull’utilizzo di connettori con etichetta beta.
+>L&#39;origine [!DNL Google Ads] è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la [Panoramica origini](../../home.md#terms-and-conditions).
 
-Adobe Experience Platform consente di acquisire dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] servizi. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
+Adobe Experience Platform consente di acquisire dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi [!DNL Platform]. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 
-[!DNL Experience Platform] fornisce supporto per l’acquisizione di dati da un sistema pubblicitario di terze parti. Il supporto per i provider pubblicitari include [!DNL Google Ads].
+[!DNL Experience Platform] fornisce supporto per l&#39;acquisizione di dati da un sistema pubblicitario di terze parti. Il supporto per i provider pubblicitari include [!DNL Google Ads].
 
 ## ELENCO CONSENTITI di indirizzo IP
 
-Prima di utilizzare i connettori di origine, è necessario aggiungere un elenco di indirizzi IP a un elenco consentiti. La mancata aggiunta all’elenco consentiti degli indirizzi IP specifici per l’area geografica potrebbe causare errori o prestazioni non ottimali durante l’utilizzo delle origini. Consulta la [ELENCO CONSENTITI di indirizzo IP](../../ip-address-allow-list.md) per ulteriori informazioni.
+Prima di utilizzare i connettori di origine, è necessario aggiungere un elenco di indirizzi IP a un elenco consentiti. La mancata aggiunta all’elenco consentiti degli indirizzi IP specifici per l’area geografica potrebbe causare errori o prestazioni non ottimali durante l’utilizzo delle origini. Per ulteriori informazioni, vedere la pagina [elenco consentiti indirizzo IP](../../ip-address-allow-list.md).
 
-## Connetti [!DNL Google Ads] alla piattaforma
+## Connetti [!DNL Google Ads] a Platform
 
-La documentazione seguente fornisce informazioni sulle modalità di connessione [!DNL Google Ads] in Platform tramite API o l’interfaccia utente:
+La documentazione seguente fornisce informazioni su come connettere [!DNL Google Ads] a Platform tramite API o tramite l&#39;interfaccia utente:
 
 ### Utilizzo delle API
 

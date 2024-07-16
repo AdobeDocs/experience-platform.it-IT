@@ -6,14 +6,14 @@ description: Per creare un batch, devi eseguire una richiesta POST all’endpoin
 exl-id: 1d2cbca9-1cd6-4b89-9b77-3687268bd849
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
-source-wordcount: '117'
+source-wordcount: '118'
 ht-degree: 5%
 
 ---
 
 # Creare un batch
 
-Affinché un set di dati possa acquisire dati, deve essere associato a un batch. Utilizzo di `id` di un set di dati esistente, è possibile creare un batch effettuando una richiesta POST al `/batches` endpoint nella [!DNL Catalog] API.
+Affinché un set di dati possa acquisire dati, deve essere associato a un batch. Utilizzando il valore `id` di un set di dati esistente, è possibile creare un batch effettuando una richiesta POST all&#39;endpoint `/batches` nell&#39;API [!DNL Catalog].
 
 **Formato API**
 
@@ -38,11 +38,11 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `datasetId` | Il `id` del set di dati a cui sarà associato il batch. |
+| `datasetId` | `id` del set di dati a cui verrà associato il batch. |
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce lo stato HTTP 201 (Creato) e un oggetto di risposta contenente i dettagli del batch appena creato, inclusi i relativi `id`, una stringa generata dal sistema di sola lettura.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 201 (Creato) e un oggetto di risposta contenente i dettagli del batch appena creato, incluso `id`, una stringa generata dal sistema di sola lettura.
 
 ```JSON
 {

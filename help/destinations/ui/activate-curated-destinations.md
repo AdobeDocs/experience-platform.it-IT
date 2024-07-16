@@ -5,20 +5,20 @@ description: Scopri come attivare i tipi di pubblico da Adobe Experience Platfor
 exl-id: 37e5bab9-588f-40b3-b65b-68f1a4b868f1
 source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '660'
 ht-degree: 0%
 
 ---
 
 # Attiva i tipi di pubblico nelle destinazioni curate in base agli identificatori LiveRamp
 
-Utilizzare l’integrazione di Adobe Real-Time CDP con [!DNL LiveRamp] per attivare dei tipi di pubblico in un elenco curato di destinazioni che utilizzano [!DNL [LiveRamp RampID]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html) per l&#39;attivazione, comprese le destinazioni TV e audio collegate, come quelle elencate di seguito.
+Utilizza l&#39;integrazione di Adobe Real-Time CDP con [!DNL LiveRamp] per attivare i tipi di pubblico in un elenco curato di destinazioni che utilizzano [!DNL [LiveRamp RampID]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html) per l&#39;attivazione, incluse le destinazioni TV e audio connesse, come quelle elencate di seguito.
 
 >[!IMPORTANT]
 >
->Non è necessario acquisire o utilizzare in alcun modo i RampID LiveRamp nell’interfaccia di Experienci Platform.
+>Non è necessario acquisire o utilizzare in alcun modo i RampID LiveRamp nell’interfaccia di Experience Platform.
 >
-> Puoi esportare identità da Real-Time CDP, come identificatori basati su PII, identificatori noti e ID personalizzati, come descritto nella sezione [Documentazione di LiveRamp](https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#known-identifiers). Queste identità vengono quindi associate a [!DNL LiveRamp RampIDs] a valle del processo di attivazione.
+> Puoi esportare le identità da Real-Time CDP, ad esempio identificatori basati su PII, identificatori noti e ID personalizzati, come descritto nella [documentazione LiveRamp](https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#known-identifiers) ufficiale. Queste identità vengono quindi associate a [!DNL LiveRamp RampIDs] più a valle nel processo di attivazione.
 
 
 * [[!DNL 4C Insights]](#insights)
@@ -46,17 +46,17 @@ Questo articolo spiega il flusso di lavoro necessario per attivare i tipi di pub
 
 ## Flusso di lavoro attivazione {#workflow}
 
-È possibile attivare i tipi di pubblico per le destinazioni TV e audio collegate eseguendo un processo in due fasi e utilizzando [LiveRamp - Onboarding](../catalog/advertising/liveramp-onboarding.md) e [LiveRamp - Distribuzione](../catalog/advertising/liveramp-distribution.md) come illustrato nell’immagine seguente.
+Puoi attivare i tipi di pubblico per le destinazioni TV e audio connesse seguendo un processo in due fasi e utilizzando le destinazioni [LiveRamp - Onboarding](../catalog/advertising/liveramp-onboarding.md) e [LiveRamp - Distribuzione](../catalog/advertising/liveramp-distribution.md), come illustrato nell&#39;immagine seguente.
 
 ![Diagramma che mostra il flusso di lavoro per attivare i tipi di pubblico da Real-Time CDP alle destinazioni curate tramite LiveRamp.](../assets/ui/activate-curated-destinations-liveramp/workflow-diagram.png){width="1920" zoomable="yes"}
 
-Innanzitutto, esporta i tipi di pubblico da Real-Time CDP a [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) come file CSV.
+Esportare innanzitutto i tipi di pubblico da Real-Time CDP nella destinazione [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) come file CSV.
 
-Dopo aver esportato i tipi di pubblico, puoi attivarli utilizzando [[!DNL LiveRamp - Distribution]](../catalog/advertising/liveramp-distribution.md) destinazione.
+Dopo aver esportato i tipi di pubblico, attivarli utilizzando la destinazione [[!DNL LiveRamp - Distribution]](../catalog/advertising/liveramp-distribution.md).
 
 >[!TIP]
 >
->Questo processo ti consente di attivare i tipi di pubblico in destinazioni quali [[!DNL Roku]](../catalog/advertising/liveramp-distribution.md#roku), [[!DNL Disney]](../catalog/advertising/liveramp-distribution.md#disney)e molto altro direttamente dall’interfaccia utente di Real-Time CDP, senza dover accedere al [!DNL LiveRamp] account per l&#39;attivazione.
+>Questo processo consente di attivare i tipi di pubblico in destinazioni quali [[!DNL Roku]](../catalog/advertising/liveramp-distribution.md#roku), [[!DNL Disney]](../catalog/advertising/liveramp-distribution.md#disney) e altre direttamente dall&#39;interfaccia utente di Real-Time CDP, senza dover accedere all&#39;account [!DNL LiveRamp] per l&#39;attivazione.
 
 ### Esercitazione video {#video}
 
@@ -64,53 +64,53 @@ Guarda il video seguente per una spiegazione end-to-end del flusso di lavoro des
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425367)
 
-### Passaggio 1: invia i tuoi tipi di pubblico da Experienci Platform a LiveRamp, tramite [!DNL LiveRamp - Onboarding] destinazione {#onboarding}
+### Passaggio 1: invia i tuoi tipi di pubblico da Experience Platform a LiveRamp, tramite la destinazione [!DNL LiveRamp - Onboarding] {#onboarding}
 
-La prima cosa da fare per attivare i tipi di pubblico in destinazioni curate basate su RampID LiveRamp è: **esportare i tipi di pubblico da Experienci Platform a[!DNL LiveRamp]**.
+Per attivare i tipi di pubblico in destinazioni curate basate su RampID LiveRamp, devi innanzitutto **esportare i tipi di pubblico da Experience Platform a[!DNL LiveRamp]**.
 
-Per farlo, utilizza **[!DNL LiveRamp - Onboarding]** destinazione.
+A tale scopo, utilizzare la destinazione **[!DNL LiveRamp - Onboarding]**.
 
-![Experience Platform di immagine dell’interfaccia utente che mostra la scheda LiveRamp - Onboarding destination](../assets/ui/activate-curated-destinations-liveramp/liveramp-onboarding-catalog.png)
+![Experience Platform di immagine dell&#39;interfaccia utente che mostra la scheda LiveRamp - Onboarding destinazione](../assets/ui/activate-curated-destinations-liveramp/liveramp-onboarding-catalog.png)
 
-Per scoprire come configurare [!DNL LiveRamp - Onboarding] destinazione ed esportare i tipi di pubblico da Experienci Platform, leggi la [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) documentazione di destinazione.
-
->[!IMPORTANT]
->
->Durante l&#39;esportazione di file in [!DNL LiveRamp - Onboarding] di destinazione, Platform genera un file CSV per ogni [ID criterio di unione](../../profile/merge-policies/overview.md). Consulta la [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) documentazione di destinazione per informazioni dettagliate su come convalidare l&#39;esportazione dei dati in LiveRamp.
-
-
-Dopo aver esportato correttamente i tipi di pubblico in LiveRamp, continua con [passaggio 2](#distribution).
-
->[!TIP]
->
->Prima di passare a [passaggio 2](#distribution), [convalida](../catalog/advertising/liveramp-onboarding.md#exported-data) che i tipi di pubblico sono stati esportati correttamente in LiveRamp. Consulta la documentazione su [monitoraggio dei flussi di dati di destinazione](../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) e informazioni sui dettagli di monitoraggio specifici per [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md#exported-data).
-
-### Passaggio 2: attiva i tipi di pubblico onboarded sulle destinazioni TV e audio collegate, attraverso il [!DNL LiveRamp - Distribution] destinazione {#distribution}
-
-Dopo aver [convalidato](../catalog/advertising/liveramp-onboarding.md#exported-data) che i tipi di pubblico siano stati esportati correttamente in LiveRamp, è ora di attivarli nelle destinazioni preferite, ad esempio [[!DNL Roku]](../catalog/advertising/liveramp-distribution.md#roku), [[!DNL Disney]](../catalog/advertising/liveramp-distribution.md#disney), e altro ancora.
-
-Attivare i tipi di pubblico (esportati in [passaggio 1](#onboarding)) utilizzando **[!DNL LiveRamp - Distribution]** destinazione.
-
-![Experience Platform di immagine dell’interfaccia utente che mostra la scheda LiveRamp - Distribution destination](../assets/ui/activate-curated-destinations-liveramp/liveramp-distribution-catalog.png)
-
-Per scoprire come configurare **[!DNL LiveRamp - Distribution]** destinazione e attivare i tipi di pubblico esportati in [passaggio 1](#onboarding), leggi [[!DNL LiveRamp - Distribution]](../catalog/advertising/liveramp-distribution.md) documentazione di destinazione.
+Per informazioni su come configurare la destinazione [!DNL LiveRamp - Onboarding] ed esportare i tipi di pubblico da Experience Platform, consulta la documentazione della destinazione [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md).
 
 >[!IMPORTANT]
 >
->In **selezione del pubblico** passaggio del **[!DNL LiveRamp - Distribution]** destinazione, è necessario selezionare la *stesso pubblico esatto* che hai esportato in [LiveRamp - Onboarding](../catalog/advertising/liveramp-onboarding.md) destinazione in [passaggio 1](#onboarding).
+>Durante l&#39;esportazione dei file nella destinazione [!DNL LiveRamp - Onboarding], Platform genera un file CSV per ogni [ID del criterio di unione](../../profile/merge-policies/overview.md). Per informazioni dettagliate su come convalidare l&#39;esportazione dei dati in LiveRamp, consulta la documentazione della destinazione [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md).
 
-Quando si configura **[!DNL LiveRamp - Distribution]** destinazione, devi creare una connessione dedicata per ogni destinazione a valle che desideri utilizzare (Roku, Disney e così via).
+
+Dopo aver esportato correttamente i tipi di pubblico in LiveRamp, continua con il [passaggio 2](#distribution).
 
 >[!TIP]
 >
->Per la denominazione della destinazione, Adobe consiglia di seguire questo formato: `LiveRamp - Downstream Destination Name`. Questo modello di denominazione consente di identificare rapidamente le destinazioni in [Sfoglia](../ui/destinations-workspace.md#browse) dell’area di lavoro destinazioni.
+>Prima di passare al [passaggio 2](#distribution), [verifica](../catalog/advertising/liveramp-onboarding.md#exported-data) che i tipi di pubblico siano stati esportati correttamente in LiveRamp. Consulta la documentazione sui [flussi di dati di destinazione di monitoraggio](../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) e leggi i dettagli di monitoraggio specifici per [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md#exported-data).
+
+### Passaggio 2: attiva i tipi di pubblico onboarded nelle destinazioni TV e audio connesse, tramite la destinazione [!DNL LiveRamp - Distribution] {#distribution}
+
+Dopo aver [convalidato](../catalog/advertising/liveramp-onboarding.md#exported-data) che i tipi di pubblico sono stati esportati correttamente in LiveRamp, è ora di attivare i tipi di pubblico nelle destinazioni preferite, ad esempio [[!DNL Roku]](../catalog/advertising/liveramp-distribution.md#roku), [[!DNL Disney]](../catalog/advertising/liveramp-distribution.md#disney) e altro ancora.
+
+È possibile attivare i tipi di pubblico (esportati nel [passaggio 1](#onboarding)) utilizzando la destinazione **[!DNL LiveRamp - Distribution]**.
+
+![Immagine dell&#39;interfaccia utente di Experience Platform che mostra la scheda LiveRamp - Distribution destination](../assets/ui/activate-curated-destinations-liveramp/liveramp-distribution-catalog.png)
+
+Per informazioni su come configurare la destinazione **[!DNL LiveRamp - Distribution]** e attivare i tipi di pubblico esportati nel [passaggio 1](#onboarding), leggere la documentazione della destinazione [[!DNL LiveRamp - Distribution]](../catalog/advertising/liveramp-distribution.md).
+
+>[!IMPORTANT]
+>
+>Nel passaggio **selezione pubblico** della destinazione **[!DNL LiveRamp - Distribution]**, devi selezionare i *tipi di pubblico identici* che hai esportato nella destinazione [LiveRamp - Onboarding](../catalog/advertising/liveramp-onboarding.md) in [passaggio 1](#onboarding).
+
+Quando configuri la destinazione **[!DNL LiveRamp - Distribution]**, devi creare una connessione dedicata per ogni destinazione a valle che desideri utilizzare (Roku, Disney e così via).
+
+>[!TIP]
+>
+>Per la denominazione della destinazione, l&#39;Adobe consiglia di usare questo formato: `LiveRamp - Downstream Destination Name`. Questo modello di denominazione consente di identificare rapidamente le destinazioni nella scheda [Sfoglia](../ui/destinations-workspace.md#browse) dell&#39;area di lavoro delle destinazioni.
 ><br>
 >Esempio: `LiveRamp - Roku`.
 
-![Schermata dell’interfaccia utente di Platform che mostra più destinazioni LiveRamp.](../assets/ui/activate-curated-destinations-liveramp/liveramp-naming.png)
+![Schermata dell&#39;interfaccia utente di Platform che mostra più destinazioni LiveRamp.](../assets/ui/activate-curated-destinations-liveramp/liveramp-naming.png)
 
 ## Dati esportati / Convalida esportazione dati {#exported-data}
 
-Per convalidare la corretta esportazione dei tipi di pubblico in [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) destinazione, consulta la documentazione su [monitoraggio dei flussi di dati di destinazione](../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) e informazioni sui dettagli di monitoraggio specifici per [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md#exported-data).
+Per convalidare la corretta esportazione dei tipi di pubblico nella destinazione [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md), consulta la documentazione sui [flussi di dati di destinazione di monitoraggio](../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) e leggi i dettagli di monitoraggio specifici per [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md#exported-data).
 
 Per convalidare la corretta attivazione dei tipi di pubblico nella piattaforma pubblicitaria scelta (ad esempio Roku, Disney e altri), accedi al tuo account della piattaforma di destinazione e controlla le metriche di attivazione.

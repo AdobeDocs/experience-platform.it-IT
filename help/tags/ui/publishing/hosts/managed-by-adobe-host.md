@@ -4,7 +4,7 @@ description: Scopri l’opzione di hosting predefinita per la distribuzione dell
 exl-id: 9042c313-b0d3-4f6e-963d-0051d760fd16
 source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
-source-wordcount: '1173'
+source-wordcount: '1177'
 ht-degree: 88%
 
 ---
@@ -76,7 +76,7 @@ I gruppi del server di origine hanno quindi il tempo necessario per replicare tr
 
 Le build delle librerie vengono anche memorizzate nella cache del browser tramite l’intestazione HTTP `cache-control`. Quando utilizzi gli host gestiti da Adobe, non puoi intervenire sulle intestazioni restituite nelle risposte API e vengono quindi utilizzate le impostazioni di cache predefinite di Adobe. In altre parole, non è possibile utilizzare intestazioni personalizzate per gli host gestiti da Adobe. Se hai l’esigenza di usare un’intestazione `cache-control` personalizzata, puoi ricorrere al [self-hosting](self-hosting-libraries.md).
 
-Il tempo di scadenza della build della libreria memorizzata nella cache del browser (determinato dalla `cache-control` ) varia a seconda dell’ambiente di tag in uso:
+Il tempo di scadenza della build della libreria memorizzata nella cache del browser (determinato dall&#39;intestazione `cache-control`) varia a seconda dell&#39;ambiente di tag in uso:
 
 | Ambiente | Valore `cache-control` |
 | --- | --- |
@@ -88,7 +88,7 @@ Come riportato in questa tabella, la memorizzazione nella cache del browser non 
 
 Le intestazioni per il controllo della cache sono applicabili solo alla build della libreria principale. Le risorse secondarie rispetto alla libreria principale sono sempre considerate nuove e quindi non è necessario memorizzarle nella cache del browser.
 
-## Utilizzo dell’hosting gestito da Adobe nell’interfaccia di 
+## Utilizzo dell’hosting gestito da Adobe nell’interfaccia utente di
 
 La prima volta che crei una proprietà nell’interfaccia utente di Platform o di Data Collection, viene automaticamente creato un host gestito da Adobe. Anche tutti gli ambienti disponibili con proprietà immediatamente utilizzabili vengono assegnati per impostazione predefinita all’host gestito da Adobe.
 
@@ -98,7 +98,6 @@ La prima volta che crei una proprietà nell’interfaccia utente di Platform o d
 >
 >1. Seleziona la scheda **[!UICONTROL Host]** nella tua proprietà, quindi seleziona **[!UICONTROL Aggiungi host]**.
 >1. Specifica un nome per l’host, seleziona **[!UICONTROL Gestito da Adobe]** come tipo di host, quindi seleziona **[!UICONTROL Salva]**.
-
 >
 >A questo punto puoi riassegnare gli ambienti all’host gestito da Adobe, in base alle tue esigenze.
 

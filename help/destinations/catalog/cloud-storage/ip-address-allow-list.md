@@ -1,7 +1,7 @@
 ---
 title: ELENCO CONSENTITI di indirizzo IP per destinazioni di archiviazione cloud basata su file
 type: Documentation
-description: Questa pagina fornisce intervalli IP che puoi aggiungere al tuo elenco consentiti per esportare in modo sicuro i dati da Experienci Platform a destinazioni di archiviazione cloud.
+description: Questa pagina fornisce intervalli IP che puoi aggiungere al tuo elenco consentiti per esportare in modo sicuro i dati da Experience Platform a destinazioni di archiviazione cloud.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
 source-git-commit: 1d8ba11b1043fa68bf3c0205e8cecc2de8910234
 workflow-type: tm+mt
@@ -10,32 +10,32 @@ ht-degree: 1%
 
 ---
 
-# INSERIRE NELL&#39;ELENCO CONSENTITI Indirizzo IP per le destinazioni di archiviazione cloud basata su file {#ip-address-allow-list-cloud-storage}
+# Indirizzi IP di cui è stato eseguito il inserisco nell&#39;elenco Consentiti per le destinazioni di archiviazione cloud basate su file {#ip-address-allow-list-cloud-storage}
 
 >[!IMPORTANT]
 >
 > * L’Adobe consiglia di aggiungere un segnalibro a questa pagina e di visitarla nuovamente ogni tre mesi per verificare la presenza degli indirizzi IP più recenti. L’Adobe non fornisce la notifica dei nuovi intervalli IP.
-> * Sebbene Adobe supporti le esportazioni di dati ai server SFTP, le posizioni di archiviazione cloud consigliate per l’esportazione dei dati sono [!DNL Amazon S3] e [!DNL Azure Blob].
+> * Sebbene Adobe supporti le esportazioni di dati ai server SFTP, i percorsi consigliati per l&#39;archiviazione cloud per l&#39;esportazione dei dati sono [!DNL Amazon S3] e [!DNL Azure Blob].
 
 ## Applicabilità {#applicability}
 
 Le informazioni sull’intervallo IP in questa pagina si applicano ai seguenti connettori di archiviazione cloud basati su file nel catalogo delle destinazioni:
 
 * [[!UICONTROL Amazon S3]](./amazon-s3.md)
-* [[!UICONTROL Archiviazione cloud Google]](google-cloud-storage.md)
+* [[!UICONTROL Google Cloud Storage]](google-cloud-storage.md)
 * [SFTP](./sftp.md)
 
 >[!IMPORTANT]
 >
->Gli intervalli IP documentati in questa pagina sono *non* supportato per le seguenti destinazioni di archiviazione cloud basata su file: [!UICONTROL BLOB di Azure], [!UICONTROL Archiviazione Azure Data Lake Gen2] e [!UICONTROL Data Landing Zone].
+>Gli intervalli IP documentati in questa pagina sono *non* supportati per le seguenti destinazioni di archiviazione cloud basata su file: [!UICONTROL BLOB di Azure], [!UICONTROL Archiviazione Azure Data Lake Gen2] e [!UICONTROL Area di destinazione dati].
 
 ## Panoramica {#overview}
 
-Questa pagina fornisce intervalli IP che puoi aggiungere al tuo inserisco nell&#39;elenco Consentiti di per esportare in modo sicuro i dati da Experienci Platform a diverse destinazioni di archiviazione cloud.
+Questa pagina fornisce intervalli IP che puoi aggiungere al tuo inserisco nell&#39;elenco Consentiti di per esportare in modo sicuro i dati da Experience Platform a diverse destinazioni di archiviazione cloud.
 
 È possibile definire i controlli di accesso alla rete tramite il firewall di rete. Specificando l’intervallo IP appropriato, puoi consentire il traffico per il servizio di trasferimento dati.
 
-L’Adobe consiglia di aggiungere i seguenti intervalli IP a un inserisco nell&#39;elenco Consentiti di prima di utilizzare le connessioni di destinazione dell’archiviazione cloud. La mancata aggiunta dell’intervallo IP specifico per l’area geografica al inserisco nell&#39;elenco Consentiti di può causare errori o non prestazioni quando si utilizzano le connessioni di destinazione dell’archiviazione cloud.
+L’Adobe consiglia di aggiungere i seguenti intervalli IP a un inserisco nell&#39;elenco Consentiti di prima di utilizzare le connessioni di destinazione dell’archiviazione cloud. Se non si aggiunge l’intervallo IP specifico per l’area geografica al inserisco nell&#39;elenco Consentiti di, si potrebbero verificare errori o prestazioni quando si utilizzano le connessioni di destinazione dell’archiviazione cloud.
 
 ## Obbligatorio per tutti i clienti {#all-customers}
 

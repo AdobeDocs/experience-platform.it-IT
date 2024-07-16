@@ -4,8 +4,8 @@ title: Recuperare un modello di pubblico
 exl-id: 44f2d571-49c5-4112-b3ee-bc839f2b0874
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '418'
-ht-degree: 2%
+source-wordcount: '420'
+ht-degree: 1%
 
 ---
 
@@ -15,21 +15,21 @@ ht-degree: 2%
 >
 >**Endpoint API**: `platform.adobe.io/data/core/activation/authoring/audience-templates`
 
-Questa pagina esemplifica la richiesta API e il payload che puoi utilizzare per recuperare un modello di metadati di pubblico, utilizzando `/authoring/audience-templates` Endpoint API
+Questa pagina esemplifica la richiesta API e il payload che è possibile utilizzare per recuperare un modello di metadati di pubblico, utilizzando l&#39;endpoint API `/authoring/audience-templates`.
 
-Per una descrizione dettagliata delle funzionalità che è possibile configurare tramite questo endpoint, vedi [gestione dei metadati del pubblico](../functionality/audience-metadata-management.md).
+Per una descrizione dettagliata delle funzionalità che è possibile configurare tramite questo endpoint, vedere [Gestione metadati pubblico](../functionality/audience-metadata-management.md).
 
 >[!IMPORTANT]
 >
->Tutti i nomi e i valori dei parametri supportati da Destination SDK sono **distinzione maiuscole/minuscole**. Per evitare errori di distinzione tra maiuscole e minuscole, utilizza i nomi e i valori dei parametri esattamente come mostrato nella documentazione.
+>Tutti i nomi e i valori dei parametri supportati da Destination SDK sono **con distinzione tra maiuscole e minuscole**. Per evitare errori di distinzione tra maiuscole e minuscole, utilizza i nomi e i valori dei parametri esattamente come mostrato nella documentazione.
 
 ## Guida introduttiva alle operazioni API dei modelli di pubblico {#get-started}
 
-Prima di continuare, controlla [guida introduttiva](../getting-started.md) per informazioni importanti che è necessario conoscere per effettuare correttamente chiamate all’API, tra cui come ottenere l’autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
+Prima di continuare, consulta la [guida introduttiva](../getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
 
 ## Recuperare un modello di pubblico {#retrieve}
 
-Per recuperare un modello di pubblico esistente, devi effettuare una `GET` richiesta al `/authoring/audience-templates` endpoint.
+Per recuperare un modello di pubblico esistente, devi eseguire una richiesta `GET` all&#39;endpoint `/authoring/audience-templates`.
 
 **Formato API**
 
@@ -39,13 +39,13 @@ Utilizza il seguente formato API per recuperare tutti i modelli di pubblico per 
 GET /authoring/audience-templates
 ```
 
-Utilizza il seguente formato API per recuperare un modello di pubblico specifico, definito da `{INSTANCE_ID}` parametro.
+Utilizza il seguente formato API per recuperare un modello di pubblico specifico, definito dal parametro `{INSTANCE_ID}`.
 
 ```http
 GET /authoring/audience-templates/{INSTANCE_ID}
 ```
 
-Le due richieste seguenti recuperano tutti i modelli di pubblico per l’organizzazione IMS, o un modello di pubblico specifico, a seconda che venga passato o meno il `INSTANCE_ID` nella richiesta.
+Le due richieste seguenti recuperano tutti i modelli di pubblico per l’organizzazione IMS o un modello di pubblico specifico, a seconda che nella richiesta venga passato il parametro `INSTANCE_ID`.
 
 Seleziona ciascuna scheda di seguito per visualizzare il payload corrispondente.
 
@@ -53,7 +53,7 @@ Seleziona ciascuna scheda di seguito per visualizzare il payload corrispondente.
 
 >[!TAB Recupera tutti i modelli di pubblico]
 
-La seguente richiesta recupererà l’elenco dei modelli di pubblico a cui hai accesso, in base a [!DNL IMS Org ID] e la configurazione della sandbox.
+La richiesta seguente recupererà l&#39;elenco dei modelli di pubblico a cui hai accesso, in base a [!DNL IMS Org ID] e alla configurazione sandbox.
 
 +++Richiesta
 
@@ -69,7 +69,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 +++Risposta
 
-In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elenco di modelli di pubblico a cui hai accesso, in base al [!DNL IMS Org ID] e il nome della sandbox che hai utilizzato. Uno `instanceId` corrisponde a un modello di pubblico.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elenco di modelli di pubblico a cui hai accesso, in base a [!DNL IMS Org ID] e al nome di sandbox utilizzati. Un `instanceId` corrisponde a un modello di pubblico.
 
 ```json
 {
@@ -182,7 +182,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elen
 
 >[!TAB Recuperare un modello di pubblico specifico]
 
-La seguente richiesta recupererà l’elenco dei modelli di pubblico a cui hai accesso, in base a [!DNL IMS Org ID] e la configurazione della sandbox.
+La richiesta seguente recupererà l&#39;elenco dei modelli di pubblico a cui hai accesso, in base a [!DNL IMS Org ID] e alla configurazione sandbox.
 
 +++Richiesta
 
@@ -202,7 +202,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 +++Risposta
 
-In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i dettagli del modello di pubblico corrispondenti al `{INSTANCE_ID}` fornite durante la chiamata.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i dettagli del modello di pubblico corrispondenti al `{INSTANCE_ID}` fornito nella chiamata.
 
 ```json
 {
@@ -317,8 +317,8 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 
 ## Gestione degli errori API {#error-handling}
 
-Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Fai riferimento a [Codici di stato API](../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
+Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
 
 ## Passaggi successivi {#next-steps}
 
-Dopo aver letto questo documento, ora sai come recuperare i dettagli sulla configurazione del server di destinazione utilizzando `/authoring/destination-servers` Endpoint API Letto [come utilizzare Destination SDK per configurare la destinazione](../guides/configure-destination-instructions.md) per capire in che modo questo passaggio si inserisce nel processo di configurazione della destinazione.
+Dopo aver letto questo documento, saprai come recuperare i dettagli sulla configurazione del server di destinazione utilizzando l&#39;endpoint API `/authoring/destination-servers`. Leggi [come utilizzare Destination SDK per configurare la destinazione](../guides/configure-destination-instructions.md) per capire in che modo questo passaggio si inserisce nel processo di configurazione della destinazione.

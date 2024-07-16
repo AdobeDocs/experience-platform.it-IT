@@ -9,9 +9,9 @@ ht-degree: 8%
 
 ---
 
-# [!UICONTROL Conto finanziario] tipo di dati
+# Tipo di dati [!UICONTROL Account finanziario]
 
-[!UICONTROL Conto finanziario] è un tipo di dati XDM standard che descrive i dettagli di un conto finanziario, tra cui il tipo, il proprietario e il saldo corrente.
+[!UICONTROL Conto finanziario] è un tipo di dati XDM standard che descrive i dettagli di un conto finanziario, inclusi il tipo, il proprietario e il saldo corrente.
 
 ![](../images/data-types/financial-account.png)
 
@@ -24,4 +24,4 @@ ht-degree: 8%
 
 {style="table-layout:auto"}
 
-Per ulteriori dettagli sul tipo di dati, consulta [archivio XDM pubblico](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/financial-account.schema.json).
+Per ulteriori dettagli sul tipo di dati, consulta l&#39;[archivio XDM pubblico](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/financial-account.schema.json).

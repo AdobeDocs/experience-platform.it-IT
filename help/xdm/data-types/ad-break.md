@@ -5,13 +5,13 @@ exl-id: dfe0c386-8459-440d-95b5-b2139fac0fc3
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '102'
-ht-degree: 6%
+ht-degree: 21%
 
 ---
 
-# [!UICONTROL Interruzione pubblicitaria] tipo di dati
+# [!UICONTROL Tipo di dati interruzione annuncio]
 
-[!UICONTROL Interruzione pubblicitaria] è un tipo di dati Experience Data Model (XDM) standard che descrive come un annuncio a tempo viene inserito in un elemento multimediale a tempo.
+[!UICONTROL L&#39;interruzione pubblicitaria] è un tipo di dati Experience Data Model (XDM) standard che descrive come un annuncio a tempo viene inserito in un elemento multimediale a tempo.
 
 ![Struttura del tipo di dati](../images/data-types/ad-break.png)
 
@@ -19,7 +19,7 @@ ht-degree: 6%
 | --- | --- | --- |
 | `_dc.title` | Stringa | Un nome descrittivo per l’interruzione pubblicitaria. |
 | `_id` | Stringa | Identificatore univoco dell’interruzione pubblicitaria. |
-| `offset` | Intero | Lo scostamento, in secondi, dell’interruzione pubblicitaria dall’inizio del contenuto principale. |
+| `offset` | Intero | Lo scostamento, in secondi, dell’interruzione pubblicitaria dall’inizio del contenuto primario. |
 
 {style="table-layout:auto"}
 

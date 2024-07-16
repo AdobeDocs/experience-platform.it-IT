@@ -4,8 +4,8 @@ description: Scopri le caratteristiche dell’estensione Tag di Adobe Target v2 
 exl-id: 8f491d67-86da-4e27-92bf-909cd6854be1
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '1356'
-ht-degree: 94%
+source-wordcount: '1318'
+ht-degree: 91%
 
 ---
 
@@ -31,7 +31,7 @@ Per configurare l’estensione, apri la scheda Estensioni, passa il puntatore su
 
 ### Impostazioni at.js
 
-Tutte le impostazioni at.js, a eccezione del Timeout, vengono recuperate automaticamente dalla configurazione at.js nell’interfaccia utente di Target. L’estensione recupera le impostazioni dall’interfaccia utente di Target solo quando viene aggiunta per la prima volta; pertanto, in caso di aggiornamenti aggiuntivi, tutte le impostazioni dovranno essere gestite nell’interfaccia di 
+Tutte le impostazioni at.js, a eccezione del Timeout, vengono recuperate automaticamente dalla configurazione at.js nell’interfaccia utente di Target. L&#39;estensione recupera le impostazioni dall&#39;interfaccia utente di Target solo quando viene aggiunta per la prima volta, pertanto tutte le impostazioni devono essere gestite nell&#39;interfaccia utente se sono necessari aggiornamenti aggiuntivi.
 
 Sono disponibili le seguenti configurazioni:
 

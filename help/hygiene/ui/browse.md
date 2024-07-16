@@ -23,15 +23,15 @@ Questa guida illustra come visualizzare e gestire gli ordini di lavoro esistenti
 
 ## Elenca e filtra gli ordini di lavoro esistenti
 
-La prima volta che accedi a **[!UICONTROL Ciclo di vita dei dati]** nell’interfaccia utente di, viene visualizzato un elenco degli ordini di lavoro esistenti con i relativi dettagli di base.
+La prima volta che accedi all&#39;area di lavoro **[!UICONTROL Ciclo di vita dei dati]** nell&#39;interfaccia utente, viene visualizzato un elenco degli ordini di lavoro esistenti con i relativi dettagli di base.
 
-![Immagine che mostra [!UICONTROL Ciclo di vita dei dati] Workspace nell’interfaccia utente di Platform](../images/ui/browse/work-order-list.png)
+![Immagine che mostra l&#39;area di lavoro [!UICONTROL Ciclo di vita dei dati] nell&#39;interfaccia utente di Platform](../images/ui/browse/work-order-list.png)
 
-Nell&#39;elenco vengono visualizzati solo gli ordini di lavorazione per una categoria alla volta. Seleziona **[!UICONTROL Consumatore]** per visualizzare un elenco di attività di eliminazione record e **[!UICONTROL Set di dati]** per visualizzare un elenco delle scadenze pianificate dei set di dati.
+Nell&#39;elenco vengono visualizzati solo gli ordini di lavorazione per una categoria alla volta. Seleziona **[!UICONTROL Consumer]** per visualizzare un elenco delle attività di eliminazione dei record e **[!UICONTROL Set di dati]** per visualizzare un elenco delle scadenze pianificate dei set di dati.
 
-![Immagine che mostra [!UICONTROL Set di dati] scheda](../images/ui/browse/dataset-tab.png)
+![Immagine che mostra la scheda [!UICONTROL Set di dati]](../images/ui/browse/dataset-tab.png)
 
-Seleziona l’icona funnel (![Immagine dell’icona funnel](../images/ui/browse/funnel-icon.png)) per visualizzare un elenco di filtri per gli ordini di lavoro visualizzati.
+Selezionare l&#39;icona del funnel (![Immagine dell&#39;icona del funnel](../images/ui/browse/funnel-icon.png)) per visualizzare un elenco di filtri per gli ordini di lavoro visualizzati.
 
 ![Immagine dei filtri ordine di lavoro visualizzati](../images/ui/browse/filters.png)
 
@@ -43,7 +43,7 @@ I seguenti filtri si applicano alle richieste di cancellazione dei record:
 
 | Filtro | Descrizione |
 | --- | --- |
-| [!UICONTROL Stato] | Filtra in base allo stato corrente dell&#39;ordine di lavorazione:<ul><li>**[!UICONTROL Completato]**: processo completato.</li><li>**[!UICONTROL Non riuscito]**: il processo ha rilevato un errore e non è stato completato.</li><li>**[!UICONTROL Elaborazione]**: la richiesta è iniziata ed è in fase di elaborazione.</li></ul> |
+| [!UICONTROL Stato] | Filtra in base allo stato corrente dell&#39;ordine di lavorazione:<ul><li>**[!UICONTROL Completato]**: processo completato.</li><li>**[!UICONTROL Non riuscito]**: il processo ha rilevato un errore e non è stato completato.</li><li>**[!UICONTROL Elaborazione]**: la richiesta è stata avviata ed è in fase di elaborazione.</li></ul> |
 | [!UICONTROL Data di creazione] | Filtra in base al momento in cui è stato effettuato l’ordine di lavoro. |
 | [!UICONTROL Data aggiornamento] | Filtra in base al momento dell&#39;ultimo aggiornamento dell&#39;ordine di lavoro. Le creazioni vengono conteggiate come aggiornamenti. |
 
@@ -53,7 +53,7 @@ I seguenti filtri si applicano alle richieste di scadenza dei set di dati:
 
 | Filtro | Descrizione |
 | --- | --- |
-| [!UICONTROL Stato] | Filtra in base allo stato corrente dell&#39;ordine di lavorazione:<ul><li>**[!UICONTROL Completato]**: processo completato.</li><li>**[!UICONTROL In sospeso]**: il processo è stato creato ma non è ancora stato eseguito. A [richiesta di scadenza del set di dati](./dataset-expiration.md) assume questo stato prima della data di eliminazione pianificata. Una volta arrivata la data di eliminazione, lo stato si aggiorna a [!UICONTROL In esecuzione] a meno che il processo non venga annullato in precedenza.</li><li>**[!UICONTROL In esecuzione]**: la richiesta di scadenza del set di dati è iniziata e è attualmente in elaborazione.</li><li>**[!UICONTROL Annullato]**: il processo è stato annullato come parte di una richiesta manuale dell’utente.</li></ul> |
+| [!UICONTROL Stato] | Filtra in base allo stato corrente dell&#39;ordine di lavorazione:<ul><li>**[!UICONTROL Completato]**: processo completato.</li><li>**[!UICONTROL In sospeso]**: il processo è stato creato ma non è ancora stato eseguito. Una [richiesta di scadenza del set di dati](./dataset-expiration.md) presuppone questo stato prima della data di eliminazione pianificata. Una volta arrivata la data di eliminazione, lo stato si aggiorna a [!UICONTROL In esecuzione] a meno che il processo non venga prima annullato.</li><li>**[!UICONTROL Esecuzione]**: la richiesta di scadenza del set di dati è iniziata ed è in corso di elaborazione.</li><li>**[!UICONTROL Annullato]**: il processo è stato annullato come parte di una richiesta utente manuale.</li></ul> |
 | [!UICONTROL Data di creazione] | Filtra in base al momento in cui è stato effettuato l’ordine di lavoro. |
 | [!UICONTROL Data di scadenza] | Filtra le richieste di scadenza dei set di dati in base alla data di eliminazione pianificata per il set di dati in questione. |
 | [!UICONTROL Data aggiornamento] | Filtra in base al momento dell&#39;ultimo aggiornamento dell&#39;ordine di lavoro. Le creazioni e le scadenze vengono conteggiate come aggiornamenti. |
@@ -85,9 +85,9 @@ A seconda del tipo di ordine di lavoro selezionato, vengono fornite informazioni
 
 ### Dettagli eliminazione record {#record-delete}
 
-I dettagli di una richiesta di cancellazione del record includono lo stato corrente e il tempo trascorso dall&#39;invio della richiesta. Ogni richiesta include anche un **[!UICONTROL Stato per servizio]** sezione che fornisce dettagli sullo stato di ciascun servizio a valle coinvolto nell’eliminazione. Nella barra a destra è possibile utilizzare i controlli per aggiornare il nome e la descrizione dell&#39;ordine di lavoro.
+I dettagli di una richiesta di cancellazione del record includono lo stato corrente e il tempo trascorso dall&#39;invio della richiesta. Ogni richiesta include anche una sezione **[!UICONTROL Stato per servizio]** che fornisce dettagli di stato individuali su ciascun servizio a valle coinvolto nell&#39;eliminazione. Nella barra a destra è possibile utilizzare i controlli per aggiornare il nome e la descrizione dell&#39;ordine di lavoro.
 
-![Immagine che mostra la pagina dei dettagli di un ordine di lavoro di eliminazione record](../images/ui/browse/record-delete-details.png)
+![Immagine che mostra la pagina dei dettagli per un ordine di lavoro di eliminazione record](../images/ui/browse/record-delete-details.png)
 
 ### Dettagli scadenza set di dati {#dataset-expiration}
 

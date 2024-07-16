@@ -1,5 +1,5 @@
 ---
-title: Acquisire dati crittografati nell’area di lavoro dell’interfaccia utente Sources
+title: Acquisire dati crittografati nel Workspace dell’interfaccia utente Sources
 description: Scopri come acquisire i dati crittografati nell’area di lavoro dell’interfaccia utente delle origini.
 hide: true
 hidefromtoc: true

@@ -7,14 +7,14 @@ role: Developer
 source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '40'
-ht-degree: 52%
+ht-degree: 55%
 
 ---
 
 
-# Estrarre, trasformare e caricare le procedure in Experienci Platform {#etl}
+# Estrarre, trasformare e caricare le procedure in Experience Platform {#etl}
 
 - [Sviluppo di integrazioni ETL](home.md)
 - [Trasformazione ETL](transformations.md)
 - [Flusso di lavoro ETL](workflow.md)
-- [Note sulla versione della piattaforma](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Note sulla versione della piattaforma](https://experienceleague.adobe.com/it/docs/experience-platform/release-notes/latest)

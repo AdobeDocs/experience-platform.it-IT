@@ -9,7 +9,7 @@ role: User, Developer
 source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '225'
-ht-degree: 18%
+ht-degree: 32%
 
 ---
 
@@ -18,16 +18,16 @@ ht-degree: 18%
 
 * [Panoramica di Data Science Workspace](home.md)
 * [Accesso e funzioni di Data Science Workspace](access-features-dsw.md)
-* [Procedura dettagliata su Data Science Workspace](walkthrough.md)
-* JupyterLab notebook {#jupyterlab}
+* [Descrizione dettagliata di Data Science Workspace](walkthrough.md)
+* JupyterLab {#jupyterlab}
    * [Panoramica](jupyterlab/overview.md)
    * [Accesso ai dati](jupyterlab/access-notebook-data.md)
    * [Analizzare i dati](jupyterlab/analyze-your-data.md)
    * [Servizio query](jupyterlab/query-service.md)
    * [Analisi esplorativa dei dati (EDA)](jupyterlab/eda-notebook.md)
    * [Creare un modello con il generatore di formule](jupyterlab/create-a-model.md)
-   * [Collaborare in JupyterLab utilizzando Git](jupyterlab/using-git-for-collaboration.md)
-* API di apprendimento automatico di Sensei {#api}
+   * [Collaborare in JupyterLab tramite Git](jupyterlab/using-git-for-collaboration.md)
+* API di apprendimento automatico Sensei {#api}
    * [Introduzione](api/getting-started.md)
    * [Motori](api/engines.md)
    * [MLInstance (ricette)](api/mlinstances.md)
@@ -46,23 +46,23 @@ ht-degree: 18%
    * [Creazione di modelli con l’SDK di Platform (Python)](authoring/platform-sdk.md)
    * [Accesso ai dati Python](authoring/python.md)
    * [Accesso ai dati Spark](authoring/spark.md)
-* Tutorial su modelli e ricette {#models-recipes}
+* Esercitazioni modello e ricetta {#models-recipes}
    * [Creare e pubblicare un modello di apprendimento automatico](models-recipes/create-publish-model.md)
    * [Creare schemi e set di dati Luma demo](models-recipes/create-luma-data.md)
    * [Creare lo schema e il set di dati di vendita al dettaglio](models-recipes/create-retails-sales-dataset.md)
    * [Anteprima di schemi e set di dati](models-recipes/preview-schema-data.md)
-   * [Creare pacchetti di file di origine in una ricetta](models-recipes/package-source-files-recipe.md)
-   * [Importare una composizione in pacchetti (interfaccia utente)](models-recipes/import-packaged-recipe-ui.md)
+   * [Creare un pacchetto di file di origine per una ricetta](models-recipes/package-source-files-recipe.md)
+   * [Importare un pacchetto di ricette (interfaccia utente)](models-recipes/import-packaged-recipe-ui.md)
    * [Importare una composizione in pacchetti (API)](models-recipes/import-packaged-recipe-api.md)
-   * [Addestra e valuta un modello (interfaccia utente)](models-recipes/train-evaluate-model-ui.md)
+   * [Addestrare e valutare un modello (interfaccia utente)](models-recipes/train-evaluate-model-ui.md)
    * [Addestra e valuta un modello (API)](models-recipes/train-evaluate-model-api.md)
    * [Punteggio di un modello (interfaccia utente)](models-recipes/score-model-ui.md)
    * [Punteggio di un modello (API)](models-recipes/score-model-api.md)
    * [Ottimizzare un modello](models-recipes/optimize-model.md)
    * [Arricchire il profilo cliente in tempo reale con informazioni sull’apprendimento automatico](models-recipes/enrich-profile.md)
-   * [Pubblicare un modello come servizio (UI)](models-recipes/publish-model-service-ui.md)
-   * [Pubblicare un modello come servizio (API)](models-recipes/publish-model-service-api.md)
+   * [Publish a model as a service (interfaccia utente)](models-recipes/publish-model-service-ui.md)
+   * [Publish a model as a service (API)](models-recipes/publish-model-service-api.md)
    * [Pianificazione dell’apprendimento automatico e del punteggio in un servizio (interfaccia utente)](models-recipes/schedule-models-ui.md)
 * [Guida alla risoluzione dei problemi](troubleshooting-guide.md)
 * [Riferimento API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
-* [Note sulla versione della piattaforma](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Note sulla versione della piattaforma](https://experienceleague.adobe.com/it/docs/experience-platform/release-notes/latest)

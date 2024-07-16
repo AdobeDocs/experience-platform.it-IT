@@ -11,15 +11,15 @@ ht-degree: 3%
 
 ---
 
-# [!UICONTROL Interazione del punto di interesse] tipo di dati
+# [!UICONTROL Tipo di dati interazione punto di interesse]
 
-[!UICONTROL Interazione del punto di interesse] è un tipo di dati XDM standard che descrive il dispositivo wireless che comunica informazioni di identità alle applicazioni mobili quando i dispositivi mobili rientrano nel raggio d’azione.
+[!UICONTROL Interazione punto di interesse] è un tipo di dati XDM standard che descrive il dispositivo wireless che comunica informazioni di identità alle applicazioni mobili quando i dispositivi mobili rientrano nell&#39;intervallo.
 
 <img src="../images/data-types/poi-interaction.png" width="400" /><br />
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
-| `poiDetail` | [[!UICONTROL Dettagli del punto di interesse]](./poi-details.md) | Descrive i dettagli del punto di interesse (POI) che ha causato l’evento. |
+| `poiDetail` | [[!UICONTROL Dettagli punto di interesse]](./poi-details.md) | Descrive i dettagli del punto di interesse (POI) che ha causato l’evento. |
 | `poiEntries` | Oggetto | Descrive il numero di volte in cui una persona è entrata nel POI. Contiene due proprietà: <ul><li>`id`: identificatore univoco della misura.</li><li>`value`: valore quantificabile della misura.</li></ul> |
 | `poiExits` | Oggetto | Descrive il numero di volte in cui una persona è uscita dal POI. Contiene due proprietà: <ul><li>`id`: identificatore univoco della misura.</li><li>`value`: valore quantificabile della misura.</li></ul> |
 

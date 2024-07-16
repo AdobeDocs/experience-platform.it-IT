@@ -3,8 +3,8 @@ title: Guida alla risoluzione dei problemi di Adobe Experience Platform Assuranc
 description: Questo documento illustra le soluzioni ai problemi comuni che si verificano quando si utilizza Adobe Experience Platform Assurance.
 exl-id: 8078e6f6-ca18-4939-a417-40ebf5a52e24
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
-workflow-type: ht
-source-wordcount: '526'
+workflow-type: tm+mt
+source-wordcount: '453'
 ht-degree: 100%
 
 ---

@@ -4,29 +4,29 @@ description: Scopri come creare bozze della connessione di base, della connessio
 exl-id: aad6a302-1905-4a23-bc3d-39e76c9a22da
 source-git-commit: ebd650355a5a4c2a949739384bfd5c8df9577075
 workflow-type: tm+mt
-source-wordcount: '1192'
+source-wordcount: '1188'
 ht-degree: 5%
 
 ---
 
-# Creare bozze del [!DNL Flow Service] entità che utilizzano l&#39;API
+# Crea bozze delle entità [!DNL Flow Service] utilizzando l&#39;API
 
-È possibile utilizzare `mode=draft` parametro di query in [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>) per impostare [!DNL Flow Service] entità quali le connessioni di base, le connessioni di origine, le connessioni di destinazione e i flussi di dati a uno stato di bozza.
+È possibile utilizzare il parametro di query `mode=draft` nell&#39;[[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>) per impostare le entità [!DNL Flow Service], quali le connessioni di base, le connessioni di origine, le connessioni di destinazione e i flussi di dati, su uno stato bozza.
 
-Le bozze possono essere aggiornate in un secondo momento con nuove informazioni e quindi pubblicate quando sono pronte, utilizzando `op=publish` parametro di query.
+Le bozze possono essere aggiornate in un secondo momento con nuove informazioni e quindi pubblicate quando sono pronte, utilizzando il parametro di query `op=publish`.
 
-Questo tutorial descrive come impostare [!DNL Flow Service] allo stato di bozza e consentono di mettere in pausa e salvare i flussi di lavoro per il completamento in un secondo momento.
+Questo tutorial illustra come impostare le entità [!DNL Flow Service] su uno stato bozza e consentire di mettere in pausa e salvare i flussi di lavoro per il completamento in un secondo momento.
 
 ## Introduzione
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Sorgenti](../../home.md): un Experience Platform consente di acquisire dati da varie origini, consentendoti allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
-* [Sandbox](../../../sandboxes/home.md): Experienci Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Origini](../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
+* [Sandbox](../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 ### Utilizzo delle API di Platform
 
-Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida su [introduzione alle API di Platform](../../../landing/api-guide.md).
+Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida in [guida introduttiva alle API di Platform](../../../landing/api-guide.md).
 
 ### Verifica il supporto della modalità bozza
 
@@ -36,7 +36,8 @@ Per informazioni su come effettuare correttamente chiamate alle API di Platform,
 
 >[!TAB Cerca dettagli sulle specifiche di connessione]
 
-+++Richiesta La richiesta seguente recupera le informazioni sulle specifiche di connessione per [!DNL Azure File Storage]:
++++Richiesta
+La richiesta seguente recupera le informazioni sulle specifiche di connessione per [!DNL Azure File Storage]:
 
 ```shell
 curl -X GET \
@@ -52,7 +53,7 @@ curl -X GET \
 
 +++Risposta
 
-In caso di esito positivo, la risposta restituisce le informazioni sulle specifiche di connessione per l’origine. Per verificare se la modalità bozza è supportata per l’origine, verifica che `items[0].attributes.isDraftModeSupported` ha un valore di `true`.
+In caso di esito positivo, la risposta restituisce le informazioni sulle specifiche di connessione per l’origine. Per verificare se la modalità bozza è supportata per l&#39;origine, verificare che `items[0].attributes.isDraftModeSupported` abbia un valore di `true`.
 
 ```json {line-numbers="true" start-line="1" highlight="252"}
 {
@@ -340,9 +341,10 @@ In caso di esito positivo, la risposta restituisce le informazioni sulle specifi
 
 +++
 
->[!TAB Cerca dettagli sulle specifiche di flusso]
+>[!TAB Cerca dettagli specifiche flusso]
 
-+++Richiesta La richiesta seguente recupera i dettagli delle specifiche di flusso per un’origine di archiviazione cloud:
++++Richiesta
+La richiesta seguente recupera i dettagli delle specifiche di flusso per un’origine di archiviazione cloud:
 
 ```shell
 curl -X GET \
@@ -358,7 +360,7 @@ curl -X GET \
 
 +++Risposta
 
-In caso di esito positivo, la risposta restituisce le informazioni sulle specifiche di flusso per l’origine. Per verificare se la modalità bozza è supportata per l’origine, verifica che `items[0].attributes.isDraftModeSupported` ha un valore di `true`.
+In caso di esito positivo, la risposta restituisce le informazioni sulle specifiche di flusso per l’origine. Per verificare se la modalità bozza è supportata per l&#39;origine, verificare che `items[0].attributes.isDraftModeSupported` abbia un valore di `true`.
 
 ```json {line-numbers="true" start-line="1" highlight="167"}
 {
@@ -569,7 +571,7 @@ In caso di esito positivo, la risposta restituisce le informazioni sulle specifi
 
 ## Creare una bozza di connessione di base {#create-a-draft-base-connection}
 
-Per creare una bozza di connessione di base, effettuare una richiesta POST al `/connections` endpoint del [!DNL Flow Service] API e fornire `mode=draft` come parametro di query.
+Per creare una bozza di connessione di base, effettuare una richiesta POST all&#39;endpoint `/connections` dell&#39;API [!DNL Flow Service] e fornire `mode=draft` come parametro di query.
 
 **Formato API**
 
@@ -579,11 +581,11 @@ POST /connections?mode=draft
 
 | Parametro | Descrizione |
 | --- | --- |
-| `mode` | Parametro di query fornito dall&#39;utente che determina lo stato della connessione di base. Per impostare una connessione di base come bozza, impostate `mode` a `draft`. |
+| `mode` | Parametro di query fornito dall&#39;utente che determina lo stato della connessione di base. Per impostare una connessione di base come bozza, impostare `mode` su `draft`. |
 
 **Richiesta**
 
-La richiesta seguente crea una bozza di connessione di base per [!DNL Azure File Storage] origine:
+La richiesta seguente crea bozza di connessione di base per l&#39;origine [!DNL Azure File Storage]:
 
 ```shell
 curl -X POST \
@@ -622,9 +624,9 @@ In caso di esito positivo, la risposta restituisce l’ID della connessione di b
 }
 ```
 
-## Pubblicare la bozza di connessione di base {#publish-your-draft-base-connection}
+## Publish connessione base bozza {#publish-your-draft-base-connection}
 
-Quando la bozza è pronta per la pubblicazione, invia una richiesta POST al `/connections` e fornire l&#39;ID della bozza di connessione di base che si desidera pubblicare, nonché un&#39;operazione di pubblicazione.
+Una volta che la bozza è pronta per la pubblicazione, invia una richiesta POST all&#39;endpoint `/connections` e fornisci l&#39;ID della bozza di connessione di base da pubblicare, nonché un&#39;operazione di pubblicazione.
 
 **Formato API**
 
@@ -634,11 +636,11 @@ POST /connections/{BASE_CONNECTION_ID}/action?op=publish
 
 | Parametro | Descrizione |
 | --- | --- |
-| `op` | Operazione che aggiorna lo stato della connessione di base sottoposta a query. Per pubblicare una bozza di connessione di base, impostare `op` a `publish`. |
+| `op` | Operazione che aggiorna lo stato della connessione di base sottoposta a query. Per pubblicare una bozza di connessione di base, impostare `op` su `publish`. |
 
 **Richiesta**
 
-La richiesta seguente pubblica la bozza della connessione di base per [!DNL Azure File Storage] creato in un passaggio precedente.
+La richiesta seguente pubblica la bozza della connessione di base per [!DNL Azure File Storage] creata in un passaggio precedente.
 
 ```shell
 curl -X POST \
@@ -663,7 +665,7 @@ In caso di esito positivo, la risposta restituisce l’ID e l’e-mail corrispon
 
 ## Creare una bozza di connessione sorgente {#create-a-draft-source-connection}
 
-Per creare una bozza di connessione sorgente, effettua una richiesta POST al `/sourceConnections` endpoint del [!DNL Flow Service] API e fornire `mode=draft` come parametro di query.
+Per creare una bozza di connessione di origine, effettuare una richiesta POST all&#39;endpoint `/sourceConnections` dell&#39;API [!DNL Flow Service] e fornire `mode=draft` come parametro di query.
 
 **Formato API**
 
@@ -673,7 +675,7 @@ POST /sourceConnections?mode=draft
 
 | Parametro | Descrizione |
 | --- | --- |
-| `mode` | Parametro di query fornito dall&#39;utente che determina lo stato della connessione di origine. Per impostare una connessione di origine come bozza, impostate `mode` a `draft`. |
+| `mode` | Parametro di query fornito dall&#39;utente che determina lo stato della connessione di origine. Per impostare una connessione di origine come bozza, impostare `mode` su `draft`. |
 
 **Richiesta**
 
@@ -714,13 +716,13 @@ In caso di esito positivo, la risposta restituisce l’ID della connessione sorg
 }
 ```
 
-## Pubblicare la bozza della connessione sorgente {#publish-your-draft-source-connection}
+## Publish la bozza della connessione sorgente {#publish-your-draft-source-connection}
 
 >[!NOTE]
 >
 >Non è possibile pubblicare una connessione di origine se la connessione di base associata è ancora in stato di bozza. Prima di pubblicare la connessione di base, assicurati che la tua connessione di base sia stata pubblicata.
 
-Quando la bozza è pronta per la pubblicazione, invia una richiesta POST al `/sourceConnections` e fornire l&#39;ID della bozza della connessione di origine che si desidera pubblicare, nonché un&#39;operazione di pubblicazione.
+Una volta che la bozza è pronta per la pubblicazione, invia una richiesta POST all&#39;endpoint `/sourceConnections` e fornisci l&#39;ID della bozza della connessione di origine che desideri pubblicare, nonché un&#39;operazione di pubblicazione.
 
 **Formato API**
 
@@ -730,11 +732,11 @@ POST /sourceConnections/{SOURCE_CONNECTION_ID}/action?op=publish
 
 | Parametro | Descrizione |
 | --- | --- |
-| `op` | Operazione che aggiorna lo stato della connessione di origine interrogata. Per pubblicare una bozza di connessione di origine, impostare `op` a `publish`. |
+| `op` | Operazione che aggiorna lo stato della connessione di origine interrogata. Per pubblicare una bozza di connessione di origine, impostare `op` su `publish`. |
 
 **Richiesta**
 
-La richiesta seguente pubblica la bozza della connessione sorgente per [!DNL Azure File Storage] creato in un passaggio precedente.
+La richiesta seguente pubblica la bozza della connessione di origine per [!DNL Azure File Storage] creata in un passaggio precedente.
 
 ```shell
 curl -X POST \
@@ -759,7 +761,7 @@ In caso di esito positivo, la risposta restituisce l’ID e l’e-mail corrispon
 
 ## Creare una bozza di connessione di destinazione {#create-a-draft-target-connection}
 
-Per creare una bozza di connessione di destinazione, effettua una richiesta POST al `/targetConnections` endpoint del [!DNL Flow Service] API e fornire `mode=draft` come parametro di query.
+Per creare una bozza di connessione di destinazione, effettuare una richiesta POST all&#39;endpoint `/targetConnections` dell&#39;API [!DNL Flow Service] e fornire `mode=draft` come parametro di query.
 
 **Formato API**
 
@@ -769,7 +771,7 @@ POST /targetConnections?mode=draft
 
 | Parametro | Descrizione |
 | --- | --- |
-| `mode` | Parametro di query fornito dall&#39;utente che determina lo stato della connessione di destinazione. Per impostare una connessione di destinazione come bozza, impostare `mode` a `draft`. |
+| `mode` | Parametro di query fornito dall&#39;utente che determina lo stato della connessione di destinazione. Per impostare una connessione di destinazione come bozza, impostare `mode` su `draft`. |
 
 **Richiesta**
 
@@ -811,13 +813,13 @@ In caso di esito positivo, la risposta restituisce l’ID della connessione di d
 }
 ```
 
-## Pubblicare la bozza di connessione di destinazione {#publish-your-draft-target-connection}
+## Publish la bozza di connessione di destinazione {#publish-your-draft-target-connection}
 
 >[!NOTE]
 >
 >Non è possibile pubblicare una connessione di destinazione se la connessione di base associata è ancora in stato di bozza. Prima di pubblicare la connessione di destinazione, assicurati che la connessione di base sia pubblicata.
 
-Quando la bozza è pronta per la pubblicazione, invia una richiesta POST al `/targetConnections` e fornire l’ID della bozza di connessione di destinazione da pubblicare, nonché un’operazione di pubblicazione.
+Quando la bozza è pronta per la pubblicazione, effettua una richiesta POST all&#39;endpoint `/targetConnections` e fornisci l&#39;ID della bozza di connessione di destinazione da pubblicare, nonché un&#39;operazione di pubblicazione.
 
 **Formato API**
 
@@ -827,11 +829,11 @@ POST /targetConnections/{TARGET_CONNECTION_ID}/action?op=publish
 
 | Parametro | Descrizione |
 | --- | --- |
-| `op` | Operazione di azione che aggiorna lo stato della connessione di destinazione interrogata. Per pubblicare una bozza di connessione di destinazione, impostare `op` a `publish`. |
+| `op` | Operazione di azione che aggiorna lo stato della connessione di destinazione interrogata. Per pubblicare una bozza di connessione di destinazione, impostare `op` su `publish`. |
 
 **Richiesta**
 
-La richiesta seguente pubblica la bozza di connessione di destinazione per [!DNL Azure File Storage] creato in un passaggio precedente.
+La richiesta seguente pubblica la bozza della connessione di destinazione per [!DNL Azure File Storage] creata in un passaggio precedente.
 
 ```shell
 curl -X POST \
@@ -856,7 +858,7 @@ In caso di esito positivo, la risposta restituisce l’ID e l’e-mail corrispon
 
 ## Creare un flusso di dati 2D {#create-a-draft-dataflow}
 
-Per impostare un flusso di dati come bozza, effettua una richiesta POST al `/flows` endpoint durante l&#39;aggiunta di `mode=draft` come parametro di query. Questo consente di creare un flusso di dati e salvarlo come bozza.
+Per impostare un flusso di dati come bozza, effettua una richiesta POST all&#39;endpoint `/flows` durante l&#39;aggiunta di `mode=draft` come parametro di query. Questo consente di creare un flusso di dati e salvarlo come bozza.
 
 **Formato API**
 
@@ -866,7 +868,7 @@ POST /flows?mode=draft
 
 | Parametro | Descrizione |
 | --- | --- |
-| `mode` | Parametro di query fornito dall’utente che determina lo stato del flusso di dati. Per impostare un flusso di dati come sformo, impostate `mode` a `draft`. |
+| `mode` | Parametro di query fornito dall’utente che determina lo stato del flusso di dati. Per impostare un flusso di dati come bozza, impostare `mode` su `draft`. |
 
 **Richiesta**
 
@@ -906,13 +908,13 @@ In caso di esito positivo, la risposta restituisce l’ID di flusso e l’eTag c
 }
 ```
 
-## Pubblicare il flusso di dati della bozza {#publish-your-draft-dataflow}
+## Publish flusso di dati bozza {#publish-your-draft-dataflow}
 
 >[!NOTE]
 >
 >Non puoi pubblicare un flusso di dati se le connessioni di origine e di destinazione associate sono ancora in stato di bozza. Prima di pubblicare il flusso di dati, assicurati che le connessioni di origine e di destinazione siano pubblicate.
 
-Quando la bozza è pronta per la pubblicazione, invia una richiesta POST al `/flows` endpoint, fornendo l’ID del flusso di dati bozza da pubblicare e un’operazione di pubblicazione.
+Quando la bozza è pronta per essere pubblicata, effettua una richiesta POST all&#39;endpoint `/flows` fornendo l&#39;ID del flusso di dati della bozza da pubblicare, nonché un&#39;operazione di pubblicazione.
 
 **Formato API**
 
@@ -922,7 +924,7 @@ POST /flows/{FLOW_ID}/action?op=publish
 
 | Parametro | Descrizione |
 | --- | --- |
-| `op` | Operazione che aggiorna lo stato del flusso di dati sottoposto a query. Per pubblicare un flusso di dati 2D, impostate `op` a `publish`. |
+| `op` | Operazione che aggiorna lo stato del flusso di dati sottoposto a query. Per pubblicare un flusso di dati bozza, impostare `op` su `publish`. |
 
 **Richiesta**
 
@@ -940,7 +942,7 @@ curl -X POST \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce l’ID e i corrispondenti `etag` del flusso di dati.
+In caso di esito positivo, la risposta restituisce l’ID e il corrispondente `etag` del flusso di dati.
 
 ```json
 {
@@ -951,4 +953,4 @@ In caso di esito positivo, la risposta restituisce l’ID e i corrispondenti `et
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai imparato a creare bozze delle tue [!DNL Flow Service] e pubblicare queste bozze. Per ulteriori informazioni sulle origini, consulta la [panoramica sulle origini](../../home.md).
+Seguendo questa esercitazione, hai imparato a creare bozze delle entità [!DNL Flow Service] e a pubblicare queste bozze. Per ulteriori informazioni sulle origini, consulta la [panoramica sulle origini](../../home.md).

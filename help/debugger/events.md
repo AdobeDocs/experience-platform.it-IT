@@ -14,7 +14,7 @@ ht-degree: 42%
 
 # Scheda Eventi
 
-Il **Eventi** fornisce una visualizzazione grafica degli eventi che si verificano, visualizzati su una timeline.
+La scheda **Eventi** fornisce una visualizzazione grafica degli eventi che si verificano, visualizzati su una timeline.
 
 ![](images/events.jpg)
 

@@ -8,7 +8,7 @@ role: Developer,User
 source-git-commit: 3ebd17eced73424135fc93a90f05d758912eb7d0
 workflow-type: tm+mt
 source-wordcount: '132'
-ht-degree: 27%
+ht-degree: 34%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 27%
 * [Scarica dashboard in PDF](download.md)
 * Data Distiller {#data-distiller}
    * [Panoramica](data-distiller/overview.md)
-   * Approfondimenti personalizzabili per reporting esteso dell’app {#customizable-insights}
+   * Approfondimenti personalizzabili per report app estesi {#customizable-insights}
       * [Panoramica](data-distiller/customizable-insights/overview.md)
       * [Modalità Query Pro (creazione grafico SQL)](data-distiller/customizable-insights/query-pro-mode.md)
       * Filtri {#filters}
@@ -42,7 +42,7 @@ ht-degree: 27%
    * [Tipi di pubblico](insights/audiences.md)
    * [Destinazioni](insights/destinations.md)
    * [Profili account](insights/account-profiles.md)
-* Personalizzare le dashboard {#customize}
+* Personalizza dashboard {#customize}
    * [Panoramica sulla personalizzazione](customize/overview.md)
    * [Modificare le dashboard](customize/modify.md)
    * [Libreria widget](customize/widget-library.md)

@@ -6,17 +6,17 @@ description: Observability Insights è un’API RESTful che consente agli svilup
 exl-id: 3dee20e2-0551-43db-ba89-bc049b56af08
 source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
-source-wordcount: '155'
+source-wordcount: '151'
 ht-degree: 1%
 
 ---
 
 # Guida dell’API di [!DNL Observability Insights]
 
-Il [!DNL Observability Insights] API fornisce un endpoint che consente di recuperare e monitorare in modo programmatico i dati delle metriche per varie funzioni di Adobe Experience Platform. Questo endpoint è descritto di seguito. Per informazioni dettagliate, consulta la guida dell’endpoint e fai riferimento a [guida introduttiva](./getting-started.md) per informazioni importanti sulle intestazioni richieste, leggi le chiamate API di esempio e altro ancora.
+L&#39;API [!DNL Observability Insights] fornisce un endpoint che consente di recuperare e monitorare in modo programmatico i dati delle metriche per varie funzioni di Adobe Experience Platform. Questo endpoint è descritto di seguito. Per informazioni dettagliate, consulta la guida dell&#39;endpoint e fai riferimento alla [guida introduttiva](./getting-started.md) per informazioni importanti sulle intestazioni richieste, per leggere esempi di chiamate API e altro ancora.
 
-Per visualizzare tutti gli endpoint disponibili e le operazioni CRUD, visitare il [[!DNL Observability Insights] Swagger API](https://www.adobe.io/experience-platform-apis/references/observability-insights/).
+Per visualizzare tutti gli endpoint disponibili e le operazioni CRUD, visita il [[!DNL Observability Insights] Swagger API](https://www.adobe.io/experience-platform-apis/references/observability-insights/).
 
 ## Metriche
 
-Le metriche di osservabilità forniscono informazioni approfondite sulle statistiche di utilizzo, le tendenze storiche e gli indicatori di prestazioni per varie funzioni di Adobe Experience Platform. Per informazioni su come recuperare le metriche utilizzando l’API, consulta [guida dell’endpoint &quot;metrics&quot;](./metrics.md).
+Le metriche di osservabilità forniscono informazioni approfondite sulle statistiche di utilizzo, le tendenze storiche e gli indicatori di prestazioni per varie funzioni di Adobe Experience Platform. Per informazioni su come recuperare le metriche utilizzando l&#39;API, consulta la [guida dell&#39;endpoint metriche](./metrics.md).

@@ -18,7 +18,7 @@ ht-degree: 23%
 - Guide API {#api}
    - [Monitorare i flussi di dati](./api/monitor.md)
    - [Ordinare e filtrare le risposte API](./api/sort-and-filter.md)
-- Guide dell’interfaccia utente {#ui}
+- Guide dell&#39;interfaccia utente {#ui}
    - [Panoramica del dashboard di monitoraggio](./ui/monitor.md)
    - [Monitorare i flussi di dati nelle origini](./ui/monitor-sources.md)
    - [Monitorare i flussi di dati nelle identità](./ui/monitor-identities.md)
@@ -27,4 +27,4 @@ ht-degree: 23%
    - [Monitorare i flussi di dati nelle destinazioni](./ui/monitor-destinations.md)
    - Monitoraggio B2B {#b2b}
       - [Monitorare i processi di arricchimento dei profili](./ui/b2b/monitor-profile-enrichment.md)
-- [API del servizio Flusso](https://www.adobe.io/experience-platform-apis/references/flow-service/)
+- [API servizio flusso](https://www.adobe.io/experience-platform-apis/references/flow-service/)

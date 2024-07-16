@@ -4,8 +4,8 @@ description: Scopri come creare, visualizzare, aggiornare ed eliminare gli attri
 exl-id: f217891c-574d-4a64-9d04-afc436cf16a9
 source-git-commit: 94c94b8a3757aca1a04ff4ffc3c62e84602805cc
 workflow-type: tm+mt
-source-wordcount: '1654'
-ht-degree: 3%
+source-wordcount: '1664'
+ht-degree: 2%
 
 ---
 
@@ -15,28 +15,28 @@ ht-degree: 3%
 >
 >L’accesso all’API è limitato. Per informazioni su come ottenere l’accesso all’API degli attributi calcolati, contatta il supporto Adobe.
 
-Gli attributi calcolati sono funzioni utilizzate per aggregare i dati a livello di evento negli attributi a livello di profilo. Queste funzioni vengono calcolate automaticamente in modo che possano essere utilizzate in segmentazione, attivazione e personalizzazione. Questa guida include esempi di chiamate API per eseguire operazioni CRUD di base utilizzando `/attributes` endpoint.
+Gli attributi calcolati sono funzioni utilizzate per aggregare i dati a livello di evento negli attributi a livello di profilo. Queste funzioni vengono calcolate automaticamente in modo che possano essere utilizzate in segmentazione, attivazione e personalizzazione. Questa guida include esempi di chiamate API per eseguire operazioni CRUD di base utilizzando l&#39;endpoint `/attributes`.
 
-Per ulteriori informazioni sugli attributi calcolati, consulta la sezione [panoramica degli attributi calcolati](overview.md).
+Per ulteriori informazioni sugli attributi calcolati, leggere la [panoramica sugli attributi calcolati](overview.md).
 
 ## Introduzione
 
-L’endpoint API utilizzato in questa guida fa parte del [API Profilo cliente in tempo reale](https://www.adobe.com/go/profile-apis-en).
+L&#39;endpoint API utilizzato in questa guida fa parte dell&#39;[API del profilo cliente in tempo reale](https://www.adobe.com/go/profile-apis-en).
 
-Prima di continuare, controlla [Guida introduttiva all’API del profilo](../api/getting-started.md) per collegamenti alla documentazione consigliata, una guida per la lettura delle chiamate API di esempio visualizzate in questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experienci Platform.
+Prima di continuare, consulta la [Guida introduttiva all&#39;API del profilo](../api/getting-started.md) per i collegamenti alla documentazione consigliata, una guida alla lettura delle chiamate API di esempio visualizzate in questo documento e informazioni importanti sulle intestazioni necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
 
 Inoltre, consulta la documentazione del seguente servizio:
 
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): framework standardizzato per l’organizzazione dei dati sull’esperienza del cliente in [!DNL Experience Platform].
-   - [Guida introduttiva al Registro di schema](../../xdm/api/getting-started.md#know-your-tenant_id): informazioni su `{TENANT_ID}`, che viene visualizzato nelle risposte di questa guida.
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): framework standardizzato tramite il quale [!DNL Experience Platform] organizza i dati sull&#39;esperienza del cliente.
+   - [Guida introduttiva al registro degli schemi](../../xdm/api/getting-started.md#know-your-tenant_id): vengono fornite informazioni su `{TENANT_ID}`, visualizzate nelle risposte in questa guida.
 
 ## Recuperare un elenco di attributi calcolati {#list}
 
-Per recuperare un elenco di tutti gli attributi calcolati per la tua organizzazione, devi effettuare una richiesta GET al `/attributes` endpoint.
+Per recuperare un elenco di tutti gli attributi calcolati per l&#39;organizzazione, eseguire una richiesta GET all&#39;endpoint `/attributes`.
 
 **Formato API**
 
-Il `/attributes` l’endpoint supporta diversi parametri di query per aiutare a filtrare i risultati. Anche se questi parametri sono facoltativi, si consiglia vivamente di utilizzarli per ridurre i costi comuni quando si elencano le risorse. Se effettui una chiamata a questo endpoint senza parametri, verranno recuperati tutti gli attributi calcolati disponibili per la tua organizzazione. È possibile includere più parametri, separati da e commerciali (`&`).
+L&#39;endpoint `/attributes` supporta diversi parametri di query per filtrare i risultati. Anche se questi parametri sono facoltativi, si consiglia vivamente di utilizzarli per ridurre i costi comuni quando si elencano le risorse. Se effettui una chiamata a questo endpoint senza parametri, verranno recuperati tutti gli attributi calcolati disponibili per la tua organizzazione. È possibile includere più parametri, separati da e commerciali (`&`).
 
 ```http
 GET /attributes
@@ -49,8 +49,8 @@ I seguenti parametri di query possono essere utilizzati per recuperare un elenco
 | --------------- | ----------- | ------- |
 | `limit` | Un parametro che specifica il numero massimo di elementi restituiti come parte della risposta. Il valore minimo di questo parametro è 1 e il valore massimo è 40. Se questo parametro non è incluso, per impostazione predefinita verranno restituiti 20 elementi. | `limit=20` |
 | `offset` | Un parametro che specifica il numero di elementi da ignorare prima di restituire gli elementi. | `offset=5` |
-| `sortBy` | Parametro che specifica l&#39;ordine in cui vengono ordinati gli elementi restituiti. Le opzioni disponibili includono `name`, `status`, `updateEpoch`, e `createEpoch`. Puoi anche scegliere se ordinare in ordine crescente o decrescente non includendo o includendo un `-` davanti all’opzione di ordinamento. Per impostazione predefinita, gli elementi vengono ordinati per `updateEpoch` in ordine decrescente. | `sortBy=name` |
-| `property` | Parametro che consente di filtrare in base a vari campi attributo calcolati. Le proprietà supportate includono `name`, `createEpoch`, `mergeFunction.value`, `updateEpoch`, e `status`. Le operazioni supportate dipendono dalla proprietà elencata. <ul><li>`name`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li><li>`createEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=) </li><li>`mergeFunction.value`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li><li>`updateEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=)</li><li>`status`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li></ul> | `property=updateEpoch>=1683669114845`<br/>`property=name!=testingrelease`<br/>`property=status=contains(new,processing,disabled)` |
+| `sortBy` | Parametro che specifica l&#39;ordine in cui vengono ordinati gli elementi restituiti. Le opzioni disponibili sono `name`, `status`, `updateEpoch` e `createEpoch`. È inoltre possibile scegliere se ordinare in ordine crescente o decrescente non includendo o includendo `-` prima dell&#39;opzione di ordinamento. Per impostazione predefinita, gli elementi verranno ordinati per `updateEpoch` in ordine decrescente. | `sortBy=name` |
+| `property` | Parametro che consente di filtrare in base a vari campi attributo calcolati. Le proprietà supportate sono `name`, `createEpoch`, `mergeFunction.value`, `updateEpoch` e `status`. Le operazioni supportate dipendono dalla proprietà elencata. <ul><li>`name`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains(), `NOT_CONTAINS` (=!contains())</li><li>`createEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=) </li><li>`mergeFunction.value`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains(), `NOT_CONTAINS` (=!contains())</li><li>`updateEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=)</li><li>`status`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains(), `NOT_CONTAINS` (=!contains())</li></ul> | `property=updateEpoch>=1683669114845`<br/>`property=name!=testingrelease`<br/>`property=status=contains(new,processing,disabled)` |
 
 **Richiesta**
 
@@ -211,14 +211,14 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elen
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `_links` | Oggetto contenente le informazioni sull&#39;impaginazione necessarie per accedere all&#39;ultima pagina dei risultati, alla pagina successiva dei risultati, alla pagina precedente dei risultati o alla pagina corrente dei risultati. |
-| `computedAttributes` | Matrice che contiene gli attributi calcolati in base ai parametri di query. Ulteriori informazioni sull’array degli attributi calcolati sono disponibili nella sezione [recupera una sezione attributo calcolato specifica](#get). |
+| `computedAttributes` | Matrice che contiene gli attributi calcolati in base ai parametri di query. Ulteriori informazioni sull&#39;array degli attributi calcolati sono disponibili nella sezione [recuperare un attributo calcolato specifico](#get). |
 | `_page` | Oggetto contenente metadati sui risultati restituiti. Ciò include informazioni sull&#39;offset corrente, il conteggio degli attributi calcolati restituiti, il conteggio totale degli attributi calcolati e il limite degli attributi calcolati restituiti. |
 
 +++
 
 ## Creare un attributo calcolato {#create}
 
-Per creare un attributo calcolato, inizia effettuando una richiesta POST al `/attributes` endpoint con un corpo della richiesta contenente i dettagli dell’attributo calcolato che desideri creare.
+Per creare un attributo calcolato, iniziare effettuando una richiesta POST all&#39;endpoint `/attributes` con un corpo della richiesta contenente i dettagli dell&#39;attributo calcolato che si desidera creare.
 
 **Formato API**
 
@@ -257,17 +257,17 @@ curl -X POST https://platform.adobe.io/data/core/ca/attributes \
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `name` | Nome del campo attributo calcolato sotto forma di stringa. Il nome dell&#39;attributo calcolato può essere composto solo da caratteri alfanumerici senza spazi o trattini bassi. Questo valore **deve** essere univoco tra tutti gli attributi calcolati. Come best practice, questo nome deve essere una versione camelCase del `displayName`. |
+| `name` | Nome del campo attributo calcolato sotto forma di stringa. Il nome dell&#39;attributo calcolato può essere composto solo da caratteri alfanumerici senza spazi o trattini bassi. Questo valore **deve** essere univoco tra tutti gli attributi calcolati. Come best practice, questo nome deve essere una versione di camelCase di `displayName`. |
 | `description` | Descrizione dell&#39;attributo calcolato. Questa funzione è particolarmente utile quando sono stati definiti più attributi calcolati, in quanto consente ad altri utenti all’interno dell’organizzazione di determinare l’attributo calcolato corretto da utilizzare. |
 | `displayName` | Nome visualizzato dell&#39;attributo calcolato. Questo è il nome che verrà visualizzato quando vengono elencati gli attributi calcolati nell’interfaccia utente di Adobe Experience Platform. |
 | `expression` | Oggetto che rappresenta l’espressione di query dell’attributo calcolato che stai tentando di creare. |
 | `expression.type` | Tipo dell&#39;espressione. Attualmente, è supportato solo PQL. |
-| `expression.format` | Il formato dell’espressione. Attualmente, solo `pql/text` è supportato. |
+| `expression.format` | Il formato dell’espressione. Attualmente, è supportato solo `pql/text`. |
 | `expression.value` | Il valore dell’espressione. |
 | `keepCurrent` | Valore booleano che determina se il valore dell’attributo calcolato viene mantenuto aggiornato tramite l’aggiornamento rapido. Attualmente, questo valore deve essere impostato su `false`. |
 | `duration` | Oggetto che rappresenta il periodo di lookback per l’attributo calcolato. Il periodo di lookback rappresenta il periodo di tempo trascorso il quale è possibile risalire per calcolare l’attributo calcolato. |
-| `duration.count` | Numero che rappresenta la durata del periodo di lookback. I valori possibili dipendono dal valore del `duration.unit` campo. <ul><li>`HOURS`: 1-24</li><li>`DAYS`: 1-7</li><li>`WEEKS`: 1-4</li><li>`MONTHS`: 1-6</li></ul> |
-| `duration.unit` | Stringa che rappresenta l’unità di tempo che verrà utilizzata per il periodo di lookback. I valori possibili includono: `HOURS`, `DAYS`, `WEEKS`, e `MONTHS`. |
+| `duration.count` | Numero che rappresenta la durata del periodo di lookback. I valori possibili dipendono dal valore del campo `duration.unit`. <ul><li>`HOURS`: 1-24</li><li>`DAYS`: 1-7</li><li>`WEEKS`: 1-4</li><li>`MONTHS`: 1-6</li></ul> |
+| `duration.unit` | Stringa che rappresenta l’unità di tempo che verrà utilizzata per il periodo di lookback. I valori possibili includono: `HOURS`, `DAYS`, `WEEKS` e `MONTHS`. |
 | `status` | Stato dell&#39;attributo calcolato. I valori possibili includono `DRAFT` e `NEW`. |
 
 +++
@@ -325,7 +325,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 
 ## Recuperare un attributo calcolato specifico {#get}
 
-Per recuperare informazioni dettagliate su un attributo calcolato specifico, effettua una richiesta GET al `/attributes` e fornendo l’ID dell’attributo calcolato che desideri recuperare nel percorso della richiesta.
+Per recuperare informazioni dettagliate su un attributo calcolato specifico, eseguire una richiesta GET all&#39;endpoint `/attributes` e fornire l&#39;ID dell&#39;attributo calcolato che si desidera recuperare nel percorso della richiesta.
 
 **Formato API**
 
@@ -396,13 +396,13 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 | `displayName` | Nome visualizzato dell&#39;attributo calcolato. Questo è il nome che verrà visualizzato quando vengono elencati gli attributi calcolati nell’interfaccia utente di Adobe Experience Platform. |
 | `description` | Descrizione dell&#39;attributo calcolato. Questa funzione è particolarmente utile quando sono stati definiti più attributi calcolati, in quanto consente ad altri utenti all’interno dell’organizzazione di determinare l’attributo calcolato corretto da utilizzare. |
 | `imsOrgId` | ID dell’organizzazione a cui appartiene l’attributo calcolato. |
-| `sandbox` | L’oggetto sandbox contiene i dettagli della sandbox in cui è stato configurato l’attributo calcolato. Queste informazioni sono tratte dall’intestazione sandbox inviata nella richiesta. Per ulteriori informazioni, vedere [panoramica sulle sandbox](../../sandboxes/home.md). |
-| `path` | Il `path` all&#39;attributo calcolato. |
+| `sandbox` | L’oggetto sandbox contiene i dettagli della sandbox in cui è stato configurato l’attributo calcolato. Queste informazioni sono tratte dall’intestazione sandbox inviata nella richiesta. Per ulteriori informazioni, consulta la [panoramica delle sandbox](../../sandboxes/home.md). |
+| `path` | `path` all&#39;attributo calcolato. |
 | `keepCurrent` | Valore booleano che determina se il valore dell’attributo calcolato viene mantenuto aggiornato tramite l’aggiornamento rapido. |
 | `expression` | Oggetto contenente l&#39;espressione dell&#39;attributo calcolato. |
-| `mergeFunction` | Oggetto contenente la funzione di unione per l’attributo calcolato. Questo valore è basato sul parametro di aggregazione corrispondente all&#39;interno dell&#39;espressione dell&#39;attributo calcolato. I valori possibili includono `SUM`, `MIN`, `MAX`, e `MOST_RECENT`. |
-| `status` | Stato dell&#39;attributo calcolato. Può corrispondere a uno dei seguenti valori: `DRAFT`, `NEW`, `INITIALIZING`, `PROCESSING`, `PROCESSED`, `FAILED`, o `DISABLED`. |
-| `schema` | Oggetto che contiene informazioni sullo schema in cui viene valutata l’espressione. Attualmente, solo `_xdm.context.profile` è supportato. |
+| `mergeFunction` | Oggetto contenente la funzione di unione per l’attributo calcolato. Questo valore è basato sul parametro di aggregazione corrispondente all&#39;interno dell&#39;espressione dell&#39;attributo calcolato. I valori possibili sono `SUM`, `MIN`, `MAX` e `MOST_RECENT`. |
+| `status` | Stato dell&#39;attributo calcolato. Può essere uno dei valori seguenti: `DRAFT`, `NEW`, `INITIALIZING`, `PROCESSING`, `PROCESSED`, `FAILED` o `DISABLED`. |
+| `schema` | Oggetto che contiene informazioni sullo schema in cui viene valutata l’espressione. Attualmente, è supportato solo `_xdm.context.profile`. |
 | `lastEvaluationTs` | Timestamp che rappresenta l’ultima valutazione dell’attributo calcolato. |
 | `createEpoch` | L’ora di creazione dell’attributo calcolato in secondi. |
 | `updateEpoch` | Ora dell&#39;ultimo aggiornamento dell&#39;attributo calcolato, in secondi. |
@@ -412,11 +412,11 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 
 ## Eliminare un attributo calcolato specifico {#delete}
 
-Per eliminare un attributo calcolato specifico, devi eseguire una richiesta DELETE al `/attributes` e fornendo l’ID dell’attributo calcolato che desideri eliminare nel percorso della richiesta.
+È possibile eliminare un attributo calcolato specifico effettuando una richiesta DELETE all&#39;endpoint `/attributes` e fornendo l&#39;ID dell&#39;attributo calcolato che si desidera eliminare nel percorso della richiesta.
 
 >[!IMPORTANT]
 >
->La richiesta di eliminazione può essere utilizzata solo per eliminare attributi calcolati con stato **bozza** (`DRAFT`). Questo endpoint **non può** per eliminare gli attributi calcolati in qualsiasi altro stato.
+>La richiesta di eliminazione può essere utilizzata solo per eliminare attributi calcolati con stato **bozza** (`DRAFT`). Questo endpoint **non può** essere utilizzato per eliminare attributi calcolati in qualsiasi altro stato.
 
 **Formato API**
 
@@ -426,7 +426,7 @@ DELETE /attributes/{ATTRIBUTE_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{ATTRIBUTE_ID}` | Il `id` valore dell’attributo calcolato che desideri eliminare. |
+| `{ATTRIBUTE_ID}` | Il valore `id` dell&#39;attributo calcolato che si desidera eliminare. |
 
 **Richiesta**
 
@@ -487,14 +487,14 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 202 con i detta
 
 ## Aggiornare un attributo calcolato specifico
 
-È possibile aggiornare un attributo calcolato specifico effettuando una richiesta PATCH al `/attributes` e fornendo l’ID dell’attributo calcolato che desideri aggiornare nel percorso della richiesta.
+È possibile aggiornare un attributo calcolato specifico effettuando una richiesta PATCH all&#39;endpoint `/attributes` e fornendo l&#39;ID dell&#39;attributo calcolato che si desidera aggiornare nel percorso della richiesta.
 
 >[!IMPORTANT]
 >
 >Quando si aggiorna un attributo calcolato, è possibile aggiornare solo i campi seguenti:
 >
 >- Se lo stato corrente è `NEW`, lo stato può essere modificato solo in `DISABLED`.
->- Se lo stato corrente è `DRAFT`, è possibile modificare i valori dei campi seguenti: `name`, `description`, `keepCurrent`, `expression`, e `duration`. Puoi anche modificare lo stato da `DRAFT` a `NEW`. Qualsiasi modifica ai campi generati dal sistema, ad esempio `mergeFunction` o `path` restituirà un errore.
+>- Se lo stato corrente è `DRAFT`, è possibile modificare i valori dei campi seguenti: `name`, `description`, `keepCurrent`, `expression` e `duration`. È inoltre possibile modificare lo stato da `DRAFT` a `NEW`. Qualsiasi modifica ai campi generati dal sistema, ad esempio `mergeFunction` o `path`, restituirà un errore.
 >- Se lo stato corrente è `PROCESSING` o `PROCESSED`, lo stato può essere modificato solo in `DISABLED`.
 
 **Formato API**
@@ -505,11 +505,11 @@ PATCH /attributes/{ATTRIBUTE_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{ATTRIBUTE_ID}` | Il `id` valore dell’attributo calcolato che desideri aggiornare. |
+| `{ATTRIBUTE_ID}` | Il valore `id` dell&#39;attributo calcolato che si desidera aggiornare. |
 
 **Richiesta**
 
-La richiesta seguente aggiorna lo stato dell’attributo calcolato da `DRAFT` a `NEW`.
+La richiesta seguente aggiornerà lo stato dell&#39;attributo calcolato da `DRAFT` a `NEW`.
 
 +++ Richiesta di esempio per aggiornare un attributo calcolato.
 
@@ -579,4 +579,4 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 
 ## Passaggi successivi
 
-Ora che hai imparato le nozioni di base sugli attributi calcolati, puoi iniziare a definirli per la tua organizzazione. Per informazioni su come utilizzare gli attributi calcolati nell’interfaccia utente di Experienci Platform, leggi [guida dell’interfaccia utente per attributi calcolati](./ui.md).
+Ora che hai imparato le nozioni di base sugli attributi calcolati, puoi iniziare a definirli per la tua organizzazione. Per informazioni sull&#39;utilizzo degli attributi calcolati nell&#39;interfaccia utente di Experience Platform, leggere la [guida dell&#39;interfaccia utente degli attributi calcolati](./ui.md).

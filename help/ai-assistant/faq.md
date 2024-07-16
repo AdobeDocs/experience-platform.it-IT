@@ -1,7 +1,8 @@
 ---
 title: Domande frequenti sull’Assistente AI
 description: Scopri le risposte alle domande frequenti sull’Assistente di intelligenza artificiale
-source-git-commit: 0820ba0f14e9eae5d89cd48490b1af5f9afcda70
+exl-id: 17a07c11-7bc6-4cba-be0a-d75fdb567053
+source-git-commit: da5a4e099909d7994b9bbe408a70039d34c14b50
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 0%
@@ -14,16 +15,16 @@ Di seguito è riportato un elenco di risposte alle domande più frequenti sull�
 
 ## Le informazioni dell’Assistente di intelligenza artificiale vengono fornite in tempo reale?
 
-I dati presentati nelle risposte dell’Assistente AI vengono aggiornati ogni giorno. Ciò significa che i dati contenuti nelle risposte possono essere anteriori di 24 ore rispetto ai dati che potrebbero essere visualizzati nell’interfaccia utente di Experienci Platform al momento della risposta.
+I dati presentati nelle risposte dell’Assistente AI vengono aggiornati ogni giorno. Ciò significa che i dati contenuti nelle risposte possono essere anteriori di 24 ore rispetto ai dati che potrebbero essere visualizzati nell’interfaccia utente di Experience Platform al momento della risposta.
 
-Gli stessi principi si applicano al controllo degli accessi. L’Assistente AI può richiedere fino a 24 ore per riflettere eventuali modifiche apportate alle configurazioni di controllo di accesso e autorizzazione. Per ulteriori informazioni, consulta la guida su [privacy nell’Assistente AI](./privacy.md).
+Gli stessi principi si applicano al controllo degli accessi. L’Assistente AI può richiedere fino a 24 ore per riflettere eventuali modifiche apportate alle configurazioni di controllo di accesso e autorizzazione. Per ulteriori informazioni, consulta la guida sulla [privacy nell&#39;Assistente AI](./privacy.md).
 
 ## Quali applicazioni di Adobe sono supportate dall’Assistente AI?
 
 Attualmente, l’ambito di AI Assistant è il seguente:
 
-* [Conoscenza del prodotto](./home.md#product-knowledge): AI Assistant può rispondere a domande sulla conoscenza del prodotto, ad Experience Platform, Real-time Customer Data Platform e Adobe Journey Optimizer. Puoi anche approfondire gli argomenti della conoscenza del prodotto per il Customer Journey Analytics, ma solo tramite l’interfaccia utente del Customer Journey Analytics.
-* [Informazioni operative](./home.md#operational-insights): puoi chiedere all’Assistente AI informazioni approfondite operative sui seguenti oggetti dati: attributi, tipi di pubblico, flussi di dati, set di dati, destinazioni, percorsi, schemi e origini.
+* [Conoscenza del prodotto](./home.md#product-knowledge): l&#39;Assistente all&#39;intelligenza artificiale può rispondere alle domande relative alla conoscenza del prodotto, ad Experience Platform, Real-time Customer Data Platform e Adobe Journey Optimizer. Puoi anche approfondire gli argomenti della conoscenza del prodotto per il Customer Journey Analytics, ma solo tramite l’interfaccia utente del Customer Journey Analytics.
+* [Informazioni operative](./home.md#operational-insights): puoi chiedere all&#39;Assistente AI domande sulle informazioni operative sui seguenti oggetti dati: attributi, tipi di pubblico, flussi di dati, set di dati, destinazioni, percorsi, schemi e origini.
 
 ## Quali sono le funzionalità di AI Assistant?
 

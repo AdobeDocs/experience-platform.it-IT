@@ -24,12 +24,12 @@ GET /{OBJECT_TYPE}?{FILTER}={VALUE}&{FILTER_2}={VALUE}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{OBJECT_TYPE}` | Il tipo di [!DNL Catalog] oggetto da elencare. Gli oggetti validi sono: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
-| `{FILTER}` | Parametro di query utilizzato per filtrare i risultati restituiti nella risposta. Più parametri separati da e commerciali (`&`). Consulta la guida su [filtraggio dei dati catalogo](filter-data.md) per ulteriori informazioni. |
+| `{OBJECT_TYPE}` | Tipo di oggetto [!DNL Catalog] da elencare. Gli oggetti validi sono: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{FILTER}` | Parametro di query utilizzato per filtrare i risultati restituiti nella risposta. Più parametri separati da e commerciali (`&`). Per ulteriori informazioni, consulta la guida su [filtraggio dei dati del catalogo](filter-data.md). |
 
 **Richiesta**
 
-La richiesta di esempio seguente recupera un elenco di set di dati con `limit` filtro che riduce la risposta a cinque risultati, e una `properties` filtro che limita le proprietà visualizzate per ogni set di dati.
+La richiesta di esempio seguente recupera un elenco di set di dati, con un filtro `limit` che riduce la risposta a cinque risultati e un filtro `properties` che limita le proprietà visualizzate per ogni set di dati.
 
 ```shell
 curl -X GET \
@@ -42,11 +42,11 @@ curl -X GET \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce un elenco di [!DNL Catalog] oggetti sotto forma di coppie chiave-valore, filtrati in base ai parametri di query forniti nella richiesta. Per ogni coppia chiave-valore, la chiave rappresenta un identificatore univoco per [!DNL Catalog] oggetto in questione, che può quindi essere utilizzato in un&#39;altra chiamata a [visualizzare l&#39;oggetto specifico](look-up-object.md) per ulteriori dettagli.
+In caso di esito positivo, la risposta restituisce un elenco di [!DNL Catalog] oggetti sotto forma di coppie chiave-valore, filtrate dai parametri di query forniti nella richiesta. Per ogni coppia chiave-valore, la chiave rappresenta un identificatore univoco per l&#39;oggetto [!DNL Catalog] in questione, che può quindi essere utilizzato in un&#39;altra chiamata per [visualizzare l&#39;oggetto specifico](look-up-object.md) per ulteriori dettagli.
 
 >[!NOTE]
 >
->Se un oggetto restituito non contiene una o più delle proprietà richieste indicate dal `properties` , la risposta restituisce solo le proprietà richieste che include, come mostrato nella ***`Sample Dataset 3`*** e ***`Sample Dataset 4`*** di seguito.
+>Se un oggetto restituito non contiene una o più delle proprietà richieste indicate dalla query `properties`, la risposta restituisce solo le proprietà richieste incluse, come illustrato di seguito in ***`Sample Dataset 3`*** e ***`Sample Dataset 4`***.
 
 ```json
 {

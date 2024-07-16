@@ -9,17 +9,17 @@ ht-degree: 3%
 
 ---
 
-# [!UICONTROL Dettagli aggiornamento] gruppo di campi schema
+# [!UICONTROL Aggiorna dettagli] gruppo di campi schema
 
-[!UICONTROL Dettagli aggiornamento] è un gruppo di campi di schema standard per [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md) utilizzato per acquisire informazioni relative a un evento di marketing di aggiornamento, inclusi dettagli sulla transazione e sulle diverse modalità di visualizzazione dell’offerta a un cliente.
+[!UICONTROL Dettagli aggiornamento] è un gruppo di campi dello schema standard per la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md) utilizzata per acquisire informazioni relative a un evento di marketing di aggiornamento, inclusi i dettagli sulla transazione e i diversi modi in cui l&#39;offerta è stata visualizzata a un cliente.
 
 Il gruppo di campi fornisce un singolo campo di tipo oggetto, `upgrades`. Le proprietà contenute in questo oggetto sono illustrate di seguito.
 
-![Struttura dei dettagli di aggiornamento](../../images/field-groups/upgrade-details.png)
+![Struttura dettagli aggiornamento](../../images/field-groups/upgrade-details.png)
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
-| `upgradeImpressions` | Array di [Impression](../../data-types/impressions.md) | Un array che elenca le impression registrate (visualizzazioni digitali o impegni con l’offerta di aggiornamento) per il cliente. |
+| `upgradeImpressions` | Array di [impression](../../data-types/impressions.md) | Un array che elenca le impression registrate (visualizzazioni digitali o impegni con l’offerta di aggiornamento) per il cliente. |
 | `upgradeTransaction` | [Transazione](../../data-types/transaction.md) | Descrive la transazione di valuta per l&#39;aggiornamento. |
 
 {style="table-layout:auto"}

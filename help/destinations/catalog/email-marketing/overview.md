@@ -7,7 +7,7 @@ exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
 source-git-commit: 4566d5241f287801569e0cfa5b86ea6210fd1638
 workflow-type: tm+mt
 source-wordcount: '376'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
@@ -30,18 +30,18 @@ Adobe Experience Platform supporta le seguenti destinazioni di e-mail marketing:
 * [(File) Oracle Eloqua](oracle-eloqua.md)
 * [(File) [!DNL Salesforce Marketing Cloud]](salesforce-marketing-cloud.md)
 * [[!DNL Salesforce Marketing Cloud Account Engagement]](salesforce-marketing-cloud-account-engagement.md)
-* [Responsys Oracle](oracle-responsys.md)
+* [Oracle Responsys](oracle-responsys.md)
 * [InviaGriglia](sendgrid.md)
 
 ## Connettersi a una nuova destinazione di e-mail marketing {#connect-destination}
 
-Per inviare i tipi di pubblico a destinazioni di e-mail marketing per le campagne, Platform deve prima connettersi alla destinazione. Consulta la [tutorial sulla creazione della destinazione](../../ui/connect-destination.md) per informazioni dettagliate sulla configurazione di una nuova destinazione.
+Per inviare i tipi di pubblico a destinazioni di e-mail marketing per le campagne, Platform deve prima connettersi alla destinazione. Per informazioni dettagliate sulla configurazione di una nuova destinazione, consulta il [tutorial sulla creazione della destinazione](../../ui/connect-destination.md).
 
 ## Best practice per l’attivazione dei tipi di pubblico nelle destinazioni di e-mail marketing {#best-practices}
 
 ### Selezione identità {#identity}
 
-L’Adobe consiglia di selezionare un identificatore univoco dal [schema di unione](../../../profile/home.md#profile-fragments-and-union-schemas). Questo è il campo da cui le identità utente sono ricavate. Nella maggior parte dei casi, questo campo è l’indirizzo e-mail, ma può anche essere un ID programma fedeltà o un numero di telefono. Fai riferimento alla tabella seguente per gli identificatori univoci più comuni e il relativo campo XDM nello schema.
+L&#39;Adobe consiglia di selezionare un identificatore univoco dallo [schema di unione](../../../profile/home.md#profile-fragments-and-union-schemas). Questo è il campo da cui le identità utente sono ricavate. Nella maggior parte dei casi, questo campo è l’indirizzo e-mail, ma può anche essere un ID programma fedeltà o un numero di telefono. Fai riferimento alla tabella seguente per gli identificatori univoci più comuni e il relativo campo XDM nello schema.
 
 | Identificatore univoco | Campo XDM nello schema unificato |
 |----------------- | ---------------------------|
@@ -64,7 +64,7 @@ Nel selettore campo Schema, scegli gli altri campi da esportare nella destinazio
 | Stato indirizzo | `homeAddress.stateProvince` |
 | Indirizzo Codice postale | `homeAddress.postalCode` |
 | Compleanno | `person.birthDayAndMonth` |
-| Iscrizione al segmento | `segmentMembership.status` |
+| Appartenenza a segmento | `segmentMembership.status` |
 
 {style="table-layout:auto"}
 
@@ -74,7 +74,7 @@ Alcune destinazioni di e-mail marketing nel catalogo esportano i profili in modo
 
 Altre destinazioni esportano i file in un percorso di archiviazione cloud. Al termine dell’esportazione, devi importare i dati dalla posizione di archiviazione cloud alla destinazione di e-mail marketing.
 
-Segui i collegamenti in [destinazioni di e-mail marketing supportate](#supported-destinations) per scoprire come attivare i tipi di pubblico per ogni destinazione di e-mail marketing.
+Segui i collegamenti nella sezione [destinazioni e-mail marketing supportate](#supported-destinations) per scoprire come attivare i tipi di pubblico per ogni destinazione e-mail marketing.
 
 ## Risorse aggiuntive {#additional-resources}
 

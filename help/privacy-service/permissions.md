@@ -4,7 +4,7 @@ description: Scopri come gestire le autorizzazioni utente per Adobe Experience P
 exl-id: 6aa81850-48d7-4fff-95d1-53b769090649
 source-git-commit: 20a737cf36bf08415a15db78599f36659207ace1
 workflow-type: tm+mt
-source-wordcount: '1504'
+source-wordcount: '1481'
 ht-degree: 95%
 
 ---
@@ -47,17 +47,17 @@ La tabella seguente illustra le autorizzazioni disponibili per Privacy Service c
 
 Per gestire le autorizzazioni di Privacy Service, accedi ad [Admin Console](https://adminconsole.adobe.com/) e seleziona **[!UICONTROL Prodotti]** nell’area di navigazione in alto. Da qui, seleziona **[!UICONTROL Adobe Experience Platform Privacy Service]**.
 
-![L’Admin Console con la scheda del prodotto Privacy Service evidenziata.](./images/permissions/privacy-service-card.png)
+![L&#39;Admin Console con la scheda prodotto Privacy Service evidenziata.](./images/permissions/privacy-service-card.png)
 
 ### Selezionare o creare un profilo di prodotto
 
 La schermata successiva mostra un elenco dei profili di prodotto disponibili per Privacy Service nell’organizzazione. Se non esiste alcun profilo di prodotto, seleziona **[!UICONTROL Nuovo profilo]** per crearne uno. Se nell’organizzazione sono presenti più ruoli o gruppi di utenti che richiedono livelli di accesso diversi, è necessario creare un profilo di prodotto separato per ciascuno di essi.
 
-![L’Admin Console con il profilo di prodotto Privacy Service evidenziato.](./images/permissions/select-or-create-profile.png)
+![L&#39;Admin Console con il profilo di prodotto Privacy Service evidenziato.](./images/permissions/select-or-create-profile.png)
 
 Dopo aver selezionato un profilo di prodotto, puoi utilizzare la scheda **[!UICONTROL Autorizzazioni]** per iniziare le [autorizzazioni di modifica](#edit-permissions) per il profilo, oppure seleziona la scheda **[!UICONTROL Utenti]** per iniziare l’[assegnazione di utenti](#assign-users) al profilo.
 
-![La scheda delle autorizzazioni per un Admin Console di profilo di prodotto.](./images/permissions/users-permissions-tabs.png)
+![Scheda delle autorizzazioni per un Admin Console di profilo di prodotto.](./images/permissions/users-permissions-tabs.png)
 
 ### Modificare le autorizzazioni per il profilo {#edit-permissions}
 
@@ -69,7 +69,7 @@ Quando si modificano le autorizzazioni per un profilo, le autorizzazioni disponi
 
 Le autorizzazioni sono organizzate in categorie. Per passare da una categoria all’altra, seleziona la categoria desiderata dal menu di navigazione a sinistra.
 
-![Il [!UICONTROL Rinuncia alla vendita] sezione in autorizzazioni.](./images/permissions/switch-category.png)
+![La sezione [!UICONTROL Rinuncia] in autorizzazioni.](./images/permissions/switch-category.png)
 
 Al termine della configurazione delle autorizzazioni, seleziona **[!UICONTROL Salva]**.
 
@@ -77,13 +77,13 @@ Al termine della configurazione delle autorizzazioni, seleziona **[!UICONTROL Sa
 
 La vista del profilo di prodotto viene nuovamente visualizzata con le autorizzazioni aggiunte riportate.
 
-![Le autorizzazioni aggiunte per il profilo di prodotto.](./images/permissions/permissions-added.png)
+![Autorizzazioni aggiunte per il profilo di prodotto.](./images/permissions/permissions-added.png)
 
 ### Assegnare utenti al profilo {#assign-users}
 
 Per assegnare gli utenti al profilo di prodotto (e concedere loro le autorizzazioni configurate per il profilo), seleziona la scheda **[!UICONTROL Utenti]**, seguita da **[!UICONTROL Aggiungi utente]**.
 
-![La scheda Utenti per un profilo di prodotto in Admin Console.](./images/permissions/manage-users.png)
+![Scheda Utenti per un profilo di prodotto in Admin Console.](./images/permissions/manage-users.png)
 
 Per ulteriori informazioni sulla gestione degli utenti per un profilo di prodotto, consulta la [documentazione di Admin Console](https://helpx.adobe.com/it/enterprise/using/manage-product-profiles.html).
 

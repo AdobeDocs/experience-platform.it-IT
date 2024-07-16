@@ -4,8 +4,8 @@ description: Scopri i passaggi per inviare l’estensione Adobe Experience Platf
 exl-id: 7a30ae5c-f9c7-45f9-b648-3fb31006b1ce
 source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '238'
-ht-degree: 84%
+source-wordcount: '230'
+ht-degree: 87%
 
 ---
 
@@ -29,7 +29,7 @@ Per informazioni su ciascuno dei passaggi, seleziona il collegamento corrisponde
 
 ## Supporto
 
-Durante la creazione e il test dell’estensione, è possibile ricevere supporto tramite l’area di lavoro Slack della community di sviluppatori di tag. L’area di lavoro Slack è una community online in cui gli autori delle estensioni si supportano a vicenda. Puoi richiedere l’accesso utilizzando i seguenti elementi [modulo online](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform).
+Durante la creazione e il test dell’estensione, è possibile ricevere supporto tramite l’area di lavoro Slack della community di sviluppatori di tag. L’area di lavoro Slack è una community online in cui gli autori delle estensioni si supportano a vicenda. Puoi richiedere l&#39;accesso utilizzando il seguente [modulo online](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform).
 
 >[!NOTE]
 >

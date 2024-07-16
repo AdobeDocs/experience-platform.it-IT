@@ -4,8 +4,8 @@ description: Scopri il concetto di ambienti di tag e come funzionano in Adobe Ex
 exl-id: 0bf641c9-412e-4737-9b76-232d980385b2
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1464'
-ht-degree: 97%
+source-wordcount: '1462'
+ht-degree: 96%
 
 ---
 
@@ -91,7 +91,7 @@ Seleziona **[!UICONTROL Host]** per scegliere dal menu a discesa un host preconf
 
 ![](./images/environments/select-host.png)
 
-Quando viene creata una build, questa viene consegnata alla posizione specificata per l’host assegnato. Per informazioni su come creare e configurare gli host tag, consulta [panoramica sugli host](./hosts/hosts-overview.md).
+Quando viene creata una build, questa viene consegnata alla posizione specificata per l’host assegnato. Per informazioni su come creare e configurare gli host tag, consulta la [panoramica sugli host](./hosts/hosts-overview.md).
 
 ### Impostazione di archiviazione {#archive}
 

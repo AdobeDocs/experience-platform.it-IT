@@ -6,7 +6,7 @@ description: Questo documento introduce la preparazione dati in Adobe Experience
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
 source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '789'
 ht-degree: 0%
 
 ---
@@ -26,46 +26,46 @@ La preparazione dati applica anche diverse convalide di dati intrinseche per gar
 
 >[!NOTE]
 >
->A meno che il messaggio risultante non sia un XDM valido, eventuali errori di trasformazione nella preparazione dati determineranno l’impostazione di tali attributi su `null`, mentre il resto della riga verrà acquisito. Se la riga viene risolta in XDM non valido, la riga **non** essere acquisiti. In entrambi i casi, l’errore verrà documentato.
+>A meno che il messaggio risultante non sia un XDM valido, eventuali errori di trasformazione nella preparazione dati determineranno l&#39;impostazione di tali attributi su `null`, mentre il resto della riga verrà acquisito. Se la riga viene risolta in XDM non valido, la riga **non** verrà acquisita. In entrambi i casi, l’errore verrà documentato.
 
 ## Mappatura
 
 Un mapping è un&#39;associazione di un attributo di input o di un campo calcolato a un attributo XDM. Un singolo attributo può essere mappato a più attributi XDM creando singoli mapping.
 
-Per ulteriori informazioni sulle diverse funzioni di mappatura, consultare [guida alle funzioni di mappatura](./functions.md).
+Per ulteriori informazioni sulle diverse funzioni di mappatura, leggere la [guida alle funzioni di mappatura](./functions.md).
 
 ### Campi calcolati
 
 I campi calcolati consentono la creazione di valori in base agli attributi nello schema di input. Questi valori possono quindi essere assegnati ad attributi nello schema di destinazione e ricevere un nome e una descrizione per consentire un riferimento più semplice. I campi calcolati hanno una lunghezza massima di 4096 caratteri.
 
-Per ulteriori informazioni sui campi calcolati, leggere [guida ai campi calcolati](./functions.md#calculated-fields).
+Per ulteriori informazioni sui campi calcolati, leggere la [guida dei campi calcolati](./functions.md#calculated-fields).
 
 ### Esci dai caratteri speciali {#escape-special-characters}
 
-È possibile utilizzare caratteri speciali in un campo `${...}`. Tuttavia, i file JSON che contengono campi con un punto (`.`) non sono supportati da questo meccanismo. Quando si interagisce con le gerarchie, se un attributo figlio ha un punto (`.`), è necessario utilizzare una barra rovesciata (`\`) per eliminare i caratteri speciali. Ad esempio: `address` è un oggetto che contiene l’attributo `street.name`, può quindi essere indicato come `address.street\.name` invece di `address.street.name`.
+È possibile eliminare i caratteri speciali in un campo utilizzando `${...}`. Tuttavia, i file JSON che contengono campi con un punto (`.`) non sono supportati da questo meccanismo. Quando si interagisce con le gerarchie, se un attributo figlio ha un punto (`.`), è necessario utilizzare una barra rovesciata (`\`) per eliminare i caratteri speciali. Ad esempio, `address` è un oggetto che contiene l&#39;attributo `street.name`, che può quindi essere indicato come `address.street\.name` invece di `address.street.name`.
 
 ## Set di mappatura
 
 Un set di mappature che trasforma uno schema in un altro è collettivamente noto come set di mappatura. Un singolo set di mappatura viene creato come parte di ogni flusso di dati. Un set di mappatura è parte integrante dei flussi di dati e viene creato, modificato e monitorato come parte dei flussi di dati.
 
-Per ulteriori informazioni sui set di mappatura, tra cui come utilizzare i campi all’interno di un set di mappatura, leggi [guida al set di mappatura](./mapping-set.md). Per informazioni su come creare un set di mappatura e utilizzare altre chiamate API relative ai set di mappatura, consulta la sezione sui set di mappatura in [guida per sviluppatori](./api/mapping-set.md).
+Per ulteriori informazioni sui set di mappatura, tra cui come utilizzare i campi all&#39;interno di un set di mappatura, leggere la [guida del set di mappatura](./mapping-set.md). Per informazioni su come creare un set di mappatura e utilizzare altre chiamate API relative ai set di mappatura, consulta la sezione sui set di mappatura nella [guida per gli sviluppatori](./api/mapping-set.md).
 
 ## Gestione del formato dei dati
 
-La preparazione dati può gestire in modo affidabile diversi formati di dati acquisiti in Platform. Per ulteriori informazioni su come la preparazione dati gestisce diversi tipi di dati, consulta la sezione [panoramica sulla gestione del formato dei dati](./data-handling.md).
+La preparazione dati può gestire in modo affidabile diversi formati di dati acquisiti in Platform. Per ulteriori informazioni su come la preparazione dati gestisce diversi tipi di dati, leggere la [panoramica sulla gestione del formato dati](./data-handling.md).
 
 ## Invia aggiornamenti riga parziali tramite [!DNL Data Prep]
 
-Upsert in streaming [!DNL Data Prep] consente di inviare aggiornamenti di riga parziali a [!DNL Profile Service] e allo stesso tempo creare e stabilire nuovi collegamenti di identità con una singola richiesta API. Per ulteriori informazioni su come eseguire lo streaming degli upsert in [!DNL Data Prep], consulta il documento su [invio di aggiornamenti di riga parziali](./upserts.md).
+Gli upsert di streaming in [!DNL Data Prep] consentono di inviare aggiornamenti di riga parziali ai dati [!DNL Profile Service], creando e stabilendo nuovi collegamenti di identità con una singola richiesta API. Per ulteriori informazioni su come eseguire lo streaming degli aggiornamenti a monte in [!DNL Data Prep], consulta il documento in [invio di aggiornamenti di riga parziali](./upserts.md).
 
-## Controllo degli accessi basato su attributi in [!DNL Data Prep]
+## Controllo dell&#39;accesso basato su attributi in [!DNL Data Prep]
 
 Il controllo dell’accesso basato su attributi in Adobe Experience Platform consente agli amministratori di controllare l’accesso a oggetti e/o funzionalità specifici in base agli attributi.
 
 Il controllo dell&#39;accesso basato su attributi consente di mappare solo gli attributi a cui hai accesso. Gli attributi ai quali non hai accesso non possono essere utilizzati nelle mappature pass-through e nei campi calcolati. Di conseguenza, se non hai accesso a un campo obbligatorio, non puoi salvare correttamente una mappatura. Inoltre, non è possibile mappare oggetti o array di oggetti se non si ha accesso a nessuno degli attributi figlio. Tuttavia, è possibile mappare singolarmente altri elementi all&#39;interno dell&#39;oggetto o dell&#39;array di oggetti.
 
-Consulta la [panoramica sul controllo degli accessi basato su attributi](../access-control/abac/overview.md) per ulteriori informazioni.
+Per ulteriori informazioni, vedere la [panoramica sul controllo degli accessi basato su attributi](../access-control/abac/overview.md).
 
 ## Passaggi successivi
 
-Questo documento illustra le nozioni di base sulla preparazione dati in Adobe Experience Platform. Per ulteriori informazioni sulle diverse funzioni di mappatura, consultare [guida alle funzioni di mappatura](./functions.md). Per ulteriori informazioni su come la preparazione dati gestisce diversi tipi di dati, consulta la sezione [guida alla gestione del formato dei dati](./data-handling.md#dates). Per informazioni su come utilizzare l’API di preparazione dati, leggi la sezione [Guida per gli sviluppatori sulla preparazione dati](api/overview.md).
+Questo documento illustra le nozioni di base sulla preparazione dati in Adobe Experience Platform. Per ulteriori informazioni sulle diverse funzioni di mappatura, leggere la [guida alle funzioni di mappatura](./functions.md). Per ulteriori informazioni su come la preparazione dati gestisce diversi tipi di dati, leggere la [guida alla gestione del formato dei dati](./data-handling.md#dates). Per informazioni su come utilizzare l&#39;API di preparazione dati, leggere la [Guida per gli sviluppatori di preparazione dati](api/overview.md).

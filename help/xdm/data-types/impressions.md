@@ -9,9 +9,9 @@ ht-degree: 6%
 
 ---
 
-# [!UICONTROL Impression] tipo di dati
+# Tipo di dati [!UICONTROL Impression]
 
-[!UICONTROL Impression] è un tipo di dati XDM standard che descrive un’impression di marketing, ovvero una metrica utilizzata per quantificare il numero di visualizzazioni o impegni digitali per un contenuto come un annuncio pubblicitario, un post digitale o una pagina web.
+[!UICONTROL Impression] è un tipo di dati XDM standard che descrive un&#39;impressione di marketing, ovvero una metrica utilizzata per quantificare il numero di visualizzazioni o progetti digitali per un contenuto, ad esempio un annuncio pubblicitario, un post digitale o una pagina Web.
 
 ![](../images/data-types/impressions.png)
 

@@ -15,24 +15,24 @@ Puoi utilizzare Real-time Customer Data Platform per tenere traccia del valore d
 
 L’infografica seguente illustra il ciclo di raccolta, manipolazione, analisi e attuazione dei dati che genera dati ad alte prestazioni per migliorare le campagne di marketing.
 
-![L’infografica di andata e ritorno dei dati dall’osservazione all’analisi all’azione.](../images/use-cases/infographic-use-case-cycle.png)
+![L&#39;infografica di andata e ritorno dei dati dall&#39;osservazione all&#39;analisi all&#39;azione.](../images/use-cases/infographic-use-case-cycle.png)
 
 Questo caso d’uso end-to-end illustra come acquisire e modificare i segnali di dati per calcolare l’attributo derivato del valore del ciclo di vita del cliente. Questi set di dati derivati possono quindi essere applicati ai dati del profilo di Real-Time CDP e sono disponibili per l’utilizzo con dashboard definiti dall’utente per creare una dashboard per l’analisi approfondita. Tramite Data Distiller, puoi estendere il modello dati di Real-Time CDP Insights e utilizzare i set di dati derivati da CLV e le informazioni della dashboard per creare un nuovo pubblico e attivarlo nella destinazione desiderata. Questi tipi di pubblico ad alte prestazioni possono quindi essere utilizzati per sviluppare la tua prossima campagna di marketing.
 
 Questa guida è stata progettata per aiutarti a comprendere meglio la customer experience misurando i segnali di dati tra i punti di contatto chiave che guidano CLV e implementando un caso d’uso simile nell’ambiente. L’intero processo è riassunto nell’immagine seguente.
 
-![Un’infografica dei passaggi generali necessari per utilizzare il valore del ciclo di vita del cliente.](../images/use-cases/implementation-steps.png)
+![Infografica dei passaggi generali necessari per utilizzare il valore del ciclo di vita del cliente.](../images/use-cases/implementation-steps.png)
 
 ## Introduzione {#getting-started}
 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Servizio query](../home.md): fornisce un’interfaccia utente e un’API RESTful in cui è possibile utilizzare query SQL per analizzare e arricchire i dati.
-* [Servizio di segmentazione](../../segmentation/home.md): consente di generare tipi di pubblico dai dati Profilo cliente in tempo reale.
+* [Query Service](../home.md): fornisce un&#39;interfaccia utente e un&#39;API RESTful in cui è possibile utilizzare query SQL per analizzare e arricchire i dati.
+* [Servizio di segmentazione](../../segmentation/home.md): consente di generare tipi di pubblico dai dati del profilo cliente in tempo reale.
 
 ## Prerequisiti
 
-Questa guida richiede di avere [Data Distiller](../data-distiller/overview.md) SKU come parte dell’offerta del pacchetto. In caso di dubbi, contatta il rappresentante del servizio Adobe.
+Questa guida richiede che lo SKU di [Data Distiller](../data-distiller/overview.md) sia incluso nell&#39;offerta del pacchetto. In caso di dubbi, contatta il rappresentante del servizio Adobe.
 
 ## Creare un set di dati derivato {#create-derived-dataset}
 
@@ -47,7 +47,7 @@ Il primo passo per stabilire il proprio CLV consiste nel creare un set di dati d
 
 ## Estendere il modello dati di insights e pianificare gli aggiornamenti {#extend-data-model-and-set-refresh-schedule}
 
-Successivamente, devi creare un modello dati personalizzato o estendere un modello dati Adobe Real-Time CDP esistente per interagire con le informazioni di reporting di CLV. Consulta la documentazione per scoprire come [creare un modello dati per le informazioni di reporting tramite Query Service da utilizzare con dati di archivio accelerati e dashboard definiti dall’utente](../data-distiller/customizable-insights/reporting-insights-data-model.md#build-a-reporting-insights-data-model). Il tutorial illustra i seguenti passaggi:
+Successivamente, devi creare un modello dati personalizzato o estendere un modello dati Adobe Real-Time CDP esistente per interagire con le informazioni di reporting di CLV. Consulta la documentazione per scoprire come [creare un modello di dati Reporting Insights tramite Query Service da utilizzare con dati di archivio accelerati e dashboard definiti dall&#39;utente](../data-distiller/customizable-insights/reporting-insights-data-model.md#build-a-reporting-insights-data-model). Il tutorial illustra i seguenti passaggi:
 
 * Crea un modello per la generazione di rapporti di approfondimenti con Data Distiller.
 * Crea tabelle, relazioni e popola i dati.
@@ -56,24 +56,24 @@ Successivamente, devi creare un modello dati personalizzato o estendere un model
 * Crea tabelle dimensione per estendere il modello di reporting insights.
 * Eseguire una query sul modello dati Exaccelerated Store Reporting Insights
 
-Per informazioni su come utilizzare questa funzione, consulta la documentazione sul modello dati di Real-time Customer Data Platform Insights. [personalizza i modelli di query SQL per creare rapporti di Real-Time CDP per i casi d’uso degli indicatori prestazioni chiave (KPI, Key Performance Indicator) di marketing](../../dashboards/data-models/cdp-insights-data-model-b2c.md).
+Per informazioni su come [personalizzare i modelli di query SQL per creare rapporti Real-Time CDP per i casi d&#39;uso di indicatori di prestazioni chiave (KPI) e marketing, consulta la documentazione del modello dati di Real-time Customer Data Platform Insights](../../dashboards/data-models/cdp-insights-data-model-b2c.md).
 
-Assicurati di impostare una pianificazione per aggiornare il modello dati personalizzato a intervalli regolari. In questo modo i dati vengono reinseriti come parte della pipeline di acquisizione in base alle esigenze e popolano le dashboard definite dall’utente. Consulta la [guida alla pianificazione delle query](../ui/query-schedules.md#create-schedule) per scoprire come impostare la pianificazione.
+Assicurati di impostare una pianificazione per aggiornare il modello dati personalizzato a intervalli regolari. In questo modo i dati vengono reinseriti come parte della pipeline di acquisizione in base alle esigenze e popolano le dashboard definite dall’utente. Per informazioni su come impostare la pianificazione, consulta la [guida alla pianificazione delle query](../ui/query-schedules.md#create-schedule).
 
 ## Creare un dashboard per acquisire informazioni {#build-a-custom-dashboard}
 
-Dopo aver creato il modello dati personalizzato, puoi visualizzare i dati con query personalizzate e dashboard definiti dall’utente. Per istruzioni complete su come eseguire questa operazione, consulta la panoramica delle dashboard definite dall’utente. [creare un dashboard personalizzato](../../dashboards/user-defined-dashboards.md). La guida dell’interfaccia utente include informazioni su:
+Dopo aver creato il modello dati personalizzato, puoi visualizzare i dati con query personalizzate e dashboard definiti dall’utente. Per istruzioni complete su come [creare un dashboard personalizzato](../../dashboards/user-defined-dashboards.md), consulta la panoramica dei dashboard definiti dall&#39;utente. La guida dell’interfaccia utente include informazioni su:
 
 * Come creare un widget.
 * Come utilizzare il compositore widget.
 
 Di seguito sono riportati alcuni esempi di widget CLV personalizzati che utilizzano contenitori decile.
 
-![Raccolta di widget CLTV personalizzati basati su decile.](../images/use-cases/deciles-user-defined-dashboard.png)
+![Insieme di widget CLTV personalizzati basati su decile.](../images/use-cases/deciles-user-defined-dashboard.png)
 
 ## Creare e attivare tipi di pubblico ad alte prestazioni {#create-and-activate-audiences}
 
-Il passaggio successivo consiste nel creare una definizione di segmento e generare tipi di pubblico dai dati dei profili cliente in tempo reale. Per informazioni su come effettuare le seguenti operazioni, consulta la guida dell’interfaccia utente di Segment Builder [creare e attivare tipi di pubblico in Platform](../../segmentation/ui/segment-builder.md). La guida fornisce sezioni su come:
+Il passaggio successivo consiste nel creare una definizione di segmento e generare tipi di pubblico dai dati dei profili cliente in tempo reale. Per informazioni su come [creare e attivare tipi di pubblico in Platform](../../segmentation/ui/segment-builder.md), consulta la guida dell&#39;interfaccia utente di Segment Builder. La guida fornisce sezioni su come:
 
 * Crea definizioni di segmenti utilizzando una combinazione di attributi, eventi e tipi di pubblico esistenti come blocchi predefiniti.
 * Utilizza l’area di lavoro e i contenitori del generatore di regole per controllare l’ordine in cui vengono eseguite le regole di segmentazione.
@@ -81,17 +81,17 @@ Il passaggio successivo consiste nel creare una definizione di segmento e genera
 * Abilita tutte le definizioni dei segmenti per la segmentazione pianificata.
 * Abilita le definizioni di segmenti specificate per la segmentazione in streaming.
 
-In alternativa, è possibile [tutorial video sul generatore di segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-segments.html) disponibile per ulteriori informazioni.
+In alternativa, è disponibile anche un&#39;esercitazione video [per la generazione di segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-segments.html) per ulteriori informazioni.
 
 ## Attivare il pubblico per una campagna e-mail {#activate-audience-for-campaign}
 
 Una volta creato il pubblico, puoi attivarlo in una destinazione. Platform supporta diversi provider di servizi e-mail (ESP) che consentono di gestire le attività di marketing e-mail, ad esempio l’invio di campagne e-mail promozionali.
 
-Controlla la [panoramica delle destinazioni di e-mail marketing](../../destinations/catalog/email-marketing/overview.md#connect-destination) per un elenco delle destinazioni supportate in cui desideri esportare i dati (ad esempio [Eloqua Oracle](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) page).
+Controlla la [panoramica delle destinazioni di e-mail marketing](../../destinations/catalog/email-marketing/overview.md#connect-destination) per ottenere un elenco delle destinazioni supportate in cui desideri esportare i dati (ad esempio la pagina [Oracle Eloqua](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)).
 
 ## Visualizzare i dati di analisi restituiti dalla campagna {#post-campaign-data-analysis}
 
-I dati provenienti dalle origini ora possono essere [elaborato in modo incrementale](../key-concepts/incremental-load.md) come parte di un aggiornamento pianificato del modello dati nell’archivio dati accelerato. Eventuali eventi di risposta dai clienti possono essere acquisiti in Adobe Experience Platform così come si verificano o in batch. Il modello dati può essere aggiornato una o più volte al giorno, a seconda delle impostazioni o dei connettori di origine. Consulta la [panoramica dell’API per l’acquisizione batch](../../ingestion/batch-ingestion/api-overview.md) o [panoramica sull’acquisizione in streaming](../../ingestion/streaming-ingestion/overview.md) per ulteriori informazioni.
+I dati delle origini ora possono essere [elaborati in modo incrementale](../key-concepts/incremental-load.md) come parte di un aggiornamento pianificato del modello dati nell&#39;archivio dati accelerato. Eventuali eventi di risposta dai clienti possono essere acquisiti in Adobe Experience Platform così come si verificano o in batch. Il modello dati può essere aggiornato una o più volte al giorno, a seconda delle impostazioni o dei connettori di origine. Per ulteriori informazioni, consulta la [panoramica dell&#39;API di acquisizione batch](../../ingestion/batch-ingestion/api-overview.md) o la [panoramica dell&#39;acquisizione streaming](../../ingestion/streaming-ingestion/overview.md).
 
 Una volta aggiornato il modello dati, i widget del dashboard personalizzati forniscono segnali significativi che consentono di misurare e visualizzare il valore del ciclo di vita del cliente.
 
@@ -99,11 +99,11 @@ Una volta aggiornato il modello dati, i widget del dashboard personalizzati forn
 
 Sono disponibili diverse opzioni di visualizzazione per l’analisi personalizzata.
 
-![L’e-mail aperta dal widget dei bucket della campagna.](../images/use-cases/email-opened-by-campaign-buckets.png)
+![Indirizzo e-mail aperto dal widget dei bucket della campagna.](../images/use-cases/email-opened-by-campaign-buckets.png)
 
 Queste informazioni possono a loro volta aiutarti a sviluppare le tue strategie aziendali per le campagne successive.
 
-![Una raccolta di quattro widget personalizzati che descrivono i risultati della campagna e-mail.](../images/use-cases/example-widgets.png)
+![Raccolta di quattro widget personalizzati che descrivono i risultati della campagna e-mail.](../images/use-cases/example-widgets.png)
 
 ## Passaggi successivi
 

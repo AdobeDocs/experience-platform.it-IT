@@ -25,16 +25,16 @@ Questo documento fornisce un tutorial per gestire l’accesso ai dati sensibili 
 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Sistema Experience Data Model (XDM)](../../xdm/home.md): framework standardizzato tramite il quale Experienci Platform organizza i dati sull’esperienza del cliente.
+* [Experience Data Model (XDM) System](../../xdm/home.md): framework standardizzato in base al quale Experience Platform organizza i dati sull&#39;esperienza del cliente.
    * [[!DNL Schema Editor]](../../xdm/ui/overview.md): scopri come creare e gestire schemi e altre risorse nell’interfaccia utente di Platform.
-* [[!DNL Data Governance]](../../data-governance/home.md): scopri come [!DNL Data Governance] consente di gestire i dati dei clienti e garantire la conformità a normative, restrizioni e criteri applicabili all’utilizzo dei dati.
-* [Controllo degli accessi basato su attributi](../../access-control/abac/overview.md): il controllo degli accessi basato sugli attributi è una funzionalità di Adobe Experience Platform che consente agli amministratori di controllare l’accesso a oggetti e/o funzionalità specifici in base agli attributi. Gli attributi possono essere metadati aggiunti a un oggetto, ad esempio un’etichetta aggiunta a un campo schema ad hoc o normale. Un amministratore definisce i criteri di accesso che includono attributi per gestire le autorizzazioni di accesso degli utenti.
+* [[!DNL Data Governance]](../../data-governance/home.md): scopri come [!DNL Data Governance] ti consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all&#39;utilizzo dei dati.
+* [Controllo dell&#39;accesso basato su attributi](../../access-control/abac/overview.md): il controllo dell&#39;accesso basato su attributi è una funzionalità di Adobe Experience Platform che consente agli amministratori di controllare l&#39;accesso a oggetti specifici e/o funzionalità basate su attributi. Gli attributi possono essere metadati aggiunti a un oggetto, ad esempio un’etichetta aggiunta a un campo schema ad hoc o normale. Un amministratore definisce i criteri di accesso che includono attributi per gestire le autorizzazioni di accesso degli utenti.
 
 ## Creare uno schema ad hoc
 
 Una volta eseguita la query e generati i risultati, viene generato automaticamente uno schema ad hoc che viene aggiunto all’inventario degli schemi.
 
-Per aggiungere un’etichetta di dati, passa a [!UICONTROL Schemi] scheda Sfoglia dashboard selezionando [!UICONTROL Schemi] nella barra a sinistra dell’interfaccia utente di Platform. Viene visualizzato l’inventario degli schemi.
+Per aggiungere un&#39;etichetta dati, passa alla scheda Sfoglia del dashboard [!UICONTROL Schemi] selezionando [!UICONTROL Schemi] nella barra a sinistra dell&#39;interfaccia utente di Platform. Viene visualizzato l’inventario degli schemi.
 
 >[!NOTE]
 >
@@ -42,9 +42,9 @@ Per aggiungere un’etichetta di dati, passa a [!UICONTROL Schemi] scheda Sfogli
 
 ## Scopri gli schemi ad hoc nell’inventario degli schemi dell’interfaccia utente di Platform {#discover-ad-hoc-schemas}
 
-Per abilitare la visualizzazione degli schemi ad hoc nell’interfaccia utente di Platform, seleziona l’icona del filtro (![Icona di filtro.](../images/data-governance/filter.png)) a sinistra del campo di ricerca, quindi selezionare **[!UICONTROL Mostra schemi ad hoc] nella barra a sinistra visualizzata.
+Per abilitare la visualizzazione degli schemi ad hoc nell&#39;interfaccia utente di Platform, selezionare l&#39;icona del filtro (![Icona del filtro.](../images/data-governance/filter.png)) a sinistra del campo di ricerca, quindi seleziona **[!UICONTROL Mostra schemi ad hoc] nella barra a sinistra visualizzata.
 
-![Nella barra a sinistra delle opzioni del filtro del dashboard Schema è abilitato l’interruttore &quot;Mostra schema ad hoc&quot;.](../images/data-governance/adhoc-schema-toggle.png)
+![Nella barra a sinistra delle opzioni del filtro del dashboard Schema è abilitato l&#39;interruttore &#39;Mostra schema ad hoc&#39;.](../images/data-governance/adhoc-schema-toggle.png)
 
 Seleziona il nome dello schema ad hoc creato di recente dall’elenco disponibile. Viene visualizzata una visualizzazione della struttura dello schema ad hoc.
 
@@ -52,31 +52,31 @@ Seleziona il nome dello schema ad hoc creato di recente dall’elenco disponibil
 
 ## Modificare le etichette di governance
 
-Per modificare le etichette dati per lo schema ad hoc, seleziona la [!UICONTROL Etichette] scheda. L’area di lavoro etichette consente di applicare, creare e modificare le etichette nei campi dello schema ad hoc e di controllare le autorizzazioni di accesso tramite l’interfaccia utente. Tutti i campi all’interno dello schema ad hoc sono rappresentati qui.
+Per modificare le etichette dati per lo schema ad hoc, seleziona la scheda [!UICONTROL Etichette]. L’area di lavoro etichette consente di applicare, creare e modificare le etichette nei campi dello schema ad hoc e di controllare le autorizzazioni di accesso tramite l’interfaccia utente. Tutti i campi all’interno dello schema ad hoc sono rappresentati qui.
 
 ## Modifica le etichette per lo schema o il campo
 
-Per modificare le etichette per l’intero schema, seleziona l’icona a forma di matita (![Un’icona a forma di matita.](../images/data-governance/edit-icon.png)) a lato del nome dello schema sotto il [!UICONTROL Etichette] scheda.
+Per modificare le etichette per l&#39;intero schema, selezionare l&#39;icona della matita (![Un&#39;icona della matita.](../images/data-governance/edit-icon.png)) a lato del nome dello schema sotto la scheda [!UICONTROL Etichette].
 
-![La vista etichette nell’area di lavoro schemi con l’icona a forma di matita evidenziata.](../images/data-governance/edit-entire-schema-labels.png)
+![La visualizzazione delle etichette nell&#39;area di lavoro degli schemi con l&#39;icona della matita evidenziata.](../images/data-governance/edit-entire-schema-labels.png)
 
-Per applicare un&#39;etichetta a un campo esistente, selezionare uno o più campi dall&#39;elenco seguito da [!UICONTROL Modifica etichette di governance] nella barra laterale a destra.
+Per applicare un&#39;etichetta a un campo esistente, seleziona uno o più campi dall&#39;elenco seguito da [!UICONTROL Modifica etichette di governance] nella barra laterale a destra.
 
-![La vista delle etichette nell’area di lavoro degli schemi con l’opzione &quot;Modifica etichette di governance&quot; evidenziata nella barra laterale a destra.](../images/data-governance/edit-governance-labels.png)
+![La visualizzazione delle etichette nell&#39;area di lavoro degli schemi con l&#39;opzione &#39;Modifica etichette di governance&#39; evidenziata nella barra laterale a destra.](../images/data-governance/edit-governance-labels.png)
 
 ## Popover Modifica etichette
 
-Il [!UICONTROL Modifica etichette] viene visualizzato popover. Da questa vista puoi creare o modificare le etichette di governance esistenti tramite l’interfaccia utente.
+Viene visualizzato il popover [!UICONTROL Modifica etichette]. Da questa vista puoi creare o modificare le etichette di governance esistenti tramite l’interfaccia utente.
 
-![Viene visualizzata la finestra a comparsa Modifica etichette.](../images/data-governance/edit-labels-popover.png)
+![Finestra a comparsa Modifica etichette.](../images/data-governance/edit-labels-popover.png)
 
-Consulta la documentazione per istruzioni su come [crea o modifica etichette per lo schema o il campo selezionato](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field).
+Consulta la documentazione per istruzioni su come [creare o modificare le etichette per lo schema o il campo selezionato](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field).
 
 >[!NOTE]
 >
 >La creazione di una nuova etichetta o la modifica di un’etichetta esistente richiede le autorizzazioni di amministratore per la tua organizzazione. Se non disponi dei privilegi di amministratore, contatta l’amministratore di sistema per organizzare l’accesso.
 
-Le etichette possono essere create anche utilizzando l’area di lavoro delle autorizzazioni. Consulta la [guida alla creazione di etichette nell’area di lavoro autorizzazioni](../../access-control/abac/ui/labels.md) per istruzioni.
+Le etichette possono essere create anche utilizzando l’area di lavoro delle autorizzazioni. Per istruzioni, consulta la [guida sulla creazione di etichette nell&#39;area di lavoro autorizzazioni](../../access-control/abac/ui/labels.md).
 
 Una volta applicato il livello appropriato di controllo degli accessi basato su attributi, il seguente comportamento di sistema si applica a qualsiasi query eseguita tramite Query Service quando un utente tenta di accedere a dati non accessibili:
 

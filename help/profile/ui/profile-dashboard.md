@@ -13,10 +13,10 @@ ht-degree: 0%
 
 # [!UICONTROL Profili] dashboard {#profile-dashboard}
 
-L’interfaccia utente di Adobe Experience Platform fornisce una dashboard attraverso la quale puoi visualizzare informazioni importanti sulla tua [!DNL Real-Time Customer Profile] dati acquisiti durante un&#39;istantanea giornaliera.
+L&#39;interfaccia utente di Adobe Experience Platform fornisce un dashboard attraverso il quale è possibile visualizzare informazioni importanti sui dati di [!DNL Real-Time Customer Profile] acquisiti durante uno snapshot giornaliero.
 
-Per istruzioni dettagliate su come accedere e interagire con [!UICONTROL Profili] nell&#39;interfaccia utente, oltre a ulteriori informazioni sulle metriche disponibili visualizzate nella dashboard, visita il [[!UICONTROL Profili] guida del dashboard](../../dashboards/guides/profiles.md).
+Per istruzioni dettagliate su come accedere e interagire con la dashboard [!UICONTROL Profili] nell&#39;interfaccia utente e per ulteriori informazioni sulle metriche disponibili visualizzate nella dashboard, visita la guida della dashboard [[!UICONTROL Profili]](../../dashboards/guides/profiles.md).
 
-Per una panoramica di tutte le funzioni del dashboard nell’interfaccia utente di Experience Platform, leggi innanzitutto [panoramica delle dashboard](../../dashboards/home.md).
+Per una panoramica di tutte le funzionalità del dashboard nell&#39;interfaccia utente di Experience Platform, leggere la [panoramica dei dashboard](../../dashboards/home.md).
 
-![Viene visualizzato il dashboard Profilo.](../images/profile-dashboard/dashboard-overview.png)
+![Viene visualizzato il dashboard dei profili.](../images/profile-dashboard/dashboard-overview.png)

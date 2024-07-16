@@ -7,13 +7,13 @@ exl-id: 209654f7-0bde-439a-989c-ce2e41599105
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '244'
-ht-degree: 4%
+ht-degree: 24%
 
 ---
 
-# [!UICONTROL Canale esperienza] tipo di dati
+# Tipo di dati [!UICONTROL Experience Channel]
 
-[!UICONTROL Canale esperienza] è un tipo di dati Experience Data Model (XDM) standard che descrive un canale di esperienza. Un canale di esperienza rappresenta un metodo o un percorso per il modo in cui vengono utilizzate le esperienze digitali.
+[!UICONTROL Experience Channel] è un tipo di dati Experience Data Model (XDM) standard che descrive un canale di esperienza. Un canale di esperienza rappresenta un metodo o un percorso per il modo in cui vengono utilizzate le esperienze digitali.
 
 Esistono più canali di esperienza, ciascuno con vincoli diversi relativi al modo in cui vengono forniti i contenuti, al modo in cui è possibile osservare l’interazione del cliente e alla modalità di raccolta dei dati. All’interno di un canale, le esperienze possono essere distribuite a posizioni specifiche. Le posizioni e i tipi di posizioni esistenti in un canale differiscono da canale a canale.
 
@@ -24,9 +24,9 @@ Esistono più canali di esperienza, ciascuno con vincoli diversi relativi al mod
 | `_id` | Stringa | Un ID che identifica in modo univoco il canale. Ogni canale di esperienza specifico definisce una costante `@id`. |
 | `_type` | Stringa | Fornisce un’etichetta di classificazione approssimativa per i canali con proprietà simili. |
 | `contentTypes` | Array di stringhe | I tipi di contenuto che questo canale può fornire. |
-| `locationTypes` | Array di stringhe | I tipi di posizioni (luoghi virtuali) da cui questo canale è costituito e a cui può fornire contenuti. |
+| `locationTypes` | Array di stringhe | I tipi di posizioni (luoghi virtuali) da cui questo canale è composto e a cui può fornire contenuti. |
 | `mediaAction` | Stringa | Descrive un’azione multimediale Experience Event, se applicabile. |
-| `mediaType` | Stringa | Descrive se il tipo di file multimediale è pagato, di proprietà o guadagnato. |
+| `mediaType` | Stringa | Descrive se il tipo di elemento multimediale è pagato, di proprietà o guadagnato. |
 | `metricTypes` | Array di stringhe | Le metriche che possono essere raccolte in questo canale. |
 | `mode` | Stringa | Modalità di distribuzione delle esperienze in questo canale. |
 | `typeAtSource` | Stringa | Un nome personalizzato per il canale. |

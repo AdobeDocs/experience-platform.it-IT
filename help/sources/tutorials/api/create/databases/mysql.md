@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;MySQL;mysql
 solution: Experience Platform
-title: Creare un [!DNL MySQL] Connessione di base tramite l’API del servizio Flow
+title: Crea una connessione di base  [!DNL MySQL]  utilizzando l'API del servizio Flusso
 type: Tutorial
 description: Scopri come connettere Adobe Experience Platform a MySQL utilizzando l’API del servizio Flusso.
 exl-id: 273da568-84ed-4a3d-bfea-0f5b33f1551a
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
-source-wordcount: '450'
-ht-degree: 2%
+source-wordcount: '441'
+ht-degree: 5%
 
 ---
 
-# Creare un [!DNL MySQL] connessione di base tramite [!DNL Flow Service] API
+# Creare una connessione di base [!DNL MySQL] utilizzando l&#39;API [!DNL Flow Service]
 
 Una connessione di base rappresenta la connessione autenticata tra un&#39;origine e Adobe Experience Platform.
 
@@ -22,31 +22,31 @@ Questo tutorial illustra i passaggi necessari per creare una connessione di base
 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Sorgenti](../../../../home.md): [!DNL Experience Platform] consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] servizi.
-* [Sandbox](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che permettono di suddividere un singolo [!DNL Platform] in ambienti virtuali separati, per facilitare lo sviluppo e l’evoluzione delle applicazioni di esperienza digitale.
+* [Origini](../../../../home.md): [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini e consente di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi [!DNL Platform].
+* [Sandbox](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza di [!DNL Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per connettersi correttamente a [!DNL MySQL] utilizzando [!DNL Flow Service] API.
+Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per connettersi correttamente a [!DNL MySQL] utilizzando l&#39;API [!DNL Flow Service].
 
 ### Raccogli le credenziali richieste
 
-Per ottenere [!DNL Flow Service] per connettersi con [!DNL MySQL] archiviazione, è necessario fornire il valore per la seguente proprietà di connessione:
+Affinché [!DNL Flow Service] possa connettersi all&#39;archivio [!DNL MySQL], è necessario fornire il valore per la seguente proprietà di connessione:
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
-| `connectionString` | Il [!DNL MySQL] stringa di connessione associata al tuo account. Il [!DNL MySQL] modello di stringa di connessione: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
-| `connectionSpec.id` | La specifica di connessione restituisce le proprietà del connettore di un&#39;origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di origine. ID della specifica di connessione per [!DNL MySQL] è `26d738e0-8963-47ea-aadf-c60de735468a`. |
+| `connectionString` | La stringa di connessione [!DNL MySQL] associata al tuo account. Schema della stringa di connessione [!DNL MySQL]: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+| `connectionSpec.id` | La specifica di connessione restituisce le proprietà del connettore di un&#39;origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di origine. L&#39;ID della specifica di connessione per [!DNL MySQL] è `26d738e0-8963-47ea-aadf-c60de735468a`. |
 
-Per ulteriori informazioni su come ottenere una stringa di connessione, consulta questa [[!DNL MySQL] documento](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html).
+Per ulteriori informazioni su come ottenere una stringa di connessione, fare riferimento a questo [[!DNL MySQL] documento](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html).
 
 ### Utilizzo delle API di Platform
 
-Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida su [introduzione alle API di Platform](../../../../../landing/api-guide.md).
+Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida in [guida introduttiva alle API di Platform](../../../../../landing/api-guide.md).
 
 ## Creare una connessione di base
 
 Una connessione di base mantiene le informazioni tra l’origine e Platform, incluse le credenziali di autenticazione dell’origine, lo stato corrente della connessione e l’ID univoco della connessione di base. L’ID della connessione di base consente di esplorare e navigare tra i file dall’interno dell’origine e identificare gli elementi specifici che desideri acquisire, comprese le informazioni relative ai tipi di dati e ai formati.
 
-Per creare un ID di connessione di base, effettua una richiesta POST al `/connections` endpoint durante la fornitura del [!DNL MySQL] credenziali di autenticazione come parte dei parametri della richiesta.
+Per creare un ID di connessione di base, effettuare una richiesta POST all&#39;endpoint `/connections` fornendo le credenziali di autenticazione [!DNL MySQL] come parte dei parametri della richiesta.
 
 **Formato API**
 
@@ -84,8 +84,8 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --------- | ----------- |
-| `auth.params.connectionString` | Il [!DNL MySQL] stringa di connessione associata al tuo account. Il [!DNL MySQL] modello di stringa di connessione: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
-| `connectionSpec.id` | Il [!DNL MySQL] ID specifica di connessione: `26d738e0-8963-47ea-aadf-c60de735468a`. |
+| `auth.params.connectionString` | La stringa di connessione [!DNL MySQL] associata al tuo account. Schema della stringa di connessione [!DNL MySQL]: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+| `connectionSpec.id` | ID della specifica di connessione [!DNL MySQL]: `26d738e0-8963-47ea-aadf-c60de735468a`. |
 
 **Risposta**
 
@@ -100,8 +100,8 @@ In caso di esito positivo, la risposta restituisce i dettagli della connessione 
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato una [!DNL MySQL]connessione di base tramite [!DNL Flow Service] API. Puoi utilizzare questo ID connessione di base nelle seguenti esercitazioni:
+Seguendo questa esercitazione, hai creato una connessione di base [!DNL MySQL] utilizzando l&#39;API [!DNL Flow Service]. Puoi utilizzare questo ID connessione di base nelle seguenti esercitazioni:
 
-* [Esplora la struttura e il contenuto delle tabelle di dati utilizzando [!DNL Flow Service] API](../../explore/tabular.md)
-* [Crea un flusso di dati per portare i dati del database su Platform utilizzando [!DNL Flow Service] API](../../collect/database-nosql.md)
+* [Esplora la struttura e il contenuto delle tabelle dati utilizzando l&#39;API  [!DNL Flow Service] ](../../explore/tabular.md)
+* [Crea un flusso di dati per portare i dati del database in Platform utilizzando l&#39;API  [!DNL Flow Service] ](../../collect/database-nosql.md)
 

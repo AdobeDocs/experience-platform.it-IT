@@ -20,10 +20,10 @@ Le identità correlate in un grafico delle identità, indipendentemente dallo sp
 
 Recuperare tutti i membri del cluster per una singola identità.
 
-È possibile utilizzare l’ `graph-type` parametro per indicare il grafo delle identità da cui ottenere il cluster. Le opzioni sono:
+È possibile utilizzare il parametro facoltativo `graph-type` per indicare il grafico delle identità da cui ottenere il cluster. Le opzioni sono:
 
 - Nessuno: non eseguire alcuna unione di identità.
-- Private Graph (Grafico privato): esegue l’unione delle identità in base al grafico delle identità private. In caso negativo `graph-type` , è l&#39;impostazione predefinita.
+- Private Graph (Grafico privato): esegue l’unione delle identità in base al grafico delle identità private. Se non viene fornito alcun `graph-type`, questo è il valore predefinito.
 
 **Formato API**
 
@@ -33,7 +33,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/cluster/members?{PARAM
 
 **Richiesta**
 
-Opzione 1: specificare l&#39;identità come spazio dei nomi (`nsId`, per ID) e il valore ID (`id`).
+Opzione 1: specificare l&#39;identità come spazio dei nomi (`nsId`, per ID) e valore ID (`id`).
 
 ```shell
 curl -X GET \
@@ -44,7 +44,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opzione 2: specificare l&#39;identità come spazio dei nomi (`ns`, per nome) e il valore ID (`id`).
+Opzione 2: specificare l&#39;identità come spazio dei nomi (`ns`, per nome) e valore ID (`id`).
 
 ```shell
 curl -X GET \
@@ -55,7 +55,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opzione 3: specificare l&#39;identità come XID (`xid`). Per ulteriori informazioni su come ottenere l’XID di un’identità, consulta la sezione di questo documento relativa a [recupero dello XID per un’identità](./list-native-id.md).
+Opzione 3: specificare l&#39;identità come XID (`xid`). Per ulteriori informazioni su come ottenere XID di un&#39;identità, consulta la sezione di questo documento che descrive [come ottenere XID per un&#39;identità](./list-native-id.md).
 
 ```shell
 curl -X GET \
@@ -68,7 +68,7 @@ curl -X GET \
 
 ## Ottieni identità associate per più identità
 
-Utilizzare `POST` come equivalente batch del `GET` metodo descritto sopra per restituire le identità nei cluster di identità multiple.
+Utilizzare `POST` come equivalente batch del metodo `GET` descritto in precedenza per restituire le identità nei cluster di più identità.
 
 >[!NOTE]
 >
@@ -86,7 +86,7 @@ Nella richiesta seguente viene illustrato come specificare un elenco di XID per 
 
 **Richiesta stub**
 
-Utilizzo di `x-uis-cst-ctx: stub` L’intestazione restituirà una risposta con stubbed. Si tratta di una soluzione temporanea per agevolare il rapido progresso dello sviluppo dell’integrazione, durante il completamento dei servizi. Se non sarà più necessario, diventerà obsoleto.
+L&#39;utilizzo dell&#39;intestazione `x-uis-cst-ctx: stub` restituirà una risposta con stubbed. Si tratta di una soluzione temporanea per agevolare il rapido progresso dello sviluppo dell’integrazione, durante il completamento dei servizi. Se non sarà più necessario, diventerà obsoleto.
 
 ```shell
 curl -X POST \
@@ -144,7 +144,7 @@ curl -X POST \
 
 **Risposta**
 
-**Risposta &#39;Stubbed&#39;**
+**risposta &#39;Stubbed&#39;**
 
 ```json
 {
@@ -242,4 +242,4 @@ curl -X POST \
 
 ## Passaggi successivi
 
-Procedi all’esercitazione successiva per [elencare la cronologia cluster di un&#39;identità](./list-cluster-history.md)
+Procedi all&#39;esercitazione successiva per [elencare la cronologia cluster di un&#39;identità](./list-cluster-history.md)

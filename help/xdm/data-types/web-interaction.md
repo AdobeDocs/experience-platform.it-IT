@@ -7,13 +7,13 @@ exl-id: 772d96c5-9fa3-4fed-8b38-16b8e7101743
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '164'
-ht-degree: 4%
+ht-degree: 10%
 
 ---
 
-# [!UICONTROL Interazione web] tipo di dati
+# [!UICONTROL Interazione Web] tipo di dati
 
-[!UICONTROL Interazione web] è un tipo di dati Experience Data Model (XDM) standard che descrive le informazioni sulle interazioni che si sono verificate su una pagina web dopo il completamento del caricamento iniziale della pagina. È stato progettato per registrare le interazioni in applicazioni web avanzate che non attivano il caricamento di una nuova pagina, come le app web a pagina singola (SPA).
+[!UICONTROL Interazione Web] è un tipo di dati XDM (Experience Data Model) standard che descrive informazioni sulle interazioni eseguite in una pagina Web dopo il completamento del caricamento della pagina iniziale. È stato progettato per registrare le interazioni in applicazioni web avanzate che non attivano il caricamento di una nuova pagina, come le app web a pagina singola (SPA).
 
 <img src="../images/data-types/web-interaction.PNG" width="500" /><br />
 

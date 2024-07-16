@@ -15,21 +15,21 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Se non utilizzi Adobe Real-time Customer Data Platform B2B Edition, consulta [panoramica sulle origini](./sources-overview.md) invece.
+>Se non utilizzi Adobe Real-time Customer Data Platform B2B Edition, consulta invece la [panoramica delle origini](./sources-overview.md).
 
-Adobe Real-time Customer Data Platform B2B Edition consente di raccogliere i dati B2B tramite varie origini, tra cui [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md) connettore di origine, Salesforce, Amazon S3 e ADLS, tra gli altri. Questa gamma di origini consente di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi.
+Adobe Real-time Customer Data Platform B2B Edition consente di raccogliere i dati B2B tramite varie origini, tra cui il connettore di origine [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md), Salesforce, Amazon S3 e ADLS. Questa gamma di origini consente di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi.
 
-Per capire come le sorgenti entrano nel flusso di lavoro B2B, consulta [tutorial end-to-end](../b2b-tutorial.md#ingest-your-data-into-experience-platform).
+Per capire come le origini si adattano al flusso di lavoro B2B, consulta l&#39;[esercitazione end-to-end](../b2b-tutorial.md#ingest-your-data-into-experience-platform).
 
-Consulta la [panoramica dei connettori di origini](../../sources/home.md) per ulteriori informazioni sui tipi di origini disponibili in Adobe Experience Platform.
+Per ulteriori informazioni sui tipi di origini disponibili in Adobe Experience Platform, vedere la [panoramica dei connettori di origine](../../sources/home.md).
 
 >[!IMPORTANT]
 >
->Devi avere accesso a [Edizione B2B di Real-time Customer Data Platform](../../rctcdp/../rtcdp/b2b-overview.md) affinché gli schemi B2B possano partecipare [Profilo cliente in tempo reale](../proile/../../profile/home.md).
+>Devi avere accesso a [Real-time Customer Data Platform B2B Edition](../../rctcdp/../rtcdp/b2b-overview.md) per consentire agli schemi B2B di partecipare a [Real-Time Customer Profile](../proile/../../profile/home.md).
 
-I documenti seguenti forniscono ulteriori informazioni sull’utilizzo di [!DNL Marketo] per inserire dati B2B in Platform:
+I seguenti documenti forniscono ulteriori informazioni sull&#39;utilizzo di [!DNL Marketo] per portare dati B2B in Platform:
 
-* Per informazioni su come collegare [!DNL Marketo] su Platform, consulta l’esercitazione su [creazione di un connettore di origine Marketo nell’interfaccia utente](../../sources/tutorials/ui/create/adobe-applications/marketo.md).
-* Per informazioni sulla configurazione di base per gli spazi dei nomi e gli schemi B2B, consulta la documentazione di [Spazi dei nomi e schemi B2B](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
-* Per informazioni su come trovare [!DNL Marketo] ID Munchkin e generazione delle credenziali, vedi [[!DNL Marketo] guida all’autenticazione](../../sources/connectors/adobe-applications/marketo/marketo-auth.md).
-* Per informazioni sulle regole di mappatura specifiche applicabili a [!DNL Marketo] , consulta la documentazione su [[!DNL Marketo] mappature campi](../../sources/connectors/adobe-applications//mapping/marketo.md).
+* Per informazioni su come collegare i dati di [!DNL Marketo] a Platform, consulta l&#39;esercitazione su [creazione di un connettore di origine Marketo nell&#39;interfaccia utente](../../sources/tutorials/ui/create/adobe-applications/marketo.md).
+* Per informazioni sulla configurazione sottostante degli spazi dei nomi e degli schemi B2B, consulta la documentazione per [spazi dei nomi B2B e schemi](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
+* Per informazioni su come trovare l&#39;ID Munchkin [!DNL Marketo] e generare le credenziali, vedere la [[!DNL Marketo] guida all&#39;autenticazione](../../sources/connectors/adobe-applications/marketo/marketo-auth.md).
+* Per informazioni sulle regole di mappatura specifiche che si applicano ai set di dati [!DNL Marketo], consulta la documentazione sulle [[!DNL Marketo] mappature dei campi](../../sources/connectors/adobe-applications//mapping/marketo.md).

@@ -1,67 +1,67 @@
 ---
 title: Amministrazione account di attivazione espanso
 description: Scopri come eseguire attività amministrative sull’account Expanded Activation, ad esempio monitorare l’utilizzo delle licenze e assegnare le autorizzazioni corrette.
-source-git-commit: 5bc8d6c7173f221c2830a9b15c8ec6241e8bc59d
+exl-id: ee0ec4b9-a083-447b-b7a7-e1307e90c646
+source-git-commit: 2222e9fbf75f3082d331868f820247e0c0ce3ba2
 workflow-type: tm+mt
 source-wordcount: '402'
 ht-degree: 0%
 
 ---
 
-
 # Amministrazione account
 
-Per acquisire i tipi di pubblico da Audienci Manager e attivarli nelle destinazioni social e pubblicitarie, devi innanzitutto creare un account utente per l’attivazione espansa e assegnare l’account al ruolo di autorizzazione corretto.
+Per acquisire i tipi di pubblico da Audience Manager e attivarli nelle destinazioni social e pubblicitarie, devi innanzitutto creare un account utente per l’attivazione espansa e assegnare l’account al ruolo di autorizzazione corretto.
 
 Questa pagina spiega come creare un account utente nell’Admin Console e assegnare le autorizzazioni corrette per l’attivazione espansa.
 
 ## Creare account utente {#create-users}
 
-Prima di usare [!DNL Audience Manager Expanded Activation], è necessario creare un account utente.
+Prima di poter utilizzare [!DNL Audience Manager Expanded Activation], è necessario creare un account utente.
 
-Per creare un account utente per [!DNL Expanded Activation], seguire le istruzioni sulla gestione degli utenti da [Adobe Admin Console](https://helpx.adobe.com/it/enterprise/using/manage-users-individually.html) documentazione.
+Per creare un account utente per [!DNL Expanded Activation], seguire le istruzioni sulla gestione degli utenti riportate nella documentazione di [Adobe Admin Console](https://helpx.adobe.com/it/enterprise/using/manage-users-individually.html).
 
 ## Aggiungere utenti al ruolo di autorizzazione {#permissions}
 
-Dopo aver creato un account utente, devi aggiungerlo al [!DNL Expanded Activation] ruolo di autorizzazione, nella [!DNL Expanded Activation] dell&#39;utente.
+Dopo aver creato un account utente, è necessario aggiungerlo al ruolo di autorizzazione [!DNL Expanded Activation] nell&#39;interfaccia utente [!DNL Expanded Activation].
 
-Vai a **[!UICONTROL Amministrazione]** -> **[!UICONTROL Autorizzazioni]** -> **[!UICONTROL Ruoli]**, e seleziona la **[!UICONTROL Ruolo predefinito di attivazione espanso]**.
+Vai a **[!UICONTROL Amministrazione]** -> **[!UICONTROL Autorizzazioni]** -> **[!UICONTROL Ruoli]** e seleziona il **[!UICONTROL Ruolo predefinito di attivazione espanso]**.
 
-![Immagine espansa dell&#39;interfaccia utente di Activation con la pagina Ruoli.](assets/expanded-activation-role.png)
+![Immagine dell&#39;interfaccia utente di Attivazione espansa che mostra la pagina Ruoli.](assets/expanded-activation-role.png)
 
-Vai a **[!UICONTROL Utenti]** e seleziona **[!UICONTROL Aggiungi utenti]**.
+Vai alla scheda **[!UICONTROL Utenti]** e seleziona **[!UICONTROL Aggiungi utenti]**.
 
-![Immagine espansa dell&#39;interfaccia utente di Activation con la pagina Utenti.](assets/add-users.png)
+![Immagine dell&#39;interfaccia utente di Attivazione espansa che mostra la pagina Utenti.](assets/add-users.png)
 
-Seleziona il nuovo utente creato dall’elenco disponibile e fai clic su **[!UICONTROL Salva]**.
+Selezionare il nuovo utente creato dall&#39;elenco disponibile e selezionare **[!UICONTROL Salva]**.
 
-![Immagine espansa dell&#39;interfaccia utente di Activation con la pagina Aggiungi utenti.](assets/add-user.png)
+![Immagine dell&#39;interfaccia utente di Attivazione espansa che mostra la pagina Aggiungi utenti.](assets/add-user.png)
 
-L’account utente viene ora creato e assegnato al ruolo corretto. È ora possibile accedere al **[!UICONTROL Attivazione espansa]** dell&#39;utente.
+L’account utente viene ora creato e assegnato al ruolo corretto. È ora possibile accedere all&#39;interfaccia utente di **[!UICONTROL Expanded Activation]**.
 
 ## Monitorare l’utilizzo delle licenze {#license-usage}
 
-Il tuo [!DNL Audience Manager Expanded Activation] contratto specifica il numero massimo di e-mail con hash che è possibile acquisire nel tuo account.
+Il contratto [!DNL Audience Manager Expanded Activation] specifica il numero massimo di e-mail con hash che è possibile acquisire nel tuo account.
 
-Per trovare queste informazioni, vai al **[!UICONTROL Amministrazione]** -> **[!UICONTROL Utilizzo licenze]** pagina.
+Per trovare queste informazioni, vai alla pagina **[!UICONTROL Amministrazione]** -> **[!UICONTROL Utilizzo licenze]**.
 
-![Immagine espansa dell&#39;interfaccia utente di Activation che mostra la schermata di utilizzo della licenza.](assets/license-usage.png)
+![Immagine dell&#39;interfaccia utente di Attivazione espansa che mostra la schermata di utilizzo della licenza.](assets/license-usage.png)
 
 In questa pagina puoi trovare le seguenti informazioni:
 
-* **[!UICONTROL Prodotto]**: il prodotto di Adobe per il quale hai la licenza. Questo sarà sempre **[!UICONTROL Audience Manager di attivazione espansa]**.
-* **[!UICONTROL Metrica principale]**: nome della metrica tracciata per l’utilizzo. Questo sarà sempre **[!UICONTROL Pubblico di riferimento]**.
-* **[!UICONTROL Importo licenza]**: numero massimo di e-mail con hash che puoi acquisire con licenza.
+* **[!UICONTROL Prodotto]**: il prodotto di Adobe per il quale hai la licenza. Sarà sempre **[!UICONTROL Audience Manager di attivazione espansa]**.
+* **[!UICONTROL Metrica primaria]**: nome della metrica di cui si tiene traccia per l&#39;utilizzo. Questo sarà sempre **[!UICONTROL pubblico indirizzabile]**.
+* **[!UICONTROL Importo licenza]**: numero massimo di e-mail con hash che si è autorizzati ad acquisire.
 
   >[!TIP]
   >
-  >Le e-mail con hash vengono acquisite tramite [Connettore sorgente in Audience Manager](../sources/connectors/adobe-applications/audience-manager.md). Consulta la documentazione su [come attivare i tipi di pubblico](activate-audiences.md) per ulteriori dettagli.
+  >Le e-mail con hash vengono acquisite tramite il [connettore di origine Audience Manager](../sources/connectors/adobe-applications/audience-manager.md). Per ulteriori dettagli, consulta la documentazione su [come attivare i tipi di pubblico](activate-audiences.md).
 
-* **[!UICONTROL Utilizzo]**: numero di e-mail con hash che hai acquisito.
-* **[!UICONTROL % di utilizzo]**: la percentuale dell’importo della licenza utilizzata.
+* **[!UICONTROL Utilizzo]**: il numero di e-mail con hash che hai acquisito.
+* **[!UICONTROL Utilizzo %]**: la percentuale della quantità di licenza utilizzata.
 
-Per ulteriori informazioni sull’utilizzo delle licenze in Experienci Platform, consulta la sezione [documentazione sull’utilizzo delle licenze](../dashboards/guides/license-usage.md).
+Per ulteriori informazioni sull&#39;utilizzo delle licenze in Experience Platform, consulta la [documentazione sull&#39;utilizzo delle licenze](../dashboards/guides/license-usage.md).
 
 ## Passaggi successivi {#next-steps}
 
-Ora che hai configurato almeno un account utente con l’accesso corretto a Expanded Activation, puoi iniziare a utilizzarlo per: [attivare i tipi di pubblico](activate-audiences.md).
+Ora che hai configurato almeno un account utente con l&#39;accesso corretto a Expanded Activation (Attivazione espansa), puoi iniziare a utilizzare l&#39;account per [attivare tipi di pubblico](activate-audiences.md).

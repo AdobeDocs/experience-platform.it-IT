@@ -6,7 +6,7 @@ description: Questa esercitazione elenca i passaggi per eliminare una destinazio
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '413'
+source-wordcount: '411'
 ht-degree: 0%
 
 ---
@@ -19,27 +19,27 @@ Nell’interfaccia utente di Adobe Experience Platform, puoi eliminare le connes
 
 L’eliminazione di una destinazione rimuove tutti i flussi di dati esistenti in tale destinazione. Tutti i tipi di pubblico attivati nelle destinazioni eliminate vengono annullati prima dell’eliminazione del flusso di dati.
 
-Esistono due modi per eliminare le destinazioni dal [!DNL Platform] [!DNL UI]. Puoi eseguire le seguenti operazioni:
+Esistono due modi per eliminare le destinazioni da [!DNL Platform] [!DNL UI]. Puoi eseguire le seguenti operazioni:
 
-* [Eliminare le destinazioni dalla [!UICONTROL Sfoglia] scheda](#delete-browse-tab)
+* [Elimina destinazioni dalla scheda [!UICONTROL Sfoglia]](#delete-browse-tab)
 * [Eliminare le destinazioni dalla pagina dei dettagli della destinazione](#delete-destination-details-page)
 
 ## Eliminare le destinazioni dalla scheda Sfoglia{#delete-browse-tab}
 
-Per eliminare una destinazione dal menu, effettua le seguenti operazioni [!UICONTROL Sfoglia] scheda.
+Segui i passaggi seguenti per eliminare una destinazione dalla scheda [!UICONTROL Sfoglia].
 
-1. Accedi a [Interfaccia utente Experienci Platform](https://platform.adobe.com/) e seleziona **[!UICONTROL Destinazioni]** dalla barra di navigazione a sinistra. Per visualizzare le destinazioni esistenti, seleziona **[!UICONTROL Sfoglia]** dall’intestazione in alto.
+1. Accedi a [interfaccia utente Experience Platform](https://platform.adobe.com/) e seleziona **[!UICONTROL Destinazioni]** dalla barra di navigazione a sinistra. Per visualizzare le destinazioni esistenti, seleziona **[!UICONTROL Sfoglia]** dall&#39;intestazione superiore.
 
    ![Sfoglia destinazioni](../assets/ui/delete-destinations/browse-destinations.png)
 
-2. Seleziona l’icona del filtro ![Icona filtro](../assets/ui/delete-destinations/filter.png) in alto a sinistra per avviare il pannello ordina. Il pannello Ordinamento fornisce un elenco di tutte le destinazioni. Puoi selezionare più di una destinazione dall’elenco per visualizzare una selezione filtrata di flussi di dati associati alla destinazione selezionata.
+2. Seleziona l&#39;icona del filtro ![Icona filtro](../assets/ui/delete-destinations/filter.png) in alto a sinistra per avviare il pannello di ordinamento. Il pannello Ordinamento fornisce un elenco di tutte le destinazioni. Puoi selezionare più di una destinazione dall’elenco per visualizzare una selezione filtrata di flussi di dati associati alla destinazione selezionata.
 
    ![Filtra destinazioni](../assets/ui/delete-destinations/filter-destinations.png)
 
-3. Seleziona la ![Pulsante Altro](../assets/ui/delete-destinations/more-icon.png) nella colonna Nome, quindi selezionare ![Pulsante Elimina](../assets/ui/delete-destinations/delete-icon.png) **[!UICONTROL Elimina]** per rimuovere una connessione di destinazione esistente.
+3. Selezionare il pulsante ![Altro pulsante](../assets/ui/delete-destinations/more-icon.png) nella colonna Nome, quindi selezionare ![Elimina pulsante](../assets/ui/delete-destinations/delete-icon.png) **[!UICONTROL Elimina]** per rimuovere una connessione di destinazione esistente.
    ![Elimina destinazioni](../assets/ui/delete-destinations/delete-destinations.png)
 
-4. Seleziona **[!UICONTROL Elimina]** per confermare la rimozione della connessione di destinazione.
+4. Selezionare **[!UICONTROL Elimina]** per confermare la rimozione della connessione di destinazione.
 
    ![Conferma eliminazione destinazione](../assets/ui/delete-destinations/delete-destinations-confirm.png)
 
@@ -47,11 +47,11 @@ Per eliminare una destinazione dal menu, effettua le seguenti operazioni [!UICON
 
 Per eliminare una destinazione dalla pagina dei dettagli della destinazione, segui la procedura riportata di seguito.
 
-1. Accedi a [Interfaccia utente Experienci Platform](https://platform.adobe.com/) e seleziona **[!UICONTROL Destinazioni]** dalla barra di navigazione a sinistra. Per visualizzare le destinazioni esistenti, seleziona **[!UICONTROL Sfoglia]** dall’intestazione in alto.
+1. Accedi a [interfaccia utente Experience Platform](https://platform.adobe.com/) e seleziona **[!UICONTROL Destinazioni]** dalla barra di navigazione a sinistra. Per visualizzare le destinazioni esistenti, seleziona **[!UICONTROL Sfoglia]** dall&#39;intestazione superiore.
 
    ![Sfoglia destinazioni](../assets/ui/delete-destinations/browse-destinations.png)
 
-2. Seleziona l’icona del filtro ![Icona filtro](../assets/ui/delete-destinations/filter.png) in alto a sinistra per avviare il pannello ordina. Il pannello Ordinamento fornisce un elenco di tutte le destinazioni. Puoi selezionare più di una destinazione dall’elenco per visualizzare una selezione filtrata di flussi di dati associati alla destinazione selezionata.
+2. Seleziona l&#39;icona del filtro ![Icona filtro](../assets/ui/delete-destinations/filter.png) in alto a sinistra per avviare il pannello di ordinamento. Il pannello Ordinamento fornisce un elenco di tutte le destinazioni. Puoi selezionare più di una destinazione dall’elenco per visualizzare una selezione filtrata di flussi di dati associati alla destinazione selezionata.
 
    ![Filtra destinazioni](../assets/ui/delete-destinations/filter-destinations.png)
 
@@ -59,13 +59,13 @@ Per eliminare una destinazione dalla pagina dei dettagli della destinazione, seg
 
    ![Seleziona destinazione](../assets/ui/delete-destinations/delete-destination-select.png)
 
-   * Se la destinazione dispone di flussi di dati esistenti, viene visualizzato il [!UICONTROL Il flusso di dati viene eseguito] scheda.
+   * Se la destinazione dispone di flussi di dati esistenti, viene visualizzata la scheda [!UICONTROL Esecuzioni flusso di dati].
 
-     ![Scheda Esecuzioni flusso di dati](../assets/ui/delete-destinations/destination-details-dataflows.png)
+     ![Il flusso di dati esegue la scheda](../assets/ui/delete-destinations/destination-details-dataflows.png)
 
    * Se la destinazione non dispone di flussi di dati esistenti, viene visualizzata una pagina vuota in cui puoi iniziare ad attivare i tipi di pubblico.
 
-     ![Dettagli della destinazione](../assets/ui/delete-destinations/destination-details-empty.png)
+     ![Dettagli destinazione](../assets/ui/delete-destinations/destination-details-empty.png)
 
 4. Seleziona **[!UICONTROL Elimina]** nella barra a destra.
 
@@ -73,8 +73,8 @@ Per eliminare una destinazione dalla pagina dei dettagli della destinazione, seg
 
 5. Seleziona **[!UICONTROL Elimina]** nella finestra di dialogo di conferma per rimuovere la destinazione.
 
-   ![Conferma eliminazione destinazione](..//assets/ui/delete-destinations/delete-destinations-delete.png)
+   ![Elimina conferma destinazione](..//assets/ui/delete-destinations/delete-destinations-delete.png)
 
    >[!NOTE]
    >
-   >A seconda del carico del server, potrebbero essere necessari alcuni minuti per [!DNL Platform] per eliminare la destinazione.
+   >A seconda del carico del server, l&#39;eliminazione della destinazione può richiedere alcuni minuti per [!DNL Platform].

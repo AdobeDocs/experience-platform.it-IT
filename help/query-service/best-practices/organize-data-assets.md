@@ -13,17 +13,17 @@ ht-degree: 0%
 
 Questo documento fornisce indicazioni sulle best practice per organizzare le risorse dati, tra cui set di dati, viste e tabelle temporanee da utilizzare con Adobe Experience Platform Query Service. Vengono inoltre fornite informazioni su come strutturare i dati e su come accedere, aggiornare ed eliminare tali informazioni.
 
-È importante organizzare in modo logico le risorse dati all’interno di Platform [!DNL Data Lake] mentre crescono. Query Service estende i costrutti SQL che consentono di raggruppare in modo logico le risorse di dati all’interno di una sandbox. Questo metodo di organizzazione consente la condivisione di risorse di dati tra schemi senza la necessità di spostarli fisicamente.
+È importante organizzare in modo logico le risorse dati in Platform [!DNL Data Lake] man mano che aumentano. Query Service estende i costrutti SQL che consentono di raggruppare in modo logico le risorse di dati all’interno di una sandbox. Questo metodo di organizzazione consente la condivisione di risorse di dati tra schemi senza la necessità di spostarli fisicamente.
 
 ## Introduzione
 
-Prima di continuare con questo documento, è necessario avere una buona conoscenza di [Servizio query](../home.md) e aver letto il [guida all’interfaccia utente](../ui/user-guide.md).
+Prima di continuare con questo documento, è necessario avere una buona conoscenza delle funzionalità di [Query Service](../home.md) e aver letto la [guida all&#39;interfaccia utente](../ui/user-guide.md).
 
 ## Organizzazione dei dati in Query Service
 
 Negli esempi seguenti vengono illustrati i costrutti disponibili tramite Adobe Experience Platform Query Service per organizzare in modo logico i dati utilizzando la sintassi SQL standard. È innanzitutto necessario creare un database che funga da contenitore per i punti dati. Un database può contenere uno o più schemi e ogni schema può quindi avere uno o più riferimenti a una risorsa dati (set di dati, viste, tabelle temporanee, ecc.). Tali riferimenti includono eventuali relazioni o associazioni tra i set di dati.
 
-Consulta la [Guida utente di Query Editor](../ui/user-guide.md) per istruzioni dettagliate su come utilizzare l’interfaccia utente di Query Service per creare query SQL.
+Per istruzioni dettagliate su come utilizzare l&#39;interfaccia utente di Query Service per creare query SQL, vedere la [guida utente di Query Editor](../ui/user-guide.md).
 
 Sono supportati i seguenti costrutti SQL per organizzare in modo logico i set di dati in una sandbox.
 
@@ -36,13 +36,13 @@ ALTER TABLE t1 ADD PRIMARY KEY (c1) NOT ENFORCED;
 ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
 ```
 
-L’esempio (leggermente troncato per brevità) illustra questa metodologia dove `databaseA` contiene schema `schema1`.
+L&#39;esempio (leggermente troncato per brevità) illustra questa metodologia in cui `databaseA` contiene lo schema `schema1`.
 
 ## Associazione di risorse di dati a uno schema
 
 Una volta creato uno schema che funge da contenitore per le risorse di dati, ogni set di dati può essere associato a uno o più schemi nel database utilizzando la sintassi standard SQL ALTER TABLE.
 
-L’esempio seguente aggiunge `dataset1`, `dataset2`, `dataset3` e `v1` al `databaseA.schema1` contenitore creato nell’esempio precedente.
+Nell&#39;esempio seguente vengono aggiunti `dataset1`, `dataset2`, `dataset3` e `v1` al contenitore `databaseA.schema1` creato nell&#39;esempio precedente.
 
 ```SQL
 ALTER TABLE dataset1 ADD SCHEMA databaseA.schema1;
@@ -56,11 +56,11 @@ ALTER VIEW v1  ADD SCHEMA databaseA.schema1;
 
 ## Accesso alle risorse di dati dal contenitore dati
 
-Qualificando in modo appropriato il nome del database, qualsiasi [!DNL PostgreSQL] Il client può connettersi a qualsiasi struttura di dati creata utilizzando la parola chiave SHOW. Per ulteriori informazioni sulla parola chiave SHOW, vedere [MOSTRA sezione nella documentazione della sintassi SQL](../sql/syntax.md#show).
+Qualificando in modo appropriato il nome del database, qualsiasi client [!DNL PostgreSQL] può connettersi a qualsiasi struttura di dati creata utilizzando la parola chiave SHOW. Per ulteriori informazioni sulla parola chiave SHOW, vedere la sezione [SHOW nella documentazione relativa alla sintassi SQL](../sql/syntax.md#show).
 
-&quot;all&quot; è il nome predefinito del database che contiene ogni database e contenitore di schema in una sandbox. Quando si crea un [!DNL PostgreSQL] connessione tramite `dbname="all"`, puoi accedere a **qualsiasi** database e schema creati per organizzare i dati in modo logico.
+&quot;all&quot; è il nome predefinito del database che contiene ogni database e contenitore di schema in una sandbox. Quando si crea una connessione [!DNL PostgreSQL] utilizzando `dbname="all"`, è possibile accedere al database e allo schema **any** creati per organizzare i dati in modo logico.
 
-Elenco di tutti i database in `dbname="all"` visualizza tre database disponibili.
+L&#39;elenco di tutti i database in `dbname="all"` mostra tre database disponibili.
 
 ```sql
 SHOW DATABASES;
@@ -72,7 +72,7 @@ databaseB
 databaseC
 ```
 
-Elenco di tutti gli schemi in `dbname="all"` visualizza i tre schemi correlati a ogni database nella sandbox.
+L&#39;elenco di tutti gli schemi in `dbname="all"` mostra i tre schemi correlati a ogni database nella sandbox.
 
 ```SQL
 SHOW SCHEMAS;
@@ -84,7 +84,7 @@ databaseA      | schema2
 databaseB      | schema3
 ```
 
-Quando si crea un [!DNL PostgreSQL] connessione tramite `dbname="databaseA"`, è possibile accedere a qualsiasi schema associato a quel database specifico, come illustrato nell’esempio seguente.
+Quando si crea una connessione [!DNL PostgreSQL] utilizzando `dbname="databaseA"`, è possibile accedere a qualsiasi schema associato a tale database specifico, come illustrato nell&#39;esempio seguente.
 
 ```sql
 SHOW DATABASES;
@@ -102,7 +102,7 @@ databaseA      | schema1
 databaseA      | schema2
 ```
 
-La notazione del punto consente di accedere a ogni tabella associata a uno schema specifico connesso al database scelto. Tramite connessione a `DBNAME = databaseA.schema1;`, tutte le tabelle associate a tale schema specifico (`schema1`). Fornisce informazioni su quale set di dati contiene quale tabella.
+La notazione del punto consente di accedere a ogni tabella associata a uno schema specifico connesso al database scelto. Tramite la connessione a `DBNAME = databaseA.schema1;`, vengono visualizzate tutte le tabelle associate allo schema specifico (`schema1`). Fornisce informazioni su quale set di dati contiene quale tabella.
 
 ```sql
 SHOW DATABASES;
@@ -129,7 +129,7 @@ dataset3| table
 
 ## Aggiornare o rimuovere risorse di dati da un contenitore di dati
 
-Man mano che la quantità di risorse di dati nell’organizzazione (o nella sandbox) aumenta, diventa necessario aggiornare o rimuovere le risorse di dati da un contenitore di dati. Le singole risorse possono essere rimosse dal contenitore organizzazione facendo riferimento al nome del database e dello schema appropriato utilizzando la notazione del punto. Tabella e vista (`t1` e `v1` rispettivamente) aggiunto a `databaseA.schema1` nel primo esempio, vengono rimossi utilizzando la sintassi dell&#39;esempio seguente.
+Man mano che la quantità di risorse di dati nell’organizzazione (o nella sandbox) aumenta, diventa necessario aggiornare o rimuovere le risorse di dati da un contenitore di dati. Le singole risorse possono essere rimosse dal contenitore organizzazione facendo riferimento al nome del database e dello schema appropriato utilizzando la notazione del punto. La tabella e la visualizzazione (`t1` e `v1` rispettivamente) aggiunte a `databaseA.schema1` nel primo esempio vengono rimosse utilizzando la sintassi nell&#39;esempio seguente.
 
 ```sql
 ALTER TABLE databaseA.schema2.t1 REMOVE SCHEMA databaseA.schema2;
@@ -138,7 +138,7 @@ ALTER VIEW databaseA.schema2.v1 REMOVE SCHEMA databaseA.schema2;
 
 ### Rimuovere risorse di dati
 
-Il [RILASCIA TABELLA](../sql/syntax.md#drop-table) rimuove fisicamente una risorsa di dati solo dal [!DNL Data Lake] quando esiste un singolo riferimento alla tabella in tutti i database dell’organizzazione.
+La funzione [DROP TABLE](../sql/syntax.md#drop-table) rimuove fisicamente una risorsa dati da [!DNL Data Lake] solo quando esiste un singolo riferimento alla tabella in tutti i database dell&#39;organizzazione.
 
 ```sql
 DROP TABLE databaseA.schema2.t1;
@@ -170,4 +170,4 @@ DROP SCHEMA databaseA.schema2;
 
 ## Passaggi successivi
 
-La lettura di questo documento consente di comprendere meglio le best practice relative all’organizzazione e alla struttura delle risorse dati da utilizzare con Adobe Experience Platform Query Service. Si consiglia di continuare ad acquisire familiarità con le best practice di Query Service consultando [documentazione sulla deduplicazione dei dati](../key-concepts/deduplication.md).
+La lettura di questo documento consente di comprendere meglio le best practice relative all’organizzazione e alla struttura delle risorse dati da utilizzare con Adobe Experience Platform Query Service. Si consiglia di continuare a conoscere le best practice di Query Service consultando la [documentazione sulla deduplicazione dei dati](../key-concepts/deduplication.md).

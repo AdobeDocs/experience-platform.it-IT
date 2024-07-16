@@ -11,13 +11,13 @@ ht-degree: 3%
 
 # Configurazione dei metadati del pubblico
 
-Durante l’esportazione dei dati da Experienci Platform alla destinazione, per poter condividere tra Experienci Platform e la destinazione potrebbero essere necessari metadati di pubblico specifici, come nomi di pubblico o ID di pubblico.
+Durante l’esportazione dei dati da Experience Platform alla destinazione, per poter condividere tra Experience Platform e la destinazione potrebbero essere necessari metadati di pubblico specifici, come nomi di pubblico o ID di pubblico.
 
 Destination SDK offre strumenti che puoi utilizzare per creare, aggiornare o eliminare in modo programmatico i tipi di pubblico nella piattaforma di destinazione.
 
-Per capire dove questo componente si inserisce in un’integrazione creata con Destination SDK, consulta il diagramma riportato di seguito. [opzioni di configurazione](../configuration-options.md) o consulta la guida su come [utilizzare Destination SDK per configurare una destinazione di streaming](../../guides/configure-destination-instructions.md#create-destination-configuration).
+Per capire dove questo componente si inserisce in un&#39;integrazione creata con Destination SDK, consulta il diagramma nella documentazione delle [opzioni di configurazione](../configuration-options.md) oppure consulta la guida su come [utilizzare Destination SDK per configurare una destinazione di streaming](../../guides/configure-destination-instructions.md#create-destination-configuration).
 
-Puoi configurare il modello di metadati del pubblico tramite `/authoring/audience-templates` endpoint. Dopo aver creato la configurazione dei metadati del pubblico, puoi utilizzare `/authoring/destinations` endpoint per configurare `audienceMetadataConfig` sezione. Questa sezione indica alla destinazione quali metadati di pubblico deve mappare sul modello di pubblico.
+Puoi configurare il modello di metadati del pubblico tramite l&#39;endpoint `/authoring/audience-templates`. Dopo aver creato la configurazione dei metadati del pubblico, puoi utilizzare l&#39;endpoint `/authoring/destinations` per configurare la sezione `audienceMetadataConfig`. Questa sezione indica alla destinazione quali metadati di pubblico deve mappare sul modello di pubblico.
 
 Consulta le seguenti pagine di riferimento API per esempi dettagliati di chiamate API, in cui puoi configurare i componenti mostrati in questa pagina.
 
@@ -28,7 +28,7 @@ Consulta le seguenti pagine di riferimento API per esempi dettagliati di chiamat
 
 >[!IMPORTANT]
 >
->Tutti i nomi e i valori dei parametri supportati da Destination SDK sono **distinzione maiuscole/minuscole**. Per evitare errori di distinzione tra maiuscole e minuscole, utilizza i nomi e i valori dei parametri esattamente come mostrato nella documentazione.
+>Tutti i nomi e i valori dei parametri supportati da Destination SDK sono **con distinzione tra maiuscole e minuscole**. Per evitare errori di distinzione tra maiuscole e minuscole, utilizza i nomi e i valori dei parametri esattamente come mostrato nella documentazione.
 
 ## Tipi di integrazione supportati {#supported-integration-types}
 
@@ -54,10 +54,10 @@ Quando crei la configurazione dei metadati del pubblico, puoi utilizzare i param
 
 | Parametro | Tipo | Descrizione |
 |---------|----------|------|
-| `mapExperiencePlatformSegmentName` | Booleano | Indica se [[!UICONTROL ID mappatura]](../../../ui/activate-segment-streaming-destinations.md#scheduling) il valore nel flusso di lavoro di attivazione della destinazione deve essere il nome del pubblico Experience Platform. |
-| `mapExperiencePlatformSegmentId` | Booleano | Indica se [[!UICONTROL ID mappatura]](../../../ui/activate-segment-streaming-destinations.md#scheduling) il valore nel flusso di lavoro di attivazione della destinazione deve essere l’ID del pubblico Experience Platform. |
-| `mapUserInput` | Booleano | Attiva o disattiva l&#39;input dell&#39;utente per [[!UICONTROL ID mappatura]](../../../ui/activate-segment-streaming-destinations.md#scheduling) nel flusso di lavoro di attivazione della destinazione. Se impostato su `true`, `audienceTemplateId` non può essere presente. |
-| `audienceTemplateId` | Stringa | Il `instanceId` del [modello metadati pubblico](../../metadata-api/create-audience-template.md) utilizzato per la tua destinazione. |
+| `mapExperiencePlatformSegmentName` | Booleano | Indica se il valore [[!UICONTROL ID mappatura]](../../../ui/activate-segment-streaming-destinations.md#scheduling) nel flusso di lavoro di attivazione della destinazione deve essere il nome del pubblico Experience Platform. |
+| `mapExperiencePlatformSegmentId` | Booleano | Indica se il valore [[!UICONTROL ID mappatura]](../../../ui/activate-segment-streaming-destinations.md#scheduling) nel flusso di lavoro di attivazione della destinazione deve essere l&#39;ID del pubblico Experience Platform. |
+| `mapUserInput` | Booleano | Attiva o disattiva l&#39;input dell&#39;utente per il valore [[!UICONTROL ID mappatura]](../../../ui/activate-segment-streaming-destinations.md#scheduling) nel flusso di lavoro di attivazione della destinazione. Se impostato su `true`, `audienceTemplateId` non può essere presente. |
+| `audienceTemplateId` | Stringa | `instanceId` del [modello di metadati del pubblico](../../metadata-api/create-audience-template.md) utilizzato per la destinazione. |
 
 {style="table-layout:auto"}
 

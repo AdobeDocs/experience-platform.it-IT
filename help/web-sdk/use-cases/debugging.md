@@ -16,9 +16,9 @@ Quando il debug è abilitato, Web SDK invia messaggi alla console del browser ch
 
 Il debug è disattivato per impostazione predefinita, ma può essere attivato in quattro modi diversi. È possibile utilizzare qualsiasi combinazione di questi metodi per abilitare o disabilitare il debug più adatto al flusso di lavoro di sviluppo.
 
-## Utilizzare `debugEnabled` nel `configure` comando
+## Usa `debugEnabled` nel comando `configure`
 
-Imposta il `debugEnabled` da booleano a true durante la configurazione dell’estensione. Questa opzione viene in genere utilizzata per gli ambienti di sviluppo, in quanto consente il debug per tutti coloro che visitano qualsiasi pagina del sito:
+Imposta il valore booleano `debugEnabled` su true durante la configurazione dell&#39;estensione. Questa opzione viene in genere utilizzata per gli ambienti di sviluppo, in quanto consente il debug per tutti coloro che visitano qualsiasi pagina del sito:
 
 ```js
 alloy("configure", {
@@ -28,9 +28,9 @@ alloy("configure", {
 });
 ```
 
-Consulta [`debugEnabled`](../commands/configure/debugenabled.md) per ulteriori informazioni.
+Per ulteriori informazioni, vedere [`debugEnabled`](../commands/configure/debugenabled.md).
 
-## Utilizza il `setDebug` comando
+## Usa il comando `setDebug`
 
 Analogamente al valore booleano riportato sopra, questo comando abilita il debug per tutti i visitatori della pagina.
 
@@ -38,7 +38,7 @@ Analogamente al valore booleano riportato sopra, questo comando abilita il debug
 alloy("setDebug", {"enabled": true});
 ```
 
-Consulta la [`setDebug`](../commands/setdebug.md) per ulteriori informazioni.
+Per ulteriori informazioni, vedere il comando [`setDebug`](../commands/setdebug.md).
 
 ## Imposta un parametro di stringa query
 
@@ -54,4 +54,4 @@ L’Adobe Experience Platform Debugger è un potente strumento che esamina le pa
 
 ![Abilita debugger](../assets/enable-debugging.png)
 
-Consulta [Panoramica Adobe Experience Platform Debugger](/help/debugger/home.md) per ulteriori informazioni.
+Per ulteriori informazioni, vedere [Panoramica Adobe Experience Platform Debugger](/help/debugger/home.md).

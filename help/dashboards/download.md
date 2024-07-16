@@ -23,31 +23,31 @@ Questo documento fornisce un riepilogo su come scaricare i dashboard utilizzando
 
 ## Scarica dashboard
 
-Per iniziare a scaricare un dashboard, passa al dashboard che desideri scaricare (ad esempio, il [!UICONTROL Profili] e quindi selezionare il menu altre opzioni (**`...`**) dall&#39;angolo in alto a destra del dashboard. Quindi, seleziona **[!UICONTROL Scarica]**.
+Per iniziare a scaricare un dashboard, passare al dashboard che si desidera scaricare, ad esempio il dashboard [!UICONTROL Profili], quindi selezionare il menu altre opzioni (**`...`**) dall&#39;angolo superiore destro del dashboard. Selezionare **[!UICONTROL Scarica]**.
 
-![Il dashboard Profili di Experience Platform con i puntini di sospensione e il menu a discesa Scarica evidenziati.](images/download/download-button.png)
+![Dashboard dei profili di Experience Platform con i puntini di sospensione e il menu a discesa Scarica evidenziati.](images/download/download-button.png)
 
 ## Anteprima PDF
 
-Dopo aver selezionato **[!UICONTROL Scarica]**, viene visualizzato il menu di stampa predefinito del browser. In questo esempio viene visualizzato il menu di stampa di Google Chrome.
+Dopo aver selezionato **[!UICONTROL Scarica]**, viene aperto il menu di stampa predefinito del browser. In questo esempio viene visualizzato il menu di stampa di Google Chrome.
 
 Il menu di stampa consente di visualizzare in anteprima il PDF che verrà salvato. Il PDF è una rappresentazione fedele dei widget del dashboard visualizzati nell’interfaccia utente di Platform e le dimensioni del PDF vengono regolate automaticamente in modo da visualizzare tutti i widget del dashboard attualmente visibili in una singola pagina.
 
-![La panoramica Profilo viene visualizzata in un formato a pagina singola con il pannello Opzioni di stampa a destra.](images/download/download-chrome-print.png)
+![La panoramica del profilo viene visualizzata in un formato a pagina singola con il pannello Opzioni di stampa a destra.](images/download/download-chrome-print.png)
 
 Il PDF include un’intestazione generata automaticamente contenente il logo dell’Experience Platform, il nome della dashboard, il nome dell’utente e la data e l’ora in cui la dashboard è stata scaricata. Queste informazioni sono di sola lettura e non possono essere modificate in PDF.
 
-![Primo piano dell&#39;anteprima di stampa con l&#39;intestazione generata automaticamente evidenziata.](images/download/download-pdf.png)
+![Chiusura dell&#39;anteprima di stampa con l&#39;intestazione generata automaticamente evidenziata.](images/download/download-pdf.png)
 
 ## Salva come PDF
 
-Dopo aver visualizzato l’anteprima del PDF, seleziona **Salva** per scegliere la posizione in cui salvare il PDF.
+Dopo aver visualizzato l&#39;anteprima del PDF, seleziona **Salva** per scegliere il percorso in cui salvare il PDF.
 
 >[!NOTE]
 >
->Se necessario, è possibile utilizzare **Destinazione** menu a discesa per selezionare **Salva come PDF** se questa opzione non viene selezionata automaticamente.
+>Se necessario, puoi utilizzare il menu a discesa **Destinazione** per selezionare **Salva come PDF** se tale opzione non è selezionata automaticamente.
 
-![La panoramica Profilo viene visualizzata in un formato a pagina singola con l’opzione Salva come PDF del menu a discesa Destinazione evidenziata.](images/download/download-chrome-print-destination.png)
+![La panoramica del profilo viene visualizzata in un formato a pagina singola con l&#39;opzione di stampa Salva come PDF nel menu a discesa Destinazione evidenziata.](images/download/download-chrome-print-destination.png)
 
 ## Personalizzare i PDF del dashboard
 
@@ -55,13 +55,13 @@ Il PDF generato corrisponde al dashboard che è possibile visualizzare nell’in
 
 Ad esempio, puoi modificare l’aspetto del dashboard dei profili in modo da includere diversi widget a larghezza intera sovrapposti a tre widget standard.
 
-![Viene visualizzato il dashboard Profilo che mostra i widget allungati.](images/download/download-modify.png)
+![Viene visualizzato il dashboard dei profili che mostra widget allungati.](images/download/download-modify.png)
 
 Selezionando per scaricare il dashboard aggiornato si ottiene una nuova anteprima PDF che corrisponde all’aspetto del dashboard dei profili personalizzati. Inoltre, regola automaticamente le dimensioni del PDF per garantire che tutti i widget visibili siano inclusi in un PDF di una pagina.
 
-![La panoramica Profilo viene visualizzata in un formato a pagina singola con il pannello Opzioni di stampa a destra.](images/download/download-chrome-print-modified.png)
+![La panoramica del profilo viene visualizzata in un formato a pagina singola con il pannello Opzioni di stampa a destra.](images/download/download-chrome-print-modified.png)
 
-Per ulteriori informazioni sulla personalizzazione delle dashboard, leggi [panoramica sulla personalizzazione della dashboard](customize/overview.md).
+Per ulteriori informazioni sulla personalizzazione delle dashboard, leggere la [panoramica sulla personalizzazione delle dashboard](customize/overview.md).
 
 ## Passaggi successivi
 

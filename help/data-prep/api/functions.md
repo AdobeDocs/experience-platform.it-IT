@@ -5,18 +5,18 @@ description: Puoi utilizzare l’endpoint "/functions" nell’API della preparaz
 exl-id: dc24bfb4-2d96-4757-a610-0c2ee960d41d
 source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '209'
+source-wordcount: '213'
 ht-degree: 5%
 
 ---
 
 # Endpoint funzioni
 
-Le funzioni di mappatura consentono di trasformare i dati tra gli schemi di origine e di destinazione. È possibile utilizzare `/languages/el` endpoint per convalidare le espressioni e ottenere un elenco di tutte le funzioni del set di mappatura disponibili.
+Le funzioni di mappatura consentono di trasformare i dati tra gli schemi di origine e di destinazione. È possibile utilizzare l&#39;endpoint `/languages/el` per convalidare le espressioni e ottenere un elenco di tutte le funzioni del set di mappatura disponibili.
 
 ## Convalidare espressioni
 
-Per verificare se l’espressione corrente è valida, effettua una richiesta POST al `/languages/el/validate` endpoint.
+Per verificare se l&#39;espressione corrente è valida, eseguire una richiesta POST all&#39;endpoint `/languages/el/validate`.
 
 **Formato API**
 
@@ -52,7 +52,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con lo stat
 
 ## Elencare le funzioni del set di mappatura
 
-Per recuperare un elenco di tutte le funzioni del set di mappatura disponibili, devi effettuare una richiesta GET al `/languages/el/functions` endpoint.
+Per recuperare un elenco di tutte le funzioni del set di mappatura disponibili, eseguire una richiesta GET all&#39;endpoint `/languages/el/functions`.
 
 **Formato API**
 
@@ -117,7 +117,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elen
 
 ## Elenca gli operatori del set di mappatura
 
-Per recuperare un elenco di tutti gli operatori del set di mappatura disponibili, devi effettuare una richiesta GET al `/languages/el/operators` endpoint.
+È possibile recuperare un elenco di tutti gli operatori del set di mappatura disponibili effettuando una richiesta GET all&#39;endpoint `/languages/el/operators`.
 
 **Formato API**
 

@@ -209,7 +209,7 @@ Assegna un nome all’elemento dati `partnerData`, lascia il valore [!UICONTROL 
 
 Per impostare il secondo elemento dati, assegna un nome alla nuova variabile `pageVisit`, imposta l’**[!UICONTROL estensione]** su **[!UICONTROL Adobe Experience Platform]** e scegli **[!UICONTROL Oggetto XDM]** come tipo di dati.
 
-![Sono state evidenziate le selezioni per configurare correttamente l’elemento dati pageVisit.](/help/rtcdp/assets/partner-data/onsite-personalization/page-visit-data-element.png)
+![Selezioni evidenziate per configurare correttamente l&#39;elemento dati pageVisit.](/help/rtcdp/assets/partner-data/onsite-personalization/page-visit-data-element.png)
 
 Dallo schema, seleziona gli attributi di terze parti corrispondenti ai valori previsti per il partner di dati. Quindi, seleziona il pulsante di opzione con titolo **[!UICONTROL Fornisci l’intero oggetto]**. Seleziona l’icona che assomiglia a un database e scegli l’elemento dati `partnerData` creato in precedenza.
 
@@ -259,11 +259,11 @@ Ora puoi creare e attivare tipi di pubblico per la personalizzazione.
 
 #### Creare un pubblico e impostare la segmentazione Edge
 
-Nell’interfaccia utente di Platform, passa a **[!UICONTROL Cliente]** > **[!UICONTROL Tipi di pubblico]** e crea un pubblico per acquisire i visitatori del tuo sito web.
+Nell&#39;interfaccia utente di Platform, passa a **[!UICONTROL Cliente]** > **[!UICONTROL Tipi di pubblico]** e crea un pubblico per acquisire i visitatori del tuo sito Web.
 
-![Visualizzazione della modalità di accesso ai tipi di pubblico.](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
+![Visualizzazione di come accedere ai tipi di pubblico.](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
 
-È necessario configurare il pubblico con [segmentazione Edge](/help/segmentation/ui/edge-segmentation.md) in questo modo l’appartenenza del pubblico dei visitatori viene valutata in tempo reale, quando visitano la tua proprietà web.
+Devi impostare il pubblico con [segmentazione Edge](/help/segmentation/ui/edge-segmentation.md) in modo che l&#39;appartenenza del pubblico dei visitatori venga valutata in tempo reale, quando visitano la tua proprietà Web.
 
 Assicurati anche di impostare un [criterio di unione attivo su Edge](/help/destinations/ui/activate-edge-personalization-destinations.md#create-merge-policy) per i tipi di pubblico Edge.
 

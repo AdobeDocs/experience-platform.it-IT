@@ -18,9 +18,9 @@ ht-degree: 2%
 >
 >Se viene passato un token utente, l’utente del token deve avere un ruolo &quot;amministratore organizzazione&quot; per l’organizzazione richiesta.
 
-Per elencare i nomi di tutte le autorizzazioni e di tutti i tipi di risorse, devi effettuare una richiesta GET al `/acl/reference` endpoint. Questi nomi possono quindi essere utilizzati nelle chiamate API a [visualizzare criteri di controllo dell&#39;accesso effettivi](./effective-policies.md) per l&#39;utente corrente.
+È possibile elencare i nomi di tutte le autorizzazioni e i tipi di risorse effettuando una richiesta GET all&#39;endpoint `/acl/reference`. Questi nomi possono quindi essere utilizzati nelle chiamate API per [visualizzare i criteri di controllo di accesso effettivi](./effective-policies.md) per l&#39;utente corrente.
 
-Un’autorizzazione è un criterio gestito tramite Adobe Admin Console e mappato a zero o più criteri di tipo risorsa. Un tipo di risorsa è un criterio che abilita le funzionalità di lettura, scrittura e/o eliminazione per un tipo specifico di [!DNL Platform] risorse (come set di dati o schemi).
+Un’autorizzazione è un criterio gestito tramite Adobe Admin Console e mappato a zero o più criteri di tipo risorsa. Un tipo di risorsa è un criterio che abilita le funzionalità di lettura, scrittura e/o eliminazione per un tipo specifico di risorsa [!DNL Platform] (ad esempio set di dati o schemi).
 
 **Formato API**
 
@@ -40,7 +40,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un `permissions` oggetto e un `resource-types` oggetto, ciascuno contenente un elenco completo di nomi rispettivamente per le autorizzazioni di accesso o per i tipi di risorse.
+In caso di esito positivo, la risposta restituisce un oggetto `permissions` e un oggetto `resource-types`, ciascuno contenente rispettivamente un elenco completo di nomi per le autorizzazioni di accesso o i tipi di risorse.
 
 ```json
 {

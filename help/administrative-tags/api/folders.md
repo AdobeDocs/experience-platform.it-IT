@@ -2,19 +2,19 @@
 title: Endpoint cartelle
 description: Scopri come creare, aggiornare, gestire ed eliminare cartelle utilizzando le API di Adobe Experience Platform.
 role: Developer
-source-git-commit: 8f9a2b5a2063b76518302eb9de38b628c87416e1
+exl-id: ee43d699-725d-4ffd-a71b-049eeb3b4d7c
+source-git-commit: 717a4ea0568200c940cf9b8f26f4dd2aa9c00a3e
 workflow-type: tm+mt
 source-wordcount: '818'
 ht-degree: 5%
 
 ---
 
-
 # Endpoint &quot;cartelle&quot;
 
 >[!IMPORTANT]
 >
->L’URL dell’endpoint per questo set di endpoint è `https://experience.adobe.io`.
+>L&#39;URL dell&#39;endpoint per questo set di endpoint è `https://experience.adobe.io`.
 
 Le cartelle sono una funzionalità che consente di organizzare meglio gli oggetti aziendali per facilitarne la navigazione e la classificazione.
 
@@ -22,11 +22,11 @@ Questa guida fornisce informazioni utili per comprendere meglio le cartelle e in
 
 ## Introduzione
 
-Prima di continuare, controlla [guida introduttiva](./getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all’API, incluse le intestazioni richieste e la lettura di esempi di chiamate API.
+Prima di continuare, consulta la [guida introduttiva](./getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all&#39;API, incluse le intestazioni richieste e la lettura delle chiamate API di esempio.
 
 ## Recuperare un elenco di cartelle {#list}
 
-Per recuperare un elenco di cartelle appartenenti alla tua organizzazione, devi effettuare una richiesta GET al `/folder` e specificando il tipo di cartella e l’ID della cartella principale.
+Per recuperare un elenco di cartelle appartenenti alla tua organizzazione, devi eseguire una richiesta di GET all&#39;endpoint `/folder` e specificare il tipo di cartella e l&#39;ID della cartella principale.
 
 **Formato API**
 
@@ -36,8 +36,8 @@ GET /folder/{FOLDER_TYPE}/{PARENT_FOLDER_ID}/subfolders
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | Tipo di oggetti contenuti nella cartella. I valori supportati includono `segment` e `dataset`. |
-| `{PARENT_FOLDER_ID}` | ID della cartella principale da cui stai recuperando l’elenco delle cartelle. Per visualizzare un elenco di tutte le cartelle principali, utilizza l’ID cartella `root`. |
+| `{FOLDER_TYPE}` | Tipo di oggetti contenuti nella cartella. I valori supportati sono `segment` e `dataset`. |
+| `{PARENT_FOLDER_ID}` | ID della cartella principale da cui stai recuperando l’elenco delle cartelle. Per visualizzare un elenco di tutte le cartelle padre, utilizzare l&#39;ID cartella `root`. |
 
 **Richiesta**
 
@@ -113,7 +113,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elen
 
 ## Crea una nuova cartella {#create}
 
-Per creare una nuova cartella, devi effettuare una richiesta POST al `/folder` e specificando il tipo di cartella.
+Per creare una nuova cartella, eseguire una richiesta POST all&#39;endpoint `/folder` e specificare il tipo di cartella.
 
 **Formato API**
 
@@ -123,7 +123,7 @@ POST /folder/{FOLDER_TYPE}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | Tipo di oggetti contenuti nella cartella. I valori supportati includono `segment` e `dataset`. |
+| `{FOLDER_TYPE}` | Tipo di oggetti contenuti nella cartella. I valori supportati sono `segment` e `dataset`. |
 
 **Richiesta**
 
@@ -185,7 +185,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 
 ## Recuperare una cartella specifica {#get}
 
-Per recuperare una cartella specifica che appartiene alla tua organizzazione, devi effettuare una richiesta GET al `/folder` e specificando il tipo di cartella e l’ID della cartella.
+Per recuperare una cartella specifica appartenente alla tua organizzazione, devi eseguire una richiesta di GET all&#39;endpoint `/folder` e specificare il tipo di cartella e l&#39;ID della cartella.
 
 **Formato API**
 
@@ -195,7 +195,7 @@ GET /folder/{FOLDER_TYPE}/{FOLDER_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | Tipo di oggetti contenuti nella cartella. I valori supportati includono `segment` e `dataset`. |
+| `{FOLDER_TYPE}` | Tipo di oggetti contenuti nella cartella. I valori supportati sono `segment` e `dataset`. |
 | `{FOLDER_ID}` | ID della cartella da recuperare. |
 
 **Richiesta**
@@ -256,7 +256,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 
 ## Convalida una cartella specificata {#validate}
 
-Per verificare se una cartella può contenere oggetti, invia una richiesta GET al `/folder/{FOLDER_TYPE}/{FOLDER_ID}/validate` e forniscono sia il tipo di cartella che l’ID.
+È possibile verificare se una cartella è idonea a contenere oggetti effettuando una richiesta di GET all&#39;endpoint `/folder/{FOLDER_TYPE}/{FOLDER_ID}/validate` e fornendo sia il tipo di cartella che l&#39;ID.
 
 **Formato API**
 
@@ -266,7 +266,7 @@ GET /folder/{FOLDER_TYPE}/{FOLDER_ID}/validate
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | Tipo di oggetti contenuti nella cartella. I valori supportati includono `segment` e `dataset`. |
+| `{FOLDER_TYPE}` | Tipo di oggetti contenuti nella cartella. I valori supportati sono `segment` e `dataset`. |
 | `{FOLDER_ID}` | ID della cartella da convalidare. |
 
 **Richiesta**
@@ -316,7 +316,7 @@ In caso di esito positivo, lo stato HTTP 200 restituisce i dettagli della cartel
 
 ## Aggiornare una cartella specifica {#update}
 
-Per aggiornare i dettagli di una cartella specifica che appartiene alla tua organizzazione, devi effettuare una richiesta PATCH al `/folder` e specificando il tipo di cartella e l’ID della cartella.
+Per aggiornare i dettagli di una cartella specifica appartenente alla tua organizzazione, devi eseguire una richiesta PATCH all&#39;endpoint `/folder` e specificare il tipo di cartella e l&#39;ID della cartella.
 
 **Formato API**
 
@@ -326,7 +326,7 @@ PATCH /folder/{FOLDER_TYPE}/{FOLDER_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | Tipo di oggetti contenuti nella cartella. I valori supportati includono `segment` e `dataset`. |
+| `{FOLDER_TYPE}` | Tipo di oggetti contenuti nella cartella. I valori supportati sono `segment` e `dataset`. |
 | `{FOLDER_ID}` | ID della cartella da aggiornare. |
 
 **Richiesta**
@@ -378,7 +378,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 
 ## Eliminare una cartella specifica {#delete}
 
-Per eliminare una cartella specifica appartenente alla tua organizzazione, devi effettuare una richiesta DELETE al `/folder` e specificando il tipo di cartella e l&#39;ID della cartella.
+Per eliminare una cartella specifica appartenente alla tua organizzazione, devi eseguire una richiesta DELETE a `/folder` e specificare il tipo di cartella e l&#39;ID della cartella.
 
 ***Formato API**
 
@@ -388,7 +388,7 @@ DELETE /folder/{FOLDER_TYPE}/{FOLDER_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | Tipo di oggetti contenuti nella cartella. I valori supportati includono `segment` e `dataset`. |
+| `{FOLDER_TYPE}` | Tipo di oggetti contenuti nella cartella. I valori supportati sono `segment` e `dataset`. |
 | `{FOLDER_ID}` | ID della cartella da eliminare. |
 
 **Richiesta**

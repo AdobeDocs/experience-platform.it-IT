@@ -6,7 +6,7 @@ description: Questo tutorial elenca i passaggi per aggiornare gli account di des
 exl-id: afb41878-4205-4c64-af4d-e2740f852785
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '505'
+source-wordcount: '504'
 ht-degree: 0%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 0%
 
 ## Panoramica {#overview}
 
-Il **[!UICONTROL Account]** Questa scheda mostra i dettagli sulle connessioni stabilite con varie destinazioni. Consulta la sezione [Panoramica sugli account](../ui/destinations-workspace.md#accounts) per tutte le informazioni che puoi ottenere su ciascun account di destinazione.
+La scheda **[!UICONTROL Account]** mostra i dettagli sulle connessioni stabilite con varie destinazioni. Per tutte le informazioni che puoi ottenere su ciascun account di destinazione, consulta la [Panoramica account](../ui/destinations-workspace.md#accounts).
 
-Questo tutorial illustra i passaggi necessari per aggiornare i dettagli dell’account di destinazione utilizzando l’interfaccia utente di Experienci Platform.
+Questo tutorial illustra i passaggi necessari per aggiornare i dettagli dell’account di destinazione utilizzando l’interfaccia utente di Experience Platform.
 
 Puoi aggiornare i dettagli dell’account di destinazione per aggiornare e autenticare nuovamente le credenziali per gli account correnti o scaduti per le destinazioni attualmente in uso. In genere, i token OAuth e bearer hanno una durata limitata, a seconda della piattaforma di destinazione. Quando questi token scadono, puoi aggiornarli nel flusso di lavoro descritto di seguito. Questo flusso di lavoro ti indirizza a passare attraverso il flusso di lavoro OAuth o a reinserire un token. Analogamente, se nella piattaforma a valle è stata modificata una password o un accesso utente, è possibile aggiornare le credenziali.
 
@@ -29,40 +29,40 @@ Per le destinazioni batch, puoi aggiornare l’accesso o la chiave segreta, se �
 
 Per aggiornare i dettagli di connessione alle destinazioni esistenti, segui la procedura riportata di seguito.
 
-1. Accedi a [Interfaccia utente Experienci Platform](https://platform.adobe.com/) e seleziona **[!UICONTROL Destinazioni]** dalla barra di navigazione a sinistra. Seleziona **[!UICONTROL Account]** nell’intestazione in alto per visualizzare i tuoi account esistenti.
+1. Accedi a [interfaccia utente Experience Platform](https://platform.adobe.com/) e seleziona **[!UICONTROL Destinazioni]** dalla barra di navigazione a sinistra. Seleziona **[!UICONTROL Account]** dall&#39;intestazione superiore per visualizzare gli account esistenti.
 
    ![Scheda Account](../assets/ui/update-accounts/accounts-tab.png)
 
-2. Seleziona l’icona del filtro ![Icona filtro](../assets/ui/update-accounts/filter.png) in alto a sinistra per avviare il pannello ordina. Il pannello Ordinamento fornisce un elenco di tutte le destinazioni. Puoi selezionare più di una destinazione dall’elenco per visualizzare una selezione filtrata di account associati alle destinazioni selezionate.
+2. Seleziona l&#39;icona del filtro ![Icona filtro](../assets/ui/update-accounts/filter.png) in alto a sinistra per avviare il pannello di ordinamento. Il pannello Ordinamento fornisce un elenco di tutte le destinazioni. Puoi selezionare più di una destinazione dall’elenco per visualizzare una selezione filtrata di account associati alle destinazioni selezionate.
 
-   ![Filtrare gli account di destinazione](../assets/ui/update-accounts/filter-accounts.png)
+   ![Filtra account di destinazione](../assets/ui/update-accounts/filter-accounts.png)
 
-3. Seleziona i puntini di sospensione (`...`) accanto al nome dell&#39;account che si desidera aggiornare. Viene visualizzato un pannello a comparsa che fornisce le opzioni per **[!UICONTROL Attiva tipi di pubblico]**, **[!UICONTROL Modifica dettagli]**, e **[!UICONTROL Elimina]** l’account. Seleziona la ![Pulsante Modifica dettagli](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Modifica dettagli]** per modificare le informazioni sull&#39;account.
+3. Selezionare i puntini di sospensione (`...`) accanto al nome dell&#39;account da aggiornare. Viene visualizzato un pannello a comparsa che fornisce opzioni per **[!UICONTROL attivare i tipi di pubblico]**, **[!UICONTROL modificare i dettagli]** e **[!UICONTROL eliminare]** l&#39;account. Selezionare il pulsante ![Modifica dettagli](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Modifica dettagli]** per modificare le informazioni sull&#39;account.
 
    ![Modifica account](../assets/ui/update-accounts/accounts-edit.png)
 
 4. Immetti le credenziali dell&#39;account aggiornate.
 
-   * Per gli account che utilizzano un `OAuth1` o `OAuth2` tipo di connessione, seleziona **[!UICONTROL Riconnetti OAuth]** per rinnovare le credenziali dell&#39;account. Puoi anche aggiornare il nome e la descrizione dell’account.
+   * Per gli account che utilizzano un tipo di connessione `OAuth1` o `OAuth2`, seleziona **[!UICONTROL Riconnetti OAuth]** per rinnovare le credenziali dell&#39;account. Puoi anche aggiornare il nome e la descrizione dell’account.
 
    ![Modifica dettagli OAuth](../assets/ui/update-accounts/edit-details-oauth.png)
 
-   * Per gli account che utilizzano un `Access Key` o `ConnectionString` tipo di connessione, puoi modificare le informazioni di autenticazione dell’account, tra cui l’ID di accesso, le chiavi segrete o le stringhe di connessione. Puoi anche aggiornare il nome e la descrizione dell’account.
+   * Per gli account che utilizzano un tipo di connessione `Access Key` o `ConnectionString`, è possibile modificare le informazioni di autenticazione dell&#39;account, incluse informazioni quali l&#39;ID di accesso, le chiavi segrete o le stringhe di connessione. Puoi anche aggiornare il nome e la descrizione dell’account.
 
-   ![Modifica dettagli Chiave di accesso](../assets/ui/update-accounts/edit-details-key.png)
+   ![Modifica dettagli chiave di accesso](../assets/ui/update-accounts/edit-details-key.png)
 
-   * Per gli account che utilizzano `Bearer token` tipo di connessione, se necessario, puoi inserire un nuovo token bearer. Puoi anche aggiornare il nome e la descrizione dell’account.
+   * Per gli account che utilizzano un tipo di connessione `Bearer token`, è possibile immettere un nuovo token Bearer, se necessario. Puoi anche aggiornare il nome e la descrizione dell’account.
 
-   ![Modifica dettagli Token Bearer](../assets/ui/update-accounts/edit-details-bearer.png)
+   ![Modifica token Bearer dei dettagli](../assets/ui/update-accounts/edit-details-bearer.png)
 
-   * Per gli account che utilizzano `Server to server` tipo di connessione, puoi aggiornare il nome e la descrizione dell’account.
+   * Per gli account che utilizzano un tipo di connessione `Server to server`, è possibile aggiornare il nome e la descrizione dell&#39;account.
 
-   ![Modifica dettagli Server-to-Server](../assets/ui/update-accounts/edit-details-s2s.png)
+   ![Modifica dettagli da server a server](../assets/ui/update-accounts/edit-details-s2s.png)
 
-5. Seleziona **[!UICONTROL Salva]** per completare l&#39;aggiornamento dei dettagli dell&#39;account.
+5. Seleziona **[!UICONTROL Salva]** per completare l&#39;aggiornamento dei dettagli account.
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai utilizzato correttamente il **[!UICONTROL destinazioni]** per aggiornare gli account esistenti.
+Seguendo questa esercitazione, hai utilizzato correttamente l&#39;area di lavoro **[!UICONTROL destinazioni]** per aggiornare gli account esistenti.
 
-Per ulteriori informazioni sulle destinazioni, consulta [panoramica sulle destinazioni](../catalog/overview.md).
+Per ulteriori informazioni sulle destinazioni, consulta la [panoramica sulle destinazioni](../catalog/overview.md).

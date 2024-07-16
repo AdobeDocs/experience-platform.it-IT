@@ -1,19 +1,19 @@
 ---
 title: getMediaAnalyticsTracker
 description: Scopri come creare un oggetto Tracker di Media Analytics e utilizzarlo per tenere traccia degli eventi multimediali.
-source-git-commit: 9384c1cc15441199e898d6cc0850e5422253f106
+exl-id: ae968da8-7763-4b2a-a716-3014ba0d270d
+source-git-commit: 57d42d88ec9a93744450a2a352590ab57d9e5bb7
 workflow-type: tm+mt
 source-wordcount: '302'
 ht-degree: 3%
 
 ---
 
-
 # `getMediaAnalyticsTracker`
 
-Questo comando Web SDK recupera un tracciatore Media Analytics. È possibile utilizzare questo comando per creare un&#39;istanza dell&#39;oggetto e quindi, utilizzando le stesse API fornite da [Libreria JS per contenuti multimediali](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html), tieni traccia degli eventi multimediali.
+Questo comando Web SDK recupera un tracciatore Media Analytics. È possibile utilizzare questo comando per creare un&#39;istanza dell&#39;oggetto e quindi, utilizzando le stesse API fornite dalla [libreria Media JS](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html), tenere traccia degli eventi multimediali.
 
-Il `getMediaAnalyticsTracker` restituisce l’API legacy di Media Analytics.
+Il comando `getMediaAnalyticsTracker` restituisce l&#39;API legacy di Media Analytics.
 
 
 | Nome metodo | Descrizione | Sintassi |

@@ -7,33 +7,33 @@ description: Scopri come eliminare i flussi di dati in batch e in streaming util
 exl-id: ea9040b1-3a40-493d-86f0-27deef09df07
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '324'
+source-wordcount: '322'
 ht-degree: 3%
 
 ---
 
 # Eliminare un flusso di dati utilizzando l’API del servizio Flusso
 
-Puoi eliminare i flussi di dati batch e in streaming che contengono errori o sono diventati obsoleti utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+È possibile eliminare i flussi di dati batch e in streaming che contengono errori o che sono diventati obsoleti utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-Questa esercitazione descrive i passaggi per eliminare i flussi di dati creati sia con origini in batch che in streaming utilizzando [!DNL Flow Service].
+Questo tutorial illustra i passaggi necessari per eliminare i flussi di dati creati con origini batch e di streaming utilizzando [!DNL Flow Service].
 
 ## Introduzione
 
-Questo tutorial richiede un ID di flusso valido. Se non disponi di un ID di flusso valido, seleziona il connettore desiderato da [panoramica sulle origini](../../home.md) e segui i passaggi descritti prima di provare questa esercitazione.
+Questo tutorial richiede un ID di flusso valido. Se non disponi di un ID di flusso valido, seleziona il connettore desiderato dalla [panoramica origini](../../home.md) e segui i passaggi descritti prima di provare questa esercitazione.
 
 Questo tutorial richiede anche una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Sorgenti](../../home.md): [!DNL Experience Platform] consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] servizi.
-* [Sandbox](../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che permettono di suddividere un singolo [!DNL Platform] in ambienti virtuali separati, per facilitare lo sviluppo e l’evoluzione delle applicazioni di esperienza digitale.
+* [Origini](../../home.md): [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini e consente di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi [!DNL Platform].
+* [Sandbox](../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza di [!DNL Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 ### Utilizzo delle API di Platform
 
-Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida su [introduzione alle API di Platform](../../../landing/api-guide.md).
+Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida in [guida introduttiva alle API di Platform](../../../landing/api-guide.md).
 
 ## Eliminare un flusso di dati
 
-Con un ID di flusso esistente, puoi eliminare un flusso di dati eseguendo una richiesta DELETE al [!DNL Flow Service] API.
+Con un ID di flusso esistente, puoi eliminare un flusso di dati eseguendo una richiesta DELETE all&#39;API [!DNL Flow Service].
 
 **Formato API**
 
@@ -43,7 +43,7 @@ DELETE /flows/{FLOW_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{FLOW_ID}` | L&#39;unico `id` valore per il flusso di dati che desideri eliminare. |
+| `{FLOW_ID}` | Valore `id` univoco per il flusso di dati che si desidera eliminare. |
 
 **Richiesta**
 
@@ -62,6 +62,6 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 204 (nessun con
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai utilizzato correttamente il [!DNL Flow Service] API per eliminare un flusso di dati esistente.
+Seguendo questa esercitazione, hai utilizzato correttamente l&#39;API [!DNL Flow Service] per eliminare un flusso di dati esistente.
 
-Per i passaggi su come eseguire queste operazioni utilizzando l’interfaccia utente, consulta l’esercitazione su [eliminazione di flussi di dati nell’interfaccia utente](../../tutorials/ui/delete.md)
+Per i passaggi su come eseguire queste operazioni utilizzando l&#39;interfaccia utente, fare riferimento al tutorial su [eliminazione dei flussi di dati nell&#39;interfaccia utente](../../tutorials/ui/delete.md)

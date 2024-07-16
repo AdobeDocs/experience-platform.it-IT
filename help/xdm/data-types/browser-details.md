@@ -7,13 +7,13 @@ exl-id: c67ff8bc-0614-4422-9bb7-689b98d7086d
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '240'
-ht-degree: 7%
+ht-degree: 27%
 
 ---
 
 # [!UICONTROL Dettagli browser] tipo di dati
 
-[!UICONTROL Dettagli browser] è un tipo di dati XDM standard che descrive i dettagli relativi a un browser o a un’applicazione.
+[!UICONTROL Dettagli browser] è un tipo di dati XDM standard che descrive i dettagli relativi a un browser o a un&#39;applicazione.
 
 <img src="../images/data-types/browser-details.png" width="450" /><br />
 
@@ -22,13 +22,13 @@ ht-degree: 7%
 | `acceptLanguage` | Stringa | Un tag di lingua IETF ([RFC 5646](https://tools.ietf.org/html/rfc5646)). |
 | `cookiesEnabled` | Booleano | Indica se le impostazioni dell’utente consentono la scrittura di cookie. |
 | `javaEnabled` | Booleano | Indica se Java era abilitato nel dispositivo da cui è stata fatta l’osservazione. |
-| `javaScriptEnabled` | Booleano | Indica se JavaScript era abilitato nel dispositivo da cui è stata fatta l’osservazione. |
+| `javaScriptEnabled` | Booleano | Indica se JavaScript è stato abilitato nel dispositivo da cui è stata effettuata l’osservazione. |
 | `javaScriptVersion` | Stringa | La versione di JavaScript supportata durante l’osservazione. |
 | `javaVersion` | Stringa | La versione di Java supportata durante l’osservazione. |
 | `name` | Stringa | Il nome dell’applicazione o del browser. |
 | `quicktimeVersion` | Stringa | La versione di Apple Quicktime supportata durante l’osservazione. |
 | `thirdPartyCookiesEnabled` | Booleano | Indica se i cookie di terze parti sono stati abilitati nel dispositivo da cui è stata effettuata l’osservazione. |
-| `userAgent` | Stringa | Stringa HTTP dell’agente utente proveniente dalla richiesta client. |
+| `userAgent` | Stringa | La stringa HTTP dell’agente-utente proveniente dalla richiesta del client. |
 | `vendor` | Stringa | Il fornitore dell’applicazione o del browser. |
 | `version` | Stringa | Versione dell’applicazione o del browser. |
 | `viewportHeight` | Intero | La dimensione verticale in pixel della finestra in cui è stato visualizzato l’evento. Per un evento di visualizzazione web, corrisponde all’altezza del riquadro di visualizzazione del browser. |

@@ -6,14 +6,14 @@ description: Questa esercitazione fornisce informazioni sulla conversione di dat
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '489'
-ht-degree: 5%
+source-wordcount: '486'
+ht-degree: 3%
 
 ---
 
-# Creazione di modelli con Adobe Experience Platform [!DNL Platform] SDK
+# Authoring del modello con l&#39;SDK [!DNL Platform] di Adobe Experience Platform
 
-Questa esercitazione fornisce informazioni sulla conversione `data_access_sdk_python` al nuovo Python `platform_sdk` in Python e R. Questo tutorial fornisce informazioni sulle seguenti operazioni:
+Questa esercitazione fornisce informazioni sulla conversione di `data_access_sdk_python` nel nuovo Python `platform_sdk` sia in Python che in R. Questo tutorial fornisce informazioni sulle seguenti operazioni:
 
 - [Genera autenticazione](#build-authentication)
 - [Lettura di base dei dati](#basic-reading-of-data)
@@ -21,11 +21,11 @@ Questa esercitazione fornisce informazioni sulla conversione `data_access_sdk_py
 
 ## Genera autenticazione {#build-authentication}
 
-Per effettuare chiamate a è necessaria l’autenticazione [!DNL Adobe Experience Platform], ed è composto da Chiave API, ID organizzazione, token utente e token di servizio.
+Per effettuare chiamate a [!DNL Adobe Experience Platform] è necessaria l&#39;autenticazione, che comprende la chiave API, l&#39;ID organizzazione, un token utente e un token di servizio.
 
 ### Python
 
-Se utilizzi Jupyter Notebook, utilizza il codice seguente per generare il `client_context`:
+Se si utilizza Jupyter Notebook, utilizzare il codice seguente per generare `client_context`:
 
 ```python
 client_context = PLATFORM_SDK_CLIENT_CONTEXT
@@ -43,7 +43,7 @@ client_context = ClientContext(api_key={API_KEY},
 
 ### R
 
-Se utilizzi Jupyter Notebook, utilizza il codice seguente per generare il `client_context`:
+Se si utilizza Jupyter Notebook, utilizzare il codice seguente per generare `client_context`:
 
 ```r
 library(reticulate)
@@ -68,7 +68,7 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
 
 ## Lettura di base dei dati {#basic-reading-of-data}
 
-Con il nuovo [!DNL Platform] SDK, la dimensione massima di lettura è di 32 GB, con un tempo massimo di lettura di 10 minuti.
+Con il nuovo SDK [!DNL Platform], la dimensione massima di lettura è di 32 GB, con un tempo massimo di lettura di 10 minuti.
 
 Se il tempo di lettura richiede troppo tempo, puoi provare a utilizzare una delle seguenti opzioni di filtro:
 
@@ -79,7 +79,7 @@ Se il tempo di lettura richiede troppo tempo, puoi provare a utilizzare una dell
 
 >[!NOTE]
 >
->L’organizzazione è impostata all’interno di `client_context`.
+>L&#39;organizzazione è impostata in `client_context`.
 
 ### Python
 
@@ -145,7 +145,7 @@ df2 <- dataset_reader$where(
 df2
 ```
 
-Il nuovo [!DNL Platform] L’SDK supporta le seguenti operazioni:
+Il nuovo SDK [!DNL Platform] supporta le operazioni seguenti:
 
 | Operazione | Funzione |
 | --------- | -------- |
@@ -195,7 +195,7 @@ df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 
 >[!NOTE]
 >
->L’organizzazione è impostata all’interno di `client_context`.
+>L&#39;organizzazione è impostata in `client_context`.
 
 Per scrivere i dati in Python e R, usate uno dei seguenti esempi:
 
@@ -220,4 +220,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## Passaggi successivi
 
-Dopo aver configurato `platform_sdk` caricatore di dati, i dati vengono sottoposti a preparazione e quindi suddivisi nel `train` e `val` set di dati. Per informazioni sulla preparazione dei dati e sulla progettazione delle funzioni, consulta la sezione su [preparazione dei dati e progettazione delle funzioni](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) nel tutorial per la creazione di una ricetta con [!DNL JupyterLab] notebook.
+Dopo aver configurato il caricatore di dati `platform_sdk`, i dati vengono preparati e quindi suddivisi nei set di dati `train` e `val`. Per informazioni sulla preparazione dei dati e sulla progettazione delle funzionalità, visitare la sezione relativa alla [preparazione dei dati e alla progettazione delle funzionalità](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) nell&#39;esercitazione per la creazione di una ricetta utilizzando [!DNL JupyterLab] notebook.

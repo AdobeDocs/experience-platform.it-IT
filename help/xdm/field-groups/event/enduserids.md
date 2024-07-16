@@ -16,9 +16,9 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->I nomi di diversi gruppi di campi dello schema sono stati modificati. Vedi il documento su [aggiornamenti nome gruppo di campi](../name-updates.md) per ulteriori informazioni.
+>I nomi di diversi gruppi di campi dello schema sono stati modificati. Per ulteriori informazioni, consulta il documento sugli aggiornamenti del nome del gruppo di campi [](../name-updates.md).
 
-[!UICONTROL Dettagli ID utente finale] è un gruppo di campi di schema standard per [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md), utilizzato per descrivere le informazioni sull’identità di un individuo in diverse applicazioni di Adobe. Il gruppo di campi fornisce un livello principale `endUserIDs` oggetto, che contiene un oggetto di sola lettura `_experience` campo i cui valori vengono aggiornati automaticamente durante l’acquisizione dei dati.
+[!UICONTROL Dettagli ID utente finale] è un gruppo di campi dello schema standard per la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md), utilizzato per descrivere le informazioni sull&#39;identità di un individuo in diverse applicazioni di Adobe. Il gruppo di campi fornisce un oggetto `endUserIDs` di livello principale, che contiene un campo `_experience` di sola lettura i cui valori vengono aggiornati automaticamente durante l&#39;acquisizione dei dati.
 
 <img src="../../images/field-groups/enduserids.png" width="700" /><br />
 

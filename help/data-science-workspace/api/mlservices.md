@@ -16,7 +16,7 @@ ht-degree: 2%
 
 Un MLService è un modello pubblicato e addestrato che offre all’organizzazione la possibilità di accedere e riutilizzare i modelli sviluppati in precedenza. Una caratteristica chiave di MLServices è la capacità di automatizzare la formazione e il punteggio su base pianificata. Le esecuzioni pianificate dei corsi di formazione possono contribuire a mantenere l’efficienza e l’accuratezza di un modello, mentre le esecuzioni pianificate dei punteggi possono garantire la generazione coerente di nuove informazioni.
 
-Le pianificazioni automatizzate di formazione e punteggio sono definite con una marca temporale iniziale, una marca temporale finale e una frequenza rappresentata da [espressione cron](https://en.wikipedia.org/wiki/Cron). Gli Schedules possono essere definiti quando [creazione di un servizio MLS](#create-an-mlservice) o applicato da [aggiornamento di un servizio MLS esistente](#update-an-mlservice).
+Le pianificazioni automatizzate di formazione e punteggio sono definite con una marca temporale iniziale, una marca temporale finale e una frequenza rappresentata come [espressione cron](https://en.wikipedia.org/wiki/Cron). Le pianificazioni possono essere definite durante la [creazione di un MLService](#create-an-mlservice) o applicate da [aggiornamento di un MLService esistente](#update-an-mlservice).
 
 ## Creare un servizio MLS {#create-an-mlservice}
 
@@ -77,7 +77,7 @@ curl -X POST \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce un payload contenente i dettagli del servizio MLS appena creato, incluso il relativo identificatore univoco (`id`), ID esperimento per formazione (`trainingExperimentId`), ID esperimento per punteggio (`scoringExperimentId`) e l’ID del set di dati di apprendimento di input (`trainingDataSetId`).
+In caso di esito positivo, la risposta restituisce un payload contenente i dettagli del servizio MLS appena creato, inclusi l&#39;identificatore univoco (`id`), l&#39;ID esperimento per l&#39;addestramento (`trainingExperimentId`), l&#39;ID esperimento per il punteggio (`scoringExperimentId`) e l&#39;ID del set di dati di addestramento di input (`trainingDataSetId`).
 
 ```json
 {
@@ -108,7 +108,7 @@ In caso di esito positivo, la risposta restituisce un payload contenente i detta
 
 ## Recuperare un elenco di servizi MLS {#retrieve-a-list-of-mlservices}
 
-È possibile recuperare un elenco di MLServices eseguendo una singola richiesta GET. Per filtrare i risultati, puoi specificare i parametri di query nel percorso della richiesta. Per un elenco delle query disponibili, consulta la sezione dell’appendice su [parametri di query per il recupero delle risorse](./appendix.md#query).
+È possibile recuperare un elenco di MLServices eseguendo una singola richiesta GET. Per filtrare i risultati, puoi specificare i parametri di query nel percorso della richiesta. Per un elenco delle query disponibili, consulta la sezione dell&#39;appendice sui [parametri di query per il recupero delle risorse](./appendix.md#query).
 
 **Formato API**
 
@@ -120,12 +120,12 @@ GET /mlServices?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{QUERY_PARAMETER}` | Uno dei [parametri di query disponibili](./appendix.md#query) utilizzato per filtrare i risultati. |
+| `{QUERY_PARAMETER}` | Uno dei [parametri di query disponibili](./appendix.md#query) utilizzati per filtrare i risultati. |
 | `{VALUE}` | Valore per il parametro di query precedente. |
 
 **Richiesta**
 
-La richiesta seguente contiene una query e recupera un elenco di servizi MLS che condividono lo stesso ID istanza MLS (`{MLINSTANCE_ID}`).
+La richiesta seguente contiene una query e recupera un elenco di MLServices che condividono lo stesso ID MLInstance (`{MLINSTANCE_ID}`).
 
 ```shell
 curl -X GET \
@@ -138,7 +138,7 @@ curl -X GET \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce un elenco di MLServices e dei relativi dettagli, compreso l’ID MLService (`{MLSERVICE_ID}`), ID esperimento per formazione (`{TRAINING_ID}`), ID esperimento per punteggio (`{SCORING_ID}`) e l’ID del set di dati di apprendimento di input (`{DATASET_ID}`).
+In caso di esito positivo, la risposta restituisce un elenco di MLServices e dei relativi dettagli, inclusi l&#39;ID MLService (`{MLSERVICE_ID}`), l&#39;ID esperimento per l&#39;addestramento (`{TRAINING_ID}`), l&#39;ID esperimento per il punteggio (`{SCORING_ID}`) e l&#39;ID del set di dati di addestramento di input (`{DATASET_ID}`).
 
 ```json
 {
@@ -215,7 +215,7 @@ Puoi aggiornare un MLService esistente sovrascrivendo le relative proprietà tra
 
 >[!TIP]
 >
->Per garantire il successo di questa richiesta PUT, si consiglia di eseguire prima una richiesta GET a [recuperare il servizio MLS per ID](#retrieve-a-specific-mlservice). Quindi, modifica e aggiorna l’oggetto JSON restituito e applica l’intero oggetto JSON modificato come payload per la richiesta PUT.
+>Per garantire il completamento di questa richiesta PUT, si consiglia di eseguire prima una richiesta GET per [recuperare MLService per ID](#retrieve-a-specific-mlservice). Quindi, modifica e aggiorna l’oggetto JSON restituito e applica l’intero oggetto JSON modificato come payload per la richiesta PUT.
 
 **Formato API**
 

@@ -2,10 +2,11 @@
 title: Casi d’uso supportati con Adobe Experience Platform Query Service
 description: Scopri quali casi d’uso sono supportati con Adobe Experience Platform Query Service.
 keywords: Query Service;casi d'uso
-source-git-commit: 454f485a327233ca1a5b37ea58f16b7b53255ba6
+exl-id: eba8050d-be3a-41b6-8175-4f6b2b2ef7b0
+source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
 workflow-type: tm+mt
 source-wordcount: '137'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -20,4 +21,3 @@ Ogni documento in questa sezione contiene informazioni su come implementare il r
 - [Valore della durata del cliente](./customer-lifetime-value.md)
 - [Determinare un punteggio tendenza](./propensity-score.md)
 - [Corrispondenza fuzzy](./fuzzy-match.md)
-

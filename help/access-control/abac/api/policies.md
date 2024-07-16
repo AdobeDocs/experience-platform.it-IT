@@ -18,19 +18,19 @@ ht-degree: 3%
 >
 >Se viene passato un token utente, l’utente del token deve avere un ruolo &quot;amministratore organizzazione&quot; per l’organizzazione richiesta.
 
-I criteri di controllo degli accessi sono istruzioni che riuniscono attributi per stabilire azioni consentite e inammissibili. Questi criteri possono essere locali o globali e possono ignorare altri criteri. Il `/policies` L’endpoint nell’API di controllo degli accessi basato su attributi consente di gestire in modo programmatico i criteri, incluse le informazioni sulle regole che li governano e sulle rispettive condizioni dell’oggetto.
+I criteri di controllo degli accessi sono istruzioni che riuniscono attributi per stabilire azioni consentite e inammissibili. Questi criteri possono essere locali o globali e possono ignorare altri criteri. L&#39;endpoint `/policies` nell&#39;API di controllo degli accessi basata su attributi consente di gestire in modo programmatico i criteri, incluse le informazioni sulle regole che li governano e sulle rispettive condizioni dell&#39;oggetto.
 
 >[!IMPORTANT]
 >
->Questo endpoint non deve essere confuso con `/policies` endpoint nella [API del servizio criteri](../../../data-governance/api/policies.md), utilizzato per gestire i criteri di utilizzo dei dati.
+>Questo endpoint non deve essere confuso con l&#39;endpoint `/policies` nell&#39;API [Policy Service](../../../data-governance/api/policies.md), utilizzata per gestire i criteri di utilizzo dei dati.
 
 ## Introduzione
 
-L’endpoint API utilizzato in questa guida fa parte dell’API di controllo degli accessi basata su attributi. Prima di continuare, controlla [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida per la lettura delle chiamate API di esempio di questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experienci Platform.
+L’endpoint API utilizzato in questa guida fa parte dell’API di controllo degli accessi basata su attributi. Prima di continuare, consulta la [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e per le informazioni importanti sulle intestazioni necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
 
 ## Recuperare un elenco di criteri {#list}
 
-Effettuare una richiesta di GET al `/policies` per elencare tutti i criteri esistenti nell’organizzazione.
+Effettuare una richiesta di GET all&#39;endpoint `/policies` per elencare tutti i criteri esistenti nell&#39;organizzazione.
 
 **Formato API**
 
@@ -136,22 +136,22 @@ In caso di esito positivo, la risposta restituisce un elenco di criteri esistent
 | `id` | ID corrispondente a un criterio. Questo identificatore è generato automaticamente e può essere utilizzato per cercare, aggiornare ed eliminare un criterio. |
 | `imsOrgId` | Organizzazione in cui è accessibile il criterio sottoposto a query. |
 | `createdBy` | ID dell’utente che ha creato il criterio. |
-| `createdAt` | L’ora in cui è stato creato il criterio. Il `createdAt` viene visualizzata nella marca temporale dell’epoca unix. |
+| `createdAt` | L’ora in cui è stato creato il criterio. La proprietà `createdAt` viene visualizzata nel timestamp dell&#39;epoca unix. |
 | `modifiedBy` | ID dell’ultimo utente che ha aggiornato il criterio. |
-| `modifiedAt` | L’ora dell’ultimo aggiornamento del criterio. Il `modifiedAt` viene visualizzata nella marca temporale dell’epoca unix. |
+| `modifiedAt` | L’ora dell’ultimo aggiornamento del criterio. La proprietà `modifiedAt` viene visualizzata nel timestamp dell&#39;epoca unix. |
 | `name` | Nome del criterio. |
 | `description` | (Facoltativo) Proprietà che può essere aggiunta per fornire ulteriori informazioni su un particolare criterio. |
 | `status` | Stato corrente di un criterio. Questa proprietà definisce se un criterio è attualmente `active` o `inactive`. |
-| `subjectCondition` | Le condizioni applicate a un soggetto. Un oggetto è un utente con determinati attributi che richiede l’accesso a una risorsa per eseguire un’azione. In questo caso, `subjectCondition` sono condizioni di tipo query applicate agli attributi dell’oggetto. |
+| `subjectCondition` | Le condizioni applicate a un soggetto. Un oggetto è un utente con determinati attributi che richiede l’accesso a una risorsa per eseguire un’azione. In questo caso, `subjectCondition` sono condizioni di tipo query applicate agli attributi dell&#39;oggetto. |
 | `rules` | L’insieme di regole che definiscono un criterio. Le regole definiscono quali combinazioni di attributi sono autorizzate affinché il soggetto esegua correttamente un’azione sulla risorsa. |
-| `rules.effect` | L’effetto che risulta dopo aver considerato i valori per `action`, `condition` e `resource`. I valori possibili includono: `permit`, `deny`, o `indeterminate`. |
+| `rules.effect` | L&#39;effetto che si verifica dopo aver considerato i valori per `action`, `condition` e `resource`. I valori possibili includono: `permit`, `deny` o `indeterminate`. |
 | `rules.resource` | La risorsa o l&#39;oggetto a cui un soggetto può o non può accedere.  Le risorse possono essere file, applicazioni, server o anche API. |
 | `rules.condition` | Condizioni applicate a una risorsa. Ad esempio, se una risorsa è uno schema, a uno schema possono essere applicate determinate etichette che contribuiscono a determinare se un’azione contro tale schema è consentita o meno. |
-| `rules.action` | Azione consentita a un oggetto per una risorsa su cui è stata eseguita una query. I valori possibili includono: `read`, `create`, `edit`, e `delete`. |
+| `rules.action` | Azione consentita a un oggetto per una risorsa su cui è stata eseguita una query. I valori possibili includono: `read`, `create`, `edit` e `delete`. |
 
 ## Cerca i dettagli dei criteri per ID {#lookup}
 
-Effettuare una richiesta di GET al `/policies` mentre si fornisce un ID policy nel percorso della richiesta per recuperare informazioni su quel singolo criterio.
+Effettuare una richiesta di GET all&#39;endpoint `/policies` fornendo un ID di criterio nel percorso della richiesta per recuperare informazioni su quel singolo criterio.
 
 **Formato API**
 
@@ -232,23 +232,23 @@ In caso di esito positivo, la richiesta restituisce informazioni sull’ID del c
 | `id` | ID corrispondente a un criterio. Questo identificatore è generato automaticamente e può essere utilizzato per cercare, aggiornare ed eliminare un criterio. |
 | `imsOrgId` | Organizzazione in cui è accessibile il criterio sottoposto a query. |
 | `createdBy` | ID dell’utente che ha creato il criterio. |
-| `createdAt` | L’ora in cui è stato creato il criterio. Il `createdAt` viene visualizzata nella marca temporale dell’epoca unix. |
+| `createdAt` | L’ora in cui è stato creato il criterio. La proprietà `createdAt` viene visualizzata nel timestamp dell&#39;epoca unix. |
 | `modifiedBy` | ID dell’ultimo utente che ha aggiornato il criterio. |
-| `modifiedAt` | L’ora dell’ultimo aggiornamento del criterio. Il `modifiedAt` viene visualizzata nella marca temporale dell’epoca unix. |
+| `modifiedAt` | L’ora dell’ultimo aggiornamento del criterio. La proprietà `modifiedAt` viene visualizzata nel timestamp dell&#39;epoca unix. |
 | `name` | Nome del criterio. |
 | `description` | (Facoltativo) Proprietà che può essere aggiunta per fornire ulteriori informazioni su un particolare criterio. |
 | `status` | Stato corrente di un criterio. Questa proprietà definisce se un criterio è attualmente `active` o `inactive`. |
-| `subjectCondition` | Le condizioni applicate a un soggetto. Un oggetto è un utente con determinati attributi che richiede l’accesso a una risorsa per eseguire un’azione. In questo caso, `subjectCondition` sono condizioni di tipo query applicate agli attributi dell’oggetto. |
+| `subjectCondition` | Le condizioni applicate a un soggetto. Un oggetto è un utente con determinati attributi che richiede l’accesso a una risorsa per eseguire un’azione. In questo caso, `subjectCondition` sono condizioni di tipo query applicate agli attributi dell&#39;oggetto. |
 | `rules` | L’insieme di regole che definiscono un criterio. Le regole definiscono quali combinazioni di attributi sono autorizzate affinché il soggetto esegua correttamente un’azione sulla risorsa. |
-| `rules.effect` | L’effetto che risulta dopo aver considerato i valori per `action`, `condition` e `resource`. I valori possibili includono: `permit`, `deny`, o `indeterminate`. |
+| `rules.effect` | L&#39;effetto che si verifica dopo aver considerato i valori per `action`, `condition` e `resource`. I valori possibili includono: `permit`, `deny` o `indeterminate`. |
 | `rules.resource` | La risorsa o l&#39;oggetto a cui un soggetto può o non può accedere.  Le risorse possono essere file, applicazioni, server o anche API. |
 | `rules.condition` | Condizioni applicate a una risorsa. Ad esempio, se una risorsa è uno schema, a uno schema possono essere applicate determinate etichette che contribuiscono a determinare se un’azione contro tale schema è consentita o meno. |
-| `rules.action` | Azione consentita a un oggetto per una risorsa su cui è stata eseguita una query. I valori possibili includono: `read`, `create`, `edit`, e `delete`. |
+| `rules.action` | Azione consentita a un oggetto per una risorsa su cui è stata eseguita una query. I valori possibili includono: `read`, `create`, `edit` e `delete`. |
 
 
 ## Creare un criterio {#create}
 
-Per creare un nuovo criterio, effettua una richiesta POST al `/policies` endpoint.
+Per creare un nuovo criterio, effettuare una richiesta POST all&#39;endpoint `/policies`.
 
 **Formato API**
 
@@ -289,10 +289,10 @@ curl -X POST \
 | `description` | (Facoltativo) Proprietà che può essere aggiunta per fornire ulteriori informazioni su un particolare criterio. |
 | `imsOrgId` | L’organizzazione che contiene il criterio. |
 | `rules` | L’insieme di regole che definiscono un criterio. Le regole definiscono quali combinazioni di attributi sono autorizzate affinché il soggetto esegua correttamente un’azione sulla risorsa. |
-| `rules.effect` | L’effetto che risulta dopo aver considerato i valori per `action`, `condition` e `resource`. I valori possibili includono: `permit`, `deny`, o `indeterminate`. |
+| `rules.effect` | L&#39;effetto che si verifica dopo aver considerato i valori per `action`, `condition` e `resource`. I valori possibili includono: `permit`, `deny` o `indeterminate`. |
 | `rules.resource` | La risorsa o l&#39;oggetto a cui un soggetto può o non può accedere.  Le risorse possono essere file, applicazioni, server o anche API. |
 | `rules.condition` | Condizioni applicate a una risorsa. Ad esempio, se una risorsa è uno schema, a uno schema possono essere applicate determinate etichette che contribuiscono a determinare se un’azione contro tale schema è consentita o meno. |
-| `rules.action` | Azione consentita a un oggetto per una risorsa su cui è stata eseguita una query. I valori possibili includono: `read`, `create`, `edit`, e `delete`. |
+| `rules.action` | Azione consentita a un oggetto per una risorsa su cui è stata eseguita una query. I valori possibili includono: `read`, `create`, `edit` e `delete`. |
 
 **Risposta**
 
@@ -329,15 +329,15 @@ In caso di esito positivo, la richiesta restituisce il criterio appena creato, c
 | `id` | ID corrispondente a un criterio. Questo identificatore è generato automaticamente e può essere utilizzato per cercare, aggiornare ed eliminare un criterio. |
 | `name` | Nome di un criterio. |
 | `rules` | L’insieme di regole che definiscono un criterio. Le regole definiscono quali combinazioni di attributi sono autorizzate affinché il soggetto esegua correttamente un’azione sulla risorsa. |
-| `rules.effect` | L’effetto che risulta dopo aver considerato i valori per `action`, `condition` e `resource`. I valori possibili includono: `permit`, `deny`, o `indeterminate`. |
+| `rules.effect` | L&#39;effetto che si verifica dopo aver considerato i valori per `action`, `condition` e `resource`. I valori possibili includono: `permit`, `deny` o `indeterminate`. |
 | `rules.resource` | La risorsa o l&#39;oggetto a cui un soggetto può o non può accedere.  Le risorse possono essere file, applicazioni, server o anche API. |
 | `rules.condition` | Condizioni applicate a una risorsa. Ad esempio, se una risorsa è uno schema, a uno schema possono essere applicate determinate etichette che contribuiscono a determinare se un’azione contro tale schema è consentita o meno. |
-| `rules.action` | Azione consentita a un oggetto per una risorsa su cui è stata eseguita una query. I valori possibili includono: `read`, `create`, `edit`, e `delete`. |
+| `rules.action` | Azione consentita a un oggetto per una risorsa su cui è stata eseguita una query. I valori possibili includono: `read`, `create`, `edit` e `delete`. |
 
 
 ## Aggiornare un criterio per ID criterio {#put}
 
-Per aggiornare le regole di un singolo criterio, effettua una richiesta PUT al `/policies` endpoint, fornendo l’ID del criterio da aggiornare nel percorso della richiesta.
+Per aggiornare le regole di un singolo criterio, effettuare una richiesta PUT all&#39;endpoint `/policies` fornendo l&#39;ID del criterio che si desidera aggiornare nel percorso della richiesta.
 
 **Formato API**
 
@@ -406,7 +406,7 @@ In caso di esito positivo, la risposta restituisce il criterio aggiornato.
 
 ## Aggiornare le proprietà dei criteri {#patch}
 
-Per aggiornare le proprietà di un singolo criterio, effettua una richiesta PATCH al `/policies` endpoint, fornendo l’ID del criterio da aggiornare nel percorso della richiesta.
+Per aggiornare le proprietà di un singolo criterio, effettuare una richiesta PATCH all&#39;endpoint `/policies` fornendo l&#39;ID del criterio che si desidera aggiornare nel percorso della richiesta.
 
 **Formato API**
 
@@ -420,7 +420,7 @@ PATCH /policies/{POLICY_ID}
 
 **Richiesta**
 
-La seguente richiesta sostituisce il valore di `/description` in ID policy `c3863937-5d40-448d-a7be-416e538f955e`.
+La richiesta seguente sostituisce il valore di `/description` nell&#39;ID criterio `c3863937-5d40-448d-a7be-416e538f955e`.
 
 ```shell
 curl -X PATCH \
@@ -441,7 +441,7 @@ curl -X PATCH \
 
 | Operazioni | Descrizione |
 | --- | --- |
-| `op` | Chiamata di operazione utilizzata per definire l&#39;azione necessaria per aggiornare il ruolo. Le operazioni includono: `add`, `replace`, e `remove`. |
+| `op` | Chiamata di operazione utilizzata per definire l&#39;azione necessaria per aggiornare il ruolo. Le operazioni includono: `add`, `replace` e `remove`. |
 | `path` | Percorso del parametro da aggiornare. |
 | `value` | Il nuovo valore con cui desideri aggiornare il parametro. |
 
@@ -477,7 +477,7 @@ In caso di esito positivo, la risposta restituisce l’ID del criterio su cui è
 
 ## Eliminare un criterio {#delete}
 
-Per eliminare un criterio, effettua una richiesta DELETE al `/policies` mentre fornisci l’ID del criterio da eliminare.
+Per eliminare un criterio, effettuare una richiesta DELETE all&#39;endpoint `/policies` fornendo l&#39;ID del criterio che si desidera eliminare.
 
 **Formato API**
 
@@ -491,7 +491,7 @@ DELETE /policies/{POLICY_ID}
 
 **Richiesta**
 
-La richiesta seguente elimina il criterio con l’ID di `c3863937-5d40-448d-a7be-416e538f955e`.
+La richiesta seguente elimina il criterio con ID `c3863937-5d40-448d-a7be-416e538f955e`.
 
 ```shell
 curl -X DELETE \

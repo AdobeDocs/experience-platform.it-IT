@@ -10,17 +10,17 @@ ht-degree: 0%
 
 ---
 
-# [!UICONTROL IdentityMap] gruppo di campi schema
+# [!UICONTROL Gruppo di campi schema IdentityMap]
 
 >[!NOTE]
 >
->I nomi di diversi gruppi di campi dello schema sono stati modificati. Vedi il documento su [aggiornamenti nome gruppo di campi](../name-updates.md) per ulteriori informazioni.
+>I nomi di diversi gruppi di campi dello schema sono stati modificati. Per ulteriori informazioni, consulta il documento sugli aggiornamenti del nome del gruppo di campi [](../name-updates.md).
 
-[!UICONTROL IdentityMap] è un gruppo di campi di schema standard per [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). Il gruppo di campi fornisce un singolo campo mappa che contiene un set di identità utente basate sullo spazio dei nomi.
+[!UICONTROL IdentityMap] è un gruppo di campi di schema standard per la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). Il gruppo di campi fornisce un singolo campo mappa che contiene un set di identità utente basate sullo spazio dei nomi.
 
-![Un diagramma del [!UICONTROL IdentityMap] gruppo di campi schema](../../images/field-groups/identitymap.png)
+![Diagramma del gruppo di campi dello schema [!UICONTROL IdentityMap]](../../images/field-groups/identitymap.png)
 
-Consulta la sezione sulle mappe di identità in [nozioni di base sulla composizione dello schema](../../schema/composition.md#identityMap) per ulteriori informazioni sul loro caso d’uso, compresi i vantaggi e gli svantaggi.
+Consulta la sezione sulle mappe di identità nelle [nozioni di base sulla composizione dello schema](../../schema/composition.md#identityMap) per ulteriori informazioni sul caso d&#39;uso, inclusi i vantaggi e gli svantaggi.
 
 **esempio**
 
@@ -38,4 +38,4 @@ Consulta la sezione sulle mappe di identità in [nozioni di base sulla composizi
 }
 ```
 
-Per ulteriori dettagli sul gruppo di campi, consulta [schema completo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/identitymap.schema.json) nell’archivio XDM pubblico.
+Per ulteriori dettagli sul gruppo di campi, consulta lo [schema completo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/identitymap.schema.json) nell&#39;archivio XDM pubblico.

@@ -9,9 +9,9 @@ ht-degree: 6%
 
 ---
 
-# [!UICONTROL Dettagli di implementazione] tipo di dati
+# [!UICONTROL Dettagli implementazione] tipo di dati
 
-[!UICONTROL Dettagli di implementazione] è un tipo di dati Experience Data Model (XDM) standard che descrive un’implementazione di tecnologia, ad esempio un’API o un SDK.
+[!UICONTROL Dettagli implementazione] è un tipo di dati XDM (Experience Data Model) standard che descrive un&#39;implementazione di tecnologia, ad esempio un&#39;API o un SDK.
 
 ![Struttura del tipo di dati](../images/data-types/implementation-details.png)
 

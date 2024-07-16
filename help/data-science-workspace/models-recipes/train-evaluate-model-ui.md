@@ -7,8 +7,8 @@ description: In Adobe Experience Platform Data Science Workspace, viene creato u
 exl-id: 6f674cfa-c123-46a3-80e2-9342fe687976
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1090'
-ht-degree: 2%
+source-wordcount: '1084'
+ht-degree: 1%
 
 ---
 
@@ -20,20 +20,20 @@ Questo tutorial illustra i passaggi necessari per creare, addestrare e valutare 
 
 ## Introduzione
 
-Per completare questa esercitazione, devi avere accesso a [!DNL Experience Platform]. Se non hai accesso a un’organizzazione in [!DNL Experience Platform], contattare l&#39;amministratore di sistema prima di procedere.
+Per completare questa esercitazione, devi avere accesso a [!DNL Experience Platform]. Se non si dispone dell&#39;accesso a un&#39;organizzazione in [!DNL Experience Platform], contattare l&#39;amministratore di sistema prima di procedere.
 
-Questa esercitazione richiede una ricetta esistente. Se non hai una ricetta, segui la [Importare una composizione in pacchetti nell’interfaccia utente](./import-packaged-recipe-ui.md) prima di continuare.
+Questa esercitazione richiede una ricetta esistente. Se non disponi di una ricetta, segui l&#39;esercitazione [Importa una composizione in pacchetti nell&#39;interfaccia utente](./import-packaged-recipe-ui.md) prima di continuare.
 
 ## Creare un modello
 
-Ad Experience Platform, seleziona la **[!UICONTROL Modelli]** nella barra di navigazione a sinistra, quindi seleziona la scheda Sfoglia per visualizzare i modelli esistenti. Seleziona **[!UICONTROL Crea modello]** in alto a destra nella pagina per iniziare un processo di creazione di un modello.
+Ad Experience Platform, seleziona la scheda **[!UICONTROL Modelli]** nell&#39;area di navigazione a sinistra, quindi seleziona la scheda Sfoglia per visualizzare i modelli esistenti. Seleziona **[!UICONTROL Crea modello]** in alto a destra della pagina per iniziare un processo di creazione modello.
 
 ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
-Sfoglia l’elenco delle ricette esistenti, individua e seleziona la ricetta da utilizzare per creare il modello e seleziona **[!UICONTROL Successivo]**.
+Sfoglia l&#39;elenco delle ricette esistenti, individua e seleziona la ricetta da utilizzare per creare il modello e seleziona **[!UICONTROL Successivo]**.
 ![](../images/models-recipes/train-evaluate-ui/select_recipe.png)
 
-Seleziona un set di dati di input appropriato e seleziona **[!UICONTROL Successivo]**. In questo modo verrà impostato il set di dati di addestramento di input predefinito per il modello.
+Seleziona un set di dati di input appropriato e seleziona **[!UICONTROL Avanti]**. In questo modo verrà impostato il set di dati di addestramento di input predefinito per il modello.
 ![](../images/models-recipes/train-evaluate-ui/select_dataset.png)
 
 Fornite un nome per il modello ed esaminate le configurazioni del modello di default. Le configurazioni di default venivano applicate durante la creazione della ricetta, esaminando e modificando i valori di configurazione facendo doppio clic sui valori.
@@ -42,38 +42,38 @@ Per fornire un nuovo set di configurazioni, seleziona **[!UICONTROL Carica nuova
 
 >[!NOTE]
 >
->Le configurazioni sono univoche e specifiche della ricetta prevista, il che significa che le configurazioni della ricetta di vendita al dettaglio non funzioneranno per la ricetta di Recommendations del prodotto. Consulta la [riferimento](#reference) sezione per un elenco delle configurazioni delle ricette per la vendita al dettaglio.
+>Le configurazioni sono univoche e specifiche della ricetta prevista, il che significa che le configurazioni della ricetta di vendita al dettaglio non funzioneranno per la ricetta di Recommendations del prodotto. Consulta la sezione [riferimento](#reference) per un elenco delle configurazioni delle ricette per la vendita al dettaglio.
 
 ![](../images/models-recipes/train-evaluate-ui/name_and_configure.png)
 
 ## Creare un’esecuzione del corso di formazione
 
-Ad Experience Platform, seleziona la **[!UICONTROL Modelli]** nella barra di navigazione a sinistra, quindi seleziona la scheda Sfoglia per visualizzare i modelli esistenti. Individuare e selezionare il collegamento ipertestuale associato al nome del modello che si desidera addestrare.
+Ad Experience Platform, seleziona la scheda **[!UICONTROL Modelli]** nell&#39;area di navigazione a sinistra, quindi seleziona la scheda Sfoglia per visualizzare i modelli esistenti. Individuare e selezionare il collegamento ipertestuale associato al nome del modello che si desidera addestrare.
 
 ![](../images/models-recipes/train-evaluate-ui/model-hyperlink.png)
 
-Sono elencate tutte le esecuzioni di formazione esistenti con i relativi stati di formazione correnti. Per i modelli creati utilizzando [!DNL Data Science Workspace] interfaccia utente, un’esecuzione dell’addestramento viene generata ed eseguita automaticamente utilizzando le configurazioni predefinite e il set di dati di addestramento di input.
+Sono elencate tutte le esecuzioni di formazione esistenti con i relativi stati di formazione correnti. Per i modelli creati utilizzando l&#39;interfaccia utente [!DNL Data Science Workspace], viene generata ed eseguita automaticamente un&#39;esecuzione di addestramento utilizzando le configurazioni predefinite e il set di dati di addestramento di input.
 
-Creare una nuova esecuzione dell’apprendimento selezionando **[!UICONTROL Addestra]** in alto a destra nella pagina di panoramica del modello.
+Crea una nuova esecuzione del training selezionando **[!UICONTROL Forma]** in alto a destra nella pagina di panoramica del modello.
 
 ![](../images/models-recipes/train-evaluate-ui/model_overview.png)
 
-Seleziona il set di dati di input dell’addestramento per l’esecuzione dell’addestramento, quindi seleziona **[!UICONTROL Successivo]**.
+Seleziona il set di dati di input dell&#39;addestramento per l&#39;esecuzione dell&#39;addestramento, quindi seleziona **[!UICONTROL Successivo]**.
 
 ![](../images/models-recipes/train-evaluate-ui/training_input.png)
 
-Le configurazioni predefinite fornite durante la creazione del modello vengono visualizzate, modificate e modificate di conseguenza facendo doppio clic sui valori. Seleziona **[!UICONTROL Fine]** per creare ed eseguire l’esecuzione dell’addestramento.
+Le configurazioni predefinite fornite durante la creazione del modello vengono visualizzate, modificate e modificate di conseguenza facendo doppio clic sui valori. Seleziona **[!UICONTROL Fine]** per creare ed eseguire l&#39;esecuzione del corso di formazione.
 
 >[!NOTE]
 >
->Le configurazioni sono univoche e specifiche della ricetta prevista, il che significa che le configurazioni della ricetta di vendita al dettaglio non funzioneranno per la ricetta di Recommendations del prodotto. Consulta la [riferimento](#reference) sezione per un elenco delle configurazioni delle ricette per la vendita al dettaglio.
+>Le configurazioni sono univoche e specifiche della ricetta prevista, il che significa che le configurazioni della ricetta di vendita al dettaglio non funzioneranno per la ricetta di Recommendations del prodotto. Consulta la sezione [riferimento](#reference) per un elenco delle configurazioni delle ricette per la vendita al dettaglio.
 
 ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
 
 ## Valutare il modello
 
-Ad Experience Platform, seleziona la **[!UICONTROL Modelli]** nella barra di navigazione a sinistra, quindi seleziona la scheda Sfoglia per visualizzare i modelli esistenti. Individuare e selezionare il collegamento ipertestuale associato al nome del modello che si desidera valutare.
+Ad Experience Platform, seleziona la scheda **[!UICONTROL Modelli]** nell&#39;area di navigazione a sinistra, quindi seleziona la scheda Sfoglia per visualizzare i modelli esistenti. Individuare e selezionare il collegamento ipertestuale associato al nome del modello che si desidera valutare.
 
 ![seleziona modello](../images/models-recipes/train-evaluate-ui/model-hyperlink.png)
 
@@ -83,9 +83,9 @@ La metrica MAPE (Mean Absolute Percent Error) esprime l’accuratezza come perce
 
 ![panoramica delle esecuzioni di addestramento](../images/models-recipes/train-evaluate-ui/complete_training_run.png)
 
-La metrica &quot;Precisione&quot; descrive la percentuale di istanze rilevanti rispetto al totale *recuperato* Istanze. La precisione può essere vista come la probabilità che un risultato selezionato casualmente sia corretto.
+La metrica &quot;Precisione&quot; descrive la percentuale di istanze rilevanti rispetto al totale di *istanze recuperate*. La precisione può essere vista come la probabilità che un risultato selezionato casualmente sia corretto.
 
-![più esecuzioni](../images/models-recipes/train-evaluate-ui/multiple_training_runs.png)
+![esecuzione di più esecuzioni](../images/models-recipes/train-evaluate-ui/multiple_training_runs.png)
 
 La selezione di un’esecuzione di addestramento specifica fornisce i dettagli dell’esecuzione aprendo la pagina di valutazione. Questa operazione può essere eseguita anche prima del completamento dell’esecuzione. Nella pagina di valutazione puoi visualizzare altre metriche di valutazione, parametri di configurazione e visualizzazioni specifici per l’esecuzione dell’apprendimento.
 
@@ -99,17 +99,17 @@ Gli iperparametri non possono essere addestrati e un modello deve essere ottimiz
 
 ## Passaggi successivi
 
-Questo tutorial illustra come creare, addestrare e valutare un modello in [!DNL Data Science Workspace]. Una volta raggiunto un modello ottimizzato, puoi utilizzare il modello addestrato per generare informazioni seguendo la [Valutazione di un modello nell’interfaccia utente](./score-model-ui.md) esercitazione.
+Questo tutorial illustra i passaggi necessari per creare, addestrare e valutare un modello in [!DNL Data Science Workspace]. Una volta raggiunto un modello ottimizzato, puoi utilizzare il modello addestrato per generare informazioni seguendo l&#39;esercitazione [Punteggio un modello nell&#39;interfaccia utente](./score-model-ui.md).
 
 ## Riferimenti {#reference}
 
 ### Configurazioni ricetta vendita al dettaglio
 
-Gli iperparametri determinano il comportamento di addestramento del modello, modificando gli iperparametri si avrà un impatto sulla precisione e l&#39;accuratezza del modello:
+Gli iperparametri determinano il comportamento di addestramento del modello, la modifica degli iperparametri influisce sulla precisione e sull&#39;accuratezza del modello:
 
 | Hyperparameter | Descrizione | Intervallo consigliato |
 | --- | --- | --- |
-| tasso_di_apprendimento | Il tasso di apprendimento riduce il contributo di ogni albero in base al valore learning_rate. Esiste un compromesso tra learning_rate e n_estimatori. | 0.1 |
+| tasso_di_apprendimento | Il tasso di apprendimento riduce il contributo di ogni albero in base al valore learning_rate. Esiste un compromesso tra learning_rate e n_estimatori. | 0,1 |
 | n_stimatori | Il numero di fasi di potenziamento da eseguire. Il potenziamento della sfumatura è abbastanza robusto da adattare in eccesso, quindi un numero elevato di solito si traduce in prestazioni migliori. | 100 |
 | max_depth | Profondità massima dei singoli stimatori di regressione. La profondità massima limita il numero di nodi nella struttura. Regola questo parametro per ottenere prestazioni migliori; il valore migliore dipende dall’interazione delle variabili di input. | 3 |
 

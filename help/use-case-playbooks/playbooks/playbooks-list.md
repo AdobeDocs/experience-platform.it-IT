@@ -38,8 +38,8 @@ Leggi questa pagina per una panoramica di tutti i playbook disponibili che puoi 
 | Aumentare l&#39;acquisto di prodotti durante la visita al negozio | Spingi gli acquirenti a comprare i prodotti mentre sono vicino al negozio. |
 | Aumento dell&#39;acquisto di prodotti e servizi durante il soggiorno | Spingi gli ospiti ad acquistare prodotti e servizi mentre si trovano nella proprietà. |
 | Aumentare gli Acquisti Per Gioco Singolo | Scegli i fan per aumentare gli acquisti ripetuti di singoli giochi. |
-| Sondaggio post-evento e promozione sugli incentivi | Spingi i fan a rispondere a un sondaggio post-evento offrendo un incentivo promozionale. |
-| Sondaggio post-viaggio | Incoraggia gli ospiti a rispondere a un sondaggio post-viaggio offrendo un incentivo promozionale. |
+| Sondaggio sugli eventi Post e promozione sugli incentivi | Spingi i fan a rispondere a un sondaggio post-evento offrendo un incentivo promozionale. |
+| Sondaggio Post-Trip | Incoraggia gli ospiti a rispondere a un sondaggio post-viaggio offrendo un incentivo promozionale. |
 | Promozione prodotti | Spingi gli acquirenti a comprare i prodotti durante una campagna promozionale sui prodotti in corso. |
 | Conferma di acquisto: materiale promozionale | Conferma una nuova ventola per l’acquisto di merci. |
 | Conferma acquisto: prodotto | Conferma un nuovo acquirente per l’acquisto di un prodotto. |
@@ -77,4 +77,4 @@ Leggi questa pagina per una panoramica di tutti i playbook disponibili che puoi 
 
 ## Passaggi successivi
 
-Ora che conosci i playbook disponibili, leggi questo [guida](/help/use-case-playbooks/playbooks/choose.md) per capire come iniziare a utilizzare i playbook e scegliere quello giusto nell’interfaccia utente.
+Ora che conosci i playbook disponibili, leggi questa [guida](/help/use-case-playbooks/playbooks/choose.md) per capire come iniziare a utilizzare i playbook e scegli quello giusto nell&#39;interfaccia utente.

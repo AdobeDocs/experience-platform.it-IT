@@ -13,11 +13,11 @@ ht-degree: 2%
 
 Per impostazione predefinita, tutte le destinazioni create tramite Destination SDK supportano le qualifiche storiche dei profili. Ciò significa che quando gli utenti impostano per la prima volta un flusso di dati di attivazione per le destinazioni, la prima esportazione contiene tutti i membri del pubblico che si sono mai qualificati per quel segmento.
 
-Questo comportamento è definito da `"backfillHistoricalProfileData":true` nella configurazione di destinazione.
+Questo comportamento è definito dal parametro `"backfillHistoricalProfileData":true` nella configurazione di destinazione.
 
 >[!IMPORTANT]
 >
->Le qualifiche storiche dei profili sono abilitate per tutte le destinazioni create tramite Destination SDK e `backfillHistoricalProfileData` Il parametro non è configurabile dall&#39;utente.
+>Le qualifiche di profilo cronologiche sono abilitate per tutte le destinazioni create tramite Destination SDK e il parametro `backfillHistoricalProfileData` non è configurabile dall&#39;utente.
 
 ## Tipi di integrazione supportati {#supported-integration-types}
 
@@ -40,7 +40,7 @@ Consulta la tabella seguente per informazioni dettagliate sui tipi di integrazio
 
 ## Passaggi successivi {#next-steps}
 
-Dopo aver letto questo articolo, dovresti sapere che Experienci Platform esporta automaticamente una popolazione storica di tutti i profili che si sono mai qualificati per un pubblico attivato quando il pubblico viene esportato per la prima volta nella destinazione. Questa opzione non è configurabile in Destination SDK o nell’interfaccia utente di Experienci Platform.
+Dopo aver letto questo articolo, dovresti sapere che Experience Platform esporta automaticamente una popolazione storica di tutti i profili che si sono mai qualificati per un pubblico attivato quando il pubblico viene esportato per la prima volta nella destinazione. Questa opzione non è configurabile in Destination SDK o nell’interfaccia utente di Experience Platform.
 
 Per ulteriori informazioni sugli altri componenti di destinazione, consulta i seguenti articoli:
 

@@ -125,9 +125,9 @@ Segui le istruzioni per creare una proprietà mobile.
    * **Name:** nome della proprietà.
    * **Privacy:** per impostazione predefinita, l&#39;impostazione relativa alla privacy è impostata su Opted In (Consenti), ovvero che desideri che l&#39;SDK raccolga e invii dati alle soluzioni. Se selezioni Opted Out (Nega), per impostazione predefinita l&#39;SDK NON invierà dati alle soluzioni. Se selezioni l’impostazione Unknown (Sconosciuto), l’SDK farà in modo che l’applicazione chieda prima l’autorizzazione all’utente per la raccolta e la condivisione dei dati.
 
-      >[!NOTE]
-      >
-      >Queste impostazioni possono essere ulteriormente controllate tramite API nell’app mobile.
+     >[!NOTE]
+     >
+     >Queste impostazioni possono essere ulteriormente controllate tramite API nell’app mobile.
 
    * **Use HTTPS:** scegli se tutte le comunicazioni di dati devono essere inviate tramite HTTP o HTTPS.
 

@@ -19,10 +19,10 @@ ht-degree: 0%
 
 # Creare segmenti con più entità nell’interfaccia utente di Experience Platform
 
-Il video seguente ha lo scopo di aiutarti a comprendere la creazione di segmenti dinamici. Mostra un esempio di esperienza del cliente seguita da una breve presentazione delle funzioni chiave nella [!DNL Platform] di rete. Per ulteriori informazioni sulla segmentazione con più entità, consulta la guida su [segmentazione con più entità](../multi-entity-segmentation.md).
+Il video seguente ha lo scopo di aiutarti a comprendere la creazione di segmenti dinamici. Mostra un esempio di esperienza del cliente seguita da una breve presentazione delle funzioni chiave nell&#39;interfaccia [!DNL Platform]. Per ulteriori informazioni sulla segmentazione con più entità, consulta la guida sulla [segmentazione con più entità](../multi-entity-segmentation.md).
 
 >[!NOTE]
 >
->L’interfaccia utente di Experience Platform viene aggiornata frequentemente e potrebbe essere cambiata dopo la registrazione del video. Per informazioni aggiornate, fare riferimento al [Guida al Generatore di segmenti](../ui/segment-builder.md).
+>L’interfaccia utente di Experience Platform viene aggiornata frequentemente e potrebbe essere cambiata dopo la registrazione del video. Per informazioni aggiornate, consulta la [guida di Segment Builder](../ui/segment-builder.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/32179?quality=12&learn=on)

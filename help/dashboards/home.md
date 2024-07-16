@@ -22,9 +22,9 @@ Le dashboard forniscono rapporti predefiniti sui dati dell’organizzazione e so
 
 ## Guida introduttiva alle dashboard
 
-Per visualizzare e gestire le dashboard, passa a **[!UICONTROL Dashboard]** nell’interfaccia utente di Experience Platform e seleziona la **[!UICONTROL Sfoglia]** per accedere all’inventario del dashboard.
+Per visualizzare e gestire le dashboard, passa a **[!UICONTROL Dashboard]** nell&#39;interfaccia utente di Experience Platform e seleziona la scheda **[!UICONTROL Sfoglia]** per accedere all&#39;inventario delle dashboard.
 
-Puoi anche accedere alle dashboard passando alla sezione appropriata all’interno dell’interfaccia utente della dashboard che desideri visualizzare. Per visualizzare il dashboard dei profili, ad esempio, passa a **[!UICONTROL Profili]** e seleziona la **[!UICONTROL Panoramica]** scheda.
+Puoi anche accedere alle dashboard passando alla sezione appropriata all’interno dell’interfaccia utente della dashboard che desideri visualizzare. Per visualizzare il dashboard dei profili, ad esempio, passare all&#39;area di lavoro **[!UICONTROL Profili]** e selezionare la scheda **[!UICONTROL Panoramica]**.
 
 I dati nello snapshot mostrano esattamente come vengono visualizzati nel momento specifico in cui lo snapshot è stato creato. In altre parole, l’istantanea non è un’approssimazione o un esempio dei dati e le dashboard non vengono aggiornate in tempo reale.
 
@@ -34,7 +34,7 @@ I dati nello snapshot mostrano esattamente come vengono visualizzati nel momento
 
 ## Inventario dashboard
 
-Per i passaggi dettagliati su come utilizzare il **[!UICONTROL Dashboard]** per visualizzare tutte le dashboard disponibili, consulta la sezione [guida all’inventario del dashboard](./inventory.md).
+Per i passaggi dettagliati su come utilizzare l&#39;area di lavoro **[!UICONTROL Dashboard]** per visualizzare tutte le dashboard disponibili, consulta la [guida all&#39;inventario delle dashboard](./inventory.md).
 
 ## Dashboard disponibili
 

@@ -3,8 +3,8 @@ title: Panoramica di Adobe Experience Platform Assurance
 description: Adobe Experience Platform Assurance consente di controllare, provare, simulare e convalidare il modo in cui raccogli i dati o distribuisci le esperienze all’interno delle tue applicazioni mobili.
 exl-id: e887f5f6-3db0-4521-be2d-20ef3d08e7d0
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
-workflow-type: ht
-source-wordcount: '824'
+workflow-type: tm+mt
+source-wordcount: '808'
 ht-degree: 100%
 
 ---

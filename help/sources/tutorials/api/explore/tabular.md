@@ -1,37 +1,37 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;origini;API;esplorare;servizio di flusso
-title: Esplorare un’origine tabulare utilizzando l’API del servizio Flusso
+title: Esplorare un Source tabulare utilizzando l’API del servizio Flusso
 description: Questa esercitazione utilizza l’API Servizio flusso per esplorare il contenuto e la struttura di un’origine basata su tabella.
 exl-id: 0c7a5b8a-2071-4ac2-b2d1-c5534e7c7d9c
 source-git-commit: 3bdeec8284873b8d9368f833b24e9922ed489019
 workflow-type: tm+mt
-source-wordcount: '469'
-ht-degree: 3%
+source-wordcount: '465'
+ht-degree: 6%
 
 ---
 
-# Esplora le tabelle di dati utilizzando [!DNL Flow Service] API
+# Esplora le tabelle di dati utilizzando l&#39;API [!DNL Flow Service]
 
-Questa esercitazione descrive come esplorare e visualizzare in anteprima la struttura e il contenuto delle tabelle dati utilizzando [[!DNL Flow Service]](https://www.adobe.io/experience-platform-apis/references/flow-service/) API.
+Questo tutorial illustra come esplorare e visualizzare in anteprima la struttura e il contenuto delle tabelle dati utilizzando l&#39;API [[!DNL Flow Service]](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
-> Per esplorare le tabelle dati, è necessario disporre già di un ID connessione di base valido per un&#39;origine tabulare. Se non disponi di questo ID, consulta i seguenti tutorial per i passaggi su come creare un ID connessione di base per una sorgente tabulare: <ul><li>[Advertising](../../../home.md#advertising)</li><li>[CRM](../../../home.md#customer-relationship-management)</li><li>[Customer success](../../../home.md#customer-success)</li><li>[Database](../../../home.md#database)</li><li>[E-commerce](../../../home.md#ecommerce)</li><li>[Automazione del marketing](../../../home.md#marketing-automation)</li><li>[Pagamenti](../../../home.md#payments)</li><li>[Protocoli](../../../home.md#protocols)</li></ul>
+> Per esplorare le tabelle dati, è necessario disporre già di un ID connessione di base valido per un&#39;origine tabulare. Se non disponi di questo ID, consulta i seguenti tutorial per i passaggi su come creare un ID connessione di base per una sorgente tabulare: <ul><li>[Advertising](../../../home.md#advertising)</li><li>[CRM](../../../home.md#customer-relationship-management)</li><li>[Customer success](../../../home.md#customer-success)</li><li>[Database](../../../home.md#database)</li><li>[E-commerce](../../../home.md#ecommerce)</li><li>[Automazione marketing](../../../home.md#marketing-automation)</li><li>[Pagamenti](../../../home.md#payments)</li><li>[Protocolli](../../../home.md#protocols)</li></ul>
 
 ## Introduzione
 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Sorgenti](../../../home.md): [!DNL Experience Platform] consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] servizi.
-* [Sandbox](../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che permettono di suddividere un singolo [!DNL Platform] in ambienti virtuali separati, per facilitare lo sviluppo e l’evoluzione delle applicazioni di esperienza digitale.
+* [Origini](../../../home.md): [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini e consente di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi [!DNL Platform].
+* [Sandbox](../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza di [!DNL Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 ### Utilizzo delle API di Platform
 
-Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida su [introduzione alle API di Platform](../../../../landing/api-guide.md).
+Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida in [guida introduttiva alle API di Platform](../../../../landing/api-guide.md).
 
 ## Esplora le tabelle di dati
 
-È possibile recuperare informazioni sulla struttura delle tabelle dati effettuando una richiesta di GET al [!DNL Flow Service] fornendo l’ID della connessione di base della sorgente.
+È possibile recuperare informazioni sulla struttura delle tabelle dati effettuando una richiesta di GET all&#39;API [!DNL Flow Service] e fornendo l&#39;ID connessione di base dell&#39;origine.
 
 **Formato API**
 
@@ -56,7 +56,7 @@ curl -X GET \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce un array di tabelle dall’origine. Trova la tabella da portare in Platform e prendi nota della sua `path` come è necessario fornirlo nel passaggio successivo per esaminarne la struttura.
+In caso di esito positivo, la risposta restituisce un array di tabelle dall’origine. Individua la tabella da inserire in Platform e prendi nota della relativa proprietà `path`, in quanto devi fornirla nel passaggio successivo per esaminarne la struttura.
 
 ```json
 [
@@ -79,7 +79,7 @@ In caso di esito positivo, la risposta restituisce un array di tabelle dall’or
 
 ## Inspect: struttura di una tabella
 
-Per verificare il contenuto delle tabelle dati, eseguire una richiesta di GET al [!DNL Flow Service] API quando si specifica il percorso di una tabella come parametro di query.
+Per verificare il contenuto delle tabelle dati, eseguire una richiesta di GET all&#39;API [!DNL Flow Service] specificando il percorso di una tabella come parametro di query.
 
 **Formato API**
 
@@ -105,7 +105,7 @@ curl -X GET \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce informazioni sul contenuto e sulla struttura della tabella specificata. I dettagli relativi a ciascuna colonna della tabella si trovano all’interno di elementi della sezione `columns` array.
+In caso di esito positivo, la risposta restituisce informazioni sul contenuto e sulla struttura della tabella specificata. I dettagli relativi a ciascuna colonna della tabella si trovano all&#39;interno di elementi dell&#39;array `columns`.
 
 ```json
 {
@@ -188,9 +188,9 @@ In caso di esito positivo, la risposta restituisce informazioni sul contenuto e 
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, sono state raccolte informazioni sulla struttura e sul contenuto delle tabelle di dati. Inoltre, è stato recuperato il percorso della tabella da acquisire in Platform. Puoi utilizzare queste informazioni per creare una connessione di origine e un flusso di dati per portare i dati in Platform. Consulta i seguenti tutorial per i passaggi specifici su come creare una connessione di origine e un flusso di dati utilizzando [!DNL Flow Service] API:
+Seguendo questa esercitazione, sono state raccolte informazioni sulla struttura e sul contenuto delle tabelle di dati. Inoltre, è stato recuperato il percorso della tabella da acquisire in Platform. Puoi utilizzare queste informazioni per creare una connessione di origine e un flusso di dati per portare i dati in Platform. Per i passaggi specifici su come creare una connessione di origine e un flusso di dati utilizzando l&#39;API [!DNL Flow Service], consulta i seguenti tutorial:
 
-* [Fonti pubblicitarie](../collect/advertising.md)
+* [Origini Advertising](../collect/advertising.md)
 * [Sorgenti CRM](../collect/crm.md)
 * [Origini del successo del cliente](../collect/customer-success.md)
 * [Origini del database](../collect/database-nosql.md)

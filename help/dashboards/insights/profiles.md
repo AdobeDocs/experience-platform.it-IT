@@ -5,7 +5,7 @@ exl-id: f3792076-3e01-4e26-8788-32927202a2e5
 source-git-commit: 34eb9151cc6bb8551553b0a8427e58871acb4dbb
 workflow-type: tm+mt
 source-wordcount: '1661'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -15,9 +15,9 @@ Le informazioni derivate dall’analisi del modello dati rendono i dati di Adobe
 
 Comprendi le informazioni sul tuo profilo accedendo all’SQL che li alimenta, quindi genera le tue informazioni per esplorare ulteriormente i tuoi clienti e le loro esperienze utente che compongono i tuoi profili. Trasforma i dati non elaborati in nuove informazioni fruibili utilizzando l’SQL esistente del modello dati di Real-Time CDP come ispirazione per creare query per le tue esigenze aziendali specifiche.
 
-Consulta la [Visualizza documentazione SQL](../view-sql.md) per ulteriori informazioni su come adattare le istruzioni SQL degli approfondimenti direttamente tramite l’interfaccia utente di Platform.
+Per ulteriori informazioni su come adattare le istruzioni SQL degli approfondimenti direttamente tramite l&#39;interfaccia utente di Platform, consulta la [Visualizza documentazione SQL](../view-sql.md).
 
-Le informazioni seguenti sono tutte disponibili per l&#39;utilizzo come parte del [Dashboard dei profili](../guides/profiles.md) o un personalizzato [dashboard definito dall&#39;utente](../user-defined-dashboards.md). Consulta la [panoramica sulla personalizzazione](../customize/overview.md) per istruzioni su come personalizzare il dashboard o [creare e modificare nuovi widget](../customize/custom-widgets.md) nella libreria widget e [dashboard definito dall&#39;utente](../user-defined-dashboards.md#create-widget).
+Tutte le informazioni seguenti sono disponibili per l&#39;utilizzo come parte del [dashboard dei profili](../guides/profiles.md) o di un [dashboard personalizzato definito dall&#39;utente](../user-defined-dashboards.md). Consulta la [panoramica sulla personalizzazione](../customize/overview.md) per istruzioni su come personalizzare il dashboard o [creare e modificare nuovi widget](../customize/custom-widgets.md) nella libreria di widget e [dashboard definito dall&#39;utente](../user-defined-dashboards.md#create-widget).
 
 ## Sovrapposizione del pubblico con criterio di unione {#audience-overlap-by-merge-policy}
 
@@ -64,7 +64,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-Consulta la [Documentazione del widget Sovrapposizione pubblico per criterio di unione](../guides/profiles.md#audience-overlap-by-merge-policy) per informazioni sull’aspetto e le funzionalità di questa informazione.
+Per informazioni sull&#39;aspetto e le funzionalità di questa informazione, consulta la [documentazione sulla sovrapposizione del pubblico da parte dei widget dei criteri di unione](../guides/profiles.md#audience-overlap-by-merge-policy).
 
 ## Rapporto di sovrapposizione pubblico {#audience-overlap-report}
 
@@ -131,7 +131,7 @@ SELECT source_segment_name,
 
 +++
 
-Consulta la [Documentazione del widget del rapporto di sovrapposizione pubblico](../guides/profiles.md#audience-overlap-report) per informazioni sull’aspetto e le funzionalità di questa informazione.
+Per informazioni sull&#39;aspetto e le funzionalità di questa informazione, consulta la [documentazione sui widget per report di sovrapposizione pubblico](../guides/profiles.md#audience-overlap-report).
 
 ## Tipi di pubblico (conteggio) {#audiences}
 
@@ -159,7 +159,7 @@ SELECT count(DISTINCT a.segment_id) count_of_segments
 
 +++
 
-Consulta la [Documentazione dei widget Pubblico](../guides/profiles.md#audiences) per informazioni sull’aspetto e le funzionalità di questa informazione.
+Consulta la [documentazione del widget Tipi di pubblico](../guides/profiles.md#audiences) per informazioni sull&#39;aspetto e le funzionalità di questa informazione.
 
 ## Tipi di pubblico mappati allo stato di destinazione {#audiences-mapped-to-destination-status}
 
@@ -191,7 +191,7 @@ SELECT COUNT(DISTINCT (y.segment_id)) AS count_mapped_segments,
 
 +++
 
-Consulta la [Pubblico mappato alla documentazione del widget di stato della destinazione](../guides/profiles.md#audiences-mapped-to-destination-status) per informazioni sull’aspetto e le funzionalità di questa informazione.
+Per informazioni sull&#39;aspetto e le funzionalità di questa informazione, consulta la [documentazione sui tipi di pubblico mappati al widget di stato della destinazione](../guides/profiles.md#audiences-mapped-to-destination-status).
 
 ## Dimensione pubblico {#audiences-size}
 
@@ -224,9 +224,9 @@ SELECT qsaccel.profile_agg.adwh_fact_profile_by_segment_trendlines.date_key,
 
 +++
 
-Consulta la [Documentazione del widget dimensione pubblico](../guides/profiles.md#audiences-size) per informazioni sull’aspetto e le funzionalità di questa informazione.
+Per informazioni sull&#39;aspetto e le funzionalità di questa informazione, consulta la [documentazione sui widget dimensione pubblico](../guides/profiles.md#audiences-size).
 
-## Distribuzione dei punteggi in IA per l’analisi dei clienti {#customer-ai-distribution-of-scores}
+## Distribuzione dei punteggi tramite IA analisi clienti {#customer-ai-distribution-of-scores}
 
 Domande a cui questa informazione ha risposto:
 
@@ -361,9 +361,9 @@ SELECT b.model_name,
 
 +++
 
-Consulta la [Documentazione del widget Distribuzione di punteggi in IA per l’analisi dei clienti](../guides/profiles.md#customer-ai-distribution-of-scores) per informazioni sull’aspetto e le funzionalità di questa informazione.
+Per informazioni sull&#39;aspetto e le funzionalità di questa informazione, consulta la [documentazione sulla distribuzione dei punteggi da parte di IA per l&#39;analisi dei clienti](../guides/profiles.md#customer-ai-distribution-of-scores).
 
-## Riepilogo punteggio di Customer AI {#customer-ai-scoring-summary}
+## Riepilogo del punteggio di IA per l’analisi dei clienti {#customer-ai-scoring-summary}
 
 Domande a cui questa informazione ha risposto:
 
@@ -402,13 +402,13 @@ SELECT model_name,
 
 +++
 
-Consulta la [Documentazione del widget di riepilogo del punteggio di IA per l’analisi dei clienti](../guides/profiles.md#customer-ai-scoring-summary) per informazioni sull’aspetto e le funzionalità di questa informazione.
+Per informazioni sull&#39;aspetto e le funzionalità di questa informazione, consulta la [documentazione del widget di riepilogo del punteggio di Customer AI](../guides/profiles.md#customer-ai-scoring-summary).
 
 ## Sovrapposizione di identità {#identity-overlap}
 
 Domande a cui questa informazione ha risposto:
 
-- Qual è l’intersezione comune tra [!UICONTROL Tipo di identità A] e [!UICONTROL Tipo di identità B]?
+- Qual è l&#39;intersezione comune tra [!UICONTROL Tipo di identità A] e [!UICONTROL Tipo di identità B]?
 - Come posso perfezionare i tipi di pubblico dei clienti in base alla sovrapposizione di tipi di identità specifici per migliorare le strategie di marketing mirate?
 - Quali insight possono essere ottenuti valutando le prestazioni della campagna all’interno delle aree intersecanti?
 - Utilizzando questa informazione sulle prestazioni della campagna, come possono essere ottimizzate le attività di marketing future?
@@ -459,7 +459,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-Consulta la [Documentazione del widget di sovrapposizione identità](../guides/profiles.md#identity-overlap) per informazioni sull’aspetto e le funzionalità di questa informazione.
+Per informazioni sull&#39;aspetto e le funzionalità di questa informazione, consulta la [documentazione sui widget di sovrapposizione identità](../guides/profiles.md#identity-overlap).
 
 ## Conteggio dei profili {#profile-count}
 
@@ -481,9 +481,9 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
   GROUP BY qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name;
 ```
 
-Informazioni complete sull’aspetto e le funzionalità di questa informazione sono disponibili nella sezione [Guida del widget Conteggio profili](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count).
+Informazioni complete sull&#39;aspetto e sulle funzionalità di questa informazione sono disponibili nella [Guida del widget Conteggio profili](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count).
 
-Consulta la [Documentazione del widget di conteggio profili](../guides/profiles.md#profile-count) per informazioni sull’aspetto e le funzionalità di questa informazione.
+Consulta la [documentazione del widget del conteggio dei profili](../guides/profiles.md#profile-count) per informazioni sull&#39;aspetto e le funzionalità di questa informazione.
 
 ## Modifica del conteggio dei profili {#profile-count-change}
 
@@ -528,7 +528,7 @@ SELECT (sum(count_of_profiles) - sum(count_of_profiles_days_ago)) profiles_added
 
 +++
 
-Consulta la [Documentazione del widget di modifica conteggio profili](../guides/profiles.md#profile-count-change) per informazioni sull’aspetto e le funzionalità di questa informazione.
+Consulta la [documentazione del widget di modifica del conteggio dei profili](../guides/profiles.md#profile-count-change) per informazioni sull&#39;aspetto e le funzionalità di questa informazione.
 
 ## Tendenza modifica conteggio profili {#profile-count-change-trend}
 
@@ -562,9 +562,9 @@ SELECT date_key,
 
 +++
 
-Consulta la [Documentazione del widget tendenza modifica conteggio profili](../guides/profiles.md#profile-count-change-trend) per informazioni sull’aspetto e le funzionalità di questa informazione.
+Consulta la [documentazione del widget della tendenza di modifica del conteggio dei profili](../guides/profiles.md#profile-count-change-trend) per informazioni sull&#39;aspetto e le funzionalità di questa informazione.
 
-## Tendenza conteggio profili {#profile-count-trend}
+## Tendenza conteggio dei profili {#profile-count-trend}
 
 Domande a cui questa informazione ha risposto:
 
@@ -593,7 +593,7 @@ SELECT date_key,
 
 +++
 
-Consulta la [Documentazione del widget tendenza conteggio profili](../guides/profiles.md#profile-count-trend) per informazioni sull’aspetto e le funzionalità di questa informazione.
+Consulta la [documentazione del widget di tendenza del conteggio dei profili](../guides/profiles.md#profile-count-trend) per informazioni sull&#39;aspetto e le funzionalità di questa informazione.
 
 ## Profili per identità {#profiles-by-identity}
 
@@ -622,7 +622,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-Consulta la [Documentazione dei profili per widget identità](../guides/profiles.md#profiles-by-identity) per informazioni sull’aspetto e le funzionalità di questa informazione.
+Per informazioni sull&#39;aspetto e le funzionalità di questa informazione, consulta la [documentazione sui profili per widget identità](../guides/profiles.md#profiles-by-identity).
 
 ## Tendenza di modifica del conteggio dei profili {#profiles-count-change-trend}
 
@@ -656,7 +656,7 @@ SELECT date_key,
 
 +++
 
-Consulta la [Documentazione del widget tendenza modifica conteggio profili](../guides/profiles.md#profiles-count-change-trend) per informazioni sull’aspetto e le funzionalità di questa informazione.
+Per informazioni sull&#39;aspetto e le funzionalità di questa informazione, consulta la [documentazione del widget della tendenza di modifica del conteggio dei profili](../guides/profiles.md#profiles-count-change-trend).
 
 ## Tendenza di modifica del conteggio dei profili per identità {#profiles-count-change-trend-by-identity}
 
@@ -697,7 +697,7 @@ SELECT date_key,
 
 +++
 
-Consulta la [Tendenza di modifica del conteggio dei profili per documentazione del widget identità](../guides/profiles.md#profiles-count-change-trend-by-identity) per informazioni sull’aspetto e le funzionalità di questa informazione.
+Per informazioni sull&#39;aspetto e le funzionalità di questa informazione, consulta la [documentazione sulla modifica del conteggio dei profili in base al widget identità](../guides/profiles.md#profiles-count-change-trend-by-identity).
 
 ## Profili a identità singola {#single-identity-profiles}
 
@@ -722,7 +722,7 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 +++
 
-Consulta la [Documentazione del widget Profili di identità singola](../guides/profiles.md#single-identity-profiles) per informazioni sull’aspetto e le funzionalità di questa informazione.
+Per informazioni sull&#39;aspetto e le funzionalità di questa informazione, consulta la [documentazione sui widget per profili di identità singoli](../guides/profiles.md#single-identity-profiles).
 
 ## Profili di identità singola per identità {#single-identity-profiles-by-identity}
 
@@ -749,7 +749,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-Consulta la [Documentazione dei profili di identità singola per widget identità](../guides/profiles.md#single-identity-profiles-by-identity) per informazioni sull’aspetto e le funzionalità di questa informazione.
+Per informazioni sull&#39;aspetto e le funzionalità di questa informazione, consulta la [documentazione sui profili di identità singola per widget identità](../guides/profiles.md#single-identity-profiles-by-identity).
 
 ## Profili non segmentati {#unsegmented-profiles}
 
@@ -773,12 +773,12 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 +++
 
-Consulta la [Documentazione dei widget di profili non segmentati](../guides/profiles.md#unsegmented-profiles) per informazioni sull’aspetto e le funzionalità di questa informazione.
+Per informazioni sull&#39;aspetto e le funzionalità di questa informazione, consulta la [documentazione sui widget di profili non segmentati](../guides/profiles.md#unsegmented-profiles).
 
 ## Passaggi successivi
 
 Una volta letto questo documento, potrai comprendere le istruzioni SQL che generano informazioni approfondite sul dashboard e quali sono le domande più comuni che vengono risolte dall’analisi. Ora puoi modificare e ripetere le istruzioni SQL per generare informazioni personalizzate.
 
-Consulta la [Visualizza documentazione SQL](../view-sql.md) per ulteriori informazioni su come adattare le istruzioni SQL degli approfondimenti direttamente tramite l’interfaccia utente di Platform.
+Per ulteriori informazioni su come adattare l&#39;istruzione SQL delle informazioni direttamente tramite l&#39;interfaccia utente di Platform, vedere la [Visualizza documentazione SQL](../view-sql.md).
 
-Puoi anche leggere e comprendere il codice SQL che genera informazioni approfondite per [Tipi di pubblico](./audiences.md), [Profili account](./account-profiles.md), e [Destinazioni](./destinations.md) dashboard.
+È inoltre possibile leggere e comprendere il linguaggio SQL che genera informazioni approfondite per le [dashboard Tipi di pubblico](./audiences.md), [Profili account](./account-profiles.md) e [Destinazioni](./destinations.md).

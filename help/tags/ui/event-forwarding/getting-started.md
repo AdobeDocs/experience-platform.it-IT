@@ -5,8 +5,8 @@ feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
 source-git-commit: 05170986263b6eed2d19a65e34f70dc28eb8ba2f
 workflow-type: tm+mt
-source-wordcount: '870'
-ht-degree: 77%
+source-wordcount: '864'
+ht-degree: 76%
 
 ---
 
@@ -31,7 +31,7 @@ Dopo aver inviato i dati a Edge Network, è possibile attivare le soluzioni Adob
 
 * Adobe Real-Time CDP Connections, Prime o Ultimate (contatta il team del tuo account Adobe per informazioni sui prezzi)
 * Inoltro di eventi in Adobe Experience Platform
-* Adobe Experience Platform Web SDK, Mobile SDK o Edge Network Server API configurate per inviare dati a Edge Network
+* Adobe Experience Platform Web SDK, Mobile SDK o Edge Network Server API configurati per inviare dati ad Edge Network
 * Mappare i dati su Experience Data Model (XDM) (la mappatura può essere eseguita utilizzando i tag)
 
 ## Creare uno schema XDM
@@ -42,7 +42,7 @@ Crea lo schema in Adobe Experience Platform.
 
 1. Assegna allo schema un nome e una breve descrizione.
 
-1. Puoi aggiungere il gruppo di campi &quot;Dettagli web ExperienceEvent&quot; selezionando **[!UICONTROL Aggiungi]** accanto a **[!UICONTROL Gruppi di campi]**.
+1. Puoi aggiungere il gruppo di campi &quot;Dettagli Web ExperienceEvent&quot; selezionando **[!UICONTROL Aggiungi]** accanto a **[!UICONTROL Gruppi di campi]**.
 
    >[!NOTE]
    >
@@ -54,7 +54,7 @@ Per ulteriori informazioni sugli schemi, consulta la [guida del sistema Experien
 
 ## Creare una proprietà di inoltro degli eventi
 
-In **[!UICONTROL Tag]** workspace, crea una proprietà di tipo **[!UICONTROL Bordo]**.
+Nell&#39;area di lavoro **[!UICONTROL Tag]** creare una proprietà di tipo **[!UICONTROL Edge]**.
 
 1. Seleziona **[!UICONTROL Nuova proprietà]**.
 
@@ -65,7 +65,7 @@ In **[!UICONTROL Tag]** workspace, crea una proprietà di tipo **[!UICONTROL Bor
 1. Seleziona **[!UICONTROL Salva]**.
 
 Dopo aver creato la proprietà, passa alla scheda **[!UICONTROL Ambienti]** per la nuova proprietà e annota
-gli ID dell’ambiente. Se l’organizzazione Adobe utilizzata nel flusso di dati è diversa dall’organizzazione Adobe utilizzata nell’inoltro degli eventi, puoi copiare l’ID ambiente da **[!UICONTROL Ambienti]** e incollarlo durante la creazione di un flusso di dati. In alternativa, è possibile selezionare l’ambiente da un menu a discesa.
+gli ID dell’ambiente. Se l&#39;organizzazione Adobe utilizzata nel flusso di dati è diversa dall&#39;organizzazione Adobe utilizzata nell&#39;inoltro degli eventi, è possibile copiare l&#39;ID ambiente dalla scheda **[!UICONTROL Ambienti]** e incollarlo durante la creazione di un flusso di dati. In alternativa, è possibile selezionare l’ambiente da un menu a discesa.
 
 ## Creare un flusso di dati
 
@@ -82,7 +82,7 @@ La descrizione è utile per identificare le configurazioni, qualora ne siano ele
 
 Quindi configura Edge Network per inviare i dati all’inoltro di eventi e ad altri prodotti Adobe.
 
-1. In **[!UICONTROL Flussi di dati]** Workspace, seleziona la proprietà creata.
+1. Nell&#39;area di lavoro **[!UICONTROL Datastreams]** selezionare la proprietà creata.
 
 1. Seleziona l&#39;ambiente di sviluppo, di produzione oppure di gestione temporanea.
 
@@ -98,9 +98,9 @@ Dopo la configurazione, annota gli ID ambiente per la nuova proprietà.
 
 ## Configura l’estensione Platform Web SDK per inviare dati allo stream di dati creato in precedenza
 
-Crea la proprietà in **[!UICONTROL Tag]** , quindi vai a **[!UICONTROL Estensioni]** e seleziona l’estensione Experienci Platform Web SDK dal catalogo per configurarla e installarla.
+Crea la tua proprietà nell&#39;area di lavoro **[!UICONTROL Tag]**, quindi passa a **[!UICONTROL Estensioni]** e seleziona l&#39;estensione Experience Platform Web SDK dal catalogo per configurarla e installarla.
 
-Consulta la [Documentazione dell’estensione Web SDK](../../extensions/client/web-sdk/overview.md) per informazioni dettagliate sulle opzioni di configurazione.
+Per informazioni dettagliate sulle opzioni di configurazione, consulta la [documentazione dell&#39;estensione Web SDK](../../extensions/client/web-sdk/overview.md).
 
 ## Creare una regola di tag per inviare dati all’SDK per web di Platform
 

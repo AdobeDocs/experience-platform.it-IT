@@ -14,8 +14,8 @@ ht-degree: 0%
 
 L’interfaccia utente di Adobe Experience Platform fornisce una dashboard attraverso la quale puoi visualizzare informazioni importanti sui tipi di pubblico, acquisite durante un’istantanea giornaliera.
 
-Per istruzioni dettagliate su come accedere e interagire con la dashboard dei tipi di pubblico nell’interfaccia utente, nonché per ulteriori informazioni sulle metriche disponibili visualizzate nella dashboard, visita la [guida della dashboard di audiences](../../dashboards/guides/audiences.md).
+Per istruzioni dettagliate su come accedere e interagire con la dashboard dei tipi di pubblico nell&#39;interfaccia utente, nonché per ulteriori informazioni sulle metriche disponibili visualizzate nella dashboard, visita la [guida della dashboard dei tipi di pubblico](../../dashboards/guides/audiences.md).
 
-Per una panoramica di tutte le funzioni del dashboard nell’interfaccia utente di Experience Platform, leggi innanzitutto [panoramica delle dashboard](../../dashboards/home.md).
+Per una panoramica di tutte le funzionalità del dashboard nell&#39;interfaccia utente di Experience Platform, leggere la [panoramica dei dashboard](../../dashboards/home.md).
 
-![Dashboard dei tipi di pubblico. Vengono visualizzati tre widget: il widget dimensione pubblico, il widget tendenza modifica dimensione pubblico e i profili per widget identità.](../../dashboards/images/segments/dashboard-overview.png)
+![Dashboard del pubblico. Vengono visualizzati tre widget: il widget dimensione pubblico, il widget tendenza modifica dimensione pubblico e i profili per widget identità.](../../dashboards/images/segments/dashboard-overview.png)

@@ -15,7 +15,7 @@ ht-degree: 90%
 >
 >Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
-L’eliminazione di una risorsa corrisponde alla rimozione permanente da Adobe Experience Platform. Se desideri rimuovere una risorsa da una libreria di tag specifica, ma desideri comunque che sia disponibile per l’utilizzo in altre librerie, consulta la guida su [rimozione di risorse da una libreria](remove-resources-from-library.md).
+L’eliminazione di una risorsa corrisponde alla rimozione permanente da Adobe Experience Platform. Se si desidera rimuovere una risorsa da una libreria di tag specifica, ma si desidera comunque che la risorsa sia disponibile per l&#39;utilizzo in altre librerie, vedere la guida in [rimozione di risorse da una libreria](remove-resources-from-library.md).
 
 Puoi eliminare elementi dati, regole, estensioni, host, ambienti e proprietà. Una volta eliminate, queste risorse non sono recuperabili.
 

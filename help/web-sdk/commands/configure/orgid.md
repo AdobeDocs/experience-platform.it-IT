@@ -1,7 +1,8 @@
 ---
 title: orgId
 description: La proprietà orgId è una stringa che indica all’Adobe a quale organizzazione vengono inviati i dati.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+exl-id: 0e04e85a-800c-4927-a165-80a5a578f4c2
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '232'
 ht-degree: 0%
@@ -10,31 +11,31 @@ ht-degree: 0%
 
 # `orgId`
 
-Il `orgId` proprietà è una stringa che indica all’Adobe a quale organizzazione vengono inviati i dati. **Questa proprietà è obbligatoria per tutti i dati inviati tramite Web SDK.**
+La proprietà `orgId` è una stringa che indica all&#39;Adobe a quale organizzazione vengono inviati i dati. **Questa proprietà è obbligatoria per tutti i dati inviati tramite Web SDK.**
 
 Per individuare `orgID`:
 
-1. Accedi a [experience.adobe.com](https://experience.adobe.com) utilizzando le credenziali di Adobe ID.
-1. In qualsiasi punto del Adobe Experience Cloud, premere **`[Ctrl]`** + **`[I]`**. A [!UICONTROL Debugger dati utente] viene visualizzata la finestra.
-1. Clic **[!UICONTROL Copia]** ![Copia](../../assets/copy.png) accanto al [!UICONTROL ID organizzazione corrente], oppure fai clic su **[!UICONTROL Organizzazioni assegnate]** per visualizzare altri ID organizzazione a cui puoi accedere.
-1. Una volta individuate le informazioni desiderate, fare clic su **[!UICONTROL Chiudi]**.
+1. Accedi a [experience.adobe.com](https://experience.adobe.com) utilizzando le credenziali Adobe ID.
+1. In qualsiasi punto del Adobe Experience Cloud, premere **`[Ctrl]`** + **`[I]`**. Viene visualizzata una finestra di [!UICONTROL User Data Debugger].
+1. Fai clic su **[!UICONTROL Copia]** ![Copia](../../assets/copy.png) accanto all&#39;[!UICONTROL ID organizzazione corrente] oppure fai clic sulla scheda **[!UICONTROL Organizzazioni assegnate]** per visualizzare altri ID organizzazione a cui puoi accedere.
+1. Dopo aver individuato le informazioni desiderate, fare clic su **[!UICONTROL Chiudi]**.
 
-Gli ID organizzazione sono sempre stringhe alfanumeriche di 24 caratteri e terminano sempre con `@AdobeOrg`.
+Gli ID organizzazione sono sempre stringhe alfanumeriche di 24 caratteri e terminano sempre in `@AdobeOrg`.
 
-## Configurare un `orgID` utilizzo dell’estensione tag Web SDK
+## Configurare `orgID` utilizzando l&#39;estensione tag Web SDK
 
-Inserisci l’ID organizzazione nel **[!UICONTROL ID organizzazione IMS]** campo di testo quando [configurazione dell’estensione tag](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+Immetti l&#39;ID organizzazione nel campo di testo **[!UICONTROL ID organizzazione IMS]** quando [configuri l&#39;estensione tag](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
-1. Accedi a [experience.adobe.com](https://experience.adobe.com) utilizzando le credenziali di Adobe ID.
-1. Accedi a **[!UICONTROL Raccolta dati]** > **[!UICONTROL Tag]**.
+1. Accedi a [experience.adobe.com](https://experience.adobe.com) utilizzando le credenziali Adobe ID.
+1. Passa a **[!UICONTROL Raccolta dati]** > **[!UICONTROL Tag]**.
 1. Seleziona la proprietà tag desiderata.
-1. Accedi a **[!UICONTROL Estensioni]**, quindi fai clic su **[!UICONTROL Configura]** il [!UICONTROL Adobe Experience Platform Web SDK] Card.
-1. Inserisci l’ID organizzazione desiderato nella [!UICONTROL ID organizzazione IMS] campo di testo nella parte superiore.
-1. Clic **[!UICONTROL Salva]**, quindi pubblica le modifiche.
+1. Passa a **[!UICONTROL Estensioni]**, quindi fai clic su **[!UICONTROL Configura]** nella scheda [!UICONTROL Adobe Experience Platform Web SDK].
+1. Inserisci l&#39;ID organizzazione desiderato nel campo di testo [!UICONTROL ID organizzazione IMS] in alto.
+1. Fai clic su **[!UICONTROL Salva]**, quindi pubblica le modifiche.
 
-## Configurare un `orgID` utilizzo della libreria JavaScript dell’SDK web
+## Configurare `orgID` utilizzando la libreria JavaScript dell&#39;SDK Web
 
-Imposta il `orgId` stringa durante l&#39;esecuzione di `configure` comando. Se ometti questa proprietà durante la configurazione dell’SDK per web, l’SDK per web genera un errore della console e i dati non vengono inviati a Adobe.
+Impostare la stringa `orgId` durante l&#39;esecuzione del comando `configure`. Se ometti questa proprietà durante la configurazione dell’SDK per web, l’SDK per web genera un errore della console e i dati non vengono inviati a Adobe.
 
 ```js
 alloy("configure", {

@@ -13,9 +13,9 @@ ht-degree: 8%
 
 >[!IMPORTANT]
 >
->L’etichettatura basata su schema fa parte di [controllo degli accessi basato su attributi](../../access-control/abac/overview.md), attualmente disponibile in versione limitata per i clienti del settore sanitario negli Stati Uniti. Questa funzionalità sarà disponibile per tutti i clienti di Adobe Real-time Customer Data Platform una volta rilasciata completamente.
+>L&#39;etichettatura basata su schema fa parte di [controllo dell&#39;accesso basato su attributi](../../access-control/abac/overview.md), attualmente disponibile in una versione limitata per i clienti del settore sanitario negli Stati Uniti. Questa funzionalità sarà disponibile per tutti i clienti di Adobe Real-time Customer Data Platform una volta rilasciata completamente.
 
-Tutti i dati inseriti in Adobe Experience Platform sono vincolati dagli schemi Experience Data Model (XDM). Questi dati possono essere soggetti a restrizioni di utilizzo definite dalla tua organizzazione o da normative legali. Per questo motivo, Platform ti consente di limitare l’utilizzo di determinati set di dati e campi tramite l’utilizzo di [etichette di utilizzo dei dati](../../data-governance/labels/overview.md).
+Tutti i dati inseriti in Adobe Experience Platform sono vincolati dagli schemi Experience Data Model (XDM). Questi dati possono essere soggetti a restrizioni di utilizzo definite dalla tua organizzazione o da normative legali. Per questo motivo, Platform ti consente di limitare l&#39;utilizzo di determinati set di dati e campi tramite l&#39;utilizzo di [etichette di utilizzo dati](../../data-governance/labels/overview.md).
 
 Un’etichetta applicata a un campo schema indica i criteri di utilizzo che si applicano ai dati contenuti in quel campo specifico.
 
@@ -29,9 +29,9 @@ Questo tutorial illustra i passaggi necessari per aggiungere etichette a uno sch
 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM) System]](../home.md): il quadro standardizzato mediante il quale [!DNL Experience Platform] organizza i dati sull’esperienza del cliente.
-   * [Editor schema](../ui/overview.md): scopri come creare e gestire schemi e altre risorse nell’interfaccia utente di Platform.
-* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): fornisce l’infrastruttura per applicare le restrizioni di utilizzo dei dati sulle operazioni di Platform, utilizzando criteri che definiscono quali azioni di marketing possono o non possono essere eseguite sui dati con etichetta.
+* [[!DNL Experience Data Model (XDM) System]](../home.md): framework standardizzato tramite il quale [!DNL Experience Platform] organizza i dati sull&#39;esperienza del cliente.
+   * [Editor schema](../ui/overview.md): scopri come creare e gestire schemi e altre risorse nell&#39;interfaccia utente di Platform.
+* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): fornisce l&#39;infrastruttura per applicare le restrizioni di utilizzo dei dati sulle operazioni di Platform, utilizzando criteri che definiscono quali azioni di marketing possono o non possono essere eseguite sui dati con etichetta.
 
 ## Selezionare uno schema o un campo a cui aggiungere etichette {#select-schema-field}
 
@@ -40,56 +40,56 @@ Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Expe
 >title="Modificare le etichette di governance"
 >abstract="Applica un’etichetta a un campo dello schema per indicare i criteri di utilizzo applicati ai dati contenuti in quel campo specifico."
 
-Per iniziare ad aggiungere le etichette, devi prima [seleziona uno schema esistente da modificare](../ui/resources/schemas.md#edit) o [crea un nuovo schema](../ui/resources/schemas.md#create) per visualizzarne la struttura nell&#39;Editor di schema.
+Per iniziare ad aggiungere le etichette, devi prima [selezionare uno schema esistente da modificare](../ui/resources/schemas.md#edit) o [creare un nuovo schema](../ui/resources/schemas.md#create) per visualizzarne la struttura nell&#39;Editor di schema.
 
-Per modificare le etichette di un singolo campo, è possibile selezionare il campo nell&#39;area di lavoro e quindi selezionare **[!UICONTROL Gestisci accesso]** nella barra a destra.
+Per modificare le etichette di un singolo campo, seleziona il campo nell&#39;area di lavoro, quindi seleziona **[!UICONTROL Gestisci accesso]** nella barra a destra.
 
 >[!IMPORTANT]
 >
 >È possibile applicare un massimo di 300 etichette a qualsiasi schema.
 
-![Seleziona un campo dall’area di lavoro dell’Editor di schema](../images/tutorials/labels/manage-access.png)
+![Selezionare un campo dall&#39;area di lavoro dell&#39;Editor schema](../images/tutorials/labels/manage-access.png)
 
-È inoltre possibile selezionare **[!UICONTROL Etichette]** , scegli il campo desiderato dall’elenco e seleziona **[!UICONTROL Applica etichette di accesso e governance dei dati]** nella barra a destra.
+Puoi anche selezionare la scheda **[!UICONTROL Etichette]**, scegliere il campo desiderato dall&#39;elenco e selezionare **[!UICONTROL Applica etichette di accesso e governance dei dati]** nella barra a destra.
 
-![Seleziona un campo dal [!UICONTROL Etichette] scheda](../images/tutorials/labels/select-field-on-labels-tab.png)
+![Seleziona un campo dalla scheda [!UICONTROL Etichette]](../images/tutorials/labels/select-field-on-labels-tab.png)
 
-Per modificare le etichette per l&#39;intero schema, nel **[!UICONTROL Etichette]** , seleziona la casella di controllo sotto l’icona del filtro. In questo modo viene selezionato ogni campo disponibile nello schema. Quindi, seleziona **[!UICONTROL Applica etichette di accesso e governance dei dati]** nella barra a destra.
+Per modificare le etichette per l&#39;intero schema, nella scheda **[!UICONTROL Etichette]**, seleziona la casella di controllo sotto l&#39;icona del filtro. In questo modo viene selezionato ogni campo disponibile nello schema. Quindi, seleziona **[!UICONTROL Applica etichette di accesso e governance dei dati]** nella barra a destra.
 
-![Seleziona il nome dello schema da [!UICONTROL Etichette] scheda](../images/tutorials/labels/select-schema-on-labels-tab.png)
+![Selezionare il nome dello schema dalla scheda [!UICONTROL Etichette]](../images/tutorials/labels/select-schema-on-labels-tab.png)
 
 >[!NOTE]
 >
->Quando si tenta per la prima volta di modificare le etichette di uno schema o di un campo, viene visualizzato un messaggio di liberatoria che spiega in che modo l’utilizzo delle etichette influisce sulle operazioni a valle a seconda dei criteri dell’organizzazione. Seleziona **[!UICONTROL Procedi]** per continuare la modifica.
+>Quando si tenta per la prima volta di modificare le etichette di uno schema o di un campo, viene visualizzato un messaggio di liberatoria che spiega in che modo l’utilizzo delle etichette influisce sulle operazioni a valle a seconda dei criteri dell’organizzazione. Seleziona **[!UICONTROL Procedi]** per continuare a modificare.
 >
->![Dichiarazione di utilizzo etichetta](../images/tutorials/labels/disclaimer.png)
+>![Dichiarazione di non responsabilità per l&#39;utilizzo dell&#39;etichetta](../images/tutorials/labels/disclaimer.png)
 
 ## Modifica le etichette per lo schema o il campo {#edit-labels}
 
 Viene visualizzata una finestra di dialogo che consente di modificare le etichette per il campo selezionato. Se hai selezionato un singolo campo di tipo oggetto, la barra a destra elenca i sottocampi a cui verranno propagate le etichette applicate.
 
-![Viene evidenziata la finestra di dialogo Applica etichette di accesso e governance dei dati con i campi selezionati.](../images/tutorials/labels/edit-labels.png)
+![Finestra di dialogo Applica etichette di accesso e governance dei dati con i campi selezionati evidenziati.](../images/tutorials/labels/edit-labels.png)
 
 >[!NOTE]
 >
 >Se stai modificando i campi per l’intero schema, la barra a destra non elenca i campi applicabili e visualizza invece il nome dello schema.
 
-Utilizza l’elenco visualizzato per selezionare le etichette da aggiungere allo schema o al campo. Quando si selezionano le etichette, **[!UICONTROL Etichette applicate]** La sezione viene aggiornata per mostrare le etichette selezionate finora.
+Utilizza l’elenco visualizzato per selezionare le etichette da aggiungere allo schema o al campo. Man mano che le etichette vengono scelte, la sezione **[!UICONTROL Etichette applicate]** viene aggiornata per mostrare le etichette selezionate finora.
 
-![La finestra di dialogo Applica etichette di accesso e governance dei dati con le etichette applicate evidenziate.](../images/tutorials/labels/applied-labels.png)
+![Finestra di dialogo Applica etichette di accesso e governance dei dati con le etichette applicate evidenziate.](../images/tutorials/labels/applied-labels.png)
 
-Per filtrare le etichette visualizzate per tipo, seleziona la categoria desiderata nella barra a sinistra. Per creare una nuova etichetta personalizzata, seleziona **[!UICONTROL Crea etichetta]**.
+Per filtrare le etichette visualizzate per tipo, seleziona la categoria desiderata nella barra a sinistra. Per creare una nuova etichetta personalizzata, selezionare **[!UICONTROL Crea etichetta]**.
 
-![La finestra di dialogo Applica etichette di accesso e governance dei dati con un filtro per il tipo di etichetta applicato e l’opzione Crea etichetta evidenziata.](../images/tutorials/labels/filter-and-create-custom.png)
+![Finestra di dialogo Applica etichette di accesso e governance dei dati con filtro di tipo etichetta applicato ed etichetta Crea evidenziata.](../images/tutorials/labels/filter-and-create-custom.png)
 
-Una volta che sei soddisfatto delle etichette scelte, seleziona **[!UICONTROL Salva]** per applicarli al campo o allo schema.
+Una volta ottenute le etichette desiderate, selezionare **[!UICONTROL Salva]** per applicarle al campo o allo schema.
 
-![La finestra di dialogo Applica etichette di accesso e governance dei dati con Salva è evidenziata.](../images/tutorials/labels/save-labels.png)
+![Finestra di dialogo Applica etichette di accesso e governance dei dati con Salva evidenziato.](../images/tutorials/labels/save-labels.png)
 
-Il **[!UICONTROL Etichette]** viene visualizzata di nuovo la scheda con le etichette applicate allo schema.
+Viene visualizzata di nuovo la scheda **[!UICONTROL Etichette]** con le etichette applicate per lo schema.
 
-![La scheda Etichette dell’area di lavoro degli schemi con le etichette dei campi applicate evidenziate.](../images/tutorials/labels/field-labels-added.png)
+![Scheda Etichette dell&#39;area di lavoro degli schemi con le etichette dei campi applicate evidenziate.](../images/tutorials/labels/field-labels-added.png)
 
 ## Passaggi successivi
 
-Questa guida illustra come gestire le etichette di utilizzo dei dati per schemi e campi. Per informazioni sulla gestione delle etichette di utilizzo dei dati, tra cui come aggiungerle a set di dati specifici anziché a livello di schema, consulta [guida dell’interfaccia utente per le etichette di utilizzo dei dati](../../data-governance/labels/user-guide.md).
+Questa guida illustra come gestire le etichette di utilizzo dei dati per schemi e campi. Per informazioni sulla gestione delle etichette di utilizzo dei dati, tra cui come aggiungerle a set di dati specifici anziché a livello di schema, consulta la [guida dell&#39;interfaccia utente delle etichette di utilizzo dei dati](../../data-governance/labels/user-guide.md).

@@ -22,7 +22,7 @@ ht-degree: 29%
    - [Logica di collegamento dell’identità](./features/identity-linking-logic.md)
    - [Visualizzatore del grafico delle identità](./features/identity-graph-viewer.md)
    - [Eliminazioni nel servizio Identity](./features/deletion.md)
-   - Regole di collegamento del grafo delle identità {#identity-graph-linking-rules}
+   - Regole di collegamento del grafico delle identità {#identity-graph-linking-rules}
       - [Panoramica delle funzioni](./identity-graph-linking-rules/overview.md)
       - [Algoritmo di ottimizzazione identità](./identity-graph-linking-rules/identity-optimization-algorithm.md)
       - [Priorità dello spazio dei nomi](./identity-graph-linking-rules/namespace-priority.md)
@@ -33,7 +33,7 @@ ht-degree: 29%
    - [Panoramica di ECID](./features/ecid.md)
 - [Guida all’implementazione](implementation.md)
 - [Guardrail per i dati di identità](guardrails.md)
-- API del servizio Identity {#api}
+- API del servizio identità {#api}
    - [Guida introduttuva](api/getting-started.md)
    - [Etichettare un campo come identità](api/label-identities.md)
    - [Elencare le identità del cluster](api/list-cluster-identites.md)

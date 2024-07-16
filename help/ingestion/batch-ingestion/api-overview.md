@@ -13,15 +13,15 @@ ht-degree: 6%
 
 # Guida per gli sviluppatori sull’acquisizione in batch
 
-Questo documento fornisce una guida completa all’utilizzo di [endpoint API per acquisizione batch](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) in Adobe Experience Platform. Per una panoramica delle API di acquisizione batch, inclusi i prerequisiti e le best practice, leggi [panoramica dell’API per l’acquisizione batch](overview.md).
+Questo documento fornisce una guida completa all&#39;utilizzo di [endpoint API per l&#39;acquisizione batch](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) in Adobe Experience Platform. Per una panoramica delle API di acquisizione batch, inclusi i prerequisiti e le best practice, leggi la [panoramica dell&#39;API di acquisizione batch](overview.md).
 
-L&#39;appendice del presente documento fornisce informazioni per [formattazione dei dati da utilizzare per l’acquisizione](#data-transformation-for-batch-ingestion), inclusi file di dati CSV e JSON di esempio.
+L&#39;appendice di questo documento fornisce informazioni per [i dati di formattazione da utilizzare per l&#39;acquisizione](#data-transformation-for-batch-ingestion), inclusi file di dati CSV e JSON di esempio.
 
 ## Introduzione
 
-Gli endpoint API utilizzati in questa guida fanno parte del [API di acquisizione in batch](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). L’acquisizione in batch viene fornita tramite un’API RESTful in cui puoi eseguire operazioni CRUD di base sui tipi di oggetto supportati.
+Gli endpoint API utilizzati in questa guida fanno parte dell&#39;[API di acquisizione batch](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). L’acquisizione in batch viene fornita tramite un’API RESTful in cui puoi eseguire operazioni CRUD di base sui tipi di oggetto supportati.
 
-Prima di continuare, controlla [panoramica dell’API per l’acquisizione batch](overview.md) e [guida introduttiva](getting-started.md).
+Prima di continuare, controlla la [panoramica dell&#39;API di acquisizione batch](overview.md) e la [guida introduttiva](getting-started.md).
 
 ## Acquisire file JSON
 
@@ -35,7 +35,7 @@ Innanzitutto, devi creare un batch, con JSON come formato di input. Durante la c
 
 >[!NOTE]
 >
->Gli esempi seguenti sono per JSON a riga singola. Per acquisire JSON su più righe, `isMultiLineJson` sarà necessario impostare il flag. Per ulteriori informazioni, leggere [guida alla risoluzione dei problemi di acquisizione batch](./troubleshooting.md).
+>Gli esempi seguenti sono per JSON a riga singola. Per acquisire JSON su più righe, è necessario impostare il flag `isMultiLineJson`. Per ulteriori informazioni, leggere la [guida alla risoluzione dei problemi di acquisizione batch](./troubleshooting.md).
 
 **Formato API**
 
@@ -97,7 +97,7 @@ Dopo aver creato un batch, puoi utilizzare l’ID batch dalla risposta di creazi
 
 >[!NOTE]
 >
->Vedere la sezione dell&#39;appendice per un [esempio di file di dati JSON formattato correttamente](#data-transformation-for-batch-ingestion).
+>Consulta la sezione dell&#39;appendice per un [esempio di file di dati JSON formattato correttamente](#data-transformation-for-batch-ingestion).
 
 **Formato API**
 
@@ -232,7 +232,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 ### Carica file
 
-Dopo aver creato un batch, puoi utilizzare `batchId` da prima di per caricare i file nel batch. Puoi caricare più file nel batch.
+Dopo aver creato un batch, è possibile utilizzare `batchId` di prima per caricare i file nel batch. Puoi caricare più file nel batch.
 
 **Formato API**
 
@@ -450,7 +450,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 ### Completa file di grandi dimensioni
 
-Dopo aver creato un batch, puoi utilizzare `batchId` da prima di per caricare i file nel batch. Puoi caricare più file nel batch.
+Dopo aver creato un batch, è possibile utilizzare `batchId` di prima per caricare i file nel batch. Puoi caricare più file nel batch.
 
 **Formato API**
 
@@ -513,7 +513,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Acquisire file CSV
 
-Per acquisire i file CSV, devi creare una classe, uno schema e un set di dati che supporti CSV. Per informazioni dettagliate su come creare la classe e lo schema necessari, segui le istruzioni fornite nella [tutorial sulla creazione di schemi ad hoc](../../xdm/api/ad-hoc.md).
+Per acquisire i file CSV, devi creare una classe, uno schema e un set di dati che supporti CSV. Per informazioni dettagliate su come creare la classe e lo schema necessari, seguire le istruzioni fornite nell&#39;[esercitazione per la creazione di schemi ad hoc](../../xdm/api/ad-hoc.md).
 
 >[!NOTE]
 >
@@ -617,11 +617,11 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### Carica file
 
-Dopo aver creato un batch, puoi utilizzare `batchId` da prima di per caricare i file nel batch. Puoi caricare più file nel batch.
+Dopo aver creato un batch, è possibile utilizzare `batchId` di prima per caricare i file nel batch. Puoi caricare più file nel batch.
 
 >[!NOTE]
 >
->Vedere la sezione dell&#39;appendice per un [esempio di file di dati CSV formattato correttamente](#data-transformation-for-batch-ingestion).
+>Consulta la sezione dell&#39;appendice per un [esempio di file di dati CSV formattato correttamente](#data-transformation-for-batch-ingestion).
 
 **Formato API**
 
@@ -720,7 +720,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Eliminare un batch {#delete-a-batch}
 
-È possibile eliminare un batch eseguendo la seguente richiesta POST con `action=REVERT` parametro di query per l’ID del batch da eliminare. Il batch è contrassegnato come &quot;inattivo&quot;, rendendolo idoneo per la raccolta di oggetti inattivi. Il batch verrà raccolto in modo asincrono e contrassegnato come &quot;eliminato&quot;.
+È possibile eliminare un batch eseguendo la seguente richiesta POST con il parametro di query `action=REVERT` sull&#39;ID del batch che si desidera eliminare. Il batch è contrassegnato come &quot;inattivo&quot;, rendendolo idoneo per la raccolta di oggetti inattivi. Il batch verrà raccolto in modo asincrono e contrassegnato come &quot;eliminato&quot;.
 
 **Formato API**
 
@@ -758,10 +758,10 @@ A volte può essere necessario aggiornare i dati nell’archivio profili della t
 
 Per applicare la patch a un batch è necessario quanto segue:
 
-- **Un set di dati abilitato per gli aggiornamenti di profili e attributi.** Questa operazione viene eseguita tramite tag di set di dati e richiede un `isUpsert:true` aggiunta al tag `unifiedProfile` array. Per i passaggi dettagliati che mostrano come creare un set di dati o configurare un set di dati esistente per l’upsert, segui l’esercitazione per [abilitazione di un set di dati per gli aggiornamenti del profilo](../../catalog/datasets/enable-upsert.md).
-- **Un file Parquet contenente i campi di cui applicare la patch e i campi di identità per il profilo.** Il formato dei dati per l’applicazione di patch a un batch è simile al normale processo di acquisizione batch. L’input richiesto è un file Parquet e, oltre ai campi da aggiornare, i dati caricati devono contenere i campi di identità in modo che corrispondano ai dati nell’archivio Profili.
+- **Set di dati abilitato per gli aggiornamenti di profili e attributi.** Questa operazione viene eseguita tramite i tag del set di dati e richiede l&#39;aggiunta di un tag `isUpsert:true` specifico all&#39;array `unifiedProfile`. Per i passaggi dettagliati che mostrano come creare un set di dati o configurare un set di dati esistente per l&#39;upsert, segui l&#39;esercitazione per [abilitare un set di dati per gli aggiornamenti del profilo](../../catalog/datasets/enable-upsert.md).
+- **File di Parquet contenente i campi da applicare e i campi di identità per il profilo.** Il formato dei dati per l&#39;applicazione della patch a un batch è simile al normale processo di acquisizione batch. L’input richiesto è un file Parquet e, oltre ai campi da aggiornare, i dati caricati devono contenere i campi di identità in modo che corrispondano ai dati nell’archivio Profili.
 
-Dopo aver abilitato un set di dati per Profilo e upsert e un file Parquet contenente i campi a cui applicare la patch e i campi di identità necessari, puoi seguire i passaggi per [acquisizione dei file Parquet](#ingest-parquet-files) al fine di completare la patch tramite l’acquisizione in batch.
+Dopo aver abilitato un set di dati per Profilo e upsert e un file Parquet contenente i campi da applicare alla patch e i campi di identità necessari, puoi seguire i passaggi per [acquisire i file Parquet](#ingest-parquet-files) per completare la patch tramite l&#39;acquisizione batch.
 
 ## Ripetere un batch
 
@@ -769,7 +769,7 @@ Se desideri sostituire un batch già acquisito, puoi farlo con &quot;ripetizione
 
 ### Crea batch
 
-Innanzitutto, devi creare un batch, con JSON come formato di input. Durante la creazione del batch, dovrai fornire un ID set di dati. È inoltre necessario assicurarsi che tutti i file caricati come parte del batch siano conformi allo schema XDM collegato al set di dati fornito. Inoltre, devi fornire i vecchi batch come riferimento nella sezione di ripetizione. Nell’esempio seguente, stai riproducendo i batch con ID `batchIdA` e `batchIdB`.
+Innanzitutto, devi creare un batch, con JSON come formato di input. Durante la creazione del batch, dovrai fornire un ID set di dati. È inoltre necessario assicurarsi che tutti i file caricati come parte del batch siano conformi allo schema XDM collegato al set di dati fornito. Inoltre, devi fornire i vecchi batch come riferimento nella sezione di ripetizione. Nell&#39;esempio seguente si stanno riproducendo i batch con ID `batchIdA` e `batchIdB`.
 
 **Formato API**
 
@@ -843,7 +843,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### Carica file
 
-Dopo aver creato un batch, puoi utilizzare `batchId` da prima di per caricare i file nel batch. Puoi caricare più file nel batch.
+Dopo aver creato un batch, è possibile utilizzare `batchId` di prima per caricare i file nel batch. Puoi caricare più file nel batch.
 
 **Formato API**
 
@@ -915,13 +915,13 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Appendice
 
-La sezione seguente contiene informazioni aggiuntive per l’acquisizione di dati in Experienci Platform tramite l’acquisizione batch.
+La sezione seguente contiene informazioni aggiuntive per l’acquisizione di dati in Experience Platform tramite l’acquisizione batch.
 
 ### Trasformazione dei dati per l’acquisizione batch
 
-Per acquisire un file di dati in [!DNL Experience Platform], la struttura gerarchica del file deve essere conforme alla [Experience Data Model (XDM)](../../xdm/home.md) schema associato al set di dati in fase di caricamento in.
+Per acquisire un file di dati in [!DNL Experience Platform], la struttura gerarchica del file deve essere conforme allo schema [Experience Data Model (XDM)](../../xdm/home.md) associato al set di dati in fase di caricamento in.
 
-Le informazioni su come mappare un file CSV in modo che sia conforme a uno schema XDM sono disponibili nella sezione [trasformazioni campione](../../etl/transformations.md) insieme a un esempio di un file di dati JSON formattato correttamente. I file di esempio forniti nel documento sono disponibili qui:
+Le informazioni su come mappare un file CSV in modo che sia conforme a uno schema XDM si trovano nel documento [trasformazioni di esempio](../../etl/transformations.md), insieme a un esempio di file di dati JSON formattato correttamente. I file di esempio forniti nel documento sono disponibili qui:
 
-- [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
-- [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
+- [Profili_CRM.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
+- [Profili_CRM.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)

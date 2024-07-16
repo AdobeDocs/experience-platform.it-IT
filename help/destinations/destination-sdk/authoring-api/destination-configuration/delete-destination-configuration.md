@@ -4,32 +4,32 @@ title: Eliminare una configurazione di destinazione
 exl-id: c7309ab7-1b8d-46d4-8017-fd4aa5918cdd
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '278'
-ht-degree: 3%
+source-wordcount: '279'
+ht-degree: 2%
 
 ---
 
 # Eliminare una configurazione di destinazione
 
-Questa pagina esemplifica la richiesta API e il payload che è possibile utilizzare per eliminare una configurazione di destinazione esistente, utilizzando `/authoring/destinations` Endpoint API
+Questa pagina esemplifica la richiesta API e il payload che è possibile utilizzare per eliminare una configurazione di destinazione esistente, utilizzando l&#39;endpoint API `/authoring/destinations`.
 
 >[!IMPORTANT]
 >
->Tutti i nomi e i valori dei parametri supportati da Destination SDK sono **distinzione maiuscole/minuscole**. Per evitare errori di distinzione tra maiuscole e minuscole, utilizza i nomi e i valori dei parametri esattamente come mostrato nella documentazione.
+>Tutti i nomi e i valori dei parametri supportati da Destination SDK sono **con distinzione tra maiuscole e minuscole**. Per evitare errori di distinzione tra maiuscole e minuscole, utilizza i nomi e i valori dei parametri esattamente come mostrato nella documentazione.
 
 ## Guida introduttiva alle operazioni API di configurazione di destinazione {#get-started}
 
-Prima di continuare, controlla [guida introduttiva](../../getting-started.md) per informazioni importanti che è necessario conoscere per effettuare correttamente chiamate all’API, tra cui come ottenere l’autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
+Prima di continuare, consulta la [guida introduttiva](../../getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
 
 ## Eliminare una configurazione di destinazione {#delete}
 
-È possibile eliminare un [esistente](create-destination-configuration.md) configurazione del server di destinazione effettuando una `DELETE` richiesta al `/authoring/destinations` endpoint con `{INSTANCE_ID}`della configurazione di destinazione che desideri eliminare.
+È possibile eliminare una configurazione del server di destinazione [esistente](create-destination-configuration.md) effettuando una richiesta `DELETE` all&#39;endpoint `/authoring/destinations` con `{INSTANCE_ID}` della configurazione di destinazione da eliminare.
 
 >[!TIP]
 >
 >**Endpoint API**: `platform.adobe.io/data/core/activation/authoring/destinations`
 
-Per ottenere una configurazione di destinazione esistente e la corrispondente `{INSTANCE_ID}`, consulta l’articolo su [recupero di una configurazione di destinazione](retrieve-destination-configuration.md).
+Per ottenere una configurazione di destinazione esistente e i corrispondenti `{INSTANCE_ID}`, vedere l&#39;articolo relativo al [recupero di una configurazione di destinazione](retrieve-destination-configuration.md).
 
 **Formato API**
 
@@ -39,7 +39,7 @@ DELETE /authoring/destinations/{INSTANCE_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{INSTANCE_ID}` | Il `ID` della configurazione di destinazione da eliminare. |
+| `{INSTANCE_ID}` | `ID` della configurazione di destinazione da eliminare. |
 
 +++Richiesta
 
@@ -58,11 +58,11 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 insieme a u
 
 ## Gestione degli errori API {#error-handling}
 
-Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Fai riferimento a [Codici di stato API](../../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
+Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](../../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
 
 ## Passaggi successivi
 
-Dopo aver letto questo documento, ora sai come eliminare una configurazione di destinazione esistente tramite la Destination SDK `/authoring/destinations` Endpoint API
+Dopo aver letto questo documento, ora sai come eliminare una configurazione di destinazione esistente tramite l&#39;endpoint API Destination SDK `/authoring/destinations`.
 
 Per ulteriori informazioni su cosa è possibile fare con questo endpoint, consulta i seguenti articoli:
 

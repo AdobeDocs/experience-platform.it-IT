@@ -12,13 +12,13 @@ ht-degree: 2%
 ---
 
 
-# [!UICONTROL Dettagli contatto di lavoro] gruppo di campi schema
+# [!UICONTROL Dettagli contatto di lavoro] gruppo di campi dello schema
 
 >[!NOTE]
 >
->I nomi di diversi gruppi di campi dello schema sono stati modificati. Vedi il documento su [aggiornamenti nome gruppo di campi](../name-updates.md) per ulteriori informazioni.
+>I nomi di diversi gruppi di campi dello schema sono stati modificati. Per ulteriori informazioni, consulta il documento sugli aggiornamenti del nome del gruppo di campi [](../name-updates.md).
 
-[!UICONTROL Dettagli contatto di lavoro] è un gruppo di campi di schema standard per [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). Il gruppo di campi fornisce diversi campi che acquisiscono informazioni professionali relative a una singola persona, ad esempio l’indirizzo del luogo di lavoro, l’e-mail aziendale, il numero di telefono aziendale e le organizzazioni a cui la persona appartiene.
+[!UICONTROL Dettagli contatto di lavoro] è un gruppo di campi dello schema standard per la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). Il gruppo di campi fornisce diversi campi che acquisiscono informazioni professionali relative a una singola persona, ad esempio l’indirizzo del luogo di lavoro, l’e-mail aziendale, il numero di telefono aziendale e le organizzazioni a cui la persona appartiene.
 
 ![](../../images/field-groups/work-contact-details.png)
 

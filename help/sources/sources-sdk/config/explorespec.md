@@ -84,4 +84,4 @@ Esplora specifiche definisce i parametri necessari per l&#39;esplorazione e l&#3
 
 ## Passaggi successivi
 
-Una volta compilate le specifiche di esplorazione, puoi creare una specifica di connessione completa utilizzando [!DNL Flow Service] API. Consulta la [Guida dell’API Self-Serve Sources (Batch SDK)](../api/api-overview.md) per ulteriori informazioni.
+Dopo aver popolato le specifiche di esplorazione, è possibile creare una specifica di connessione completa utilizzando l&#39;API [!DNL Flow Service]. Per ulteriori informazioni, consulta la [guida dell&#39;API Self-Serve Sources (Batch SDK)](../api/api-overview.md).

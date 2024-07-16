@@ -20,11 +20,11 @@ Scopri come risolvere gli errori durante l’utilizzo dei playbook basati su cas
 
 Quando crei un’istanza di un playbook e generi risorse, vengono visualizzate alcune limitazioni note.
 
-* Per gli schemi generati, se uno schema viene generato in un’istanza di un playbook e lo si modifica, allora un altro schema *non* viene generato se si abilita un&#39;altra istanza del playbook. Continua invece a utilizzare anche lo schema modificato all’interno dell’istanza.
+* Per gli schemi generati, se uno schema viene generato in un&#39;istanza di un playbook e lo si modifica, un altro schema *non verrà generato* se si abilita un&#39;altra istanza del playbook. Continua invece a utilizzare anche lo schema modificato all’interno dell’istanza.
 
-* Quando si utilizza [funzionalità di riconoscimento dei dati](/help/use-case-playbooks/playbooks/data-awareness.md) per promuovere lo schema dalla sandbox inspirational alla sandbox di sviluppo, potresti visualizzare alcuni errori simili ai seguenti:
+* Quando si utilizza la funzionalità di riconoscimento dei dati [](/help/use-case-playbooks/playbooks/data-awareness.md) per promuovere lo schema dalla sandbox di ispirazione alla sandbox di sviluppo, è possibile che si verifichino alcuni errori simili ai seguenti:
 
-![Errori visualizzati nel flusso di lavoro di mappatura schema.](/help/use-case-playbooks/assets/playbooks/troubleshooting/schema-errors.png){width="1000" zoomable="yes"}
+![Errori visualizzati nel flusso di lavoro di mappatura dello schema.](/help/use-case-playbooks/assets/playbooks/troubleshooting/schema-errors.png){width="1000" zoomable="yes"}
 
 Ciò si verifica perché alcuni dei campi generati dallo schema non sono presenti nello schema nella sandbox di sviluppo in cui si sta copiando. Cercate quali sono questi campi. Quindi, torna alla sandbox di sviluppo dove puoi:
 

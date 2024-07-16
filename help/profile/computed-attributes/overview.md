@@ -4,14 +4,14 @@ description: Gli attributi calcolati sono funzioni per aggregare i dati a livell
 exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
 source-git-commit: 03f1dfab768e98ef4959d605cc3ead25bb5eb238
 workflow-type: tm+mt
-source-wordcount: '1140'
-ht-degree: 4%
+source-wordcount: '1153'
+ht-degree: 2%
 
 ---
 
 # Panoramica degli attributi calcolati
 
-La personalizzazione basata sul comportamento degli utenti è un requisito chiave affinché gli esperti di marketing massimizzino l’impatto della personalizzazione. Ad esempio, puoi personalizzare l’e-mail di marketing con il prodotto visualizzato più di recente per favorire la conversione o la pagina web in base al totale degli acquisti effettuati dagli utenti per promuovere la fidelizzazione.
+Personalization basato sul comportamento degli utenti è un requisito chiave affinché gli esperti di marketing possano massimizzare l’impatto della personalizzazione. Ad esempio, puoi personalizzare l’e-mail di marketing con il prodotto visualizzato più di recente per favorire la conversione o la pagina web in base al totale degli acquisti effettuati dagli utenti per promuovere la fidelizzazione.
 
 Gli attributi calcolati consentono di convertire rapidamente i dati comportamentali del profilo in valori aggregati a livello di profilo senza dipendere dalle risorse tecniche per:
 
@@ -48,11 +48,11 @@ Gli attributi calcolati consentono di definire gli aggregati di eventi in modo a
 
 | Funzione | Descrizione | Tipi di dati supportati | Esempio di utilizzo |
 | -------- | ----------- | -------------------- | ------------- |
-| SOMMA | Una funzione che **somme** il valore specificato per gli eventi qualificati. | Interi, numeri, lunghezze | Somma di tutti gli acquisti degli ultimi 7 giorni |
-| COUNT | Una funzione che **conteggi** il numero di eventi che si sono verificati per la regola specificata. | N/D | Numero di acquisti negli ultimi 3 mesi |
-| MIN | Una funzione che trova **minimo** valore per gli eventi qualificati. | Interi, Numeri, Lunghi, Marca temporale | Dati del primo acquisto negli ultimi 7 giorni<br/>Importo minimo dell’ordine nelle ultime 4 settimane |
-| MAX | Una funzione che trova **massimo** valore per gli eventi qualificati. | Interi, Numeri, Lunghi, Marca temporale | Ultimi dati di acquisto negli ultimi 7 giorni<br/>Importo massimo dell’ordine nelle ultime 4 settimane |
-| MOST_RECENT | Funzione che trova il valore di attributo specificato dall&#39;ultimo evento qualificato. Questa funzione offre **entrambi** il valore e la marca temporale dell’attributo. | Tutti i valori primitivi, matrici di valori primitivi | Ultimo prodotto visualizzato negli ultimi 7 giorni |
+| SOMMA | Funzione che **somma** il valore specificato per gli eventi qualificati. | Interi, numeri, lunghezze | Somma di tutti gli acquisti degli ultimi 7 giorni |
+| CONTEGGIO | Funzione che **conta** il numero di eventi che si sono verificati per la regola specificata. | N/D | Numero di acquisti negli ultimi 3 mesi |
+| MIN | Funzione che trova il valore **minimum** per gli eventi qualificati. | Interi, Numeri, Lunghi, Marca temporale | Dati del primo acquisto negli ultimi 7 giorni<br/>Importo minimo dell&#39;ordine nelle ultime 4 settimane |
+| MAX | Funzione che trova il valore **maximum** per gli eventi qualificati. | Interi, Numeri, Lunghi, Marca temporale | Ultimi dati di acquisto negli ultimi 7 giorni<br/>Importo massimo ordine nelle ultime 4 settimane |
+| MOST_RECENT | Funzione che trova il valore di attributo specificato dall&#39;ultimo evento qualificato. Questa funzione assegna a **both** il valore e il timestamp dell&#39;attributo. | Tutti i valori primitivi, matrici di valori primitivi | Ultimo prodotto visualizzato negli ultimi 7 giorni |
 
 ### Periodi di lookback
 
@@ -62,10 +62,10 @@ Il periodo di lookback si riferisce alla quantità di tempo che viene esaminata 
 
 La frequenza di aggiornamento si riferisce alla frequenza con cui gli attributi calcolati vengono aggiornati. Questo valore dipende dal periodo di lookback e viene impostato automaticamente.
 
-| Periodo di lookback | Refresh frequency (Frequenza di aggiornamento) |
+| Periodo di lookback | Frequenza di aggiornamento |
 | --------------- | ----------------- |
-| Fino a 24 ore | Oraria |
-| Fino a 7 giorni | Giornaliero |
+| Fino a 24 ore | Ogni ora |
+| Fino a 7 giorni | Giornaliera |
 | Fino a 4 settimane | Settimanale |
 | Fino a 6 mesi | Mensile |
 
@@ -73,9 +73,9 @@ Ad esempio, se l’attributo calcolato ha un periodo di lookback degli ultimi 7 
 
 >[!NOTE]
 >
->Sia le settimane che i mesi sono considerati **settimane di calendario** e **mesi calendario** quando utilizzato nei lookback di eventi. La settimana del calendario inizia il **Domenica** e termina il **Sabato** della settimana. Il mese del calendario inizia il **primo** del mese e termina **ultimo giorno** del mese.
+>Sia le settimane che i mesi sono considerati come **settimane** e **mesi** di calendario se utilizzati nei lookback di eventi. La settimana del calendario inizia il **domenica** e termina il **sabato** della settimana. Il mese del calendario inizia il **primo** del mese e termina il **ultimo giorno** del mese.
 
-Il periodo di lookback per gli attributi calcolati è un **continuo** periodo di lookback. Ad esempio, se la valutazione viene eseguita per la prima volta il 15 ottobre alle 12:00 UTC, un periodo di lookback di due settimane recupera tutti gli eventi dal 1° al 15 ottobre, aggiorna una settimana dopo il 22 ottobre, quindi recupera tutti gli eventi dall’8 ottobre al 22 ottobre.
+Il periodo di lookback per gli attributi calcolati è un periodo di lookback **roll**. Ad esempio, se la valutazione viene eseguita per la prima volta il 15 ottobre alle 12:00 UTC, un periodo di lookback di due settimane recupera tutti gli eventi dal 1° al 15 ottobre, aggiorna una settimana dopo il 22 ottobre, quindi recupera tutti gli eventi dall’8 ottobre al 22 ottobre.
 
 **Aggiornamento rapido** {#fast-refresh}
 
@@ -87,8 +87,8 @@ L’aggiornamento rapido consente di mantenere aggiornati gli attributi. L’abi
 >
 >Se crei un attributo calcolato con un periodo di lookback di due settimane con aggiornamento rapido abilitato, il periodo di lookback iniziale sarà di due settimane. Tuttavia, con ogni aggiornamento giornaliero, il periodo di lookback includerà gli eventi del giorno aggiuntivo. L’aggiunta di giorni continuerà fino all’inizio della settimana di calendario successiva, durante la quale l’intervallo di lookback verrà rinnovato e tornerà a due settimane.
 >
->Ad esempio, se si è verificato un periodo di lookback di due settimane a partire dal 15 marzo (domenica) con aggiornamento rapido abilitato, con aggiornamento giornaliero, il periodo di lookback continuerà a espandersi inclusivamente fino al 22 marzo, giorno in cui verrà ripristinato su due settimane. In breve, l’attributo calcolato è **aggiornato** ogni giorno, con il periodo di lookback che aumenta da **due** settimane a **tre** settimane durante la settimana, e quindi di nuovo a **due** settimane.
+>Ad esempio, se si è verificato un periodo di lookback di due settimane a partire dal 15 marzo (domenica) con aggiornamento rapido abilitato, con aggiornamento giornaliero, il periodo di lookback continuerà a espandersi inclusivamente fino al 22 marzo, giorno in cui verrà ripristinato su due settimane. In breve, l&#39;attributo calcolato è **aggiornato** al giorno, con il periodo di lookback che aumenta da **due** settimane a **tre** settimane durante la settimana, per poi tornare successivamente a **due** settimane.
 
 ## Passaggi successivi
 
-Per ulteriori informazioni sulla creazione e la gestione degli attributi calcolati, consultare [guida API per attributi calcolati](./api.md) o [guida dell’interfaccia utente per attributi calcolati](./ui.md).
+Per ulteriori informazioni sulla creazione e la gestione degli attributi calcolati, leggere la [guida dell&#39;API per gli attributi calcolati](./api.md) o la [guida dell&#39;interfaccia utente per gli attributi calcolati](./ui.md).

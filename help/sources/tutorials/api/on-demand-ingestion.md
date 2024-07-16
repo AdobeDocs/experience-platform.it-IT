@@ -5,18 +5,18 @@ description: Scopri come creare un’esecuzione del flusso per l’acquisizione 
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
 source-git-commit: cea12160656ba0724789db03e62213022bacd645
 workflow-type: tm+mt
-source-wordcount: '801'
+source-wordcount: '797'
 ht-degree: 2%
 
 ---
 
-# Crea un’esecuzione del flusso per l’acquisizione su richiesta utilizzando [!DNL Flow Service] API
+# Creare un&#39;esecuzione di flusso per l&#39;acquisizione su richiesta utilizzando l&#39;API [!DNL Flow Service]
 
 Le esecuzioni del flusso rappresentano un’istanza dell’esecuzione del flusso. Ad esempio, se un flusso è pianificato per essere eseguito ogni ora alle 9:00, alle 10:00 e alle 11:00, sono disponibili tre istanze di un flusso. Le esecuzioni del flusso sono specifiche per la tua particolare organizzazione.
 
 L’acquisizione su richiesta consente di creare un flusso eseguito su un determinato flusso di dati. Questo consente agli utenti di creare un’esecuzione del flusso, basata su parametri specifici, e un ciclo di acquisizione, senza token di servizio. Il supporto per l’acquisizione su richiesta è disponibile solo per le origini batch.
 
-Questa esercitazione descrive i passaggi per utilizzare l’acquisizione on-demand e creare un’esecuzione di flusso utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Questo tutorial illustra i passaggi per utilizzare l&#39;acquisizione su richiesta e creare un&#39;esecuzione del flusso utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introduzione
 
@@ -26,16 +26,16 @@ Questa esercitazione descrive i passaggi per utilizzare l’acquisizione on-dema
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Sorgenti](../../home.md): [!DNL Experience Platform] consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] servizi.
-* [Sandbox](../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che permettono di suddividere un singolo [!DNL Platform] in ambienti virtuali separati, per facilitare lo sviluppo e l’evoluzione delle applicazioni di esperienza digitale.
+* [Origini](../../home.md): [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini e consente di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi [!DNL Platform].
+* [Sandbox](../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza di [!DNL Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 ### Utilizzo delle API di Platform
 
-Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida su [introduzione alle API di Platform](../../../landing/api-guide.md).
+Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida in [guida introduttiva alle API di Platform](../../../landing/api-guide.md).
 
 ## Creare un&#39;esecuzione di flusso per un&#39;origine basata su tabella
 
-Per creare un flusso per un’origine basata su tabella, effettua una richiesta POST al [!DNL Flow Service] fornendo l’ID del flusso su cui desideri creare l’esecuzione, nonché i valori per l’ora di inizio, l’ora di fine e la colonna delta.
+Per creare un flusso per un&#39;origine basata su tabella, eseguire una richiesta POST all&#39;API [!DNL Flow Service] fornendo l&#39;ID del flusso su cui si desidera creare l&#39;esecuzione, nonché i valori per l&#39;ora di inizio, l&#39;ora di fine e la colonna delta.
 
 >[!TIP]
 >
@@ -49,11 +49,11 @@ POST /runs/
 
 **Richiesta**
 
-La richiesta seguente crea un’esecuzione di flusso per l’ID di flusso `3abea21c-7e36-4be1-bec1-d3bad0e3e0de`.
+La richiesta seguente crea un&#39;esecuzione di flusso per l&#39;ID di flusso `3abea21c-7e36-4be1-bec1-d3bad0e3e0de`.
 
 >[!NOTE]
 >
->È sufficiente fornire `deltaColumn` durante la creazione della prima esecuzione del flusso. Dopo, `deltaColumn` verrà aggiornata come parte di `copy` trasformazione nel flusso e sarà trattata come la fonte della verità. Qualsiasi tentativo di modificare il `deltaColumn` tramite i parametri di esecuzione del flusso genererà un errore.
+>È necessario fornire `deltaColumn` solo quando si crea la prima esecuzione del flusso. In seguito, `deltaColumn` riceverà la patch come parte della trasformazione `copy` nel flusso e verrà trattato come l&#39;origine della verità. Eventuali tentativi di modificare il valore `deltaColumn` tramite i parametri di esecuzione del flusso genereranno un errore.
 
 ```shell
 curl -X POST \
@@ -82,12 +82,12 @@ curl -X POST \
 | `params.startTime` | L’ora programmata di inizio dell’esecuzione del flusso su richiesta. Questo valore è rappresentato nel tempo unix. |
 | `params.windowStartTime` | La prima data e ora da cui verranno recuperati i dati. Questo valore è rappresentato nel tempo unix. |
 | `params.windowEndTime` | La data e l’ora in cui i dati verranno recuperati. Questo valore è rappresentato nel tempo unix. |
-| `params.deltaColumn` | La colonna delta è necessaria per partizionare i dati e separare i dati appena acquisiti da quelli storici. **Nota**: Il `deltaColumn` è necessario solo durante la creazione della prima esecuzione del flusso. |
+| `params.deltaColumn` | La colonna delta è necessaria per partizionare i dati e separare i dati appena acquisiti da quelli storici. **Nota**: `deltaColumn` è necessario solo durante la creazione della prima esecuzione del flusso. |
 | `params.deltaColumn.name` | Nome della colonna delta. |
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce i dettagli della nuova esecuzione di flusso creata, inclusa la relativa esecuzione univoca `id`.
+In caso di esito positivo, la risposta restituisce i dettagli della nuova esecuzione di flusso creata, inclusa l&#39;esecuzione univoca `id`.
 
 ```json
 {
@@ -102,7 +102,7 @@ In caso di esito positivo, la risposta restituisce i dettagli della nuova esecuz
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `id` | ID dell’esecuzione del flusso appena creata. Consulta la guida su [recupero delle specifiche di flusso](../api/collect/database-nosql.md#specs) per ulteriori informazioni sulle specifiche di esecuzione basate su tabelle. |
+| `id` | ID dell’esecuzione del flusso appena creata. Per ulteriori informazioni sulle specifiche di esecuzione basate su tabelle, vedere la guida al [recupero delle specifiche di flusso](../api/collect/database-nosql.md#specs). |
 | `etag` | Versione risorsa dell’esecuzione del flusso. |
 <!-- 
 | `createdAt` | The unix timestamp that designates when the flow run was created. |
@@ -124,7 +124,7 @@ In caso di esito positivo, la risposta restituisce i dettagli della nuova esecuz
 
 ## Creare un&#39;esecuzione di flusso per un&#39;origine basata su file
 
-Per creare un flusso per un’origine basata su file, effettua una richiesta POST al [!DNL Flow Service] fornendo l’ID del flusso su cui desideri creare i valori di esecuzione e per l’ora di inizio e di fine.
+Per creare un flusso per un&#39;origine basata su file, effettuare una richiesta POST all&#39;API [!DNL Flow Service] fornendo l&#39;ID del flusso su cui si desidera creare i valori e per l&#39;ora di inizio e di fine.
 
 >[!TIP]
 >
@@ -138,7 +138,7 @@ POST /runs/
 
 **Richiesta**
 
-La richiesta seguente crea un’esecuzione di flusso per l’ID di flusso `3abea21c-7e36-4be1-bec1-d3bad0e3e0de`.
+La richiesta seguente crea un&#39;esecuzione di flusso per l&#39;ID di flusso `3abea21c-7e36-4be1-bec1-d3bad0e3e0de`.
 
 ```shell
 curl -X POST \
@@ -167,7 +167,7 @@ curl -X POST \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce i dettagli della nuova esecuzione di flusso creata, inclusa la relativa esecuzione univoca `id`.
+In caso di esito positivo, la risposta restituisce i dettagli della nuova esecuzione di flusso creata, inclusa l&#39;esecuzione univoca `id`.
 
 
 ```json
@@ -183,9 +183,9 @@ In caso di esito positivo, la risposta restituisce i dettagli della nuova esecuz
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `id` | ID dell’esecuzione del flusso appena creata. Consulta la guida su [recupero delle specifiche di flusso](../api/collect/database-nosql.md#specs) per ulteriori informazioni sulle specifiche di esecuzione basate su tabelle. |
+| `id` | ID dell’esecuzione del flusso appena creata. Per ulteriori informazioni sulle specifiche di esecuzione basate su tabelle, vedere la guida al [recupero delle specifiche di flusso](../api/collect/database-nosql.md#specs). |
 | `etag` | Versione risorsa dell’esecuzione del flusso. |
 
 ## Monitorare le esecuzioni del flusso
 
-Una volta creata l’esecuzione del flusso, puoi monitorare i dati che vengono acquisiti tramite di essa per visualizzare informazioni sulle esecuzioni del flusso, sullo stato di completamento e sugli errori. Per monitorare il flusso eseguito utilizzando l’API, consulta l’esercitazione su [monitoraggio dei flussi di dati nell’API](./monitor.md). Per monitorare il flusso eseguito tramite l’interfaccia utente di Platform, consulta la guida su [monitoraggio dei flussi di dati di origine tramite il dashboard di monitoraggio](../../../dataflows/ui/monitor-sources.md).
+Una volta creata l’esecuzione del flusso, puoi monitorare i dati che vengono acquisiti tramite di essa per visualizzare informazioni sulle esecuzioni del flusso, sullo stato di completamento e sugli errori. Per monitorare il flusso eseguito utilizzando l&#39;API, consulta l&#39;esercitazione sul [monitoraggio dei flussi di dati nell&#39;API](./monitor.md). Per monitorare le esecuzioni del flusso tramite l&#39;interfaccia utente di Platform, consulta la guida su [flussi di dati di origine monitoraggio tramite il dashboard di monitoraggio](../../../dataflows/ui/monitor-sources.md).

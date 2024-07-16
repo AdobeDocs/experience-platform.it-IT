@@ -14,7 +14,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->L’SDK di streaming per origini self-service è in versione beta. Leggi le [panoramica sulle origini](../../home.md#terms-and-conditions) per ulteriori informazioni sull’utilizzo di fonti etichettate beta.
+>L’SDK di streaming per origini self-service è in versione beta. Per ulteriori informazioni sull&#39;utilizzo di origini con etichetta beta, leggere la [panoramica delle origini](../../home.md#terms-and-conditions).
 
 È possibile aggiornare le proprietà di una specifica di connessione tramite un&#39;operazione PUT. Quando si aggiorna una specifica di connessione tramite una richiesta PUT, il corpo deve includere tutti i campi necessari per la creazione di una nuova specifica di connessione in una richiesta POST.
 
@@ -196,4 +196,4 @@ In caso di esito positivo, la chiamata restituisce i dettagli aggiornati della s
 
 ## Passaggi successivi
 
-Una volta completati gli aggiornamenti alle specifiche di connessione, puoi procedere a [testare e inviare l’origine per l’integrazione](./submit.md).
+Una volta completati gli aggiornamenti alle specifiche di connessione, puoi passare a [verifica e inviare l&#39;origine per l&#39;integrazione](./submit.md).

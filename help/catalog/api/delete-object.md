@@ -13,11 +13,11 @@ ht-degree: 2%
 
 # Eliminare un oggetto nell’API
 
-È possibile eliminare un [!DNL Catalog] fornendo il proprio ID nel percorso di una richiesta DELETE.
+È possibile eliminare un oggetto [!DNL Catalog] fornendo il relativo ID nel percorso di una richiesta DELETE.
 
 >[!WARNING]
 >
->Presta particolare attenzione durante l’eliminazione di oggetti, poiché questa operazione non può essere annullata e può causare modifiche che interrompono altrove in [!DNL Experience Platform].
+>Prestare particolare attenzione durante l&#39;eliminazione degli oggetti, poiché questa operazione non può essere annullata e può causare modifiche che causano interruzioni in altre aree di [!DNL Experience Platform].
 
 **Formato API**
 
@@ -27,11 +27,11 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 
 >[!IMPORTANT]
 >
->Il `DELETE /batches/{ID}` l&#39;endpoint è stato dichiarato obsoleto. Per eliminare un batch, è necessario utilizzare [API di acquisizione in batch](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
+>L&#39;endpoint `DELETE /batches/{ID}` è stato dichiarato obsoleto. Per eliminare un batch, è necessario utilizzare l&#39;[API di acquisizione batch](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{OBJECT_TYPE}` | Il tipo di [!DNL Catalog] oggetto da eliminare. Gli oggetti validi sono: <ul><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | Tipo di oggetto [!DNL Catalog] da eliminare. Gli oggetti validi sono: <ul><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | Identificatore dell’oggetto specifico da aggiornare. |
 
 **Richiesta**
@@ -59,4 +59,4 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 (OK) e un a
 
 >[!NOTE]
 >
->In caso negativo [!DNL Catalog] Gli oggetti corrispondono all&#39;ID fornito nella richiesta. È possibile che venga comunque visualizzato il codice di stato HTTP 200, ma l&#39;array di risposta sarà vuoto.
+>Se nessun oggetto [!DNL Catalog] corrisponde all&#39;ID fornito nella richiesta, è possibile ricevere comunque il codice di stato HTTP 200, ma l&#39;array di risposta sarà vuoto.

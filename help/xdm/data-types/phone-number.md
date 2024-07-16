@@ -7,24 +7,24 @@ exl-id: b84e48f9-bbb4-4b8b-9476-4bc1c455ecfd
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '187'
-ht-degree: 1%
+ht-degree: 16%
 
 ---
 
-# [!UICONTROL Numero di telefono] tipo di dati
+# [!UICONTROL Tipo di dati numero di telefono]
 
-[!UICONTROL Numero di telefono] è un tipo di dati XDM standard che descrive i dettagli di un numero di telefono.
+[!UICONTROL Phone number] è un tipo di dati XDM standard che descrive i dettagli di un numero di telefono.
 
 <img src="../images/data-types/phone-number.png" width="600" /><br />
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `extension` | Il numero interno utilizzato per chiamare da un centralino, centralino o centralino privato. |
-| `number` | Il numero di telefono. Nota che il numero di telefono è una stringa e può includere caratteri significativi come parentesi `()`, trattini `-`, o caratteri per indicare identificatori di sotto-composizione come le estensioni `x` ad esempio: `1-353(0)18391111` o `+613 9403600x1234`. |
-| `primary` | Un valore booleano che indica se si tratta del numero di telefono principale dell’individuo. A differenza dell’indirizzo o dell’indirizzo e-mail, ci possono essere più numeri di telefono primari; uno per canale di comunicazione. Il canale di comunicazione è definito dal tipo (indicato dal nome della proprietà principale): `textMessaging`, `mobile`, `phone`, `home`, `work`, `unknown`, e `fax`. |
+| `extension` | Il numero interno utilizzato per chiamare da un centralino, centralino privato o operatore. |
+| `number` | Il numero di telefono. Nota: il numero di telefono è una stringa e può includere caratteri significativi come parentesi quadre `()`, trattini `-` o caratteri per indicare identificatori di sotto-composizione come le estensioni `x`, ad esempio `1-353(0)18391111` o `+613 9403600x1234`. |
+| `primary` | Un valore booleano che indica se si tratta del numero di telefono principale dell’individuo. A differenza dell’indirizzo o dell’indirizzo e-mail, ci possono essere più numeri di telefono primari; uno per canale di comunicazione. Il canale di comunicazione è definito dal tipo (indicato dal nome della proprietà padre): `textMessaging`, `mobile`, `phone`, `home`, `work`, `unknown` e `fax`. |
 | `status` | Indica se il numero di telefono può essere attualmente utilizzato. |
 | `statusReason` | Descrizione dello stato corrente. |
-| `validity` | Livello di correttezza tecnica del numero di telefono. |
+| `validity` | Un livello di correttezza tecnica del numero di telefono. |
 
 {style="table-layout:auto"}
 

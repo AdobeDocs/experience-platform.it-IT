@@ -15,4 +15,4 @@ ht-degree: 0%
 
 Il tutorial per abilitare un set di dati per l’utilizzo in Real-Time Customer Profile e Adobe Experience Platform Identity Service include i passaggi per la creazione di un nuovo set di dati e per la configurazione di un set di dati esistente. Il tutorial illustra anche i passaggi per acquisire i dati nel set di dati e confermare la corretta acquisizione dei dati nel profilo e nel servizio Identity.
 
-Per accedere a questa esercitazione, visita [Tutorial su come abilitare un set di dati per profilo e identità tramite API](../../catalog/datasets/enable-for-profile.md), parte della documentazione dei set di dati.
+Per accedere a questa esercitazione, visita l&#39;esercitazione [Abilitare un set di dati per profilo e identità tramite API](../../catalog/datasets/enable-for-profile.md), parte della documentazione dei set di dati.

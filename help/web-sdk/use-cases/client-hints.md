@@ -6,7 +6,7 @@ exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
 source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
 source-wordcount: '1152'
-ht-degree: 4%
+ht-degree: 3%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 4%
 
 Ogni volta che un browser web invia una richiesta a un server web, l’intestazione della richiesta include informazioni sul browser e sull’ambiente in cui viene eseguito il browser. Tutti questi dati vengono aggregati in una stringa, denominata stringa dell’agente utente.
 
-Di seguito è riportato un esempio dell’aspetto di una stringa dell’agente utente in una richiesta proveniente da un browser Chrome in esecuzione su un [!DNL Mac OS] dispositivo.
+Di seguito è riportato un esempio dell&#39;aspetto di una stringa agente utente in una richiesta proveniente da un browser Chrome in esecuzione su un dispositivo [!DNL Mac OS].
 
 >[!NOTE]
 >
@@ -32,7 +32,7 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like 
 | Versione software | 105 |
 | Versione software completa | 105.0.0.0 |
 | Nome del motore di layout | AppleWebKit |
-| Versione del motore di layout | 537.36 |
+| Versione motore di layout | 537,36 |
 | Sistema operativo | MAC OS X |
 | Versione del sistema operativo | 10.15.7 |
 | Dispositivo | Mac OS X 10_15_7 |
@@ -56,7 +56,7 @@ Negli ultimi anni, i proprietari del sito e i fornitori di marketing hanno utili
 
 Nonostante lo scopo importante che le stringhe dell’agente utente svolgono per i proprietari del sito, gli sviluppatori del browser hanno deciso di modificare il funzionamento delle stringhe dell’agente utente per limitare potenziali problemi di privacy per gli utenti finali.
 
-La soluzione che hanno sviluppato si chiama [user agent client hints](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Gli hint client consentono ancora ai siti web di raccogliere le informazioni necessarie su browser, sistema operativo e dispositivo, fornendo al tempo stesso una maggiore protezione contro i metodi di tracciamento nascosti, come la impronta digitale.
+La soluzione sviluppata è denominata [user agent client hints](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Gli hint client consentono ancora ai siti web di raccogliere le informazioni necessarie su browser, sistema operativo e dispositivo, fornendo al tempo stesso una maggiore protezione contro i metodi di tracciamento nascosti, come la impronta digitale.
 
 Gli hint client consentono ai proprietari del sito web di accedere a gran parte delle stesse informazioni disponibili nella stringa dell’agente utente, ma in modo più rispettoso della privacy.
 
@@ -64,7 +64,7 @@ Quando i browser moderni inviano un utente a un server web, l’intera stringa d
 
 ## Supporto browser {#browser-support}
 
-[Hint client agente utente](https://developer.chrome.com/docs/privacy-sandbox/user-agent/) sono stati introdotti con [!DNL Google Chrome]versione 89.
+[User agent client hints](https://developer.chrome.com/docs/privacy-sandbox/user-agent/) introdotti con [!DNL Google Chrome]versione 89.
 
 Altri browser basati su Chromium supportano l’API dei Client Hints, ad esempio:
 
@@ -112,21 +112,21 @@ Gli hint client ad alta entropia sono disabilitati per impostazione predefinita 
 
 Alcune soluzioni Adobe Experience Cloud si basano sulle informazioni incluse negli hint client ad alta entropia durante la generazione dei rapporti.
 
-Se non abiliti gli hint client ad alta entropia nell’ambiente, i rapporti e le caratteristiche di Adobe Analytics e Audienci Manager descritti di seguito non funzioneranno.
+Se non abiliti gli hint client ad alta entropia nell’ambiente, i rapporti e le caratteristiche di Adobe Analytics e Audience Manager descritti di seguito non funzioneranno.
 
 ### Adobe Analytics segnala che si basa su hint client ad alta entropia {#analytics}
 
-Il [Sistema operativo](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html) la dimensione include la versione del sistema operativo memorizzata come hint client ad alta entropia. Se gli hint client ad alta entropia non sono abilitati, la versione del sistema operativo potrebbe non essere accurata per gli hit raccolti dai browser Chromium.
+La dimensione [Sistema operativo](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html) include la versione del sistema operativo memorizzata come hint client ad alta entropia. Se gli hint client ad alta entropia non sono abilitati, la versione del sistema operativo potrebbe non essere accurata per gli hit raccolti dai browser Chromium.
 
 ### caratteristiche Audienci Manager basate su hint client ad alta entropia {#aam}
 
-[!DNL Google] ha aggiornato il [!DNL Chrome] funzionalità del browser per ridurre al minimo le informazioni raccolte tramite `User-Agent` intestazione. Di conseguenza, Audience Manager i clienti che utilizzano [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=it) non riceverà più informazioni affidabili sulle caratteristiche basate su [chiavi a livello di piattaforma](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html).
+[!DNL Google] ha aggiornato la funzionalità del browser [!DNL Chrome] per ridurre le informazioni raccolte tramite l&#39;intestazione `User-Agent`. Di conseguenza, i clienti Audience Manager che utilizzano [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=it) non riceveranno più informazioni affidabili sulle caratteristiche basate su [chiavi a livello di piattaforma](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html).
 
-Audience Manager i clienti che utilizzano chiavi a livello di piattaforma per il targeting devono passare a [Experienci Platform Web SDK](/help/web-sdk/home.md) invece di [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=it), e abilita [Client Hints ad alta entropia](#enabling-high-entropy-client-hints) per continuare a ricevere dati affidabili sulle caratteristiche.
+I clienti Audience Manager che utilizzano chiavi a livello di piattaforma per il targeting devono passare a [Experience Platform Web SDK](/help/web-sdk/home.md) invece di [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=it) e abilitare [High Entropy Client Hints](#enabling-high-entropy-client-hints) per continuare a ricevere dati affidabili sulle caratteristiche.
 
 ## Abilitazione degli hint client ad alta entropia {#enabling-high-entropy-client-hints}
 
-Per abilitare gli hint client ad alta entropia nella distribuzione Web SDK, devi includere gli hint aggiuntivi `highEntropyUserAgentHints` opzione di contesto in [`context`](/help/web-sdk/commands/configure/context.md) campo.
+Per abilitare gli hint client ad alta entropia nella distribuzione Web SDK, è necessario includere l&#39;opzione di contesto `highEntropyUserAgentHints` aggiuntiva nel campo [`context`](/help/web-sdk/commands/configure/context.md).
 
 Ad esempio, per recuperare gli hint client ad alta entropia dalle proprietà web, la configurazione sarà simile alla seguente:
 
@@ -144,7 +144,7 @@ Sec-CH-UA-Mobile: ?0
 Sec-CH-UA-Platform: "macOS
 ```
 
-Equivalente [!DNL User-Agent] l’intestazione per lo stesso browser sarà simile alla seguente:
+L&#39;intestazione [!DNL User-Agent] equivalente per lo stesso browser sarà simile alla seguente:
 
 ```shell
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36
@@ -152,9 +152,9 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like 
 
 Sebbene le informazioni siano simili, la prima richiesta al server contiene suggerimenti client. Questi includono solo un sottoinsieme di ciò che è disponibile nella stringa dell’agente utente. Mancano nella richiesta l’architettura del sistema operativo, la versione completa del sistema operativo, il nome del motore di layout, la versione del motore di layout e la versione completa del browser.
 
-Tuttavia, su richieste successive, [!DNL Client Hints API] consente ai server web di richiedere ulteriori dettagli sul dispositivo. Quando questi valori vengono richiesti, a seconda della policy del browser o delle impostazioni utente, la risposta del browser può includere tali informazioni.
+Tuttavia, nelle richieste successive, [!DNL Client Hints API] consente ai server Web di richiedere ulteriori dettagli sul dispositivo. Quando questi valori vengono richiesti, a seconda della policy del browser o delle impostazioni utente, la risposta del browser può includere tali informazioni.
 
-Di seguito è riportato un esempio dell’oggetto JSON restituito da [!DNL Client Hints API] quando sono richiesti valori entropici elevati:
+Di seguito è riportato un esempio dell&#39;oggetto JSON restituito da [!DNL Client Hints API] quando sono richiesti valori di entropia elevati:
 
 
 ```json

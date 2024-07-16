@@ -12,19 +12,19 @@ ht-degree: 1%
 
 # Endpoint &quot;accelerated queries&quot;
 
-Come parte dello SKU di Data Distiller, il [API servizio query](https://developer.adobe.com/experience-platform-apis/references/query-service/) consente di eseguire query senza stato nell’archivio accelerato. I risultati restituiti si basano su dati aggregati. La latenza ridotta dei risultati consente uno scambio di informazioni più interattivo. Le API per query accelerate vengono utilizzate anche per [dashboard definiti dall&#39;utente](../../dashboards/user-defined-dashboards.md).
+Come parte dello SKU di Data Distiller, l&#39;[API servizio query](https://developer.adobe.com/experience-platform-apis/references/query-service/) consente di eseguire query senza stato nell&#39;archivio accelerato. I risultati restituiti si basano su dati aggregati. La latenza ridotta dei risultati consente uno scambio di informazioni più interattivo. Le API per query accelerate vengono utilizzate anche per alimentare [dashboard definiti dall&#39;utente](../../dashboards/user-defined-dashboards.md).
 
-Prima di continuare con questa guida, assicurati di aver letto e compreso [Guida API di Query Service](./getting-started.md) per utilizzare correttamente l’API Query Service.
+Prima di continuare con questa guida, assicurati di aver letto e compreso la [guida API di Query Service](./getting-started.md) per utilizzare correttamente l&#39;API di Query Service.
 
 ## Introduzione
 
-Per utilizzare l’archivio con accelerazione delle query è necessario lo SKU di Data Distiller. Consulta la sezione [imballaggio](../packaging.md) e [guardrail](../guardrails.md#query-accelerated-store), e [licenza](../data-distiller/license-usage.md) documentazione relativa allo SKU di Data Distiller. Se non disponi dello SKU di Data Distiller, contatta il rappresentante dell’assistenza clienti Adobe per ulteriori informazioni.
+Per utilizzare l’archivio con accelerazione delle query è necessario lo SKU di Data Distiller. Consulta la documentazione [package](../packaging.md) e [guardrail](../guardrails.md#query-accelerated-store) e [licensing](../data-distiller/license-usage.md) relativa allo SKU di Data Distiller. Se non disponi dello SKU di Data Distiller, contatta il rappresentante dell’assistenza clienti Adobe per ulteriori informazioni.
 
 Le sezioni seguenti descrivono le chiamate API necessarie per accedere all’archivio accelerato delle query in modo senza stato tramite l’API Query Service. Ogni chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
 
 ## Eseguire una query accelerata {#run-accelerated-query}
 
-Effettuare una richiesta POST al `/accelerated-queries` per eseguire una query accelerata. La query è contenuta direttamente nel payload della richiesta oppure è referenziata con un ID modello.
+Eseguire una richiesta POST all&#39;endpoint `/accelerated-queries` per eseguire una query accelerata. La query è contenuta direttamente nel payload della richiesta oppure è referenziata con un ID modello.
 
 **Formato API**
 
@@ -36,7 +36,7 @@ POST /accelerated-queries
 
 >[!IMPORTANT]
 >
->Richieste al `/accelerated-queries` l&#39;endpoint richiede un&#39;istruzione SQL OPPURE un ID modello, ma non entrambi. L’invio di entrambi in una richiesta causa un errore.
+>Le richieste all&#39;endpoint `/accelerated-queries` richiedono un&#39;istruzione SQL OPPURE un ID modello, ma non entrambi. L’invio di entrambi in una richiesta causa un errore.
 
 La richiesta seguente invia una query SQL nel corpo della richiesta all&#39;archivio accelerato.
 
@@ -80,9 +80,9 @@ curl -X POST https://platform.adobe.io/data/foundation/query/accelerated-queries
 
 | Proprietà | Descrizione |
 |---|---|
-| `dbName` | Nome del database a cui si sta eseguendo una query accelerata. Il valore per `dbName` deve assumere il formato di `{SANDBOX_NAME}:{ACCELERATED_STORE_DATABASE}.{ACCELERATED_STORE_SCHEMA}`. Il database fornito deve esistere nell’archivio accelerato, altrimenti la richiesta genererà un errore. È inoltre necessario assicurarsi che `x-sandbox-name` nome di intestazione e sandbox in `dbName` fai riferimento alla stessa sandbox. |
+| `dbName` | Nome del database a cui si sta eseguendo una query accelerata. Il valore per `dbName` deve assumere il formato di `{SANDBOX_NAME}:{ACCELERATED_STORE_DATABASE}.{ACCELERATED_STORE_SCHEMA}`. Il database fornito deve esistere nell’archivio accelerato, altrimenti la richiesta genererà un errore. È inoltre necessario assicurarsi che l&#39;intestazione e il nome della sandbox `x-sandbox-name` in `dbName` facciano riferimento alla stessa sandbox. |
 | `sql` | Stringa di istruzione SQL. La dimensione massima consentita è di 1000000 caratteri. |
-| `templateId` | L’identificatore univoco di una query creata e salvata come modello quando viene effettuata una richiesta POST al `/templates` endpoint. |
+| `templateId` | Identificatore univoco di una query creata e salvata come modello quando viene effettuata una richiesta POST all&#39;endpoint `/templates`. |
 | `name` | Nome descrittivo facoltativo per la query accelerata. |
 | `description` | Commento facoltativo sull’intento della query per aiutare altri utenti a comprenderne lo scopo. La dimensione massima consentita è 1000 byte. |
 
@@ -209,6 +209,6 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con lo sche
 | `resultsMeta` | Questo oggetto contiene i metadati per ogni colonna restituita nei risultati, in modo che gli utenti possano conoscere il nome e il tipo di ogni colonna. |
 | `resultsMeta._adhoc` | Schema ad hoc Experience Data Model (XDM) con campi denominati in modo che possano essere utilizzati solo da un singolo set di dati. |
 | `resultsMeta._adhoc.type` | Il tipo di dati dello schema ad hoc. |
-| `resultsMeta._adhoc.meta:xdmType` | Si tratta di un valore generato dal sistema per il tipo di campo XDM. Per ulteriori informazioni sui tipi disponibili, consulta la documentazione su [tipi XDM disponibili](../../xdm/tutorials/custom-fields-api.md). |
+| `resultsMeta._adhoc.meta:xdmType` | Si tratta di un valore generato dal sistema per il tipo di campo XDM. Per ulteriori informazioni sui tipi disponibili, consulta la documentazione sui [tipi XDM disponibili](../../xdm/tutorials/custom-fields-api.md). |
 | `resultsMeta._adhoc.properties` | Si tratta dei nomi delle colonne del set di dati sottoposto a query. |
 | `resultsMeta._adhoc.results` | Questi sono i nomi delle righe del set di dati sottoposto a query. Riflettono ciascuna delle colonne restituite. |

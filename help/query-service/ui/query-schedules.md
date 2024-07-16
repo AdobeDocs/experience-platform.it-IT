@@ -17,85 +17,85 @@ Puoi automatizzare l’esecuzione delle query creando pianificazioni di query. L
 >
 >È possibile aggiungere una pianificazione solo a una query già creata e salvata.
 
-Tutte le query pianificate vengono aggiunte all’elenco in [!UICONTROL Query pianificate] scheda. Da tale area di lavoro è possibile monitorare lo stato di tutti i processi di query pianificati tramite l’interfaccia utente. Il giorno [!UICONTROL Query pianificate] scheda puoi trovare informazioni importanti sull’esecuzione della query e abbonarti agli avvisi. Le informazioni disponibili includono lo stato, i dettagli della pianificazione e i messaggi/codici di errore in caso di errore di esecuzione. Consulta la [Monitorare il documento delle query pianificate](./monitor-queries.md) per ulteriori informazioni.
+Tutte le query pianificate vengono aggiunte all&#39;elenco nella scheda [!UICONTROL Query pianificate]. Da tale area di lavoro è possibile monitorare lo stato di tutti i processi di query pianificati tramite l’interfaccia utente. Nella scheda [!UICONTROL Query pianificate] puoi trovare informazioni importanti sull&#39;esecuzione della query e iscriverti agli avvisi. Le informazioni disponibili includono lo stato, i dettagli della pianificazione e i messaggi/codici di errore in caso di errore di esecuzione. Per ulteriori informazioni, vedere il documento [Monitorare le query pianificate](./monitor-queries.md).
 
-Questo flusso di lavoro descrive il processo di pianificazione nell’interfaccia utente di Query Service. Per informazioni su come aggiungere pianificazioni utilizzando l’API, leggi la [guida dell’endpoint &quot;scheduled queries&quot;](../api/scheduled-queries.md).
+Questo flusso di lavoro descrive il processo di pianificazione nell’interfaccia utente di Query Service. Per informazioni su come aggiungere pianificazioni utilizzando l&#39;API, leggere la [guida dell&#39;endpoint per le query pianificate](../api/scheduled-queries.md).
 
 ## Creare una pianificazione di query {#create-schedule}
 
-Per pianificare una query, selezionare un modello di query dalla [!UICONTROL Modelli] scheda o [!UICONTROL Modello] colonna del [!UICONTROL Query pianificate] scheda. Selezionando il nome del modello si passa all&#39;editor di query.
+Per pianificare una query, selezionare un modello di query dalla scheda [!UICONTROL Modelli] o dalla colonna [!UICONTROL Modello] della scheda [!UICONTROL Query pianificate]. Selezionando il nome del modello si passa all&#39;editor di query.
 
 Se si accede a una query salvata dall&#39;Editor query, è possibile creare una pianificazione per la query o visualizzarne la pianificazione dal pannello dei dettagli.
 
 >[!TIP]
 >
->Seleziona **[!UICONTROL Visualizza pianificazione]** per passare all&#39;area di lavoro pianificazioni e visualizzare immediatamente qualsiasi query pianificata eseguita.
+>Selezionare **[!UICONTROL Visualizza pianificazione]** per passare all&#39;area di lavoro pianificazioni e visualizzare immediatamente qualsiasi query pianificata eseguita.
 
-![Editor query con [!UICONTROL Visualizza pianificazione] e [!UICONTROL Aggiungi pianificazione] evidenziato.](../images/ui/query-schedules/view-add-schedule.png)
+![Editor query con [!UICONTROL Visualizza pianificazione] e [!UICONTROL Aggiungi pianificazione] evidenziati.](../images/ui/query-schedules/view-add-schedule.png)
 
-Seleziona **[!UICONTROL Aggiungi pianificazione]** per passare al [pagina dettagli pianificazione](#schedule-details).
+Seleziona **[!UICONTROL Aggiungi pianificazione]** per passare alla [pagina dettagli pianificazione](#schedule-details).
 
-In alternativa, seleziona la **[!UICONTROL Schedules]** sotto il nome della query.
+In alternativa, selezionare la scheda **[!UICONTROL Schedules]** sotto il nome della query.
 
-![Editor query con la scheda Schedules evidenziata.](../images/ui/query-schedules/schedules-tab.png)
+![L&#39;editor delle query con la scheda Schedules evidenziata.](../images/ui/query-schedules/schedules-tab.png)
 
 Verrà visualizzata l&#39;area di lavoro pianificazioni. Nell’interfaccia utente viene visualizzato un elenco delle esecuzioni pianificate a cui è associato il modello. Seleziona **[!UICONTROL Aggiungi pianificazione]** per creare una pianificazione.
 
-![Nell&#39;area di lavoro Pianificazione editor query è evidenziata Aggiungi pianificazione.](../images/ui/query-schedules/add-schedule.png)
+![Area di lavoro di pianificazione dell&#39;editor delle query con Aggiungi pianificazione evidenziata.](../images/ui/query-schedules/add-schedule.png)
 
 ### Aggiungi dettagli pianificazione {#schedule-details}
 
-Viene visualizzata la pagina dei dettagli della pianificazione. In questa pagina è possibile modificare una serie di dettagli per la query pianificata. I dettagli includono [frequenza e giorno feriale della query pianificata](#scheduled-query-frequency) run, la data di inizio e di fine, il set di dati in cui esportare i risultati e [avvisi sullo stato delle query](#alerts-for-query-status).
+Viene visualizzata la pagina dei dettagli della pianificazione. In questa pagina è possibile modificare una serie di dettagli per la query pianificata. I dettagli includono [frequenza e giorno feriale dell&#39;esecuzione pianificata della query](#scheduled-query-frequency), la data di inizio e di fine, il set di dati in cui esportare i risultati e [avvisi sullo stato della query](#alerts-for-query-status).
 
-![Viene evidenziato il pannello Dettagli pianificazione.](../images/ui/query-schedules/schedule-details.png)
+![Il pannello Dettagli pianificazione è evidenziato.](../images/ui/query-schedules/schedule-details.png)
 
 #### Frequenza query pianificata {#scheduled-query-frequency}
 
 Puoi scegliere le seguenti opzioni per **[!UICONTROL Frequenza]**:
 
-- **[!UICONTROL Ogni ora]**: la query pianificata viene eseguita ogni ora per il periodo di data selezionato.
-- **[!UICONTROL Giornaliero]**: la query pianificata verrà eseguita ogni X giorni all’ora e nel periodo di data selezionati. L&#39;ora selezionata è in **UTC** e non il tuo fuso orario locale.
-- **[!UICONTROL Ogni settimana]**: la query selezionata verrà eseguita nei giorni della settimana, dell’ora e del periodo di data selezionati. L&#39;ora selezionata è in **UTC** e non il tuo fuso orario locale.
-- **[!UICONTROL Mensile]**: la query selezionata verrà eseguita ogni mese al giorno, all’ora e al periodo di data selezionati. L&#39;ora selezionata è in **UTC** e non il tuo fuso orario locale.
-- **[!UICONTROL Annuale]**: la query selezionata verrà eseguita ogni anno al giorno, al mese, all’ora e al periodo di data selezionati. L&#39;ora selezionata è in **UTC** e non il tuo fuso orario locale.
+- **[!UICONTROL Oraria]**: la query pianificata verrà eseguita ogni ora per il periodo di date selezionato.
+- **[!UICONTROL Giornaliero]**: la query pianificata verrà eseguita ogni X giorni alla data e all&#39;ora selezionate. L&#39;ora selezionata è tra **UTC** e non il tuo fuso orario locale.
+- **[!UICONTROL Settimanale]**: la query selezionata verrà eseguita nei giorni della settimana, dell&#39;ora e del periodo selezionato. L&#39;ora selezionata è tra **UTC** e non il tuo fuso orario locale.
+- **[!UICONTROL Mensile]**: la query selezionata verrà eseguita ogni mese al giorno, all&#39;ora e al periodo di data selezionati. L&#39;ora selezionata è tra **UTC** e non il tuo fuso orario locale.
+- **[!UICONTROL Annuale]**: la query selezionata verrà eseguita ogni anno al giorno, al mese, all&#39;ora e al periodo di data selezionati. L&#39;ora selezionata è tra **UTC** e non il tuo fuso orario locale.
 
 ### Fornisci dettagli set di dati {#dataset-details}
 
 Gestisci i risultati della query aggiungendo i dati a un set di dati esistente o creando un nuovo set di dati e aggiungendo i dati a esso.
 
-Seleziona **[!UICONTROL Crea e aggiungi al nuovo set di dati]** per creare un set di dati quando si esegue una query per la prima volta. Le esecuzioni successive continuano a inserire dati in tale set di dati. Infine, fornisci un nome e una descrizione per il set di dati.
+Selezionare **[!UICONTROL Crea e aggiungi al nuovo set di dati]** per creare un set di dati quando si esegue una query per la prima volta. Le esecuzioni successive continuano a inserire dati in tale set di dati. Infine, fornisci un nome e una descrizione per il set di dati.
 
 >[!IMPORTANT]
 >
-> Poiché si utilizza un set di dati esistente o si crea un nuovo set di dati, **non** devono includere `INSERT INTO` o `CREATE TABLE AS SELECT` come parte della query, poiché i set di dati sono già impostati. Inclusione di `INSERT INTO` o `CREATE TABLE AS SELECT` come parte delle query pianificate genererà un errore.
+> Poiché si sta utilizzando un set di dati esistente o creando un nuovo set di dati, **non** deve includere `INSERT INTO` o `CREATE TABLE AS SELECT` come parte della query, poiché i set di dati sono già impostati. L&#39;inclusione di `INSERT INTO` o `CREATE TABLE AS SELECT` come parte delle query pianificate genererà un errore.
 
-![Il pannello Dettagli pianificazione con i dettagli del set di dati e il [!UICONTROL Crea e aggiungi al nuovo set di dati] opzioni evidenziate.](../images/ui/query-schedules/dataset-details-create-and-append.png)
+![Il pannello Dettagli pianificazione con i dettagli del set di dati e le opzioni [!UICONTROL Crea e aggiungi al nuovo set di dati] sono evidenziati.](../images/ui/query-schedules/dataset-details-create-and-append.png)
 
-In alternativa, seleziona **[!UICONTROL Aggiungi a set di dati esistente]** seguito dall’icona del set di dati (![Icona del set di dati.](../images/ui/query-schedules/dataset-icon.png)).
+In alternativa, selezionare **[!UICONTROL Aggiungi al set di dati esistente]** seguito dall&#39;icona del set di dati (![Icona del set di dati.](../images/ui/query-schedules/dataset-icon.png)).
 
 ![Il pannello Dettagli pianificazione con i dettagli del set di dati ed Aggiungi al set di dati esistente è evidenziato.](../images/ui/query-schedules/dataset-details-existing.png)
 
-Il **[!UICONTROL Seleziona set di dati di output]** viene visualizzata.
+Viene visualizzata la finestra di dialogo **[!UICONTROL Seleziona set di dati di output]**.
 
 Quindi, sfoglia i set di dati esistenti o utilizza il campo di ricerca per filtrare le opzioni. Seleziona la riga del set di dati da utilizzare. I dettagli del set di dati vengono visualizzati nel pannello a destra. Seleziona **[!UICONTROL Fine]** per confermare la scelta.
 
-![Viene evidenziata la finestra di dialogo Seleziona set di dati di output con il campo di ricerca, una riga di set di dati e l’opzione Fine.](../images/ui/query-schedules/select-output-dataset-dialog.png)
+![Finestra di dialogo Seleziona set di dati di output con il campo di ricerca, una riga di set di dati e Fine evidenziati.](../images/ui/query-schedules/select-output-dataset-dialog.png)
 
 ### Quarantena le query in caso di errore continuo {#quarantine}
 
-Durante la creazione di una pianificazione, puoi registrare la query nella funzione di quarantena per proteggere le risorse di sistema e prevenire potenziali interruzioni. La funzione di quarantena identifica e isola automaticamente le query che hanno ripetutamente esito negativo inserendole in una [!UICONTROL In quarantena] stato. Mettendo in quarantena le query dopo dieci errori consecutivi, puoi intervenire, rivedere e rettificare i problemi prima di consentire ulteriori esecuzioni. In questo modo è possibile mantenere l&#39;efficienza operativa e l&#39;integrità dei dati.
+Durante la creazione di una pianificazione, puoi registrare la query nella funzione di quarantena per proteggere le risorse di sistema e prevenire potenziali interruzioni. La funzionalità di quarantena identifica e isola automaticamente le query che hanno ripetutamente esito negativo inserendole in uno stato [!UICONTROL In quarantena]. Mettendo in quarantena le query dopo dieci errori consecutivi, puoi intervenire, rivedere e rettificare i problemi prima di consentire ulteriori esecuzioni. In questo modo è possibile mantenere l&#39;efficienza operativa e l&#39;integrità dei dati.
 
-![L’area di lavoro Query pianificate con [!UICONTROL Quarantena query] evidenziate e Sì selezionate.](../images/ui/query-schedules/quarantine-enroll.png)
+![Area di lavoro Pianificazioni query con [!UICONTROL Quarantena query] evidenziata e Sì selezionata.](../images/ui/query-schedules/quarantine-enroll.png)
 
-Dopo aver registrato una query per la funzione di quarantena, puoi attivare gli avvisi per questa modifica dello stato della query. Se una query pianificata non è iscritta alla quarantena, non viene visualizzata come opzione su [la finestra di dialogo Avvisi](./monitor-queries.md#alert-subscription).
+Dopo aver registrato una query per la funzione di quarantena, puoi attivare gli avvisi per questa modifica dello stato della query. Se una query pianificata non è registrata in quarantena, non viene visualizzata come opzione nella [finestra di dialogo Avvisi](./monitor-queries.md#alert-subscription).
 
-È inoltre possibile registrare una query pianificata nella funzione di quarantena dalle azioni in linea di [!UICONTROL Query pianificate] scheda. Consulta la [monitorare la documentazione delle query](./monitor-queries.md#alert-subscription) per ulteriori dettagli.
+È inoltre possibile registrare una query pianificata nella funzionalità di quarantena dalle azioni in linea della scheda [!UICONTROL Query pianificate]. Per ulteriori dettagli, consulta la [documentazione delle query di monitoraggio](./monitor-queries.md#alert-subscription).
 
 ### Impostare gli avvisi per uno stato di query pianificata {#alerts-for-query-status}
 
 È inoltre possibile abbonarsi agli avvisi di query come parte delle impostazioni di query pianificate. Puoi configurare le impostazioni per ricevere notifiche per una serie di situazioni. Gli avvisi possono essere impostati per uno stato di quarantena, ritardi nell’elaborazione delle query o una modifica dello stato della query. Le opzioni di avviso dello stato della query disponibili includono avvio, operazione riuscita ed errore. Gli avvisi possono essere ricevuti come notifiche pop-up o e-mail. Selezionare la casella di controllo per sottoscrivere gli avvisi relativi allo stato della query pianificata.
 
-![Il pannello Dettagli pianificazione con le opzioni Avviso evidenziate.](../images/ui/query-editor/alerts.png)
+![Pannello Dettagli pianificazione con le opzioni di avviso evidenziate.](../images/ui/query-editor/alerts.png)
 
 La tabella seguente spiega i tipi di avviso per le query supportati:
 
@@ -104,52 +104,52 @@ La tabella seguente spiega i tipi di avviso per le query supportati:
 | `start` | Questo avviso avvisa quando viene avviata o avviata l&#39;elaborazione di una query pianificata. |
 | `success` | Questo avviso informa l&#39;utente quando una query pianificata viene eseguita correttamente, indicando che la query è stata eseguita senza errori. |
 | `failed` | Questo avviso viene attivato quando una query pianificata viene eseguita con un errore o non viene eseguita correttamente. Consente di identificare e risolvere tempestivamente i problemi. |
-| `quarantine` | Questo avviso viene attivato quando un’esecuzione di query pianificata viene messa in quarantena. Una volta che una query è [iscritto alla funzione di quarantena](#quarantine), qualsiasi query pianificata che non supera dieci esecuzioni consecutive viene automaticamente inserita in una [!UICONTROL In quarantena] stato. Una query in quarantena richiede quindi l’intervento dell’utente prima di poter eseguire ulteriori esecuzioni. Nota: per poter sottoscrivere avvisi di quarantena, è necessario registrare le query per la funzione di quarantena. |
-| `delay` | Questo avviso ti avvisa se è presente [ritardo nell’esito di un’esecuzione di una query pianificata](./monitor-queries.md#query-run-delay) oltre una soglia specificata. È possibile impostare un&#39;ora personalizzata che attivi l&#39;avviso quando la query viene eseguita per tale durata senza completare o non riuscire. Il comportamento predefinito imposta un avviso per 150 minuti dopo l’inizio dell’elaborazione della query. |
+| `quarantine` | Questo avviso viene attivato quando un’esecuzione di query pianificata viene messa in quarantena. Una volta che una query è [registrata nella funzionalità di quarantena](#quarantine), qualsiasi query pianificata che non riesce a eseguire dieci esecuzioni consecutive viene automaticamente posta in uno stato [!UICONTROL In quarantena]. Una query in quarantena richiede quindi l’intervento dell’utente prima di poter eseguire ulteriori esecuzioni. Nota: per poter sottoscrivere avvisi di quarantena, è necessario registrare le query per la funzione di quarantena. |
+| `delay` | Questo avviso notifica se si verifica un [ritardo nell&#39;esito di un&#39;esecuzione di una query pianificata](./monitor-queries.md#query-run-delay) oltre la soglia specificata. È possibile impostare un&#39;ora personalizzata che attivi l&#39;avviso quando la query viene eseguita per tale durata senza completare o non riuscire. Il comportamento predefinito imposta un avviso per 150 minuti dopo l’inizio dell’elaborazione della query. |
 
 >[!NOTE]
 >
->Se si sceglie di impostare un [!UICONTROL Ritardo esecuzione query] Avviso, è necessario impostare il ritardo desiderato in minuti nell’interfaccia utente di Platform. Immetti la durata in minuti. Il ritardo massimo è di 24 ore (1440 minuti).
+>Se scegli di impostare un avviso di [!UICONTROL Ritardo esecuzione query], devi impostare il tempo di ritardo desiderato in minuti nell&#39;interfaccia utente di Platform. Immetti la durata in minuti. Il ritardo massimo è di 24 ore (1440 minuti).
 
-Per una panoramica degli avvisi in Adobe Experience Platform, inclusa la struttura della definizione delle regole di avviso, vedi [panoramica degli avvisi](../../observability/alerts/overview.md). Per informazioni sulla gestione degli avvisi e delle regole di avviso nell’interfaccia utente di Adobe Experience Platform, consulta [Guida all’interfaccia utente Avvisi](../../observability/alerts/ui.md).
+Per una panoramica degli avvisi in Adobe Experience Platform, inclusa la struttura della definizione delle regole di avviso, vedere la [panoramica degli avvisi](../../observability/alerts/overview.md). Per informazioni sulla gestione degli avvisi e delle regole di avviso nell&#39;interfaccia utente di Adobe Experience Platform, vedere la [guida dell&#39;interfaccia utente degli avvisi](../../observability/alerts/ui.md).
 
 ### Impostare i parametri per una query con parametri pianificata {#set-parameters}
 
 >[!IMPORTANT]
 >
->La funzione per l’interfaccia con parametri per query è attualmente disponibile in una **solo versione limitata** e non è disponibile per tutti i clienti. Se non hai accesso alle query con parametri, continua con [eliminare o disattivare una pianificazione](#delete-schedule) sezione.
+>La funzionalità dell&#39;interfaccia utente per query con parametri è attualmente disponibile solo in una **versione limitata** e non è disponibile per tutti i clienti. Se non hai accesso alle query con parametri, continua con la sezione [elimina o disabilita una pianificazione](#delete-schedule).
 
 Se si crea una query pianificata per una query con parametri, è necessario impostare i valori dei parametri per queste esecuzioni della query.
 
-![La sezione Dettagli pianificazione del flusso di lavoro di creazione della pianificazione con la sezione Parametri query evidenziata.](../images/ui/query-schedules/scheduled-query-parameter.png)
+![Sezione Dettagli pianificazione del flusso di lavoro di creazione della pianificazione con la sezione Parametri query evidenziata.](../images/ui/query-schedules/scheduled-query-parameter.png)
 
 Dopo aver confermato i dettagli della pianificazione, seleziona **[!UICONTROL Salva]** per creare una pianificazione. Viene visualizzata di nuovo la scheda Pianificazioni del modello. In questa area di lavoro vengono visualizzati i dettagli della pianificazione appena creata, inclusi l’ID pianificazione, la pianificazione stessa e il set di dati di output della pianificazione.
 
 ## Visualizza esecuzioni query pianificate {#scheduled-query-runs}
 
-Dal modello di [!UICONTROL Schedules] , seleziona l’ID pianificazione per passare all’elenco delle query eseguite per la query appena pianificata.
+Dalla scheda [!UICONTROL Schedules] del modello, seleziona l&#39;ID pianificazione per passare all&#39;elenco delle query eseguite per la query appena pianificata.
 
 ![Area di lavoro pianificazioni con la pianificazione appena creata evidenziata.](../images/ui/query-schedules/schedules-workspace.png)
 
-In alternativa, per visualizzare un elenco delle esecuzioni pianificate di un modello di query, passare alla **[!UICONTROL Query pianificate]** e selezionare un nome di modello dall&#39;elenco disponibile.
+In alternativa, per visualizzare un elenco delle esecuzioni pianificate di un modello di query, passare alla scheda **[!UICONTROL Query pianificate]** e selezionare un nome di modello dall&#39;elenco disponibile.
 
-![La scheda Query pianificate con un modello denominato evidenziato.](../images/ui/query-schedules/view-scheduled-runs.png)
+![Scheda Query pianificate con un modello denominato evidenziato.](../images/ui/query-schedules/view-scheduled-runs.png)
 
 Viene visualizzato l&#39;elenco delle query eseguite per la query pianificata.
 
-![La sezione dei dettagli dell’area di lavoro Query pianificate con un elenco delle esecuzioni delle query è evidenziata per una query pianificata.](../images/ui/query-schedules/list-of-scheduled-runs.png)
+![La sezione dei dettagli dell&#39;area di lavoro Query pianificate con un elenco di query viene eseguita evidenziata per una query pianificata.](../images/ui/query-schedules/list-of-scheduled-runs.png)
 
-Consulta la [monitoraggio della guida con query pianificata](./monitor-queries.md#inline-actions) per informazioni complete su come monitorare lo stato di tutti i processi di query tramite l’interfaccia utente.
+Per informazioni complete su come monitorare lo stato di tutti i processi di query tramite l&#39;interfaccia utente, vedere la [guida monitoraggi pianificati per query](./monitor-queries.md#inline-actions).
 
-Seleziona un **[!UICONTROL ID esecuzione query]** dall’elenco, per passare alla panoramica dell’esecuzione della query. Per una disaggregazione completa delle informazioni disponibili [panoramica dell’esecuzione delle query](./monitor-queries.md#query-run-overview), consulta la documentazione sul monitoraggio delle query pianificate.
+Selezionare un **[!UICONTROL ID esecuzione query]** dall&#39;elenco per passare alla panoramica esecuzione query. Per un&#39;analisi completa delle informazioni disponibili nella [panoramica sull&#39;esecuzione delle query](./monitor-queries.md#query-run-overview), vedere la documentazione relativa al monitoraggio delle query pianificate.
 
-Per monitorare le query pianificate tramite l’API Query Service, consulta la sezione [guida degli endpoint di esecuzione delle query pianificate](../api/runs-scheduled-queries.md).
+Per monitorare le query pianificate tramite l&#39;API Query Service, vedere la [guida degli endpoint per l&#39;esecuzione pianificata delle query](../api/runs-scheduled-queries.md).
 
 ## Abilitare, disabilitare o eliminare una pianificazione {#delete-schedule}
 
-È possibile abilitare, disabilitare o eliminare una pianificazione dall&#39;area di lavoro pianificazioni di una particolare query o dall&#39; [!UICONTROL Query pianificate] area di lavoro che elenca tutte le query pianificate.
+È possibile abilitare, disabilitare o eliminare una pianificazione dall&#39;area di lavoro pianificazioni di una determinata query o dall&#39;area di lavoro [!UICONTROL Query pianificate] in cui sono elencate tutte le query pianificate.
 
-Per accedere al [!UICONTROL Schedules] della query scelta, è necessario selezionare il nome di un modello di query dalla scheda [!UICONTROL Modelli] scheda o [!UICONTROL Query pianificate] scheda. Consente di passare all&#39;editor delle query per la query. Dall’editor delle query, seleziona **[!UICONTROL Schedules]** per accedere all&#39;area di lavoro pianificazioni.
+Per accedere alla scheda [!UICONTROL Schedules] della query scelta, è necessario selezionare il nome di un modello di query dalla scheda [!UICONTROL Templates] o dalla scheda [!UICONTROL Scheduled Queries]. Consente di passare all&#39;editor delle query per la query. Dall&#39;editor delle query, selezionare **[!UICONTROL Schedules]** per accedere all&#39;area di lavoro delle pianificazioni.
 
 Seleziona una pianificazione dalle righe delle pianificazioni disponibili per popolare il pannello dei dettagli. Utilizza l’interruttore per disabilitare (o abilitare) la query pianificata.
 
@@ -159,14 +159,14 @@ Seleziona una pianificazione dalle righe delle pianificazioni disponibili per po
 >
 >È necessario disattivare la pianificazione prima di eliminare una pianificazione per una query.
 
-![L’elenco delle pianificazioni di un modello con il pannello dei dettagli evidenziato.](../images/ui/query-schedules/schedule-details-panel.png)
+![Elenco delle pianificazioni di un modello con il pannello dei dettagli evidenziato.](../images/ui/query-schedules/schedule-details-panel.png)
 
-Viene visualizzata una finestra di dialogo di conferma. Seleziona **[!UICONTROL Disattiva]** per confermare l’azione.
+Viene visualizzata una finestra di dialogo di conferma. Seleziona **[!UICONTROL Disattiva]** per confermare l&#39;azione.
 
-![La finestra di dialogo di conferma Disattiva pianificazione.](../images/ui/query-schedules/disable-schedule-confirmation-dialog.png)
+![Finestra di dialogo per disabilitare la conferma della pianificazione.](../images/ui/query-schedules/disable-schedule-confirmation-dialog.png)
 
-Seleziona **[!UICONTROL Eliminare una pianificazione]** per eliminare la pianificazione disabilitata.
+Selezionare **[!UICONTROL Elimina una pianificazione]** per eliminare la pianificazione disabilitata.
 
 ![Area di lavoro pianificazioni con Elimina pianificazione evidenziata.](../images/ui/query-schedules/delete-schedule.png)
 
-In alternativa, [!UICONTROL Query pianificate] La scheda offre una raccolta di azioni in linea per ogni query pianificata. Le azioni in linea disponibili includono [!UICONTROL Disattiva pianificazione] o [!UICONTROL Abilita pianificazione], [!UICONTROL Elimina pianificazione], e [!UICONTROL Abbonati] agli avvisi per la query pianificata. Per istruzioni complete su come eliminare o disabilitare una query pianificata tramite la scheda Query pianificate, vedi [monitoraggio della guida con query pianificata](./monitor-queries.md#inline-actions).
+In alternativa, la scheda [!UICONTROL Query pianificate] offre una raccolta di azioni in linea per ogni query pianificata. Le azioni in linea disponibili includono [!UICONTROL Disabilita pianificazione] o [!UICONTROL Abilita pianificazione], [!UICONTROL Elimina pianificazione] e [!UICONTROL Abbonati] agli avvisi per la query pianificata. Per istruzioni complete su come eliminare o disabilitare una query pianificata tramite la scheda Query pianificate, vedere la [guida Monitoraggio query pianificate](./monitor-queries.md#inline-actions).

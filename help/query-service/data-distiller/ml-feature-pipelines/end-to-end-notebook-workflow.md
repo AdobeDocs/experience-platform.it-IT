@@ -24,9 +24,9 @@ Utilizza Data Distiller per arricchire le pipeline di apprendimento automatico c
 
 Questo documento fornisce una serie di notebook per ambienti di apprendimento automatico basati su cloud che illustrano un flusso di lavoro end-to-end. Il flusso di lavoro utilizza gli strumenti di apprendimento automatico preferiti per creare modelli di dati personalizzati che supportano i casi di utilizzo di marketing con i dati di Experience Platform.
 
-Questo flusso di lavoro richiede l’utilizzo di [!DNL Python] notebook negli ambienti di apprendimento automatico. Istruzioni per iniziare a usare questi [!DNL Python] I notebook sono inclusi nei rispettivi file readme.
+Questo flusso di lavoro richiede l&#39;utilizzo di [!DNL Python] blocchi appunti negli ambienti di apprendimento automatico. Le istruzioni per iniziare a usare questi notebook [!DNL Python] sono incluse nei rispettivi file readme.
 
-Prima di continuare con questa guida, segui i passaggi descritti in [Panoramica delle pipeline delle funzioni AI/ML](./overview.md) per abilitare l’uso dei notebook Python di esempio utilizzati in questo caso d’uso della pipeline di funzioni AI/ML.
+Prima di continuare con questa guida, segui i passaggi descritti nella panoramica delle [pipeline di funzioni AI/ML](./overview.md) per abilitare l’utilizzo dei notebook Python di esempio utilizzati in questo caso d’uso della pipeline di funzioni AI/ML.
 
 ## Notebook dell’ambiente di apprendimento automatico cloud {#cmle-notebooks}
 

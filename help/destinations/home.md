@@ -11,7 +11,7 @@ ht-degree: 4%
 
 # Panoramica di [!DNL Destinations] {#overview}
 
-![Banner di panoramica sulle destinazioni.](./assets/overview/destinations-overview-banner.png)
+![Banner panoramica sulle destinazioni.](./assets/overview/destinations-overview-banner.png)
 
 **[!DNL Destinations]** sono integrazioni predefinite con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 
@@ -24,7 +24,7 @@ ht-degree: 4%
 
 ## Destinazioni e origini {#destinations-and-sources}
 
-Una delle funzionalità principali di Platform è l’acquisizione dei dati di prime parti e l’attivazione per le esigenze aziendali. Utilizzare [sorgenti](../sources/home.md) per acquisire dati in Platform e nelle destinazioni per esportare dati da Platform.
+Una delle funzionalità principali di Platform è l’acquisizione dei dati di prime parti e l’attivazione per le esigenze aziendali. Utilizza [sorgenti](../sources/home.md) per acquisire dati in Platform e le destinazioni per esportare dati da Platform.
 
 ## Passaggi delle destinazioni {#steps}
 
@@ -34,39 +34,39 @@ Una delle funzionalità principali di Platform è l’acquisizione dei dati di p
 
 ## Controlli {#controls}
 
-I controlli in [area di lavoro destinazioni](./ui/destinations-workspace.md) consente di:
+I controlli nell&#39;area di lavoro [destinazioni](./ui/destinations-workspace.md) consentono di:
 
 * Sfoglia il catalogo delle piattaforme di destinazione in cui puoi attivare i tuoi dati;
 * Creare, modificare, attivare e disattivare flussi di dati per le destinazioni nel catalogo;
 * Creare un account in un percorso di archiviazione o collegare Platform all’account nella piattaforma di destinazione;
 * Seleziona i tipi di pubblico o i set di dati da attivare nelle destinazioni;
-* Seleziona quale [Campi Experience Data Model (XDM)](../xdm/home.md) da esportare durante l’attivazione di tipi di pubblico in determinate destinazioni, ad esempio destinazioni di e-mail marketing, piattaforme di gestione delle relazioni con i clienti, posizioni di archiviazione cloud e altro ancora.
+* Seleziona i [campi Experience Data Model (XDM)](../xdm/home.md) da esportare durante l&#39;attivazione di tipi di pubblico in determinate destinazioni, ad esempio destinazioni di e-mail marketing, piattaforme CRM, posizioni di archiviazione cloud e altro ancora.
 * Attiva diversi tipi di profili e tipi di pubblico per le destinazioni: persone, account e potenziali clienti.
 
 ## Tipi e categorie di destinazione {#types-and-categories}
 
-Ad Experience Platform, puoi attivare i dati per vari tipi di destinazioni, per soddisfare i casi d’uso di attivazione. Le destinazioni variano da integrazioni basate su API a integrazioni con sistemi di ricezione di file, destinazioni di ricerca dei profili e altro ancora. Per informazioni dettagliate su tutte le destinazioni disponibili, leggi [panoramica sui tipi e sulle categorie di destinazione](./destination-types.md).
+Ad Experience Platform, puoi attivare i dati per vari tipi di destinazioni, per soddisfare i casi d’uso di attivazione. Le destinazioni variano da integrazioni basate su API a integrazioni con sistemi di ricezione di file, destinazioni di ricerca dei profili e altro ancora. Per informazioni dettagliate su tutte le destinazioni disponibili, leggere la [panoramica sui tipi e sulle categorie di destinazione](./destination-types.md).
 
 ## Destinazioni create da Adobi e da partner {#adobe-and-partner-built-destinations}
 
-Alcuni dei connettori nel catalogo delle destinazioni Experienci Platform sono generati e gestiti da Adobe, mentre altri sono generati e gestiti da aziende partner che utilizzano [Destination SDK](/help/destinations/destination-sdk/overview.md). Una nota nella parte superiore della pagina della documentazione per ciascun connettore creato dal partner richiama se una destinazione è stata creata e gestita dal partner. Ad esempio, il [Connettore Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md) viene creato da Adobe, mentre [Connettore TikTok](/help/destinations/catalog/social/tiktok.md) viene creato e gestito dal team TikTok.
+Alcuni dei connettori nel catalogo delle destinazioni Experience Platform sono generati e gestiti da Adobe, mentre altri sono generati e gestiti da società partner che utilizzano [Destination SDK](/help/destinations/destination-sdk/overview.md). Una nota nella parte superiore della pagina della documentazione per ciascun connettore creato dal partner richiama se una destinazione è stata creata e gestita dal partner. Il [connettore Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), ad esempio, è stato creato da Adobe, mentre il [connettore TikTok](/help/destinations/catalog/social/tiktok.md) è stato creato e gestito dal team TikTok.
 
 Per i connettori creati e gestiti dal partner, ciò significa che potrebbe essere necessario risolvere i problemi con il connettore dal team partner (metodo di contatto fornito nella nota nella pagina della documentazione). Per i problemi relativi ai connettori creati e gestiti da Adobe, contatta il rappresentante dell’Adobe o l’Assistenza clienti.
 
 ## Destinazioni e controlli di accesso {#access-controls}
 
-La funzionalità delle destinazioni in Platform funziona con le autorizzazioni di controllo degli accessi di Adobe Experience Platform. A seconda del livello di autorizzazione dell’utente, è possibile visualizzare, gestire e attivare le destinazioni. Per informazioni sulle singole autorizzazioni, vai a [controllo degli accessi in Adobe Experience Platform](../access-control/home.md) e scorri verso il basso fino alla tabella nella parte inferiore della pagina.
+La funzionalità delle destinazioni in Platform funziona con le autorizzazioni di controllo degli accessi di Adobe Experience Platform. A seconda del livello di autorizzazione dell’utente, è possibile visualizzare, gestire e attivare le destinazioni. Per informazioni sulle singole autorizzazioni, passare al controllo di accesso [in Adobe Experience Platform](../access-control/home.md) e scorrere verso il basso fino alla tabella nella parte inferiore della pagina.
 
 La tabella seguente illustra le autorizzazioni e le combinazioni di autorizzazioni necessarie per eseguire determinate azioni sulle destinazioni.
 
 | Livello di autorizzazione | Descrizione |
 | ---- | ---- |
-| **[!UICONTROL Visualizza destinazioni]** | Per accedere alla scheda delle destinazioni nell’interfaccia utente di Experienci Platform, è necessario **[!UICONTROL Visualizza destinazioni]** [autorizzazione per il controllo degli accessi](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Gestire le destinazioni]** | Per connettersi alle destinazioni, è necessario **[!UICONTROL Visualizza destinazioni]** e **[!UICONTROL Gestire le destinazioni]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** | Per attivare i tipi di pubblico nelle destinazioni e abilitare [passaggio di mappatura](ui/activate-batch-profile-destinations.md#mapping) del flusso di lavoro, è necessario **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attivare i segmenti senza mappatura]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** | Per aggiungere o rimuovere tipi di pubblico da flussi di dati esistenti senza avere accesso al [passaggio di mappatura](ui/activate-batch-profile-destinations.md#mapping) del flusso di lavoro, è necessario **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attivare i segmenti senza mappatura]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Gestire e attivare le destinazioni dei set di dati]** | Per esportare i set di dati nelle destinazioni, è necessario **[!UICONTROL Visualizza destinazioni]** e **[!UICONTROL Gestire e attivare le destinazioni dei set di dati]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Visualizza grafico delle identità]** | Per esportare *identità* nelle destinazioni, è necessario **[!UICONTROL Visualizza grafico delle identità]** [autorizzazione per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"} |
+| **[!UICONTROL Visualizza destinazioni]** | Per accedere alla scheda delle destinazioni nell&#39;interfaccia utente di Experience Platform, è necessario disporre dell&#39;autorizzazione **[!UICONTROL Visualizza destinazioni]** [controllo di accesso](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Gestisci destinazioni]** | Per connettersi alle destinazioni, sono necessarie le **[!UICONTROL Destinazioni visualizzazione]** e le **[!UICONTROL Autorizzazioni per il controllo degli accessi](/help/access-control/home.md#permissions) di Gestione destinazioni]** [. |
+| **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attiva destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizza segmenti]** | Per attivare i tipi di pubblico nelle destinazioni e abilitare il [passaggio di mappatura](ui/activate-batch-profile-destinations.md#mapping) del flusso di lavoro, sono necessari **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attiva destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizza segmenti]** [Autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attiva segmenti senza mapping]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizza segmenti]** | Per aggiungere o rimuovere tipi di pubblico dai flussi di dati esistenti senza avere accesso al [passaggio di mappatura](ui/activate-batch-profile-destinations.md#mapping) del flusso di lavoro, è necessario **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attiva segmenti senza mappatura]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizza segmenti]** [Autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Gestisci e attiva destinazioni set di dati]** | Per esportare i set di dati nelle destinazioni, sono necessarie le **[!UICONTROL Destinazioni visualizzazione]** e le **[!UICONTROL Autorizzazioni di gestione e attivazione dei set di dati]** [per il controllo degli accessi](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Visualizza grafico identità]** | Per esportare *identità* nelle destinazioni, è necessario disporre dell&#39;autorizzazione **[!UICONTROL Visualizza grafo identità]** [Controllo di accesso](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -74,7 +74,7 @@ Il diagramma seguente mostra visivamente le autorizzazioni necessarie a seconda 
 
 ![Diagramma che mostra le autorizzazioni necessarie per eseguire determinate azioni sulle destinazioni.](/help/destinations/assets/overview/permissions-diagram.png)
 
-Per ulteriori informazioni sui controlli di accesso, vedere [Guida utente al controllo degli accessi](../access-control/ui/overview.md).
+Per ulteriori informazioni sui controlli di accesso, vedere la [Guida utente per il controllo di accesso](../access-control/ui/overview.md).
 
 ### Controllo degli accessi basato su attributi per le destinazioni {#attribute-based-access}
 
@@ -82,35 +82,35 @@ Il controllo dell’accesso basato su attributi in Adobe Experience Platform con
 
 Con il controllo degli accessi basato su attributi, puoi applicare configurazioni di mappatura ai campi per i quali disponi delle autorizzazioni di. Inoltre, non è possibile esportare i dati in una destinazione se non si dispone dell’accesso a tutti i campi del set di dati.
 
-Per ulteriori informazioni sul funzionamento delle destinazioni con i controlli di accesso basati su attributi, vedi [panoramica sul controllo degli accessi basato su attributi](../access-control/abac/overview.md#destinations).
+Per ulteriori informazioni sul funzionamento delle destinazioni con i controlli di accesso basati su attributi, leggere la [panoramica sul controllo di accesso basato su attributi](../access-control/abac/overview.md#destinations).
 
 ## Controllo delle destinazioni {#destinations-monitoring}
 
-Dopo aver stabilito una connessione a una destinazione e aver completato il flusso di lavoro di attivazione, puoi monitorare le esportazioni di dati nel sistema di ricezione. Leggi le [guida sul monitoraggio dei flussi di dati per le destinazioni nell’interfaccia utente](/help/dataflows/ui/monitor-destinations.md) per ulteriori informazioni.
+Dopo aver stabilito una connessione a una destinazione e aver completato il flusso di lavoro di attivazione, puoi monitorare le esportazioni di dati nel sistema di ricezione. Per ulteriori informazioni, leggere la [guida sul monitoraggio dei flussi di dati nelle destinazioni nell&#39;interfaccia utente](/help/dataflows/ui/monitor-destinations.md).
 
 ![Esempio di pagina di monitoraggio delle destinazioni.](./assets/overview/monitoring-page-example.png)
 
-Puoi anche verificare se i dati arrivano correttamente alla destinazione. La maggior parte delle pagine della documentazione di destinazione nel catalogo presenta un *Convalida sezione esportazione dati*, che indica come verificare nella piattaforma di destinazione che i dati siano stati correttamente importati da Experienci Platform. Visualizza un esempio di questa sezione per [Destinazione Amazon Ads](/help/destinations/catalog/advertising/amazon-ads.md#exported-data).
+Puoi anche verificare se i dati arrivano correttamente alla destinazione. La maggior parte delle pagine della documentazione di destinazione nel catalogo dispone di una *sezione Convalida esportazione dati*, che indica come verificare nella piattaforma di destinazione che i dati sono stati correttamente importati da Experience Platform. Visualizza un esempio di questa sezione per la [destinazione Amazon Ads](/help/destinations/catalog/advertising/amazon-ads.md#exported-data).
 
 ## Restrizioni alla governance dei dati per l’attivazione dei dati nelle destinazioni {#data-governance}
 
 La governance dei dati viene applicata alle destinazioni Platform tramite:
 
-* *Azioni di marketing* che puoi selezionare nel flusso di lavoro crea destinazioni;
-* *Criteri di utilizzo dati* che impediscono l’attivazione di dati contenenti determinate etichette di utilizzo in destinazioni con determinate azioni di marketing.
+* *Azioni di marketing* che puoi selezionare nel flusso di lavoro per la creazione delle destinazioni;
+* *Criteri di utilizzo dati* che impediscono l&#39;attivazione di dati contenenti determinate etichette di utilizzo in destinazioni con determinate azioni di marketing.
 
-Per ulteriori informazioni su, consulta Governance dei dati nella documentazione di Platform. [azioni di marketing](../data-governance/policies/overview.md) e [risoluzione delle violazioni dei criteri per i dati](../data-governance/enforcement/auto-enforcement.md).
+Per ulteriori informazioni sulle [azioni di marketing](../data-governance/policies/overview.md) e sulla [risoluzione delle violazioni dei criteri per i dati](../data-governance/enforcement/auto-enforcement.md), consulta la documentazione sulla governance dei dati in Platform.
 
 Per ulteriori informazioni sulla selezione delle azioni di marketing nel flusso di lavoro di creazione della destinazione, consulta le pagine seguenti per i diversi tipi di destinazione in Platform:
 
-* [Destinazioni pubblicitarie - Google Ad Manager](./catalog/advertising/google-ad-manager.md)
-* [Destinazioni pubblicitarie - Google Ads](./catalog/advertising/google-ads-destination.md)
-* [Destinazioni pubblicitarie - Google Display &amp; Video 360](./catalog/advertising/google-dv360.md)
+* [Destinazioni Advertising - Google Ad Manager](./catalog/advertising/google-ad-manager.md)
+* [Destinazioni Advertising - Google Ads](./catalog/advertising/google-ads-destination.md)
+* [Destinazioni Advertising - Google Display &amp; Video 360](./catalog/advertising/google-dv360.md)
 * [Destinazioni di archiviazione cloud](./catalog/cloud-storage/overview.md)
 * [Destinazioni di e-mail marketing](./catalog/email-marketing/overview.md)
 * [Destinazioni social](./catalog/social/overview.md)
 
-Per ulteriori informazioni sulle violazioni dei criteri per i dati nel flusso di lavoro di attivazione del pubblico, vedi **[!UICONTROL Revisione]** nelle seguenti guide:
+Per ulteriori informazioni sulle violazioni dei criteri per i dati nel flusso di lavoro di attivazione del pubblico, vedi il passaggio **[!UICONTROL Rivedi]** nelle seguenti guide:
 
 * [Attiva i dati del pubblico nelle destinazioni di esportazione del pubblico in streaming](./ui/activate-segment-streaming-destinations.md#review)
 * [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo di streaming](./ui/activate-streaming-profile-destinations.md#review)

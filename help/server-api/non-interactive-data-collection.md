@@ -1,6 +1,6 @@
 ---
 title: Raccolta di dati non interattivi
-description: Scopri in che modo l’API del server di rete Edge di Adobe Experience Platform esegue la raccolta dati non interattiva.
+description: Scopri in che modo l’API Adobe Experience Platform Edge Network Server esegue la raccolta dati non interattiva.
 exl-id: 1a704e8f-8900-4f56-a843-9550007088fe
 source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
@@ -14,11 +14,11 @@ ht-degree: 4%
 
 ## Panoramica {#overview}
 
-Gli endpoint di raccolta dati per eventi non interattivi vengono utilizzati per inviare più eventi a set di dati Experienci Platform o ad altre prese.
+Gli endpoint di raccolta dati per eventi non interattivi vengono utilizzati per inviare più eventi a set di dati Experience Platform o ad altre prese.
 
 L’invio di eventi in batch è consigliato quando gli eventi dell’utente finale vengono messi in coda localmente per un breve periodo di tempo (ad esempio quando non vi è alcuna connessione di rete).
 
-Gli eventi batch non devono necessariamente appartenere allo stesso utente finale, il che significa che possono contenere identità diverse all’interno del `identityMap` oggetto.
+Gli eventi batch non devono necessariamente appartenere allo stesso utente finale, il che significa che possono contenere identità diverse all&#39;interno del loro oggetto `identityMap`.
 
 ## Esempio di chiamata API non interattiva {#example}
 
@@ -91,16 +91,16 @@ curl -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId={DATASTREAM_
 | Parametro | Tipo | Obbligatorio | Descrizione |
 | --- | --- | --- | --- |
 | `dataStreamId` | `String` | Sì | ID dello stream di dati utilizzato dall’endpoint di raccolta dati. |
-| `requestId` | `String` | No | Specifica un ID di traccia della richiesta esterno. Se non ne viene fornito alcuno, la rete Edge ne genererà uno per te e lo restituirà nel corpo/nelle intestazioni della risposta. |
-| `silent` | `Boolean` | No | Parametro booleano facoltativo che indica se la rete Edge deve restituire un `204 No Content` risposta con un payload vuoto o meno. Gli errori critici vengono segnalati utilizzando il codice di stato HTTP e il payload corrispondenti. |
+| `requestId` | `String` | No | Specifica un ID di traccia della richiesta esterno. Se non viene fornito alcun elemento, l’Edge Network ne genererà uno per te e lo restituirà nel corpo/nelle intestazioni della risposta. |
+| `silent` | `Boolean` | No | Parametro booleano facoltativo che indica se l&#39;Edge Network deve restituire o meno una risposta `204 No Content` con un payload vuoto. Gli errori critici vengono segnalati utilizzando il codice di stato HTTP e il payload corrispondenti. |
 
 ### Risposta {#response}
 
-In caso di esito positivo, la risposta restituisce uno dei seguenti stati, e un `requestID` se nella richiesta non è stata fornita alcuna informazione.
+In caso di esito positivo, la risposta restituisce uno dei seguenti stati e `requestID`, se non ne è stato fornito alcuno nella richiesta.
 
 * `202 Accepted` quando la richiesta è stata elaborata correttamente;
-* `204 No Content` quando la richiesta è stata elaborata correttamente e il `silent` parametro impostato su `true`;
-* `400 Bad Request` quando la richiesta non era formata correttamente (ad esempio, non è stata trovata l’identità primaria obbligatoria).
+* `204 No Content` quando la richiesta è stata elaborata correttamente e il parametro `silent` è stato impostato su `true`;
+* `400 Bad Request` quando la richiesta non era formata correttamente (ad esempio, l&#39;identità primaria obbligatoria non è stata trovata).
 
 ```json
 {

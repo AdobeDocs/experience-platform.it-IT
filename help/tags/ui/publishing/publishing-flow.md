@@ -42,7 +42,7 @@ Per quanto riguarda il flusso di pubblicazione, sono disponibili quattro stati d
 * [[!UICONTROL Approvato]](#approved)
 * [[!UICONTROL Pubblicato]](#published)
 
-Questi quattro stati sono rappresentati come colonne all&#39;interno del **[!UICONTROL Flusso di pubblicazione]** scheda.
+Questi quattro stati sono rappresentati dalle colonne nella scheda **[!UICONTROL Flusso di pubblicazione]**.
 
 ![](./images/approval-workflow/flow-ui.png)
 
@@ -112,7 +112,7 @@ Ciò che è incluso a monte dipende dalla fase corrente della libreria. Ad esemp
 
 ![](./images/approval-workflow/upstream.png)
 
-Quando si modifica una libreria nell’interfaccia utente di, tutte le risorse ereditate sono rappresentate nella **[!UICONTROL Risorse a monte]** sezione. Per visualizzare queste risorse, seleziona l’opzione per espandere la scheda, sotto l’intestazione della sezione.
+Durante la modifica di una libreria nell&#39;interfaccia utente, tutte le risorse ereditate sono rappresentate nella sezione **[!UICONTROL Risorse a monte]**. Per visualizzare queste risorse, seleziona l’opzione per espandere la scheda, sotto l’intestazione della sezione.
 
 ![](./images/approval-workflow/upstream-collapse.png)
 

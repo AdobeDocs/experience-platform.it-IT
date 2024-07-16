@@ -4,7 +4,7 @@ description: Scopri come visualizzare la cronologia delle revisioni per una riso
 exl-id: 95b22641-9f6f-4aac-a727-d99098f040a4
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '912'
 ht-degree: 98%
 
 ---
@@ -49,7 +49,7 @@ Nella vista Confronto, vengono evidenziate le differenze tra le versioni delle i
 
 In precedenza, si possono vedere le seguenti modifiche:
 
-* L&#39;estensione [!DNL Adobe Analytics] viene aggiornata a una nuova versione, indicata dai numeri di versione arancioni nella parte superiore.
+* L’estensione [!DNL Adobe Analytics] viene aggiornata a una nuova versione, indicata dai numeri di versione arancioni nella parte superiore.
 * `orgID` e `currencyCode` vengono modificati secondo le impostazioni indicate dall&#39;espansione della sezione arancione nelle impostazioni.
 
 ## Confronto degli elementi dati

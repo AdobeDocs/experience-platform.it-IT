@@ -15,29 +15,29 @@ ht-degree: 27%
 
 >[!AVAILABILITY]
 >
->I tipi di pubblico dell’account sono disponibili solo in [Edizione B2B di Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2b) e [Edizione B2P di Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2p).
+>I tipi di pubblico dell&#39;account sono disponibili solo nella [edizione B2B di Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2b) e nella [edizione B2P di Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2p).
 
 Con la segmentazione dell’account, Adobe Experience Platform ti consente di rendere l’esperienza di segmentazione del marketing completamente semplice e sofisticata, dal pubblico basato sulle persone a quello basato sull’account.
 
-I tipi di pubblico dell’account possono essere utilizzati come input per le destinazioni basate su account, consentendoti di eseguire il targeting delle persone all’interno di tali account nei servizi a valle. Ad esempio, puoi utilizzare tipi di pubblico basati sull’account per recuperare i record di tutti gli account che lo fanno **non** disporre di informazioni di contatto per qualsiasi persona con il titolo di Chief Operating Officer (COO) o Chief Marketing Officer (CMO).
+I tipi di pubblico dell’account possono essere utilizzati come input per le destinazioni basate su account, consentendoti di eseguire il targeting delle persone all’interno di tali account nei servizi a valle. Ad esempio, puoi utilizzare i tipi di pubblico basati sull&#39;account per recuperare i record di tutti gli account che **non** hanno informazioni di contatto per qualsiasi persona con il titolo di Chief Operating Officer (COO) o Chief Marketing Officer (CMO).
 
 ## Terminologia {#terminology}
 
 Prima di iniziare a utilizzare i tipi di pubblico dell’account, esamina le differenze tra i diversi tipi di pubblico:
 
-- **Pubblico dell’account**: un pubblico di tipo account è un pubblico che viene creato con **account** dati del profilo. I dati del profilo account possono essere utilizzati per creare tipi di pubblico mirati alle persone negli account a valle. Per ulteriori informazioni sui profili dell’account, consulta [panoramica del profilo account](../../rtcdp/accounts/account-profile-overview.md).
-- **Pubblico persone**: un pubblico di tipo Persone è un pubblico che viene creato con **cliente** dati del profilo. I dati del profilo cliente possono essere utilizzati per creare tipi di pubblico mirati alla clientela della tua azienda. Per ulteriori informazioni sui profili dei clienti, consulta [Panoramica del profilo cliente in tempo reale](../../profile/home.md).
-- **Pubblico potenziale**: un pubblico potenziale è un pubblico che viene creato con **potenziale cliente** dati del profilo. I dati del profilo del potenziale cliente possono essere utilizzati per creare tipi di pubblico da utenti non autenticati. Per ulteriori informazioni sui profili potenziali, consulta la sezione [panoramica del profilo di prospect](../../profile/ui/prospect-profile.md).
+- **Tipi di pubblico dell&#39;account**: un pubblico dell&#39;account è un pubblico creato utilizzando i dati del profilo **account**. I dati del profilo account possono essere utilizzati per creare tipi di pubblico mirati alle persone negli account a valle. Per ulteriori informazioni sui profili dell&#39;account, leggere la [panoramica del profilo dell&#39;account](../../rtcdp/accounts/account-profile-overview.md).
+- **Pubblico persone**: un pubblico persone è un pubblico creato utilizzando i dati del profilo **cliente**. I dati del profilo cliente possono essere utilizzati per creare tipi di pubblico mirati alla clientela della tua azienda. Per ulteriori informazioni sui profili cliente, leggere la [Panoramica del profilo cliente in tempo reale](../../profile/home.md).
+- **Pubblico potenziale**: un pubblico potenziale è un pubblico creato utilizzando i dati del profilo **prospect**. I dati del profilo del potenziale cliente possono essere utilizzati per creare tipi di pubblico da utenti non autenticati. Per ulteriori informazioni sui profili di potenziali clienti, leggere la [panoramica dei profili di potenziali clienti](../../profile/ui/prospect-profile.md).
 
 ## Accesso {#access}
 
-Per accedere ai tipi di pubblico dell’account, seleziona **[!UICONTROL Tipi di pubblico]** nel **[!UICONTROL Account]** sezione.
+Per accedere ai tipi di pubblico dell&#39;account, seleziona **[!UICONTROL Tipi di pubblico]** nella sezione **[!UICONTROL Account]**.
 
 ![Il pulsante Tipi di pubblico è evidenziato nella sezione Account.](../images/ui/account-audiences/select.png)
 
-Il [!UICONTROL Sfoglia] viene visualizzata una pagina con un elenco di tutti i tipi di pubblico dell’account per l’organizzazione.
+Viene visualizzata la pagina [!UICONTROL Sfoglia], con un elenco di tutti i tipi di pubblico dell&#39;account per l&#39;organizzazione.
 
-![Vengono visualizzati i tipi di pubblico dell’account appartenenti all’organizzazione.](../images/ui/account-audiences/browse.png)
+![Vengono visualizzati i tipi di pubblico dell&#39;account appartenenti all&#39;organizzazione.](../images/ui/account-audiences/browse.png)
 
 Questa vista elenca informazioni sul pubblico, tra cui nome, conteggio dei profili, origine, stato del ciclo di vita, data di creazione e data dell’ultimo aggiornamento.
 
@@ -47,25 +47,25 @@ Puoi anche utilizzare la funzionalità di ricerca e filtro per cercare e ordinar
 
 >[!NOTE]
 >
->I tipi di pubblico dell’account vengono valutati utilizzando **batch** e verranno valutati ogni 24 ore.
+>I tipi di pubblico dell&#39;account vengono valutati utilizzando la segmentazione **batch** e verranno valutati ogni 24 ore.
 
-Per creare un pubblico di tipo account, seleziona **[!UICONTROL Creare un pubblico]** il [!UICONTROL Sfoglia] pagina.
+Per creare un pubblico per un account, seleziona **[!UICONTROL Crea pubblico]** nella pagina [!UICONTROL Sfoglia].
 
-![Il [!UICONTROL Creare un pubblico] nella pagina di navigazione del pubblico dell’account.](../images/ui/account-audiences/select-create-audience.png)
+![Il pulsante [!UICONTROL Crea pubblico] è evidenziato nella pagina di navigazione del pubblico dell&#39;account.](../images/ui/account-audiences/select-create-audience.png)
 
-Viene visualizzato il Generatore di segmenti. Gli attributi dell’account e i tipi di pubblico vengono visualizzati sulla barra di navigazione a sinistra. Sotto [!UICONTROL Attributi] , puoi aggiungere attributi personalizzati e creati da Platform.
+Viene visualizzato il Generatore di segmenti. Gli attributi dell’account e i tipi di pubblico vengono visualizzati sulla barra di navigazione a sinistra. Nella scheda [!UICONTROL Attributi] puoi aggiungere attributi personalizzati e creati da Platform.
 
-![Viene visualizzato il Generatore di segmenti. Vengono visualizzati solo gli attributi e i tipi di pubblico.](../images/ui/account-audiences/segment-builder.png)
+![Viene visualizzato il Generatore di segmenti. Si noti che vengono visualizzati solo gli attributi e i tipi di pubblico.](../images/ui/account-audiences/segment-builder.png)
 
-Durante la creazione del pubblico dell’account, tieni presente che gli eventi sono elencati in **[!UICONTROL Persone]**, anziché essere la propria scheda, in quanto questi attributi sono associati alle persone.
+Quando crei il pubblico dell&#39;account, tieni presente che gli eventi sono elencati in **[!UICONTROL Persone]**, anziché essere la loro scheda, poiché questi attributi sono associati alle persone.
 
-![La posizione in cui trovare gli eventi, che si trova all’interno del [!UICONTROL Persone] cartella, viene evidenziato.](../images/ui/account-audiences/attributes.png)
+![La posizione in cui trovare gli eventi, che si trova nella cartella [!UICONTROL Persone], è evidenziata.](../images/ui/account-audiences/attributes.png)
 
-Sotto [!UICONTROL Tipi di pubblico] , puoi aggiungere tipi di pubblico basati sulle persone creati in precedenza da utilizzare per la creazione del pubblico del tuo account.
+Nella scheda [!UICONTROL Tipi di pubblico] puoi aggiungere tipi di pubblico basati sulle persone creati in precedenza da utilizzare per la creazione del pubblico del tuo account.
 
-![Viene evidenziata la scheda Tipi di pubblico nel Generatore di segmenti.](../images/ui/account-audiences/audiences.png)
+![La scheda Tipi di pubblico nel Generatore di segmenti è evidenziata.](../images/ui/account-audiences/audiences.png)
 
-Per ulteriori informazioni sull’utilizzo del Generatore di segmenti, consulta la sezione [Guida dell’interfaccia utente di Segment Builder](./segment-builder.md).
+Per ulteriori informazioni sull&#39;utilizzo del Generatore di segmenti, leggere la [Guida dell&#39;interfaccia utente del Generatore di segmenti](./segment-builder.md).
 
 ## Attiva pubblico {#activate}
 
@@ -77,13 +77,13 @@ Dopo aver creato il pubblico del tuo account, puoi attivarlo in altri servizi a 
 
 Seleziona il pubblico da attivare, seguito da **[!UICONTROL Attiva nella destinazione]**.
 
-![Il [!UICONTROL Attiva nella destinazione] nel menu Azioni rapide per il pubblico selezionato.](../images/ui/account-audiences/activate.png)
+![Il pulsante [!UICONTROL Attiva nella destinazione] è evidenziato nel menu Azioni rapide per il pubblico selezionato.](../images/ui/account-audiences/activate.png)
 
-Il [!UICONTROL Attiva destinazione] viene visualizzata. Per ulteriori informazioni sul processo di attivazione, comprese le destinazioni supportate e i dettagli sulle mappature dei campi, leggi [attivare il pubblico dell’account](/help/destinations/ui/activate-account-audiences.md) esercitazione.
+Viene visualizzata la pagina [!UICONTROL Attiva destinazione]. Per ulteriori informazioni sul processo di attivazione, incluse le destinazioni supportate e i dettagli sulle mappature dei campi, consulta l&#39;esercitazione [attivare i tipi di pubblico dell&#39;account](/help/destinations/ui/activate-account-audiences.md).
 
 ## Passaggi successivi {#next-steps}
 
-Dopo aver letto questa guida, ora hai una migliore comprensione di come creare e utilizzare i tipi di pubblico del tuo account in Adobe Experience Platform. Per scoprire come utilizzare altri tipi di pubblico in Platform, leggi la sezione [Guida dell’interfaccia utente di Segmentation Service](./overview.md).
+Dopo aver letto questa guida, ora hai una migliore comprensione di come creare e utilizzare i tipi di pubblico del tuo account in Adobe Experience Platform. Per informazioni su come utilizzare altri tipi di pubblico in Platform, consulta la [Guida dell’interfaccia utente del servizio di segmentazione](./overview.md).
 
 ## Appendice {#appendix}
 
@@ -161,24 +161,24 @@ La sezione seguente fornisce informazioni aggiuntive sui tipi di pubblico dell�
 >title="Violazione vincolo"
 >abstract="Il pubblico viola un vincolo. Per ulteriori informazioni, leggi il documento collegato."
 
-Quando si utilizzano i tipi di pubblico dell’account, il pubblico **deve** rispettare i seguenti vincoli:
+Quando si utilizzano i tipi di pubblico dell&#39;account, il pubblico **deve** rispettare i seguenti vincoli:
 
 >[!NOTE]
 >
->L&#39;elenco seguente mostra **predefinito** vincoli per il pubblico dell’account. Questi valori **maggio** a seconda delle impostazioni implementate dall’amministratore della tua organizzazione.
+>L&#39;elenco seguente mostra i vincoli **default** per i tipi di pubblico dell&#39;account. Questi valori **maggio** variano a seconda delle impostazioni implementate dall&#39;amministratore dell&#39;organizzazione.
 
-- L’intervallo di lookback massimo per gli eventi esperienza è **30 giorni**.
+- L&#39;intervallo di lookback massimo per gli eventi esperienza è **30 giorni**.
 - La profondità massima dei contenitori nidificati è **5**.
    - Ciò significa che **non puoi** avere più di cinque contenitori nidificati durante la creazione del pubblico.
-- Il numero massimo di regole all’interno di un singolo contenitore è **5**.
-   - Ciò significa che il pubblico **non può** hai più di cinque regole che compongono il pubblico.
+- Il numero massimo di regole in un singolo contenitore è **5**.
+   - Ciò significa che il pubblico **non può** avere più di cinque regole che compongono il pubblico.
 - Il numero massimo di entità incrociate utilizzabili è **5**.
    - Un’entità incrociata si verifica quando si passa da un’entità all’altra all’interno del pubblico. Ad esempio, passare da un account a una persona a un elenco di marketing.
-- Entità personalizzate **non può** essere utilizzati.
+- Impossibile utilizzare le entità personalizzate **1}.**
 - Il numero massimo di valori che è possibile controllare per un singolo campo è **50**.
    - Ad esempio, se hai un campo &quot;Nome città&quot;, puoi confrontare tale valore con 50 nomi di città.
-- Pubblico dell’account **non può** utilizzare `inSegment` eventi.
-- Pubblico dell’account **non può** utilizzare eventi sequenziali.
-- Pubblico dell’account **non può** utilizzare le mappe.
+- Il pubblico dell&#39;account **non può** utilizzare `inSegment` eventi.
+- Il pubblico dell&#39;account **non può** utilizzare eventi sequenziali.
+- I tipi di pubblico dell&#39;account **non possono** utilizzare le mappe.
 - La profondità massima degli array nidificati è **5**.
 - Il numero massimo di oggetti nidificati è **10**.

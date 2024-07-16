@@ -5,7 +5,7 @@ exl-id: 3aa79322-2237-492f-82ff-0ba4d4902f70
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
 source-wordcount: '600'
-ht-degree: 70%
+ht-degree: 67%
 
 ---
 
@@ -23,13 +23,13 @@ Questo documento illustra come definire i tipi di elementi dati per un’estensi
 
 >[!IMPORTANT]
 >
->Se stai sviluppando un’estensione Edge, consulta la guida su [tipi di elementi dati per le estensioni edge](../edge/data-element-types.md) invece.
+>Se stai sviluppando un&#39;estensione Edge, consulta invece la guida sui [tipi di elementi dati per le estensioni Edge](../edge/data-element-types.md).
 >
 >In questo documento si presuppone che tu abbia familiarità con i moduli libreria e sul modo in cui vengono integrati nelle estensioni web. Per un&#39;introduzione, vedere la panoramica sulla [formattazione del modulo libreria](./format.md) prima di tornare a questa guida.
 
 I tipi di elementi dati sono in genere costituiti dai seguenti elementi:
 
-1. A [visualizza](./views.md) mostrate nell’interfaccia di Experience Platform e nell’interfaccia di Data Collection, che consentono agli utenti di modificare le impostazioni per l’elemento dati.
+1. Una [vista](./views.md) nell&#39;interfaccia utente di Experience Platform e nell&#39;interfaccia utente di Data Collection che consente agli utenti di modificare le impostazioni per l&#39;elemento dati.
 2. Modulo libreria emesso all’interno della libreria runtime di tag per interpretare le impostazioni e recuperare i dati.
 
 Considera una situazione in cui desideri consentire agli utenti di recuperare dei dati da un elemento nell’archiviazione locale denominato `productName`. Il modulo potrebbe presentarsi così:

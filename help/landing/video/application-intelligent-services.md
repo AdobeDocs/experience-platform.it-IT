@@ -1,5 +1,5 @@
 ---
-title: Applicazione e servizi intelligenti basati su Experienci Platform
+title: Applicazione e servizi intelligenti basati su Experience Platform
 description: Questo video offre una panoramica delle applicazioni e dei servizi intelligenti basati su Adobe Experience Platform, che integrano Experience Cloud Applications&mdash;Real-time Customer Data Platform, Journey Orchestration, Customer Journey Analytics, Attribution AI e IA per l’analisi dei clienti.
 kt: 4333
 audience: all
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 ---
 
-# Applicazione e Intelligent Services basati su Experienci Platform
+# Applicazione e Intelligent Services basati su Experience Platform
 
 Questo video offre una panoramica dell’applicazione e dei servizi intelligenti basati sull’Experience Platform.
 

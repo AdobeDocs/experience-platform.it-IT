@@ -15,7 +15,7 @@ ht-degree: 82%
 
 # Scheda Riepilogo
 
-Per eseguire Adobi Experience Platform Debugger, apri la pagina da esaminare nel browser, quindi seleziona l’icona (![](images/start-icon.jpg)) sulla barra del browser. L’estensione si apre su **Riepilogo** scheda.
+Per eseguire Adobe Experience Platform Debugger, aprire la pagina che si desidera esaminare nel browser, quindi selezionare l&#39;icona (![](images/start-icon.jpg)) sulla barra del browser. L&#39;estensione verrà aperta nella scheda **Riepilogo**.
 
 ![](images/summary.jpg)
 
@@ -77,7 +77,7 @@ Experience Platform Debugger mostra le seguenti informazioni per ciascuna soluzi
  <tbody> 
   <tr> 
    <td colname="col1"> <p>Nome </p> </td> 
-   <td colname="col2"> <p>Nome del tag <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html" format="https" scope="external"> proprietà</a> </p> </td> 
+   <td colname="col2"> <p>Nome della proprietà <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html" format="https" scope="external"> del tag</a> </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Versione </p> </td> 
@@ -85,11 +85,11 @@ Experience Platform Debugger mostra le seguenti informazioni per ciascuna soluzi
   </tr> 
   <tr> 
    <td colname="col1"> <p>Data build </p> </td> 
-   <td colname="col2"> <p>Il tag <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html" format="https" scope="external"> libreria</a> data build </p> </td> 
+   <td colname="col2"> <p>Data build della libreria </a> di tag <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html" format="https" scope="external"> </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Ambiente </p> </td> 
-   <td colname="col2"> <p>Il <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=it" format="https" scope="external"> ambiente</a> utilizzato dalla libreria di tag </p> </td> 
+   <td colname="col2"> <p>L'ambiente <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=it" format="https" scope="external"></a> utilizzato dalla libreria di tag </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Estensioni </p> </td> 
@@ -162,7 +162,7 @@ Experience Platform Debugger mostra le seguenti informazioni per ciascuna soluzi
   </tr> 
   <tr> 
    <td colname="col1"> <p>Evento caricamento pagina </p> </td> 
-   <td colname="col2"> <p>Tipo di <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/target/overview.html?lang=it" format="html" scope="external">evento</a> che attiva il caricamento della pagina. </p> </td> 
+   <td colname="col2"> <p>Tipo di <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/target/overview.html" format="html" scope="external">evento</a> che attiva il caricamento della pagina. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Nome richiesta </p> </td> 

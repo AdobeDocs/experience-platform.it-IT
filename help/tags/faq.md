@@ -4,7 +4,7 @@ description: Risposte alle domande più frequenti sui tag in Adobe Experience Pl
 exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
 source-git-commit: 9701a14dc2915e0d6dcc6051c15d5113f305487f
 workflow-type: tm+mt
-source-wordcount: '1044'
+source-wordcount: '1032'
 ht-degree: 78%
 
 ---
@@ -45,7 +45,7 @@ I tag sono disponibili tramite un portale self-service, che può essere utilizza
 
 Anche molti nostri clienti scelgono di creare estensioni private da usare solo all’interno delle proprie aziende utilizzando gli stessi metodi di sviluppo delle estensioni.
 
-Per sviluppare un&#39;estensione, vedi [Panoramica sullo sviluppo di estensioni](./extension-dev/overview.md) pagina.
+Per sviluppare un&#39;estensione, vedi la pagina [Panoramica sullo sviluppo delle estensioni](./extension-dev/overview.md).
 
 ## I tag soddisfano gli standard di sicurezza della mia azienda?
 
@@ -73,7 +73,7 @@ I tag sono progettati per distribuire ed eseguire tecnologie marketing e pubblic
 
 ## Quali browser supportano i tag?
 
-Visualizza i browser supportati [qui](./extension-dev/browsers.md).
+Vedi i browser supportati [qui](./extension-dev/browsers.md).
 
 La maggior parte dei clienti Adobe sfrutta funzioni di piattaforme web più moderne nei browser attuali e crea esperienze utente migliori, inclusi applicazioni per pagina singola e siti web e pagine interattivi Ajax-heavy. Con sempre più clienti che adottano approcci più moderni per i loro siti, una soluzione come quella offerta dai tag supporta questa tendenza.
 
@@ -83,14 +83,14 @@ Sì! I tag ora supportano proprietà e configurazioni mobili per i nuovi [SDK pe
 
 ## Perché l’interfaccia utente dice che si è verificato un errore durante il caricamento del mio account?
 
-Se ricevi un messaggio che informa che si è verificato un errore durante il caricamento dell’account, significa che l’account non appartiene ad alcun profilo di prodotto per i tag. Consulta la guida su [gestione delle autorizzazioni](../collection/permissions.md) per scoprire come configurare un profilo di prodotto in Adobe Admin Console per concedere l’accesso alle funzioni di raccolta dati nell’interfaccia utente di.
+Se ricevi un messaggio che informa che si è verificato un errore durante il caricamento dell’account, significa che l’account non appartiene ad alcun profilo di prodotto per i tag. Consulta la guida su [gestione delle autorizzazioni](../collection/permissions.md) per scoprire come configurare un profilo di prodotto in Adobe Admin Console per concedere l&#39;accesso alle funzioni di raccolta dati nell&#39;interfaccia utente.
 
 ## Perché non posso aggiungere proprietà nell&#39;interfaccia utente?
 
 Se non riesci a creare nuove proprietà quando accedi all’interfaccia utente, significa che il tuo account non appartiene a un profilo di prodotto con l’autorizzazione Gestione proprietà.
 
-Consulta la guida su [gestione delle autorizzazioni](../collection/permissions.md) per scoprire come configurare un profilo di prodotto in Adobe Admin Console per concedere il diritto Manage Properties (Gestisci proprietà). Per ulteriori informazioni sui diversi diritti per i tag, consulta la panoramica su [autorizzazioni utente per i tag](./ui/administration/user-permissions.md).
+Per informazioni su come configurare un profilo di prodotto in Adobe Admin Console per concedere il diritto Manage Properties, consulta la guida su [gestione delle autorizzazioni](../collection/permissions.md). Per ulteriori informazioni sui diversi diritti per i tag, consulta la panoramica sulle [autorizzazioni utente per i tag](./ui/administration/user-permissions.md).
 
 ## Cosa succede se ho altre domande?
 
-Se hai altre domande, puoi chiedere alla [Pagina community di Adobe Experience Platform Data Collection](https://adobe.com/go/launchme) su Experience League, o partecipare al [area di lavoro Slack community](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform) per sviluppatori e argomenti sull’implementazione tecnica.
+Se hai altre domande, puoi chiedere nella [pagina della community di Adobe Experience Platform Data Collection](https://adobe.com/go/launchme) su Experience League oppure partecipare all&#39;[area di lavoro di Slack della community](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform) per sviluppatori e argomenti sull&#39;implementazione tecnica.

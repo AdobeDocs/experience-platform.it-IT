@@ -6,14 +6,14 @@ description: Elenco di comandi PostgreSQL attualmente supportati per l'esecuzion
 exl-id: bfcbad55-3086-44c9-9938-6ba0504e747b
 source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
-source-wordcount: '335'
+source-wordcount: '332'
 ht-degree: 0%
 
 ---
 
 # Metadati [!DNL PostgreSQL] comandi in Query Service
 
-Per i metadati nel set di dati, quanto segue [!DNL PostgreSQL] comandi attualmente supportati per l&#39;esecuzione di query:
+Per i metadati nel set di dati, i seguenti comandi [!DNL PostgreSQL] sono attualmente supportati per l&#39;esecuzione di query:
 
 >[!NOTE]
 >
@@ -37,9 +37,9 @@ Per i metadati nel set di dati, quanto segue [!DNL PostgreSQL] comandi attualmen
 | `\errverbose` | Ripete il messaggio di errore server più recente alla massima gravità. |
 | `\l or \list` | Visualizza un elenco di database nel server. |
 | `\set` | Visualizza i nomi e i valori di tutte le variabili psql correnti. |
-| `\showtables` | Mostra le seguenti informazioni: <br>name (nome): nome in base al quale verrà fatto riferimento alla tabella.<br>datasetId: ID del set di dati archiviato.<br>set di dati: nome del set di dati archiviato.<br>description: Una descrizione del set di dati.<br>resolved: un valore booleano che indica se il set di dati viene risolto o meno nella sessione corrente. |
+| `\showtables` | Mostra le seguenti informazioni: <br>nome: il nome in base al quale verrà fatto riferimento alla tabella.<br>datasetId: ID del set di dati archiviato.<br>set di dati: nome del set di dati archiviato.<br>descrizione: una descrizione del set di dati.<br>resolved: valore booleano che indica se il set di dati viene risolto o meno nella sessione corrente. |
 | `\timing` | Attiva o disattiva la visualizzazione. La visualizzazione è in millisecondi. Gli intervalli superiori a un secondo vengono visualizzati in formato minuti:secondi, con campi ore e giorni aggiunti quando necessario. |
 
-Tutti i comandi che iniziano con `\d` possono essere combinate. Ad esempio, puoi rilasciare `\dtsn` per visualizzare un elenco di tutte le tabelle, sequenze e schemi. `\d` di per sé mostra tutte le tabelle, le viste, le viste materializzate e le sequenze visibili.
+Tutti i comandi che iniziano con `\d` possono essere combinati. Ad esempio, è possibile emettere `\dtsn` per visualizzare un elenco di tutte le tabelle, sequenze e schemi. `\d` mostra tutte le tabelle, le viste, le viste materializzate e le sequenze visibili.
 
-Per ulteriori informazioni sui comandi elencati sopra, consulta la documentazione all’indirizzo [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html). Tuttavia, tieni presente che non tutte le opzioni visualizzate nella [!DNL PostgreSQL] la documentazione di è supportata da [!DNL Experience Platform].
+Per ulteriori informazioni sui comandi elencati in precedenza, consulta la documentazione all&#39;indirizzo [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html). Si noti tuttavia che non tutte le opzioni visualizzate nella documentazione di [!DNL PostgreSQL] sono supportate da [!DNL Experience Platform].

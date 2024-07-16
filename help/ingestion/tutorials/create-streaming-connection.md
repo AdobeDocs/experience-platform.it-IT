@@ -18,4 +18,4 @@ Per avviare lo streaming dei dati in Adobe Experience Platform è necessaria la 
 
 Dopo aver registrato una connessione in streaming, in qualità di produttore di dati avrai un URL univoco che può essere utilizzato per inviare dati a Platform.
 
-Per informazioni su come creare una connessione in streaming autenticata, leggi [Guida API sorgente API HTTP](../../sources/tutorials/api/create/streaming/http.md).
+Per informazioni su come creare una connessione streaming autenticata, leggere la [guida API sorgente HTTP API](../../sources/tutorials/api/create/streaming/http.md).

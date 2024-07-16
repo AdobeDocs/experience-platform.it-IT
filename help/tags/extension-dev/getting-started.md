@@ -4,7 +4,7 @@ description: Introduzione allo sviluppo di estensioni tag in Adobe Experience Pl
 exl-id: 3925b928-0180-4a4f-aaa6-42f342089560
 source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '448'
 ht-degree: 91%
 
 ---
@@ -60,7 +60,6 @@ Lo strumento di scaffolding fornirà quindi le opzioni per la creazione della st
 >* È possibile aggiungere più eventi, condizioni e azioni.
 >* Può esistere una sola vista di configurazione.
 
-
 ## Passaggi successivi
 
-* Segui le [Panoramica del processo di invio](./submit/overview.md) e prepararsi a [convalida](./submit/upload-and-test.md#validate) e [caricare](./submit/upload-and-test.md#integration) l’estensione per il test all’interno dell’ecosistema di tag.
+* Segui la [Panoramica del processo di invio](./submit/overview.md) e prepara [la convalida](./submit/upload-and-test.md#validate) e [il caricamento](./submit/upload-and-test.md#integration) della tua estensione per il test all&#39;interno dell&#39;ecosistema di tag.

@@ -1,22 +1,22 @@
 ---
 solution: Experience Platform
 title: Funzioni Array, List e Set PQL
-description: PQL (Profile Query Language) offre funzioni che semplificano l’interazione con array, elenchi e stringhe.
+description: Profile Query Language (PQL) offre funzioni per semplificare l’interazione con array, elenchi e stringhe.
 exl-id: 5ff2b066-8857-4cde-9932-c8bf09e273d3
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '750'
-ht-degree: 5%
+source-wordcount: '753'
+ht-degree: 4%
 
 ---
 
 # Funzioni array, list e set
 
-[!DNL Profile Query Language] (PQL) offre funzioni per semplificare l&#39;interazione con array, elenchi e stringhe. Ulteriori informazioni su altre funzioni PQL sono disponibili nella [[!DNL Profile Query Language] panoramica](./overview.md).
+[!DNL Profile Query Language] (PQL) offre funzioni che semplificano l&#39;interazione con array, elenchi e stringhe. Ulteriori informazioni sulle altre funzioni di PQL sono disponibili nella [[!DNL Profile Query Language] panoramica](./overview.md).
 
-## In
+## In entrata
 
-Il `in` viene utilizzata per determinare se un elemento è membro di un array o di un elenco.
+La funzione `in` viene utilizzata per determinare se un elemento è membro di un array o di un elenco.
 
 **Formato**
 
@@ -32,13 +32,13 @@ La seguente query PQL definisce le persone il cui compleanno cade in marzo, giug
 person.birthMonth in [3, 6, 9]
 ```
 
-## Non in entrata
+## Non in
 
-Il `notIn` viene utilizzata per determinare se un elemento non è un membro di un array o di un elenco.
+La funzione `notIn` viene utilizzata per determinare se un elemento non è un membro di un array o di un elenco.
 
 >[!NOTE]
 >
->Il `notIn` funzione *anche* assicura che nessuno dei due valori sia uguale a null. Pertanto, i risultati non sono una negazione esatta del `in` funzione.
+>La funzione `notIn` *also* assicura che nessuno dei due valori sia uguale a null. Pertanto, i risultati non sono una negazione esatta della funzione `in`.
 
 **Formato**
 
@@ -48,15 +48,15 @@ Il `notIn` viene utilizzata per determinare se un elemento non è un membro di u
 
 **Esempio**
 
-La seguente query PQL definisce le persone il cui compleanno non è in marzo, giugno o settembre.
+La seguente query PQL definisce gli utenti con compleanni che non sono in marzo, giugno o settembre.
 
 ```sql
 person.birthMonth notIn [3, 6, 9]
 ```
 
-## Intersects
+## Interseca
 
-Il `intersects` viene utilizzata per determinare se due array o elenchi hanno almeno un membro comune.
+La funzione `intersects` viene utilizzata per determinare se due array o elenchi hanno almeno un membro comune.
 
 **Formato**
 
@@ -74,7 +74,7 @@ person.favoriteColors.intersects(["red", "blue", "green"])
 
 ## Intersezione 
 
-Il `intersection` La funzione viene utilizzata per determinare i membri comuni di due array o elenchi.
+La funzione `intersection` viene utilizzata per determinare i membri comuni di due array o elenchi.
 
 **Formato**
 
@@ -92,7 +92,7 @@ person1.favoriteColors.intersection(person2.favoriteColors) = ["red", "blue", "g
 
 ## Sottoinsieme di
 
-Il `subsetOf` viene utilizzata per determinare se un array specifico (array A) è un sottoinsieme di un altro array (array B). In altre parole, che tutti gli elementi nell&#39;array A sono elementi dell&#39;array B.
+La funzione `subsetOf` viene utilizzata per determinare se un array specifico (array A) è un sottoinsieme di un altro array (array B). In altre parole, che tutti gli elementi nell&#39;array A sono elementi dell&#39;array B.
 
 **Formato**
 
@@ -108,9 +108,9 @@ La seguente query PQL definisce le persone che hanno visitato tutte le loro citt
 person.favoriteCities.subsetOf(person.visitedCities)
 ```
 
-## Soprainsieme di
+## Superset di
 
-Il `supersetOf` viene utilizzata per determinare se un array specifico (array A) è un superset di un altro array (array B). In altre parole, l’array A contiene tutti gli elementi dell’array B.
+La funzione `supersetOf` viene utilizzata per determinare se un array specifico (array A) è un superset di un altro array (array B). In altre parole, l’array A contiene tutti gli elementi dell’array B.
 
 **Formato**
 
@@ -128,7 +128,7 @@ person.eatenFoods.supersetOf(["sushi", "pizza"])
 
 ## Include
 
-Il `includes` viene utilizzata per determinare se un array o un elenco contiene un dato elemento.
+La funzione `includes` viene utilizzata per determinare se un array o un elenco contiene un dato elemento.
 
 **Formato**
 
@@ -144,9 +144,9 @@ La seguente query PQL definisce gli utenti il cui colore preferito include il ro
 person.favoriteColors.includes("red")
 ```
 
-## Distinct
+## Diverso
 
-Il `distinct` viene utilizzata per rimuovere valori duplicati da un array o da un elenco.
+La funzione `distinct` viene utilizzata per rimuovere i valori duplicati da un array o da un elenco.
 
 **Formato**
 
@@ -164,7 +164,7 @@ person.orders.storeId.distinct().count() > 1
 
 ## Raggruppa per
 
-Il `groupBy` La funzione viene utilizzata per suddividere i valori di un array o di un elenco in un gruppo in base al valore dell’espressione.
+La funzione `groupBy` viene utilizzata per suddividere i valori di un array o di un elenco in un gruppo in base al valore dell&#39;espressione.
 
 **Formato**
 
@@ -187,7 +187,7 @@ orders.groupBy(storeId)
 
 ## Filtro
 
-Il `filter` viene utilizzata per filtrare un array o un elenco in base a un’espressione.
+La funzione `filter` viene utilizzata per filtrare un array o un elenco in base a un&#39;espressione.
 
 **Formato**
 
@@ -210,7 +210,7 @@ person.filter(age >= 21)
 
 ## Mappa
 
-Il `map` viene utilizzata per creare un nuovo array applicando un’espressione a ogni elemento in un determinato array.
+La funzione `map` viene utilizzata per creare un nuovo array applicando un&#39;espressione a ogni elemento in un determinato array.
 
 **Formato**
 
@@ -226,9 +226,9 @@ La query PQL seguente crea una nuova matrice di numeri e quadra il valore dei nu
 numbers.map(square)
 ```
 
-## Primo `n` nell’array {#first-n}
+## Primi `n` nell&#39;array {#first-n}
 
-Il `topN` viene utilizzata per restituire la prima `N` elementi di un array, se ordinati in ordine crescente in base alla data espressione numerica.
+La funzione `topN` viene utilizzata per restituire i primi `N` elementi in un array, se ordinati in ordine crescente in base alla data espressione numerica.
 
 **Formato**
 
@@ -250,9 +250,9 @@ La query PQL seguente restituisce i primi cinque ordini con il prezzo più alto.
 orders.topN(price, 5)
 ```
 
-## Ultimo `n` nell’array
+## Ultimi `n` nell&#39;array
 
-Il `bottomN` viene utilizzata per restituire l&#39;ultimo `N` elementi di un array, se ordinati in ordine crescente in base alla data espressione numerica.
+La funzione `bottomN` viene utilizzata per restituire gli ultimi `N` elementi in un array, se ordinati in ordine crescente in base alla data espressione numerica.
 
 **Formato**
 
@@ -276,7 +276,7 @@ orders.bottomN(price, 5)
 
 ## Primo elemento
 
-Il `head` viene utilizzata per restituire il primo elemento dell’array o dell’elenco.
+La funzione `head` viene utilizzata per restituire il primo elemento dell&#39;array o dell&#39;elenco.
 
 **Formato**
 
@@ -286,7 +286,7 @@ Il `head` viene utilizzata per restituire il primo elemento dell’array o dell�
 
 **Esempio**
 
-La query PQL seguente restituisce il primo dei primi cinque ordini con il prezzo più alto. Ulteriori informazioni su `topN` è disponibile nella sezione [primo `n` nell’array](#first-n) sezione.
+La query PQL seguente restituisce il primo dei primi cinque ordini con il prezzo più alto. Ulteriori informazioni sulla funzione `topN` sono disponibili nella sezione [first `n` in array](#first-n).
 
 ```sql
 orders.topN(price, 5).head()
@@ -294,4 +294,4 @@ orders.topN(price, 5).head()
 
 ## Passaggi successivi
 
-Dopo aver appreso le funzioni array, list e set, è possibile utilizzarle all’interno delle query PQL. Per ulteriori informazioni su altre funzioni PQL, leggere [Panoramica sulla lingua delle query di profilo](./overview.md).
+Dopo aver appreso le funzioni array, elenco e impostazione, è possibile utilizzarle all&#39;interno delle query PQL. Per ulteriori informazioni su altre funzioni di PQL, leggere la [panoramica di Profile Query Language](./overview.md).

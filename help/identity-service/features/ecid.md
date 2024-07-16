@@ -17,7 +17,7 @@ ht-degree: 0%
 
 L’ID Experience Cloud (ECID) è uno spazio dei nomi di identità condiviso e utilizzato dalle diverse applicazioni Adobe Experience Platform e Adobe Experience Cloud.
 
-ECID fornisce le basi per l’identità del cliente. Con il contesto di [[!DNL Identity Service]](../home.md), ECID viene utilizzato come ID primario per i dispositivi e come nodo di base per i grafici di identità.
+ECID fornisce le basi per l’identità del cliente. Con il contesto di [[!DNL Identity Service]](../home.md), ECID viene utilizzato come ID primario per i dispositivi e come nodo di base per i grafici delle identità.
 
 Con ECID è possibile:
 
@@ -31,8 +31,8 @@ Per identificare gli utenti online è necessario instrumentare il sito o l’app
 
 La seguente documentazione fornisce ulteriori risorse sulla comprensione di ECID nelle diverse applicazioni Platform e Experience Cloud:
 
-* Per utilizzare ECID con l’implementazione del sito web, consulta la documentazione di [Servizio Experience Cloud Identity](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=it).
-* Per scoprire come ECID viene utilizzato con le app e i contenuti web per dispositivi mobili, consulta la documentazione di [tracciamento dei visitatori tra app e contenuti web per dispositivi mobili](https://experienceleague.adobe.com/docs/mobile-services/ios/sdk-reference-ios/hybrid-app.html#sdk-reference-ios).
-* L’implementazione di questi strumenti può essere semplice e facile da gestire se utilizzi [tag](../../tags/home.md).
-* Consulta la [Documentazione di Privacy Service](../../privacy-service/identity-data.md) per informazioni sull’utilizzo di ECID per facilitare la conformità alle normative sulla privacy come il RGPD.
-* Per ulteriori informazioni su ECID con il contesto di Platform, consulta [Panoramica del servizio Identity](../home.md) e [panoramica degli spazi dei nomi delle identità](./namespaces.md).
+* Per utilizzare ECID con l&#39;implementazione del sito Web, consulta la documentazione di [Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=it).
+* Per informazioni sull&#39;utilizzo di ECID con app e contenuti Web per dispositivi mobili, consulta la documentazione relativa al tracciamento di [visitatori tra app e Web per dispositivi mobili](https://experienceleague.adobe.com/docs/mobile-services/ios/sdk-reference-ios/hybrid-app.html#sdk-reference-ios).
+* La distribuzione di questi strumenti può essere semplice e facile da gestire se si utilizzano [tag](../../tags/home.md).
+* Consulta la [documentazione Privacy Service](../../privacy-service/identity-data.md) per informazioni sull&#39;utilizzo di ECID per facilitare la conformità con le normative sulla privacy come il RGPD.
+* Per ulteriori informazioni su ECID con il contesto di Platform, consulta la [Panoramica del servizio Identity](../home.md) e la [Panoramica sugli spazi dei nomi delle identità](./namespaces.md).

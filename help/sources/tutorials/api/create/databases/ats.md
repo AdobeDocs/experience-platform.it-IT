@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;[!DNL Azure Table Storage];[!DNL Azure Table Storage];Archiviazione tabelle di Azure
+keywords: Experience Platform;home;argomenti popolari;[!DNL Azure Table Storage];[!DNL Azure Table Storage];Azure table storage
 solution: Experience Platform
 title: Creare una connessione di base dell’archiviazione tabelle di Azure tramite l’API del servizio Flusso
 type: Tutorial
@@ -7,16 +7,16 @@ description: Scopri come collegare Azure Table Storage a Adobe Experience Platfo
 exl-id: 8ebd5d77-ed1f-47e1-8212-efb6c5e84ec1
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
-source-wordcount: '475'
-ht-degree: 6%
+source-wordcount: '465'
+ht-degree: 5%
 
 ---
 
-# Creare un [!DNL Azure Table Storage] connessione di base tramite [!DNL Flow Service] API
+# Creare una connessione di base [!DNL Azure Table Storage] utilizzando l&#39;API [!DNL Flow Service]
 
 >[!NOTE]
 >
->Il [!DNL Azure Table Storage] connettore in versione beta. Consulta la [Panoramica sulle origini](../../../../home.md#terms-and-conditions) per ulteriori informazioni sull’utilizzo di connettori con etichetta beta.
+>Il connettore [!DNL Azure Table Storage] è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la [Panoramica origini](../../../../home.md#terms-and-conditions).
 
 Una connessione di base rappresenta la connessione autenticata tra un&#39;origine e Adobe Experience Platform.
 
@@ -26,31 +26,31 @@ Questo tutorial illustra i passaggi necessari per creare una connessione di base
 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Sorgenti](../../../../home.md): [!DNL Experience Platform] consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] servizi.
-* [Sandbox](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che permettono di suddividere un singolo [!DNL Platform] in ambienti virtuali separati, per facilitare lo sviluppo e l’evoluzione delle applicazioni di esperienza digitale.
+* [Origini](../../../../home.md): [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini e consente di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi [!DNL Platform].
+* [Sandbox](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza di [!DNL Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per connettersi correttamente a [!DNL Azure Table Storage] utilizzando [!DNL Flow Service] API.
+Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per connettersi correttamente a [!DNL Azure Table Storage] utilizzando l&#39;API [!DNL Flow Service].
 
 ### Raccogli le credenziali richieste
 
-Per ottenere [!DNL Flow Service] per connettersi con [!DNL Azure Table Storage], è necessario fornire valori per le seguenti proprietà di connessione:
+Affinché [!DNL Flow Service] possa connettersi a [!DNL Azure Table Storage], è necessario fornire i valori per le proprietà di connessione seguenti:
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
-| `connectionString` | Stringa di connessione utilizzata per connettersi a un [!DNL Azure Table Storage] dell&#39;istanza. Schema della stringa di connessione per [!DNL Azure Table Storage] è: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
-| `connectionSpec.id` | La specifica di connessione restituisce le proprietà del connettore di un&#39;origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di origine. ID della specifica di connessione per [!DNL Azure Table Storage] è `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
+| `connectionString` | Stringa di connessione utilizzata per connettersi a un&#39;istanza [!DNL Azure Table Storage]. Schema della stringa di connessione per [!DNL Azure Table Storage]: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionSpec.id` | La specifica di connessione restituisce le proprietà del connettore di un&#39;origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di origine. L&#39;ID della specifica di connessione per [!DNL Azure Table Storage] è `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
 
 Per ulteriori informazioni su come ottenere una stringa di connessione, fare riferimento a [questo [!DNL Azure Table Storage] documento](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction).
 
 ### Utilizzo delle API di Platform
 
-Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida su [introduzione alle API di Platform](../../../../../landing/api-guide.md).
+Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida in [guida introduttiva alle API di Platform](../../../../../landing/api-guide.md).
 
-## Crea una connessione di base
+## Creare una connessione di base
 
 Una connessione di base mantiene le informazioni tra l’origine e Platform, incluse le credenziali di autenticazione dell’origine, lo stato corrente della connessione e l’ID univoco della connessione di base. L’ID della connessione di base consente di esplorare e navigare tra i file dall’interno dell’origine e identificare gli elementi specifici che desideri acquisire, comprese le informazioni relative ai tipi di dati e ai formati.
 
-Per creare un ID di connessione di base, effettua una richiesta POST al `/connections` endpoint durante la fornitura del [!DNL Azure Table Storage] credenziali di autenticazione come parte dei parametri della richiesta.
+Per creare un ID di connessione di base, effettuare una richiesta POST all&#39;endpoint `/connections` fornendo le credenziali di autenticazione [!DNL Azure Table Storage] come parte dei parametri della richiesta.
 
 **Formato API**
 
@@ -88,8 +88,8 @@ curl -X POST \
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `auth.params.connectionString` | Stringa di connessione utilizzata per connettersi a un [!DNL Azure Table Storage] dell&#39;istanza. Schema della stringa di connessione per [!DNL Azure Table Storage] è: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
-| `connectionSpec.id` | Il [!DNL Azure Table Storage] ID specifica di connessione: `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
+| `auth.params.connectionString` | Stringa di connessione utilizzata per connettersi a un&#39;istanza [!DNL Azure Table Storage]. Schema della stringa di connessione per [!DNL Azure Table Storage]: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionSpec.id` | ID della specifica di connessione [!DNL Azure Table Storage]: `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
 
 **Risposta**
 
@@ -104,7 +104,7 @@ In caso di esito positivo, la risposta restituisce i dettagli della connessione 
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato un’ [!DNL Azure Table Storage] connessione di base tramite [!DNL Flow Service] API. Puoi utilizzare questo ID connessione di base nelle seguenti esercitazioni:
+Seguendo questa esercitazione, è stata creata una connessione di base [!DNL Azure Table Storage] utilizzando l&#39;API [!DNL Flow Service]. Puoi utilizzare questo ID connessione di base nelle seguenti esercitazioni:
 
-* [Esplora la struttura e il contenuto delle tabelle di dati utilizzando [!DNL Flow Service] API](../../explore/tabular.md)
-* [Crea un flusso di dati per portare i dati del database su Platform utilizzando [!DNL Flow Service] API](../../collect/database-nosql.md)
+* [Esplora la struttura e il contenuto delle tabelle dati utilizzando l&#39;API  [!DNL Flow Service] ](../../explore/tabular.md)
+* [Crea un flusso di dati per portare i dati del database in Platform utilizzando l&#39;API  [!DNL Flow Service] ](../../collect/database-nosql.md)

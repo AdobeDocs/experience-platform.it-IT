@@ -4,8 +4,8 @@ description: Scopri l’estensione tag per Adobe Target in Adobe Experience Plat
 exl-id: b1c5e25b-42ea-4835-b2d4-913fa2536e77
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '1192'
-ht-degree: 96%
+source-wordcount: '1179'
+ht-degree: 93%
 
 ---
 
@@ -31,7 +31,7 @@ Per configurare l’estensione, apri la scheda [!UICONTROL Estensioni], passa il
 
 ### Impostazioni at.js
 
-Tutte le impostazioni at.js, a eccezione del Timeout, vengono recuperate automaticamente dalla configurazione at.js nell’interfaccia utente di Target. L’estensione recupera le impostazioni dall’interfaccia utente di Target quando viene aggiunta per la prima volta; in caso di aggiornamenti futuri, tutte le impostazioni dovranno invece essere gestite nell&#39;interfaccia di 
+Tutte le impostazioni at.js, a eccezione del Timeout, vengono recuperate automaticamente dalla configurazione at.js nell’interfaccia utente di Target. L&#39;estensione recupera le impostazioni dall&#39;interfaccia utente di Target solo quando viene aggiunta per la prima volta, pertanto tutte le impostazioni devono essere gestite nell&#39;interfaccia utente se sono necessari aggiornamenti aggiuntivi.
 
 Sono disponibili le seguenti configurazioni:
 

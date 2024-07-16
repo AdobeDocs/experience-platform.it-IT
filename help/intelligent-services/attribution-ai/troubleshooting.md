@@ -19,12 +19,12 @@ Questo documento fornisce le risposte alle domande più frequenti su Attribution
 
 ## Impossibile accedere alle Attribution AI in incognito Chrome
 
-Gli errori di caricamento nella modalità in incognito di Google Chrome sono presenti a causa di aggiornamenti nelle impostazioni di sicurezza della modalità in incognito di Google Chrome. Il problema è attivamente in fase di elaborazione con Chrome per rendere experience.adobe.com un dominio fidato.
+Gli errori di caricamento in modalità incognito di Google Chrome sono presenti a causa di aggiornamenti nelle impostazioni di protezione in modalità incognito di Google Chrome. Il problema è stato affrontato attivamente con Chrome per rendere experience.adobe.com un dominio affidabile.
 
 <img src="./images/faq/error.PNG" width="500" /><br />
 
 ### Correzione consigliata
 
-Per risolvere questo problema è necessario aggiungere experience.adobe.com come sito che può sempre utilizzare i cookie. Per iniziare, passa a **chrome://settings/cookies**. Quindi, scorri verso il basso fino a **Comportamenti personalizzati** seguito dalla selezione della sezione **Aggiungi** accanto a &quot;siti che possono sempre utilizzare i cookie&quot;. Nel popover visualizzato, copiare e incollare `[*.]experience.adobe.com` quindi seleziona la **Inclusione di cookie di terze parti** in questo sito. Al termine, seleziona **Aggiungi** e ricaricare le Attribution AI in incognito.
+Per risolvere questo problema è necessario aggiungere experience.adobe.com come sito che può sempre utilizzare i cookie. Per iniziare, passa a **chrome://settings/cookies**. Quindi, scorri verso il basso fino alla sezione **Comportamenti personalizzati**, quindi seleziona il pulsante **Aggiungi** accanto a &quot;Siti che possono sempre utilizzare i cookie&quot;. Nel popover visualizzato, copia e incolla `[*.]experience.adobe.com`, quindi seleziona la casella di controllo **Includi cookie di terze parti** su questo sito. Al termine, seleziona **Aggiungi** e ricarica l&#39;Attribution AI in incognito.
 
 ![correzione consigliata](./images/faq/cookies2.gif)

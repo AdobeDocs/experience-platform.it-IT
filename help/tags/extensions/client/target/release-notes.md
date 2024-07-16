@@ -4,7 +4,7 @@ description: Note aggiornate sulla versione dell’estensione tag Adobe Target i
 exl-id: ba29f614-c3cd-4e0b-b043-2b1c17567def
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '578'
 ht-degree: 94%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 94%
 ### Estensione Adobe Target 0.11.4
 
 * Aggiornato a at.js v1.8.3
-* Aggiunto `SameSite=None` e `Secure` attributi durante l’impostazione dei cookie
+* Sono stati aggiunti gli attributi `SameSite=None` e `Secure` durante l&#39;impostazione dei cookie
 
 ## 24 luglio 2020
 

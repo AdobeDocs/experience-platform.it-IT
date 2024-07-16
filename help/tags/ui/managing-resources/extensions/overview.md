@@ -27,7 +27,7 @@ Le estensioni determinano gli elementi disponibili per la creazione di propriet�
 
 Utilizza i collegamenti nella parte superiore dell’elenco Estensioni per visualizzare le estensioni installate, il catalogo delle estensioni o gli aggiornamenti.
 
-Seleziona un’estensione, quindi fai clic su [!UICONTROL Configura] per visualizzarne e modificarne le impostazioni. Per ulteriori informazioni, consulta la sezione su [aggiunta di una nuova estensione](#add-a-new-extension) per informazioni sulle opzioni di estensione,
+Seleziona un’estensione, quindi fai clic su [!UICONTROL Configura] per visualizzarne e modificarne le impostazioni. Per ulteriori informazioni, vedere la sezione relativa all&#39;[aggiunta di una nuova estensione](#add-a-new-extension) per informazioni sulle opzioni di estensione.
 
 >[!IMPORTANT]
 >

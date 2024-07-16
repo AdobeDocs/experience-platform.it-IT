@@ -1,12 +1,12 @@
 ---
 title: Coinvolgi e acquisisci nuovi clienti senza dipendere dai cookie di terze parti
-description: Scopri come coinvolgere e acquisire nuovi clienti attraverso la ricerca di casi d’uso, senza affidarsi a cookie di terze parti.
+description: Scopri come coinvolgere e acquisire nuovi clienti attraverso possibili casi d’uso, senza affidarti a cookie di terze parti.
 feature: Use Cases, Customer Acquisition
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
 source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2074'
-ht-degree: 84%
+ht-degree: 85%
 
 ---
 
@@ -197,7 +197,7 @@ Perché i profili di potenziali clienti appena caricati in Real-Time CDP vengano
 
 ![Vista di come controllare i profili di potenziali clienti.](/help/rtcdp/assets/partner-data/prospecting/inspect-prospect-profile.gif)
 
-Ulteriori informazioni su [profili potenziali](/help/profile/ui/prospect-profile.md).
+Ulteriori informazioni su [profili prospect](/help/profile/ui/prospect-profile.md).
 
 ### Creare tipi di pubblico potenziale {#create-prospect-audiences}
 
@@ -213,20 +213,20 @@ L’esperienza di creazione del pubblico per profili di potenziali clienti è di
 * Solo valutazione del profilo in batch.
 * Non supporta la creazione di tipi di pubblico in base a eventi di serie temporali.
 
-Ulteriori informazioni su [audience potenziali](/help/segmentation/ui/prospect-audience.md).
+Ulteriori informazioni su [tipi di pubblico potenziali](/help/segmentation/ui/prospect-audience.md).
 
 ### Attivare profili di potenziali clienti nelle destinazioni {#activate-to-destinations}
 
 Utilizza i tipi di pubblico di potenziali clienti esportandoli nelle destinazioni. Attualmente, solo alcune destinazioni di archiviazione cloud supportano l’attivazione di profili potenziali.
 
-![Destinazioni che supportano i potenziali tipi di pubblico.](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
+![Destinazioni che supportano i tipi di pubblico potenziali.](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
 
-[Ulteriori informazioni](/help/destinations/ui/activate-prospect-audiences.md) informazioni sull’attivazione di potenziali clienti in destinazioni di archiviazione cloud.
+[Ulteriori informazioni](/help/destinations/ui/activate-prospect-audiences.md) sull&#39;attivazione di potenziali clienti nelle destinazioni di archiviazione cloud.
 
 ## Altri casi d’uso ottenuti tramite il supporto dei dati dei partner {#other-use-cases}
 
 Esplora altri casi d’uso abilitati tramite il supporto dei dati dei partner in Real-Time CDP:
 
 * [Puoi integrare i profili di prime parti con attributi di partner di dati affidabili, per migliorare la base di dati, acquisire nuove informazioni sulla base dei clienti e una migliore ottimizzazione del pubblico.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-* [Personalizzare le esperienze nel sito per visitatori sconosciuti utilizzando il riconoscimento dei visitatori supportato dai partner](/help/rtcdp/partner-data/onsite-personalization.md) durante la visita senza che l’utente si autentichi o abbia una storia precedente con il tuo marchio.
+* [Personalizza le esperienze nel sito per visitatori sconosciuti utilizzando il riconoscimento dei visitatori supportato dai partner](/help/rtcdp/partner-data/onsite-personalization.md) durante la visita senza che l&#39;utente si autentichi o abbia una storia precedente con il tuo marchio.
 * [Attivazione estesa di profili di potenziali clienti e tipi di pubblico di potenziali clienti](/help/destinations/ui/activate-prospect-audiences.md) per selezionare le destinazioni.

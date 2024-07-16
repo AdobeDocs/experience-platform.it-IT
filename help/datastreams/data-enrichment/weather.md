@@ -1,22 +1,22 @@
 ---
 title: Migliora la raccolta dati con i dati meteo da DNL The Weather Channel
 description: Migliora i dati raccolti tramite flussi di dati con i dati meteo da DNL The Weather Channel.
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+exl-id: 548dfca7-2548-46ac-9c7e-8190d64dd0a4
+source-git-commit: 041a1782442df5f08bb52e4e450734a51c7781ea
 workflow-type: tm+mt
 source-wordcount: '674'
 ht-degree: 68%
 
 ---
 
-
 # Migliora la raccolta dati con i dati meteo da [!DNL The Weather Channel]
 
-Adobe ha collaborato con [!DNL [The Weather Company]](https://www.ibm.com/weather) per portare il contesto aggiuntivo del meteo degli Stati Uniti ai dati raccolti tramite stream di dati. Puoi utilizzare questi dati per l’analisi, il targeting e la creazione di tipi di pubblico in Experienci Platform.
+Adobe ha collaborato con [!DNL [The Weather Company]](https://www.ibm.com/weather) per portare il contesto aggiuntivo del meteo degli Stati Uniti ai dati raccolti tramite stream di dati. Puoi utilizzare questi dati per l’analisi, il targeting e la creazione di tipi di pubblico in Experience Platform.
 
-Esistono tre tipi di dati disponibili da [!DNL The Weather Channel]:
+Sono disponibili tre tipi di dati da [!DNL The Weather Channel]:
 
 * **[!UICONTROL Meteo attuale]**: le condizioni meteo attuali dell’utente, in base alla sua posizione. Ciò include la temperatura corrente, le precipitazioni, la copertura nuvolosa e altro ancora.
-* **[!UICONTROL Tempo previsto]**: la previsione include le previsioni a 1, 2, 3, 5, 7 e 10 giorni per l’ubicazione utente.
+* **[!UICONTROL Meteo previsto]**: la previsione include 1, 2, 3, 5, 7 e 10 giorni per la posizione utente.
 * **[!UICONTROL Trigger]**: i trigger sono combinazioni specifiche che vengono mappate su diverse condizioni meteo semantiche. Esistono tre diversi tipi di trigger meteo:
 
    * **[!UICONTROL Trigger meteo]**: condizioni semanticamente significative, come meteo freddo o piovoso. Questi possono differire nelle loro definizioni tra i vari climi.
@@ -27,8 +27,8 @@ Esistono tre tipi di dati disponibili da [!DNL The Weather Channel]:
 
 Prima di utilizzare i dati meteo, è necessario soddisfare i seguenti prerequisiti:
 
-* È necessario concedere in licenza i dati meteo che utilizzerai da [!DNL The Weather Channel]. Seguirà l’abilitazione del meteo sul tuo account.
-* I dati meteo sono disponibili solo attraverso stream di dati. Per utilizzare i dati meteo, è necessario utilizzare [!DNL Web SDK], [!DNL Mobile Edge Extension] o [API server](../../server-api/overview.md) per includere questi dati.
+* È necessario concedere in licenza i dati meteo che verranno utilizzati da [!DNL The Weather Channel]. Seguirà l’abilitazione del meteo sul tuo account.
+* I dati meteo sono disponibili solo attraverso stream di dati. Per utilizzare i dati meteo, è necessario utilizzare [!DNL Web SDK], [!DNL Mobile Edge Extension] o [Server API](../../server-api/overview.md) per includere tali dati.
 * Lo stream di dati deve avere abilitata la funzione di [[!UICONTROL geolocalizzazione]](../configure.md#advanced-options).
 * Aggiungi il [gruppo di campi meteo](#schema-configuration) allo schema in uso.
 
@@ -62,11 +62,11 @@ Puoi trovare l’elenco di campi da mappare nella pagina di [riferimento meteo](
 
 ### Adobe Customer Journey Analytics {#cja}
 
-In [!DNL Adobe Customer Journey Analytics], i dati meteo sono disponibili nel set di dati specificato nello stream di dati. Se gli attributi meteo sono [aggiunto allo schema](#prerequisites-prerequisites), sono disponibili per [aggiungere a una visualizzazione dati](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html?lang=it) in [!DNL Customer Journey Analytics].
+In [!DNL Adobe Customer Journey Analytics], i dati meteo sono disponibili nel set di dati specificato nello stream di dati. Se gli attributi meteo sono [aggiunti allo schema](#prerequisites-prerequisites), saranno disponibili per [aggiungere a una visualizzazione dati](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html?lang=it) in [!DNL Customer Journey Analytics].
 
 ### Real-Time Customer Data Platform {#rtcdp}
 
-I dati meteorologici sono disponibili nel [Real-time Customer Data Platform](../../rtcdp/overview.md), per l’utilizzo in audience. I dati meteo sono collegati agli eventi.
+I dati meteo sono disponibili in [Real-time Customer Data Platform](../../rtcdp/overview.md), per l&#39;utilizzo in audience. I dati meteo sono collegati agli eventi.
 
 ![Segment Builder che mostra gli eventi meteo](../assets/data-enrichment/weather/schema-builder.png)
 

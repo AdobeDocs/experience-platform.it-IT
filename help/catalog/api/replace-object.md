@@ -13,11 +13,11 @@ ht-degree: 3%
 
 # Sostituire un oggetto Catalog
 
-Puoi sovrascrivere il contenuto di una [!DNL Catalog] oggetto utilizzando una richiesta PUT, in cui l’intera risorsa viene sostituita con il payload della richiesta.
+È possibile sovrascrivere il contenuto di un oggetto [!DNL Catalog] utilizzando una richiesta PUT, in cui l&#39;intera risorsa viene sostituita con il payload della richiesta.
 
 >[!NOTE]
 >
->Se devi aggiornare solo alcuni campi specifici all’interno di una [!DNL Catalog] di un oggetto, l’utilizzo di una richiesta PATCH potrebbe essere più efficiente.
+>Se è necessario aggiornare solo alcuni campi specifici all&#39;interno di un oggetto [!DNL Catalog], l&#39;utilizzo di una richiesta PATCH potrebbe risultare più efficiente.
 
 **Formato API**
 
@@ -27,7 +27,7 @@ PUT /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{OBJECT_TYPE}` | Il tipo di [!DNL Catalog] oggetto da sostituire. Gli oggetti validi sono: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | Tipo di oggetto [!DNL Catalog] da sostituire. Gli oggetti validi sono: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | Identificatore dell’oggetto specifico da aggiornare. |
 
 **Richiesta**

@@ -1,7 +1,8 @@
 ---
 title: Gestire tipi di dati array e mapping con funzioni di ordine superiore
 description: Scopri come gestire array e mappare tipi di dati con funzioni di ordine superiore in Query Service. Sono forniti esempi pratici per i casi d’uso comuni.
-source-git-commit: 27eab04e409099450453a2a218659e576b8f6ab4
+exl-id: dec4e4f6-ad6b-4482-ae8c-f10cc939a634
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '1471'
 ht-degree: 0%
@@ -18,7 +19,7 @@ Il seguente elenco di casi d’uso contiene esempi di funzioni di manipolazione 
 
 `transform(array<T>, function<T, U>): array<U>`
 
-Lo snippet di cui sopra applica una funzione a ciascun elemento dell’array e restituisce un nuovo array di elementi trasformati. In particolare, `transform` function prende un array di tipo T e converte ogni elemento dal tipo T al tipo U. Restituisce quindi un array di tipo U. I tipi effettivi T e U dipendono dall&#39;uso specifico della funzione di trasformazione.
+Lo snippet di cui sopra applica una funzione a ciascun elemento dell’array e restituisce un nuovo array di elementi trasformati. In particolare, la funzione `transform` utilizza un array di tipo T e converte ogni elemento dal tipo T al tipo U. Restituisce quindi un array di tipo U. I tipi effettivi T e U dipendono dall&#39;uso specifico della funzione di trasformazione.
 
 `transform(array<T>, function<T, Int, U>): array<U>`
 
@@ -26,7 +27,7 @@ Questa funzione di trasformazione di matrice è simile all&#39;esempio precedent
 
 **Esempio**
 
-L’esempio SQL seguente illustra questo caso d’uso. La query recupera un set limitato di righe dalla tabella specificata, trasformando `productListItems` moltiplicando il valore `priceTotal` di ciascuna voce per 73. Il risultato include `_id`, `productListItems`, e il `price_in_inr` colonne. La selezione si basa su un intervallo di timestamp specifico.
+L’esempio SQL seguente illustra questo caso d’uso. La query recupera un set limitato di righe dalla tabella specificata, trasformando l&#39;array `productListItems` moltiplicando l&#39;attributo `priceTotal` di ogni elemento per 73. Il risultato include le colonne `_id`, `productListItems` e `price_in_inr` trasformate. La selezione si basa su un intervallo di timestamp specifico.
 
 ```sql
 SELECT _id,
@@ -59,11 +60,11 @@ I risultati per questa istruzione SQL saranno simili a quelli riportati di segui
 
 `exists(array<T>, function<T, boolean>): boolean`
 
-Nel frammento precedente, il `exists` La funzione viene applicata a ciascun elemento dell’array e restituisce un valore booleano. Il valore booleano indica se nell’array sono presenti uno o più elementi che soddisfano una condizione specificata. In questo caso, conferma l’esistenza di un prodotto con una SKU specifica.
+Nel frammento precedente, la funzione `exists` viene applicata a ogni elemento dell&#39;array e restituisce un valore booleano. Il valore booleano indica se nell’array sono presenti uno o più elementi che soddisfano una condizione specificata. In questo caso, conferma l’esistenza di un prodotto con una SKU specifica.
 
 **Esempio**
 
-Nell’esempio SQL seguente, la query recupera `productListItems` dal `geometrixxx_999_xdm_pqs_1batch_10k_rows` e valuta se un elemento con una SKU uguale a `123679` nel `productListItems` array esistente. Quindi filtra i risultati in base a un intervallo specifico di marche temporali e limita i risultati finali a dieci righe.
+Nell&#39;esempio SQL seguente, la query recupera `productListItems` dalla tabella `geometrixxx_999_xdm_pqs_1batch_10k_rows` e valuta se esiste un elemento con uno SKU uguale a `123679` nell&#39;array `productListItems`. Quindi filtra i risultati in base a un intervallo specifico di marche temporali e limita i risultati finali a dieci righe.
 
 ```sql
 SELECT productListItems
@@ -102,7 +103,7 @@ Questa funzione filtra una matrice di elementi in base a una determinata condizi
 
 **Esempio**
 
-La query seguente seleziona la `productListItems` , applica un filtro per includere solo elementi con SKU maggiore di 100000 e limita il set di risultati alle righe all&#39;interno di un intervallo di timestamp specifico. L’array filtrato viene quindi alias come `_filter` nell&#39;output.
+La query seguente seleziona la colonna `productListItems`, applica un filtro per includere solo elementi con SKU maggiore di 100000 e limita il set di risultati alle righe all&#39;interno di un intervallo di timestamp specifico. L&#39;array filtrato viene quindi impostato come `_filter` nell&#39;output.
 
 ```sql
 SELECT productListItems,
@@ -136,7 +137,7 @@ Questa operazione di aggregazione applica un operatore binario a uno stato inizi
 
 **Esempio**
 
-Questo esempio di query calcola il valore SKU massimo dalla `productListItems` all’interno dell’intervallo di timestamp specificato e raddoppia il risultato. L&#39;output include l&#39;originale `productListItems` e l&#39;array calcolato `max_value`.
+Questo esempio di query calcola il valore SKU massimo dall&#39;array `productListItems` entro l&#39;intervallo di timestamp specificato e raddoppia il risultato. L&#39;output include l&#39;array `productListItems` originale e l&#39;array `max_value` calcolato.
 
 ```sql
 SELECT productListItems,
@@ -175,7 +176,7 @@ Questo snippet combina gli elementi di due array in un unico nuovo array. L&#39;
 
 **Esempio**
 
-La query seguente utilizza `zip_with` per creare coppie di valori da due array. A questo scopo, aggiungi i valori SKU dalla sezione `productListItems` a una sequenza di numeri interi, generata utilizzando il `Sequence` funzione. Il risultato viene selezionato insieme all&#39;originale `productListItems` ed è limitato in base a un intervallo di timestamp.
+La query seguente utilizza la funzione `zip_with` per creare coppie di valori da due array. A tale scopo, aggiungere i valori SKU dell&#39;array `productListItems` a una sequenza di numeri interi generata utilizzando la funzione `Sequence`. Il risultato viene selezionato insieme alla colonna `productListItems` originale ed è limitato in base a un intervallo di timestamp.
 
 ```sql
 SELECT productListItems,
@@ -250,7 +251,7 @@ productListItems     | map_from_entries
 
 `map_form_arrays(array<K>, array<V>): map<K, V>`
 
-Il `map_form_arrays` funzione crea una mappa utilizzando valori accoppiati da due array.
+La funzione `map_form_arrays` crea una mappa utilizzando i valori accoppiati di due array.
 
 >[!IMPORTANT]
 >
@@ -258,7 +259,7 @@ Il `map_form_arrays` funzione crea una mappa utilizzando valori accoppiati da du
 
 **Esempio**
 
-L&#39;istruzione SQL seguente crea una mappa in cui le chiavi sono numeri in sequenza generati utilizzando `Sequence` e i valori sono elementi della `productListItems` array. La query seleziona `productListItems` e utilizza la `Map_from_arrays` per creare la mappa in base alla sequenza di numeri generata e agli elementi dell’array. Il risultato è limitato a dieci righe e filtrato in base a un intervallo di marca temporale.
+L&#39;istruzione SQL seguente crea una mappa in cui le chiavi sono numeri in sequenza generati utilizzando la funzione `Sequence` e i valori sono elementi dell&#39;array `productListItems`. La query seleziona la colonna `productListItems` e utilizza la funzione `Map_from_arrays` per creare la mappa in base alla sequenza di numeri generata e agli elementi dell&#39;array. Il risultato è limitato a dieci righe e filtrato in base a un intervallo di marca temporale.
 
 ```sql
 SELECT productListItems,
@@ -296,11 +297,11 @@ productListItems     | map_from_entries
 
 `map_concat(map<K, V>, ...): map<K, V>`
 
-Il `map_concat` funzione nel frammento precedente prende più mappe come argomenti e restituisce una nuova mappa che combina tutte le coppie chiave-valore dalle mappe di input. La funzione concatena più mappe in una singola mappa e la mappa risultante include tutte le coppie chiave-valore dalle mappe di input.
+La funzione `map_concat` nel frammento precedente accetta più mappe come argomenti e restituisce una nuova mappa che combina tutte le coppie chiave-valore dalle mappe di input. La funzione concatena più mappe in una singola mappa e la mappa risultante include tutte le coppie chiave-valore dalle mappe di input.
 
 **Esempio**
 
-L&#39;istruzione SQL seguente crea una mappa in cui ogni elemento `productListItems` è associato a un numero di sequenza, che viene quindi concatenato con un’altra mappa in cui le chiavi vengono generate in un intervallo di sequenza specifico.
+L&#39;istruzione SQL seguente crea una mappa in cui ogni elemento in `productListItems` è associato a un numero di sequenza, che viene quindi concatenato con un&#39;altra mappa in cui le chiavi vengono generate in un intervallo di sequenza specifico.
 
 ```sql
 SELECT productListItems,
@@ -345,7 +346,7 @@ Per le mappe, restituisce un valore per la chiave specificata o null se la chiav
 
 **Esempio**
 
-La query seleziona `identitymap` colonna dalla tabella `geometrixxx_999_xdm_pqs_1batch_10k_rows` ed estrae il valore associato alla chiave `AAID` per ogni riga. I risultati sono limitati alle righe che rientrano nell’intervallo di marca temporale specificato e la query limita l’output a dieci righe.
+La query seleziona la colonna `identitymap` dalla tabella `geometrixxx_999_xdm_pqs_1batch_10k_rows` ed estrae il valore associato alla chiave `AAID` per ogni riga. I risultati sono limitati alle righe che rientrano nell’intervallo di marca temporale specificato e la query limita l’output a dieci righe.
 
 ```sql
 SELECT identitymap,
@@ -383,7 +384,7 @@ Questo snippet restituisce le dimensioni di una matrice o mappa specificata e fo
 
 **Esempio**
 
-La query seguente recupera `identitymap` e la `Cardinality` funzione calcola il numero di elementi in ogni mappa all&#39;interno del `identitymap`. I risultati sono limitati a dieci righe e vengono filtrati in base a un intervallo di marca temporale specificato.
+La query seguente recupera la colonna `identitymap` e la funzione `Cardinality` calcola il numero di elementi in ogni mappa all&#39;interno di `identitymap`. I risultati sono limitati a dieci righe e vengono filtrati in base a un intervallo di marca temporale specificato.
 
 ```sql
 SELECT identitymap,
@@ -421,7 +422,7 @@ Lo snippet di cui sopra rimuove i valori duplicati dall’array specificato.
 
 **Esempio**
 
-La query seguente seleziona la `productListItems` , rimuove gli elementi duplicati dagli array e limita l&#39;output a dieci righe in base a un intervallo di timestamp specificato.
+La query seguente seleziona la colonna `productListItems`, rimuove gli elementi duplicati dagli array e limita l&#39;output a dieci righe in base a un intervallo di timestamp specificato.
 
 ```sql
 SELECT productListItems,
@@ -457,8 +458,8 @@ productListItems     | array_distinct(productListItems)
 
 I seguenti esempi di funzioni di ordine superiore sono spiegati come parte del caso di utilizzo del recupero di record simili. Un esempio e una spiegazione dell’utilizzo di ciascuna funzione sono forniti nella rispettiva sezione di tale documento.
 
-Il [`transform` esempio di funzione](../use-cases/retrieve-similar-records.md#length-adjustment) riguarda la tokenizzazione di un elenco di prodotti.
+L&#39;esempio di funzione [`transform`](../use-cases/retrieve-similar-records.md#length-adjustment) riguarda la tokenizzazione di un elenco di prodotti.
 
-Il [`filter` esempio di funzione](../use-cases/retrieve-similar-records.md#filter-results) dimostra un’estrazione più precisa e precisa delle informazioni pertinenti dai dati testuali.
+L&#39;esempio della funzione [`filter`](../use-cases/retrieve-similar-records.md#filter-results) dimostra un&#39;estrazione più precisa e precisa delle informazioni rilevanti dai dati di testo.
 
-Il [`reduce` funzione](../use-cases/retrieve-similar-records.md#higher-order-function-solutions) consente di ottenere valori cumulativi o aggregati, che possono essere fondamentali in vari processi di analisi e pianificazione.
+La funzione [`reduce`](../use-cases/retrieve-similar-records.md#higher-order-function-solutions) consente di derivare valori cumulativi o aggregati, che possono essere fondamentali in vari processi di analisi e pianificazione.

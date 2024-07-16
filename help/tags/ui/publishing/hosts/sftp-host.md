@@ -4,8 +4,8 @@ description: Scopri come configurare i tag in Adobe Experience Platform per dist
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '820'
-ht-degree: 38%
+source-wordcount: '811'
+ht-degree: 36%
 
 ---
 
@@ -19,9 +19,9 @@ Adobe Experience Platform ti consente di distribuire le build della libreria di 
 
 >[!NOTE]
 >
->Puoi anche scegliere di utilizzare un host gestito da Adobe. Consulta la guida su [Host gestiti da Adobe](./managed-by-adobe-host.md) per ulteriori informazioni.
+>Puoi anche scegliere di utilizzare un host gestito da Adobe. Per ulteriori informazioni, consulta la guida sugli [host gestiti da Adobe](./managed-by-adobe-host.md).
 >
->Per informazioni sui vantaggi e le limitazioni delle librerie di self-hosting, consulta la sezione [guida all’hosting autonomo](./self-hosting-libraries.md).
+>Per informazioni sui vantaggi e le limitazioni delle librerie di hosting autonomo, consulta la [guida all&#39;hosting autonomo](./self-hosting-libraries.md).
 
 ## Configurare una chiave di accesso per il server {#access-key}
 
@@ -33,7 +33,7 @@ Sul server SFTP deve essere installata una coppia di chiave pubblica/privata. Pu
 
 ### Crittografa le chiavi
 
-La chiave privata viene utilizzata per crittografare la chiave pubblica. Dovrai fornire la tua chiave privata durante il processo di creazione dell’host SFTP. Consulta la sezione su [cifratura dei valori](../../../api/guides/encrypting-values.md) nella guida dell’API di Reactor per istruzioni sulla crittografia delle chiavi pubbliche. Utilizza la chiave GPG dell’ambiente di produzione a meno che tu non sappia di aver bisogno di una chiave specifica. Infine, puoi crittografare la tua chiave privata da qualsiasi computer, per cui non devi installare GPG sul server per completare questo passaggio.
+La chiave privata viene utilizzata per crittografare la chiave pubblica. Dovrai fornire la tua chiave privata durante il processo di creazione dell’host SFTP. Per istruzioni sulla crittografia delle chiavi pubbliche, consulta la sezione su [valori di crittografia](../../../api/guides/encrypting-values.md) nella guida dell&#39;API di Reactor. Utilizza la chiave GPG dell’ambiente di produzione a meno che tu non sappia di aver bisogno di una chiave specifica. Infine, puoi crittografare la tua chiave privata da qualsiasi computer, per cui non devi installare GPG sul server per completare questo passaggio.
 
 ### Inserire nell&#39;elenco Consentiti gli indirizzi IP della piattaforma
 
@@ -53,11 +53,11 @@ Per informazioni più dettagliate, consulta il seguente articolo Medium su [come
 
 Seleziona **[!UICONTROL Host]** nel menu di navigazione a sinistra, seguito da **[!UICONTROL Aggiungi host]**.
 
-![Immagine che mostra il pulsante Aggiungi host selezionato nell’interfaccia utente](../../../images/ui/publishing/sftp-hosts/add-host-button.png)
+![Immagine che mostra il pulsante Aggiungi host selezionato nell&#39;interfaccia utente](../../../images/ui/publishing/sftp-hosts/add-host-button.png)
 
-Viene visualizzata la finestra di dialogo per la creazione dell’host. Specifica un nome per l’host e sotto **[!UICONTROL Tipo]**, seleziona **[!UICONTROL SFTP]**.
+Viene visualizzata la finestra di dialogo per la creazione dell’host. Specifica un nome per l&#39;host e in **[!UICONTROL Tipo]** seleziona **[!UICONTROL SFTP]**.
 
-![Immagine che mostra l’opzione di hosting SFTP selezionata](../../../images/ui/publishing/sftp-hosts/select-sftp.png)
+![Immagine che mostra l&#39;opzione di hosting SFTP selezionata](../../../images/ui/publishing/sftp-hosts/select-sftp.png)
 
 ### Configurare l’host SFTP {#configure}
 
@@ -67,19 +67,19 @@ La finestra di dialogo si espande per includere opzioni di configurazione aggiun
 
 | Campo di configurazione | Descrizione |
 | --- | --- |
-| [!UICONTROL Non utilizzare collegamenti simbolici] | Per impostazione predefinita, tutti gli host SFTP utilizzano collegamenti simbolici (symlink) per fare riferimento alla libreria [build](../builds.md) salvate nel server. Tuttavia, non tutti i server supportano l&#39;utilizzo di symlink. Quando questa opzione è selezionata, l’host utilizza un’operazione di copia per aggiornare direttamente le risorse della build invece di utilizzare i symlink. |
-| [!UICONTROL URL del server SFTP] | Percorso URL di base per il server. |
+| [!UICONTROL Non utilizzare i collegamenti simbolici] | Per impostazione predefinita, tutti gli host SFTP utilizzano collegamenti simbolici (symlink) per fare riferimento alle [build](../builds.md) della libreria salvate nel server. Tuttavia, non tutti i server supportano l&#39;utilizzo di symlink. Quando questa opzione è selezionata, l’host utilizza un’operazione di copia per aggiornare direttamente le risorse della build invece di utilizzare i symlink. |
+| [!UICONTROL URL server SFTP] | Percorso URL di base per il server. |
 | [!UICONTROL Percorso] | Percorso da aggiungere all&#39;URL del server base per questo host. |
-| [!UICONTROL Porta ] | Per la porta, scegli una delle seguenti possibilità:<ul><li>`21`</li><li>`22`</li><li>`80`</li><li>`200-299`</li><li>`443`</li><li>`2000-2999`</li><li>`4343`</li><li>`8080`</li><li>`8888`</li></ul>Come best practice per la sicurezza, Adobe limita il numero di porte che possono essere utilizzate per il traffico in uscita. Le porte selezionate sono solitamente consentite dai firewall aziendali e includono alcuni intervalli per garantire flessibilità. |
+| [!UICONTROL Porta] | Per la porta, scegli una delle seguenti possibilità:<ul><li>`21`</li><li>`22`</li><li>`80`</li><li>`200-299`</li><li>`443`</li><li>`2000-2999`</li><li>`4343`</li><li>`8080`</li><li>`8888`</li></ul>Come best practice per la sicurezza, Adobe limita il numero di porte che possono essere utilizzate per il traffico in uscita. Le porte selezionate sono solitamente consentite dai firewall aziendali e includono alcuni intervalli per garantire flessibilità. |
 | [!UICONTROL Nome utente] | Nome utente da utilizzare per l&#39;accesso al server. |
 | [!UICONTROL Chiave privata crittografata] | La chiave privata crittografata creata in un [passaggio precedente](#access-key). |
 
 Seleziona **[!UICONTROL Salva]** per creare l&#39;host con la configurazione selezionata.
 
-![Immagine che mostra l’host SFTP in fase di salvataggio](../../../images/ui/publishing/sftp-hosts/save-host.png)
+![Immagine che mostra l&#39;host SFTP in fase di salvataggio](../../../images/ui/publishing/sftp-hosts/save-host.png)
 
 Quando selezioni **[!UICONTROL Salva]**, viene verificata la connessione e la capacità di consegnare i file al server SFTP. Platform crea una cartella, scrive un file all’interno della cartella, verifica che il file sia presente, quindi si ripulisce in seguito. Se l’account utente sul server SFTP (quello associato al certificato protetto fornito a Platform) non dispone delle autorizzazioni necessarie per eseguire questa azione, l’host passa a uno stato &quot;Non riuscito&quot;.
 
 ## Passaggi successivi
 
-Questa guida illustra come configurare un server SFTP con hosting autonomo da utilizzare nei tag. Una volta stabilito l’host, puoi associarlo a uno o più dei [ambienti](../environments.md) per la pubblicazione di librerie di tag. Per ulteriori informazioni sul processo ad alto livello di attivazione delle funzionalità tag sulle proprietà web o mobili, consulta la sezione [panoramica sulla pubblicazione](../overview.md).
+Questa guida illustra come configurare un server SFTP con hosting autonomo da utilizzare nei tag. Una volta stabilito l&#39;host, puoi associarlo a uno o più [ambienti](../environments.md) per la pubblicazione di librerie di tag. Per ulteriori informazioni sul processo di alto livello di attivazione delle funzionalità tag nelle proprietà Web o mobili, consulta la [panoramica sulla pubblicazione](../overview.md).

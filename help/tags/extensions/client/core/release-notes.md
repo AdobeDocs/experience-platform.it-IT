@@ -4,8 +4,8 @@ description: Note aggiornate sulla versione dell’estensione Core in Adobe Expe
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
 source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
-source-wordcount: '1644'
-ht-degree: 62%
+source-wordcount: '1632'
+ht-degree: 60%
 
 ---
 
@@ -31,7 +31,7 @@ v3.4.1
       * Query String Parameter
       * Traffic Source
       * Variable
-* Modifica il delegato events/EntersViewport per utilizzare [API Intersection Observer](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) invece del rilevamento manuale degli elementi che entrano nella finestra della vista.
+* Modifica il delegato events/EntersViewport in modo da utilizzare l&#39;API [Intersection Observer](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) invece del rilevamento manuale degli elementi che entrano nel riquadro di visualizzazione.
 * Rimuove il codice che stava eseguendo la migrazione dei cookie DTM a LocalStorage.
 * registra un avviso nella console quando le API LocalStorage e SessionStorage non sono disponibili.
 
@@ -39,7 +39,7 @@ v3.4.1
 
 v3.3.0
 
-* Modifica il [Attiva azione chiamata diretta](./overview.md#direct-call-action) in modo da poter fornire informazioni evento personalizzate da inviare alle regole di chiamata diretta.
+* Modifica [Trigger azione chiamata diretta](./overview.md#direct-call-action) in modo da poter fornire informazioni personalizzate sull&#39;evento da inviare alle regole di chiamata diretta.
 
 ## 8 ottobre 2021
 
@@ -79,7 +79,7 @@ Sono stati aggiunti nuovi elementi dati:
 * Oggetto unito: seleziona più elementi dati che forniranno ciascuno un oggetto. Questi oggetti verranno uniti in profondità (in modo ricorsivo) per produrre un nuovo oggetto.
 * Valore condizionale: restituisce uno dei due valori (conditionValue o fallbackValue) in base al risultato del confronto.
 * Ambiente di runtime: restituisce una delle seguenti variabili di ambiente di Launch: fase dell’ambiente, data di build della libreria, nome della proprietà, ID proprietà, nome della regola, ID regola, tipo di evento, payload dei dettagli dell’evento, identificatore della chiamata diretta.
-* Strumenti JavaScript: wrapper per le operazioni JavaScript più comuni: manipolazione di base delle stringhe (replace, substring, regex match, first and last index, split, slice), operazioni di base degli array (slice, join, pop, shift) e operazioni universali di base (slice, length).
+* Strumenti di JavaScript - Wrapper per le operazioni comuni di JavaScript: manipolazione di base delle stringhe (replace, substring, regex match, first and last index, split, slice), operazioni di base degli array (slice, join, pop, shift) e operazioni di base universali (slice, length).
 * Attributi del dispositivo: restituisce gli attributi del dispositivo come le dimensioni della finestra o dello schermo.
 
 ## 11 agosto 2021
@@ -88,7 +88,7 @@ v3.0.0
 
 * PDCL-6153: offre supporto per richiamare in modo affidabile l&#39;URL completo per le azioni del codice personalizzato memorizzato nella cache.
 
-La versione 3.0.0 dell&#39;estensione Core è associata a modifiche in [v27.2.0 di Turbine web runtime](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0), che consente agli utenti di caricare la propria libreria tra molte aree di hosting gestite da Adobe, se l’azienda dell’utente supporta CDN Premium.
+La versione 3.0.0 dell&#39;estensione Core è associata alle modifiche in [v27.2.0 del Web Runtime di Turbine](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0), che consente agli utenti di caricare la propria libreria tra molte aree di hosting gestite da Adobe, se la società dell&#39;utente supporta CDN Premium.
 
 Questo aggiornamento è facoltativo e compatibile con le versioni precedenti per gli utenti senza CDN Premium e obbligatorio per i clienti che hanno CDN Premium abilitato nella propria azienda.
 
@@ -117,13 +117,13 @@ v2.0.4
 
 * Supporto per elementi dati per vari campi. Il supporto per gli elementi dati è stato aggiunto ai seguenti eventi: “Tempo sulla pagina”, “Entra in viewport”, “Passaggio del mouse” e “Tempo file multimediale riprodotto”; e alle seguenti condizioni: “Tempo sul sito” e “Confronto valori”.
 * È stato aggiunto il supporto del comportamento predefinito per Ctrl/Comando + clic e per clic del pulsante centrale del mouse quando si utilizza Ritardo collegamento.
-* **Ritardo collegamento contrassegnato sull’evento clic come &quot;non più supportato&quot;.** - Ulteriori informazioni sono disponibili sul [Blog di Data Collection](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) per Adobe Experience Platform.
+* **Ritardo collegamento contrassegnato sull&#39;evento clic come &quot;non più supportato&quot;.** - Ulteriori informazioni sono disponibili sul [Blog di Data Collection](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) per Adobe Experience Platform.
 
 ## 6 gennaio 2021
 
 v1.9.0
 
-* **Nuova azione &quot;Trigger Direct Call&quot;** : l&#39;estensione Core ora include un nuovo tipo di azione denominato `Trigger Direct Call`.  Può essere utilizzato quando si desidera attivare una regola di chiamata diretta tramite un&#39;azione di una regola diversa. Viene mappato direttamente sul metodo `_satellite.track()`. Ringraziamo Jan Exner per questo contributo.
+* **Nuova azione &quot;Trigger Direct Call&quot;** - L&#39;estensione Core ora include un nuovo tipo di azione denominato `Trigger Direct Call`.  Può essere utilizzato quando si desidera attivare una regola di chiamata diretta tramite un&#39;azione di una regola diversa. Viene mappato direttamente sul metodo `_satellite.track()`. Ringraziamo Jan Exner per questo contributo.
 
 ## 8 dicembre 2020
 
@@ -181,7 +181,7 @@ v1.6.2
 
 v1.6.1
 
-* **Supporto per nonce CSP**: l&#39;estensione core presenta ora un parametro di configurazione opzionale. È possibile aggiungere un elemento dati che faccia riferimento a un nonce. Se configurati, tutti gli script in linea aggiunti da un tag alla pagina utilizzano il nonce configurato. Questa modifica supporta l’utilizzo di criteri sulla sicurezza dei contenuti con un nonce, in modo che gli script tag possano essere caricati in un ambiente CSP. Per ulteriori informazioni sull’utilizzo dei tag con CSP, consulta [qui](../../../ui/client-side/content-security-policy.md).
+* **Supporto per nonce CSP**: l&#39;estensione core presenta ora un parametro di configurazione opzionale. È possibile aggiungere un elemento dati che faccia riferimento a un nonce. Se configurati, tutti gli script in linea aggiunti da un tag alla pagina utilizzano il nonce configurato. Questa modifica supporta l’utilizzo di criteri sulla sicurezza dei contenuti con un nonce, in modo che gli script tag possano essere caricati in un ambiente CSP. Per ulteriori informazioni sull&#39;utilizzo dei tag con CSP [consulta](../../../ui/client-side/content-security-policy.md).
 
 ## 18 giugno 2019
 
@@ -210,7 +210,7 @@ v1.4.2
 
 * **Opzione Persist Cohort**: l&#39;opzione di mantenere una coorte è stata aggiunta alla condizione Sampling. Ciò ha l&#39;effetto di mantenere un utente dentro o fuori la coorte di campionamento tra le diverse sessioni. Ad esempio, se la casella di controllo &quot;persist cohort&quot; è selezionata e la condizione restituisce true la prima volta che viene eseguita per un visitatore specifico, restituirà true su tutte le esecuzioni successive della condizione per lo stesso visitatore. Analogamente, se la casella di controllo &quot;persist cohort&quot; è selezionata e la condizione restituisce false la prima volta che viene eseguita per un visitatore specifico, restituirà false su tutte le esecuzioni successive della condizione per lo stesso visitatore.
 * **Correzione di bug**: è stato risolto un problema che causava la cancellazione del contenuto del sito Web da parte di una regola con un evento Page Bottom e un’azione Custom Code su una pagina in cui i tag venivano caricati in modo sincrono ma non erano installati correttamente (nessuna chiamata a `_satellite.pageBottom()`).
-* **Correzione bug** - È stato risolto un problema che causava il mancato funzionamento di Enters Viewport se la libreria di tag veniva caricata in modo asincrono e il caricamento veniva completato dopo che l’evento DOMContentLoaded del browser era stato avviato.
+* **Correzione bug** - È stato risolto un problema che causava il mancato funzionamento di Enters Viewport se la libreria di tag veniva caricata in modo asincrono e il caricamento veniva completato dopo che l&#39;evento DOMContentLoaded del browser era stato avviato.
 
 ## 24 maggio 2018
 

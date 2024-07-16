@@ -4,7 +4,7 @@ title: Genera un esempio di modello di trasformazione dei messaggi
 exl-id: d18a06f7-0c3a-4b4d-a7d5-011690d00e2c
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '375'
+source-wordcount: '376'
 ht-degree: 2%
 
 ---
@@ -16,19 +16,19 @@ ht-degree: 2%
 >
 >**Endpoint API**: `https://platform.adobe.io/data/core/activation/authoring/testing/template/sample`
 
-Questa pagina elenca e descrive tutte le operazioni API che è possibile eseguire utilizzando `/authoring/testing/template/sample` Endpoint API, per generare un [modello di trasformazione dei messaggi](../../functionality/destination-server/message-format.md#using-templating) per la tua destinazione. Per una descrizione delle funzionalità supportate da questo endpoint, leggere [crea modello](create-template.md).
+In questa pagina sono elencate e descritte tutte le operazioni API che è possibile eseguire utilizzando l&#39;endpoint API `/authoring/testing/template/sample` per generare un [modello di trasformazione dei messaggi](../../functionality/destination-server/message-format.md#using-templating) per la destinazione. Per una descrizione delle funzionalità supportate da questo endpoint, leggere [crea modello](create-template.md).
 
 ## Guida introduttiva alle operazioni API dei modelli di esempio {#get-started}
 
-Prima di continuare, controlla [guida introduttiva](../../getting-started.md) per informazioni importanti che è necessario conoscere per effettuare correttamente chiamate all’API, tra cui come ottenere l’autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
+Prima di continuare, consulta la [guida introduttiva](../../getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
 
 ## Ottieni modello di esempio {#generate-sample-template}
 
-Per ottenere un modello di esempio, devi effettuare una richiesta GET al `authoring/testing/template/sample/` e fornendo l’ID di destinazione della configurazione di destinazione in base alla quale stai creando il modello.
+Per ottenere un modello di esempio, devi eseguire una richiesta di GET all&#39;endpoint `authoring/testing/template/sample/` e fornire l&#39;ID di destinazione della configurazione di destinazione in base alla quale stai creando il modello.
 
 >[!TIP]
 >
->* L’ID di destinazione da utilizzare qui è il `instanceId` che corrisponde a una configurazione di destinazione, creata utilizzando `/destinations` endpoint. Consulta la sezione [recuperare una configurazione di destinazione](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) per ulteriori dettagli.
+>* L&#39;ID di destinazione da utilizzare è `instanceId` che corrisponde a una configurazione di destinazione, creata utilizzando l&#39;endpoint `/destinations`. Per ulteriori dettagli, consultare [recuperare una configurazione di destinazione](../../authoring-api/destination-configuration/retrieve-destination-configuration.md).
 
 **Formato API**
 
@@ -58,7 +58,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un modello di esempio modificabile in base al formato di dati previsto.
 
-Se l’ID di destinazione fornito corrisponde a una configurazione di destinazione con [aggregazione della migliore fatica](../../functionality/destination-configuration/aggregation-policy.md) e `maxUsersPerRequest=1` nel criterio di aggregazione, la richiesta restituisce un modello di esempio simile al seguente:
+Se l&#39;ID di destinazione fornito corrisponde a una configurazione di destinazione con [aggregazione della migliore risorsa](../../functionality/destination-configuration/aggregation-policy.md) e `maxUsersPerRequest=1` nel criterio di aggregazione, la richiesta restituisce un modello di esempio simile al seguente:
 
 ```python
 {#- THIS is an example template for a single profile -#}
@@ -91,7 +91,7 @@ Se l’ID di destinazione fornito corrisponde a una configurazione di destinazio
 }
 ```
 
-Se l’ID di destinazione fornito corrisponde a un modello di server di destinazione con [aggregazione configurabile](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) o [aggregazione della migliore fatica](../../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation) con `maxUsersPerRequest` maggiore di uno, la richiesta restituisce un modello di esempio simile a questo:
+Se l&#39;ID di destinazione fornito corrisponde a un modello del server di destinazione con [aggregazione configurabile](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) o [aggregazione ottimale](../../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation) con `maxUsersPerRequest` maggiore di uno, la richiesta restituisce un modello di esempio simile al seguente:
 
 ```python
 {#- THIS is an example template for multiple profiles -#}
@@ -132,8 +132,8 @@ Se l’ID di destinazione fornito corrisponde a un modello di server di destinaz
 
 ## Gestione degli errori API {#api-error-handling}
 
-Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Fai riferimento a [Codici di stato API](../../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
+Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](../../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
 
 ## Passaggi successivi {#next-steps}
 
-Dopo aver letto questo documento, ora sai come generare un modello di trasformazione dei messaggi utilizzando `/authoring/testing/template/sample` Endpoint API Quindi, puoi utilizzare [Endpoint API del modello di rendering](render-template-api.md) per generare profili esportati in base al modello e confrontarli con il formato di dati previsto della destinazione.
+Dopo aver letto questo documento, sai come generare un modello di trasformazione dei messaggi utilizzando l&#39;endpoint API `/authoring/testing/template/sample`. Successivamente, puoi utilizzare l&#39;endpoint [API del modello di rendering](render-template-api.md) per generare profili esportati in base al modello e confrontarli con il formato di dati previsto della tua destinazione.

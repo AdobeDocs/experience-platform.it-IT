@@ -8,7 +8,7 @@ role: Developer
 source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '145'
-ht-degree: 20%
+ht-degree: 18%
 
 ---
 
@@ -20,14 +20,14 @@ ht-degree: 20%
    - [Panoramica](streaming-ingestion/overview.md)
    - [Connettore Kafka](streaming-ingestion/kafka.md)
    - [Risoluzione dei problemi](streaming-ingestion/troubleshooting.md)
-- Acquisizione in batch{#batch}
+- Acquisizione batch{#batch}
    - [Guida introduttiva alle API di acquisizione batch](batch-ingestion/getting-started.md)
    - [Panoramica API](batch-ingestion/overview.md)
    - [Guida per gli sviluppatori API](batch-ingestion/api-overview.md)
    - [Acquisizione batch parziale](batch-ingestion/partial.md)
    - [Risoluzione dei problemi](batch-ingestion/troubleshooting.md)
 - Tutorial {#tutorials}
-   - Mappare un file CSV su XDM {#map-csv}
+   - Mappare un file CSV a XDM {#map-csv}
       - [Panoramica](./tutorials/map-csv/overview.md)
       - [Mappare un file CSV su uno schema esistente](./tutorials/map-csv/existing-schema.md)
       - [Mappare un file CSV utilizzando i consigli generati dall’intelligenza artificiale](./tutorials/map-csv/recommendations.md)
@@ -46,7 +46,7 @@ ht-degree: 20%
    - [Convalida acquisizione in streaming](quality/streaming-validation.md)
    - [Notifiche di acquisizione dei dati](quality/subscribe-events.md)
 - [Guardrail per l’acquisizione dei dati](guardrails.md)
-- [Connettori di origine](source-connectors.md)
-- [Riferimento API per acquisizione in batch](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
-- [Riferimento API per Streaming Ingestion](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
-- [Note sulla versione della piattaforma](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Connettori Source](source-connectors.md)
+- [Riferimento API per l&#39;acquisizione in batch](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
+- [Riferimento API Streaming Ingestion](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
+- [Note sulla versione della piattaforma](https://experienceleague.adobe.com/it/docs/experience-platform/release-notes/latest)

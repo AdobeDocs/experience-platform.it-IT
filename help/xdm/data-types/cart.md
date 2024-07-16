@@ -1,23 +1,24 @@
 ---
 title: Tipo di dati carrello
 description: Scopri il tipo di dati Cart Experience Data Model (XDM).
-source-git-commit: c3590dc2cfe47eb634136eeb88578f965598760d
+exl-id: 24ae3882-60f3-4962-b0b5-7dba48170da8
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '118'
-ht-degree: 5%
+ht-degree: 14%
 
 ---
 
-# [!UICONTROL Carrello] tipo di dati
+# Tipo di dati [!UICONTROL Carrello]
 
-[!UICONTROL Carrello] è un tipo di dati Experience Data Model (XDM) standard che fornisce proprietà relative a un carrello. Utilizza questo tipo di dati per acquisire l&#39;identificatore univoco assegnato dal venditore (`Cart ID`) e la sorgente (`Cart Source`) quando uno o più prodotti sono stati aggiunti al carrello.
+[!UICONTROL Carrello] è un tipo di dati Experience Data Model (XDM) standard che fornisce proprietà relative a un carrello acquisti. Utilizzare questo tipo di dati per acquisire l&#39;identificatore univoco assegnato dal venditore (`Cart ID`) e l&#39;origine (`Cart Source`) in cui uno o più prodotti sono stati aggiunti al carrello.
 
-![Un diagramma del [!UICONTROL Carrello] tipo di dati.](../images/data-types/cart.png)
+![Diagramma del tipo di dati [!UICONTROL Carrello].](../images/data-types/cart.png)
 
 | Nome visualizzato | Proprietà | Tipo di dati | Descrizione |
 |----------------|-------------------|-----------|------------------------------------------------------------|
-| [!UICONTROL ID carrello] | `cartID` | string | Identificatore univoco assegnato dal venditore al carrello. |
-| [!UICONTROL Origine carrello] | `cartSource` | string | Da dove sono stati aggiunti uno o più prodotti al carrello. |
+| [!UICONTROL ID carrello] | `cartID` | stringa | Identificatore univoco assegnato dal venditore al carrello. |
+| [!UICONTROL Source carrello] | `cartSource` | stringa | Da dove sono stati aggiunti uno o più prodotti al carrello. |
 
 {style="table-layout:auto"}
 

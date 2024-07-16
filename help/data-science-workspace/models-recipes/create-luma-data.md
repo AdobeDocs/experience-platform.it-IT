@@ -7,14 +7,14 @@ description: Questa esercitazione ti fornisce i prerequisiti e le risorse necess
 exl-id: a791e532-1116-4407-b745-fd6c2ac0d8f7
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '463'
-ht-degree: 1%
+source-wordcount: '456'
+ht-degree: 0%
 
 ---
 
 # Creare schemi e set di dati del modello di propensione Luma
 
-Questa esercitazione ti fornisce i prerequisiti e le risorse necessari per tutte le altre [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] esercitazioni. Una volta completati, i seguenti schemi e set di dati saranno disponibili per te e la tua organizzazione.
+Questo tutorial ti fornisce i prerequisiti e le risorse necessari per tutte le altre esercitazioni di [!DNL Adobe Experience Platform] [!DNL Data Science Workspace]. Una volta completati, i seguenti schemi e set di dati saranno disponibili per te e la tua organizzazione.
 
 **Schemi:**
 
@@ -30,7 +30,7 @@ Questa esercitazione ti fornisce i prerequisiti e le risorse necessari per tutte
 
 ## Scaricare le risorse {#assets}
 
-L’esercitazione seguente utilizza un modello di propensione all’acquisto Luma personalizzato. Prima di procedere, [scarica le risorse richieste](https://experienceleague.adobe.com/docs/platform-learn/assets/DSW-course-sample-assets.zip) cartella zip. Questa cartella contiene:
+L’esercitazione seguente utilizza un modello di propensione all’acquisto Luma personalizzato. Prima di procedere, [scarica la cartella zip delle risorse richieste](https://experienceleague.adobe.com/docs/platform-learn/assets/DSW-course-sample-assets.zip). Questa cartella contiene:
 
 - Il notebook del modello di propensione all&#39;acquisto
 - Notebook utilizzato per acquisire dati in un set di dati di formazione e punteggio (un sottoinsieme di dati web Luma)
@@ -43,7 +43,7 @@ L’esercitazione seguente utilizza un modello di propensione all’acquisto Lum
 
 ### Creare lo schema di dati web Luma e acquisire i dati
 
-Per creare un modello, è necessario disporre di un set di dati in Platform utilizzato per addestrare e valutare il modello. Il seguente tutorial video da [Corso su Data Science Workspace](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw&amp;lang=it) illustra come creare lo schema Luma e acquisire i dati utilizzati dal modello di propensione all’acquisto.
+Per creare un modello, è necessario disporre di un set di dati in Platform utilizzato per addestrare e valutare il modello. Il seguente tutorial video del corso [Data Science Workspace](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw&amp;lang=it) illustra come creare lo schema Luma e acquisire i dati utilizzati dal modello di propensione all’acquisto.
 
 >[!VIDEO](https://video.tv.adobe.com/v/333312)
 
@@ -55,6 +55,6 @@ Per eseguire il notebook per la generazione di formule o utilizzare l’API per 
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato correttamente gli schemi e i set di dati richiesti per il modello di propensione Luma. Ora puoi passare alla prossima esercitazione e creare il modello utilizzando [notebook per la generazione di ricette](../jupyterlab/create-a-model.md) esercitazione.
+Seguendo questa esercitazione, hai creato correttamente gli schemi e i set di dati richiesti per il modello di propensione Luma. Ora puoi passare all&#39;esercitazione successiva e creare il modello utilizzando l&#39;esercitazione [blocco appunti per la generazione di formule](../jupyterlab/create-a-model.md).
 
-Inoltre, puoi esplorare i dati utilizzando il blocco appunti EDA (Exploratory Data Analysis) fornito. Questo blocco appunti può essere utilizzato per comprendere i pattern nei dati Luma, verificare la correttezza dei dati e riepilogare i dati rilevanti per il modello di propensione predittiva. Per ulteriori informazioni sull’analisi esplorativa dei dati, consulta [Documentazione dell’AED](../jupyterlab/eda-notebook.md).
+Inoltre, puoi esplorare i dati utilizzando il blocco appunti EDA (Exploratory Data Analysis) fornito. Questo blocco appunti può essere utilizzato per comprendere i pattern nei dati Luma, verificare la correttezza dei dati e riepilogare i dati rilevanti per il modello di propensione predittiva. Per ulteriori informazioni sull&#39;analisi esplorativa dei dati, consulta la [documentazione EDA](../jupyterlab/eda-notebook.md).

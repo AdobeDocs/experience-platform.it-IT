@@ -18,7 +18,7 @@ ht-degree: 2%
 >
 >Se viene passato un token utente, l’utente del token deve avere un ruolo &quot;amministratore organizzazione&quot; per l’organizzazione richiesta.
 
-Per visualizzare i criteri di controllo dell&#39;accesso effettivi per l&#39;utente corrente, effettuare una richiesta POST al `/acl/effective-policies` endpoint nella [!DNL Access Control] API. Le autorizzazioni e i tipi di risorse che desideri recuperare devono essere forniti nel payload della richiesta sotto forma di un array. Questo è dimostrato nella chiamata API di esempio di seguito.
+Per visualizzare i criteri di controllo di accesso effettivi per l&#39;utente corrente, effettuare una richiesta POST all&#39;endpoint `/acl/effective-policies` nell&#39;API [!DNL Access Control]. Le autorizzazioni e i tipi di risorse che desideri recuperare devono essere forniti nel payload della richiesta sotto forma di un array. Questo è dimostrato nella chiamata API di esempio di seguito.
 
 **Formato API**
 
@@ -28,7 +28,7 @@ POST /acl/effective-policies
 
 **Richiesta**
 
-Le seguenti richieste recuperano informazioni su &quot;[!UICONTROL Gestione set di dati]&quot;autorizzazione e accesso a&quot;[!UICONTROL schemi]&quot;tipo di risorsa per l’utente corrente.
+Le richieste seguenti recuperano informazioni sull&#39;autorizzazione &quot;[!UICONTROL Gestisci set di dati]&quot; e l&#39;accesso al tipo di risorsa &quot;[!UICONTROL schemi]&quot; per l&#39;utente corrente.
 
 ```shell
 curl -X POST \
@@ -46,11 +46,11 @@ curl -X POST \
 
 >[!NOTE]
 >
->Per un elenco completo delle autorizzazioni e dei tipi di risorse che possono essere forniti nell’array di payload, consulta la sezione dell’appendice su [autorizzazioni e tipi di risorse accettati](#accepted-permissions-and-resource-types).
+>Per un elenco completo delle autorizzazioni e dei tipi di risorse che possono essere forniti nell&#39;array di payload, vedere la sezione dell&#39;appendice relativa alle [autorizzazioni accettate e ai tipi di risorse](#accepted-permissions-and-resource-types).
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce informazioni sulle autorizzazioni e sui tipi di risorse forniti nella richiesta. La risposta include le autorizzazioni attive di cui dispone l’utente corrente per i tipi di risorse specificati nella richiesta. Se le autorizzazioni incluse nel payload della richiesta sono attive per l’utente corrente, l’API restituisce l’autorizzazione con un rischio asterisco (`*`) per indicare che l&#39;autorizzazione è attiva. Tutte le autorizzazioni fornite nella richiesta che non sono attive per l’utente vengono omesse dal payload di risposta.
+In caso di esito positivo, la risposta restituisce informazioni sulle autorizzazioni e sui tipi di risorse forniti nella richiesta. La risposta include le autorizzazioni attive di cui dispone l’utente corrente per i tipi di risorse specificati nella richiesta. Se le autorizzazioni incluse nel payload della richiesta sono attive per l&#39;utente corrente, l&#39;API restituisce l&#39;autorizzazione con un astrisk (`*`) per indicare che l&#39;autorizzazione è attiva. Tutte le autorizzazioni fornite nella richiesta che non sono attive per l’utente vengono omesse dal payload di risposta.
 
 ```json
 {
@@ -69,15 +69,15 @@ In caso di esito positivo, la risposta restituisce informazioni sulle autorizzaz
 
 ## Passaggi successivi
 
-Questo documento illustra come effettuare chiamate al [!DNL Access Control] API per restituire informazioni sulle autorizzazioni attive e sui criteri di accesso correlati per i tipi di risorse. Per ulteriori informazioni sul controllo degli accessi per [!DNL Experience Platform], vedere [panoramica sul controllo degli accessi](../home.md).
+In questo documento viene descritto come effettuare chiamate all&#39;API [!DNL Access Control] per restituire informazioni sulle autorizzazioni attive e sui criteri di accesso correlati per i tipi di risorse. Per ulteriori informazioni sul controllo degli accessi per [!DNL Experience Platform], vedere la [panoramica sul controllo degli accessi](../home.md).
 
 ## Appendice
 
-Questa sezione fornisce informazioni supplementari per l&#39;utilizzo di [!DNL Access Control] API.
+Questa sezione fornisce informazioni supplementari per l&#39;utilizzo dell&#39;API [!DNL Access Control].
 
 ### Autorizzazioni accettate e tipi di risorse
 
-Di seguito è riportato un elenco di autorizzazioni e tipi di risorse che è possibile includere nel payload di una richiesta POST a `/acl/active-permissions` endpoint.
+Di seguito è riportato un elenco di autorizzazioni e tipi di risorse da includere nel payload di una richiesta POST all&#39;endpoint `/acl/active-permissions`.
 
 **Autorizzazioni**
 

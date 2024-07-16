@@ -8,7 +8,7 @@ role: Admin
 source-git-commit: e27695a96d7b61e2552387611c4eb63ebc6daf47
 workflow-type: tm+mt
 source-wordcount: '127'
-ht-degree: 44%
+ht-degree: 45%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 44%
 # Controllo degli accessi {#access-control}
 
 * [Panoramica sul controllo degli accessi](home.md)
-* Controllo degli accessi basato su attributi {#abac}
+* Controllo dell&#39;accesso basato su attributi {#abac}
    * [Panoramica](abac/overview.md)
    * [Guida completa](abac/end-to-end-guide.md)
    * [Utilizzare le etichette di accesso per gestire l’accesso degli utenti ai flussi di dati di destinazione](/help/access-control/abac/apply-access-labels-destinations.md)
@@ -28,13 +28,13 @@ ht-degree: 44%
       * [Ruoli](abac/ui/roles.md)
       * [Sandbox](abac/ui/sandboxes.md)
       * [Utenti](abac/ui/users.md)
-   * API di controllo dell’accesso basata su attributi {#abac-api}
+   * API di controllo dell&#39;accesso basata su attributi {#abac-api}
       * [Panoramica](abac/api/overview.md)
       * [Introduzione](abac/api/getting-started.md)
       * [Ruoli](abac/api/roles.md)
       * [Criteri](abac/api/policies.md)
       * [Prodotti](abac/api/products.md)
-* Interfaccia utente per il controllo degli accessi {#ui}
+* Interfaccia utente di controllo degli accessi {#ui}
    * [Panoramica](ui/overview.md)
    * [Seleziona un profilo di prodotto](ui/browse.md)
    * [Gestire le autorizzazioni per un profilo di prodotto](ui/permissions.md)
@@ -47,4 +47,4 @@ ht-degree: 44%
    * [Visualizza criteri effettivi](api/effective-policies.md)
 * [Guida alla risoluzione dei problemi](troubleshooting-guide.md)
 * [Riferimento API](https://www.adobe.io/experience-platform-apis/references/access-control/)
-* [Note sulla versione della piattaforma](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Note sulla versione della piattaforma](https://experienceleague.adobe.com/it/docs/experience-platform/release-notes/latest)

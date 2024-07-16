@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Mappare un file CSV su uno schema XDM
 
-Per acquisire i dati CSV in [!DNL Adobe Experience Platform], i dati devono essere mappati su un [!DNL Experience Data Model] (XDM). Le seguenti esercitazioni descrivono come mappare i file CSV su schemi XDM utilizzando [!DNL Platform] Interfaccia utente:
+Per acquisire i dati CSV in [!DNL Adobe Experience Platform], i dati devono essere mappati su uno schema [!DNL Experience Data Model] (XDM). I seguenti tutorial descrivono come mappare i file CSV su schemi XDM utilizzando l&#39;interfaccia utente [!DNL Platform]:
 
 * [Mappare un file CSV su uno schema XDM esistente](./existing-schema.md)
-* [Mappare un file CSV su un nuovo schema XDM utilizzando i consigli generati dall’intelligenza artificiale](./recommendations.md) (attualmente in versione beta)
+* [Mappa un file CSV su un nuovo schema XDM utilizzando i consigli generati da IA](./recommendations.md) (attualmente in versione beta)

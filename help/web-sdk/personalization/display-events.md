@@ -17,12 +17,12 @@ L’invio di eventi di visualizzazione migliora la precisione delle metriche di 
 
 Web SDK consente di inviare eventi di visualizzazione in due modi:
 
-* [Automaticamente](#send-automatically), immediatamente dopo il rendering del contenuto personalizzato sulla pagina. Consulta la documentazione su come [rendering di contenuti personalizzati](rendering-personalization-content.md) per ulteriori informazioni.
-* [Manualmente](#send-sendEvent-calls), tramite successiva `sendEvent` chiamate.
+* [Automaticamente](#send-automatically), subito dopo il rendering del contenuto personalizzato sulla pagina. Per ulteriori informazioni, consulta la documentazione su come [eseguire il rendering di contenuti personalizzati](rendering-personalization-content.md).
+* [Manualmente](#send-sendEvent-calls), tramite `sendEvent` chiamate successive.
 
 >[!NOTE]
 >
->Gli eventi di visualizzazione non vengono inviati automaticamente quando si chiama il `applyPropositions` funzione.
+>Gli eventi di visualizzazione non vengono inviati automaticamente quando si chiama la funzione `applyPropositions`.
 
 ## Invia automaticamente eventi di visualizzazione {#send-automatically}
 
@@ -33,29 +33,29 @@ Per inviare automaticamente gli eventi di visualizzazione dopo il rendering del 
 * `renderDecisions: true`
 * `personalization.sendDisplayNotifications: true` o non specificato
 
-L’SDK per web invia gli eventi di visualizzazione subito dopo aver eseguito il rendering di qualsiasi personalizzazione a seguito di una `sendEvent` chiamare.
+Web SDK invia gli eventi di visualizzazione subito dopo aver eseguito il rendering di qualsiasi personalizzazione in seguito a una chiamata `sendEvent`.
 
 ## Inviare eventi di visualizzazione nelle chiamate sendEvent successive {#send-sendEvent-calls}
 
-Confrontato con [automaticamente](#send-automatically) invio di eventi di visualizzazione, quando li includi in `sendEvent` chiamate è inoltre possibile includere ulteriori informazioni sul caricamento della pagina nella chiamata. Queste potrebbero essere informazioni aggiuntive, che non erano disponibili quando si richiedeva il contenuto personalizzato.
+Rispetto a [eventi di visualizzazione inviati automaticamente](#send-automatically), quando li includi nelle chiamate `sendEvent` successive hai anche la possibilità di includere ulteriori informazioni sul caricamento della pagina nella chiamata. Queste potrebbero essere informazioni aggiuntive, che non erano disponibili quando si richiedeva il contenuto personalizzato.
 
-Inoltre, l’invio di eventi di visualizzazione in `sendEvent` Le chiamate di minimizzano gli errori di tasso di mancato recapito quando si utilizza Adobe Analytics.
+Inoltre, l&#39;invio di eventi di visualizzazione nelle chiamate di `sendEvent` riduce al minimo gli errori di tasso di mancato recapito quando si utilizza Adobe Analytics.
 
 >[!IMPORTANT]
 >
->Quando si utilizzano proposte sottoposte a rendering manuale, gli eventi di visualizzazione sono supportati solo tramite `sendEvent` chiamate. In questo caso non è possibile inviare automaticamente eventi di visualizzazione.
+>Quando si utilizzano proposte sottoposte a rendering manuale, gli eventi di visualizzazione sono supportati solo tramite chiamate `sendEvent`. In questo caso non è possibile inviare automaticamente eventi di visualizzazione.
 
 ### Inviare eventi di visualizzazione per le proposte sottoposte a rendering automatico {#auto-rendered-propositions}
 
-Per inviare eventi di visualizzazione per le proposte sottoposte a rendering automatico, devi configurare i seguenti parametri nel `sendEvent` chiama:
+Per inviare eventi di visualizzazione per le proposte sottoposte a rendering automatico, è necessario configurare i seguenti parametri nella chiamata `sendEvent`:
 
 * `renderDecisions: true`
-* `personalization.sendDisplayNotifications: false` per l’hit di inizio pagina
+* `personalization.sendDisplayNotifications: false` per l&#39;hit di inizio pagina
 
-Per inviare gli eventi di visualizzazione, chiama `sendEvent` con `personalization.includePendingDisplayNotifications: true`
+Per inviare gli eventi di visualizzazione, chiamare `sendEvent` con `personalization.includePendingDisplayNotifications: true`
 
 ### Inviare eventi di visualizzazione per le proposte sottoposte a rendering manuale {#manually-rendered-propositions}
 
-Per inviare eventi di visualizzazione per le proposte sottoposte a rendering manuale, è necessario includerli nella `_experience.decisioning.propositions` Campo XDM, incluso `id`, `scope`, e `scopeDetails` campi dalle proposte.
+Per inviare eventi di visualizzazione per le proposte sottoposte a rendering manuale, è necessario includerli nel campo XDM `_experience.decisioning.propositions`, inclusi i campi `id`, `scope` e `scopeDetails` delle proposte.
 
-Inoltre, imposta `include _experience.decisioning.propositionEventType.display` campo a `1`.
+Impostare inoltre il campo `include _experience.decisioning.propositionEventType.display` su `1`.

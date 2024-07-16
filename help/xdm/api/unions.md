@@ -6,38 +6,38 @@ description: L’endpoint /unions nell’API Schema Registry consente di gestire
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
 source-git-commit: 3da2e8f66f08a7bb9533795f7854ad583734911c
 workflow-type: tm+mt
-source-wordcount: '897'
+source-wordcount: '899'
 ht-degree: 2%
 
 ---
 
 # Endpoint Unions
 
-Le unioni (o visualizzazioni unione) sono schemi di sola lettura generati dal sistema che aggregano i campi di tutti gli schemi che condividono la stessa classe ([!DNL XDM ExperienceEvent] o [!DNL XDM Individual Profile]) e sono abilitati per [[!DNL Real-Time Customer Profile]](../../profile/home.md).
+Le unioni (o le visualizzazioni unione) sono schemi di sola lettura generati dal sistema che aggregano i campi di tutti gli schemi che condividono la stessa classe ([!DNL XDM ExperienceEvent] o [!DNL XDM Individual Profile]) e sono abilitati per [[!DNL Real-Time Customer Profile]](../../profile/home.md).
 
-Questo documento descrive i concetti essenziali per l’utilizzo delle unioni nell’API del registro dello schema, inclusi gli esempi di chiamate per varie operazioni. Per informazioni più generali sulle unioni in XDM, consulta la sezione sulle unioni in [nozioni di base sulla composizione dello schema](../schema/composition.md#union).
+Questo documento descrive i concetti essenziali per l’utilizzo delle unioni nell’API del registro dello schema, inclusi gli esempi di chiamate per varie operazioni. Per informazioni più generali sulle unioni in XDM, consulta la sezione sulle unioni nelle [nozioni di base sulla composizione dello schema](../schema/composition.md#union).
 
 ## Campi schema di unione
 
-Il [!DNL Schema Registry] include automaticamente tre campi chiave in uno schema di unione: `identityMap`, `timeSeriesEvents`, e `segmentMembership`.
+[!DNL Schema Registry] include automaticamente tre campi chiave in uno schema di unione: `identityMap`, `timeSeriesEvents` e `segmentMembership`.
 
 ### Mappa identità
 
-Di uno schema di unione `identityMap` è una rappresentazione delle identità note negli schemi di record associati all’unione. La mappa delle identità separa le identità in array diversi in base allo spazio dei nomi. Ogni identità elencata è essa stessa un oggetto contenente un `id` valore. Consulta la [Documentazione del servizio Identity](../../identity-service/home.md) per ulteriori informazioni.
+`identityMap` di uno schema di unione è una rappresentazione delle identità note all&#39;interno degli schemi di record associati dell&#39;unione. La mappa delle identità separa le identità in array diversi in base allo spazio dei nomi. Ogni identità elencata è essa stessa un oggetto contenente un valore `id` univoco. Per ulteriori informazioni, consulta la [documentazione del servizio Identity](../../identity-service/home.md).
 
 ### Eventi di serie temporali
 
-Il `timeSeriesEvents` array è un elenco di eventi di serie temporali correlati agli schemi di record associati all’unione. Quando i dati di profilo vengono esportati in set di dati, questo array viene incluso per ogni record. Ciò è utile per vari casi d’uso, come l’apprendimento automatico in cui i modelli richiedono l’intera cronologia del comportamento di un profilo, oltre agli attributi record.
+L&#39;array `timeSeriesEvents` è un elenco di eventi di serie temporali correlati agli schemi di record associati all&#39;unione. Quando i dati di profilo vengono esportati in set di dati, questo array viene incluso per ogni record. Ciò è utile per vari casi d’uso, come l’apprendimento automatico in cui i modelli richiedono l’intera cronologia del comportamento di un profilo, oltre agli attributi record.
 
 ### Mappa di appartenenza al segmento
 
-Il `segmentMembership` map memorizza i risultati della valutazione di una definizione di segmento. Quando i processi di segmentazione vengono eseguiti correttamente utilizzando [API di segmentazione](https://www.adobe.io/experience-platform-apis/references/segmentation/), la mappa viene aggiornata. `segmentMembership` archivia anche eventuali tipi di pubblico pre-valutati che vengono acquisiti in Platform, consentendo l’integrazione con altre soluzioni come Adobe Audience Manager. Guarda il tutorial su [creazione di tipi di pubblico tramite API](../../segmentation/tutorials/create-a-segment.md) per ulteriori informazioni.
+La mappa `segmentMembership` memorizza i risultati della valutazione di una definizione di segmento. Quando i processi di segmentazione vengono eseguiti correttamente utilizzando l&#39;[API di segmentazione](https://www.adobe.io/experience-platform-apis/references/segmentation/), la mappa viene aggiornata. `segmentMembership` memorizza anche eventuali tipi di pubblico pre-valutati che vengono acquisiti in Platform, consentendo l&#39;integrazione con altre soluzioni come Adobe Audience Manager. Per ulteriori informazioni, consulta l&#39;esercitazione sulla [creazione di tipi di pubblico tramite API](../../segmentation/tutorials/create-a-segment.md).
 
 ## Recuperare un elenco di unioni {#list}
 
-Quando si imposta `union` in uno schema, il tag [!DNL Schema Registry] aggiunge automaticamente lo schema all&#39;unione per la classe su cui si basa lo schema. Se non esiste alcuna unione per la classe in questione, viene creata automaticamente una nuova unione. Il `$id` per l’unione è simile alla norma `$id` di altri [!DNL Schema Registry] , con l&#39;unica differenza che è seguita da due trattini bassi e dalla parola &quot;unione&quot; (`__union`).
+Quando si imposta il tag `union` su uno schema, [!DNL Schema Registry] aggiunge automaticamente lo schema all&#39;unione per la classe su cui si basa lo schema. Se non esiste alcuna unione per la classe in questione, viene creata automaticamente una nuova unione. `$id` per l&#39;unione è simile allo standard `$id` di altre risorse [!DNL Schema Registry], con l&#39;unica differenza che è seguito da due trattini bassi e dalla parola &quot;unione&quot; (`__union`).
 
-Per visualizzare un elenco dei sindacati disponibili, devi effettuare una richiesta GET al `/tenant/unions` endpoint.
+È possibile visualizzare un elenco di unioni disponibili effettuando una richiesta GET all&#39;endpoint `/tenant/unions`.
 
 **Formato API**
 
@@ -57,18 +57,18 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed-id+json'
 ```
 
-Il formato della risposta dipende da `Accept` intestazione inviata nella richiesta. I seguenti elementi `Accept` le intestazioni sono disponibili per l&#39;elenco dei sindacati:
+Il formato della risposta dipende dall&#39;intestazione `Accept` inviata nella richiesta. Le seguenti intestazioni di `Accept` sono disponibili per l&#39;elenco dei sindacati:
 
-| `Accept` intestazione | Descrizione |
+| Intestazione `Accept` | Descrizione |
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Restituisce un breve riepilogo di ciascuna risorsa. Questa è l’intestazione consigliata per l’elenco delle risorse. (Limite: 300) |
-| `application/vnd.adobe.xed+json` | Restituisce la classe JSON completa per ogni risorsa, con originale `$ref` e `allOf` incluso. (Limite: 300) |
+| `application/vnd.adobe.xed+json` | Restituisce la classe JSON completa per ogni risorsa, inclusi `$ref` e `allOf` originali. (Limite: 300) |
 
 {style="table-layout:auto"}
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 (OK) e un `results` nel corpo della risposta. Se sono state definite unioni, i dettagli di ogni unione vengono forniti come oggetti all’interno dell’array. Se non è stata definita alcuna unione, viene comunque restituito lo stato HTTP 200 (OK) ma il `results` l’array sarà vuoto.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 (OK) e un array `results` nel corpo della risposta. Se sono state definite unioni, i dettagli di ogni unione vengono forniti come oggetti all’interno dell’array. Se non è stata definita alcuna unione, viene comunque restituito lo stato HTTP 200 (OK) ma l&#39;array `results` sarà vuoto.
 
 ```JSON
 {
@@ -91,11 +91,11 @@ Una risposta corretta restituisce lo stato HTTP 200 (OK) e un `results` nel corp
 
 ## Cercare un’unione {#lookup}
 
-È possibile visualizzare un’unione specifica eseguendo una richiesta GET che includa `$id` e, a seconda dell’intestazione Accept, alcuni o tutti i dettagli dell’unione.
+È possibile visualizzare un&#39;unione specifica eseguendo una richiesta di GET che includa `$id` e, a seconda dell&#39;intestazione Accept, alcuni o tutti i dettagli dell&#39;unione.
 
 >[!NOTE]
 >
->Le ricerche unione sono disponibili utilizzando `/unions` e `/schemas` per abilitarli per l’utilizzo in [!DNL Profile] esporta in un set di dati.
+>Le ricerche di unione sono disponibili utilizzando l&#39;endpoint `/unions` e `/schemas` per consentirne l&#39;utilizzo in [!DNL Profile] esportazioni in un set di dati.
 
 **Formato API**
 
@@ -106,7 +106,7 @@ GET /tenant/schemas/{UNION_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{UNION_ID}` | Codifica URL `$id` URI dell’unione da cercare. Agli URI per gli schemi di unione viene aggiunto &quot;__union&quot;. |
+| `{UNION_ID}` | URI `$id` con codifica URL dell&#39;unione da cercare. Agli URI per gli schemi di unione viene aggiunto &quot;__union&quot;. |
 
 {style="table-layout:auto"}
 
@@ -122,20 +122,20 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed+json; version=1'
 ```
 
-Le richieste di ricerca unione richiedono un `version` essere incluso nell’intestazione Accept.
+Le richieste di ricerca unione richiedono l&#39;inclusione di `version` nell&#39;intestazione Accept.
 
 Per le ricerche dello schema di unione sono disponibili le seguenti intestazioni Accept:
 
-| Accept | Descrizione |
+| Accetta | Descrizione |
 | -------|------------ |
 | `application/vnd.adobe.xed+json; version=1` | Raw con `$ref` e `allOf`. Include titoli e descrizioni. |
-| `application/vnd.adobe.xed-full+json; version=1` | `$ref` attributi e `allOf` risolto. Include titoli e descrizioni. |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` attributi e `allOf` risolti. Include titoli e descrizioni. |
 
 {style="table-layout:auto"}
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce la visualizzazione unione di tutti gli schemi che implementano la classe il cui `$id` è stato fornito nel percorso della richiesta.
+In caso di esito positivo, la risposta restituisce la visualizzazione unione di tutti gli schemi che implementano la classe di cui è stato fornito `$id` nel percorso della richiesta.
 
 Il formato della risposta dipende dall’intestazione Accept inviata nella richiesta. Prova a confrontare le risposte con diverse intestazioni Accept e a determinare quale sia la migliore per il tuo caso d’uso.
 
@@ -180,11 +180,11 @@ Il formato della risposta dipende dall’intestazione Accept inviata nella richi
 
 ## Abilita uno schema per l’iscrizione all’unione {#enable}
 
-Affinché uno schema possa essere incluso nell’unione per la sua classe, viene `union` deve essere aggiunto al tag dello schema `meta:immutableTags` attributo. Per farlo, devi eseguire una richiesta PATCH per aggiungere una `meta:immutableTags` array con un singolo valore stringa di `union` allo schema in questione. Consulta la [guida all’endpoint degli schemi](./schemas.md#union) per un esempio dettagliato.
+Per includere uno schema nell&#39;unione per la relativa classe, è necessario aggiungere un tag `union` all&#39;attributo `meta:immutableTags` dello schema. A tale scopo, è possibile eseguire una richiesta PATCH per aggiungere un array `meta:immutableTags` con un singolo valore stringa di `union` allo schema in questione. Per un esempio dettagliato, consulta la [guida dell&#39;endpoint degli schemi](./schemas.md#union).
 
 ## Elencare schemi in un’unione {#list-schemas}
 
-Per vedere quali schemi fanno parte di un’unione specifica, puoi eseguire una richiesta GET a `/tenant/schemas` endpoint. Utilizzo di `property` parametro di query, puoi configurare la risposta in modo che restituisca solo gli schemi contenenti una `meta:immutableTags` campo e a `meta:class` è uguale alla classe di cui si sta accedendo all’unione.
+Per vedere quali schemi fanno parte di un&#39;unione specifica, è possibile eseguire una richiesta GET all&#39;endpoint `/tenant/schemas`. Utilizzando il parametro di query `property`, puoi configurare la risposta in modo che restituisca solo schemi contenenti un campo `meta:immutableTags` e un `meta:class` uguali alla classe di cui stai accedendo all&#39;unione.
 
 **Formato API**
 
@@ -194,13 +194,13 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{CLASS_ID}` | Il `$id` della classe di cui desideri elencare gli schemi abilitati per l’unione. |
+| `{CLASS_ID}` | `$id` della classe di cui si desidera elencare gli schemi abilitati per l&#39;unione. |
 
 {style="table-layout:auto"}
 
 **Richiesta**
 
-La seguente richiesta recupera un elenco di tutti gli schemi che fanno parte dell’unione per [!DNL XDM Individual Profile] classe.
+La richiesta seguente recupera un elenco di tutti gli schemi che fanno parte dell&#39;unione per la classe [!DNL XDM Individual Profile].
 
 ```SHELL
 curl -X GET \
@@ -212,12 +212,12 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Il formato della risposta dipende da `Accept` intestazione inviata nella richiesta. I seguenti elementi `Accept` le intestazioni sono disponibili per gli schemi di elenco:
+Il formato della risposta dipende dall&#39;intestazione `Accept` inviata nella richiesta. Le seguenti intestazioni `Accept` sono disponibili per gli schemi di elenco:
 
-| `Accept` intestazione | Descrizione |
+| Intestazione `Accept` | Descrizione |
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Restituisce un breve riepilogo di ciascuna risorsa. Questa è l’intestazione consigliata per l’elenco delle risorse. (Limite: 300) |
-| `application/vnd.adobe.xed+json` | Restituisce lo schema JSON completo per ogni risorsa, con originale `$ref` e `allOf` incluso. (Limite: 300) |
+| `application/vnd.adobe.xed+json` | Restituisce lo schema JSON completo per ogni risorsa, con `$ref` e `allOf` originali inclusi. (Limite: 300) |
 
 {style="table-layout:auto"}
 

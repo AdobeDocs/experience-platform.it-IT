@@ -4,18 +4,18 @@ description: Scopri come utilizzare Data Distiller per esplorare e analizzare i 
 exl-id: 1dd4cf6e-f7cc-4f4b-afbd-bfc1d342a2c3
 source-git-commit: 27834417a1683136a173996cff1fd422305e65b9
 workflow-type: tm+mt
-source-wordcount: '808'
-ht-degree: 16%
+source-wordcount: '760'
+ht-degree: 13%
 
 ---
 
 # Analisi esplorativa dei dati
 
-Questo documento fornisce alcuni esempi di base e best practice per l’utilizzo di Data Distiller per esplorare e analizzare i dati da un [!DNL Python] notebook.
+In questo documento vengono forniti alcuni esempi di base e best practice per l&#39;utilizzo di Data Distiller per esplorare e analizzare i dati di un blocco appunti [!DNL Python].
 
 ## Guida introduttuva
 
-Prima di continuare con questa guida, assicurati di aver creato una connessione a Data Distiller nel tuo [!DNL Python] notebook. Consulta la documentazione per istruzioni su come [connettere un [!DNL Python] da notebook a Data Distiller](./establish-connection.md).
+Prima di continuare con questa guida, verificare di aver creato una connessione a Data Distiller nel blocco appunti [!DNL Python]. Per istruzioni su come [collegare un blocco appunti [!DNL Python] a Data Distiller](./establish-connection.md), vedere la documentazione.
 
 ## Acquisire statistiche di base {#basic-statistics}
 
@@ -42,9 +42,9 @@ df
 
 ## Creare una versione campionata di set di dati di grandi dimensioni {#create-dataset-sample}
 
-Se il set di dati da ricercare è molto grande o se non sono necessari risultati esatti da query esplorative, utilizza [funzionalità di campionamento](../../key-concepts/dataset-samples.md) disponibile per le query di Data Distiller. Si tratta di un processo in due fasi:
+Se il set di dati che si desidera interrogare è molto grande o se non sono necessari risultati esatti da query esplorative, utilizzare la [funzionalità di campionamento](../../key-concepts/dataset-samples.md) disponibile per le query di Data Distiller. Si tratta di un processo in due fasi:
 
-- In primo luogo, **analizzare** il set di dati per creare una versione campionata con una proporzione di campionamento specificata
+- Innanzitutto, **analizza** il set di dati per creare una versione campionata con una proporzione di campionamento specificata
 - Esegui quindi una query sulla versione campionata del set di dati. A seconda delle funzioni applicate al set di dati campionato, può essere opportuno scalare l’output in base ai numeri fino al set di dati completo
 
 ### Creare un campione del 5% {#create-sample}
@@ -64,7 +64,7 @@ qs_cursor.query(analyze_table_query, output="raw")
 
 ### Visualizzare gli esempi {#view-sample}
 
-È possibile utilizzare `sample_meta` per visualizzare tutti gli esempi creati da un determinato set di dati. Il frammento di codice seguente illustra come utilizzare `sample_meta` funzione.
+È possibile utilizzare la funzione `sample_meta` per visualizzare tutti i campioni creati da un determinato set di dati. Il frammento di codice seguente illustra come utilizzare la funzione `sample_meta`.
 
 ```python
 sampled_version_of_table_query = f'''SELECT sample_meta('{table_name}')'''
@@ -77,7 +77,7 @@ df_samples
 
 |   | sample_table_name | sample_dataset_id | parent_dataset_id | sample_type | tasso_di_campionamento | filter_condition_on_source_dataset | sample_num_rows | creato |
 |---|---|---|---|---|---|---|---|---|
-| 0 | com_summary_data_experience_event_dataset_c... | 650f7a09ed6c3e28d34d7fc2 | 64fb4d7a7d748828d304a2f4 | uniforme | 0.5 | 6427 | 23/09/2023 | 11:51:37 |
+| 0 | com_summary_data_experience_event_dataset_c... | 650f7a09ed6c3e28d34d7fc2 | 64fb4d7a7d748828d304a2f4 | uniforme | 0,5 | 6427 | 23/09/2023 | 11:51:37 |
 
 {style="table-layout:auto"}
 
@@ -138,7 +138,7 @@ funnel_df
 
 ### Tracciare i risultati della query {#plot-results}
 
-Quindi, traccia i risultati della query utilizzando [!DNL Python] `plotly` libreria:
+Quindi, tracciare i risultati della query utilizzando la libreria [!DNL Python] `plotly`:
 
 ```python
 import plotly.express as px
@@ -152,18 +152,18 @@ fig.show()
 
 **Output di esempio**
 
-![Un’infografica del funnel e-mail eventType.](../../images/data-distiller/email-funnel.png)
+![Infografica del funnel e-mail eventType.](../../images/data-distiller/email-funnel.png)
 
 ## Correlazioni tra eventi {#event-correlations}
 
-Un’altra analisi comune consiste nel calcolare le correlazioni tra i tipi di evento e un tipo di evento di conversione target. In questo esempio, l’evento di abbonamento è rappresentato da `web.formFilledOut`. In questo esempio viene utilizzato [!DNL Spark] funzioni disponibili nelle query di Data Distiller per eseguire i passaggi seguenti:
+Un’altra analisi comune consiste nel calcolare le correlazioni tra i tipi di evento e un tipo di evento di conversione target. In questo esempio, l&#39;evento di sottoscrizione è rappresentato da `web.formFilledOut`. In questo esempio vengono utilizzate le funzioni [!DNL Spark] disponibili nelle query di Data Distiller per eseguire i passaggi seguenti:
 
 1. Conteggia il numero di eventi per ogni tipo di evento in base al profilo.
-2. Aggrega i conteggi di ciascun tipo di evento tra i profili e calcola le correlazioni di ciascun tipo di evento con `web,formFilledOut`.
+2. Aggregare i conteggi di ciascun tipo di evento tra i profili e calcolare le correlazioni di ciascun tipo di evento con `web,formFilledOut`.
 3. Trasforma il dataframe di conteggi e correlazioni in una tabella di coefficienti di correlazione Pearson di ogni funzione (conteggi dei tipi di evento) con l’evento target.
 4. Visualizzare i risultati in un plot.
 
-Il [!DNL Spark] le funzioni aggregano i dati per restituire una piccola tabella di risultati, in modo da poter eseguire questo tipo di query sull’intero set di dati.
+Le funzioni [!DNL Spark] aggregano i dati per restituire una piccola tabella di risultati, in modo da poter eseguire questo tipo di query sull&#39;intero set di dati.
 
 ```python
 large_correlation_query=f'''
@@ -215,7 +215,7 @@ large_correlation_df
 
 |   | webFormsFilled_totalUsers | advertisingClicks_totalUsers | productViews_totalUsers | productPurchases_totalUsers | propositionDismisses_totaUsers | propositionDisplays_totalUsers | propositionInteracts_totalUsers | emailClicks_totalUsers | emailOpens_totalUsers | webLinksClicks_totalUsers | ... | webForms_advertisingClicks | webForms_productViews | webForms_productPurchases | webForms_propositionDismisses | webForms_propositionInteracts | webForms_emailClicks | webForms_emailOpens | webForms_emailSends | webForms_webLinkClicks | webForms_webPageViews |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 0 | 17860 | 7610 | 37915 | 0 | 2889 | 37650 | 2964 | 51581 | 239028 | 37581 | … | 0.026805 | 0.2779 | Nessuna | 0.06014 | 0.143656 | 0.305657 | 0.218874 | 0.192836 | 0.259353 | Nessuna |
+| 0 | 17860 | 7610 | 37915 | 0 | 2889 | 37650 | 2964 | 51581 | 239028 | 37581 | ... | 0,026805 | 0,2779 | Nessuna | 0,06014 | 0,143656 | 0,305657 | 0,218874 | 0,192836 | 0,259353 | Nessuna |
 
 {style="table-layout:auto"}
 
@@ -234,22 +234,22 @@ corrdf.fillna(0)
 
 **Output di esempio**:
 
-|    | variabile  | Valore  | funzionalità | pearsonCorrelation |
+|    | variabile | valore | funzionalità | pearsonCorrelation |
 | --- | ---  |  ---  |  ---  | --- |
-| 0 | `webForms_EmailOpens` | 0.218874 | Aperture e-mail | 0.218874 |
-| 1 | `webForms_advertisingClicks` | 0.026805 | advertisingClicks | 0.026805 |
-| 2 | `webForms_productViews` | 0.277900 | productViews | 0.277900 |
-| 3 | `webForms_productPurchases` | 0.000000 | productPurchases | 0.000000 |
-| 4 | `webForms_propositionDismisses` | 0.060140 | propositionDismisses | 0.060140 |
-| 5 | `webForms_propositionInteracts` | 0.143656 | propositionInteracts | 0.143656 |
-| 6 | `webForms_emailClicks` | 0.305657 | emailClicks | 0.305657 |
-| 7 | `webForms_emailOpens` | 0.218874 | emailOpens | 0.218874 |
-| 8 | `webForms_emailSends` | 0.192836 | emailSends | 0.192836 |
-| 9 | `webForms_webLinkClicks` | 0.259353 | webLinkClicks | 0.259353 |
-| 10 | `webForms_webPageViews` | 0.000000 | webPageViews | 0.000000 |
+| 0 | `webForms_EmailOpens` | 0,218874 | Aperture e-mail | 0,218874 |
+| 1 | `webForms_advertisingClicks` | 0,026805 | advertisingClicks | 0,026805 |
+| 2 | `webForms_productViews` | 0,277900 | productViews | 0,277900 |
+| 3 | `webForms_productPurchases` | 0,000000 | productPurchases | 0,000000 |
+| 4 | `webForms_propositionDismisses` | 0,060140 | propositionDismisses | 0,060140 |
+| 5 | `webForms_propositionInteracts` | 0,143656 | propositionInteracts | 0,143656 |
+| 6 | `webForms_emailClicks` | 0,305657 | emailClicks | 0,305657 |
+| 7 | `webForms_emailOpens` | 0,218874 | emailOpens | 0,218874 |
+| 8 | `webForms_emailSends` | 0,192836 | emailSends | 0,192836 |
+| 9 | `webForms_webLinkClicks` | 0,259353 | webLinkClicks | 0,259353 |
+| 10 | `webForms_webPageViews` | 0,000000 | webPageViews | 0,000000 |
 
 
-Infine, puoi visualizzare le correlazioni con `matplotlib` [!DNL Python] libreria:
+Infine, è possibile visualizzare le correlazioni con la libreria `matplotlib` [!DNL Python]:
 
 ```python
 import matplotlib.pyplot as plt
@@ -258,8 +258,8 @@ sns.barplot(data=corrdf.fillna(0), y="feature", x="pearsonCorrelation")
 ax.set_title("Pearson Correlation of Events with the outcome event")
 ```
 
-![Un grafico a barre della Correlazione di Pearson degli eventi degli esiti degli eventi](../../images/data-distiller/pearson-correlations.png)
+![Un grafico a barre della correlazione Pearson degli eventi dei risultati dell&#39;evento](../../images/data-distiller/pearson-correlations.png)
 
 ## Passaggi successivi
 
-Dopo aver letto questo documento, hai imparato a utilizzare Data Distiller per esplorare e analizzare i dati da un [!DNL Python] notebook. Il passaggio successivo nella creazione di pipeline di funzioni da Experienci Platform per alimentare modelli personalizzati nell’ambiente di apprendimento automatico è [funzionalità di progettazione per l’apprendimento automatico](./feature-engineering.md).
+Dopo aver letto questo documento, hai imparato a utilizzare Data Distiller per esplorare e analizzare i dati di un blocco appunti [!DNL Python]. Il passaggio successivo nella creazione di pipeline di funzionalità da Experience Platform per alimentare modelli personalizzati nell&#39;ambiente di apprendimento automatico è [funzionalità di ingegneria per l&#39;apprendimento automatico](./feature-engineering.md).

@@ -4,8 +4,8 @@ description: Scopri come definire le viste per i moduli libreria nelle estension
 exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
 source-git-commit: 41efcb14df44524b58be2293d2b943bd890c1621
 workflow-type: tm+mt
-source-wordcount: '2083'
-ht-degree: 97%
+source-wordcount: '2061'
+ht-degree: 98%
 
 ---
 
@@ -172,7 +172,7 @@ Per indicare dove può essere utile per l’utente utilizzare gli elementi dati 
 
 >[!NOTE]
 >
->Per scaricare l&#39;icona appropriata, vai alla [pagina delle icone di Adobe Spectrum](https://spectrum.adobe.com/page/icons/) e cerca &quot;[!DNL Data]&quot;.
+>Per scaricare l&#39;icona appropriata, passare alla pagina delle [icone in Adobe Spectrum](https://spectrum.adobe.com/page/icons/) e cercare &quot;[!DNL Data]&quot;.
 
 Quando un utente fa clic sul pulsante accanto al campo di testo, richiama `window.extensionBridge.openDataElementSelector` come [indicato sopra](#open-data-element). L’utente potrà quindi scegliere uno degli elementi dati elencati, anziché dover ricordare il nome e immetterlo tra simboli di percentuale. Una volta selezionato un elemento dati, riceverai il nome di tale elemento dati racchiuso tra simboli di percentuale (a meno che l’opzione `tokenize` non sia stata impostata su `false`). È quindi consigliabile compilare il campo di testo con il risultato.
 

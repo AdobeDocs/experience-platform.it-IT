@@ -7,15 +7,15 @@ exl-id: 59e6d82b-3317-456d-8c56-3efd5978433a
 source-git-commit: 7ac1521adb916313c8b53fe2a095821d756480be
 workflow-type: tm+mt
 source-wordcount: '1903'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-# [!DNL Spark] Funzioni SQL
+# [!DNL Spark] funzioni SQL
 
 È possibile utilizzare diverse funzioni SQL Spark incorporate per estendere le funzionalità SQL con Adobe Experience Platform Query Service. Questo documento elenca le funzioni SQL di Spark supportate da Query Service.
 
-Per informazioni più dettagliate sulle funzioni, tra cui la sintassi, l&#39;utilizzo e alcuni esempi, leggere [Documentazione della funzione SQL Spark](https://spark.apache.org/docs/latest/api/sql/index.html).
+Per informazioni più dettagliate sulle funzioni, tra cui la sintassi, l&#39;utilizzo e alcuni esempi, leggere la [documentazione sulle funzioni SQL Spark](https://spark.apache.org/docs/latest/api/sql/index.html).
 
 >[!NOTE]
 >
@@ -97,7 +97,7 @@ Per informazioni più dettagliate sulle funzioni, tra cui la sintassi, l&#39;uti
 | [`!`](https://spark.apache.org/docs/latest/api/sql/index.html#_1) o [`not`](https://spark.apache.org/docs/latest/api/sql/index.html#not) | Non logico |
 | [`<`](https://spark.apache.org/docs/latest/api/sql/index.html#_8) | Minore di |
 | [`<=`](https://spark.apache.org/docs/latest/api/sql/index.html#_9) | Minore o uguale a |
-| [`=`](https://spark.apache.org/docs/latest/api/sql/index.html#_12) | Uguale |
+| [`=`](https://spark.apache.org/docs/latest/api/sql/index.html#_12) | Uguale a |
 | [`>`](https://spark.apache.org/docs/latest/api/sql/index.html#_14) | Maggiore di |
 | [`>=`](https://spark.apache.org/docs/latest/api/sql/index.html#_15) | Maggiore o uguale a |
 | [`^`](https://spark.apache.org/docs/latest/api/sql/index.html#_16) | OR esclusivo bit per bit |
@@ -139,8 +139,8 @@ Per informazioni più dettagliate sulle funzioni, tra cui la sintassi, l&#39;uti
 | [`next_day`](https://spark.apache.org/docs/latest/api/sql/index.html#next_day) | Restituisce il primo giorno successivo all’input |
 | [`quarter`](https://spark.apache.org/docs/latest/api/sql/index.html#quarter) | Restituisce il trimestre dell&#39;input |
 | [`second`](https://spark.apache.org/docs/latest/api/sql/index.html#second) | Restituisce il secondo della stringa |
-| [`to_date`](https://spark.apache.org/docs/latest/api/sql/index.html#to_date) | Converte la stringa in una data. **Nota:** La stringa **deve** essere nel formato `yyyy-mm-ddTHH24:MM:SS`. |
-| [`to_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_timestamp) | Converte la stringa in una marca temporale. **Nota:** La stringa **deve** essere nel formato `yyyy-mm-ddTHH24:MM:SS`. |
+| [`to_date`](https://spark.apache.org/docs/latest/api/sql/index.html#to_date) | Converte la stringa in una data. **Nota:** la stringa **deve** essere nel formato `yyyy-mm-ddTHH24:MM:SS`. |
+| [`to_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_timestamp) | Converte la stringa in una marca temporale. **Nota:** la stringa **deve** essere nel formato `yyyy-mm-ddTHH24:MM:SS`. |
 | [`to_unix_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_unix_timestamp) | Converte la stringa in una marca temporale UNIX® |
 | [`to_utc_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_utc_timestamp) | Converte la stringa in una marca temporale UTC |
 | [`trunc`](https://spark.apache.org/docs/latest/api/sql/index.html#trunc) | Tronca la data |
@@ -149,7 +149,7 @@ Per informazioni più dettagliate sulle funzioni, tra cui la sintassi, l&#39;uti
 | [`weekofyear`](https://spark.apache.org/docs/latest/api/sql/index.html#weekofyear) | Restituisce la settimana dell’anno per una data specificata |
 | [`year`](https://spark.apache.org/docs/latest/api/sql/index.html#year) | Restituisce l’anno della stringa |
 
-### Matrici {#arrays}
+### Array {#arrays}
 
 | Funzione | Descrizione |
 | -------- | ----------- |
@@ -250,7 +250,7 @@ Per informazioni più dettagliate sulle funzioni, tra cui la sintassi, l&#39;uti
 | [`concat_ws`](https://spark.apache.org/docs/latest/api/sql/index.html#concat_ws) | Concatenazione con separatore |
 | [`count`](https://spark.apache.org/docs/latest/api/sql/index.html#count) | Restituisce il conteggio totale delle righe |
 | [`decode`](https://spark.apache.org/docs/latest/api/sql/index.html#decode) | Decodificare utilizzando un set di caratteri |
-| [`elt`](https://spark.apache.org/docs/latest/api/sql/index.html#elt) | Restituisce il [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n)th input |
+| [`elt`](https://spark.apache.org/docs/latest/api/sql/index.html#elt) | Restituisce il [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n) input |
 | [`encode`](https://spark.apache.org/docs/latest/api/sql/index.html#encode) | Codifica utilizzando un set di caratteri |
 | [`first`](https://spark.apache.org/docs/latest/api/sql/index.html#first), [`first_value`](https://spark.apache.org/docs/latest/api/sql/index.html#first_value) | Restituisce il primo valore |
 | [`grouping`](https://spark.apache.org/docs/latest/api/sql/index.html#grouping) | Indica se una colonna è raggruppata |
@@ -259,7 +259,7 @@ Per informazioni più dettagliate sulle funzioni, tra cui la sintassi, l&#39;uti
 | [`json_tuple`](https://spark.apache.org/docs/latest/api/sql/index.html#json_tuple) | Restituisce una tupla da un input JSON |
 | [`lag`](https://spark.apache.org/docs/latest/api/sql/index.html#lag), [`lead`](https://spark.apache.org/docs/latest/api/sql/index.html#lead) | Restituisce il valore prima dell&#39;offset |
 | [`last`](https://spark.apache.org/docs/latest/api/sql/index.html#last), [`last_value`](https://spark.apache.org/docs/latest/api/sql/index.html#last_value) | Restituisce l’ultimo valore |
-| [`left`](https://spark.apache.org/docs/latest/api/sql/index.html#left) | Restituisce il primo [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n) caratteri |
+| [`left`](https://spark.apache.org/docs/latest/api/sql/index.html#left) | Restituisce i primi [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n) caratteri |
 | [`length`](https://spark.apache.org/docs/latest/api/sql/index.html#length) | Restituisce la lunghezza della stringa |
 | [`levenshtein`](https://spark.apache.org/docs/latest/api/sql/index.html#levenshtein) | Restituisce la distanza di Levenshtein tra stringhe |
 | [`locate`](https://spark.apache.org/docs/latest/api/sql/index.html#locate), [`position`](https://spark.apache.org/docs/latest/api/sql/index.html#position) | Restituisce la posizione della prima occorrenza di una sottostringa |

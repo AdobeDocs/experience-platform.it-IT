@@ -6,7 +6,7 @@ description: Questo documento funge da guida per il download dei punteggi per le
 exl-id: 8821e3fb-c520-4933-8eb7-0b0aa10db916
 source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1051'
 ht-degree: 3%
 
 ---
@@ -17,13 +17,13 @@ Questo documento funge da guida per il download dei punteggi per le Attribution 
 
 ## Introduzione
 
-Attribution AI consente di scaricare i punteggi nel formato di file Parquet. Questo tutorial richiede di aver letto e terminato il download della sezione dei punteggi di Attribution AI in [introduzione](./getting-started.md) guida.
+Attribution AI consente di scaricare i punteggi nel formato di file Parquet. Questo tutorial richiede di aver letto e terminato la sezione download dei punteggi di Attribution AI nella [guida introduttiva](./getting-started.md).
 
-Inoltre, per accedere ai punteggi di Attribution AI, è necessario disporre di un’istanza del servizio con uno stato di esecuzione corretto. Per creare una nuova istanza di servizio, visita [Guida utente di Attribution AI](./user-guide.md). Se di recente è stata creata un’istanza del servizio per la quale si sta ancora eseguendo l’apprendimento e il punteggio, attendi 24 ore per il completamento dell’esecuzione.
+Inoltre, per accedere ai punteggi di Attribution AI, è necessario disporre di un’istanza del servizio con uno stato di esecuzione corretto. Per creare una nuova istanza del servizio, visita la [guida utente di Attribution AI](./user-guide.md). Se di recente è stata creata un’istanza del servizio per la quale si sta ancora eseguendo l’apprendimento e il punteggio, attendi 24 ore per il completamento dell’esecuzione.
 
 ## Trovare l’ID del set di dati {#dataset-id}
 
-Per Attribution AI approfondimenti nell’istanza di servizio, fai clic su *Altre azioni* nella navigazione in alto a destra, quindi seleziona **[!UICONTROL Punteggi di accesso]**.
+Nell&#39;istanza del servizio per approfondimenti Attribution AI, fai clic sul menu a discesa *Altre azioni* nell&#39;area di navigazione in alto a destra, quindi seleziona **[!UICONTROL Punteggi di accesso]**.
 
 ![altre azioni](./images/download-scores/more-actions.png)
 
@@ -33,7 +33,7 @@ Viene visualizzata una nuova finestra di dialogo contenente un collegamento alla
 
 ## Recuperare l’ID batch {#retrieve-your-batch-id}
 
-Utilizzando l’ID del set di dati del passaggio precedente, devi effettuare una chiamata all’API del catalogo per recuperare un ID batch. Per questa chiamata API vengono utilizzati parametri di query aggiuntivi per restituire l’ultimo batch riuscito invece di un elenco di batch appartenenti alla tua organizzazione. Per restituire batch aggiuntivi, aumentare il numero di `limit` parametro di query alla quantità desiderata che si desidera restituire. Per ulteriori informazioni sui tipi di parametri di query disponibili, consulta la guida su [filtrare i dati del catalogo utilizzando i parametri di query](../../catalog/api/filter-data.md).
+Utilizzando l’ID del set di dati del passaggio precedente, devi effettuare una chiamata all’API del catalogo per recuperare un ID batch. Per questa chiamata API vengono utilizzati parametri di query aggiuntivi per restituire l’ultimo batch riuscito invece di un elenco di batch appartenenti alla tua organizzazione. Per restituire batch aggiuntivi, aumentare il numero del parametro di query `limit` fino alla quantità desiderata. Per ulteriori informazioni sui tipi di parametri di query disponibili, visitare la guida su [filtraggio dei dati del catalogo tramite parametri di query](../../catalog/api/filter-data.md).
 
 **Formato API**
 
@@ -61,7 +61,7 @@ In caso di esito positivo, la risposta restituisce un payload contenente un ogge
 
 >[!NOTE]
 >
-> La seguente risposta ha avuto il `tags` oggetto riformato per migliorarne la leggibilità.
+> L&#39;oggetto `tags` della risposta seguente è stato riformato per migliorarne la leggibilità.
 
 ```json
 {
@@ -112,7 +112,7 @@ In caso di esito positivo, la risposta restituisce un payload contenente un ogge
 
 ## Recupera la chiamata API successiva con il tuo ID batch {#retrieve-the-next-api-call-with-your-batch-id}
 
-Una volta ottenuto l’ID batch, potrai effettuare una nuova richiesta GET a `/batches`. La richiesta restituisce un collegamento utilizzato come richiesta API successiva.
+Una volta ottenuto l&#39;ID batch, puoi effettuare una nuova richiesta GET a `/batches`. La richiesta restituisce un collegamento utilizzato come richiesta API successiva.
 
 **Formato API**
 
@@ -122,7 +122,7 @@ GET batches/{BATCH_ID}/files
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{BATCH_ID}` | ID batch recuperato nel passaggio precedente [recupera il tuo ID batch](#retrieve-your-batch-id). |
+| `{BATCH_ID}` | ID batch recuperato nel passaggio precedente [recuperare l&#39;ID batch](#retrieve-your-batch-id). |
 
 **Richiesta**
 
@@ -138,7 +138,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/01E5QSWCAA
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce un payload contenente `_links` oggetto. All&#39;interno del `_links` l&#39;oggetto è un `href` con una nuova chiamata API come valore. Copia questo valore per passare al passaggio successivo.
+Una risposta corretta restituisce un payload contenente un oggetto `_links`. All&#39;interno dell&#39;oggetto `_links` è presente un `href` con una nuova chiamata API come valore. Copia questo valore per passare al passaggio successivo.
 
 ```json
 {
@@ -166,7 +166,7 @@ In caso di esito positivo, la risposta restituisce un payload contenente `_links
 
 ## Recuperare i file {#retrieving-your-files}
 
-Utilizzo di `href` valore ottenuto nel passaggio precedente come chiamata API, effettua una nuova richiesta GET per recuperare la directory dei file.
+Utilizzando il valore `href` ottenuto nel passaggio precedente come chiamata API, effettua una nuova richiesta GET per recuperare la directory dei file.
 
 **Formato API**
 
@@ -176,7 +176,7 @@ GET files/{DATASETFILE_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{DATASETFILE_ID}` | L&#39;ID dataSetFile viene restituito in `href` valore da [passaggio precedente](#retrieve-the-next-api-call-with-your-batch-id). È inoltre accessibile nel `data` array sotto il tipo di oggetto `dataSetFileId`. |
+| `{DATASETFILE_ID}` | L&#39;ID dataSetFile viene restituito nel valore `href` del [passaggio precedente](#retrieve-the-next-api-call-with-your-batch-id). È inoltre accessibile nell&#39;array `data` sotto il tipo di oggetto `dataSetFileId`. |
 
 **Richiesta**
 
@@ -217,15 +217,15 @@ La risposta contiene un array di dati che può avere una singola voce o un elenc
 | `_links.self.href` | URL della richiesta di GET utilizzato per scaricare un file nella directory. |
 
 
-Copia il `href` valore per qualsiasi oggetto file in `data` , quindi procedere al passaggio successivo.
+Copiare il valore `href` per qualsiasi oggetto file nell&#39;array `data`, quindi procedere al passaggio successivo.
 
 ## Scaricare i dati del file
 
-Per scaricare i dati del file, effettua una richiesta GET al `"href"` valore copiato nel passaggio precedente [recupero dei file](#retrieving-your-files).
+Per scaricare i dati del file, invia una richiesta GET al valore `"href"` copiato nel passaggio precedente [recupero dei file](#retrieving-your-files).
 
 >[!NOTE]
 >
->Se esegui questa richiesta direttamente nella riga di comando, potrebbe essere richiesto di aggiungere un output dopo le intestazioni della richiesta. L’esempio di richiesta seguente utilizza `--output {FILENAME.FILETYPE}`.
+>Se esegui questa richiesta direttamente nella riga di comando, potrebbe essere richiesto di aggiungere un output dopo le intestazioni della richiesta. Nell&#39;esempio di richiesta seguente viene utilizzato `--output {FILENAME.FILETYPE}`.
 
 **Formato API**
 
@@ -235,7 +235,7 @@ GET files/{DATASETFILE_ID}?path={FILE_NAME}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{DATASETFILE_ID}` | L&#39;ID dataSetFile viene restituito in `href` valore da un [passaggio precedente](#retrieve-the-next-api-call-with-your-batch-id). |
+| `{DATASETFILE_ID}` | L&#39;ID dataSetFile viene restituito nel valore `href` da un [passaggio precedente](#retrieve-the-next-api-call-with-your-batch-id). |
 | `{FILE_NAME}` | Nome del file. |
 
 **Richiesta**
@@ -259,11 +259,11 @@ La risposta scarica il file richiesto nella directory corrente. In questo esempi
 
 ![Terminale](./images/download-scores/terminal-output.png)
 
-I punteggi scaricati saranno in formato Parquet e avranno bisogno di un [!DNL Spark]-shell o lettore Parquet per visualizzare i punteggi. Per la visualizzazione del punteggio non elaborato, puoi utilizzare [Strumenti Apache Parquet](https://parquet.apache.org/docs/). Gli strumenti di Parquet possono analizzare i dati con [!DNL Spark].
+I punteggi scaricati saranno in formato Parquet e per visualizzarli sarà necessario un lettore con shell [!DNL Spark] o Parquet. Per la visualizzazione del punteggio non elaborato, puoi utilizzare [gli strumenti Apache Parquet](https://parquet.apache.org/docs/). Gli strumenti Parquet possono analizzare i dati con [!DNL Spark].
 
 ## Passaggi successivi
 
-In questo documento sono descritti i passaggi necessari per scaricare i punteggi delle Attribution AI. Per ulteriori informazioni sugli output di punteggio, visitare il sito Web [Input e output di IA per l’attribuzione](./input-output.md) documentazione.
+In questo documento sono descritti i passaggi necessari per scaricare i punteggi delle Attribution AI. Per ulteriori informazioni sugli output di punteggio, visita la documentazione [Input e output di IA per l&#39;attribuzione](./input-output.md).
 
 ## Accesso ai punteggi con il Snowflake
 
@@ -287,11 +287,11 @@ Una volta ottenute le credenziali e l’URL, puoi eseguire una query sulle tabel
 
 ### Ricerca dello schema nel Snowflake
 
-Utilizzando le credenziali fornite, accedi al Snowflake. Fai clic su **Fogli di lavoro** nella navigazione principale in alto a sinistra, quindi vai alla directory del database nel pannello a sinistra.
+Utilizzando le credenziali fornite, accedi al Snowflake. Fai clic sulla scheda **Fogli di lavoro** nell&#39;area di navigazione principale in alto a sinistra, quindi passa alla directory del database nel pannello a sinistra.
 
 ![Fogli di lavoro e navigazione](./images/download-scores/edited_snowflake_1.png)
 
-Quindi, fai clic su **Seleziona schema** nell’angolo in alto a destra dello schermo. Nel popover visualizzato, verificare che sia selezionato il database corretto. Quindi, fai clic su *Schema* e seleziona uno degli schemi elencati. Puoi eseguire query dirette dalle tabelle di punteggio elencate nello schema selezionato.
+Fare clic su **Seleziona schema** nell&#39;angolo superiore destro della schermata. Nel popover visualizzato, verificare che sia selezionato il database corretto. Quindi, fai clic sul menu a discesa *Schema* e seleziona uno degli schemi elencati. Puoi eseguire query dirette dalle tabelle di punteggio elencate nello schema selezionato.
 
 ![trova uno schema](./images/download-scores/edited_snowflake_2.png)
 
@@ -299,7 +299,7 @@ Quindi, fai clic su **Seleziona schema** nell’angolo in alto a destra dello sc
 
 Le credenziali di Snowflake possono essere utilizzate per impostare una connessione tra Power BI Desktop e i database di Snowflake.
 
-In primo luogo, sotto *Server* digitare l&#39;URL del Snowflake. Avanti, sotto *Data warehouse*, digitare &quot;XSMALL&quot;. Quindi, digita il nome utente e la password.
+Digitare innanzitutto l&#39;URL del Snowflake nella casella *Server*. Successivamente, in *Warehouse*, digitare &quot;XSMALL&quot;. Quindi, digita il nome utente e la password.
 
 ![esempio di POWERBI](./images/download-scores/powerbi-snowflake.png)
 

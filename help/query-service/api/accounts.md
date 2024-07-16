@@ -14,15 +14,15 @@ ht-degree: 5%
 
 # Endpoint Account
 
-In Adobe Experience Platform Query Service, gli account vengono utilizzati per creare credenziali senza scadenza che è possibile utilizzare con client SQL esterni. È possibile utilizzare `/accounts` endpoint nell’API di Query Service, che consente di creare, recuperare, modificare ed eliminare in modo programmatico gli account di integrazione di Query Service (noto anche come account tecnico).
+In Adobe Experience Platform Query Service, gli account vengono utilizzati per creare credenziali senza scadenza che è possibile utilizzare con client SQL esterni. È possibile utilizzare l&#39;endpoint `/accounts` nell&#39;API di Query Service, che consente di creare, recuperare, modificare ed eliminare a livello di programmazione gli account di integrazione di Query Service (noto anche come account tecnico).
 
 ## Introduzione
 
-Gli endpoint utilizzati in questa guida fanno parte dell’API Query Service. Prima di continuare, controlla [guida introduttiva](./getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all’API, incluse le intestazioni richieste e la lettura di esempi di chiamate API.
+Gli endpoint utilizzati in questa guida fanno parte dell’API Query Service. Prima di continuare, consulta la [guida introduttiva](./getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all&#39;API, incluse le intestazioni richieste e la lettura delle chiamate API di esempio.
 
 ## Creare un account
 
-Per creare un account di integrazione di Query Service, devi effettuare una richiesta POST al `/accounts` endpoint.
+È possibile creare un account di integrazione di Query Service effettuando una richiesta POST all&#39;endpoint `/accounts`.
 
 **Formato API**
 
@@ -52,10 +52,10 @@ curl -X POST https://platform.adobe.io/data/foundation/queryauth/accounts \
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `accountName` | **Obbligatorio** Nome dell’account di integrazione di Query Service. |
-| `assignedToUser` | **Obbligatorio** L’Adobe ID per cui verrà creato l’account di integrazione di Query Service. |
-| `credential` | *(Facoltativo)* Credenziali utilizzate per l&#39;integrazione di Query Service. Se non viene specificato, il sistema genererà automaticamente una credenziale. |
-| `description` | *(Facoltativo)* Descrizione dell&#39;account di integrazione di Query Service. |
+| `accountName` | **Obbligatorio** Nome dell&#39;account di integrazione di Query Service. |
+| `assignedToUser` | **Obbligatorio** l&#39;Adobe ID per il quale verrà creato l&#39;account di integrazione di Query Service. |
+| `credential` | *(Facoltativo)* Le credenziali utilizzate per l&#39;integrazione di Query Service. Se non viene specificato, il sistema genererà automaticamente una credenziale. |
+| `description` | *(Facoltativo)* Descrizione per l&#39;account di integrazione di Query Service. |
 
 **Risposta**
 
@@ -72,12 +72,12 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200, con i dett
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `technicalAccountName` | Nome dell’account di integrazione di Query Service. |
-| `technicalAccountId` | ID dell’account di integrazione di Query Service. Questo, insieme al `credential`, compone la password per il tuo account. |
-| `credential` | Le credenziali dell’account di integrazione di Query Service. Questo, insieme al `technicalAccountId`, compone la password per il tuo account. |
+| `technicalAccountId` | ID dell’account di integrazione di Query Service. Questa, insieme a `credential`, compone la password per il tuo account. |
+| `credential` | Le credenziali dell’account di integrazione di Query Service. Questa, insieme a `technicalAccountId`, compone la password per il tuo account. |
 
 ## Aggiornare un account
 
-Per aggiornare l’account di integrazione di Query Service, effettua una richiesta PUT al `/accounts` endpoint.
+Per aggiornare l&#39;account di integrazione di Query Service, eseguire una richiesta PUT all&#39;endpoint `/accounts`.
 
 **Formato API**
 
@@ -109,10 +109,10 @@ curl -X PUT https://platform.adobe.io/data/foundation/queryauth/accounts/E09A0DF
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `accountName` | *(Facoltativo)* Nome aggiornato per l’account di integrazione di Query Service. |
-| `assignedToUser` | *(Facoltativo)* L’Adobe ID aggiornato a cui è collegato l’account di integrazione di Query Service. |
-| `credential` | *(Facoltativo)* Credenziali aggiornate per l&#39;account di Query Service. |
-| `description` | *(Facoltativo)* Descrizione aggiornata dell’account di integrazione di Query Service. |
+| `accountName` | *(Facoltativo)* Il nome aggiornato per l&#39;account di integrazione di Query Service. |
+| `assignedToUser` | *(Facoltativo)* L&#39;Adobe ID aggiornato a cui è collegato l&#39;account di integrazione di Query Service. |
+| `credential` | *(Facoltativo)* Le credenziali aggiornate per l&#39;account di Query Service. |
+| `description` | *(Facoltativo)* Descrizione aggiornata per l&#39;account di integrazione di Query Service. |
 
 **Risposta**
 
@@ -135,7 +135,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 
 ## Elenca tutti gli account
 
-Per recuperare un elenco di tutti gli account di integrazione di Query Service, effettua una richiesta GET al `/accounts` endpoint.
+Per recuperare un elenco di tutti gli account di integrazione di Query Service, eseguire una richiesta GET all&#39;endpoint `/accounts`.
 
 **Formato API**
 
@@ -206,7 +206,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elen
 
 ## Eliminare un account
 
-Per eliminare l’account di integrazione di Query Service, effettua una richiesta DELETE al `/accounts` endpoint.
+È possibile eliminare l&#39;account di integrazione di Query Service effettuando una richiesta DELETE all&#39;endpoint `/accounts`.
 
 **Formato API**
 

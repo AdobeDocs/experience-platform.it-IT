@@ -12,7 +12,7 @@ ht-degree: 2%
 
 # Guida alle autorizzazioni
 
-[!UICONTROL Autorizzazioni] è l’area di Adobe Experience Platform in cui gli amministratori possono definire ruoli utente e criteri di accesso per gestire le autorizzazioni di accesso per funzioni e oggetti all’interno di un’applicazione di prodotto.
+[!UICONTROL Autorizzazioni] è l&#39;area di Adobe Experience Platform in cui gli amministratori possono definire i ruoli utente e i criteri di accesso per gestire le autorizzazioni di accesso per funzionalità e oggetti all&#39;interno di un&#39;applicazione di prodotto.
 
 Con [!UICONTROL Autorizzazioni], puoi configurare:
 
@@ -23,26 +23,26 @@ Con [!UICONTROL Autorizzazioni], puoi configurare:
 * [Sandbox](./sandboxes.md)
 * [Utenti](./users.md)
 
-Per accedere ai permessi di controllo dell&#39;accesso basati su attributi per [!DNL Adobe Experience Platform], devi essere un amministratore dell’organizzazione con un abbonamento a [!DNL Adobe Experience Platform]. Adobe supporta gerarchie di amministratori flessibili per le organizzazioni, ma devi essere un amministratore di prodotto per [!DNL Adobe Experience Platform] per configurare le autorizzazioni. Consulta l’articolo di Adobe Help Center su [ruoli amministrativi](https://helpx.adobe.com/it/enterprise/using/admin-roles.html) per ulteriori informazioni.
+Per accedere alle autorizzazioni di controllo degli accessi basate su attributi per [!DNL Adobe Experience Platform], è necessario essere un amministratore dell&#39;organizzazione con una sottoscrizione a [!DNL Adobe Experience Platform]. Sebbene Adobe supporti gerarchie di amministratori flessibili per le organizzazioni, è necessario essere un amministratore di prodotto per [!DNL Adobe Experience Platform] per configurare le autorizzazioni. Per ulteriori informazioni, consulta l&#39;articolo di Adobe Help Center su [ruoli amministrativi](https://helpx.adobe.com/it/enterprise/using/admin-roles.html).
 
 Se non disponi dei privilegi di amministratore, contatta l’amministratore di sistema per ottenere l’accesso.
 
-Una volta che hai i privilegi di amministratore, vai a [Adobe Experience Platform](https://experience.adobe.com/) e accedi utilizzando il tuo [!DNL Adobe] credenziali. Una volta effettuato l’accesso, il **[!UICONTROL Panoramica]** viene visualizzata per la tua organizzazione per la quale disponi dei privilegi di amministratore. Questa pagina mostra i prodotti a cui la tua organizzazione è abbonata, insieme ad altri controlli per aggiungere utenti e amministratori all’organizzazione nel suo complesso. Seleziona **[!UICONTROL Autorizzazioni]** per aprire l’area di lavoro di controllo degli accessi basata su attributi per l’integrazione con Platform.
+Una volta che hai i privilegi di amministratore, vai a [Adobe Experience Platform](https://experience.adobe.com/) e accedi con le tue credenziali [!DNL Adobe]. Una volta effettuato l&#39;accesso, viene visualizzata la pagina **[!UICONTROL Panoramica]** per l&#39;organizzazione per la quale si dispone dei privilegi di amministratore. Questa pagina mostra i prodotti a cui la tua organizzazione è abbonata, insieme ad altri controlli per aggiungere utenti e amministratori all’organizzazione nel suo complesso. Seleziona **[!UICONTROL Autorizzazioni]** per aprire l&#39;area di lavoro di controllo degli accessi basata su attributi per l&#39;integrazione con Platform.
 
 ![flac-select-product](../../images/flac-ui/flac-select-product.png)
 
-Viene visualizzata l’area di lavoro di controllo degli accessi basata su attributi per Platform, con apertura nella sezione **[!UICONTROL Ruoli]** pagina. Questa pagina consente di visualizzare tutti i ruoli e di gestire le varie impostazioni come descritto in questo documento.
+Viene visualizzata l&#39;area di lavoro di controllo degli accessi basata su attributi per Platform, che si apre nella pagina **[!UICONTROL Ruoli]**. Questa pagina consente di visualizzare tutti i ruoli e di gestire le varie impostazioni come descritto in questo documento.
 
 >[!IMPORTANT]
 >
->Per gestire le autorizzazioni per utenti, funzionalità, etichette e altre risorse dell’organizzazione, ora devi utilizzare le Autorizzazioni su [!DNL Adobe Experience Platform] anziché Ruoli in [!DNL Adobe Admin Console].
+>Per gestire le autorizzazioni per gli utenti, le funzionalità, le etichette e altre risorse dell&#39;organizzazione, è ora necessario utilizzare Autorizzazioni su [!DNL Adobe Experience Platform] anziché Ruoli in [!DNL Adobe Admin Console].
 
-Ora dovresti utilizzare le Autorizzazioni su [!DNL Adobe Experience Platform], anziché Ruoli in Adobe Admin Console, per gestire le autorizzazioni per utenti, funzionalità, etichette e altre risorse dell’organizzazione.
+È ora necessario utilizzare Autorizzazioni su [!DNL Adobe Experience Platform], anziché Ruoli in Adobe Admin Console, per gestire le autorizzazioni per gli utenti, le funzionalità, le etichette e altre risorse dell&#39;organizzazione.
 
 ![flac-select-roles](../../images/flac-ui/flac-select-roles.png)
 
-Questa guida utente illustra come utilizzare il [!DNL Adobe Experience Platform] per assegnare le autorizzazioni di accesso a Platform. Per informazioni più generali su come navigare nel [!DNL Admin Console], vedere [Guida utente di Admin Console](https://helpx.adobe.com/it/enterprise/using/admin-console.html).
+Questa guida utente illustra come utilizzare [!DNL Adobe Experience Platform] per assegnare le autorizzazioni di accesso a Platform. Per ulteriori informazioni generali su come spostarsi in [!DNL Admin Console], vedere la [guida utente di Admin Console](https://helpx.adobe.com/it/enterprise/using/admin-console.html).
 
 ## Passaggi successivi
 
-Dopo aver visitato l’area di lavoro delle autorizzazioni, procedi al passaggio successivo per [crea un nuovo ruolo](roles.md).
+Dopo aver navigato nell&#39;area di lavoro delle autorizzazioni, procedere al passaggio successivo per [creare un nuovo ruolo](roles.md).

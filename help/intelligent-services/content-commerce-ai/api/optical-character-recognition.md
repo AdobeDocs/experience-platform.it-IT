@@ -6,7 +6,7 @@ description: Nell’API per l’assegnazione di tag ai contenuti, il servizio OC
 exl-id: 85b976a7-0229-43e9-b166-cdbd213b867f
 source-git-commit: 82722ddf7ff543361177b555fffea730a7879886
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '693'
 ht-degree: 4%
 
 ---
@@ -74,9 +74,9 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 
 **Risposta**
 
-Una risposta corretta restituisce il testo rilevato nel `tags` per ogni immagine trasmessa nella richiesta. Se in una determinata immagine non è presente testo, `is_text_present` è 0 e `tags` è un elenco vuoto.
+In caso di esito positivo, la risposta restituisce il testo rilevato nell&#39;elenco `tags` per ogni immagine passata nella richiesta. Se in una determinata immagine non è presente testo, `is_text_present` è 0 e `tags` è un elenco vuoto.
 
-[result0, result1, ...]: elenco di risposte per ciascun documento di input. Ogni risultato è un dado con le chiavi:
+[risultato0, risultato1, ...]: elenco di risposte per ciascun documento di input. Ogni risultato è un dado con le chiavi:
 
 1. request_element_id: indice corrispondente al file di input per questa risposta, 0 per la prima immagine nell’elenco dei documenti della richiesta, 1 per quella successiva e così via.
 2. tag: elenco di dizionari, ogni dizionario ha due chiavi: testo, che è una parola riconosciuta dall’immagine, e rilevanza, che viene calcolata come frazione dell’area del riquadro del testo estratto rispetto all’immagine completa. 0,01 si tradurrebbe in un testo che occupi almeno l’1% dell’immagine.
@@ -207,9 +207,9 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 | `min_probability` | Qual è la probabilità minima per le parole riconosciute? Il servizio restituisce solo le parole estratte dall&#39;immagine e con una probabilità maggiore rispetto a min_probability. Il valore predefinito è 0,2. | No |
 | `min_relevance` | Qual è la rilevanza minima per le parole riconosciute? Il servizio restituisce solo le parole estratte dall’immagine e di maggiore rilevanza rispetto a min_importance. Il valore predefinito è 0,01. La rilevanza viene calcolata come frazione dell’area del riquadro del testo estratto rispetto all’immagine completa. 0,01 si tradurrebbe in un testo che occupi almeno l’1% dell’immagine. | No |
 
-| Nome | Tipo di dati | Obbligatorio | Impostazione predefinita | Valori | Descrizione |
+| Nome | Tipo di dati | Obbligatorio | Predefinito | Valori | Descrizione |
 | -----| --------- | -------- | ------- | ------ | ----------- |
-| `repo:path` | string | - | - | - | URL preceduto dell’immagine da cui deve essere estratto il testo. |
-| `sensei:repoType` | string | - | - | HTTPS | Tipo di archivio in cui viene memorizzata l’immagine. |
-| `sensei:multipart_field_name` | string | - | - | - | Utilizzalo quando trasmetti l’immagine come argomento multipart invece di utilizzare URL prefirmati. |
-| `dc:format` | string | Sì | - | &quot;image/jpg&quot;, <br>image/jpeg <br>&quot;image/png&quot;, <br>&quot;image/tiff&quot; | La codifica dell’immagine viene verificata in base ai tipi di codifica di input consentiti prima dell’elaborazione. |
+| `repo:path` | stringa | - | - | - | URL preceduto dell’immagine da cui deve essere estratto il testo. |
+| `sensei:repoType` | stringa | - | - | HTTPS | Tipo di archivio in cui viene memorizzata l’immagine. |
+| `sensei:multipart_field_name` | stringa | - | - | - | Utilizzalo quando trasmetti l’immagine come argomento multipart invece di utilizzare URL prefirmati. |
+| `dc:format` | stringa | Sì | - | &quot;image/jpg&quot;, <br>&quot;image/jpeg&quot;, <br>&quot;image/png&quot;, <br>&quot;image/tiff&quot; | La codifica dell’immagine viene verificata in base ai tipi di codifica di input consentiti prima dell’elaborazione. |

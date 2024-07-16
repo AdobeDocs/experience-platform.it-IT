@@ -16,26 +16,26 @@ ht-degree: 2%
 
 ## Panoramica {#overview}
 
-Il [!DNL Magnite Streaming: Real-Time] e Magnite Streaming: le destinazioni Batch in Adobe Experience Platform consentono di mappare ed esportare i tipi di pubblico per il targeting e l’attivazione sulla piattaforma Magnite Streaming.
+Le destinazioni Batch di [!DNL Magnite Streaming: Real-Time] e Magnite Streaming: in Adobe Experience Platform consentono di mappare ed esportare i tipi di pubblico per il targeting e l&#39;attivazione sulla piattaforma Magnite Streaming.
 
-Attivazione dei tipi di pubblico in [!DNL Magnite Streaming] Platform è un processo in due fasi che richiede di utilizzare sia le destinazioni Magnite Streaming: Real-Time che Magnite Streaming: Batch.
+L&#39;attivazione dei tipi di pubblico nella piattaforma [!DNL Magnite Streaming] è un processo in due fasi che richiede l&#39;utilizzo di entrambe le destinazioni Streaming Magnite: Real-Time e Streaming Magnite: Batch.
 
 Per attivare i tipi di pubblico in [!DNL Magnite Streaming], è necessario:
 
-* Attiva i tipi di pubblico in [!DNL Magnite Streaming: Real-Time] come mostrato in questa pagina.
-* Attiva lo stesso pubblico nella destinazione Magnite Streaming: Batch. Il [!DNL Magnite Streaming: Batch] la destinazione è un componente obbligatorio. Impossibile attivare il pubblico su [!DNL Magnite Streaming] La destinazione batch genera un’integrazione non riuscita e i tipi di pubblico non vengono attivati.
+* Attiva i tipi di pubblico sulla destinazione [!DNL Magnite Streaming: Real-Time], come illustrato in questa pagina.
+* Attiva lo stesso pubblico nella destinazione Magnite Streaming: Batch. La destinazione [!DNL Magnite Streaming: Batch] è un componente obbligatorio. Se non si attiva il pubblico nella destinazione batch [!DNL Magnite Streaming], si verificherà un errore di integrazione e il pubblico non verrà attivato.
 
-Nota: quando si utilizza la destinazione in tempo reale, [!DNL Magnite: Streaming] riceverà i tipi di pubblico in tempo reale, ma possiamo solo memorizzare temporaneamente i tipi di pubblico in tempo reale nella nostra piattaforma e verranno rimossi dal sistema entro un paio di giorni. Per questo motivo, se desideri utilizzare la destinazione Magnite: Streaming Real-Time, potrai *anche* necessità di utilizzare la destinazione Magnite Streaming: Batch: per ogni pubblico che si attiva nella destinazione in tempo reale, è necessario attivare anche la destinazione Batch.
+Nota: quando si utilizza la destinazione in tempo reale, [!DNL Magnite: Streaming] riceverà i tipi di pubblico in tempo reale, ma è possibile archiviare solo i tipi di pubblico in tempo reale temporaneamente nella piattaforma e verranno rimossi dal sistema entro un paio di giorni. Per questo motivo, se desideri utilizzare la destinazione Magnite: Streaming Real-Time, *anche* dovrai utilizzare la destinazione Magnite Streaming: Batch - ogni pubblico che attivi nella destinazione Real-Time, devi attivare anche nella destinazione Batch.
 
 >[!IMPORTANT]
 >
 >Questo connettore di destinazione è in versione beta ed è disponibile solo per alcuni clienti. Per richiedere l’accesso, contatta il rappresentante del tuo Adobe.
 >
->Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti da [!DNL Magnite] team. Per eventuali richieste di informazioni o richieste di aggiornamento, contattatele direttamente all&#39;indirizzo `adobe-tech@magnite.com`.
+>Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti dal team [!DNL Magnite]. Per richieste di informazioni o richieste di aggiornamento, contattale direttamente all&#39;indirizzo `adobe-tech@magnite.com`.
 
 ## Casi d’uso {#use-cases}
 
-Per aiutarti a capire meglio come e quando utilizzare il [!DNL Magnite Streaming: Real-Time] destinazione: ecco un caso d’uso di esempio che i clienti di Adobe Experience Platform possono risolvere utilizzando questa destinazione.
+Per aiutarti a capire meglio come e quando utilizzare la destinazione [!DNL Magnite Streaming: Real-Time], ecco un esempio di caso d&#39;uso che i clienti Adobe Experience Platform possono risolvere utilizzando questa destinazione.
 
 ### Attivazione e targeting {#activation-and-targeting}
 
@@ -43,12 +43,12 @@ Questa integrazione con Magnite consente ai clienti di trasmettere i propri tipi
 
 ## Prerequisiti {#prerequisites}
 
-Per utilizzare [!DNL Magnite] destinazioni in Adobe Experience Platform, devi prima disporre di un [!DNL Magnite Streaming] account. Se si dispone di [!DNL Magnite Streaming] account, contatta il tuo [!DNL Magnite] al responsabile dell’account devono essere fornite le credenziali per accedere [!DNL Magnite's] destinazioni.
-Se non si dispone di [!DNL Magnite Streaming] account, contatta adobe-tech@magnite.com
+Per utilizzare le destinazioni [!DNL Magnite] in Adobe Experience Platform, devi prima disporre di un account [!DNL Magnite Streaming]. Se hai un account [!DNL Magnite Streaming], contatta il tuo account manager [!DNL Magnite] per ricevere le credenziali per accedere a [!DNL Magnite's] destinazioni.
+Se non disponi di un account [!DNL Magnite Streaming], contatta adobe-tech@magnite.com
 
 ## Identità supportate {#supported-identities}
 
-Il [!DNL Magnite Streaming: Real-Time] la destinazione supporta l’attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](/help/identity-service/features/namespaces.md).
+La destinazione [!DNL Magnite Streaming: Real-Time] supporta l&#39;attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](/help/identity-service/features/namespaces.md).
 
 | Identità di destinazione | Descrizione | Considerazioni |
 |-------------------|--------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
@@ -62,8 +62,8 @@ Questa sezione descrive il tipo di pubblico che puoi esportare in questa destina
 
 | Origine pubblico | Supportato | Descrizione |
 |-----------------------------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati dall’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md). |
-| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
+| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite il servizio di segmentazione [Experience Platform](../../../segmentation/home.md). |
+| Caricamenti personalizzati | ✓ | Tipi di pubblico [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -73,8 +73,8 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 | Elemento | Tipo | Note |
 |------------------|---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Tipo di esportazione | **[!UICONTROL Esportazione segmento]** | Stai esportando tutti i membri di un segmento (pubblico) con gli identificatori (nome, numero di telefono o altri) utilizzati in [!DNL Magnite Streaming: Real-Time] destinazione. |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione dei segmenti, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo di esportazione | **[!UICONTROL Esportazione segmento]** | Stai esportando tutti i membri di un segmento (pubblico) con gli identificatori (nome, numero di telefono o altri) utilizzati nella destinazione [!DNL Magnite Streaming: Real-Time]. |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione dei segmenti, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni sulle [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -82,47 +82,47 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 >[!IMPORTANT]
 >
->Per connettersi alla destinazione, è necessario **[!UICONTROL Visualizza destinazioni]** e **[!UICONTROL Gestione destinazioni]** [autorizzazione per il controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>Per connettersi alla destinazione, è necessario disporre delle **[!UICONTROL Destinazioni di visualizzazione]** e **[!UICONTROL Gestione destinazioni]** [Autorizzazione per il controllo degli accessi](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Per connettersi a questa destinazione, seguire i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
+Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
 
 ### Autenticarsi nella destinazione {#authenticate}
 
-Per autenticare nella destinazione, compila i campi obbligatori e seleziona **[!UICONTROL Connetti alla destinazione]**.
+Per eseguire l&#39;autenticazione nella destinazione, compilare i campi obbligatori e selezionare **[!UICONTROL Connetti alla destinazione]**.
 
 ![campi di autenticazione della configurazione di destinazione non compilati](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-unfilled.png)
 
-* **[!UICONTROL Nome utente]**: nome utente fornito da [!DNL Magnite].
-* **[!UICONTROL Password]**: password fornita da [!DNL Magnite].
+* **[!UICONTROL Nome utente]**: il nome utente fornito da [!DNL Magnite].
+* **[!UICONTROL Password]**: la password fornita da [!DNL Magnite].
 
 ### Inserire i dettagli della destinazione {#destination-details}
 
 Per configurare i dettagli per la destinazione, compila i campi obbligatori e facoltativi seguenti. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 
-* **[!UICONTROL Nome]**: nome con cui riconoscerai questa destinazione in futuro.
-* **[!UICONTROL Descrizione]**: descrizione che ti aiuterà a identificare questa destinazione in futuro.
-* **[!UICONTROL Nome del partner di origine]**: nome del cliente/dell’azienda. Solo supportati [!DNL Magnite Streaming] I client sono disponibili per la selezione.
+* **[!UICONTROL Nome]**: un nome con cui riconoscerai questa destinazione in futuro.
+* **[!UICONTROL Descrizione]**: una descrizione che ti aiuterà a identificare questa destinazione in futuro.
+* **[!UICONTROL Nome del partner di origine]**: nome del cliente/della società. Solo i client [!DNL Magnite Streaming] supportati sono disponibili per la selezione.
 
 ![campi di autenticazione della configurazione di destinazione compilati](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-filled.png)
 
-Al termine, seleziona la **[!UICONTROL Crea]** pulsante.
+Al termine, seleziona il pulsante **[!UICONTROL Crea]**.
 
 ![Criteri di governance facoltativi e azioni di applicazione](../../assets/catalog/advertising/magnite/destination-realtime-config-grouping-policy.png)
 
 ### Abilita avvisi {#enable-alerts}
 
-Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati verso la tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento agli avvisi sulle destinazioni tramite l’interfaccia utente](../../ui/alerts.md).
+Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati verso la tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento a destinazioni avvisi tramite l&#39;interfaccia utente](../../ui/alerts.md).
 
-Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
+Dopo aver fornito i dettagli per la connessione di destinazione, seleziona **[!UICONTROL Avanti]**.
 
 ## Attiva i segmenti in questa destinazione {#activate}
 
 >[!IMPORTANT]
 >
->* Per attivare i dati, è necessario **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attiva destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
->* Per esportare *identità*, è necessario **[!UICONTROL Visualizza grafico delle identità]** [autorizzazione per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
+>* Per attivare i dati, è necessario **[!UICONTROL Visualizzare le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizzare i profili]** e **[!UICONTROL Visualizzare i segmenti]** [accedere alle autorizzazioni di controllo](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL Visualizza grafo identità]** [Controllo di accesso](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 
-Letto [Attivare profili e segmenti nelle destinazioni di esportazione di segmenti in streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) per istruzioni sull’attivazione dei segmenti di pubblico in questa destinazione.
+Leggi [Attivare profili e segmenti nelle destinazioni di esportazione dei segmenti di streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) per le istruzioni sull&#39;attivazione dei segmenti di pubblico in questa destinazione.
 
 Una volta creata la connessione di destinazione, puoi procedere al flusso di attivazione del pubblico. La sezione seguente illustra come attivare i tipi di pubblico utilizzando la destinazione in tempo reale.
 
@@ -132,25 +132,25 @@ Il passaggio successivo consiste nel mappare gli identificatori di origine all&#
 
 * Puoi aggiungere tutte le mappature necessarie selezionando **[!UICONTROL Aggiungi nuova mappatura]**.
 
-Questo esempio, utilizzando la destinazione in tempo reale, mostra una riga contenente un identificatore di origine deviceId generico mappato al campo di destinazione device_id Magnite. Quando utilizzi le mappature, seleziona [!UICONTROL Successivo].
+Questo esempio, utilizzando la destinazione in tempo reale, mostra una riga contenente un identificatore di origine deviceId generico mappato al campo di destinazione device_id Magnite. Quando utilizzi i mapping, seleziona [!UICONTROL Avanti].
 
 ![Mappa i campi dati desiderati sul campo device_ID](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-field-mapping.png)
 
 Assicurati di impostare gli ID di mappatura su tutti i tipi di pubblico attivati, o imposta NESSUNO se non è presente alcun ID di mappatura.
 
-![Assicurati di impostare gli ID di mappatura su tutti i tipi di pubblico attivati, o imposta NESSUNO se non è presente alcun ID di mappatura](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-mappingid.png)
+![Assicurarsi di impostare gli ID mappatura per tutti i tipi di pubblico attivati o impostare NONE se non è presente alcun ID mappatura](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-mappingid.png)
 
 Ora devi configurare una data di inizio (obbligatoria), una data di fine (facoltativa) e un ID di mappatura per ogni pubblico.
 
 **ID mappatura**
 
-* Utilizza il **[!UICONTROL ID mappatura]** quando un pubblico dispone di un ID segmento preesistente noto in precedenza a Magnite.
+* Utilizza il campo **[!UICONTROL ID mappatura]** quando un pubblico ha un ID segmento preesistente precedentemente noto a Magnite.
 
-* Per aggiungere una **[!UICONTROL ID mappatura]** per un pubblico, seleziona ogni riga di pubblico singolarmente e immetti i dati nella colonna di destra (vedi immagine qui sopra). Se non vuoi aggiungere un ID mappatura, inserisci NESSUNO nel campo ID mappatura.
+* Per aggiungere un **[!UICONTROL ID mappatura]** a un pubblico, seleziona ogni riga di pubblico singolarmente e immetti i dati nella colonna di destra (vedi immagine qui sopra). Se non vuoi aggiungere un ID mappatura, inserisci NESSUNO nel campo ID mappatura.
 
-Seleziona **[!UICONTROL Successivo]** e finalizza il flusso di attivazione.
+Seleziona **[!UICONTROL Avanti]** e finalizza il flusso di attivazione.
 
-![Seleziona Avanti e finalizza il flusso di attivazione.](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-review.png)
+![Selezionare avanti e finalizzare il flusso di attivazione.](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-review.png)
 
 ## Dati esportati / Convalida esportazione dati {#exported-data}
 
@@ -162,18 +162,18 @@ Dopo aver caricato i tipi di pubblico, puoi verificare che siano stati creati e 
 
 -->
 
-* Acquisizione Post, i tipi di pubblico devono apparire in [!DNL Magnite Streaming] in pochi minuti e può essere applicata a un’offerta. Puoi confermarlo cercando l’ID segmento condiviso durante i passaggi di attivazione in Adobe Experience Platform.
+* I tipi di pubblico di Post-ingest dovrebbero comparire in [!DNL Magnite Streaming] entro pochi minuti e possono essere applicati a un&#39;offerta. Puoi confermarlo cercando l’ID segmento condiviso durante i passaggi di attivazione in Adobe Experience Platform.
 
-## Attiva gli stessi tipi di pubblico tramite [!DNL Magnite Streaming: Batch]destinazione
+## Attiva gli stessi tipi di pubblico tramite la destinazione [!DNL Magnite Streaming: Batch]
 
-Tipi di pubblico condivisi con [!DNL Magnite Streaming] l’utilizzo della destinazione in tempo reale dovrà essere condiviso anche utilizzando la destinazione Magnite Streaming: Batch. Se configurati correttamente, i nomi dei segmenti in [!DNL Magnite Streaming] L’interfaccia utente viene aggiornata per riflettere quelle utilizzate nell’aggiornamento post-giornaliero di Adobe Experience Platform.
+I tipi di pubblico condivisi con [!DNL Magnite Streaming] utilizzando la destinazione in tempo reale dovranno essere condivisi anche utilizzando la destinazione Magnite Streaming: Batch. Se configurati correttamente, i nomi dei segmenti nell&#39;interfaccia utente [!DNL Magnite Streaming] vengono aggiornati per riflettere quelli utilizzati nell&#39;aggiornamento post-giornaliero di Adobe Experience Platform.
 
 Infine, se per l’integrazione non è stata configurata una destinazione Batch, impostala ora tramite il documento di destinazione Magnite Streaming: Batch.
 
 ## Utilizzo dei dati e governance {#data-usage-governance}
 
-Tutti [!DNL Adobe Experience Platform] le destinazioni sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] applica la governance dei dati, leggi [Panoramica sulla governance dei dati](/help/data-governance/home.md).
+Tutte le destinazioni [!DNL Adobe Experience Platform] sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] applica la governance dei dati, leggere la [Panoramica sulla governance dei dati](/help/data-governance/home.md).
 
 ## Risorse aggiuntive {#additional-resources}
 
-Per ulteriore documentazione, visita il [Centro assistenza Magnite](https://help.magnite.com/help).
+Per ulteriori informazioni, visitare il [Centro assistenza Magnite](https://help.magnite.com/help).

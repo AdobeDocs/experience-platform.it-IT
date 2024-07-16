@@ -4,14 +4,14 @@ description: Note sulla versione di agosto 2023 per Adobe Experience Platform.
 exl-id: c67dca3a-eccb-427e-8ab3-b69c51b57938
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '1750'
-ht-degree: 38%
+source-wordcount: '1739'
+ht-degree: 35%
 
 ---
 
 # Note sulla versione di Adobe Experience Platform
 
-**Data di rilascio: 23 agosto 2023**
+**Data di rilascio: giovedì 23 agosto 2023**
 
 Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
@@ -29,7 +29,7 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
 ## Real-Time Customer Data Platform {#rtcdp}
 
-Basato su Experience Platform, Real-time Customer Data Platform ([!DNL Real-Time CDP]) consente alle aziende di unire dati noti e sconosciuti per attivare i profili cliente con decisioni intelligenti in tutto il percorso del cliente.
+Basato su un Experience Platform, Real-time Customer Data Platform ([!DNL Real-Time CDP]) consente alle aziende di unire dati noti e sconosciuti per attivare i profili dei clienti con decisioni intelligenti in tutto il percorso di clienti.
 
 [!DNL Real-Time CDP] combina più origini dati aziendali per creare profili cliente in tempo reale. I segmenti generati da questi profili possono quindi essere inviati alle destinazioni a valle per fornire esperienze cliente personalizzate individuali su tutti i canali e i dispositivi.
 
@@ -37,12 +37,12 @@ Basato su Experience Platform, Real-time Customer Data Platform ([!DNL Real-Time
 
 | Funzione | Descrizione |
 | --- | --- |
-| Guida all’esempio di ricoinvolgimento intelligente | Il [Nuovo coinvolgimento intelligente](../../rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md) la guida del caso d’uso fornisce dettagli su come coinvolgere nuovamente i clienti che hanno abbandonato una conversione prima di completarla in modo intelligente e responsabile. Questa guida utilizza i seguenti percorsi di esempio per coinvolgere nuovamente i clienti: <ul><li>Percorso di ricoinvolgimento: esegui il targeting dei clienti che hanno abbandonato la navigazione dei prodotti.</li><li>Percorso carrello abbandonato: il targeting dei clienti che hanno inserito prodotti nel carrello ma non hanno ancora completato l’acquisto.</li><li>Percorso di conferma dell’ordine: concentrarsi sugli acquisti di prodotti</li></ul> Utilizza il collegamento dettagliato delle opzioni di feedback nella parte inferiore della sezione [Guida all’esempio di ricoinvolgimento intelligente](../../rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md) per fornire un feedback. |
-| Supporto dati partner | Esegui il marketing upper funnel in Real-Time CDP, con profili prospect originati dai partner e ID partner, per raggiungere nuovi clienti e arricchire i dati di prime parti: <ul><li>Acquisizione da parte del cliente e indirizzabilità: sfrutta identificatori senza cookie e PII con hash provenienti da partner di dati scelti per raggiungere nuovi clienti e ridurre la dipendenza da cookie di terze parti.</li><li>Marketing full funnel in un unico sistema: segmentazione self-service, cura del pubblico e attivazione nativa per clienti potenziali e noti in un unico sistema.</li><li>Foundation of trust: governa i dati e i profili dei partner con l’utilizzo di dati brevettati, l’etichettatura, i controlli di accesso e altro ancora in modo responsabile per il mercato. Per ulteriori informazioni, consulta le seguenti guide dei casi d’uso: Sono ora disponibili le guide dei casi d’uso per la ricerca di potenziali clienti. Leggi le guide dei casi d’uso per la ricerca di potenziali clienti per scoprire come coinvolgere e acquisire nuovi clienti attraverso i casi d’uso per la ricerca di potenziali clienti:<ul><li>[Prospezione](../../rtcdp/partner-data/prospecting.md)</li><li>[Personalizzazione nel sito](../../rtcdp/partner-data/onsite-personalization.md)</li><li>[Integrare i profili di prime parti](../../rtcdp/partner-data/supplement-first-party-profiles.md)</li><li>[Attiva i tipi di pubblico potenziali](../../destinations/ui/activate-prospect-audiences.md)</li></ul> |
+| Guida all’esempio di ricoinvolgimento intelligente | La guida al caso d&#39;uso [Intelligent Re-engagement](../../rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md) fornisce dettagli su come coinvolgere nuovamente i clienti che hanno abbandonato una conversione prima di completarla in modo intelligente e responsabile. Questa guida utilizza i seguenti percorsi di esempio per coinvolgere nuovamente i clienti: <ul><li>Percorso di ricoinvolgimento: esegui il targeting dei clienti che hanno abbandonato la navigazione dei prodotti.</li><li>Percorso carrello abbandonato: il targeting dei clienti che hanno inserito prodotti nel carrello ma non hanno ancora completato l’acquisto.</li><li>Percorso di conferma dell’ordine: concentrarsi sugli acquisti di prodotti</li></ul> Utilizza il collegamento delle opzioni di feedback dettagliato nella parte inferiore della [Guida al caso di utilizzo del coinvolgimento intelligente](../../rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md) per fornire un feedback. |
+| Supporto dati partner | Esegui il marketing upper funnel in Real-Time CDP, con profili prospect originati dai partner e ID partner, per raggiungere nuovi clienti e arricchire i dati di prime parti: <ul><li>Acquisizione da parte del cliente e indirizzabilità: sfrutta identificatori senza cookie e PII con hash provenienti da partner di dati scelti per raggiungere nuovi clienti e ridurre la dipendenza da cookie di terze parti.</li><li>Marketing full funnel in un unico sistema: segmentazione self-service, cura del pubblico e attivazione nativa per clienti potenziali e noti in un unico sistema.</li><li>Foundation of trust: governa i dati e i profili dei partner con l’utilizzo di dati brevettati, l’etichettatura, i controlli di accesso e altro ancora in modo responsabile per il mercato. Per ulteriori informazioni, consulta le seguenti guide dei casi d’uso: Sono ora disponibili le guide dei casi d’uso per la ricerca di potenziali clienti. Leggi le guide dei casi d’uso per la ricerca di potenziali clienti per scoprire come coinvolgere e acquisire nuovi clienti attraverso i casi d’uso per la ricerca di potenziali clienti:<ul><li>[Ricerca in corso](../../rtcdp/partner-data/prospecting.md)</li><li>[Personalizzazione in loco](../../rtcdp/partner-data/onsite-personalization.md)</li><li>[Integrare i profili di prime parti](../../rtcdp/partner-data/supplement-first-party-profiles.md)</li><li>[Attiva i tipi di pubblico potenziali](../../destinations/ui/activate-prospect-audiences.md)</li></ul> |
 
 {style="table-layout:auto"}
 
-Per ulteriori informazioni, leggere [Panoramica di Real-Time CDP](../../rtcdp/overview.md).
+Per ulteriori informazioni, leggere la [panoramica di Real-Time CDP](../../rtcdp/overview.md).
 
 ## Controllo degli accessi basato su attributi {#abac}
 
@@ -54,11 +54,11 @@ Tramite il controllo dell’accesso basato su attributi, gli amministratori dell
 
 | Funzione | Descrizione |
 | --- | --- |
-| Configurazione sandbox dei criteri di autorizzazione | Il nuovo [configurazione sandbox dei criteri di autorizzazione](../../access-control/abac/ui/policies.md) Questa funzione ti consente di applicare un criterio di controllo dell’accesso basato su attributi su tutte le sandbox o su un numero selezionato di sandbox, a seconda delle tue esigenze e dei tuoi requisiti. |
+| Configurazione sandbox dei criteri di autorizzazione | La nuova funzionalità di configurazione della sandbox per [criteri di autorizzazione](../../access-control/abac/ui/policies.md) consente di applicare un criterio di controllo dell&#39;accesso basato su attributi a tutte le sandbox o a un numero selezionato di sandbox, a seconda delle esigenze e dei requisiti. |
 
 {style="table-layout:auto"}
 
-Per ulteriori informazioni sul controllo degli accessi basato su attributi, vedere [panoramica sul controllo degli accessi basato su attributi](../../access-control/abac/overview.md). Per una guida completa sul flusso di lavoro di controllo degli accessi basato su attributi, leggi [guida end-to-end per il controllo degli accessi basato su attributi](../../access-control/abac/end-to-end-guide.md).
+Per ulteriori informazioni sul controllo degli accessi basato su attributi, vedere la [panoramica sul controllo degli accessi basato su attributi](../../access-control/abac/overview.md). Per una guida completa sul flusso di lavoro di controllo degli accessi basato su attributi, leggere la [guida end-to-end per il controllo degli accessi basato su attributi](../../access-control/abac/end-to-end-guide.md).
 
 ## Dashboard {#dashboards}
 
@@ -68,7 +68,7 @@ Adobe Experience Platform fornisce più dashboard attraverso le quali è possibi
 
 | Funzione | Descrizione |
 | --- | --- |
-| Caso di utilizzo: analisi del consenso e tracciamento | Scopri come creare una dashboard del consenso per vari casi d’uso di marketing per i dati di Real-Time CDP con [analisi del consenso e documento di tracciamento](../../dashboards/insights-use-cases/consent-analysis.md). Descrive come creare un pubblico con gli attributi appropriati per le tue esigenze aziendali e quindi utilizzare le informazioni tramite l’utilizzo di widget preconfigurati nell’interfaccia utente di Adobe Experience Platform. Fornisce inoltre istruzioni su come creare widget personalizzati con la funzione delle dashboard definite dall’utente. Il documento illustra la tendenza del consenso e i casi di utilizzo di sovrapposizione del consenso. |
+| Caso di utilizzo: analisi del consenso e tracciamento | Scopri come creare un dashboard di consenso per vari casi di utilizzo di marketing per i dati di Real-Time CDP con il [documento di analisi e tracciamento del consenso](../../dashboards/insights-use-cases/consent-analysis.md). Descrive come creare un pubblico con gli attributi appropriati per le tue esigenze aziendali e quindi utilizzare le informazioni tramite l’utilizzo di widget preconfigurati nell’interfaccia utente di Adobe Experience Platform. Fornisce inoltre istruzioni su come creare widget personalizzati con la funzione delle dashboard definite dall’utente. Il documento illustra la tendenza del consenso e i casi di utilizzo di sovrapposizione del consenso. |
 
 {style="table-layout:auto"}
 
@@ -82,11 +82,11 @@ Adobe Experience Platform fornisce una suite di tecnologie che consente di racco
 
 | Tipo | Funzione | Descrizione |
 | --- | --- | --- |
-| Tag e inoltro eventi | [Tag Experience Platform (Cina)](/help/tags/ui/publishing/premium-cdn.md) | La nuova funzione Tag di Experience Platform (Cina) migliora l’affidabilità e la latenza del sito web, consentendo tempi di risposta più rapidi per i clienti che distribuiscono i tag sui siti web in Cina. I clienti ora possono utilizzare il codice JavaScript nella libreria Tag durante l’implementazione di siti web in Cina. Questa funzione è stata aggiunta anche al protocollo UPP (Unified Provisioning Protocol), per consentire l’implementazione automatica del prodotto dopo l’acquisto. |
+| Tag e inoltro eventi | [Tag Experienci Platform (Cina)](/help/tags/ui/publishing/premium-cdn.md) | La nuova funzione Tag di Experience Platform (Cina) migliora l’affidabilità e la latenza del sito web, consentendo tempi di risposta più rapidi per i clienti che distribuiscono i tag sui siti web in Cina. I clienti ora possono utilizzare il codice JavaScript nella libreria Tag per implementare siti web in Cina. Questa funzione è stata aggiunta anche al protocollo UPP (Unified Provisioning Protocol), per consentire l’implementazione automatica del prodotto dopo l’acquisto. |
 
 {style="table-layout:auto"}
 
-Per ulteriori informazioni, leggere [panoramica delle raccolte dati](../../tags/home.md).
+Per ulteriori informazioni, leggere la [panoramica delle raccolte dati](../../tags/home.md).
 
 ## Acquisizione dei dati {#data-ingestion}
 
@@ -98,7 +98,7 @@ Adobe Experience Platform offre un set completo di funzioni per acquisire qualsi
 | --- | --- |
 | Modifiche ai flussi di lavoro di acquisizione dati | Le righe di dati contenenti valori superiori al tipo di dati specificato (ad esempio, dati lunghi passati come tipo di dati integer) verranno ora rifiutate e verranno segnalati messaggi di errore. In precedenza, queste righe venivano rifiutate senza preavviso. |
 
-Per ulteriori informazioni, leggere [panoramica sull’acquisizione dei dati](../../ingestion/home.md).
+Per ulteriori informazioni, consulta la [panoramica sull’acquisizione dei dati](../../ingestion/home.md).
 
 ## Preparazione dei dati {#data-prep}
 
@@ -112,7 +112,7 @@ La preparazione dei dati consente ai data engineer di mappare, trasformare e con
 
 {style="table-layout:auto"}
 
-Per ulteriori informazioni, leggere [Panoramica sulla preparazione dati](../../data-prep/home.md).
+Per ulteriori informazioni, leggere la [Panoramica sulla preparazione dati](../../data-prep/home.md).
 
 ## Destinazioni {#destinations}
 
@@ -120,8 +120,8 @@ Per ulteriori informazioni, leggere [Panoramica sulla preparazione dati](../../d
 
 **Funzionalità nuove o aggiornate** {#destinations-new-updated-functionality}
 
-- Ora puoi [attivare i tipi di pubblico potenziali](../../destinations/ui/activate-prospect-audiences.md) nelle destinazioni di archiviazione cloud.
-- Il generale [guardrail di attivazione](../../destinations/guardrails.md#general-activation-guardrails) di un massimo di 100 destinazioni per sandbox è stato aggiornato a _limite rigido_.
+- Ora puoi [attivare i tipi di pubblico potenziali](../../destinations/ui/activate-prospect-audiences.md) nelle destinazioni dell&#39;archiviazione cloud.
+- Il [guardrail di attivazione](../../destinations/guardrails.md#general-activation-guardrails) generale con un massimo di 100 destinazioni per sandbox è stato aggiornato a _limite rigido_.
 
 Per informazioni più generali sulle destinazioni, consulta la [panoramica sulle destinazioni](../../destinations/home.md).
 
@@ -133,7 +133,7 @@ XDM è una specifica open-source che fornisce strutture e definizioni comuni (sc
 
 | Tipo di componente | Nome | Descrizione |
 | --- | --- | --- |
-| Classe | [[!UICONTROL Profilo individuale potenziale cliente XDM]](https://github.com/adobe/xdm/pull/1758/files) | Utilizza questa classe per inserire profili di potenziali clienti provenienti dai casi d’uso più complessi dei fornitori di dati per l’acquisizione clienti. Consulta la sezione [[!UICONTROL Profilo potenziale individuale XDM]](../../xdm/classes/prospect.md) per visualizzare esempi e ulteriori informazioni. |
+| Classe | [[!UICONTROL Profilo individuale potenziale cliente XDM]](https://github.com/adobe/xdm/pull/1758/files) | Utilizza questa classe per inserire profili di potenziali clienti provenienti dai casi d’uso più complessi dei fornitori di dati per l’acquisizione di clienti. Per ulteriori informazioni e esempi, consulta la documentazione di [[!UICONTROL XDM Individual Prospect Profile]](../../xdm/classes/prospect.md). |
 
 {style="table-layout:auto"}
 
@@ -141,12 +141,12 @@ XDM è una specifica open-source che fornisce strutture e definizioni comuni (sc
 
 | Tipo di componente | Nome | Descrizione aggiornamento |
 | --- | --- | --- |
-| Estensione ([!UICONTROL Estensione completa Adobe Analytics ExperienceEvent]) | [[!UICONTROL Dati contestuali]](https://github.com/adobe/xdm/pull/1761/files) | [!UICONTROL Dati contestuali] oggetto mappa aggiunto a [!UICONTROL Estensione completa Adobe Analytics ExperienceEvent] per fornire dati contestuali per Adobe Analytics. |
-| Gruppo di campi | Multiplo | Vari campi aggiunti a [[!UICONTROL Dettagli segmento evento arricchito]](https://github.com/adobe/xdm/pull/1760/files). |
+| Estensione ([!UICONTROL Estensione completa Adobe Analytics ExperienceEvent]) | [[!UICONTROL Dati contestuali]](https://github.com/adobe/xdm/pull/1761/files) | [!UICONTROL Dati contestuali] ha aggiunto l&#39;oggetto mappa a [!UICONTROL Estensione completa Adobe Analytics ExperienceEvent] per fornire i dati contestuali per Adobe Analytics. |
+| Gruppo di campi | Multiplo | Diversi campi aggiunti a [[!UICONTROL Dettagli segmento evento arricchito]](https://github.com/adobe/xdm/pull/1760/files). |
 
 {style="table-layout:auto"}
 
-Per ulteriori informazioni, leggere [Panoramica del sistema XDM](../../xdm/home.md).
+Per ulteriori informazioni, leggere la [Panoramica del sistema XDM](../../xdm/home.md).
 
 ## Identity Service {#identity-service}
 
@@ -158,7 +158,7 @@ Adobe Experience Platform Identity Service offre una panoramica completa della c
 | --- | --- |
 | Modifiche ai limiti del grafo delle identità | Entro la fine di settembre, il grafo delle identità passerà a 50 identità per grafo, e verrà acquisita l’identità più recente. Di conseguenza, l’identità meno recente verrà eliminata in base alla marca temporale e al tipo di identità dell’acquisizione, e i tipi di identità dei cookie verranno eliminati per primi. Oggi, i grafici delle identità hanno un limite di 150 identità per grafico e, una volta raggiunto questo limite, i grafici non vengono più aggiornati. Contatta il rappresentante del tuo account per richiedere una modifica del tipo di identità se la sandbox di produzione contiene: <ul><li>uno spazio dei nomi personalizzato in cui gli identificatori della persona (come gli ID del sistema di gestione delle relazioni con i clienti) sono configurati come tipo di identità cookie/dispositivo.</li><li>uno spazio dei nomi personalizzato in cui gli identificatori cookie/dispositivo sono configurati come tipo di identità tra dispositivi.</li></ul> Queste richieste verranno elaborate manualmente da Adobe Engineering. Per ulteriori informazioni, leggere [guardrail per i dati del servizio Identity](../../identity-service/guardrails.md). |
 
-Per ulteriori informazioni, leggere [Panoramica del servizio Identity](../../identity-service/home.md).
+Per ulteriori informazioni, leggere la [Panoramica del servizio Identity](../../identity-service/home.md).
 
 ## Servizio di segmentazione {#segmentation}
 
@@ -168,11 +168,11 @@ Per ulteriori informazioni, leggere [Panoramica del servizio Identity](../../ide
 
 | Funzione | Descrizione |
 | --- | --- |
-| Tipi di pubblico simili (disponibilità limitata) | I tipi di pubblico simili forniscono informazioni intelligenti su ciascun pubblico, sfruttando informazioni basate sull’apprendimento automatico per identificare e indirizzare i clienti di alto valore con le campagne di marketing. Con i tipi di pubblico simili, puoi creare tipi di pubblico espansi per rivolgerti a clienti con prestazioni simili a quelle dei tuoi tipi di pubblico con prestazioni migliori, oppure rivolgerti a clienti simili ai tipi di pubblico convertiti in precedenza. Per ulteriori informazioni sui tipi di pubblico simili, consulta [Panoramica sui tipi di pubblico simili](../../segmentation/ui/lookalike-audiences.md). |
+| Tipi di pubblico simili (disponibilità limitata) | I tipi di pubblico simili forniscono informazioni intelligenti su ciascun pubblico, sfruttando informazioni basate sull’apprendimento automatico per identificare e indirizzare i clienti di alto valore con le campagne di marketing. Con i tipi di pubblico simili, puoi creare tipi di pubblico espansi per rivolgerti a clienti con prestazioni simili a quelle dei tuoi tipi di pubblico con prestazioni migliori, oppure rivolgerti a clienti simili ai tipi di pubblico convertiti in precedenza. Per ulteriori informazioni sui tipi di pubblico per similarità, leggere la [Panoramica sui tipi di pubblico per similarità](../../segmentation/ui/lookalike-audiences.md). |
 
 {style="table-layout:auto"}
 
-Per ulteriori informazioni, leggere [Panoramica sulla segmentazione](../../segmentation/home.md).
+Per ulteriori informazioni, leggere la [Panoramica sulla segmentazione](../../segmentation/home.md).
 
 ## Origini {#sources}
 
@@ -182,10 +182,10 @@ Experience Platform fornisce un’API RESTful e un’interfaccia utente interatt
 
 | Funzione | Descrizione |
 | --- | --- |
-| Disponibilità generale di [!DNL SugarCRM] | [!DNL SugarCRM] Le origini sono ora disponibili. Utilizza le origini [!DNL SugarCRM Accounts & Contacts] e [!DNL SugarCRM Events] per importare i dati dal tuo account [!DNL SugarCRM] su Experience Platform. Per ulteriori informazioni, consulta la [[!DNL SugarCRM] panoramica](../../sources/connectors/crm/sugarcrm.md). |
-| Supporto per l’acquisizione su richiesta di flussi di dati di origini nell’interfaccia utente | Ora puoi creare un flusso eseguito su richiesta per un flusso di dati di origini esistenti nell’interfaccia utente. Per ulteriori informazioni, consulta la guida su [creazione di un’esecuzione del flusso su richiesta per le origini utilizzando l’interfaccia utente](../../sources/tutorials/ui/on-demand-ingestion.md). |
-| Supporto per nuovi `correlationID` campo per Adobe Analytics | Il campo `_experience.decisioning.propositions.scopeDetails.correlationID` è ora disponibile nello schema del connettore sorgente di Adobe Analytics. Questo campo viene utilizzato a supporto delle classificazioni A4T e verrà popolato a partire da settembre 2023. |
+| Disponibilità generale di [!DNL SugarCRM] | [!DNL SugarCRM] origini sono ora disponibili. Utilizza le origini [!DNL SugarCRM Accounts & Contacts] e [!DNL SugarCRM Events] per importare i dati dal tuo account [!DNL SugarCRM] su Experience Platform. Per ulteriori informazioni, consulta la [[!DNL SugarCRM] panoramica](../../sources/connectors/crm/sugarcrm.md). |
+| Supporto per l’acquisizione su richiesta di flussi di dati di origini nell’interfaccia utente | Ora puoi creare un flusso eseguito su richiesta per un flusso di dati di origini esistenti nell’interfaccia utente. Per ulteriori informazioni, leggere la guida in [creazione di un&#39;esecuzione del flusso su richiesta per le origini tramite l&#39;interfaccia utente](../../sources/tutorials/ui/on-demand-ingestion.md). |
+| Supporto per il nuovo campo `correlationID` per Adobe Analytics | Il campo `_experience.decisioning.propositions.scopeDetails.correlationID` è ora disponibile nello schema del connettore sorgente di Adobe Analytics. Questo campo viene utilizzato a supporto delle classificazioni A4T e verrà popolato a partire da settembre 2023. |
 
 {style="table-layout:auto"}
 
-Per ulteriori informazioni, leggere [panoramica sulle origini](../../sources/home.md).
+Per ulteriori informazioni, leggere la [panoramica delle origini](../../sources/home.md).

@@ -15,23 +15,23 @@ ht-degree: 2%
 
 ## Panoramica {#overview}
 
-Adobe Experience Platform utilizza [segmentazione Edge](../../segmentation/ui/edge-segmentation.md) insieme a [destinazioni edge](/help/destinations/destination-types.md#edge-personalization-destinations) per consentire ai clienti di creare e indirizzare il pubblico su larga scala, in tempo reale. Questa funzionalità consente di configurare casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva.
+Adobe Experience Platform utilizza [la segmentazione Edge](../../segmentation/ui/edge-segmentation.md) insieme a [destinazioni Edge](/help/destinations/destination-types.md#edge-personalization-destinations) per consentire ai clienti di creare e indirizzare tipi di pubblico su larga scala, in tempo reale. Questa funzionalità consente di configurare casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva.
 
-Esempi di destinazioni Edge sono [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) e [Personalizzazione personalizzata](../../destinations/catalog/personalization/custom-personalization.md) connessioni.
+Esempi di destinazioni Edge sono le connessioni [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) e [Personalizzazione personalizzata](../../destinations/catalog/personalization/custom-personalization.md).
 
 >[!NOTE]
 >
->Quando [configurazione della connessione Adobe Target](../catalog/personalization/adobe-target-connection.md) *senza* utilizzando un ID dello stream di dati, i casi d’uso descritti in questo articolo non sono supportati. In assenza di uno stream di dati, sono supportati solo i casi di utilizzo di personalizzazione della sessione successiva.
+>Quando [si configura la connessione Adobe Target](../catalog/personalization/adobe-target-connection.md) *senza* utilizzando un ID dello stream di dati, i casi d&#39;uso descritti in questo articolo non sono supportati. In assenza di uno stream di dati, sono supportati solo i casi di utilizzo di personalizzazione della sessione successiva.
 
 >[!IMPORTANT]
 > 
-> * Per attivare i dati e abilitare [passaggio di mappatura](#mapping) del flusso di lavoro, è necessario **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions).
-> * Per attivare i dati senza passare attraverso [passaggio di mappatura](#mapping) del flusso di lavoro, è necessario **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attiva segmento senza mappatura]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions).
->* Per esportare *identità*, è necessario **[!UICONTROL Visualizza grafico delle identità]** [autorizzazione per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
+> * Per attivare i dati e abilitare il [passaggio di mappatura](#mapping) del flusso di lavoro, sono necessari **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attiva destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizza segmenti]** [Autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions).
+> * Per attivare i dati senza passare attraverso il [passaggio di mappatura](#mapping) del flusso di lavoro, è necessario **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attiva segmento senza mappatura]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizza segmenti]** [Autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions).
+>* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL Visualizza grafo identità]** [Controllo di accesso](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 > 
-> Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
+> Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Questo articolo spiega il flusso di lavoro necessario per attivare i tipi di pubblico nelle destinazioni edge di Adobe Experience Platform. Se usato insieme a [segmentazione Edge](../../segmentation/ui/edge-segmentation.md) e l’ [mappatura attributi profilo](#mapping), queste destinazioni abilitano i casi d’uso per la personalizzazione della stessa pagina e della pagina successiva nelle tue proprietà web e mobili.
+Questo articolo spiega il flusso di lavoro necessario per attivare i tipi di pubblico nelle destinazioni edge di Adobe Experience Platform. Se utilizzate insieme alla [segmentazione Edge](../../segmentation/ui/edge-segmentation.md) e alla mappatura facoltativa degli attributi del profilo [](#mapping), queste destinazioni consentono casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva nelle proprietà Web e mobile.
 
 Per una breve panoramica su come configurare la connessione Adobe Target per la personalizzazione Edge, guarda il video seguente.
 
@@ -47,15 +47,15 @@ Per una breve panoramica su come condividere tipi di pubblico e attributi di pro
 
 ## Casi d’uso {#use-cases}
 
-Utilizza soluzioni di personalizzazione di Adobe, come Adobe Target, o piattaforme partner di personalizzazione (ad esempio, [!DNL Optimizely], [!DNL Pega]), nonché sistemi proprietari (ad esempio, CMS interno) per fornire ai clienti un&#39;esperienza di personalizzazione più approfondita tramite [Personalization personalizzato](../catalog/personalization/custom-personalization.md) destinazione. Tutto questo sfruttando anche le funzionalità di raccolta dati e segmentazione di Experience Platform Edge Network.
+Utilizza le soluzioni di personalizzazione di Adobe, come Adobe Target, o le tue piattaforme partner di personalizzazione (ad esempio, [!DNL Optimizely], [!DNL Pega]), nonché i sistemi proprietari (ad esempio, CMS interno) per fornire ai clienti un&#39;esperienza di personalizzazione più approfondita tramite la destinazione [Personalization](../catalog/personalization/custom-personalization.md) personalizzata. Tutto questo sfruttando anche le funzionalità di raccolta dati e segmentazione di Experience Platform Edge Network.
 
 I casi d’uso descritti di seguito includono sia la personalizzazione del sito che la pubblicità mirata nel sito.
 
-Per abilitare questi casi d’uso, i clienti necessitano di un modo rapido e semplice per recuperare da Experience Platform informazioni su tipi di pubblico e attributi di profilo e per inviarle all’utente [Adobe Target](../catalog/personalization/adobe-target-connection.md) o [Personalization personalizzato](../catalog/personalization/custom-personalization.md) nell&#39;interfaccia utente di Experience Platform.
+Per abilitare questi casi d&#39;uso, i clienti hanno bisogno di un modo rapido e semplificato per recuperare da Experience Platform informazioni sia sui tipi di pubblico che sugli attributi del profilo e per inviarle alle connessioni [Adobe Target](../catalog/personalization/adobe-target-connection.md) o [Custom Personalization](../catalog/personalization/custom-personalization.md) nell&#39;interfaccia utente di Experience Platform.
 
 ### Personalizzazione della stessa pagina {#same-page}
 
-Un utente visita una pagina del sito web. Puoi utilizzare le informazioni sulla visita della pagina corrente (ad esempio, URL di riferimento, lingua del browser, informazioni sul prodotto incorporate) per selezionare l’azione o la decisione successiva (ad esempio, personalizzazione) utilizzando [Personalizzazione personalizzata](../catalog/personalization/custom-personalization.md) connessione per piattaforme non Adobi (ad esempio, [!DNL Pega], [!DNL Optimizely] o altri.).
+Un utente visita una pagina del sito web. Puoi utilizzare le informazioni sulla visita della pagina corrente (ad esempio, URL di riferimento, lingua del browser, informazioni sul prodotto incorporate) per selezionare l&#39;azione o la decisione successiva (ad esempio, personalizzazione) utilizzando la connessione [Personalizzazione personalizzata](../catalog/personalization/custom-personalization.md) per piattaforme non Adobi (ad esempio, [!DNL Pega], [!DNL Optimizely] o altre).
 
 ### Personalizzazione della pagina successiva {#next-page}
 
@@ -77,37 +77,37 @@ Un’azienda di noleggio e vendita di immobili vuole personalizzare la propria p
 
 Il primo passaggio nella configurazione della destinazione di personalizzazione consiste nel configurare uno stream di dati per l’SDK per web di Experience Platform. Questa operazione viene eseguita nell’interfaccia utente di Data Collection.
 
-Durante la configurazione dello stream di dati, in **[!UICONTROL Adobe Experience Platform]** assicurati che entrambi **[!UICONTROL Segmentazione di Edge]** e **[!UICONTROL Destinazioni Personalization]** sono selezionati.
+Durante la configurazione dello stream di dati, in **[!UICONTROL Adobe Experience Platform]** assicurati che siano selezionate sia **[!UICONTROL Segmentazione Edge]** che **[!UICONTROL Destinazioni Personalization]**.
 
 >[!TIP]
 >
->A partire dalla versione di aprile 2024, non è necessario selezionare la casella di controllo Segmentazione di Edge quando [configurazione della connessione ad Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md). In questo caso, [personalizzazione della sessione successiva](#next-session) è l’unico caso di utilizzo di personalizzazione disponibile.
+>A partire dalla versione di aprile 2024, non è necessario selezionare la casella di controllo Segmentazione di Edge durante la [configurazione della connessione ad Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md). In questo caso, [personalizzazione della sessione successiva](#next-session) è l&#39;unico caso d&#39;uso di personalizzazione disponibile.
 
-![Configurazione dello stream di dati con Segmentazione Edge e Destinazioni Personalization evidenziate.](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
+![Configurazione dello stream di dati con segmentazione Edge e destinazioni Personalization evidenziate!](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
-Per ulteriori informazioni su come impostare un flusso di dati, segui le istruzioni descritte nella sezione [Documentazione di Platform Web SDK](../../datastreams/configure.md#aep).
+Per ulteriori dettagli sulla configurazione di un flusso di dati, seguire le istruzioni descritte nella [documentazione di Platform Web SDK](../../datastreams/configure.md#aep).
 
-### Creare un [!DNL Active-On-Edge] criterio di unione {#create-merge-policy}
+### Crea un criterio di unione [!DNL Active-On-Edge] {#create-merge-policy}
 
-Dopo aver creato la connessione di destinazione, è necessario creare un [!DNL Active-On-Edge] criterio di unione. Il [!DNL Active-On-Edge] criterio di unione per garantire che i tipi di pubblico vengano valutati costantemente [sul bordo](../../segmentation/ui/edge-segmentation.md) e sono disponibili per i casi di utilizzo di personalizzazione in tempo reale e nella pagina successiva.
+Dopo aver creato la connessione di destinazione, è necessario creare un criterio di unione [!DNL Active-On-Edge]. Il criterio di unione [!DNL Active-On-Edge] garantisce che i tipi di pubblico vengano valutati costantemente [sul server Edge](../../segmentation/ui/edge-segmentation.md) e siano disponibili per casi di utilizzo di personalizzazione in tempo reale e nella pagina successiva.
 
 >[!IMPORTANT]
 >
->Attualmente, le destinazioni Edge supportano solo l’attivazione di tipi di pubblico che utilizzano [Criterio di unione Attivo su Edge](../../segmentation/ui/segment-builder.md#merge-policies) impostato come predefinito. Se mappi tipi di pubblico che utilizzano un criterio di unione diverso su destinazioni edge, tali tipi di pubblico non verranno valutati.
+>Attualmente, le destinazioni Edge supportano solo l&#39;attivazione di tipi di pubblico che utilizzano il [Criterio di unione attivo su Edge](../../segmentation/ui/segment-builder.md#merge-policies) impostato come predefinito. Se mappi tipi di pubblico che utilizzano un criterio di unione diverso su destinazioni edge, tali tipi di pubblico non verranno valutati.
 
-Segui le istruzioni su [creazione di un criterio di unione](../../profile/merge-policies/ui-guide.md#create-a-merge-policy), e assicurati di abilitare **[!UICONTROL Criterio di unione Attivo su Edge]** attivare/disattivare.
+Segui le istruzioni relative alla [creazione di un criterio di unione](../../profile/merge-policies/ui-guide.md#create-a-merge-policy) e assicurati di attivare/disattivare il criterio di unione **[!UICONTROL Attivo su Edge]**.
 
 ### Creare un nuovo pubblico in Platform {#create-audience}
 
-Dopo aver creato [!DNL Active-On-Edge] criterio di unione, devi creare un nuovo pubblico in Platform.
+Dopo aver creato il criterio di unione [!DNL Active-On-Edge], è necessario creare un nuovo pubblico in Platform.
 
-Segui le [audience builder](../../segmentation/ui/segment-builder.md) per creare il nuovo pubblico e assicurati di [assegnarlo](../../segmentation/ui/segment-builder.md#merge-policies) il [!DNL Active-On-Edge] criterio di unione creato nel passaggio precedente.
+Segui la guida di [audience builder](../../segmentation/ui/segment-builder.md) per creare il nuovo pubblico e assicurati di [assegnargli](../../segmentation/ui/segment-builder.md#merge-policies) il criterio di unione [!DNL Active-On-Edge] creato nel passaggio precedente.
 
 ### Creare una connessione di destinazione {#connect-destination}
 
 Dopo aver configurato lo stream di dati, puoi iniziare a configurare la destinazione di personalizzazione.
 
-Segui le [tutorial sulla creazione della connessione di destinazione](../ui/connect-destination.md) per istruzioni dettagliate su come creare una nuova connessione di destinazione.
+Segui l&#39;esercitazione [creazione connessione di destinazione](../ui/connect-destination.md) per istruzioni dettagliate su come creare una nuova connessione di destinazione.
 
 A seconda della destinazione che stai configurando, consulta i seguenti articoli per i prerequisiti specifici per la destinazione e le relative informazioni:
 
@@ -118,43 +118,43 @@ A seconda della destinazione che stai configurando, consulta i seguenti articoli
 
 Dopo aver completato i prerequisiti, ora puoi selezionare la destinazione di personalizzazione Edge da utilizzare per la personalizzazione della stessa pagina e della pagina successiva.
 
-1. Vai a **[!UICONTROL Connessioni > Destinazioni]**, e seleziona la **[!UICONTROL Catalogo]** scheda.
+1. Vai a **[!UICONTROL Connessioni > Destinazioni]** e seleziona la scheda **[!UICONTROL Catalogo]**.
 
-   ![La scheda Catalogo di destinazione è evidenziata nell’interfaccia utente di Experience Platform.](../assets/ui/activate-edge-personalization-destinations/catalog-tab.png)
+   ![Scheda Catalogo di destinazione evidenziata nell&#39;interfaccia utente di Experience Platform.](../assets/ui/activate-edge-personalization-destinations/catalog-tab.png)
 
-1. Seleziona **[!UICONTROL Attiva tipi di pubblico]** sulla scheda corrispondente alla destinazione di personalizzazione in cui desideri attivare i tipi di pubblico, come illustrato nell’immagine seguente.
+1. Seleziona **[!UICONTROL Attiva tipi di pubblico]** sulla scheda corrispondente alla destinazione di personalizzazione in cui desideri attivare i tipi di pubblico, come illustrato nell&#39;immagine seguente.
 
-   ![Attiva il controllo del pubblico evidenziato su una scheda di destinazione nel catalogo.](../assets/ui/activate-edge-personalization-destinations/activate-audiences-button.png)
+   ![Attiva controllo del pubblico evidenziato in una scheda di destinazione nel catalogo.](../assets/ui/activate-edge-personalization-destinations/activate-audiences-button.png)
 
-1. Seleziona la connessione di destinazione da utilizzare per attivare i tipi di pubblico, quindi fai clic su **[!UICONTROL Successivo]**.
+1. Seleziona la connessione di destinazione da utilizzare per attivare i tipi di pubblico, quindi seleziona **[!UICONTROL Successivo]**.
 
-   ![Seleziona il passaggio di destinazione nel flusso di lavoro di attivazione.](../assets/ui/activate-edge-personalization-destinations/select-destination.png)
+   ![Selezionare il passaggio di destinazione nel flusso di lavoro di attivazione.](../assets/ui/activate-edge-personalization-destinations/select-destination.png)
 
-1. Passa alla sezione successiva a [seleziona i tipi di pubblico](#select-audiences).
+1. Passa alla sezione successiva per [selezionare il pubblico](#select-audiences).
 
 ## Seleziona i tipi di pubblico {#select-audiences}
 
-Utilizza le caselle di controllo a sinistra dei nomi del pubblico per selezionare i tipi di pubblico da attivare nella destinazione, quindi seleziona **[!UICONTROL Successivo]**.
+Utilizza le caselle di controllo a sinistra dei nomi del pubblico per selezionare i tipi di pubblico che desideri attivare nella destinazione, quindi seleziona **[!UICONTROL Successivo]**.
 
-Per selezionare i tipi di pubblico da attivare nella destinazione, utilizza le caselle di controllo a sinistra dei nomi dei tipi di pubblico, quindi seleziona **[!UICONTROL Successivo]**.
+Per selezionare i tipi di pubblico che si desidera attivare nella destinazione, utilizzare le caselle di controllo a sinistra dei nomi dei tipi di pubblico, quindi selezionare **[!UICONTROL Avanti]**.
 
 Puoi scegliere tra più tipi di pubblico, a seconda della loro origine:
 
-* **[!UICONTROL Servizio di segmentazione]**: tipi di pubblico generati all’interno di Experience Platform dal servizio di segmentazione. Consulta la [documentazione sulla segmentazione](../../segmentation/ui/overview.md) per ulteriori dettagli.
-* **[!UICONTROL Caricamento personalizzato]**: tipi di pubblico generati al di fuori di Experience Platform e caricati in Platform come file CSV. Per ulteriori informazioni sui tipi di pubblico esterni, consulta la documentazione su [importazione di un pubblico](../../segmentation/ui/audience-portal.md#import-audience).
-* Altri tipi di pubblico, derivanti da altre soluzioni di Adobe, quali [!DNL Audience Manager].
+* **[!UICONTROL Servizio di segmentazione]**: tipi di pubblico generati in Experience Platform dal servizio di segmentazione. Per ulteriori dettagli, consulta la [documentazione sulla segmentazione](../../segmentation/ui/overview.md).
+* **[!UICONTROL Caricamento personalizzato]**: pubblico generato al di fuori di Experience Platform e caricato in Platform come file CSV. Per ulteriori informazioni sui tipi di pubblico esterni, consulta la documentazione su [importazione di un pubblico](../../segmentation/ui/audience-portal.md#import-audience).
+* Altri tipi di pubblico, provenienti da altre soluzioni Adobe, ad esempio [!DNL Audience Manager].
 
-![Seleziona il passaggio del pubblico del flusso di lavoro di attivazione evidenziando diversi tipi di pubblico.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
+![Selezionare il passaggio dei tipi di pubblico del flusso di lavoro di attivazione evidenziando diversi tipi di pubblico.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
 
 ## Mappa attributi {#mapping}
 
 >[!IMPORTANT]
 >
->Gli attributi del profilo possono contenere dati sensibili. Per proteggere questi dati, è necessario **[!UICONTROL Personalization personalizzato]** La destinazione richiede l&#39;utilizzo di [API server Edge Network](../../server-api/overview.md) durante la configurazione della destinazione per la personalizzazione basata su attributi. Tutte le chiamate API server devono essere effettuate in un [contesto autenticato](../../server-api/authentication.md).
+>Gli attributi del profilo possono contenere dati sensibili. Per proteggere questi dati, la destinazione **[!UICONTROL Personalization]** personalizzata richiede l&#39;utilizzo dell&#39;[Edge Network Server API](../../server-api/overview.md) durante la configurazione della destinazione per la personalizzazione basata su attributi. Tutte le chiamate API server devono essere effettuate in un [contesto autenticato](../../server-api/authentication.md).
 >
-><br>Se utilizzi già Web SDK o Mobile SDK per l’integrazione, puoi recuperare gli attributi tramite l’API server aggiungendo un’integrazione lato server.
+><br>Se utilizzi già Web SDK o Mobile SDK per l&#39;integrazione, puoi recuperare gli attributi tramite l&#39;API server aggiungendo un&#39;integrazione lato server.
 >
-><br>Se non segui i requisiti di cui sopra, la personalizzazione sarà basata solo sull’iscrizione al pubblico.
+><br>Se non segui i requisiti di cui sopra, la personalizzazione sarà basata solo sull&#39;iscrizione al pubblico.
 
 Seleziona gli attributi in base ai quali desideri abilitare i casi di utilizzo di personalizzazione per i tuoi utenti. Ciò significa che se il valore di un attributo cambia o se un attributo viene aggiunto a un profilo, tale profilo diventa un membro del pubblico e viene attivato nella destinazione di personalizzazione.
 
@@ -164,47 +164,47 @@ L’aggiunta di attributi è facoltativa e puoi comunque procedere al passaggio 
 
 ### Seleziona attributi sorgente {#select-source-attributes}
 
-Per aggiungere attributi di origine, selezionare **[!UICONTROL Aggiungi nuovo campo]** controllo sul **[!UICONTROL Campo Source]** e cerca o passa al campo dell’attributo XDM desiderato, come mostrato di seguito.
+Per aggiungere gli attributi di origine, seleziona il controllo **[!UICONTROL Aggiungi nuovo campo]** nella colonna **[!UICONTROL Campo Source]** e cerca o passa al campo attributo XDM desiderato, come illustrato di seguito.
 
-![Registrazione su schermo che mostra come selezionare un attributo target nel passaggio di mappatura.](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-attribute.gif)
+![Registrazione schermata che mostra come selezionare un attributo di destinazione nel passaggio di mappatura.](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-attribute.gif)
 
 ### Seleziona attributi di destinazione {#select-target-attributes}
 
-Per aggiungere attributi di destinazione, selezionare **[!UICONTROL Aggiungi nuovo campo]** controllo sul **[!UICONTROL Campo di destinazione]** e digitare il nome dell&#39;attributo personalizzato a cui si desidera mappare l&#39;attributo di origine.
+Per aggiungere attributi di destinazione, selezionare il controllo **[!UICONTROL Aggiungi nuovo campo]** nella colonna **[!UICONTROL Campo di destinazione]** e digitare il nome dell&#39;attributo personalizzato a cui si desidera mappare l&#39;attributo di origine.
 
 >[!NOTE]
 >
->La selezione degli attributi di destinazione si applica solo al [Personalization personalizzato](../catalog/personalization/custom-personalization.md) flusso di lavoro di attivazione, per supportare la mappatura dei campi con nomi descrittivi nella piattaforma di destinazione.
+>La selezione degli attributi di destinazione si applica solo al flusso di lavoro di attivazione di [Personalization](../catalog/personalization/custom-personalization.md) personalizzato, per supportare la mappatura dei campi con nome descrittivo nella piattaforma di destinazione.
 
 ![Registrazione schermata che mostra come selezionare un attributo XDM nel passaggio di mappatura](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-target-attribute.gif)
 
 ## Pianificare l’esportazione del pubblico {#scheduling}
 
-Per impostazione predefinita, il [!UICONTROL Pianificazione del pubblico] Questa pagina mostra solo i tipi di pubblico appena selezionati che hai scelto nel flusso di attivazione corrente.
+Per impostazione predefinita, nella pagina [!UICONTROL Pianificazione pubblico] sono visualizzati solo i nuovi tipi di pubblico selezionati nel flusso di attivazione corrente.
 
-Per visualizzare tutti i tipi di pubblico attivati nella destinazione, utilizza l’opzione di filtro e disattiva il **[!UICONTROL Mostra solo i nuovi tipi di pubblico]** filtro.
+Per visualizzare tutti i tipi di pubblico attivati nella destinazione, utilizza l&#39;opzione di filtro e disabilita il filtro **[!UICONTROL Mostra solo nuovi tipi di pubblico]**.
 
-![Il filtro Tutti i tipi di pubblico è evidenziato.](../assets/ui/activate-edge-personalization-destinations/all-audiences.png)
+![Filtro Tutti i tipi di pubblico evidenziato.](../assets/ui/activate-edge-personalization-destinations/all-audiences.png)
 
-Il giorno **[!UICONTROL Pianificazione del pubblico]** , seleziona ogni pubblico, quindi utilizza la **[!UICONTROL Data di inizio]** e **[!UICONTROL Data di fine]** selettori per configurare l’intervallo di tempo per l’invio di dati alla destinazione.
+Nella pagina **[!UICONTROL Pianificazione pubblico]**, seleziona ogni pubblico, quindi utilizza i selettori **[!UICONTROL Data inizio]** e **[!UICONTROL Data fine]** per configurare l&#39;intervallo di tempo per l&#39;invio dei dati alla destinazione.
 
 ![Passaggio di pianificazione del pubblico del flusso di lavoro di attivazione con data di inizio e di fine evidenziate.](../assets/ui/activate-edge-personalization-destinations/audience-schedule.png)
 
-Seleziona **[!UICONTROL Successivo]** per passare al [!UICONTROL Revisione] pagina.
+Seleziona **[!UICONTROL Avanti]** per passare alla pagina [!UICONTROL Rivedi].
 
 ## Controlla {#review}
 
-Il giorno **[!UICONTROL Revisione]** pagina, è possibile visualizzare un riepilogo della selezione. Seleziona **[!UICONTROL Annulla]** per interrompere il flusso, **[!UICONTROL Indietro]** per modificare le impostazioni, oppure **[!UICONTROL Fine]** per confermare la selezione e iniziare a inviare dati alla destinazione.
+Nella pagina **[!UICONTROL Rivedi]** puoi visualizzare un riepilogo della selezione. Seleziona **[!UICONTROL Annulla]** per interrompere il flusso, **[!UICONTROL Indietro]** per modificare le impostazioni oppure **[!UICONTROL Fine]** per confermare la selezione e iniziare a inviare dati alla destinazione.
 
-![Riepilogo della selezione nel passaggio di revisione.](../assets/ui/activate-edge-personalization-destinations/review.png)
+![Riepilogo selezioni nel passaggio di revisione.](../assets/ui/activate-edge-personalization-destinations/review.png)
 
 ### Valutazione dei criteri di consenso {#consent-policy-evaluation}
 
-Se l’organizzazione ha acquistato **Adobe Healthcare Shield** o **Adobe Privacy &amp; Security Shield**, seleziona **[!UICONTROL Visualizza i criteri di consenso applicabili]** per vedere quali criteri di consenso vengono applicati e quanti profili vengono inclusi di conseguenza nell’attivazione. Ulteriori informazioni [valutazione dei criteri di consenso](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) per ulteriori informazioni.
+Se l’organizzazione ha acquistato **Adobe Healthcare Shield** o **Adobe Privacy &amp; Security Shield**, seleziona **[!UICONTROL Visualizza i criteri di consenso applicabili]** per vedere quali criteri di consenso vengono applicati e quanti profili vengono inclusi di conseguenza nell’attivazione. Leggi informazioni sulla [valutazione dei criteri di consenso](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) per ulteriori informazioni.
 
 ### Controlli dei criteri di utilizzo dei dati {#data-usage-policy-checks}
 
-In **[!UICONTROL Revisione]** step, Experience Platform controlla anche eventuali violazioni dei criteri di utilizzo dei dati. Di seguito è riportato un esempio di violazione di una policy. Non puoi completare il flusso di lavoro di attivazione del pubblico finché non hai risolto la violazione. Per informazioni su come risolvere le violazioni dei criteri, vedere [violazioni dei criteri di utilizzo dei dati](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) nella sezione documentazione sulla governance dei dati.
+Nel passaggio **[!UICONTROL Rivedi]**, Experience Platform controlla anche eventuali violazioni dei criteri di utilizzo dei dati. Di seguito è riportato un esempio di violazione di una policy. Non puoi completare il flusso di lavoro di attivazione del pubblico finché non hai risolto la violazione. Per informazioni su come risolvere le violazioni dei criteri, leggere le [violazioni dei criteri di utilizzo dei dati](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) nella sezione relativa alla governance dei dati.
 
 ![Esempio di violazione dei criteri per i dati.](../assets/common/data-policy-violation.png)
 

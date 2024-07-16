@@ -21,13 +21,13 @@ ht-degree: 36%
 >title="Ordini di lavoro recenti per ciclo di vita dei dati"
 >abstract="Questo widget mostra gli ultimi cinque ordini di lavoro relativi al ciclo di vita dei dati creati o aggiornati, a seconda dell’opzione selezionata in alto a destra. Per ulteriori informazioni sui processi relativi al ciclo di vita dei dati, seleziona **Ciclo di vita dei dati** nella barra di navigazione a sinistra."
 
-Il **[!UICONTROL Ciclo di vita dei dati]** Workspace nell’interfaccia utente di Adobe Experience Platform consente di creare e monitorare varie attività di gestione del ciclo di vita dei dati, inclusa l’eliminazione di record e la pianificazione delle scadenze dei set di dati.
+L&#39;area di lavoro **[!UICONTROL Ciclo di vita dati]** nell&#39;interfaccia utente di Adobe Experience Platform consente di creare e monitorare varie attività di gestione del ciclo di vita dei dati, inclusa l&#39;eliminazione di record e la pianificazione delle scadenze dei set di dati.
 
-Questa guida illustra come gestire le attività relative al ciclo di vita dei dati nell’interfaccia utente di Platform. Per informazioni su come eseguire queste attività utilizzando le chiamate API, consulta la [Guida dell’API di igiene dei dati](../api/overview.md).
+Questa guida illustra come gestire le attività relative al ciclo di vita dei dati nell’interfaccia utente di Platform. Per informazioni su come eseguire queste attività utilizzando le chiamate API, consulta la [Guida dell&#39;API di igiene dei dati](../api/overview.md).
 
-Per accedere al workspace, seleziona **Ciclo di vita dei dati** nel menu di navigazione a sinistra.
+Per accedere all&#39;area di lavoro, seleziona **Ciclo di vita dati** nell&#39;area di navigazione a sinistra.
 
-![Il [!UICONTROL Ciclo di vita dei dati] nell’interfaccia utente di Platform, con [!UICONTROL Ciclo di vita dei dati] evidenziato nella barra di navigazione a sinistra.](../images/ui/overview/home.png)
+![L&#39;area di lavoro [!UICONTROL Ciclo di vita dati] nell&#39;interfaccia utente di Platform, con [!UICONTROL Ciclo di vita dati] evidenziato nell&#39;area di navigazione a sinistra.](../images/ui/overview/home.png)
 
 Da qui è possibile sfogliare gli ordini di lavoro esistenti e configurare nuove operazioni del ciclo di vita dei dati. Per ulteriori informazioni, consulta le sezioni seguenti di questa guida:
 

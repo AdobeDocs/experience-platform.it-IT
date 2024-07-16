@@ -4,7 +4,7 @@ description: L’API di Reactor consente agli sviluppatori di gestire in modo pr
 exl-id: 153eab11-db08-499e-80d1-c56f254372ce
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1081'
+source-wordcount: '1079'
 ht-degree: 94%
 
 ---
@@ -117,7 +117,7 @@ L’endpoint `/search` fpermette di trovare le risorse che corrispondono a un da
 
 ## Segreti
 
-Un segreto contiene credenziali che consentono l&#39;autenticazione dell&#39;inoltro eventi in un altro sistema per lo scambio sicuro dei dati. Consulta la [guida ai segreti](./guides/secrets.md) per una panoramica sul funzionamento dei segreti nell’inoltro degli eventi e [guida dell’endpoint &quot;secrets&quot;](./endpoints/secrets.md) per scoprire come gestirli nell’API di Reactor.
+Un segreto contiene credenziali che consentono l&#39;autenticazione dell&#39;inoltro eventi in un altro sistema per lo scambio sicuro dei dati. Consulta la [guida dei segreti](./guides/secrets.md) per una panoramica sul funzionamento dei segreti nell&#39;inoltro degli eventi e la [guida dell&#39;endpoint dei segreti](./endpoints/secrets.md) per informazioni su come gestirli nell&#39;API di Reactor.
 
 ## Passaggi successivi
 

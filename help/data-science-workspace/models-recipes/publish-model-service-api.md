@@ -1,28 +1,28 @@
 ---
 keywords: Experience Platform;pubblicare un modello;Data Science Workspace;argomenti popolari;sensei machine learning api
 solution: Experience Platform
-title: Pubblicare un modello come servizio utilizzando l’API di apprendimento automatico di Sensei
+title: Publish a Model as a Service tramite l’API di apprendimento automatico di Sensei
 type: Tutorial
 description: Questo tutorial illustra il processo di pubblicazione di un modello come servizio utilizzando l’API di apprendimento automatico di Sensei.
 exl-id: f78b1220-0595-492d-9f8b-c3a312f17253
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '1516'
+source-wordcount: '1518'
 ht-degree: 2%
 
 ---
 
-# Pubblicare un modello come servizio utilizzando [!DNL Sensei Machine Learning API]
+# Publish un modello come servizio utilizzando [!DNL Sensei Machine Learning API]
 
-Questa esercitazione descrive il processo di pubblicazione di un modello come servizio utilizzando [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
+Questo tutorial descrive il processo di pubblicazione di un modello come servizio utilizzando [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
 
 ## Introduzione
 
-Questo tutorial richiede una buona conoscenza di Adobe Experience Platform Data Science Workspace. Prima di iniziare questo tutorial, controlla [Panoramica di Data Science Workspace](../home.md) per un’introduzione di alto livello al servizio.
+Questo tutorial richiede una buona conoscenza di Adobe Experience Platform Data Science Workspace. Prima di iniziare questo tutorial, controlla [Data Science Workspace overview](../home.md) per un&#39;introduzione di alto livello al servizio.
 
-Per seguire questa esercitazione, è necessario disporre di un motore ML esistente, di un&#39;istanza ML e di un esperimento. Per i passaggi su come crearli nell’API, consulta l’esercitazione su [importazione di una ricetta confezionata](./import-packaged-recipe-api.md).
+Per seguire questa esercitazione, è necessario disporre di un motore ML esistente, di un&#39;istanza ML e di un esperimento. Per i passaggi su come crearli nell&#39;API, consulta l&#39;esercitazione su [importazione di una ricetta in pacchetti](./import-packaged-recipe-api.md).
 
-Infine, prima di iniziare questo tutorial, controlla [introduzione](../api/getting-started.md) sezione della guida per gli sviluppatori per informazioni importanti che è necessario conoscere per effettuare correttamente chiamate al [!DNL Sensei Machine Learning] API, incluse le intestazioni richieste utilizzate in questa esercitazione:
+Infine, prima di iniziare questo tutorial, consulta la sezione [guida introduttiva](../api/getting-started.md) della guida per gli sviluppatori per informazioni importanti che devi conoscere per effettuare correttamente chiamate all&#39;API [!DNL Sensei Machine Learning], incluse le intestazioni richieste utilizzate in questo tutorial:
 
 - `{ACCESS_TOKEN}`
 - `{ORG_ID}`
@@ -38,7 +38,7 @@ La tabella seguente illustra alcuni termini comuni utilizzati in questa esercita
 
 | Termine | Definizione |
 | --- | --- |
-| **Istanza di apprendimento automatico (istanza ML)** | Un’istanza di un [!DNL Sensei] Motore per un determinato tenant, contenente dati, parametri e [!DNL Sensei] codice. |
+| **Istanza di Machine Learning (istanza ML)** | Istanza di un motore [!DNL Sensei] per un determinato tenant, contenente dati, parametri e codice [!DNL Sensei] specifici. |
 | **Esperimento** | Entità ombrello per l’esecuzione di esperimenti di formazione, il punteggio delle esecuzioni di esperimenti o entrambi. |
 | **Esperimento pianificato** | Termine che descrive l’automazione delle esecuzioni degli esperimenti di formazione o punteggio, gestito da una pianificazione definita dall’utente. |
 | **Esecuzione esperimento** | Un esempio particolare di addestramento o valutazione degli esperimenti. Le esecuzioni di più esperimenti di un particolare esperimento possono differire nei valori dei set di dati utilizzati per l’addestramento o il punteggio. |
@@ -86,7 +86,7 @@ curl -X POST
 | `trainingExperimentId` | Identificazione dell’esperimento corrispondente all’identificazione dell’istanza ML. |
 | `trainingExperimentRunId` | Una particolare esecuzione dell’esperimento di formazione da utilizzare per la pubblicazione del servizio ML. |
 | `scoringDataSetId` | Identificazione che fa riferimento al set di dati specifico da utilizzare per le esecuzioni dell’esperimento con punteggio pianificato. |
-| `scoringTimeframe` | Valore intero che rappresenta i minuti necessari per filtrare i dati da utilizzare per il punteggio delle esecuzioni degli esperimenti. Ad esempio, un valore di `10080` significa che i dati degli ultimi 10080 minuti o 168 ore verranno utilizzati per ogni esecuzione di esperimento con punteggio pianificato. Tieni presente che un valore di `0` non filtra i dati, tutti i dati all’interno del set di dati vengono utilizzati per il punteggio. |
+| `scoringTimeframe` | Valore intero che rappresenta i minuti necessari per filtrare i dati da utilizzare per il punteggio delle esecuzioni degli esperimenti. Ad esempio, un valore di `10080` indica che i dati degli ultimi 10080 minuti o 168 ore verranno utilizzati per ogni esecuzione di esperimento con punteggio pianificato. Tieni presente che un valore di `0` non filtrerà i dati, tutti i dati all&#39;interno del set di dati vengono utilizzati per il punteggio. |
 | `scoringSchedule` | Contiene dettagli relativi alle esecuzioni pianificate degli esperimenti con punteggio. |
 | `scoringSchedule.startTime` | Datetime che indica quando avviare il punteggio. |
 | `scoringSchedule.endTime` | Datetime che indica quando avviare il punteggio. |
@@ -94,7 +94,7 @@ curl -X POST
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce i dettagli del servizio ML appena creato, incluso il relativo univoco `id` e `scoringExperimentId` per l’esperimento con punteggio corrispondente.
+In caso di esito positivo, la risposta restituisce i dettagli del servizio ML appena creato, incluso il relativo `id` univoco e il `scoringExperimentId` per il corrispondente esperimento di punteggio.
 
 
 ```JSON
@@ -129,7 +129,7 @@ A seconda del caso d’uso e dei requisiti specifici, la creazione di un servizi
 
 ### Servizio ML con esperimento pianificato per il punteggio {#ml-service-with-scheduled-experiment-for-scoring}
 
-Puoi creare un servizio ML pubblicando un’istanza ML con esecuzioni di esperimenti pianificate per il punteggio, che creerà un’entità di esperimento ordinaria per l’apprendimento. Viene generata un’esecuzione dell’esperimento di formazione che verrà utilizzata per tutte le esecuzioni pianificate dell’esperimento con punteggio. Assicurati di avere `mlInstanceId`, `trainingDataSetId`, e `scoringDataSetId` necessari per la creazione del servizio ML, e che esistono e sono valori validi.
+Puoi creare un servizio ML pubblicando un’istanza ML con esecuzioni di esperimenti pianificate per il punteggio, che creerà un’entità di esperimento ordinaria per l’apprendimento. Viene generata un’esecuzione dell’esperimento di formazione che verrà utilizzata per tutte le esecuzioni pianificate dell’esperimento con punteggio. Verifica che siano presenti `mlInstanceId`, `trainingDataSetId` e `scoringDataSetId` necessari per la creazione del servizio ML e che esistano e siano valori validi.
 
 **Formato API**
 
@@ -166,9 +166,9 @@ curl -X POST
 | --- | --- |
 | `mlInstanceId` | Identificazione dell’istanza ML esistente, che rappresenta l’istanza ML utilizzata per creare il servizio ML. |
 | `trainingDataSetId` | Identificazione che si riferisce al set di dati specifico da utilizzare per l’esperimento di formazione. |
-| `trainingTimeframe` | Valore intero che rappresenta i minuti necessari per filtrare i dati da utilizzare per l’addestramento di Experiment. Ad esempio, un valore di `"10080"` significa che i dati degli ultimi 10080 minuti o 168 ore verranno utilizzati per l’esecuzione dell’esperimento di formazione. Tieni presente che un valore di `"0"` non filtra i dati, tutti i dati all’interno del set di dati vengono utilizzati per l’apprendimento. |
+| `trainingTimeframe` | Valore intero che rappresenta i minuti necessari per filtrare i dati da utilizzare per l’addestramento di Experiment. Ad esempio, un valore di `"10080"` indica che i dati degli ultimi 10080 minuti o 168 ore verranno utilizzati per l’esecuzione dell’esperimento di formazione. Tieni presente che un valore di `"0"` non filtrerà i dati; tutti i dati all&#39;interno del set di dati vengono utilizzati per l&#39;apprendimento. |
 | `scoringDataSetId` | Identificazione che fa riferimento al set di dati specifico da utilizzare per le esecuzioni dell’esperimento con punteggio pianificato. |
-| `scoringTimeframe` | Valore intero che rappresenta i minuti necessari per filtrare i dati da utilizzare per il punteggio delle esecuzioni degli esperimenti. Ad esempio, un valore di `"10080"` significa che i dati degli ultimi 10080 minuti o 168 ore verranno utilizzati per ogni esecuzione di esperimento con punteggio pianificato. Tieni presente che un valore di `"0"` non filtra i dati, tutti i dati all’interno del set di dati vengono utilizzati per il punteggio. |
+| `scoringTimeframe` | Valore intero che rappresenta i minuti necessari per filtrare i dati da utilizzare per il punteggio delle esecuzioni degli esperimenti. Ad esempio, un valore di `"10080"` indica che i dati degli ultimi 10080 minuti o 168 ore verranno utilizzati per ogni esecuzione di esperimento con punteggio pianificato. Tieni presente che un valore di `"0"` non filtrerà i dati, tutti i dati all&#39;interno del set di dati vengono utilizzati per il punteggio. |
 | `scoringSchedule` | Contiene dettagli relativi alle esecuzioni pianificate degli esperimenti con punteggio. |
 | `scoringSchedule.startTime` | Datetime che indica quando avviare il punteggio. |
 | `scoringSchedule.endTime` | Datetime che indica quando avviare il punteggio. |
@@ -176,7 +176,7 @@ curl -X POST
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce i dettagli del servizio ML appena creato. Questo include il servizio univoco `id`, nonché `trainingExperimentId` e `scoringExperimentId` per gli esperimenti di formazione e punteggio corrispondenti, rispettivamente.
+In caso di esito positivo, la risposta restituisce i dettagli del servizio ML appena creato. Ciò include l&#39;univoco del servizio `id`, nonché `trainingExperimentId` e `scoringExperimentId` per i relativi esperimenti di formazione e punteggio, rispettivamente.
 
 ```JSON
 {
@@ -243,9 +243,9 @@ curl -X POST 'https://platform.adobe.io/data/sensei/mlServices'
 | --- | --- |
 | `mlInstanceId` | Identificazione dell’istanza ML esistente, che rappresenta l’istanza ML utilizzata per creare il servizio ML. |
 | `trainingDataSetId` | Identificazione che si riferisce al set di dati specifico da utilizzare per l’esperimento di formazione. |
-| `trainingTimeframe` | Valore intero che rappresenta i minuti necessari per filtrare i dati da utilizzare per l’addestramento di Experiment. Ad esempio, un valore di `"10080"` significa che i dati degli ultimi 10080 minuti o 168 ore verranno utilizzati per l’esecuzione dell’esperimento di formazione. Tieni presente che un valore di `"0"` non filtra i dati, tutti i dati all’interno del set di dati vengono utilizzati per l’apprendimento. |
+| `trainingTimeframe` | Valore intero che rappresenta i minuti necessari per filtrare i dati da utilizzare per l’addestramento di Experiment. Ad esempio, un valore di `"10080"` indica che i dati degli ultimi 10080 minuti o 168 ore verranno utilizzati per l’esecuzione dell’esperimento di formazione. Tieni presente che un valore di `"0"` non filtrerà i dati; tutti i dati all&#39;interno del set di dati vengono utilizzati per l&#39;apprendimento. |
 | `scoringDataSetId` | Identificazione che fa riferimento al set di dati specifico da utilizzare per le esecuzioni dell’esperimento con punteggio pianificato. |
-| `scoringTimeframe` | Valore intero che rappresenta i minuti necessari per filtrare i dati da utilizzare per il punteggio delle esecuzioni degli esperimenti. Ad esempio, un valore di `"10080"` significa che i dati degli ultimi 10080 minuti o 168 ore verranno utilizzati per ogni esecuzione di esperimento con punteggio pianificato. Tieni presente che un valore di `"0"` non filtra i dati, tutti i dati all’interno del set di dati vengono utilizzati per il punteggio. |
+| `scoringTimeframe` | Valore intero che rappresenta i minuti necessari per filtrare i dati da utilizzare per il punteggio delle esecuzioni degli esperimenti. Ad esempio, un valore di `"10080"` indica che i dati degli ultimi 10080 minuti o 168 ore verranno utilizzati per ogni esecuzione di esperimento con punteggio pianificato. Tieni presente che un valore di `"0"` non filtrerà i dati, tutti i dati all&#39;interno del set di dati vengono utilizzati per il punteggio. |
 | `trainingSchedule` | Contiene dettagli relativi alle esecuzioni pianificate degli esperimenti di formazione. |
 | `scoringSchedule` | Contiene dettagli relativi alle esecuzioni pianificate degli esperimenti con punteggio. |
 | `scoringSchedule.startTime` | Datetime che indica quando avviare il punteggio. |
@@ -254,7 +254,7 @@ curl -X POST 'https://platform.adobe.io/data/sensei/mlServices'
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce i dettagli del servizio ML appena creato. Questo include il servizio univoco `id`, nonché `trainingExperimentId` e `scoringExperimentId` dei corrispondenti esperimenti di formazione e punteggio. Nell’esempio di risposta seguente, la presenza di `trainingSchedule` e `scoringSchedule` suggerisce che le entità esperimento per la formazione e il punteggio siano esperimenti pianificati.
+In caso di esito positivo, la risposta restituisce i dettagli del servizio ML appena creato. Questo include l&#39;univoco `id` del servizio, nonché `trainingExperimentId` e `scoringExperimentId` dei relativi esperimenti di formazione e punteggio, rispettivamente. Nella risposta di esempio seguente, la presenza di `trainingSchedule` e `scoringSchedule` suggerisce che le entità esperimento per l&#39;apprendimento e il punteggio sono esperimenti pianificati.
 
 ```JSON
 {
@@ -285,7 +285,7 @@ In caso di esito positivo, la risposta restituisce i dettagli del servizio ML ap
 
 ## Cercare un servizio ML {#retrieving-ml-services}
 
-È possibile cercare un servizio ML esistente effettuando una `GET` richiesta a `/mlServices` e fornendo il `id` del servizio ML nel percorso.
+Per cercare un servizio ML esistente, effettuare una richiesta `GET` a `/mlServices` e fornire l&#39;elemento `id` univoco del servizio ML nel percorso.
 
 **Formato API**
 
@@ -295,7 +295,7 @@ GET /mlServices/{SERVICE_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{SERVICE_ID}` | L&#39;unico `id` del servizio ML che stai cercando. |
+| `{SERVICE_ID}` | `id` univoco del servizio ML che stai cercando. |
 
 **Richiesta**
 
@@ -340,12 +340,12 @@ In caso di esito positivo, la risposta restituisce i dettagli del servizio ML.
 
 >[!NOTE]
 >
->Il recupero di diversi servizi ML può restituire una risposta con più o meno coppie chiave-valore. La risposta di cui sopra è una rappresentazione di [Servizio ML con esercitazioni pianificate e esecuzioni dell’esperimento di punteggio](#ml-service-with-scheduled-experiments-for-training-and-scoring).
+>Il recupero di diversi servizi ML può restituire una risposta con più o meno coppie chiave-valore. La risposta precedente è una rappresentazione di un servizio [ML con esecuzioni pianificate dell&#39;addestramento e del punteggio dell&#39;esperimento](#ml-service-with-scheduled-experiments-for-training-and-scoring).
 
 
 ## Pianificare l’apprendimento o il punteggio
 
-Se desideri pianificare il punteggio e l’addestramento su un servizio ML già pubblicato, puoi farlo aggiornando il servizio ML esistente con un `PUT` richiesta su `/mlServices`.
+Se si desidera pianificare il punteggio e l&#39;addestramento per un servizio ML già pubblicato, è possibile aggiornare il servizio ML esistente con una richiesta `PUT` in data `/mlServices`.
 
 **Formato API**
 
@@ -355,11 +355,11 @@ PUT /mlServices/{SERVICE_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{SERVICE_ID}` | L&#39;unico `id` del servizio ML che si sta aggiornando. |
+| `{SERVICE_ID}` | `id` univoco del servizio ML che si sta aggiornando. |
 
 **Richiesta**
 
-La richiesta seguente pianifica l’apprendimento e il punteggio per un servizio ML esistente aggiungendo il `trainingSchedule` e `scoringSchedule` chiavi con i rispettivi `startTime`, `endTime`, e `cron` tasti.
+La richiesta seguente pianifica l&#39;addestramento e il punteggio per un servizio ML esistente aggiungendo le chiavi `trainingSchedule` e `scoringSchedule` con le rispettive chiavi `startTime`, `endTime` e `cron`.
 
 ```SHELL
 curl -X PUT 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}' 
@@ -392,7 +392,7 @@ curl -X PUT 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}'
 
 >[!WARNING]
 >
->Non tentare di modificare `startTime` sui processi di formazione e punteggio pianificati esistenti. Se il `startTime` deve essere modificato, prova a pubblicare lo stesso modello e a ripianificare i processi di formazione e valutazione.
+>Non tentare di modificare `startTime` sui processi di formazione e punteggio pianificati esistenti. Se `startTime` deve essere modificato, è consigliabile pubblicare lo stesso modello e ripianificare i processi di formazione e valutazione.
 
 **Risposta**
 

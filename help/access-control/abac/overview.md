@@ -23,7 +23,7 @@ Utilizza questa funzionalità per etichettare i campi dello schema Experience Da
 
 >[!IMPORTANT]
 >
->Il controllo dell’accesso basato su attributi non deve essere confuso con le funzionalità di governance dei dati di Experience Platform, che consentono di utilizzare etichette e criteri per controllare il modo in cui i dati vengono utilizzati in Platform, anziché gli utenti dell’organizzazione che vi hanno accesso. Consulta la [panoramica sulla governance dei dati](../../data-governance/home.md) per ulteriori informazioni.
+>Il controllo dell’accesso basato su attributi non deve essere confuso con le funzionalità di governance dei dati di Experience Platform, che consentono di utilizzare etichette e criteri per controllare il modo in cui i dati vengono utilizzati in Platform, anziché gli utenti dell’organizzazione che vi hanno accesso. Per ulteriori informazioni, consulta la [panoramica sulla governance dei dati](../../data-governance/home.md).
 
 Tramite il controllo dell’accesso basato su attributi, gli amministratori dell’organizzazione possono controllare l’accesso degli utenti ai dati personali sensibili (SPD), alle informazioni personali (PII) e ai tipi di dati personalizzati in tutti i flussi di lavoro e le risorse di Platform. Gli amministratori possono definire ruoli utente con accesso solo a campi e dati specifici che corrispondono a tali campi.
 
@@ -55,11 +55,11 @@ Il controllo dell’accesso basato su attributi include i seguenti componenti:
 
 Autorizzazioni è l’area di Experience Cloud in cui gli amministratori possono definire i ruoli utente e i criteri di accesso per gestire le autorizzazioni di accesso per funzioni e oggetti all’interno di un’applicazione di prodotto.
 
-Tramite le Autorizzazioni, puoi creare e gestire i ruoli, nonché assegnare le autorizzazioni per le risorse desiderate per tali ruoli. Le autorizzazioni ti consentono inoltre di gestire le etichette, le sandbox e gli utenti associati a un ruolo specifico. Per ulteriori informazioni, vedere [Guida alle autorizzazioni](ui/browse.md).
+Tramite le Autorizzazioni, puoi creare e gestire i ruoli, nonché assegnare le autorizzazioni per le risorse desiderate per tali ruoli. Le autorizzazioni ti consentono inoltre di gestire le etichette, le sandbox e gli utenti associati a un ruolo specifico. Per ulteriori informazioni, vedere la [Guida alle autorizzazioni](ui/browse.md).
 
 ## API di controllo dell’accesso basata su attributi
 
-L’API di controllo degli accessi basata su attributi consente di gestire in modo programmatico ruoli, criteri e prodotti all’interno di Platform utilizzando le API. Per ulteriori informazioni, consulta la guida su [utilizzo dell’API per gestire le configurazioni di controllo dell’accesso basate su attributi](api/overview.md).
+L’API di controllo degli accessi basata su attributi consente di gestire in modo programmatico ruoli, criteri e prodotti all’interno di Platform utilizzando le API. Per ulteriori informazioni, consulta la guida su [utilizzo dell&#39;API per gestire le configurazioni di controllo dell&#39;accesso basate su attributi](api/overview.md).
 
 ## Controllo degli accessi basato su attributi in Adobe Experience Platform
 
@@ -67,25 +67,25 @@ Le sezioni seguenti forniscono informazioni su come il controllo degli accessi b
 
 ### Controllo degli accessi
 
-Piattaforma utilizza [Adobe Admin Console](https://adminconsole.adobe.com) ruoli per collegare gli utenti con autorizzazioni e sandbox. Le autorizzazioni controllano l’accesso a diverse funzionalità di Platform, tra cui la modellazione di dati, la gestione dei profili e l’amministrazione delle sandbox. Una volta che l’organizzazione è abilitata per il controllo degli accessi basato su attributi, puoi iniziare a utilizzare Autorizzazioni su Adobe Experience Cloud, anziché Ruoli in Adobe Admin Console, per gestire le autorizzazioni per gli utenti, le funzionalità, le etichette e altre risorse dell’organizzazione.
+Platform sfrutta i ruoli [Adobe Admin Console](https://adminconsole.adobe.com) per collegare gli utenti con autorizzazioni e sandbox. Le autorizzazioni controllano l’accesso a diverse funzionalità di Platform, tra cui la modellazione di dati, la gestione dei profili e l’amministrazione delle sandbox. Una volta che l’organizzazione è abilitata per il controllo degli accessi basato su attributi, puoi iniziare a utilizzare Autorizzazioni su Adobe Experience Cloud, anziché Ruoli in Adobe Admin Console, per gestire le autorizzazioni per gli utenti, le funzionalità, le etichette e altre risorse dell’organizzazione.
 
 La disponibilità del controllo degli accessi basato su attributi per i clienti che acquistano prodotti sanitari e/o scudi per la privacy è limitata. Le caratteristiche di questa funzionalità includono:
 
 * Interfaccia autorizzazioni: fornisce un’interfaccia che consente di definire ruoli utente, autorizzazioni e criteri per il controllo degli accessi basato su attributi.
 
-* Etichette: aggiungi, modifica e rimuovi etichette ai ruoli utente, ai campi dello schema, ai segmenti e ad altri oggetti supportati per sfruttare i criteri di controllo di accesso. **Nota:** Qualsiasi segmento che utilizza un attributo etichettato deve essere etichettato allo stesso modo se desideri che ad esso vengano applicate le stesse restrizioni di accesso.
+* Etichette: aggiungi, modifica e rimuovi etichette ai ruoli utente, ai campi dello schema, ai segmenti e ad altri oggetti supportati per sfruttare i criteri di controllo di accesso. **Nota:** Qualsiasi segmento che utilizza un attributo con etichetta deve essere etichettato allo stesso modo se desideri che ad esso vengano applicate le stesse restrizioni di accesso.
 
 I flussi di lavoro di amministrazione per tutte le applicazioni alimentate da Experienci Platform da Admin Console alla nuova interfaccia Autorizzazioni sono in fase di commutazione.
 
 >[!IMPORTANT]
 >
->Quando l’organizzazione è abilitata, i ruoli vengono migrati automaticamente all’interfaccia Autorizzazioni. I ruoli nell’Admin Console rimarranno invariati per il momento. Per favore **non** modifica i ruoli dopo l’abilitazione dell’organizzazione.
+>Quando l’organizzazione è abilitata, i ruoli vengono migrati automaticamente all’interfaccia Autorizzazioni. I ruoli nell’Admin Console rimarranno invariati per il momento. **non** modificare i ruoli dopo l&#39;abilitazione dell&#39;organizzazione.
 
-Per ulteriori informazioni sul controllo degli accessi, vedere [panoramica sul controllo degli accessi](../home.md).
+Per ulteriori informazioni sul controllo degli accessi, vedere la [panoramica sul controllo degli accessi](../home.md).
 
 ### Destinazioni {#destinations}
 
-[!DNL Destinations] sono integrazioni preconfigurate con piattaforme di destinazione che consentono l’attivazione fluida dei dati da Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
+[!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l&#39;attivazione diretta dei dati da Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 
 In qualità di amministratore, puoi utilizzare funzionalità di controllo dell’accesso basate su attributi per:
 
@@ -98,19 +98,19 @@ In qualità di amministratore, puoi utilizzare funzionalità di controllo dell�
 >
 >In sintesi, considera le seguenti implicazioni quando utilizzi le destinazioni e il controllo degli accessi basato su attributi:
 >
->* Puoi attivare solo i tipi di pubblico per i quali disponi dell’autorizzazione di accesso e visualizzazione [Audience Portal](/help/segmentation/ui/audience-portal.md#browse) e [seleziona passaggio segmento](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) del workflow di attivazione.
->* In [passaggio di mappatura del flusso di lavoro di attivazione](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping), è possibile visualizzare e selezionare per l&#39;attivazione solo i campi per i quali si dispone dell&#39;autorizzazione di accesso.
+>* Puoi attivare solo i tipi di pubblico per i quali disponi dell&#39;autorizzazione di accesso e visualizzazione in [Audience Portal](/help/segmentation/ui/audience-portal.md#browse) e [seleziona il passaggio del segmento](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) del flusso di lavoro di attivazione.
+>* Nel [passaggio di mappatura del flusso di lavoro di attivazione](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping), puoi visualizzare e selezionare per l&#39;attivazione solo i campi per i quali disponi dell&#39;autorizzazione di accesso.
 >* Quando desideri attivare altri segmenti in una destinazione esistente in cui non hai accesso a tutti i campi mappati per l’esportazione, il flusso di lavoro di attivazione viene bloccato automaticamente.
 
-Per ulteriori informazioni su [!DNL Destinations], fare riferimento a [[!DNL Destinations] panoramica](../../destinations/home.md).
+Per ulteriori informazioni su [!DNL Destinations], consulta la [[!DNL Destinations] panoramica](../../destinations/home.md).
 
 ### Identity Service
 
-Adobe Experience Platform [!DNL Identity Service] ti consente di avere una visione migliore del cliente e del suo comportamento collegando le identità tra dispositivi e sistemi, consentendoti di fornire esperienze digitali personali e di impatto in tempo reale.
+Adobe Experience Platform [!DNL Identity Service] consente di ottenere una migliore visualizzazione dei clienti e del loro comportamento collegando le identità tra dispositivi e sistemi, consentendo di fornire esperienze digitali personali e di impatto in tempo reale.
 
-Come parte del controllo degli accessi basato su attributi, `view-identity-graph` L’autorizzazione ti consente di determinare quali utenti dell’organizzazione possono accedere al grafo delle identità tramite l’interfaccia utente o le API. Per ulteriori informazioni, consulta la guida su [utilizzo del visualizzatore del grafico delle identità](../../identity-service/features/identity-graph-viewer.md).
+Come parte del controllo degli accessi basato su attributi, l&#39;autorizzazione `view-identity-graph` consente di determinare quali utenti dell&#39;organizzazione possono accedere al grafo delle identità tramite l&#39;interfaccia utente o le API. Per ulteriori informazioni, consulta la guida su [utilizzo del visualizzatore del grafico delle identità](../../identity-service/features/identity-graph-viewer.md).
 
-Per ulteriori informazioni su [!DNL Identity Service], fare riferimento a [[!DNL Identity Service] panoramica](../../identity-service/home.md).
+Per ulteriori informazioni su [!DNL Identity Service], consulta la [[!DNL Identity Service] panoramica](../../identity-service/home.md).
 
 ### Profilo cliente in tempo reale
 
@@ -123,7 +123,7 @@ In qualità di amministratore, puoi utilizzare funzionalità di controllo dell�
    * In qualità di amministratore, puoi assegnare agli utenti della tua organizzazione il provisioning necessario per visualizzare solo gli attributi del profilo etichettati con etichette a cui gli utenti hanno accesso durante la creazione di segmenti;
 * Configura l’accesso utente all’anteprima dei dati etichettando campi di dati specifici utilizzati nello schema XDM del modello di dati.
 
-Per ulteriori informazioni sul profilo, consulta [Panoramica del profilo](../../profile/home.md).
+Per ulteriori informazioni sul profilo, consulta la [Panoramica profilo](../../profile/home.md).
 
 ### Servizio di segmentazione
 
@@ -134,7 +134,7 @@ In qualità di amministratore, puoi utilizzare funzionalità di controllo dell�
 * Configurare l’accesso degli utenti per visualizzare e gestire segmenti specifici in base a ruoli, autorizzazioni ed etichette;
    * In qualità di amministratore, puoi assegnare ruoli agli utenti dell’organizzazione per visualizzare solo i segmenti etichettati con etichette a cui gli utenti hanno accesso e i segmenti che non contengono etichette quando utilizzi l’interfaccia utente Segmentazione.
 
-Per ulteriori informazioni su [!DNL Segmentation Service], fare riferimento a [[!DNL Segmentation Service] panoramica](../../segmentation/home.md).
+Per ulteriori informazioni su [!DNL Segmentation Service], consulta la [[!DNL Segmentation Service] panoramica](../../segmentation/home.md).
 
 ### XDM
 
@@ -145,4 +145,4 @@ Il controllo degli accessi basato su attributi consente di:
 * [Applica etichette di utilizzo dati a gruppi di campi e classi](../../xdm/tutorials/labels.md). Ciò consente a più schemi con gli stessi gruppi di campi o classi di avere campi contrassegnati con gli stessi attributi, a seconda delle configurazioni a livello di gruppo di campi o di classe;
 * Configura l’accesso degli utenti a campi di schema XDM specifici in base ai set di autorizzazioni applicati ai ruoli assegnati agli utenti.
 
-Per ulteriori informazioni su XDM, consulta [Panoramica di XDM](../../xdm/home.md).
+Per ulteriori informazioni su XDM, consulta la [panoramica XDM](../../xdm/home.md).

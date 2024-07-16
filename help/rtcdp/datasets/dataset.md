@@ -13,6 +13,6 @@ ht-degree: 0%
 
 # Set di dati in Real-time Customer Data Platform
 
-Nell’interfaccia utente di Real-time Customer Data Platform puoi visualizzare e gestire tutti i set di dati creati dalla tua organizzazione, oltre a crearne di nuovi. Per sfogliare i set di dati nell’interfaccia utente, seleziona **[!UICONTROL Set di dati]** nel menu di navigazione a sinistra. Il **[!UICONTROL Sfoglia]** La scheda contiene un elenco di set di dati, incluse le colonne con nome, data e ora di creazione, origine, schema e ultimo stato batch, nonché la data e l’ora dell’ultimo aggiornamento del set di dati.
+Nell’interfaccia utente di Real-time Customer Data Platform puoi visualizzare e gestire tutti i set di dati creati dalla tua organizzazione, oltre a crearne di nuovi. Per sfogliare i set di dati nell&#39;interfaccia utente, selezionare **[!UICONTROL Set di dati]** nell&#39;area di navigazione a sinistra. La scheda **[!UICONTROL Sfoglia]** contiene un elenco di set di dati, incluse le colonne con il nome, la data di creazione (data e ora), l&#39;origine, lo schema e lo stato dell&#39;ultimo batch, nonché la data e l&#39;ora dell&#39;ultimo aggiornamento del set di dati.
 
-Per informazioni sui set di dati in [!DNL Experience Platform], iniziare leggendo il [Panoramica sui set di dati](../../catalog/datasets/overview.md).
+Per informazioni sui set di dati in [!DNL Experience Platform], leggere la [panoramica sui set di dati](../../catalog/datasets/overview.md).

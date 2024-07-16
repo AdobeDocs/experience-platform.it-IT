@@ -1,8 +1,9 @@
 ---
 title: Eventi di Analytics 2.0 in Assurance
-description: Questa guida spiega come utilizzare Adobe Analytics e Analytics Edge View con Adobe Experience Platform Assurance.
+description: Questa guida spiega come utilizzare le visualizzazioni Adobe Analytics e Analytics Edge con Adobe Experience Platform Assurance.
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: f707554ea89731fbd3f013d6065fde27ba7fa811
+exl-id: faaa2c1d-3471-4d86-9a25-03265b996e31
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '742'
 ht-degree: 19%
@@ -11,21 +12,21 @@ ht-degree: 19%
 
 # Eventi di Analytics 2.0 in Assurance
 
-Analytics Events 2.0 fornisce una visualizzazione più completa degli eventi SDK per gli utenti che eseguono il debug e la convalida dell’implementazione di Adobe Analytics. La visualizzazione mostra gli eventi inviati ad Adobe Analytics dal [SDK di Adobe Experience Platform Mobile](https://developer.adobe.com/client-sdks/solution/adobe-analytics/) nonché [SDK di Adobe Experience Platform Edge Network](https://developer.adobe.com/client-sdks/edge/edge-network/). La vista dispone anche di un pannello dei dettagli che fornisce informazioni contestuali su come l’evento è stato elaborato dall’SDK client e dai servizi a monte dopo che ha lasciato il dispositivo.
+Analytics Events 2.0 fornisce una visualizzazione più completa degli eventi SDK per gli utenti che eseguono il debug e la convalida dell’implementazione di Adobe Analytics. La visualizzazione mostra gli eventi inviati ad Adobe Analytics da [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/solution/adobe-analytics/) e da [Adobe Experience Platform Edge Network SDK](https://developer.adobe.com/client-sdks/edge/edge-network/). La vista dispone anche di un pannello dei dettagli che fornisce informazioni contestuali su come l’evento è stato elaborato dall’SDK client e dai servizi a monte dopo che ha lasciato il dispositivo.
 
 ## Introduzione
 
 La procedura seguente illustra come utilizzare questa visualizzazione:
 
-1. [Configurare Adobe Experience Platform Assurance](../tutorials/implement-assurance.md).
-2. [Creare e connettersi a una sessione Assurance](../tutorials/using-assurance.md).
-3. Nell’interfaccia utente Assurance dalla navigazione a sinistra **Home** menu visualizza, selezionare **Eventi di Analytics 2.0 (Beta)**. Se non trovi questa opzione, seleziona **Configura** in basso a sinistra nella finestra, aggiungi **Eventi di Analytics 2.0 (Beta)**, e seleziona **Salva**.
+1. [Configura Adobe Experience Platform Assurance](../tutorials/implement-assurance.md).
+2. [Crea e connetti a una sessione Assurance](../tutorials/using-assurance.md).
+3. Nell&#39;interfaccia utente Assurance dal menu di visualizzazione **Home** della navigazione a sinistra, selezionare **Eventi di Analytics 2.0 (Beta)**. Se non trovi questa opzione, seleziona **Configura** in basso a sinistra nella finestra, aggiungi **Analytics Events 2.0 (Beta)** e seleziona **Salva**.
 
 ## Visualizzazione eventi di Analytics
 
-Utilizza la Vista evento di Analytics se utilizzi il **Adobe Analytics** estensione per dispositivi mobili. Questa visualizzazione consente di visualizzare facilmente gli eventi di Analytics inviati dal client connesso, inclusi gli eventi Track Action, Track State e Lifecycle. Selezionando uno degli eventi di Analytics nella tabella, nel pannello di destra è possibile visualizzare i dettagli dell’elaborazione dell’evento.
+Utilizza la visualizzazione eventi di Analytics se utilizzi l&#39;estensione mobile **Adobe Analytics**. Questa visualizzazione consente di visualizzare facilmente gli eventi di Analytics inviati dal client connesso, inclusi gli eventi Track Action, Track State e Lifecycle. Selezionando uno degli eventi di Analytics nella tabella, nel pannello di destra è possibile visualizzare i dettagli dell’elaborazione dell’evento.
 
-![Immagine che illustra i diversi componenti nella visualizzazione Eventi di Analytics.](./images/adobe-analytics-edge/analytics-events.png)
+![Immagine che illustra componenti diversi nella visualizzazione eventi di Analytics.](./images/adobe-analytics-edge/analytics-events.png)
 
 ### Stato post-elaborazione
 
@@ -50,26 +51,26 @@ Per un evento di tracciamento di Analytics, la vista dettagliata contiene le par
 
 - Un evento di richiesta dell’SDK di Analytics di origine.
 - Metadati e dati contestuali della richiesta, come ID suite di rapporti, versioni dell’estensione SDK e dati contestuali.
-- Informazioni post-elaborate sull’evento Analytics che contiene la mappatura di revar, evar e prop.
+- Informazioni elaborate da Post sull’evento Analytics contenente la mappatura di revar, evar e prop.
 
 ### Convalida visualizzazione Analytics
 
 La vista di convalida consente di visualizzare facilmente i risultati sugli script di convalida relativi ad Analytics. Gli errori visualizzati dai validatori possono contenere collegamenti a dove devono essere corretti o visualizzare eventi in stato di errore.
 
-![Immagine che mostra la scheda Convalida nella vista Analytics.](./images/adobe-analytics-edge/analytics-validation-view.png)
+![Immagine che mostra la scheda Convalida nella visualizzazione Analytics.](./images/adobe-analytics-edge/analytics-validation-view.png)
 
 ## Vista Edge di Analytics
 
-Utilizza la vista Analytics Edge se utilizzi **Rete Edge** o **Bridge perimetrale** estensioni per dispositivi mobili. Per abilitare questa visualizzazione, seleziona l’interruttore &quot;Analytics Edge (Beta)&quot; in alto a destra per visualizzare gli eventi di Analytics inviati tramite rete Edge nella sessione corrente. Questo include tutti gli eventi che sono stati attivati dall’estensione del ciclo di vita, dalle richieste Edge e/o dagli eventi Edge Bridge basati su Track Action e Track State.
+Utilizza la visualizzazione Edge di Analytics se utilizzi **estensioni mobili Edge Network** o **Edge Bridge**. Per abilitare questa visualizzazione, seleziona l’interruttore &quot;Analytics Edge (Beta)&quot; in alto a destra per visualizzare gli eventi di Analytics inviati tramite la rete Edge nella sessione corrente. Ciò include tutti gli eventi che sono stati attivati dall’estensione del ciclo di vita, dalle richieste di Edge e/o dagli eventi Edge Bridge basati su Track Action e Track State.
 
-![Immagine che mostra l’interruttore utilizzato per passare dalla visualizzazione Analytics alla visualizzazione Edge di Analytics e viceversa.](./images/adobe-analytics-edge/analytics-view-toggle.png)
+![Immagine che mostra l&#39;interruttore utilizzato per passare dalla visualizzazione Analytics alla visualizzazione Edge Analytics e viceversa.](./images/adobe-analytics-edge/analytics-view-toggle.png)
 
-La vista Analytics Edge contiene informazioni sulle richieste Edge e i metodi del ciclo di vita relativi ad Analytics inviati dal client. Scegliendo un evento nell’elenco, il pannello di destra visualizza gli eventi elaborati dall’SDK del client e dal servizio a monte dopo che hanno lasciato il dispositivo, in modo da poter visualizzare facilmente la catena di eventi risultanti da una chiamata.
+La vista Edge di Analytics contiene informazioni sulle richieste Edge relative ad Analytics e sui metodi del ciclo di vita inviati dal client. Scegliendo un evento nell’elenco, il pannello di destra visualizza gli eventi elaborati dall’SDK del client e dal servizio a monte dopo che hanno lasciato il dispositivo, in modo da poter visualizzare facilmente la catena di eventi risultanti da una chiamata.
 
-![Un’immagine che illustra diversi componenti nella vista Edge di Analytics.](./images/adobe-analytics-edge/edge-analytics-events.png)
+![Immagine che illustra i diversi componenti nella visualizzazione Edge di Analytics.](./images/adobe-analytics-edge/edge-analytics-events.png)
 
-### Convalida Analytics Edge
+### Convalida di Analytics Edge
 
 La vista di convalida di Analytics Edge consente di visualizzare facilmente i risultati sugli script di convalida relativi ad Analytics Edge. Gli errori visualizzati dai validatori possono contenere collegamenti a dove devono essere corretti o visualizzare eventi in stato di errore.
 
-![Immagine che mostra la scheda Convalida nella vista Analytics Edge.](./images/adobe-analytics-edge/edge-analytics-validation-view.png)
+![Immagine che mostra la scheda Convalida nella visualizzazione Edge di Analytics.](./images/adobe-analytics-edge/edge-analytics-validation-view.png)

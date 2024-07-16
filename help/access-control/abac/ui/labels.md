@@ -27,14 +27,14 @@ Le etichette consentono di categorizzare set di dati e campi in base ai criteri 
 
 >[!NOTE]
 >
->Esiste un unico elenco di etichette per un’intera organizzazione. Per creare un’etichetta personalizzata, è necessario **[!UICONTROL Gestisci etichette di utilizzo]** autorizzazioni sulla sandbox di produzione. L&#39;eliminazione delle etichette non è attualmente supportata.
+>Esiste un unico elenco di etichette per un’intera organizzazione. Per creare un&#39;etichetta personalizzata, sono necessarie le autorizzazioni **[!UICONTROL Gestione etichette di utilizzo]** nella sandbox di produzione. L&#39;eliminazione delle etichette non è attualmente supportata.
 
-Per creare una nuova etichetta, seleziona la **[!UICONTROL Etichette]** nella barra laterale e seleziona **[!UICONTROL Crea etichetta]**.
+Per creare una nuova etichetta, seleziona la scheda **[!UICONTROL Etichette]** nella barra laterale e seleziona **[!UICONTROL Crea etichetta]**.
 
 ![flac-new-label](../../images/flac-ui/create-label.png)
 
-Il **[!UICONTROL Crea una nuova etichetta]** viene visualizzata una finestra di dialogo che richiede di immettere un nome, un nome descrittivo facoltativo e una descrizione facoltativa.
+Viene visualizzata la finestra di dialogo **[!UICONTROL Crea nuova etichetta]**, in cui viene richiesto di immettere un nome, un nome descrittivo facoltativo e una descrizione facoltativa.
 
 ![new-label-info](../../images/flac-ui/new-label-info.png)
 
-Al termine, seleziona **[!UICONTROL Conferma]**.
+Al termine, selezionare **[!UICONTROL Conferma]**.

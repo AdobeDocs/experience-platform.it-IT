@@ -1,11 +1,11 @@
 ---
 title: Best practice per l’adesione alle licenze di gestione dati
-description: Scopri le best practice e gli strumenti che puoi utilizzare per gestire al meglio i diritti alle licenze con Adobe Experience Platform.
+description: Scopri le best practice da seguire e gli strumenti che puoi utilizzare per gestire al meglio i diritti alle licenze con Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
 source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2237'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -19,15 +19,15 @@ Questo documento illustra le best practice da seguire e gli strumenti che puoi u
 
 ## Informazioni sull&#39;archiviazione dei dati Adobe Experience Platform
 
-Experience Platform è composto principalmente da due archivi di dati: [!DNL data lake] e nell’archivio Profili.
+L&#39;Experience Platform è composto principalmente da due archivi di dati: l&#39;archivio [!DNL data lake] e l&#39;archivio Profilo.
 
-Il **[!DNL data lake]** ha principalmente i seguenti scopi:
+**[!DNL data lake]** ha principalmente i seguenti scopi:
 
-* funge da area di gestione temporanea per l’onboarding dei dati in Experienci Platform;
-* funge da archiviazione dei dati a lungo termine per tutti i dati Experienci Platform;
+* funge da area di gestione temporanea per l’onboarding dei dati in Experience Platform;
+* funge da archiviazione dei dati a lungo termine per tutti i dati Experience Platform;
 * Abilita casi d’uso come analisi dei dati e data science.
 
-Il **Archivio profili** è dove vengono creati i profili dei clienti e serve principalmente per i seguenti scopi:
+L&#39;**archivio profili** è il luogo in cui vengono creati i profili dei clienti e ha principalmente le seguenti finalità:
 
 * Funge da archivio dati per i profili utilizzati per supportare esperienze in tempo reale;
 * Abilita casi d’uso come segmentazione, attivazione e personalizzazione.
@@ -40,14 +40,14 @@ Il **Archivio profili** è dove vengono creati i profili dei clienti e serve pri
 
 Quando si riceve la licenza di Experience Platform, vengono forniti diritti di utilizzo della licenza che variano a seconda dello SKU:
 
-**[!DNL Addressable Audience]** - il numero totale di profili cliente consentiti contrattualmente in Experienci Platform, inclusi i profili noti e pseudonimi.
+**[!DNL Addressable Audience]** - numero totale di profili cliente contrattualmente consentiti in Experience Platform, inclusi i profili noti e pseudonimi.
 
-**[!DNL Profile Richness]** : la dimensione media dei dati del profilo in Experienci Platform. Puoi aumentare il tuo [!DNL Profile Richness] acquistando un pacchetto richness.
+**[!DNL Profile Richness]** - la dimensione media dei dati del profilo in Experience Platform. Puoi aumentare il tuo diritto a [!DNL Profile Richness] acquistando un pacchetto ricchezza.
 
-Il [!DNL Profile Richness] La metrica varia a seconda della licenza acquistata. Esistono due calcoli per [!DNL Profile Richness] disponibile:
+La metrica [!DNL Profile Richness] varia a seconda della licenza acquistata. Sono disponibili due calcoli per [!DNL Profile Richness]:
 
 * La somma di tutti i dati di produzione memorizzati in Adobe Real-time Customer Data Platform (ovvero Profilo cliente in tempo reale e Servizio identità) in qualsiasi momento, divisa per [!DNL Addressable Audience];
-* La somma di tutti i dati memorizzati in Platform (inclusi, ma non limitati a [!DNL data lake], Real-Time Customer Profile e Identity Service) in qualsiasi momento e tutti i dati trasmessi tramite (anziché archiviati all’interno di) Platform negli ultimi 12 mesi, divisi per [!DNL Addressable Audience].
+* La somma di tutti i dati memorizzati in Platform (inclusi, ma non limitati a, [!DNL data lake], Real-Time Customer Profile e Identity Service) in qualsiasi momento e tutti i dati trasmessi tramite (anziché archiviati all&#39;interno di) Platform negli ultimi 12 mesi, divisa per [!DNL Addressable Audience].
 
 La disponibilità di queste metriche e la definizione specifica di ciascuna di esse varia a seconda delle licenze acquistate dalla tua organizzazione.
 
@@ -55,7 +55,7 @@ La disponibilità di queste metriche e la definizione specifica di ciascuna di e
 
 L’interfaccia utente di Adobe Experience Platform fornisce un dashboard tramite il quale puoi visualizzare un’istantanea dei dati relativi alla licenza della tua organizzazione per Platform. I dati nel dashboard vengono visualizzati esattamente come appaiono nel momento specifico in cui è stata acquisita l’istantanea. L’istantanea non è né un’approssimazione né un campione di dati e il dashboard non viene aggiornato in tempo reale.
 
-Per ulteriori informazioni, consulta la guida su [utilizzo del dashboard utilizzo licenze nell’interfaccia utente di Platform](../../dashboards/guides/license-usage.md#license-usage-dashboard-data).
+Per ulteriori informazioni, consulta la guida su [utilizzo del dashboard utilizzo licenze nell&#39;interfaccia utente di Platform](../../dashboards/guides/license-usage.md#license-usage-dashboard-data).
 
 ## Best practice per la gestione dei dati
 
@@ -79,7 +79,7 @@ Esistono due scenari centrali da considerare per garantire che l’utilizzo dei 
 
 ### Quali dati inserire in Platform?
 
-I dati possono essere acquisiti in uno o più sistemi in Platform, ovvero [!DNL data lake] e/o nell’archivio Profili. Ciò significa che in entrambi i sistemi possono esistere dati diversi per una varietà di casi d’uso diversi. Ad esempio, potrebbe essere utile conservare i dati storici nel [!DNL data lake], ma non nell’archivio Profili. Per selezionare i dati da inviare all’archivio profili, abilita un set di dati per l’acquisizione del profilo.
+I dati possono essere acquisiti in uno o più sistemi in Platform, ovvero nell’archivio [!DNL data lake] e/o Profilo. Ciò significa che in entrambi i sistemi possono esistere dati diversi per una varietà di casi d’uso diversi. Ad esempio, potrebbe essere utile conservare i dati storici in [!DNL data lake], ma non nell&#39;archivio profili. Per selezionare i dati da inviare all’archivio profili, abilita un set di dati per l’acquisizione del profilo.
 
 >[!NOTE]
 >
@@ -98,7 +98,7 @@ Esistono diversi strumenti che puoi sfruttare per rispettare i diritti di utiliz
 
 I grafici delle identità non vengono conteggiati per il diritto totale al pubblico indirizzabile, perché il pubblico indirizzabile si riferisce al numero totale di profili cliente.
 
-Tuttavia, i limiti del grafo delle identità possono influenzare il pubblico indirizzabile a causa della suddivisione delle identità. Ad esempio, se l’ECID più vecchio viene rimosso dal grafico, ECID continuerà a esistere in Real-Time Customer Profile come profilo pseudonimo. È possibile impostare [Scadenze dati profilo pseudonimo](../../profile/pseudonymous-profiles.md) per aggirare questo comportamento. Per ulteriori informazioni, leggere [guardrail per i dati del servizio Identity](../../identity-service/guardrails.md).
+Tuttavia, i limiti del grafo delle identità possono influenzare il pubblico indirizzabile a causa della suddivisione delle identità. Ad esempio, se l’ECID più vecchio viene rimosso dal grafico, ECID continuerà a esistere in Real-Time Customer Profile come profilo pseudonimo. Puoi impostare [Scadenze dati profilo pseudonimo](../../profile/pseudonymous-profiles.md) per aggirare questo comportamento. Per ulteriori informazioni, leggere [guardrail per i dati del servizio Identity](../../identity-service/guardrails.md).
 
 ### Filtri di acquisizione {#ingestion-filters}
 
@@ -106,12 +106,12 @@ I filtri di acquisizione consentono di inserire solo i dati necessari per i casi
 
 | Filtro di acquisizione | Descrizione |
 | --- | --- |
-| Filtro origine Adobe Audience Manager | Quando crei una connessione sorgente Adobe Audience Manager, puoi scegliere quali segmenti e caratteristiche inserire nella [!DNL data lake] e Real-Time Customer Profile, anziché acquisire i dati Audienci Manager nella loro interezza. Consulta la guida su [creazione di una connessione sorgente Audienci Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) per ulteriori informazioni. |
-| Preparazione dati di Adobe Analytics | È possibile utilizzare [!DNL Data Prep] funzionalità durante la creazione di una connessione di origine Analytics per filtrare i dati non necessari per i casi d’uso. Da a [!DNL Data Prep], puoi definire gli attributi o le colonne da pubblicare nel profilo. Puoi anche fornire istruzioni condizionali per informare Platform se i dati devono essere pubblicati nel profilo o solo nel [!DNL data lake]. Consulta la guida su [creazione di una connessione sorgente Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) per ulteriori informazioni. |
-| Supporto per abilitare/disabilitare i set di dati per il profilo | Per acquisire dati nel Profilo cliente in tempo reale, devi abilitare un set di dati da utilizzare nell’archivio Profili. In questo modo, aggiunge al tuo [!DNL Addressable Audience] e [!DNL Profile Richness] diritti. Una volta che un set di dati non è più necessario per i casi di utilizzo del profilo cliente, puoi disabilitare l’integrazione del set di dati con Profilo per garantire che i dati rimangano conformi alla licenza. Consulta la guida su [abilitazione e disabilitazione dei set di dati per il profilo](../../catalog/datasets/enable-for-profile.md) per ulteriori informazioni. |
+| Filtro origine Adobe Audience Manager | Quando si crea una connessione di origine Adobe Audience Manager, è possibile scegliere i segmenti e le caratteristiche da inserire in [!DNL data lake] e nel profilo cliente in tempo reale, anziché acquisire i dati di Audience Manager nella loro interezza. Per ulteriori informazioni, vedere la guida alla [creazione di una connessione di origine Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md). |
+| Preparazione dati di Adobe Analytics | È possibile utilizzare le funzionalità [!DNL Data Prep] durante la creazione di una connessione di origine Analytics per filtrare i dati non necessari per i casi d&#39;uso. Tramite [!DNL Data Prep], puoi definire quali attributi/colonne devono essere pubblicati nel profilo. È inoltre possibile fornire istruzioni condizionali per informare Platform se i dati devono essere pubblicati nel profilo o solo in [!DNL data lake]. Per ulteriori informazioni, consulta la guida sulla [creazione di una connessione di origine Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md). |
+| Supporto per abilitare/disabilitare i set di dati per il profilo | Per acquisire dati nel Profilo cliente in tempo reale, devi abilitare un set di dati da utilizzare nell’archivio Profili. In questo modo, aggiungi alle tue [!DNL Addressable Audience] e [!DNL Profile Richness] adesioni. Una volta che un set di dati non è più necessario per i casi di utilizzo del profilo cliente, puoi disabilitare l’integrazione del set di dati con Profilo per garantire che i dati rimangano conformi alla licenza. Per ulteriori informazioni, consulta la guida su [abilitazione e disabilitazione dei set di dati per il profilo](../../catalog/datasets/enable-for-profile.md). |
 | Esclusione di dati SDK per web e SDK per dispositivi mobili | Esistono due tipi di dati raccolti da Web e Mobile SDK: dati raccolti automaticamente e dati raccolti esplicitamente dallo sviluppatore. Per gestire meglio la conformità della licenza, puoi disabilitare la raccolta automatica dei dati nella configurazione dell’SDK tramite l’impostazione contestuale. I dati personalizzati possono anche essere rimossi o non impostati dallo sviluppatore. |
-| Esclusione dei dati di inoltro lato server | Se invii dati a Platform utilizzando l’inoltro lato server, puoi escludere i dati inviati rimuovendo la mappatura in un’azione della regola per escluderla in tutti gli eventi oppure aggiungendo condizioni alla regola in modo che i dati vengano attivati solo per determinati eventi. Consulta la documentazione su [eventi e condizioni](/help/tags/ui/managing-resources/rules.md#events-and-conditions-if) per ulteriori informazioni. |
-| Filtrare i dati a livello di origine | Puoi utilizzare operatori logici e di confronto per filtrare i dati a livello di riga dalle origini prima di creare una connessione e acquisire i dati da Experienci Platform. Per ulteriori informazioni, consulta la guida su [filtrare i dati a livello di riga per un&#39;origine utilizzando [!DNL Flow Service] API](../../sources/tutorials/api/filter.md). |
+| Esclusione dei dati di inoltro lato server | Se invii dati a Platform utilizzando l’inoltro lato server, puoi escludere i dati inviati rimuovendo la mappatura in un’azione della regola per escluderla in tutti gli eventi oppure aggiungendo condizioni alla regola in modo che i dati vengano attivati solo per determinati eventi. Per ulteriori informazioni, consulta la documentazione su [eventi e condizioni](/help/tags/ui/managing-resources/rules.md#events-and-conditions-if). |
+| Filtrare i dati a livello di origine | Puoi utilizzare operatori logici e di confronto per filtrare i dati a livello di riga dalle origini prima di creare una connessione e acquisire i dati da Experience Platform. Per ulteriori informazioni, leggere la guida su [filtrare i dati a livello di riga per un&#39;origine utilizzando l&#39; [!DNL Flow Service] API](../../sources/tutorials/api/filter.md). |
 
 {style="table-layout:auto"}
 
@@ -121,10 +121,10 @@ L’archivio Profili è composto dai seguenti componenti:
 
 | Componente archivio profili | Descrizione |
 | --- | --- |
-| Frammenti di profilo | Ogni profilo cliente è composto da più **frammenti di profilo** che sono stati uniti per formare un’unica vista del cliente. Ad esempio, se un cliente interagisce con il tuo marchio attraverso diversi canali, la tua organizzazione avrà più **frammenti di profilo** relativo al singolo cliente visualizzato in più set di dati. Quando questi frammenti vengono acquisiti in Platform, vengono uniti utilizzando il grafico delle identità per creare un singolo profilo per quel cliente. **Frammenti di profilo** consistere in uno spazio dei nomi di identità come identificatore, con dati di record e/o dati di serie temporali associati. |
-| Registra dati (attributi) | Un profilo è una rappresentazione di un soggetto, un’organizzazione o un individuo, composta da molti **Attributi** (noto anche come **registrare dati**). Ad esempio, il profilo di un prodotto può includere uno SKU e una descrizione, mentre il profilo di una persona contiene informazioni come nome, cognome e indirizzo e-mail. **Registra dati** di solito ha un volume basso/moderato, ma è utile per lunghi periodi di tempo. |
-| Dati delle serie temporali (Comportamento) | **Dati delle serie temporali** fornisce informazioni sul comportamento di un utente. Rappresentata dalla classe di schema standard Experience Data Model (XDM) [!DNL ExperienceEvent], i dati delle serie temporali possono descrivere eventi quali elementi aggiunti al carrello, collegamenti su cui viene fatto clic e video visualizzati. Il valore del comportamento può diminuire nel tempo. |
-| Spazio dei nomi dell’identità (identità) | Quando i dati del cliente si uniscono, vengono uniti in un unico profilo tramite l’utilizzo di **spazi dei nomi di identità** e la possibilità di unire queste identità man mano che si acquisiscono maggiori informazioni sull’utente. Consulta la [panoramica degli spazi dei nomi delle identità](../../identity-service/features/namespaces.md) per ulteriori informazioni. |
+| Frammenti di profilo | Ogni profilo cliente è composto da più **frammenti di profilo** che sono stati uniti per formare un&#39;unica visualizzazione del cliente. Ad esempio, se un cliente interagisce con il tuo marchio su più canali, la tua organizzazione avrà più **frammenti di profilo** relativi a quel singolo cliente che appaiono in più set di dati. Quando questi frammenti vengono acquisiti in Platform, vengono uniti utilizzando il grafico delle identità per creare un singolo profilo per quel cliente. **I frammenti di profilo** sono costituiti da uno spazio dei nomi di identità come identificatore, con dati di record e/o dati di serie temporali associati. |
+| Registra dati (attributi) | Un profilo è una rappresentazione di un soggetto, un&#39;organizzazione o un individuo, composta da molti **Attributi** (noti anche come **dati record**). Ad esempio, il profilo di un prodotto può includere uno SKU e una descrizione, mentre il profilo di una persona contiene informazioni come nome, cognome e indirizzo e-mail. **I dati del record** sono in genere di volume basso/moderato, ma sono importanti per lunghi periodi di tempo. |
+| Dati delle serie temporali (Comportamento) | **I dati della serie temporale** forniscono informazioni sul comportamento di un utente. Rappresentati dalla classe di schema standard Experience Data Model (XDM) [!DNL ExperienceEvent], i dati della serie temporale possono descrivere eventi quali elementi aggiunti a un carrello, collegamenti su cui si fa clic e video visualizzati. Il valore del comportamento può diminuire nel tempo. |
+| Spazio dei nomi dell’identità (identità) | Quando i dati dei clienti si uniscono, vengono uniti in un unico profilo tramite l&#39;utilizzo di **spazi dei nomi di identità** e la possibilità di unire queste identità man mano che si acquisiscono ulteriori informazioni sull&#39;utente. Per ulteriori informazioni, consulta la [panoramica sugli spazi dei nomi delle identità](../../identity-service/features/namespaces.md). |
 
 {style="table-layout:auto"}
 
@@ -132,18 +132,18 @@ L’archivio Profili è composto dai seguenti componenti:
 
 Sono disponibili diversi rapporti per comprendere la composizione dell’archivio Profili. Questi rapporti ti aiutano a prendere decisioni informate su come e dove impostare le scadenze degli eventi esperienza per ottimizzare l’utilizzo della licenza:
 
-* **API del rapporto di sovrapposizione dei set di dati**: espone i set di dati che contribuiscono maggiormente al pubblico di riferimento. Puoi utilizzare questo rapporto per identificare quale [!DNL ExperienceEvent] set di dati per cui impostare una scadenza. Guarda il tutorial su [generazione del rapporto di sovrapposizione dei set di dati](../../profile/tutorials/dataset-overlap-report.md) per ulteriori informazioni.
-* **API rapporto di sovrapposizione identità**: espone gli spazi dei nomi delle identità che contribuiscono maggiormente al pubblico indirizzabile. Guarda il tutorial su [generazione del rapporto di sovrapposizione identità](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) per ulteriori informazioni.
+* **API report di sovrapposizione set di dati**: espone i set di dati che contribuiscono maggiormente al pubblico indirizzabile. È possibile utilizzare questo report per identificare i [!DNL ExperienceEvent] set di dati per i quali impostare una scadenza. Per ulteriori informazioni, consulta l&#39;esercitazione su [generazione del report di sovrapposizione dei set di dati](../../profile/tutorials/dataset-overlap-report.md).
+* **API rapporto di sovrapposizione identità**: espone gli spazi dei nomi delle identità che contribuiscono maggiormente al pubblico indirizzabile. Per ulteriori informazioni, consulta l&#39;esercitazione su [generazione del rapporto di sovrapposizione identità](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report).
 <!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
 -->
 
 #### Scadenze dati profilo pseudonimo {#pseudonymous-profile-expirations}
 
-Questa funzionalità consente di rimuovere automaticamente i profili pseudonimi non aggiornati dall’archivio profili. Per ulteriori informazioni su questa funzione, leggere [Panoramica sulla scadenza dei dati del profilo pseudonimo](../../profile/pseudonymous-profiles.md).
+Questa funzionalità consente di rimuovere automaticamente i profili pseudonimi non aggiornati dall’archivio profili. Per ulteriori informazioni su questa funzione, leggere la [Panoramica sulla scadenza dei dati del profilo pseudonimo](../../profile/pseudonymous-profiles.md).
 
 #### Scadenze degli eventi esperienza {#event-expirations}
 
-Questa funzionalità ti consente di rimuovere automaticamente i dati comportamentali da un set di dati abilitato per il profilo che non è più utile per i tuoi casi d’uso. Consulta la panoramica su [Scadenze degli eventi esperienza](../../profile/event-expirations.md) per informazioni dettagliate sul funzionamento di questo processo dopo che è stato abilitato per un set di dati.
+Questa funzionalità ti consente di rimuovere automaticamente i dati comportamentali da un set di dati abilitato per il profilo che non è più utile per i tuoi casi d’uso. Per informazioni dettagliate sul funzionamento di questo processo dopo che è stato abilitato per un set di dati, consulta la panoramica sulle [scadenze evento esperienza](../../profile/event-expirations.md).
 
 ## Riepilogo delle best practice per la conformità dell’utilizzo delle licenze {#best-practices}
 
@@ -151,25 +151,25 @@ Di seguito è riportato un elenco di alcune best practice consigliate che è pos
 
 * Utilizza il [dashboard utilizzo licenze](../../dashboards/guides/license-usage.md) per monitorare e tenere traccia delle tendenze di utilizzo dei clienti. Questo ti consente di anticipare eventuali interruzioni del servizio.
 * Configura [filtri di acquisizione](#ingestion-filters) identificando gli eventi necessari per i casi di utilizzo di segmentazione e personalizzazione. Questo ti consente di inviare solo gli eventi importanti necessari per i tuoi casi d’uso.
-* Assicurati di avere solo [set di dati abilitati per il profilo](#ingestion-filters) necessari per i casi di utilizzo di segmentazione e personalizzazione.
-* Configura [Scadenze degli eventi esperienza](#event-expirations) e [Scadenze dati profilo pseudonimo](#pseudonymous-profile-expirations) per dati ad alta frequenza come i dati web.
-* Controlla periodicamente [Report composizione profilo](#profile-store-composition-reports) per comprendere la composizione dell’archivio profili. Questo consente di comprendere le origini dati che contribuiscono maggiormente al consumo delle licenze.
+* Assicurati di disporre solo di [set di dati abilitati per il profilo](#ingestion-filters) necessari per i casi di utilizzo di segmentazione e personalizzazione.
+* Configura [Scadenze evento esperienza](#event-expirations) e [Scadenze dati profilo pseudonimo](#pseudonymous-profile-expirations) per dati ad alta frequenza come i dati Web.
+* Controlla periodicamente i [report sulla composizione del profilo](#profile-store-composition-reports) per conoscere la composizione dell&#39;archivio profili. Questo consente di comprendere le origini dati che contribuiscono maggiormente al consumo delle licenze.
 
 ## Riepilogo delle funzioni e disponibilità {#feature-summary}
 
-Le best practice e gli strumenti descritti in questo documento consentono di gestire meglio l’utilizzo dei diritti di licenza in Adobe Experience Platform. Questo documento verrà aggiornato con il rilascio di ulteriori funzioni che contribuiranno a fornire visibilità e controllo a tutti i clienti Experienci Platform.
+Le best practice e gli strumenti descritti in questo documento consentono di gestire meglio l’utilizzo dei diritti di licenza in Adobe Experience Platform. Questo documento verrà aggiornato con il rilascio di ulteriori funzioni che contribuiranno a fornire visibilità e controllo a tutti i clienti Experience Platform.
 
 La tabella seguente illustra l’elenco delle funzioni attualmente disponibili per gestire al meglio il diritto all’utilizzo della licenza.
 
 | Funzione | Descrizione |
 | --- | --- |
-| [Abilitare/disabilitare i set di dati per il profilo](../../catalog/datasets/user-guide.md) | Abilita o disabilita l’acquisizione di set di dati in Real-Time Customer Profile. |
-| [Scadenze degli eventi esperienza](../../profile/event-expirations.md) | Applica un tempo di scadenza per tutti gli eventi acquisiti in un set di dati abilitato per il profilo. Per abilitare questa funzione, contatta il team del tuo account di Adobe o l’Assistenza clienti. |
-| [Filtri per la preparazione dati di Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | Applica [!DNL Kafka] filtri per escludere i dati non necessari dall’acquisizione |
+| [Attiva/Disattiva set di dati per il profilo](../../catalog/datasets/user-guide.md) | Abilita o disabilita l’acquisizione di set di dati in Real-Time Customer Profile. |
+| [Scadenze evento esperienza](../../profile/event-expirations.md) | Applica un tempo di scadenza per tutti gli eventi acquisiti in un set di dati abilitato per il profilo. Per abilitare questa funzione, contatta il team del tuo account di Adobe o l’Assistenza clienti. |
+| [Filtri per la preparazione dati di Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | Applica i filtri [!DNL Kafka] per escludere i dati non necessari dall’acquisizione |
 | [Filtri del connettore di origine di Adobe Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Applica i filtri di connessione di origine dell’Audience Manager per escludere i dati non necessari dall’acquisizione |
-| [Filtri dati inoltro eventi](../../tags/ui/event-forwarding/overview.md) | Applica lato server [!DNL Kafka] filtri per escludere i dati non necessari dall’acquisizione.  Consulta la documentazione su [regole di tag](../../tags/ui/managing-resources/rules.md) per ulteriori informazioni. |
+| [Filtri dati inoltro eventi](../../tags/ui/event-forwarding/overview.md) | Applica i filtri [!DNL Kafka] lato server per escludere i dati non necessari dall&#39;acquisizione.  Per ulteriori informazioni, consulta la documentazione sulle [regole tag](../../tags/ui/managing-resources/rules.md). |
 | [Interfaccia utente dashboard utilizzo licenze](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | Visualizza un’istantanea dei dati relativi alla licenza della tua organizzazione, ad Experience Platform |
-| [API del rapporto di sovrapposizione dei set di dati](../../profile/tutorials/dataset-overlap-report.md) | Restituisce i set di dati che contribuiscono maggiormente al pubblico indirizzabile |
-| [API rapporto di sovrapposizione identità](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) | Restituisce gli spazi dei nomi di identità che contribuiscono maggiormente al pubblico indirizzabile |
+| [API report di sovrapposizione set di dati](../../profile/tutorials/dataset-overlap-report.md) | Restituisce i set di dati che contribuiscono maggiormente al pubblico indirizzabile |
+| [API report di sovrapposizione identità](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) | Restituisce gli spazi dei nomi di identità che contribuiscono maggiormente al pubblico indirizzabile |
 
 {style="table-layout:auto"}

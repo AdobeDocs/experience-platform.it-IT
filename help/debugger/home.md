@@ -1,5 +1,5 @@
 ---
-description: Experienci Platform Debugger esamina le pagine web e ti aiuta a individuare problemi nell’implementazione delle soluzioni Experience Cloud.
+description: Experience Platform Debugger esamina le pagine web e ti aiuta a individuare problemi nell’implementazione delle soluzioni Experience Cloud.
 keywords: debugger;estensione Experience Platform Debugger;chrome;estensione
 seo-description: Technical documentation for the Adobe Experience Platform Debugger Chrome Extension - examine your web pages and understand problems with your Experience Cloud solution mplementations
 seo-title: Adobe Experience Platform Debugger Chrome Extension
@@ -15,12 +15,12 @@ ht-degree: 5%
 
 # Panoramica Adobe Experience Platform Debugger
 
-L’estensione di Adobe Experience Platform Debugger per [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) esamina le pagine web e aiuta a individuare problemi nell’implementazione delle soluzioni Adobe Experience Cloud.
+L&#39;estensione di Adobe Experience Platform Debugger per [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) esamina le pagine Web e ti aiuta a individuare problemi nell&#39;implementazione delle soluzioni Adobe Experience Cloud.
 
 Platform Debugger può essere utilizzato con le altre soluzioni di attivazione di Adobe per eseguire le operazioni seguenti:
 
-1. Utilizzare [tag](../tags/home.md) per inserire il codice che attiva [Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=it) sulle tue pagine.
-1. Utilizza il [**[!UICONTROL Auditor ]**scheda](./auditor/overview.md) in Platform Debugger per testare le implementazioni.
+1. Utilizza [tag](../tags/home.md) per inserire il codice che attiva [prodotti Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=it) nelle tue pagine.
+1. Utilizza la scheda [**[!UICONTROL Auditor ]**](./auditor/overview.md) in Platform Debugger per testare le tue implementazioni.
 1. Utilizza gli strumenti basati su eventi e specifici della soluzione in Platform Debugger per eseguire il debug dei problemi rilevati da Auditor o per esaminare altre informazioni sulle implementazioni.
 
 >[!NOTE]
@@ -33,9 +33,9 @@ Puoi eseguire Platform Debugger su qualsiasi pagina web e l’estensione avrà a
 
 Puoi utilizzare le informazioni raccolte da Platform Debugger per comprendere meglio come vengono implementate le soluzioni Experience Cloud. Ad esempio:
 
-* **Tag**: consulta quali proprietà, ambiente e build sono implementati in una pagina.
-* **Adobe Target**: scopri le attività per le quali hai o meno diritto e perché.
-* **Adobe Analytics**: scopri quali suite di rapporti sono attive nella pagina corrente.
+* **Tag**: vedi quali proprietà, ambiente e build sono distribuiti in una pagina.
+* **Adobe Target**: scopri le attività per le quali sei idoneo o meno e perché.
+* **Adobe Analytics**: visualizza le suite di rapporti attive nella pagina corrente.
 
 ## Esercitazione video
 

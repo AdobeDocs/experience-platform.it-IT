@@ -9,19 +9,19 @@ ht-degree: 3%
 
 ---
 
-# [!UICONTROL Fornitore di servizi sanitari] gruppo di campi schema
+# [!UICONTROL Gruppo di campi schema per provider di servizi sanitari]
 
-[!UICONTROL Fornitore di servizi sanitari] è un gruppo di campi di schema standard per [[!UICONTROL Provider] classe](../../classes/provider.md). Fornisce un singolo campo di tipo oggetto `healthcareProvider` che acquisisce proprietà relative a un singolo professionista sanitario o a un&#39;organizzazione di strutture sanitarie autorizzata a fornire servizi di diagnosi e trattamento di assistenza sanitaria.
+[!UICONTROL Healthcare Provider] è un gruppo di campi di schema standard per la classe [[!UICONTROL Provider]](../../classes/provider.md). Fornisce un singolo campo di tipo oggetto `healthcareProvider` che acquisisce le proprietà relative a un singolo professionista sanitario o a un&#39;organizzazione di strutture sanitarie autorizzata a fornire servizi di diagnosi e trattamento di assistenza sanitaria.
 
 ![](../../images/field-groups/healthcare-provider.png)
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
-| `addressDetails` | Array di oggetti | Elenca i dettagli dell&#39;indirizzo del provider. Ogni oggetto include le seguenti proprietà: <ul><li>`address`: ([[!UICONTROL Indirizzo postale]](../../data-types/postal-address.md)): l’indirizzo postale del fornitore.</li><li>`addressType`: (Stringa) tipo di indirizzo, che indica dove il provider fornisce servizi.</li></ul> |
+| `addressDetails` | Array di oggetti | Elenca i dettagli dell&#39;indirizzo del provider. Ogni oggetto include le seguenti proprietà: <ul><li>`address`: ([[!UICONTROL Indirizzo postale]](../../data-types/postal-address.md)): l&#39;indirizzo postale del provider.</li><li>`addressType`: (stringa) il tipo di indirizzo che indica dove il provider fornisce i servizi.</li></ul> |
 | `emailAddress` | [[!UICONTROL Indirizzo e-mail]](../../data-types/email-address.md) | Indirizzo e-mail del provider. |
 | `fax` | [[!UICONTROL Numero di telefono]](../../data-types/phone-number.md) | Numero di fax del provider. |
 | `phoneNumber` | [[!UICONTROL Numero di telefono]](../../data-types/phone-number.md) | Numero di telefono del provider. |
-| `qualifications` | Array di oggetti | Elenca le certificazioni, le licenze o la formazione relative alla fornitura di assistenza. Ogni oggetto include le seguenti proprietà: <ul><li>`issuer`: ([[!UICONTROL Dettagli account]](../../data-types/account-details.md)): l’organizzazione che disciplina e rilascia la qualifica.</li><li>`activePeriod`: (Numero intero) l’anno fino al quale è valida la qualifica.</li><li>`code`: (Stringa) Rappresentazione codificata della qualifica.</li></ul> |
+| `qualifications` | Array di oggetti | Elenca le certificazioni, le licenze o la formazione relative alla fornitura di assistenza. Ogni oggetto include le seguenti proprietà: <ul><li>`issuer`: ([[!UICONTROL Dettagli account]](../../data-types/account-details.md)): l&#39;organizzazione che regola e rilascia la qualifica.</li><li>`activePeriod`: (numero intero) l&#39;anno fino al quale è valida la qualifica.</li><li>`code`: (stringa) una rappresentazione codificata della qualifica.</li></ul> |
 | `classification` | Stringa | La classificazione del fornitore di servizi in base alla classe o alla categoria (ad esempio, assistenza paziente, assistenza non paziente e così via). |
 | `isActive` | Booleano | Indica se il provider è attivo. |
 | `languages` | Array di stringhe | Elenco di lingue in cui il provider esegue operazioni. |
@@ -32,4 +32,4 @@ ht-degree: 3%
 
 {style="table-layout:auto"}
 
-Per ulteriori dettagli sul gruppo di campi, consulta [archivio XDM pubblico](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json).
+Per ulteriori dettagli sul gruppo di campi, consulta l&#39;[archivio XDM pubblico](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json).

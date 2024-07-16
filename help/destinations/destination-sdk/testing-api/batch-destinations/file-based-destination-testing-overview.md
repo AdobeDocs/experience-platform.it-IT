@@ -14,7 +14,7 @@ ht-degree: 0%
 
 L’API di test della destinazione basata su file è un set di endpoint che puoi utilizzare per convalidare la configurazione delle destinazioni basate su file generate tramite la Destination SDK.
 
-È consigliabile utilizzare questi strumenti per convalidare la configurazione prima di [invio](../../guides/submit-destination.md) la destinazione da rivedere all&#39;Adobe.
+È consigliabile utilizzare questi strumenti per convalidare la configurazione prima di [inviare](../../guides/submit-destination.md) la destinazione per la revisione ad Adobe.
 
 Per risultati di test ottimali, consigliamo di utilizzare questa API in base al diagramma di flusso riportato di seguito.
 
@@ -24,7 +24,7 @@ Consulta le sezioni seguenti per una breve panoramica su ciò che può fare ogni
 
 ## Generare profili di esempio {#generate-sample-profiles}
 
-Utilizza il `/sample-profiles` Endpoint API per generare profili di esempio in base allo schema di origine esistente.
+Utilizza l&#39;endpoint API `/sample-profiles` per generare profili di esempio in base allo schema di origine esistente.
 
 I profili di esempio possono aiutarti a comprendere la struttura JSON di un profilo. Inoltre, ti forniscono un valore predefinito che puoi personalizzare con i tuoi dati di profilo, per ulteriori test di destinazione.
 
@@ -32,24 +32,24 @@ Consulta la [documentazione dedicata](file-based-sample-profile-generation-api.m
 
 ## Verifica configurazione di destinazione {#test-destination-configuration}
 
-Utilizza il `/testing/destinationInstance` Endpoint API per verificare se la destinazione basata su file è configurata correttamente e per verificare l’integrità dei flussi di dati alla destinazione configurata.
+Utilizza l&#39;endpoint API `/testing/destinationInstance` per verificare se la destinazione basata su file è configurata correttamente e per verificare l&#39;integrità dei flussi di dati alla destinazione configurata.
 
-Puoi effettuare richieste all’endpoint di test con o senza aggiunta di [profili di esempio](file-based-sample-profile-generation-api.md) alla chiamata. Se non invii profili nella richiesta, l’API genera automaticamente un profilo di esempio e lo aggiunge alla richiesta.
+Puoi effettuare richieste all&#39;endpoint di test con o senza aggiungere [profili di esempio](file-based-sample-profile-generation-api.md) alla chiamata. Se non invii profili nella richiesta, l’API genera automaticamente un profilo di esempio e lo aggiunge alla richiesta.
 
 Consulta la [documentazione dedicata](file-based-destination-testing-api.md) per scoprire come verificare la configurazione di destinazione con i profili di esempio.
 
 ## Visualizza risultati di attivazione dettagliati {#view-detailed-activation-results}
 
-Utilizza il `/testing/destinationInstance` Endpoint API per visualizzare i dettagli completi dei risultati del test di destinazione basato su file.
+Utilizza l&#39;endpoint API `/testing/destinationInstance` per visualizzare i dettagli completi dei risultati dei test di destinazione basati su file.
 
-Questo endpoint API restituisce lo stesso risultato che si otterrebbe utilizzando [API del servizio Flusso](../../../api/update-destination-dataflows.md) per monitorare i flussi di dati.
+Questo endpoint API restituisce lo stesso risultato ottenuto quando si utilizza l&#39;API [Flow Service](../../../api/update-destination-dataflows.md) per monitorare i flussi di dati.
 
-Consulta la [documentazione dedicata](file-based-destination-results-api.md) per scoprire come visualizzare i risultati dettagliati dell’attivazione.
+Consulta la [documentazione dedicata](file-based-destination-results-api.md) per scoprire come visualizzare i risultati dettagliati dell&#39;attivazione.
 
 ## Rendering dei campi dati del cliente {#render-customer-data-fields}
 
-Utilizza il `/authoring/testing/template/render` Endpoint API per visualizzare il modello [campi dati cliente](../../functionality/destination-configuration/customer-data-fields.md) definito nella configurazione di destinazione sarà simile a.
+Utilizza l&#39;endpoint API `/authoring/testing/template/render` per visualizzare come si presenteranno i [campi dati cliente](../../functionality/destination-configuration/customer-data-fields.md) definiti nella configurazione di destinazione.
 
 L’endpoint API genera valori casuali per i campi dati del cliente e li restituisce nella risposta. Questo consente di convalidare la struttura semantica dei campi dati del cliente, ad esempio i nomi dei bucket o i percorsi delle cartelle.
 
-Consulta la [documentazione dedicata](file-based-render-template-api.md) per scoprire come generare e visualizzare i valori per i campi dati dei clienti.
+Consulta la [documentazione dedicata](file-based-render-template-api.md) per scoprire come generare e visualizzare i valori per i campi dei dati cliente.

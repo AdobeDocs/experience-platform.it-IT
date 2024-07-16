@@ -4,8 +4,8 @@ description: Scopri i diversi tipi di autorizzazioni disponibili per i tag e alc
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
 source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
-source-wordcount: '1299'
-ht-degree: 23%
+source-wordcount: '1305'
+ht-degree: 18%
 
 ---
 
@@ -21,7 +21,7 @@ Questa guida fornisce una panoramica dei diversi tipi di autorizzazioni disponib
 
 >[!NOTE]
 >
->Per i passaggi su come configurare le autorizzazioni per gli utenti che utilizzano Admin Console, consulta l’esercitazione su [gestione delle autorizzazioni per la raccolta dati](../../../collection/permissions.md).
+>Per i passaggi su come configurare le autorizzazioni per gli utenti utilizzando l&#39;Admin Console, fare riferimento al tutorial su [gestione delle autorizzazioni per la raccolta dati](../../../collection/permissions.md).
 
 ## Tipi di autorizzazione
 
@@ -52,10 +52,10 @@ La tabella seguente illustra i diritti di proprietà disponibili e le funzionali
 
 | Diritto di proprietà | Descrizione |
 | --- | --- |
-| **Sviluppa** | Questo consente di eseguire le azioni seguenti:<ul><li>Creare regole ed elementi dati</li><li>Creare librerie e generarle negli ambienti di sviluppo esistenti</li><li>Inviare una libreria per l’approvazione</li></ul>La maggior parte delle attività quotidiane nell’interfaccia utente di richiede questo diritto. |
-| **Approvazione** | Questo consente di trasferire nell’ambiente di staging una libreria e una build inviate. Puoi inoltre approvare una libreria per la pubblicazione dopo aver completato i test. |
-| **Pubblica** | Questo consente di pubblicare librerie approvate nell’ambiente di produzione. |
-| **Gestire le estensioni** | Questo consente di eseguire le azioni seguenti: <ul><li>Installare nuove estensioni in una proprietà</li><li>Modificare la configurazione per un&#39;estensione già installata</li><li>Eliminare un’estensione</li></ul>Per ulteriori informazioni sulle estensioni, consulta la [panoramica sulle estensioni](../managing-resources/extensions/overview.md). In genere questo ruolo appartiene al reparto IT o Marketing, a seconda dell&#39;organizzazione. |
+| **Sviluppa** | Questo consente di eseguire le azioni seguenti:<ul><li>Creare regole ed elementi dati</li><li>Creare librerie e generarle negli ambienti di sviluppo esistenti</li><li>Inviare una libreria per l’approvazione</li></ul>La maggior parte delle attività quotidiane nell’interfaccia utente richiedono questo diritto. |
+| **Approva** | Questo consente di trasferire nell’ambiente di staging una libreria e una build inviate. Puoi inoltre approvare una libreria per la pubblicazione dopo aver completato i test. |
+| **Publish** | Questo consente di pubblicare librerie approvate nell’ambiente di produzione. |
+| **Gestione estensioni** | Questo consente di eseguire le azioni seguenti: <ul><li>Installare nuove estensioni in una proprietà</li><li>Modificare la configurazione per un&#39;estensione già installata</li><li>Eliminare un’estensione</li></ul>Per ulteriori informazioni sulle estensioni, consulta la [panoramica sulle estensioni](../managing-resources/extensions/overview.md). In genere questo ruolo appartiene al reparto IT o Marketing, a seconda dell&#39;organizzazione. |
 | **Gestisci ambienti** | Questo consente di creare e modificare gli ambienti. Per ulteriori informazioni, consulta la [documentazione degli ambienti](../publishing/environments.md). Generalmente, questo ruolo appartiene al reparto IT. |
 
 {style="table-layout:auto"}
@@ -66,9 +66,9 @@ I diritti aziendali si applicano ad autorizzazioni che si estendono su più prop
 
 | Diritto dell’azienda | Descrizione |
 | --- | --- |
-| **Gestisci proprietà** | Questo consente di eseguire le azioni seguenti:<ul><li>Creare nuove proprietà</li><li>Modificare i metadati e le impostazioni a livello di proprietà</li><li>Elimina proprietà</li></ul>Generalmente, gli amministratori eseguono questo ruolo. Consulta la [documentazione sulle proprietà](companies-and-properties.md) per ulteriori informazioni. |
-| **Sviluppare estensioni** | Consente di creare e modificare pacchetti di estensione di proprietà dell’azienda, incluse versioni private e richieste di versioni pubbliche. |
-| **Gestire le configurazioni dell’app** | Questa opzione è disponibile solo per chi dispone di una licenza per Adobe Journey Optimizer o di un’altra soluzione che consente l’accesso a messaggi mobili in-app e push.  Questo consente di gestire le app conosciute da Experience Cloud insieme alle credenziali push necessarie per comunicare con il servizio di messaggistica Firebase Cloud e il servizio Apple Push Notification. |
+| **Gestisci proprietà** | Questo consente di eseguire le azioni seguenti:<ul><li>Creare nuove proprietà</li><li>Modificare i metadati e le impostazioni a livello di proprietà</li><li>Elimina proprietà</li></ul>Questo ruolo viene in genere eseguito dagli amministratori. Per ulteriori informazioni, consulta la [documentazione sulle proprietà](companies-and-properties.md). |
+| **Sviluppa estensioni** | Consente di creare e modificare pacchetti di estensione di proprietà dell’azienda, incluse versioni private e richieste di versioni pubbliche. |
+| **Gestione configurazioni app** | Questa opzione è disponibile solo per chi dispone di una licenza per Adobe Journey Optimizer o di un’altra soluzione che consente l’accesso a messaggi mobili in-app e push.  Questo consente di gestire le app conosciute da Experience Cloud insieme alle credenziali push necessarie per comunicare con il servizio di messaggistica Firebase Cloud e il servizio Apple Push Notification. |
 
 {style="table-layout:auto"}
 
@@ -76,7 +76,7 @@ I diritti aziendali si applicano ad autorizzazioni che si estendono su più prop
 
 Le autorizzazioni totali di un singolo utente sono determinate dall’iscrizione totale in profili di prodotto diversi. Se un utente appartiene a più profili di prodotto, le autorizzazioni di ciascun profilo vengono aggiunte insieme anziché moltiplicate.
 
-Ad esempio, il profilo di prodotto A ti concede il diritto Develop per la proprietà 1. Il profilo di prodotto B ti concede il diritto Publish per la proprietà 2. In questo caso, è possibile sviluppare nella proprietà 1 e pubblicare nella proprietà 2, ma non è possibile pubblicare nella proprietà 1 o sviluppare nella proprietà 2 perché non si dispone dei diritti espliciti per farlo.
+Ad esempio, il profilo di prodotto A ti concede il diritto Develop per la proprietà 1. Il profilo di prodotto B ti concede il diritto Publish per la proprietà 2. In questo caso, è possibile sviluppare nella proprietà 1 e Publish nella proprietà 2, ma non è possibile pubblicare nella proprietà 1 o sviluppare nella proprietà 2 perché non si dispone dei diritti espliciti per farlo.
 
 ## Scenari di diritti
 
@@ -102,7 +102,7 @@ Per eseguire questa operazione:
 
 Un&#39;azienda di livello Enterprise potrebbe avere più siti divisi geograficamente, con team diversi responsabili di ogni area geografica. All&#39;interno di questi team, i vari utenti possono sviluppare e pubblicare.
 
-È simile al precedente scenario &quot;Separazione dei compiti&quot;, ma organizzato per aree geografiche. Ad esempio, puoi creare un profilo &quot;Develop&quot; (Sviluppa) e un profilo &quot;Publish&quot; (Pubblica) per il Nord America e creare gruppi separati &quot;Develop&quot; (Sviluppa) e &quot;Publish&quot; (Pubblica) per l’Europa.
+È simile alla precedente &quot;Separazione dei compiti&quot;, ma organizzata per aree geografiche. Ad esempio, puoi creare un profilo &quot;Develop&quot; (Sviluppa) e un profilo &quot;Publish&quot; (Sviluppa) per il Nord America e gruppi &quot;Develop&quot; e &quot;Publish&quot; separati per l’Europa.
 
 ## Ruoli di esempio
 
@@ -110,12 +110,12 @@ Nella tabella seguente vengono forniti alcuni esempi dei tipi di ruoli che è po
 
 | Ruolo | Descrizione | Proprietà | Diritti di proprietà | Diritti aziendali |
 | --- | --- | --- | --- | --- |
-| Manager | Vuole vedere cosa sta succedendo nel sistema, ma non dovrebbe essere in grado di apportare modifiche. | Inclusione automatica | (Nessuna) | (Nessuna) |
+| Manager | Vuole vedere cosa sta succedendo nel sistema, ma non dovrebbe essere in grado di apportare modifiche. | Inclusione automatica | (Nessuno) | (Nessuno) |
 | Addetto al marketing | Può installare estensioni e impostare nuovi tag per le proprietà esistenti, ma non può pubblicare negli ambienti di staging o produzione. | Inclusione automatica | <ul><li>Sviluppa</li><li>Gestire le estensioni</li></ul> | <ul><li>Gestisci proprietà</li></ul> |
-| Sviluppatore app mobili | È responsabile dell’implementazione di soluzioni Adobe e di terze parti all’interno di un’app mobile nativa. | Inclusione automatica | <ul><li>Sviluppa</li><li>Gestire le estensioni</li></ul> | <li>Gestisci proprietà</li><li>Gestire le configurazioni dell’app</li> |
-| Team IT | Non modifica effettivamente alcun tag, ma ha il pieno controllo sugli ambienti di staging e produzione e su ciò che contiene. | Inclusione automatica | (Nessuna) | <ul><li>Approvazione</li><li>Pubblica</li><li>Gestisci ambienti</li></ul> |
+| Sviluppatore app mobili | È responsabile dell’implementazione di soluzioni Adobe e di terze parti all’interno di un’app mobile nativa. | Inclusione automatica | <ul><li>Sviluppa</li><li>Gestire le estensioni</li></ul> | <li>Gestisci proprietà</li><li>Gestione configurazioni app</li> |
+| Team IT | Non modifica effettivamente alcun tag, ma ha il pieno controllo sugli ambienti di staging e produzione e su ciò che contiene. | Inclusione automatica | (Nessuno) | <ul><li>Approva</li><li>Pubblica</li><li>Gestisci ambienti</li></ul> |
 | Sviluppatore di estensioni | Sviluppa le estensioni e può inviarle per l&#39;approvazione, ma non può pubblicarle o aggiungerle alle proprietà esistenti. | Inclusione automatica | <ul><li>Sviluppa</li></ul> | <ul><li>Gestisci proprietà</li><li>Sviluppare estensioni</li></ul> |
-| Utente privilegiato | Fa tutto. | Inclusione automatica | <ul><li>Sviluppa</li><li>Approvazione</li><li>Pubblica</li><li>Gestire le estensioni</li><li>Gestisci ambienti</li></ul> | <ul><li>Gestisci proprietà</li></ul> |
+| Utente privilegiato | Fa tutto. | Inclusione automatica | <ul><li>Sviluppa</li><li>Approva</li><li>Pubblica</li><li>Gestire le estensioni</li><li>Gestisci ambienti</li></ul> | <ul><li>Gestisci proprietà</li></ul> |
 
 {style="table-layout:auto"}
 

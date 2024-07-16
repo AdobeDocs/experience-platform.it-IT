@@ -6,17 +6,17 @@ exl-id: 15f106c7-b88b-4042-b925-703e2a309573
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
 source-wordcount: '309'
-ht-degree: 10%
+ht-degree: 7%
 
 ---
 
 # Funzioni di confronto
 
-Le funzioni di confronto vengono utilizzate per confrontare espressioni e valori diversi, restituendo `true` o `false` di conseguenza. Ulteriori informazioni su altre funzioni PQL sono disponibili nella [[!DNL Profile Query Language] panoramica](./overview.md).
+Le funzioni di confronto vengono utilizzate per confrontare espressioni e valori diversi, restituendo di conseguenza `true` o `false`. Ulteriori informazioni sulle altre funzioni di PQL sono disponibili nella [[!DNL Profile Query Language] panoramica](./overview.md).
 
-## È uguale a
+## Uguale a
 
-Il `=` (uguale a) controlla se un valore o un&#39;espressione è uguale a un altro valore o espressione.
+La funzione `=` (è uguale a) controlla se un valore o un&#39;espressione è uguale a un altro valore o espressione.
 
 **Formato**
 
@@ -34,7 +34,7 @@ homeAddress.countryISO = "CA"
 
 ## Non uguale
 
-Il `!=` (diverso da) controlla se un valore o un’espressione è **non** uguale a un altro valore o espressione.
+La funzione `!=` (diverso da) controlla se un valore o un&#39;espressione è **diverso** uguale a un altro valore o espressione.
 
 **Formato**
 
@@ -52,7 +52,7 @@ homeAddress.countryISO != "CA"
 
 ## Maggiore di
 
-Il `>` (maggiore di) per verificare se il primo valore è maggiore del secondo valore.
+La funzione `>` (maggiore di) viene utilizzata per verificare se il primo valore è maggiore del secondo valore.
 
 **Formato**
 
@@ -70,7 +70,7 @@ person.birthMonth > 2
 
 ## Maggiore o uguale a
 
-Il `>=` (maggiore o uguale a) per verificare se il primo valore è maggiore o uguale al secondo valore.
+La funzione `>=` (maggiore o uguale a) viene utilizzata per verificare se il primo valore è maggiore o uguale al secondo valore.
 
 **Formato**
 
@@ -88,7 +88,7 @@ person.birthMonth >= 3
 
 ## Minore di
 
-Il `<` La funzione di confronto (minore di) viene utilizzata per verificare se il primo valore è minore del secondo valore.
+La funzione di confronto `<` (minore di) viene utilizzata per verificare se il primo valore è minore del secondo valore.
 
 **Formato**
 
@@ -106,7 +106,7 @@ person.birthMonth < 2
 
 ## Minore o uguale a
 
-Il `<=` (minore o uguale a) per verificare se il primo valore è minore o uguale al secondo valore.
+La funzione di confronto `<=` (minore o uguale a) viene utilizzata per verificare se il primo valore è minore o uguale al secondo valore.
 
 **Formato**
 
@@ -124,4 +124,4 @@ person.birthMonth <= 2
 
 ## Passaggi successivi
 
-Ora che hai imparato le funzioni di confronto, puoi utilizzarle all’interno delle query PQL. Per ulteriori informazioni su altre funzioni PQL, leggere [Panoramica sulla lingua delle query di profilo](./overview.md).
+Ora che hai imparato le funzioni di confronto, puoi utilizzarle all’interno delle query PQL. Per ulteriori informazioni su altre funzioni di PQL, leggere la [panoramica di Profile Query Language](./overview.md).

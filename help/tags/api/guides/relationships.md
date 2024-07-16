@@ -4,7 +4,7 @@ description: Scopri come vengono stabilite le relazioni tra le risorse nell’AP
 exl-id: 23976978-a639-4eef-91b6-380a29ec1c14
 source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '809'
 ht-degree: 99%
 
 ---
@@ -150,8 +150,8 @@ Le tabelle seguenti descrivono le relazioni disponibili per ogni tipo di risorsa
 
 | Relazione | Obbligatorio | Creare tramite payload | Creare tramite URL |
 | :--- | :---: | :---: | :---: |
-| `property` | ✓ |  |  |
-| `entity` | ✓ |  |  |
+| `property` | ✓ | | |
+| `entity` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -159,12 +159,12 @@ Le tabelle seguenti descrivono le relazioni disponibili per ogni tipo di risorsa
 
 | Relazione | Obbligatorio | Creare tramite payload | Creare tramite URL |
 | :--- | :---: | :---: | :---: |
-| `data_elements` |  |  |  |
-| `extensions` |  |  |  |
-| `rules` |  |  |  |
-| `environment` | ✓ |  |  |
-| `library` | ✓ |  |  |
-| `property` | ✓ |  |  |
+| `data_elements` | | | |
+| `extensions` | | | |
+| `rules` | | | |
+| `environment` | ✓ | | |
+| `library` | ✓ | | |
+| `property` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -172,7 +172,7 @@ Le tabelle seguenti descrivono le relazioni disponibili per ogni tipo di risorsa
 
 | Relazione | Obbligatorio | Creare tramite payload | Creare tramite URL |
 | :--- | :---: | :---: | :---: |
-| `property` | ✓ |  |  |
+| `property` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -180,7 +180,7 @@ Le tabelle seguenti descrivono le relazioni disponibili per ogni tipo di risorsa
 
 | Relazione | Obbligatorio | Creare tramite payload | Creare tramite URL |
 | :--- | :---: | :---: | :---: |
-| `properties` |  |  |  |
+| `properties` | | | |
 
 {style="table-layout:auto"}
 
@@ -188,14 +188,14 @@ Le tabelle seguenti descrivono le relazioni disponibili per ogni tipo di risorsa
 
 | Relazione | Obbligatorio | Creare tramite payload | Creare tramite URL |
 | :--- | :---: | :---: | :---: |
-| `libraries` |  |  |  |
-| `revisions` | ✓ |  |  |
-| `notes` |  |  |  |
-| `property` | ✓ |  |  |
-| `origin` | ✓ |  |  |
-| `extension` | ✓ | ✓ |  |
-| `updated_with_extension` | ✓ |  |  |
-| `updated_with_extension_package` | ✓ |  |  |
+| `libraries` | | | |
+| `revisions` | ✓ | | |
+| `notes` | | | |
+| `property` | ✓ | | |
+| `origin` | ✓ | | |
+| `extension` | ✓ | ✓ | |
+| `updated_with_extension` | ✓ | | |
+| `updated_with_extension_package` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -203,10 +203,10 @@ Le tabelle seguenti descrivono le relazioni disponibili per ogni tipo di risorsa
 
 | Relazione | Obbligatorio | Creare tramite payload | Creare tramite URL |
 | :--- | :---: | :---: | :---: |
-| `library` |  |  |  |
-| `builds` |  |  |  |
-| `host` | ✓ | ✓ |  |
-| `property` | ✓ |  |  |
+| `library` | | | |
+| `builds` | | | |
+| `host` | ✓ | ✓ | |
+| `property` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -214,13 +214,13 @@ Le tabelle seguenti descrivono le relazioni disponibili per ogni tipo di risorsa
 
 | Relazione | Obbligatorio | Creare tramite payload | Creare tramite URL |
 | :--- | :---: | :---: | :---: |
-| `libraries` |  |  |  |
-| `revisions` | ✓ |  |  |
-| `notes` |  |  |  |
-| `property` | ✓ |  |  |
-| `origin` | ✓ |  |  |
-| `extension_package` | ✓ | ✓ |  |
-| `updated_with_extension_package` | ✓ |  |  |
+| `libraries` | | | |
+| `revisions` | ✓ | | |
+| `notes` | | | |
+| `property` | ✓ | | |
+| `origin` | ✓ | | |
+| `extension_package` | ✓ | ✓ | |
+| `updated_with_extension_package` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -228,7 +228,7 @@ Le tabelle seguenti descrivono le relazioni disponibili per ogni tipo di risorsa
 
 | Relazione | Obbligatorio | Creare tramite payload | Creare tramite URL |
 | :--- | :---: | :---: | :---: |
-| `property` | ✓ |  |  |
+| `property` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -236,15 +236,15 @@ Le tabelle seguenti descrivono le relazioni disponibili per ogni tipo di risorsa
 
 | Relazione | Obbligatorio | Creare tramite payload | Creare tramite URL |
 | :--- | :---: | :---: | :---: |
-| `builds` |  |  |  |
-| `environment` |  |  | ✓ |
-| `data_elements` |  |  | ✓ |
-| `extensions` |  |  | ✓ |
-| `rules` |  |  | ✓ |
-| `notes` |  |  |  |
-| `upstream_library` | ✓ |  |  |
-| `property` | ✓ |  |  |
-| `last_build` |  |  |  |
+| `builds` | | | |
+| `environment` | | | ✓ |
+| `data_elements` | | | ✓ |
+| `extensions` | | | ✓ |
+| `rules` | | | ✓ |
+| `notes` | | | |
+| `upstream_library` | ✓ | | |
+| `property` | ✓ | | |
+| `last_build` | | | |
 
 {style="table-layout:auto"}
 
@@ -252,7 +252,7 @@ Le tabelle seguenti descrivono le relazioni disponibili per ogni tipo di risorsa
 
 | Relazione | Obbligatorio | Creare tramite payload | Creare tramite URL |
 | :--- | :---: | :---: | :---: |
-| `resource` | ✓ |  |  |
+| `resource` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -260,13 +260,13 @@ Le tabelle seguenti descrivono le relazioni disponibili per ogni tipo di risorsa
 
 | Relazione | Obbligatorio | Creare tramite payload | Creare tramite URL |
 | :--- | :---: | :---: | :---: |
-| `company` | ✓ |  |  |
-| `callbacks` |  |  |  |
-| `environments` |  |  |  |
-| `libraries` |  |  |  |
-| `data_elements` |  |  |  |
-| `extensions` |  |  |  |
-| `extensions` |  |  |  |
+| `company` | ✓ | | |
+| `callbacks` | | | |
+| `environments` | | | |
+| `libraries` | | | |
+| `data_elements` | | | |
+| `extensions` | | | |
+| `extensions` | | | |
 
 {style="table-layout:auto"}
 
@@ -274,14 +274,14 @@ Le tabelle seguenti descrivono le relazioni disponibili per ogni tipo di risorsa
 
 | Relazione | Obbligatorio | Creare tramite payload | Creare tramite URL |
 | :--- | :---: | :---: | :---: |
-| `updated_with_extensions_package` | ✓ |  |  |
-| `updated_with_extension` | ✓ |  |  |
-| `extension` | ✓ | ✓ |  |
-| `notes` |  |  |  |
-| `origin` | ✓ |  |  |
-| `property` | ✓ |  |  |
-| `rules` | ✓ | ✓ |  |
-| `revisions` | ✓ |  |  |
+| `updated_with_extensions_package` | ✓ | | |
+| `updated_with_extension` | ✓ | | |
+| `extension` | ✓ | ✓ | |
+| `notes` | | | |
+| `origin` | ✓ | | |
+| `property` | ✓ | | |
+| `rules` | ✓ | ✓ | |
+| `revisions` | ✓ | | |
 
 {style="table-layout:auto"}
 
@@ -289,17 +289,17 @@ Le tabelle seguenti descrivono le relazioni disponibili per ogni tipo di risorsa
 
 | Relazione | Obbligatorio | Creare tramite payload | Creare tramite URL |
 | :--- | :---: | :---: | :---: |
-| `libraries` |  |  |  |
-| `revisions` | ✓ |  |  |
-| `notes` |  |  |  |
-| `property` | ✓ |  |  |
-| `origin` | ✓ |  |  |
-| `rule_components` |  |  |  |
+| `libraries` | | | |
+| `revisions` | ✓ | | |
+| `notes` | | | |
+| `property` | ✓ | | |
+| `origin` | ✓ | | |
+| `rule_components` | | | |
 
 ### Segreti
 
 | Relazione | Obbligatorio | Creare tramite payload | Creare tramite URL |
 | :--- | :---: | :---: | :---: |
-| `property` | ✓ |  | ✓ |
-| `environment` | ✓ | ✓ |  |
+| `property` | ✓ | | ✓ |
+| `environment` | ✓ | ✓ | |
 

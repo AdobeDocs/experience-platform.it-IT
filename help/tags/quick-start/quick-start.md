@@ -4,8 +4,8 @@ description: Scopri come iniziare a usare i tag in Adobe Experience Platform.
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
 source-git-commit: 60d88be5d710314cdc6900f4b63643c740b91fa6
 workflow-type: tm+mt
-source-wordcount: '1525'
-ht-degree: 92%
+source-wordcount: '1521'
+ht-degree: 88%
 
 ---
 
@@ -33,11 +33,11 @@ I tag sono completamente integrati con il tuo Adobe ID. Le autorizzazioni utente
 
 I tag dispongono di un sistema di gestione degli utenti basato su diritti. Ciò significa che i diritti individuali devono essere concessi esplicitamente. Tali diritti sono assegnati ai gruppi, quindi gli utenti vengono aggiunti ai gruppi appropriati per poter accedere. Anche se l’organizzazione ha accesso a Raccolta dati, i singoli utenti non possono fare nulla finché non vengono espressamente concessi loro alcuni diritti da parte dell’amministratore.
 
-Per istruzioni dettagliate su come creare gruppi e aggiungere utenti per i tag, vedi [guida alle autorizzazioni della raccolta dati](../../collection/permissions.md).
+Per istruzioni dettagliate su come creare gruppi e aggiungere utenti per i tag, consulta la [guida alle autorizzazioni per la raccolta dati](../../collection/permissions.md).
 
 ## 2. Accedere
 
-Dopo aver aggiunto i diritti dei tag al tuo Adobe ID, devi accedere all’interfaccia utente di Experience Platform o all’interfaccia utente di Data Collection. Per eseguire questa operazione, vai direttamente al [Schermata di accesso Experience Cloud](https://experience.adobe.com/)e selezionando una delle seguenti opzioni **[!UICONTROL Raccolta dati]** o **[!UICONTROL Experience Platform]**.
+Dopo aver aggiunto i diritti dei tag al tuo Adobe ID, devi accedere all’interfaccia utente di Experience Platform o all’interfaccia utente di Data Collection. Per eseguire questa operazione, passare direttamente alla [schermata di accesso Experience Cloud](https://experience.adobe.com/) e selezionare **[!UICONTROL Raccolta dati]** o **[!UICONTROL Experience Platform]**.
 
 >[!NOTE]
 >
@@ -45,7 +45,7 @@ Dopo aver aggiunto i diritti dei tag al tuo Adobe ID, devi accedere all’interf
 
 ## 3. Creare una proprietà
 
-Dopo aver effettuato l’accesso all’interfaccia utente di , la prima cosa da fare è creare una proprietà. Una proprietà è fondamentalmente un contenitore che riempi con estensioni, regole, elementi dati e librerie durante la distribuzione di tag sul sito. Molte persone creano una proprietà per ciascun sito Web (o gruppo di siti strettamente correlati) in cui desiderano distribuire lo stesso set di tag.
+Dopo aver effettuato l’accesso all’interfaccia utente, la prima cosa da fare è creare una proprietà. Una proprietà è fondamentalmente un contenitore che riempi con estensioni, regole, elementi dati e librerie durante la distribuzione di tag sul sito. Molte persone creano una proprietà per ciascun sito Web (o gruppo di siti strettamente correlati) in cui desiderano distribuire lo stesso set di tag.
 
 Per ulteriori informazioni sulla creazione delle proprietà, vedi [Creazione di una proprietà](../ui/administration/companies-and-properties.md).
 
@@ -55,7 +55,7 @@ Un’estensione è un’integrazione creata da Adobe o da un partner di Adobe ch
 
 Tutte le nuove proprietà hanno installata l&#39;[estensione Core](../extensions/client/core/overview.md). Le proprietà per dispositivi mobili sono dotate di estensioni aggiuntive. L’estensione Core è creata da Adobe per fornire un set predefinito solido di tipi di elementi dati per il livello di dati, e i tipi di eventi per le regole. La maggior parte delle azioni che desideri eseguire (ottenere un ECID, inviare un beacon [!DNL Adobe Analytics], caricare la global mbox [!DNL Target], ecc.) saranno disponibili grazie alle estensioni installate dal catalogo.
 
-Ciò che rende i tag in Platform davvero unici è che queste estensioni possono essere create da chiunque. Devi rilasciare un pixel di remarketing Facebook sul sito? Controlla l&#39;estensione creata da Facebook. Vuoi fare lo stesso per Twitter o Linked In? Utilizza le loro estensioni. Devi eseguire un sondaggio? Dai un&#39;occhiata a Question Pro o Foresee. Devi gestire la privacy e il consenso degli utenti finali, in ambito [!DNL GDPR]? Vedi se Evidon o Trust Arc fanno al caso tuo. Desideri visualizzare informazioni dettagliate sul comportamento dei singoli utenti sul tuo sito? Guarda Clicktale. Per ulteriori informazioni, consulta la sezione su [aggiunta di una nuova estensione](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
+Ciò che rende i tag in Platform davvero unici è che queste estensioni possono essere create da chiunque. Devi rilasciare un pixel di remarketing Facebook sul sito? Controlla l&#39;estensione creata da Facebook. Vuoi fare lo stesso per Twitter o Linked In? Utilizza le loro estensioni. Devi eseguire un sondaggio? Dai un&#39;occhiata a Question Pro o Foresee. Devi gestire la privacy e il consenso degli utenti finali, in ambito [!DNL GDPR]? Vedi se Evidon o Trust Arc fanno al caso tuo. Desideri visualizzare informazioni dettagliate sul comportamento dei singoli utenti sul tuo sito? Guarda Clicktale. Per ulteriori informazioni, vedere la sezione relativa all&#39;aggiunta di una nuova estensione [1.](../ui/managing-resources/extensions/overview.md#add-a-new-extension)
 
 ## 5. Creare elementi dati e regole
 
@@ -67,7 +67,7 @@ Gli **elementi dati** sono indicatori per le informazioni da raccogliere e invia
 * Sessione e archiviazione locale
 * Tutto il resto
 
-Una volta definito l’elemento dati, puoi utilizzarlo ovunque nell’interfaccia utente di per qualsiasi estensione. Per informazioni più dettagliate, consulta la documentazione sugli [elementi dati](../ui/managing-resources/data-elements.md).
+Una volta definito l’elemento dati, puoi utilizzarlo ovunque nell’interfaccia utente per qualsiasi estensione. Per informazioni più dettagliate, consulta la documentazione sugli [elementi dati](../ui/managing-resources/data-elements.md).
 
 Le **regole** sono il nucleo logico della tua implementazione e controllano cosa, quando, dove e come si trovano i tag sul sito. Definisci un evento, imposta condizioni ed eccezioni, quindi definisci le azioni e l&#39;ordine. Infine, pubblica le modifiche per vedere i risultati. Per ulteriori informazioni, vedi [Regole](../ui/managing-resources/rules.md).
 
@@ -135,5 +135,5 @@ Per ulteriori informazioni sui diversi stati e opzioni disponibili durante il pr
 Per ulteriori informazioni, consulta le seguenti risorse:
 
 * **[Community di Data Collection](https://forums.adobe.com/community/experience-cloud/platform/launch)**: fai domande e rispondi, invia idee e vota quelle degli altri. Accedi con il tuo Adobe ID.
-* **[Documentazione per sviluppatori](../api/overview.md)**: partecipa alla community di sviluppatori di tag per creare estensioni o utilizzare le API dei tag.
+* **[Developer Docs](../api/overview.md)**: partecipa alla community di sviluppatori di tag per creare estensioni o utilizzare le API dei tag
 * **[Panoramica dei tutorial](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html?lang=it)**: questi documenti presentano i concetti relativi ai tag, inclusi l’inoltro degli eventi e Mobile SDK per app Android.

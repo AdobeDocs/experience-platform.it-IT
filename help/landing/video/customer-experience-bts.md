@@ -1,5 +1,5 @@
 ---
-title: 'Dietro le quinte: un''esperienza del cliente con tecnologia Adobe Experience Platform'
+title: Dietro le quinte&#58; un'esperienza del cliente con tecnologia Adobe Experience Platform
 description: Nel video precedente abbiamo visto come un marchio di esempio, Luma, è stato in grado di creare un’esperienza del cliente ricca, gratificante e rilevante. Questo video illustra come viene utilizzato Adobe Experience Platform per eseguire questo percorso.
 kt: 4340
 audience: all
@@ -16,6 +16,6 @@ ht-degree: 0%
 
 # Dietro le quinte di un’esperienza del cliente basata su Experience Platform
 
-Dopo aver guardato il video mostrato [un’esperienza del cliente basata su Platform](customer-experience.md), vai dietro le quinte per vedere come Adobe Experience Platform è stato utilizzato per alimentare questa esperienza.
+Dopo aver visto il video che mostra [un&#39;esperienza del cliente basata su Platform](customer-experience.md), vai dietro le quinte per vedere come Adobe Experience Platform è stato utilizzato per alimentare questa esperienza.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28144?quality=12&learn=on)

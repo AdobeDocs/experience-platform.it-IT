@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Utilizza una corrispondenza &quot;fuzzy&quot; nei dati Adobe Experience Platform per restituire le corrispondenze più probabili e approssimative senza dover cercare stringhe con caratteri identici. Questo consente una ricerca molto più flessibile dei dati e li rende più accessibili risparmiando tempo e fatica.
 
-Invece di provare a riformattare le stringhe di ricerca per farle corrispondere, la corrispondenza sfocata analizza il rapporto di somiglianza tra due sequenze e restituisce la percentuale di somiglianza. [[!DNL FuzzyWuzzy]](https://pypi.org/project/fuzzywuzzy/) è consigliato per questo processo, in quanto le sue funzioni sono più adatte per aiutare a far corrispondere le stringhe in situazioni più complesse rispetto a [!DNL regex] o [!DNL difflib].
+Invece di provare a riformattare le stringhe di ricerca per farle corrispondere, la corrispondenza sfocata analizza il rapporto di somiglianza tra due sequenze e restituisce la percentuale di somiglianza. [[!DNL FuzzyWuzzy]](https://pypi.org/project/fuzzywuzzy/) è consigliato per questo processo in quanto le sue funzioni sono più adatte per consentire la corrispondenza di stringhe in situazioni più complesse rispetto a [!DNL regex] o [!DNL difflib].
 
 L’esempio fornito in questo caso d’uso si concentra sulla corrispondenza di attributi simili da una ricerca nella camera d’albergo in due diversi set di dati dell’agenzia di viaggio. Il documento illustra come far corrispondere le stringhe in base al loro grado di somiglianza da grandi origini dati separate. In questo esempio, fuzzy match confronta i risultati della ricerca per le caratteristiche di una stanza delle agenzie di viaggio Luma e Acme.
 
@@ -21,32 +21,32 @@ L’esempio fornito in questo caso d’uso si concentra sulla corrispondenza di 
 
 Poiché parte di questo processo richiede la formazione di un modello di apprendimento automatico, il presente documento presuppone una conoscenza operativa di uno o più ambienti di apprendimento automatico.
 
-Questo esempio utilizza [!DNL Python] e [!DNL Jupyter Notebook] ambiente di sviluppo. Sebbene siano disponibili molte opzioni, [!DNL Jupyter Notebook] è consigliata in quanto si tratta di un&#39;applicazione web open-source con requisiti di calcolo ridotti. Può essere scaricato da [il sito ufficiale di Jupyter](https://jupyter.org/).
+Questo esempio utilizza [!DNL Python] e l&#39;ambiente di sviluppo [!DNL Jupyter Notebook]. Sebbene siano disponibili molte opzioni, [!DNL Jupyter Notebook] è consigliato in quanto si tratta di un&#39;applicazione Web open-source con requisiti di calcolo ridotti. Può essere scaricato da [il sito ufficiale Jupyter](https://jupyter.org/).
 
-Prima di iniziare, è necessario importare le librerie necessarie. [!DNL FuzzyWuzzy] è un open-source [!DNL Python] libreria basata su [!DNL difflib] e utilizzati per associare le stringhe. Utilizza [!DNL Levenshtein Distance] per calcolare le differenze tra sequenze e serie. [!DNL FuzzyWuzzy] ha i seguenti requisiti:
+Prima di iniziare, è necessario importare le librerie necessarie. [!DNL FuzzyWuzzy] è una libreria [!DNL Python] open source creata sulla libreria [!DNL difflib] e utilizzata per trovare stringhe corrispondenti. Utilizza [!DNL Levenshtein Distance] per calcolare le differenze tra sequenze e pattern. [!DNL FuzzyWuzzy] ha i seguenti requisiti:
 
-- [!DNL Python] 2.4 (o superiore)
+- [!DNL Python] 2.4 (o versione successiva)
 - [!DNL Python-Levenshtein]
 
-Dalla riga di comando, utilizza il seguente comando per installare [!DNL FuzzyWuzzy]:
+Dalla riga di comando, utilizzare il comando seguente per installare [!DNL FuzzyWuzzy]:
 
 ```console
 pip install fuzzywuzzy
 ```
 
-Oppure usa il seguente comando per installare [!DNL Python-Levenshtein] inoltre:
+Oppure usa il seguente comando per installare anche [!DNL Python-Levenshtein]:
 
 ```console
 pip install fuzzywuzzy[speedup]
 ```
 
-Ulteriori informazioni tecniche su [!DNL Fuzzywuzzy] possono essere trovati nelle loro [documentazione ufficiale](https://pypi.org/project/fuzzywuzzy/).
+Ulteriori informazioni tecniche su [!DNL Fuzzywuzzy] sono disponibili nella [documentazione ufficiale](https://pypi.org/project/fuzzywuzzy/).
 
 ### Connetti a Query Service
 
-È necessario collegare il modello di apprendimento automatico a Query Service fornendo le credenziali di connessione. È possibile fornire credenziali sia in scadenza che non in scadenza. Consulta la sezione [guida alle credenziali](../ui/credentials.md) per ulteriori informazioni su come acquisire le credenziali necessarie. Se sta usando [!DNL Jupyter Notebook], leggi la guida completa su [come connettersi a Query Service](../clients/jupyter-notebook.md).
+È necessario collegare il modello di apprendimento automatico a Query Service fornendo le credenziali di connessione. È possibile fornire credenziali sia in scadenza che non in scadenza. Per ulteriori informazioni su come acquisire le credenziali necessarie, vedere la [guida alle credenziali](../ui/credentials.md). Se utilizzi [!DNL Jupyter Notebook], leggi la guida completa su [come connetterti a Query Service](../clients/jupyter-notebook.md).
 
-Inoltre, assicurati di importare [!DNL numpy] nel tuo pacchetto [!DNL Python] per consentire l&#39;algebra lineare.
+Assicurarsi inoltre di importare il pacchetto [!DNL numpy] nell&#39;ambiente [!DNL Python] per abilitare l&#39;algebra lineare.
 
 ```python
 import numpy as np
@@ -67,9 +67,9 @@ password=<YOUR_QUERY_SERVICE_PASSWORD>
 cur = conn.cursor()
 ```
 
-Il tuo [!DNL Jupyter Notebook] L’istanza è ora connessa a Query Service. Se la connessione ha esito positivo, non viene visualizzato alcun messaggio. Se la connessione non è riuscita, viene visualizzato un errore.
+L&#39;istanza [!DNL Jupyter Notebook] è ora connessa a Query Service. Se la connessione ha esito positivo, non viene visualizzato alcun messaggio. Se la connessione non è riuscita, viene visualizzato un errore.
 
-### Disegnare dati dal set di dati Luma {#luma-dataset}
+### Dati Draw dal set di dati Luma {#luma-dataset}
 
 I dati per l’analisi vengono estratti dal primo set di dati con i seguenti comandi. Per brevità, gli esempi sono stati limitati ai primi 10 risultati della colonna.
 
@@ -96,7 +96,7 @@ array(['Deluxe King Or Queen Room', 'Kona Tower City / Mountain View',
 
 +++
 
-### Disegnare dati dal set di dati Acme {#acme-dataset}
+### Dati Draw dal set di dati Acme {#acme-dataset}
 
 I dati per l’analisi vengono ora estratti dal secondo set di dati con i seguenti comandi. Anche in questo caso, per brevità, gli esempi sono stati limitati ai primi 10 risultati della colonna.
 
@@ -125,7 +125,7 @@ array(['Deluxe King Or Queen Room', 'Kona Tower City / Mountain View',
 
 ### Creare una funzione di punteggio fuzzy {#fuzzy-scoring}
 
-Quindi, devi importare `fuzz` dalla libreria FuzzyWuzzy ed eseguire un confronto delle proporzioni parziali delle stringhe. La funzione di rapporto parziale consente di eseguire la corrispondenza della sottostringa. Questa opzione consente di prendere la stringa più breve e di farla corrispondere a tutte le sottostringhe della stessa lunghezza. La funzione restituisce un rapporto di somiglianza percentuale fino al 100%. Ad esempio, la funzione di rapporto parziale confronta le seguenti stringhe &quot;Camera Deluxe&quot;, &quot;1 Letto King&quot; e &quot;Camera Re Deluxe&quot; e restituisce un punteggio di somiglianza del 69%.
+È quindi necessario importare `fuzz` dalla libreria FuzzyWuzzy ed eseguire un confronto delle proporzioni parziali delle stringhe. La funzione di rapporto parziale consente di eseguire la corrispondenza della sottostringa. Questa opzione consente di prendere la stringa più breve e di farla corrispondere a tutte le sottostringhe della stessa lunghezza. La funzione restituisce un rapporto di somiglianza percentuale fino al 100%. Ad esempio, la funzione di rapporto parziale confronta le seguenti stringhe &quot;Camera Deluxe&quot;, &quot;1 Letto King&quot; e &quot;Camera Re Deluxe&quot; e restituisce un punteggio di somiglianza del 69%.
 
 Nel caso di utilizzo di corrispondenza della camera di hotel, questa operazione viene eseguita utilizzando i seguenti comandi:
 
@@ -135,7 +135,7 @@ def compute_match_score(x,y):
     return fuzz.partial_ratio(x,y)
 ```
 
-Avanti, importa `cdist` dal [!DNL SciPy] per calcolare la distanza tra ciascuna coppia nelle due raccolte di input. In questo modo vengono calcolati i punteggi di tutte le coppie di camere di hotel fornite da ciascuna agenzia di viaggio.
+Importare quindi `cdist` dalla libreria [!DNL SciPy] per calcolare la distanza tra ciascuna coppia nei due insiemi di input. In questo modo vengono calcolati i punteggi di tutte le coppie di camere di hotel fornite da ciascuna agenzia di viaggio.
 
 ```python
 from scipy.spatial.distance import cdist

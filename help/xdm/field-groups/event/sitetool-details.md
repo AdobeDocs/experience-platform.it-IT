@@ -11,13 +11,13 @@ ht-degree: 5%
 
 # [!UICONTROL Dettagli Sitetool] gruppo di campi schema
 
-[!UICONTROL Dettagli Sitetool] è un gruppo di campi di schema standard per [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). Il gruppo di campi fornisce un singolo `sitetool` a uno schema, che acquisisce le informazioni raccolte da un sitetool.
+[!UICONTROL Dettagli sitetool] è un gruppo di campi di schema standard per la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). Il gruppo di campi fornisce un singolo oggetto `sitetool` a uno schema, che acquisisce le informazioni raccolte da un sitetool.
 
 ![Struttura del gruppo di campi](../../images/field-groups/sitetool-details.png)
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
-| `dataGatheringEvent` | Oggetto | Indica se questo evento è un evento di raccolta dati insieme ad altri dettagli correlati. Contiene le seguenti proprietà:<ul><li>`data`: (Mappa) contiene i dati JSON raccolti e inviati come parte di quiz, sondaggio o evento di invio di sondaggi.</li><li>`isTrue`: (booleano) indica se questo evento è un evento di raccolta dati come quiz, sondaggio o sondaggio.</li><li>`score`: (Numero intero) il punteggio ottenuto dall’attore in base alle risposte dell’evento.</li></ul> |
+| `dataGatheringEvent` | Oggetto | Indica se questo evento è un evento di raccolta dati insieme ad altri dettagli correlati. Contiene le seguenti proprietà:<ul><li>`data`: (mappa) contiene i dati JSON raccolti e inviati come parte dell&#39;evento di invio di quiz, sondaggi o sondaggi.</li><li>`isTrue`: (booleano) indica se questo evento è un evento di raccolta dati come quiz, sondaggio o sondaggio.</li><li>`score`: (numero intero) punteggio protetto dall&#39;attore in base alle risposte agli eventi.</li></ul> |
 | `actor` | Stringa | Persona/membro che ha eseguito l&#39;azione. |
 | `actorID` | Stringa | Identificatore univoco della persona/del membro che ha eseguito l’azione. |
 | `isKeyEvent` | Booleano | Indica se questo evento è un evento chiave. |
@@ -26,4 +26,4 @@ ht-degree: 5%
 
 {style="table-layout:auto"}
 
-Per ulteriori dettagli sul gruppo di campi, consulta [archivio XDM pubblico](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-healthcare-sitetool.schema.json).
+Per ulteriori dettagli sul gruppo di campi, consulta l&#39;[archivio XDM pubblico](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-healthcare-sitetool.schema.json).

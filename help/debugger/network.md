@@ -15,7 +15,7 @@ ht-degree: 58%
 
 # Scheda Rete
 
-Il **Rete** La scheda aggrega tutte le chiamate della soluzione Adobe Experience Cloud effettuate sulla pagina e le visualizza in ordine da sinistra a destra. I parametri standard vengono etichettati automaticamente con nomi descrittivi e disposti per raggruppare parametri comuni sullo stesso ruolo.
+La scheda **Rete** aggrega tutte le chiamate della soluzione Adobe Experience Cloud effettuate nella pagina e le visualizza in ordine da sinistra a destra. I parametri standard vengono etichettati automaticamente con nomi descrittivi e disposti per raggruppare parametri comuni sullo stesso ruolo.
 
 ![](images/network.jpg)
 
@@ -29,7 +29,7 @@ Per cambiare le informazioni in base alla soluzione, seleziona la soluzione da v
 
 ![](images/network-analytics.jpg)
 
-Per visualizzare di nuovo tutte le soluzioni, seleziona **[!UICONTROL Rete]**
+Per visualizzare di nuovo tutte le soluzioni, selezionare **[!UICONTROL Rete]**
 
 Selezionare un elemento nella visualizzazione di rete per visualizzare una visualizzazione espansa. Dalla finestra di visualizzazione espansa, puoi copiare le informazioni visualizzate negli Appunti.
 
@@ -39,6 +39,6 @@ Selezionare un elemento nella visualizzazione di rete per visualizzare una visua
 
 ![](images/copy.jpg)-->
 
-Per cancellare l’elenco, seleziona **[!UICONTROL Rimuovi eventi]**.
+Per cancellare l&#39;elenco, selezionare **[!UICONTROL Rimuovi eventi]**.
 
-Per scaricare un file Excel con le informazioni di questa schermata, seleziona **[!UICONTROL Scarica]**.
+Per scaricare un file Excel con le informazioni di questa schermata, selezionare **[!UICONTROL Scarica]**.

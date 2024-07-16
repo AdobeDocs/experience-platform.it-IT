@@ -4,33 +4,33 @@ description: Questa esercitazione descrive la sintassi per l’ordinamento e il 
 exl-id: 029c3199-946e-4f89-ba7a-dac50cc40c09
 source-git-commit: c7ff379b260edeef03f8b47f932ce9040eef3be2
 workflow-type: tm+mt
-source-wordcount: '863'
+source-wordcount: '829'
 ht-degree: 2%
 
 ---
 
 # Ordinamento e filtraggio delle risposte nell’API del servizio Flusso
 
-Durante l’esecuzione delle richieste di inserimento nell’elenco (GET) in [API del servizio Flusso](https://www.adobe.io/experience-platform-apis/references/flow-service/), puoi utilizzare i parametri di query per ordinare e filtrare le risposte. Questa guida fornisce un riferimento su come utilizzare questi parametri per diversi casi d’uso.
+Quando si eseguono richieste di elenco (GET) nell&#39;API [Flow Service](https://www.adobe.io/experience-platform-apis/references/flow-service/), è possibile utilizzare i parametri di query per ordinare e filtrare le risposte. Questa guida fornisce un riferimento su come utilizzare questi parametri per diversi casi d’uso.
 
 ## Ordinamento
 
-È possibile ordinare le risposte utilizzando un `orderby` parametro query. Le seguenti risorse possono essere ordinate nell’API:
+È possibile ordinare le risposte utilizzando un parametro di query `orderby`. Le seguenti risorse possono essere ordinate nell’API:
 
 * [Connessioni](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Connections)
-* [Connessioni di origine](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Source-connections)
+* [connessioni Source](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Source-connections)
 * [Connessioni di destinazione](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Target-connections)
 * [Flussi](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Flows)
 * [Esecuzioni](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Runs)
 
-Per utilizzare il parametro, è necessario impostarne il valore sulla proprietà specifica in base alla quale si desidera ordinare (ad esempio, `?orderby=name`). È possibile anteporre al valore un segno più (`+`) per ordine crescente o segno meno (`-`) in ordine decrescente. Se non viene fornito alcun prefisso di ordinamento, l’elenco viene ordinato in ordine crescente per impostazione predefinita.
+Per utilizzare il parametro, è necessario impostarne il valore sulla proprietà specifica in base alla quale si desidera ordinare (ad esempio, `?orderby=name`). È possibile anteporre al valore un segno più (`+`) per l&#39;ordine crescente o un segno meno (`-`) per l&#39;ordine decrescente. Se non viene fornito alcun prefisso di ordinamento, l’elenco viene ordinato in ordine crescente per impostazione predefinita.
 
 ```http
 GET /flows?orderby=name
 GET /flows?orderby=-name
 ```
 
-È inoltre possibile combinare un parametro di ordinamento con un parametro di filtro utilizzando il simbolo &quot;e&quot; (`&`).
+È inoltre possibile combinare un parametro di ordinamento con un parametro di filtro utilizzando il simbolo &quot;and&quot; (`&`).
 
 ```http
 GET /flows?property=state==enabled&orderby=createdAt
@@ -38,21 +38,21 @@ GET /flows?property=state==enabled&orderby=createdAt
 
 ## Filtro
 
-Puoi filtrare le risposte utilizzando una `property` parametro con un&#39;espressione chiave-valore. Ad esempio: `?property=id==12345` restituisce solo risorse il cui `id` la proprietà è esattamente uguale a `12345`.
+È possibile filtrare le risposte utilizzando un parametro `property` con un&#39;espressione chiave-valore. Ad esempio, `?property=id==12345` restituisce solo le risorse la cui proprietà `id` è esattamente uguale a `12345`.
 
 Il filtro può essere applicato in modo generico a qualsiasi proprietà in un’entità, purché sia noto il percorso valido di tale proprietà.
 
 >[!NOTE]
 >
->Se una proprietà è nidificata all&#39;interno di un elemento matrice, è necessario aggiungere parentesi quadre (`[]`) all&#39;array nel percorso. Consulta la sezione su [filtraggio in base alle proprietà dell’array](#arrays) ad esempio.
+>Se una proprietà è nidificata all&#39;interno di un elemento di matrice, è necessario aggiungere parentesi quadre (`[]`) alla matrice nel percorso. Per esempi, consulta la sezione sul filtro [per le proprietà dell&#39;array](#arrays).
 
-**Restituisce tutte le connessioni di origine in cui il nome della tabella di origine è `lead`:**
+**Restituire tutte le connessioni di origine in cui il nome della tabella di origine è `lead`:**
 
 ```http
 GET /sourceConnections?property=params.tableName==lead
 ```
 
-**Restituisce tutti i flussi per un ID segmento specifico:**
+**Restituisci tutti i flussi per un ID segmento specifico:**
 
 ```http
 GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.id==5722a16f-5e1f-4732-91b6-3b03943f759a
@@ -60,9 +60,9 @@ GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.
 
 ### Unione di filtri
 
-Più `property` i filtri possono essere inclusi in una query a condizione che siano separati da caratteri &quot;e&quot; (`&`). Quando si combinano i filtri si assume una relazione AND, il che significa che un’entità deve soddisfare tutti i filtri per essere inclusa nella risposta.
+È possibile includere più filtri `property` in una query purché siano separati da caratteri &quot;e&quot; (`&`). Quando si combinano i filtri si assume una relazione AND, il che significa che un’entità deve soddisfare tutti i filtri per essere inclusa nella risposta.
 
-**Restituisce tutti i flussi abilitati per un ID segmento:**
+**Restituisci tutti i flussi abilitati per un ID segmento:**
 
 ```http
 GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.id==5722a16f-5e1f-4732-91b6-3b03943f759a&property=state==enabled
@@ -70,7 +70,7 @@ GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.
 
 ### Filtraggio delle proprietà dell’array {#arrays}
 
-Puoi filtrare in base alle proprietà degli elementi all’interno degli array aggiungendo `[]` al nome della proprietà array.
+È possibile filtrare in base alle proprietà degli elementi all&#39;interno degli array aggiungendo `[]` al nome della proprietà dell&#39;array.
 
 **Flussi di ritorno associati a connessioni di origine specifiche:**
 
@@ -84,13 +84,13 @@ GET /flows?property=sourceConnectionIds[]==9874984,6980696
 GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.id==5722a16f-5e1f-4732-91b6-3b03943f759a
 ```
 
-**Restituire le connessioni di origine che hanno una colonna con un `name` valore:**
+**Restituire le connessioni di origine con una colonna con un valore `name` specifico:**
 
 ```http
 GET /sourceConnections?property=params.columns[].name==firstName
 ```
 
-**Cerca l’ID di esecuzione del flusso per una destinazione filtrando per ID segmento:**
+**Cercare l&#39;ID esecuzione flusso per una destinazione filtrando l&#39;ID segmento:**
 
 ```http
 GET /runs?property=metrics.recordSummary.targetSummaries[].entitySummaries[].id==segment:068d6e2c-b546-4c73-bfb7-9a9d33375659
@@ -98,9 +98,9 @@ GET /runs?property=metrics.recordSummary.targetSummaries[].entitySummaries[].id=
 
 ### `count`
 
-Qualsiasi query di filtro può essere aggiunta con `count` parametro di query con valore `true` per restituire il conteggio dei risultati. La risposta API contiene un `count` proprietà il cui valore rappresenta il conteggio del totale degli elementi filtrati. Gli elementi filtrati effettivi non vengono restituiti in questa chiamata.
+Qualsiasi query di filtro può essere aggiunta con il parametro di query `count` con un valore di `true` per restituire il conteggio dei risultati. La risposta API contiene una proprietà `count` il cui valore rappresenta il numero totale di elementi filtrati. Gli elementi filtrati effettivi non vengono restituiti in questa chiamata.
 
-**Restituisce il conteggio dei flussi abilitati nel sistema:**
+**Restituisce il numero di flussi abilitati nel sistema:**
 
 ```http
 GET /flows?property=state==enabled&count=true
@@ -197,17 +197,17 @@ A seconda dell’entità Servizio flusso che stai recuperando, è possibile util
 
 ## Casi d’uso {#use-cases}
 
-Leggi questa sezione per alcuni esempi specifici su come utilizzare i filtri e l’ordinamento per restituire informazioni su determinati connettori o per assistenza nei problemi di debug. Adobe Se desideri aggiungere altri casi d’uso, utilizza l’ **[!UICONTROL Opzioni di feedback dettagliate]** sulla pagina per inviare una richiesta.
+Leggi questa sezione per alcuni esempi specifici su come utilizzare i filtri e l’ordinamento per restituire informazioni su determinati connettori o per assistenza nei problemi di debug. Adobe Se ci sono altri casi d&#39;uso che desideri aggiungere, utilizza le **[!UICONTROL opzioni di feedback dettagliate]** nella pagina per inviare una richiesta.
 
 **Filtro per restituire solo le connessioni a una determinata destinazione**
 
-Puoi utilizzare i filtri per restituire connessioni solo a determinate destinazioni. Innanzitutto, esegui una query su `connectionSpecs` endpoint come quello riportato di seguito:
+Puoi utilizzare i filtri per restituire connessioni solo a determinate destinazioni. Innanzitutto, esegui una query sull&#39;endpoint `connectionSpecs` come segue:
 
 ```http
 GET /connectionSpecs
 ```
 
-Quindi, cerca il `connectionSpec` esaminando la `name` parametro. Ad esempio, cerca Amazon Ads, o Pega, o SFTP, e così via in `name` parametro. Il corrispondente `id` è il `connectionSpec` che puoi cercare nella chiamata API successiva.
+Quindi, cercare `connectionSpec` desiderato esaminando il parametro `name`. Ad esempio, cerca Amazon Ads, Pega, o SFTP e così via nel parametro `name`. Il `id` corrispondente è il `connectionSpec` in base al quale è possibile eseguire una ricerca nella chiamata API successiva.
 
 Ad esempio, filtra le destinazioni per restituire solo le connessioni esistenti alle connessioni Amazon S3:
 
@@ -215,9 +215,9 @@ Ad esempio, filtra le destinazioni per restituire solo le connessioni esistenti 
 GET /connections?property=connectionSpec.id==4890fc95-5a1f-4983-94bb-e060c08e3f81
 ```
 
-**Filtra per restituire flussi di dati solo alle destinazioni**
+**Filtro per restituire flussi di dati solo alle destinazioni**
 
-Quando si esegue una query su `/flows` endpoint, invece di restituire tutti i flussi di dati di origini e destinazioni, puoi utilizzare un filtro per restituire solo i flussi di dati alle destinazioni. A tale scopo, utilizza `isDestinationFlow` come parametro di query, come segue:
+Quando si esegue una query sull&#39;endpoint `/flows`, invece di restituire tutti i flussi di dati di origine e destinazione, è possibile utilizzare un filtro per restituire solo i flussi di dati alle destinazioni. A tale scopo, utilizzare `isDestinationFlow` come parametro di query, come riportato di seguito:
 
 ```http
 GET /flows?property=inheritedAttributes.properties.isDestinationFlow==true
@@ -239,7 +239,7 @@ Puoi filtrare le esecuzioni di un flusso di dati per esaminare solo le esecuzion
 GET /runs?property=flowId==<flow-id>&property=metrics.durationSummary.startedAtUTC>1593134665781&property=metrics.durationSummary.startedAtUTC<1653134665781
 ```
 
-**Filtro per restituire solo i flussi di dati non riusciti**
+**Filtro per restituire solo flussi di dati non riusciti**
 
 A scopo di debug, puoi filtrare e visualizzare tutti i flussi di dati non riusciti eseguiti per un determinato flusso di dati di origine o di destinazione, come indicato di seguito:
 
@@ -249,4 +249,4 @@ GET /runs?property=flowId==<flow-id>&property=metrics.statusSummary.status==Fail
 
 ## Passaggi successivi
 
-Questa guida illustra come utilizzare `orderby` e `property` Parametri di query per ordinare e filtrare le risposte nell’API del servizio Flusso. Per guide dettagliate sull’utilizzo dell’API per i flussi di lavoro più comuni in Platform, consulta i tutorial sull’API contenuti in [sorgenti](../../sources/home.md) e [destinazioni](../../destinations/home.md) documentazione.
+Questa guida illustra come utilizzare i parametri di query `orderby` e `property` per ordinare e filtrare le risposte nell&#39;API del servizio Flusso. Per guide dettagliate sull&#39;utilizzo dell&#39;API per i flussi di lavoro comuni in Platform, consulta i tutorial sull&#39;API contenuti nella documentazione di [sources](../../sources/home.md) e [destinations](../../destinations/home.md).

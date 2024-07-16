@@ -190,12 +190,12 @@ ht-degree: 45%
 * [!UICONTROL Schemi] UI {#ui}
    * [Panoramica](./ui/overview.md)
    * [Esplora risorse XDM](./ui/explore.md)
-   * Creare e modificare le risorse {#resources}
+   * Crea e modifica le risorse {#resources}
       * [Schemi](./ui/resources/schemas.md)
       * [Classi](./ui/resources/classes.md)
       * [Gruppi di campi](./ui/resources/field-groups.md)
       * [Tipi di dati](./ui/resources/data-types.md)
-   * Definire i campi {#fields}
+   * Definisci i campi {#fields}
       * [Panoramica](./ui/fields/overview.md)
       * [Campi array](./ui/fields/array.md)
       * [Campi enum](./ui/fields/enum.md)
@@ -207,7 +207,7 @@ ht-degree: 45%
    * [Flussi di lavoro basati sui campi](./ui/field-based-workflows.md)
    * [Genera dati XDM di esempio](./ui/sample.md)
    * [Esportare gli schemi XDM](./ui/export.md)
-* API del registro dello schema {#api}
+* API del registro di schema {#api}
    * [Panoramica](api/overview.md)
    * [Introduzione](api/getting-started.md)
    * [Schemi](api/schemas.md)

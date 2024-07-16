@@ -53,7 +53,7 @@ curl -X POST \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce un payload contenente i dettagli dell’esperimento appena creato, compreso il relativo identificatore univoco (`id`).
+In caso di esito positivo, la risposta restituisce un payload contenente i dettagli dell&#39;esperimento appena creato, incluso il relativo identificatore univoco (`id`).
 
 ```json
 {
@@ -100,11 +100,11 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `{TASK}` | Specifica l&#39;attività dell&#39;esecuzione. Imposta questo valore come `train` per la formazione, `score` per il punteggio, oppure `featurePipeline` per la tubazione di feature. |
+| `{TASK}` | Specifica l&#39;attività dell&#39;esecuzione. Imposta questo valore come `train` per l’apprendimento, `score` per il punteggio o `featurePipeline` per la pipeline delle funzioni. |
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce un payload contenente i dettagli della nuova esecuzione creata, inclusi i parametri predefiniti di formazione o punteggio ereditati e l’ID univoco dell’esecuzione (`{RUN_ID}`).
+In caso di esito positivo, la risposta restituisce un payload contenente i dettagli della nuova esecuzione creata, inclusi i parametri di formazione o punteggio predefiniti ereditati e l&#39;ID univoco dell&#39;esecuzione (`{RUN_ID}`).
 
 ```json
 {
@@ -133,7 +133,7 @@ In caso di esito positivo, la risposta restituisce un payload contenente i detta
 
 ## Recuperare un elenco di esperimenti
 
-Per recuperare un elenco di esperimenti appartenenti a una particolare istanza MLInstance, esegui una singola richiesta GET e fornisci un ID istanza MLInstance valido come parametro query. Per un elenco delle query disponibili, consulta la sezione dell’appendice su [parametri di query per il recupero delle risorse](./appendix.md#query).
+Per recuperare un elenco di esperimenti appartenenti a una particolare istanza MLInstance, esegui una singola richiesta GET e fornisci un ID istanza MLInstance valido come parametro query. Per un elenco delle query disponibili, consulta la sezione dell&#39;appendice sui [parametri di query per il recupero delle risorse](./appendix.md#query).
 
 
 **Formato API**
@@ -242,7 +242,7 @@ Una risposta corretta restituisce un payload contenente i dettagli dell’esperi
 
 ## Recuperare un elenco di esecuzioni di esperimenti
 
-Per recuperare un elenco di esecuzioni di formazione o punteggio appartenenti a un particolare esperimento, devi eseguire una singola richiesta di GET e fornire un ID esperimento valido. Per filtrare i risultati, puoi specificare i parametri di query nel percorso della richiesta. Per un elenco completo dei parametri di query disponibili, consulta la sezione dell’appendice su [parametri di query per il recupero delle risorse](./appendix.md#query).
+Per recuperare un elenco di esecuzioni di formazione o punteggio appartenenti a un particolare esperimento, devi eseguire una singola richiesta di GET e fornire un ID esperimento valido. Per filtrare i risultati, puoi specificare i parametri di query nel percorso della richiesta. Per un elenco completo dei parametri di query disponibili, consulta la sezione dell&#39;appendice sui [parametri di query per il recupero delle risorse](./appendix.md#query).
 
 >[!NOTE]
 >
@@ -259,7 +259,7 @@ GET /experiments/{EXPERIMENT_ID}/runs?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAM
 | Parametro | Descrizione |
 | --- | --- |
 | `{EXPERIMENT_ID}` | Un ID esperimento valido. |
-| `{QUERY_PARAMETER}` | Uno dei [parametri di query disponibili](./appendix.md#query) utilizzato per filtrare i risultati. |
+| `{QUERY_PARAMETER}` | Uno dei [parametri di query disponibili](./appendix.md#query) utilizzati per filtrare i risultati. |
 | `{VALUE}` | Valore per il parametro di query precedente. |
 
 **Richiesta**
@@ -277,7 +277,7 @@ curl -X GET \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce un payload contenente un elenco di esecuzioni e ciascuno dei relativi dettagli, incluso l’ID esecuzione dell’esperimento (`{RUN_ID}`).
+In caso di esito positivo, la risposta restituisce un payload contenente un elenco di esecuzioni e ciascuno dei relativi dettagli, incluso l&#39;ID esecuzione dell&#39;esperimento (`{RUN_ID}`).
 
 ```json
 {
@@ -307,7 +307,7 @@ Puoi aggiornare un esperimento esistente sovrascrivendo le relative proprietà t
 
 >[!TIP]
 >
->Per garantire il successo di questa richiesta PUT, si consiglia di eseguire prima una richiesta GET a [recupera l’esperimento per ID](#retrieve-specific). Quindi, modifica e aggiorna l’oggetto JSON restituito e applica l’intero oggetto JSON modificato come payload per la richiesta PUT.
+>Per garantire il successo di questa richiesta PUT, si consiglia di eseguire prima una richiesta GET per [recuperare l&#39;esperimento per ID](#retrieve-specific). Quindi, modifica e aggiorna l’oggetto JSON restituito e applica l’intero oggetto JSON modificato come payload per la richiesta PUT.
 
 La chiamata API di esempio seguente aggiorna il nome di un esperimento quando si hanno inizialmente queste proprietà:
 

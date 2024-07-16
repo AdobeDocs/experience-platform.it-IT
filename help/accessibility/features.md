@@ -6,8 +6,8 @@ description: Scopri le funzioni generali di accessibilità supportate da Adobe E
 exl-id: 4b7e2f2b-af51-4376-8a63-16c921cc7135
 source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
-source-wordcount: '484'
-ht-degree: 3%
+source-wordcount: '481'
+ht-degree: 0%
 
 ---
 
@@ -31,13 +31,13 @@ I seguenti elementi di navigazione facilitano l’accessibilità:
 * Il tasto Esc funge da pulsante di annullamento per chiudere una finestra di dialogo, se presente.
 * In Experience Platform, attorno a un elemento selezionato viene visualizzato un bordo blu con un’indicazione chiara dell’elemento dell’interfaccia attualmente attivo.
 
-![Un bordo blu che appare intorno a un elemento selezionato per indicare che è applicato lo stato attivo.](images/profile-overview-tab.png)
+![Un bordo blu visualizzato intorno a un elemento selezionato per indicare che lo stato attivo è applicato.](images/profile-overview-tab.png)
 
 ## Palette di colori e contrasto
 
-Experience Platform si impegna per [WCAG 2.1 AA](https://www.w3.org/TR/WCAG/) conformità, compresi i requisiti per il contrasto del colore. L’interfaccia utente di Experience Platform fornisce un contrasto sufficiente nell’applicazione per garantire un’esperienza di visualizzazione accessibile agli utenti ipovedenti o con deficienze cromatiche.
+Experience Platform si impegna per garantire la conformità a [WCAG 2.1 AA](https://www.w3.org/TR/WCAG/), inclusi i requisiti per il contrasto del colore. L’interfaccia utente di Experience Platform fornisce un contrasto sufficiente nell’applicazione per garantire un’esperienza di visualizzazione accessibile agli utenti ipovedenti o con deficienze cromatiche.
 
-![La palette di colori e il contrasto presenti nella home page dell’interfaccia utente di Experience Platform.](images/homepage.png)
+![La palette di colori e il contrasto presenti nella home page dell&#39;interfaccia utente di Experience Platform.](images/homepage.png)
 
 ## Convalida campo obbligatoria
 

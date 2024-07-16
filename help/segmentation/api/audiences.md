@@ -12,19 +12,19 @@ ht-degree: 2%
 
 # Endpoint &quot;audience&quot;
 
-Un pubblico è una raccolta di persone che condividono comportamenti e/o caratteristiche simili. Queste raccolte di persone possono essere generate utilizzando Adobe Experience Platform o da origini esterne. È possibile utilizzare `/audiences` nell’API di segmentazione, che consente di recuperare, creare, aggiornare ed eliminare in modo programmatico i tipi di pubblico.
+Un pubblico è una raccolta di persone che condividono comportamenti e/o caratteristiche simili. Queste raccolte di persone possono essere generate utilizzando Adobe Experience Platform o da origini esterne. È possibile utilizzare l&#39;endpoint `/audiences` nell&#39;API di segmentazione, che consente di recuperare, creare, aggiornare ed eliminare in modo programmatico i tipi di pubblico.
 
 ## Introduzione
 
-Gli endpoint utilizzati in questa guida fanno parte del [!DNL Adobe Experience Platform Segmentation Service] API. Prima di continuare, controlla [guida introduttiva](./getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all’API, incluse le intestazioni richieste e la lettura di esempi di chiamate API.
+Gli endpoint utilizzati in questa guida fanno parte dell&#39;API [!DNL Adobe Experience Platform Segmentation Service]. Prima di continuare, consulta la [guida introduttiva](./getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all&#39;API, incluse le intestazioni richieste e la lettura delle chiamate API di esempio.
 
 ## Recuperare un elenco di tipi di pubblico {#list}
 
-Per recuperare un elenco di tutti i tipi di pubblico per la tua organizzazione, devi effettuare una richiesta GET al `/audiences` endpoint.
+Per recuperare un elenco di tutti i tipi di pubblico per l&#39;organizzazione, eseguire una richiesta GET all&#39;endpoint `/audiences`.
 
 **Formato API**
 
-Il `/audiences` l’endpoint supporta diversi parametri di query per aiutare a filtrare i risultati. Anche se questi parametri sono facoltativi, si consiglia vivamente di utilizzarli per ridurre i costi comuni quando si elencano le risorse. Se effettui una chiamata a questo endpoint senza parametri, verranno recuperati tutti i tipi di pubblico disponibili per la tua organizzazione. È possibile includere più parametri, separati da e commerciali (`&`).
+L&#39;endpoint `/audiences` supporta diversi parametri di query per filtrare i risultati. Anche se questi parametri sono facoltativi, si consiglia vivamente di utilizzarli per ridurre i costi comuni quando si elencano le risorse. Se effettui una chiamata a questo endpoint senza parametri, verranno recuperati tutti i tipi di pubblico disponibili per la tua organizzazione. È possibile includere più parametri, separati da e commerciali (`&`).
 
 ```http
 GET /audiences
@@ -37,10 +37,10 @@ Durante il recupero di un elenco di tipi di pubblico è possibile utilizzare i s
 | --------------- | ----------- | ------- |
 | `start` | Specifica l&#39;offset iniziale per i tipi di pubblico restituiti. | `start=5` |
 | `limit` | Specifica il numero massimo di pubblici restituiti per pagina. | `limit=10` |
-| `sort` | Specifica l&#39;ordine di ordinamento dei risultati. Questo è scritto nel formato `attributeName:[desc/asc]`. | `sort=updateTime:desc` |
-| `property` | Un filtro che ti consente di specificare tipi di pubblico che **esattamente** corrisponde al valore di un attributo. Questo è scritto nel formato `property=` | `property=audienceId==test-audience-id` |
-| `name` | Un filtro che consente di specificare tipi di pubblico i cui nomi **contain** il valore fornito. Questo valore non distingue tra maiuscole e minuscole. | `name=Sample` |
-| `description` | Un filtro che consente di specificare tipi di pubblico le cui descrizioni **contain** il valore fornito. Questo valore non distingue tra maiuscole e minuscole. | `description=Test Description` |
+| `sort` | Specifica l&#39;ordine di ordinamento dei risultati. Scritto nel formato `attributeName:[desc/asc]`. | `sort=updateTime:desc` |
+| `property` | Filtro che consente di specificare tipi di pubblico che **corrispondono esattamente** al valore di un attributo. Scritto nel formato `property=` | `property=audienceId==test-audience-id` |
+| `name` | Filtro che consente di specificare tipi di pubblico i cui nomi **contengono** il valore specificato. Questo valore non distingue tra maiuscole e minuscole. | `name=Sample` |
+| `description` | Un filtro che consente di specificare tipi di pubblico le cui descrizioni **contengono** il valore specificato. Questo valore non distingue tra maiuscole e minuscole. | `description=Test Description` |
 
 **Richiesta**
 
@@ -176,29 +176,29 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elen
 | Proprietà | Tipo di pubblico | Descrizione |
 | -------- | ------------- | ----------- | 
 | `id` | Entrambi | Identificatore di sola lettura generato dal sistema per il pubblico. |
-| `audienceId` | Entrambi | Se il pubblico è generato da Platform, è lo stesso valore del pubblico `id`. Se il pubblico è generato esternamente, questo valore viene fornito dal client. |
+| `audienceId` | Entrambi | Se il pubblico è generato da Platform, è lo stesso valore di `id`. Se il pubblico è generato esternamente, questo valore viene fornito dal client. |
 | `schema` | Entrambi | Lo schema Experience Data Model (XDM) del pubblico. |
 | `imsOrgId` | Entrambi | ID dell’organizzazione a cui appartiene il pubblico. |
-| `sandbox` | Entrambi | Informazioni sulla sandbox a cui appartiene il pubblico. Ulteriori informazioni sulle sandbox sono disponibili nella sezione [panoramica sulle sandbox](../../sandboxes/home.md). |
+| `sandbox` | Entrambi | Informazioni sulla sandbox a cui appartiene il pubblico. Ulteriori informazioni sulle sandbox sono disponibili nella [panoramica sulle sandbox](../../sandboxes/home.md). |
 | `name` | Entrambi | Il nome del pubblico. |
 | `description` | Entrambi | Una descrizione del pubblico. |
-| `expression` | Generato da piattaforma | L’espressione PQL (Profile Query Language) del pubblico. Ulteriori informazioni sulle espressioni PQL sono disponibili nella sezione [Guida alle espressioni PQL](../pql/overview.md). |
-| `mergePolicyId` | Generato da piattaforma | ID del criterio di unione a cui è associato il pubblico. Ulteriori informazioni sui criteri di unione sono disponibili nella sezione [guida ai criteri di unione](../../profile/api/merge-policies.md). |
-| `evaluationInfo` | Generato da piattaforma | Mostra come verrà valutato il pubblico. I possibili metodi di valutazione includono batch, sincrono (streaming) o continuo (edge). Ulteriori informazioni sui metodi di valutazione sono disponibili nella sezione [panoramica sulla segmentazione](../home.md) |
+| `expression` | Generato da piattaforma | L’espressione Profile Query Language (PQL) del pubblico. Ulteriori informazioni sulle espressioni di PQL sono disponibili nella [guida delle espressioni di PQL](../pql/overview.md). |
+| `mergePolicyId` | Generato da piattaforma | ID del criterio di unione a cui è associato il pubblico. Ulteriori informazioni sui criteri di unione sono disponibili nella [guida dei criteri di unione](../../profile/api/merge-policies.md). |
+| `evaluationInfo` | Generato da piattaforma | Mostra come verrà valutato il pubblico. I possibili metodi di valutazione includono batch, sincrono (streaming) o continuo (edge). Ulteriori informazioni sui metodi di valutazione sono disponibili nella [panoramica sulla segmentazione](../home.md) |
 | `dependents` | Entrambi | Un array di ID di pubblico che dipendono dal pubblico corrente. Questa opzione è utile per creare un pubblico che è un segmento di un segmento. |
 | `dependencies` | Entrambi | Un array di ID di pubblico da cui dipende il pubblico. Questa opzione è utile per creare un pubblico che è un segmento di un segmento. |
-| `type` | Entrambi | Campo generato dal sistema che indica se il pubblico è generato da Platform o da un pubblico generato esternamente. I valori possibili includono `SegmentDefinition` e `ExternalSegment`. A `SegmentDefinition` fa riferimento a un pubblico generato in Platform, mentre un `ExternalSegment` fa riferimento a un pubblico non generato in Platform. |
-| `originName` | Entrambi | Campo che fa riferimento al nome dell’origine del pubblico. Per il pubblico generato da Platform, questo valore sarà `REAL_TIME_CUSTOMER_PROFILE`. Per i tipi di pubblico generati in Audience Orchestration, questo valore sarà `AUDIENCE_ORCHESTRATION`. Per i tipi di pubblico generati in Adobe Audience Manager, questo valore sarà `AUDIENCE_MANAGER`. Per altri tipi di pubblico generati esternamente, questo valore sarà `CUSTOM_UPLOAD`. |
+| `type` | Entrambi | Campo generato dal sistema che indica se il pubblico è generato da Platform o da un pubblico generato esternamente. I valori possibili includono `SegmentDefinition` e `ExternalSegment`. Un `SegmentDefinition` fa riferimento a un pubblico generato in Platform, mentre un `ExternalSegment` fa riferimento a un pubblico non generato in Platform. |
+| `originName` | Entrambi | Campo che fa riferimento al nome dell’origine del pubblico. Per il pubblico generato da Platform, questo valore sarà `REAL_TIME_CUSTOMER_PROFILE`. Per il pubblico generato in Audience Orchestration, questo valore sarà `AUDIENCE_ORCHESTRATION`. Per il pubblico generato in Adobe Audience Manager, questo valore sarà `AUDIENCE_MANAGER`. Per altri tipi di pubblico generati esternamente, questo valore sarà `CUSTOM_UPLOAD`. |
 | `createdBy` | Entrambi | ID dell’utente che ha creato il pubblico. |
 | `labels` | Entrambi | Etichette di controllo dell’accesso basate su attributi e utilizzo dati a livello di oggetto rilevanti per il pubblico. |
-| `namespace` | Entrambi | Lo spazio dei nomi a cui appartiene il pubblico. I valori possibili includono `AAM`, `AAMSegments`, `AAMTraits`, e `AEPSegments`. |
+| `namespace` | Entrambi | Lo spazio dei nomi a cui appartiene il pubblico. I valori possibili sono `AAM`, `AAMSegments`, `AAMTraits` e `AEPSegments`. |
 | `linkedAudienceRef` | Entrambi | Oggetto che contiene identificatori di altri sistemi relativi al pubblico. |
 
 +++
 
 ## Creare un nuovo pubblico {#create}
 
-Per creare un nuovo pubblico, devi effettuare una richiesta POST al `/audiences` endpoint.
+Per creare un nuovo pubblico, devi eseguire una richiesta POST all&#39;endpoint `/audiences`.
 
 **Formato API**
 
@@ -245,8 +245,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 | -------- | ----------- | 
 | `name` | Il nome del pubblico. |
 | `description` | Una descrizione del pubblico. |
-| `type` | Campo che indica se il pubblico è generato da Platform o da un pubblico generato esternamente. I valori possibili includono `SegmentDefinition` e `ExternalSegment`. A `SegmentDefinition` fa riferimento a un pubblico generato in Platform, mentre un `ExternalSegment` fa riferimento a un pubblico non generato in Platform. |
-| `expression` | L’espressione PQL (Profile Query Language) del pubblico. Ulteriori informazioni sulle espressioni PQL sono disponibili nella sezione [Guida alle espressioni PQL](../pql/overview.md). |
+| `type` | Campo che indica se il pubblico è generato da Platform o da un pubblico generato esternamente. I valori possibili includono `SegmentDefinition` e `ExternalSegment`. Un `SegmentDefinition` fa riferimento a un pubblico generato in Platform, mentre un `ExternalSegment` fa riferimento a un pubblico non generato in Platform. |
+| `expression` | L’espressione Profile Query Language (PQL) del pubblico. Ulteriori informazioni sulle espressioni di PQL sono disponibili nella [guida delle espressioni di PQL](../pql/overview.md). |
 | `schema` | Lo schema Experience Data Model (XDM) del pubblico. |
 | `labels` | Etichette di controllo dell’accesso basate su attributi e utilizzo dati a livello di oggetto rilevanti per il pubblico. |
 | `ttlInDays` | Rappresenta il valore di scadenza dei dati per il pubblico, in giorni. |
@@ -288,13 +288,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 | `name` | Il nome del pubblico. |
 | `namespace` | Lo spazio dei nomi per il pubblico. |
 | `description` | Una descrizione del pubblico. |
-| `type` | Campo che indica se il pubblico è generato da Platform o da un pubblico generato esternamente. I valori possibili includono `SegmentDefinition` e `ExternalSegment`. A `SegmentDefinition` fa riferimento a un pubblico generato in Platform, mentre un `ExternalSegment` fa riferimento a un pubblico non generato in Platform. |
-| `originName` | Nome dell’origine del pubblico. Per i tipi di pubblico generati esternamente, il valore predefinito è `CUSTOM_UPLOAD`. Altri valori supportati includono `REAL_TIME_CUSTOMER_PROFILE`, `CUSTOM_UPLOAD`, `AUDIENCE_ORCHESTRATION`, e `AUDIENCE_MATCH`. |
-| `lifecycleState` | Campo facoltativo che determina lo stato iniziale del pubblico che stai tentando di creare. I valori supportati includono `draft`, `published`, e `inactive`. |
+| `type` | Campo che indica se il pubblico è generato da Platform o da un pubblico generato esternamente. I valori possibili includono `SegmentDefinition` e `ExternalSegment`. Un `SegmentDefinition` fa riferimento a un pubblico generato in Platform, mentre un `ExternalSegment` fa riferimento a un pubblico non generato in Platform. |
+| `originName` | Nome dell’origine del pubblico. Per il pubblico generato esternamente, il valore predefinito è `CUSTOM_UPLOAD`. Altri valori supportati sono `REAL_TIME_CUSTOMER_PROFILE`, `CUSTOM_UPLOAD`, `AUDIENCE_ORCHESTRATION` e `AUDIENCE_MATCH`. |
+| `lifecycleState` | Campo facoltativo che determina lo stato iniziale del pubblico che stai tentando di creare. I valori supportati sono `draft`, `published` e `inactive`. |
 | `datasetId` | ID del set di dati in cui è possibile trovare i dati che costituiscono il pubblico. |
 | `labels` | Etichette di controllo dell’accesso basate su attributi e utilizzo dati a livello di oggetto rilevanti per il pubblico. |
 | `audienceMeta` | Metadati che appartengono al pubblico generato esternamente. |
-| `linkedAudienceRef` | Oggetto che contiene identificatori per altri sistemi relativi al pubblico. Ciò può includere quanto segue: <ul><li>`flowId`: questo ID viene utilizzato per collegare il pubblico al flusso di dati utilizzato per inserire i dati del pubblico. Ulteriori informazioni sugli ID richiesti sono disponibili nella sezione [creare una guida al flusso di dati](../../sources/tutorials/api/collect/cloud-storage.md).</li><li>`aoWorkflowId`: questo ID viene utilizzato per connettere il pubblico a una composizione correlata di Audience Orchestration.&lt;/li/> <li>`payloadFieldGroupRef`: questo ID viene utilizzato per fare riferimento allo schema Gruppo di campi XDM che descrive la struttura del pubblico. Ulteriori informazioni sul valore di questo campo sono disponibili nella sezione [Guida dell’endpoint gruppo di campi XDM](../../xdm/api/field-groups.md).</li><li>`audienceFolderId`: questo ID viene utilizzato per fare riferimento all’ID cartella in Adobe Audience Manager per il pubblico. Ulteriori informazioni su questa API sono disponibili nella sezione [Guida API di Adobe Audience Manager](https://bank.demdex.com/portal/swagger/index.html#/Segment%20Folder%20API).</ul> |
+| `linkedAudienceRef` | Oggetto che contiene identificatori per altri sistemi relativi al pubblico. Ciò può includere quanto segue: <ul><li>`flowId`: questo ID viene utilizzato per connettere il pubblico al flusso di dati utilizzato per inserire i dati sul pubblico. Ulteriori informazioni sugli ID richiesti sono disponibili nella [guida alla creazione di un flusso di dati](../../sources/tutorials/api/collect/cloud-storage.md).</li><li>`aoWorkflowId`: questo ID viene utilizzato per connettere il pubblico a una composizione correlata di Audience Orchestration.&lt;/li/> <li>`payloadFieldGroupRef`: questo ID viene utilizzato per fare riferimento allo schema Gruppo di campi XDM che descrive la struttura del pubblico. Ulteriori informazioni sul valore di questo campo sono disponibili nella [guida dell&#39;endpoint del gruppo di campi XDM](../../xdm/api/field-groups.md).</li><li>`audienceFolderId`: questo ID viene utilizzato per fare riferimento all&#39;ID cartella in Adobe Audience Manager per il pubblico. Ulteriori informazioni su questa API sono disponibili nella [guida dell&#39;API Adobe Audience Manager](https://bank.demdex.com/portal/swagger/index.html#/Segment%20Folder%20API).</ul> |
 
 +++
 
@@ -419,7 +419,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 
 ## Cercare un pubblico specificato {#get}
 
-Per cercare informazioni dettagliate su un pubblico specifico, effettua una richiesta GET al `/audiences` e fornendo l’ID del pubblico da recuperare nel percorso della richiesta.
+Per cercare informazioni dettagliate su un pubblico specifico, effettua una richiesta di GET all&#39;endpoint `/audiences` e specifica l&#39;ID del pubblico da recuperare nel percorso della richiesta.
 
 **Formato API**
 
@@ -429,7 +429,7 @@ GET /audiences/{AUDIENCE_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- | 
-| `{AUDIENCE_ID}` | ID del pubblico che stai tentando di recuperare. Tieni presente che questa è la `id` ed è **non** il `audienceId` campo. |
+| `{AUDIENCE_ID}` | ID del pubblico che stai tentando di recuperare. Tieni presente che si tratta del campo `id` e che **non** è il campo `audienceId`. |
 
 **Richiesta**
 
@@ -561,7 +561,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 
 ## Aggiornare un campo in un pubblico {#update-field}
 
-Puoi aggiornare i campi di un pubblico specifico effettuando una richiesta PATCH al `/audiences` e fornendo l’ID del pubblico da aggiornare nel percorso della richiesta.
+Per aggiornare i campi di un pubblico specifico, devi eseguire una richiesta PATCH all&#39;endpoint `/audiences` e fornire l&#39;ID del pubblico da aggiornare nel percorso della richiesta.
 
 **Formato API**
 
@@ -571,7 +571,7 @@ PATCH /audiences/{AUDIENCE_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{AUDIENCE_ID}` | ID del pubblico che desideri aggiornare. Tieni presente che questa è la `id` ed è **non** il `audienceId` campo. |
+| `{AUDIENCE_ID}` | ID del pubblico che desideri aggiornare. Tieni presente che si tratta del campo `id` e che **non** è il campo `audienceId`. |
 
 **Richiesta**
 
@@ -600,7 +600,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-45
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `op` | Per aggiornare il pubblico, questo valore è sempre `add`. |
+| `op` | Per aggiornare i tipi di pubblico, questo valore è sempre `add`. |
 | `path` | Percorso del campo da aggiornare. |
 | `value` | Il valore a cui desideri aggiornare il campo. |
 
@@ -679,7 +679,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 
 ## Aggiornare un pubblico {#put}
 
-Per aggiornare (sovrascrivere) un pubblico specifico, devi effettuare una richiesta PUT al `/audiences` e fornendo l’ID del pubblico da aggiornare nel percorso della richiesta.
+È possibile aggiornare (sovrascrivere) un pubblico specifico effettuando una richiesta PUT all&#39;endpoint `/audiences` e fornendo l&#39;ID del pubblico che si desidera aggiornare nel percorso della richiesta.
 
 **Formato API**
 
@@ -689,7 +689,7 @@ PUT /audiences/{AUDIENCE_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{AUDIENCE_ID}` | ID del pubblico che desideri aggiornare. Tieni presente che questa è la `id` ed è **non** il `audienceId` campo. |
+| `{AUDIENCE_ID}` | ID del pubblico che desideri aggiornare. Tieni presente che si tratta del campo `id` e che **non** è il campo `audienceId`. |
 
 **Richiesta**
 
@@ -722,8 +722,8 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 | `name` | Il nome del pubblico. |
 | `namespace` | Lo spazio dei nomi per il pubblico. |
 | `description` | Una descrizione del pubblico. |
-| `type` | Campo generato dal sistema che indica se il pubblico è generato da Platform o da un pubblico generato esternamente. I valori possibili includono `SegmentDefinition` e `ExternalSegment`. A `SegmentDefinition` fa riferimento a un pubblico generato in Platform, mentre un `ExternalSegment` fa riferimento a un pubblico non generato in Platform. |
-| `lifecycleState` | Stato del pubblico. I valori possibili includono `draft`, `published`, e `inactive`. `draft` rappresenta quando viene creato il pubblico, `published` quando viene pubblicato il pubblico e `inactive` quando il pubblico non è più attivo. |
+| `type` | Campo generato dal sistema che indica se il pubblico è generato da Platform o da un pubblico generato esternamente. I valori possibili includono `SegmentDefinition` e `ExternalSegment`. Un `SegmentDefinition` fa riferimento a un pubblico generato in Platform, mentre un `ExternalSegment` fa riferimento a un pubblico non generato in Platform. |
+| `lifecycleState` | Stato del pubblico. I valori possibili sono `draft`, `published` e `inactive`. `draft` rappresenta quando viene creato il pubblico, `published` quando il pubblico viene pubblicato e `inactive` quando il pubblico non è più attivo. |
 | `datasetId` | ID del set di dati in cui è possibile trovare i dati sul pubblico. |
 | `labels` | Etichette di controllo dell’accesso basate su attributi e utilizzo dati a livello di oggetto rilevanti per il pubblico. |
 
@@ -765,7 +765,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 
 ## Eliminare un pubblico {#delete}
 
-Per eliminare un pubblico specifico, devi effettuare una richiesta DELETE al `/audiences` e fornendo l’ID del pubblico da eliminare nel percorso della richiesta.
+Per eliminare un pubblico specifico, devi eseguire una richiesta DELETE all&#39;endpoint `/audiences` e fornire l&#39;ID del pubblico da eliminare nel percorso della richiesta.
 
 **Formato API**
 
@@ -775,7 +775,7 @@ DELETE /audiences/{AUDIENCE_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{AUDIENCE_ID}` | ID del pubblico da eliminare. Tieni presente che questa è la `id` ed è **non** il `audienceId` campo. |
+| `{AUDIENCE_ID}` | ID del pubblico da eliminare. Tieni presente che si tratta del campo `id` e che **non** è il campo `audienceId`. |
 
 **Richiesta**
 
@@ -797,7 +797,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 204 senza messa
 
 ## Recuperare più tipi di pubblico {#bulk-get}
 
-Per recuperare più tipi di pubblico, devi effettuare una richiesta POST al `/audiences/bulk-get` e fornendo gli ID dei tipi di pubblico da recuperare.
+Per recuperare più tipi di pubblico, devi eseguire una richiesta POST all&#39;endpoint `/audiences/bulk-get` e fornire gli ID dei tipi di pubblico da recuperare.
 
 **Formato API**
 
@@ -937,4 +937,4 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 207 con le info
 
 ## Passaggi successivi
 
-Dopo aver letto questa guida, ora hai una migliore comprensione di come creare, gestire ed eliminare i tipi di pubblico utilizzando l’API di Adobe Experience Platform. Per ulteriori informazioni sulla gestione dell&#39;audience tramite l&#39;interfaccia utente, leggi [guida all’interfaccia utente di segmentazione](../ui/overview.md).
+Dopo aver letto questa guida, ora hai una migliore comprensione di come creare, gestire ed eliminare i tipi di pubblico utilizzando l’API di Adobe Experience Platform. Per ulteriori informazioni sulla gestione dell&#39;audience tramite l&#39;interfaccia utente, consulta la [guida dell&#39;interfaccia utente di segmentazione](../ui/overview.md).

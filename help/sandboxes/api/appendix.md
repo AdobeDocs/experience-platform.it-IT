@@ -14,15 +14,15 @@ ht-degree: 1%
 
 # Appendice alla guida delle API sandbox
 
-Questo documento fornisce informazioni supplementari relative all&#39;utilizzo di [!DNL Sandbox] API.
+Questo documento fornisce informazioni supplementari relative all&#39;utilizzo dell&#39;API [!DNL Sandbox].
 
 ## Utilizzo dei parametri di query {#query}
 
-Il [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox) supporta l’utilizzo di parametri di query per visualizzare e filtrare i risultati quando si elencano le sandbox.
+L&#39;[[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox) supporta l&#39;utilizzo di parametri di query per la visualizzazione delle pagine e il filtraggio dei risultati quando vengono elencate le sandbox.
 
 >[!NOTE]
 >
->Il `limit` e `offset` i parametri di query devono essere specificati insieme. Se ne specifichi solo uno, l’API restituirà un errore. Se non specificate alcun valore, il limite predefinito è 50 e l&#39;offset è 0.
+>I parametri di query `limit` e `offset` devono essere specificati insieme. Se ne specifichi solo uno, l’API restituirà un errore. Se non specificate alcun valore, il limite predefinito è 50 e l&#39;offset è 0.
 
 | Parametro | Descrizione |
 | --- | --- |

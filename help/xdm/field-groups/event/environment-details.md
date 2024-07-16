@@ -12,13 +12,13 @@ ht-degree: 2%
 ---
 
 
-# [!UICONTROL Dettagli dell’ambiente] gruppo di campi schema
+# [!UICONTROL Dettagli ambiente] gruppo di campi schema
 
 >[!NOTE]
 >
->I nomi di diversi gruppi di campi dello schema sono stati modificati. Vedi il documento su [aggiornamenti nome gruppo di campi](../name-updates.md) per ulteriori informazioni.
+>I nomi di diversi gruppi di campi dello schema sono stati modificati. Per ulteriori informazioni, consulta il documento sugli aggiornamenti del nome del gruppo di campi [](../name-updates.md).
 
-[!UICONTROL Dettagli dell’ambiente] è un gruppo di campi di schema standard per [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md) utilizzato per acquisire informazioni sui dettagli dell’ambiente relativi a un evento esperienza, ad esempio i dettagli del dispositivo, le informazioni sul browser, l’ora locale e altre informazioni geografiche.
+[!UICONTROL Dettagli ambiente] è un gruppo di campi dello schema standard per la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md) utilizzata per acquisire informazioni sui dettagli dell&#39;ambiente relativi a un evento esperienza, ad esempio i dettagli del dispositivo, le informazioni del browser, l&#39;ora locale e altre informazioni geografiche.
 
 <img src="../../images/field-groups/environment-details.png" width="500" /><br />
 
@@ -26,7 +26,7 @@ ht-degree: 2%
 | --- | --- | --- |
 | `device` | [Dispositivo](../../data-types/device.md) | Descrive un dispositivo identificato, un’applicazione o un’istanza del browser del dispositivo che è tracciabile nelle sessioni, normalmente tramite i cookie. |
 | `environment` | [Ambiente](../../data-types/environment.md) | Descrive informazioni sul contesto situazionale dell’osservazione dell’evento, specificando informazioni transitorie come la rete o le versioni del software. |
-| `placeContext` | [Contesto del luogo](../../data-types/place-context.md) | Descrive le circostanze transitorie relative all’osservazione dell’evento. Alcuni esempi includono informazioni specifiche per le impostazioni locali come meteo, ora locale, traffico, giorno della settimana, giorno lavorativo o festivo e orario di lavoro. |
+| `placeContext` | [Inserisci contesto](../../data-types/place-context.md) | Descrive le circostanze transitorie relative all’osservazione dell’evento. Alcuni esempi includono informazioni specifiche per le impostazioni locali come meteo, ora locale, traffico, giorno della settimana, giorno lavorativo o festivo e orario di lavoro. |
 
 {style="table-layout:auto"}
 

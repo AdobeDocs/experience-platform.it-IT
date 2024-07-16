@@ -7,31 +7,31 @@ description: Questo tutorial illustra i passaggi necessari per aggiornare un flu
 exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '607'
+source-wordcount: '603'
 ht-degree: 3%
 
 ---
 
 # Aggiornare i flussi di dati utilizzando l’API del servizio Flusso
 
-Questa esercitazione illustra i passaggi necessari per aggiornare un flusso di dati, incluse le informazioni di base, la pianificazione e i set di mappatura mediante [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Questo tutorial illustra i passaggi necessari per aggiornare un flusso di dati, incluse le informazioni di base, la pianificazione e i set di mappatura mediante l&#39;[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introduzione
 
-Questo tutorial richiede un ID di flusso valido. Se non disponi di un ID di flusso valido, seleziona il connettore desiderato da [panoramica sulle origini](../../home.md) e segui i passaggi descritti prima di provare questa esercitazione.
+Questo tutorial richiede un ID di flusso valido. Se non disponi di un ID di flusso valido, seleziona il connettore desiderato dalla [panoramica origini](../../home.md) e segui i passaggi descritti prima di provare questa esercitazione.
 
 Questo tutorial richiede anche una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Sorgenti](../../home.md): un Experience Platform consente di acquisire dati da varie origini, consentendoti allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
-* [Sandbox](../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Origini](../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
+* [Sandbox](../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 ### Utilizzo delle API di Platform
 
-Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida su [introduzione alle API di Platform](../../../landing/api-guide.md).
+Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida in [guida introduttiva alle API di Platform](../../../landing/api-guide.md).
 
 ## Cerca dettagli flusso di dati
 
-Il primo passaggio nell’aggiornamento del flusso di dati consiste nel recuperare i dettagli del flusso di dati utilizzando il tuo ID flusso. Per visualizzare i dettagli correnti di un flusso di dati esistente, effettua una richiesta GET al `/flows` endpoint.
+Il primo passaggio nell’aggiornamento del flusso di dati consiste nel recuperare i dettagli del flusso di dati utilizzando il tuo ID flusso. È possibile visualizzare i dettagli correnti di un flusso di dati esistente effettuando una richiesta GET all&#39;endpoint `/flows`.
 
 **Formato API**
 
@@ -41,7 +41,7 @@ GET /flows/{FLOW_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{FLOW_ID}` | L&#39;unico `id` valore per il flusso di dati che desideri recuperare. |
+| `{FLOW_ID}` | Il valore `id` univoco per il flusso di dati che desideri recuperare. |
 
 **Richiesta**
 
@@ -58,7 +58,7 @@ curl -X GET \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce i dettagli correnti del flusso di dati, inclusa la versione, la pianificazione e l’identificatore univoco (`id`).
+In caso di esito positivo, la risposta restituisce i dettagli correnti del flusso di dati, inclusa la versione, la pianificazione e l&#39;identificatore univoco (`id`).
 
 ```json
 {
@@ -172,11 +172,11 @@ In caso di esito positivo, la risposta restituisce i dettagli correnti del fluss
 
 ## Aggiorna flusso di dati
 
-Per aggiornare la pianificazione di esecuzione, il nome e la descrizione del flusso di dati, esegui una richiesta PATCH al [!DNL Flow Service] fornendo l’ID di flusso, la versione e la nuova pianificazione che desideri utilizzare.
+Per aggiornare la pianificazione di esecuzione, il nome e la descrizione del flusso di dati, eseguire una richiesta PATCH all&#39;API [!DNL Flow Service] fornendo l&#39;ID di flusso, la versione e la nuova pianificazione che si desidera utilizzare.
 
 >[!IMPORTANT]
 >
->Il `If-Match` L’intestazione è obbligatoria quando si effettua una richiesta PATCH. Il valore di questa intestazione è la versione univoca della connessione che desideri aggiornare. Il valore etag viene aggiornato a ogni aggiornamento riuscito di un flusso di dati.
+>L&#39;intestazione `If-Match` è obbligatoria quando si effettua una richiesta PATCH. Il valore di questa intestazione è la versione univoca della connessione che desideri aggiornare. Il valore etag viene aggiornato a ogni aggiornamento riuscito di un flusso di dati.
 
 **Formato API**
 
@@ -217,13 +217,13 @@ curl -X PATCH \
 
 | Proprietà | Descrizione |
 | --------- | ----------- |
-| `op` | Chiamata di operazione utilizzata per definire l’azione necessaria per aggiornare il flusso di dati. Le operazioni includono: `add`, `replace`, e `remove`. |
+| `op` | Chiamata di operazione utilizzata per definire l’azione necessaria per aggiornare il flusso di dati. Le operazioni includono: `add`, `replace` e `remove`. |
 | `path` | Definisce la parte del flusso da aggiornare. |
 | `value` | Il nuovo valore con cui desideri aggiornare il parametro. |
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce l’ID di flusso e un tag aggiornato. Per verificare l’aggiornamento, effettua una richiesta GET al [!DNL Flow Service] , fornendo al tempo stesso l&#39;ID di flusso.
+In caso di esito positivo, la risposta restituisce l’ID di flusso e un tag aggiornato. È possibile verificare l&#39;aggiornamento effettuando una richiesta di GET all&#39;API [!DNL Flow Service] e fornendo il proprio ID di flusso.
 
 ```json
 {
@@ -234,7 +234,7 @@ In caso di esito positivo, la risposta restituisce l’ID di flusso e un tag agg
 
 ## Aggiorna mappatura
 
-Per aggiornare il set di mappatura di un flusso di dati esistente, devi effettuare una richiesta PATCH al [!DNL Flow Service] API e fornendo valori aggiornati per le `mappingId` e `mappingVersion`.
+È possibile aggiornare il set di mappatura di un flusso di dati esistente effettuando una richiesta PATCH all&#39;API [!DNL Flow Service] e fornendo valori aggiornati per `mappingId` e `mappingVersion`.
 
 **Formato API**
 
@@ -271,7 +271,7 @@ curl -X PATCH \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `op` | Chiamata di operazione utilizzata per definire l’azione necessaria per aggiornare il flusso di dati. Le operazioni includono: `add`, `replace`, e `remove`. |
+| `op` | Chiamata di operazione utilizzata per definire l’azione necessaria per aggiornare il flusso di dati. Le operazioni includono: `add`, `replace` e `remove`. |
 | `path` | Definisce la parte del flusso da aggiornare. In questo esempio, `transformations` è in fase di aggiornamento. |
 | `value.name` | Nome della proprietà da aggiornare. |
 | `value.params.mappingId` | Il nuovo ID di mappatura da utilizzare per aggiornare il set di mappatura del flusso di dati. |
@@ -279,7 +279,7 @@ curl -X PATCH \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce l’ID di flusso e un tag aggiornato. Per verificare l’aggiornamento, effettua una richiesta GET al [!DNL Flow Service] , fornendo al tempo stesso l&#39;ID di flusso.
+In caso di esito positivo, la risposta restituisce l’ID di flusso e un tag aggiornato. È possibile verificare l&#39;aggiornamento effettuando una richiesta di GET all&#39;API [!DNL Flow Service] e fornendo il proprio ID di flusso.
 
 ```json
 {
@@ -290,4 +290,4 @@ In caso di esito positivo, la risposta restituisce l’ID di flusso e un tag agg
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai aggiornato le informazioni di base, la pianificazione e i set di mappatura del flusso di dati utilizzando [!DNL Flow Service] API. Per ulteriori informazioni sull&#39;utilizzo dei connettori di origine, vedere [panoramica sulle origini](../../home.md).
+Seguendo questa esercitazione, hai aggiornato le informazioni di base, la pianificazione e i set di mappatura del flusso di dati utilizzando l&#39;API [!DNL Flow Service]. Per ulteriori informazioni sull&#39;utilizzo dei connettori di origine, vedere [panoramica origini](../../home.md).

@@ -1,12 +1,12 @@
 ---
-title: Panoramica dell’origine di SAP Commerce
+title: Panoramica di SAP Commerce Source
 description: Scopri come collegare SAP Commerce a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 last-substantial-update: 2023-07-26T00:00:00Z
 badge: Beta
 exl-id: d2ddfec3-a421-48a7-b765-86ce9162f26f
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '394'
+source-wordcount: '347'
 ht-degree: 3%
 
 ---
@@ -15,31 +15,31 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->Il [!DNL SAP Commerce] sorgente in versione beta. Consulta la [panoramica sulle origini](../../home.md#terms-and-conditions) per ulteriori informazioni sull’utilizzo di fonti etichettate beta.
+>L&#39;origine [!DNL SAP Commerce] è in versione beta. Per ulteriori informazioni sull&#39;utilizzo di origini con etichetta beta, vedere la [panoramica origini](../../home.md#terms-and-conditions).
 
-[[!DNL SAP Commerce]](https://www.sap.com/india/products/acquired-brands/what-is-hybris.html), una piattaforma di e-commerce basata su cloud per le aziende B2B e B2C è disponibile come parte del portafoglio Customer Experience di SAP. [[!DNL SAP] Fatturazione abbonamento](https://www.sap.com/products/financial-management/subscription-billing.html) è un prodotto incluso nel portfolio e consente la gestione completa del ciclo di vita degli abbonamenti con esperienze di vendita e pagamento semplificate tramite integrazioni standardizzate.
+[[!DNL SAP Commerce]](https://www.sap.com/india/products/acquired-brands/what-is-hybris.html), una soluzione di piattaforma di e-commerce basata su cloud per le aziende B2B e B2C, è disponibile come parte del portafoglio SAP Customer Experience. [[!DNL SAP] La fatturazione dell&#39;abbonamento](https://www.sap.com/products/financial-management/subscription-billing.html) è un prodotto incluso nel portfolio e consente la gestione completa del ciclo di vita dell&#39;abbonamento con esperienze di vendita e pagamento semplificate tramite integrazioni standardizzate.
 
-Il [!DNL SAP Commerce] consente di acquisire informazioni su clienti e contatti in Platform dalla [[!DNL SAP] Fatturazione abbonamento](https://www.sap.com/products/financial-management/subscription-billing.html) Di seguito sono riportati gli endpoint API per i partner aziendali:
+L&#39;origine [!DNL SAP Commerce] consente di acquisire informazioni su clienti e contatti in Platform dagli endpoint API [[!DNL SAP] Subscription Billing](https://www.sap.com/products/financial-management/subscription-billing.html) Business Partners di seguito:
 
 * [Clienti](https://api.sap.com/api/BusinessPartner_APIs/path/GET_customers)
 * [Contatti](https://api.sap.com/api/BusinessPartner_APIs/path/GET_contacts)
 
-Inoltre, se [!DNL SAP Commerce] viene eseguito per recuperare i dati del cliente, il [Relazioni cliente-contatto](https://api.sap.com/api/BusinessPartner_APIs/path/GET_relationships-customer-contacts) L’API viene inoltre chiamata per recuperare le informazioni di contatto del cliente.
+Inoltre, se [!DNL SAP Commerce] viene eseguito per recuperare i dati del cliente, viene chiamata anche l&#39;API [Customer-Contact Relationships](https://api.sap.com/api/BusinessPartner_APIs/path/GET_relationships-customer-contacts) per recuperare le informazioni di contatto del cliente.
 
 ## ELENCO CONSENTITI di indirizzo IP {#ip-allow-list}
 
-Prima di utilizzare i connettori di origine, potrebbe essere necessario aggiungere un elenco di indirizzi IP a un elenco consentiti. La mancata aggiunta all’elenco consentiti degli indirizzi IP specifici per l’area geografica potrebbe causare errori o prestazioni non ottimali durante l’utilizzo delle origini. Consulta la [ELENCO CONSENTITI di indirizzo IP](../../ip-address-allow-list.md) per ulteriori informazioni.
+Prima di utilizzare i connettori di origine, potrebbe essere necessario aggiungere un elenco di indirizzi IP a un elenco consentiti. La mancata aggiunta all’elenco consentiti degli indirizzi IP specifici per l’area geografica potrebbe causare errori o prestazioni non ottimali durante l’utilizzo delle origini. Per ulteriori informazioni, vedere la pagina [elenco consentiti indirizzo IP](../../ip-address-allow-list.md).
 
 ## Prerequisiti {#prerequisites}
 
-Prima di poter portare il [!DNL SAP Commerce] dati per Experience Platform, devi prima assicurarti di disporre dei seguenti elementi:
+Prima di poter portare i dati di [!DNL SAP Commerce] all&#39;Experience Platform, è necessario assicurarsi di disporre dei seguenti elementi:
 
-* A [!DNL SAP Subscription Billing] account. Se non disponi già di un account di fatturazione valido, contatta [!DNL SAP] responsabile dell’account. Consulta la sezione [[!DNL SAP] Configurazione piattaforma](https://help.sap.com/doc/5fd179965d5145fbbe7f2a7aa1272338/latest/en-US/PlatformConfiguration.pdf) per ulteriori dettagli.
+* Un account [!DNL SAP Subscription Billing]. Se non disponi già di un account di fatturazione valido, contatta il tuo account manager [!DNL SAP]. Per ulteriori informazioni, consultare il documento [[!DNL SAP] Configurazione piattaforma](https://help.sap.com/doc/5fd179965d5145fbbe7f2a7aa1272338/latest/en-US/PlatformConfiguration.pdf).
 
-* [!DNL SAP] chiave del servizio. Il [!DNL SAP] service key consente di accedere al [!DNL SAP Subscription Billing] API tramite Experienci Platform. [!DNL SAP Commerce] richiede quanto segue:
+* Chiave del servizio [!DNL SAP]. La chiave del servizio [!DNL SAP] ti consente di accedere all&#39;API [!DNL SAP Subscription Billing] tramite Experience Platform. [!DNL SAP Commerce] richiede quanto segue:
    * ID client
    * Segreto client
-   * URL. Il pattern dell’URL è il seguente: `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. Questo valore verrà utilizzato in seguito per ottenere i valori per `region` e `tokenEndpoint` quando [Crea connessione di base](../../tutorials/api/create/ecommerce/sap-commerce.md#base-connection) utilizzando l’API o quando [Connetti [!DNL SAP Commerce] account](../../tutorials/ui/create/ecommerce/sap-commerce.md#connect-account) tramite l’interfaccia utente di Platform.
+   * URL. Schema URL: `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. Questo valore verrà utilizzato successivamente per ottenere i valori per `region` e `tokenEndpoint` quando [crei una connessione di base](../../tutorials/api/create/ecommerce/sap-commerce.md#base-connection) utilizzando l&#39;API o quando [connetti il tuo account [!DNL SAP Commerce] ](../../tutorials/ui/create/ecommerce/sap-commerce.md#connect-account) tramite l&#39;interfaccia utente di Platform.
 
 +++Seleziona per visualizzare un esempio della chiave del servizio
 
@@ -71,8 +71,8 @@ Prima di poter portare il [!DNL SAP Commerce] dati per Experience Platform, devi
 
 ## Passaggi successivi
 
-La documentazione seguente fornisce informazioni sulle modalità di connessione [!DNL SAP Commerce] in Platform tramite API o l’interfaccia utente:
+La documentazione seguente fornisce informazioni su come connettere [!DNL SAP Commerce] a Platform tramite API o tramite l&#39;interfaccia utente:
 
-* [Creare una connessione di origine e un flusso di dati per portare [!DNL SAP Commerce] dati per Platform tramite API](../../tutorials/api/create/ecommerce/sap-commerce.md).
-* [Connetti [!DNL SAP Commerce] Experience Platform dell’account tramite l’interfaccia utente](../../tutorials/ui/create/ecommerce/sap-commerce.md).
+* [Crea una connessione di origine e un flusso di dati per portare [!DNL SAP Commerce] dati in Platform tramite API](../../tutorials/api/create/ecommerce/sap-commerce.md).
+* [Connetti il tuo account [!DNL SAP Commerce] ad Experience Platform utilizzando l&#39;interfaccia utente](../../tutorials/ui/create/ecommerce/sap-commerce.md).
 * [Creare un flusso di dati per un’origine utilizzando l’interfaccia utente](../../tutorials/ui/dataflow/ecommerce.md)

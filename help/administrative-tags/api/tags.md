@@ -2,19 +2,19 @@
 title: Endpoint tag unificato
 description: Scopri come creare, aggiornare, gestire ed eliminare categorie e tag utilizzando le API di Adobe Experience Platform.
 role: Developer
-source-git-commit: ede314d0cbe50514090915fccf7ef3c2a5254b7a
+exl-id: 6687d1da-a5e4-435a-9f99-1b0f9ac98088
+source-git-commit: 717a4ea0568200c940cf9b8f26f4dd2aa9c00a3e
 workflow-type: tm+mt
 source-wordcount: '1860'
 ht-degree: 4%
 
 ---
 
-
 # Endpoint &quot;unified tags&quot;
 
 >[!IMPORTANT]
 >
->L’URL dell’endpoint per questo set di endpoint è `https://experience.adobe.io`.
+>L&#39;URL dell&#39;endpoint per questo set di endpoint è `https://experience.adobe.io`.
 
 I tag sono una funzionalità che consente di gestire le tassonomie dei metadati per classificare gli oggetti aziendali in modo da semplificarne l&#39;individuazione e la classificazione. Successivamente puoi organizzare questi tag in altri gruppi aggiungendoli alle categorie di tag.
 
@@ -22,19 +22,19 @@ Questa guida fornisce informazioni utili per comprendere meglio i tag e le categ
 
 ## Introduzione
 
-Gli endpoint utilizzati in questa guida fanno parte delle API di Adobe Experience Platform. Prima di continuare, controlla [guida introduttiva](./getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all’API, incluse le intestazioni richieste e la lettura di esempi di chiamate API
+Gli endpoint utilizzati in questa guida fanno parte delle API di Adobe Experience Platform. Prima di continuare, consulta la [guida introduttiva](./getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all&#39;API, incluse le intestazioni richieste e la lettura di esempi di chiamate API
 
 ### Glossario
 
-Il glossario seguente evidenzia la differenza tra **tag** e un **categoria tag**.
+Il glossario seguente evidenzia la differenza tra un **tag** e una **categoria di tag**.
 
-- **Tag**: un tag consente di gestire la tassonomia dei metadati per gli oggetti business, consentendoti di classificare tali oggetti per facilitarne l’individuazione e la classificazione.
+- **Tag**: un tag consente di gestire la tassonomia dei metadati per gli oggetti business e di classificarli in modo da semplificarne l&#39;individuazione e la classificazione.
    - **Tag non categorizzato**: un tag non categorizzato è un tag che non appartiene a una categoria di tag. Per impostazione predefinita, i tag creati non saranno categorizzati.
 - **Categoria tag**: una categoria di tag consente di raggruppare i tag in set significativi, consentendo di fornire più contesto allo scopo del tag.
 
 ## Recuperare un elenco di categorie di tag {#get-tag-categories}
 
-Per recuperare un elenco di categorie di tag che appartengono alla tua organizzazione, devi effettuare una richiesta GET al `/tagCategory` endpoint.
+Per recuperare un elenco di categorie di tag appartenenti alla tua organizzazione, devi effettuare una richiesta GET all&#39;endpoint `/tagCategory`.
 
 **Formato API**
 
@@ -49,8 +49,8 @@ Per recuperare le categorie di tag è possibile utilizzare i seguenti parametri 
 | --------------- | ----------- | ------- |
 | `start` | Percorso da cui inizia l’elenco dei risultati. È possibile utilizzarlo per indicare l’indice iniziale per l’impaginazione dei risultati. | `start=a` |
 | `limit` | Il numero massimo di categorie di tag che si desidera recuperare per pagina. | `limit=20` |
-| `property` | Attributo in base al quale filtrare quando si recuperano le categorie di tag. I valori supportati includono: &lt;ul><li>`name`: nome della categoria di tag.</li></ul> | `property=name==category` |
-| `sortBy` | Ordine in base al quale vengono ordinate le categorie di tag. I valori supportati includono `name`, `createdAt`, e `modifiedAt`. | `sortBy=name` |
+| `property` | Attributo in base al quale filtrare quando si recuperano le categorie di tag. I valori supportati includono: &lt;ul≥<li>`name`: nome della categoria di tag.</li></ul> | `property=name==category` |
+| `sortBy` | Ordine in base al quale vengono ordinate le categorie di tag. I valori supportati sono `name`, `createdAt` e `modifiedAt`. | `sortBy=name` |
 | `sortOrder` | Direzione in cui vengono ordinate le categorie di tag. I valori supportati includono `asc` e `desc`. | `sortOrder=asc` |
 
 **Richiesta**
@@ -104,7 +104,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elen
 >
 >Solo l’amministratore di sistema e l’amministratore di prodotto possono utilizzare questa chiamata API.
 
-Per creare una nuova categoria di tag, devi effettuare una richiesta POST al `/tagCategory` endpoint.
+È possibile creare una nuova categoria di tag effettuando una richiesta POST all&#39;endpoint `/tagCategory`.
 
 **Formato API**
 
@@ -159,7 +159,7 @@ Una risposta di esempio restituisce lo stato HTTP 200 con i dettagli della categ
 
 ## Recuperare una categoria di tag specifica {#get-tag-category}
 
-Per recuperare una categoria di tag specifica che appartiene alla tua organizzazione, devi effettuare una richiesta GET al `/tagCategory` e specificando l’ID della categoria di tag.
+Per recuperare una categoria di tag specifica che appartiene alla tua organizzazione, devi effettuare una richiesta di GET all&#39;endpoint `/tagCategory` e specificare l&#39;ID della categoria di tag.
 
 **Formato API**
 
@@ -224,7 +224,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 >
 >Solo l’amministratore di sistema e l’amministratore di prodotto possono utilizzare questa chiamata API.
 
-Per aggiornare i dettagli di una categoria di tag specifica che appartiene alla tua organizzazione, devi effettuare una richiesta PATCH al `/tagCategory` e specificando l’ID della categoria di tag.
+Per aggiornare i dettagli di una categoria di tag specifica che appartiene alla tua organizzazione, devi eseguire una richiesta PATCH all&#39;endpoint `/tagCategory` e specificare l&#39;ID della categoria di tag.
 
 **Formato API**
 
@@ -256,7 +256,7 @@ curl -X PATCH https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b-
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `op` | Operazione completata. Per aggiornare una categoria di tag specifica, imposta questo valore su `replace`. |
+| `op` | Operazione completata. Per aggiornare una categoria di tag specifica, impostare questo valore su `replace`. |
 | `path` | Percorso del campo che verrà aggiornato. I valori supportati includono `name` e `description`. |
 | `value` | Valore aggiornato del campo da aggiornare. |
 | `from` | Valore originale del campo che si desidera aggiornare. |
@@ -291,7 +291,7 @@ In caso di esito positivo, la risposta HTTP status 200 contiene informazioni sul
 >
 >Solo l’amministratore di sistema e l’amministratore di prodotto possono utilizzare questa chiamata API.
 
-Per eliminare una categoria di tag specifica appartenente alla tua organizzazione, devi effettuare una richiesta DELETE al `/tagCategory` e specificando l’ID della categoria di tag.
+Per eliminare una categoria di tag specifica appartenente alla tua organizzazione, devi eseguire una richiesta DELETE all&#39;endpoint `/tagCategory` e specificare l&#39;ID della categoria di tag.
 
 **Formato API**
 
@@ -323,7 +323,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 insieme a u
 
 ## Recuperare un elenco di tag {#get-tags}
 
-Per recuperare un elenco di tag appartenenti alla tua organizzazione, effettua una richiesta GET al `/tags` e l’ID della categoria di tag.
+Per recuperare un elenco di tag appartenenti alla tua organizzazione, devi effettuare una richiesta di GET all&#39;endpoint `/tags` e all&#39;ID della categoria di tag.
 
 **Formato API**
 
@@ -338,8 +338,8 @@ Durante il recupero dei tag è possibile utilizzare i seguenti parametri di quer
 | --------------- | ----------- | ------- |
 | `start` | Percorso da cui inizia l’elenco dei risultati. È possibile utilizzarlo per indicare l’indice iniziale per l’impaginazione dei risultati. | `start=a` |
 | `limit` | Il numero massimo di tag da recuperare per pagina. | `limit=20` |
-| `property` | Attributo in base al quale filtrare quando si recuperano i tag. I valori supportati includono:<ul><li>`name`: nome del tag.</li><li>`archived`: se i tag vengono archiviati o meno. È possibile impostare questo valore su `true` o `false`.</li><li>`tagCategoryId`: ID della categoria di tag a cui appartiene il tag.</li></ul> | <ul><li>`property=name==TestTag`</li><li>`property=archived==false`</li><li>`property=tagCategoryId==e2b7c656-067b-4413-a366-adde0401df50`</li> |
-| `sortBy` | L’ordine in cui i tag sono ordinati per. I valori supportati includono `name`, `createdAt`, e `modifiedAt`. | `sortBy=name` |
+| `property` | Attributo in base al quale filtrare quando si recuperano i tag. I valori supportati includono:<ul><li>`name`: nome del tag.</li><li>`archived`: archiviazione o annullamento dell&#39;archiviazione dei tag. È possibile impostare questo valore su `true` o `false`.</li><li>`tagCategoryId`: ID della categoria di tag a cui appartiene il tag.</li></ul> | <ul><li>`property=name==TestTag`</li><li>`property=archived==false`</li><li>`property=tagCategoryId==e2b7c656-067b-4413-a366-adde0401df50`</li> |
+| `sortBy` | L’ordine in cui i tag sono ordinati per. I valori supportati sono `name`, `createdAt` e `modifiedAt`. | `sortBy=name` |
 | `sortOrder` | Direzione in cui vengono ordinate le categorie di tag. I valori supportati includono `asc` e `desc`. | `sortOrder=asc` |
 
 
@@ -506,9 +506,9 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 >
 >Solo l’amministratore di sistema e l’amministratore di prodotto possono utilizzare questa chiamata API per creare un nuovo tag in una categoria di tag specificata.
 >
->Se stai creando un tag non categorizzato, **non** sono necessarie le autorizzazioni di amministratore.
+>Se stai creando un tag non categorizzato, **non** hai bisogno delle autorizzazioni di amministratore.
 
-Per creare un nuovo tag, devi effettuare una richiesta POST al `/tags` endpoint.
+È possibile creare un nuovo tag effettuando una richiesta POST all&#39;endpoint `/tags`.
 
 **Formato API**
 
@@ -533,7 +533,7 @@ curl -X POST https://experience.adobe.io/unifiedtags/tags
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `name` | **Obbligatorio**. Nome del tag da creare. |
+| `name` | **Richiesto**. Nome del tag da creare. |
 | `tagCategoryId` | *Facoltativo*. ID della categoria di tag a cui desideri che appartenga il tag. Se non viene specificato, il tag verrà creato come parte della categoria Non categorizzato. |
 
 +++
@@ -575,7 +575,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 201 con i detta
 
 ## Recuperare un tag specifico {#get-tag}
 
-Per recuperare un tag specifico che appartiene alla tua organizzazione, effettua una richiesta GET al `/tags` e specificando l’ID del tag da recuperare.
+Per recuperare un tag specifico appartenente alla tua organizzazione, devi eseguire una richiesta di GET all&#39;endpoint `/tags` e specificare l&#39;ID del tag da recuperare.
 
 **Formato API**
 
@@ -639,7 +639,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 
 ## Convalida tag {#validate-tags}
 
-Per verificare l’esistenza dei tag, effettua una richiesta POST al `/tags/validate` endpoint.
+È possibile verificare se esistono tag effettuando una richiesta POST all&#39;endpoint `/tags/validate`.
 
 **Formato API**
 
@@ -668,7 +668,7 @@ curl -X POST https://experience.adobe.io/unifiedtags/tags/validate
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `ids` | Array contenente un elenco di ID tag da convalidare. |
-| `entity` | Entità che richiede la convalida. È possibile utilizzare `{API_KEY}` per questo parametro. |
+| `entity` | Entità che richiede la convalida. È possibile utilizzare il valore `{API_KEY}` per questo parametro. |
 
 +++
 
@@ -705,7 +705,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 
 ## Aggiornare un tag specifico {#update-tag}
 
-Per aggiornare un tag specificato, devi eseguire una richiesta PATCH a `/tags` e fornendo l’ID del tag da aggiornare.
+È possibile aggiornare un tag specificato effettuando una richiesta PATCH all&#39;endpoint `/tags` e fornendo l&#39;ID del tag che si desidera aggiornare.
 
 **Formato API**
 
@@ -737,8 +737,8 @@ curl -X GET https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-81d9
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `op` | Operazione da eseguire. In questo caso d’uso, sarà sempre impostato su `replace`. |
-| `path` | Percorso del campo che verrà aggiornato. I valori supportati includono `name`, `archived`, e `tagCategoryId`. |
+| `op` | Operazione da eseguire. In questo caso d&#39;uso, sarà sempre impostato su `replace`. |
+| `path` | Percorso del campo che verrà aggiornato. I valori supportati sono `name`, `archived` e `tagCategoryId`. |
 | `value` | Valore aggiornato del campo da aggiornare. |
 | `from` | Valore originale del campo che si desidera aggiornare. |
 
@@ -773,9 +773,9 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 >
 >Solo l’amministratore di sistema e l’amministratore di prodotto possono utilizzare questa chiamata API.
 >
->Inoltre, il tag **non può** essere associati a qualsiasi oggetto aziendale e **deve** essere archiviato prima di poter eliminare il tag. Puoi archiviare il tag utilizzando [aggiorna endpoint tag](#update-tag).
+>Inoltre, il tag **non può** essere associato ad alcun oggetto aziendale e **deve** essere archiviato prima di poter eliminare il tag. È possibile archiviare il tag utilizzando l&#39;endpoint [aggiorna tag](#update-tag).
 
-È possibile eliminare un tag specifico creando un tag DELETE nella `/tags` e specificando l’ID del tag da eliminare.
+È possibile eliminare un tag specifico creando un tag DELETE nell&#39;endpoint `/tags` e specificando l&#39;ID del tag che si desidera eliminare.
 
 **Formato API**
 
@@ -807,4 +807,4 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 insieme a u
 
 ## Passaggi successivi
 
-Dopo aver letto questa guida, avrai una migliore comprensione di come creare, gestire ed eliminare tag e categorie di tag utilizzando le API di Adobe Experience Platform. Per ulteriori informazioni sulla gestione dei tag tramite l’interfaccia utente, consulta [guida alla gestione dei tag](../ui/managing-tags.md). Per ulteriori informazioni sulla gestione delle categorie di tag tramite l’interfaccia utente, consulta [guida alle categorie di tag](../ui/tags-categories.md).
+Dopo aver letto questa guida, avrai una migliore comprensione di come creare, gestire ed eliminare tag e categorie di tag utilizzando le API di Adobe Experience Platform. Per ulteriori informazioni sulla gestione dei tag tramite l&#39;interfaccia utente, leggere la [guida alla gestione dei tag](../ui/managing-tags.md). Per ulteriori informazioni sulla gestione delle categorie di tag tramite l&#39;interfaccia utente, leggere la [guida alle categorie di tag](../ui/tags-categories.md).

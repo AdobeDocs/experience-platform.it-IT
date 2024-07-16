@@ -9,9 +9,9 @@ ht-degree: 8%
 
 ---
 
-# [!UICONTROL Catalogo prodotti] gruppo di campi schema
+# [!UICONTROL Gruppo di campi per schema Catalogo prodotti]
 
-[!UICONTROL Catalogo prodotti] è un gruppo di campi di schema standard per [[!UICONTROL Prodotto] classe](../../classes/product.md) che acquisisce le proprietà relative a un catalogo di prodotti.
+[!UICONTROL Il catalogo prodotti] è un gruppo di campi dello schema standard per la [[!UICONTROL classe prodotto]](../../classes/product.md) che acquisisce le proprietà relative a un catalogo prodotti.
 
 ![](../../images/field-groups/product/product-catalog.png)
 
@@ -22,4 +22,4 @@ ht-degree: 8%
 
 {style="table-layout:auto"}
 
-Per ulteriori dettagli sul gruppo di campi, consulta [archivio XDM pubblico](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/product/product-catalog.schema.json).
+Per ulteriori dettagli sul gruppo di campi, consulta l&#39;[archivio XDM pubblico](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/product/product-catalog.schema.json).

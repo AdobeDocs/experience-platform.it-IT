@@ -19,12 +19,12 @@ ht-degree: 0%
 
 # Segmentazione in streaming nell’interfaccia utente di Experience Platform
 
-Il video seguente ha lo scopo di aiutarti a comprendere la segmentazione dello streaming. Mostra un esempio di esperienza del cliente seguita da una breve presentazione delle funzioni chiave nella [!DNL Platform] di rete. Per ulteriori informazioni sulla segmentazione dello streaming e su come eseguire tale segmentazione nell’interfaccia utente, leggi [guida dell’interfaccia utente per la segmentazione in streaming](../ui/streaming-segmentation.md).
+Il video seguente ha lo scopo di aiutarti a comprendere la segmentazione dello streaming. Mostra un esempio di esperienza del cliente seguita da una breve presentazione delle funzioni chiave nell&#39;interfaccia [!DNL Platform]. Per ulteriori informazioni sulla segmentazione dello streaming e su come eseguire la segmentazione dello streaming nell&#39;interfaccia utente, consulta la [guida dell&#39;interfaccia utente per la segmentazione dello streaming](../ui/streaming-segmentation.md).
 
-Se ti interessa la segmentazione in streaming utilizzando l’API di segmentazione, leggi la [guida dell’API per la segmentazione in streaming](../api/streaming-segmentation.md).
+Se ti interessa la segmentazione in streaming utilizzando l&#39;API di segmentazione, consulta la [guida dell&#39;API di segmentazione in streaming](../api/streaming-segmentation.md).
 
 >[!NOTE]
 >
->L’interfaccia utente di Experience Platform viene aggiornata frequentemente e potrebbe essere cambiata dopo la registrazione del video. Per informazioni aggiornate, fare riferimento al [guida dell’interfaccia utente per la segmentazione in streaming](../ui/streaming-segmentation.md).
+>L’interfaccia utente di Experience Platform viene aggiornata frequentemente e potrebbe essere cambiata dopo la registrazione del video. Per informazioni aggiornate, consulta la [guida dell&#39;interfaccia utente di segmentazione in streaming](../ui/streaming-segmentation.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/36184?quality=12&learn=on)

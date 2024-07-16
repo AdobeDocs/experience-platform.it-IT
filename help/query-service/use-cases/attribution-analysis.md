@@ -4,8 +4,8 @@ description: Questo documento spiega come utilizzare Query Service per creare un
 exl-id: d62cd349-06fc-4ce6-a5e8-978f11186927
 source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '1419'
-ht-degree: 1%
+source-wordcount: '1418'
+ht-degree: 0%
 
 ---
 
@@ -18,13 +18,13 @@ L’attribuzione è un concetto analitico che consente di determinare le tattich
 Gli esempi SQL in questo documento sono query comunemente utilizzate con i dati di Adobe Analytics. Questo tutorial richiede una buona conoscenza dei seguenti componenti:
 
 * [Connettore di origine di Adobe Analytics per la panoramica dei dati della suite di rapporti](../../sources/connectors/adobe-applications/mapping/analytics.md).
-* [Documentazione sulle mappature dei campi di Analytics](../../sources/connectors/adobe-applications/mapping/analytics.md) fornisce ulteriori informazioni sull’acquisizione e la mappatura dei dati analitici da utilizzare con Query Service.
-* [Panoramica di Attribution IQ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=it)
-* [Guida del pannello Attribuzione di Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html?lang=it).
+* [La documentazione sulle mappature dei campi di Analytics](../../sources/connectors/adobe-applications/mapping/analytics.md) fornisce ulteriori informazioni sull&#39;acquisizione e la mappatura dei dati analitici da utilizzare con Query Service.
+* [Panoramica dell&#39;Attribution IQ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)
+* [Guida del pannello Attribuzione di Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html).
 
-Una spiegazione dei parametri all&#39;interno del `OVER()` è disponibile nella sezione [sezione funzioni finestra](../sql/adobe-defined-functions.md#window-functions). Il [Glossario dei termini di Adobe Marketing and Commerce](https://business.adobe.com/glossary/index.html) può essere utile.
+Una spiegazione dei parametri all&#39;interno della funzione `OVER()` è disponibile nella sezione [funzioni finestra](../sql/adobe-defined-functions.md#window-functions). Anche il [Glossario dei termini di Adobe Marketing e Commerce](https://business.adobe.com/glossary/index.html) può essere utile.
 
-Per ciascuno dei seguenti casi d’uso, come modello da personalizzare viene fornito un esempio di query SQL con parametri. Fornisci i parametri ovunque ti trovi `{ }` negli esempi SQL che si desidera valutare.
+Per ciascuno dei seguenti casi d’uso, come modello da personalizzare viene fornito un esempio di query SQL con parametri. Fornire i parametri nei punti in cui sono visualizzati `{ }` negli esempi SQL che si è interessati a valutare.
 
 ## Obiettivi
 
@@ -47,40 +47,40 @@ La tabella seguente fornisce una suddivisione dei parametri e delle relative des
 | `{CHANNEL_VALUE}` | Colonna o campo che rappresenta il canale di destinazione della query. |
 | `{EXP_TIMEOUT}` | Finestra di tempo precedente all’evento del canale, in secondi, in cui la query cerca un evento di primo contatto. |
 | `{EXP_CONDITION}` | La condizione che determina il punto di scadenza del canale. |
-| `{EXP_BEFORE}` | Valore booleano che indica se il canale scade prima o dopo la condizione specificata. `{EXP_CONDITION}`, è soddisfatto. Questa opzione è abilitata principalmente per le condizioni di scadenza di una sessione, per garantire che il primo contatto non sia selezionato da una sessione precedente. Per impostazione predefinita, questo valore è impostato su `false`. |
+| `{EXP_BEFORE}` | Valore booleano che indica se il canale scade prima o dopo il verificarsi della condizione specificata `{EXP_CONDITION}`. Questa opzione è abilitata principalmente per le condizioni di scadenza di una sessione, per garantire che il primo contatto non sia selezionato da una sessione precedente. Per impostazione predefinita, questo valore è impostato su `false`. |
 
 ## Componenti colonna risultati query {#query-result-column-components}
 
-I risultati delle query di attribuzione sono forniti nel `first_touch` o `last_touch` colonna. Queste colonne sono costituite dai seguenti componenti:
+I risultati delle query di attribuzione sono forniti nella colonna `first_touch` o nella colonna `last_touch`. Queste colonne sono costituite dai seguenti componenti:
 
 ```console
 ({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
 ```
 
-| Parametri | Descrizione |
+| Elemento “parameters” | Descrizione |
 | ---------- | ----------- |
-| `{NAME}` | Il `{CHANNEL_NAME}`, immesso come etichetta in Azure Data Factory (ADF). |
-| `{VALUE}` | Il valore da `{CHANNEL_VALUE}` questo è l’ultimo contatto all’interno del `{EXP_TIMEOUT}` intervallo |
-| `{TIMESTAMP}` | Il timestamp del [!DNL Experience Event] dove si è verificato l’ultimo contatto |
+| `{NAME}` | `{CHANNEL_NAME}`, immesso come etichetta in Azure Data Factory (ADF). |
+| `{VALUE}` | Valore di `{CHANNEL_VALUE}` che rappresenta l&#39;ultimo contatto nell&#39;intervallo `{EXP_TIMEOUT}` specificato |
+| `{TIMESTAMP}` | Il timestamp di [!DNL Experience Event] in cui si è verificato l&#39;ultimo contatto |
 | `{FRACTION}` | Attribuzione dell’ultimo contatto, espressa come frazione decimale. |
 
 ### Attribuzione del primo contatto {#first-touch}
 
 L’attribuzione del primo contatto attribuisce il 100% della responsabilità per un esito positivo al canale iniziale incontrato dal consumatore. Questo esempio SQL viene utilizzato per evidenziare l’interazione che ha portato a una serie successiva di azioni del cliente.
 
-La query seguente restituisce il valore di attribuzione del primo contatto e i dettagli del canale nel target [!DNL Experience Event] set di dati. Inoltre, restituisce un `struct` oggetto per il canale selezionato con il valore di primo contatto, la marca temporale e l’attribuzione per ogni riga.
+La query seguente restituisce il valore di attribuzione del primo contatto e i dettagli del canale nel set di dati di destinazione [!DNL Experience Event]. Inoltre, restituisce un oggetto `struct` per il canale selezionato con il valore di primo contatto, la marca temporale e l&#39;attribuzione per ogni riga.
 
 >[!NOTE]
 >
 >L’ID Experience Cloud (ECID) è noto anche come MCID e continua a essere utilizzato nei namespace.
 
-**Sintassi della query**
+**Sintassi query**
 
 ```sql
 ATTRIBUTION_FIRST_TOUCH({TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}) OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-Per un elenco completo dei parametri potenzialmente richiesti e delle relative descrizioni, vedere [sezione parametri query di attribuzione](#attribution-query-parameters).
+Per un elenco completo dei parametri potenzialmente richiesti e delle relative descrizioni, vedere la sezione [Parametri query di attribuzione](#attribution-query-parameters).
 
 **Query di esempio**
 
@@ -98,7 +98,7 @@ LIMIT 10
 
 **Risultati**
 
-Nei risultati seguenti, il codice di tracciamento iniziale `em:946426` è tratto da [!DNL Experience Event] set di dati. Questo codice di tracciamento è attribuito al 100% (`1.0`) della responsabilità per le azioni del cliente, perché è stata la prima interazione.
+Nei risultati seguenti, il codice di tracciamento iniziale `em:946426` proviene dal set di dati [!DNL Experience Event]. Questo codice di tracciamento è attribuito con il 100% (`1.0`) della responsabilità per le azioni del cliente perché è stata la prima interazione.
 
 ```console
                  id                 |       timestamp       | trackingCode |                   first_touch                   
@@ -116,15 +116,15 @@ Nei risultati seguenti, il codice di tracciamento iniziale `em:946426` è tratto
 (10 rows)
 ```
 
-Per una suddivisione dei risultati visualizzati nel `first_touch` , vedere la [sezione dei componenti colonna](#query-result-column-components).
+Per una suddivisione dei risultati visualizzati nella colonna `first_touch`, vedere la [sezione dei componenti colonna](#query-result-column-components).
 
 ### Attribuzione ultimo contatto {#second-touch}
 
 L’attribuzione dell’ultimo contatto attribuisce il 100% della responsabilità per un esito positivo all’ultimo canale incontrato dal consumatore. Questo esempio SQL viene utilizzato per evidenziare l’interazione finale in una serie di azioni del cliente.
 
-La query restituisce il valore di attribuzione dell’ultimo contatto e i dettagli del canale nel target [!DNL Experience Event] set di dati. Inoltre, restituisce un `struct` oggetto per il canale selezionato con il valore dell’ultimo contatto, la marca temporale e l’attribuzione per ogni riga.
+La query restituisce il valore di attribuzione ultimo contatto e i dettagli del canale nel set di dati di destinazione [!DNL Experience Event]. Inoltre, restituisce un oggetto `struct` per il canale selezionato con il valore dell&#39;ultimo contatto, la marca temporale e l&#39;attribuzione per ogni riga.
 
-**Sintassi della query**
+**Sintassi query**
 
 ```sql
 ATTRIBUTION_LAST_TOUCH({TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}) OVER ({PARTITION} {ORDER} {FRAME})
@@ -145,7 +145,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 **Risultati**
 
-Nei risultati visualizzati di seguito, il codice di tracciamento nell’oggetto restituito è l’ultima interazione in ogni [!DNL Experience Event] record. A ciascun codice è attribuito il 100% (`1.0`) la responsabilità per le azioni del cliente, in quanto si trattava dell’ultima interazione.
+Nei risultati visualizzati di seguito, il codice di tracciamento nell&#39;oggetto restituito è l&#39;ultima interazione in ogni record [!DNL Experience Event]. A ciascun codice viene attribuita la responsabilità 100% (`1.0`) per le azioni del cliente, in quanto si trattava dell&#39;ultima interazione.
 
 ```console
                  id                |       timestamp       | trackingCode |                   last_touch                   
@@ -163,15 +163,15 @@ Nei risultati visualizzati di seguito, il codice di tracciamento nell’oggetto 
 (10 rows)
 ```
 
-Per una suddivisione dei risultati visualizzati nel `last_touch` , vedere la [sezione dei componenti colonna](#query-result-column-components).
+Per una suddivisione dei risultati visualizzati nella colonna `last_touch`, vedere la [sezione dei componenti colonna](#query-result-column-components).
 
 ### Attribuzione del primo contatto con condizione di scadenza {#first-touch-attribution-with-expiration-condition}
 
-Questa query viene utilizzata per vedere quale interazione ha portato a una serie di azioni del cliente all’interno di una parte del [!DNL Experience Event] set di dati determinato da una condizione scelta.
+Questa query viene utilizzata per vedere quale interazione ha portato a una serie di azioni del cliente all&#39;interno di una parte del set di dati [!DNL Experience Event] determinata da una condizione scelta.
 
-La query restituisce il valore di attribuzione del primo contatto e i dettagli per un singolo canale nella destinazione [!DNL Experience Event] set di dati, con scadenza dopo o prima di una condizione. Inoltre, restituisce un `struct` oggetto con il valore di primo contatto, la marca temporale e l’attribuzione per ogni riga restituita per il canale selezionato.
+La query restituisce il valore di attribuzione del primo contatto e i dettagli per un singolo canale nel set di dati di destinazione [!DNL Experience Event], con scadenza dopo o prima di una condizione. Inoltre, restituisce un oggetto `struct` con il valore di primo contatto, la marca temporale e l&#39;attribuzione per ogni riga restituita per il canale selezionato.
 
-**Sintassi della query**
+**Sintassi query**
 
 ```sql
 ATTRIBUTION_FIRST_TOUCH_EXP_IF(
@@ -179,11 +179,11 @@ ATTRIBUTION_FIRST_TOUCH_EXP_IF(
     OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-Per un elenco completo dei parametri potenzialmente richiesti e delle relative descrizioni, vedere [sezione parametri query di attribuzione](#attribution-query-parameters).
+Per un elenco completo dei parametri potenzialmente richiesti e delle relative descrizioni, vedere la sezione [Parametri query di attribuzione](#attribution-query-parameters).
 
 **Query di esempio**
 
-Nell’esempio riportato di seguito, viene registrato un acquisto (`commerce.purchases.value IS NOT NULL`) in ciascuno dei quattro giorni indicati nei risultati (15, 21, 23 e 29 luglio) e il codice di tracciamento iniziale per ogni giorno è attribuito al 100% (`1.0`) responsabilità per le azioni del cliente.
+Nell&#39;esempio riportato di seguito, viene registrato un acquisto (`commerce.purchases.value IS NOT NULL`) in ciascuno dei quattro giorni visualizzati nei risultati (15, 21, 23 e 29 luglio) e al codice di tracciamento iniziale in ogni giorno viene attribuita la responsabilità del 100% (`1.0`) per le azioni del cliente.
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -214,15 +214,15 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-Per una suddivisione dei risultati visualizzati nel `first_touch` , vedere la [sezione dei componenti colonna](#query-result-column-components).
+Per una suddivisione dei risultati visualizzati nella colonna `first_touch`, vedere la [sezione dei componenti colonna](#query-result-column-components).
 
 ### Attribuzione del primo contatto con timeout di scadenza {#first-touch-attribution-with-expiration-timeout}
 
 Questa query viene utilizzata per trovare l’interazione, entro un periodo di tempo selezionato, che ha portato all’azione del cliente riuscita.
 
-La query seguente restituisce il valore di attribuzione del primo contatto e i dettagli per un singolo canale nel target [!DNL Experience Event] set di dati per un periodo di tempo specificato. La query restituisce un `struct` oggetto con il valore di primo contatto, la marca temporale e l’attribuzione per ogni riga restituita per il canale selezionato.
+La query seguente restituisce il valore di attribuzione del primo contatto e i dettagli per un singolo canale nel set di dati di destinazione [!DNL Experience Event] per un periodo di tempo specificato. La query restituisce un oggetto `struct` con il valore di primo contatto, la marca temporale e l&#39;attribuzione per ogni riga restituita per il canale selezionato.
 
-**Sintassi della query**
+**Sintassi query**
 
 ```sql
 ATTRIBUTION_FIRST_TOUCH_EXP_IF(
@@ -230,7 +230,7 @@ ATTRIBUTION_FIRST_TOUCH_EXP_IF(
     OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-Per un elenco completo dei parametri potenzialmente richiesti e delle relative descrizioni, vedere [sezione parametri query di attribuzione](#attribution-query-parameters).
+Per un elenco completo dei parametri potenzialmente richiesti e delle relative descrizioni, vedere la sezione [Parametri query di attribuzione](#attribution-query-parameters).
 
 **Query di esempio**
 
@@ -265,15 +265,15 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-Per una suddivisione dei risultati visualizzati nel `first_touch` , vedere la [sezione dei componenti colonna](#query-result-column-components).
+Per una suddivisione dei risultati visualizzati nella colonna `first_touch`, vedere la [sezione dei componenti colonna](#query-result-column-components).
 
 ### Attribuzione ultimo contatto con condizione di scadenza {#last-touch-attribution-with-expiration-condition}
 
-Questa query viene utilizzata per trovare l’ultima interazione in una serie di azioni del cliente all’interno di una parte del [!DNL Experience Event] set di dati determinato da una condizione scelta.
+Questa query viene utilizzata per trovare l&#39;ultima interazione in una serie di azioni del cliente all&#39;interno di una parte del set di dati [!DNL Experience Event] determinata da una condizione scelta.
 
-La query seguente restituisce il valore di attribuzione dell’ultimo contatto e i dettagli per un singolo canale nella destinazione [!DNL Experience Event] set di dati, con scadenza dopo o prima di una condizione. La query restituisce un `struct` oggetto con il valore dell’ultimo contatto, la marca temporale e l’attribuzione per ogni riga restituita per il canale selezionato.
+La query seguente restituisce il valore di attribuzione dell&#39;ultimo contatto e i dettagli per un singolo canale nel set di dati di destinazione [!DNL Experience Event], con scadenza dopo o prima di una condizione. La query restituisce un oggetto `struct` con l&#39;ultimo valore di contatto, la marca temporale e l&#39;attribuzione per ogni riga restituita per il canale selezionato.
 
-**Sintassi della query**
+**Sintassi query**
 
 ```sql
 ATTRIBUTION_LAST_TOUCH_EXP_IF(
@@ -281,11 +281,11 @@ ATTRIBUTION_LAST_TOUCH_EXP_IF(
     OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-Per un elenco completo dei parametri potenzialmente richiesti e delle relative descrizioni, vedere [sezione parametri query di attribuzione](#attribution-query-parameters).
+Per un elenco completo dei parametri potenzialmente richiesti e delle relative descrizioni, vedere la sezione [Parametri query di attribuzione](#attribution-query-parameters).
 
 **Query di esempio**
 
-Nell’esempio riportato di seguito, viene registrato un acquisto (`commerce.purchases.value IS NOT NULL`) in ciascuno dei quattro giorni indicati nei risultati (15, 21, 23 e 29 luglio) e all&#39;ultimo codice di tracciamento per ogni giorno è attribuito il 100% (`1.0`) responsabilità per le azioni del cliente.
+Nell&#39;esempio riportato di seguito, viene registrato un acquisto (`commerce.purchases.value IS NOT NULL`) in ciascuno dei quattro giorni visualizzati nei risultati (15, 21, 23 e 29 luglio) e all&#39;ultimo codice di tracciamento di ogni giorno viene attribuita la responsabilità del 100% (`1.0`) per le azioni del cliente.
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -298,7 +298,7 @@ FROM experience_events
 ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
-**Esempio di risultati**
+**Risultati di esempio**
 
 ```console
                 id                 |       timestamp       | trackingCode |                   last_touch                   
@@ -316,13 +316,13 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-Per una suddivisione dei risultati visualizzati nel `last_touch` , vedere la [sezione dei componenti colonna](#query-result-column-components).
+Per una suddivisione dei risultati visualizzati nella colonna `last_touch`, vedere la [sezione dei componenti colonna](#query-result-column-components).
 
 ### Attribuzione ultimo contatto con timeout di scadenza {#last-touch-attribution-with-expiration-timeout}
 
-Questa query viene utilizzata per trovare l’ultima interazione entro un intervallo di tempo selezionato. La query restituisce il valore di attribuzione dell’ultimo contatto e i dettagli per un singolo canale nella destinazione [!DNL Experience Event] set di dati per un periodo di tempo specificato. La query restituisce un `struct` oggetto con il valore dell’ultimo contatto, la marca temporale e l’attribuzione per ogni riga restituita per il canale selezionato.
+Questa query viene utilizzata per trovare l’ultima interazione entro un intervallo di tempo selezionato. La query restituisce il valore di attribuzione ultimo contatto e i dettagli per un singolo canale nel set di dati di destinazione [!DNL Experience Event] per un periodo di tempo specificato. La query restituisce un oggetto `struct` con l&#39;ultimo valore di contatto, la marca temporale e l&#39;attribuzione per ogni riga restituita per il canale selezionato.
 
-**Sintassi della query**
+**Sintassi query**
 
 ```sql
 ATTRIBUTION_LAST_TOUCH_EXP_TIMEOUT(
@@ -330,11 +330,11 @@ ATTRIBUTION_LAST_TOUCH_EXP_TIMEOUT(
     OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-Per un elenco completo dei parametri potenzialmente richiesti e delle relative descrizioni, vedere [sezione parametri query di attribuzione](#attribution-query-parameters).
+Per un elenco completo dei parametri potenzialmente richiesti e delle relative descrizioni, vedere la sezione [Parametri query di attribuzione](#attribution-query-parameters).
 
 **Query di esempio**
 
-Nell’esempio mostrato di seguito, l’ultimo contatto restituito per ogni azione del cliente è l’interazione finale entro i sette giorni successivi (`expTimeout = 86400 * 7`).
+Nell&#39;esempio riportato di seguito, l&#39;ultimo contatto restituito per ogni azione del cliente è l&#39;interazione finale entro i sette giorni successivi (`expTimeout = 86400 * 7`).
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -365,4 +365,4 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-Per una suddivisione dei risultati visualizzati nel `last_touch` , vedere la [sezione dei componenti colonna](#query-result-column-components).
+Per una suddivisione dei risultati visualizzati nella colonna `last_touch`, vedere la [sezione dei componenti colonna](#query-result-column-components).

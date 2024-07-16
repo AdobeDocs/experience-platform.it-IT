@@ -18,15 +18,15 @@ ht-degree: 4%
 >
 >Se viene passato un token utente, l’utente del token deve avere un ruolo &quot;amministratore organizzazione&quot; per l’organizzazione richiesta.
 
-Il `/products` L’endpoint nell’API di controllo degli accessi basata su attributi consente di gestire in modo programmatico prodotti, categorie di autorizzazioni e set di autorizzazioni associati ai prodotti dell’organizzazione.
+L&#39;endpoint `/products` nell&#39;API di controllo degli accessi basata su attributi consente di gestire in modo programmatico prodotti, categorie di autorizzazioni e set di autorizzazioni associati ai prodotti dell&#39;organizzazione.
 
 ## Introduzione
 
-L’endpoint API utilizzato in questa guida fa parte dell’API di controllo degli accessi basata su attributi. Prima di continuare, controlla [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida per la lettura delle chiamate API di esempio di questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experienci Platform.
+L’endpoint API utilizzato in questa guida fa parte dell’API di controllo degli accessi basata su attributi. Prima di continuare, consulta la [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e per le informazioni importanti sulle intestazioni necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
 
 ## Recuperare un elenco di prodotti autorizzati {#list}
 
-Per recuperare un elenco di prodotti autorizzati, devi effettuare una richiesta GET al `/products` endpoint.
+È possibile recuperare un elenco di prodotti autorizzati effettuando una richiesta GET all&#39;endpoint `/products`.
 
 **Formato API**
 
@@ -70,7 +70,7 @@ In caso di esito positivo, la risposta restituisce un elenco di prodotti autoriz
 
 ## Cercare categorie di autorizzazioni per ID prodotto
 
-Per cercare le categorie di autorizzazione per un determinato prodotto, devi effettuare una richiesta GET al `/products/{PRODUCT_ID}/categories` endpoint durante la specifica dell&#39;ID prodotto.
+Per cercare le categorie di autorizzazione per un determinato prodotto, è possibile effettuare una richiesta di GET all&#39;endpoint `/products/{PRODUCT_ID}/categories` specificando l&#39;ID prodotto.
 
 **Formato API**
 
@@ -145,7 +145,7 @@ In caso di esito positivo, la risposta restituisce le categorie di autorizzazion
 
 ## Cercare i set di autorizzazioni per ID prodotto
 
-Per cercare i set di autorizzazioni per un determinato prodotto, devi effettuare una richiesta GET al `/products/{PRODUCT_ID}/permission-sets` endpoint durante la specifica dell&#39;ID prodotto.
+Per cercare i set di autorizzazioni per un determinato prodotto, è possibile effettuare una richiesta di GET all&#39;endpoint `/products/{PRODUCT_ID}/permission-sets` specificando l&#39;ID prodotto.
 
 **Formato API**
 
@@ -242,4 +242,4 @@ In caso di esito positivo, la risposta restituisce i set di autorizzazioni assoc
 | `category` | La categoria di autorizzazioni disponibile. |
 | `permissions` | Le autorizzazioni includono la possibilità di visualizzare e/o utilizzare le funzioni di Platform, ad esempio la creazione di sandbox, la definizione di schemi e la gestione di set di dati. |
 | `permissions.resource` | La risorsa o l&#39;oggetto a cui un soggetto può o non può accedere. Le risorse possono essere file, applicazioni, server o anche API. |
-| `permissions.actions` | Azione consentita a un oggetto per una risorsa su cui è stata eseguita una query. I valori possibili includono: `view`, `read`, `create`, `edit`, e `delete` |
+| `permissions.actions` | Azione consentita a un oggetto per una risorsa su cui è stata eseguita una query. I valori possibili includono: `view`, `read`, `create`, `edit` e `delete` |

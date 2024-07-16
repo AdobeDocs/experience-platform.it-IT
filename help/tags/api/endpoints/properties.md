@@ -4,7 +4,7 @@ description: Scopri come effettuare chiamate all’endpoint /properties nell’A
 exl-id: 7830c519-312f-4f73-b3f5-64ab0420d902
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1103'
+source-wordcount: '1100'
 ht-degree: 98%
 
 ---

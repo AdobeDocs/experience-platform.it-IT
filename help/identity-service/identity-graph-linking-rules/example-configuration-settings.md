@@ -44,7 +44,7 @@ Eventi:
 
 * ID CRM: Tom, Email_LC_SHA256: tom<span>@acme.com
 * ID CRM: Tom, ECID: 111
-* CRM ID: Summer, Email_LC_SHA256: summer<span>@acme.com
+* ID CRM: Summer, Email_LC_SHA256: summer<span>@acme.com
 * CRM ID: Summer, ECID: 222
 
 Configurazione algoritmo:

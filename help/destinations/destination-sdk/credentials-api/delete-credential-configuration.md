@@ -4,8 +4,8 @@ title: Eliminare una configurazione di credenziali
 exl-id: a540e349-043c-4f04-8ca8-f650b9943492
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '395'
-ht-degree: 2%
+source-wordcount: '396'
+ht-degree: 1%
 
 ---
 
@@ -15,33 +15,33 @@ ht-degree: 2%
 >
 >**Endpoint API**: `platform.adobe.io/data/core/activation/authoring/credentials`
 
-Questa pagina esemplifica la richiesta API e il payload che è possibile utilizzare per eliminare una configurazione di credenziali utilizzando `/authoring/credentials` Endpoint API
+Questa pagina illustra la richiesta API e il payload che è possibile utilizzare per eliminare una configurazione di credenziali utilizzando l&#39;endpoint API `/authoring/credentials`.
 
-## Quando utilizzare il `/credentials` Endpoint API {#when-to-use}
+## Quando utilizzare l&#39;endpoint API `/credentials` {#when-to-use}
 
 >[!IMPORTANT]
 >
->Nella maggior parte dei casi, ***non*** devono utilizzare `/credentials` Endpoint API È invece possibile configurare le informazioni di autenticazione per la destinazione tramite `customerAuthenticationConfigurations` parametri di `/destinations` endpoint.
+>Nella maggior parte dei casi, ***non*** deve utilizzare l&#39;endpoint API `/credentials`. È invece possibile configurare le informazioni di autenticazione per la destinazione tramite i parametri `customerAuthenticationConfigurations` dell&#39;endpoint `/destinations`.
 > 
->Letto [Configurazione autenticazione cliente](../functionality/destination-configuration/customer-authentication.md) per informazioni dettagliate sui tipi di autenticazione supportati.
+>Leggi [Configurazione autenticazione cliente](../functionality/destination-configuration/customer-authentication.md) per informazioni dettagliate sui tipi di autenticazione supportati.
 
-Utilizzare questo endpoint API per creare una configurazione di credenziali solo se esiste un sistema di autenticazione globale tra Adobe e la piattaforma di destinazione e [!DNL Platform] Il cliente non deve fornire credenziali di autenticazione per connettersi alla destinazione. In questo caso, è necessario creare una configurazione delle credenziali utilizzando `/credentials` Endpoint API
+Utilizzare questo endpoint API per creare una configurazione di credenziali solo se è presente un sistema di autenticazione globale tra Adobe e la piattaforma di destinazione e il cliente [!DNL Platform] non deve fornire credenziali di autenticazione per connettersi alla destinazione. In questo caso, è necessario creare una configurazione delle credenziali utilizzando l&#39;endpoint API `/credentials`.
 
-Quando si utilizza un sistema di autenticazione globale, è necessario impostare `"authenticationRule":"PLATFORM_AUTHENTICATION"` nel [consegna di destinazione](../functionality/destination-configuration/destination-delivery.md) configurazione, quando [creazione di una nuova configurazione di destinazione](../authoring-api/destination-configuration/create-destination-configuration.md).
+Quando si utilizza un sistema di autenticazione globale, è necessario impostare `"authenticationRule":"PLATFORM_AUTHENTICATION"` nella configurazione [consegna di destinazione](../functionality/destination-configuration/destination-delivery.md), durante la [creazione di una nuova configurazione di destinazione](../authoring-api/destination-configuration/create-destination-configuration.md).
 
 >[!IMPORTANT]
 >
->Tutti i nomi e i valori dei parametri supportati da Destination SDK sono **distinzione maiuscole/minuscole**. Per evitare errori di distinzione tra maiuscole e minuscole, utilizza i nomi e i valori dei parametri esattamente come mostrato nella documentazione.
+>Tutti i nomi e i valori dei parametri supportati da Destination SDK sono **con distinzione tra maiuscole e minuscole**. Per evitare errori di distinzione tra maiuscole e minuscole, utilizza i nomi e i valori dei parametri esattamente come mostrato nella documentazione.
 
 ## Guida introduttiva alle operazioni API per le credenziali {#get-started}
 
-Prima di continuare, controlla [guida introduttiva](../getting-started.md) per informazioni importanti che è necessario conoscere per effettuare correttamente chiamate all’API, tra cui come ottenere l’autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
+Prima di continuare, consulta la [guida introduttiva](../getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
 
 ## Eliminare una configurazione di credenziali {#delete}
 
-È possibile eliminare un [esistente](create-credential-configuration.md) configurazione delle credenziali effettuando una `DELETE` richiesta al `/authoring/credentials` endpoint con `{INSTANCE_ID}`della configurazione delle credenziali che si desidera eliminare.
+È possibile eliminare una configurazione di credenziali [esistente](create-credential-configuration.md) effettuando una richiesta `DELETE` all&#39;endpoint `/authoring/credentials` con `{INSTANCE_ID}` della configurazione di credenziali che si desidera eliminare.
 
-Per ottenere una configurazione di destinazione esistente e la corrispondente `{INSTANCE_ID}`, consulta l’articolo su [recupero di una configurazione di credenziali](retrieve-credential-configuration.md).
+Per ottenere una configurazione di destinazione esistente e i corrispondenti `{INSTANCE_ID}`, vedere l&#39;articolo relativo al [recupero di una configurazione delle credenziali](retrieve-credential-configuration.md).
 
 **Formato API**
 
@@ -51,9 +51,9 @@ DELETE /authoring/credentials/{INSTANCE_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{INSTANCE_ID}` | Il `ID` della configurazione delle credenziali che si desidera eliminare. |
+| `{INSTANCE_ID}` | `ID` della configurazione delle credenziali da eliminare. |
 
-La richiesta seguente elimina una configurazione di credenziali definita da `{INSTANCE_ID}` parametro.
+La richiesta seguente elimina una configurazione di credenziali definita dal parametro `{INSTANCE_ID}`.
 
 +++Richiesta
 
@@ -75,8 +75,8 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 insieme a u
 
 ## Gestione degli errori API {#error-handling}
 
-Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Fai riferimento a [Codici di stato API](../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
+Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
 
 ## Passaggi successivi {#next-steps}
 
-Dopo aver letto questo documento, ora sai come eliminare una configurazione di credenziali utilizzando `/authoring/credentials` Endpoint API Letto [come utilizzare Destination SDK per configurare la destinazione](../guides/configure-destination-instructions.md) per capire in che modo questo passaggio si inserisce nel processo di configurazione della destinazione.
+Dopo aver letto questo documento, ora sai come eliminare una configurazione di credenziali utilizzando l&#39;endpoint API `/authoring/credentials`. Leggi [come utilizzare Destination SDK per configurare la destinazione](../guides/configure-destination-instructions.md) per capire in che modo questo passaggio si inserisce nel processo di configurazione della destinazione.

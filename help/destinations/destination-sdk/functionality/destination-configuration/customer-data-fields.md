@@ -1,5 +1,5 @@
 ---
-description: Scopri come creare campi di input nell’interfaccia utente di Experienci Platform, che consentono agli utenti di specificare varie informazioni rilevanti per la connessione e l’esportazione di dati nella destinazione.
+description: Scopri come creare campi di input nell’interfaccia utente di Experience Platform, che consentono agli utenti di specificare varie informazioni rilevanti per la connessione e l’esportazione di dati nella destinazione.
 title: Campi dati cliente
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
 source-git-commit: b35f584d13fb241c06b4045b525d84775ef8317c
@@ -11,32 +11,32 @@ ht-degree: 1%
 
 # Configurare l’input dell’utente tramite i campi dati del cliente
 
-Quando ti connetti alla destinazione nell’interfaccia utente di Experienci Platform, potrebbe essere necessario che gli utenti forniscano dettagli di configurazione specifici o selezionino le opzioni specifiche che rendi disponibili. In Destination SDK, queste opzioni sono denominate campi dati del cliente.
+Quando ti connetti alla destinazione nell’interfaccia utente di Experience Platform, potrebbe essere necessario che gli utenti forniscano dettagli di configurazione specifici o selezionino le opzioni specifiche che rendi disponibili. In Destination SDK, queste opzioni sono denominate campi dati del cliente.
 
-Per capire dove questo componente si inserisce in un’integrazione creata con Destination SDK, consulta il diagramma riportato di seguito. [opzioni di configurazione](../configuration-options.md) oppure consulta le seguenti pagine di panoramica sulla configurazione di destinazione:
+Per capire dove questo componente si inserisce in un&#39;integrazione creata con Destination SDK, consulta il diagramma nella documentazione delle [opzioni di configurazione](../configuration-options.md) oppure vedi le seguenti pagine di panoramica sulla configurazione di destinazione:
 
 * [Utilizzare Destination SDK per configurare una destinazione di streaming](../../guides/configure-destination-instructions.md#create-destination-configuration)
 * [Utilizzare Destination SDK per configurare una destinazione basata su file](../../guides/configure-file-based-destination-instructions.md#create-destination-configuration)
 
 ## Casi d’uso per i campi dati cliente {#use-cases}
 
-Utilizza i campi dati del cliente per diversi casi d’uso in cui gli utenti devono inserire dati nell’interfaccia utente di Experienci Platform. Ad esempio, utilizza i campi dati del cliente quando gli utenti devono fornire:
+Utilizza i campi dati del cliente per diversi casi d’uso in cui gli utenti devono inserire dati nell’interfaccia utente di Experience Platform. Ad esempio, utilizza i campi dati del cliente quando gli utenti devono fornire:
 
 * Nomi e percorsi dei bucket di archiviazione cloud, per destinazioni basate su file.
 * Il formato accettato dai campi dati del cliente.
 * Tipi di compressione file disponibili selezionabili dagli utenti.
 * Elenchi degli endpoint disponibili per integrazioni in tempo reale (streaming).
 
-Puoi configurare i campi dati del cliente tramite `/authoring/destinations` endpoint. Consulta le seguenti pagine di riferimento API per esempi dettagliati di chiamate API, in cui puoi configurare i componenti mostrati in questa pagina.
+È possibile configurare i campi dati del cliente tramite l&#39;endpoint `/authoring/destinations`. Consulta le seguenti pagine di riferimento API per esempi dettagliati di chiamate API, in cui puoi configurare i componenti mostrati in questa pagina.
 
 * [Creare una configurazione di destinazione](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [Aggiornare una configurazione di destinazione](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-Questo articolo descrive tutti i tipi di configurazione dei campi dati cliente supportati che è possibile utilizzare per la destinazione e mostra cosa vedranno i clienti nell’interfaccia utente di Experienci Platform.
+Questo articolo descrive tutti i tipi di configurazione dei campi dati cliente supportati che è possibile utilizzare per la destinazione e mostra cosa vedranno i clienti nell’interfaccia utente di Experience Platform.
 
 >[!IMPORTANT]
 >
->Tutti i nomi e i valori dei parametri supportati da Destination SDK sono **distinzione maiuscole/minuscole**. Per evitare errori di distinzione tra maiuscole e minuscole, utilizza i nomi e i valori dei parametri esattamente come mostrato nella documentazione.
+>Tutti i nomi e i valori dei parametri supportati da Destination SDK sono **con distinzione tra maiuscole e minuscole**. Per evitare errori di distinzione tra maiuscole e minuscole, utilizza i nomi e i valori dei parametri esattamente come mostrato nella documentazione.
 
 ## Tipi di integrazione supportati {#supported-integration-types}
 
@@ -53,24 +53,24 @@ Quando crei campi dati del cliente personalizzati, puoi utilizzare i parametri d
 
 | Parametro | Tipo | Obbligatorio/facoltativo | Descrizione |
 |---------|----------|------|---|
-| `name` | Stringa | Obbligatorio | Immetti un nome per il campo personalizzato che stai presentando. Questo nome è visibile nell’interfaccia utente di Platform solo se `title` campo vuoto o mancante. |
+| `name` | Stringa | Obbligatorio | Immetti un nome per il campo personalizzato che stai presentando. Questo nome non è visibile nell&#39;interfaccia utente di Platform, a meno che il campo `title` non sia vuoto o mancante. |
 | `type` | Stringa | Obbligatorio | Indica il tipo di campo personalizzato che si sta introducendo. Valori accettati: <ul><li>`string`</li><li>`object`</li><li>`integer`</li></ul> |
-| `title` | Stringa | Facoltativo | Indica il nome del campo, così come viene visualizzato dai clienti nell’interfaccia utente di Platform. Se questo campo è vuoto o mancante, l’interfaccia utente eredita il nome del campo da `name` valore. |
+| `title` | Stringa | Facoltativo | Indica il nome del campo, così come viene visualizzato dai clienti nell’interfaccia utente di Platform. Se questo campo è vuoto o mancante, l&#39;interfaccia utente eredita il nome del campo dal valore `name`. |
 | `description` | Stringa | Facoltativo | Fornisci una descrizione per il campo personalizzato. Questa descrizione non è visibile nell’interfaccia utente di Platform. |
 | `isRequired` | Booleano | Facoltativo | Indica se gli utenti devono fornire un valore per questo campo nel flusso di lavoro di configurazione di destinazione. |
 | `pattern` | Stringa | Facoltativo | Se necessario, applica un pattern per il campo personalizzato. Utilizza espressioni regolari per applicare un pattern. Ad esempio, se gli ID cliente non includono numeri o trattini bassi, immetti `^[A-Za-z]+$` in questo campo. |
 | `enum` | Stringa | Facoltativo | Esegue il rendering del campo personalizzato come menu a discesa ed elenca le opzioni disponibili per l&#39;utente. |
-| `default` | Stringa | Facoltativo | Definisce il valore predefinito da un `enum` elenco. |
+| `default` | Stringa | Facoltativo | Definisce il valore predefinito da un elenco `enum`. |
 | `hidden` | Booleano | Facoltativo | Indica se il campo dati del cliente viene visualizzato o meno nell’interfaccia utente. |
-| `unique` | Booleano | Facoltativo | Utilizza questo parametro quando devi creare un campo dati cliente il cui valore deve essere univoco in tutti i flussi di dati di destinazione impostati dall’organizzazione di un utente. Ad esempio, il **[!UICONTROL Alias di integrazione]** campo in [Personalizzazione personalizzata](../../../catalog/personalization/custom-personalization.md) la destinazione deve essere univoca, il che significa che due flussi di dati separati verso questa destinazione non possono avere lo stesso valore per questo campo. |
+| `unique` | Booleano | Facoltativo | Utilizza questo parametro quando devi creare un campo dati cliente il cui valore deve essere univoco in tutti i flussi di dati di destinazione impostati dall’organizzazione di un utente. Ad esempio, il campo **[!UICONTROL Alias integrazione]** nella destinazione [Personalization](../../../catalog/personalization/custom-personalization.md) personalizzata deve essere univoco, il che significa che due flussi di dati separati per questa destinazione non possono avere lo stesso valore per questo campo. |
 | `readOnly` | Booleano | Facoltativo | Indica se il cliente può modificare il valore del campo. |
 
 {style="table-layout:auto"}
 
-Nell’esempio seguente, il `customerDataFields` Questa sezione definisce due campi che gli utenti devono inserire nell’interfaccia utente di Platform quando si connettono alla destinazione:
+Nell’esempio seguente, la sezione `customerDataFields` definisce due campi che gli utenti devono inserire nell’interfaccia utente di Platform per connettersi alla destinazione:
 
-* `Account ID`: ID account utente per la piattaforma di destinazione.
-* `Endpoint region`: endpoint regionale dell’API a cui si connetteranno. Il `enum` sezione crea un menu a discesa con i valori definiti in disponibile per la selezione da parte degli utenti.
+* `Account ID`: un ID account utente per la piattaforma di destinazione.
+* `Endpoint region`: l&#39;endpoint regionale dell&#39;API a cui si connetteranno. La sezione `enum` crea un menu a discesa con i valori definiti in disponibili per la selezione da parte degli utenti.
 
 ```json
 "customerDataFields":[
@@ -99,21 +99,21 @@ Nell’esempio seguente, il `customerDataFields` Questa sezione definisce due ca
 
 L’esperienza dell’interfaccia utente risultante è illustrata nell’immagine seguente.
 
-![Immagine dell’interfaccia utente con un esempio di campi dati del cliente.](../../assets/functionality/destination-configuration/customer-data-fields-example.png)
+![Immagine dell&#39;interfaccia utente con un esempio di campi dati del cliente.](../../assets/functionality/destination-configuration/customer-data-fields-example.png)
 
 ## Nomi e descrizioni delle connessioni di destinazione {#names-description}
 
-Durante la creazione di una nuova destinazione, Destination SDK aggiunge automaticamente **[!UICONTROL Nome]** e **[!UICONTROL Descrizione]** nella schermata di connessione di destinazione nell’interfaccia utente di Platform. Come illustrato nell&#39;esempio precedente, **[!UICONTROL Nome]** e **[!UICONTROL Descrizione]** I campi vengono visualizzati nell’interfaccia utente senza essere inclusi nella configurazione dei campi dati del cliente.
+Durante la creazione di una nuova destinazione, Destination SDK aggiunge automaticamente i campi **[!UICONTROL Nome]** e **[!UICONTROL Descrizione]** alla schermata di connessione della destinazione nell&#39;interfaccia utente di Platform. Come puoi vedere nell&#39;esempio precedente, i campi **[!UICONTROL Nome]** e **[!UICONTROL Descrizione]** vengono visualizzati nell&#39;interfaccia utente senza essere inclusi nella configurazione dei campi dati del cliente.
 
 >[!IMPORTANT]
 >
->Se aggiungi **[!UICONTROL Nome]** e **[!UICONTROL Descrizione]** nella configurazione dei campi dati del cliente, gli utenti li vedranno duplicati nell’interfaccia utente.
+>Se aggiungi i campi **[!UICONTROL Nome]** e **[!UICONTROL Descrizione]** nella configurazione dei campi dati del cliente, gli utenti li vedranno duplicati nell&#39;interfaccia utente.
 
 ## Campi dati cliente ordine {#ordering}
 
 L’ordine in cui si aggiungono i campi dati del cliente nella configurazione di destinazione si riflette nell’interfaccia utente di Platform.
 
-Ad esempio, la configurazione seguente si riflette di conseguenza nell’interfaccia utente, con le opzioni visualizzate nell’ordine **[!UICONTROL Nome]**, **[!UICONTROL Descrizione]**, **[!UICONTROL Nome bucket]**, **[!UICONTROL Percorso cartella]**, **[!UICONTROL Tipo di file]**, **[!UICONTROL Formato di compressione]**.
+Ad esempio, la configurazione seguente si riflette di conseguenza nell&#39;interfaccia utente, con le opzioni visualizzate nell&#39;ordine **[!UICONTROL Nome]**, **[!UICONTROL Descrizione]**, **[!UICONTROL Nome bucket]**, **[!UICONTROL Percorso cartella]**, **[!UICONTROL Tipo file]**, **[!UICONTROL Formato compressione]**.
 
 ```json
 "customerDataFields":[
@@ -169,13 +169,13 @@ Ad esempio, la configurazione seguente si riflette di conseguenza nell’interfa
 ]
 ```
 
-![Immagine che mostra l’ordine delle opzioni di formattazione dei file nell’interfaccia utente di Experienci Platform.](../../assets/functionality/destination-configuration/customer-data-fields-order.png)
+![Immagine che mostra l&#39;ordine delle opzioni di formattazione dei file nell&#39;interfaccia utente di Experience Platform.](../../assets/functionality/destination-configuration/customer-data-fields-order.png)
 
 ## Raggruppa campi dati cliente {#grouping}
 
 Puoi raggruppare diversi campi di dati cliente all’interno di una sezione. Quando si imposta la connessione alla destinazione nell’interfaccia utente, gli utenti possono visualizzare e beneficiare di un raggruppamento visivo di campi simili.
 
-A tale scopo, utilizza `"type": "object"` per creare il gruppo e raccogliere i campi di dati cliente desiderati all’interno di una `properties` come mostrato nell&#39;immagine seguente, dove il raggruppamento **[!UICONTROL Opzioni CSV]** viene evidenziato.
+A tale scopo, utilizzare `"type": "object"` per creare il gruppo e raccogliere i campi dei dati del cliente desiderati all&#39;interno di un oggetto `properties`, come illustrato nell&#39;immagine seguente, in cui è evidenziato il raggruppamento **[!UICONTROL Opzioni CSV]**.
 
 ```json {line-numbers="true" highlight="6-28"}
 "customerDataFields":[
@@ -210,13 +210,13 @@ A tale scopo, utilizza `"type": "object"` per creare il gruppo e raccogliere i c
 ]
 ```
 
-![Immagine che mostra il raggruppamento dei campi dati del cliente nell’interfaccia utente.](../../assets/functionality/destination-configuration/group-customer-data-fields.png)
+![Immagine che mostra il raggruppamento dei campi dati del cliente nell&#39;interfaccia utente.](../../assets/functionality/destination-configuration/group-customer-data-fields.png)
 
 ## Creare selettori a discesa per i campi dei dati del cliente {#dropdown-selectors}
 
 Nelle situazioni in cui desideri consentire agli utenti di selezionare tra diverse opzioni, ad esempio il carattere da utilizzare per delimitare i campi nei file CSV, puoi aggiungere campi a discesa all’interfaccia utente.
 
-A tale scopo, utilizza `namedEnum` come mostrato di seguito e configurare un `default` valore per le opzioni che l’utente può selezionare.
+A tale scopo, utilizzare l&#39;oggetto `namedEnum` come illustrato di seguito e configurare un valore `default` per le opzioni selezionabili dall&#39;utente.
 
 ```json {line-numbers="true" highlight="15-24"}
 "customerDataFields":[
@@ -251,17 +251,17 @@ A tale scopo, utilizza `namedEnum` come mostrato di seguito e configurare un `de
 ]
 ```
 
-![Registrazione dello schermo che mostra un esempio di selettori a discesa creati con la configurazione mostrata sopra.](../../assets/functionality/destination-configuration/customer-data-fields-dropdown.gif)
+![Registrazione schermata che mostra un esempio di selettori a discesa creati con la configurazione mostrata sopra.](../../assets/functionality/destination-configuration/customer-data-fields-dropdown.gif)
 
 ## Creare selettori a discesa dinamici per i campi dati del cliente {#dynamic-dropdown-selectors}
 
 Nelle situazioni in cui desideri chiamare un’API in modo dinamico e utilizzare la risposta per popolare dinamicamente le opzioni in un menu a discesa, puoi utilizzare un selettore a discesa dinamico.
 
-I selettori a discesa dinamici sono identici ai [selettori a discesa regolari](#dropdown-selectors) nell’interfaccia utente. L’unica differenza consiste nel fatto che i valori vengono recuperati in modo dinamico da un’API.
+I selettori a discesa dinamici sono identici ai [selettori a discesa regolari](#dropdown-selectors) nell&#39;interfaccia utente. L’unica differenza consiste nel fatto che i valori vengono recuperati in modo dinamico da un’API.
 
 Per creare un selettore a discesa dinamico, devi configurare due componenti:
 
-**Passaggio 1:** [Creare un server di destinazione](../../authoring-api/destination-server/create-destination-server.md#dynamic-dropdown-servers) con un `responseFields` modello per la chiamata API dinamica, come mostrato di seguito.
+**Passaggio 1.** [Creare un server di destinazione](../../authoring-api/destination-server/create-destination-server.md#dynamic-dropdown-servers) con un modello `responseFields` per la chiamata API dinamica, come illustrato di seguito.
 
 ```json
 {
@@ -309,7 +309,7 @@ Per creare un selettore a discesa dinamico, devi configurare due componenti:
 }
 ```
 
-**Passaggio 2:** Utilizza il `dynamicEnum` come mostrato di seguito. Nell’esempio seguente, il `User` Il menu a discesa viene recuperato utilizzando dynamic server.
+**Passaggio 2.** Utilizzare l&#39;oggetto `dynamicEnum` come illustrato di seguito. Nell&#39;esempio seguente, il menu a discesa `User` viene recuperato utilizzando il server dinamico.
 
 
 ```json {line-numbers="true" highlight="13-21"}
@@ -338,7 +338,7 @@ Per creare un selettore a discesa dinamico, devi configurare due componenti:
 ]
 ```
 
-Imposta il `destinationServerId` all&#39;ID del server di destinazione creato al passaggio 1. Puoi visualizzare l’ID del server di destinazione nella risposta di [recuperare una configurazione del server di destinazione](../../authoring-api/destination-server/retrieve-destination-server.md) Chiamata API.
+Impostare il parametro `destinationServerId` sull&#39;ID del server di destinazione creato al passaggio 1. È possibile visualizzare l&#39;ID del server di destinazione nella risposta della chiamata API [per recuperare una configurazione del server di destinazione](../../authoring-api/destination-server/retrieve-destination-server.md).
 
 ## Creare campi dati cliente nidificati {#nested-fields}
 
@@ -346,11 +346,11 @@ Puoi creare campi dati cliente nidificati per modelli di integrazione complessi.
 
 Ad esempio, puoi aggiungere campi dati cliente nidificati per richiedere ai clienti di selezionare un tipo di integrazione con la destinazione, seguito immediatamente da un’altra selezione. La seconda selezione è un campo nidificato nel tipo di integrazione.
 
-Per aggiungere un campo nidificato, utilizza `properties` come mostrato di seguito. Nell’esempio di configurazione seguente, puoi visualizzare tre diversi campi nidificati all’interno del **Yourdestination - Impostazioni specifiche per l’integrazione** campo dati cliente.
+Per aggiungere un campo nidificato, utilizzare il parametro `properties` come illustrato di seguito. Nell&#39;esempio di configurazione seguente, puoi visualizzare tre campi nidificati distinti nel campo dati cliente **Yourdestination - Integration Specific Settings**.
 
 >[!TIP]
 >
->A partire dalla versione di aprile 2024, è possibile impostare un’ `isRequired` parametro sui campi nidificati. Ad esempio, nel frammento di configurazione seguente, i primi due campi nidificati sono contrassegnati come obbligatori (riga xxx evidenziata) e i clienti non possono procedere a meno che non selezionino un valore per il campo. Ulteriori informazioni sui campi obbligatori in [parametri supportati](#supported-parameters) sezione.
+>A partire dalla versione di aprile 2024, è possibile impostare un parametro `isRequired` sui campi nidificati. Ad esempio, nel frammento di configurazione seguente, i primi due campi nidificati sono contrassegnati come obbligatori (riga xxx evidenziata) e i clienti non possono procedere a meno che non selezionino un valore per il campo. Ulteriori informazioni sui campi obbligatori nella sezione [parametri supportati](#supported-parameters).
 
 ```json {line-numbers="true" highlight="11,20"}
     {
@@ -398,7 +398,7 @@ Ad esempio, è possibile creare opzioni di formattazione condizionale dei file d
 
 La configurazione seguente crea un raggruppamento condizionale per le opzioni di formattazione del file CSV. Le opzioni del file CSV vengono visualizzate solo quando l’utente seleziona CSV come tipo di file desiderato per l’esportazione.
 
-Per impostare un campo come condizionale, utilizzare `conditional` come mostrato di seguito:
+Per impostare un campo come condizionale, utilizzare il parametro `conditional` come illustrato di seguito:
 
 ```json
 "conditional": {
@@ -408,7 +408,7 @@ Per impostare un campo come condizionale, utilizzare `conditional` come mostrato
 }
 ```
 
-In un contesto più ampio, è possibile visualizzare `conditional` nella configurazione di destinazione seguente, insieme al campo `fileType` stringa e `csvOptions` oggetto in cui è definito. I campi condizionali sono definiti nella sezione `properties` parametro.
+In un contesto più ampio, è possibile visualizzare il campo `conditional` utilizzato nella configurazione di destinazione seguente, insieme alla stringa `fileType` e all&#39;oggetto `csvOptions` in cui è definito. I campi condizionali sono definiti nel parametro `properties`.
 
 ```json {line-numbers="true" highlight="3-15, 21-25"}
 "customerDataFields":[
@@ -555,13 +555,13 @@ In un contesto più ampio, è possibile visualizzare `conditional` nella configu
 
 Di seguito è riportata la schermata risultante dell’interfaccia utente, in base alla configurazione precedente. Quando l’utente seleziona il tipo di file CSV, nell’interfaccia utente vengono visualizzate ulteriori opzioni di formattazione relative al tipo di file CSV.
 
-![Registrazione schermata che mostra l’opzione di formattazione del file condizionale per i file CSV.](../../assets/functionality/destination-configuration/customer-data-fields-conditional.gif)
+![Registrazione dello schermo che mostra l&#39;opzione di formattazione del file condizionale per i file CSV.](../../assets/functionality/destination-configuration/customer-data-fields-conditional.gif)
 
 ## Accesso ai campi dati cliente con modelli {#accessing-templatized-fields}
 
 Quando la destinazione richiede l’input dell’utente, devi fornire agli utenti una selezione di campi dati del cliente che possono compilare tramite l’interfaccia utente di Platform. Quindi devi configurare il server di destinazione in modo da leggere correttamente l’input dell’utente dai campi dei dati del cliente. Questa operazione viene eseguita tramite campi con modelli.
 
-I campi con modello utilizzano il formato `{{customerData.fieldName}}`, dove `fieldName` è il nome del campo dati cliente da cui si stanno leggendo le informazioni. Tutti i campi dati cliente con modello sono preceduti da `customerData.` e racchiusi tra parentesi graffe `{{ }}`.
+I campi con modello utilizzano il formato `{{customerData.fieldName}}`, dove `fieldName` è il nome del campo dati cliente da cui si stanno leggendo le informazioni. Tutti i campi dati cliente con modelli sono preceduti da `customerData.` e racchiusi tra parentesi graffe `{{ }}`.
 
 Prendiamo ad esempio in considerazione la seguente configurazione di destinazione Amazon S3:
 
@@ -590,9 +590,9 @@ Prendiamo ad esempio in considerazione la seguente configurazione di destinazion
 ]
 ```
 
-Questa configurazione richiede agli utenti di immettere le [!DNL Amazon S3] nome del bucket e percorso della cartella nei rispettivi campi dati del cliente.
+Questa configurazione richiede agli utenti di immettere il nome del bucket [!DNL Amazon S3] e il percorso della cartella nei rispettivi campi dati del cliente.
 
-Ad Experience Platform, per connettersi correttamente a [!DNL Amazon S3], il server di destinazione deve essere configurato per leggere i valori da questi due campi di dati cliente, come mostrato di seguito:
+Ad Experience Platform, per connettersi correttamente a [!DNL Amazon S3], il server di destinazione deve essere configurato in modo da leggere i valori da questi due campi dati cliente, come illustrato di seguito:
 
 ```json
  "fileBasedS3Destination":{
@@ -607,13 +607,13 @@ Ad Experience Platform, per connettersi correttamente a [!DNL Amazon S3], il ser
    }
 ```
 
-I valori del modello `{{customerData.bucketName}}` e `{{customerData.path}}` leggi i valori forniti dall’utente in modo che Experienci Platform possa connettersi correttamente alla piattaforma di destinazione.
+I valori con modello `{{customerData.bucketName}}` e `{{customerData.path}}` leggono i valori forniti dall&#39;utente in modo che Experience Platform possa connettersi correttamente alla piattaforma di destinazione.
 
-Per ulteriori informazioni su come configurare il server di destinazione per leggere i campi con modelli, consulta la documentazione su [campi hardcoded e template](../destination-server/server-specs.md#templatized-fields).
+Per ulteriori informazioni su come configurare il server di destinazione per la lettura dei campi con modello, consulta la documentazione sui [campi con codice rigido e campi con modello](../destination-server/server-specs.md#templatized-fields).
 
 ## Passaggi successivi {#next-steps}
 
-Dopo aver letto questo articolo, dovresti capire meglio come consentire agli utenti di inserire informazioni nell’interfaccia utente di Experienci Platform tramite i campi dati del cliente. Ora sai anche come selezionare il campo dati cliente corretto per il caso d’uso e configurare, ordinare e raggruppare i campi dati cliente nell’interfaccia utente di Platform.
+Dopo aver letto questo articolo, dovresti capire meglio come consentire agli utenti di inserire informazioni nell’interfaccia utente di Experience Platform tramite i campi dati del cliente. Ora sai anche come selezionare il campo dati cliente corretto per il caso d’uso e configurare, ordinare e raggruppare i campi dati cliente nell’interfaccia utente di Platform.
 
 Per ulteriori informazioni sugli altri componenti di destinazione, consulta i seguenti articoli:
 

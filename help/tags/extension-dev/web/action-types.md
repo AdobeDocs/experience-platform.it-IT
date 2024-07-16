@@ -29,7 +29,7 @@ Questo documento illustra come definire i tipi di azione per un’estensione web
 
 I tipi di azione sono in genere i seguenti:
 
-1. A [visualizza](./views.md) sono mostrate nell’interfaccia di Experience Platform e nell’interfaccia di Data Collection, che consentono agli utenti di modificare le impostazioni per l’azione.
+1. [view](./views.md) nell&#39;interfaccia utente di Experience Platform e nell&#39;interfaccia utente di Data Collection, che consente agli utenti di modificare le impostazioni per l&#39;azione.
 2. Modulo libreria emesso all’interno della libreria runtime dei tag per interpretare le impostazioni ed eseguire un’azione.
 
 ```js

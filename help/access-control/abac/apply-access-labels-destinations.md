@@ -1,21 +1,21 @@
 ---
 title: Utilizzare le etichette di accesso per gestire l’accesso degli utenti ai flussi di dati di destinazione
 description: Scopri come utilizzare le etichette di accesso per gestire l’accesso degli utenti ai flussi di dati di destinazione in modo che solo un sottoinsieme di utenti dell’organizzazione possa accedere a flussi di dati di destinazione specifici.
-badgePrivateBeta: label="Versione beta privata" type="Informative"
+badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
 role: Developer, Admin, User
-source-git-commit: 5e5dc2f755be0f396dec1d3f19c166bae3bc9575
+exl-id: 85944720-8551-491c-8991-dd9668beb0ca
+source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 1%
 
 ---
 
-
 # Utilizzare le etichette di accesso per gestire l’accesso degli utenti ai flussi di dati di destinazione
 
-Nell&#39;ambito del [!UICONTROL Controllo degli accessi basato su attributi] funzionalità di Real-Time CDP, ora puoi applicare etichette di accesso ai flussi di dati di destinazione. In questo modo, puoi garantire che solo un sottoinsieme di utenti dell’organizzazione abbia accesso a flussi di dati di destinazione specifici.
+Come parte della funzionalità [!UICONTROL Controllo degli accessi basato su attributi] in Real-Time CDP, ora puoi applicare le etichette di accesso ai flussi di dati di destinazione. In questo modo, puoi garantire che solo un sottoinsieme di utenti dell’organizzazione abbia accesso a flussi di dati di destinazione specifici.
 
 Quando aggiungi un’etichetta di accesso a una particolare destinazione, solo gli utenti che hanno accesso a un ruolo a cui è assegnata tale etichetta possono visualizzare e modificare tale flusso di dati di destinazione. Se un flusso di dati di destinazione non è contrassegnato con alcuna etichetta, è visibile a tutti gli utenti appartenenti alla tua organizzazione.
 
@@ -23,18 +23,18 @@ Leggi questa pagina per comprendere alcuni casi d’uso di esempio, i prerequisi
 
 ## Prerequisiti {#prerequisites}
 
-Prima di iniziare a utilizzare questa funzionalità, tieni presente i seguenti prerequisiti da completare. Per acquisire familiarità con [!UICONTROL Controllo degli accessi basato su attributi] Adobe consiglia inoltre di leggere i seguenti articoli:
+Prima di iniziare a utilizzare questa funzionalità, tieni presente i seguenti prerequisiti da completare. Per acquisire familiarità con la funzionalità [!UICONTROL Controllo degli accessi basato su attributi], l&#39;Adobe consiglia inoltre di leggere i seguenti articoli:
 
 * [Panoramica sul controllo degli accessi basato su attributi](/help/access-control/abac/overview.md)
 * [Guida end-to-end al controllo degli accessi basato su attributi](/help/access-control/abac/end-to-end-guide.md)
 
 ### Accesso all’interfaccia utente delle autorizzazioni {#access-permissions-ui}
 
-[!UICONTROL Autorizzazioni] è l’area di Experience Cloud in cui gli amministratori possono definire ruoli utente e criteri per gestire le autorizzazioni per funzioni e oggetti all’interno di un’applicazione di prodotto. Leggi le [sezione autorizzazioni](/help/access-control/abac/end-to-end-guide.md#permissions) per iniziare.
+[!UICONTROL Autorizzazioni] è l&#39;area di Experience Cloud in cui gli amministratori possono definire ruoli utente e criteri per gestire le autorizzazioni per funzionalità e oggetti all&#39;interno di un&#39;applicazione di prodotto. Per iniziare, leggi la [sezione autorizzazioni](/help/access-control/abac/end-to-end-guide.md#permissions).
 
 ### Creare ruoli, etichette e assegnare utenti {#create-roles-labels-assign-users}
 
-Dopo aver ottenuto l’accesso a [!UICONTROL autorizzazioni] Nell’interfaccia utente, è necessario impostare i ruoli e aggiungere le etichette richieste a tali ruoli. Infine, è necessario aggiungere al ruolo gli utenti che devono accedere alle risorse etichettate con le etichette specifiche. Consulta le seguenti sezioni della documentazione:
+Dopo aver ottenuto l&#39;accesso all&#39;interfaccia utente di [!UICONTROL permissions], l&#39;utente o un membro del team deve impostare i ruoli e aggiungere le etichette richieste a tali ruoli. Infine, è necessario aggiungere al ruolo gli utenti che devono accedere alle risorse etichettate con le etichette specifiche. Consulta le seguenti sezioni della documentazione:
 
 * [Creare un nuovo ruolo](/help/access-control/abac/ui/roles.md)
 * [Aggiungere etichette a un ruolo](/help/access-control/abac/end-to-end-guide.md#label-roles)
@@ -44,11 +44,11 @@ Dopo aver ottenuto l’accesso a [!UICONTROL autorizzazioni] Nell’interfaccia 
 
 Prima di poter applicare le etichette di accesso al flusso di dati, è innanzitutto necessario connettersi alla destinazione desiderata e creare un flusso di dati per esportare i dati.
 
-Leggi le guide su [connessione a una destinazione](/help/destinations/ui/connect-destination.md) e [attivazione dei dati nella destinazione](/help/destinations/ui/activation-overview.md). Quindi, seleziona la destinazione desiderata da [catalogo dei connettori disponibili](/help/destinations/catalog/overview.md).
+Leggi le guide su [connessione a una destinazione](/help/destinations/ui/connect-destination.md) e [attivazione dei dati nella destinazione](/help/destinations/ui/activation-overview.md). Quindi, seleziona la destinazione desiderata dal [catalogo di connettori disponibili](/help/destinations/catalog/overview.md).
 
 ## Già disponibile: Applica etichette di accesso ad altre risorse Experienci Platform {#apply-labels-other-resources}
 
-Questa versione di consente di concedere agli utenti l’accesso a livello di oggetto a flussi di dati di destinazione specifici; tuttavia, la funzionalità per concedere il controllo di accesso a livello di oggetto è già generalmente disponibile per altre risorse di Experience Platform, come [audience](/help/access-control/abac/end-to-end-guide.md#apply-labels-to-segments).
+Questa versione consente di concedere agli utenti l&#39;accesso a livello di oggetto a flussi di dati di destinazione specifici, ma la funzionalità per concedere il controllo di accesso a livello di oggetto è già disponibile per altre risorse di Experience Platform, come [tipi di pubblico](/help/access-control/abac/end-to-end-guide.md#apply-labels-to-segments).
 
 ## Esempio di caso d’uso {#use-case-example}
 
@@ -58,13 +58,13 @@ Con il controllo dell’accesso a livello di oggetto per le destinazioni, limita
 
 Per applicare le etichette di accesso a un flusso di dati specifico:
 
-1. Accedi a **[!UICONTROL Destinazioni]** > **[!UICONTROL Sfoglia]** e individua il flusso di dati di destinazione a cui desideri limitare l’accesso degli utenti.
-1. Seleziona i puntini di sospensione (`...`) in [!UICONTROL Nome] e utilizza la ![Modifica controllo dettagli](/help/access-control/images/olac/key-icon.svg) **[!UICONTROL Applica etichette di accesso]** per aggiungere nuove etichette e gestire le etichette esistenti per il flusso di dati.
-   ![Seleziona Applica etichette di accesso nella vista Sfoglia dell’area di lavoro delle destinazioni.](/help/access-control/images/olac/apply-access-labels.png)
+1. Passa a **[!UICONTROL Destinazioni]** > **[!UICONTROL Sfoglia]** e individua il flusso di dati di destinazione a cui desideri limitare l&#39;accesso degli utenti.
+1. Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Name] e utilizzare il controllo ![Edit details](/help/access-control/images/olac/key-icon.svg) **[!UICONTROL Apply access labels]** per aggiungere nuove etichette e gestire le etichette esistenti per il flusso di dati.
+   ![Selezionare Applica etichette di accesso nella visualizzazione Sfoglia dell&#39;area di lavoro delle destinazioni.](/help/access-control/images/olac/apply-access-labels.png)
 1. Seleziona le etichette da aggiungere al flusso di dati di destinazione e seleziona **[!UICONTROL Salva]**.
-   ![Seleziona le etichette di accesso in che devono essere applicate al flusso di dati di destinazione.](/help/access-control/images/olac/view-access-labels.png)
+   ![Selezionare le etichette di accesso in che devono essere applicate al flusso di dati di destinazione.](/help/access-control/images/olac/view-access-labels.png)
 1. Osserva come ora il flusso di dati presenta un’etichetta di accesso nell’interfaccia utente.
-   ![Visualizzazione di diversi flussi di dati di destinazione con il flusso di dati selezionato e visualizzazione di un’etichetta di accesso.](/help/access-control/images/olac/dataflow-with-access-label.png)
+   ![Visualizzazione di diversi flussi di dati di destinazione con il flusso di dati selezionato come visualizzazione di un&#39;etichetta di accesso.](/help/access-control/images/olac/dataflow-with-access-label.png)
 
 Se un flusso di dati di destinazione non è contrassegnato con alcuna etichetta, verrà visualizzato per tutti gli utenti. Se il flusso di dati è contrassegnato con una o più etichette di accesso, verrà visualizzato solo per gli utenti appartenenti a un ruolo con la stessa etichetta o combinazione di etichette.
 
@@ -72,7 +72,7 @@ Puoi aggiungere etichette standard e personalizzate ai flussi di dati di destina
 
 * Gli utenti assegnati a ruoli con accesso alla stessa etichetta possono visualizzare il flusso di dati con la nuova etichetta nell’interfaccia utente. Possono visualizzare e modificare il flusso di dati di destinazione nell’interfaccia utente o tramite API.
 
-* Utenti che sono *non* i ruoli assegnati a con accesso alla stessa etichetta non hanno accesso al flusso di dati di destinazione per visualizzarlo o modificarlo nell’interfaccia utente o tramite API.
+* Gli utenti che sono *non* assegnati a ruoli con accesso alla stessa etichetta non hanno accesso al flusso di dati di destinazione per visualizzarlo o modificarlo nell&#39;interfaccia utente o tramite API.
 
 ## Callout importanti ed elementi da conoscere {#important-callouts}
 
@@ -88,4 +88,4 @@ Quando si aggiungono più etichette a un flusso di dati di destinazione, gli ute
 
 Seguendo i passaggi descritti in questo documento, ora sai come applicare le etichette di accesso ai flussi di dati di destinazione in modo che solo un sottoinsieme di utenti dell’organizzazione possa accedere a flussi di dati di destinazione specifici.
 
-Ulteriori informazioni sulle altre funzionalità supportate da [!UICONTROL Controllo degli accessi basato su attributi] quando si attivano i dati nelle destinazioni. Ad esempio, puoi limitare l’accesso degli utenti a [visualizza e attiva solo campi specifici](/help/access-control/abac/overview.md#destinations).
+Ulteriori informazioni sulle altre funzionalità supportate da [!UICONTROL Controllo degli accessi basato su attributi] durante l&#39;attivazione dei dati nelle destinazioni. Ad esempio, puoi limitare l&#39;accesso degli utenti a [visualizzare e attivare solo campi specifici](/help/access-control/abac/overview.md#destinations).

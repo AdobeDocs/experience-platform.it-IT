@@ -1,5 +1,5 @@
 ---
-title: Personalizzazione tramite Adobe Target
+title: Personalization tramite Adobe Target
 description: Scopri come utilizzare l’API server per distribuire ed eseguire il rendering di esperienze personalizzate create in Adobe Target.
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
 source-git-commit: ddffe9bf30741b457f7de1099b50ac1624fca927
@@ -9,29 +9,29 @@ ht-degree: 1%
 
 ---
 
-# Personalizzazione tramite Adobe Target
+# Personalization tramite Adobe Target
 
 ## Panoramica {#overview}
 
-L’API del server di rete Edge può distribuire ed eseguire il rendering di esperienze personalizzate create in Adobe Target, con l’aiuto del [Compositore esperienza basato su moduli](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html).
+L&#39;API server Edge Network può distribuire ed eseguire il rendering di esperienze personalizzate create in Adobe Target, con l&#39;aiuto del [Compositore esperienza basato su moduli](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html).
 
 >[!IMPORTANT]
 >
->Esperienze di personalizzazione create tramite [Compositore esperienza visivo di Target](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) non sono completamente supportati dall’API server. L’API server può **recuperare** attività create dal Compositore esperienza visivo, ma l’API server non può **rendering** attività create dal Compositore esperienza visivo. Se desideri eseguire il rendering delle attività create da VEC, implementa [personalizzazione ibrida](../web-sdk/personalization/hybrid-personalization.md) utilizzando Web SDK e l’API del server di rete Edge.
+>Le esperienze Personalization create tramite il Compositore esperienza visivo di [Target](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) non sono completamente supportate dall&#39;API server. L&#39;API server può **recuperare** attività create dal Compositore esperienza visivo, ma l&#39;API server non può **eseguire il rendering** delle attività create dal Compositore esperienza visivo. Se desideri eseguire il rendering delle attività create dal Compositore esperienza visivo, implementa [la personalizzazione ibrida](../web-sdk/personalization/hybrid-personalization.md) utilizzando Web SDK e l&#39;API server Edge Network.
 
 ## Configurare lo stream di dati {#configure-your-datastream}
 
 Prima di poter utilizzare l’API server in combinazione con Adobe Target, devi abilitare la personalizzazione Adobe Target nella configurazione dello stream di dati.
 
-Consulta la [guida sull’aggiunta di servizi a un flusso di dati](../datastreams/overview.md#adobe-target-settings), per informazioni dettagliate su come abilitare Adobe Target.
+Per informazioni dettagliate su come abilitare Adobe Target, consulta la [guida sull&#39;aggiunta di servizi a uno stream di dati](../datastreams/overview.md#adobe-target-settings).
 
-Durante la configurazione dello stream di dati, puoi (facoltativamente) fornire valori per [!DNL Property Token], [!DNL Target Environment ID], e [!DNL Target Third Party ID Namespace].
+Durante la configurazione dello stream di dati, è possibile (facoltativamente) fornire valori per [!DNL Property Token], [!DNL Target Environment ID] e [!DNL Target Third Party ID Namespace].
 
-![Immagine dell’interfaccia utente che mostra la schermata di configurazione del servizio stream di dati, con Adobe Target selezionato](assets/target-datastream.png)
+![Immagine dell&#39;interfaccia utente che mostra la schermata di configurazione del servizio stream di dati, con Adobe Target selezionato](assets/target-datastream.png)
 
 ## Parametri personalizzati {#custom-parameters}
 
-La maggior parte dei campi nel [!DNL XDM] una parte di ogni richiesta viene serializzata in notazione col punto e quindi inviata a Target come personalizzata o [!DNL mbox] parametri.
+La maggior parte dei campi nella porzione [!DNL XDM] di ogni richiesta viene serializzata in notazione con punto e quindi inviata a Target come parametri personalizzati o [!DNL mbox].
 
 
 ### Esempio {#custom-parameters-example}
@@ -56,7 +56,7 @@ Durante la creazione di tipi di pubblico in Target, i seguenti valori saranno di
 
 ## Aggiornamenti del profilo di Target {#profile-update}
 
-Il [!DNL Server API] consente aggiornamenti al profilo Target. Per aggiornare un profilo Target, assicurati che i dati del profilo vengano passati nel `data` porzione della richiesta nel seguente formato:
+[!DNL Server API] consente aggiornamenti al profilo Target. Per aggiornare un profilo di Target, assicurarsi che i dati del profilo vengano passati nella porzione `data` della richiesta nel seguente formato:
 
 ```json
 "data":  {
@@ -71,9 +71,9 @@ Il [!DNL Server API] consente aggiornamenti al profilo Target. Per aggiornare un
 
 ### Schemi {#schemas}
 
-La porzione della richiesta relativa alla query determina il contenuto restituito da Target. Sotto `personalization` oggetto, `schemas` determina il tipo di contenuto che Target deve restituire.
+La porzione della richiesta relativa alla query determina il contenuto restituito da Target. Nell&#39;oggetto `personalization`, `schemas` determina il tipo di contenuto da restituire da Target.
 
-In situazioni in cui non sei sicuro del tipo di offerte che recupererai, devi includere tutti e quattro gli schemi nella query di personalizzazione per Edge Network:
+In situazioni in cui non sei sicuro del tipo di offerte che recupererai, devi includere tutti e quattro gli schemi nella query di personalizzazione per l’Edge Network:
 
 * **Offerte basate su HTML:**
 https://ns.adobe.com/personalization/html-content-item
@@ -81,16 +81,16 @@ https://ns.adobe.com/personalization/html-content-item
 https://ns.adobe.com/personalization/json-content-item
 * **Offerte di reindirizzamento di Target**
 https://ns.adobe.com/personalization/redirect-item
-* **Targeting delle offerte di manipolazione DOM**
+* **Offerte di manipolazione DOM di Target**
 https://ns.adobe.com/personalization/dom-action
 
 ### Ambiti decisionali {#decision-scopes}
 
-Adobe Target [!DNL mbox] i nomi devono essere inclusi nel `decisionScopes` per restituire il contenuto appropriato.
+I nomi di Adobe Target [!DNL mbox] devono essere inclusi nell&#39;array `decisionScopes` per restituire il contenuto appropriato.
 
 #### Esempio {#decision-scopes-example}
 
-Nell’esempio seguente, tutti e quattro i tipi di offerta sono richiesti insieme a un’attività Target denominata `serverapimbox`.
+Nell&#39;esempio seguente, tutti e quattro i tipi di offerta sono richiesti insieme a un&#39;attività Target denominata `serverapimbox`.
 
 ```json
 "query":{
@@ -199,7 +199,7 @@ curl -X POST 'https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 
 ### Risposta {#response}
 
-La rete Edge restituirà una risposta simile a quella riportata di seguito.
+L’Edge Network restituirà una risposta simile a quella riportata di seguito.
 
 ```json
 {
@@ -270,9 +270,9 @@ La rete Edge restituirà una risposta simile a quella riportata di seguito.
 }
 ```
 
-Se il visitatore è idoneo per un’attività di personalizzazione basata sui dati inviati ad Adobe Target, il contenuto dell’attività pertinente si troverà in `handle` oggetto, dove il tipo è `personalization:decisions`.
+Se il visitatore è idoneo per un&#39;attività di personalizzazione basata sui dati inviati ad Adobe Target, il contenuto dell&#39;attività pertinente verrà trovato nell&#39;oggetto `handle`, dove il tipo è `personalization:decisions`.
 
-A volte vengono restituiti altri contenuti in `handle` anche. Altri tipi di contenuto non sono rilevanti per la personalizzazione Target. Se il visitatore è idoneo per più attività, ogni attività sarà una separata `personalization` nell&#39;array.
+A volte verranno restituiti anche altri contenuti in `handle`. Altri tipi di contenuto non sono rilevanti per la personalizzazione Target. Se il visitatore è idoneo per più attività, ogni attività sarà un oggetto `personalization` separato nell&#39;array.
 
 La tabella seguente spiega gli elementi chiave di quella parte della risposta.
 
@@ -290,6 +290,6 @@ La tabella seguente spiega gli elementi chiave di quella parte della risposta.
 
 ## Applicazione di esempio per la personalizzazione lato server {#sample}
 
-L&#39;applicazione di esempio trovata in [questo URL](https://github.com/adobe/alloy-samples/tree/main/target/personalization-server-side) illustra come utilizzare Adobe Experience Platform per ottenere contenuti di personalizzazione da Adobe Target. La pagina web cambia in base al contenuto di personalizzazione restituito.
+L&#39;applicazione di esempio trovata in [questo URL](https://github.com/adobe/alloy-samples/tree/main/target/personalization-server-side) dimostra di utilizzare Adobe Experience Platform per ottenere contenuti di personalizzazione da Adobe Target. La pagina web cambia in base al contenuto di personalizzazione restituito.
 
-In questo esempio _non_ si basa su librerie lato client come [!DNL Web SDK] per ottenere contenuti di personalizzazione. Invece, utilizza le API Adobe Experience Platform per recuperare il contenuto di personalizzazione. Quindi l’implementazione genera il lato server di HTML in base al contenuto di personalizzazione restituito.
+In questo esempio _not_ si basa su librerie lato client come [!DNL Web SDK] per ottenere contenuti di personalizzazione. Invece, utilizza le API Adobe Experience Platform per recuperare il contenuto di personalizzazione. Quindi l’implementazione genera il lato server di HTML in base al contenuto di personalizzazione restituito.

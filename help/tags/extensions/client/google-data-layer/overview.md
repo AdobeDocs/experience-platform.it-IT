@@ -11,13 +11,13 @@ ht-degree: 12%
 
 # Estensione Google Data Layer
 
-L’estensione Google Data Layer consente di utilizzare un livello dati Google nell’implementazione dei tag. L&#39;estensione può essere utilizzata in modo indipendente o simultaneo con le soluzioni Google e con open source di Google [Libreria helper livello dati](https://github.com/google/data-layer-helper).
+L’estensione Google Data Layer consente di utilizzare un livello dati Google nell’implementazione dei tag. L&#39;estensione può essere utilizzata in modo indipendente o simultaneo con le soluzioni Google e con la [Libreria helper del livello dati](https://github.com/google/data-layer-helper) open source di Google.
 
-La libreria helper fornisce funzionalità basate su eventi simili a quelle di Adobe Client Data Layer (ACDL). Gli elementi dati, le regole e le azioni dell’estensione Google Data Layer forniscono funzionalità simili a quelle della [Estensione ACDL](../client-data-layer/overview.md).
+La libreria helper fornisce funzionalità basate su eventi simili a quelle di Adobe Client Data Layer (ACDL). Gli elementi dati, le regole e le azioni dell&#39;estensione Google Data Layer forniscono funzionalità simili a quelle dell&#39;estensione [ACDL](../client-data-layer/overview.md).
 
 ## Installazione
 
-Per installare l’estensione, passa al catalogo delle estensioni nell’interfaccia utente di Data Collection e seleziona **[!UICONTROL Google Data Layer]**.
+Per installare l&#39;estensione, passa al catalogo delle estensioni nell&#39;interfaccia utente di Data Collection e seleziona **[!UICONTROL Google Data Layer]**.
 
 Una volta installata, l’estensione crea o accede a un livello dati a ogni caricamento della libreria Tag di Adobe Experience Platform.
 
@@ -35,27 +35,27 @@ Il nome predefinito del livello dati è il nome predefinito di Google `dataLayer
 
 >[!NOTE]
 >
->La parola _evento_ viene sovraccaricato quando un livello dati basato su eventi viene utilizzato nei tag di Adobe Experience Platform. _Eventi_ può essere:
+>La parola _event_ viene sovraccaricata quando un livello dati basato su eventi viene utilizzato nei tag di Adobe Experience Platform. _Eventi_ può essere:
 > - Eventi tag Adobe Experience Platform (libreria caricata e così via).
 > - Eventi JavaScript.
-> - Dati inviati al livello dati con _evento_ parola chiave.
+> - Dati inviati al livello dati con la parola chiave _event_.
 
 L’estensione consente di ascoltare le modifiche sul livello dati.
 
 >[!NOTE]
 >
->È importante comprendere l&#39;uso del _evento_ parola chiave quando i dati vengono inviati a un livello dati di Google, in modo simile a Adobe Client Data Layer. Il _evento_ parola chiave modifica il comportamento del livello dati di Google e quindi di questa estensione.\
+>È importante comprendere l&#39;utilizzo della parola chiave _event_ quando i dati vengono inviati a un livello dati di Google, in modo simile al livello dati client di Adobe. La parola chiave _event_ modifica il comportamento del livello dati di Google e quindi di questa estensione.\
 > Leggi la documentazione di Google o fai ricerche se non sei sicuro su questo punto.
 
 ### Tipi di evento Google
 
-Google supporta due metodi per trasmettere gli eventi: Google Tag Manager, che utilizza `push()` e Google Analytics 4, utilizzando il `gtag()` metodo.
+Google supporta due metodi di push degli eventi: Google Tag Manager, con il metodo `push()`, e Google Analytics 4, con il metodo `gtag()`.
 
-Le versioni di Google Data Layer precedenti alla 1.2.1 supportavano solo gli eventi creati da `push()`, come illustrato negli esempi di codice di questa pagina.
+Le versioni di Google Data Layer precedenti alla 1.2.1 supportavano solo gli eventi creati da `push()`, come mostrato negli esempi di codice in questa pagina.
 
 Le versioni 1.2.1 e successive supportano gli eventi creati con `gtag()`.  Questo è facoltativo e può essere abilitato nella finestra di dialogo di configurazione dell’estensione.
 
-Per ulteriori informazioni su `push()` e `gtag()` eventi, consulta [Documentazione di Google](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag).  Le informazioni sono fornite anche nelle finestre di dialogo di configurazione e regola dell’estensione.
+Per ulteriori informazioni sugli eventi `push()` e `gtag()`, vedere la [documentazione di Google](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag).  Le informazioni sono fornite anche nelle finestre di dialogo di configurazione e regola dell’estensione.
 
 ### Ascolta tutti i push al livello dati
 
@@ -105,7 +105,7 @@ Ad esempio, l’impostazione `myEvent` quando si utilizza questa configurazione 
 dataLayer.push({"event":"myEvent"})
 ```
 
-È possibile utilizzare un regex (ECMAScript / JavaScript) per far corrispondere i nomi degli eventi.
+È possibile utilizzare un regex (ECMAScript / JavaScript) per far corrispondere i nomi di evento.
 
 Ad esempio, impostando &#39;myEvent\d&#39; si tiene traccia di `myEvent` con una cifra (\d):
 
@@ -157,4 +157,4 @@ L’elemento dati può quindi restituire:
 
 L’elemento dati e le finestre di dialogo degli eventi dell’estensione contengono informazioni di utilizzo ed esempi dettagliati.
 
-Ulteriori informazioni generali sono disponibili nella [LEGGIMI progetto](https://github.com/adobe/reactor-extension-googledatalayer/blob/main/README.md)
+Ulteriori informazioni generali sono disponibili nel file README del [progetto](https://github.com/adobe/reactor-extension-googledatalayer/blob/main/README.md)

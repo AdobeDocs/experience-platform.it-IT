@@ -20,7 +20,7 @@ Questo video offre un’introduzione rapida all’interfaccia utente di Adobe Ex
 
 >[!NOTE]
 >
->L’interfaccia utente di Experience Platform viene aggiornata frequentemente e potrebbe essere cambiata dopo la registrazione del video. Per informazioni aggiornate, visitare il sito Web [Guida all’interfaccia utente di Adobe Experience Platform](../ui-guide.md).
+>L’interfaccia utente di Experience Platform viene aggiornata frequentemente e potrebbe essere cambiata dopo la registrazione del video. Per informazioni aggiornate, visitare la [guida dell&#39;interfaccia utente di Adobe Experience Platform](../ui-guide.md).
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/32792?quality=12&learn=on)

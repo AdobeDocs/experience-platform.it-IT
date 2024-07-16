@@ -5,60 +5,60 @@ exl-id: 826a96aa-2d64-4a8b-88cf-34a0b6c26df5
 last-substantial-update: 2022-11-23T00:00:00Z
 source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
 workflow-type: tm+mt
-source-wordcount: '841'
-ht-degree: 3%
+source-wordcount: '810'
+ht-degree: 4%
 
 ---
 
-# [!DNL AWS] panoramica dell’estensione
+# Panoramica dell&#39;estensione [!DNL AWS]
 
 >[!NOTE]
 >
 >Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
-[[!DNL Amazon Web Services] ([!DNL AWS])](https://aws.amazon.com/) è una piattaforma di cloud computing che offre un’ampia gamma di servizi, tra cui elaborazione distribuita, archiviazione di database, distribuzione di contenuti e servizi di integrazione software-as-a-service (SaaS) per la gestione delle relazioni con i clienti (CRM) e la pianificazione delle risorse aziendali (ERP).
+[[!DNL Amazon Web Services] ([!DNL AWS])](https://aws.amazon.com/) è una piattaforma di cloud computing che offre un&#39;ampia gamma di servizi quali elaborazione distribuita, archiviazione del database, distribuzione di contenuti e servizi di integrazione SaaS (Software-as-a-Service) per la gestione delle relazioni con i clienti (CRM) e la pianificazione delle risorse aziendali (ERP).
 
-Il [!DNL AWS] [inoltro eventi](../../../ui/event-forwarding/overview.md) l&#39;estensione sfrutta [[!DNL Amazon Kinesis Data Streams]](https://docs.aws.amazon.com/streams/latest/dev/introduction.html) per inviare eventi da Adobe Experience Platform Edge Network a [!DNL AWS] per ulteriore elaborazione. Questa guida illustra come installare l’estensione e utilizzarne le funzionalità in una regola di inoltro degli eventi.
+L&#39;estensione [!DNL AWS] [event forwarding](../../../ui/event-forwarding/overview.md) sfrutta [[!DNL Amazon Kinesis Data Streams]](https://docs.aws.amazon.com/streams/latest/dev/introduction.html) per inviare eventi dall&#39;Edge Network di Adobe Experience Platform a [!DNL AWS] per l&#39;ulteriore elaborazione. Questa guida illustra come installare l’estensione e utilizzarne le funzionalità in una regola di inoltro degli eventi.
 
 ## Prerequisiti
 
-Devi avere un [!DNL AWS] account con esistente [!DNL Kinesis] flusso di dati per utilizzare questa estensione. Se non disponi di un flusso di dati preesistente, vedi [!DNL AWS] documentazione su [creazione di un nuovo flusso di dati utilizzando [!DNL AWS] Console di gestione](https://docs.aws.amazon.com/streams/latest/dev/how-do-i-create-a-stream.html).
+Per utilizzare questa estensione, è necessario disporre di un account [!DNL AWS] con un flusso di dati [!DNL Kinesis] esistente. Se non disponi di un flusso di dati preesistente, consulta la documentazione di [!DNL AWS] su [creazione di un nuovo flusso di dati tramite  [!DNL AWS] Management Console](https://docs.aws.amazon.com/streams/latest/dev/how-do-i-create-a-stream.html).
 
 ## Installare l’estensione {#install}
 
-Per installare [!DNL AWS] , passa all’interfaccia utente di Data Collection o all’interfaccia utente di Experience Platform e seleziona **[!UICONTROL Inoltro eventi]** dal menu di navigazione a sinistra. Da qui, seleziona una proprietà a cui aggiungere l’estensione o creane una nuova.
+Per installare l&#39;estensione [!DNL AWS], passa all&#39;interfaccia utente di Data Collection o all&#39;interfaccia utente Experience Platform e seleziona **[!UICONTROL Inoltro eventi]** dal menu di navigazione a sinistra. Da qui, seleziona una proprietà a cui aggiungere l’estensione o creane una nuova.
 
-Dopo aver selezionato o creato la proprietà desiderata, seleziona **[!UICONTROL Estensioni]** nel menu di navigazione a sinistra, seleziona quindi **[!UICONTROL Catalogo]** scheda. Cerca [!UICONTROL AWS] , quindi seleziona **[!UICONTROL Installa]**.
+Dopo aver selezionato o creato la proprietà desiderata, seleziona **[!UICONTROL Estensioni]** nel menu di navigazione a sinistra, quindi seleziona la scheda **[!UICONTROL Catalogo]**. Cerca la scheda [!UICONTROL AWS], quindi seleziona **[!UICONTROL Installa]**.
 
-![Il [!UICONTROL Installa] pulsante selezionato per il [!UICONTROL AWS] nell’interfaccia utente di Data Collection.](../../../images/extensions/server/aws/install.png)
+![Pulsante [!UICONTROL Installa] selezionato per l&#39;estensione [!UICONTROL AWS] nell&#39;interfaccia utente di Data Collection.](../../../images/extensions/server/aws/install.png)
 
-Nella schermata successiva, devi fornire le credenziali di connessione per il [!DNL AWS] account. In particolare, devi fornire [!DNL AWS] ID chiave di accesso e chiave di accesso segreta. Se non conosci questi valori, consulta la [!DNL AWS] documentazione su [come ottenere l’ID della chiave di accesso e la chiave di accesso segreta](https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html).
+Nella schermata successiva è necessario fornire le credenziali di connessione per l&#39;account [!DNL AWS]. In particolare, devi fornire l&#39;ID della chiave di accesso [!DNL AWS] e la chiave di accesso segreta. Se non conosci questi valori, consulta la documentazione di [!DNL AWS] su [come ottenere l&#39;ID della chiave di accesso e la chiave di accesso segreta](https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html).
 
-![L’ID della chiave di accesso e la chiave di accesso segreta sono stati aggiunti nella vista di configurazione dell’estensione.](../../../images/extensions/server/aws/credentials.png)
+![L&#39;ID della chiave di accesso e la chiave di accesso segreta sono stati aggiunti nella vista di configurazione dell&#39;estensione.](../../../images/extensions/server/aws/credentials.png)
 
 >[!IMPORTANT]
 >
->È necessario allegare un criterio di accesso al [!DNL AWS] account utilizzato per generare le credenziali di accesso. Questo criterio deve essere configurato per concedere i diritti di accesso per l’invio di dati a [!DNL Kinesis] flusso di dati. Fai riferimento a **Esempio 2** nel [!DNL AWS] documento su [esempi di criteri per [!DNL Kinesis Data Streams]](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html#kinesis-using-iam-examples) per vedere come definire il criterio.
+>È necessario allegare un criterio di accesso all&#39;account [!DNL AWS] utilizzato per generare le credenziali di accesso. Questo criterio deve essere configurato per concedere i diritti di accesso per l&#39;invio di dati al flusso di dati [!DNL Kinesis]. Per informazioni su come definire i criteri, consultare l&#39;**Esempio 2** nel documento [!DNL AWS] in [Criteri di esempio per [!DNL Kinesis Data Streams]](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html#kinesis-using-iam-examples).
 
-Al termine, seleziona **[!UICONTROL Salva]** e l’estensione sia installata.
+Al termine, selezionare **[!UICONTROL Salva]** e l&#39;estensione verrà installata.
 
 ## Configurare una regola di inoltro degli eventi {#rule}
 
-Dopo aver installato l’estensione, crea un nuovo inoltro eventi [regola](../../../ui/managing-resources/rules.md) e configurarne le condizioni come desiderato. Durante la configurazione delle azioni per la regola, seleziona la **[!UICONTROL AWS]** , quindi seleziona **[!UICONTROL Invia dati a flusso dati Kinesis]** per il tipo di azione.
+Dopo aver installato l&#39;estensione, crea una nuova [regola](../../../ui/managing-resources/rules.md) di inoltro eventi e configurane le condizioni come desiderato. Durante la configurazione delle azioni per la regola, seleziona l&#39;estensione **[!UICONTROL AWS]**, quindi seleziona **[!UICONTROL Invia dati a Kinesis Data Stream]** per il tipo di azione.
 
-![Il [!UICONTROL Invia dati a flusso dati Kinesis] tipo di azione selezionato per una regola nell’interfaccia utente di Data Collection.](../../../images/extensions/server/aws/select-action-type.png)
+![Tipo di azione [!UICONTROL Invia dati a Kinesis Data Stream] selezionato per una regola nell&#39;interfaccia utente di Data Collection.](../../../images/extensions/server/aws/select-action-type.png)
 
-Il pannello a destra si aggiorna per mostrare le opzioni di configurazione per la modalità di invio dei dati. In particolare, devi assegnare [elementi dati](../../../ui/managing-resources/data-elements.md) alle varie proprietà che rappresentano [!DNL Event Hub] configurazione.
+Il pannello a destra si aggiorna per mostrare le opzioni di configurazione per la modalità di invio dei dati. In particolare, devi assegnare [elementi dati](../../../ui/managing-resources/data-elements.md) alle varie proprietà che rappresentano la tua configurazione di [!DNL Event Hub].
 
-![Le opzioni di configurazione per [!UICONTROL Invia dati a flusso dati Kinesis] tipo di azione visualizzato nell’interfaccia utente.](../../../images/extensions/server/aws/data-stream-details.png)
+![Opzioni di configurazione per il tipo di azione [!UICONTROL Invia dati a flusso di dati Kinesis] visualizzato nell&#39;interfaccia utente.](../../../images/extensions/server/aws/data-stream-details.png)
 
-**[!UICONTROL Dettagli flusso di dati Kinesis]**
+**[!UICONTROL Dettagli flusso dati Kinesis]**
 
 | Input | Descrizione |
 | --- | --- |
 | [!UICONTROL Nome flusso] | Il nome del flusso a cui questa regola di inoltro eventi invierà i record di dati. |
-| [!UICONTROL Area geografica AWS] | Il [!DNL AWS] area in cui [!DNL Kinesis] flusso di dati creato. |
-| [!UICONTROL Chiave partizione] | Il [chiave di partizione](https://docs.aws.amazon.com/streams/latest/dev/key-concepts.html#partition-key) che l’estensione utilizzerà per inviare dati al flusso di dati.<br><br>[!DNL Kinesis Data Streams] separa i record di dati appartenenti a un flusso in più parti. Utilizza la chiave di partizione inviata con ciascun record di dati per determinare a quale partizione appartiene un determinato record di dati.<br><br>Una buona chiave di partizione per la distribuzione dei clienti potrebbe essere il numero del cliente, in quanto è diverso per ciascun cliente. Una chiave di partizione scadente potrebbe avere il loro codice postale perché tutti possono vivere nella stessa area nelle vicinanze. In generale, è consigliabile scegliere una chiave di partizione con l&#39;intervallo più alto di valori potenziali diversi. Consulta la [!DNL AWS] articolo su [ridimensionamento [!DNL Kinesis] flussi di dati](https://aws.amazon.com/blogs/big-data/under-the-hood-scaling-your-kinesis-data-streams/) per le best practice sulla gestione delle chiavi di partizione. |
+| [!UICONTROL Area geografica AWS] | Area [!DNL AWS] in cui viene creato il flusso di dati [!DNL Kinesis]. |
+| [!UICONTROL Chiave partizione] | La [chiave di partizione](https://docs.aws.amazon.com/streams/latest/dev/key-concepts.html#partition-key) che verrà utilizzata dall&#39;estensione per inviare dati al flusso di dati.<br><br>[!DNL Kinesis Data Streams] separa i record di dati appartenenti a un flusso in più parti. Utilizza la chiave di partizione inviata con ciascun record di dati per determinare a quale partizione appartiene un determinato record di dati.<br><br>Una buona chiave di partizione per la distribuzione dei clienti potrebbe essere il numero del cliente, poiché è diverso per ciascun cliente. Una chiave di partizione scadente potrebbe avere il loro codice postale perché tutti possono vivere nella stessa area nelle vicinanze. In generale, è consigliabile scegliere una chiave di partizione con l&#39;intervallo più alto di valori potenziali diversi. Consulta l&#39;articolo [!DNL AWS] su [ridimensionamento dei [!DNL Kinesis] flussi di dati](https://aws.amazon.com/blogs/big-data/under-the-hood-scaling-your-kinesis-data-streams/) per le best practice sulla gestione delle chiavi di partizione. |
 
 {style="table-layout:auto"}
 
@@ -66,14 +66,14 @@ Il pannello a destra si aggiorna per mostrare le opzioni di configurazione per l
 
 | Input | Descrizione |
 | --- | --- |
-| [!UICONTROL Payload] | Questo campo contiene i dati che verranno inoltrati al [!DNL Kinesis] flusso di dati, in formato JSON.<br><br>Sotto **[!UICONTROL Raw]** , puoi incollare l’oggetto JSON direttamente nel campo di testo fornito, oppure puoi selezionare l’icona dell’elemento dati (![Icona del set di dati](../../../images/extensions/server/aws/data-element-icon.png)) per scegliere da un elenco di elementi dati esistenti per rappresentare il payload.<br><br>È inoltre possibile utilizzare **[!UICONTROL Editor coppie chiave-valore JSON]** per aggiungere manualmente ogni coppia chiave-valore tramite un editor di interfaccia utente. Ogni valore può essere rappresentato da un input non elaborato, oppure è possibile selezionare un elemento dati. |
+| [!UICONTROL Payload] | Questo campo contiene i dati che verranno inoltrati al flusso di dati [!DNL Kinesis], in formato JSON.<br><br>Con l&#39;opzione **[!UICONTROL Raw]**, puoi incollare l&#39;oggetto JSON direttamente nel campo di testo fornito, oppure puoi selezionare l&#39;icona dell&#39;elemento dati (![icona del set di dati](../../../images/extensions/server/aws/data-element-icon.png)) per effettuare una selezione da un elenco di elementi dati esistenti per rappresentare il payload.<br><br>È inoltre possibile utilizzare l&#39;opzione **[!UICONTROL Editor coppie chiave-valore JSON]** per aggiungere manualmente ogni coppia chiave-valore tramite un editor di interfaccia utente. Ogni valore può essere rappresentato da un input non elaborato, oppure è possibile selezionare un elemento dati. |
 
 {style="table-layout:auto"}
 
-Al termine, seleziona **[!UICONTROL Mantieni modifiche]** per aggiungere l’azione alla configurazione della regola. Quando sei soddisfatto della regola, seleziona **[!UICONTROL Salva nella libreria]**.
+Al termine, seleziona **[!UICONTROL Mantieni modifiche]** per aggiungere l&#39;azione alla configurazione della regola. Una volta soddisfatta la regola, selezionare **[!UICONTROL Salva nella libreria]**.
 
-Infine, pubblica un nuovo inoltro di eventi [build](../../../ui/publishing/builds.md) per abilitare le modifiche alla libreria.
+Infine, pubblica un nuovo evento con inoltro di [build](../../../ui/publishing/builds.md) per abilitare le modifiche alla libreria.
 
 ## Passaggi successivi
 
-Questa guida illustra come inviare dati a [!DNL Kinesis Data Streams] utilizzando [!DNL AWS] estensione di inoltro degli eventi. Per ulteriori informazioni sulle funzionalità di inoltro degli eventi in Experience Platform, consulta [panoramica sull’inoltro degli eventi](../../../ui/event-forwarding/overview.md).
+Questa guida illustra come inviare dati a [!DNL Kinesis Data Streams] utilizzando l&#39;estensione di inoltro eventi [!DNL AWS]. Per ulteriori informazioni sulle funzionalità di inoltro degli eventi in Experience Platform, consulta la [panoramica sull&#39;inoltro degli eventi](../../../ui/event-forwarding/overview.md).

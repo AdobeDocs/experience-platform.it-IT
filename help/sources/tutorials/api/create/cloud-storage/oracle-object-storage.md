@@ -7,12 +7,12 @@ description: Scopri come collegare Adobe Experience Platform a Oracle Object Sto
 exl-id: a85faa44-7d5a-42a2-9052-af01744e13c9
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '555'
-ht-degree: 1%
+source-wordcount: '543'
+ht-degree: 4%
 
 ---
 
-# Creare un [!DNL Oracle Object Storage] connessione di base tramite [!DNL Flow Service] API
+# Creare una connessione di base [!DNL Oracle Object Storage] utilizzando l&#39;API [!DNL Flow Service]
 
 Una connessione di base rappresenta la connessione autenticata tra un&#39;origine e Adobe Experience Platform.
 
@@ -22,35 +22,35 @@ Questo tutorial illustra i passaggi necessari per creare una connessione di base
 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Sorgenti](../../../../home.md): un Experience Platform consente di acquisire dati da varie origini, consentendoti allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
-* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Origini](../../../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
+* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per connettersi correttamente a [!DNL Oracle Object Storage] utilizzando [!DNL Flow Service] API.
+Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per connettersi correttamente a [!DNL Oracle Object Storage] utilizzando l&#39;API [!DNL Flow Service].
 
 ### Raccogli le credenziali richieste
 
-Per ottenere [!DNL Flow Service] per connettersi a [!DNL Oracle Object Storage], è necessario fornire valori per le seguenti proprietà di connessione:
+Affinché [!DNL Flow Service] possa connettersi a [!DNL Oracle Object Storage], è necessario fornire i valori per le proprietà di connessione seguenti:
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
-| `serviceUrl` | Il [!DNL Oracle Object Storage] endpoint necessario per l&#39;autenticazione. Il formato dell’endpoint è: `https://{OBJECT_STORAGE_NAMESPACE}.compat.objectstorage.eu-frankfurt-1.oraclecloud.com` |
-| `accessKey` | Il [!DNL Oracle Object Storage] ID della chiave di accesso richiesto per l’autenticazione. |
-| `secretKey` | Il [!DNL Oracle Object Storage] password richiesta per l&#39;autenticazione. |
+| `serviceUrl` | Endpoint [!DNL Oracle Object Storage] richiesto per l&#39;autenticazione. Formato endpoint: `https://{OBJECT_STORAGE_NAMESPACE}.compat.objectstorage.eu-frankfurt-1.oraclecloud.com` |
+| `accessKey` | ID della chiave di accesso [!DNL Oracle Object Storage] richiesto per l&#39;autenticazione. |
+| `secretKey` | La password [!DNL Oracle Object Storage] richiesta per l&#39;autenticazione. |
 | `bucketName` | Il nome del bucket consentito è necessario se l’utente dispone di accesso limitato. Il nome del bucket deve contenere tra tre e 63 caratteri, deve iniziare e terminare con una lettera o un numero e può contenere solo lettere minuscole, numeri o trattini (`-`). Il nome del bucket non può essere formattato come un indirizzo IP. |
 | `folderPath` | Il percorso della cartella consentito è necessario se l’utente ha limitato l’accesso. |
-| `connectionSpec.id` | La specifica di connessione restituisce le proprietà del connettore di un&#39;origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di origine. ID della specifica di connessione per [!DNL Oracle Object Storage] è: `c85f9425-fb21-426c-ad0b-405e9bd8a46c`. |
+| `connectionSpec.id` | La specifica di connessione restituisce le proprietà del connettore di un&#39;origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di origine. ID della specifica di connessione per [!DNL Oracle Object Storage]: `c85f9425-fb21-426c-ad0b-405e9bd8a46c`. |
 
-Per ulteriori informazioni su come ottenere questi valori, consulta [Guida all’autenticazione di Oracle Object Storage](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials).
+Per ulteriori informazioni su come ottenere questi valori, fare riferimento alla [Guida all&#39;autenticazione di Oracle Object Storage](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials).
 
 ### Utilizzo delle API di Platform
 
-Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida su [introduzione alle API di Platform](../../../../../landing/api-guide.md).
+Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida in [guida introduttiva alle API di Platform](../../../../../landing/api-guide.md).
 
 ## Creare una connessione di base
 
 Una connessione di base mantiene le informazioni tra l’origine e Platform, incluse le credenziali di autenticazione dell’origine, lo stato corrente della connessione e l’ID univoco della connessione di base. L’ID della connessione di base consente di esplorare e navigare tra i file dall’interno dell’origine e identificare gli elementi specifici che desideri acquisire, comprese le informazioni relative ai tipi di dati e ai formati.
 
-Per creare un ID di connessione di base, effettua una richiesta POST al `/connections` endpoint durante la fornitura del [!DNL Oracle Object Storage] credenziali di autenticazione come parte dei parametri della richiesta.
+Per creare un ID di connessione di base, effettuare una richiesta POST all&#39;endpoint `/connections` fornendo le credenziali di autenticazione [!DNL Oracle Object Storage] come parte dei parametri della richiesta.
 
 **Formato API**
 
@@ -92,12 +92,12 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `auth.params.serviceUrl` | Il [!DNL Oracle Object Storage] endpoint necessario per l&#39;autenticazione. |
-| `auth.params.accessKey` | Il [!DNL Oracle Object Storage] ID della chiave di accesso richiesto per l’autenticazione. |
-| `auth.params.secretKey` | Il [!DNL Oracle Object Storage] password richiesta per l&#39;autenticazione. |
+| `auth.params.serviceUrl` | Endpoint [!DNL Oracle Object Storage] richiesto per l&#39;autenticazione. |
+| `auth.params.accessKey` | ID della chiave di accesso [!DNL Oracle Object Storage] richiesto per l&#39;autenticazione. |
+| `auth.params.secretKey` | La password [!DNL Oracle Object Storage] richiesta per l&#39;autenticazione. |
 | `auth.params.bucketName` | Il nome del bucket consentito è necessario se l’utente dispone di accesso limitato. |
 | `auth.params.folderPath` | Il percorso della cartella consentito è necessario se l’utente ha limitato l’accesso. |
-| `connectionSpec.id` | Il [!DNL Oracle Object Storage] ID specifica di connessione: `c85f9425-fb21-426c-ad0b-405e9bd8a46c`. |
+| `connectionSpec.id` | ID della specifica di connessione [!DNL Oracle Object Storage]: `c85f9425-fb21-426c-ad0b-405e9bd8a46c`. |
 
 **Risposta**
 
@@ -112,4 +112,4 @@ In caso di esito positivo, la risposta restituisce l’ID di connessione della c
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato un’ [!DNL Oracle Object Storage] connessione tramite [!DNL Flow Service] e hanno ottenuto il relativo ID di connessione univoco. Puoi usare questo ID connessione per [esplorare gli archivi cloud utilizzando l’API del servizio Flow](../../explore/cloud-storage.md).
+Seguendo questa esercitazione, hai creato una connessione [!DNL Oracle Object Storage] utilizzando l&#39;API [!DNL Flow Service] e ne hai ottenuto l&#39;ID di connessione univoco. Puoi usare questo ID connessione per [esplorare gli archivi cloud utilizzando l&#39;API del servizio Flusso](../../explore/cloud-storage.md).

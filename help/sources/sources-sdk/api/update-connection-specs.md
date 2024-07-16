@@ -22,7 +22,7 @@ PUT /connectionSpecs/{CONNECTION_SPEC_ID}
 
 **Richiesta**
 
-La richiesta seguente aggiorna il `name` del [!DNL MailChimp] origine creata nel passaggio precedente.
+La richiesta seguente aggiorna `name` dell&#39;origine [!DNL MailChimp] creata nel passaggio precedente.
 
 ```shell
 PUT -X GET \

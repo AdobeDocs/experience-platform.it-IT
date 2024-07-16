@@ -4,16 +4,16 @@ description: Scopri come effettuare chiamate all’endpoint /secrets nell’API 
 exl-id: 76875a28-5d13-402d-8543-24db7e2bee8e
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1246'
+source-wordcount: '1239'
 ht-degree: 12%
 
 ---
 
 # Endpoint Secrets
 
-Un segreto è una risorsa che esiste solo all’interno delle proprietà di inoltro degli eventi (proprietà con un `platform` attributo impostato su `edge`). Consentono l’inoltro degli eventi per l’autenticazione in un altro sistema per lo scambio sicuro dei dati.
+Un segreto è una risorsa che esiste solo all&#39;interno delle proprietà di inoltro degli eventi (proprietà con un attributo `platform` impostato su `edge`). Consentono l’inoltro degli eventi per l’autenticazione in un altro sistema per lo scambio sicuro dei dati.
 
-Questa guida illustra come effettuare chiamate al `/secrets` nell’API di Reactor. Per una spiegazione dettagliata dei diversi tipi di segreto e di come utilizzarli, consulta la panoramica di alto livello su [segreti](../guides/secrets.md) prima di tornare a questa guida.
+Questa guida illustra come effettuare chiamate all&#39;endpoint `/secrets` nell&#39;API di Reactor. Per una spiegazione dettagliata dei diversi tipi di segreto e di come utilizzarli, consulta la panoramica di alto livello su [segreti](../guides/secrets.md) prima di tornare a questa guida.
 
 ## Introduzione
 
@@ -302,7 +302,7 @@ Per creare un segreto, devi eseguire una richiesta POST.
 
 >[!NOTE]
 >
->Quando crei un nuovo segreto, l’API restituisce una risposta immediata contenente informazioni per tale risorsa. Allo stesso tempo, viene attivata un&#39;attività di scambio segreto per verificare che lo scambio di credenziali funzioni. Questa attività viene elaborata in modo asincrono e aggiorna l’attributo di stato del segreto in `succeeded` o `failed` a seconda del risultato.
+>Quando crei un nuovo segreto, l’API restituisce una risposta immediata contenente informazioni per tale risorsa. Allo stesso tempo, viene attivata un&#39;attività di scambio segreto per verificare che lo scambio di credenziali funzioni. Questa attività viene elaborata in modo asincrono e aggiorna l&#39;attributo di stato del segreto su `succeeded` o `failed` a seconda del risultato.
 
 **Formato API**
 
@@ -352,16 +352,16 @@ curl -X POST \
 | Proprietà | Descrizione |
 | --- | --- |
 | `name` | Nome univoco e descrittivo del segreto. |
-| `type_of` | Tipo di credenziali di autenticazione rappresentato dal segreto. Ha tre valori accettati:<ul><li>`token`: stringa di token.</li><li>`simple-http`: nome utente e password.</li><li>`oauth2`: credenziali conformi allo standard OAuth.</li></ul> |
-| `credentials` | Oggetto contenente i valori delle credenziali per il segreto. A seconda della `type_of` , devono essere fornite proprietà diverse. Consulta la sezione su [credenziali](../guides/secrets.md#credentials) nella guida segreti per informazioni dettagliate sui requisiti per ciascun tipo. |
-| `relationships.environment` | Ogni segreto deve essere associato a un ambiente quando viene creato per la prima volta. Il `data` l&#39;oggetto all&#39;interno di questa proprietà deve contenere `id` dell’ambiente a cui viene assegnato il segreto, insieme a un `type` valore di `environments`. |
+| `type_of` | Tipo di credenziali di autenticazione rappresentato dal segreto. Ha tre valori accettati:<ul><li>`token`: una stringa di token.</li><li>`simple-http`: nome utente e password.</li><li>`oauth2`: credenziali conformi allo standard OAuth.</li></ul> |
+| `credentials` | Oggetto contenente i valori delle credenziali per il segreto. A seconda dell&#39;attributo `type_of`, è necessario specificare proprietà diverse. Per informazioni dettagliate sui requisiti per ciascun tipo, consulta la sezione sulle [credenziali](../guides/secrets.md#credentials) nella guida dei segreti. |
+| `relationships.environment` | Ogni segreto deve essere associato a un ambiente quando viene creato per la prima volta. L&#39;oggetto `data` all&#39;interno di questa proprietà deve contenere `id` dell&#39;ambiente a cui viene assegnato il segreto, insieme a un valore `type` di `environments`. |
 | `type` | Tipo di risorsa da creare. Per questa chiamata, il valore deve essere `secrets`. |
 
 {style="table-layout:auto"}
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce i dettagli del segreto. A seconda del tipo di segreto, alcune proprietà in `credentials` può essere nascosto.
+In caso di esito positivo, la risposta restituisce i dettagli del segreto. A seconda del tipo di segreto, alcune proprietà in `credentials` potrebbero essere nascoste.
 
 ```json
 {
@@ -417,13 +417,13 @@ In caso di esito positivo, la risposta restituisce i dettagli del segreto. A sec
 }
 ```
 
-## Test di un `oauth2` segreto {#test}
+## Verifica un segreto `oauth2` {#test}
 
 >[!NOTE]
 >
->Questa operazione può essere eseguita solo su segreti con un `type_of` valore di `oauth2`.
+>Questa operazione può essere eseguita solo su segreti con un valore `type_of` di `oauth2`.
 
-Puoi testare un’ `oauth2` segreto includendo il relativo ID nel percorso di una richiesta PATCH. L&#39;operazione di test esegue uno scambio e include la risposta del servizio di autorizzazione in `test_exchange` attributo nel segreto di `meta` oggetto. Questa operazione non aggiorna il segreto stesso.
+È possibile verificare un segreto `oauth2` includendo il relativo ID nel percorso di una richiesta PATCH. L&#39;operazione di test esegue uno scambio e include la risposta del servizio di autorizzazione nell&#39;attributo `test_exchange` nell&#39;oggetto `meta` del segreto. Questa operazione non aggiorna il segreto stesso.
 
 **Formato API**
 
@@ -433,7 +433,7 @@ PATCH /secrets/{SECRET_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{SECRET_ID}` | ID del `oauth2` segreto che vuoi verificare. |
+| `{SECRET_ID}` | ID del segreto `oauth2` che si desidera verificare. |
 
 {style="table-layout:auto"}
 
@@ -463,8 +463,8 @@ curl -X PATCH \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `attributes` | Deve contenere `type_of` proprietà con valore `oauth2`. |
-| `meta` | Deve contenere un `action` proprietà con valore `test`. |
+| `attributes` | Deve contenere una proprietà `type_of` con valore `oauth2`. |
+| `meta` | Deve contenere una proprietà `action` con valore `test`. |
 | `id` | ID del segreto che stai testando. Deve corrispondere all’ID fornito nel percorso della richiesta. |
 | `type` | Tipo di risorsa su cui viene eseguita l’operazione. Deve essere impostato su `secrets`. |
 
@@ -472,7 +472,7 @@ curl -X PATCH \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce i dettagli del segreto e la risposta del servizio di autorizzazione è contenuta in `meta.test_exchange`.
+In caso di esito positivo, la risposta restituisce i dettagli del segreto. La risposta del servizio di autorizzazione è contenuta in `meta.test_exchange`.
 
 ```json
 { 
@@ -580,8 +580,8 @@ curl -X PATCH \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `attributes` | Deve contenere `type_of` proprietà corrispondente a quella del segreto da aggiornare (`token`, `simple-http`, o `oauth2`). |
-| `meta` | Deve contenere un `action` proprietà con valore `retry`. |
+| `attributes` | Deve contenere una proprietà `type_of` corrispondente a quella del segreto da aggiornare (`token`, `simple-http` o `oauth2`). |
+| `meta` | Deve contenere una proprietà `action` con valore `retry`. |
 | `id` | ID del segreto che stai ritentando. Deve corrispondere all’ID fornito nel percorso della richiesta. |
 | `type` | Tipo di risorsa su cui viene eseguita l’operazione. Deve essere impostato su `secrets`. |
 
@@ -589,7 +589,7 @@ curl -X PATCH \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce i dettagli del segreto e il suo stato viene reimpostato su `pending`. Al termine dello scambio, lo stato del segreto viene aggiornato a `succeeded` o `failed` a seconda del risultato.
+In caso di esito positivo, la risposta restituisce i dettagli del segreto, con il relativo stato reimpostato su `pending`. Al termine dello scambio, lo stato del segreto verrà aggiornato a `succeeded` o `failed` a seconda del risultato.
 
 ```json
 {
@@ -644,11 +644,11 @@ In caso di esito positivo, la risposta restituisce i dettagli del segreto e il s
 }
 ```
 
-## Autorizza nuovamente un `oauth2-google` segreto {#reauthorize}
+## Riautorizza un segreto `oauth2-google` {#reauthorize}
 
-Ogni `oauth2-google` Il segreto contiene un `meta.authorization_url_expires_at` proprietà che indica la scadenza dell’URL di autorizzazione. Trascorso questo tempo, il segreto deve essere nuovamente autorizzato per poter rinnovare il processo di autenticazione.
+Ogni segreto `oauth2-google` contiene una proprietà `meta.authorization_url_expires_at` che indica la scadenza dell&#39;URL di autorizzazione. Trascorso questo tempo, il segreto deve essere nuovamente autorizzato per poter rinnovare il processo di autenticazione.
 
-Per autorizzare nuovamente un `oauth2-google` segreto, fai una richiesta PATCH per il segreto in questione.
+Per autorizzare nuovamente un segreto `oauth2-google`, effettuare una richiesta PATCH per il segreto in questione.
 
 **Formato API**
 
@@ -658,11 +658,11 @@ PATCH /secrets/{SECRET_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{SECRET_ID}` | Il `id` del segreto che desideri autorizzare nuovamente. |
+| `{SECRET_ID}` | `id` del segreto che si desidera autorizzare di nuovo. |
 
 **Richiesta**
 
-Il `data` l&#39;oggetto nel payload della richiesta deve contenere `meta.action` proprietà impostata su `reauthorize`.
+L&#39;oggetto `data` nel payload della richiesta deve contenere una proprietà `meta.action` impostata su `reauthorize`.
 
 ```shell
 curl -X PATCH \
@@ -795,7 +795,7 @@ L’API di Reactor consente di aggiungere note a determinate risorse, inclusi i 
 
 >[!NOTE]
 >
->Consulta la [guida dell’endpoint &quot;notes&quot;](./notes.md) per informazioni dettagliate su come creare e modificare le note per le risorse API di Reactor.
+>Per informazioni dettagliate su come creare e modificare le note per le risorse API di Reactor, consulta la [guida dell’endpoint &quot;notes&quot;](./notes.md).
 
 Per recuperare tutte le note relative a un segreto, effettua una richiesta GET.
 
@@ -870,13 +870,13 @@ In caso di esito positivo, la risposta restituisce un elenco di note appartenent
 
 ## Recuperare le risorse correlate per un segreto {#related}
 
-Le seguenti chiamate mostrano come recuperare le risorse correlate per un segreto. Quando [ricerca di un segreto](#lookup), queste relazioni sono elencate in `relationships` proprietà.
+Le seguenti chiamate mostrano come recuperare le risorse correlate per un segreto. Quando [cerca un segreto](#lookup), queste relazioni sono elencate nella proprietà `relationships`.
 
 Per ulteriori informazioni sulle relazioni nell’API di Reactor, consulta la [guida delle relazioni](../guides/relationships.md).
 
 ### Cercare un segreto nell’ambiente correlato {#environment}
 
-Per cercare l’ambiente che utilizza un segreto, aggiungi `/environment` al percorso di una richiesta GET.
+Per cercare l&#39;ambiente che utilizza un segreto, devi aggiungere `/environment` al percorso di una richiesta GET.
 
 **Formato API**
 
@@ -985,7 +985,7 @@ In caso di esito positivo, la risposta restituisce i dettagli dell’ambiente.
 
 ### Cercare la proprietà correlata per un segreto {#property}
 
-Per cercare la proprietà a cui appartiene un segreto, aggiungi `/property` al percorso di una richiesta GET.
+Per cercare la proprietà a cui appartiene un segreto, devi aggiungere `/property` al percorso di una richiesta GET.
 
 **Formato API**
 

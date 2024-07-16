@@ -31,7 +31,7 @@ I tag sono offerti ai clienti di [!DNL Adobe Experience Cloud] come funzionalit�
 
 Utilizza il nella guida del prodotto nel pannello a destra per ulteriori informazioni sui tag e visualizzare le risorse disponibili aggiuntive.
 
-![Proprietà dei tag nell’interfaccia utente di Data Collection.](./images/ui/tags-overview/tags-properties.png)
+![Proprietà dei tag nell&#39;interfaccia utente di Data Collection.](./images/ui/tags-overview/tags-properties.png)
 
 ### Estensioni {#extensions}
 

@@ -7,11 +7,11 @@ exl-id: eaf4812e-32ec-4b07-82ef-60777f03623d
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '104'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
-# [!UICONTROL Valuta] tipo di dati
+# Tipo di dati [!UICONTROL Valuta]
 
 [!UICONTROL Valuta] è un tipo di dati XDM standard che descrive un importo di valuta, inclusi il tipo di valuta e la data di conversione.
 
@@ -19,9 +19,9 @@ ht-degree: 5%
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
-| `amount` | Doppio | L&#39;importo della valuta come definito dal `currencyCode`. |
-| `conversionDate` | DateTime | Timestamp di quando è stata effettuata la conversione della valuta. |
-| `currencyCode` | Stringa | Un codice ISO 4217 che indica il tipo di valuta che `amount` rappresenta. |
+| `amount` | Doppio | Quantità di valuta definita da `currencyCode`. |
+| `conversionDate` | Data e ora | Timestamp di quando è stata effettuata la conversione della valuta. |
+| `currencyCode` | Stringa | Codice ISO 4217 che indica il tipo di valuta rappresentato da `amount`. |
 
 {style="table-layout:auto"}
 

@@ -12,6 +12,6 @@ ht-degree: 0%
 
 # Casi d’uso supportati
 
-Adobe Experience Platform Web SDK potenzia un’ampia varietà di casi di utilizzo di personalizzazione con altre soluzioni Adobe, come Adobe Analytics, Audienci Manager, Target e Experienci Platform.
+Adobe Experience Platform Web SDK potenzia un’ampia varietà di casi di utilizzo di personalizzazione con altre soluzioni Adobe, come Adobe Analytics, Audience Manager, Target e Experience Platform.
 
-Per informazioni dettagliate sull’implementazione dei casi di utilizzo supportati, consulta la relativa documentazione in [Pagina dei casi di utilizzo dell’SDK per web: progetto](https://github.com/orgs/adobe/projects/18/views/1?filterQuery=).
+Per informazioni dettagliate sull&#39;implementazione dei casi d&#39;uso supportati, consulta la relativa documentazione nella [pagina dei casi d&#39;uso dell&#39;SDK Web: Progetto](https://github.com/orgs/adobe/projects/18/views/1?filterQuery=).

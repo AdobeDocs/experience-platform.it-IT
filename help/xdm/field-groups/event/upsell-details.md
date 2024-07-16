@@ -9,9 +9,9 @@ ht-degree: 3%
 
 ---
 
-# [!UICONTROL Dettagli della vendita in upselling] gruppo di campi schema
+# [!UICONTROL Dettagli di vendita in upselling] gruppo di campi schema
 
-[!UICONTROL Dettagli della vendita in upselling] è un gruppo di campi di schema standard per [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md) utilizzato per acquisire informazioni relative a un evento di marketing di upselling, inclusi dettagli sulla transazione e sulle diverse modalità di visualizzazione dell’offerta a un cliente.
+[!UICONTROL Dettagli di vendita in upselling] è un gruppo di campi dello schema standard per la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md) utilizzata per acquisire informazioni relative a un evento di marketing di vendita in upselling, inclusi i dettagli sulla transazione e i diversi modi in cui l&#39;offerta è stata visualizzata a un cliente.
 
 Il gruppo di campi fornisce un singolo campo di tipo oggetto, `upsells`. Le proprietà contenute in questo oggetto sono illustrate di seguito.
 
@@ -19,7 +19,7 @@ Il gruppo di campi fornisce un singolo campo di tipo oggetto, `upsells`. Le prop
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
-| `upsellImpressions` | Array di [Impression](../../data-types/impressions.md) | Un array che elenca le impression registrate (visualizzazioni digitali o impegni con l’offerta di upselling) per il cliente. |
+| `upsellImpressions` | Array di [impression](../../data-types/impressions.md) | Un array che elenca le impression registrate (visualizzazioni digitali o impegni con l’offerta di upselling) per il cliente. |
 | `upsellTransaction` | [Transazione](../../data-types/transaction.md) | Descrive la transazione di valuta per la vendita in upselling. |
 
 {style="table-layout:auto"}

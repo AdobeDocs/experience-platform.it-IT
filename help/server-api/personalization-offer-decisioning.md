@@ -1,49 +1,49 @@
 ---
-title: Personalizzazione tramite Offer Decisioning
+title: Personalization tramite Offer Decisioning
 description: Scopri come utilizzare l’API server per distribuire ed eseguire il rendering di esperienze personalizzate tramite Offer Decisioning.
 exl-id: 5348cd3e-08db-4778-b413-3339cb56b35a
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '572'
-ht-degree: 5%
+source-wordcount: '534'
+ht-degree: 2%
 
 ---
 
-# Personalizzazione tramite Offer Decisioning
+# Personalization tramite Offer Decisioning
 
 ## Panoramica {#overview}
 
-L’API del server di rete Edge può fornire esperienze personalizzate gestite in [Offer decisioning](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=it) al canale web.
+L&#39;API server Edge Network può distribuire esperienze personalizzate gestite in [Offer Decisioning](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=it) al canale Web.
 
-[!DNL Offer Decisioning] supporta un’interfaccia non visiva per creare, attivare e distribuire le attività e le esperienze di personalizzazione.
+[!DNL Offer Decisioning] supporta un&#39;interfaccia non visiva per creare, attivare e distribuire le attività e le esperienze di personalizzazione.
 
 ## Prerequisiti {#prerequisites}
 
-Personalizzazione tramite [!DNL Offer Decisioning] richiede di avere accesso a [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=it) prima di configurare l’integrazione.
+Personalization tramite [!DNL Offer Decisioning] richiede l&#39;accesso a [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=it) prima di configurare l&#39;integrazione.
 
 ## Configurare lo stream di dati {#configure-your-datastream}
 
-Prima di poter utilizzare l’API server in combinazione con Offer Decisioning, è necessario abilitare la personalizzazione Adobe Experience Platform nella configurazione dello stream di dati e abilitare **[!UICONTROL Offer decisioning]** opzione.
+Prima di poter utilizzare l&#39;API server in combinazione con Offer Decisioning, devi abilitare la personalizzazione Adobe Experience Platform nella configurazione dello stream di dati e l&#39;opzione **[!UICONTROL Offer Decisioning]**.
 
-Consulta la [guida sull’aggiunta di servizi a un flusso di dati](../datastreams/overview.md#adobe-experience-platform-settings), per informazioni dettagliate su come abilitare Offer Decisioning.
+Per informazioni dettagliate su come abilitare Offer Decisioning, consulta la [guida sull&#39;aggiunta di servizi a uno stream di dati](../datastreams/overview.md#adobe-experience-platform-settings).
 
-![Immagine dell’interfaccia utente che mostra la schermata di configurazione del servizio di stream di dati, con Offer decisioning selezionato](assets/aep-od-datastream.png)
+![Immagine dell&#39;interfaccia utente che mostra la schermata di configurazione del servizio stream di dati, con Offer decisioning selezionato](assets/aep-od-datastream.png)
 
-## Creazione di un pubblico {#audience-creation}
+## Creazione di pubblico {#audience-creation}
 
-[!DNL Offer Decisioning] si basa sul servizio di segmentazione di Adobe Experience Platform per la creazione di tipi di pubblico. Puoi trovare la documentazione di [!DNL Segmentation Service] [qui](../segmentation/home.md).
+[!DNL Offer Decisioning] si basa sul servizio di segmentazione di Adobe Experience Platform per la creazione del pubblico. La documentazione di [!DNL Segmentation Service] [è disponibile qui](../segmentation/home.md).
 
 ## Definizione degli ambiti decisionali {#creating-decision-scopes}
 
-Il [!DNL Offer Decision Engine] utilizza i dati Adobe Experience Platform e [Profili cliente in tempo reale](../profile/home.md), insieme al [!DNL Offer Library], per offrire offerte ai clienti e ai canali giusti al momento giusto.
+[!DNL Offer Decision Engine] utilizza i dati di Adobe Experience Platform e [i profili cliente in tempo reale](../profile/home.md), insieme a [!DNL Offer Library], per distribuire le offerte ai clienti e ai canali giusti al momento giusto.
 
-Per ulteriori informazioni su [!DNL Offer Decisioning Engine], consulta la sezione dedicata [documentazione](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=it).
+Per ulteriori informazioni su [!DNL Offer Decisioning Engine], consulta la [documentazione](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=it) dedicata.
 
-Dopo [configurazione dello stream di dati](#configure-your-datastream), devi definire gli ambiti decisionali da utilizzare nella campagna di personalizzazione.
+Dopo la [configurazione dello stream di dati](#configure-your-datastream), è necessario definire gli ambiti decisionali da utilizzare nella campagna di personalizzazione.
 
-[Ambiti decisionali](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html#add-decision-scopes) sono le stringhe JSON con codifica Base64 contenenti gli ID di attività e posizionamento che desideri [!DNL Offer Decisioning Service] da utilizzare per la proposta di offerte.
+[Gli ambiti decisionali](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html#add-decision-scopes) sono le stringhe JSON con codifica Base64 contenenti gli ID di attività e posizionamento che desideri che [!DNL Offer Decisioning Service] utilizzi per proporre le offerte.
 
-**JSON ambito decisione**
+**Ambito decisione JSON**
 
 ```json
 {
@@ -52,17 +52,17 @@ Dopo [configurazione dello stream di dati](#configure-your-datastream), devi def
 }
 ```
 
-**Stringa con codifica Base64 dell&#39;ambito decisionale**
+**Stringa con codifica Base64 per ambito decisionale**
 
 ```shell
 "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="
 ```
 
-Dopo aver creato le offerte e le raccolte, devi definire una [ambito della decisione](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html#add-decision-scopes).
+Dopo aver creato le offerte e le raccolte, devi definire un [ambito di decisione](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html#add-decision-scopes).
 
-Copia l’ambito di decisione con codifica Base64. Lo utilizzerai in `query` oggetto della richiesta API server.
+Copia l’ambito di decisione con codifica Base64. Verrà utilizzato nell&#39;oggetto `query` della richiesta API server.
 
-![Immagine dell’interfaccia utente che mostra l’interfaccia utente di Offer decisioning ed evidenzia l’ambito della decisione.](assets/decision-scope.png)
+![Immagine dell&#39;interfaccia utente che mostra l&#39;interfaccia utente Offer decisioning, evidenziando l&#39;ambito della decisione.](assets/decision-scope.png)
 
 ```json
 "query":{
@@ -88,7 +88,7 @@ Di seguito è descritta una richiesta completa che include un oggetto XDM comple
 
 >[!NOTE]
 >
->Il `xdm` e `data` gli oggetti sono facoltativi e sono obbligatori solo ad Offer decisioning se sono stati creati segmenti con condizioni che utilizzano campi in uno di questi oggetti.
+>Gli oggetti `xdm` e `data` sono facoltativi e sono obbligatori solo ad Offer decisioning se sono stati creati segmenti con condizioni che utilizzano campi in uno di questi oggetti.
 
 ```shell
 curl -X POST 'https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_ID}' \
@@ -181,7 +181,7 @@ curl -X POST 'https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 
 ### Risposta {#response}
 
-La rete Edge restituirà una risposta simile a quella riportata di seguito.
+L’Edge Network restituirà una risposta simile a quella riportata di seguito.
 
 ```json
 {
@@ -244,9 +244,9 @@ La rete Edge restituirà una risposta simile a quella riportata di seguito.
 }
 ```
 
-Se il visitatore è idoneo per un’attività di personalizzazione basata sui dati inviati a [!DNL Offer Decisioning], il contenuto pertinente dell&#39;attività si trova sotto `handle` oggetto, dove il tipo è `personalization:decisions`.
+Se il visitatore è idoneo per un&#39;attività di personalizzazione basata sui dati inviati a [!DNL Offer Decisioning], il contenuto dell&#39;attività pertinente verrà trovato nell&#39;oggetto `handle`, dove il tipo è `personalization:decisions`.
 
-Gli altri contenuti verranno restituiti sotto `handle` oggetto. Altri tipi di contenuto non sono rilevanti per [!DNL Offer Decisioning] personalizzazione. Se il visitatore è idoneo per più attività, queste saranno contenute in un array.
+Gli altri contenuti verranno restituiti anche nell&#39;oggetto `handle`. Altri tipi di contenuto non sono rilevanti per la personalizzazione [!DNL Offer Decisioning]. Se il visitatore è idoneo per più attività, queste saranno contenute in un array.
 
 La tabella seguente spiega gli elementi chiave di quella parte della risposta.
 

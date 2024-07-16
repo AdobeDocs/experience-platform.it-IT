@@ -1,6 +1,6 @@
 ---
 title: Registrazione lato server per i dati A4T in Platform Web SDK
-description: Scopri come abilitare la registrazione lato server per Adobe Analytics for Target (A4T) utilizzando l’SDK web di Experienci Platform.
+description: Scopri come abilitare la registrazione lato server per Adobe Analytics for Target (A4T) utilizzando l’SDK web di Experience Platform.
 seo-title: Server-side logging for A4T data in Platform Web SDK
 seo-description: Learn how to enable server-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
 keywords: a4t;target;web;sdk;platform;logging;
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Registrazione lato server per i dati A4T in Platform Web SDK
 
-Adobe Experience Platform Web SDK consente di implementare la funzionalità Adobe Analytics for Target (A4T) sulla rete Edge di Platform. Quando la registrazione lato server è abilitata, tutti gli hit di Analytics inviati tramite la rete Edge vengono potenziati con i dettagli di Target sul lato server, senza dover passare attraverso il processo di unione degli hit.
+Adobe Experience Platform Web SDK consente di implementare la funzionalità Adobe Analytics for Target (A4T) sull’Edge Network della piattaforma. Quando la registrazione lato server è abilitata, tutti gli hit di Analytics inviati tramite l’Edge Network vengono potenziati con i dettagli di Target sul lato server, senza dover passare attraverso la procedura di unione degli hit.
 
 La registrazione lato server per Analytics è abilitata quando Analytics è abilitato nella configurazione dello stream di dati:
 
@@ -26,4 +26,4 @@ Il diagramma seguente mostra il flusso dei dati nel sistema quando è abilitata 
 
 ## Passaggi successivi
 
-Questa guida tratta la registrazione lato server per i dati A4T nell’SDK per web. Consulta la guida su [registrazione lato client](./client-side.md) per ulteriori informazioni su come gestire i dati A4T sul lato client.
+Questa guida tratta la registrazione lato server per i dati A4T nell’SDK per web. Per ulteriori informazioni su come gestire i dati A4T sul lato client, consulta la guida alla [registrazione lato client](./client-side.md).

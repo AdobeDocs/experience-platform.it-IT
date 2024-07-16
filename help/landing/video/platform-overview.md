@@ -18,6 +18,6 @@ ht-degree: 0%
 
 Questo video offre una rapida introduzione ad Experience Platform e illustra alcune delle problematiche aziendali che è possibile risolvere.
 
-Per ulteriori informazioni, consulta [Panoramica Experience Platform](../home.md).
+Per ulteriori informazioni, leggere l&#39;[Experience Platform di panoramica](../home.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/32797?quality=12&learn=on)

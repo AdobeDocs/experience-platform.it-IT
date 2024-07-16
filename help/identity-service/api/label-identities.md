@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Etichettare un campo come identità
 
-I campi che contengono informazioni personali (PII, personally identifiable information) possono essere etichettati come campi di identità. Un valore fornito in un campo di identità viene interpretato come un’identità da [!DNL Identity Service]. Lo spazio dei nomi dell’identità è specificato come parte dell’etichettatura del campo.
+I campi che contengono informazioni personali (PII, personally identifiable information) possono essere etichettati come campi di identità. Un valore fornito in un campo di identità viene interpretato come identità da [!DNL Identity Service]. Lo spazio dei nomi dell’identità è specificato come parte dell’etichettatura del campo.
 
 Affinché un campo sia etichettato come identità devono essere soddisfatti i seguenti criteri:
 
@@ -22,8 +22,8 @@ Affinché un campo sia etichettato come identità devono essere soddisfatti i se
 - Le identità sono riconosciute solo nei dati delle serie temporali e dei record
 - Solo i campi PII devono essere contrassegnati come identità. La scelta di un campo che rappresenta dati più generici determinerebbe relazioni meno precise e potenziali errori di accesso alle identità correlate dal grafico delle identità
 
-Per istruzioni su come utilizzare l’API Schema Registry per etichettare un campo come identità, visita [guida dell’endpoint &quot;descriptors&quot;](../../xdm/api/descriptors.md#create).
+Per istruzioni su come utilizzare l&#39;API Schema Registry per etichettare un campo come identità, visita la [guida dell&#39;endpoint dei descrittori](../../xdm/api/descriptors.md#create).
 
 ## Passaggi successivi
 
-Procedi all’esercitazione successiva per [elenca identità cluster](./list-cluster-identites.md)
+Procedi all&#39;esercitazione successiva per [elencare le identità del cluster](./list-cluster-identites.md)

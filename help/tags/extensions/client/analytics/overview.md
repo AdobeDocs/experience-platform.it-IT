@@ -4,7 +4,7 @@ description: Scopri le caratteristiche dell’estensione tag di Adobe Analytics 
 exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '2275'
+source-wordcount: '2105'
 ht-degree: 95%
 
 ---
@@ -330,13 +330,13 @@ Se lo desideri, configura gerarchie aggiuntive.
 
 #### Nome pagina
 
-Questo valore fa riferimento al nome di una determinata pagina e corrisponde al [`pageName` variabile](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html) in Analytics.
+Questo valore fa riferimento al nome di una determinata pagina e corrisponde alla variabile [`pageName`](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html) in Analytics.
 
 >[!IMPORTANT]
 >
 >Nelle implementazioni di Adobe Experience Manager, questa variabile indica all’AEM dove memorizzare il rapporto Analytics recuperato. Per garantire la corretta persistenza dei rapporti, la stringa del nome della pagina deve essere formattata come un percorso del sito separato da due punti.
 >
->Ad esempio, una pagina web in `content/we-retail/language-masters/en/men.html` deve avere il valore nome pagina pari a `content:we-retail:language-masters:en:men`.
+>Ad esempio, una pagina Web in `content/we-retail/language-masters/en/men.html` deve avere il valore del nome pagina `content:we-retail:language-masters:en:men`.
 
 #### Altre informazioni
 
@@ -351,7 +351,7 @@ Queste impostazioni includono:
 * Campaign
 * ID acquisto
 
-   Specifica un valore o un parametro di query
+  Specifica un valore o un parametro di query
 
 * Stato
 * ZIP

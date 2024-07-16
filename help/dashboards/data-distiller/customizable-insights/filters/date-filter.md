@@ -1,7 +1,8 @@
 ---
 title: Creare un filtro data
 description: Scopri come filtrare le informazioni personalizzate per data.
-source-git-commit: 17ad52864bbca09844c0241b6451e6811bd8f413
+exl-id: fa05d651-ea43-41f0-9b7d-f19c4a9ac256
+source-git-commit: 5bb954da7c1e05922a4e0f8d0bc7d3ab5c8e0e58
 workflow-type: tm+mt
 source-wordcount: '662'
 ht-degree: 0%
@@ -10,25 +11,25 @@ ht-degree: 0%
 
 # Creare un filtro data {#create-date-filter}
 
-Per filtrare le informazioni in base alla data, è necessario aggiungere parametri alle query SQL che possono accettare vincoli di data. Questa operazione viene eseguita come parte del flusso di lavoro per la creazione di insight in modalità query pro. Consulta la [documentazione della modalità query pro](#query-pro-mode) per scoprire come immettere SQL per gli approfondimenti.
+Per filtrare le informazioni in base alla data, è necessario aggiungere parametri alle query SQL che possono accettare vincoli di data. Questa operazione viene eseguita come parte del flusso di lavoro per la creazione di insight in modalità query pro. Consulta la [documentazione sulla modalità query pro](#query-pro-mode) per scoprire come immettere SQL per ottenere informazioni approfondite.
 
 I parametri di query consentono di lavorare con i dati dinamici in quanto fungono da segnaposto per i valori aggiunti in fase di esecuzione. Questi valori dei segnaposto possono essere aggiornati tramite l’interfaccia utente e consentono agli utenti meno tecnici di aggiornare le informazioni in base a intervalli di date.
 
-Se non conosci i parametri di query, consulta la documentazione per [istruzioni su come implementare query con parametri](../../../../query-service/ui/parameterized-queries.md).
+Se non conosci i parametri di query, consulta la documentazione di [istruzioni su come implementare query con parametri](../../../../query-service/ui/parameterized-queries.md).
 
 ## Applicare un filtro data al dashboard {#apply-date-filter}
 
-Per applicare un filtro data, seleziona **[!UICONTROL Aggiungi filtro]**, quindi **[!UICONTROL Filtro data]** dal menu a discesa della vista dashboard.
+Per applicare un filtro data, seleziona **[!UICONTROL Aggiungi filtro]**, quindi **[!UICONTROL Filtro data]** dal menu a discesa della visualizzazione del dashboard.
 
-![Un dashboard personalizzato con Aggiungi filtro e il relativo menu a discesa evidenziato.](../../../images/customizable-insights/add-filter.png)
+![Dashboard personalizzato con filtro Aggiungi e menu a discesa evidenziato.](../../../images/customizable-insights/add-filter.png)
 
 ## Modifica il codice SQL per includere i parametri di query della data {#include-date-parameters}
 
-Quindi, assicurati che il codice SQL includa i parametri di query per consentire un intervallo di date. Se non sono ancora stati incorporati i parametri di query nell&#39;istruzione SQL, modificare le informazioni per includere tali parametri. Consulta la documentazione per istruzioni su come [modificare un approfondimento](../query-pro-mode.md#edit).
+Quindi, assicurati che il codice SQL includa i parametri di query per consentire un intervallo di date. Se non sono ancora stati incorporati i parametri di query nell&#39;istruzione SQL, modificare le informazioni per includere tali parametri. Per istruzioni su come [modificare un approfondimento](../query-pro-mode.md#edit), consulta la documentazione.
 
 >[!TIP]
 >
->Si consiglia di aggiungere `$START_DATE` e `$END_DATE` parametri dell’istruzione SQL in ciascuno dei grafici per i quali si desidera abilitare i filtri di data.
+>Si consiglia di aggiungere `$START_DATE` e `$END_DATE` parametri all&#39;istruzione SQL in ciascuno dei grafici per i quali si desidera abilitare i filtri di data.
 
 >[!NOTE]
 >
@@ -36,7 +37,7 @@ Quindi, assicurati che il codice SQL includa i parametri di query per consentire
 
 Se il modello dati o le tabelle che si sta analizzando hanno un componente tempo, è possibile raggruppare i dati per data e quindi applicare questi filtri data.
 
-L&#39;istruzione SQL di esempio seguente illustra come incorporare `$START_DATE` e `$END_DATE` parametri e utilizzi `cast` per inquadrare il componente tempo come una data.
+L&#39;istruzione SQL di esempio seguente illustra come incorporare i parametri `$START_DATE` e `$END_DATE` e utilizza `cast` per inquadrare il componente tempo come una data.
 
 ```sql
 SELECT Sum(personalization_consent_count) AS Personalization,
@@ -59,21 +60,21 @@ La schermata seguente evidenzia i vincoli di data incorporati nell’istruzione 
 >
 >Durante la composizione dell’istruzione in modalità query pro, è necessario fornire valori di esempio per ciascun parametro al fine di eseguire l’istruzione SQL e generare il grafico. I valori di esempio forniti durante la composizione dell’istruzione vengono sostituiti dai valori effettivi selezionati per il filtro data (o globale) in fase di esecuzione.
 
-![Il [!UICONTROL Immetti SQL] con i parametri di data evidenziati nel linguaggio SQL.](../../../images/customizable-insights/sql-date-parameters.png)
+![Finestra di dialogo [!UICONTROL Inserisci SQL] con i parametri di data evidenziati nell&#39;istruzione SQL.](../../../images/customizable-insights/sql-date-parameters.png)
 
 ## Abilita i parametri di data in ogni informazione approfondita {#enable-date-parameters}
 
-Dopo aver incorporato i parametri appropriati nell’istruzione SQL delle informazioni, `Start_date` e `End_date` le variabili sono ora disponibili come interruttori nel compositore widget. Consulta la [sezione popolamento widget modalità query pro](#populate-widget) per informazioni su come modificare un approfondimento.
+Dopo aver incorporato i parametri appropriati nell&#39;istruzione SQL delle informazioni, le variabili `Start_date` e `End_date` sono ora disponibili come opzioni nel compositore widget. Per informazioni su come modificare un approfondimento, consulta la sezione [popolazione widget modalità query pro](#populate-widget).
 
-Dal compositore widget, seleziona attiva per abilitare `Start_date` e `End_date` parametri.
+Dal compositore widget, selezionare Attiva/Disattiva per abilitare i parametri `Start_date` e `End_date`.
 
-![Il compositore widget con Start_date e End_date viene evidenziato.](../../../images/customizable-insights/widget-composer-date-filter-toggles.png)
+![Il compositore widget con le opzioni Start_date e End_date è evidenziato.](../../../images/customizable-insights/widget-composer-date-filter-toggles.png)
 
 Quindi, seleziona i parametri di query appropriati dai menu a discesa.
 
 ![Il compositore widget con il menu a discesa Start_date evidenziato.](../../../images/customizable-insights/widget-composer-date-filter-dropdown.png)
 
-Infine, seleziona **[!UICONTROL Salva e chiudi]** per tornare alla dashboard. I filtri di data sono ora abilitati per tutte le informazioni che hanno parametri di data di inizio e di fine.
+Infine, seleziona **[!UICONTROL Salva e chiudi]** per tornare al dashboard. I filtri di data sono ora abilitati per tutte le informazioni che hanno parametri di data di inizio e di fine.
 
 ## Utilizzare il filtro data
 
@@ -83,7 +84,7 @@ Per utilizzare un filtro data personalizzato, seleziona l’icona del calendario
 >
 >La semplice aggiunta di un filtro per data non modificherà i grafici. Devi modificare ciascuna informazione per includere la data di inizio e di fine scelte.
 
-![Un dashboard personalizzato con il calendario del filtro data evidenziato.](../../../images/customizable-insights/date-filter.png)
+![Dashboard personalizzato con il calendario del filtro data evidenziato.](../../../images/customizable-insights/date-filter.png)
 
 Dopo aver selezionato un intervallo di date dal dashboard, le informazioni che contengono parametri di data nel codice SQL visualizzeranno le opzioni del filtro data nel compositore widget.
 
@@ -93,6 +94,6 @@ Dopo aver selezionato un intervallo di date dal dashboard, le informazioni che c
 
 ## Eliminare un filtro data {#delete-date-filter}
 
-Per rimuovere il filtro data, seleziona l’icona Elimina filtro (![Icona Elimina filtro.](../../../images/customizable-insights/delete-filter-icon.png)).
+Per rimuovere il filtro di data, selezionare l&#39;icona Elimina filtro (![Icona Elimina filtro.](../../../images/customizable-insights/delete-filter-icon.png)).
 
-![Dashboard personalizzato con l’icona di eliminazione del filtro evidenziata.](../../../images/customizable-insights/delete-date-filter.png)
+![Dashboard personalizzato con l&#39;icona di eliminazione del filtro evidenziata.](../../../images/customizable-insights/delete-date-filter.png)

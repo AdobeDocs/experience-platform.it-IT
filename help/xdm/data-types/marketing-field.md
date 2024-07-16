@@ -10,22 +10,22 @@ ht-degree: 1%
 
 ---
 
-# [!UICONTROL Campo preferenza di marketing generica] tipo di dati
+# [!UICONTROL Tipo di dati campo preferenza marketing generica]
 
-[!UICONTROL Campo preferenza di marketing generica] è un tipo di dati XDM standard che descrive la selezione di un cliente per una particolare preferenza di marketing.
+[!UICONTROL Il campo delle preferenze di marketing generiche] è un tipo di dati XDM standard che descrive la selezione di un cliente per una particolare preferenza di marketing.
 
 >[!NOTE]
 >
->Questo tipo di dati è destinato a essere utilizzato per personalizzare la struttura degli schemi di consenso della tua organizzazione utilizzando [[!UICONTROL Consensi e preferenze] gruppo di campi](../field-groups/profile/consents.md) come base di riferimento.
+>Questo tipo di dati è destinato a essere utilizzato per personalizzare la struttura degli schemi di consenso della tua organizzazione utilizzando come base di riferimento il gruppo di campi [[!UICONTROL Consensi e preferenze]](../field-groups/profile/consents.md).
 >
->Se hai bisogno di un `subscriptions` mappatura per un particolare campo delle preferenze di marketing, è necessario utilizzare [campo di marketing con tipo di dati abbonamenti](./marketing-field-subscriptions.md) invece.
+>Se hai bisogno di una mappa `subscriptions` per un particolare campo delle preferenze di marketing, devi utilizzare il [campo di marketing con tipo di dati abbonamenti](./marketing-field-subscriptions.md).
 
 ![](../images/data-types/marketing-field.png)
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
 | `reason` | Stringa | Quando un cliente rinuncia a un caso di utilizzo di marketing, questo campo stringa rappresenta il motivo per cui il cliente ha rinunciato. |
-| `time` | DateTime | Una marca temporale ISO 8601 indicante quando la preferenza di marketing è cambiata, se applicabile. |
+| `time` | Data e ora | Una marca temporale ISO 8601 indicante quando la preferenza di marketing è cambiata, se applicabile. |
 | `val` | Stringa | Scelta preferenziale fornita dal cliente per questo caso d’uso di marketing. Per i valori e le definizioni accettati, consulta la tabella seguente. |
 
 {style="table-layout:auto"}
@@ -34,12 +34,12 @@ La tabella seguente illustra i valori accettati per `val`:
 
 | Valore | Titolo | Descrizione |
 | --- | --- | --- |
-| `y` | Sì (consenso) | Il cliente ha acconsentito alla preferenza. In altre parole, **fare** acconsentire all&#39;uso dei loro dati come indicato dalla preferenza in questione. |
-| `n` | No (rinuncia) | Il cliente ha rinunciato alla preferenza. In altre parole, **non** acconsentire all&#39;uso dei loro dati come indicato dalla preferenza in questione. |
-| `p` | Verifica in sospeso | Il sistema non ha ancora ricevuto un valore di preferenza finale. Questo viene spesso utilizzato come parte di un consenso che richiede una verifica in due fasi. Ad esempio, se un cliente acconsente alla ricezione di e-mail, il consenso viene impostato su `p` fino a quando non seleziona un collegamento in un’e-mail per verificare di aver fornito l’indirizzo e-mail corretto, dopodiché il consenso verrà aggiornato a `y`.<br><br>Se questa preferenza non utilizza un processo di verifica a due insiemi, `p` La scelta può invece essere utilizzata per indicare che il cliente non ha ancora risposto al prompt del consenso. Ad esempio, puoi impostare automaticamente il valore su `p` sulla prima pagina di un sito web, prima che il cliente abbia risposto al prompt del consenso. Nelle giurisdizioni che non richiedono il consenso esplicito, è possibile utilizzarlo anche per indicare che il cliente non ha esplicitamente rinunciato (in altre parole, si presume il consenso). |
+| `y` | Sì (consenso) | Il cliente ha acconsentito alla preferenza. In altre parole, **acconsentono** all&#39;utilizzo dei propri dati come indicato dalla preferenza in questione. |
+| `n` | No (rinuncia) | Il cliente ha rinunciato alla preferenza. In altre parole, **non** acconsentono all&#39;utilizzo dei propri dati come indicato dalla preferenza in questione. |
+| `p` | Verifica in sospeso | Il sistema non ha ancora ricevuto un valore di preferenza finale. Questo viene spesso utilizzato come parte di un consenso che richiede una verifica in due fasi. Ad esempio, se un cliente acconsente alla ricezione di e-mail, tale consenso viene impostato su `p` fino a quando non seleziona un collegamento in un messaggio e-mail per verificare di aver fornito l&#39;indirizzo e-mail corretto, nel qual caso il consenso verrà aggiornato a `y`.<br><br>Se questa preferenza non utilizza un processo di verifica a due set, è possibile utilizzare la scelta `p` per indicare che il cliente non ha ancora risposto alla richiesta di consenso. Ad esempio, puoi impostare automaticamente il valore su `p` nella prima pagina di un sito Web, prima che il cliente abbia risposto alla richiesta di consenso. Nelle giurisdizioni che non richiedono il consenso esplicito, è possibile utilizzarlo anche per indicare che il cliente non ha esplicitamente rinunciato (in altre parole, si presume il consenso). |
 | `u` | Sconosciuto | Informazioni sulle preferenze del cliente sconosciute. |
-| `dy` | Predefinito di Sì (consenso) | Il cliente non ha fornito un valore di consenso e viene trattato come un consenso (&quot;Sì&quot;) per impostazione predefinita. In altre parole, si presume il consenso fino a quando il cliente non indica il contrario.<br><br>Tieni presente che se le leggi o le modifiche all’informativa sulla privacy della tua azienda determinano modifiche alle impostazioni predefinite di alcuni o di tutti gli utenti, devi aggiornare manualmente tutti i profili contenenti i valori predefiniti. |
-| `dn` | Predefinito per No (rinuncia) | Il cliente non ha fornito un valore di consenso e per impostazione predefinita viene trattato come una rinuncia (&quot;No&quot;). In altre parole, si presume che il cliente abbia negato il consenso fino a quando non indica diversamente.<br><br>Tieni presente che se le leggi o le modifiche all’informativa sulla privacy della tua azienda determinano modifiche alle impostazioni predefinite di alcuni o di tutti gli utenti, devi aggiornare manualmente tutti i profili contenenti i valori predefiniti. |
+| `dy` | Predefinito di Sì (consenso) | Il cliente non ha fornito un valore di consenso e viene trattato come un consenso (&quot;Sì&quot;) per impostazione predefinita. In altre parole, si presume il consenso fino a quando il cliente non indica il contrario.<br><br>Se le leggi o le modifiche all&#39;informativa sulla privacy della tua azienda determinano modifiche alle impostazioni predefinite di alcuni o di tutti gli utenti, devi aggiornare manualmente tutti i profili contenenti i valori predefiniti. |
+| `dn` | Predefinito per No (rinuncia) | Il cliente non ha fornito un valore di consenso e per impostazione predefinita viene trattato come una rinuncia (&quot;No&quot;). In altre parole, si presume che il cliente abbia negato il consenso fino a quando non indica diversamente.<br><br>Se le leggi o le modifiche all&#39;informativa sulla privacy della tua azienda determinano modifiche alle impostazioni predefinite di alcuni o di tutti gli utenti, devi aggiornare manualmente tutti i profili contenenti i valori predefiniti. |
 | `LI` | Interesse legittimo | Il legittimo interesse commerciale a raccogliere e trattare tali dati per lo scopo specificato supera il potenziale danno che essi comportano per l’individuo. |
 | `CT` | Contratto | La raccolta dei dati per lo scopo specificato è necessaria per adempiere agli obblighi contrattuali con la persona. |
 | `CP` | Rispetto di un obbligo legale | La raccolta dei dati per lo scopo specificato è necessaria per soddisfare gli obblighi legali dell&#39;impresa. |

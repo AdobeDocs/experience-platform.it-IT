@@ -13,7 +13,7 @@ ht-degree: 16%
 
 Un pacchetto di estensione rappresenta un’[estensione](./extensions.md) creata da uno sviluppatore di estensioni. Ulteriori funzionalità che possono essere rese disponibili agli utenti di tag sono definite da un pacchetto di estensione. Queste funzionalità possono includere moduli principali e moduli condivisi, anche se vengono spesso fornite come [componenti regola](./rule-components.md) (eventi, condizioni e azioni) e [elementi dati](./data-elements.md).
 
-Un pacchetto di estensione è di proprietà dello sviluppatore [azienda](./companies.md). I proprietari dei pacchetti di estensione possono autorizzare altre aziende a utilizzare le loro versioni private dei pacchetti. A ogni azienda autorizzata viene concessa un’autorizzazione di utilizzo per un singolo pacchetto di estensione, valida per tutte le versioni private future e correnti del pacchetto.
+Un pacchetto di estensione appartiene alla [società](./companies.md) dello sviluppatore. I proprietari dei pacchetti di estensione possono autorizzare altre aziende a utilizzare le loro versioni private dei pacchetti. A ogni azienda autorizzata viene concessa un’autorizzazione di utilizzo per un singolo pacchetto di estensione, valida per tutte le versioni private future e correnti del pacchetto.
 
 ## Introduzione
 
@@ -31,7 +31,7 @@ GET /extension_packages/{EXTENSION_PACKAGE_ID}/extension_package_usage_authoriza
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{PROPERTY_ID}` | Il `ID` della proprietà di cui desideri elencare l’autorizzazione per l’utilizzo del pacchetto di estensione. |
+| `{PROPERTY_ID}` | `ID` della proprietà di cui desideri elencare l’autorizzazione per l’utilizzo del pacchetto di estensione. |
 
 {style="table-layout:auto"}
 
@@ -102,7 +102,7 @@ In caso di esito positivo, la risposta restituisce un elenco di pacchetti di est
 
 ## Creare un’autorizzazione per l’utilizzo del pacchetto di estensione {#create}
 
-Creare un’autorizzazione per l’utilizzo del pacchetto di estensione per ogni [pacchetto di estensione](./extension-packages.md) e `{ORG_ID}` dell’organizzazione che desideri autorizzare. Per creare una nuova autorizzazione per l’utilizzo del pacchetto di estensione, effettua una richiesta POST all’endpoint seguente.
+Creare un&#39;autorizzazione per l&#39;utilizzo del pacchetto di estensione per ogni [pacchetto di estensione](./extension-packages.md) e `{ORG_ID}` dell&#39;organizzazione che si desidera autorizzare. Per creare una nuova autorizzazione per l’utilizzo del pacchetto di estensione, effettua una richiesta POST all’endpoint seguente.
 
 **Formato API**
 
@@ -112,7 +112,7 @@ POST /extension_packages/{EXTENSION_PACKAGE_ID}/extension_package_usage_authoriz
 
 | Parametro | Descrizione |
 | --- | --- |
-| `EXTENSION_PACKAGE_ID` | Il `ID` del pacchetto di estensione per cui desideri creare un’autorizzazione.&quot; |
+| `EXTENSION_PACKAGE_ID` | `ID` del pacchetto di estensione per il quale si desidera creare un&#39;autorizzazione.&quot; |
 
 {style="table-layout:auto"}
 
@@ -137,7 +137,7 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `attributes.authorized_org_id` | Il `ID` dell’organizzazione che desideri autorizzare. |
+| `attributes.authorized_org_id` | `ID` dell&#39;organizzazione che si desidera autorizzare. |
 
 **Risposta**
 
@@ -183,7 +183,7 @@ In caso di esito positivo, la risposta restituisce i dettagli della nuova autori
 
 >[!NOTE]
 >
->Nell’esempio di risposta precedente, l’autorizzazione si trova attualmente in `pending_approval` fase. Prima di utilizzare il pacchetto di estensione, l’organizzazione deve approvare l’autorizzazione. Gli utenti dell’organizzazione possono sfogliare il pacchetto di estensione privato mentre l’autorizzazione è in attesa di approvazione, ma non sono in grado di installarlo e non possono trovarlo nel catalogo delle estensioni.
+>Nell&#39;esempio di risposta precedente, l&#39;autorizzazione si trova attualmente nella fase `pending_approval`. Prima di utilizzare il pacchetto di estensione, l’organizzazione deve approvare l’autorizzazione. Gli utenti dell’organizzazione possono sfogliare il pacchetto di estensione privato mentre l’autorizzazione è in attesa di approvazione, ma non sono in grado di installarlo e non possono trovarlo nel catalogo delle estensioni.
 
 ## Recuperare un elenco di autorizzazioni di utilizzo del pacchetto di estensione {#list_authorizations}
 
@@ -264,7 +264,7 @@ In caso di esito positivo, la risposta restituisce un elenco di pacchetti di est
 
 ## Eliminare l’autorizzazione per l’utilizzo di un pacchetto di estensione {#delete}
 
-Per eliminare l’autorizzazione di utilizzo di un pacchetto di estensione, includi i relativi `ID` nel percorso di una richiesta DELETE. Questo impedisce all’organizzazione autorizzata di visualizzare le versioni private del pacchetto di estensione nel catalogo e di installarlo nelle relative proprietà.
+Per eliminare l&#39;autorizzazione di utilizzo di un pacchetto di estensione, includi `ID` nel percorso di una richiesta DELETE. Questo impedisce all’organizzazione autorizzata di visualizzare le versioni private del pacchetto di estensione nel catalogo e di installarlo nelle relative proprietà.
 
 >[!NOTE]
 >
@@ -278,7 +278,7 @@ DELETE /extension_package_usage_authorizations/{ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `ID` | Il `ID` dell’autorizzazione di utilizzo del pacchetto di estensione che desideri eliminare. |
+| `ID` | `ID` dell&#39;autorizzazione di utilizzo del pacchetto di estensione che si desidera eliminare. |
 
 {style="table-layout:auto"}
 
@@ -298,11 +298,11 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 204 (nessun con
 
 ## Aggiornare l’autorizzazione per l’utilizzo di un pacchetto di estensione {#update}
 
-Per approvare o rifiutare l’autorizzazione per l’utilizzo di un pacchetto di estensione, includi i relativi `ID` nel percorso di una richiesta PATCH.
+Per approvare o rifiutare l&#39;autorizzazione per l&#39;utilizzo di un pacchetto di estensione, includi `ID` nel percorso di una richiesta PATCH.
 
 >[!NOTE]
 >
->Per approvare o rifiutare l’autorizzazione all’utilizzo di un pacchetto di estensione per la tua azienda, è necessario disporre di `manage_properties` diritti.
+>Per approvare o rifiutare l&#39;autorizzazione per l&#39;utilizzo di un pacchetto di estensione per la società, è necessario disporre di `manage_properties` diritti.
 
 **Formato API**
 
@@ -312,7 +312,7 @@ PATCH /extension_package_usage_authorizations/{ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `ID` | Il `ID` dell’autorizzazione di utilizzo del pacchetto di estensione che desideri eliminare. |
+| `ID` | `ID` dell&#39;autorizzazione di utilizzo del pacchetto di estensione che si desidera eliminare. |
 
 {style="table-layout:auto"}
 
@@ -338,7 +338,7 @@ curl -X PATCH \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `attributes` | Attributi che desideri rivedere. Per le autorizzazioni di utilizzo del pacchetto di estensione puoi rivedere le relative `state`. |
+| `attributes` | Attributi che desideri rivedere. Per le autorizzazioni di utilizzo del pacchetto di estensione è possibile rivedere `state`. |
 
 **Risposta**
 
@@ -398,7 +398,7 @@ GET /extension_package_usage_authorizations/{ID}/extension_package
 
 | Parametro | Descrizione |
 | --- | --- |
-| `ID` | Il `ID` dell’autorizzazione di utilizzo del pacchetto di estensione che desideri recuperare. |
+| `ID` | `ID` dell&#39;autorizzazione di utilizzo del pacchetto di estensione che si desidera recuperare. |
 
 {style="table-layout:auto"}
 

@@ -22,7 +22,7 @@ Per utilizzare un playbook, passa a **[!UICONTROL Playbook per casi d’uso] > [
 >title="Creare un’istanza"
 >abstract="Generare un elenco di risorse come percorsi, tipi di pubblico, schemi o destinazioni da utilizzare in scenari di percorso o di attivazione."
 
-Prima di creare un’istanza del playbook, esplora i playbook disponibili per [scegli il playbook giusto](/help/use-case-playbooks/playbooks/choose.md). Quando sei pronto a procedere con un playbook e creare un’istanza, seleziona **[!UICONTROL Crea istanza]** per procedere con il playbook e generare risorse tecniche.
+Prima di creare un&#39;istanza del playbook, esplorare i playbook disponibili per [scegliere il playbook corretto](/help/use-case-playbooks/playbooks/choose.md). Quando sei pronto a procedere con un playbook e creare un’istanza, seleziona **[!UICONTROL Crea istanza]** per procedere con il playbook e generare risorse tecniche.
 
 ![Crea un’istanza di un playbook.](/help/use-case-playbooks/assets/playbooks/ui-guide/create-playbook-instance.png)
 
@@ -63,7 +63,7 @@ Il comportamento descritto sopra vale per tutte le risorse create, ad eccezione 
 >
 >Esegui il test nella sandbox di sviluppo e, quando è pronto, passa alla produzione.
 >
->Una volta generati gli oggetti, puoi continuare a testarli nelle sandbox di sviluppo aggiungendo dati. Puoi testare le risorse per tutto il tempo desiderato nella sandbox di sviluppo e replicare la logica delle risorse (definizioni di pubblico, percorsi, schemi e così via) nella sandbox di produzione quando lo desideri. Puoi passare alla sandbox di sviluppo e quindi alla sandbox di produzione utilizzando [funzionalità di riconoscimento dei dati](/help/use-case-playbooks/playbooks/data-awareness.md).
+>Una volta generati gli oggetti, puoi continuare a testarli nelle sandbox di sviluppo aggiungendo dati. Puoi testare le risorse per tutto il tempo desiderato nella sandbox di sviluppo e replicare la logica delle risorse (definizioni di pubblico, percorsi, schemi e così via) nella sandbox di produzione quando lo desideri. Puoi passare alla sandbox di sviluppo e quindi alla sandbox di produzione utilizzando la [funzionalità di riconoscimento dei dati](/help/use-case-playbooks/playbooks/data-awareness.md).
 
 ## Riutilizzare i playbook {#reuse-playbooks}
 

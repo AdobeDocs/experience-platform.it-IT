@@ -4,8 +4,8 @@ description: L’endpoint /tools nell’API degli strumenti sandbox consente di 
 exl-id: 529cb7d6-6b3f-459c-be03-35fc28b891cf
 source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
-source-wordcount: '152'
-ht-degree: 20%
+source-wordcount: '150'
+ht-degree: 22%
 
 ---
 
@@ -13,11 +13,11 @@ ht-degree: 20%
 
 Gli strumenti sandbox consentono di selezionare artefatti diversi ed esportarli in un pacchetto. Un pacchetto può essere costituito da uno o più oggetti. Tutti gli oggetti inclusi in un pacchetto devono appartenere alla stessa sandbox.
 
-Il `/tools` L’endpoint nell’API degli strumenti sandbox consente di elencare e recuperare i dati JSON del processo.
+L&#39;endpoint `/tools` nell&#39;API degli strumenti sandbox consente di elencare e recuperare i dati JSON del processo.
 
 ## Dettagli processo {#details}
 
-Per recuperare in modo indipendente i dati JSON del processo, effettua una richiesta GET al `/tools` e fornire l’ID del processo.
+Per recuperare in modo indipendente i dati JSON del processo, effettua una richiesta di GET all&#39;endpoint `/tools` e fornisci l&#39;ID del processo.
 
 **Formato API**
 
@@ -43,7 +43,7 @@ curl -X GET \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce i dettagli per l’ID del processo su cui viene eseguita la query, fornendo aggiornamenti dello stato in tempo reale come `completedTasks` e `failedTasks` vengono aggiornati man mano che il processo procede.
+In caso di esito positivo, la risposta restituisce i dettagli per l&#39;ID del processo su cui viene eseguita la query, fornendo aggiornamenti dello stato in tempo reale man mano che `completedTasks` e `failedTasks` vengono aggiornati all&#39;avanzamento del processo.
 
 ```json
 {

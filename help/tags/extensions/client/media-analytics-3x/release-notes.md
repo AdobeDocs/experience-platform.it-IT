@@ -4,7 +4,7 @@ description: Note aggiornate sulla versione dell’estensione tag Adobe Media An
 exl-id: 1ed0504d-d13c-4e7b-8eb1-78c54e62a523
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '171'
+source-wordcount: '175'
 ht-degree: 89%
 
 ---

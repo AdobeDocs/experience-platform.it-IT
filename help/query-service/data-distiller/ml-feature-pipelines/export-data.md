@@ -4,16 +4,16 @@ description: Scopri come condividere un set di dati di formazione preparato, cre
 exl-id: 75022acf-fafd-41d6-8dfa-ff3fd4c4fa7e
 source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '537'
-ht-degree: 3%
+source-wordcount: '457'
+ht-degree: 5%
 
 ---
 
 # Esportare dati in ambienti ML esterni
 
-Questo documento illustra come condividere un set di dati di formazione preparato creato con Data Distiller in una posizione di archiviazione cloud che l’ambiente di apprendimento può leggere per l’apprendimento e il punteggio del modello. L’esempio esporta il set di dati di formazione in [Data Landing Zone (DLZ)](../../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md). È possibile modificare la destinazione di archiviazione in base alle esigenze per lavorare con l&#39;ambiente di apprendimento automatico.
+Questo documento illustra come condividere un set di dati di formazione preparato creato con Data Distiller in una posizione di archiviazione cloud che l’ambiente di apprendimento può leggere per l’apprendimento e il punteggio del modello. L&#39;esempio esporta il set di dati di formazione in [Data Landing Zone (DLZ)](../../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md). È possibile modificare la destinazione di archiviazione in base alle esigenze per lavorare con l&#39;ambiente di apprendimento automatico.
 
-Il [Servizio di flusso per le destinazioni](https://developer.adobe.com/experience-platform-apis/references/destinations/) viene utilizzato per completare la pipeline delle funzioni inviando un set di dati di funzioni calcolate in una posizione di archiviazione cloud appropriata.
+Il servizio [Flusso per destinazioni](https://developer.adobe.com/experience-platform-apis/references/destinations/) viene utilizzato per completare la pipeline delle funzionalità inviando un set di dati di funzionalità calcolate in un percorso di archiviazione cloud appropriato.
 
 ## Creare la connessione di origine {#create-source-connection}
 
@@ -39,13 +39,13 @@ La connessione di destinazione è responsabile della connessione al file system 
 
 Le destinazioni di archiviazione cloud disponibili sono identificate ciascuna da un ID della specifica di connessione:
 
-| Tipo di archiviazione cloud | ID specifica di connessione |
+| Tipo di archiviazione cloud | ID connessione specifico |
 |-----------------------|--------------------------------------|
 | Amazon S3 | 4fce964d-3f37-408f-9778-e597338a21ee |
 | Archiviazione BLOB di Azure | 6d6b59bf-fb58-4107-9064-4d246c0e5bb2 |
 | Azure Data Lake | be2c3209-53bc-47e7-ab25-145db8b873e1 |
 | Data Landing Zone | 10440537-2a7b-4583-ac39-ed38d4b848e8 |
-| Archiviazione cloud Google | c5d93acb-ea8b-4b14-8f53-02138444ae99 |
+| Google Cloud Storage | c5d93acb-ea8b-4b14-8f53-02138444ae99 |
 | SFTP | 36965a81-b1c6-401b-99f8-22508f1e6a26 |
 
 ```python
@@ -91,7 +91,7 @@ Ogni tipo di archiviazione cloud disponibile è identificato da un ID della spec
 | Archiviazione BLOB di Azure | 95bd8965-fc8a-4119-b9c3-944c2c2df6d2 |
 | Azure Data Lake | 17be2013-2549-41ce-96e7-a70363bec293 |
 | Data Landing Zone | cd2fc47e-e838-4f38-a581-8fff2f99b63a |
-| Archiviazione cloud Google | 585c15c4-6cbf-4126-8f87-e26bff78b657 |
+| Google Cloud Storage | 585c15c4-6cbf-4126-8f87-e26bff78b657 |
 | SFTP | 354d6aad-4754-46e4-a576-1b384561c440 |
 
 Il codice seguente crea un flusso di dati con una pianificazione impostata per iniziare molto in futuro. Questo consente di attivare flussi ad hoc durante lo sviluppo del modello. Una volta creato un modello addestrato, è possibile aggiornare la pianificazione del flusso di dati per condividere il set di dati della feature sulla pianificazione desiderata.
@@ -170,7 +170,7 @@ activation_res
 
 ## Condivisione semplificata nella Data Landing Zone
 
-Per condividere un set di dati nell’area di destinazione dati in modo più semplice, la `aepp` la libreria fornisce `exportDatasetToDataLandingZone` funzione che esegue i passaggi precedenti in una singola chiamata di funzione:
+Per condividere un set di dati nella Data Landing Zone in modo più semplice, la libreria `aepp` fornisce una funzione `exportDatasetToDataLandingZone` che esegue i passaggi precedenti in una singola chiamata di funzione:
 
 ```python
 from aepp import exportDatasetToDataLandingZone

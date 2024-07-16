@@ -4,14 +4,14 @@ title: Configurazione formattazione file
 exl-id: 98fec559-9073-4517-a10e-34c2caf292d5
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '1093'
-ht-degree: 4%
+source-wordcount: '1094'
+ht-degree: 2%
 
 ---
 
 # Configurazione formattazione file
 
-Destination SDK supporta un set flessibile di funzioni che puoi configurare in base alle tue esigenze di integrazione. Tra queste funzioni è incluso il supporto per [!DNL CSV] formattazione del file.
+Destination SDK supporta un set flessibile di funzioni che puoi configurare in base alle tue esigenze di integrazione. Tra queste caratteristiche vi è il supporto per la formattazione del file [!DNL CSV].
 
 Quando crei destinazioni basate su file tramite Destination SDK, puoi definire la formattazione dei file CSV esportati. Puoi personalizzare molte opzioni di formattazione, ad esempio, ma non solo:
 
@@ -19,23 +19,23 @@ Quando crei destinazioni basate su file tramite Destination SDK, puoi definire l
 * Quale carattere utilizzare per citare i valori;
 * Come dovrebbero apparire i valori vuoti.
 
-A seconda della configurazione di destinazione, gli utenti visualizzeranno determinate opzioni nell’interfaccia utente quando si connettono a una destinazione basata su file. Puoi vedere come si presentano queste opzioni in [opzioni di formattazione dei file per le destinazioni basate su file](../../../ui/batch-destinations-file-formatting-options.md) documentazione.
+A seconda della configurazione di destinazione, gli utenti visualizzeranno determinate opzioni nell’interfaccia utente quando si connettono a una destinazione basata su file. Puoi vedere come si presentano queste opzioni nella documentazione di [opzioni di formattazione dei file per destinazioni basate su file](../../../ui/batch-destinations-file-formatting-options.md).
 
 
 Le impostazioni di formattazione dei file fanno parte della configurazione del server di destinazione per le destinazioni basate su file.
 
-Per capire dove questo componente si inserisce in un’integrazione creata con Destination SDK, consulta il diagramma riportato di seguito. [opzioni di configurazione](../configuration-options.md) oppure consulta la guida su come [utilizzare Destination SDK per configurare una destinazione basata su file](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
+Per capire dove questo componente si inserisce in un&#39;integrazione creata con Destination SDK, consulta il diagramma nella documentazione delle [opzioni di configurazione](../configuration-options.md) o consulta la guida su come [utilizzare Destination SDK per configurare una destinazione basata su file](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
-È possibile configurare le opzioni di formattazione del file tramite `/authoring/destination-servers` endpoint. Consulta le seguenti pagine di riferimento API per esempi dettagliati di chiamate API, in cui puoi configurare i componenti mostrati in questa pagina.
+È possibile configurare le opzioni di formattazione del file tramite l&#39;endpoint `/authoring/destination-servers`. Consulta le seguenti pagine di riferimento API per esempi dettagliati di chiamate API, in cui puoi configurare i componenti mostrati in questa pagina.
 
 * [Creare una configurazione del server di destinazione](../../authoring-api/destination-server/create-destination-server.md)
 * [Aggiornare una configurazione del server di destinazione](../../authoring-api/destination-server/update-destination-server.md)
 
-Questa pagina descrive tutte le impostazioni di formattazione dei file supportate per l&#39;esportazione `CSV` file.
+In questa pagina sono descritte tutte le impostazioni di formattazione dei file supportate per i file `CSV` esportati.
 
 >[!IMPORTANT]
 >
->Tutti i nomi e i valori dei parametri supportati da Destination SDK sono **distinzione maiuscole/minuscole**. Per evitare errori di distinzione tra maiuscole e minuscole, utilizza i nomi e i valori dei parametri esattamente come mostrato nella documentazione.
+>Tutti i nomi e i valori dei parametri supportati da Destination SDK sono **con distinzione tra maiuscole e minuscole**. Per evitare errori di distinzione tra maiuscole e minuscole, utilizza i nomi e i valori dei parametri esattamente come mostrato nella documentazione.
 
 ## Tipi di integrazione supportati {#supported-integration-types}
 
@@ -48,16 +48,16 @@ Consulta la tabella seguente per informazioni dettagliate sui tipi di integrazio
 
 ## Parametri supportati {#supported-parameters}
 
-È possibile modificare diverse proprietà dei file esportati in modo che corrispondano ai requisiti del sistema di ricezione dei file della destinazione, al fine di leggere e interpretare in modo ottimale i file ricevuti da Experienci Platform.
+È possibile modificare diverse proprietà dei file esportati in modo che corrispondano ai requisiti del sistema di ricezione dei file della destinazione, al fine di leggere e interpretare in modo ottimale i file ricevuti da Experience Platform.
 
 >[!NOTE]
 >
->Le opzioni CSV sono supportate solo quando si esportano file CSV. Il `fileConfigurations` questa sezione non è obbligatoria durante la configurazione di un nuovo server di destinazione. Se nella chiamata API non trasmetti alcun valore per le opzioni CSV, i valori predefiniti verranno recuperati da [tabella di riferimento più avanti](#file-formatting-reference-and-example) verrà utilizzato.
+>Le opzioni CSV sono supportate solo quando si esportano file CSV. La sezione `fileConfigurations` non è obbligatoria durante la configurazione di un nuovo server di destinazione. Se nella chiamata API non trasmetti alcun valore per le opzioni CSV, verranno utilizzati i valori predefiniti della [tabella di riferimento più avanti](#file-formatting-reference-and-example).
 
 
 ## Opzioni CSV in cui gli utenti non possono selezionare le opzioni di configurazione {#file-configuration-templating-none}
 
-Nell’esempio di configurazione seguente, tutte le opzioni CSV sono predefinite. Le impostazioni di esportazione definite in ciascuna `csvOptions` I parametri sono finali e gli utenti non possono modificarli.
+Nell’esempio di configurazione seguente, tutte le opzioni CSV sono predefinite. Le impostazioni di esportazione definite in ciascuno dei parametri `csvOptions` sono definitive e gli utenti non possono modificarle.
 
 ```json
 "fileConfigurations": {
@@ -129,7 +129,7 @@ Nell’esempio di configurazione seguente, tutte le opzioni CSV sono predefinite
 
 ## Opzioni CSV in cui gli utenti possono selezionare le opzioni di configurazione {#file-configuration-templating-pebble}
 
-Nell’esempio di configurazione seguente, nessuna delle opzioni CSV è predefinita. Il `value` in ciascuno dei `csvOptions` parametri è configurato in un campo corrispondente dei dati del cliente tramite `/destinations` endpoint (ad esempio [`customerData.quote`](../../functionality/destination-configuration/customer-data-fields.md#conditional-options) per `quote` file (opzione di formattazione del file) e gli utenti possono utilizzare l’interfaccia utente di Experienci Platform per selezionare tra le varie opzioni configurate nel campo dati cliente corrispondente. Puoi vedere come si presentano queste opzioni in [opzioni di formattazione dei file per le destinazioni basate su file](../../../ui/batch-destinations-file-formatting-options.md) documentazione.
+Nell’esempio di configurazione seguente, nessuna delle opzioni CSV è predefinita. `value` in ciascuno dei parametri `csvOptions` è configurato in un campo dati cliente corrispondente tramite l&#39;endpoint `/destinations` (ad esempio [`customerData.quote`](../../functionality/destination-configuration/customer-data-fields.md#conditional-options) per l&#39;opzione di formattazione del file `quote`) e gli utenti possono utilizzare l&#39;interfaccia utente di Experience Platform per selezionare tra le varie opzioni configurate nel campo dati cliente corrispondente. Puoi vedere come si presentano queste opzioni nella documentazione di [opzioni di formattazione dei file per destinazioni basate su file](../../../ui/batch-destinations-file-formatting-options.md).
 
 ```json
 {
@@ -177,30 +177,30 @@ Nell’esempio di configurazione seguente, nessuna delle opzioni CSV è predefin
 
 >[!TIP]
 >
->Le opzioni di formattazione del file CSV descritte di seguito sono documentate anche nel [Guida di Apache Spark per file CSV](https://spark.apache.org/docs/latest/sql-data-sources-csv.html). Le descrizioni utilizzate di seguito sono tratte dalla guida di Apache Spark.
+>Le opzioni di formattazione del file CSV descritte di seguito sono documentate anche nella [Guida di Apache Spark per i file CSV](https://spark.apache.org/docs/latest/sql-data-sources-csv.html). Le descrizioni utilizzate di seguito sono tratte dalla guida di Apache Spark.
 
 Di seguito è riportato un riferimento completo di tutte le opzioni di formattazione dei file disponibili in Destination SDK, insieme a esempi di output per ogni opzione.
 
 | Campo | Obbligatorio/facoltativo | Descrizione | Valore predefinito | Esempio di output 1 | Esempio di output 2 |
 |---|---|---|---|---|---|
-| `templatingStrategy` | Obbligatorio | Per ogni opzione di formattazione del file configurata, è necessario aggiungere il parametro `templatingStrategy`, che può avere due valori: <br><ul><li>`NONE`: utilizza questo valore se non intendi consentire agli utenti di selezionare tra valori diversi per una configurazione. Consulta [questa configurazione](#file-configuration-templating-none) ad esempio, in cui le opzioni di formattazione del file sono fisse.</li><li>`PEBBLE_V1`: utilizza questo valore se desideri consentire agli utenti di selezionare tra valori diversi per una configurazione. In questo caso, devi anche impostare un campo dati cliente corrispondente nel `/destination` configurazione dell’endpoint, per rendere note le varie opzioni agli utenti nell’interfaccia utente. Consulta [questa configurazione](#file-configuration-templating-pebble) ad esempio, in cui gli utenti possono selezionare tra diversi valori per le opzioni di formattazione del file.</li></ul> | - | - | - |
-| `compression.value` | Facoltativo | Codec di compressione da utilizzare per il salvataggio dei dati nel file. Valori supportati: `none`, `bzip2`, `gzip`, `lz4`, e `snappy`. | `none` | - | - |
-| `fileType.value` | Facoltativo | Specifica il formato del file di output. Valori supportati: `csv`, `parquet`, e `json`. | `csv` | - | - |
+| `templatingStrategy` | Obbligatorio | Per ogni opzione di formattazione del file configurata, è necessario aggiungere il parametro `templatingStrategy`, che può avere due valori: <br><ul><li>`NONE`: utilizzare questo valore se non si prevede di consentire agli utenti di selezionare valori diversi per una configurazione. Vedi [questa configurazione](#file-configuration-templating-none) per un esempio in cui le opzioni di formattazione del file sono fisse.</li><li>`PEBBLE_V1`: utilizzare questo valore se si desidera consentire agli utenti di selezionare valori diversi per una configurazione. In questo caso, devi anche impostare un campo dati cliente corrispondente nella configurazione dell&#39;endpoint `/destination`, per rendere note le varie opzioni agli utenti nell&#39;interfaccia utente. Vedi [questa configurazione](#file-configuration-templating-pebble) per un esempio in cui gli utenti possono selezionare tra valori diversi per le opzioni di formattazione del file.</li></ul> | - | - | - |
+| `compression.value` | Facoltativo | Codec di compressione da utilizzare per il salvataggio dei dati nel file. Valori supportati: `none`, `bzip2`, `gzip`, `lz4` e `snappy`. | `none` | - | - |
+| `fileType.value` | Facoltativo | Specifica il formato del file di output. Valori supportati: `csv`, `parquet` e `json`. | `csv` | - | - |
 | `csvOptions.quote.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Imposta un singolo carattere utilizzato per l&#39;escape dei valori tra virgolette, in cui il separatore può far parte del valore. | `null` | Esempio di valore predefinito: `quote.value: "u0000"` —> `male,NULJohn,LastNameNUL` | Esempio personalizzato: `quote.value: "\""` —> `male,"John,LastName"` |
-| `csvOptions.quoteAll.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Indica se tutti i valori devono essere sempre racchiusi tra virgolette. L&#39;impostazione predefinita prevede solo l&#39;escape di valori contenenti virgolette. | `false` | `quoteAll`:`false` --> `male,John,"TestLastName"` | `quoteAll`:`true` -->`"male","John","TestLastName"` |
-| `csvOptions.delimiter.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Imposta un separatore per ogni campo e valore. Il separatore può essere costituito da uno o più caratteri. | `,` | `delimiter`:`,` --> `comma-separated values"` | `delimiter`:`\t` --> `tab-separated values` |
-| `csvOptions.escape.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Imposta un singolo carattere utilizzato per eseguire l’escape delle virgolette all’interno di un valore già tra virgolette. | `\` | `"escape"`:`"\\"` --> `male,John,"Test,\"LastName5"` | `"escape"`:`"'"` --> `male,John,"Test,'''"LastName5"` |
+| `csvOptions.quoteAll.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Indica se tutti i valori devono essere sempre racchiusi tra virgolette. L&#39;impostazione predefinita prevede solo l&#39;escape di valori contenenti virgolette. | `false` | `quoteAll`:`false` —> `male,John,"TestLastName"` | `quoteAll`:`true` —>`"male","John","TestLastName"` |
+| `csvOptions.delimiter.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Imposta un separatore per ogni campo e valore. Il separatore può essere costituito da uno o più caratteri. | `,` | `delimiter`:`,` —> `comma-separated values"` | `delimiter`:`\t` —> `tab-separated values` |
+| `csvOptions.escape.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Imposta un singolo carattere utilizzato per l&#39;escape delle virgolette all&#39;interno di un valore già citato. | `\` | `"escape"`:`"\\"` —> `male,John,"Test,\"LastName5"` | `"escape"`:`"'"` —> `male,John,"Test,'''"LastName5"` |
 | `csvOptions.escapeQuotes.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Indica se i valori contenenti virgolette devono essere sempre racchiusi tra virgolette. L&#39;impostazione predefinita prevede l&#39;escape di tutti i valori contenenti una virgoletta. | `true` | - | - |
 | `csvOptions.header.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Indica se scrivere i nomi delle colonne come prima riga nel file esportato. | `true` | - | - |
-| `csvOptions.ignoreLeadingWhiteSpace.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Indica se eliminare gli spazi bianchi iniziali dai valori. | `true` | `ignoreLeadingWhiteSpace`:`true` --> `"male","John","TestLastName"` | `ignoreLeadingWhiteSpace`:`false`--> `"    male","John","TestLastName"` |
-| `csvOptions.ignoreTrailingWhiteSpace.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Indica se rifilare gli spazi vuoti finali dai valori. | `true` | `ignoreTrailingWhiteSpace`:`true` --> `"male","John","TestLastName"` | `ignoreTrailingWhiteSpace`:`false`--> `"male    ","John","TestLastName"` |
-| `csvOptions.nullValue.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Imposta la rappresentazione di stringa di un valore null. | `""` | `nullvalue`:`""` --> `male,"",TestLastName` | `nullvalue`:`"NULL"` --> `male,NULL,TestLastName` |
-| `csvOptions.dateFormat.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Indica il formato della data. | `yyyy-MM-dd` | `dateFormat`:`yyyy-MM-dd` --> `male,TestLastName,John,2022-02-24` | `dateFormat`:`MM/dd/yyyy` --> `male,TestLastName,John,02/24/2022` |
+| `csvOptions.ignoreLeadingWhiteSpace.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Indica se eliminare gli spazi bianchi iniziali dai valori. | `true` | `ignoreLeadingWhiteSpace`:`true` —> `"male","John","TestLastName"` | `ignoreLeadingWhiteSpace`:`false`—> `"    male","John","TestLastName"` |
+| `csvOptions.ignoreTrailingWhiteSpace.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Indica se rifilare gli spazi vuoti finali dai valori. | `true` | `ignoreTrailingWhiteSpace`:`true` —> `"male","John","TestLastName"` | `ignoreTrailingWhiteSpace`:`false`—> `"male    ","John","TestLastName"` |
+| `csvOptions.nullValue.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Imposta la rappresentazione di stringa di un valore null. | `""` | `nullvalue`:`""` —> `male,"",TestLastName` | `nullvalue`:`"NULL"` —> `male,NULL,TestLastName` |
+| `csvOptions.dateFormat.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Indica il formato della data. | `yyyy-MM-dd` | `dateFormat`:`yyyy-MM-dd` —> `male,TestLastName,John,2022-02-24` | `dateFormat`:`MM/dd/yyyy` —> `male,TestLastName,John,02/24/2022` |
 | `csvOptions.timestampFormat.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Imposta la stringa che indica un formato timestamp. | `yyyy-MM-dd'T'HH:mm:ss[.SSS][XXX]` | - | - |
-| `csvOptions.charToEscapeQuoteEscaping.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Imposta un singolo carattere utilizzato per l&#39;escape del carattere virgolette. | `\` quando i caratteri escape e le virgolette sono diversi. `\0` quando il carattere di escape e le virgolette sono uguali. | - | - |
+| `csvOptions.charToEscapeQuoteEscaping.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Imposta un singolo carattere utilizzato per l&#39;escape del carattere virgolette. | `\` quando i caratteri di escape e le virgolette sono diversi. `\0` quando il carattere di escape e le virgolette sono uguali. | - | - |
 | `csvOptions.emptyValue.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Imposta la rappresentazione di stringa di un valore vuoto. | `""` | `"emptyValue":""` --> `male,"",John` | `"emptyValue":"empty"` --> `male,empty,John` |
-| `maxFileRowCount` | Facoltativo | Indica il numero massimo di righe per file esportato, compreso tra 1.000.000 e 10.000.000. | 5,000,000 |
-| `includeFileManifest` | Facoltativo | Abilita il supporto per l&#39;esportazione di un manifesto di file insieme alle esportazioni di file. Il file JSON del manifesto contiene informazioni sulla posizione di esportazione, sulle dimensioni di esportazione e altro ancora. Il manifesto viene denominato utilizzando il formato `manifest-<<destinationId>>-<<dataflowRunId>>.json`. | Visualizza un [file manifesto di esempio](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). Il file manifesto include i campi seguenti: <ul><li>`flowRunId`: Il [esecuzione del flusso di dati](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) che ha generato il file esportato.</li><li>`scheduledTime`: ora in UTC in cui è stato esportato il file. </li><li>`exportResults.sinkPath`: percorso nel percorso di archiviazione in cui viene depositato il file esportato. </li><li>`exportResults.name`: nome del file esportato.</li><li>`size`: dimensione del file esportato, in byte.</li></ul> |
+| `maxFileRowCount` | Facoltativo | Indica il numero massimo di righe per file esportato, compreso tra 1.000.000 e 10.000.000. | 5.000.000 |
+| `includeFileManifest` | Facoltativo | Abilita il supporto per l&#39;esportazione di un manifesto di file insieme alle esportazioni di file. Il file JSON del manifesto contiene informazioni sulla posizione di esportazione, sulle dimensioni di esportazione e altro ancora. Il manifesto è denominato nel formato `manifest-<<destinationId>>-<<dataflowRunId>>.json`. | Visualizza un [file manifesto di esempio](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). Il file manifesto include i campi seguenti: <ul><li>`flowRunId`: [esecuzione del flusso di dati](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) che ha generato il file esportato.</li><li>`scheduledTime`: ora in UTC in cui è stato esportato il file. </li><li>`exportResults.sinkPath`: il percorso nel percorso di archiviazione in cui è depositato il file esportato. </li><li>`exportResults.name`: nome del file esportato.</li><li>`size`: dimensione del file esportato, in byte.</li></ul> |
 
 {style="table-layout:auto"}
 

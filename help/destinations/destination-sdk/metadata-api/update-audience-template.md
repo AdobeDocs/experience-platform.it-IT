@@ -4,8 +4,8 @@ title: Aggiornare un modello di pubblico
 exl-id: 8185a015-256d-46a7-af33-8475832fb6c1
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '319'
-ht-degree: 3%
+source-wordcount: '320'
+ht-degree: 1%
 
 ---
 
@@ -15,23 +15,23 @@ ht-degree: 3%
 >
 >**Endpoint API**: `platform.adobe.io/data/core/activation/authoring/audience-templates`
 
-Questa pagina illustra la richiesta API e il payload che puoi utilizzare per aggiornare un modello di pubblico, utilizzando `/authoring/audience-templates` Endpoint API
+Questa pagina illustra la richiesta API e il payload che è possibile utilizzare per aggiornare un modello di pubblico, utilizzando l&#39;endpoint API `/authoring/audience-templates`.
 
-Per una descrizione dettagliata delle funzionalità che è possibile configurare tramite questo endpoint, vedi [gestione dei metadati del pubblico](../functionality/audience-metadata-management.md).
+Per una descrizione dettagliata delle funzionalità che è possibile configurare tramite questo endpoint, vedere [Gestione metadati pubblico](../functionality/audience-metadata-management.md).
 
 >[!IMPORTANT]
 >
->Tutti i nomi e i valori dei parametri supportati da Destination SDK sono **distinzione maiuscole/minuscole**. Per evitare errori di distinzione tra maiuscole e minuscole, utilizza i nomi e i valori dei parametri esattamente come mostrato nella documentazione.
+>Tutti i nomi e i valori dei parametri supportati da Destination SDK sono **con distinzione tra maiuscole e minuscole**. Per evitare errori di distinzione tra maiuscole e minuscole, utilizza i nomi e i valori dei parametri esattamente come mostrato nella documentazione.
 
 ## Guida introduttiva alle operazioni API dei modelli di pubblico {#get-started}
 
-Prima di continuare, controlla [guida introduttiva](../getting-started.md) per informazioni importanti che è necessario conoscere per effettuare correttamente chiamate all’API, tra cui come ottenere l’autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
+Prima di continuare, consulta la [guida introduttiva](../getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
 
 ## Aggiornare un modello di pubblico {#create}
 
-È possibile aggiornare una [esistente](create-audience-template.md) modello di pubblico creando un `PUT` richiesta al `/authoring/audience-templates` con il payload aggiornato.
+È possibile aggiornare un modello di pubblico [esistente](create-audience-template.md) effettuando una richiesta `PUT` all&#39;endpoint `/authoring/audience-templates` con il payload aggiornato.
 
-Per ottenere un modello di pubblico esistente e i corrispondenti `{INSTANCE_ID}`, consulta l’articolo su [recupero di un modello di pubblico](retrieve-audience-template.md).
+Per ottenere un modello di pubblico esistente e il corrispondente `{INSTANCE_ID}`, consulta l&#39;articolo su [recupero di un modello di pubblico](retrieve-audience-template.md).
 
 **Formato API**
 
@@ -41,7 +41,7 @@ PUT /authoring/audience-templates/{INSTANCE_ID}
 
 | Parametro | Descrizione |
 | -------- | ----------- |
-| `{INSTANCE_ID}` | ID del modello di pubblico che desideri aggiornare. Per ottenere un modello di pubblico esistente e i corrispondenti `{INSTANCE_ID}`, vedi [Recuperare un modello di pubblico](retrieve-audience-template.md). |
+| `{INSTANCE_ID}` | ID del modello di pubblico che desideri aggiornare. Per ottenere un modello di pubblico esistente e il corrispondente `{INSTANCE_ID}`, vedi [Recuperare un modello di pubblico](retrieve-audience-template.md). |
 
 La richiesta seguente aggiorna un modello di metadati di pubblico esistente, configurato dai parametri forniti nel payload.
 
@@ -153,8 +153,8 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 
 ## Gestione degli errori API
 
-Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Fai riferimento a [Codici di stato API](../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
+Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
 
 ## Passaggi successivi
 
-Dopo aver letto questo documento, ora sai quando utilizzare i modelli di pubblico e come aggiornare un modello di pubblico utilizzando `/authoring/audience-templates` Endpoint API Letto [come utilizzare Destination SDK per configurare la destinazione](../guides/configure-destination-instructions.md) per capire in che modo questo passaggio si inserisce nel processo di configurazione della destinazione.
+Dopo aver letto questo documento, ora sai quando utilizzare i modelli di pubblico e come aggiornare un modello di pubblico utilizzando l&#39;endpoint API `/authoring/audience-templates`. Leggi [come utilizzare Destination SDK per configurare la destinazione](../guides/configure-destination-instructions.md) per capire in che modo questo passaggio si inserisce nel processo di configurazione della destinazione.

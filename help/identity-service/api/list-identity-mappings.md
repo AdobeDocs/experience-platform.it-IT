@@ -28,7 +28,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/mapping
 
 **Richiesta**
 
-Opzione 1: specificare l&#39;identità come spazio dei nomi (`nsId`, per ID) e il valore ID (`id`).
+Opzione 1: specificare l&#39;identità come spazio dei nomi (`nsId`, per ID) e valore ID (`id`).
 
 ```shell
 curl -X GET \
@@ -39,7 +39,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opzione 2: specificare l&#39;identità come spazio dei nomi (`ns`, per nome) e il valore ID (`id`).
+Opzione 2: specificare l&#39;identità come spazio dei nomi (`ns`, per nome) e valore ID (`id`).
 
 ```shell
 curl -X GET \
@@ -50,7 +50,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opzione 3: specificare l&#39;identità come XID (`xid`). Per ulteriori informazioni su come ottenere l’XID di un’identità, consulta la sezione di questo documento relativa a [recupero dello XID per un’identità](./list-native-id.md).
+Opzione 3: specificare l&#39;identità come XID (`xid`). Per ulteriori informazioni su come ottenere XID di un&#39;identità, consulta la sezione di questo documento che descrive [come ottenere XID per un&#39;identità](./list-native-id.md).
 
 ```shell
 curl -X GET \
@@ -63,7 +63,7 @@ curl -X GET \
 
 ### Ottenere mappature di identità per più identità
 
-Utilizza il `POST` metodo come equivalente batch del `GET` per recuperare mappature per più identità.
+Utilizzare il metodo `POST` come equivalente batch del metodo `GET` descritto in precedenza per recuperare mappature per più identità.
 
 >[!NOTE]
 >
@@ -121,7 +121,7 @@ curl -X POST \
       }' | json_pp
 ```
 
-**Utilizzo degli UID**
+**Utilizzo di UID**
 
 ```shell
 curl -X POST \
@@ -145,7 +145,7 @@ curl -X POST \
       }' | json_pp
 ```
 
-Se non sono state trovate identità correlate con l’input fornito, viene `HTTP 204` il codice di risposta viene restituito senza contenuto.
+Se non sono state trovate identità correlate con l&#39;input fornito, viene restituito un codice di risposta `HTTP 204` senza contenuto.
 
 **Risposta**
 
@@ -183,9 +183,9 @@ Se non sono state trovate identità correlate con l’input fornito, viene `HTTP
 }
 ```
 
-- `lastAssociationTime`: marca temporale dell’ultima associazione dell’identità di input a questa identità.
-- `regions`: fornisce `regionId` e `lastAssociationTime` per il punto in cui è stata visualizzata l’identità.
+- `lastAssociationTime`: il timestamp dell&#39;ultima associazione dell&#39;identità di input a questa identità.
+- `regions`: fornisce `regionId` e `lastAssociationTime` per la posizione in cui è stata visualizzata l&#39;identità.
 
 ## Passaggi successivi
 
-Procedi all’esercitazione successiva per [elenca gli spazi dei nomi disponibili](./list-namespaces.md).
+Procedi all&#39;esercitazione successiva per [elencare gli spazi dei nomi disponibili](./list-namespaces.md).

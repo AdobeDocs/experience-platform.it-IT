@@ -1,22 +1,22 @@
 ---
 solution: Experience Platform
 title: Funzioni stringa PQL
-description: PQL (Profile Query Language) offre funzioni per semplificare l’interazione con le stringhe.
+description: Profile Query Language (PQL) offre funzioni per semplificare l’interazione con le stringhe.
 exl-id: 9fd79d86-0802-4312-abce-f6ef5ba5bb34
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '823'
-ht-degree: 6%
+source-wordcount: '815'
+ht-degree: 5%
 
 ---
 
 # Funzioni stringa
 
-[!DNL Profile Query Language] (PQL) offre funzioni per semplificare l’interazione con le stringhe. Ulteriori informazioni su altre funzioni PQL sono disponibili nella [[!DNL Profile Query Language] panoramica](./overview.md).
+[!DNL Profile Query Language] (PQL) offre funzioni per semplificare l&#39;interazione con le stringhe. Ulteriori informazioni sulle altre funzioni di PQL sono disponibili nella [[!DNL Profile Query Language] panoramica](./overview.md).
 
-## Mi piace
+## Simile a
 
-Il `like` viene utilizzata per determinare se una stringa corrisponde a un pattern specificato.
+La funzione `like` viene utilizzata per determinare se una stringa corrisponde a un pattern specificato.
 
 **Formato**
 
@@ -27,7 +27,7 @@ Il `like` viene utilizzata per determinare se una stringa corrisponde a un patte
 | Argomento | Descrizione |
 | --------- | ----------- |
 | `{STRING_1}` | Stringa su cui eseguire il controllo. |
-| `{STRING_2}` | Espressione da confrontare con la prima stringa. Per creare un’espressione sono disponibili due caratteri speciali supportati: `%` e `_`. <ul><li>`%` viene utilizzato per rappresentare zero o più caratteri.</li><li>`_` viene utilizzato per rappresentare esattamente un carattere.</li></ul> |
+| `{STRING_2}` | Espressione da confrontare con la prima stringa. Per la creazione di un&#39;espressione sono supportati due caratteri speciali: `%` e `_`. <ul><li>`%` viene utilizzato per rappresentare zero o più caratteri.</li><li>`_` viene utilizzato per rappresentare esattamente un carattere.</li></ul> |
 
 **Esempio**
 
@@ -39,7 +39,7 @@ city like "%es%"
 
 ## Inizia con
 
-Il `startsWith` viene utilizzata per determinare se una stringa inizia con una sottostringa specificata.
+La funzione `startsWith` viene utilizzata per determinare se una stringa inizia con una sottostringa specificata.
 
 **Formato**
 
@@ -63,7 +63,7 @@ person.name.startsWith("Joe")
 
 ## Non inizia con
 
-Il `doesNotStartWith` La funzione viene utilizzata per determinare se una stringa non inizia con una sottostringa specificata.
+La funzione `doesNotStartWith` viene utilizzata per determinare se una stringa non inizia con una sottostringa specificata.
 
 **Formato**
 
@@ -87,7 +87,7 @@ person.name.doesNotStartWith("Joe")
 
 ## Termina con
 
-Il `endsWith` viene utilizzata per determinare se una stringa termina con una sottostringa specificata.
+La funzione `endsWith` viene utilizzata per determinare se una stringa termina con una sottostringa specificata.
 
 **Formato**
 
@@ -111,7 +111,7 @@ person.emailAddress.endsWith(".com")
 
 ## Non termina con
 
-Il `doesNotEndWith` La funzione viene utilizzata per determinare se una stringa non termina con una sottostringa specificata.
+La funzione `doesNotEndWith` viene utilizzata per determinare se una stringa non termina con una sottostringa specificata.
 
 **Formato**
 
@@ -135,7 +135,7 @@ person.emailAddress.doesNotEndWith(".com")
 
 ## Contains
 
-Il `contains` La funzione viene utilizzata per determinare se una stringa contiene una sottostringa specificata.
+La funzione `contains` viene utilizzata per determinare se una stringa contiene una sottostringa specificata.
 
 **Formato**
 
@@ -159,7 +159,7 @@ person.emailAddress.contains("2010@gm")
 
 ## Non contiene
 
-Il `doesNotContain` La funzione viene utilizzata per determinare se una stringa non contiene una sottostringa specificata.
+La funzione `doesNotContain` viene utilizzata per determinare se una stringa non contiene una sottostringa specificata.
 
 **Formato**
 
@@ -181,9 +181,9 @@ La seguente query PQL determina, con distinzione tra maiuscole e minuscole, se l
 person.emailAddress.doesNotContain("2010@gm")
 ```
 
-## È uguale a
+## Uguale a
 
-Il `equals` viene utilizzata per determinare se una stringa è uguale alla stringa specificata.
+La funzione `equals` viene utilizzata per determinare se una stringa è uguale alla stringa specificata.
 
 **Formato**
 
@@ -204,9 +204,9 @@ La seguente query PQL determina, con distinzione tra maiuscole e minuscole, se i
 person.name.equals("John")
 ```
 
-## Diverso da
+## Non uguale a
 
-Il `notEqualTo` viene utilizzata per determinare se una stringa non è uguale alla stringa specificata.
+La funzione `notEqualTo` viene utilizzata per determinare se una stringa non è uguale alla stringa specificata.
 
 **Formato**
 
@@ -227,9 +227,9 @@ La seguente query PQL determina, con distinzione tra maiuscole e minuscole, se i
 person.name.notEqualTo("John")
 ```
 
-## Corrisponde
+## Corrisponde a
 
-Il `matches` viene utilizzata per determinare se una stringa corrisponde a una specifica espressione regolare. Fare riferimento a [questo documento](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) per ulteriori informazioni sui pattern corrispondenti nelle espressioni regolari, vedere.
+La funzione `matches` viene utilizzata per determinare se una stringa corrisponde a una specifica espressione regolare. Fare riferimento a [questo documento](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) per ulteriori informazioni sui pattern corrispondenti nelle espressioni regolari.
 
 **Formato**
 
@@ -247,11 +247,11 @@ person.name.matches("(?i)^John")
 
 >[!NOTE]
 >
->Se utilizzi funzioni di espressione regolare come `\w`, tu **deve** escape del carattere barra rovesciata. Quindi, invece di scrivere solo `\w`, è necessario includere una barra rovesciata aggiuntiva e scrivere `\\w`.
+>Se utilizzi funzioni di espressione regolare come `\w`, **devi** eliminare il carattere barra rovesciata. Pertanto, invece di scrivere solo `\w`, è necessario includere una barra rovesciata e scrivere `\\w`.
 
 ## Gruppo di espressioni regolari
 
-Il `regexGroup` La funzione viene utilizzata per estrarre informazioni specifiche, in base all’espressione regolare fornita.
+La funzione `regexGroup` viene utilizzata per estrarre informazioni specifiche, in base all&#39;espressione regolare fornita.
 
 **Formato**
 
@@ -269,8 +269,8 @@ emailAddress.regexGroup("@(\\w+)", 1)
 
 >[!NOTE]
 >
->Se utilizzi funzioni di espressione regolare come `\w`, tu **deve** escape del carattere barra rovesciata. Quindi, invece di scrivere solo `\w`, è necessario includere una barra rovesciata aggiuntiva e scrivere `\\w`.
+>Se utilizzi funzioni di espressione regolare come `\w`, **devi** eliminare il carattere barra rovesciata. Pertanto, invece di scrivere solo `\w`, è necessario includere una barra rovesciata e scrivere `\\w`.
 
 ## Passaggi successivi
 
-Ora che hai imparato le funzioni stringa, puoi utilizzarle all’interno delle query PQL. Per ulteriori informazioni su altre funzioni PQL, leggere [Panoramica sulla lingua delle query di profilo](./overview.md).
+Ora che hai imparato le funzioni stringa, puoi utilizzarle all’interno delle query PQL. Per ulteriori informazioni su altre funzioni di PQL, leggere la [panoramica di Profile Query Language](./overview.md).

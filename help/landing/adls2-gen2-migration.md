@@ -4,7 +4,7 @@ description: Scopri le nuove funzioni fornite dalla migrazione di Data Lake a Ge
 exl-id: 56d9c77a-d7eb-498d-994f-b15d150dedb7
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '285'
+source-wordcount: '286'
 ht-degree: 0%
 
 ---
@@ -15,14 +15,14 @@ Adobe Experience Platform sta eseguendo la migrazione al Data Lake Gen2. Si trat
 
 ## Impatto utente
 
-Durante la migrazione del Data Lake da Adobe a Gen1, gli utenti potranno: **letto** dal Data Lake, ma tutte le funzionalità che **scrivere** nel Data Lake sarà interessato. Di seguito è riportato un elenco delle funzionalità interessate:
+Durante la migrazione del Data Lake da Adobe da Gen1 a Gen 2, gli utenti potranno **leggere** dal Data Lake, ma saranno interessate tutte le funzionalità **scrivere** nel Data Lake. Di seguito è riportato un elenco delle funzionalità interessate:
 
-- **Sorgenti**: i dati in arrivo dalle sorgenti e dai vari flussi di lavoro di acquisizione dei dati subiranno ritardi. Al termine della migrazione, gli utenti visualizzeranno i propri dati.
-- **Servizio query**: gli utenti possono eseguire query ma non saranno in grado di scrivere l’output della query in un set di dati.
-- **Profilo cliente in tempo reale**: dati acquisiti nell’archivio dei profili tramite **batch** l’acquisizione non sarà disponibile durante la migrazione. Tuttavia, i dati acquisiti tramite **streaming** l’acquisizione sarà disponibile durante la migrazione. Inoltre, le esportazioni di profili non saranno disponibili durante la migrazione.
-- **Data Science Workspace**: le scritture da Data Science Workspace avranno esito negativo.
-- **Servizio di segmentazione**: tipi di pubblico derivati da **batch** La segmentazione non può essere attivata durante la migrazione. Tipi di pubblico derivati da **streaming** la segmentazione non verrà influenzata.
-- **Customer Journey Analytics**: i dati dei rapporti sul Customer Journey Analytics potrebbero non essere aggiornati e non verranno aggiornati durante la migrazione, in quanto i batch non vengono acquisiti nel Data Lake.
+- **Origini**: i dati provenienti dalle origini e da vari flussi di lavoro di acquisizione dati verranno ritardati. Al termine della migrazione, gli utenti visualizzeranno i propri dati.
+- **Servizio query**: gli utenti possono eseguire query ma non saranno in grado di scrivere l&#39;output della query in un set di dati.
+- **Profilo cliente in tempo reale**: i dati acquisiti nell&#39;archivio profili tramite l&#39;acquisizione di **batch** non saranno disponibili durante la migrazione. Tuttavia, i dati acquisiti tramite l&#39;acquisizione di **streaming** saranno disponibili durante la migrazione. Inoltre, le esportazioni di profili non saranno disponibili durante la migrazione.
+- **Data Science Workspace**: le operazioni di scrittura da Data Science Workspace non riusciranno.
+- **Servizio di segmentazione**: impossibile attivare i tipi di pubblico derivati dalla segmentazione **batch** durante la migrazione. I tipi di pubblico derivati dalla segmentazione **streaming** non saranno interessati.
+- **Customer Journey Analytics**: i dati dei report di Customer Journey Analytics potrebbero non essere aggiornati e non verranno aggiornati durante la migrazione, poiché i batch non vengono acquisiti nel Data Lake.
 
 ## Comunicazione agli utenti di Platform
 

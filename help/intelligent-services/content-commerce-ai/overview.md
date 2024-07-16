@@ -6,7 +6,7 @@ description: L’assegnazione tag dei contenuti è un insieme di servizi di inte
 exl-id: 65c527d7-b1bd-414f-aba1-8445676a7052
 source-git-commit: a42bb4af3ec0f752874827c5a9bf70a66beb6d91
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '322'
 ht-degree: 1%
 
 ---
@@ -23,24 +23,24 @@ Il contenuto è un componente essenziale di queste esperienze. Per rispondere me
 
 | Tipo di contenuto | Funzioni | Panoramica delle funzionalità |
 | --- | --- | --- |
-| Testo | - Assegnazione di tag alle parole chiave <br> | : estrae automaticamente parole chiave e tag da documenti e pagine Web aziendali utilizzando un servizio di intelligenza artificiale pronto all’uso. <br> |
-| Immagini | - Applicazione di tag colore <br> - Riconoscimento ottico dei caratteri (OCR) | - Estrarre accuratamente i colori dominanti (etichette e valori esadecimali) e il loro peso dall&#39;immagine di un prodotto. <br> - Estrarre con precisione il testo presente dall&#39;immagine di un prodotto. |
+| Testo | - Assegnazione tag parole chiave <br> | : estrae automaticamente parole chiave e tag da documenti e pagine Web aziendali utilizzando un servizio di intelligenza artificiale pronto all’uso. <br> |
+| Immagini | - Applicazione di tag colore <br> - Riconoscimento ottico dei caratteri (OCR) | - Estrarre accuratamente i colori dominanti (etichette e valori esadecimali) e il loro peso dall&#39;immagine di un prodotto. <br> - Estrae con precisione il testo presente dall&#39;immagine di un prodotto. |
 
 ## Informazioni sull’assegnazione tag dei contenuti
 
 La visione generale dell’assegnazione tag dei contenuti è suddivisa in tre passaggi per realizzare il coinvolgimento ottimale dei clienti e massimizzare i KPI guidati dai clienti.
 
-**Passaggio 1: comprendere il contenuto**
+**Passaggio 1: informazioni sul contenuto**
 - Estrai funzioni intelligenti e metadati.
 - Organizza il contenuto (tag, categorizza, raggruppa, deduplica).
 - Associa dati di contenuto alle risorse.
 
-**Passaggio 2: comprendere il cliente**
+**Passaggio 2: informazioni sul cliente**
 - Associa le azioni del cliente alle funzioni del contenuto.
 - Utilizza le preferenze e le affinità del cliente dai contenuti e dalle azioni.
 - Aggiungi le preferenze al profilo del cliente.
 
-**Passaggio 3: abilitare l’ottimizzazione dell’esperienza**
+**Passaggio 3: abilitazione dell&#39;ottimizzazione dell&#39;esperienza**
 - Utilizza il profilo del cliente per fornire esperienze migliorate e personalizzate, nella sessione e per le esperienze successive.
 - Utilizza le funzionalità di contenuto per ottenere informazioni approfondite sui comportamenti dei clienti su cui si basano i KPI.
 - Utilizza approfondimenti sui contenuti per migliorare la creazione, l’authoring e la selezione dei contenuti.

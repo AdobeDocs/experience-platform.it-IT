@@ -4,8 +4,8 @@ description: Scopri come definire i moduli di libreria condivisa per le estensio
 exl-id: ec013a39-966c-43f3-bc36-31198990a17e
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
-source-wordcount: '272'
-ht-degree: 81%
+source-wordcount: '263'
+ht-degree: 71%
 
 ---
 
@@ -30,7 +30,7 @@ var userIdPromise = new Promise(/* load user ID, then resolve promise */);
 module.exports = userIdPromise;
 ```
 
-In [manifesto dell&#39;estensione](../manifest.md), è necessario fornire un nome per questo modulo condiviso. Se gli si assegna il nome `user-id-promise`, un’altra estensione potrebbe quindi accedere al modulo condiviso nel modo seguente:
+Nel manifesto dell&#39;[estensione](../manifest.md), devi fornire un nome per questo modulo condiviso. Se gli si assegna il nome `user-id-promise`, un’altra estensione potrebbe quindi accedere al modulo condiviso nel modo seguente:
 
 ```javascript
 var userIdPromise = turbine.getSharedModule('user-extension', 'user-id-promise');

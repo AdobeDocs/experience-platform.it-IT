@@ -1,25 +1,25 @@
 ---
 title: Approfondimenti di Analytics per interazioni web e mobili
-description: Questo documento spiega come utilizzare Query Service per creare informazioni actionable dai dati Adobe Analytics acquisiti.
+description: Questo documento spiega come utilizzare Query Service per creare informazioni fruibili dai dati Adobe Analytics acquisiti.
 exl-id: f64e61ef-0157-4f0a-88f8-bbe4f9aa83f0
 source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '237'
 ht-degree: 1%
 
 ---
 
 # Approfondimenti di Analytics per le interazioni web e mobili
 
-Adobe Experience Platform consente di acquisire dati dalle suite di rapporti di Adobe Analytics utilizzando i campi Experience Data Model (XDM) per compilare i set di dati. Questi dati di analisi vengono modificati per adeguarsi al [!DNL XDM ExperienceEvent] classe. Query Service può quindi utilizzare questi dati eseguendo query SQL per generare informazioni utili sul comportamento di un utente sulle piattaforme digitali.
+Adobe Experience Platform consente di acquisire dati dalle suite di rapporti di Adobe Analytics utilizzando i campi Experience Data Model (XDM) per compilare i set di dati. I dati di analisi sono stati modificati per essere conformi alla classe [!DNL XDM ExperienceEvent]. Query Service può quindi utilizzare questi dati eseguendo query SQL per generare informazioni utili sul comportamento di un utente sulle piattaforme digitali.
 
 Questo documento fornisce una serie di query SQL di esempio che illustrano casi d’uso comuni durante la creazione di informazioni dai dati di Analytics per web e dispositivi mobili.
 
-Consulta la [Documentazione sulle mappature dei campi di Analytics](../../sources/connectors/adobe-applications/mapping/analytics.md) per ulteriori informazioni sull’acquisizione e la mappatura dei dati di analisi.
+Per ulteriori informazioni sull&#39;acquisizione e la mappatura dei dati di analisi, consulta la [documentazione sulle mappature dei campi di Analytics](../../sources/connectors/adobe-applications/mapping/analytics.md).
 
 ## Introduzione
 
-Per ciascuno dei seguenti casi d’uso, come modello da personalizzare viene fornito un esempio di query SQL con parametri. Fornisci i parametri ovunque ti trovi `{ }` negli esempi SQL per il set di dati, l’eVar, l’evento o l’intervallo di tempo che desideri valutare.
+Per ciascuno dei seguenti casi d’uso, come modello da personalizzare viene fornito un esempio di query SQL con parametri. Fornire i parametri nei punti in cui `{ }` è visualizzato negli esempi SQL per il set di dati, l&#39;eVar, l&#39;evento o l&#39;intervallo di tempo che si desidera valutare.
 
 ## Obiettivi
 

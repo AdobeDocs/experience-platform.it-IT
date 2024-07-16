@@ -7,17 +7,17 @@ exl-id: 00c20081-09d0-425c-9894-0f957558bd43
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '692'
-ht-degree: 6%
+ht-degree: 5%
 
 ---
 
-# [!UICONTROL Abbonamento Telecom] gruppo di campi schema
+# [!UICONTROL Sottoscrizione telefonica] gruppo di campi dello schema
 
 >[!NOTE]
 >
->I nomi di diversi gruppi di campi dello schema sono stati modificati. Vedi il documento su [aggiornamenti nome gruppo di campi](../name-updates.md) per ulteriori informazioni.
+>I nomi di diversi gruppi di campi dello schema sono stati modificati. Per ulteriori informazioni, consulta il documento sugli aggiornamenti del nome del gruppo di campi [](../name-updates.md).
 
-[!UICONTROL Abbonamento Telecom] è un gruppo di campi di schema standard per [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) che descrive il piano di abbonamento telefonico di un cliente, inclusi prezzi, pacchetti e abbonamenti a singoli prodotti.
+[!UICONTROL Sottoscrizione telefonica] è un gruppo di campi dello schema standard per la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) che descrive il piano di abbonamento telefonico di un cliente, inclusi prezzi, pacchetti e abbonamenti a singoli prodotti.
 
 Il gruppo di campi fornisce un singolo campo di tipo oggetto, `telecomSubscription`, le cui proprietà sono descritte di seguito.
 
@@ -25,10 +25,10 @@ Il gruppo di campi fornisce un singolo campo di tipo oggetto, `telecomSubscripti
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
-| `internetSubscription` | Array di oggetti | Descrive i dettagli del piano di abbonamento a Internet come il limite massimo di dati, il tipo di connessione e i dettagli sulla velocità. Consulta la [sezione successiva](#internetSubscription) per ulteriori informazioni. |
-| `landlineSubscription` | Array di oggetti | Descrive i dettagli del piano di abbonamento alla rete fissa, incluse le caratteristiche selezionate, i minuti e i piani di composizione. Consulta la [sezione successiva](#landlineSubscription) per ulteriori informazioni. |
-| `mediaSubscription` | Array di oggetti | Descrive i dettagli del piano di abbonamento multimediale, tra cui il numero di canali e i servizi di streaming inclusi. Consulta la [sezione successiva](#mediaSubscription) per ulteriori informazioni. |
-| `mobileSubscription` | Array di oggetti | Descrive i dettagli del piano di abbonamento mobile, tra cui il numero di righe, le tariffe dati, il costo e altro ancora. Consulta la [sezione successiva](#mobileSubscription) per ulteriori informazioni. |
+| `internetSubscription` | Array di oggetti | Descrive i dettagli del piano di abbonamento a Internet come il limite massimo di dati, il tipo di connessione e i dettagli sulla velocità. Per ulteriori informazioni, consulta la [sezione seguente](#internetSubscription). |
+| `landlineSubscription` | Array di oggetti | Descrive i dettagli del piano di abbonamento alla rete fissa, incluse le caratteristiche selezionate, i minuti e i piani di composizione. Per ulteriori informazioni, consulta la [sezione seguente](#landlineSubscription). |
+| `mediaSubscription` | Array di oggetti | Descrive i dettagli del piano di abbonamento multimediale, tra cui il numero di canali e i servizi di streaming inclusi. Per ulteriori informazioni, consulta la [sezione seguente](#mediaSubscription). |
+| `mobileSubscription` | Array di oggetti | Descrive i dettagli del piano di abbonamento mobile, tra cui il numero di righe, le tariffe dati, il costo e altro ancora. Per ulteriori informazioni, consulta la [sezione seguente](#mobileSubscription). |
 | `primarySubscriber` | [[!UICONTROL Persona]](../../data-types/person.md) | Descrive il proprietario della sottoscrizione. |
 | `bundleName` | Stringa | Acquisisce il nome di qualsiasi tipo di bundle di abbonamento a cui il cliente è iscritto, ad esempio `Internet + Media`. |
 | `primaryPartyID` | Stringa | Identificatore della persona principale responsabile dell’abbonamento, che in genere potrebbe essere il numero di telefono del dispositivo. |
@@ -44,7 +44,7 @@ Per ulteriori dettagli sul gruppo di campi, consulta l’archivio XDM pubblico:
 
 `internetSubscription` viene fornito come array di oggetti. La struttura di ciascun oggetto è descritta di seguito.
 
-![internetSubscription](../../images/field-groups/telecom-subscription/internetSubscription.png)
+![abbonamentoInternet](../../images/field-groups/telecom-subscription/internetSubscription.png)
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |

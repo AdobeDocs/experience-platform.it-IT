@@ -29,7 +29,7 @@ Questo documento illustra come definire i tipi di condizioni per un’estensione
 
 I tipi di condizione sono in genere i seguenti:
 
-1. A [visualizza](./views.md) mostrate nell’interfaccia utente di Experience Platform e in quella di Data Collection, che consentono agli utenti di modificare le impostazioni per la condizione.
+1. [view](./views.md) nell&#39;interfaccia utente di Experience Platform e nell&#39;interfaccia utente di Data Collection che consente agli utenti di modificare le impostazioni per la condizione.
 2. Modulo libreria emesso all’interno della libreria runtime dei tag per interpretare le impostazioni e valutare una condizione.
 
 Un modulo libreria di tipo condizione ha un obiettivo: valutare se qualcosa è vero o falso. Sta a te definire ciò che verrà valutato.

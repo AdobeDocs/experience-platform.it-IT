@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;mappatura Audience Manager;mappatura audience manager
 solution: Experience Platform
-title: Campi di mappatura per il connettore di origine di Adobe Audience Manager
+title: Campi di mappatura per il connettore Source di Adobe Audience Manager
 description: Scopri come mappare i dati di Adobe Audience Manager (dati in tempo reale, onboarded e profilo) sui campi Experience Data Model (XDM) corrispondenti per il connettore di origine dell’Audience Manager.
 exl-id: b800ba43-c308-4334-adce-3d554d50cefb
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '156'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Le tabelle seguenti contengono le mappature tra i campi nei dati di Adobe Audience Manager (dati in tempo reale, onboarded e profilo) e i relativi campi XDM corrispondenti.
 
-Consulta la sezione [Dizionario campo XDM](../../../../xdm/schema/field-dictionary.md) per ulteriori informazioni su ciascun campo XDM.
+Per ulteriori informazioni su ciascun campo XDM, consulta il [dizionario di campi XDM](../../../../xdm/schema/field-dictionary.md).
 
 ## Dati in tempo reale
 

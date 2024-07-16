@@ -4,18 +4,18 @@ title: Aggiornare una configurazione del server di destinazione
 exl-id: 579d2cc1-5110-4fba-9dcc-ff4b8d259827
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '1098'
-ht-degree: 13%
+source-wordcount: '1101'
+ht-degree: 7%
 
 ---
 
 # Aggiornare una configurazione del server di destinazione
 
-Questa pagina illustra la richiesta API e il payload che è possibile utilizzare per aggiornare una configurazione del server di destinazione esistente, utilizzando `/authoring/destination-servers` Endpoint API
+Questa pagina esemplifica la richiesta API e il payload che è possibile utilizzare per aggiornare una configurazione del server di destinazione esistente, utilizzando l&#39;endpoint API `/authoring/destination-servers`.
 
 >[!TIP]
 >
->Qualsiasi operazione di aggiornamento su destinazioni pubbliche/di produzione è visibile solo dopo l’utilizzo di [API di pubblicazione](../../publishing-api/create-publishing-request.md) e invia l’aggiornamento per la revisione di Adobi.
+>Qualsiasi operazione di aggiornamento sulle destinazioni pubbliche/di produzione è visibile solo dopo aver utilizzato l&#39;[API di pubblicazione](../../publishing-api/create-publishing-request.md) e aver inviato l&#39;aggiornamento per una revisione di Adobe.
 
 Per una descrizione dettagliata delle funzionalità che puoi configurare tramite questo endpoint, leggi i seguenti articoli:
 
@@ -26,21 +26,21 @@ Per una descrizione dettagliata delle funzionalità che puoi configurare tramite
 
 >[!IMPORTANT]
 >
->Tutti i nomi e i valori dei parametri supportati da Destination SDK sono **distinzione maiuscole/minuscole**. Per evitare errori di distinzione tra maiuscole e minuscole, utilizza i nomi e i valori dei parametri esattamente come mostrato nella documentazione.
+>Tutti i nomi e i valori dei parametri supportati da Destination SDK sono **con distinzione tra maiuscole e minuscole**. Per evitare errori di distinzione tra maiuscole e minuscole, utilizza i nomi e i valori dei parametri esattamente come mostrato nella documentazione.
 
 ## Guida introduttiva alle operazioni API del server di destinazione {#get-started}
 
-Prima di continuare, controlla [guida introduttiva](../../getting-started.md) per informazioni importanti che è necessario conoscere per effettuare correttamente chiamate all’API, tra cui come ottenere l’autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
+Prima di continuare, consulta la [guida introduttiva](../../getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
 
 ## Aggiornare una configurazione del server di destinazione {#update}
 
-È possibile aggiornare una [esistente](create-destination-server.md) configurazione del server di destinazione effettuando una `PUT` richiesta al `/authoring/destination-servers` con il payload aggiornato.
+È possibile aggiornare una configurazione del server di destinazione [esistente](create-destination-server.md) effettuando una richiesta `PUT` all&#39;endpoint `/authoring/destination-servers` con il payload aggiornato.
 
 >[!TIP]
 >
 >**Endpoint API**: `platform.adobe.io/data/core/activation/authoring/destination-servers`
 
-Per ottenere una configurazione del server di destinazione esistente e la corrispondente `{INSTANCE_ID}`, consulta l’articolo su [recupero di una configurazione del server di destinazione](retrieve-destination-server.md).
+Per ottenere una configurazione del server di destinazione esistente e i relativi `{INSTANCE_ID}`, vedere l&#39;articolo relativo al [recupero di una configurazione del server di destinazione](retrieve-destination-server.md).
 
 **Formato API**
 
@@ -50,7 +50,7 @@ PUT /authoring/destination-servers/{INSTANCE_ID}
 
 | Parametro | Descrizione |
 | -------- | ----------- |
-| `{INSTANCE_ID}` | ID della configurazione del server di destinazione che desideri aggiornare. Per ottenere una configurazione del server di destinazione esistente e la corrispondente `{INSTANCE_ID}`, vedi [Recuperare una configurazione del server di destinazione](retrieve-destination-server.md). |
+| `{INSTANCE_ID}` | ID della configurazione del server di destinazione che desideri aggiornare. Per ottenere una configurazione del server di destinazione esistente e i relativi `{INSTANCE_ID}`, vedere [Recuperare una configurazione del server di destinazione](retrieve-destination-server.md). |
 
 Le seguenti richieste aggiornano una configurazione del server di destinazione esistente, configurata dai parametri forniti nel payload.
 
@@ -93,13 +93,13 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 | Parametro | Tipo | Descrizione |
 | -------- | ----------- | ----------- |
 | `name` | Stringa | *Obbligatorio.* Rappresenta un nome descrittivo del server, visibile solo agli Adobi. Questo nome non è visibile ai partner o ai clienti. Esempio `Moviestar destination server`. |
-| `destinationServerType` | Stringa | *Obbligatorio.* Imposta su `URL_BASED` per destinazioni in tempo reale (streaming). |
-| `urlBasedDestination.url.templatingStrategy` | Stringa | *Obbligatorio.* <ul><li>Utilizzare `PEBBLE_V1` se Adobe deve trasformare l’URL in `value` di seguito. Utilizza questa opzione se disponi di un endpoint come: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Utilizzare `NONE` se non è necessaria alcuna trasformazione sul lato Adobe, ad esempio se si dispone di un endpoint come: `https://api.moviestar.com/data/items`.</li></ul> |
-| `urlBasedDestination.url.value` | Stringa | *Obbligatorio.* Inserisci l’indirizzo dell’endpoint API a cui l’Experience Platform deve connettersi. |
+| `destinationServerType` | Stringa | *Obbligatorio.* Impostato su `URL_BASED` per le destinazioni in tempo reale (streaming). |
+| `urlBasedDestination.url.templatingStrategy` | Stringa | *Obbligatorio.* <ul><li>Utilizza `PEBBLE_V1` se Adobe deve trasformare l&#39;URL nel campo `value` di seguito. Utilizzare questa opzione se si dispone di un endpoint come: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Utilizzare `NONE` se non è necessaria alcuna trasformazione sul lato Adobe, ad esempio se si dispone di un endpoint come: `https://api.moviestar.com/data/items`.</li></ul> |
+| `urlBasedDestination.url.value` | Stringa | *Obbligatorio.* Inserire l&#39;indirizzo dell&#39;endpoint API a cui l&#39;Experience Platform deve connettersi. |
 | `httpTemplate.httpMethod` | Stringa | *Obbligatorio.* Il metodo che Adobe utilizzerà nelle chiamate al server. Le opzioni sono `GET`, `PUT`, `PUT`, `DELETE`, `PATCH`. |
-| `httpTemplate.requestBody.templatingStrategy` | Stringa | *Obbligatorio.* Seleziona `PEBBLE_V1`. |
-| `httpTemplate.requestBody.value` | Stringa | *Obbligatorio.* Questa stringa è la versione con escape di carattere che trasforma i dati dei clienti di Platform nel formato previsto dal servizio. <br> <ul><li> Per informazioni su come scrivere il modello, leggere [Sezione Utilizzo dei modelli](../../functionality/destination-server/message-format.md#using-templating). </li><li> Per ulteriori informazioni sull’escape di caratteri, consulta [RFC JSON standard, sezione sette](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Per un esempio di semplice trasformazione, fai riferimento a [Attributi del profilo](../../functionality/destination-server/message-format.md#attributes) trasformazione. </li></ul> |
-| `httpTemplate.contentType` | Stringa | *Obbligatorio.* Il tipo di contenuto accettato dal server. Questo valore è molto probabile `application/json`. |
+| `httpTemplate.requestBody.templatingStrategy` | Stringa | *Obbligatorio.* Utilizza `PEBBLE_V1`. |
+| `httpTemplate.requestBody.value` | Stringa | *Obbligatorio.* Questa stringa è la versione con escape carattere che trasforma i dati dei clienti di Platform nel formato previsto dal servizio. <br> <ul><li> Per informazioni su come scrivere il modello, leggere la sezione [Utilizzo dei modelli](../../functionality/destination-server/message-format.md#using-templating). </li><li> Per ulteriori informazioni sull&#39;escape di caratteri, consulta lo standard JSON [RFC, sezione sette](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Per un esempio di semplice trasformazione, fare riferimento alla trasformazione [Attributi profilo](../../functionality/destination-server/message-format.md#attributes). </li></ul> |
+| `httpTemplate.contentType` | Stringa | *Obbligatorio.* Il tipo di contenuto accettato dal server. Questo valore è molto probabilmente `application/json`. |
 
 {style="table-layout:auto"}
 
@@ -202,12 +202,12 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 | Parametro | Tipo | Descrizione |
 |---|---|---|
 | `name` | Stringa | Nome della connessione di destinazione. |
-| `destinationServerType` | Stringa | Imposta questo valore in base alla piattaforma di destinazione. Per [!DNL Amazon S3], imposta su `FILE_BASED_S3`. |
-| `fileBasedS3Destination.bucket.templatingStrategy` | Stringa | *Obbligatorio.* Seleziona `PEBBLE_V1`. |
-| `fileBasedS3Destination.bucket.value` | Stringa | Il nome del [!DNL Amazon S3] bucket da utilizzare per questa destinazione. |
-| `fileBasedS3Destination.path.templatingStrategy` | Stringa | *Obbligatorio.* Seleziona `PEBBLE_V1`. |
+| `destinationServerType` | Stringa | Imposta questo valore in base alla piattaforma di destinazione. Per [!DNL Amazon S3], impostarlo su `FILE_BASED_S3`. |
+| `fileBasedS3Destination.bucket.templatingStrategy` | Stringa | *Obbligatorio.* Utilizza `PEBBLE_V1`. |
+| `fileBasedS3Destination.bucket.value` | Stringa | Nome del bucket [!DNL Amazon S3] che deve essere utilizzato da questa destinazione. |
+| `fileBasedS3Destination.path.templatingStrategy` | Stringa | *Obbligatorio.* Utilizza `PEBBLE_V1`. |
 | `fileBasedS3Destination.path.value` | Stringa | Percorso della cartella di destinazione che ospiterà i file esportati. |
-| `fileConfigurations` | N/D | Consulta [configurazione formattazione file](../../functionality/destination-server/file-formatting.md) per informazioni dettagliate su come configurare queste impostazioni. |
+| `fileConfigurations` | N/D | Per informazioni dettagliate su come configurare queste impostazioni, vedere [configurazione formattazione file](../../functionality/destination-server/file-formatting.md). |
 
 {style="table-layout:auto"}
 
@@ -308,14 +308,14 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 | Parametro | Tipo | Descrizione |
 |---|---|---|
 | `name` | Stringa | Nome della connessione di destinazione. |
-| `destinationServerType` | Stringa | Imposta questo valore in base alla piattaforma di destinazione. Per [!DNL SFTP] destinazioni, impostalo su `FILE_BASED_SFTP`. |
-| `fileBasedSFTPDestination.rootDirectory.templatingStrategy` | Stringa | *Obbligatorio.* Seleziona `PEBBLE_V1`. |
+| `destinationServerType` | Stringa | Imposta questo valore in base alla piattaforma di destinazione. Per [!DNL SFTP] destinazioni, impostare su `FILE_BASED_SFTP`. |
+| `fileBasedSFTPDestination.rootDirectory.templatingStrategy` | Stringa | *Obbligatorio.* Utilizza `PEBBLE_V1`. |
 | `fileBasedSFTPDestination.rootDirectory.value` | Stringa | La directory radice dell&#39;archiviazione di destinazione. |
-| `fileBasedSFTPDestination.hostName.templatingStrategy` | Stringa | *Obbligatorio.* Seleziona `PEBBLE_V1`. |
+| `fileBasedSFTPDestination.hostName.templatingStrategy` | Stringa | *Obbligatorio.* Utilizza `PEBBLE_V1`. |
 | `fileBasedSFTPDestination.hostName.value` | Stringa | Nome host dell&#39;archiviazione di destinazione. |
 | `port` | Intero | Porta del file server SFTP. |
 | `encryptionMode` | Stringa | Indica se utilizzare la crittografia file. Valori supportati: <ul><li>PGP</li><li>Nessuna</li></ul> |
-| `fileConfigurations` | N/D | Consulta [configurazione formattazione file](../../functionality/destination-server/file-formatting.md) per informazioni dettagliate su come configurare queste impostazioni. |
+| `fileConfigurations` | N/D | Per informazioni dettagliate su come configurare queste impostazioni, vedere [configurazione formattazione file](../../functionality/destination-server/file-formatting.md). |
 
 {style="table-layout:auto"}
 
@@ -414,10 +414,10 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 | Parametro | Tipo | Descrizione |
 |---|---|---|
 | `name` | Stringa | Nome della connessione di destinazione. |
-| `destinationServerType` | Stringa | Imposta questo valore in base alla piattaforma di destinazione. Per [!DNL Azure Data Lake Storage] destinazioni, impostalo su `FILE_BASED_ADLS_GEN2`. |
-| `fileBasedAdlsGen2Destination.path.templatingStrategy` | Stringa | *Obbligatorio.* Seleziona `PEBBLE_V1`. |
+| `destinationServerType` | Stringa | Imposta questo valore in base alla piattaforma di destinazione. Per [!DNL Azure Data Lake Storage] destinazioni, impostare su `FILE_BASED_ADLS_GEN2`. |
+| `fileBasedAdlsGen2Destination.path.templatingStrategy` | Stringa | *Obbligatorio.* Utilizza `PEBBLE_V1`. |
 | `fileBasedAdlsGen2Destination.path.value` | Stringa | Percorso della cartella di destinazione che ospiterà i file esportati. |
-| `fileConfigurations` | N/D | Consulta [configurazione formattazione file](../../functionality/destination-server/file-formatting.md) per informazioni dettagliate su come configurare queste impostazioni. |
+| `fileConfigurations` | N/D | Per informazioni dettagliate su come configurare queste impostazioni, vedere [configurazione formattazione file](../../functionality/destination-server/file-formatting.md). |
 
 {style="table-layout:auto"}
 
@@ -520,12 +520,12 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 | Parametro | Tipo | Descrizione |
 |---|---|---|
 | `name` | Stringa | Nome della connessione di destinazione. |
-| `destinationServerType` | Stringa | Imposta questo valore in base alla piattaforma di destinazione. Per [!DNL Azure Blob Storage] destinazioni, impostalo su `FILE_BASED_AZURE_BLOB`. |
-| `fileBasedAzureBlobDestination.path.templatingStrategy` | Stringa | *Obbligatorio.* Seleziona `PEBBLE_V1`. |
+| `destinationServerType` | Stringa | Imposta questo valore in base alla piattaforma di destinazione. Per [!DNL Azure Blob Storage] destinazioni, impostare su `FILE_BASED_AZURE_BLOB`. |
+| `fileBasedAzureBlobDestination.path.templatingStrategy` | Stringa | *Obbligatorio.* Utilizza `PEBBLE_V1`. |
 | `fileBasedAzureBlobDestination.path.value` | Stringa | Percorso della cartella di destinazione che ospiterà i file esportati. |
-| `fileBasedAzureBlobDestination.container.templatingStrategy` | Stringa | *Obbligatorio.* Seleziona `PEBBLE_V1`. |
-| `fileBasedAzureBlobDestination.container.value` | Stringa | Il nome del [!DNL Azure Blob Storage] contenitore utilizzato da questa destinazione. |
-| `fileConfigurations` | N/D | Consulta [configurazione formattazione file](../../functionality/destination-server/file-formatting.md) per informazioni dettagliate su come configurare queste impostazioni. |
+| `fileBasedAzureBlobDestination.container.templatingStrategy` | Stringa | *Obbligatorio.* Utilizza `PEBBLE_V1`. |
+| `fileBasedAzureBlobDestination.container.value` | Stringa | Nome del contenitore [!DNL Azure Blob Storage] che deve essere utilizzato da questa destinazione. |
+| `fileConfigurations` | N/D | Per informazioni dettagliate su come configurare queste impostazioni, vedere [configurazione formattazione file](../../functionality/destination-server/file-formatting.md). |
 
 {style="table-layout:auto"}
 
@@ -537,7 +537,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 
 +++
 
->[!TAB Data Landing Zone (DLZ)]
+>[!TAB Zona di destinazione dati (DLZ)]
 
 +++Richiesta
 
@@ -625,10 +625,10 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 | Parametro | Tipo | Descrizione |
 |---|---|---|
 | `name` | Stringa | Nome della connessione di destinazione. |
-| `destinationServerType` | Stringa | Imposta questo valore in base alla piattaforma di destinazione. Per [!DNL Data Landing Zone] destinazioni, impostalo su `FILE_BASED_DLZ`. |
-| `fileBasedDlzDestination.path.templatingStrategy` | Stringa | *Obbligatorio.*  Seleziona `PEBBLE_V1`. |
+| `destinationServerType` | Stringa | Imposta questo valore in base alla piattaforma di destinazione. Per [!DNL Data Landing Zone] destinazioni, impostare su `FILE_BASED_DLZ`. |
+| `fileBasedDlzDestination.path.templatingStrategy` | Stringa | *Obbligatorio.* Utilizza `PEBBLE_V1`. |
 | `fileBasedDlzDestination.path.value` | Stringa | Percorso della cartella di destinazione che ospiterà i file esportati. |
-| `fileConfigurations` | N/D | Consulta [configurazione formattazione file](../../functionality/destination-server/file-formatting.md) per informazioni dettagliate su come configurare queste impostazioni. |
+| `fileConfigurations` | N/D | Per informazioni dettagliate su come configurare queste impostazioni, vedere [configurazione formattazione file](../../functionality/destination-server/file-formatting.md). |
 
 {style="table-layout:auto"}
 
@@ -640,7 +640,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 
 +++
 
->[!TAB Archiviazione cloud Google]
+>[!TAB Google Cloud Storage]
 
 +++Richiesta
 
@@ -731,12 +731,12 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 | Parametro | Tipo | Descrizione |
 |---|---|---|
 | `name` | Stringa | Nome della connessione di destinazione. |
-| `destinationServerType` | Stringa | Imposta questo valore in base alla piattaforma di destinazione. Per [!DNL Google Cloud Storage] destinazioni, impostalo su `FILE_BASED_GOOGLE_CLOUD`. |
-| `fileBasedGoogleCloudStorageDestination.bucket.templatingStrategy` | Stringa | *Obbligatorio.*  Seleziona `PEBBLE_V1`. |
-| `fileBasedGoogleCloudStorageDestination.bucket.value` | Stringa | Il nome del [!DNL Google Cloud Storage] bucket da utilizzare per questa destinazione. |
-| `fileBasedGoogleCloudStorageDestination.path.templatingStrategy` | Stringa | *Obbligatorio.* Seleziona `PEBBLE_V1`. |
+| `destinationServerType` | Stringa | Imposta questo valore in base alla piattaforma di destinazione. Per [!DNL Google Cloud Storage] destinazioni, impostare su `FILE_BASED_GOOGLE_CLOUD`. |
+| `fileBasedGoogleCloudStorageDestination.bucket.templatingStrategy` | Stringa | *Obbligatorio.* Utilizza `PEBBLE_V1`. |
+| `fileBasedGoogleCloudStorageDestination.bucket.value` | Stringa | Nome del bucket [!DNL Google Cloud Storage] che deve essere utilizzato da questa destinazione. |
+| `fileBasedGoogleCloudStorageDestination.path.templatingStrategy` | Stringa | *Obbligatorio.* Utilizza `PEBBLE_V1`. |
 | `fileBasedGoogleCloudStorageDestination.path.value` | Stringa | Percorso della cartella di destinazione che ospiterà i file esportati. |
-| `fileConfigurations` | N/D | Consulta [configurazione formattazione file](../../functionality/destination-server/file-formatting.md) per informazioni dettagliate su come configurare queste impostazioni. |
+| `fileConfigurations` | N/D | Per informazioni dettagliate su come configurare queste impostazioni, vedere [configurazione formattazione file](../../functionality/destination-server/file-formatting.md). |
 
 {style="table-layout:auto"}
 
@@ -752,11 +752,11 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 
 ## Gestione degli errori API {#error-handling}
 
-Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Fai riferimento a [Codici di stato API](../../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
+Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](../../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
 
 ## Passaggi successivi {#next-steps}
 
-Dopo aver letto questo documento, ora sai come aggiornare la configurazione di un server di destinazione tramite Destination SDK `/authoring/destination-servers` Endpoint API
+Dopo aver letto questo documento, ora sai come aggiornare la configurazione di un server di destinazione tramite l&#39;endpoint API Destination SDK `/authoring/destination-servers`.
 
 Per ulteriori informazioni su cosa è possibile fare con questo endpoint, consulta i seguenti articoli:
 

@@ -6,22 +6,22 @@ description: Puoi utilizzare l’endpoint "/mappingSets" nell’API di Adobe Exp
 exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '852'
+source-wordcount: '859'
 ht-degree: 5%
 
 ---
 
 # Endpoint set di mappatura
 
-I set di mappatura possono essere utilizzati per definire il modo in cui i dati in uno schema di origine vengono mappati a quelli di uno schema di destinazione. È possibile utilizzare `/mappingSets` nell’API della preparazione dati per recuperare, creare, aggiornare e convalidare in modo programmatico i set di mappatura.
+I set di mappatura possono essere utilizzati per definire il modo in cui i dati in uno schema di origine vengono mappati a quelli di uno schema di destinazione. È possibile utilizzare l&#39;endpoint `/mappingSets` nell&#39;API di preparazione dati per recuperare, creare, aggiornare e convalidare a livello di programmazione i set di mappatura.
 
 ## Elenca set di mappatura
 
-È possibile recuperare un elenco di tutti i set di mappatura per l’organizzazione effettuando una richiesta di GET al `/mappingSets` endpoint.
+È possibile recuperare un elenco di tutti i set di mappatura per l&#39;organizzazione effettuando una richiesta GET all&#39;endpoint `/mappingSets`.
 
 **Formato API**
 
-Il `/mappingSets` l’endpoint supporta diversi parametri di query per aiutare a filtrare i risultati. Anche se la maggior parte di questi parametri sono facoltativi, si consiglia vivamente di utilizzarli per ridurre i costi operativi. Tuttavia, è necessario includere entrambi `start` e `limit` come parte della richiesta. È possibile includere più parametri, separati da e commerciali (`&`).
+L&#39;endpoint `/mappingSets` supporta diversi parametri di query per filtrare i risultati. Anche se la maggior parte di questi parametri sono facoltativi, si consiglia vivamente di utilizzarli per ridurre i costi operativi. Tuttavia, è necessario includere entrambi i parametri `start` e `limit` come parte della richiesta. È possibile includere più parametri, separati da e commerciali (`&`).
 
 ```http
 GET /mappingSets?limit={LIMIT}&start={START}
@@ -33,9 +33,9 @@ GET /mappingSets?limit={LIMIT}&start={START}&expandSchema={EXPAND_SCHEMA}
 | Parametro | Descrizione |
 | --------- | ----------- |
 | `{LIMIT}` | (**Obbligatorio**) Specifica il numero di set di mappatura restituiti. |
-| `{START}` | (**Obbligatorio**) Specifica l&#39;offset delle pagine dei risultati. Per ottenere la prima pagina dei risultati, imposta il valore su `start=0`. |
+| `{START}` | (**Obbligatorio**) Specifica l&#39;offset delle pagine dei risultati. Per ottenere la prima pagina dei risultati, impostare il valore su `start=0`. |
 | `{NAME}` | Filtra i set di mappatura per nome. |
-| `{ORDER_BY}` | Ordina l’ordine dei risultati. Gli unici campi supportati sono `createdDate` e `updatedDate`. Puoi anteporre la proprietà con `+` o `-` per ordinarlo rispettivamente in ordine crescente o decrescente. |
+| `{ORDER_BY}` | Ordina l’ordine dei risultati. Gli unici campi supportati sono `createdDate` e `updatedDate`. È possibile anteporre alla proprietà `+` o `-` per ordinarla rispettivamente in ordine crescente o decrescente. |
 | `{EXPAND_SCHEMA}` | Valore booleano che determina se lo schema di output completo viene restituito come parte della risposta. |
 
 **Richiesta**
@@ -165,7 +165,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets?lim
 
 ## Creare un set di mappatura
 
-Per creare un nuovo set di mappatura, devi effettuare una richiesta POST al `/mappingSets` endpoint.
+È possibile creare un nuovo set di mappatura effettuando una richiesta POST all&#39;endpoint `/mappingSets`.
 
 **Formato API**
 
@@ -217,8 +217,8 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `outputSchema.schemaRef.id` | ID dello schema XDM a cui si fa riferimento. |
-| `outputSchema.schemaRef.contentType` | Determina il formato di risposta dello schema di riferimento. Ulteriori informazioni su questo campo sono disponibili nella sezione [Guida per gli sviluppatori del registro dello schema](../../xdm/api/schemas.md#lookup). |
-| `mappings.sourceType` | Il tipo di origine descrive come il valore verrà estratto dall’origine alla destinazione. Il tipo di origine supporta due valori possibili: <ul><li>`ATTRIBUTE`: tipo di origine `ATTRIBUTE` viene utilizzato quando l’attributo di input proviene da uno schema di origine.</li><li>`EXPRESSION`: tipo di origine `EXPRESSION` viene utilizzato quando la mappatura viene completata utilizzando un campo calcolato.</li></ul> **AVVISO**: un’impostazione errata dei valori del tipo di origine può impedire la modifica dei set di mappatura. |
+| `outputSchema.schemaRef.contentType` | Determina il formato di risposta dello schema di riferimento. Ulteriori informazioni su questo campo sono disponibili nella [Guida per gli sviluppatori del registro degli schemi](../../xdm/api/schemas.md#lookup). |
+| `mappings.sourceType` | Il tipo di origine descrive come il valore verrà estratto dall’origine alla destinazione. Il tipo di origine supporta due valori possibili: <ul><li>`ATTRIBUTE`: il tipo di origine `ATTRIBUTE` viene utilizzato quando l&#39;attributo di input proviene da uno schema di origine.</li><li>`EXPRESSION`: il tipo di origine `EXPRESSION` viene utilizzato quando la mappatura viene completata utilizzando un campo calcolato.</li></ul> **AVVISO**: se non si impostano correttamente i valori del tipo di origine, i set di mappatura non potranno essere modificati. |
 | `mappings.source` | La posizione da cui desideri mappare i dati. |
 | `mappings.destination` | La posizione in cui desideri mappare i dati. |
 
@@ -239,7 +239,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 
 ## Convalida mappature
 
-Per verificare il corretto funzionamento delle mappature, effettua una richiesta POST al `/mappingSets/validate` endpoint.
+Per verificare il corretto funzionamento dei mapping, eseguire una richiesta POST all&#39;endpoint `/mappingSets/validate`.
 
 **Formato API**
 
@@ -313,7 +313,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 
 ## Anteprima dati per mappature
 
-Per visualizzare in anteprima a cosa verranno mappati i dati, effettua una richiesta POST al `/mappingSets/preview` endpoint.
+Per visualizzare in anteprima a cosa verranno mappati i dati, effettua una richiesta POST all&#39;endpoint `/mappingSets/preview`.
 
 **Formato API**
 
@@ -392,7 +392,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un’an
 
 ## Cercare un set di mappatura
 
-Per recuperare un set di mappatura specifico, devi fornire il relativo ID nel percorso di una richiesta GET al `/mappingSets` endpoint. Questo endpoint supporta anche diversi parametri di query per consentire il recupero dei dettagli sulla versione del set di mappatura specificato.
+Per recuperare un set di mappatura specifico, devi fornire il relativo ID nel percorso di una richiesta GET all&#39;endpoint `/mappingSets`. Questo endpoint supporta anche diversi parametri di query per consentire il recupero dei dettagli sulla versione del set di mappatura specificato.
 
 **Formato API**
 
@@ -583,7 +583,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 
 ## Aggiornare un set di mappatura
 
-Per aggiornare un set di mappatura, devi fornire il relativo ID nel percorso di un `PUT` richiesta al `mappingSets` endpoint.
+Per aggiornare un set di mappatura, devi fornire il relativo ID nel percorso di una richiesta `PUT` all&#39;endpoint `mappingSets`.
 
 **Formato API**
 

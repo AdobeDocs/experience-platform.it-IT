@@ -13,11 +13,11 @@ ht-degree: 7%
 
 Gli strumenti sandbox consentono di selezionare diversi artefatti (noti anche come oggetti) ed esportarli in un pacchetto. Un pacchetto può essere costituito da un singolo artefatto o da più artefatti (come set di dati o schemi). Tutti gli artefatti inclusi in un pacchetto devono appartenere alla stessa sandbox.
 
-Il `/packages` l’endpoint nell’API degli strumenti sandbox consente di gestire in modo programmatico i pacchetti nell’organizzazione, inclusa la pubblicazione di un pacchetto e l’importazione di un pacchetto in una sandbox.
+L&#39;endpoint `/packages` nell&#39;API degli strumenti sandbox consente di gestire in modo programmatico i pacchetti dell&#39;organizzazione, ad esempio la pubblicazione di un pacchetto e l&#39;importazione di un pacchetto in una sandbox.
 
 ## Creare un pacchetto {#create}
 
-Per creare un pacchetto con più artefatti, devi effettuare una richiesta POST al `/packages` fornendo valori per il nome e il tipo di pacchetto.
+È possibile creare un pacchetto con più artefatti effettuando una richiesta POST all&#39;endpoint `/packages` e fornendo i valori per il nome e il tipo di pacchetto del pacchetto.
 
 **Formato API**
 
@@ -57,10 +57,10 @@ curl -X POST \
 | --- | --- | --- | --- |
 | `name` | Nome del pacchetto. | Stringa | Sì |
 | `description` | Una descrizione per fornire ulteriori informazioni sul pacchetto. | Stringa | No |
-| `packageType` | Il tipo di pacchetto è **PARZIALE** per indicare che si stanno includendo artefatti specifici in un pacchetto. | Stringa | SÌ |
+| `packageType` | Il tipo di pacchetto è **PARTIAL** per indicare che si stanno includendo artefatti specifici in un pacchetto. | Stringa | SÌ |
 | `sourceSandbox` | La sandbox di origine del pacchetto. | Stringa | No |
 | `expiry` | Il timestamp che definisce la data di scadenza del pacchetto. Il valore predefinito è 90 giorni dalla data di creazione. Il campo di scadenza della risposta sarà l’ora UTC dell’epoca. | Stringa (formato timestamp UTC) | No |
-| `artifacts` | Elenco di artefatti da esportare nel pacchetto. Il `artifacts` il valore deve essere **nulle** o **vuoto**, quando `packageType` è `FULL`. | Array | No |
+| `artifacts` | Elenco di artefatti da esportare nel pacchetto. Il valore `artifacts` deve essere **null** o **empty**, quando `packageType` è `FULL`. | Array | No |
 
 **Risposta**
 
@@ -100,11 +100,11 @@ In caso di esito positivo, la risposta restituisce il pacchetto appena creato. L
 
 ## Aggiornare un pacchetto {#update}
 
-Per aggiornare un pacchetto, devi effettuare una richiesta PUT al `/packages` endpoint.
+È possibile aggiornare un pacchetto effettuando una richiesta PUT all&#39;endpoint `/packages`.
 
 ### Aggiungere artefatti a un pacchetto {#add-artifacts}
 
-Per aggiungere artefatti a un pacchetto, è necessario fornire un `id` e includono **AGGIUNGI** per `action`.
+Per aggiungere artifact a un pacchetto, è necessario specificare `id` e includere **ADD** per `action`.
 
 **Formato API**
 
@@ -137,8 +137,8 @@ curl -X PUT \
 | Proprietà | Descrizione | Tipo | Obbligatorio |
 | --- | --- | --- | --- |
 | `id` | ID del pacchetto da aggiornare. | Stringa | Sì |
-| `action` | Per aggiungere artefatti al pacchetto, il valore dell’azione deve essere **AGGIUNGI**. Questa azione è supportata solo **PARZIALE** tipi di pacchetti. | Stringa | Sì |
-| `artifacts` | Elenco di artefatti da aggiungere al pacchetto. Non ci sarebbe alcuna modifica al pacchetto se l&#39;elenco è **nulle** o **vuoto**. Gli artefatti vengono deduplicati prima di essere aggiunti al pacchetto. | Array | No |
+| `action` | Per aggiungere artifact al pacchetto, il valore dell&#39;azione deve essere **ADD**. Questa azione è supportata solo per i tipi di pacchetto **PARTIAL**. | Stringa | Sì |
+| `artifacts` | Elenco di artefatti da aggiungere al pacchetto. Non ci sarebbero modifiche al pacchetto se l&#39;elenco è **null** o **empty**. Gli artefatti vengono deduplicati prima di essere aggiunti al pacchetto. | Array | No |
 | `expiry` | Il timestamp che definisce la data di scadenza del pacchetto. Il valore predefinito è 90 giorni dalla chiamata dell’API di PUT se la scadenza non è specificata nel payload. Il campo di scadenza della risposta sarà l’ora UTC dell’epoca. | Stringa (formato timestamp UTC) | No |
 
 **Risposta**
@@ -183,7 +183,7 @@ In caso di esito positivo, la risposta restituisce il pacchetto aggiornato. La r
 
 ### Eliminare gli artefatti da un pacchetto {#delete-artifacts}
 
-Per eliminare gli artefatti da un pacchetto, è necessario fornire un `id` e includono **DELETE** per `action`.
+Per eliminare gli artifact da un pacchetto, è necessario fornire `id` e includere **DELETE** per `action`.
 
 
 **Formato API**
@@ -216,8 +216,8 @@ curl -X PUT \
 | Proprietà | Descrizione | Tipo | Obbligatorio |
 | --- | --- | --- | --- |
 | `id` | ID del pacchetto da aggiornare. | Stringa | Sì |
-| `action` | Per eliminare gli artefatti da un pacchetto, il valore dell’azione deve essere **DELETE**. Questa azione è supportata solo **PARZIALE** tipi di pacchetti. | Stringa | Sì |
-| `artifacts` | Elenco di artefatti da eliminare dal pacchetto. Non ci sarebbe alcuna modifica al pacchetto se l&#39;elenco è **nulle** o **vuoto**. | Array | No |
+| `action` | Per eliminare gli artifact da un pacchetto, il valore dell&#39;azione deve essere **DELETE**. Questa azione è supportata solo per i tipi di pacchetto **PARTIAL**. | Stringa | Sì |
+| `artifacts` | Elenco di artefatti da eliminare dal pacchetto. Non ci sarebbero modifiche al pacchetto se l&#39;elenco è **null** o **empty**. | Array | No |
 
 **Risposta**
 
@@ -257,9 +257,9 @@ In caso di esito positivo, la risposta restituisce il pacchetto aggiornato. La r
 
 >[!NOTE]
 >
->Il **AGGIORNA** viene utilizzata per aggiornare i campi di metadati del pacchetto e **non può** per aggiungere o eliminare artefatti in un pacchetto.
+>L&#39;azione **AGGIORNA** viene utilizzata per aggiornare i campi dei metadati del pacchetto e **non può** essere utilizzata per aggiungere/eliminare artifact a un pacchetto.
 
-Per aggiornare i campi di metadati in un pacchetto, devi fornire un `id` e includono **AGGIORNA** per `action`.
+Per aggiornare i campi di metadati in un pacchetto, è necessario fornire `id` e includere **UPDATE** per `action`.
 
 **Formato API**
 
@@ -291,9 +291,9 @@ curl -X PUT \
 | Proprietà | Descrizione | Tipo | Obbligatorio |
 | --- | --- | --- | --- |
 | `id` | ID del pacchetto da aggiornare. | Stringa | Sì |
-| `action` | Per aggiornare i campi di metadati in un pacchetto, il valore dell’azione deve essere **AGGIORNA**. Questa azione è supportata solo **PARZIALE** tipi di pacchetti. | Stringa | Sì |
+| `action` | Per aggiornare i campi di metadati in un pacchetto, il valore dell&#39;azione deve essere **UPDATE**. Questa azione è supportata solo per i tipi di pacchetto **PARTIAL**. | Stringa | Sì |
 | `name` | Nome aggiornato del pacchetto. I nomi di pacchetto duplicati non sono consentiti. | Array | Sì |
-| `sourceSandbox` | La sandbox di origine deve appartenere alla stessa organizzazione specificata nell’intestazione della richiesta. | Stringa | Sì |
+| `sourceSandbox` | La sandbox di Source deve appartenere alla stessa organizzazione specificata nell’intestazione della richiesta. | Stringa | Sì |
 
 **Risposta**
 
@@ -331,7 +331,7 @@ In caso di esito positivo, la risposta restituisce il pacchetto aggiornato. La r
 
 ## Eliminare un pacchetto {#delete}
 
-Per eliminare un pacchetto, effettua una richiesta DELETE al `/packages` e specificare l&#39;ID del pacchetto da eliminare.
+Per eliminare un pacchetto, effettuare una richiesta DELETE all&#39;endpoint `/packages` e specificare l&#39;ID del pacchetto da eliminare.
 
 **Formato API**
 
@@ -345,7 +345,7 @@ DELETE /packages/{PACKAGE_ID}
 
 **Richiesta**
 
-La seguente richiesta elimina il pacchetto con l’ID {PACKAGE_ID}.
+La richiesta seguente elimina il pacchetto con ID {PACKAGE_ID}.
 
 ```shell
 curl -X DELETE \
@@ -365,9 +365,9 @@ In caso di esito positivo, la risposta restituisce un motivo che mostra l’ID p
 }
 ```
 
-## Pubblicare un pacchetto {#publish}
+## Publish un pacchetto {#publish}
 
-Per abilitare l’importazione di un pacchetto in una sandbox, devi pubblicarlo. Effettuare una richiesta di GET al `/packages` endpoint durante la specifica dell’ID del pacchetto da pubblicare.
+Per abilitare l’importazione di un pacchetto in una sandbox, devi pubblicarlo. Effettuare una richiesta di GET all&#39;endpoint `/packages` specificando l&#39;ID del pacchetto da pubblicare.
 
 **Formato API**
 
@@ -381,7 +381,7 @@ GET /packages/{PACKAGE_ID}/export
 
 **Richiesta**
 
-La richiesta seguente pubblica il pacchetto con l’ID {PACKAGE_ID}.
+La richiesta seguente pubblica il pacchetto con ID {PACKAGE_ID}.
 
 ```shell
 curl -X GET \
@@ -393,7 +393,7 @@ curl -X GET \
 
 | Proprietà | Descrizione | Tipo | Obbligatorio |
 | --- | --- | --- | --- |
-| `expiryPeriod` | Questo periodo di tempo specificato dall&#39;utente definisce la data di scadenza del pacchetto (in giorni) dal momento in cui il pacchetto è stato pubblicato. Questo valore non deve essere negativo.<br> Se non viene specificato alcun valore, il valore predefinito sarà calcolato come 90 (giorni) dalla data di pubblicazione. | Intero | No |
+| `expiryPeriod` | Questo periodo di tempo specificato dall&#39;utente definisce la data di scadenza del pacchetto (in giorni) dal momento in cui il pacchetto è stato pubblicato. Questo valore non deve essere negativo.<br> Se non viene specificato alcun valore, il valore predefinito verrà calcolato come 90 (giorni) dalla data di pubblicazione. | Intero | No |
 
 **Risposta**
 
@@ -416,7 +416,7 @@ In caso di esito positivo, la risposta restituisce il pacchetto pubblicato.
 
 ## Cercare un pacchetto {#look-up-package}
 
-Per cercare un singolo pacchetto, devi effettuare una richiesta GET al `/packages` endpoint che include l’ID corrispondente del pacchetto nel percorso della richiesta.
+Per cercare un singolo pacchetto, devi eseguire una richiesta GET all&#39;endpoint `/packages` che includa l&#39;ID corrispondente del pacchetto nel percorso della richiesta.
 
 **Formato API**
 
@@ -483,7 +483,7 @@ In caso di esito positivo, la risposta restituisce i dettagli per l’ID pacchet
 
 ## Elencare pacchetti {#list-packages}
 
-Puoi elencare tutti i pacchetti nella tua organizzazione effettuando una richiesta GET al `/packages` endpoint.
+È possibile elencare tutti i pacchetti dell&#39;organizzazione effettuando una richiesta di GET all&#39;endpoint `/packages`.
 
 **Formato API**
 
@@ -493,11 +493,11 @@ GET /packages/?{QUERY_PARAMS}
 
 | Parametro | Descrizione |
 | --- | --- |
-| {QUERY_PARAMS} | Parametri di query facoltativi in base ai quali filtrare i risultati. Consulta la sezione su [parametri di query](./appendix.md) per ulteriori informazioni. |
+| {QUERY_PARAMS} | Parametri di query facoltativi in base ai quali filtrare i risultati. Per ulteriori informazioni, vedere la sezione relativa ai [parametri di query](./appendix.md). |
 
 **Richiesta**
 
-La richiesta seguente recupera le informazioni dei pacchetti in base al {QUERY_PARAMS}.
+La richiesta seguente recupera le informazioni dei pacchetti in base a {QUERY_PARAMS}.
 
 ```shell
 curl -X GET \
@@ -615,7 +615,7 @@ curl -X GET \
 
 **Risposta**
 
-I conflitti vengono restituiti nella risposta. La risposta mostra il pacchetto originale più il `alternatives` frammento come array ordinato per classificazione.
+I conflitti vengono restituiti nella risposta. La risposta mostra il pacchetto originale più il frammento `alternatives` come un array ordinato per classificazione.
 
 Visualizza risposta+++
 
@@ -735,7 +735,7 @@ Visualizza risposta+++
 >
 >Per la risoluzione dei conflitti è fondamentale che l’artefatto alternativo esista già nella sandbox di destinazione.
 
-È possibile inviare un&#39;importazione per un pacchetto dopo aver esaminato i conflitti e fornito le sostituzioni effettuando una richiesta POST al `/packages` endpoint. Il risultato viene fornito come payload, che avvia il processo di importazione per la sandbox di destinazione come specificato nel payload.
+Dopo aver esaminato i conflitti e fornito le sostituzioni, è possibile inviare un&#39;importazione per un pacchetto effettuando una richiesta POST all&#39;endpoint `/packages`. Il risultato viene fornito come payload, che avvia il processo di importazione per la sandbox di destinazione come specificato nel payload.
 
 Il payload accetta anche il nome e la descrizione del processo specificati dall’utente per il processo di importazione. Se il nome e la descrizione specificati dall&#39;utente non sono disponibili, vengono utilizzati il nome e la descrizione del pacchetto per il nome e la descrizione del processo.
 
@@ -747,7 +747,7 @@ POST /packages/import
 
 **Richiesta**
 
-La richiesta seguente recupera i pacchetti da importare. Il payload è una mappa di sostituzioni in cui, se è presente una voce, la chiave è `artifactId` fornite dal pacchetto, e l’alternativa è il valore. Se la mappa o il payload è **vuoto**, non vengono eseguite sostituzioni.
+La richiesta seguente recupera i pacchetti da importare. Il payload è una mappa di sostituzioni in cui, se esiste una voce, la chiave è `artifactId` fornita dal pacchetto e l&#39;alternativa è il valore. Se la mappa o il payload è **vuoto**, non vengono eseguite sostituzioni.
 
 ```shell
 curl -X POST \
@@ -775,7 +775,7 @@ curl -X POST \
 
 | Proprietà | Descrizione | Tipo | Obbligatorio |
 | --- | --- | --- | --- |
-| `alternatives` | `alternatives` rappresenta il mapping degli artefatti sandbox di origine agli artefatti sandbox di destinazione esistenti. Poiché sono già presenti, il processo di importazione evita la creazione di questi artefatti nella sandbox di destinazione. | Stringa | No |
+| `alternatives` | `alternatives` rappresenta il mapping degli artifact sandbox di origine agli artifact sandbox di destinazione esistenti. Poiché sono già presenti, il processo di importazione evita la creazione di questi artefatti nella sandbox di destinazione. | Stringa | No |
 
 **Risposta**
 
@@ -801,7 +801,7 @@ curl -X POST \
 
 ## Elenca tutti gli oggetti dipendenti {#dependent-objects}
 
-Elencare tutti gli oggetti dipendenti per gli oggetti esportati in un pacchetto effettuando una richiesta POST al `/packages` endpoint durante la specifica dell’ID del pacchetto.
+Elencare tutti gli oggetti dipendenti per gli oggetti esportati in un pacchetto effettuando una richiesta POST all&#39;endpoint `/packages` mentre si specifica l&#39;ID del pacchetto.
 
 **Formato API**
 
@@ -880,7 +880,7 @@ In caso di esito positivo, la risposta restituisce un elenco di elementi figlio 
 
 ## Controlla le autorizzazioni basate sul ruolo per importare tutti gli artefatti del pacchetto {#role-based-permissions}
 
-Per verificare se si dispone delle autorizzazioni necessarie per importare gli artefatti del pacchetto, effettuare una richiesta GET al `/packages` endpoint durante la specifica dell’ID del pacchetto e del nome della sandbox di destinazione.
+Per verificare se si dispone delle autorizzazioni per importare gli artefatti del pacchetto, eseguire una richiesta GET all&#39;endpoint `/packages` specificando l&#39;ID del pacchetto e il nome della sandbox di destinazione.
 
 **Formato API**
 
@@ -1028,7 +1028,7 @@ Visualizza risposta+++
 
 ## Elencare processi di esportazione/importazione {#list-jobs}
 
-È possibile elencare i processi di esportazione/importazione correnti effettuando una richiesta di GET al `/packages` endpoint.
+È possibile elencare i processi di esportazione/importazione correnti effettuando una richiesta GET all&#39;endpoint `/packages`.
 
 **Formato API**
 
@@ -1038,7 +1038,7 @@ GET /packages/jobs?{QUERY_PARAMS}
 
 | Parametro | Descrizione |
 | --- | --- |
-| {QUERY_PARAMS} | Parametri di query facoltativi in base ai quali filtrare i risultati. Consulta la sezione su [parametri di query](./appendix.md) per ulteriori informazioni. |
+| {QUERY_PARAMS} | Parametri di query facoltativi in base ai quali filtrare i risultati. Per ulteriori informazioni, vedere la sezione relativa ai [parametri di query](./appendix.md). |
 
 **Richiesta**
 

@@ -12,21 +12,21 @@ ht-degree: 0%
 
 # Tipi di evento
 
-Questa pagina descrive i tipi di evento Adobe Experience Platform forniti dall’estensione tag Adobe Experience Platform Web SDK. Questi sono utilizzati per [regole di compilazione](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html) e non devono essere confusi con `eventType` campo in [`xdm` oggetto](/help/web-sdk/commands/sendevent/xdm.md).
+Questa pagina descrive i tipi di evento Adobe Experience Platform forniti dall’estensione tag Adobe Experience Platform Web SDK. Sono utilizzati per [generare regole](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html?lang=it) e non devono essere confusi con il campo `eventType` nell&#39;oggetto [`xdm`](/help/web-sdk/commands/sendevent/xdm.md).
 
 ## [!UICONTROL Invio evento completato]
 
-In genere, la proprietà ha una o più regole che utilizzano [[!UICONTROL Invia evento] azione](action-types.md#send-event) per inviare eventi a Adobe Experience Platform Edge Network. Ogni volta che un evento viene inviato a Edge Network, viene restituita una risposta al browser con dati utili. Senza [!UICONTROL Invio evento completato] tipo di evento, non avresti accesso ai dati restituiti.
+In genere, la proprietà dispone di una o più regole che utilizzano l&#39;azione [[!UICONTROL Invia evento]](action-types.md#send-event) per inviare eventi all&#39;Edge Network di Adobe Experience Platform. Ogni volta che un evento viene inviato a Edge Network, viene restituita una risposta al browser con dati utili. Senza il tipo di evento [!UICONTROL Invia evento completato], non potrai accedere ai dati restituiti.
 
-Per accedere ai dati restituiti, crea una regola separata, quindi aggiungi un [!UICONTROL Invio evento completato] alla regola. Questa regola viene attivata ogni volta che viene ricevuta una risposta corretta dal server a seguito di una [!UICONTROL Invia evento] azione.
+Per accedere ai dati restituiti, crea una regola separata, quindi aggiungi un evento [!UICONTROL Invia evento completato] alla regola. Questa regola viene attivata ogni volta che viene ricevuta una risposta dal server a seguito di un&#39;azione [!UICONTROL Invia evento].
 
-Quando un [!UICONTROL Invio evento completato] evento attiva una regola, fornisce i dati restituiti dal server che possono essere utili per eseguire determinate attività. In genere, si aggiunge un [!UICONTROL Codice personalizzato] azione (da [!UICONTROL Core] ) alla stessa regola che contiene il [!UICONTROL Invio evento completato] evento. In [!UICONTROL Codice personalizzato] , il codice personalizzato avrà accesso a una variabile denominata `event`. Questo `event` conterrà i dati restituiti dal server.
+Quando un evento [!UICONTROL Invia evento completato] attiva una regola, fornisce i dati restituiti dal server che possono essere utili per eseguire determinate attività. In genere, si aggiunge un&#39;azione [!UICONTROL Codice personalizzato] (dall&#39;estensione [!UICONTROL Core]) alla stessa regola contenente l&#39;evento [!UICONTROL Invia evento completato]. Nell&#39;azione [!UICONTROL Codice personalizzato], il codice personalizzato avrà accesso a una variabile denominata `event`. Questa variabile `event` conterrà i dati restituiti dal server.
 
 La regola per la gestione dei dati restituiti da Edge Network potrebbe essere simile alla seguente:
 
 ![](assets/send-event-complete.png)
 
-Di seguito sono riportati alcuni esempi di come eseguire determinate attività utilizzando [!UICONTROL Codice personalizzato] in questa regola.
+Di seguito sono riportati alcuni esempi di come eseguire alcune attività utilizzando l&#39;azione [!UICONTROL Codice personalizzato] in questa regola.
 
 ### Rendering manuale di contenuti personalizzati
 
@@ -36,15 +36,15 @@ Nell’azione Codice personalizzato, inclusa nella regola per la gestione dei da
 var propositions = event.propositions;
 ```
 
-Se `event.propositions` esiste, è un array contenente oggetti della proposta di personalizzazione. Le proposte incluse nell’array sono determinate, in gran parte, dal modo in cui l’evento è stato inviato al server.
+Se `event.propositions` esiste, si tratta di un array contenente oggetti di proposta di personalizzazione. Le proposte incluse nell’array sono determinate, in gran parte, dal modo in cui l’evento è stato inviato al server.
 
-Per questo primo scenario, supponiamo che tu non abbia selezionato [!UICONTROL Decisioni di rendering] e non hanno fornito alcun [!UICONTROL ambiti decisionali] all&#39;interno del [!UICONTROL Invia evento] azione responsabile dell’invio dell’evento.
+Per questo primo scenario, si supponga di non aver selezionato la casella di controllo [!UICONTROL Decisioni di rendering] e di non aver fornito alcun [!UICONTROL ambito di decisione] nell&#39;azione [!UICONTROL Invia evento] responsabile dell&#39;invio dell&#39;evento.
 
 ![img.png](assets/send-event-render-unchecked-without-scopes.png)
 
-In questo esempio, la proprietà `propositions` l’array contiene solo proposte relative all’evento idonee per il rendering automatico.
+In questo esempio, l&#39;array `propositions` contiene solo proposte relative all&#39;evento idonee per il rendering automatico.
 
-Il `propositions` l’array potrebbe assomigliare a questo esempio:
+L&#39;array `propositions` potrebbe essere simile a questo esempio:
 
 ```json
 [
@@ -85,17 +85,17 @@ Il `propositions` l’array potrebbe assomigliare a questo esempio:
 ]
 ```
 
-Durante l’invio dell’evento, il [!UICONTROL Decisioni di rendering] La casella di controllo non è stata selezionata, pertanto l’SDK non ha tentato di eseguire automaticamente il rendering di alcun contenuto. L’SDK ha comunque recuperato automaticamente i contenuti idonei per il rendering automatico e ti ha fornito come eseguire il rendering manualmente, se lo desideri. Tieni presente che ogni oggetto della proposta ha il proprio `renderAttempted` proprietà impostata su `false`.
+Durante l&#39;invio dell&#39;evento, la casella di controllo [!UICONTROL Decisioni di rendering] non è stata selezionata, pertanto l&#39;SDK non ha tentato di eseguire automaticamente il rendering di alcun contenuto. L’SDK ha comunque recuperato automaticamente i contenuti idonei per il rendering automatico e ti ha fornito come eseguire il rendering manualmente, se lo desideri. Tieni presente che la proprietà `renderAttempted` di ogni oggetto della proposta è impostata su `false`.
 
-Se invece avresti selezionato [!UICONTROL Decisioni di rendering] Quando inviava l’evento, l’SDK tentava di eseguire il rendering di tutte le proposte idonee per il rendering automatico. Di conseguenza, ogni oggetto della proposta avrebbe il suo `renderAttempted` proprietà impostata su `true`. In questo caso, non sarebbe necessario eseguire manualmente il rendering di queste proposte.
+Se invece avessi selezionato la casella di controllo [!UICONTROL Decisioni di rendering] durante l&#39;invio dell&#39;evento, l&#39;SDK avrebbe tentato di eseguire il rendering di tutte le proposte idonee per il rendering automatico. Di conseguenza, la proprietà `renderAttempted` di ciascuno degli oggetti della proposta sarà impostata su `true`. In questo caso, non sarebbe necessario eseguire manualmente il rendering di queste proposte.
 
-Finora hai esaminato solo i contenuti di personalizzazione idonei per il rendering automatico (ad esempio, qualsiasi contenuto creato nel Compositore esperienza visivo di Adobe Target). Per recuperare eventuali contenuti di personalizzazione _non_ idonei per il rendering automatico, richiedi il contenuto fornendo ambiti decisionali utilizzando [!UICONTROL Ambiti decisionali] campo in [!UICONTROL Invia evento] azione. Un ambito è una stringa che identifica una particolare proposta che desideri recuperare dal server.
+Finora hai esaminato solo i contenuti di personalizzazione idonei per il rendering automatico (ad esempio, qualsiasi contenuto creato nel Compositore esperienza visivo di Adobe Target). Per recuperare qualsiasi contenuto di personalizzazione _not_ idoneo per il rendering automatico, richiedi il contenuto fornendo ambiti decisionali utilizzando il campo [!UICONTROL Ambiti decisionali] nell&#39;azione [!UICONTROL Invia evento]. Un ambito è una stringa che identifica una particolare proposta che desideri recuperare dal server.
 
-Il [!UICONTROL Invia evento] L&#39;azione sarà simile alla seguente:
+L&#39;azione [!UICONTROL Invia evento] sarà simile alla seguente:
 
 ![img.png](assets/send-event-render-unchecked-with-scopes.png)
 
-In questo esempio, se le proposte si trovano sul server che corrisponde a `salutation` o `discount` , vengono restituiti e inclusi nel `propositions` array. Tieni presente che le proposte idonee per il rendering automatico continueranno a essere incluse nel `propositions` , indipendentemente dalla modalità di configurazione [!UICONTROL Decisioni di rendering] o [!UICONTROL Ambiti decisionali] campi in [!UICONTROL Invia evento] azione. Il `propositions` L’array, in questo caso, sarà simile a questo esempio:
+In questo esempio, se le proposte vengono trovate nel server corrispondente all&#39;ambito `salutation` o `discount`, vengono restituite e incluse nell&#39;array `propositions`. Tieni presente che le proposte idonee per il rendering automatico continueranno a essere incluse nell&#39;array `propositions`, indipendentemente da come configuri i campi [!UICONTROL Decisioni di rendering] o [!UICONTROL Ambiti decisionali] nell&#39;azione [!UICONTROL Invia evento]. L&#39;array `propositions`, in questo caso, sarà simile all&#39;esempio seguente:
 
 ```json
 [
@@ -169,14 +169,14 @@ In questo esempio, se le proposte si trovano sul server che corrisponde a `salut
 ]
 ```
 
-A questo punto, puoi eseguire il rendering del contenuto delle proposte come lo ritieni opportuno. In questo esempio, la proposta corrisponde alla `discount` scope è una proposta HTML creata utilizzando il Compositore esperienza basato su moduli di Adobe Target. Supponiamo di avere un elemento sulla pagina con l&#39;ID di `daily-special` e desiderano eseguire il rendering del contenuto da `discount` proposizione nel `daily-special` elemento. Effettua le seguenti operazioni:
+A questo punto, puoi eseguire il rendering del contenuto delle proposte come lo ritieni opportuno. In questo esempio, la proposta corrispondente all&#39;ambito `discount` è una proposta HTML creata utilizzando il Compositore esperienza basato su moduli di Adobe Target. Si supponga di disporre di un elemento nella pagina con ID `daily-special` e di voler eseguire il rendering del contenuto della proposta `discount` nell&#39;elemento `daily-special`. Effettua le seguenti operazioni:
 
-1. Estrarre proposte dalla `event` oggetto.
-1. Eseguire un ciclo tra le proposte, cercando la proposta con un ambito di `discount`.
+1. Estrarre le proposte dall&#39;oggetto `event`.
+1. Eseguire un ciclo in ogni proposta, cercando la proposta con un ambito di `discount`.
 1. Se trovi una proposta, scorri ciclicamente ogni elemento della proposta, cercando l’elemento che è il contenuto HTML. (È meglio controllare che presumere.)
-1. Se trovi un elemento contenente contenuti HTML, individua `daily-special` nella pagina e sostituirne il HTML con il contenuto personalizzato.
+1. Se trovi un elemento contenente contenuti HTML, individua l&#39;elemento `daily-special` nella pagina e sostituisci il relativo HTML con il contenuto personalizzato.
 
-Il codice personalizzato all&#39;interno del [!UICONTROL Codice personalizzato] L&#39;azione potrebbe essere visualizzata come segue:
+Il codice personalizzato all&#39;interno dell&#39;azione [!UICONTROL Codice personalizzato] potrebbe essere visualizzato come segue:
 
 ```javascript
 var propositions = event.propositions;
@@ -217,7 +217,7 @@ if (discountHtml) {
 
 ### Accesso ai token di risposta di Adobe Target
 
-Il contenuto di personalizzazione restituito da Adobe Target include [token di risposta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html), ovvero dettagli sull’attività, l’offerta, l’esperienza, il profilo utente, le informazioni geografiche e altro ancora. Questi dettagli possono essere condivisi con strumenti di terze parti o utilizzati per il debug. I token di risposta possono essere configurati nell’interfaccia utente di Adobe Target.
+Il contenuto Personalization restituito da Adobe Target include [token di risposta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html), ovvero dettagli su attività, offerta, esperienza, profilo utente, informazioni geografiche e altro ancora. Questi dettagli possono essere condivisi con strumenti di terze parti o utilizzati per il debug. I token di risposta possono essere configurati nell’interfaccia utente di Adobe Target.
 
 Nell’azione Codice personalizzato, inclusa nella regola per la gestione dei dati di risposta, puoi accedere alle proposte di personalizzazione restituite dal server. A tale scopo, digita il seguente codice personalizzato:
 
@@ -225,15 +225,15 @@ Nell’azione Codice personalizzato, inclusa nella regola per la gestione dei da
 var propositions = event.propositions;
 ```
 
-Se `event.propositions` esiste, è un array contenente oggetti della proposta di personalizzazione. Consulta [Rendering manuale di contenuti personalizzati](#manually-render-personalized-content) per ulteriori informazioni sul contenuto di `result.propositions`.
+Se `event.propositions` esiste, si tratta di un array contenente oggetti di proposta di personalizzazione. Per ulteriori informazioni sul contenuto di `result.propositions`, vedere [Eseguire manualmente il rendering del contenuto personalizzato](#manually-render-personalized-content).
 
-Supponiamo di voler raccogliere tutti i nomi delle attività da tutte le proposte di cui è stato eseguito il rendering automatico dall’SDK web e inviarli in un singolo array. È quindi possibile inviare il singolo array a una terza parte. In questo caso, scrivi il codice personalizzato all’interno del [!UICONTROL Codice personalizzato] azione per:
+Supponiamo di voler raccogliere tutti i nomi delle attività da tutte le proposte di cui è stato eseguito il rendering automatico dall’SDK web e inviarli in un singolo array. È quindi possibile inviare il singolo array a una terza parte. In questo caso, scrivere il codice personalizzato nell&#39;azione [!UICONTROL Codice personalizzato] in:
 
-1. Estrarre proposte dalla `event` oggetto.
+1. Estrarre le proposte dall&#39;oggetto `event`.
 1. Eseguire un ciclo tra le proposte.
 1. Determina se l’SDK ha eseguito il rendering della proposta.
 1. In tal caso, scorri ciclicamente ogni elemento della proposta.
-1. Recupera il nome dell’attività da `meta` , che è un oggetto contenente token di risposta.
+1. Recuperare il nome dell&#39;attività dalla proprietà `meta`, che è un oggetto contenente token di risposta.
 1. Invia il nome dell’attività a un array.
 1. Invia i nomi delle attività a una terza parte.
 

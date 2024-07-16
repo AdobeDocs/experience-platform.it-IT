@@ -12,23 +12,23 @@ ht-degree: 0%
 
 # [!UICONTROL Consensi e preferenze] gruppo di campi
 
-[!UICONTROL Consensi e preferenze] è un gruppo di campi standard per [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) che acquisisce informazioni sul consenso e sulle preferenze di un singolo cliente.
+[!UICONTROL Consensi e preferenze] è un gruppo di campi standard per la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) che acquisisce informazioni sul consenso e sulle preferenze per un singolo cliente.
 
 >[!NOTE]
 >
->Poiché questo gruppo di campi è compatibile solo con [!DNL XDM Individual Profile], non può essere utilizzato per [!DNL XDM ExperienceEvent] schemi. Se desideri includere i dati sul consenso e sulle preferenze nello schema Experience Event, aggiungi [[!UICONTROL Consenso per le preferenze di privacy, personalizzazione e marketing] tipo di dati](../../data-types/consents.md) allo schema tramite l’utilizzo di un [gruppo di campi personalizzato](../../ui/resources/field-groups.md#create) invece.
+>Poiché questo gruppo di campi è compatibile solo con [!DNL XDM Individual Profile], non può essere utilizzato per [!DNL XDM ExperienceEvent] schemi. Se desideri includere i dati sul consenso e sulle preferenze nello schema Experience Event, aggiungi allo schema il tipo di dati [[!UICONTROL Consenso per privacy, Personalization e preferenze di marketing]](../../data-types/consents.md) tramite un [gruppo di campi personalizzato](../../ui/resources/field-groups.md#create).
 
 ## Struttura del gruppo di campi {#structure}
 
-Il [!UICONTROL Consensi e preferenze] gruppo di campi fornisce un singolo campo di tipo oggetto, `consents`, per acquisire informazioni su consenso e preferenze. Questo campo estende [[!UICONTROL Consenso per le preferenze di privacy, personalizzazione e marketing] tipo di dati](../../data-types/consents.md), rimozione di `adID` e aggiungendo un `idSpecific` campo mappa.
+Il gruppo di campi [!UICONTROL Consensi e preferenze] fornisce un singolo campo di tipo oggetto, `consents`, per acquisire informazioni sul consenso e sulle preferenze. Questo campo estende il tipo di dati [[!UICONTROL Consenso per privacy, Personalization e preferenze di marketing]](../../data-types/consents.md), rimuovendo il campo `adID` e aggiungendo un campo mappa `idSpecific`.
 
 ![](../../images/field-groups/consent.png)
 
 >[!TIP]
 >
->Consulta la guida su [esplorazione delle risorse XDM](../../ui/explore.md) per i passaggi su come cercare qualsiasi risorsa XDM e ispezionarne la struttura nell’interfaccia utente di Platform.
+>Consulta la guida su [esplorazione delle risorse XDM](../../ui/explore.md) in per i passaggi su come cercare qualsiasi risorsa XDM e ispezionarne la struttura nell&#39;interfaccia utente di Platform.
 
-Il codice JSON seguente mostra un esempio del tipo di dati che [!UICONTROL Consensi e preferenze] gruppo di campi può elaborare. Per informazioni su come utilizzare la maggior parte dei campi forniti dal gruppo di campi, consulta la guida sulla [Tipo di dati Consensi e preferenze](../../data-types/consents.md). Le sottosezioni seguenti si concentrano sugli attributi univoci aggiunti dal gruppo di campi al tipo di dati.
+Il seguente codice JSON mostra un esempio del tipo di dati che il gruppo di campi [!UICONTROL Consensi e preferenze] può elaborare. Per informazioni su come utilizzare la maggior parte dei campi forniti dal gruppo di campi, fare riferimento alla guida sul tipo di dati [Consensi e preferenze](../../data-types/consents.md). Le sottosezioni seguenti si concentrano sugli attributi univoci aggiunti dal gruppo di campi al tipo di dati.
 
 ```json
 {
@@ -92,8 +92,8 @@ Il codice JSON seguente mostra un esempio del tipo di dati che [!UICONTROL Conse
 >
 >Puoi generare dati JSON di esempio per qualsiasi schema XDM definito in Experience Platform per aiutare a visualizzare in che modo devono essere mappati i dati sul consenso dei clienti e sulle preferenze. Per ulteriori informazioni, consulta la seguente documentazione:
 >
->* [Generare dati di esempio nell’interfaccia utente](../../ui/sample.md)
->* [Generare dati di esempio nell’API](../../api/sample-data.md)
+>* [Genera dati di esempio nell&#39;interfaccia utente](../../ui/sample.md)
+>* [Genera dati di esempio nell&#39;API](../../api/sample-data.md)
 
 ### `idSpecific`
 
@@ -101,12 +101,12 @@ Il codice JSON seguente mostra un esempio del tipo di dati che [!UICONTROL Conse
 
 >[!IMPORTANT]
 >
->Consensi e preferenze a livello di canale (ovvero quelli forniti in `consents` all&#39;esterno di `idSpecific`) si applica a tutti gli ID all&#39;interno di quel canale. Pertanto, tutti i consensi e le preferenze a livello di canale influiscono direttamente sul rispetto delle impostazioni equivalenti specifiche per ID o dispositivo:
+>I consensi e le preferenze a livello di canale (ovvero quelli forniti in `consents` al di fuori di `idSpecific`) si applicano a tutti gli ID all&#39;interno di quel canale. Pertanto, tutti i consensi e le preferenze a livello di canale influiscono direttamente sul rispetto delle impostazioni equivalenti specifiche per ID o dispositivo:
 >
->* Se il cliente ha rinunciato a livello di canale, qualsiasi consenso o preferenza equivalente in `idSpecific` vengono ignorati.
->* Se il consenso o la preferenza a livello di canale non è impostata, o il cliente ha acconsentito, allora il consenso o le preferenze equivalenti in `idSpecific` sono onorati.
+>* Se il cliente ha rinunciato a livello di canale, tutti i consensi o le preferenze equivalenti in `idSpecific` vengono ignorati.
+>* Se il consenso o la preferenza a livello di canale non è impostata o il cliente ha acconsentito, vengono rispettati i consensi o le preferenze equivalenti in `idSpecific`.
 
-Ogni chiave nella `idSpecific` L’oggetto rappresenta uno spazio dei nomi di identità specifico riconosciuto da Adobe Experience Platform Identity Service. Sebbene sia possibile definire spazi dei nomi personalizzati per categorizzare diversi identificatori, si consiglia di utilizzare uno degli spazi dei nomi standard forniti da Identity Service per ridurre le dimensioni di archiviazione per Real-Time Customer Profile. Per ulteriori informazioni sugli spazi dei nomi di identità, consulta [panoramica dello spazio dei nomi delle identità](../../../identity-service/features/namespaces.md) nella documentazione del servizio Identity.
+Ogni chiave nell&#39;oggetto `idSpecific` rappresenta uno spazio dei nomi di identità specifico riconosciuto da Adobe Experience Platform Identity Service. Sebbene sia possibile definire spazi dei nomi personalizzati per categorizzare diversi identificatori, si consiglia di utilizzare uno degli spazi dei nomi standard forniti da Identity Service per ridurre le dimensioni di archiviazione per Real-Time Customer Profile. Per ulteriori informazioni sugli spazi dei nomi di identità, consulta la [panoramica dello spazio dei nomi di identità](../../../identity-service/features/namespaces.md) nella documentazione di Identity Service.
 
 Le chiavi di ciascun oggetto spazio dei nomi rappresentano i valori di identità univoci per i quali il cliente ha impostato le preferenze. Ogni valore di identità può contenere un set completo di consensi e preferenze, formattato come `consents`.
 
@@ -139,13 +139,13 @@ Le chiavi di ciascun oggetto spazio dei nomi rappresentano i valori di identità
 }
 ```
 
-Entro `marketing` oggetti forniti in `idSpecific` sezione, il `any` e `preferred` non sono supportati. Questi campi possono essere configurati solo a livello di utente. Inoltre, la `idSpecific` preferenze di marketing per `email`, `sms`, e `push` non supportano `subscriptions` campi.
+All&#39;interno di `marketing` oggetti forniti nella sezione `idSpecific`, i campi `any` e `preferred` non sono supportati. Questi campi possono essere configurati solo a livello di utente. Inoltre, le preferenze di marketing `idSpecific` per `email`, `sms` e `push` non supportano i campi `subscriptions`.
 
-Esiste anche un consenso che può essere fornito solo nel `idSpecific` sezione: `adID`. Questo campo è trattato nella sottosezione seguente.
+È inoltre possibile fornire un consenso solo nella sezione `idSpecific`: `adID`. Questo campo è trattato nella sottosezione seguente.
 
 #### `adID`
 
-Il `adID` Il consenso rappresenta il consenso del cliente per indicare se è possibile utilizzare un ID inserzionista (IDFA o GAID) per collegare il cliente tra le app su questo dispositivo. Questo valore può essere configurato solo in `ECID` spazio dei nomi delle identità in `idSpecific` e non può essere impostata per altri namespace o a livello di utente per questo gruppo di campi.
+Il consenso `adID` rappresenta il consenso del cliente per l&#39;utilizzo di un ID inserzionista (IDFA o GAID) per collegare il cliente tra le app su questo dispositivo. Questo valore può essere configurato solo nello spazio dei nomi dell&#39;identità `ECID` nella sezione `idSpecific` e non può essere impostato per altri spazi dei nomi o a livello di utente per questo gruppo di campi.
 
 ```json
 "idSpecific": {
@@ -173,20 +173,20 @@ Il `adID` Il consenso rappresenta il consenso del cliente per indicare se è pos
 
 ## Acquisizione di dati tramite il gruppo di campi {#ingest}
 
-Per utilizzare il [!UICONTROL Consensi e preferenze] per acquisire i dati sul consenso dai clienti, devi creare un set di dati basato su uno schema che contiene tale gruppo di campi.
+Per utilizzare il gruppo di campi [!UICONTROL Consensi e preferenze] per acquisire i dati sul consenso dai clienti, è necessario creare un set di dati basato su uno schema che contiene tale gruppo di campi.
 
-Guarda il tutorial su [creazione di uno schema nell’interfaccia utente](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) per i passaggi su come assegnare gruppi di campi ai campi. Dopo aver creato uno schema contenente un campo con il [!UICONTROL Consensi e preferenze] gruppo di campi, fare riferimento alla sezione [creazione di un set di dati](../../../catalog/datasets/user-guide.md#create) nella guida utente del set di dati, segui i passaggi per creare un set di dati con uno schema esistente.
+Consulta l&#39;esercitazione sulla [creazione di uno schema nell&#39;interfaccia utente](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) per i passaggi su come assegnare gruppi di campi ai campi. Dopo aver creato uno schema contenente un campo con il gruppo di campi [!UICONTROL Consensi e preferenze], consulta la sezione sulla [creazione di un set di dati](../../../catalog/datasets/user-guide.md#create) nella guida utente del set di dati, seguendo i passaggi per creare un set di dati con uno schema esistente.
 
 >[!IMPORTANT]
 >
->Se desideri inviare i dati sul consenso a [!DNL Real-Time Customer Profile], è necessario creare un’ [!DNL Profile]schema abilitato in base al [!DNL XDM Individual Profile] classe che contiene [!UICONTROL Consensi e preferenze] gruppo di campi. Il set di dati creato in base a tale schema deve essere abilitato anche per [!DNL Profile]. Fai riferimento ai tutorial collegati in precedenza per i passaggi specifici relativi a [!DNL Real-Time Customer Profile] requisiti per schemi e set di dati.
+>Per inviare i dati sul consenso a [!DNL Real-Time Customer Profile], è necessario creare uno schema abilitato per [!DNL Profile] basato sulla classe [!DNL XDM Individual Profile] che contiene il gruppo di campi [!UICONTROL Consensi e preferenze]. Il set di dati creato in base a tale schema deve essere abilitato anche per [!DNL Profile]. Fare riferimento ai tutorial collegati in precedenza per i passaggi specifici relativi ai requisiti di [!DNL Real-Time Customer Profile] per schemi e set di dati.
 >
->Inoltre, devi anche assicurarti che i criteri di unione siano configurati per assegnare la priorità ai set di dati che contengono i dati di consenso e preferenze più recenti, al fine di aggiornare correttamente i profili dei clienti. Consulta la panoramica su [criteri di unione](../../../rtcdp/profile/merge-policies.md) per ulteriori informazioni.
+>Inoltre, devi anche assicurarti che i criteri di unione siano configurati per assegnare la priorità ai set di dati che contengono i dati di consenso e preferenze più recenti, al fine di aggiornare correttamente i profili dei clienti. Per ulteriori informazioni, consulta la panoramica sui [criteri di unione](../../../rtcdp/profile/merge-policies.md).
 
 ## Gestione delle modifiche di consenso e preferenze
 
-Quando un cliente modifica i propri consensi o preferenze sul sito web, queste modifiche devono essere raccolte e immediatamente applicate utilizzando [Adobe Experience Platform Web SDK](../../../web-sdk/commands/setconsent.md). Se un cliente rinuncia alla raccolta dei dati, tutta la raccolta dei dati deve cessare immediatamente. Se un cliente rinuncia alla personalizzazione, significa che non dovrebbe essere presente alcuna personalizzazione nella pagina successiva in cui visita.
+Quando un cliente cambia il proprio consenso o le proprie preferenze sul sito Web, le modifiche devono essere raccolte e applicate immediatamente tramite [Adobe Experience Platform Web SDK](../../../web-sdk/commands/setconsent.md). Se un cliente rinuncia alla raccolta dei dati, tutta la raccolta dei dati deve cessare immediatamente. Se un cliente rinuncia alla personalizzazione, significa che non dovrebbe essere presente alcuna personalizzazione nella pagina successiva in cui visita.
 
 ## Passaggi successivi
 
-Il presente documento riguarda la struttura e l&#39;uso del [!UICONTROL Consensi e preferenze] gruppo di campi. Per ulteriori informazioni sugli altri campi forniti dal gruppo di campi, vedere il documento relativo [[!UICONTROL Consenso per le preferenze di privacy, personalizzazione e marketing] tipo di dati](../../data-types/consents.md).
+Questo documento descrive la struttura e l&#39;utilizzo del gruppo di campi [!UICONTROL Consensi e preferenze]. Per ulteriori informazioni sugli altri campi forniti dal gruppo di campi, consulta il documento sul tipo di dati [[!UICONTROL Consenso per privacy, Personalization e preferenze di marketing]](../../data-types/consents.md).

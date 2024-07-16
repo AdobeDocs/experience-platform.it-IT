@@ -1,6 +1,6 @@
 ---
 title: Registrazione di Adobe Analytics for Target (A4T) in Platform Web SDK
-description: Scopri come controllare la raccolta di dati di Adobe Analytics for Target (A4T) utilizzando Experienci Platform Web SDK.
+description: Scopri come controllare la raccolta di dati di Adobe Analytics for Target (A4T) utilizzando Experience Platform Web SDK.
 seo-title: Adobe Analytics for Target (A4T) Logging in the Platform Web SDK
 seo-description: Learn how to control the collection of Adobe Analytics for Target (A4T) data using the Experience Platform Web SDK.
 keywords: a4t;registrazione;analytics;sdk;web sdk;
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Registrazione di Adobe Analytics for Target (A4T) in Platform Web SDK
 
-Quando utilizzi Adobe Target per la personalizzazione, puoi scegliere quale sistema utilizzare per la misurazione delle prestazioni. Ogni [Attività Target](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html) consente di scegliere tra reporting di Target e reporting di Adobe Analytics.
+Quando utilizzi Adobe Target per la personalizzazione, puoi scegliere quale sistema utilizzare per la misurazione delle prestazioni. Ogni [attività Target](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html) ti consente di selezionare tra reporting di Target e reporting di Adobe Analytics.
 
 Se utilizzi la generazione rapporti di Analytics, Adobe Target deve comunicare ad Analytics quanto segue:
 
@@ -26,10 +26,10 @@ Adobe Experience Platform Web SDK supporta due tipi di registrazione di Analytic
 
 | Metodo di registrazione | Descrizione |
 | --- | --- |
-| Registrazione Analytics lato server | Tutti gli hit di Analytics inviati tramite la rete Edge vengono potenziati con i dettagli di Target sul lato server, senza dover passare attraverso il processo di unione degli hit. |
-| Registrazione Analytics lato client | I dati di Target vengono restituiti sul lato client, consentendoti di migliorare e inviare manualmente i dati ad Analytics utilizzando [API di inserimento dati](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html). |
+| Registrazione Analytics lato server | Tutti gli hit di Analytics inviati attraverso l’Edge Network vengono potenziati con i dettagli di Target sul lato server, senza dover passare attraverso la procedura di unione degli hit. |
+| Registrazione Analytics lato client | I dati di destinazione vengono restituiti sul lato client, consentendo di aumentare e inviare manualmente i dati ad Analytics utilizzando l&#39;[API di inserimento dati](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html). |
 
-Il metodo di registrazione è determinato dalla presenza o meno di Adobe Analytics abilitato nella configurazione [flusso di dati](../../../../datastreams/overview.md):
+Il metodo di registrazione è determinato dall&#39;abilitazione di Adobe Analytics nel [flusso di dati](../../../../datastreams/overview.md) configurato:
 
 ![Flusso di decisione del metodo di registrazione](../assets/analytics-logging.png)
 

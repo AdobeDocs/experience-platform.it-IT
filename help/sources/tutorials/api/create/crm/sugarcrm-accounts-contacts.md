@@ -9,22 +9,22 @@ ht-degree: 2%
 
 ---
 
-# Creare una connessione di origine e un flusso di dati per [!DNL SugarCRM Accounts & Contacts] utilizzo dell’API del servizio Flusso
+# Creare una connessione di origine e un flusso di dati per [!DNL SugarCRM Accounts & Contacts] utilizzando l&#39;API del servizio Flusso
 
-Il seguente tutorial illustra i passaggi necessari per creare un [!DNL SugarCRM Accounts & Contacts] connessione sorgente e crea un flusso di dati per portare [[!DNL SugarCRM]](https://www.sugarcrm.com/) dati di account e contatti a Adobe Experience Platform utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Il seguente tutorial illustra i passaggi necessari per creare una connessione di origine [!DNL SugarCRM Accounts & Contacts] e un flusso di dati per portare i dati di account e contatti di [[!DNL SugarCRM]](https://www.sugarcrm.com/) a Adobe Experience Platform utilizzando l&#39;API [[!DNL Flow Service] 4}.](https://www.adobe.io/experience-platform-apis/references/flow-service/)
 
 ## Introduzione
 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Experience Platform:
 
-* [Sorgenti](../../../../home.md): un Experience Platform consente di acquisire dati da varie origini, consentendoti allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
-* [Sandbox](../../../../../sandboxes/home.md): Experienci Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Origini](../../../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
+* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per connettersi correttamente a [!DNL SugarCRM] utilizzando [!DNL Flow Service] API.
+Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per connettersi correttamente a [!DNL SugarCRM] utilizzando l&#39;API [!DNL Flow Service].
 
 ### Raccogli le credenziali richieste
 
-Per connettersi [!DNL SugarCRM Accounts & Contacts] In Platform, è necessario fornire valori per le seguenti proprietà di connessione:
+Per connettere [!DNL SugarCRM Accounts & Contacts] a Platform, è necessario fornire i valori per le seguenti proprietà di connessione:
 
 | Credenziali | Descrizione | Esempio |
 | --- | --- | --- |
@@ -32,15 +32,15 @@ Per connettersi [!DNL SugarCRM Accounts & Contacts] In Platform, è necessario f
 | `username` | Nome utente dell’account sviluppatore SugarCRM. | `abc.def@example.com@sugarmarketdemo000.com` |
 | `password` | Password dell’account sviluppatore SugarCRM. | `123456789` |
 
-## Connetti [!DNL SugarCRM Accounts & Contacts] alla piattaforma utilizzando [!DNL Flow Service] API
+## Connetti [!DNL SugarCRM Accounts & Contacts] a Platform utilizzando l&#39;API [!DNL Flow Service]
 
-Di seguito sono descritti i passaggi da eseguire per autenticare il [!DNL SugarCRM] origine, creare una connessione di origine e creare un flusso di dati per portare in Experience Platform i dati degli account e dei contatti.
+Di seguito vengono illustrati i passaggi necessari per autenticare l&#39;origine [!DNL SugarCRM], creare una connessione di origine e creare un flusso di dati per l&#39;Experience Platform dei dati di account e contatti.
 
 ### Creare una connessione di base {#base-connection}
 
 Una connessione di base mantiene le informazioni tra l’origine e Platform, incluse le credenziali di autenticazione dell’origine, lo stato corrente della connessione e l’ID univoco della connessione di base. L’ID della connessione di base consente di esplorare e navigare tra i file dall’interno dell’origine e identificare gli elementi specifici che desideri acquisire, comprese le informazioni relative ai tipi di dati e ai formati.
 
-Per creare un ID di connessione di base, effettua una richiesta POST al `/connections` endpoint durante la fornitura del [!DNL SugarCRM Accounts & Contacts] credenziali di autenticazione come parte del corpo della richiesta.
+Per creare un ID di connessione di base, effettuare una richiesta POST all&#39;endpoint `/connections` fornendo le credenziali di autenticazione [!DNL SugarCRM Accounts & Contacts] come parte del corpo della richiesta.
 
 **Formato API**
 
@@ -82,9 +82,9 @@ curl -X POST \
 | --- | --- |
 | `name` | Nome della connessione di base. Verificare che il nome della connessione di base sia descrittivo, in quanto è possibile utilizzarlo per cercare informazioni sulla connessione di base. |
 | `description` | Valore facoltativo che è possibile includere per fornire ulteriori informazioni sulla connessione di base. |
-| `connectionSpec.id` | ID della specifica di connessione dell&#39;origine. Questo ID può essere recuperato dopo che l&#39;origine è stata registrata e approvata tramite [!DNL Flow Service] API. |
+| `connectionSpec.id` | ID della specifica di connessione dell&#39;origine. Questo ID può essere recuperato dopo che l&#39;origine è stata registrata e approvata tramite l&#39;API [!DNL Flow Service]. |
 | `auth.specName` | Tipo di autenticazione utilizzato per autenticare l’origine in Platform. |
-| `auth.params.host` | L’host dell’API SugarCRM: *developer.salesfusion.com* |
+| `auth.params.host` | Host API SugarCRM: *developer.salesfusion.com* |
 | `auth.params.username` | Nome utente dell’account sviluppatore SugarCRM. |
 | `auth.params.password` | Password dell’account sviluppatore SugarCRM. |
 
@@ -118,11 +118,11 @@ Quando si eseguono richieste di GET per esplorare la struttura e il contenuto de
 | `{BASE_CONNECTION_ID}` | ID della connessione di base generato nel passaggio precedente. |
 | `objectType=rest` | Tipo di oggetto che si desidera esplorare. Attualmente, questo valore è sempre impostato su `rest`. |
 | `{OBJECT}` | Questo parametro è necessario solo quando si visualizza una directory specifica. Il relativo valore rappresenta il percorso della directory che desideri esplorare. Per questa origine il valore sarebbe `json`. |
-| `fileType=json` | Il tipo di file che desideri portare su Platform. Attualmente, `json` è l’unico tipo di file supportato. |
+| `fileType=json` | Il tipo di file che desideri portare su Platform. Attualmente, `json` è l&#39;unico tipo di file supportato. |
 | `{PREVIEW}` | Valore booleano che definisce se il contenuto della connessione supporta l’anteprima. |
-| `{SOURCE_PARAMS}` | Definisce i parametri per il file sorgente da portare a Platform. Per recuperare il formato accettato per `{SOURCE_PARAMS}`, è necessario codificare l&#39;intera stringa in base64. <br> [!DNL SugarCRM Accounts & Contacts] supporta più API. A seconda del tipo di oggetto utilizzato, passare una delle seguenti operazioni: <ul><li>`accounts` : società con cui l’organizzazione ha una relazione.</li><li>`contacts` : singole persone con cui l’organizzazione ha una relazione consolidata.</li></ul> |
+| `{SOURCE_PARAMS}` | Definisce i parametri per il file sorgente da portare a Platform. Per recuperare il tipo di formato accettato per `{SOURCE_PARAMS}`, è necessario codificare l&#39;intera stringa in base64. <br> [!DNL SugarCRM Accounts & Contacts] supporta più API. A seconda del tipo di oggetto utilizzato, passare una delle seguenti operazioni: <ul><li>`accounts`: società con cui l&#39;organizzazione ha una relazione.</li><li>`contacts`: singoli utenti con cui l&#39;organizzazione ha una relazione stabilita.</li></ul> |
 
-Il [!DNL SugarCRM Accounts & Contacts] supporta più API. Di seguito è riportato un esempio di oggetto a seconda del tipo di oggetto che si sta sfruttando per la richiesta da inviare:
+[!DNL SugarCRM Accounts & Contacts] supporta più API. Di seguito è riportato un esempio di oggetto a seconda del tipo di oggetto che si sta sfruttando per la richiesta da inviare:
 
 **Richiesta**
 
@@ -130,7 +130,7 @@ Il [!DNL SugarCRM Accounts & Contacts] supporta più API. Di seguito è riportat
 
 >[!TAB Account]
 
-Per [!DNL SugarCRM] Account API il valore per `{SOURCE_PARAMS}` viene passato come `{"object_type":"accounts"}`. Quando codificato in base64, equivale a `eyJvYmplY3RfdHlwZSI6ImFjY291bnRzIn0=` come mostrato di seguito.
+Per l&#39;API Account [!DNL SugarCRM] il valore per `{SOURCE_PARAMS}` è passato come `{"object_type":"accounts"}`. Codificato in base64, equivale a `eyJvYmplY3RfdHlwZSI6ImFjY291bnRzIn0=` come mostrato di seguito.
 
 ```shell
 curl -X GET \
@@ -143,7 +143,7 @@ curl -X GET \
 
 >[!TAB Contatti]
 
-Per [!DNL SugarCRM] API dei contatti il valore per `{SOURCE_PARAMS}` viene passato come `{"object_type":"contacts"}`. Quando codificato in base64, equivale a `eyJvYmplY3RfdHlwZSI6ImNvbnRhY3RzIn0=` come mostrato di seguito.
+Per l&#39;API Contatti [!DNL SugarCRM] il valore per `{SOURCE_PARAMS}` è passato come `{"object_type":"contacts"}`. Quando codificato in base64, equivale a `eyJvYmplY3RfdHlwZSI6ImNvbnRhY3RzIn0=` come mostrato di seguito.
 
 ```shell
 curl -X GET \
@@ -568,7 +568,7 @@ In caso di esito positivo, la risposta restituisce una struttura come indicato d
 
 ### Creare una connessione sorgente {#source-connection}
 
-Puoi creare una connessione sorgente effettuando una richiesta POST al [!DNL Flow Service] API. Una connessione di origine è costituita da un ID di connessione, un percorso del file di dati di origine e un ID della specifica di connessione.
+È possibile creare una connessione di origine effettuando una richiesta POST all&#39;API [!DNL Flow Service]. Una connessione di origine è costituita da un ID di connessione, un percorso del file di dati di origine e un ID della specifica di connessione.
 
 **Formato API**
 
@@ -578,7 +578,7 @@ POST /sourceConnections
 
 **Richiesta**
 
-La richiesta seguente crea una connessione sorgente per [!DNL SugarCRM Accounts & Contacts]:
+La richiesta seguente crea una connessione di origine per [!DNL SugarCRM Accounts & Contacts]:
 
 A seconda del tipo di oggetto utilizzato, seleziona una delle schede seguenti:
 
@@ -586,7 +586,7 @@ A seconda del tipo di oggetto utilizzato, seleziona una delle schede seguenti:
 
 >[!TAB Account]
 
-Per [!DNL SugarCRM] Account API per `object_type` il valore della proprietà deve essere `accounts`.
+Per l&#39;API Account [!DNL SugarCRM] il valore della proprietà `object_type` deve essere `accounts`.
 
 ```shell
 curl -X POST \
@@ -616,7 +616,7 @@ curl -X POST \
 
 >[!TAB Contatti]
 
-Per [!DNL SugarCRM] API dei contatti `object_type` il valore della proprietà deve essere `contacts`.
+Per l&#39;API Contatti [!DNL SugarCRM] il valore della proprietà `object_type` deve essere `contacts`.
 
 ```shell
 curl -X POST \
@@ -652,13 +652,13 @@ curl -X POST \
 | `description` | Valore facoltativo che è possibile includere per fornire ulteriori informazioni sulla connessione di origine. |
 | `baseConnectionId` | ID connessione di base di [!DNL SugarCRM Accounts & Contacts]. Questo ID è stato generato in un passaggio precedente. |
 | `connectionSpec.id` | ID della specifica di connessione corrispondente all&#39;origine. |
-| `data.format` | Il formato del [!DNL SugarCRM Accounts & Contacts] i dati che desideri acquisire. Attualmente, l’unico formato di dati supportato è `json`. |
-| `object_type` | [!DNL SugarCRM Accounts & Contacts] supporta più API. A seconda del tipo di oggetto utilizzato, passare una delle seguenti operazioni: <ul><li>`accounts` : società con cui l’organizzazione ha una relazione.</li><li>`contacts` : singole persone con cui l’organizzazione ha una relazione consolidata.</li></ul> |
+| `data.format` | Formato dei dati [!DNL SugarCRM Accounts & Contacts] che si desidera acquisire. Attualmente, l&#39;unico formato di dati supportato è `json`. |
+| `object_type` | [!DNL SugarCRM Accounts & Contacts] supporta più API. A seconda del tipo di oggetto utilizzato, passare una delle seguenti operazioni: <ul><li>`accounts`: società con cui l&#39;organizzazione ha una relazione.</li><li>`contacts`: singoli utenti con cui l&#39;organizzazione ha una relazione stabilita.</li></ul> |
 | `path` | Avrà lo stesso valore selezionato per *`object_type`*. |
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce l’identificatore univoco (`id`) della connessione sorgente appena creata. Questo ID è necessario in un passaggio successivo per creare un flusso di dati.
+In caso di esito positivo, la risposta restituisce l&#39;identificatore univoco (`id`) della connessione di origine appena creata. Questo ID è necessario in un passaggio successivo per creare un flusso di dati.
 
 ```json
 {
@@ -671,21 +671,21 @@ In caso di esito positivo, la risposta restituisce l’identificatore univoco (`
 
 Per utilizzare i dati sorgente in Platform, è necessario creare uno schema di destinazione che strutturi i dati sorgente in base alle tue esigenze. Lo schema di destinazione viene quindi utilizzato per creare un set di dati di Platform in cui sono contenuti i dati di origine.
 
-È possibile creare uno schema XDM di destinazione eseguendo una richiesta POST al [API del registro dello schema](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
+È possibile creare uno schema XDM di destinazione eseguendo una richiesta POST all&#39;API [Schema Registry](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
 
-Per i passaggi dettagliati su come creare uno schema XDM di destinazione, consulta l’esercitazione su [creazione di uno schema tramite l’API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html#create).
+Per i passaggi dettagliati su come creare uno schema XDM di destinazione, consulta l&#39;esercitazione su [creazione di uno schema utilizzando l&#39;API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html#create).
 
 ### Creare un set di dati di destinazione {#target-dataset}
 
-È possibile creare un set di dati di destinazione eseguendo una richiesta POST al [API Catalog Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), che fornisce l’ID dello schema di destinazione all’interno del payload.
+È possibile creare un set di dati di destinazione eseguendo una richiesta POST all&#39;API [Catalog Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), fornendo l&#39;ID dello schema di destinazione all&#39;interno del payload.
 
-Per i passaggi dettagliati su come creare un set di dati di destinazione, consulta l’esercitazione su [creazione di un set di dati tramite l’API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html).
+Per i passaggi dettagliati su come creare un set di dati di destinazione, consulta l&#39;esercitazione su [creazione di un set di dati utilizzando l&#39;API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html).
 
 ### Creare una connessione di destinazione {#target-connection}
 
-Una connessione di destinazione rappresenta la connessione alla destinazione in cui devono essere memorizzati i dati acquisiti. Per creare una connessione di destinazione, devi fornire l’ID di specifica della connessione fissa che corrisponde al data lake. Questo ID è: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Una connessione di destinazione rappresenta la connessione alla destinazione in cui devono essere memorizzati i dati acquisiti. Per creare una connessione di destinazione, devi fornire l’ID di specifica della connessione fissa che corrisponde al data lake. ID: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Ora disponi degli identificatori univoci, di uno schema di destinazione, di un set di dati di destinazione e dell’ID della specifica di connessione al data lake. Utilizzando questi identificatori, puoi creare una connessione di destinazione utilizzando [!DNL Flow Service] API per specificare il set di dati che conterrà i dati di origine in entrata.
+Ora disponi degli identificatori univoci, di uno schema di destinazione, di un set di dati di destinazione e dell’ID della specifica di connessione al data lake. Utilizzando questi identificatori, è possibile creare una connessione di destinazione utilizzando l&#39;API [!DNL Flow Service] per specificare il set di dati che conterrà i dati di origine in entrata.
 
 **Formato API**
 
@@ -729,13 +729,13 @@ curl -X POST \
 | -------- | ----------- |
 | `name` | Nome della connessione di destinazione. Assicurati che il nome della connessione di destinazione sia descrittivo, in quanto può essere utilizzato per cercare informazioni sulla connessione di destinazione. |
 | `description` | Valore facoltativo che è possibile includere per fornire ulteriori informazioni sulla connessione di destinazione. |
-| `connectionSpec.id` | ID della specifica di connessione corrispondente al data lake. Questo ID fisso è: `6b137bf6-d2a0-48c8-914b-d50f4942eb85`. |
-| `data.format` | Il formato del [!DNL SugarCRM Accounts & Contacts] i dati che desideri acquisire. |
+| `connectionSpec.id` | ID della specifica di connessione corrispondente al data lake. ID corretto: `6b137bf6-d2a0-48c8-914b-d50f4942eb85`. |
+| `data.format` | Formato dei dati [!DNL SugarCRM Accounts & Contacts] che si desidera acquisire. |
 | `params.dataSetId` | ID del set di dati di destinazione recuperato in un passaggio precedente. |
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce l’identificatore univoco della nuova connessione di destinazione (`id`). Questo ID è richiesto nei passaggi successivi.
+Una risposta corretta restituisce l&#39;identificatore univoco della nuova connessione di destinazione (`id`). Questo ID è richiesto nei passaggi successivi.
 
 ```json
 {
@@ -746,7 +746,7 @@ In caso di esito positivo, la risposta restituisce l’identificatore univoco de
 
 ### Creare una mappatura {#mapping}
 
-Per poter acquisire i dati di origine in un set di dati di destinazione, è necessario prima mapparli sullo schema di destinazione a cui il set di dati di destinazione aderisce. Ciò si ottiene eseguendo una richiesta POST a [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) con mappature di dati definite nel payload della richiesta.
+Per poter acquisire i dati di origine in un set di dati di destinazione, è necessario prima mapparli sullo schema di destinazione a cui il set di dati di destinazione aderisce. Ciò si ottiene eseguendo una richiesta POST all&#39;API [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) con mappature dati definite nel payload della richiesta.
 
 **Formato API**
 
@@ -863,14 +863,14 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `outputSchema.schemaRef.id` | ID del [schema XDM di destinazione](#target-schema) generato in un passaggio precedente. |
+| `outputSchema.schemaRef.id` | ID dello schema XDM [target](#target-schema) generato in un passaggio precedente. |
 | `mappings.sourceType` | Tipo di attributo di origine di cui viene eseguito il mapping. |
 | `mappings.source` | L’attributo di origine che deve essere mappato su un percorso XDM di destinazione. |
 | `mappings.destination` | Percorso XDM di destinazione in cui viene eseguito il mapping dell’attributo di origine. |
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce i dettagli della mappatura appena creata, compreso l’identificatore univoco (`id`). Questo valore è necessario in un passaggio successivo per creare un flusso di dati.
+In caso di esito positivo, la risposta restituisce i dettagli della mappatura appena creata, incluso il relativo identificatore univoco (`id`). Questo valore è necessario in un passaggio successivo per creare un flusso di dati.
 
 ```json
 {
@@ -885,15 +885,15 @@ In caso di esito positivo, la risposta restituisce i dettagli della mappatura ap
 
 ### Creare un flusso {#flow}
 
-L’ultimo passaggio per importare dati da [!DNL SugarCRM Accounts & Contacts] In Platform è necessario creare un flusso di dati. A questo punto sono stati preparati i seguenti valori obbligatori:
+L&#39;ultimo passaggio per portare i dati da [!DNL SugarCRM Accounts & Contacts] a Platform consiste nel creare un flusso di dati. A questo punto sono stati preparati i seguenti valori obbligatori:
 
-* [ID connessione sorgente](#source-connection)
+* [ID connessione Source](#source-connection)
 * [ID connessione di destinazione](#target-connection)
 * [ID di mappatura](#mapping)
 
 Un flusso di dati è responsabile della pianificazione e della raccolta di dati da un’origine. Puoi creare un flusso di dati eseguendo una richiesta POST e fornendo i valori precedentemente menzionati all’interno del payload.
 
-Per pianificare un’acquisizione, devi prima impostare il valore dell’ora di inizio su tempo epoca in secondi. Quindi, è necessario impostare il valore della frequenza su uno dei seguenti `hour` o `day`. Il valore dell’intervallo indica il periodo tra due acquisizioni consecutive. Il valore dell’intervallo deve essere impostato come `1` o `24` a seconda di `scheduleParams.frequency` selezione di `hour` o `day`.
+Per pianificare un’acquisizione, devi prima impostare il valore dell’ora di inizio su tempo epoca in secondi. Quindi impostare il valore della frequenza su uno di `hour` o `day`. Il valore dell’intervallo indica il periodo tra due acquisizioni consecutive. Il valore dell&#39;intervallo deve essere impostato come `1` o `24` a seconda della selezione `scheduleParams.frequency` di `hour` o `day`.
 
 **Formato API**
 
@@ -944,21 +944,21 @@ curl -X POST \
 | --- | --- |
 | `name` | Nome del flusso di dati. Assicurati che il nome del flusso di dati sia descrittivo, in quanto può essere utilizzato per cercare informazioni sul flusso di dati. |
 | `description` | Valore facoltativo che puoi includere per fornire ulteriori informazioni sul flusso di dati. |
-| `flowSpec.id` | ID della specifica di flusso necessario per creare un flusso di dati. Questo ID fisso è: `6499120c-0b15-42dc-936e-847ea3c24d72`. |
-| `flowSpec.version` | Versione corrispondente dell&#39;ID della specifica di flusso. Questo valore viene impostato automaticamente su `1.0`. |
-| `sourceConnectionIds` | Il [ID connessione sorgente](#source-connection) generato in un passaggio precedente. |
-| `targetConnectionIds` | Il [ID connessione di destinazione](#target-connection) generato in un passaggio precedente. |
+| `flowSpec.id` | ID della specifica di flusso necessario per creare un flusso di dati. ID corretto: `6499120c-0b15-42dc-936e-847ea3c24d72`. |
+| `flowSpec.version` | Versione corrispondente dell&#39;ID della specifica di flusso. Il valore predefinito è `1.0`. |
+| `sourceConnectionIds` | L&#39;[ID connessione di origine](#source-connection) generato in un passaggio precedente. |
+| `targetConnectionIds` | L&#39;ID [connessione di destinazione](#target-connection) generato in un passaggio precedente. |
 | `transformations` | Questa proprietà contiene le varie trasformazioni che devono essere applicate ai dati. Questa proprietà è necessaria per portare dati non conformi a XDM su Platform. |
 | `transformations.name` | Nome assegnato alla trasformazione. |
-| `transformations.params.mappingId` | Il [ID mappatura](#mapping) generato in un passaggio precedente. |
-| `transformations.params.mappingVersion` | Versione corrispondente dell&#39;ID di mappatura. Questo valore viene impostato automaticamente su `0`. |
+| `transformations.params.mappingId` | L&#39;[ID mappatura](#mapping) generato in un passaggio precedente. |
+| `transformations.params.mappingVersion` | Versione corrispondente dell&#39;ID di mappatura. Il valore predefinito è `0`. |
 | `scheduleParams.startTime` | Questa proprietà contiene informazioni sulla pianificazione dell’acquisizione del flusso di dati. |
 | `scheduleParams.frequency` | La frequenza con cui il flusso di dati raccoglierà i dati. I valori accettabili includono: `hour` o `day`. |
-| `scheduleParams.interval` | L’intervallo indica il periodo tra due esecuzioni consecutive del flusso. Il valore dell&#39;intervallo deve essere un numero intero diverso da zero. Il valore dell’intervallo deve essere impostato come `1` o `24` a seconda di `scheduleParams.frequency` selezione di `hour` o `day`. |
+| `scheduleParams.interval` | L’intervallo indica il periodo tra due esecuzioni consecutive del flusso. Il valore dell&#39;intervallo deve essere un numero intero diverso da zero. Il valore dell&#39;intervallo deve essere impostato come `1` o `24` a seconda della selezione `scheduleParams.frequency` di `hour` o `day`. |
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce l’ID (`id`) del flusso di dati appena creato. Puoi usare questo ID per monitorare, aggiornare o eliminare il flusso di dati.
+In caso di esito positivo, la risposta restituisce l&#39;ID (`id`) del flusso di dati appena creato. Puoi usare questo ID per monitorare, aggiornare o eliminare il flusso di dati.
 
 ```json
 {
@@ -973,20 +973,20 @@ La sezione seguente fornisce informazioni sui passaggi possibili per monitorare,
 
 ### Monitorare il flusso di dati
 
-Una volta creato il flusso di dati, puoi monitorare i dati che vengono acquisiti tramite di esso per visualizzare informazioni sulle esecuzioni del flusso, sullo stato di completamento e sugli errori. Per esempi API completi, consulta la guida su [monitoraggio dei flussi di dati di origine tramite l’API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/monitor.html).
+Una volta creato il flusso di dati, puoi monitorare i dati che vengono acquisiti tramite di esso per visualizzare informazioni sulle esecuzioni del flusso, sullo stato di completamento e sugli errori. Per esempi API completi, consulta la guida su [monitoraggio dei flussi di dati di origine tramite API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/monitor.html).
 
 ### Aggiornare il flusso di dati
 
-Aggiorna i dettagli del flusso di dati, ad esempio il nome e la descrizione, nonché la pianificazione di esecuzione e i set di mappatura associati, effettuando una richiesta PATCH al `/flows` endpoint di [!DNL Flow Service] e fornire l’ID del flusso di dati. Quando effettui una richiesta PATCH, devi fornire il codice univoco del flusso di dati `etag` nel `If-Match` intestazione. Per esempi API completi, consulta la guida su [aggiornamento dei flussi di dati di origine tramite l’API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
+Aggiorna i dettagli del flusso di dati, ad esempio il nome e la descrizione, nonché la pianificazione dell&#39;esecuzione e i set di mappatura associati, effettuando una richiesta PATCH all&#39;endpoint `/flows` dell&#39;API [!DNL Flow Service] e fornendo al contempo l&#39;ID del flusso di dati. Quando si effettua una richiesta PATCH, è necessario fornire `etag` univoco del flusso di dati nell&#39;intestazione `If-Match`. Per esempi API completi, leggere la guida sull&#39;[aggiornamento dei flussi di dati di origine tramite API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
 
 ### Aggiornare l’account
 
-Aggiorna il nome, la descrizione e le credenziali dell’account di origine eseguendo una richiesta PATCH al [!DNL Flow Service] fornendo l’ID connessione di base come parametro di query. Quando effettui una richiesta PATCH, devi fornire il codice univoco dell’account sorgente `etag` nel `If-Match` intestazione. Per esempi API completi, consulta la guida su [aggiornamento dell’account sorgente tramite l’API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
+Aggiornare il nome, la descrizione e le credenziali dell&#39;account di origine eseguendo una richiesta PATCH all&#39;API [!DNL Flow Service] e fornendo l&#39;ID connessione di base come parametro di query. Quando si effettua una richiesta PATCH, è necessario fornire `etag` univoco dell&#39;account di origine nell&#39;intestazione `If-Match`. Per esempi API completi, consulta la guida in [aggiornamento dell&#39;account di origine tramite l&#39;API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
 
 ### Eliminare il flusso di dati
 
-Elimina il flusso di dati eseguendo una richiesta DELETE al [!DNL Flow Service] fornendo l’ID del flusso di dati che desideri eliminare come parte del parametro di query. Per esempi API completi, consulta la guida su [eliminazione dei flussi di dati tramite API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html).
+Elimina il flusso di dati eseguendo una richiesta DELETE all&#39;API [!DNL Flow Service] e fornendo l&#39;ID del flusso di dati che desideri eliminare come parte del parametro di query. Per esempi API completi, consulta la guida su [eliminazione dei flussi di dati tramite l&#39;API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html).
 
 ### Elimina l’account
 
-Elimina l’account eseguendo una richiesta DELETE al [!DNL Flow Service] fornendo l’ID della connessione di base dell’account da eliminare. Per esempi API completi, consulta la guida su [eliminazione dell’account sorgente tramite l’API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html).
+Eliminare l&#39;account eseguendo una richiesta DELETE all&#39;API [!DNL Flow Service] e fornendo l&#39;ID connessione di base dell&#39;account che si desidera eliminare. Per esempi API completi, leggere la guida in [eliminazione dell&#39;account di origine tramite l&#39;API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html).

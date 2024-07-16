@@ -5,7 +5,7 @@ description: Scopri come mappare i campi evento di Adobe Target a uno schema Exp
 exl-id: dab08ab6-6c1c-460a-bb52-8dcdb5709a34
 source-git-commit: 81412493b096264ce7a89e3ca2348edb2dcd1798
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '431'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ La tabella seguente illustra i campi di uno schema Experience Data Model (XDM) e
 | **`dataSource`** | | Configurato su &quot;1&quot; per tutti i client. |
 | `dataSource._id` | Valore generato dal sistema che non può essere passato con la richiesta. | ID univoco di questa origine dati. Questo verrebbe fornito dall’individuo o dal sistema che ha creato l’origine dati. |
 | `dataSource.code` | Valore generato dal sistema che non può essere passato con la richiesta. | Collegamento all&#39;@id. completa È possibile utilizzare almeno uno dei codici o dei @id. A volte, questo codice viene indicato come codice di integrazione dell’origine dati. |
-| `dataSource.tags` | Valore generato dal sistema che non può essere passato con la richiesta. | I tag vengono utilizzati per indicare come gli alias rappresentati da una determinata origine dati devono essere interpretati dalle applicazioni che utilizzano tali alias.<br><br>Esempi:<br><ul><li>`isAVID`: origini dati che rappresentano gli ID visitatore di Analytics.</li><li>`isCRSKey`: origini di dati che rappresentano alias da utilizzare come chiavi in CRS.</li></ul>I tag vengono impostati al momento della creazione dell’origine dati, ma sono anche inclusi nei messaggi della pipeline quando si fa riferimento a una determinata origine dati. |
+| `dataSource.tags` | Valore generato dal sistema che non può essere passato con la richiesta. | I tag vengono utilizzati per indicare come gli alias rappresentati da una determinata origine dati devono essere interpretati dalle applicazioni che utilizzano tali alias.<br><br>Esempi:<br><ul><li>`isAVID`: origini dati che rappresentano gli ID visitatore di Analytics.</li><li>`isCRSKey`: origini dati che rappresentano alias da utilizzare come chiavi in CRS.</li></ul>I tag vengono impostati al momento della creazione dell’origine dati, ma sono anche inclusi nei messaggi della pipeline quando si fa riferimento a una determinata origine dati. |
 | **`timestamp`** | Timestamp evento |
 | **`channel`** | `context.channel` | Funziona solo con la consegna in visualizzazione. Le opzioni sono &quot;web&quot; e &quot;mobile&quot;, con &quot;web&quot; come impostazione predefinita. |
 | **`endUserIds`** |

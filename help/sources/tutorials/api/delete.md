@@ -7,37 +7,37 @@ description: Scopri come eliminare un account utilizzando l’API del servizio F
 exl-id: 3d07ab7d-c012-472e-8db4-b19e3936dcba
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '339'
-ht-degree: 2%
+source-wordcount: '336'
+ht-degree: 3%
 
 ---
 
 # Eliminare un account utilizzando l’API del servizio Flusso
 
-È possibile eliminare i conti di origine che contengono errori o che sono diventati obsoleti utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+È possibile eliminare gli account di origine che contengono errori o che sono diventati obsoleti utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 Consulta il seguente tutorial per i passaggi su come eliminare un account utilizzando l’API.
 
 ## Introduzione
 
-Questo tutorial richiede un ID di connessione valido. Se non si dispone di un ID di connessione valido, selezionare il connettore desiderato dall&#39;elenco [panoramica sulle origini](../../home.md) e segui i passaggi descritti prima di provare questa esercitazione.
+Questo tutorial richiede un ID di connessione valido. Se non disponi di un ID di connessione valido, seleziona il connettore desiderato dalla [panoramica origini](../../home.md) e segui i passaggi descritti prima di provare questa esercitazione.
 
 Questo tutorial richiede anche una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Sorgenti](../../home.md): [!DNL Experience Platform] consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] servizi.
-* [Sandbox](../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che permettono di suddividere un singolo [!DNL Platform] in ambienti virtuali separati, per facilitare lo sviluppo e l’evoluzione delle applicazioni di esperienza digitale.
+* [Origini](../../home.md): [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini e consente di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi [!DNL Platform].
+* [Sandbox](../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza di [!DNL Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 ### Utilizzo delle API di Platform
 
-Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida su [introduzione alle API di Platform](../../../landing/api-guide.md).
+Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida in [guida introduttiva alle API di Platform](../../../landing/api-guide.md).
 
 ## Elimina account
 
 >[!TIP]
 >
->Prima di eliminare l’account di origine, devi eliminare tutti i flussi di dati esistenti associati all’account di origine. Per eliminare i flussi di dati esistenti, consulta l’esercitazione su [eliminazione dei flussi di dati di origine](./delete-dataflows.md).
+>Prima di eliminare l’account di origine, devi eliminare tutti i flussi di dati esistenti associati all’account di origine. Per eliminare i flussi di dati esistenti, consulta l&#39;esercitazione su [eliminazione dei flussi di dati di origine](./delete-dataflows.md).
 
-Per eliminare un account, effettua una richiesta DELETE al [!DNL Flow Service] fornendo l’ID connessione di base corrispondente all’account che desideri eliminare.
+Per eliminare un account, effettuare una richiesta DELETE all&#39;API [!DNL Flow Service] fornendo l&#39;ID connessione di base corrispondente all&#39;account che si desidera eliminare.
 
 **Formato API**
 
@@ -68,6 +68,6 @@ Puoi confermare l’eliminazione tentando una richiesta di ricerca (GET) alla co
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai utilizzato correttamente il [!DNL Flow Service] API per eliminare gli account esistenti.
+Seguendo questa esercitazione, hai usato correttamente l&#39;API [!DNL Flow Service] per eliminare gli account esistenti.
 
-Per i passaggi su come eseguire queste operazioni utilizzando l’interfaccia utente, consulta l’esercitazione su [eliminazione di account nell’interfaccia utente](../../tutorials/ui/delete-accounts.md).
+Per i passaggi su come eseguire queste operazioni utilizzando l&#39;interfaccia utente, fare riferimento al tutorial su [eliminazione di account nell&#39;interfaccia utente](../../tutorials/ui/delete-accounts.md).

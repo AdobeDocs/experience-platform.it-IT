@@ -14,13 +14,13 @@ ht-degree: 2%
 
 # Endpoint di consenso
 
-Alcune normative richiedono il consenso esplicito del cliente prima che i suoi dati personali possano essere raccolti. Il `/consent` endpoint nella [!DNL Privacy Service] API ti consente di elaborare le richieste di consenso dei clienti e di integrarle nel flusso di lavoro sulla privacy.
+Alcune normative richiedono il consenso esplicito del cliente prima che i suoi dati personali possano essere raccolti. L&#39;endpoint `/consent` nell&#39;API [!DNL Privacy Service] consente di elaborare le richieste di consenso dei clienti e di integrarle nel flusso di lavoro per la privacy.
 
-Prima di utilizzare questa guida, consultare [introduzione](./getting-started.md) guida per informazioni sulle intestazioni di autenticazione richieste presentate nella chiamata API di esempio di seguito.
+Prima di utilizzare questa guida, consulta la [guida introduttiva](./getting-started.md) per informazioni sulle intestazioni di autenticazione richieste presentate nella chiamata API di esempio seguente.
 
 ## Elaborare una richiesta di consenso del cliente
 
-Le richieste di consenso vengono elaborate effettuando una richiesta POST al `/consent` endpoint.
+Le richieste di consenso vengono elaborate effettuando una richiesta POST all&#39;endpoint `/consent`.
 
 **Formato API**
 
@@ -30,7 +30,7 @@ POST /consent
 
 **Richiesta**
 
-La seguente richiesta crea un nuovo processo di consenso per gli ID utente forniti in `entities` array.
+La richiesta seguente crea un nuovo processo di consenso per gli ID utente forniti nell&#39;array `entities`.
 
 ```shell
 curl -X POST \
@@ -61,17 +61,17 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `optOutOfSale` | Se impostato su true, indica che gli utenti forniti in `entities` desiderano rinunciare alla vendita o alla condivisione dei loro dati personali. |
-| `entities` | Array di oggetti che indica gli utenti a cui si applica la richiesta di consenso. Ogni oggetto contiene un `namespace` e un array di `values` affinché i singoli utenti corrispondano a quello spazio dei nomi. |
-| `nameSpace` | Ogni oggetto in `entities` l&#39;array deve contenere uno dei [spazi dei nomi di identità standard](./appendix.md#standard-namespaces) riconosciuto dall’API Privacy Service. |
-| `values` | Un array di valori per ogni utente, corrispondente al fornito `nameSpace`. |
+| `optOutOfSale` | Se impostato su true, indica che gli utenti forniti in `entities` desiderano rinunciare alla vendita o alla condivisione dei propri dati personali. |
+| `entities` | Array di oggetti che indica gli utenti a cui si applica la richiesta di consenso. Ogni oggetto contiene un `namespace` e un array di `values` che corrispondono ai singoli utenti con tale spazio dei nomi. |
+| `nameSpace` | Ogni oggetto nell&#39;array `entities` deve contenere uno dei [spazi dei nomi di identità standard](./appendix.md#standard-namespaces) riconosciuti dall&#39;API Privacy Service. |
+| `values` | Matrice di valori per ogni utente, corrispondente al valore `nameSpace` specificato. |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
->Per ulteriori informazioni su come determinare quali valori di identità cliente inviare a [!DNL Privacy Service], consulta la guida [fornitura di dati di identità](../identity-data.md).
+>Per ulteriori informazioni su come determinare quali valori di identità cliente inviare a [!DNL Privacy Service], vedere la guida relativa a [fornitura dei dati di identità](../identity-data.md).
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce lo stato HTTP 202 (Accepted) senza payload, indicando che la richiesta è stata accettata da [!DNL Privacy Service] e sono in fase di elaborazione.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 202 (Accepted) senza payload, a indicare che la richiesta è stata accettata da [!DNL Privacy Service] ed è in fase di elaborazione.

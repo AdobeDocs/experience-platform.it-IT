@@ -1,5 +1,5 @@
 ---
-title: Collegare l'account Salesforce tramite l'interfaccia utente Experienci Platform
+title: Collegare l'account Salesforce tramite l'interfaccia utente Experience Platform
 description: Scopri come collegare il tuo account Salesforce e portare i tuoi dati di gestione delle relazioni con i clienti a Experience Platform utilizzando l’interfaccia utente di.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
 source-git-commit: 7930a869627130a5db34780e64b809cda0c1e5f4
@@ -9,83 +9,83 @@ ht-degree: 3%
 
 ---
 
-# Connetti [!DNL Salesforce] Experience Platform dell’account tramite l’interfaccia utente
+# Connetti il tuo account [!DNL Salesforce] ad Experience Platform utilizzando l&#39;interfaccia utente
 
-Questo tutorial descrive come collegare [!DNL Salesforce] e trasferire i dati CRM a Adobe Experience Platform utilizzando l’interfaccia utente di Experienci Platform.
+Questo tutorial illustra i passaggi necessari per collegare l&#39;account [!DNL Salesforce] e trasferire i dati di gestione delle relazioni con i clienti a Adobe Experience Platform utilizzando l&#39;interfaccia utente di Experience Platform.
 
 ## Introduzione
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): framework standardizzato tramite il quale Experienci Platform organizza i dati sull’esperienza del cliente.
-   * [Nozioni di base sulla composizione dello schema](../../../../../xdm/schema/composition.md): scopri gli elementi di base degli schemi XDM, compresi i principi chiave e le best practice nella composizione dello schema.
-   * [Esercitazione sull’editor di schemi](../../../../../xdm/tutorials/create-schema-ui.md): scopri come creare schemi personalizzati utilizzando l’interfaccia utente dell’Editor di schema.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): framework standardizzato in base al quale Experience Platform organizza i dati sull&#39;esperienza del cliente.
+   * [Nozioni di base sulla composizione dello schema](../../../../../xdm/schema/composition.md): scopri i blocchi predefiniti di base degli schemi XDM, inclusi i principi chiave e le best practice nella composizione dello schema.
+   * [Esercitazione sull&#39;editor di schemi](../../../../../xdm/tutorials/create-schema-ui.md): scopri come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;editor di schemi.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
-Se disponi già di un [!DNL Salesforce] account, puoi saltare il resto di questo documento e passare all’esercitazione su [configurazione di un flusso di dati per i dati CRM](../../dataflow/crm.md).
+Se disponi già di un account [!DNL Salesforce] autenticato, puoi saltare il resto di questo documento e passare all&#39;esercitazione su [configurazione di un flusso di dati per i dati CRM](../../dataflow/crm.md).
 
 ### Raccogli le credenziali richieste {#gather-required-credentials}
 
-Il [!DNL Salesforce] L&#39;origine supporta l&#39;autenticazione di base e le credenziali client OAuth2.
+L&#39;origine [!DNL Salesforce] supporta l&#39;autenticazione di base e le credenziali client OAuth2.
 
 >[!BEGINTABS]
 
 >[!TAB Autenticazione di base]
 
-È necessario fornire i valori per le seguenti credenziali per connettere il [!DNL Salesforce] tramite autenticazione di base.
+Per connettere l&#39;account [!DNL Salesforce] tramite l&#39;autenticazione di base, è necessario fornire i valori per le credenziali seguenti.
 
 | Credenziali | Descrizione |
 | --- | --- |
-| URL ambiente | L’URL del [!DNL Salesforce] istanza di origine. |
-| Nome utente | Nome utente per [!DNL Salesforce] account utente. |
-| Password | La password per [!DNL Salesforce] account utente. |
-| Token di sicurezza | Token di sicurezza per [!DNL Salesforce] account utente. |
-| Versione API | (Facoltativo) La versione REST API di [!DNL Salesforce] che si sta utilizzando. Il valore della versione API deve essere formattato con un decimale. Ad esempio, se utilizzi la versione API `52`, è necessario immettere il valore come `52.0`. Se questo campo viene lasciato vuoto, Experienci Platform utilizzerà automaticamente l’ultima versione disponibile. |
+| URL ambiente | URL dell&#39;istanza di origine [!DNL Salesforce]. |
+| Nome utente | Nome utente per l&#39;account utente [!DNL Salesforce]. |
+| Password | Password per l&#39;account utente [!DNL Salesforce]. |
+| Token di sicurezza | Token di sicurezza per l&#39;account utente [!DNL Salesforce]. |
+| Versione API | (Facoltativo) Versione REST API dell&#39;istanza [!DNL Salesforce] in uso. Il valore della versione API deve essere formattato con un decimale. Ad esempio, se utilizzi la versione API `52`, devi immettere il valore come `52.0`. Se questo campo viene lasciato vuoto, Experience Platform utilizzerà automaticamente l’ultima versione disponibile. |
 
-Per ulteriori informazioni sull’autenticazione, consulta [questo [!DNL Salesforce] guida all’autenticazione](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm).
+Per ulteriori informazioni sull&#39;autenticazione, consultare [questa [!DNL Salesforce] guida all&#39;autenticazione](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm).
 
 >[!TAB Credenziali client OAuth2]
 
-È necessario fornire i valori per le seguenti credenziali per connettere il [!DNL Salesforce] utilizzando le credenziali client OAuth2.
+È necessario fornire i valori per le credenziali seguenti per connettere l&#39;account [!DNL Salesforce] utilizzando le credenziali client OAuth2.
 
 | Credenziali | Descrizione |
 | --- | --- |
-| URL ambiente | L’URL del [!DNL Salesforce] istanza di origine. |
-| ID client | L’ID client viene utilizzato insieme al segreto client come parte dell’autenticazione OAuth2. Insieme, l’ID client e il segreto client consentono all’applicazione di funzionare per conto del tuo account identificando l’applicazione in [!DNL Salesforce]. |
-| Segreto client | Il segreto client viene utilizzato insieme all’ID client come parte dell’autenticazione OAuth2. Insieme, l’ID client e il segreto client consentono all’applicazione di funzionare per conto del tuo account identificando l’applicazione in [!DNL Salesforce]. |
-| Versione API | Versione REST API di [!DNL Salesforce] che si sta utilizzando. Il valore della versione API deve essere formattato con un decimale. Ad esempio, se utilizzi la versione API `52`, è necessario immettere il valore come `52.0`. Se questo campo viene lasciato vuoto, Experienci Platform utilizzerà automaticamente l’ultima versione disponibile. |
+| URL ambiente | URL dell&#39;istanza di origine [!DNL Salesforce]. |
+| ID client | L’ID client viene utilizzato insieme al segreto client come parte dell’autenticazione OAuth2. Insieme, l&#39;ID client e il segreto client consentono all&#39;applicazione di funzionare per conto dell&#39;account identificando l&#39;applicazione in [!DNL Salesforce]. |
+| Segreto client | Il segreto client viene utilizzato insieme all’ID client come parte dell’autenticazione OAuth2. Insieme, l&#39;ID client e il segreto client consentono all&#39;applicazione di funzionare per conto dell&#39;account identificando l&#39;applicazione in [!DNL Salesforce]. |
+| Versione API | Versione REST API dell&#39;istanza [!DNL Salesforce] in uso. Il valore della versione API deve essere formattato con un decimale. Ad esempio, se utilizzi la versione API `52`, devi immettere il valore come `52.0`. Se questo campo viene lasciato vuoto, Experience Platform utilizzerà automaticamente l’ultima versione disponibile. |
 
-Per ulteriori informazioni sull’utilizzo di OAuth per [!DNL Salesforce], leggi [[!DNL Salesforce] guida ai flussi di autorizzazione OAuth](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5).
+Per ulteriori informazioni sull&#39;utilizzo di OAuth per [!DNL Salesforce], leggere la [[!DNL Salesforce] guida sui flussi di autorizzazione OAuth](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5).
 
 >[!ENDTABS]
 
-Dopo aver raccolto le credenziali richieste, puoi seguire la procedura riportata di seguito per collegare il tuo [!DNL Salesforce] da Experience Platform.
+Dopo aver raccolto le credenziali richieste, puoi seguire i passaggi seguenti per collegare l&#39;account [!DNL Salesforce] all&#39;Experience Platform.
 
-## Connetti [!DNL Salesforce] account
+## Connetti il tuo account [!DNL Salesforce]
 
-Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Sorgenti]** dalla barra di navigazione a sinistra per accedere al [!UICONTROL Sorgenti] Workspace. Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
+Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
 
-Seleziona **[!DNL Salesforce]** sotto *[!UICONTROL CRM]* categoria, quindi selezionare **[!UICONTROL Aggiungi dati]**.
+Selezionare **[!DNL Salesforce]** nella categoria *[!UICONTROL CRM]*, quindi selezionare **[!UICONTROL Aggiungi dati]**.
 
 >[!TIP]
 >
->Le origini nel catalogo delle origini visualizzano **[!UICONTROL Configurazione]** quando una determinata origine non dispone ancora di un account autenticato. Quando esiste un account autenticato, questa opzione diventa **[!UICONTROL Aggiungi dati]**.
+>Le origini nel catalogo delle origini visualizzano l&#39;opzione **[!UICONTROL Configura]** quando un&#39;origine specificata non dispone ancora di un account autenticato. Quando esiste un account autenticato, questa opzione diventa **[!UICONTROL Aggiungi dati]**.
 
-![Catalogo delle sorgenti nell’interfaccia utente di Experienci Platform con la scheda sorgente Salesforce selezionata.](../../../../images/tutorials/create/salesforce/catalog.png)
+![Catalogo delle origini nell&#39;interfaccia utente di Experience Platform con la scheda sorgente Salesforce selezionata.](../../../../images/tutorials/create/salesforce/catalog.png)
 
-Il **[!UICONTROL Connetti a Salesforce]** viene visualizzata. In questa pagina è possibile utilizzare nuove credenziali o credenziali esistenti.
+Viene visualizzata la pagina **[!UICONTROL Connetti a Salesforce]**. In questa pagina è possibile utilizzare nuove credenziali o credenziali esistenti.
 
 ### Usa un account esistente
 
-Per utilizzare un account esistente, seleziona **[!UICONTROL Account esistente]** quindi selezionare l&#39;account che si desidera utilizzare dall&#39;elenco visualizzato. Al termine, seleziona **[!UICONTROL Successivo]** per procedere.
+Per utilizzare un account esistente, selezionare **[!UICONTROL Account esistente]**, quindi selezionare l&#39;account che si desidera utilizzare dall&#39;elenco visualizzato. Al termine, selezionare **[!UICONTROL Avanti]** per continuare.
 
-![Elenco di account Salesforce autenticati già presenti nell’organizzazione.](../../../../images/tutorials/create/salesforce/existing.png)
+![Elenco di account Salesforce autenticati già presenti nell&#39;organizzazione.](../../../../images/tutorials/create/salesforce/existing.png)
 
 ### Crea un nuovo account
 
-Per creare un nuovo account, seleziona **[!UICONTROL Nuovo account]** e fornisci un nome e una descrizione per il nuovo [!DNL Salesforce] account.
+Per creare un nuovo account, seleziona **[!UICONTROL Nuovo account]** e fornisci un nome e una descrizione per il nuovo account [!DNL Salesforce].
 
-![L’interfaccia in cui puoi creare un nuovo account Salesforce fornendo le credenziali di autenticazione appropriate.](../../../../images/tutorials/create/salesforce/new.png)
+![Interfaccia in cui è possibile creare un nuovo account Salesforce fornendo le credenziali di autenticazione appropriate.](../../../../images/tutorials/create/salesforce/new.png)
 
 Quindi, seleziona il tipo di autenticazione che desideri utilizzare per il nuovo account.
 
@@ -93,32 +93,32 @@ Quindi, seleziona il tipo di autenticazione che desideri utilizzare per il nuovo
 
 >[!TAB Autenticazione di base]
 
-Per l’autenticazione di base, seleziona **[!UICONTROL Autenticazione di base]** e quindi fornisci i valori per le seguenti credenziali:
+Per l&#39;autenticazione di base, selezionare **[!UICONTROL Autenticazione di base]**, quindi specificare i valori per le credenziali seguenti:
 
 * URL ambiente
 * Nome utente
 * Password
 * Versione API (opzionale)
 
-Al termine, seleziona **[!UICONTROL Connetti all&#39;origine]**.
+Al termine, selezionare **[!UICONTROL Connetti all&#39;origine]**.
 
-![Interfaccia di autenticazione di base per la creazione dell’account Salesforce.](../../../../images/tutorials/create/salesforce/basic.png)
+![Interfaccia di autenticazione di base per la creazione dell&#39;account Salesforce.](../../../../images/tutorials/create/salesforce/basic.png)
 
 >[!TAB Credenziali client OAuth2]
 
-Per le credenziali client OAuth 2, selezionare **[!UICONTROL Credenziali client OAuth2]** e quindi fornisci i valori per le seguenti credenziali:
+Per le credenziali client OAuth 2, selezionare **[!UICONTROL Credenziali client OAuth2]**, quindi specificare i valori per le credenziali seguenti:
 
 * URL ambiente
 * ID client
 * Segreto client
 * Versione API
 
-Al termine, seleziona **[!UICONTROL Connetti all&#39;origine]**.
+Al termine, selezionare **[!UICONTROL Connetti all&#39;origine]**.
 
-![L’interfaccia OAuth per la creazione dell’account Salesforce.](../../../../images/tutorials/create/salesforce/oauth2.png)
+![Interfaccia OAuth per la creazione dell&#39;account Salesforce.](../../../../images/tutorials/create/salesforce/oauth2.png)
 
 >[!ENDTABS]
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai stabilito una connessione con il tuo [!DNL Salesforce] account. Ora puoi continuare con l’esercitazione successiva e [configurare un flusso di dati per inserire dati in [!DNL Platform]](../../dataflow/crm.md).
+Seguendo questa esercitazione, hai stabilito una connessione al tuo account [!DNL Salesforce]. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per inserire dati in [!DNL Platform]](../../dataflow/crm.md).

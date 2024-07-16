@@ -7,44 +7,44 @@ description: Questo tutorial illustra i passaggi necessari per monitorare i dati
 exl-id: c4b2db97-eba4-460d-8c00-c76c666ed70e
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
-source-wordcount: '718'
-ht-degree: 1%
+source-wordcount: '711'
+ht-degree: 8%
 
 ---
 
 # Monitorare i flussi di dati tramite l’API del servizio Flusso
 
-Adobe Experience Platform consente di acquisire dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] servizi. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre. Inoltre, Experience Platform consente di attivare i dati per i partner esterni.
+Adobe Experience Platform consente di acquisire dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi [!DNL Platform]. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre. Inoltre, Experience Platform consente di attivare i dati per i partner esterni.
 
-[!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da diverse origini all’interno di Adobe Experience Platform. Il servizio fornisce un’interfaccia utente e un’API RESTful da cui tutte le origini e le destinazioni supportate sono collegabili.
+[!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da diverse origini all&#39;interno di Adobe Experience Platform. Il servizio fornisce un’interfaccia utente e un’API RESTful da cui tutte le origini e le destinazioni supportate sono collegabili.
 
 Questa esercitazione descrive i passaggi per monitorare i dati di esecuzione del flusso per completezza, errori e metriche utilizzando [[!DNL Flow Service API]](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introduzione
 
-Questa esercitazione richiede di avere il valore ID di un flusso di dati valido. Se non disponi di un ID di flusso di dati valido, seleziona il connettore desiderato dall’elenco [panoramica sulle origini](../../sources/home.md) o [panoramica sulle destinazioni](../../destinations/catalog/overview.md) e segui i passaggi descritti prima di provare questa esercitazione.
+Questa esercitazione richiede di avere il valore ID di un flusso di dati valido. Se non disponi di un ID flusso di dati valido, seleziona il connettore desiderato dalla [panoramica origini](../../sources/home.md) o [panoramica destinazioni](../../destinations/catalog/overview.md) e segui i passaggi descritti prima di provare questa esercitazione.
 
 Questo tutorial richiede anche una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-- [Destinazioni](../../destinations/home.md): le destinazioni sono integrazioni predefinite con applicazioni di uso comune che consentono l’attivazione diretta dei dati da Platform per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
-- [Sorgenti](../../sources/home.md): [!DNL Experience Platform] consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] servizi.
-- [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che permettono di suddividere un singolo [!DNL Platform] in ambienti virtuali separati, per facilitare lo sviluppo e l’evoluzione delle applicazioni di esperienza digitale.
+- [Destinazioni](../../destinations/home.md): le destinazioni sono integrazioni predefinite con applicazioni di uso comune che consentono l&#39;attivazione diretta dei dati da Platform per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d&#39;uso.
+- [Origini](../../sources/home.md): [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini e consente di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi [!DNL Platform].
+- [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza di [!DNL Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per monitorare correttamente le esecuzioni del flusso utilizzando [!DNL Flow Service] API.
+Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per monitorare correttamente le esecuzioni del flusso tramite l&#39;API [!DNL Flow Service].
 
 ### Lettura delle chiamate API di esempio
 
-Questo tutorial fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito il codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere esempi di chiamate API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nel [!DNL Experience Platform] guida alla risoluzione dei problemi.
+Questo tutorial fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform].
 
-### Raccogli i valori per le intestazioni richieste
+### Raccogliere i valori per le intestazioni richieste
 
-Per effettuare chiamate a [!DNL Platform] , devi prima completare le [tutorial sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento del tutorial sull’autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte [!DNL Experience Platform] Chiamate API, come mostrato di seguito:
+Per effettuare chiamate alle API [!DNL Platform], devi prima completare l&#39;[esercitazione di autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-Tutte le risorse in [!DNL Experience Platform], compresi quelli appartenenti a [!DNL Flow Service], sono isolate in specifiche sandbox virtuali. Tutte le richieste a [!DNL Platform] Le API richiedono un’intestazione che specifichi il nome della sandbox in cui verrà eseguita l’operazione:
+Tutte le risorse in [!DNL Experience Platform], incluse quelle appartenenti a [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API [!DNL Platform] richiedono un&#39;intestazione che specifichi il nome della sandbox in cui verrà eseguita l&#39;operazione:
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -54,7 +54,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’
 
 ## Monitorare le esecuzioni del flusso
 
-Dopo aver creato un flusso di dati, esegui una richiesta di GET a [!DNL Flow Service] API.
+Dopo aver creato un flusso di dati, eseguire una richiesta di GET all&#39;API [!DNL Flow Service].
 
 **Formato API**
 
@@ -64,7 +64,7 @@ GET /runs?property=flowId=={FLOW_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{FLOW_ID}` | L&#39;unico `id` valore per il flusso di dati che desideri monitorare. |
+| `{FLOW_ID}` | Valore `id` univoco per il flusso di dati che si desidera monitorare. |
 
 **Richiesta**
 
@@ -81,7 +81,7 @@ curl -X GET \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce dettagli relativi all’esecuzione del flusso, incluse informazioni sulla data di creazione, sulle connessioni di origine e di destinazione e sull’identificatore univoco dell’esecuzione del flusso (`id`).
+In caso di esito positivo, la risposta restituisce i dettagli relativi all&#39;esecuzione del flusso, incluse informazioni sulla data di creazione, sulle connessioni di origine e di destinazione, nonché sull&#39;identificatore univoco dell&#39;esecuzione del flusso (`id`).
 
 ```json
 {
@@ -195,9 +195,9 @@ In caso di esito positivo, la risposta restituisce dettagli relativi all’esecu
 | `sizeSummary` | Volume dei dati in byte. |
 | `recordSummary` | Numero di record dei dati. |
 | `fileSummary` | I conteggi dei file dei dati. |
-| `fileSummary.extensions` | Contiene informazioni specifiche dell’attività. Ad esempio: `manifest` fa solo parte dell’&quot;Attività di promozione&quot; e pertanto è inclusa con `extensions` oggetto. |
+| `fileSummary.extensions` | Contiene informazioni specifiche dell’attività. `manifest`, ad esempio, è solo parte dell&#39;attività di promozione e pertanto è incluso nell&#39;oggetto `extensions`. |
 | `statusSummary` | Mostra se l’esecuzione del flusso è riuscita o meno. |
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai recuperato metriche e informazioni di errore sul flusso di dati utilizzando [!DNL Flow Service] API. Ora puoi continuare a monitorare il flusso di dati, a seconda della pianificazione di acquisizione, per monitorarne lo stato e i tassi di acquisizione. Per informazioni su come monitorare i flussi di dati per le origini, consulta la sezione [monitoraggio dei flussi di dati per le origini tramite l’interfaccia utente](../ui/monitor-sources.md) esercitazione. Per ulteriori informazioni su come monitorare i flussi di dati per le destinazioni, consulta la sezione [monitoraggio dei flussi di dati per le destinazioni tramite l’interfaccia utente](../ui/monitor-destinations.md) esercitazione.
+Seguendo questa esercitazione, hai recuperato metriche e informazioni di errore sul flusso di dati utilizzando l&#39;API [!DNL Flow Service]. Ora puoi continuare a monitorare il flusso di dati, a seconda della pianificazione di acquisizione, per monitorarne lo stato e i tassi di acquisizione. Per informazioni su come monitorare i flussi di dati per le origini, leggere l&#39;esercitazione [monitoraggio dei flussi di dati per le origini tramite l&#39;interfaccia utente](../ui/monitor-sources.md). Per ulteriori informazioni su come monitorare i flussi di dati per le destinazioni, leggere l&#39;esercitazione [monitoraggio dei flussi di dati per le destinazioni tramite l&#39;interfaccia utente](../ui/monitor-destinations.md).

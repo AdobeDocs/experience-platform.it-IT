@@ -11,13 +11,13 @@ ht-degree: 4%
 
 ---
 
-# [!UICONTROL Dettagli sulla permuta dei dispositivi] gruppo di campi schema
+# [!UICONTROL Dettagli permuta dispositivo] gruppo di campi schema
 
 >[!NOTE]
 >
->I nomi di diversi gruppi di campi dello schema sono stati modificati. Vedi il documento su [aggiornamenti nome gruppo di campi](../name-updates.md) per ulteriori informazioni.
+>I nomi di diversi gruppi di campi dello schema sono stati modificati. Per ulteriori informazioni, consulta il documento sugli aggiornamenti del nome del gruppo di campi [](../name-updates.md).
 
-[!UICONTROL Dettagli sulla permuta dei dispositivi] è un gruppo di campi di schema standard per [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). Fornisce un singolo campo (`deviceTradeInDetails`) che descrive una transazione di permuta con dispositivo, incluso il valore di permuta, l’ID dispositivo originale e l’ID nuovo dispositivo.
+[!UICONTROL Device Trade-In Details] è un gruppo di campi di schema standard per la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). Fornisce un singolo campo (`deviceTradeInDetails`) che descrive una transazione di permuta del dispositivo, incluso il valore di permuta, l&#39;ID dispositivo originale e l&#39;ID nuovo dispositivo.
 
 ![Struttura dei dettagli sulla permuta dei dispositivi](../../images/field-groups/device-trade-in-details.png)
 

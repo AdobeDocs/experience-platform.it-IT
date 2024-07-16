@@ -11,17 +11,17 @@ ht-degree: 2%
 
 ---
 
-# [!UICONTROL Informazioni web] tipo di dati
+# [!UICONTROL Informazioni Web] tipo di dati
 
-[!UICONTROL Informazioni web] è un tipo di dati Experience Data Model (XDM) standard che descrive le informazioni registrate tramite un evento esperienza specifico per il canale World Wide Web, inclusi la pagina web, il referrer e/o il collegamento relativo all’interazione su pagina.
+[!UICONTROL Informazioni Web] è un tipo di dati XDM (Experience Data Model) standard che descrive le informazioni registrate tramite un Experience Event specifico per il canale World Wide Web, inclusi la pagina Web, il referrer e/o il collegamento relativi all&#39;interazione su pagina.
 
 ![](../images/data-types/web-information.png)
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
-| `webInteraction` | [[!UICONTROL Interazione web]](./web-interaction.md) | Descrive i dettagli del collegamento web o dell’URL che corrisponde all’interazione. |
-| `webPageDetails` | [[!UICONTROL Dettagli pagina web]](./webpage-details.md) | Descrive i dettagli della pagina web in cui si è verificata l’interazione web. |
-| `webReferrer` | [!UICONTROL Oggetto] | Descrive il referente di un’interazione web, che è l’URL da cui un visitatore proviene immediatamente prima che l’interazione web corrente sia stata registrata. Contiene le seguenti sottoproprietà: <ul><li>`URL`: URL del referente.</li><li>`type`: tipo di referente.</li></ul> |
+| `webInteraction` | [[!UICONTROL Interazione Web]](./web-interaction.md) | Descrive i dettagli del collegamento web o dell’URL che corrisponde all’interazione. |
+| `webPageDetails` | [[!UICONTROL Dettagli pagina Web]](./webpage-details.md) | Descrive i dettagli della pagina web in cui si è verificata l’interazione web. |
+| `webReferrer` | [!UICONTROL Oggetto] | Descrive il referente di un’interazione web, che è l’URL da cui un visitatore proviene immediatamente prima che l’interazione web corrente sia stata registrata. Contiene le seguenti sottoproprietà: <ul><li>`URL`: URL del referente.</li><li>`type`: tipo di referrer.</li></ul> |
 
 {style="table-layout:auto"}
 

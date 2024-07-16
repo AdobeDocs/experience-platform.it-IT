@@ -13,17 +13,17 @@ ht-degree: 0%
 
 L’archivio con query accelerate consente di ridurre il tempo e la potenza di elaborazione necessari per ottenere informazioni critiche dai dati. In genere, i dati vengono elaborati a intervalli regolari (ad esempio, su base oraria o giornaliera), dove vengono create e riportate le visualizzazioni aggregate. L’analisi di questi rapporti generati dai dati aggregati deriva da informazioni mirate a migliorare le prestazioni aziendali. L’archivio con query accelerata fornisce un servizio di cache, concorrenza, un’esperienza interattiva e un’API senza stato. Tuttavia, presuppone che i dati siano preelaborati e ottimizzati per l’esecuzione di query aggregate e non per l’esecuzione di query di dati non elaborati.
 
-L’archivio con query accelerata ti consente di creare un modello dati personalizzato e/o estendere un modello dati Adobe Real-time Customer Data Platform esistente. Puoi quindi interagire con o incorporare le tue informazioni di reporting in un framework di reporting/visualizzazione a tua scelta. Per informazioni su come utilizzare questa funzione, consulta la documentazione sul modello dati di Real-time Customer Data Platform Insights. [personalizza i modelli di query SQL per creare rapporti di Real-Time CDP per i casi d’uso degli indicatori prestazioni chiave (KPI, Key Performance Indicator) di marketing](../../../dashboards/data-models/cdp-insights-data-model-b2c.md).
+L’archivio con query accelerata ti consente di creare un modello dati personalizzato e/o estendere un modello dati Adobe Real-time Customer Data Platform esistente. Puoi quindi interagire con o incorporare le tue informazioni di reporting in un framework di reporting/visualizzazione a tua scelta. Per informazioni su come [personalizzare i modelli di query SQL per creare rapporti Real-Time CDP per i casi d&#39;uso di indicatori di prestazioni chiave (KPI) e marketing, consulta la documentazione del modello dati di Real-time Customer Data Platform Insights](../../../dashboards/data-models/cdp-insights-data-model-b2c.md).
 
 Il modello dati di Real-Time CDP di Adobe Experience Platform fornisce informazioni su profili, tipi di pubblico e destinazioni e abilita le dashboard di Real-Time CDP Insight. Questo documento ti guida attraverso il processo di creazione del modello dati Reporting Insights e anche come estendere i modelli dati di Real-Time CDP in base alle esigenze.
 
 ## Prerequisiti
 
-Questa esercitazione utilizza dashboard definite dall’utente per visualizzare i dati dal modello dati personalizzato nell’interfaccia utente di Platform. Consulta la sezione [documentazione delle dashboard definite dall&#39;utente](../../../dashboards/user-defined-dashboards.md) per ulteriori informazioni su questa funzione.
+Questa esercitazione utilizza dashboard definite dall’utente per visualizzare i dati dal modello dati personalizzato nell’interfaccia utente di Platform. Per ulteriori informazioni su questa funzione, consulta la [documentazione delle dashboard definite dall&#39;utente](../../../dashboards/user-defined-dashboards.md).
 
 ## Introduzione
 
-Lo SKU di Data Distiller è necessario per creare un modello dati personalizzato per le informazioni di reporting ed estendere i modelli dati di Real-Time CDP che contengono dati Platform arricchiti. Consulta la sezione [imballaggio](../../packaging.md), [guardrail](../../guardrails.md#query-accelerated-store), e  [licenza](../../data-distiller/license-usage.md) documentazione relativa allo SKU di Data Distiller. Se non disponi dello SKU di Data Distiller, contatta il rappresentante dell’assistenza clienti Adobe per ulteriori informazioni.
+Lo SKU di Data Distiller è necessario per creare un modello dati personalizzato per le informazioni di reporting ed estendere i modelli dati di Real-Time CDP che contengono dati Platform arricchiti. Consulta la documentazione [package](../../packaging.md), [guardrail](../../guardrails.md#query-accelerated-store) e [licensing](../../data-distiller/license-usage.md) relativa allo SKU di Data Distiller. Se non disponi dello SKU di Data Distiller, contatta il rappresentante dell’assistenza clienti Adobe per ulteriori informazioni.
 
 ## Creare un modello dati per informazioni di reporting
 
@@ -31,17 +31,17 @@ Questa esercitazione utilizza un esempio di creazione di un modello dati di audi
 
 All’inizio, disponi di un modello dati iniziale dalle tue sorgenti (potenzialmente dall’API della piattaforma dell’inserzionista). Per ottenere una visualizzazione aggregata dei dati non elaborati, crea un modello di reporting insights come descritto nell’immagine seguente. Questo consente a un set di dati di ottenere i limiti superiore e inferiore della corrispondenza del pubblico.
 
-![Un diagramma relazionale di entità (ERD) del modello utente di audience insight.](../../images/data-distiller/customizable-insights/audience-insight-user-model.png)
+![Diagramma relazionale di entità (ERD) del modello utente di Audience Insight.](../../images/data-distiller/customizable-insights/audience-insight-user-model.png)
 
-In questo esempio, la proprietà `externalaudiencereach` la tabella o il set di dati è basato su un ID e tiene traccia dei limiti inferiore e superiore per il conteggio delle corrispondenze. Il `externalaudiencemapping` La tabella/set di dati dimensionale mappa l’ID esterno su una destinazione e un pubblico in Platform.
+In questo esempio, la tabella/set di dati `externalaudiencereach` è basato su un ID e tiene traccia dei limiti inferiore e superiore per il conteggio delle corrispondenze. La tabella/set di dati della dimensione `externalaudiencemapping` mappa l&#39;ID esterno a una destinazione e a un pubblico su Platform.
 
 ## Creazione di un modello per la generazione di rapporti di approfondimenti con Data Distiller
 
-Quindi, crea un modello di reporting insight (`audienceinsight` in questo esempio) e utilizzare il comando SQL `ACCOUNT=acp_query_batch and TYPE=QSACCEL` per assicurarsi che venga creato nell&#39;archivio accelerato. Quindi utilizza Query Service per creare un `audienceinsight.audiencemodel` schema per `audienceinsight` database.
+Creare quindi un modello di informazioni di reporting (`audienceinsight` in questo esempio) e utilizzare il comando SQL `ACCOUNT=acp_query_batch and TYPE=QSACCEL` per assicurarsi che venga creato nell&#39;archivio accelerato. Quindi utilizzare Query Service per creare uno schema `audienceinsight.audiencemodel` per il database `audienceinsight`.
 
 >[!NOTE]
 >
->Lo SKU di Data Distiller è necessario per `ACCOUNT=acp_query_batch` comando. Senza di esso, nel data lake viene creato un modello dati regolare.
+>Lo SKU di Data Distiller è richiesto per il comando `ACCOUNT=acp_query_batch`. Senza di esso, nel data lake viene creato un modello dati regolare.
 
 ```sql
 CREATE database audienceinsight WITH (TYPE=QSACCEL, ACCOUNT=acp_query_batch);
@@ -51,7 +51,7 @@ CREATE schema audienceinsight.audiencemodel;
 
 ## Creare tabelle, relazioni e compilare dati
 
-Ora che hai creato il tuo `audienceinsight` reporting di insight, crea il `externalaudiencereach` e `externalaudiencemapping` e stabilire relazioni tra di esse. Quindi, utilizza `ALTER TABLE` per aggiungere un vincolo di chiave esterna tra le tabelle e definire una relazione. Nell&#39;esempio SQL seguente viene illustrato come eseguire questa operazione.
+Dopo aver creato il modello di reporting insight di `audienceinsight`, creare le tabelle `externalaudiencereach` e `externalaudiencemapping` e stabilire relazioni tra di esse. Utilizzare quindi il comando `ALTER TABLE` per aggiungere un vincolo di chiave esterna tra le tabelle e definire una relazione. Nell&#39;esempio SQL seguente viene illustrato come eseguire questa operazione.
 
 ```sql
 CREATE TABLE IF NOT exists audienceinsight.audiencemodel.externalaudiencereach
@@ -78,13 +78,13 @@ SELECT cast(null as int) audience_id,
 ALTER TABLE externalaudiencereach ADD  CONSTRAINT FOREIGN KEY (ext_custom_audience_id) REFERENCES externalaudiencemapping (ext_custom_audience_id) NOT enforced;
 ```
 
-Dopo la corretta esecuzione di entrambi `ALTER TABLE` viene creata la relazione tra le tabelle fact e dimension.
+Dopo la corretta esecuzione di entrambi i comandi `ALTER TABLE`, viene creata la relazione tra le tabelle fact e dimension.
 
-Una volta eseguite le istruzioni, utilizza `SHOW datagroups;` per restituire un elenco dei set di dati disponibili nell’archivio accelerato da `audienceinsight.audiencemodel`. I risultati della tabella devono essere simili all’esempio fornito di seguito.
+Dopo l&#39;esecuzione delle istruzioni, utilizzare il comando `SHOW datagroups;` per restituire un elenco dei set di dati disponibili nell&#39;archivio accelerato da `audienceinsight.audiencemodel`. I risultati della tabella devono essere simili all’esempio fornito di seguito.
 
 >[!IMPORTANT]
 >
->Dall’endpoint API senza stato di Query Service sono accessibili solo i dati nell’archivio accelerato `POST /data/foundation/query/accelerated-queries`.
+>Dall&#39;endpoint API senza stato `POST /data/foundation/query/accelerated-queries` di Query Service è possibile accedere solo ai dati nell&#39;archivio accelerato.
 
 ```console
     Database     |    Schema     | GroupType |      ChildType       |        ChildName        | PhysicalParent |               ChildId               
@@ -95,7 +95,7 @@ Una volta eseguite le istruzioni, utilizza `SHOW datagroups;` per restituire un 
 
 ## Eseguire una query sul modello dati di reporting insight
 
-Utilizza Query Service per eseguire query su `audiencemodel.externalaudiencereach` tabella delle dimensioni. Di seguito è riportato un esempio di query.
+Utilizzare Query Service per eseguire query sulla tabella delle dimensioni `audiencemodel.externalaudiencereach`. Di seguito è riportato un esempio di query.
 
 ```sql
 SELECT a.ext_custom_audience_id,
@@ -131,11 +131,11 @@ ext_custom_audience_id | approximate_count_upper_bound
 
 Puoi estendere il modello di pubblico con ulteriori dettagli per creare una tabella di dimensioni più ricca. Ad esempio, puoi mappare il nome del pubblico e il nome della destinazione all’identificatore del pubblico esterno. A questo scopo, utilizza Query Service per creare o aggiornare un nuovo set di dati e aggiungerlo al modello di pubblico che combina tipi di pubblico e destinazioni con un’identità esterna. Il diagramma seguente illustra il concetto di questa estensione del modello dati.
 
-![Un diagramma ERD che collega il modello di dati di Real-Time CDP Insight e il modello di archiviazione accelerata Query.](../../images/data-distiller/customizable-insights/updatingAudienceInsightUserModel.png)
+![Diagramma ERD che collega il modello dati di Real-Time CDP Insight e il modello di archivio rapido Query.](../../images/data-distiller/customizable-insights/updatingAudienceInsightUserModel.png)
 
 ## Creare tabelle dimensione per estendere il modello di reporting insights
 
-Utilizzare Query Service per aggiungere attributi descrittivi chiave dai set di dati della dimensione Real-Time CDP arricchiti al `audienceinsight` e stabilire una relazione tra la fact table e la nuova dimension table. L’istruzione SQL seguente illustra come integrare le tabelle dimensioni esistenti nel modello dati per insights di reporting.
+Utilizzare Query Service per aggiungere attributi descrittivi chiave dai set di dati della dimensione Real-Time CDP arricchiti al modello dati `audienceinsight` e stabilire una relazione tra la fact table e la nuova tabella della dimensione. L’istruzione SQL seguente illustra come integrare le tabelle dimensioni esistenti nel modello dati per insights di reporting.
 
 ```sql
 CREATE TABLE audienceinsight.audiencemodel.external_seg_dest_map AS
@@ -154,7 +154,7 @@ CREATE TABLE audienceinsight.audiencemodel.external_seg_dest_map AS
 ALTER TABLE externalaudiencereach  ADD  CONSTRAINT FOREIGN KEY (ext_custom_audience_id) REFERENCES external_seg_dest_map (ext_custom_audience_id) NOT enforced;
 ```
 
-Utilizza il `SHOW datagroups;` per confermare la creazione del componente aggiuntivo `external_seg_dest_map` tabella delle dimensioni.
+Utilizzare il comando `SHOW datagroups;` per confermare la creazione della tabella dimensione `external_seg_dest_map` aggiuntiva.
 
 ```console
     Database     |     Schema     | GroupType |      ChildType       |                ChildName  | PhysicalParent |               ChildId               
@@ -166,7 +166,7 @@ Utilizza il `SHOW datagroups;` per confermare la creazione del componente aggiun
 
 ## Eseguire una query sul modello dati Exaccelerated Store Reporting Insights
 
-Ora che il `audienceinsight` il modello dati è stato potenziato ed è pronto per essere interrogato. L’istruzione SQL seguente mostra l’elenco delle destinazioni e dei tipi di pubblico mappati.
+Ora che il modello dati `audienceinsight` è stato potenziato, è possibile eseguire una query. L’istruzione SQL seguente mostra l’elenco delle destinazioni e dei tipi di pubblico mappati.
 
 ```sql
 SELECT a.ext_custom_audience_id,
@@ -226,6 +226,6 @@ LIMIT  5000
 
 L’immagine seguente fornisce un esempio delle possibili visualizzazioni personalizzate basate sul modello dati per insights di reporting.
 
-![Un conteggio delle corrispondenze per destinazione e widget di pubblico creato dal nuovo modello dati per approfondimenti reporting.](../../images/data-distiller/customizable-insights/user-defined-dashboard-widget.png)
+![Un conteggio delle corrispondenze per destinazione e widget di pubblico creato dal nuovo modello dati Reporting Insights.](../../images/data-distiller/customizable-insights/user-defined-dashboard-widget.png)
 
-Il modello dati personalizzato si trova nell’elenco dei modelli dati disponibili nell’area di lavoro del dashboard definita dall’utente. Consulta la [guida alla dashboard definita dall’utente](../../../dashboards/user-defined-dashboards.md) per istruzioni su come utilizzare il modello dati personalizzato.
+Il modello dati personalizzato si trova nell’elenco dei modelli dati disponibili nell’area di lavoro del dashboard definita dall’utente. Consulta la [guida alla dashboard definita dall&#39;utente](../../../dashboards/user-defined-dashboards.md) per informazioni su come utilizzare il modello dati personalizzato.

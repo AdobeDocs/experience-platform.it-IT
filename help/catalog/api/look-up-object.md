@@ -13,11 +13,11 @@ ht-degree: 3%
 
 # Cercare un oggetto Catalog
 
-Se conosci l’identificatore univoco di un dato [!DNL Catalog] oggetto, è possibile eseguire una richiesta GET per visualizzare i dettagli dell&#39;oggetto.
+Se si conosce l&#39;identificatore univoco di un oggetto [!DNL Catalog] specifico, è possibile eseguire una richiesta di GET per visualizzare i dettagli dell&#39;oggetto.
 
 >[!NOTE]
 >
->Quando si visualizzano oggetti specifici, è comunque consigliabile [filtra per proprietà](filter-data.md) e restituiscono solo le proprietà a cui sei interessato.
+>Quando si visualizzano oggetti specifici, è comunque consigliabile [filtrare in base alle proprietà](filter-data.md) e restituire solo le proprietà desiderate.
 
 **Formato API**
 
@@ -28,12 +28,12 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{OBJECT_TYPE}` | Il tipo di [!DNL Catalog] oggetto da recuperare. Gli oggetti validi sono: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | Tipo di oggetto [!DNL Catalog] da recuperare. Gli oggetti validi sono: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | Identificatore dell&#39;oggetto specifico che si desidera recuperare. |
 
 **Richiesta**
 
-La richiesta seguente recupera un set di dati in base al suo ID, restituendo il relativo `name`, `description`, `tags`, e `files` proprietà.
+La richiesta seguente recupera un set di dati in base al relativo ID, restituendo le proprietà `name`, `description`, `tags` e `files`.
 
 ```shell
 curl -X GET \
@@ -46,7 +46,7 @@ curl -X GET \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce il set di dati specificato con solo il `properties` nel corpo.
+In caso di esito positivo, la risposta restituisce il set di dati specificato con solo il `properties` richiesto nel corpo.
 
 ```json
 {
@@ -65,4 +65,4 @@ In caso di esito positivo, la risposta restituisce il set di dati specificato co
 
 >[!NOTE]
 >
->Proprietà i cui valori hanno il prefisso `@` rappresentano oggetti intercorrelati. Vedere la sezione dell&#39;appendice relativa a [visualizzazione di oggetti correlati](appendix.md#view-interrelated-objects) per i passaggi su come visualizzare i dettagli di questi oggetti.
+>Le proprietà i cui valori sono preceduti da `@` rappresentano oggetti intercorrelati. Per informazioni su come visualizzare i dettagli di questi oggetti, vedere la sezione dell&#39;appendice relativa alla visualizzazione di [oggetti intercorrelati](appendix.md#view-interrelated-objects).

@@ -11,7 +11,7 @@ ht-degree: 6%
 
 # [!UICONTROL Dettagli richiesta preventivo] gruppo di campi schema
 
-[!UICONTROL Dettagli richiesta preventivo] è un gruppo di campi di schema standard per [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). Il gruppo di campi fornisce un singolo `quotes` object to a schema, che acquisisce i dettagli del processo di richiesta per vari tipi di preventivi, tra cui polizze assicurative, assistenza sanitaria, ordini di produzione e ordini high-tech.
+[!UICONTROL Dettagli richiesta preventivo] è un gruppo di campi dello schema standard per la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). Il gruppo di campi fornisce un singolo oggetto `quotes` a uno schema, che acquisisce i dettagli del processo di richiesta per vari tipi di preventivi, tra cui polizze assicurative, assistenza sanitaria, ordini di produzione e ordini ad alta tecnologia.
 
 ![](../../images/field-groups/quote-request-details.png)
 
@@ -25,4 +25,4 @@ ht-degree: 6%
 
 {style="table-layout:auto"}
 
-Per ulteriori dettagli sul gruppo di campi, consulta [archivio XDM pubblico](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-quote-request-details.schema.json).
+Per ulteriori dettagli sul gruppo di campi, consulta l&#39;[archivio XDM pubblico](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-quote-request-details.schema.json).

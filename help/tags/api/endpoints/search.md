@@ -4,7 +4,7 @@ description: Scopri come effettuare chiamate all’endpoint /search nell’API d
 exl-id: 14eb8d8a-3b42-42f3-be87-f39e16d616f4
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '652'
 ht-degree: 97%
 
 ---
@@ -36,7 +36,6 @@ L’ambito di tutte le query corrisponde all’azienda corrente e alle propriet�
 >* I metadati non sono ricercabili e non vengono restituiti nei risultati della ricerca.
 >* I campi dello schema per i delegati del pacchetto di estensione (azioni, condizioni, ecc.) sono ricercabili come testo, ma non come struttura di dati nidificata.
 >* Le query di intervallo al momento supportano solo i numeri interi.
-
 
 Per ulteriori informazioni su come utilizzare questa funzionalità, consulta la [guida alla ricerca](../guides/search.md).
 

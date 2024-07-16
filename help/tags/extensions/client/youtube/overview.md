@@ -23,7 +23,7 @@ Per ogni proprietà tag in Adobe Experience Platform, le seguenti estensioni dev
 * Servizio ID visitatore di Experience Cloud
 * Estensione core
 
-Utilizza il [&quot;Incorporare un lettore utilizzando un \&lt;iframe> tag&quot;](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) frammento di codice dai documenti per sviluppatori di Google nel HTML di ogni pagina web in cui deve essere eseguito il rendering di un lettore video.
+Utilizza lo snippet di codice [&quot;Incorpora un lettore utilizzando un tag \&lt;iframe\>&quot;](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) dai documenti per sviluppatori di Google nel HTML di ogni pagina web in cui deve essere eseguito il rendering di un lettore video.
 
 Con la versione 2.0.1 di questa estensione è possibile incorporare uno o più video YouTube in una singola pagina web inserendo un attributo `id` con valore univoco nel tag di script iframe e aggiungendo `enablejsapi=1` e `rel=0` alla fine del valore dell’attributo `src`, se non già incluso. Esempio:
 
@@ -75,18 +75,18 @@ Nell’estensione sono disponibili otto eventi; solo Tracciamento punto di cue p
 Le regole prevedono tre azioni:
 
 * **Imposta variabili:** imposta le variabili Adobe Analytics (mappa tutti o alcuni elementi di dati inclusi).
-* **Invia beacon:** Invia il beacon di Adobe Analytics come chiamata di tracciamento dei collegamenti personalizzata e specifica un valore &quot;Nome collegamento&quot;.
+* **Invia beacon:** Invia il beacon Adobe Analytics come chiamata di tracciamento dei collegamenti personalizzata e specifica un valore &quot;Nome collegamento&quot;.
 * **Cancella variabili:** cancella le variabili Adobe Analytics.
 
 ## Esempio di regola tag per “Video Start”
 
 Devono essere inclusi i seguenti oggetti di estensione video.
 
-* **Eventi**: &quot;Video Start&quot; (questo evento causa l’attivazione della regola quando il visitatore avvia un video YouTube).
+* **Eventi**: &quot;Inizio video&quot; (questo evento causa l&#39;attivazione della regola quando il visitatore avvia un video YouTube).
 
 * **Condizione**: nessuna
 
-* **Azioni**: utilizza **Estensione Analytics** per mappare l’azione &quot;Imposta variabili&quot;:
+* **Azioni**: utilizza l&#39;estensione **Analytics** per impostare le variabili, per mappare:
 
    * l’evento per Inizio video;
    * una prop/eVar per l’elemento dati Durata video;
@@ -94,7 +94,7 @@ Devono essere inclusi i seguenti oggetti di estensione video.
    * un prop/eVar per l’elemento dati Nome video;
    * una prop/eVar per l’elemento dati URL video.
 
-  Quindi, includi l’azione &quot;Invia beacon&quot; (`s.tl`) con il nome del collegamento &quot;video start&quot;, seguito dall&#39;azione &quot;Cancella variabili&quot;.
+  Quindi, includere l&#39;azione &quot;Invia beacon&quot; (`s.tl`) con il nome del collegamento &quot;video start&quot;, seguita dall&#39;azione &quot;Cancella variabili&quot;.
 
 >[!TIP]
 > 
@@ -114,4 +114,4 @@ r.push(_satellite.getVar('Extension Version'));
 return r.join('|');
 ```
 
-Per ulteriori informazioni su come creare e sfruttare in modo efficace gli elementi dati in Platform, leggi [elementi dati](../../../ui/managing-resources/data-elements.md) documentazione.
+Per ulteriori informazioni su come creare e sfruttare efficacemente gli elementi dati in Platform, consulta la documentazione di [elementi dati](../../../ui/managing-resources/data-elements.md).

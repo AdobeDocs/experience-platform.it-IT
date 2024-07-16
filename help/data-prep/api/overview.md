@@ -14,20 +14,20 @@ ht-degree: 1%
 
 La preparazione dati consente ai data engineer di mappare, trasformare e convalidare i dati da e verso Experience Data Model (XDM). La preparazione dati viene visualizzata come un passaggio &quot;Mappa&quot; nei processi di acquisizione dati, incluso il flusso di lavoro di acquisizione CSV.
 
-L’API del servizio di mappatura, nota anche come API della preparazione dati, include più endpoint descritti di seguito. Per informazioni dettagliate, consulta le guide dei singoli endpoint e fai riferimento a [guida introduttiva](./getting-started.md) per informazioni importanti sulle intestazioni richieste, leggi le chiamate API di esempio e altro ancora.
+L’API del servizio di mappatura, nota anche come API della preparazione dati, include più endpoint descritti di seguito. Per informazioni dettagliate, consulta le guide dei singoli endpoint e fai riferimento alla [guida introduttiva](./getting-started.md) per informazioni importanti sulle intestazioni richieste, sulla lettura delle chiamate API di esempio e altro ancora.
 
 ## Funzioni
 
-Le funzioni di mappatura consentono di trasformare i dati tra gli schemi di origine e di destinazione. È possibile utilizzare `/languages/el` endpoint per convalidare le espressioni e ottenere un elenco di tutte le funzioni e le operazioni del set di mappatura disponibili.
+Le funzioni di mappatura consentono di trasformare i dati tra gli schemi di origine e di destinazione. È possibile utilizzare l&#39;endpoint `/languages/el` per convalidare le espressioni e ottenere un elenco di tutte le funzioni e le operazioni del set di mappatura disponibili.
 
-Per informazioni dettagliate su come utilizzare le funzioni per set di mappatura, leggere [guida dell’endpoint &quot;functions&quot;](./functions.md).
+Per informazioni dettagliate su come utilizzare le funzioni di set di mappatura, leggere la [guida dell&#39;endpoint delle funzioni](./functions.md).
 
 ## Set di mappatura
 
-I set di mappatura possono essere utilizzati per definire il modo in cui i dati in uno schema di origine vengono mappati a quelli di uno schema di destinazione. È possibile utilizzare `/mappingSets` nell’API della preparazione dati per recuperare, creare, aggiornare e convalidare in modo programmatico i set di mappatura.
+I set di mappatura possono essere utilizzati per definire il modo in cui i dati in uno schema di origine vengono mappati a quelli di uno schema di destinazione. È possibile utilizzare l&#39;endpoint `/mappingSets` nell&#39;API di preparazione dati per recuperare, creare, aggiornare e convalidare a livello di programmazione i set di mappatura.
 
-Per informazioni dettagliate su come utilizzare i set di mappatura, leggi [guida dell’endpoint del set di mappatura](./mapping-set.md).
+Per informazioni dettagliate su come utilizzare i set di mappatura, leggere la [guida dell&#39;endpoint del set di mappatura](./mapping-set.md).
 
 ## Passaggi successivi
 
-Per iniziare a effettuare chiamate utilizzando l’API del servizio di mappatura, leggi la [guida introduttiva](./getting-started.md) quindi seleziona una delle guide degli endpoint per scoprire come utilizzare gli endpoint specifici.
+Per iniziare a effettuare chiamate utilizzando l&#39;API del servizio di mappatura, leggi la [guida introduttiva](./getting-started.md), quindi seleziona una delle guide dell&#39;endpoint per scoprire come utilizzare gli endpoint specifici.

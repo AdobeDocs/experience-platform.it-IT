@@ -13,9 +13,9 @@ ht-degree: 0%
 
 # Guida alla risoluzione dei problemi di Identity Service
 
-Questo documento fornisce le risposte alle domande più frequenti su Adobe Experience Platform [!DNL Identity Service], nonché una guida alla risoluzione dei problemi relativi agli errori più comuni. Per domande e risoluzione dei problemi relativi a [!DNL Platform] API in generale, consulta [Guida alla risoluzione dei problemi API di Adobe Experience Platform](../landing/troubleshooting.md).
+Questo documento contiene le risposte alle domande frequenti su Adobe Experience Platform [!DNL Identity Service] e una guida alla risoluzione dei problemi relativi agli errori più comuni. Per domande e risoluzione dei problemi relativi alle API [!DNL Platform] in generale, consulta la [guida alla risoluzione dei problemi API di Adobe Experience Platform](../landing/troubleshooting.md).
 
-I dati che identificano un singolo cliente sono spesso frammentati tra i vari dispositivi e sistemi utilizzati per interagire con il tuo marchio. [!DNL Identity Service] riunisce queste identità frammentate, facilitando una comprensione completa del comportamento dei clienti in modo da poter fornire esperienze digitali di impatto in tempo reale. Per ulteriori informazioni, vedere [Panoramica del servizio Identity](./home.md).
+I dati che identificano un singolo cliente sono spesso frammentati tra i vari dispositivi e sistemi utilizzati per interagire con il tuo marchio. [!DNL Identity Service] riunisce queste identità frammentate, facilitando una comprensione completa del comportamento del cliente in modo da poter fornire esperienze digitali di impatto in tempo reale. Per ulteriori informazioni, consulta [Panoramica del servizio Identity](./home.md).
 
 ## Domande frequenti
 
@@ -27,7 +27,7 @@ I dati di identità sono tutti i dati che possono essere utilizzati per identifi
 
 ## Qual è il vantaggio di etichettare i campi di dati come identità?
 
-Etichettare alcuni campi di dati come identità nei dati di record e serie temporali consente di mappare le relazioni di identità all’interno della struttura naturale dei dati e riconciliare i dati duplicati tra canali diversi. Consulta la [Panoramica del servizio Identity](./home.md) per ulteriori informazioni.
+Etichettare alcuni campi di dati come identità nei dati di record e serie temporali consente di mappare le relazioni di identità all’interno della struttura naturale dei dati e riconciliare i dati duplicati tra canali diversi. Per ulteriori informazioni, consulta [Panoramica del servizio Identity](./home.md).
 
 ## Cosa sono le identità note e anonime?
 
@@ -39,13 +39,13 @@ Un’identità anonima si riferisce a un valore di identità che non può essere
 
 Un grafo di identità privata è una mappa privata delle relazioni tra identità collegate e unite, visibile solo all’organizzazione.
 
-Quando più identità sono incluse in un dato acquisito da un endpoint di streaming o inviate a un set di dati abilitato per [!DNL Identity Service], queste identità sono collegate nel grafo delle identità private. [!DNL Identity Service] sfrutta questo grafico per ottenere le identità per un dato consumatore o entità, consentendo l’unione di identità e profili.
+Quando più identità sono incluse in qualsiasi dato acquisito da un endpoint di streaming o inviato a un set di dati abilitato per [!DNL Identity Service], tali identità sono collegate nel grafo delle identità private. [!DNL Identity Service] sfrutta questo grafico per ottenere le identità per un determinato consumatore o entità, consentendo l&#39;unione di identità e profili.
 
 ## Come si creano più campi di identità in uno schema XDM?
 
-[Experience Data Model (XDM)](../xdm/home.md) gli schemi supportano più campi di identità. Qualsiasi campo di dati di tipo `string` all’interno di uno schema che implementa la classe XDM Individual Profile o XDM ExperienceEvent può essere etichettato come campo di identità. Una volta etichettati, tutti i dati contenuti in questi campi vengono aggiunti alla mappa di identità del profilo.
+Gli schemi [Experience Data Model (XDM)](../xdm/home.md) supportano più campi di identità. Qualsiasi campo dati di tipo `string` all&#39;interno di uno schema che implementa la classe XDM Individual Profile o XDM ExperienceEvent può essere etichettato come campo di identità. Una volta etichettati, tutti i dati contenuti in questi campi vengono aggiunti alla mappa di identità del profilo.
 
-Per i passaggi su come etichettare un campo XDM come campo di identità utilizzando l’interfaccia utente, consulta la sezione [Sezione identità](../xdm/tutorials/create-schema-ui.md) nell’esercitazione sull’Editor di schema. Se utilizzi l’API, consulta [Sezione del descrittore di identità](../xdm/tutorials/create-schema-api.md) nell’esercitazione API del registro dello schema.
+Per i passaggi su come etichettare un campo XDM come campo di identità tramite l&#39;interfaccia utente, vedi la [sezione Identità](../xdm/tutorials/create-schema-ui.md) nell&#39;esercitazione dell&#39;Editor di schema. Se utilizzi l&#39;API, consulta la [sezione del descrittore di identità](../xdm/tutorials/create-schema-api.md) nell&#39;esercitazione sull&#39;API del registro degli schemi.
 
 ## Esistono contesti in cui alcuni campi non devono essere etichettati come identità?
 
@@ -55,41 +55,41 @@ Campi come i codici postali e gli indirizzi IP non devono essere etichettati com
 
 ## Perché i campi di identità non collegano come previsto?
 
-Utilizzo di [`/cluster/members` endpoint](./api/list-cluster-identites.md) nell’API del servizio Identity, puoi visualizzare le identità associate a uno o più campi di identità. Se la risposta non restituisce le identità collegate previste, assicurati di fornire le informazioni di identità appropriate nei dati XDM. Consulta la sezione su [fornitura di dati XDM al servizio Identity](./home.md) nella panoramica del servizio Identity per ulteriori informazioni.
+Utilizzando l&#39;endpoint [`/cluster/members`](./api/list-cluster-identites.md) nell&#39;API del servizio Identity, è possibile visualizzare le identità associate per uno o più campi di identità. Se la risposta non restituisce le identità collegate previste, assicurati di fornire le informazioni di identità appropriate nei dati XDM. Per ulteriori informazioni, consulta la sezione relativa alla [fornitura di dati XDM al servizio Identity](./home.md) nella panoramica del servizio Identity.
 
 ## Che cos’è uno spazio dei nomi delle identità?
 
-Uno spazio dei nomi delle identità fornisce contesto per il modo in cui i campi di identità si relazionano all’identità di un cliente. Ad esempio, i campi di identità nello spazio dei nomi &quot;E-mail&quot; devono essere conformi a un formato e-mail standard (nome<span>@emailprovider.com) i campi che utilizzano lo spazio dei nomi &quot;Telefono&quot; devono essere conformi a un numero di telefono standard (come 987-555-1234 in Nord America).
+Uno spazio dei nomi delle identità fornisce contesto per il modo in cui i campi di identità si relazionano all’identità di un cliente. Ad esempio, i campi di identità nello spazio dei nomi &quot;E-mail&quot; devono essere conformi a un formato e-mail standard (nome<span>@emailprovider.com), mentre i campi che utilizzano lo spazio dei nomi &quot;Telefono&quot; devono essere conformi a un numero di telefono standard (ad esempio 987-555-1234 in Nord America).
 
 Gli spazi dei nomi distinguono valori di identità simili tra sistemi di gestione delle relazioni con i clienti diversi. Ad esempio, considera un profilo che contiene un ID fedeltà numerico associato al programma di premi della tua azienda. Uno spazio dei nomi di &quot;Fedeltà&quot; separerebbe questo valore da un ID numerico simile per il sistema di eCommerce che appare anche nello stesso profilo.
 
-Consulta la [panoramica dello spazio dei nomi delle identità](./home.md) per ulteriori informazioni.
+Per ulteriori informazioni, consulta la [panoramica dello spazio dei nomi delle identità](./home.md).
 
 ## Come si associa un’identità a uno spazio dei nomi delle identità?
 
-I campi di identità devono essere associati a uno spazio dei nomi di identità esistente al momento della creazione. Eventuali nuovi spazi dei nomi devono essere [creato utilizzando l’API](#how-do-i-create-a-custom-namespace-for-my-organization) prima di associarli ai campi di identità.
+I campi di identità devono essere associati a uno spazio dei nomi di identità esistente al momento della creazione. Qualsiasi nuovo spazio dei nomi deve essere [creato utilizzando l&#39;API](#how-do-i-create-a-custom-namespace-for-my-organization) prima di associarlo ai campi di identità.
 
-Per istruzioni dettagliate sulla definizione di uno spazio dei nomi durante la creazione di un descrittore di identità tramite l’API, consulta la sezione su [creazione di un descrittore](../xdm/tutorials/create-schema-ui.md) nella guida per gli sviluppatori del registro dello schema. Per contrassegnare un campo schema come identità nell’interfaccia utente, segui i passaggi descritti in [Esercitazione sull’editor di schemi](../xdm/tutorials/create-schema-api.md).
+Per istruzioni dettagliate sulla definizione di uno spazio dei nomi durante la creazione di un descrittore di identità tramite l&#39;API, consulta la sezione [creazione di un descrittore](../xdm/tutorials/create-schema-ui.md) nella guida per gli sviluppatori del registro dello schema. Per contrassegnare un campo schema come identità nell&#39;interfaccia utente, seguire i passaggi descritti nell&#39;esercitazione [Editor schema](../xdm/tutorials/create-schema-api.md).
 
-## Quali sono gli spazi dei nomi di identità standard forniti da Experienci Platform? {#standard-namespaces}
+## Quali sono gli spazi dei nomi di identità standard forniti da Experience Platform? {#standard-namespaces}
 
-Gli spazi dei nomi di identità standard sono spazi dei nomi disponibili per tutte le organizzazioni. Consulta la [Panoramica sugli spazi dei nomi delle identità](./features/namespaces.md) per un elenco completo degli spazi dei nomi standard disponibili.
+Gli spazi dei nomi di identità standard sono spazi dei nomi disponibili per tutte le organizzazioni. Per un elenco completo degli spazi dei nomi standard disponibili, consulta la [Panoramica sugli spazi dei nomi delle identità](./features/namespaces.md).
 
 ## Dove posso trovare l’elenco degli spazi dei nomi di identità disponibili per la mia organizzazione?
 
-Utilizzo di [API del servizio Identity](https://www.adobe.io/experience-platform-apis/references/identity-service), puoi elencare tutti gli spazi dei nomi di identità disponibili per la tua organizzazione effettuando una richiesta GET al `/idnamespace/identities` endpoint. Consulta la sezione su [elenco degli spazi dei nomi disponibili](./api/list-namespaces.md) per ulteriori informazioni, consulta la panoramica dell’API del servizio Identity.
+Utilizzando l&#39;API [Identity Service](https://www.adobe.io/experience-platform-apis/references/identity-service), puoi elencare tutti gli spazi dei nomi di identità disponibili per la tua organizzazione effettuando una richiesta di GET all&#39;endpoint `/idnamespace/identities`. Per ulteriori informazioni, consulta la sezione su [elenco degli spazi dei nomi disponibili](./api/list-namespaces.md) nella panoramica dell&#39;API del servizio Identity.
 
 ## Come si crea uno spazio dei nomi personalizzato per l’organizzazione?
 
-Utilizzo di [API del servizio Identity](https://www.adobe.io/experience-platform-apis/references/identity-service), puoi creare uno spazio dei nomi di identità personalizzato per la tua organizzazione effettuando una richiesta POST al `/idnamespace/identities` endpoint. Consulta la sezione su [creazione di uno spazio dei nomi personalizzato](./api/create-custom-namespace.md) per ulteriori informazioni, consulta la panoramica dell’API del servizio Identity.
+Utilizzando l&#39;API [Identity Service](https://www.adobe.io/experience-platform-apis/references/identity-service), puoi creare uno spazio dei nomi di identità personalizzato per la tua organizzazione effettuando una richiesta POST all&#39;endpoint `/idnamespace/identities`. Per ulteriori informazioni, consulta la sezione sulla [creazione di uno spazio dei nomi personalizzato](./api/create-custom-namespace.md) nella panoramica dell&#39;API del servizio Identity.
 
 ## Cosa sono le identità composite e gli XID?
 
-Nelle chiamate API viene fatto riferimento alle identità tramite l’identità composita o XID. Un’identità composita è una rappresentazione di un’identità che contiene un valore ID e uno spazio dei nomi. Un XID è un identificatore a valore singolo che rappresenta lo stesso costrutto di un’identità composita (un ID e uno spazio dei nomi) e viene assegnato automaticamente alle nuove identità quando viene mantenuto da Identity Service. Consulta la [Panoramica API del servizio Identity](./home.md) per ulteriori informazioni.
+Nelle chiamate API viene fatto riferimento alle identità tramite l’identità composita o XID. Un’identità composita è una rappresentazione di un’identità che contiene un valore ID e uno spazio dei nomi. Un XID è un identificatore a valore singolo che rappresenta lo stesso costrutto di un’identità composita (un ID e uno spazio dei nomi) e viene assegnato automaticamente alle nuove identità quando viene mantenuto da Identity Service. Per ulteriori informazioni, consulta la [Panoramica API del servizio Identity](./home.md).
 
 ## In che modo il servizio Identity gestisce le informazioni personali (PII, personally identifiable information)?
 
-Identity Service dispone di spazi dei nomi standard per supportare l’acquisizione di valori di identità con hash per numeri di telefono e e-mail. Tuttavia, sei responsabile dell’hashing dei valori. Per ulteriori informazioni sull’hashing dei dati acquisiti in Platform, consulta [[!DNL Data Prep] guida alle funzioni di mappatura](../data-prep/functions.md#hashing).
+Identity Service dispone di spazi dei nomi standard per supportare l’acquisizione di valori di identità con hash per numeri di telefono e e-mail. Tuttavia, sei responsabile dell’hashing dei valori. Per ulteriori informazioni sull&#39;hashing dei dati acquisiti in Platform, consulta la [[!DNL Data Prep] guida alle funzioni di mappatura](../data-prep/functions.md#hashing).
 
 ## Ci sono considerazioni quando si esegue l’hashing di identità basate su PII?
 
@@ -115,15 +115,15 @@ Internal solutions|Preferred|Common
 
 ## Perché non posso accedere alla pagina o alle API del grafo delle identità?
 
-L’amministratore di Platform deve effettuare il provisioning con `view-identity-graph` per visualizzare i dati del grafico delle identità. Senza questa autorizzazione, riceverai un messaggio di autorizzazione negata nella pagina del visualizzatore del grafico delle identità e quando chiami le API di Platform. Consulta la [panoramica sul controllo degli accessi](../access-control/home.md) per ulteriori informazioni sulle autorizzazioni.
+L&#39;amministratore di Platform deve fornire l&#39;autorizzazione `view-identity-graph` per poter visualizzare i dati del grafico delle identità. Senza questa autorizzazione, riceverai un messaggio di autorizzazione negata nella pagina del visualizzatore del grafico delle identità e quando chiami le API di Platform. Per ulteriori informazioni sulle autorizzazioni, vedere la [panoramica sul controllo degli accessi](../access-control/home.md).
 
 ## Risoluzione dei problemi
 
-La sezione seguente fornisce suggerimenti per la risoluzione dei problemi relativi a codici di errore specifici e a comportamenti imprevisti che potrebbero verificarsi durante l&#39;utilizzo di [!DNL Identity Service] API.
+Nella sezione seguente vengono forniti suggerimenti per la risoluzione dei problemi relativi a codici di errore specifici e a possibili comportamenti imprevisti durante l&#39;utilizzo dell&#39;API [!DNL Identity Service].
 
 ## [!DNL Identity Service] messaggi di errore
 
-Di seguito è riportato un elenco di messaggi di errore che è possibile visualizzare quando si utilizza [!DNL Identity Service] API.
+Di seguito è riportato un elenco di messaggi di errore che è possibile visualizzare quando si utilizza l&#39;API [!DNL Identity Service].
 
 ### Parametro di query richiesto mancante
 
@@ -167,7 +167,7 @@ Prima di riprovare, verifica di includere correttamente il parametro indicato ne
 }
 ```
 
-Questo messaggio di errore viene visualizzato quando si tenta di recuperare informazioni di identità per un numero di elementi superiore al numero massimo consentito di [XID](#what-are-composite-identities-and-xids) consentito in una singola chiamata API. Per risolvere il problema, riduci il numero di XID nella richiesta a meno del limite visualizzato.
+Questo messaggio di errore viene visualizzato quando si tenta di recuperare informazioni di identità per un numero di [XIDs](#what-are-composite-identities-and-xids) superiore al numero massimo consentito in una singola chiamata API. Per risolvere il problema, riduci il numero di XID nella richiesta a meno del limite visualizzato.
 
 
 ### Una singola chiamata ha un limite di 1000 compositeXids
@@ -180,7 +180,7 @@ Questo messaggio di errore viene visualizzato quando si tenta di recuperare info
 }
 ```
 
-Questo messaggio di errore viene visualizzato quando si tenta di recuperare informazioni di identità per un numero di elementi superiore al numero massimo consentito di [identità composite](#what-are-composite-identities-and-xids) consentito in una singola chiamata API. Per risolvere il problema, riduci il numero di identità composite nella richiesta a meno del limite visualizzato.
+Questo messaggio di errore viene visualizzato quando si tenta di recuperare informazioni di identità per un numero di identità composite superiore al numero massimo di [identità composite](#what-are-composite-identities-and-xids) consentito in una singola chiamata API. Per risolvere il problema, riduci il numero di identità composite nella richiesta a meno del limite visualizzato.
 
 ### Il tipo di grafico specificato non è valido
 
@@ -192,7 +192,7 @@ Questo messaggio di errore viene visualizzato quando si tenta di recuperare info
 }
 ```
 
-Questo messaggio di errore viene visualizzato quando `graph-type` al parametro query viene assegnato un valore non valido nel percorso della richiesta. Consulta la sezione su [grafi di identità](./home.md) nel [!DNL Identity Service] panoramica per scoprire quali tipi di grafo sono supportati.
+Questo messaggio di errore viene visualizzato quando a un parametro di query `graph-type` viene assegnato un valore non valido nel percorso della richiesta. Per informazioni sui tipi di grafo supportati, consulta la sezione sui [grafi di identità](./home.md) nella panoramica di [!DNL Identity Service].
 
 ### Il token di servizio non dispone di un ambito valido
 
@@ -204,7 +204,7 @@ Questo messaggio di errore viene visualizzato quando `graph-type` al parametro q
 }
 ```
 
-Questo messaggio di errore viene visualizzato quando all’organizzazione non sono state assegnate le autorizzazioni appropriate per [!DNL Identity Service]. Per risolvere il problema, contatta l’amministratore di sistema.
+Questo messaggio di errore viene visualizzato quando all&#39;organizzazione non sono state assegnate le autorizzazioni appropriate per [!DNL Identity Service]. Per risolvere il problema, contatta l’amministratore di sistema.
 
 ### Token del servizio gateway non valido
 
@@ -216,7 +216,7 @@ Questo messaggio di errore viene visualizzato quando all’organizzazione non so
 }
 ```
 
-In caso di errore, il token di accesso non è valido. I token di accesso scadono ogni 24 ore e devono essere rigenerati per continuare a utilizzare [!DNL Platform] API. Consulta la [tutorial sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en) per istruzioni sulla generazione di nuovi token di accesso.
+In caso di errore, il token di accesso non è valido. I token di accesso scadono ogni 24 ore e devono essere rigenerati per continuare a utilizzare le API [!DNL Platform]. Per istruzioni sulla generazione di nuovi token di accesso, consulta l&#39;[esercitazione sull&#39;autenticazione](https://www.adobe.com/go/platform-api-authentication-en).
 
 ### Token del servizio di autorizzazione non valido
 
@@ -228,7 +228,7 @@ In caso di errore, il token di accesso non è valido. I token di accesso scadono
 }
 ```
 
-In caso di errore, il token di accesso non è valido. I token di accesso scadono ogni 24 ore e devono essere rigenerati per continuare a utilizzare [!DNL Platform] API. Consulta la [tutorial sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en) per istruzioni sulla generazione di nuovi token di accesso.
+In caso di errore, il token di accesso non è valido. I token di accesso scadono ogni 24 ore e devono essere rigenerati per continuare a utilizzare le API [!DNL Platform]. Per istruzioni sulla generazione di nuovi token di accesso, consulta l&#39;[esercitazione sull&#39;autenticazione](https://www.adobe.com/go/platform-api-authentication-en).
 
 ### Il token utente non dispone di un contesto di prodotto valido
 
@@ -240,7 +240,7 @@ In caso di errore, il token di accesso non è valido. I token di accesso scadono
 }
 ```
 
-Questo messaggio di errore viene visualizzato quando il token di accesso non è stato generato da un [!DNL Experience Platform] integrazione. Consulta la [tutorial sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en) per istruzioni sulla generazione di nuovi token di accesso per un [!DNL Experience Platform] integrazione.
+Questo messaggio di errore viene visualizzato quando il token di accesso non è stato generato da un&#39;integrazione [!DNL Experience Platform]. Per istruzioni sulla generazione di nuovi token di accesso per un&#39;integrazione [!DNL Experience Platform], vedere il [tutorial di autenticazione](https://www.adobe.com/go/platform-api-authentication-en).
 
 ### Errore interno nell’ottenere XID nativo dal codice di identità e spazio dei nomi
 
@@ -252,9 +252,9 @@ Questo messaggio di errore viene visualizzato quando il token di accesso non è 
 }
 ```
 
-Quando [!DNL Identity Service] persiste un’identità, all’ID dell’identità e all’ID dello spazio dei nomi associato viene assegnato un identificatore univoco denominato XID. Questo messaggio viene visualizzato quando si verifica un errore durante il processo di ricerca dell’XID per un determinato valore ID e spazio dei nomi.
+Quando [!DNL Identity Service] persiste un&#39;identità, all&#39;ID dell&#39;identità e all&#39;ID dello spazio dei nomi associato viene assegnato un identificatore univoco denominato XID. Questo messaggio viene visualizzato quando si verifica un errore durante il processo di ricerca dell’XID per un determinato valore ID e spazio dei nomi.
 
-### Non è stato eseguito il provisioning per l’organizzazione IMS [!DNL Identity Service] utilizzo
+### Non è stato eseguito il provisioning per l’organizzazione IMS per l’utilizzo [!DNL Identity Service]
 
 ```json
 {
@@ -264,7 +264,7 @@ Quando [!DNL Identity Service] persiste un’identità, all’ID dell’identit�
 }
 ```
 
-Questo messaggio di errore viene visualizzato quando all’organizzazione non sono state assegnate le autorizzazioni appropriate per [!DNL Identity Service]. Per risolvere il problema, contatta l’amministratore di sistema.
+Questo messaggio di errore viene visualizzato quando all&#39;organizzazione non sono state assegnate le autorizzazioni appropriate per [!DNL Identity Service]. Per risolvere il problema, contatta l’amministratore di sistema.
 
 ### Errore interno del server
 
@@ -276,13 +276,13 @@ Questo messaggio di errore viene visualizzato quando all’organizzazione non so
 }
 ```
 
-Questo errore viene visualizzato quando si verifica un&#39;eccezione imprevista nell&#39;esecuzione di un [!DNL Platform] chiamata del servizio. Si consiglia di programmare le chiamate automatizzate in modo da ritentare le richieste più volte a intervalli temporizzati quando si riceve questo errore. Se il problema persiste, contattare l&#39;amministratore di sistema.
+Questo errore viene visualizzato quando si verifica un&#39;eccezione imprevista nell&#39;esecuzione di una chiamata del servizio [!DNL Platform]. Si consiglia di programmare le chiamate automatizzate in modo da ritentare le richieste più volte a intervalli temporizzati quando si riceve questo errore. Se il problema persiste, contattare l&#39;amministratore di sistema.
 
 ## Codici di errore di acquisizione batch
 
-[!DNL Identity Service] acquisisce i dati di identità dai dati di record e serie temporali caricati in [!DNL Platform] utilizzo dell’acquisizione in batch. Poiché l’acquisizione batch è un processo asincrono, è necessario visualizzare i dettagli di un batch per visualizzare gli errori. Gli errori si accumulano con l’avanzamento del batch fino al suo completamento.
+[!DNL Identity Service] acquisisce i dati di identità dai dati di record e serie temporali caricati in [!DNL Platform] mediante acquisizione in batch. Poiché l’acquisizione batch è un processo asincrono, è necessario visualizzare i dettagli di un batch per visualizzare gli errori. Gli errori si accumulano con l’avanzamento del batch fino al suo completamento.
 
-Di seguito è riportato un elenco di messaggi di errore relativi a [!DNL Identity Service] è possibile che si verifichino problemi durante l’utilizzo di [API di acquisizione in batch](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/).
+Di seguito è riportato un elenco di messaggi di errore relativi a [!DNL Identity Service] che è possibile incontrare quando si utilizza l&#39;[API di acquisizione batch](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/).
 
 ### Schema XDM sconosciuto
 
@@ -294,7 +294,7 @@ Di seguito è riportato un elenco di messaggi di errore relativi a [!DNL Identit
 }
 ```
 
-[!DNL Identity Service] utilizza le identità solo per i dati di record o serie temporali conformi al [!DNL Profile] o [!DNL ExperienceEvent] classi. Tentativo di acquisire dati per [!DNL Identity Service] se non aderisce a nessuna delle due classi, verrà attivato questo errore.
+[!DNL Identity Service] utilizza le identità solo per i dati di record o serie temporali conformi rispettivamente alle classi [!DNL Profile] o [!DNL ExperienceEvent]. Il tentativo di acquisire i dati per [!DNL Identity Service] che non aderisce a nessuna delle due classi attiverà questo errore.
 
 ### Nelle prime 100 righe del batch elaborato erano presenti 0 identità valide
 
@@ -342,7 +342,7 @@ Questo errore viene visualizzato quando un record acquisito presenta un’identi
 }
 ```
 
-Quando si acquisiscono dati batch, questo messaggio di errore viene visualizzato se all’organizzazione non sono state assegnate le autorizzazioni appropriate per [!DNL Identity Service]. Per risolvere il problema, contatta l’amministratore di sistema.
+Durante l&#39;acquisizione dei dati batch, questo messaggio di errore viene visualizzato quando all&#39;organizzazione non sono state assegnate le autorizzazioni appropriate per [!DNL Identity Service]. Per risolvere il problema, contatta l’amministratore di sistema.
 
 ### Errore interno
 

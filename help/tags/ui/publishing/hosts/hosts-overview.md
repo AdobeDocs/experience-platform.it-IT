@@ -26,4 +26,4 @@ Per informazioni dettagliate su ciascun tipo di host, utilizza i collegamenti ri
 
 Lo stesso host può essere utilizzato per più ambienti all&#39;interno di una proprietà.
 
-Per ulteriori informazioni sulla scelta tra hosting autonomo e hosting gestito da Adobe, consulta la sezione [guida all’hosting autonomo](./self-hosting-libraries.md).
+Per ulteriori informazioni sulla scelta tra hosting autonomo e hosting gestito da Adobe, consulta la [guida all&#39;hosting autonomo](./self-hosting-libraries.md).

@@ -36,4 +36,4 @@ ht-degree: 33%
    * [Abilitare un set di dati per gli aggiornamenti del profilo (upsert)](datasets/enable-upsert.md)
 * [Elaborazione della richiesta di accesso a dati personali nel Data Lake](privacy.md)
 * [Riferimento API](https://www.adobe.io/experience-platform-apis/references/catalog/)
-* [Note sulla versione della piattaforma](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Note sulla versione della piattaforma](https://experienceleague.adobe.com/it/docs/experience-platform/release-notes/latest)

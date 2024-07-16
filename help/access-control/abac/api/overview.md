@@ -20,22 +20,22 @@ L’API di controllo dell’accesso basata su attributi viene utilizzata per acc
 
 >[!IMPORTANT]
 >
->Il controllo dell’accesso basato su attributi non deve essere confuso con le funzionalità di governance dei dati di Experienci Platform, che consentono di utilizzare etichette e criteri per controllare il modo in cui i dati vengono utilizzati in Platform, anziché gli utenti dell’organizzazione che vi hanno accesso. Consulta la [Guida API del servizio criteri](../../../data-governance/api/overview.md) per i passaggi su come sfruttare in modo programmatico queste funzionalità.
+>Il controllo dell’accesso basato su attributi non deve essere confuso con le funzionalità di governance dei dati di Experience Platform, che consentono di utilizzare etichette e criteri per controllare il modo in cui i dati vengono utilizzati in Platform, anziché gli utenti dell’organizzazione che vi hanno accesso. Consulta la [Guida API del servizio criteri](../../../data-governance/api/overview.md) per informazioni su come sfruttare queste funzionalità a livello di programmazione.
 
-Questi endpoint sono descritti di seguito. Per informazioni dettagliate, consulta le guide dei singoli endpoint e fai riferimento a [guida introduttiva](./getting-started.md) per informazioni importanti sulle intestazioni richieste, leggi le chiamate API di esempio e altro ancora.
+Questi endpoint sono descritti di seguito. Per informazioni dettagliate, consulta le guide dei singoli endpoint e fai riferimento alla [guida introduttiva](./getting-started.md) per informazioni importanti sulle intestazioni richieste, sulla lettura delle chiamate API di esempio e altro ancora.
 
 ## Ruoli
 
-I ruoli definiscono l’accesso di un amministratore, uno specialista o un utente finale alle risorse della tua organizzazione. In un ambiente di controllo degli accessi basato su ruoli, il provisioning degli accessi utente è raggruppato in base a responsabilità e esigenze comuni. Un ruolo dispone di un determinato set di autorizzazioni e i membri dell’organizzazione possono essere assegnati a uno o più ruoli, a seconda dell’ambito di visualizzazione o dell’accesso in scrittura di cui hanno bisogno. Consulta la [guida dell’endpoint &quot;roles&quot;](./roles.md) per ulteriori informazioni sull’utilizzo dei ruoli nell’API.
+I ruoli definiscono l’accesso di un amministratore, uno specialista o un utente finale alle risorse della tua organizzazione. In un ambiente di controllo degli accessi basato su ruoli, il provisioning degli accessi utente è raggruppato in base a responsabilità e esigenze comuni. Un ruolo dispone di un determinato set di autorizzazioni e i membri dell’organizzazione possono essere assegnati a uno o più ruoli, a seconda dell’ambito di visualizzazione o dell’accesso in scrittura di cui hanno bisogno. Per ulteriori informazioni sull&#39;utilizzo dei ruoli nell&#39;API, consulta la guida dell&#39;endpoint [roles](./roles.md).
 
 ## Criteri
 
-I criteri sono dichiarazioni che riuniscono alcuni attributi al fine di definire azioni ammissibili e non ammissibili. I criteri possono essere locali o globali e possono ignorare altri criteri. Il `/policies` l’endpoint ti consente di gestire in modo programmatico i criteri dell’organizzazione. Consulta la [guida dell’endpoint &quot;policies&quot;](./policies.md) per ulteriori informazioni sull’utilizzo dei criteri nell’API.
+I criteri sono dichiarazioni che riuniscono alcuni attributi al fine di definire azioni ammissibili e non ammissibili. I criteri possono essere locali o globali e possono ignorare altri criteri. L&#39;endpoint `/policies` consente di gestire in modo programmatico i criteri dell&#39;organizzazione. Per ulteriori informazioni sull&#39;utilizzo dei criteri nell&#39;API, consulta la [guida dell&#39;endpoint &quot;policies&quot;](./policies.md).
 
 ## Prodotti
 
-Il `/products` L’endpoint nell’API di controllo degli accessi basata su attributi consente di gestire in modo programmatico prodotti, categorie di autorizzazioni e set di autorizzazioni associati ai prodotti dell’organizzazione. Consulta la [guida dell’endpoint &quot;products&quot;](./products.md) per ulteriori informazioni sull’utilizzo dei prodotti e delle categorie e dei set di autorizzazioni corrispondenti nell’API.
+L&#39;endpoint `/products` nell&#39;API di controllo degli accessi basata su attributi consente di gestire in modo programmatico prodotti, categorie di autorizzazioni e set di autorizzazioni associati ai prodotti dell&#39;organizzazione. Per ulteriori informazioni sull&#39;utilizzo dei prodotti e delle categorie di autorizzazioni e dei set di autorizzazioni corrispondenti nell&#39;API, consulta la [guida dell&#39;endpoint &quot;products&quot;](./products.md).
 
 ## Passaggi successivi
 
-Per iniziare a effettuare chiamate utilizzando l’API di controllo degli accessi basata su attributi, leggi [guida introduttiva](./getting-started.md) quindi seleziona una delle guide degli endpoint per scoprire come utilizzare endpoint specifici.
+Per iniziare a effettuare chiamate utilizzando l&#39;API di controllo degli accessi basata su attributi, leggere la [guida introduttiva](./getting-started.md), quindi selezionare una delle guide degli endpoint per informazioni su come utilizzare endpoint specifici.

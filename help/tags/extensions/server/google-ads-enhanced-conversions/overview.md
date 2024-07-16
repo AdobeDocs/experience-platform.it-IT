@@ -5,114 +5,113 @@ exl-id: 65cdff40-276f-4481-9621-6c6861dbd412
 last-substantial-update: 2022-11-23T00:00:00Z
 source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
 workflow-type: tm+mt
-source-wordcount: '1311'
+source-wordcount: '1296'
 ht-degree: 1%
 
 ---
 
-# [!DNL Google Ads] Estensione Conversioni avanzate
+# Estensione per conversioni avanzate di [!DNL Google Ads]
 
-Utilizzo di [!DNL Google Ads] API, puoi sfruttare [conversioni avanzate](https://support.google.com/google-ads/answer/9888656) inviando i dati dei clienti di prime parti sotto forma di adeguamenti di conversione. Google utilizza questi dati aggiuntivi per migliorare il reporting delle conversioni online guidate dalle interazioni con annunci.
+Utilizzando l&#39;API [!DNL Google Ads], puoi sfruttare [le conversioni migliorate](https://support.google.com/google-ads/answer/9888656) inviando dati dei clienti di prime parti sotto forma di regolazioni della conversione. Google utilizza questi dati aggiuntivi per migliorare il reporting delle conversioni online guidate dalle interazioni con annunci.
 
-Il [[!DNL Google Ads] Estensione inoltro eventi per conversioni avanzate](https://exchange.adobe.com/apps/ec/108630/google-ads-enhanced-conversions) (in seguito denominati [!DNL Enhanced Conversions] fornisce un modello intuitivo per implementare facilmente conversioni avanzate per [!DNL Google Ads] API.
+L&#39;estensione per l&#39;inoltro degli eventi [[!DNL Google Ads] Conversioni avanzate](https://exchange.adobe.com/apps/ec/108630/google-ads-enhanced-conversions) (in precedenza denominata estensione [!DNL Enhanced Conversions]) fornisce un modello intuitivo per implementare facilmente conversioni avanzate per l&#39;API [!DNL Google Ads].
 
 >[!IMPORTANT]
 >
->Le conversioni avanzate funzionano solo per i tipi di conversione in cui sono presenti dati dei clienti, come abbonamenti, iscrizioni e acquisti. Devono essere disponibili uno o più dei seguenti dati cliente, in quanto richiesti quando [configurazione di un’azione di conversione](#conversion-action-event-forwarding) per una regola di inoltro degli eventi:
+>Le conversioni avanzate funzionano solo per i tipi di conversione in cui sono presenti dati dei clienti, come abbonamenti, iscrizioni e acquisti. Uno o più dei seguenti dati del cliente devono essere disponibili, in quanto sono necessari quando [si configura un&#39;azione di conversione](#conversion-action-event-forwarding) per una regola di inoltro eventi:
 >
 >* Indirizzo e-mail (preferito)
 >* Nome e indirizzo dell’abitazione (indirizzo, città, stato/regione e codice postale)
 >* Numero di telefono (deve essere fornito in aggiunta a una delle altre due informazioni precedenti)
 
+## Panoramica sull’implementazione
 
-## Panoramica sull&#39;implementazione
-
-Le conversioni avanzate sfruttano [!DNL Google Ads] API per aggiungere dati di prime parti a una conversione che si è verificata su un dispositivo client, in genere un sito Web. Ciò significa che esistono due passaggi per implementare le conversioni avanzate:
+Le conversioni avanzate sfruttano l&#39;API [!DNL Google Ads] per aggiungere dati di prime parti a una conversione che si è verificata su un dispositivo client, in genere un sito Web. Ciò significa che esistono due passaggi per implementare le conversioni avanzate:
 
 1. Invia una conversione dal client.
 1. Utilizza l’inoltro degli eventi per inviare dati di prime parti aggiuntivi che migliorano i dati di conversione inviati dal client.
 
 >[!TIP]
 >
->Per associare l’evento di conversione lato client ai dati di prime parti inviati dall’inoltro degli eventi, il `transaction_ID` deve essere lo stesso in entrambe le chiamate. Per ulteriori informazioni su dove deve essere fornito questo valore per ciascun servizio, consulta le sezioni sulla configurazione delle azioni di conversione per [tag](#conversion-action-tags) e [inoltro eventi](#conversion-action-event-forwarding), rispettivamente.
+>Per associare l&#39;evento di conversione lato client ai dati di prime parti inviati dall&#39;inoltro degli eventi, `transaction_ID` deve essere lo stesso in entrambe le chiamate. Per ulteriori informazioni su dove deve essere fornito questo valore per ogni servizio, consulta le sezioni sulla configurazione delle azioni di conversione per [tag](#conversion-action-tags) e [inoltro eventi](#conversion-action-event-forwarding), rispettivamente.
 
-Poiché l’invio di eventi di conversione coinvolge sia un’implementazione lato client che un’implementazione lato server, questo documento descrive i passaggi prerequisiti per la configurazione lato client [[!DNL Google Global Site Tag] Estensione (gtag)](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag) oltre al [!DNL Enhanced Conversions] estensione per l’inoltro di eventi.
+Poiché l&#39;invio di eventi di conversione coinvolge sia un&#39;implementazione lato client che un&#39;implementazione lato server, questo documento descrive i passaggi preliminari per configurare l&#39;estensione [[!DNL Google Global Site Tag] (gtag) lato client](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag) oltre all&#39;estensione [!DNL Enhanced Conversions] per l&#39;inoltro di eventi.
 
-Il seguente video fornisce un’introduzione alla [!DNL Enhanced Conversions] e illustra i passaggi di implementazione ad alto livello:
+Il video seguente fornisce un&#39;introduzione all&#39;estensione [!DNL Enhanced Conversions] e illustra i passaggi di implementazione ad alto livello:
 
 >[!VIDEO](https://video.tv.adobe.com/v/3411365?quality=12&learn=on)
 
-## Inviare una conversione tramite tag
+## Inviare una conversione tramite i tag
 
-Per inviare un evento di conversione da a un sito Web, [!DNL Google Global Site Tag] (gtag) deve essere distribuito. Per farlo, puoi configurare e installare i tag [!DNL Google Global Site Tag] Estensione (gtag).
+Per inviare un evento di conversione da in un sito Web, è necessario distribuire [!DNL Google Global Site Tag] (gtag). Puoi ottenere questo risultato utilizzando i tag configurando e installando l&#39;estensione [!DNL Google Global Site Tag] (gtag).
 
-### Configurare e installare [!DNL Google Global Site Tag] estensione
+### Configura e installa l&#39;estensione [!DNL Google Global Site Tag]
 
-Accedi a [!UICONTROL Raccolta dati] Interfaccia utente o interfaccia utente Experience Platform e seleziona **[!UICONTROL Tag]** nel menu di navigazione a sinistra. Seleziona la proprietà tag su cui desideri installare l’estensione, quindi fai clic su **[!UICONTROL Estensioni]** nel menu di navigazione a sinistra. Sotto **[!UICONTROL Catalogo]** , individua la scheda [!UICONTROL Tag del sito globale di Google (gtag)] e seleziona **[!UICONTROL Installa]**.
+Passa all&#39;interfaccia utente di [!UICONTROL Data Collection] o Experience Platform e seleziona **[!UICONTROL Tag]** nell&#39;area di navigazione a sinistra. Seleziona la proprietà tag su cui desideri installare l&#39;estensione, quindi seleziona **[!UICONTROL Estensioni]** nel menu di navigazione a sinistra. Nella scheda **[!UICONTROL Catalogo]**, individua l&#39;estensione [!UICONTROL Google Global Site Tag (gtag)] e seleziona **[!UICONTROL Installa]**.
 
-![Il [!UICONTROL Tag del sito globale di Google (gtag)] l&#39;estensione selezionata in [!UICONTROL Estensioni] visualizzare in [!UICONTROL Raccolta dati] UI.](../../../images/extensions/server/google-ads-enhanced-conversions/install-gtag-extension.png)
+![L&#39;estensione [!UICONTROL Global Site Tag (gtag) di Google] è selezionata nella visualizzazione [!UICONTROL Extensions] nell&#39;interfaccia utente [!UICONTROL Data Collection].](../../../images/extensions/server/google-ads-enhanced-conversions/install-gtag-extension.png)
 
-Viene visualizzata la finestra di dialogo di installazione. Da qui, seleziona **[!UICONTROL Aggiungi account]** e fornisci i seguenti valori quando richiesto:
+Viene visualizzata la finestra di dialogo di installazione. Da qui, selezionare **[!UICONTROL Aggiungi account]** e fornire i seguenti valori quando richiesto:
 
 | Proprietà account | Descrizione |
 | --- | --- |
 | Nome account | Un nome univoco per l’account. Questo nome viene utilizzato solo nell’interfaccia utente dei tag. |
-| ID account | Il tuo [!DNL Google Ads] ID account. Per trovare questo valore, accedi a [!DNL Google Ads] e passa a: **[!DNL Tools and Settings]** > **[!DNL Conversions]** > **[!DNL Select a conversion action]** > **[!DNL Tag Setup]** > **[!DNL Install the Tag yourself]**. La stringa dell’ID account si trova nella finestra dello snippet di codice che inizia con `AW-` o `d`. |
+| ID account | ID del tuo account [!DNL Google Ads]. Per trovare questo valore, accedere a [!DNL Google Ads] e passare a: **[!DNL Tools and Settings]** > **[!DNL Conversions]** > **[!DNL Select a conversion action]** > **[!DNL Tag Setup]** > **[!DNL Install the Tag yourself]**. La stringa dell&#39;ID account si trova nella finestra dello snippet di codice che inizia con `AW-` o `d`. |
 | Prodotto | Seleziona **[!UICONTROL Google Ads (AdWords)]**. |
 
 {style="table-layout:auto"}
 
-Al termine, seleziona **[!UICONTROL Aggiungi account]**, quindi seleziona **[!UICONTROL Salva]**.
+Al termine, selezionare **[!UICONTROL Aggiungi account]**, quindi selezionare **[!UICONTROL Salva]**.
 
 ### Aggiungere un’azione di conversione di invio {#conversion-action-tags}
 
-Dopo aver installato l’estensione, puoi iniziare a includere le azioni di conversione nelle regole dei tag. Quando crei o modifichi una regola che ascolta la conversione da migliorare, seleziona **[!UICONTROL Aggiungi]** in [!UICONTROL Azioni]. Nella finestra di dialogo successiva, seleziona **[!UICONTROL Tag del sito globale di Google (gtag)]** dal [!UICONTROL Estensione] a discesa, quindi seleziona **[!UICONTROL Inviare un evento]** in [!UICONTROL Tipo di azione].
+Dopo aver installato l’estensione, puoi iniziare a includere le azioni di conversione nelle regole dei tag. Quando crei o modifichi una regola che ascolta la conversione che desideri migliorare, seleziona **[!UICONTROL Aggiungi]** in [!UICONTROL Azioni]. Nella finestra di dialogo successiva, seleziona **[!UICONTROL Tag sito globale Google (gtag)]** dal menu a discesa [!UICONTROL Estensione], quindi seleziona **[!UICONTROL Invia un evento]** in [!UICONTROL Tipo azione].
 
-![Il [!UICONTROL Inviare un evento] tipo di azione selezionato nella vista configurazione azione del flusso di lavoro di modifica delle regole.](../../../images/extensions/server/google-ads-enhanced-conversions/select-client-action.png)
+![Tipo di azione [!UICONTROL Invia un evento] selezionato nella visualizzazione di configurazione dell&#39;azione del flusso di lavoro di modifica delle regole.](../../../images/extensions/server/google-ads-enhanced-conversions/select-client-action.png)
 
-Vengono visualizzati controlli aggiuntivi che consentono di configurare [!DNL gtag] evento. Devono essere compilati almeno i seguenti campi:
+Vengono visualizzati controlli aggiuntivi che consentono di configurare l&#39;evento [!DNL gtag]. Devono essere compilati almeno i seguenti campi:
 
-1. **[!UICONTROL Nome evento (azione)]**: Invio `conversion` come valore.
-1. Aggiungi un nuovo campo in cui la chiave è `transaction_id` e il valore è un [elemento dati](../../../ui/managing-resources/data-elements.md) che contiene [ID transazione](https://support.google.com/google-ads/answer/6386790) valore.
-1. **[!UICONTROL Etichetta di conversione]**: immetti l’etichetta di conversione appropriata dal file [!DNL Google Ads] account. Per trovare questo valore, accedi a Google Ads e passa a **[!DNL Tools and Settings]** > **[!DNL Conversions]** > **[!DNL Select a conversion action]** > **[!DNL Tag Setup]** > **[!DNL Use Google Tag Manager]**. L’etichetta di conversione si trova in [!DNL Instructions].
+1. **[!UICONTROL Nome evento (azione)]**: immettere `conversion` come valore.
+1. Aggiungi un nuovo campo in cui la chiave è `transaction_id` e il valore è un [elemento dati](../../../ui/managing-resources/data-elements.md) che contiene il valore [transaction ID](https://support.google.com/google-ads/answer/6386790).
+1. **[!UICONTROL Etichetta conversione]**: immettere l&#39;etichetta di conversione appropriata dall&#39;account [!DNL Google Ads]. Per trovare questo valore, accedere a Google Ads e passare a **[!DNL Tools and Settings]** > **[!DNL Conversions]** > **[!DNL Select a conversion action]** > **[!DNL Tag Setup]** > **[!DNL Use Google Tag Manager]**. L&#39;etichetta di conversione si trova in [!DNL Instructions].
    >[!IMPORTANT]
    >
-   >Mentre ti trovi nell’area di configurazione dei tag del [!DNL Google Ads] , assicurati che le conversioni avanzate siano abilitate. A questo scopo, rivedi e accetta i termini di servizio, quindi seleziona **[!DNL Turn on enhanced conversions]** e **[!DNL API]** come metodo di implementazione.
+   >Quando ti trovi nell&#39;area di configurazione dei tag dell&#39;account [!DNL Google Ads], accertati che le conversioni avanzate siano abilitate. Per eseguire questa operazione, rivedere e accettare i termini di servizio, quindi selezionare **[!DNL Turn on enhanced conversions]** e **[!DNL API]** come metodo di implementazione.
 
-Dopo aver configurato l’azione, seleziona **[!UICONTROL Mantieni modifiche]** per aggiungere l’azione alla configurazione della regola. Quando sei soddisfatto della regola, seleziona **[!UICONTROL Salva nella libreria]**.
+Dopo aver configurato l&#39;azione, selezionare **[!UICONTROL Mantieni modifiche]** per aggiungere l&#39;azione alla configurazione della regola. Una volta soddisfatta la regola, selezionare **[!UICONTROL Salva nella libreria]**.
 
-Infine, pubblica un nuovo [build](../../../ui/publishing/builds.md) per abilitare le modifiche alla libreria.
+Infine, pubblicare una nuova [build](../../../ui/publishing/builds.md) per abilitare le modifiche alla libreria.
 
 ## Inviare dati di prime parti tramite l’inoltro di eventi
 
-Quando sei in grado di inviare eventi di conversione dal lato client, puoi migliorare queste conversioni utilizzando [!DNL Enhanced Conversions] estensione di inoltro degli eventi.
+Una volta che sei in grado di inviare eventi di conversione dal lato client, puoi migliorare queste conversioni utilizzando l&#39;estensione di inoltro degli eventi [!DNL Enhanced Conversions].
 
 ### Creare un segreto e un elemento dati Google OAuth 2 {#create-secret-data-element}
 
-Prima di configurare l’estensione, è necessario creare un token di accesso nell’inoltro degli eventi per l’autenticazione in [!DNL Google Ads] API.
+Prima di configurare l&#39;estensione, è necessario creare un token di accesso nell&#39;inoltro eventi per l&#39;autenticazione nell&#39;API [!DNL Google Ads].
 
-Consulta la guida su [creazione di segreti per l’inoltro degli eventi](../../../ui/event-forwarding/secrets.md) per i passaggi dettagliati. Assicurati di selezionare **[!UICONTROL Google OAuth 2]** come tipo segreto. Continua a seguire le istruzioni e, quando ti viene richiesto di selezionare un profilo account Google, seleziona l’account con accesso all’azione di conversione che stai configurando.
+Per i passaggi dettagliati, consulta la guida sulla [creazione di segreti per l&#39;inoltro degli eventi](../../../ui/event-forwarding/secrets.md). Accertati di selezionare **[!UICONTROL Google OAuth 2]** come tipo segreto. Continua a seguire le istruzioni e, quando ti viene richiesto di selezionare un profilo account Google, seleziona l’account con accesso all’azione di conversione che stai configurando.
 
-Una volta creato il segreto, [creare un nuovo elemento dati](../../../ui/managing-resources/data-elements.md#create-a-data-element) e seleziona **[!UICONTROL Segreto]** per il tipo di elemento dati. Seleziona il segreto Google OAuth 2 appropriato per ogni ambiente e seleziona **[!UICONTROL Salva nella libreria]**.
+Una volta creato il segreto, [crea un nuovo elemento dati](../../../ui/managing-resources/data-elements.md#create-a-data-element) e seleziona **[!UICONTROL Segreto]** per il tipo di elemento dati. Selezionare il segreto Google OAuth 2 appropriato per ogni ambiente e selezionare **[!UICONTROL Salva nella libreria]**.
 
-### Configurare e installare [!DNL Enhanced Conversions] estensione {#install-enhanced-conversions}
+### Configura e installa l&#39;estensione [!DNL Enhanced Conversions] {#install-enhanced-conversions}
 
-Trova il [!UICONTROL Conversioni avanzate di Google Ads] nel catalogo di inoltro degli eventi e seleziona **[!UICONTROL Installa]**.
+Trova l&#39;estensione [!UICONTROL Google Ads Enhanced Conversions] nel catalogo di inoltro degli eventi e seleziona **[!UICONTROL Installa]**.
 
-![Il [!UICONTROL Conversioni avanzate di Google Ads] l&#39;estensione selezionata in [!UICONTROL Estensioni] visualizzare in [!UICONTROL Raccolta dati] UI.](../../../images/extensions/server/google-ads-enhanced-conversions/install-enhanced-conversions.png)
+![L&#39;estensione [!UICONTROL Conversioni avanzate di Google Ads] è selezionata nella visualizzazione [!UICONTROL Estensioni] nell&#39;interfaccia utente [!UICONTROL Raccolta dati].](../../../images/extensions/server/google-ads-enhanced-conversions/install-enhanced-conversions.png)
 
 Per configurare l&#39;estensione, è necessario compilare i due campi obbligatori:
 
-1. **[!UICONTROL ID cliente]**: ID che identifica in modo univoco il tuo [!DNL Google Ads] account. Per trovare questo valore, accedi a [!DNL Google Ads] e passa a **[!DNL Help]** > **[!DNL Customer ID]**.
-1. **[!UICONTROL Elemento dati token di accesso]**: seleziona l’icona dell’elemento dati (![Icona elemento dati](../../../images/extensions/server/google-ads-enhanced-conversions/data-element-icon.png)) e scegliere l’elemento dati segreto Google OAuth 2 che si desidera [configurato nel passaggio precedente](#create-secret-data-element) dal menu.
+1. **[!UICONTROL ID cliente]**: l&#39;ID che identifica in modo univoco il tuo account [!DNL Google Ads]. Per trovare questo valore, accedere a [!DNL Google Ads] e passare a **[!DNL Help]** > **[!DNL Customer ID]**.
+1. **[!UICONTROL Elemento dati token di accesso]**: selezionare l&#39;icona dell&#39;elemento dati (![Icona elemento dati](../../../images/extensions/server/google-ads-enhanced-conversions/data-element-icon.png)) e scegliere dal menu l&#39;elemento dati segreto Google OAuth 2 [configurato nel passaggio precedente](#create-secret-data-element).
 
-Al termine, seleziona **[!UICONTROL Salva]** per installare l’estensione.
+Al termine, selezionare **[!UICONTROL Salva]** per installare l&#39;estensione.
 
-### Aggiungi un [!UICONTROL Invia conversione] azione su una regola {#conversion-action-event-forwarding}
+### Aggiungi un&#39;azione [!UICONTROL Invia conversione] a una regola {#conversion-action-event-forwarding}
 
-Una volta installata l’estensione, puoi iniziare a includerla [!UICONTROL Invia conversione] azioni nelle regole di inoltro degli eventi. Quando crei o modifichi una regola che ascolta la conversione da migliorare, seleziona **[!UICONTROL Aggiungi]** in [!UICONTROL Azioni]. Nella finestra di dialogo successiva, seleziona **[!UICONTROL Conversioni avanzate di Google Ads]** dal [!UICONTROL Estensione] a discesa, quindi seleziona **[!UICONTROL Invia conversione]** in [!UICONTROL Tipo di azione].
+Dopo l&#39;installazione dell&#39;estensione, puoi iniziare a includere [!UICONTROL Invia azioni di conversione] nelle regole di inoltro degli eventi. Quando crei o modifichi una regola che ascolta la conversione che desideri migliorare, seleziona **[!UICONTROL Aggiungi]** in [!UICONTROL Azioni]. Nella finestra di dialogo successiva, seleziona **[!UICONTROL Conversioni avanzate di Google Ads]** dal menu a discesa [!UICONTROL Estensione], quindi seleziona **[!UICONTROL Invia conversione]** in [!UICONTROL Tipo azione].
 
-![Il [!UICONTROL Invia conversione] tipo di azione selezionato nella vista configurazione azione del flusso di lavoro di modifica delle regole.](../../../images/extensions/server/google-ads-enhanced-conversions/select-server-action.png)
+![Tipo di azione [!UICONTROL Invia conversione] selezionato nella visualizzazione di configurazione dell&#39;azione del flusso di lavoro di modifica delle regole.](../../../images/extensions/server/google-ads-enhanced-conversions/select-server-action.png)
 
 Nel pannello di destra vengono visualizzati nuovi controlli che consentono di configurare la conversione. Devono essere completati almeno i seguenti campi:
 
@@ -120,9 +119,9 @@ Nel pannello di destra vengono visualizzati nuovi controlli che consentono di co
 
 | Input | Descrizione |
 | --- | --- |
-| Customer ID | Il tuo [!DNL Google Ads] ID cliente. Viene impostato automaticamente sull&#39;ID cliente immesso al momento dell&#39;immissione [installazione dell’estensione](#install-enhanced-conversions). |
-| ID conversione o etichetta di conversione | Valori di tracciamento ottenuti da [!DNL Google Ads] quando si imposta il tracciamento delle conversioni. I valori iniziano con `AW-`.<br><br>Per informazioni dettagliate su come trovare questi valori, consulta [[!DNL Google Ads] documentazione](https://support.google.com/tagmanager/answer/6105160?hl=en). |
-| ID transazione | Seleziona un elemento dati con lo stesso valore ID transazione che è [inviato dal lato client](#conversion-action-tags) utilizzando [!DNL Google Global Site Tag] estensione. |
+| ID cliente | ID cliente [!DNL Google Ads]. Viene impostato automaticamente sull&#39;ID cliente immesso al momento dell&#39;installazione dell&#39;estensione [](#install-enhanced-conversions). |
+| ID conversione o etichetta di conversione | Valori di tracciamento ottenuti da [!DNL Google Ads] durante la configurazione del tracciamento delle conversioni. I valori iniziano con `AW-`.<br><br>Per informazioni dettagliate su come trovare questi valori, consulta la [[!DNL Google Ads] documentazione](https://support.google.com/tagmanager/answer/6105160?hl=en). |
+| ID transazione | Selezionare un elemento dati con lo stesso valore ID transazione [inviato dal lato client](#conversion-action-tags) utilizzando l&#39;estensione [!DNL Google Global Site Tag]. |
 
 **Identificazione utente**
 
@@ -133,14 +132,14 @@ Nel pannello di destra vengono visualizzati nuovi controlli che consentono di co
 
 >[!TIP]
 >
->Prima di inviare i dati di identificazione utente a Google, è necessario eseguire l&#39;hashing. Se i dati non vengono sottoposti ad hashing quando vengono ricevuti dall’inoltro degli eventi, seleziona la **[!UICONTROL Normalizza e hash]** attiva un determinato campo per indicare all’estensione di eseguire l’hash del valore.
+>Prima di inviare i dati di identificazione utente a Google, è necessario eseguire l&#39;hashing. Se i dati non vengono sottoposti ad hashing quando vengono ricevuti dall&#39;inoltro degli eventi, seleziona l&#39;interruttore **[!UICONTROL Normalize &amp; Hash]** in un determinato campo per indicare all&#39;estensione di eseguire l&#39;hashing del valore.
 >
->![Il [!UICONTROL Normalizza e hash] attiva/disattiva per [!UICONTROL E-mail] input all&#39;interno di [!UICONTROL Invia conversione] modulo di configurazione delle azioni.](../../../images/extensions/server/google-ads-enhanced-conversions/hash-user-id-values.png)
+>![Attivazione/disattivazione di [!UICONTROL Normalize &amp; Hash] per l&#39;input [!UICONTROL Email] nel modulo di configurazione dell&#39;azione [!UICONTROL Invia conversione].](../../../images/extensions/server/google-ads-enhanced-conversions/hash-user-id-values.png)
 
-Al termine, seleziona **[!UICONTROL Mantieni modifiche]** per aggiungere l’azione alla configurazione della regola. Quando sei soddisfatto della regola, seleziona **[!UICONTROL Salva nella libreria]**.
+Al termine, seleziona **[!UICONTROL Mantieni modifiche]** per aggiungere l&#39;azione alla configurazione della regola. Una volta soddisfatta la regola, selezionare **[!UICONTROL Salva nella libreria]**.
 
-Infine, pubblica un nuovo inoltro di eventi [build](../../../ui/publishing/builds.md) per abilitare le modifiche alla libreria.
+Infine, pubblica un nuovo evento con inoltro di [build](../../../ui/publishing/builds.md) per abilitare le modifiche alla libreria.
 
 ## Passaggi successivi
 
-Questa guida illustra come inviare eventi di conversione a [!DNL Google Ads] utilizzando [!DNL Enhanced Conversions] estensione di inoltro degli eventi. Per ulteriori informazioni sulle funzionalità di inoltro degli eventi in Experience Platform, consulta [panoramica sull’inoltro degli eventi](../../../ui/event-forwarding/overview.md).
+In questa guida viene descritto come inviare eventi di conversione a [!DNL Google Ads] tramite l&#39;estensione di inoltro eventi [!DNL Enhanced Conversions]. Per ulteriori informazioni sulle funzionalità di inoltro degli eventi in Experience Platform, consulta la [panoramica sull&#39;inoltro degli eventi](../../../ui/event-forwarding/overview.md).

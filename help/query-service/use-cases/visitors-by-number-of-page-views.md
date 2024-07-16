@@ -5,18 +5,18 @@ description: Scopri come scrivere query che utilizzano gli eventi esperienza per
 exl-id: 6e8eed0c-838e-4cd0-ae8c-453114fbf4ea
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
-source-wordcount: '272'
+source-wordcount: '273'
 ht-degree: 1%
 
 ---
 
 # Elencare i visitatori in base al numero di visualizzazioni di pagina
 
-Questo documento fornisce un esempio del codice SQL necessario per recuperare una lista di visitatori organizzata in base al numero di visualizzazioni di pagina. Con Adobe Experience Platform Query Service, puoi scrivere query che utilizzano [!DNL Experience Events] per acquisire diversi casi d’uso. Gli eventi esperienza sono rappresentati dalla classe ExperienceEvent di Experience Data Model (XDM), che acquisisce un’istantanea immutabile e non aggregata del sistema quando un utente interagisce con un sito web o un servizio. Gli eventi esperienza possono essere utilizzati anche per l’analisi del dominio temporale. Consulta la [sezione passaggi successivi](#next-steps) per ulteriori casi d’uso che coinvolgono [!DNL Experience Events] per generare rapporti sui visitatori.
+Questo documento fornisce un esempio del codice SQL necessario per recuperare una lista di visitatori organizzata in base al numero di visualizzazioni di pagina. Adobe Experience Platform Query Service consente di scrivere query che utilizzano [!DNL Experience Events] per acquisire diversi casi d&#39;uso. Gli eventi esperienza sono rappresentati dalla classe ExperienceEvent di Experience Data Model (XDM), che acquisisce un’istantanea immutabile e non aggregata del sistema quando un utente interagisce con un sito web o un servizio. Gli eventi esperienza possono essere utilizzati anche per l’analisi del dominio temporale. Consulta la [sezione passaggi successivi](#next-steps) per altri casi d&#39;uso che coinvolgono [!DNL Experience Events] per generare rapporti sui visitatori.
 
-Ulteriori informazioni su XDM e [!DNL Experience Events] si trova nella sezione [[!DNL XDM System] panoramica](../../xdm/home.md). Combinando Query Service con [!DNL Experience Events], puoi tenere traccia in modo efficace delle tendenze comportamentali tra i tuoi utenti. Il documento seguente fornisce esempi di query che coinvolgono [!DNL Experience Events].
+Ulteriori informazioni su XDM e [!DNL Experience Events] sono disponibili nella [[!DNL XDM System] panoramica](../../xdm/home.md). Combinando Query Service con [!DNL Experience Events], puoi tenere traccia in modo efficace delle tendenze comportamentali tra i tuoi utenti. Il documento seguente fornisce esempi di query che coinvolgono [!DNL Experience Events].
 
-## Oggetto
+## Finalità
 
 L’esempio seguente crea un rapporto che elenca i 10 ID degli utenti che hanno visualizzato più pagine.
 

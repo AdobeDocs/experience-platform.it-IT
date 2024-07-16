@@ -25,12 +25,12 @@ Sono illustrati i seguenti concetti chiave:
 
 ## Introduzione
 
-Questa guida richiede una buona conoscenza di [esecuzione di query in Query Service](../best-practices/writing-queries.md) e i seguenti componenti di Adobe Experience Platform:
+Questa guida richiede una buona conoscenza dell&#39;esecuzione di [query in Query Service](../best-practices/writing-queries.md) e dei seguenti componenti di Adobe Experience Platform:
 
-* [Panoramica del profilo cliente in tempo reale](../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+* [Panoramica del profilo cliente in tempo reale](../../profile/home.md): fornisce un profilo consumatore unificato in tempo reale basato su dati aggregati provenienti da più origini.
 * [Nozioni di base sulla composizione dello schema](../../xdm/schema/composition.md): introduzione agli schemi Experience Data Model (XDM) e ai blocchi predefiniti, ai principi e alle best practice per la composizione degli schemi.
-* [Abilitare uno schema per Real-Time Customer Profile](../../profile/tutorials/add-profile-data.md): questa esercitazione illustra i passaggi necessari per aggiungere dati a Real-Time Customer Profile.
-* [Come definire un tipo di dati personalizzato](../../xdm/api/data-types.md): i tipi di dati vengono utilizzati come campi del tipo di riferimento nelle classi o nei gruppi di campi dello schema e consentono l’utilizzo coerente di una struttura a più campi che può essere inclusa ovunque nello schema.
+* [Abilitare uno schema per Real-Time Customer Profile](../../profile/tutorials/add-profile-data.md): questo tutorial illustra i passaggi necessari per aggiungere dati a Real-Time Customer Profile.
+* [Come definire un tipo di dati personalizzato](../../xdm/api/data-types.md): i tipi di dati vengono utilizzati come campi di tipo riferimento nelle classi o nei gruppi di campi dello schema e consentono l&#39;utilizzo coerente di una struttura a più campi che può essere inclusa in qualsiasi punto dello schema.
 
 ## Obiettivi
 
@@ -46,21 +46,21 @@ Questa guida utilizza un set di dati sulla fedeltà delle compagnie aeree per di
 
 Query Service consente di creare un set di dati contenente decili per categoria, che possono quindi essere segmentati per creare tipi di pubblico in base alla classificazione degli attributi. I concetti visualizzati negli esempi seguenti possono essere applicati per creare altri set di dati a bucket decile, purché sia definita una categoria e sia disponibile una metrica.
 
-L’esempio di dati sulla fedeltà delle compagnie aeree utilizza un [Classe XDM ExperienceEvents](../../xdm/classes/experienceevent.md). Ogni evento è una registrazione di una transazione commerciale per chilometraggio, accreditata o addebitata, e lo stato di fedeltà di appartenenza di &quot;Flyer&quot;, &quot;Frequent&quot;, &quot;Silver&quot; o &quot;Gold&quot;. Il campo dell’identità primaria è `membershipNumber`.
+L&#39;esempio di dati sulla fedeltà della compagnia aerea utilizza una [classe ExperienceEvents XDM](../../xdm/classes/experienceevent.md). Ogni evento è una registrazione di una transazione commerciale per chilometraggio, accreditata o addebitata, e lo stato di fedeltà di appartenenza di &quot;Flyer&quot;, &quot;Frequent&quot;, &quot;Silver&quot; o &quot;Gold&quot;. Il campo dell&#39;identità primaria è `membershipNumber`.
 
 ### Set di dati di esempio
 
-Il set di dati iniziale sulla fedeltà della compagnia aerea per questo esempio è &quot;Dati sulla fedeltà della compagnia aerea&quot; e ha il seguente schema. L’identità primaria dello schema è `_profilefoundationreportingstg.membershipNumber`.
+Il set di dati iniziale sulla fedeltà della compagnia aerea per questo esempio è &quot;Dati sulla fedeltà della compagnia aerea&quot; e ha il seguente schema. Si noti che l&#39;identità primaria per lo schema è `_profilefoundationreportingstg.membershipNumber`.
 
-![Un diagramma dello schema Dati fedeltà compagnia aerea.](../images/use-cases/airline-loyalty-data.png)
+![Diagramma dello schema dei dati sulla fedeltà della compagnia aerea.](../images/use-cases/airline-loyalty-data.png)
 
 **Dati di esempio**
 
-Nella tabella seguente vengono visualizzati i dati di esempio contenuti nel `_profilefoundationreportingstg` oggetto utilizzato per questo esempio. Fornisce il contesto per l’utilizzo di bucket decile per creare set di dati derivati complessi.
+Nella tabella seguente vengono visualizzati i dati di esempio contenuti nell&#39;oggetto `_profilefoundationreportingstg` utilizzato per questo esempio. Fornisce il contesto per l’utilizzo di bucket decile per creare set di dati derivati complessi.
 
 >[!NOTE]
 >
->Per brevità, l’ID tenant `_profilefoundationreportingstg` è stato omesso dall’inizio dello spazio dei nomi nei titoli delle colonne e nelle successive menzioni in tutto il documento.
+>Per brevità, l&#39;ID tenant `_profilefoundationreportingstg` è stato omesso dall&#39;inizio dello spazio dei nomi nei titoli delle colonne e nelle successive menzioni in tutto il documento.
 
 | `.membershipNumber` | `.emailAddress.address` | `.transactionDate` | `.transactionType` | `.transactionDetails` | `.mileage` | `.loyaltyStatus` |
 |---|---|---|---|---|---|---|
@@ -74,7 +74,7 @@ Nella tabella seguente vengono visualizzati i dati di esempio contenuti nel `_pr
 
 ## Generare set di dati decile
 
-Nei dati sulla fedeltà delle compagnie aeree riportati sopra, la `.mileage` il valore contiene il numero di miglia percorse da un membro per ogni singolo volo effettuato. Questi dati vengono utilizzati per creare decili per il numero di miglia percorse durante i lookback a vita e per una varietà di periodi di lookback. A questo scopo, viene creato un set di dati che contiene decili in un tipo di dati mappa per ogni periodo di lookback e un decile appropriato per ogni periodo di lookback assegnato in `membershipNumber`.
+Nei dati sulla fedeltà della compagnia aerea visualizzati sopra, il valore `.mileage` contiene il numero di miglia percorse da un membro per ogni singolo volo effettuato. Questi dati vengono utilizzati per creare decili per il numero di miglia percorse durante i lookback a vita e per una varietà di periodi di lookback. A questo scopo, viene creato un set di dati contenente decili in un tipo di dati mappa per ogni periodo di lookback e un decile appropriato per ogni periodo di lookback assegnato in `membershipNumber`.
 
 Crea uno &quot;Schema del decile per la fedeltà della compagnia aerea&quot; per creare un set di dati decile utilizzando Query Service.
 
@@ -82,23 +82,23 @@ Crea uno &quot;Schema del decile per la fedeltà della compagnia aerea&quot; per
 
 ### Abilitare lo schema per Real-Time Customer Profile
 
-I dati acquisiti in Experienci Platform per l’utilizzo da parte di Real-Time Customer Profile devono essere conformi a [uno schema Experience Data Model (XDM) abilitato per il profilo](../../xdm/ui/resources/schemas.md). Per abilitare uno schema per il profilo, è necessario implementare la classe XDM Individual Profile o XDM ExperienceEvent.
+I dati acquisiti in Experience Platform per l&#39;utilizzo da parte di Real-Time Customer Profile devono essere conformi a [uno schema Experience Data Model (XDM) abilitato per il profilo](../../xdm/ui/resources/schemas.md). Per abilitare uno schema per il profilo, è necessario implementare la classe XDM Individual Profile o XDM ExperienceEvent.
 
-[Abilita lo schema per l’utilizzo in Real-Time Customer Profile utilizzando lo Schema Registry API (API del registro degli schemi).](../../xdm/tutorials/create-schema-api.md) o [Interfaccia utente dell’Editor di schema](../../xdm/tutorials/create-schema-ui.md).  Le istruzioni dettagliate su come abilitare uno schema per il profilo sono disponibili nella rispettiva documentazione.
+[Abilitare lo schema per l&#39;utilizzo in Real-Time Customer Profile utilizzando l&#39;API Schema Registry](../../xdm/tutorials/create-schema-api.md) o l&#39;interfaccia utente di [Schema Editor](../../xdm/tutorials/create-schema-ui.md).  Le istruzioni dettagliate su come abilitare uno schema per il profilo sono disponibili nella rispettiva documentazione.
 
 Quindi, crea un tipo di dati da riutilizzare per tutti i gruppi di campi correlati al decile. La creazione del gruppo di campi decile è un passaggio unico per sandbox. Può essere riutilizzato anche per tutti gli schemi relativi al decile.
 
 ### Creare uno spazio dei nomi delle identità e contrassegnarlo come identificatore primario {#identity-namespace}
 
-A qualsiasi schema creato per l&#39;utilizzo con decili deve essere assegnata un&#39;identità primaria. È possibile [definire un campo di identità nell’interfaccia utente degli schemi di Adobe Experience Platform](../../xdm/ui/fields/identity.md#define-an-identity-field), o tramite [API del registro dello schema](../../xdm/api/descriptors.md#create).
+A qualsiasi schema creato per l&#39;utilizzo con decili deve essere assegnata un&#39;identità primaria. È possibile [definire un campo di identità nell&#39;interfaccia utente degli schemi di Adobe Experience Platform](../../xdm/ui/fields/identity.md#define-an-identity-field) o tramite l&#39;[API del registro degli schemi](../../xdm/api/descriptors.md#create).
 
-Query Service consente inoltre di impostare un’identità o un’identità primaria per i campi di set di dati dello schema ad hoc direttamente tramite SQL. Consulta la documentazione su [impostazione di un’identità secondaria e primaria in identità di schema ad hoc](../data-governance/ad-hoc-schema-identities.md) per ulteriori informazioni.
+Query Service consente inoltre di impostare un’identità o un’identità primaria per i campi di set di dati dello schema ad hoc direttamente tramite SQL. Per ulteriori informazioni, consulta la documentazione su [impostazione di un&#39;identità secondaria e di un&#39;identità primaria in identità di schema ad hoc](../data-governance/ad-hoc-schema-identities.md).
 
 ### Creare una query per il calcolo dei decili in un periodo di lookback {#create-a-query}
 
 L’esempio seguente illustra la query SQL per calcolare un decile in un periodo di lookback.
 
-È possibile creare un modello utilizzando l’Editor query nell’interfaccia utente o tramite [API servizio query](../api/query-templates.md#create-a-query-template).
+È possibile creare un modello utilizzando l&#39;Editor query nell&#39;interfaccia utente o tramite l&#39;[API servizio query](../api/query-templates.md#create-a-query-template).
 
 ```sql
 CREATE TABLE AS airline_loyality_decile 
@@ -210,13 +210,13 @@ summed_miles_1 AS (
 )
 ```
 
-Il blocco viene ripetuto due volte nel modello (`summed_miles_3` e `summed_miles_6`) con una modifica nel calcolo della data al fine di generare i dati per gli altri periodi di lookback.
+Il blocco viene ripetuto due volte nel modello (`summed_miles_3` e `summed_miles_6`) con una modifica nel calcolo della data per generare i dati per gli altri periodi di lookback.
 
 È importante notare le colonne di identità, dimensione e metrica per la query (`membershipNumber`, `loyaltyStatus` e `totalMiles` rispettivamente).
 
 #### Classificazione
 
-I decili consentono di eseguire il bucket categoriale. Per creare il numero di classificazione, `NTILE` viene utilizzata con un parametro di `10` in una FINESTRA raggruppata per `loyaltyStatus` campo. Questo si traduce in una classificazione da 1 a 10. Imposta il `ORDER BY` clausola del `WINDOW` a `DESC` per garantire che un valore di classificazione di `1` viene assegnato al **più grande** all’interno della dimensione.
+I decili consentono di eseguire il bucket categoriale. Per creare il numero di classificazione, viene utilizzata la funzione `NTILE` con un parametro di `10` all&#39;interno di una FINESTRA raggruppata per il campo `loyaltyStatus`. Questo si traduce in una classificazione da 1 a 10. Impostare la clausola `ORDER BY` di `WINDOW` su `DESC` per garantire che venga assegnato un valore di classificazione di `1` alla metrica **most** nella dimensione.
 
 ```sql
 rankings_1 AS (
@@ -230,7 +230,7 @@ rankings_1 AS (
 
 #### Aggregazione mappa
 
-Con più periodi di lookback, devi creare in anticipo le mappe del decile bucket utilizzando `MAP_FROM_ARRAYS` e `COLLECT_LIST` funzioni. Nello snippet di esempio: `MAP_FROM_ARRAYS` crea una mappa con una coppia di chiavi (`loyaltyStatus`) e valori (`decileBucket`). `COLLECT_LIST` restituisce un array con tutti i valori nella colonna specificata.
+Con più periodi di lookback, devi creare in anticipo le mappe decile bucket utilizzando le funzioni `MAP_FROM_ARRAYS` e `COLLECT_LIST`. Nel frammento di esempio `MAP_FROM_ARRAYS` crea una mappa con una coppia di matrici di chiavi (`loyaltyStatus`) e valori (`decileBucket`). `COLLECT_LIST` restituisce un array con tutti i valori nella colonna specificata.
 
 ```sql
 map_1 AS (
@@ -247,7 +247,7 @@ map_1 AS (
 
 #### Identità univoche
 
-L’elenco delle identità univoche (`membershipNumber`) è necessario per creare un elenco univoco di tutte le appartenenze.
+L&#39;elenco di identità univoche (`membershipNumber`) è necessario per creare un elenco univoco di tutte le appartenenze.
 
 ```sql
 all_memberships AS (
@@ -257,7 +257,7 @@ all_memberships AS (
 
 >[!NOTE]
 >
->Se la classificazione decile è necessaria solo per un periodo di durata, questo passaggio può essere omesso e l’aggregazione può essere eseguita da `membershipNumber` possono essere eseguite nel passaggio finale.
+>Se la classificazione decile è necessaria solo per un periodo di durata, questo passaggio può essere omesso e l&#39;aggregazione da `membershipNumber` può essere eseguita nel passaggio finale.
 
 #### Unire tutti i dati temporanei
 
@@ -295,8 +295,8 @@ Nei risultati della query viene garantita una correlazione tra il numero di clas
 
 ### Eseguire il modello di query
 
-Esegui la query per popolare il set di dati decile. Puoi anche salvare la query come modello e pianificarla per l’esecuzione a una cadenza. Quando viene salvata come modello, la query può anche essere aggiornata per utilizzare il pattern di creazione e inserimento che fa riferimento al `table_exists` comando. Ulteriori informazioni su come utilizzare il `table_exists`Il comando si trova nel [Guida alla sintassi SQL](../sql/syntax.md#table-exists).
+Esegui la query per popolare il set di dati decile. Puoi anche salvare la query come modello e pianificarla per l’esecuzione a una cadenza. Quando viene salvata come modello, la query può anche essere aggiornata per utilizzare il modello di creazione e inserimento che fa riferimento al comando `table_exists`. Ulteriori informazioni sull&#39;utilizzo del comando `table_exists`sono disponibili nella [guida alla sintassi SQL](../sql/syntax.md#table-exists).
 
 ## Passaggi successivi
 
-Il caso d’uso di esempio fornito sopra evidenzia i passaggi per rendere disponibili i set di dati derivati basati su decile in Real-Time Customer Profile. Questo consente al servizio di segmentazione, tramite un’interfaccia utente o un’API RESTful, di generare tipi di pubblico in base a questi decile bucket. Consulta la [Panoramica del servizio di segmentazione](../../segmentation/home.md) per informazioni su come creare, valutare e accedere ai segmenti.
+Il caso d’uso di esempio fornito sopra evidenzia i passaggi per rendere disponibili i set di dati derivati basati su decile in Real-Time Customer Profile. Questo consente al servizio di segmentazione, tramite un’interfaccia utente o un’API RESTful, di generare tipi di pubblico in base a questi decile bucket. Per informazioni su come creare, valutare e accedere ai segmenti, consulta la [Panoramica del servizio di segmentazione](../../segmentation/home.md).

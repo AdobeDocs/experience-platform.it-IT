@@ -1,22 +1,22 @@
 ---
 solution: Experience Platform
-title: Supporto di browser e lingue per l’interfaccia utente di Experienci Platform
+title: Supporto di browser e lingue per l’interfaccia utente di Experience Platform
 description: Adobe Experience Platform è il sistema più potente, flessibile e aperto sul mercato per la creazione e la gestione di soluzioni complete che guidano la customer experience. Experience Platform consente alle organizzazioni di centralizzare e standardizzare i dati e i contenuti dei clienti da qualsiasi sistema, e di applicare tecniche di data science e apprendimento automatico al fine di migliorare la progettazione e la consegna di esperienze personalizzate.
 exl-id: 1b74aede-55df-4e81-8360-e49d1932b373
 source-git-commit: 9c46f2eeb563009da52acb629796ee9992136343
 workflow-type: tm+mt
-source-wordcount: '247'
-ht-degree: 25%
+source-wordcount: '251'
+ht-degree: 10%
 
 ---
 
-# Supporto di browser e lingue per l’interfaccia utente di Experienci Platform
+# Supporto di browser e lingue per l’interfaccia utente di Experience Platform
 
 L’interfaccia utente di Adobe Experience Platform è progettata per supportare più browser e lingue.
 
-## Supporto del browser
+## Supporto browser
 
-L’interfaccia utente di Platform è progettata per funzionare in modo ottimale in **versioni più recenti** di Google Chrome, Safari, Firefox e Microsoft Edge. Potresti riscontrare dei problemi durante l’utilizzo di alcune funzioni nelle versioni precedenti dei browser.
+L&#39;interfaccia utente di Platform è progettata per funzionare in modo ottimale nelle **versioni più recenti** di Google Chrome, Safari, Firefox e Microsoft Edge. Potresti riscontrare dei problemi durante l’utilizzo di alcune funzioni nelle versioni precedenti dei browser.
 
 | Sistema operativo | Browser supportati |
 |---|---|
@@ -30,7 +30,7 @@ I seguenti sistemi operativi e browser non sono supportati:
 * Internet Explorer 10
 * Opera
 
-## Supporto linguistico
+## Supporto delle lingue
 
 L’interfaccia utente di Platform è attualmente disponibile nelle seguenti lingue:
 
@@ -51,8 +51,8 @@ La lingua predefinita dell’interfaccia utente è determinata dalla regione spe
 
 Per cambiare lingua:
 
-1. Accedi al tuo account Experienci Platform.
-1. Premi `Ctrl + i` per visualizzare il menu informazioni account.
+1. Accedi al tuo account Experience Platform.
+1. Premere `Ctrl + i` per visualizzare il menu delle informazioni sull&#39;account.
 1. Vai a **[!UICONTROL Lingue preferite]**.
 1. Seleziona le preferenze per la prima e la seconda lingua.
 1. Seleziona **[!UICONTROL Salva]** e chiudi la finestra.

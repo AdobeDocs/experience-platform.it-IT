@@ -9,9 +9,9 @@ ht-degree: 3%
 
 ---
 
-# [!UICONTROL Dettagli applicazione] gruppo di campi schema
+# [!UICONTROL Dettagli applicazione] gruppo di campi dello schema
 
-[!UICONTROL Dettagli applicazione] è un gruppo di campi di schema standard per [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). Il gruppo di campi fornisce un singolo `application` oggetto in uno schema, che acquisisce dettagli relativi all’applicazione come arresti anomali, utilizzo della funzione, avvii e aggiornamenti.
+[!UICONTROL Dettagli applicazione] è un gruppo di campi dello schema standard per la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). Il gruppo di campi fornisce un singolo oggetto `application` a uno schema, che acquisisce dettagli relativi all&#39;applicazione come arresti anomali, utilizzo delle funzionalità, avvii e aggiornamenti.
 
 ![](../../images/field-groups/application-details.png)
 
@@ -21,4 +21,4 @@ ht-degree: 3%
 
 {style="table-layout:auto"}
 
-Per ulteriori dettagli sul gruppo di campi, consulta [archivio XDM pubblico](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-application.schema.json).
+Per ulteriori dettagli sul gruppo di campi, consulta l&#39;[archivio XDM pubblico](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-application.schema.json).

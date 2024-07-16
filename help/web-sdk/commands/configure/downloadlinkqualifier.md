@@ -1,7 +1,8 @@
 ---
 title: downloadLinkQualifier
 description: Consente di determinare in che modo il tracciamento automatico dei collegamenti qualifica i collegamenti di download.
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+exl-id: ef4f0ed4-83fc-485f-866d-f9ca15447ac8
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '228'
 ht-degree: 0%
@@ -10,25 +11,25 @@ ht-degree: 0%
 
 # `downloadLinkQualifier`
 
-Se abiliti il tracciamento automatico dei collegamenti utilizzando [`clickCollectionEnabled`](clickcollectionenabled.md), il `downloadLinkQualifier` Questa proprietà consente di determinare i criteri in base ai quali un URL deve essere considerato un collegamento di download.
+Se si abilita il tracciamento automatico dei collegamenti utilizzando [`clickCollectionEnabled`](clickcollectionenabled.md), la proprietà `downloadLinkQualifier` consente di determinare i criteri in base ai quali un URL può essere considerato un collegamento di download.
 
-Questa proprietà è una stringa regex. Se l’URL su cui è stato fatto clic corrisponde a questo regex, `xdm.web.webInteraction.type` è impostato su `"download"`. Anche i collegamenti sono immediatamente classificati come collegamenti di download se includono un `download` Attributo HTML. Se `clickCollectionEnabled` non è abilitato, questa proprietà non esegue alcuna operazione.
+Questa proprietà è una stringa regex. Se l&#39;URL su cui è stato fatto clic corrisponde a questo regex, `xdm.web.webInteraction.type` è impostato su `"download"`. Se includono un attributo HTML `download`, i collegamenti vengono immediatamente classificati come collegamento di download. Se `clickCollectionEnabled` non è abilitato, questa proprietà non esegue alcuna operazione.
 
 ## Scaricare il qualificatore di collegamento utilizzando l’estensione tag Web SDK
 
-Abilita **[!UICONTROL Abilita raccolta dati di clic]** , quindi immettere il testo desiderato in **[!UICONTROL Qualificatore collegamento di download]** quando [configurazione dell’estensione tag](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+Abilita la casella di controllo **[!UICONTROL Abilita raccolta dati su clic]**, quindi immetti il testo desiderato in **[!UICONTROL Scarica qualificatore collegamento]** durante la [configurazione dell&#39;estensione tag](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
-1. Accedi a [experience.adobe.com](https://experience.adobe.com) utilizzando le credenziali di Adobe ID.
-1. Accedi a **[!UICONTROL Raccolta dati]** > **[!UICONTROL Tag]**.
+1. Accedi a [experience.adobe.com](https://experience.adobe.com) utilizzando le credenziali Adobe ID.
+1. Passa a **[!UICONTROL Raccolta dati]** > **[!UICONTROL Tag]**.
 1. Seleziona la proprietà tag desiderata.
-1. Accedi a **[!UICONTROL Estensioni]**, quindi fai clic su **[!UICONTROL Configura]** il [!UICONTROL Adobe Experience Platform Web SDK] Card.
-1. Scorri verso il basso fino a [!UICONTROL Raccolta dati] , quindi selezionare la casella di controllo **[!UICONTROL Abilita raccolta dati di clic]**.
-1. Una volta abilitata, la funzione **[!UICONTROL Qualificatore collegamento di download]** viene visualizzata la casella di testo. Immetti il valore desiderato. Sono inoltre disponibili pulsanti per testare il regex e ripristinare il valore predefinito.
-1. Clic **[!UICONTROL Salva]**, quindi pubblica le modifiche.
+1. Passa a **[!UICONTROL Estensioni]**, quindi fai clic su **[!UICONTROL Configura]** nella scheda [!UICONTROL Adobe Experience Platform Web SDK].
+1. Scorri verso il basso fino alla sezione [!UICONTROL Raccolta dati], quindi seleziona la casella di controllo **[!UICONTROL Abilita raccolta dati su clic]**.
+1. Una volta abilitata, viene visualizzata la casella di testo **[!UICONTROL Qualificatore collegamento di download]**. Immetti il valore desiderato. Sono inoltre disponibili pulsanti per testare il regex e ripristinare il valore predefinito.
+1. Fai clic su **[!UICONTROL Salva]**, quindi pubblica le modifiche.
 
 ## Scaricare il qualificatore di collegamento utilizzando la libreria JavaScript dell’SDK per web
 
-Imposta il `downloadLinkQualifier` stringa durante l&#39;esecuzione di `configure` comando. Se si omette questa proprietà, verrà utilizzato il valore predefinito seguente:
+Impostare la stringa `downloadLinkQualifier` durante l&#39;esecuzione del comando `configure`. Se si omette questa proprietà, verrà utilizzato il valore predefinito seguente:
 
 `\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|doc|docx|xls|xlsx|ppt|pptx)$`
 

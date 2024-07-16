@@ -13,21 +13,21 @@ ht-degree: 0%
 
 Adobe Experience Platform Web SDK supporta Interactive Advertising Bureau Transparency &amp; Consent Framework, versione 2.0 (IAB TCF 2.0). Questa guida illustra come impostare una proprietà tag per inviare informazioni sul consenso IAB TCF 2.0 ad Adobe utilizzando l’estensione tag Adobe Experience Platform Web SDK.
 
-Se non desideri utilizzare i tag, consulta la guida su [utilizzo di IAB TCF 2.0 senza tag](./without-tags.md).
+Se non desideri utilizzare i tag, consulta la guida in [Utilizzo di IAB TCF 2.0 senza tag](./without-tags.md).
 
 ## Introduzione
 
 Per utilizzare IAB TCF 2.0 con i tag e l’estensione Platform Web SDK, è necessario disporre di uno schema XDM e di un set di dati.
 
-Inoltre, questa guida richiede una buona conoscenza di Adobe Experience Platform Web SDK. Per un rapido aggiornamento, leggere [Panoramica di Adobe Experience Platform Web SDK](../../home.md) e [Domande frequenti](../../faq.md) documentazione.
+Inoltre, questa guida richiede una buona conoscenza di Adobe Experience Platform Web SDK. Per un rapido aggiornamento, leggere la [panoramica di Adobe Experience Platform Web SDK](../../home.md) e la [documentazione sulle domande frequenti](../../faq.md).
 
 ## Impostazione del consenso predefinito
 
-Nella configurazione dell’estensione è presente un’impostazione per il consenso predefinito. Questo controlla il comportamento dei clienti che non hanno un cookie di consenso. Se desideri mettere in coda eventi esperienza per i clienti che non hanno un cookie di consenso, imposta questo su `pending`. Se desideri eliminare gli eventi esperienza per i clienti che non hanno un cookie di consenso, imposta questo su `out`. Puoi anche utilizzare un elemento dati per impostare dinamicamente il valore del consenso predefinito. Consulta [`defaultConsent`](/help/web-sdk/commands/configure/defaultconsent.md) per ulteriori informazioni.
+Nella configurazione dell’estensione è presente un’impostazione per il consenso predefinito. Questo controlla il comportamento dei clienti che non hanno un cookie di consenso. Se desideri mettere in coda eventi esperienza per i clienti che non hanno un cookie di consenso, imposta questo su `pending`. Se desideri eliminare gli eventi esperienza per i clienti che non hanno un cookie di consenso, imposta questo su `out`. Puoi anche utilizzare un elemento dati per impostare dinamicamente il valore del consenso predefinito. Per ulteriori informazioni, vedere [`defaultConsent`](/help/web-sdk/commands/configure/defaultconsent.md).
 
 ## Aggiornamento del profilo con le informazioni sul consenso {#consent-code-1}
 
-Per chiamare il [`setConsent`](/help/web-sdk/commands/setconsent.md) azione quando le preferenze di consenso dei clienti sono state modificate, crea una regola di tag. Per iniziare, aggiungi un nuovo evento e scegli il tipo di evento &quot;Custom Code&quot; dell’estensione Core.
+Per chiamare l&#39;azione [`setConsent`](/help/web-sdk/commands/setconsent.md) quando le preferenze di consenso dei clienti sono cambiate, crea una regola di tag. Per iniziare, aggiungi un nuovo evento e scegli il tipo di evento &quot;Custom Code&quot; dell’estensione Core.
 
 Utilizza il seguente esempio di codice per il nuovo evento:
 
@@ -53,7 +53,7 @@ addEventListener();
 
 Questo codice personalizzato esegue due operazioni:
 
-* Imposta due elementi di dati, uno con la stringa di consenso e uno con la `gdprApplies` flag. Ciò è utile in un secondo momento durante la compilazione dell’azione &quot;Imposta consenso&quot;.
+* Imposta due elementi dati, uno con la stringa di consenso e uno con il flag `gdprApplies`. Ciò è utile in un secondo momento durante la compilazione dell’azione &quot;Imposta consenso&quot;.
 
 * Attiva la regola quando le preferenze di consenso sono cambiate. Utilizza l’azione &quot;Imposta consenso&quot; ogni volta che le preferenze di consenso vengono modificate. Aggiungi un’azione &quot;Imposta consenso&quot; nell’estensione e compila il modulo come segue:
 
@@ -62,7 +62,7 @@ Questo codice personalizzato esegue due operazioni:
 * Valore: &quot;%IAB TCF Consent String%&quot;
 * Si applica il RGPD: &quot;%IAB TCF Consent RGPD%&quot;
 
-![IAB: imposta azione di consenso](../../assets/consent/iab-tcf/with-launch/iab-action.png)
+![Azione impostazione consenso IAB](../../assets/consent/iab-tcf/with-launch/iab-action.png)
 
 >[!IMPORTANT]
 >
@@ -70,17 +70,17 @@ Questo codice personalizzato esegue due operazioni:
 
 ## Creazione di un elemento dati XDM per eventi esperienza
 
-La stringa di consenso deve essere inclusa nell’evento esperienza XDM. A questo scopo, utilizza l’elemento dati Oggetto XDM. Inizia creando un nuovo elemento dati Oggetto XDM o, in alternativa, utilizzane uno già creato per l’invio di eventi. Se hai aggiunto il gruppo di campi dello schema Privacy dell’evento esperienza allo schema, dovresti disporre di un’ `consentStrings` chiave nell’oggetto XDM.
+La stringa di consenso deve essere inclusa nell’evento esperienza XDM. A questo scopo, utilizza l’elemento dati Oggetto XDM. Inizia creando un nuovo elemento dati Oggetto XDM o, in alternativa, utilizzane uno già creato per l’invio di eventi. Se hai aggiunto il gruppo di campi dello schema Privacy dell’evento esperienza allo schema, dovresti disporre di una chiave `consentStrings` nell’oggetto XDM.
 
 1. Seleziona **[!UICONTROL consentStrings]**.
 
-1. Scegli **[!UICONTROL Fornisci singoli elementi]** e seleziona **[!UICONTROL Aggiungi elemento]**.
+1. Scegliere **[!UICONTROL Fornisci singoli elementi]** e selezionare **[!UICONTROL Aggiungi elemento]**.
 
-1. Espandi **[!UICONTROL consentString]** ed espandere il primo elemento, quindi inserire i seguenti valori:
+1. Espandi l&#39;intestazione **[!UICONTROL consentString]**, espandi il primo elemento e compila i seguenti valori:
 
 * `consentStandard`: IAB TCF
 * `consentStandardVersion`: 2,0
-* `consentStringValue`: %IAB TCF Consent String%
+* `consentStringValue`: %IAB TCF stringa di consenso%
 * `gdprApplies`: %IAB TCF consenso RGPD%
 
 >[!IMPORTANT]
@@ -111,7 +111,7 @@ function addEventListener() {
 addEventListener();
 ```
 
-Questo codice è identico al codice personalizzato precedente, con la differenza che entrambi `useractioncomplete` e `tcloaded` vengono gestiti. Il [codice personalizzato precedente](#consent-code-1) viene attivato solo quando il cliente sceglie le sue preferenze per la prima volta. Questo codice si attiva anche quando il cliente ha già scelto le proprie preferenze. Ad esempio, al secondo caricamento della pagina.
+Questo codice è identico al codice personalizzato precedente, con la differenza che vengono gestiti sia gli eventi `useractioncomplete` che `tcloaded`. Il [codice personalizzato precedente](#consent-code-1) viene attivato solo quando il cliente sceglie le proprie preferenze per la prima volta. Questo codice si attiva anche quando il cliente ha già scelto le proprie preferenze. Ad esempio, al secondo caricamento della pagina.
 
 Aggiungi un’azione &quot;Invia evento&quot; dall’estensione Platform Web SDK. All’interno del campo XDM, scegli l’elemento dati XDM creato nella sezione precedente.
 
@@ -121,4 +121,4 @@ Quando gli eventi vengono attivati dopo l’evento esperienza iniziale, i due el
 
 ## Passaggi successivi
 
-Ora che hai imparato a utilizzare IAB TCF 2.0 con l’estensione Platform Web SDK, puoi anche scegliere di integrarla con altre soluzioni di Adobe come Adobe Analytics o Adobe Real-time Customer Data Platform. Consulta la [Panoramica di IAB Transparency &amp; Consent Framework 2.0](./overview.md) per ulteriori informazioni.
+Ora che hai imparato a utilizzare IAB TCF 2.0 con l’estensione Platform Web SDK, puoi anche scegliere di integrarla con altre soluzioni di Adobe come Adobe Analytics o Adobe Real-time Customer Data Platform. Per ulteriori informazioni, consulta la [panoramica su IAB Transparency &amp; Consent Framework 2.0](./overview.md).

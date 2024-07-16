@@ -95,7 +95,7 @@ Quando crei o modifichi elementi, puoi salvarli e generarli nella [libreria atti
 >
 >I tipi di elementi dati sono determinati dall&#39;estensione. Non vi sono limiti ai tipi che è possibile creare.
 
-Nelle sezioni seguenti sono descritti i tipi di elementi dati disponibili in **Estensione core**. Altre estensioni utilizzano altri tipi di elementi dati.
+Nelle sezioni seguenti vengono descritti i tipi di elementi dati disponibili nell&#39;estensione **Core**. Altre estensioni utilizzano altri tipi di elementi dati.
 
 ### Cookie
 
@@ -139,7 +139,7 @@ Puoi utilizzarlo negli script personalizzati con la sintassi dell’oggetto `_sa
 var rule = _satellite.getVar('return event rule', event);
 ```
 
-Quando si utilizza la percentuale (`%`), è sufficiente specificare il nome dell’elemento dati. Non c’è bisogno di specificare `event`.
+Quando si utilizza la sintassi percentuale (`%`), è necessario specificare solo il nome dell&#39;elemento dati. Non c’è bisogno di specificare `event`.
 
 ```text
 %data element name%

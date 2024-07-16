@@ -11,28 +11,28 @@ ht-degree: 1%
 
 # Impostare le identità primarie in un set di dati ad hoc
 
-Adobe Experience Platform Query Service consente di contrassegnare le colonne dei set di dati come identità primarie o secondarie utilizzando i vincoli per SQL `ALTER TABLE` comando. Puoi utilizzare questa funzione per garantire che i campi contrassegnati siano coerenti con i requisiti sulla privacy dei dati. Questo comando consente di aggiungere o eliminare vincoli per le colonne della tabella delle identità primaria e secondaria direttamente tramite SQL.
+Adobe Experience Platform Query Service consente di contrassegnare le colonne dei set di dati come identità primarie o secondarie utilizzando i vincoli per il comando SQL `ALTER TABLE`. Puoi utilizzare questa funzione per garantire che i campi contrassegnati siano coerenti con i requisiti sulla privacy dei dati. Questo comando consente di aggiungere o eliminare vincoli per le colonne della tabella delle identità primaria e secondaria direttamente tramite SQL.
 
 ## Introduzione
 
-Per etichettare le colonne dei set di dati come identità primaria o secondaria è necessario conoscere `ALTER TABLE` Comando SQL e buona comprensione dei requisiti di privacy dei dati. Prima di continuare con questo documento, consulta la seguente documentazione:
+Per etichettare le colonne del set di dati come identità primaria o secondaria è necessario conoscere il comando SQL `ALTER TABLE` e comprendere correttamente i requisiti di privacy dei dati. Prima di continuare con questo documento, consulta la seguente documentazione:
 
-* [La guida alla sintassi SQL per `ALTER TABLE` comando](../sql/syntax.md).
+* [Guida alla sintassi SQL per il comando `ALTER TABLE`](../sql/syntax.md).
 * [Panoramica sulla governance dei dati](../../data-governance/home.md) per ulteriori informazioni.
 
 ## Aggiungere vincoli {#add-constraints}
 
-Il `ALTER TABLE` Questo comando consente di etichettare una colonna di set di dati come identità di una persona e quindi di utilizzarla come identità primaria aggiornando i metadati associati tramite SQL. Questa funzione è particolarmente utile quando i set di dati vengono creati tramite SQL anziché direttamente da uno schema tramite l’interfaccia utente di Platform. Il comando può essere utilizzato per garantire che le operazioni sui dati in Platform siano conformi ai criteri di utilizzo dei dati.
+Il comando `ALTER TABLE` consente di etichettare una colonna di set di dati come identità di una persona e quindi di utilizzare tale etichetta come identità primaria aggiornando i metadati associati tramite SQL. Questa funzione è particolarmente utile quando i set di dati vengono creati tramite SQL anziché direttamente da uno schema tramite l’interfaccia utente di Platform. Il comando può essere utilizzato per garantire che le operazioni sui dati in Platform siano conformi ai criteri di utilizzo dei dati.
 
 **Esempi**
 
-Nell&#39;esempio seguente viene aggiunto un vincolo al `t1` tabella. I valori di `id` sono ora contrassegnate come identità primarie sotto il `IDFA` spazio dei nomi. Uno spazio dei nomi di identità è una parola chiave che dichiara il tipo di dati di identità che il campo rappresenta.
+Nell&#39;esempio seguente viene aggiunto un vincolo alla tabella `t1` esistente. I valori della colonna `id` sono ora contrassegnati come identità primarie nello spazio dei nomi `IDFA`. Uno spazio dei nomi di identità è una parola chiave che dichiara il tipo di dati di identità che il campo rappresenta.
 
 ```sql
 ALTER TABLE t1 ADD CONSTRAINT PRIMARY IDENTITY (id) NAMESPACE 'IDFA';
 ```
 
-Il secondo esempio assicura che `id` è contrassegnata come identità secondaria.
+Il secondo esempio assicura che la colonna `id` sia contrassegnata come identità secondaria.
 
 ```sql
 ALTER TABLE t1 ADD CONSTRAINT IDENTITY(id) NAMESPACE 'IDFA';
@@ -40,11 +40,11 @@ ALTER TABLE t1 ADD CONSTRAINT IDENTITY(id) NAMESPACE 'IDFA';
 
 ## Elimina vincoli {#drop-constraints}
 
-I vincoli possono essere rimossi anche dalle colonne della tabella utilizzando `ALTER TABLE` comando.
+I vincoli possono essere rimossi anche dalle colonne della tabella utilizzando il comando `ALTER TABLE`.
 
 **Esempi**
 
-Nell&#39;esempio seguente viene rimosso il requisito che `c1` colonna deve essere etichettata come identità primaria nella `t1` tabella.
+Nell&#39;esempio seguente viene rimosso il requisito che la colonna `c1` sia etichettata come identità primaria nella tabella `t1` esistente.
 
 ```sql
 ALTER TABLE t1 DROP CONSTRAINT PRIMARY IDENTITY (c1) ;
@@ -58,7 +58,7 @@ ALTER TABLE t1 DROP CONSTRAINT IDENTITY (c1) ;
 
 ## Mostra identità
 
-Usa il comando metadati `show identities` dall’interfaccia della riga di comando per visualizzare una tabella con tutti gli attributi assegnati come identità.
+Utilizzare il comando metadati `show identities` dall&#39;interfaccia della riga di comando per visualizzare una tabella con tutti gli attributi assegnati come identità.
 
 ```shell
 > show identities;
@@ -76,6 +76,6 @@ Di seguito è riportato un esempio di tabella restituita.
 
 L’elenco seguente spiega considerazioni importanti per l’aggiornamento delle identità nei set di dati esistenti quando si utilizza XDM.
 
-* Per specificare una colonna come identità, **deve** definisci anche lo spazio dei nomi da mantenere come metadati per la colonna.
+* Per specificare una colonna come identità, **è necessario** definire anche lo spazio dei nomi da mantenere come metadati per la colonna.
 * XDM non supporta la specifica di un nome di colonna nell’attributo namespace.
-* Se lo schema utilizza `identityMap` Campo XDM, radice o livello principale `identityMap` oggetto **deve** essere etichettati come identità o identità primaria.
+* Se lo schema utilizza il campo XDM `identityMap`, l&#39;oggetto **principale o di primo livello `identityMap` deve** essere etichettato come identità o identità primaria.

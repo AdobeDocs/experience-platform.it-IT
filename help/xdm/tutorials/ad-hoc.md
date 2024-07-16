@@ -7,29 +7,29 @@ type: Tutorial
 exl-id: bef01000-909a-4594-8cf4-b9dbe0b358d5
 source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
-source-wordcount: '819'
+source-wordcount: '815'
 ht-degree: 3%
 
 ---
 
 # Creare uno schema ad hoc
 
-In circostanze specifiche, può essere necessario creare un [!DNL Experience Data Model] (XDM) con campi a cui viene assegnato un namespace per l’utilizzo solo da un singolo set di dati. Questo viene definito schema &quot;ad hoc&quot;. Gli schemi ad hoc vengono utilizzati in vari flussi di lavoro di acquisizione dati per [!DNL Experience Platform], inclusa l’acquisizione di file CSV e la creazione di alcuni tipi di connessioni sorgente.
+In circostanze specifiche, potrebbe essere necessario creare uno schema [!DNL Experience Data Model] (XDM) con campi a cui viene assegnato un namespace per l&#39;utilizzo solo da un singolo set di dati. Questo viene definito schema &quot;ad hoc&quot;. Gli schemi ad hoc vengono utilizzati in vari flussi di lavoro di acquisizione dati per [!DNL Experience Platform], inclusa l&#39;acquisizione di file CSV e la creazione di alcuni tipi di connessioni di origine.
 
-Questo documento descrive i passaggi generali per la creazione di uno schema ad hoc tramite [API del registro dello schema](https://www.adobe.io/experience-platform-apis/references/schema-registry/). È destinato ad essere utilizzato in combinazione con altri [!DNL Experience Platform] esercitazioni che richiedono la creazione di uno schema ad hoc come parte del flusso di lavoro. Ciascuno di questi documenti fornisce informazioni dettagliate su come configurare correttamente uno schema ad hoc per il relativo caso d’uso specifico.
+In questo documento vengono illustrati i passaggi generali per la creazione di uno schema ad hoc tramite l&#39;API [Schema Registry](https://www.adobe.io/experience-platform-apis/references/schema-registry/). È destinato a essere utilizzato insieme ad altre esercitazioni di [!DNL Experience Platform] che richiedono la creazione di uno schema ad hoc come parte del flusso di lavoro. Ciascuno di questi documenti fornisce informazioni dettagliate su come configurare correttamente uno schema ad hoc per il relativo caso d’uso specifico.
 
 ## Introduzione
 
-Questo tutorial richiede una buona conoscenza di [!DNL Experience Data Model] (XDM). Prima di iniziare questo tutorial, consulta la seguente documentazione XDM:
+Questo tutorial richiede una buona conoscenza del sistema [!DNL Experience Data Model] (XDM). Prima di iniziare questo tutorial, consulta la seguente documentazione XDM:
 
 - [Panoramica del sistema XDM](../home.md): panoramica di alto livello di XDM e della relativa implementazione in [!DNL Experience Platform].
 - [Nozioni di base sulla composizione dello schema](../schema/composition.md): panoramica dei componenti di base degli schemi XDM.
 
-Prima di iniziare questo tutorial, controlla [guida per sviluppatori](../api/getting-started.md) per informazioni importanti che è necessario conoscere per effettuare correttamente chiamate al [!DNL Schema Registry] API. Ciò include `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni necessarie per effettuare le richieste (con particolare attenzione all’intestazione Accept e ai suoi possibili valori).
+Prima di iniziare questo tutorial, consulta la [guida per gli sviluppatori](../api/getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente le chiamate all&#39;API [!DNL Schema Registry]. Ciò include `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni necessarie per effettuare le richieste (con particolare attenzione all&#39;intestazione Accept e ai suoi possibili valori).
 
 ## Creare una classe ad hoc
 
-Il comportamento dei dati di uno schema XDM è determinato dalla relativa classe sottostante. Il primo passaggio nella creazione di uno schema ad hoc consiste nel creare una classe basata su `adhoc` comportamento. A tale scopo, invia una richiesta POST al `/tenant/classes` endpoint.
+Il comportamento dei dati di uno schema XDM è determinato dalla relativa classe sottostante. Il primo passaggio nella creazione di uno schema ad hoc consiste nel creare una classe basata sul comportamento `adhoc`. A tale scopo, effettuare una richiesta POST all&#39;endpoint `/tenant/classes`.
 
 **Formato API**
 
@@ -39,11 +39,11 @@ POST /tenant/classes
 
 **Richiesta**
 
-La richiesta seguente crea una nuova classe XDM, configurata dagli attributi forniti nel payload. Fornendo un `$ref` proprietà impostata su `https://ns.adobe.com/xdm/data/adhoc` nel `allOf` questa classe eredita il `adhoc` comportamento. La richiesta definisce anche `_adhoc` oggetto, che contiene i campi personalizzati per la classe.
+La richiesta seguente crea una nuova classe XDM, configurata dagli attributi forniti nel payload. Specificando una proprietà `$ref` impostata su `https://ns.adobe.com/xdm/data/adhoc` nell&#39;array `allOf`, questa classe eredita il comportamento `adhoc`. La richiesta definisce anche un oggetto `_adhoc` contenente i campi personalizzati per la classe.
 
 >[!NOTE]
 >
->I campi personalizzati definiti in `_adhoc` varia a seconda del caso di utilizzo dello schema ad hoc. Fai riferimento al flusso di lavoro specifico nell’esercitazione appropriata per i campi personalizzati richiesti in base al caso d’uso.
+>I campi personalizzati definiti in `_adhoc` variano a seconda del caso di utilizzo dello schema ad hoc. Fai riferimento al flusso di lavoro specifico nell’esercitazione appropriata per i campi personalizzati richiesti in base al caso d’uso.
 
 ```shell
 curl -X POST \
@@ -89,7 +89,7 @@ curl -X POST \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce i dettagli della nuova classe, sostituendo `properties._adhoc` il nome dell&#39;oggetto con un GUID che è un identificatore univoco di sola lettura generato dal sistema per la classe. Il `meta:datasetNamespace` viene generato automaticamente e incluso nella risposta.
+In caso di esito positivo, la risposta restituisce i dettagli della nuova classe, sostituendo il nome dell&#39;oggetto `properties._adhoc` con un GUID generato dal sistema e di sola lettura come identificatore univoco della classe. Anche l&#39;attributo `meta:datasetNamespace` viene generato automaticamente e incluso nella risposta.
 
 ```json
 {
@@ -152,7 +152,7 @@ In caso di esito positivo, la risposta restituisce i dettagli della nuova classe
 
 ## Creare uno schema ad hoc
 
-Dopo aver creato una classe ad hoc, puoi creare un nuovo schema che implementa tale classe effettuando una richiesta POST al `/tenant/schemas` endpoint.
+Dopo aver creato una classe ad hoc, è possibile creare un nuovo schema che implementa tale classe effettuando una richiesta POST all&#39;endpoint `/tenant/schemas`.
 
 **Formato API**
 
@@ -162,7 +162,7 @@ POST /tenant/schemas
 
 **Richiesta**
 
-La richiesta seguente crea un nuovo schema, fornendo un riferimento (`$ref`) al `$id` della classe ad hoc creata in precedenza nel relativo payload.
+La richiesta seguente crea un nuovo schema, fornendo un riferimento (`$ref`) a `$id` della classe ad hoc creata in precedenza nel suo payload.
 
 ```shell
 curl -X POST \
@@ -186,7 +186,7 @@ curl -X POST \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce i dettagli dello schema appena creato, incluso il relativo schema generato dal sistema e di sola lettura `$id`.
+In caso di esito positivo, la risposta restituisce i dettagli dello schema appena creato, incluso il relativo `$id` di sola lettura generato dal sistema.
 
 ```json
 {
@@ -227,7 +227,7 @@ In caso di esito positivo, la risposta restituisce i dettagli dello schema appen
 
 >[!NOTE]
 >
->Questo passaggio è facoltativo. Se non desideri esaminare la struttura dei campi dello schema ad hoc, puoi passare alla sezione [passaggi successivi](#next-steps) alla fine di questa esercitazione.
+>Questo passaggio è facoltativo. Se non desideri controllare la struttura dei campi dello schema ad hoc, puoi passare alla sezione [passaggi successivi](#next-steps) alla fine di questa esercitazione.
 
 Una volta creato lo schema ad hoc, puoi effettuare una richiesta di ricerca (GET) per visualizzare lo schema nel relativo modulo espanso. A tale scopo, utilizza l’intestazione Accept appropriata nella richiesta GET, come dimostrato di seguito.
 
@@ -239,13 +239,13 @@ GET /tenant/schemas/{SCHEMA_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{SCHEMA_ID}` | Codifica URL `$id` URI o `meta:altId` dello schema ad hoc a cui desideri accedere. |
+| `{SCHEMA_ID}` | URI `$id` con codifica URL o `meta:altId` dello schema ad hoc a cui si desidera accedere. |
 
 {style="table-layout:auto"}
 
 **Richiesta**
 
-La richiesta seguente utilizza l’intestazione Accept `application/vnd.adobe.xed-full+json; version=1`, che restituisce il modulo espanso dello schema. Tieni presente che quando recuperi una risorsa specifica da [!DNL Schema Registry], l’intestazione Accept della richiesta deve includere la versione principale della risorsa in questione.
+La richiesta seguente utilizza l&#39;intestazione Accept `application/vnd.adobe.xed-full+json; version=1`, che restituisce il modulo espanso dello schema. Quando si recupera una risorsa specifica da [!DNL Schema Registry], l&#39;intestazione Accept della richiesta deve includere la versione principale della risorsa in questione.
 
 ```shell
 curl -X GET \
@@ -309,6 +309,6 @@ In caso di esito positivo, la risposta restituisce i dettagli dello schema, incl
 
 ## Passaggi successivi {#next-steps}
 
-Seguendo questa esercitazione, hai creato un nuovo schema ad hoc. Se hai visitato questo documento come parte di un&#39;altra esercitazione, ora puoi utilizzare `$id` dello schema ad hoc per completare il flusso di lavoro come indicato.
+Seguendo questa esercitazione, hai creato un nuovo schema ad hoc. Se sei stato portato a questo documento come parte di un&#39;altra esercitazione, ora puoi utilizzare `$id` dello schema ad hoc per completare il flusso di lavoro come indicato.
 
-Per ulteriori informazioni sull&#39;utilizzo di [!DNL Schema Registry] API, fare riferimento al [guida per sviluppatori](../api/getting-started.md).
+Per ulteriori informazioni sull&#39;utilizzo dell&#39;API [!DNL Schema Registry], fare riferimento alla [guida per gli sviluppatori](../api/getting-started.md).

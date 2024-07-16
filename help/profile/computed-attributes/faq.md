@@ -4,7 +4,7 @@ description: Risposte alle domande frequenti sull’utilizzo degli attributi cal
 exl-id: a4d3c06a-d135-453b-9637-4f98e62737a7
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1090'
+source-wordcount: '1083'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ In Adobe Experience Platform, gli attributi calcolati sono funzioni utilizzate p
 
 ## Come posso accedere agli attributi calcolati?
 
-Per accedere agli attributi calcolati, devi disporre delle autorizzazioni appropriate (**Visualizza attributi calcolati** e **Gestisci attributi calcolati**). Per ulteriori informazioni sulle autorizzazioni necessarie, leggere [documentazione sul controllo degli accessi](../../access-control/home.md). Per informazioni su come applicare queste autorizzazioni, leggi [guida alla gestione delle autorizzazioni](../../access-control/ui/permissions.md).
+Per accedere agli attributi calcolati, devi disporre delle autorizzazioni appropriate (**Visualizza attributi calcolati** e **Gestisci attributi calcolati**). Per ulteriori informazioni sulle autorizzazioni richieste, leggere la [documentazione sul controllo degli accessi](../../access-control/home.md). Per informazioni su come applicare queste autorizzazioni, leggere la [guida alla gestione delle autorizzazioni](../../access-control/ui/permissions.md).
 
 ## Quali set di dati contribuiscono ai calcoli degli attributi calcolati?
 
@@ -31,17 +31,17 @@ L’ultima valutazione si riferisce alla marca temporale fino alla quale gli eve
 
 ## È possibile scegliere la frequenza di aggiornamento? Come si decide?
 
-La frequenza di aggiornamento viene determinata automaticamente in base al periodo di lookback dell’attributo calcolato. Per ulteriori informazioni, leggere la [sezione periodo di lookback](./overview.md#lookback-periods) della panoramica degli attributi calcolati.
+La frequenza di aggiornamento viene determinata automaticamente in base al periodo di lookback dell’attributo calcolato. Per ulteriori informazioni, consulta la [sezione Periodo di lookback](./overview.md#lookback-periods) della panoramica degli attributi calcolati.
 
 ## In che modo i calcoli sono influenzati dalle scadenze dei dati di Experience Event?
 
 I calcoli degli attributi calcolati vengono recuperati per la durata del lookback definita nella prima valutazione e aggiornati in base agli eventi incrementali per gli aggiornamenti successivi. Di conseguenza, questi calcoli sono **non** interessati dalle scadenze dei dati Experience Event dei vecchi dati dopo la prima valutazione.
 
-Ad esempio, se crei un attributo calcolato valutato mensilmente con un periodo di lookback di tre mesi, per la prima valutazione l’attributo calcolato calcolerà tutti gli eventi entro tale periodo di lookback di tre mesi. Anche se il set di dati Experience Event ha una scadenza di dati di un mese, questa scadenza sarà **non** influisce sull’aggiornamento mensile degli attributi calcolati, in quanto l’esecuzione della valutazione del mese successivo aggregherà in modo incrementale gli eventi e aggiornerà il calcolo.
+Ad esempio, se crei un attributo calcolato valutato mensilmente con un periodo di lookback di tre mesi, per la prima valutazione l’attributo calcolato calcolerà tutti gli eventi entro tale periodo di lookback di tre mesi. Anche se la scadenza dei dati del set di dati Experience Event è un mese, questa scadenza dei dati **non** influirà sull&#39;aggiornamento mensile degli attributi calcolati, poiché l&#39;esecuzione della valutazione del mese successivo aggregherà in modo incrementale gli eventi e aggiornerà il calcolo.
 
 >[!NOTE]
 >
->Dati scaduti **non può** viene recuperato in un secondo momento da un attributo calcolato. Scadenza dei dati del set di dati evento **maggio** ha limitato la possibilità di convalidare il valore dell’attributo calcolato in un momento successivo. Per convalidare il valore dell’attributo calcolato, il periodo di lookback deve rimanere **entro** i limiti delle scadenze dei dati.
+>I dati scaduti **non possono** essere recuperati in un secondo momento da un attributo calcolato. La scadenza dei dati del set di dati dell&#39;evento **maggio** ha limitato la possibilità di convalidare il valore dell&#39;attributo calcolato in un momento successivo. Per convalidare il valore dell&#39;attributo calcolato, il periodo di lookback deve rimanere **entro** i limiti delle scadenze dei dati.
 
 ## È possibile creare un attributo calcolato basato su un altro attributo calcolato?
 
@@ -53,11 +53,11 @@ Sì, esiste un limite al numero di attributi calcolati che è possibile creare. 
 
 ## Esistono implicazioni a valle per la disabilitazione di un attributo calcolato?
 
-Prima di disabilitare l’attributo calcolato, **dovrebbe** rimuovile dai sistemi a valle (ad esempio segmentazione, percorsi o destinazioni), in quanto potrebbero verificarsi complicazioni se non vengono rimosse.
+Prima di disabilitare l&#39;attributo calcolato, **devi** rimuoverlo dai sistemi a valle (come segmentazione, percorsi o destinazioni), poiché potrebbero verificarsi complicazioni se non viene rimosso.
 
 ## Cosa succede quando disattivi un attributo calcolato? {#inactive-status}
 
-Quando un attributo calcolato viene disabilitato o reso inattivo, non viene più aggiornato. Di conseguenza, questo attributo calcolato **non può** essere utilizzati nella ricerca di profili o in altri utilizzi a valle.
+Quando un attributo calcolato viene disabilitato o reso inattivo, non viene più aggiornato. Di conseguenza, questo attributo calcolato **non può** essere utilizzato nella ricerca di profili o in altri utilizzi a valle.
 
 ## In che modo gli attributi calcolati aiutano a stimolare il coinvolgimento?
 
@@ -65,9 +65,9 @@ Gli attributi calcolati favoriscono l’arricchimento del profilo aggregando gli
 
 ## Con quale frequenza vengono valutati gli attributi calcolati? È correlato alla pianificazione di valutazione del pubblico?
 
-Gli attributi calcolati vengono valutati in un **batch** frequenza **indipendente** alla pianificazione della valutazione di pubblico, destinazione e percorso. Ciò significa che indipendentemente dal tipo di segmentazione (segmentazione batch o segmentazione in streaming), l’attributo calcolato verrà valutato sulla propria pianificazione (oraria, giornaliera, settimanale o mensile).
+Gli attributi calcolati vengono valutati in una frequenza **batch** **indipendente** rispetto alla pianificazione della valutazione del pubblico, della destinazione e del percorso. Ciò significa che indipendentemente dal tipo di segmentazione (segmentazione batch o segmentazione in streaming), l’attributo calcolato verrà valutato sulla propria pianificazione (oraria, giornaliera, settimanale o mensile).
 
-La prima valutazione dell’attributo calcolato viene eseguita entro 24 ore dalla **creazione**. Le valutazioni batch successive vengono eseguite su base oraria, giornaliera, settimanale o mensile a seconda del periodo di lookback definito.
+La prima valutazione dell&#39;attributo calcolato viene eseguita entro le 24 ore successive alla sua **creazione**. Le valutazioni batch successive vengono eseguite su base oraria, giornaliera, settimanale o mensile a seconda del periodo di lookback definito.
 
 Ad esempio, se la prima valutazione si verifica alle 12:00 UTC del 9 ottobre, le valutazioni successive si verificheranno nei seguenti orari:
 
@@ -77,21 +77,21 @@ Ad esempio, se la prima valutazione si verifica alle 12:00 UTC del 9 ottobre, le
 
 >[!IMPORTANT]
 >
->Questo è il caso solo se l’aggiornamento rapido è **non** abilitato. Per scoprire come cambia il periodo di lookback quando è abilitato l’aggiornamento rapido, leggi [sezione aggiornamento rapido](./overview.md#fast-refresh).
+>Questo accade solo se l&#39;aggiornamento rapido è abilitato per **not**. Per informazioni sulle modifiche del periodo di lookback quando è abilitato l&#39;aggiornamento rapido, leggere la [sezione sull&#39;aggiornamento rapido](./overview.md#fast-refresh).
 
-Entrambe **ogni settimana** e **mensile** gli aggiornamenti hanno luogo all&#39;inizio del **settimana del calendario** (la domenica della nuova settimana) o l&#39;inizio della **mese del calendario** (il primo del nuovo mese), anziché esattamente una settimana o un mese dopo la data della prima valutazione.
+Entrambi gli aggiornamenti di **weekly** e **month** hanno luogo all&#39;inizio della **settimana** del calendario (la domenica della nuova settimana) o all&#39;inizio del **mese** del calendario (il primo del nuovo mese), anziché esattamente una settimana o un mese dopo la prima data di valutazione.
 
 >[!NOTE]
 >
->Il valore attributo calcolato è **non** aggiornato immediatamente nel profilo dopo ogni esecuzione della valutazione. Per garantire che il valore aggiornato sia presente nei profili, è necessario considerare un buffer di alcune ore tra il tempo di valutazione e l’utilizzo degli attributi calcolati. La pianificazione dell&#39;aggiornamento degli attributi calcolati è **determinato dal sistema** e **non può** essere modificata. Per ulteriori informazioni, contatta l’Assistenza clienti Adobe.
+>Il valore dell&#39;attributo calcolato è **not** aggiornato immediatamente nel profilo dopo ogni esecuzione della valutazione. Per garantire che il valore aggiornato sia presente nei profili, è necessario considerare un buffer di alcune ore tra il tempo di valutazione e l’utilizzo degli attributi calcolati. La pianificazione dell&#39;aggiornamento degli attributi calcolati è **determinata dal sistema** e **non può** essere modificata. Per ulteriori informazioni, contatta l’Assistenza clienti Adobe.
 
 ## Come interagiscono gli attributi calcolati con i tipi di pubblico valutati utilizzando la segmentazione in streaming?
 
-Se un pubblico valutato mediante segmentazione in streaming utilizza un attributo calcolato, sarà necessario **valore più recente** dell’attributo calcolato durante la valutazione del pubblico. Ad esempio, se il pubblico cerca eventi di acquisto, al momento dell’evento di acquisto farà riferimento all’ultimo valore dell’attributo calcolato valutato.
+Se un pubblico valutato mediante segmentazione in streaming utilizza un attributo calcolato, durante la valutazione del pubblico verrà utilizzato il **valore più recente** dell&#39;attributo calcolato. Ad esempio, se il pubblico cerca eventi di acquisto, al momento dell’evento di acquisto farà riferimento all’ultimo valore dell’attributo calcolato valutato.
 
 ## Posso utilizzare attributi calcolati su Edge?
 
-Come qualsiasi altro attributo di profilo, gli attributi calcolati sono disponibili e possono essere utilizzati sugli spigoli. Gli attributi calcolati sono **non** calcolato sul server Edge.
+Come qualsiasi altro attributo di profilo, gli attributi calcolati sono disponibili e possono essere utilizzati sugli spigoli. Si noti che gli attributi calcolati sono **non** calcolati sul server Edge.
 
 ## Come vengono applicate le etichette di utilizzo dei dati sugli attributi calcolati?
 
@@ -99,4 +99,4 @@ Gli attributi calcolati derivano automaticamente le etichette di utilizzo dei da
 
 ## Come si utilizzano gli attributi calcolati con Adobe Journey Optimizer?
 
-Per utilizzare gli attributi calcolati nei percorsi, devi aggiungere `SystemComputedAttributes` all&#39;origine dati di Experience Platform. Per ulteriori informazioni sulla configurazione dell’origine dati di Experienci Platform, consulta [Guida all’origine dati di Adobe Experience Platform](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html).
+Per utilizzare gli attributi calcolati nei percorsi, è necessario aggiungere il gruppo di campi `SystemComputedAttributes` all&#39;origine dati Experience Platform. Per ulteriori informazioni sulla configurazione dell&#39;origine dati Experience Platform, leggere la [guida all&#39;origine dati di Adobe Experience Platform](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html).

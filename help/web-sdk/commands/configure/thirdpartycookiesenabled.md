@@ -14,29 +14,29 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Google [ha annunciato](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout) pianifica di interrompere il supporto di Chrome per i cookie di terze parti nella seconda metà del 2024. Di conseguenza, i cookie di terze parti non saranno più supportati in nessuno dei principali browser.
+>Google [ha annunciato](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout) l&#39;intenzione di interrompere il supporto di Chrome per i cookie di terze parti nella seconda metà del 2024. Di conseguenza, i cookie di terze parti non saranno più supportati in nessuno dei principali browser.
 >
->Quando questa modifica viene implementata, Adobe interromperà il supporto per `demdex` cookie attualmente supportato nell’SDK per web.
+>Quando questa modifica verrà implementata, Adobe interromperà il supporto per il cookie `demdex` attualmente supportato nell&#39;SDK Web.
 
 
-Il `thirdPartyCookiesEnabled` proprietà booleana che determina se Web SDK imposta i cookie in un contesto di terze parti. L’abilitazione di questa opzione è utile se desideri identificare i visitatori tra i sottodomini o i domini di cui è proprietaria la tua organizzazione. Tuttavia, molti browser moderni limitano l’impostazione e la scadenza dei cookie di terze parti.
+La proprietà `thirdPartyCookiesEnabled` è un valore booleano che determina se Web SDK imposta i cookie in un contesto di terze parti. L’abilitazione di questa opzione è utile se desideri identificare i visitatori tra i sottodomini o i domini di cui è proprietaria la tua organizzazione. Tuttavia, molti browser moderni limitano l’impostazione e la scadenza dei cookie di terze parti.
 
-Quando questa opzione è abilitata, l’SDK web utilizza Adobe Audience Manager per identificare un visitatore. Quando questa opzione è disabilitata, la chiamata all’Audience Manager è disabilitata. Consulta [Informazioni sulle chiamate al dominio Demdex](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html?lang=it) per ulteriori informazioni, consulta la guida utente di Audienci Manager.
+Quando questa opzione è abilitata, l’SDK web utilizza Adobe Audience Manager per identificare un visitatore. Quando questa opzione è disabilitata, la chiamata all’Audience Manager è disabilitata. Per ulteriori informazioni, consulta [Informazioni sulle chiamate al dominio Demdex](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html?lang=it) nella guida utente di Audience Manager.
 
 ## Abilitare i cookie di terze parti tramite l’estensione tag Web SDK
 
-Seleziona la **[!UICONTROL Utilizzare i cookie di terze parti]** casella di controllo [configurazione dell’estensione tag](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+Selezionare la casella di controllo **[!UICONTROL Utilizza cookie di terze parti]** durante la [configurazione dell&#39;estensione tag](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
-1. Accedi a [experience.adobe.com](https://experience.adobe.com) utilizzando le credenziali di Adobe ID.
-1. Accedi a **[!UICONTROL Raccolta dati]** > **[!UICONTROL Tag]**.
+1. Accedi a [experience.adobe.com](https://experience.adobe.com) utilizzando le credenziali Adobe ID.
+1. Passa a **[!UICONTROL Raccolta dati]** > **[!UICONTROL Tag]**.
 1. Seleziona la proprietà tag desiderata.
-1. Accedi a **[!UICONTROL Estensioni]**, quindi fai clic su **[!UICONTROL Configura]** il [!UICONTROL Adobe Experience Platform Web SDK] Card.
-1. Scorri verso il basso fino a [!UICONTROL Identità] , quindi selezionare la casella di controllo **[!UICONTROL Utilizzare i cookie di terze parti]**.
-1. Clic **[!UICONTROL Salva]**, quindi pubblica le modifiche.
+1. Passa a **[!UICONTROL Estensioni]**, quindi fai clic su **[!UICONTROL Configura]** nella scheda [!UICONTROL Adobe Experience Platform Web SDK].
+1. Scorri verso il basso fino alla sezione [!UICONTROL Identity], quindi seleziona la casella di controllo **[!UICONTROL Use third-party cookies]**.
+1. Fai clic su **[!UICONTROL Salva]**, quindi pubblica le modifiche.
 
-## Abilitare i cookie di terze parti utilizzando la libreria JavaScript dell’SDK per web
+## Abilitare i cookie di terze parti tramite la libreria JavaScript dell’SDK per web
 
-Imposta il `thirdPartyCookiesEnabled` booleano quando si esegue `configure` comando. Se ometti questa proprietà durante la configurazione dell’SDK web, per impostazione predefinita `true`. Imposta questo valore su `false` se non desideri che l’SDK per web utilizzi Audienci Manager per identificare i visitatori.
+Impostare il valore booleano `thirdPartyCookiesEnabled` durante l&#39;esecuzione del comando `configure`. Se si omette questa proprietà durante la configurazione dell&#39;SDK Web, per impostazione predefinita verrà utilizzato `true`. Imposta questo valore su `false` se non desideri che l&#39;SDK Web utilizzi Audience Manager per identificare i visitatori.
 
 ```js
 alloy("configure", {

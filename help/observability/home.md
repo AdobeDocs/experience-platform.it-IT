@@ -13,13 +13,13 @@ ht-degree: 1%
 
 # Panoramica di [!DNL Observability Insights]
 
-Adobe Experience Platform [!DNL Observability Insights] consente di monitorare le attività di Platform tramite l’utilizzo di metriche statistiche e notifiche di eventi. Questo documento fornisce una panoramica delle varie funzionalità fornite dal servizio, insieme a collegamenti verso ulteriori documenti per ulteriori dettagli.
+Adobe Experience Platform [!DNL Observability Insights] consente di monitorare le attività di Platform tramite l&#39;utilizzo di metriche statistiche e notifiche di eventi. Questo documento fornisce una panoramica delle varie funzionalità fornite dal servizio, insieme a collegamenti verso ulteriori documenti per ulteriori dettagli.
 
-## [!DNL Observability Insights] API
+## API [!DNL Observability Insights]
 
-Il [!DNL Observability Insights] API RESTful consente di esporre metriche chiave di osservabilità in Adobe Experience Platform. Queste metriche forniscono informazioni su [!DNL Platform] statistiche di utilizzo, controlli di integrità per [!DNL Platform] servizi, tendenze storiche e indicatori di prestazioni per vari [!DNL Platform] funzionalità.
+L&#39;API [!DNL Observability Insights] è un&#39;API RESTful che consente di esporre metriche chiave di osservabilità in Adobe Experience Platform. Queste metriche forniscono informazioni approfondite sulle statistiche di utilizzo di [!DNL Platform], sui controlli di integrità per i servizi [!DNL Platform], sulle tendenze cronologiche e sugli indicatori di prestazioni per varie funzionalità di [!DNL Platform].
 
-Per ulteriori informazioni sull’utilizzo dell’API, consulta la sezione [[!DNL Observability Insights] Guida per gli sviluppatori API](./api/overview.md).
+Per ulteriori informazioni sull&#39;utilizzo dell&#39;API, vedere la [[!DNL Observability Insights] Guida per gli sviluppatori API](./api/overview.md).
 
 ## Avvisi
 
@@ -27,8 +27,8 @@ Experience Platform consente di abbonarti agli avvisi basati su metriche di osse
 
 Con l’abbonamento agli avvisi, puoi impostare i tuoi protocolli a valle per quando un processo è stato completato, se è stata raggiunta una determinata fase cardine all’interno di un flusso di lavoro o se si sono verificati errori durante il processo.
 
-Consulta la panoramica su [avvisi](./alerts/overview.md) per ulteriori informazioni.
+Per ulteriori informazioni, consulta la panoramica sugli [avvisi](./alerts/overview.md).
 
 ## Passaggi successivi
 
-In questo documento sono state trattate le varie funzionalità di [!DNL Observability Insights]. Per ulteriori informazioni su ciascuna funzione, consulta la documentazione accessibile dai collegamenti presenti in questa panoramica.
+Questo documento descrive le varie funzionalità di [!DNL Observability Insights]. Per ulteriori informazioni su ciascuna funzione, consulta la documentazione accessibile dai collegamenti presenti in questa panoramica.

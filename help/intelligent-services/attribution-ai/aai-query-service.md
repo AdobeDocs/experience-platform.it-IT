@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Analisi dei punteggi di attribuzione tramite Query Service
 
-Ogni riga nei dati rappresenta una conversione, in cui le informazioni per i punti di contatto correlati vengono memorizzate come un array di strutture sotto `touchpointsDetail` colonna.
+Ogni riga nei dati rappresenta una conversione, in cui le informazioni per i punti di contatto correlati vengono memorizzate come array di strutture nella colonna `touchpointsDetail`.
 
 | Informazioni punto di contatto | Colonna |
 | ---------------------- | ------ |
@@ -23,7 +23,7 @@ Ogni riga nei dati rappresenta una conversione, in cui le informazioni per i pun
 
 ## Ricerca dei percorsi dei dati
 
-Nell’interfaccia utente di Adobe Experience Platform, seleziona **[!UICONTROL Set di dati]** nel menu di navigazione a sinistra. Il **[!UICONTROL Set di dati]** viene visualizzata. Quindi, seleziona la **[!UICONTROL Sfoglia]** e trova il set di dati di output per i punteggi delle Attribution AI.
+Nell&#39;interfaccia utente di Adobe Experience Platform, seleziona **[!UICONTROL Set di dati]** nell&#39;area di navigazione a sinistra. Viene visualizzata la pagina **[!UICONTROL Set di dati]**. Quindi, seleziona la scheda **[!UICONTROL Sfoglia]** e trova il set di dati di output per i punteggi delle Attribution AI.
 
 ![Accesso al modello](./images/aai-query/datasets_browse.png)
 
@@ -31,7 +31,7 @@ Seleziona il set di dati di output. Viene visualizzata la pagina dell’attivit�
 
 ![pagina attività set di dati](./images/aai-query/select_preview.png)
 
-Nella pagina dell’attività del set di dati, seleziona **[!UICONTROL Anteprima set di dati]** nell’angolo in alto a destra per visualizzare in anteprima i dati e assicurarti che siano stati acquisiti come previsto.
+Nella pagina dell&#39;attività del set di dati, seleziona **[!UICONTROL Anteprima set di dati]** nell&#39;angolo in alto a destra per visualizzare in anteprima i dati e assicurarti che siano stati acquisiti come previsto.
 
 ![anteprima set di dati](./images/aai-query/preview_dataset.JPG)
 
@@ -39,29 +39,29 @@ Dopo aver visualizzato l’anteprima dei dati, seleziona lo schema nella barra a
 
 ![seleziona lo schema](./images/aai-query/select_schema.png)
 
-Utilizzando lo schema di punteggio, puoi selezionare o cercare un valore. Una volta selezionata, la **[!UICONTROL Proprietà campo]** viene visualizzata la barra laterale che consente di copiare il percorso da utilizzare per la creazione delle query.
+Utilizzando lo schema di punteggio, puoi selezionare o cercare un valore. Una volta selezionata, si apre la barra laterale **[!UICONTROL Proprietà campo]** che consente di copiare il percorso da utilizzare nella creazione di query.
 
 ![copia il percorso](./images/aai-query/copy_path.png)
 
 ## Servizio query di accesso
 
-Per accedere a Query Service dall’interfaccia utente di Platform, inizia selezionando **[!UICONTROL Query]** nel menu di navigazione a sinistra, seleziona quindi **[!UICONTROL Sfoglia]** scheda. Viene caricato un elenco delle query salvate in precedenza.
+Per accedere a Query Service dall&#39;interfaccia utente di Platform, inizia selezionando **[!UICONTROL Query]** nell&#39;area di navigazione a sinistra, quindi seleziona la scheda **[!UICONTROL Sfoglia]**. Viene caricato un elenco delle query salvate in precedenza.
 
-![query service browse](./images/aai-query/query_tab.png)
+![ricerca servizio query](./images/aai-query/query_tab.png)
 
-Quindi, seleziona **[!UICONTROL Crea query]** in alto a destra. L’editor delle query viene caricato. Utilizzando l’editor delle query è possibile iniziare a creare query utilizzando i dati di punteggio.
+Quindi, seleziona **[!UICONTROL Crea query]** nell&#39;angolo superiore destro. L’editor delle query viene caricato. Utilizzando l’editor delle query è possibile iniziare a creare query utilizzando i dati di punteggio.
 
-![editor di query](./images/aai-query/query_example.png)
+![editor query](./images/aai-query/query_example.png)
 
-Per ulteriori informazioni sull’editor delle query, visita [Guida utente di Query Editor](../../query-service/ui/user-guide.md).
+Per ulteriori informazioni sull&#39;editor delle query, visitare la [guida utente dell&#39;editor delle query](../../query-service/ui/user-guide.md).
 
 ## Modelli di query per l’analisi del punteggio di attribuzione
 
-Le query seguenti possono essere utilizzate come modello per diversi scenari di analisi del punteggio. Sostituire il `_tenantId` e `your_score_output_dataset` con i valori corretti presenti nello schema di output del punteggio.
+Le query seguenti possono essere utilizzate come modello per diversi scenari di analisi del punteggio. Sostituire `_tenantId` e `your_score_output_dataset` con i valori corretti presenti nello schema di output del punteggio.
 
 >[!NOTE]
 >
-> A seconda di come i dati sono stati acquisiti, i valori utilizzati di seguito come `timestamp` potrebbe essere in un formato diverso.
+> A seconda di come sono stati acquisiti i dati, i valori utilizzati di seguito, ad esempio `timestamp`, potrebbero essere in un formato diverso.
 
 ### Esempi di convalida
 
@@ -88,7 +88,7 @@ Le query seguenti possono essere utilizzate come modello per diversi scenari di 
         conversionName
 ```
 
-**Numero totale di eventi di sola conversione (in una finestra di conversione)**
+**Numero totale di eventi di sola conversione (all&#39;interno di una finestra di conversione)**
 
 ```sql
     SELECT
@@ -129,7 +129,7 @@ Le query seguenti possono essere utilizzate come modello per diversi scenari di 
 
 ### Esempio di analisi della distribuzione
 
-**Quantità di punti di contatto nei percorsi di conversione per tipo definito (all’interno di una finestra di conversione)**
+**Quantità di punti di contatto nei percorsi di conversione per tipo definito (all&#39;interno di una finestra di conversione)**
 
 ```sql
     SELECT conversionName,
@@ -155,7 +155,7 @@ Le query seguenti possono essere utilizzate come modello per diversi scenari di 
 
 ### Esempi di generazione di approfondimenti
 
-**Suddivisione delle unità incrementali per punto di contatto e data di conversione (all’interno di una finestra di conversione)**
+**Suddivisione unità incrementale per punto di contatto e data di conversione (all&#39;interno di una finestra di conversione)**
 
 ```sql
     SELECT conversionName,
@@ -180,7 +180,7 @@ Le query seguenti possono essere utilizzate come modello per diversi scenari di 
         conversionName, touchpointName, DATE(conversion_timestamp)
 ```
 
-**Suddivisione incrementale delle unità per punto di contatto e data del punto di contatto (all’interno di una finestra di conversione)**
+**Suddivisione unità incrementale per punto di contatto e data punto di contatto (all&#39;interno di una finestra di conversione)**
 
 ```sql
     SELECT conversionName,
@@ -206,7 +206,7 @@ Le query seguenti possono essere utilizzate come modello per diversi scenari di 
     LIMIT 20
 ```
 
-**Punteggi aggregati per un determinato tipo di punto di contatto per tutti i modelli di punteggio (all’interno di una finestra di conversione)**
+**Punteggi aggregati per un determinato tipo di punto di contatto per tutti i modelli di punteggio (in una finestra di conversione)**
 
 ```sql
     SELECT
@@ -237,7 +237,7 @@ Le query seguenti possono essere utilizzate come modello per diversi scenari di 
         conversionName, touchpointName
 ```
 
-**Avanzato - analisi della lunghezza del percorso**
+**Avanzate - analisi lunghezza percorso**
 
 Ottieni una distribuzione della lunghezza del percorso per ogni tipo di evento di conversione:
 
@@ -268,7 +268,7 @@ Ottieni una distribuzione della lunghezza del percorso per ogni tipo di evento d
         conversionName, path_length
 ```
 
-**Avanzato: numero distinto di punti di contatto nell’analisi dei percorsi di conversione**
+**Avanzate - numero distinto di punti di contatto nell&#39;analisi dei percorsi di conversione**
 
 Ottieni la distribuzione per il numero di punti di contatto distinti su un percorso di conversione per ogni tipo di evento di conversione:
 
@@ -305,7 +305,7 @@ Questa query appiattisce la colonna struct in più colonne singole ed esplora le
 
 >[!TIP]
 >
-> In questo esempio, devi sostituire `{COLUMN_NAME}` oltre a `_tenantId` e `your_score_output_dataset`. Il `COLUMN_NAME` la variabile può accettare i valori dei nomi di colonna pass-through facoltativi (colonne di reporting) aggiunti durante la configurazione del modello di Attribution AI. Rivedi lo schema di output del punteggio per trovare `{COLUMN_NAME}` valori necessari per completare la query.
+> In questo esempio, devi sostituire `{COLUMN_NAME}` oltre a `_tenantId` e `your_score_output_dataset`. La variabile `COLUMN_NAME` può accettare i valori dei nomi di colonna pass-through facoltativi (colonne di reporting) aggiunti durante la configurazione del modello di Attribution AI. Rivedi lo schema di output del punteggio per trovare i valori `{COLUMN_NAME}` necessari per completare la query.
 
 ```sql
 SELECT 

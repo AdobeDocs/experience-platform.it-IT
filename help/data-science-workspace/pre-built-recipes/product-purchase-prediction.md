@@ -6,8 +6,8 @@ description: La ricetta di previsione dell’acquisto del prodotto consente di p
 exl-id: 66a45629-33a3-4081-8dbd-b864983b8f57
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '397'
-ht-degree: 6%
+source-wordcount: '392'
+ht-degree: 5%
 
 ---
 
@@ -31,7 +31,7 @@ La ricetta di Previsione dell’acquisto del prodotto utilizza l’apprendimento
 
 ## Schema dati
 
-Questa ricetta utilizza [Schemi XDM](../../xdm/home.md) per modellare i dati. Lo schema utilizzato per questa ricetta è mostrato di seguito:
+Questa ricetta utilizza [schemi XDM](../../xdm/home.md) per modellare i dati. Lo schema utilizzato per questa ricetta è mostrato di seguito:
 
 | Nome campo | Tipo |
 | --- | --- |
@@ -48,7 +48,7 @@ Questa ricetta utilizza [Schemi XDM](../../xdm/home.md) per modellare i dati. Lo
 | orderDate1 | Numero |
 | shippingDate1 | Numero |
 | totalPrice1 | Numero |
-| tax1 | Numero |
+| imposta1 | Numero |
 | orderDate2 | Numero |
 | shippingDate2 | Numero |
 | totalPrice2 | Numero |
@@ -56,6 +56,6 @@ Questa ricetta utilizza [Schemi XDM](../../xdm/home.md) per modellare i dati. Lo
 
 ## Algoritmo
 
-In primo luogo, il set di dati di formazione nel *PrevisioneProdotto* schema caricato. Da qui, il modello viene addestrato utilizzando un [classificatore foresta casuale](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html). Il classificatore di foresta casuale è un tipo di algoritmo integrato che fa riferimento a un algoritmo che combina più algoritmi per ottenere prestazioni predittive migliorate. L&#39;idea alla base dell&#39;algoritmo è che il classificatore casuale di foresta costruisce più alberi decisionali e li unisce per creare una previsione più precisa e stabile.
+Innanzitutto, viene caricato il set di dati di formazione nello schema *ProductPrediction*. Da qui, il modello viene addestrato utilizzando un [classificatore di foresta casuale](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html). Il classificatore di foresta casuale è un tipo di algoritmo integrato che fa riferimento a un algoritmo che combina più algoritmi per ottenere prestazioni predittive migliorate. L&#39;idea alla base dell&#39;algoritmo è che il classificatore casuale di foresta costruisce più alberi decisionali e li unisce per creare una previsione più precisa e stabile.
 
 Questo processo inizia con la creazione di un set di alberi decisionali che seleziona in modo casuale sottoinsiemi di dati di addestramento. Successivamente, viene calcolata la media dei risultati di ciascun albero decisionale.

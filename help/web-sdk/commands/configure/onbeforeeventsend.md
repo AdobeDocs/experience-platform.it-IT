@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # `onBeforeEventSend`
 
-Il `onBeforeEventSend` callback consente di registrare una funzione di JavaScript che può modificare i dati inviati immediatamente prima che tali dati vengano inviati ad Adobe. Questo callback consente di manipolare `xdm` o `data` , inclusa la possibilità di aggiungere, modificare o rimuovere elementi. Puoi anche annullare completamente l’invio di dati in modo condizionale, ad esempio con il traffico bot lato client rilevato.
+Il callback `onBeforeEventSend` consente di registrare una funzione di JavaScript in grado di modificare i dati inviati immediatamente prima dell&#39;invio dei dati ad Adobe. Questo callback consente di manipolare l&#39;oggetto `xdm` o `data`, inclusa la possibilità di aggiungere, modificare o rimuovere elementi. Puoi anche annullare completamente l’invio di dati in modo condizionale, ad esempio con il traffico bot lato client rilevato.
 
 >[!WARNING]
 >
@@ -19,24 +19,24 @@ Il `onBeforeEventSend` callback consente di registrare una funzione di JavaScrip
 
 ## Configurare su prima del callback di invio dell’evento utilizzando l’estensione tag Web SDK {#tag-extension}
 
-Seleziona la **[!UICONTROL Immetti prima del codice di callback di invio dell&#39;evento]** quando [configurazione dell’estensione tag](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Questo pulsante apre una finestra modale in cui puoi inserire il codice desiderato.
+Seleziona il pulsante **[!UICONTROL Fornisci prima del codice di callback dell&#39;invio dell&#39;evento]** durante [la configurazione dell&#39;estensione tag](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Questo pulsante apre una finestra modale in cui puoi inserire il codice desiderato.
 
-1. Accedi a [experience.adobe.com](https://experience.adobe.com) utilizzando le credenziali di Adobe ID.
-1. Accedi a **[!UICONTROL Raccolta dati]** > **[!UICONTROL Tag]**.
+1. Accedi a [experience.adobe.com](https://experience.adobe.com) utilizzando le credenziali Adobe ID.
+1. Passa a **[!UICONTROL Raccolta dati]** > **[!UICONTROL Tag]**.
 1. Seleziona la proprietà tag desiderata.
-1. Accedi a **[!UICONTROL Estensioni]**, quindi fai clic su **[!UICONTROL Configura]** il [!UICONTROL Adobe Experience Platform Web SDK] Card.
-1. Scorri verso il basso fino a [!UICONTROL Raccolta dati] , quindi selezionare il pulsante **[!UICONTROL Immetti prima del codice di callback di invio dell&#39;evento]**.
+1. Passa a **[!UICONTROL Estensioni]**, quindi fai clic su **[!UICONTROL Configura]** nella scheda [!UICONTROL Adobe Experience Platform Web SDK].
+1. Scorri verso il basso fino alla sezione [!UICONTROL Raccolta dati], quindi seleziona il pulsante **[!UICONTROL Fornisci prima del codice di callback di invio dell&#39;evento]**.
 1. Questo pulsante apre una finestra modale con un editor di codice. Inserisci il codice desiderato, quindi fai clic su **[!UICONTROL Salva]** per chiudere la finestra modale.
-1. Clic **[!UICONTROL Salva]** in impostazioni estensione, pubblica le modifiche.
+1. Fai clic su **[!UICONTROL Salva]** in Impostazioni estensione, quindi pubblica le modifiche.
 
 Nell’editor di codice puoi accedere alle seguenti variabili:
 
-* **`content.xdm`**: Il [XDM](../sendevent/xdm.md) payload dell’evento.
-* **`content.data`**: Il [dati](../sendevent/data.md) payload dell&#39;oggetto per l&#39;evento.
-* **`return true`**: chiudi immediatamente il callback e invia i dati all&#39;Adobe con i valori correnti nella `content` oggetto.
-* **`return false`**: chiudi immediatamente il callback e interrompi l’invio di dati all’Adobe.
+* **`content.xdm`**: payload [XDM](../sendevent/xdm.md) per l&#39;evento.
+* **`content.data`**: payload dell&#39;oggetto [data](../sendevent/data.md) per l&#39;evento.
+* **`return true`**: uscire immediatamente dal callback e inviare i dati all&#39;Adobe con i valori correnti nell&#39;oggetto `content`.
+* **`return false`**: uscire immediatamente dal callback e interrompere l&#39;invio di dati all&#39;Adobe.
 
-Qualsiasi variabile definita al di fuori di `content` possono essere utilizzati, ma non sono inclusi nel payload inviato ad Adobe.
+È possibile utilizzare qualsiasi variabile definita al di fuori di `content`, ma non è inclusa nel payload inviato a Adobe.
 
 ```js
 // Use nullish coalescing assignments to add objects if they don't yet exist
@@ -64,11 +64,11 @@ if (myBotDetector.isABot()) {
 ```
 
 >[!TIP]
->Evita di tornare `false` al primo evento di una pagina. Ritorno `false` sul primo evento può avere un impatto negativo sulla personalizzazione.
+>Evita di restituire `false` nel primo evento di una pagina. La restituzione di `false` sul primo evento può avere un impatto negativo sulla personalizzazione.
 
 ## Configurare su prima del callback di invio dell’evento utilizzando la libreria JavaScript dell’SDK web {#library}
 
-Registra il `onBeforeEventSend` callback durante l&#39;esecuzione di `configure` comando. È possibile modificare il `content` nome variabile a qualsiasi valore desiderato modificando la variabile di parametro all&#39;interno della funzione in linea.
+Registra il callback `onBeforeEventSend` durante l&#39;esecuzione del comando `configure`. È possibile modificare il nome della variabile `content` in qualsiasi valore desiderato modificando la variabile di parametro all&#39;interno della funzione in linea.
 
 ```js
 alloy("configure", {

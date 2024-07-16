@@ -13,9 +13,9 @@ ht-degree: 0%
 
 # [!DNL Segmentation Service] in [!DNL Real-Time Customer Data Platform]
 
-[!DNL Adobe Real-Time Customer Data Platform] (Real-Time CDP) consente di raccogliere dati da più origini per fornire ai clienti un’esperienza coordinata e coerente. È possibile distribuire campagne di marketing personalizzate utilizzando [!DNL Segmentation Service], parte di Adobe Experience Platform.
+[!DNL Adobe Real-Time Customer Data Platform] (Real-Time CDP) consente di inserire dati provenienti da più origini per fornire ai clienti un&#39;esperienza coordinata e coerente. È possibile distribuire campagne di marketing personalizzate utilizzando [!DNL Segmentation Service], parte di Adobe Experience Platform.
 
-Real-Time CDP è basato su Adobe Experience Platform e utilizza molti dei [!DNL Experience Platform] servizi e funzionalità. Utilizzo di [!DNL Segmentation Service], puoi offrire servizi di marketing personalizzati dividendo i clienti in gruppi più piccoli con caratteristiche simili.
+Real-Time CDP è basato su Adobe Experience Platform e utilizza molti servizi e funzionalità di [!DNL Experience Platform]. Utilizzando [!DNL Segmentation Service], puoi offrire servizi di marketing personalizzati dividendo i tuoi clienti in gruppi più piccoli con caratteristiche simili.
 
 ## Segmentazione
 
@@ -23,7 +23,7 @@ La segmentazione è il processo di definizione di attributi o comportamenti spec
 
 ## [!DNL Segment Builder]
 
-[!DNL Platform] consente di creare e accedere facilmente alle definizioni dei segmenti e di utilizzare diversi blocchi predefiniti per caratterizzare ulteriormente i tipi di pubblico. Per ulteriori informazioni su come utilizzare il Generatore di segmenti, leggi [Guida al Generatore di segmenti](./segment-builder-guide.md).
+[!DNL Platform] consente di creare e accedere facilmente alle definizioni dei segmenti e di utilizzare diversi blocchi predefiniti per caratterizzare ulteriormente i tipi di pubblico. Per ulteriori informazioni su come utilizzare il Generatore di segmenti, consulta la [guida del Generatore di segmenti](./segment-builder-guide.md).
 
 ## IA per l’analisi dei clienti
 
@@ -38,19 +38,19 @@ Con l’aiuto di fattori influenti, IA per l’analisi dei clienti può dirti co
 * Miglioramento dei profili dei clienti con fattori influenti per i punteggi di tendenza.
 * Creazione di tipi di pubblico di clienti in base a fattori influenti e punteggi di propensione.
 
-Customer AI si trova in **[!UICONTROL Servizi]** scheda in **[!UICONTROL Servizi Adobe]**.
+IA per l&#39;analisi dei clienti si trova nella scheda **[!UICONTROL Servizi]** in **[!UICONTROL Servizi Adobe]**.
 
-![Posizione di Customer AI](../assets/overview/rtcdp-customer-ai.png)
+![Posizione IA per l&#39;analisi dei clienti](../assets/overview/rtcdp-customer-ai.png)
 
 ### Guida introduttiva ad IA per l’analisi dei clienti
 
-Per iniziare a utilizzare IA per l’analisi dei clienti, devi seguire la [esercitazione sulla preparazione dei dati](../../intelligent-services/data-preparation.md) e configura lo schema di input in base al caso d’uso. Successivamente, sarà necessario [configurare un’istanza di Customer AI](../../intelligent-services/customer-ai/user-guide/configure.md). Dopo aver configurato una variante, viene generato un modello in cui potete [visualizzare approfondimenti e punteggi](../../intelligent-services/customer-ai/user-guide/discover-insights.md). Utilizzando i dati generati dal modello, puoi creare tipi di pubblico per l’attivazione basata sui dati.
+Per iniziare a utilizzare IA per l&#39;analisi dei clienti, segui l&#39;[esercitazione sulla preparazione dei dati](../../intelligent-services/data-preparation.md) e configura lo schema di input in base al tuo caso d&#39;uso. Successivamente, dovrai [configurare un&#39;istanza di IA per l&#39;analisi dei clienti](../../intelligent-services/customer-ai/user-guide/configure.md). Dopo aver configurato un&#39;istanza, viene generato un modello in cui puoi [visualizzare informazioni e punteggi](../../intelligent-services/customer-ai/user-guide/discover-insights.md). Utilizzando i dati generati dal modello, puoi creare tipi di pubblico per l’attivazione basata sui dati.
 
-Per ulteriori informazioni su Customer AI, visita innanzitutto il [Panoramica di Customer AI](../../intelligent-services/customer-ai/overview.md). Inoltre, il video seguente mostra come IA per l’analisi dei clienti arricchisce i profili dei clienti con dati di propensione basati su intelligenza artificiale e potenzia la segmentazione dei clienti e le attività di targeting.
+Per ulteriori informazioni su Customer AI, inizia visitando la [Panoramica di Customer AI](../../intelligent-services/customer-ai/overview.md). Inoltre, il video seguente mostra come IA per l’analisi dei clienti arricchisce i profili dei clienti con dati di propensione basati su intelligenza artificiale e potenzia la segmentazione dei clienti e le attività di targeting.
 
 >[!VIDEO](https://video.tv.adobe.com/v/40374/?quality=12&learn=on)
 
 
 ## Passaggi successivi
 
-Dopo aver letto questa panoramica, ora dovresti capire come Real-Time CDP utilizza [!DNL Segmentation Service] per migliorare la personalizzazione e la personalizzazione delle campagne di marketing. Per ulteriori informazioni su [!DNL Segmentation Service], leggi le [Documentazione sulla segmentazione](../../segmentation/home.md).
+Dopo aver letto questa panoramica, sarai in grado di capire come Real-Time CDP utilizza [!DNL Segmentation Service] per migliorare la personalizzazione e la personalizzazione delle campagne di marketing. Per ulteriori informazioni su [!DNL Segmentation Service], leggere la [documentazione sulla segmentazione](../../segmentation/home.md).

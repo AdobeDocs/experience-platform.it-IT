@@ -13,23 +13,23 @@ ht-degree: 2%
 
 # Endpoint &quot;segment export jobs&quot;
 
-I processi di esportazione sono processi asincroni utilizzati per rendere persistenti i membri del segmento di pubblico nei set di dati. È possibile utilizzare `/export/jobs` nell’API di segmentazione di Adobe Experience Platform, che consente di recuperare, creare e annullare a livello di programmazione i processi di esportazione.
+I processi di esportazione sono processi asincroni utilizzati per rendere persistenti i membri del segmento di pubblico nei set di dati. È possibile utilizzare l&#39;endpoint `/export/jobs` nell&#39;API di segmentazione di Adobe Experience Platform, che consente di recuperare, creare e annullare a livello di programmazione i processi di esportazione.
 
 >[!NOTE]
 >
->Questa guida descrive l’utilizzo dei processi di esportazione nel [!DNL Segmentation API]. Per informazioni su come gestire i processi di esportazione per [!DNL Real-Time Customer Profile] , consulta la guida su [processi di esportazione nell’API del profilo](../../profile/api/export-jobs.md)
+>Questa guida descrive l&#39;utilizzo dei processi di esportazione in [!DNL Segmentation API]. Per informazioni su come gestire i processi di esportazione per i dati [!DNL Real-Time Customer Profile], vedere la guida relativa ai [processi di esportazione nell&#39;API di profilo](../../profile/api/export-jobs.md)
 
 ## Introduzione
 
-Gli endpoint utilizzati in questa guida fanno parte del [!DNL Adobe Experience Platform Segmentation Service] API. Prima di continuare, controlla [guida introduttiva](./getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all’API, incluse le intestazioni richieste e la lettura di esempi di chiamate API.
+Gli endpoint utilizzati in questa guida fanno parte dell&#39;API [!DNL Adobe Experience Platform Segmentation Service]. Prima di continuare, consulta la [guida introduttiva](./getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all&#39;API, incluse le intestazioni richieste e la lettura delle chiamate API di esempio.
 
 ## Recuperare un elenco di processi di esportazione {#retrieve-list}
 
-Per recuperare un elenco di tutti i processi di esportazione per la tua organizzazione, effettua una richiesta GET al `/export/jobs` endpoint.
+Per recuperare un elenco di tutti i processi di esportazione per l&#39;organizzazione, eseguire una richiesta GET all&#39;endpoint `/export/jobs`.
 
 **Formato API**
 
-Il `/export/jobs` l’endpoint supporta diversi parametri di query per aiutare a filtrare i risultati. Anche se questi parametri sono facoltativi, si consiglia vivamente di utilizzarli per ridurre i costi generali. Effettuando una chiamata a questo endpoint senza parametri, verranno recuperati tutti i processi di esportazione disponibili per la tua organizzazione. È possibile includere più parametri, separati da e commerciali (`&`).
+L&#39;endpoint `/export/jobs` supporta diversi parametri di query per filtrare i risultati. Anche se questi parametri sono facoltativi, si consiglia vivamente di utilizzarli per ridurre i costi generali. Effettuando una chiamata a questo endpoint senza parametri, verranno recuperati tutti i processi di esportazione disponibili per la tua organizzazione. È possibile includere più parametri, separati da e commerciali (`&`).
 
 ```http
 GET /export/jobs
@@ -197,10 +197,10 @@ La seguente risposta restituisce lo stato HTTP 200 con un elenco dei processi di
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `destination` | Informazioni sulla destinazione dei dati esportati:<ul><li>`datasetId`: ID del set di dati in cui sono stati esportati i dati.</li><li>`segmentPerBatch`: valore booleano che indica se gli ID segmento sono consolidati o meno. Il valore &quot;false&quot; indica che tutti gli ID segmento vengono esportati in un singolo ID batch. Il valore &quot;true&quot; indica che un ID segmento viene esportato in un ID batch. **Nota:** L&#39;impostazione del valore su true può influire sulle prestazioni dell&#39;esportazione batch.</li></ul> |
+| `destination` | Informazioni sulla destinazione dei dati esportati:<ul><li>`datasetId`: ID del set di dati in cui sono stati esportati i dati.</li><li>`segmentPerBatch`: valore booleano che indica se gli ID segmento sono consolidati o meno. Il valore &quot;false&quot; indica che tutti gli ID segmento vengono esportati in un singolo ID batch. Il valore &quot;true&quot; indica che un ID segmento viene esportato in un ID batch. **Nota:** l&#39;impostazione del valore su true può influire sulle prestazioni di esportazione batch.</li></ul> |
 | `fields` | Elenco dei campi esportati, separati da virgole. |
 | `schema.name` | Nome dello schema associato al set di dati in cui devono essere esportati i dati. |
-| `filter.segments` | I segmenti esportati. Sono inclusi i seguenti campi:<ul><li>`segmentId`: ID segmento in cui verranno esportati i profili.</li><li>`segmentNs`: spazio dei nomi del segmento per il dato `segmentID`.</li><li>`status`: array di stringhe che fornisce un filtro di stato per `segmentID`. Per impostazione predefinita, `status` avrà il valore `["realized"]` che rappresenta tutti i profili che rientrano nel segmento al momento corrente. I valori possibili includono: `realized` e `exited`. Un valore di `realized` indica che il profilo è idoneo per il segmento. Un valore di `exiting` significa che il profilo sta uscendo dal segmento.</li></ul> |
+| `filter.segments` | I segmenti esportati. Sono inclusi i seguenti campi:<ul><li>`segmentId`: ID segmento in cui verranno esportati i profili.</li><li>`segmentNs`: spazio dei nomi del segmento per `segmentID` specificato.</li><li>`status`: un array di stringhe che fornisce un filtro di stato per `segmentID`. Per impostazione predefinita, `status` avrà il valore `["realized"]` che rappresenta tutti i profili che rientrano nel segmento al momento. I valori possibili includono: `realized` e `exited`. Il valore `realized` indica che il profilo è idoneo per il segmento. Il valore `exiting` indica che il profilo sta uscendo dal segmento.</li></ul> |
 | `mergePolicy` | Informazioni sui criteri di unione per i dati esportati. |
 | `metrics.totalTime` | Campo che indica il tempo totale richiesto per l&#39;esecuzione del processo di esportazione. |
 | `metrics.profileExportTime` | Un campo che indica il tempo necessario per l’esportazione dei profili. |
@@ -209,7 +209,7 @@ La seguente risposta restituisce lo stato HTTP 200 con un elenco dei processi di
 
 ## Crea un nuovo processo di esportazione {#create}
 
-Per creare un nuovo processo di esportazione, devi effettuare una richiesta POST al `/export/jobs` endpoint.
+È possibile creare un nuovo processo di esportazione effettuando una richiesta POST all&#39;endpoint `/export/jobs`.
 
 **Formato API**
 
@@ -279,16 +279,16 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 | `fields` | Elenco dei campi esportati, separati da virgole. Se questo campo viene lasciato vuoto, verranno esportati tutti i campi. |
 | `mergePolicy` | Specifica il criterio di unione da applicare ai dati esportati. Includi questo parametro quando vengono esportati più segmenti. Se non specificato, l’esportazione accetta lo stesso criterio di unione del segmento specificato. |
 | `filter` | Oggetto che specifica i segmenti da includere nel processo di esportazione in base all’ID, al tempo di qualifica o al tempo di acquisizione, a seconda delle sottoproprietà elencate di seguito. Se questo campo viene lasciato vuoto, verranno esportati tutti i dati. |
-| `filter.segments` | Specifica i segmenti da esportare. Omettendo questo valore, tutti i dati di tutti i profili vengono esportati. Accetta un array di oggetti segmento, ciascuno contenente i seguenti campi:<ul><li>`segmentId`: **(Obbligatorio se si utilizza `segments`)** ID segmento per i profili da esportare.</li><li>`segmentNs` *(Facoltativo)* Spazio dei nomi del segmento per il dato `segmentID`.</li><li>`status` *(Facoltativo)* Matrice di stringhe che fornisce un filtro di stato per `segmentID`. Per impostazione predefinita, `status` avrà il valore `["realized"]` che rappresenta tutti i profili che rientrano nel segmento al momento corrente. I valori possibili includono: `realized` e `exited`.  Un valore di `realized` indica che il profilo è idoneo per il segmento. Un valore di `exiting` significa che il profilo sta uscendo dal segmento.</li></ul> |
+| `filter.segments` | Specifica i segmenti da esportare. Omettendo questo valore, tutti i dati di tutti i profili vengono esportati. Accetta un array di oggetti segmento, ciascuno contenente i seguenti campi:<ul><li>`segmentId`: **(obbligatorio se si utilizza `segments`)** ID segmento per i profili da esportare.</li><li>`segmentNs` *(Facoltativo)* Spazio dei nomi del segmento per il `segmentID` specificato.</li><li>`status` *(Facoltativo)* Matrice di stringhe che fornisce un filtro di stato per `segmentID`. Per impostazione predefinita, `status` avrà il valore `["realized"]` che rappresenta tutti i profili che rientrano nel segmento al momento. I valori possibili includono: `realized` e `exited`.  Il valore `realized` indica che il profilo è idoneo per il segmento. Il valore `exiting` indica che il profilo sta uscendo dal segmento.</li></ul> |
 | `filter.segmentQualificationTime` | Filtra in base al tempo di qualifica del segmento. È possibile specificare l&#39;ora di inizio e/o di fine. |
-| `filter.segmentQualificationTime.startTime` | Ora di inizio della qualifica del segmento per un ID segmento per un determinato stato. Se non specificato, non sarà presente alcun filtro sull’ora di inizio per la qualifica di un ID segmento. La marca temporale deve essere fornita in [RFC 3339](https://tools.ietf.org/html/rfc3339) formato. |
-| `filter.segmentQualificationTime.endTime` | Ora di fine della qualifica del segmento per un ID segmento per un determinato stato. Se non specificato, non sarà presente alcun filtro sull’ora di fine per la qualifica di un ID segmento. La marca temporale deve essere fornita in [RFC 3339](https://tools.ietf.org/html/rfc3339) formato. |
-| `filter.fromIngestTimestamp ` | Limita i profili esportati a includere solo quelli che sono stati aggiornati dopo questa marca temporale. La marca temporale deve essere fornita in [RFC 3339](https://tools.ietf.org/html/rfc3339) formato. <ul><li>`fromIngestTimestamp` per **profili**, se fornito: include tutti i profili uniti in cui la marca temporale aggiornata unita è maggiore della marca temporale specificata. Supporti `greater_than` operando.</li><li>`fromIngestTimestamp` per **Eventi**: tutti gli eventi acquisiti dopo questa marca temporale verranno esportati in modo corrispondente al risultato del profilo risultante. Non è l’ora dell’evento in sé, ma il tempo di acquisizione degli eventi.</li> |
-| `filter.emptyProfiles` | Valore booleano che indica se filtrare i profili vuoti. I profili possono contenere record di profilo, record ExperienceEvent o entrambi. I profili senza record di profilo e solo i record ExperienceEvent sono denominati &quot;emptyProfiles&quot;. Per esportare tutti i profili nell’archivio dei profili, inclusi i &quot;emptyProfiles&quot;, imposta il valore di `emptyProfiles` a `true`. Se `emptyProfiles` è impostato su `false`, vengono esportati solo i profili con record di profilo nell’archivio. Per impostazione predefinita, se `emptyProfiles` non è incluso, vengono esportati solo i profili contenenti record di profilo. |
-| `additionalFields.eventList` | Controlla i campi evento della serie temporale esportati per gli oggetti figlio o associati fornendo una o più delle seguenti impostazioni:<ul><li>`fields`: controlla i campi da esportare.</li><li>`filter`: specifica i criteri che limitano i risultati inclusi dagli oggetti associati. Prevede un valore minimo richiesto per l&#39;esportazione, in genere una data.</li><li>`filter.fromIngestTimestamp`: filtra gli eventi della serie temporale con quelli che sono stati acquisiti dopo la marca temporale fornita. Non è l’ora dell’evento in sé, ma il tempo di acquisizione degli eventi.</li><li>`filter.toIngestTimestamp`: filtra la marca temporale in base a quelle che sono state acquisite prima della marca temporale fornita. Non è l’ora dell’evento in sé, ma il tempo di acquisizione degli eventi.</li></ul> |
-| `destination` | **(Obbligatorio)** Informazioni sui dati esportati:<ul><li>`datasetId`: **(Obbligatorio)** ID del set di dati in cui devono essere esportati i dati.</li><li>`segmentPerBatch`: *(Facoltativo)* Valore booleano che, se non specificato, viene impostato automaticamente su &quot;false&quot;. Il valore &quot;false&quot; esporta tutti gli ID segmento in un singolo ID batch. Il valore &quot;true&quot; esporta un ID segmento in un ID batch. L&#39;impostazione del valore su &quot;true&quot; può influire sulle prestazioni di esportazione batch.</li></ul> |
-| `schema.name` | **(Obbligatorio)** Nome dello schema associato al set di dati in cui devono essere esportati i dati. |
-| `evaluationInfo.segmentation` | *(Facoltativo)* Valore booleano che, se non specificato, viene utilizzato per impostazione predefinita `false`. Un valore di `true` indica che è necessario eseguire la segmentazione sul processo di esportazione. |
+| `filter.segmentQualificationTime.startTime` | Ora di inizio della qualifica del segmento per un ID segmento per un determinato stato. Se non specificato, non sarà presente alcun filtro sull’ora di inizio per la qualifica di un ID segmento. Il timestamp deve essere fornito nel formato [RFC 3339](https://tools.ietf.org/html/rfc3339). |
+| `filter.segmentQualificationTime.endTime` | Ora di fine della qualifica del segmento per un ID segmento per un determinato stato. Se non specificato, non sarà presente alcun filtro sull’ora di fine per la qualifica di un ID segmento. Il timestamp deve essere fornito nel formato [RFC 3339](https://tools.ietf.org/html/rfc3339). |
+| `filter.fromIngestTimestamp ` | Limita i profili esportati a includere solo quelli che sono stati aggiornati dopo questa marca temporale. Il timestamp deve essere fornito nel formato [RFC 3339](https://tools.ietf.org/html/rfc3339). <ul><li>`fromIngestTimestamp` per **profili**, se fornito: include tutti i profili uniti in cui la marca temporale aggiornata unita è maggiore della marca temporale specificata. Supporta operando `greater_than`.</li><li>`fromIngestTimestamp` per **eventi**: tutti gli eventi acquisiti dopo questa marca temporale verranno esportati in base al risultato del profilo risultante. Non è l’ora dell’evento in sé, ma il tempo di acquisizione degli eventi.</li> |
+| `filter.emptyProfiles` | Valore booleano che indica se filtrare i profili vuoti. I profili possono contenere record di profilo, record ExperienceEvent o entrambi. I profili senza record di profilo e solo i record ExperienceEvent sono denominati &quot;emptyProfiles&quot;. Per esportare tutti i profili nell&#39;archivio profili, inclusi i &quot;emptyProfiles&quot;, impostare il valore di `emptyProfiles` su `true`. Se `emptyProfiles` è impostato su `false`, vengono esportati solo i profili con record di profilo nell&#39;archivio. Per impostazione predefinita, se l&#39;attributo `emptyProfiles` non è incluso, vengono esportati solo i profili contenenti record di profilo. |
+| `additionalFields.eventList` | Controlla i campi evento della serie temporale esportati per gli oggetti figlio o associati fornendo una o più delle seguenti impostazioni:<ul><li>`fields`: controlla i campi da esportare.</li><li>`filter`: specifica i criteri che limitano i risultati inclusi dagli oggetti associati. Prevede un valore minimo richiesto per l&#39;esportazione, in genere una data.</li><li>`filter.fromIngestTimestamp`: filtra gli eventi della serie temporale con quelli che sono stati acquisiti dopo la marca temporale fornita. Non è l’ora dell’evento in sé, ma il tempo di acquisizione degli eventi.</li><li>`filter.toIngestTimestamp`: filtra il timestamp in base a quelli che sono stati acquisiti prima del timestamp fornito. Non è l’ora dell’evento in sé, ma il tempo di acquisizione degli eventi.</li></ul> |
+| `destination` | **(obbligatorio)** Informazioni sui dati esportati:<ul><li>`datasetId`: **(obbligatorio)** ID del set di dati in cui devono essere esportati i dati.</li><li>`segmentPerBatch`: *(Facoltativo)* Valore booleano che, se non specificato, viene impostato automaticamente su &quot;false&quot;. Il valore &quot;false&quot; esporta tutti gli ID segmento in un singolo ID batch. Il valore &quot;true&quot; esporta un ID segmento in un ID batch. L&#39;impostazione del valore su &quot;true&quot; può influire sulle prestazioni di esportazione batch.</li></ul> |
+| `schema.name` | **(Obbligatorio)** Il nome dello schema associato al set di dati in cui devono essere esportati i dati. |
+| `evaluationInfo.segmentation` | *(Facoltativo)* Valore booleano che, se non specificato, viene impostato automaticamente su `false`. Il valore `true` indica che è necessario eseguire la segmentazione sul processo di esportazione. |
 
 **Risposta**
 
@@ -357,7 +357,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 | -------- | ----------- |
 | `id` | Valore di sola lettura generato dal sistema che identifica il processo di esportazione appena creato. |
 
-In alternativa, se `destination.segmentPerBatch` è stato impostato su `true`, il `destination` l&#39;oggetto di cui sopra avrebbe un `batches` come mostrato di seguito:
+In alternativa, se `destination.segmentPerBatch` fosse stato impostato su `true`, l&#39;oggetto `destination` di cui sopra avrebbe un array `batches`, come illustrato di seguito:
 
 ```json
     "destination": {
@@ -382,7 +382,7 @@ In alternativa, se `destination.segmentPerBatch` è stato impostato su `true`, i
 
 ## Recuperare un processo di esportazione specifico {#get}
 
-Per recuperare informazioni dettagliate su un processo di esportazione specifico, devi effettuare una richiesta GET al `/export/jobs` e fornendo l’ID del processo di esportazione che desideri recuperare nel percorso della richiesta.
+Per recuperare informazioni dettagliate su un processo di esportazione specifico, eseguire una richiesta GET all&#39;endpoint `/export/jobs` e specificare l&#39;ID del processo di esportazione che si desidera recuperare nel percorso della richiesta.
 
 **Formato API**
 
@@ -392,7 +392,7 @@ GET /export/jobs/{EXPORT_JOB_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{EXPORT_JOB_ID}` | Il `id` del processo di esportazione a cui desideri accedere. |
+| `{EXPORT_JOB_ID}` | `id` del processo di esportazione a cui desideri accedere. |
 
 **Richiesta**
 
@@ -467,10 +467,10 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `destination` | Informazioni sulla destinazione dei dati esportati:<ul><li>`datasetId`: ID del set di dati in cui sono stati esportati i dati.</li><li>`segmentPerBatch`: valore booleano che indica se gli ID segmento sono consolidati o meno. Un valore di `false` significa che tutti gli ID del segmento erano in un singolo ID batch. Un valore di `true` significa che un ID segmento viene esportato in un ID batch.</li></ul> |
+| `destination` | Informazioni sulla destinazione dei dati esportati:<ul><li>`datasetId`: ID del set di dati in cui sono stati esportati i dati.</li><li>`segmentPerBatch`: valore booleano che indica se gli ID segmento sono consolidati o meno. Il valore `false` indica che tutti gli ID segmento erano in un singolo ID batch. Il valore `true` indica che un ID segmento viene esportato in un ID batch.</li></ul> |
 | `fields` | Elenco dei campi esportati, separati da virgole. |
 | `schema.name` | Nome dello schema associato al set di dati in cui devono essere esportati i dati. |
-| `filter.segments` | I segmenti esportati. Sono inclusi i seguenti campi:<ul><li>`segmentId`: ID segmento per i profili da esportare.</li><li>`segmentNs`: spazio dei nomi del segmento per il dato `segmentID`.</li><li>`status`: array di stringhe che fornisce un filtro di stato per `segmentID`. Per impostazione predefinita, `status` avrà il valore `["realized"]` che rappresenta tutti i profili che rientrano nel segmento al momento corrente. I valori possibili includono: `realized` e `exited`.  Un valore di `realized` indica che il profilo è idoneo per il segmento. Un valore di `exiting` significa che il profilo sta uscendo dal segmento.</li></ul> |
+| `filter.segments` | I segmenti esportati. Sono inclusi i seguenti campi:<ul><li>`segmentId`: ID segmento per i profili da esportare.</li><li>`segmentNs`: spazio dei nomi del segmento per `segmentID` specificato.</li><li>`status`: un array di stringhe che fornisce un filtro di stato per `segmentID`. Per impostazione predefinita, `status` avrà il valore `["realized"]` che rappresenta tutti i profili che rientrano nel segmento al momento. I valori possibili includono: `realized` e `exited`.  Il valore `realized` indica che il profilo è idoneo per il segmento. Il valore `exiting` indica che il profilo sta uscendo dal segmento.</li></ul> |
 | `mergePolicy` | Informazioni sui criteri di unione per i dati esportati. |
 | `metrics.totalTime` | Campo che indica il tempo totale richiesto per l&#39;esecuzione del processo di esportazione. |
 | `metrics.profileExportTime` | Un campo che indica il tempo necessario per l’esportazione dei profili. |
@@ -478,7 +478,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 
 ## Annullare o eliminare un processo di esportazione specifico {#delete}
 
-Per richiedere l’eliminazione del processo di esportazione specificato, effettua una richiesta DELETE al `/export/jobs` e fornendo l’ID del processo di esportazione da eliminare nel percorso della richiesta.
+È possibile richiedere l&#39;eliminazione del processo di esportazione specificato effettuando una richiesta DELETE all&#39;endpoint `/export/jobs` e fornendo l&#39;ID del processo di esportazione che si desidera eliminare nel percorso della richiesta.
 
 **Formato API**
 
@@ -488,7 +488,7 @@ DELETE /export/jobs/{EXPORT_JOB_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{EXPORT_JOB_ID}` | Il `id` del processo di esportazione che desideri eliminare. |
+| `{EXPORT_JOB_ID}` | `id` del processo di esportazione che si desidera eliminare. |
 
 **Richiesta**
 

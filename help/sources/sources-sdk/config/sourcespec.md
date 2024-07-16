@@ -5,16 +5,16 @@ description: Questo documento fornisce una panoramica delle configurazioni da pr
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
 source-git-commit: 1fdce7c798d8aff49ab4953298ad7aa8dddb16bd
 workflow-type: tm+mt
-source-wordcount: '2078'
+source-wordcount: '2084'
 ht-degree: 1%
 
 ---
 
 # Configurare le specifiche di origine per le origini self-service (SDK batch)
 
-Le specifiche dell&#39;origine contengono informazioni specifiche per un&#39;origine, inclusi gli attributi relativi alla categoria, allo stato beta e all&#39;icona del catalogo di un&#39;origine. Contengono anche informazioni utili come parametri URL, contenuto, intestazione e pianificazione. Le specifiche di origine descrivono anche lo schema dei parametri necessari per creare una connessione di origine da una connessione di base. Lo schema è necessario per creare una connessione di origine.
+Le specifiche Source contengono informazioni specifiche per un&#39;origine, inclusi gli attributi relativi alla categoria, allo stato beta e all&#39;icona del catalogo di un&#39;origine. Contengono anche informazioni utili come parametri URL, contenuto, intestazione e pianificazione. Le specifiche Source descrivono anche lo schema dei parametri necessari per creare una connessione sorgente da una connessione di base. Lo schema è necessario per creare una connessione di origine.
 
-Consulta la [appendice](#source-spec) ad esempio una specifica di origine completamente popolata.
+Per un esempio di specifica di origine completa, vedere l&#39;[appendice](#source-spec).
 
 
 ```json
@@ -239,41 +239,41 @@ Consulta la [appendice](#source-spec) ad esempio una specifica di origine comple
 | `sourceSpec.attributes.spec.properties.urlParams` | Contiene informazioni sul percorso della risorsa URL, sul metodo e sui parametri di query supportati. |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.path` | Definisce il percorso della risorsa da cui recuperare i dati. | `/3.0/reports/${campaignId}/email-activity` |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.method` | Definisce il metodo HTTP da utilizzare per effettuare la richiesta alla risorsa di recupero dei dati. | `GET`, `POST` |
-| `sourceSpec.attributes.spec.properties.urlParams.properties.queryParams` | Definisce i parametri di query supportati che possono essere utilizzati per aggiungere l’URL di origine quando si effettua una richiesta di recupero dei dati. **Nota**: qualsiasi valore di parametro fornito dall’utente deve essere formattato come segnaposto. Ad esempio: `${USER_PARAMETER}`. | `"queryParams" : {"key" : "value", "key1" : "value1"}` verrà aggiunto all’URL di origine come: `/?key=value&key1=value1` |
+| `sourceSpec.attributes.spec.properties.urlParams.properties.queryParams` | Definisce i parametri di query supportati che possono essere utilizzati per aggiungere l’URL di origine quando si effettua una richiesta di recupero dei dati. **Nota**: qualsiasi valore di parametro fornito dall&#39;utente deve essere formattato come segnaposto. Esempio: `${USER_PARAMETER}`. | `"queryParams" : {"key" : "value", "key1" : "value1"}` verrà aggiunto all&#39;URL di origine come: `/?key=value&key1=value1` |
 | `sourceSpec.attributes.spec.properties.spec.properties.headerParams` | Definisce le intestazioni che devono essere fornite nella richiesta HTTP all’URL di origine durante il recupero dei dati. | `"headerParams" : {"Content-Type" : "application/json", "x-api-key" : "key"}` |
 | `sourceSpec.attributes.spec.properties.bodyParams` | Questo attributo può essere configurato per inviare il corpo HTTP tramite una richiesta POST. |
-| `sourceSpec.attributes.spec.properties.contentPath` | Definisce il nodo che contiene l’elenco degli elementi da acquisire in Platform. Questo attributo deve seguire una sintassi di percorso JSON valida e deve puntare a un array specifico. | Visualizza [sezione risorse aggiuntive](#content-path) per un esempio della risorsa contenuta in un percorso di contenuto. |
+| `sourceSpec.attributes.spec.properties.contentPath` | Definisce il nodo che contiene l’elenco degli elementi da acquisire in Platform. Questo attributo deve seguire una sintassi di percorso JSON valida e deve puntare a un array specifico. | Visualizzare la [sezione risorse aggiuntive](#content-path) per un esempio della risorsa contenuta in un percorso di contenuto. |
 | `sourceSpec.attributes.spec.properties.contentPath.path` | Percorso che punta ai record della raccolta da acquisire in Platform. | `$.emails` |
 | `sourceSpec.attributes.spec.properties.contentPath.skipAttributes` | Questa proprietà ti consente di identificare elementi specifici dalla risorsa identificata nel percorso del contenuto che devono essere esclusi dall’acquisizione. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.contentPath.keepAttributes` | Questa proprietà consente di specificare in modo esplicito i singoli attributi che si desidera mantenere. | `[total_items]` |
-| `sourceSpec.attributes.spec.properties.contentPath.overrideWrapperAttribute` | Questa proprietà consente di ignorare il valore del nome attributo specificato in `contentPath`. | `email` |
+| `sourceSpec.attributes.spec.properties.contentPath.overrideWrapperAttribute` | Questa proprietà consente di ignorare il valore del nome dell&#39;attributo specificato in `contentPath`. | `email` |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath` | Questa proprietà consente di &quot;appiattire&quot; due array e trasformare i dati delle risorse in risorse Platform. |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.path` | Percorso che punta ai record della raccolta che si desidera appiattire. | `$.email.activity` |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.skipAttributes` | Questa proprietà ti consente di identificare elementi specifici dalla risorsa identificata nel percorso dell’entità che devono essere esclusi dall’acquisizione. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.keepAttributes` | Questa proprietà consente di specificare in modo esplicito i singoli attributi che si desidera mantenere. | `[total_items]` |
-| `sourceSpec.attributes.spec.properties.explodeEntityPath.overrideWrapperAttribute` | Questa proprietà consente di ignorare il valore del nome attributo specificato in `explodeEntityPath`. | `activity` |
+| `sourceSpec.attributes.spec.properties.explodeEntityPath.overrideWrapperAttribute` | Questa proprietà consente di ignorare il valore del nome dell&#39;attributo specificato in `explodeEntityPath`. | `activity` |
 | `sourceSpec.attributes.spec.properties.paginationParams` | Definisce i parametri o i campi da fornire per ottenere un collegamento alla pagina successiva dalla risposta della pagina corrente dell&#39;utente o durante la creazione di un URL della pagina successiva. |
-| `sourceSpec.attributes.spec.properties.paginationParams.type` | Visualizza il tipo di impaginazione supportato per l&#39;origine. | <ul><li>`OFFSET`: questo tipo di impaginazione ti consente di analizzare i risultati specificando un indice da cui avviare la matrice risultante e un limite sul numero di risultati restituiti.</li><li>`POINTER`: questo tipo di impaginazione ti consente di utilizzare una `pointer` variabile per puntare a un particolare elemento che deve essere inviato con una richiesta. L&#39;impaginazione del tipo di puntatore richiede il percorso nel payload che punta alla pagina successiva.</li><li>`CONTINUATION_TOKEN`: questo tipo di impaginazione ti consente di aggiungere alla query o ai parametri di intestazione un token di continuazione per recuperare i dati restituiti rimanenti dall’origine che non sono stati inizialmente restituiti a causa di un massimo predeterminato.</li><li>`PAGE`: questo tipo di impaginazione ti consente di aggiungere al parametro di query un parametro di paging per scorrere i dati restituiti per pagina, a partire dalla pagina zero.</li><li>`NONE`: questo tipo di impaginazione può essere utilizzato per origini che non supportano nessuno dei tipi di impaginazione disponibili. Tipo di impaginazione `NONE` restituisce tutti i dati di risposta dopo una richiesta.</li></ul> |
-| `sourceSpec.attributes.spec.properties.paginationParams.limitName` | Il nome del limite attraverso il quale l’API può specificare il numero di record da recuperare in una pagina. | `limit` oppure `count` |
-| `sourceSpec.attributes.spec.properties.paginationParams.limitValue` | Il numero di record da recuperare in una pagina. | `limit=10` oppure `count=10` |
+| `sourceSpec.attributes.spec.properties.paginationParams.type` | Visualizza il tipo di impaginazione supportato per l&#39;origine. | <ul><li>`OFFSET`: questo tipo di impaginazione consente di analizzare i risultati specificando un indice da cui avviare l&#39;array risultante e un limite al numero di risultati restituiti.</li><li>`POINTER`: questo tipo di impaginazione consente di utilizzare una variabile `pointer` per puntare a un elemento particolare che deve essere inviato con una richiesta. L&#39;impaginazione del tipo di puntatore richiede il percorso nel payload che punta alla pagina successiva.</li><li>`CONTINUATION_TOKEN`: questo tipo di impaginazione ti consente di aggiungere alla query o ai parametri di intestazione un token di continuazione per recuperare i dati restituiti rimanenti dall&#39;origine che non sono stati inizialmente restituiti a causa di un massimo predeterminato.</li><li>`PAGE`: questo tipo di impaginazione ti consente di aggiungere al parametro di query un parametro di paging per scorrere i dati restituiti per pagine, a partire dalla pagina zero.</li><li>`NONE`: questo tipo di impaginazione può essere utilizzato per le origini che non supportano nessuno dei tipi di impaginazione disponibili. Il tipo di impaginazione `NONE` restituisce tutti i dati di risposta dopo una richiesta.</li></ul> |
+| `sourceSpec.attributes.spec.properties.paginationParams.limitName` | Il nome del limite attraverso il quale l’API può specificare il numero di record da recuperare in una pagina. | `limit` o `count` |
+| `sourceSpec.attributes.spec.properties.paginationParams.limitValue` | Il numero di record da recuperare in una pagina. | `limit=10` o `count=10` |
 | `sourceSpec.attributes.spec.properties.paginationParams.offSetName` | Nome dell&#39;attributo di offset. Questa opzione è necessaria se il tipo di paginazione è impostato su `offset`. | `offset` |
 | `sourceSpec.attributes.spec.properties.paginationParams.pointerPath` | Nome dell&#39;attributo del puntatore. Questo richiede il percorso json dell’attributo che punterà alla pagina successiva. Questa opzione è necessaria se il tipo di paginazione è impostato su `pointer`. | `pointer` |
-| `sourceSpec.attributes.spec.properties.scheduleParams` | Contiene parametri che definiscono i formati di pianificazione supportati per l&#39;origine. I parametri di pianificazione includono `startTime` e `endTime`, entrambi che consentono di impostare intervalli di tempo specifici per le esecuzioni batch, in modo da garantire che i record recuperati in una precedente esecuzione batch non vengano recuperati nuovamente. |
+| `sourceSpec.attributes.spec.properties.scheduleParams` | Contiene parametri che definiscono i formati di pianificazione supportati per l&#39;origine. I parametri di pianificazione includono `startTime` e `endTime`, che consentono di impostare intervalli di tempo specifici per le esecuzioni batch, in modo da garantire che i record recuperati in una precedente esecuzione batch non vengano recuperati. |
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleStartParamName` | Definisce il nome del parametro dell&#39;ora di inizio | `since_last_changed` |
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleEndParamName` | Definisce il nome del parametro dell&#39;ora di fine | `before_last_changed` |
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleStartParamFormat` | Definisce il formato supportato per `scheduleStartParamName`. | `yyyy-MM-ddTHH:mm:ssZ` |
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleEndParamFormat` | Definisce il formato supportato per `scheduleEndParamName`. | `yyyy-MM-ddTHH:mm:ssZ` |
-| `sourceSpec.spec.properties` | Definisce i parametri forniti dall&#39;utente per recuperare i valori delle risorse. | Consulta la [risorse aggiuntive](#user-input) ad esempio, parametri immessi dall&#39;utente per `spec.properties`. |
+| `sourceSpec.spec.properties` | Definisce i parametri forniti dall&#39;utente per recuperare i valori delle risorse. | Consulta le [risorse aggiuntive](#user-input) per un esempio dei parametri immessi dall&#39;utente per `spec.properties`. |
 
 {style="table-layout:auto"}
 
 ## Risorse aggiuntive {#appendix}
 
-Le sezioni seguenti forniscono informazioni sulle configurazioni aggiuntive che è possibile apportare al `sourceSpec`, inclusi la pianificazione avanzata e gli schemi personalizzati.
+Nelle sezioni seguenti vengono fornite informazioni sulle configurazioni aggiuntive che è possibile apportare a `sourceSpec`, inclusi la pianificazione avanzata e gli schemi personalizzati.
 
 ### Esempio di percorso del contenuto {#content-path}
 
-Di seguito è riportato un esempio del contenuto di `contentPath` proprietà in una [!DNL MailChimp Members] specifica di connessione.
+Di seguito è riportato un esempio del contenuto della proprietà `contentPath` in una specifica di connessione [!DNL MailChimp Members].
 
 ```json
 "contentPath": {
@@ -287,11 +287,11 @@ Di seguito è riportato un esempio del contenuto di `contentPath` proprietà in 
 }
 ```
 
-### `spec.properties` esempio di input utente {#user-input}
+### Esempio di input utente `spec.properties` {#user-input}
 
-Di seguito è riportato un esempio di `spec.properties` utilizzando un [!DNL MailChimp Members] specifica di connessione.
+Di seguito è riportato un esempio di `spec.properties` fornito dall&#39;utente che utilizza una specifica di connessione [!DNL MailChimp Members].
 
-In questo esempio, `listId` viene fornito come parte di `urlParams.path`. Se è necessario recuperare `listId` da un cliente, devi anche definirlo come parte di `spec.properties`.
+In questo esempio, `listId` viene fornito come parte di `urlParams.path`. Se devi recuperare `listId` da un cliente, devi definirlo anche come parte di `spec.properties`.
 
 
 ```json
@@ -312,7 +312,7 @@ In questo esempio, `listId` viene fornito come parte di `urlParams.path`. Se è 
     }
 ```
 
-### Esempio di specifica di origine {#source-spec}
+### Esempio di specifica Source {#source-spec}
 
 Di seguito è riportata una specifica di origine completata utilizzando [!DNL MailChimp Members]:
 
@@ -409,7 +409,7 @@ Questo tipo di impaginazione consente di analizzare i risultati specificando un 
 
 >[!TAB Puntatore]
 
-Questo tipo di impaginazione ti consente di utilizzare un’ `pointer` variabile per puntare a un particolare elemento che deve essere inviato con una richiesta. L&#39;impaginazione del tipo di puntatore richiede il percorso nel payload che punta alla pagina successiva. Ad esempio:
+Questo tipo di impaginazione consente di utilizzare una variabile `pointer` per puntare a un elemento particolare che deve essere inviato con una richiesta. L&#39;impaginazione del tipo di puntatore richiede il percorso nel payload che punta alla pagina successiva. Ad esempio:
 
 ```json
 {
@@ -447,9 +447,9 @@ Un’origine che supporta il tipo di token di continuazione dell’impaginazione
 | --- | --- |
 | `type` | Tipo di impaginazione utilizzato per restituire i dati. |
 | `continuationTokenPath` | Il valore che deve essere aggiunto ai parametri della query per passare alla pagina successiva dei risultati restituiti. |
-| `parameterType` | Il `parameterType` definisce dove `parameterName` deve essere aggiunto. Il `QUERYPARAM` tipo ti consente di aggiungere la query con il `parameterName`. Il `HEADERPARAM` consente di aggiungere `parameterName` nella richiesta di intestazione. |
-| `parameterName` | Nome del parametro utilizzato per incorporare il token di continuazione. Il formato è il seguente: `{PARAMETER_NAME}={CONTINUATION_TOKEN}`. |
-| `delayRequestMillis` | Il `delayRequestMillis` nell’impaginazione consente di controllare la frequenza delle richieste effettuate all’origine. Alcune origini possono avere un limite al numero di richieste che è possibile effettuare al minuto. Ad esempio: [!DNL Zendesk] ha un limite di 100 richieste al minuto e definisce  `delayRequestMillis` a `850` consente di configurare l’origine per effettuare chiamate a circa 80 richieste al minuto, ben al di sotto della soglia di 100 richieste al minuto. |
+| `parameterType` | La proprietà `parameterType` definisce dove è necessario aggiungere `parameterName`. Il tipo `QUERYPARAM` ti consente di aggiungere la query a `parameterName`. `HEADERPARAM` ti consente di aggiungere `parameterName` alla richiesta di intestazione. |
+| `parameterName` | Nome del parametro utilizzato per incorporare il token di continuazione. Formato: `{PARAMETER_NAME}={CONTINUATION_TOKEN}`. |
+| `delayRequestMillis` | La proprietà `delayRequestMillis` nell&#39;impaginazione consente di controllare la frequenza delle richieste effettuate all&#39;origine. Alcune origini possono avere un limite al numero di richieste che è possibile effettuare al minuto. Ad esempio, [!DNL Zendesk] ha un limite di 100 richieste al minuto e la definizione di `delayRequestMillis` in `850` consente di configurare l&#39;origine per effettuare chiamate a circa 80 richieste al minuto, ben al di sotto della soglia di 100 richieste al minuto. |
 
 Di seguito è riportato un esempio di risposta restituita utilizzando il tipo di token di continuazione impaginazione:
 
@@ -480,7 +480,7 @@ Di seguito è riportato un esempio di risposta restituita utilizzando il tipo di
 
 >[!TAB Pagina]
 
-Il `PAGE` tipo di impaginazione consente di scorrere i dati restituiti per numero di pagine a partire da zero. Quando si utilizza `PAGE` tipo di impaginazione, devi fornire il numero di record dato in una singola pagina.
+Il tipo di impaginazione `PAGE` consente di scorrere i dati restituiti per numero di pagine a partire da zero. Quando si utilizza l&#39;impaginazione di tipo `PAGE`, è necessario fornire il numero di record specificato in una singola pagina.
 
 ```json
 "paginationParams": {
@@ -500,16 +500,16 @@ Il `PAGE` tipo di impaginazione consente di scorrere i dati restituiti per numer
 | `limitName` | Il nome del limite attraverso il quale l’API può specificare il numero di record da recuperare in una pagina. |
 | `limitValue` | Il numero di record da recuperare in una pagina. |
 | `initialPageIndex` | (Facoltativo) L’indice della pagina iniziale definisce il numero di pagina da cui inizierà l’impaginazione. Questo campo può essere utilizzato per le origini in cui l’impaginazione non inizia da 0. Se non specificato, l’indice della pagina iniziale sarà 0 per impostazione predefinita. Questo campo richiede un numero intero. |
-| `endPageIndex` | (Facoltativo) L’indice della pagina finale ti consente di stabilire una condizione di fine e di interrompere l’impaginazione. Questo campo può essere utilizzato quando le condizioni di fine predefinite per interrompere l’impaginazione non sono disponibili. Questo campo può essere utilizzato anche se il numero di pagine da acquisire o l’ultimo numero di pagina viene fornito tramite l’intestazione di risposta, che è comune quando si utilizza `PAGE` impaginazione di tipo. Il valore per l’indice della pagina finale può essere l’ultimo numero di pagina o un valore di espressione di tipo stringa dall’intestazione di risposta. Ad esempio, puoi utilizzare `headers.x-pagecount` per assegnare l&#39;indice della pagina finale a `x-pagecount` valore dalle intestazioni di risposta. **Nota**: `x-pagecount` è un’intestazione di risposta obbligatoria per alcune origini e contiene il valore numero di pagine da acquisire. |
-| `pageParamName` | Il nome del parametro che è necessario accodare ai parametri di query per poter attraversare pagine diverse dei dati restituiti. Ad esempio: `https://abc.com?pageIndex=1` restituisce la seconda pagina del payload di ritorno di un’API. |
+| `endPageIndex` | (Facoltativo) L’indice della pagina finale ti consente di stabilire una condizione di fine e di interrompere l’impaginazione. Questo campo può essere utilizzato quando le condizioni di fine predefinite per interrompere l’impaginazione non sono disponibili. Questo campo può essere utilizzato anche se il numero di pagine da acquisire o l&#39;ultimo numero di pagina viene fornito tramite l&#39;intestazione di risposta, comune quando si utilizza l&#39;impaginazione di tipo `PAGE`. Il valore per l’indice della pagina finale può essere l’ultimo numero di pagina o un valore di espressione di tipo stringa dall’intestazione di risposta. Ad esempio, è possibile utilizzare `headers.x-pagecount` per assegnare l&#39;indice della pagina finale al valore `x-pagecount` dalle intestazioni di risposta. **Nota**: `x-pagecount` è un&#39;intestazione di risposta obbligatoria per alcune origini e contiene il valore numero di pagine da acquisire. |
+| `pageParamName` | Il nome del parametro che è necessario accodare ai parametri di query per poter attraversare pagine diverse dei dati restituiti. `https://abc.com?pageIndex=1`, ad esempio, restituirebbe la seconda pagina del payload di ritorno di un&#39;API. |
 | `maximumRequest` | Il numero massimo di richieste che un’origine può effettuare per una determinata esecuzione incrementale. Il limite predefinito corrente è 10000. |
 
 {style="table-layout:auto"}
 
 
->[!TAB Nessuna]
+>[!TAB Nessuno]
 
-Il `NONE` il tipo di impaginazione può essere utilizzato per origini che non supportano nessuno dei tipi di impaginazione disponibili. Origini che utilizzano il tipo di impaginazione `NONE` è sufficiente restituire tutti i record recuperabili quando viene effettuata una richiesta GET.
+Il tipo di impaginazione `NONE` può essere utilizzato per le origini che non supportano nessuno dei tipi di impaginazione disponibili. Le origini che utilizzano il tipo di impaginazione di `NONE` restituiscono semplicemente tutti i record recuperabili quando viene effettuata una richiesta di GET.
 
 ```json
 "paginationParams": {
@@ -521,9 +521,9 @@ Il `NONE` il tipo di impaginazione può essere utilizzato per origini che non su
 
 ### Pianificazione avanzata per origini self-service (SDK batch)
 
-Configura la pianificazione incrementale e di backfill dell’origine utilizzando la pianificazione avanzata. Il `incremental` consente di configurare una pianificazione in cui l&#39;origine acquisirà solo record nuovi o modificati, mentre `backfill` consente di creare una pianificazione per acquisire i dati storici.
+Configura la pianificazione incrementale e di backfill dell’origine utilizzando la pianificazione avanzata. La proprietà `incremental` consente di configurare una pianificazione in cui l&#39;origine acquisirà solo record nuovi o modificati, mentre la proprietà `backfill` consente di creare una pianificazione per acquisire i dati storici.
 
-Con la pianificazione avanzata, puoi utilizzare espressioni e funzioni specifiche della tua origine per configurare pianificazioni incrementali e di backfill. Nell’esempio seguente, il [!DNL Zendesk] origine richiede che la pianificazione incrementale sia formattata come `type:user updated > {START_TIME} updated < {END_TIME}` e backfill come `type:user updated < {END_TIME}`.
+Con la pianificazione avanzata, puoi utilizzare espressioni e funzioni specifiche della tua origine per configurare pianificazioni incrementali e di backfill. Nell&#39;esempio seguente, l&#39;origine [!DNL Zendesk] richiede che la pianificazione incrementale sia formattata come `type:user updated > {START_TIME} updated < {END_TIME}` e che la retrocompilazione come `type:user updated < {END_TIME}`.
 
 ```json
 "scheduleParams": {
@@ -536,12 +536,12 @@ Con la pianificazione avanzata, puoi utilizzare espressioni e funzioni specifich
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `scheduleParams.type` | Tipo di pianificazione che verrà utilizzato dall&#39;origine. Imposta questo valore su `ADVANCE` per utilizzare il tipo di pianificazione avanzata. |
-| `scheduleParams.paramFormat` | Il formato definito del parametro di pianificazione. Questo valore può essere lo stesso del `scheduleStartParamFormat` e `scheduleEndParamFormat` valori. |
+| `scheduleParams.type` | Tipo di pianificazione che verrà utilizzato dall&#39;origine. Impostare questo valore su `ADVANCE` per utilizzare il tipo di pianificazione avanzata. |
+| `scheduleParams.paramFormat` | Il formato definito del parametro di pianificazione. Questo valore può essere uguale ai valori `scheduleStartParamFormat` e `scheduleEndParamFormat` dell&#39;origine. |
 | `scheduleParams.incremental` | La query incrementale dell’origine. Incrementale si riferisce a un metodo di acquisizione in cui vengono acquisiti solo dati nuovi o modificati. |
 | `scheduleParams.backfill` | La query di retrocompilazione dell’origine. Il backfill si riferisce a un metodo di acquisizione in cui vengono acquisiti dati storici. |
 
-Dopo aver configurato la pianificazione avanzata, è necessario fare riferimento a `scheduleParams` nella sezione URL, body o header params (Parametri URL, corpo o intestazione), a seconda di ciò che supporta la tua specifica origine. Nell’esempio seguente, `{SCHEDULE_QUERY}` è un segnaposto utilizzato per specificare dove verranno utilizzate le espressioni di pianificazione incrementale e di retrocompilazione. Nel caso di un [!DNL Zendesk] origine, `query` viene utilizzato in `queryParams` per specificare la programmazione avanzata.
+Dopo aver configurato la pianificazione avanzata, è necessario fare riferimento a `scheduleParams` nella sezione URL, body o header params (Parametri URL, corpo o intestazione), a seconda di ciò che supporta la propria origine. Nell&#39;esempio seguente, `{SCHEDULE_QUERY}` è un segnaposto utilizzato per specificare dove verranno utilizzate le espressioni di pianificazione incrementale e di backfill. Nel caso di un&#39;origine [!DNL Zendesk], `query` viene utilizzato in `queryParams` per specificare la pianificazione avanzata.
 
 ```json
 "urlParams": {
@@ -556,7 +556,7 @@ Dopo aver configurato la pianificazione avanzata, è necessario fare riferimento
 
 ### Aggiungi uno schema personalizzato per definire gli attributi dinamici della tua origine
 
-Puoi includere uno schema personalizzato nel tuo `sourceSpec` per definire tutti gli attributi necessari per l&#39;origine, inclusi quelli dinamici. È possibile aggiornare la specifica di connessione corrispondente dell’origine effettuando una richiesta PUT al `/connectionSpecs` endpoint del [!DNL Flow Service] , fornendo al tempo stesso lo schema personalizzato nel `sourceSpec` sezione della specifica di connessione.
+È possibile includere uno schema personalizzato in `sourceSpec` per definire tutti gli attributi richiesti per l&#39;origine, inclusi gli eventuali attributi dinamici necessari. È possibile aggiornare la specifica di connessione corrispondente dell&#39;origine effettuando una richiesta PUT all&#39;endpoint `/connectionSpecs` dell&#39;API [!DNL Flow Service] e fornendo al contempo lo schema personalizzato nella sezione `sourceSpec` della specifica di connessione.
 
 Di seguito è riportato un esempio di schema personalizzato che è possibile aggiungere alla specifica di connessione dell&#39;origine:
 
@@ -659,4 +659,4 @@ Di seguito è riportato un esempio di schema personalizzato che è possibile agg
 
 ## Passaggi successivi
 
-Con le specifiche sorgente compilate, puoi procedere alla configurazione delle specifiche di esplorazione per l’origine che desideri integrare in Platform. Vedi il documento su [configurazione delle specifiche di esplorazione](./explorespec.md) per ulteriori informazioni.
+Con le specifiche sorgente compilate, puoi procedere alla configurazione delle specifiche di esplorazione per l’origine che desideri integrare in Platform. Per ulteriori informazioni, consulta il documento sulla [configurazione delle specifiche di esplorazione](./explorespec.md).

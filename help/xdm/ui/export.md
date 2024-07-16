@@ -7,7 +7,7 @@ exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
 source-git-commit: 0f0842c1d14ce42453b09bf97e1f3690448f6e9a
 workflow-type: tm+mt
 source-wordcount: '655'
-ht-degree: 0%
+ht-degree: 11%
 
 ---
 
@@ -16,35 +16,35 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_xdm_copyjsonstructure"
 >title="Copia struttura JSON"
->abstract="Genera un payload di esportazione per lo schema scelto copiando la struttura JSON negli Appunti. Utilizzare questa funzione per esportare i dettagli di qualsiasi schema della raccolta schemi. Questo JSON esportato può quindi essere utilizzato per importare lo schema e tutte le risorse correlate in una sandbox o organizzazione diversa. In questo modo la condivisione e il riutilizzo degli schemi tra ambienti diversi diventano semplici ed efficienti."
+>abstract="Genera un payload di esportazione per lo schema scelto copiando la struttura JSON negli appunti. Utilizza questa funzione per esportare i dettagli di qualsiasi schema della libreria degli schemi. Questo JSON esportato può quindi essere utilizzato per importare lo schema e tutte le risorse correlate in una sandbox o organizzazione diversa. In questo modo la condivisione e il riutilizzo degli schemi tra ambienti diversi diventano semplici ed efficienti."
 
 Tutte le risorse all’interno della Libreria schemi sono contenute in una sandbox specifica all’interno di un’organizzazione. In alcuni casi, potrebbe essere utile condividere risorse Experience Data Model (XDM) tra sandbox e organizzazioni.
 
-Per soddisfare questa esigenza, [!UICONTROL Schemi] Nell’interfaccia utente di Adobe Experience Platform, Workspace consente di generare un payload di esportazione per qualsiasi schema in nella Libreria schemi. Questo payload può quindi essere utilizzato in una chiamata all’API Schema Registry per importare lo schema (e tutte le risorse dipendenti) in una sandbox e un’organizzazione di destinazione.
+Per soddisfare questa esigenza, l&#39;area di lavoro [!UICONTROL Schemi] nell&#39;interfaccia utente di Adobe Experience Platform consente di generare un payload di esportazione per qualsiasi schema all&#39;interno della raccolta schemi. Questo payload può quindi essere utilizzato in una chiamata all’API Schema Registry per importare lo schema (e tutte le risorse dipendenti) in una sandbox e un’organizzazione di destinazione.
 
 >[!NOTE]
 >
->È inoltre possibile utilizzare l’API Schema Registry per esportare altre risorse oltre agli schemi, tra cui classi, gruppi di campi di schema e tipi di dati. Consulta la [guida dell’endpoint di esportazione](../api/export.md) per ulteriori informazioni.
+>È inoltre possibile utilizzare l’API Schema Registry per esportare altre risorse oltre agli schemi, tra cui classi, gruppi di campi di schema e tipi di dati. Per ulteriori informazioni, consulta la [guida dell&#39;endpoint di esportazione](../api/export.md).
 
 ## Prerequisiti
 
-Anche se l’interfaccia utente di Platform consente di esportare risorse XDM, è necessario utilizzare l’API Schema Registry per importare tali risorse in altre sandbox o organizzazioni per completare il flusso di lavoro. Consulta la guida su [guida introduttiva all’API Schema Registry](../api/getting-started.md) per informazioni importanti sulle intestazioni di autenticazione richieste prima di seguire questa guida.
+Anche se l’interfaccia utente di Platform consente di esportare risorse XDM, è necessario utilizzare l’API Schema Registry per importare tali risorse in altre sandbox o organizzazioni per completare il flusso di lavoro. Consulta la guida [guida introduttiva all&#39;API Schema Registry](../api/getting-started.md) per informazioni importanti sulle intestazioni di autenticazione richieste prima di seguire questa guida.
 
 ## Generare un payload di esportazione {#generate-export-payload}
 
-I payload di esportazione possono essere generati nell’interfaccia utente di Platform dal pannello dei dettagli in [!UICONTROL Sfoglia] o direttamente dall’area di lavoro dello schema nell’Editor di schema.
+I payload di esportazione possono essere generati nell&#39;interfaccia utente di Platform dal pannello dei dettagli nella scheda [!UICONTROL Sfoglia] o direttamente dall&#39;area di lavoro dello schema nell&#39;Editor di schema.
 
-Per generare un payload di esportazione, seleziona **[!UICONTROL Schemi]** nel menu di navigazione a sinistra. All&#39;interno del [!UICONTROL Schemi] nell’area di lavoro, seleziona la riga dello schema da esportare per visualizzare i dettagli dello schema nella barra laterale a destra.
+Per generare un payload di esportazione, seleziona **[!UICONTROL Schemi]** nell&#39;area di navigazione a sinistra. Nell&#39;area di lavoro [!UICONTROL Schemi], selezionare la riga dello schema da esportare per visualizzare i dettagli dello schema nella barra laterale a destra.
 
 >[!TIP]
 >
->Consulta la guida su [esplorazione delle risorse XDM](./explore.md) per informazioni dettagliate su come trovare la risorsa XDM che stai cercando.
+>Per informazioni dettagliate su come trovare la risorsa XDM che stai cercando, consulta la guida su [esplorazione delle risorse XDM](./explore.md).
 
-Quindi, seleziona la **[!UICONTROL Copia JSON]** icona (![Copia icona](../images/ui/export/icon.png)) dalle opzioni disponibili.
+Quindi, seleziona l&#39;icona **[!UICONTROL Copia JSON]** (![Copia icona](../images/ui/export/icon.png)) tra le opzioni disponibili.
 
-![L’area di lavoro Schemi con una riga di schema e [!UICONTROL Copia in JSON] evidenziato.](../images/ui/export/copy-json.png)
+![Area di lavoro Schemi con una riga di schema e [!UICONTROL Copia in JSON] evidenziata.](../images/ui/export/copy-json.png)
 
-Questo copia un payload JSON negli Appunti, generato in base alla struttura dello schema. Per il &quot;[!DNL Loyalty Members]&quot; mostrato sopra, viene generato il seguente JSON:
+Questo copia un payload JSON negli Appunti, generato in base alla struttura dello schema. Per lo schema &quot;[!DNL Loyalty Members]&quot; mostrato sopra, viene generato il seguente JSON:
 
 +++Seleziona per espandere un esempio di payload JSON
 
@@ -212,22 +212,22 @@ Questo copia un payload JSON negli Appunti, generato in base alla struttura dell
 
 +++
 
-Puoi copiare il payload anche selezionando [!UICONTROL Altro] in alto a destra nell’Editor di schema. Un menu a discesa fornisce due opzioni: [!UICONTROL Copia struttura JSON] e [!UICONTROL Elimina schema].
+È inoltre possibile copiare il payload selezionando [!UICONTROL Altro] in alto a destra nell&#39;Editor di schema. Un menu a discesa fornisce due opzioni: [!UICONTROL Copia struttura JSON] e [!UICONTROL Elimina schema].
 
 >[!NOTE]
 >
 >Non è possibile eliminare uno schema se è abilitato per il profilo o se a esso sono associati set di dati.
 
-![Editor schemi con [!UICONTROL Altro] e [!UICONTROL Copia in JSON] evidenziato.](../images/ui/export/schema-editor-copy-json.png)
+![Editor schemi con [!UICONTROL Altro] e [!UICONTROL Copia in JSON] evidenziati.](../images/ui/export/schema-editor-copy-json.png)
 
-Il payload assume la forma di un array; ogni elemento dell’array è un oggetto che rappresenta una risorsa XDM personalizzata da esportare. Nell’esempio precedente, l’opzione &quot;[!DNL Loyalty details]&quot; gruppo di campi personalizzato e &quot;[!DNL Loyalty Members]&quot;sono inclusi. Tutte le risorse core utilizzate dallo schema non vengono incluse nell’esportazione, in quanto sono disponibili in tutte le sandbox e le organizzazioni.
+Il payload assume la forma di un array; ogni elemento dell’array è un oggetto che rappresenta una risorsa XDM personalizzata da esportare. Nell&#39;esempio precedente, il gruppo di campi personalizzato &quot;[!DNL Loyalty details]&quot; e lo schema &quot;[!DNL Loyalty Members]&quot; sono inclusi. Tutte le risorse core utilizzate dallo schema non vengono incluse nell’esportazione, in quanto sono disponibili in tutte le sandbox e le organizzazioni.
 
-Ogni istanza dell’ID tenant dell’organizzazione viene visualizzata come `<XDM_TENANTID_PLACEHOLDER>` nel payload. Questi segnaposto verranno sostituiti automaticamente con il valore ID tenant appropriato a seconda di dove importi lo schema nel passaggio successivo.
+Tieni presente che ogni istanza dell&#39;ID tenant della tua organizzazione viene visualizzata come `<XDM_TENANTID_PLACEHOLDER>` nel payload. Questi segnaposto verranno sostituiti automaticamente con il valore ID tenant appropriato a seconda di dove importi lo schema nel passaggio successivo.
 
 ## Importare la risorsa utilizzando l’API {#import-resource-with-api}
 
-Dopo aver copiato il JSON di esportazione per lo schema, puoi utilizzarlo come payload per una richiesta POST al `/rpc/import` nell’API Schema Registry. Consulta la [importa guida dell’endpoint](../api/import.md) per informazioni dettagliate su come configurare la chiamata per inviare lo schema all’organizzazione e alla sandbox desiderate.
+Dopo aver copiato il JSON di esportazione per lo schema, puoi utilizzarlo come payload per una richiesta POST all&#39;endpoint `/rpc/import` nell&#39;API Schema Registry. Consulta la [guida dell&#39;endpoint di importazione](../api/import.md) per informazioni dettagliate su come configurare la chiamata per inviare lo schema all&#39;organizzazione e alla sandbox desiderate.
 
 ## Passaggi successivi
 
-Seguendo questa guida, hai esportato correttamente uno schema XDM in un’organizzazione o sandbox diversa. Per ulteriori informazioni sulle funzionalità di [!UICONTROL Schemi] interfaccia utente, fare riferimento a [[!UICONTROL Schemi] Panoramica dell’interfaccia utente](./overview.md).
+Seguendo questa guida, hai esportato correttamente uno schema XDM in un’organizzazione o sandbox diversa. Per ulteriori informazioni sulle funzionalità dell&#39;interfaccia utente di [!UICONTROL Schemi], fare riferimento alla panoramica dell&#39;interfaccia utente di [[!UICONTROL Schemi]](./overview.md).

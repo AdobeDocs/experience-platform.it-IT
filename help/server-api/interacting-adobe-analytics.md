@@ -1,6 +1,6 @@
 ---
 title: Interazione con Adobe Analytics
-description: Scopri come utilizzare l’API del server di rete Edge per interagire con Adobe Analytics.
+description: Scopri come utilizzare l’API server di Edge Network per interagire con Adobe Analytics.
 exl-id: b5e7a4d0-9aea-4e70-a7d6-b9aad09aaddf
 source-git-commit: 5de1ec17b78c97be21c0d2afd6f0b119a6074b6f
 workflow-type: tm+mt
@@ -13,11 +13,11 @@ ht-degree: 1%
 
 ## Panoramica {#overview}
 
-La raccolta dati di Adobe Analytics funziona traducendo i dati XDM in un formato comprensibile ad Adobe Analytics. Diversi campi XDM sono [mappato automaticamente](https://experienceleague.adobe.com/docs/analytics/implementation/aep-edge/variable-mapping.html?lang=it) alle variabili di Analytics. Puoi anche mappare manualmente i valori XDM sulle variabili Analytics precedenti.
+La raccolta dati di Adobe Analytics funziona traducendo i dati XDM in un formato comprensibile ad Adobe Analytics. Diversi campi XDM sono [mappati automaticamente](https://experienceleague.adobe.com/docs/analytics/implementation/aep-edge/variable-mapping.html) alle variabili di Analytics. Puoi anche mappare manualmente i valori XDM sulle variabili Analytics precedenti.
 
-Per abilitare Adobe Analytics alla ricezione di dati dall’API server, devi [configurare lo stream di dati](../datastreams/overview.md#adobe-analytics-settings) per inoltrare gli eventi ad Adobe Analytics, inserendo l’ID suite di rapporti nella pagina di configurazione dello stream di dati.
+Per consentire ad Adobe Analytics di ricevere dati dall&#39;API server, devi [configurare lo stream di dati](../datastreams/overview.md#adobe-analytics-settings) per inoltrare eventi ad Adobe Analytics, immettendo l&#39;ID suite di rapporti nella pagina di configurazione dello stream di dati.
 
-![Configurazione dello stream di dati Adobe Analytics](assets/analytics-datastream.png)
+![Configurazione Adobe Analytics Datastream](assets/analytics-datastream.png)
 
 ## Interazione con Adobe Analytics {#interacting-analytics}
 
@@ -29,7 +29,7 @@ POST /ee/v2/interact?dataStreamId={DATASTREAM_ID}
 
 ### Richiesta {#request}
 
-L’esempio seguente include diversi valori mappati automaticamente dall’ `_experience.analytics` gruppo di campi. Include anche livelli di dati basati su JSON. Anche se questi livelli di dati non possono essere mappati automaticamente, è possibile utilizzare [Preparazione per la raccolta dati](../datastreams/data-prep.md) per mappare questi valori a uno schema che contiene i gruppi di campi a cui si fa riferimento in precedenza.
+L&#39;esempio seguente include diversi valori mappati automaticamente dal gruppo di campi `_experience.analytics`. Include anche livelli di dati basati su JSON. Anche se questi livelli di dati non possono essere mappati automaticamente, è possibile utilizzare [Preparazione dati per raccolta dati](../datastreams/data-prep.md) per mappare questi valori a uno schema che contiene i gruppi di campi di cui sopra.
 
 Tutti i valori mappati dagli utenti a tali campi verranno automaticamente mappati sui valori Analytics appropriati, come se fossero inclusi nella richiesta API.
 

@@ -20,15 +20,15 @@ ht-degree: 6%
 
 I ruoli definiscono l’accesso di un amministratore, uno specialista o un utente finale alle risorse della tua organizzazione. In un ambiente di controllo degli accessi basato su ruoli, il provisioning degli accessi utente è raggruppato in base a responsabilità e esigenze comuni. Un ruolo dispone di un determinato set di autorizzazioni e i membri dell’organizzazione possono essere assegnati a uno o più ruoli, a seconda dell’ambito di accesso di visualizzazione o scrittura necessario.
 
-Il `/roles` L’endpoint nell’API di controllo degli accessi basata su attributi consente di gestire in modo programmatico i ruoli all’interno dell’organizzazione.
+L&#39;endpoint `/roles` nell&#39;API di controllo degli accessi basata su attributi consente di gestire in modo programmatico i ruoli dell&#39;organizzazione.
 
 ## Introduzione
 
-L’endpoint API utilizzato in questa guida fa parte dell’API di controllo degli accessi basata su attributi. Prima di continuare, controlla [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida per la lettura delle chiamate API di esempio di questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experienci Platform.
+L’endpoint API utilizzato in questa guida fa parte dell’API di controllo degli accessi basata su attributi. Prima di continuare, consulta la [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e per le informazioni importanti sulle intestazioni necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
 
 ## Recuperare un elenco di ruoli {#list}
 
-Puoi elencare tutti i ruoli esistenti appartenenti alla tua organizzazione effettuando una richiesta GET al `/roles` endpoint.
+Per elencare tutti i ruoli esistenti appartenenti alla tua organizzazione, devi eseguire una richiesta GET all&#39;endpoint `/roles`.
 
 **Formato API**
 
@@ -113,7 +113,7 @@ In caso di esito positivo, la risposta restituisce un elenco di ruoli dell’org
 
 ## Cercare un ruolo {#lookup}
 
-Per cercare un singolo ruolo, devi eseguire una richiesta GET che includa il `roleId` nel percorso della richiesta.
+Per cercare un singolo ruolo, devi eseguire una richiesta GET che includa il `roleId` corrispondente nel percorso della richiesta.
 
 **Formato API**
 
@@ -180,7 +180,7 @@ In caso di esito positivo, la risposta restituisce i dettagli per l’ID ruolo i
 
 ## Cerca soggetti per ID ruolo
 
-Puoi anche recuperare gli oggetti effettuando una richiesta GET al `/roles` endpoint durante la fornitura di un {ROLE_ID}.
+È inoltre possibile recuperare gli oggetti effettuando una richiesta GET all&#39;endpoint `/roles` e fornendo un {ROLE_ID}.
 
 **Formato API**
 
@@ -256,7 +256,7 @@ In caso di esito positivo, la risposta restituisce i soggetti associati all’ID
 
 ## Creare un ruolo {#create}
 
-Per creare un nuovo ruolo, effettua una richiesta POST al `/roles` mentre forniscono valori per il nome, la descrizione e il tipo di ruolo del ruolo.
+Per creare un nuovo ruolo, effettuare una richiesta POST all&#39;endpoint `/roles` fornendo i valori per il nome, la descrizione e il tipo di ruolo del ruolo.
 
 **Formato API**
 
@@ -328,7 +328,7 @@ In caso di esito positivo, la risposta restituisce il ruolo appena creato, con i
 
 ## Aggiornare un ruolo {#patch}
 
-È possibile aggiornare le proprietà di un ruolo effettuando una richiesta PATCH al `/roles` fornendo l’ID del ruolo e i valori corrispondenti per le operazioni che desideri applicare.
+È possibile aggiornare le proprietà di un ruolo effettuando una richiesta PATCH all&#39;endpoint `/roles` e fornendo l&#39;ID ruolo e i valori corrispondenti per le operazioni che si desidera applicare.
 
 **Formato API**
 
@@ -361,7 +361,7 @@ curl -X PATCH \
 
 | Operazioni | Descrizione |
 | --- | --- |
-| `op` | Chiamata di operazione utilizzata per definire l&#39;azione necessaria per aggiornare il ruolo. Le operazioni includono: `add`, `replace`, e `remove`. |
+| `op` | Chiamata di operazione utilizzata per definire l&#39;azione necessaria per aggiornare il ruolo. Le operazioni includono: `add`, `replace` e `remove`. |
 | `path` | Percorso del parametro da aggiornare. |
 | `value` | Il nuovo valore con cui desideri aggiornare il parametro. |
 
@@ -408,7 +408,7 @@ In caso di esito positivo, la risposta restituisce il ruolo aggiornato, inclusi 
 
 ## Aggiornare un ruolo per ID ruolo {#put}
 
-Per aggiornare un ruolo, devi effettuare una richiesta PUT al `/roles` e specificando l’ID del ruolo che corrisponde al ruolo da aggiornare.
+È possibile aggiornare un ruolo effettuando una richiesta PUT all&#39;endpoint `/roles` e specificando l&#39;ID ruolo corrispondente al ruolo da aggiornare.
 
 **Formato API**
 
@@ -418,7 +418,7 @@ PUT /roles/{ROLE_ID}
 
 **Richiesta**
 
-La richiesta seguente aggiorna il nome, la descrizione e il tipo di ruolo per l’ID ruolo: `3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809`.
+La richiesta seguente aggiorna il nome, la descrizione e il tipo di ruolo per l&#39;ID ruolo: `3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809`.
 
 ```shell
 curl -X PUT \
@@ -482,7 +482,7 @@ In caso di esito positivo, la risposta restituisce il ruolo aggiornato, inclusi 
 
 ## Aggiorna oggetto per ID ruolo
 
-Per aggiornare gli oggetti associati a un ruolo, effettua una richiesta PATCH al `/roles` fornendo l’ID del ruolo dei soggetti da aggiornare.
+Per aggiornare i soggetti associati a un ruolo, effettuare una richiesta PATCH all&#39;endpoint `/roles` fornendo l&#39;ID ruolo dei soggetti da aggiornare.
 
 **Formato API**
 
@@ -496,7 +496,7 @@ PATCH /roles/{ROLE_ID}/subjects
 
 **Richiesta**
 
-La richiesta seguente aggiorna gli argomenti associati a `{ROLE_ID}`.
+La richiesta seguente aggiorna gli oggetti associati a `{ROLE_ID}`.
 
 ```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/access-control/administration/roles/<ROLE_ID>/subjects' \
@@ -515,7 +515,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/acces
 
 | Operazioni | Descrizione |
 | --- | --- |
-| `op` | Chiamata di operazione utilizzata per definire l&#39;azione necessaria per aggiornare il ruolo. Le operazioni includono: `add`, `replace`, e `remove`. |
+| `op` | Chiamata di operazione utilizzata per definire l&#39;azione necessaria per aggiornare il ruolo. Le operazioni includono: `add`, `replace` e `remove`. |
 | `path` | Percorso del parametro da aggiornare. |
 | `value` | Il nuovo valore con cui desideri aggiornare il parametro. |
 
@@ -552,7 +552,7 @@ In caso di esito positivo, la risposta restituisce il ruolo aggiornato, inclusi 
 
 ## Eliminare una mansione {#delete}
 
-Per eliminare un ruolo, effettua una richiesta DELETE al `/roles` endpoint durante la specifica dell&#39;ID del ruolo da eliminare.
+Per eliminare un ruolo, effettuare una richiesta DELETE all&#39;endpoint `/roles` specificando l&#39;ID del ruolo che si desidera eliminare.
 
 **Formato API**
 
@@ -566,7 +566,7 @@ DELETE /roles/{ROLE_ID}
 
 **Richiesta**
 
-La richiesta seguente elimina il ruolo con l’ID di `{ROLE_ID}`.
+La richiesta seguente elimina il ruolo con ID `{ROLE_ID}`.
 
 ```shell
 curl -X DELETE \
@@ -584,7 +584,7 @@ Puoi confermare l’eliminazione tentando una richiesta di ricerca (GET) al ruol
 
 ## Aggiungi credenziali API {#apicredential}
 
-Per aggiungere una credenziale API, effettua una richiesta PATCH a `/roles` fornendo l’ID del ruolo dei soggetti.
+Per aggiungere una credenziale API, effettuare una richiesta PATCH all&#39;endpoint `/roles` fornendo l&#39;ID ruolo dei soggetti.
 
 **Formato API**
 
@@ -605,7 +605,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/acces
 
 | Operazioni | Descrizione |
 | --- | --- |
-| `op` | Chiamata di operazione utilizzata per definire l&#39;azione necessaria per aggiornare il ruolo. Le operazioni includono: `add`, `replace`, e `remove`. |
+| `op` | Chiamata di operazione utilizzata per definire l&#39;azione necessaria per aggiornare il ruolo. Le operazioni includono: `add`, `replace` e `remove`. |
 | `path` | Percorso del parametro da aggiungere. |
 | `value` | Il valore con cui desideri aggiungere il parametro. |
 

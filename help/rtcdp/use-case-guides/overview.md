@@ -2,7 +2,8 @@
 title: Casi d’uso di esempio in Real-Time CDP
 description: Visualizza esempi di casi di utilizzo cross-service per trarre il massimo dall’implementazione di Real-Time CDP.
 feature: Use Cases
-source-git-commit: a58476e0a52cce763a114b2b4f4314fdb2e3f4c9
+exl-id: 2d92a9d3-7648-4241-904e-48f5b2e16023
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 6%
@@ -35,7 +36,7 @@ I casi d’uso di esempio possono essere raggruppati in casi di acquisizione del
     </a>
     <div>
       <a href="../partner-data/prospecting.md">
-    <strong>Nuova acquisizione cliente</strong>
+    <strong>Nuova acquisizione clienti</strong>
     </a>
     </div>
     <p>
@@ -48,7 +49,7 @@ I casi d’uso di esempio possono essere raggruppati in casi di acquisizione del
     </a>
     <div>
       <a href="../partner-data/onsite-personalization.md">
-    <strong>Personalizzazione nel sito</strong>
+    <strong>Personalizzazione in loco</strong>
     </a>
     </div>
     <p>
@@ -65,7 +66,7 @@ I casi d’uso di esempio possono essere raggruppati in casi di acquisizione del
     </a>
     </div>
     <p>
-    <em>Scopri come creare un pubblico di visitatori non autenticati ed effettuare il retargeting utilizzando gli ID duraturi forniti dai partner.</em>
+    <em>Scopri come creare un pubblico di visitatori non autenticati e reindirizzarli utilizzando gli ID durevoli forniti dal partner.</em>
     <p>
   </td>
   </tr>
@@ -81,17 +82,17 @@ I casi d’uso di esempio possono essere raggruppati in casi di acquisizione del
     </a>
     <div>
       <a href="../partner-data/supplement-first-party-profiles.md">
-    <strong>Integrare i profili di prime parti con gli attributi forniti dai partner</strong>
+    <strong>Integrare i profili di prime parti con attributi forniti dai partner</strong>
     </a>
     </div>
     <p>
-    <em>Puoi integrare i profili di prime parti con attributi provenienti da partner di dati affidabili, per migliorare la base di dati, ottenere nuove informazioni sulla base cliente e ottimizzare al meglio il pubblico.</em>
+    <em>Aggiungi i profili di prime parti con attributi di partner di dati affidabili per migliorare la base dati, ottenere nuove informazioni sulla base cliente e ottimizzare meglio il pubblico.</em>
     <p>
   </td>
   </tr>
   </table>
 
-## Personalizzazione, approfondimenti, coinvolgimento {#personalization-insights-engagement}
+## Personalization, approfondimenti, coinvolgimento {#personalization-insights-engagement}
 
 <table style="margin-top: 0 !important">
 <tr>
@@ -105,7 +106,7 @@ I casi d’uso di esempio possono essere raggruppati in casi di acquisizione del
     </a>
     </div>
     <p>
-    <em>Coinvolgi nuovamente i clienti che hanno abbandonato una conversione in modo intelligente e responsabile. Coinvolgi i clienti meno esperti con esperienze per aumentare la conversione e il valore del ciclo di vita del client.</em>
+    <em>Rivolgiti ai clienti che hanno abbandonato una conversione in modo intelligente e responsabile. Coinvolgi i clienti inattivi con esperienze per aumentare la conversione e il valore del ciclo di vita del client.</em>
     <p>
   </td>
   </tr>

@@ -20,16 +20,16 @@ Adobe non è responsabile del deterioramento delle prestazioni causato dal super
 
 >[!IMPORTANT]
 >
->Controllare i diritti di licenza nell&#39;ordine di vendita e i corrispondenti [Descrizione del prodotto](https://helpx.adobe.com/it/legal/product-descriptions.html) sui limiti di utilizzo effettivi oltre a questa pagina di guardrail.
+>Controlla i diritti di licenza nell&#39;ordine di vendita e la corrispondente [descrizione del prodotto](https://helpx.adobe.com/it/legal/product-descriptions.html) sui limiti di utilizzo effettivi, oltre a questa pagina di guardrail.
 
 ## Definizioni
 
-* **Disponibilità** viene calcolato per ogni intervallo di cinque minuti come percentuale di richieste elaborate dall’Edge Network Experienci Platform che non hanno esito negativo con errori e si riferiscono solo alle API Edge Network fornite. Se un tenant non ha effettuato richieste in un determinato intervallo di cinque minuti, tale intervallo viene considerato disponibile al 100%.
-* **Percentuale tempo di attività mensile** per una determinata regione viene calcolata come media della disponibilità per tutti gli intervalli di cinque minuti in un mese.
-* Un **a monte** è un servizio dietro l’Edge Network, abilitato per un flusso di dati specifico, ad esempio Adobe Server Side Forwarding, Adobe Edge Segmentation o Adobe Target.
-* A **unità di richiesta** corrisponde a un frammento di 8 KB di una richiesta e uno a monte configurato per uno stream di dati.
-* A **richiesta** è un singolo messaggio inviato da un’applicazione di proprietà del cliente al [!DNL Server API]. Una richiesta può contenere una o più unità di richiesta.
-* Un **errore** è qualsiasi richiesta che non riesce a causa di un Edge Network [errore del servizio interno](error-handling.md).
+* **Disponibilità** viene calcolata per ogni intervallo di cinque minuti come percentuale di richieste elaborate dall&#39;Edge Network di Experience Platform che non hanno esito negativo con errori e si riferiscono solo alle API di Edge Network con provisioning. Se un tenant non ha effettuato richieste in un determinato intervallo di cinque minuti, tale intervallo viene considerato disponibile al 100%.
+* **La percentuale di tempo di attività mensile** per una determinata area viene calcolata come media della disponibilità per tutti gli intervalli di cinque minuti in un mese.
+* Un **upstream** è un servizio dietro l&#39;Edge Network, abilitato per un flusso di dati specifico, ad esempio Adobe Server Side Forwarding, Adobe Edge Segmentation o Adobe Target.
+* Una **unità di richiesta** corrisponde a un frammento di 8 KB di una richiesta e una a monte configurata per uno stream di dati.
+* Una **richiesta** è un singolo messaggio inviato da un&#39;applicazione di proprietà del cliente a [!DNL Server API]. Una richiesta può contenere una o più unità di richiesta.
+* Un **errore** è una richiesta non riuscita a causa di un errore del servizio interno di Edge Network [](error-handling.md).
 
 ## Limiti del servizio
 
@@ -37,7 +37,7 @@ Tutti gli stream di dati applicano determinati limiti di utilizzo, che controlla
 
 ### Unità di richiesta
 
-Tutti i limiti vengono applicati e normalizzati in un **unità di richiesta (RU)**, definito come **Frammento da 8 KB** di una richiesta indirizzata a un servizio upstream configurato in un flusso di dati.
+Tutti i limiti vengono applicati e normalizzati su una **unità di richiesta (RU)**, definita come frammento **8 KB** di una richiesta indirizzata a un servizio upstream configurato in un flusso di dati.
 
 #### Esempi
 
@@ -71,10 +71,10 @@ La tabella seguente mostra i valori limite predefiniti. Se hai bisogno di limiti
 
 ## Passaggi successivi
 
-Consulta la seguente documentazione per ulteriori informazioni su altri guardrail dei servizi Experienci Platform, informazioni sulla latenza end-to-end e informazioni sulle licenze dai documenti di descrizione del prodotto Real-Time CDP:
+Consulta la seguente documentazione per ulteriori informazioni su altri guardrail dei servizi Experience Platform, informazioni sulla latenza end-to-end e informazioni sulle licenze dai documenti di descrizione del prodotto Real-Time CDP:
 
 * [Guardrail Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [Diagrammi di latenza end-to-end](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) per vari servizi di Experience Platform.
-* [Real-time Customer Data Platform (versione B2C - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Diagrammi di latenza end-to-end](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) per vari servizi Experience Platform.
+* [Real-time Customer Data Platform (Edizione B2C - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
 * [Real-time Customer Data Platform (B2P - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
 * [Real-time Customer Data Platform (B2B - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

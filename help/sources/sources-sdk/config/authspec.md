@@ -5,7 +5,7 @@ description: Questo documento fornisce una panoramica delle configurazioni da pr
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '518'
+source-wordcount: '522'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 Le specifiche di autenticazione definiscono il modo in cui gli utenti di Adobe Experience Platform possono connettersi all’origine.
 
-Il `authSpec` L’array contiene informazioni sui parametri di autenticazione necessari per connettere un’origine a Platform. Qualsiasi origine può supportare più tipi diversi di autenticazione.
+L&#39;array `authSpec` contiene informazioni sui parametri di autenticazione necessari per connettere un&#39;origine a Platform. Qualsiasi origine può supportare più tipi diversi di autenticazione.
 
 ## Specifiche di autenticazione
 
@@ -181,7 +181,7 @@ L’autenticazione di base è un tipo di autenticazione che ti consente di acced
 
 ## Esempio di specifica di autenticazione
 
-Di seguito è riportato un esempio di specifica di autenticazione completata che utilizza [[!DNL MailChimp Members]](../../tutorials/api/create/marketing-automation/mailchimp-members.md) sorgente.
+Di seguito è riportato un esempio di specifica di autenticazione completata che utilizza un&#39;origine [[!DNL MailChimp Members]](../../tutorials/api/create/marketing-automation/mailchimp-members.md).
 
 ```json
   "authSpec": [
@@ -237,4 +237,4 @@ Di seguito è riportato un esempio di specifica di autenticazione completata che
 
 ## Passaggi successivi
 
-Con le specifiche di autenticazione compilate, puoi procedere alla configurazione delle specifiche di origine per l’origine che desideri integrare in Platform. Vedi il documento su [configurazione delle specifiche di origine](./sourcespec.md) per ulteriori informazioni.
+Con le specifiche di autenticazione compilate, puoi procedere alla configurazione delle specifiche di origine per l’origine che desideri integrare in Platform. Per ulteriori informazioni, vedere il documento sulla [configurazione delle specifiche di origine](./sourcespec.md).

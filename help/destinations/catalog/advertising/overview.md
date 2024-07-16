@@ -1,16 +1,16 @@
 ---
 keywords: destinazioni pubblicitarie;destinazioni;destinazioni piattaforma pubblicitaria;advertising destinations;destinations;platform destinations
-title: Panoramica sulle destinazioni Advertising
+title: Panoramica sulle destinazioni di Advertising
 description: Collega Adobe Experience Platform a una piattaforma pubblicitaria di terze parti (ad esempio DSP, ad network, SSP) e condividi tipi di pubblico pseudonimi su tali piattaforme.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
 source-git-commit: 2e8aac316f5e5edf169181b9e371dcd91e81c40d
 workflow-type: tm+mt
 source-wordcount: '263'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-# Panoramica sulle destinazioni Advertising {#advertising-destinations}
+# Panoramica sulle destinazioni di Advertising {#advertising-destinations}
 
 ## Panoramica {#overview}
 
@@ -20,15 +20,15 @@ Quando ti connetti a una destinazione pubblicitaria, i tipi di pubblico vengono 
 
 ## Destinazioni pubblicitarie supportate {#supported-destinations}
 
-Attualmente, Experienci Platform supporta le destinazioni pubblicitarie elencate di seguito.
+Attualmente, Experience Platform supporta le destinazioni pubblicitarie elencate di seguito.
 
-Per comprendere la differenza tra connessioni ed estensioni, consulta [Connessioni](../../destination-types.md#connections) nella pagina Tipi e categorie di destinazione.
+Per comprendere la differenza tra connessioni ed estensioni, vedere [Connessioni](../../destination-types.md#connections) nella pagina Tipi e categorie di destinazione.
 
 ### Connessioni
 
 * [Connessione Adobe Advertising Cloud](adobe-advertising-cloud-connection.md)
-* [Connessione Amazon Ads (Beta)](amazon-ads.md)
-* [Connessione (Beta) Criteo](criteo.md)
+* [(Beta) Connessione Amazon Ads](amazon-ads.md)
+* [(Beta) Connessione critica](criteo.md)
 * [Google Display e connessione Video 360](google-dv360.md)
 * [Connessione Google Ads](google-ads-destination.md)
 * [Connessione Google Ad Manager](google-ad-manager.md)
@@ -45,7 +45,7 @@ Per comprendere la differenza tra connessioni ed estensioni, consulta [Connessio
 ### Estensioni
 
 * [Estensione Adobe Advertising Cloud](adobe-advertising-cloud.md)
-* [Estensione tag Awin Advertising Conversion](awin-conversiontag.md)
+* [Estensione tag di conversione Awin Advertising](awin-conversiontag.md)
 * [Estensione Awin Advertising Mastertag](awin-mastertag.md)
 * [Estensione di tracciamento degli eventi universali di Bing Ads](bing-ads.md)
 * [Estensione ramo](branch.md)
@@ -60,4 +60,4 @@ Per comprendere la differenza tra connessioni ed estensioni, consulta [Connessio
 
 ## Connetti a una nuova destinazione pubblicitaria {#connect-destination}
 
-Per inviare tipi di pubblico a destinazioni pubblicitarie per le campagne, Platform deve prima connettersi alla destinazione. Consulta la [tutorial sulla creazione della destinazione](../../ui/connect-destination.md) per informazioni dettagliate sulla configurazione di una nuova destinazione.
+Per inviare tipi di pubblico a destinazioni pubblicitarie per le campagne, Platform deve prima connettersi alla destinazione. Per informazioni dettagliate sulla configurazione di una nuova destinazione, consulta il [tutorial sulla creazione della destinazione](../../ui/connect-destination.md).

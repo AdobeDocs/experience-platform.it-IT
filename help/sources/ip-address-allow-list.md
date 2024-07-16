@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;argomenti popolari;indirizzo ip;indirizzi ip;indirizzo ip elenco consentiti; elenco consentiti
 description: Prima di utilizzare i connettori di origine, è necessario aggiungere gli indirizzi IP a un elenco consentiti.
 solution: Experience Platform
-title: ELENCO CONSENTITI di indirizzo IP per le connessioni di origine
+title: ELENCO CONSENTITI di indirizzo IP per le connessioni Source
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
 source-git-commit: bcd74083169c40966d7de8ba7b79082931a6744d
 workflow-type: tm+mt
@@ -69,7 +69,7 @@ ht-degree: 0%
 
 ## ELENCO CONSENTITI di indirizzo IP per origini di streaming {#streaming}
 
-Devi aggiungere i seguenti indirizzi IP all’elenco consentiti per consentire il traffico per il servizio di trasferimento dati per origini di streaming come [[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md), [[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md), [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md), e [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md).
+È necessario aggiungere i seguenti indirizzi IP all&#39;elenco consentiti per consentire il traffico per il servizio di trasferimento dati per le origini di streaming come [[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md), [[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md), [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md) e [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md).
 
 >[!BEGINTABS]
 

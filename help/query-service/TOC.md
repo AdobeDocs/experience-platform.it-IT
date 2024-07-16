@@ -27,12 +27,12 @@ ht-degree: 19%
       - [Panoramica](data-distiller/derived-datasets/overview.md)
       - [Creare set di dati derivati con SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
       - [Creare set di dati derivati basati su decile](data-distiller/derived-datasets/decile-based-derived-attributes.md)
-   - Approfondimenti personalizzabili per reporting esteso dell’app {#customizable-insights}
+   - Approfondimenti personalizzabili per report app estesi {#customizable-insights}
       - [Panoramica](data-distiller/customizable-insights/overview.md)
-      - [Modalità Query Pro](data-distiller/customizable-insights/query-pro-mode.md)
+      - [Modalità query pro](data-distiller/customizable-insights/query-pro-mode.md)
       - [Inviare query accelerate](data-distiller/customizable-insights/send-accelerated-queries.md)
       - [Guida al modello dati per insights di reporting](data-distiller/customizable-insights/reporting-insights-data-model.md)
-   - Pipeline per funzioni AI/ML {#ml-feature-pipelines}
+   - Pipeline di funzionalità IA/ML {#ml-feature-pipelines}
       - [Panoramica](data-distiller/ml-feature-pipelines/overview.md)
       - [Connetti a Jupyter Notebooks](data-distiller/ml-feature-pipelines/establish-connection.md)
       - [Analisi esplorativa dei dati](data-distiller/ml-feature-pipelines/exploratory-analysis.md)
@@ -88,11 +88,11 @@ ht-degree: 19%
    - [Monitorare le query pianificate](ui/monitor-queries.md)
    - [Guida alle credenziali](ui/credentials.md)
    - [Genera set di dati di output dai risultati della query](ui/create-datasets.md)
-- Endpoint API di Query Service {#api}
+- Endpoint API servizio query {#api}
    - [Introduzione](api/getting-started.md)
    - [Query](api/queries.md)
    - [Parametri di connessione](api/connection-parameters.md)
-   - [Schedules](api/scheduled-queries.md)
+   - [Pianificazioni](api/scheduled-queries.md)
    - [Viene eseguito per le query pianificate](api/runs-scheduled-queries.md)
    - [Modelli di query](api/query-templates.md)
    - [Query accelerate](api/accelerated-queries.md)
@@ -114,6 +114,6 @@ ht-degree: 19%
    - [Comandi metadati](sql/metadata.md)
    - [Istruzioni preparate](sql/prepared-statements.md)
 - [Domande frequenti](troubleshooting-guide.md)
-- [Indirizzo IP inserito nell&#39;elenco Consentiti](ip-address-allowlist.md)
+- [Indirizzo IP inserisco nell&#39;elenco Consentiti](ip-address-allowlist.md)
 - [Riferimento API](https://www.adobe.io/experience-platform-apis/references/query-service/)
 - [Note sulla versione della piattaforma](https://experienceleague.adobe.com/it/docs/experience-platform/release-notes/latest)

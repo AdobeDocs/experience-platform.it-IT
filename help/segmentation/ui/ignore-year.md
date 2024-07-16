@@ -19,7 +19,7 @@ ht-degree: 8%
 
 >[!IMPORTANT]
 >
->Puoi utilizzare il vincolo di tempo &quot;ignore year&quot; (ignora anno) solo in una definizione di segmento valutata utilizzando **segmentazione batch**. L’aggiunta del vincolo di tempo &quot;ignore year&quot; (ignora anno) alla definizione del segmento renderà il pubblico risultante **non idoneo** per lo streaming o la segmentazione Edge.
+>È possibile utilizzare solo il vincolo di tempo &quot;ignore year&quot; (ignora anno) in una definizione di segmento valutata utilizzando **segmentazione batch**. Se aggiungi il vincolo di tempo &quot;ignore year&quot; (ignora anno) alla definizione del segmento, il pubblico risultante **non sarà idoneo** per lo streaming o la segmentazione Edge.
 
 La versione di febbraio 2024 per Adobe Experience Platform ha introdotto modifiche al servizio di segmentazione di Adobe Experience Platform che risolve un problema con l’opzione &quot;ignora anno&quot; nella creazione e valutazione del pubblico.
 

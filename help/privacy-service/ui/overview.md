@@ -22,25 +22,25 @@ L’interfaccia utente di Privacy Service consente di coordinare le richieste di
 
 >[!NOTE]
 >
->Per informazioni sulla gestione delle richieste di conformità a livello di programmazione tramite l’API Privacy Service, consulta la [Guida all’API di Privacy Service](../api/overview.md). Vedi il documento n. [gestione delle autorizzazioni di Privacy Service](../permissions.md) per ulteriori informazioni.
+>Per informazioni sulla gestione delle richieste di conformità a livello di programmazione tramite l&#39;API Privacy Service, vedere la [guida dell&#39;API Privacy Service](../api/overview.md). Per ulteriori informazioni, vedere il documento n. [gestione delle autorizzazioni di Privacy Service](../permissions.md).
 
-## Accedi a [!DNL Privacy Service] UI
+## Accedi all&#39;interfaccia utente [!DNL Privacy Service]
 
 >[!IMPORTANT]
 >
->Per eseguire l&#39;autenticazione in è necessario disporre di un Adobe ID [!DNL Privacy Service] UI.
+>È necessario disporre di un Adobe ID per l&#39;autenticazione nell&#39;interfaccia utente [!DNL Privacy Service].
 
-Per accedere all’interfaccia utente, accedi a [Adobe Experience Cloud](https://experience.adobe.com/) e seleziona **[!UICONTROL Interfaccia utente Privacy]** nel menu di accesso rapido.
+Per accedere all&#39;interfaccia utente, accedi a [Adobe Experience Cloud](https://experience.adobe.com/) e seleziona **[!UICONTROL Interfaccia utente Privacy]** nel menu di accesso rapido.
 
-![Dashboard di Experience Cloud con l’interfaccia utente Privacy evidenziata.](../images/ui-overview/quick-access.png)
+![Dashboard di Experience Cloud con interfaccia utente Privacy evidenziata.](../images/ui-overview/quick-access.png)
 
 
 ### Accesso da [!DNL Experience Platform]
 
-Se hai accesso all’interfaccia utente di Adobe Experience Platform, puoi anche accedere al [!DNL Privacy Service] Interfaccia utente tramite **[!UICONTROL Richieste]** nel menu di navigazione a sinistra.
+Se hai accesso all&#39;interfaccia utente di Adobe Experience Platform, puoi anche accedere all&#39;interfaccia utente [!DNL Privacy Service] tramite la scheda **[!UICONTROL Richieste]** nel menu di navigazione a sinistra.
 
-![L’interfaccia utente di Adobe Experience Platform con Richieste evidenziata nella barra di navigazione a sinistra.](../images/ui-overview/platform.png)
+![L&#39;interfaccia utente di Adobe Experience Platform con le richieste evidenziate nella barra di navigazione a sinistra.](../images/ui-overview/platform.png)
 
 ## Passaggi successivi
 
-Dopo aver effettuato l’accesso, consulta [guida utente](user-guide.md) per i passaggi su come eseguire varie operazioni utilizzando [!DNL Privacy Service] UI.
+Dopo aver effettuato l&#39;accesso, fare riferimento alla [guida utente](user-guide.md) per i passaggi relativi all&#39;esecuzione di varie operazioni tramite l&#39;interfaccia utente [!DNL Privacy Service].

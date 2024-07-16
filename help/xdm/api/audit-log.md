@@ -6,24 +6,24 @@ description: L’endpoint /auditlog nell’API Schema Registry consente di recup
 exl-id: 8d33ae7c-0aa4-4f38-a183-a2ff1801e291
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 5%
+source-wordcount: '397'
+ht-degree: 2%
 
 ---
 
 # Endpoint del registro di controllo
 
-Per ogni risorsa Experience Data Model (XDM), [!DNL Schema Registry] mantiene un registro di tutte le modifiche che si sono verificate tra diversi aggiornamenti. Il `/auditlog` endpoint nella [!DNL Schema Registry] API consente di recuperare un registro di audit per qualsiasi classe, gruppo di campi di schema, tipo di dati o schema specificato da ID.
+Per ogni risorsa Experience Data Model (XDM), [!DNL Schema Registry] mantiene un registro di tutte le modifiche che si sono verificate tra diversi aggiornamenti. L&#39;endpoint `/auditlog` nell&#39;API [!DNL Schema Registry] consente di recuperare un registro di controllo per qualsiasi classe, gruppo di campi di schema, tipo di dati o schema specificato dall&#39;ID.
 
 ## Introduzione
 
-L’endpoint utilizzato in questa guida fa parte dell’[[!DNL Schema Registry] API di ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Prima di continuare, controlla [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida per la lettura delle chiamate API di esempio di questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
+L&#39;endpoint utilizzato in questa guida fa parte dell&#39;[[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Prima di continuare, consulta la [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e per le informazioni importanti sulle intestazioni necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
 
-Il `/auditlog` l&#39;endpoint fa parte delle chiamate di procedura remota (RPC) supportate dalla [!DNL Schema Registry]. A differenza di altri endpoint nel [!DNL Schema Registry] API, gli endpoint RPC non richiedono intestazioni aggiuntive come `Accept` o `Content-Type`, e non utilizzare un `CONTAINER_ID`. Devono invece utilizzare il `/rpc` dello spazio dei nomi, come dimostrato nella chiamata API di seguito.
+L&#39;endpoint `/auditlog` fa parte delle chiamate di procedura remota (RPC) supportate da [!DNL Schema Registry]. A differenza di altri endpoint nell&#39;API [!DNL Schema Registry], gli endpoint RPC non richiedono intestazioni aggiuntive come `Accept` o `Content-Type` e non utilizzano un `CONTAINER_ID`. Devono invece utilizzare lo spazio dei nomi `/rpc`, come dimostrato nella chiamata API seguente.
 
 ## Recuperare un registro di controllo per una risorsa
 
-È possibile recuperare un registro di controllo per qualsiasi classe, gruppo di campi, tipo di dati o schema all&#39;interno della raccolta schemi specificando l&#39;ID della risorsa nel percorso di una richiesta di GET al `/auditlog` endpoint.
+È possibile recuperare un registro di controllo per qualsiasi classe, gruppo di campi, tipo di dati o schema all&#39;interno della raccolta schemi specificando l&#39;ID della risorsa nel percorso di una richiesta GET all&#39;endpoint `/auditlog`.
 
 **Formato API**
 
@@ -33,7 +33,7 @@ GET /rpc/auditlog/{RESOURCE_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{RESOURCE_ID}` | Il `meta:altId` o con codifica URL `$id` della risorsa di cui desideri recuperare il registro di controllo. |
+| `{RESOURCE_ID}` | `meta:altId` o `$id` con codifica URL della risorsa di cui desideri recuperare il registro di controllo. |
 
 {style="table-layout:auto"}
 
@@ -119,10 +119,10 @@ In caso di esito positivo, la risposta restituisce un elenco cronologico delle m
 | Proprietà | Descrizione |
 | --- | --- |
 | `updates` | Matrice di oggetti, in cui ogni oggetto rappresenta una modifica apportata alla risorsa specificata o a una delle relative risorse dipendenti. |
-| `id` | Il `$id` della risorsa che è stata modificata. Questo valore rappresenta in genere la risorsa specificata nel percorso della richiesta, ma può rappresentare una risorsa dipendente se questa è l’origine della modifica. |
+| `id` | `$id` della risorsa modificata. Questo valore rappresenta in genere la risorsa specificata nel percorso della richiesta, ma può rappresentare una risorsa dipendente se questa è l’origine della modifica. |
 | `xdmType` | Tipo di risorsa modificato. |
 | `action` | Tipo di modifica apportata. |
-| `path` | A [Puntatore JSON](../../landing/api-fundamentals.md#json-pointer) stringa che indica il percorso del campo specifico modificato o aggiunto. |
+| `path` | Una stringa [JSON Pointer](../../landing/api-fundamentals.md#json-pointer) che indica il percorso del campo specifico modificato o aggiunto. |
 | `value` | Valore assegnato al campo nuovo o aggiornato. |
 
 {style="table-layout:auto"}

@@ -4,7 +4,7 @@ description: Scopri come aggiungere singoli campi da gruppi di campi preesistent
 exl-id: 696cce2b-bbde-416a-9f52-12ab4da9c2c6
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
-source-wordcount: '629'
+source-wordcount: '625'
 ht-degree: 2%
 
 ---
@@ -17,17 +17,17 @@ Durante la creazione di uno schema, è possibile utilizzare alcuni campi di un d
 
 >[!NOTE]
 >
->Per informazioni su come aggiungere e rimuovere singoli campi schema nell’interfaccia utente di Adobe Experience Platform, consulta la guida su [flussi di lavoro basati sui campi](../ui/field-based-workflows.md) (attualmente in versione beta).
+>Per informazioni su come aggiungere e rimuovere singoli campi dello schema nell&#39;interfaccia utente di Adobe Experience Platform, consulta la guida sui [flussi di lavoro basati sui campi](../ui/field-based-workflows.md) (attualmente in versione beta).
 
 ## Prerequisiti
 
-Questo tutorial prevede l’esecuzione di chiamate al [API del registro dello schema](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Prima di iniziare, controlla [guida per sviluppatori](../api/getting-started.md) per informazioni importanti che è necessario conoscere per effettuare correttamente chiamate all’API, tra cui `{TENANT_ID}`, il concetto di contenitori e le intestazioni necessarie per effettuare le richieste.
+Questo tutorial prevede l&#39;esecuzione di chiamate all&#39;API [Schema Registry](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Prima di iniziare, consulta la [guida per gli sviluppatori](../api/getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all&#39;API, tra cui `{TENANT_ID}`, il concetto di contenitori e le intestazioni necessarie per effettuare le richieste.
 
-## Comprensione di `meta:refProperty` campo
+## Informazioni sul campo `meta:refProperty`
 
-Per uno schema specifico, la classe e i gruppi di campi che compongono la sua struttura sono referenziati nel relativo `allOf` array. Ogni componente è rappresentato come un oggetto contenente un `$ref` proprietà che fa riferimento all&#39;URI del componente `$id`.
+Per uno schema specifico, la classe e i gruppi di campi che ne costituiscono la struttura fanno riferimento al suo array `allOf`. Ogni componente è rappresentato come un oggetto contenente una proprietà `$ref` che fa riferimento all&#39;URI del componente `$id`.
 
-Il seguente codice JSON rappresenta uno schema semplificato che utilizza una singola classe (`experienceevent`) e gruppo di campi (`experienceevent-all`):
+Il seguente JSON rappresenta uno schema semplificato che utilizza una singola classe (`experienceevent`) e un gruppo di campi (`experienceevent-all`):
 
 ```json
 {
@@ -45,13 +45,13 @@ Il seguente codice JSON rappresenta uno schema semplificato che utilizza una sin
 }
 ```
 
-Per qualsiasi oggetto in `allOf` matrice che fa riferimento a un gruppo di campi, è possibile aggiungere un elemento di pari livello `meta:refProperty` per specificare quali campi del gruppo devono essere inclusi nello schema.
+Per qualsiasi oggetto nell&#39;array `allOf` che fa riferimento a un gruppo di campi, è possibile aggiungere un campo di pari livello `meta:refProperty` per specificare quali campi del gruppo devono essere inclusi nello schema.
 
 >[!NOTE]
 >
->Ogni campo viene specificato utilizzando una stringa puntatore JSON che rappresenta il percorso del campo all’interno del rispettivo gruppo di campi. La stringa deve iniziare con una barra iniziale (`/`) e non devono includere `properties` spazi dei nomi. Ad esempio: `/_experience/campaign/message/id`.
+>Ogni campo viene specificato utilizzando una stringa puntatore JSON che rappresenta il percorso del campo all’interno del rispettivo gruppo di campi. La stringa deve iniziare con una barra iniziale (`/`) e non deve includere spazi dei nomi `properties`. Esempio: `/_experience/campaign/message/id`.
 
-Se inclusa come stringa, `meta:refProperty` può fare riferimento a un singolo campo in un gruppo. È possibile includere altri campi dello stesso gruppo utilizzando lo stesso `$ref` valore in un altro oggetto con un diverso `meta:refProperty` valore.
+Se incluso come stringa, `meta:refProperty` può fare riferimento a un singolo campo in un gruppo. È possibile includere altri campi dello stesso gruppo utilizzando lo stesso valore `$ref` in un altro oggetto con un valore `meta:refProperty` diverso.
 
 ```json
 {
@@ -74,7 +74,7 @@ Se inclusa come stringa, `meta:refProperty` può fare riferimento a un singolo c
 }
 ```
 
-In alternativa: `meta:refProperty` può essere fornito come array, consentendo di specificare più campi da includere da un dato gruppo all’interno di un singolo `allOf` voce di elenco:
+In alternativa, è possibile fornire `meta:refProperty` come array, consentendo di specificare più campi da includere da un determinato gruppo all&#39;interno di una singola voce di elenco `allOf`:
 
 ```json
 {
@@ -99,7 +99,7 @@ In alternativa: `meta:refProperty` può essere fornito come array, consentendo d
 
 ## Aggiungere campi con un’operazione PUT
 
-Puoi utilizzare una richiesta PUT per riscrivere un intero schema e configurare i campi da includere in `allOf`.
+È possibile utilizzare una richiesta PUT per riscrivere un intero schema e configurare i campi da includere in `allOf`.
 
 **Formato API**
 
@@ -109,11 +109,11 @@ PUT /tenant/schemas/{SCHEMA_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{SCHEMA_ID}` | Il `meta:altId` o con codifica URL `$id` dello schema che desideri riscrivere. |
+| `{SCHEMA_ID}` | `meta:altId` o `$id` con codifica URL dello schema che si desidera riscrivere. |
 
 **Richiesta**
 
-La richiesta seguente aggiorna i campi specifici inclusi nel gruppo di campi sotto `allOf` array.
+La richiesta seguente aggiorna i campi specifici inclusi dal gruppo di campi nell&#39;array `allOf`.
 
 ```shell
 curl -X PUT \
@@ -190,11 +190,11 @@ In caso di esito positivo, la risposta restituisce i dettagli dello schema aggio
 
 >[!NOTE]
 >
->Per informazioni più dettagliate sulle richieste PUT di schemi, consulta [guida all’endpoint degli schemi](../api/schemas.md#put).
+>Per informazioni più dettagliate sulle richieste PUT per gli schemi, consulta la [guida dell&#39;endpoint Schemas](../api/schemas.md#put).
 
 ## Aggiungere campi con un’operazione PATCH
 
-È possibile utilizzare una richiesta PATCH per aggiungere singoli campi a uno schema senza sovrascriverne altri. Il registro dello schema supporta tutte le operazioni Patch JSON standard, tra cui `add`, `remove`, e `replace`. Per ulteriori informazioni sulla patch JSON, vedi [Guida di base sulle API](../../landing/api-fundamentals.md#json-patch).
+È possibile utilizzare una richiesta PATCH per aggiungere singoli campi a uno schema senza sovrascriverne altri. Il registro dello schema supporta tutte le operazioni Patch JSON standard, inclusi `add`, `remove` e `replace`. Per ulteriori informazioni sulla patch JSON, consulta la [guida delle API fondamentali](../../landing/api-fundamentals.md#json-patch).
 
 **Formato API**
 
@@ -204,11 +204,11 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{SCHEMA_ID}` | Il `meta:altId` o con codifica URL `$id` dello schema che desideri riscrivere. |
+| `{SCHEMA_ID}` | `meta:altId` o `$id` con codifica URL dello schema che si desidera riscrivere. |
 
 **Richiesta**
 
-La richiesta seguente aggiunge un nuovo oggetto al file dello schema `allOf` , specificando i campi da aggiungere.
+La richiesta seguente aggiunge un nuovo oggetto all&#39;array `allOf` dello schema, specificando i campi da aggiungere.
 
 ```shell
 curl -X PATCH \
@@ -281,10 +281,10 @@ In caso di esito positivo, la risposta restituisce i dettagli dello schema aggio
 
 >[!NOTE]
 >
->Per informazioni più dettagliate sulle richieste PATCH di schemi, consulta [guida all’endpoint degli schemi](../api/schemas.md#patch).
+>Per informazioni più dettagliate sulle richieste PATCH per gli schemi, consulta la [guida dell&#39;endpoint Schemas](../api/schemas.md#patch).
 
 ## Passaggi successivi
 
-Questa guida illustra come utilizzare le chiamate API per aggiungere singoli campi da un gruppo di campi esistente a uno schema. Per informazioni dettagliate su come eseguire attività simili basate sui campi nell’interfaccia utente di Platform, consulta la guida su [flussi di lavoro basati sui campi](../ui/field-based-workflows.md).
+Questa guida illustra come utilizzare le chiamate API per aggiungere singoli campi da un gruppo di campi esistente a uno schema. Per informazioni dettagliate su come eseguire attività simili basate sui campi nell&#39;interfaccia utente di Platform, consulta la guida sui [flussi di lavoro basati sui campi](../ui/field-based-workflows.md).
 
-Per ulteriori informazioni sulle funzionalità dell’API Schema Registry, consulta [Panoramica API](../api/overview.md) per un elenco completo degli endpoint e dei processi.
+Per ulteriori informazioni sulle funzionalità dell&#39;API Schema Registry, fare riferimento alla [panoramica API](../api/overview.md) per un elenco completo degli endpoint e dei processi.

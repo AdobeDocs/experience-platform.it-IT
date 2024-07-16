@@ -1,7 +1,8 @@
 ---
 title: prehidingStyle
 description: Crea una definizione CSS che consenta il caricamento di contenuto personalizzato senza sfarfallio.
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+exl-id: 3693542a-69d3-4ad8-bea4-4cabf7d80563
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 0%
@@ -10,27 +11,27 @@ ht-degree: 0%
 
 # `prehidingStyle`
 
-Il `prehidingStyle` consente di definire un selettore CSS per nascondere il contenuto personalizzato fino al suo caricamento. Questa proprietà è utile nelle implementazioni sincrone dell’SDK web per evitare sfarfallii. L’Adobe consiglia di utilizzare [frammento pre-hiding](../../personalization/manage-flicker.md) per le implementazioni asincrone di Web SDK.
+La proprietà `prehidingStyle` ti consente di definire un selettore CSS per nascondere il contenuto personalizzato fino al caricamento. Questa proprietà è utile nelle implementazioni sincrone dell’SDK web per evitare sfarfallii. L&#39;Adobe consiglia di utilizzare il [frammento di pre-hiding](../../personalization/manage-flicker.md) per le implementazioni asincrone di Web SDK.
 
-I selettori CSS definiti in questa proprietà iniziano a nascondere il contenuto quando esegui il primo [`sendEvent`](../sendevent/overview.md) su una pagina. Il contenuto viene reso visibile quando viene ricevuta una risposta da un Adobe, che in genere include contenuti personalizzati. Il contenuto viene mostrato anche se `sendEvent` comando non riuscito o timeout.
+I selettori CSS definiti in questa proprietà iniziano a nascondere il contenuto quando si esegue il primo comando [`sendEvent`](../sendevent/overview.md) su una pagina. Il contenuto viene reso visibile quando viene ricevuta una risposta da un Adobe, che in genere include contenuti personalizzati. Il contenuto è visibile anche se il comando `sendEvent` non riesce o si interrompe.
 
-Se includi entrambi `prehidingStyle` e il frammento pre-hiding nell&#39;implementazione, il frammento pre-hiding ha priorità rispetto a questa proprietà di configurazione.
+Se si includono sia `prehidingStyle` che il frammento pre-hiding nell&#39;implementazione, il frammento pre-hiding ha la priorità rispetto a questa proprietà di configurazione.
 
 ## Prehiding dello stile tramite l’estensione tag Web SDK
 
-Seleziona la **[!UICONTROL Fornisci stile pre-hiding]** quando [configurazione dell’estensione tag](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+Selezionare il pulsante **[!UICONTROL Fornisci stile di pre-hiding]** durante [la configurazione dell&#39;estensione tag](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
-1. Accedi a [experience.adobe.com](https://experience.adobe.com) utilizzando le credenziali di Adobe ID.
-1. Accedi a **[!UICONTROL Raccolta dati]** > **[!UICONTROL Tag]**.
+1. Accedi a [experience.adobe.com](https://experience.adobe.com) utilizzando le credenziali Adobe ID.
+1. Passa a **[!UICONTROL Raccolta dati]** > **[!UICONTROL Tag]**.
 1. Seleziona la proprietà tag desiderata.
-1. Accedi a **[!UICONTROL Estensioni]**, quindi fai clic su **[!UICONTROL Configura]** il [!UICONTROL Adobe Experience Platform Web SDK] Card.
-1. Scorri verso il basso fino a [!UICONTROL Personalizzazione] , quindi selezionare il pulsante **[!UICONTROL Fornisci stile pre-hiding]**.
+1. Passa a **[!UICONTROL Estensioni]**, quindi fai clic su **[!UICONTROL Configura]** nella scheda [!UICONTROL Adobe Experience Platform Web SDK].
+1. Scorri verso il basso fino alla sezione [!UICONTROL Personalization], quindi seleziona il pulsante **[!UICONTROL Fornisci stile di pre-hiding]**.
 1. Questo pulsante apre una finestra modale con un editor CSS. Inserisci il selettore CSS e il blocco di dichiarazione desiderati, quindi fai clic su **[!UICONTROL Salva]** per chiudere la finestra modale.
-1. Clic **[!UICONTROL Salva]** in impostazioni estensione, pubblica le modifiche.
+1. Fai clic su **[!UICONTROL Salva]** in Impostazioni estensione, quindi pubblica le modifiche.
 
-## Prehiding dello stile tramite la libreria JavaScript di Web SDK
+## Prehiding dello stile tramite la libreria JavaScript dell&#39;SDK Web
 
-Imposta il `prehidingStyle` stringa durante l&#39;esecuzione di `configure` comando. Se ometti questa proprietà durante la configurazione dell’SDK per web, quando esegui il primo comando non viene nascosto nulla `sendEvent` su una pagina. Imposta questo valore sul selettore CSS e sul blocco di dichiarazione desiderati per le librerie caricate in modo sincrono.
+Impostare la stringa `prehidingStyle` durante l&#39;esecuzione del comando `configure`. Se si omette questa proprietà durante la configurazione dell&#39;SDK Web, non verrà nascosto nulla durante l&#39;esecuzione del primo comando `sendEvent` su una pagina. Imposta questo valore sul selettore CSS e sul blocco di dichiarazione desiderati per le librerie caricate in modo sincrono.
 
 ```js
 alloy("configure", {

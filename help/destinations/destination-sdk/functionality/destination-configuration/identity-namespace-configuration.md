@@ -5,35 +5,35 @@ exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
 source-git-commit: 606685c1f0b607ca586e477cb9825ec551d537cc
 workflow-type: tm+mt
 source-wordcount: '918'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
 # Configurazione dello spazio dei nomi dell’identità
 
-In questo Experience Platform vengono utilizzati gli spazi dei nomi delle identità per descrivere il tipo di identità specifiche. Ad esempio, uno spazio dei nomi delle identità denominato `Email` identifica un valore come `name@email.com` come indirizzo e-mail.
+In questo Experience Platform vengono utilizzati gli spazi dei nomi delle identità per descrivere il tipo di identità specifiche. Ad esempio, uno spazio dei nomi di identità denominato `Email` identifica un valore come `name@email.com` come indirizzo e-mail.
 
 A seconda del tipo di destinazione creato (in streaming o basata su file), tieni presente i seguenti requisiti di spazio dei nomi delle identità:
 
-* Durante la creazione di destinazioni in tempo reale (streaming) tramite Destination SDK, oltre a [configurazione di uno schema partner](schema-configuration.md) in cui gli utenti possono mappare gli attributi e le identità del profilo, è necessario definire anche *almeno uno* spazi dei nomi di identità supportati dalla piattaforma di destinazione. Ad esempio, se la piattaforma di destinazione accetta e-mail con hash e [!DNL IDFA], è necessario definire queste due identità come [descritti più avanti in questo documento](#supported-parameters).
+* Durante la creazione di destinazioni in tempo reale (streaming) tramite Destination SDK, oltre a [configurare uno schema partner](schema-configuration.md) in cui gli utenti possono mappare gli attributi e le identità del profilo, devi anche definire *almeno uno* spazi dei nomi di identità supportati dalla piattaforma di destinazione. Ad esempio, se la piattaforma di destinazione accetta e-mail con hash e [!DNL IDFA], è necessario definire queste due identità come [descritte più avanti in questo documento](#supported-parameters).
 
   >[!IMPORTANT]
   >
-  >Quando si attivano tipi di pubblico su destinazioni di streaming, gli utenti devono anche mappare _almeno un&#39;identità di destinazione_, oltre agli attributi del profilo di destinazione. In caso contrario, i tipi di pubblico non verranno attivati nella piattaforma di destinazione.
+  >Quando si attivano tipi di pubblico su destinazioni di streaming, gli utenti devono mappare anche _almeno un&#39;identità di destinazione_, oltre agli attributi del profilo di destinazione. In caso contrario, i tipi di pubblico non verranno attivati nella piattaforma di destinazione.
 
-* Quando si creano destinazioni basate su file tramite Destination SDK, la configurazione degli spazi dei nomi di identità è _facoltativo_.
+* Durante la creazione di destinazioni basate su file tramite Destination SDK, la configurazione degli spazi dei nomi di identità è _facoltativa_.
 
-Per ulteriori informazioni sugli spazi dei nomi delle identità in Experienci Platform, consulta [documentazione sugli spazi dei nomi di identità](../../../../identity-service/features/namespaces.md).
+Per ulteriori informazioni sugli spazi dei nomi delle identità in Experience Platform, consulta la [documentazione sugli spazi dei nomi delle identità](../../../../identity-service/features/namespaces.md).
 
 Quando configuri gli spazi dei nomi di identità per la destinazione, puoi ottimizzare la mappatura identità di destinazione supportata dalla destinazione, ad esempio:
 
 * Consente agli utenti di mappare gli attributi XDM agli spazi dei nomi delle identità.
-* Consentire agli utenti di mappare [spazi dei nomi di identità standard](../../../../identity-service/features/namespaces.md#standard) nei tuoi spazi dei nomi di identità.
-* Consentire agli utenti di mappare [spazi dei nomi di identità personalizzati](../../../../identity-service/features/namespaces.md#manage-namespaces) nei tuoi spazi dei nomi di identità.
+* Consente agli utenti di mappare [spazi dei nomi di identità standard](../../../../identity-service/features/namespaces.md#standard) agli spazi dei nomi di identità personalizzati.
+* Consente agli utenti di mappare [spazi dei nomi di identità personalizzati](../../../../identity-service/features/namespaces.md#manage-namespaces) agli spazi dei nomi di identità personalizzati.
 
-Per capire dove questo componente si inserisce in un’integrazione creata con Destination SDK, consulta il diagramma riportato di seguito. [opzioni di configurazione](../configuration-options.md) o consulta la guida su come [utilizzare Destination SDK per configurare una destinazione basata su file](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
+Per capire dove questo componente si inserisce in un&#39;integrazione creata con Destination SDK, consulta il diagramma nella documentazione delle [opzioni di configurazione](../configuration-options.md) oppure consulta la guida su come [utilizzare Destination SDK per configurare una destinazione basata su file](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
-Puoi configurare gli spazi dei nomi di identità supportati tramite `/authoring/destinations` endpoint. Consulta le seguenti pagine di riferimento API per esempi dettagliati di chiamate API, in cui puoi configurare i componenti mostrati in questa pagina.
+È possibile configurare gli spazi dei nomi di identità supportati tramite l&#39;endpoint `/authoring/destinations`. Consulta le seguenti pagine di riferimento API per esempi dettagliati di chiamate API, in cui puoi configurare i componenti mostrati in questa pagina.
 
 * [Creare una configurazione di destinazione](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [Aggiornare una configurazione di destinazione](../../authoring-api/destination-configuration/update-destination-configuration.md)
@@ -42,7 +42,7 @@ Questo articolo descrive tutte le opzioni di configurazione degli spazi dei nomi
 
 >[!IMPORTANT]
 >
->Tutti i nomi e i valori dei parametri supportati da Destination SDK sono **distinzione maiuscole/minuscole**. Per evitare errori di distinzione tra maiuscole e minuscole, utilizza i nomi e i valori dei parametri esattamente come mostrato nella documentazione.
+>Tutti i nomi e i valori dei parametri supportati da Destination SDK sono **con distinzione tra maiuscole e minuscole**. Per evitare errori di distinzione tra maiuscole e minuscole, utilizza i nomi e i valori dei parametri esattamente come mostrato nella documentazione.
 
 ## Tipi di integrazione supportati {#supported-integration-types}
 
@@ -61,9 +61,9 @@ Quando definisci le identità di destinazione supportate dalla destinazione, puo
 |---------|----------|---|------|
 | `acceptsAttributes` | Booleano | Facoltativo | Indica se i clienti possono mappare gli attributi di profilo standard all’identità che stai configurando. |
 | `acceptsCustomNamespaces` | Booleano | Facoltativo | Indica se i clienti possono mappare gli spazi dei nomi di identità personalizzati allo spazio dei nomi di identità che stai configurando. |
-| `acceptedGlobalNamespaces` | - | Facoltativo | Indica quale [spazi dei nomi di identità standard](../../../../identity-service/features/namespaces.md#standard) (ad esempio, [!UICONTROL IDFA]) i clienti possono eseguire il mapping all&#39;identità che stai configurando. |
-| `transformation` | Stringa | Facoltativo | Visualizza la [[!UICONTROL Applica trasformazione]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) nell’interfaccia utente di Platform, quando il campo di origine è un attributo XDM o uno spazio dei nomi di identità personalizzato. Utilizza questa opzione per consentire agli utenti di aggiungere hash agli attributi sorgente durante l’esportazione. Per abilitare questa opzione, imposta il valore su `sha256(lower($))`. |
-| `requiredTransformation` | Stringa | Facoltativo | Quando i clienti selezionano questo spazio dei nomi dell’identità di origine, il [[!UICONTROL Applica trasformazione]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) La casella di controllo viene applicata automaticamente alla mappatura e i clienti non possono disattivarla. Per abilitare questa opzione, imposta il valore su `sha256(lower($))`. |
+| `acceptedGlobalNamespaces` | - | Facoltativo | Indica quali [spazi dei nomi di identità standard](../../../../identity-service/features/namespaces.md#standard) (ad esempio, [!UICONTROL IDFA]) i clienti possono mappare all&#39;identità che stai configurando. |
+| `transformation` | Stringa | Facoltativo | Visualizza la casella di controllo [[!UICONTROL Applica trasformazione]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) nell&#39;interfaccia utente di Platform quando il campo di origine è un attributo XDM o uno spazio dei nomi di identità personalizzato. Utilizza questa opzione per consentire agli utenti di aggiungere hash agli attributi sorgente durante l’esportazione. Per abilitare questa opzione, impostare il valore su `sha256(lower($))`. |
+| `requiredTransformation` | Stringa | Facoltativo | Quando i clienti selezionano questo spazio dei nomi dell&#39;identità di origine, la casella di controllo [[!UICONTROL Applica trasformazione]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) viene applicata automaticamente alla mappatura e i clienti non possono disattivarla. Per abilitare questa opzione, impostare il valore su `sha256(lower($))`. |
 
 {style="table-layout:auto"}
 
@@ -85,12 +85,12 @@ Quando definisci le identità di destinazione supportate dalla destinazione, puo
    }
 ```
 
-Indicare quale [!DNL Platform] identità che i clienti possono esportare nella tua destinazione. Alcuni esempi sono [!DNL Experience Cloud ID], e-mail con hash, ID dispositivo ([!DNL IDFA], [!DNL GAID]). Questi valori sono [!DNL Platform] spazi dei nomi di identità che i clienti possono mappare su spazi dei nomi di identità dalla tua destinazione.
+È necessario indicare le identità [!DNL Platform] che i clienti possono esportare nella destinazione. Alcuni esempi sono [!DNL Experience Cloud ID], e-mail con hash, ID dispositivo ([!DNL IDFA], [!DNL GAID]). Questi valori sono [!DNL Platform] spazi dei nomi di identità che i clienti possono mappare su spazi dei nomi di identità dalla destinazione.
 
-Gli spazi dei nomi delle identità non richiedono una corrispondenza da 1 a 1 tra [!DNL Platform] e la tua destinazione.
-Ad esempio, i clienti possono mappare una [!DNL Platform] [!DNL IDFA] spazio dei nomi in un [!DNL IDFA] dalla destinazione, oppure possono mappare lo stesso [!DNL Platform] [!DNL IDFA] spazio dei nomi in un [!DNL Customer ID] dello spazio dei nomi nella destinazione.
+Gli spazi dei nomi di identità non richiedono una corrispondenza 1-a-1 tra [!DNL Platform] e la destinazione.
+Ad esempio, i clienti possono mappare uno spazio dei nomi [!DNL Platform] [!DNL IDFA] a uno spazio dei nomi [!DNL IDFA] dalla tua destinazione, oppure possono mappare lo stesso spazio dei nomi [!DNL Platform] [!DNL IDFA] a uno spazio dei nomi [!DNL Customer ID] nella tua destinazione.
 
-Ulteriori informazioni sulle identità in [panoramica dello spazio dei nomi delle identità](../../../../identity-service/features/namespaces.md).
+Ulteriori informazioni sulle identità nella [panoramica dello spazio dei nomi delle identità](../../../../identity-service/features/namespaces.md).
 
 ## Considerazioni sulla mappatura
 
@@ -98,9 +98,9 @@ Se i clienti selezionano uno spazio dei nomi dell’identità di origine e non u
 
 ## Configurare l’hashing facoltativo del campo sorgente
 
-I clienti di Experienci Platform possono scegliere di acquisire i dati in Platform in formato hash o in testo normale. Se la piattaforma di destinazione accetta sia dati con hash che dati senza hash, puoi dare ai clienti la possibilità di scegliere se Platform deve eseguire l’hashing dei valori dei campi sorgente quando vengono esportati nella destinazione.
+I clienti di Experience Platform possono scegliere di acquisire i dati in Platform in formato hash o in testo normale. Se la piattaforma di destinazione accetta sia dati con hash che dati senza hash, puoi dare ai clienti la possibilità di scegliere se Platform deve eseguire l’hashing dei valori dei campi sorgente quando vengono esportati nella destinazione.
 
-La configurazione seguente abilita il [Applica trasformazione](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) nell’interfaccia utente di Platform, nel passaggio Mappatura.
+La configurazione seguente abilita l&#39;opzione opzionale [Applica trasformazione](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) nell&#39;interfaccia utente di Platform, nel passaggio Mappatura.
 
 ```json {line-numbers="true" highlight="5"}
 "identityNamespaces":{
@@ -118,13 +118,13 @@ La configurazione seguente abilita il [Applica trasformazione](../../../ui/activ
    }
 ```
 
-Seleziona questa opzione quando utilizzi campi sorgente senza hash, per fare in modo che Adobe Experience Platform li inserisca automaticamente nell&#39;hashing al momento dell&#39;attivazione.
+Seleziona questa opzione quando utilizzi campi di origine senza hash per fare in modo che Adobe Experience Platform ne esegua automaticamente l’hashing all’attivazione.
 
-Quando mappi gli attributi di origine senza hash agli attributi di destinazione per i quali la destinazione prevede l&#39;hashing (ad esempio: `email_lc_sha256` o `phone_sha256`), controlla **Applica trasformazione** opzione per fare in modo che Adobe Experience Platform esegua automaticamente l’hash degli attributi sorgente all’attivazione.
+Quando si esegue il mapping degli attributi di origine senza hash agli attributi di destinazione per i quali la destinazione prevede l&#39;hash (ad esempio: `email_lc_sha256` o `phone_sha256`), selezionare l&#39;opzione **Applica trasformazione** per fare in modo che Adobe Experience Platform esegua automaticamente l&#39;hash degli attributi di origine all&#39;attivazione.
 
 ## Configurare l’hashing obbligatorio del campo sorgente
 
-Se la destinazione accetta solo dati con hash, puoi configurare gli attributi esportati in modo che ricevano automaticamente l’hash da Platform. La configurazione seguente controlla automaticamente **Applica trasformazione** opzione quando `Email` e `Phone` le identità sono mappate.
+Se la destinazione accetta solo dati con hash, puoi configurare gli attributi esportati in modo che ricevano automaticamente l’hash da Platform. La configurazione seguente controlla automaticamente l&#39;opzione **Applica trasformazione** quando le identità `Email` e `Phone` sono mappate.
 
 ```json {line-numbers="true" highlight="8,11"}
 "identityNamespaces":{

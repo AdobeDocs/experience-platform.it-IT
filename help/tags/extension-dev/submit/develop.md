@@ -4,8 +4,8 @@ description: Questo documento fornisce una panoramica generale del processo di s
 exl-id: fb2f7275-a5da-4a41-b915-822c71c02e5c
 source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '538'
-ht-degree: 94%
+source-wordcount: '473'
+ht-degree: 92%
 
 ---
 
@@ -27,9 +27,9 @@ Una volta delineato un piano, le guide seguenti saranno utili per comprendere il
 * Il [video tutorial sulle estensioni](https://youtu.be/rxjtC9o4rl0) rappresenta un ottimo punto di partenza.
 * La playlist YouTube di [introduzione alle estensioni](https://www.youtube.com/playlist?list=PLOdw8u2F8CIgynzKrPEwCPuDxzHW1WP5m) spiega come creare pacchetti di estensione.
 * L’articolo [Understanding JSON Schema](https://spacetelescope.github.io/understanding-json-schema/index.html#) spiega lo schema JSON.
-* Strumento di convalida [JSON Lint/Validator](https://jsonlint.com/).
+* [Lint/Validator JSON](https://jsonlint.com/).
 * L’estensione [JSON Viewer](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh) per Chrome consente di evidenziare e stampare il codice JSON e JSONP.
-* L’editor [jsonschema.net](https://jsonschema.net/#/editor) facilita la creazione dello schema JSON dall’oggetto..
+* Editor [jsonschema.net](https://jsonschema.net/#/editor) per creare lo schema JSON dall&#39;oggetto.
 * [JSON Schema Validator](https://www.jsonschemavalidator.net) è uno strumento online interattivo per la convalida dello schema JSON.
 
 ## Strumenti

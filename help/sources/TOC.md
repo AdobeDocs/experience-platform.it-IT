@@ -1,14 +1,14 @@
 ---
 audience: user
 user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
-breadcrumb-title: Guida ai connettori di sorgenti
-user-guide-description: Acquisire dati da diverse origini. Scopri come strutturare, etichettare e migliorare i dati già acquisiti.
+breadcrumb-title: Guida ai connettori di origini
+user-guide-description: Acquisisci dati da diverse origini. Scopri come strutturare, etichettare e migliorare i dati già acquisiti.
 feature: Sources
 role: Developer
 source-git-commit: 485881d4cbba09ae89d26b3613907174c0f24cc3
 workflow-type: tm+mt
 source-wordcount: '1046'
-ht-degree: 23%
+ht-degree: 30%
 
 ---
 
@@ -37,7 +37,7 @@ ht-degree: 23%
          - [Guida all’autenticazione di Marketo Engage](connectors/adobe-applications/marketo/marketo-auth.md)
          - [Spazi dei nomi e schemi B2B](connectors/adobe-applications/marketo/marketo-namespaces.md)
          - [Guida alla migrazione della mappatura ECID](connectors/adobe-applications/marketo/migration.md)
-   - Pubblicità {#advertising}
+   - Advertising {#advertising}
       - [Connettore Google Ads](connectors/advertising/ads.md)
       - [Pinterest Ads](connectors/advertising/pinterest-ads.md)
    - Analytics {#analytics}
@@ -76,7 +76,7 @@ ht-degree: 23%
       - [Connettore Amazon Redshift](connectors/databases/redshift.md)
       - [Apache Hive sul connettore Azure HDInsights](connectors/databases/hive.md)
       - [Apache Spark sul connettore Azure HDInsights](connectors/databases/spark.md)
-      - [Connettore Azure Date Explorer](connectors/databases/data-explorer.md)
+      - [Connettore Azure Data Explorer](connectors/databases/data-explorer.md)
       - [Azure synapse del connettore Analytics](connectors/databases/synapse-analytics.md)
       - [Connettore Azure Table Storage](connectors/databases/ats.md)
       - [Connettore Couchbase](connectors/databases/couchbase.md)
@@ -103,7 +103,7 @@ ht-degree: 23%
       - [Shopify Streaming](connectors/ecommerce/shopify-streaming.md)
    - Sistema locale {#local-system}
       - [Connettore caricamento file locale](connectors/local-system/local-file-upload.md)
-   - Automazione del marketing {#marketing-automation}
+   - Automazione marketing {#marketing-automation}
       - [Braze Currents](connectors/marketing-automation/braze.md)
       - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
       - [Customer.io](connectors/marketing-automation/customerio-webhook.md)
@@ -118,14 +118,14 @@ ht-degree: 23%
       - [Connettore PayPal](connectors/payments/paypal.md)
       - [Connettore quadrato](connectors/payments/square.md)
       - [Connettore a Stripe](connectors/payments/stripe.md)
-   - Protocoli {#protocols}
+   - Protocolli {#protocols}
       - [Connettore OData generico](connectors/protocols/odata.md)
       - [Connettore API REST generico](connectors/protocols/generic-rest.md)
-   - Streaming {#streaming}
+   - Streaming di {#streaming}
       - [Connettore API HTTP](connectors/streaming/http.md)
 - Esercitazioni API {#api-tutorials}
-   - Creare una connessione di base {#create}
-      - Pubblicità {#advertising}
+   - Crea una connessione di base {#create}
+      - Advertising {#advertising}
          - [Google Ads](tutorials/api/create/advertising/ads.md)
          - [Pinterest Ads](tutorials/api/create/advertising/pinterest-ads.md)
       - Analytics {#analytics}
@@ -160,14 +160,14 @@ ht-degree: 23%
          - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
          - [Zendesk](tutorials/api/create/customer-success/zendesk.md)
       - Database {#databases}
-         - [Amazon Redshift](tutorials/api/create/databases/redshift.md)
+         - [ Amazon Redshift](tutorials/api/create/databases/redshift.md)
          - [Hive Apache su Azure HDInsights](tutorials/api/create/databases/hive.md)
          - [Apache Spark su Azure HDInsights](tutorials/api/create/databases/spark.md)
          - [Azure Data Explorer](tutorials/api/create/databases/data-explorer.md)
          - [Azure Synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
          - [Azure Table Storage](tutorials/api/create/databases/ats.md)
          - [Couchbase](tutorials/api/create/databases/couchbase.md)
-         - [Google BigQuery](tutorials/api/create/databases/bigquery.md)
+         - [BigQuery Google](tutorials/api/create/databases/bigquery.md)
          - [GreenPlum](tutorials/api/create/databases/greenplum.md)
          - [HP Vertica](tutorials/api/create/databases/hp-vertica.md)
          - [IBM DB2](tutorials/api/create/databases/ibm-db2.md)
@@ -184,7 +184,7 @@ ht-degree: 23%
          - [COMMERCE SAP](tutorials/api/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
          - [Shopify Streaming](tutorials/api/create/ecommerce/shopify-streaming.md)
-      - Automazione del marketing {#marketing-automation}
+      - Automazione marketing {#marketing-automation}
          - [Chatlio](tutorials/api/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)
          - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
@@ -200,10 +200,10 @@ ht-degree: 23%
          - [PayPal](tutorials/api/create/payments/paypal.md)
          - [Square](tutorials/api/create/payments/square.md)
          - [Stripe](tutorials/api/create/payments/stripe.md)
-      - Protocoli {#protocols}
+      - Protocolli {#protocols}
          - [OData generica](tutorials/api/create/protocols/odata.md)
          - [API REST generica](tutorials/api/create/protocols/generic-rest.md)
-      - Streaming {#streaming}
+      - Streaming di {#streaming}
          - [API HTTP](tutorials/api/create/streaming/http.md)
    - Esplora i dati {#explore}
       - [Esplora i dati pubblicitari](tutorials/api/explore/advertising.md)
@@ -216,7 +216,7 @@ ht-degree: 23%
       - [Esplora i dati di pagamento](tutorials/api/explore/payments.md)
       - [Esplora i dati del protocollo](tutorials/api/explore/protocols.md)
       - [Esplora tabelle dati](tutorials/api/explore/tabular.md)
-   - Raccogliere dati {#collect}
+   - Raccogli dati {#collect}
       - [Raccogliere dati pubblicitari](tutorials/api/collect/advertising.md)
       - [Raccogliere dati di archiviazione cloud](tutorials/api/collect/cloud-storage.md)
       - [Raccogliere dati CRM](tutorials/api/collect/crm.md)
@@ -231,14 +231,14 @@ ht-degree: 23%
    - [Filtrare i dati a livello di origine](tutorials/api/filter.md)
    - [Monitorare i flussi di dati](tutorials/api/monitor.md)
    - [Aggiorna account](tutorials/api/update.md)
-   - [Aggiorna flussi di dati](tutorials/api/update-dataflows.md)
+   - [Aggiornare i flussi di dati](tutorials/api/update-dataflows.md)
    - [Riprova esecuzioni flusso di dati non riuscite](tutorials/api/retry-flows.md)
    - [Elimina account](tutorials/api/delete.md)
    - [Elimina flussi di dati](tutorials/api/delete-dataflows.md)
    - [Acquisire dati crittografati](tutorials/api/encrypt-data.md)
    - [Salvare un flusso di dati come bozza](tutorials/api/draft.md)
-- Tutorial sull’interfaccia utente {#ui-tutorials}
-   - Creare una connessione sorgente {#create}
+- Tutorial dell&#39;interfaccia utente {#ui-tutorials}
+   - Crea una connessione di origine {#create}
       - applicazioni Adobe {#adobe-applications}
          - [Adobe Analytics (dati suite di rapporti)](tutorials/ui/create/adobe-applications/analytics.md)
          - [Adobe Analytics (dati delle classificazioni)](tutorials/ui/create/adobe-applications/classifications.md)
@@ -247,7 +247,7 @@ ht-degree: 23%
          - [Attributi del cliente](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
          - [Attività personalizzate Marketo](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
-      - Pubblicità {#advertising}
+      - Advertising {#advertising}
          - [Google Ads](tutorials/ui/create/advertising/ads.md)
          - [Pinterest Ads](tutorials/ui/create/advertising/pinterest-ads.md)
       - Analytics {#analytics}
@@ -284,14 +284,14 @@ ht-degree: 23%
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
          - [Zendesk](tutorials/ui/create/customer-success/zendesk.md)
       - Database {#databases}
-         - [Amazon Redshift](tutorials/ui/create/databases/redshift.md)
+         - [ Amazon Redshift](tutorials/ui/create/databases/redshift.md)
          - [Hive Apache su Azure HDInsights](tutorials/ui/create/databases/hive.md)
          - [Apache Spark su Azure HDInsights](tutorials/ui/create/databases/spark.md)
          - [Azure Data Explorer](tutorials/ui/create/databases/data-explorer.md)
          - [Azure Synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azure Table Storage](tutorials/ui/create/databases/ats.md)
          - [Couchbase](tutorials/ui/create/databases/couchbase.md)
-         - [Google Big Query](tutorials/ui/create/databases/bigquery.md)
+         - [Google BigQuery](tutorials/ui/create/databases/bigquery.md)
          - [GreenPlum](tutorials/ui/create/databases/greenplum.md)
          - [HP Vertica](tutorials/ui/create/databases/hp-vertica.md)
          - [IBM DB2](tutorials/ui/create/databases/ibm-db2.md)
@@ -313,8 +313,8 @@ ht-degree: 23%
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
          - [Shopify Streaming](tutorials/ui/create/ecommerce/shopify-streaming.md)
       - Sistema locale {#local-system}
-         - [Caricamento di file locali](tutorials/ui/create/local-system/local-file-upload.md)
-      - Automazione del marketing {#marketing-automation}
+         - [Caricamento file locale](tutorials/ui/create/local-system/local-file-upload.md)
+      - Automazione marketing {#marketing-automation}
          - [Braze Currents](tutorials/ui/create/marketing-automation/braze.md)
          - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/ui/create/marketing-automation/customerio-webhook.md)
@@ -331,12 +331,12 @@ ht-degree: 23%
          - [PayPal](tutorials/ui/create/payments/paypal.md)
          - [Square](tutorials/ui/create/payments/square.md)
          - [Stripe](tutorials/ui/create/payments/stripe.md)
-      - Protocoli {#protocols}
+      - Protocolli {#protocols}
          - [OData generica](tutorials/ui/create/protocols/odata.md)
-      - Streaming {#streaming}
+      - Streaming di {#streaming}
          - [API HTTP](tutorials/ui/create/streaming/http.md)
    - Configurare un flusso di dati {#dataflow}
-      - [Flusso di dati di Advertising Connection](tutorials/ui/dataflow/advertising.md)
+      - [Flusso di dati della connessione Advertising](tutorials/ui/dataflow/advertising.md)
       - [Flusso di dati della connessione Analytics](tutorials/ui/dataflow/analytics.md)
       - [Flusso di dati della connessione archiviazione cloud in batch](tutorials/ui/dataflow/batch/cloud-storage.md)
       - [Flusso di dati della connessione archiviazione cloud in streaming](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
@@ -355,19 +355,19 @@ ht-degree: 23%
    - [Monitorare i flussi di dati batch](tutorials/ui/monitor.md)
    - [Monitorare i flussi di dati in streaming](tutorials/ui/monitor-streaming.md)
    - [Aggiorna account](tutorials/ui/update.md)
-   - [Aggiorna flussi di dati](tutorials/ui/update-dataflows.md)
+   - [Aggiornare i flussi di dati](tutorials/ui/update-dataflows.md)
    - [Elimina account](tutorials/ui/delete-accounts.md)
    - [Elimina flussi di dati](tutorials/ui/delete.md)
-   - [Iscriviti agli avvisi sulle origini](tutorials/ui/alerts.md)
+   - [Iscriversi agli avvisi delle origini](tutorials/ui/alerts.md)
    - [Salvare un flusso di dati come bozza](tutorials/ui/draft.md)
 - Origini self-service (SDK batch) {#sdk}
    - [Panoramica](sources-sdk/overview.md)
-   - Configurare le specifiche di connessione {#config}
+   - Configura la specifica di connessione {#config}
       - [Opzioni di configurazione](sources-sdk/config/config.md)
       - [Configura specifica di autenticazione](sources-sdk/config/authspec.md)
       - [Configurare la specifica di origine](sources-sdk/config/sourcespec.md)
       - [Configura specifica di esplorazione](sources-sdk/config/explorespec.md)
-   - Guida dell’API Self-Serve Sources (Batch SDK) {#self-serve-api}
+   - Guida dell&#39;API Self-Service Sources (Batch SDK) {#self-serve-api}
       - [Panoramica dell’API Self-Service Sources (Batch SDK)](sources-sdk/api/api-overview.md)
       - [Introduzione](sources-sdk/api/getting-started.md)
       - [Creare una specifica di connessione](sources-sdk/api/create.md)
@@ -380,7 +380,7 @@ ht-degree: 23%
       - [Utilizza un editor di testo nell’ambiente locale per creare una pagina della documentazione delle sorgenti](sources-sdk/documentation/text-editor.md)
       - [Modello API self-service della documentazione](sources-sdk/documentation/template.md)
       - [Modello di interfaccia utente self-service della documentazione](sources-sdk/documentation/ui-template.md)
-   - SDK per streaming {#streaming-sdk}
+   - SDK di streaming {#streaming-sdk}
       - [Introduzione alle origini self-service (Streaming SDK)](sources-sdk/streaming/getting-started.md)
       - [Creare una specifica di connessione per un&#39;origine di streaming](sources-sdk/streaming/create.md)
       - [Aggiornare una specifica di connessione per un&#39;origine di streaming](sources-sdk/streaming/update-connection-specs.md)

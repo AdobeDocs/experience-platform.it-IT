@@ -51,9 +51,9 @@ MAP <data_type, data_type>
 ARRAY <data_type>
 ```
 
-In alternativa, i set di dati possono essere abilitati anche per il profilo tramite l’interfaccia utente di Platform. Per ulteriori informazioni su come contrassegnare un set di dati come abilitato per il profilo, consulta [abilitare un set di dati per la documentazione di Real-Time Customer Profile](../../../catalog/datasets/user-guide.md#enable-profile).
+In alternativa, i set di dati possono essere abilitati anche per il profilo tramite l’interfaccia utente di Platform. Per ulteriori informazioni su come contrassegnare un set di dati come abilitato per il profilo, consulta [abilitare un set di dati per la documentazione del profilo cliente in tempo reale](../../../catalog/datasets/user-guide.md#enable-profile).
 
-Nell’esempio di query seguente, la `decile_table` set di dati creato con `id` come colonna di identità primaria e ha lo spazio dei nomi `IDFA`. Ha anche un campo denominato `decile1Month` del tipo di dati mappa. Tabella creata (`decile_table`) è abilitato per il profilo.
+Nella query di esempio seguente, il set di dati `decile_table` viene creato con `id` come colonna di identità primaria e ha lo spazio dei nomi `IDFA`. Inoltre, dispone di un campo denominato `decile1Month` del tipo di dati mappa. La tabella creata (`decile_table`) è abilitata per il profilo.
 
 ```sql
 CREATE TABLE decile_table (id text PRIMARY KEY NAMESPACE 'IDFA', 
@@ -69,13 +69,13 @@ Created Table DataSet Id
 (1 row)
 ```
 
-Utilizzare `label='PROFILE'` su un `CREATE TABLE` per creare un set di dati abilitato per il profilo. Il `upsert` è attivata per impostazione predefinita. Il `upsert` La funzionalità può essere sovrascritta utilizzando `ALTER` come illustrato nell&#39;esempio seguente.
+Utilizzare `label='PROFILE'` su un comando `CREATE TABLE` per creare un set di dati abilitato per il profilo. La funzionalità `upsert` è attivata per impostazione predefinita. La funzionalità `upsert` può essere sovrascritta utilizzando il comando `ALTER`, come illustrato nell&#39;esempio seguente.
 
 ```sql
 ALTER TABLE <your_table_name> DROP label upsert;
 ```
 
-Consulta la documentazione sulla sintassi SQl per ulteriori informazioni sull’utilizzo di [MODIFICA TABELLA](../../sql/syntax.md#alter-table) comando e [etichetta come parte di una query CTAS](../../sql/syntax.md#create-table-as-select).
+Per ulteriori informazioni sull&#39;utilizzo del comando [ALTER TABLE](../../sql/syntax.md#alter-table) e dell&#39;etichetta [label come parte di una query CTAS](../../sql/syntax.md#create-table-as-select), vedere la documentazione relativa alla sintassi SQl.
 
 ## Costrutti utili per la gestione dei set di dati derivati tramite SQL
 
@@ -91,7 +91,7 @@ ALTER TABLE your_decile_table ADD label 'PROFILE';
 
 >[!NOTE]
 >
->In caso di esecuzione corretta del `ALTER TABLE` , la console restituisce `ALTER SUCCESS`.
+>Se il comando `ALTER TABLE` viene eseguito correttamente, la console restituisce `ALTER SUCCESS`.
 
 ### Aggiungere un’identità primaria a un set di dati esistente {#add-primary-identity}
 
@@ -107,11 +107,11 @@ Ad esempio:
 ALTER TABLE test1_dataset ADD CONSTRAINT PRIMARY KEY(id2) NAMESPACE 'IDFA';
 ```
 
-Nell’esempio fornito, `id2` è una colonna esistente in `test1_dataset`.
+Nell&#39;esempio fornito, `id2` è una colonna esistente in `test1_dataset`.
 
 ### Disattivare un set di dati per il profilo {#disable-dataset-for-profile}
 
-Se si desidera disattivare la tabella per gli utilizzi del profilo, è necessario utilizzare il comando DROP. Esempio di istruzione SQL che UTILIZZA `DROP` viene visualizzato di seguito.
+Se si desidera disattivare la tabella per gli utilizzi del profilo, è necessario utilizzare il comando DROP. Di seguito è riportato un esempio di istruzione SQL che UTILIZZA `DROP`.
 
 ```sql
 ALTER TABLE table_name DROP LABEL 'PROFILE';
@@ -123,7 +123,7 @@ Ad esempio:
 ALTER TABLE decile_table DROP label 'PROFILE';
 ```
 
-Questa istruzione SQL fornisce un metodo alternativo efficiente all’utilizzo di una chiamata API. Per ulteriori informazioni, consulta la documentazione su come [disattivare un set di dati da utilizzare con Real-Time CDP utilizzando l’API dei set di dati](../../../catalog/datasets/enable-upsert.md#disable-the-dataset-for-profile).
+Questa istruzione SQL fornisce un metodo alternativo efficiente all’utilizzo di una chiamata API. Per ulteriori informazioni, vedere la documentazione su come [disabilitare un set di dati da utilizzare con Real-Time CDP utilizzando l&#39;API dei set di dati](../../../catalog/datasets/enable-upsert.md#disable-the-dataset-for-profile).
 
 ### Consenti funzionalità di aggiornamento e inserimento per il set di dati {#enable-upsert-functionality-for-dataset}
 
@@ -141,7 +141,7 @@ Ad esempio:
 ALTER TABLE table_with_a_decile ADD label 'UPSERT';
 ```
 
-Questa istruzione SQL fornisce un metodo alternativo efficiente all’utilizzo di una chiamata API. Per ulteriori informazioni, consulta la documentazione su come [abilitare un set di dati da utilizzare con Real-Time CDP e UPSERT utilizzando l’API dei set di dati](../../../catalog/datasets/enable-upsert.md#enable-the-dataset).
+Questa istruzione SQL fornisce un metodo alternativo efficiente all’utilizzo di una chiamata API. Per ulteriori informazioni, vedere la documentazione su come [abilitare un set di dati da utilizzare con Real-Time CDP e UPSERT utilizzando l&#39;API dei set di dati](../../../catalog/datasets/enable-upsert.md#enable-the-dataset).
 
 ### Disattiva la funzionalità di aggiornamento e inserimento per il set di dati {#disable-upsert-functionality-for-dataset}
 
@@ -161,7 +161,7 @@ ALTER TABLE table_with_a_decile DROP label 'UPSERT';
 
 ### Mostra informazioni aggiuntive sulla tabella associate a ogni tabella {#show-labels-for-tables}
 
-Vengono conservati metadati aggiuntivi per i set di dati abilitati per il profilo. Utilizza il `SHOW TABLES` per visualizzare un `labels` che fornisce informazioni su tutte le etichette associate alle tabelle.
+Vengono conservati metadati aggiuntivi per i set di dati abilitati per il profilo. Utilizzare il comando `SHOW TABLES` per visualizzare una colonna `labels` aggiuntiva che fornisce informazioni sulle etichette associate alle tabelle.
 
 Di seguito è riportato un esempio dell&#39;output di questo comando:
 
@@ -174,7 +174,7 @@ Di seguito è riportato un esempio dell&#39;output di questo comando:
 (3 rows)
 ```
 
-Si può vedere dall&#39;esempio che `table_with_a_decile` è stato abilitato per il profilo e applicato con etichette quali [&#39;UPSERT&#39;](#enable-upsert-functionality-for-dataset), [&#39;PROFILO&#39;](#enable-existing-dataset-for-profile) come descritto in precedenza.
+Si può vedere dall&#39;esempio che `table_with_a_decile` è stato abilitato per il profilo e applicato con etichette come [&#39;UPSERT&#39;](#enable-upsert-functionality-for-dataset), [&#39;PROFILE&#39;](#enable-existing-dataset-for-profile) come descritto in precedenza.
 
 ### Creare un gruppo di campi con SQL
 
@@ -188,8 +188,8 @@ CREATE FIELDGROUP <field_group_name> [IF NOT EXISTS]  (field_name <data_type> pr
 
 >[!IMPORTANT]
 >
->La creazione di un gruppo di campi tramite SQL avrà esito negativo se `label` Il flag non viene fornito nell’istruzione o se il gruppo di campi esiste già.
->Assicurati che la query includa `IF NOT EXISTS` clausola per evitare che la query non riesca perché il gruppo di campi esiste già.
+>La creazione del gruppo di campi tramite SQL non riuscirà se il flag `label` non viene fornito nell&#39;istruzione o se il gruppo di campi esiste già.
+>Verificare che la query includa una clausola `IF NOT EXISTS` per evitare che la query non riesca perché il gruppo di campi esiste già.
 
 Un esempio reale potrebbe essere simile a quello riportato di seguito.
 
@@ -199,11 +199,11 @@ CREATE FIELDGROUP field_group_for_test123 (decile1Month map<text, integer>, deci
 
 Se questa istruzione viene eseguita correttamente, viene restituito l&#39;ID del gruppo di campi creato. Ad esempio `c731a1eafdfdecae1683c6dca197c66ed2c2b49ecd3a9525`.
 
-Consulta la documentazione su come [creare un nuovo gruppo di campi nell’Editor di schema](../../../xdm/ui/resources/field-groups.md#create) o utilizzando [API del Registro di sistema dello schema](../../../xdm/api/field-groups.md#create) per ulteriori informazioni su metodi alternativi.
+Per ulteriori informazioni sui metodi alternativi, vedere la documentazione su come [creare un nuovo gruppo di campi nell&#39;Editor di schema](../../../xdm/ui/resources/field-groups.md#create) o utilizzare l&#39;[API del Registro di sistema dello schema](../../../xdm/api/field-groups.md#create).
 
 ### Rilascia un gruppo di campi
 
-Talvolta può essere necessario rimuovere un gruppo di campi dal registro degli schemi. Questa operazione viene eseguita eseguendo `DROP FIELDGROUP` con l&#39;ID del gruppo di campi.
+Talvolta può essere necessario rimuovere un gruppo di campi dal registro degli schemi. A tale scopo, eseguire il comando `DROP FIELDGROUP` con l&#39;ID del gruppo di campi.
 
 ```sql
 DROP FIELDGROUP [IF EXISTS] <your_field_group_id>;
@@ -217,11 +217,11 @@ DROP FIELDGROUP field_group_for_test123;
 
 >[!IMPORTANT]
 >
->L&#39;eliminazione di un gruppo di campi tramite SQL avrà esito negativo se il gruppo di campi non esiste. Assicurati che l’istruzione includa `IF EXISTS` per evitare che la query non riesca.
+>L&#39;eliminazione di un gruppo di campi tramite SQL avrà esito negativo se il gruppo di campi non esiste. Verificare che l&#39;istruzione includa una clausola `IF EXISTS` per evitare che la query non riesca.
 
 ### Mostra tutti i nomi e gli ID dei gruppi di campi per le tabelle
 
-Il `SHOW FIELDGROUPS` restituisce una tabella che contiene il nome, il valore fieldgroupId e il proprietario delle tabelle.
+Il comando `SHOW FIELDGROUPS` restituisce una tabella che contiene il nome, l&#39;ID gruppo di campi e il proprietario delle tabelle.
 
 Di seguito è riportato un esempio dell&#39;output di questo comando:
 
@@ -237,4 +237,4 @@ Di seguito è riportato un esempio dell&#39;output di questo comando:
 
 ## Passaggi successivi
 
-Dopo aver letto questo documento, sarai in grado di comprendere meglio come utilizzare SQL per creare un profilo e un set di dati abilitati per l’upsert basati su set di dati derivati. Ora puoi utilizzare questo set di dati con flussi di lavoro di acquisizione batch per apportare aggiornamenti ai dati del profilo. Per ulteriori informazioni sull’acquisizione di dati in Adobe Experience Platform, consulta la sezione [panoramica sull’acquisizione dei dati](../../../ingestion/home.md).
+Dopo aver letto questo documento, sarai in grado di comprendere meglio come utilizzare SQL per creare un profilo e un set di dati abilitati per l’upsert basati su set di dati derivati. Ora puoi utilizzare questo set di dati con flussi di lavoro di acquisizione batch per apportare aggiornamenti ai dati del profilo. Per ulteriori informazioni sull&#39;acquisizione di dati in Adobe Experience Platform, consulta la [panoramica sull&#39;acquisizione dei dati](../../../ingestion/home.md).

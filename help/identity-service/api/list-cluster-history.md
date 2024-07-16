@@ -14,12 +14,12 @@ ht-degree: 2%
 
 # Ottenere la cronologia cluster di un&#39;identità
 
-Le identità possono spostare i cluster nel corso di varie esecuzioni del grafico dei dispositivi. [!DNL Identity Service] fornisce visibilità nel tempo sulle associazioni cluster di una determinata identità.
+Le identità possono spostare i cluster nel corso di varie esecuzioni del grafico dei dispositivi. [!DNL Identity Service] fornisce visibilità sulle associazioni cluster di una determinata identità nel tempo.
 
-Usa facoltativo `graph-type` parametro per indicare il tipo di output da cui ottenere il cluster. Le opzioni sono:
+Utilizzare il parametro facoltativo `graph-type` per indicare il tipo di output da cui ottenere il cluster. Le opzioni sono:
 
-- `None` - Non eseguire alcuna unione di identità.
-- `Private Graph` : esegui l’unione delle identità in base al grafico delle identità private. In caso negativo `graph-type` , è l&#39;impostazione predefinita.
+- `None` - Non eseguire alcuna unione identità.
+- `Private Graph` - Eseguire l&#39;unione delle identità in base al grafico delle identità private. Se non viene fornito alcun `graph-type`, questo è il valore predefinito.
 
 ## Ottenere la cronologia cluster di una singola identità
 
@@ -31,7 +31,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/cluster/history
 
 **Richiesta**
 
-Opzione 1: specificare l&#39;identità come spazio dei nomi (`nsId`, per ID) e il valore ID (`id`).
+Opzione 1: specificare l&#39;identità come spazio dei nomi (`nsId`, per ID) e valore ID (`id`).
 
 ```shell
 curl -X GET \
@@ -42,7 +42,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opzione 2: specificare l&#39;identità come spazio dei nomi (`ns`, per nome) e il valore ID (`id`).
+Opzione 2: specificare l&#39;identità come spazio dei nomi (`ns`, per nome) e valore ID (`id`).
 
 ```shell
 curl -X GET \
@@ -53,7 +53,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opzione 3: specificare l&#39;identità come XID (`xid`). Per ulteriori informazioni su come ottenere l’XID di un’identità, consulta la sezione di questo documento relativa a [recupero dello XID per un’identità](./list-native-id.md).
+Opzione 3: specificare l&#39;identità come XID (`xid`). Per ulteriori informazioni su come ottenere XID di un&#39;identità, consulta la sezione di questo documento che descrive [come ottenere XID per un&#39;identità](./list-native-id.md).
 
 ```shell
 curl -X GET \
@@ -66,7 +66,7 @@ curl -X GET \
 
 ## Ottenere la cronologia cluster di più identità
 
-Utilizza il `POST` metodo come equivalente batch del `GET` metodo descritto in precedenza per restituire le cronologie cluster di più identità.
+Utilizzare il metodo `POST` come equivalente batch del metodo `GET` descritto in precedenza per restituire le cronologie cluster di più identità.
 
 >[!NOTE]
 >
@@ -109,7 +109,7 @@ Opzione 2: fornire un elenco di identità come ID compositi, dove ciascuna di es
 
 **Richiesta stub**
 
-Utilizzo di `x-uis-cst-ctx: stub` L’intestazione restituirà una risposta con stubbed. Si tratta di una soluzione temporanea per agevolare il rapido progresso dello sviluppo dell’integrazione, durante il completamento dei servizi. Se non sarà più necessario, diventerà obsoleto.
+L&#39;utilizzo dell&#39;intestazione `x-uis-cst-ctx: stub` restituirà una risposta con stubbed. Si tratta di una soluzione temporanea per agevolare il rapido progresso dello sviluppo dell’integrazione, durante il completamento dei servizi. Se non sarà più necessario, diventerà obsoleto.
 
 ```shell
 curl -X POST \
@@ -142,7 +142,7 @@ curl -X POST \
       }' | json_pp
 ```
 
-**Utilizzo degli UID**
+**Utilizzo di UID**
 
 ```shell
 curl -X POST \
@@ -166,7 +166,7 @@ curl -X POST \
       }' | json_pp
 ```
 
-**Rispondi**
+**Rispetta**
 
 ```json
 {
@@ -218,4 +218,4 @@ curl -X POST \
 
 ## Passaggi successivi
 
-Procedi all’esercitazione successiva per [elencare mappature identità](./list-identity-mappings.md)
+Procedi all&#39;esercitazione successiva per [elencare i mapping di identità](./list-identity-mappings.md)

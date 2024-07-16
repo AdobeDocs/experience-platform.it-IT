@@ -13,62 +13,62 @@ ht-degree: 0%
 
 # Creare set di dati per l’acquisizione dei dati di consenso IAB TCF 2.0
 
-Affinché Adobe Experience Platform possa elaborare i dati sul consenso dei clienti in conformità con IAB [!DNL Transparency & Consent Framework] (TCF) 2.0, tali dati devono essere inviati a set di dati i cui schemi contengono campi di consenso TCF 2.0.
+Affinché Adobe Experience Platform possa elaborare i dati sul consenso del cliente in conformità all’IAB [!DNL Transparency & Consent Framework] (TCF) 2.0, tali dati devono essere inviati a set di dati i cui schemi contengono campi di consenso TCF 2.0.
 
 In particolare, per acquisire i dati di consenso TCF 2.0 sono necessari due set di dati:
 
-* Un set di dati basato su [!DNL XDM Individual Profile] classe, abilitata per l&#39;utilizzo in [!DNL Real-Time Customer Profile].
-* Un set di dati basato su [!DNL XDM ExperienceEvent] classe.
+* Set di dati basato sulla classe [!DNL XDM Individual Profile], abilitato per l&#39;utilizzo in [!DNL Real-Time Customer Profile].
+* Un set di dati basato sulla classe [!DNL XDM ExperienceEvent].
 
 >[!IMPORTANT]
 >
 >Platform applica solo le stringhe TCF raccolte nel set di dati Profilo individuale. Anche se è ancora necessario un set di dati ExperienceEvent per creare un flusso di dati come parte di questo flusso di lavoro, è sufficiente acquisire i dati nel set di dati del profilo. Il set di dati ExperienceEvent può ancora essere utilizzato se desideri tenere traccia degli eventi di modifica del consenso nel tempo, ma questi valori non vengono utilizzati in durante l’applicazione all’attivazione dei segmenti.
 
-Questo documento descrive la procedura per impostare questi due set di dati. Per una panoramica dell’intero flusso di lavoro per configurare le operazioni sui dati di Platform per TCF 2.0, consulta [Panoramica sulla conformità IAB TCF 2.0](./overview.md).
+Questo documento descrive la procedura per impostare questi due set di dati. Per una panoramica del flusso di lavoro completo per configurare le operazioni sui dati di Platform per TCF 2.0, consulta la [panoramica sulla conformità IAB TCF 2.0](./overview.md).
 
 ## Prerequisiti
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Experience Data Model (XDM)](../../../../xdm/home.md): il quadro standardizzato mediante il quale [!DNL Experience Platform] organizza i dati sull’esperienza del cliente.
-   * [Nozioni di base sulla composizione dello schema](../../../../xdm/schema/composition.md): scopri gli elementi di base degli schemi XDM.
+* [Experience Data Model (XDM)](../../../../xdm/home.md): framework standardizzato tramite il quale [!DNL Experience Platform] organizza i dati sull&#39;esperienza del cliente.
+   * [Nozioni di base sulla composizione dello schema](../../../../xdm/schema/composition.md): scopri i blocchi predefiniti di base degli schemi XDM.
 * [Servizio Adobe Experience Platform Identity](../../../../identity-service/home.md): consente di collegare le identità dei clienti da diverse origini dati tra dispositivi e sistemi.
-   * [Spazi dei nomi delle identità](../../../../identity-service/features/namespaces.md): i dati di identità del cliente devono essere forniti in uno spazio dei nomi di identità specifico riconosciuto dal servizio Identity.
-* [Profilo cliente in tempo reale](../../../../profile/home.md): utilizza [!DNL Identity Service] per consentirti di creare profili cliente dettagliati dai set di dati in tempo reale. [!DNL Real-Time Customer Profile] estrae dati dal Data Lake e mantiene i profili dei clienti nel proprio archivio dati separato.
+   * [Spazi dei nomi di identità](../../../../identity-service/features/namespaces.md): i dati di identità del cliente devono essere forniti in uno spazio dei nomi di identità specifico riconosciuto da Identity Service.
+* [Profilo cliente in tempo reale](../../../../profile/home.md): sfrutta [!DNL Identity Service] per creare profili cliente dettagliati dai set di dati in tempo reale. [!DNL Real-Time Customer Profile] estrae dati dal Data Lake e mantiene i profili cliente nel proprio archivio dati separato.
 
 ## Gruppi di campi TCF 2.0 {#field-groups}
 
-Il [!UICONTROL Dettagli del consenso IAB TCF 2.0] Il gruppo di campi schema fornisce i campi di consenso del cliente necessari per il supporto di TCF 2.0. Esistono due versioni di questo gruppo di campi: una compatibile con [!DNL XDM Individual Profile] e l&#39;altro con il [!DNL XDM ExperienceEvent] classe.
+Il gruppo di campi dello schema [!UICONTROL IAB TCF 2.0 Consent Details] fornisce i campi di consenso del cliente necessari per il supporto di TCF 2.0. Esistono due versioni di questo gruppo di campi: una compatibile con la classe [!DNL XDM Individual Profile] e l&#39;altra con la classe [!DNL XDM ExperienceEvent].
 
 Le sezioni seguenti spiegano la struttura di ciascuno di questi gruppi di campi, inclusi i dati previsti durante l’acquisizione.
 
 ### Gruppo di campi Profilo {#profile-field-group}
 
-Per gli schemi basati su [!DNL XDM Individual Profile], il [!UICONTROL Dettagli del consenso IAB TCF 2.0] gruppo di campi fornisce un singolo campo di tipo mappa, `identityPrivacyInfo`, che mappa le identità dei clienti in base alle preferenze di consenso TCF. Per consentire l’applicazione automatica, questo gruppo di campi deve essere incluso in uno schema basato su record abilitato per Real-Time Customer Profile.
+Per gli schemi basati su [!DNL XDM Individual Profile], il gruppo di campi [!UICONTROL Dettagli consenso IAB TCF 2.0] fornisce un singolo campo di tipo mappa, `identityPrivacyInfo`, che mappa le identità dei clienti in base alle preferenze di consenso TCF. Per consentire l’applicazione automatica, questo gruppo di campi deve essere incluso in uno schema basato su record abilitato per Real-Time Customer Profile.
 
-Consulta la [guida di riferimento](../../../../xdm/field-groups/profile/iab.md) affinché questo gruppo di campi possa saperne di più sulla sua struttura e sul suo caso d’uso.
+Per ulteriori informazioni sulla struttura e sul caso d&#39;uso di questo gruppo di campi, consulta la [guida di riferimento](../../../../xdm/field-groups/profile/iab.md).
 
 ### Gruppo di campi evento {#event-field-group}
 
-Se desideri tenere traccia degli eventi di modifica del consenso nel tempo, puoi aggiungere [!UICONTROL Dettagli del consenso IAB TCF 2.0] gruppo di campi al tuo [!UICONTROL XDM ExperienceEvent] schema.
+Se desideri tenere traccia degli eventi di modifica del consenso nel tempo, puoi aggiungere il gruppo di campi [!UICONTROL Dettagli consenso IAB TCF 2.0] allo schema [!UICONTROL XDM ExperienceEvent].
 
-Se non prevedi di tenere traccia degli eventi di modifica del consenso nel tempo, non è necessario includere questo gruppo di campi nello schema dell’evento. Quando applica automaticamente i valori di consenso TCF, Experienci Platform utilizza solo le informazioni di consenso più recenti acquisite in [gruppo di campi del profilo](#profile-field-group). I valori di consenso acquisiti dagli eventi non partecipano ai flussi di lavoro di applicazione automatica.
+Se non prevedi di tenere traccia degli eventi di modifica del consenso nel tempo, non è necessario includere questo gruppo di campi nello schema dell’evento. Quando si applicano automaticamente i valori di consenso TCF, Experience Platform utilizza solo le informazioni di consenso più recenti acquisite nel gruppo di campi [profilo](#profile-field-group). I valori di consenso acquisiti dagli eventi non partecipano ai flussi di lavoro di applicazione automatica.
 
-Consulta la [guida di riferimento](../../../../xdm/field-groups/event/iab.md) per questo gruppo di campi per ulteriori informazioni sulla struttura e sul caso d’uso.
+Per ulteriori informazioni sulla struttura e sul caso d&#39;uso di questo gruppo di campi, consulta la [guida di riferimento](../../../../xdm/field-groups/event/iab.md).
 
 ## Creare schemi di consenso dei clienti {#create-schemas}
 
 Per creare set di dati che acquisiscano i dati del consenso, devi prima creare schemi XDM su cui basare tali set di dati.
 
-Come indicato nella sezione precedente, uno schema che utilizza [!UICONTROL Profilo individuale XDM] è necessaria per applicare il consenso nei flussi di lavoro della piattaforma a valle. Facoltativamente, puoi anche creare uno schema separato basato su [!UICONTROL XDM ExperienceEvent] se desideri tenere traccia delle modifiche del consenso nel tempo. Entrambi gli schemi devono contenere un `identityMap` e un gruppo di campi TCF 2.0 appropriato.
+Come indicato nella sezione precedente, per applicare il consenso nei flussi di lavoro a valle di Platform è necessario uno schema che utilizza la classe [!UICONTROL XDM Individual Profile]. Facoltativamente, puoi anche creare uno schema separato basato su [!UICONTROL XDM ExperienceEvent] se desideri tenere traccia delle modifiche del consenso nel tempo. Entrambi gli schemi devono contenere un campo `identityMap` e un gruppo di campi TCF 2.0 appropriato.
 
-Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Schemi]** nel menu di navigazione a sinistra per aprire [!UICONTROL Schemi] Workspace. Da qui, segui i passaggi descritti nelle sezioni seguenti per creare ogni schema richiesto.
+Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Schemi]** nell&#39;area di navigazione a sinistra per aprire l&#39;area di lavoro [!UICONTROL Schemi]. Da qui, segui i passaggi descritti nelle sezioni seguenti per creare ogni schema richiesto.
 
 >[!NOTE]
 >
 >Se disponi di schemi XDM esistenti che desideri utilizzare per acquisire i dati del consenso, puoi modificarli invece di crearne di nuovi. Tuttavia, se uno schema esistente è stato abilitato per l’utilizzo in Real-Time Customer Profile, la sua identità primaria non può essere un campo direttamente identificabile che non può essere utilizzato in annunci pubblicitari basati su interessi, come un indirizzo e-mail. Se non sei sicuro di quali campi sono soggetti a restrizioni, rivolgiti al tuo consulente legale.
 >
->Inoltre, quando si modificano gli schemi esistenti, è possibile apportare solo modifiche aggiuntive (non interrompenti). Consulta la sezione sulla [principi dell’evoluzione dello schema](../../../../xdm/schema/composition.md#evolution) per ulteriori informazioni.
+>Inoltre, quando si modificano gli schemi esistenti, è possibile apportare solo modifiche aggiuntive (non interrompenti). Per ulteriori informazioni, consulta la sezione sui [principi dell&#39;evoluzione dello schema](../../../../xdm/schema/composition.md#evolution).
 
 ### Creare uno schema di consenso del profilo {#profile-schema}
 
@@ -76,43 +76,43 @@ Seleziona **[!UICONTROL Crea schema]**, quindi scegli **[!UICONTROL Profilo indi
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/create-schema-profile.png)
 
-Il **[!UICONTROL Aggiungi gruppi di campi]** viene visualizzata una finestra di dialogo che consente di iniziare ad aggiungere gruppi di campi allo schema immediatamente. Da qui, seleziona **[!UICONTROL Dettagli del consenso IAB TCF 2.0]** dall&#39;elenco. Facoltativamente, è possibile utilizzare la barra di ricerca per limitare i risultati in modo da individuare più facilmente il gruppo di campi.
+Viene visualizzata la finestra di dialogo **[!UICONTROL Aggiungi gruppi di campi]**, che consente di iniziare ad aggiungere gruppi di campi allo schema immediatamente. Da qui, seleziona **[!UICONTROL IAB TCF 2.0 Consent Details]** dall&#39;elenco. Facoltativamente, è possibile utilizzare la barra di ricerca per limitare i risultati in modo da individuare più facilmente il gruppo di campi.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-profile-privacy.png)
 
-Quindi, trova il **[!UICONTROL IdentityMap]** dall&#39;elenco e selezionarlo. Una volta elencati entrambi i gruppi di campi nella barra a destra, seleziona **[!UICONTROL Aggiungi gruppi di campi]**.
+Individuare quindi il gruppo di campi **[!UICONTROL IdentityMap]** dall&#39;elenco e selezionarlo. Dopo aver elencato entrambi i gruppi di campi nella barra a destra, seleziona **[!UICONTROL Aggiungi gruppi di campi]**.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-profile-identitymap.png)
 
-L’area di lavoro viene visualizzata nuovamente, mostrando che il `identityPrivacyInfo` e `identityMap` I campi sono stati aggiunti alla struttura dello schema.
+L&#39;area di lavoro viene nuovamente visualizzata, mostrando che i campi `identityPrivacyInfo` e `identityMap` sono stati aggiunti alla struttura dello schema.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/profile-privacy-structure.png)
 
-Prima di aggiungere altri campi allo schema, seleziona il campo principale da visualizzare **[!UICONTROL Proprietà dello schema]** nella barra a destra, dove puoi fornire un nome e una descrizione per lo schema.
+Prima di aggiungere altri campi allo schema, seleziona il campo principale per visualizzare **[!UICONTROL le proprietà dello schema]** nella barra a destra, dove puoi fornire un nome e una descrizione dello schema.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/schema-details-profile.png)
 
-Dopo aver fornito un nome e una descrizione, puoi facoltativamente aggiungere altri campi allo schema selezionando **[!UICONTROL Aggiungi]** sotto **[!UICONTROL Gruppi di campi]** sezione sul lato sinistro dell’area di lavoro.
+Dopo aver fornito un nome e una descrizione, è possibile aggiungere altri campi allo schema selezionando **[!UICONTROL Aggiungi]** nella sezione **[!UICONTROL Gruppi di campi]** sul lato sinistro dell&#39;area di lavoro.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-field-group-profile.png)
 
-Se stai modificando uno schema esistente già abilitato per l’utilizzo in [!DNL Real-Time Customer Profile], seleziona **[!UICONTROL Salva]** per confermare le modifiche prima di passare alla sezione su [creazione di un set di dati basato sullo schema di consenso](#dataset). Se stai creando un nuovo schema, continua seguendo i passaggi descritti nella sottosezione seguente.
+Se stai modificando uno schema esistente già abilitato per l&#39;utilizzo in [!DNL Real-Time Customer Profile], seleziona **[!UICONTROL Salva]** per confermare le modifiche prima di passare alla sezione [creazione di un set di dati basato sullo schema di consenso](#dataset). Se stai creando un nuovo schema, continua seguendo i passaggi descritti nella sottosezione seguente.
 
-#### Abilita lo schema per l’utilizzo in [!DNL Real-Time Customer Profile]
+#### Abilita lo schema da utilizzare in [!DNL Real-Time Customer Profile]
 
-Affinché Platform associ i dati sul consenso ricevuti a profili cliente specifici, lo schema di consenso deve essere abilitato per l’utilizzo in [!DNL Real-Time Customer Profile].
+Per consentire a Platform di associare i dati sul consenso ricevuti a profili cliente specifici, lo schema di consenso deve essere abilitato per l&#39;utilizzo in [!DNL Real-Time Customer Profile].
 
 >[!NOTE]
 >
->Lo schema di esempio mostrato in questa sezione utilizza `identityMap` come identità primaria. Se desideri impostare un altro campo come identità primaria, accertati di utilizzare un identificatore indiretto come un ID cookie e non un campo direttamente identificabile che non può essere utilizzato in annunci pubblicitari basati su interessi, come un indirizzo e-mail. Se non sei sicuro di quali campi sono soggetti a restrizioni, rivolgiti al tuo consulente legale.
+>Lo schema di esempio mostrato in questa sezione utilizza il campo `identityMap` come identità primaria. Se desideri impostare un altro campo come identità primaria, accertati di utilizzare un identificatore indiretto come un ID cookie e non un campo direttamente identificabile che non può essere utilizzato in annunci pubblicitari basati su interessi, come un indirizzo e-mail. Se non sei sicuro di quali campi sono soggetti a restrizioni, rivolgiti al tuo consulente legale.
 >
->I passaggi per impostare un campo di identità principale per uno schema si trovano in [[!UICONTROL Schemi] Guida all’interfaccia utente](../../../../xdm/ui/fields/identity.md).
+>I passaggi per l&#39;impostazione di un campo di identità primaria per uno schema sono disponibili nella [[!UICONTROL Guida dell&#39;interfaccia utente Schemi]](../../../../xdm/ui/fields/identity.md).
 
-Per abilitare lo schema per [!DNL Profile], seleziona il nome dello schema nella barra a sinistra per aprire **[!UICONTROL Proprietà dello schema]** sezione. Da qui, seleziona la **[!UICONTROL Profilo]** interruttore.
+Per abilitare lo schema per [!DNL Profile], seleziona il nome dello schema nella barra a sinistra per aprire la sezione **[!UICONTROL Proprietà schema]**. Da qui, seleziona il pulsante di attivazione/disattivazione **[!UICONTROL Profilo]**.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/profile-enable-profile.png)
 
-Viene visualizzato un messaggio a comparsa che indica un&#39;identità primaria mancante. Seleziona la casella di controllo per utilizzare un’identità primaria alternativa, in quanto l’identità primaria sarà contenuta nel `identityMap` campo.
+Viene visualizzato un messaggio a comparsa che indica un&#39;identità primaria mancante. Selezionare la casella di controllo per l&#39;utilizzo di un&#39;identità primaria alternativa, in quanto l&#39;identità primaria sarà contenuta nel campo `identityMap`.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/missing-primary-identity.png)
 
@@ -124,42 +124,42 @@ Infine, seleziona **[!UICONTROL Salva]** per confermare le modifiche.
 
 >[!NOTE]
 >
->Gli schemi di consenso degli eventi vengono utilizzati solo per tenere traccia degli eventi di modifica del consenso nel tempo e non partecipano ai flussi di lavoro di applicazione a valle. Se non desideri tenere traccia delle modifiche del consenso nel tempo, puoi passare alla sezione successiva su [creazione di set di dati di consenso](#datasets).
+>Gli schemi di consenso degli eventi vengono utilizzati solo per tenere traccia degli eventi di modifica del consenso nel tempo e non partecipano ai flussi di lavoro di applicazione a valle. Se non desideri tenere traccia delle modifiche del consenso nel tempo, puoi passare alla sezione successiva sulla [creazione dei set di dati del consenso](#datasets).
 
-In **[!UICONTROL Schemi]** workspace, seleziona **[!UICONTROL Crea schema]**, quindi scegli **[!UICONTROL XDM ExperienceEvent]** dal menu a discesa.
+Nell&#39;area di lavoro **[!UICONTROL Schemi]**, seleziona **[!UICONTROL Crea schema]**, quindi scegli **[!UICONTROL XDM ExperienceEvent]** dal menu a discesa.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/create-schema-event.png)
 
-Il **[!UICONTROL Aggiungi gruppi di campi]** viene visualizzata. Da qui, seleziona **[!UICONTROL Dettagli del consenso IAB TCF 2.0]** dall&#39;elenco. Facoltativamente, è possibile utilizzare la barra di ricerca per limitare i risultati in modo da individuare più facilmente il gruppo di campi.
+Viene visualizzata la finestra di dialogo **[!UICONTROL Aggiungi gruppi di campi]**. Da qui, seleziona **[!UICONTROL IAB TCF 2.0 Consent Details]** dall&#39;elenco. Facoltativamente, è possibile utilizzare la barra di ricerca per limitare i risultati in modo da individuare più facilmente il gruppo di campi.
 
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-event-privacy.png)
 
-Quindi, trova il **[!UICONTROL IdentityMap]** dall&#39;elenco e selezionarlo. Una volta elencati entrambi i gruppi di campi nella barra a destra, seleziona **[!UICONTROL Aggiungi gruppi di campi]**.
+Individuare quindi il gruppo di campi **[!UICONTROL IdentityMap]** dall&#39;elenco e selezionarlo. Dopo aver elencato entrambi i gruppi di campi nella barra a destra, seleziona **[!UICONTROL Aggiungi gruppi di campi]**.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-event-identitymap.png)
 
-L’area di lavoro viene visualizzata nuovamente, mostrando che il `consentStrings` e `identityMap` I campi sono stati aggiunti alla struttura dello schema.
+L&#39;area di lavoro viene nuovamente visualizzata, mostrando che i campi `consentStrings` e `identityMap` sono stati aggiunti alla struttura dello schema.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/event-privacy-structure.png)
 
-Prima di aggiungere altri campi allo schema, seleziona il campo principale da visualizzare **[!UICONTROL Proprietà dello schema]** nella barra a destra, dove puoi fornire un nome e una descrizione per lo schema.
+Prima di aggiungere altri campi allo schema, seleziona il campo principale per visualizzare **[!UICONTROL le proprietà dello schema]** nella barra a destra, dove puoi fornire un nome e una descrizione dello schema.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/schema-details-event.png)
 
-Dopo aver fornito un nome e una descrizione, puoi facoltativamente aggiungere altri campi allo schema selezionando **[!UICONTROL Aggiungi]** sotto **[!UICONTROL Gruppi di campi]** sezione sul lato sinistro dell’area di lavoro.
+Dopo aver fornito un nome e una descrizione, è possibile aggiungere altri campi allo schema selezionando **[!UICONTROL Aggiungi]** nella sezione **[!UICONTROL Gruppi di campi]** sul lato sinistro dell&#39;area di lavoro.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-field-group-event.png)
 
-Dopo aver aggiunto i gruppi di campi necessari, completa selezionando **[!UICONTROL Salva]**.
+Dopo aver aggiunto i gruppi di campi necessari, terminare selezionando **[!UICONTROL Salva]**.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/event-all-field-groups.png)
 
 ## Creare set di dati in base agli schemi di consenso {#datasets}
 
-Per ciascuno degli schemi richiesti descritti in precedenza, devi creare un set di dati che acquisirà in ultima analisi i dati sul consenso dei clienti. Il set di dati basato sullo schema del record deve essere abilitato per [!DNL Real-Time Customer Profile], mentre il set di dati basato sullo schema della serie temporale **non deve** essere [!DNL Profile]-abilitato.
+Per ciascuno degli schemi richiesti descritti in precedenza, devi creare un set di dati che acquisirà in ultima analisi i dati sul consenso dei clienti. Il set di dati basato sullo schema del record deve essere abilitato per [!DNL Real-Time Customer Profile], mentre il set di dati basato sullo schema della serie temporale **non deve essere abilitato per [!DNL Profile]**.
 
-Per iniziare, seleziona **[!UICONTROL Set di dati]** nel menu di navigazione a sinistra, seleziona quindi **[!UICONTROL Crea set di dati]** in alto a destra.
+Per iniziare, seleziona **[!UICONTROL Set di dati]** nell&#39;area di navigazione a sinistra, quindi seleziona **[!UICONTROL Crea set di dati]** nell&#39;angolo in alto a destra.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/dataset-create.png)
 
@@ -167,17 +167,17 @@ Nella pagina successiva, seleziona **[!UICONTROL Crea set di dati dallo schema]*
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/dataset-create-from-schema.png)
 
-Il **[!UICONTROL Crea set di dati dallo schema]** viene visualizzato il flusso di lavoro, a partire dal **[!UICONTROL Seleziona schema]** passaggio. Nell’elenco fornito, individua uno degli schemi di consenso creati in precedenza. Facoltativamente, puoi utilizzare la barra di ricerca per limitare i risultati e individuare più facilmente lo schema. Seleziona il pulsante di opzione accanto allo schema desiderato, quindi seleziona **[!UICONTROL Successivo]** per continuare.
+Viene visualizzato il flusso di lavoro **[!UICONTROL Crea set di dati dallo schema]** a partire dal passaggio **[!UICONTROL Seleziona schema]**. Nell’elenco fornito, individua uno degli schemi di consenso creati in precedenza. Facoltativamente, puoi utilizzare la barra di ricerca per limitare i risultati e individuare più facilmente lo schema. Seleziona il pulsante di scelta accanto allo schema desiderato, quindi seleziona **[!UICONTROL Successivo]** per continuare.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/dataset-select-schema.png)
 
-Il **[!UICONTROL Configurare il set di dati]** viene visualizzato il passaggio. Fornisci un nome e una descrizione univoci e facilmente identificabili per il set di dati prima di selezionarlo **[!UICONTROL Fine]**.
+Viene visualizzato il passaggio **[!UICONTROL Configura set di dati]**. Fornisci un nome e una descrizione univoci e facilmente identificabili per il set di dati prima di selezionare **[!UICONTROL Fine]**.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/dataset-configure.png)
 
-Viene visualizzata la pagina dei dettagli per il set di dati appena creato. Se il set di dati si basa sullo schema della serie temporale, il processo è completo. Se il set di dati si basa sullo schema del record, il passaggio finale nel processo consiste nell’abilitare il set di dati per l’utilizzo in [!DNL Real-Time Customer Profile].
+Viene visualizzata la pagina dei dettagli per il set di dati appena creato. Se il set di dati si basa sullo schema della serie temporale, il processo è completo. Se il set di dati è basato sullo schema del record, il passaggio finale nel processo consiste nell&#39;abilitare il set di dati per l&#39;utilizzo in [!DNL Real-Time Customer Profile].
 
-Nella barra a destra, seleziona la **[!UICONTROL Profilo]** , quindi seleziona **[!UICONTROL Abilita]** nel messaggio di conferma per abilitare lo schema per [!DNL Profile].
+Nella barra a destra, seleziona l&#39;interruttore **[!UICONTROL Profilo]**, quindi seleziona **[!UICONTROL Abilita]** nel popover di conferma per abilitare lo schema per [!DNL Profile].
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/dataset-enable-profile.png)
 
@@ -188,6 +188,6 @@ Segui nuovamente i passaggi precedenti per creare un set di dati basato su event
 Seguendo questa esercitazione, hai creato almeno un set di dati che ora può essere utilizzato per raccogliere i dati sul consenso del cliente:
 
 * Un set di dati basato su record abilitato per l’utilizzo in Real-Time Customer Profile. **(Obbligatorio)**
-* Un set di dati basato su serie temporali che non è abilitato per [!DNL Profile]. (Facoltativo)
+* Set di dati basato su serie temporali non abilitato per [!DNL Profile]. (Facoltativo)
 
-Ora puoi tornare al [Panoramica di IAB TCF 2.0](./overview.md#merge-policies) per continuare il processo di configurazione di Platform per la conformità a TCF 2.0.
+È ora possibile tornare alla [panoramica di IAB TCF 2.0](./overview.md#merge-policies) per continuare il processo di configurazione della piattaforma per la conformità a TCF 2.0.

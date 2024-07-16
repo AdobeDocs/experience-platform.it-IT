@@ -4,7 +4,7 @@ description: Scopri come riutilizzare più condizioni in numerose query con mode
 exl-id: 78959070-f9e5-4736-b72a-a8ef518bfa4f
 source-git-commit: 37aeff5131b9f67dbc99f6199918403e699478c8
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '486'
 ht-degree: 1%
 
 ---
@@ -17,11 +17,11 @@ Questo documento descrive l’utilizzo e le limitazioni dei modelli in linea all
 
 ## Prerequisiti
 
-I modelli in linea sono supportati sia dall’interfaccia utente che dall’API Query Service. Prima di continuare con questa guida, consulta la documentazione su come [creare un modello di query tramite l’API](../api/query-templates.md#create-a-query-template) o con [Editor query](../ui/user-guide.md#query-authoring).
+I modelli in linea sono supportati sia dall’interfaccia utente che dall’API Query Service. Prima di continuare con questa guida, leggere la documentazione su come [creare un modello di query tramite l&#39;API](../api/query-templates.md#create-a-query-template) o con [Editor query](../ui/user-guide.md#query-authoring).
 
 ## Sintassi del modello in linea {#syntax}
 
-Una volta salvata, una query viene definita modello. Quando il modello fa riferimento a un altro modello all’interno dell’istruzione, viene denominato modello in linea. I modelli in linea sono indicati nel codice SQL utilizzando il simbolo hash (#) seguito dal nome del modello. Un esempio di questa sintassi è `#YOUR_TEMPLATE_NAME`.
+Una volta salvata, una query viene definita modello. Quando il modello fa riferimento a un altro modello all’interno dell’istruzione, viene denominato modello in linea. I modelli in linea sono indicati nel codice SQL utilizzando il simbolo hash (#) seguito dal nome del modello. Esempio di sintassi: `#YOUR_TEMPLATE_NAME`.
 
 ## Caso d’uso {#use-case}
 
@@ -40,14 +40,14 @@ Durante l’esecuzione della query, Query Service sostituisce il nome del modell
 >
 >I modelli di query possono richiamare qualsiasi numero di altri modelli in linea. Non esiste alcuna restrizione al numero di modelli in linea che è possibile richiamare da una singola query. I modelli possono essere nidificati anche all’interno di altri modelli in linea.
 
-È possibile utilizzare i modelli per memorizzare una o più condizioni. Non è necessario che siano query complete di per sé. Se il modello contiene una query valida, è possibile eseguirla semplicemente chiamando il nome del modello preceduto da un simbolo hash. Ad esempio, se hai memorizzato `SELECT * FROM JUNE_2023_LOYALTY_MEMBERS;` come modello denominato `JUNE_2023_LOYALTY_MEMBERS`, il comando  `#JUNE_2023_LOYALTY_MEMBERS;` esegue la query valida contenuta nel modello.
+È possibile utilizzare i modelli per memorizzare una o più condizioni. Non è necessario che siano query complete di per sé. Se il modello contiene una query valida, è possibile eseguirla semplicemente chiamando il nome del modello preceduto da un simbolo hash. Se ad esempio si archivia `SELECT * FROM JUNE_2023_LOYALTY_MEMBERS;` come modello denominato `JUNE_2023_LOYALTY_MEMBERS`, il comando `#JUNE_2023_LOYALTY_MEMBERS;` eseguirà la query valida contenuta nel modello.
 
 >
 >
->Nell’interfaccia utente di Adobe Experience Platform, i modelli in linea sotto forma di query con parametri sono supportati solo a livello principale. Ciò significa che le query con parametri funzionano solo se utilizzate nel modello originale. Il modello figlio deve essere statico e non può avere parametri dinamici. Consulta la [documentazione sulle query con parametri](../ui/parameterized-queries.md) per ulteriori informazioni.
+>Nell’interfaccia utente di Adobe Experience Platform, i modelli in linea sotto forma di query con parametri sono supportati solo a livello principale. Ciò significa che le query con parametri funzionano solo se utilizzate nel modello originale. Il modello figlio deve essere statico e non può avere parametri dinamici. Per ulteriori informazioni, consulta la [documentazione sulle query con parametri](../ui/parameterized-queries.md).
 
 ## Passaggi successivi
 
 Dopo aver letto questo documento, ora sai come fare riferimento ad altri modelli all’interno dell’SQL, sia nell’Editor query che tramite l’API Query Service.
 
-Inoltre, dovresti leggere [guida ai blocchi anonimi](./anonymous-block.md), che spiega come ridurre al minimo i costi comuni di sviluppo concatenando una o più istruzioni SQL eseguite in sequenza.
+È inoltre necessario leggere la [guida ai blocchi anonimi](./anonymous-block.md) che spiega come ridurre al minimo i costi generali di sviluppo concatenando una o più istruzioni SQL eseguite in sequenza.

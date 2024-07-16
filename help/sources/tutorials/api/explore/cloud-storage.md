@@ -5,39 +5,39 @@ description: Questa esercitazione utilizza l’API Flow Service per esplorare un
 exl-id: ba1a9bff-43a6-44fb-a4e7-e6a45b7eeebd
 source-git-commit: 9b9803b4d2aeb2a86ef980f34ee34909679ea3d9
 workflow-type: tm+mt
-source-wordcount: '699'
-ht-degree: 5%
+source-wordcount: '691'
+ht-degree: 4%
 
 ---
 
-# Esplora le cartelle di archiviazione cloud utilizzando [!DNL Flow Service] API
+# Esplora le cartelle di archiviazione cloud utilizzando l&#39;API [!DNL Flow Service]
 
-Questo tutorial illustra come esplorare e visualizzare in anteprima la struttura e i contenuti dell’archiviazione cloud utilizzando [[!DNL Flow Service]](https://www.adobe.io/experience-platform-apis/references/flow-service/) API.
+Questo tutorial illustra come esplorare e visualizzare in anteprima la struttura e il contenuto dell&#39;archiviazione cloud utilizzando l&#39;API [[!DNL Flow Service]](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
->Per esplorare l’archiviazione cloud, è necessario disporre già di un ID connessione di base valido per un’origine di archiviazione cloud. Se non disponi di questo ID, consulta [panoramica sulle origini](../../../home.md#cloud-storage) per un elenco delle origini di archiviazione cloud con cui è possibile creare una connessione di base.
+>Per esplorare l’archiviazione cloud, è necessario disporre già di un ID connessione di base valido per un’origine di archiviazione cloud. Se non disponi di questo ID, consulta la [panoramica origini](../../../home.md#cloud-storage) per un elenco delle origini dell&#39;archiviazione cloud con cui puoi creare una connessione di base.
 
 ## Introduzione
 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Sorgenti](../../../home.md): [!DNL Experience Platform] consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] servizi.
-* [Sandbox](../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che permettono di suddividere un singolo [!DNL Platform] in ambienti virtuali separati, per facilitare lo sviluppo e l’evoluzione delle applicazioni di esperienza digitale.
+* [Origini](../../../home.md): [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini e consente di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi [!DNL Platform].
+* [Sandbox](../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza di [!DNL Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 ### Utilizzo delle API di Platform
 
-Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida su [introduzione alle API di Platform](../../../../landing/api-guide.md).
+Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida in [guida introduttiva alle API di Platform](../../../../landing/api-guide.md).
 
 ## Esplora le cartelle di archiviazione cloud
 
-Per recuperare informazioni sulla struttura delle cartelle di archiviazione cloud, effettua una richiesta GET al [!DNL Flow Service] fornendo l’ID della connessione di base della sorgente.
+È possibile recuperare informazioni sulla struttura delle cartelle di archiviazione cloud effettuando una richiesta di GET all&#39;API [!DNL Flow Service] e fornendo l&#39;ID di connessione di base dell&#39;origine.
 
 Quando esegui richieste GET per esplorare l’archiviazione cloud, devi includere i parametri di query elencati nella tabella seguente:
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `objectType` | Tipo di oggetto che si desidera esplorare. Imposta questo valore come: <ul><li>`folder`: esplora una directory specifica</li><li>`root`: esplora la directory principale.</li></ul> |
+| `objectType` | Tipo di oggetto che si desidera esplorare. Imposta questo valore come: <ul><li>`folder`: Esplora una directory specifica</li><li>`root`: Esplora la directory radice.</li></ul> |
 | `object` | Questo parametro è necessario solo quando si visualizza una directory specifica. Il relativo valore rappresenta il percorso della directory che desideri esplorare. |
 
 
@@ -66,7 +66,7 @@ curl -X GET \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce un array di file e cartelle presenti nella directory in cui è stata eseguita la query. Prendi nota della `path` del file che desideri caricare, in quanto è necessario fornirlo nel passaggio successivo per esaminarne la struttura.
+In caso di esito positivo, la risposta restituisce un array di file e cartelle presenti nella directory in cui è stata eseguita la query. Prendere nota della proprietà `path` del file che si desidera caricare, in quanto è necessario fornirlo nel passaggio successivo per esaminarne la struttura.
 
 ```json
 [
@@ -113,8 +113,8 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=FILE&object={FILE_PATH}
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | ID di connessione del connettore di origine dell’archiviazione cloud. |
 | `{FILE_PATH}` | Percorso del file che si desidera controllare. |
-| `{FILE_TYPE}` | Il tipo di file. I tipi di file supportati includono:<ul><li><code>DELIMITATO</code>: valore separato da delimitatore. I file DSV devono essere separati da virgole.</li><li><code>JSON</code>: notazione oggetto JavaScript. I file JSON devono essere conformi a XDM</li><li><code>PARQUET</code>: Apache Parquet I file Parquet devono essere conformi a XDM.</li></ul> |
-| `{QUERY_PARAMS}` | Parametri di query facoltativi che possono essere utilizzati per filtrare i risultati. Consulta la sezione su [parametri di query](#query) per ulteriori informazioni. |
+| `{FILE_TYPE}` | Il tipo di file. I tipi di file supportati includono:<ul><li><code>DELIMITATO</code>: valore separato da delimitatore. I file DSV devono essere separati da virgole.</li><li><code>JSON</code>: Notazione oggetto JavaScript. I file JSON devono essere conformi a XDM</li><li><code>PARQUET</code>: Apache Parquet I file Parquet devono essere conformi a XDM.</li></ul> |
+| `{QUERY_PARAMS}` | Parametri di query facoltativi che possono essere utilizzati per filtrare i risultati. Per ulteriori informazioni, vedere la sezione relativa ai [parametri di query](#query). |
 
 **Richiesta**
 
@@ -158,14 +158,14 @@ In caso di esito positivo, la risposta restituisce la struttura del file oggetto
 
 ## Utilizzo dei parametri di query {#query}
 
-Il [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) supporta l’utilizzo di parametri di query per l’anteprima e l’ispezione di diversi tipi di file.
+[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) supporta l&#39;utilizzo di parametri di query per l&#39;anteprima e l&#39;analisi di diversi tipi di file.
 
 | Parametro | Descrizione |
 | --------- | ----------- |
 | `columnDelimiter` | Il valore di un singolo carattere specificato come delimitatore di colonna per esaminare i file CSV o TSV. Se il parametro non viene fornito, il valore predefinito è una virgola `(,)`. |
 | `compressionType` | Parametro query obbligatorio per l’anteprima di un file delimitato o JSON compresso. I file compressi supportati sono: <ul><li>`bzip2`</li><li>`gzip`</li><li>`deflate`</li><li>`zipDeflate`</li><li>`tarGzip`</li><li>`tar`</li></ul> |
-| `encoding` | Definisce il tipo di codifica da utilizzare per il rendering dell&#39;anteprima. I tipi di codifica supportati sono: `UTF-8` e `ISO-8859-1`. **Nota**: Il `encoding` Il parametro è disponibile solo durante l’acquisizione di file CSV delimitati. Altri tipi di file verranno acquisiti con la codifica predefinita, `UTF-8`. |
+| `encoding` | Definisce il tipo di codifica da utilizzare per il rendering dell&#39;anteprima. I tipi di codifica supportati sono: `UTF-8` e `ISO-8859-1`. **Nota**: il parametro `encoding` è disponibile solo per l&#39;acquisizione di file CSV delimitati. Altri tipi di file verranno acquisiti con la codifica predefinita, `UTF-8`. |
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai esplorato il sistema di archiviazione cloud e trovato il percorso del file che desideri importare in [!DNL Platform]e ne ha visualizzato la struttura. Queste informazioni sono disponibili nell&#39;esercitazione successiva per [raccogliere dati dall’archiviazione cloud e inserirli in Platform](../collect/cloud-storage.md).
+Seguendo questa esercitazione, hai esplorato il sistema di archiviazione cloud, trovato il percorso del file che desideri importare in [!DNL Platform] e ne hai visualizzato la struttura. Puoi utilizzare queste informazioni nel prossimo tutorial per [raccogliere dati dall&#39;archiviazione cloud e inserirli in Platform](../collect/cloud-storage.md).

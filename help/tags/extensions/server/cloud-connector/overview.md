@@ -4,7 +4,7 @@ description: Scopri l’estensione di inoltro degli eventi Cloud Connector in Ad
 exl-id: f3713652-ac32-4171-8dda-127c8c235849
 source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
 workflow-type: tm+mt
-source-wordcount: '1616'
+source-wordcount: '1356'
 ht-degree: 98%
 
 ---
@@ -63,11 +63,11 @@ Nella tabella seguente sono elencate le intestazioni predefinite. Non sei limita
 
 | Header | Descrizione |
 |---|---|
-| [A-IM](https://developer.mozilla.org/it-IT/docs/Web/HTTP/Headers/Accept) |  |
-| [Accept](https://developer.mozilla.org/it-IT/docs/Web/HTTP/Headers/Accept) |  |
-| [Accept-Charset](https://developer.mozilla.org/it-IT/docs/Web/HTTP/Headers/Accept-Charset) |  |
-| [Accept-Encoding](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Encoding) |  |
-| [Accept-Language](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language) |  |
+| [A-IM](https://developer.mozilla.org/it-IT/docs/Web/HTTP/Headers/Accept) | |
+| [Accept](https://developer.mozilla.org/it-IT/docs/Web/HTTP/Headers/Accept) | |
+| [Accept-Charset](https://developer.mozilla.org/it-IT/docs/Web/HTTP/Headers/Accept-Charset) | |
+| [Accept-Encoding](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Encoding) | |
+| [Accept-Language](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language) | |
 | [Accept-Datetime](https://developer.mozilla.org/it-IT/docs/Web/HTTP/Headers/Accept) | Trasmesso da un agente utente, indica la volontà di accedere a uno stato passato di una risorsa originale. A tal fine, l’intestazione `Accept-Datetime` viene trasmessa in una richiesta HTTP eseguita su TimeGate per una risorsa originale e il suo valore indica il datetime dello stato precedente desiderato per la risorsa originale. |
 | Access-Control-Request-Headers | Utilizzato dai browser durante l’emissione di una [richiesta di verifica preliminare](https://developer.mozilla.org/en-US/docs/Glossary/preflight_request), per comunicare al server le [intestazioni HTTP](https://developer.mozilla.org/it-IT/docs/Web/HTTP/Headers) che il client potrebbe inviare quando viene effettuata la richiesta effettiva. |
 | Access-Control-Request-Method | Utilizzato dai browser quando viene rilasciata una [richiesta di verifica preliminare](https://developer.mozilla.org/en-US/docs/Glossary/preflight_request), per comunicare al server il [metodo HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods) che verrà utilizzato quando viene effettuata la richiesta effettiva. Questa intestazione è necessaria perché la richiesta di verifica preliminare è sempre un metodo [OPTION](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/OPTIONS) e non utilizza lo stesso metodo della richiesta effettiva. |
@@ -83,24 +83,24 @@ Nella tabella seguente sono elencate le intestazioni predefinite. Non sei limita
 | Forwarded | Contiene informazioni provenienti dai [server reverse proxy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling) che vengono alterate o perse quando un proxy viene coinvolto nel percorso della richiesta. |
 | Da | Contiene un indirizzo e-mail Internet per un utente umano che controlla l’agente utente richiedente. |
 | Host | Specifica l’host e il numero di porta del server al quale viene inviata la richiesta. |
-| If-Match |  |
-| If-Modified-Since |  |
-| [If-None-Match](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-None-Match) |  |
-| [If-Range](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Range) |  |
-| [If-Unmodified-Since](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Unmodified-Since) |  |
-| [Max-Forwards](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Unmodified-Since) |  |
-| [Origin](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Origin) |  |
-| [Pragma](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma) | Intestazione specifica per l’implementazione, che può avere vari effetti ovunque lungo la catena di richieste e risposte. Utilizzato per compatibilità con le versioni precedenti delle cache HTTP/1.0 in cui l’intestazione Cache-Control non è ancora presente. |  |
+| If-Match | |
+| If-Modified-Since | |
+| [If-None-Match](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-None-Match) | |
+| [If-Range](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Range) | |
+| [If-Unmodified-Since](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Unmodified-Since) | |
+| [Max-Forwards](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Unmodified-Since) | |
+| [Origin](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Origin) | |
+| [Pragma](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma) | Intestazione specifica per l’implementazione, che può avere vari effetti ovunque lungo la catena di richieste e risposte. Utilizzato per compatibilità con le versioni precedenti delle cache HTTP/1.0 in cui l’intestazione Cache-Control non è ancora presente. | |
 | [Proxy-Authorization](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Proxy-Authorization) |
-| [Range](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Range) | Indica la parte di un documento che il server deve restituire. |  |
-| [Referer](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer) | Indirizzo della pagina web precedente dalla quale un collegamento ha portato alla pagina richiesta. |  |
+| [Range](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Range) | Indica la parte di un documento che il server deve restituire. | |
+| [Referer](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer) | Indirizzo della pagina web precedente dalla quale un collegamento ha portato alla pagina richiesta. | |
 | TE | Specifica le codifiche di trasferimento che l’agente utente è disposto ad accettare, anche chiamato `Accept-Transfer-Encoding` in modo in modo più informale e intuitivo. |
-| Esegui l&#39;aggiornamento | Il documento RFC pertinente per il campo dell&#39;intestazione [`Upgrade` è RFC 7230, sezione 6.7](https://tools.ietf.org/html/rfc7230#section-6.7). Lo standard stabilisce regole per l&#39;aggiornamento o la modifica a un protocollo diverso sulla connessione corrente client, server e protocollo di trasporto. Ad esempio, questo standard di intestazione consente a un client di passare da HTTP 1.1 a HTTP 2.0, sempre che il server decida di riconoscere e implementare il campo dell&#39;intestazione `Upgrade`. Nessuna delle parti è tenuta ad accettare i termini specificati nel campo dell&#39;intestazione `Upgrade`. Può essere utilizzato nelle intestazioni client e server. Se il campo dell&#39;intestazione `Upgrade` è specificato, il mittente DEVE anche inviare il campo dell&#39;intestazione `Connection` con l&#39;opzione `upgrade` specificata. |  |
+| Esegui l&#39;aggiornamento | Il documento RFC pertinente per il campo dell&#39;intestazione [`Upgrade` è RFC 7230, sezione 6.7](https://tools.ietf.org/html/rfc7230#section-6.7). Lo standard stabilisce regole per l&#39;aggiornamento o la modifica a un protocollo diverso sulla connessione corrente client, server e protocollo di trasporto. Ad esempio, questo standard di intestazione consente a un client di passare da HTTP 1.1 a HTTP 2.0, sempre che il server decida di riconoscere e implementare il campo dell&#39;intestazione `Upgrade`. Nessuna delle parti è tenuta ad accettare i termini specificati nel campo dell&#39;intestazione `Upgrade`. Può essere utilizzato nelle intestazioni client e server. Se il campo dell&#39;intestazione `Upgrade` è specificato, il mittente DEVE anche inviare il campo dell&#39;intestazione `Connection` con l&#39;opzione `upgrade` specificata. | |
 | [Utente-agente](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) | Contiene una stringa caratteristica che consente ai peer del protocollo di rete di identificare il tipo di applicazione, il sistema operativo, il fornitore di software o la versione del software dell&#39;agente utente del software richiedente. |
 | [Via](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Via) | Vengono aggiunti dai proxy, sia forward che reverse proxy, e possono essere visualizzati nelle intestazioni delle richieste e delle risposte. |
 | [Avvertenza](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Warning) | Informazioni generali di avviso sui possibili problemi. |
-| X-CSRF-Token |  |
-| X-Requested-With |  |
+| X-CSRF-Token | |
+| X-Requested-With | |
 
 #### Body come JSON
 

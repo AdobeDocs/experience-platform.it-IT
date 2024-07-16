@@ -1,13 +1,13 @@
 ---
 title: Punteggio predittivo di lead e account in Real-Time CDP B2B
 type: Documentation
-description: Panoramica e ulteriori informazioni sulla funzione di punteggio predittivo di lead e account in Experienci Platform CDP B2B.
+description: Panoramica e ulteriori informazioni sulla funzione di punteggio predittivo di lead e account in Experience Platform CDP B2B.
 feature: Profiles, B2B
 badgeB2B: label="Edizione B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: d3afbabb-005d-4537-831a-857c88043759
 source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: '859'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ Il servizio di predictive lead and account scoring affronta le sfide di cui sopr
 
 >[!NOTE]
 >
->[!DNL Marketo] l’origine dati è attualmente richiesta in quanto è l’unica origine dati in grado di fornire gli eventi di conversione a livello di profilo della persona.
+>L&#39;origine dati [!DNL Marketo] è attualmente richiesta in quanto è l&#39;unica origine dati in grado di fornire gli eventi di conversione a livello di profilo della persona.
 
 Il punteggio predittivo di lead e account utilizza un metodo di apprendimento automatico basato su albero (aumento casuale di foresta/gradiente) per creare il modello di punteggio predittivo di lead.
 
@@ -52,7 +52,7 @@ L’algoritmo prende in considerazione i seguenti attributi e dati di input:
 
 >[!NOTE]
 > 
->L’algoritmo controlla solo `sourceAccountKey.sourceKey` nel gruppo di campi Persona:componentiPersona.
+>L&#39;algoritmo controlla solo il campo `sourceAccountKey.sourceKey` nel gruppo di campi Person:personComponents.
 
 * Profilo account
 
@@ -86,11 +86,11 @@ I requisiti in materia di qualità dei dati sono i seguenti:
 
 I processi di assegnazione del punteggio vengono eseguiti quotidianamente e i risultati vengono salvati come attributi di profilo e attributi di conto, che possono quindi essere utilizzati nelle definizioni dei segmenti e nella personalizzazione. Le informazioni analitiche predefinite sono disponibili anche nella dashboard di panoramica dell’account.
 
-Consulta la documentazione per ulteriori informazioni su come [gestire il punteggio predittivo di lead e account](/help/rtcdp/b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md) servizio.
+Consulta la documentazione per ulteriori informazioni su come [gestire il servizio di valutazione predittiva di lead e account](/help/rtcdp/b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md).
 
 ## Visualizzare i risultati predittivi del punteggio di lead e account {#how-to-view}
 
-Dopo l’esecuzione del processo, i risultati vengono salvati in un nuovo set di dati di sistema per ciascun modello con il nome `LeadsAI.Scores` - ***il nome del punteggio***. Ogni gruppo di campi di punteggio può essere individuato in `{CUSTOM_FIELD_GROUP}.LeadsAI.the_score_name`.
+Dopo l&#39;esecuzione del processo, i risultati vengono salvati in un nuovo set di dati di sistema per ogni modello con il nome `LeadsAI.Scores` - ***il nome punteggio***. Ogni gruppo di campi di punteggio può trovarsi in `{CUSTOM_FIELD_GROUP}.LeadsAI.the_score_name`.
 
 | Attributo | Descrizione |
 | --- | --- |
@@ -102,15 +102,15 @@ Dopo l’esecuzione del processo, i risultati vengono salvati in un nuovo set di
 
 ### Visualizzare i punteggi del profilo cliente
 
-Per visualizzare i punteggi predittivi di un profilo persona, seleziona **[!UICONTROL Profili]** nella sezione cliente del pannello a sinistra, quindi inserisci lo spazio dei nomi e il valore di identità. Al termine, seleziona **[!UICONTROL Visualizza]**.
+Per visualizzare i punteggi predittivi per un profilo persona, seleziona **[!UICONTROL Profili]** nella sezione cliente del pannello a sinistra, quindi inserisci lo spazio dei nomi dell&#39;identità e il valore dell&#39;identità. Al termine, selezionare **[!UICONTROL Visualizza]**.
 
 Quindi, seleziona il profilo dall’elenco.
 
 ![Profilo cliente](/help/rtcdp/accounts/images/b2b-view-customer-profile.png)
 
-Il **[!UICONTROL Dettaglio]** La pagina ora include i punteggi predittivi. Fai clic sull’icona del grafico accanto al punteggio predittivo.
+La pagina **[!UICONTROL Dettagli]** include ora i punteggi predittivi. Fai clic sull’icona del grafico accanto al punteggio predittivo.
 
-![Punteggio predittivo del profilo cliente](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score.png)
+![Punteggio predittivo profilo cliente](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score.png)
 
 Una finestra di dialogo a comparsa mostra il punteggio, la distribuzione complessiva del punteggio, i principali fattori influenti per questo punteggio e la definizione dell’obiettivo del punteggio.
 
@@ -124,4 +124,4 @@ Puoi monitorare le metriche di base e lo stato dell’esecuzione giornaliera dei
 * Processo con punteggio successivo (data)
 * Processo di formazione successivo (data)
 
-Per ulteriori informazioni, consulta la documentazione su [monitoraggio dei processi per il punteggio predittivo di lead e account](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).
+Per ulteriori informazioni, consulta la documentazione su [processi di monitoraggio per il punteggio predittivo di lead e account](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).

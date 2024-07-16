@@ -10,71 +10,71 @@ ht-degree: 2%
 
 ---
 
-# [!DNL Mailchimp Tags] connessione
+# Connessione [!DNL Mailchimp Tags]
 
-[[!DNL Mailchimp]](https://mailchimp.com) *(noto anche come [!DNL Intuit Mailchimp])* è una piattaforma di automazione del marketing e un servizio di e-mail marketing utilizzato dalle aziende per gestire e comunicare con i contatti *(clienti, clienti o altre parti interessate)* utilizzo di mailing list e campagne di e-mail marketing.
+[[!DNL Mailchimp]](https://mailchimp.com) *(noto anche come [!DNL Intuit Mailchimp])* è un popolare piattaforma di automazione del marketing e servizio di marketing via e-mail utilizzato dalle aziende per gestire e parlare con i contatti *(clienti, clienti o altre parti interessate)* utilizzando mailing list e campagne di marketing via e-mail.
 
-[!DNL Mailchimp Tags] utilizza [audience](https://mailchimp.com/help/getting-started-audience/) e [tag](https://mailchimp.com/help/getting-started-tags/) per gestire le informazioni di contatto. I tag sono etichette che consentono di organizzare i contatti e di etichettarli per la categorizzazione interna in [!DNL Mailchimp].
+[!DNL Mailchimp Tags] utilizza [tipi di pubblico](https://mailchimp.com/help/getting-started-audience/) e [tag](https://mailchimp.com/help/getting-started-tags/) per gestire le informazioni di contatto. I tag sono etichette che consentono di organizzare i contatti ed etichettarli per la categorizzazione interna in [!DNL Mailchimp].
 
-Confrontato con [!DNL Mailchimp Interest Categories] che utilizzeresti per ordinare i tuoi contatti in base ai loro interessi e preferenze, [!DNL Mailchimp Tags] ha lo scopo di gestire gli abbonamenti ad argomenti di interesse per i tuoi contatti. *Experience Platform dispone anche di una connessione per [!DNL Mailchimp Interest Categories], è possibile visualizzarlo in [[!DNL Mailchimp Interest Categories]](/help/destinations/catalog/email-marketing/mailchimp-interest-categories.md) pagina.*
+Rispetto a [!DNL Mailchimp Interest Categories], che utilizzeresti per ordinare i tuoi contatti in base ai loro interessi e preferenze, [!DNL Mailchimp Tags] ha lo scopo di gestire gli abbonamenti ad argomenti di interesse per i tuoi contatti. *Nota: l&#39;Experience Platform dispone anche di una connessione per [!DNL Mailchimp Interest Categories]. È possibile estrarlo nella pagina [[!DNL Mailchimp Interest Categories]](/help/destinations/catalog/email-marketing/mailchimp-interest-categories.md).*
 
-Questo [!DNL Adobe Experience Platform] [destinazione](/help/destinations/home.md) sfrutta [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) endpoint. È possibile **aggiungi nuovi contatti** o **aggiorna i tag di esistenti [!DNL Mailchimp] contatti** all&#39;interno di un [!DNL Mailchimp] dopo averli attivati all’interno di un nuovo pubblico. [!DNL Mailchimp Tags] utilizza i nomi del pubblico selezionati da Platform come nomi di tag in [!DNL Mailchimp].
+Questa [!DNL Adobe Experience Platform] [destinazione](/help/destinations/home.md) sfrutta l&#39;endpoint [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/). È possibile **aggiungere nuovi contatti** o **aggiornare i tag dei contatti [!DNL Mailchimp] esistenti** all&#39;interno di un pubblico [!DNL Mailchimp] esistente dopo averli attivati all&#39;interno di un nuovo pubblico. [!DNL Mailchimp Tags] utilizza i nomi del pubblico selezionati da Platform come nomi dei tag in [!DNL Mailchimp].
 
 ## Casi d’uso {#use-cases}
 
-Per aiutarti a capire meglio come e quando utilizzare il [!DNL Mailchimp Tags] destinazione: ecco un caso d’uso di esempio che i clienti di Adobe Experience Platform possono risolvere utilizzando questa destinazione.
+Per aiutarti a capire meglio come e quando utilizzare la destinazione [!DNL Mailchimp Tags], ecco un esempio di caso d&#39;uso che i clienti Adobe Experience Platform possono risolvere utilizzando questa destinazione.
 
 ### Invia e-mail ai contatti per campagne di marketing {#use-case-send-emails}
 
-Il reparto vendite di un’organizzazione desidera trasmettere una campagna di marketing basata su e-mail a un elenco curato di contatti. Gli elenchi di contatti vengono ricevuti in batch da diverse origini offline e devono pertanto essere tracciati. Il team identifica un [!DNL Mailchimp] e inizia a creare i tipi di pubblico Experienci Platform in cui vengono aggiunti i contatti di ogni elenco. Dopo aver inviato questi tipi di pubblico a [!DNL Mailchimp Tags], se non esistono contatti nel [!DNL Mailchimp] pubblico, vengono aggiunti con un tag associato che include il nome del pubblico a cui appartiene il contatto. Se esistono già contatti in [!DNL Mailchimp] audience viene aggiunto un nuovo tag con il nome del pubblico. Poiché le etichette sono visibili in [!DNL Mailchimp] le sorgenti offline sono facilmente identificabili. Dopo l’invio dei dati a [!DNL Mailchimp] inviano l’e-mail della campagna di marketing al pubblico.
+Il reparto vendite di un’organizzazione desidera trasmettere una campagna di marketing basata su e-mail a un elenco curato di contatti. Gli elenchi di contatti vengono ricevuti in batch da diverse origini offline e devono pertanto essere tracciati. Il team identifica un pubblico [!DNL Mailchimp] esistente e inizia a creare i tipi di pubblico Experienci Platform in cui vengono aggiunti i contatti di ogni elenco. Dopo aver inviato questi tipi di pubblico a [!DNL Mailchimp Tags], se nel pubblico [!DNL Mailchimp] selezionato non esistono contatti, questi vengono aggiunti con un tag associato che include il nome del pubblico a cui appartiene il contatto. Se esistono già contatti nel pubblico [!DNL Mailchimp], viene aggiunto un nuovo tag con il nome del pubblico. Poiché le etichette sono visibili in [!DNL Mailchimp], le origini offline sono facilmente identificabili. Dopo l&#39;invio dei dati a [!DNL Mailchimp], l&#39;e-mail della campagna di marketing viene inviata al pubblico.
 
 ## Prerequisiti {#prerequisites}
 
-Consulta le sezioni seguenti per eventuali prerequisiti da impostare in Experience Platform e [!DNL Mailchimp] e per le informazioni da raccogliere prima di lavorare con [!DNL Mailchimp Tags] destinazione.
+Consultare le sezioni seguenti per eventuali prerequisiti da impostare in Experience Platform e [!DNL Mailchimp] e per informazioni da raccogliere prima di utilizzare la destinazione [!DNL Mailchimp Tags].
 
 ### Prerequisiti in Experience Platform {#prerequisites-in-experience-platform}
 
-Prima di attivare i dati in [!DNL Mailchimp Tags] destinazione, è necessario disporre di un [schema](/help/xdm/schema/composition.md), a [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), e [audience](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) creato in [!DNL Experience Platform].
+Prima di attivare i dati nella destinazione [!DNL Mailchimp Tags], è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en) e [tipi di pubblico](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) creati in [!DNL Experience Platform].
 
-### Prerequisiti per [!DNL Mailchimp Tags] destinazione {#prerequisites-destination}
+### Prerequisiti per la destinazione [!DNL Mailchimp Tags] {#prerequisites-destination}
 
-Prendi nota dei seguenti prerequisiti per esportare i dati da Platform al tuo [!DNL Mailchimp Tags] account:
+Per esportare i dati da Platform al tuo account [!DNL Mailchimp Tags], tieni presente i seguenti prerequisiti:
 
-#### Devi avere un [!DNL Mailchimp] account {#prerequisites-account}
+#### Devi avere un account [!DNL Mailchimp] {#prerequisites-account}
 
-Prima di creare un [!DNL Mailchimp Tags] destinazione, devi prima assicurarti di disporre di un [!DNL Mailchimp] account. Se non ne hai già una, visita il [[!DNL Mailchimp] pagina di registrazione](https://login.mailchimp.com/signup/) per registrarti e creare il tuo account.
+Prima di poter creare una destinazione [!DNL Mailchimp Tags], è necessario assicurarsi di disporre di un account [!DNL Mailchimp]. Se non ne hai già una, visita la [[!DNL Mailchimp] pagina di iscrizione](https://login.mailchimp.com/signup/) per registrarti e creare il tuo account.
 
-#### Raccogli [!DNL Mailchimp] Chiave API {#gather-credentials}
+#### Raccogli la chiave API [!DNL Mailchimp] {#gather-credentials}
 
-Hai bisogno del tuo [!DNL Mailchimp] **Chiave API** per autenticare [!DNL Mailchimp Interest Categories] destinazione rispetto al tuo [!DNL Mailchimp] account. Il **Chiave API** funge da **Password** quando [autentica la destinazione](#authenticate).
+È necessaria la [!DNL Mailchimp] **chiave API** per autenticare la destinazione [!DNL Mailchimp Interest Categories] in base all&#39;account [!DNL Mailchimp]. La **chiave API** funge da **password** quando [autentichi la destinazione](#authenticate).
 
-Se non si dispone di **Chiave API**, accedere al [!DNL Mailchimp] e fare riferimento al [!DNL Mailchimp] documentazione su [come generare la chiave API](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key).
+Se non disponi della tua **chiave API**, accedi al tuo account [!DNL Mailchimp] e fai riferimento alla documentazione di [!DNL Mailchimp] in [come generare la tua chiave API](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key).
 
-Un esempio di chiave API è `0123456789abcdef0123456789abcde-us14`.
+Esempio di chiave API: `0123456789abcdef0123456789abcde-us14`.
 
 >[!IMPORTANT]
 >
->Se si genera **Chiave API**, annotalo in quanto non potrai più accedervi dopo la generazione.
+>Se generi la **chiave API**, annotala in quanto non potrai più accedervi dopo la generazione.
 
-#### Identificare [!DNL Mailchimp] data center {#identify-data-center}
+#### Identificare il data center [!DNL Mailchimp] {#identify-data-center}
 
-Quindi, devi identificare il tuo [!DNL Mailchimp] data center. Per eseguire questa operazione, accedi al tuo [!DNL Mailchimp] account e passare al **Sezione chiavi API** del tuo account.
+Successivamente, è necessario identificare il data center [!DNL Mailchimp]. Per eseguire questa operazione, accedere all&#39;account [!DNL Mailchimp] e passare alla **sezione delle chiavi API** dell&#39;account.
 
-L’ID del centro dati è la prima sezione dell’URL visualizzato nel browser. Se l’URL è *https://`us14`.mailchimp.com/account/api/*, il centro dati è `us14`.
+L’ID del centro dati è la prima sezione dell’URL visualizzato nel browser. Se l&#39;URL è *https://`us14`.mailchimp.com/account/api/*, il datacenter è `us14`.
 
-L’ID del datacenter viene anche aggiunto alla chiave API nel modulo *key-dc*; Ad esempio, se la chiave API è `0123456789abcdef0123456789abcde-us14`, il centro dati è `us14`.
+L&#39;ID del datacenter viene anche aggiunto alla chiave API nel formato *key-dc*. Ad esempio, se la chiave API è `0123456789abcdef0123456789abcde-us14`, il datacenter è `us14`.
 
-Annotare il valore del centro dati *(`us14` in questo esempio)*. Questo valore è necessario quando [compila i dettagli della destinazione](#destination-details).
+Annotare il valore del datacenter *(`us14` in questo esempio)*. Questo valore ti sarà necessario quando [inserisci i dettagli di destinazione](#destination-details).
 
-Per ulteriori informazioni, consultare [[!DNL Mailchimp] Documentazione di base](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-structure).
+Per ulteriori informazioni, consulta la [[!DNL Mailchimp] documentazione di base](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-structure).
 
 ### Guardrail {#guardrails}
 
-Consulta la sezione [!DNL Mailchimp] [limiti di tariffa](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits) per informazioni dettagliate sui limiti imposti dalla [!DNL Mailchimp] API.
+Per informazioni dettagliate sui limiti imposti dall&#39;API [!DNL Mailchimp], vedere [!DNL Mailchimp] [limiti di tariffa](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits).
 
 ## Identità supportate {#supported-identities}
 
-[!DNL Mailchimp] supporta l’attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](/help/identity-service/features/namespaces.md).
+[!DNL Mailchimp] supporta l&#39;attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](/help/identity-service/features/namespaces.md).
 
 | Identità di destinazione | Descrizione | Considerazioni |
 |---|---|---|
@@ -88,8 +88,8 @@ Questa sezione descrive il tipo di pubblico che puoi esportare in questa destina
 
 | Origine pubblico | Supportato | Descrizione |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati dall’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md). |
-| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
+| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite il servizio di segmentazione [Experience Platform](../../../segmentation/home.md). |
+| Caricamenti personalizzati | ✓ | Tipi di pubblico [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -99,8 +99,8 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
-| Tipo di esportazione | **[!UICONTROL Basato su profilo]** | <ul><li>Stai esportando tutti i membri di un pubblico, insieme ai campi di schema desiderati *ad esempio: indirizzo e-mail, numero di telefono, cognome*, in base alla mappatura del campo.</li><li> Per ogni pubblico selezionato in Platform, la [!DNL Mailchimp Tags] Lo stato del segmento viene aggiornato con lo stato del pubblico da Platform.</li></ul> |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo di esportazione | **[!UICONTROL Basato su profilo]** | <ul><li>Stai esportando tutti i membri di un pubblico, insieme ai campi di schema desiderati *(ad esempio: indirizzo e-mail, numero di telefono, cognome)*, in base al mapping dei campi.</li><li> Per ogni pubblico selezionato in Platform, lo stato del segmento [!DNL Mailchimp Tags] corrispondente viene aggiornato con lo stato del pubblico da Platform.</li></ul> |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni sulle [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -108,99 +108,102 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 >[!IMPORTANT]
 >
->Per connettersi alla destinazione, è necessario **[!UICONTROL Gestire le destinazioni]** [autorizzazione per il controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>Per connettersi alla destinazione, è necessario disporre dell&#39;autorizzazione **[!UICONTROL Gestione destinazioni]** [controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Per connettersi a questa destinazione, seguire i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
+Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
 
-Entro **[!UICONTROL Destinazioni]** > **[!UICONTROL Catalogo]**, cerca [!DNL Mailchimp Tags]. In alternativa, è possibile posizionarlo sotto il **[!UICONTROL E-mail marketing]** categoria.
+In **[!UICONTROL Destinazioni]** > **[!UICONTROL Catalogo]**, cerca [!DNL Mailchimp Tags]. In alternativa puoi trovarlo nella categoria **[!UICONTROL E-mail marketing]**.
 
 ### Autenticarsi nella destinazione {#authenticate}
 
-Per eseguire l’autenticazione nella destinazione, compila i campi richiesti di seguito e seleziona **[!UICONTROL Connetti alla destinazione]**.
+Per eseguire l&#39;autenticazione nella destinazione, compilare i campi obbligatori e selezionare **[!UICONTROL Connetti alla destinazione]**.
 
 | Campo | Descrizione |
 | --- | --- |
-| **[!UICONTROL Nome utente]** | Il tuo [!DNL Mailchimp] nome utente. |
-| **[!UICONTROL Password]** | Il tuo [!DNL Mailchimp] **Chiave API**, che hai annotato in [Raccogli [!DNL Mailchimp] credenziali](#gather-credentials) sezione.<br> La chiave API assume la forma di `{KEY}-{DC}`, in cui `{KEY}` porzione si riferisce al valore annotato in basso nel [[!DNL Mailchimp] Chiave API](#gather-credentials) sezione e `{DC}` porzione si riferisce al [[!DNL Mailchimp] data center](#identify-data-center). <br>È possibile specificare `{KEY}` parte o l&#39;intero modulo.<br> Ad esempio, se la chiave API è <br>*`0123456789abcdef0123456789abcde-us14`*,<br> puoi fornire *`0123456789abcdef0123456789abcde`*o *`0123456789abcdef0123456789abcde-us14`*come valore. |
+| **[!UICONTROL Nome utente]** | Nome utente [!DNL Mailchimp]. |
+| **[!UICONTROL Password]** | La [!DNL Mailchimp] **chiave API**, annotata nella sezione [Raccogli [!DNL Mailchimp] credenziali](#gather-credentials).<br> La chiave API assume la forma di `{KEY}-{DC}`, dove la parte `{KEY}` fa riferimento al valore annotato nella sezione [[!DNL Mailchimp] Chiave API](#gather-credentials) e la parte `{DC}` fa riferimento al [[!DNL Mailchimp] datacenter](#identify-data-center). <br>È possibile fornire la porzione `{KEY}` o l&#39;intero modulo.<br> Ad esempio, se la chiave API è <br>*`0123456789abcdef0123456789abcde-us14`*,<br> puoi fornire *`0123456789abcdef0123456789abcde`*o *`0123456789abcdef0123456789abcde-us14`*come valore. |
 
 {style="table-layout:auto"}
 
-![Schermata dell’interfaccia utente di Platform che mostra come eseguire l’autenticazione.](../../assets/catalog/email-marketing/mailchimp-tags/authenticate-destination.png)
+![Schermata dell&#39;interfaccia utente di Platform che mostra come eseguire l&#39;autenticazione.](../../assets/catalog/email-marketing/mailchimp-tags/authenticate-destination.png)
 
-Se i dettagli forniti sono validi, nell’interfaccia utente viene visualizzato un **[!UICONTROL Connesso]** con un segno di spunta verde. A questo punto è possibile procedere al passaggio successivo.
+Se i dettagli forniti sono validi, nell&#39;interfaccia utente viene visualizzato lo stato **[!UICONTROL Connesso]** con un segno di spunta verde. A questo punto è possibile procedere al passaggio successivo.
 
 ### Inserire i dettagli della destinazione {#destination-details}
 
 Per configurare i dettagli per la destinazione, compila i campi obbligatori e facoltativi seguenti. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 
-![Schermata dell’interfaccia utente di Platform che mostra i dettagli della destinazione.](../../assets/catalog/email-marketing/mailchimp-tags/destination-details.png)
+![Schermata dell&#39;interfaccia utente di Platform che mostra i dettagli della destinazione.](../../assets/catalog/email-marketing/mailchimp-tags/destination-details.png)
 
 | Campo | Descrizione |
 | --- | --- |
 | **[!UICONTROL Nome]** | Un nome con cui riconoscerai questa destinazione in futuro. |
 | **[!UICONTROL Descrizione]** | Una descrizione che ti aiuterà a identificare questa destinazione in futuro. |
-| **[!UICONTROL Data center]** | Il tuo [!DNL Mailchimp] account `data center`. Consulta la sezione [Identificare [!DNL Mailchimp] data center](#identify-data-center) sezione per eventuali indicazioni. |
-| **[!UICONTROL Nome pubblico (immetti prima il centro dati)]** | Dopo aver inserito **[!UICONTROL Data center]**, questo menu a discesa viene compilato automaticamente con i nomi del pubblico del tuo [!DNL Mailchimp] account. Seleziona il pubblico da aggiornare con i dati di Platform. |
+| **[!UICONTROL Data center]** | Il tuo account [!DNL Mailchimp] `data center`. Per ulteriori informazioni, consulta la sezione [Identificare [!DNL Mailchimp] il centro dati](#identify-data-center). |
+| **[!UICONTROL Nome pubblico (immettere prima il centro dati)]** | Dopo aver immesso il **[!UICONTROL centro dati]**, questo menu a discesa viene compilato automaticamente con i nomi del pubblico del tuo account [!DNL Mailchimp]. Seleziona il pubblico da aggiornare con i dati di Platform. |
 
 {style="table-layout:auto"}
 
 ### Abilita avvisi {#enable-alerts}
 
-Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati verso la tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento agli avvisi sulle destinazioni tramite l’interfaccia utente](../../ui/alerts.md).
+Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati verso la tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento a destinazioni avvisi tramite l&#39;interfaccia utente](../../ui/alerts.md).
 
-Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
+Dopo aver fornito i dettagli per la connessione di destinazione, seleziona **[!UICONTROL Avanti]**.
 
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 
->* Per attivare i dati, è necessario **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
->* Per esportare *identità*, è necessario **[!UICONTROL Visualizza grafico delle identità]** [autorizzazione per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
+>* Per attivare i dati, è necessario **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attiva destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizza segmenti]** [Autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL Visualizza grafo identità]** [Controllo di accesso](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 
-Letto [Attivare i tipi di pubblico nelle destinazioni di streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) per istruzioni sull’attivazione dei tipi di pubblico in questa destinazione.
+Per istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione, leggi [Attiva tipi di pubblico in destinazioni di streaming](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
 ### Considerazioni sulla mappatura ed esempio {#mapping-considerations-example}
 
-Per inviare correttamente i dati sul pubblico da Adobe Experience Platform a [!DNL Mailchimp Tags] destinazione, devi passare attraverso il passaggio di mappatura dei campi. La mappatura consiste nella creazione di un collegamento tra i campi dello schema Experience Data Model (XDM) nell’account Platform e i corrispondenti equivalenti dalla destinazione.
+Per inviare correttamente i dati sul pubblico da Adobe Experience Platform alla destinazione [!DNL Mailchimp Tags], è necessario eseguire il passaggio di mappatura dei campi. La mappatura consiste nella creazione di un collegamento tra i campi dello schema Experience Data Model (XDM) nell’account Platform e i corrispondenti equivalenti dalla destinazione.
 
-Per mappare correttamente i campi XDM su [!DNL Mailchimp Tags] campi di destinazione, segui i passaggi seguenti:
+Per mappare correttamente i campi XDM ai campi di destinazione [!DNL Mailchimp Tags], effettua le seguenti operazioni:
 
-1. In **[!UICONTROL Mappatura]** passaggio, seleziona **[!UICONTROL Aggiungi nuova mappatura]**. Viene visualizzata una nuova riga di mappatura.
-1. In **[!UICONTROL Seleziona campo di origine]** finestra, scegli **[!UICONTROL Seleziona lo spazio dei nomi dell’identità]** e seleziona la `Email` spazio dei nomi dell’identità.
+1. Nel passaggio **[!UICONTROL Mapping]**, seleziona **[!UICONTROL Aggiungi nuovo mapping]**. Viene visualizzata una nuova riga di mappatura.
+1. Nella finestra **[!UICONTROL Seleziona campo di origine]**, scegli **[!UICONTROL Seleziona spazio dei nomi identità]** e seleziona lo spazio dei nomi identità `Email`.
 
-   ![Schermata dell’interfaccia utente di Platform con il campo Source e-mail dallo spazio dei nomi delle identità.](../../assets/catalog/email-marketing/mailchimp-tags/source-field.png)
+   ![Schermata dell&#39;interfaccia utente di Platform con campo Source come E-mail dallo spazio dei nomi delle identità.](../../assets/catalog/email-marketing/mailchimp-tags/source-field.png)
 
-1. In **[!UICONTROL Seleziona campo di destinazione]** finestra, scegli **[!UICONTROL Seleziona lo spazio dei nomi dell’identità]** e seleziona la `Email` spazio dei nomi dell’identità.
+1. Nella finestra **[!UICONTROL Seleziona campo di destinazione]**, scegli **[!UICONTROL Seleziona spazio dei nomi identità]** e seleziona lo spazio dei nomi identità `Email`.
 
-   ![Schermata dell’interfaccia utente di Platform con il campo Target come E-mail dallo spazio dei nomi dell’identità.](../../assets/catalog/email-marketing/mailchimp-tags/target-field.png)
+   ![Schermata dell&#39;interfaccia utente di Platform con il campo Target come E-mail dallo spazio dei nomi delle identità.](../../assets/catalog/email-marketing/mailchimp-tags/target-field.png)
 
-   Le mappature tra lo schema del profilo XDM e [!DNL Mailchimp Tags] sarà il seguente: | Campo Source | Campo di destinazione | Obbligatorio | | — | — | — | |`IdentityMap: Email`|`Identity: Email`| Sì |
+   Le mappature tra lo schema del profilo XDM e [!DNL Mailchimp Tags] saranno le seguenti:
+| Campo Source | Campo di destinazione | Obbligatorio |
+| — | — | — |
+|`IdentityMap: Email`|`Identity: Email`| Sì |
 
    Di seguito è riportato un esempio con le mappature completate:
-   ![Esempio di schermata dell’interfaccia utente di Platform che mostra le mappature dei campi.](../../assets/catalog/email-marketing/mailchimp-tags/mappings.png)
+   ![Esempio di schermata dell&#39;interfaccia utente di Platform che mostra le mappature dei campi.](../../assets/catalog/email-marketing/mailchimp-tags/mappings.png)
 
-Una volta completate le mappature per la connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
+Dopo aver fornito le mappature per la connessione di destinazione, seleziona **[!UICONTROL Avanti]**.
 
 ## Convalidare l’esportazione dei dati {#exported-data}
 
 Per verificare di aver impostato correttamente la destinazione, segui i passaggi seguenti:
 
-1. Accedi al tuo [[!DNL Mailchimp]](https://login.mailchimp.com/) account. Quindi vai al **[!DNL Audience]** > **[!DNL All Contacts]** e verificare se i contatti del pubblico sono stati aggiunti e quelli del pubblico sono stati aggiornati con il nome del pubblico.
-   ![Schermata dell’interfaccia utente Mailchimp che mostra la pagina Pubblico.](../../assets/catalog/email-marketing/mailchimp-tags/contacts.png)
+1. Accedi al tuo account [[!DNL Mailchimp]](https://login.mailchimp.com/). Quindi passa alla pagina **[!DNL Audience]** > **[!DNL All Contacts]** e controlla se i contatti del pubblico sono stati aggiunti e quelli all&#39;interno del pubblico sono stati aggiornati con il nome del pubblico.
+   ![Schermata dell&#39;interfaccia utente Mailchimp che mostra la pagina Pubblico.](../../assets/catalog/email-marketing/mailchimp-tags/contacts.png)
 
 ## Utilizzo dei dati e governance {#data-usage-governance}
 
-Tutti [!DNL Adobe Experience Platform] le destinazioni sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] applica la governance dei dati, consulta la sezione [Panoramica sulla governance dei dati](/help/data-governance/home.md).
+Tutte le destinazioni [!DNL Adobe Experience Platform] sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] applica la governance dei dati, vedi [Panoramica sulla governance dei dati](/help/data-governance/home.md).
 
 ## Errori e risoluzione problemi {#errors-and-troubleshooting}
 
-Consulta la sezione [[!DNL Mailchimp] pagina errori](https://mailchimp.com/developer/marketing/docs/errors/) per un elenco completo dei codici di stato e di errore, con relative spiegazioni.
+Per un elenco completo dei codici di stato e di errore con relative spiegazioni, consultare la [[!DNL Mailchimp] pagina errori](https://mailchimp.com/developer/marketing/docs/errors/).
 
 ## Risorse aggiuntive {#additional-resources}
 
-Ulteriori informazioni utili da [!DNL Mailchimp] la documentazione è riportata di seguito:
+Di seguito sono riportate ulteriori informazioni utili dalla documentazione di [!DNL Mailchimp]:
 * [Guida introduttiva a [!DNL Mailchimp]](https://mailchimp.com/help/getting-started-with-mailchimp/)
-* [Guida introduttiva a Audiences](https://mailchimp.com/help/getting-started-audience/)
-* [Creare un pubblico](https://mailchimp.com/help/create-audience/)
+* [Guida introduttiva ai tipi di pubblico](https://mailchimp.com/help/getting-started-audience/)
+* [Crea un pubblico](https://mailchimp.com/help/create-audience/)
 * [Guida introduttiva ai tag](https://mailchimp.com/help/getting-started-tags/)
-* [API di marketing](https://mailchimp.com/developer/marketing/api/)
+* [API marketing](https://mailchimp.com/developer/marketing/api/)

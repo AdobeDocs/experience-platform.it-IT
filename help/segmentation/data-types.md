@@ -5,7 +5,7 @@ description: Tutti i tipi di dati Experience Data Model (XDM) sono supportati al
 exl-id: 73f932a7-f864-4566-ade7-c148a12dc83c
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '478'
 ht-degree: 3%
 
 ---
@@ -28,7 +28,7 @@ I dati stringa vengono inclusi nelle definizioni dei segmenti utilizzando istruz
 
 ## Dati data
 
-I dati sulla data consentono di assegnare un contesto basato sul tempo alle definizioni dei segmenti, utilizzando date di inizio/fine specifiche o istruzioni relative alla data come mostrato nella tabella seguente. Un’implementazione potrebbe consistere nella creazione di un pubblico di clienti che hanno interagito con il tuo marchio in qualsiasi momento *quest&#39;anno* ed è stato anche attivo *entro* ultimi giorni.
+I dati sulla data consentono di assegnare un contesto basato sul tempo alle definizioni dei segmenti, utilizzando date di inizio/fine specifiche o istruzioni relative alla data come mostrato nella tabella seguente. Un&#39;implementazione potrebbe creare un pubblico di clienti che hanno interagito con il tuo marchio in qualsiasi momento *quest&#39;anno* ed è stato attivo *entro* negli ultimi giorni.
 
 | Campo di esempio | Dichiarazioni relative alla data | Timeline |
 | ------------- | ------------------------ | --------- |
@@ -37,13 +37,13 @@ I dati sulla data consentono di assegnare un contesto basato sul tempo alle defi
 
 ## Eventi esperienza
 
-Come schema Adobe Experience Platform, [!DNL XDM ExperienceEvents] registrare le interazioni esplicite e implicite dei clienti con [!DNL Platform]- applicazioni integrate, inclusa un&#39;istantanea del sistema al momento dell&#39;interazione. [!DNL ExperienceEvents] sono documenti fattuali. Di conseguenza, sono un’origine dati disponibile durante la definizione del segmento.
+Come schema di Adobe Experience Platform, [!DNL XDM ExperienceEvents] registra le interazioni cliente esplicite e implicite con le applicazioni integrate in [!DNL Platform], inclusa un&#39;istantanea del sistema nel momento in cui si è verificata l&#39;interazione. [!DNL ExperienceEvents] sono record dei fatti. Di conseguenza, sono un’origine dati disponibile durante la definizione del segmento.
 
 Come mostrato nella tabella seguente, i dati dell’evento vengono riprodotti utilizzando parole chiave che aiutano a perfezionare il comportamento dell’evento e a specificare gli attributi dell’evento.
 
 | Parola chiave | Utilizzo di  |
 | ------- | --- |
-| Includere/escludere | Descrive il comportamento dell’evento attraverso l’inclusione o l’omissione di dati. |
+| Includi/escludi | Descrive il comportamento dell’evento attraverso l’inclusione o l’omissione di dati. |
 | Qualsiasi/tutti | Consente di determinare il numero di definizioni di segmenti qualificate. |
 | Pulsante di attivazione/disattivazione &quot;Applica regola temporale&quot; | Incorpora i dati della data. |
 | È uguale a, non è uguale a, inizia con, non inizia con, termina con, non termina con, contiene, non contiene, esiste, non esiste | Incorpora i dati stringa. |
@@ -52,18 +52,18 @@ Come mostrato nella tabella seguente, i dati dell’evento vengono riprodotti ut
 
 I tipi di pubblico esterni possono essere utilizzati anche come componenti di una nuova definizione di segmento, aggiungendo le relative regole di attributo alle nuove definizioni di segmento.
 
-Attualmente, solo Adobe Audience Manager è supportato come pubblico esterno, con fonti aggiuntive abilitate in futuro. Ulteriori informazioni sull’utilizzo dei tipi di pubblico di Adobe Audience Manager con Platform sono disponibili nella sezione [guida alla condivisione del pubblico nella documentazione di Adobe Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html).
+Attualmente, solo Adobe Audience Manager è supportato come pubblico esterno, con fonti aggiuntive abilitate in futuro. Ulteriori informazioni sull&#39;utilizzo dei tipi di pubblico di Adobe Audience Manager con Platform sono disponibili nella [guida alla condivisione del pubblico all&#39;interno della documentazione di Adobe Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html).
 
 ### Condivisione della definizione del segmento
 
-Le definizioni dei segmenti create in Platform possono essere utilizzate in altre [Servizi di base di Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=it). Per abilitare questa funzione, contatta l’architetto della soluzione o il consulente.
+Le definizioni dei segmenti create in Platform possono essere utilizzate in altri [Servizi core Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=it). Per abilitare questa funzione, contatta l’architetto della soluzione o il consulente.
 
 ## Altri tipi di dati
 
 Oltre ai tipi di dati menzionati in precedenza, l’elenco dei tipi di dati supportati include anche:
 
 - Identificatore risorsa uniforme (URI)
-- Enum
+- Enumerazione
 - Numero
 - Lungo
 - Intero

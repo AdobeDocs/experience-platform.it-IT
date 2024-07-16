@@ -16,14 +16,14 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 > 
-> * Per attivare i dati e abilitare [passaggio di mappatura](#mapping) del flusso di lavoro, è necessario **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions).
-> * Per attivare i dati senza passare attraverso [passaggio di mappatura](#mapping) del flusso di lavoro, è necessario **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attiva segmento senza mappatura]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions).
+> * Per attivare i dati e abilitare il [passaggio di mappatura](#mapping) del flusso di lavoro, sono necessari **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attiva destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizza segmenti]** [Autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions).
+> * Per attivare i dati senza passare attraverso il [passaggio di mappatura](#mapping) del flusso di lavoro, è necessario **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attiva segmento senza mappatura]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizza segmenti]** [Autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions).
 > 
-> Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
+> Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 ## Panoramica {#overview}
 
-Questo articolo spiega il flusso di lavoro necessario per attivare i dati sul pubblico in Adobe Experience Platform per lo streaming di destinazioni basate su profili (denominate anche [destinazioni enterprise](/help/destinations/destination-types.md#streaming-profile-export)).
+Questo articolo spiega il flusso di lavoro necessario per attivare i dati sul pubblico in Adobe Experience Platform nelle destinazioni basate su profili di streaming (dette anche [destinazioni aziendali](/help/destinations/destination-types.md#streaming-profile-export)).
 
 Il presente articolo si applica alle tre destinazioni seguenti:
 
@@ -33,65 +33,65 @@ Il presente articolo si applica alle tre destinazioni seguenti:
 
 ## Prerequisiti {#prerequisites}
 
-Per attivare i dati nelle destinazioni, è necessario aver completato [connesso a una destinazione](./connect-destination.md). Se non lo hai già fatto, accedi al [catalogo delle destinazioni](../catalog/overview.md), sfoglia le destinazioni supportate e configura la destinazione che desideri utilizzare.
+Per attivare i dati nelle destinazioni, devi avere [connesso correttamente a una destinazione](./connect-destination.md). Se non lo hai già fatto, vai al [catalogo delle destinazioni](../catalog/overview.md), sfoglia le destinazioni supportate e configura la destinazione che desideri utilizzare.
 
 ## Seleziona la destinazione {#select-destination}
 
-1. Vai a **[!UICONTROL Connessioni > Destinazioni]**, e seleziona la **[!UICONTROL Catalogo]** scheda.
+1. Vai a **[!UICONTROL Connessioni > Destinazioni]** e seleziona la scheda **[!UICONTROL Catalogo]**.
 
    ![Immagine che mostra la scheda del catalogo di destinazione.](../assets/ui/activate-streaming-profile-destinations/catalog-tab.png)
 
-1. Seleziona **[!UICONTROL Attiva tipi di pubblico]** sulla scheda corrispondente alla destinazione in cui desideri attivare i tipi di pubblico, come illustrato nell’immagine seguente.
+1. Seleziona **[!UICONTROL Attiva pubblico]** nella scheda corrispondente alla destinazione in cui desideri attivare il pubblico, come illustrato nell&#39;immagine seguente.
 
    ![Immagine che evidenzia il controllo Attiva pubblico nella scheda del catalogo delle destinazioni.](../assets/ui/activate-streaming-profile-destinations/activate-audiences-button.png)
 
-1. Seleziona la connessione di destinazione da utilizzare per attivare i tipi di pubblico, quindi fai clic su **[!UICONTROL Successivo]**.
+1. Seleziona la connessione di destinazione da utilizzare per attivare i tipi di pubblico, quindi seleziona **[!UICONTROL Successivo]**.
 
    ![Immagine che mostra una selezione di due destinazioni a cui è possibile connettersi.](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
 
-1. Passa alla sezione successiva a [seleziona i tipi di pubblico](#select-audiences).
+1. Passa alla sezione successiva per [selezionare il pubblico](#select-audiences).
 
 ## Seleziona i tipi di pubblico {#select-audiences}
 
-Per selezionare i tipi di pubblico da attivare nella destinazione, utilizza le caselle di controllo a sinistra dei nomi dei tipi di pubblico, quindi seleziona **[!UICONTROL Successivo]**.
+Per selezionare i tipi di pubblico che si desidera attivare nella destinazione, utilizzare le caselle di controllo a sinistra dei nomi dei tipi di pubblico, quindi selezionare **[!UICONTROL Avanti]**.
 
 Puoi scegliere tra più tipi di pubblico, a seconda della loro origine:
 
-* **[!UICONTROL Servizio di segmentazione]**: tipi di pubblico generati all’interno di Experience Platform dal servizio di segmentazione. Consulta la [Documentazione di Audience Portal](../../segmentation/ui/audience-portal.md) per ulteriori dettagli.
-* **[!UICONTROL Caricamento personalizzato]**: tipi di pubblico generati al di fuori di Experience Platform e caricati in Platform come file CSV. Per ulteriori informazioni sui tipi di pubblico esterni, consulta la documentazione su [importazione di un pubblico](../../segmentation/ui/audience-portal.md#import-audience).
-* Altri tipi di pubblico, derivanti da altre soluzioni di Adobe, quali [!DNL Audience Manager].
+* **[!UICONTROL Servizio di segmentazione]**: tipi di pubblico generati in Experience Platform dal servizio di segmentazione. Per ulteriori dettagli, consulta la [documentazione di Audience Portal](../../segmentation/ui/audience-portal.md).
+* **[!UICONTROL Caricamento personalizzato]**: pubblico generato al di fuori di Experience Platform e caricato in Platform come file CSV. Per ulteriori informazioni sui tipi di pubblico esterni, consulta la documentazione su [importazione di un pubblico](../../segmentation/ui/audience-portal.md#import-audience).
+* Altri tipi di pubblico, provenienti da altre soluzioni Adobe, ad esempio [!DNL Audience Manager].
 
-![Immagine che evidenzia la selezione delle caselle di controllo nel passaggio Seleziona pubblico del flusso di lavoro di attivazione.](../assets/ui/activate-streaming-profile-destinations/select-audiences.png)
+![Immagine che evidenzia la selezione delle caselle di controllo nel passaggio Seleziona tipi di pubblico del flusso di lavoro di attivazione.](../assets/ui/activate-streaming-profile-destinations/select-audiences.png)
 
 ## Seleziona attributi profilo {#select-attributes}
 
-In **[!UICONTROL Mappatura]** fase, seleziona gli attributi del profilo che desideri inviare alla destinazione target.
+Nel passaggio **[!UICONTROL Mappatura]**, seleziona gli attributi del profilo che desideri inviare alla destinazione.
 
-1. In **[!UICONTROL Seleziona attributi]** pagina, seleziona **[!UICONTROL Aggiungi nuovo campo]**.
+1. Nella pagina **[!UICONTROL Seleziona attributi]**, seleziona **[!UICONTROL Aggiungi nuovo campo]**.
 
    ![Immagine che evidenzia il controllo Aggiungi nuovo campo nel passaggio di mappatura.](../assets/ui/activate-streaming-profile-destinations/add-new-field.png)
 
-1. Selezionare la freccia a destra della **[!UICONTROL Campo schema]** voce.
+1. Selezionare la freccia a destra della voce **[!UICONTROL Campo schema]**.
 
-   ![Immagine che evidenzia come selezionare un campo sorgente nel passaggio di mappatura.](../assets/ui/activate-streaming-profile-destinations/select-schema-field.png)
+   ![Immagine che evidenzia come selezionare un campo di origine nel passaggio di mappatura.](../assets/ui/activate-streaming-profile-destinations/select-schema-field.png)
 
-1. In **[!UICONTROL Seleziona campo]** , selezionare gli attributi XDM da inviare alla destinazione, quindi scegliere **[!UICONTROL Seleziona]**.
+1. Nella pagina **[!UICONTROL Seleziona campo]**, seleziona gli attributi XDM da inviare alla destinazione, quindi scegli **[!UICONTROL Seleziona]**.
 
-   ![Immagine che mostra una selezione di campi XDM da selezionare come campi sorgente.](../assets/ui/activate-streaming-profile-destinations/target-field-page.png)
+   ![Immagine che mostra una selezione di campi XDM che è possibile selezionare come campi di origine.](../assets/ui/activate-streaming-profile-destinations/target-field-page.png)
 
-1. Per aggiungere altri campi, ripeti i passaggi da 1 a 3, quindi seleziona **[!UICONTROL Successivo]**.
+1. Per aggiungere altri campi, ripetere i passaggi da 1 a 3, quindi selezionare **[!UICONTROL Avanti]**.
 
 ## Controlla {#review}
 
-Il giorno **[!UICONTROL Revisione]** pagina, è possibile visualizzare un riepilogo della selezione. Seleziona **[!UICONTROL Annulla]** per interrompere il flusso, **[!UICONTROL Indietro]** per modificare le impostazioni, oppure **[!UICONTROL Fine]** per confermare la selezione e iniziare a inviare dati alla destinazione.
+Nella pagina **[!UICONTROL Rivedi]** puoi visualizzare un riepilogo della selezione. Seleziona **[!UICONTROL Annulla]** per interrompere il flusso, **[!UICONTROL Indietro]** per modificare le impostazioni oppure **[!UICONTROL Fine]** per confermare la selezione e iniziare a inviare dati alla destinazione.
 
-![Riepilogo della selezione nel passaggio di revisione.](../assets/ui/activate-streaming-profile-destinations/review.png)
+![Riepilogo selezioni nel passaggio di revisione.](../assets/ui/activate-streaming-profile-destinations/review.png)
 
 ### Valutazione dei criteri di consenso {#consent-policy-evaluation}
 
-[Valutazione dei criteri di consenso](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) non è attualmente supportato nelle esportazioni verso le tre destinazioni Enterprise: Amazon Kinesis, Azure Event Hubs e HTTP API.
+[La valutazione dei criteri di consenso](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) non è attualmente supportata nelle esportazioni nelle tre destinazioni Enterprise: Amazon Kinesis, Azure Event Hubs e HTTP API.
 
-Ciò significa che i profili che non hanno acconsentito al targeting *sono inclusi* nelle esportazioni verso queste tre destinazioni.
+Ciò significa che i profili che non hanno acconsentito alla destinazione *sono inclusi* nelle esportazioni verso queste tre destinazioni.
 
 <!--
 
@@ -101,9 +101,9 @@ If your organization purchased **Adobe Healthcare Shield** or **Adobe Privacy & 
 
 ### Controlli dei criteri di utilizzo dei dati {#data-usage-policy-checks}
 
-In **[!UICONTROL Revisione]** step, Experience Platform controlla anche eventuali violazioni dei criteri di utilizzo dei dati. Di seguito è riportato un esempio di violazione di una policy. Non puoi completare il flusso di lavoro di attivazione del pubblico finché non hai risolto la violazione. Per informazioni su come risolvere le violazioni dei criteri, vedere [violazioni dei criteri di utilizzo dei dati](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) nella sezione documentazione sulla governance dei dati.
+Nel passaggio **[!UICONTROL Rivedi]**, Experience Platform controlla anche eventuali violazioni dei criteri di utilizzo dei dati. Di seguito è riportato un esempio di violazione di una policy. Non puoi completare il flusso di lavoro di attivazione del pubblico finché non hai risolto la violazione. Per informazioni su come risolvere le violazioni dei criteri, leggere le [violazioni dei criteri di utilizzo dei dati](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) nella sezione relativa alla governance dei dati.
 
-![violazione dei criteri per i dati](../assets/common/data-policy-violation.png)
+![violazione criteri dati](../assets/common/data-policy-violation.png)
 
 ### Filtrare i tipi di pubblico {#filter-audiences}
 
@@ -115,7 +115,7 @@ Se si è soddisfatti della selezione e non sono state rilevate violazioni dei cr
 
 ## Verificare l’attivazione del pubblico {#verify}
 
-Il tuo esportato [!DNL Experience Platform] I dati vengono consegnati nella destinazione target in formato JSON. Ad esempio, l’evento seguente contiene l’attributo dell’indirizzo e-mail di un profilo idoneo per un determinato pubblico ed uscito da un altro pubblico. Le identità per questo potenziale cliente sono `ECID` e `email_lc_sha256`.
+I dati di [!DNL Experience Platform] esportati vengono consegnati nella destinazione di destinazione in formato JSON. Ad esempio, l’evento seguente contiene l’attributo dell’indirizzo e-mail di un profilo idoneo per un determinato pubblico ed uscito da un altro pubblico. Le identità per questo prospect sono `ECID` e `email_lc_sha256`.
 
 ```json
 {

@@ -6,7 +6,7 @@ description: La ricetta Vendite al dettaglio consente di prevedere le previsioni
 exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '580'
 ht-degree: 2%
 
 ---
@@ -30,13 +30,13 @@ La ricetta Retail Sales Forecasting utilizza l’apprendimento automatico per pr
 
 ## Come si inizia?
 
-Per iniziare, segui questa pagina [esercitazione](../jupyterlab/create-a-model.md).
+Per iniziare, segui questa [esercitazione](../jupyterlab/create-a-model.md).
 
 Questo tutorial illustra come creare la ricetta per la vendita al dettaglio in un notebook Jupyter e come utilizzare il flusso di lavoro blocco appunti per la composizione per creare la ricetta in Adobe Experience Platform.
 
 ## Schema dati
 
-Questa ricetta utilizza [Schemi XDM](../../xdm/schema/field-dictionary.md) per modellare i dati. Lo schema utilizzato per questa ricetta è mostrato di seguito:
+Questa ricetta utilizza [schemi XDM](../../xdm/schema/field-dictionary.md) per modellare i dati. Lo schema utilizzato per questa ricetta è mostrato di seguito:
 
 | Nome campo | Tipo |
 | --- | --- |
@@ -55,7 +55,7 @@ Questa ricetta utilizza [Schemi XDM](../../xdm/schema/field-dictionary.md) per m
 
 ## Algoritmo
 
-In primo luogo, il set di dati di formazione nel *DSWRetailSales* schema caricato. Da qui, il modello viene addestrato utilizzando un [algoritmo di regressione con potenziamento del gradiente](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html). Il potenziamento con gradiente utilizza l’idea che gli Allievi deboli (almeno leggermente migliori del caso casuale) possano formare una successione di Allievi focalizzati sul miglioramento delle debolezze dell’Allievo precedente. Insieme, possono essere utilizzati per creare un potente modello predittivo.
+Innanzitutto, viene caricato il set di dati di formazione nello schema *DSWRetailSales*. Da qui, il modello viene addestrato utilizzando un algoritmo regressore [gradiente potenziato](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html). Il potenziamento con gradiente utilizza l’idea che gli Allievi deboli (almeno leggermente migliori del caso casuale) possano formare una successione di Allievi focalizzati sul miglioramento delle debolezze dell’Allievo precedente. Insieme, possono essere utilizzati per creare un potente modello predittivo.
 
 Il processo prevede tre elementi: una funzione di perdita, un allievo debole e un modello additivo.
 

@@ -1,25 +1,25 @@
 ---
 keywords: Experience Platform;file di origine del pacchetto;Data Science Workspace;argomenti popolari;Docker;docker image
 solution: Experience Platform
-title: Creare pacchetti di file di origine in una ricetta
+title: Creare pacchetti di file Source in una ricetta
 type: Tutorial
 description: Questa esercitazione fornisce istruzioni su come creare un pacchetto dei file di origine di esempio per le vendite al dettaglio in un file di archivio, che può essere utilizzato per creare una ricetta in Adobe Experience Platform Data Science Workspace seguendo il flusso di lavoro di importazione delle ricette nell’interfaccia utente o utilizzando l’API.
 exl-id: 199b8127-4f1b-43a4-82e6-58cb70fcdc08
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '1159'
+source-wordcount: '1143'
 ht-degree: 0%
 
 ---
 
-# Creare pacchetti di file di origine in una ricetta
+# Creare un pacchetto di file di origine per una ricetta
 
-Questa esercitazione fornisce istruzioni su come creare un pacchetto dei file di origine di esempio di vendita al dettaglio forniti in un file di archivio, che può essere utilizzato per creare una ricetta in Adobe Experience Platform [!DNL Data Science Workspace] seguendo il flusso di lavoro di importazione delle ricette nell’interfaccia utente o utilizzando l’API.
+Questo tutorial fornisce istruzioni su come creare un pacchetto dei file di origine di esempio per le vendite al dettaglio in un file di archivio, che può essere utilizzato per creare una ricetta in Adobe Experience Platform [!DNL Data Science Workspace] seguendo il flusso di lavoro di importazione delle ricette nell&#39;interfaccia utente o utilizzando l&#39;API.
 
 Concetti da comprendere:
 
-- **Ricette**: una ricetta è il termine di Adobe per una specifica di modello ed è un contenitore di livello superiore che rappresenta un apprendimento automatico specifico, un algoritmo di intelligenza artificiale o un insieme di algoritmi, una logica di elaborazione e una configurazione necessarie per creare ed eseguire un modello addestrato e quindi contribuire a risolvere problemi di business specifici.
-- **File di origine**: singoli file nel progetto che contengono la logica per una ricetta.
+- **Ricette**: una ricetta è il termine Adobe per una specifica di modello ed è un contenitore di livello superiore che rappresenta un apprendimento automatico specifico, un algoritmo di intelligenza artificiale o un insieme di algoritmi, una logica di elaborazione e una configurazione necessari per generare ed eseguire un modello addestrato e quindi contribuire a risolvere problemi di business specifici.
+- **File Source**: singoli file nel progetto che contengono la logica per una ricetta.
 
 ## Prerequisiti
 
@@ -30,7 +30,7 @@ Concetti da comprendere:
 
 ## Creazione ricetta
 
-La creazione della ricetta inizia con la creazione di pacchetti di file di origine per la creazione di un file di archivio. I file di origine definiscono la logica di apprendimento automatico e gli algoritmi utilizzati per risolvere un problema specifico presente e sono scritti in [!DNL Python], R, PySpark o Scala. I file di archivio creati si presentano come un’immagine Docker. Una volta generato, il file di archivio viene importato in [!DNL Data Science Workspace] per creare una ricetta [nell’interfaccia utente](./import-packaged-recipe-ui.md) o [utilizzo dell’API](./import-packaged-recipe-api.md).
+La creazione della ricetta inizia con la creazione di pacchetti di file di origine per la creazione di un file di archivio. I file Source definiscono la logica di apprendimento automatico e gli algoritmi utilizzati per risolvere un problema specifico e sono scritti in [!DNL Python], R, PySpark o Scala. I file di archivio creati si presentano come un’immagine Docker. Una volta generato, il file di archivio collocato viene importato in [!DNL Data Science Workspace] per creare una ricetta [nell&#39;interfaccia utente](./import-packaged-recipe-ui.md) o [utilizzando l&#39;API](./import-packaged-recipe-api.md).
 
 ### Authoring di modelli basato su Docker {#docker-based-model-authoring}
 
@@ -38,54 +38,53 @@ Un’immagine Docker consente a uno sviluppatore di creare un pacchetto di un’
 
 L’immagine Docker generata viene inviata al registro dei contenitori di Azure utilizzando le credenziali fornite durante il flusso di lavoro per la creazione della ricetta.
 
-Per ottenere le credenziali del Registro di sistema del contenitore di Azure, accedi a [Adobe Experience Platform](https://platform.adobe.com). Nella colonna di navigazione a sinistra, passa a **[!UICONTROL Flussi di lavoro]**. Seleziona **[!UICONTROL Importa ricetta]** seguito dalla selezione **[!UICONTROL Launch]**. Per maggiori informazioni, vedere la schermata seguente.
+Per ottenere le credenziali del Registro di sistema del contenitore di Azure, accedi a [Adobe Experience Platform](https://platform.adobe.com). Nella colonna di navigazione sinistra, passa a **[!UICONTROL Flussi di lavoro]**. Seleziona **[!UICONTROL Importa ricetta]**, quindi seleziona **[!UICONTROL Avvia]**. Per maggiori informazioni, vedere la schermata seguente.
 
 ![](../images/models-recipes/package-source-files/import.png)
 
-Il **[!UICONTROL Configura]** viene visualizzata la pagina. Fornisci un **[!UICONTROL Nome ricetta]**, ad esempio &quot;ricetta di vendita al dettaglio&quot; e, facoltativamente, fornire una descrizione o un URL della documentazione. Al termine, fai clic su **[!UICONTROL Successivo]**.
+Viene visualizzata la pagina **[!UICONTROL Configura]**. Fornisci un **[!UICONTROL nome ricetta]** appropriato, ad esempio &quot;ricetta di vendita al dettaglio&quot;, e facoltativamente fornisci una descrizione o un URL della documentazione. Al termine, fai clic su **[!UICONTROL Avanti]**.
 
 ![](../images/models-recipes/package-source-files/configure.png)
 
-Seleziona la scheda appropriata *Runtime*, quindi scegli un **[!UICONTROL Classificazione]** per *Tipo*. Le credenziali del Registro di sistema del contenitore di Azure vengono generate una volta completate.
+Seleziona il *Runtime* appropriato, quindi scegli una **[!UICONTROL Classificazione]** per *Tipo*. Le credenziali del Registro di sistema del contenitore di Azure vengono generate una volta completate.
 
 >[!NOTE]
 >
->*Tipo* è la classe di problema di apprendimento automatico per cui la ricetta è progettata e viene utilizzata dopo l’addestramento per aiutare a personalizzare la valutazione della fase di addestramento.
+>*Tipo* è la classe di problema di apprendimento automatico per cui la ricetta è progettata e viene utilizzata dopo l&#39;addestramento per aiutare a personalizzare la valutazione dell&#39;esecuzione dell&#39;addestramento.
 
 >[!TIP]
 >
->- Per [!DNL Python] ricette seleziona la **[!UICONTROL Python]** runtime.
->- Per le ricette R seleziona la **[!UICONTROL R]** runtime.
->- Per le ricette PySpark, seleziona la **[!UICONTROL PySpark]** runtime. Un tipo di artefatto viene popolato automaticamente.
->- Per le ricette Scala seleziona la **[!UICONTROL Scintilla]** runtime. Un tipo di artefatto viene popolato automaticamente.
-
+>- Per [!DNL Python] ricette selezionare il runtime **[!UICONTROL Python]**.
+>- Per le ricette R selezionare il runtime **[!UICONTROL R]**.
+>- Per le ricette PySpark, seleziona il runtime **[!UICONTROL PySpark]**. Un tipo di artefatto viene popolato automaticamente.
+>- Per le ricette Scala, seleziona il runtime **[!UICONTROL Spark]**. Un tipo di artefatto viene popolato automaticamente.
 
 ![](../images/models-recipes/package-source-files/docker-creds.png)
 
-Osserva i valori per Docker host, nome utente e password. Questi vengono utilizzati per generare e inviare [!DNL Docker] immagine nei flussi di lavoro descritti di seguito.
+Osserva i valori per Docker host, nome utente e password. Questi vengono utilizzati per generare e inviare l&#39;immagine [!DNL Docker] nei flussi di lavoro descritti di seguito.
 
 >[!NOTE]
 >
->L’URL di origine viene fornito dopo aver completato i passaggi descritti di seguito. Il file di configurazione viene descritto nelle esercitazioni successive disponibili in [passaggi successivi](#next-steps).
+>L’URL Source viene fornito dopo aver completato i passaggi descritti di seguito. Il file di configurazione è descritto nelle esercitazioni successive disponibili nei [passaggi successivi](#next-steps).
 
 ### Creare un pacchetto dei file di origine
 
-Inizia ottenendo il codebase di esempio trovato nella <a href="https://github.com/adobe/experience-platform-dsw-reference" target="_blank">Experience Platform di riferimento di Data Science Workspace</a> archivio.
+Per prima cosa, ottenere il codebase di esempio trovato nell&#39;archivio <a href="https://github.com/adobe/experience-platform-dsw-reference" target="_blank">Experience Platform Data Science Workspace Reference</a>.
 
 - [Creare un’immagine Python Docker](#python-docker)
 - [Genera immagine Docker R](#r-docker)
 - [Crea immagine Docker PySpark](#pyspark-docker)
 - [Crea immagine Docker Scala (Spark)](#scala-docker)
 
-### Genera [!DNL Python] Immagine Docker {#python-docker}
+### Genera immagine Docker [!DNL Python] {#python-docker}
 
-Se non lo hai fatto, clona il file [!DNL GitHub] sul sistema locale con il seguente comando:
+In caso contrario, clonare l&#39;archivio [!DNL GitHub] nel sistema locale con il comando seguente:
 
 ```shell
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-Passa alla directory `experience-platform-dsw-reference/recipes/python/retail`. Qui troverai gli script `login.sh` e `build.sh` utilizzato per accedere a Docker e per generare [!DNL Python Docker] immagine. Se ha il suo [Credenziali Docker](#docker-based-model-authoring) a questo punto, immetti i seguenti comandi nell’ordine indicato:
+Passare alla directory `experience-platform-dsw-reference/recipes/python/retail`. Qui troverai gli script `login.sh` e `build.sh` utilizzati per accedere a Docker e per generare l&#39;immagine [!DNL Python Docker]. Se le tue [credenziali Docker](#docker-based-model-authoring) sono pronte, immetti i seguenti comandi nell&#39;ordine:
 
 ```BASH
 # for logging in to Docker
@@ -104,17 +103,17 @@ Una volta completato lo script di build, nell’output della console viene forni
 {DOCKER_HOST}/ml-retailsales-python:{VERSION_TAG}
 ```
 
-Copia questo URL e passa a [passaggi successivi](#next-steps).
+Copia questo URL e passa ai [passaggi successivi](#next-steps).
 
-### Build R [!DNL Docker] immagine {#r-docker}
+### Genera immagine R [!DNL Docker] {#r-docker}
 
-Se non lo hai fatto, clona il file [!DNL GitHub] sul sistema locale con il seguente comando:
+In caso contrario, clonare l&#39;archivio [!DNL GitHub] nel sistema locale con il comando seguente:
 
 ```BASH
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-Passa alla directory `experience-platform-dsw-reference/recipes/R/Retail - GradientBoosting` nell’archivio clonato. Qui troverai i file `login.sh` e `build.sh` che utilizzerai per accedere a Docker e per generare l’immagine R Docker. Se ha il suo [Credenziali Docker](#docker-based-model-authoring) a questo punto, immetti i seguenti comandi nell’ordine indicato:
+Passare alla directory `experience-platform-dsw-reference/recipes/R/Retail - GradientBoosting` all&#39;interno dell&#39;archivio clonato. Qui troverai i file `login.sh` e `build.sh` che utilizzerai per accedere a Docker e per generare l&#39;immagine R Docker. Se le tue [credenziali Docker](#docker-based-model-authoring) sono pronte, immetti i seguenti comandi nell&#39;ordine:
 
 ```BASH
 # for logging in to Docker
@@ -133,17 +132,17 @@ Una volta completato lo script di build, nell’output della console viene forni
 {DOCKER_HOST}/ml-retail-r:{VERSION_TAG}
 ```
 
-Copia questo URL e passa a [passaggi successivi](#next-steps).
+Copia questo URL e passa ai [passaggi successivi](#next-steps).
 
 ### Crea immagine Docker PySpark {#pyspark-docker}
 
-Iniziare clonando il file [!DNL GitHub] sul sistema locale con il seguente comando:
+Per iniziare, clonare l&#39;archivio [!DNL GitHub] nel sistema locale con il comando seguente:
 
 ```shell
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-Passa alla directory `experience-platform-dsw-reference/recipes/pyspark/retail`. Gli script `login.sh` e `build.sh` si trovano qui e vengono utilizzati per accedere a Docker e per generare l’immagine Docker. Se ha il suo [Credenziali Docker](#docker-based-model-authoring) a questo punto, immetti i seguenti comandi nell’ordine indicato:
+Passare alla directory `experience-platform-dsw-reference/recipes/pyspark/retail`. Gli script `login.sh` e `build.sh` si trovano qui e vengono utilizzati per accedere a Docker e per generare l&#39;immagine Docker. Se le tue [credenziali Docker](#docker-based-model-authoring) sono pronte, immetti i seguenti comandi nell&#39;ordine:
 
 ```BASH
 # for logging in to Docker
@@ -162,17 +161,17 @@ Una volta completato lo script di build, nell’output della console viene forni
 {DOCKER_HOST}/ml-retailsales-pyspark:{VERSION_TAG}
 ```
 
-Copia questo URL e passa a [passaggi successivi](#next-steps).
+Copia questo URL e passa ai [passaggi successivi](#next-steps).
 
 ### Crea immagine Docker Scala {#scala-docker}
 
-Iniziare clonando il file [!DNL GitHub] sul sistema locale con il seguente comando nel terminale:
+Iniziare clonando l&#39;archivio [!DNL GitHub] nel sistema locale con il seguente comando nel terminale:
 
 ```shell
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-Quindi, passa alla directory `experience-platform-dsw-reference/recipes/scala` dove trovare gli script `login.sh` e `build.sh`. Questi script vengono utilizzati per accedere a Docker e generare l’immagine Docker. Se ha il suo [Credenziali Docker](#docker-based-model-authoring) a questo punto, immettere i seguenti comandi nel terminale:
+Passare quindi alla directory `experience-platform-dsw-reference/recipes/scala` in cui è possibile trovare gli script `login.sh` e `build.sh`. Questi script vengono utilizzati per accedere a Docker e generare l’immagine Docker. Se le tue [credenziali Docker](#docker-based-model-authoring) sono pronte, immetti i seguenti comandi da terminare in ordine:
 
 ```BASH
 # for logging in to Docker
@@ -184,7 +183,7 @@ Quindi, passa alla directory `experience-platform-dsw-reference/recipes/scala` d
 
 >[!TIP]
 >
->Se ricevi un errore di autorizzazione quando tenti di accedere a Docker utilizzando `login.sh` script, prova a utilizzare il comando `bash login.sh`.
+>Se si riceve un errore di autorizzazione quando si tenta di accedere a Docker utilizzando lo script `login.sh`, provare a utilizzare il comando `bash login.sh`.
 
 Durante l’esecuzione dello script di accesso, devi fornire l’host Docker, il nome utente e la password. Durante la generazione, devi fornire l’host Docker e un tag di versione per la build.
 
@@ -195,11 +194,11 @@ Una volta completato lo script di build, nell’output della console viene forni
 {DOCKER_HOST}/ml-retailsales-spark:{VERSION_TAG}
 ```
 
-Copia questo URL e passa a [passaggi successivi](#next-steps).
+Copia questo URL e passa ai [passaggi successivi](#next-steps).
 
 ## Passaggi successivi {#next-steps}
 
-Questo tutorial illustra come creare pacchetti di file di origine in una ricetta, il passaggio preliminare per importare una ricetta in [!DNL Data Science Workspace]. Ora dovresti disporre di un’immagine Docker nel registro dei contenitori di Azure insieme all’URL dell’immagine corrispondente. Ora puoi iniziare il tutorial sull’importazione di una ricetta in pacchetti in [!DNL Data Science Workspace]. Per iniziare, seleziona uno dei collegamenti alle esercitazioni seguenti:
+Questo tutorial ha esaminato il packaging dei file di origine in una ricetta, il passaggio preliminare per l&#39;importazione di una ricetta in [!DNL Data Science Workspace]. Ora dovresti disporre di un’immagine Docker nel registro dei contenitori di Azure insieme all’URL dell’immagine corrispondente. È ora possibile iniziare l&#39;esercitazione sull&#39;importazione di una composizione in pacchetti in [!DNL Data Science Workspace]. Per iniziare, seleziona uno dei collegamenti alle esercitazioni seguenti:
 
 - [Importare una composizione in pacchetti nell’interfaccia utente](./import-packaged-recipe-ui.md)
 - [Importare una composizione in pacchetti utilizzando l’API](./import-packaged-recipe-api.md)

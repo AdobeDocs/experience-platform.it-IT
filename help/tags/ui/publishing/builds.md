@@ -4,7 +4,7 @@ description: Scopri il concetto di build e come queste funzionano in Adobe Exper
 exl-id: af899282-aa2d-4395-8dbd-18d91be3f041
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
-source-wordcount: '787'
+source-wordcount: '784'
 ht-degree: 97%
 
 ---

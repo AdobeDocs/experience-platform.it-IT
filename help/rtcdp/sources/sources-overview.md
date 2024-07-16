@@ -13,6 +13,6 @@ ht-degree: 0%
 
 # Origini in Real-time Customer Data Platform
 
-[!DNL Adobe Real-Time Customer Data Platform] consente di acquisire dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] servizi. Puoi acquisire dati da diverse origini, ad esempio app Adobe, archiviazione basata su cloud, software di terze parti, sistema CRM e altro ancora.
+[!DNL Adobe Real-Time Customer Data Platform] consente di acquisire dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi [!DNL Platform]. Puoi acquisire dati da diverse origini, ad esempio app Adobe, archiviazione basata su cloud, software di terze parti, sistema CRM e altro ancora.
 
-Per una panoramica più dettagliata delle sorgenti, incluso un elenco delle sorgenti disponibili e collegamenti ai tutorial, leggi [documentazione delle sorgenti](../../sources/home.md).
+Per una panoramica più dettagliata delle origini, incluso un elenco delle origini disponibili e i collegamenti ai tutorial, consulta la [documentazione delle origini](../../sources/home.md).

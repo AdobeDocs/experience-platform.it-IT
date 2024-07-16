@@ -1,13 +1,13 @@
 ---
 title: Lead per la corrispondenza dell’account in Real-Time CDP B2B
 type: Documentation
-description: Panoramica e ulteriori informazioni sulla funzione di corrispondenza lead-account in Experienci Platform CDP B2B.
+description: Panoramica e ulteriori informazioni sulla funzione di corrispondenza lead-account in Experience Platform CDP B2B.
 feature: Get Started, Profiles, B2B
 badgeB2B: label="Edizione B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 2f853599-6bca-4ba6-bbba-131a49d8854e
 source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '626'
+source-wordcount: '605'
 ht-degree: 3%
 
 ---
@@ -29,29 +29,29 @@ Il marketing basato su account consente di collegare ad account di vendita perso
 - Nome della persona
 - Indirizzo e-mail
 - Numero di contatto
-- Nome dell’azienda
+- Nome società
 - Sito Web della società
 - Qualifica
 - Posizione
 
 La corrispondenza lead-account consente di unire profili di persone noti a profili di account. Puoi quindi segmentare ed eseguire il targeting dei dati in un contesto B2B, ad esempio account, opportunità e così via. I profili di persona possono essere classificati nelle tre categorie seguenti:
 
-- **Profilo della persona dell’account:** Il profilo persona è già associato ad almeno un profilo account tramite la relazione da un’origine dati. Ciò implica che è presente almeno un frammento di contatto.
+- **Profilo persona account:** Il profilo persona è già associato ad almeno un profilo account tramite la relazione da un&#39;origine dati. Ciò implica che è presente almeno un frammento di contatto.
 
 >[!NOTE]
 >
 > I profili della persona dell’account non corrispondono quando si eseguono processi di corrispondenza lead-account.
 
-- **Profilo persona nota:** Il profilo persona NON è associato ad alcun profilo account e almeno uno dei seguenti attributi di profilo persona ha un valore:
+- **Profilo persona noto:** Il profilo persona NON è associato ad alcun profilo account e almeno uno dei seguenti attributi del profilo persona ha un valore:
 
    - Indirizzo e-mail
-   - Nome dell’azienda
+   - Nome società
    - Sito Web della società
 
-- **Profilo persona anonima:** Il profilo persona NON è associato ad alcun profilo account e nessuno dei seguenti attributi di profilo persona ha un valore:
+- **Profilo persona anonimo:** Il profilo persona NON è associato ad alcun profilo account e nessuno dei seguenti attributi del profilo persona ha un valore:
 
    - Indirizzo e-mail
-   - Nome dell’azienda
+   - Nome società
    - Sito Web della società
 
 >[!NOTE]
@@ -80,22 +80,22 @@ L’attributo workEmail si trova come gruppo di campi di livello superiore nello
 
 I profili avranno una corrispondenza migliore solo se il punteggio di corrispondenza supera la soglia di affidabilità interna. I risultati vengono salvati in un nuovo set di dati di sistema dell’XDM di relazione account-persona esistente.
 
-Il servizio di corrispondenza lead-account viene eseguito quando diventa disponibile una nuova istantanea del profilo persona, che viene eseguita ogni 24 ore. Consulta la documentazione per ulteriori informazioni su [configurazione della corrispondenza lead-account](/help/rtcdp/accounts/account-profile-ui-guide.md).
+Il servizio di corrispondenza lead-account viene eseguito quando diventa disponibile una nuova istantanea del profilo persona, che viene eseguita ogni 24 ore. Consulta la documentazione per ulteriori informazioni sulla [configurazione del lead per corrispondenza account](/help/rtcdp/accounts/account-profile-ui-guide.md).
 
 ## Come visualizzare l’output di corrispondenza lead-account {#how-to-view}
 
 Dopo l’esecuzione del processo, i risultati vengono salvati in un nuovo set di dati dell’XDM di relazione account-persona esistente.
 
-Per visualizzare in anteprima il set di dati, seleziona **[!UICONTROL Anteprima set di dati]** in alto a destra.
+Per visualizzare l&#39;anteprima del set di dati, seleziona **[!UICONTROL Anteprima set di dati]** in alto a destra.
 
 ![Nuovo set di dati](/help/rtcdp/accounts/images/b2b-dataset-output.png)
 
-Il set di dati include le informazioni dell’account corrispondenti e il punteggio di corrispondenza per il set di dati scelto. Il **[!UICONTROL Origine relazione]** indica se proviene dal processo di corrispondenza lead-account.
+Il set di dati include le informazioni dell’account corrispondenti e il punteggio di corrispondenza per il set di dati scelto. Il campo **[!UICONTROL Relazione Source]** indica se proviene dal processo di corrispondenza lead-account.
 
-![Anteprima dei punteggi e dell’output di affidabilità dei set di dati](/help/rtcdp/accounts/images/b2b-dataset-preview.png)
+![Anteprima risultati e punteggi di attendibilità del set di dati](/help/rtcdp/accounts/images/b2b-dataset-preview.png)
 
 ## Monitoraggio dei processi di corrispondenza lead-account {#monitoring-jobs}
 
 Puoi monitorare lo stato del processo e le metriche associate per qualsiasi lead in corrispondenza dell’account attraverso il dashboard.
 
-Consulta la documentazione per ulteriori informazioni su [monitoraggio dei processi per la corrispondenza lead-account](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).
+Consulta la documentazione per ulteriori informazioni sui [processi di monitoraggio per la corrispondenza lead-account](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).

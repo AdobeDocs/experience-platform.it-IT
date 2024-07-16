@@ -13,4 +13,4 @@ ht-degree: 0%
 
 # Etichette di utilizzo dei dati nell’API del servizio Set di dati
 
-A parte l’API Catalog Service, il [!DNL Dataset Service] L’API fornisce endpoint per la gestione delle etichette di utilizzo dei dati per i set di dati. Per i passaggi su come effettuare chiamate a questi endpoint, consulta la guida su [gestione delle etichette di utilizzo dei dati tramite l’API](../../data-governance/labels/dataset-api.md) nella documentazione sulla governance dei dati di Adobe Experience Platform.
+A parte l&#39;API Catalog Service, l&#39;API [!DNL Dataset Service] fornisce endpoint per la gestione delle etichette di utilizzo dei dati per i set di dati. Per i passaggi su come effettuare chiamate a questi endpoint, consulta la guida su [gestione delle etichette di utilizzo dei dati tramite API](../../data-governance/labels/dataset-api.md) nella documentazione sulla governance dei dati di Adobe Experience Platform.

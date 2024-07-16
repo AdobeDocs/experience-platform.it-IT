@@ -14,15 +14,15 @@ ht-degree: 3%
 
 # Endpoint &quot;sandbox types&quot;
 
-Per recuperare un elenco dei tipi di sandbox supportati per la tua organizzazione, invia una richiesta GET al `/sandboxTypes` endpoint.
+Per recuperare un elenco dei tipi di sandbox supportati per la tua organizzazione, devi effettuare una richiesta GET all&#39;endpoint `/sandboxTypes`.
 
 ## Introduzione
 
-L’endpoint API utilizzato in questa guida fa parte del [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox). Prima di continuare, controlla [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida per la lettura delle chiamate API di esempio di questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experienci Platform.
+L&#39;endpoint API utilizzato in questa guida fa parte dell&#39;[[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox). Prima di continuare, consulta la [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e per le informazioni importanti sulle intestazioni necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
 
 ## Recuperare un elenco di tipi di sandbox supportati
 
-Per recuperare un elenco dei tipi di sandbox supportati per la tua organizzazione, invia una richiesta GET al `/sandboxTypes` endpoint.
+Per recuperare un elenco dei tipi di sandbox supportati per la tua organizzazione, devi effettuare una richiesta GET all&#39;endpoint `/sandboxTypes`.
 
 **Formato API**
 

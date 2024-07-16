@@ -5,21 +5,21 @@ exl-id: 911cabec-2afb-4216-b413-80533f826b0e
 source-git-commit: dc2a2ecf7b602d2fcfd3b6c93cecdb6f3368a3f9
 workflow-type: tm+mt
 source-wordcount: '900'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
 # `context`
 
-Il `context` La proprietà è un array di stringhe che determina ciò che l’SDK web può raccogliere automaticamente. Anche se questi dati possono fornire un grande valore, omettere alcuni di questi dati può essere utile in modo da poter rispettare l’informativa sulla privacy della tua organizzazione.
+La proprietà `context` è un array di stringhe che determina ciò che l&#39;SDK Web può raccogliere automaticamente. Anche se questi dati possono fornire un grande valore, omettere alcuni di questi dati può essere utile in modo da poter rispettare l’informativa sulla privacy della tua organizzazione.
 
 ## Parole chiave di contesto ed elementi XDM
 
-Se includi una determinata parola chiave di contesto, Web SDK compila automaticamente tutti gli elementi XDM associati. Se desideri omettere uno specifico elemento XDM e consentire ad altri di farlo, puoi cancellare i valori utilizzando [`onBeforeEventSend`](onbeforeeventsend.md). Se invii più eventi a una pagina, l’SDK web include questi campi ogni `SendEvent` chiamare.
+Se includi una determinata parola chiave di contesto, Web SDK compila automaticamente tutti gli elementi XDM associati. Se si desidera omettere un elemento XDM specifico consentendo ad altri elementi, è possibile cancellare i valori utilizzando [`onBeforeEventSend`](onbeforeeventsend.md). Se invii più eventi a una pagina, Web SDK include questi campi a ogni chiamata `SendEvent`.
 
 ### Web
 
-Il `"web"` parola chiave raccoglie informazioni sulla pagina corrente.
+La parola chiave `"web"` raccoglie informazioni sulla pagina corrente.
 
 | Dimensione | Descrizione | Percorso XDM | Esempio di valore |
 | --- | --- | --- | --- |
@@ -30,19 +30,19 @@ Il `"web"` parola chiave raccoglie informazioni sulla pagina corrente.
 
 ### Dispositivo
 
-Il `"device"` keyword raccoglie informazioni sul dispositivo dell&#39;utente.
+La parola chiave `"device"` raccoglie informazioni sul dispositivo dell&#39;utente.
 
 | Dimensione | Descrizione | Percorso XDM | Esempio di valore |
 | --- | --- | --- | --- |
 | Altezza schermo | Altezza dello schermo in pixel. | `xdm.device.screenHeight` | `900` |
 | Larghezza schermo | Larghezza dello schermo in pixel. | `xdm.device.screenWidth` | `1440` |
-| Orientamento schermo | Orientamento dello schermo. | `xdm.device.screenOrientation` | `landscape` oppure `portrait` |
+| Orientamento schermo | Orientamento dello schermo. | `xdm.device.screenOrientation` | `landscape` o `portrait` |
 
 {style="table-layout:auto"}
 
 ### Ambiente
 
-Il `"environment"` la parola chiave raccoglie informazioni sul browser dell&#39;utente.
+La parola chiave `"environment"` raccoglie informazioni sul browser dell&#39;utente.
 
 | Dimensione | Descrizione | Percorso XDM | Esempio di valore |
 | --- | --- | --- | --- |
@@ -54,11 +54,11 @@ Il `"environment"` la parola chiave raccoglie informazioni sul browser dell&#39;
 
 ### Contesto del luogo
 
-Il `"placeContext"` la parola chiave raccoglie informazioni sulla posizione dell&#39;utente.
+La parola chiave `"placeContext"` raccoglie informazioni sulla posizione dell&#39;utente.
 
 | Dimensione | Descrizione | Percorso XDM | Esempio di valore |
 | --- | --- | --- | --- |
-| Ora locale | Timestamp locale per l’utente finale in versione estesa semplificata [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) formato. | `xdm.placeContext.localTime` | `YYYY-08-07T15:47:17.129-07:00` |
+| Ora locale | Timestamp locale per l&#39;utente finale in formato [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) esteso semplificato. | `xdm.placeContext.localTime` | `YYYY-08-07T15:47:17.129-07:00` |
 | Offset fuso orario locale | Il numero di minuti di offset dell&#39;utente da GMT. | `xdm.placeContext.localTimezoneOffset` | `360` |
 | Codice paese | Il codice del paese dell’utente finale. | `xdm.placeContext.geo.countryCode` | `US` |
 | Provincia di Stato | Il codice della provincia dello stato dell&#39;utente finale. | `xdm.placeContext.geo.stateProvince` | `CA` |
@@ -68,64 +68,64 @@ Il `"placeContext"` la parola chiave raccoglie informazioni sulla posizione dell
 {style="table-layout:auto"}
 
 
-### Marca temporale
+### Timestamp
 
-Il `timestamp` keyword raccoglie informazioni sulla marca temporale dell’evento. Questa parte del contesto non può essere rimossa.
+La parola chiave `timestamp` raccoglie informazioni sulla marca temporale dell&#39;evento. Questa parte del contesto non può essere rimossa.
 
 | Dimensione | Descrizione | Percorso XDM | Esempio di valore |
 | --- | --- | --- | --- |
-| Timestamp dell’evento | Timestamp UTC per l’utente finale in versione estesa semplificata [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) formato. | `xdm.timestamp` | `2019-08-07T22:47:17.129Z` |
+| Timestamp dell’evento | Timestamp UTC per l&#39;utente finale in formato [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) esteso semplificato. | `xdm.timestamp` | `2019-08-07T22:47:17.129Z` |
 
 {style="table-layout:auto"}
 
 ### Dettagli di implementazione
 
-Il `implementationDetails` keyword raccoglie informazioni sulla versione SDK utilizzata per raccogliere l’evento.
+La parola chiave `implementationDetails` raccoglie informazioni sulla versione SDK utilizzata per raccogliere l&#39;evento.
 
 | Dimensione | Descrizione | Percorso XDM | Esempio di valore |
 | --- | --- | --- | --- |
-| Nome | Identificatore del kit di sviluppo software (SDK). Questo campo utilizza un URI per migliorare l’univocità tra gli identificatori forniti da diverse librerie software. | `xdm.implementationDetails.name` | Quando si utilizza la libreria autonoma, il valore è `https://ns.adobe.com/experience/alloy`. Quando la libreria viene utilizzata come parte dell’estensione tag, il valore è `https://ns.adobe.com/experience/alloy+reactor`. |
-| Versione | Versione del kit di sviluppo software (SDK). | `xdm.implementationDetails.version` | Quando si utilizza la libreria indipendente, il valore è la versione della libreria. Quando la libreria viene utilizzata come parte dell’estensione tag, il valore è la versione della libreria e la versione dell’estensione tag unita a un `+`. Ad esempio, se la versione della libreria è `2.1.0` e la versione dell’estensione tag è `2.1.3`, il valore sarà `2.1.0+2.1.3`. |
+| Nome | Identificatore del kit di sviluppo software (SDK). Questo campo utilizza un URI per migliorare l’univocità tra gli identificatori forniti da diverse librerie software. | `xdm.implementationDetails.name` | Quando si utilizza la libreria autonoma, il valore è `https://ns.adobe.com/experience/alloy`. Quando la libreria viene utilizzata come parte dell&#39;estensione tag, il valore è `https://ns.adobe.com/experience/alloy+reactor`. |
+| Versione | Versione del kit di sviluppo software (SDK). | `xdm.implementationDetails.version` | Quando si utilizza la libreria indipendente, il valore è la versione della libreria. Quando la libreria viene utilizzata come parte dell&#39;estensione tag, il valore è la versione della libreria e la versione dell&#39;estensione tag unita con un `+`. Ad esempio, se la versione della libreria è `2.1.0` e la versione dell&#39;estensione tag è `2.1.3`, il valore sarà `2.1.0+2.1.3`. |
 | Ambiente | Ambiente in cui sono stati raccolti i dati. Questo è sempre impostato su `browser`. | `xdm.implementationDetails.environment` | `browser` |
 
 
 ### Hint client ad alta entropia
 
-Il `"highEntropyUserAgentHints"` keyword raccoglie informazioni dettagliate sul dispositivo dell&#39;utente. Questi dati sono inclusi nell’intestazione HTTP della richiesta inviata all’Adobe. Una volta arrivati i dati all’interno della rete Edge, l’oggetto XDM compila il rispettivo percorso XDM. Se imposti il rispettivo percorso XDM nel `sendEvent` , ha la precedenza sul valore dell&#39;intestazione HTTP.
+La parola chiave `"highEntropyUserAgentHints"` raccoglie informazioni dettagliate sul dispositivo dell&#39;utente. Questi dati sono inclusi nell’intestazione HTTP della richiesta inviata all’Adobe. Una volta arrivati i dati all’interno della rete Edge, l’oggetto XDM compila il rispettivo percorso XDM. Se imposti il rispettivo percorso XDM nella chiamata `sendEvent`, ha la precedenza sul valore dell&#39;intestazione HTTP.
 
-Se utilizzi le ricerche dei dispositivi quando [configurazione dello stream di dati](/help/datastreams/configure.md), i dati possono essere cancellati a favore dei valori di ricerca del dispositivo. Alcuni campi degli hint client e dei campi di ricerca del dispositivo non possono esistere nello stesso hit.
+Se si utilizzano le ricerche dei dispositivi durante [la configurazione dello stream di dati](/help/datastreams/configure.md), è possibile cancellare i dati in favore dei valori di ricerca dei dispositivi. Alcuni campi degli hint client e dei campi di ricerca del dispositivo non possono esistere nello stesso hit.
 
 | Dimensione | Descrizione | Intestazione HTTP | Percorso XDM | Esempio di valore |
 | --- | --- | --- | --- | --- |
 | Versione del sistema operativo | Versione del sistema operativo. | `Sec-CH-UA-Platform-Version` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.platformVersion` | |
 | Architettura | Architettura CPU sottostante. | `Sec-CH-UA-Arch` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture` | |
 | Modello dispositivo | Nome del dispositivo utilizzato. | `Sec-CH-UA-Model` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.model` | |
-| numero di bit | Il numero di bit supportati dall&#39;architettura CPU sottostante. | `Sec-CH-UA-Bitness` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.bitness` | |
-| Fornitore browser | Azienda che ha creato il browser. L’hint a bassa entropia `Sec-CH-UA` raccoglie anche questo elemento. | `Sec-CH-UA-Full-Version-List` | | |
-| Nome browser | Browser utilizzato. L’hint a bassa entropia `Sec-CH-UA` raccoglie anche questo elemento. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | |
-| Versione browser | Versione significativa del browser. L’hint a bassa entropia `Sec-CH-UA` raccoglie anche questo elemento. La versione esatta del browser non viene raccolta automaticamente. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | |
+| Amarezza | Il numero di bit supportati dall&#39;architettura CPU sottostante. | `Sec-CH-UA-Bitness` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.bitness` | |
+| Fornitore browser | Azienda che ha creato il browser. Anche l&#39;hint a bassa entropia `Sec-CH-UA` raccoglie questo elemento. | `Sec-CH-UA-Full-Version-List` | | |
+| Nome browser | Browser utilizzato. Anche l&#39;hint a bassa entropia `Sec-CH-UA` raccoglie questo elemento. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | |
+| Versione browser | Versione significativa del browser. Anche l&#39;hint a bassa entropia `Sec-CH-UA` raccoglie questo elemento. La versione esatta del browser non viene raccolta automaticamente. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | |
 
 {style="table-layout:auto"}
 
 ## Raccogliere informazioni contestuali utilizzando l’estensione tag Web SDK
 
-L&#39;impostazione relativa alle informazioni contestuali è una combinazione di pulsanti di scelta e caselle di controllo quando [configurazione dell’estensione tag](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Ogni casella di controllo è associata a una parola chiave di contesto.
+L&#39;impostazione relativa alle informazioni di contesto è una combinazione di pulsanti di scelta e caselle di controllo durante la [configurazione dell&#39;estensione tag](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Ogni casella di controllo è associata a una parola chiave di contesto.
 
-1. Accedi a [experience.adobe.com](https://experience.adobe.com) utilizzando le credenziali di Adobe ID.
-1. Accedi a **[!UICONTROL Raccolta dati]** > **[!UICONTROL Tag]**.
+1. Accedi a [experience.adobe.com](https://experience.adobe.com) utilizzando le credenziali Adobe ID.
+1. Passa a **[!UICONTROL Raccolta dati]** > **[!UICONTROL Tag]**.
 1. Seleziona la proprietà tag desiderata.
-1. Accedi a **[!UICONTROL Estensioni]**, quindi fai clic su **[!UICONTROL Configura]** il [!UICONTROL Adobe Experience Platform Web SDK] Card.
-1. Scorri verso il basso fino a [!UICONTROL Raccolta dati] , quindi selezionare una delle seguenti opzioni **[!UICONTROL Tutte le informazioni di contesto predefinite]** o **[!UICONTROL Informazioni specifiche sul contesto]**.
-1. Se si seleziona **[!UICONTROL Informazioni specifiche sul contesto]**, abilita la casella di controllo accanto a ciascun elemento di informazioni di contesto desiderato.
-1. Clic **[!UICONTROL Salva]**, quindi pubblica le modifiche.
+1. Passa a **[!UICONTROL Estensioni]**, quindi fai clic su **[!UICONTROL Configura]** nella scheda [!UICONTROL Adobe Experience Platform Web SDK].
+1. Scorri fino alla sezione [!UICONTROL Raccolta dati], quindi seleziona **[!UICONTROL Tutte le informazioni di contesto predefinite]** o **[!UICONTROL Informazioni di contesto specifiche]**.
+1. Se si seleziona **[!UICONTROL Informazioni di contesto specifiche]**, abilitare la casella di controllo accanto a ogni elemento informazioni di contesto desiderato.
+1. Fai clic su **[!UICONTROL Salva]**, quindi pubblica le modifiche.
 
-## Raccogliere informazioni contestuali utilizzando la libreria JavaScript di Web SDK
+## Raccogliere informazioni contestuali utilizzando la libreria JavaScript dell’SDK per web
 
-Imposta il `context` matrice di stringhe durante l&#39;esecuzione di `configure` comando. Se ometti questa proprietà durante la configurazione dell’SDK, tutte le informazioni sul contesto tranne `"highEntropyUserAgentHints"` viene raccolto per impostazione predefinita. Imposta questa proprietà se desideri raccogliere hint client ad alta entropia o se desideri omettere altre informazioni contestuali dalla raccolta di dati. Le stringhe possono essere incluse in qualsiasi ordine.
+Impostare la matrice di stringhe `context` durante l&#39;esecuzione del comando `configure`. Se si omette questa proprietà durante la configurazione dell&#39;SDK, tutte le informazioni di contesto tranne `"highEntropyUserAgentHints"` vengono raccolte per impostazione predefinita. Imposta questa proprietà se desideri raccogliere hint client ad alta entropia o se desideri omettere altre informazioni contestuali dalla raccolta di dati. Le stringhe possono essere incluse in qualsiasi ordine.
 
 >[!NOTE]
 >
->Se desideri raccogliere tutte le informazioni di contesto, inclusi gli hint client ad alta entropia, devi includere ogni valore nella sezione `context` stringa di matrice. Il valore predefinito `context` valore omesso `highEntropyUserAgentHints`, e se si imposta `context` , eventuali valori omessi non raccolgono i dati.
+>Se si desidera raccogliere tutte le informazioni di contesto, inclusi gli hint client ad alta entropia, è necessario includere ogni valore nella stringa di matrice `context`. Il valore predefinito `context` omette `highEntropyUserAgentHints` e se si imposta la proprietà `context`, eventuali valori omessi non raccolgono dati.
 
 ```js
 alloy("configure", {

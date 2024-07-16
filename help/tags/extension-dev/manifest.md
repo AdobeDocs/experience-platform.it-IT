@@ -4,8 +4,8 @@ description: Scopri come configurare un file manifest JSON che informi Adobe Exp
 exl-id: 7cac020b-3cfd-4a0a-a2d1-edee1be125d0
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '2645'
-ht-degree: 99%
+source-wordcount: '2591'
+ht-degree: 98%
 
 ---
 
@@ -23,7 +23,7 @@ Un manifesto dell’estensione deve essere costituito dai seguenti elementi:
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `name` | Nome dell’estensione. Deve essere univoco rispetto a tutte le altre estensioni e deve essere conforme alle [regole relative alla denominazione](#naming-rules). **Viene usato dai tag come identificatore e non deve essere modificato dopo la pubblicazione dell’estensione.** |
+| `name` | Nome dell’estensione. Deve essere univoco rispetto a tutte le altre estensioni e deve essere conforme alle [regole di denominazione](#naming-rules). **Viene usato dai tag come identificatore e non deve essere modificato dopo la pubblicazione dell’estensione.** |
 | `platform` | Piattaforma per l’estensione. Al momento l’unico valore accettato è `web`. |
 | `version` | Versione dell’estensione. Deve seguire il formato di controllo delle versioni [semver](https://semver.org/). È conforme al [campo npm version](https://docs.npmjs.com/files/package.json#version). |
 | `displayName` | Nome leggibile dell’estensione. Verrà mostrato agli utenti di Platform. Non è necessario indicare “tag” o “Estensione”; gli utenti sapranno già che si tratta di un’estensione tag. |
@@ -120,7 +120,7 @@ La definizione di un tipo è un oggetto utilizzato per descrivere un tipo di eve
     </tr>
     <tr>
       <td><code>categoryName</code> <em>(Facoltativo)</em></td>
-      <td>Se fornito, il <code>displayName</code> verrà elencato in <code>categoryName</code> nell’interfaccia utente di Tutti i tipi con lo stesso <code>categoryName</code> saranno elencati nella stessa categoria. Ad esempio, se l’estensione ha fornito un tipo di evento <code>keyUp</code> e un tipo di evento <code>keyDown</code>, entrambi con <code>categoryName</code> impostato su <code>Keyboard</code>, entrambi i tipi di evento sono elencati nella categoria Keyboard quando l’utente seleziona una voce dall’elenco dei tipi di evento disponibili per creare una regola. Il valore di <code>categoryName</code> deve essere leggibile.</td>
+      <td>Se fornito, <code>displayName</code> verrà elencato in <code>categoryName</code> nell'interfaccia utente. Tutti i tipi con lo stesso <code>categoryName</code> saranno elencati nella stessa categoria. Ad esempio, se l’estensione ha fornito un tipo di evento <code>keyUp</code> e un tipo di evento <code>keyDown</code>, entrambi con <code>categoryName</code> impostato su <code>Keyboard</code>, entrambi i tipi di evento sono elencati nella categoria Keyboard quando l’utente seleziona una voce dall’elenco dei tipi di evento disponibili per creare una regola. Il valore di <code>categoryName</code> deve essere leggibile.</td>
     </tr>
     <tr>
       <td><code>libPath</code></td>

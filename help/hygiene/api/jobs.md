@@ -20,7 +20,7 @@ ht-degree: 6%
 
 L’API di igiene dei dati consente di correggere o eliminare in modo programmatico i dati personali memorizzati dai clienti in Adobe Experience Platform.
 
-Puoi accedere all’API tramite lo stesso percorso principale del file [API PRIVACY SERVICE](../../privacy-service/api/overview.md): `https://platform.adobe.io/data/core/privacy/`
+Puoi accedere all&#39;API tramite lo stesso percorso radice dell&#39;[API Privacy Service](../../privacy-service/api/overview.md): `https://platform.adobe.io/data/core/privacy/`
 
 ## Introduzione
 
@@ -28,7 +28,7 @@ Questa sezione fornisce un’introduzione ai concetti di base che è necessario 
 
 ### Raccogliere i valori per le intestazioni richieste
 
-Per effettuare chiamate all’API di igiene dei dati, devi prima raccogliere le credenziali di autenticazione. Si tratta delle stesse credenziali utilizzate per accedere all’API Privacy Service. Consulta la sezione [Panoramica API](./overview.md#getting-started) per generare valori per ciascuna delle intestazioni richieste per l’API di igiene dei dati, come illustrato di seguito:
+Per effettuare chiamate all’API di igiene dei dati, devi prima raccogliere le credenziali di autenticazione. Si tratta delle stesse credenziali utilizzate per accedere all’API Privacy Service. Consulta la [panoramica API](./overview.md#getting-started) per generare valori per ciascuna delle intestazioni richieste per l&#39;API di igiene dei dati, come illustrato di seguito:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -40,7 +40,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’
 
 ### Lettura delle chiamate API di esempio
 
-Questo documento fornisce un esempio di chiamata API per dimostrare come formattare le richieste. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere esempi di chiamate API](../../landing/api-guide.md#sample-api) nella guida introduttiva di Experienci Platform API.
+Questo documento fornisce un esempio di chiamata API per dimostrare come formattare le richieste. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere le chiamate API di esempio](../../landing/api-guide.md#sample-api) nella guida introduttiva per le API di Experience Platform.
 
 ## Creare un processo di eliminazione
 
@@ -54,7 +54,7 @@ POST /jobs
 
 **Richiesta**
 
-Il payload della richiesta è strutturato in modo simile a quello di un [richiesta di eliminazione nell’API di Privacy Service](../../privacy-service/api/privacy-jobs.md#access-delete). Include un `users` array i cui oggetti rappresentano gli utenti i cui dati devono essere eliminati.
+Il payload della richiesta è strutturato in modo simile a quello di una richiesta [delete nell&#39;API Privacy Service](../../privacy-service/api/privacy-jobs.md#access-delete). Include un array `users` i cui oggetti rappresentano gli utenti i cui dati devono essere eliminati.
 
 ```shell
 curl -X POST \
@@ -108,8 +108,8 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `companyContexts` | Array contenente le informazioni di autenticazione per l’organizzazione. Deve contenere un singolo oggetto con le seguenti proprietà: <ul><li>`namespace`: deve essere impostato su `imsOrgID`.</li><li>`value`: l’ID organizzazione. Questo è lo stesso valore fornito nella `x-gw-ims-org-id` intestazione.</li></ul> |
-| `users` | Matrice contenente una raccolta di almeno un utente di cui si desidera eliminare le informazioni. Ogni oggetto utente contiene le seguenti informazioni: <ul><li>`key`: identificatore per un utente utilizzato per qualificare gli ID processo separati nei dati di risposta. È consigliabile scegliere una stringa univoca e facilmente identificabile per questo valore, in modo che sia possibile farvi riferimento o cercarlo in un secondo momento.</li><li>`action`: array che elenca le azioni da eseguire sui dati dell’utente. Deve contenere un singolo valore stringa: `delete`.</li><li>`userIDs`: raccolta di identità per l’utente. Il numero di identità che un singolo utente può avere è limitato a nove. Ogni identità contiene le seguenti proprietà: <ul><li>`namespace`: Il [spazio dei nomi delle identità](../../identity-service/features/namespaces.md) associato all’ID. Questo può essere un [spazio dei nomi standard](../../privacy-service/api/appendix.md#standard-namespaces) riconosciuto da Platform, oppure può essere uno spazio dei nomi personalizzato definito dall’organizzazione. Il tipo di spazio dei nomi utilizzato deve essere riflesso nel `type` proprietà.</li><li>`value`: valore di identità.</li><li>`type`: deve essere impostato su `standard` se si utilizza uno spazio dei nomi riconosciuto a livello globale, oppure `custom` se utilizzi uno spazio dei nomi definito dall’organizzazione.</li></ul></li></ul> |
+| `companyContexts` | Array contenente le informazioni di autenticazione per l’organizzazione. Deve contenere un singolo oggetto con le seguenti proprietà: <ul><li>`namespace`: deve essere impostato su `imsOrgID`.</li><li>`value`: ID organizzazione. È lo stesso valore fornito nell&#39;intestazione `x-gw-ims-org-id`.</li></ul> |
+| `users` | Matrice contenente una raccolta di almeno un utente di cui si desidera eliminare le informazioni. Ogni oggetto utente contiene le seguenti informazioni: <ul><li>`key`: identificatore di un utente utilizzato per qualificare gli ID di processo separati nei dati di risposta. È consigliabile scegliere una stringa univoca e facilmente identificabile per questo valore, in modo che sia possibile farvi riferimento o cercarlo in un secondo momento.</li><li>`action`: array che elenca le azioni desiderate da eseguire sui dati dell&#39;utente. Deve contenere un singolo valore stringa: `delete`.</li><li>`userIDs`: raccolta di identità per l&#39;utente. Il numero di identità che un singolo utente può avere è limitato a nove. Ogni identità contiene le seguenti proprietà: <ul><li>`namespace`: [spazio dei nomi identità](../../identity-service/features/namespaces.md) associato all&#39;ID. Può trattarsi di uno spazio dei nomi [standard](../../privacy-service/api/appendix.md#standard-namespaces) riconosciuto da Platform oppure di uno spazio dei nomi personalizzato definito dall&#39;organizzazione. Il tipo di spazio dei nomi utilizzato deve essere riflesso nella proprietà `type`.</li><li>`value`: valore di identità.</li><li>`type`: deve essere impostato su `standard` se si utilizza uno spazio dei nomi riconosciuto a livello globale oppure su `custom` se si utilizza uno spazio dei nomi definito dall&#39;organizzazione.</li></ul></li></ul> |
 
 {style="table-layout:auto"}
 

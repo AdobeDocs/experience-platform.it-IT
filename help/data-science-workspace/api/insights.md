@@ -18,7 +18,7 @@ Gli insights contengono metriche utilizzate per consentire a un data scientist d
 
 ## Recuperare un elenco di approfondimenti
 
-Per recuperare un elenco di approfondimenti, esegui una singola richiesta di GET all’endpoint &quot;insights&quot;.  Per filtrare i risultati, puoi specificare i parametri di query nel percorso della richiesta. Per un elenco delle query disponibili, consulta la sezione dell’appendice su [parametri di query per il recupero delle risorse](./appendix.md#query).
+Per recuperare un elenco di approfondimenti, esegui una singola richiesta di GET all’endpoint &quot;insights&quot;.  Per filtrare i risultati, puoi specificare i parametri di query nel percorso della richiesta. Per un elenco delle query disponibili, consulta la sezione dell&#39;appendice sui [parametri di query per il recupero delle risorse](./appendix.md#query).
 
 **Formato API**
 
@@ -39,7 +39,7 @@ curl -X GET \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce un payload che include un elenco di approfondimenti e ogni approfondimento ha un identificatore univoco ( `id` ). Inoltre, riceverai `context` che contiene gli identificatori univoci associati a quella particolare informazione successiva ai dati degli eventi e delle metriche di Insights.
+In caso di esito positivo, la risposta restituisce un payload che include un elenco di approfondimenti e ogni approfondimento ha un identificatore univoco ( `id` ). Inoltre, riceverai `context`, che contiene gli identificatori univoci associati a quella particolare informazione, dopo aver aggiunto i dati relativi agli eventi e alle metriche di Insights.
 
 ```json
 {
@@ -108,7 +108,7 @@ In caso di esito positivo, la risposta restituisce un payload che include un ele
 
 ## Recuperare un approfondimento specifico
 
-Per cercare una particolare informazione, effettua una richiesta di GET e fornisci una `{INSIGHT_ID}` nel percorso della richiesta. Per filtrare i risultati, puoi specificare i parametri di query nel percorso della richiesta. Per un elenco delle query disponibili, consulta la sezione dell’appendice su [parametri di query per il recupero delle risorse](./appendix.md#query).
+Per cercare un particolare approfondimento, effettua una richiesta di GET e fornisci un `{INSIGHT_ID}` valido nel percorso della richiesta. Per filtrare i risultati, puoi specificare i parametri di query nel percorso della richiesta. Per un elenco delle query disponibili, consulta la sezione dell&#39;appendice sui [parametri di query per il recupero delle risorse](./appendix.md#query).
 
 **Formato API**
 
@@ -133,7 +133,7 @@ curl -X GET \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce un payload che include l’identificatore univoco di insights (`id`). Inoltre, riceverai `context` che contiene gli identificatori univoci associati alle informazioni specifiche che seguono i dati relativi agli eventi e alle metriche di Insights.
+In caso di esito positivo, la risposta restituisce un payload che include l&#39;identificatore univoco di insights (`id`). Inoltre, riceverai `context`, che contiene gli identificatori univoci associati alle informazioni specifiche seguenti con i dati degli eventi e delle metriche di Insights.
 
 ```json
 {
@@ -229,7 +229,7 @@ curl -X POST \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce un payload con `{INSIGHT_ID}` ed eventuali parametri forniti nella richiesta iniziale.
+In caso di esito positivo, la risposta restituirà un payload con `{INSIGHT_ID}` e tutti i parametri forniti nella richiesta iniziale.
 
 ```json
 {
@@ -264,7 +264,7 @@ In caso di esito positivo, la risposta restituisce un payload con `{INSIGHT_ID}`
 
 ## Recuperare un elenco di metriche predefinite per gli algoritmi
 
-Per recuperare un elenco di tutte le metriche predefinite e dell’algoritmo, esegui una singola richiesta di GET all’endpoint delle metriche. Per eseguire una query su una particolare metrica, effettua una richiesta GET e fornisci una `{ALGORITHM}` nel percorso della richiesta.
+Per recuperare un elenco di tutte le metriche predefinite e dell’algoritmo, esegui una singola richiesta di GET all’endpoint delle metriche. Per eseguire una query su una particolare metrica, effettua una richiesta di GET e fornisci un `{ALGORITHM}` valido nel percorso della richiesta.
 
 **Formato API**
 
@@ -279,7 +279,7 @@ GET /insights/metrics?algorithm={ALGORITHM}
 
 **Richiesta**
 
-La richiesta seguente contiene una query e recupera una metrica specifica utilizzando l’identificatore dell’algoritmo `{ALGORITHM}`
+La richiesta seguente contiene una query e recupera una metrica specifica utilizzando l&#39;identificatore dell&#39;algoritmo `{ALGORITHM}`
 
 ```shell
 curl -X GET \
@@ -292,7 +292,7 @@ curl -X GET \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce un payload che include `algorithm` un identificatore univoco e un array di metriche predefinite.
+In caso di esito positivo, la risposta restituisce un payload che include l&#39;identificatore univoco `algorithm` e un array di metriche predefinite.
 
 ```json
 {

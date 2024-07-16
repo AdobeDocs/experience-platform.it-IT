@@ -13,40 +13,40 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti da [!DNL Merkury] team. Per richieste di informazioni o richieste di aggiornamento, contatta il tuo [!DNL Merkury] rappresentante dell’account.
+>Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti dal team [!DNL Merkury]. Per richieste di informazioni o richieste di aggiornamento, contattare il rappresentante dell&#39;account [!DNL Merkury].
 
 ## Panoramica
 
-Utilizza il [!DNL Merkury Enterprise Identity] per creare profili di consumatori più precisi, completi e approfonditi. Grazie ai dati di profilo migliorati, gli esperti di marketing possono migliorare informazioni, segmenti e modelli, con conseguente targeting più preciso e modellazione predittiva.
+Utilizza la destinazione [!DNL Merkury Enterprise Identity] per creare profili di consumo più precisi, completi e approfonditi. Grazie ai dati di profilo migliorati, gli esperti di marketing possono migliorare informazioni, segmenti e modelli, con conseguente targeting più preciso e modellazione predittiva.
 
-![Schema dell’interconnessione tra Merkury e Experience Platform, compresi l’acquisizione e l’attivazione](../../assets/catalog/data-partners/merkury-identity/media/image1.png)
+![Diagramma che mostra l&#39;interconnessione tra Merkury e Experience Platform, incluse l&#39;acquisizione e l&#39;attivazione](../../assets/catalog/data-partners/merkury-identity/media/image1.png)
 
-Segui i passaggi descritti in questa pagina della documentazione per creare un [!DNL Merkury Identity] connessione di destinazione e attivazione di tipi di pubblico per l’identificazione e l’arricchimento tramite l’interfaccia utente di Adobe Experience Platform.
+Segui i passaggi descritti in questa pagina della documentazione per creare una connessione di destinazione [!DNL Merkury Identity] e attivare i tipi di pubblico per l&#39;identificazione e l&#39;arricchimento tramite l&#39;interfaccia utente di Adobe Experience Platform.
 
 >[!NOTE]
 >
->Se desideri attivare dei tipi di pubblico su destinazioni multimediali con il tuo [!DNL Merkury Connect] account, utilizza [!DNL Merkury Connections] invece della destinazione.
+>Se desideri attivare i tipi di pubblico nelle destinazioni dei contenuti multimediali con il tuo account [!DNL Merkury Connect], utilizza invece la destinazione [!DNL Merkury Connections].
 
-![La scheda di destinazione Merkury Enterprise Identity evidenziata nel catalogo delle destinazioni di Experience Platform.](../../assets/catalog/data-partners/merkury-identity/media/image2.png)
+![La scheda di destinazione di Merkury Enterprise Identity è evidenziata nel catalogo delle destinazioni di Experience Platform.](../../assets/catalog/data-partners/merkury-identity/media/image2.png)
 
 ## Casi d’uso
 
-Il [!DNL Merkury Enterprise Identity] La destinazione consente di trasferire in modo sicuro i dati PII del consumatore per i seguenti elementi [!DNL Merkury] funzionalità:
+La destinazione [!DNL Merkury Enterprise Identity] consente di trasferire in modo sicuro i dati PII del consumer per le seguenti funzionalità [!DNL Merkury]:
 
-* **Qualità dei dati**: migliorare la qualità dei dati del profilo dei consumatori grazie all’igiene dei dati e alla standardizzazione. [!DNL Merkury] include l’igiene postale negli Stati Uniti e l’identificazione degli spostamenti per supportare i casi d’uso più avanzati del marketing direct mailing.
-* **Risoluzione identità**: crea una visione unica, accurata e completa del cliente, informata da [!DNL Merkury] ID individuali e di famiglia. Gli ID Merkury forniscono un livello profondo di collegamento del profilo basato su [!DNL Merkury]Il grafico completo dell&#39;identità del consumatore adulto degli Stati Uniti di 268+ milioni di persone.
-* **Arricchimento**: informazioni e personalizzazione migliorate con [!DNL Merkury Data]. [!DNL Merkury Data] include oltre 10.000 attributi di dati disponibili, tra cui dati demografici, sullo stile di vita, finanziari, eventi vita e dati di acquisto dal [!DNL Merkury Data Suite].
+* **Qualità dei dati**: migliora la qualità dei dati del profilo del consumatore con l&#39;igiene dei dati e la standardizzazione. [!DNL Merkury] include l&#39;igiene postale negli Stati Uniti e l&#39;identificazione degli spostamenti per supportare i casi d&#39;uso di marketing di direct mailing più avanzati.
+* **Risoluzione identità**: crea una singola vista accurata e completa del cliente, informata da [!DNL Merkury] ID individuali e domestici. Gli ID Merkury forniscono un livello profondo di collegamento del profilo basato sul grafico completo dell&#39;identità del consumatore adulto di [!DNL Merkury], costituito da oltre 268 milioni di persone.
+* **Arricchimento**: migliora le informazioni e la personalizzazione con [!DNL Merkury Data]. [!DNL Merkury Data] include oltre 10.000 attributi di dati disponibili, che vanno da dati demografici, lifestyle, finanziari, eventi vita e dati di acquisto da [!DNL Merkury Data Suite].
 
 >[!NOTE]
 >
->Questi casi d’uso vengono eseguiti tramite una combinazione di connettori di destinazione e sorgente. Il cliente inizierebbe esportando i propri record esistenti dei clienti per l’arricchimento utilizzando questo connettore di destinazione. [!DNL Merkury]Il servizio di ricerca il file, lo recupera e lo arricchisce con [!DNL Merkury]e genera un file. Il cliente utilizzerà quindi il [!DNL Merkury] Scheda sorgente del connettore Source per acquisire i profili cliente idratati nuovamente in Adobe Real-Time CDP.
+>Questi casi d’uso vengono eseguiti tramite una combinazione di connettori di destinazione e sorgente. Il cliente inizierebbe esportando i propri record esistenti dei clienti per l’arricchimento utilizzando questo connettore di destinazione. Il servizio di [!DNL Merkury] cercherà il file, lo recupererà, lo arricchirà con i dati di [!DNL Merkury] e genererà un file. Il cliente utilizzerà quindi la scheda di origine del connettore Source [!DNL Merkury] corrispondente per acquisire nuovamente i profili cliente idrati in Adobe Real-Time CDP.
 
 ## Prerequisiti
 
 >[!IMPORTANT]
 >
->* Per connettersi alla destinazione, è necessario **Visualizza destinazioni** e **Gestire le destinazioni**, **Attivare le destinazioni**, **Visualizza profili**, e **Visualizzare segmenti** [[autorizzazioni di controllo degli accessi]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions). Leggi le [[panoramica sul controllo degli accessi]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
->* Per esportare *identità*, è necessario **Visualizza grafico delle identità** [[autorizzazione per il controllo degli accessi]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions).\![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](../../assets/catalog/data-partners/merkury-identity/media/image3.png)
+>* Per connettersi alla destinazione, è necessario **Visualizzare le destinazioni** e **Gestire le destinazioni**, **Attivare le destinazioni**, **Visualizzare i profili** e **Visualizzare i segmenti** [[Autorizzazioni di controllo di accesso]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions). Leggere la [[panoramica sul controllo di accesso]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) o contattare l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>* Per esportare *identità*, è necessario **Visualizza grafo identità** [[autorizzazione di controllo di accesso]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions).\![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](../../assets/catalog/data-partners/merkury-identity/media/image3.png)
 
 ## Identità supportate {#supported-identities}
 
@@ -54,9 +54,9 @@ Il [!DNL Merkury Enterprise Identity] La destinazione consente di trasferire in 
 |---|---|---|
 | GAID | GOOGLE ADVERTISING ID | Seleziona l’identità di destinazione GAID quando l’identità di origine è uno spazio dei nomi GAID. |
 | IDFA | Apple ID per inserzionisti | Selezionare l&#39;identità di destinazione IDFA quando l&#39;identità di origine è uno spazio dei nomi IDFA. |
-| ECID | Experience Cloud ID | Uno spazio dei nomi che rappresenta ECID. A questo spazio dei nomi possono fare riferimento anche i seguenti alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Vedi il seguente documento su [ECID](/help/identity-service/features/ecid.md) per ulteriori informazioni. |
-| phone_sha256 | Numeri di telefono con hash con algoritmo SHA256 | I numeri di telefono con hash SHA256 e testo normale sono supportati da Adobe Experience Platform. Quando il campo sorgente contiene attributi senza hash, seleziona la **[!UICONTROL Applica trasformazione]** opzione, per avere [!DNL Platform] esegui automaticamente l’hash dei dati all’attivazione. |
-| email_lc_sha256 | Indirizzi e-mail con hash con algoritmo SHA256 | Adobe Experience Platform supporta sia gli indirizzi di posta elettronica in testo normale che quelli con hash SHA256. Quando il campo sorgente contiene attributi senza hash, seleziona la **[!UICONTROL Applica trasformazione]** opzione, per avere [!DNL Platform] esegui automaticamente l’hash dei dati all’attivazione. |
+| ECID | Experience Cloud ID | Uno spazio dei nomi che rappresenta ECID. A questo spazio dei nomi possono fare riferimento anche i seguenti alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Per ulteriori informazioni, consulta il seguente documento su [ECID](/help/identity-service/features/ecid.md). |
+| phone_sha256 | Numeri di telefono con hash con algoritmo SHA256 | I numeri di telefono con hash SHA256 e testo normale sono supportati da Adobe Experience Platform. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Applica trasformazione]** per impostare [!DNL Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. |
+| email_lc_sha256 | Indirizzi e-mail con hash con algoritmo SHA256 | Adobe Experience Platform supporta sia gli indirizzi di posta elettronica in testo normale che quelli con hash SHA256. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Applica trasformazione]** per impostare [!DNL Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. |
 | extern_id | ID utente personalizzati | Seleziona questa identità di destinazione quando l&#39;identità di origine è uno spazio dei nomi personalizzato. |
 
 {style="table-layout:auto"}
@@ -67,19 +67,18 @@ Questa sezione descrive il tipo di pubblico che puoi esportare in questa destina
 
 | **Pubblico** | **Supportato** | **Descrizione** | **origine** |
 |---|---|---|---|
-| Servizio di segmentazione | ✓ | Tipi di pubblico generati dall’Experience Platform [[Servizio di segmentazione]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home). |
-| Caricamenti personalizzati | x | Tipi di pubblico [[importato]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) in Experience Platform da file CSV. |
+| Servizio di segmentazione | ✓ | Tipi di pubblico generati tramite l&#39;Experience Platform [[Servizio di segmentazione]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home). |
+| Caricamenti personalizzati | x | Tipi di pubblico [[importato]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
 
 ## Tipo e frequenza di esportazione
 
 Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, consulta la tabella seguente.
-
-|**Pubblico**|**Supportato**|**Origine descrizione**|
-|---|---|---|
-|Segmentation Service|✓|Audiences generated through the Experience Platform [[Segmentation Service]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home).|
-|Custom uploads|X|Audiences [[imported]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) into Experience Platform from CSV files.|
+|**Pubblico**|**Supportato**|**Origine descrizione**|\
+|—|—|—|\
+✓ |Servizio di segmentazione|Pubblico generato tramite l&#39;Experience Platform [[Servizio di segmentazione]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home).|
+Caricamenti personalizzati|X|Tipi di pubblico [[importati]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) in Experience Platform da file CSV.
 
 {style="table-layout:auto"}
 
@@ -87,13 +86,13 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 >[!IMPORTANT]
 >
->Per connettersi alla destinazione, è necessario **Visualizza destinazioni** e **Gestire e attivare le destinazioni dei set di dati** [[autorizzazioni di controllo degli accessi]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions). Leggi le [[panoramica sul controllo degli accessi]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>Per connettersi alla destinazione, è necessario **Visualizza destinazioni** e **Gestisci e attiva destinazioni set di dati** [[autorizzazioni controllo di accesso]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions). Leggere la [[panoramica sul controllo di accesso]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) o contattare l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Per connettersi a questa destinazione, seguire i passaggi descritti in [[tutorial sulla configurazione della destinazione]](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/connect-destination). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
+Per connettersi a questa destinazione, seguire i passaggi descritti nel [[tutorial sulla configurazione della destinazione]](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/connect-destination). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
 
 ### Autenticarsi nella destinazione
 
-Per autenticare nella destinazione, compila i campi obbligatori e seleziona **Connetti alla destinazione**.
+Per eseguire l&#39;autenticazione nella destinazione, compilare i campi obbligatori e selezionare **Connetti alla destinazione**.
 
 Per accedere al bucket su Experience Platform, devi fornire valori validi per le seguenti credenziali:
 
@@ -105,7 +104,7 @@ Per accedere al bucket su Experience Platform, devi fornire valori validi per le
 
 {style="table-layout:auto"}
 
-![schermata di creazione nuova destinazione](../../assets/catalog/data-partners/merkury-identity/media/image4.png)
+![nuova schermata di creazione della destinazione](../../assets/catalog/data-partners/merkury-identity/media/image4.png)
 
 ### Inserire i dettagli della destinazione
 
@@ -114,11 +113,11 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
 ![Schermata dei dettagli della destinazione](../../assets/catalog/data-partners/merkury-identity/media/image6.png)
 
 
-* **Nome (obbligatorio)** - Il nome con cui verrà salvata la destinazione
-* **Descrizione** - Breve spiegazione dello scopo della destinazione
-* **Nome bucket (obbligatorio)** - Nome del bucket Amazon S3 impostato su S3
-* **Percorso cartella (obbligatorio)** - Se si utilizzano sottodirectory in un bucket, è necessario definire un percorso oppure &#39;/&#39; per fare riferimento al percorso principale.
-* **Tipo di file** - Selezionare il formato che l&#39;Experience Platform deve utilizzare per i file esportati. Consulta il team di Merkury per il tipo di file previsto per il tuo account.
+* **Nome (obbligatorio)** - Nome in cui verrà salvata la destinazione
+* **Descrizione** - Breve spiegazione dello scopo della destinazione
+* **Nome bucket (obbligatorio)** - Nome del bucket Amazon S3 configurato in S3
+* **Percorso cartella (obbligatorio)** - Se vengono utilizzate sottodirectory in un bucket, è necessario definire un percorso oppure &#39;/&#39; per fare riferimento al percorso principale.
+* Experienci Platform **Tipo file** - Selezionare il formato da utilizzare per i file esportati. Consulta il team di Merkury per il tipo di file previsto per il tuo account.
 
 >[!NOTE]
 >
@@ -128,42 +127,42 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
 
 ### Account esistente
 
-Gli account già definiti utilizzando la destinazione Merkury Enterprise Identity vengono visualizzati in un pop-up di elenco. Se questa opzione è selezionata, i dettagli dell’account sono visualizzati nella barra a destra. Visualizza l’esempio dall’interfaccia utente, quando passi a **Destinazioni** > **Account**;
+Gli account già definiti utilizzando la destinazione Merkury Enterprise Identity vengono visualizzati in un pop-up di elenco. Se questa opzione è selezionata, i dettagli dell’account sono visualizzati nella barra a destra. Visualizza l&#39;esempio dall&#39;interfaccia utente quando passi a **Destinazioni** > **Account**;
 
-![Schermata dell’account di destinazione nella pagina degli account di destinazione](../../assets/catalog/data-partners/merkury-identity/media/image5.png)
+![Schermata dell&#39;account di destinazione nella pagina degli account di destinazione](../../assets/catalog/data-partners/merkury-identity/media/image5.png)
 
 
 ### Abilita avvisi
 
-Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati verso la tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento agli avvisi sulle destinazioni tramite l’interfaccia utente](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/alerts).
+Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati verso la tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento a destinazioni avvisi tramite l&#39;interfaccia utente](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/alerts).
 
-Una volta completate le informazioni sulla connessione di destinazione, seleziona **Successivo**.
+Dopo aver fornito i dettagli per la connessione di destinazione, seleziona **Avanti**.
 
 ## Attivare tipi di pubblico in questa destinazione
 
 >[!IMPORTANT]
 >
->* Per attivare i dati, è necessario **Visualizza destinazioni**, **Attivare le destinazioni**, **Visualizza profili**, e **Visualizzare segmenti** autorizzazioni di controllo degli accessi. Leggi la panoramica sul controllo degli accessi o contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
->* Per esportare le identità, è necessario **Visualizza grafico delle identità** autorizzazione per il controllo degli accessi.
+>* Per attivare i dati, sono necessarie le autorizzazioni di controllo di accesso **Visualizza destinazioni**, **Attiva destinazioni**, **Visualizza profili** e **Visualizza segmenti**. Leggi la panoramica sul controllo degli accessi o contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>* Per esportare le identità, è necessario disporre dell&#39;autorizzazione di controllo dell&#39;accesso **Visualizza grafo identità**.
 
-Letto [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) per istruzioni sull’attivazione dei tipi di pubblico in questa destinazione.
+Per istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione, leggi [Attiva dati pubblico per esportare i profili in batch](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations).
 
 ## Suggerimenti di mappatura
 
-La corretta elaborazione dei file sul [!DNL Merkury] side richiede elementi nome e indirizzo. Anche se non tutti gli elementi sono necessari, fornire il più possibile contribuirà ad una corrispondenza di successo.
+La corretta elaborazione dei file sul lato [!DNL Merkury] richiede elementi di nome e indirizzo. Anche se non tutti gli elementi sono necessari, fornire il più possibile contribuirà ad una corrispondenza di successo.
 
-I suggerimenti di mappatura sono forniti nella tabella seguente elencando gli attributi sul lato destinazione utilizzati da [!DNL Merkury] elaborazione a cui i clienti possono mappare gli attributi del profilo. Considera questi elementi come suggerimenti, in quanto non tutti gli elementi sono necessari e i valori sorgente dipenderanno dalle esigenze dell’account.
+I suggerimenti di mappatura sono forniti nella tabella seguente che elenca gli attributi sul lato destinazione utilizzati dall&#39;elaborazione [!DNL Merkury] a cui i clienti possono mappare gli attributi del profilo. Considera questi elementi come suggerimenti, in quanto non tutti gli elementi sono necessari e i valori sorgente dipenderanno dalle esigenze dell’account.
 
 | Campo di destinazione | Descrizione Source |
 |---|---|
-| id | Campo di identità da utilizzare per la mappatura [!DNL Merkury] dati di cui eseguire l’Experience Platform tramite [!DNL Merkury Enterprise Identity] Connettore Source |
-| Input_First_Name | Il `person.name.firstName` valore in Experience Platform. |
-| Input_Last_Name | Il `person.name.lastName` valore in Experience Platform. |
-| Input_Address_Line_1 | Il `mailingAddress.street` valore in Experience Platform. |
-| Input_City | Il `mailingAddress.city` valore in Experience Platform. |
-| Input_State_Province_Code | Il `mailingAddress.state` valore in Experience Platform. Da utilizzare se lo stato è nel formato di codice a due caratteri. |
-| Nome_Provincia_Stato_Input | Il `mailingAddress.state` valore in Experience Platform. Usa se lo stato è il nome completo dello stato |
-| Codice_postale_di_input | Il `mailingAddress.postalCode` valore in Experience Platform. |
+| id | Campo di identità da utilizzare per mappare i dati [!DNL Merkury] all&#39;Experience Platform tramite il connettore Source [!DNL Merkury Enterprise Identity] |
+| Input_First_Name | Il valore `person.name.firstName` in Experience Platform. |
+| Input_Last_Name | Il valore `person.name.lastName` in Experience Platform. |
+| Input_Address_Line_1 | Il valore `mailingAddress.street` in Experience Platform. |
+| Input_City | Il valore `mailingAddress.city` in Experience Platform. |
+| Input_State_Province_Code | Il valore `mailingAddress.state` in Experience Platform. Da utilizzare se lo stato è nel formato di codice a due caratteri. |
+| Nome_Provincia_Stato_Input | Il valore `mailingAddress.state` in Experience Platform. Usa se lo stato è il nome completo dello stato |
+| Codice_postale_di_input | Il valore `mailingAddress.postalCode` in Experience Platform. |
 | Input_Email_Address | Il valore che desideri mappare come indirizzo e-mail dei profili. |
 | Input_Phone | Il valore da mappare come numero di telefono dei profili. |
 
@@ -175,8 +174,8 @@ Per verificare se i dati sono stati esportati correttamente, controlla il bucket
 
 ## Utilizzo dei dati e governance
 
-Tutte le destinazioni Adobe Experience Platform sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come Adobe Experience Platform applica la governance dei dati, leggi [Panoramica sulla governance dei dati](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home).
+Tutte le destinazioni Adobe Experience Platform sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come Adobe Experience Platform applica la governance dei dati, consulta la [Panoramica sulla governance dei dati](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home).
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato correttamente un flusso di dati per esportare i dati del profilo da Experience Platform al tuo [!DNL Merkury] posizione S3 gestita. Quindi, devi contattare il tuo [!DNL Merkury] rappresentante con il nome dell’account, i nomi dei file e il percorso del bucket, in modo da poter configurare l’elaborazione.
+Seguendo questa esercitazione, è stato creato un flusso di dati per esportare i dati del profilo da Experience Platform nel percorso S3 gestito di [!DNL Merkury]. Quindi, devi contattare il tuo rappresentante [!DNL Merkury] con il nome dell&#39;account, i nomi dei file e il percorso del bucket in modo da poter configurare l&#39;elaborazione.

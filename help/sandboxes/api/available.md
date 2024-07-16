@@ -28,7 +28,7 @@ GET /{QUERY_PARAMS}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | Parametri di query facoltativi in base ai quali filtrare i risultati. Consulta la [documento dell&#39;appendice](./appendix.md#query) per un elenco dei parametri disponibili. |
+| `{QUERY_PARAMS}` | Parametri di query facoltativi in base ai quali filtrare i risultati. Per un elenco dei parametri disponibili, vedere il [documento di appendice](./appendix.md#query). |
 
 **Richiesta**
 
@@ -42,7 +42,7 @@ curl -X GET \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce un elenco di sandbox disponibili per l’utente corrente, inclusi dettagli quali `name`, `title`, `state`, e `type`.
+In caso di esito positivo, la risposta restituisce un elenco di sandbox disponibili per l&#39;utente corrente, inclusi dettagli quali `name`, `title`, `state` e `type`.
 
 ```json
 {
@@ -104,7 +104,7 @@ In caso di esito positivo, la risposta restituisce un elenco di sandbox disponib
 | --- | --- |
 | `name` | Nome della sandbox. Utilizzato a scopo di ricerca nelle chiamate API. |
 | `title` | Nome visualizzato della sandbox. |
-| `state` | Lo stato di elaborazione corrente della sandbox. Lo stato di una sandbox può essere uno dei seguenti: <ul><li>`creating`: la sandbox è stata creata ma è ancora in fase di provisioning da parte del sistema.</li><li>`active`: la sandbox viene creata e attivata.</li><li>`failed`: a causa di un errore, non è stato possibile eseguire il provisioning della sandbox da parte del sistema ed è disabilitata.</li><li>`deleted`: la sandbox è stata disabilitata manualmente.</li></ul> |
+| `state` | Lo stato di elaborazione corrente della sandbox. Lo stato di una sandbox può essere uno dei seguenti: <ul><li>`creating`: la sandbox è stata creata, ma è ancora in corso il provisioning da parte del sistema.</li><li>`active`: la sandbox è stata creata ed è attiva.</li><li>`failed`: a causa di un errore, non è stato possibile eseguire il provisioning della sandbox da parte del sistema ed è disabilitato.</li><li>`deleted`: Sandbox disabilitata manualmente.</li></ul> |
 | `type` | Il tipo di sandbox, &quot;sviluppo&quot; o &quot;produzione&quot;. |
 | `isDefault` | Una proprietà booleana che indica se questa sandbox è la sandbox di produzione predefinita per l’organizzazione. |
 | `eTag` | Identificatore di una versione specifica della sandbox. Utilizzato per il controllo delle versioni e l’efficienza della memorizzazione nella cache, questo valore viene aggiornato ogni volta che viene apportata una modifica alla sandbox. |

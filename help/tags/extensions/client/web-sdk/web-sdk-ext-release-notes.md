@@ -12,7 +12,7 @@ ht-degree: 30%
 
 # Note sulla versione dell’estensione Adobe Experience Platform Web SDK
 
-Questo documento descrive le note sulla versione dell’estensione tag Adobe Experience Platform Web SDK. Per le ultime note sulla versione dell’SDK, consulta [Note sulla versione di Platform Web SDK](/help/web-sdk/release-notes.md).
+Questo documento descrive le note sulla versione dell’estensione tag Adobe Experience Platform Web SDK. Per le ultime note sulla versione dell&#39;SDK, consulta le [note sulla versione di Platform Web SDK](/help/web-sdk/release-notes.md).
 
 ## Versione 2.24.0 - 5 giugno 2024
 
@@ -29,16 +29,16 @@ Contiene la versione 2.20.0 di Adobe Experience Platform Web SDK.
 
 **Nuove funzioni**
 
-* È stato aggiunto il supporto per [`Streaming Media Collection`](web-sdk-extension-configuration.md#streaming-media) nella configurazione dell’estensione.
-* È stata aggiunta la [`Send Media Event`](action-types.md#send-media-event) azione per [!DNL Streaming Media Collection] funzionalità.
-* È stata aggiunta la [`Media: Quality of Experience`](data-element-types.md#quality-experience) elemento dati per [!DNL Streaming Media Collection] funzionalità.
+* È stato aggiunto il supporto per il componente [`Streaming Media Collection`](web-sdk-extension-configuration.md#streaming-media) nella configurazione dell&#39;estensione.
+* Aggiunta dell&#39;azione [`Send Media Event`](action-types.md#send-media-event) per la funzionalità [!DNL Streaming Media Collection].
+* È stato aggiunto l&#39;elemento dati [`Media: Quality of Experience`](data-element-types.md#quality-experience) per la funzionalità [!DNL Streaming Media Collection].
 
 Contiene la versione 2.20.0 di Adobe Experience Platform Web SDK.
 
 **Correzioni e miglioramenti**
 
-* È stato corretto un errore che si verificava durante la ricerca di elementi dati nella sezione [Aggiorna variabile](action-types.md#update-variable) azione.
-* Rimosso [!UICONTROL Contenuti multimediali] tipi di evento dei tipi di evento consigliati per l&#39;utilizzo in `sendEvent` azione.
+* È stato corretto un errore che si verificava durante la ricerca di elementi dati nell&#39;azione [Aggiorna variabile](action-types.md#update-variable).
+* Sono stati rimossi i tipi di evento [!UICONTROL Media] dai tipi di evento suggeriti per l&#39;utilizzo nell&#39;azione `sendEvent`.
 
 ## Versione 2.22.0 - 3 maggio 2024
 
@@ -64,17 +64,17 @@ Contiene la versione 2.19.1 di Adobe Experience Platform Web SDK.
 
 **Correzioni e miglioramenti**
 
-* È stato risolto un problema a causa del quale l’array propositions era disponibile in `Send event complete` Gli eventi sono sempre stati vuoti.
+* È stato risolto un problema a causa del quale l’array propositions disponibile negli eventi `Send event complete` era sempre vuoto.
 
 ## Versione 2.21.2 - 1 novembre 2023
 
 **Nuove funzioni**
 
-* Aggiunto `Request default personalization` opzione per inviare l’azione evento.
+* È stata aggiunta l&#39;opzione `Request default personalization` per inviare l&#39;azione evento.
 * È stato aggiunto il supporto per gli eventi di inizio e fine pagina nell’azione invia evento.
-* Aggiunto `Apply propositions` azione.
-* Aggiunto `Evaluate rulesets` azione e `Subscribe ruleset items` per i messaggi in-app.
-* Aggiunto `Decision context` per inviare un&#39;azione evento.
+* Aggiunta azione `Apply propositions`.
+* Aggiunta azione `Evaluate rulesets` ed evento `Subscribe ruleset items` per i messaggi in-app.
+* Aggiunta di `Decision context` per inviare l&#39;azione evento.
 
 **Correzioni e miglioramenti**
 
@@ -96,16 +96,16 @@ Contiene la versione 2.19.1 di Adobe Experience Platform Web SDK.
 
 **Nuove funzioni**
 
-* È stato aggiunto il supporto per [sostituzioni per comando dell’ID dello stream di dati](../../../../datastreams/overrides.md).
+* Aggiunta del supporto per [sostituzioni per comando dell&#39;ID dello stream di dati](../../../../datastreams/overrides.md).
 
 **Correzioni e miglioramenti**
 
-* Obsoleto `edgeConfigId` a favore di `datastreamId` nella configurazione dell’SDK.
+* `edgeConfigId` è obsoleto a favore di `datastreamId` nella configurazione SDK.
 * Diversi miglioramenti all’esperienza utente per la configurazione dello stream di dati sostituiscono l’interfaccia utente di.
 
 ## Versione 2.19.0 - 21 giugno 2023
 
-* Il **[!UICONTROL Variabile]** data element e **[!UICONTROL Aggiorna variabile]** Le azioni sono ora generalmente disponibili.
+* L&#39;elemento dati **[!UICONTROL Variable]** e le azioni **[!UICONTROL Update Variable]** sono ora generalmente disponibili.
 
 ## Versione 2.18.0 - 18 maggio 2023
 
@@ -117,7 +117,7 @@ Contiene la versione 2.19.1 di Adobe Experience Platform Web SDK.
 
 * Contiene la versione 2.16.0 di Adobe Experience Platform Web SDK.
 * È stato aggiunto il supporto per [sostituzioni della configurazione dello stream di dati](/help/datastreams/overrides.md).
-* Aggiungi avviso di deprecazione al `datasetId` opzione sul `sendEvent` comando.
+* Aggiungere un avviso di deprecazione all&#39;opzione `datasetId` nel comando `sendEvent`.
 
 
 **Correzioni e miglioramenti**
@@ -132,12 +132,12 @@ Contiene la versione 2.19.1 di Adobe Experience Platform Web SDK.
 
 **Nuove funzioni**
 
-* (Beta) aggiunto **[!UICONTROL Aggiorna variabile]** azione e **[!UICONTROL Variabile]** elemento dati.
-* È stata aggiunta la configurazione per [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) callback.
+* (Beta) Aggiunta l&#39;azione **[!UICONTROL Aggiorna variabile]** e l&#39;elemento dati **[!UICONTROL Variabile]**.
+* Aggiunta configurazione per la funzione di callback [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md).
 
 **Correzioni e miglioramenti**
 
-* È stato risolto un problema che impediva il funzionamento del clic sugli elementi all’interno di un tag di ancoraggio quando il **[!UICONTROL Reindirizza con identità]** è stata utilizzata l&#39;azione.
+* È stato risolto un problema che impediva il funzionamento del clic sugli elementi all&#39;interno di un tag di ancoraggio quando veniva utilizzata l&#39;azione **[!UICONTROL Reindirizza con identità]**.
 * È stato risolto un problema che impediva il funzionamento degli elementi dati dell’oggetto XDM in presenza di un solo schema.
 * Contiene la versione 2.15.0 di Adobe Experience Platform Web SDK.
 
@@ -145,7 +145,7 @@ Contiene la versione 2.19.1 di Adobe Experience Platform Web SDK.
 ## Versione 2.15.1 - 26 gennaio 2023
 
 * È stato risolto un problema che impediva agli utenti senza accesso ai flussi di dati di modificare la configurazione dell’estensione.
-* È stato aggiunto il supporto per le superfici in `sendEvent` azione.
+* Aggiunta del supporto per le superfici nell&#39;azione `sendEvent`.
 
 Contiene la versione 2.14.0 di Adobe Experience Platform Web SDK.
 
@@ -158,7 +158,7 @@ Contiene la versione 2.13.1 della libreria Adobe Experience Platform Web SDK.
 
 ## Versione 2.14.0 - 28 settembre 2022
 
-* Aggiunto nuovo `targetMigrationEnabled` che abilita la migrazione completa pagina per pagina.
+* È stata aggiunta la nuova configurazione `targetMigrationEnabled` che abilita la migrazione completa pagina per pagina.
 * È stata aggiunta un’azione di risposta di applicazione per abilitare le implementazioni ibride server-client.
 * È stata aggiunta l’opzione di contesto User-Agent Client Hints ad alta entropia.
 
@@ -172,9 +172,9 @@ Contiene la versione 2.12.0 della libreria Adobe Experience Platform Web SDK.
 
 ## Versione 2.12.0 - 13 giugno 2022
 
-* È stato aggiornato il `identityMap` elemento dati per popolare le opzioni namespace in base alle sandbox definite dalle impostazioni di estensione.
-* Aggiunto **[!UICONTROL Reindirizza con identità]** per consentire la condivisione di identità tra domini diversi.
-* Sono stati aggiunti collegamenti alla documentazione di `sendEvent` azione.
+* Aggiornamento dell&#39;elemento dati `identityMap` per popolare le opzioni dello spazio dei nomi in base alle sandbox definite dalle impostazioni di estensione.
+* Aggiunta azione **[!UICONTROL Reindirizza con identità]** per consentire la condivisione di identità tra domini diversi.
+* Link alla documentazione aggiunti all&#39;azione `sendEvent`.
 * È stata aggiornata la libreria dell’interfaccia utente di React Spectrum.
 * Sono stati apportati diversi miglioramenti all’interfaccia utente.
 
@@ -211,13 +211,13 @@ Contiene la versione 2.8.0 della libreria dell’SDK per web di Adobe Experience
 
 Contiene la versione 2.7.0 della libreria dell’SDK per web di Adobe Experience Platform.
 
-* Ulteriori informazioni dall’Edge Network sono disponibili nell’evento Invia evento come completato, tra cui `inferences` e `destinations`. Il formato di queste proprietà potrebbe cambiare in quanto queste funzioni vengono attualmente implementate come parte di una versione beta.
+* Ulteriori informazioni dall&#39;Edge Network sono disponibili nell&#39;evento Send Event Complete, inclusi `inferences` e `destinations`. Il formato di queste proprietà potrebbe cambiare in quanto queste funzioni vengono attualmente implementate come parte di un Beta.
 
 ## Versione 2.7.3 - 7 settembre 2021
 
 Contiene la versione 2.6.4 della libreria dell’SDK per web di Adobe Experience Platform.
 
-* Non viene più visualizzato un avviso di elementi obsoleti per `container.buildInfo.environment.`
+* Non è più presente un avviso di deprecazione per `container.buildInfo.environment.`
 
 ## Versione 2.7.0 - 16 agosto 2021
 
@@ -250,7 +250,7 @@ Contiene la versione 2.6.0 della libreria dell’SDK per web di Adobe Experience
 
 Contiene la versione 2.5.0 della libreria dell’SDK per web di Adobe Experience Platform.
 
-* È stato aggiunto un `data` all&#39;azione Invia evento. La prossima documentazione descriverà come questo può essere utilizzato in alcuni scenari.
+* È stato aggiunto un campo `data` all&#39;azione Invia evento. La prossima documentazione descriverà come questo può essere utilizzato in alcuni scenari.
 * Nella vista dell’elemento dati Oggetto XDM è stato risolto un problema che causava la generazione di un errore se l’utente aveva accesso alle sandbox di Adobe Experience Platform ma non a quelle configurate come predefinite per l’organizzazione.
 * Nella visualizzazione dell’elemento dati Oggetto XDM è stato risolto un problema a causa del quale un campo schema richiesto veniva considerato non valido anche se l’oggetto principale non conteneva valori.
 
@@ -258,10 +258,10 @@ Contiene la versione 2.5.0 della libreria dell’SDK per web di Adobe Experience
 
 Contiene la versione 2.4.0 della libreria dell’SDK per web di Adobe Experience Platform.
 
-* Aggiunto [&quot;Scaricamento documento&quot;](/help/web-sdk/commands/sendevent/documentunloading.md) Casella di controllo per inviare l’interfaccia utente dell’azione Evento.
-* È stato aggiunto il supporto per `out` opzione quando [configurazione del consenso predefinito](/help/web-sdk/commands/configure/defaultconsent.md) che rilascia tutti gli eventi fino alla ricezione del consenso (il `pending` option accoda gli eventi e li invia dopo aver ricevuto il consenso).
+* Aggiunta della casella di controllo [&quot;Scaricamento documento&quot;](/help/web-sdk/commands/sendevent/documentunloading.md) all&#39;interfaccia utente dell&#39;azione Invia evento.
+* È stato aggiunto il supporto per un&#39;opzione `out` durante la [configurazione del consenso predefinito](/help/web-sdk/commands/configure/defaultconsent.md), che elimina tutti gli eventi fino alla ricezione del consenso (l&#39;opzione `pending` esistente accoda gli eventi e li invia dopo la ricezione del consenso).
 * È stata aggiunta una descrizione comando al campo del consenso predefinito.
-* È stato aggiunto il supporto per lo standard Consent 2.0 di Adobe quando si utilizza [`setConsent`](/help/web-sdk/commands/setconsent.md) comando.
+* È stato aggiunto il supporto per lo standard Consent 2.0 di Adobe quando si utilizza il comando [`setConsent`](/help/web-sdk/commands/setconsent.md).
 * Ora viene visualizzato un errore migliore nell’interfaccia utente dell’elemento dati di oggetti XDM se il token di accesso dell’utente non è valido o se il provisioning del token di accesso non è corretto.
 * È stato corretto un errore tra origini diverse (che non influisce sul funzionamento dell’estensione) visualizzato nella console di sviluppo del browser durante la visualizzazione di un elemento dati Oggetto XDM.
 
@@ -276,7 +276,7 @@ Contiene la versione 2.3.0 della libreria dell’SDK per web di Adobe Experience
 ## Versione 2.2.0 - 1 ottobre 2020
 
 * Quando si tentava di creare un oggetto XDM da schemi sandbox, si verificavano problemi di autenticazione. L’API che chiama Platform ora riconosce gli ambienti e agli utenti vengono presentati solo gli schemi che possono modificare.
-* Quando si utilizza `identityMap` data element, gli spazi dei nomi sono ora precompilati in un menu a discesa e non è più necessario compilarli manualmente.
+* Quando si utilizza l&#39;elemento dati `identityMap`, gli spazi dei nomi vengono ora precompilati in un menu a discesa e non è più necessario compilarli manualmente.
 * È stata rivista l’interfaccia utente per l’elemento dati `xdmObject`. Nella nuova interfaccia è possibile vedere quali campi sono stati compilati, senza dover accedere a ciascun elemento nell’oggetto.
 
 ## Versione 2.1.1 - 26 agosto 2020
@@ -311,7 +311,7 @@ Queste decisioni sono restituite dal comando `sendEvent` solo se `renderDecision
 * È stato risolto un problema in ID unione eventi a causa del quale veniva reimpostato ogni volta che si faceva riferimento all’elemento dati.
 * L’azione `setCustomerIds` è stata rinominata `syncIdentity`.
 * È stato aggiunto un comando `getIdentity`. Per il momento questo può essere utilizzato solo tramite codice personalizzato.
-* Abilitazione del debug tramite `_satellite` ora abilita il debug in Adobe Experience Platform Web SDK.
+* L&#39;abilitazione del debug con `_satellite` ora abilita il debug in Adobe Experience Platform Web SDK.
 * È stato aggiunto il supporto per i valori digitati nell’oggetto XDM: booleani, numeri e decimali.
 
 ## Versione 0.0.10 - 16 marzo 2020

@@ -1,24 +1,25 @@
 ---
 title: Tipo di dati restituito
 description: Scopri il tipo di dati Return Experience Data Model (XDM).
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+exl-id: 1fd99a25-547f-49e7-8980-dda7db2ebb8a
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '109'
-ht-degree: 6%
+ht-degree: 8%
 
 ---
 
-# [!UICONTROL Ritorno] tipo di dati
+# Tipo di dati [!UICONTROL Return]
 
-[!UICONTROL Ritorno] è un tipo di dati standard Experience Data Model (XDM) che acquisisce le informazioni essenziali relative a un’autorizzazione di restituzione del materiale promozionale (Return Merchandise Authorization, RMA).
+[!UICONTROL Return] è un tipo di dati XDM (Experience Data Model) standard che acquisisce le informazioni essenziali relative a un&#39;autorizzazione di restituzione del materiale promozionale (RMA).
 
-![Diagramma del tipo di dati Return.](../images/data-types/return.png)
+![Diagramma del tipo di dati restituito.](../images/data-types/return.png)
 
 | Nome visualizzato | Proprietà | Tipo di dati | Descrizione |
 |----------------------------------|----------------------|-----------|--------------------------------------------------|
-| [!UICONTROL ID restituito] | `returnID` | string | Identificatore univoco di questa RMA. |
-| [!UICONTROL Stato di ritorno] | `returnStatus` | string | Lo stato corrente della RMA (ad esempio In sospeso o Chiuso). |
-| [!UICONTROL ID acquisto ordine] | `purchaseID` | string | L’identificatore univoco dell’ordine/acquisto a cui si riferisce RMA. |
+| [!UICONTROL ID restituito] | `returnID` | stringa | Identificatore univoco di questa RMA. |
+| [!UICONTROL Stato restituito] | `returnStatus` | stringa | Lo stato corrente della RMA (ad esempio In sospeso o Chiuso). |
+| [!UICONTROL ID acquisto ordine] | `purchaseID` | stringa | L’identificatore univoco dell’ordine/acquisto a cui si riferisce RMA. |
 
 {style="table-layout:auto"}
 
@@ -26,4 +27,3 @@ Per ulteriori dettagli sul tipo di dati, consulta l’archivio XDM pubblico:
 
 * [Esempio compilato](https://github.com/adobe/xdm/blob/master/components/datatypes/return.example.1.json)
 * [Schema completo](https://github.com/adobe/xdm/blob/master/components/datatypes/return.schema.json)
-

@@ -13,34 +13,34 @@ ht-degree: 0%
 
 Adobe offre un’estensione tag dedicata per implementare e configurare l’SDK per web. Questo metodo di implementazione è il metodo principale consigliato dall’Adobe per distribuire e gestire il codice di raccolta dati.
 
-Dopo aver incontrato il [prerequisiti](overview.md), è possibile distribuire l’estensione tag Web SDK seguendo la procedura riportata di seguito:
+Una volta soddisfatti i [prerequisiti](overview.md), puoi distribuire l&#39;estensione tag Web SDK seguendo la procedura seguente:
 
 ## Installare l’estensione all’interno di un tag
 
-1. Accedi a [experience.adobe.com](https://experience.adobe.com) utilizzando le credenziali di Adobe ID.
-1. Accedi a **[!UICONTROL Raccolta dati]** > **[!UICONTROL Tag]**.
+1. Accedi a [experience.adobe.com](https://experience.adobe.com) utilizzando le credenziali Adobe ID.
+1. Passa a **[!UICONTROL Raccolta dati]** > **[!UICONTROL Tag]**.
 1. Seleziona la proprietà tag desiderata o creane una.
-1. Accedi a **[!UICONTROL Estensioni]**, quindi seleziona la **[!UICONTROL Catalogo]** scheda.
-1. Individuare e installare **[!UICONTROL Adobe Experience Platform Web SDK]** estensione.
+1. Passa a **[!UICONTROL Estensioni]**, quindi seleziona la scheda **[!UICONTROL Catalogo]**.
+1. Individua e installa l&#39;estensione **[!UICONTROL Adobe Experience Platform Web SDK]**.
 1. Seleziona la sandbox e lo stream di dati appropriati per ogni ambiente, quindi fai clic su **[!UICONTROL Salva]**.
 
-Consulta la documentazione su come [configurare l’estensione tag Web SDK](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) per ulteriori informazioni.
+Per ulteriori informazioni, consulta la documentazione su come [configurare l&#39;estensione tag Web SDK](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
-## Pubblicare il codice tag in Sviluppo
+## Publish il codice tag per lo sviluppo
 
 L’estensione Web SDK è ora installata per questo tag. Ora puoi pubblicare il codice tag da utilizzare in un ambiente di sviluppo.
 
-1. Accedi a **[!UICONTROL Flusso di pubblicazione]**, quindi seleziona **[!UICONTROL Aggiungi libreria]**.
-1. Assegna alla libreria il nome desiderato, ad esempio &quot;Aggiungi libreria SDK Web&quot;. Imposta il [!UICONTROL Ambiente] menu a discesa &quot;Development&quot;.
+1. Passa a **[!UICONTROL Flusso di pubblicazione]**, quindi seleziona **[!UICONTROL Aggiungi libreria]**.
+1. Assegna alla libreria il nome desiderato, ad esempio &quot;Aggiungi libreria SDK Web&quot;. Impostare il menu a discesa [!UICONTROL Ambiente] su &quot;Sviluppo&quot;.
 1. Seleziona **[!UICONTROL Aggiungi tutte le risorse modificate]**, quindi fai clic su **[!UICONTROL Salva e genera in sviluppo]**.
 
 ## Installare il codice del caricatore sul sito
 
 Ora che il codice tag è pubblicato, puoi aggiungere il codice del caricatore tag al tuo sito web.
 
-1. Accedi a **[!UICONTROL Ambienti]**, quindi fai clic sull’icona Riquadro accanto a &quot;Sviluppo&quot; per aprire una finestra modale contenente le istruzioni di installazione per questo ambiente.
-1. Copia il codice di incorporamento e incollalo nella `<head>` del sito web.
+1. Passa a **[!UICONTROL Ambienti]**, quindi fai clic sull&#39;icona della casella accanto a &quot;Sviluppo&quot; per aprire una finestra modale contenente le istruzioni di installazione per questo ambiente.
+1. Copiare il codice di incorporamento e incollarlo nel tag `<head>` del sito Web.
 
 ## Compila la tua implementazione e pubblica in produzione
 
-Consulta la [Panoramica dell’estensione Web SDK](../../tags/extensions/client/web-sdk/overview.md) per ulteriori informazioni sull’estensione stessa, e [Panoramica sui tag](../../tags/home.md) per ulteriori informazioni sulla navigazione nell’interfaccia dei tag.
+Per ulteriori informazioni sull&#39;estensione, consulta [Panoramica dell&#39;estensione Web SDK](../../tags/extensions/client/web-sdk/overview.md) e [Panoramica tag](../../tags/home.md) per ulteriori informazioni sulla navigazione nell&#39;interfaccia dei tag.

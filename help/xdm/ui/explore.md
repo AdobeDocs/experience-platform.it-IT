@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;argomenti popolari;ui;interfaccia utente;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;data model;esplorare;classe;gruppo di campi;tipo di dati;schema;
 solution: Experience Platform
 title: Esplorare le risorse dello schema nell’interfaccia utente
-description: Scopri come esplorare schemi, classi, gruppi di campi di schema e tipi di dati esistenti nell’interfaccia utente di Experienci Platform.
+description: Scopri come esplorare schemi, classi, gruppi di campi di schema e tipi di dati esistenti nell’interfaccia utente di Experience Platform.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
 source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
@@ -14,25 +14,25 @@ ht-degree: 0%
 
 # Esplorare le risorse dello schema nell’interfaccia utente
 
-In Adobe Experience Platform, tutte le risorse dello schema Experience Data Model (XDM) sono memorizzate nel [!DNL Schema Library], incluse le risorse standard fornite da Adobe e le risorse personalizzate definite dall’organizzazione. Nell’interfaccia utente di Experienci Platform, puoi visualizzare la struttura e i campi di qualsiasi schema, classe, gruppo di campi o tipo di dati esistente in [!DNL Schema Library]. Questa funzione è particolarmente utile durante la pianificazione e la preparazione per l’acquisizione dei dati, in quanto l’interfaccia utente fornisce informazioni sui tipi di dati previsti e sui casi di utilizzo di ciascun campo fornito da queste risorse XDM.
+In Adobe Experience Platform, tutte le risorse dello schema Experience Data Model (XDM) sono memorizzate in [!DNL Schema Library], incluse le risorse standard fornite da Adobe e le risorse personalizzate definite dall&#39;organizzazione. Nell&#39;interfaccia utente di Experience Platform è possibile visualizzare la struttura e i campi di qualsiasi schema, classe, gruppo di campi o tipo di dati esistente in [!DNL Schema Library]. Questa funzione è particolarmente utile durante la pianificazione e la preparazione per l’acquisizione dei dati, in quanto l’interfaccia utente fornisce informazioni sui tipi di dati previsti e sui casi di utilizzo di ciascun campo fornito da queste risorse XDM.
 
-Questo tutorial illustra i passaggi necessari per esplorare schemi, classi, gruppi di campi e tipi di dati esistenti nell’interfaccia utente di Experienci Platform.
+Questo tutorial illustra i passaggi necessari per esplorare schemi, classi, gruppi di campi e tipi di dati esistenti nell’interfaccia utente di Experience Platform.
 
 ## Cercare una risorsa schema {#lookup}
 
-Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Schemi]** nel menu di navigazione a sinistra. Il [!UICONTROL Schemi] workspace fornisce un **[!UICONTROL Sfoglia]** per esplorare tutti gli schemi dell’organizzazione, insieme a schede dedicate aggiuntive per l’esplorazione **[!UICONTROL Classi]**, **[!UICONTROL Gruppi di campi]**, e **[!UICONTROL Tipi di dati]** rispettivamente.
+Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Schemi]** nell&#39;area di navigazione a sinistra. L&#39;area di lavoro [!UICONTROL Schemi] fornisce una scheda **[!UICONTROL Sfoglia]** per esplorare tutti gli schemi dell&#39;organizzazione, insieme a schede dedicate aggiuntive per esplorare rispettivamente **[!UICONTROL Classi]**, **[!UICONTROL Gruppi di campi]** e **[!UICONTROL Tipi di dati]**.
 
 ![](../images/ui/explore/tabs.png)
 
-Icona del filtro (![Immagine icona filtro](../images/ui/explore/icon.png)) mostra i controlli nella barra a sinistra per limitare i risultati elencati. I controlli visualizzati variano a seconda del tipo di risorsa elencata.
+L&#39;icona del filtro (![Immagine icona filtro](../images/ui/explore/icon.png)) rivela i controlli nella barra a sinistra per limitare i risultati elencati. I controlli visualizzati variano a seconda del tipo di risorsa elencata.
 
-Ad esempio, per filtrare l’elenco in modo da mostrare solo i tipi di dati standard forniti dall’Adobe, seleziona **[!UICONTROL Tipo di dati]** e **[!UICONTROL Adobe]** sotto **[!UICONTROL Tipo]** e **[!UICONTROL Proprietario]** sezioni, rispettivamente.
+Per filtrare l&#39;elenco in modo da visualizzare solo i tipi di dati standard forniti dall&#39;Adobe, selezionare **[!UICONTROL Tipo di dati]** e **[!UICONTROL Adobe]** rispettivamente nelle sezioni **[!UICONTROL Tipo]** e **[!UICONTROL Proprietario]**.
 
-Il **[!UICONTROL Incluso nel profilo]** consente di filtrare i risultati in modo da visualizzare solo le risorse utilizzate negli schemi che sono stati abilitati per l’utilizzo in [Profilo cliente in tempo reale](../../profile/home.md). Il **[!UICONTROL Mostra schemi ad hoc]** attiva/disattiva filtra l’elenco degli schemi creati con campi con namespace utilizzabili solo da un singolo set di dati.
+L&#39;opzione **[!UICONTROL Incluso nel profilo]** consente di filtrare i risultati in modo da visualizzare solo le risorse utilizzate negli schemi abilitati per l&#39;utilizzo in [Profilo cliente in tempo reale](../../profile/home.md). L&#39;opzione **[!UICONTROL Mostra schemi ad hoc]** filtra l&#39;elenco degli schemi creati con campi a cui è stato assegnato un namespace per l&#39;utilizzo da parte di un solo set di dati.
 
-![Il [!UICONTROL Schemi] workspace [!UICONTROL Sfoglia] con il pannello filtri evidenziato.](../images/ui/explore/filter.png)
+![Scheda [!UICONTROL Sfoglia] dell&#39;area di lavoro [!UICONTROL Schemi] con il pannello Filtri evidenziato.](../images/ui/explore/filter.png)
 
-Quando si elencano le risorse in **[!UICONTROL Classi]**, **[!UICONTROL Gruppi di campi]**, o **[!UICONTROL Tipi di dati]** schede, è possibile selezionare **[!UICONTROL Adobe]** per visualizzare solo le risorse standard o **[!UICONTROL Cliente]** per visualizzare solo le risorse create dall’organizzazione.
+Quando vengono elencate le risorse nelle schede **[!UICONTROL Classi]**, **[!UICONTROL Gruppi di campi]** o **[!UICONTROL Tipi di dati]**, è possibile selezionare **[!UICONTROL Adobe]** per visualizzare solo le risorse standard o **[!UICONTROL Cliente]** per visualizzare solo le risorse create dall&#39;organizzazione.
 
 ![](../images/ui/explore/filter-data-type.png)
 
@@ -56,17 +56,17 @@ Tutti i campi di tipo oggetto contenenti sottoproprietà vengono compressi per i
 
 ### Indicatore di classe e gruppo di campi standard {#standard-class-and-field-group-indicator}
 
-Nell’Editor schema, le classi e i gruppi di campi standard (generati dagli Adobi) sono indicati con l’icona a forma di lucchetto (![Icona del lucchetto.](../images/ui/explore/padlock-icon.png). Il lucchetto viene visualizzato nella barra a sinistra accanto al nome della classe o del gruppo di campi, nonché accanto a qualsiasi campo nel diagramma dello schema che fa parte di una risorsa generata dal sistema.
+Nell&#39;Editor schema, le classi e i gruppi di campi standard (generati da Adobi) sono indicati con l&#39;icona lucchetto (![Un&#39;icona lucchetto.](../images/ui/explore/padlock-icon.png). Il lucchetto viene visualizzato nella barra a sinistra accanto al nome della classe o del gruppo di campi, nonché accanto a qualsiasi campo nel diagramma dello schema che fa parte di una risorsa generata dal sistema.
 
-![Editor schema con l’icona lucchetto evidenziata](../images/ui/explore/schema-editor-padlock-icon.png)
+![Editor schema con l&#39;icona lucchetto evidenziata](../images/ui/explore/schema-editor-padlock-icon.png)
 
-Consulta la [Aggiungere campi personalizzati a gruppi di campi standard](./resources/schemas.md) documentazione di riferimento. Impossibile modificare una classe standard.
+Consulta la documentazione [Aggiungere campi personalizzati ai gruppi di campi standard](./resources/schemas.md). Impossibile modificare una classe standard.
 
 ### Campi generati dal sistema {#system-fields}
 
 Alcuni nomi di campo sono preceduti da un trattino basso, ad esempio `_repo` e `_id`. Questi rappresentano segnaposto per i campi che il sistema genera e assegna automaticamente quando i dati vengono acquisiti.
 
-Di conseguenza, la maggior parte di questi campi deve essere esclusa dalla struttura dei dati al momento dell’acquisizione in Platform. L&#39;eccezione principale a questa regola è la [`_{TENANT_ID}` campo](../api/getting-started.md#know-your-tenant_id), in cui tutti i campi XDM creati nell’organizzazione devono essere denominati.
+Di conseguenza, la maggior parte di questi campi deve essere esclusa dalla struttura dei dati al momento dell’acquisizione in Platform. L&#39;eccezione principale a questa regola è il campo [`_{TENANT_ID}`](../api/getting-started.md#know-your-tenant_id), in cui tutti i campi XDM creati nell&#39;organizzazione devono essere namespace.
 
 ### Tipi di dati {#data-types}
 
@@ -74,7 +74,7 @@ Per ogni campo visualizzato nell’area di lavoro, accanto al nome viene visuali
 
 ![](../images/ui/explore/data-types.png)
 
-Qualsiasi tipo di dati aggiunto con parentesi quadre (`[]`) rappresenta un array di quel particolare tipo di dati. Ad esempio, un tipo di dati **[!UICONTROL Stringa]\[]** indica che il campo richiede una matrice di valori stringa. Tipo di dati di **[!UICONTROL Voce di pagamento]\[]** indica un array di oggetti conformi al [!UICONTROL Voce di pagamento] tipo di dati.
+Qualsiasi tipo di dati aggiunto con parentesi quadre (`[]`) rappresenta una matrice di quel particolare tipo di dati. Ad esempio, un tipo di dati **[!UICONTROL String]\[]** indica che il campo richiede una matrice di valori stringa. Un tipo di dati **[!UICONTROL Elemento pagamento]\[]** indica un array di oggetti conformi al tipo di dati [!UICONTROL Elemento pagamento].
 
 Se un campo array è basato su un tipo di oggetto, è possibile selezionarne l&#39;icona nell&#39;area di lavoro per visualizzare gli attributi previsti per ogni elemento array.
 
@@ -82,7 +82,7 @@ Se un campo array è basato su un tipo di oggetto, è possibile selezionarne l&#
 
 ### [!UICONTROL Proprietà campo] {#field-properties}
 
-Quando selezioni il nome di qualsiasi campo nell’area di lavoro, la barra a destra si aggiorna per mostrare i dettagli di quel campo in **[!UICONTROL Proprietà campo]**. Può includere una descrizione del caso d’uso previsto del campo, valori predefiniti, modelli, formati, se il campo è obbligatorio o meno e altro ancora.
+Quando selezioni il nome di un campo nell&#39;area di lavoro, la barra a destra si aggiorna per mostrare i dettagli di quel campo in **[!UICONTROL Proprietà campo]**. Può includere una descrizione del caso d’uso previsto del campo, valori predefiniti, modelli, formati, se il campo è obbligatorio o meno e altro ancora.
 
 ![](../images/ui/explore/field-properties.png)
 
@@ -94,13 +94,13 @@ Se il campo che stai esaminando è un campo enum, nella barra a destra verranno 
 
 Durante l’analisi degli schemi che contengono campi di identità, questi campi sono elencati nella barra a sinistra sotto la classe o il gruppo di campi che li fornisce allo schema. Seleziona il nome del campo di identità nella barra a sinistra per visualizzare il campo nell’area di lavoro, indipendentemente dalla profondità di nidificazione.
 
-I campi di identità sono evidenziati nell’area di lavoro con l’icona di un’impronta digitale (![Immagine icona impronta digitale](../images/ui/explore/identity-symbol.png)). Se selezioni il nome del campo di identità, puoi visualizzare informazioni aggiuntive come [spazio dei nomi delle identità](../../identity-service/features/namespaces.md) e se il campo rappresenta o meno l’identità primaria dello schema.
+I campi di identità sono evidenziati nell&#39;area di lavoro con un&#39;icona di impronta digitale (![Immagine icona impronta digitale](../images/ui/explore/identity-symbol.png)). Se si seleziona il nome del campo di identità, è possibile visualizzare ulteriori informazioni, ad esempio lo spazio dei nomi [identità](../../identity-service/features/namespaces.md) e se il campo rappresenta o meno l&#39;identità primaria dello schema.
 
 ![](../images/ui/explore/identity-field.png)
 
 >[!NOTE]
 >
->Consulta la guida su [definizione dei campi di identità](./fields/identity.md) per ulteriori informazioni sui campi di identità e sulla loro relazione con i servizi Platform a valle.
+>Per ulteriori informazioni sui campi di identità e sulla loro relazione con i servizi Platform a valle, consulta la guida su [definizione dei campi di identità](./fields/identity.md).
 
 ### Campi di relazione {#relationship}
 
@@ -112,8 +112,8 @@ I campi di relazione vengono inoltre evidenziati in modo univoco nell’area di 
 
 >[!NOTE]
 >
->Guarda il tutorial su [creazione di una relazione nell’interfaccia utente](../tutorials/relationship-ui.md) per ulteriori informazioni sull’utilizzo delle relazioni negli schemi XDM.
+>Per ulteriori informazioni sull&#39;utilizzo delle relazioni negli schemi XDM, consulta il tutorial su [creazione di una relazione nell&#39;interfaccia utente](../tutorials/relationship-ui.md).
 
 ## Passaggi successivi
 
-Questo documento illustra come esplorare le risorse XDM esistenti nell’interfaccia utente di Experienci Platform. Per ulteriori informazioni sulle diverse funzioni del [!UICONTROL Schemi] workspace e [!DNL Schema Editor], vedere [[!UICONTROL Schemi] panoramica di workspace](./overview.md).
+Questo documento illustra come esplorare le risorse XDM esistenti nell’interfaccia utente di Experience Platform. Per ulteriori informazioni sulle diverse funzionalità dell&#39;area di lavoro [!UICONTROL Schemi] e [!DNL Schema Editor], vedere la panoramica dell&#39;area di lavoro [[!UICONTROL Schemi]](./overview.md).

@@ -14,22 +14,22 @@ ht-degree: 3%
 
 ## Panoramica {#overview}
 
-Il `/authoring/testing/template/render` l’endpoint consente di visualizzare il modo in cui il modello [campi dati cliente](../../functionality/destination-configuration/customer-data-fields.md) definito nella configurazione di destinazione sarà simile a.
+L&#39;endpoint `/authoring/testing/template/render` consente di visualizzare l&#39;aspetto dei [campi dati cliente](../../functionality/destination-configuration/customer-data-fields.md) definiti nella configurazione di destinazione.
 
 L’endpoint genera valori casuali per i campi dati del cliente e li restituisce nella risposta. Questo consente di convalidare la struttura semantica dei campi dati del cliente, ad esempio i nomi dei bucket o i percorsi delle cartelle.
 
 ## Introduzione {#getting-started}
 
-Prima di continuare, controlla [guida introduttiva](../../getting-started.md) per informazioni importanti che è necessario conoscere per effettuare correttamente chiamate all’API, tra cui come ottenere l’autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
+Prima di continuare, consulta la [guida introduttiva](../../getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
 
 ## Prerequisiti {#prerequisites}
 
-Prima di utilizzare il `/template/render` endpoint, assicurati di soddisfare le seguenti condizioni:
+Prima di poter utilizzare l&#39;endpoint `/template/render`, verificare di soddisfare le seguenti condizioni:
 
-* Hai già una destinazione basata su file creata tramite la Destination SDK e puoi visualizzarla nel tuo [catalogo delle destinazioni](../../../ui/destinations-workspace.md).
+* Hai già una destinazione basata su file creata tramite la Destination SDK e la puoi visualizzare nel [catalogo delle destinazioni](../../../ui/destinations-workspace.md).
 * Per eseguire correttamente la richiesta API, è necessario disporre dell’ID dell’istanza di destinazione corrispondente all’istanza di destinazione da testare. Ottieni dall’URL l’ID dell’istanza di destinazione da utilizzare nella chiamata API per la navigazione di una connessione con la destinazione nell’interfaccia utente di Platform.
 
-   ![Immagine dell’interfaccia utente che mostra come ottenere l’ID dell’istanza di destinazione dall’URL.](../../assets/testing-api/get-destination-instance-id.png)
+  ![Immagine dell&#39;interfaccia utente che mostra come ottenere l&#39;ID dell&#39;istanza di destinazione dall&#39;URL.](../../assets/testing-api/get-destination-instance-id.png)
 
 ## Campi cliente con modello di rendering {#render-customer-fields}
 
@@ -56,7 +56,7 @@ Per illustrare il comportamento di questo endpoint API, prendiamo in considerazi
 
 **Richiesta**
 
-La richiesta seguente chiama `/authoring/testing/template/render` endpoint, che restituisce una risposta con valori generati in modo casuale per i due campi dati cliente sopra menzionati.
+La richiesta seguente chiama l&#39;endpoint `/authoring/testing/template/render`, che restituisce una risposta con valori generati in modo casuale per i due campi dati cliente sopra menzionati.
 
 ```shell
 curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/template/render/destination' \
@@ -75,14 +75,14 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/t
 }'
 ```
 
-| Parametri | Descrizione |
+| Elemento “parameters” | Descrizione |
 | -------- | ----------- |
-| `destinationId` | ID del [configurazione di destinazione](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) che stai testando. |
-| `templates` | I nomi dei campi con modelli definiti nel [configurazione del server di destinazione](../../authoring-api/destination-server/create-destination-server.md). |
+| `destinationId` | ID della [configurazione di destinazione](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) che si sta testando. |
+| `templates` | I nomi dei campi con modelli definiti nella [configurazione del server di destinazione](../../authoring-api/destination-server/create-destination-server.md). |
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce `HTTP 200 OK` e il corpo include valori generati in modo casuale per i campi del modello.
+In caso di esito positivo, la risposta restituisce lo stato `HTTP 200 OK` e il corpo include valori generati in modo casuale per i campi modello.
 
 Questa risposta può essere utile per convalidare la struttura corretta dei campi dati del cliente, ad esempio i nomi dei bucket o i percorsi delle cartelle.
 
@@ -98,8 +98,8 @@ Questa risposta può essere utile per convalidare la struttura corretta dei camp
 
 ## Gestione degli errori API {#api-error-handling}
 
-Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Fai riferimento a [Codici di stato API](../../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
+Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](../../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
 
 ## Passaggi successivi {#next-steps}
 
-Dopo aver letto questo documento, ora sai come convalidare la configurazione del campo dati cliente definita nel [server di destinazione](../../authoring-api/destination-server/create-destination-server.md).
+Dopo aver letto questo documento, sai come convalidare la configurazione del campo dati cliente definita nel [server di destinazione](../../authoring-api/destination-server/create-destination-server.md).

@@ -4,7 +4,7 @@ description: Note aggiornate sulla versione per l’estensione tag Adobe Analyti
 exl-id: 3ddc3e6f-412c-42d5-8cbf-25273c1794d5
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '131'
+source-wordcount: '135'
 ht-degree: 86%
 
 ---

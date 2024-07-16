@@ -15,13 +15,13 @@ ht-degree: 2%
 
 This document provides an overview of the AI/ML feature pipelines use case and details the steps required to get started with the cloud machine learning environment (CMLE) notebooks. -->
 
-Data Distiller consente ai data scientist e ai tecnici di arricchire le pipeline di apprendimento automatico con dati di esperienza del cliente di alto valore raccolti e curati in Adobe Experience Platform. Da un [!DNL Python] in qualsiasi ambiente, puoi esplorare in modo interattivo i dati dei clienti nell’Experience Platform, definire ed elaborare le funzioni in base ai dati e leggere le funzioni calcolate nell’ambiente di machine learning per la modellazione.
+Data Distiller consente ai data scientist e ai tecnici di arricchire le pipeline di apprendimento automatico con dati di esperienza del cliente di alto valore raccolti e curati in Adobe Experience Platform. Da un blocco appunti [!DNL Python] in qualsiasi ambiente, puoi esplorare in modo interattivo i dati dei clienti nell&#39;Experience Platform, definire ed elaborare le funzioni dai dati e leggere le funzioni calcolate nell&#39;ambiente di machine learning per la modellazione.
 
 >[!IMPORTANT]
 >
 >Questo flusso di lavoro richiede Data Distiller e una licenza Adobe Experience Platform Intelligence. Se non disponi di uno di questi prodotti, contatta il rappresentante del servizio Adobe.
 
-![Un’infografica che descrive la pipeline delle funzioni AI-ML.](../../images/data-distiller/ai-ml-feature-pipeline.png)
+![Un&#39;infografica che descrive la pipeline delle funzioni di IA-ML.](../../images/data-distiller/ai-ml-feature-pipeline.png)
 
 - Grazie alle potenti funzionalità di query di Data Distiller, puoi estrarre funzioni significative dai dati comportamentali avanzati disponibili nell’Experience Platform. Puoi quindi inserire i dati delle funzioni distillati nell’ambiente di apprendimento automatico senza dover copiare grandi volumi di dati evento al di fuori dell’Experience Platform.
 - Leggi il set di dati delle funzioni preparato negli strumenti di apprendimento automatico preferiti e combinali con altre funzioni derivate dai dati aziendali per addestrare, sperimentare, ottimizzare e distribuire modelli personalizzati personalizzati per la tua azienda.
@@ -31,27 +31,27 @@ Data Distiller consente ai data scientist e ai tecnici di arricchire le pipeline
 
 Questo flusso di lavoro richiede una buona conoscenza dei vari aspetti di Adobe Experience Platform. Prima di iniziare questo tutorial, consulta la documentazione per i seguenti concetti:
 
-- Procedura [autenticare e accedere alle API Experienci Platform](../../../landing/api-authentication.md).
-- Sandbox: [Autorizzazioni di controllo dell’accesso basate su attributi](../../../access-control/abac/overview.md) e come creare e gestire i ruoli, nonché assegnare le autorizzazioni per le risorse desiderate per tali ruoli.
-- Governance dei dati: come [applica etichette di utilizzo dati a set di dati e campi, suddividendoli in categorie](../../../data-governance/labels/overview.md) in base ai criteri di governance dei dati e ai criteri di controllo degli accessi correlati.
+- Come [autenticare e accedere alle API Experience Platform](../../../landing/api-authentication.md).
+- Sandbox: [Autorizzazioni di controllo dell&#39;accesso basate su attributi](../../../access-control/abac/overview.md) e modalità di creazione e gestione dei ruoli, nonché assegnazione delle autorizzazioni di risorse desiderate per questi ruoli.
+- Governance dei dati: come [applicare etichette di utilizzo dei dati a set di dati e campi, suddividendoli in categorie](../../../data-governance/labels/overview.md) in base ai criteri di governance dei dati e ai criteri di controllo degli accessi correlati.
 
 ## Passaggi successivi
 
 Dopo aver letto questo documento, ti sono stati presentati i concetti importanti che si basano sull’utilizzo degli strumenti di machine learning preferiti per creare modelli personalizzati che supportano i casi di utilizzo di marketing.
 
-I documenti inclusi in questa serie di guide descrivono i passaggi di base per la creazione di feature pipeline da un Experience Platform all’altro per alimentare modelli personalizzati nell’ambiente di apprendimento automatico. Ora puoi stabilire una connessione tra Data Distiller e il tuo [!DNL Jupyter Notebook].
+I documenti inclusi in questa serie di guide descrivono i passaggi di base per la creazione di feature pipeline da un Experience Platform all’altro per alimentare modelli personalizzati nell’ambiente di apprendimento automatico. È ora possibile stabilire una connessione tra Data Distiller e [!DNL Jupyter Notebook].
 
-- **Configurazione**: [Connessione a Data Distiller da un [!DNL Python] notebook](./establish-connection.md)
+- **Configurazione**: [Connessione a Data Distiller da un [!DNL Python] blocco appunti](./establish-connection.md)
 
 La documentazione collegata di seguito corrisponde ai passaggi indicati nell’infografica precedente.
 
 - **Passaggio 1**: [Esplorare e analizzare i set di dati](./exploratory-analysis.md)
-- **Passaggio 2**: [Funzioni di ingegnere per l’apprendimento automatico](./feature-engineering.md)
-- **Passaggio 3**: [Esporta set di dati di funzionalità](./export-data.md)
+- **Passaggio 2**: [Caratteristiche tecniche per l&#39;apprendimento automatico](./feature-engineering.md)
+- **Passaggio 3**: [Esporta set di dati della funzionalità](./export-data.md)
 
 ## Risorse aggiuntive
 
-- [aepp](https://github.com/adobe/aepp): open source gestito da Adobe [!DNL Python] per effettuare richieste a Data Distiller e ad altri servizi di Experience Platform da [!DNL Python] codice.
+- [aepp](https://github.com/adobe/aepp): libreria [!DNL Python] open source gestita da Adobe per l&#39;esecuzione di richieste a Data Distiller e ad altri servizi Experience Platform dal codice [!DNL Python].
 
 <!-- Old content below -->
 

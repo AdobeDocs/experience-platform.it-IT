@@ -7,7 +7,7 @@ feature: Sandboxes
 source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '70'
-ht-degree: 62%
+ht-degree: 72%
 
 ---
 
@@ -16,8 +16,8 @@ ht-degree: 62%
 
 * [Panoramica sulle sandbox](home.md)
 * Interfaccia utente sandbox {#ui}
-   * [Panoramica dell’interfaccia utente Sandbox](ui/overview.md)
-   * [Guida utente sulle sandbox](ui/user-guide.md)
+   * [Panoramica dell’interfaccia della sandbox](ui/overview.md)
+   * [Guida utente delle sandbox](ui/user-guide.md)
    * [Strumenti sandbox](ui/sandbox-tooling.md)
 * API sandbox {#api}
    * [Panoramica](api/overview.md)
@@ -26,7 +26,7 @@ ht-degree: 62%
    * [Gestione sandbox](api/sandboxes.md)
    * [Tipi di sandbox](api/types.md)
    * [Appendice](api/appendix.md)
-* API strumenti sandbox {#sandbox-tooling-api}
+* API degli strumenti sandbox {#sandbox-tooling-api}
    * [Panoramica](sandbox-tooling-api/overview.md)
    * [Introduzione](sandbox-tooling-api/getting-started.md)
    * [Pacchetti](sandbox-tooling-api/packages.md)
@@ -34,4 +34,4 @@ ht-degree: 62%
    * [Appendice](sandbox-tooling-api/appendix.md)
 * [Guida alla risoluzione dei problemi](troubleshooting-guide.md)
 * [Riferimento API](https://www.adobe.io/experience-platform-apis/references/sandbox)
-* [Note sulla versione della piattaforma](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Note sulla versione della piattaforma](https://experienceleague.adobe.com/it/docs/experience-platform/release-notes/latest)

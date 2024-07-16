@@ -53,7 +53,7 @@ Crea una regola specificando le azioni che si verificano se viene soddisfatta un
 
 >[!TIP]
 >
->Puoi visualizzare le risorse aggiuntive disponibili per ulteriori informazioni su questa funzione selezionando ![informazioni su](../../images/ui/event-forwarding/overview/about.png) nel pannello a destra.
+>Puoi visualizzare le risorse aggiuntive disponibili per ulteriori informazioni su questa funzione selezionando ![informazioni](../../images/ui/event-forwarding/overview/about.png) dal pannello a destra.
 
 1. Apri la scheda [!UICONTROL Regole], quindi seleziona **[!UICONTROL Crea nuova regola]**.
 
@@ -63,7 +63,7 @@ Crea una regola specificando le azioni che si verificano se viene soddisfatta un
 1. Fai clic sull’icona **[!UICONTROL Aggiungi]** degli Eventi.
 1. Seleziona l’estensione e uno dei tipi di evento disponibili per tale estensione, quindi configura le impostazioni dell’evento.
 
-   ![Pagina Configurazione evento regole.](../../images/rule-event-config.png)
+   ![Pagina configurazione evento regole.](../../images/rule-event-config.png)
 
    I tipi di evento disponibili dipendono dall’estensione selezionata. Le impostazioni dell’evento variano a seconda del tipo di evento. Alcuni eventi non dispongono di impostazioni da configurare.
 
@@ -91,7 +91,7 @@ Crea una regola specificando le azioni che si verificano se viene soddisfatta un
 
      Se desideri che venga eseguita in un secondo momento, impostala con un numero maggiore di 50. Per ulteriori informazioni sull&#39;ordinamento, consulta [Ordinamento delle regole](rules.md#rule-ordering).
 
-1. Seleziona le Condizioni **[!UICONTROL Aggiungi]** , quindi seleziona un tipo di logica, un’estensione, un tipo di condizione e configura le impostazioni della condizione. Quindi, seleziona **[!UICONTROL Mantieni modifiche]**.
+1. Fai clic sull&#39;icona **[!UICONTROL Aggiungi]** delle Condizioni, quindi seleziona un tipo di logica, un&#39;estensione, un tipo di condizione e configura le impostazioni della condizione. Quindi, seleziona **[!UICONTROL Mantieni modifiche]**.
 
    ![Pagina di configurazione della condizione delle regole.](../../images/condition-settings.png)
 
@@ -106,9 +106,9 @@ Crea una regola specificando le azioni che si verificano se viene soddisfatta un
 
    È possibile aggiungere tutte le condizioni desiderate. Più condizioni all’interno della stessa regola sono collegate da AND.
 
-1. Seleziona le azioni **[!UICONTROL Aggiungi]** , quindi seleziona l’estensione e uno dei tipi di azione disponibili per l’estensione, configura le impostazioni per l’azione, quindi seleziona **[!UICONTROL Mantieni modifiche]**.
+1. Fai clic sull&#39;icona Azioni **[!UICONTROL Aggiungi]**, quindi seleziona l&#39;estensione e uno dei tipi di azione disponibili per l&#39;estensione, configura le impostazioni per l&#39;azione, quindi seleziona **[!UICONTROL Mantieni modifiche]**.
 
-   ![Pagina di configurazione dell&#39;azione delle regole.](../../images/action-settings.png)
+   ![Pagina di configurazione azione delle regole.](../../images/action-settings.png)
 
    I tipi di azioni disponibili dipendono dall’estensione selezionata. Le impostazioni delle azioni variano a seconda del tipo di azione.
 
@@ -167,13 +167,13 @@ Adobe non è in grado di garantire che vengano attivate altre regole e che sia n
 
 ## Sequenza dei componenti della regola {#sequencing}
 
-Il comportamento dell’ambiente di runtime dipende dal fatto se **[!UICONTROL Eseguire componenti regola in sequenza]** è attivato o disattivato per la proprietà. Questa impostazione determina se i componenti di una regola possono essere valutati in parallelo (in modo asincrono) o se devono essere valutati in sequenza.
+Il comportamento dell&#39;ambiente di runtime dipende dall&#39;abilitazione o meno di **[!UICONTROL Esegui componenti regola in sequenza]** per la proprietà. Questa impostazione determina se i componenti di una regola possono essere valutati in parallelo (in modo asincrono) o se devono essere valutati in sequenza.
 
 >[!IMPORTANT]
 >
->Questa impostazione determina solo il modo in cui le condizioni e le azioni vengono valutate all’interno di ogni regola e non influisce sulla sequenza in cui le regole stesse vengono eseguite sulla proprietà. Consulta la sezione precedente su [ordine regole](#rule-ordering) per ulteriori informazioni su come determinare l’ordine di esecuzione per più regole.
+>Questa impostazione determina solo il modo in cui le condizioni e le azioni vengono valutate all’interno di ogni regola e non influisce sulla sequenza in cui le regole stesse vengono eseguite sulla proprietà. Per ulteriori informazioni su come determinare l&#39;ordine di esecuzione per più regole, fare riferimento alla sezione precedente sull&#39;[ordinamento regole](#rule-ordering).
 >
->In entrata [inoltro eventi](../event-forwarding/overview.md) Le proprietà, le azioni delle regole vengono sempre eseguite in sequenza e questa impostazione non è disponibile. Nel creare la regola è importante accertarsi che l’ordine sia corretto.
+>Nelle proprietà [inoltro eventi](../event-forwarding/overview.md), le azioni delle regole vengono sempre eseguite in sequenza e questa impostazione non è disponibile. Nel creare la regola è importante accertarsi che l’ordine sia corretto.
 
 ### Abilitata
 

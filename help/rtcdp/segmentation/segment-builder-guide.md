@@ -16,4 +16,4 @@ ht-degree: 0%
 
 Basato su Adobe Experience Platform, [!DNL Adobe Real-Time Customer Data Platform] è in grado di utilizzare tutte le funzionalità del Generatore di segmenti che fanno parte di [!DNL Experience Platform]. Nell’interfaccia utente del Generatore di segmenti puoi creare nuovi tipi di pubblico, accedere a quelli esistenti e modificare quelli esistenti.
 
-Per una guida più dettagliata sul Generatore di segmenti, leggi [Guida utente di Segment Builder](../../segmentation/ui/segment-builder.md).
+Per una guida più dettagliata sul Generatore di segmenti, consulta la [guida utente del Generatore di segmenti](../../segmentation/ui/segment-builder.md).

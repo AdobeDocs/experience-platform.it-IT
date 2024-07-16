@@ -6,30 +6,30 @@ description: Scopri come collegare Adobe Experience Platform a MailChimp Campaig
 exl-id: fd4821c7-6fe1-4cad-8e13-3549dbe0ce98
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
-source-wordcount: '1942'
+source-wordcount: '1925'
 ht-degree: 2%
 
 ---
 
-# Creare un flusso di dati per [!DNL Mailchimp Campaign] utilizzo dell’API del servizio Flusso
+# Creare un flusso di dati per [!DNL Mailchimp Campaign] utilizzando l&#39;API del servizio Flusso
 
-Il seguente tutorial illustra i passaggi necessari per creare una connessione di origine e un flusso di dati da portare [!DNL Mailchimp Campaign] dati a Platform utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Il seguente tutorial illustra i passaggi necessari per creare una connessione di origine e un flusso di dati per portare i dati [!DNL Mailchimp Campaign] in Platform utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prerequisiti
 
-Prima di connettersi [!DNL Mailchimp] a Adobe Experience Platform utilizzando il codice di aggiornamento OAuth 2, devi prima recuperare il token di accesso per [!DNL MailChimp.] Consulta la [[!DNL Mailchimp] Guida di OAuth 2](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/) per istruzioni dettagliate su come trovare il token di accesso.
+Prima di poter connettere [!DNL Mailchimp] a Adobe Experience Platform utilizzando il codice di aggiornamento OAuth 2, devi prima recuperare il token di accesso per [!DNL MailChimp.] Per istruzioni dettagliate su come trovare il token di accesso, consulta la [[!DNL Mailchimp] guida di OAuth 2](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/).
 
 ## Creare una connessione di base {#base-connection}
 
-Dopo aver recuperato [!DNL Mailchimp] credenziali di autenticazione, ora puoi avviare il processo di creazione del flusso di dati per portare [!DNL Mailchimp Campaign] su Platform. Il primo passaggio nella creazione di un flusso di dati consiste nel creare una connessione di base.
+Dopo aver recuperato le credenziali di autenticazione di [!DNL Mailchimp], ora puoi avviare il processo di creazione del flusso di dati per portare i dati di [!DNL Mailchimp Campaign] in Platform. Il primo passaggio nella creazione di un flusso di dati consiste nel creare una connessione di base.
 
 Una connessione di base mantiene le informazioni tra l’origine e Platform, incluse le credenziali di autenticazione dell’origine, lo stato corrente della connessione e l’ID univoco della connessione di base. L’ID della connessione di base consente di esplorare e navigare tra i file dall’interno dell’origine e identificare gli elementi specifici che desideri acquisire, comprese le informazioni relative ai tipi di dati e ai formati.
 
-[!DNL Mailchimp] supporta sia l’autenticazione di base che il codice di aggiornamento OAuth 2. Per istruzioni su come eseguire l’autenticazione con uno dei tipi di autenticazione, consulta gli esempi seguenti.
+[!DNL Mailchimp] supporta sia l&#39;autenticazione di base che il codice di aggiornamento OAuth 2. Per istruzioni su come eseguire l’autenticazione con uno dei tipi di autenticazione, consulta gli esempi seguenti.
 
-### Creare un [!DNL Mailchimp] connessione di base tramite autenticazione di base
+### Crea una connessione di base [!DNL Mailchimp] utilizzando l&#39;autenticazione di base
 
-Per creare un [!DNL Mailchimp] connessione di base tramite autenticazione di base, invia una richiesta POST al `/connections` endpoint di [!DNL Flow Service] fornendo al contempo le credenziali per il `authorizationTestUrl`, `username`, e `password`.
+Per creare una connessione di base [!DNL Mailchimp] utilizzando l&#39;autenticazione di base, eseguire una richiesta POST all&#39;endpoint `/connections` dell&#39;API [!DNL Flow Service] fornendo le credenziali per `authorizationTestUrl`, `username` e `password`.
 
 **Formato API**
 
@@ -71,11 +71,11 @@ curl -X POST \
 | --- | --- |
 | `name` | Nome della connessione di base. Verificare che il nome della connessione di base sia descrittivo, in quanto è possibile utilizzarlo per cercare informazioni sulla connessione di base. |
 | `description` | (Facoltativo) Proprietà che è possibile includere per fornire ulteriori informazioni sulla connessione di base. |
-| `connectionSpec.id` | ID della specifica di connessione dell&#39;origine. Questo ID può essere recuperato dopo che l&#39;origine è stata registrata e approvata tramite [!DNL Flow Service] API. |
+| `connectionSpec.id` | ID della specifica di connessione dell&#39;origine. Questo ID può essere recuperato dopo che l&#39;origine è stata registrata e approvata tramite l&#39;API [!DNL Flow Service]. |
 | `auth.specName` | Tipo di autenticazione utilizzato per connettere l’origine a Platform. |
 | `auth.params.authorizationTestUrl` | (Facoltativo) L’URL del test di autorizzazione viene utilizzato per convalidare le credenziali durante la creazione di una connessione di base. Se non vengono fornite, le credenziali vengono controllate automaticamente durante il passaggio di creazione della connessione di origine. |
-| `auth.params.username` | Il nome utente che corrisponde al [!DNL Mailchimp] account. Questa opzione è necessaria per l’autenticazione di base. |
-| `auth.params.password` | La password che corrisponde al tuo [!DNL Mailchimp] account. Questa opzione è necessaria per l’autenticazione di base. |
+| `auth.params.username` | Nome utente corrispondente all&#39;account [!DNL Mailchimp]. Questa opzione è necessaria per l’autenticazione di base. |
+| `auth.params.password` | Password corrispondente all&#39;account [!DNL Mailchimp]. Questa opzione è necessaria per l’autenticazione di base. |
 
 **Risposta**
 
@@ -88,9 +88,9 @@ In caso di esito positivo, la risposta restituisce la connessione di base appena
 }
 ```
 
-### Creare un [!DNL Mailchimp] connessione di base tramite codice di aggiornamento OAuth 2
+### Crea una connessione di base [!DNL Mailchimp] utilizzando il codice di aggiornamento OAuth 2
 
-Per creare un [!DNL Mailchimp] connessione di base utilizzando il codice di aggiornamento OAuth 2, invia una richiesta POST al `/connections` mentre si forniscono le credenziali per il proprio `authorizationTestUrl`, e `accessToken`.
+Per creare una connessione di base [!DNL Mailchimp] utilizzando il codice di aggiornamento OAuth 2, effettuare una richiesta POST all&#39;endpoint `/connections` fornendo le credenziali per `authorizationTestUrl` e `accessToken`.
 
 **Formato API**
 
@@ -131,7 +131,7 @@ curl -X POST \
 | --- | --- |
 | `name` | Nome della connessione di base. Verificare che il nome della connessione di base sia descrittivo, in quanto è possibile utilizzarlo per cercare informazioni sulla connessione di base. |
 | `description` | (Facoltativo) Proprietà che è possibile includere per fornire ulteriori informazioni sulla connessione di base. |
-| `connectionSpec.id` | ID della specifica di connessione dell&#39;origine. Questo ID può essere recuperato dopo la registrazione della sorgente tramite [!DNL Flow Service] API. |
+| `connectionSpec.id` | ID della specifica di connessione dell&#39;origine. Questo ID può essere recuperato dopo la registrazione dell&#39;origine con l&#39;API [!DNL Flow Service]. |
 | `auth.specName` | Tipo di autenticazione utilizzato per autenticare l’origine in Platform. |
 | `auth.params.authorizationTestUrl` | (Facoltativo) L’URL del test di autorizzazione viene utilizzato per convalidare le credenziali durante la creazione di una connessione di base. Se non vengono fornite, le credenziali vengono controllate automaticamente durante il passaggio di creazione della connessione di origine. |
 | `auth.params.accessToken` | Il token di accesso corrispondente utilizzato per autenticare l’origine. Questo è richiesto per l’autenticazione basata su OAuth. |
@@ -158,11 +158,11 @@ Utilizzando l’ID connessione di base generato nel passaggio precedente, puoi e
 | `{OBJECT}` | L’oggetto che desideri esplorare. |
 | `{FILE_TYPE}` | Questo parametro è necessario solo quando si visualizza una directory specifica. Il relativo valore rappresenta il percorso della directory che desideri esplorare. |
 | `{PREVIEW}` | Valore booleano che definisce se il contenuto della connessione supporta l’anteprima. |
-| `{SOURCE_PARAMS}` | Una stringa con codifica base64 del file `campaign_id`. |
+| `{SOURCE_PARAMS}` | Stringa con codifica base64 di `campaign_id`. |
 
 >[!TIP]
 >
->Per recuperare il formato accettato per `{SOURCE_PARAMS}`, è necessario codificare l&#39;intero `campaignId` stringa in base64. Ad esempio: `{"campaignId": "c66a200cda"}` codificato in base64 equivale a `eyJjYW1wYWlnbklkIjoiYzY2YTIwMGNkYSJ9`.
+>Per recuperare il formato accettato per `{SOURCE_PARAMS}`, è necessario codificare l&#39;intera stringa `campaignId` in base64. Ad esempio, `{"campaignId": "c66a200cda"}` codificato in base64 equivale a `eyJjYW1wYWlnbklkIjoiYzY2YTIwMGNkYSJ9`.
 
 **Formato API**
 
@@ -252,19 +252,19 @@ In caso di esito positivo, la risposta restituisce la struttura del file su cui 
 
 ## Creare una connessione sorgente {#source-connection}
 
-Puoi creare una connessione sorgente effettuando una richiesta POST al [!DNL Flow Service] API. Una connessione di origine è costituita da un ID di connessione, un percorso del file di dati di origine e un ID della specifica di connessione.
+È possibile creare una connessione di origine effettuando una richiesta POST all&#39;API [!DNL Flow Service]. Una connessione di origine è costituita da un ID di connessione, un percorso del file di dati di origine e un ID della specifica di connessione.
 
 Per creare una connessione di origine, è inoltre necessario definire un valore enum per l&#39;attributo formato dati.
 
 Utilizzare i seguenti valori enum per le origini basate su file:
 
-| Formato dati | Valore enum |
+| Formato dei dati | Valore enum |
 | ----------- | ---------- |
 | Delimitato | `delimited` |
 | JSON | `json` |
 | Parquet | `parquet` |
 
-Per tutte le origini basate su tabelle, imposta il valore su `tabular`.
+Per tutte le origini basate su tabelle, impostare il valore su `tabular`.
 
 **Formato API**
 
@@ -274,7 +274,7 @@ POST /sourceConnections
 
 **Richiesta**
 
-La richiesta seguente crea una connessione sorgente per [!DNL Mailchimp]:
+La richiesta seguente crea una connessione di origine per [!DNL Mailchimp]:
 
 ```shell
 curl -X POST \
@@ -307,12 +307,12 @@ curl -X POST \
 | `description` | Valore facoltativo che è possibile includere per fornire ulteriori informazioni sulla connessione di origine. |
 | `baseConnectionId` | ID connessione di base di [!DNL Mailchimp]. Questo ID è stato generato in un passaggio precedente. |
 | `connectionSpec.id` | ID della specifica di connessione corrispondente all&#39;origine. |
-| `data.format` | Il formato del [!DNL Mailchimp] i dati che desideri acquisire. |
-| `params.campaignId` | Il [!DNL Mailchimp] l’ID della campagna identifica un [!DNL Mailchimp] Campaign, che ti consente di inviare e-mail ai tuoi elenchi/tipi di pubblico. |
+| `data.format` | Formato dei dati [!DNL Mailchimp] che si desidera acquisire. |
+| `params.campaignId` | L&#39;ID campagna [!DNL Mailchimp] identifica una campagna [!DNL Mailchimp] specifica, che consente quindi di inviare e-mail ai tuoi elenchi/tipi di pubblico. |
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce l’identificatore univoco (`id`) della connessione sorgente appena creata. Questo ID è necessario in un passaggio successivo per creare un flusso di dati.
+In caso di esito positivo, la risposta restituisce l&#39;identificatore univoco (`id`) della connessione di origine appena creata. Questo ID è necessario in un passaggio successivo per creare un flusso di dati.
 
 ```json
 {
@@ -325,21 +325,21 @@ In caso di esito positivo, la risposta restituisce l’identificatore univoco (`
 
 Per utilizzare i dati sorgente in Platform, è necessario creare uno schema di destinazione che strutturi i dati sorgente in base alle tue esigenze. Lo schema di destinazione viene quindi utilizzato per creare un set di dati di Platform in cui sono contenuti i dati di origine.
 
-È possibile creare uno schema XDM di destinazione eseguendo una richiesta POST al [API del registro dello schema](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+È possibile creare uno schema XDM di destinazione eseguendo una richiesta POST all&#39;API [Schema Registry](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
-Per i passaggi dettagliati su come creare uno schema XDM di destinazione, consulta l’esercitazione su [creazione di uno schema tramite l’API](../../../../../xdm/api/schemas.md).
+Per i passaggi dettagliati su come creare uno schema XDM di destinazione, consulta l&#39;esercitazione su [creazione di uno schema utilizzando l&#39;API](../../../../../xdm/api/schemas.md).
 
 ### Creare un set di dati di destinazione {#target-dataset}
 
-È possibile creare un set di dati di destinazione eseguendo una richiesta POST al [API Catalog Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), che fornisce l’ID dello schema di destinazione all’interno del payload.
+È possibile creare un set di dati di destinazione eseguendo una richiesta POST all&#39;API [Catalog Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), fornendo l&#39;ID dello schema di destinazione all&#39;interno del payload.
 
-Per i passaggi dettagliati su come creare un set di dati di destinazione, consulta l’esercitazione su [creazione di un set di dati tramite l’API](../../../../../catalog/api/create-dataset.md).
+Per i passaggi dettagliati su come creare un set di dati di destinazione, consulta l&#39;esercitazione su [creazione di un set di dati utilizzando l&#39;API](../../../../../catalog/api/create-dataset.md).
 
 ## Creare una connessione di destinazione {#target-connection}
 
-Una connessione di destinazione rappresenta la connessione alla destinazione in cui arrivano i dati acquisiti. Per creare una connessione di destinazione, devi fornire l&#39;ID di specifica della connessione fissa che corrisponde al [!DNL Data Lake]. Questo ID è: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Una connessione di destinazione rappresenta la connessione alla destinazione in cui arrivano i dati acquisiti. Per creare una connessione di destinazione, è necessario fornire l&#39;ID della specifica di connessione fissa corrispondente a [!DNL Data Lake]. ID: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Ora disponi degli identificatori univoci, di uno schema di destinazione, di un set di dati di destinazione e dell’ID della specifica di connessione al [!DNL Data Lake]. Utilizzando questi identificatori, puoi creare una connessione di destinazione utilizzando [!DNL Flow Service] API per specificare il set di dati che conterrà i dati di origine in entrata.
+Ora disponi degli identificatori univoci uno schema di destinazione un set di dati di destinazione e l&#39;ID della specifica di connessione a [!DNL Data Lake]. Utilizzando questi identificatori, è possibile creare una connessione di destinazione utilizzando l&#39;API [!DNL Flow Service] per specificare il set di dati che conterrà i dati di origine in entrata.
 
 **Formato API**
 
@@ -383,14 +383,14 @@ curl -X POST \
 | -------- | ----------- |
 | `name` | Nome della connessione di destinazione. Assicurati che il nome della connessione di destinazione sia descrittivo, in quanto può essere utilizzato per cercare informazioni sulla connessione di destinazione. |
 | `description` | Valore facoltativo che è possibile includere per fornire ulteriori informazioni sulla connessione di destinazione. |
-| `connectionSpec.id` | ID della specifica di connessione che corrisponde a [!DNL Data Lake]. Questo ID fisso è: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | Il formato del [!DNL Mailchimp] dati da inserire in Platform. |
+| `connectionSpec.id` | ID della specifica di connessione corrispondente a [!DNL Data Lake]. ID corretto: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `data.format` | Il formato dei dati [!DNL Mailchimp] che desideri portare in Platform. |
 | `params.dataSetId` | ID del set di dati di destinazione recuperato in un passaggio precedente. |
 
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce l’identificatore univoco della nuova connessione di destinazione (`id`). Questo ID è richiesto nei passaggi successivi.
+Una risposta corretta restituisce l&#39;identificatore univoco della nuova connessione di destinazione (`id`). Questo ID è richiesto nei passaggi successivi.
 
 ```json
 {
@@ -471,14 +471,14 @@ A successful response returns details of the newly created mapping including its
 
 ## Creare un flusso {#flow}
 
-L&#39;ultimo passo verso la [!DNL Mailchimp] I dati da a Platform consistono nel creare un flusso di dati. A questo punto sono stati preparati i seguenti valori obbligatori:
+L&#39;ultimo passaggio per l&#39;immissione di dati [!DNL Mailchimp] in Platform consiste nella creazione di un flusso di dati. A questo punto sono stati preparati i seguenti valori obbligatori:
 
-* [ID connessione sorgente](#source-connection)
+* [ID connessione Source](#source-connection)
 * [ID connessione di destinazione](#target-connection)
 
 Un flusso di dati è responsabile della pianificazione e della raccolta di dati da un’origine. Puoi creare un flusso di dati eseguendo una richiesta POST e fornendo i valori precedentemente menzionati all’interno del payload.
 
-Per pianificare un’acquisizione, devi prima impostare il valore dell’ora di inizio su tempo epoca in secondi. Quindi, è necessario impostare il valore della frequenza su una delle cinque opzioni seguenti: `once`, `minute`, `hour`, `day`, o `week`. Il valore di intervallo indica il periodo tra due acquisizioni consecutive e la creazione di un’acquisizione una tantum (`once`) non richiede l&#39;impostazione di un intervallo. Per tutte le altre frequenze, il valore dell&#39;intervallo deve essere impostato su uguale o maggiore di `15`.
+Per pianificare un’acquisizione, devi prima impostare il valore dell’ora di inizio su tempo epoca in secondi. Impostare quindi il valore della frequenza su una delle cinque opzioni seguenti: `once`, `minute`, `hour`, `day` o `week`. Il valore di intervallo indica il periodo tra due acquisizioni consecutive e la creazione di un&#39;acquisizione una tantum (`once`) non richiede l&#39;impostazione di un intervallo. Per tutte le altre frequenze, il valore dell&#39;intervallo deve essere impostato su uguale o maggiore di `15`.
 
 
 **Formato API**
@@ -522,17 +522,17 @@ curl -X POST \
 | --- | --- |
 | `name` | Nome del flusso di dati. Assicurati che il nome del flusso di dati sia descrittivo, in quanto può essere utilizzato per cercare informazioni sul flusso di dati. |
 | `description` | (Facoltativo) Una proprietà che puoi includere per fornire ulteriori informazioni sul flusso di dati. |
-| `flowSpec.id` | ID della specifica di flusso necessario per creare un flusso di dati. Questo ID fisso è: `6499120c-0b15-42dc-936e-847ea3c24d72`. |
-| `flowSpec.version` | Versione corrispondente dell&#39;ID della specifica di flusso. Questo valore viene impostato automaticamente su `1.0`. |
-| `sourceConnectionIds` | Il [ID connessione sorgente](#source-connection) generato in un passaggio precedente. |
-| `targetConnectionIds` | Il [ID connessione di destinazione](#target-connection) generato in un passaggio precedente. |
+| `flowSpec.id` | ID della specifica di flusso necessario per creare un flusso di dati. ID corretto: `6499120c-0b15-42dc-936e-847ea3c24d72`. |
+| `flowSpec.version` | Versione corrispondente dell&#39;ID della specifica di flusso. Il valore predefinito è `1.0`. |
+| `sourceConnectionIds` | L&#39;[ID connessione di origine](#source-connection) generato in un passaggio precedente. |
+| `targetConnectionIds` | L&#39;ID [connessione di destinazione](#target-connection) generato in un passaggio precedente. |
 | `scheduleParams.startTime` | L’ora di inizio designata per l’inizio della prima acquisizione dei dati. |
-| `scheduleParams.frequency` | La frequenza con cui il flusso di dati raccoglierà i dati. I valori accettabili includono: `once`, `minute`, `hour`, `day`, o `week`. |
-| `scheduleParams.interval` | L’intervallo indica il periodo tra due esecuzioni consecutive del flusso. Il valore dell&#39;intervallo deve essere un numero intero diverso da zero. Intervallo non richiesto quando la frequenza è impostata come `once` e deve essere maggiore o uguale a `15` per altri valori di frequenza. |
+| `scheduleParams.frequency` | La frequenza con cui il flusso di dati raccoglierà i dati. I valori accettabili includono: `once`, `minute`, `hour`, `day` o `week`. |
+| `scheduleParams.interval` | L’intervallo indica il periodo tra due esecuzioni consecutive del flusso. Il valore dell&#39;intervallo deve essere un numero intero diverso da zero. L&#39;intervallo non è necessario quando la frequenza è impostata come `once` e deve essere maggiore o uguale a `15` per gli altri valori di frequenza. |
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce l’ID (`id`) del flusso di dati appena creato. Puoi usare questo ID per monitorare, aggiornare o eliminare il flusso di dati.
+In caso di esito positivo, la risposta restituisce l&#39;ID (`id`) del flusso di dati appena creato. Puoi usare questo ID per monitorare, aggiornare o eliminare il flusso di dati.
 
 ```json
 {
@@ -547,20 +547,20 @@ La sezione seguente fornisce informazioni sui passaggi possibili per monitorare,
 
 ### Monitorare il flusso di dati
 
-Una volta creato il flusso di dati, puoi monitorare i dati che vengono acquisiti tramite di esso per visualizzare informazioni sulle esecuzioni del flusso, sullo stato di completamento e sugli errori. Per esempi API completi, consulta la guida su [monitoraggio dei flussi di dati di origine tramite l’API](../../monitor.md).
+Una volta creato il flusso di dati, puoi monitorare i dati che vengono acquisiti tramite di esso per visualizzare informazioni sulle esecuzioni del flusso, sullo stato di completamento e sugli errori. Per esempi API completi, consulta la guida su [monitoraggio dei flussi di dati di origine tramite API](../../monitor.md).
 
 ### Aggiornare il flusso di dati
 
-Aggiorna i dettagli del flusso di dati, ad esempio il nome e la descrizione, nonché la pianificazione di esecuzione e i set di mappatura associati, effettuando una richiesta PATCH al `/flows` endpoint di [!DNL Flow Service] e fornire l’ID del flusso di dati. Quando effettui una richiesta PATCH, devi fornire il codice univoco del flusso di dati `etag` nel `If-Match` intestazione. Per esempi API completi, consulta la guida su [aggiornamento dei flussi di dati di origine tramite l’API](../../update-dataflows.md).
+Aggiorna i dettagli del flusso di dati, ad esempio il nome e la descrizione, nonché la pianificazione dell&#39;esecuzione e i set di mappatura associati, effettuando una richiesta PATCH all&#39;endpoint `/flows` dell&#39;API [!DNL Flow Service] e fornendo al contempo l&#39;ID del flusso di dati. Quando si effettua una richiesta PATCH, è necessario fornire `etag` univoco del flusso di dati nell&#39;intestazione `If-Match`. Per esempi API completi, leggere la guida sull&#39;aggiornamento dei flussi di dati di origine in [tramite API](../../update-dataflows.md).
 
 ### Aggiornare l’account
 
-Aggiorna il nome, la descrizione e le credenziali dell’account di origine eseguendo una richiesta PATCH al [!DNL Flow Service] fornendo l’ID connessione di base come parametro di query. Quando effettui una richiesta PATCH, devi fornire il codice univoco dell’account sorgente `etag` nel `If-Match` intestazione. Per esempi API completi, consulta la guida su [aggiornamento dell’account sorgente tramite l’API](../../update.md).
+Aggiornare il nome, la descrizione e le credenziali dell&#39;account di origine eseguendo una richiesta PATCH all&#39;API [!DNL Flow Service] e fornendo l&#39;ID connessione di base come parametro di query. Quando si effettua una richiesta PATCH, è necessario fornire `etag` univoco dell&#39;account di origine nell&#39;intestazione `If-Match`. Per esempi API completi, consulta la guida in [aggiornamento dell&#39;account di origine tramite l&#39;API](../../update.md).
 
 ### Eliminare il flusso di dati
 
-Elimina il flusso di dati eseguendo una richiesta DELETE al [!DNL Flow Service] fornendo l’ID del flusso di dati che desideri eliminare come parte del parametro di query. Per esempi API completi, consulta la guida su [eliminazione dei flussi di dati tramite API](../../delete-dataflows.md).
+Elimina il flusso di dati eseguendo una richiesta DELETE all&#39;API [!DNL Flow Service] e fornendo l&#39;ID del flusso di dati che desideri eliminare come parte del parametro di query. Per esempi API completi, consulta la guida su [eliminazione dei flussi di dati tramite l&#39;API](../../delete-dataflows.md).
 
 ### Elimina l’account
 
-Elimina l’account eseguendo una richiesta DELETE al [!DNL Flow Service] fornendo l’ID della connessione di base dell’account da eliminare. Per esempi API completi, consulta la guida su [eliminazione dell’account sorgente tramite l’API](../../delete.md).
+Eliminare l&#39;account eseguendo una richiesta DELETE all&#39;API [!DNL Flow Service] e fornendo l&#39;ID connessione di base dell&#39;account che si desidera eliminare. Per esempi API completi, leggere la guida in [eliminazione dell&#39;account di origine tramite l&#39;API](../../delete.md).

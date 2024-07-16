@@ -5,20 +5,20 @@ exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
 source-git-commit: adb48b898c85561efb2d96b714ed98a0e3e4ea9b
 workflow-type: tm+mt
 source-wordcount: '1736'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
 # Acquisizione di dati crittografati
 
-Puoi acquisire i file di dati crittografati in Adobe Experience Platform utilizzando origini batch di archiviazione cloud. Con l’acquisizione di dati crittografati, puoi sfruttare meccanismi di crittografia asimmetrica per trasferire in modo sicuro i dati batch in Experienci Platform. Attualmente, i meccanismi di crittografia asimmetrica supportati sono PGP e GPG.
+Puoi acquisire i file di dati crittografati in Adobe Experience Platform utilizzando origini batch di archiviazione cloud. Con l’acquisizione di dati crittografati, puoi sfruttare meccanismi di crittografia asimmetrica per trasferire in modo sicuro i dati batch in Experience Platform. Attualmente, i meccanismi di crittografia asimmetrica supportati sono PGP e GPG.
 
 Il processo di acquisizione dei dati crittografati è il seguente:
 
-1. [Creare una coppia di chiavi di crittografia utilizzando le API Experienci Platform](#create-encryption-key-pair). La coppia di chiavi di crittografia è costituita da una chiave privata e da una chiave pubblica. Una volta creata, puoi copiare o scaricare la chiave pubblica, insieme all’ID della chiave pubblica e all’ora di scadenza corrispondenti. Durante questa procedura, la chiave privata verrà memorizzata da Experienci Platform in un archivio protetto. **NOTA:** La chiave pubblica nella risposta è codificata in Base64 e deve essere decrittografata prima dell’utilizzo.
+1. [Creare una coppia di chiavi di crittografia utilizzando le API Experience Platform](#create-encryption-key-pair). La coppia di chiavi di crittografia è costituita da una chiave privata e da una chiave pubblica. Una volta creata, puoi copiare o scaricare la chiave pubblica, insieme all’ID della chiave pubblica e all’ora di scadenza corrispondenti. Durante questa procedura, la chiave privata verrà memorizzata da Experience Platform in un archivio protetto. **NOTA:** la chiave pubblica nella risposta è codificata in Base64 e deve essere decrittografata prima di utilizzare.
 2. Utilizza la chiave pubblica per crittografare il file di dati che desideri acquisire.
 3. Inserisci il file crittografato nell’archiviazione cloud.
-4. Quando il file crittografato è pronto, [creare una connessione di origine e un flusso di dati per l’origine di archiviazione cloud](#create-a-dataflow-for-encrypted-data). Durante il passaggio di creazione del flusso, devi fornire un `encryption` e includere l&#39;ID della chiave pubblica.
+4. Quando il file crittografato è pronto, [crea una connessione di origine e un flusso di dati per l&#39;origine dell&#39;archiviazione cloud](#create-a-dataflow-for-encrypted-data). Durante il passaggio di creazione del flusso, devi fornire un parametro `encryption` e includere l&#39;ID della chiave pubblica.
 5. L’Experience Platform recupera la chiave privata dall’archivio protetto per decrittografare i dati al momento dell’acquisizione.
 
 >[!IMPORTANT]
@@ -31,13 +31,13 @@ In questo documento vengono descritti i passaggi necessari per generare una copp
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Sorgenti](../../home.md): un Experience Platform consente di acquisire dati da varie origini, consentendoti allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
-   * [Sorgenti di archiviazione cloud](../api/collect/cloud-storage.md): crea un flusso di dati per portare all’Experience Platform i dati batch dall’origine dell’archiviazione cloud.
-* [Sandbox](../../../sandboxes/home.md): Experienci Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Origini](../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
+   * [Origini archiviazione cloud](../api/collect/cloud-storage.md): crea un flusso di dati per portare all&#39;Experience Platform i dati batch dall&#39;origine archiviazione cloud.
+* [Sandbox](../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 ### Utilizzo delle API di Platform
 
-Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida su [introduzione alle API di Platform](../../../landing/api-guide.md).
+Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida in [guida introduttiva alle API di Platform](../../../landing/api-guide.md).
 
 ### Estensioni di file supportate per i file crittografati {#supported-file-extensions-for-encrypted-files}
 
@@ -64,7 +64,7 @@ L’elenco delle estensioni di file supportate per i file crittografati è:
 
 ## Crea coppia di chiavi di crittografia {#create-encryption-key-pair}
 
-Il primo passaggio nell’acquisizione di dati crittografati da Experienci Platform consiste nel creare la coppia di chiavi di crittografia effettuando una richiesta POST al `/encryption/keys` endpoint del [!DNL Connectors] API.
+Il primo passaggio per l&#39;acquisizione di dati crittografati in Experience Platform consiste nel creare la coppia di chiavi di crittografia effettuando una richiesta POST all&#39;endpoint `/encryption/keys` dell&#39;API [!DNL Connectors].
 
 **Formato API**
 
@@ -97,7 +97,7 @@ curl -X POST \
 | Parametro | Descrizione |
 | --- | --- |
 | `encryptionAlgorithm` | Tipo di algoritmo di crittografia in uso. I tipi di crittografia supportati sono `PGP` e `GPG`. |
-| `params.passPhrase` | La passphrase fornisce un ulteriore livello di protezione per le chiavi di crittografia. Al momento della creazione, Experienci Platform memorizza la passphrase in un archivio protetto diverso dalla chiave pubblica. Specificare una stringa non vuota come passphrase. |
+| `params.passPhrase` | La passphrase fornisce un ulteriore livello di protezione per le chiavi di crittografia. Al momento della creazione, Experience Platform memorizza la passphrase in un archivio protetto diverso dalla chiave pubblica. Specificare una stringa non vuota come passphrase. |
 
 +++
 
@@ -118,14 +118,14 @@ In caso di esito positivo, la risposta restituisce la chiave pubblica con codifi
 | Proprietà | Descrizione |
 | --- | --- |
 | `publicKey` | La chiave pubblica viene utilizzata per crittografare i dati nell’archiviazione cloud. Questa chiave corrisponde alla chiave privata creata durante questo passaggio. Tuttavia, la chiave privata viene immediatamente recapitata all’Experience Platform. |
-| `publicKeyId` | L’ID della chiave pubblica viene utilizzato per creare un flusso di dati e acquisire i dati di archiviazione cloud crittografati per Experienci Platform. |
+| `publicKeyId` | L’ID della chiave pubblica viene utilizzato per creare un flusso di dati e acquisire i dati di archiviazione cloud crittografati per Experience Platform. |
 | `expiryTime` | L&#39;ora di scadenza definisce la data di scadenza della coppia di chiavi di crittografia. Questa data viene impostata automaticamente su 180 giorni dopo la data di generazione della chiave e viene visualizzata in formato timestamp unix. |
 
 +++
 
 ### Recuperare le chiavi di crittografia {#retrieve-encryption-keys}
 
-Per recuperare tutte le chiavi di crittografia dell’organizzazione, effettua una richiesta GET al `/encryption/keys` endpoint=nt.
+Per recuperare tutte le chiavi di crittografia dell&#39;organizzazione, eseguire una richiesta di GET all&#39;endpoint `/encryption/keys`=nt.
 
 **Formato API**
 
@@ -168,7 +168,7 @@ In caso di esito positivo, la risposta restituisce l’algoritmo di crittografia
 
 ### Recupera chiavi di crittografia per ID {#retrieve-encryption-keys-by-id}
 
-Per recuperare un set specifico di chiavi di crittografia, effettuare una richiesta GET al `/encryption/keys` e fornire l&#39;ID della chiave pubblica come parametro di intestazione.
+Per recuperare un set specifico di chiavi di crittografia, effettuare una richiesta GET all&#39;endpoint `/encryption/keys` e fornire l&#39;ID della chiave pubblica come parametro di intestazione.
 
 **Formato API**
 
@@ -211,11 +211,11 @@ In caso di esito positivo, la risposta restituisce l’algoritmo di crittografia
 
 Facoltativamente, puoi creare una coppia di chiavi per la verifica della firma per firmare e acquisire i dati crittografati.
 
-Durante questa fase, devi generare la tua combinazione di chiave privata e chiave pubblica e quindi utilizzare la tua chiave privata per firmare i dati crittografati. Successivamente, devi codificare la chiave pubblica in Base64 e condividerla con Experienci Platform affinché Platform possa verificare la firma.
+Durante questa fase, devi generare la tua combinazione di chiave privata e chiave pubblica e quindi utilizzare la tua chiave privata per firmare i dati crittografati. Successivamente, devi codificare la chiave pubblica in Base64 e condividerla con Experience Platform affinché Platform possa verificare la firma.
 
 ### Condividi la chiave pubblica per Experience Platform
 
-Per condividere la chiave pubblica, invia una richiesta POST al `/customer-keys` fornendo l&#39;algoritmo di crittografia e la chiave pubblica con codifica Base64.
+Per condividere la chiave pubblica, effettuare una richiesta POST all&#39;endpoint `/customer-keys` fornendo al contempo l&#39;algoritmo di crittografia e la chiave pubblica con codifica Base64.
 
 **Formato API**
 
@@ -260,11 +260,11 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `publicKeyId` | Questo ID di chiave pubblica viene restituito in risposta alla condivisione della chiave gestita dal cliente con Experienci Platform. Puoi fornire questo ID di chiave pubblica come ID della chiave di verifica della firma durante la creazione di un flusso di dati per dati firmati e crittografati. |
+| `publicKeyId` | Questo ID di chiave pubblica viene restituito in risposta alla condivisione della chiave gestita dal cliente con Experience Platform. Puoi fornire questo ID di chiave pubblica come ID della chiave di verifica della firma durante la creazione di un flusso di dati per dati firmati e crittografati. |
 
 +++
 
-## Connetti l’origine dell’archiviazione cloud a Experienci Platform utilizzando [!DNL Flow Service] API
+## Connetti l&#39;origine dell&#39;archiviazione cloud ad Experience Platform utilizzando l&#39;API [!DNL Flow Service]
 
 Dopo aver recuperato la coppia di chiavi di crittografia, ora puoi procedere e creare una connessione di origine per l’origine dell’archiviazione cloud e trasferire i dati crittografati a Platform.
 
@@ -273,15 +273,15 @@ Innanzitutto, devi creare una connessione di base per autenticare l’origine su
 * [Amazon S3](../api/create/cloud-storage/s3.md)
 * [[!DNL Apache HDFS]](../api/create/cloud-storage/hdfs.md)
 * [BLOB di Azure](../api/create/cloud-storage/blob.md)
-* [Archiviazione Azure Data Lake Gen2](../api/create/cloud-storage/adls-gen2.md)
+* [Azure Data Lake Storage Gen2](../api/create/cloud-storage/adls-gen2.md)
 * [Archiviazione file di Azure](../api/create/cloud-storage/azure-file-storage.md)
 * [Data Landing Zone](../api/create/cloud-storage/data-landing-zone.md)
 * [FTP](../api/create/cloud-storage/ftp.md)
-* [Archiviazione cloud Google](../api/create/cloud-storage/google.md)
-* [Oracle archiviazione oggetti](../api/create/cloud-storage/oracle-object-storage.md)
+* [Google Cloud Storage](../api/create/cloud-storage/google.md)
+* [Archiviazione di oggetti di Oracle](../api/create/cloud-storage/oracle-object-storage.md)
 * [SFTP](../api/create/cloud-storage/sftp.md)
 
-Dopo aver creato una connessione di base, è necessario seguire i passaggi descritti nell&#39;esercitazione per [creazione di una connessione di origine per un&#39;origine di archiviazione cloud](../api/collect/cloud-storage.md) per creare una connessione sorgente, una connessione di destinazione e una mappatura.
+Dopo aver creato una connessione di base, è necessario seguire i passaggi descritti nell&#39;esercitazione per [creare una connessione di origine per un&#39;origine di archiviazione cloud](../api/collect/cloud-storage.md) per creare una connessione di origine, una connessione di destinazione e una mappatura.
 
 ## Creare un flusso di dati per i dati crittografati {#create-a-dataflow-for-encrypted-data}
 
@@ -290,11 +290,11 @@ Dopo aver creato una connessione di base, è necessario seguire i passaggi descr
 >Per creare un flusso di dati per l’acquisizione di dati crittografati, è necessario disporre dei seguenti elementi:
 >
 >* [ID chiave pubblica](#create-encryption-key-pair)
->* [ID connessione sorgente](../api/collect/cloud-storage.md#source)
+>* [ID connessione Source](../api/collect/cloud-storage.md#source)
 >* [ID connessione di destinazione](../api/collect/cloud-storage.md#target)
 >* [ID mappatura](../api/collect/cloud-storage.md#mapping)
 
-Per creare un flusso di dati, effettua una richiesta POST al `/flows` endpoint del [!DNL Flow Service] API. Per acquisire i dati crittografati, è necessario aggiungere una `encryption` sezione al `transformations` e includere `publicKeyId` creato in un passaggio precedente.
+Per creare un flusso di dati, effettuare una richiesta POST all&#39;endpoint `/flows` dell&#39;API [!DNL Flow Service]. Per acquisire i dati crittografati, è necessario aggiungere una sezione `encryption` alla proprietà `transformations` e includere `publicKeyId` creato in un passaggio precedente.
 
 **Formato API**
 
@@ -304,7 +304,7 @@ POST /flows
 
 >[!BEGINTABS]
 
->[!TAB Creare un flusso di dati per l’acquisizione di dati crittografati]
+>[!TAB Crea un flusso di dati per l&#39;acquisizione di dati crittografati]
 
 **Richiesta**
 
@@ -360,11 +360,11 @@ curl -X POST \
 | `sourceConnectionIds` | ID della connessione di origine. Questo ID rappresenta il trasferimento di dati dall’origine a Platform. |
 | `targetConnectionIds` | ID della connessione di destinazione. Questo ID rappresenta dove arrivano i dati una volta trasferiti a Platform. |
 | `transformations[x].params.mappingId` | ID di mappatura. |
-| `transformations.name` | Quando si acquisiscono file crittografati, è necessario fornire `Encryption` come parametro di trasformazione aggiuntivo per il flusso di dati. |
+| `transformations.name` | Durante l&#39;acquisizione di file crittografati, devi fornire `Encryption` come parametro di trasformazione aggiuntivo per il flusso di dati. |
 | `transformations[x].params.publicKeyId` | ID della chiave pubblica creato. Questo ID è la metà della coppia di chiavi di crittografia utilizzata per crittografare i dati di archiviazione cloud. |
 | `scheduleParams.startTime` | L’ora di inizio del flusso di dati in tempo epoca. |
-| `scheduleParams.frequency` | La frequenza con cui il flusso di dati raccoglierà i dati. I valori accettabili includono: `once`, `minute`, `hour`, `day`, o `week`. |
-| `scheduleParams.interval` | L’intervallo indica il periodo tra due esecuzioni consecutive del flusso. Il valore dell&#39;intervallo deve essere un numero intero diverso da zero. Intervallo non richiesto quando la frequenza è impostata come `once` e deve essere maggiore o uguale a `15` per altri valori di frequenza. |
+| `scheduleParams.frequency` | La frequenza con cui il flusso di dati raccoglierà i dati. I valori accettabili includono: `once`, `minute`, `hour`, `day` o `week`. |
+| `scheduleParams.interval` | L’intervallo indica il periodo tra due esecuzioni consecutive del flusso. Il valore dell&#39;intervallo deve essere un numero intero diverso da zero. L&#39;intervallo non è necessario quando la frequenza è impostata come `once` e deve essere maggiore o uguale a `15` per gli altri valori di frequenza. |
 
 +++
 
@@ -372,7 +372,7 @@ curl -X POST \
 
 +++Visualizza risposta di esempio
 
-In caso di esito positivo, la risposta restituisce l’ID (`id`) del flusso di dati appena creato per i dati crittografati.
+In caso di esito positivo, la risposta restituisce l&#39;ID (`id`) del flusso di dati appena creato per i dati crittografati.
 
 ```json
 {
@@ -383,7 +383,7 @@ In caso di esito positivo, la risposta restituisce l’ID (`id`) del flusso di d
 
 +++
 
->[!TAB Creare un flusso di dati per acquisire dati crittografati e firmati]
+>[!TAB Crea un flusso di dati per acquisire dati crittografati e firmati]
 
 **Richiesta**
 
@@ -434,7 +434,7 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `params.signVerificationKeyId` | L’ID della chiave di verifica della firma è uguale all’ID della chiave pubblica recuperato dopo la condivisione della chiave pubblica con codifica Base64 con Experienci Platform. |
+| `params.signVerificationKeyId` | L’ID della chiave di verifica della firma è uguale all’ID della chiave pubblica recuperato dopo la condivisione della chiave pubblica con codifica Base64 con Experience Platform. |
 
 +++
 
@@ -442,7 +442,7 @@ curl -X POST \
 
 +++Visualizza risposta di esempio
 
-In caso di esito positivo, la risposta restituisce l’ID (`id`) del flusso di dati appena creato per i dati crittografati.
+In caso di esito positivo, la risposta restituisce l&#39;ID (`id`) del flusso di dati appena creato per i dati crittografati.
 
 ```json
 {
@@ -457,7 +457,7 @@ In caso di esito positivo, la risposta restituisce l’ID (`id`) del flusso di d
 
 ### Elimina chiavi di crittografia {#delete-encryption-keys}
 
-Per eliminare le chiavi di crittografia, invia una richiesta DELETE al `/encryption/keys` e fornire l&#39;ID della chiave pubblica come parametro di intestazione.
+Per eliminare le chiavi di crittografia, effettua una richiesta DELETE all&#39;endpoint `/encryption/keys` e fornisci l&#39;ID della chiave pubblica come parametro di intestazione.
 
 **Formato API**
 
@@ -485,7 +485,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 204 (nessun con
 
 ### Convalidare le chiavi di crittografia {#validate-encryption-keys}
 
-Per convalidare le chiavi di crittografia, invia una richiesta di GET al `/encryption/keys/validate/` e fornire l&#39;ID della chiave pubblica da convalidare come parametro di intestazione.
+Per convalidare le chiavi di crittografia, effettuare una richiesta di GET all&#39;endpoint `/encryption/keys/validate/` e fornire l&#39;ID della chiave pubblica da convalidare come parametro di intestazione.
 
 ```http
 GET /data/foundation/connectors/encryption/keys/validate/{PUBLIC_KEY_ID}
@@ -513,7 +513,7 @@ In caso di esito positivo, la risposta restituisce la conferma che gli ID sono v
 
 >[!TAB Valido]
 
-Un ID di chiave pubblica valido restituisce lo stato `Active` insieme all’ID della chiave pubblica.
+Un ID chiave pubblica valido restituisce lo stato `Active` insieme all&#39;ID chiave pubblica.
 
 ```json
 {
@@ -524,7 +524,7 @@ Un ID di chiave pubblica valido restituisce lo stato `Active` insieme all’ID d
 
 >[!TAB Non valido]
 
-Un ID di chiave pubblica non valido restituisce lo stato `Expired` insieme all’ID della chiave pubblica.
+Un ID di chiave pubblica non valido restituisce lo stato `Expired` insieme all&#39;ID di chiave pubblica.
 
 ```json
 {
@@ -540,9 +540,9 @@ Un ID di chiave pubblica non valido restituisce lo stato `Expired` insieme all�
 
 L’acquisizione di dati crittografati non supporta l’acquisizione di cartelle ricorrenti o a più livelli nelle origini. Tutti i file crittografati devono essere contenuti in una singola cartella. Non sono supportati neanche i caratteri jolly con più cartelle in un unico percorso di origine.
 
-Di seguito è riportato un esempio di struttura di cartelle supportata, in cui il percorso di origine è `/ACME-customers/*.csv.gpg`.
+Di seguito è riportato un esempio di struttura di cartelle supportata, dove il percorso di origine è `/ACME-customers/*.csv.gpg`.
 
-In questo scenario, i file in grassetto vengono acquisiti in Experienci Platform.
+In questo scenario, i file in grassetto vengono acquisiti in Experience Platform.
 
 * ACME-clienti
    * **File1.csv.gpg**
@@ -568,4 +568,4 @@ In questo scenario, l’esecuzione del flusso non riuscirà e restituirà un mes
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato una coppia di chiavi di crittografia per i dati dell’archiviazione cloud e un flusso di dati per acquisire i dati crittografati utilizzando [!DNL Flow Service API]. Per gli aggiornamenti sullo stato relativi a completezza, errori e metriche del flusso di dati, consulta la guida su [monitoraggio del flusso di dati tramite [!DNL Flow Service] API](./monitor.md).
+Seguendo questa esercitazione, hai creato una coppia di chiavi di crittografia per i dati dell&#39;archiviazione cloud e un flusso di dati per acquisire i dati crittografati utilizzando [!DNL Flow Service API]. Per gli aggiornamenti sullo stato di completezza, errori e metriche del flusso di dati, leggi la guida sul [monitoraggio del flusso di dati tramite l&#39;API [!DNL Flow Service] 2}.](./monitor.md)

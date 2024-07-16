@@ -6,7 +6,7 @@ exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
 source-git-commit: c6019737e93756f3f524d5a85ea57383baa1a31d
 workflow-type: tm+mt
 source-wordcount: '776'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -24,11 +24,11 @@ Infine, è possibile distinguere le connessioni tra le destinazioni pubbliche di
 
 ## Connessioni {#connections}
 
-**[!UICONTROL Esportazione profilo]**, **[!UICONTROL Esportazione di pubblico in streaming]**, e **[!DNL Edge Personalization]** le destinazioni in Adobe Experience Platform acquisiscono i dati dell’evento, combinandoli con altre origini dati per formare la [Profilo cliente in tempo reale](../profile/home.md), applica la segmentazione ed esporta tipi di pubblico e profili qualificati nelle destinazioni.
+**[!UICONTROL Esportazione profilo]**, **[!UICONTROL Esportazione pubblico in streaming]** e **[!DNL Edge Personalization]** destinazioni in Adobe Experience Platform acquisiscono i dati dell&#39;evento, li combinano con altre origini dati per formare il [Profilo cliente in tempo reale](../profile/home.md), applicano la segmentazione ed esportano tipi di pubblico e profili qualificati nelle destinazioni.
 
 ## Destinazioni di esportazione profilo {#profile-export}
 
-Le destinazioni di esportazione dei profili ricevono dati non elaborati, spesso con l’indirizzo e-mail come chiave primaria. Experienci Platform supporta attualmente due tipi di destinazioni di esportazione del profilo:
+Le destinazioni di esportazione dei profili ricevono dati non elaborati, spesso con l’indirizzo e-mail come chiave primaria. Experience Platform supporta attualmente due tipi di destinazioni di esportazione del profilo:
 
 * [Destinazioni di esportazione dei profili di streaming (destinazioni aziendali)](#streaming-profile-export)
 * [Destinazioni batch (basate su file)](#file-based)
@@ -37,7 +37,7 @@ Le destinazioni di esportazione dei profili ricevono dati non elaborati, spesso 
 
 >[!IMPORTANT]
 >
->Le destinazioni Enterprise, o destinazioni di esportazione di profili di streaming, sono disponibili per [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform.html) solo clienti.
+>Le destinazioni Enterprise o le destinazioni di esportazione dei profili di streaming sono disponibili solo per [clienti Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform.html).
 
 Utilizza i connettori dati di destinazione Enterprise per fornire profili Adobe Real-time Customer Data Platform in tempo reale a sistemi interni o ad altri sistemi di terze parti per casi di utilizzo di sincronizzazione, analisi e ulteriore arricchimento dei profili.
 
@@ -47,19 +47,19 @@ Le destinazioni Enterprise includono:
 
 * [Destinazione API HTTP](catalog/streaming/http-destination.md)
 * [Amazon Kinesis](catalog/cloud-storage/amazon-kinesis.md)
-* [Hub eventi di Azure](catalog/cloud-storage/azure-event-hubs.md)
+* [Hub eventi Azure](catalog/cloud-storage/azure-event-hubs.md)
 
 ### Destinazioni batch (basate su file) {#file-based}
 
-Ricezione di destinazioni basate su file `.csv` file contenenti profili e/o attributi. [Amazon S3](catalog/cloud-storage/amazon-s3.md) è un esempio di destinazione in cui è possibile esportare file contenenti esportazioni di profili.
+Le destinazioni basate su file ricevono `.csv` file contenenti profili e/o attributi. [Amazon S3](catalog/cloud-storage/amazon-s3.md) è un esempio di destinazione in cui è possibile esportare file contenenti esportazioni di profili.
 
 ## Destinazioni di esportazione del pubblico in streaming {#streaming-destinations}
 
-Le destinazioni di esportazione del pubblico ricevono i dati sul pubblico di Experienci Platform. Queste destinazioni utilizzano ID pubblico o ID utente. Destinazioni pubblicitarie e social come [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md), o [Facebook](catalog/social/facebook.md) sono esempi di tali destinazioni.
+Le destinazioni di esportazione del pubblico ricevono i dati sul pubblico di Experienci Platform. Queste destinazioni utilizzano ID pubblico o ID utente. Advertising e destinazioni social come [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md) o [Facebook](catalog/social/facebook.md) sono esempi di tali destinazioni.
 
 ## Destinazioni di personalizzazione Edge {#edge-personalization-destinations}
 
-Le destinazioni di personalizzazione Edge in Experienci Platform includono [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) e [Destinazione di personalizzazione personalizzata](/help/destinations/catalog/personalization/custom-personalization.md). Utilizzando queste destinazioni, puoi abilitare per i clienti i casi di utilizzo della personalizzazione della stessa pagina e della pagina successiva.
+Le destinazioni di personalizzazione di Edge in Experience Platform includono [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) e [Personalization destination](/help/destinations/catalog/personalization/custom-personalization.md). Utilizzando queste destinazioni, puoi abilitare per i clienti i casi di utilizzo della personalizzazione della stessa pagina e della pagina successiva.
 
 Ulteriori informazioni su come [configurare le destinazioni di personalizzazione per la personalizzazione della stessa pagina e della pagina successiva](/help/destinations/ui/activate-edge-personalization-destinations.md).
 
@@ -71,17 +71,17 @@ Il video seguente illustra le particolarità dei due tipi di destinazioni:
 
 ## Tipi di pubblico esportati {#exported-audiences-types}
 
-Puoi esportare tre tipi di pubblico da Experienci Platform in varie destinazioni:
+Puoi esportare tre tipi di pubblico da Experience Platform in varie destinazioni:
 
 * Pubblico persone
 * Pubblico dell’account
 * Pubblico potenziale
 
-Ulteriori informazioni su [vari tipi di pubblico](/help/segmentation/ui/account-audiences.md#terminology).
+Ulteriori informazioni sui [vari tipi di pubblico](/help/segmentation/ui/account-audiences.md#terminology).
 
 Un simbolo sulla scheda di destinazione mostra quali tipi di pubblico puoi esportare in ogni destinazione.
 
-![Esempio di scheda di destinazione con simboli che mostrano quali tipi di pubblico possono essere esportati.](/help/destinations/assets/destination-types/types-of-audiences.png)
+![Esempio di scheda di destinazione con simboli che indicano quali tipi di pubblico possono essere esportati.](/help/destinations/assets/destination-types/types-of-audiences.png)
 
 
 ## Destinazioni di esportazione del set di dati {#dataset-export-destinations}
@@ -96,11 +96,11 @@ Platform sfrutta la potenza e la flessibilità della gestione dei tag, consenten
 
 >[!TIP]
 >
->Per informazioni dettagliate sulle estensioni tag, inclusi i casi di utilizzo e come trovarle nell’interfaccia, vedi [panoramica delle estensioni tag](./catalog/launch-extensions/overview.md).
+>Per informazioni dettagliate sulle estensioni tag, inclusi i casi d&#39;uso e le modalità per trovarle nell&#39;interfaccia, consulta la [panoramica sulle estensioni tag](./catalog/launch-extensions/overview.md).
 
-Le estensioni di tag inoltrano i dati di eventi non elaborati a diversi tipi di destinazioni. Considera le estensioni come un **Inoltro eventi** tipo di destinazione. Si tratta di un tipo più semplice di integrazione con le piattaforme di destinazione, che inoltra solo i dati dell’evento non elaborati. Esempi di questi sono [Estensione di personalizzazione Gainsight](./catalog/personalization/gainsight.md) o [Conferma voce dell’estensione del cliente](./catalog/voice/confirmit-digital-feedback.md).
+Le estensioni di tag inoltrano i dati di eventi non elaborati a diversi tipi di destinazioni. Considera le estensioni come un tipo di destinazione **Inoltro eventi**. Si tratta di un tipo più semplice di integrazione con le piattaforme di destinazione, che inoltra solo i dati dell’evento non elaborati. Esempi di queste sono l&#39;[estensione Gainsight personalization](./catalog/personalization/gainsight.md) o la [conferma voce dell&#39;estensione del cliente](./catalog/voice/confirmit-digital-feedback.md).
 
-![Estensioni di tag rispetto ad altre destinazioni](./assets/common/launch-and-other-destinations.png)
+![Estensioni tag rispetto ad altre destinazioni](./assets/common/launch-and-other-destinations.png)
 
 ## Quando utilizzare connessioni ed estensioni {#when-to-use}
 
@@ -112,6 +112,6 @@ Le estensioni sono utili quando i dati evento vengono utilizzati per attivare un
 
 ## Categorie di destinazione {#categories}
 
-Le connessioni e le estensioni in [catalogo delle destinazioni](https://platform.adobe.com/destination/catalog) sono raggruppati per categoria di destinazione (**Pubblicità**, **Archiviazione cloud**, **Piattaforme di sondaggio**, **E-mail marketing**, ecc.), a seconda dell’azione di marketing che ti aiutano a raggiungere. Per ulteriori informazioni su ciascuna categoria, nonché sulle destinazioni incluse in ciascuna categoria, consulta la [Documentazione del catalogo delle destinazioni](./catalog/overview.md).
+Le connessioni e le estensioni nel [catalogo delle destinazioni](https://platform.adobe.com/destination/catalog) sono raggruppate per categoria di destinazione (**Advertising**, **Archiviazione cloud**, **Piattaforme sondaggio**, **E-mail marketing**, ecc.), a seconda dell&#39;azione di marketing che ti aiutano a ottenere. Per ulteriori informazioni su ciascuna categoria e sulle destinazioni incluse in ciascuna categoria, consulta la [documentazione del catalogo delle destinazioni](./catalog/overview.md).
 
-![Le categorie di destinazione sono evidenziate nella pagina del catalogo.](./assets/destination-types/destination-categories-menu.png)
+![Categorie di destinazione evidenziate nella pagina del catalogo.](./assets/destination-types/destination-categories-menu.png)

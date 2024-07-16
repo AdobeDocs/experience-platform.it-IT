@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ## Destinazioni di coinvolgimento mobile supportate {#supported-destinations}
 
-[!DNL Adobe Experience Platform] attualmente supporta le seguenti destinazioni di coinvolgimento per dispositivi mobili:
+[!DNL Adobe Experience Platform] attualmente supporta le seguenti destinazioni di coinvolgimento mobile:
 
 * [Connessione attributi dirigibili](airship-attributes.md)
 * [Connessione tag dirigibili](airship-tags.md)
