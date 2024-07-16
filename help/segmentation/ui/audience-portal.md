@@ -29,7 +29,7 @@ In Audience Portal, puoi eseguire le seguenti attività:
 
 Per aprire Audience Portal, seleziona la scheda **[!UICONTROL Sfoglia]** nella sezione Segmentazione.
 
-## Elenco del pubblico {#list}
+## Elenco dei tipi di pubblico {#list}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_churncolumnname"
