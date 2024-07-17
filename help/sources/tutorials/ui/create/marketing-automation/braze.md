@@ -4,10 +4,10 @@ description: Scopri come creare un flusso di dati per l’account Braze utilizza
 last-substantial-update: 2024-01-30T00:00:00Z
 badge: Beta
 exl-id: 6e94414a-176c-4810-80ff-02cf9e797756
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: 59600165328181e41750b9b2a1f4fbf162dd1df5
 workflow-type: tm+mt
-source-wordcount: '689'
-ht-degree: 2%
+source-wordcount: '1001'
+ht-degree: 1%
 
 ---
 
@@ -41,7 +41,21 @@ Questo tutorial richiede anche una buona conoscenza di [[!DNL Braze] Current](ht
 
 Se disponi già di una connessione [!DNL Braze], puoi saltare il resto del documento e passare all&#39;esercitazione [configurazione di un flusso di dati](../../dataflow/marketing-automation.md).
 
-## Connetti il tuo account [!DNL Braze] a Experience Platform
+## Creare uno schema XDM
+
+>[!TIP]
+>
+>Se questa è la prima volta che crei una connessione [!DNL Braze Currents], devi creare uno schema Experience Data Model (XDM). Se hai già creato uno schema per [!DNL Braze Currents], puoi saltare questo passaggio e passare a [connettere il tuo account a Experience Platform](#connect).
+
+Nell&#39;interfaccia utente di Platform, utilizza la barra di navigazione a sinistra, quindi seleziona **[!UICONTROL Schemi]** per accedere all&#39;area di lavoro [!UICONTROL Schemi]. Selezionare **[!UICONTROL Crea schema]**, quindi **[!UICONTROL Evento esperienza]**. Per continuare, selezionare **[!UICONTROL Avanti]**.
+
+![Uno schema completato.](../../../../images/tutorials/create/braze/schema.png)
+
+Immetti un nome e una descrizione per lo schema. Quindi, utilizza il pannello [!UICONTROL Composizione] per configurare gli attributi dello schema. In [!UICONTROL Gruppi di campi], seleziona **[!UICONTROL Aggiungi]** e aggiungi il gruppo di campi [!UICONTROL Evento utente corrente brasatura]. Al termine, selezionare **[!UICONTROL Salva]**.
+
+Per ulteriori informazioni sugli schemi, leggere la guida a [creazione di schemi nell&#39;interfaccia utente](../../../../../xdm/tutorials/create-schema-ui.md).
+
+## Connetti il tuo account [!DNL Braze] a Experience Platform {#connect}
 
 Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
 
@@ -53,18 +67,30 @@ Quindi, carica il [file di esempio Braze Currents](https://github.com/Appboy/cur
 
 ![Schermata &quot;Aggiungi dati&quot;.](../../../../images/tutorials/create/braze/select-data.png)
 
-Una volta caricato il file, devi fornire i dettagli del flusso di dati, incluse le informazioni sul set di dati e lo schema a cui stai eseguendo la mappatura.
+Una volta caricato il file, devi fornire i dettagli del flusso di dati, incluse le informazioni sul set di dati e lo schema a cui stai eseguendo la mappatura.  Se è la prima volta che connetti un’origine Braze Currents, crea un nuovo set di dati.  In caso contrario, puoi utilizzare qualsiasi set di dati esistente che faccia riferimento allo schema Braze.  Se crei un nuovo set di dati, utilizza lo schema creato nella sezione precedente.
 ![Nella schermata &quot;Dettagli flusso di dati&quot; è evidenziata l&#39;opzione &quot;Dettagli set di dati.&quot;](../../../../images/tutorials/create/braze/dataflow-detail.png)
 
 Quindi, configura la mappatura per i dati utilizzando l’interfaccia di mappatura.
 
-![Schermata &quot;Mappatura&quot;.](../../../../images/tutorials/create/braze/mapping.png)
+![Schermata &quot;Mappatura&quot;.](../../../../images/tutorials/create/braze/mapping_errors.png)
+
+La mappatura presenterà i seguenti problemi che devono essere risolti.
+
+Nei dati di origine, *id* verrà mappato in modo errato a *_braze.appID*. È necessario modificare il campo di mappatura di destinazione in *_id* al livello radice dello schema. Quindi, assicurati che *properties.is_amp* sia mappato a *_braze.messaging.email.isAMP*.
+
+Eliminare quindi il mapping *time* su *timestamp*, quindi selezionare l&#39;icona di aggiunta (`+`) e selezionare **[!UICONTROL Aggiungi campo calcolato]**. Nella casella fornita, inserisci *time \* 1000* e seleziona **[!UICONTROL Salva]**.
+
+Una volta aggiunto il nuovo campo calcolato, seleziona **[!UICONTROL Mappa campo di destinazione]** accanto al nuovo campo di origine e mappalo su *timestamp* al livello principale dello schema. Selezionare **[!UICONTROL Convalida]** per assicurarsi di non avere altri errori.
 
 >[!IMPORTANT]
 >
 >I timestamp di brasatura non sono espressi in millisecondi, ma in secondi. Affinché i timestamp in Experience Platform vengano rispecchiati accuratamente, è necessario creare campi calcolati in millisecondi. Un calcolo di &quot;tempo * 1000&quot; convertirà correttamente in millisecondi, adatto per la mappatura a un campo marca temporale in Experience Platform.
 >
 >![Creazione di un campo calcolato per la marca temporale ](../../../../images/tutorials/create/braze/create-calculated-field.png)
+
+![Mappatura senza errori.](../../../../images/tutorials/create/braze/completed_mapping.png)
+
+Al termine, selezionare **[!UICONTROL Avanti]**. Utilizzare la pagina Revisione per confermare i dettagli del flusso di dati, quindi selezionare **[!UICONTROL Fine]**.
 
 ### Raccogli le credenziali richieste
 
