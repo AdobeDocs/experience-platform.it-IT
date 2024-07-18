@@ -3,7 +3,7 @@ keywords: crm;CRM;crm destinazioni;salesforce crm;salesforce crm destinazione
 title: Connessione CRM Salesforce
 description: La destinazione di gestione delle relazioni con i clienti di Salesforce ti consente di esportare i dati del tuo account e di attivarli all’interno di Salesforce CRM per le tue esigenze aziendali.
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: d9ff92138a5de774f011dd9b2e5f1cdc3371bacf
 workflow-type: tm+mt
 source-wordcount: '2821'
 ht-degree: 1%
@@ -134,7 +134,7 @@ Se l&#39;amministratore dell&#39;account [!DNL Salesforce] ha applicato restrizi
 Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, consulta la tabella seguente.
 
 | Elemento | Tipo | Note |
----------|----------|---------|
+|---------|----------|---------|
 | Tipo di esportazione | **[!UICONTROL Basato su profilo]** | <ul><li>Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati *(ad esempio: indirizzo e-mail, numero di telefono, cognome)*, in base al mapping dei campi.</li><li> Ogni stato del pubblico in [!DNL Salesforce CRM] viene aggiornato con lo stato del pubblico corrispondente da Platform, in base al valore **[!UICONTROL ID mappatura]** fornito durante il passaggio [pianificazione del pubblico](#schedule-segment-export-example).</li></ul> |
 | Frequenza di esportazione | **[!UICONTROL Streaming]** | <ul><li>Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni sulle [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
@@ -153,8 +153,9 @@ All&#39;interno di **[!UICONTROL Destinazioni]** > **[!UICONTROL Catalogo]**, ce
 ### Autenticarsi nella destinazione {#authenticate}
 
 Per eseguire l&#39;autenticazione nella destinazione, compilare i campi obbligatori e selezionare **[!UICONTROL Connetti alla destinazione]**. Per ulteriori informazioni, consulta la sezione [Raccogli [!DNL Salesforce CRM] credenziali](#gather-credentials).
+
 | Credenziali | Descrizione |
-| — | — |
+| --- | --- |
 | **[!UICONTROL Nome utente]** | Nome utente dell&#39;account [!DNL Salesforce]. |
 | **[!UICONTROL Password]** | Stringa concatenata composta dalla password dell&#39;account [!DNL Salesforce] a cui è stato aggiunto il token di sicurezza [!DNL Salesforce].<br>Il valore concatenato è `{PASSWORD}{TOKEN}`.<br> Nota: non utilizzare parentesi graffe o spazi.<br>Ad esempio, se la password [!DNL Salesforce] è `MyPa$$w0rd123` e il token di sicurezza [!DNL Salesforce] è `TOKEN12345....0000`, il valore concatenato che utilizzerai nel campo **[!UICONTROL Password]** è `MyPa$$w0rd123TOKEN12345....0000`. |
 | **[!UICONTROL Dominio personalizzato]** | Il prefisso del dominio [!DNL Salesforce]. <br>Ad esempio, se il tuo dominio è *`d5i000000isb4eak-dev-ed`.my.salesforce.com*, devi fornire `d5i000000isb4eak-dev-ed` come valore. |
@@ -212,12 +213,13 @@ Per mappare correttamente i campi XDM ai campi di destinazione [!DNL (API) Sales
    * Se lavori con *Contatti* all&#39;interno del segmento, fai riferimento al Riferimento agli oggetti in Salesforce per [Contatto](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_contact.htm) per definire i mapping per i campi da aggiornare.
    * Puoi identificare i campi obbligatori cercando la parola *Obbligatorio*, indicata nelle descrizioni dei campi nel collegamento precedente.
    * A seconda dei campi che desideri esportare o aggiornare, aggiungi mappature tra lo schema del profilo XDM e [!DNL (API) Salesforce CRM]:
-Campo Source|Campo di destinazione| Note |
-| — | — | — |
-|`IdentityMap: crmID`|`Identity: SalesforceId`|`Mandatory`|
-|`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory`. Cognome del contatto fino a 80 caratteri. |\
-     |`xdm: person.name.firstName`|`Attribute: FirstName`| Il nome del contatto può contenere un massimo di 40 caratteri. |
-|`xdm: personalEmail.address`|`Attribute: Email`| L’indirizzo e-mail del contatto. |
+
+     | Campo origine | Campo di destinazione | Note |
+     | --- | --- | --- |
+     | `IdentityMap: crmID` | `Identity: SalesforceId` | `Mandatory` |
+     | `xdm: person.name.lastName` | `Attribute: LastName` | `Mandatory`. Cognome del contatto fino a 80 caratteri. |
+     | `xdm: person.name.firstName` | `Attribute: FirstName` | Il nome del contatto può contenere un massimo di 40 caratteri. |
+     | `xdm: personalEmail.address` | `Attribute: Email` | L’indirizzo e-mail del contatto. |
 
    * Di seguito è riportato un esempio che utilizza queste mappature:
      ![Esempio di schermata dell&#39;interfaccia utente di Platform che mostra le mappature di Target.](../../assets/catalog/crm/salesforce/mappings-contacts.png)
@@ -227,12 +229,13 @@ Campo Source|Campo di destinazione| Note |
    * Se lavori con *Lead* all&#39;interno del segmento, fai riferimento al Riferimento agli oggetti in Salesforce per [Lead](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_lead.htm) per definire le mappature per i campi da aggiornare.
    * Puoi identificare i campi obbligatori cercando la parola *Obbligatorio*, indicata nelle descrizioni dei campi nel collegamento precedente.
    * A seconda dei campi che desideri esportare o aggiornare, aggiungi mappature tra lo schema del profilo XDM e [!DNL (API) Salesforce CRM]:
-Campo Source|Campo di destinazione| Note |
-| — | — | — |
-|`IdentityMap: crmID`|`Identity: SalesforceId`|`Mandatory`|
-|`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory`. Cognome della sequenza fino a 80 caratteri. |\
-     |`xdm: b2b.companyName`|`Attribute: Company`| `Mandatory`. L&#39;azienda del lead. |
-|`xdm: personalEmail.address`|`Attribute: Email`| Indirizzo e-mail del lead. |
+
+     | Campo origine | Campo di destinazione | Note |
+     | --- | --- | --- |
+     | `IdentityMap: crmID` | `Identity: SalesforceId` | `Mandatory` |
+     | `xdm: person.name.lastName` | `Attribute: LastName` | `Mandatory`. Cognome della sequenza fino a 80 caratteri. |
+     | `xdm: b2b.companyName` | `Attribute: Company` | `Mandatory`. L&#39;azienda del lead. |
+     | `xdm: personalEmail.address` | `Attribute: Email` | Indirizzo e-mail del lead. |
 
    * Di seguito è riportato un esempio che utilizza queste mappature:
      ![Esempio di schermata dell&#39;interfaccia utente di Platform che mostra le mappature di Target.](../../assets/catalog/crm/salesforce/mappings-leads.png)
@@ -256,8 +259,9 @@ Di seguito è riportato un esempio che indica la posizione dell&#39;[!DNL Salesf
 Come mostrato sopra il [!DNL Salesforce] **[!UICONTROL Nome campo]** corrisponde esattamente al valore specificato in [!DNL Salesforce CRM] **[!UICONTROL ID mappatura]**.
 
 A seconda del caso d&#39;uso, tutti i tipi di pubblico attivati possono essere mappati allo stesso campo personalizzato [!DNL Salesforce] o a un **[!UICONTROL Nome campo]** diverso in [!DNL Salesforce CRM]. Un esempio tipico basato sull’immagine mostrata sopra potrebbe essere.
+
 | Nome segmento [!DNL Salesforce CRM] | [!DNL Salesforce] **[!UICONTROL Nome Campo]** | [!DNL Salesforce CRM] **[!UICONTROL ID mappatura]** |
-| — | — | — |
+| --- | --- | --- |
 | crm_1_seg | `crm_1_seg` | `crm_1_seg` |
 | crm_2_seg | `crm_2_seg` | `crm_2_seg` |
 

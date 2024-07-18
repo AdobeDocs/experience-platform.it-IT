@@ -1,7 +1,7 @@
 ---
 title: Destinazione identità organizzazione Merkury
 description: Scopri come creare una connessione di destinazione Merkury Enterprise Identity utilizzando l’interfaccia utente di Adobe Experience Platform.
-source-git-commit: 01ce38d26cf61706de84ec143e3dd8af720d0591
+source-git-commit: 0a1d024b5642c08cd9349220a9686d8d4cbfd55a
 workflow-type: tm+mt
 source-wordcount: '1469'
 ht-degree: 2%
@@ -75,10 +75,11 @@ Questa sezione descrive il tipo di pubblico che puoi esportare in questa destina
 ## Tipo e frequenza di esportazione
 
 Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, consulta la tabella seguente.
-|**Pubblico**|**Supportato**|**Origine descrizione**|\
-|—|—|—|\
-✓ |Servizio di segmentazione|Pubblico generato tramite l&#39;Experience Platform [[Servizio di segmentazione]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home).|
-Caricamenti personalizzati|X|Tipi di pubblico [[importati]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) in Experience Platform da file CSV.
+
+| **Pubblico** | **Supportato** | **Origine descrizione** |
+|---|---|---|      
+| Servizio di segmentazione | ✓ | Tipi di pubblico generati tramite l&#39;Experience Platform [[Servizio di segmentazione]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home). |
+| Caricamenti personalizzati | X | Tipi di pubblico [[importato]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
 
