@@ -2,9 +2,9 @@
 title: Domande frequenti sui tipi di pubblico
 description: Trova le risposte alle domande più frequenti su tipi di pubblico e altri concetti correlati alla segmentazione.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
 workflow-type: tm+mt
-source-wordcount: '4096'
+source-wordcount: '4092'
 ht-degree: 0%
 
 ---
@@ -317,7 +317,7 @@ Per ulteriori dettagli sull&#39;utilizzo di Audience Composition, leggere la [gu
 
 I tipi di pubblico vengono salvati automaticamente durante la loro creazione in Composizione pubblico. L’ora di creazione del pubblico sarà la prima volta che si verifica questo salvataggio automatico.
 
-Una volta creato il pubblico, la sua valutazione può richiedere fino a 24 ore.
+Dopo la creazione della composizione del pubblico, possono essere necessarie fino a 48 ore per valutarla e attivarla per l’utilizzo in servizi a valle come una destinazione Real-Time CDP o un canale Adobe Journey Optimizer.
 
 ### Quando posso utilizzare il pubblico che ho creato?
 
@@ -337,11 +337,7 @@ La suddivisione del pubblico consente di suddividere ulteriormente il pubblico i
 
 La suddivisione per attributo comporta l&#39;esclusività reciproca tra i gruppi. Ciò significa che se un record soddisfa i criteri di più percorsi suddivisi, gli verrà assegnato il percorso **first** da sinistra e **not** assegnato a uno qualsiasi degli altri percorsi.
 
-Quando si divide per percentuale, le divisioni vengono **casualmente** completate. Ciò significa che i profili verranno assegnati in modo casuale a ciascun percorso. La suddivisione **è** persistente, il che significa che il profilo si troverà nello stesso pubblico secondario a ogni valutazione.
-
->[!NOTE]
->
->In precedenza, le suddivisioni nella composizione del pubblico erano **non** persistenti.
+Quando si divide per percentuale, le divisioni vengono **casualmente** completate. Ciò significa che i profili verranno assegnati in modo casuale a ciascun percorso.
 
 Per ulteriori informazioni sul blocco di suddivisione, consulta la [guida dell&#39;interfaccia utente per la composizione del pubblico](./ui/audience-composition.md#split).
 

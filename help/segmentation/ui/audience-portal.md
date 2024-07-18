@@ -1,9 +1,9 @@
 ---
 title: Panoramica di Audience Portal
 description: Scopri come utilizzare Audience Portal per visualizzare, gestire e creare tipi di pubblico in Adobe Experience Platform.
-source-git-commit: c724baba6972e1a033c18b63ab824149567d20fb
+source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
 workflow-type: tm+mt
-source-wordcount: '3673'
+source-wordcount: '3693'
 ht-degree: 3%
 
 ---
@@ -258,6 +258,10 @@ Selezionando **[!UICONTROL Modifica proprietà]** potrai modificare i dettagli d
 ### Totale pubblico {#audience-total}
 
 La sezione **[!UICONTROL Pubblico totale]** mostra il numero totale di profili idonei per il pubblico.
+
+>[!NOTE]
+>
+>Potrebbero essere necessari fino a 30 minuti per aggiornare il conteggio totale del pubblico dopo il completamento del processo di esportazione.
 
 Le stime vengono generate utilizzando una dimensione campione dei dati di campionamento di quel giorno. Se nell’archivio Profili sono presenti meno di 1 milione di entità, viene utilizzato l’intero set di dati; per un numero di entità compreso tra 1 e 20 milioni, vengono utilizzate 1 milione di entità; e per più di 20 milioni di entità, viene utilizzato il 5% del totale delle entità. Ulteriori informazioni sulla generazione di stime sono disponibili nella [sezione sulla generazione di stime](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) dell&#39;esercitazione sulla creazione di tipi di pubblico.
 

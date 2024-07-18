@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guida all’interfaccia utente di Audiences
 description: La funzione di composizione del pubblico nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro ricca che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica dei tipi di pubblico per la tua organizzazione.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 3852fc4eca8ea4b6b3fdcfb6aaa54315d83038b4
+source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
 workflow-type: tm+mt
-source-wordcount: '1913'
+source-wordcount: '1951'
 ht-degree: 0%
 
 ---
@@ -268,14 +268,18 @@ Inoltre, puoi abilitare l&#39;interruttore **[!UICONTROL Altri profili]** per cr
 
 ## Pubblicazione del pubblico
 
-Dopo aver composto il pubblico, puoi salvarlo e pubblicarlo selezionando **[!UICONTROL Publish]**.
+>[!IMPORTANT]
+>
+>Quando pubblichi la composizione del pubblico, tieni presente che potrebbero essere necessarie fino a 48 ore per valutarla e attivarla per l’utilizzo in servizi a valle come una destinazione Real-Time CDP o un canale Adobe Journey Optimizer.
 
-![Il pulsante Publish è evidenziato e mostra come salvare e pubblicare il pubblico.](../images/ui/audience-composition/publish.png)
+Dopo aver creato la composizione, puoi salvarla e pubblicarla selezionando **[!UICONTROL Publish]**.
+
+![Il pulsante Publish è evidenziato e mostra come salvare e pubblicare la composizione.](../images/ui/audience-composition/publish.png)
 
 In caso di errori nella creazione del pubblico, viene visualizzato un avviso che informa su come risolvere il problema.
 
-![Il pulsante Publish è evidenziato e mostra come salvare e pubblicare il pubblico.](../images/ui/audience-composition/audience-alert.png)
+![Il pulsante Publish è evidenziato e mostra come salvare e pubblicare la composizione.](../images/ui/audience-composition/audience-alert.png)
 
 ## Passaggi successivi
 
-La funzione Composizione pubblico offre un flusso di lavoro avanzato che consente di creare tipi di pubblico da diversi tipi di blocchi. Per ulteriori informazioni su altre parti dell&#39;interfaccia utente di Segmentation Service, consulta la [Guida utente di Segmentation Service](./overview.md).
+La funzione Composizione pubblico offre un flusso di lavoro avanzato che consente di creare composizioni da diversi tipi di blocchi. Per ulteriori informazioni su altre parti dell&#39;interfaccia utente di Segmentation Service, consulta la [Guida utente di Segmentation Service](./overview.md).
