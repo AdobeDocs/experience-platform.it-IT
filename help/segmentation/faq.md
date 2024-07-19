@@ -2,9 +2,9 @@
 title: Domande frequenti sui tipi di pubblico
 description: Trova le risposte alle domande più frequenti su tipi di pubblico e altri concetti correlati alla segmentazione.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
+source-git-commit: 5e677e53677cd28787004043e9fcc9b94e631fc8
 workflow-type: tm+mt
-source-wordcount: '4092'
+source-wordcount: '4187'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ Quando carichi un pubblico generato esternamente, vengono creati i seguenti elem
 
 Durante il flusso di lavoro di importazione del pubblico esterno, è necessario specificare quale colonna nel file CSV corrisponde all&#39;**identità primaria**. Un esempio di identità primaria include l’indirizzo e-mail, l’ECID o uno spazio dei nomi di identità personalizzato specifico per l’organizzazione.
 
-I dati associati a questa colonna di identità primaria sono i dati **only** associati al profilo. Se non sono presenti profili corrispondenti ai dati nella colonna dell’identità primaria, viene creato un nuovo profilo. Tuttavia, questo profilo è essenzialmente un profilo orfano poiché a esso sono associati **no** attributi o eventi esperienza.
+I dati associati a questa colonna di identità primaria sono i dati **only** allegati al profilo. Se non sono presenti profili corrispondenti ai dati nella colonna dell’identità primaria, viene creato un nuovo profilo. Tuttavia, questo profilo è essenzialmente un profilo orfano poiché a esso sono associati **no** attributi o eventi esperienza.
 
 Tutti gli altri dati all&#39;interno del pubblico generato esternamente sono considerati **attributi payload**. Questi attributi possono essere utilizzati **solo** per la personalizzazione e l&#39;arricchimento durante l&#39;attivazione e sono **non** associati a un profilo. Tuttavia, questi attributi vengono memorizzati nel data lake.
 
@@ -59,6 +59,10 @@ Sì, se gli identificatori primari corrispondono, il pubblico generato estername
 ### Posso utilizzare un pubblico generato esternamente per creare altri tipi di pubblico?
 
 Sì, qualsiasi pubblico generato esternamente verrà visualizzato nell&#39;inventario del pubblico e può essere utilizzato per la creazione di tipi di pubblico all&#39;interno del [Generatore di segmenti](./ui/segment-builder.md).
+
+### Con quale frequenza vengono valutati i tipi di pubblico generati esternamente?
+
+I tipi di pubblico generati esternamente sono **soli** valutati durante l&#39;importazione. Poiché gli attributi associati a questi tipi di pubblico di importazione non sono durevoli e fanno parte **not** dell&#39;archivio profili, l&#39;unica volta che un pubblico generato esternamente viene aggiornato è se quello esistente viene aggiornato manualmente.
 
 ### Posso utilizzare attributi caricati esternamente come parte della segmentazione?
 
@@ -97,6 +101,10 @@ Se hai caricato accidentalmente un pubblico generato esternamente e desideri rim
 La scadenza dei dati corrente per i tipi di pubblico generati esternamente è **30 giorni**. Questa scadenza dei dati è stata scelta per ridurre la quantità di dati in eccesso archiviati all’interno dell’organizzazione.
 
 Al termine del periodo di scadenza dei dati, il set di dati associato sarà ancora visibile all&#39;interno dell&#39;inventario dei set di dati, ma **non** sarà in grado di attivare il pubblico e il conteggio dei profili verrà visualizzato come zero.
+
+### Posso importare un numero massimo di tipi di pubblico generati esternamente?
+
+Non esiste alcun limite al numero di tipi di pubblico generati esternamente che è possibile importare. Tuttavia, tieni presente che i tipi di pubblico importati **do** vengono conteggiati rispetto al limite di pubblico complessivo.
 
 ### In che modo Audience Portal e Audience Composition interagiranno con il rilascio di Real-Time CDP Partner Data?
 
