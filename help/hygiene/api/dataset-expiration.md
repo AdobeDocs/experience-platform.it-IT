@@ -3,9 +3,9 @@ title: Endpoint API di scadenza set di dati
 description: L’endpoint /ttl nell’API di igiene dei dati consente di pianificare in modo programmatico le scadenze dei set di dati in Adobe Experience Platform.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 4fb8313f8209b68acef1484fc873b9bd014492be
+source-git-commit: 911089ec641d9fbb436807b04dd38e00fd47eecf
 workflow-type: tm+mt
-source-wordcount: '2217'
+source-wordcount: '1964'
 ht-degree: 2%
 
 ---
@@ -388,88 +388,6 @@ curl -X DELETE \
 
 In caso di esito positivo, la risposta restituisce lo stato HTTP 204 (nessun contenuto) e l&#39;attributo `status` della scadenza è impostato su `cancelled`.
 
-## Recuperare la cronologia dello stato di scadenza di un set di dati {#retrieve-expiration-history}
-
-Per cercare la cronologia dello stato di scadenza di un set di dati specifico, utilizzare il parametro di query `{DATASET_ID}` e `include=history` in una richiesta di ricerca. Il risultato include informazioni sulla creazione della scadenza del set di dati, su eventuali aggiornamenti applicati e sulla relativa cancellazione o esecuzione (se applicabile). È inoltre possibile utilizzare `{DATASET_EXPIRATION_ID}` per recuperare la cronologia dello stato di scadenza del set di dati.
-
-**Formato API**
-
-```http
-GET /ttl/{DATASET_ID}?include=history
-GET /ttl/{DATASET_EXPIRATION_ID}?include=history
-```
-
-| Parametro | Descrizione |
-| --- | --- |
-| `{DATASET_ID}` | ID del set di dati di cui desideri cercare la cronologia delle scadenze. |
-| `{DATASET_EXPIRATION_ID}` | ID della scadenza del set di dati. Nota: nella risposta viene indicato come `ttlId`. |
-
-{style="table-layout:auto"}
-
-**Richiesta**
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/hygiene/ttl/62759f2ede9e601b63a2ee14?include=history \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Risposta**
-
-In caso di esito positivo, la risposta restituisce i dettagli della scadenza del set di dati, con un array `history` che fornisce i dettagli degli attributi `status`, `expiry`, `updatedAt` e `updatedBy` per ciascuno degli aggiornamenti registrati.
-
-```json
-{
-  "ttlId": "SD-b16c8b48-a15a-45c8-9215-587ea89369bf",
-  "datasetId": "62759f2ede9e601b63a2ee14",
-  "datasetName": "Example Dataset",
-  "sandboxName": "prod",
-  "displayName": "Expiration Request 123",
-  "description": "Expiration Request 123 Description",
-  "imsOrg": "0FCC747E56F59C747F000101@AdobeOrg",
-  "status": "cancelled",
-  "expiry": "2022-05-09T23:47:30.071186Z",
-  "updatedAt": "2022-05-09T23:47:30.071186Z",
-  "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
-  "history": [
-    {
-      "status": "created",
-      "expiry": "2032-12-31T23:59:59Z",
-      "updatedAt": "2022-05-09T22:38:40.393115Z",
-      "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e"
-    },
-    {
-      "status": "updated",
-      "expiry": "2032-12-31T23:59:59Z",
-      "updatedAt": "2022-05-09T22:41:46.731002Z",
-      "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e"
-    },
-    {
-      "status": "cancelled",
-      "expiry": "2022-05-09T23:47:30.071186Z",
-      "updatedAt": "2022-05-09T23:47:30.071186Z",
-      "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e"
-    }
-  ]
-}
-```
-
-| Proprietà | Descrizione |
-| --- | --- |
-| `ttlId` | ID della scadenza del set di dati. |
-| `datasetId` | ID del set di dati a cui si applica questa scadenza. |
-| `datasetName` | Nome visualizzato del set di dati a cui si applica questa scadenza. |
-| `sandboxName` | Il nome della sandbox in cui si trova il set di dati di destinazione. |
-| `displayName` | Nome visualizzato della richiesta di scadenza. |
-| `description` | Descrizione della richiesta di scadenza. |
-| `imsOrg` | ID organizzazione. |
-| `history` | Elenca la cronologia degli aggiornamenti per la scadenza come array di oggetti, con ogni oggetto contenente gli attributi `status`, `expiry`, `updatedAt` e `updatedBy` per la scadenza al momento dell&#39;aggiornamento. |
-
-{style="table-layout:auto"}
-
 ## Appendice
 
 ### Parametri di query accettati {#query-params}
@@ -482,18 +400,14 @@ La tabella seguente illustra i parametri di query disponibili quando [si elencan
 
 | Parametro | Descrizione | Esempio |
 | --- | --- | --- |
-| `author` | Corrisponde a scadenze il cui `created_by` corrisponde alla stringa di ricerca. Se la stringa di ricerca inizia con `LIKE` o `NOT LIKE`, il resto viene considerato come un modello di ricerca SQL. In caso contrario, l&#39;intera stringa di ricerca viene trattata come una stringa letterale che deve corrispondere esattamente all&#39;intero contenuto di un campo `created_by`. | `author=LIKE %john%`, `author=John Q. Public` |
-| `cancelledDate` / `cancelledToDate` / `cancelledFromDate` | Corrisponde alle scadenze annullate in qualsiasi momento nell’intervallo indicato. Ciò si applica anche se la scadenza è stata successivamente riaperta (impostando una nuova scadenza per lo stesso set di dati). | `updatedDate=2022-01-01` |
-| `completedDate` / `completedToDate` / `completedFromDate` | Corrisponde alle scadenze completate durante l’intervallo specificato. | `completedToDate=2021-11-11-06:00` |
-| `createdDate` | Corrisponde alle scadenze create nell’intervallo di 24 ore a partire dall’ora indicata.<br><br>Si noti che le date senza un&#39;ora (come `2021-12-07`) rappresentano il datetime all&#39;inizio di tale giorno. Pertanto, `createdDate=2021-12-07` si riferisce a qualsiasi scadenza creata il 7 dicembre 2021, da `00:00:00` a `23:59:59.999999999` (UTC). | `createdDate=2021-12-07` |
-| `createdFromDate` | Corrisponde alle scadenze create all’ora indicata o successivamente. | `createdFromDate=2021-12-07T00:00:00Z` |
-| `createdToDate` | Corrisponde alle scadenze create entro l’ora indicata o prima di essa. | `createdToDate=2021-12-07T23:59:59.999999999Z` |
+| `author` | Utilizzare il parametro di query `author` per trovare la persona che ha aggiornato più di recente la scadenza del set di dati. Se non sono stati apportati aggiornamenti dalla sua creazione, corrisponderà al creatore originale della scadenza. Questo parametro corrisponde alle scadenze in cui il campo `created_by` corrisponde alla stringa di ricerca.<br>Se la stringa di ricerca inizia con `LIKE` o `NOT LIKE`, il resto viene trattato come un modello di ricerca SQL. In caso contrario, l&#39;intera stringa di ricerca viene trattata come una stringa letterale che deve corrispondere esattamente all&#39;intero contenuto di un campo `created_by`. | `author=LIKE %john%`, `author=John Q. Public` |
 | `datasetId` | Corrisponde alle scadenze che si applicano a un set di dati specifico. | `datasetId=62b3925ff20f8e1b990a7434` |
 | `datasetName` | Corrisponde a scadenze il cui nome del set di dati contiene la stringa di ricerca fornita. La corrispondenza non distingue tra maiuscole e minuscole. | `datasetName=Acme` |
 | `description` |   | `description=Handle expiration of Acme information through the end of 2024.` |
 | `displayName` | Corrisponde a scadenze il cui nome visualizzato contiene la stringa di ricerca fornita. La corrispondenza non distingue tra maiuscole e minuscole. | `displayName=License Expiry` |
 | `executedDate` / `executedFromDate` / `executedToDate` | Filtra i risultati in base a una data di esecuzione esatta, una data di fine per l’esecuzione o una data di inizio per l’esecuzione. Vengono utilizzati per recuperare dati o record associati all&#39;esecuzione di un&#39;operazione in una data specifica, prima di una data specifica o dopo una data specifica. | `executedDate=2023-02-05T19:34:40.383615Z` |
-| `expiryDate` / `expiryToDate` / `expiryFromDate` | Corrisponde alle scadenze che devono essere eseguite, o che sono già state eseguite, durante l’intervallo specificato. | `expiryFromDate=2099-01-01&expiryToDate=2100-01-01` |
+| `expiryDate` | Corrisponde alle scadenze che si sono verificate nell’intervallo di 24 ore della data specificata. | `2024-01-01` |
+| `expiryToDate` / `expiryFromDate` | Corrisponde alle scadenze che devono essere eseguite, o che sono già state eseguite, durante l’intervallo specificato. | `expiryFromDate=2099-01-01&expiryToDate=2100-01-01` |
 | `limit` | Un numero intero compreso tra 1 e 100 che indica il numero massimo di scadenze da restituire. Impostazione predefinita: 25. | `limit=50` |
 | `orderBy` | Il parametro di query `orderBy` specifica l&#39;ordinamento dei risultati restituiti dall&#39;API. Utilizzalo per disporre i dati in base a uno o più campi, in ordine crescente (ASC) o decrescente (DESC). Utilizzare il prefisso + o - per indicare rispettivamente ASC e DESC. Sono accettati i seguenti valori: `displayName`, `description`, `datasetName`, `id`, `updatedBy`, `updatedAt`, `expiry`, `status`. | `-datasetName` |
 | `orgId` | Corrisponde alle scadenze dei set di dati il cui ID organizzazione corrisponde a quello del parametro. Il valore predefinito è quello delle intestazioni `x-gw-ims-org-id` e viene ignorato a meno che la richiesta non fornisca un token di servizio. | `orgId=885737B25DC460C50A49411B@AdobeOrg` |
@@ -502,7 +416,8 @@ La tabella seguente illustra i parametri di query disponibili quando [si elencan
 | `search` | Corrisponde alle scadenze in cui la stringa specificata corrisponde esattamente all&#39;ID scadenza o è **contenuto** in uno dei campi seguenti:<br><ul><li>autore</li><li>nome visualizzato</li><li>descrizione</li><li>nome visualizzato</li><li>nome set di dati</li></ul> | `search=TESTING` |
 | `status` | Elenco di stati separato da virgole. Se inclusa, la risposta corrisponde alle scadenze del set di dati il cui stato corrente è tra quelli elencati. | `status=pending,cancelled` |
 | `ttlId` | Corrisponde alla richiesta di scadenza con l’ID specificato. | `ttlID=SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f` |
-| `updatedDate` / `updatedToDate` / `updatedFromDate` | Come `createdDate` / `createdFromDate` / `createdToDate`, ma corrisponde all&#39;ora di aggiornamento della scadenza di un set di dati invece dell&#39;ora di creazione.<br><br>Una scadenza viene considerata aggiornata a ogni modifica, anche quando viene creata, annullata o eseguita. | `updatedDate=2022-01-01` |
+| `updatedDate` | Corrisponde alle scadenze aggiornate nella finestra di 24 ore della data specificata. | `2024-01-01` |
+| `updatedToDate` / `updatedFromDate` | Corrisponde alle scadenze aggiornate nella finestra di 24 ore a partire dall’ora indicata.<br><br>Una scadenza viene considerata aggiornata a ogni modifica, anche quando viene creata, annullata o eseguita. | `updatedDate=2022-01-01` |
 
 {style="table-layout:auto"}
 
