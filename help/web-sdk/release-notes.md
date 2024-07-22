@@ -3,9 +3,9 @@ title: Note sulla versione di Adobe Experience Platform Web SDK
 description: Note sulla versione più recente di Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;note sulla versione;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 060f6bb0ff6f57a84698a27bd9f640c0178e5b51
+source-git-commit: 47cf9cdb7c59ce8459ecb8823787b5145d5f5621
 workflow-type: tm+mt
-source-wordcount: '1811'
+source-wordcount: '1857'
 ht-degree: 1%
 
 ---
@@ -21,6 +21,20 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 >Google [ha annunciato](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout) l&#39;intenzione di interrompere il supporto di Chrome per i cookie di terze parti nella seconda metà del 2024. Di conseguenza, i cookie di terze parti non saranno più supportati in nessuno dei principali browser.
 >
 >Quando questa modifica verrà implementata, Adobe interromperà il supporto per il cookie `demdex` attualmente supportato nell&#39;SDK Web.
+
+## Versione 2.21.1 - 18 luglio 2024
+
+**Correzioni e miglioramenti**
+
+* È stato corretto un errore di compilazione che si verificava con l’utilizzo della libreria NPM.
+
+## Versione 2.21.0 - 16 luglio 2024
+
+**Nuove funzioni**
+
+* È stato aggiunto il supporto per il tracciamento automatico delle interazioni delle proposte.
+* È stato aggiunto uno script di build personalizzato che fornisce un file alloy.js.
+* È stata migliorata la raccolta di clic con il supporto di ActivityMap e del raggruppamento di eventi.
 
 ## Versione 2.20.0 - 21 maggio 2024
 
