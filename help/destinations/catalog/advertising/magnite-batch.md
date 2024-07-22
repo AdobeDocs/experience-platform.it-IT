@@ -1,34 +1,34 @@
 ---
-title: Destinazione batch di streaming Magnite
+title: Destinazione batch Magnite
 description: Utilizza questa destinazione per fornire Adobi di pubblico CDP alla piattaforma Magnite Streaming in batch.
 badgeBeta: label="Beta" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: b8921e887b827fcc7b9115045a1954c41a37bce8
 workflow-type: tm+mt
-source-wordcount: '1685'
+source-wordcount: '1663'
 ht-degree: 1%
 
 ---
 
 
-# Streaming Magnite: connessione in batch {#magnite-streaming-batch}
+# Magnite: connessione in batch {#magnite-streaming-batch}
 
 ## Panoramica {#overview}
 
-Questo documento descrive la destinazione Magnite Streaming: Batch e fornisce alcuni esempi di casi d’uso per comprendere meglio come attivare ed esportare i tipi di pubblico.
+Questo documento descrive la destinazione Magnite: Batch e fornisce alcuni esempi di casi d’uso per comprendere meglio come attivare ed esportare i tipi di pubblico.
 
-I tipi di pubblico di Adobe Real-Time CDP possono essere inviati a Magnite: piattaforma di streaming in due modi: una volta al giorno oppure in tempo reale:
+I tipi di pubblico di Adobe Real-Time CDP possono essere inviati alla piattaforma Magnite Streaming in due modi: una volta al giorno oppure in tempo reale:
 
-1. Se desideri e/o vuoi consegnare i tipi di pubblico una sola volta al giorno, puoi utilizzare la destinazione Magnite: Streaming Batch, che distribuisce i tipi di pubblico a Magnite: Streaming tramite una consegna giornaliera di file batch S3. Questi tipi di pubblico in batch vengono memorizzati indefinitamente nella nostra piattaforma, a differenza dei tipi di pubblico in tempo reale, che vengono memorizzati solo per un paio di giorni.
+1. Se desideri e/o vuoi consegnare i tipi di pubblico una sola volta al giorno, puoi utilizzare la destinazione Magnite: Batch, che distribuisce i tipi di pubblico a Magnite Streaming tramite una consegna giornaliera di file batch S3. Questi tipi di pubblico in batch vengono memorizzati indefinitamente nella piattaforma Magnite, a differenza dei tipi di pubblico in tempo reale, che vengono memorizzati solo per un paio di giorni.
 
-2. Tuttavia, se desideri e/o vuoi fornire tipi di pubblico in tempo reale, devi utilizzare la destinazione Magnite: Streaming Real-Time. Quando utilizziamo la destinazione in tempo reale, Magnite: lo streaming riceverà i tipi di pubblico in tempo reale, ma possiamo memorizzare solo i tipi di pubblico in tempo reale temporaneamente sulla nostra piattaforma e verranno rimossi dal nostro sistema entro un paio di giorni. Per questo motivo, se desideri utilizzare la destinazione Magnite: Streaming Real-Time, dovrai anche utilizzare la destinazione Magnite: Streaming Batch: ogni pubblico che attivi sulla destinazione Real-Time, dovrai attivare anche la destinazione Batch.
+2. Tuttavia, se desideri o vuoi inviare i tipi di pubblico più frequentemente, dovrai utilizzare la destinazione [Magnite Real-Time](/help/destinations/catalog/advertising/magnite-streaming.md). Quando si utilizza la destinazione in tempo reale, Magnite Streaming riceverà i tipi di pubblico in tempo reale, ma Magnite può memorizzare solo i tipi di pubblico in tempo reale temporaneamente nella propria piattaforma e verranno rimossi dal sistema entro un paio di giorni. Per questo motivo, se desideri utilizzare la destinazione Magnite in tempo reale, *anche* dovrai utilizzare la destinazione Magnite: Batch - ogni pubblico che attivi nella destinazione in tempo reale, dovrai attivare anche nella destinazione Batch.
 
-Per ricapitolare: se desideri distribuire i tipi di pubblico di Adobe Real-Time CDP solo una volta al giorno, utilizzerai solo la destinazione Magnite: Streaming Batch e i tipi di pubblico verranno consegnati una volta al giorno. Se desideri distribuire il pubblico di Adobe Real-Time CDP in tempo reale, utilizzerai SIA la destinazione Magnite: Streaming Batch che la destinazione Magnite: Streaming Real-Time. Per ulteriori informazioni, contattare Magnite: Streaming.
+Per ricapitolare: se desideri distribuire i tipi di pubblico di Adobe Real-Time CDP solo una volta al giorno, utilizzerai solo la destinazione Magnite: Batch e i tipi di pubblico verranno consegnati una volta al giorno. Se desideri distribuire il pubblico di Adobe Real-Time CDP in tempo reale, utilizzerai *sia* la destinazione Magnite: Batch che la destinazione Magnite Real-Time. Per ulteriori informazioni, contattare Magnite: Streaming.
 
 
-Continua a leggere di seguito per ulteriori informazioni sulla destinazione Magnite: Streaming Batch, su come connettersi ad essa e su come attivare i tipi di pubblico di Adobe Real-Time CDP.
-Per ulteriori informazioni sulla destinazione in tempo reale, consulta [questo documento](magnite-streaming.md).
+Continua a leggere di seguito per ulteriori informazioni sulla destinazione Magnite: Batch, su come connettersi ad essa e su come attivare i tipi di pubblico di Adobe Real-Time CDP.
+Per ulteriori informazioni sulla destinazione in tempo reale, consulta [questa pagina della documentazione](magnite-streaming.md).
 
 >[!IMPORTANT]
 >
@@ -38,31 +38,31 @@ Per ulteriori informazioni sulla destinazione in tempo reale, consulta [questo d
 
 ## Casi d’uso {#use-cases}
 
-Per aiutarti a capire meglio come e quando utilizzare la destinazione Batch Magnite Streaming:, ecco alcuni esempi di casi d’uso che i clienti di Adobe Experience Platform possono risolvere utilizzando questa destinazione.
+Per aiutarti a capire meglio come e quando utilizzare la destinazione Batch Magnite:, ecco alcuni esempi di casi d’uso che i clienti di Adobe Experience Platform possono risolvere utilizzando questa destinazione.
 
 ### #1 del caso d’uso {#use-case-1}
 
-Hai attivato un pubblico sulla destinazione Magnite Streaming: Real-Time.
+Hai attivato un pubblico sulla destinazione Magnite in tempo reale.
 
-Tutti i tipi di pubblico attivati tramite Magnite Streaming: Real-Time devono utilizzare anche la destinazione Magnite Streaming: Batch, in quanto i dati della consegna Batch devono sostituire/mantenere i dati della consegna in tempo reale all’interno della piattaforma Magnite Streaming.
+Tutti i tipi di pubblico attivati tramite la destinazione Magnite in tempo reale devono utilizzare anche la destinazione Magnite: Batch, in quanto i dati della consegna Batch sono intesi a sostituire/mantenere i dati della consegna in tempo reale all’interno della piattaforma Magnite Streaming.
 
 ### #2 del caso d’uso {#use-case-2}
 
 Desideri attivare un pubblico solo in una cadenza batch/giornaliera sulla piattaforma Magnite Streaming.
 
-Tutti i tipi di pubblico attivati tramite Magnite Streaming: la destinazione batch verrà consegnata in batch/cadenza giornaliera e sarà quindi indirizzabile nella piattaforma Magnite Streaming.
+Tutti i tipi di pubblico attivati tramite la destinazione Magnite: Batch verranno consegnati in batch/cadenza giornaliera e saranno quindi disponibili per il targeting nella piattaforma Magnite Streaming.
 
 ## Prerequisiti {#prerequisites}
 
-Per utilizzare le destinazioni Magnite in Adobe Experience Platform, devi prima disporre di un account Magnite Streaming. Se hai un account [!DNL Magnite Streaming], contatta il tuo account manager [!DNL Magnite] per ricevere le credenziali per accedere a [!DNL Magnite's] destinazioni. Se non disponi di un account [!DNL Magnite Streaming], contatta adobe-tech@magnite.com
+Per utilizzare le destinazioni [!DNL Magnite] in Adobe Experience Platform, è innanzitutto necessario disporre di un account Magnite Streaming. Se hai un account [!DNL Magnite Streaming], contatta il tuo account manager [!DNL Magnite] per ricevere le credenziali per accedere a [!DNL Magnite's] destinazioni. Se non disponi di un account [!DNL Magnite Streaming], contatta adobe-tech@magnite.com
 
 ## Identità supportate {#supported-identities}
 
-La destinazione Magnite Streaming: Batch può ricevere *qualsiasi* origini identità da Adobe CDP. Attualmente, questa destinazione dispone di tre campi di identità di Target a cui eseguire il mapping.
+La destinazione Magnite: Batch può ricevere *qualsiasi* origine identità da Adobe CDP. Attualmente, questa destinazione dispone di tre campi di identità di Target a cui eseguire il mapping.
 
 >[!NOTE]
 >
->*Qualsiasi* origine identità può essere mappata a una qualsiasi delle identità di destinazione magnite_deviceId.
+>*Qualsiasi* origine identità può essere mappata a una qualsiasi delle `magnite_deviceId` identità di destinazione.
 
 | Identità di destinazione | Descrizione | Considerazioni |
 |:--------------------------- |:------------------------------------------------------------------------------------------------ |:------------------------------------------------------------------------------------- |
@@ -85,7 +85,7 @@ La destinazione Magnite Streaming: Batch può ricevere *qualsiasi* origini ident
 
 | Elemento | Tipo | Note |
 |-----------------------------|----------|----------|
-| Tipo di esportazione | Esportazione pubblico | Stai esportando tutti i membri di un pubblico con gli identificatori (nome, numero di telefono o altri) utilizzati nella destinazione Magnite Streaming: Batch. |
+| Tipo di esportazione | Esportazione pubblico | Stai esportando tutti i membri di un pubblico con gli identificatori (nome, numero di telefono o altri) utilizzati nella destinazione Magnite: Batch. |
 | Frequenza di esportazione | Batch | Le destinazioni batch esportano i file sulle piattaforme a valle con incrementi di tre, sei, otto, dodici o ventiquattro ore. Ulteriori informazioni sulle [destinazioni basate su file](/help/destinations/destination-types.md) batch. |
 
 {style="table-layout:auto"}
@@ -96,7 +96,7 @@ Dopo aver approvato l’utilizzo della destinazione e aver condiviso le tue cred
 
 ### Autenticarsi nella destinazione {#authenticate}
 
-Individua la destinazione Magnite Streaming: Batch nel catalogo delle esperienze Adobe. Fai clic sul pulsante delle opzioni aggiuntive (\...) e quindi configura la connessione/istanza di destinazione.
+Individua la destinazione Magnite: Batch nel catalogo delle esperienze Adobe. Fai clic sul pulsante delle opzioni aggiuntive (\...) e quindi configura la connessione/istanza di destinazione.
 
 Se disponi già di un account, puoi trovarlo modificando l’opzione Tipo di account in &quot;Account esistente&quot;. In caso contrario, verrà creato un account di seguito:
 
@@ -126,7 +126,7 @@ connessione/istanza di destinazione in futuro.
 
 Puoi quindi procedere selezionando **[!UICONTROL Avanti]**
 
-Nella schermata successiva, intitolata &quot;Governance Policy and Enforcement Actions (Optional)&quot; (Criteri di governance e azioni di applicazione (Facoltativo)), puoi selezionare facoltativamente tutti i criteri di governance dei dati rilevanti. &quot;Esportazione dati&quot; è generalmente selezionato per la destinazione Batch di streaming Magnite.
+Nella schermata successiva, intitolata &quot;Governance Policy and Enforcement Actions (Optional)&quot; (Criteri di governance e azioni di applicazione (Facoltativo)), puoi selezionare facoltativamente tutti i criteri di governance dei dati rilevanti. &quot;Esportazione dati&quot; è generalmente selezionato per la destinazione Magnite: Batch.
 
 ![Criteri di governance facoltativi e azioni di applicazione](../../assets/catalog/advertising/magnite/destination-batch-config-grouping-policy.png)
 
@@ -175,11 +175,11 @@ Nella schermata &quot;Configure a filename and export schedule for each audience
 
 Una volta caricati i tipi di pubblico, puoi verificare che siano stati creati e caricati correttamente.
 
-* La destinazione Magnite Streaming Batch distribuisce i file S3 a Magnite Streaming con cadenza giornaliera. Dopo la consegna e l’acquisizione, i tipi di pubblico/segmenti dovrebbero apparire in Magnite Streaming e possono essere applicati a un’offerta. Puoi confermarlo cercando l’ID segmento o il nome segmento condiviso durante i passaggi di attivazione in Adobe Experience Platform.
+* La destinazione Magnite: Batch distribuisce i file S3 a Magnite Streaming con cadenza giornaliera. Dopo la consegna e l’acquisizione, i tipi di pubblico/segmenti dovrebbero apparire in Magnite Streaming e possono essere applicati a un’offerta. Puoi confermarlo cercando l’ID segmento o il nome segmento condiviso durante i passaggi di attivazione in Adobe Experience Platform.
 
 >[!NOTE]
 >
->I tipi di pubblico attivati/recapitati nella destinazione Batch di streaming di Magnite *sostituiranno* gli stessi tipi di pubblico attivati/recapitati tramite la destinazione in tempo reale di streaming di Magnite. Se cerchi un segmento utilizzando il nome del segmento, è possibile che il segmento non venga trovato in tempo reale, fino a quando il batch non viene acquisito ed elaborato dalla piattaforma Magnite Streaming.
+>I tipi di pubblico attivati/recapitati alla destinazione Magnite: Batch *sostituiranno* gli stessi tipi di pubblico attivati/recapitati tramite la destinazione Magnite in tempo reale. Se cerchi un segmento utilizzando il nome del segmento, è possibile che il segmento non venga trovato in tempo reale, fino a quando il batch non viene acquisito ed elaborato dalla piattaforma Magnite Streaming.
 
 ## Utilizzo dei dati e governance {#data-usage-governance}
 

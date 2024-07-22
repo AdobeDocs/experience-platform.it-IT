@@ -3,9 +3,9 @@ keywords: destinazioni;destinazione;tipi di destinazione;destinations;destinatio
 title: Tipi e categorie di destinazione
 description: Scopri i diversi tipi e categorie di destinazioni in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: c6019737e93756f3f524d5a85ea57383baa1a31d
+source-git-commit: 8314aca706b47c4cbcb993418c287629f5563189
 workflow-type: tm+mt
-source-wordcount: '776'
+source-wordcount: '804'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ In Adobe Experience Platform, distinguiamo tra diversi tipi di destinazione: con
 
 Infine, è possibile distinguere le connessioni tra le destinazioni pubbliche disponibili in tutte le organizzazioni nel catalogo delle destinazioni e le destinazioni private che i clienti di Real-Time CDP Ultimate possono creare per soddisfare i propri casi di utilizzo specifici per l&#39;esportazione.
 
-![Diagramma dei tipi di destinazioni.](./assets/destination-types/types-of-destinations-no-highlight.png)
+![Diagramma dei tipi di destinazioni.](./assets/destination-types/types-of-destinations-no-highlight.png "Diagramma dei tipi di destinazioni."){zoomable="yes"}
 
 ## Connessioni {#connections}
 
@@ -33,17 +33,17 @@ Le destinazioni di esportazione dei profili ricevono dati non elaborati, spesso 
 * [Destinazioni di esportazione dei profili di streaming (destinazioni aziendali)](#streaming-profile-export)
 * [Destinazioni batch (basate su file)](#file-based)
 
-### Destinazioni di esportazione dei profili di streaming (destinazioni aziendali) {#streaming-profile-export}
+### Destinazioni enterprise avanzate (destinazioni di esportazione del profilo di streaming) {#streaming-profile-export}
 
 >[!IMPORTANT]
 >
->Le destinazioni Enterprise o le destinazioni di esportazione dei profili di streaming sono disponibili solo per [clienti Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform.html).
+>Le destinazioni enterprise avanzate, o destinazioni di esportazione del profilo di streaming, sono disponibili solo per [clienti Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform.html).
 
-Utilizza i connettori dati di destinazione Enterprise per fornire profili Adobe Real-time Customer Data Platform in tempo reale a sistemi interni o ad altri sistemi di terze parti per casi di utilizzo di sincronizzazione, analisi e ulteriore arricchimento dei profili.
+Utilizza i connettori dati di destinazione aziendale avanzati per fornire profili Adobe Real-time Customer Data Platform in tempo reale a sistemi interni o ad altri sistemi di terze parti per casi di utilizzo di sincronizzazione, analisi e ulteriore arricchimento dei profili.
 
 Queste destinazioni ricevono i dati di pubblico e profilo come flussi di dati di Experience Platform.
 
-Le destinazioni Enterprise includono:
+Le destinazioni enterprise avanzate includono:
 
 * [Destinazione API HTTP](catalog/streaming/http-destination.md)
 * [Amazon Kinesis](catalog/cloud-storage/amazon-kinesis.md)
@@ -81,7 +81,7 @@ Ulteriori informazioni sui [vari tipi di pubblico](/help/segmentation/ui/account
 
 Un simbolo sulla scheda di destinazione mostra quali tipi di pubblico puoi esportare in ogni destinazione.
 
-![Esempio di scheda di destinazione con simboli che indicano quali tipi di pubblico possono essere esportati.](/help/destinations/assets/destination-types/types-of-audiences.png)
+![Esempio di scheda di destinazione con simboli che indicano quali tipi di pubblico possono essere esportati.](/help/destinations/assets/destination-types/types-of-audiences.png "Esempio di scheda di destinazione con simboli che indicano quali tipi di pubblico possono essere esportati."){zoomable="yes"}
 
 
 ## Destinazioni di esportazione del set di dati {#dataset-export-destinations}
@@ -114,4 +114,4 @@ Le estensioni sono utili quando i dati evento vengono utilizzati per attivare un
 
 Le connessioni e le estensioni nel [catalogo delle destinazioni](https://platform.adobe.com/destination/catalog) sono raggruppate per categoria di destinazione (**Advertising**, **Archiviazione cloud**, **Piattaforme sondaggio**, **E-mail marketing**, ecc.), a seconda dell&#39;azione di marketing che ti aiutano a ottenere. Per ulteriori informazioni su ciascuna categoria e sulle destinazioni incluse in ciascuna categoria, consulta la [documentazione del catalogo delle destinazioni](./catalog/overview.md).
 
-![Categorie di destinazione evidenziate nella pagina del catalogo.](./assets/destination-types/destination-categories-menu.png)
+![Categorie di destinazione evidenziate nella pagina del catalogo.](./assets/destination-types/destination-categories-menu.png "Categorie di destinazione evidenziate nella pagina del catalogo."){zoomable="yes"}
