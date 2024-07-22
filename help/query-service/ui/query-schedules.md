@@ -2,9 +2,9 @@
 title: Pianificazioni query
 description: Scopri come automatizzare l’esecuzione di query pianificate, eliminare o disabilitare una pianificazione di query e utilizzare le opzioni di pianificazione disponibili tramite l’interfaccia utente di Adobe Experience Platform.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
+source-git-commit: 0b056da8457010ce36efc48e3dd91f280a9b15c5
 workflow-type: tm+mt
-source-wordcount: '1822'
+source-wordcount: '1848'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,10 @@ Verrà visualizzata l&#39;area di lavoro pianificazioni. Nell’interfaccia uten
 ### Aggiungi dettagli pianificazione {#schedule-details}
 
 Viene visualizzata la pagina dei dettagli della pianificazione. In questa pagina è possibile modificare una serie di dettagli per la query pianificata. I dettagli includono [frequenza e giorno feriale dell&#39;esecuzione pianificata della query](#scheduled-query-frequency), la data di inizio e di fine, il set di dati in cui esportare i risultati e [avvisi sullo stato della query](#alerts-for-query-status).
+
+>[!IMPORTANT]
+>
+>L’interfaccia utente dell’utilità di pianificazione delle query non supporta la pianificazione indefinita o permanente. È necessario specificare una data di fine. Non esiste alcun limite massimo per la data di fine.
 
 ![Il pannello Dettagli pianificazione è evidenziato.](../images/ui/query-schedules/schedule-details.png)
 

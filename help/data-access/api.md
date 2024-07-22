@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Guida dell’API di accesso ai dati
 description: L’API di accesso ai dati supporta Adobe Experience Platform fornendo agli sviluppatori un’interfaccia RESTful incentrata sulla reperibilità e l’accessibilità dei set di dati acquisiti in Experience Platform.
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
-source-git-commit: d8694c094ae4a7284e4a3ed0ae5bc3dc198e501a
+source-git-commit: dbb96744c873d2bf656be03ebf1b8ea2fb08acf3
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '554'
 ht-degree: 5%
 
 ---
 
 # Guida dell’API di accesso ai dati
+
+>[!IMPORTANT]
+>
+>L&#39;API di accesso ai dati è ora **obsoleta**. Ti consigliamo di utilizzare le Destinazioni per l’esportazione di dati da Adobe Experience Platform. Per ulteriori informazioni, consulta la [documentazione sulle destinazioni di esportazione dei set di dati](../destinations/destination-types.md#dataset-export-destinations).
 
 L&#39;API di accesso ai dati supporta Adobe Experience Platform fornendo agli utenti un&#39;interfaccia RESTful incentrata sulla reperibilità e l&#39;accessibilità dei set di dati acquisiti in [!DNL Experience Platform].
 
@@ -19,7 +23,7 @@ L&#39;API di accesso ai dati supporta Adobe Experience Platform fornendo agli ut
 
 ## Riferimento alle specifiche API
 
-La documentazione di riferimento API Swagger è disponibile [qui](https://developer.adobe.com/experience-platform-apis/references/data-access/).
+La documentazione di riferimento OpenAPI è disponibile [qui](https://developer.adobe.com/experience-platform-apis/references/data-access/).
 
 ## Terminologia {#terminology}
 
