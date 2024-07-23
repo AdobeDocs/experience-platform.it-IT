@@ -5,10 +5,10 @@ breadcrumb-title: Guida di Query Service
 user-guide-description: Utilizza il linguaggio SQL standard per eseguire query sui dati nel data lake in Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: bb95e0aa8ee92aee5a2f126d85e78308e652a061
+source-git-commit: 3e4fe58deb48622129c919b8c4a93ba4e57c4338
 workflow-type: tm+mt
-source-wordcount: '321'
-ht-degree: 19%
+source-wordcount: '323'
+ht-degree: 18%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 19%
       - [Funzioni del tecnico per ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
       - [Esportare dati in ambienti ML](data-distiller/ml-feature-pipelines/export-data.md)
       - [Flusso di lavoro end-to-end per l’arricchimento della pipeline dati AI/ML](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
-- Casi d’uso {#use-cases}
+- Esempi pratici {#use-cases}
    - [Panoramica](use-cases/overview.md)
    - [Sfoglia abbandonata](use-cases/abandoned-browse.md)
    - [Analisi dell’attribuzione](use-cases/attribution-analysis.md)
@@ -47,6 +47,7 @@ ht-degree: 19%
    - [Creare un rapporto con tendenze degli eventi](use-cases/trended-report-of-events.md)
    - [Analisi del consenso](use-cases/consent-analysis.md)
    - [Valore della durata del cliente](use-cases/customer-lifetime-value.md)
+   - [Esplorazione dei dati](./use-cases/data-exploration.md)
    - [Set di dati derivati basati sul decile](use-cases/deciles-use-case.md)
    - [Corrispondenza fuzzy](use-cases/fuzzy-match.md)
    - [Elencare le visualizzazioni di pagina di un utente](use-cases/list-visitor-sessions.md)

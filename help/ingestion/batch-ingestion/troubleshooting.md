@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida alla risoluzione dei problemi di acquisizione in batch
 description: Questa documentazione sarà utile per rispondere alle domande frequenti sulle API di acquisizione dati in batch di Adobe Experience Platform.
 exl-id: 0a750d7e-a4ee-4a79-a697-b4b732478b2b
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 37b241f15f297263cc7aa20f382c115a2d131c7e
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1426'
 ht-degree: 1%
 
 ---
@@ -212,11 +212,11 @@ Quando un batch si trova in &quot;Caricamento&quot;, significa che l’API Compl
 
 ### Esiste un modo per sapere se un batch è stato acquisito correttamente?
 
-Una volta che lo stato del batch è &quot;Attivo&quot;, il batch è stato correttamente acquisito. Per conoscere lo stato del batch, segui i passaggi dettagliati [precedenti](#how-is-batch-ingestion-monitored).
+Sì, una volta che lo stato del batch è &quot;Attivo&quot;, il batch è stato correttamente acquisito. Per conoscere lo stato del batch, segui i passaggi dettagliati [precedenti](#how-is-batch-ingestion-monitored).
 
-### Cosa succede in caso di errore di un batch?
+### Cosa succede in caso di errore di un batch? {#what-if-a-batch-fails}
 
-Quando un batch ha esito negativo, il motivo dell&#39;errore può essere identificato nella sezione `errors` del payload. Di seguito sono riportati alcuni esempi di errori:
+Quando un batch non riesce, il processo si arresta e restituisce lo stato `Failure`. Il motivo dell&#39;errore può essere identificato nella sezione `errors` del payload. Di seguito sono riportati alcuni esempi di errori:
 
 ```json
     "errors":[
