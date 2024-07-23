@@ -1,13 +1,13 @@
 ---
 title: Endpoint autorizzazioni utilizzo pacchetto estensione
 description: Scopri come effettuare chiamate all’endpoint per le autorizzazioni /extension_package_usage nell’API di Reactor.
-source-git-commit: fdf01451527e2fab8eb6e6f9d7b4901a85381450
+exl-id: ad3fb704-7d2f-45ec-b80b-ea4d327f2205
+source-git-commit: 9cdd349e0eccb4498d88f24a84b0f1c116b0adfe
 workflow-type: tm+mt
 source-wordcount: '653'
 ht-degree: 16%
 
 ---
-
 
 # Endpoint di autorizzazioni di utilizzo del pacchetto di estensione
 
@@ -185,7 +185,7 @@ In caso di esito positivo, la risposta restituisce i dettagli della nuova autori
 >
 >Nell&#39;esempio di risposta precedente, l&#39;autorizzazione si trova attualmente nella fase `pending_approval`. Prima di utilizzare il pacchetto di estensione, l’organizzazione deve approvare l’autorizzazione. Gli utenti dell’organizzazione possono sfogliare il pacchetto di estensione privato mentre l’autorizzazione è in attesa di approvazione, ma non sono in grado di installarlo e non possono trovarlo nel catalogo delle estensioni.
 
-## Recuperare un elenco di autorizzazioni di utilizzo del pacchetto di estensione {#list_authorizations}
+## Recuperare un elenco di autorizzazioni di utilizzo del pacchetto di estensione {#list-authorizations}
 
 Per recuperare un elenco di autorizzazioni di utilizzo del pacchetto di estensione, effettua una richiesta GET.
 
@@ -386,7 +386,7 @@ In caso di esito positivo, la risposta restituisce i dettagli dell’autorizzazi
 >
 >Una volta approvata l’autorizzazione, l’organizzazione può installare il pacchetto di estensione sulle proprietà.
 
-## Recuperare i dati per il pacchetto di estensione per l’autorizzazione di utilizzo di un pacchetto di estensione {#retrieve_data}
+## Recuperare i dati per il pacchetto di estensione per l’autorizzazione di utilizzo di un pacchetto di estensione {#retrieve-data}
 
 Per recuperare i dati del pacchetto di estensione per l’autorizzazione di utilizzo di un pacchetto di estensione, effettua una richiesta GET.
 
