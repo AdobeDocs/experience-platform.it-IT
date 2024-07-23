@@ -3,9 +3,9 @@ keywords: destinazioni;destinazione;tipi di destinazione;destinations;destinatio
 title: Tipi e categorie di destinazione
 description: Scopri i diversi tipi e categorie di destinazioni in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 8314aca706b47c4cbcb993418c287629f5563189
+source-git-commit: 13ceaa53b53f17457c8d2c914b3fd05f6af2441b
 workflow-type: tm+mt
-source-wordcount: '804'
+source-wordcount: '805'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,11 @@ In Adobe Experience Platform, distinguiamo tra diversi tipi di destinazione: con
 
 Infine, è possibile distinguere le connessioni tra le destinazioni pubbliche disponibili in tutte le organizzazioni nel catalogo delle destinazioni e le destinazioni private che i clienti di Real-Time CDP Ultimate possono creare per soddisfare i propri casi di utilizzo specifici per l&#39;esportazione.
 
+>[!BEGINSHADEBOX]
+
 ![Diagramma dei tipi di destinazioni.](./assets/destination-types/types-of-destinations-no-highlight.png "Diagramma dei tipi di destinazioni."){zoomable="yes"}
+
+>[!ENDSHADEBOX]
 
 ## Connessioni {#connections}
 
@@ -30,8 +34,8 @@ Infine, è possibile distinguere le connessioni tra le destinazioni pubbliche di
 
 Le destinazioni di esportazione dei profili ricevono dati non elaborati, spesso con l’indirizzo e-mail come chiave primaria. Experience Platform supporta attualmente due tipi di destinazioni di esportazione del profilo:
 
-* [Destinazioni di esportazione dei profili di streaming (destinazioni aziendali)](#streaming-profile-export)
 * [Destinazioni batch (basate su file)](#file-based)
+* [Destinazioni enterprise avanzate (destinazioni di esportazione del profilo di streaming)](#streaming-profile-export)
 
 ### Destinazioni enterprise avanzate (destinazioni di esportazione del profilo di streaming) {#streaming-profile-export}
 
