@@ -2,9 +2,9 @@
 title: Utilizzare Adobe Target con Web SDK per la personalizzazione
 description: Scopri come eseguire il rendering di contenuti personalizzati con Experience Platform Web SDK utilizzando Adobe Target
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 69406293dce5fdfc832adff801f1991626dafae0
+source-git-commit: b50ea35bf0e394298c0c8f0ffb13032aaa1ffafb
 workflow-type: tm+mt
-source-wordcount: '1345'
+source-wordcount: '1364'
 ht-degree: 1%
 
 ---
@@ -192,77 +192,31 @@ Per ritardare la registrazione degli attributi nel profilo fino alla visualizzaz
 
 Ad esempio, il sito web contiene tre ambiti decisionali corrispondenti a tre collegamenti per categorie sul sito web (uomini, donne e bambini) e desideri tenere traccia della categoria che l’utente ha eventualmente visitato. Invia queste richieste con il flag `__save` impostato su `false` per evitare di rendere persistente la categoria al momento della richiesta del contenuto. Dopo aver visualizzato il contenuto, invia il payload corretto (inclusi `eventToken` e `stateToken`) per gli attributi corrispondenti da registrare.
 
-<!--Save profile or entity attributes by default with:
-
-```js
-alloy ( "sendEvent" , {
-  renderDecisions : true,
-  data : {
-    __adobe : {
-      target : {
-        "__save" : true // Optional. __save=true is the default 
-        "profile.gender" : "female",
-        "profile.age" : 30,
-        "entity.name" : "T-shirt",
-        "entity.id" : "1234",
-      }
-    }
-  }
-} ) ; 
-```
--->
-
 L’esempio seguente invia un messaggio in stile trackEvent, esegue script di profilo, salva gli attributi e registra immediatamente l’evento.
 
 ```js
-alloy ( "sendEvent" , {
-  renderDecisions : true,
-  data : {
-    __adobe : {
-      target : {
-        "profile.gender" : "female",
-        "profile.age" : 30,
-        "entity.name" : "T-shirt" ,
-        "entity.id" : "1234" ,
-        "track": {
-          "scopes": [ "mbox1", "mbox2"],
-          "type": "display|click|..."
+alloy("sendEvent", {
+    "renderDecisions": true,
+    "data": {
+        "xdm": { // Experience Event XDM data },
+            "__adobe": {
+                "target": {
+                    " __save": true|false,
+                    //defaults to true if omitted 
+                    "profile.gender": "female",
+                    "profile.age": 30,
+                    "entity.name": "T-shirt",
+                    "entity.id": "1234"
+                }
+            }
         }
-      }
     }
-  }
-} ) ;
+})
 ```
 
 >[!NOTE]
 >
->Se la direttiva `__save` viene omessa, il salvataggio degli attributi di profilo ed entità avviene immediatamente, come se la richiesta fosse stata eseguita, anche se il resto della richiesta è un recupero preventivo della personalizzazione. La direttiva `__save` è rilevante solo per gli attributi di profilo ed entità. Se l&#39;oggetto track è presente, la direttiva `__save` viene ignorata. I dati vengono salvati immediatamente e la notifica viene registrata.
-
-**`sendEvent`con dati profilo**
-
-```js
-alloy("sendEvent", {
-   renderDecisions: true|false,
-   xdm: { // Experience Event XDM data },
-   data: { // Freeform data }
-});
-```
-
-**Come inviare gli attributi del profilo ad Adobe Target:**
-
-```js
-alloy("sendEvent", {
-  "renderDecisions": true,
-  "data": {
-    "__adobe": {
-      "target": {
-        "profile.gender": "female",
-        "profile.age": 30
-      }
-    }
-  }
-});
-```
+>Se la direttiva `__save` viene omessa, il salvataggio degli attributi di profilo ed entità avviene immediatamente. La direttiva `__save` è rilevante solo per gli attributi di profilo e i dettagli di entità.
 
 ## Richiedi consigli
 
@@ -302,6 +256,34 @@ alloy("sendEvent", {
   }
 });
 ```
+
+## Visualizzare le metriche di conversione mbox {#display-mbox-conversion-metrics}
+
+L’esempio seguente mostra come tracciare le conversioni mbox di visualizzazione e inviare i parametri di profilo ad Adobe Target, senza richiedere di qualificarsi per alcun contenuto o attività.
+
+```js
+alloy("sendEvent", {
+    "xdm": {
+        "_experience": {
+            "decisioning": {
+                "propositions": [{
+                    "scope": "conversion-step-1" //example scope name
+                }],
+                "propositionEventType": {
+                    "display": 1
+                }
+            }
+        },
+        "eventType": "decisioning.propositionDisplay"
+    }
+});
+```
+
+
+| Proprietà | Descrizione |
+|---------|----------|
+| `xdm._experience.decisioning.propositions[x].scope` | L’ambito a cui associare la metrica di successo (che la attribuirà a un’attività specifica sul lato Target). |
+| `xdm._experience.decisioning.propositions[x].eventType` | Stringa che descrive il tipo di evento previsto. Imposta su `"decisioning.propositionDisplay"` per questo caso d&#39;uso. |
 
 ## Debug
 
