@@ -2,7 +2,7 @@
 title: thirdPartyCookiesEnabled
 description: Consenti l’utilizzo di cookie di terze parti per identificare i visitatori.
 exl-id: f241a9ae-a892-46a5-b0dd-5ac72a44d4ac
-source-git-commit: bc48f45bd6b9b7f7cc446ae84d712376292718d2
+source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
 workflow-type: tm+mt
 source-wordcount: '278'
 ht-degree: 0%
@@ -40,8 +40,8 @@ Impostare il valore booleano `thirdPartyCookiesEnabled` durante l&#39;esecuzione
 
 ```js
 alloy("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "thirdPartyCookiesEnabled": false
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  thirdPartyCookiesEnabled: false
 });
 ```

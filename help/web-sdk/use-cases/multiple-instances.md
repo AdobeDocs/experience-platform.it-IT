@@ -1,11 +1,11 @@
 ---
 title: Utilizzare più istanze di Web SDK
 description: Scopri come interagire con più proprietà di Experience Platform Web SDK.
-keywords: più proprietà;configurare;sendEvent;edgeConfigId;orgId;
+keywords: più proprietà
 exl-id: e07afb0d-3490-414f-bc9c-f71bc04fe664
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '215'
 ht-degree: 0%
 
 ---
@@ -38,24 +38,24 @@ Seguendo l’esempio precedente, è possibile eseguire comandi utilizzando ogni 
 
 ```javascript
 titanium("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg"
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg"
 });
 
 titanium("sendEvent", {
-  "data": {
-    "key": "value"
+  data: {
+    key: "value"
   }
 });
 
 copper("configure", {
-  "edgeConfigId": "f46e981f-fd03-4bdd-a9d9-73ce4447f870",
-  "orgId": "ADB3NUMBERSANDLETTERS2@AdobeOrg"
+  datastreamId: "f46e981f-fd03-4bdd-a9d9-73ce4447f870",
+  orgId: "ADB3NUMBERSANDLETTERS2@AdobeOrg"
 });
 
 copper("sendEvent", {
-  "data": {
-    "key": "value"
+  data: {
+    key: "value"
   }
 });
 ```
@@ -64,4 +64,4 @@ Assicurarsi di eseguire il comando `configure` per ogni istanza prima di eseguir
 
 >[!IMPORTANT]
 >
->Per evitare conflitti con i cookie, ogni istanza di Web SDK deve avere il proprio `edgeConfigId` univoco e il proprio `orgId` univoco.
+>Per evitare conflitti con i cookie, ogni istanza di Web SDK deve avere il proprio `datastreamId` univoco e il proprio `orgId` univoco.

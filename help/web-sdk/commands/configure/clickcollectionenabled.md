@@ -1,13 +1,13 @@
 ---
 title: clickCollectionEnabled
 description: Scopri come configurare Web SDK per determinare se i dati dei clic di collegamento vengono raccolti automaticamente.
-source-git-commit: 660d4e72bd93ca65001092520539a249eae23bfc
+exl-id: e91b5bc6-8880-4884-87f9-60ec8787027e
+source-git-commit: d3be2a9e75514023a7732a1c3460f8695ef02e68
 workflow-type: tm+mt
-source-wordcount: '371'
+source-wordcount: '356'
 ht-degree: 0%
 
 ---
-
 
 # `clickCollectionEnabled`
 
@@ -33,14 +33,13 @@ In tutti i casi, `xdm.web.webInteraction.name` è impostato sull&#39;etichetta d
 
 ## Abilitare il tracciamento automatico dei collegamenti tramite l’estensione tag Web SDK {#tag-extension}
 
-Selezionare la casella di controllo **[!UICONTROL Abilita raccolta dati su clic]** durante la [configurazione dell&#39;estensione tag](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+Questa variabile viene gestita automaticamente dall’estensione tag; non è necessario impostarla esplicitamente. Se durante la [configurazione dell&#39;estensione tag](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) viene selezionato uno dei seguenti elementi, vengono raccolti i dati di tracciamento dei collegamenti applicabili:
 
-1. Accedi a [experience.adobe.com](https://experience.adobe.com) utilizzando le credenziali Adobe ID.
-1. Passa a **[!UICONTROL Raccolta dati]** > **[!UICONTROL Tag]**.
-1. Seleziona la proprietà tag desiderata.
-1. Passa a **[!UICONTROL Estensioni]**, quindi fai clic su **[!UICONTROL Configura]** nella scheda [!UICONTROL Adobe Experience Platform Web SDK].
-1. Scorri verso il basso fino alla sezione [!UICONTROL Raccolta dati], quindi seleziona la casella di controllo **[!UICONTROL Abilita raccolta dati su clic]**.
-1. Fai clic su **[!UICONTROL Salva]**, quindi pubblica le modifiche.
+* [!UICONTROL Raccogliere i clic sul collegamento interno]
+* [!UICONTROL Raccogli i clic sul collegamento esterno]
+* [!UICONTROL Raccogli clic sul collegamento di download]
+
+Per ulteriori informazioni, vedere [`clickCollection`](clickcollection.md).
 
 ## Abilitare il tracciamento automatico dei collegamenti utilizzando la libreria JavaScript dell’SDK per web {#library}
 
@@ -48,7 +47,7 @@ Impostare il valore booleano `clickCollectionEnabled` durante l&#39;esecuzione d
 
 ```js
 alloy(configure, {
-  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
   clickCollectionEnabled: false
 });

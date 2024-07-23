@@ -1,11 +1,11 @@
 ---
 title: Metodi di debug
 description: Scopri come attivare/disattivare le funzionalità di debug in Web SDK.
-keywords: debug web sdk;debugging;configurare;configurare comando;debug comando;edgeConfigId;setDebug;debugEnabled;debug;
+keywords: debug web sdk;debug;comando debug;setDebug;debugEnabled;debug
 exl-id: 4e893af8-a48e-48dc-9737-4c61b3355f03
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
 workflow-type: tm+mt
-source-wordcount: '280'
+source-wordcount: '276'
 ht-degree: 0%
 
 ---
@@ -22,9 +22,9 @@ Imposta il valore booleano `debugEnabled` su true durante la configurazione dell
 
 ```js
 alloy("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "debugEnabled": true
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  debugEnabled: true
 });
 ```
 
