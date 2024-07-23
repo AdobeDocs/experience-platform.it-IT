@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Terminologia delle normative sulla privacy
 description: Questo documento fornisce le definizioni dei termini chiave relativi alle normative sulla privacy supportate da Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
+source-git-commit: be219530f33209cb4f3fe70425bb293edff4b309
 workflow-type: tm+mt
-source-wordcount: '1842'
+source-wordcount: '2020'
 ht-degree: 0%
 
 ---
@@ -71,6 +71,8 @@ Questo documento fornisce le definizioni dei termini chiave relativi alle normat
 
 **Archiviazione del sistema**: qualsiasi insieme specifico di dati personali accessibile in base a criteri specifici o su cui è possibile eseguire query.
 
+**FDBR**: il [!DNL Florida Digital Bill of Rights] (FDBR) è una normativa che fornisce ai residenti della Florida i diritti di accesso, correzione, eliminazione e copia dei propri dati personali. Obbliga la trasparenza nelle pratiche relative ai dati, consente rinunce alla vendita di dati o alla pubblicità mirata e vieta la sorveglianza non autorizzata. Il Dipartimento degli Affari Legali della Florida fa rispettare questi diritti, richiedendo ai titolari del trattamento dei dati di rispondere alle richieste entro 45 giorni.
+
 ## G
 
 **RGPD**: il [!DNL General Data Protection Regulation] (RGPD) è un quadro giuridico che definisce le linee guida per la raccolta e il trattamento di informazioni personali di persone all&#39;interno dello Spazio economico europeo (SEE). Il RGPD stabilisce i principi per la gestione dei dati e i diritti dell’individuo, imponendo nel contempo ammende che possono essere basate sulle entrate. Il RGPD copre tutte le aziende che si occupano dei dati dei cittadini del SEE, pertanto è una normativa critica per i responsabili della conformità aziendale presso banche, assicuratori e altre società finanziarie.
@@ -107,13 +109,11 @@ Questo documento fornisce le definizioni dei termini chiave relativi alle normat
 
 ## O
 
+**OCPA**: la legislazione dell&#39;Oregon Consumer Privacy Act (OCPA) concede ai residenti dell&#39;Oregon diritti chiave sui loro dati personali, tra cui il diritto di conoscere, correggere, eliminare e ottenere una copia dei loro dati. Impone obblighi severi alle aziende, richiedendo loro di fornire avvisi dettagliati sulla privacy, ottenere il consenso per alcuni usi dei dati e implementare una maggiore protezione per le informazioni sensibili. La legislazione mira a conciliare la privacy dei consumatori con gli interessi delle imprese.
+
 ## P
 
 **PDPA**: il [!DNL Personal Data Protection Act] della Thailandia (PDPA) è stato introdotto per proteggere i proprietari di dati thailandesi dalla raccolta, dall&#39;utilizzo o dalla divulgazione illegali dei loro dati personali. Ispirandosi al regolamento generale sulla protezione dei dati (RGPD) dell&#39;Unione Europea, il regolamento garantisce ai cittadini thailandesi il diritto di richiedere l&#39;accesso o la cancellazione dei propri dati personali memorizzati.
-
-<!-- Not yet released:
-**PDPD**: The [!DNL Personal Data Protection Decree] of Vietnam (PDPD) ...  
--->
 
 **Dati personali**: qualsiasi informazione correlata a una persona fisica o a una &quot;persona interessata&quot; che può essere utilizzata per identificare direttamente o indirettamente la persona.
 
@@ -152,6 +152,8 @@ Questo documento fornisce le definizioni dei termini chiave relativi alle normat
 **Autorità di controllo**: autorità pubblica istituita da uno Stato membro conformemente all&#39;articolo 46.
 
 ## T
+
+**TDPSA**: il Texas Data Privacy and Security Act (TDPSA) è una legge completa che protegge i diritti dei residenti del Texas sui dati personali. Concede alle persone il diritto di accedere ai dati, correggerli, eliminarli e ottenerne copia, nonché di rinunciare alle vendite di dati e alla pubblicità mirata. Le imprese che violano questa legislazione possono essere passibili di sanzioni finanziarie.
 
 **Triloghi**: i triloghi sono negoziati informali tra la Commissione europea, il Parlamento europeo e il Consiglio dell&#39;Unione europea. Tali negoziati si svolgono generalmente dopo le prime letture della legislazione proposta per giungere più rapidamente all&#39;adozione di un testo di compromesso.
 concordare più rapidamente l&#39;adozione di un testo di compromesso.

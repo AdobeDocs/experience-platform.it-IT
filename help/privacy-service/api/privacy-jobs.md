@@ -5,7 +5,7 @@ title: Endpoint API per processi di privacy
 description: Scopri come gestire i processi sulla privacy per le applicazioni Experience Cloud utilizzando l’API Privacy Service.
 role: Developer
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: e8e8a9267ddcf7ee9d1d199da8d157ed5f36d344
+source-git-commit: 341cc4cb150717f08b2e59412ef58fbd6f7b3450
 workflow-type: tm+mt
 source-wordcount: '1821'
 ht-degree: 1%
@@ -42,7 +42,7 @@ GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={ST
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{REGULATION}` | Tipo di regolamento per cui eseguire la query. I valori accettati includono: <ul><li>`apa_aus`</li><li>`cpa_usa`</li><li>`cpra_usa`</li><li>`ctdpa_usa`</li><li>`gdpr` - Nota: viene utilizzato anche per le richieste relative alle normative **ccpa**.</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`mhmda_usa`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>Per ulteriori informazioni sulle normative sulla privacy rappresentate dai valori sopra riportati, consulta la panoramica sulle [normative supportate](../regulations/overview.md). |
+| `{REGULATION}` | Tipo di regolamento per cui eseguire la query. I valori accettati includono: <ul><li>`apa_aus`</li><li>`cpa_usa`</li><li>`cpra_usa`</li><li>`ctdpa_usa`</li><li>`fdbr_usa`</li><li>`gdpr` - Nota: viene utilizzato anche per le richieste relative alle normative **ccpa**.</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`mhmda_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_usa`</li><li>`pdpa_tha`</li><li>`tdpsa_usa`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>Per ulteriori informazioni sulle normative sulla privacy rappresentate dai valori sopra riportati, consulta la panoramica sulle [normative supportate](../regulations/overview.md). |
 | `{PAGE}` | Pagina di dati da visualizzare, utilizzando la numerazione basata su 0. Il valore predefinito è `0`. |
 | `{SIZE}` | Il numero di risultati da visualizzare su ogni pagina. Il valore predefinito è `100` e il massimo è `1000`. Se si supera il valore massimo, l’API restituisce un errore 400 codici. |
 | `{status}` | Il comportamento predefinito consiste nell’includere tutti gli stati. Se si specifica un tipo di stato, la richiesta restituisce solo i processi di privacy che corrispondono a tale tipo di stato. I valori accettati includono: <ul><li>`processing`</li><li>`complete`</li><li>`error`</li></ul> |
@@ -51,10 +51,6 @@ GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={ST
 | `{filterDate}` | Questo parametro limita i risultati a quelli elaborati in una data specificata. Accetta il formato AAAA-MM-GG. Il sistema può tornare indietro negli ultimi 45 giorni. |
 
 {style="table-layout:auto"}
-
-<!-- Not released yet:
-<li>`pdpd_vnm`</li> 
- -->
 
 **Richiesta**
 
