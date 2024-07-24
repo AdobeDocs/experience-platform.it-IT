@@ -1,16 +1,16 @@
 ---
-title: Scenari Di Esempio Per La Configurazione Delle Impostazioni Delle Identità
-description: Scopri alcuni scenari di esempio per la configurazione delle impostazioni delle identità.
+title: Esempio Di Scenari Cliente Risolti Dalle Regole Di Collegamento Del Grafico Delle Identità
+description: Scopri scenari di clienti di esempio risolti dalle regole di collegamento del grafico delle identità.
 badge: Beta
 exl-id: bccd5b7a-3836-47d8-b976-51747b9c1803
-source-git-commit: f1779ee75c877649a69f9fa99f3872aea861beca
+source-git-commit: be6fdb7e23ed4769ab4ee7ef72532296f020f4a4
 workflow-type: tm+mt
 source-wordcount: '455'
 ht-degree: 1%
 
 ---
 
-# Scenari di esempio per la configurazione delle regole di collegamento del grafico delle identità
+# Esempi di scenari cliente risolti dalle regole di collegamento del grafico delle identità
 
 >[!AVAILABILITY]
 >
@@ -30,22 +30,22 @@ Esistono casi in cui si possono verificare più accessi su un singolo dispositiv
 
 ![dispositivi condivisi](../images/identity-settings/shared-devices.png)
 
-In questi casi, dal punto di vista del grafico, senza limiti abilitati, un singolo ECID sarà collegato a più ID del sistema di gestione delle relazioni con i clienti.
+In questi casi, dal punto di vista del grafico, senza limiti abilitati, un singolo ECID sarà collegato a più CRMID.
 
 Con le regole di collegamento del grafico delle identità, puoi:
 
-* Configura l’ID utilizzato per l’accesso come identificatore univoco. Ad esempio, puoi limitare un grafico per memorizzare una sola identità con un ID del sistema di gestione delle relazioni con i clienti spazio dei nomi, e quindi definire tale ID del sistema di gestione delle relazioni con i clienti come identificatore univoco di un dispositivo condiviso.
-   * In questo modo, puoi evitare che gli ID del sistema di gestione delle relazioni con i clienti vengano uniti dall’ECID.
+* Configura l’ID utilizzato per l’accesso come identificatore univoco. Ad esempio, puoi limitare un grafico per memorizzare una sola identità con uno spazio dei nomi CRMID e quindi definire tale CRMID come identificatore univoco di un dispositivo condiviso.
+   * In questo modo, puoi evitare che i CRMID vengano uniti dall’ECID.
 
 ## Scenari e-mail/telefono non validi
 
-Ci sono anche esempi di utenti che forniscono valori falsi come numeri di telefono e/o indirizzi e-mail al momento della registrazione. In questi casi, se i limiti non sono abilitati, le identità relative a telefono/e-mail finiranno per essere collegate a più ID CRM diversi.
+Ci sono anche esempi di utenti che forniscono valori falsi come numeri di telefono e/o indirizzi e-mail al momento della registrazione. In questi casi, se i limiti non sono abilitati, le identità relative a telefono/e-mail finiranno per essere collegate a più CRMID diversi.
 
 ![email-phone non valido](../images/identity-settings/invalid-email-phone.png)
 
 Con le regole di collegamento del grafico delle identità, puoi:
 
-* Configura l’ID del sistema di gestione delle relazioni con i clienti, il numero di telefono o l’indirizzo e-mail come identificatore univoco e limita quindi una persona a un solo ID del sistema di gestione delle relazioni con i clienti, numero di telefono e/o indirizzo e-mail associato al suo account.
+* Configura il CRMID, il numero di telefono o l’indirizzo e-mail come identificatore univoco e limita quindi una persona a un solo CRMID, numero di telefono e/o indirizzo e-mail associato al suo account.
 
 ## Valori di identità errati o errati
 
@@ -56,11 +56,11 @@ In alcuni casi, valori di identità errati e non univoci vengono acquisiti nel s
 * Spazio dei nomi del numero di telefono con valore di identità &quot;non specificato&quot;.
    * I numeri di telefono non devono contenere caratteri dell’alfabeto.
 
-Queste identità possono causare i seguenti grafici, in cui più ID del sistema di gestione delle relazioni con i clienti vengono uniti insieme all’identità &quot;errata&quot;:
+Queste identità possono causare i seguenti grafici, in cui più identificatori CRMID vengono uniti insieme all’identità &quot;bad&quot;:
 
 ![dati errati](../images/identity-settings/bad-data.png)
 
-Con le regole di collegamento del grafico delle identità puoi configurare l’ID del sistema di gestione delle relazioni con i clienti come identificatore univoco per evitare la compressione del profilo indesiderata dovuta a questo tipo di dati.
+Con le regole di collegamento del grafico delle identità puoi configurare il CRMID come identificatore univoco per evitare la compressione del profilo indesiderata a causa di questo tipo di dati.
 
 ## Passaggi successivi
 

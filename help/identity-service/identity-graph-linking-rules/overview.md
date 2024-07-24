@@ -3,9 +3,9 @@ title: Panoramica delle regole di collegamento del grafico delle identità
 description: Scopri le regole di collegamento del grafico identità in Identity Service.
 badge: Beta
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 72773f9ba5de4387c631bd1aa0c4e76b74e5f1dc
+source-git-commit: 7daa9191f2e095f01c7c09f02f87aa8724e2e325
 workflow-type: tm+mt
-source-wordcount: '1173'
+source-wordcount: '1177'
 ht-degree: 1%
 
 ---
@@ -14,12 +14,16 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->Questa funzione non è ancora disponibile; il programma beta per le regole di collegamento del grafo delle identità dovrebbe iniziare a luglio per le sandbox di sviluppo. Contatta il team del tuo account di Adobe per informazioni sui criteri di partecipazione.
+>Le regole di collegamento del grafo delle identità sono attualmente in versione beta. Contatta il team del tuo account di Adobe per informazioni sui criteri di partecipazione. La funzione e la documentazione sono soggette a modifiche.
 
 ## Sommario 
 
 * [Panoramica](./overview.md)
 * [Algoritmo di ottimizzazione identità](./identity-optimization-algorithm.md)
+* [Priorità dello spazio dei nomi](./namespace-priority.md)
+* [Interfaccia utente simulazione grafico](./graph-simulation.md)
+* [Interfaccia utente per le impostazioni delle identità](./identity-settings-ui.md)
+* [Esempio di configurazioni del grafico](./configuration.md)
 * [Scenari di esempio](./example-scenarios.md)
 
 Con il servizio Adobe Experience Platform Identity e il profilo cliente in tempo reale, è facile presumere che i dati siano acquisiti perfettamente e che tutti i profili uniti rappresentino una singola persona tramite un identificatore di persona, ad esempio un ID del sistema di gestione delle relazioni con i clienti. Tuttavia, esistono scenari possibili in cui alcuni dati potrebbero tentare di unire più profili disparati in un unico profilo (&quot;compressione del grafico&quot;). Per evitare queste unioni indesiderate, puoi utilizzare le configurazioni fornite tramite le regole di collegamento del grafico delle identità e consentire una personalizzazione accurata per i tuoi utenti.

@@ -2,14 +2,19 @@
 title: Guida alla configurazione delle regole di collegamento del grafico delle identità
 description: Scopri i passaggi consigliati da seguire per implementare i dati con le configurazioni delle regole di collegamento del grafico delle identità.
 badge: Beta
-source-git-commit: 72773f9ba5de4387c631bd1aa0c4e76b74e5f1dc
+exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
+source-git-commit: 536770d0c3e7e93921fe40887dafa5c76e851f5e
 workflow-type: tm+mt
-source-wordcount: '807'
-ht-degree: 4%
+source-wordcount: '1312'
+ht-degree: 2%
 
 ---
 
 # Guida alla configurazione delle regole di collegamento del grafico delle identità
+
+>[!AVAILABILITY]
+>
+>Le regole di collegamento del grafo delle identità sono attualmente in versione beta. Contatta il team del tuo account di Adobe per informazioni sui criteri di partecipazione. La funzione e la documentazione sono soggette a modifiche.
 
 Leggi questo documento per una guida dettagliata che puoi seguire durante l’implementazione dei dati con il servizio Adobe Experience Platform Identity.
 
@@ -67,6 +72,11 @@ Per istruzioni su come creare un set di dati, leggere la [guida dell&#39;interfa
 
 ## Inserire i dati {#ingest}
 
+>[!WARNING]
+>
+>* Durante il processo di pre-implementazione, devi assicurarti che gli eventi autenticati che il sistema invierà ad Experience Platform contengano sempre un identificatore di persona, come CRMID.
+>* Durante l’implementazione, devi assicurarti che lo spazio dei nomi univoco con la priorità più elevata sia sempre presente in ogni profilo. Consulta l&#39;[appendice](#appendix) per esempi di scenari di grafo risolti assicurando che ogni profilo contenga lo spazio dei nomi univoco con la priorità più elevata.
+
 A questo punto, dovresti disporre dei seguenti elementi:
 
 * Le autorizzazioni necessarie per accedere alle funzioni di Identity Service.
@@ -86,3 +96,55 @@ Una volta che hai tutti gli elementi elencati sopra, puoi iniziare ad acquisire 
 >Una volta acquisiti i dati, il payload dei dati non elaborati XDM non cambia. Puoi comunque visualizzare le configurazioni dell’identità primaria nell’interfaccia utente. Tuttavia, queste configurazioni verranno sostituite dalle impostazioni di identità.
 
 Per qualsiasi feedback, utilizza l&#39;opzione **[!UICONTROL Feedback su Beta]** nell&#39;area di lavoro dell&#39;interfaccia utente di Identity Service.
+
+## Appendice {#appendix}
+
+Leggi questa sezione per ulteriori informazioni a cui puoi fare riferimento durante l’implementazione delle impostazioni di identità e degli spazi dei nomi univoci.
+
+### Scenario dispositivo condiviso {#shared-device-scenario}
+
+È necessario assicurarsi che venga utilizzato un singolo spazio dei nomi in tutti i profili che rappresentano una persona. In questo modo, il servizio Identity rileva l’identificatore di persona appropriato in un dato grafico.
+
+>[!BEGINTABS]
+
+>[!TAB Senza uno spazio dei nomi dell&#39;identificatore di persona]
+
+Se non disponi di uno spazio dei nomi univoco per rappresentare gli identificatori delle persone, potresti ottenere un grafico che collega più identificatori delle persone allo stesso ECID. In questo esempio, sia B2BCRM che B2CCRM sono collegati allo stesso ECID allo stesso tempo. Questo grafico suggerisce che Tom, usando il suo account di accesso B2C, ha condiviso un dispositivo con Summer, usando il suo account di accesso B2B. Tuttavia, il sistema riconoscerà che si tratta di un profilo (compressione del grafico).
+
+![Uno scenario grafico in cui due identificatori di persona sono collegati allo stesso ECID.](../images/graph-examples/multi_namespaces.png)
+
+>[!TAB Con uno spazio dei nomi dell&#39;identificatore di persona]
+
+Dato uno spazio dei nomi univoco, (in questo caso un CRMID invece di due spazi dei nomi diversi), Identity Service è in grado di distinguere l’identificatore della persona più recente associato all’ECID. In questo esempio, poiché esiste un CRMID univoco, Identity Service è in grado di riconoscere uno scenario di &quot;dispositivo condiviso&quot;, in cui due entità condividono lo stesso dispositivo.
+
+![Uno scenario di grafico dei dispositivi condiviso, in cui due identificatori di persona sono collegati allo stesso ECID, ma il collegamento precedente viene rimosso.](../images/graph-examples/crmid_only_multi.png)
+
+>[!ENDTABS]
+
+### Scenario loginID con interferenza {#dangling-loginid-scenario}
+
+Il grafico seguente simula uno scenario di loginID &quot;penzolante&quot;. In questo esempio, due diversi loginID sono associati allo stesso ECID. Tuttavia, `{loginID: ID_C}` non è collegato al CRMID. Pertanto, il servizio Identity non è in grado di rilevare che questi due ID di accesso rappresentano due entità diverse.
+
+>[!BEGINTABS]
+
+>[!TAB ID accesso ambiguo]
+
+In questo esempio, `{loginID: ID_C}` viene lasciato scollegato da un CRMID. Pertanto, l’entità persona a cui deve essere associato questo loginID rimane ambigua.
+
+![Esempio di un grafico con uno scenario di loginID &quot;pendente&quot;.](../images/graph-examples/dangling_example.png)
+
+>[!TAB loginID collegato a un CRMID]
+
+In questo esempio, `{loginID: ID_C}` è collegato a `{CRMID: Tom}`. Pertanto, il sistema è in grado di rilevare che questo loginID è associato a Tom.
+
+![LoginID collegato a un CRMID.](../images/graph-examples/id_c_tom.png)
+
+>[!TAB loginID è collegato a un altro CRMID]
+
+In questo esempio, `{loginID: ID_C}` è collegato a `{CRMID: Summer}`. Pertanto, il sistema è in grado di rilevare che questo loginID è associato a un’altra entità persona, in questo caso Summer.
+
+In questo esempio viene inoltre mostrato che Tom e Summer devono separare le entità persona che condividono un dispositivo, rappresentato da `{ECID: 111}`.
+
+![LoginID collegato a un altro CRMID.](../images/graph-examples/id_c_summer.png)
+
+>[!ENDTABS]
