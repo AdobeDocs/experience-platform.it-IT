@@ -3,7 +3,7 @@ description: Scopri come monitorare i flussi di dati durante la segmentazione ut
 title: Monitorare i flussi di dati per i tipi di pubblico nell’interfaccia utente
 type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
-source-git-commit: 716c14f29be24d084111864053e3e4ae884003f0
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1862'
 ht-degree: 4%
@@ -64,7 +64,7 @@ Per questa visualizzazione dashboard sono disponibili le metriche seguenti:
 | **[!UICONTROL Identità ultima attivazione]** | Il numero di identità attivate nell’ultimo processo di attivazione del pubblico. |
 | **[!UICONTROL Destinazione ultima attivazione]** | Il nome della destinazione a cui è stato attivato l’ultimo processo di attivazione del pubblico. |
 
-Puoi filtrare i risultati per un pubblico specifico e visualizzare i relativi processi di segmentazione selezionando l&#39;icona del filtro (![Icona del filtro.](../assets/ui/monitor-audiences/filter-icon.png)). I processi di segmentazione sono ordinati in ordine cronologico, con i processi di segmentazione più recenti che appaiono per primi.
+Puoi filtrare i risultati per un pubblico specifico e visualizzare i relativi processi di segmentazione selezionando l&#39;icona del filtro (![Icona del filtro.](/help/images/icons/filter-add.png)). I processi di segmentazione sono ordinati in ordine cronologico, con i processi di segmentazione più recenti che appaiono per primi.
 
 ![L&#39;icona del filtro è evidenziata. Selezionando questa opzione è possibile visualizzare i processi di segmentazione per il pubblico specificato.](../assets/ui/monitor-audiences/filter-audience.png)
 
@@ -89,7 +89,7 @@ Per questa visualizzazione dashboard sono disponibili le metriche seguenti:
 | **[!UICONTROL Identità attivata]** | Il numero di identità attivate dal processo di segmentazione. Ogni profilo può avere più identità. Ad esempio, un profilo potrebbe avere come identità un’e-mail, un numero di telefono e un numero fedeltà. |
 | **[!UICONTROL Nome destinazione]** | Il nome della destinazione in cui viene attivato il processo di segmentazione. |
 
-Puoi filtrare ulteriormente per un processo di segmentazione specifico e visualizzarne i dettagli selezionando l&#39;icona del filtro (![Icona del filtro.](../assets/ui/monitor-audiences/filter-icon.png)). Esistono due diversi tipi di processi di segmentazione che possono essere filtrati: processi di attivazione e processi di valutazione.
+Puoi filtrare ulteriormente per un processo di segmentazione specifico e visualizzarne i dettagli selezionando l&#39;icona del filtro (![Icona del filtro.](/help/images/icons/filter.png)). Esistono due diversi tipi di processi di segmentazione che possono essere filtrati: processi di attivazione e processi di valutazione.
 
 ### Dettagli processo di attivazione {#activation-job-details}
 

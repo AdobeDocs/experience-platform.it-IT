@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creare e modificare le classi nell’interfaccia utente
 description: Scopri come creare e modificare le classi nell’interfaccia utente di Experience Platform.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1458'
 ht-degree: 5%
@@ -74,7 +74,7 @@ Selezionare un pulsante di opzione per filtrare le classi in base al fatto che s
 
 ![Il flusso di lavoro [!UICONTROL Crea schema] con la barra di ricerca [!UICONTROL Personalizzato] e [!UICONTROL Industrie] evidenziati.](../../images/ui/resources/classes/filter-and-search.png)
 
-Per aiutarti a decidere la classe appropriata, sono disponibili informazioni (![Un&#39;icona di informazioni.](../../images/ui/resources/classes/info.png)) e anteprima (![Icona anteprima.](../../images/ui/resources/classes/preview.png)) per ogni classe. L’icona info apre una finestra di dialogo che fornisce una descrizione della classe e del settore a cui è associata. L&#39;icona di anteprima apre una finestra di dialogo di anteprima per la classe che contiene un diagramma schema e le relative proprietà.
+Per aiutarti a decidere la classe appropriata, sono disponibili informazioni (![Un&#39;icona di informazioni.](/help/images/icons/info.png)) e anteprima (![Icona anteprima.](/help/images/icons/preview.png)) per ogni classe. L’icona info apre una finestra di dialogo che fornisce una descrizione della classe e del settore a cui è associata. L&#39;icona di anteprima apre una finestra di dialogo di anteprima per la classe che contiene un diagramma schema e le relative proprietà.
 
 ![Anteprima della classe selezionata con il diagramma dello schema e le proprietà della classe evidenziate.](../../images/ui/resources/classes/class-preview.png)
 

@@ -2,7 +2,7 @@
 title: Visualizza SQL approfondimento
 description: Visualizza le istruzioni SQL alla base di Profilo, Pubblico, Destinazione e approfondimenti personalizzati ed esegui la query su richiesta tramite l’Editor query.
 exl-id: fd728926-c113-4593-92b1-916a02d09d41
-source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 0%
@@ -43,7 +43,7 @@ Viene visualizzata una finestra di dialogo che contiene il titolo dell’approfo
 
 >[!TIP]
 >
->È possibile copiare l&#39;intera istruzione SQL negli Appunti selezionando l&#39;icona Copia (![Icona Copia.](./images/view-sql/copy-icon.png)) in alto a destra nella finestra di dialogo.
+>È possibile copiare l&#39;intera istruzione SQL negli Appunti selezionando l&#39;icona Copia (![Icona Copia.](/help/images/icons/copy.png)) in alto a destra nella finestra di dialogo.
 
 ![Una finestra di dialogo di approfondimento con l&#39;istruzione SQL evidenziata.](./images/view-sql/sql-dialog.png)
 

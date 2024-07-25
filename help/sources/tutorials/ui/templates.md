@@ -3,7 +3,7 @@ description: Scopri come utilizzare i modelli nell’interfaccia utente di Adobe
 title: Creare un flusso di dati di origini utilizzando i modelli nell’interfaccia utente
 badge1: "Beta"
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: 4a9cae014a8eba20f93023913f3a73103b16d944
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2241'
 ht-degree: 10%
@@ -174,7 +174,7 @@ La tabella seguente illustra i modelli B2C disponibili per l&#39;origine [!DNL M
 
 +++
 
-A seconda del tipo di azienda selezionato, viene visualizzato un elenco di modelli. Seleziona l&#39;icona di anteprima ![icona anteprima](../../images/tutorials/templates/preview-icon.png) accanto al nome di un modello per visualizzare in anteprima i dati di esempio dal modello.
+A seconda del tipo di azienda selezionato, viene visualizzato un elenco di modelli. Seleziona l&#39;icona di anteprima ![icona anteprima](/help/images/icons/preview.png) accanto al nome di un modello per visualizzare in anteprima i dati di esempio dal modello.
 
 ![Elenco di modelli con l&#39;icona di anteprima evidenziata.](../../images/tutorials/templates/templates.png)
 

@@ -2,9 +2,9 @@
 title: Modelli di rapporto Power BI per dashboard di Platform
 description: Utilizza i modelli di rapporto per esplorare i dati di Experience Platform utilizzando il Power BI.
 exl-id: fb98a79f-3d82-4e11-b08a-b7cb06414462
-source-git-commit: 729d218f72a8caecc90a98810b973d0754f7757b
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
-source-wordcount: '1465'
+source-wordcount: '1467'
 ht-degree: 0%
 
 ---
@@ -144,7 +144,7 @@ Una volta che il dashboard dispone delle metriche e degli attributi appropriati 
 
 ## Eliminare l’integrazione dell’applicazione Power BI
 
-Per eliminare il dashboard, passare all&#39;inventario del dashboard e selezionare l&#39;icona di eliminazione (![](../images/power-bi/delete-icon.png)) accanto al nome del dashboard.
+Per eliminare il dashboard, passare all&#39;inventario del dashboard e selezionare l&#39;icona Elimina (![icona Elimina](/help/images/icons/delete.png)) accanto al nome del dashboard.
 
 >[!NOTE]
 >

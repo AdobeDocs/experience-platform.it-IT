@@ -4,7 +4,7 @@ title: Dashboard dei profili
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale puoi visualizzare informazioni importanti sui dati Real-Time Customer Profile della tua organizzazione.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '4997'
 ht-degree: 9%
@@ -470,7 +470,7 @@ Seleziona **[!UICONTROL Visualizza altro]** per aprire una finestra di dialogo a
 
 ![Il widget del report di sovrapposizione del pubblico con Visualizza più evidenziato .](../images/profiles/profiles-audience-overlap-report.png)
 
-Viene visualizzata la finestra di dialogo [!UICONTROL Rapporto di sovrapposizione pubblico]. Questa finestra di dialogo può contenere fino a 50 righe di analisi di sovrapposizione del pubblico suddivise in sei colonne. Per rimuovere o aggiungere colonne dalla tabella, selezionare l&#39;icona delle impostazioni (![Icona delle impostazioni.](../images/profiles/settings-icon.png)).
+Viene visualizzata la finestra di dialogo [!UICONTROL Rapporto di sovrapposizione pubblico]. Questa finestra di dialogo può contenere fino a 50 righe di analisi di sovrapposizione del pubblico suddivise in sei colonne. Per rimuovere o aggiungere colonne dalla tabella, selezionare l&#39;icona delle impostazioni (![Icona delle impostazioni.](/help/images/icons/settings.png)).
 
 ![Finestra di dialogo Rapporto di sovrapposizione pubblico.](../images/profiles/profiles-audience-overlap-report-dialog.png)
 

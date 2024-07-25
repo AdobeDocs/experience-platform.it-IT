@@ -2,7 +2,7 @@
 title: Definire una relazione tra due schemi nell’edizione B2B di Real-time Customer Data Platform
 description: Scopri come definire una relazione molti-a-uno tra due schemi in Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1363'
 ht-degree: 15%
@@ -97,7 +97,7 @@ Per definire una relazione tra due schemi, lo schema di origine deve disporre di
 >
 >Attualmente, è possibile definire solo relazioni molti-a-uno e uno-a-uno da uno schema di origine a uno schema di riferimento. Per le relazioni uno-a-molti, devi definire il campo relazione nello schema che rappresenta il &quot;molti&quot;.
 
-Per impostare un campo di relazione, selezionare l&#39;icona freccia (![Icona freccia](../images/tutorials/relationship-b2b/arrow.png)) accanto al campo in questione nell&#39;area di lavoro. Nel caso dello schema [!DNL Opportunities], questo è il campo `accountKey.sourceKey` poiché l&#39;obiettivo è quello di stabilire una relazione molti-a-uno con un account.
+Per impostare un campo di relazione, selezionare l&#39;icona freccia (![Icona freccia](/help/images/icons/alias.png)) accanto al campo in questione nell&#39;area di lavoro. Nel caso dello schema [!DNL Opportunities], questo è il campo `accountKey.sourceKey` poiché l&#39;obiettivo è quello di stabilire una relazione molti-a-uno con un account.
 
 ![Pulsante Relazione](../images/tutorials/relationship-b2b/relationship-button.png)
 

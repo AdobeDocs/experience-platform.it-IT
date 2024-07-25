@@ -2,7 +2,7 @@
 title: Integrazione del registro di controllo di Query Service
 description: I registri di audit di Query Service conservano i record relativi a varie azioni dell’utente per formare un audit trail per la risoluzione dei problemi o il rispetto delle politiche aziendali di gestione dei dati e dei requisiti normativi. Questa esercitazione fornisce una panoramica delle funzioni del registro di controllo specifiche di Query Service.
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '930'
 ht-degree: 1%
@@ -31,7 +31,7 @@ Le categorie del registro di controllo fornite da [!DNL Query Service] sono le s
 
 ## Esegui un registro di controllo [!DNL Query Service] {#perform-an-audit-log}
 
-Per eseguire un controllo di audit per le attività [!DNL Query Service], seleziona **[!UICONTROL Audit]** dal menu di navigazione a sinistra, seguito dall&#39;icona funnel (![Icona filtro.](../images/audit-log/filter.png)) per visualizzare un elenco di controlli filtro per limitare i risultati.
+Per eseguire un controllo di audit per le attività [!DNL Query Service], seleziona **[!UICONTROL Audit]** dal menu di navigazione a sinistra, seguito dall&#39;icona funnel (![Icona filtro.](/help/images/icons/filter.png)) per visualizzare un elenco di controlli filtro per limitare i risultati.
 
 ![Dashboard del registro di controllo dell&#39;interfaccia utente di Platform con &quot;Audits&quot; nella navigazione a sinistra e controlli filtro evidenziati.](../images/audit-log/filter-controls.png)
 

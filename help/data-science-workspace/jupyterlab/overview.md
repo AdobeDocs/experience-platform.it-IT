@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica dell’interfaccia utente di JupyterLab
 description: JupyterLab è un’interfaccia utente basata su web per Project Jupyter ed è strettamente integrata in Adobe Experience Platform. Fornisce un ambiente di sviluppo interattivo per consentire ai data scientist di lavorare con Jupyter Notebooks, codice e dati. Questo documento fornisce una panoramica di JupyterLab e delle sue funzioni, nonché istruzioni per eseguire azioni comuni.
 exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1812'
 ht-degree: 2%
@@ -116,9 +116,9 @@ In [!DNL JupyterLab] selezionare l&#39;icona a forma di ingranaggio nell&#39;ang
 
 ### Termina e riavvia [!DNL JupyterLab]
 
-In [!DNL JupyterLab], puoi terminare la sessione per impedire l&#39;utilizzo di ulteriori risorse. Iniziare selezionando l&#39;**icona di alimentazione** ![icona di alimentazione](../images/jupyterlab/user-guide/power_button.png), quindi selezionare **[!UICONTROL Chiudi sessione]** dal popover che sembra terminare la sessione. Le sessioni del notebook terminano automaticamente dopo 12 ore di assenza di attività.
+In [!DNL JupyterLab], puoi terminare la sessione per impedire l&#39;utilizzo di ulteriori risorse. Iniziare selezionando l&#39;**icona di alimentazione** ![icona di alimentazione](/help/images/icons/power.png), quindi selezionare **[!UICONTROL Chiudi sessione]** dal popover che sembra terminare la sessione. Le sessioni del notebook terminano automaticamente dopo 12 ore di assenza di attività.
 
-Per riavviare [!DNL JupyterLab], selezionare l&#39;icona **riavvia** ![riavvia icona](../images/jupyterlab/user-guide/restart_button.png) situata direttamente a sinistra dell&#39;icona di alimentazione, quindi selezionare **[!UICONTROL Riavvia]** dal popover visualizzato.
+Per riavviare [!DNL JupyterLab], selezionare l&#39;icona **riavvia** ![riavvia icona](/help/images/icons/restart.png) situata direttamente a sinistra dell&#39;icona di alimentazione, quindi selezionare **[!UICONTROL Riavvia]** dal popover visualizzato.
 
 ![termina jupyterlab](../images/jupyterlab/user-guide/shutdown-jupyterlab.gif)
 

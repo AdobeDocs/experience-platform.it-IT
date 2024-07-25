@@ -2,7 +2,7 @@
 title: Mappare un file CSV a uno schema XDM utilizzando la funzione di Recommendations generata da IA
 description: Questo tutorial illustra come mappare un file CSV a uno schema XDM utilizzando i consigli generati dall’intelligenza artificiale.
 exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
-source-git-commit: 6632086641004c2b788a28cbc47ac6d8bd4eace3
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1100'
 ht-degree: 1%
@@ -90,7 +90,7 @@ I campi CSV vengono mappati automaticamente ai gruppi di campi XDM esistenti uti
 
 ![Il pulsante [!UICONTROL Modifica] selezionato accanto alla struttura dello schema.](../../images/tutorials/map-csv-recommendations/edit-schema-structure.png)
 
-Viene visualizzata una finestra di dialogo che consente di modificare il nome visualizzato, il tipo di dati e il gruppo di campi per qualsiasi campo della mappatura. Selezionare l&#39;icona di modifica (![icona Modifica](../../images/tutorials/map-csv-recommendations/edit-icon.png)) accanto a un campo di origine per modificarne i dettagli nella colonna di destra prima di selezionare **[!UICONTROL Applica]**.
+Viene visualizzata una finestra di dialogo che consente di modificare il nome visualizzato, il tipo di dati e il gruppo di campi per qualsiasi campo della mappatura. Selezionare l&#39;icona di modifica (![icona Modifica](/help/images/icons/edit.png)) accanto a un campo di origine per modificarne i dettagli nella colonna di destra prima di selezionare **[!UICONTROL Applica]**.
 
 ![Gruppo di campi consigliato per un campo di origine in corso di modifica.](../../images/tutorials/map-csv-recommendations/select-schema-field.png)
 

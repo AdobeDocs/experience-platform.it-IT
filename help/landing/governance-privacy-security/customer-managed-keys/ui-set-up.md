@@ -2,7 +2,7 @@
 title: Configurare e configurare le chiavi gestite dal cliente tramite l’interfaccia utente di Platform
 description: Scopri come configurare l’app CMK con il tenant di Azure e inviare l’ID della chiave di crittografia a Adobe Experience Platform.
 exl-id: 5f38997a-66f3-4f9d-9c2f-fb70266ec0a6
-source-git-commit: 4f08e8fcc8d53b981af60226f1397a1d1ac4d8dc
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1090'
 ht-degree: 0%
@@ -42,7 +42,7 @@ Seleziona **[!UICONTROL Configura]** per aprire la visualizzazione [!UICONTROL C
 
 Per avviare il processo di registrazione, copiare l&#39;URL di autenticazione dell&#39;applicazione per l&#39;organizzazione dalla visualizzazione [!UICONTROL Configurazione chiavi gestite dal cliente] e incollarlo nell&#39;ambiente [!DNL Azure] **[!DNL Key Vault Crypto Service Encryption User]**. I dettagli su come [assegnare un ruolo](#assign-to-role) sono forniti nella sezione successiva.
 
-Selezionare l&#39;icona Copia (![Icona Copia.](../../images/governance-privacy-security/customer-managed-keys/copy-icon.png)) da [!UICONTROL URL di autenticazione applicazione].
+Selezionare l&#39;icona Copia (![Icona Copia.](/help/images/icons/copy.png)) da [!UICONTROL URL di autenticazione applicazione].
 
 ![Visualizzazione della [!UICONTROL configurazione delle chiavi gestite dal cliente] con la sezione URL di autenticazione dell&#39;applicazione evidenziata.](../../images/governance-privacy-security/customer-managed-keys/application-authentication-url.png)
 

@@ -5,7 +5,7 @@ title: Esplorare le risorse dello schema nell’interfaccia utente
 description: Scopri come esplorare schemi, classi, gruppi di campi di schema e tipi di dati esistenti nell’interfaccia utente di Experience Platform.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1078'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Schemi]** nell&
 
 ![](../images/ui/explore/tabs.png)
 
-L&#39;icona del filtro (![Immagine icona filtro](../images/ui/explore/icon.png)) rivela i controlli nella barra a sinistra per limitare i risultati elencati. I controlli visualizzati variano a seconda del tipo di risorsa elencata.
+L&#39;icona del filtro (![Immagine icona filtro](/help/images/icons/filter.png)) rivela i controlli nella barra a sinistra per limitare i risultati elencati. I controlli visualizzati variano a seconda del tipo di risorsa elencata.
 
 Per filtrare l&#39;elenco in modo da visualizzare solo i tipi di dati standard forniti dall&#39;Adobe, selezionare **[!UICONTROL Tipo di dati]** e **[!UICONTROL Adobe]** rispettivamente nelle sezioni **[!UICONTROL Tipo]** e **[!UICONTROL Proprietario]**.
 
@@ -56,7 +56,7 @@ Tutti i campi di tipo oggetto contenenti sottoproprietà vengono compressi per i
 
 ### Indicatore di classe e gruppo di campi standard {#standard-class-and-field-group-indicator}
 
-Nell&#39;Editor schema, le classi e i gruppi di campi standard (generati da Adobi) sono indicati con l&#39;icona lucchetto (![Un&#39;icona lucchetto.](../images/ui/explore/padlock-icon.png). Il lucchetto viene visualizzato nella barra a sinistra accanto al nome della classe o del gruppo di campi, nonché accanto a qualsiasi campo nel diagramma dello schema che fa parte di una risorsa generata dal sistema.
+Nell&#39;Editor schema, le classi e i gruppi di campi standard (generati da Adobi) sono indicati con l&#39;icona lucchetto (![Un&#39;icona lucchetto.](/help/images/icons/lock-closed.png). Il lucchetto viene visualizzato nella barra a sinistra accanto al nome della classe o del gruppo di campi, nonché accanto a qualsiasi campo nel diagramma dello schema che fa parte di una risorsa generata dal sistema.
 
 ![Editor schema con l&#39;icona lucchetto evidenziata](../images/ui/explore/schema-editor-padlock-icon.png)
 
@@ -94,7 +94,7 @@ Se il campo che stai esaminando è un campo enum, nella barra a destra verranno 
 
 Durante l’analisi degli schemi che contengono campi di identità, questi campi sono elencati nella barra a sinistra sotto la classe o il gruppo di campi che li fornisce allo schema. Seleziona il nome del campo di identità nella barra a sinistra per visualizzare il campo nell’area di lavoro, indipendentemente dalla profondità di nidificazione.
 
-I campi di identità sono evidenziati nell&#39;area di lavoro con un&#39;icona di impronta digitale (![Immagine icona impronta digitale](../images/ui/explore/identity-symbol.png)). Se si seleziona il nome del campo di identità, è possibile visualizzare ulteriori informazioni, ad esempio lo spazio dei nomi [identità](../../identity-service/features/namespaces.md) e se il campo rappresenta o meno l&#39;identità primaria dello schema.
+I campi di identità sono evidenziati nell&#39;area di lavoro con un&#39;icona di impronta digitale (![Immagine icona impronta digitale](/help/images/icons/identity-service.png)). Se si seleziona il nome del campo di identità, è possibile visualizzare ulteriori informazioni, ad esempio lo spazio dei nomi [identità](../../identity-service/features/namespaces.md) e se il campo rappresenta o meno l&#39;identità primaria dello schema.
 
 ![](../images/ui/explore/identity-field.png)
 

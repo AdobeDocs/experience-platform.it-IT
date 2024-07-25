@@ -5,7 +5,7 @@ feature: Customer AI
 title: Scopri gli approfondimenti con IA per l’analisi dei clienti
 description: Questo documento funge da guida per l’interazione con le informazioni approfondite sull’istanza del servizio nell’interfaccia utente di IA per l’analisi dei clienti di Intelligent Services.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2098'
 ht-degree: 1%
@@ -180,7 +180,7 @@ Passando il puntatore del mouse sulle righe vengono visualizzati la data e il ta
 
 ![Esempio di bucket](../images/insights/churn_tab.png)
 
-Puoi filtrare l’intervallo di tempo per la frequenza prevista ed effettiva visualizzata. Seleziona l&#39;**icona calendario** ![icona](../images/insights/calendar_icon.png)quindi seleziona un nuovo intervallo di date. I risultati in ciascun bucket vengono aggiornati per essere visualizzati entro il nuovo intervallo di date.
+Puoi filtrare l’intervallo di tempo per la frequenza prevista ed effettiva visualizzata. Seleziona l&#39;**icona calendario** ![icona](/help/images/icons/calendar.png)quindi seleziona un nuovo intervallo di date. I risultati in ciascun bucket vengono aggiornati per essere visualizzati entro il nuovo intervallo di date.
 
 ![Selettore data](../images/insights/date_selector.png)
 

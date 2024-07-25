@@ -4,7 +4,7 @@ description: Real-Time Customer Profile consente di visualizzare una visualizzaz
 title: Monitorare i flussi di dati per i profili nell’interfaccia utente
 type: Tutorial
 exl-id: 00b624b2-f6d1-4ef2-abf2-52cede89b684
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1076'
 ht-degree: 7%
@@ -63,7 +63,7 @@ Per questa visualizzazione dashboard sono disponibili le metriche seguenti:
 | **[!UICONTROL Frammenti di profilo totali]** | Numero totale di record scritti in [!DNL Profile], inclusi tutti i frammenti [!DNL Profile] esistenti aggiornati e i nuovi frammenti [!DNL Profile] creati. |
 | **[!UICONTROL Totale flussi di dati non riusciti]** | Numero di esecuzioni del flusso di dati non riuscite. |
 
-È possibile selezionare l&#39;icona del filtro ![Icona filtro](../assets/ui/monitor-profiles/filter.png) accanto al nome dell&#39;origine per visualizzare le informazioni di elaborazione del profilo per i flussi di dati dell&#39;origine selezionata.
+È possibile selezionare l&#39;icona del filtro ![Icona filtro](/help/images/icons/filter.png) accanto al nome dell&#39;origine per visualizzare le informazioni di elaborazione del profilo per i flussi di dati dell&#39;origine selezionata.
 
 ![L&#39;icona del filtro è evidenziata. La selezione di questa icona consente di visualizzare i flussi di dati dell&#39;origine selezionata.](../assets/ui/monitor-profiles/sources-filter.png)
 
@@ -86,7 +86,7 @@ Per questa visualizzazione dashboard sono disponibili le metriche seguenti:
 | **[!UICONTROL Totale esecuzioni di flusso non riuscite]** | Numero di esecuzioni del flusso di dati non riuscite. |
 | **[!UICONTROL Ultima attività]** | Il timestamp dell’ultima esecuzione del flusso di dati. |
 
-Seleziona l&#39;icona filtro ![filter](../assets/ui/monitor-profiles/filter.png) accanto all&#39;ora di inizio dell&#39;esecuzione del flusso di dati per visualizzare ulteriori informazioni sull&#39;esecuzione del flusso di dati [!DNL Profile].
+Seleziona l&#39;icona filtro ![filter](/help/images/icons/filter.png) accanto all&#39;ora di inizio dell&#39;esecuzione del flusso di dati per visualizzare ulteriori informazioni sull&#39;esecuzione del flusso di dati [!DNL Profile].
 
 ![L&#39;icona del filtro è evidenziata. La selezione di questa icona consente di visualizzare i dettagli sul flusso di dati selezionato.](../assets/ui/monitor-profiles/dataflows-filter.png)
 

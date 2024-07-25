@@ -4,7 +4,7 @@ title: Dashboard dei tipi di pubblico
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale puoi visualizzare informazioni importanti sui tipi di pubblico creati dalla tua organizzazione.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: a8b5ed09e8e28075a3a4f37ad30f01c1cc389b9c
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '3132'
 ht-degree: 9%
@@ -235,7 +235,7 @@ Seleziona **[!UICONTROL Visualizza altro]** per aprire una finestra di dialogo a
 
 ![Il widget del report di sovrapposizione del pubblico con Visualizza più evidenziato .](../images/audiences/audience-overlap-report.png)
 
-Viene visualizzata la finestra di dialogo [!UICONTROL Rapporto di sovrapposizione pubblico]. Questa finestra di dialogo può contenere fino a 50 righe di analisi di sovrapposizione del pubblico suddivise in sei colonne. Selezionare l&#39;icona Impostazioni (![Icona Impostazioni.](../images/audiences/settings-icon.png)) per rimuovere o aggiungere colonne dalla tabella.
+Viene visualizzata la finestra di dialogo [!UICONTROL Rapporto di sovrapposizione pubblico]. Questa finestra di dialogo può contenere fino a 50 righe di analisi di sovrapposizione del pubblico suddivise in sei colonne. Selezionare l&#39;icona Impostazioni (![Icona Impostazioni.](/help/images/icons/settings.png)) per rimuovere o aggiungere colonne dalla tabella.
 
 ![Finestra di dialogo Rapporto di sovrapposizione pubblico.](../images/audiences/audience-overlap-report-dialog.png)
 

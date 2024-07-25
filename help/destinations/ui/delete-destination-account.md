@@ -4,7 +4,7 @@ title: Elimina account di destinazione
 type: Tutorial
 description: Questo tutorial elenca i passaggi per eliminare gli account di destinazione nell’interfaccia utente di Adobe Experience Platform
 exl-id: 9b39ba4b-19a4-48a8-a6f1-f860777cdb9e
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 0%
@@ -33,11 +33,11 @@ Per eliminare gli account di destinazione esistenti, effettua le seguenti operaz
 
    ![Scheda Account](../assets/ui/delete-accounts/accounts-tab.png)
 
-2. Seleziona l&#39;icona del filtro ![Icona filtro](../assets/ui/update-accounts/filter.png) in alto a sinistra per avviare il pannello di ordinamento. Il pannello Ordinamento fornisce un elenco di tutte le destinazioni. Puoi selezionare più di una destinazione dall’elenco per visualizzare una selezione filtrata di account associati alle destinazioni selezionate.
+2. Seleziona l&#39;icona del filtro ![Icona filtro](/help/images/icons/filter.png) in alto a sinistra per avviare il pannello di ordinamento. Il pannello Ordinamento fornisce un elenco di tutte le destinazioni. Puoi selezionare più di una destinazione dall’elenco per visualizzare una selezione filtrata di account associati alle destinazioni selezionate.
 
    ![Filtra destinazioni](../assets/ui/delete-accounts/filter-accounts.png)
 
-3. Selezionare i puntini di sospensione (`...`) accanto al nome dell&#39;account che si desidera eliminare. Viene visualizzato un pannello a comparsa che fornisce opzioni per **[!UICONTROL attivare i tipi di pubblico]**, **[!UICONTROL modificare i dettagli]** e **[!UICONTROL eliminare]** l&#39;account. Selezionare il pulsante ![Elimina](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Elimina]** per eliminare l&#39;account desiderato.
+3. Selezionare i puntini di sospensione (`...`) accanto al nome dell&#39;account che si desidera eliminare. Viene visualizzato un pannello a comparsa che fornisce opzioni per **[!UICONTROL attivare i tipi di pubblico]**, **[!UICONTROL modificare i dettagli]** e **[!UICONTROL eliminare]** l&#39;account. Selezionare il pulsante ![Elimina](/help/images/icons/delete.png) **[!UICONTROL Elimina]** per eliminare l&#39;account desiderato.
 
    ![Elimina account di destinazione](../assets/ui/delete-accounts/delete-accounts.png)
 

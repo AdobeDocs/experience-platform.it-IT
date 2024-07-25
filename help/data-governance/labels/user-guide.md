@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gestire le etichette di utilizzo dei dati nell’interfaccia utente
 description: Questa guida descrive i passaggi per lavorare con le etichette di utilizzo dei dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: ea58ece75d2208ae96bd71c2f51e14279769640f
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1538'
 ht-degree: 17%
@@ -71,7 +71,7 @@ Le etichette possono essere applicate all&#39;intero set di dati dalla scheda **
 
 ![Scheda [!UICONTROL Governance dei dati] dell&#39;area di lavoro [!UICONTROL Set di dati] con governance dei dati evidenziata.](../images/labels/dataset-governance.png)
 
-Per modificare le etichette di utilizzo dei dati a livello di set di dati, iniziare selezionando l&#39;icona della matita (![Un&#39;icona della matita.](../images/labels/edit-icon.png)) nella riga del nome del set di dati.
+Per modificare le etichette di utilizzo dei dati a livello di set di dati, iniziare selezionando l&#39;icona della matita (![Un&#39;icona della matita.](/help/images/icons/edit.png)) nella riga del nome del set di dati.
 
 ![Scheda [!UICONTROL Governance dei dati] dell&#39;area di lavoro [!UICONTROL Set di dati] con l&#39;icona Modifica matita evidenziata.](../images/labels/dataset-level-edit.png)
 

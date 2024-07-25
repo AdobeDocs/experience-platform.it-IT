@@ -4,7 +4,7 @@ title: Aggiorna account di destinazione
 type: Tutorial
 description: Questo tutorial elenca i passaggi per aggiornare gli account di destinazione nell’interfaccia utente di Adobe Experience Platform
 exl-id: afb41878-4205-4c64-af4d-e2740f852785
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '504'
 ht-degree: 0%
@@ -33,11 +33,11 @@ Per aggiornare i dettagli di connessione alle destinazioni esistenti, segui la p
 
    ![Scheda Account](../assets/ui/update-accounts/accounts-tab.png)
 
-2. Seleziona l&#39;icona del filtro ![Icona filtro](../assets/ui/update-accounts/filter.png) in alto a sinistra per avviare il pannello di ordinamento. Il pannello Ordinamento fornisce un elenco di tutte le destinazioni. Puoi selezionare più di una destinazione dall’elenco per visualizzare una selezione filtrata di account associati alle destinazioni selezionate.
+2. Seleziona l&#39;icona del filtro ![Icona filtro](/help/images/icons/filter.png) in alto a sinistra per avviare il pannello di ordinamento. Il pannello Ordinamento fornisce un elenco di tutte le destinazioni. Puoi selezionare più di una destinazione dall’elenco per visualizzare una selezione filtrata di account associati alle destinazioni selezionate.
 
    ![Filtra account di destinazione](../assets/ui/update-accounts/filter-accounts.png)
 
-3. Selezionare i puntini di sospensione (`...`) accanto al nome dell&#39;account da aggiornare. Viene visualizzato un pannello a comparsa che fornisce opzioni per **[!UICONTROL attivare i tipi di pubblico]**, **[!UICONTROL modificare i dettagli]** e **[!UICONTROL eliminare]** l&#39;account. Selezionare il pulsante ![Modifica dettagli](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Modifica dettagli]** per modificare le informazioni sull&#39;account.
+3. Selezionare i puntini di sospensione (`...`) accanto al nome dell&#39;account da aggiornare. Viene visualizzato un pannello a comparsa che fornisce opzioni per **[!UICONTROL attivare i tipi di pubblico]**, **[!UICONTROL modificare i dettagli]** e **[!UICONTROL eliminare]** l&#39;account. Selezionare il pulsante ![Modifica dettagli](/help/images/icons/edit.png) **[!UICONTROL Modifica dettagli]** per modificare le informazioni sull&#39;account.
 
    ![Modifica account](../assets/ui/update-accounts/accounts-edit.png)
 

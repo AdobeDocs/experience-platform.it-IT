@@ -2,7 +2,7 @@
 title: Dashboard personalizzati
 description: Scopri come creare e gestire dashboard personalizzate che consentono di creare, aggiungere e modificare widget personalizzati per visualizzare le metriche chiave.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: 17ad52864bbca09844c0241b6451e6811bd8f413
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1624'
 ht-degree: 3%
@@ -30,7 +30,7 @@ Prima di aggiungere un dashboard personalizzato, l’inventario dei dashboard è
 
 <!-- >[!NOTE]
 >
->To edit an existing dashboard, select the dashboard name from the inventory list followed by the pencil icon (![A pencil icon.](./images/user-defined-dashboards/edit-icon.png))
+>To edit an existing dashboard, select the dashboard name from the inventory list followed by the pencil icon (![A pencil icon.](/help/images/icons/edit.png))
 >![A custom inventory listed in the dashboard inventory.](./images/user-defined-dashboards/dashbaord-inventory.png "A custom inventory listed in the dashboard inventory."){width="100" zoomable="yes"} -->
 
 Viene visualizzata la finestra di dialogo [!UICONTROL Crea dashboard]. Immettere un nome descrittivo per la raccolta di widget che si desidera creare e selezionare **[!UICONTROL Salva]**.
@@ -68,7 +68,7 @@ Viene visualizzata la finestra di dialogo [!UICONTROL Seleziona modello dati]. S
 
 >[!TIP]
 >
->Selezionare l&#39;icona delle informazioni (![Un&#39;icona delle informazioni.](./images/user-defined-dashboards/info-icon.png)) per visualizzare il nome completo del modello dati se è troppo lungo per essere visualizzato nella barra dei dati.
+>Selezionare l&#39;icona delle informazioni (![Un&#39;icona delle informazioni.](/help/images/icons/info.png)) per visualizzare il nome completo del modello dati se è troppo lungo per essere visualizzato nella barra dei dati.
 
 ![Finestra di dialogo Seleziona dati.](./images/user-defined-dashboards/select-data-model-dialog.png)
 
@@ -94,17 +94,17 @@ Seleziona una tabella dall&#39;elenco disponibile nella barra a sinistra per for
 
 Il compositore widget ora è compilato con i dati della tabella scelta.
 
-Il modello dati e la tabella attualmente selezionata vengono visualizzati nella parte superiore della barra a sinistra e gli attributi disponibili per la creazione del widget sono elencati nella colonna [!UICONTROL Attributi]. È possibile utilizzare la barra di ricerca per cercare attributi anziché scorrere l&#39;elenco oppure modificare il modello dati scelto selezionando l&#39;icona della matita (![icona della matita.](./images/user-defined-dashboards/edit-icon.png)) nella barra a sinistra.
+Il modello dati e la tabella attualmente selezionata vengono visualizzati nella parte superiore della barra a sinistra e gli attributi disponibili per la creazione del widget sono elencati nella colonna [!UICONTROL Attributi]. È possibile utilizzare la barra di ricerca per cercare attributi anziché scorrere l&#39;elenco oppure modificare il modello dati scelto selezionando l&#39;icona della matita (![icona della matita.](/help/images/icons/edit.png)) nella barra a sinistra.
 
 ![Un widget popolato con dati all&#39;interno del compositore widget.](./images/user-defined-dashboards/populated-widget-composer.png)
 
 #### Aggiungere e filtrare gli attributi {#add-and-filter-attributes}
 
-Selezionare l&#39;icona di aggiunta (![Un&#39;icona di aggiunta.](./images/user-defined-dashboards/add-icon.png)) accanto al nome di un attributo per aggiungere un attributo al widget. Il menu a discesa visualizzato consente di aggiungere un attributo come asse X, asse Y, colore o filtro per il widget. L&#39;attributo [!UICONTROL Color] consente di differenziare i risultati degli indicatori dell&#39;asse X e Y in base al colore. A tale scopo, i risultati vengono suddivisi in colori diversi in base alla composizione di un terzo attributo.
+Selezionare l&#39;icona di aggiunta (![Un&#39;icona di aggiunta.](/help/images/icons/add-circle.png)) accanto al nome di un attributo per aggiungere un attributo al widget. Il menu a discesa visualizzato consente di aggiungere un attributo come asse X, asse Y, colore o filtro per il widget. L&#39;attributo [!UICONTROL Color] consente di differenziare i risultati degli indicatori dell&#39;asse X e Y in base al colore. A tale scopo, i risultati vengono suddivisi in colori diversi in base alla composizione di un terzo attributo.
 
 >[!TIP]
 >
->Se si desidera invertire la disposizione dell&#39;asse X e Y, selezionare l&#39;icona freccia su e freccia giù (![icona freccia su e freccia giù.](./images/user-defined-dashboards/switch-axis-icon.png)) per cambiare la loro disposizione.
+>Se si desidera invertire la disposizione dell&#39;asse X e Y, selezionare l&#39;icona freccia su e freccia giù (![icona freccia su e freccia giù.](/help/images/icons/switch.png)) per cambiare la loro disposizione.
 
 ![Il compositore widget con il menu a discesa dell&#39;icona del componente aggiuntivo evidenziato.](./images/user-defined-dashboards/attributes-dropdown.png)
 
@@ -132,7 +132,7 @@ In alternativa, puoi creare un periodo personalizzato in base al quale filtrare 
 
 ### Proprietà widget
 
-Selezionare l&#39;icona delle proprietà (![Icona delle proprietà.](./images/user-defined-dashboards/properties-icon.png)) nella barra a destra per aprire il pannello proprietà. Nel pannello [!UICONTROL Proprietà], immetti un nome per il widget nel campo di testo [!UICONTROL Titolo widget].
+Selezionare l&#39;icona delle proprietà (![Icona delle proprietà.](/help/images/icons/properties.png)) nella barra a destra per aprire il pannello proprietà. Nel pannello [!UICONTROL Proprietà], immetti un nome per il widget nel campo di testo [!UICONTROL Titolo widget].
 
 ![Il pannello delle proprietà con l&#39;icona delle proprietà e il campo del titolo del widget evidenziato.](./images/user-defined-dashboards/properties-panel.png)
 
@@ -146,7 +146,7 @@ Se si salva nel compositore widget, il widget viene salvato localmente nel dashb
 
 >[!TIP]
 >
->Selezionare l&#39;icona delle proprietà (![Icona delle proprietà.](./images/user-defined-dashboards/properties-icon.png)) accanto al nome del dashboard per visualizzare i dettagli sulla sua creazione. Puoi modificare il nome del dashboard nella finestra di dialogo visualizzata.
+>Selezionare l&#39;icona delle proprietà (![Icona delle proprietà.](/help/images/icons/properties.png)) accanto al nome del dashboard per visualizzare i dettagli sulla sua creazione. Puoi modificare il nome del dashboard nella finestra di dialogo visualizzata.
 
 I widget possono essere ridisposti e ridimensionati mentre si trovano in questa area di lavoro. Seleziona **[!UICONTROL Salva]** per mantenere il nome del dashboard e il layout configurato.
 
@@ -162,7 +162,7 @@ Dopo aver creato un widget, è possibile modificarlo, duplicarlo o eliminarlo co
 >
 >Per passare da un dashboard personalizzato all’altro, seleziona Dashboard nella barra di navigazione a sinistra, quindi seleziona il nome del dashboard dall’elenco di inventario.
 
-Selezionare l&#39;icona della matita (![Un&#39;icona della matita.](./images/user-defined-dashboards/edit-icon.png)) dall&#39;alto a destra del dashboard personalizzato per accedere alla modalità di modifica.
+Selezionare l&#39;icona della matita (![Un&#39;icona della matita.](/help/images/icons/edit.png)) dall&#39;alto a destra del dashboard personalizzato per accedere alla modalità di modifica.
 
 ![Dashboard personalizzato con l&#39;icona della matita evidenziata.](./images/user-defined-dashboards/edit-mode.png)
 

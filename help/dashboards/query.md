@@ -4,7 +4,7 @@ title: Esplorare, verificare ed elaborare i set di dati del dashboard tramite Qu
 type: Documentation
 description: Scopri come utilizzare Query Service per esplorare ed elaborare set di dati non elaborati che alimentano dashboard di profilo, pubblico e destinazione in Experience Platform.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '944'
 ht-degree: 0%
@@ -33,7 +33,7 @@ Per ulteriori informazioni su [!DNL Query Service] e sul suo ruolo in Experience
 >
 >I set di dati generati dal sistema sono nascosti per impostazione predefinita. Per impostazione predefinita, la scheda [!UICONTROL Sfoglia] mostra solo i set di dati in cui hai acquisito i dati.
 
-Per visualizzare i set di dati generati dal sistema, selezionare l&#39;icona filtro (![Icona filtro.](./images/query/filter.png)) situato a sinistra della barra di ricerca.
+Per visualizzare i set di dati generati dal sistema, selezionare l&#39;icona filtro (![Icona filtro.](/help/images/icons/filter.png)) situato a sinistra della barra di ricerca.
 
 ![Scheda Sfoglia dei set di dati con l&#39;icona del filtro evidenziata.](./images/query/filter-datasets.png)
 

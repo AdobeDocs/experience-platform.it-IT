@@ -2,7 +2,7 @@
 title: Visualizzatore grafico identità
 description: Un grafo di identità è una mappa delle relazioni tra identità diverse per un particolare cliente, che fornisce una rappresentazione visiva di come il cliente interagisce con il brand su canali diversi.
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
-source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1402'
 ht-degree: 6%
@@ -46,7 +46,7 @@ Per visualizzare un grafo delle identità, fornisci uno spazio dei nomi delle id
 
 >[!TIP]
 >
->Seleziona l&#39;icona della tabella ![icona della tabella](../images/identity-graph-viewer/table-icon.png) per visualizzare un pannello con un elenco di tutti gli spazi dei nomi di identità disponibili nell&#39;organizzazione. Puoi utilizzare uno qualsiasi degli spazi dei nomi di identità purché sia connesso un valore di identità valido. Per ulteriori informazioni, leggere la [guida dello spazio dei nomi delle identità](./namespaces.md).
+>Seleziona l&#39;icona della tabella ![icona della tabella](/help/images/icons/table.png) per visualizzare un pannello con un elenco di tutti gli spazi dei nomi di identità disponibili nell&#39;organizzazione. Puoi utilizzare uno qualsiasi degli spazi dei nomi di identità purché sia connesso un valore di identità valido. Per ulteriori informazioni, leggere la [guida dello spazio dei nomi delle identità](./namespaces.md).
 
 ![Uno spazio dei nomi delle identità e il valore corrispondente, fornito nella schermata di ricerca del grafico delle identità.](../images/graph-viewer/namespace-and-value.png)
 

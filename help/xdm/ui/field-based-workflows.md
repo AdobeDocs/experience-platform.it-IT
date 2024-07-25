@@ -2,7 +2,7 @@
 title: Flussi di lavoro basati sui campi nell’Editor di schema
 description: Scopri come aggiungere singolarmente i campi dai gruppi di campi esistenti agli schemi Experience Data Model (XDM).
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
-source-git-commit: 19e0a26958ec57ccbc614be53b5aaacce7ce9450
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1301'
 ht-degree: 0%
@@ -57,7 +57,7 @@ In **[!UICONTROL Nome campo]**, inizia a digitare il nome del campo che desideri
 
 Mentre alcuni campi standard condividono lo stesso nome, la loro struttura può variare a seconda del gruppo di campi da cui provengono. Se un campo standard è nidificato all’interno di un oggetto principale nella struttura del gruppo di campi, anche il campo principale verrà incluso nello schema se viene aggiunto il campo secondario.
 
-Selezionare l&#39;icona di anteprima (![icona Anteprima](../images/ui/field-based-workflows/preview-icon.png)) accanto a un campo standard per visualizzare la struttura del relativo gruppo di campi e capire meglio come potrebbe essere nidificato. Per aggiungere il campo standard allo schema, seleziona l&#39;icona più (![Icona più](../images/ui/field-based-workflows/add-icon.png)).
+Selezionare l&#39;icona di anteprima (![icona Anteprima](/help/images/icons/preview.png)) accanto a un campo standard per visualizzare la struttura del relativo gruppo di campi e capire meglio come potrebbe essere nidificato. Per aggiungere il campo standard allo schema, seleziona l&#39;icona più (![Icona più](/help/images/icons/add-circle.png)).
 
 ![Icona Aggiungi evidenziata su un elemento dei campi standard suggeriti.](../images/ui/field-based-workflows/add-standard-field.png)
 

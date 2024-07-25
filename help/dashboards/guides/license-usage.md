@@ -4,7 +4,7 @@ title: Dashboard utilizzo licenze
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale è possibile visualizzare informazioni importanti sull’utilizzo delle licenze della tua organizzazione.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: b6811d447f76a671adc98bddef6e760c8be8cd9b
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2103'
 ht-degree: 7%
@@ -101,7 +101,7 @@ Per visualizzare **una particolare metrica di utilizzo da una sandbox specifica*
 
 ![Scheda Dettagli del dashboard Utilizzo licenze.](../images/license-usage/details-tab.png)
 
-Da questa visualizzazione è possibile selezionare ![L&#39;icona di controllo.](../images/license-usage/inspect-icon.png) accanto al nome di una sandbox per visualizzare la visualizzazione di quella metrica. Si apre una finestra di dialogo con una visualizzazione per quella metrica.
+Da questa visualizzazione è possibile selezionare ![L&#39;icona di controllo.](/help/images/icons/inspect.png) accanto al nome di una sandbox per visualizzare la visualizzazione di quella metrica. Si apre una finestra di dialogo con una visualizzazione per quella metrica.
 
 ### Visualizzazioni {#visualizations}
 

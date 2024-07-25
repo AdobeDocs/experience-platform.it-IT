@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Monitorare i flussi di dati per le destinazioni nell’interfaccia utente
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 93430a9ba5911bf8dc901ec3f82f06a6b25b8dc4
+source-git-commit: 19f1f64434d655d3b19260460519018fc9c8e174
 workflow-type: tm+mt
 source-wordcount: '3337'
 ht-degree: 10%
@@ -178,7 +178,7 @@ Nella pagina dei dettagli viene inoltre visualizzato un elenco di identità con 
 >title="Activation"
 >abstract="La vista Attivazione della destinazione contiene informazioni sullo stato di attivazione di un pubblico e metriche prelevate dal profilo cliente in tempo reale per generare identità univoche."
 
-Per accedere al dashboard [!UICONTROL Monitoraggio], seleziona **[!UICONTROL Monitoraggio]** (![icona monitoraggio](../assets/ui/monitor-destinations/monitoring-icon.png)) nel menu di navigazione a sinistra. Nella pagina [!UICONTROL Monitoraggio], seleziona [!UICONTROL Destinazioni]. Il dashboard [!UICONTROL Monitoraggio] contiene metriche e informazioni sui processi di esecuzione di destinazione.
+Per accedere al dashboard [!UICONTROL Monitoraggio], seleziona **[!UICONTROL Monitoraggio]** (![icona monitoraggio](/help/images/icons/monitoring.png)) nel menu di navigazione a sinistra. Nella pagina [!UICONTROL Monitoraggio], seleziona [!UICONTROL Destinazioni]. Il dashboard [!UICONTROL Monitoraggio] contiene metriche e informazioni sui processi di esecuzione di destinazione.
 
 Utilizza il dashboard [!UICONTROL Destinazioni] per avere un&#39;idea generale dello stato dei flussi di attivazione. Inizia ottenendo informazioni su un livello aggregato per tutte le destinazioni di batch e streaming, quindi approfondisci le viste dettagliate per i flussi di dati, le esecuzioni dei flussi di dati e i tipi di pubblico attivati, per una panoramica approfondita dei dati di attivazione. Le schermate nel dashboard [!UICONTROL Monitoraggio] forniscono informazioni fruibili tramite metriche e descrizioni degli errori per aiutarti a risolvere eventuali problemi che potrebbero verificarsi negli scenari di attivazione.
 
@@ -199,7 +199,7 @@ Per impostazione predefinita, i dati visualizzati contengono le informazioni di 
 
 ![Controllo dell&#39;intervallo di date di lookback delle modifiche evidenziato per le destinazioni attivate](../assets/ui/monitor-destinations/dashboard-graph-change-date-range.png)
 
-Utilizza l&#39;icona freccia (![icona freccia](/help/dataflows/assets/ui/monitor-destinations/chevron-up.png)) per espandere o chiudere le schede nella parte superiore dello schermo, che mostrano immediatamente informazioni sui dettagli di attivazione, in base al tipo di destinazione - streaming o batch:
+Utilizza l&#39;icona freccia (![icona freccia](/help/images/icons/chevron-up.png)) per espandere o chiudere le schede nella parte superiore dello schermo, che mostrano immediatamente informazioni sui dettagli di attivazione, in base al tipo di destinazione - streaming o batch:
 
 - **[!UICONTROL Frequenza di attivazione streaming]**: rappresenta la percentuale di identità ricevute attivate o ignorate correttamente. La formula utilizzata per calcolare questa percentuale è descritta più avanti in questa pagina, nella sezione [Esecuzioni del flusso di dati per le destinazioni di streaming](#dataflow-runs-for-streaming-destinations).
 - **[!UICONTROL Il flusso di dati batch non riuscito viene eseguito]**: rappresenta il numero di esecuzioni del flusso di dati non riuscite nell&#39;intervallo di tempo selezionato.
@@ -226,13 +226,13 @@ Puoi anche filtrare l’elenco delle destinazioni per visualizzare solo la categ
 
 ![Filtra le destinazioni tramite il selettore a discesa](../assets/ui/monitor-destinations/dashboard-destinations-filter-dropdown.png)
 
-Inoltre, puoi immettere una destinazione nella barra di ricerca per isolarla in una singola destinazione. Se desideri visualizzare i flussi di dati della destinazione, puoi selezionare il filtro ![filter](../assets/ui/monitor-destinations/filter-add.png) accanto per visualizzare un elenco dei relativi flussi di dati attivi.
+Inoltre, puoi immettere una destinazione nella barra di ricerca per isolarla in una singola destinazione. Se desideri visualizzare i flussi di dati della destinazione, puoi selezionare il filtro ![filter](/help/images/icons/filter-add.png) accanto per visualizzare un elenco dei relativi flussi di dati attivi.
 
 ![Filtra le destinazioni utilizzando la barra di ricerca evidenziata nella visualizzazione di monitoraggio.](../assets/ui/monitor-destinations/filtered-destinations.png)
 
 Se desideri visualizzare tutti i flussi di dati esistenti in tutte le destinazioni, seleziona **[!UICONTROL Flussi di dati]**.
 
-Viene visualizzato un elenco di flussi di dati, ordinati in base all’ultima esecuzione del flusso di dati. Per visualizzare ulteriori dettagli per un flusso di dati specifico, individua la destinazione da monitorare, seleziona il filtro ![filter](../assets/ui/monitor-destinations/filter-add.png) accanto e quindi seleziona il filtro ![filter](../assets/ui/monitor-destinations/filter-add.png) accanto al flusso di dati di cui desideri ulteriori informazioni.
+Viene visualizzato un elenco di flussi di dati, ordinati in base all’ultima esecuzione del flusso di dati. Per visualizzare ulteriori dettagli per un flusso di dati specifico, individua la destinazione da monitorare, seleziona il filtro ![filter](/help/images/icons/filter-add.png) accanto e quindi seleziona il filtro ![filter](/help/images/icons/filter-add.png) accanto al flusso di dati di cui desideri ulteriori informazioni.
 
 ![Tutti i flussi di dati sono evidenziati nel dashboard di monitoraggio.](../assets/ui/monitor-destinations/dashboard-dataflows.png)
 
@@ -269,7 +269,7 @@ Ad esempio, stai attivando un pubblico denominato &quot;Membri fedeltà in Calif
 ![Tipi di pubblico evidenziati nel pannello del flusso di dati.](../assets/ui/monitor-destinations/dashboard-segments-view.png)
 
 Nella vista a livello di pubblico, le metriche sono aggregate tra più flussi di dati eseguiti all’interno dell’intervallo di tempo selezionato. In presenza di più esecuzioni del flusso di dati, puoi approfondire la ricerca dal livello di pubblico per visualizzare il raggruppamento di ogni esecuzione del flusso di dati, filtrato in base al pubblico selezionato.
-Utilizza il pulsante filtro ![filter](../assets/ui/monitor-destinations/filter-add.png) per analizzare in profondità il flusso di dati e la visualizzazione eseguita per ogni pubblico nel flusso di dati.
+Utilizza il pulsante filtro ![filter](/help/images/icons/filter-add.png) per analizzare in profondità il flusso di dati e la visualizzazione eseguita per ogni pubblico nel flusso di dati.
 
 ### Pagina di esecuzione del flusso di dati {#dataflow-runs-page}
 
@@ -283,7 +283,7 @@ Quando esegui il drill-down nella pagina del flusso di dati dalla [visualizzazio
 
 ![Pulsanti di opzione che mostrano come filtrare il flusso di dati per i tipi di pubblico.](/help/dataflows/assets/ui/monitor-destinations/dataflow-runs-segment-filter.png)
 
-Per visualizzare ulteriori dettagli su un&#39;esecuzione specifica del flusso di dati, seleziona il filtro ![filter](../assets/ui/monitor-destinations/filter-add.png) accanto all&#39;ora di inizio dell&#39;esecuzione del flusso di dati per visualizzare la pagina dei dettagli dell&#39;esecuzione del flusso di dati.
+Per visualizzare ulteriori dettagli su un&#39;esecuzione specifica del flusso di dati, seleziona il filtro ![filter](/help/images/icons/filter-add.png) accanto all&#39;ora di inizio dell&#39;esecuzione del flusso di dati per visualizzare la pagina dei dettagli dell&#39;esecuzione del flusso di dati.
 
 ![Il flusso di dati esegue il filtro nel dashboard di monitoraggio per eseguire il drill-in di ulteriori informazioni per una determinata esecuzione del flusso di dati.](../assets/ui/monitor-destinations/dataflow-runs-filter.png)
 

@@ -3,7 +3,7 @@ title: Pubblico potenziale
 description: Scopri come creare e utilizzare i tipi di pubblico potenziali per eseguire il targeting di clienti sconosciuti utilizzando informazioni di terze parti.
 type: Documentation
 exl-id: b48cc0cf-f1c4-46fe-bb1d-cad53a9439dc
-source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '395'
 ht-degree: 2%
@@ -26,7 +26,7 @@ Viene visualizzata la pagina Sfoglia. Viene visualizzato un elenco di tutti i ti
 
 Questa vista elenca informazioni sul pubblico, tra cui il nome, il conteggio dei profili, l’origine, lo stato del ciclo di vita, la data di creazione, la data dell’ultimo aggiornamento e il raggruppamento.
 
-È possibile aggiungere ulteriori campi alla visualizzazione selezionando ![l&#39;icona dell&#39;attributo del filtro](../images/ui/prospect-audience/filter-attribute.png). Questi campi aggiuntivi includono la frequenza di aggiornamento e l’ultimo aggiornato da.
+È possibile aggiungere ulteriori campi alla visualizzazione selezionando ![l&#39;icona dell&#39;attributo del filtro](/help/images/icons/column-settings.png). Questi campi aggiuntivi includono la frequenza di aggiornamento e l’ultimo aggiornato da.
 
 Ulteriori informazioni sulla pagina Sfoglia, incluse informazioni dettagliate sui campi elencati, sono disponibili nella [Panoramica di Audience Portal](./audience-portal.md#list).
 

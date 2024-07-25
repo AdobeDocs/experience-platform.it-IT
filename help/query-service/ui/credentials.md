@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida alle credenziali di Query Service
 description: Adobe Experience Platform Query Service fornisce un’interfaccia utente che può essere utilizzata per scrivere ed eseguire query, visualizzare le query eseguite in precedenza e accedere a quelle salvate dagli utenti della tua organizzazione.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: ba4ff2715d4e3eb71377542ab2361b967cd3ac11
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1807'
 ht-degree: 2%
@@ -36,7 +36,7 @@ La sezione **[!UICONTROL Credenziali in scadenza]** fornisce le seguenti informa
 - **[!UICONTROL Porta]**: numero di porta dell&#39;host a cui connettersi.
 - **[!UICONTROL Database]**: nome del database a cui connettere un client.
 - **[!UICONTROL Nome utente]**: nome utente utilizzato per connettersi a Query Service.
-- **[!UICONTROL Password]**: password utilizzata per la connessione a Query Service. Le password nell’interfaccia utente sono state sottoposte a hashing per motivi di sicurezza. Selezionare l&#39;icona Copia (![Icona Copia.](../images/ui/credentials/copy-icon.png)) per copiare le credenziali complete senza hash negli Appunti.
+- **[!UICONTROL Password]**: password utilizzata per la connessione a Query Service. Le password nell’interfaccia utente sono state sottoposte a hashing per motivi di sicurezza. Selezionare l&#39;icona Copia (![Icona Copia.](/help/images/icons/copy.png)) per copiare le credenziali complete senza hash negli Appunti.
 - **[!UICONTROL Comando PSQL]**: comando che ha inserito automaticamente tutte le informazioni rilevanti per la connessione a Query Service tramite PSQL nella riga di comando.
 - **[!UICONTROL Scadenza]**: data e ora di scadenza delle credenziali. La durata di validità predefinita del token è di 24 ore, ma può essere modificata nelle impostazioni avanzate dell’Admin Console.
 
@@ -126,7 +126,7 @@ Dopo aver salvato le credenziali generate, seleziona **[!UICONTROL Chiudi]**. È
 
 ![Scheda Credenziali del dashboard delle query con la sezione Credenziali senza scadenza evidenziata.](../images/ui/credentials/list-credentials.png)
 
-È possibile modificare o eliminare le credenziali senza scadenza. Per modificare una credenziale senza scadenza, selezionare l&#39;icona della matita (![Un&#39;icona della matita.](../images/ui/credentials/edit-icon.png)). Per eliminare una credenziale senza scadenza, selezionare l&#39;icona Elimina (![Icona Cestino.](../images/ui/credentials/delete-icon.png)).
+È possibile modificare o eliminare le credenziali senza scadenza. Per modificare una credenziale senza scadenza, selezionare l&#39;icona della matita (![Un&#39;icona della matita.](/help/images/icons/edit.png)). Per eliminare una credenziale senza scadenza, selezionare l&#39;icona Elimina (![Icona Cestino.](/help/images/icons/delete.png)).
 
 Quando si modifica una credenziale senza scadenza, viene visualizzata una finestra modale. Puoi fornire i seguenti dettagli da aggiornare:
 

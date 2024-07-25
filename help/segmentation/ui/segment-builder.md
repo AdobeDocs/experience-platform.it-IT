@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Segment Builder
 description: Il Generatore di segmenti nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro avanzata che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica di regole, ad esempio le tessere trascinate utilizzate per rappresentare le proprietà dei dati.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 305aa7f44cd64d9a0ae704fe9aa01d2d1c536ade
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '3743'
 ht-degree: 6%
@@ -141,7 +141,7 @@ Se si seleziona un valore da questo elenco di enumerazioni, il valore viene evid
 
 ![Avviso visualizzato se si inserisce un valore non incluso nell&#39;elenco enumerazione.](../images/ui/segment-builder/enum-warning.png)
 
-Se crei più valori, puoi aggiungerli tutti contemporaneamente utilizzando il caricamento in blocco. Seleziona l&#39;icona ![più](../images/ui/segment-builder/plus-icon.png) per visualizzare il popover **[!UICONTROL Aggiungi valori in blocco]**.
+Se crei più valori, puoi aggiungerli tutti contemporaneamente utilizzando il caricamento in blocco. Seleziona l&#39;icona ![più](/help/images/icons/add-circle.png) per visualizzare il popover **[!UICONTROL Aggiungi valori in blocco]**.
 
 ![L&#39;icona più è evidenziata e mostra il pulsante che puoi selezionare per accedere al popover di caricamento in blocco.](../images/ui/segment-builder/add-bulk-values.png)
 
@@ -287,7 +287,7 @@ Mentre continui a creare la definizione del segmento, puoi visualizzare un&#39;a
 >
 >Ulteriori informazioni sulla generazione di stime per le definizioni dei segmenti sono disponibili nella [sezione sulla generazione di stime](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) dell&#39;esercitazione sulla creazione delle definizioni dei segmenti.
 
-Puoi anche selezionare il metodo di valutazione. Se si conosce il metodo di valutazione da utilizzare, è possibile selezionare il metodo di valutazione desiderato utilizzando l&#39;elenco a discesa. Se si desidera conoscere i tipi di valutazione per i quali questa definizione di segmento è idonea, è possibile selezionare l&#39;icona Sfoglia ![icona cartella con una lente di ingrandimento](../images/ui/segment-builder/segment-evaluation-select-icon.png) per visualizzare un elenco dei metodi di valutazione della definizione di segmento disponibili.
+Puoi anche selezionare il metodo di valutazione. Se si conosce il metodo di valutazione da utilizzare, è possibile selezionare il metodo di valutazione desiderato utilizzando l&#39;elenco a discesa. Se si desidera conoscere i tipi di valutazione per i quali questa definizione di segmento è idonea, è possibile selezionare l&#39;icona Sfoglia ![icona cartella con una lente di ingrandimento](/help/images/icons/folder-search.png) per visualizzare un elenco dei metodi di valutazione della definizione di segmento disponibili.
 
 Viene visualizzato il popover [!UICONTROL Idoneità al metodo di valutazione]. In questo popover vengono visualizzati i metodi di valutazione disponibili, ovvero batch, streaming e edge. Il popover mostra quali metodi di valutazione sono idonei e non idonei. A seconda dei parametri utilizzati nella definizione del segmento, questo potrebbe non essere idoneo per alcuni metodi di valutazione. Per ulteriori informazioni sui requisiti per ciascun metodo di valutazione, leggi le [panoramiche di segmentazione in streaming](./streaming-segmentation.md#query-types) o [segmentazione Edge](./edge-segmentation.md#query-types).
 

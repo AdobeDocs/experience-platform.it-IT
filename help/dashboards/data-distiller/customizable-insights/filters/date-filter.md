@@ -2,7 +2,7 @@
 title: Creare un filtro data
 description: Scopri come filtrare le informazioni personalizzate per data.
 exl-id: fa05d651-ea43-41f0-9b7d-f19c4a9ac256
-source-git-commit: 5bb954da7c1e05922a4e0f8d0bc7d3ab5c8e0e58
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '662'
 ht-degree: 0%
@@ -94,6 +94,6 @@ Dopo aver selezionato un intervallo di date dal dashboard, le informazioni che c
 
 ## Eliminare un filtro data {#delete-date-filter}
 
-Per rimuovere il filtro di data, selezionare l&#39;icona Elimina filtro (![Icona Elimina filtro.](../../../images/customizable-insights/delete-filter-icon.png)).
+Per rimuovere il filtro di data, selezionare l&#39;icona Elimina filtro (![Icona Elimina filtro.](/help/images/icons/filter-delete.png)).
 
 ![Dashboard personalizzato con l&#39;icona di eliminazione del filtro evidenziata.](../../../images/customizable-insights/delete-date-filter.png)

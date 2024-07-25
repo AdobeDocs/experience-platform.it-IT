@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guida all’interfaccia utente di Audiences
 description: La funzione di composizione del pubblico nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro ricca che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica dei tipi di pubblico per la tua organizzazione.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
+source-git-commit: 8bc03889ff108630bd20fe47f2c2920ceba5069b
 workflow-type: tm+mt
 source-wordcount: '1951'
 ht-degree: 0%
@@ -20,7 +20,7 @@ La funzione Composizione pubblico fornisce un’area di lavoro per creare e modi
 
 ![Interfaccia utente per la composizione del pubblico.](../images/ui/audience-composition/audience-composition.png)
 
-Per modificare i dettagli della composizione, inclusi il titolo e la descrizione, selezionare il pulsante ![cursori](../images/ui/audience-composition/sliders.png).
+Per modificare i dettagli della composizione, inclusi il titolo e la descrizione, selezionare il pulsante ![cursori](/help/images/icons/properties.png).
 
 Viene visualizzato il popover **[!UICONTROL Proprietà composizione]**. È possibile inserire i dettagli della composizione, inclusi il titolo e la descrizione qui.
 
@@ -114,7 +114,7 @@ Viene visualizzato un elenco di tipi di pubblico. Seleziona **[!UICONTROL Aggiun
 
 ### Escludi per attributo {#exclude-attribute}
 
-Se escludi per attributo, puoi selezionare gli attributi da escludere selezionando l&#39;icona ![filtro](../images/ui/audience-composition/filter-attribute.png) nella sezione **[!UICONTROL Regola di esclusione]**.
+Se escludi per attributo, puoi selezionare gli attributi da escludere selezionando l&#39;icona ![filtro](/help/images/icons/project-edit.png) nella sezione **[!UICONTROL Regola di esclusione]**.
 
 ![La sezione degli attributi è evidenziata e mostra dove scegliere l&#39;attributo da escludere.](../images/ui/audience-composition/exclude-attribute.png)
 
@@ -140,7 +140,7 @@ Per aggiungere un blocco **[!UICONTROL Arricchisci]**, seleziona l&#39;icona **+
 
 Blocco **[!UICONTROL Arricchisci]** aggiunto. Quando questo blocco è selezionato, i dettagli sull’arricchimento vengono visualizzati nella barra a destra. Questo include l’etichetta del blocco e il set di dati di arricchimento.
 
-Per selezionare il set di dati con cui arricchire il pubblico, seleziona l&#39;icona ![filtro](../images/ui/audience-composition/filter-attribute.png).
+Per selezionare il set di dati con cui arricchire il pubblico, seleziona l&#39;icona ![filtro](/help/images/icons/project-edit.png).
 
 ![Il pulsante del filtro è evidenziato. Selezionando questa opzione si accede al popover [!UICONTROL Seleziona set di dati].](../images/ui/audience-composition/enrich-select-dataset.png)
 
@@ -160,7 +160,7 @@ La sezione **[!UICONTROL Criteri di arricchimento]** è ora visualizzata nella b
 
 ![L&#39;area [!UICONTROL Criteri di arricchimento] è evidenziata.](../images/ui/audience-composition/enrichment-criteria.png)
 
-Per selezionare la **[!UICONTROL chiave di join di Source]**, selezionare l&#39;icona ![filter](../images/ui/audience-composition/filter-attribute.png).
+Per selezionare la **[!UICONTROL chiave di join di Source]**, selezionare l&#39;icona ![filter](/help/images/icons/project-edit.png).
 
 ![L&#39;icona del filtro per la [!UICONTROL chiave di join di Source] è evidenziata.](../images/ui/audience-composition/enrich-select-source-join-key.png)
 
@@ -168,7 +168,7 @@ Viene visualizzato il popover **[!UICONTROL Seleziona un attributo di profilo]**
 
 ![L&#39;attributo che si desidera utilizzare come chiave di join di origine è evidenziato.](../images/ui/audience-composition/enrich-select-profile-attribute.png)
 
-Per selezionare la chiave di join del set di dati **[!UICONTROL Enrichment]**, selezionare l&#39;icona ![filter](../images/ui/audience-composition/filter-attribute.png).
+Per selezionare la chiave di join del set di dati **[!UICONTROL Enrichment]**, selezionare l&#39;icona ![filter](/help/images/icons/project-edit.png).
 
 ![L&#39;icona del filtro per la chiave di aggiunta al set di dati di arricchimento  è evidenziata.](../images/ui/audience-composition/enrich-select-enrichment-dataset-join-key.png)
 
@@ -216,7 +216,7 @@ Quando selezioni il blocco, i dettagli sulla classificazione vengono visualizzat
 
 ![Il blocco di classificazione è evidenziato, così come i dettagli del blocco di classificazione.](../images/ui/audience-composition/rank.png)
 
-Per selezionare l&#39;attributo in base al quale classificare i tipi di pubblico, seleziona l&#39;icona ![filtro](../images/ui/audience-composition/filter-attribute.png).
+Per selezionare l&#39;attributo in base al quale classificare i tipi di pubblico, seleziona l&#39;icona ![filtro](/help/images/icons/project-edit.png).
 
 ![L&#39;icona del filtro è evidenziata e mostra cosa selezionare per accedere alla schermata di selezione degli attributi del profilo.](../images/ui/audience-composition/select-rank-attribute.png)
 
@@ -250,7 +250,7 @@ Ad esempio, puoi avere tre percorsi, ciascuno con una percentuale diversa di pro
 
 ### Dividi per attributo {#split-attribute}
 
-Quando si divide per attributo, il pubblico viene diviso in base agli attributi forniti. Per selezionare l&#39;attributo da dividere, selezionare il blocco **[!UICONTROL Dividi]**, seguito dall&#39;icona ![filtro](../images/ui/audience-composition/filter-attribute.png).
+Quando si divide per attributo, il pubblico viene diviso in base agli attributi forniti. Per selezionare l&#39;attributo da dividere, selezionare il blocco **[!UICONTROL Dividi]**, seguito dall&#39;icona ![filtro](/help/images/icons/project-edit.png).
 
 ![Il pulsante di filtro è selezionato e mostra come filtrare per attributo.](../images/ui/audience-composition/select-split-attribute.png)
 

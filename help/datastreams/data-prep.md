@@ -2,7 +2,7 @@
 title: Preparazione dei dati per la raccolta dati
 description: Scopri come mappare i dati su uno schema evento Experience Data Model (XDM) durante la configurazione di uno stream di dati per Adobe Experience Platform Web e Mobile SDK.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1183'
 ht-degree: 60%
@@ -173,11 +173,11 @@ Per creare una regola di mapping, selezionare **[!UICONTROL Aggiungi nuovo mappi
 
 ![Aggiunta di una nuova mappatura.](assets/data-prep/add-new-mapping.png)
 
-Seleziona l’icona della sorgente (![Icona sorgente](assets/data-prep/source-icon.png)) e nella finestra di dialogo visualizzata seleziona il campo di origine che desideri mappare nell’area di lavoro fornita. Dopo aver scelto un campo, utilizza il pulsante **[!UICONTROL Seleziona]** per continuare.
+Seleziona l’icona della sorgente (![Icona sorgente](/help/images/icons/source.png)) e nella finestra di dialogo visualizzata seleziona il campo di origine che desideri mappare nell’area di lavoro fornita. Dopo aver scelto un campo, utilizza il pulsante **[!UICONTROL Seleziona]** per continuare.
 
 ![Selezione del campo da mappare nello schema di origine.](assets/data-prep/source-mapping.png)
 
-Quindi, seleziona l’icona dello schema (![Icona dello schema](assets/data-prep/schema-icon.png)) per aprire una finestra di dialogo simile per lo schema dell’evento di destinazione. Scegli il campo in cui mappare i dati prima di confermare con **[!UICONTROL Seleziona]**.
+Quindi, seleziona l’icona dello schema (![Icona dello schema](/help/images/icons/schema.png)) per aprire una finestra di dialogo simile per lo schema dell’evento di destinazione. Scegli il campo in cui mappare i dati prima di confermare con **[!UICONTROL Seleziona]**.
 
 ![Selezione del campo da mappare nello schema di destinazione.](assets/data-prep/target-mapping.png)
 

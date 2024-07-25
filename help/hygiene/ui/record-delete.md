@@ -3,7 +3,7 @@ title: Elimina record
 description: Scopri come eliminare i record nell’interfaccia utente di Adobe Experience Platform.
 badgeBeta: label="Beta" type="Informative"
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 9981f35732b041a92c5a371e727a8facb6636cf5
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1567'
 ht-degree: 8%
@@ -51,7 +51,7 @@ Viene visualizzato il flusso di lavoro per la creazione delle richieste. Per imp
 
 Il passaggio successivo consiste nel determinare se eliminare record da un singolo set di dati o da tutti i set di dati. Se questa opzione non è disponibile, passare alla sezione [Specificare le identità](#provide-identities) della guida.
 
-Nella sezione **[!UICONTROL Dettagli record]**, utilizza il pulsante di scelta per selezionare tra un set di dati specifico e tutti i set di dati. Se si sceglie **[!UICONTROL Seleziona set di dati]**, procedere con la selezione dell&#39;icona del database (![Icona del database](../images/ui/record-delete/database-icon.png)) per aprire una finestra di dialogo contenente un elenco dei set di dati disponibili. Seleziona il set di dati desiderato dall&#39;elenco seguito da **[!UICONTROL Fine]**.
+Nella sezione **[!UICONTROL Dettagli record]**, utilizza il pulsante di scelta per selezionare tra un set di dati specifico e tutti i set di dati. Se si sceglie **[!UICONTROL Seleziona set di dati]**, procedere con la selezione dell&#39;icona del database (![Icona del database](/help/images/icons/database.png)) per aprire una finestra di dialogo contenente un elenco dei set di dati disponibili. Seleziona il set di dati desiderato dall&#39;elenco seguito da **[!UICONTROL Fine]**.
 
 ![Finestra di dialogo [!UICONTROL Seleziona set di dati] con un set di dati selezionato ed evidenziato [!UICONTROL Fine].](../images/ui/record-delete/select-dataset.png)
 
@@ -130,7 +130,7 @@ Vengono visualizzati i controlli che consentono di immettere le identità una al
 
 ![Il flusso di lavoro per la creazione di richieste con un campo di identità aggiunto manualmente.](../images/ui/record-delete/identity-added.png)
 
-Per aggiungere altre identità, selezionare l&#39;icona più (![A icona più.](../images/ui/record-delete/plus-icon.png)) accanto a una delle righe oppure selezionare **[!UICONTROL Aggiungi identità]**.
+Per aggiungere altre identità, selezionare l&#39;icona più (![A icona più.](/help/images/icons/tree-expand-all.png)) accanto a una delle righe oppure selezionare **[!UICONTROL Aggiungi identità]**.
 
 ![Flusso di lavoro per la creazione di richieste con l&#39;icona più e l&#39;icona Aggiungi identità evidenziate.](../images/ui/record-delete/more-identities.png)
 

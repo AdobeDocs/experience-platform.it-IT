@@ -2,7 +2,7 @@
 title: Panoramica dell’estensione Adobe Privacy
 description: Scopri l’estensione tag Adobe Privacy in Adobe Experience Platform.
 exl-id: 8401861e-93ad-48eb-8796-b26ed8963c32
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '900'
 ht-degree: 9%
@@ -95,7 +95,7 @@ Durante la configurazione dell&#39;azione per la regola, seleziona **[!UICONTROL
 
 ![Seleziona tipo di azione](../../../images/extensions/client/privacy/action-type.png)
 
-Il pannello di destra richiede di selezionare un elemento dati che fungerà da callback dell’azione. Selezionare l&#39;icona del database (![Icona database](../../../images/extensions/client/privacy/database.png)) e scegliere dall&#39;elenco l&#39;elemento dati creato in precedenza. Seleziona **[!UICONTROL Mantieni modifiche]** per continuare.
+Il pannello di destra richiede di selezionare un elemento dati che fungerà da callback dell’azione. Selezionare l&#39;icona del database (![Icona database](/help/images/icons/database.png)) e scegliere dall&#39;elenco l&#39;elemento dati creato in precedenza. Seleziona **[!UICONTROL Mantieni modifiche]** per continuare.
 
 ![Seleziona elemento dati](../../../images/extensions/client/privacy/add-data-element.png)
 

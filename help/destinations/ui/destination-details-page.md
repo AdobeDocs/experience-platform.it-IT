@@ -3,7 +3,7 @@ keywords: destinazioni;destinazione;pagina dettagli destinazioni;pagina dettagli
 title: Visualizzare i dettagli della destinazione
 description: La pagina dei dettagli di una singola destinazione fornisce una panoramica dei dettagli della destinazione. I dettagli della destinazione includono il nome della destinazione, l’ID, i tipi di pubblico mappati sulla destinazione e i controlli per modificare l’attivazione e abilitare e disabilitare il flusso di dati.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: de867c1747fcdb14d8eb72bd3432c177e680c4fa
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1189'
 ht-degree: 0%
@@ -28,19 +28,19 @@ Per visualizzare ulteriori dettagli su una destinazione esistente, segui la proc
 
    ![Sfoglia destinazioni](../assets/ui/details-page/browse-destinations.png)
 
-1. Seleziona l&#39;icona del filtro ![Icona filtro](../assets/ui/details-page/filter.png) in alto a sinistra per avviare il pannello di ordinamento. Il pannello Ordinamento fornisce un elenco di tutte le destinazioni. Puoi selezionare più di una destinazione dall’elenco per visualizzare una selezione filtrata di flussi di dati associati alla destinazione selezionata.
+2. Seleziona l&#39;icona del filtro ![Icona filtro](/help/images/icons/filter.png) in alto a sinistra per avviare il pannello di ordinamento. Il pannello Ordinamento fornisce un elenco di tutte le destinazioni. Puoi selezionare più di una destinazione dall’elenco per visualizzare una selezione filtrata di flussi di dati associati alla destinazione selezionata.
 
    ![Filtra destinazioni](../assets/ui/details-page/filter-destinations.png)
 
-1. Seleziona la riga della destinazione per la quale desideri visualizzare ulteriori informazioni. Viene visualizzata una barra a destra con informazioni sulla destinazione, tra cui l’ID di destinazione, l’utente che ha creato la connessione di destinazione e altre informazioni.
+3. Seleziona la riga della destinazione per la quale desideri visualizzare ulteriori informazioni. Viene visualizzata una barra a destra con informazioni sulla destinazione, tra cui l’ID di destinazione, l’utente che ha creato la connessione di destinazione e altre informazioni.
 
    ![ID destinazione nella barra a destra](../assets/ui/details-page/right-rail-info-including-destination-id.png)
 
-1. In alternativa, è possibile visualizzare altre informazioni sulla destinazione selezionando *il nome della destinazione* che si desidera visualizzare.
+4. In alternativa, è possibile visualizzare altre informazioni sulla destinazione selezionando *il nome della destinazione* che si desidera visualizzare.
 
    ![Seleziona destinazione](../assets/ui/details-page/destination-select.png)
 
-1. La pagina dei dettagli della destinazione viene visualizzata nella barra a destra, con i controlli disponibili.
+5. La pagina dei dettagli della destinazione viene visualizzata nella barra a destra, con i controlli disponibili.
 
    ![Dettagli destinazione](../assets/ui/details-page/destination-details.png)
 

@@ -5,7 +5,7 @@ solution: Experience Platform
 title: Aggiornamento dei dettagli dell’account di connessione Source nell’interfaccia utente
 type: Tutorial
 exl-id: de264bd4-fe3d-4622-9f24-f1612d8334c9
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '452'
 ht-degree: 1%
@@ -33,7 +33,7 @@ Accedi all&#39;[interfaccia utente Experience Platform](https://platform.adobe.c
 
 Viene visualizzata la pagina **[!UICONTROL Account]**. In questa pagina è riportato un elenco di account visualizzabili, con informazioni sulla loro origine, nome utente, numero di flussi di dati e data di creazione.
 
-Seleziona l&#39;icona del filtro ![filter](../../images/tutorials/update/filter.png) in alto a sinistra per avviare il pannello di ordinamento.
+Seleziona l&#39;icona del filtro ![filter](/help/images/icons/filter.png) in alto a sinistra per avviare il pannello di ordinamento.
 
 ![elenco account](../../images/tutorials/update/accounts-list.png)
 

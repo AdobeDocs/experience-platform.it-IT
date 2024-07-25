@@ -1,13 +1,13 @@
 ---
 title: Panoramica di Audience Portal
 description: Scopri come utilizzare Audience Portal per visualizzare, gestire e creare tipi di pubblico in Adobe Experience Platform.
-source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
+exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
+source-git-commit: d1fbfe5dd887059a6aab96566311cbd63c5b091f
 workflow-type: tm+mt
 source-wordcount: '3693'
 ht-degree: 3%
 
 ---
-
 
 # Panoramica di Audience Portal
 
@@ -90,7 +90,7 @@ Viene visualizzato il grafico a torta, con una suddivisione dei tipi di pubblico
 
 ### Personalizza {#customize}
 
-Puoi aggiungere campi aggiuntivi a Audience Portal selezionando ![l&#39;icona dell&#39;attributo del filtro](../images/ui/audience-portal/filter-attribute.png). Questi campi aggiuntivi includono lo stato del ciclo di vita, la frequenza di aggiornamento, l’ultimo aggiornamento di, la descrizione, creato da ed etichette di accesso.
+Puoi aggiungere campi aggiuntivi a Audience Portal selezionando ![l&#39;icona dell&#39;attributo del filtro](/help/images/icons/column-settings.png). Questi campi aggiuntivi includono lo stato del ciclo di vita, la frequenza di aggiornamento, l’ultimo aggiornamento di, la descrizione, creato da ed etichette di accesso.
 
 | Campo | Descrizione |
 | ----- | ----------- |
@@ -116,7 +116,7 @@ Se il raggruppamento è selezionato, la visualizzazione mostra un grafico a barr
 | [!UICONTROL Esistente] | Numero di profili **rimasti** nel segmento nelle ultime 24 ore dall&#39;ultima esecuzione del processo di segmentazione batch. |
 | [!UICONTROL Uscita] | Il numero di profili che **sono usciti** dal segmento nelle ultime 24 ore dall&#39;ultima esecuzione del processo di segmentazione batch. |
 
-Dopo aver selezionato i campi da visualizzare, è possibile ridimensionare anche la larghezza delle colonne visualizzate. Per eseguire questa operazione, trascinare l&#39;area tra le colonne o selezionare l&#39;![icona freccia](../images/ui/audience-portal/arrow-icon.png) della colonna da ridimensionare, seguita da **[!UICONTROL Ridimensiona colonna]**.
+Dopo aver selezionato i campi da visualizzare, è possibile ridimensionare anche la larghezza delle colonne visualizzate. Per eseguire questa operazione, trascinare l&#39;area tra le colonne o selezionare l&#39;![icona freccia](/help/images/icons/chevron-down.png) della colonna da ridimensionare, seguita da **[!UICONTROL Ridimensiona colonna]**.
 
 ![Il pulsante Ridimensiona colonna è evidenziato.](../images/ui/audience-portal/browse-audience-resize-column.png)
 
@@ -177,7 +177,7 @@ Una volta che il pubblico si trova in una cartella, puoi scegliere di visualizza
 
 Puoi anche filtrare i tipi di pubblico, in base a diverse impostazioni.
 
-Per filtrare i tipi di pubblico disponibili, seleziona l&#39;icona ![filtro](../images/ui/audience-portal/filter-icon.png).
+Per filtrare i tipi di pubblico disponibili, seleziona l&#39;icona ![filtro](/help/images/icons/filter.png).
 
 ![Viene visualizzata la pagina Sfoglia tipi di pubblico con l&#39;icona del filtro evidenziata.](../images/ui/audience-portal/browse-select-filter.png)
 

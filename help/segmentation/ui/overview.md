@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente del servizio di segmentazione
 description: Scopri come creare e gestire tipi di pubblico e definizioni di segmenti nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: acfe91144175e136955ffd9f0cdae2c351217c16
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '959'
 ht-degree: 1%
@@ -69,7 +69,7 @@ Accanto a ogni pubblico è presente un’icona con i puntini di sospensione. Sel
 | Gestisci accesso | Gestisce le etichette di accesso che appartengono al pubblico. Per ulteriori informazioni sulle etichette di accesso, consulta la documentazione su [gestione delle etichette](../../access-control/abac/ui/labels.md). |
 | Elimina | Elimina il pubblico selezionato. I tipi di pubblico utilizzati nelle destinazioni a valle o dipendenti in altri tipi di pubblico **non possono** essere eliminati. Per ulteriori informazioni sull&#39;eliminazione del pubblico, leggere le [domande frequenti sulla segmentazione](../faq.md#lifecycle-states). |
 
-È possibile selezionare l&#39;icona ![Personalizza tabella](../images/ui/overview/customize-table.png) per modificare i campi visualizzati.
+È possibile selezionare l&#39;icona ![Personalizza tabella](/help/images/icons/column-settings.png) per modificare i campi visualizzati.
 
 ![Il pulsante Personalizza tabella è evidenziato. La selezione di questo pulsante consente di personalizzare i campi visualizzati nella pagina Composizioni pubblico.](../images/ui/overview/compositions-select-customize-table.png)
 

@@ -5,7 +5,7 @@ title: Servizio query in Jupyter Notebook
 type: Tutorial
 description: Adobe Experience Platform consente di utilizzare SQL (Structured Query Language) in Data Science Workspace integrando Query Service in JupyterLab come funzione standard. Questo tutorial illustra query SQL di esempio per casi d’uso comuni per esplorare, trasformare e analizzare i dati di Adobe Analytics.
 exl-id: c5ac7d11-a3bd-4ef8-a650-9f496a8bbaa7
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: d1b571fe72208cf2f2ae339273f05cc38dda9845
 workflow-type: tm+mt
 source-wordcount: '822'
 ht-degree: 0%
@@ -98,7 +98,7 @@ Prima di avviare questa esercitazione, è necessario disporre dei seguenti prere
 
 Immettere le seguenti query SQL nelle singole celle del blocco appunti. Esegui una query selezionando la relativa cella e quindi il pulsante **[!UICONTROL play]**. I risultati della query o i registri di errore vengono visualizzati sotto la cella eseguita.
 
-Quando un blocco appunti è inattivo per un periodo di tempo prolungato, la connessione tra il blocco appunti e [!DNL Query Service] potrebbe interrompersi. In questi casi, riavviare [!DNL JupyterLab] selezionando il pulsante **Riavvia** ![Riavvia pulsante](../images/jupyterlab/user-guide/restart_button.png) nell&#39;angolo superiore destro accanto al pulsante di alimentazione.
+Quando un blocco appunti è inattivo per un periodo di tempo prolungato, la connessione tra il blocco appunti e [!DNL Query Service] potrebbe interrompersi. In questi casi, riavviare [!DNL JupyterLab] selezionando il pulsante **Riavvia** ![Riavvia pulsante](/help/images/icons/restart.png) nell&#39;angolo superiore destro accanto al pulsante di alimentazione.
 
 Il kernel del notebook viene ripristinato, ma le celle rimangono, quindi riesegui tutte le celle per continuare da dove hai lasciato.
 

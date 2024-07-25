@@ -2,7 +2,7 @@
 title: Modalità Query Pro
 description: Scopri come utilizzare le query SQL nell’interfaccia utente di Adobe Experience Platform per generare grafici per le dashboard personalizzate.
 exl-id: 15c664c4-8546-4e04-b81d-c78bf83500d3
-source-git-commit: 5bb954da7c1e05922a4e0f8d0bc7d3ab5c8e0e58
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1060'
 ht-degree: 1%
@@ -35,7 +35,7 @@ Per includere [global](./filters/global-filter.md) o [filtri di data](./filters/
 >
 >Se si desidera utilizzare un filtro globale, è necessario inserire un parametro di query nell&#39;istruzione SQL e quindi collegare tale parametro di query al filtro globale nel compositore widget. Nella schermata seguente, `CONSENT_VALUE_FILTER` viene utilizzato nel linguaggio SQL come parametro di query per un filtro globale. Per ulteriori informazioni su come eseguire questa operazione, consulta la [documentazione del filtro globale](./filters/global-filter.md#enable-global-filter).
 
-Per eseguire la query, selezionare l&#39;icona di esecuzione (![Icona di esecuzione.](../../images/customizable-insights/run-icon.png)). Nell&#39;Editor query viene visualizzata la scheda dei risultati. Quindi, per confermare la configurazione e aprire il compositore widget, seleziona **[!UICONTROL Seleziona]**.
+Per eseguire la query, selezionare l&#39;icona di esecuzione (![Icona di esecuzione.](/help/images/icons/play.png)). Nell&#39;Editor query viene visualizzata la scheda dei risultati. Quindi, per confermare la configurazione e aprire il compositore widget, seleziona **[!UICONTROL Seleziona]**.
 
 >[!TIP]
 >
@@ -45,7 +45,7 @@ Per eseguire la query, selezionare l&#39;icona di esecuzione (![Icona di esecuzi
 
 ## Popolare widget {#populate-widget}
 
-Il compositore widget ora è popolato con le colonne dell&#39;SQL eseguito. Il tipo di dashboard è indicato in alto a sinistra, in questo caso è [!UICONTROL Voce SQL manuale]. Selezionare l&#39;icona della matita (![Un&#39;icona della matita.](../../images/customizable-insights/edit-icon.png)) per modificare l&#39;istruzione SQL in qualsiasi momento.
+Il compositore widget ora è popolato con le colonne dell&#39;SQL eseguito. Il tipo di dashboard è indicato in alto a sinistra, in questo caso è [!UICONTROL Voce SQL manuale]. Selezionare l&#39;icona della matita (![Un&#39;icona della matita.](/help/images/icons/edit.png)) per modificare l&#39;istruzione SQL in qualsiasi momento.
 
 >[!TIP]
 >
@@ -57,13 +57,13 @@ Per creare il widget, utilizza gli attributi elencati nella colonna [!UICONTROL 
 
 ### Aggiungi attributi {#add-attributes}
 
-Per aggiungere un attributo al widget, selezionare l&#39;icona più (![A icona più.](../../images/customizable-insights/add-icon.png)) accanto al nome di un attributo. Il menu a discesa visualizzato consente di aggiungere un attributo al grafico dalle opzioni determinate dall&#39;istruzione SQL. Diversi tipi di grafico dispongono di opzioni diverse, ad esempio un elenco a discesa degli assi X e Y.
+Per aggiungere un attributo al widget, selezionare l&#39;icona più (![A icona più.](/help/images/icons/add-circle.png)) accanto al nome di un attributo. Il menu a discesa visualizzato consente di aggiungere un attributo al grafico dalle opzioni determinate dall&#39;istruzione SQL. Diversi tipi di grafico dispongono di opzioni diverse, ad esempio un elenco a discesa degli assi X e Y.
 
 In questo esempio di grafico ad anello, le opzioni sono dimensione e colore. Il colore suddivide i risultati del grafico ad anello e la dimensione corrisponde alla metrica effettiva utilizzata. Aggiungere un attributo al campo [!UICONTROL Colore] per dividere i risultati in colori diversi in base alla composizione dell&#39;attributo.
 
 >[!TIP]
 >
->Selezionare l&#39;icona freccia su e freccia giù (![Icona freccia su e freccia giù.](../../images/customizable-insights/switch-axis-icon.png)) per cambiare la disposizione degli assi X e Y nei grafici a barre o a linee.
+>Selezionare l&#39;icona freccia su e freccia giù (![Icona freccia su e freccia giù.](/help/images/icons/switch.png)) per cambiare la disposizione degli assi X e Y nei grafici a barre o a linee.
 
 ![Il compositore widget con l&#39;icona del componente aggiuntivo a discesa e le frecce di selezione evidenziate.](../../images/customizable-insights/add-icon-and-switch-arrows.png)
 
@@ -73,7 +73,7 @@ Per modificare il tipo di grafico o il grafico del widget, seleziona tra le opzi
 
 ## Proprietà widget {#properties}
 
-Selezionare l&#39;icona delle proprietà (![Icona delle proprietà.](../../images/customizable-insights/properties-icon.png)) nella barra a destra per aprire il pannello proprietà. Nel pannello [!UICONTROL Proprietà], immetti un nome per il widget nel campo di testo **[!UICONTROL Titolo widget]**. È inoltre possibile rinominare vari aspetti del grafico.
+Selezionare l&#39;icona delle proprietà (![Icona delle proprietà.](/help/images/icons/properties.png)) nella barra a destra per aprire il pannello proprietà. Nel pannello [!UICONTROL Proprietà], immetti un nome per il widget nel campo di testo **[!UICONTROL Titolo widget]**. È inoltre possibile rinominare vari aspetti del grafico.
 
 >[!NOTE]
 >
@@ -93,7 +93,7 @@ Seleziona **[!UICONTROL Modifica]** per modificare l&#39;intero dashboard o qual
 
 ![Dashboard personalizzato con Modifica evidenziata.](../../images/customizable-insights/edit-dashboard.png)
 
-Seleziona **[!UICONTROL Aggiungi filtro]** per creare un [[!UICONTROL Filtro data]](#create-date-filter) o un [[!UICONTROL Filtro globale]](#create-global-filter). Dopo la creazione, tutti i filtri globali e di data sono disponibili da [icona filtro](#select-global-filter) (![icona filtro.](../../images/customizable-insights/filter.png)) del tuo dashboard.
+Seleziona **[!UICONTROL Aggiungi filtro]** per creare un [[!UICONTROL Filtro data]](#create-date-filter) o un [[!UICONTROL Filtro globale]](#create-global-filter). Dopo la creazione, tutti i filtri globali e di data sono disponibili da [icona filtro](#select-global-filter) (![icona filtro.](/help/images/icons/filter.png)) del tuo dashboard.
 
 ![Dashboard personalizzato con il menu a discesa Aggiungi filtro evidenziato.](../../images/customizable-insights/add-filter.png)
 

@@ -5,7 +5,7 @@ solution: Experience Platform
 title: Aggiornare un flusso di dati di connessione Source nell’interfaccia utente
 type: Tutorial
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
-source-git-commit: cef5c203acf3318445399669336166e6627ebe66
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '782'
 ht-degree: 9%
@@ -36,7 +36,7 @@ Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dal 
 
 La pagina [!UICONTROL Flussi dati] contiene un elenco di tutti i flussi di dati esistenti, incluse informazioni sul set di dati di destinazione, sull&#39;origine e sul nome account corrispondenti.
 
-Per ordinare l&#39;elenco, seleziona l&#39;icona del filtro ![filter](../../images/tutorials/update/filter.png) in alto a sinistra per utilizzare il pannello di ordinamento.
+Per ordinare l&#39;elenco, seleziona l&#39;icona del filtro ![filter](/help/images/icons/filter.png) in alto a sinistra per utilizzare il pannello di ordinamento.
 
 ![flussi di dati filtro](../../images/tutorials/update-dataflows/filter-dataflows.png)
 

@@ -2,7 +2,7 @@
 description: Scopri come utilizzare il dashboard di monitoraggio per monitorare i dati acquisiti dalle sorgenti.
 title: Monitorare i flussi di dati per le origini nell’interfaccia utente
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: 51f8a8c77518a0b2e9e4b914c891f97433db1ef2
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1256'
 ht-degree: 11%
@@ -83,13 +83,13 @@ Puoi filtrare ulteriormente i dati utilizzando le opzioni fornite sopra la tabel
 
 {style="table-layout:auto"}
 
-Per monitorare i dati che vengono acquisiti in un flusso di dati specifico, seleziona l&#39;icona del filtro ![filter](../assets/ui/monitor-sources/filter.png) accanto a un&#39;origine.
+Per monitorare i dati che vengono acquisiti in un flusso di dati specifico, seleziona l&#39;icona del filtro ![filter](/help/images/icons/filter-add.png) accanto a un&#39;origine.
 
 ![Monitorare un flusso di dati specifico selezionando l&#39;icona del filtro accanto a una determinata origine.](../assets/ui/monitor-sources/monitor-dataflow.png)
 
 La tabella delle metriche viene aggiornata con una tabella di flussi di dati attivi che corrispondono all’origine selezionata. Durante questo passaggio, puoi visualizzare ulteriori informazioni sui flussi di dati, tra cui il set di dati e il tipo di dati corrispondenti, nonché una marca temporale per indicare quando sono stati attivi per l’ultima volta.
 
-Per esaminare ulteriormente un flusso di dati, seleziona l&#39;icona filtro ![filter](../assets/ui/monitor-sources/filter.png) accanto a un flusso di dati.
+Per esaminare ulteriormente un flusso di dati, seleziona l&#39;icona filtro ![filter](/help/images/icons/filter-add.png) accanto a un flusso di dati.
 
 ![Tabella dei flussi di dati nel dashboard di monitoraggio.](../assets/ui/monitor-sources/select-dataflow.png)
 
@@ -97,7 +97,7 @@ Viene quindi visualizzata un’interfaccia che elenca tutte le iterazioni di ese
 
 Le esecuzioni del flusso di dati rappresentano un’istanza dell’esecuzione del flusso di dati. Ad esempio, se un flusso di dati è pianificato per essere eseguito ogni ora alle 09:00, alle 00:00 e alle 00:00, sono disponibili tre istanze di un flusso. Le esecuzioni del flusso sono specifiche per la tua particolare organizzazione.
 
-Per verificare le metriche di una specifica iterazione di esecuzione del flusso di dati, seleziona l&#39;icona del filtro ![filter](../assets/ui/monitor-sources/filter.png) accanto al flusso di dati.
+Per verificare le metriche di una specifica iterazione di esecuzione del flusso di dati, seleziona l&#39;icona del filtro ![filter](/help/images/icons/filter-add.png) accanto al flusso di dati.
 
 ![Pagina delle metriche di esecuzione del flusso di dati.](../assets/ui/monitor-sources/dataflow-page.png)
 

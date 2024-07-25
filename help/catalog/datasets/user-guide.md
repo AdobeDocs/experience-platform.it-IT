@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente dei set di dati
 description: Scopri come eseguire azioni comuni quando si lavora con i set di dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '3080'
 ht-degree: 3%
@@ -161,11 +161,11 @@ Viene visualizzata la finestra di dialogo [!UICONTROL Sposta] set di dati nella 
 
 >[!TIP]
 >
->Puoi anche creare cartelle direttamente dalla finestra di dialogo Sposta set di dati. Per creare una cartella, selezionare l&#39;icona Crea cartella (![Icona Crea cartella.](../images/datasets/user-guide/create-folder-icon.png)) in alto a destra nella finestra di dialogo.
+>Puoi anche creare cartelle direttamente dalla finestra di dialogo Sposta set di dati. Per creare una cartella, selezionare l&#39;icona Crea cartella (![Icona Crea cartella.](/help/images/icons/folder-add.png)) in alto a destra nella finestra di dialogo.
 >
 >![La finestra di dialogo del set di dati [!UICONTROL Sposta] con l&#39;icona Crea cartella evidenziata.](/help/catalog/images/datasets/user-guide/create-folder.png)
 
-Una volta che il set di dati si trova in una cartella, puoi scegliere di visualizzare solo i set di dati che appartengono a una cartella specifica. Per aprire la struttura di cartelle, selezionare l&#39;icona Mostra cartelle (![L&#39;icona Mostra cartelle](../images/datasets/user-guide/show-folders-icon.png)). Quindi, seleziona la cartella scelta per visualizzare tutti i set di dati associati.
+Una volta che il set di dati si trova in una cartella, puoi scegliere di visualizzare solo i set di dati che appartengono a una cartella specifica. Per aprire la struttura di cartelle, selezionare l&#39;icona Mostra cartelle (![L&#39;icona Mostra cartelle](/help/images/icons/rail-left.png)). Quindi, seleziona la cartella scelta per visualizzare tutti i set di dati associati.
 
 ![Dashboard [!UICONTROL Set di dati] con la struttura di cartelle dei set di dati visualizzata, l&#39;icona Mostra cartelle e una cartella selezionata evidenziata.](../images/datasets/user-guide/folder-structure.png)
 
@@ -197,7 +197,7 @@ Se un set di dati è abilitato per il profilo, eliminandolo tramite l’interfac
 
 ## Cercare e filtrare i set di dati {#search-and-filter}
 
-Per cercare o filtrare l&#39;elenco dei set di dati disponibili, selezionare l&#39;icona del filtro (![Icona del filtro.](../images/datasets/user-guide/icon.png)) in alto a sinistra nell&#39;area di lavoro. Nella barra a sinistra viene visualizzato un set di opzioni filtro. Esistono diversi metodi per filtrare i set di dati disponibili. Questi includono: [[!UICONTROL Mostra set di dati di sistema]](#show-system-datasets), [[!UICONTROL Incluso nel profilo]](#filter-profile-enabled-datasets), [[!UICONTROL Tag]](#filter-by-tag), [[!UICONTROL Data creazione]](#filter-by-creation-date), [[!UICONTROL Data modifica], [!UICONTROL Creato da]](#filter-by-creation-date) e [[!UICONTROL Schema]](#filter-by-schema).
+Per cercare o filtrare l&#39;elenco dei set di dati disponibili, selezionare l&#39;icona del filtro (![Icona del filtro.](/help/images/icons/filter.png)) in alto a sinistra nell&#39;area di lavoro. Nella barra a sinistra viene visualizzato un set di opzioni filtro. Esistono diversi metodi per filtrare i set di dati disponibili. Questi includono: [[!UICONTROL Mostra set di dati di sistema]](#show-system-datasets), [[!UICONTROL Incluso nel profilo]](#filter-profile-enabled-datasets), [[!UICONTROL Tag]](#filter-by-tag), [[!UICONTROL Data creazione]](#filter-by-creation-date), [[!UICONTROL Data modifica], [!UICONTROL Creato da]](#filter-by-creation-date) e [[!UICONTROL Schema]](#filter-by-schema).
 
 L’elenco dei filtri applicati viene visualizzato sopra i risultati filtrati.
 

@@ -2,7 +2,7 @@
 title: Registri query
 description: I registri delle query vengono generati automaticamente ogni volta che viene eseguita una query e sono disponibili tramite l’interfaccia utente per facilitare la risoluzione dei problemi. Questo documento illustra come utilizzare e navigare nella sezione Registri di Query Service dell’interfaccia utente.
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1012'
 ht-degree: 0%
@@ -31,7 +31,7 @@ Per controllare i registri delle query, selezionare [!UICONTROL Query] per passa
 
 ## Personalizza ed esegui ricerche {#customize-and-search}
 
-I registri di Query Service vengono presentati in un formato di tabella personalizzabile. Per personalizzare le colonne della tabella, selezionare l&#39;icona Impostazioni (![A icona Impostazioni.](../images/ui/query-log/settings-icon.png)) a destra dello schermo. Viene visualizzata una finestra di dialogo [!UICONTROL Personalizza tabella] in cui è possibile deselezionare ogni colonna.
+I registri di Query Service vengono presentati in un formato di tabella personalizzabile. Per personalizzare le colonne della tabella, selezionare l&#39;icona Impostazioni (![A icona Impostazioni.](/help/images/icons/column-settings.png)) a destra dello schermo. Viene visualizzata una finestra di dialogo [!UICONTROL Personalizza tabella] in cui è possibile deselezionare ogni colonna.
 
 Puoi anche cercare i registri relativi a modelli di query specifici digitando il nome del modello nel campo di ricerca.
 
@@ -67,13 +67,13 @@ Nel pannello dei dettagli del registro, potete eseguire diverse azioni. È possi
 
 ## Modifica registri {#edit-logs}
 
-Accanto al nome del modello di ogni riga o al frammento SQL è presente l&#39;icona di una matita (![Un&#39;icona di una matita.](../images/ui/query-log/edit-icon.png)) da utilizzare per passare all&#39;editor di query. La query viene quindi precompilata nell’editor per la modifica.
+Accanto al nome del modello di ogni riga o al frammento SQL è presente l&#39;icona di una matita (![Un&#39;icona di una matita.](/help/images/icons/edit.png)) da utilizzare per passare all&#39;editor di query. La query viene quindi precompilata nell’editor per la modifica.
 
 ![L&#39;area di lavoro Registro query con l&#39;icona a forma di matita evidenziata.](../images/ui/query-log/edit-query.png)
 
 ## Filtra registri {#filter-logs}
 
-Puoi filtrare l’elenco dei registri di query in base a diverse impostazioni. Selezionare l&#39;icona filtro (![Icona filtro.](../images/ui/query-log/filter-icon.png)) in alto a sinistra nell&#39;area di lavoro per aprire un set di opzioni filtro nella barra a sinistra.
+Puoi filtrare l’elenco dei registri di query in base a diverse impostazioni. Selezionare l&#39;icona filtro (![Icona filtro.](/help/images/icons/filter.png)) in alto a sinistra nell&#39;area di lavoro per aprire un set di opzioni filtro nella barra a sinistra.
 
 ![Area di lavoro registro query con l&#39;icona del filtro evidenziata.](../images/ui/query-log/log-filter.png)
 

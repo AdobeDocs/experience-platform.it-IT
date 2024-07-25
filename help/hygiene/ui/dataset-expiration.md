@@ -2,7 +2,7 @@
 title: Scadenze automatizzate del set di dati
 description: Scopri come pianificare la scadenza di un set di dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 2aba88ac657e73a12be14d2c3a67dd5714513c97
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '871'
 ht-degree: 18%
@@ -55,11 +55,11 @@ Viene visualizzato il flusso di lavoro per la creazione delle richieste. Nella s
 
 ### Seleziona una data e un set di dati {#select-date-and-dataset}
 
-Nella sezione **[!UICONTROL Azione richiesta]**, seleziona una data entro la quale desideri eliminare il set di dati. È possibile immettere la data manualmente (nel formato `mm/dd/yyyy`) o selezionare l&#39;icona del calendario (![Icona del calendario.](../images/ui/ttl/calendar-icon.png)) per selezionare la data da una finestra di dialogo.
+Nella sezione **[!UICONTROL Azione richiesta]**, seleziona una data entro la quale desideri eliminare il set di dati. È possibile immettere la data manualmente (nel formato `mm/dd/yyyy`) o selezionare l&#39;icona del calendario (![Icona del calendario.](/help/images/icons/calendar.png)) per selezionare la data da una finestra di dialogo.
 
 ![Finestra di dialogo del calendario con data di scadenza selezionata ed evidenziata per il set di dati.](../images/ui/ttl/select-date.png)
 
-In **[!UICONTROL Dettagli set di dati]**, selezionare l&#39;icona del database (![Icona del database.](../images/ui/ttl/database-icon.png)) per aprire una finestra di dialogo di selezione del set di dati. Scegli un set di dati dall&#39;elenco a cui applicare la scadenza, quindi seleziona **[!UICONTROL Fine]**.
+In **[!UICONTROL Dettagli set di dati]**, selezionare l&#39;icona del database (![Icona del database.](/help/images/icons/database.png)) per aprire una finestra di dialogo di selezione del set di dati. Scegli un set di dati dall&#39;elenco a cui applicare la scadenza, quindi seleziona **[!UICONTROL Fine]**.
 
 ![Finestra di dialogo [!UICONTROL Seleziona set di dati] con un set di dati selezionato ed evidenziato [!UICONTROL Fine].](../images/ui/ttl/select-dataset.png)
 

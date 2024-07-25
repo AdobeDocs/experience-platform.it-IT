@@ -4,7 +4,7 @@ title: Guida all’interfaccia utente per gli avvisi
 description: Scopri come gestire gli avvisi nell’interfaccia utente di Experience Platform.
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
-source-git-commit: 8d63e9fa4c7eb09ffb90edca612a6e6d44dd18fa
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '626'
 ht-degree: 0%
@@ -71,7 +71,7 @@ Gli utenti sono stati aggiunti all&#39;elenco di notifiche di avviso. Gli utenti
 
 Le notifiche degli avvisi possono essere inviate direttamente al tuo indirizzo e-mail.
 
-Seleziona l&#39;icona a forma di campana (![icona a forma di campana](../images/alerts/ui/bell-icon.png)) nella barra multifunzione superiore a destra per visualizzare notifiche e annunci. Nel menu a discesa visualizzato, seleziona l&#39;icona cog (![icona cog](../images/alerts/ui/cog-icon.png)) per accedere alla pagina delle preferenze di Experience Cloud.
+Seleziona l&#39;icona a forma di campana (![icona a forma di campana](/help/images/icons/bell.png)) nella barra multifunzione superiore a destra per visualizzare notifiche e annunci. Nel menu a discesa visualizzato, seleziona l&#39;icona cog (![icona cog](/help/images/icons/settings.png)) per accedere alla pagina delle preferenze di Experience Cloud.
 
 ![Elenco di avvisi che evidenziano l&#39;icona del campanello e l&#39;icona del barattolo.](../images/alerts/ui/edit-preferences.png)
 

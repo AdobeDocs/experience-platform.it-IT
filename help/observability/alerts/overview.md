@@ -4,7 +4,7 @@ title: Panoramica degli avvisi
 description: Scopri gli avvisi di Adobe Experience Platform, inclusa la struttura della definizione delle regole di avviso.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: cb889a169aa42b761b0eeff5aa7fb771ad6ed4be
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '797'
 ht-degree: 3%
@@ -31,7 +31,7 @@ Gli avvisi di Platform possono essere inviati una sola volta oppure possono esse
 | --- | --- |
 | Non indica necessariamente un problema. | Indica uno stato potenzialmente indesiderato. |
 | Non si ripete. | Può ripetere se la condizione anomala persiste. |
-| Gli esempi includono:<ul><li>Acquisizione dei dati completata.</li><li>Esecuzione di una query completata.</li><li>I dati sono stati eliminati.</li></ul> | Gli esempi includono:<ul><li>La durata dell’acquisizione supera il contratto del livello di servizio (SLA).</li><li>L’ingestione giornaliera non si è verificata nelle ultime 24 ore.</li><li>Il tasso di errore del processore di flusso è superiore alla soglia configurata.</li><li>Il numero totale di profili supera l’adesione.</li></ul> |
+| Gli esempi includono:<ul><li>Acquisizione dei dati completata.</li><li>Esecuzione di una query completata.</li><li>I dati sono stati eliminati.</li></ul> | Gli esempi includono:<ul><li>La durata dell’acquisizione supera il livello di servizio concordato (SLA).</li><li>L’ingestione giornaliera non si è verificata nelle ultime 24 ore.</li><li>Il tasso di errore del processore di flusso è superiore alla soglia configurata.</li><li>Il numero totale di profili supera l’adesione.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -83,7 +83,7 @@ Per utilizzare gli avvisi nell’interfaccia utente di Platform, è necessario d
 >
 >Per ulteriori informazioni su come gestire le autorizzazioni in Platform, consulta la [documentazione sul controllo degli accessi](../../access-control/ui/overview.md).
 
-Con l&#39;autorizzazione Visualizza avvisi, è possibile visualizzare gli avvisi ricevuti selezionando l&#39;icona a forma di campana (![icona campana](../images/alerts/overview/icon.png)) nell&#39;angolo in alto a destra.
+Con l&#39;autorizzazione Visualizza avvisi, è possibile visualizzare gli avvisi ricevuti selezionando l&#39;icona a forma di campana (![icona campana](/help/images/icons/bell.png)) nell&#39;angolo in alto a destra.
 
 ![](../images/alerts/overview/ui.png)
 

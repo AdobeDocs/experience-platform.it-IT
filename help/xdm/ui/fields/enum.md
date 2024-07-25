@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Definire i campi enum e i valori suggeriti nell’interfaccia utente
 description: Scopri come definire le enumerazioni e i valori consigliati per i campi stringa nell’interfaccia utente di Experience Platform.
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1256'
 ht-degree: 8%
@@ -40,7 +40,7 @@ Seleziona **[!UICONTROL Numeri e valori suggeriti]**, quindi seleziona **[!UICON
 
 Nella colonna **[!UICONTROL Valore]** è necessario specificare il valore esatto al quale si desidera vincolare il campo. Facoltativamente, puoi anche fornire un **[!UICONTROL Nome visualizzato]** descrittivo per il vincolo, che influisce su come il valore verrà rappresentato nella segmentazione.
 
-Continua a utilizzare **[!UICONTROL Aggiungi riga]** per aggiungere i vincoli desiderati e le etichette facoltative all&#39;enum oppure seleziona l&#39;icona Elimina (![Immagine dell&#39;icona Elimina](../../images/ui/fields/enum/remove-icon.png)) accanto a una riga aggiunta in precedenza per rimuoverla. Al termine, selezionare **[!UICONTROL Applica]** per applicare le modifiche allo schema.
+Continua a utilizzare **[!UICONTROL Aggiungi riga]** per aggiungere i vincoli desiderati e le etichette facoltative all&#39;enum oppure seleziona l&#39;icona Elimina (![Immagine dell&#39;icona Elimina](/help/images/icons/remove-circle.png)) accanto a una riga aggiunta in precedenza per rimuoverla. Al termine, selezionare **[!UICONTROL Applica]** per applicare le modifiche allo schema.
 
 ![Immagine che mostra i valori enum e i nomi visualizzati compilati per il campo stringa nell&#39;interfaccia utente](../../images/ui/fields/enum/enum-confirm.png)
 
@@ -52,7 +52,7 @@ Seleziona **[!UICONTROL Numeri e valori suggeriti]**, quindi seleziona **[!UICON
 
 ![Immagine che mostra l&#39;opzione Valori suggeriti selezionata nell&#39;interfaccia utente](../../images/ui/fields/enum/suggested-add-row.png)
 
-Nella colonna **[!UICONTROL Nome visualizzato]**, specifica un nome descrittivo per il valore da visualizzare nell&#39;interfaccia utente Segmentazione. Per aggiungere altri valori suggeriti, selezionare **[!UICONTROL Aggiungi riga]** di nuovo e ripetere il processo in base alle esigenze. Per rimuovere una riga aggiunta in precedenza, selezionare ![l&#39;icona Elimina](../../images/ui/fields/enum/remove-icon.png) accanto alla riga in questione.
+Nella colonna **[!UICONTROL Nome visualizzato]**, specifica un nome descrittivo per il valore da visualizzare nell&#39;interfaccia utente Segmentazione. Per aggiungere altri valori suggeriti, selezionare **[!UICONTROL Aggiungi riga]** di nuovo e ripetere il processo in base alle esigenze. Per rimuovere una riga aggiunta in precedenza, selezionare ![l&#39;icona Elimina](/help/images/icons/remove-circle.png) accanto alla riga in questione.
 
 Al termine, selezionare **[!UICONTROL Applica]** per applicare le modifiche allo schema.
 
@@ -68,7 +68,7 @@ Alcuni campi dei componenti XDM standard contengono i propri valori consigliati,
 
 ![Immagine che mostra i valori enum e i nomi visualizzati compilati per il campo stringa nell&#39;interfaccia utente](../../images/ui/fields/enum/suggested-standard.png)
 
-Per aggiungere nuovi valori suggeriti per un campo standard, selezionare **[!UICONTROL Aggiungi riga]**. Per rimuovere un valore suggerito precedentemente aggiunto dall&#39;organizzazione, selezionare ![l&#39;icona Elimina](../../images/ui/fields/enum/remove-icon.png) accanto alla riga in questione.
+Per aggiungere nuovi valori suggeriti per un campo standard, selezionare **[!UICONTROL Aggiungi riga]**. Per rimuovere un valore suggerito precedentemente aggiunto dall&#39;organizzazione, selezionare ![l&#39;icona Elimina](/help/images/icons/remove-circle.png) accanto alla riga in questione.
 
 ![Immagine che mostra i valori enum e i nomi visualizzati compilati per il campo stringa nell&#39;interfaccia utente](../../images/ui/fields/enum/suggested-standard-add.png)
 

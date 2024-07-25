@@ -4,7 +4,7 @@ feature: Attribution AI
 title: Guida all’interfaccia utente di Attribution AI
 description: Questo documento funge da guida per l’interazione con Attribution AI nell’interfaccia utente di Intelligent Services.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2450'
 ht-degree: 0%
@@ -63,7 +63,7 @@ Dopo aver selezionato i set di dati da utilizzare, seleziona il pulsante **[!UIC
 
 ![Seleziona set di dati](./images/user-guide/select-datasets.png)
 
-Selezionando l&#39;icona info ![icona info](./images/user-guide/info-icon.png) accanto a un set di dati si apre il popover di anteprima del set di dati.
+Selezionando l&#39;icona info ![icona info](/help/images/icons/info.png) accanto a un set di dati si apre il popover di anteprima del set di dati.
 
 ![Seleziona e cerca il set di dati](./images/user-guide/dataset-preview.png)
 

@@ -4,7 +4,7 @@ description: Il servizio Adobe Experience Platform Identity offre una panoramica
 title: Monitorare i flussi di dati per le identità nell’interfaccia utente
 type: Tutorial
 exl-id: 735b0e52-74f6-47fe-98c6-e12a633b6f57
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1151'
 ht-degree: 9%
@@ -62,7 +62,7 @@ Per questa visualizzazione dashboard sono disponibili le metriche seguenti:
 | **[!UICONTROL Grafici aggiornati]** | Numero di grafici di identità esistenti aggiornati con i nuovi bordi. |
 | **[!UICONTROL Totale flussi di dati non riusciti]** | Numero di esecuzioni del flusso di dati non riuscite. |
 
-È possibile selezionare l&#39;icona del filtro ![Icona filtro](../assets/ui/monitor-identities/filter.png) accanto al nome dell&#39;origine per visualizzare le informazioni sull&#39;elaborazione delle identità per i flussi di dati dell&#39;origine selezionata.
+È possibile selezionare l&#39;icona del filtro ![Icona filtro](/help/images/icons/filter.png) accanto al nome dell&#39;origine per visualizzare le informazioni sull&#39;elaborazione delle identità per i flussi di dati dell&#39;origine selezionata.
 
 ![L&#39;icona del filtro è evidenziata. La selezione di questa icona consente di visualizzare i flussi di dati dell&#39;origine selezionata.](../assets/ui/monitor-identities/sources-filter.png)
 
@@ -87,7 +87,7 @@ Per questa visualizzazione dashboard sono disponibili le metriche seguenti:
 | **[!UICONTROL Grafici aggiornati]** | Numero di grafici di identità esistenti aggiornati con i nuovi bordi. |
 | **[!UICONTROL Totale flussi di dati non riusciti]** | Numero di esecuzioni del flusso di dati non riuscite. |
 
-Seleziona l&#39;icona filtro ![filter](../assets/ui/monitor-identities/filter.png) accanto all&#39;ora di inizio dell&#39;esecuzione del flusso di dati per visualizzare ulteriori informazioni sull&#39;esecuzione del flusso di dati [!DNL Identity].
+Seleziona l&#39;icona filtro ![filter](/help/images/icons/filter.png) accanto all&#39;ora di inizio dell&#39;esecuzione del flusso di dati per visualizzare ulteriori informazioni sull&#39;esecuzione del flusso di dati [!DNL Identity].
 
 ![L&#39;icona del filtro è evidenziata. La selezione di questa icona consente di visualizzare i dettagli sul flusso di dati selezionato.](../assets/ui/monitor-identities/dataflows-filter.png)
 

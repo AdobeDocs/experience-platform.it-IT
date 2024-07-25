@@ -2,7 +2,7 @@
 title: Monitorare le query pianificate
 description: Scopri come monitorare le query tramite l’interfaccia utente di Query Service.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2454'
 ht-degree: 0%
@@ -25,7 +25,7 @@ La tabella seguente descrive ogni colonna disponibile.
 
 >[!NOTE]
 >
->Icona di notifica sottoscrizioni (![Icona di notifica sottoscrizioni.](../images/ui/monitor-queries/alert-subscription-icon.png)) è contenuto in ogni riga di una colonna senza titolo. Per ulteriori informazioni, consulta la sezione [iscrizioni agli avvisi](#alert-subscription).
+>Icona di notifica sottoscrizioni (![Icona di notifica sottoscrizioni.](/help/images/icons/alert-add.png)) è contenuto in ogni riga di una colonna senza titolo. Per ulteriori informazioni, consulta la sezione [iscrizioni agli avvisi](#alert-subscription).
 
 | Colonna | Descrizione |
 |---|---|
@@ -45,7 +45,7 @@ La tabella seguente descrive ogni colonna disponibile.
 
 ## Personalizzare le impostazioni della tabella per le query pianificate {#customize-table}
 
-È possibile modificare le colonne nella scheda [!UICONTROL Query pianificate] in base alle proprie esigenze. Per aprire la finestra di dialogo delle impostazioni di [!UICONTROL Personalizza tabella] e modificare le colonne disponibili, selezionare l&#39;icona delle impostazioni (![Icona delle impostazioni.](../images/ui/monitor-queries/settings-icon.png)) in alto a destra nella schermata.
+È possibile modificare le colonne nella scheda [!UICONTROL Query pianificate] in base alle proprie esigenze. Per aprire la finestra di dialogo delle impostazioni di [!UICONTROL Personalizza tabella] e modificare le colonne disponibili, selezionare l&#39;icona delle impostazioni (![Icona delle impostazioni.](/help/images/icons/column-settings.png)) in alto a destra nella schermata.
 
 >[!NOTE]
 >
@@ -89,7 +89,7 @@ Se si desidera pianificare le esecuzioni per tale modello di query, selezionare 
 
 ### Iscriversi agli avvisi {#alert-subscription}
 
-Per sottoscrivere avvisi per l&#39;esecuzione di query pianificate, selezionare `...` (puntini di sospensione) o l&#39;icona di sottoscrizione avviso (![Icona di sottoscrizione avviso.](../images/ui/monitor-queries/alert-subscription-icon.png)) per la query pianificata da gestire. Viene visualizzato il menu a discesa delle azioni in linea. Selezionare **[!UICONTROL Sottoscrivi]** tra le opzioni disponibili.
+Per sottoscrivere avvisi per l&#39;esecuzione di query pianificate, selezionare `...` (puntini di sospensione) o l&#39;icona di sottoscrizione avviso (![Icona di sottoscrizione avviso.](/help/images/icons/alert-add.png)) per la query pianificata da gestire. Viene visualizzato il menu a discesa delle azioni in linea. Selezionare **[!UICONTROL Sottoscrivi]** tra le opzioni disponibili.
 
 ![L&#39;area di lavoro delle query pianificate con i puntini di sospensione, l&#39;icona di sottoscrizione degli avvisi e il menu a discesa delle azioni in linea evidenziato.](../images/ui/monitor-queries/subscribe.png)
 
@@ -115,7 +115,7 @@ Per ulteriori informazioni, consulta la [documentazione sulle sottoscrizioni di 
 
 ### Visualizzare i dettagli della query {#query-details}
 
-Selezionare l&#39;icona delle informazioni (![Un&#39;icona delle informazioni.](../images/ui/monitor-queries/information-icon.png)) per visualizzare il pannello dei dettagli della query. Il pannello dei dettagli contiene tutte le informazioni rilevanti sulla query oltre ai fatti inclusi nella tabella delle query pianificate. Le informazioni aggiuntive includono l’ID della query, la data dell’ultima modifica, l’SQL della query, l’ID della pianificazione e la pianificazione del set corrente.
+Selezionare l&#39;icona delle informazioni (![Un&#39;icona delle informazioni.](/help/images/icons/info.png)) per visualizzare il pannello dei dettagli della query. Il pannello dei dettagli contiene tutte le informazioni rilevanti sulla query oltre ai fatti inclusi nella tabella delle query pianificate. Le informazioni aggiuntive includono l’ID della query, la data dell’ultima modifica, l’SQL della query, l’ID della pianificazione e la pianificazione del set corrente.
 
 ![Scheda Query pianificate con l&#39;icona delle informazioni e il pannello dei dettagli evidenziati.](../images/ui/monitor-queries/details-panel.png)
 
@@ -151,7 +151,7 @@ Consulta la sezione abbonamento agli avvisi per scoprire come [abbonarti agli av
 
 ## Filtrare le query {#filter}
 
-Puoi filtrare le query in base alla frequenza di esecuzione. Dalla scheda [!UICONTROL Query pianificate], seleziona l&#39;icona del filtro (![Icona del filtro](../images/ui/monitor-queries/filter-icon.png)) per aprire la barra laterale del filtro.
+Puoi filtrare le query in base alla frequenza di esecuzione. Dalla scheda [!UICONTROL Query pianificate], seleziona l&#39;icona del filtro (![Icona del filtro](/help/images/icons/filter.png)) per aprire la barra laterale del filtro.
 
 ![Scheda Query pianificate con l&#39;icona del filtro evidenziata.](../images/ui/monitor-queries/filter-queries.png)
 

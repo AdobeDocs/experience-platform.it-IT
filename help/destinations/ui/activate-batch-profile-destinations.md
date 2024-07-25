@@ -3,7 +3,7 @@ title: Attivare i tipi di pubblico per le destinazioni di esportazione dei profi
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico disponibili in Adobe Experience Platform inviandoli a destinazioni basate su profili in batch.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 68781d27e374261108955b24dfb7b46141f5108b
 workflow-type: tm+mt
 source-wordcount: '3975'
 ht-degree: 11%
@@ -529,14 +529,14 @@ Gli attributi di arricchimento corrispondono ai tipi di pubblico caricati person
 
 Per selezionare gli attributi di arricchimento per ciascun pubblico esterno, segui i passaggi seguenti:
 
-1. Nella colonna **[!UICONTROL Attributi di arricchimento]** selezionare il pulsante ![Modifica](../assets/ui/activate-batch-profile-destinations/edit-button.svg) (Modifica).
-2. Selezionare **[!UICONTROL Aggiungi attributo di arricchimento]**. Viene visualizzato un nuovo campo schema vuoto.
+1. Nella colonna **[!UICONTROL Attributi di arricchimento]** selezionare il pulsante ![Modifica](/help/images/icons/edit.png) (Modifica).
+1. Selezionare **[!UICONTROL Aggiungi attributo di arricchimento]**. Viene visualizzato un nuovo campo schema vuoto.
    ![Immagine dell&#39;interfaccia utente che mostra la schermata modale degli attributi di arricchimento.](../assets/ui/activate-batch-profile-destinations/add-enrichment-attribute.png)
-3. Selezionare il pulsante a destra del campo vuoto per aprire la schermata di selezione dei campi.
-4. Seleziona gli attributi da esportare per il pubblico.
+1. Selezionare il pulsante a destra del campo vuoto per aprire la schermata di selezione dei campi.
+1. Seleziona gli attributi da esportare per il pubblico.
    ![Immagine dell&#39;interfaccia utente che mostra l&#39;elenco degli attributi di arricchimento.](../assets/ui/activate-batch-profile-destinations/select-enrichment-attributes.png)
-5. Dopo aver aggiunto tutti gli attributi che desideri esportare, seleziona **[!UICONTROL Salva e chiudi]**.
-6. Ripeti questi passaggi per ogni pubblico esterno.
+1. Dopo aver aggiunto tutti gli attributi che desideri esportare, seleziona **[!UICONTROL Salva e chiudi]**.
+1. Ripeti questi passaggi per ogni pubblico esterno.
 
 Se desideri attivare tipi di pubblico esterni nelle destinazioni senza esportare alcun attributo, abilita l&#39;opzione **[!UICONTROL Escludi attributi di arricchimento]**. Questa opzione esporta i profili dai tipi di pubblico esterni, ma nessuno degli attributi corrispondenti viene inviato alla destinazione.
 

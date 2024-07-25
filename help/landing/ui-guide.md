@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica dell’interfaccia utente di Experience Platform
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1795'
 ht-degree: 1%
@@ -75,17 +75,17 @@ Selezionando il selettore si apre un menu a discesa contenente le organizzazioni
 
 ### Cambiare applicazioni
 
-L&#39;elemento successivo sul lato destro della navigazione superiore è il **commutatore applicazione**, rappresentato dall&#39;icona ![commutatore applicazione](./images/user-guide/app-switcher-icon.png). Quando selezioni questa icona, puoi passare da un’applicazione Adobe a cui la tua organizzazione ha accesso, come Experience Platform, Analytics, Assets e altre.
+L&#39;elemento successivo sul lato destro della navigazione superiore è il **commutatore applicazione**, rappresentato dall&#39;icona ![commutatore applicazione](/help/images/icons/apps.png). Quando selezioni questa icona, puoi passare da un’applicazione Adobe a cui la tua organizzazione ha accesso, come Experience Platform, Analytics, Assets e altre.
 
 ### Aiuto
 
-A destra del commutatore dell&#39;applicazione si trova il menu **Guida e supporto tecnico**, rappresentato dall&#39;icona ![punto interrogativo/Guida](./images/user-guide/help-icon.png). Quando selezioni questa icona, viene visualizzato un menu a comparsa contenente diverse risorse di aiuto e supporto. Nella scheda **[!UICONTROL Guida]** è disponibile un elenco della documentazione relativa alla pagina in cui si è connessi. La scheda **[!UICONTROL Supporto]** consente di creare un ticket di supporto con il team di supporto Adobe. La scheda **[!UICONTROL Feedback]** consente di inviare ad Adobe commenti e suggerimenti su Platform.
+A destra del commutatore dell&#39;applicazione si trova il menu **Guida e supporto tecnico**, rappresentato dall&#39;icona ![punto interrogativo/Guida](/help/images/icons/help.png). Quando selezioni questa icona, viene visualizzato un menu a comparsa contenente diverse risorse di aiuto e supporto. Nella scheda **[!UICONTROL Guida]** è disponibile un elenco della documentazione relativa alla pagina in cui si è connessi. La scheda **[!UICONTROL Supporto]** consente di creare un ticket di supporto con il team di supporto Adobe. La scheda **[!UICONTROL Feedback]** consente di inviare ad Adobe commenti e suggerimenti su Platform.
 
 ![](images/user-guide/homepage-help-clicked.png)
 
 ### Notifiche e annunci
 
-Nella sezione **notifications**, rappresentata dall&#39;icona ![bell/Notifications and Announcements](images/user-guide/notification-icon.png). La scheda **[!UICONTROL Notifiche]** mostra informazioni importanti sul prodotto e altri aggiornamenti rilevanti, mentre la scheda **[!UICONTROL Annunci]** mostra informazioni sulla manutenzione del servizio.
+Nella sezione **notifications**, rappresentata dall&#39;icona ![bell/Notifications and Announcements](/help/images/icons/bell.png). La scheda **[!UICONTROL Notifiche]** mostra informazioni importanti sul prodotto e altri aggiornamenti rilevanti, mentre la scheda **[!UICONTROL Annunci]** mostra informazioni sulla manutenzione del servizio.
 
 ### Profilo utente
 

@@ -3,7 +3,7 @@ keywords: Experience Platform;home;argomenti popolari;controllo degli accessi;co
 title: Autorizzazioni per la gestione dei ruoli di controllo dell'accesso basato su attributi
 description: Questo documento fornisce informazioni sulla configurazione delle autorizzazioni per un ruolo tramite l’interfaccia Autorizzazioni in Adobe Experience Cloud
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: c1c7a851315214e2362085d3283d144066d4dd8a
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '984'
 ht-degree: 2%
@@ -24,7 +24,7 @@ Immediatamente dopo la [creazione di un nuovo ruolo](#create-a-new-role), si rit
 
 ## Filtra ruoli
 
-Selezionare l&#39;icona funnel (![icona filtro](../../images/icon.png)) per visualizzare un elenco di controlli filtro che consentono di limitare i risultati.
+Selezionare l&#39;icona funnel (![icona filtro](/help/images/icons/filter.png)) per visualizzare un elenco di controlli filtro che consentono di limitare i risultati.
 
 ![flac-filters](../../images/flac-ui/flac-filters.png)
 

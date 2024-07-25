@@ -2,7 +2,7 @@
 title: Query con parametri
 description: Scopri come utilizzare le query con parametri nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
-source-git-commit: 9cf8dabfdf3f20f4032a79ba191bd2dc8123a369
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '690'
 ht-degree: 11%
@@ -47,7 +47,7 @@ SELECT
 
 Per creare una query con parametri nell’interfaccia utente, passa all’editor delle query. Per ulteriori istruzioni, vedere la sezione relativa all&#39;accesso di [all&#39;editor di query](./user-guide.md#accessing-query-editor).
 
-Utilizza la premessa `'$'` per immettere un parametro di query nella query nell’editor di testo. Quindi, seleziona la scheda **[!UICONTROL Parametri query]** accanto alla [!UICONTROL Console] per aggiungere il valore mancante alla chiave. Impossibile eseguire la query se si omette di aggiungere un valore a una delle chiavi richieste. Icona di avviso (![Icona di avviso.](../images/ui/parameterized-queries/alert-icon.png)) viene visualizzato nella sezione Parametri query accanto a qualsiasi campo di input [!UICONTROL Value] vuoto.
+Utilizza la premessa `'$'` per immettere un parametro di query nella query nell’editor di testo. Quindi, seleziona la scheda **[!UICONTROL Parametri query]** accanto alla [!UICONTROL Console] per aggiungere il valore mancante alla chiave. Impossibile eseguire la query se si omette di aggiungere un valore a una delle chiavi richieste. Icona di avviso (![Icona di avviso.](/help/images/icons/alert.png)) viene visualizzato nella sezione Parametri query accanto a qualsiasi campo di input [!UICONTROL Value] vuoto.
 
 >[!NOTE]
 >

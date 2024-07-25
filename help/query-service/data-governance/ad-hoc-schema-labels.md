@@ -2,7 +2,7 @@
 title: Supporto del controllo degli accessi basato su attributi per schemi ad hoc
 description: Guida per limitare l’accesso ai campi dati negli schemi ad hoc generati tramite Adobe Experience Platform Query Service.
 exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
-source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1013'
 ht-degree: 2%
@@ -42,7 +42,7 @@ Per aggiungere un&#39;etichetta dati, passa alla scheda Sfoglia del dashboard [!
 
 ## Scopri gli schemi ad hoc nell’inventario degli schemi dell’interfaccia utente di Platform {#discover-ad-hoc-schemas}
 
-Per abilitare la visualizzazione degli schemi ad hoc nell&#39;interfaccia utente di Platform, selezionare l&#39;icona del filtro (![Icona del filtro.](../images/data-governance/filter.png)) a sinistra del campo di ricerca, quindi seleziona **[!UICONTROL Mostra schemi ad hoc] nella barra a sinistra visualizzata.
+Per abilitare la visualizzazione degli schemi ad hoc nell&#39;interfaccia utente di Platform, selezionare l&#39;icona del filtro (![Icona del filtro.](/help/images/icons/filter.png)) a sinistra del campo di ricerca, quindi seleziona **[!UICONTROL Mostra schemi ad hoc] nella barra a sinistra visualizzata.
 
 ![Nella barra a sinistra delle opzioni del filtro del dashboard Schema è abilitato l&#39;interruttore &#39;Mostra schema ad hoc&#39;.](../images/data-governance/adhoc-schema-toggle.png)
 
@@ -56,7 +56,7 @@ Per modificare le etichette dati per lo schema ad hoc, seleziona la scheda [!UIC
 
 ## Modifica le etichette per lo schema o il campo
 
-Per modificare le etichette per l&#39;intero schema, selezionare l&#39;icona della matita (![Un&#39;icona della matita.](../images/data-governance/edit-icon.png)) a lato del nome dello schema sotto la scheda [!UICONTROL Etichette].
+Per modificare le etichette per l&#39;intero schema, selezionare l&#39;icona della matita (![Un&#39;icona della matita.](/help/images/icons/edit.png)) a lato del nome dello schema sotto la scheda [!UICONTROL Etichette].
 
 ![La visualizzazione delle etichette nell&#39;area di lavoro degli schemi con l&#39;icona della matita evidenziata.](../images/data-governance/edit-entire-schema-labels.png)
 

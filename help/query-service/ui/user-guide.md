@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Query Editor
 description: L’editor delle query è uno strumento interattivo fornito da Adobe Experience Platform Query Service che consente di scrivere, convalidare ed eseguire query per i dati sull’esperienza del cliente all’interno dell’interfaccia utente di Experience Platform. Query Editor supporta lo sviluppo di query per l’analisi e l’esplorazione dei dati e consente di eseguire query interattive a scopo di sviluppo, nonché query non interattive per popolare i set di dati in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 45eab8f894819eea36465ea0b8f3f3dd8f91fbe0
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2432'
 ht-degree: 0%
@@ -57,7 +57,7 @@ Un&#39;icona delle impostazioni sopra il campo di input di Query Editor include 
 >
 >È possibile [!UICONTROL Disattivare il completamento automatico della sintassi] durante la creazione di una query senza perdere l&#39;avanzamento.
 
-Per attivare i temi scuri o chiari, selezionare l&#39;icona delle impostazioni (![Un&#39;icona delle impostazioni.](../images/ui/query-editor/settings-icon.png)) seguita dall&#39;opzione visualizzata nel menu a discesa.
+Per attivare i temi scuri o chiari, selezionare l&#39;icona delle impostazioni (![Un&#39;icona delle impostazioni.](/help/images/icons/settings.png)) seguita dall&#39;opzione visualizzata nel menu a discesa.
 
 ![Editor query con l&#39;icona delle impostazioni e l&#39;opzione del menu a discesa Abilita tema scuro evidenziata.](../images/ui/query-editor/query-editor-settings.png)
 

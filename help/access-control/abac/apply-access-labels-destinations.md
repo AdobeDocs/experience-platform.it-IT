@@ -6,7 +6,7 @@ hide: true
 hidefromtoc: true
 role: Developer, Admin, User
 exl-id: 85944720-8551-491c-8991-dd9668beb0ca
-source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
+source-git-commit: 68781d27e374261108955b24dfb7b46141f5108b
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 1%
@@ -59,7 +59,7 @@ Con il controllo dell’accesso a livello di oggetto per le destinazioni, limita
 Per applicare le etichette di accesso a un flusso di dati specifico:
 
 1. Passa a **[!UICONTROL Destinazioni]** > **[!UICONTROL Sfoglia]** e individua il flusso di dati di destinazione a cui desideri limitare l&#39;accesso degli utenti.
-1. Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Name] e utilizzare il controllo ![Edit details](/help/access-control/images/olac/key-icon.svg) **[!UICONTROL Apply access labels]** per aggiungere nuove etichette e gestire le etichette esistenti per il flusso di dati.
+1. Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Name] e utilizzare il controllo ![Edit details](/help/images/icons/key.png) **[!UICONTROL Apply access labels]** per aggiungere nuove etichette e gestire le etichette esistenti per il flusso di dati.
    ![Selezionare Applica etichette di accesso nella visualizzazione Sfoglia dell&#39;area di lavoro delle destinazioni.](/help/access-control/images/olac/apply-access-labels.png)
 1. Seleziona le etichette da aggiungere al flusso di dati di destinazione e seleziona **[!UICONTROL Salva]**.
    ![Selezionare le etichette di accesso in che devono essere applicate al flusso di dati di destinazione.](/help/access-control/images/olac/view-access-labels.png)

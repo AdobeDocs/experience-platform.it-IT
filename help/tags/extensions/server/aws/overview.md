@@ -3,7 +3,7 @@ title: Panoramica dell’estensione AWS
 description: Scopri l’estensione AWS per l’inoltro di eventi in Adobe Experience Platform.
 exl-id: 826a96aa-2d64-4a8b-88cf-34a0b6c26df5
 last-substantial-update: 2022-11-23T00:00:00Z
-source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '810'
 ht-degree: 4%
@@ -66,7 +66,7 @@ Il pannello a destra si aggiorna per mostrare le opzioni di configurazione per l
 
 | Input | Descrizione |
 | --- | --- |
-| [!UICONTROL Payload] | Questo campo contiene i dati che verranno inoltrati al flusso di dati [!DNL Kinesis], in formato JSON.<br><br>Con l&#39;opzione **[!UICONTROL Raw]**, puoi incollare l&#39;oggetto JSON direttamente nel campo di testo fornito, oppure puoi selezionare l&#39;icona dell&#39;elemento dati (![icona del set di dati](../../../images/extensions/server/aws/data-element-icon.png)) per effettuare una selezione da un elenco di elementi dati esistenti per rappresentare il payload.<br><br>È inoltre possibile utilizzare l&#39;opzione **[!UICONTROL Editor coppie chiave-valore JSON]** per aggiungere manualmente ogni coppia chiave-valore tramite un editor di interfaccia utente. Ogni valore può essere rappresentato da un input non elaborato, oppure è possibile selezionare un elemento dati. |
+| [!UICONTROL Payload] | Questo campo contiene i dati che verranno inoltrati al flusso di dati [!DNL Kinesis], in formato JSON.<br><br>Con l&#39;opzione **[!UICONTROL Raw]**, puoi incollare l&#39;oggetto JSON direttamente nel campo di testo fornito, oppure puoi selezionare l&#39;icona dell&#39;elemento dati (![icona del set di dati](/help/images/icons/database.png)) per effettuare una selezione da un elenco di elementi dati esistenti per rappresentare il payload.<br><br>È inoltre possibile utilizzare l&#39;opzione **[!UICONTROL Editor coppie chiave-valore JSON]** per aggiungere manualmente ogni coppia chiave-valore tramite un editor di interfaccia utente. Ogni valore può essere rappresentato da un input non elaborato, oppure è possibile selezionare un elemento dati. |
 
 {style="table-layout:auto"}
 

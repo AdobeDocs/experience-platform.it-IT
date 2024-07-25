@@ -2,7 +2,7 @@
 title: Guida dell’interfaccia utente Attributi calcolati
 description: Scopri come creare, visualizzare e aggiornare gli attributi calcolati utilizzando l’interfaccia utente di Adobe Experience Platform.
 exl-id: bc621167-6dba-473e-90e4-aac7ceb6579a
-source-git-commit: 762a7fc7dd00657e4e710eb763c5bb63b210593a
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1576'
 ht-degree: 6%
@@ -32,7 +32,7 @@ Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Prof
 
 ![La sezione [!UICONTROL Profilo] e le schede [!UICONTROL Attributi calcolati] sono evidenziate e mostrano agli utenti come accedere alla pagina Sfoglia attributi calcolati.](./images/ui/browse.png)
 
-Per selezionare i campi visibili, è possibile selezionare ![l&#39;icona Configura colonne](./images/ui/configure-icon.png) per aggiungere o rimuovere i campi da visualizzare.
+Per selezionare i campi visibili, è possibile selezionare ![l&#39;icona Configura colonne](/help/images/icons/column-settings.png) per aggiungere o rimuovere i campi da visualizzare.
 
 | Campo | Descrizione |
 | ----- | ----------- |
@@ -47,7 +47,7 @@ Per selezionare i campi visibili, è possibile selezionare ![l&#39;icona Configu
 | [!UICONTROL Creato] | Timestamp che mostra la data e l’ora di creazione dell’attributo calcolato. |
 | [!UICONTROL Ultima modifica] | Timestamp che mostra la data e l’ora dell’ultima modifica apportata all’attributo calcolato. |
 
-Puoi anche filtrare gli attributi calcolati visualizzati in base allo stato del ciclo di vita. Seleziona l&#39;icona ![funnel](./images/ui/filter-icon.png).
+Puoi anche filtrare gli attributi calcolati visualizzati in base allo stato del ciclo di vita. Seleziona l&#39;icona ![funnel](/help/images/icons/filter.png).
 
 ![L&#39;icona del filtro è evidenziata.](./images/ui/select-filter.png)
 

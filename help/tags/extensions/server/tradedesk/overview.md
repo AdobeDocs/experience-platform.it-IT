@@ -4,7 +4,7 @@ description: Scopri l’estensione API Trade Desk Real-time Conversions per l’
 hide: true
 hidefromtoc: true
 exl-id: 1ff32e2b-9ff8-4395-ae44-cba75a2da515
-source-git-commit: 161cb8a587026012bb07acce9da67037feb5391c
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '930'
 ht-degree: 2%
@@ -90,7 +90,7 @@ Per ulteriori informazioni sulle [proprietà di richiesta](https://partner.thetr
 
 **[!UICONTROL Parametri richiesta oggetto]**
 
-Oggetto JSON contenente ulteriori informazioni. Puoi utilizzare un set ridotto di input di valore chiave o fornire JSON non elaborato. È inoltre possibile recuperare dati dinamici da un elemento dati selezionando i dischi (![icona disco](../../../images/extensions/server/tradedesk/disk-icon.png)) a destra.
+Oggetto JSON contenente ulteriori informazioni. Puoi utilizzare un set ridotto di input di valore chiave o fornire JSON non elaborato. È inoltre possibile recuperare dati dinamici da un elemento dati selezionando i dischi (![icona disco](/help/images/icons/database.png)) a destra.
 
 
 ![La sezione [!DNL Object Request Parameters] che mostra i campi disponibili.](../../../images/extensions/server/tradedesk/configure-object-request-params.png)

@@ -2,7 +2,7 @@
 title: Panoramica end-to-end sulla raccolta dati
 description: Panoramica di alto livello su come inviare dati di eventi alle soluzioni Adobe Experience Cloud utilizzando le funzionalità di raccolta dati di Adobe Experience Platform.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2616'
 ht-degree: 0%
@@ -228,7 +228,7 @@ Viene visualizzata la pagina di configurazione dell’azione. Per ottenere la re
 
 ![Tipo azione](./images/e2e/action-type.png)
 
-La schermata si aggiorna per mostrare opzioni aggiuntive per configurare l’azione invia evento. In **[!UICONTROL Tipo]** puoi fornire un valore di tipo personalizzato per compilare il campo XDM `eventType`. In **[!UICONTROL Dati XDM]**, fornire il nome del tipo di dati XDM creato in precedenza (racchiuso tra simboli di percentuale) oppure selezionare l&#39;icona del database (![Icona del database](./images/e2e/database-symbol.png)) per selezionarlo da un elenco. Questi sono i dati che verranno infine inviati all’Edge Network.
+La schermata si aggiorna per mostrare opzioni aggiuntive per configurare l’azione invia evento. In **[!UICONTROL Tipo]** puoi fornire un valore di tipo personalizzato per compilare il campo XDM `eventType`. In **[!UICONTROL Dati XDM]**, fornire il nome del tipo di dati XDM creato in precedenza (racchiuso tra simboli di percentuale) oppure selezionare l&#39;icona del database (![Icona del database](/help/images/icons/database.png)) per selezionarlo da un elenco. Questi sono i dati che verranno infine inviati all’Edge Network.
 
 Al termine, seleziona **[!UICONTROL Mantieni modifiche]**.
 

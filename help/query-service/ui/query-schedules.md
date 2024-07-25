@@ -2,7 +2,7 @@
 title: Pianificazioni query
 description: Scopri come automatizzare l’esecuzione di query pianificate, eliminare o disabilitare una pianificazione di query e utilizzare le opzioni di pianificazione disponibili tramite l’interfaccia utente di Adobe Experience Platform.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: 0b056da8457010ce36efc48e3dd91f280a9b15c5
+source-git-commit: 19f1f64434d655d3b19260460519018fc9c8e174
 workflow-type: tm+mt
 source-wordcount: '1848'
 ht-degree: 0%
@@ -75,7 +75,7 @@ Selezionare **[!UICONTROL Crea e aggiungi al nuovo set di dati]** per creare un 
 
 ![Il pannello Dettagli pianificazione con i dettagli del set di dati e le opzioni [!UICONTROL Crea e aggiungi al nuovo set di dati] sono evidenziati.](../images/ui/query-schedules/dataset-details-create-and-append.png)
 
-In alternativa, selezionare **[!UICONTROL Aggiungi al set di dati esistente]** seguito dall&#39;icona del set di dati (![Icona del set di dati.](../images/ui/query-schedules/dataset-icon.png)).
+In alternativa, selezionare **[!UICONTROL Aggiungi al set di dati esistente]** seguito dall&#39;icona del set di dati (![Icona del set di dati.](/help/images/icons/database.png)).
 
 ![Il pannello Dettagli pianificazione con i dettagli del set di dati ed Aggiungi al set di dati esistente è evidenziato.](../images/ui/query-schedules/dataset-details-existing.png)
 

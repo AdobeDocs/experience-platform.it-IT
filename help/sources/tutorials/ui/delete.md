@@ -5,7 +5,7 @@ solution: Experience Platform
 title: Eliminare i flussi di dati nell’interfaccia utente
 type: Tutorial
 exl-id: aa224467-7733-40de-aab7-0ff1c557abf2
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 1%
@@ -33,7 +33,7 @@ Nell&#39;interfaccia utente di [Experience Platform](https://platform.adobe.com)
 
 Viene visualizzata la pagina **[!UICONTROL Flussi dati]**. In questa pagina è riportato un elenco di flussi di dati visualizzabili, con informazioni sul set di dati di destinazione, l’origine, il nome dell’account e la data di creazione.
 
-Seleziona l&#39;icona del filtro (![icona-filtro](../../images/tutorials/delete/filter.png)) in alto a sinistra per avviare il pannello di ordinamento.
+Seleziona l&#39;icona del filtro (![icona-filtro](/help/images/icons/filter.png)) in alto a sinistra per avviare il pannello di ordinamento.
 
 ![flussi di dati](../../images/tutorials/delete/dataflows.png)
 

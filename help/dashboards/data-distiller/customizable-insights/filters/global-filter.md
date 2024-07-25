@@ -2,7 +2,7 @@
 title: Creare un filtro globale
 description: Scopri come filtrare le informazioni sui dati con un filtro personalizzato applicato a livello globale.
 exl-id: a0084039-8809-4883-9f68-c666dcac5881
-source-git-commit: 5bb954da7c1e05922a4e0f8d0bc7d3ab5c8e0e58
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '482'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Per creare un filtro globale, seleziona innanzitutto **[!UICONTROL Aggiungi filt
 
 È possibile modificare rapidamente le informazioni fornite dall&#39;istruzione SQL mediante filtri globali personalizzati.
 
-Viene visualizzata la finestra di dialogo [!UICONTROL Crea un filtro globale]. La creazione di un filtro globale segue lo stesso processo della creazione di un approfondimento con SQL. Selezionare innanzitutto un database (modello dati di insights) per eseguire una query, quindi immettere le istruzioni SQL personalizzate nell&#39;editor di query e infine selezionare l&#39;icona di esecuzione (![Icona di esecuzione.](../../../images/customizable-insights/run-icon.png)).
+Viene visualizzata la finestra di dialogo [!UICONTROL Crea un filtro globale]. La creazione di un filtro globale segue lo stesso processo della creazione di un approfondimento con SQL. Selezionare innanzitutto un database (modello dati di insights) per eseguire una query, quindi immettere le istruzioni SQL personalizzate nell&#39;editor di query e infine selezionare l&#39;icona di esecuzione (![Icona di esecuzione.](/help/images/icons/play.png)).
 
 >[!IMPORTANT]
 >
@@ -57,6 +57,6 @@ Dopo aver creato il filtro globale per il dashboard, l’interruttore per tale f
 
 ## Seleziona un filtro globale {#select-global-filter}
 
-Per aprire la finestra di dialogo [!UICONTROL Filtri] in cui sono elencati tutti i filtri personalizzati, selezionare l&#39;icona del filtro (![Icona del filtro.](../../../images/customizable-insights/filter.png)) a sinistra del dashboard. Quindi, per applicare gli effetti alle informazioni del dashboard, scegli un&#39;opzione dal menu a discesa del filtro globale, quindi seleziona **[!UICONTROL Applica]**.
+Per aprire la finestra di dialogo [!UICONTROL Filtri] in cui sono elencati tutti i filtri personalizzati, selezionare l&#39;icona del filtro (![Icona del filtro.](/help/images/icons/filter.png)) a sinistra del dashboard. Quindi, per applicare gli effetti alle informazioni del dashboard, scegli un&#39;opzione dal menu a discesa del filtro globale, quindi seleziona **[!UICONTROL Applica]**.
 
 ![Dashboard personalizzato con la finestra di dialogo del filtro evidenziata.](../../../images/customizable-insights/custom-filters.png)

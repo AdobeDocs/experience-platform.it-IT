@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Monitorare i processi di arricchimento dei profili
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '764'
 ht-degree: 2%
@@ -77,7 +77,7 @@ Per i processi di arricchimento del profilo di punteggio lead predittivo e accou
 
 In questa sezione vengono descritte diverse opzioni dell’interfaccia utente (UI) nell’interfaccia di monitoraggio, che consentono di filtrare le metriche visualizzate nella pagina.
 
-Utilizza l&#39;icona freccia (![icona freccia](/help/dataflows/assets/ui/monitor-destinations/chevron-up.png)) per espandere o chiudere la scheda nella parte superiore dello schermo, che mostra immediatamente le informazioni sui processi di arricchimento del profilo.
+Utilizza l&#39;icona freccia (![icona freccia](/help/images/icons/chevron-up.png)) per espandere o chiudere la scheda nella parte superiore dello schermo, che mostra immediatamente le informazioni sui processi di arricchimento del profilo.
 
 ![Registrazione dello schermo con l&#39;icona freccia Controllo dell&#39;interfaccia utente.](/help/dataflows/assets/ui/b2b/use-arrow-control.gif)
 

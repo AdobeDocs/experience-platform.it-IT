@@ -2,7 +2,7 @@
 title: Sfoglia ordini di lavoro del ciclo di vita dei dati
 description: Scopri come visualizzare e gestire gli ordini di lavoro del ciclo di vita dei dati esistenti nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '841'
 ht-degree: 27%
@@ -31,7 +31,7 @@ Nell&#39;elenco vengono visualizzati solo gli ordini di lavorazione per una cate
 
 ![Immagine che mostra la scheda [!UICONTROL Set di dati]](../images/ui/browse/dataset-tab.png)
 
-Selezionare l&#39;icona del funnel (![Immagine dell&#39;icona del funnel](../images/ui/browse/funnel-icon.png)) per visualizzare un elenco di filtri per gli ordini di lavoro visualizzati.
+Selezionare l&#39;icona del funnel (![Immagine dell&#39;icona del funnel](/help/images/icons/filter.png)) per visualizzare un elenco di filtri per gli ordini di lavoro visualizzati.
 
 ![Immagine dei filtri ordine di lavoro visualizzati](../images/ui/browse/filters.png)
 

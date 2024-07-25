@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Applicazione automatica dei criteri
 description: Questo documento illustra come i criteri di utilizzo dei dati vengono applicati automaticamente quando si attivano i tipi di pubblico nelle destinazioni in Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: ea58ece75d2208ae96bd71c2f51e14279769640f
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2109'
 ht-degree: 0%
@@ -104,7 +104,7 @@ Sotto il riepilogo delle violazioni viene visualizzato un grafico della derivazi
 
 ![Finestra di dialogo per violazione dei criteri con grafico derivazione dati evidenziato.](../images/enforcement/data-lineage.png)
 
-È inoltre possibile utilizzare l&#39;icona **[!UICONTROL Filtro]** (![Icona filtro.](../images/enforcement/filter.png)) per filtrare le entità visualizzate per categoria. È necessario selezionare almeno due categorie per visualizzare i dati.
+È inoltre possibile utilizzare l&#39;icona **[!UICONTROL Filtro]** (![Icona filtro.](/help/images/icons/filter.png)) per filtrare le entità visualizzate per categoria. È necessario selezionare almeno due categorie per visualizzare i dati.
 
 ![Finestra di dialogo per violazione dei criteri con filtro derivazione dati e menu a discesa evidenziati.](../images/enforcement/lineage-filter.png)
 
