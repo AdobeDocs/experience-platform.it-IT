@@ -2,7 +2,7 @@
 description: Il servizio delle destinazioni in Adobe Experience Platform utilizza endpoint di configurazione per diversi componenti che creano la funzionalità delle destinazioni. Scopri come questi componenti combinati consentono ad Experience Platform di connettersi ai partner di destinazione, inviare messaggi personalizzati e attivare i dati del profilo nell’ecosistema digitale.
 title: Opzioni di configurazione in Destination SDK
 exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: f652faac7d771b590b30f591616b53d0cd2ff1eb
 workflow-type: tm+mt
 source-wordcount: '828'
 ht-degree: 0%
@@ -17,7 +17,11 @@ La combinazione di questi componenti consente ad Experience Platform di connette
 
 Il diagramma seguente mostra una panoramica ad alto livello dei componenti che è possibile configurare tramite Destination SDK per creare una destinazione personalizzata. Questi componenti sono descritti più avanti.
 
-![Diagramma che mostra i componenti Destination SDK, gli endpoint di configurazione e le operazioni da essi supportate.](../assets/functionality/destination-sdk-components-diagram.png)
+>[!BEGINSHADEBOX]
+
+![Diagramma che mostra i componenti Destination SDK, gli endpoint di configurazione e le operazioni da essi supportate.](../assets/functionality/destination-sdk-components-diagram.png){zoomable="yes"}
+
+>[!ENDSHADEBOX]
 
 ## Configurazione del server {#server-configuration}
 
