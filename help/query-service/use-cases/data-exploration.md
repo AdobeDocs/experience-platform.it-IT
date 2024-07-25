@@ -1,9 +1,10 @@
 ---
 title: Esplorare, risolvere i problemi e verificare l’acquisizione in batch con SQL
-description: Scopri come comprendere e gestire il processo di acquisizione dei dati in Adobe Experience Platform. Questo documento include come verificare i batch, gestire gli errori ed eseguire query sui dati acquisiti.
-source-git-commit: 37b241f15f297263cc7aa20f382c115a2d131c7e
+description: Scopri come comprendere e gestire il processo di acquisizione dei dati in Adobe Experience Platform. Questo documento include come verificare i batch ed eseguire query sui dati acquisiti.
+exl-id: 8f49680c-42ec-488e-8586-50182d50e900
+source-git-commit: 692a061e3b2facbfafc65f966832230187f5244d
 workflow-type: tm+mt
-source-wordcount: '1215'
+source-wordcount: '1160'
 ht-degree: 0%
 
 ---
@@ -12,7 +13,6 @@ ht-degree: 0%
 
 Questo documento spiega come verificare e convalidare i record in batch acquisiti con SQL. Questo documento illustra come:
 
-- Gestione degli errori che possono verificarsi durante il processo di acquisizione
 - Accedere ai metadati batch del set di dati
 - Risolvere i problemi e garantire l&#39;integrità dei dati eseguendo query sui batch
 
@@ -26,7 +26,6 @@ Per facilitare la comprensione dei concetti descritti in questo documento, è ne
 
 - **Acquisizione dei dati**: consulta la [panoramica sull&#39;acquisizione dei dati](../../ingestion/home.md) per scoprire le nozioni di base sull&#39;acquisizione dei dati in Platform, inclusi i diversi metodi e processi coinvolti.
 - **Acquisizione batch**: consulta la [panoramica dell&#39;API di acquisizione batch](../../ingestion/batch-ingestion/overview.md) per scoprire i concetti di base dell&#39;acquisizione batch. In particolare, cos’è un &quot;batch&quot; e come funziona all’interno del processo di acquisizione dei dati di Platform.
-- **Gestione degli errori durante l&#39;acquisizione dei dati**: scopri [diversi tipi di errori che possono verificarsi](../../ingestion/quality/error-diagnostics.md#retrieve-errors) durante l&#39;acquisizione dei dati e [come gestirli](../../ingestion/batch-ingestion/troubleshooting.md#what-if-a-batch-fails).
 - **Metadati di sistema nei set di dati**: consulta la [Panoramica di Catalog Service](../../catalog/home.md) per scoprire come i campi dei metadati di sistema vengono utilizzati per monitorare ed eseguire query sui dati acquisiti.
 - **Experience Data Model (XDM)**: consulta la [panoramica dell&#39;interfaccia utente degli schemi](../../xdm/ui/overview.md) e le [&#39;nozioni di base sulla composizione dello schema&#39;](../../xdm/schema/composition.md) per scoprire gli schemi XDM e come rappresentano e convalidano la struttura e il formato dei dati acquisiti in Platform.
 
@@ -57,11 +56,7 @@ I risultati di questa query sono mostrati nell’immagine seguente.
 
 Questi risultati dimostrano che il numero di batch di input non corrisponde necessariamente al numero di batch di output, in quanto il sistema determina il modo più efficiente per eseguire il batch e memorizzare i dati nel data lake.
 
-L’esempio seguente utilizza un set di dati diverso per illustrare questo punto.
-
->[!NOTE]
->
->Se si desidera provare questo esempio, è possibile acquisire il file di esempio fornito ([`drug_checkout_data`](../images/use-cases/drug_checkout_data.zip)) in Platform e configurare la mappatura dello schema.
+Ai fini di questo esempio, si presume che tu abbia acquisito un file CSV in Platform e creato un set di dati denominato `drug_checkout_data`.
 
 Il file `drug_checkout_data` è un set profondamente nidificato di 35.000 record. Utilizzare l&#39;istruzione SQL `SELECT * FROM drug_orders;` per visualizzare in anteprima il primo set di record nel set di dati `drug_orders` basato su JSON.
 
@@ -97,7 +92,7 @@ Quindi, convalida e verifica i record acquisiti nel set di dati con SQL.
 
 >[!TIP]
 >
->Per recuperare l’ID batch e i record di query associati a tale ID batch, devi innanzitutto creare un batch in Platform. Se desideri testare il processo autonomamente, puoi acquisire i dati CSV in Platform. Leggi la guida su come [mappare un file CSV su uno schema XDM esistente utilizzando i consigli generati dall&#39;intelligenza artificiale](../../ingestion/tutorials/map-csv/recommendations.md). Un [file CSV del profilo di esempio](../images/use-cases/sample-profiles.csv) è disponibile qui per comodità.
+>Per recuperare l’ID batch e i record di query associati a tale ID batch, devi innanzitutto creare un batch in Platform. Se desideri testare il processo autonomamente, puoi acquisire i dati CSV in Platform. Leggi la guida su come [mappare un file CSV su uno schema XDM esistente utilizzando i consigli generati dall&#39;intelligenza artificiale](../../ingestion/tutorials/map-csv/recommendations.md).
 
 Dopo aver acquisito un batch, devi passare alla scheda dell&#39;attività [!UICONTROL Set di dati] per il set di dati in cui hai acquisito i dati.
 
