@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida introduttiva alle API di Adobe Experience Platform
 description: Adobe Experience Platform fornisce servizi API strettamente collegati tra loro. Questa guida contiene informazioni sui servizi disponibili, le intestazioni richieste per le operazioni CRUD, i messaggi di errore, le raccolte Postman e le chiamate API di esempio.
 exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
-source-git-commit: c728d63c22593ca56999dd0bb6679dea7de0e00a
+source-git-commit: f0b9d414d7b08015478c132de6910629d86c9cf9
 workflow-type: tm+mt
-source-wordcount: '1405'
+source-wordcount: '1446'
 ht-degree: 0%
 
 ---
@@ -124,8 +124,10 @@ Per ulteriori informazioni su endpoint specifici nelle API di Platform, incluse 
 | [[!DNL Catalog Service] Guida API](.././catalog/api/getting-started.md) | L&#39;API [!DNL Catalog Service] consente agli sviluppatori di gestire i metadati del set di dati in Adobe Experience Platform. Ciò include le posizioni dei dati, le fasi di elaborazione, gli errori che si sono verificati durante l’elaborazione e i rapporti sui dati. |
 | [[!DNL Data Access] Guida API](.././data-access/api.md) | L&#39;API [!DNL Data Access] consente agli sviluppatori di recuperare informazioni sui set di dati acquisiti in Experience Platform. Ciò include l’accesso e il download di file di set di dati, il recupero di informazioni sull’intestazione, l’elenco dei batch con errori e di quelli riusciti e il download di file CSV/Parquet di anteprima. |
 | [[!DNL Dataset Service] Guida API](.././data-governance/labels/dataset-api.md) | L’API Servizio set di dati consente di applicare e modificare le etichette di utilizzo per i set di dati. Fa parte delle funzionalità del catalogo dati di Adobe Experience Platform, ma è separata dall’API Catalog Service che gestisce i metadati dei set di dati. |
+| [[!DNL Data Hygiene API guide]](../hygiene/api/overview.md) | L&#39;API [!DNL Data Hygiene] consente di correggere o eliminare in modo programmatico i dati personali archiviati dei clienti in Adobe Experience Platform, nonché di pianificare le date di scadenza per i set di dati. |
 | [[!DNL Edge Network Server] Guida API](../server-api/overview.md) | [!DNL Edge Network Server API] può essere utilizzato per diversi casi di utilizzo di raccolta dati, personalizzazione, pubblicità e marketing. [!DNL Server API] può essere utilizzato su server, dispositivi [!DNL IoT], set-top box e molti altri dispositivi. |
 | [[!DNL Identity Service] Guida API](.././identity-service/api/getting-started.md) | L&#39;API [!DNL Identity Service] consente agli sviluppatori di gestire l&#39;identificazione dei clienti in tempo reale, tra dispositivi e canali diversi, utilizzando grafici di identità in Adobe Experience Platform. |
+| [[!DNL MTLS Service API guide]](../data-governance/mtls-api/overview.md) | L&#39;API [!DNL MTLS Service] ti consente di recuperare in modo sicuro i certificati pubblici emessi da Adobe per la tua organizzazione. |
 | [[!DNL Observability Insights] Guida API](.././observability/api/overview.md) | [!DNL Observability Insights] è un&#39;API RESTful che consente agli sviluppatori di esporre metriche chiave di osservabilità in Adobe Experience Platform. Queste metriche forniscono informazioni approfondite sulle statistiche di utilizzo di Platform, sui controlli di integrità per i servizi di Platform, sulle tendenze storiche e sugli indicatori di prestazioni per le varie funzionalità di Platform. |
 | [[!DNL Policy Service] Guida API](.././data-governance/api/overview.md) <br> (governance dei dati) | L&#39;API [!DNL Policy Service] consente di creare e gestire etichette e criteri di utilizzo dei dati per determinare quali azioni di marketing possono essere eseguite sui dati che contengono determinate etichette di utilizzo dei dati. Per applicare etichette ai set di dati e ai campi, consulta la guida [[!DNL Dataset Service] API](.././data-governance/labels/dataset-api.md) |
 | [[!DNL Privacy Service] Guida API](.././privacy-service/api/getting-started.md) | L&#39;API [!DNL Privacy Service] consente agli sviluppatori di creare e gestire le richieste dei clienti di accedere o eliminare i propri dati personali nelle applicazioni Experience Cloud, in conformità con le normative legali sulla privacy. |

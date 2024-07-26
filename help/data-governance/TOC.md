@@ -5,10 +5,10 @@ breadcrumb-title: Guida alla governance dei dati
 user-guide-description: Applica restrizioni all’utilizzo dei dati tramite l’uso di etichette, azioni di marketing e criteri di governance.
 feature: Data Governance
 role: User,Developer,Admin
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 8837d719fbdf2864995c0d73a87a41c4b119cfb7
 workflow-type: tm+mt
-source-wordcount: '90'
-ht-degree: 44%
+source-wordcount: '99'
+ht-degree: 43%
 
 ---
 
@@ -30,6 +30,10 @@ ht-degree: 44%
    * [Panoramica](enforcement/overview.md)
    * [Applicazione automatica](enforcement/auto-enforcement.md)
    * [Imposizione basata su API](enforcement/api-enforcement.md)
+* API servizio MTLS {#mtls-api}
+   * [Panoramica](mtls-api/overview.md)
+   * [Introduzione](mtls-api/getting-started.md)
+   * [Endpoint certificato pubblico](mtls-api/public-certificate-endpoint.md)
 * API servizio criteri {#api}
    * [Panoramica](api/overview.md)
    * [Introduzione](api/getting-started.md)
