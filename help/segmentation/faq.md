@@ -2,9 +2,9 @@
 title: Domande frequenti sui tipi di pubblico
 description: Trova le risposte alle domande più frequenti su tipi di pubblico e altri concetti correlati alla segmentazione.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 5e677e53677cd28787004043e9fcc9b94e631fc8
+source-git-commit: 2d15ba41ff326034a6f9a32301f67f5d3b2a1c14
 workflow-type: tm+mt
-source-wordcount: '4187'
+source-wordcount: '4362'
 ht-degree: 0%
 
 ---
@@ -56,6 +56,16 @@ Anche se è possibile fare riferimento al pubblico generato esternamente durante
 
 Sì, se gli identificatori primari corrispondono, il pubblico generato esternamente verrà unito al profilo esistente in Platform. La riconciliazione di questi dati può richiedere fino a 24 ore. Se i dati del profilo non esistono già, verrà creato un nuovo profilo durante l’acquisizione dei dati.
 
+### In che modo le preferenze di consenso del cliente vengono rispettate per i tipi di pubblico generati esternamente e importati in Audience Portal?{#consent}
+
+Poiché i dati del cliente vengono acquisiti da più canali, i criteri di unione e unione delle identità consentono di consolidarli in un unico profilo cliente in tempo reale. Le informazioni sulle preferenze di consenso dei clienti vengono memorizzate e valutate a livello di profilo.
+
+Le destinazioni a valle verificano ogni profilo per informazioni sul consenso prima dell’attivazione. Le informazioni sul consenso di ciascun profilo vengono confrontate con i requisiti del consenso per una particolare destinazione. Se il profilo non soddisfa i requisiti, non viene inviato a una destinazione.
+
+Quando un pubblico esterno viene acquisito in Audience Portal, viene unito ai profili esistenti utilizzando un ID primario come e-mail o ECID. Di conseguenza, i criteri di consenso esistenti rimarranno in vigore per tutta la durata dell’attivazione.
+
+Tieni presente che **non** deve includere informazioni sul consenso con un pubblico generato esternamente, poiché le variabili payload sono **non** memorizzate nell&#39;archivio profili ma nel data lake. Piuttosto, **devi** utilizzare un canale di acquisizione Adobe Experience Platform in cui vengono importati i dati del profilo.
+
 ### Posso utilizzare un pubblico generato esternamente per creare altri tipi di pubblico?
 
 Sì, qualsiasi pubblico generato esternamente verrà visualizzato nell&#39;inventario del pubblico e può essere utilizzato per la creazione di tipi di pubblico all&#39;interno del [Generatore di segmenti](./ui/segment-builder.md).
@@ -80,7 +90,7 @@ Il criterio di unione predefinito specifico per l’organizzazione viene applica
 
 ### Dove posso attivare i tipi di pubblico generati esternamente in?
 
-Un pubblico generato esternamente può essere mappato su qualsiasi destinazione RTCDP e può essere utilizzato nelle campagne Adobe Journey Optimizer.
+Un pubblico generato esternamente può essere mappato su qualsiasi destinazione e utilizzato nelle campagne Adobe Journey Optimizer.
 
 ### Quando saranno pronti per l’attivazione i tipi di pubblico generati esternamente?
 
