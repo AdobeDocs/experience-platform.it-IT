@@ -2,9 +2,9 @@
 description: Questa pagina esemplifica la chiamata API utilizzata per creare un modello di pubblico tramite Adobe Experience Platform Destination SDK.
 title: Creare un modello di pubblico
 exl-id: 98d30002-d462-4008-9337-7de0cd608194
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 3447a1c6959419c36fd55359496284daf90e26cf
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '622'
 ht-degree: 3%
 
 ---
@@ -50,135 +50,202 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '
 {
-   "metadataTemplate":{
-      "name":"string",
-      "create":{
-         "url":"string",
-         "httpMethod":"string",
-         "headers":[
-            {
-               "header":"string",
-               "value":"string"
-            }
-         ],
-         "requestBody":{
-            
-         },
-         "responseFields":[
-            {
-               "name":"string",
-               "value":"string"
-            }
-         ],
-         "responseErrorFields":[
-            {
-               "name":"string",
-               "value":"string"
-            }
-         ]
+  "metadataTemplate": {
+    "name": "Test Webhook Audience Template",
+    "create": {
+      "url": "https://your-webhook-site/0bd222fa-8ae2-433b-8f0e-f2ce137b0ee4/{{customerData.customerID}}/segments",
+      "httpMethod": "POST",
+      "headers": [
+        {
+          "value": "application/json",
+          "header": "Content-Type"
+        },
+        {
+          "value": "Bearer {{authData.token}}",
+          "header": "Authorization"
+        }
+      ],
+      "requestBody": {
+        "json": {
+          "name": "{{segment.name}}",
+          "type": "segment",
+          "metadata": {
+            "org_id": "{{destination.imsOrgId}}",
+            "sandbox": "{{destination.sandboxName}}",
+            "destination_id": "{{destination.id}}",
+            "destination_name": "{{destination.name}}",
+            "segmentEnrichmentAttributes": "{% set columns = [] %}{% for atr in segmentEnrichmentAttributes %}{% set columns = columns|merge([atr.source]) %}{% endfor %}{{ columns | toJson }}"
+          },
+          "external_id": "{{segment.id}}"
+        }
       },
-      "update":{
-         "url":"string",
-         "httpMethod":"string",
-         "headers":[
-            {
-               "header":"string",
-               "value":"string"
-            }
-         ],
-         "requestBody":{
-            
-         },
-         "responseFields":[
-            {
-               "name":"string",
-               "value":"string"
-            }
-         ],
-         "responseErrorFields":[
-            {
-               "name":"string",
-               "value":"string"
-            }
-         ]
+      "responseFields": [
+        {
+          "value": "{{headers.X-Request-Id}}",
+          "name": "externalAudienceId"
+        }
+      ],
+      "responseErrorFields": [
+        {
+          "value": "{{root}}",
+          "name": "message"
+        }
+      ]
+    },
+    "update": {
+      "url": "https://your-webhook-site/0bd222fa-8ae2-433b-8f0e-f2ce137b0ee4/{{customerData.customerID}}/segments/{{segment.alias}}",
+      "httpMethod": "PUT",
+      "headers": [
+        {
+          "value": "application/json",
+          "header": "Content-Type"
+        },
+        {
+          "value": "Bearer {{authData.token}}",
+          "header": "Authorization"
+        }
+      ],
+      "requestBody": {
+        "json": {
+          "name": "{{segment.name}}",
+          "type": "segment",
+          "metadata": {
+            "org_id": "{{destination.imsOrgId}}",
+            "sandbox": "{{destination.sandboxName}}",
+            "destination_id": "{{destination.id}}",
+            "destination_name": "{{destination.name}}",
+            "segmentEnrichmentAttributes": "{% set columns = [] %}{% for atr in segmentEnrichmentAttributes %}{% set columns = columns|merge([atr.source]) %}{% endfor %}{{ columns | toJson }}"
+          },
+          "external_id": "{{segment.id}}"
+        }
       },
-      "delete":{
-         "url":"string",
-         "httpMethod":"string",
-         "headers":[
-            {
-               "header":"string",
-               "value":"string"
-            }
-         ],
-         "requestBody":{
-            
-         },
-         "responseFields":[
-            {
-               "name":"string",
-               "value":"string"
-            }
-         ],
-         "responseErrorFields":[
-            {
-               "name":"string",
-               "value":"string"
-            }
-         ]
+      "responseFields": [
+        {
+          "value": "{{headers.X-Request-Id}}",
+          "name": "externalAudienceId"
+        }
+      ],
+      "responseErrorFields": [
+        {
+          "value": "{{root}}",
+          "name": "message"
+        }
+      ]
+    },
+    "delete": {
+      "url": "https://your-webhook-site/0bd222fa-8ae2-433b-8f0e-f2ce137b0ee4/{{customerData.customerID}}/segments/{{segment.alias}}",
+      "httpMethod": "DELETE",
+      "headers": [
+        {
+          "value": "Bearer {{authData.token}}",
+          "header": "Authorization"
+        }
+      ],
+      "responseErrorFields": [
+        {
+          "value": "{{root}}",
+          "name": "message"
+        }
+      ]
+    },
+    "createDestination": {
+      "url": "https://your-webhook-site/0bd222fa-8ae2-433b-8f0e-f2ce137b0ee4/{{customerData.customerID}}/createDestination",
+      "httpMethod": "POST",
+      "headers": [
+        {
+          "value": "application/json",
+          "header": "Content-Type"
+        },
+        {
+          "value": "Bearer {{authData.token}}",
+          "header": "Authorization"
+        }
+      ],
+      "requestBody": {
+        "json": {
+          "name": "{{destination.name}}",
+          "type": "destination",
+          "metadata": {
+            "org_id": "{{destination.imsOrgId}}",
+            "sandbox": "{{destination.sandboxName}}",
+            "destination_id": "{{destination.id}}",
+            "destination_name": "{{destination.name}}",
+            "enrichmentAttributes": "{{destination.enrichmentAttributes}}"
+          },
+          "external_id": "{{destination.id}}"
+        }
       },
-      "validate":{
-         "url":"string",
-         "httpMethod":"string",
-         "headers":[
-            {
-               "header":"string",
-               "value":"string"
-            }
-         ],
-         "requestBody":{
-            
-         },
-         "responseFields":[
-            {
-               "name":"string",
-               "value":"string"
-            }
-         ],
-         "responseErrorFields":[
-            {
-               "name":"string",
-               "value":"string"
-            }
-         ]
+      "responseFields": [
+        {
+          "value": "{{headers.X-Request-Id}}",
+          "name": "externalAudienceId"
+        }
+      ],
+      "responseErrorFields": [
+        {
+          "value": "{{root}}",
+          "name": "message"
+        }
+      ]
+    },
+    "updateDestination": {
+      "url": "https://your-webhook-site/0bd222fa-8ae2-433b-8f0e-f2ce137b0ee4/{{customerData.customerID}}/updateDestination",
+      "httpMethod": "POST",
+      "headers": [
+        {
+          "value": "application/json",
+          "header": "Content-Type"
+        },
+        {
+          "value": "Bearer {{authData.token}}",
+          "header": "Authorization"
+        }
+      ],
+      "requestBody": {
+        "json": {
+          "name": "{{destination.name}}",
+          "type": "destination",
+          "metadata": {
+            "org_id": "{{destination.imsOrgId}}",
+            "sandbox": "{{destination.sandboxName}}",
+            "destination_id": "{{destination.id}}",
+            "destination_name": "{{destination.name}}",
+            "enrichmentAttributes": "{{destination.enrichmentAttributes}}"
+          },
+          "external_id": "{{destination.id}}"
+        }
       },
-      "notify":{
-         "url":"string",
-         "httpMethod":"string",
-         "headers":[
-            {
-               "header":"string",
-               "value":"string"
-            }
-         ],
-         "requestBody":{
-            
-         },
-         "responseFields":[
-            {
-               "name":"string",
-               "value":"string"
-            }
-         ],
-         "responseErrorFields":[
-            {
-               "name":"string",
-               "value":"string"
-            }
-         ]
-      }
-   },
-   "validations":[
+      "responseFields": [
+        {
+          "value": "{{headers.X-Request-Id}}",
+          "name": "externalAudienceId"
+        }
+      ],
+      "responseErrorFields": [
+        {
+          "value": "{{root}}",
+          "name": "message"
+        }
+      ]
+    },
+    "deleteDestination": {
+      "url": "https://your-webhook-site/0bd222fa-8ae2-433b-8f0e-f2ce137b0ee4/{{customerData.customerID}}/deleteDestination",
+      "httpMethod": "DELETE",
+      "headers": [
+        {
+          "value": "Bearer {{authData.token}}",
+          "header": "Authorization"
+        }
+      ],
+      "responseErrorFields": [
+        {
+          "value": "{{root}}",
+          "name": "message"
+        }
+      ]
+    }
+  },
+  "validations":[
       {
          "field":"string",
          "regex":"string"
@@ -189,12 +256,12 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 
 | Proprietà | Tipo | Descrizione |
 | -------- | ----------- | ----------- |
-| `name` | Stringa | Il nome del modello di metadati del pubblico per la destinazione. Questo nome verrà visualizzato in qualsiasi messaggio di errore specifico del partner nell&#39;interfaccia utente di Experience Platform, seguito dal messaggio di errore analizzato da `metadataTemplate.create.errorSchemaMap`. |
-| `url` | Stringa | L’URL e l’endpoint dell’API, utilizzati per creare, aggiornare, eliminare o convalidare i tipi di pubblico nella piattaforma. Due esempi di settore sono: `https://adsapi.snapchat.com/v1/adaccounts/{{customerData.accountId}}/segments` e `https://api.linkedin.com/v2/dmpSegments/{{segment.alias}}`. |
+| `name` | Stringa | Il nome del modello di metadati del pubblico per la destinazione. Questo nome verrà visualizzato in qualsiasi messaggio di errore specifico del partner nell’interfaccia utente di Experience Platform. |
+| `url` | Stringa | L’URL e l’endpoint dell’API, utilizzati per creare, aggiornare, eliminare o convalidare tipi di pubblico e/o flussi di dati nella piattaforma. Due esempi di settore sono: `https://adsapi.snapchat.com/v1/adaccounts/{{customerData.accountId}}/segments` e `https://api.linkedin.com/v2/dmpSegments/{{segment.alias}}`. |
 | `httpMethod` | Stringa | Il metodo utilizzato sull’endpoint per creare, aggiornare, eliminare o convalidare a livello di programmazione il pubblico nella destinazione. Esempio: `POST`, `PUT`, `DELETE` |
 | `headers.header` | Stringa | Specifica eventuali intestazioni HTTP da aggiungere alla chiamata all’API. Ad esempio, `"Content-Type"` |
 | `headers.value` | Stringa | Specifica il valore delle intestazioni HTTP da aggiungere alla chiamata all’API. Ad esempio, `"application/x-www-form-urlencoded"` |
-| `requestBody` | Stringa | Specifica il contenuto del corpo del messaggio da inviare all’API. I parametri da aggiungere all&#39;oggetto `requestBody` dipendono dai campi accettati dall&#39;API. Ad esempio, fai riferimento al [primo esempio di modello](../functionality/audience-metadata-management.md#example-1) nel documento di funzionalità dei metadati del pubblico. |
+| `requestBody` | Stringa | Specifica il contenuto del corpo del messaggio da inviare all’API. I parametri da aggiungere all&#39;oggetto `requestBody` dipendono dai campi accettati dall&#39;API. Per informazioni su cosa includere nel corpo del messaggio, consultare la [documentazione sulle macro supportate](../functionality/audience-metadata-management.md#macros). |
 | `responseFields.name` | Stringa | Specifica eventuali campi di risposta restituiti dall’API quando vengono chiamati. Ad esempio, consulta gli [esempi di modelli](../functionality/audience-metadata-management.md#examples) nel documento relativo alla funzionalità per i metadati per il pubblico. |
 | `responseFields.value` | Stringa | Specifica il valore di tutti i campi di risposta restituiti dall’API quando vengono chiamati. |
 | `responseErrorFields.name` | Stringa | Specifica eventuali campi di risposta restituiti dall’API quando vengono chiamati. Ad esempio, consulta gli [esempi di modelli](../functionality/audience-metadata-management.md#examples) nel documento relativo alla funzionalità per i metadati per il pubblico. |

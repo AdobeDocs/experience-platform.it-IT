@@ -2,9 +2,9 @@
 description: Utilizza i modelli di metadati del pubblico per creare, aggiornare o eliminare in modo programmatico i tipi di pubblico nella tua destinazione. Adobe fornisce un modello estensibile di metadati per il pubblico, che puoi configurare in base alle specifiche della tua API di marketing. Dopo aver definito, testato e inviato il modello, questo verrà utilizzato da Adobe per strutturare le chiamate API alla destinazione.
 title: Gestione dei metadati del pubblico
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
-source-git-commit: 3660c3a342af07268d2ca2c907145df8237872a1
+source-git-commit: 6c4a2f9f6b338ec03b99ee1d7e91f7d9c0347b08
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1308'
 ht-degree: 0%
 
 ---
@@ -53,11 +53,10 @@ Puoi utilizzare il modello generico per [creare un nuovo modello di pubblico](..
 
 Se necessario, il team di progettazione Adobe può collaborare con te per espandere il modello generico con campi personalizzati.
 
-## Esempi di configurazione {#configuration-examples}
 
-Questa sezione include tre esempi di configurazioni di metadati di pubblico generici, come riferimento, insieme alle descrizioni delle sezioni principali della configurazione. Osserva come l’URL, le intestazioni, la richiesta e il corpo della risposta differiscono tra le tre configurazioni di esempio. Ciò è dovuto alle diverse specifiche delle tre piattaforme di esempio nell’API di marketing.
+## Eventi modello supportati {#supported-events}
 
-Si noti che in alcuni esempi i campi macro come `{{authData.accessToken}}` o `{{segment.name}}` vengono utilizzati nell&#39;URL, mentre in altri esempi vengono utilizzati nelle intestazioni o nel corpo della richiesta. Dipende davvero dalle specifiche API di marketing.
+La tabella seguente descrive gli eventi supportati dai modelli di metadati per il pubblico.
 
 | Sezione modello | Descrizione |
 |--- |--- |
@@ -66,10 +65,21 @@ Si noti che in alcuni esempi i campi macro come `{{authData.accessToken}}` o `{{
 | `delete` | Include tutti i componenti necessari (URL, metodo HTTP, intestazioni, corpo della richiesta e della risposta) per effettuare una chiamata HTTP all’API, per eliminare in modo programmatico segmenti/tipi di pubblico nella piattaforma. |
 | `validate` | Esegue le convalide per qualsiasi campo nella configurazione del modello prima di effettuare una chiamata all&#39;API partner. Ad esempio, puoi verificare che l’ID account dell’utente sia stato immesso correttamente. |
 | `notify` | Si applica solo alle destinazioni basate su file. Include tutti i componenti necessari (URL, metodo HTTP, intestazioni, corpo della richiesta e della risposta) per effettuare una chiamata HTTP all’API e ricevere una notifica sulle esportazioni dei file riuscite. |
+| `createDestination` | Include tutti i componenti necessari (URL, metodo HTTP, intestazioni, corpo della richiesta e della risposta) per effettuare una chiamata HTTP all’API, per creare in modo programmatico un flusso di dati nella piattaforma e sincronizzare nuovamente le informazioni con Adobe Experience Platform. |
+| `updateDestination` | Include tutti i componenti necessari (URL, metodo HTTP, intestazioni, corpo della richiesta e della risposta) per effettuare una chiamata HTTP all’API, aggiornare in modo programmatico un flusso di dati nella piattaforma e sincronizzare nuovamente le informazioni con Adobe Experience Platform. |
+| `deleteDestination` | Include tutti i componenti necessari (URL, metodo HTTP, intestazioni, corpo della richiesta e della risposta) per effettuare una chiamata HTTP all’API ed eliminare in modo programmatico un flusso di dati dalla piattaforma. |
 
 {style="table-layout:auto"}
 
-### Esempio di streaming 1 {#example-1}
+## Esempi di configurazione {#configuration-examples}
+
+Questa sezione include esempi di configurazioni di metadati di pubblico generici, come riferimento.
+
+Nota come l’URL, le intestazioni e i corpi delle richieste differiscono tra le tre configurazioni di esempio. Ciò è dovuto alle diverse specifiche delle tre piattaforme di esempio nell’API di marketing.
+
+Si noti che in alcuni esempi i campi macro come `{{authData.accessToken}}` o `{{segment.name}}` vengono utilizzati nell&#39;URL, mentre in altri esempi vengono utilizzati nelle intestazioni o nel corpo della richiesta. Il loro utilizzo dipende dalle specifiche API di marketing.
+
++++Esempio di streaming 1
 
 ```json
 {
@@ -178,7 +188,9 @@ Si noti che in alcuni esempi i campi macro come `{{authData.accessToken}}` o `{{
 }
 ```
 
-### Esempio di streaming 2 {#example-2}
++++
+
++++Esempio di streaming 2
 
 ```json
 {
@@ -272,7 +284,9 @@ Si noti che in alcuni esempi i campi macro come `{{authData.accessToken}}` o `{{
 }
 ```
 
-### Esempio di streaming 3 {#example-3}
++++
+
++++Esempio di streaming 3
 
 ```json
 {
@@ -374,8 +388,9 @@ Si noti che in alcuni esempi i campi macro come `{{authData.accessToken}}` o `{{
 }
 ```
 
++++
 
-### Esempio basato su file {#example-file-based}
++++Esempio basato su file
 
 ```json
 {
@@ -521,6 +536,8 @@ Si noti che in alcuni esempi i campi macro come `{{authData.accessToken}}` o `{{
 }
 ```
 
++++
+
 Trova le descrizioni di tutti i parametri nel modello nel riferimento API [Crea un modello di pubblico](../metadata-api/create-audience-template.md).
 
 ## Macro utilizzate nei modelli di metadati del pubblico {#macros}
@@ -537,5 +554,12 @@ Per trasmettere informazioni quali ID pubblico, token di accesso, messaggi di er
 | `{{authData.accessToken}}` | Ti consente di passare il token di accesso all’endpoint API. Utilizza `{{authData.accessToken}}` se Experience Platform deve utilizzare token senza scadenza per la connessione alla destinazione, altrimenti utilizza `{{oauth2ServiceAccessToken}}` per generare un token di accesso. |
 | `{{body.segments[0].segment.id}}` | Restituisce l&#39;identificatore univoco del pubblico creato come valore della chiave `externalAudienceId`. |
 | `{{error.message}}` | Restituisce un messaggio di errore che verrà mostrato agli utenti nell’interfaccia utente di Experience Platform. |
+| `{{{segmentEnrichmentAttributes}}}` | Consente di accedere a tutti gli attributi di arricchimento per un pubblico specifico.  Questa macro è supportata dagli eventi `create`, `update` e `delete`. Gli attributi di arricchimento sono disponibili solo per [tipi di pubblico di caricamento personalizzati](destination-configuration/schema-configuration.md#external-audiences). Per informazioni sul funzionamento della selezione degli attributi di arricchimento, consulta la [guida all&#39;attivazione del pubblico batch](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes). |
+| `{{destination.name}}` | Restituisce il nome della destinazione. |
+| `{{destination.sandboxName}}` | Restituisce il nome della sandbox di Experience Platform in cui è configurata la destinazione. |
+| `{{destination.id}}` | Restituisce l&#39;ID della configurazione di destinazione. |
+| `{{destination.imsOrgId}}` | Restituisce l’ID dell’organizzazione IMS in cui è configurata la destinazione. |
+| `{{destination.enrichmentAttributes}}` | Consente di accedere a tutti gli attributi di arricchimento per tutti i tipi di pubblico mappati a una destinazione. Questa macro è supportata dagli eventi `createDestination`, `updateDestination` e `deleteDestination`. Gli attributi di arricchimento sono disponibili solo per [tipi di pubblico di caricamento personalizzati](destination-configuration/schema-configuration.md#external-audiences). Per informazioni sul funzionamento della selezione degli attributi di arricchimento, consulta la [guida all&#39;attivazione del pubblico batch](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes). |
+| `{{destination.enrichmentAttributes.<namespace>.<segmentId>}}` | Consente di accedere agli attributi di arricchimento per tipi di pubblico esterni specifici mappati a una destinazione. Gli attributi di arricchimento sono disponibili solo per [tipi di pubblico di caricamento personalizzati](destination-configuration/schema-configuration.md#external-audiences). Per informazioni sul funzionamento della selezione degli attributi di arricchimento, consulta la [guida all&#39;attivazione del pubblico batch](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes). |
 
 {style="table-layout:auto"}
