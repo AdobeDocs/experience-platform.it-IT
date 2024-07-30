@@ -3,9 +3,9 @@ keywords: Experience Platform;risoluzione dei problemi;guardrail;linee guida;
 title: Guardrail per l’acquisizione dei dati
 description: Scopri i guardrail per l’acquisizione dei dati in Adobe Experience Platform.
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 583eb70235174825dd542b95463784638bdef235
+source-git-commit: a574e30a12f56618e8bfaff988aa095025b36a28
 workflow-type: tm+mt
-source-wordcount: '669'
+source-wordcount: '721'
 ht-degree: 0%
 
 ---
@@ -34,6 +34,9 @@ La tabella seguente illustra i guardrail da considerare quando si utilizza l&#39
 | Acquisizione del data lake tramite origini batch | <ul><li>È possibile acquisire fino a 200 GB di dati all&#39;ora nel data lake utilizzando origini di acquisizione batch come [!DNL Azure Blob], [!DNL Amazon S3] e [!DNL SFTP].</li><li>La dimensione del batch deve essere compresa tra 256 MB e 100 GB. Questo vale sia per i dati non compressi che per quelli compressi. Quando i dati compressi non sono compressi nel data lake, si applicano queste limitazioni.</li><li>Il numero massimo di file per batch è 1500.</li><li>La dimensione minima di un file o di una cartella è di 1 byte. Non è possibile acquisire cartelle o file di dimensioni pari a 0 byte.</li></ul> | Leggi la [panoramica origini](../sources/home.md) per un catalogo di origini che puoi utilizzare per l&#39;acquisizione dei dati. |
 | Acquisizione in batch nel profilo | <ul><li>La dimensione massima di una classe di record è 100 KB (rigido).</li><li>La dimensione massima di una classe ExperienceEvent è 10 KB (rigido).</li></ul> | |
 | Numero di batch di profili o ExperienceEvent acquisiti al giorno | **Il numero massimo di batch di profili o ExperienceEvent acquisiti al giorno è 90.** Ciò significa che il totale combinato dei batch di profili ed ExperienceEvent acquisiti ogni giorno non può superare i 90. L&#39;acquisizione di batch aggiuntivi influisce sulle prestazioni del sistema. | Si tratta di un limite non vincolante. È possibile superare un limite non superabile, tuttavia, i limiti non superabili forniscono una linea guida consigliata per le prestazioni del sistema. |
+| Acquisizione di dati crittografati | La dimensione massima supportata per un singolo file crittografato è 1 GB. Ad esempio, mentre è possibile acquisire 2 o più GB di dati in una singola esecuzione del flusso di dati, nessun singolo file nell’esecuzione del flusso di dati può superare 1 GB. | Per ulteriori informazioni, consulta la [guida dell&#39;API per l&#39;acquisizione di dati crittografati](../sources/tutorials/api/encrypt-data.md). |
+
+{style="table-layout:auto"}
 
 ## Guardrail per acquisizione in streaming
 
@@ -46,6 +49,8 @@ La tabella seguente illustra i guardrail da considerare quando si utilizzano le 
 | Tipo di acquisizione | Linee guida | Note |
 | --- | --- | --- |
 | Origini di streaming | <ul><li>La dimensione massima del record è 1 MB, con la dimensione consigliata di 10 KB.</li><li>Le origini di streaming supportano tra 4000 e 5000 richieste al secondo durante l’acquisizione nel data lake. Questo vale per entrambe le connessioni di origine appena create, oltre alle connessioni di origine esistenti. **Nota**: l&#39;elaborazione completa dei dati di streaming nel data lake può richiedere fino a 30 minuti.</li><li>Le origini di streaming supportano un massimo di 1500 richieste al secondo durante l’acquisizione dei dati nel profilo o la segmentazione in streaming.</li></ul> | Le origini di streaming come [!DNL Kafka], [!DNL Azure Event Hubs] e [!DNL Amazon Kinesis] non utilizzano la route [!DNL Data Collection Core Service] (DCCS) e possono avere limiti di velocità effettiva diversi. Consulta la [panoramica delle origini](../sources/home.md) per un catalogo delle origini che puoi utilizzare per l&#39;acquisizione dei dati. |
+
+{style="table-layout:auto"}
 
 ## Passaggi successivi
 
