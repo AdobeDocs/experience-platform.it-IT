@@ -3,9 +3,9 @@ keywords: destinazioni;soluzioni experience cloud; target;destinazione target; a
 title: Panoramica sulle destinazioni degli Adobi
 description: Gestisci la customer experience collegando i tuoi dati in Platform ad altre soluzioni Adobe Experience Cloud per il targeting di annunci, la personalizzazione, l’automazione del marketing e altro ancora
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
-source-git-commit: 461545b7d06a4c54fb4037cf1eb2ba44dd6ee7b9
+source-git-commit: 515a7cc3ba12afe14aab3e882b7fd55d5cc09069
 workflow-type: tm+mt
-source-wordcount: '224'
+source-wordcount: '231'
 ht-degree: 9%
 
 ---
@@ -30,6 +30,7 @@ Per comprendere la differenza tra connessioni ed estensioni, vedere [Connessioni
 * [(Beta) Experience Cloud di tipi di pubblico](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
 * [Connessione Marketo Engage](/help/destinations/catalog/adobe/marketo-engage.md)
 * [Connessione Marketo Measure Ultimate](/help/destinations/catalog/adobe/marketo-measure-ultimate.md)
+* [Connessione Federated Audience Composition](https://www.adobe.com/go/destinations-federated-audience-composition){target="_blank"} (disponibilità limitata)
 
 ### Estensioni
 

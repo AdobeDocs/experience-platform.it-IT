@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente del servizio di segmentazione
 description: Scopri come creare e gestire tipi di pubblico e definizioni di segmenti nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 9844a7bf5e7198e7d5112ec924220aba71cdc14b
 workflow-type: tm+mt
-source-wordcount: '959'
-ht-degree: 1%
+source-wordcount: '1043'
+ht-degree: 2%
 
 ---
 
@@ -89,6 +89,12 @@ Viene visualizzato un popover che elenca tutti i campi che possono essere visual
 Per visualizzare la composizione del pubblico, seleziona il nome di un pubblico nella scheda [!UICONTROL Tipi di pubblico].
 
 Viene visualizzata la pagina Composizione pubblico con i blocchi predefiniti che compongono il pubblico. Per ulteriori dettagli su come utilizzare la composizione del pubblico, consulta la [guida dell&#39;interfaccia utente per la composizione del pubblico](./audience-composition.md).
+
+## Composizione di pubblico federato {#fac}
+
+Oltre alle composizioni del pubblico e alle definizioni dei segmenti, puoi utilizzare Adobe Federated Audience Composition per creare nuovi tipi di pubblico dai set di dati aziendali senza copiare i dati sottostanti e memorizzarli in Adobe Experience Platform Audience Portal. Puoi anche arricchire i tipi di pubblico esistenti in Adobe Experience Platform utilizzando dati di pubblico composti che sono stati federati dal data warehouse aziendale. Leggi la guida su [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+
+![Elenco di tipi di pubblico creati in Federated Audience Composition per la tua organizzazione.](../images/ui/overview/federated-audience-composition.png)
 
 ## Segmentazione in streaming {#streaming-segmentation}
 

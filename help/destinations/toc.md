@@ -5,9 +5,9 @@ user-guide-description: Attiva i dati, noti e non, per campagne di marketing cro
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 82e9263293462a223b635e828b95cb2b098886c7
+source-git-commit: 515a7cc3ba12afe14aab3e882b7fd55d5cc09069
 workflow-type: tm+mt
-source-wordcount: '1241'
+source-wordcount: '1248'
 ht-degree: 6%
 
 ---
@@ -65,6 +65,7 @@ ht-degree: 6%
       * [Connessione Marketo Engage](./catalog/adobe/marketo-engage.md)
       * [Connessione Marketo Measure Ultimate](./catalog/adobe/marketo-measure-ultimate.md)
       * [Condivisione Experience Platform del pubblico](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+      * [Connessione Federated Audience Composition (disponibilità limitata)](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Destinazioni Advertising{#advertising}
       * [Panoramica sulle destinazioni di Advertising](./catalog/advertising/overview.md)
       * [Connessione Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud-connection.md)

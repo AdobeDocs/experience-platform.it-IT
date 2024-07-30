@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Panoramica del servizio di segmentazione
 description: Scopri il servizio di segmentazione di Adobe Experience Platform e il ruolo che svolge nell’ecosistema della piattaforma.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 515a7cc3ba12afe14aab3e882b7fd55d5cc09069
 workflow-type: tm+mt
-source-wordcount: '1607'
-ht-degree: 12%
+source-wordcount: '1700'
+ht-degree: 13%
 
 ---
 
@@ -51,6 +51,14 @@ Per informazioni sulla creazione di definizioni di segmenti utilizzando l&#39;AP
 >Se uno schema viene esteso, tutti i caricamenti futuri devono aggiornare di conseguenza i campi appena aggiunti. Per ulteriori informazioni sulla personalizzazione di [!DNL Experience Data Model] (XDM), visitare l&#39;esercitazione [Editor schema](../xdm/tutorials/create-schema-ui.md).
 >
 >Inoltre, se nel set di dati è abilitato un valore di scadenza di evento esperienza, questo potrebbe influire sull’appartenenza della definizione di segmento creata. Per ulteriori informazioni su come questa funzione può influenzare la segmentazione, consulta la guida in [Scadenze evento esperienza](../profile/event-expirations.md).
+
+### Composizione di pubblico federato {#fac}
+
+Oltre alle composizioni del pubblico e alle definizioni dei segmenti, puoi utilizzare Adobe Federated Audience Composition per creare nuovi tipi di pubblico dai set di dati aziendali senza copiare i dati sottostanti e memorizzarli in Adobe Experience Platform Audience Portal. Puoi anche arricchire i tipi di pubblico esistenti in Adobe Experience Platform utilizzando dati di pubblico composti che sono stati federati dal data warehouse aziendale. Leggi la guida su [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+
+>[!AVAILABILITY]
+>
+>La composizione di pubblico federato è attualmente disponibile solo per un set di organizzazioni (disponibilità limitata). Per ulteriori informazioni, contatta il tuo rappresentante Adobe.
 
 ## Valutare i tipi di pubblico {#evaluate-segments}
 

@@ -2,9 +2,9 @@
 title: Panoramica di Audience Portal
 description: Scopri come utilizzare Audience Portal per visualizzare, gestire e creare tipi di pubblico in Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 2d15ba41ff326034a6f9a32301f67f5d3b2a1c14
+source-git-commit: 527c9bf7ff60ceb1e621ccac5a88b8e9eb32ebfb
 workflow-type: tm+mt
-source-wordcount: '3725'
+source-wordcount: '3826'
 ht-degree: 3%
 
 ---
@@ -25,6 +25,7 @@ In Audience Portal, puoi eseguire le seguenti attività:
 - [Creazione di un pubblico](#create-audience)
    - [Utilizza Segment Builder (Generatore di segmenti) per creare un pubblico](#segment-builder)
    - [Utilizzare la composizione del pubblico per creare un pubblico](#audience-composition)
+   - [Utilizza Federated Audience Composition per creare un pubblico utilizzando i dati del data warehouse esistente](#fac) (disponibilità limitata)
 - [Importare tipi di pubblico generati esternamente](#import-audience)
 
 Per aprire Audience Portal, seleziona la scheda **[!UICONTROL Sfoglia]** nella sezione Segmentazione.
@@ -339,6 +340,12 @@ Selezionando **[!UICONTROL Componi pubblico]** puoi passare alla composizione de
 Selezionando **[!UICONTROL Genera regola]** puoi passare al Generatore di segmenti. Questa area di lavoro fornisce controlli intuitivi per la creazione e la modifica delle definizioni dei segmenti, ad esempio le tessere trascinate utilizzate per rappresentare le proprietà dei dati. Per ulteriori informazioni sulla creazione delle definizioni dei segmenti, consulta la [guida del Generatore di segmenti](./segment-builder.md)
 
 ![Viene visualizzata l&#39;area di lavoro del Generatore di segmenti.](../images/ui/audience-portal/segment-builder.png)
+
+### Composizione di pubblico federato {#fac}
+
+Oltre alle composizioni del pubblico e alle definizioni dei segmenti, puoi utilizzare Adobe Federated Audience Composition per creare nuovi tipi di pubblico dai set di dati aziendali senza copiare i dati sottostanti e memorizzarli in Adobe Experience Platform Audience Portal. Puoi anche arricchire i tipi di pubblico esistenti in Adobe Experience Platform utilizzando dati di pubblico composti che sono stati federati dal data warehouse aziendale. Leggi la guida su [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+
+![Elenco di tipi di pubblico creati in Federated Audience Composition per la tua organizzazione.](../images/ui/overview/federated-audience-composition.png)
 
 ## Importazione di un pubblico {#import-audience}
 

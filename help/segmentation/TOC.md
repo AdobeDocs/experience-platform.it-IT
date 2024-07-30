@@ -5,10 +5,10 @@ breadcrumb-title: Guida al servizio di segmentazione
 user-guide-description: Crea tipi di pubblico dai dati del profilo cliente in tempo reale utilizzando definizioni di segmenti generate da Adobe Experience Platform o da origini esterne.
 feature: Segments
 role: User
-source-git-commit: 62a174e6f3b1bd1b0bc518ff7e5f236893e9e5d3
+source-git-commit: 515a7cc3ba12afe14aab3e882b7fd55d5cc09069
 workflow-type: tm+mt
-source-wordcount: '185'
-ht-degree: 43%
+source-wordcount: '191'
+ht-degree: 41%
 
 ---
 
@@ -36,6 +36,7 @@ ht-degree: 43%
    - [Audience Portal](ui/audience-portal.md)
    - [Composizione del pubblico](ui/audience-composition.md)
    - [Segment Builder](ui/segment-builder.md)
+   - [Composizione del pubblico federato (disponibilità limitata)](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)
    - [Pubblico dell’account](ui/account-audiences.md)
    - [Tipi di pubblico per similarità](ui/lookalike-audiences.md)
    - [Pubblico potenziale](ui/prospect-audience.md)
