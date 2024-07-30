@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Classe XDM ExperienceEvent
 description: Scopri la classe XDM ExperienceEvent e le best practice per la modellazione dei dati degli eventi.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 5537485206c1625ca661d6b33f7bba08538a0fa3
 workflow-type: tm+mt
-source-wordcount: '2672'
+source-wordcount: '2761'
 ht-degree: 0%
 
 ---
@@ -105,6 +105,7 @@ La tabella seguente illustra i valori accettati per `eventType` e le relative de
 | `advertising.timePlayed` | Questo evento tiene traccia della quantità di tempo trascorso da un utente su una specifica risorsa multimediale a tempo. |
 | `application.close` | Questo evento tiene traccia di quando un’applicazione è stata chiusa o inviata in background. |
 | `application.launch` | Questo evento tiene traccia di quando un’applicazione è stata avviata o portata in primo piano. |
+| `click` | **Obsoleto** Utilizza invece `decisioning.propositionInteract`. |
 | `commerce.backofficeCreditMemoIssued` | Questo evento tiene traccia di quando un avviso di credito è stato emesso a un cliente. |
 | `commerce.backofficeOrderCancelled` | Questo evento tiene traccia di quando un processo di acquisto avviato in precedenza è stato terminato prima del completamento. |
 | `commerce.backofficeOrderItemsShipped` | Questo evento tiene traccia di quando gli articoli acquistati sono stati fisicamente spediti al cliente. |
@@ -119,11 +120,12 @@ La tabella seguente illustra i valori accettati per `eventType` e le relative de
 | `commerce.productViews` | Questo evento tiene traccia di quando un prodotto ha ricevuto una o più visualizzazioni. |
 | `commerce.purchases` | Questo evento tiene traccia di quando un ordine è stato accettato. Questa è l’unica azione richiesta in una conversione commerce. Un evento di acquisto deve fare riferimento a un elenco di prodotti. |
 | `commerce.saveForLaters` | Questo evento tiene traccia di quando un elenco di prodotti è stato salvato per un utilizzo futuro, ad esempio una lista di desideri di prodotto. |
-| `decisioning.propositionDisplay` | Questo evento tiene traccia di quando una proposta decisionale è stata visualizzata a una persona. |
-| `decisioning.propositionDismiss` | Questo evento tiene traccia di quando è stata presa la decisione di non partecipare all’offerta presentata. |
-| `decisioning.propositionInteract` | Questo evento tiene traccia di quando una persona ha interagito con una proposta decisionale. |
+| `decisioning.propositionDisplay` | Questo evento viene utilizzato quando Web SDK invia automaticamente informazioni su ciò che viene visualizzato in una pagina. Tuttavia, non è necessario questo tipo di evento se si includono già le informazioni di visualizzazione in altri modi, come con gli hit di pagina superiori e inferiori. Per la parte inferiore degli hit pagina, puoi scegliere qualsiasi tipo di evento desiderato. |
+| `decisioning.propositionDismiss` | Questo tipo di evento viene utilizzato quando un messaggio in-application di Adobe Journey Optimizer o una scheda di contenuti viene chiusa. |
+| `decisioning.propositionFetch` | Utilizzato per indicare che un evento è principalmente per recuperare le decisioni. Adobe Analytics rilascerà automaticamente questo evento. |
+| `decisioning.propositionInteract` | Questo tipo di evento viene utilizzato per tenere traccia delle interazioni, come i clic, sul contenuto personalizzato. |
 | `decisioning.propositionSend` | Questo evento tiene traccia di quando è stato deciso di inviare a un potenziale cliente un consiglio o un&#39;offerta da prendere in considerazione. |
-| `decisioning.propositionTrigger` | Questo evento tiene traccia dell’attivazione di un processo di proposta. Si è verificata una determinata condizione o azione per richiedere la presentazione di un’offerta. |
+| `decisioning.propositionTrigger` | Gli eventi di questo tipo vengono archiviati nell&#39;archivio locale da [Web SDK](../../web-sdk/home.md) ma non vengono inviati a Experience Edge. Ogni volta che un set di regole viene soddisfatto, un evento viene generato e memorizzato nell’archiviazione locale (se tale impostazione è abilitata). |
 | `delivery.feedback` | Questo evento tiene traccia degli eventi di feedback per una consegna, ad esempio una consegna e-mail. |
 | `directMarketing.emailBounced` | Questo evento tiene traccia di quando un’e-mail inviata a una persona non viene recapitata. |
 | `directMarketing.emailBouncedSoft` | Questo evento tiene traccia dei mancati recapiti non permanenti di un’e-mail a una persona. |
@@ -132,6 +134,7 @@ La tabella seguente illustra i valori accettati per `eventType` e le relative de
 | `directMarketing.emailOpened` | Questo evento tiene traccia di quando una persona ha aperto un’e-mail di marketing. |
 | `directMarketing.emailSent` | Questo evento tiene traccia di quando un’e-mail di marketing è stata inviata a una persona. |
 | `directMarketing.emailUnsubscribed` | Questo evento tiene traccia di quando una persona ha annullato l’abbonamento a un’e-mail di marketing. |
+| `display` | **Obsoleto** Utilizza invece `decisioning.propositionDisplay`. |
 | `inappmessageTracking.dismiss` | Questo evento tiene traccia di quando un messaggio in-app è stato chiuso. |
 | `inappmessageTracking.display` | Questo evento traccia la visualizzazione di un messaggio in-app. |
 | `inappmessageTracking.interact` | Questo evento tiene traccia di quando è stato interagito un messaggio in-app con. |
@@ -146,33 +149,34 @@ La tabella seguente illustra i valori accettati per `eventType` e le relative de
 | `leadOperation.statusInCampaignProgressionChanged` | Questo evento tiene traccia di quando lo stato di un lead in una campagna è cambiato. |
 | `listOperation.addToList` | Questo evento tiene traccia di quando una persona è stata aggiunta a un elenco di marketing. |
 | `listOperation.removeFromList` | Questo evento tiene traccia di quando una persona è stata rimossa da un elenco di marketing. |
-| `media.adBreakComplete` | Questo evento traccia quando si è verificato un evento `adBreakComplete`. Questo evento viene attivato all’inizio di un’interruzione pubblicitaria. |
-| `media.adBreakStart` | Questo evento traccia quando si è verificato un evento `adBreakStart`. Questo evento viene attivato al termine di un’interruzione pubblicitaria. |
-| `media.adComplete` | Questo evento traccia quando si è verificato un evento `adComplete`. Questo evento viene attivato quando un annuncio è stato completato. |
-| `media.adSkip` | Questo evento traccia quando si è verificato un evento `adSkip`. Questo evento viene attivato quando un annuncio viene saltato. |
-| `media.adStart` | Questo evento traccia quando si è verificato un evento `adStart`. Questo evento viene attivato all&#39;avvio di un annuncio. |
-| `media.bitrateChange` | Questo evento tiene traccia di quando si è verificato un evento `bitrateChange`. Questo evento viene attivato quando si verifica una modifica nella velocità bit. |
-| `media.bufferStart` | Questo evento tiene traccia di quando si è verificato un evento `bufferStart`. Questo evento viene attivato quando il contenuto multimediale inizia a memorizzare in un buffer. |
-| `media.chapterComplete` | Questo evento tiene traccia di quando si è verificato un evento `chapterComplete`. Questo evento viene attivato al completamento di un capitolo nel file multimediale. |
-| `media.chapterSkip` | Questo evento tiene traccia di quando si è verificato un evento `chapterSkip`. Questo evento viene attivato quando un utente passa avanti o indietro a un’altra sezione o capitolo all’interno del contenuto multimediale. |
-| `media.chapterStart` | Questo evento tiene traccia di quando si è verificato un evento `chapterStart`. Questo evento viene attivato all’inizio di una sezione o di un capitolo specifico all’interno del contenuto multimediale. |
+| `media.adBreakComplete` | Questo evento segnala il completamento di un’interruzione pubblicitaria. |
+| `media.adBreakStart` | Questo evento segnala l’inizio di un’interruzione pubblicitaria. |
+| `media.adComplete` | Questo evento segnala il completamento di un annuncio. |
+| `media.adSkip` | Questo evento segnala quando un annuncio viene saltato. |
+| `media.adStart` | Questo evento segnala l’inizio di un annuncio. |
+| `media.bitrateChange` | Questo evento segnala quando si verifica una modifica nel bitrate. |
+| `media.bufferStart` | Il tipo di evento `media.bufferStart` viene inviato all&#39;inizio del buffering. Non esiste un tipo di evento `bufferResume` specifico; il buffering viene considerato ripreso quando un evento `play` viene inviato dopo un evento `bufferStart`. |
+| `media.chapterComplete` | Questo evento segnala il completamento di un capitolo. |
+| `media.chapterSkip` | Questo evento viene attivato quando un utente passa avanti o indietro a un’altra sezione o capitolo. |
+| `media.chapterStart` | Questo evento segnala l’inizio di un capitolo. |
 | `media.downloaded` | Questo evento tiene traccia di quando si sono verificati contenuti multimediali scaricati. |
-| `media.error` | Questo evento traccia quando si è verificato un evento `error`. Questo evento viene attivato quando si verifica un errore o un problema durante la riproduzione di contenuti multimediali. |
-| `media.pauseStart` | Questo evento tiene traccia di quando si è verificato un evento `pauseStart`. Questo evento viene attivato quando un utente avvia una pausa nella riproduzione di contenuti multimediali. |
-| `media.ping` | Questo evento traccia quando si è verificato un evento `ping`. In questo modo viene verificata la disponibilità di una risorsa multimediale. |
-| `media.play` | Questo evento tiene traccia di quando si è verificato un evento `play`. Questo evento viene attivato durante la riproduzione del contenuto multimediale, indicando il consumo attivo da parte dell’utente. |
-| `media.sessionComplete` | Questo evento tiene traccia di quando si è verificato un evento `sessionComplete`. Questo evento segna la fine di una sessione di riproduzione multimediale. |
-| `media.sessionEnd` | Questo evento tiene traccia di quando si è verificato un evento `sessionEnd`. Questo evento indica la conclusione di una sessione multimediale. Questa conclusione può comportare la chiusura del lettore multimediale o l’interruzione della riproduzione. |
-| `media.sessionStart` | Questo evento tiene traccia di quando si è verificato un evento `sessionStart`. Questo evento segna l’inizio di una sessione di riproduzione multimediale. Viene attivato quando un utente avvia la riproduzione di un file multimediale. |
-| `media.statesUpdate` | Questo evento tiene traccia di quando si è verificato un evento `statesUpdate`. Le funzionalità di tracciamento dello stato del lettore possono essere collegate a un flusso audio o video. Gli stati standard sono: fullscreen, mute, closedCaptioning, pictureInPicture e inFocus. |
+| `media.error` | Questo evento segnala quando si è verificato un errore durante la riproduzione del contenuto multimediale. |
+| `media.pauseStart` | Questo evento tiene traccia di quando si è verificato un evento `pauseStart`. Questo evento viene attivato quando un utente avvia una pausa nella riproduzione di contenuti multimediali. Non esiste un tipo di evento di ripresa. La ripresa viene dedotta quando si invia un evento di riproduzione dopo `pauseStart`. |
+| `media.ping` | Il tipo di evento `media.ping` viene utilizzato per indicare lo stato di riproduzione in corso. Per il contenuto principale, questo evento deve essere inviato ogni 10 secondi durante la riproduzione, a partire da 10 secondi dopo l’inizio della riproduzione. Per il contenuto degli annunci, deve essere inviato ogni secondo durante il tracciamento degli annunci. Gli eventi ping non devono includere la mappa dei parametri nel corpo della richiesta. |
+| `media.play` | Il tipo di evento `media.play` viene inviato quando il lettore passa allo stato `playing` da un altro stato, ad esempio `buffering,` `paused` (quando viene ripreso dall&#39;utente) o `error` (quando viene ripristinato), inclusi scenari come la riproduzione automatica. Questo evento viene attivato dal callback `on('Playing')` del lettore. |
+| `media.sessionComplete` | Questo evento viene inviato al raggiungimento della fine del contenuto principale. |
+| `media.sessionEnd` | Il tipo di evento `media.sessionEnd` notifica al backend di Media Analytics la chiusura immediata di una sessione quando un utente abbandona la visualizzazione ed è improbabile che ritorni. Se questo evento non viene inviato, la sessione si interrompe dopo 10 minuti di inattività o 30 minuti senza movimento dell’indicatore di riproduzione. Eventuali chiamate multimediali successive con tale ID sessione verranno ignorate. |
+| `media.sessionStart` | Il tipo di evento `media.sessionStart` viene inviato con la chiamata di avvio della sessione. Dopo aver ricevuto una risposta, l’ID sessione viene estratto dall’intestazione Posizione e utilizzato per tutte le chiamate evento successive al server di raccolta. |
+| `media.statesUpdate` | Questo evento tiene traccia di quando si è verificato un evento `statesUpdate`. Le funzionalità di tracciamento dello stato del lettore possono essere collegate a un flusso audio o video. Gli stati standard sono: `fullscreen`, `mute`, `closedCaptioning`, `pictureInPicture` e `inFocus`. |
 | `opportunityEvent.addToOpportunity` | Questo evento tiene traccia di quando una persona è stata aggiunta a un’opportunità. |
 | `opportunityEvent.opportunityUpdated` | Questo evento tiene traccia di quando un’opportunità è stata aggiornata. |
 | `opportunityEvent.removeFromOpportunity` | Questo evento tiene traccia di quando una persona è stata rimossa da un’opportunità. |
+| `personalization.request` | **Obsoleto** Utilizza invece `decisioning.propositionFetch`. |
 | `pushTracking.applicationOpened` | Questo evento tiene traccia di quando una persona ha aperto un’applicazione da una notifica push. |
 | `pushTracking.customAction` | Questo evento tiene traccia di quando una persona ha selezionato un’azione personalizzata in una notifica push. |
 | `web.formFilledOut` | Questo evento tiene traccia di quando una persona ha compilato un modulo su una pagina web. |
-| `web.webinteraction.linkClicks` | Questo evento tiene traccia di quando un collegamento è stato selezionato una o più volte. |
-| `web.webpagedetails.pageViews` | Questo evento tiene traccia di quando una pagina Web ha ricevuto una o più visualizzazioni. |
+| `web.webinteraction.linkClicks` | L’evento segnala che un clic su un collegamento è stato registrato automaticamente dall’SDK web. |
+| `web.webpagedetails.pageViews` | Questo tipo di evento è il metodo standard per contrassegnare l’hit come visualizzazione di pagina. |
 | `location.entry` | Questo evento tiene traccia dell’ingresso di una persona o di un dispositivo in una posizione specifica. |
 | `location.exit` | Questo evento tiene traccia dell’uscita di una persona o di un dispositivo da una posizione specifica. |
 

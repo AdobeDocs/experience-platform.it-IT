@@ -2,7 +2,7 @@
 title: Esempi di set di dati
 description: I set di dati di esempio di Query Service consentono di eseguire query esplorative sui big data con tempi di elaborazione notevolmente ridotti a scapito della precisione delle query. Questa guida fornisce informazioni su come gestire gli esempi per l’elaborazione approssimativa delle query
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 28fe8ec5a589b8d181ba2f888d50fa9d2d7d4996
 workflow-type: tm+mt
 source-wordcount: '643'
 ht-degree: 0%
@@ -100,7 +100,7 @@ SELECT * FROM example_dataset_name WITHAPPROXIMATE;
 L’operazione di eliminazione ti consente di creare nuovi campioni una volta raggiunto il limite massimo di cinque campioni di set di dati.
 
 ```sql
-DROP TABLE SAMPLE x5e5cd8ea0a83c418a8ef0928_uniform_2_0_percent_bnhmc;
+DROP TABLESAMPLE x5e5cd8ea0a83c418a8ef0928_uniform_2_0_percent_bnhmc;
 ```
 
 >[!NOTE]
