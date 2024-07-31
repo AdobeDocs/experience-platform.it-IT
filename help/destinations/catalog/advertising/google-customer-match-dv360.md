@@ -3,9 +3,9 @@ title: Customer Match Google + Display e connessione Video 360
 description: Con il connettore di destinazione Google Customer Match + Display & Video 360, puoi utilizzare i dati online e offline di Experience Platform per raggiungere e coinvolgere nuovamente i clienti nelle proprietà possedute e gestite da Google, come Search, Shopping, Gmail e YouTube.
 badgeBeta: label="Beta" type="Informative"
 exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: c3de72a0f90578803b969f32cc484047089099bd
 workflow-type: tm+mt
-source-wordcount: '1935'
+source-wordcount: '1999'
 ht-degree: 1%
 
 ---
@@ -222,6 +222,12 @@ I dati degli spazi dei nomi senza hash vengono automaticamente sottoposti a hash
 L&#39;hash dei dati di origine degli attributi non viene eseguito automaticamente. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Applica trasformazione]** per impostare [!DNL Platform] per l&#39;hashing automatico dei dati all&#39;attivazione.
 
 ![Applica controllo di trasformazione evidenziato nel passaggio di mappatura del flusso di lavoro di attivazione.](../../assets/catalog/advertising/google-customer-match-dv360/transformation.png)
+
+## Monitorare la destinazione
+
+Dopo la connessione alla destinazione e la definizione di un flusso di dati di destinazione, puoi utilizzare la [funzionalità di monitoraggio](/help/dataflows/ui/monitor-destinations.md) in Real-Time CDP per ottenere informazioni dettagliate sui record del profilo attivati nella destinazione in ogni esecuzione del flusso di dati.
+
+Le informazioni di monitoraggio per la connessione [!DNL Google Customer Match + Display & Video 360] includono informazioni a livello di pubblico relative a identità attivate, escluse e non riuscite in ogni flusso di dati e flusso di dati eseguito. Ulteriori informazioni sulla funzionalità.
 
 ## Verifica che l’attivazione del pubblico sia avvenuta correttamente {#verify-activation}
 

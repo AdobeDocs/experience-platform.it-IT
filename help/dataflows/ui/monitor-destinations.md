@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Monitorare i flussi di dati per le destinazioni nell’interfaccia utente
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 19f1f64434d655d3b19260460519018fc9c8e174
+source-git-commit: ee63f5ee6cca98e0b5838dc2de656d1d615a0b3a
 workflow-type: tm+mt
-source-wordcount: '3337'
+source-wordcount: '3549'
 ht-degree: 10%
 
 ---
@@ -86,7 +86,7 @@ Viene visualizzato un elenco di singole esecuzioni e delle relative metriche spe
 
 Ogni singola esecuzione del flusso di dati mostra i seguenti dettagli:
 
-- **[!UICONTROL Inizio esecuzione flusso di dati]**: ora di inizio dell&#39;esecuzione del flusso di dati. Per le esecuzioni di flussi di dati in streaming, Experience Platform acquisisce metriche basate sull’inizio dell’esecuzione del flusso di dati, sotto forma di metriche orarie. Per le esecuzioni dei flussi di dati in streaming, se un flusso di dati viene avviato, ad esempio, alle 22:30, la metrica mostra l’ora di inizio come 22:00 nell’interfaccia utente.
+- **[!UICONTROL Inizio esecuzione flusso di dati]**: ora di inizio dell&#39;esecuzione del flusso di dati. Per le esecuzioni di flussi di dati in streaming, Experience Platform acquisisce metriche basate sull’inizio dell’esecuzione del flusso di dati, sotto forma di metriche orarie. Ciò significa che per l’esecuzione del flusso di dati in streaming, se un flusso di dati viene avviato, ad esempio, alle 22:30, la metrica mostra l’ora di inizio come 22:00 nell’interfaccia utente.
 - **[!UICONTROL Tempo di elaborazione]**: tempo necessario all&#39;elaborazione del flusso di dati.
    - Per le esecuzioni di **[!UICONTROL completed]**, la metrica del tempo di elaborazione mostra sempre un&#39;ora.
    - Per le esecuzioni di flussi di dati che si trovano ancora in uno stato di **[!UICONTROL elaborazione]**, la finestra per acquisire tutte le metriche rimane aperta per più di un&#39;ora, per elaborare tutte le metriche che corrispondono all&#39;esecuzione del flusso di dati. Ad esempio, un’esecuzione di un flusso di dati avviata alle 09:30 potrebbe rimanere in uno stato di elaborazione per un’ora e trenta minuti per acquisire ed elaborare tutte le metriche. Quindi, una volta che la finestra di elaborazione si chiude e lo stato dell&#39;esecuzione del flusso di dati diventa **completato**, il tempo di elaborazione visualizzato viene modificato in un&#39;ora.
@@ -107,6 +107,16 @@ La pagina dei dettagli per un’esecuzione del flusso di dati contiene informazi
 Nella pagina dei dettagli viene inoltre visualizzato un elenco di identità con errori e di identità escluse. Vengono visualizzate informazioni sia per le identità non riuscite che per quelle escluse, inclusi il codice di errore, il conteggio delle identità e la descrizione. Per impostazione predefinita, nell’elenco vengono visualizzate le identità con errori. Per visualizzare le identità ignorate, seleziona l&#39;opzione **[!UICONTROL Identità escluse]**.
 
 ![Record di flusso di dati per le destinazioni di streaming con un messaggio di errore evidenziato.](../assets/ui/monitor-destinations/dataflow-records-stream.png)
+
+#### (Beta) Monitoraggio dell’esecuzione dei flussi di dati a livello di pubblico per le destinazioni di streaming {#audience-level-dataflow-runs-for-streaming-destinations}
+
+Puoi visualizzare informazioni sulle identità attivate, escluse o non riuscite suddivise a livello di pubblico, per ogni pubblico che fa parte del flusso di dati. Questo può aiutarti a capire che il monitoraggio a livello di pubblico per le destinazioni di streaming è attualmente disponibile solo per la [[!DNL Google Customer Match + Display & Video 360] destinazione](/help/destinations/catalog/advertising/google-customer-match-dv360.md).
+
+![Monitoraggio a livello di pubblico per le destinazioni di streaming.](/help/dataflows/assets/ui/monitor-destinations/audience-level-monitoring-streaming.png)
+
+>[!NOTE]
+>
+>Il numero di **[!UICONTROL profili ricevuti]** nella scheda dei tipi di pubblico potrebbe non corrispondere sempre al numero di profili ricevuti per l&#39;esecuzione del flusso di dati. Questo perché un dato profilo potrebbe far parte di più tipi di pubblico attivati nell’esecuzione del flusso di dati.
 
 ### Il flusso di dati viene eseguito per le destinazioni di batch {#dataflow-runs-for-batch-destinations}
 
@@ -166,12 +176,25 @@ Nella pagina dei dettagli viene inoltre visualizzato un elenco di identità con 
 
 ![Record di flusso di dati per destinazioni batch con un messaggio di errore evidenziato.](../assets/ui/monitor-destinations/dataflow-records-batch.png)
 
+### Visualizza nel monitoraggio {#view-in-monitoring}
+
+Puoi anche scegliere di visualizzare informazioni dettagliate su un determinato flusso di dati e il relativo flusso di dati viene eseguito nel dashboard di monitoraggio. Per visualizzare informazioni su un flusso di dati nel dashboard di monitoraggio:
+
+1. Passa a **[!UICONTROL Connessioni]** > **[!UICONTROL Destinazioni]** > **[!UICONTROL Sfoglia]** scheda
+2. Passa al flusso di dati che desideri ispezionare.
+3. Seleziona il simbolo di puntini di sospensione e l&#39;![icona di monitoraggio](/help/images/icons/monitoring.png) **[!UICONTROL Visualizza nel monitoraggio]**.
+
+![Per ottenere ulteriori informazioni su un flusso di dati, seleziona Visualizza nel monitoraggio nel flusso di lavoro delle destinazioni.](/help/dataflows/assets/ui/monitor-destinations/view-in-monitoring.png)
+
+>[!SUCCESS]
+>
+>Ora puoi visualizzare le informazioni sul flusso di dati e sul flusso di dati associato che viene eseguito nel dashboard di monitoraggio. Per ulteriori informazioni, consulta la sezione seguente.
+
 ## Dashboard di monitoraggio delle destinazioni {#monitoring-destinations-dashboard}
 
 >[!NOTE]
 >
->- La funzionalità di monitoraggio delle destinazioni è attualmente supportata per tutte le destinazioni nell&#39;Experience Platform *eccetto* le destinazioni [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) e [Personalizzazione personalizzata](/help/destinations/catalog/personalization/custom-personalization.md).
->- Per le destinazioni [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md) e [HTTP API](/help/destinations/catalog/streaming/http-destination.md), vengono stimate le metriche relative alle identità escluse, non riuscite e attivate. Volumi più elevati di dati di attivazione consentono una maggiore precisione delle metriche.
+>La funzionalità di monitoraggio delle destinazioni è attualmente supportata per tutte le destinazioni nell&#39;Experience Platform *eccetto* le destinazioni [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) e [Personalizzazione personalizzata](/help/destinations/catalog/personalization/custom-personalization.md).
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"
@@ -208,17 +231,20 @@ Utilizza l&#39;icona freccia (![icona freccia](/help/images/icons/chevron-up.png
 
 Il grafico **[!UICONTROL Activation]** viene visualizzato per impostazione predefinita ed è possibile disattivarlo per espandere l&#39;elenco di destinazioni di seguito. Seleziona l&#39;interruttore **[!UICONTROL Metriche e grafici]** per disabilitare i grafici.
 
-Il pannello **[!UICONTROL Activation]** visualizza un elenco di destinazioni che contengono almeno un account esistente. Questo elenco include anche informazioni sui profili ricevuti, identità attivate, identità non riuscite, identità escluse, tasso di attivazione, flussi di dati totali non riusciti e la data dell’ultimo aggiornamento per queste destinazioni. Non tutte le metriche sono disponibili per tutti i tipi di destinazione. La tabella seguente illustra le metriche e le informazioni disponibili per tipo di destinazione, streaming o batch.
+Il pannello **[!UICONTROL Activation]** visualizza un elenco di destinazioni che contengono almeno un account esistente. Questo elenco include anche informazioni sui profili ricevuti, identità attivate, identità non riuscite, identità escluse, tasso di attivazione, flussi di dati totali non riusciti e la data dell’ultimo aggiornamento per queste destinazioni. Non tutte le metriche sono disponibili per tutti i tipi di destinazione. La tabella seguente illustra le metriche e le informazioni disponibili per tipo di destinazione.
 
 | Metrica | Tipo di destinazione |
----------|----------|
-| **[!UICONTROL Profili ricevuti]** | Streaming e batch |
-| **[!UICONTROL Identità attivate]** | Streaming e batch |
-| **[!UICONTROL Identità non riuscite]** | Streaming |
-| **[!UICONTROL Identità escluse]** | Streaming e batch |
+|--------------------------------------|-----------------------|
+| **[!UICONTROL Record ricevuti]** | Streaming e batch |
+| **[!UICONTROL Record attivati]** | Streaming e batch |
+| **[!UICONTROL Record non riusciti]** | Streaming |
+| **[!UICONTROL Record ignorati]** | Streaming e batch |
+| **[!UICONTROL Tipo di dati]** | Streaming e batch |
 | **[!UICONTROL Tasso di attivazione]** | Streaming |
 | **[!UICONTROL Totale flussi di dati non riusciti]** | Batch |
 | **[!UICONTROL Ultimo aggiornamento]** | Streaming e batch |
+
+{style="table-layout:auto"}
 
 ![Dashboard di monitoraggio con tutte le destinazioni attivate evidenziate.](../assets/ui/monitor-destinations/dashboard-destinations.png)
 
@@ -256,15 +282,15 @@ Utilizza l&#39;interruttore **[!UICONTROL Mostra solo errori]** per visualizzare
 
 ### Visualizzazione a livello di pubblico {#segment-level-view}
 
-Quando **[!UICONTROL Tipi di pubblico]** è selezionato, viene visualizzato un elenco dei tipi di pubblico attivati nel flusso di dati selezionato, all&#39;interno dell&#39;intervallo di tempo selezionato. Questa schermata include informazioni a livello di pubblico sulle identità attivate, sulle identità escluse, nonché sullo stato e sull’ora dell’ultima esecuzione del flusso di dati. Esaminando le metriche per le identità escluse e attivate, puoi verificare se un pubblico è stato attivato correttamente o meno.
+Quando **[!UICONTROL Tipi di pubblico]** è selezionato, viene visualizzato un elenco dei tipi di pubblico attivati nel flusso di dati selezionato, all&#39;interno dell&#39;intervallo di tempo selezionato. Questa schermata include informazioni a livello di pubblico sui record attivati, sui record esclusi, nonché sullo stato e sull’ora dell’ultima esecuzione del flusso di dati. Esaminando le metriche per i record esclusi e attivati, puoi verificare se un pubblico è stato attivato correttamente o meno.
 
-Ad esempio, stai attivando un pubblico denominato &quot;Membri fedeltà in California&quot; in una destinazione Amazon S3 &quot;Membri fedeltà California December&quot;. Supponiamo che nel pubblico selezionato siano presenti 100 profili, ma solo 80 profili su 100 contengono gli attributi dell&#39;ID fedeltà e che le regole di mappatura dell&#39;esportazione siano state definite come `loyalty.id` obbligatorie. In questo caso, a livello di pubblico, vedrai 80 identità attivate e 20 identità escluse.
+Ad esempio, stai attivando un pubblico denominato &quot;Membri fedeltà in California&quot; in una destinazione Amazon S3 &quot;Membri fedeltà California December&quot;. Supponiamo che nel pubblico selezionato siano presenti 100 profili, ma solo 80 record su 100 contengono gli attributi dell&#39;ID fedeltà e che le regole di mappatura dell&#39;esportazione siano state definite come `loyalty.id` obbligatorie. In questo caso, a livello di pubblico, vedrai 80 record attivati e 20 record esclusi.
 
 >[!IMPORTANT]
 >
 >Tieni presente le limitazioni correnti relative alle metriche a livello di pubblico:
->- La visualizzazione a livello di pubblico è attualmente disponibile solo per le destinazioni batch.
->- Le metriche a livello di pubblico sono attualmente registrate solo per l’esecuzione corretta del flusso di dati. Non vengono registrati per le esecuzioni dei flussi di dati non riuscite e i record esclusi.
+>- La visualizzazione a livello di pubblico è attualmente disponibile solo per le destinazioni batch (basate su file) e per la destinazione di streaming [Google Customer Match DV 360](/help/destinations/catalog/advertising/google-customer-match-dv360.md). Il rollout è pianificato per ulteriori destinazioni di streaming.
+>- Per le destinazioni batch, le metriche a livello di pubblico sono attualmente registrate solo per l’esecuzione corretta del flusso di dati. Non vengono registrati per le esecuzioni dei flussi di dati non riuscite e i record esclusi. Per l’esecuzione del flusso di dati su destinazioni di streaming, le metriche vengono acquisite e visualizzate per i record attivati ed esclusi.
 
 ![Tipi di pubblico evidenziati nel pannello del flusso di dati.](../assets/ui/monitor-destinations/dashboard-segments-view.png)
 
@@ -273,13 +299,13 @@ Utilizza il pulsante filtro ![filter](/help/images/icons/filter-add.png) per ana
 
 ### Pagina di esecuzione del flusso di dati {#dataflow-runs-page}
 
-La pagina Esecuzioni flusso di dati visualizza informazioni sulle esecuzioni del flusso di dati, tra cui l’ora di inizio dell’esecuzione del flusso di dati, il tempo di elaborazione, i profili ricevuti, le identità attivate, le identità escluse, le identità non riuscite, il tasso di attivazione e lo stato.
+La pagina Esecuzioni flusso di dati visualizza informazioni sulle esecuzioni del flusso di dati, tra cui l’ora di inizio dell’esecuzione del flusso di dati, il tempo di elaborazione, i record ricevuti, i record attivati, i record esclusi, i record con errore, il tasso di attivazione e lo stato.
 
 Quando esegui il drill-down nella pagina del flusso di dati dalla [visualizzazione a livello di pubblico](#segment-level-view), puoi filtrare il flusso di dati eseguito in base alle seguenti opzioni:
 
-- **[!UICONTROL Il flusso di dati viene eseguito con identità non riuscite]**: per il pubblico selezionato, questa opzione elenca tutte le esecuzioni del flusso di dati non riuscite per l&#39;attivazione. Per verificare il motivo per cui le identità in una determinata esecuzione del flusso di dati non sono riuscite, vedere la [pagina dei dettagli di esecuzione del flusso di dati](#dataflow-run-details-page) per tale esecuzione.
-- **[!UICONTROL Il flusso di dati viene eseguito con identità ignorate]**: per il pubblico selezionato, questa opzione elenca tutti i flussi di dati eseguiti in cui alcune identità non sono state completamente attivate e alcuni profili sono stati ignorati. Per verificare il motivo per cui le identità in una determinata esecuzione del flusso di dati sono state ignorate, vedere la [pagina dei dettagli di esecuzione del flusso di dati](#dataflow-run-details-page) per tale esecuzione.
-- **[!UICONTROL Il flusso di dati viene eseguito con identità attivate]**: per il pubblico selezionato, questa opzione elenca tutte le esecuzioni del flusso di dati con identità attivate correttamente.
+- **[!UICONTROL Il flusso di dati viene eseguito con record non riusciti]**: per il pubblico selezionato, questa opzione elenca tutte le esecuzioni del flusso di dati non riuscite per l&#39;attivazione. Per verificare il motivo per cui i record in una determinata esecuzione del flusso di dati non sono riusciti, vedere la [pagina dei dettagli di esecuzione del flusso di dati](#dataflow-run-details-page) per tale esecuzione.
+- **[!UICONTROL Il flusso di dati viene eseguito con record esclusi]**: per il pubblico selezionato, questa opzione elenca tutte le esecuzioni del flusso di dati in cui alcuni record non sono stati completamente attivati e alcuni profili sono stati saltati. Per verificare il motivo per cui i record in una determinata esecuzione del flusso di dati sono stati ignorati, vedere la [pagina dei dettagli dell&#39;esecuzione del flusso di dati](#dataflow-run-details-page) per tale esecuzione.
+- **[!UICONTROL Il flusso di dati viene eseguito con record attivati]**: per il pubblico selezionato, questa opzione elenca tutte le esecuzioni del flusso di dati con record attivati correttamente.
 
 ![Pulsanti di opzione che mostrano come filtrare il flusso di dati per i tipi di pubblico.](/help/dataflows/assets/ui/monitor-destinations/dataflow-runs-segment-filter.png)
 
@@ -295,13 +321,13 @@ La pagina dei dettagli di esecuzione del flusso di dati, oltre ai dettagli ripor
 - **[!UICONTROL ID organizzazione IMS]**: organizzazione a cui appartiene il flusso di dati.
 - **[!UICONTROL Ultimo aggiornamento]**: ora dell&#39;ultimo aggiornamento del flusso di dati.
 
-La pagina dei dettagli dispone anche di un interruttore per passare dagli errori di esecuzione del flusso di dati ai tipi di pubblico e viceversa. Questa opzione è disponibile solo per i flussi di dati eseguiti in destinazioni batch.
+La pagina dei dettagli dispone anche di un interruttore per passare dagli errori di esecuzione del flusso di dati ai tipi di pubblico e viceversa. Questa opzione è disponibile solo per il flusso di dati eseguito in destinazioni batch e per la destinazione di streaming [Google Customer Match DV 360](/help/destinations/catalog/advertising/google-customer-match-dv360.md).
 
-La visualizzazione degli errori di esecuzione del flusso di dati mostra un elenco di identità non riuscite e di identità escluse. Vengono visualizzate informazioni sia per le identità non riuscite che per quelle escluse, inclusi il codice di errore, il conteggio delle identità e la descrizione. Per impostazione predefinita, nell’elenco vengono visualizzate le identità con errori. Per visualizzare le identità ignorate, seleziona l&#39;opzione **[!UICONTROL Identità escluse]**.
+Nella visualizzazione errori di esecuzione del flusso di dati viene visualizzato un elenco di record con errori e di record ignorati. Vengono visualizzate informazioni sia per i record con errori che per quelli ignorati, inclusi il codice di errore, il conteggio delle identità e la descrizione. Per impostazione predefinita, nell&#39;elenco vengono visualizzati i record con errori. Per visualizzare i record ignorati, selezionare l&#39;opzione **[!UICONTROL Record ignorati]**.
 
 ![Le identità escluse vengono evidenziate nella visualizzazione di monitoraggio](../assets/ui/monitor-destinations/identities-excluded.png)
 
-Quando **[!UICONTROL Tipi di pubblico]** è selezionato, viene visualizzato un elenco dei tipi di pubblico attivati nell&#39;esecuzione del flusso di dati selezionato. Questa schermata include informazioni a livello di pubblico sulle identità attivate, sulle identità escluse, nonché sullo stato e sull’ora dell’ultima esecuzione del flusso di dati.
+Quando **[!UICONTROL Tipi di pubblico]** è selezionato, viene visualizzato un elenco dei tipi di pubblico attivati nell&#39;esecuzione del flusso di dati selezionato. Questa schermata include informazioni a livello di pubblico sui record attivati, sui record esclusi, nonché sullo stato e sull’ora dell’ultima esecuzione del flusso di dati.
 
 ![Visualizzazione tipi di pubblico nella schermata dei dettagli di esecuzione del flusso di dati.](../assets/ui/monitor-destinations/dataflow-run-segments-view.png)
 
