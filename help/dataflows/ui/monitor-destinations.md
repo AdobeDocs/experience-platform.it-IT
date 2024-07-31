@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Monitorare i flussi di dati per le destinazioni nell’interfaccia utente
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: ee63f5ee6cca98e0b5838dc2de656d1d615a0b3a
+source-git-commit: 27802292a7a06f2edaea9efc39d4a63507e0e7e1
 workflow-type: tm+mt
-source-wordcount: '3549'
+source-wordcount: '3542'
 ht-degree: 10%
 
 ---
@@ -110,13 +110,13 @@ Nella pagina dei dettagli viene inoltre visualizzato un elenco di identità con 
 
 #### (Beta) Monitoraggio dell’esecuzione dei flussi di dati a livello di pubblico per le destinazioni di streaming {#audience-level-dataflow-runs-for-streaming-destinations}
 
-Puoi visualizzare informazioni sulle identità attivate, escluse o non riuscite suddivise a livello di pubblico, per ogni pubblico che fa parte del flusso di dati. Questo può aiutarti a capire che il monitoraggio a livello di pubblico per le destinazioni di streaming è attualmente disponibile solo per la [[!DNL Google Customer Match + Display & Video 360] destinazione](/help/destinations/catalog/advertising/google-customer-match-dv360.md).
+Puoi visualizzare informazioni sulle identità attivate, escluse o non riuscite suddivise a livello di pubblico, per ogni pubblico che fa parte del flusso di dati. Il monitoraggio a livello di pubblico per le destinazioni di streaming è attualmente disponibile solo per la [[!DNL Google Customer Match + Display & Video 360] destinazione](/help/destinations/catalog/advertising/google-customer-match-dv360.md).
 
 ![Monitoraggio a livello di pubblico per le destinazioni di streaming.](/help/dataflows/assets/ui/monitor-destinations/audience-level-monitoring-streaming.png)
 
 >[!NOTE]
 >
->Il numero di **[!UICONTROL profili ricevuti]** nella scheda dei tipi di pubblico potrebbe non corrispondere sempre al numero di profili ricevuti per l&#39;esecuzione del flusso di dati. Questo perché un dato profilo potrebbe far parte di più tipi di pubblico attivati nell’esecuzione del flusso di dati.
+>Il numero di **[!UICONTROL profili ricevuti]** nella scheda **[!UICONTROL Tipi di pubblico]** potrebbe non corrispondere sempre al numero di profili ricevuti per l&#39;esecuzione del flusso di dati. Questo perché un dato profilo potrebbe far parte di più tipi di pubblico attivati nell’esecuzione del flusso di dati.
 
 ### Il flusso di dati viene eseguito per le destinazioni di batch {#dataflow-runs-for-batch-destinations}
 
