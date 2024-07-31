@@ -3,7 +3,7 @@ title: Tag Mailchimp
 description: La destinazione Mailchimp Tags ti consente di esportare i dati del tuo account e attivarli all’interno di Mailchimp per interagire con i contatti.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 0f278ca8-4fcf-4c47-b538-9cffa45a3d90
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '1646'
 ht-degree: 2%
@@ -175,9 +175,10 @@ Per mappare correttamente i campi XDM ai campi di destinazione [!DNL Mailchimp T
    ![Schermata dell&#39;interfaccia utente di Platform con il campo Target come E-mail dallo spazio dei nomi delle identità.](../../assets/catalog/email-marketing/mailchimp-tags/target-field.png)
 
    Le mappature tra lo schema del profilo XDM e [!DNL Mailchimp Tags] saranno le seguenti:
-| Campo Source | Campo di destinazione | Obbligatorio |
-| — | — | — |
-|`IdentityMap: Email`|`Identity: Email`| Sì |
+
+   | Campo origine | Campo di destinazione | Obbligatorio |
+   | --- | --- | --- |
+   | `IdentityMap: Email` | `Identity: Email` | Sì |
 
    Di seguito è riportato un esempio con le mappature completate:
    ![Esempio di schermata dell&#39;interfaccia utente di Platform che mostra le mappature dei campi.](../../assets/catalog/email-marketing/mailchimp-tags/mappings.png)

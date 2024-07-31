@@ -4,7 +4,7 @@ title: Connessione LINE
 description: La destinazione LINE ti consente di aggiungere profili al pubblico di Platform e di fornire esperienze personalizzate agli utenti connessi.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '1190'
 ht-degree: 2%
@@ -121,8 +121,9 @@ Leggi [Attivare profili e tipi di pubblico nelle destinazioni di esportazione de
 Per inviare correttamente i dati sul pubblico da Adobe Experience Platform alla destinazione [!DNL LINE], è necessario eseguire il passaggio di mappatura dei campi. La mappatura consiste nella creazione di un collegamento tra i campi dello schema Experience Data Model (XDM) nell’account Platform e i corrispondenti equivalenti dalla destinazione. Per mappare correttamente i campi XDM ai campi di destinazione [!DNL LINE], effettua le seguenti operazioni:
 
 A seconda dell’identità di origine, è necessario mappare i seguenti spazi dei nomi dell’identità di destinazione:
-| Identità di destinazione | Campo Source | Campo di destinazione |
-| — | — | — |
+
+| Identità di destinazione | Campo origine | Campo di destinazione |
+| --- | --- | --- |
 | ID per inserzionisti (IFA) | `IDFA` o `GAID` | `LineId` |
 | ID utente LINE | `UserID` | `LineId` |
 

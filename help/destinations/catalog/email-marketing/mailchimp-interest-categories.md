@@ -3,10 +3,10 @@ title: Categorie di interesse Mailchimp
 description: Mailchimp (noto anche come Intuit Mailchimp) è un popolare piattaforma di automazione del marketing e servizio di e-mail marketing utilizzato dalle aziende per gestire e parlare con i contatti (clienti, clienti o altre parti interessate) utilizzando mailing list e campagne di e-mail marketing. Utilizza questo connettore per ordinare i contatti in base ai loro interessi e preferenze.
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: bdce8295-7305-4d54-81c1-7fa3e580ce70
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '2299'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -168,12 +168,13 @@ Per mappare correttamente i campi XDM ai campi di destinazione [!DNL Mailchimp I
 1. Nella finestra **[!UICONTROL Seleziona campo di destinazione]**, scegli **[!UICONTROL Seleziona spazio dei nomi identità]** e seleziona un&#39;identità oppure scegli **[!UICONTROL Seleziona attributi]** categoria e seleziona dall&#39;elenco di attributi popolati dall&#39;API [!DNL Mailchimp]. *Tutti gli attributi personalizzati aggiunti al pubblico [!DNL Mailchimp] selezionato saranno disponibili per la selezione come campi di destinazione.*
 
    Di seguito sono indicate le mappature disponibili tra lo schema del profilo XDM e [!DNL Mailchimp Interest Categories]:
-| Campo Source | Campo di destinazione | Note |
-| — | — | — |
-|`IdentityMap: Email`|`Identity: email`| Obbligatorio: sì |
-|`xdm: person.name.firstName`|`Attribute: FNAME`| |
-|`xdm: person.name.lastName`|`Attribute: LNAME`| |
-|`xdm: person.birthDayAndMonth`|`Attribute: BIRTHDAY`| |
+
+   | Campo origine | Campo di destinazione | Note |
+   | --- | --- | --- |
+   | `IdentityMap: Email` | `Identity: email` | Obbligatorio: sì |
+   | `xdm: person.name.firstName` | `Attribute: FNAME` | |
+   | `xdm: person.name.lastName` | `Attribute: LNAME` | |
+   | `xdm: person.birthDayAndMonth` | `Attribute: BIRTHDAY` | |
 
    Inoltre, `ADDRESS` è un campo di destinazione speciale noto come `merge field` all&#39;interno del tuo pubblico [!DNL Mailchimp]. La [[!DNL Mailchimp] documentazione](https://mailchimp.com/developer/marketing/docs/merge-fields/) definisce le chiavi richieste come `addr1`, `city`, `state` e `zip` e le chiavi facoltative `addr2` e `country`. I valori per questi campi devono essere stringhe. Se è presente uno dei mapping di campi `ADDRESS`, la destinazione passa l&#39;oggetto `ADDRESS` all&#39;API [!DNL Mailchimp] per l&#39;aggiornamento. Il valore predefinito di qualsiasi campo `ADDRESS` non mappato è `NULL`, ad eccezione del paese che utilizza `US` come impostazione predefinita.
 

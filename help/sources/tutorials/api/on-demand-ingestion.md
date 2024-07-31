@@ -3,7 +3,7 @@ keywords: Experience Platform;home;argomenti popolari;servizio di flusso;
 title: Creare un’esecuzione del flusso per l’acquisizione su richiesta utilizzando l’API del servizio Flusso
 description: Scopri come creare un’esecuzione del flusso per l’acquisizione on-demand utilizzando l’API del servizio Flusso
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: cea12160656ba0724789db03e62213022bacd645
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '797'
 ht-degree: 2%
@@ -104,6 +104,7 @@ In caso di esito positivo, la risposta restituisce i dettagli della nuova esecuz
 | --- | --- |
 | `id` | ID dell’esecuzione del flusso appena creata. Per ulteriori informazioni sulle specifiche di esecuzione basate su tabelle, vedere la guida al [recupero delle specifiche di flusso](../api/collect/database-nosql.md#specs). |
 | `etag` | Versione risorsa dell’esecuzione del flusso. |
+
 <!-- 
 | `createdAt` | The unix timestamp that designates when the flow run was created. |
 | `updatedAt` | The unix timestamp that designates when the flow run was last updated. |

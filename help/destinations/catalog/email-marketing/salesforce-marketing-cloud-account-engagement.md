@@ -3,7 +3,7 @@ title: Coinvolgimento dell’account di Marketing Cloud Salesforce
 description: Scopri come utilizzare la destinazione Salesforce Marketing Cloud Account Engagement (precedentemente nota come Pardot) per esportare i dati dell’account e attivarli in Salesforce Marketing Cloud Account Engagement per le tue esigenze aziendali.
 last-substantial-update: 2023-04-14T00:00:00Z
 exl-id: fca9d4f4-8717-4bfa-9992-5164ba98bea4
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '1532'
 ht-degree: 2%
@@ -153,11 +153,12 @@ Per mappare correttamente i campi XDM ai campi di destinazione [!DNL Marketing C
 1. Nella finestra **[!UICONTROL Seleziona campo di destinazione]**, scegli **[!UICONTROL Seleziona spazio dei nomi identità]** e seleziona un&#39;identità oppure scegli **[!UICONTROL Seleziona attributi personalizzati]** categoria e specifica dall&#39;elenco di [[!DNL Prospect API fields]](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html#fields) dallo schema disponibile.
 
    * Ripeti questi passaggi per aggiungere qualsiasi mappatura tra lo schema del profilo XDM e [!DNL Marketing Cloud Account Engagement]:
-| Campo Source | Campo di destinazione | Obbligatorio |
-| — | — | — |
-|`IdentityMap: Email`|`Identity: email`| Sì |
-|`xdm: MailingAddress.city`|`xdm: city`| |
-|`xdm: person.name.firstName`|`Attribute: firstName`| |
+
+     | Campo origine | Campo di destinazione | Obbligatorio |
+     | --- | --- | --- |
+     | `IdentityMap: Email` | `Identity: email` | Sì |
+     | `xdm: MailingAddress.city` | `xdm: city` | |
+     | `xdm: person.name.firstName` | `Attribute: firstName` | |
 
    * Di seguito è riportato un esempio con le mappature di cui sopra:
      ![Esempio di schermata dell&#39;interfaccia utente di Platform che mostra le mappature di Target.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/mappings.png)

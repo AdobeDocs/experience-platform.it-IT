@@ -3,10 +3,10 @@ title: Connessione Zendesk
 description: La destinazione Zendesk ti consente di esportare i dati del tuo account e di attivarli all'interno di Zendesk per le tue esigenze aziendali.
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: e7fcbbf4-5d6c-4abb-96cb-ea5b67a88711
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '1469'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -121,12 +121,14 @@ Per mappare correttamente i campi XDM ai campi di destinazione [!DNL Zendesk], e
 1. Nel passaggio **[!UICONTROL Mapping]**, seleziona **[!UICONTROL Aggiungi nuovo mapping]**. Viene visualizzata una nuova riga di mappatura.
 1. Nella finestra **[!UICONTROL Seleziona campo di origine]**, scegli la categoria **[!UICONTROL Seleziona attributi]** e seleziona l&#39;attributo XDM oppure scegli lo spazio dei nomi **[!UICONTROL Seleziona identità]** e seleziona un&#39;identità.
 1. Nella finestra **[!UICONTROL Seleziona campo di destinazione]**, scegli la categoria **[!UICONTROL Seleziona spazio dei nomi identità]** e seleziona un&#39;identità di destinazione, oppure scegli la categoria **[!UICONTROL Seleziona attributi]** e seleziona uno degli attributi di schema supportati.
+
    * Ripeti questi passaggi per aggiungere le seguenti mappature obbligatorie, puoi anche aggiungere qualsiasi altro attributo che desideri aggiornare tra lo schema del profilo XDM e l&#39;istanza [!DNL Zendesk]:
-Campo Source|Campo di destinazione| Obbligatorio
-|—|—|—|
-|`xdm: person.name.lastName`|`xdm: last_name`| Sì |
-|`IdentityMap: Email`|`Identity: email`| Sì |
-|`xdm: person.name.firstName`|`xdm: first_name`| |
+
+     | Campo origine | Campo di destinazione | Obbligatorio |
+     |---|---|---|
+     | `xdm: person.name.lastName` | `xdm: last_name` | Sì |
+     | `IdentityMap: Email` | `Identity: email` | Sì |
+     | `xdm: person.name.firstName` | `xdm: first_name` | |
 
    * Di seguito è riportato un esempio che utilizza queste mappature:
      ![Esempio di schermata dell&#39;interfaccia utente di Platform con mappature di attributi.](../../assets/catalog/crm/zendesk/mappings.png)

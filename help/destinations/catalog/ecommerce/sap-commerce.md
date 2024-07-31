@@ -3,7 +3,7 @@ title: Connessione SAP Commerce
 description: Utilizzare il connettore di destinazione SAP Commerce per aggiornare i record dei clienti nell'account SAP.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 3bd1a2a7-fb56-472d-b9bd-603b94a8937e
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '2246'
 ht-degree: 3%
@@ -194,6 +194,7 @@ Per inviare correttamente i dati sul pubblico da Adobe Experience Platform alla 
 #### Mappa l&#39;identità `customerNumberSAP`
 
 L&#39;identità `customerNumberSAP` è una mappatura obbligatoria per questa destinazione. Segui i passaggi seguenti per mapparla:
+
 1. Nel passaggio **[!UICONTROL Mapping]**, seleziona **[!UICONTROL Aggiungi nuovo mapping]**. Ora è possibile visualizzare una nuova riga di mappatura sullo schermo.
    ![Schermata dell&#39;interfaccia utente di Platform con il pulsante Aggiungi nuova mappatura evidenziato.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
 1. Nella finestra **[!UICONTROL Seleziona campo di origine]**, scegli **[!UICONTROL Seleziona spazio dei nomi identità]** e seleziona `customerNumberSAP`.
@@ -211,6 +212,7 @@ Di seguito è riportato un esempio con la mappatura di identità:
 #### Mappatura degli attributi
 
 Per aggiungere altri attributi da aggiornare tra lo schema del profilo XDM e l&#39;account [!DNL SAP Subscription Billing], ripeti i passaggi seguenti:
+
 1. Nel passaggio **[!UICONTROL Mapping]**, seleziona **[!UICONTROL Aggiungi nuovo mapping]**. Ora è possibile visualizzare una nuova riga di mappatura sullo schermo.
    ![Schermata dell&#39;interfaccia utente di Platform con il pulsante Aggiungi nuova mappatura evidenziato.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
 1. Nella finestra **[!UICONTROL Seleziona campo di origine]**, scegli la categoria **[!UICONTROL Seleziona attributi]** e seleziona l&#39;attributo XDM.
@@ -302,8 +304,9 @@ Come mostrato, il valore all&#39;interno del campo **[!UICONTROL ID mappatura]**
 Ripeti questa sezione per ogni pubblico di Platform attivato.
 
 In base all’immagine mostrata sopra in cui hai selezionato due tipi di pubblico, la mappatura sarà la seguente:
+
 | Nome pubblico [!DNL SAP Commerce] | [!DNL SAP Subscription Billing] **[!UICONTROL Tipo di riferimento]** | [!DNL SAP Commerce] **[!UICONTROL Valore di mappatura ID]** |
-| — | — | — |
+| --- | --- | --- |
 | sap_audience1 | `SAP_1` | `SAP_1` |
 | Pubblico SAP2 | `SAP_2` | `SAP_2` |
 

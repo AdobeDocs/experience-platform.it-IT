@@ -3,7 +3,7 @@ keywords: crm;CRM;destinazioni crm;Outreach;Outreach crm destination
 title: Connessione di uscita
 description: La destinazione Outreach ti consente di esportare i dati del tuo account e attivarli in Outreach per le tue esigenze aziendali.
 exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '1678'
 ht-degree: 2%
@@ -155,18 +155,20 @@ Per inviare correttamente i dati sul pubblico da Adobe Experience Platform alla 
      ![Schermata dell&#39;interfaccia utente di Platform che mostra la mappatura di Target tramite OutreachId.](../../assets/catalog/crm/outreach/target-mapping.png)
 
    * Aggiungi la seguente mappatura tra lo schema del profilo XDM e l&#39;istanza [!DNL Outreach]:
-Schema profilo XDM|[!DNL Outreach] istanza| Obbligatorio
-|—|—|—|
-|`Oid`|`OutreachId`| Sì |
+
+     | Schema profilo XDM | Istanza [!DNL Outreach] | Obbligatorio |
+     |---|---|---|
+     | `Oid` | `OutreachId` | Sì |
 
    * **[!UICONTROL Seleziona attributi personalizzati]**: seleziona questa opzione per mappare il campo di origine a un attributo personalizzato definito nel campo [!UICONTROL Nome attributo]. Per un elenco completo degli attributi supportati, consulta la [[!DNL Outreach] documentazione del prospect](https://api.outreach.io/api/v2/docs#prospect).
      ![Schermata dell&#39;interfaccia utente di Platform che mostra la mappatura di Target tramite LastName.](../../assets/catalog/crm/outreach/target-mapping-lastname.png)
 
    * Ad esempio, a seconda dei valori che desideri aggiornare, aggiungi la seguente mappatura tra lo schema del profilo XDM e l&#39;istanza [!DNL Outreach]:
-Schema profilo XDM|[!DNL Outreach] istanza|
-|—|—|
-|`person.name.firstName`|`firstName`|
-|`person.name.lastName`|`lastName`|
+
+     | Schema profilo XDM | Istanza [!DNL Outreach] |
+     |---|---|
+     | `person.name.firstName` | `firstName` |
+     | `person.name.lastName` | `lastName` |
 
    * Di seguito è riportato un esempio che utilizza queste mappature:
      ![Esempio di schermata dell&#39;interfaccia utente di Platform che mostra le mappature di Target.](../../assets/catalog/crm/outreach/mappings.png)

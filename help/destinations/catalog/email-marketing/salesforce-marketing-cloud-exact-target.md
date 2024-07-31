@@ -2,7 +2,7 @@
 title: (API) Connessione Marketing Cloud Salesforce
 description: La destinazione Marketing Cloud Salesforce (precedentemente nota come ExactTarget) ti consente di esportare i dati del tuo account e attivarli all’interno del Marketing Cloud Salesforce per le tue esigenze aziendali.
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '2895'
 ht-degree: 1%
@@ -242,6 +242,7 @@ Di seguito è riportato un attributo di esempio da [!DNL Salesforce Marketing Cl
 ![Schermata dell&#39;interfaccia utente del Marketing Cloud Salesforce con un attributo.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-custom-field.png)
 
 Di seguito è riportato un esempio che indica la posizione dell&#39;[!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL ID mappatura]**:
+
 ![Esempio di schermata dell&#39;interfaccia utente di Platform che mostra l&#39;esportazione pianificata del pubblico.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/schedule-segment-export.png)
 
 Come mostrato, [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL L&#39;ID mappatura]** deve corrispondere esattamente al valore specificato in [!DNL Salesforce Marketing Cloud] **[!UICONTROL NOME CAMPO]**.
@@ -249,8 +250,9 @@ Come mostrato, [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL L&#39;ID ma
 Ripeti questa sezione per ogni segmento di Platform attivato.
 
 Un esempio tipico basato sull’immagine mostrata sopra potrebbe essere.
+
 | Nome segmento [!DNL (API) Salesforce Marketing Cloud] | [!DNL Salesforce Marketing Cloud] **[!UICONTROL NOME CAMPO]** | [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL ID mappatura]** |
-| — | — | — |
+| --- | --- | --- |
 | pubblico mc salesforce 1 | `salesforce_mc_segment_1` | `salesforce_mc_segment_1` |
 | pubblico mc salesforce 2 | `salesforce_mc_segment_2` | `salesforce_mc_segment_2` |
 
