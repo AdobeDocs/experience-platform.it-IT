@@ -4,10 +4,10 @@ title: Dashboard utilizzo licenze
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale è possibile visualizzare informazioni importanti sull’utilizzo delle licenze della tua organizzazione.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 3e465803b6c8fe11cef1633c0f0624465086c2a3
 workflow-type: tm+mt
-source-wordcount: '2103'
-ht-degree: 7%
+source-wordcount: '2328'
+ht-degree: 6%
 
 ---
 
@@ -64,6 +64,7 @@ Questa dashboard mostra tutti i prodotti Adobe Experience Platform con licenza, 
 | **[!UICONTROL Importo licenza]** | Il valore contrattuale per l’importo massimo della metrica principale come concordato nel contratto di licenza del prodotto. |
 | **[!UICONTROL Utilizzo]** | Quantità della metrica principale utilizzata. Questo valore fornisce l’utilizzo totale di quella metrica in tutte le sandbox, di produzione o di sviluppo. |
 | **[!UICONTROL Utilizzo %]** | La percentuale della metrica principale utilizzata in base alla quantità di licenza. |
+| **[!UICONTROL Utilizzo delle previsioni]** | (**Beta**) La percentuale di utilizzo prevista della metrica principale in base alla quantità di licenza. |
 
 >[!NOTE]
 >
@@ -71,29 +72,57 @@ Questa dashboard mostra tutti i prodotti Adobe Experience Platform con licenza, 
 
 La tabella indica la metrica principale per ciascun prodotto, in quanto ogni prodotto può tracciare numerose metriche.
 
+### [!BADGE Beta]{type=Informative} utilizzo previsto {#predicted-usage}
+
+>[!AVAILABILITY]
+>
+La funzionalità per prevedere l’utilizzo futuro della licenza è attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
+
+Gestisci e ottimizza in modo proattivo le risorse di gestione delle licenze in base a previsioni approfondite sull’utilizzo. La colonna [!UICONTROL Utilizzo previsto] prevede con precisione l&#39;utilizzo futuro delle licenze a livello di sandbox, in tutte le sandbox di produzione e sviluppo, per tutti i prodotti acquistati. Questa funzionalità di avviso fornisce una previsione dell’utilizzo della licenza per sei settimane nel futuro, in base all’utilizzo fino al 15 di questo mese di calendario. Le previsioni sono fornite con un limite inferiore e uno superiore.
+
+>[!IMPORTANT]
+>
+Le previsioni vengono aggiornate su base mensile. La data di aggiornamento è inclusa in un&#39;icona di informazioni (![Icona di informazioni.](../images/license-usage/info-icon.png)) sopra il titolo della colonna.
+
+Per visualizzare un riepilogo dell&#39;utilizzo di un prodotto, selezionare un prodotto dall&#39;elenco [!UICONTROL Panoramica].
+
+![Utilizzo della [!UICONTROL Licenza] [!UICONTROL Panoramica] con un prodotto ed evidenziata la colonna Utilizzo previsto.](../images/license-usage/product-predicted-usage.png)
+
+Viene visualizzata la scheda Riepilogo. Puoi utilizzare le previsioni granulari disponibili nelle schede [!UICONTROL Riepilogo] e [!UICONTROL Dettagli] per garantire un processo decisionale informato e un utilizzo efficiente delle licenze.
+
+![Visualizzazione di riepilogo di un prodotto Platform con la colonna Utilizzo previsto evidenziata.](../images/license-usage/summary-predicted-usage.png)
+
+La funzione di utilizzo previsto supporta per le metriche seguenti:
+
+- [!UICONTROL Pubblico indirizzabile]
+- [!UICONTROL Ricchezza media profilo]
+- [!UICONTROL Calcola ore]
+- [!UICONTROL Numero di righe del pubblico del Percorso di clienti]
+- [!UICONTROL Archiviazione totale]
+
 ## Scheda [!UICONTROL Riepilogo] {#summary-tab}
 
 Per visualizzare ulteriori metriche e informazioni dettagliate sull’utilizzo della licenza del prodotto, seleziona un nome di prodotto dall’elenco. Viene visualizzata la visualizzazione [!UICONTROL Riepilogo] per il prodotto. Tutte le metriche disponibili vengono visualizzate nella scheda [!UICONTROL Riepilogo]. Le metriche disponibili dipendono dal prodotto concesso in licenza. Questa visualizzazione fornisce **una visualizzazione consolidata di tutte le metriche in tutte le sandbox di produzione o di sviluppo**. Lo stesso livello di analisi viene fornito per le sandbox di produzione e di sviluppo.
 
 ![Visualizzazione di riepilogo di un prodotto Platform che visualizza tutte le metriche disponibili per tale prodotto.](../images/license-usage/summary-tab.png)
 
-Nella scheda Riepilogo la tabella include la colonna [!UICONTROL Metrica]. Queste descrizioni leggibili dall’utente indicano tutte le metriche utilizzate per quel tipo di sandbox.
+Nella scheda Riepilogo la tabella include la colonna [!UICONTROL Metrica]. Queste descrizioni leggibili dall’utente indicano tutte le metriche utilizzate per quel tipo of sandbox.
 
 ### Seleziona una sandbox {#select-sandbox}
 
-Per modificare la visualizzazione tra i tipi di sandbox di produzione e di sviluppo, selezionare [!UICONTROL Sandbox di produzione] o [!UICONTROL Sandbox di sviluppo]. Il tipo di sandbox selezionato è indicato dal pulsante di opzione accanto al nome della sandbox.
+Per cambiare la visualizzazione tra i tipi di sandbox di produzione e di sviluppo: select [!UICONTROL Sandbox di produzione] o [!UICONTROL Sandbox di sviluppo]. Tipo di sandbox selezionato is indicato dal pulsante di opzione accanto al nome della sandbox.
 
-I rapporti sul consumo per le sandbox sono cumulativi per tutte le sandbox dello stesso tipo. In altre parole, se si seleziona [!UICONTROL Produzione] o [!UICONTROL Sviluppo], verranno visualizzati report sul consumo per tutte le sandbox di produzione o di sviluppo, rispettivamente.
+I rapporti sul consumo per le sandbox sono cumulativi per tutte le sandbox dello stesso tipo. In In altre parole, selezionando [!UICONTROL Produzione] o [!UICONTROL Sviluppo] vengono forniti i report sul consumo per tutte le sandbox di produzione o di sviluppo, rispettivamente.
 
 ![Visualizzazione di riepilogo di un prodotto Platform con sandbox di produzione e sandbox di sviluppo evidenziate.](../images/license-usage/summary-tab-sandboxes.png)
 
 >[!WARNING]
 >
->L’autorizzazione per visualizzare il dashboard utilizzo licenze deve essere specificata a livello di sandbox. Aggiungi le autorizzazioni a ogni singola sandbox per visualizzarle all’interno del dashboard. Questa limitazione verrà risolta in una versione futura. Nel frattempo, è disponibile la seguente soluzione alternativa:
+L’autorizzazione per visualizzare il dashboard utilizzo licenze deve essere specificata a livello di sandbox. Aggiungi le autorizzazioni a ogni singola sandbox per visualizzarle all’interno del dashboard. Questa limitazione verrà risolta in una versione futura. Nel frattempo, è disponibile la seguente soluzione alternativa:
 >
->1. Creare un profilo di prodotto in Adobe Admin Console.
->2. In Autorizzazione nella categoria Sandbox, aggiungi tutte le sandbox da visualizzare nel dashboard utilizzo licenze.
->3. Nella categoria Autorizzazioni dashboard utenti, aggiungi l’autorizzazione &quot;Visualizza dashboard utilizzo licenze&quot;.
+1. Creare un profilo di prodotto in Adobe Admin Console.
+2. In Autorizzazione nella categoria Sandbox, aggiungi tutte le sandbox da visualizzare nel dashboard utilizzo licenze.
+3. Nella categoria Autorizzazioni dashboard utenti, aggiungi l’autorizzazione &quot;Visualizza dashboard utilizzo licenze&quot;.
 
 ## Scheda [!UICONTROL Dettagli] {#details-tab}
 
@@ -154,7 +183,7 @@ Il dashboard utilizzo licenze riporta diverse metriche univoche applicabili a pi
 
 >[!TIP]
 >
->È possibile controllare i diritti di licenza nell&#39;ordine di vendita per calcolare metriche quali l&#39;indennità di archiviazione.<br>Ad esempio,<ul><li>Indennità di archiviazione = numero di &quot;profili autorizzati&quot; nel contratto X Ricchezza media profilo</li></ul>
+È possibile controllare i diritti di licenza nell&#39;ordine di vendita per calcolare metriche quali l&#39;indennità di archiviazione.<br>Ad esempio,<ul><li>Indennità di archiviazione = numero di &quot;profili autorizzati&quot; nel contratto X Ricchezza media profilo</li></ul>
 
 La disponibilità di queste metriche e la definizione specifica di ciascuna di esse varia a seconda delle licenze acquistate dalla tua organizzazione. Per le definizioni dettagliate di ciascuna metrica, consulta l’appropriata documentazione di descrizione del prodotto:
 
@@ -169,7 +198,7 @@ La disponibilità di queste metriche e la definizione specifica di ciascuna di e
 
 >[!WARNING]
 >
->Il dashboard utilizzo licenze riporta solo l’ultima licenza fornita per la tua organizzazione. Se l’ultima licenza fornita per la tua organizzazione non viene visualizzata nella tabella precedente, è possibile che il dashboard utilizzo licenze non venga visualizzato correttamente. Il supporto per licenze aggiuntive e più licenze in una singola organizzazione è pianificato per una versione futura.
+Il dashboard utilizzo licenze riporta solo l’ultima licenza fornita per la tua organizzazione. Se l’ultima licenza fornita per la tua organizzazione non viene visualizzata nella tabella precedente, è possibile che il dashboard utilizzo licenze non venga visualizzato correttamente. Il supporto per licenze aggiuntive e più licenze in una singola organizzazione è pianificato per una versione futura.
 
 ## Passaggi successivi
 
