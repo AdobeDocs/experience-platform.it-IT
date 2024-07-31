@@ -4,10 +4,10 @@ title: Playbook di casi d’uso disponibili per Real-time Customer Data Platform
 description: Elenco di tutti i playbook in Real-time Customer Data Platform e Adobe Journey Optimizer.
 role: User
 exl-id: 00f16761-3759-4de0-882d-b77e18f7c1fe
-source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
+source-git-commit: 5b1209ed96c78810b6bd7489825b19496d8b0b6a
 workflow-type: tm+mt
-source-wordcount: '776'
-ht-degree: 3%
+source-wordcount: '965'
+ht-degree: 2%
 
 ---
 
@@ -25,6 +25,8 @@ Leggi questa pagina per una panoramica di tutti i playbook disponibili che puoi 
 | Nome playbook | Descrizione |
 | ------------- |  ----------- |
 | Navigazione abbandonata: Merchandise | Spingi i fan a coinvolgerli di nuovo dopo che hanno lasciato il tuo sito web o app dopo aver navigato in un prodotto. |
+| Esplorazione abbandonata: prodotto | Spingi gli acquirenti a coinvolgerli di nuovo dopo aver lasciato il sito web o l’app dopo aver navigato in un prodotto. |
+| Esplorazione abbandonata: prenotazione | Spingi gli ospiti a coinvolgerli di nuovo dopo che hanno lasciato il tuo sito web o app dopo aver sfogliato una potenziale prenotazione. |
 | Carrello abbandonato: materiale promozionale | Spingi i fan a coinvolgerli di nuovo dopo che hanno lasciato il tuo sito web o app dopo aver aggiunto la merce al carrello. |
 | Carrello abbandonato: prodotto | Spingi gli acquirenti a coinvolgerli di nuovo dopo aver lasciato il sito web o l’app dopo aver aggiunto i prodotti al carrello. |
 | Carrello abbandonato: prenotazione | Spingi gli ospiti a coinvolgerli di nuovo dopo aver lasciato il tuo sito web o app dopo aver aggiunto una nuova prenotazione al carrello. |
@@ -38,12 +40,15 @@ Leggi questa pagina per una panoramica di tutti i playbook disponibili che puoi 
 | Aumentare l&#39;acquisto di prodotti durante la visita al negozio | Spingi gli acquirenti a comprare i prodotti mentre sono vicino al negozio. |
 | Aumento dell&#39;acquisto di prodotti e servizi durante il soggiorno | Spingi gli ospiti ad acquistare prodotti e servizi mentre si trovano nella proprietà. |
 | Aumentare gli Acquisti Per Gioco Singolo | Scegli i fan per aumentare gli acquisti ripetuti di singoli giochi. |
-| Sondaggio sugli eventi Post e promozione sugli incentivi | Spingi i fan a rispondere a un sondaggio post-evento offrendo un incentivo promozionale. |
-| Sondaggio Post-Trip | Incoraggia gli ospiti a rispondere a un sondaggio post-viaggio offrendo un incentivo promozionale. |
+| Sondaggio post-evento e promozione sugli incentivi | Spingi i fan a rispondere a un sondaggio post-evento offrendo un incentivo promozionale. |
+| Sondaggio post-viaggio | Incoraggia gli ospiti a rispondere a un sondaggio post-viaggio offrendo un incentivo promozionale. |
 | Promozione prodotti | Spingi gli acquirenti a comprare i prodotti durante una campagna promozionale sui prodotti in corso. |
 | Conferma di acquisto: materiale promozionale | Conferma una nuova ventola per l’acquisto di merci. |
 | Conferma acquisto: prodotto | Conferma un nuovo acquirente per l’acquisto di un prodotto. |
 | Conferma acquisto: prenotazione | Conferma un nuovo ospite di prenotazione. |
+| Ricoinvolgi le ventole | coinvolgere di nuovo in modo intelligente e responsabile i tifosi che hanno abbandonato una conversione prima di completarla. Agisci con intelligenza ed empatia per creare esperienze per i tuoi fan, e non semplici promemoria. |
+| Coinvolgi di nuovo gli ospiti | Riprendi in modo intelligente e responsabile gli ospiti che hanno abbandonato una prenotazione prima di completarla. Agisci con intelligenza ed empatia per creare esperienze per i tuoi ospiti, e non semplici promemoria. |
+| Ri-coinvolgere gli acquirenti | Coinvolgi nuovamente in modo intelligente e responsabile i clienti che hanno abbandonato un acquisto prima di completarlo. Agisci con intelligenza ed empatia per creare esperienze per i tuoi clienti, e non semplici promemoria. |
 | Inviare Un Messaggio Di Compleanno Ai Fan | Saluta i fan per il loro compleanno con un&#39;offerta esclusiva. |
 | Invia un messaggio di compleanno agli ospiti | Salutate gli ospiti per il loro compleanno con un&#39;offerta esclusiva. |
 | Invia un messaggio di compleanno agli acquirenti | Saluta i clienti per il loro compleanno con un&#39;offerta esclusiva. |
@@ -60,7 +65,10 @@ Leggi questa pagina per una panoramica di tutti i playbook disponibili che puoi 
 
 | Nome playbook | Descrizione |
 | ------------- | ----------- |
-| Carrello abbandonato: materiale promozionale, per l&#39;attivazione | Effettua il retargeting dei fan dopo che hanno lasciato il sito web o l’app dopo aver aggiunto la merce al carrello. |
+| Esplorazione abbandonata: materiale promozionale, per l&#39;attivazione | Effettua il retargeting dei fan dopo che hanno lasciato il sito web o l’app dopo aver aggiunto la merce al carrello. |
+| Esplorazione abbandonata: prodotto, per l&#39;attivazione | Effettua il retargeting degli acquirenti dopo che hanno lasciato il sito web o l’app dopo aver aggiunto i prodotti al carrello. |
+| Esplorazione abbandonata: prenotazione - per attivazione | Effettua il retargeting degli ospiti dopo che hanno lasciato il sito web o l’app dopo aver aggiunto una nuova prenotazione al carrello. |
+| Carrello abbandonato: materiale promozionale, per l&#39;attivazione | Effettua il retargeting degli appassionati dopo che hanno lasciato il sito web o l’app dopo aver aggiunto la merce sportiva al carrello. |
 | Carrello abbandonato: prodotto, per l&#39;attivazione | Effettua il retargeting degli acquirenti dopo che hanno lasciato il sito web o l’app dopo l’aggiunta di prodotti al carrello. |
 | Carrello abbandonato: prenotazione - per attivazione | Effettua il retargeting degli ospiti dopo che hanno lasciato il sito web o l’app dopo aver aggiunto una nuova prenotazione al carrello. |
 | Promozione destinazione: per attivazione | Effettua una prenotazione durante una promozione continua con destinazione di viaggio. |
