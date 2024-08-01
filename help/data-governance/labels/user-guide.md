@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gestire le etichette di utilizzo dei dati nell’interfaccia utente
 description: Questa guida descrive i passaggi per lavorare con le etichette di utilizzo dei dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 7a4de0491057747c7ce4d7bc4378da453f3b3a1c
 workflow-type: tm+mt
-source-wordcount: '1538'
+source-wordcount: '1550'
 ht-degree: 17%
 
 ---
@@ -22,7 +22,7 @@ Questa guida utente descrive i passaggi per l&#39;utilizzo delle etichette di ut
 
 ## Gestisci etichette {#manage-labels}
 
-Per applicare le etichette ai dati, è necessario disporre dell&#39;autorizzazione **[!UICONTROL Gestisci etichette di utilizzo]** per l&#39;utilizzo nella sandbox di produzione predefinita denominata &quot;prod&quot;. Per creare un’etichetta personalizzata, devi anche disporre di diritti di amministrazione sul profilo del prodotto. Ogni organizzazione dispone di un solo elenco di etichette applicabili e al momento l’eliminazione delle etichette non è supportata.
+Per applicare le etichette ai dati, è necessario disporre dell&#39;autorizzazione **[!UICONTROL Gestisci etichette di utilizzo]** per l&#39;utilizzo nella sandbox di produzione predefinita denominata &quot;prod&quot;. Per creare un’etichetta personalizzata, devi anche disporre di diritti di amministrazione sul profilo del prodotto. Ogni organizzazione dispone di un solo elenco di etichette applicabili. **impossibile** eliminare le etichette. È invece possibile rimuoverli dai set di dati o dai campi a cui sono applicati.
 
 Per ulteriori informazioni su come assegnare un&#39;autorizzazione, vedere la guida su come [configurare le autorizzazioni](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) o la [panoramica sul controllo degli accessi](../../access-control/home.md). Se non hai accesso all’Admin Console per la tua organizzazione, contatta l’amministratore della tua organizzazione.
 

@@ -5,9 +5,9 @@ title: Endpoint API etichette
 description: Scopri come gestire le etichette di utilizzo dei dati in Experience Platform utilizzando l’API del servizio criteri.
 role: Developer
 exl-id: 9a01f65c-01f1-4298-bdcf-b7e00ccfe9f2
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 77d68a42b16c78cdc2b55f7776ba1c8ec98d8acd
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '536'
 ht-degree: 4%
 
 ---
@@ -18,7 +18,7 @@ Le etichette di utilizzo dei dati consentono di categorizzare i dati in base ai 
 
 >[!NOTE]
 >
->L&#39;endpoint `/labels` viene utilizzato solo per recuperare, creare e aggiornare le etichette di utilizzo dei dati. Per i passaggi su come aggiungere etichette a set di dati e campi utilizzando chiamate API, consulta la guida su [gestione delle etichette dei set di dati](../labels/dataset-api.md).
+>L&#39;endpoint `/labels` viene utilizzato solo per recuperare, creare e aggiornare le etichette di utilizzo dei dati. Non è possibile eliminare le etichette. Tuttavia, puoi aggiungere o rimuovere etichette ai set di dati e ai campi utilizzando le chiamate API. Per istruzioni, consulta la guida nel documento [gestione delle etichette dei set di dati](../labels/dataset-api.md).
 
 ## Introduzione
 
@@ -163,6 +163,10 @@ In caso di esito positivo, la risposta restituisce i dettagli dell’etichetta p
 ## Creare o aggiornare un’etichetta personalizzata {#create-update}
 
 Per creare o aggiornare un&#39;etichetta personalizzata, è necessario effettuare una richiesta PUT all&#39;API [!DNL Policy Service].
+
+>[!NOTE]
+>
+>Se si desidera rimuovere le etichette da un set di dati, è possibile eseguire una [richiesta PUT sull&#39;API del servizio Set di dati](../labels/dataset-api.md#remove) oppure utilizzare l&#39;[interfaccia utente Set di dati](../labels/user-guide.md#remove-labels-from-a-dataset).
 
 **Formato API**
 

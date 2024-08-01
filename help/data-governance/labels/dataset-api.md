@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gestire le etichette di utilizzo dei dati per i set di dati utilizzando le API
 description: L’API Servizio set di dati consente di applicare e modificare le etichette di utilizzo per i set di dati. Fa parte delle funzionalità del catalogo dati di Adobe Experience Platform, ma è separata dall’API Catalog Service che gestisce i metadati dei set di dati.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-source-git-commit: 8db484e4a65516058d701ca972fcbcb6b73abb31
+source-git-commit: 9eda7068eb2a3fd5e59fbeff69c85abfad5ccf39
 workflow-type: tm+mt
-source-wordcount: '1314'
+source-wordcount: '1340'
 ht-degree: 2%
 
 ---
@@ -166,6 +166,10 @@ In caso di esito positivo, la risposta restituisce il set aggiornato di etichett
 ## Rimuovere le etichette da un set di dati {#remove}
 
 È possibile rimuovere le etichette di campo applicate in precedenza aggiornando i valori `optionalLabels` esistenti con un sottoinsieme delle etichette di campo esistenti o con un elenco vuoto per rimuoverle completamente. Effettuare una richiesta PUT all&#39;API [!DNL Dataset Service] per aggiornare o rimuovere le etichette applicate in precedenza.
+
+>[!NOTE]
+>
+>È possibile rimuovere completamente le etichette di un set di dati fornendo un elenco vuoto per il parametro `labels`. Non è obbligatorio che un set di dati conservi etichette.
 
 **Formato API**
 
