@@ -6,9 +6,9 @@ title: Requisiti dei dati in Customer AI
 topic-legacy: Getting started
 description: Scopri di più sugli eventi, gli input e gli output richiesti utilizzati da Customer AI.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: 63bdb48936070d23d1801d8e6143db3aefad5f6e
 workflow-type: tm+mt
-source-wordcount: '2505'
+source-wordcount: '2545'
 ht-degree: 1%
 
 ---
@@ -158,6 +158,8 @@ IA per l’analisi dei clienti richiede dati storici per la formazione dei model
 Per impostazione predefinita, IA per l’analisi dei clienti cerca un utente che abbia avuto attività negli ultimi 45 giorni se non viene fornita alcuna definizione di popolazione idonea durante la configurazione dell’applicazione. Inoltre, IA per l’analisi dei clienti richiede almeno 500 eventi di qualificazione e 500 eventi non qualificati (1000 in totale) da dati storici basati su una definizione di obiettivo prevista.
 
 Gli esempi seguenti illustrano l&#39;utilizzo di una semplice formula che consente di determinare la quantità minima di dati richiesti. Se disponi di un numero di dati superiore al requisito minimo, è probabile che il modello fornisca risultati più precisi. Se la quantità di dati è inferiore a quella minima richiesta, il modello avrà esito negativo poiché non sono disponibili dati sufficienti per l&#39;apprendimento del modello.
+
+IA per l’analisi dei clienti utilizza un modello di sopravvivenza per stimare la probabilità che un evento si verifichi in un dato momento e identificare i fattori che influenzano, oltre all’apprendimento supervisionato che definisce le popolazioni positive e negative e alberi basati sulle decisioni come `lightgbm` per generare un punteggio di probabilità.
 
 **Formula**:
 
