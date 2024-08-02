@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gestire le etichette di utilizzo dei dati nell’interfaccia utente
 description: Questa guida descrive i passaggi per lavorare con le etichette di utilizzo dei dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: c1722c59c437215ce578a1a44cf0cad3b03ceca9
+source-git-commit: a5efc45f0043cd6eb4a209737b9e430c85ea2f14
 workflow-type: tm+mt
-source-wordcount: '1549'
+source-wordcount: '1548'
 ht-degree: 17%
 
 ---
@@ -36,7 +36,7 @@ Puoi aggiungere etichette direttamente a uno schema o a campi all’interno di t
 >
 >![La violazione dei criteri di governance dei dati ha rilevato una finestra di dialogo con il riepilogo delle violazioni e il diagramma di derivazione dei dati evidenziati.](../images/labels/policy-violation-dialog.png)
 >
->Per ulteriori informazioni sulle violazioni parziali dei criteri, consulta la [documentazione sulle violazioni dei criteri di utilizzo dei dati](../enforcement/auto-enforcement.md#data-usage-violation).
+>Per ulteriori informazioni sulle violazioni dei criteri, consulta la [documentazione sulle violazioni dei criteri di utilizzo](../enforcement/auto-enforcement.md#data-usage-violation).
 
 Per gestire le etichette di utilizzo dei dati a livello di schema, è necessario selezionare uno schema esistente o crearne uno nuovo. Dopo aver effettuato l&#39;accesso a Adobe Experience Platform, seleziona **[!UICONTROL Schemi]** nel menu di navigazione a sinistra per aprire l&#39;area di lavoro **[!UICONTROL Schemi]**. Questa pagina elenca tutti gli schemi creati appartenenti alla tua organizzazione, insieme a dettagli utili relativi a ciascuno schema.
 
