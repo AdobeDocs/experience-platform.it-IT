@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform, luglio 2024
 description: Note sulla versione di Adobe Experience Platform di luglio 2024.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 8d25e396fc816546348268b8b4f2bb16175b4513
+source-git-commit: c38f6845a4819b648abacea2c36a576dac61f38f
 workflow-type: tm+mt
-source-wordcount: '1048'
-ht-degree: 20%
+source-wordcount: '1225'
+ht-degree: 22%
 
 ---
 
@@ -23,7 +23,9 @@ Aggiornamenti alle funzioni e alla documentazione esistenti in Experience Platfo
 - [Raccolta dati](#data-collection)
 - [Governance dei dati](#data-governance)
 - [Destinazioni](#destinations)
+- [Servizio di segmentazione](#segmentation)
 - [Origini](#sources)
+- [Tag unificati](#unified-tags)
 
 ## Composizione di pubblico federato {#federated-audience-composition}
 
@@ -105,6 +107,18 @@ Per ulteriori informazioni, leggere la [panoramica sulla governance dei dati](..
 
 Per ulteriori informazioni, leggere la [panoramica delle destinazioni](../../destinations/home.md).
 
+## Servizio di segmentazione {#segmentation}
+
+[!DNL Segmentation Service] consente di segmentare i dati memorizzati in [!DNL Experience Platform] che si riferiscono ai singoli utenti (come clienti, potenziali clienti, utenti o organizzazioni) in tipi di pubblico. Puoi creare tipi di pubblico tramite definizioni di segmenti o altre origini dai tuoi dati di [!DNL Real-Time Customer Profile]. Questi tipi di pubblico sono configurati e gestiti centralmente in [!DNL Platform] e sono facilmente accessibili da qualsiasi soluzione Adobe.
+
+**Nuova documentazione**
+
+| Nuova documentazione | Descrizione |
+| ----------------- | ----------- | 
+| [Audience Portal](../../segmentation/ui/audience-portal.md) | Scopri come utilizzare Audience Portal, che consente di visualizzare, gestire e creare tipi di pubblico in Adobe Experience Platform in un hub centralizzato. |
+
+{style="table-layout:auto"}
+
 ## Origini
 
 Experience Platform fornisce un’API RESTful e un’interfaccia utente interattiva per impostare facilmente le connessioni di origine per vari provider di dati. Queste connessioni di origine consentono di autenticarti e connetterti a sistemi di archiviazione esterni e servizi di gestione delle relazioni con i clienti, impostare i tempi per le esecuzioni dell’acquisizione e gestire la velocità effettiva di acquisizione dei dati.
@@ -113,10 +127,25 @@ Utilizza le origini in Experience Platform per acquisire dati da un’applicazio
 
 **Documentazione aggiornata**
 
-| Documentazione aggiornata | descrizione |
+| Documentazione aggiornata | Descrizione |
 | --- | --- |
 | Guida all&#39;autenticazione estesa per [[!DNL Snowflake]](../../sources/connectors/databases/snowflake.md) | Leggi la guida all&#39;autenticazione estesa per [!DNL Snowflake] per scoprire come recuperare l&#39;[identificatore account](../../sources/connectors/databases/snowflake.md#retrieve-your-account-identifier) e la [chiave privata](../../sources/connectors/databases/snowflake.md#retrieve-your-private-key) per l&#39;autenticazione. Inoltre, utilizza la guida all&#39;autenticazione espansa per i passaggi su come [verificare le configurazioni del tuo warehouse e ruolo](../../sources/connectors/databases/snowflake.md#verify-configurations). |
 
 {style="table-layout:auto"}
 
 Per ulteriori informazioni, leggere la [panoramica delle origini](../../sources/home.md).
+
+## Tag unificati
+
+I tag unificati consentono di categorizzare e gestire gli oggetti aziendali all’interno di Adobe Experience Platform. Con l’API Tag unificati, puoi creare sia cartelle che tag per organizzare meglio gli oggetti di Platform, ad esempio i tipi di pubblico o i set di dati.
+
+**Nuova documentazione**
+
+| Nuova documentazione | Descrizione |
+| ----------------- | ----------- |
+| [Guida all&#39;API Unified Tags](../../administrative-tags/api/overview.md) | Per informazioni su come creare cartelle e tag per ordinare gli oggetti business, leggi la guida alle API per tag unificati. |
+| [Riferimento API tag unificati](https://developer.adobe.com/experience-platform-apis/references/unified-tags/) | Utilizza il riferimento API Unified Tags per provare interattivamente gli endpoint Unified Tags. |
+
+{style="table-layout:auto"}
+
+Per ulteriori informazioni, leggere la [Panoramica sui tag unificati](../../administrative-tags/overview.md).
