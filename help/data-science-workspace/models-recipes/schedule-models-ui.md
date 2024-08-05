@@ -1,18 +1,24 @@
 ---
-keywords: Experience Platform;pianificare un modello;Data Science Workspace;argomenti comuni;pianificare punteggio;pianificare l'apprendimento
+keywords: Experience Platform; programmare un modello; Data Science Area di lavoro; argomenti popolari; programmare il punteggio; programmare training
 solution: Experience Platform
-title: Pianificare un modello nell’interfaccia utente di Data Science Workspace
+title: Pianificare un modello in Data Science Area di lavoro interfaccia
 type: Tutorial
-description: Adobe Experience Platform Data Science Workspace consente di impostare punteggi pianificati e esecuzioni di formazione su un servizio di apprendimento automatico. L’automazione del processo di formazione e valutazione consente di mantenere e migliorare l’efficienza di un servizio nel tempo, tenendo il passo con i modelli all’interno dei dati.
+description: Adobe Experience Platform Data Science Area di lavoro consente di impostare punteggi pianificati ed training vengono eseguiti su un servizio di Machine Learning. L'automazione del processo di training e punteggio può aiutare a mantenere e migliorare l'efficienza di un Servizio nel tempo tenendo il passo con i modelli all'interno dei dati.
 exl-id: 51f6f328-7c63-4de1-9184-2ba526bb82e2
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '577'
 ht-degree: 0%
 
 ---
 
-# Pianificare un modello nell’interfaccia utente di Data Science Workspace
+# Pianificare un modello in Data Science Area di lavoro interfaccia
+
+>[!NOTE]
+>
+>Data Science Workspace non è più disponibile per l’acquisto.
+>
+>Questa documentazione è destinata ai clienti esistenti che dispongono di diritti precedenti su Data Science Workspace.
 
 Adobe Experience Platform [!DNL Data Science Workspace] consente di impostare il punteggio pianificato e le esecuzioni di formazione su un servizio di apprendimento automatico. L’automazione del processo di formazione e valutazione consente di mantenere e migliorare l’efficienza di un servizio nel tempo, tenendo il passo con i modelli all’interno dei dati.
 
@@ -23,9 +29,9 @@ Questo tutorial illustra i passaggi necessari per configurare le pianificazioni 
 
 ## Introduzione
 
-Per completare questa esercitazione, devi avere accesso a [!DNL Experience Platform]. Se non si dispone dell&#39;accesso a un&#39;organizzazione in [!DNL Experience Platform], contattare l&#39;amministratore di sistema prima di procedere.
+Per completare questa esercitazione, è necessario disporre di accesso a [!DNL Experience Platform]. Se non si dispone di accesso a un&#39;organizzazione in [!DNL Experience Platform], si prega di parlare con l&#39;amministratore di sistema prima di procedere.
 
-Questo tutorial richiede un servizio esistente. Se non si dispone di un servizio accessibile con cui lavorare, è possibile crearne uno seguendo l&#39;esercitazione per [pubblicare un modello come servizio](./publish-model-service-ui.md).
+Questo esercitazione richiede un servizio esistente. Se non si dispone di un servizio accessibile con cui lavorare, è possibile crearne uno seguendo la esercitazione per [la pubblicazione di un modello come servizio](./publish-model-service-ui.md).
 
 ## Configurare il punteggio pianificato {#configure-scheduled-scoring}
 
@@ -47,11 +53,11 @@ La pianificazione del punteggio aggiornata viene visualizzata nella pagina **[!U
 
 ![](../images/models-recipes/schedule/scoring_set.png)
 
-## Configurare l’apprendimento pianificato {#configure-scheduled-training}
+## Configurare training pianificate {#configure-scheduled-training}
 
-La configurazione delle esecuzioni pianificate dell’apprendimento su un servizio assicura che il modello di apprendimento automatico sia aggiornato ai pattern di dati più recenti. Al termine di un addestramento pianificato, il modello addestrato risultante viene utilizzato per alimentare il servizio fino alla successiva esecuzione di addestramento pianificata.
+La configurazione delle training pianificate eseguite in un servizio garantisce che il modello di Machine Learning venga aggiornato ai modelli di dati più recenti. Ogni volta che viene completata un&#39;esecuzione di training pianificata, il modello addestrato risultante viene utilizzato per alimentare il servizio fino alla successiva esecuzione di training pianificata.
 
-Dopo aver creato un servizio, puoi seguire i passaggi seguenti per configurare e applicare una pianificazione di formazione:
+Una volta creato un servizio, è possibile seguire i passaggi seguenti per configurare e applicare un training programmare:
 
 In Adobe Experience Platform, seleziona la scheda **[!UICONTROL Servizi]** nella colonna di navigazione a sinistra per accedere alla **[!UICONTROL Raccolta servizi]**. Trova il servizio su cui vuoi pianificare l&#39;esecuzione del corso di formazione e seleziona **[!UICONTROL Apri]** per visualizzarne la pagina **[!UICONTROL Panoramica]**.
 
@@ -71,4 +77,4 @@ La pianificazione aggiornata dei corsi di formazione è visualizzata nella pagin
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai pianificato le esecuzioni automatizzate di formazione e punteggio in un servizio e hai completato il flusso di lavoro dell&#39;interfaccia utente dell&#39;esercitazione [!DNL Data Science Workspace]. Se non lo hai già fatto, prova a [riavviare l&#39;esercitazione](./create-retails-sales-dataset.md) e segui il flusso di lavoro API per creare, addestrare, valutare e pubblicare un modello.
+Seguendo questa esercitazione, si sono pianificate correttamente le training automatizzate e le esecuzioni di punteggio su un servizio e completato il [!DNL Data Science Workspace] esercitazione interfaccia workflow. Se non l&#39;hai già fatto, prendi in considerazione [il riavvio del esercitazione](./create-retails-sales-dataset.md) e seguire l&#39;API workflow per creare, addestrare, assegnare un punteggio e pubblicare un modello.

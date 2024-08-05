@@ -1,42 +1,48 @@
 ---
 keywords: Experience Platform;JupyterLab;notebook;Data Science Workspace;argomenti popolari;jupyterlab
 solution: Experience Platform
-title: Panoramica dell’interfaccia utente di JupyterLab
-description: JupyterLab è un’interfaccia utente basata su web per Project Jupyter ed è strettamente integrata in Adobe Experience Platform. Fornisce un ambiente di sviluppo interattivo per consentire ai data scientist di lavorare con Jupyter Notebooks, codice e dati. Questo documento fornisce una panoramica di JupyterLab e delle sue funzioni, nonché istruzioni per eseguire azioni comuni.
+title: Panoramica interfaccia JupyterLab
+description: JupyterLab è un'interfaccia utente basata sul web per Project Jupyter ed è strettamente integrata in Adobe Experience Platform. Fornisce un ambiente di sviluppo interattivo per consentire ai data scientist di lavorare con Jupyter Notebooks, codice e dati. Questo documento fornisce una panoramica di JupyterLab e delle sue funzionalità, nonché istruzioni per eseguire azioni comuni.
 exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '1812'
+source-wordcount: '1835'
 ht-degree: 2%
 
 ---
 
 # [!DNL JupyterLab] Panoramica dell’interfaccia utente
 
-[!DNL JupyterLab] è un&#39;interfaccia utente basata sul Web per [Project Jupyter](https://jupyter.org/) ed è strettamente integrata in Adobe Experience Platform. Fornisce un ambiente di sviluppo interattivo per consentire ai data scientist di lavorare con Jupyter Notebooks, codice e dati.
+>[!NOTE]
+>
+>Data Science Workspace non è più disponibile per l’acquisto.
+>
+>Questa documentazione è destinata ai clienti esistenti con precedenti diritti a Data Science Area di lavoro.
 
-In questo documento viene fornita una panoramica di [!DNL JupyterLab] e delle relative caratteristiche, nonché istruzioni per l&#39;esecuzione di azioni comuni.
+[!DNL JupyterLab] è un&#39;interfaccia utente basata sul web per [Project Jupyter](https://jupyter.org/) ed è strettamente integrata in Adobe Experience Platform. Fornisce un ambiente di sviluppo interattivo per consentire ai data scientist di lavorare con Jupyter Notebooks, codice e dati.
 
-## [!DNL JupyterLab] il [!DNL Experience Platform]
+In questo documento viene fornita una panoramica delle [!DNL JupyterLab] relative funzionalità, nonché istruzioni per eseguire azioni comuni.
 
-L&#39;integrazione di Experience Platform con JupyterLab è accompagnata da modifiche architetturali, considerazioni di progettazione, estensioni per notebook personalizzate, librerie preinstallate e un&#39;interfaccia a tema Adobe.
+## [!DNL JupyterLab] su [!DNL Experience Platform]
+
+L&#39;integrazione di JupyterLab di Experience Platform è accompagnata da modifiche architetturali, considerazioni di progettazione, estensioni personalizzate per notebook, librerie preinstallate e un&#39;interfaccia a tema Adobe Systems.
 
 L’elenco seguente illustra alcune delle funzioni esclusive di JupyterLab su Platform:
 
 | Funzione | Descrizione |
 | --- | --- |
-| **Kernel** | I kernel forniscono al blocco appunti e ad altri front-end [!DNL JupyterLab] la possibilità di eseguire e introdurre il codice in diversi linguaggi di programmazione. [!DNL Experience Platform] fornisce kernel aggiuntivi per supportare lo sviluppo in [!DNL Python], R, PySpark e [!DNL Spark]. Per ulteriori dettagli, consulta la sezione [kernel](#kernels). |
-| **Accesso ai dati** | Accedere ai set di dati esistenti direttamente da [!DNL JupyterLab] con il supporto completo per le funzionalità di lettura e scrittura. |
-| Integrazione del servizio **[!DNL Platform]** | Le integrazioni incorporate consentono di utilizzare altri servizi [!DNL Platform] direttamente da [!DNL JupyterLab]. Un elenco completo delle integrazioni supportate è fornito nella sezione relativa all&#39;integrazione di [con altri servizi di Platform](#service-integration). |
-| **Autenticazione** | Oltre al modello di sicurezza integrato di <a href="https://jupyter-notebook.readthedocs.io/en/stable/security.html" target="_blank">JupyterLab</a>, tutte le interazioni tra l&#39;applicazione e Experience Platform, inclusa la comunicazione da servizio a servizio di Platform, vengono crittografate e autenticate tramite <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>. |
-| **Librerie di sviluppo** | In [!DNL Experience Platform], [!DNL JupyterLab] fornisce librerie preinstallate per [!DNL Python], R e PySpark. Per un elenco completo delle librerie supportate, consulta l&#39;[appendice](#supported-libraries). |
-| **Controller libreria** | Quando le librerie preinstallate non sono sufficienti per le tue esigenze, è possibile installare librerie aggiuntive per Python e R e archiviarle temporaneamente in contenitori isolati per mantenere l&#39;integrità di [!DNL Platform] e proteggere i tuoi dati. Per ulteriori dettagli, consulta la sezione [kernel](#kernels). |
+| **Kernel** | I kernel forniscono notebook e altri [!DNL JupyterLab] front-end la capacità di eseguire e introspezione codice in diversi linguaggi di programmazione. [!DNL Experience Platform] fornisce kernel aggiuntivi per supportare lo sviluppo in [!DNL Python], R, PySpark e [!DNL Spark]. Vedi la [sezione kernel](#kernels) per maggiori dettagli. |
+| **Data accesso** | Accedi ai set di dati esistenti direttamente dall&#39;interno [!DNL JupyterLab] con il supporto completo per le funzionalità di lettura e scrittura. |
+| **[!DNL Platform]Integrazione dei servizi** | Le integrazioni incorporate consentono di utilizzare altri servizi [!DNL Platform] direttamente da [!DNL JupyterLab]. Un elenco completo delle integrazioni supportate è fornito nella sezione relativa all&#39;integrazione di [con altri servizi di Platform](#service-integration). |
+| **Autenticazione** | Oltre al <a href="https://jupyter-notebook.readthedocs.io/en/stable/security.html" target="_blank">modello di sicurezza integrato di JupyterLab, ogni interazione tra il applicazione e il Experience Platform, inclusa Platform comunicazione da servizio a servizio, viene crittografata e autenticata tramite l&#39;IMS<a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System]</a></a>. |
+| **librerie di sviluppo** | In [!DNL Experience Platform], [!DNL JupyterLab] fornisce librerie preinstallati per [!DNL Python], R e PySpark. Vedere l&#39;appendice [](#supported-libraries) per un elenco completo dei librerie supportati. |
+| **Controller libreria** | Quando le librerie preinstallate non sono sufficienti per le tue esigenze, è possibile installare librerie aggiuntive per Python e R e archiviarle temporaneamente in contenitori isolati per mantenere l&#39;integrità di [!DNL Platform] e proteggere i tuoi dati. Vedi la [sezione kernel](#kernels) per maggiori dettagli. |
 
 >[!NOTE]
 >
->Le librerie aggiuntive sono disponibili solo per la sessione in cui sono state installate. È necessario reinstallare tutte le librerie aggiuntive necessarie all&#39;avvio di nuove sessioni.
+>I librerie aggiuntivi sono disponibili solo per la sessione in cui sono stati installati. È necessario reinstallare eventuali librerie aggiuntivi necessari all&#39;avvio di nuove sessioni.
 
-## Integrazione con altri servizi [!DNL Platform] {#service-integration}
+## Integrazione con altri [!DNL Platform] servizi {#service-integration}
 
 Standardizzazione e interoperabilità sono concetti chiave alla base di [!DNL Experience Platform]. L&#39;integrazione di [!DNL JupyterLab] in [!DNL Platform] come IDE incorporato consente di interagire con altri servizi [!DNL Platform], consentendo di utilizzare [!DNL Platform] al massimo delle potenzialità. I seguenti servizi [!DNL Platform] sono disponibili in [!DNL JupyterLab]:
 
@@ -54,13 +60,13 @@ Standardizzazione e interoperabilità sono concetti chiave alla base di [!DNL Ex
 Le informazioni sulle caratteristiche chiave di [!DNL JupyterLab] e le istruzioni sull&#39;esecuzione di operazioni comuni sono fornite nelle sezioni seguenti:
 
 * [Accedi a JupyterLab](#access-jupyterlab)
-* [Interfaccia JupyterLab](#jupyterlab-interface)
+* [Interfaccia di JupyterLab](#jupyterlab-interface)
 * [Celle di codice](#code-cells)
 * [Kernel](#kernels)
 * [Sessioni kernel](#kernel-sessions)
 * [Modulo di avvio](#launcher)
 
-### Accedi a [!DNL JupyterLab] {#access-jupyterlab}
+### Accesso [!DNL JupyterLab] {#access-jupyterlab}
 
 In [Adobe Experience Platform](https://platform.adobe.com), seleziona **[!UICONTROL Blocchi appunti]** dalla colonna di navigazione a sinistra. Attendere il completamento dell&#39;inizializzazione di [!DNL JupyterLab].
 
@@ -79,72 +85,72 @@ La barra dei menu nella parte superiore dell&#39;interfaccia include menu di pri
 * **Visualizzazione:** azioni che modificano l&#39;aspetto di [!DNL JupyterLab]
 * **Esegui:** azioni per l&#39;esecuzione del codice in attività diverse, ad esempio blocchi appunti e console di codice
 * **Kernel:** azioni per la gestione dei kernel
-* **Schede:** un elenco di documenti e attività aperti
-* **Impostazioni:** Impostazioni comuni e un editor di impostazioni avanzate
-* **Guida:** Un elenco di [!DNL JupyterLab] e collegamenti della Guida del kernel
+* **Tabulazioni:** un elenco di documenti e attività aperti
+* **Impostazioni:** impostazioni comuni e impostazioni avanzate editor
+* **Guida:** Un elenco di collegamenti alla guida del [!DNL JupyterLab] kernel
 
-**Barra laterale a sinistra**
+**Barra laterale sinistra**
 
-La barra laterale a sinistra contiene schede selezionabili che consentono di accedere alle seguenti funzioni:
+La barra laterale sinistra contiene cliccabile schede che forniscono accesso alle seguenti funzioni:
 
 * **Browser file:** un elenco di documenti e directory dei blocchi appunti salvati
-* **Esplora dati:** Sfogliare, accedere ed esplorare set di dati e schemi
-* **Kernel e terminali in esecuzione:** Un elenco di sessioni attive del kernel e del terminale con la possibilità di terminare
-* **Comandi:** Elenco di comandi utili
-* **Ispettore celle:** editor di celle che consente di accedere a strumenti e metadati utili per la configurazione di un blocco appunti a scopo di presentazione
+* **Data Explorer:** Sfoglia, accesso ed esplorare set di dati e schemi
+* **Kernel e terminali in esecuzione:** un elenco di sessioni attive del kernel e del terminale con la possibilità di terminare
+* **Comandi:** un elenco di comandi utili
+* **Ispettore celle:** un editor di cella che fornisce accesso agli strumenti e metadati utile per impostare un blocco appunti a scopo di presentazione
 * **schede:** un elenco di schede aperte
 
-Seleziona una scheda per esporne le funzioni o fai clic su una scheda espansa per comprimere la barra laterale a sinistra, come illustrato di seguito:
+Seleziona un scheda per esporne le feature oppure fai clic su un scheda espanso per comprimere la barra laterale sinistra, come illustrato di seguito:
 
 ![](../images/jupyterlab/user-guide/left_sidebar_collapse.gif)
 
 **Area di lavoro principale**
 
-L&#39;area di lavoro principale in [!DNL JupyterLab] consente di disporre documenti e altre attività in pannelli di schede che possono essere ridimensionati o suddivisi. Trascinare una scheda al centro di un pannello di tabulazione per migrare la scheda. Dividi un pannello trascinando una scheda a sinistra, a destra, in alto o in basso nel pannello:
+L&#39;area di lavoro principale consente [!DNL JupyterLab] di organizzare documenti e altre attività in pannelli di schede che possono essere ridimensionati o suddivisi. Trascinate un scheda al centro di un pannello scheda per eseguire la migrazione della scheda. Dividere un pannello trascinando un scheda a sinistra, a destra, in alto o in basso del pannello:
 
 ![](../images/jupyterlab/user-guide/main_work_area.gif)
 
-### Configurazione della GPU e del server di memoria in [!DNL Python]/R
+### Configurazione GPU e server di memoria in [!DNL Python]/R
 
-In [!DNL JupyterLab] selezionare l&#39;icona a forma di ingranaggio nell&#39;angolo superiore destro per aprire *Configurazione server notebook*. È possibile attivare la GPU e allocare la quantità di memoria necessaria utilizzando il dispositivo di scorrimento. La quantità di memoria che è possibile allocare dipende da quanto è stato eseguito il provisioning dell’organizzazione. Seleziona **[!UICONTROL Aggiorna configurazioni]** da salvare.
+In [!DNL JupyterLab] selezionare l&#39;icona a forma di ingranaggio nell&#39;angolo superiore destro per aprire *la configurazione del* server Notebook. È possibile attivare la GPU e allocare la quantità di memoria necessaria utilizzando il cursore. La quantità di memoria che è possibile allocare dipende dalla quantità di provisioning dell&#39;organizzazione. Seleziona **[!UICONTROL Aggiorna]** configurazioni per salvare.
 
 >[!NOTE]
 >
->Per i notebook viene eseguito il provisioning di una sola GPU per organizzazione. Se la GPU è in uso, è necessario attendere che l&#39;utente che ha prenotato la GPU la rilasci. Questa operazione può essere eseguita disconnettendosi o lasciando la GPU inattiva per quattro o più ore.
+>Viene eseguito il provisioning di una sola GPU per organizzazione per i notebook. Se la GPU è in uso, è necessario attendere che l&#39;utente che ha prenotato la GPU la rilasci. Questa operazione può essere eseguita disconnettendosi o lasciando la GPU inattiva per quattro o più ore.
 
 ![](../images/jupyterlab/user-guide/notebook-gpu-config.png)
 
 ### Termina e riavvia [!DNL JupyterLab]
 
-In [!DNL JupyterLab], puoi terminare la sessione per impedire l&#39;utilizzo di ulteriori risorse. Iniziare selezionando l&#39;**icona di alimentazione** ![icona di alimentazione](/help/images/icons/power.png), quindi selezionare **[!UICONTROL Chiudi sessione]** dal popover che sembra terminare la sessione. Le sessioni del notebook terminano automaticamente dopo 12 ore di assenza di attività.
+In [!DNL JupyterLab], puoi terminare la sessione per impedire l&#39;utilizzo di ulteriori risorse. Inizia selezionando l&#39;icona di accensione dell&#39;icona **di accensione, quindi seleziona**[!UICONTROL  Spegni ]**dal popover che sembra terminare la sessione.** ![](/help/images/icons/power.png) Le sessioni del blocco appunti terminano automaticamente dopo 12 ore di inattività.
 
-Per riavviare [!DNL JupyterLab], selezionare l&#39;icona **riavvia** ![riavvia icona](/help/images/icons/restart.png) situata direttamente a sinistra dell&#39;icona di alimentazione, quindi selezionare **[!UICONTROL Riavvia]** dal popover visualizzato.
+Per riavviare [!DNL JupyterLab], seleziona l&#39;icona ![**di riavvio dell&#39;icona**](/help/images/icons/restart.png) di riavvio situata direttamente a sinistra dell&#39;icona di accensione, quindi seleziona **[!UICONTROL Riavvia]** dal popover visualizzato.
 
-![termina jupyterlab](../images/jupyterlab/user-guide/shutdown-jupyterlab.gif)
+![Terminare JupyterLab](../images/jupyterlab/user-guide/shutdown-jupyterlab.gif)
 
-### Celle di codice {#code-cells}
+### Code celle {#code-cells}
 
-Le celle di codice sono il contenuto principale dei notebook. Contengono codice sorgente nel linguaggio del kernel associato al blocco appunti e l&#39;output risultante dall&#39;esecuzione della cella del codice. A destra di ogni cella di codice che rappresenta l&#39;ordine di esecuzione viene visualizzato un conteggio di esecuzione.
+Code celle sono la contenuto principale dei quaderni. Contengono il codice sorgente nel linguaggio del kernel associato del notebook e l&#39;output come risultato dell&#39;esecuzione della cella di codice. A destra di ogni cella di codice che rappresenta l&#39;ordine di esecuzione viene visualizzato un conteggio di esecuzione.
 
 ![](../images/jupyterlab/user-guide/code_cell.png)
 
 Le azioni comuni delle celle sono descritte di seguito:
 
-* **Aggiungi cella:** Per aggiungere una cella vuota, fare clic sul simbolo più (**+**) nel menu del blocco appunti. Le nuove celle vengono posizionate sotto la cella con cui si sta interagendo o alla fine del blocco appunti se non è attiva alcuna cella particolare.
+* **Aggiungere una cella:** fare clic sul simbolo più (**+**) dal menu del blocco appunti per aggiungere una cella vuota. Nuovo celle vengono posizionate sotto la cella con cui si sta interagendo o alla fine del quaderno se non è presente alcuna cella particolare in concentrarsi.
 
-* **Spostare una cella:** Posizionare il cursore a destra della cella che si desidera spostare, quindi fare clic e trascinare la cella in una nuova posizione. Inoltre, se si sposta una cella da un blocco appunti a un altro, la cella viene replicata insieme al relativo contenuto.
+* **Spostare una cella:** posiziona il cursore a destra della cella da spostare, quindi fai clic e trascina la cella in una nuova posizione. Inoltre, lo spostamento di una cella da un blocco appunti a un altro replica la cella insieme al relativo contenuto.
 
-* **Esegui una cella:** Fare clic sul corpo della cella che si desidera eseguire, quindi fare clic sull&#39;icona **Riproduci** (**▶**) nel menu del blocco appunti. Un asterisco (**\***) viene visualizzato nel contatore di esecuzione della cella durante l&#39;elaborazione dell&#39;esecuzione e viene sostituito con un numero intero al termine.
+* **Eseguire una cella: fare clic sul corpo della cella che si desidera eseguire,** quindi fare clic sull&#39;icona **di riproduzione** (**▶**) dal menu del blocco appunti. Un asterisco (**\***) viene visualizzato nel contatore di esecuzione della cella durante l&#39;elaborazione dell&#39;esecuzione e viene sostituito con un numero intero al termine.
 
-* **Eliminare una cella:** Fare clic sul corpo della cella che si desidera eliminare, quindi fare clic sull&#39;icona **forbice**.
+* **Elimina una cella: fai clic sul corpo della cella che desideri eliminare,** quindi fai clic sull&#39;icona **a forma di forbice** .
 
 ### Kernel {#kernels}
 
 I kernel per notebook sono i motori di elaborazione specifici per il linguaggio per l&#39;elaborazione di celle per notebook. Oltre a [!DNL Python], [!DNL JupyterLab] fornisce supporto linguistico aggiuntivo in R, PySpark e [!DNL Spark] (Scala). Quando si apre un documento blocco appunti, viene avviato il kernel associato. Quando viene eseguita una cella del notebook, il kernel esegue il calcolo e produce risultati che possono richiedere notevoli risorse di CPU e memoria. Si noti che la memoria allocata non viene liberata fino alla chiusura del kernel.
 
-Alcune caratteristiche e funzionalità sono limitate a determinati kernel come descritto nella tabella seguente:
+Alcune caratteristiche e funzionalità sono limitate a particolari kernel come descritto nella tabella seguente:
 
-| Kernel | Supporto per l&#39;installazione della libreria | [!DNL Platform] integrazioni |
+| Kernel | Supporto per l&#39;installazione della libreria | [!DNL Platform] Integrazioni |
 | :----: | :--------------------------: | :-------------------- |
 | **[!DNL Python]** | Sì | <ul><li>[!DNL Sensei ML Framework]</li><li>[!DNL Catalog Service]</li><li>[!DNL Query Service]</li></ul> |
 | **R** | Sì | <ul><li>[!DNL Sensei ML Framework]</li><li>[!DNL Catalog Service]</li></ul> |
@@ -152,7 +158,7 @@ Alcune caratteristiche e funzionalità sono limitate a determinati kernel come d
 
 ### Sessioni kernel {#kernel-sessions}
 
-Ogni blocco appunti o attività attiva in [!DNL JupyterLab] utilizza una sessione kernel. Per trovare tutte le sessioni attive, espandi la scheda **Terminali e kernel in esecuzione** dalla barra laterale a sinistra. Il tipo e lo stato del kernel di un notebook possono essere identificati osservando la parte superiore destra dell&#39;interfaccia del notebook. Nel diagramma seguente, il kernel associato al blocco appunti è **[!DNL Python]3** e il suo stato corrente è rappresentato da un cerchio grigio a destra. Un cerchio cavo implica un kernel inattivo e un cerchio solido implica un kernel occupato.
+Ogni notebook o attività attiva utilizza [!DNL JupyterLab] una sessione del kernel. Per trovare tutte le sessioni attive, espandi la scheda **Terminali e kernel in esecuzione** dalla barra laterale a sinistra. Il tipo e lo stato del kernel di un notebook possono essere identificati osservando la parte superiore destra dell&#39;interfaccia del notebook. Nel diagramma seguente, il kernel associato al blocco appunti è **[!DNL Python]3** e il suo stato corrente è rappresentato da un cerchio grigio a destra. Un cerchio cavo implica un kernel inattivo e un cerchio solido implica un kernel occupato.
 
 ![](../images/jupyterlab/user-guide/kernel_and_state_1.png)
 
@@ -169,22 +175,22 @@ Il *modulo di avvio* personalizzato fornisce utili modelli di blocco appunti per
 | Modello | Descrizione |
 | --- | --- |
 | Vuoto | Un file del blocco appunti vuoto. |
-| Starter | Un notebook precompilato che illustra l’esplorazione dei dati utilizzando dati di esempio. |
-| Vendite al dettaglio | Un notebook precompilato con [ricetta per la vendita al dettaglio](../pre-built-recipes/retail-sales.md) utilizzando dati di esempio. |
-| Generatore di ricette | Modello di blocco appunti per la creazione di una composizione in [!DNL JupyterLab]. È precompilata con codice e commento che illustra e descrive il processo di creazione della ricetta. Per informazioni dettagliate, consulta il [blocco appunti per l&#39;esercitazione sulla ricetta](https://www.adobe.com/go/data-science-create-recipe-notebook-tutorial-en). |
-| [!DNL Query Service] | Un blocco appunti precompilato che illustra l&#39;utilizzo di [!DNL Query Service] direttamente in [!DNL JupyterLab] con flussi di lavoro di esempio forniti che analizza i dati su larga scala. |
-| Eventi XDM | Un blocco appunti precompilato che illustra l’esplorazione dei dati sui dati post-valore di Experience Event, concentrandosi sulle funzioni comuni all’intera struttura di dati. |
-| Query XDM | Un blocco appunti precompilato che illustra query di business di esempio sui dati di Experience Event. |
-| Aggregazione | Un notebook precompilato che illustra flussi di lavoro di esempio per aggregare grandi quantità di dati in blocchi più piccoli e gestibili. |
-| Clustering | Un notebook precompilato che illustra il processo di modellazione dell’apprendimento automatico end-to-end tramite algoritmi di clustering. |
+| Starter | Un notebook precompilato che illustra l&#39;esplorazione dei dati utilizzando dati di esempio. |
+| Vendite al dettaglio | Un quaderno precompilato con la ricetta](../pre-built-recipes/retail-sales.md) di vendita al [dettaglio utilizzando dati di esempio. |
+| Generatore di ricette | Modello di blocco appunti per la creazione di una composizione in [!DNL JupyterLab]. È precompilata con codice e commento che illustra e descrive il processo di creazione della ricetta. Fare riferimento al blocco appunti per l&#39;esercitazione [](https://www.adobe.com/go/data-science-create-recipe-notebook-tutorial-en) delle ricette per una procedura dettagliata |
+| [!DNL Query Service] | Un notebook precompilato che illustra l&#39;utilizzo di flussi di [!DNL Query Service] lavoro di esempio forniti direttamente in [!DNL JupyterLab] dotazione, che analizza i dati su larga scala. |
+| Eventi XDM | Un notebook precompilato che illustra l&#39;esplorazione dei dati sui dati postvalue dell&#39;evento dell&#39;esperienza, concentrandosi sulle funzionalità comuni a tutta la struttura dei dati. |
+| Query XDM | Un blocco appunti precompilato che illustra query aziendali di esempio sui dati degli eventi esperienza. |
+| Aggregazione | Un notebook precompilato che illustra i flussi di lavoro di esempio per aggregato grandi quantità di dati in blocchi più piccoli e gestibili. |
+| Clustering | Un notebook precompilato che illustra il processo di modellazione end-to-end di Machine Learning utilizzando algoritmi di clustering. |
 
-Alcuni modelli di notebook sono limitati a determinati kernel. La disponibilità del modello per ciascun kernel è mappata nella tabella seguente:
+Alcuni modelli di notebook sono limitati a determinati kernel. La disponibilità dei template per ogni kernel è mappata nella seguente tabella:
 
 <table>
     <tr>
         <td></td>
         <th><strong>Vuoto</strong></th>
-        <th><strong>Starter</strong></th>
+        <th><strong>Avviatore</strong></th>
         <th><strong>Vendite al dettaglio</strong></th>
         <th><strong>Generatore di ricette</strong></th>
         <th><strong>[!DNL Query Service]</strong></th>
@@ -243,21 +249,21 @@ Alcuni modelli di notebook sono limitati a determinati kernel. La disponibilità
     </tr>
 </table>
 
-Per aprire un nuovo *modulo di avvio*, fare clic su **File > Nuovo modulo di avvio**. In alternativa, espandere **Browser file** dalla barra laterale sinistra e fare clic sul simbolo più (**+**):
+Per aprire un nuovo *modulo di avvio*, fare clic su **File > Nuovo modulo di avvio**. In alternativa, espandi il **File browser** dalla barra laterale sinistra e fai clic sul simbolo più (**+**):
 
 ![](../images/jupyterlab/user-guide/new_launcher.gif)
 
 ## Passaggi successivi
 
-Per ulteriori informazioni su ciascuno dei notebook supportati e su come utilizzarli, consulta la [Guida per gli sviluppatori di Jupyterlab per l&#39;accesso ai dati dei notebook](./access-notebook-data.md). Questa guida illustra come utilizzare i notebook JupyterLab per accedere ai dati, incluse le operazioni di lettura, scrittura e query. La guida all&#39;accesso ai dati contiene inoltre informazioni sulla quantità massima di dati che può essere letta da ogni blocco appunti supportato.
+Per ulteriori informazioni su ciascuno dei notebook supportati e su come usarli, visita la guida per sviluppatori di [accesso](./access-notebook-data.md) dati dei notebook Jupyterlab. Questa guida è incentrata su come utilizzare i notebook JupyterLab per accesso i dati, inclusi lettura, scrittura e query sui dati. La guida accesso dati contiene inoltre informazioni sulla quantità massima di dati che possono essere letti da ogni notebook supportato.
 
-## Librerie supportate {#supported-libraries}
+## librerie supportati {#supported-libraries}
 
-Per un elenco dei pacchetti supportati in Python, R e PySpark, copiare e incollare `!conda list` in una nuova cella, quindi eseguire la cella. Un elenco di pacchetti supportati viene compilato in ordine alfabetico.
+Per un elenco dei pacchetti supportati in Python, R e PySpark, copia e incolla `!conda list` in una nuova cella, quindi esegui la cella. Un elenco di pacchetti supportati viene compilato in ordine alfabetico.
 
 ![esempio](../images/jupyterlab/user-guide/libraries.PNG)
 
 Inoltre, vengono utilizzate le dipendenze seguenti, ma non elencate:
-* CUDA 11,2
+* CUDA 11.2
 * CUDNN 8.1
 

@@ -5,14 +5,20 @@ title: Anteprima dello schema e del set di dati di vendita al dettaglio
 type: Tutorial
 description: Il seguente documento illustra l’anteprima di schemi e set di dati su Adobe Experience Platform.
 exl-id: dca9835b-4f76-42cc-b262-b20323bf4356
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '259'
 ht-degree: 3%
 
 ---
 
 # Anteprima dello schema e del set di dati di vendita al dettaglio
+
+>[!NOTE]
+>
+>Data Science Workspace non è più disponibile per l’acquisto.
+>
+>Questa documentazione è destinata ai clienti esistenti che dispongono di diritti precedenti su Data Science Workspace.
 
 Al completamento dello script di avvio dall&#39;esercitazione [Retail Sales Schema and dataset](./create-retails-sales-dataset.md). Gli schemi e i set di dati di output possono essere visualizzati su [!DNL Experience Platform]. Per visualizzare gli schemi e i set di dati, effettua le seguenti operazioni:
 

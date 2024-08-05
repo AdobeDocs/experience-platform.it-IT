@@ -1,21 +1,27 @@
 ---
-keywords: Experience Platform;guida per sviluppatori;SDK;Data Access SDK;Data Science Workspace;argomenti più comuni
+keywords: Experience Platform; guida per sviluppatori; SDK; SDK di accesso ai dati; Data Science Area di lavoro; Argomenti comuni
 solution: Experience Platform
-title: Authoring di modelli con l’SDK della piattaforma Adobe Experience Platform
-description: Questa esercitazione fornisce informazioni sulla conversione di data_access_sdk_python nel nuovo Python platform_sdk sia in Python che in R.
+title: Authoring di modelli con SDK Adobe Experience Platform Platform
+description: Questo esercitazione fornisce informazioni sulla conversione di data_accesso_sdk_python nella nuova platform_sdk Python sia in Python che in R.
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '509'
 ht-degree: 3%
 
 ---
 
-# Authoring del modello con l&#39;SDK [!DNL Platform] di Adobe Experience Platform
+# Authoring di modelli con SDK Adobe Experience Platform [!DNL Platform]
 
-Questa esercitazione fornisce informazioni sulla conversione di `data_access_sdk_python` nel nuovo Python `platform_sdk` sia in Python che in R. Questo tutorial fornisce informazioni sulle seguenti operazioni:
+>[!NOTE]
+>
+>Data Science Workspace non è più disponibile per l’acquisto.
+>
+>Questa documentazione è destinata ai clienti esistenti con precedenti diritti a Data Science Area di lavoro.
 
-- [Genera autenticazione](#build-authentication)
+Questo esercitazione fornisce informazioni sulla conversione `data_access_sdk_python` al nuovo Python `platform_sdk` sia in Python che in R. In questo esercitazione vengono fornite informazioni sulle seguenti operazioni:
+
+- [Costruire l&#39;autenticazione](#build-authentication)
 - [Lettura di base dei dati](#basic-reading-of-data)
 - [Scrittura di base dei dati](#basic-writing-of-data)
 
@@ -73,17 +79,17 @@ Con il nuovo SDK [!DNL Platform], la dimensione massima di lettura è di 32 GB, 
 Se il tempo di lettura richiede troppo tempo, puoi provare a utilizzare una delle seguenti opzioni di filtro:
 
 - [Filtraggio dei dati per offset e limite](#filter-by-offset-and-limit)
-- [Filtrare i dati per data](#filter-by-date)
-- [Filtrare i dati per colonna](#filter-by-selected-columns)
-- [Recupero risultati ordinati](#get-sorted-results)
+- [Filtraggio dei dati per data](#filter-by-date)
+- [Filtraggio dei dati per colonna](#filter-by-selected-columns)
+- [Ottenere risultati ordinati](#get-sorted-results)
 
 >[!NOTE]
 >
->L&#39;organizzazione è impostata in `client_context`.
+>L&#39;organizzazione è impostata all&#39;interno di `client_context`.
 
 ### Python
 
-Per leggere i dati in Python, usa il codice di esempio seguente:
+Per leggere i dati in Python, usa l&#39;esempio di codice seguente:
 
 ```python
 from platform_sdk.dataset_reader import DatasetReader
@@ -94,7 +100,7 @@ df.head()
 
 ### R
 
-Per leggere i dati in R, utilizza il codice di esempio seguente:
+Per leggere i dati in R, utilizzare l&#39;esempio di codice riportato di seguito:
 
 ```r
 DatasetReader <- psdk$dataset_reader$DatasetReader
@@ -105,7 +111,7 @@ df
 
 ## Filtra per offset e limite {#filter-by-offset-and-limit}
 
-Poiché il filtro per ID batch non è più supportato, per eseguire la lettura dei dati è necessario utilizzare `offset` e `limit`.
+Poiché il filtraggio per ID batch non è più supportato, per ambito lettura dei dati, è necessario utilizzare `offset` e `limit`.
 
 ### Python
 
@@ -154,8 +160,8 @@ Il nuovo SDK [!DNL Platform] supporta le operazioni seguenti:
 | Maggiore o uguale a (`>=`) | `ge()` |
 | Minore di (`<`) | `lt()` |
 | Minore o uguale a (`<=`) | `le()` |
-| E (`&`) | `And()` |
-| Oppure (`|`) | `Or()` |
+| e (`&`) | `And()` |
+| oppure (`|`) | `Or()` |
 
 ## Filtra per colonne selezionate {#filter-by-selected-columns}
 
@@ -197,7 +203,7 @@ df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 >
 >L&#39;organizzazione è impostata in `client_context`.
 
-Per scrivere i dati in Python e R, usate uno dei seguenti esempi:
+Per scrivere dati in Python e R, usa uno degli esempi seguenti di seguito:
 
 ### Python
 
@@ -220,4 +226,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## Passaggi successivi
 
-Dopo aver configurato il caricatore di dati `platform_sdk`, i dati vengono preparati e quindi suddivisi nei set di dati `train` e `val`. Per informazioni sulla preparazione dei dati e sulla progettazione delle funzionalità, visitare la sezione relativa alla [preparazione dei dati e alla progettazione delle funzionalità](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) nell&#39;esercitazione per la creazione di una ricetta utilizzando [!DNL JupyterLab] notebook.
+Una volta configurato il `platform_sdk` caricatore di dati, i dati vengono sottoposti a preparazione e quindi suddivisi nei `train` set di dati AND `val` . Per informazioni sulla preparazione dei dati e sulla progettazione delle funzionalità, visitare la sezione relativa alla [preparazione dei dati e alla progettazione delle funzionalità](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) nell&#39;esercitazione per la creazione di una ricetta utilizzando [!DNL JupyterLab] notebook.

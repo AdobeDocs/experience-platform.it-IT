@@ -5,14 +5,20 @@ title: Punteggio di un modello utilizzando l’API di apprendimento automatico d
 type: Tutorial
 description: Questa esercitazione ti mostrerà come sfruttare le API di apprendimento automatico di Sensei per creare un’esecuzione di un esperimento e di un esperimento.
 exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '570'
 ht-degree: 1%
 
 ---
 
 # Punteggio di un modello utilizzando [!DNL Sensei Machine Learning API]
+
+>[!NOTE]
+>
+>Data Science Workspace non è più disponibile per l’acquisto.
+>
+>Questa documentazione è destinata ai clienti esistenti che dispongono di diritti precedenti su Data Science Workspace.
 
 Questa esercitazione ti mostrerà come sfruttare le API per creare un’esecuzione di un esperimento e di un esperimento. Per un elenco di tutti gli endpoint nell&#39;API di apprendimento automatico di Sensei, fare riferimento a [questo documento](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/).
 

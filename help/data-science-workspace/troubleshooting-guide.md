@@ -1,23 +1,29 @@
 ---
-keywords: Experience Platform;risoluzione dei problemi;Data Science Workspace;argomenti più comuni
+keywords: Experience Platform; risoluzione dei problemi; Data Science Area di lavoro; Argomenti comuni
 solution: Experience Platform
 title: Guida alla risoluzione dei problemi di Data Science Workspace
 description: Questo documento fornisce le risposte alle domande più frequenti su Adobe Experience Platform Data Science Workspace.
 exl-id: fbc5efdc-f166-4000-bde2-4aa4b0318b38
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '1474'
+source-wordcount: '1497'
 ht-degree: 0%
 
 ---
 
 # Guida alla risoluzione dei problemi di [!DNL Data Science Workspace]
 
-Questo documento fornisce le risposte alle domande frequenti su Adobe Experience Platform [!DNL Data Science Workspace]. Per domande e risoluzione dei problemi relativi alle API [!DNL Platform] in generale, consulta la [guida alla risoluzione dei problemi API di Adobe Experience Platform](../landing/troubleshooting.md).
+>[!NOTE]
+>
+>Data Science Area di lavoro non è più disponibile per l&#39;acquisto.
+>
+>Questa documentazione è destinata ai clienti esistenti con precedenti diritti a Data Science Area di lavoro.
 
-## Stato query JupyterLab Notebook bloccato in esecuzione
+In questo documento vengono fornite le risposte alle domande più frequenti su Adobe Experience Platform [!DNL Data Science Workspace]. Per domande e risoluzione dei problemi relativi alle [!DNL Platform] API in generale, consulta la [Adobe Experience Platform Guida](../landing/troubleshooting.md) alla risoluzione dei problemi relativi alle API.
 
-Un notebook JupyterLab può indicare che una cella è in esecuzione, indefinitamente, in alcune condizioni di memoria esaurita. Ad esempio, quando si esegue una query su un set di dati di grandi dimensioni o si eseguono più query successive, JupyterLab Notebook può esaurire la memoria disponibile per memorizzare l’oggetto dataframe risultante. Vi sono alcuni indicatori che possono essere osservati in questa situazione. Innanzitutto, il kernel entra nello stato inattivo anche se la cella viene visualizzata come in esecuzione, indicata dall&#39;icona [`*`] accanto alla cella. Inoltre, la barra inferiore indica la quantità di RAM utilizzata/disponibile.
+## Stato della query JupyterLab Notebook bloccato nello stato di esecuzione
+
+Un notebook JupyterLab può indicare che una cella si trova nello stato di esecuzione, a tempo indeterminato, in alcune condizioni di memoria esaurita. Ad esempio, quando si esegue una query su un set di dati di grandi dimensioni o si eseguono più query successive, JupyterLab Notebook può esaurire la memoria disponibile per memorizzare l’oggetto dataframe risultante. Vi sono alcuni indicatori che possono essere osservati in questa situazione. Innanzitutto, il kernel entra nello stato inattivo anche se la cella viene visualizzata come in esecuzione, indicata dall&#39;icona [`*`] accanto alla cella. Inoltre, la barra inferiore indica la quantità di RAM utilizzata/disponibile.
 
 ![RAM disponibile](./images/jupyterlab/user-guide/allocate-ram.png)
 
@@ -39,7 +45,7 @@ Con la versione 80.x del browser [!DNL Google Chrome], tutti i cookie di terze p
 
 Per risolvere il problema, attenersi alla procedura descritta di seguito.
 
-Nel browser [!DNL Chrome], passa in alto a destra e seleziona **Impostazioni** (in alternativa puoi copiare e incollare &quot;chrome://settings/&quot; nella barra degli indirizzi). Quindi, scorri fino alla parte inferiore della pagina e fai clic sul menu a discesa **Avanzate**.
+Nel browser [!DNL Chrome], passa in alto a destra e seleziona **Impostazioni** (in alternativa puoi copiare e incollare &quot;chrome://settings/&quot; nella barra degli indirizzi). Successivo, scorri fino alla parte inferiore della pagina e fai clic sul **menu a discesa Avanzate** .
 
 ![avanzato per Chrome](./images/faq/chrome-advanced.png)
 
@@ -51,23 +57,23 @@ Viene visualizzata la sezione **Privacy e sicurezza**. Fare clic su **Impostazio
 
 Infine, imposta &quot;Blocca cookie di terze parti&quot; su &quot;OFF&quot;.
 
-![avanzato per Chrome](./images/faq/toggle-off.png)
+![Chrome Advanced](./images/faq/toggle-off.png)
 
 >[!NOTE]
 >
->In alternativa, è possibile disabilitare i cookie di terze parti e aggiungere [*.]ds.adobe.net all&#39;elenco consentiti.
+>In alternativa, è possibile disabilitare i cookie di terze parti e aggiungere [*.]ds.adobe.net all&#39;elenco Consenti.
 
-Passa a chrome://flags/ nella barra degli indirizzi. Cercare e disattivare il flag *&quot;SameSite by default cookies&quot;* utilizzando il menu a discesa a destra.
+Vai a &quot;chrome://flags/&quot; nella barra degli indirizzi. Search e disabilita il contrassegno intitolato *&quot;Cookie SameSite by default&quot;* utilizzando il menu a discesa sulla destra.
 
-![disabilita flag samesite](./images/faq/samesite-flag.png)
+![Disattiva contrassegno SameSite](./images/faq/samesite-flag.png)
 
 Dopo il passaggio 2, viene richiesto di riavviare il browser. Dopo il riavvio, [!DNL Jupyterlab] dovrebbe essere accessibile.
 
-## Perché non riesco ad accedere a [!DNL JupyterLab] in Safari?
+## Perché non riesco a accesso [!DNL JupyterLab] in Safari?
 
-Per impostazione predefinita, Safari disabilita i cookie di terze parti in Safari &lt; 12. Poiché l&#39;istanza della macchina virtuale [!DNL Jupyter] risiede in un dominio diverso dal frame padre, Adobe Experience Platform attualmente richiede l&#39;attivazione di cookie di terze parti. Abilitare i cookie di terze parti o passare a un altro browser, ad esempio [!DNL Google Chrome].
+Safari disabilita i cookie di terze parti per impostazione predefinita in Safari &lt; 12. Poiché il [!DNL Jupyter] istanza della macchina virtuale risiede in un dominio diverso da quello del frame padre, Adobe Experience Platform attualmente richiede che i cookie di terze parti siano abilitati. Abilita i cookie di terze parti o passa a un browser diverso, ad esempio [!DNL Google Chrome].
 
-Per Safari 12, è necessario cambiare l&#39;agente utente in &#39;[!DNL Chrome]&#39; o &#39;[!DNL Firefox]&#39;. Per cambiare agente utente, apri il menu *Safari* e seleziona **Preferenze**. Viene visualizzata la finestra delle preferenze.
+Per Safari 12, devi impostare l&#39;agente utente su &#39;[!DNL Chrome]&#39; o &#39;[!DNL Firefox]&#39;. Per cambiare agente utente, apri il *menu Safari* e seleziona **Preferenze**. Viene visualizzata la finestra delle preferenze.
 
 ![Preferenze Safari](./images/faq/preferences.png)
 
@@ -75,33 +81,33 @@ Nella finestra delle preferenze di Safari, seleziona **Avanzate**. Selezionare q
 
 ![Safari avanzato](./images/faq/advanced.png)
 
-Quindi, dalla barra di navigazione superiore, seleziona il menu **Sviluppo**. Dall&#39;elenco a discesa **Sviluppo**, passa il puntatore del mouse su **Agente utente**. È possibile selezionare la stringa dell&#39;agente utente **[!DNL Chrome]** o **[!DNL Firefox]** che si desidera utilizzare.
+Quindi, dalla barra di navigazione superiore, seleziona il menu **Sviluppo**. Dall&#39;elenco a discesa **Sviluppo**, passa il puntatore del mouse su **Agente utente**. Puoi selezionare la stringa o **[!DNL Firefox]** agente **[!DNL Chrome]** utente che desideri like usare.
 
 ![Menu Sviluppo](./images/faq/user-agent.png)
 
-## Perché viene visualizzato il messaggio &#39;403 Forbidden&#39; quando si tenta di caricare o eliminare un file in [!DNL JupyterLab]?
+## Perché viene visualizzato il messaggio &quot;403 Vietato&quot; quando provo a caricare o eliminare un file in [!DNL JupyterLab]?
 
-Se il browser è abilitato con il software di blocco degli annunci pubblicitari come [!DNL Ghostery] o [!DNL AdBlock] Plus, il dominio &quot;\*.adobe.net&quot; deve essere consentito in ogni software di blocco degli annunci pubblicitari affinché [!DNL JupyterLab] funzioni normalmente. Questo perché [!DNL JupyterLab] macchine virtuali vengono eseguite in un dominio diverso rispetto al dominio [!DNL Experience Platform].
+Se il tuo browser è abilitato con software di blocco degli annunci pubblicitari come [!DNL Ghostery] o [!DNL AdBlock] Plus, il dominio &quot;\*.adobe.net&quot; deve essere consentito in ogni software di blocco degli annunci per [!DNL JupyterLab] funzionare normalmente. Questo perché [!DNL JupyterLab] le macchine virtuali vengono eseguite in un dominio diverso da quello del [!DNL Experience Platform] dominio.
 
-## Perché alcune parti di [!DNL Jupyter Notebook] sembrano codificate o non vengono riprodotte come codice?
+## Perché alcune parti del mio [!DNL Jupyter Notebook] aspetto vengono codificate o non vengono visualizzate come codice?
 
-Ciò può verificarsi se la cella in questione viene accidentalmente modificata da &quot;Code&quot; a &quot;Markdown&quot;. Mentre una cella di codice è attiva, premendo la combinazione di tasti **ESC+M** il tipo della cella viene modificato in Markdown. Il tipo di cella può essere modificato dall&#39;indicatore a discesa nella parte superiore del blocco appunti per le celle selezionate. Per cambiare un tipo di cella in codice, inizia selezionando la cella che desideri modificare. Quindi, fai clic sul menu a discesa che indica il tipo corrente della cella, quindi seleziona &quot;Codice&quot;.
+Questo può accadere se la cella in questione viene accidentalmente modificata da &quot;Code&quot; a &quot;Markdown&quot;. Mentre una cella di codice è attiva, premendo la combinazione **di tasti ESC+M** il tipo di cella viene impostato su Markdown. Il tipo di cella può essere modificato dall&#39;indicatore a discesa nella parte superiore del blocco appunti per le celle selezionate. Per modificare un tipo di cella in codice, selezionare innanzitutto la cella specificata che si desidera modificare. Successivo, fai clic sul menu a discesa che indica il tipo corrente della cella, quindi seleziona &quot;Code&quot;.
 
 ![](./images/faq/code_type.png)
 
-## Come installare le librerie [!DNL Python] personalizzate?
+## Come si installano i librerie personalizzati [!DNL Python] ?
 
-Il kernel [!DNL Python] è preinstallato con molte librerie di machine learning popolari. Tuttavia, puoi installare librerie personalizzate aggiuntive eseguendo il seguente comando all’interno di una cella di codice:
+Il [!DNL Python] kernel è preinstallato con molti librerie di machine learning popolari. Tuttavia, è possibile installare ulteriori librerie personalizzati eseguendo il comando seguente all&#39;interno di una cella di codice:
 
 ```shell
 !pip install {LIBRARY_NAME}
 ```
 
-Per un elenco completo delle librerie [!DNL Python] preinstallate, vedere la sezione [appendice della Guida utente di JupyterLab](./jupyterlab/overview.md#supported-libraries).
+Per un elenco completo dei librerie preinstallati [!DNL Python] , vedere la [sezione appendice del Guida utente](./jupyterlab/overview.md#supported-libraries) JupyterLab.
 
-## Posso installare librerie PySpark personalizzate?
+## Posso installare librerie PySpark personalizzati?
 
-Sfortunatamente, non è possibile installare librerie aggiuntive per il kernel PySpark. Tuttavia, puoi contattare il rappresentante del servizio clienti Adobe per richiedere l’installazione di librerie PySpark personalizzate.
+Sfortunatamente, non è possibile installare librerie aggiuntive per il kernel PySpark. Tuttavia, puoi contattare il tuo rappresentante del servizio clienti Adobe Systems per installare librerie PySpark personalizzati.
 
 Per un elenco delle librerie PySpark preinstallate, consulta la [sezione dell&#39;appendice della Guida utente di JupyterLab](./jupyterlab/overview.md#supported-libraries).
 
@@ -123,13 +129,13 @@ Per un elenco delle librerie PySpark preinstallate, consulta la [sezione dell&#3
 }
 ```
 
-Per ulteriori informazioni sulla configurazione delle risorse cluster [!DNL Spark], incluso l&#39;elenco completo delle proprietà configurabili, vedere la [Guida utente di JupyterLab](./jupyterlab/overview.md#kernels).
+Per ulteriori informazioni sulla [!DNL Spark] configurazione delle risorse del cluster, incluso l&#39;elenco completo delle proprietà configurabili, vedere la [Guida utente](./jupyterlab/overview.md#kernels) JupyterLab.
 
-## Perché ricevo un errore quando tento di eseguire determinate attività per set di dati più grandi?
+## Perché ricevo un errore quando provo a eseguire determinate attività per set di dati più grandi?
 
-Se si riceve un errore per un motivo quale `Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues.`, in genere il driver o un esecutore sta esaurendo la memoria. Per ulteriori informazioni sui limiti dei dati e su come eseguire attività su set di dati di grandi dimensioni, consulta la documentazione di JupyterLab Notebooks [data access](./jupyterlab/access-notebook-data.md). In genere questo errore può essere risolto modificando `mode` da `interactive` a `batch`.
+Se viene visualizzato un errore con un motivo come `Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues.` Ciò significa in genere che il driver o un esecutore sta esaurendo la memoria. Per ulteriori informazioni sui limiti dei dati e su come eseguire attività su set di dati di grandi dimensioni, vedere la documentazione relativa ai dati accesso di](./jupyterlab/access-notebook-data.md) JupyterLab Notebooks[. In genere questo errore può essere risolto modificando il `mode` da `interactive` a `batch`.
 
-Inoltre, durante la scrittura di set di dati Spark/PySpark di grandi dimensioni, la memorizzazione nella cache dei dati (`df.cache()`) prima dell&#39;esecuzione del codice di scrittura può migliorare notevolmente le prestazioni.
+Inoltre, durante la scrittura di set di dati Spark/PySpark di grandi dimensioni, caching i dati (`df.cache()`) prima di eseguire il codice di scrittura può migliorare notevolmente le prestazioni.
 
 <!-- remove this paragraph at a later date once the sdk is updated -->
 
@@ -149,9 +155,9 @@ Se ricevi uno dei seguenti errori:
 - Client RPC remoto disassociato e altri errori di memoria.
 - Scarse prestazioni durante la lettura e la scrittura di set di dati.
 
-Verificare che i dati vengano memorizzati nella cache (`df.cache()`) prima di scriverli. Durante l&#39;esecuzione del codice nei blocchi appunti, l&#39;utilizzo di `df.cache()` prima di un&#39;azione come `fit()` può migliorare notevolmente le prestazioni del blocco appunti. L&#39;utilizzo di `df.cache()` prima della scrittura di un set di dati garantisce che le trasformazioni vengano eseguite una sola volta invece di più volte.
+Verificare che i dati vengano memorizzati nella cache (`df.cache()`) prima di scriverli. Durante l&#39;esecuzione del codice nei blocchi appunti, l&#39;utilizzo di `df.cache()` prima di un&#39;azione come `fit()` può migliorare notevolmente le prestazioni del blocco appunti. L&#39;utilizzo `df.cache()` prima della scrittura di un dataset garantisce che le trasformazioni vengano eseguite una sola volta anziché più volte.
 
-## Limitazioni di [!DNL Docker Hub] in Data Science Workspace
+## [!DNL Docker Hub] limitare le restrizioni in Data Science Area di lavoro
 
 A partire dal 20 novembre 2020, sono entrati in vigore i limiti di tariffa per l’uso anonimo e gratuito autenticato di Docker Hub. Gli utenti anonimi e gratuiti di [!DNL Docker Hub] sono limitati a 100 richieste pull di immagini contenitore ogni sei ore. Se sono state apportate queste modifiche, verrà visualizzato il seguente messaggio di errore: `ERROR: toomanyrequests: Too Many Requests.` o `You have reached your pull rate limit. You may increase the limit by authenticating and upgrading: https://www.docker.com/increase-rate-limits.`.
 

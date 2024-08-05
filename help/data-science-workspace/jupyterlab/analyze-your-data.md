@@ -5,14 +5,20 @@ title: Analizzare I Dati Utilizzando I Notebook
 type: Tutorial
 description: Questo tutorial si concentra su come utilizzare Jupyter Notebooks, integrato in Data Science Workspace, per accedere, esplorare e visualizzare i tuoi dati.
 exl-id: 3b0148d1-9c08-458b-9601-979cb6c7a0fb
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '1706'
+source-wordcount: '1729'
 ht-degree: 0%
 
 ---
 
 # Analizzare i dati utilizzando i notebook
+
+>[!NOTE]
+>
+>Data Science Workspace non è più disponibile per l’acquisto.
+>
+>Questa documentazione è destinata ai clienti esistenti che dispongono di diritti precedenti su Data Science Workspace.
 
 Questo tutorial si concentra su come utilizzare Jupyter Notebooks, integrato in Data Science Workspace, per accedere, esplorare e visualizzare i tuoi dati. Al termine di questa esercitazione, avrai acquisito una conoscenza di alcune delle funzioni offerte da Jupyter Notebooks per comprendere meglio i tuoi dati.
 
@@ -20,11 +26,11 @@ Sono introdotti i seguenti concetti:
 
 - **[!DNL JupyterLab]:** [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) è l&#39;interfaccia Web di nuova generazione per Project Jupyter ed è strettamente integrata in [!DNL Adobe Experience Platform].
 - **Batch:** I set di dati sono costituiti da batch. Un batch è un insieme di dati raccolti in un periodo di tempo ed elaborati insieme come una singola unità. Quando i dati vengono aggiunti a un set di dati vengono creati nuovi batch.
-- **SDK per l&#39;accesso ai dati (obsoleto):** L&#39;SDK per l&#39;accesso ai dati è ora obsoleto. Utilizzare la guida di [[!DNL Platform SDK]](../authoring/platform-sdk.md).
+- **Data Access SDK (obsoleto):** l&#39;SDK Data Access è ora obsoleto. Si prega di utilizzare la [[!DNL Platform SDK]](../authoring/platform-sdk.md) guida.
 
-## Esplorare i notebook in Data Science Workspace
+## Esplora i notebook in Data Science Area di lavoro
 
-In questa sezione vengono esaminati i dati precedentemente acquisiti nello schema di vendita al dettaglio.
+In questa sezione vengono esplorati i dati precedentemente inseriti nello schema delle vendite al dettaglio.
 
 Data Science Workspace consente agli utenti di creare [!DNL Jupyter Notebooks] tramite la piattaforma [!DNL JupyterLab], dove possono creare e modificare flussi di lavoro di apprendimento automatico. [!DNL JupyterLab] è uno strumento di collaborazione server-client che consente agli utenti di modificare i documenti del blocco appunti tramite un browser Web. Questi blocchi appunti possono contenere sia codice eseguibile che elementi in formato Rich Text. A tale scopo, utilizzeremo Markdown per la descrizione dell&#39;analisi e il codice eseguibile [!DNL Python] per eseguire l&#39;esplorazione e l&#39;analisi dei dati.
 
@@ -38,11 +44,11 @@ Per impostazione predefinita, la ricetta Tensorflow funziona in un cluster GPU e
 
 ### Crea un nuovo blocco appunti
 
-Nell&#39;interfaccia utente di [!DNL Adobe Experience Platform], seleziona [!UICONTROL Data Science] nel menu principale per passare a Data Science Workspace. Da questa pagina, selezionare [!DNL JupyterLab] per aprire il modulo di avvio [!DNL JupyterLab]. Dovresti visualizzare una pagina simile a questa.
+Nell&#39;interfaccia utente di [!DNL Adobe Experience Platform], seleziona [!UICONTROL Data Science] nel menu principale per passare a Data Science Workspace. Da questa pagina, selezionare [!DNL JupyterLab] per aprire il modulo di avvio [!DNL JupyterLab]. Dovresti vedere una pagina simile a questa.
 
 ![](../images/jupyterlab/analyze-data/jupyterlab-launcher-new.png)
 
-Nel nostro tutorial, utilizzeremo [!DNL Python] 3 nel Jupyter Notebook per mostrare come accedere ed esplorare i dati. Nella pagina di avvio sono disponibili blocchi appunti di esempio. Verrà utilizzata la ricetta Vendite al dettaglio per [!DNL Python] 3.
+Nel nostro esercitazione, useremo [!DNL Python] 3 nel Jupyter Notebook per mostrare come accesso ed esplorare i dati. Nella pagina di avvio sono disponibili blocchi appunti di esempio. Verrà utilizzata la ricetta Vendite al dettaglio per [!DNL Python] 3.
 
 ![](../images/jupyterlab/analyze-data/retail_sales.png)
 
@@ -72,7 +78,7 @@ Infine, possiamo dare un&#39;occhiata all&#39;aspetto dei nostri dati. È possib
 
 #### [!DNL Experience Platform] dati
 
-Ora si passa all&#39;accesso ai dati [!DNL Experience Platform].
+Ora, andremo oltre l&#39;accesso ai [!DNL Experience Platform] dati.
 
 ##### Per ID set di dati
 
@@ -150,11 +156,11 @@ Esaminando i valori minimo e massimo per `store`, è possibile notare che sono p
 
 ![](../images/jupyterlab/analyze-data/df_groupby.png)
 
-Ciò significa che 22 archivi sono di `storeType` `A`, 17 sono `storeType` `B` e 6 sono `storeType` `C`.
+Ciò significa che 22 negozi sono di `storeType` `A`, 17 sono `storeType` `B`, e 6 sono `storeType` `C`.
 
-#### Visualizzazione dati
+#### Visualizzazione dei dati
 
-Ora che conosciamo i valori dei nostri frame di dati, vogliamo integrarli con le visualizzazioni per rendere le cose più chiare e più facili da identificare. I grafici sono utili anche per trasmettere i risultati a un pubblico. Alcune librerie [!DNL Python] utili per la visualizzazione includono:
+Ora che conosciamo i valori dei nostri frame di dati, vogliamo integrarli con visualizzazioni per rendere le cose più chiare e facili da identificare i modelli. I grafici sono utili anche quando si trasmettono i risultati a un pubblico. Alcuni [!DNL Python] librerie utili per la visualizzazione includono:
 - [Matplotlib](https://matplotlib.org/)
 - [panda](https://pandas.pydata.org/)
 - [seaborn](https://seaborn.pydata.org/)
@@ -168,18 +174,18 @@ In questa sezione presenteremo rapidamente alcuni vantaggi relativi all’utiliz
 
 [seaborn](https://seaborn.pydata.org/) è una build del pacchetto sopra matplotlib. Il suo obiettivo principale è quello di rendere i grafici predefiniti più accattivanti dal punto di vista visivo e semplificare la creazione di grafici complessi.
 
-[ggplot](https://ggplot2.tidyverse.org/) è un pacchetto creato anche sopra matplotlib. Tuttavia la differenza principale è che l&#39;utensile è una porta di ggplot2 per R. Simile al seaborn, l&#39;obiettivo è quello di migliorare su matplotlib. Gli utenti che hanno familiarità con ggplot2 for R devono considerare questa libreria.
+[ggplot](https://ggplot2.tidyverse.org/) è un pacchetto creato anche sopra matplotlib. Tuttavia la differenza principale è che il strumento è un porta di ggplot2 per R. Simile a seaborn, l&#39;obiettivo è quello di migliorare matplotlib. Gli utenti che hanno familiarità con ggplot2 per R dovrebbero prendere in considerazione questo libreria.
 
 
-##### Univariati, grafici
+##### Grafici univariati
 
-I grafici univariati sono grafici di una singola variabile. Un comune grafico univariato viene utilizzato per visualizzare i dati sotto forma di grafico a scatola e sussurro.
+I grafi univariati sono grafici di una singola variabile. Un grafico univariato comune viene utilizzato per visualizzare i dati è il grafico a scatola e baffi.
 
-Utilizzando i nostri set di dati di vendita al dettaglio precedenti, possiamo generare il box e il whisker plot per ciascuno dei 45 negozi e le loro vendite settimanali. Il plot viene generato utilizzando la funzione `seaborn.boxplot`.
+Utilizzando il nostro set di dati di vendita al dettaglio di prima, possiamo generare il grafico della scatola e dei baffi per ciascuno dei 45 negozi e le loro vendite settimanali. Il grafico viene generato utilizzando la `seaborn.boxplot` funzione.
 
 ![](../images/jupyterlab/analyze-data/box_whisker.png)
 
-Per mostrare la distribuzione dei dati viene utilizzato un grafico a scatola e a baffi. Le linee esterne del plottaggio mostrano i quartili superiore e inferiore, mentre la casella si estende sull&#39;intervallo interquartile. La riga nella casella contrassegna la mediana. Tutti i punti di dati superiori a 1,5 volte il quartile superiore o inferiore sono contrassegnati da un cerchio. Questi punti sono considerati valori anomali.
+Un grafico a scatola e baffi viene utilizzato per mostrare la distribuzione dei dati. Le linee esterne del plottaggio mostrano i quartili superiore e inferiore, mentre la casella si estende sull&#39;intervallo interquartile. La riga nella casella contrassegna la mediana. Tutti i punti di dati superiori a 1,5 volte il quartile superiore o inferiore sono contrassegnati da un cerchio. Questi punti sono considerati valori anomali.
 
 ##### Grafici multivariati
 
@@ -194,7 +200,7 @@ Osservate la diagonale di 1 in basso rispetto al centro. Questo mostra che quand
 
 ## Passaggi successivi
 
-Questo tutorial illustra come creare un nuovo blocco appunti Jupyter in Data Science Workspace e come accedere ai dati sia esternamente che da [!DNL Adobe Experience Platform]. Nello specifico, abbiamo esaminato i seguenti passaggi:
+Questo esercitazione ha spiegato come creare un nuovo Jupyter Notebook nel Area di lavoro di data science e come accesso i dati esternamente e da [!DNL Adobe Experience Platform]. In particolare, abbiamo esaminato i seguenti passaggi:
 - Crea un nuovo Jupyter Notebook
 - Accedere a set di dati e schemi
 - Esplora i set di dati

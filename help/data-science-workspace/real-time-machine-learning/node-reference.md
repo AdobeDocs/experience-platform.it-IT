@@ -1,29 +1,35 @@
 ---
-keywords: Experience Platform;guida per sviluppatori;Data Science Workspace;argomenti popolari;machine learning in tempo reale;riferimento nodo;
+keywords: Experience Platform; guida per sviluppatori; Data Science Area di lavoro; argomenti popolari; Machine Learning in tempo reale; riferimento al nodo;
 solution: Experience Platform
-title: Riferimento nodo di apprendimento automatico in tempo reale
-description: Un nodo è l'unità fondamentale di cui vengono formati i grafici. Ogni nodo esegue un’attività specifica e può essere collegato utilizzando dei collegamenti per formare un grafico che rappresenta una pipeline ML. L’attività eseguita da un nodo rappresenta un’operazione sui dati di input, ad esempio una trasformazione di dati o schemi, o un’inferenza di apprendimento automatico. Il nodo restituisce il valore trasformato o dedotto ai nodi successivi.
+title: Riferimento per i nodi di Machine Learning in tempo reale
+description: Un nodo è l'unità fondamentale di cui sono formati i grafici. Ogni nodo esegue un'attività specifica e possono essere concatenati utilizzando collegamenti per formare un grafico che rappresenta una pipeline ML. L'attività eseguita da un nodo rappresenta un'operazione sui dati di input, ad esempio una trasformazione di dati o schemi o un'inferenza di Machine Learning. Il nodo emette il valore trasformato o dedotto ai nodi successivi.
 exl-id: 67fe26b5-ce03-4a9a-ad45-783b2acf8d92
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 9030a5482d4ea2b54426680cef92b89e68ef5b33
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '675'
 ht-degree: 0%
 
 ---
 
-# Riferimento nodo di Machine Learning in tempo reale (Alpha)
+# Riferimento ai nodi di Machine Learning in tempo reale (Alpha)
+
+>[!NOTE]
+>
+>Data Science Area di lavoro non è più disponibile per l&#39;acquisto.
+>
+>Questa documentazione è destinata ai clienti esistenti con precedenti diritti a Data Science Area di lavoro.
 
 >[!IMPORTANT]
 >
->Real-time Machine Learning non è ancora disponibile per tutti gli utenti. Questa funzione è in formato alfa ed è ancora in fase di test. Questo documento è soggetto a modifiche.
+>L&#39;apprendimento automatico in tempo reale non è ancora disponibile per tutti gli utenti. Questa funzione è in versione alpha ed è ancora in fase di test. Questo documento è soggetto a modifiche.
 
-Un nodo è l&#39;unità fondamentale di cui vengono formati i grafici. Ogni nodo esegue un’attività specifica e può essere collegato utilizzando dei collegamenti per formare un grafico che rappresenta una pipeline ML. L’attività eseguita da un nodo rappresenta un’operazione sui dati di input, ad esempio una trasformazione di dati o schemi, o un’inferenza di apprendimento automatico. Il nodo restituisce il valore trasformato o dedotto ai nodi successivi.
+Un nodo è l&#39;unità fondamentale di cui sono formati i grafici. Ogni nodo esegue un&#39;attività specifica e possono essere concatenati utilizzando collegamenti per formare un grafico che rappresenta una pipeline ML. L&#39;attività eseguita da un nodo rappresenta un&#39;operazione sui dati di input, ad esempio una trasformazione di dati o schemi o un&#39;inferenza di Machine Learning. Il nodo emette il valore trasformato o dedotto ai nodi successivi.
 
-La guida seguente illustra le librerie di nodi supportate per Real-time Machine Learning.
+La guida seguente delinea i librerie di nodo supportati per l&#39;apprendimento automatico in tempo reale.
 
 ## Individuazione dei nodi da utilizzare nella pipeline ML
 
-Copiare il codice seguente in un blocco appunti [!DNL Python] per visualizzare tutti i nodi disponibili per l&#39;utilizzo.
+Copiare il codice riportato di seguito in un [!DNL Python] blocco appunti per visualizzare tutti i nodi disponibili per l&#39;uso.
 
 ```python
 from pprint import pprint
@@ -53,11 +59,11 @@ pprint(nf.discover_nodes())
 
 ## Nodi standard
 
-I nodi standard si basano su librerie open source di dati scientifici come Pandas e ScikitLearn.
+I nodi standard versione su librerie di data science open source come Pandas e ScikitLearn.
 
-### ModelUpload
+### Caricamento modello
 
-Il nodo ModelUpload è un nodo di Adobe interno che utilizza un percorso_modello e carica il modello dal percorso del modello locale nell&#39;archivio BLOB di Machine Learning in tempo reale.
+Il nodo ModelUpload è un nodo Adobe Systems interno che accetta un model_path e carica il modello dal percorso del modello locale al BLOB Real-time Machine Learning BLOB store.
 
 ```python
 model = ModelUpload(params={'model_path': model_path})
@@ -69,11 +75,11 @@ model_id = msg_model.model['model_id']
 
 ### ONNXNode
 
-ONNXNode è un nodo di Adobe interno che utilizza un ID modello per richiamare il modello ONNX pre-addestrato e lo utilizza per valutare i dati in arrivo.
+ONNXNode è un nodo Adobe Systems interno che accetta un ID modello per richiamare il modello ONNX pre-addestrato e lo utilizza per assegnare un punteggio ai dati in ingresso.
 
 >[!TIP]
 >
->Specificare le colonne nello stesso ordine in cui si desidera inviare i dati al modello ONNX per il punteggio.
+>Specificare le colonne nello stesso ordine in cui si desidera like i dati da inviare al modello ONNX per il punteggio.
 
 ```python
 node_model_score = ONNXNode(params={"features": ['browser', 'device', 'login_page', 'product_page', 'search_page'], "model_id": model_id})
@@ -81,9 +87,9 @@ node_model_score = ONNXNode(params={"features": ['browser', 'device', 'login_pag
 
 ### Panda {#pandas}
 
-Il seguente nodo Pandas consente di importare qualsiasi metodo `pd.DataFrame` o qualsiasi funzione generale di livello superiore Panda. Per ulteriori informazioni sui metodi Pandas, visitare la [documentazione sui metodi Pandas](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). Per ulteriori informazioni sulle funzioni di primo livello, visitare la [guida di riferimento API Pandas per le funzioni generali](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html).
+Il seguente nodo Pandas consente di importare qualsiasi `pd.DataFrame` metodo o qualsiasi funzione generale di livello superiore dei panda. Per ulteriori informazioni sui metodi Pandas, visita la documentazione](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html) sui [metodi Pandas. Per ulteriori informazioni sulle funzioni di primo livello, visita la guida di riferimento API [Pandas per le funzioni](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html) generali.
 
-Il nodo seguente utilizza `"import": "map"` per importare il nome del metodo come stringa nei parametri, quindi immette i parametri come funzione di mappa. L&#39;esempio seguente esegue questa operazione utilizzando `{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}`. Dopo aver impostato la mappa, è possibile impostare `inplace` come `True` o `False`. Impostare `inplace` come `True` o `False` a seconda che si desideri applicare la trasformazione in sede o meno. Per impostazione predefinita `"inplace": False` crea una nuova colonna. Il supporto per fornire un nuovo nome di colonna è impostato per essere aggiunto in una versione successiva. L&#39;ultima riga `cols` può essere un nome di colonna singolo o un elenco di colonne. Specificare le colonne alle quali applicare la trasformazione. In questo esempio è specificato `device`.
+Il nodo seguente viene utilizzato `"import": "map"` per importare il nome del metodo come stringa nei parametri, seguito dall&#39;immissione dei parametri come funzione mappa. L&#39;esempio seguente esegue questa operazione utilizzando `{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}`. Una volta impostata la mappa, è possibile impostarla `inplace` come `True` o `False`. Imposta `inplace` come `True` o `False` in base al fatto che desideri applicare o meno la trasformazione. Per impostazione predefinita `"inplace": False` crea una nuova colonna. Il supporto per fornire un nuovo nome di colonna è impostato per essere aggiunto in una versione successiva. L&#39;ultima riga `cols` può essere un nome di una singola colonna o un elenco di colonne. Specificare le colonne a cui applicare la trasformazione. In questo esempio `device` è specificato.
 
 ```python
 #  df["device"] = df["device"].map({"Desktop":1, "Mobile":0}, na_action=0)
@@ -104,7 +110,7 @@ node_browser_apply = Pandas(params={"import": "map",
 
 ### ScikitLearn
 
-Il nodo ScikitLearn consente di importare qualsiasi modello o scalatore ScikitLearn ML. Utilizza la tabella seguente per ulteriori informazioni su uno qualsiasi dei valori utilizzati nell’esempio:
+Il nodo ScikitLearn consente di importare qualsiasi modello o scaler ScikitLearn ML. Utilizzare la tabella seguente per ulteriori informazioni sui valori utilizzati nell&#39;esempio:
 
 ```python
 model_train = ScikitLearn(params={
@@ -121,17 +127,17 @@ msg6 = model_train.process(msg5)
 
 | Valore | Descrizione |
 | --- | --- |
-| funzioni | Inserite le feature nel modello (elenco di stringhe). <br> Ad esempio: `browser`, `device`, `login_page`, `product_page`, `search_page` |
-| etichetta | Nome colonna di destinazione (stringa). |
-| modalità | Treno/prova (stringa). |
-| percorso_modello | Percorso del modello di salvataggio locale in formato onnx. |
-| params.model | Percorso di importazione assoluto del modello (stringa). Esempio: `sklearn.linear_model.LogisticRegression`. |
-| params.model_params | Modellare gli iperparametri. Per ulteriori informazioni, consulta la documentazione dell&#39;API [sklearn (map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html). |
-| node_instance.process(data_message_from_previous_node) | Il metodo `process()` prende DataMsg dal nodo precedente e applica la trasformazione. Questo dipende dal nodo corrente utilizzato. |
+| tratti somatici | Funzioni di input per il modello (elenco di stringhe). <br>Ad esempio: `browser`, `device`, , `login_page`, `product_page``search_page` |
+| etichetta | Target nome colonna (stringa). |
+| modo | Treno/test (stringa). |
+| model_path | Percorso del modello di salvataggio locale in formato onnx. |
+| params.model | Percorso di importazione assoluto del modello (stringa), ad esempio: `sklearn.linear_model.LogisticRegression`. |
+| params.model_params | Modellare gli iperparametri, vedere la documentazione dell&#39;API [sklearn (map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) per ulteriori informazioni. |
+| node_istanza.process(data_message_from_previous_node) | Il metodo `process()` accetta DataMsg dal nodo precedente e applica la trasformazione. Questo dipende dal nodo corrente utilizzato. |
 
-### Divisione
+### Dividi
 
-Utilizza il seguente nodo per suddividere il dataframe in treno e test superando `train_size` o `test_size`. Questo restituisce un dataframe con più indici. È possibile accedere ai dataframe dei treni e dei test utilizzando l&#39;esempio seguente: `msg5.data.xs("train")`.
+Utilizza il seguente nodo per suddividere il frame di dati in training ed eseguire il test passando `train_size` o `test_size`. In questo modo viene restituito un frame di dati con un indice multiplo. È possibile accesso eseguire il training e testare i frame di dati utilizzando l&#39;esempio seguente, `msg5.data.xs("train")`.
 
 ```python
 splitter = Split(params={"train_size": 0.7})
@@ -140,4 +146,4 @@ msg5 = splitter.process(msg4)
 
 ## Passaggi successivi
 
-Il passaggio successivo consiste nel creare nodi da utilizzare per il punteggio di un modello di apprendimento automatico in tempo reale. Per ulteriori informazioni, visitare la [Guida utente di Real-time Machine Learning](./rtml-authoring-notebook.md).
+Il passaggio successivo consiste nel creare nodi da utilizzare per assegnare un punteggio a un modello di Machine Learning in tempo reale. Per altre informazioni, visita la Guida](./rtml-authoring-notebook.md) all&#39;utente di [Appunti di Machine Learning in tempo reale.

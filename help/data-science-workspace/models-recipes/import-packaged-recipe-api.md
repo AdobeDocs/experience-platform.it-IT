@@ -5,24 +5,30 @@ title: Importare una composizione in pacchetti utilizzando l’API di apprendime
 type: Tutorial
 description: Questa esercitazione utilizza l’API di apprendimento automatico di Sensei per creare un motore, noto anche come ricetta nell’interfaccia utente di.
 exl-id: c8dde30b-5234-448d-a597-f1c8d32f23d4
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '995'
+source-wordcount: '1018'
 ht-degree: 3%
 
 ---
 
 # Importare una ricetta confezionata utilizzando l’API di apprendimento automatico di Sensei
 
+>[!NOTE]
+>
+>Data Science Workspace non è più disponibile per l’acquisto.
+>
+>Questa documentazione è destinata ai clienti esistenti che dispongono di diritti precedenti su Data Science Workspace.
+
 Questa esercitazione utilizza [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) per creare un [motore](../api/engines.md), noto anche come ricetta nell&#39;interfaccia utente.
 
 Prima di iniziare, è importante notare che Adobe Experience Platform [!DNL Data Science Workspace] utilizza termini diversi per fare riferimento a elementi simili nell&#39;API e nell&#39;interfaccia utente. In questa esercitazione vengono utilizzati i termini API e la tabella seguente illustra i termini correlati:
 
-| Termine interfaccia utente | Termine API |
+| interfaccia Termine | Termine API |
 | ---- | ---- |
 | Ricetta | [Motore](../api/engines.md) |
 | Modello | [MLInstance](../api/mlinstances.md) |
-| Formazione e valutazione | [Esperimento](../api/experiments.md) |
+| Formazione e valutazione | [Rsperimento](../api/experiments.md) |
 | Servizio | [MLService](../api/mlservices.md) |
 
 Un motore contiene algoritmi di apprendimento automatico e logica per risolvere problemi specifici. Il diagramma seguente fornisce una visualizzazione del flusso di lavoro API in [!DNL Data Science Workspace]. Questa esercitazione si concentra sulla creazione di un motore, il cervello di un modello di apprendimento automatico.
@@ -43,15 +49,15 @@ Questo tutorial richiede di aver completato l&#39;esercitazione [Autenticazione 
 
 ## Creare un motore
 
-I motori possono essere creati effettuando una richiesta POST all’endpoint /engines. Il motore creato è configurato in base al formato del file Composizione da includere nella richiesta API.
+I motori possono essere creati effettuando una richiesta POST all’endpoint /engines. Il motore creato viene configurato in base alla forma del file Recipe pacchettizzato che deve essere incluso come parte dell&#39;API richiesta.
 
-### Creare un motore con un URL Docker {#create-an-engine-with-a-docker-url}
+### Crea un motore con un Docker URL {#create-an-engine-with-a-docker-url}
 
-Per creare un motore con un file di composizione in pacchetto memorizzato in un contenitore Docker, è necessario fornire l’URL Docker al file di composizione in pacchetto.
+Per creare un motore con un file di ricetta confezionato archiviato in un contenitore Docker, è necessario fornire il URL Docker al file di ricetta pacchettizzato.
 
 >[!CAUTION]
 >
-> Se utilizzi [!DNL Python] o R, utilizza la richiesta seguente. Se utilizzi PySpark o Scala, utilizza l’esempio di richiesta PySpark/Scala che si trova sotto l’esempio Python/R.
+> Se si utilizza [!DNL Python] o R, utilizzare la richiesta riportata di seguito. Se si utilizza PySpark o Scala, utilizzare l&#39;esempio di richiesta PySpark/Scala che si trova sotto l&#39;esempio Python/R.
 
 **Formato API**
 
@@ -87,12 +93,12 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | -------  | ----------- |
-| `engine.name` | Il nome desiderato per il motore. La ricetta corrispondente a questo motore erediterà questo valore per essere visualizzato nell&#39;interfaccia utente [!DNL Data Science Workspace] come nome della ricetta. |
-| `engine.description` | Descrizione facoltativa del motore. La ricetta corrispondente a questo motore erediterà questo valore per essere visualizzato nell&#39;interfaccia utente [!DNL Data Science Workspace] come descrizione della ricetta. Non rimuovere questa proprietà, lascia che questo valore sia una stringa vuota se scegli di non fornire una descrizione. |
+| `engine.name` | Il nome desiderato per il motore. La Ricetta corrispondente a questo Motore erediterà questo valore da visualizzare nell [!DNL Data Science Workspace] utente interfaccia come nome della Ricetta. |
+| `engine.description` | Descrizione facoltativa del motore. La Ricetta corrispondente a questo Motore erediterà questo valore da visualizzare nell [!DNL Data Science Workspace] utente interfaccia come descrizione della Ricetta. Non rimuovere questa proprietà, lascia che questo valore sia una stringa vuota se scegli di non fornire una descrizione. |
 | `engine.type` | Tipo di esecuzione del motore. Questo valore corrisponde al linguaggio in cui viene sviluppata l’immagine Docker. Quando viene fornito un URL Docker per creare un motore, `type` è `Python`, `R`, `PySpark`, `Spark` (Scala) o `Tensorflow`. |
 | `artifacts.default.image.location` | `{DOCKER_URL}` verrà inserito qui. Un URL Docker completo ha la seguente struttura: `your_docker_host.azurecr.io/docker_image_file:version` |
 | `artifacts.default.image.name` | Un nome aggiuntivo per il file di immagine Docker. Non rimuovere questa proprietà, lascia che questo valore sia una stringa vuota se scegli di non fornire un nome di file immagine Docker aggiuntivo. |
-| `artifacts.default.image.executionType` | Tipo di esecuzione del motore. Questo valore corrisponde al linguaggio in cui viene sviluppata l’immagine Docker. Quando viene fornito un URL Docker per creare un motore, `executionType` è `Python`, `R`, `PySpark`, `Spark` (Scala) o `Tensorflow`. |
+| `artifacts.default.image.executionType` | Tipo di esecuzione del motore. Questo valore corrisponde alla lingua in cui è stata sviluppata l&#39;immagine Docker. Quando viene fornito un URL Docker per creare un motore, `executionType` è `Python`, `R`, `PySpark`, `Spark` (Scala) o `Tensorflow`. |
 
 **Richiedi PySpark**
 
@@ -125,8 +131,8 @@ curl -X POST \
 | Proprietà | Descrizione |
 | --- | --- |
 | `name` | Il nome desiderato per il motore. La ricetta corrispondente a questo motore erediterà questo valore per essere visualizzato nell’interfaccia utente come nome della ricetta. |
-| `description` | Descrizione facoltativa del motore. La ricetta corrispondente a questo motore erediterà questo valore per essere visualizzato nell’interfaccia utente come descrizione della ricetta. Questa proprietà è obbligatoria. Se non si desidera fornire una descrizione, impostarne il valore su una stringa vuota. |
-| `type` | Tipo di esecuzione del motore. Questo valore corrisponde al linguaggio in cui l’immagine Docker è generata su &quot;PySpark&quot;. |
+| `description` | Descrizione facoltativa del motore. La Ricetta corrispondente a questo Motore erediterà questo valore da visualizzare in interfaccia come descrizione della Ricetta. Questa proprietà è obbligatoria. Se non si desidera fornire una descrizione, impostarne il valore come stringa vuota. |
+| `type` | Tipo di esecuzione del motore. Questo valore corrisponde alla lingua in cui l&#39;immagine Docker è basata su &quot;PySpark&quot;. |
 | `mlLibrary` | Campo richiesto per la creazione di motori per le ricette PySpark e Scala. |
 | `artifacts.default.image.location` | Posizione dell’immagine Docker collegata da un URL Docker. |
 | `artifacts.default.image.executionType` | Tipo di esecuzione del motore. Questo valore corrisponde alla lingua in cui l’immagine Docker è generata su &quot;Spark&quot;. |
@@ -163,10 +169,10 @@ curl -X POST \
 | --- | --- |
 | `name` | Il nome desiderato per il motore. La ricetta corrispondente a questo motore erediterà questo valore per essere visualizzato nell’interfaccia utente come nome della ricetta. |
 | `description` | Descrizione facoltativa del motore. La ricetta corrispondente a questo motore erediterà questo valore per essere visualizzato nell’interfaccia utente come descrizione della ricetta. Questa proprietà è obbligatoria. Se non si desidera fornire una descrizione, impostarne il valore su una stringa vuota. |
-| `type` | Tipo di esecuzione del motore. Questo valore corrisponde alla lingua in cui l’immagine Docker è generata su &quot;Spark&quot;. |
-| `mlLibrary` | Campo richiesto per la creazione di motori per le ricette PySpark e Scala. |
-| `artifacts.default.image.location` | Posizione dell’immagine Docker collegata da un URL Docker. |
-| `artifacts.default.image.executionType` | Tipo di esecuzione del motore. Questo valore corrisponde alla lingua in cui l’immagine Docker è generata su &quot;Spark&quot;. |
+| `type` | Tipo di esecuzione del motore. Questo valore corrisponde alla lingua in cui l&#39;immagine Docker è basata su &quot;Spark&quot;. |
+| `mlLibrary` | Campo richiesto durante la creazione di motori per le ricette PySpark e Scala. |
+| `artifacts.default.image.location` | Posizione dell&#39;immagine Docker collegata da un URL Docker. |
+| `artifacts.default.image.executionType` | Tipo di esecuzione del motore. Questo valore corrisponde alla lingua in cui l&#39;immagine Docker è basata su &quot;Spark&quot;. |
 
 **Risposta**
 
@@ -197,8 +203,8 @@ In caso di esito positivo, la risposta restituisce un payload contenente i detta
 }
 ```
 
-In caso di esito positivo, la risposta mostra un payload JSON con informazioni relative al motore appena creato. La chiave `id` rappresenta l&#39;identificatore univoco del motore ed è richiesta nell&#39;esercitazione successiva per creare un&#39;istanza MLI. Prima di procedere con i passaggi successivi, assicurati che l’identificatore del motore sia salvato.
+Una risposta corretta mostra un payload JSON con informazioni relative al motore appena creato. La `id` chiave rappresenta l&#39;identificatore univoco del motore ed è necessaria nella esercitazione successiva per creare un MLInstance. Assicurarsi che l&#39;identificatore Engine sia salvato prima di procedere con i passaggi successivi.
 
 ## Passaggi successivi {#next-steps}
 
-Hai creato un motore utilizzando l’API ed è stato ottenuto un identificatore univoco del motore come parte del corpo della risposta. È possibile utilizzare questo identificatore del motore nell&#39;esercitazione successiva mentre si apprende come [creare, addestrare e valutare un modello utilizzando l&#39;API](./train-evaluate-model-api.md).
+È stato creato un motore utilizzando l&#39;API ed è stato ottenuto un identificatore motore univoco come parte del corpo della risposta. È possibile utilizzare questo identificatore del motore nell&#39;esercitazione successiva mentre si apprende come [creare, addestrare e valutare un modello utilizzando l&#39;API](./train-evaluate-model-api.md).

@@ -1,32 +1,38 @@
 ---
-keywords: Experience Platform;JupyterLab;blocchi appunti;Data Science Workspace;argomenti popolari;analizzare blocchi appunti dati;eda;analisi dati esplorativi;data science;JupyterLab;notebooks;exploratory data analysis;data science
+keywords: Experience Platform; JupyterLab; Notebook; Data Science Area di lavoro; argomenti popolari; analizzare i notebook di dati; Eda; analisi esplorativa dei dati; Data Science
 solution: Experience Platform
-title: Notebook per l’analisi esplorativa dei dati (EDA)
+title: Quaderno di analisi esplorativa dei dati (EDA)
 type: Tutorial
-description: Questa guida si concentra su come utilizzare il Notebook per l’analisi dei dati esplorativi (EDA) per scoprire i pattern nei dati web, aggregare gli eventi con un obiettivo di previsione, pulire i dati aggregati e comprendere la relazione tra i predittori e un obiettivo.
+description: Questa guida è incentrata su come utilizzare il blocco appunti di analisi esplorativa dei dati (EDA) per individuare modelli nei dati Web, aggregato eventi con un obiettivo di stima, pulire i dati aggregati e comprendere la relazione tra predittori e un obiettivo.
 exl-id: 48209326-0a07-4b5c-8b49-a2082a78fa47
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '2766'
+source-wordcount: '2789'
 ht-degree: 0%
 
 ---
 
-# Esplorazione dei dati basati sul Web per i modelli predittivi tramite il notebook per l&#39;analisi dei dati esplorativi (EDA)
+# Esplorazione dei dati basati sul Web per i modelli predittivi utilizzando il notebook per l&#39;analisi dei dati esplorativi (EDA)
 
-Il notebook per l&#39;analisi dei dati esplorativi (EDA) è stato progettato per assistere l&#39;utente nell&#39;individuazione di pattern nei dati, nel controllo della integrità dei dati e nel riepilogo dei dati rilevanti per i modelli predittivi.
+>[!NOTE]
+>
+>Data Science Area di lavoro non è più disponibile per l&#39;acquisto.
+>
+>Questa documentazione è destinata ai clienti esistenti con precedenti diritti a Data Science Area di lavoro.
 
-L’esempio del notebook EDA è stato ottimizzato pensando ai dati basati sul web ed è costituito da due parti. La prima parte inizia con l’utilizzo di Query Service per visualizzare tendenze e snapshot di dati. Successivamente, tenendo presente un obiettivo per l’analisi dei dati esplorativi, i dati vengono aggregati a livello di profilo e visitatore.
+Il notebook per l&#39;analisi esplorativa dei dati (EDA) è progettato per aiutarti a scoprire modelli nei dati, verificare la sanità dei dati e riepilogare i dati rilevanti per i modelli predittivi.
+
+L&#39;esempio del notebook EDA è stato ottimizzato tenendo conto dei dati basati sul Web ed è costituito da due parti. La prima parte inizia con l&#39;utilizzo di Query Service per visualizzare tendenze e snapshot dei dati. Successivo, con un obiettivo in mente per l&#39;analisi esplorativa dei dati, i dati vengono aggregati a livello di profilo e visitatore.
 
 La seconda parte inizia con l&#39;esecuzione di analisi descrittive sui dati aggregati utilizzando le librerie di Python. Questo blocco appunti presenta visualizzazioni quali istogrammi, grafici a dispersione, box plot e una matrice di correlazione per ricavare informazioni actionable utilizzate per determinare quali funzioni sono più probabilmente utili nella previsione di un obiettivo.
 
 ## Introduzione
 
-Prima di leggere questa guida, consulta la [[!DNL JupyterLab] guida utente](./overview.md) per un&#39;introduzione di alto livello a [!DNL JupyterLab] e al suo ruolo in Data Science Workspace. Inoltre, se utilizzi i tuoi dati, consulta la documentazione di [accesso ai dati in [!DNL Jupyterlab] blocchi appunti](./access-notebook-data.md). Questa guida contiene informazioni importanti sui limiti dei dati dei notebook.
+Prima di leggere questa guida, consulta la guida](./overview.md) utente [[!DNL JupyterLab] per un&#39;introduzione di alto livello e il suo ruolo all&#39;interno di [!DNL JupyterLab] Data Science Area di lavoro. Inoltre, se si utilizzano i propri dati, consultare la documentazione relativa ai [accesso dei dati nei [!DNL Jupyterlab] blocchi appunti](./access-notebook-data.md). Questa guida contiene informazioni importanti sui limiti di dati del notebook.
 
-Questo blocco appunti utilizza un set di dati di valori medi sotto forma di dati Adobe Analytics Experience Events trovati nell’Analysis Workspace di Analytics. Per utilizzare il blocco appunti EDA, è necessario definire la tabella dati con i seguenti valori `target_table` e `target_table_id`. È possibile utilizzare qualsiasi set di dati di valori medi.
+Questo notebook usa un set di dati midvalues sotto forma di dati Adobe Analytics Experience Events trovati nel Analytics Analysis Workspace. Per utilizzare il notebook EDA, è necessario definire la tabella di dati con i seguenti valori `target_table` e `target_table_id`. È possibile utilizzare qualsiasi set di dati midvalue.
 
-Per trovare questi valori, seguire i passaggi descritti nella sezione [scrivere in un set di dati in python](./access-notebook-data.md#write-python) della guida all&#39;accesso ai dati di JupyterLab. Il nome del set di dati (`target_table`) si trova nella directory del set di dati. Dopo aver fatto clic con il pulsante destro del mouse sul set di dati per esplorare o scrivere dati in un blocco appunti, nella voce di codice eseguibile viene fornito un ID del set di dati (`target_table_id`).
+Per trovare questi valori, seguire i passaggi descritti nella [sezione Scrivi in un set di dati in Python](./access-notebook-data.md#write-python) della guida all&#39;accesso dei dati JupyterLab. Il nome del set di dati (`target_table`) si trova nella directory del set di dati. Una volta clic destro il set di dati per esplorare o scrivere dati in un notebook, viene fornito un ID set di dati (`target_table_id`) nella voce di codice eseguibile.
 
 ## Individuazione dei dati
 
@@ -92,7 +98,7 @@ target_table_id = "5f7c40ef488de5194ba0157a"
 
 ### Esplora il set di dati per le date disponibili
 
-Utilizzando la cella fornita di seguito, puoi visualizzare l’intervallo di date coperto nella tabella. Lo scopo dell’analisi del numero di giorni, della prima data e dell’ultima data è quello di facilitare la selezione di un intervallo di date per ulteriori analisi.
+Utilizzando la cella fornita di seguito, è possibile visualizzare l&#39;intervallo di date coperto nella tabella. Lo scopo dell’analisi del numero di giorni, della prima data e dell’ultima data è quello di facilitare la selezione di un intervallo di date per ulteriori analisi.
 
 ```python
 %%read_sql -c QS_CONNECTION
@@ -116,9 +122,9 @@ target_month = "02" ## The target month
 target_day = "(01,02,03)" ## The target days
 ```
 
-### Individuazione set di dati
+### Individuazione di set di dati
 
-Dopo aver configurato tutti i parametri, avviato [!DNL Query Service], e disporre di un intervallo di date, è possibile iniziare a leggere le righe di dati. Limita il numero di righe lette.
+Dopo aver configurato tutti i parametri, avviato [!DNL Query Service]e disporre di un intervallo di date, è possibile iniziare a leggere righe di dati. È consigliabile limitare il numero di righe lette.
 
 ```python
 from platform_sdk.dataset_reader import DatasetReader
@@ -128,21 +134,21 @@ dataset_reader = DatasetReader(PLATFORM_SDK_CLIENT_CONTEXT, dataset_id=target_ta
 Table = dataset_reader.limit(5).read()
 ```
 
-Per visualizzare il numero di colonne disponibili nel set di dati, utilizza la cella seguente:
+Per visualizzare il numero di colonne disponibili nel set di dati, utilizzare la cella seguente:
 
 ```python
 print("\nNumber of columns:",len(Table.columns))
 ```
 
-Per visualizzare le righe del set di dati, utilizza la cella seguente. In questo esempio, il numero di righe è limitato a cinque.
+Per visualizzare le righe del set di dati, utilizzare la cella seguente. In questo esempio, il numero di righe è limitato a cinque.
 
 ```python
 Table.head(5)
 ```
 
-![output righe tabella](../images/jupyterlab/eda/data-table-overview.PNG)
+![Output riga tabella](../images/jupyterlab/eda/data-table-overview.PNG)
 
-Una volta che hai un’idea di quali dati sono contenuti nel set di dati, può essere utile suddividerlo ulteriormente. In questo esempio vengono elencati i nomi delle colonne e i tipi di dati per ciascuna colonna, mentre l’output viene utilizzato per verificare se il tipo di dati è corretto o meno.
+Una volta che hai un&#39;idea di quali dati sono contenuti nel set di dati, può essere utile suddividere ulteriormente il set di dati. In questo esempio vengono elencati i nomi delle colonne e i tipi di dati per ogni colonna, mentre l&#39;output viene utilizzato per verificare se il tipo di dati è corretto o meno.
 
 ```python
 ColumnNames_Types = pd.DataFrame(Table.dtypes)
@@ -151,11 +157,11 @@ ColumnNames_Types.columns = ["Column_Name", "Data_Type"]
 ColumnNames_Types
 ```
 
-![elenco nomi colonna e tipi di dati](../images/jupyterlab/eda/data-columns.PNG)
+![Elenco Nome colonna e tipi di dati](../images/jupyterlab/eda/data-columns.PNG)
 
 ### Esplorazione delle tendenze del set di dati
 
-La sezione seguente contiene quattro query di esempio utilizzate per esplorare tendenze e pattern nei dati. Gli esempi forniti di seguito non sono esaustivi ma riguardano alcune delle funzioni più comunemente esaminate.
+La sezione seguente contiene quattro query di esempio utilizzate per esplorare tendenze e modelli nei dati. Gli esempi forniti di seguito non sono esaustivi, ma coprono alcune delle funzionalità più comunemente esaminate.
 
 **Conteggio attività orario per un dato giorno**
 
@@ -199,9 +205,9 @@ iplot(fig)
 
 ![output grafico a barre per query 1](../images/jupyterlab/eda/activity-count-by-hour-of-day.png)
 
-**Prime 10 pagine visualizzate per un dato giorno**
+**Le prime 10 pagine visualizzate per un determinato giorno**
 
-Questa query analizza le pagine più visualizzate in un determinato giorno. L’output viene rappresentato sotto forma di tabella contenente le metriche relative al nome della pagina e al conteggio di visualizzazione della pagina.
+Questa query analizza quali sono le pagine più visualizzate per un determinato giorno. L&#39;output è rappresentato sotto forma di una tabella contenente le metriche relative al nome della pagina e al conteggio delle visualizzazioni di pagina.
 
 ```sql
 %%read_sql query_4_df -c QS_CONNECTION
@@ -217,7 +223,7 @@ ORDER  BY page_views DESC
 LIMIT  10;
 ```
 
-Dopo aver confermato il funzionamento della query, i dati possono essere presentati in un istogramma univoco per ottenere chiarezza visiva.
+Dopo aver confermato che la query funziona, i dati possono essere presentati in un grafico univariato istogramma per chiarezza visiva.
 
 ```python
 trace = go.Bar(
@@ -238,7 +244,7 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-![prime dieci pagine visualizzate](../images/jupyterlab/eda/top-ten-viewed-pages-for-a-given-day.png)
+![Prime dieci pagine visualizzate](../images/jupyterlab/eda/top-ten-viewed-pages-for-a-given-day.png)
 
 **Prime dieci città raggruppate per attività utente**
 
@@ -258,7 +264,7 @@ ORDER  BY Count DESC
 LIMIT  10;
 ```
 
-Dopo aver confermato il funzionamento della query, i dati possono essere presentati in un istogramma univoco per ottenere chiarezza visiva.
+Dopo aver confermato che la query funziona, i dati possono essere presentati in un grafico univariato istogramma per chiarezza visiva.
 
 ```python
 trace = go.Bar(
@@ -279,11 +285,11 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-![prime dieci città](../images/jupyterlab/eda/top-ten-cities-by-user-activity.png)
+![Top ten delle città](../images/jupyterlab/eda/top-ten-cities-by-user-activity.png)
 
-**Primi dieci prodotti visualizzati**
+**I primi dieci prodotti visualizzati**
 
-Questa query fornisce un elenco dei primi dieci prodotti visualizzati. Nell&#39;esempio seguente, la funzione `Explode()` viene utilizzata per restituire ogni prodotto nell&#39;oggetto `productlistitems` alla propria riga. Questo consente di eseguire una query nidificata per aggregare le visualizzazioni del prodotto per SKU diverse.
+Questa query fornisce un elenco dei primi dieci prodotti visualizzati. Nell&#39;esempio seguente, la `Explode()` funzione viene utilizzata per restituire ogni prodotto dell&#39;oggetto `productlistitems` alla propria riga. Ciò consente di eseguire una query nidificata per aggregato le visualizzazioni di prodotto per referenza di magazzino diversi.
 
 ```sql
 %%read_sql query_7_df -c QS_CONNECTION
@@ -302,7 +308,7 @@ ORDER BY Total_Product_Views DESC
 LIMIT  10;
 ```
 
-Dopo aver confermato il funzionamento della query, i dati possono essere presentati in un istogramma univoco per ottenere chiarezza visiva.
+Dopo aver confermato che la query funziona, i dati possono essere presentati in un grafico univariato istogramma per chiarezza visiva.
 
 ```python
 trace = go.Bar(
@@ -323,19 +329,19 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-![prime dieci visualizzazioni prodotto](../images/jupyterlab/eda/top-ten-viewed-products.png)
+![Le prime dieci visualizzazioni di prodotto](../images/jupyterlab/eda/top-ten-viewed-products.png)
 
 Dopo aver esplorato le tendenze e gli schemi dei dati, dovresti avere una buona idea di quali funzioni desideri creare per una previsione di un obiettivo. L’esplorazione delle tabelle può evidenziare rapidamente la forma di ciascun attributo di dati, le evidenti rappresentazioni errate e i valori eccessivi e iniziare a suggerire relazioni candidate da esplorare tra gli attributi.
 
 ## Analisi esplorativa dei dati
 
-L’analisi esplorativa dei dati viene utilizzata per perfezionare la comprensione dei dati e creare un’intuizione per domande convincenti che possono essere utilizzate come base per la modellazione.
+L&#39;analisi esplorativa dei dati viene utilizzata per perfezionare la comprensione dei dati e versione un&#39;intuizione per domande convincenti che possono essere utilizzate come base per la modellazione.
 
-Dopo aver completato il passaggio di individuazione dei dati, avrai esplorato i dati a livello di evento con alcune aggregazioni a livello di evento, città o ID utente per visualizzare le tendenze per un giorno. Anche se questi dati sono importanti, non forniscono un quadro completo. Ancora non capisci cosa spinge un acquisto sul tuo sito web.
+Dopo aver completato il passaggio di individuazione dei dati, avrai esplorato i dati a livello di evento con alcune aggregazioni a livello di evento, città o ID utente per visualizzare le tendenze per un giorno. Sebbene questi dati siano importanti, non forniscono un quadro completo. Ancora non capisci cosa spinge un acquisto sul tuo sito web.
 
-Per comprendere questo aspetto, devi aggregare i dati a livello di profilo/visitatore, definire un obiettivo di acquisto e applicare concetti statistici come correlazione, box plot e grafici a dispersione. Questi metodi vengono utilizzati per confrontare i modelli di attività per acquirenti e non acquirenti nella finestra di previsione definita.
+Per capirlo, devi aggregato i dati a livello di profilo/visitatore, definire un obiettivo di acquisto e applicare concetti statistici come correlazione, box plot e grafici a dispersione. Questi metodi vengono utilizzati per confrontare i modelli di attività per acquirenti e non acquirenti nella finestra di previsione definita.
 
-In questa sezione vengono create ed esplorate le seguenti funzioni:
+In questa sezione vengono create ed esplorate le seguenti funzionalità:
 
 - `COUNT_UNIQUE_PRODUCTS_PURCHASED`: numero di prodotti univoci acquistati.
 - `COUNT_CHECK_OUTS`: numero di estrazioni.
@@ -367,7 +373,7 @@ threshold = 1
 
 ### Aggregazione dei dati per la creazione di funzionalità e obiettivi
 
-Per iniziare l’analisi esplorativa, devi creare un obiettivo a livello di profilo, seguito dall’aggregazione del set di dati. In questo esempio vengono fornite due query. La prima query contiene la creazione di un obiettivo. La seconda query deve essere aggiornata per includere qualsiasi variabile diversa da quelle della prima query. È possibile aggiornare `limit` per la query. Dopo aver eseguito le query seguenti, i dati aggregati sono ora disponibili per l’esplorazione.
+Per iniziare l&#39;analisi esplorativa, è necessario creare un obiettivo a livello di profilo, seguito dall&#39;aggregazione del set di dati. In questo esempio, vengono fornite due query. La prima query contiene la creazione di un obiettivo. La seconda query deve essere aggiornata per includere qualsiasi variabile diversa da quelle della prima query. È possibile aggiornare `limit` per la query. Dopo aver eseguito le query seguenti, i dati aggregati sono ora disponibili per l’esplorazione.
 
 ```sql
 %%read_sql target_df -d -c QS_CONNECTION
@@ -475,11 +481,11 @@ print("Count of unique profiles:", (len(Data)))
 
 Dopo aver completato l’aggregazione dei dati e averla unita all’obiettivo, è necessario rivedere i dati, talvolta denominati controllo dello stato dei dati.
 
-Questo processo comporta l’identificazione dei valori mancanti e dei valori anomali. Quando vengono identificati dei problemi, il compito successivo è quello di elaborare strategie specifiche per gestirli.
+Questo processo comporta l&#39;identificazione dei valori mancanti e dei valori anomali. Quando vengono identificati i problemi, il compito successivo è quello di elaborare strategie specifiche per gestirli.
 
 >[!NOTE]
 >
->Durante questo passaggio, è possibile individuare i valori danneggiati che possono segnalare un errore nel processo di registrazione dei dati.
+>Durante questa fase, è possibile individuare il danneggiamento dei valori che può segnalare un errore nel processo di registrazione dati.
 
 ```python
 Missing = pd.DataFrame(round(Data.isnull().sum()*100/len(Data),2))
@@ -509,13 +515,13 @@ iplot(fig)
 
 ![Valori mancanti](../images/jupyterlab/eda/missing-values.png)
 
-Dopo aver rilevato i valori mancanti, è fondamentale identificare i valori anomali. Le statistiche parametriche come la media, la deviazione standard e la correlazione sono altamente sensibili agli outlier. Inoltre, anche le ipotesi relative a procedure statistiche comuni, quali le regressioni lineari, si basano su tali statistiche. Questo significa che i valori anomali possono compromettere un&#39;analisi.
+Dopo aver rilevato i valori mancanti, è critico identificare i valori anomali. Le statistiche parametriche come la media, la deviazione standard e la correlazione sono altamente sensibili agli outlier. Inoltre, anche le ipotesi relative a procedure statistiche comuni, quali le regressioni lineari, si basano su tali statistiche. Questo significa che i valori anomali possono compromettere un&#39;analisi.
 
 Per identificare i valori erratici, in questo esempio viene utilizzato l&#39;intervallo tra quartili. Intervallo interquartile (IQR) è l&#39;intervallo tra il primo e il terzo quartile (25° e 75° percentile). Questo esempio raccoglie tutti i punti dati che rientrano in 1,5 volte l&#39;IQR al di sotto del 25° percentile o 1,5 volte l&#39;IQR al di sopra del 75° percentile. I valori che rientrano in uno di questi valori vengono definiti come valore aberrante nella cella seguente.
 
 >[!TIP]
 >
->Per correggere le anomalie è necessario conoscere il business e il settore in cui si lavora. A volte non puoi rilasciare un’osservazione solo perché è un’anomalia. Le anomalie possono essere osservazioni legittime e sono spesso quelle più interessanti. Per ulteriori informazioni sull&#39;eliminazione dei valori anomali, visitare il [passaggio facoltativo per la pulizia dei dati](#optional-data-clean).
+>Per correggere i valori anomali è necessario avere una comprensione dell&#39;azienda e del settore in cui si lavora. A volte non puoi rilasciare un’osservazione solo perché è un’anomalia. I valori anomali possono essere osservazioni legittime e sono spesso le più interessanti. Per ulteriori informazioni sull&#39;eliminazione dei valori anomali, visita il [passaggio](#optional-data-clean) facoltativo di pulizia dei dati.
 
 ```python
 TARGET = Data.TARGET
@@ -556,13 +562,13 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-![grafico outlier](../images/jupyterlab/eda/outliers.png)
+![Grafico dei valori anomali](../images/jupyterlab/eda/outliers.png)
 
 ### Analisi univariata
 
-Una volta corretti i dati per valori mancanti e valori anomali, puoi iniziare l’analisi. Esistono tre tipi di analisi: univariata, bivariata e multivariata. L’analisi univariata prende i dati, li riepiloga e li trova pattern utilizzando relazioni a singola variabile. L’analisi bivariata esamina più variabili alla volta, mentre l’analisi multivariata esamina tre o più variabili alla volta.
+Una volta corretti i dati per i valori mancanti e i valori anomali, è possibile avviare l&#39;analisi. Esistono tre tipi di analisi: univariata, bivariata e multivariata. L&#39;analisi univariata prende i dati, riepiloga e trova modelli nei dati utilizzando relazioni a singola variabile. L&#39;analisi bivariata esamina più di una variabile alla volta, mentre l&#39;analisi multivariata esamina tre o più variabili alla volta.
 
-Nell&#39;esempio seguente viene creata una tabella per visualizzare la distribuzione delle feature.
+Nell&#39;esempio riportato di seguito viene prodotta una tabella per visualizzare la distribuzione delle feature.
 
 ```python
 Data_numerical = Data.select_dtypes(include=['float64', 'int64'])
@@ -574,9 +580,9 @@ distribution.columns = ['Count', 'Mean', 'Min', '1st_perc','5th_perc','25th_perc
 distribution
 ```
 
-![distribuzione delle funzionalità](../images/jupyterlab/eda/distribution-of-features.PNG)
+![Distribuzione delle funzionalità](../images/jupyterlab/eda/distribution-of-features.PNG)
 
-Dopo aver distribuito le funzioni, puoi creare grafici di dati visualizzati utilizzando un array. Le celle seguenti vengono utilizzate per visualizzare la tabella precedente con dati numerici.
+Una volta ottenuta una distribuzione delle funzionalità, è possibile creare grafici di dati visualizzati utilizzando un array. Le celle seguenti vengono utilizzate per visualizzare la tabella precedente con i dati numerici.
 
 ```python
 A = sns.palplot(sns.color_palette("Blues"))
@@ -589,11 +595,11 @@ for column in Data_numerical.columns[0:]:
     sns.distplot(Data_numerical[column], color = A, kde=False, bins=6, hist_kws={'alpha': 0.4});
 ```
 
-![grafici dati numerici](../images/jupyterlab/eda/univaiate-graphs.png)
+![Grafici a dati numerici](../images/jupyterlab/eda/univaiate-graphs.png)
 
-### Dati categoriali
+### Dati categorici
 
-I dati categorici di raggruppamento vengono utilizzati per comprendere i valori contenuti in ciascuna delle colonne dei dati aggregati e delle relative distribuzioni. In questo esempio vengono utilizzate le prime 10 categorie per facilitare il plottaggio delle distribuzioni. È importante notare che una colonna può contenere migliaia di valori univoci. Non si desidera eseguire il rendering di un plottaggio disordinato rendendolo illeggibile. Tenendo presente l’obiettivo aziendale, il raggruppamento dei dati produce risultati più significativi.
+Il raggruppamento di dati categorici viene utilizzato per comprendere i valori contenuti in ciascuna delle colonne di dati aggregati e le relative distribuzioni. In questo esempio vengono utilizzate le prime 10 categorie per facilitare il plottaggio delle distribuzioni. È importante notare che in una colonna possono essere contenuti migliaia di valori univoci. Non si desidera eseguire il rendering di un plottaggio disordinato rendendolo illeggibile. Tenendo presente l’obiettivo aziendale, il raggruppamento dei dati produce risultati più significativi.
 
 ```python
 Data_categorical = Data.select_dtypes(include='object')
@@ -612,9 +618,9 @@ for column in Data_categorical.columns[0:]:
 
 ![colonne catagoriche](../images/jupyterlab/eda/graph-category.PNG)
 
-### Rimuovi le colonne con un solo valore distinto
+### Rimuovi colonne con un solo valore distinto
 
-Le colonne con un solo valore non aggiungono alcuna informazione all&#39;analisi e possono essere rimosse.
+Le colonne che hanno solo un valore non aggiungono alcuna informazione all&#39;analisi e possono essere rimosse.
 
 ```python
 for col in Data.columns:
@@ -628,11 +634,11 @@ for col in Data.columns:
             Data.drop(col,inplace=True,axis=1)
 ```
 
-Dopo aver rimosso le colonne con valore singolo, verificare la presenza di eventuali errori nelle colonne rimanenti utilizzando il comando `Data.columns` in una nuova cella.
+Dopo aver rimosso le colonne con valore singolo, verificare la presenza di eventuali errori nelle colonne rimanenti nell&#39;utilizzo del `Data.columns` comando in una nuova cella.
 
-### Correggi per valori mancanti
+### Correggere i valori mancanti
 
-La sezione seguente contiene alcuni approcci di esempio per la correzione dei valori mancanti. Anche se nei dati precedenti solo una colonna aveva un valore mancante, le celle di esempio sotto correggono i valori per tutti i tipi di dati. Comprendono:
+La sezione seguente contiene alcuni approcci di esempio sulla correzione dei valori mancanti. Sebbene nei dati di cui sopra solo una colonna avesse un valore mancante, le celle di esempio sotto valori corretti per tutti i tipi di dati. Comprendono:
 
 - Tipi di dati numerici: inserire 0 o max se applicabile
 - Tipi di dati categorici: valore modale di input
@@ -784,11 +790,11 @@ else:
     print(Imp_features)
 ```
 
-![caratteristiche importanti](../images/jupyterlab/eda/important-feature-model.PNG)
+![Caratteristiche importanti](../images/jupyterlab/eda/important-feature-model.PNG)
 
-### Esempio di approfondimento
+### Esempio informazione approfondita
 
-Durante l’analisi dei dati, non è raro trovare informazioni approfondite. L’esempio seguente è un approfondimento che mappa l’attualità e il valore monetario di un evento target.
+Durante l&#39;analisi dei dati, non è raro scoprire informazioni. Nell&#39;esempio seguente è riportato un informazione approfondita che mappa l&#39;attualità e il valore monetario di un evento destinazione.
 
 ```python
 # Proxy for monetary value is TOTAL_ORDER_REVENUE and proxy for frequency is NUMBER_VISITS
@@ -800,9 +806,9 @@ else:
     sns.lmplot("DAYS_SINCE_VISIT", "TOTAL_ORDER_REVENUE", Data, hue="TARGET", fit_reg=False);
 ```
 
-![esempio di approfondimento](../images/jupyterlab/eda/insight.PNG)
+![Esempio informazione approfondita](../images/jupyterlab/eda/insight.PNG)
 
-## Passaggio di pulizia dati opzionale {#optional-data-clean}
+## Passaggio facoltativo di pulizia dei dati {#optional-data-clean}
 
 Per correggere le anomalie è necessario conoscere il business e il settore in cui si lavora. A volte non puoi rilasciare un’osservazione solo perché è un’anomalia. Le anomalie possono essere osservazioni legittime e sono spesso quelle più interessanti.
 
@@ -828,6 +834,6 @@ Data = pd.concat([Data_categorical, Data_numerical, TARGET], axis = 1)
 
 ## Passaggi successivi
 
-Dopo aver completato l’analisi dei dati esplorativi, puoi iniziare a creare un modello. In alternativa, puoi utilizzare i dati e le informazioni derivati per creare una dashboard con strumenti come Power BI.
+Dopo aver completato l’analisi dei dati esplorativi, puoi iniziare a creare un modello. In alternativa, è possibile usare i dati e le informazioni dettagliate derivati per creare un dashboard con strumenti come Power BI.
 
-Adobe Experience Platform separa il processo di creazione del modello in due fasi distinte: Ricette (un&#39;istanza di modello) e Modelli. Per iniziare il processo di creazione della ricetta, consulta la documentazione di [creazione di una ricetta in JupyerLab Notebooks](./create-a-model.md). Questo documento contiene informazioni ed esempi per la creazione, la formazione e il punteggio, una ricetta all&#39;interno di [!DNL JupyterLab] Notebooks.
+Adobe Experience Platform separa il processo di creazione del modello in due fasi distinte, Ricette (un istanza del modello) e Modelli. Per iniziare il processo di creazione della ricetta, visita la documentazione per la creazione di [una ricetta nei blocchi appunti JupyerLab](./create-a-model.md). Questo documento contiene informazioni ed esempi per creare, training e assegnare un punteggio a una ricetta all&#39;interno di [!DNL JupyterLab] Notebooks.

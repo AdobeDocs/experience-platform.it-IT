@@ -5,14 +5,20 @@ title: Endpoint API MLInstance
 description: Un'istanza MLInstance è un accoppiamento di un motore esistente con un set appropriato di configurazioni che definisce eventuali parametri di formazione, parametri di punteggio o configurazioni di risorse hardware.
 role: Developer
 exl-id: e78cda69-1ff9-47ce-b25d-915de4633e11
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '642'
 ht-degree: 3%
 
 ---
 
 # Endpoint MLInstance
+
+>[!NOTE]
+>
+>Data Science Area di lavoro non è più disponibile per l&#39;acquisto.
+>
+>Questa documentazione è destinata ai clienti esistenti che dispongono di diritti precedenti su Data Science Workspace.
 
 Un MLInstance è un accoppiamento di un [motore](./engines.md) esistente con un set di configurazioni appropriato che definisce eventuali parametri di formazione, parametri di punteggio o configurazioni di risorse hardware.
 
@@ -20,7 +26,7 @@ Un MLInstance è un accoppiamento di un [motore](./engines.md) esistente con un 
 
 È possibile creare un&#39;istanza MLI eseguendo una richiesta POST e fornendo un payload di richiesta costituito da un ID motore valido (`{ENGINE_ID}`) e da un set appropriato di configurazioni predefinite.
 
-Se l’ID motore fa riferimento a un PySpark o a un motore Spark, puoi configurare la quantità di risorse di calcolo, ad esempio il numero di core o la quantità di memoria. Se si fa riferimento a un motore Python, è possibile scegliere se utilizzare una CPU o una GPU a scopo di formazione e punteggio. Per ulteriori informazioni, consulta le sezioni dell&#39;appendice sulle [configurazioni delle risorse PySpark e Spark](./appendix.md#resource-config) e [configurazioni della CPU e della GPU Python](./appendix.md#cpu-gpu-config).
+Se l’ID motore fa riferimento a un PySpark o a un motore Spark, puoi configurare la quantità di risorse di calcolo, ad esempio il numero di core o la quantità di memoria. Se si fa riferimento a un motore Python, è possibile scegliere se utilizzare una CPU o una GPU a scopo di formazione e punteggio. Per ulteriori informazioni, fare riferimento alle sezioni dell&#39;appendice sulle [configurazioni](./appendix.md#resource-config) delle risorse PySpark e Spark e [sulle configurazioni di CPU e GPU](./appendix.md#cpu-gpu-config) Python.
 
 **Formato API**
 
@@ -76,10 +82,10 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `name` | Nome desiderato per l&#39;istanza MLI. Il modello corrispondente a questa istanza MLI erediterà questo valore per essere visualizzato nell’interfaccia utente come nome del modello. |
-| `description` | Descrizione facoltativa per l&#39;istanza MLI. Il modello corrispondente a questa istanza MLI erediterà questo valore per essere visualizzato nell’interfaccia utente come descrizione del modello. Questa proprietà è obbligatoria. Se non si desidera fornire una descrizione, impostarne il valore su una stringa vuota. |
+| `name` | Nome desiderato per MLInstance. Il modello corrispondente a questa MLInstance erediterà questo valore da visualizzare nella interfaccia come nome del modello. |
+| `description` | Una descrizione facoltativa per MLInstance. Il modello corrispondente a questa MLInstance erediterà questo valore da visualizzare in interfaccia come descrizione del modello. Questa proprietà è obbligatoria. Se non si desidera fornire una descrizione, impostarne il valore come stringa vuota. |
 | `engineId` | ID di un motore esistente. |
-| `tasks` | Un set di configurazioni per l’apprendimento, il punteggio o le pipeline delle funzioni. |
+| `tasks` | Set di configurazioni per pipeline di training, punteggio o feature. |
 
 **Risposta**
 
@@ -158,7 +164,7 @@ curl -X GET \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce un elenco di istanze MLI e i relativi dettagli.
+Una risposta corretta restituisce un elenco di MLInstance e i relativi dettagli.
 
 ```json
 {
@@ -196,9 +202,9 @@ In caso di esito positivo, la risposta restituisce un elenco di istanze MLI e i 
 }
 ```
 
-## Recuperare un’istanza MLI specifica {#retrieve-specific}
+## Recupera un&#39;istanza MLInstance specifica {#retrieve-specific}
 
-Per recuperare i dettagli di una specifica istanza MLI, esegui una richiesta GET che includa l’ID dell’istanza MLI desiderata nel percorso della richiesta.
+È possibile recuperare i dettagli di una MLInstance specifica eseguendo una richiesta GET che include l&#39;ID della MLInstance desiderata nel percorso richiesta.
 
 **Formato API**
 
@@ -208,7 +214,7 @@ GET /mlInstances/{MLINSTANCE_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{MLINSTANCE_ID}` | ID dell’istanza MLI desiderata. |
+| `{MLINSTANCE_ID}` | ID della MLInstance desiderata. |
 
 **Richiesta**
 
@@ -223,7 +229,7 @@ curl -X GET \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce i dettagli dell’istanza MLI.
+Una risposta corretta restituisce i dettagli della MLInstance.
 
 ```json
 {
@@ -277,7 +283,7 @@ Puoi aggiornare un’istanza MLI esistente sovrascrivendo le relative proprietà
 >
 >Per garantire il successo di questa richiesta PUT, si consiglia di eseguire prima una richiesta GET per [recuperare l&#39;istanza MLInstance tramite ID](#retrieve-specific). Quindi, modifica e aggiorna l’oggetto JSON restituito e applica l’intero oggetto JSON modificato come payload per la richiesta PUT.
 
-La seguente chiamata API di esempio aggiornerà i parametri di formazione e punteggio di un’istanza MLI durante l’utilizzo iniziale di queste proprietà:
+La seguente chiamata API di esempio aggiornerà i parametri di training e punteggio di MLInstance, pur avendo inizialmente queste proprietà:
 
 ```json
 {
@@ -320,7 +326,7 @@ PUT /mlInstances/{MLINSTANCE_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{MLINSTANCE_ID}` | Un ID istanza MLI valido. |
+| `{MLINSTANCE_ID}` | Un ID MLInstance valido. |
 
 **Richiesta**
 
@@ -366,7 +372,7 @@ curl -X PUT \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce un payload contenente i dettagli aggiornati dell’istanza MLI.
+Una risposta corretta restituisce un payload contenente i dettagli aggiornati di MLInstance.
 
 ```json
 {
@@ -403,9 +409,9 @@ In caso di esito positivo, la risposta restituisce un payload contenente i detta
 }
 ```
 
-## Elimina istanze MLI per ID motore
+## Elimina MLInstances per ID motore
 
-Per eliminare tutte le istanze MLI che condividono lo stesso motore, esegui una richiesta DELETE che includa l’ID motore come parametro di query.
+È possibile eliminare tutte le MLInstance che condividono lo stesso motore eseguendo una richiesta DELETE che include l&#39;ID motore come parametro di query.
 
 **Formato API**
 

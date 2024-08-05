@@ -1,18 +1,24 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;accesso ai dati;sdk di spark;api di accesso ai dati;ricetta di spark;spark di lettura;spark di scrittura
+keywords: Experience Platform; casa; argomenti popolari; accesso dei dati; SDK Spark; API accesso dati; ricetta scintilla; leggere scintilla; Scrivi Spark
 solution: Experience Platform
-title: Accesso ai dati con Spark in Data Science Workspace
+title: Accesso ai dati tramite Spark in Data Science Area di lavoro
 type: Tutorial
-description: Il seguente documento contiene esempi su come accedere ai dati utilizzando Spark per l’utilizzo in Data Science Workspace.
+description: Il documento seguente contiene esempi su come accesso dati usando Spark per l'utilizzo in Data Science Area di lavoro.
 exl-id: 9bffb52d-1c16-4899-b455-ce570d76d3b4
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '444'
+source-wordcount: '467'
 ht-degree: 0%
 
 ---
 
-# Accesso ai dati con Spark in Data Science Workspace
+# Accesso ai dati tramite Spark in Data Science Area di lavoro
+
+>[!NOTE]
+>
+>Data Science Workspace non è più disponibile per l’acquisto.
+>
+>Questa documentazione è destinata ai clienti esistenti che dispongono di diritti precedenti su Data Science Workspace.
 
 Il seguente documento contiene esempi su come accedere ai dati utilizzando Spark per l’utilizzo in Data Science Workspace. Per informazioni sull&#39;accesso ai dati tramite i notebook JupyterLab, consulta la documentazione sull&#39;[accesso ai dati dei notebook JupyterLab](../jupyterlab/access-notebook-data.md).
 
@@ -47,9 +53,9 @@ Class Helper {
 
 ## Lettura di un set di dati
 
-Durante l’utilizzo di Spark è possibile accedere a due modalità di lettura: interattiva e batch.
+Durante l&#39;utilizzo di Spark hai accesso a due modalità di lettura: interattiva e batch.
 
-La modalità interattiva crea una connessione JDBC (Java Database Connectivity) a [!DNL Query Service] e ottiene i risultati tramite un JDBC regolare `ResultSet` che viene automaticamente convertito in `DataFrame`. Questa modalità funziona in modo simile al metodo predefinito [!DNL Spark] `spark.read.jdbc()`. Questa modalità è destinata solo ai set di dati di piccole dimensioni. Se il set di dati supera i 5 milioni di righe, si consiglia di passare alla modalità batch.
+La modalità interattiva crea una connessione [!DNL Query Service] JDBC (Java Database Connectivity) e ottiene risultati tramite un normale JDBC `ResultSet` che viene automaticamente convertito in un `DataFrame`file . Questa modalità funziona in modo simile al metodo `spark.read.jdbc()`incorporato[!DNL Spark]. Questa modalità è destinata solo a set di dati di piccole dimensioni. Se il set di dati supera i 5 milioni di righe, si consiglia di passare alla modalità batch.
 
 La modalità batch utilizza il comando COPY di [!DNL Query Service] per generare set di risultati Parquet in una posizione condivisa. Questi file di Parquet possono quindi essere ulteriormente elaborati.
 
@@ -109,11 +115,11 @@ Di seguito è riportato un esempio di utilizzo della funzione `distinct()`:
 df = df.select("column-a", "column-b").distinct().show()
 ```
 
-### clausola WHERE
+### Clausola WHERE
 
-L&#39;SDK [!DNL Spark] consente due metodi per il filtro: tramite un&#39;espressione SQL o tramite il filtraggio attraverso condizioni.
+L&#39;SDK [!DNL Spark] consente due metodi per filtrare: utilizzando un&#39;espressione SQL o filtrando le condizioni.
 
-Di seguito è riportato un esempio di utilizzo di queste funzioni di filtro:
+Di seguito è riportato un esempio dell&#39;utilizzo di queste funzioni di filtro:
 
 #### Espressione SQL
 
@@ -147,9 +153,9 @@ Di seguito è riportato un esempio di utilizzo della funzione `limit()`:
 df = df.limit(100)
 ```
 
-## Scrittura in un set di dati
+## Scrittura su un dataset
 
-Utilizzando la mappatura `configProperties`, puoi scrivere su un set di dati in Experience Platform utilizzando `QSOption`.
+Utilizzando la `configProperties` mappatura, è possibile scrivere in un dataset in Experience Platform utilizzando `QSOption`.
 
 ```scala
 val userToken: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_TOKEN", "").toString

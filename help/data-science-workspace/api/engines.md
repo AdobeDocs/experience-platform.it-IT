@@ -1,26 +1,32 @@
 ---
-keywords: Experience Platform;guida per sviluppatori;endpoint;Data Science Workspace;argomenti popolari;motori;sensei machine learning api
+keywords: Experience Platform; guida per sviluppatori; Endpoint; Data Science Area di lavoro; argomenti popolari; motori; API di Machine Learning di Sensei
 solution: Experience Platform
-title: Endpoint API per i motori
-description: I motori sono le basi dei modelli di apprendimento automatico in Data Science Workspace. Contengono algoritmi di apprendimento automatico che risolvono problemi specifici, pipeline di funzioni per eseguire attività di progettazione delle funzioni o entrambi.
+title: Endpoint API motori
+description: I motori sono le basi dei modelli di apprendimento automatico in Data Science Workspace. Contengono algoritmi di apprendimento automatico che risolvono problemi specifici, pipeline di funzionalità per eseguire l'ingegneria delle funzionalità o entrambi.
 role: Developer
 exl-id: 7c670abd-636c-47d8-bd8c-5ce0965ce82f
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '1165'
+source-wordcount: '1188'
 ht-degree: 2%
 
 ---
 
 # Endpoint &quot;engines&quot;
 
-I motori sono le basi dei modelli di apprendimento automatico in Data Science Workspace. Contengono algoritmi di apprendimento automatico che risolvono problemi specifici, pipeline di funzioni per eseguire attività di progettazione delle funzioni o entrambi.
+>[!NOTE]
+>
+>Data Science Area di lavoro non è più disponibile per l&#39;acquisto.
+>
+>Questa documentazione è destinata ai clienti esistenti con precedenti diritti a Data Science Area di lavoro.
 
-## Cercare il registro Docker
+I motori sono alla base dei modelli di machine learning in Data Science Area di lavoro. Contengono algoritmi di apprendimento automatico che risolvono problemi specifici, pipeline di funzionalità per eseguire l&#39;ingegneria delle funzionalità o entrambi.
+
+## Look il registro Docker
 
 >[!TIP]
 >
->Se non disponi di un URL Docker, visita l&#39;esercitazione [Package source files into a ricetta](../models-recipes/package-source-files-recipe.md) per una procedura dettagliata sulla creazione di un URL host Docker.
+>Se non si dispone di un URL Docker, visita i file di origine del [pacchetto in una esercitazione di ricette](../models-recipes/package-source-files-recipe.md) per una procedura dettagliata sulla creazione di un URL host Docker.
 
 Le credenziali del Registro di sistema Docker sono necessarie per caricare un pacchetto di file di composizione, inclusi l’URL host Docker, il nome utente e la password. Per cercare queste informazioni, effettua la seguente richiesta GET:
 
@@ -137,7 +143,7 @@ curl -X POST \
 | `name` | Il nome desiderato per il motore. La ricetta corrispondente a questo motore erediterà questo valore per essere visualizzato nell’interfaccia utente come nome della ricetta. |
 | `description` | Descrizione facoltativa del motore. La ricetta corrispondente a questo motore erediterà questo valore per essere visualizzato nell’interfaccia utente come descrizione della ricetta. Questa proprietà è obbligatoria. Se non si desidera fornire una descrizione, impostarne il valore su una stringa vuota. |
 | `type` | Tipo di esecuzione del motore. Questo valore corrisponde alla lingua su cui viene generata l’immagine Docker. Il valore può essere impostato su Spark o PySpark. |
-| `mlLibrary` | Campo richiesto per la creazione di motori per le ricette PySpark e Scala. Questo campo deve essere impostato su `databricks-spark`. |
+| `mlLibrary` | Campo richiesto durante la creazione di motori per le ricette PySpark e Scala. Questo campo deve essere impostato su `databricks-spark`. |
 | `artifacts.default.image.location` | Percorso dell’immagine Docker. È supportato solo Azure ACR o Dockerhub pubblico (non autenticato). |
 | `artifacts.default.image.executionType` | Tipo di esecuzione del motore. Questo valore corrisponde alla lingua su cui viene generata l’immagine Docker. Può essere &quot;Spark&quot; o &quot;PySpark&quot;. |
 
@@ -215,11 +221,11 @@ curl -X POST \
 | --- | --- |
 | `type` | Tipo di esecuzione del motore. Questo valore corrisponde alla lingua su cui viene generata l’immagine Docker. Il valore può essere impostato su Spark o PySpark. |
 | `algorithm` | Algoritmo in uso. Impostare questo valore su `fp` (pipeline delle funzionalità). |
-| `name` | Il nome desiderato per il motore della pipeline di funzioni. La ricetta corrispondente a questo motore erediterà questo valore per essere visualizzato nell’interfaccia utente come nome della ricetta. |
-| `description` | Descrizione facoltativa del motore. La ricetta corrispondente a questo motore erediterà questo valore per essere visualizzato nell’interfaccia utente come descrizione della ricetta. Questa proprietà è obbligatoria. Se non si desidera fornire una descrizione, impostarne il valore su una stringa vuota. |
+| `name` | Nome desiderato per il motore della pipeline di funzionalità. La Ricetta corrispondente a questo Motore erediterà questo valore da visualizzare nella interfaccia come nome della Ricetta. |
+| `description` | Descrizione facoltativa del motore. La Ricetta corrispondente a questo Motore erediterà questo valore da visualizzare in interfaccia come descrizione della Ricetta. Questa proprietà è obbligatoria. Se non si desidera fornire una descrizione, impostarne il valore come stringa vuota. |
 | `mlLibrary` | Campo richiesto per la creazione di motori per le ricette PySpark e Scala. Questo campo deve essere impostato su `databricks-spark`. |
-| `artifacts.default.image.location` | Percorso dell’immagine Docker. È supportato solo Azure ACR o Dockerhub pubblico (non autenticato). |
-| `artifacts.default.image.executionType` | Tipo di esecuzione del motore. Questo valore corrisponde alla lingua su cui viene generata l’immagine Docker. Può essere &quot;Spark&quot; o &quot;PySpark&quot;. |
+| `artifacts.default.image.location` | Posizione dell&#39;immagine Docker. È supportato solo Azure ACR o Dockerhub pubblico (non autenticato). |
+| `artifacts.default.image.executionType` | Tipo di esecuzione del motore. Questo valore corrisponde alla lingua in cui è basata l&#39;immagine Docker. Può essere &quot;Spark&quot; o &quot;PySpark&quot;. |
 | `artifacts.default.image.packagingType` | Il tipo di imballaggio del motore. Questo valore deve essere impostato su `docker`. |
 | `artifacts.default.defaultMLInstanceConfigs` | Parametri del file di configurazione `pipeline.json`. |
 

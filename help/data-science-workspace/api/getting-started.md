@@ -5,14 +5,20 @@ title: Guida API di apprendimento automatico di Sensei
 description: L’API di apprendimento automatico di Sensei consente agli sviluppatori di eseguire operazioni CRUD su varie risorse di Data Science Workspace. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
 role: Developer
 exl-id: d51d0eb2-b1e9-4cc1-889a-9487395703b0
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '232'
-ht-degree: 15%
+source-wordcount: '255'
+ht-degree: 13%
 
 ---
 
 # Guida dell’API di [!DNL Sensei Machine Learning]
+
+>[!NOTE]
+>
+>Data Science Workspace non è più disponibile per l’acquisto.
+>
+>Questa documentazione è destinata ai clienti esistenti che dispongono di diritti precedenti su Data Science Workspace.
 
 L&#39;API [!DNL Sensei Machine Learning] fornisce un meccanismo che consente ai data scientist di organizzare e gestire i servizi di machine learning, dall&#39;onboarding degli algoritmi alla sperimentazione e alla distribuzione dei servizi.
 

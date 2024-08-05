@@ -5,17 +5,22 @@ title: Formazione e valutazione di un modello tramite l’API di apprendimento a
 type: Tutorial
 description: Questo tutorial illustra come creare, addestrare e valutare un modello utilizzando le chiamate API di apprendimento automatico di Sensei.
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '1217'
+source-wordcount: '1240'
 ht-degree: 1%
 
 ---
 
-# Addestra e valuta un modello utilizzando l&#39;API [!DNL Sensei Machine Learning]
+# Addestrare e valutare un modello utilizzando l&#39;API [!DNL Sensei Machine Learning]
 
+>[!NOTE]
+>
+>Data Science Area di lavoro non è più disponibile per l&#39;acquisto.
+>
+>Questa documentazione è destinata ai clienti esistenti con precedenti diritti a Data Science Area di lavoro.
 
-Questo tutorial illustra come creare, addestrare e valutare un modello utilizzando le chiamate API. Per un elenco dettagliato della documentazione API, consulta [questo documento](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
+In questo esercitazione viene illustrato come creare, addestrare e valutare un modello utilizzando le chiamate API. Fare riferimento a [questo documento](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) per un elenco dettagliato della documentazione API.
 
 ## Prerequisiti
 
@@ -64,8 +69,8 @@ curl -X POST \
   -d `{JSON_PAYLOAD}`
 ```
 
-`{ACCESS_TOKEN}`: il valore del token Bearer specifico fornito dopo l&#39;autenticazione.\
-`{ORG_ID}`: credenziali organizzazione trovate nell&#39;integrazione univoca di Adobe Experience Platform.\
+`{ACCESS_TOKEN}`: il valore specifico del token portatore fornito dopo l&#39;autenticazione.\
+`{ORG_ID}`: credenziali dell&#39;organizzazione trovate nell&#39;integrazione univoca del Adobe Experience Platform.\
 `{API_KEY}`: valore chiave API specifico trovato nell&#39;integrazione univoca di Adobe Experience Platform.\
 `{JSON_PAYLOAD}`: configurazione dell&#39;istanza MLI. L’esempio utilizzato nel nostro tutorial è mostrato qui:
 
@@ -178,8 +183,8 @@ curl -X POST \
 
 `{ORG_ID}`: credenziali organizzazione trovate nell&#39;integrazione univoca di Adobe Experience Platform.\
 `{ACCESS_TOKEN}`: il valore del token Bearer specifico fornito dopo l&#39;autenticazione.\
-`{API_KEY}`: valore chiave API specifico trovato nell&#39;integrazione univoca di Adobe Experience Platform.\
-`{JSON_PAYLOAD}`: oggetto esperimento creato. L’esempio utilizzato nel nostro tutorial è mostrato qui:
+`{API_KEY}`: il valore specifico della chiave API trovato nell&#39;integrazione Adobe Experience Platform univoca.\
+`{JSON_PAYLOAD}`: oggetto esperimento creato. L&#39;esempio che usiamo nel nostro esercitazione è mostrato qui:
 
 ```JSON
 {
@@ -216,7 +221,7 @@ La risposta dalla creazione dell’esperimento è simile alla seguente.
 
 ### Creare un esperimento pianificato per la formazione
 
-Gli esperimenti pianificati vengono utilizzati in modo da non dover creare ogni singola esecuzione dell’esperimento tramite una chiamata API. Al contrario, forniamo tutti i parametri necessari durante la creazione dell’esperimento e ogni esecuzione verrà creata periodicamente.
+Gli esperimenti pianificati vengono utilizzati in modo da non dover creare ogni singola esecuzione di esperimenti tramite una chiamata API. Invece, forniamo tutti i parametri necessari durante la creazione dell&#39;esperimento e ogni esecuzione verrà creata periodicamente.
 
 Per indicare la creazione di un esperimento pianificato, è necessario aggiungere una sezione `template` nel corpo della richiesta. In `template` sono inclusi tutti i parametri necessari per la pianificazione delle esecuzioni, ad esempio `tasks`, che indica l&#39;azione, e `schedule`, che indica la tempistica delle esecuzioni pianificate.
 
@@ -233,9 +238,9 @@ curl -X POST \
 ```
 
 `{ORG_ID}`: credenziali organizzazione trovate nell&#39;integrazione univoca di Adobe Experience Platform.\
-`{ACCESS_TOKEN}`: il valore del token Bearer specifico fornito dopo l&#39;autenticazione.\
-`{API_KEY}`: valore chiave API specifico trovato nell&#39;integrazione univoca di Adobe Experience Platform.\
-`{JSON_PAYLOAD}`: set di dati da pubblicare. L’esempio utilizzato nel nostro tutorial è mostrato qui:
+`{ACCESS_TOKEN}`: il valore specifico del token portatore fornito dopo l&#39;autenticazione.\
+`{API_KEY}`: il valore specifico della chiave API trovato nell&#39;integrazione Adobe Experience Platform univoca.\
+`{JSON_PAYLOAD}`: Set di dati da inviare. L&#39;esempio che usiamo nel nostro esercitazione è mostrato qui:
 
 ```JSON
 {
@@ -265,7 +270,7 @@ curl -X POST \
 }
 ```
 
-Quando si crea un esperimento, il corpo `{JSON_PAYLOAD}` deve contenere il parametro `mlInstanceId` o `mlInstanceQuery`. In questo esempio, un esperimento pianificato richiamerà un&#39;esecuzione ogni 20 minuti, impostata nel parametro `cron`, a partire da `startTime` fino a `endTime`.
+Quando creiamo un esperimento, il corpo, `{JSON_PAYLOAD}`, dovrebbe contenere il `mlInstanceId` parametro o il `mlInstanceQuery` parametro. In questo esempio, un esperimento pianificato richiamerà un&#39;esecuzione `cron` ogni 20 minuti, impostata nel parametro, a partire da fino a `startTime` .`endTime`
 
 **Risposta**
 
@@ -392,11 +397,11 @@ curl -X GET \
 `{EXPERIMENT_RUN_ID}`: ID che rappresenta l&#39;esecuzione dell&#39;esperimento.\
 `{ACCESS_TOKEN}`: il valore del token Bearer specifico fornito dopo l&#39;autenticazione.\
 `{ORG_ID}`: credenziali organizzazione trovate nell&#39;integrazione univoca di Adobe Experience Platform.\
-`{API_KEY}`: valore chiave API specifico trovato nell&#39;integrazione univoca di Adobe Experience Platform.
+`{API_KEY}`: il valore specifico della chiave API trovato nell&#39;integrazione Adobe Experience Platform univoca.
 
 **Risposta**
 
-La chiamata di GET fornirà lo stato nel parametro `state` come mostrato di seguito:
+La chiamata GET fornirà lo stato nel `state` parametro, come mostrato di seguito:
 
 ```JSON
 {
@@ -429,7 +434,7 @@ La chiamata di GET fornirà lo stato nel parametro `state` come mostrato di segu
 }
 ```
 
-`{EXPERIMENT_RUN_ID}`: ID che rappresenta l&#39;esecuzione dell&#39;esperimento.\
+`{EXPERIMENT_RUN_ID}`: l&#39;ID che rappresenta l&#39;esecuzione dell&#39;esperimento.\
 `{EXPERIMENT_ID}`: ID che rappresenta l&#39;esperimento in cui si trova l&#39;esecuzione dell&#39;esperimento.
 
 Oltre allo stato `DONE`, gli altri stati includono:
@@ -486,9 +491,9 @@ La risposta rappresenta il modello addestrato che è stato creato.
 `{EXPERIMENT_ID}`: l&#39;ID corrispondente all&#39;esperimento eseguito.\
 `{EXPERIMENT_RUN_ID}`: ID corrispondente all&#39;esecuzione dell&#39;esperimento.
 
-### Interrompere ed eliminare un esperimento pianificato
+### Interruzione ed eliminare un esperimento pianificato
 
-Se desideri interrompere l&#39;esecuzione di un esperimento pianificato prima del relativo `endTime`, puoi eseguire una query su una richiesta DELETE a `{EXPERIMENT_ID}`
+Se si desidera interrompere l&#39;esecuzione di un esperimento pianificato prima della sua `endTime`, è possibile eseguire questa operazione interrogando un richiesta DELETE al `{EXPERIMENT_ID}`
 
 **Richiesta**
 
@@ -507,7 +512,7 @@ curl -X DELETE \
 >
 >La chiamata API disabiliterà la creazione di nuove esecuzioni dell’esperimento. Tuttavia, non interrompe l’esecuzione di esecuzioni di esperimenti già in esecuzione.
 
-Di seguito è riportata la risposta con la quale si notifica che l’esperimento è stato eliminato correttamente.
+Di seguito è riportata la risposta che notifica che l&#39;esperimento è stato eliminato correttamente.
 
 **Risposta**
 

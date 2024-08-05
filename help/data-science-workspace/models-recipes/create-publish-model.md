@@ -5,15 +5,21 @@ title: Creare e creare un modello di apprendimento automatico con Publish
 type: Tutorial
 description: La guida seguente descrive i passaggi necessari per creare e pubblicare un modello di apprendimento automatico.
 exl-id: f71e5a17-9952-411e-8e6a-aab46bc4c006
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1096'
 ht-degree: 0%
 
 ---
 
 
 # Creare e pubblicare un modello di apprendimento automatico
+
+>[!NOTE]
+>
+>Data Science Workspace non è più disponibile per l’acquisto.
+>
+>Questa documentazione è destinata ai clienti esistenti che dispongono di diritti precedenti su Data Science Workspace.
 
 La guida seguente descrive i passaggi necessari per creare e pubblicare un modello di apprendimento automatico. Ogni sezione contiene una descrizione delle operazioni da eseguire e un collegamento alla documentazione dell’interfaccia utente e dell’API per eseguire il passaggio descritto.
 

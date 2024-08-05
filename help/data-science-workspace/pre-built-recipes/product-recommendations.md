@@ -4,14 +4,20 @@ solution: Experience Platform
 title: Ricetta consigli prodotto
 description: La ricetta Product Recommendations ti consente di fornire consigli di prodotto personalizzati e personalizzati in base alle esigenze e agli interessi del cliente. Con un modello di previsione accurato, la cronologia degli acquisti di un cliente può fornire informazioni sui prodotti che potrebbe essere interessato.
 exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 923c6f2deb4d1199cfc5dc9dc4ca7b4da154aaaa
 workflow-type: tm+mt
-source-wordcount: '466'
-ht-degree: 3%
+source-wordcount: '489'
+ht-degree: 2%
 
 ---
 
 # Ricetta per consigli sui prodotti
+
+>[!NOTE]
+>
+>Data Science Workspace non è più disponibile per l’acquisto.
+>
+>Questa documentazione è destinata ai clienti esistenti che dispongono di diritti precedenti su Data Science Workspace.
 
 La ricetta Product Recommendations ti consente di fornire consigli di prodotto personalizzati e personalizzati in base alle esigenze e agli interessi del cliente. Con un modello di previsione accurato, la cronologia degli acquisti di un cliente può fornire informazioni sui prodotti che potrebbe essere interessato.
 

@@ -5,21 +5,27 @@ title: Creare pacchetti di file Source in una ricetta
 type: Tutorial
 description: Questa esercitazione fornisce istruzioni su come creare un pacchetto dei file di origine di esempio per le vendite al dettaglio in un file di archivio, che può essere utilizzato per creare una ricetta in Adobe Experience Platform Data Science Workspace seguendo il flusso di lavoro di importazione delle ricette nell’interfaccia utente o utilizzando l’API.
 exl-id: 199b8127-4f1b-43a4-82e6-58cb70fcdc08
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '1143'
+source-wordcount: '1166'
 ht-degree: 0%
 
 ---
 
 # Creare un pacchetto di file di origine per una ricetta
 
+>[!NOTE]
+>
+>Data Science Workspace non è più disponibile per l’acquisto.
+>
+>Questa documentazione è destinata ai clienti esistenti che dispongono di diritti precedenti su Data Science Workspace.
+
 Questo tutorial fornisce istruzioni su come creare un pacchetto dei file di origine di esempio per le vendite al dettaglio in un file di archivio, che può essere utilizzato per creare una ricetta in Adobe Experience Platform [!DNL Data Science Workspace] seguendo il flusso di lavoro di importazione delle ricette nell&#39;interfaccia utente o utilizzando l&#39;API.
 
 Concetti da comprendere:
 
-- **Ricette**: una ricetta è il termine Adobe per una specifica di modello ed è un contenitore di livello superiore che rappresenta un apprendimento automatico specifico, un algoritmo di intelligenza artificiale o un insieme di algoritmi, una logica di elaborazione e una configurazione necessari per generare ed eseguire un modello addestrato e quindi contribuire a risolvere problemi di business specifici.
-- **File Source**: singoli file nel progetto che contengono la logica per una ricetta.
+- **Ricette**: una ricetta è il termine di Adobe Systems per una specifica del modello ed è un contenitore di primo livello che rappresenta uno specifico algoritmo di apprendimento automatico, intelligence artificiale o un insieme di algoritmi, logica di elaborazione e configurazione necessari per versione ed eseguire un modello addestrato e quindi aiutare a risolvere problemi aziendali specifici.
+- **** File Origine: singoli file nel progetto che contengono la logica per una ricetta.
 
 ## Prerequisiti
 
@@ -61,11 +67,11 @@ Seleziona il *Runtime* appropriato, quindi scegli una **[!UICONTROL Classificazi
 
 ![](../images/models-recipes/package-source-files/docker-creds.png)
 
-Osserva i valori per Docker host, nome utente e password. Questi vengono utilizzati per generare e inviare l&#39;immagine [!DNL Docker] nei flussi di lavoro descritti di seguito.
+Prendi nota dei valori per host, nome utente e password Docker. Questi vengono utilizzati per versione e spingere la tua [!DNL Docker] immagine nei flussi di lavoro descritti di seguito.
 
 >[!NOTE]
 >
->L’URL Source viene fornito dopo aver completato i passaggi descritti di seguito. Il file di configurazione è descritto nelle esercitazioni successive disponibili nei [passaggi successivi](#next-steps).
+>Il Origine URL viene fornito dopo aver completato i passaggi descritti di seguito. Il file di configurazione viene spiegato nelle esercitazioni successive che si trovano nei [passaggi](#next-steps) successivi.
 
 ### Creare un pacchetto dei file di origine
 
@@ -96,18 +102,18 @@ Passare alla directory `experience-platform-dsw-reference/recipes/python/retail`
 
 Durante l’esecuzione dello script di accesso, devi fornire l’host Docker, il nome utente e la password. Durante la generazione, devi fornire l’host Docker e un tag di versione per la build.
 
-Una volta completato lo script di build, nell’output della console viene fornito l’URL del file di origine Docker. Per questo esempio specifico, avrà un aspetto simile a:
+Una volta completato lo script di build, nell’output della console viene fornito l’URL del file di origine Docker. Per questo esempio specifico, avrà un aspetto simile like:
 
 ```BASH
 # URL format: 
 {DOCKER_HOST}/ml-retailsales-python:{VERSION_TAG}
 ```
 
-Copia questo URL e passa ai [passaggi successivi](#next-steps).
+Copia questo URL e passa ai [passaggi](#next-steps) successivi.
 
 ### Genera immagine R [!DNL Docker] {#r-docker}
 
-In caso contrario, clonare l&#39;archivio [!DNL GitHub] nel sistema locale con il comando seguente:
+Se non è stato fatto, clonare il [!DNL GitHub] archivio nel sistema locale con il seguente comando:
 
 ```BASH
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
@@ -183,11 +189,11 @@ Passare quindi alla directory `experience-platform-dsw-reference/recipes/scala` 
 
 >[!TIP]
 >
->Se si riceve un errore di autorizzazione quando si tenta di accedere a Docker utilizzando lo script `login.sh`, provare a utilizzare il comando `bash login.sh`.
+>Se viene visualizzato un errore autorizzazione quando si tenta di login a Docker utilizzando lo `login.sh` script, provare a utilizzare il comando `bash login.sh`.
 
-Durante l’esecuzione dello script di accesso, devi fornire l’host Docker, il nome utente e la password. Durante la generazione, devi fornire l’host Docker e un tag di versione per la build.
+Quando si esegue lo script login, è necessario fornire l&#39;host Docker, il nome utente e il password. Durante la compilazione, è necessario fornire l&#39;host Docker e un tag di versione per il versione.
 
-Una volta completato lo script di build, nell’output della console viene fornito l’URL del file di origine Docker. Per questo esempio specifico, avrà un aspetto simile a:
+Una volta completato lo script versione, viene fornito un file di origine Docker URL nell&#39;output della console. Per questo esempio specifico, avrà un aspetto simile like:
 
 ```BASH
 # URL format: 
