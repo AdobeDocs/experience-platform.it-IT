@@ -3,9 +3,9 @@ title: Endpoint API di Audiences
 description: Utilizza l’endpoint "audiences" nell’API del servizio di segmentazione di Adobe Experience Platform per creare, gestire e aggiornare in modo programmatico i tipi di pubblico per la tua organizzazione.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 87b491339469e69653cad79b657bd1edfbca1de9
+source-git-commit: 914174de797d7d5f6c47769d75380c0ce5685ee2
 workflow-type: tm+mt
-source-wordcount: '1879'
+source-wordcount: '1869'
 ht-degree: 2%
 
 ---
@@ -73,7 +73,6 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elen
             "schema": {
                 "name": "_xdm.context.profile"
             },
-            "ttlInDays": 60,
             "profileInstanceId": "ups",
             "imsOrgId": "{ORG_ID}",
             "sandbox": {
@@ -236,8 +235,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
         },
         "labels": [
           "core/C1"
-        ],
-        "ttlInDays": 60
+        ]
     }'
 ```
 
@@ -249,7 +247,6 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 | `expression` | L’espressione Profile Query Language (PQL) del pubblico. Ulteriori informazioni sulle espressioni di PQL sono disponibili nella [guida delle espressioni di PQL](../pql/overview.md). |
 | `schema` | Lo schema Experience Data Model (XDM) del pubblico. |
 | `labels` | Etichette di controllo dell’accesso basate su attributi e utilizzo dati a livello di oggetto rilevanti per il pubblico. |
-| `ttlInDays` | Rappresenta il valore di scadenza dei dati per il pubblico, in giorni. |
 
 +++
 
@@ -317,7 +314,6 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
      "schema": {
       "name": "_xdm.context.profile"
     },
-    "ttlInDays": 60,
     "profileInstanceId": "ups",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
@@ -462,7 +458,6 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
     "schema": {
         "name": "_xdm.context.profile"
     },
-    "ttlInDays": 60,
     "profileInstanceId": "ups",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
@@ -619,7 +614,6 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
     "schema": {
         "name": "_xdm.context.profile"
     },
-    "ttlInDays": 60,
     "profileInstanceId": "ups",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
@@ -845,7 +839,6 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 207 con le info
          "schema": {
             "name": "_xdm.context.profile"
          },
-         "ttlInDays": 30,
          "imsOrgId": "{ORG_ID}",
          "sandbox": {
             "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",

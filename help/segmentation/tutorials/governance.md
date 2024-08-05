@@ -4,7 +4,7 @@ title: Applicare la conformità dell’utilizzo dati per un segmento di pubblico
 type: Tutorial
 description: Questo tutorial illustra i passaggi necessari per applicare le definizioni dei segmenti di conformità per l’utilizzo dei dati utilizzando le API.
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 914174de797d7d5f6c47769d75380c0ce5685ee2
 workflow-type: tm+mt
 source-wordcount: '1348'
 ht-degree: 6%
@@ -91,7 +91,6 @@ In caso di esito positivo, la risposta restituisce i dettagli della definizione 
     "schema": { 
         "name": "_xdm.context.profile"
     },
-    "ttlInDays": 90,
     "imsOrgId": "{ORG_ID}",
     "name": "Cart abandons in CA",
     "description": "",
