@@ -4,7 +4,7 @@ type: Tutorial
 description: Scopri come attivare i dati sul pubblico disponibili in Adobe Experience Platform inviando tipi di pubblico a destinazioni basate su profili di streaming.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 6b186030c66598cddcdfcf509b8863e10d4fd0a7
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '764'
 ht-degree: 1%
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 ## Panoramica {#overview}
 
-Questo articolo spiega il flusso di lavoro necessario per attivare i dati sul pubblico in Adobe Experience Platform nelle destinazioni basate su profili di streaming (dette anche [destinazioni aziendali](/help/destinations/destination-types.md#streaming-profile-export)).
+Questo articolo spiega il flusso di lavoro necessario per attivare i dati sul pubblico in Adobe Experience Platform nelle destinazioni basate su profili di streaming (dette anche [destinazioni aziendali](/help/destinations/destination-types.md#advanced-enterprise-destinations)).
 
 Il presente articolo si applica alle tre destinazioni seguenti:
 

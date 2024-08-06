@@ -2,7 +2,7 @@
 title: Note sulla versione di Adobe Experience Platform - Gennaio 2023
 description: Note sulla versione di Adobe Experience Platform di gennaio 2023.
 exl-id: 461898ce-5683-4ab1-9167-ac25843a1ff8
-source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '2224'
 ht-degree: 99%
@@ -175,7 +175,7 @@ Per rimuovere la ridondanza nel ciclo di vita dell’appartenenza al segmento, l
 
 Dopo la deprecazione, i profili qualificati in un segmento verranno rappresentati come `Realized` e i profili non qualificati continueranno a essere rappresentati come `Exited`. Questo porterà la parità con le destinazioni basate su file con stati dei segmenti `Active` e `Expired`.
 
-Se utilizzi le [destinazioni Enterprise](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Azure Event Hub, API HTTP) e disponi di processi downstream automatizzati basati su stati `Existing`, questa modifica potrebbe interessarti. Se questo è il caso, controlla le integrazioni a valle. Se ti interessa identificare profili nuovi e qualificati oltre un certo periodo di tempo, puoi utilizzare una combinazione di stati `Realized` e il `lastQualificationTime` nella mappa di appartenenza al segmento. Per ulteriori informazioni, contatta il rappresentante Adobe.
+Se utilizzi le [destinazioni Enterprise](../../destinations/destination-types.md#advanced-enterprise-destinations) (Amazon Kinesis, Azure Event Hub, API HTTP) e disponi di processi downstream automatizzati basati su stati `Existing`, questa modifica potrebbe interessarti. Se questo è il caso, controlla le integrazioni a valle. Se ti interessa identificare profili nuovi e qualificati oltre un certo periodo di tempo, puoi utilizzare una combinazione di stati `Realized` e il `lastQualificationTime` nella mappa di appartenenza al segmento. Per ulteriori informazioni, contatta il rappresentante Adobe.
 
 Per ulteriori informazioni sul Profilo cliente in tempo reale, inclusi tutorial e best practice per l’utilizzo dei dati del profilo, inizia consultando la [Panoramica sul Profilo cliente in tempo reale](../../profile/home.md).
 

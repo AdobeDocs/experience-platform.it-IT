@@ -2,7 +2,7 @@
 title: Comportamento di esportazione del profilo
 description: Scopri come il comportamento di esportazione del profilo varia tra i diversi modelli di integrazione supportati nelle destinazioni di Experience Platform.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '2931'
 ht-degree: 0%
@@ -44,7 +44,7 @@ Il criterio di aggregazione è configurabile e gli sviluppatori di destinazione 
 >
 > Le destinazioni Enterprise sono disponibili solo per [clienti Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform.html).
 
-Le [destinazioni Enterprise](/help/destinations/destination-types.md#streaming-profile-export) in Experience Platform sono Amazon Kinesis, Azure Event Hub e API HTTP.
+Le [destinazioni Enterprise](/help/destinations/destination-types.md#advanced-enterprise-destinations) in Experience Platform sono Amazon Kinesis, Azure Event Hub e API HTTP.
 
 Experience Platform ottimizza il comportamento di esportazione del profilo nella destinazione aziendale, per esportare i dati nell’endpoint API solo quando si sono verificati aggiornamenti rilevanti a un profilo in seguito alla qualifica di un pubblico o ad altri eventi significativi. I profili vengono esportati nella destinazione nelle seguenti situazioni:
 

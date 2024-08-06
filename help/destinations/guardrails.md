@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: Ulteriori informazioni sull’utilizzo predefinito dell’attivazione dei dati e sui limiti di tariffa.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '1685'
 ht-degree: 2%
@@ -92,7 +92,7 @@ I guardrail seguenti si applicano al metodo [ad-hoc activation](/help/destinatio
 
 ### Attivazione delle destinazioni di personalizzazione Edge {#edge-destinations-activation}
 
-I guardrail riportati di seguito si applicano all&#39;attivazione tramite [destinazioni di personalizzazione edge](/help/destinations/destination-types.md#streaming-profile-export).
+I guardrail riportati di seguito si applicano all&#39;attivazione tramite [destinazioni di personalizzazione edge](/help/destinations/destination-types.md#advanced-enterprise-destinations).
 
 | Guardrail | Limite | Tipo limite | Descrizione |
 | --- | --- | --- | --- |

@@ -2,7 +2,7 @@
 title: Note sulla versione di Adobe Experience Platform - Aprile 2023
 description: Note sulla versione di Adobe Experience Platform di aprile 2023.
 exl-id: 7b501467-99a7-4aee-ae86-66c851250ecf
-source-git-commit: 5de1ec17b78c97be21c0d2afd6f0b119a6074b6f
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '2038'
 ht-degree: 98%
@@ -174,7 +174,7 @@ Adobe Experience Platform ti consente di promuovere esperienze coordinate, coere
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Mappa di appartenenza al segmento | In seguito al precedente annuncio di febbraio, il 15 maggio 2023 lo stato `Existing` verrà rimosso dalla mappa di appartenenza al segmento per rimuovere la ridondanza nel ciclo di vita dell’appartenenza al segmento. Dopo questa modifica, i profili qualificati in un segmento verranno rappresentati come `Realized` e i profili non qualificati continueranno a essere rappresentati come `Exited`.<br/><br/> Se utilizzi le [destinazioni Enterprise](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Hub eventi Azure, API HTTP) e potresti disporre di processi a valle automatizzati basati sullo stato `Existing`, questa modifica potrebbe interessarti. In questo caso, rivedi le tue integrazioni a valle. Se ti interessa identificare profili nuovi e qualificati oltre un certo periodo di tempo, puoi utilizzare una combinazione di stato `Realized` e `lastQualificationTime` nella mappa di appartenenza al segmento. Per ulteriori informazioni, contatta il rappresentante Adobe. |
+| Mappa di appartenenza al segmento | In seguito al precedente annuncio di febbraio, il 15 maggio 2023 lo stato `Existing` verrà rimosso dalla mappa di appartenenza al segmento per rimuovere la ridondanza nel ciclo di vita dell’appartenenza al segmento. Dopo questa modifica, i profili qualificati in un segmento verranno rappresentati come `Realized` e i profili non qualificati continueranno a essere rappresentati come `Exited`.<br/><br/> Se utilizzi le [destinazioni Enterprise](../../destinations/destination-types.md#advanced-enterprise-destinations) (Amazon Kinesis, Hub eventi Azure, API HTTP) e potresti disporre di processi a valle automatizzati basati sullo stato `Existing`, questa modifica potrebbe interessarti. In questo caso, rivedi le tue integrazioni a valle. Se ti interessa identificare profili nuovi e qualificati oltre un certo periodo di tempo, puoi utilizzare una combinazione di stato `Realized` e `lastQualificationTime` nella mappa di appartenenza al segmento. Per ulteriori informazioni, contatta il rappresentante Adobe. |
 
 {style="table-layout:auto"}
 
