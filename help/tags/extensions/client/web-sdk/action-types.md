@@ -3,9 +3,9 @@ title: Tipi di azioni nell’estensione Adobe Experience Platform Web SDK
 description: Scopri i diversi tipi di azioni forniti dall’estensione tag Adobe Experience Platform Web SDK.
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: c3b05dfd57b3335230e9abb40de6f2e1ee5ee6fa
+source-git-commit: 760484bb7f95df97701f81f78783f0214aecaf5b
 workflow-type: tm+mt
-source-wordcount: '2114'
+source-wordcount: '2112'
 ht-degree: 1%
 
 ---
@@ -93,10 +93,6 @@ Utilizza il selettore **[!UICONTROL Istanza]** per scegliere l&#39;istanza dell&
 
 * **[!UICONTROL Istanza]**: selezionare l&#39;istanza dell&#39;SDK Web che si desidera configurare. Se disponi di una sola istanza, questa verrà preselezionata.
 * **[!UICONTROL Utilizza eventi guidati]**: abilita questa opzione per compilare o nascondere automaticamente alcuni campi per abilitare un particolare caso d&#39;uso. L’attivazione di questa opzione attiva la visualizzazione delle seguenti impostazioni.
-
-  >[!NOTE]
-  >
-  >Gli eventi guidati mostrati di seguito sono correlati a [eventi principali e finali della pagina](../../../../web-sdk/use-cases/top-bottom-page-events.md).
    * **[!UICONTROL Richiedi personalizzazione]**: questo evento deve essere chiamato nella parte superiore della pagina. Quando è selezionato, questo evento imposta i campi seguenti:
       * **[!UICONTROL Tipo]**: **[!UICONTROL Recupero proposta di decisione]**
       * **[!UICONTROL Invia automaticamente un evento di visualizzazione]**: **[!UICONTROL false]**
@@ -104,6 +100,10 @@ Utilizza il selettore **[!UICONTROL Istanza]** per scegliere l&#39;istanza dell&
    * **[!UICONTROL Raccogli analisi]**: questo evento deve essere chiamato nella parte inferiore della pagina. Quando è selezionato, questo evento imposta i campi seguenti:
       * **[!UICONTROL Includi proposte sottoposte a rendering]**: **[!UICONTROL true]**
       * Le impostazioni di **[!UICONTROL Personalization]** sono nascoste
+
+  >[!NOTE]
+  >
+  >Gli eventi guidati sono correlati a [eventi principali e finali della pagina](../../../../web-sdk/use-cases/top-bottom-page-events.md).
 
 
 ### Dati {#data}
