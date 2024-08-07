@@ -4,9 +4,9 @@ title: Panoramica sui playbook di casi d’uso
 description: Scopri come utilizzare la funzione Playbook di casi d’uso in Experience Platform per iniziare a utilizzare vari casi d’uso di marketing
 role: Developer, User, Admin, Leader
 exl-id: 9c5c4f61-ea99-4f54-9b77-d486be29813c
-source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
+source-git-commit: 152d7d29494d586016260ed6ed3d3f60e6bf766b
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '529'
 ht-degree: 30%
 
 ---
@@ -29,10 +29,12 @@ Cosa troverai in questa documentazione di guida:
 
 ## Panoramica {#overview}
 
-[!UICONTROL Playbook di casi d&#39;uso] può aiutarti a superare il problema quando inizi a usare Real-Time CDP o Adobe Journey Optimizer quando potresti non sapere esattamente con cosa iniziare o come creare le risorse giuste per ottenere i casi d&#39;uso desiderati. I playbook basati su casi d’uso possono aiutarti:
+[!UICONTROL Playbook di casi d&#39;uso] può aiutarti a superare il problema quando inizi a usare Real-Time CDP o Adobe Journey Optimizer quando potresti non sapere esattamente con cosa iniziare o come creare le risorse giuste per ottenere i casi d&#39;uso desiderati.
 
-* Esempi di casi d’uso
-* Creazione di risorse diverse da utilizzare, testare e promuovere in produzione quando sono pronte.
+I playbook basati su casi d’uso possono aiutarti:
+
+* [Presentazione di un catalogo di playbook disponibili per iniziare più rapidamente a utilizzare i casi d’uso](../playbooks/playbooks-list.md)
+* [Creazione di risorse diverse](../playbooks/create-share-reuse.md)
 
 ![Vista di tutti i playbook](/help/use-case-playbooks/assets/playbooks/overview/playbooks-landing-page.png)
 
