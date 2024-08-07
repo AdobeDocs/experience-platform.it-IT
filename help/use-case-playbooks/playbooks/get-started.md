@@ -4,10 +4,10 @@ title: Introduzione ai playbook con casi d’uso
 description: Scopri come iniziare a utilizzare la funzionalità Playbook di casi d’uso.
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
+source-git-commit: 1781aa552107b6ca1fed357c053a4f892960dc55
 workflow-type: tm+mt
-source-wordcount: '953'
-ht-degree: 15%
+source-wordcount: '990'
+ht-degree: 14%
 
 ---
 
@@ -19,6 +19,8 @@ Scopri come impostare l’account per Use Case Playbook, progettato per Real-tim
 * Creare una sandbox
 * Configurare le autorizzazioni utente
 * Configurare le superfici di canale Journey Optimizer per le notifiche e-mail, push e SMS (se si intende utilizzare i playbook Journey Optimizer)
+
+Per accedere a una raccolta completa di playbook di casi d&#39;uso nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Playbook]** dal menu di navigazione a sinistra. Leggi la documentazione su come [esplorare i playbook dei casi d&#39;uso](../playbooks/navigate.md) e iniziare a utilizzare una [sandbox ispiratrice](../playbooks/navigate.md).
 
 ## Configurare i playbook di casi d’uso - Procedura dettagliata con video {#video}
 

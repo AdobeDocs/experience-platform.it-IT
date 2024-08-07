@@ -4,16 +4,16 @@ title: Scegli tra una selezione di playbook
 description: Scopri come scegliere il playbook corretto per il tuo caso d’uso abilitare i playbook.
 role: User
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
-source-git-commit: ea735c486ca88de05f2ee2a8e40c68e3ef29c4fd
+source-git-commit: 1781aa552107b6ca1fed357c053a4f892960dc55
 workflow-type: tm+mt
 source-wordcount: '757'
-ht-degree: 90%
+ht-degree: 88%
 
 ---
 
 # Scegli tra una selezione di playbook
 
-Per utilizzare un playbook, passa a **[!UICONTROL Playbook per casi d’uso] > [!UICONTROL Playbook]**. Sfoglia e utilizza le varie opzioni di ricerca e filtro disponibili nella pagina per selezionare e iniziare a utilizzare un playbook specifico.
+Per utilizzare un playbook, seleziona **[!UICONTROL Playbook]** dal menu di navigazione a sinistra. Sfoglia e utilizza le varie opzioni di ricerca e filtro disponibili nella pagina per selezionare e iniziare a utilizzare un playbook specifico.
 
 ## Ricerca e filtro {#search-and-filter}
 
