@@ -1,10 +1,10 @@
 ---
 title: Gestire tipi di dati array e mapping con funzioni di ordine superiore
-description: Scopri come gestire array e mappare tipi di dati con funzioni di ordine superiore in Query Service. Sono forniti esempi pratici per i casi d’uso comuni.
+description: Scopri come gestire array e mappare tipi di dati con funzioni di ordine superiore in Query Service. Alcuni esempi sono forniti con casi d’uso comuni.
 exl-id: dec4e4f6-ad6b-4482-ae8c-f10cc939a634
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: d2bc580ba1cacdfab45bdc6356c630a63e7d0f6e
 workflow-type: tm+mt
-source-wordcount: '1471'
+source-wordcount: '1470'
 ht-degree: 0%
 
 ---

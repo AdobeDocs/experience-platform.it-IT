@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Domande frequenti
 description: Questo documento contiene domande e risposte comuni relative a Query Service. Gli argomenti includono esportazione di dati, strumenti di terze parti ed errori PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: 84f30a47102a51b40d6811cd4815c36f6ffd34b5
 workflow-type: tm+mt
-source-wordcount: '4425'
+source-wordcount: '4564'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,11 @@ Questo documento fornisce le risposte alle domande più frequenti su Query Servi
 Il seguente elenco di risposte alle domande frequenti è suddiviso nelle seguenti categorie:
 
 - [Generale](#general)
+- [Interfaccia utente query](#queries-ui) 
+- [Esempi di set di dati](#dataset-samples)
 - [Esportazione dei dati](#exporting-data)
+- [Sintassi SQL](#sql-syntax) 
+- [Query ITAS](#itas-queries)
 - [Strumenti di terze parti](#third-party-tools)
 - [Errori API PostgreSQL](#postgresql-api-errors)
 - [Errori REST API](#rest-api-errors)
@@ -603,6 +607,22 @@ Sì, è possibile utilizzare il comando `CREATE VIEW` senza accedere a Data Dist
 Sì. Tuttavia, alcuni client di terze parti, come DbVisualizer, potrebbero richiedere un identificatore separato prima e dopo un blocco SQL per indicare che una parte di uno script deve essere gestita come una singola istruzione. Ulteriori dettagli sono disponibili nella [documentazione sui blocchi anonimi](./key-concepts/anonymous-block.md) o nella [documentazione ufficiale di DbVisualizer](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect).
 +++
 
+## Interfaccia query
+
+### Quando si tenta di connettersi a Query Service, la &quot;Crea query&quot; si blocca su &quot;Inizializzazione della connessione in corso...&quot;. Come posso risolvere il problema?
+
++++Risposta
+Se la &quot;Query di creazione&quot; è bloccata su &quot;Inizializzazione della connessione in corso...&quot;, è probabile che si tratti di un problema di connessione o di sessione. Aggiorna il browser se utilizzi l’interfaccia utente di Platform e riprova.
++++
+
+## Esempi di set di dati
+
+### Posso creare campioni su un set di dati di sistema?
+
++++Risposta
+No. Le autorizzazioni di scrittura sono limitate ai set di dati di sistema, pertanto non è possibile creare campioni.
++++
+
 ## Esportazione dei dati {#exporting-data}
 
 Questa sezione fornisce informazioni sull’esportazione di dati e sui limiti.
@@ -647,6 +667,22 @@ timestamp >= to_timestamp('2022-07-22')
 and timestamp < to_timestamp('2022-07-23');
 ```
 
++++
+
+## Sintassi SQL
+
+### MERGE INTO è supportato da Data Distiller o Query Service?
+
++++Risposta
+Il costrutto MERGE INTO SQL non è supportato da Data Distiller o Query Service.
++++
+
+## Query ITAS
+
+### Cosa sono le query ITAS?
+
++++Risposta
+Le query INSERT INTO sono denominate query ITAS. Si noti che le query CREATE TABLE sono denominate query CTAS.
 +++
 
 ## Strumenti di terze parti {#third-party-tools}

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Query Editor
 description: L’editor delle query è uno strumento interattivo fornito da Adobe Experience Platform Query Service che consente di scrivere, convalidare ed eseguire query per i dati sull’esperienza del cliente all’interno dell’interfaccia utente di Experience Platform. Query Editor supporta lo sviluppo di query per l’analisi e l’esplorazione dei dati e consente di eseguire query interattive a scopo di sviluppo, nonché query non interattive per popolare i set di dati in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: d2bc580ba1cacdfab45bdc6356c630a63e7d0f6e
 workflow-type: tm+mt
-source-wordcount: '2432'
+source-wordcount: '2430'
 ht-degree: 0%
 
 ---
@@ -223,9 +223,9 @@ Al termine di una query, i risultati vengono visualizzati nella scheda **[!UICON
 
 ![Scheda Risultati della console Editor query che visualizza i risultati dell&#39;esecuzione di una query.](../images/ui/query-editor/query-results.png)
 
-## Casi d’uso {#use-cases}
+## Esempi {#examples}
 
-Query Service offre soluzioni per una varietà di casi d’uso in diversi settori e scenari aziendali. Questi esempi pratici dimostrano la flessibilità e l&#39;impatto del servizio nel soddisfare le diverse esigenze. Per [scoprire in che modo Query Service può apportare valore alle tue esigenze aziendali specifiche](../use-cases/overview.md), esplora la raccolta completa di documenti relativi ai casi d&#39;uso. Scopri come utilizzare Query Service per fornire informazioni approfondite e soluzioni per migliorare l’efficienza operativa e il successo aziendale.
+Query Service offre soluzioni per una varietà di casi d’uso in diversi settori e scenari aziendali. Questi esempi dimostrano la flessibilità e l&#39;impatto del servizio nel soddisfare le diverse esigenze. Per [scoprire in che modo Query Service può apportare valore alle tue esigenze aziendali specifiche](../use-cases/overview.md), esplora la raccolta completa di documenti relativi ai casi d&#39;uso. Scopri come utilizzare Query Service per fornire informazioni approfondite e soluzioni per migliorare l’efficienza operativa e il successo aziendale.
 
 <!-- This video is from 2019. The logic is sounds but the workflow is too outdated. -->
 
