@@ -3,10 +3,10 @@ title: Attivare i tipi di pubblico per le destinazioni di esportazione dei profi
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico disponibili in Adobe Experience Platform inviandoli a destinazioni basate su profili in batch.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 14c534abe51a43d45f8709657a6049a463f35045
+source-git-commit: b020f8e204e28ceb97b314d9368075064b3ebb94
 workflow-type: tm+mt
-source-wordcount: '4024'
-ht-degree: 11%
+source-wordcount: '4069'
+ht-degree: 10%
 
 ---
 
@@ -32,8 +32,13 @@ Per attivare i tipi di pubblico nelle destinazioni, devi avere [connesso corrett
 ## Formati di file supportati per l’esportazione {#supported-file-formats-export}
 
 >[!CONTEXTUALHELP]
->id="legacy_dataflow_needs_schedule_end_date"
+>id="dataset_dataflow_needs_schedule_end_date_header"
 >title="Aggiorna la data di fine per questo flusso di dati"
+>abstract="A causa dei recenti aggiornamenti di questa destinazione, il flusso di dati ora richiede una data di fine. Adobe ha impostato una data di fine predefinita al 1° marzo 2025. Effettua l’aggiornamento alla data di fine desiderata altrimenti le esportazioni di dati si interrompono nella data predefinita."
+
+>[!CONTEXTUALHELP]
+>id="dataset_dataflow_needs_schedule_end_date_body"
+>title="Aggiorna la data di fine per questo corpo del flusso di dati"
 >abstract="A causa dei recenti aggiornamenti di questa destinazione, il flusso di dati ora richiede una data di fine. Adobe ha impostato una data di fine predefinita al 1° marzo 2025. Effettua l’aggiornamento alla data di fine desiderata altrimenti le esportazioni di dati si interrompono nella data predefinita."
 
 Durante l’esportazione dei tipi di pubblico sono supportati i seguenti formati di file:
@@ -522,7 +527,6 @@ Le esportazioni di file variano nei modi seguenti, a seconda che sia selezionato
 id="platform_destinations_activate_exclude_enrichment_attributes"
 title="Escludi attributi di arricchimento"
 abstract="Abilita questa opzione per esportare i profili dai tipi di pubblico personalizzati caricati selezionati alla tua destinazione, escludendo tutti i loro attributi."
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=it#select-enrichment-attributes" text="Ulteriori informazioni sono disponibili nella documentazione"
 
 >[!IMPORTANT]
 >
