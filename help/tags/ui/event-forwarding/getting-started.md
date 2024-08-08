@@ -3,14 +3,18 @@ title: Guida introduttiva all’inoltro degli eventi
 description: Segui questa esercitazione passo per passo per iniziare a utilizzare l’inoltro degli eventi in Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 05170986263b6eed2d19a65e34f70dc28eb8ba2f
+source-git-commit: 0a95d09eb1ce59e45d52372c4b08725c009001c3
 workflow-type: tm+mt
-source-wordcount: '864'
-ht-degree: 76%
+source-wordcount: '887'
+ht-degree: 74%
 
 ---
 
 # Guida introduttiva all&#39;inoltro degli eventi
+
+>[!NOTE]
+>
+>L’inoltro di eventi è una funzione a pagamento inclusa nelle offerte Adobe Real-time Customer Data Platform Connections, Prime o Ultimate.
 
 >[!NOTE]
 >
