@@ -31,7 +31,7 @@ Aggiornamenti alle funzioni e alla documentazione esistenti in Experience Platfo
 
 La Federated Audience Composition consente alle aziende di comporre dati per una migliore applicazione in vari casi d’uso. Con questo nuovo approccio, in qualità di utente di Adobe Real-time Customer Data Platform e/o Adobe Journey Optimizer, puoi federare i set di dati direttamente dal data warehouse esistente per creare e arricchire i tipi di pubblico e gli attributi di Adobe Experience Platform in un unico sistema.
 
-Per ulteriori informazioni, consulta la [documentazione su Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+Per ulteriori informazioni, consulta la [documentazione su Federated Audience Composition](https://experienceleague.adobe.com/it/docs/federated-audience-composition/using/home).
 
 ## Gestione avanzata del ciclo di vita dei dati {#advanced-data-lifecycle-management}
 
