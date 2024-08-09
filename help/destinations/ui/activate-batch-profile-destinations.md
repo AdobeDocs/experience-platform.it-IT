@@ -3,9 +3,9 @@ title: Attivare i tipi di pubblico per le destinazioni di esportazione dei profi
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico disponibili in Adobe Experience Platform inviandoli a destinazioni basate su profili in batch.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: b020f8e204e28ceb97b314d9368075064b3ebb94
+source-git-commit: 7a909c362b9e367fa4b86a8525fe98f203e3c2d5
 workflow-type: tm+mt
-source-wordcount: '4069'
+source-wordcount: '4112'
 ht-degree: 10%
 
 ---
@@ -40,6 +40,16 @@ Per attivare i tipi di pubblico nelle destinazioni, devi avere [connesso corrett
 >id="dataset_dataflow_needs_schedule_end_date_body"
 >title="Aggiorna la data di fine per questo corpo del flusso di dati"
 >abstract="A causa dei recenti aggiornamenti di questa destinazione, il flusso di dati ora richiede una data di fine. Adobe ha impostato una data di fine predefinita al 1° marzo 2025. Effettua l’aggiornamento alla data di fine desiderata altrimenti le esportazioni di dati si interrompono nella data predefinita."
+
+>[!CONTEXTUALHELP]
+>id="destinations_folder_name_template"
+>title="Modifica percorso della cartella"
+>abstract="Utilizza diverse macro fornite per personalizzare il percorso della cartella in cui vengono esportati i set di dati."
+
+>[!CONTEXTUALHELP]
+>id="destinations_folder_name_template_preview"
+>title="Anteprima percorso cartella set di dati"
+>abstract="Ottieni un’anteprima della struttura di cartelle creata nel percorso di archiviazione in base alle macro aggiunte in questa finestra."
 
 Durante l’esportazione dei tipi di pubblico sono supportati i seguenti formati di file:
 
