@@ -3,9 +3,9 @@ keywords: Experience Platform;identità;servizio identità;risoluzione dei probl
 title: Guardrail per il servizio Identity
 description: Questo documento fornisce informazioni sui limiti di utilizzo e di tariffa per i dati del servizio Identity, utili per ottimizzare l’utilizzo del grafico delle identità.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: 6d36a6ff1243b15dcafc2f37d8bad982730f7a39
 workflow-type: tm+mt
-source-wordcount: '1549'
+source-wordcount: '1591'
 ht-degree: 1%
 
 ---
@@ -57,6 +57,10 @@ La tabella seguente illustra le regole esistenti da seguire per garantire la cor
 ### Acquisizione dello spazio dei nomi dell’identità
 
 A partire dal 31 marzo 2023, il servizio Identity bloccherà l’acquisizione di Adobe Analytics ID (AAID) per i nuovi clienti. Questa identità viene generalmente acquisita tramite l&#39;[origine Adobe Analytics](../sources/connectors/adobe-applications/analytics.md) e l&#39;[origine Adobe Audience Manager](../sources//connectors/adobe-applications/audience-manager.md) ed è ridondante perché l&#39;ECID rappresenta lo stesso browser Web. Se desideri modificare questa configurazione predefinita, contatta il team del tuo account di Adobe.
+
+## Guardrail prestazioni {#performance-guardrails}
+
+Il servizio Identity monitora continuamente i dati in arrivo per garantire prestazioni e affidabilità elevate su larga scala. Tuttavia, un afflusso di dati di eventi di esperienza in un breve periodo può portare a un deterioramento delle prestazioni e alla latenza. L’Adobe non è responsabile di tale degrado delle prestazioni.
 
 ## Informazioni sulla logica di eliminazione quando viene aggiornato un grafico delle identità alla capacità {#deletion-logic}
 
