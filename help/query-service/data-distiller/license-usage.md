@@ -2,9 +2,9 @@
 title: Monitorare l’utilizzo delle licenze per query batch
 description: L’interfaccia utente di Adobe Experience Platform fornisce una dashboard tramite la quale puoi visualizzare informazioni importanti sull’utilizzo delle licenze di Data Distiller da parte della tua organizzazione.
 exl-id: a1e365a0-cc65-4fd6-b36f-8d79b7d9ec7c
-source-git-commit: 010780b7d7f998c38fdd5344457409ed97f982fa
+source-git-commit: 971c462a18a2a3ff3c98936c99b54a0d03b7c488
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '258'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ La metrica [!UICONTROL Calcola ore] è applicabile solo ai clienti con la licenz
 
 >[!NOTE]
 >
->**I dati di [!UICONTROL Calcola ore] sono disponibili con limitazioni**: i dati visualizzati per l&#39;utilizzo delle ore di calcolo iniziano il 15 settembre 2023.
+>I dati visualizzati per l&#39;utilizzo di [!UICONTROL Calcola ore] iniziano dal 15 settembre 2023 o dalla data del rinnovo annuale del contratto, a seconda di quale evento si verifica più tardi.
 
 ![Dashboard di utilizzo della licenza con la metrica delle ore di calcolo evidenziata.](../images/data-distiller/compute-hours.png)
 
