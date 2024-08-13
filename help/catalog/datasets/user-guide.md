@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente dei set di dati
 description: Scopri come eseguire azioni comuni quando si lavora con i set di dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 10140efe33b42f9099b28564c9824839d83521a3
 workflow-type: tm+mt
-source-wordcount: '3080'
+source-wordcount: '3111'
 ht-degree: 3%
 
 ---
@@ -92,6 +92,10 @@ Puoi visualizzare in anteprima i dati di esempio del set di dati sia dalle opzio
 ![Scheda Sfoglia dell&#39;area di lavoro Set di dati con i puntini di sospensione e l&#39;opzione Anteprima set di dati evidenziati per il set di dati selezionato.](../images/datasets/user-guide/preview-dataset-option.png)
 
 Viene visualizzata la finestra di anteprima, in cui a destra è visualizzata la vista gerarchica dello schema per il set di dati.
+
+>[!NOTE]
+>
+>Il diagramma schema sul lato sinistro della visualizzazione mostra solo i campi che contengono dati. I campi senza dati vengono nascosti automaticamente per semplificare l’interfaccia utente e concentrarsi su informazioni rilevanti.
 
 ![Viene visualizzata la finestra di dialogo di anteprima del set di dati con informazioni sulla struttura e valori di esempio per il set di dati.](../images/datasets/user-guide/preview-dataset.png)
 
