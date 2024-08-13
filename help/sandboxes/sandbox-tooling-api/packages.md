@@ -2,10 +2,10 @@
 title: Endpoint API per pacchetti di strumenti sandbox
 description: L’endpoint /packages nell’API degli strumenti sandbox consente di gestire in modo programmatico i pacchetti in Adobe Experience Platform.
 exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
-source-git-commit: 8ff9c50b4999a49413f8c45274815225ba58361c
+source-git-commit: f81e15ccfd89e2d0cb450f596743341264187f52
 workflow-type: tm+mt
-source-wordcount: '1531'
-ht-degree: 7%
+source-wordcount: '1621'
+ht-degree: 9%
 
 ---
 
@@ -138,8 +138,23 @@ curl -X PUT \
 | --- | --- | --- | --- |
 | `id` | ID del pacchetto da aggiornare. | Stringa | Sì |
 | `action` | Per aggiungere artifact al pacchetto, il valore dell&#39;azione deve essere **ADD**. Questa azione è supportata solo per i tipi di pacchetto **PARTIAL**. | Stringa | Sì |
-| `artifacts` | Elenco di artefatti da aggiungere al pacchetto. Non ci sarebbero modifiche al pacchetto se l&#39;elenco è **null** o **empty**. Gli artefatti vengono deduplicati prima di essere aggiunti al pacchetto. | Array | No |
+| `artifacts` | Elenco di artefatti da aggiungere al pacchetto. Non ci sarebbero modifiche al pacchetto se l&#39;elenco è **null** o **empty**. Gli artefatti vengono deduplicati prima di essere aggiunti al pacchetto. Per un elenco completo degli artefatti supportati, consulta la tabella seguente. | Array | No |
 | `expiry` | Il timestamp che definisce la data di scadenza del pacchetto. Il valore predefinito è 90 giorni dalla chiamata dell’API di PUT se la scadenza non è specificata nel payload. Il campo di scadenza della risposta sarà l’ora UTC dell’epoca. | Stringa (formato timestamp UTC) | No |
+
+I seguenti tipi di artefatto sono attualmente supportati.
+
+| Artefatto | Piattaforma | Oggetto | Flusso parziale | Sandbox completa |
+| --- | --- | --- | --- | --- |
+| `JOURNEY` | Adobe Journey Optimizer | Percorsi | Sì | No |
+| `ID_NAMESPACE` | Customer Data Platform | Identità | Sì | Sì |
+| `REGISTRY_DATATYPE` | Customer Data Platform | Tipo di dati | Sì | Sì |
+| `REGISTRY_CLASS` | Customer Data Platform | Classe | Sì | Sì |
+| `REGISTRY_MIXIN` | Customer Data Platform | Gruppo di campi | Sì | Sì |
+| `REGISTRY_SCHEMA` | Customer Data Platform | Schemi | Sì | Sì |
+| `CATALOG_DATASET` | Customer Data Platform | Set di dati | Sì | Sì |
+| `DULE_CONSENT_POLICY` | Customer Data Platform | Criteri di consenso e governance | Sì | Sì |
+| `PROFILE_SEGMENT` | Customer Data Platform | Tipi di pubblico | Sì | Sì |
+| `FLOW` | Customer Data Platform | Flusso di dati origini | Sì | Sì |
 
 **Risposta**
 
