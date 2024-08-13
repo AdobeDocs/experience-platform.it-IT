@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida alle credenziali di Query Service
 description: Adobe Experience Platform Query Service fornisce un’interfaccia utente che può essere utilizzata per scrivere ed eseguire query, visualizzare le query eseguite in precedenza e accedere a quelle salvate dagli utenti della tua organizzazione.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 569f8f96a1039e52ac374e2eb07fd96ad8138edd
 workflow-type: tm+mt
-source-wordcount: '1807'
+source-wordcount: '1828'
 ht-degree: 2%
 
 ---
@@ -76,7 +76,11 @@ Per istruzioni complete sull&#39;accesso alle visualizzazioni dati di Customer J
 
 >[!NOTE]
 >
->Le credenziali senza scadenza hanno le seguenti limitazioni:<br><ul><li>Gli utenti devono effettuare l&#39;accesso con il proprio nome utente e password composti da `{technicalAccountId}:{credential}`. Ulteriori informazioni sono disponibili nella sezione [Genera credenziali](#generate-credentials).</li><li>Al momento della creazione delle credenziali in scadenza, viene creato un nuovo ruolo con un set di autorizzazioni di base che consente agli utenti di visualizzare schemi e set di dati. A questo ruolo viene inoltre assegnata l’autorizzazione &quot;manage queries&quot; (gestisci query), utilizzabile con Query Service.</li><li>I client di terze parti possono ottenere prestazioni diverse da quelle previste quando si elencano oggetti di query. Ad esempio, alcuni client di terze parti come [!DNL DB Visualizer] non visualizzeranno il nome della visualizzazione nel pannello sinistro. Tuttavia, il nome della visualizzazione è accessibile se chiamato all’interno di una query SELECT. Analogamente, [!DNL PowerUI] potrebbe non elencare le viste temporanee create tramite l&#39;istruzione SQL da selezionare per la creazione del dashboard.</li></ul>
+>Le credenziali senza scadenza presentano le seguenti limitazioni:
+>
+>- Gli utenti devono effettuare l&#39;accesso con il proprio nome utente e password nel formato `{technicalAccountId}:{credential}`. Ulteriori informazioni sono disponibili nella sezione [Genera credenziali](#generate-credentials).
+>- Per impostazione predefinita, alle credenziali senza scadenza vengono concesse le autorizzazioni per eseguire solo `SELECT` query. Per eseguire le query `CTAS` o `ITAS`, aggiungere manualmente le autorizzazioni &quot;Gestisci set di dati&quot; e &quot;Gestisci schemi&quot; al ruolo associato alle credenziali senza scadenza. L&#39;autorizzazione &quot;Gestisci schemi&quot; si trova nella sezione &quot;Modellazione dati&quot; e l&#39;autorizzazione &quot;Gestisci set di dati&quot; nella sezione &quot;Gestione dati&quot; di [Adobe Developer Console](<https://developer.adobe.com/console/>).
+>- I client di terze parti possono ottenere prestazioni diverse da quelle previste quando si elencano oggetti di query. Ad esempio, alcuni client di terze parti come [!DNL DB Visualizer] non visualizzeranno il nome della visualizzazione nel pannello sinistro. Tuttavia, il nome della visualizzazione è accessibile se chiamato all&#39;interno di una query `SELECT`. Analogamente, [!DNL PowerUI] potrebbe non elencare le viste temporanee create tramite SQL per la selezione nella creazione del dashboard.
 
 ### Prerequisiti
 
