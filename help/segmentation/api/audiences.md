@@ -3,10 +3,10 @@ title: Endpoint API di Audiences
 description: Utilizza l’endpoint "audiences" nell’API del servizio di segmentazione di Adobe Experience Platform per creare, gestire e aggiornare in modo programmatico i tipi di pubblico per la tua organizzazione.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 914174de797d7d5f6c47769d75380c0ce5685ee2
+source-git-commit: 5d5c1f903e6a54ea983b718c4c371ada2a937297
 workflow-type: tm+mt
-source-wordcount: '1869'
-ht-degree: 2%
+source-wordcount: '1406'
+ht-degree: 3%
 
 ---
 
@@ -207,10 +207,6 @@ POST /audiences
 
 **Richiesta**
 
->[!BEGINTABS]
-
->[!TAB Pubblico generato dalla piattaforma]
-
 +++ Richiesta di esempio per la creazione di un pubblico generato da Platform
 
 ```shell
@@ -222,7 +218,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{
         "name": "People who ordered in the last 30 days",
-        "profileInstanceId": "ups",
+        "profileInstanceId": "AEPSegments",
         "description": "Last 30 days",
         "type": "SegmentDefinition",
         "expression": {
@@ -250,60 +246,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 
 +++
 
->[!TAB Pubblico generato esternamente]
-
-+++ Richiesta di esempio per la creazione di un pubblico generato esternamente
-
-```shell
-curl -X POST https://platform.adobe.io/data/core/ups/audiences
- -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}'
- -d '{
-        "audienceId":"test-external-audience-id",
-        "name":"externalAudience",
-        "namespace":"aam",
-        "description":"Last 30 days",
-        "type":"ExternalSegment",
-        "originName":"CUSTOM_UPLOAD",
-        "lifecycleState":"published",
-        "datasetId":"6254cf3c97f8e31b639fb14d",
-        "labels":[
-            "core/C1"
-        ],
-        "linkedAudienceRef":{
-            "flowId": "4685ea90-d2b6-11ec-9d64-0242ac120002"
-        }
-    }'
-```
-
-| Proprietà | Descrizione |
-| -------- | ----------- | 
-| `audienceId` | ID fornito dall’utente per il pubblico. |
-| `name` | Il nome del pubblico. |
-| `namespace` | Lo spazio dei nomi per il pubblico. |
-| `description` | Una descrizione del pubblico. |
-| `type` | Campo che indica se il pubblico è generato da Platform o da un pubblico generato esternamente. I valori possibili includono `SegmentDefinition` e `ExternalSegment`. Un `SegmentDefinition` fa riferimento a un pubblico generato in Platform, mentre un `ExternalSegment` fa riferimento a un pubblico non generato in Platform. |
-| `originName` | Nome dell’origine del pubblico. Per il pubblico generato esternamente, il valore predefinito è `CUSTOM_UPLOAD`. Altri valori supportati sono `REAL_TIME_CUSTOMER_PROFILE`, `CUSTOM_UPLOAD`, `AUDIENCE_ORCHESTRATION` e `AUDIENCE_MATCH`. |
-| `lifecycleState` | Campo facoltativo che determina lo stato iniziale del pubblico che stai tentando di creare. I valori supportati sono `draft`, `published` e `inactive`. |
-| `datasetId` | ID del set di dati in cui è possibile trovare i dati che costituiscono il pubblico. |
-| `labels` | Etichette di controllo dell’accesso basate su attributi e utilizzo dati a livello di oggetto rilevanti per il pubblico. |
-| `audienceMeta` | Metadati che appartengono al pubblico generato esternamente. |
-| `linkedAudienceRef` | Oggetto che contiene identificatori per altri sistemi relativi al pubblico. Ciò può includere quanto segue: <ul><li>`flowId`: questo ID viene utilizzato per connettere il pubblico al flusso di dati utilizzato per inserire i dati sul pubblico. Ulteriori informazioni sugli ID richiesti sono disponibili nella [guida alla creazione di un flusso di dati](../../sources/tutorials/api/collect/cloud-storage.md).</li><li>`aoWorkflowId`: questo ID viene utilizzato per connettere il pubblico a una composizione correlata di Audience Orchestration.&lt;/li/> <li>`payloadFieldGroupRef`: questo ID viene utilizzato per fare riferimento allo schema Gruppo di campi XDM che descrive la struttura del pubblico. Ulteriori informazioni sul valore di questo campo sono disponibili nella [guida dell&#39;endpoint del gruppo di campi XDM](../../xdm/api/field-groups.md).</li><li>`audienceFolderId`: questo ID viene utilizzato per fare riferimento all&#39;ID cartella in Adobe Audience Manager per il pubblico. Ulteriori informazioni su questa API sono disponibili nella [guida dell&#39;API Adobe Audience Manager](https://bank.demdex.com/portal/swagger/index.html#/Segment%20Folder%20API).</ul> |
-
-+++
-
->[!ENDTABS]
-
 **Risposta**
 
 In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informazioni sul pubblico appena creato.
-
->[!BEGINTABS]
-
->[!TAB Pubblico generato dalla piattaforma]
 
 +++Una risposta di esempio durante la creazione di un pubblico generato da Platform.
 
@@ -373,46 +318,6 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 
 +++
 
->[!TAB Pubblico generato esternamente]
-
-+++Una risposta di esempio durante la creazione di un pubblico generato esternamente.
-
-```json
-{
-   "id": "322f9f62-cd27-11ec-9d64-0242ac120002",
-   "audienceId": "test-external-audience-id",
-   "name": "externalAudience",
-   "namespace": "aam",
-   "imsOrgId": "{ORG_ID}",
-   "sandbox":{
-      "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-      "sandboxName": "prod",
-      "type": "production",
-      "default": true
-   },
-   "isSystem": false,
-   "description": "Last 30 days",
-   "type": "ExternalSegment",
-   "originName": "CUSTOM_UPLOAD",
-   "lifecycleState": "published",
-   "createdBy": "{CREATED_BY_ID}",
-   "datasetId": "6254cf3c97f8e31b639fb14d",
-   "labels": [
-      "core/C1"
-   ],
-   "linkedAudienceRef": {
-      "flowId": "4685ea90-d2b6-11ec-9d64-0242ac120002"
-   },
-   "_etag": "\"f4102699-0000-0200-0000-625cd61a0000\"",
-   "creationTime": 1650251290000,
-   "updateEpoch": 1650251290,
-   "updateTime": 1650251290000,
-   "createEpoch": 1650251290
-}
-```
-
-+++
-
 ## Cercare un pubblico specificato {#get}
 
 Per cercare informazioni dettagliate su un pubblico specifico, effettua una richiesta di GET all&#39;endpoint `/audiences` e specifica l&#39;ID del pubblico da recuperare nel percorso della richiesta.
@@ -443,11 +348,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informazioni sul pubblico specificato. La risposta varia se il pubblico viene generato con Adobe Experience Platform o fonti esterne.
-
->[!BEGINTABS]
-
->[!TAB Pubblico generato dalla piattaforma]
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informazioni sul pubblico specificato.
 
 +++Una risposta di esempio durante il recupero di un pubblico generato da Platform.
 
@@ -516,161 +417,6 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 
 +++
 
->[!TAB Pubblico generato esternamente]
-
-+++Una risposta di esempio durante il recupero di un pubblico generato esternamente.
-
-```json
-{
-    "id": "60ccea95-1435-4180-97a5-58af4aa285ab",
-    "audienceId": "test-external-audience-id",
-    "name": "externalAudience",
-    "namespace": "aam",
-    "imsOrgId": "{ORG_ID}",
-    "sandbox": {
-        "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-        "sandboxName": "prod",
-        "type": "production",
-        "default": true
-    },
-    "isSystem": false,
-    "description": "Last 30 days",
-    "type": "ExternalSegment",
-    "lifecycleState": "active",
-    "createdBy": "{CREATED_BY_ID}",
-    "datasetId": "6254cf3c97f8e31b639fb14d",
-    "labels": [
-        "core/C1"
-    ],
-    "_etag": "\"f4102699-0000-0200-0000-625cd61a0000\"",
-    "creationTime": 1650251290000,
-    "updateEpoch": 1650251290,
-    "updateTime": 1650251290000,
-    "createEpoch": 1650251290
-}
-```
-
-+++
-
->[!ENDTABS]
-
-## Aggiornare un campo in un pubblico {#update-field}
-
-Per aggiornare i campi di un pubblico specifico, devi eseguire una richiesta PATCH all&#39;endpoint `/audiences` e fornire l&#39;ID del pubblico da aggiornare nel percorso della richiesta.
-
-**Formato API**
-
-```http
-PATCH /audiences/{AUDIENCE_ID}
-```
-
-| Parametro | Descrizione |
-| --------- | ----------- |
-| `{AUDIENCE_ID}` | ID del pubblico che desideri aggiornare. Tieni presente che si tratta del campo `id` e che **non** è il campo `audienceId`. |
-
-**Richiesta**
-
-+++Richiesta di esempio per aggiornare un campo in un pubblico.
-
-```shell
-curl -X PATCH https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
- -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}' \
- -d '
-     [
-        {
-            "op": "add",
-            "path": "/expression",
-            "value": {
-                "type": "PQL",
-                "format": "pql/text",
-                "value": "workAddress.country = \"CA\""
-            }
-        }
-      ]'
-```
-
-| Proprietà | Descrizione |
-| -------- | ----------- |
-| `op` | Per aggiornare i tipi di pubblico, questo valore è sempre `add`. |
-| `path` | Percorso del campo da aggiornare. |
-| `value` | Il valore a cui desideri aggiornare il campo. |
-
-+++
-
-**Risposta**
-
-In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informazioni sul pubblico appena aggiornato.
-
-+++Una risposta di esempio durante l’aggiornamento di un campo in un pubblico.
-
-```json
-{
-    "id": "60ccea95-1435-4180-97a5-58af4aa285ab",
-    "audienceId": "60ccea95-1435-4180-97a5-58af4aa285ab",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "profileInstanceId": "ups",
-    "imsOrgId": "{ORG_ID}",
-    "sandbox": {
-        "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-        "sandboxName": "prod",
-        "type": "production",
-        "default": true
-    },
-    "name": "People who ordered in the last 30 days",
-    "description": "Last 30 days",
-    "expression": {
-        "type": "PQL",
-        "format": "pql/text",
-        "value": "workAddress.country = \"CA\""
-    },
-    "mergePolicyId": "ef006bbe-750e-4e81-85f0-0c6902192dcc",
-    "evaluationInfo": {
-        "batch": {
-          "enabled": false
-        },
-        "continuous": {
-          "enabled": true
-        },
-        "synchronous": {
-          "enabled": false
-        }
-    },
-    "dataGovernancePolicy": {
-      "excludeOptOut": true
-    },
-    "creationTime": 1650374572000,
-    "updateEpoch": 1650374573,
-    "updateTime": 1650374573000,
-    "createEpoch": 1650374572,
-    "_etag": "\"33120d7c-0000-0200-0000-625eb7ad0000\"",
-    "dependents": [],
-    "definedOn": [
-        {
-          "meta:resourceType": "unions",
-          "meta:containerId": "tenant",
-          "$ref": "https://ns.adobe.com/xdm/context/profile__union"
-        }
-    ],
-    "dependencies": [],
-    "type": "SegmentDefinition",
-    "overridePerformanceWarnings": false,
-    "createdBy": "{CREATED_BY_ID}",
-    "lifecycleState": "active",
-    "labels": [
-      "core/C1"
-    ],
-    "namespace": "AEPSegments"
-}
-```
-
-+++
-
 ## Aggiornare un pubblico {#put}
 
 È possibile aggiornare (sovrascrivere) un pubblico specifico effettuando una richiesta PUT all&#39;endpoint `/audiences` e fornendo l&#39;ID del pubblico che si desidera aggiornare nel percorso della richiesta.
@@ -697,11 +443,11 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
-    "audienceId": "test-external-audience-id",
-    "name": "New external audience",
-    "namespace": "aam",
+    "audienceId": "test-platform-audience-id",
+    "name": "New Platform audience",
+    "namespace": "AEPSegments",
     "description": "Last 30 days",
-    "type": "ExternalSegment",
+    "type": "SegmentDefinition",
     "lifecycleState": "published",
     "datasetId": "6254cf3c97f8e31b639fb14d",
     "labels": [
@@ -732,9 +478,9 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 ```json
 {
     "id": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
-    "audienceId": "test-external-audience-id",
-    "name": "New external audience",
-    "namespace": "aam",
+    "audienceId": "test-platform-audience-id",
+    "name": "New Platform audience",
+    "namespace": "AEPSegments",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
@@ -743,7 +489,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
         "default": true
     },
     "description": "Last 30 days",
-    "type": "ExternalSegment",
+    "type": "SegmentDefinition",
     "lifecycleState": "published",
     "createdBy": "{CREATED_BY_ID}",
     "datasetId": "6254cf3c97f8e31b639fb14d",
