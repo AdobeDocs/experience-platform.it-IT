@@ -4,9 +4,9 @@ title: Dashboard utilizzo licenze
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale è possibile visualizzare informazioni importanti sull’utilizzo delle licenze della tua organizzazione.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 3e465803b6c8fe11cef1633c0f0624465086c2a3
+source-git-commit: 090b870dcfb16e59831f1e03eb46b22da4f24f0f
 workflow-type: tm+mt
-source-wordcount: '2328'
+source-wordcount: '2429'
 ht-degree: 6%
 
 ---
@@ -91,6 +91,16 @@ Per visualizzare un riepilogo dell&#39;utilizzo di un prodotto, selezionare un p
 Viene visualizzata la scheda Riepilogo. Puoi utilizzare le previsioni granulari disponibili nelle schede [!UICONTROL Riepilogo] e [!UICONTROL Dettagli] per garantire un processo decisionale informato e un utilizzo efficiente delle licenze.
 
 ![Visualizzazione di riepilogo di un prodotto Platform con la colonna Utilizzo previsto evidenziata.](../images/license-usage/summary-predicted-usage.png)
+
+La percentuale di utilizzo previsto è determinata come segue:
+
+- Se i limiti inferiore e superiore sono significativamente diversi, vengono visualizzati come intervallo (ad esempio, 32% - 35%).
+- Se i limiti inferiore e superiore sono quasi identici e non zero, vengono visualizzati come valore approssimativo (ad esempio, ~34%).
+- Se i limiti inferiore e superiore sono quasi identici e zero, vengono visualizzati esattamente come 0%.
+
+>[!NOTE]
+>
+&quot;Quasi identici&quot; in questo contesto significa che i valori sono statisticamente significativi per due posizioni decimali (ad esempio, un limite inferiore di 0,342 e un limite superiore di 0,344 sono entrambi arrotondati al 34%).
 
 La funzione di utilizzo previsto supporta per le metriche seguenti:
 
