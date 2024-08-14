@@ -5,10 +5,10 @@ breadcrumb-title: Guida al servizio di segmentazione
 user-guide-description: Crea tipi di pubblico dai dati del profilo cliente in tempo reale utilizzando definizioni di segmenti generate da Adobe Experience Platform o da origini esterne.
 feature: Segments
 role: User
-source-git-commit: 515a7cc3ba12afe14aab3e882b7fd55d5cc09069
+source-git-commit: 0bbee2100ed6fdc0f40457965e195d07de6eb2a1
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 41%
+source-wordcount: '194'
+ht-degree: 44%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 41%
    - [Audience Portal](ui/audience-portal.md)
    - [Composizione del pubblico](ui/audience-composition.md)
    - [Segment Builder](ui/segment-builder.md)
-   - [Composizione del pubblico federato (disponibilità limitata)](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)
+   - [Composizione di pubblico federato (disponibilità limitata)](https://experienceleague.adobe.com/it/docs/federated-audience-composition/using/home)
    - [Pubblico dell’account](ui/account-audiences.md)
    - [Tipi di pubblico per similarità](ui/lookalike-audiences.md)
    - [Pubblico potenziale](ui/prospect-audience.md)
@@ -73,6 +73,7 @@ ht-degree: 41%
    - [Importazione e utilizzo di tipi di pubblico esterni](tutorials/using-external-audiences.md)
    - [Creare un set di dati per esportare i dati](tutorials/create-dataset-export-segment.md)
    - [Applicazione della conformità all’utilizzo dei dati per i segmenti](tutorials/governance.md)
+- [Aggiornamento dei criteri di idoneità](./eligibility-criteria-update.md)
 - [Domande frequenti](./faq.md)
 - [Riferimento API](https://www.adobe.io/experience-platform-apis/references/segmentation/)
 - [Note sulla versione della piattaforma](https://experienceleague.adobe.com/it/docs/experience-platform/release-notes/latest)
