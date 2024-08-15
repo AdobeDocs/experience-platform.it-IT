@@ -3,10 +3,10 @@ keywords: personalizzazione target; destinazione; destinazione experience platfo
 title: Connessione Adobe Target
 description: Adobe Target è un’applicazione che fornisce funzionalità di personalizzazione e sperimentazione basate sull’intelligenza artificiale in tempo reale per tutte le interazioni dei clienti in entrata tramite siti web, app mobili e altro ancora.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 14dccb993b38ca352c6de3ed851bafe7c44ca631
 workflow-type: tm+mt
-source-wordcount: '1555'
-ht-degree: 11%
+source-wordcount: '1755'
+ht-degree: 9%
 
 ---
 
@@ -35,6 +35,15 @@ Per una breve panoramica su come configurare la connessione Adobe Target in Expe
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
 
+## Casi d’uso supportati in base al tipo di implementazione {#supported-use-cases}
+
+La tabella seguente mostra i casi d&#39;uso supportati per la destinazione Adobe Target, in base al tipo di implementazione, con o senza [Web SDK](/help/web-sdk/home.md) e con o senza [segmentazione Edge](/help/segmentation/home.md#edge) abilitata.
+
+| Implementazione di Adobe Target *senza* Web SDK | Implementazione di Adobe Target *con* Web SDK | Implementazione di Adobe Target *con* Web SDK *e* segmentazione Edge disattivata |
+|---|---|---|
+| <ul><li>Non è necessario uno stream di dati. Adobe Target può essere distribuito tramite i metodi di implementazione [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html), [lato server](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#server-side-implementation) o [ibrido](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#hybrid-implementation).</li><li>[Segmentazione Edge](../../../segmentation/ui/edge-segmentation.md) non supportata.</li><li>[La personalizzazione della stessa pagina e della pagina successiva](../../ui/activate-edge-personalization-destinations.md) non è supportata.</li><li>Puoi condividere i tipi di pubblico e gli attributi del profilo con la connessione Adobe Target per la *sandbox di produzione predefinita* e per le sandbox non predefinite.</li><li>Per configurare la personalizzazione della sessione successiva senza utilizzare un ID dello stream di dati, utilizza [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html).</li></ul> | <ul><li>È necessario uno stream di dati con Adobe Target e Experience Platform configurati come servizi.</li><li>La segmentazione di Edge funziona come previsto.</li><li>[Sono supportate la personalizzazione della stessa pagina e della pagina successiva](../../ui/activate-edge-personalization-destinations.md#use-cases).</li><li>È supportata la condivisione di tipi di pubblico e attributi di profilo da altre sandbox.</li></ul> | <ul><li>È necessario uno stream di dati con Adobe Target e Experience Platform configurati come servizi.</li><li>Durante la [configurazione dello stream di dati](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream), non selezionare la casella di controllo **Segmentazione Edge**.</li><li>[È supportata la personalizzazione della sessione successiva](../../ui/activate-edge-personalization-destinations.md#next-session).</li><li>È supportata la condivisione di tipi di pubblico e attributi di profilo da altre sandbox.</li></ul> |
+
+
 ## Prerequisiti {#prerequisites}
 
 ### ID flusso di dati {#datastream-id}
@@ -62,7 +71,7 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 
 >[!IMPORTANT]
 >
->Quando si attivano *tipi di pubblico edge per casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva*, i tipi di pubblico *devono* utilizzare un [criterio di unione attivo-su-edge](../../../segmentation/ui/segment-builder.md#merge-policies). Il criterio di unione [!DNL active-on-edge] garantisce che i tipi di pubblico vengano valutati costantemente [al limite](../../../segmentation/ui/edge-segmentation.md) e siano disponibili per i casi di utilizzo di personalizzazione in tempo reale e nella pagina successiva.  Leggi di [tutti i casi d&#39;uso disponibili](#parameter), in base al tipo di implementazione.
+>Quando si attivano *tipi di pubblico edge per casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva*, i tipi di pubblico *devono* utilizzare un [criterio di unione attivo-su-edge](../../../segmentation/ui/segment-builder.md#merge-policies). Il criterio di unione [!DNL active-on-edge] garantisce che i tipi di pubblico vengano valutati costantemente [al limite](../../../segmentation/ui/edge-segmentation.md) e siano disponibili per i casi di utilizzo di personalizzazione in tempo reale e nella pagina successiva.  Leggi di [tutti i casi d&#39;uso disponibili](#parameters), in base al tipo di implementazione.
 >Se mappi i tipi di pubblico edge che utilizzano un criterio di unione diverso sulle destinazioni di Adobe Target, tali tipi di pubblico non verranno valutati per i casi d’uso in tempo reale e nella pagina successiva.
 >Segui le istruzioni relative alla [creazione di un criterio di unione](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy) e assicurati di attivare/disattivare il criterio di unione **[!UICONTROL Attivo su Edge]**.
 
@@ -119,7 +128,7 @@ Durante la [configurazione](../../ui/connect-destination.md) di questa destinazi
   >
   >L’ID dello stream di dati è univoco per ogni connessione di destinazione di Adobe Target. Se devi mappare gli stessi tipi di pubblico su più flussi di dati, devi [creare una nuova connessione di destinazione](../../ui/connect-destination.md) per ogni ID dello stream di dati e passare attraverso il [flusso di attivazione del pubblico](#activate).
 
-   * **[!UICONTROL Nessuno]**: selezionare questa opzione se è necessario configurare la personalizzazione Adobe Target ma non è possibile implementare [Experience Platform Web SDK](/help/web-sdk/home.md). Quando si utilizza questa opzione, i tipi di pubblico esportati da Experience Platform a Target supportano solo la personalizzazione della sessione successiva e la segmentazione Edge è disabilitata. Fai riferimento alla tabella seguente per un confronto dei casi d’uso disponibili per tipo di implementazione.
+   * **[!UICONTROL Nessuno]**: selezionare questa opzione se è necessario configurare la personalizzazione Adobe Target ma non è possibile implementare [Experience Platform Web SDK](/help/web-sdk/home.md). Quando si utilizza questa opzione, i tipi di pubblico esportati da Experience Platform a Target supportano solo la personalizzazione della sessione successiva e la segmentazione Edge è disabilitata. Fai riferimento alla tabella nella sezione [casi d&#39;uso supportati](#supported-use-cases) per un confronto dei casi d&#39;uso disponibili per tipo di implementazione.
 
   | Implementazione di Adobe Target *senza* Web SDK | Implementazione di Adobe Target *con* Web SDK | Implementazione di Adobe Target *con* Web SDK *e* segmentazione Edge disattivata |
   |---|---|---|
