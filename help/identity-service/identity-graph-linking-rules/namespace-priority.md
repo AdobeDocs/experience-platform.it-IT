@@ -3,9 +3,9 @@ title: Priorità dello spazio dei nomi
 description: Scopri la priorità dello spazio dei nomi in Identity Service.
 badge: Beta
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 536770d0c3e7e93921fe40887dafa5c76e851f5e
+source-git-commit: c9610f935a074adf82d96c1eb824c159b18f2837
 workflow-type: tm+mt
-source-wordcount: '1567'
+source-wordcount: '1639'
 ht-degree: 2%
 
 ---
@@ -78,13 +78,13 @@ Per strutture di grafo relativamente complesse, la priorità dello spazio dei no
 * Per gli eventi esperienza, una volta configurate le impostazioni di identità per una determinata sandbox, l’identità primaria sarà determinata dalla priorità più elevata dello spazio dei nomi.
    * Questo perché gli eventi di esperienza sono di natura dinamica. Una mappa di identità può contenere tre o più identità e la priorità dello spazio dei nomi assicura che lo spazio dei nomi più importante sia associato all’evento esperienza.
 * Di conseguenza, le seguenti configurazioni **non saranno più utilizzate da Real-Time Customer Profile**:
-   * Casella di controllo &quot;Primary&quot; sul tipo di elemento dati in WebSDK.
+   * La casella di controllo &quot;Primary&quot; sul tipo di elemento dati in WebSDK (che si traduce in `primary=true` in identityMap). **Nota**: lo spazio dei nomi dell&#39;identità e il valore dell&#39;identità continueranno a essere utilizzati nel profilo. Inoltre, devi ancora configurare le impostazioni della casella di controllo &quot;Primario&quot; perché i servizi esterni a Real-Time Customer Profile continueranno a fare riferimento a questa configurazione.
    * Eventuali campi contrassegnati come identità primaria in uno schema XDM Experience Event Class.
    * Impostazioni di identità primaria predefinite nel connettore di origine di Adobe Analytics (ECID o AAID).
 * D&#39;altra parte, la priorità dello spazio dei nomi **non determina l&#39;identità primaria per i record di profilo**.
    * Per i record di profilo, puoi utilizzare l’area di lavoro schemi nell’interfaccia utente di Experience Platform per definire i campi di identità, inclusa l’identità primaria. Per ulteriori informazioni, consulta la guida su [definizione dei campi di identità nell&#39;interfaccia utente](../../xdm/ui/fields/identity.md).
 
->[!NOTE]
+>[!TIP]
 >
 >* La priorità dello spazio dei nomi è **una proprietà di uno spazio dei nomi**. Si tratta di un valore numerico assegnato a uno spazio dei nomi per indicarne l’importanza relativa.
 >
@@ -183,3 +183,7 @@ Per ulteriori informazioni su, leggi i documenti su [Attribution AI](../../intel
 * Data lake: elimina qualsiasi record con l’identità specificata come identità primaria o secondaria.
 
 Per ulteriori informazioni, leggere la [Panoramica del servizio Privacy](../../privacy-service/home.md).
+
+### Personalizzazione Adobe Target e Edge
+
+[Edge personalization](../../server-api/personalization-target.md) continuerà a fare riferimento a come hai configurato la casella di controllo &quot;Primary&quot; sul tipo di elemento dati in WebSDK (che si traduce in `primary=true` in identityMap).
