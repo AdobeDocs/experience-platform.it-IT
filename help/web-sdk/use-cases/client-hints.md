@@ -3,9 +3,9 @@ title: Hint client agente utente
 description: Scopri come funzionano gli hint client dell’agente utente in Web SDK. Gli hint client consentono ai proprietari del sito web di accedere a gran parte delle stesse informazioni disponibili nella stringa dell’agente utente, ma in modo più rispettoso della privacy.
 keywords: user-agent;client hints; string; user-agent string; bassa entropia; alta entropia
 exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 89dfe037e28bae51e335dc67185afa42b2c418e3
 workflow-type: tm+mt
-source-wordcount: '1152'
+source-wordcount: '1245'
 ht-degree: 3%
 
 ---
@@ -98,13 +98,16 @@ Gli hint client a bassa entropia sono abilitati per impostazione predefinita in 
 
 Gli hint client ad alta entropia sono informazioni più dettagliate sul dispositivo client, come la versione della piattaforma, l&#39;architettura, il modello, il bit (piattaforme a 64 bit o a 32 bit) o la versione completa del sistema operativo. Queste informazioni potrebbero essere potenzialmente utilizzate per il rilevamento delle impronte digitali.
 
-| Intestazione HTTP | JavaScript | Incluso nell’agente utente per impostazione predefinita | Incluso negli hint client per impostazione predefinita |
-|---|---|---|---|
-| `Sec-CH-UA-Platform-Version` | `platformVersion` | Sì | No |
-| `Sec-CH-UA-Arc` | `architecture` | Sì | No |
-| `Sec-CH-UA-Model` | `model` | Sì | No |
-| `Sec-CH-UA-Bitness` | `Bitness` | Sì | No |
-| `Sec-CH-UA-Full-Version-List` | `fullVersionList` | Sì | No |
+| Proprietà | Descrizione | Intestazione HTTP | Percorso XDM | Esempio | Incluso nell’agente utente per impostazione predefinita | Incluso negli hint client per impostazione predefinita |
+| --- | --- | --- | --- | --- |---|---|
+| Versione del sistema operativo | Versione del sistema operativo. | `Sec-CH-UA-Platform-Version` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.platformVersion` | `10.15.7` | Sì | No |
+| Architettura | Architettura CPU sottostante. | `Sec-CH-UA-Arch` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture` | `x86` | Sì | No |
+| Modello dispositivo | Nome del dispositivo utilizzato. | `Sec-CH-UA-Model` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.model` | `Intel Mac OS X 10_15_7` | Sì | No |
+| Amarezza | Il numero di bit supportati dall&#39;architettura CPU sottostante. | `Sec-CH-UA-Bitness` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.bitness` | `64` | Sì | No |
+| Fornitore browser | Azienda che ha creato il browser. Anche l&#39;hint a bassa entropia `Sec-CH-UA` raccoglie questo elemento. | `Sec-CH-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.vendor` | `Google` | Sì | No |
+| Nome browser | Browser utilizzato. Anche l&#39;hint a bassa entropia `Sec-CH-UA` raccoglie questo elemento. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | `Chrome` | Sì | No |
+| Versione browser | Versione significativa del browser. Anche l&#39;hint a bassa entropia `Sec-CH-UA` raccoglie questo elemento. La versione esatta del browser non viene raccolta automaticamente. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | `105` | Sì | No |
+
 
 Gli hint client ad alta entropia sono disabilitati per impostazione predefinita in Web SDK. Per abilitarli, devi configurare manualmente Web SDK per richiedere hint client ad alta entropia.
 

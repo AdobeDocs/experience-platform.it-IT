@@ -2,9 +2,9 @@
 title: contesto
 description: Raccogli automaticamente i dati relativi a dispositivo, ambiente o posizione.
 exl-id: 911cabec-2afb-4216-b413-80533f826b0e
-source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
+source-git-commit: 89dfe037e28bae51e335dc67185afa42b2c418e3
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '915'
 ht-degree: 7%
 
 ---
@@ -89,21 +89,25 @@ La parola chiave `implementationDetails` raccoglie informazioni sulla versione S
 | Ambiente | Ambiente in cui sono stati raccolti i dati. Questo è sempre impostato su `browser`. | `xdm.implementationDetails.environment` | `browser` |
 
 
-### Hint client ad alta entropia
+### Hint client ad alta entropia {#high-entropy-client-hints}
+
+>[!TIP]
+>
+>Per informazioni dettagliate su come configurarli, consulta la documentazione su [user agent client hints](../../use-cases/client-hints.md).
 
 La parola chiave `"highEntropyUserAgentHints"` raccoglie informazioni dettagliate sul dispositivo dell&#39;utente. Questi dati sono inclusi nell’intestazione HTTP della richiesta inviata all’Adobe. Una volta arrivati i dati all’interno della rete Edge, l’oggetto XDM compila il rispettivo percorso XDM. Se imposti il rispettivo percorso XDM nella chiamata `sendEvent`, ha la precedenza sul valore dell&#39;intestazione HTTP.
 
 Se si utilizzano le ricerche dei dispositivi durante [la configurazione dello stream di dati](/help/datastreams/configure.md), è possibile cancellare i dati in favore dei valori di ricerca dei dispositivi. Alcuni campi degli hint client e dei campi di ricerca del dispositivo non possono esistere nello stesso hit.
 
-| Dimensione | Descrizione | Intestazione HTTP | Percorso XDM | Esempio di valore |
+| Proprietà | Descrizione | Intestazione HTTP | Percorso XDM | Esempio |
 | --- | --- | --- | --- | --- |
-| Versione del sistema operativo | Versione del sistema operativo. | `Sec-CH-UA-Platform-Version` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.platformVersion` | |
-| Architettura | Architettura CPU sottostante. | `Sec-CH-UA-Arch` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture` | |
-| Modello dispositivo | Nome del dispositivo utilizzato. | `Sec-CH-UA-Model` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.model` | |
-| Amarezza | Il numero di bit supportati dall&#39;architettura CPU sottostante. | `Sec-CH-UA-Bitness` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.bitness` | |
-| Fornitore browser | Azienda che ha creato il browser. Anche l&#39;hint a bassa entropia `Sec-CH-UA` raccoglie questo elemento. | `Sec-CH-UA-Full-Version-List` | | |
-| Nome browser | Browser utilizzato. Anche l&#39;hint a bassa entropia `Sec-CH-UA` raccoglie questo elemento. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | |
-| Versione browser | Versione significativa del browser. Anche l&#39;hint a bassa entropia `Sec-CH-UA` raccoglie questo elemento. La versione esatta del browser non viene raccolta automaticamente. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | |
+| Versione del sistema operativo | Versione del sistema operativo. | `Sec-CH-UA-Platform-Version` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.platformVersion` | `10.15.7` |
+| Architettura | Architettura CPU sottostante. | `Sec-CH-UA-Arch` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture` | `x86` |
+| Modello dispositivo | Nome del dispositivo utilizzato. | `Sec-CH-UA-Model` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.model` | `Intel Mac OS X 10_15_7` |
+| Amarezza | Il numero di bit supportati dall&#39;architettura CPU sottostante. | `Sec-CH-UA-Bitness` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.bitness` | `64` |
+| Fornitore browser | Azienda che ha creato il browser. Anche l&#39;hint a bassa entropia `Sec-CH-UA` raccoglie questo elemento. | `Sec-CH-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.vendor` | `Google` |
+| Nome browser | Browser utilizzato. Anche l&#39;hint a bassa entropia `Sec-CH-UA` raccoglie questo elemento. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | `Chrome` |
+| Versione browser | Versione significativa del browser. Anche l&#39;hint a bassa entropia `Sec-CH-UA` raccoglie questo elemento. La versione esatta del browser non viene raccolta automaticamente. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | `105` |
 
 {style="table-layout:auto"}
 
