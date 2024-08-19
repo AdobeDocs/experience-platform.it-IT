@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente dei set di dati
 description: Scopri come eseguire azioni comuni quando si lavora con i set di dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 10140efe33b42f9099b28564c9824839d83521a3
+source-git-commit: a168f61fabddd06d586f7909fd92c0409fd2f51e
 workflow-type: tm+mt
-source-wordcount: '3111'
+source-wordcount: '3203'
 ht-degree: 3%
 
 ---
@@ -38,6 +38,22 @@ La presente guida utente richiede una buona conoscenza dei seguenti componenti d
 >id="platform_datasets_browse_daysRemaining"
 >title="Scadenza set di dati"
 >abstract="Questa colonna indica il numero di giorni rimanenti al set di dati di destinazione prima della scadenza automatica."
+
+>[!CONTEXTUALHELP]
+>id="platform_datasets_browse_datalakeretention"
+>title="Conservazione dei datalake"
+>abstract="Mostra i criteri di conservazione correnti per ogni set di dati. Questo valore può essere modificato nelle impostazioni di conservazione di ogni set di dati. Puoi impostare il tempo di conservazione solo per il set di dati ExperienceEvent."
+
+>[!CONTEXTUALHELP]
+>id="platform_datasets_browse_profileretention"
+>title="Conservazione profilo"
+>abstract="Mostra i criteri di conservazione correnti per ogni set di dati. Questo valore può essere modificato nelle impostazioni di conservazione di ogni set di dati. Puoi impostare il tempo di conservazione solo per un set di dati ExperienceEvent."
+
+>[!CONTEXTUALHELP]
+>id="platform_datasets_datalakesettings_datasetretention"
+>title="Conservazione dei set di dati"
+>abstract="La conservazione dei data lake imposta le regole per quanto tempo i dati vengono memorizzati e quando devono essere eliminati in diversi servizi. Ciò garantisce la conformità alle normative, la gestione dei costi di storage e il mantenimento della qualità dei dati."
+
 
 Nell&#39;interfaccia utente [!DNL Experience Platform], seleziona **[!UICONTROL Set di dati]** nell&#39;area di navigazione a sinistra per aprire il dashboard **[!UICONTROL Set di dati]**. Il dashboard elenca tutti i set di dati disponibili per l’organizzazione. Vengono visualizzati i dettagli di ciascun set di dati elencato, compreso il nome, lo schema a cui il set di dati aderisce e lo stato dell’esecuzione di acquisizione più recente.
 
