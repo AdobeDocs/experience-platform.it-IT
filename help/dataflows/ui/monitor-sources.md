@@ -2,9 +2,9 @@
 description: Scopri come utilizzare il dashboard di monitoraggio per monitorare i dati acquisiti dalle sorgenti.
 title: Monitorare i flussi di dati per le origini nell’interfaccia utente
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 9d9ae58997ec1c23af2a9124321fdfd9f03b7c4e
 workflow-type: tm+mt
-source-wordcount: '1256'
+source-wordcount: '1320'
 ht-degree: 11%
 
 ---
@@ -62,9 +62,9 @@ Nella parte inferiore del dashboard viene visualizzata una tabella che illustra 
 
 | Metriche | Descrizione |
 | --- | --- |
-| Record ricevuti | Numero totale di record ricevuti dall&#39;origine. |
+| Record ricevuti | Numero totale di record ricevuti da una determinata origine. |
 | Record acquisiti | Numero totale di record acquisiti nel data lake. |
-| Record ignorati | Numero totale di record ignorati. |
+| Record ignorati | Numero totale di record ignorati. Un record ignorato si riferisce a campi che sono stati ignorati perché non erano necessari per l’acquisizione. Ad esempio, se crei un flusso di dati di origini con acquisizione parziale abilitata, puoi configurare una soglia di tasso di errore accettabile. Durante il processo di acquisizione, i record dei campi non obbligatori, come i campi di identità, vengono ignorati se rientrano nella soglia di errore. |
 | Record con errori | Numero totale di record che non è stato possibile acquisire a causa di errori. |
 | Tasso acquisiti | La percentuale di record acquisiti in base al numero totale di record ricevuti. |
 | Totale flussi dati totali non riusciti | Numero totale di flussi di dati non riusciti. |
