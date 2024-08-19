@@ -3,9 +3,9 @@ title: Esportare i set di dati nelle destinazioni di archiviazione cloud
 type: Tutorial
 description: Scopri come esportare i set di dati da Adobe Experience Platform nella posizione di archiviazione cloud preferita.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 938e4875318f07b296fc884487ca1c664be659ef
 workflow-type: tm+mt
-source-wordcount: '1891'
+source-wordcount: '1836'
 ht-degree: 4%
 
 ---
@@ -56,7 +56,7 @@ Scopri dalla tabella seguente quali tipi di set di dati puoi esportare in base a
   <tr>
     <td>Customer Journey Analytics</td>
     <td>Tutto</td>
-    <td> Set di dati di profili ed eventi di esperienza creati nell’interfaccia utente di Experience Platform dopo l’acquisizione o la raccolta di dati tramite Sources, Web SDK, Mobile SDK, Analytics Data Connector ed Audience Manager.  <br> <p> <b>Nota sulla disponibilità:</b> la possibilità di esportare i set di dati nel cloud si trova nella fase di test limitato della versione e potrebbe non essere ancora disponibile nel tuo ambiente. Questa nota verrà rimossa quando la funzionalità sarà generalmente disponibile. Per informazioni sulla procedura di rilascio del Customer Journey Analytics, vedere <a href="https://experienceleague.adobe.com/docs/analytics-platform/using/releases/releases.html"> versioni delle funzionalità del Customer Journey Analytics</a>. </p> </td>
+    <td> Set di dati di profili ed eventi di esperienza creati nell’interfaccia utente di Experience Platform dopo l’acquisizione o la raccolta di dati tramite Sources, Web SDK, Mobile SDK, Analytics Data Connector ed Audience Manager.</td>
   </tr>
   <tr>
     <td>Data Distiller</td>
@@ -215,7 +215,7 @@ Per rimuovere i set di dati da un flusso di dati esistente, effettua le seguenti
 
    >[!NOTE]
    >
-   >Questa funzione è in versione beta ed è disponibile solo per alcuni clienti. Per richiedere l’accesso a questa funzione, contatta il rappresentante del tuo Adobe.
+Questa funzione è in versione beta ed è disponibile solo per alcuni clienti. Per richiedere l’accesso a questa funzione, contatta il rappresentante del tuo Adobe.
 
    ![Finestra di dialogo Rimuovi set di dati che mostra il controllo Rimuovi set di dati nella barra a destra.](../assets/ui/export-datasets/bulk-remove-datasets.png)
 
