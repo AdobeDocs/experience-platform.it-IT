@@ -214,8 +214,7 @@ Per rimuovere i set di dati da un flusso di dati esistente, effettua le seguenti
 3. [!BADGE Beta] Viene visualizzata la pagina **[!UICONTROL Dati attivazione]** per la destinazione. Utilizza le caselle di controllo a sinistra dell&#39;elenco dei set di dati per selezionare i set di dati da rimuovere, quindi seleziona **[!UICONTROL Rimuovi set di dati]** nella barra a destra per attivare la finestra di dialogo di conferma della rimozione dei set di dati.
 
    >[!NOTE]
-   >
-Questa funzione è in versione beta ed è disponibile solo per alcuni clienti. Per richiedere l’accesso a questa funzione, contatta il rappresentante del tuo Adobe.
+   >Questa funzione è in versione beta ed è disponibile solo per alcuni clienti. Per richiedere l’accesso a questa funzione, contatta il rappresentante del tuo Adobe.
 
    ![Finestra di dialogo Rimuovi set di dati che mostra il controllo Rimuovi set di dati nella barra a destra.](../assets/ui/export-datasets/bulk-remove-datasets.png)
 
