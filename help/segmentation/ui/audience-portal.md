@@ -2,9 +2,9 @@
 title: Panoramica di Audience Portal
 description: Scopri come utilizzare Audience Portal per visualizzare, gestire e creare tipi di pubblico in Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 527c9bf7ff60ceb1e621ccac5a88b8e9eb32ebfb
+source-git-commit: 56939b18d532f3c12ed8fdd76513d953ae74b613
 workflow-type: tm+mt
-source-wordcount: '3826'
+source-wordcount: '4125'
 ht-degree: 3%
 
 ---
@@ -254,17 +254,39 @@ Selezionando **[!UICONTROL Modifica pubblico]** puoi modificare il pubblico nel 
 
 Selezionando **[!UICONTROL Modifica proprietà]** potrai modificare i dettagli di base del pubblico, come il nome, la descrizione e i tag.
 
-![](../images/ui/audience-portal/audience-details-edit-properties.png)
+![Il pulsante Modifica proprietà è evidenziato nella pagina dei dettagli del pubblico.](../images/ui/audience-portal/audience-details-edit-properties.png)
 
 ### Totale pubblico {#audience-total}
 
-La sezione **[!UICONTROL Pubblico totale]** mostra il numero totale di profili idonei per il pubblico.
+Per il pubblico e le composizioni generati da Platform, la sezione **[!UICONTROL Pubblico totale]** mostra il numero totale di profili idonei per il pubblico.
 
 >[!NOTE]
 >
 >Potrebbero essere necessari fino a 30 minuti per aggiornare il conteggio totale del pubblico dopo il completamento del processo di esportazione.
 
 Le stime vengono generate utilizzando una dimensione campione dei dati di campionamento di quel giorno. Se nell’archivio Profili sono presenti meno di 1 milione di entità, viene utilizzato l’intero set di dati; per un numero di entità compreso tra 1 e 20 milioni, vengono utilizzate 1 milione di entità; e per più di 20 milioni di entità, viene utilizzato il 5% del totale delle entità. Ulteriori informazioni sulla generazione di stime sono disponibili nella [sezione sulla generazione di stime](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) dell&#39;esercitazione sulla creazione di tipi di pubblico.
+
+### Dettagli dell’acquisizione {#ingestion-details}
+
+Per i tipi di pubblico con origine **[!UICONTROL Caricamento personalizzato]**, la sezione **[!UICONTROL Dettagli acquisizione]** mostra sia il totale del profilo che i dettagli del set di dati in cui è stato acquisito il pubblico generato esternamente.
+
+![Viene visualizzata la sezione dei dettagli di acquisizione per la pagina dei dettagli del pubblico.](../images/ui/audience-portal/audience-details-ingestion-details.png)
+
+| Proprietà | Descrizione |
+| -------- | ----------- |
+| Conteggio dei profili | Il numero totale di profili idonei per il pubblico. |
+| Nome del set di dati | Il nome del set di dati in cui è stato acquisito il pubblico. Puoi selezionare il nome del set di dati per ulteriori informazioni su di esso. Per ulteriori informazioni sui set di dati, leggere la [guida dell&#39;interfaccia utente del set di dati](../../catalog/datasets/user-guide.md). |
+| Batch di set di dati | ID del set di dati in cui è stato acquisito il pubblico. Per ulteriori informazioni sul batch, puoi selezionare l’ID del batch. Per ulteriori informazioni sui batch, leggere la [guida all&#39;acquisizione dei dati di monitoraggio](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
+| Batch di profili | ID del batch che ha creato i profili su Platform. Per ulteriori informazioni sul batch, puoi selezionare l’ID del batch. Per ulteriori informazioni sui batch, leggere la [guida all&#39;acquisizione dei dati di monitoraggio](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
+| Schema | Il nome dello schema a cui appartiene il pubblico. Puoi selezionare il nome dello schema per visualizzare informazioni sulla struttura dello schema e applicare le etichette di utilizzo dei dati. Per ulteriori informazioni, leggere la sezione [Gestione delle etichette di utilizzo dei dati per una guida allo schema](../../xdm/tutorials/labels.md). |
+| Record acquisiti | Il numero di record acquisiti nel set di dati. |
+| Record con errori | Il numero di record che non sono stati in grado di essere acquisiti nel set di dati. |
+| Nuovi frammenti di profilo | Il numero di nuovi profili creati. |
+| Frammenti di profilo esistenti | Il numero di profili esistenti che sono stati aggiornati. |
+
+>[!NOTE]
+>
+>L’applicazione delle etichette di utilizzo dei dati allo schema è la best practice. **impossibile** applicare un&#39;etichetta di utilizzo dati direttamente al pubblico.
 
 ### Destinazioni attivate {#activated-destinations}
 
@@ -343,7 +365,7 @@ Selezionando **[!UICONTROL Genera regola]** puoi passare al Generatore di segmen
 
 ### Composizione di pubblico federato {#fac}
 
-Oltre alle composizioni del pubblico e alle definizioni dei segmenti, puoi utilizzare Adobe Federated Audience Composition per creare nuovi tipi di pubblico dai set di dati aziendali senza copiare i dati sottostanti e memorizzarli in Adobe Experience Platform Audience Portal. Puoi anche arricchire i tipi di pubblico esistenti in Adobe Experience Platform utilizzando dati di pubblico composti che sono stati federati dal data warehouse aziendale. Leggi la guida su [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+Oltre alle composizioni del pubblico e alle definizioni dei segmenti, puoi utilizzare Adobe Federated Audience Composition per creare nuovi tipi di pubblico dai set di dati aziendali senza copiare i dati sottostanti e memorizzarli in Adobe Experience Platform Audience Portal. Puoi anche arricchire i tipi di pubblico esistenti in Adobe Experience Platform utilizzando dati di pubblico composti che sono stati federati dal data warehouse aziendale. Leggi la guida su [Federated Audience Composition](https://experienceleague.adobe.com/it/docs/federated-audience-composition/using/home).
 
 ![Elenco di tipi di pubblico creati in Federated Audience Composition per la tua organizzazione.](../images/ui/overview/federated-audience-composition.png)
 
