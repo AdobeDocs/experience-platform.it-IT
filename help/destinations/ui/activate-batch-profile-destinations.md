@@ -6,7 +6,7 @@ exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 source-git-commit: d7a530c5ec2cad37b93273f5843609110d61cbfc
 workflow-type: tm+mt
 source-wordcount: '4077'
-ht-degree: 10%
+ht-degree: 13%
 
 ---
 
@@ -33,22 +33,22 @@ Per attivare i tipi di pubblico nelle destinazioni, devi avere [connesso corrett
 
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_header"
->title="Aggiorna la data di fine per questo flusso di dati"
->abstract="Aggiorna la data di fine per questo flusso di dati"
+>title="Aggiornare la data di fine per questo flusso di dati"
+>abstract="Aggiornare la data di fine per questo flusso di dati"
 
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_body"
->title="Aggiorna la data di fine per questo corpo del flusso di dati"
->abstract="A causa dei recenti aggiornamenti di questa destinazione, il flusso di dati ora richiede una data di fine. Adobe ha impostato una data di fine predefinita al 1° marzo 2025. Effettua l’aggiornamento alla data di fine desiderata altrimenti le esportazioni di dati si interrompono nella data predefinita."
+>title="Aggiornare la data di fine per questo corpo del flusso di dati"
+>abstract="A causa dei recenti aggiornamenti di questa destinazione, il flusso di dati ora richiede una data di fine. Adobe ha impostato una data di fine predefinita al 1° marzo 2025. Effettua l’aggiornamento alla data di fine desiderata altrimenti le esportazioni di dati si interromperanno alla fata predefinita."
 
 >[!CONTEXTUALHELP]
 >id="destinations_folder_name_template"
->title="Modifica percorso della cartella"
+>title="Modificare il percorso della cartella"
 >abstract="Utilizza diverse macro fornite per personalizzare il percorso della cartella in cui vengono esportati i set di dati."
 
 >[!CONTEXTUALHELP]
 >id="destinations_folder_name_template_preview"
->title="Anteprima percorso cartella set di dati"
+>title="Anteprima del percorso della cartella del set di dati"
 >abstract="Ottieni un’anteprima della struttura di cartelle creata nel percorso di archiviazione in base alle macro aggiunte in questa finestra."
 
 Durante l’esportazione dei tipi di pubblico sono supportati i seguenti formati di file:
