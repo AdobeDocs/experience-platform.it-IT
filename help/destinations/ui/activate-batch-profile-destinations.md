@@ -3,7 +3,7 @@ title: Attivare i tipi di pubblico per le destinazioni di esportazione dei profi
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico disponibili in Adobe Experience Platform inviandoli a destinazioni basate su profili in batch.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: dab3b432cac4ad416576f9d3d35e679d9483c816
+source-git-commit: d7a530c5ec2cad37b93273f5843609110d61cbfc
 workflow-type: tm+mt
 source-wordcount: '4077'
 ht-degree: 10%
@@ -346,7 +346,7 @@ Prendiamo in considerazione i due profili seguenti.
         "id": "johndoe_1@example.com"
       },
       {
-        "id": "johndoe_2@example.com"
+        "id": "doejohn_1@example.com"
       }
     ]
   },
@@ -377,10 +377,10 @@ Prendiamo in considerazione i due profili seguenti.
   "identityMap": {
     "Email": [
       {
-        "id": "johndoe_1@example.com"
+        "id": "johndoe_2@example.com"
       },
       {
-        "id": "johndoe_2@example.com"
+        "id": "doejohn_2@example.com"
       }
     ]
   },
@@ -420,8 +420,8 @@ Se si presuppone la deduplicazione da parte dello spazio dei nomi [!DNL Email], 
 
 | E-mail* | personalEmail | firstName | lastName |
 |---|---|---|---|
-| johndoe_1@example.com | johndoe@example.com | John | D |
 | johndoe_2@example.com | johndoe@example.com | John | D |
+| doejohn_2@example.com | johndoe@example.com | John | D |
 
 ### Caso di utilizzo 3: deduplicazione basata su un singolo attributo di profilo {#deduplication-use-case-3}
 
