@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Creare e modificare gli schemi nell’interfaccia utente
 description: Scopri le nozioni di base sulla creazione e la modifica degli schemi nell’interfaccia utente di Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 19f1f64434d655d3b19260460519018fc9c8e174
+source-git-commit: 15de9351203f6b43653042ab73ede17781486160
 workflow-type: tm+mt
-source-wordcount: '3736'
-ht-degree: 2%
+source-wordcount: '3861'
+ht-degree: 1%
 
 ---
 
@@ -29,13 +29,23 @@ Questa guida richiede una buona conoscenza del sistema XDM. Per un&#39;introduzi
 
 >[!NOTE]
 >
->Questa sezione illustra come creare manualmente un nuovo schema nell’interfaccia utente. Se acquisisci dati CSV in Platform, puoi scegliere di [mappare tali dati su uno schema XDM creato dai consigli generati dall&#39;intelligenza artificiale](../../../ingestion/tutorials/map-csv/recommendations.md) (attualmente in versione beta) senza dover creare manualmente lo schema.
+>Questa sezione illustra come creare manualmente un nuovo schema nell’interfaccia utente. Se si acquisiscono dati CSV in Platform, è possibile utilizzare gli algoritmi di Machine Learning (ML) per **generare uno schema da dati CSV di esempio**. Questo flusso di lavoro corrisponde al formato dei dati e crea automaticamente un nuovo schema basato sulla struttura e sul contenuto del file CSV. Per ulteriori informazioni su questo flusso di lavoro, consulta la [Guida alla creazione di schemi assistiti da ML](../ml-assisted-schema-creation.md).
 
 Nell&#39;area di lavoro [!UICONTROL Schemi], seleziona **[!UICONTROL Crea schema]** nell&#39;angolo in alto a destra.
 
 ![Area di lavoro Schemi con [!UICONTROL Crea schema] evidenziato.](../../images/ui/resources/schemas/create-schema.png)
 
-Viene visualizzato il flusso di lavoro [!UICONTROL Crea schema]. Puoi scegliere una classe base per lo schema selezionando **[!UICONTROL Profilo individuale]**, **[!UICONTROL Evento esperienza]** o **[!UICONTROL Altro]**, seguito da **[!UICONTROL Successivo]** per confermare la scelta. Per ulteriori informazioni su queste classi, consulta la documentazione [Profilo individuale XDM](../../classes/individual-profile.md) e [XDM ExperienceEvent](../../classes/experienceevent.md).
+Viene visualizzata la finestra di dialogo [!UICONTROL Crea schema]. In questa finestra di dialogo, puoi scegliere di creare manualmente uno schema aggiungendo campi e gruppi di campi, oppure puoi caricare un file CSV e utilizzare algoritmi ML per generare uno schema. Seleziona un flusso di lavoro per la creazione di uno schema dalla finestra di dialogo.
+
+![Finestra di dialogo Crea schema con le opzioni del flusso di lavoro e seleziona evidenziato.](../../images/tutorials/create-schema/create-a-schema-dialog.png)
+
+### Creazione manuale o assistita da apprendimento automatico degli schemi {#manual-or-assisted}
+
+Per informazioni su come utilizzare un algoritmo ML per consigliare una struttura di schema basata su un file csv, consulta la [guida alla creazione di schemi assistiti da apprendimento automatico](../ml-assisted-schema-creation.md). Questa guida dell’interfaccia utente si concentra sul flusso di lavoro di creazione manuale.
+
+### Creazione manuale dello schema {#manual-creation}
+
+Viene visualizzato il flusso di lavoro [!UICONTROL Crea schema]. Puoi scegliere una classe base per lo schema selezionando **[!UICONTROL Profilo individuale]**, **[!UICONTROL Evento esperienza]** o **[!UICONTROL Altro]**, seguito da **[!UICONTROL Successivo]** per confermare la scelta. Per ulteriori informazioni su queste classi, consulta la documentazione [[!UICONTROL Profilo individuale XDM]](../../classes/individual-profile.md) e [[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md).
 
 ![Il flusso di lavoro [!UICONTROL Crea schema] con le tre opzioni di classe e [!UICONTROL Successivo] evidenziato.](../../images/ui/resources/schemas/schema-class-options.png)
 

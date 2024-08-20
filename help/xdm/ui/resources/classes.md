@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creare e modificare le classi nell’interfaccia utente
 description: Scopri come creare e modificare le classi nell’interfaccia utente di Experience Platform.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 15de9351203f6b43653042ab73ede17781486160
 workflow-type: tm+mt
-source-wordcount: '1458'
+source-wordcount: '1560'
 ht-degree: 5%
 
 ---
@@ -60,7 +60,15 @@ La classe creata è disponibile ed elencata nella visualizzazione [!UICONTROL Cl
 
 ### Creare o modificare una classe {#create-or-edit}
 
-In alternativa, se si seleziona **[!UICONTROL Crea schema]**, viene visualizzato il flusso di lavoro [!UICONTROL Crea schema]. Nella sezione [!UICONTROL Dettagli schema], seleziona **[!UICONTROL Altro]**. Viene visualizzato un elenco delle classi disponibili. Da qui puoi sfogliare e filtrare le classi preesistenti su cui basare la nuova classe.
+In alternativa, se si sceglie di creare manualmente uno schema, è possibile creare o modificare una classe esistente come parte di tale flusso di lavoro. Selezionare **[!UICONTROL Crea schema]** seguito da **[!UICONTROL Manuale]** nella finestra di dialogo [!UICONTROL Crea schema] visualizzata.
+
+>[!NOTE]
+>
+>Se utilizzi il flusso di lavoro per la creazione di schemi assistiti da apprendimento automatico, puoi caricare un file e utilizzare gli algoritmi ML per generare uno schema consigliato. Nel flusso di lavoro di creazione dello schema non è necessario specificare la classe base per lo schema. Per informazioni su come ML può consigliare una struttura di schema basata su un file csv, consulta la [guida alla creazione di schemi assistiti da apprendimento automatico](../ml-assisted-schema-creation.md).
+
+![Finestra di dialogo Crea schema con le opzioni del flusso di lavoro e seleziona evidenziato.](../../images/ui/resources/classes/manually-create-a-schema.png)
+
+Viene visualizzato il flusso di lavoro per la creazione dello schema. Nella sezione [!UICONTROL Dettagli schema], seleziona **[!UICONTROL Altro]**. Viene visualizzato un elenco delle classi disponibili. Da qui puoi sfogliare e filtrare le classi preesistenti su cui basare la nuova classe.
 
 >[!NOTE]
 >

@@ -2,9 +2,9 @@
 title: Mappare un file CSV a uno schema XDM utilizzando la funzione di Recommendations generata da IA
 description: Questo tutorial illustra come mappare un file CSV a uno schema XDM utilizzando i consigli generati dall’intelligenza artificiale.
 exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: cbebee894d68f60f82e1154f41dcecc76c706a3b
 workflow-type: tm+mt
-source-wordcount: '1100'
+source-wordcount: '1172'
 ht-degree: 1%
 
 ---
@@ -101,3 +101,5 @@ Al termine della regolazione dei consigli di schema per i campi sorgente, selezi
 Questa guida illustra come mappare un file CSV a uno schema XDM utilizzando i consigli generati dall’intelligenza artificiale, per portare tali dati in Platform tramite l’acquisizione batch.
 
 Per i passaggi sulla mappatura di un file CSV a uno schema esistente, consulta il [flusso di lavoro di mappatura schema esistente](./existing-schema.md). Per informazioni sullo streaming in tempo reale dei dati a Platform tramite connessioni di origine predefinite, consulta la [panoramica sulle origini](../../../sources/home.md).
+
+È inoltre possibile utilizzare gli algoritmi di Machine Learning (ML) per **generare uno schema dai dati CSV di esempio**. Questo flusso di lavoro crea automaticamente un nuovo schema basato sulla struttura e sul contenuto del file CSV. Questo schema appena creato corrisponde al formato dei dati per consentirti di risparmiare tempo e migliorare la precisione durante la definizione della struttura, dei campi e dei tipi di dati per set di dati complessi di grandi dimensioni. Per ulteriori informazioni su questo flusso di lavoro, consulta la [Guida alla creazione di schemi assistiti da ML](../../../xdm/ui/ml-assisted-schema-creation.md).

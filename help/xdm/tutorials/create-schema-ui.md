@@ -5,9 +5,9 @@ title: Creare uno schema tramite l’Editor di schema
 type: Tutorial
 description: Questa esercitazione illustra i passaggi necessari per creare uno schema utilizzando Schema Editor all’interno di Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 15de9351203f6b43653042ab73ede17781486160
 workflow-type: tm+mt
-source-wordcount: '4813'
+source-wordcount: '4922'
 ht-degree: 1%
 
 ---
@@ -46,14 +46,23 @@ Per iniziare a comporre uno schema, seleziona **[!UICONTROL Crea schema]** nell&
 
 ![Scheda [!UICONTROL Sfoglia] dell&#39;area di lavoro [!UICONTROL Schemi] con [!UICONTROL Crea schema] evidenziato.](../images/tutorials/create-schema/create-schema-button.png)
 
+Viene visualizzata la finestra di dialogo [!UICONTROL Crea schema]. In questa finestra di dialogo, puoi scegliere di creare manualmente uno schema aggiungendo campi e gruppi di campi, oppure puoi caricare un file CSV e utilizzare algoritmi ML per generare uno schema. Seleziona un flusso di lavoro per la creazione di uno schema dalla finestra di dialogo.
+
+![Finestra di dialogo Crea schema con le opzioni del flusso di lavoro e seleziona evidenziato.](../images/tutorials/create-schema/create-a-schema-dialog.png)
+
+### Creazione manuale o assistita da apprendimento automatico degli schemi {#manual-or-assisted}
+
+Per informazioni su come utilizzare un algoritmo ML per consigliare una struttura di schema basata su un file caricato, consulta la [guida alla creazione di schemi supportati dall&#39;apprendimento automatico](../ui/ml-assisted-schema-creation.md). Questa guida dell’interfaccia utente si concentra sul flusso di lavoro di creazione manuale.
+
+### Scegli una classe base {#choose-a-class}
+
 Viene visualizzato il flusso di lavoro [!UICONTROL Crea schema]. Scegliere quindi una classe base per lo schema. Puoi scegliere tra le classi principali di [!UICONTROL XDM Individual Profile] e [!UICONTROL XDM ExperienceEvent] o [!UICONTROL Other] se queste classi non sono adatte alle tue esigenze. L&#39;opzione [!UICONTROL Altre] classi consente di [creare una nuova classe](#create-new-class) o di scegliere tra altre classi preesistenti.
 
-Per ulteriori informazioni su queste classi, consulta la documentazione [Profilo individuale XDM](../classes/individual-profile.md) e [XDM ExperienceEvent](../classes/experienceevent.md). Ai fini di questa esercitazione, seleziona **[!UICONTROL Profilo individuale XDM]** seguito da **[!UICONTROL Successivo]**.
-
-<!-- You can  by selecting either **[!UICONTROL Individual Profile]**, **[!UICONTROL Experience Event]**, or **[!UICONTROL Other]**, followed by **[!UICONTROL Next]** to confirm your choice.  -->
-
+Per ulteriori informazioni su queste classi, consulta la documentazione [[!UICONTROL Profilo individuale XDM]](../classes/individual-profile.md) e [[!UICONTROL XDM ExperienceEvent]](../classes/experienceevent.md). Ai fini di questa esercitazione, seleziona **[!UICONTROL Profilo individuale XDM]** seguito da **[!UICONTROL Successivo]**.
 
 ![Il flusso di lavoro [!UICONTROL Crea schema] con le opzioni [!UICONTROL Profilo individuale XDM] e [!UICONTROL Successivo] è evidenziato.](../images/tutorials/create-schema/individual-profile-base-class.png)
+
+### Denomina e rivedi {#name-and-review}
 
 Dopo aver selezionato una classe, viene visualizzata la sezione [!UICONTROL Name and review]. In questa sezione, fornisci un nome e una descrizione per identificare lo schema. Ci sono diverse considerazioni importanti da fare quando si decide un nome per lo schema:
 
@@ -68,6 +77,8 @@ Questa esercitazione crea uno schema per acquisire i dati relativi ai membri di 
 Immetti un nome visualizzato dello schema [!UICONTROL descrittivo] nel campo di testo. Quindi, inserisci una descrizione adatta per identificare lo schema. Dopo aver rivisto la struttura dello schema e aver impostato correttamente le impostazioni, seleziona **[!UICONTROL Fine]** per creare lo schema.
 
 ![La sezione [!UICONTROL Name and review] del flusso di lavoro [!UICONTROL Create schema] con [!UICONTROL Schema display name], [!UICONTROL Description], e [!UICONTROL Finish] evidenziato.](../images/ui/resources/schemas/name-and-review.png)
+
+### Componi lo schema {#compose-your-schema}
 
 Verrà visualizzato [!DNL Schema Editor]. Questa è l’area di lavoro su cui comporrai lo schema. Lo schema con titolo autonomo viene creato automaticamente nella sezione **[!UICONTROL Structure]** dell&#39;area di lavoro quando si arriva nell&#39;editor, insieme ai campi standard inclusi nella classe base selezionata. La classe assegnata per lo schema è elencata anche in **[!UICONTROL Classe]** nella sezione **[!UICONTROL Composizione]**.
 

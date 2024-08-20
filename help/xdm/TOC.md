@@ -5,9 +5,9 @@ breadcrumb-title: Guida di Experience Data Model (XDM)
 user-guide-description: Scopri una panoramica del sistema Experience Data Model (XDM) in Experience Platform e come utilizzare i gruppi di campi per classi e schemi per standardizzare i dati dell’esperienza.
 feature: Schemas
 role: Developer
-source-git-commit: 948a86f78ca6a6305adaf3232ca98a5437d701a6
+source-git-commit: 15de9351203f6b43653042ab73ede17781486160
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '637'
 ht-degree: 45%
 
 ---
@@ -205,6 +205,7 @@ ht-degree: 45%
       * [Campi di relazione](./ui/fields/relationship.md)
       * [Campi obbligatori](./ui/fields/required.md)
    * [Flussi di lavoro basati sui campi](./ui/field-based-workflows.md)
+   * [Creazione di schemi assistiti da apprendimento automatico](./ui/ml-assisted-schema-creation.md)
    * [Genera dati XDM di esempio](./ui/sample.md)
    * [Esportare gli schemi XDM](./ui/export.md)
 * API del registro di schema {#api}

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica sull’acquisizione dei dati
 description: Questo documento illustra i tre modi principali in cui i dati vengono acquisiti in Platform, con collegamenti alla rispettiva documentazione di panoramica per informazioni più dettagliate.
 exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
-source-git-commit: cde8db1f75cf83451e240f32a877b9d6d26a0e18
+source-git-commit: 15de9351203f6b43653042ab73ede17781486160
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '578'
 ht-degree: 3%
 
 ---
@@ -42,6 +42,12 @@ Per ulteriori informazioni, consulta la [panoramica sull&#39;acquisizione in str
 Le connessioni Source possono essere configurate per raccogliere dati da altre applicazioni Adobe (come Adobe Analytics e Adobe Audience Manager), da origini di archiviazione cloud di terze parti (come [!DNL Azure Blob], [!DNL Amazon] S3, server FTP e server SFTP) e da sistemi CRM di terze parti (come [!DNL Microsoft Dynamics] e [!DNL Salesforce]).
 
 Per ulteriori informazioni, vedere [Panoramica origini](../sources/home.md).
+
+### Creazione di schemi con assistenza ML {#ml-assisted-schema-creation}
+
+Per integrare rapidamente nuove origini dati, ora puoi utilizzare algoritmi di apprendimento automatico per generare uno schema dai dati di esempio. Questa automazione semplifica la creazione di schemi accurati, riduce gli errori e velocizza il processo dalla raccolta dei dati all’analisi e alle informazioni.
+
+Per ulteriori informazioni su questo flusso di lavoro, consulta la [Guida alla creazione di schemi assistiti da ML](../xdm/ui/ml-assisted-schema-creation.md).
 
 ## Passaggi successivi e risorse aggiuntive
 
