@@ -2,9 +2,9 @@
 title: Eliminazioni nel servizio Identity
 description: Questo documento fornisce una panoramica dei vari meccanismi che puoi utilizzare per eliminare i dati di identità in Experience Platform e per fornire chiarezza su come i grafici di identità possono essere interessati.
 exl-id: 0619d845-71c1-4699-82aa-c6436815d5b3
-source-git-commit: 576b17842ee1c5722332ba49e26b037537ec96ed
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1199'
+source-wordcount: '1198'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Il documento seguente fa riferimento alle seguenti caratteristiche di Experience
 
 * [Identity Service](../home.md): ottieni una migliore visione dei singoli clienti e del loro comportamento collegando le identità tra dispositivi e sistemi.
    * [Grafico delle identità](./identity-graph-viewer.md): un grafico delle identità è una mappa delle relazioni tra identità diverse per un particolare cliente, che fornisce una rappresentazione visiva di come il cliente interagisce con il brand attraverso canali diversi.
-   * [Spazi dei nomi di identità](./namespaces.md): gli spazi dei nomi di identità sono un componente di Identity Service che fungono da indicatori del contesto a cui si riferisce un&#39;identità. Ad esempio, distinguono un valore di &quot;name<span>@email.com&quot; come indirizzo e-mail o &quot;443522&quot; come ID CRM numerico.
+   * [Spazi dei nomi di identità](./namespaces.md): gli spazi dei nomi di identità sono un componente di Identity Service che fungono da indicatori del contesto a cui si riferisce un&#39;identità. Ad esempio, distinguono un valore di &quot;name<span>@email.com&quot; come indirizzo e-mail o &quot;443522&quot; come CRMID numerico.
 * [Catalog Service](../../catalog/home.md): Esplora la derivazione dati, i metadati, le descrizioni file, le directory e i set di dati all&#39;interno del data lake.
 * [Igiene dei dati](../../hygiene/home.md): gestisci i dati consumer memorizzati pianificando scadenze automatizzate dei set di dati o eliminando singoli record da un set di dati o da tutti i set di dati.
 * [Adobe Experience Platform Privacy Service](../../privacy-service/home.md): consente di gestire le richieste dei clienti per l&#39;accesso, la rinuncia alla vendita o l&#39;eliminazione dei dati personali nelle applicazioni Adobe Experience Cloud.

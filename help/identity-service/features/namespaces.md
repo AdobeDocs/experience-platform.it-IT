@@ -2,9 +2,9 @@
 title: Panoramica dello spazio dei nomi dell’identità
 description: Scopri gli spazi dei nomi delle identità in Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 59ac3d8b7fee0327396c990ef309ca3a4f292a77
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1862'
+source-wordcount: '1858'
 ht-degree: 16%
 
 ---
@@ -35,7 +35,7 @@ Gli spazi dei nomi di identità richiedono la comprensione di vari servizi Adobe
 >abstract="Un valore di identità è un identificatore che rappresenta una persona, organizzazione o risorsa univoca. Il contesto o il tipo di identità che il valore rappresenta è definito da uno spazio dei nomi delle identità corrispondente. Quando si abbinano i dati del record tra i frammenti di profilo, lo spazio dei nomi e il valore dell’identità devono corrispondere. Quando si abbinano i dati del record tra i frammenti di profilo, lo spazio dei nomi e il valore dell’identità devono corrispondere."
 >text="Learn more in documentation"
 
-Un&#39;identità completa include due componenti: un **valore identità** e uno **spazio dei nomi identità**. Ad esempio, se il valore di un&#39;identità è `scott@acme.com`, uno spazio dei nomi fornisce contesto a questo valore distinguendolo come indirizzo e-mail. Analogamente, uno spazio dei nomi può distinguere `555-123-456` come numero di telefono e `3126ABC` come ID CRM. In sostanza, **uno spazio dei nomi fornisce contesto a una determinata identità**. Quando si abbinano i dati dei record tra frammenti di profilo, come quando [!DNL Real-Time Customer Profile] unisce i dati del profilo, sia il valore dell&#39;identità che lo spazio dei nomi devono corrispondere.
+Un&#39;identità completa include due componenti: un **valore identità** e uno **spazio dei nomi identità**. Ad esempio, se il valore di un&#39;identità è `scott@acme.com`, uno spazio dei nomi fornisce contesto a questo valore distinguendolo come indirizzo e-mail. Analogamente, uno spazio dei nomi può distinguere `555-123-456` come numero di telefono e `3126ABC` come CRMID. In sostanza, **uno spazio dei nomi fornisce contesto a una determinata identità**. Quando si abbinano i dati dei record tra frammenti di profilo, come quando [!DNL Real-Time Customer Profile] unisce i dati del profilo, sia il valore dell&#39;identità che lo spazio dei nomi devono corrispondere.
 
 Ad esempio, due frammenti di profilo possono contenere ID primari diversi ma condividono lo stesso valore per lo spazio dei nomi &quot;E-mail&quot;, pertanto Experience Platform è in grado di vedere che questi frammenti sono in realtà lo stesso individuo e uniscono i dati nel grafico delle identità dell’individuo.
 
@@ -47,8 +47,8 @@ Un altro modo per comprendere meglio il concetto di spazio dei nomi è considera
 
 Applicazione della stessa logica al servizio Identity:
 
-* Il valore identità di `1-234-567-8900` può essere visualizzato come un numero di telefono. Tuttavia, dal punto di vista del sistema, questo valore avrebbe potuto essere configurato come ID CRM. Identity Service non avrebbe modo di applicare il contesto necessario a questo valore di identità senza uno spazio dei nomi corrispondente.
-* Un altro esempio è il valore identità di: `john@gmail.com`. Anche se questo valore di identità può essere facilmente considerato un E-mail, è del tutto possibile che sia configurato come un ID CRM dello spazio dei nomi personalizzato. Con lo spazio dei nomi è possibile distinguere `Email:john@gmail.com` da `CRM ID:john@gmail.com`.
+* Il valore identità di `1-234-567-8900` può essere visualizzato come un numero di telefono. Tuttavia, dal punto di vista del sistema, questo valore avrebbe potuto essere configurato come CRMID. Identity Service non avrebbe modo di applicare il contesto necessario a questo valore di identità senza uno spazio dei nomi corrispondente.
+* Un altro esempio è il valore identità di: `john@gmail.com`. Anche se questo valore di identità può essere facilmente considerato un E-mail, è del tutto possibile che sia configurato come CRMID dello spazio dei nomi personalizzato. Con lo spazio dei nomi è possibile distinguere `Email:john@gmail.com` da `CRMID:john@gmail.com`.
 
 >[!ENDSHADEBOX]
 
@@ -81,7 +81,7 @@ In Experience Platform sono disponibili i seguenti tipi di identità:
 | Tipo di identità | Descrizione |
 | --- | --- |
 | ID cookie | Gli ID cookie identificano i browser web. Queste identità sono fondamentali per l&#39;espansione e costituiscono la maggior parte del grafo delle identità. Tuttavia, per natura, essi decadono rapidamente e perdono il loro valore nel tempo. |
-| ID multi-dispositivo | Gli ID multi-dispositivo identificano un individuo e solitamente associano insieme altri ID. Alcuni esempi includono un ID di accesso, un ID CRM e un ID fedeltà. Indicazione a [!DNL Identity Service] per gestire il valore in modo sensibile. |
+| ID multi-dispositivo | Gli ID multi-dispositivo identificano un individuo e solitamente associano insieme altri ID. Alcuni esempi includono un ID di accesso, un CRMID e un ID fedeltà. Indicazione a [!DNL Identity Service] per gestire il valore in modo sensibile. |
 | ID dispositivo | Gli ID dispositivo identificano dispositivi hardware, come IDFA (iPhone e iPad), GAID (Android) e RIDA (Roku), e possono essere condivisi da più persone nelle famiglie. |
 | Indirizzo e-mail | Gli indirizzi e-mail sono spesso associati a una singola persona e possono quindi essere utilizzati per identificarla tra canali diversi. Le identità di questo tipo includono informazioni personali (PII, personally identifiable information). Indicazione a [!DNL Identity Service] per gestire il valore in modo sensibile. |
 | Identificatore non di persone | Gli ID non personali vengono utilizzati per memorizzare identificatori che richiedono spazi dei nomi ma non sono collegati a un cluster di persone. Ad esempio, uno SKU prodotto, i dati relativi a prodotti organizzazioni o archivi. |

@@ -5,9 +5,9 @@ description: Il rilevamento di dispositivi condivisi identifica diversi utenti a
 hide: true
 hidefromtoc: true
 exl-id: 36318163-ba07-4209-b1be-dc193ab7ba41
-source-git-commit: d7c7bed74d746aba2330ecba62f9f810fbaf0d63
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1360'
+source-wordcount: '1353'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ L&#39;utilizzo di [!DNL Shared Device Detection] richiede una conoscenza dei var
 [!DNL Shared Device Detection] funziona stabilendo due spazi dei nomi: **Spazio dei nomi dell&#39;identità condivisa** e **Spazio dei nomi dell&#39;identità utente**.
 
 * Lo spazio dei nomi dell’identità condivisa rappresenta il dispositivo che può essere utilizzato da più utenti. L’Adobe consiglia ai clienti di utilizzare ECID come identificatore del dispositivo condiviso.
-* Lo spazio dei nomi dell’identità utente è mappato allo spazio dei nomi dell’identità che corrisponde all’ID di accesso di un utente. Può trattarsi dell’ID del sistema di gestione delle relazioni con i clienti, dell’indirizzo e-mail, dell’e-mail con hash o del numero di telefono di un utente.
+* Lo spazio dei nomi dell’identità utente è mappato allo spazio dei nomi dell’identità che corrisponde all’ID di accesso di un utente. Può trattarsi dell’identificatore CRMID, dell’indirizzo e-mail, dell’e-mail con hash o del numero di telefono di un utente.
 
 Un dispositivo condiviso, come un tablet, ha un singolo **Spazio dei nomi identità condiviso**. Ogni utente di un dispositivo condiviso ha invece uno spazio dei nomi **Identità utente** designato, che corrisponde ai rispettivi ID di accesso. Ad esempio, una tavoletta condivisa da Kevin e Nora per l&#39;utilizzo da parte dell&#39;e-commerce ha il proprio ECID di `1234`, mentre Kevin ha il proprio spazio dei nomi Identità utente mappato al proprio account `kevin@email.com` e Nora ha il proprio spazio dei nomi Identità utente mappato al proprio account `nora@email.com`.
 
@@ -72,17 +72,17 @@ Considera l&#39;esempio seguente per comprendere il funzionamento di [!DNL Share
 
 >[!NOTE]
 >
->In questo diagramma, lo spazio dei nomi dell’identità condivisa è configurato in ECID e lo spazio dei nomi dell’identità utente in ID CRM.
+>In questo diagramma, lo spazio dei nomi dell’identità condivisa è configurato in ECID e lo spazio dei nomi dell’identità utente in CRMID.
 
 ![diagramma](./images/shared-device/diagram.png)
 
 * Kevin e Nora condividono un tablet per visitare un sito web di e-commerce. Tuttavia, entrambi dispongono di una propria contabilità indipendente che utilizzano ciascuno per navigare e fare acquisti online;
    * In quanto dispositivo condiviso, il tablet ha un ECID corrispondente che rappresenta l’ID cookie del browser web del tablet;
-* Supponiamo che Kevin utilizzi il tablet e **acceda** al suo account di e-commerce per cercare le cuffie, ciò significa che l&#39;ID CRM di Kevin (**Spazio dei nomi identità utente**) è ora collegato all&#39;ECID del tablet (**Spazio dei nomi identità condivisa**). I dati di navigazione del tablet sono ora incorporati con il grafo delle identità di Kevin.
-   * Se Kevin **si disconnette** e Nora utilizza il tablet e **accede** al proprio account e acquista una fotocamera, il suo ID CRM è ora collegato all&#39;ECID del tablet. Pertanto, i dati di navigazione del tablet sono ora incorporati con il grafo di identità di Nora.
-   * Se Nora **non effettua la disconnessione** e Kevin utilizza il tablet, ma **non effettua l&#39;accesso**, i dati di esplorazione del tablet vengono comunque incorporati con Nora, perché rimane l&#39;utente autenticato e il suo ID CRM è ancora collegato all&#39;ECID del tablet.
-   * Se Nora **si disconnette** e Kevin utilizza il tablet, ma **non effettua l&#39;accesso**, i dati di navigazione del tablet vengono comunque incorporati nel grafo delle identità di Nora, perché come **ultimo utente autenticato**, il suo ID CRM rimane collegato all&#39;ECID del tablet.
-   * Se Kevin **effettua di nuovo l&#39;accesso**, il suo ID CRM viene ora collegato all&#39;ECID del tablet, perché è l&#39;ultimo utente autenticato e i dati di navigazione del tablet sono ora incorporati con il suo grafo delle identità.
+* Supponiamo che Kevin utilizzi il tablet e **registri in** al suo account di e-commerce per cercare le cuffie, il CRMID di Kevin (**Spazio dei nomi identità utente**) sia ora collegato all&#39;ECID del tablet (**Spazio dei nomi identità condivisa**). I dati di navigazione del tablet sono ora incorporati con il grafo delle identità di Kevin.
+   * Se Kevin **si disconnette** e Nora utilizza il tablet e **accede** al proprio account e acquista una fotocamera, il suo CRMID è ora collegato all&#39;ECID del tablet. Pertanto, i dati di navigazione del tablet sono ora incorporati con il grafo di identità di Nora.
+   * Se Nora **non effettua la disconnessione** e Kevin utilizza il tablet, ma **non effettua l&#39;accesso**, i dati di esplorazione del tablet vengono comunque incorporati con Nora, perché rimane l&#39;utente autenticato e il suo CRMID è ancora collegato all&#39;ECID del tablet.
+   * Se Nora **si disconnette** e Kevin utilizza il tablet, ma **non effettua l&#39;accesso**, i dati di navigazione del tablet vengono comunque incorporati nel grafo delle identità di Nora, perché in quanto **ultimo utente autenticato**, il suo CRMID rimane collegato all&#39;ECID del tablet.
+   * Se Kevin **effettua di nuovo l&#39;accesso**, il suo identificatore CRMID viene collegato all&#39;identificatore ECID del tablet, in quanto è l&#39;ultimo utente autenticato e i dati di navigazione del tablet vengono ora incorporati con il suo grafo delle identità.
 
 ### Come [!DNL Profile Service] unisce i frammenti di profilo con [!DNL Shared Device Detection] abilitato
 

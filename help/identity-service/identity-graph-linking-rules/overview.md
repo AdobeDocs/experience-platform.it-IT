@@ -3,9 +3,9 @@ title: Panoramica delle regole di collegamento del grafico delle identità
 description: Scopri le regole di collegamento del grafico identità in Identity Service.
 badge: Beta
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 7daa9191f2e095f01c7c09f02f87aa8724e2e325
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1177'
+source-wordcount: '1170'
 ht-degree: 1%
 
 ---
@@ -26,13 +26,13 @@ ht-degree: 1%
 * [Esempio di configurazioni del grafico](./configuration.md)
 * [Scenari di esempio](./example-scenarios.md)
 
-Con il servizio Adobe Experience Platform Identity e il profilo cliente in tempo reale, è facile presumere che i dati siano acquisiti perfettamente e che tutti i profili uniti rappresentino una singola persona tramite un identificatore di persona, ad esempio un ID del sistema di gestione delle relazioni con i clienti. Tuttavia, esistono scenari possibili in cui alcuni dati potrebbero tentare di unire più profili disparati in un unico profilo (&quot;compressione del grafico&quot;). Per evitare queste unioni indesiderate, puoi utilizzare le configurazioni fornite tramite le regole di collegamento del grafico delle identità e consentire una personalizzazione accurata per i tuoi utenti.
+Con il servizio Adobe Experience Platform Identity e il profilo cliente in tempo reale, è facile presumere che i dati siano acquisiti perfettamente e che tutti i profili uniti rappresentino una singola persona tramite un identificatore di persona, come un CRMID. Tuttavia, esistono scenari possibili in cui alcuni dati potrebbero tentare di unire più profili disparati in un unico profilo (&quot;compressione del grafico&quot;). Per evitare queste unioni indesiderate, puoi utilizzare le configurazioni fornite tramite le regole di collegamento del grafico delle identità e consentire una personalizzazione accurata per i tuoi utenti.
 
 ## Scenari di esempio in cui potrebbe verificarsi una compressione del grafico
 
 * **Dispositivo condiviso**: il termine dispositivo condiviso si riferisce ai dispositivi utilizzati da più utenti. Alcuni esempi di dispositivi condivisi sono tablet, computer di libreria e chioschi.
 * **Numeri di telefono e di posta elettronica non validi**: i numeri di telefono e di posta elettronica non validi si riferiscono agli utenti finali che registrano informazioni di contatto non valide, ad esempio &quot;test<span>@test.com&quot; per la posta elettronica e &quot;+1-111-111-1111&quot; per il numero di telefono.
-* **Valori di identità errati o non validi**: i valori di identità errati o non validi fanno riferimento a valori di identità non univoci che potrebbero unire gli ID CRM. Ad esempio, mentre gli identificatori IDFA devono avere 36 caratteri (32 caratteri alfanumerici e quattro trattini), ci sono scenari in cui un identificatore IDFA con valore di identità &quot;user_null&quot; può essere acquisito. Allo stesso modo, i numeri di telefono supportano solo caratteri numerici, ma è possibile che venga acquisito uno spazio dei nomi telefonico con un valore di identità &quot;non specificato&quot;.
+* **Valori di identità errati o non validi**: i valori di identità errati o non validi fanno riferimento a valori di identità non univoci che potrebbero unire i valori CRMID. Ad esempio, mentre gli identificatori IDFA devono avere 36 caratteri (32 caratteri alfanumerici e quattro trattini), ci sono scenari in cui un identificatore IDFA con valore di identità &quot;user_null&quot; può essere acquisito. Allo stesso modo, i numeri di telefono supportano solo caratteri numerici, ma è possibile che venga acquisito uno spazio dei nomi telefonico con un valore di identità &quot;non specificato&quot;.
 
 Per ulteriori informazioni sugli scenari dei casi d&#39;uso per le regole di collegamento del grafo delle identità, leggere il documento in [scenari d&#39;esempio](./example-scenarios.md).
 
@@ -60,15 +60,15 @@ Considera lo scenario seguente:
 * Scott utilizza un tablet e apre il browser Google Chrome per visitare il sito nike<span>.com, dove effettua l&#39;accesso e cerca nuove scarpe da basket.
    * Dietro le quinte, questo scenario registra le seguenti identità:
       * Uno spazio dei nomi e un valore ECID per rappresentare l’utilizzo del browser
-      * Uno spazio dei nomi e un valore ID CRM per rappresentare l&#39;utente autenticato (Scott ha effettuato l&#39;accesso con la sua combinazione di nome utente e password).
+      * Uno spazio dei nomi e un valore CRMID per rappresentare l&#39;utente autenticato (Scott ha effettuato l&#39;accesso con la combinazione di nome utente e password).
 * Suo figlio Peter utilizza quindi lo stesso tablet e utilizza anche Google Chrome per visitare il sito nike<span>.com, dove accede con il proprio account per cercare le attrezzature per il calcio.
    * Dietro le quinte, questo scenario registra le seguenti identità:
       * Lo stesso spazio dei nomi e valore ECID per rappresentare il browser.
-      * Nuovo spazio dei nomi e valore ID CRM per rappresentare l’utente autenticato.
+      * Nuovo spazio dei nomi e valore CRMID per rappresentare l’utente autenticato.
 
-Se l’ID del sistema di gestione delle relazioni con i clienti è stato configurato come spazio dei nomi univoco, l’algoritmo di ottimizzazione delle identità divide gli ID del sistema di gestione delle relazioni con i clienti in due grafici di identità separati, invece di unirli.
+Se CRMID è stato configurato come uno spazio dei nomi univoco, l’algoritmo di ottimizzazione delle identità divide i CRMID in due grafici di identità separati, invece di unirli.
 
-Se non configuri uno spazio dei nomi univoco, potresti riscontrare unioni di grafici indesiderate, ad esempio due identità con lo stesso ID del sistema di gestione delle relazioni con i clienti, ma diversi valori di identità (scenari come questi spesso rappresentano due entità persona diverse nello stesso grafico).
+Se non configuri uno spazio dei nomi univoco, potresti riscontrare unioni di grafici indesiderate, ad esempio due identità con lo stesso spazio dei nomi CRMID, ma valori di identità diversi (scenari come questi spesso rappresentano due entità persona diverse nello stesso grafico).
 
 Devi configurare uno spazio dei nomi univoco per informare l’algoritmo di ottimizzazione dell’identità in modo da applicare limitazioni ai dati di identità acquisiti in un dato grafo di identità.
 

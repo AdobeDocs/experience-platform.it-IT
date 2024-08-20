@@ -3,9 +3,9 @@ title: Interfaccia utente per le impostazioni delle identità
 description: Scopri come utilizzare l’interfaccia utente delle impostazioni di identità.
 badge: Beta
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 536770d0c3e7e93921fe40887dafa5c76e851f5e
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '515'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Per designare uno spazio dei nomi univoco, selezionare la casella di controllo [
 
 ![Due spazi dei nomi selezionati e definiti come univoci.](../images/rules/unique-namespace.png)
 
-Una volta stabiliti gli spazi dei nomi univoci, i grafici non saranno più in grado di avere più identità che contengono uno spazio dei nomi univoco. Ad esempio, se hai designato l’ID del sistema di gestione delle relazioni con i clienti come spazio dei nomi univoco, un grafico può avere una sola identità con lo spazio dei nomi dell’ID del sistema di gestione delle relazioni con i clienti. Per ulteriori informazioni, leggere la [panoramica dell&#39;algoritmo di ottimizzazione delle identità](./identity-optimization-algorithm.md#unique-namespace).
+Una volta stabiliti gli spazi dei nomi univoci, i grafici non saranno più in grado di avere più identità che contengono uno spazio dei nomi univoco. Ad esempio, se hai designato CRMID come spazio dei nomi univoco, un grafo può avere una sola identità con lo spazio dei nomi CRMID. Per ulteriori informazioni, leggere la [panoramica dell&#39;algoritmo di ottimizzazione delle identità](./identity-optimization-algorithm.md#unique-namespace).
 
 Al termine, seleziona **[!UICONTROL Avanti]**. Viene visualizzato un messaggio di conferma. Utilizzare questa opportunità per verificare che le configurazioni siano corrette, quindi selezionare **[!UICONTROL Fine]**.
 

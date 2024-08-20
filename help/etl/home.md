@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Sviluppo di integrazioni ETL per Adobe Experience Platform
 description: La guida all’integrazione di ETL illustra i passaggi generali per la creazione di connettori sicuri e a elevate prestazioni, ad Experience Platform per l’acquisizione di dati in Platform.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-source-git-commit: b80d8349fc54a955ebb3362d67a482d752871420
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '3978'
+source-wordcount: '3977'
 ht-degree: 3%
 
 ---
@@ -789,5 +789,5 @@ Al momento Adobe Experience Platform non identifica i dati differiti, pertanto l
 | ---- | ------ | ----------- |
 | 19/01/2019 | Proprietà &quot;fields&quot; rimossa dai set di dati | I set di dati includevano in precedenza una proprietà &quot;fields&quot; contenente una copia dello schema. Questa funzionalità non deve più essere utilizzata. Se viene trovata la proprietà &quot;fields&quot;, questa deve essere ignorata e deve essere utilizzato &quot;observedSchema&quot; o &quot;schemaRef&quot;. |
 | 15/03/2019 | Proprietà &quot;schemaRef&quot; aggiunta ai set di dati | La proprietà &quot;schemaRef&quot; di un set di dati contiene un URI che fa riferimento allo schema XDM su cui è basato il set di dati e rappresenta tutti i potenziali campi che potrebbero essere utilizzati dal set di dati. |
-| 15/03/2019 | Tutti gli identificatori dell’utente finale vengono mappati sulla proprietà &quot;identityMap&quot; | IdentityMap è un’incapsulazione di tutti gli identificatori univoci di un soggetto, come l’ID del sistema di gestione delle relazioni con i clienti, l’ECID o l’ID del programma fedeltà. Questa mappa viene utilizzata da [[!DNL Identity Service]](../identity-service/home.md) per risolvere tutte le identità note e anonime di un soggetto, formando un singolo grafico delle identità per ogni utente finale. |
+| 15/03/2019 | Tutti gli identificatori dell’utente finale vengono mappati sulla proprietà &quot;identityMap&quot; | IdentityMap è un’incapsulazione di tutti gli identificatori univoci di un soggetto, come CRMID, ECID o l’ID del programma fedeltà. Questa mappa viene utilizzata da [[!DNL Identity Service]](../identity-service/home.md) per risolvere tutte le identità note e anonime di un soggetto, formando un singolo grafico delle identità per ogni utente finale. |
 | 30/05/2019 | Fine del ciclo di vita e rimozione della proprietà &quot;schema&quot; dai set di dati | La proprietà &quot;schema&quot; del set di dati ha fornito un collegamento di riferimento allo schema utilizzando l&#39;endpoint `/xdms` obsoleto nell&#39;API [!DNL Catalog]. Questo è stato sostituito da un &quot;schemaRef&quot; che fornisce &quot;id&quot;, &quot;version&quot; e &quot;contentType&quot; dello schema come riferimento nella nuova API [!DNL Schema Registry]. |

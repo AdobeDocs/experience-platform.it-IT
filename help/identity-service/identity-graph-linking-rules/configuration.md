@@ -3,9 +3,9 @@ title: Guida alla configurazione delle regole di collegamento del grafico delle 
 description: Scopri i passaggi consigliati da seguire per implementare i dati con le configurazioni delle regole di collegamento del grafico delle identità.
 badge: Beta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 536770d0c3e7e93921fe40887dafa5c76e851f5e
+source-git-commit: e3568aa925661f4f519daf6572fd2df40b163cb5
 workflow-type: tm+mt
-source-wordcount: '1312'
+source-wordcount: '1357'
 ht-degree: 2%
 
 ---
@@ -76,6 +76,7 @@ Per istruzioni su come creare un set di dati, leggere la [guida dell&#39;interfa
 >
 >* Durante il processo di pre-implementazione, devi assicurarti che gli eventi autenticati che il sistema invierà ad Experience Platform contengano sempre un identificatore di persona, come CRMID.
 >* Durante l’implementazione, devi assicurarti che lo spazio dei nomi univoco con la priorità più elevata sia sempre presente in ogni profilo. Consulta l&#39;[appendice](#appendix) per esempi di scenari di grafo risolti assicurando che ogni profilo contenga lo spazio dei nomi univoco con la priorità più elevata.
+>* Se utilizzi il [connettore di origine Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) per acquisire i dati, devi assegnare agli ECID una priorità maggiore rispetto ad AAID perché Identity Service blocca AAID. Dando priorità a ECID, puoi dare istruzioni al servizio Identity di memorizzare gli eventi non autenticati in ECID invece che in AAID.
 
 A questo punto, dovresti disporre dei seguenti elementi:
 

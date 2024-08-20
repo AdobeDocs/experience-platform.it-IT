@@ -2,9 +2,9 @@
 title: Logica di collegamento del servizio Identity
 description: Scopri in che modo il servizio Identity collega identità diverse per creare una visualizzazione completa di un cliente.
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: 2b6700b2c19b591cf4e60006e64ebd63b87bdb2a
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '980'
+source-wordcount: '955'
 ht-degree: 0%
 
 ---
@@ -24,16 +24,16 @@ Un’identità rappresenta un’entità del mondo reale. Se esiste un collegamen
 
 | Azione | Collegamenti stabiliti | Significato |
 | --- | --- | --- |
-| Un utente finale accede utilizzando un computer. | L’ID del sistema di gestione delle relazioni con i clienti e l’ECID sono collegati tra loro. | Una persona (ID del sistema di gestione delle relazioni con i clienti) possiede un dispositivo con un browser (ECID). |
+| Un utente finale accede utilizzando un computer. | CRMID ed ECID sono collegati tra loro. | Una persona (CRMID) possiede un dispositivo con un browser (ECID). |
 | Un utente finale naviga in modo anonimo utilizzando un iPhone. | IDFA è collegato a ECID. | Il dispositivo hardware Apple (IDFA), ad esempio un iPhone, è associato al browser (ECID). |
-| Un utente finale accede utilizzando Google Chrome e quindi Firefox. | L’ID del sistema di gestione delle relazioni con i clienti è collegato a due diversi ECID. | Una persona (ID CRM) è associata a 2 browser Web (**Nota**: ogni browser avrà il proprio ECID). |
-| Un ingegnere dati acquisisce un record CRM che include due campi contrassegnati come identità: ID CRM e E-mail. | L’ID del sistema di gestione delle relazioni con i clienti e l’E-mail sono collegati. | All’indirizzo e-mail è associata una persona (ID CRM). |
+| Un utente finale accede utilizzando Google Chrome e quindi Firefox. | Il CRMID è collegato a due diversi ECID. | Una persona (CRMID) è associata a 2 browser Web (**Nota**: ogni browser avrà il proprio ECID). |
+| Un ingegnere dati acquisisce un record CRM che include due campi contrassegnati come identità: CRMID e E-mail. | CRMID ed E-mail sono collegati. | All’indirizzo e-mail è associata una persona (CRMID). |
 
 ## Informazioni sulla logica di collegamento del servizio Identity
 
 Un’identità è costituita da uno spazio dei nomi dell’identità e da un valore di identità.
 
-* Uno spazio dei nomi di identità è il contesto di un dato valore di identità a. Esempi comuni di spazi dei nomi di identità includono ID CRM, E-mail e Telefono.
+* Uno spazio dei nomi di identità è il contesto di un dato valore di identità a. Esempi comuni di spazi dei nomi di identità includono CRMID, E-mail e Telefono.
 * Un valore di identità è la stringa che rappresenta un’entità del mondo reale. Ad esempio: &quot;julien<span>@acme.com&quot; può essere un valore di identità per uno spazio dei nomi E-mail e 555-555-1234 può essere un valore di identità corrispondente per uno spazio dei nomi Telefono.
 
 >[!TIP]
@@ -50,7 +50,7 @@ Supponiamo di avere un grafo di identità esistente con tre identità collegate:
 
 * TEL. (555)-555-1234
 * E-MAIL:julien<span>@acme.com
-* CRM ID:60013ABC
+* CRMID:60013ABC
 
 ![grafico esistente](../images/identity-settings/existing-graph.png)
 
@@ -58,14 +58,14 @@ Supponiamo di avere un grafo di identità esistente con tre identità collegate:
 
 Una coppia di identità viene acquisita nel grafico e questa coppia contiene:
 
-* CRM ID:60013ABC
+* CRMID:60013ABC
 * ECID:100066526
 
 ![dati in arrivo](../images/identity-settings/incoming-data.png)
 
 >[!TAB Grafico aggiornato]
 
-Identity Service riconosce che CRM ID:60013ABC esiste già nel tuo grafico, e quindi collega solo il nuovo ECID
+Il servizio Identity riconosce che CRMID:60013ABC esiste già nel grafico, pertanto collega solo il nuovo ECID
 
 ![grafico aggiornato](../images/identity-settings/updated-graph.png)
 
@@ -75,7 +75,7 @@ Identity Service riconosce che CRM ID:60013ABC esiste già nel tuo grafico, e qu
 
 In qualità di ingegnere dati, acquisisci il seguente set di dati CRM (record profilo) in Experience Platform.
 
-| ID CRM** | Telefono* | E-mail* | Nome | Cognome |
+| CRMID** | Telefono* | E-mail* | Nome | Cognome |
 | --- | --- | --- | --- | --- |
 | 60013ABC | 555-555-1234 | julien<span>@acme.com | Julien | Smith |
 | 31260XYZ | 777-777-6890 | evan<span>@acme.com | Evan | Smith |
@@ -92,25 +92,25 @@ Hai anche implementato Web SDK e acquisito un set di dati Web SDK (Experience Ev
 | Timestamp | Identità nell’evento* | Evento |
 | --- | --- | --- |
 | `t=1` | ECID:38652 | Visualizza home page |
-| `t=2` | ECID:38652, ID CRM:31260XYZ | Cerca scarpe |
+| `t=2` | ECID:38652, CRMID:31260XYZ | Cerca scarpe |
 | `t=3` | ECID:44675 | Visualizza home page |
-| `t=4` | ECID:44675, ID CRM: 31260XYZ | Visualizza cronologia acquisti |
+| `t=4` | ECID:44675, CRMID: 31260XYZ | Visualizza cronologia acquisti |
 
 L&#39;identità primaria di ogni evento verrà determinata in base a [modalità di configurazione dei tipi di elementi dati](../../tags/extensions/client/web-sdk/data-element-types.md).
 
 >[!NOTE]
 >
->* Se selezioni l’ID del sistema di gestione delle relazioni con i clienti come principale, gli eventi autenticati (eventi con mappa di identità contenente l’ID del sistema di gestione delle relazioni con i clienti ed ECID) avranno un’identità primaria dell’ID del sistema di gestione delle relazioni con i clienti. Per gli eventi non autenticati (gli eventi con la mappa di identità contenente solo ECID) avranno un’identità primaria di ECID. L’Adobe consiglia questa opzione.
+>* Se selezioni il CRMID come principale, gli eventi autenticati (eventi con mappa di identità contenente il CRMID e l’ECID) avranno un’identità primaria di CRMID. Per gli eventi non autenticati (gli eventi con la mappa di identità contenente solo ECID) avranno un’identità primaria di ECID. L’Adobe consiglia questa opzione.
 >
 >* Se selezioni l’ECID come principale, indipendentemente dallo stato di autenticazione, l’ECID diventa l’identità principale.
 
 In questo esempio:
 
 * `t=1`, ha utilizzato un computer desktop (ECID:38652) e per visualizzare la home page in modo anonimo.
-* `t=2`, ha utilizzato lo stesso computer desktop, ha effettuato l&#39;accesso (ID CRM:31260XYZ) e ha quindi cercato le scarpe.
-   * Una volta effettuato l’accesso, l’evento invia sia l’ECID che l’ID del sistema di gestione delle relazioni con i clienti al servizio Identity.
+* `t=2`, ha utilizzato lo stesso computer desktop, ha effettuato l&#39;accesso (CRMID:31260XYZ) e ha quindi cercato le scarpe.
+   * Una volta effettuato l’accesso, l’evento invia sia ECID che CRMID al servizio Identity.
 * `t=3`, ha utilizzato un computer portatile (ECID:44675) e ha navigato in modo anonimo.
-* `t=4`, ha utilizzato lo stesso computer portatile, ha effettuato l&#39;accesso (ID CRM: 31260XYZ) e ha quindi visualizzato la cronologia degli acquisti.
+* `t=4`, ha utilizzato lo stesso computer portatile, ha effettuato l&#39;accesso (CRMID: 31260XYZ) e ha quindi visualizzato la cronologia degli acquisti.
 
 
 >[!BEGINTABS]
@@ -119,7 +119,7 @@ In questo esempio:
 
 In `timestamp=0`, si dispone di due grafici delle identità per due clienti diversi. Entrambi sono rappresentati da tre identità collegate.
 
-| | ID CRM | E-mail | Telefono |
+| | CRMID | E-mail | Telefono |
 | --- | --- | --- | --- |
 | Cliente uno | 60013ABC | julien<span>@acme.com | 555-555-1234 |
 | Cliente due | 31260XYZ | evan<span>@acme.com | 777-777-6890 |
@@ -134,7 +134,7 @@ In `timestamp=1`, un cliente utilizza un laptop per visitare il sito Web di e-co
 
 >[!TAB timestamp=2]
 
-In `timestamp=2`, un cliente utilizza lo stesso laptop per visitare il sito Web di e-commerce. Accedono con la combinazione di nome utente e password e cercano le scarpe. Identity Service identifica l’account del cliente quando effettua l’accesso perché corrisponde al suo ID CRM: 31260XYZ. Inoltre, Identity Service mette in relazione ECID:38562 con CRM ID:31260XYZ, in quanto entrambi utilizzano lo stesso browser sullo stesso dispositivo.
+In `timestamp=2`, un cliente utilizza lo stesso laptop per visitare il sito Web di e-commerce. Accedono con la combinazione di nome utente e password e cercano le scarpe. Identity Service identifica l’account del cliente quando effettua l’accesso perché corrisponde al suo identificatore CRMID: 31260XYZ. Inoltre, Identity Service mette in relazione ECID:38562 con CRMID:31260XYZ, poiché entrambi utilizzano lo stesso browser sullo stesso dispositivo.
 
 ![timestamp-due](../images/identity-settings/timestamp-two.png)
 
@@ -146,7 +146,7 @@ In `timestamp=3` un cliente utilizza un tablet per visitare il sito Web di e-com
 
 >[!TAB timestamp=4]
 
-Alle `timestamp=4`, un cliente utilizza lo stesso tablet, accede al proprio account (ID CRM:31260XYZ) e visualizza la cronologia degli acquisti. Questo evento collega il relativo ID CRM:31260XYZ all’identificatore del cookie assegnato all’attività di navigazione anonima, ECID:44675, e collega ECID:44675 al grafico delle identità del cliente 2.
+In `timestamp=4`, un cliente utilizza lo stesso tablet, accede al proprio account (CRMID:31260XYZ) e visualizza la cronologia degli acquisti. Questo evento collega il relativo CRMID:31260XYZ all’identificatore del cookie assegnato all’attività di navigazione anonima, ECID:44675, e collega ECID:44675 al grafico delle identità del cliente 2.
 
 ![timestamp-quattro](../images/identity-settings/timestamp-four.png)
 
