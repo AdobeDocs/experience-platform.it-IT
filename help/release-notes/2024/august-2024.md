@@ -1,10 +1,10 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Agosto 2024
 description: Note sulla versione di agosto 2024 per Adobe Experience Platform.
-source-git-commit: b586edb3f8fc866c2bc0f8c387740490173174a0
+source-git-commit: 6d8c785a1e876ed6a729efbe01ad8fb4507bda0d
 workflow-type: tm+mt
-source-wordcount: '301'
-ht-degree: 21%
+source-wordcount: '1028'
+ht-degree: 26%
 
 ---
 
@@ -12,10 +12,53 @@ ht-degree: 21%
 
 **Data di rilascio: mercoledì 20 agosto 2024**
 
+>[!TIP]
+>
+>Visualizza una [panoramica della documentazione sui casi d&#39;uso di esempio](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/use-cases/overview) per scoprire vari casi d&#39;uso quali ricerca di potenziali clienti, acquisizione e altro ancora che la tua organizzazione può ottenere con Real-Time CDP.
+
 Aggiornamenti alle funzioni e alla documentazione esistenti in Experience Platform:
 
+- [Destinazioni](#destinations)
+- [Experience Data Model (XDM)](#xdm)
 - [Identity Service](#identity-service)
+- [Servizio di segmentazione](#segmentation)
 - [Origini](#sources)
+
+## Destinazioni {#destinations}
+
+[!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
+
+**Funzionalità nuove o aggiornate** {#destinations-new-updated-functionality}
+
+| Funzione | Descrizione |
+| ----------- | ----------- |
+| L’esportazione di file on-demand nelle destinazioni batch è ora generalmente disponibile. | L’opzione per esportare i file on-demand nelle destinazioni batch è ora disponibile per tutti i clienti. Per ulteriori dettagli, consulta la [documentazione dedicata](../../destinations/ui/export-file-now.md). |
+| Modifica i programmi di esportazione per più tipi di pubblico esportati nel [passaggio di pianificazione](../../destinations/ui/activate-batch-profile-destinations.md#scheduling). | L’opzione per modificare i programmi di esportazione per più tipi di pubblico esportati direttamente dalla fase di pianificazione del flusso di lavoro di Audience Activation è ora disponibile per tutti i clienti. ![Immagine dell&#39;interfaccia utente di Experience Platform che evidenzia l&#39;opzione Modifica pianificazione nel passaggio di pianificazione.](assets/august/edit-schedule.png) {width="250" align="center" zoomable="yes"} |
+| Modificare i nomi dei file per più tipi di pubblico esportati nel [passaggio di pianificazione](../../destinations/ui/activate-batch-profile-destinations.md#scheduling). | L’opzione per modificare i nomi di più file esportati direttamente dalla fase di pianificazione del flusso di lavoro di Audience Activation è ora disponibile per tutti i clienti. ![Immagine dell&#39;interfaccia utente di Experience Platform che evidenzia l&#39;opzione Modifica nome file nel passaggio di pianificazione.](assets/august/edit-file-name.png) {width="250" align="center" zoomable="yes"} |
+| Rimuovi più tipi di pubblico da un flusso di dati dalla pagina [Dettagli destinazione](../../destinations/ui/destination-details-page.md#bulk-remove). | L&#39;opzione per rimuovere più tipi di pubblico dai flussi di dati esistenti dalla pagina **[!UICONTROL Dettagli destinazione]** è ora disponibile per tutti i clienti. ![Immagine dell&#39;interfaccia utente di Experience Platform che evidenzia l&#39;opzione Rimuovi tipi di pubblico nella pagina Dettagli destinazione.](assets/august/bulk-remove-audiences.png) {width="250" align="center" zoomable="yes"} |
+| Esporta più file on-demand in destinazioni batch dalla pagina [Dettagli destinazione](../../destinations/ui/destination-details-page.md#bulk-export). | L&#39;opzione per esportare più file on-demand in destinazioni batch dalla pagina **[!UICONTROL Dettagli destinazione]** è ora disponibile per tutti i clienti. ![Immagine dell&#39;interfaccia utente di Experience Platform che evidenzia l&#39;opzione Esporta file ora nella pagina Dettagli destinazione.](assets/august/bulk-export-file-now.png) {width="250" align="center" zoomable="yes"} |
+| Modifica i nomi dei file per più tipi di pubblico esportati dalla pagina [Dettagli destinazione](../../destinations/ui/destination-details-page.md#bulk-edit-file-names). | È ora possibile modificare i nomi di più file esportati direttamente dalla pagina **[!UICONTROL Dettagli destinazione]**. ![Immagine dell&#39;interfaccia utente di Experience Platform che evidenzia l&#39;opzione Modifica nome file nella pagina dei dettagli della destinazione.](assets/august/edit-file-name-destination-details.png) {width="250" align="center" zoomable="yes"} |
+| Rimuovi più set di dati da un flusso di dati dalla pagina [Dettagli destinazione](../../destinations/ui/export-datasets.md#remove-dataset). | L’opzione per rimuovere più set di dati da un flusso di dati è ora disponibile per tutti i clienti. ![Immagine dell&#39;interfaccia utente di Experience Platform che evidenzia l&#39;opzione Rimuovi set di dati nella pagina dei dettagli della destinazione.](assets/august/bulk-remove-datasets.png) {width="250" align="center" zoomable="yes"} |
+
+{style="table-layout:auto"}
+
+Per ulteriori informazioni, leggere la [panoramica delle destinazioni](../../destinations/home.md).
+
+## Experience Data Model (XDM) {#xdm}
+
+XDM è una specifica open-source che fornisce strutture e definizioni comuni (schemi) per i dati inseriti in Adobe Experience Platform. Aderendo agli standard XDM, tutti i dati sull’esperienza cliente possono essere incorporati in una rappresentazione comune per fornire approfondimenti in modo più rapido e integrato. Puoi ottenere approfondimenti importanti dalle azioni della clientela, definire i tipi di pubblico della clientela attraverso i segmenti e utilizzare gli attributi della clientela a scopo di personalizzazione.
+
+**Nuove funzioni**
+
+| Funzione | Descrizione |
+| --- | --- |
+| Flusso di creazione schema assistito da apprendimento automatico | Utilizza algoritmi avanzati di apprendimento automatico per analizzare i file di dati CSV di esempio e creare automaticamente schemi ottimizzati utilizzando campi standard e personalizzati.<br>Caratteristiche principali:<br><ul><li>Creazione più rapida dello schema: genera schemi direttamente da file di dati di esempio utilizzando campi XDM consigliati e generati da XML.</li><li>Flexible Schema Evolution: consente di aggiungere o aggiornare facilmente i campi nello schema generato.</li><li>Integrazione perfetta: completamente integrato con il flusso di creazione dello schema di base nell’URL dello schema, per un’esperienza utente fluida e coesa.</li><li>Revisione e modifica efficienti: visualizza e aggiorna rapidamente lo schema utilizzando l’editor Flat View, rendendo il processo di creazione più efficiente e semplice da usare.</li></ul> |
+
+{style="table-layout:auto"}
+
+<!-- To learn more, read the [ML-assisted schema creation overview](../../xdm/ui/ml-assisted-schema-creation.md)  -->
+
+Per ulteriori informazioni su XDM in Platform, consulta la [Panoramica sul sistema XDM](../../xdm/home.md).
 
 ## Identity Service {#identity-service}
 
@@ -30,6 +73,20 @@ Utilizza il servizio Adobe Experience Platform Identity per creare una visione c
 {style="table-layout:auto"}
 
 Per ulteriori informazioni su Identity Service, leggere la [Panoramica di Identity Service](../../identity-service/home.md).
+
+## Servizio di segmentazione {#segmentation}
+
+[!DNL Segmentation Service] consente di segmentare i dati memorizzati in [!DNL Experience Platform] che si riferiscono ai singoli utenti (come clienti, potenziali clienti, utenti o organizzazioni) in tipi di pubblico. Puoi creare tipi di pubblico tramite definizioni di segmenti o altre origini dai tuoi dati di [!DNL Real-Time Customer Profile]. Questi tipi di pubblico sono configurati e gestiti centralmente in [!DNL Platform] e sono facilmente accessibili da qualsiasi soluzione Adobe.
+
+**Funzioni aggiornate**
+
+| Funzione | Descrizione |
+| ------- | ----------- |
+| Dettagli dell’acquisizione | Per i tipi di pubblico con origine di caricamento Personalizzata, puoi visualizzare in modo più completo i dettagli dell’acquisizione del pubblico nella pagina dei dettagli del pubblico. Inoltre, puoi applicare le etichette agli attributi del payload selezionando lo schema e selezionando gli attributi desiderati per l’etichettatura. Ulteriori informazioni sulla sezione dei dettagli di acquisizione sono disponibili nella [guida di Audience Portal](../../segmentation/ui/audience-portal.md#ingestion-details). |
+
+{style="table-layout:auto"}
+
+Per ulteriori informazioni su [!DNL Segmentation Service], consulta la [Panoramica sulla segmentazione](../../segmentation/home.md).
 
 ## Origini
 
