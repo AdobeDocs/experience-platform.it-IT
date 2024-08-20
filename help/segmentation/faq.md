@@ -2,9 +2,9 @@
 title: Domande frequenti sui tipi di pubblico
 description: Trova le risposte alle domande più frequenti su tipi di pubblico e altri concetti correlati alla segmentazione.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 2d15ba41ff326034a6f9a32301f67f5d3b2a1c14
+source-git-commit: 29d9445e6e71c60f4b596a5e645a56d2b70e133c
 workflow-type: tm+mt
-source-wordcount: '4362'
+source-wordcount: '4235'
 ht-degree: 0%
 
 ---
@@ -33,14 +33,7 @@ Per caricare tipi di pubblico generati esternamente, devi disporre delle autoriz
 
 ### Cosa succede quando carico un pubblico generato esternamente?
 
-Quando carichi un pubblico generato esternamente, vengono creati i seguenti elementi:
-
-- Set di dati
-   - Il set di dati sarà visibile all&#39;interno dell&#39;inventario dei set di dati e il nome del set di dati sarà **uguale** come nome del pubblico generato esternamente e caricato.
-- Processo batch
-   - Un processo batch **verrà eseguito automaticamente** quando si carica un pubblico generato esternamente. Ciò significa che **non** deve attendere l&#39;esecuzione del processo di segmentazione giornaliero per attivare il pubblico generato esternamente.
-- Schema ad hoc
-   - Verrà creato uno schema XDM **new** da utilizzare con il pubblico generato esternamente. Ai campi in questo schema XDM viene assegnato un namespace per l’utilizzo con il set di dati creato a sua volta.
+Quando carichi un pubblico generato esternamente, viene creato un set di dati che sarà visibile nell’inventario dei set di dati. Il nome del set di dati sarà **uguale** come nome del pubblico generato esternamente e caricato.
 
 ### Di cosa è composto un pubblico generato esternamente e cosa accade a questi dati quando vengono importati in Platform?
 
@@ -91,12 +84,6 @@ Il criterio di unione predefinito specifico per l’organizzazione viene applica
 ### Dove posso attivare i tipi di pubblico generati esternamente in?
 
 Un pubblico generato esternamente può essere mappato su qualsiasi destinazione e utilizzato nelle campagne Adobe Journey Optimizer.
-
-### Quando saranno pronti per l’attivazione i tipi di pubblico generati esternamente?
-
-Se attivati in una destinazione di streaming, i dati del pubblico generato esternamente saranno disponibili entro due ore.
-
-Se attivati in una destinazione batch, i dati del pubblico generato esternamente verranno sincronizzati con il successivo processo di segmentazione di 24 ore.
 
 ### Posso eliminare un pubblico generato esternamente?
 
