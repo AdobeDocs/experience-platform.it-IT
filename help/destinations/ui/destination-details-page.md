@@ -3,9 +3,9 @@ keywords: destinazioni;destinazione;pagina dettagli destinazioni;pagina dettagli
 title: Visualizzare i dettagli della destinazione
 description: La pagina dei dettagli di una singola destinazione fornisce una panoramica dei dettagli della destinazione. I dettagli della destinazione includono il nome della destinazione, l’ID, i tipi di pubblico mappati sulla destinazione e i controlli per modificare l’attivazione e abilitare e disabilitare il flusso di dati.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 9ebdf6e675ddfe03f43b56ed10f625a7d000a662
+source-git-commit: 47d0e2a7fae973edfda035d046f66c88d34bf8b2
 workflow-type: tm+mt
-source-wordcount: '1310'
+source-wordcount: '1286'
 ht-degree: 0%
 
 ---
@@ -144,11 +144,7 @@ Per rimuovere più tipi di pubblico dai flussi di attivazione esistenti, selezio
 
 ![Nella schermata dei dati di attivazione è evidenziata l&#39;opzione Rimuovi tipi di pubblico.](../assets/ui/details-page/bulk-remove-audiences.png)
 
-### [!BADGE Beta]{type=Informative} Esporta più file su richiesta in destinazioni batch {#bulk-export}
-
->[!NOTE]
->
-Questa funzione è in versione beta ed è disponibile solo per alcuni clienti. Per richiedere l’accesso a questa funzione, contatta il rappresentante del tuo Adobe.
+### Esportare più file on-demand in destinazioni batch {#bulk-export}
 
 Puoi [esportare più file on-demand](../ui/export-file-now.md) dalla pagina **[!UICONTROL Dati attivazione]**. A questo scopo, seleziona i tipi di pubblico per i quali desideri esportare i file su richiesta e seleziona il controllo **[!UICONTROL Esporta file ora]** per attivare un&#39;esportazione una tantum che distribuirà un file per ogni pubblico selezionato nella destinazione batch.
 
@@ -162,7 +158,7 @@ Per modificare la pianificazione di attivazione esistente di più tipi di pubbli
 
 >[!NOTE]
 >
-Per informazioni dettagliate sull&#39;esplorazione della pagina dei dettagli di un pubblico, consulta la [panoramica di Audience Portal](../../segmentation/ui/audience-portal.md#segment-details).
+>Per informazioni dettagliate sull&#39;esplorazione della pagina dei dettagli di un pubblico, consulta la [panoramica di Audience Portal](../../segmentation/ui/audience-portal.md#segment-details).
 
 ### Modificare i nomi dei file per più tipi di pubblico esportati in destinazioni batch {#bulk-edit-file-names}
 
