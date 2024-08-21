@@ -1,16 +1,17 @@
 ---
-title: (Beta) Esportare file on-demand in destinazioni batch utilizzando l’interfaccia utente di Experience Platform
+title: Esportare file on-demand in destinazioni batch utilizzando l’interfaccia utente di Experience Platform
 type: Tutorial
 description: Scopri come esportare file on-demand in destinazioni batch utilizzando l’interfaccia utente di Experience Platform.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: 64833e29d062225bc774a14ae60b102b293bb5c4
+source-git-commit: 97ae720fa4d081fcf8d6b84c81a2131e55b9b1b5
 workflow-type: tm+mt
-source-wordcount: '722'
+source-wordcount: '720'
 ht-degree: 8%
 
 ---
 
-# (Beta) Esportare file on-demand in destinazioni batch utilizzando l’interfaccia utente di Experience Platform
+
+# Esportare file on-demand in destinazioni batch utilizzando l’interfaccia utente di Experience Platform
 
 >[!IMPORTANT]
 >

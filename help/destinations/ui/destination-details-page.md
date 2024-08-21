@@ -3,9 +3,9 @@ keywords: destinazioni;destinazione;pagina dettagli destinazioni;pagina dettagli
 title: Visualizzare i dettagli della destinazione
 description: La pagina dei dettagli di una singola destinazione fornisce una panoramica dei dettagli della destinazione. I dettagli della destinazione includono il nome della destinazione, l’ID, i tipi di pubblico mappati sulla destinazione e i controlli per modificare l’attivazione e abilitare e disabilitare il flusso di dati.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 9ebdf6e675ddfe03f43b56ed10f625a7d000a662
 workflow-type: tm+mt
-source-wordcount: '1189'
+source-wordcount: '1310'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Per visualizzare ulteriori dettagli su una destinazione esistente, segui la proc
 
    ![Sfoglia destinazioni](../assets/ui/details-page/browse-destinations.png)
 
-2. Seleziona l&#39;icona del filtro ![Icona filtro](/help/images/icons/filter.png) in alto a sinistra per avviare il pannello di ordinamento. Il pannello Ordinamento fornisce un elenco di tutte le destinazioni. Puoi selezionare più di una destinazione dall’elenco per visualizzare una selezione filtrata di flussi di dati associati alla destinazione selezionata.
+2. Seleziona l&#39;icona del filtro ![Icona filtro](../../images/icons/filter.png) in alto a sinistra per avviare il pannello di ordinamento. Il pannello Ordinamento fornisce un elenco di tutte le destinazioni. Puoi selezionare più di una destinazione dall’elenco per visualizzare una selezione filtrata di flussi di dati associati alla destinazione selezionata.
 
    ![Filtra destinazioni](../assets/ui/details-page/filter-destinations.png)
 
@@ -103,33 +103,52 @@ Per ulteriori informazioni, consulta le informazioni su [il flusso di dati viene
 
 Per l&#39;esecuzione del flusso di dati in destinazioni basate su file, la **[!UICONTROL durata elaborazione]** dipende dalle dimensioni dei dati esportati e dal caricamento del sistema. Inoltre, il flusso di dati viene eseguito su destinazioni basate su file e viene suddiviso per pubblico.
 
-![L&#39;immagine del flusso di dati esegue la pagina con la colonna Tempo di elaborazione evidenziata per una destinazione basata su file.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-file-based.png)
+![L&#39;immagine del flusso di dati esegue la pagina con la colonna Tempo di elaborazione evidenziata per una destinazione basata su file.](../assets/ui/details-page/processing-time-dataflow-run-file-based.png)
 
 Per ulteriori informazioni, leggere le informazioni su [il flusso di dati viene eseguito su destinazioni batch (basate su file)](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) nella documentazione di monitoraggio.
 
 ## [!UICONTROL Dati attivazione] {#activation-data}
 
-Nella scheda [!UICONTROL Dati attivazione] viene visualizzato un elenco dei tipi di pubblico mappati sulla destinazione, inclusa la data di inizio e di fine (se applicabile) e altre informazioni rilevanti per l&#39;esportazione dei dati, come tipo di esportazione, pianificazione e frequenza. Per visualizzare i dettagli di un particolare pubblico, selezionane il nome dall’elenco.
+Nella scheda **[!UICONTROL Dati attivazione]** viene visualizzato un elenco dei tipi di pubblico mappati sulla destinazione, inclusa la data di inizio e di fine (se applicabile) e altre informazioni rilevanti per l&#39;esportazione dei dati, come tipo di esportazione, pianificazione e frequenza. Per visualizzare i dettagli di un particolare pubblico, selezionane il nome dall’elenco.
 
 >[!TIP]
 >
 >Per visualizzare e modificare i dettagli sugli attributi e le identità mappate a una destinazione, seleziona **[!UICONTROL Attiva pubblico]** nella [barra a destra](#right-rail).
 
+>[!BEGINSHADEBOX]
+
+Scheda **[!UICONTROL Dati attivazione]** per una destinazione basata su file.
+
 ![Destinazione batch visualizzazione dati attivazione](../assets/ui/details-page/activation-data-batch.png)
+
+>[!ENDSHADEBOX]
+
+
+>[!BEGINSHADEBOX]
+
+Scheda **[!UICONTROL Dati attivazione]** per una destinazione di streaming.
 
 ![Destinazione streaming visualizzazione dati attivazione](../assets/ui/details-page/activation-data-streaming.png)
 
-### [!BADGE Beta]{type=Informative} Rimuovi più tipi di pubblico dai flussi di attivazione {#bulk-remove}
+>[!ENDSHADEBOX]
 
->[!NOTE]
->
-Questa funzione è in versione beta ed è disponibile solo per alcuni clienti. Per richiedere l’accesso a questa funzione, contatta il rappresentante del tuo Adobe.
+### Filtrare i tipi di pubblico attivati {#filter-audiences}
+
+Per filtrare l’elenco dei tipi di pubblico attivati per una destinazione, immetti un nome di pubblico nella casella di ricerca. L’elenco dei tipi di pubblico si aggiorna automaticamente con i risultati della ricerca.
+
+![Casella di ricerca per filtrare i tipi di pubblico.](../assets/ui/details-page/filter-audiences.png)
+
+### Rimuovere più tipi di pubblico dai flussi di attivazione {#bulk-remove}
 
 Per rimuovere più tipi di pubblico dai flussi di attivazione esistenti, selezionare i tipi di pubblico, quindi selezionare **[!UICONTROL Rimuovi tipi di pubblico]**.
 
 ![Nella schermata dei dati di attivazione è evidenziata l&#39;opzione Rimuovi tipi di pubblico.](../assets/ui/details-page/bulk-remove-audiences.png)
 
-### Esportare più file on-demand in destinazioni batch {#bulk-export}
+### [!BADGE Beta]{type=Informative} Esporta più file su richiesta in destinazioni batch {#bulk-export}
+
+>[!NOTE]
+>
+Questa funzione è in versione beta ed è disponibile solo per alcuni clienti. Per richiedere l’accesso a questa funzione, contatta il rappresentante del tuo Adobe.
 
 Puoi [esportare più file on-demand](../ui/export-file-now.md) dalla pagina **[!UICONTROL Dati attivazione]**. A questo scopo, seleziona i tipi di pubblico per i quali desideri esportare i file su richiesta e seleziona il controllo **[!UICONTROL Esporta file ora]** per attivare un&#39;esportazione una tantum che distribuirà un file per ogni pubblico selezionato nella destinazione batch.
 
@@ -144,3 +163,9 @@ Per modificare la pianificazione di attivazione esistente di più tipi di pubbli
 >[!NOTE]
 >
 Per informazioni dettagliate sull&#39;esplorazione della pagina dei dettagli di un pubblico, consulta la [panoramica di Audience Portal](../../segmentation/ui/audience-portal.md#segment-details).
+
+### Modificare i nomi dei file per più tipi di pubblico esportati in destinazioni batch {#bulk-edit-file-names}
+
+Per modificare contemporaneamente i nomi di file esportati di più tipi di pubblico, selezionare i tipi di pubblico desiderati, quindi selezionare **[!UICONTROL Modifica nome file]**. Per informazioni dettagliate su come definire o modificare un nome di file, leggere la sezione su come [configurare i nomi di file](../ui/activate-batch-profile-destinations.md#configure-file-names).
+
+![La schermata dei dati di attivazione evidenzia l&#39;opzione di modifica dei nomi di file per più tipi di pubblico.](../assets/ui/details-page/bulk-edit-file-name.png)

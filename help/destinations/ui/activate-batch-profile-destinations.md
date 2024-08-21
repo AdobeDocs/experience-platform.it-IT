@@ -3,9 +3,9 @@ title: Attivare i tipi di pubblico per le destinazioni di esportazione dei profi
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico disponibili in Adobe Experience Platform inviandoli a destinazioni basate su profili in batch.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: d7a530c5ec2cad37b93273f5843609110d61cbfc
+source-git-commit: 85b69af6fd21cfa9712e9c57593cbf00a62837c8
 workflow-type: tm+mt
-source-wordcount: '4077'
+source-wordcount: '4202'
 ht-degree: 13%
 
 ---
@@ -110,6 +110,10 @@ Experience Platform imposta automaticamente una pianificazione predefinita per o
 
 ![Il controllo Modifica pianificazione è evidenziato nel passaggio Pianificazione.](../assets/ui/activate-batch-profile-destinations/edit-default-schedule.png)
 
+Per modificare più pianificazioni contemporaneamente, selezionare i tipi di pubblico utilizzando le caselle di controllo sul lato sinistro della schermata, quindi selezionare **[!UICONTROL Modifica pianificazione]**. La pianificazione configurata verrà quindi applicata a tutti i file esportati per i tipi di pubblico selezionati.
+
+![Immagine dell&#39;interfaccia utente di Experience Platform che mostra l&#39;opzione Modifica pianificazione per più tipi di pubblico selezionati.](../assets/ui/activate-batch-profile-destinations/edit-schedule.png)
+
 >[!TIP]
 >
 >Puoi modificare le pianificazioni di attivazione del pubblico per i flussi di attivazione esistenti dalla pagina **[!UICONTROL Dati di attivazione]**. Per informazioni dettagliate, consulta la documentazione sulle [pianificazioni di attivazione per la modifica in blocco](../ui/destination-details-page.md#bulk-edit-schedule).
@@ -200,7 +204,7 @@ Selezionare **[!UICONTROL Esporta file incrementali]** per attivare un&#39;espor
 
 4. Seleziona **[!UICONTROL Crea]** per salvare la pianificazione.
 
-### Configurare nomi file
+### Configurare nomi file {#configure-file-names}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_filename"
@@ -234,6 +238,10 @@ Il nome di destinazione e l’ID del pubblico non possono essere rimossi dai nom
 | **[!UICONTROL Nome sandbox]** | ID della sandbox utilizzato per esportare il pubblico. |
 
 {style="table-layout:auto"}
+
+Per modificare più nomi di file contemporaneamente, selezionare il pubblico utilizzando le caselle di controllo sul lato sinistro dello schermo, quindi selezionare **[!UICONTROL Modifica nome file]**. Le opzioni di nome file configurate verranno quindi applicate a tutti i file esportati per i tipi di pubblico selezionati.
+
+![Immagine dell&#39;interfaccia utente di Experience Platform che mostra l&#39;opzione Modifica nome file per più tipi di pubblico selezionati.](../assets/ui/activate-batch-profile-destinations/edit-file-name.png)
 
 Seleziona **[!UICONTROL Applica modifiche]** per confermare la selezione.
 
