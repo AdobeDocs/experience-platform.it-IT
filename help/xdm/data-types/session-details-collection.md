@@ -2,10 +2,10 @@
 title: Tipo di dati raccolta dettagli sessione
 description: Scopri il tipo di dati Experience Data Model (XDM) della raccolta dei dettagli della sessione.
 exl-id: ffe6bcf7-61e1-4f7a-ba95-7fcb78683cc9
-source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
+source-git-commit: 9350cfc299c20bd63a2a559c177b3af02739e5b9
 workflow-type: tm+mt
-source-wordcount: '926'
-ht-degree: 15%
+source-wordcount: '857'
+ht-degree: 16%
 
 ---
 
@@ -31,7 +31,6 @@ La raccolta [!UICONTROL Dettagli sessione] è un tipo di dati Experience Data Mo
 | [[!UICONTROL Tipo di contenuto broadcast]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-type) | `contentType` | Stringa | Sì | Il [!UICONTROL tipo di contenuto broadcast] della consegna del flusso. I valori disponibili per [!UICONTROL Tipo di flusso] includono:<br>Audio: &quot;canzone&quot;, &quot;podcast&quot;, &quot;audiobook&quot; e &quot;radio&quot;;<br>Video: &quot;VoD&quot;, &quot;Live&quot;, &quot;Linear&quot;, &quot;UGC&quot; e &quot;DVoD&quot;.<br>I clienti possono fornire valori personalizzati per questo parametro. |
 | [[!UICONTROL Rete di trasmissione]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#network) | `network` | Stringa | No | Nome della rete o del canale. |
 | [[!UICONTROL Canale contenuto]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-channel) | `channel` | Stringa | Sì | [!UICONTROL Canale contenuto] è il canale di distribuzione da cui è stato riprodotto il contenuto. |
-| [[!UICONTROL Completamenti contenuto]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-complete) | `isCompleted` | Booleano | No | [!UICONTROL Completamenti contenuto] indica se una risorsa multimediale a tempo è stata guardata fino al completamento. Questo evento non significa necessariamente che lo spettatore abbia guardato l&#39;intero video; potrebbe aver saltato delle parti per andare avanti. |
 | [!UICONTROL Rete di distribuzione dei contenuti] | `cdn` | Stringa | No | [!UICONTROL Rete di distribuzione dei contenuti] del contenuto riprodotto. |
 | [[!UICONTROL ID contenuto]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-id) | `name` | stringa | Sì | [!UICONTROL ID contenuto] è un identificatore univoco del contenuto. Può essere utilizzato per effettuare il collegamento ad altri ID di settore o CMS. |
 | [[!UICONTROL Nome contenuto]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-name-(variable)) | `friendlyName` | Stringa | No | Il [!UICONTROL Nome contenuto] è il nome &quot;descrittivo&quot; (leggibile dall&#39;utente) del contenuto. |
@@ -45,7 +44,6 @@ La raccolta [!UICONTROL Dettagli sessione] è un tipo di dati Experience Data Mo
 | [[!UICONTROL Genere]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#genre) | `genre` | Stringa | No | Tipo o raggruppamento di contenuti definiti dal produttore del contenuto. I valori devono essere delimitati da virgole nell’implementazione delle variabili. |
 | [[!UICONTROL File multimediali autorizzati]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#authorized) | `authorized` | Stringa | No | Conferma se l’utente è stato autorizzato tramite l’autenticazione Adobe. |
 | [[!UICONTROL Lunghezza contenuto multimediale]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-length-(variable)) | `length` | Intero | Sì | La [!UICONTROL lunghezza contenuto multimediale] contiene la lunghezza/runtime della clip, ovvero la lunghezza massima (o durata) del contenuto utilizzato, in secondi. |
-| [[!UICONTROL Avvio file multimediale]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#media-starts) | `isViewed` | Booleano | No | Evento di caricamento del file multimediale. Ciò si verifica quando il visualizzatore seleziona il pulsante di riproduzione. Questo conta anche se ci sono annunci pre-roll, buffering, errori e così via. |
 | [[!UICONTROL Identificatore MVPD]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#mvpd) | `mvpd` | Stringa | No | Identificatore MVPD (Multi-Channel Video Programming Distributor) fornito tramite l’autenticazione Adobe. |
 | [[!UICONTROL Editore]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#publisher) | `publisher` | Stringa | No | Nome dell&#39;autore del contenuto audio. |
 | [[!UICONTROL Stazione radio]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#station) | `station` | Stringa | No | Il nome della stazione radio su cui viene riprodotto l’audio. |
@@ -60,10 +58,3 @@ La raccolta [!UICONTROL Dettagli sessione] è un tipo di dati Experience Data Mo
 | [[!UICONTROL Versione]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#sdk-version) | `appVersion` | Stringa | No | Versione SDK utilizzata dal lettore. Questo potrebbe avere qualsiasi valore personalizzato che abbia senso per il lettore. |
 
 {style="table-layout:auto"}
-
-<!-- This is required for sessionStart. 
-Q) How do I indicate that?
-Q) Do you know where to link for:
-Ad Load Type
-Content Delivery Network
- -->

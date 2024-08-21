@@ -2,7 +2,7 @@
 title: Tipo di dati raccolta dettagli pod Advertising
 description: Scopri il tipo di dati Experience Data Model (XDM) della raccolta dei dettagli del pod di Advertising.
 exl-id: 401c393f-aeda-4ecd-89f4-458833190ced
-source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
+source-git-commit: 9350cfc299c20bd63a2a559c177b3af02739e5b9
 workflow-type: tm+mt
 source-wordcount: '160'
 ht-degree: 8%
@@ -16,7 +16,9 @@ ht-degree: 8%
 ![Diagramma del tipo di dati Raccolta informazioni dettagli pod di Advertising.](../images/data-types/advertising-pod-details-collection.png)
 
 | Nome visualizzato | Proprietà | Tipo di dati | Obbligatorio | Descrizione |
-|-----------------------------------------|-----------------|-----------|--------------------------------------------------------------------|
+|-----------------------------------------|-----------------|-----------|----------|---------------------------------------------------------|
 | [!UICONTROL Annuncio In Posizione Pod] | `index` | intero | Sì | Indice dell’annuncio all’interno dell’inizio dell’interruzione pubblicitaria principale. |
 | [!UICONTROL Nome descrittivo del pod] | `friendlyName` | stringa | No | Il nome facilmente comprensibile dell’interruzione pubblicitaria. |
 | [!UICONTROL Offset pod] | `offset` | intero | Sì | Lo scostamento dell’interruzione pubblicitaria all’interno del contenuto, in secondi. |
+
+{style="table-layout:auto"}

@@ -5,9 +5,9 @@ title: Creare uno schema tramite l’Editor di schema
 type: Tutorial
 description: Questa esercitazione illustra i passaggi necessari per creare uno schema utilizzando Schema Editor all’interno di Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+source-git-commit: f530e4ff755ac89141ee67bef80700b46acf0868
 workflow-type: tm+mt
-source-wordcount: '4922'
+source-wordcount: '4914'
 ht-degree: 1%
 
 ---
@@ -50,7 +50,7 @@ Viene visualizzata la finestra di dialogo [!UICONTROL Crea schema]. In questa fi
 
 ![Finestra di dialogo Crea schema con le opzioni del flusso di lavoro e seleziona evidenziato.](../images/tutorials/create-schema/create-a-schema-dialog.png)
 
-### Creazione manuale o assistita da apprendimento automatico degli schemi {#manual-or-assisted}
+### [!BADGE Beta]{type=Informative} Creazione manuale o assistita da ML dello schema {#manual-or-assisted}
 
 Per informazioni su come utilizzare un algoritmo ML per consigliare una struttura di schema basata su un file caricato, consulta la [guida alla creazione di schemi supportati dall&#39;apprendimento automatico](../ui/ml-assisted-schema-creation.md). Questa guida dell’interfaccia utente si concentra sul flusso di lavoro di creazione manuale.
 
@@ -84,13 +84,13 @@ Verrà visualizzato [!DNL Schema Editor]. Questa è l’area di lavoro su cui co
 
 >[!NOTE]
 >
->Puoi aggiornare il nome visualizzato e la descrizione facoltativa per lo schema dalla barra laterale **[!UICONTROL Proprietà schema]**. Una volta inserito un nuovo nome, l’area di lavoro si aggiorna automaticamente per riflettere il nuovo nome dello schema.
+Puoi aggiornare il nome visualizzato e la descrizione facoltativa per lo schema dalla barra laterale **[!UICONTROL Proprietà schema]**. Una volta inserito un nuovo nome, l’area di lavoro si aggiorna automaticamente per riflettere il nuovo nome dello schema.
 
 ![Editor schema con la classe base e il diagramma schema evidenziati.](../images/tutorials/create-schema/loyalty-members-schema-editor.png)
 
 >[!NOTE]
 >
->È possibile [modificare la classe di uno schema](#change-class) in qualsiasi momento durante il processo di composizione iniziale prima che lo schema sia stato salvato, ma questo deve essere fatto con estrema cautela. I gruppi di campi sono compatibili solo con determinate classi, pertanto la modifica della classe reimposterà l’area di lavoro e tutti i campi aggiunti.
+È possibile [modificare la classe di uno schema](#change-class) in qualsiasi momento durante il processo di composizione iniziale prima che lo schema sia stato salvato, ma questo deve essere fatto con estrema cautela. I gruppi di campi sono compatibili solo con determinate classi, pertanto la modifica della classe reimposterà l’area di lavoro e tutti i campi aggiunti.
 
 ## Aggiungi un gruppo di campi {#field-group}
 
@@ -126,17 +126,17 @@ Viene visualizzata di nuovo l’area di lavoro dello schema. Nella sezione **[!U
 
 >[!NOTE]
 >
->Nell&#39;Editor schema, le classi e i gruppi di campi standard (generati da Adobi) sono indicati con l&#39;icona lucchetto (![Un&#39;icona lucchetto.](/help/images/icons/lock-closed.png). Il lucchetto viene visualizzato nella barra a sinistra accanto al nome della classe o del gruppo di campi, nonché accanto a qualsiasi campo nel diagramma dello schema che fa parte di una risorsa generata dal sistema.
+Nell&#39;Editor schema, le classi e i gruppi di campi standard (generati da Adobi) sono indicati con l&#39;icona lucchetto (![Un&#39;icona lucchetto.](/help/images/icons/lock-closed.png). Il lucchetto viene visualizzato nella barra a sinistra accanto al nome della classe o del gruppo di campi, nonché accanto a qualsiasi campo nel diagramma dello schema che fa parte di una risorsa generata dal sistema.
 >
->![Editor schema con l&#39;icona lucchetto evidenziata](../images/ui/explore/padlock-icon-highlight.png)
+![Editor schema con l&#39;icona lucchetto evidenziata](../images/ui/explore/padlock-icon-highlight.png)
 
-Questo gruppo di campi contribuisce a diversi campi con il nome di primo livello `person` con il tipo di dati &quot;[!UICONTROL Persona]&quot;. Questo gruppo di campi descrive informazioni su un individuo, tra cui nome, data di nascita e genere.
+Questo gruppo di campi contribuisce con il tipo di dati a diversi campi sotto il nome di livello principale `person` "[!UICONTROL Persona]&quot;. Questo gruppo di campi descrive informazioni su un individuo, tra cui nome, data di nascita e genere.
 
 >[!NOTE]
 >
->Tenere presente che i campi possono utilizzare tipi scalari, ad esempio stringa, numero intero, matrice o data, nonché qualsiasi tipo di dati, ovvero un gruppo di campi che rappresenta un concetto comune, definito all&#39;interno di [!DNL Schema Registry].
+I campi possono utilizzare tipi scalari (such come stringa, numero intero, matrice o data), nonché qualsiasi tipo di dati (a gruppo di campi che rappresenta un concetto comune) definito in [!DNL Schema Registry].
 
-Si noti che il campo `name` contiene un tipo di dati &quot;[!UICONTROL Nome completo]&quot;, ovvero descrive un concetto comune e contiene campi secondari correlati al nome come nome, cognome, titolo di cortesia e suffisso.
+Tieni presente che il campo `name` ha un tipo di dati of &quot;[!UICONTROL Nome completo]&quot;, ovvero descrive un concetto comune e contiene campi secondari relativi al nome, ad esempio nome, cognome, titolo di cortesia e suffisso.
 
 Seleziona i diversi campi all’interno dell’area di lavoro per visualizzare eventuali campi aggiuntivi che contribuiscono alla struttura dello schema.
 
@@ -154,7 +154,7 @@ L&#39;area di lavoro viene nuovamente visualizzata con i gruppi di campi aggiunt
 
 ## Definire un gruppo di campi personalizzato {#define-field-group}
 
-Lo schema [!UICONTROL Membri fedeltà] ha lo scopo di acquisire i dati relativi ai membri di un programma fedeltà e il gruppo di campi standard [!UICONTROL Dettagli fedeltà] aggiunto allo schema fornisce la maggior parte di questi elementi, inclusi il tipo di programma, i punti, la data di iscrizione e altro ancora.
+Lo schema [!UICONTROL Membri fedeltà] ha lo scopo di acquisire i dati relativi ai membri di un programma fedeltà e il gruppo di campi [!UICONTROL Dettagli fedeltà] standard aggiunto allo schema fornisce la maggior parte di questi, incluso il tipo di programma, points, data di iscrizione e altro ancora.
 
 Tuttavia, potrebbe esserci uno scenario in cui desideri includere campi personalizzati aggiuntivi non coperti dai gruppi di campi standard per ottenere i casi d’uso. Se aggiungi campi fedeltà personalizzati, puoi scegliere tra due opzioni:
 
@@ -167,7 +167,7 @@ Per creare un nuovo gruppo di campi, seleziona **[!UICONTROL Aggiungi]** nella s
 
 >[!NOTE]
 >
->Come per i nomi delle classi, il nome del gruppo di campi deve essere breve e semplice, e deve descrivere in che modo il gruppo di campi contribuirà allo schema. Anche queste sono univoche, pertanto non potrai riutilizzare il nome e devi assicurarti che sia sufficientemente specifico.
+Come per i nomi delle classi, il nome del gruppo di campi deve essere breve e semplice, e deve descrivere in che modo il gruppo di campi contribuirà allo schema. Anche queste sono univoche, pertanto non potrai riutilizzare il nome e devi assicurarti che sia sufficientemente specifico.
 
 &quot;[!DNL Custom Loyalty Details]&quot; dovrebbe ora essere visualizzato in **[!UICONTROL Gruppi di campi]** sul lato sinistro dell&#39;area di lavoro, ma non sono ancora presenti campi associati ad essa e pertanto non verranno visualizzati nuovi campi in **[!UICONTROL Struttura]**.
 
@@ -183,7 +183,7 @@ Nell&#39;area di lavoro viene visualizzato il segnaposto &quot;[!UICONTROL Campo
 
 ![Editor schema con [!UICONTROL Campo senza titolo] e schema [!UICONTROL Proprietà campo] evidenziati.](../images/tutorials/create-schema/untitled-field.png)
 
-In questo scenario, lo schema deve avere un campo di tipo oggetto che descrive in dettaglio il livello di fedeltà corrente della persona. Utilizzando i controlli nella barra a destra, inizia a creare un campo `loyaltyTier` con tipo &quot;[!UICONTROL Oggetto]&quot; che verrà utilizzato per contenere i campi correlati.
+In questo scenario, lo schema deve avere un object-type field che descrive in dettaglio il livello di fedeltà corrente della persona. Utilizzando i controlli nella barra a destra, inizia a creare un campo `loyaltyTier` con il tipo "[!UICONTROL Oggetto]&quot; che verrà utilizzato per contenere i campi correlati.
 
 In **[!UICONTROL Assegna a]**, è necessario selezionare un gruppo di campi a cui assegnare il campo. Ricorda che tutti i campi dello schema appartengono a una classe o a un gruppo di campi e poiché questo schema utilizza una classe standard, l’unica opzione consiste nel selezionare un gruppo di campi. Inizia a digitare il nome &quot;[!DNL Custom Loyalty Details]&quot;, quindi seleziona il gruppo di campi dall&#39;elenco.
 
@@ -197,9 +197,9 @@ Le modifiche vengono applicate e viene visualizzato l&#39;oggetto `loyaltyTier` 
 
 >[!NOTE]
 >
->La presenza dell’oggetto ID tenant indica che i campi che stai aggiungendo sono contenuti nello spazio dei nomi della tua organizzazione.
+La presenza dell’oggetto ID tenant indica che i campi che stai aggiungendo sono contenuti nello spazio dei nomi della tua organizzazione.
 >
->In altre parole, i campi che stai aggiungendo sono univoci per la tua organizzazione e verranno salvati in [!DNL Schema Registry] in un&#39;area specifica accessibile solo per la tua organizzazione. I campi definiti devono sempre essere aggiunti allo spazio dei nomi del tenant per evitare conflitti con i nomi di altre classi standard, gruppi di campi, tipi di dati e campi.
+In altre parole, i campi che stai aggiungendo sono univoci per la tua organizzazione e verranno salvati in [!DNL Schema Registry] in un&#39;area specifica accessibile solo per la tua organizzazione. I campi definiti devono sempre essere aggiunti allo spazio dei nomi del tenant per evitare conflitti con i nomi di altre classi standard, gruppi di campi e tipi di dati, and campi.
 
 Per iniziare ad aggiungere i sottocampi, seleziona l&#39;icona **più (+)** accanto all&#39;oggetto `loyaltyTier`. Verrà visualizzato un nuovo segnaposto di campo e la sezione **[!UICONTROL Proprietà campo]** sarà visibile sul lato destro dell&#39;area di lavoro.
 
@@ -211,10 +211,10 @@ Ogni campo richiede le seguenti informazioni:
    * Esempio: loyaltyLevel
 * **[!UICONTROL Nome visualizzato]:** Il nome del campo, scritto con tutte le iniziali maiuscole. Questo è il nome che verrà visualizzato nell’area di lavoro durante la visualizzazione o la modifica dello schema.
    * Esempio: livello di fedeltà
-* **[!UICONTROL Tipo]:** Il tipo di dati del campo. Sono inclusi i tipi scalari di base e tutti i tipi di dati definiti in [!DNL Schema Registry]. Esempi: [!UICONTROL Stringa], [!UICONTROL Intero], [!UICONTROL Booleano], [!UICONTROL Persona], [!UICONTROL Indirizzo], [!UICONTROL Numero di telefono], ecc.
+* **[!UICONTROL Tipo]:** Il tipo di dati of il campo. Questo include i tipi scalari di base and qualsiasi tipo di dati defined in [!DNL Schema Registry]. Esempi: [!UICONTROL Stringa], [!UICONTROL Intero], [!UICONTROL Booleano], [!UICONTROL Persona], [!UICONTROL Indirizzo], [!UICONTROL Numero di telefono], ecc.
 * **[!UICONTROL Descrizione]:** Includere una descrizione facoltativa del campo con un massimo di 200 caratteri.
 
-Il primo campo per l&#39;oggetto `loyaltyTier` sarà una stringa denominata `id`, che rappresenta l&#39;ID del livello corrente del membro fedeltà. L’ID del livello sarà univoco per ciascun membro fedeltà, poiché questa società imposta soglie di punti del livello fedeltà diverse per ciascun cliente in base a fattori diversi. Imposta il tipo del nuovo campo su &quot;[!UICONTROL Stringa]&quot; e la sezione **[!UICONTROL Proprietà campo]** viene compilata con diverse opzioni per l&#39;applicazione di vincoli, inclusi il valore predefinito, il formato e la lunghezza massima. Per ulteriori informazioni, consulta la documentazione sulle [best practice per i campi di convalida dei dati](../schema/best-practices.md#data-validation-fields).
+Il primo campo per l&#39;oggetto `loyaltyTier` sarà una stringa denominata `id`, che rappresenta l&#39;ID del livello corrente del membro fedeltà. L’ID del livello sarà univoco per ciascun membro fedeltà, poiché questa società imposta soglie di punti del livello fedeltà diverse per ciascun cliente in base a fattori diversi. Imposta il tipo del nuovo campo to &quot;[!UICONTROL Stringa]&quot; e la sezione **[!UICONTROL Proprietà campo]** vengono compilati con diverse opzioni per l&#39;applicazione di vincoli, inclusi il valore predefinito, il formato e la lunghezza massima. Per ulteriori informazioni, consulta la documentazione sulle [best practice per i campi di convalida dei dati](../schema/best-practices.md#data-validation-fields).
 
 ![Editor schema con i valori delle proprietà del campo per il nuovo campo ID evidenziato.](../images/tutorials/create-schema/string-constraints.png)
 
@@ -238,17 +238,17 @@ Una volta completato, l&#39;oggetto `loyaltyTier` conterrà i campi per `id`, `c
 
 ## Aggiungere un campo enum al gruppo di campi {#enum}
 
-Quando si definiscono i campi in [!DNL Schema Editor], è possibile applicare alcune opzioni aggiuntive ai tipi di campo di base per fornire ulteriori vincoli ai dati che il campo può contenere. I casi di utilizzo per questi vincoli sono illustrati nella tabella seguente:
+Quando si definiscono i campi in [!DNL Schema Editor], è possibile applicare alcune opzioni aggiuntive ai tipi di campo di base in al fine di fornire ulteriori vincoli sui dati che il campo può contenere. I casi di utilizzo per questi vincoli sono illustrati nella tabella seguente:
 
 | Vincolo | Descrizione |
 | --- | --- |
 | [!UICONTROL Obbligatorio] | Indica che il campo è obbligatorio per l’acquisizione dei dati. Eventuali dati caricati in un set di dati basato su questo schema che non contengono questo campo non riusciranno al momento dell’acquisizione. |
-| [!UICONTROL Array] | Indica che il campo contiene una matrice di valori, ciascuno con il tipo di dati specificato. Ad esempio, l&#39;utilizzo di questo vincolo su un campo con tipo di dati &quot;[!UICONTROL String]&quot; specifica che il campo conterrà una matrice di stringhe. |
+| [!UICONTROL Array] | Indica che il campo contiene un array di valori, ciascuno con il tipo di dati specified. Ad esempio, utilizzando questo vincolo su un campo con un tipo di dati of &quot;[!UICONTROL Stringa]&quot; specifica che il campo conterrà una matrice di stringhe. |
 | [!UICONTROL Enum e valori suggeriti] | Un enum indica che questo campo deve contenere uno dei valori di un elenco enumerato di valori possibili. In alternativa, è possibile utilizzare questa opzione solo per fornire un elenco di valori suggeriti per un campo stringa senza vincolare il campo a tali valori. |
 | [!UICONTROL Identità] | Indica che questo campo è un campo di identità. Ulteriori informazioni sui campi di identità sono fornite [più avanti in questa esercitazione](#identity-field). |
 | [!UICONTROL Relazione] | Sebbene sia possibile dedurre le relazioni tra schemi tramite lo schema di unione e [!DNL Real-Time Customer Profile], questo vale solo per gli schemi che condividono la stessa classe. Il vincolo [!UICONTROL Relationship] indica che questo campo fa riferimento all&#39;identità primaria di uno schema basato su una classe diversa, il che implica una relazione tra i due schemi. Per ulteriori informazioni, vedere il tutorial su [definizione di una relazione](./relationship-ui.md). |
 
-{style="table-layout:auto"}
+{style="layout tabella:automatico"}
 
 >[!NOTE]
 >
@@ -284,7 +284,7 @@ In uno schema futuro, è ora possibile assegnare un campo come tipo &quot;[!DNL 
 
 >[!NOTE]
 >
->Puoi anche creare e modificare tipi di dati personalizzati in modo indipendente dalla modifica degli schemi. Per ulteriori informazioni, consulta la guida sulla [creazione e modifica di tipi di dati](../ui/resources/data-types.md).
+Puoi anche creare e modificare tipi di dati personalizzati in modo indipendente dalla modifica degli schemi. Per ulteriori informazioni, consulta la guida sulla [creazione e modifica di tipi di dati](../ui/resources/data-types.md).
 
 ## Cercare e filtrare i campi dello schema
 
@@ -298,7 +298,7 @@ Se cerchi un campo specifico nello schema, puoi anche utilizzare la barra di ric
 
 >[!IMPORTANT]
 >
->La funzione di ricerca tiene conto di tutti i filtri dei gruppi di campi selezionati durante la visualizzazione dei campi corrispondenti. Se in una query di ricerca non vengono visualizzati i risultati previsti, potrebbe essere necessario verificare che non si stia filtrando alcun gruppo di campi rilevante.
+La funzione di ricerca tiene conto di tutti i filtri dei gruppi di campi selezionati durante la visualizzazione dei campi corrispondenti. Se in una query di ricerca non vengono visualizzati i risultati previsti, potrebbe essere necessario verificare che non si stia filtrando alcun gruppo di campi rilevante.
 
 ## Impostare un campo schema come campo identità {#identity-field}
 
@@ -310,15 +310,15 @@ Ad esempio, possono esserci migliaia di membri del programma fedeltà appartenen
 
 >[!IMPORTANT]
 >
->I passaggi descritti di seguito descrivono come aggiungere un descrittore di identità a un campo schema esistente. In alternativa alla definizione di campi di identità all&#39;interno della struttura dello schema stesso, è possibile utilizzare un campo `identityMap` per contenere informazioni sull&#39;identità.
+I passaggi descritti di seguito descrivono come aggiungere un descrittore di identità a un campo schema esistente. In alternativa alla definizione di campi di identità all&#39;interno della struttura dello schema stesso, è possibile utilizzare un campo `identityMap` per contenere informazioni sull&#39;identità.
 >
->Se prevedi di utilizzare `identityMap`, tieni presente che sostituirà qualsiasi identità primaria aggiunta direttamente allo schema. Per ulteriori informazioni, vedere la sezione su `identityMap` nella [guida di base per la composizione dello schema](../schema/composition.md#identityMap).
+Se prevedi di utilizzare `identityMap`, tieni presente che sostituirà qualsiasi identità primaria aggiunta direttamente allo schema. Per ulteriori informazioni, vedere la sezione su `identityMap` nella [guida di base per la composizione dello schema](../schema/composition.md#identityMap).
 
 Selezionare il campo `personalEmail.address` nell&#39;area di lavoro e la casella di controllo **[!UICONTROL Identità]** verrà visualizzata in **[!UICONTROL Proprietà campo]**. Seleziona la casella e viene visualizzata l&#39;opzione per impostarla come **[!UICONTROL Identità primaria]**. Seleziona anche questa casella.
 
 >[!NOTE]
 >
->Ogni schema può contenere un solo campo di identità principale. Una volta impostato un campo schema come identità primaria, se in seguito tenti di impostare un altro campo identità nello schema come principale, riceverai un messaggio di errore.
+Ogni schema può contenere un solo campo di identità principale. Una volta impostato un campo schema come identità primaria, se in seguito tenti di impostare un altro campo identità nello schema come principale, riceverai un messaggio di errore.
 
 Successivamente, devi fornire uno spazio dei nomi **[!UICONTROL Identity]** dall&#39;elenco di spazi dei nomi predefiniti nel menu a discesa. Poiché questo campo è l&#39;indirizzo e-mail del cliente, seleziona &quot;[!UICONTROL E-mail]&quot; dal menu a discesa. Selezionare **[!UICONTROL Applica]** per confermare gli aggiornamenti al campo `personalEmail.address`.
 
@@ -326,7 +326,7 @@ Successivamente, devi fornire uno spazio dei nomi **[!UICONTROL Identity]** dall
 
 >[!NOTE]
 >
->Per un elenco degli spazi dei nomi standard e delle relative definizioni, consulta la [[!DNL Identity Service] documentazione](../../identity-service/troubleshooting-guide.md#standard-namespaces).
+Per un elenco degli spazi dei nomi standard e delle relative definizioni, consulta la [[!DNL Identity Service] documentazione](../../identity-service/troubleshooting-guide.md#standard-namespaces).
 
 Dopo aver applicato la modifica, l&#39;icona di `personalEmail.address` mostra un simbolo di impronta digitale che indica che si tratta di un campo di identità. Il campo è inoltre elencato nella barra a sinistra in **[!UICONTROL Identità]**.
 
@@ -354,7 +354,7 @@ Selezionare **[!UICONTROL Profilo]** e viene visualizzato un messaggio a compars
 
 >[!WARNING]
 >
->Una volta abilitato e salvato uno schema per [!DNL Real-Time Customer Profile], non è possibile disattivarlo.
+Una volta abilitato e salvato uno schema per [!DNL Real-Time Customer Profile], non è possibile disattivarlo.
 
 Seleziona **[!UICONTROL Abilita]** per confermare la scelta. È possibile selezionare di nuovo il profilo **[!UICONTROL Profile]** per disabilitare lo schema, se lo si desidera, ma una volta che lo schema è stato salvato mentre [!DNL Profile] è abilitato, non può più essere disabilitato.
 
@@ -366,20 +366,20 @@ Nell’Editor di schema è inoltre possibile eseguire azioni rapide per copiare 
 
 ### Eliminare uno schema {#delete-a-schema}
 
->[!CONTEXTUALHELP]
->id="platform_schemas_delete_profileenabledwithdatasets"
->title="Impossibile eliminare lo schema"
->abstract="Impossibile eliminare lo schema perché è stato abilitato per il profilo e presenta set di dati associati."
+[!CONTEXTUALHELP]
+id="platform_schemas_delete_profileenabledwithdatasets"
+title="Impossibile eliminare lo schema"
+abstract="Impossibile eliminare lo schema perché è stato abilitato per il profilo e presenta set di dati associati."
 
->[!CONTEXTUALHELP]
->id="platform_schemas_delete_profileenablednodatasets"
->title="Impossibile eliminare lo schema"
->abstract="Impossibile eliminare lo schema perché è stato abilitato per il profilo."
+[!CONTEXTUALHELP]
+id="platform_schemas_delete_profileenablednodatasets"
+title="Impossibile eliminare lo schema"
+abstract="Impossibile eliminare lo schema perché è stato abilitato per il profilo."
 
->[!CONTEXTUALHELP]
->id="platform_schemas_delete_withdatasetsnotprofileenabled"
->title="Impossibile eliminare lo schema"
->abstract="Impossibile eliminare lo schema perché presenta set di dati associati."
+[!CONTEXTUALHELP]
+id="platform_schemas_delete_withdatasetsnotprofileenabled"
+title="Impossibile eliminare lo schema"
+abstract="Impossibile eliminare lo schema perché presenta set di dati associati."
 
 Uno schema può essere eliminato all&#39;interno dell&#39;interfaccia utente dall&#39;Editor di schema utilizzando [!UICONTROL Altre] azioni e anche dai dettagli dello schema nella scheda [!UICONTROL Sfoglia]. Esistono alcune condizioni che impediscono l’eliminazione di uno schema. Uno schema non può essere eliminato se:
 
@@ -405,7 +405,7 @@ Ora puoi seguire l&#39;esercitazione su [definizione di una relazione di schema 
 
 >[!WARNING]
 >
->L&#39;interfaccia utente di [!DNL Platform] mostrata nei video seguenti non è aggiornata. Per le schermate e le funzionalità più recenti dell’interfaccia utente, consulta la documentazione precedente.
+L&#39;interfaccia utente di [!DNL Platform] mostrata nei video seguenti non è aggiornata. Per le schermate e le funzionalità più recenti dell’interfaccia utente, consulta la documentazione precedente.
 
 Nel video seguente viene illustrato come creare uno schema semplice nell&#39;interfaccia utente [!DNL Platform].
 
@@ -429,6 +429,6 @@ Nelle sezioni seguenti vengono fornite informazioni aggiuntive sull&#39;utilizzo
 
 >[!WARNING]
 >
->La riassegnazione della classe per uno schema deve essere eseguita con estrema cautela. I gruppi di campi sono compatibili solo con determinate classi, pertanto la modifica della classe reimposterà l’area di lavoro e tutti i campi aggiunti.
+La riassegnazione della classe per uno schema deve essere eseguita con estrema cautela. I gruppi di campi sono compatibili solo con determinate classi, pertanto la modifica della classe reimposterà l’area di lavoro e tutti i campi aggiunti.
 
 Per informazioni su come modificare la classe di uno schema, consulta la guida su [gestione degli schemi nell&#39;interfaccia utente](../ui/resources/schemas.md#change-class).

@@ -2,7 +2,7 @@
 title: Tipo di dati per raccolta dettagli Advertising
 description: Scopri il tipo di dati Experience Data Model (XDM) di Advertising Details Collection.
 exl-id: 3f6bf1f9-c728-46af-804a-cb41eb29951b
-source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
+source-git-commit: 9350cfc299c20bd63a2a559c177b3af02739e5b9
 workflow-type: tm+mt
 source-wordcount: '338'
 ht-degree: 14%
@@ -22,7 +22,7 @@ ht-degree: 14%
 >Ogni nome visualizzato contiene un collegamento per ulteriori informazioni sui parametri audio e video. Le pagine collegate contengono dettagli sui dati degli annunci video raccolti da Adobe, i valori di implementazione, i parametri di rete, il reporting e considerazioni importanti.
 
 | Nome visualizzato | Proprietà | Tipo di dati | Obbligatorio | Descrizione |
-|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-----------|----------------------------------------------------------------------------------------------------------------------------------|
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-----------|----------|-----------------------------------------------------------------------------------------------------------------------|
 | [[!UICONTROL Inserzionista]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#advertiser) | `advertiser` | stringa | No | Azienda o marchio il cui prodotto è presentato nell’annuncio. |
 | [[!UICONTROL Campagna pubblicitaria]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#campaign-id) | `campaignID` | stringa | No | ID della campagna pubblicitaria. |
 | [[!UICONTROL ID creatività annuncio]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#creative-id) | `creativeID` | stringa | No | L’ID della creatività dell’annuncio. |
@@ -33,3 +33,5 @@ ht-degree: 14%
 | [[!UICONTROL ID posizionamento annuncio]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#placement-id) | `placementID` | stringa | No | ID di posizionamento dell’annuncio. |
 | [[!UICONTROL Nome Lettore Annuncio]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#ad-player-name) | `playerName` | stringa | Sì | Il nome del lettore responsabile del rendering dell’annuncio. |
 | [[!UICONTROL ID sito annuncio]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#site-id) | `siteID` | stringa | No | ID del sito dell’annuncio. |
+
+{style="table-layout:auto"}

@@ -1,7 +1,7 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Agosto 2024
 description: Note sulla versione di agosto 2024 per Adobe Experience Platform.
-source-git-commit: ab26566cb7f2586d709147686180625db4e920ec
+source-git-commit: d01e16938485f6648cc02ce1674e0e9e84d78147
 workflow-type: tm+mt
 source-wordcount: '1300'
 ht-degree: 21%
@@ -69,11 +69,9 @@ XDM è una specifica open-source che fornisce strutture e definizioni comuni (sc
 
 | Funzione | Descrizione |
 | --- | --- |
-| Flusso di creazione schema assistito da apprendimento automatico | Utilizza algoritmi avanzati di apprendimento automatico per analizzare i file di dati CSV di esempio e creare automaticamente schemi ottimizzati utilizzando campi standard e personalizzati.<br>Caratteristiche principali:<br><ul><li>Creazione più rapida dello schema: genera schemi direttamente da file di dati di esempio utilizzando campi XDM consigliati e generati da XML.</li><li>Flexible Schema Evolution: consente di aggiungere o aggiornare facilmente i campi nello schema generato.</li><li>Integrazione perfetta: completamente integrato con il flusso di creazione dello schema di base nell’URL dello schema, per un’esperienza utente fluida e coesa.</li><li>Revisione e modifica efficienti: visualizza e aggiorna rapidamente lo schema utilizzando l’editor Flat View, rendendo il processo di creazione più efficiente e semplice da usare.</li></ul> |
+| Flusso di creazione schema assistito da apprendimento automatico | Utilizza algoritmi avanzati di apprendimento automatico per analizzare i file di dati di esempio e creare automaticamente schemi ottimizzati utilizzando campi standard e personalizzati.<br>Caratteristiche principali:<br><ul><li>Creazione più rapida dello schema: genera schemi direttamente da file di dati di esempio utilizzando campi XDM consigliati e generati da XML.</li><li>Flexible Schema Evolution: consente di aggiungere o aggiornare facilmente i campi nello schema generato.</li><li>Integrazione perfetta: completamente integrato con il flusso di creazione dello schema di base nell’URL dello schema, per un’esperienza utente fluida e coesa.</li><li>Revisione e modifica efficienti: visualizza e aggiorna rapidamente lo schema utilizzando l’editor Flat View, rendendo il processo di creazione più efficiente e semplice da usare.</li></ul><br>Per ulteriori informazioni, consulta la [Guida al flusso di lavoro per la creazione di schemi assistiti da ML](../../xdm/ui/ml-assisted-schema-creation.md). |
 
 {style="table-layout:auto"}
-
-Per ulteriori informazioni, consulta la panoramica sulla creazione di schemi assistiti da [ML](../../xdm/ui/ml-assisted-schema-creation.md)
 
 Per ulteriori informazioni su XDM in Platform, consulta la [Panoramica sul sistema XDM](../../xdm/home.md).
 

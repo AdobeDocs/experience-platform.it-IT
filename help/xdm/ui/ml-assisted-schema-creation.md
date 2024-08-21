@@ -1,14 +1,19 @@
 ---
 title: Creazione di schemi assistiti da apprendimento automatico
 description: Scopri come creare schemi nell’interfaccia utente di Experience Platform.
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+badgeBeta: label="Beta" type="Informative"
+source-git-commit: f1db409a2af34ac66c81d7e5a11ee1bc8e5f4c9c
 workflow-type: tm+mt
-source-wordcount: '978'
-ht-degree: 1%
+source-wordcount: '996'
+ht-degree: 2%
 
 ---
 
 # Creazione di schemi assistiti da apprendimento automatico
+
+>[!AVAILABILITY]
+>
+>* La creazione di schemi assistiti da apprendimento automatico è attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
 
 Utilizza gli algoritmi ML per generare uno schema dai dati di esempio. Questo processo consente di risparmiare tempo e migliorare la precisione durante la definizione della struttura, dei campi e dei tipi di dati per set di dati complessi di grandi dimensioni.
 
