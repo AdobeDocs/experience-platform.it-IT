@@ -1,7 +1,7 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Agosto 2024
 description: Note sulla versione di agosto 2024 per Adobe Experience Platform.
-source-git-commit: f3004071f7e023cc3ddc8b5a4c8fefd5636fd9a8
+source-git-commit: cbfbac0ad2e43424b22a283d1a2f55bdcb11159b
 workflow-type: tm+mt
 source-wordcount: '1086'
 ht-degree: 24%
@@ -28,7 +28,7 @@ Aggiornamenti alle funzioni e alla documentazione esistenti in Experience Platfo
 
 [!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 
-**Funzionalità nuove o aggiornate** {#destinations-new-updated-functionality}
+**Funzionalità nuova o aggiornata**
 
 | Funzione | Descrizione |
 | ----------- | ----------- |
