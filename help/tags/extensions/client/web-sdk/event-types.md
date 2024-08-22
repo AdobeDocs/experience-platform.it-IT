@@ -3,9 +3,9 @@ title: Tipi di eventi nell’estensione Adobe Experience Platform Web SDK
 description: Scopri come utilizzare i tipi di evento forniti dall’estensione Adobe Experience Platform Web SDK in Adobe Experience Platform Launch.
 solution: Experience Platform
 exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 666e8c6fcccf08d0841c5796677890409b22d794
 workflow-type: tm+mt
-source-wordcount: '1006'
+source-wordcount: '1127'
 ht-degree: 0%
 
 ---
@@ -260,3 +260,14 @@ if (propositions) {
   // them in some other way.
 }
 ```
+
+## [!UICONTROL Sottoscrivi elementi set di regole] {#subscribe-ruleset-items}
+
+Il tipo di evento **[!UICONTROL Sottoscrivi elementi set di regole]** consente di sottoscrivere le schede di contenuto Adobe Journey Optimizer per una superficie. Ogni volta che i set di regole vengono valutati, il callback fornito a questo comando riceve un oggetto risultato con proposte che contengono i dati della scheda di contenuto.
+
+![Immagine dell&#39;interfaccia utente dei tag di Experience Platform che mostra il tipo di evento Sottoscrivi elementi set di regole.](assets/subscribe-ruleset-items.png)
+
+Questo tipo di evento supporta le seguenti proprietà configurabili:
+
+* **[!UICONTROL Schemi]**: un array di schemi per i quali si desidera effettuare la sottoscrizione alle schede di contenuto. Puoi inserire gli schemi manualmente o fornendo un elemento dati.
+* **[!UICONTROL Superfici]**: array di superfici per le quali si desidera sottoscrivere schede di contenuto. Potete immettere le superfici manualmente o fornendo un elemento dati.
