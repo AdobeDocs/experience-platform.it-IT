@@ -1,9 +1,9 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Agosto 2024
 description: Note sulla versione di agosto 2024 per Adobe Experience Platform.
-source-git-commit: d01e16938485f6648cc02ce1674e0e9e84d78147
+source-git-commit: bc09b03cf34c9da9a93e27b7d1a07b7a3bc7f0aa
 workflow-type: tm+mt
-source-wordcount: '1300'
+source-wordcount: '1352'
 ht-degree: 21%
 
 ---
@@ -44,6 +44,14 @@ Per ulteriori informazioni sul controllo degli accessi basato su attributi, vede
 ## Destinazioni {#destinations}
 
 [!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
+
+**Destinazioni nuove o aggiornate** {#new-updated-destinations}
+
+| Destinazione | Descrizione |
+| ----------- | ----------- |
+| [Braze](/help/destinations/catalog/mobile-engagement/braze.md) | [!UICONTROL Braze] gestisce una serie di istanze diverse per il dashboard e gli endpoint REST. I clienti [!UICONTROL Braze] devono utilizzare l&#39;endpoint REST corretto in base all&#39;istanza a cui è stato eseguito il provisioning. Questa versione aggiunge un nuovo endpoint US-07 che puoi selezionare quando ti connetti a [!UICONTROL Braze]. |
+
+{style="table-layout:auto"}
 
 **Funzionalità nuove o aggiornate** {#destinations-new-updated-functionality}
 
