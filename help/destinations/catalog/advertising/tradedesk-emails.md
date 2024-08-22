@@ -3,9 +3,9 @@ title: (Beta) Il Trade Desk - Connessione CRM
 description: Attiva i profili nel tuo account di Trade Desk per il targeting e l’eliminazione del pubblico in base ai dati CRM.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 3c645ccf5b9dd17e4c3cc1267b60a9c4f1131668
 workflow-type: tm+mt
-source-wordcount: '1122'
+source-wordcount: '1148'
 ht-degree: 5%
 
 ---
@@ -26,6 +26,8 @@ ht-degree: 5%
 
 Questo documento è progettato per aiutarti ad attivare i profili nel tuo account [!DNL Trade Desk] per il targeting e l&#39;eliminazione del pubblico in base ai dati CRM.
 
+Questo connettore invia dati all&#39;endpoint di prime parti [!DNL The Trade Desk]. L&#39;integrazione tra Adobe Experience Platform e [!DNL The Trade Desk] non supporta l&#39;esportazione dei dati nell&#39;endpoint di terze parti [!DNL The Trade Desk].
+
 [!DNL The Trade Desk(TTD)] non gestisce direttamente il file di caricamento degli indirizzi e-mail in alcun momento e [!DNL The Trade Desk] non memorizza le e-mail non elaborate (senza hash).
 
 >[!TIP]
@@ -38,7 +40,7 @@ Prima di poter attivare i tipi di pubblico in [!DNL The Trade Desk], è necessar
 
 ## Requisiti di corrispondenza ID {#id-matching-requirements}
 
-A seconda del tipo di ID che acquisisci in Adobe Experience Platform, devi rispettare i requisiti corrispondenti. Per ulteriori informazioni, consulta la [panoramica dello spazio dei nomi delle identità](/help/identity-service/features/namespaces.md).
+A seconda del tipo di ID inseriti in Adobe Experience Platform, devi rispettare i requisiti corrispondenti. Per ulteriori informazioni, consulta la [panoramica dello spazio dei nomi delle identità](/help/identity-service/features/namespaces.md).
 
 ## Identità supportate {#supported-identities}
 
@@ -140,7 +142,7 @@ Selezione dei campi di destinazione:
 
 Per verificare che i dati siano correttamente esportati da Experience Platform in [!DNL The Trade Desk], trovare i tipi di pubblico nella sezione dati di Adobe 1PD all&#39;interno di [!DNL The Trade Desk] Data Management Platform (DMP). Di seguito sono riportati i passaggi per trovare l&#39;ID corrispondente nell&#39;interfaccia utente [!DNL Trade Desk]:
 
-1. Innanzitutto, fai clic sulla scheda **[!UICONTROL Dati]** e controlla **[!UICONTROL Prime parti]**.
+1. Selezionare innanzitutto la scheda **[!UICONTROL Dati]** e rivedere la sezione **[!UICONTROL Prime parti]**.
 2. Scorri verso il basso la pagina, sotto **[!UICONTROL Dati importati]**, troverai **[!UICONTROL Adobe 1PD Tile]**.
 3. Fai clic sul riquadro**[!UICONTROL Adobe 1PD]** e verranno elencati tutti i tipi di pubblico attivati nella destinazione [!DNL Trade Desk] per l&#39;inserzionista. È inoltre possibile utilizzare la funzione di ricerca.
 4. L&#39;ID segmento # dell&#39;Experience Platform verrà visualizzato come Nome segmento nell&#39;interfaccia utente [!DNL Trade Desk].
