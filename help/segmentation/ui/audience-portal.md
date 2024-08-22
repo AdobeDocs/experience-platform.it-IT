@@ -2,9 +2,9 @@
 title: Panoramica di Audience Portal
 description: Scopri come utilizzare Audience Portal per visualizzare, gestire e creare tipi di pubblico in Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 34964bc5af0676872fb472a7309aa99c21efdbc5
+source-git-commit: b59f5ffeb8af6f3bab7ed79189219f39533d2f1b
 workflow-type: tm+mt
-source-wordcount: '4162'
+source-wordcount: '4250'
 ht-degree: 3%
 
 ---
@@ -161,6 +161,18 @@ Per ulteriori informazioni sulla creazione e la gestione dei tag, leggere la [Gu
 #### Cartelle {#folders}
 
 Puoi inserire i tipi di pubblico all’interno delle cartelle per una migliore gestione dell’audience.
+
+Per creare una cartella in cui inserire il pubblico, seleziona **[!UICONTROL Crea cartella]**.
+
+![Il pulsante Crea cartella è evidenziato.](../images/ui/audience-portal/create-folder.png)
+
+>[!NOTE]
+>
+>Puoi creare una cartella solo se ti trovi in un’altra cartella. Ciò significa che **non puoi** creare una cartella se hai selezionato **[!UICONTROL Tutti i tipi di pubblico]** nella barra di navigazione a sinistra.
+
+Viene visualizzato un messaggio che consente di denominare la cartella appena creata. Seleziona **[!UICONTROL Salva]** dopo aver denominato la cartella per completare la creazione. Tieni presente che i nomi **devono** essere univoci per la cartella principale.
+
+![Il pulsante Salva nella finestra di dialogo per la creazione della cartella è evidenziato.](../images/ui/audience-portal/create-folder-dialog.png)
 
 Per spostare un pubblico in una cartella, selezionare **[!UICONTROL Sposta nella cartella]** del pubblico da spostare.
 
