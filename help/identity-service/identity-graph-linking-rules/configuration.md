@@ -3,10 +3,10 @@ title: Guida alla configurazione delle regole di collegamento del grafico delle 
 description: Scopri i passaggi consigliati da seguire per implementare i dati con le configurazioni delle regole di collegamento del grafico delle identità.
 badge: Beta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: e3568aa925661f4f519daf6572fd2df40b163cb5
+source-git-commit: 3d96e057123a4dd0b4f6f34a64a93c756b583c9b
 workflow-type: tm+mt
-source-wordcount: '1357'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -76,7 +76,7 @@ Per istruzioni su come creare un set di dati, leggere la [guida dell&#39;interfa
 >
 >* Durante il processo di pre-implementazione, devi assicurarti che gli eventi autenticati che il sistema invierà ad Experience Platform contengano sempre un identificatore di persona, come CRMID.
 >* Durante l’implementazione, devi assicurarti che lo spazio dei nomi univoco con la priorità più elevata sia sempre presente in ogni profilo. Consulta l&#39;[appendice](#appendix) per esempi di scenari di grafo risolti assicurando che ogni profilo contenga lo spazio dei nomi univoco con la priorità più elevata.
->* Se utilizzi il [connettore di origine Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) per acquisire i dati, devi assegnare agli ECID una priorità maggiore rispetto ad AAID perché Identity Service blocca AAID. Dando priorità a ECID, puoi dare istruzioni al servizio Identity di memorizzare gli eventi non autenticati in ECID invece che in AAID.
+>* Se utilizzi il [connettore di origine Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) per acquisire i dati, devi assegnare agli ECID una priorità maggiore rispetto ad AAID perché Identity Service blocca AAID. Dando priorità a ECID, puoi dare istruzioni a Real-Time Customer Profile di memorizzare gli eventi non autenticati in ECID invece che in AAID.
 
 A questo punto, dovresti disporre dei seguenti elementi:
 
