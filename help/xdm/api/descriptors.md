@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Endpoint API per i descrittori
 description: L’endpoint /descriptors nell’API Schema Registry consente di gestire in modo programmatico i descrittori XDM all’interno dell’applicazione Experience.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 44355aa2ddf03b20aca64c6675414b73682bc2b5
+source-git-commit: 866e00459c66ea4678cd98d119a7451fd8e78253
 workflow-type: tm+mt
-source-wordcount: '1919'
+source-wordcount: '1920'
 ht-degree: 2%
 
 ---
@@ -291,7 +291,7 @@ La sezione seguente fornisce informazioni aggiuntive sull&#39;utilizzo dei descr
 
 >[!NOTE]
 >
->Il numero massimo di descrittori che possono essere applicati a uno schema è 4000.
+>Il numero massimo di descrittori applicabili alla sandbox di un’organizzazione è 4000.
 
 Le sezioni seguenti forniscono una panoramica dei tipi di descrittori disponibili, inclusi i campi obbligatori per la definizione di un descrittore per ciascun tipo.
 
