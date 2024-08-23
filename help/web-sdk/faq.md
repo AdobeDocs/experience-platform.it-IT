@@ -1,10 +1,9 @@
 ---
 title: Domande frequenti su Adobe Experience Platform Web SDK
 description: Risposte alle domande frequenti su Adobe Experience Platform Web SDK.
-exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: cd2ac132c77d5d2e90c0f881d7b89a3c339fed6f
+source-git-commit: ed22c76b2805f1baab2ae3c82e1133e1fd8c9f72
 workflow-type: tm+mt
-source-wordcount: '2184'
+source-wordcount: '2033'
 ht-degree: 2%
 
 ---
@@ -172,33 +171,9 @@ Se al momento sul sito web sono presenti sezioni protette e non protette, ciò p
 
 ## Quali browser supporta Adobe Experience Platform Web SDK?
 
-Adobe Experience Platform Web SDK è progettato per funzionare in modo ottimale nelle versioni più recenti di Google Chrome, Safari, Firefox, Internet Explorer 11 e Microsoft Edge Chromium. Potresti riscontrare problemi nell’utilizzo di alcune funzioni nelle versioni precedenti dei browser.
+Adobe Experience Platform Web SDK è progettato per funzionare in modo ottimale nelle versioni più recenti di Google Chrome, Safari, Firefox e Microsoft Edge Chromium. È possibile che si verifichino problemi durante l&#39;utilizzo di alcune funzionalità nelle versioni precedenti dei browser o nei browser obsoleti, ad esempio Internet Explorer.
 
 ## Dove è possibile ottenere ulteriori informazioni su Adobe Experience Platform Web SDK?
 
 * [Documentazione](/help/web-sdk/home.md)
 * [Codice Source](https://github.com/adobe/alloy)
-
-### Supporto di Internet Explorer {#support-internet-explore}
-
-Questo SDK utilizza le promesse, un metodo per comunicare il completamento di attività asincrone. L&#39;implementazione [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) utilizzata dall&#39;SDK è supportata in modo nativo da tutti i browser di destinazione eccetto [!DNL Internet Explorer]. Per usare l&#39;SDK su [!DNL Internet Explorer], devi avere `window.Promise` [polyfilled](https://remysharp.com/2010/10/08/what-is-a-polyfill).
-
-Per determinare se si dispone già di `window.Promise` polyfill:
-
-1. Apri il tuo sito Web in [!DNL Internet Explorer].
-1. Apri la console di debug del browser.
-1. Digitare `window.Promise` nella console, quindi premere Invio.
-
-Se viene visualizzato qualcosa di diverso da `undefined`, è probabile che `window.Promise` sia già stato polilemizzato. Un altro modo per determinare se `window.Promise` è polyfill consiste nel caricare il sito Web dopo aver completato le istruzioni di installazione di cui sopra. Se l&#39;SDK genera un errore durante il riferimento a qualcosa su una promessa, è probabile che non sia stato eseguito il polyfill di `window.Promise`.
-
-Se hai stabilito che devi eseguire il polyfill di `window.Promise`, includi il seguente tag di script sopra il codice di base fornito in precedenza:
-
-```html
-<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
-```
-
-Questo tag carica uno script che garantisce che `window.Promise` sia un&#39;implementazione Promise valida.
-
->[!NOTE]
->
->Se scegli di caricare un&#39;implementazione Promise diversa, assicurati che supporti `Promise.prototype.finally`.
