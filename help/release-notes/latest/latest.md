@@ -1,9 +1,9 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Agosto 2024
 description: Note sulla versione di agosto 2024 per Adobe Experience Platform.
-source-git-commit: bc09b03cf34c9da9a93e27b7d1a07b7a3bc7f0aa
+source-git-commit: 6d91112654d08dd31e5334982e534ec42d9fc226
 workflow-type: tm+mt
-source-wordcount: '1352'
+source-wordcount: '1502'
 ht-degree: 21%
 
 ---
@@ -19,6 +19,7 @@ ht-degree: 21%
 Aggiornamenti alle funzioni e alla documentazione esistenti in Experience Platform:
 
 - [Controllo degli accessi basato su attributi](#abac)
+- [Acquisizione dei dati](#data-ingestion)
 - [Destinazioni](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Identity Service](#identity-service)
@@ -40,6 +41,19 @@ Tramite il controllo dell’accesso basato su attributi, gli amministratori dell
 {style="table-layout:auto"}
 
 Per ulteriori informazioni sul controllo degli accessi basato su attributi, vedere la [panoramica sul controllo degli accessi basato su attributi](../../access-control/abac/overview.md). Per una guida completa sul flusso di lavoro di controllo degli accessi basato su attributi, leggere la [guida end-to-end per il controllo degli accessi basato su attributi](../../access-control/abac/end-to-end-guide.md).
+
+## Acquisizione dei dati (aggiornato il 23 agosto) {#data-ingestion}
+
+Adobe Experience Platform offre un set completo di funzioni per acquisire qualsiasi tipo e latenza di dati. Puoi acquisire utilizzando le API Batch o Streaming, le origini create da Adobe, i partner di integrazione dei dati o l’interfaccia utente di Adobe Experience Platform.
+
+**Aggiornamento della gestione del formato della data nell&#39;acquisizione dei dati batch**
+
+Questa versione risolve un problema con la *gestione del formato data* nell&#39;acquisizione di dati batch. In precedenza, il sistema trasformava i campi data inseriti dai client come `Date` nel formato `DateTime`. Ciò significa che il fuso orario è stato aggiunto automaticamente ai campi e ha causato problemi agli utenti che preferivano o richiedevano il formato `Date`. In futuro, il fuso orario non verrà aggiunto automaticamente ai campi di tipo `Date`. Questo aggiornamento garantisce che il formato dei dati esportati corrisponda al formato rappresentato nel profilo per quel campo come richiesto dai clienti.
+
+`Date` campi prima della versione: `"birthDate": "2018-01-12T00:00:00Z"`
+`Date` campi dopo il rilascio: `"birthDate": "2018-01-12"`
+
+Ulteriori informazioni sull&#39;[acquisizione batch](/help/ingestion/batch-ingestion/overview.md).
 
 ## Destinazioni {#destinations}
 
