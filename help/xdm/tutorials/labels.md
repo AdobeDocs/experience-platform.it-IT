@@ -2,9 +2,9 @@
 title: Gestire le etichette di utilizzo dati per uno schema
 description: Scopri come aggiungere etichette di utilizzo dei dati ai campi dello schema Experience Data Model (XDM) nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: 37395e5762c8d54e6fca5c3502bdbf56f5b5472c
+source-git-commit: 22233d2bda488aa223555f85215be31d007eaa37
 workflow-type: tm+mt
-source-wordcount: '806'
+source-wordcount: '804'
 ht-degree: 8%
 
 ---
@@ -19,7 +19,7 @@ Tutti i dati inseriti in Adobe Experience Platform sono vincolati dagli schemi E
 
 Un’etichetta applicata a un campo schema indica i criteri di utilizzo che si applicano ai dati contenuti in quel campo specifico.
 
-Le etichette possono essere applicate a singoli schemi e campi all’interno di tali schemi. Quando le etichette vengono applicate direttamente a uno schema, vengono propagate a tutti i set di dati esistenti e futuri basati su tale schema.
+Le etichette possono essere applicate a singoli schemi e ai campi all’interno di tali schemi. Quando le etichette vengono applicate direttamente a uno schema, vengono propagate a tutti i set di dati esistenti e futuri basati su tale schema.
 
 Inoltre, qualsiasi etichetta di campo aggiunta in uno schema si propaga a tutti gli altri schemi che utilizzano lo stesso campo da una classe o un gruppo di campi condiviso. Questo consente di garantire che le regole di utilizzo per campi simili siano coerenti nell’intero modello di dati.
 

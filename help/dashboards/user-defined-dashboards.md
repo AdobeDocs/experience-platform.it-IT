@@ -2,7 +2,7 @@
 title: Dashboard personalizzati
 description: Scopri come creare e gestire dashboard personalizzate che consentono di creare, aggiungere e modificare widget personalizzati per visualizzare le metriche chiave.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 2ddfa221ecdebad81343516935e81691021e1fbc
 workflow-type: tm+mt
 source-wordcount: '1624'
 ht-degree: 3%
@@ -37,7 +37,7 @@ Viene visualizzata la finestra di dialogo [!UICONTROL Crea dashboard]. Immettere
 
 ![Finestra di dialogo Crea dashboard.](./images/user-defined-dashboards/create-dashboard-dialog.png)
 
-Gli utenti che hanno acquistato lo SKU di Data Distiller possono utilizzare query SQL personalizzate per ottenere informazioni approfondite. Per istruzioni su questo flusso di lavoro, consulta la [Guida alla creazione di Insight personalizzabile](./data-distiller/customizable-insights/overview.md).
+Gli utenti che hanno acquistato lo SKU di Data Distiller possono utilizzare query SQL personalizzate per ottenere informazioni approfondite. Per istruzioni su questo flusso di lavoro, consulta la [Guida alla creazione di SQL Insight](./data-distiller/sql-insights/overview.md).
 
 La nuova dashboard vuota creata viene visualizzata con il nome scelto nell&#39;angolo superiore sinistro della visualizzazione.
 

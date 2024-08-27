@@ -5,10 +5,10 @@ breadcrumb-title: Guida alle dashboard
 user-guide-description: Scopri come visualizzare i dati in Experience Platform tramite dashboard personalizzabili.
 feature: Dashboards
 role: Developer,User
-source-git-commit: 3ebd17eced73424135fc93a90f05d758912eb7d0
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
-source-wordcount: '132'
-ht-degree: 34%
+source-wordcount: '133'
+ht-degree: 35%
 
 ---
 
@@ -22,15 +22,17 @@ ht-degree: 34%
 * [Scarica dashboard in PDF](download.md)
 * Data Distiller {#data-distiller}
    * [Panoramica](data-distiller/overview.md)
-   * Approfondimenti personalizzabili per report app estesi {#customizable-insights}
-      * [Panoramica](data-distiller/customizable-insights/overview.md)
-      * [Modalità Query Pro (creazione grafico SQL)](data-distiller/customizable-insights/query-pro-mode.md)
+   * Approfondimenti SQl per report app estesi {#sql-insights}
+      * [Panoramica](data-distiller/sql-insights/overview.md)
+   * Modalità Query Pro {#query-pro-mode}
+      * [Panoramica](data-distiller/query-pro-mode/overview.md)
       * Filtri {#filters}
-         * [Filtro data](data-distiller/customizable-insights/filters/date-filter.md)
-         * [Filtro globale](data-distiller/customizable-insights/filters/global-filter.md)
-      * [Visualizza altro](data-distiller/customizable-insights/view-more.md)
-      * [Visualizza SQL](data-distiller/customizable-insights/view-sql.md)
-      * [Scarica come CSV](data-distiller/customizable-insights/download-csv.md)
+         * [Filtro data](data-distiller/query-pro-mode/filters/date-filter.md)
+         * [Filtro globale](data-distiller/query-pro-mode/filters/global-filter.md)
+      * [Visualizza altro](data-distiller/query-pro-mode/view-more.md)
+      * [Visualizza SQL](data-distiller/query-pro-mode/view-sql.md)
+      * [Scarica come CSV](data-distiller/query-pro-mode/download-csv.md)
+      * [Esporta come PDF](data-distiller/query-pro-mode/export-pdf.md)
 * Dashboard disponibili {#guides}
    * [Profili](guides/profiles.md)
    * [Profili account](guides/account-profiles.md)

@@ -2,7 +2,7 @@
 title: Governance dei dati in Query Service
 description: Questa panoramica descrive i principali elementi di governance dei dati in Experience Platform Query Service.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
 source-wordcount: '3129'
 ht-degree: 0%
@@ -93,7 +93,7 @@ La parola chiave `CREATE VIEW` definisce una visualizzazione di una query, ma la
 
 #### Creare restrizioni di accesso basate sul campo per i set di dati accelerati {#create-field-based-access-restrictions-on-accelerated-datasets}
 
-Con la funzionalità di controllo degli accessi [basato su attributi](../../access-control/abac/overview.md) è possibile definire ambiti di utilizzo organizzativi o dati sui set di dati fact e di dimensione nell&#39;[archivio accelerato](../data-distiller/customizable-insights/send-accelerated-queries.md). Questo consente agli amministratori di gestire l’accesso a segmenti specifici e di gestire meglio l’accesso concesso a utenti o gruppi di utenti.
+Con la funzionalità di controllo degli accessi [basato su attributi](../../access-control/abac/overview.md) è possibile definire ambiti di utilizzo organizzativi o dati sui set di dati fact e di dimensione nell&#39;[archivio accelerato](../data-distiller/sql-insights/send-accelerated-queries.md). Questo consente agli amministratori di gestire l’accesso a segmenti specifici e di gestire meglio l’accesso concesso a utenti o gruppi di utenti.
 
 Per creare restrizioni di accesso basate sui campi per i set di dati accelerati, puoi utilizzare le query CTAS di Query Service per creare set di dati accelerati e strutturarli in base a schemi XDM o schemi ad hoc esistenti. Gli amministratori possono quindi [aggiungere e modificare le etichette di utilizzo dei dati per lo schema](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) o [schema ad hoc](./ad-hoc-schema-labels.md#edit-governance-labels). Puoi applicare, creare e modificare le etichette negli schemi dall&#39;area di lavoro [!UICONTROL Etichette] nell&#39;interfaccia utente [!UICONTROL Schemi].
 

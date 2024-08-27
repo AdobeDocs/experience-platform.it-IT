@@ -4,7 +4,7 @@ description: Scopri come utilizzare le query SQL con Real-time Customer Data Pla
 badgeB2B: label="Edizione B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Edizione B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
 source-wordcount: '1155'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Edizione B2C del modello dati di Real-time Customer Data Platform Insights
 
-Il modello dati di Real-time Customer Data Platform Insights per [B2C Edition](../../rtcdp/overview.md#rtcdp-b2c) espone i modelli di dati e le istruzioni SQL che alimentano le informazioni per vari widget di profilo, destinazione e segmentazione. Puoi personalizzare questi modelli di query SQL per creare rapporti di Real-Time CDP per i casi d’uso degli indicatori di prestazioni chiave (KPI, Key Performance Indicator) e di marketing. Queste informazioni possono quindi essere utilizzate come widget personalizzati per le dashboard definite dall’utente. Consulta la documentazione sulle informazioni di reporting per l&#39;archivio accelerato delle query per scoprire [come creare un modello dati per le informazioni di reporting tramite Query Service da utilizzare con dati di archivio accelerato e dashboard definiti dall&#39;utente](../../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md).
+Il modello dati di Real-time Customer Data Platform Insights per [B2C Edition](../../rtcdp/overview.md#rtcdp-b2c) espone i modelli di dati e le istruzioni SQL che alimentano le informazioni per vari widget di profilo, destinazione e segmentazione. Puoi personalizzare questi modelli di query SQL per creare rapporti di Real-Time CDP per i casi d’uso degli indicatori di prestazioni chiave (KPI, Key Performance Indicator) e di marketing. Queste informazioni possono quindi essere utilizzate come widget personalizzati per le dashboard definite dall’utente. Consulta la documentazione sulle informazioni di reporting per l&#39;archivio accelerato delle query per scoprire [come creare un modello dati per le informazioni di reporting tramite Query Service da utilizzare con dati di archivio accelerato e dashboard definiti dall&#39;utente](../../query-service/data-distiller/sql-insights/reporting-insights-data-model.md).
 
 >[!NOTE]
 >

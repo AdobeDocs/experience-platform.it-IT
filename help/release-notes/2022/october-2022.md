@@ -2,7 +2,7 @@
 title: Note sulla versione di Adobe Experience Platform - Ottobre 2022
 description: Note sulla versione di Adobe Experience Platform di ottobre 2022.
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
 source-wordcount: '1135'
 ht-degree: 30%
@@ -101,7 +101,7 @@ Il Servizio query consente di utilizzare SQL standard per eseguire query sui dat
 | Funzione | Descrizione |
 | --- | --- |
 | Monitorare le query tramite l’interfaccia utente di Platform | La scheda Query Service [!UICONTROL Scheduled Queries] fornisce una migliore visibilità dello stato di tutti i processi di query tramite l&#39;interfaccia utente. Dalla scheda [!UICONTROL Query pianificate] è ora possibile trovare informazioni importanti sullo stato delle esecuzioni delle query, inclusi messaggi di errore e codici in caso di esito negativo. Puoi anche abbonarti agli avvisi tramite l’interfaccia utente per ciascuna di queste query in base al loro stato. Per ulteriori informazioni su questa funzione, consulta il [documento sulle query di monitoraggio](../../query-service/ui/monitor-queries.md). |
-| Query del modello dati per informazioni di reporting accelerate | Come parte dello SKU di Data Distiller, lo store con query accelerata consente di ridurre il tempo e la potenza di elaborazione necessari per ottenere informazioni critiche dai dati. Con l’archivio con query accelerata puoi creare un modello di dati personalizzato e/o estendere modelli di dati Adobe Real-time Customer Data Platform esistenti per migliorare le informazioni sul reporting e le relative visualizzazioni. Per ulteriori informazioni su questa funzione, consulta il documento [approfondimenti sul reporting accelerato degli archivi](../../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md). |
+| Query del modello dati per informazioni di reporting accelerate | Come parte dello SKU di Data Distiller, lo store con query accelerata consente di ridurre il tempo e la potenza di elaborazione necessari per ottenere informazioni critiche dai dati. Con l’archivio con query accelerata puoi creare un modello di dati personalizzato e/o estendere modelli di dati Adobe Real-time Customer Data Platform esistenti per migliorare le informazioni sul reporting e le relative visualizzazioni. Per ulteriori informazioni su questa funzione, consulta il documento [approfondimenti sul reporting accelerato degli archivi](../../query-service/data-distiller/sql-insights/reporting-insights-data-model.md). |
 
 {style="table-layout:auto"}
 

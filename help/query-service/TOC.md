@@ -5,7 +5,7 @@ breadcrumb-title: Guida di Query Service
 user-guide-description: Utilizza il linguaggio SQL standard per eseguire query sui dati nel data lake in Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: d2bc580ba1cacdfab45bdc6356c630a63e7d0f6e
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 19%
@@ -27,11 +27,11 @@ ht-degree: 19%
       - [Panoramica](data-distiller/derived-datasets/overview.md)
       - [Creare set di dati derivati con SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
       - [Creare set di dati derivati basati su decile](data-distiller/derived-datasets/decile-based-derived-attributes.md)
-   - Approfondimenti personalizzabili per report app estesi {#customizable-insights}
-      - [Panoramica](data-distiller/customizable-insights/overview.md)
-      - [Modalità query pro](data-distiller/customizable-insights/query-pro-mode.md)
-      - [Inviare query accelerate](data-distiller/customizable-insights/send-accelerated-queries.md)
-      - [Guida al modello dati per insights di reporting](data-distiller/customizable-insights/reporting-insights-data-model.md)
+   - SQL Insights per il reporting esteso dell&#39;app {#sql-insights}
+      - [Panoramica](data-distiller/sql-insights/overview.md)
+      - [Modalità query pro](data-distiller/sql-insights/query-pro-mode.md)
+      - [Inviare query accelerate](data-distiller/sql-insights/send-accelerated-queries.md)
+      - [Guida al modello dati per insights di reporting](data-distiller/sql-insights/reporting-insights-data-model.md)
    - Pipeline di funzionalità IA/ML {#ml-feature-pipelines}
       - [Panoramica](data-distiller/ml-feature-pipelines/overview.md)
       - [Connetti a Jupyter Notebooks](data-distiller/ml-feature-pipelines/establish-connection.md)

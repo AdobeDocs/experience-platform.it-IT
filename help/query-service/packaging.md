@@ -2,7 +2,7 @@
 title: Packaging servizio query
 description: Il documento seguente illustra il pacchetto di funzionalità e prodotti disponibili per Query Service ed evidenzia le differenze tra query ad hoc e batch.
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: 1e18a60478e2755f49d37d4d3bf4bd3ca6dbf23b
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
 source-wordcount: '980'
 ht-degree: 2%
@@ -67,9 +67,9 @@ La tabella seguente illustra gli effetti dell&#39;autorizzazione [!DNL Manage Qu
 
 {style="table-layout:auto"}
 
-### Permessi Approfondimenti personalizzabili rilevanti {#customizable-insights-permissions}
+### Autorizzazioni di SQL Insights rilevanti {#sql-insights-permissions}
 
-Per creare Data Distiller [Informazioni personalizzabili](./data-distiller/customizable-insights/overview.md) all&#39;interno dei dashboard, le seguenti autorizzazioni **devono** essere abilitate in Admin Console.
+Per creare Data Distiller [SQL Insights](./data-distiller/sql-insights/overview.md) nei dashboard, le seguenti autorizzazioni **must** devono essere abilitate in Admin Console.
 
 | Autorizzazione | Funzione |
 |---|---|
