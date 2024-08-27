@@ -3,7 +3,7 @@ title: Algoritmo di ottimizzazione identità
 description: Scopri l’algoritmo di ottimizzazione delle identità in Identity Service.
 badge: Beta
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 8762ea655399fbc82c63c87310337b8e875bd5bc
+source-git-commit: 84ad4a5f522b04430ee304f1a812da25e26f6954
 workflow-type: tm+mt
 source-wordcount: '1533'
 ht-degree: 1%
@@ -68,7 +68,7 @@ Quando il vincolo dello spazio dei nomi univoco viene violato, l’algoritmo di 
 * Il grafico verrà ristabilito in base all’ordine indicato sopra. Se l’aggiunta del collegamento viola il vincolo del limite (ad esempio, il grafico contiene due o più identità con uno spazio dei nomi univoco), i collegamenti vengono rimossi.
 * Il grafico risultante sarà quindi conforme al vincolo dello spazio dei nomi univoco configurato.
 
-![Diagramma che visualizza l&#39;algoritmo di ottimizzazione delle identità.](../images/ido.png)
+![Diagramma che visualizza l&#39;algoritmo di ottimizzazione delle identità.](../images/ido_algorithm.png)
 
 ## Scenari di esempio per l’algoritmo di ottimizzazione delle identità
 
