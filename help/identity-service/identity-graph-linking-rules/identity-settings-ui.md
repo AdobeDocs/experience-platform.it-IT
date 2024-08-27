@@ -3,9 +3,9 @@ title: Interfaccia utente per le impostazioni delle identità
 description: Scopri come utilizzare l’interfaccia utente delle impostazioni di identità.
 badge: Beta
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: 04b04807196bb5902e398403612429eae0de3988
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '529'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ Al termine, seleziona **[!UICONTROL Avanti]**. Viene visualizzato un messaggio d
 
 ![La pagina di convalida con Fine evidenziata.](../images/rules/finish.png)
 
-Viene visualizzato un avviso che indica che le nuove impostazioni non avranno implicazioni sui collegamenti esistenti in un grafo di identità e sui frammenti di profilo di evento esperienza già acquisiti. Inoltre, viene visualizzato un messaggio che informa che sono necessarie fino a sei ore affinché le nuove impostazioni vengano applicate al sistema. Per confermare, immetti il nome della sandbox, quindi seleziona **[!UICONTROL Conferma]**.
+Viene visualizzato un messaggio di avviso che indica che i grafici esistenti saranno interessati dall&#39;algoritmo del grafico solo se i grafici vengono aggiornati **dopo il salvataggio delle impostazioni** e che l&#39;identità primaria dei frammenti di evento nel profilo cliente in tempo reale non verrà aggiornata anche dopo le modifiche della priorità dello spazio dei nomi. Inoltre, ti viene comunicato che saranno necessarie fino a **sei ore** per rendere effettive le nuove impostazioni. Per confermare, immetti il nome della sandbox, quindi seleziona **[!UICONTROL Conferma]**.
 
 ![Finestra di conferma che visualizza un avviso relativo a un ritardo di sei ore prima dell&#39;elaborazione delle configurazioni.](../images/rules/confirm-settings.png)
 
