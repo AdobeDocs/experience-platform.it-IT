@@ -2,9 +2,9 @@
 title: Comportamento di esportazione del profilo
 description: Scopri come il comportamento di esportazione del profilo varia tra i diversi modelli di integrazione supportati nelle destinazioni di Experience Platform.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: 223734e2998568f3b9b78933fa5adf740b521f5f
 workflow-type: tm+mt
-source-wordcount: '2931'
+source-wordcount: '2930'
 ht-degree: 0%
 
 ---
@@ -145,9 +145,11 @@ In una qualsiasi delle situazioni di esportazione precedenti, i file esportati i
 
 ### Esportazioni file incrementali {#incremental-file-exports}
 
-Non tutti gli aggiornamenti di un profilo qualificano un profilo da includere nelle esportazioni di file incrementali. Ad esempio, se un attributo è stato aggiunto o rimosso da un profilo, questo non include il profilo nell’esportazione. Solo i profili per i quali è stato modificato l&#39;attributo `segmentMembership` verranno inclusi nei file esportati. In altre parole, solo se il profilo diventa parte del pubblico o viene rimosso dal pubblico, è incluso nelle esportazioni di file incrementali.
+Non tutti gli aggiornamenti di un profilo qualificano un profilo da includere nelle esportazioni di file incrementali. Ad esempio, se un attributo è stato aggiunto o rimosso da un profilo, questo non include il profilo nell’esportazione.
 
-Analogamente, se una nuova identità (nuovo indirizzo e-mail, numero di telefono, ECID e così via) viene aggiunta a un profilo nel [grafo delle identità](/help/identity-service/features/identity-graph-viewer.md), ciò non rappresenta un motivo per includere il profilo in una nuova esportazione di file incrementale.
+Tuttavia, quando l&#39;attributo `segmentMembership` di un profilo cambia, il profilo verrà incluso nei file esportati. In altre parole, se il profilo diventa parte del pubblico o viene rimosso dal pubblico, viene incluso nelle esportazioni di file incrementali.
+
+Analogamente, se una nuova identità (nuovo indirizzo e-mail, numero di telefono, ECID e così via) viene aggiunta a un profilo nel [grafo delle identità](/help/identity-service/features/identity-graph-viewer.md), il profilo verrà incluso in una nuova esportazione di file incrementale.
 
 L’aggiunta di un nuovo pubblico a una mappatura di destinazione non influisce sulle qualifiche e sulle esportazioni di un altro segmento. Le pianificazioni di esportazione sono configurate singolarmente per pubblico e i file vengono esportati separatamente per ogni segmento, anche se i tipi di pubblico sono stati aggiunti allo stesso flusso di dati di destinazione.
 
@@ -157,10 +159,10 @@ Ad esempio, nell’impostazione di esportazione illustrata di seguito, in cui un
 
 ![Esporta impostazione con diversi attributi selezionati.](/help/destinations/assets/how-destinations-work/export-selection-batch-destination.png)
 
-* Un profilo viene incluso in un’esportazione di file incrementale quando è idoneo o non idoneo per il segmento.
-* Un profilo è *non* incluso in un&#39;esportazione di file incrementale quando viene aggiunto un nuovo numero di telefono al grafico delle identità.
-* Un profilo è *non* incluso in un&#39;esportazione di file incrementale quando il valore di uno qualsiasi dei campi XDM mappati come `xdm: loyalty.points`, `xdm: loyalty.tier`, `xdm: personalEmail.address` viene aggiornato in un profilo.
-* Ogni volta che il campo XDM `segmentMembership.status` è mappato nel flusso di lavoro di attivazione della destinazione, i profili che escono dal pubblico vengono inclusi anche nei file incrementali esportati, con uno stato `exited`.
+* Un profilo *è* incluso in un&#39;esportazione di file incrementale quando è idoneo o non idoneo per il segmento.
+* Un profilo *è* incluso in un&#39;esportazione di file incrementale quando viene aggiunto un nuovo numero di telefono al grafico delle identità.
+* Un profilo *non è* incluso in un&#39;esportazione di file incrementale quando il valore di uno qualsiasi dei campi XDM mappati come `xdm: loyalty.points`, `xdm: loyalty.tier`, `xdm: personalEmail.address` viene aggiornato in un profilo.
+* Ogni volta che il campo XDM `segmentMembership.status` è mappato nel flusso di lavoro di attivazione della destinazione, i profili che escono dal pubblico *sono inclusi* anche nei file incrementali esportati, con uno stato `exited`.
 
 >[!ENDSHADEBOX]
 
@@ -184,7 +186,7 @@ Nella prima esportazione di file dopo la configurazione del flusso di lavoro di 
 
 | Cosa determina un’esportazione di destinazione | Cosa è incluso nel file esportato |
 |---------|----------|
-| <ul><li>La pianificazione di esportazione impostata nell’interfaccia utente o nell’API determina l’inizio di un’esportazione di destinazione.</li><li>Qualsiasi modifica nell’appartenenza a un pubblico di un profilo, che si qualifichi o meno dal segmento, qualifica un profilo da includere nelle esportazioni incrementali. Le modifiche negli attributi o nelle mappe di identità per un profilo *non* qualificano un profilo da includere nelle esportazioni incrementali.</li></ul> | <p>I profili per i quali è stata modificata l’iscrizione al pubblico, insieme alle informazioni più recenti per ogni attributo XDM selezionato per l’esportazione.</p><p>I profili con lo stato di uscita sono inclusi nelle esportazioni di destinazione, se il campo XDM `segmentMembership.status` è selezionato nel passaggio di mappatura.</p> |
+| <ul><li>La pianificazione di esportazione impostata nell’interfaccia utente o nell’API determina l’inizio di un’esportazione di destinazione.</li><li>Eventuali modifiche nell’appartenenza a un pubblico di un profilo, sia che si qualifichi o meno dal segmento, o modifiche nelle mappe di identità, qualificano un profilo da includere nelle esportazioni incrementali. Le modifiche negli attributi per un profilo *non* qualificano un profilo da includere nelle esportazioni incrementali.</li></ul> | <p>I profili per i quali è stata modificata l’iscrizione al pubblico, insieme alle informazioni più recenti per ogni attributo XDM selezionato per l’esportazione.</p><p>I profili con lo stato di uscita sono inclusi nelle esportazioni di destinazione, se il campo XDM `segmentMembership.status` è selezionato nel passaggio di mappatura.</p> |
 
 {style="table-layout:fixed"}
 
