@@ -2,10 +2,10 @@
 description: Scopri come configurare le opzioni di formattazione dei file quando si attivano i dati in destinazioni basate su file
 title: Configurare le opzioni di formattazione dei file per le destinazioni basate su file
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: 0eb17d4d7ad9db3737a14f383bdafe40d59eb12c
+source-git-commit: 4dd6e8685ff5cc61342b20e971216416918b95da
 workflow-type: tm+mt
-source-wordcount: '1193'
-ht-degree: 19%
+source-wordcount: '1228'
+ht-degree: 17%
 
 ---
 
@@ -68,17 +68,21 @@ Visualizza gli esempi seguenti dei contenuti dei file CSV esportati con ciascuna
 >title="Carattere virgolette"
 >abstract="Utilizza questa opzione se desideri rimuovere le virgolette doppie dalle stringhe esportate. Consulta la documentazione per vedere degli esempi di ogni selezione."
 
-Utilizza questa opzione se desideri rimuovere le virgolette doppie dalle stringhe esportate. Le opzioni disponibili sono:
+Utilizzare questa opzione per controllare se le virgolette doppie devono essere rimosse o mantenute all&#39;interno delle stringhe esportate.
+
+Le opzioni disponibili sono:
 
 * **[!UICONTROL Carattere Null (\0000)]**. Utilizza questa opzione per rimuovere le virgolette doppie dai file CSV esportati.
-* **[!UICONTROL Virgolette (&quot;)]**. Utilizza questa opzione per conservare le virgolette doppie nei file CSV esportati.
+* **[!UICONTROL Virgolette (&quot;)]**. Utilizzare questa opzione quando i valori stringa contengono un delimitatore o virgolette doppie. Questa opzione consente di mantenere i delimitatori o le virgolette doppie nei file CSV esportati, in modo da identificare correttamente il valore corrispondente a ciascun campo.
 
 #### Esempi
 
+Considerare il valore di input `Anna,"Doe,John"`.
+
 Visualizza gli esempi seguenti del contenuto dei file CSV esportati con ciascuna selezione nell’interfaccia utente.
 
-* Output di esempio con **[!UICONTROL carattere nullo (\0000)]** selezionato: `Test,John,LastName`
-* Output di esempio con **[!UICONTROL virgolette doppie (&quot;)]** selezionate: `"Test","John","LastName"`
+* Output di esempio con **[!UICONTROL carattere nullo (\0000)]** selezionato: `Anna,Doe,John`
+* Output di esempio con **[!UICONTROL virgolette doppie (&quot;)]** selezionate: `Anna,"Doe,John"`
 
 ### Carattere di escape {#escape-character}
 
