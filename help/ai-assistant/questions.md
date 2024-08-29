@@ -2,7 +2,7 @@
 title: Guida alle domande per l’Assistente AI
 description: Leggi questo documento per scoprire alcune domande di esempio che puoi utilizzare quando esegui una query sull’Assistente AI.
 exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
-source-git-commit: 196a39edd493dcc8296f4b6d2904393dd6f6cdd4
+source-git-commit: fc87c28d7019e123d974e4d2ad307928a3d3fe89
 workflow-type: tm+mt
 source-wordcount: '1524'
 ht-degree: 1%
@@ -33,6 +33,8 @@ Le domande di esempio seguenti sono raggruppate per obiettivi che è possibile r
 ## Informazioni operative per entità e domande sulla conoscenza del prodotto{#objects-questions}
 
 Le domande seguenti sono raggruppate per oggetti dati e sono classificate come [approfondimenti operativi](./home.md#operational-insights) o [conoscenza del prodotto](./home.md#product-knowledge).
+
+![](./images/prompt.png)
 
 * **Tipi di pubblico - Informazioni operative**
    * Quali tipi di pubblico utilizzano altri tipi di pubblico?
