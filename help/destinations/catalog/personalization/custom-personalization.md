@@ -3,9 +3,9 @@ keywords: personalizzazione personalizzata; destinazione; destinazione personali
 title: Connessione di personalizzazione personalizzata
 description: Questa destinazione fornisce personalizzazione esterna, sistemi di gestione dei contenuti, server di annunci e altre applicazioni in esecuzione sul sito in modo da recuperare informazioni sul pubblico da Adobe Experience Platform. Questa destinazione fornisce una personalizzazione in tempo reale in base all’iscrizione al pubblico del profilo utente.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 182176aa2e588aa356d5fea23b49f17bc8a50314
+source-git-commit: 0f70e072402bca055b96195ded91816810759fc2
 workflow-type: tm+mt
-source-wordcount: '912'
+source-wordcount: '962'
 ht-degree: 9%
 
 ---
@@ -35,7 +35,11 @@ Configura questa destinazione per consentire alle piattaforme di personalizzazio
 
 ## Prerequisiti {#prerequisites}
 
-Questa integrazione è basata su [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) o [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/). Per utilizzare questa destinazione, devi utilizzare uno di questi SDK.
+Questa destinazione richiede l’utilizzo di uno dei seguenti metodi di raccolta dati, a seconda dell’implementazione:
+
+* Utilizza [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) se desideri raccogliere dati dal tuo sito Web.
+* Utilizza [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) se desideri raccogliere dati dalla tua app mobile.
+* Utilizza l&#39;[Edge Network Server API](../../../server-api/overview.md) se non utilizzi [Web SDK](/help/web-sdk/home.md) o [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) o se desideri personalizzare l&#39;esperienza utente in base agli attributi del profilo.
 
 >[!IMPORTANT]
 >
