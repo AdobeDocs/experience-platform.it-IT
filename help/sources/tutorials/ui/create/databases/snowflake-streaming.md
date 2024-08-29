@@ -4,9 +4,9 @@ type: Tutorial
 description: Scopri come inviare dati dal database Snwoflake all’Experience Platform
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 49d488f1-90d8-452a-9f3e-02afdcc79b09
-source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
+source-git-commit: f39ee3af176e3d9b8ad04bfad81793db0ebe71a7
 workflow-type: tm+mt
-source-wordcount: '1604'
+source-wordcount: '1648'
 ht-degree: 3%
 
 ---
@@ -54,7 +54,7 @@ Al termine, selezionare **[!UICONTROL Connetti all&#39;origine]** e quindi atten
 
 | Credenziali | Descrizione |
 | --- | --- |
-| Account | Il nome dell&#39;account [!DNL Snowflake]. |
+| Account | Il nome dell&#39;account [!DNL Snowflake]. Per le convenzioni sui nomi degli account, leggere la [[!DNL Snowflake Streaming] guida all&#39;autenticazione](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials). |
 | Data warehouse | Nome del data warehouse [!DNL Snowflake]. I warehouse gestiscono l&#39;esecuzione delle query in [!DNL Snowflake]. Ogni data warehouse [!DNL Snowflake] è indipendente l&#39;uno dall&#39;altro e deve essere accessibile singolarmente per portare i dati all&#39;Experience Platform. |
 | Database | Nome del database [!DNL Snowflake]. Il database contiene i dati da portare all&#39;Experience Platform. |
 | Schema | (Facoltativo) Lo schema di database associato al tuo account [!DNL Snowflake]. |
@@ -78,7 +78,9 @@ Seleziona **[!UICONTROL Avanti]** per procedere.
 
 >[!IMPORTANT]
 >
->Per poter creare un flusso di dati in streaming, nella tabella sorgente deve esistere una colonna di marca temporale. La marca temporale è necessaria ad Experience Platform per sapere quando verranno acquisiti i dati e quando verranno inviati in streaming i dati incrementali. Puoi aggiungere retroattivamente una colonna timestamp per una connessione esistente e creare un nuovo flusso di dati.
+>* Per poter creare un flusso di dati in streaming, nella tabella sorgente deve esistere una colonna di marca temporale. La marca temporale è necessaria ad Experience Platform per sapere quando verranno acquisiti i dati e quando verranno inviati in streaming i dati incrementali. Puoi aggiungere retroattivamente una colonna timestamp per una connessione esistente e creare un nuovo flusso di dati.
+>
+>* Verificare che il caso dei campi dati nel file di dati di origine di esempio sia conforme alle indicazioni di [!DNL Snowflake] sulla risoluzione dei casi per gli identificatori. Per ulteriori informazioni, leggere il documento [[!DNL Snowflake] sul case dell&#39;identificatore](https://docs.snowflake.com/en/sql-reference/identifiers-syntax#label-identifier-casing).
 
 Viene visualizzato il passaggio [!UICONTROL Seleziona dati]. In questo passaggio, devi selezionare i dati da importare in Experience Platform, configurare marche temporali e fusi orari e fornire un file di dati sorgente di esempio per l’acquisizione di dati non elaborati.
 
