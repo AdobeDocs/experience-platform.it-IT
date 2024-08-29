@@ -1,9 +1,10 @@
 ---
 title: Gestione delle autorizzazioni di controllo degli accessi basato su attributi
 description: Scopri come utilizzare Gestione autorizzazioni in Adobe Experience Platform per generare rapporti e convalidare le autorizzazioni di accesso.
-source-git-commit: 3f2a899705d2c05b12300b6d5b0b860ad2c05bfd
+exl-id: 4c2b8b8e-ac4f-4c6e-a23f-66f658bb6e24
+source-git-commit: 7e65e88bc49ea28d567e8204db877d22ddb8d9a6
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '603'
 ht-degree: 1%
 
 ---
@@ -40,7 +41,7 @@ Per un rapporto più granulare, puoi specificare la risorsa con le azioni in una
 
 >[!INFO]
 >
->[!UICONTROL Risorsa], [!UICONTROL Azioni] e [!UICONTROL Sandbox] non sono campi obbligatori. È possibile selezionare una sola [!UICONTROL risorsa] per ogni report. Una volta aggiunta, è possibile rimuovere un&#39;azione o una sandbox selezionando **&#39;x&#39;** accanto alla selezione da rimuovere.
+>[!UICONTROL Risorsa], [!UICONTROL Azioni] e [!UICONTROL Sandbox] non sono campi obbligatori. Una volta aggiunta, è possibile rimuovere un&#39;azione o una sandbox selezionando **&#39;x&#39;** accanto alla selezione da rimuovere.
 
 ![Risorse, azioni, sandbox ed evidenziazione dei risultati](../../images/permission-manager/users-additional-attributes-select.png)
 
