@@ -5,9 +5,9 @@ breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da diverse origini. Scopri come strutturare, etichettare e migliorare i dati già acquisiti.
 feature: Sources
 role: Developer
-source-git-commit: 485881d4cbba09ae89d26b3613907174c0f24cc3
+source-git-commit: b18f93078d3cdbd0498b5b282236ac9b7bad153c
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1043'
 ht-degree: 30%
 
 ---
@@ -28,7 +28,6 @@ ht-degree: 30%
       - Mappature campi {#mapping}
          - [Mappature dei campi di Analytics](connectors/adobe-applications/mapping/analytics.md)
          - [Audience Manager di mappature campi](connectors/adobe-applications/mapping/audience-manager.md)
-         - [Mappature campo di destinazione](connectors/adobe-applications/mapping/target.md)
          - [Mappature campi Marketo Engage](connectors/adobe-applications/mapping/marketo.md)
          - [Mappature dei campi di Microsoft Dynamics](connectors/adobe-applications/mapping/dynamics.md)
          - [Mappature campi Salesforce](connectors/adobe-applications/mapping/salesforce.md)
@@ -160,7 +159,7 @@ ht-degree: 30%
          - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
          - [Zendesk](tutorials/api/create/customer-success/zendesk.md)
       - Database {#databases}
-         - [ Amazon Redshift](tutorials/api/create/databases/redshift.md)
+         - [Amazon Redshift](tutorials/api/create/databases/redshift.md)
          - [Hive Apache su Azure HDInsights](tutorials/api/create/databases/hive.md)
          - [Apache Spark su Azure HDInsights](tutorials/api/create/databases/spark.md)
          - [Azure Data Explorer](tutorials/api/create/databases/data-explorer.md)
@@ -284,7 +283,7 @@ ht-degree: 30%
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
          - [Zendesk](tutorials/ui/create/customer-success/zendesk.md)
       - Database {#databases}
-         - [ Amazon Redshift](tutorials/ui/create/databases/redshift.md)
+         - [Amazon Redshift](tutorials/ui/create/databases/redshift.md)
          - [Hive Apache su Azure HDInsights](tutorials/ui/create/databases/hive.md)
          - [Apache Spark su Azure HDInsights](tutorials/ui/create/databases/spark.md)
          - [Azure Data Explorer](tutorials/ui/create/databases/data-explorer.md)
