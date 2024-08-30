@@ -4,7 +4,7 @@ title: Anteprima endpoint API di stato campione (anteprima profilo)
 description: L’endpoint per lo stato di anteprima del campione dell’API Real-Time Customer Profile ti consente di visualizzare in anteprima l’ultimo campione riuscito dei dati del profilo, di elencare la distribuzione del profilo per set di dati e per identità e di generare rapporti che mostrano la sovrapposizione dei set di dati, la sovrapposizione delle identità e i profili non uniti.
 role: Developer
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 49196473f304585193e87393f8dc5dc37be7e4d9
 workflow-type: tm+mt
 source-wordcount: '2906'
 ht-degree: 1%
@@ -84,7 +84,7 @@ La risposta include i dettagli dell’ultimo processo di esempio riuscito esegui
     "status": true,
     "submissionTimestamp": "2020-08-01 17:57:57.0"
   },
-  "cosmosDocCount": "\"300803\"",
+  "docCount": "\"300803\"",
   "totalFragmentCount": 47429,
   "lastSuccessfulBatchTimestamp": "\"null\"",
   "streamingDriven": "\"false\"",
@@ -101,7 +101,7 @@ La risposta include i dettagli dell’ultimo processo di esempio riuscito esegui
 |---|---|
 | `numRowsToRead` | Numero totale di profili uniti nel campione. |
 | `sampleJobRunning` | Valore booleano che restituisce `true` quando è in corso un processo di esempio. Fornisce trasparenza nella latenza che si verifica quando un file batch viene caricato in quando viene effettivamente aggiunto all’archivio profili. |
-| `cosmosDocCount` | Numero totale di documenti in Cosmos. |
+| `docCount` | Numero totale di documenti nel database. |
 | `totalFragmentCount` | Numero totale di frammenti di profilo nell’archivio Profili. |
 | `lastSuccessfulBatchTimestamp` | Timestamp dell’ultima acquisizione batch riuscita. |
 | `streamingDriven` | *Questo campo è stato dichiarato obsoleto e non contiene alcun significato per la risposta.* |
