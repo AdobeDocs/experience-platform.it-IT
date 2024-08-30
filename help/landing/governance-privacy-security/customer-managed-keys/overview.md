@@ -2,9 +2,9 @@
 title: Chiavi gestite dal cliente in Adobe Experience Platform
 description: Scopri come impostare le tue chiavi di crittografia per i dati memorizzati in Adobe Experience Platform.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 5a5d35dad5f1b89c0161f4b29722b76c3caf3609
 workflow-type: tm+mt
-source-wordcount: '716'
+source-wordcount: '752'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ I dati memorizzati su Adobe Experience Platform vengono crittografati a riposo u
 
 >[!NOTE]
 >
->I dati nel data lake di Adobe Experience Platform e nell’archivio profili sono crittografati utilizzando CMK. Questi sono considerati come archivi di dati primari.
+>I dati del profilo cliente memorizzati nell&#39;archivio profili [!DNL Azure Data Lake] e [!DNL Azure Cosmos DB] di Platform sono crittografati esclusivamente tramite CMK, una volta abilitati. La revoca della chiave negli archivi dati primari può richiedere da **qualche minuto a 24 ore** e può richiedere più tempo, **fino a 7 giorni** per gli archivi dati transitori o secondari. Per ulteriori dettagli, consulta le [implicazioni della revoca dell&#39;accesso alla chiave](#revoke-access).
 
 Questo documento fornisce una panoramica generale del processo di abilitazione della funzione CMK (Customer-Managed Key) in Platform e delle informazioni sui prerequisiti necessari per completare questi passaggi.
 
@@ -54,15 +54,22 @@ Il processo è il seguente:
 
 Una volta completato il processo di configurazione, tutti i dati inseriti in Platform in tutte le sandbox verranno crittografati utilizzando la configurazione della chiave [!DNL Azure]. Per utilizzare CMK, sfrutterai la funzionalità [!DNL Microsoft Azure] che potrebbe far parte del [programma di anteprima pubblico](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
 
-## Revoca accesso {#revoke-access}
+## Implicazioni della revoca dell&#39;accesso alla chiave {#revoke-access}
 
-Se si desidera revocare l&#39;accesso Platform ai dati, è possibile rimuovere il ruolo utente associato all&#39;applicazione dall&#39;insieme di credenziali delle chiavi in [!DNL Azure].
+La revoca o la disabilitazione dell’accesso all’insieme di credenziali delle chiavi, alla chiave o all’app CMK può causare interruzioni significative, tra cui l’interruzione delle modifiche alle operazioni della piattaforma. Una volta che queste chiavi sono disattivate, i dati in Platform potrebbero diventare inaccessibili e tutte le operazioni a valle che si basano su tali dati cesseranno di funzionare. È fondamentale comprendere appieno gli impatti a valle prima di apportare qualsiasi modifica alle configurazioni chiave.
 
->[!WARNING]
->
->La disattivazione dell’insieme di credenziali delle chiavi, della chiave o dell’app CMK può causare una modifica che causa interruzioni. Una volta che l’insieme di credenziali delle chiavi, la chiave o l’app CMK è disabilitata e i dati non sono più accessibili in Platform, non sarà più possibile eseguire operazioni a valle relative a tali dati. Prima di apportare modifiche alla configurazione, assicurati di comprendere gli effetti a valle della revoca dell’accesso di Platform alla chiave.
+Se si decide di revocare l&#39;accesso di Platform ai dati, è possibile rimuovere il ruolo utente associato all&#39;applicazione dall&#39;insieme di credenziali delle chiavi in [!DNL Azure].
 
-Dopo aver rimosso l&#39;accesso con chiave o aver disabilitato/eliminato la chiave dall&#39;insieme di credenziali delle chiavi [!DNL Azure], la propagazione della configurazione agli archivi di dati primari potrebbe richiedere da alcuni minuti a 24 ore. I flussi di lavoro della piattaforma includono anche archivi di dati memorizzati nella cache e transitori necessari per le prestazioni e le funzionalità delle applicazioni di base. La propagazione della revoca CMK attraverso tali archivi memorizzati nella cache e transitori può richiedere fino a sette giorni, in base ai loro flussi di lavoro di elaborazione dei dati. Ciò significa, ad esempio, che il dashboard Profilo conserverebbe e visualizzerebbe i dati dal relativo archivio dati della cache e impiegherebbe sette giorni per scadere i dati conservati negli archivi dati della cache come parte del ciclo di aggiornamento. Lo stesso ritardo si applica ai dati che diventano nuovamente disponibili quando si riabilita l’accesso all’applicazione.
+### Timeline di propagazione {#propagation-timelines}
+
+Dopo la revoca dell&#39;accesso alla chiave dall&#39;insieme di credenziali delle chiavi [!DNL Azure], le modifiche verranno propagate come segue:
+
+| **Tipo di archivio** | **Descrizione** | **Timeline** |
+|---|---|---|
+| Archivi dati primari | Questi archivi includono Azure Data Lake e gli archivi del profilo di database di Azure Cosmos. Una volta revocato l’accesso alla chiave, i dati diventano inaccessibili. | Da **pochi minuti a 24 ore**. |
+| Archivi di dati nella cache/transitori | Include gli archivi dati utilizzati per le prestazioni e le funzionalità principali delle applicazioni. L’impatto della revoca della chiave è ritardato. | **Fino a 7 giorni**. |
+
+Ad esempio, il dashboard Profilo continuerà a visualizzare i dati dalla cache fino a sette giorni prima della scadenza e verrà aggiornato. Analogamente, la riabilitazione dell’accesso all’applicazione richiede la stessa quantità di tempo per ripristinare la disponibilità dei dati in questi archivi.
 
 >[!NOTE]
 >
