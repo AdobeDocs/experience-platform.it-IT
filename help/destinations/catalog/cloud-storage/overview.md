@@ -3,10 +3,10 @@ keywords: destinazione archiviazione cloud;archiviazione cloud
 title: Panoramica delle destinazioni di archiviazione cloud
 description: Adobe Experience Platform può distribuire i tipi di pubblico come file di dati ai percorsi di archiviazione cloud Amazon S3, AWS Kinesis, Azure Event Hub o SFTP.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
+source-git-commit: 9c1699471d5b3c3c725e46581e256a0c07f08a49
 workflow-type: tm+mt
-source-wordcount: '387'
-ht-degree: 6%
+source-wordcount: '453'
+ht-degree: 5%
 
 ---
 
@@ -62,6 +62,13 @@ Percorso cartella nel percorso di archiviazione: `acme/campaigns/2021/25768be6-e
 
 Input: `acme/campaigns/2021/%SEGMENT_NAME%/%SEGMENT_ID%`
 Percorso cartella nel percorso di archiviazione: `acme/campaigns/2021/Luxury Audience/25768be6-ebd5-45cc-8913-12fb3f348615`
+
+**Altre macro**
+
+Analogamente agli esempi precedenti, è possibile utilizzare ulteriori macro per creare una struttura di cartelle personalizzata nel percorso della cartella:
+
+* `%DATETIME%` o `%TIMESTAMP%` per aggiungere un nome di cartella personalizzato in base al tempo di esportazione dei file. Il formato per la prima macro è `MMDDYYYY_HHMMSS` e il formato UNIX a 10 cifre per la seconda macro.
+* `%DESTINATION_NAME%` per aggiungere una cartella personalizzata in base al nome del flusso di dati di destinazione.
 
 ## Tipo di esportazione dei dati {#export-type}
 
