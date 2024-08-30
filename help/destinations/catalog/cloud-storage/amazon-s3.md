@@ -2,9 +2,9 @@
 title: Connessione Amazon S3
 description: Crea una connessione in uscita allo storage Amazon Web Services (AWS) S3 per esportare periodicamente file di dati CSV da Adobe Experience Platform nei bucket S3.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 8dbdfb1e8e574647bf621a320ee07ecc7a653a6c
 workflow-type: tm+mt
-source-wordcount: '1440'
+source-wordcount: '1499'
 ht-degree: 17%
 
 ---
@@ -109,7 +109,7 @@ Utilizza questo metodo di autenticazione quando vuoi inserire la chiave di acces
 
 Utilizza questo tipo di autenticazione se preferisci non condividere le chiavi dell’account e le chiavi segrete con Adobe. Al contrario, Experience Platform si connette alla posizione Amazon S3 utilizzando l’accesso basato su ruolo.
 
-A questo scopo, devi creare nella console AWS un utente presunto, ad Adobe con [le autorizzazioni necessarie](#required-s3-permission) per scrivere nei bucket Amazon S3. Creare un&#39;entità **[!UICONTROL attendibile]** in AWS con l&#39;account Adobe **[!UICONTROL 670664943635]**. Per ulteriori informazioni, consulta la [documentazione di AWS sulla creazione di ruoli](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
+A questo scopo, devi creare nella console AWS un utente presunto, ad Adobe con [le autorizzazioni necessarie](#minimum-permissions-iam-user) per scrivere nei bucket Amazon S3. Creare un&#39;entità **[!UICONTROL attendibile]** in AWS con l&#39;account Adobe **[!UICONTROL 670664943635]**. Per ulteriori informazioni, consulta la [documentazione di AWS sulla creazione di ruoli](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
 
 * **[!DNL Role]**: incolla l&#39;ARN del ruolo creato in AWS per l&#39;utente Adobe. Il modello è simile a `arn:aws:iam::800873819705:role/destinations-role-customer`.
 * **[!UICONTROL Chiave di crittografia]**: facoltativamente, è possibile allegare la chiave pubblica in formato RSA per aggiungere la crittografia ai file esportati. Visualizza un esempio di chiave di crittografia formattata correttamente nell’immagine seguente.
@@ -162,6 +162,38 @@ Per connettere ed esportare correttamente i dati nel percorso di archiviazione [
 * `s3:ListBucket`
 * `s3:PutObject`
 * `s3:ListMultipartUploadParts`
+
+#### Autorizzazioni minime richieste per l’autenticazione dei ruoli assunta da IAM {#minimum-permissions-iam-user}
+
+Quando configuri il ruolo IAM come cliente, accertati che il criterio di autorizzazione associato al ruolo includa le azioni richieste per la cartella di destinazione nel bucket e l&#39;azione `s3:ListBucket` per la radice del bucket. Di seguito è riportato un esempio dei criteri di autorizzazioni minime per questo tipo di autenticazione:
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:GetObject",
+                "s3:DeleteObject",
+                "s3:GetBucketLocation",
+                "s3:ListMultipartUploadParts"
+            ],
+            "Resource": "arn:aws:s3:::bucket/folder/*"
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "s3:ListBucket"
+            ],
+            "Resource": "arn:aws:s3:::bucket"
+        }
+    ]
+}  
+```
 
 <!--
 
