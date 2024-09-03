@@ -3,9 +3,9 @@ keywords: connessione facebook;connessione facebook;destinazioni facebook;facebo
 title: Connessione facebook
 description: Attiva profili per le campagne Facebook per il targeting, la personalizzazione e l’eliminazione del pubblico in base alle e-mail con hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 742801c31a0371feb42df2c98b3a4ddb63ae2f48
 workflow-type: tm+mt
-source-wordcount: '1952'
+source-wordcount: '1985'
 ht-degree: 7%
 
 ---
@@ -80,7 +80,7 @@ Prima di poter inviare i tipi di pubblico a [!DNL Facebook], assicurati di soddi
   >[!IMPORTANT]
   >
   > Durante la configurazione delle autorizzazioni per Adobe Experience Cloud, devi abilitare l&#39;autorizzazione **Gestisci campagne**. L&#39;autorizzazione è necessaria per l&#39;integrazione di [!DNL Adobe Experience Platform].
-* Leggi e firma le Condizioni per l&#39;utilizzo di [!DNL Facebook Custom Audiences]. Per farlo, vai a `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, dove `accountID` è il tuo [!DNL Facebook Ad Account ID].
+* Leggi e firma le Condizioni per l&#39;utilizzo di [!DNL Facebook Custom Audiences]. Per farlo, vai a `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]&business_id=206617933627973`, dove `accountID` è il tuo [!DNL Facebook Ad Account ID]. Assicurati che la sezione `business_id=206617933627973` sia presente nell&#39;URL quando firmi i termini di servizio.
   >[!IMPORTANT]
   >
   >Quando si firmano i termini di servizio di [!DNL Facebook Custom Audiences], assicurarsi di utilizzare lo stesso account utente utilizzato per l&#39;autenticazione nell&#39;API Facebook.
@@ -251,4 +251,10 @@ Durante la configurazione di questa destinazione, potrebbe venire visualizzato i
 
 Questo errore si verifica quando i clienti utilizzano account appena creati e le autorizzazioni [!DNL Facebook] non sono ancora attive.
 
+>[!IMPORTANT]
+>
+>Assicurarsi di accettare [!DNL Facebook Custom Audience Terms of Service] in `business ID 206617933627973`, come mostrato nel modello URL nella sezione [prerequisiti account](#facebook-account-prerequisites).
+
 Se ricevi il messaggio di errore `400 Bad Request` dopo aver seguito i passaggi descritti in [Prerequisiti per l&#39;account Facebook](#facebook-account-prerequisites), attendi alcuni giorni per l&#39;entrata in vigore delle autorizzazioni [!DNL Facebook].
+
+
