@@ -4,10 +4,10 @@ title: Dashboard utilizzo licenze
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale è possibile visualizzare informazioni importanti sull’utilizzo delle licenze della tua organizzazione.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 3ea67d5bcdaeefd26cd95b89c60d21bef34ecd53
+source-git-commit: f9b7275a9cf066db8192be6a5b5528e19d18c313
 workflow-type: tm+mt
-source-wordcount: '2646'
-ht-degree: 6%
+source-wordcount: '2664'
+ht-degree: 5%
 
 ---
 
@@ -66,7 +66,7 @@ Questa dashboard mostra tutti i prodotti Adobe Experience Platform con licenza, 
 | **[!UICONTROL Importo licenza]** | Il valore contrattuale per l’importo massimo della metrica principale come concordato nel contratto di licenza del prodotto. |
 | **[!UICONTROL Utilizzo]** | Quantità della metrica principale utilizzata. Questo valore fornisce l’utilizzo totale di quella metrica in tutte le sandbox, di produzione o di sviluppo. |
 | **[!UICONTROL Utilizzo %]** | La percentuale della metrica principale utilizzata in base alla quantità di licenza. |
-| **[!UICONTROL Utilizzo delle previsioni]** | (**Beta**) La percentuale di utilizzo prevista della metrica principale in base alla quantità di licenza. |
+| **[!UICONTROL Utilizzo delle previsioni]** | La percentuale di utilizzo prevista della metrica principale in base alla quantità di licenza. |
 
 >[!NOTE]
 >
@@ -74,31 +74,27 @@ Questa dashboard mostra tutti i prodotti Adobe Experience Platform con licenza, 
 
 La tabella indica la metrica principale per ciascun prodotto, in quanto ogni prodotto può tracciare numerose metriche.
 
-### [!BADGE Beta]{type=Informative} utilizzo previsto {#predicted-usage}
+### Utilizzo previsto {#predicted-usage}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage_prediction"
 >title="Utilizzo previsto"
-abstract="Le previsioni si basano sull’utilizzo negli ultimi 6-7 mesi e vengono generate il 15 di ogni mese. Tieni presente che le previsioni sull’utilizzo delle licenze sono approssimazioni basate sull’utilizzo passato. L’utente è responsabile di comprendere l’utilizzo effettivo dell’organizzazione e di garantire che l’utilizzo non vada oltre l’ambito della licenza dell’organizzazione con Adobe. Per ridurre l’utilizzo, puoi configurare le scadenze dei dati di set di dati o profili pseudonimi per sandbox e set di dati."
-additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Scadenze di set di dati automatizzate"
-additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Scadenza dati profili pseudonimi"
+>abstract="Le previsioni si basano sull’utilizzo negli ultimi 6-7 mesi e vengono generate il 15 di ogni mese. L&#39;utilizzo dovrebbe raggiungere i valori previsti tra {startDate} e {endDate}. Ultima raccolta dati: {collectionDate}. Tieni presente che le previsioni sull’utilizzo delle licenze sono approssimazioni basate sull’utilizzo passato. L’utente è responsabile di comprendere l’utilizzo effettivo dell’organizzazione e di garantire che l’utilizzo non vada oltre l’ambito della licenza dell’organizzazione con Adobe. Per ridurre l’utilizzo, puoi configurare le scadenze dei dati di set di dati o profili pseudonimi per sandbox e set di dati."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Scadenze di set di dati automatizzate"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Scadenza dati profili pseudonimi"
 
-[!CONTEXTUALHELP]
-id="platform_licenseusage_prediction"
-title="Utilizzo previsto"
-abstract="Le previsioni si basano sull’utilizzo negli ultimi 6-7 mesi e vengono generate il 15 di ogni mese. Tieni presente che le previsioni sull’utilizzo delle licenze sono approssimazioni basate sull’utilizzo passato. L’utente è responsabile di comprendere l’utilizzo effettivo dell’organizzazione e di garantire che l’utilizzo non vada oltre l’ambito della licenza dell’organizzazione con Adobe. Per ridurre l’utilizzo, puoi configurare le scadenze dei dati di set di dati o profili pseudonimi per sandbox e set di dati."
-additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Scadenze di set di dati automatizzate"
-additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Scadenza dati profili pseudonimi"
-
->[!AVAILABILITY]
->
-La funzionalità per prevedere l’utilizzo futuro della licenza è attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
+>[!CONTEXTUALHELP]
+>id="platform_licenseusage_prediction"
+>title="Utilizzo previsto"
+>abstract="Le previsioni si basano sull’utilizzo negli ultimi 6-7 mesi e vengono generate il 15 di ogni mese. L&#39;utilizzo dovrebbe raggiungere i valori previsti tra {startDate} e {endDate}. Ultima raccolta dati: {collectionDate}. Tieni presente che le previsioni sull’utilizzo delle licenze sono approssimazioni basate sull’utilizzo passato. L’utente è responsabile di comprendere l’utilizzo effettivo dell’organizzazione e di garantire che l’utilizzo non vada oltre l’ambito della licenza dell’organizzazione con Adobe. Per ridurre l’utilizzo, puoi configurare le scadenze dei dati di set di dati o profili pseudonimi per sandbox e set di dati."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Scadenze di set di dati automatizzate"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Scadenza dati profili pseudonimi"
 
 Gestisci e ottimizza in modo proattivo le risorse di gestione delle licenze in base a previsioni approfondite sull’utilizzo. La colonna [!UICONTROL Utilizzo previsto] prevede con precisione l&#39;utilizzo futuro delle licenze a livello di sandbox, in tutte le sandbox di produzione e sviluppo, per tutti i prodotti acquistati. Questa funzionalità di avviso fornisce una previsione dell’utilizzo della licenza per sei settimane nel futuro, in base all’utilizzo fino al 15 di questo mese di calendario. Le previsioni sono fornite con un limite inferiore e uno superiore.
 
 >[!IMPORTANT]
 >
-Le previsioni vengono aggiornate su base mensile. La data di aggiornamento è inclusa in un&#39;icona di informazioni (![Icona di informazioni.](../images/license-usage/info-icon.png)) sopra il titolo della colonna.
+>Le previsioni vengono aggiornate su base mensile. La data di aggiornamento è inclusa in un&#39;icona di informazioni (![Icona di informazioni.](../images/license-usage/info-icon.png)) sopra il titolo della colonna.
 
 Per visualizzare un riepilogo dell&#39;utilizzo di un prodotto, selezionare un prodotto dall&#39;elenco [!UICONTROL Panoramica].
 
@@ -108,7 +104,7 @@ Viene visualizzata la scheda Riepilogo. Puoi utilizzare le previsioni granulari 
 
 >[!NOTE]
 >
-Tieni presente che le previsioni sull’utilizzo delle licenze sono approssimazioni basate sull’utilizzo passato. L’utente è responsabile di comprendere l’utilizzo effettivo dell’organizzazione e di garantire che l’utilizzo non vada oltre l’ambito della licenza dell’organizzazione con Adobe.
+>Tieni presente che le previsioni sull’utilizzo delle licenze sono approssimazioni basate sull’utilizzo passato. L’utente è responsabile di comprendere l’utilizzo effettivo dell’organizzazione e di garantire che l’utilizzo non vada oltre l’ambito della licenza dell’organizzazione con Adobe.
 
 ![Visualizzazione di riepilogo di un prodotto Platform con la colonna Utilizzo previsto evidenziata.](../images/license-usage/summary-predicted-usage.png)
 
@@ -120,7 +116,7 @@ La percentuale di utilizzo previsto è determinata come segue:
 
 >[!NOTE]
 >
-&quot;Quasi identici&quot; in questo contesto significa che i valori sono statisticamente significativi per due posizioni decimali (ad esempio, un limite inferiore di 0,342 e un limite superiore di 0,344 sono entrambi arrotondati al 34%).
+>&quot;Quasi identici&quot; in questo contesto significa che i valori sono statisticamente significativi per due posizioni decimali (ad esempio, un limite inferiore di 0,342 e un limite superiore di 0,344 sono entrambi arrotondati al 34%).
 
 La funzione di utilizzo previsto supporta per le metriche seguenti:
 
@@ -136,23 +132,23 @@ Per visualizzare ulteriori metriche e informazioni dettagliate sull’utilizzo d
 
 ![Visualizzazione di riepilogo di un prodotto Platform che visualizza tutte le metriche disponibili per tale prodotto.](../images/license-usage/summary-tab.png)
 
-Nella scheda Riepilogo la tabella include la colonna [!UICONTROL Metrica]. Queste descrizioni leggibili dall’utente indicano tutte le metriche utilizzate per quel tipo of sandbox.
+Nella scheda Riepilogo la tabella include la colonna [!UICONTROL Metrica]. Queste descrizioni leggibili dall’utente indicano tutte le metriche utilizzate per quel tipo di sandbox.
 
 ### Seleziona una sandbox {#select-sandbox}
 
-Per cambiare la visualizzazione tra i tipi di sandbox di produzione e di sviluppo: select [!UICONTROL Sandbox di produzione] o [!UICONTROL Sandbox di sviluppo]. Tipo di sandbox selezionato is indicato dal pulsante di opzione accanto al nome della sandbox.
+Per modificare la visualizzazione tra i tipi di sandbox di produzione e di sviluppo, selezionare [!UICONTROL Sandbox di produzione] o [!UICONTROL Sandbox di sviluppo]. Il tipo di sandbox selezionato è indicato dal pulsante di opzione accanto al nome della sandbox.
 
-I rapporti sul consumo per le sandbox sono cumulativi per tutte le sandbox dello stesso tipo. In In altre parole, selezionando [!UICONTROL Produzione] o [!UICONTROL Sviluppo] vengono forniti i report sul consumo per tutte le sandbox di produzione o di sviluppo, rispettivamente.
+I rapporti sul consumo per le sandbox sono cumulativi per tutte le sandbox dello stesso tipo. In altre parole, se si seleziona [!UICONTROL Produzione] o [!UICONTROL Sviluppo], verranno visualizzati report sul consumo per tutte le sandbox di produzione o di sviluppo, rispettivamente.
 
 ![Visualizzazione di riepilogo di un prodotto Platform con sandbox di produzione e sandbox di sviluppo evidenziate.](../images/license-usage/summary-tab-sandboxes.png)
 
 >[!WARNING]
 >
-L’autorizzazione per visualizzare il dashboard utilizzo licenze deve essere specificata a livello di sandbox. Aggiungi le autorizzazioni a ogni singola sandbox per visualizzarle all’interno del dashboard. Questa limitazione verrà risolta in una versione futura. Nel frattempo, è disponibile la seguente soluzione alternativa:
+>L’autorizzazione per visualizzare il dashboard utilizzo licenze deve essere specificata a livello di sandbox. Aggiungi le autorizzazioni a ogni singola sandbox per visualizzarle all’interno del dashboard. Questa limitazione verrà risolta in una versione futura. Nel frattempo, è disponibile la seguente soluzione alternativa:
 >
-1. Creare un profilo di prodotto in Adobe Admin Console.
-2. In Autorizzazione nella categoria Sandbox, aggiungi tutte le sandbox da visualizzare nel dashboard utilizzo licenze.
-3. Nella categoria Autorizzazioni dashboard utenti, aggiungi l’autorizzazione &quot;Visualizza dashboard utilizzo licenze&quot;.
+>1. Creare un profilo di prodotto in Adobe Admin Console.
+>2. In Autorizzazione nella categoria Sandbox, aggiungi tutte le sandbox da visualizzare nel dashboard utilizzo licenze.
+>3. Nella categoria Autorizzazioni dashboard utenti, aggiungi l’autorizzazione &quot;Visualizza dashboard utilizzo licenze&quot;.
 
 ## Scheda [!UICONTROL Dettagli] {#details-tab}
 
@@ -213,7 +209,7 @@ Il dashboard utilizzo licenze riporta diverse metriche univoche applicabili a pi
 
 >[!TIP]
 >
-È possibile controllare i diritti di licenza nell&#39;ordine di vendita per calcolare metriche quali l&#39;indennità di archiviazione.<br>Ad esempio,<ul><li>Indennità di archiviazione = numero di &quot;profili autorizzati&quot; nel contratto X Ricchezza media profilo</li></ul>
+>È possibile controllare i diritti di licenza nell&#39;ordine di vendita per calcolare metriche quali l&#39;indennità di archiviazione.<br>Ad esempio,<ul><li>Indennità di archiviazione = numero di &quot;profili autorizzati&quot; nel contratto X Ricchezza media profilo</li></ul>
 
 La disponibilità di queste metriche e la definizione specifica di ciascuna di esse varia a seconda delle licenze acquistate dalla tua organizzazione. Per le definizioni dettagliate di ciascuna metrica, consulta l’appropriata documentazione di descrizione del prodotto:
 
@@ -228,7 +224,7 @@ La disponibilità di queste metriche e la definizione specifica di ciascuna di e
 
 >[!WARNING]
 >
-Il dashboard utilizzo licenze riporta solo l’ultima licenza fornita per la tua organizzazione. Se l’ultima licenza fornita per la tua organizzazione non viene visualizzata nella tabella precedente, è possibile che il dashboard utilizzo licenze non venga visualizzato correttamente. Il supporto per licenze aggiuntive e più licenze in una singola organizzazione è pianificato per una versione futura.
+>Il dashboard utilizzo licenze riporta solo l’ultima licenza fornita per la tua organizzazione. Se l’ultima licenza fornita per la tua organizzazione non viene visualizzata nella tabella precedente, è possibile che il dashboard utilizzo licenze non venga visualizzato correttamente. Il supporto per licenze aggiuntive e più licenze in una singola organizzazione è pianificato per una versione futura.
 
 ## Passaggi successivi
 
