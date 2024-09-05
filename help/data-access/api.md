@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida dell’API di accesso ai dati
 description: L’API di accesso ai dati supporta Adobe Experience Platform fornendo agli sviluppatori un’interfaccia RESTful incentrata sulla reperibilità e l’accessibilità dei set di dati acquisiti in Experience Platform.
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
-source-git-commit: dbb96744c873d2bf656be03ebf1b8ea2fb08acf3
+source-git-commit: 1070c34bcd4577fcc5f0ac160196450db3aab9b0
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 5%
@@ -243,4 +243,4 @@ Per ulteriori esempi, consulta l&#39;[esercitazione sull&#39;accesso ai dati](tu
 
 ## Iscriviti agli eventi di acquisizione dati {#subscribe-to-data-ingestion-events}
 
-È possibile sottoscrivere eventi specifici di valore elevato tramite [Adobe Developer Console](https://developer.adobe.com/console/). Ad esempio, puoi abbonarti agli eventi di acquisizione dati per ricevere notifiche su potenziali ritardi e errori. Per ulteriori informazioni, consulta l&#39;esercitazione su [abbonamento a notifiche di acquisizione dati](../ingestion/quality/subscribe-events.md).
+È possibile sottoscrivere eventi specifici di valore elevato tramite [Adobe Developer Console](https://developer.adobe.com/console/). Ad esempio, puoi abbonarti agli eventi di acquisizione dati per ricevere notifiche su potenziali ritardi e errori. Per ulteriori informazioni, consulta il tutorial su [abbonamento alle notifiche degli eventi Adobe](../observability/alerts/subscribe.md).
