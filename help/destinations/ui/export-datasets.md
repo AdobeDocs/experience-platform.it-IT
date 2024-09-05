@@ -3,9 +3,9 @@ title: Esportare i set di dati nelle destinazioni di archiviazione cloud
 type: Tutorial
 description: Scopri come esportare i set di dati da Adobe Experience Platform nella posizione di archiviazione cloud preferita.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 85b69af6fd21cfa9712e9c57593cbf00a62837c8
+source-git-commit: e95c0e509931f141ff72c1defacebe5a29756157
 workflow-type: tm+mt
-source-wordcount: '1814'
+source-wordcount: '1845'
 ht-degree: 4%
 
 ---
@@ -234,6 +234,7 @@ Puoi visualizzare e tenere traccia delle esportazioni di profili in base ai limi
 Tieni presente le seguenti limitazioni per il rilascio di disponibilità generale delle esportazioni di set di dati:
 
 * Attualmente, è possibile esportare solo file incrementali e non è possibile selezionare una data di fine per le esportazioni dei set di dati.
+* Experience Platform può esportare più file anche per set di dati di piccole dimensioni. L’esportazione dei set di dati è progettata per l’integrazione tra sistemi e ottimizzata per le prestazioni, pertanto il numero di file esportati non è personalizzabile.
 * I nomi di file esportati non sono attualmente personalizzabili.
 * I set di dati creati tramite API non sono attualmente disponibili per l’esportazione.
 * L’interfaccia utente non ti blocca attualmente l’eliminazione di un set di dati in fase di esportazione in una destinazione. Non eliminare i set di dati da esportare nelle destinazioni. [Rimuovere il set di dati](#remove-dataset) da un flusso di dati di destinazione prima di eliminarlo.
