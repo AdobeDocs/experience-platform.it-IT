@@ -1,9 +1,10 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Agosto 2024
 description: Note sulla versione di agosto 2024 per Adobe Experience Platform.
-source-git-commit: 6d91112654d08dd31e5334982e534ec42d9fc226
+exl-id: 153891e9-fd82-4894-a047-c8d82f214fef
+source-git-commit: 4fecb47084a522b4eb9808dc317e0d70e7ef42c6
 workflow-type: tm+mt
-source-wordcount: '1502'
+source-wordcount: '1562'
 ht-degree: 21%
 
 ---
@@ -130,6 +131,12 @@ Per ulteriori informazioni su [!DNL Segmentation Service], consulta la [Panorami
 Experience Platform fornisce un’API RESTful e un’interfaccia utente interattiva per impostare facilmente le connessioni di origine per vari provider di dati. Queste connessioni di origine consentono di autenticarti e connetterti a sistemi di archiviazione esterni e servizi di gestione delle relazioni con i clienti, impostare i tempi per le esecuzioni dell’acquisizione e gestire la velocità effettiva di acquisizione dei dati.
 
 Utilizza le origini in Experience Platform per acquisire dati da un’applicazione Adobe o da un’origine dati di terze parti.
+
+**Funzione aggiornata**
+
+| Funzione | Descrizione |
+| --- | --- |
+| Aggiornamenti al connettore di origine di Adobe Analytics | La pagina dell’attività del set di dati non visualizza informazioni sui batch, poiché il connettore Source di Analytics è interamente gestito da Adobe. Puoi monitorare il flusso dei dati osservando le metriche relative ai record acquisiti. Per ulteriori informazioni, consulta la guida sulla creazione di una connessione di origine [per i dati di Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md). |
 
 **Documentazione aggiornata**
 

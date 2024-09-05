@@ -2,10 +2,10 @@
 title: Creare una connessione Adobe Analytics Source nell’interfaccia utente
 description: Scopri come creare una connessione sorgente Adobe Analytics nell’interfaccia utente per inserire i dati dei consumatori in Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: f177a8058f6533151978bfd7b8bba4845792f5ed
+source-git-commit: 40ad3101f643e6ce1b24d2a02c1817cfe04bd5d5
 workflow-type: tm+mt
-source-wordcount: '2755'
-ht-degree: 4%
+source-wordcount: '2577'
+ht-degree: 3%
 
 ---
 
@@ -301,7 +301,7 @@ Viene visualizzato un elenco dei flussi di dati di Analytics esistenti nell’or
 
 ![Elenco dei flussi di dati Adobe Analytics esistenti nell&#39;organizzazione.](../../../../images/tutorials/create/analytics/select-target-dataset.png)
 
-La pagina [!UICONTROL Attività set di dati] fornisce informazioni sull&#39;avanzamento dei dati inviati da Analytics a Experience Platform. L’interfaccia visualizza metriche quali il numero di record acquisiti, il numero di batch acquisiti e il numero di batch non riusciti.
+La pagina [!UICONTROL Attività set di dati] fornisce informazioni sull&#39;avanzamento dei dati inviati da Analytics a Experience Platform. L’interfaccia visualizza metriche quali il totale dei record del mese precedente, il totale dei record acquisiti negli ultimi sette giorni e le dimensioni dei dati nel mese precedente.
 
 L’origine crea un’istanza di due flussi di set di dati. Un flusso rappresenta i dati di backfill e l’altro è per i dati live. I dati di backfill non sono configurati per l’acquisizione in Real-Time Customer Profile, ma vengono inviati al data lake per casi d’uso analitici e di data science.
 
@@ -309,35 +309,9 @@ Per ulteriori informazioni sulla retrocompilazione, sui dati live e sulle rispet
 
 ![Pagina attività set di dati per un set di dati di destinazione specifico per i dati di Adobe Analytics.](../../../../images/tutorials/create/analytics/dataset-activity.png)
 
-+++Visualizzare singoli batch utilizzando l&#39;interfaccia di monitoraggio legacy
-
-La pagina dell’attività del set di dati non visualizza un elenco di singoli batch. Per visualizzare un elenco di singoli batch, seleziona un grafico nell’interfaccia dell’attività del set di dati.
-
-![Pagina attività set di dati con un grafico selezionato.](../../../../images/tutorials/create/analytics/select-chart.png)
-
-Viene visualizzata la dashboard Monitoraggio. Quindi, seleziona **[!UICONTROL SOLO ERRORI DI ACQUISIZIONE: SÌ]** per cancellare il filtro e visualizzare un elenco di singoli batch.
-
-![Dashboard di monitoraggio con filtro errori selezionato.](../../../../images/tutorials/create/analytics/clear-filter.png)
-
-L’interfaccia viene aggiornata a un elenco di singoli batch, incluse informazioni sulle rispettive metriche.
-
-![Pagina di monitoraggio legacy per i dati batch.](../../../../images/tutorials/create/analytics/batch-end-to-end.png)
-
-| Metriche | Descrizione |
-| --- | --- |
-| ID batch | L’ID di un determinato batch. Questo valore viene generato internamente. |
-| Nome del set di dati | Nome di un dato set di dati utilizzato per i dati di Analytics. |
-| Origine | L’origine dei dati acquisiti. |
-| Aggiornata | Data dell&#39;iterazione dell&#39;esecuzione del flusso più recente. |
-| Record nel set di dati | Numero totale di record nel set di dati. **Nota**: questo parametro talvolta visualizza lo stato `in-progress`. Questo stato indica che il processo di acquisizione dei record non è ancora stato completato. |
-| Nuovi frammenti di profilo | Numero totale di nuovi frammenti di profilo acquisiti. |
-| Frammenti di profilo esistenti | Numero totale di frammenti di profilo esistenti. |
-| Record di identità uniti | Numero totale di record di identità uniti dopo l’acquisizione. |
-| Record nel profilo | Numero totale di record acquisiti in Real-Time Customer Profile. |
-
-{style="table-layout:auto"}
-
-+++
+>[!NOTE]
+>
+>La pagina dell’attività del set di dati non visualizza informazioni sui batch, poiché il connettore di origine di Analytics è interamente gestito da Adobe. Puoi monitorare il flusso dei dati osservando le metriche relative ai record acquisiti.
 
 ## Passaggi successivi e risorse aggiuntive
 
