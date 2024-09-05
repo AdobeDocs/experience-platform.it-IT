@@ -2,7 +2,7 @@
 title: Dati di identità in Web SDK
 description: Scopri come recuperare e gestire gli ID Adobe Experience Cloud (ECID) utilizzando Adobe Experience Platform Web SDK.
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: 1cb38e3eaa83f2ad0e7dffef185d5edaf5e6c38c
+source-git-commit: 3b0fa672c4befd8e17632e62b0eeb13b6b17bfb4
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 0%
@@ -146,7 +146,7 @@ Ogni oggetto identità nell’array delle identità contiene le seguenti proprie
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
 | `id` | Stringa | **(Obbligatorio)** ID che si desidera impostare per lo spazio dei nomi specificato. |
-| `authenticationState` | Stringa | **(Obbligatorio)** Stato di autenticazione dell&#39;ID. I valori possibili sono `ambiguous`, `authenticated` e `loggedOut`. |
+| `authenticatedState` | Stringa | **(Obbligatorio)** Stato di autenticazione dell&#39;ID. I valori possibili sono `ambiguous`, `authenticated` e `loggedOut`. |
 | `primary` | Booleano | Determina se questa identità deve essere utilizzata come frammento principale nel profilo. Per impostazione predefinita, l’ECID è impostato come identificatore principale dell’utente. Se omesso, il valore predefinito sarà `false`. |
 
 Se si utilizza il campo `identityMap` per identificare dispositivi o utenti, si ottiene lo stesso risultato dell&#39;utilizzo del metodo [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html) di [!DNL ID Service API]. Per ulteriori dettagli, consulta la [documentazione API del servizio ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html).
