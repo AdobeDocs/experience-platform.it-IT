@@ -4,10 +4,10 @@ title: Endpoint API per le definizioni dei segmenti
 description: L’endpoint per le definizioni dei segmenti nell’API del servizio di segmentazione di Adobe Experience Platform consente di gestire in modo programmatico le definizioni dei segmenti per la tua organizzazione.
 role: Developer
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
+source-git-commit: f35fb6aae6aceb75391b1b615ca067a72918f4cf
 workflow-type: tm+mt
-source-wordcount: '1328'
-ht-degree: 4%
+source-wordcount: '1472'
+ht-degree: 3%
 
 ---
 
@@ -176,6 +176,61 @@ POST /segment/definitions
 
 **Richiesta**
 
+Quando crei una nuova definizione di segmento, puoi crearla nel formato `pql/text` o `pql/json`.
+
+>[!BEGINTABS]
+
+>[!TAB Utilizzo di pql/text]
+
++++ Una richiesta di esempio per creare una definizione di segmento.
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+ -d '{
+        "name": "People who ordered in the last 30 days",
+        "description": "Last 30 days",
+        "expression": {
+            "type": "PQL",
+            "format": "pql/text",
+            "value": "workAddress.country = \"US\""
+        },
+        "evaluationInfo": {
+            "batch": {
+                "enabled": true
+            },
+            "continuous": {
+                "enabled": false
+            },
+            "synchronous": {
+                "enabled": false
+            }
+        },
+        "schema": {
+            "name": "_xdm.context.profile"
+        }
+    }'
+```
+
+| Proprietà | Descrizione |
+| -------- | ----------- |
+| `name` | Un nome univoco in base al quale fare riferimento alla definizione del segmento. |
+| `description` | (Facoltativo) Una descrizione della definizione del segmento che stai creando. |
+| `expression` | Un’entità che contiene informazioni sui campi relative alla definizione del segmento. |
+| `expression.type` | Specifica il tipo di espressione. Attualmente, è supportato solo &quot;PQL&quot;. |
+| `expression.format` | Indica la struttura dell’espressione in valore. I valori supportati includono `pql/text` e `pql/json`. |
+| `expression.value` | Espressione conforme al tipo indicato in `expression.format`. |
+| `evaluationInfo` | (Facoltativo) Il tipo di definizione del segmento che stai creando. Se si desidera creare un segmento batch, impostare `evaluationInfo.batch.enabled` su true. Se si desidera creare un segmento di streaming, impostare `evaluationInfo.continuous.enabled` su true. Se si desidera creare un segmento perimetrale, impostare `evaluationInfo.synchronous.enabled` su true. Se non specificato, la definizione del segmento verrà creata come segmento **batch**. |
+| `schema` | Lo schema associato alle entità nel segmento. È costituito da un campo `id` o `name`. |
+
++++
+
+>[!TAB Utilizzo di pql/json]
+
 +++ Una richiesta di esempio per creare una definizione di segmento.
 
 ```shell
@@ -191,8 +246,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
         "description": "Last 30 days",
         "expression": {
             "type": "PQL",
-            "format": "pql/text",
-            "value": "workAddress.country = \"US\""
+            "format": "pql/json",
+            "value": "{\"nodeType\":\"fnApply\",\"fnName\":\"=\",\"params\":[{\"nodeType\":\"fieldLookup\",\"fieldName\":\"a\",\"object\":{\"nodeType\":\"parameterReference\",\"position\":1}},{\"nodeType\":\"fieldLookup\",\"fieldName\":\"b\",\"object\":{\"nodeType\":\"parameterReference\",\"position\":1}}]}"
         },
         "evaluationInfo": {
             "batch": {
@@ -220,10 +275,12 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | `schema` | Lo schema associato alle entità nel segmento. È costituito da un campo `id` o `name`. |
 | `expression` | Un’entità che contiene informazioni sui campi relative alla definizione del segmento. |
 | `expression.type` | Specifica il tipo di espressione. Attualmente, è supportato solo &quot;PQL&quot;. |
-| `expression.format` | Indica la struttura dell’espressione in valore. Attualmente, è supportato il seguente formato: <ul><li>`pql/text`: rappresentazione testuale di una definizione di segmento, in base alla grammatica PQL pubblicata.  Ad esempio, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
+| `expression.format` | Indica la struttura dell’espressione in valore. |
 | `expression.value` | Espressione conforme al tipo indicato in `expression.format`. |
 
 +++
+
+>[!ENDTABS]
 
 **Risposta**
 
