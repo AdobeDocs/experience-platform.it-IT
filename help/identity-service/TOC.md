@@ -5,10 +5,10 @@ breadcrumb-title: Guida di Platform Identity Service
 user-guide-description: Collega le identità dei clienti su più dispositivi e sistemi per offrire esperienze digitali personalizzate.
 feature: Identities
 role: Admin,Developer
-source-git-commit: 536770d0c3e7e93921fe40887dafa5c76e851f5e
+source-git-commit: 16d29811715805e2f297836bf266c854db45d4c6
 workflow-type: tm+mt
-source-wordcount: '137'
-ht-degree: 29%
+source-wordcount: '143'
+ht-degree: 28%
 
 ---
 
@@ -31,6 +31,7 @@ ht-degree: 29%
       - [Impostazioni identità](./identity-graph-linking-rules/identity-settings-ui.md)
       - [Esempi di scenari cliente](./identity-graph-linking-rules/example-scenarios.md)
       - [Esempio di configurazioni del grafico](./identity-graph-linking-rules/example-configurations.md)
+      - [Risoluzione dei problemi relativi alle regole di collegamento del grafo delle identità](./identity-graph-linking-rules/troubleshooting.md)
    - [Panoramica di ECID](./features/ecid.md)
 - [Guida all’implementazione](implementation.md)
 - [Guardrail per i dati di identità](guardrails.md)
