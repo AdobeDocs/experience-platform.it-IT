@@ -4,10 +4,10 @@ title: Endpoint API per processi di segmento
 description: L’endpoint per i processi di segmento nell’API del servizio di segmentazione di Adobe Experience Platform consente di gestire in modo programmatico i processi di segmento per la tua organizzazione.
 role: Developer
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f22246dec74c20459e5ac53bedc16cb6e4fba56e
 workflow-type: tm+mt
-source-wordcount: '1524'
-ht-degree: 3%
+source-wordcount: '1655'
+ht-degree: 2%
 
 ---
 
@@ -36,6 +36,8 @@ GET /segment/jobs?{QUERY_PARAMETERS}
 
 **Parametri query**
 
++++ Elenco dei parametri di query disponibili.
+
 | Parametro | Descrizione | Esempio |
 | --------- | ----------- | ------- |
 | `start` | Specifica l&#39;offset iniziale per i processi di segmento restituiti. | `start=1` |
@@ -44,7 +46,11 @@ GET /segment/jobs?{QUERY_PARAMETERS}
 | `sort` | Ordina i processi segmento restituiti. È scritto nel formato `[attributeName]:[desc|asc]`. | `sort=creationTime:desc` |
 | `property` | Filtra i processi di segmentazione e ottiene corrispondenze esatte per il filtro specificato. Può essere scritto in uno dei seguenti formati: <ul><li>`[jsonObjectPath]==[value]` - filtro sulla chiave oggetto</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` - filtro all&#39;interno dell&#39;array</li></ul> | `property=segments~segmentId==workInUS` |
 
++++
+
 **Richiesta**
+
++++ Una richiesta di esempio per visualizzare un elenco di processi di segmentazione.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDED \
@@ -54,17 +60,23 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Risposta**
 
 In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elenco di processi di segmento per l’organizzazione specificata come JSON. Tuttavia, la risposta sarà diversa, a seconda del numero di definizioni di segmento all’interno del processo di segmentazione.
 
-**Definizioni di segmenti minori o uguali a 1500 nel processo di segmentazione**
+>[!BEGINTABS]
+
+>[!TAB Definizioni di segmenti minori o uguali a 1500 nel processo di segmentazione]
 
 Se nel processo di segmentazione vengono eseguite meno di 1500 definizioni di segmento, nell&#39;attributo `children.segments` verrà visualizzato un elenco completo di tutte le definizioni di segmento.
 
 >[!NOTE]
 >
 >La seguente risposta è stata troncata per motivi di spazio e mostrerà solo il primo processo restituito.
+
++++ Una risposta di esempio durante il recupero di un elenco di processi di segmento.
 
 ```json
 {
@@ -166,13 +178,17 @@ Se nel processo di segmentazione vengono eseguite meno di 1500 definizioni di se
 }
 ```
 
-**Più di 1500 definizioni di segmenti**
++++
+
+>[!TAB Più di 1500 definizioni di segmenti]
 
 Se nel processo di segmentazione vengono eseguite più di 1500 definizioni di segmento, l&#39;attributo `children.segments` visualizzerà `*`, indicando che tutte le definizioni di segmento sono in fase di valutazione.
 
 >[!NOTE]
 >
 >La seguente risposta è stata troncata per motivi di spazio e mostrerà solo il primo processo restituito.
+
++++ Una risposta di esempio durante la visualizzazione di un elenco di processi di segmentazione.
 
 ```json
 {
@@ -276,6 +292,10 @@ Se nel processo di segmentazione vengono eseguite più di 1500 definizioni di se
 | `metrics.segmentProfileByStatusCounter` | Il conteggio dei profili per ogni stato. Sono supportati i tre stati seguenti: <ul><li>&quot;realized&quot; (realizzato): numero di profili idonei per la definizione del segmento.</li><li>&quot;exited&quot;: il numero di profili che non esistono più nella definizione del segmento.</li></ul> |
 | `metrics.totalProfilesByMergePolicy` | Numero totale di profili uniti per criterio di unione. |
 
++++
+
+>[!ENDTABS]
+
 ## Crea un nuovo processo di segmentazione {#create}
 
 Per creare un nuovo processo di segmentazione, devi eseguire una richiesta POST all&#39;endpoint `/segment/jobs` e includere nel corpo l&#39;ID della definizione del segmento da cui desideri creare un nuovo pubblico.
@@ -288,9 +308,13 @@ POST /segment/jobs
 
 Quando crei un nuovo processo di segmentazione, la richiesta e la risposta variano a seconda del numero di definizioni di segmento all’interno del processo di segmentazione.
 
-**Definizioni di segmenti minori o uguali a 1500 nel processo di segmentazione**
+>[!BEGINTABS]
+
+>[!TAB Minore o uguale a 1500 segmenti nel processo del segmento]
 
 **Richiesta**
+
++++Richiesta di esempio per la creazione di un nuovo processo di segmentazione
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
@@ -302,6 +326,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
  -d '[
     {
         "segmentId": "7863c010-e092-41c8-ae5e-9e533186752e"
+    },
+    {
+        "segmentId": "07d39471-05d1-4083-a310-d96978fd7c85"
     }
  ]'
 ```
@@ -310,9 +337,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 | -------- | ----------- |
 | `segmentId` | ID della definizione del segmento per cui desideri creare un processo di segmentazione. Queste definizioni dei segmenti possono appartenere a diversi criteri di unione. Ulteriori informazioni sulle definizioni dei segmenti sono disponibili nella [guida dell&#39;endpoint di definizione dei segmenti](./segment-definitions.md). |
 
++++
+
 **Risposta**
 
 In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informazioni sul processo di segmentazione appena creato.
+
++++ Una risposta di esempio durante la creazione di un nuovo processo di segmentazione.
 
 ```json
 {
@@ -335,6 +366,22 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
             "segmentId": "7863c010-e092-41c8-ae5e-9e533186752e",
             "segment": {
                 "id": "7863c010-e092-41c8-ae5e-9e533186752e",
+                "expression": {
+                    "type": "PQL",
+                    "format": "pql/json",
+                    "value": "workAddress.country = \"US\""
+                },
+                "mergePolicyId": "25c548a0-ca7f-4dcd-81d5-997642f178b9",
+                "mergePolicy": {
+                    "id": "25c548a0-ca7f-4dcd-81d5-997642f178b9",
+                    "version": 1
+                }
+            }
+        },
+        {
+            "segmentId": "07d39471-05d1-4083-a310-d96978fd7c85",
+            "segment": {
+                "id": "07d39471-05d1-4083-a310-d96978fd7c85",
                 "expression": {
                     "type": "PQL",
                     "format": "pql/json",
@@ -411,13 +458,17 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 | `segments.segment.id` | ID della definizione di segmento fornita. |
 | `segments.segment.expression` | Oggetto contenente informazioni sull’espressione della definizione del segmento, scritta in PQL. |
 
-**Più di 1500 definizioni di segmenti**
++++
+
+>[!TAB Definizione di più di 1500 segmenti nel processo di segmentazione]
 
 **Richiesta**
 
 >[!NOTE]
 >
 >Anche se è possibile creare un processo di segmentazione con più di 1500 definizioni di segmenti, si tratta di **operazione non consigliata**.
+
++++ Richiesta di esempio per la creazione di un processo di segmentazione.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
@@ -443,9 +494,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 | `schema.name` | Nome dello schema per le definizioni dei segmenti. |
 | `segments.segmentId` | Quando si esegue un processo di segmentazione con più di 1500 segmenti, è necessario passare `*` come ID segmento per indicare che si desidera eseguire un processo di segmentazione con tutti i segmenti. |
 
++++
+
 **Risposta**
 
 In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i dettagli del processo di segmentazione appena creato.
+
++++ Una risposta di esempio durante la creazione di un processo di segmentazione.
 
 ```json
 {
@@ -530,6 +585,11 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 | `segments` | Oggetto contenente informazioni sulle definizioni dei segmenti per cui è in esecuzione questo processo di segmentazione. |
 | `segments.segment.id` | `*` significa che questo processo di segmentazione è in esecuzione per tutte le definizioni di segmenti all&#39;interno della tua organizzazione. |
 
++++
+
+>[!ENDTABS]
+
+
 ## Recuperare un processo di segmento specifico {#get}
 
 Per recuperare informazioni dettagliate su un processo di segmentazione specifico, effettua una richiesta di GET all&#39;endpoint `/segment/jobs` e fornisci l&#39;ID del processo di segmentazione da recuperare nel percorso della richiesta.
@@ -546,6 +606,8 @@ GET /segment/jobs/{SEGMENT_JOB_ID}
 
 **Richiesta**
 
++++ Richiesta di esempio per recuperare un processo di segmentazione.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-43eb-9fca-557ea53771fd \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -554,13 +616,19 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Risposta**
 
 In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informazioni dettagliate sul processo di segmentazione specificato.  Tuttavia, la risposta varia a seconda del numero di definizioni di segmento all’interno del processo di segmentazione.
 
-**Definizioni di segmenti minori o uguali a 1500 nel processo di segmentazione**
+>[!BEGINTABS]
+
+>[!TAB Definizioni di segmenti minori o uguali a 1500 nel processo di segmentazione]
 
 Se nel processo di segmentazione vengono eseguite meno di 1500 definizioni di segmento, nell&#39;attributo `children.segments` verrà visualizzato un elenco completo di tutte le definizioni di segmento.
+
++++ Risposta di esempio per recuperare un processo di segmentazione.
 
 ```json
 {
@@ -622,9 +690,13 @@ Se nel processo di segmentazione vengono eseguite meno di 1500 definizioni di se
 }
 ```
 
-**Più di 1500 definizioni di segmenti**
++++
+
+>[!TAB Più di 1500 definizioni di segmenti]
 
 Se nel processo di segmentazione vengono eseguite più di 1500 definizioni di segmento, l&#39;attributo `children.segments` visualizzerà `*`, indicando che tutte le definizioni di segmento sono in fase di valutazione.
+
++++ Risposta di esempio per recuperare un processo di segmentazione.
 
 ```json
 {
@@ -711,6 +783,10 @@ Se nel processo di segmentazione vengono eseguite più di 1500 definizioni di se
 | `segments.segment.expression` | Oggetto contenente informazioni sull’espressione della definizione del segmento, scritta in PQL. |
 | `metrics` | Oggetto contenente informazioni diagnostiche sul processo di segmentazione. |
 
++++
+
+>[!ENDTABS]
+
 ## Processi di recupero in blocco dei segmenti {#bulk-get}
 
 Per recuperare informazioni dettagliate su più processi di segmentazione, effettua una richiesta POST all&#39;endpoint `/segment/jobs/bulk-get` e fornisci i valori `id` dei processi di segmentazione nel corpo della richiesta.
@@ -722,6 +798,8 @@ POST /segment/jobs/bulk-get
 ```
 
 **Richiesta**
+
++++ Richiesta di esempio per l’utilizzo dell’endpoint di recupero in blocco.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
@@ -742,6 +820,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
     }'
 ```
 
++++
+
 **Risposta**
 
 In caso di esito positivo, la risposta restituisce lo stato HTTP 207 con i processi di segmento richiesti. Tuttavia, il valore dell&#39;attributo `children.segments` varia se il processo di segmentazione è in esecuzione per più di 1500 definizioni di segmenti.
@@ -749,6 +829,8 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 207 con i proce
 >[!NOTE]
 >
 >La seguente risposta è stata troncata per motivi di spazio, mostrando solo dettagli parziali di ciascun processo di segmentazione. Nella risposta completa verranno elencati tutti i dettagli dei processi di segmentazione richiesti.
+
++++ Una risposta di esempio quando si utilizza la risposta bulk-get.
 
 ```json
 {
@@ -804,6 +886,8 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 207 con i proce
 | `segments.segment.id` | ID della definizione del segmento. |
 | `segments.segment.expression` | Oggetto contenente informazioni sull’espressione della definizione del segmento, scritta in PQL. |
 
++++
+
 ## Annullare o eliminare un processo di segmento specifico {#delete}
 
 Per eliminare un processo di segmentazione specifico, devi eseguire una richiesta DELETE all&#39;endpoint `/segment/jobs` e fornire l&#39;ID del processo di segmentazione da eliminare nel percorso della richiesta.
@@ -824,6 +908,8 @@ DELETE /segment/jobs/{SEGMENT_JOB_ID}
 
 **Richiesta**
 
++++ Richiesta di esempio per eliminare un processo di segmentazione.
+
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-43eb-9fca-557ea53771fd \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -832,9 +918,13 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfe
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Risposta**
 
 In caso di esito positivo, la risposta restituisce lo stato HTTP 204 con le seguenti informazioni.
+
++++ Una risposta di esempio durante l’eliminazione di un processo di segmentazione.
 
 ```json
 {
@@ -842,6 +932,8 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 204 con le segu
     "message": "Segment job with id 'd3b4a50d-dfea-43eb-9fca-557ea53771fd' has been marked for cancelling"
 }
 ```
+
++++
 
 ## Passaggi successivi
 

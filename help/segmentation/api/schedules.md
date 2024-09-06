@@ -4,9 +4,9 @@ title: Endpoint API Schedules
 description: Le pianificazioni sono uno strumento che può essere utilizzato per eseguire automaticamente processi di segmentazione batch una volta al giorno.
 role: Developer
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
 workflow-type: tm+mt
-source-wordcount: '2040'
+source-wordcount: '2104'
 ht-degree: 3%
 
 ---
@@ -29,18 +29,25 @@ L&#39;endpoint `/config/schedules` supporta diversi parametri di query per filtr
 
 ```http
 GET /config/schedules
-GET /config/schedules?start={START}
-GET /config/schedules?limit={LIMIT}
+GET /config/schedules?{QUERY_PARAMETERS}
 ```
 
-| Parametro | Descrizione |
-| --------- | ----------- |
-| `{START}` | Specifica da quale pagina inizierà l&#39;offset. Per impostazione predefinita, questo valore è 0. |
-| `{LIMIT}` | Specifica il numero di pianificazioni restituite. Per impostazione predefinita, questo valore è 100. |
+**Parametri query**
+
++++ Elenco dei parametri di query disponibili.
+
+| Parametro | Descrizione | Esempio |
+| --------- | ----------- | ------- |
+| `start` | Specifica da quale pagina inizierà l&#39;offset. Per impostazione predefinita, questo valore è 0. | `start=5` |
+| `limit` | Specifica il numero di pianificazioni restituite. Per impostazione predefinita, questo valore è 100. | `limit=20` |
+
++++
 
 **Richiesta**
 
 La seguente richiesta recupererà le ultime dieci pianificazioni registrate nella tua organizzazione.
+
++++ Richiesta di esempio per recuperare un elenco di pianificazioni.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
@@ -50,6 +57,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Risposta**
 
 In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elenco di pianificazioni per l’organizzazione specificata come JSON.
@@ -57,6 +66,8 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elen
 >[!NOTE]
 >
 >La seguente risposta è stata troncata per motivi di spazio e mostra solo la prima pianificazione restituita.
+
++++ Una risposta di esempio durante il recupero di un elenco di pianificazioni.
 
 ```json
 {
@@ -102,6 +113,8 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elen
 | `children.schedule` | Stringa contenente la pianificazione del processo. È possibile programmare l&#39;esecuzione dei job solo una volta al giorno, pertanto non è possibile programmare l&#39;esecuzione di un job più di una volta in un periodo di 24 ore. Per ulteriori informazioni sulle pianificazioni cron, leggere l&#39;appendice nel formato di espressione cron [](#appendix). In questo esempio, &quot;0 0 1 * *&quot; significa che la pianificazione verrà eseguita ogni giorno all’1. |
 | `children.state` | Stringa contenente lo stato della pianificazione. I due stati supportati sono &quot;active&quot; e &quot;inactive&quot;. Per impostazione predefinita, lo stato è impostato su &quot;inattivo&quot;. |
 
++++
+
 ## Crea una nuova pianificazione {#create}
 
 È possibile creare una nuova pianificazione effettuando una richiesta POST all&#39;endpoint `/config/schedules`.
@@ -113,6 +126,8 @@ POST /config/schedules
 ```
 
 **Richiesta**
+
++++ Richiesta di esempio per creare una pianificazione.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
@@ -144,9 +159,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | `schedule` | *Facoltativo.* Stringa contenente la pianificazione del processo. È possibile programmare l&#39;esecuzione dei job solo una volta al giorno, pertanto non è possibile programmare l&#39;esecuzione di un job più di una volta in un periodo di 24 ore. Per ulteriori informazioni sulle pianificazioni cron, leggere l&#39;appendice nel formato di espressione cron [](#appendix). In questo esempio, &quot;0 0 1 * *&quot; significa che la pianificazione verrà eseguita ogni giorno all’1. <br><br>Se questa stringa non viene fornita, verrà generata automaticamente una pianificazione generata dal sistema. |
 | `state` | *Facoltativo.* Stringa contenente lo stato della pianificazione. I due stati supportati sono &quot;active&quot; e &quot;inactive&quot;. Per impostazione predefinita, lo stato è impostato su &quot;inattivo&quot;. |
 
++++
+
 **Risposta**
 
 In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i dettagli della pianificazione appena creata.
+
++++ Una risposta di esempio durante la creazione di una pianificazione.
 
 ```json
 {
@@ -172,6 +191,8 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 }
 ```
 
++++
+
 ## Recuperare una pianificazione specifica {#get}
 
 Per recuperare informazioni dettagliate su una pianificazione specifica, eseguire una richiesta di GET all&#39;endpoint `/config/schedules` e fornire l&#39;ID della pianificazione da recuperare nel percorso della richiesta.
@@ -188,6 +209,8 @@ GET /config/schedules/{SCHEDULE_ID}
 
 **Richiesta**
 
++++ Richiesta di esempio per recuperare una pianificazione.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -196,9 +219,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-db
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Risposta**
 
 In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informazioni dettagliate sulla pianificazione specificata.
+
++++ Una risposta di esempio durante il recupero di una pianificazione.
 
 ```json
 {
@@ -233,15 +260,13 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 | `schedule` | Stringa contenente la pianificazione del processo. È possibile programmare l&#39;esecuzione dei job solo una volta al giorno, pertanto non è possibile programmare l&#39;esecuzione di un job più di una volta in un periodo di 24 ore. Per ulteriori informazioni sulle pianificazioni cron, leggere l&#39;appendice nel formato di espressione cron [](#appendix). In questo esempio, &quot;0 0 1 * *&quot; significa che la pianificazione verrà eseguita ogni giorno all’1. |
 | `state` | Stringa contenente lo stato della pianificazione. I due stati supportati sono `active` e `inactive`. Per impostazione predefinita, lo stato è impostato su `inactive`. |
 
++++
+
 ## Aggiorna i dettagli per una pianificazione specifica {#update}
 
 È possibile aggiornare una pianificazione specifica effettuando una richiesta PATCH all&#39;endpoint `/config/schedules` e fornendo l&#39;ID della pianificazione che si sta tentando di aggiornare nel percorso della richiesta.
 
 La richiesta PATCH ti consente di aggiornare [state](#update-state) o la [cron schedule](#update-schedule) per una singola pianificazione.
-
-### Aggiorna stato pianificazione {#update-state}
-
-È possibile utilizzare un’operazione Patch JSON per aggiornare lo stato della pianificazione. Per aggiornare lo stato, dichiarare la proprietà `path` come `/state` e impostare `value` su `active` o `inactive`. Per ulteriori informazioni sulla patch JSON, leggere la documentazione della patch [JSON](https://datatracker.ietf.org/doc/html/rfc6902).
 
 **Formato API**
 
@@ -253,7 +278,15 @@ PATCH /config/schedules/{SCHEDULE_ID}
 | --------- | ----------- |
 | `{SCHEDULE_ID}` | Il valore `id` della pianificazione da aggiornare. |
 
+>[!BEGINTABS]
+
+>[!TAB Aggiorna stato pianificazione]
+
+È possibile utilizzare un’operazione Patch JSON per aggiornare lo stato della pianificazione. Per aggiornare lo stato, dichiarare la proprietà `path` come `/state` e impostare `value` su `active` o `inactive`. Per ulteriori informazioni sulla patch JSON, leggere la documentazione della patch [JSON](https://datatracker.ietf.org/doc/html/rfc6902).
+
 **Richiesta**
+
++++ Richiesta di esempio per aggiornare lo stato della pianificazione.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
@@ -271,6 +304,8 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 ]'
 ```
 
++++
+
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `path` | Percorso del valore a cui applicare la patch. In questo caso, poiché si sta aggiornando lo stato della pianificazione, è necessario impostare il valore di `path` su &quot;/state&quot;. |
@@ -280,21 +315,15 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 
 In caso di esito positivo, la risposta restituisce lo stato HTTP 204 (nessun contenuto).
 
-### Aggiorna pianificazione cron {#update-schedule}
+>[!TAB Aggiorna pianificazione cron]
 
 È possibile utilizzare un’operazione Patch JSON per aggiornare la pianificazione cron. Per aggiornare la pianificazione, dichiarare la proprietà `path` come `/schedule` e impostare `value` su una pianificazione cron valida. Per ulteriori informazioni sulla patch JSON, leggere la documentazione della patch [JSON](https://datatracker.ietf.org/doc/html/rfc6902). Per ulteriori informazioni sulle pianificazioni cron, leggere l&#39;appendice nel formato di espressione cron [](#appendix).
 
-**Formato API**
-
-```http
-PATCH /config/schedules/{SCHEDULE_ID}
-```
-
-| Parametro | Descrizione |
-| --------- | ----------- |
-| `{SCHEDULE_ID}` | Il valore `id` della pianificazione da aggiornare. |
+>[!ENDTABS]
 
 **Richiesta**
+
++++ Richiesta di esempio per aggiornare la pianificazione.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
@@ -317,6 +346,8 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 | `path` | Percorso del valore da aggiornare. In questo caso, poiché si sta aggiornando la pianificazione cron, è necessario impostare il valore di `path` su `/schedule`. |
 | `value` | Il valore aggiornato della pianificazione cron. Questo valore deve essere sotto forma di una pianificazione cron. In questo esempio, la pianificazione verrà eseguita il secondo di ogni mese. |
 
++++
+
 **Risposta**
 
 In caso di esito positivo, la risposta restituisce lo stato HTTP 204 (nessun contenuto).
@@ -337,6 +368,8 @@ DELETE /config/schedules/{SCHEDULE_ID}
 
 **Richiesta**
 
++++ Richiesta di esempio per eliminare una pianificazione.
+
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -344,6 +377,8 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
+
++++
 
 **Risposta**
 

@@ -4,9 +4,9 @@ title: Endpoint API per processi di esportazione segmenti
 description: I processi di esportazione sono processi asincroni utilizzati per rendere persistenti i membri del segmento di pubblico nei set di dati. Puoi utilizzare l’endpoint /export/jobs nell’API del servizio di segmentazione di Adobe Experience Platform, che consente di recuperare, creare e annullare a livello di programmazione i processi di esportazione.
 role: Developer
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
 workflow-type: tm+mt
-source-wordcount: '1615'
+source-wordcount: '1678'
 ht-degree: 2%
 
 ---
@@ -33,20 +33,26 @@ L&#39;endpoint `/export/jobs` supporta diversi parametri di query per filtrare i
 
 ```http
 GET /export/jobs
-GET /export/jobs?limit={LIMIT}
-GET /export/jobs?offset={OFFSET}
-GET /export/jobs?status={STATUS}
+GET /export/jobs?{QUERY_PARAMETERS}
 ```
 
-| Parametro | Descrizione |
-| --------- | ----------- |
-| `{LIMIT}` | Specifica il numero di processi di esportazione restituiti. |
-| `{OFFSET}` | Specifica l&#39;offset delle pagine dei risultati. |
-| `{STATUS}` | Filtra i risultati in base allo stato. I valori supportati sono &quot;NEW&quot;, &quot;SUCCESSEDED&quot; e &quot;FAILED&quot;. |
+**Parametri query**
+
++++ Elenco dei parametri di query disponibili.
+
+| Parametro | Descrizione | Esempio |
+| --------- | ----------- | ------- |
+| `limit` | Specifica il numero di processi di esportazione restituiti. | `limit=10` |
+| `offset` | Specifica l&#39;offset delle pagine dei risultati. | `offset=1540974701302_96` |
+| `status` | Filtra i risultati in base allo stato. I valori supportati sono &quot;NEW&quot;, &quot;SUCCESSEDED&quot; e &quot;FAILED&quot;. | `status=NEW` |
+
++++
 
 **Richiesta**
 
 La richiesta seguente recupererà gli ultimi due processi di esportazione all’interno della tua organizzazione.
+
++++ Richiesta di esempio per recuperare i processi di esportazione.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \
@@ -56,9 +62,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Risposta**
 
 La seguente risposta restituisce lo stato HTTP 200 con un elenco dei processi di esportazione completati correttamente, in base al parametro di query fornito nel percorso della richiesta.
+
++++ Una risposta di esempio durante il recupero dei processi di esportazione.
 
 ```json
 {
@@ -207,6 +217,8 @@ La seguente risposta restituisce lo stato HTTP 200 con un elenco dei processi di
 | `page` | Informazioni sull’impaginazione dei processi di esportazione richiesti. |
 | `link.next` | Un collegamento alla pagina successiva dei processi di esportazione. |
 
++++
+
 ## Crea un nuovo processo di esportazione {#create}
 
 È possibile creare un nuovo processo di esportazione effettuando una richiesta POST all&#39;endpoint `/export/jobs`.
@@ -220,6 +232,8 @@ POST /export/jobs
 **Richiesta**
 
 La richiesta seguente crea un nuovo processo di esportazione, configurato dai parametri forniti nel payload.
+
++++ Richiesta di esempio per creare un processo di esportazione.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
@@ -290,9 +304,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 | `schema.name` | **(Obbligatorio)** Il nome dello schema associato al set di dati in cui devono essere esportati i dati. |
 | `evaluationInfo.segmentation` | *(Facoltativo)* Valore booleano che, se non specificato, viene impostato automaticamente su `false`. Il valore `true` indica che è necessario eseguire la segmentazione sul processo di esportazione. |
 
++++
+
 **Risposta**
 
 In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i dettagli del nuovo processo di esportazione creato.
+
++++ Una risposta di esempio durante la creazione di un processo di esportazione.
 
 ```json
 {
@@ -380,6 +398,8 @@ In alternativa, se `destination.segmentPerBatch` fosse stato impostato su `true`
     }
 ```
 
++++
+
 ## Recuperare un processo di esportazione specifico {#get}
 
 Per recuperare informazioni dettagliate su un processo di esportazione specifico, eseguire una richiesta GET all&#39;endpoint `/export/jobs` e specificare l&#39;ID del processo di esportazione che si desidera recuperare nel percorso della richiesta.
@@ -396,6 +416,8 @@ GET /export/jobs/{EXPORT_JOB_ID}
 
 **Richiesta**
 
++++ Richiesta di esempio per recuperare un processo di esportazione.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/11037 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -404,9 +426,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/11037 \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Risposta**
 
 In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informazioni dettagliate sul processo di esportazione specificato.
+
++++ Una risposta di esempio durante il recupero di un processo di esportazione.
 
 ```json
 {
@@ -476,6 +502,8 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 | `metrics.profileExportTime` | Un campo che indica il tempo necessario per l’esportazione dei profili. |
 | `totalExportedProfileCounter` | Numero totale di profili esportati in tutti i batch. |
 
++++
+
 ## Annullare o eliminare un processo di esportazione specifico {#delete}
 
 È possibile richiedere l&#39;eliminazione del processo di esportazione specificato effettuando una richiesta DELETE all&#39;endpoint `/export/jobs` e fornendo l&#39;ID del processo di esportazione che si desidera eliminare nel percorso della richiesta.
@@ -492,6 +520,8 @@ DELETE /export/jobs/{EXPORT_JOB_ID}
 
 **Richiesta**
 
++++ Richiesta di esempio per eliminare un processo di esportazione.
+
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/export/jobs/{EXPORT_JOB_ID} \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -499,6 +529,8 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/export/jobs/{EXPORT_JOB_I
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
+
++++
 
 **Risposta**
 

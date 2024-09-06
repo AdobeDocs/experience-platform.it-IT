@@ -4,10 +4,10 @@ title: Endpoint API per anteprime e stime
 description: Man mano che vengono sviluppate le definizioni dei segmenti, puoi utilizzare gli strumenti di stima e anteprima disponibili in Adobe Experience Platform per visualizzare informazioni di riepilogo utili a isolare il pubblico previsto.
 role: Developer
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
 workflow-type: tm+mt
-source-wordcount: '971'
-ht-degree: 3%
+source-wordcount: '1016'
+ht-degree: 2%
 
 ---
 
@@ -62,6 +62,8 @@ POST /preview
 
 **Richiesta**
 
++++ Richiesta di esempio per creare un’anteprima.
+
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/preview \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -85,9 +87,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | `predicateModel` | Il nome della classe dello schema [!DNL Experience Data Model] (XDM) su cui si basano i dati del profilo. |
 | `graphType` | Tipo di grafico da cui ottenere il cluster. I valori supportati sono `none` (non esegue alcuna unione di identità) e `pdg` (esegue l&#39;unione di identità in base al grafico delle identità private). |
 
++++
+
 **Risposta**
 
 In caso di esito positivo, la risposta restituisce lo stato HTTP 201 (Creato) con i dettagli della nuova anteprima creata.
+
++++ Risposta di esempio durante la creazione di un’anteprima.
 
 ```json
 {
@@ -103,6 +109,8 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 201 (Creato) co
 | -------- | ----------- |
 | `state` | Stato corrente del processo di anteprima. Al momento della creazione, lo stato sarà &quot;NUOVO&quot;. Successivamente, sarà nello stato &quot;RUNNING&quot; (IN ESECUZIONE) fino al completamento dell’elaborazione, che diventa &quot;RESULT_READY&quot; o &quot;FAILED&quot;. |
 | `previewId` | ID del processo di anteprima, da utilizzare a scopo di ricerca quando si visualizza una stima o un’anteprima, come descritto nella sezione successiva. |
+
++++
 
 ## Recuperare i risultati di un’anteprima specifica {#get-preview}
 
@@ -120,6 +128,8 @@ GET /preview/{PREVIEW_ID}
 
 **Richiesta**
 
++++ Richiesta di esempio per recuperare un’anteprima.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgtM2YzMS00YjY0LThkODQtYWNkMGM0ZmJkYWQzOmU4OTAwNjhiLWY1Y2EtNGE4Zi1hNmI1LWFmODdmZjBjYWFjMzow \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -128,7 +138,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Risposta**
+
++++ Risposta di esempio durante il recupero di un’anteprima.
 
 In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informazioni dettagliate sull’anteprima specificata.
 
@@ -181,6 +195,8 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 | -------- | ----------- |
 | `results` | Un elenco di ID entità, insieme alle relative identità. I collegamenti forniti possono essere utilizzati per cercare le entità specificate utilizzando l&#39;endpoint API di accesso al profilo [](../../profile/api/entities.md). |
 
++++
+
 ## Recuperare i risultati di un processo di stima specifico {#get-estimate}
 
 Dopo aver creato un processo di anteprima, puoi utilizzarne `previewId` nel percorso di una richiesta di GET all&#39;endpoint `/estimate` per visualizzare informazioni statistiche sulla definizione del segmento, incluse le dimensioni del pubblico previste, l&#39;intervallo di affidabilità e la deviazione standard dell&#39;errore.
@@ -199,6 +215,8 @@ GET /estimate/{PREVIEW_ID}
 
 La richiesta seguente recupera i risultati di un processo di stima specifico.
 
++++ Richiesta di esempio per recuperare un processo di stima.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWFjOTEtNGJiNy1hNDI2LTE1MDkzN2I2YWY1Yzo0Mg \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -207,9 +225,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWF
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Risposta**
 
 In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i dettagli del processo di stima.
+
++++ Una risposta di esempio durante il recupero di un processo di stima.
 
 ```json
 {
@@ -243,9 +265,11 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `estimatedNamespaceDistribution` | Array di oggetti che mostrano il numero di profili all’interno del segmento suddivisi per spazio dei nomi dell’identità. Il numero totale di profili per spazio dei nomi (sommando i valori mostrati per ciascuno spazio dei nomi) può essere maggiore della metrica del conteggio dei profili, perché un profilo può essere associato a più spazi dei nomi. Ad esempio, se un cliente interagisce con il tuo marchio su più di un canale, a quel singolo cliente verranno associati più spazi dei nomi. |
+| `estimatedNamespaceDistribution` | Array di oggetti che mostrano il numero di profili all’interno della definizione del segmento suddivisi per spazio dei nomi dell’identità. Il numero totale di profili per spazio dei nomi (sommando i valori mostrati per ciascuno spazio dei nomi) può essere maggiore della metrica del conteggio dei profili, perché un profilo può essere associato a più spazi dei nomi. Ad esempio, se un cliente interagisce con il tuo marchio su più di un canale, a quel singolo cliente verranno associati più spazi dei nomi. |
 | `state` | Stato corrente del processo di anteprima. Lo stato sarà &quot;RUNNING&quot; (IN ESECUZIONE) fino al completamento dell’elaborazione, che diventa &quot;RESULT_READY&quot; o &quot;FAILED&quot;. |
 | `_links.preview` | Quando `state` è &quot;RESULT_READY&quot;, questo campo fornisce un URL per visualizzare la stima. |
+
++++
 
 ## Passaggi successivi
 
