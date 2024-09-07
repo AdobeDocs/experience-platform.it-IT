@@ -4,9 +4,9 @@ title: Endpoint API per le definizioni dei segmenti
 description: L’endpoint per le definizioni dei segmenti nell’API del servizio di segmentazione di Adobe Experience Platform consente di gestire in modo programmatico le definizioni dei segmenti per la tua organizzazione.
 role: Developer
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: f35fb6aae6aceb75391b1b615ca067a72918f4cf
+source-git-commit: b3c7b97e257f76337bd02d1db9390ab314f7d1cd
 workflow-type: tm+mt
-source-wordcount: '1472'
+source-wordcount: '1519'
 ht-degree: 3%
 
 ---
@@ -458,6 +458,10 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-ge
     }'
 ```
 
+| Proprietà | Descrizione |
+| -------- | ----------- |
+| `ids` | Array contenente oggetti che definiscono gli ID delle definizioni dei segmenti da recuperare. |
+
 +++
 
 **Risposta**
@@ -617,6 +621,10 @@ PATCH /segment/definitions/{SEGMENT_ID}
 **Richiesta**
 
 La richiesta seguente aggiorna il paese dell’indirizzo di lavoro dagli Stati Uniti al Canada.
+
+>[!NOTE]
+>
+>Poiché questa chiamata API **sostituisce** il contenuto della definizione del segmento, assicurati che **tutti** i campi che desideri mantenere siano inclusi nel corpo della richiesta.
 
 +++ Richiesta di esempio per aggiornare la definizione di un segmento.
 
