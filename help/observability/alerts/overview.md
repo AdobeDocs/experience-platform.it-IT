@@ -4,9 +4,9 @@ title: Panoramica degli avvisi
 description: Scopri gli avvisi di Adobe Experience Platform, inclusa la struttura della definizione delle regole di avviso.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 829d7da1dc53486eba1cdceddb7888b578e1c137
 workflow-type: tm+mt
-source-wordcount: '797'
+source-wordcount: '793'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->Gli avvisi non sono supportati nelle sandbox non di produzione. Per abbonarti agli avvisi, devi assicurarti di utilizzare una sandbox di produzione. Tutti gli avvisi di abbonamento verranno reimpostati quando la sandbox viene reimpostata. Tutti gli avvisi di abbonamento verranno eliminati anche quando viene eliminata una sandbox.
+>Poiché gli avvisi sono supportati sia nelle sandbox di produzione che in quelle di sviluppo, è possibile abbonarsi a essi in qualsiasi sandbox. Quando viene reimpostata una sandbox, vengono reimpostati anche tutti gli avvisi di abbonamento e, quando viene eliminata una sandbox, tutti gli avvisi di abbonamento vengono eliminati.
 
 Adobe Experience Platform ti consente di abbonarti agli avvisi basati su eventi relativi alle attività di Adobe Experience Platform. Gli avvisi riducono o eliminano la necessità di eseguire il polling dell&#39;[[!DNL Observability Insights] API](../api/overview.md) per verificare se un processo è stato completato, se è stata raggiunta una determinata fase cardine in un flusso di lavoro o se si sono verificati errori.
 
