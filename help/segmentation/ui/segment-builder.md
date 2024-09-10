@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Segment Builder
 description: Il Generatore di segmenti nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro avanzata che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica di regole, ad esempio le tessere trascinate utilizzate per rappresentare le proprietà dei dati.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 7d2fe8d5e5abea768b3514d97ea7edfbb9334511
 workflow-type: tm+mt
-source-wordcount: '3743'
-ht-degree: 6%
+source-wordcount: '4767'
+ht-degree: 5%
 
 ---
 
@@ -212,6 +212,90 @@ Dopo aver inserito l&#39;evento nel contenitore Eventi, selezionare il pulsante 
 Viene aggiunta la funzione conteggio. È ora possibile selezionare la funzione count e il valore della funzione. L’esempio seguente consiste nell’includere qualsiasi evento con almeno un clic.
 
 ![Viene visualizzato ed evidenziato un elenco delle funzioni di conteggio.](../images/ui/segment-builder/select-count.png)
+
+### Vincoli temporali {#time-constraints}
+
+I vincoli di tempo consentono di applicare restrizioni temporali agli attributi basati sul tempo, agli eventi e alla sequenza tra gli eventi.
+
+>[!IMPORTANT]
+>
+>Se hai creato una definizione del segmento con i vincoli di tempo &quot;Questo mese&quot; o &quot;Quest’anno&quot; prima di giugno 2024, dovrai salvare nuovamente le definizioni del segmento. Prima di giugno 2024, &quot;This month&quot; era basato su 30 giorni e &quot;This year&quot; era basato su 365 giorni.
+
+L&#39;elenco dei vincoli di tempo disponibili è il seguente:
+
++++ Limiti di tempo disponibili
+
+>[!NOTE]
+>
+>Tutti i vincoli di tempo sono basati su UTC.
+>
+>Inoltre, se la casella di controllo [!UICONTROL Ignora anno] è abilitata, l&#39;anno **non** verrà confrontato come parte della valutazione della definizione del segmento.
+
+| Attività Time constraint | Descrizione | Abilita ignora anno | Esempio |
+| --------------- | ----------- | ------------------- | ------- |
+| Oggi | L&#39;attributo o l&#39;evento confrontato **deve** si verifica oggi. | Sì | ![Esempio del vincolo di tempo &quot;Oggi&quot; in uso.](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
+| Ieri | L&#39;attributo o l&#39;evento confrontato **must** si verifica ieri. | Sì | ![Esempio del vincolo di tempo &quot;Ieri&quot; in uso.](../images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
+| Questo mese | L&#39;attributo o l&#39;evento confrontato **must** si verifica questo mese di calendario. | Sì | ![Esempio del vincolo di tempo &quot;Questo mese&quot; in uso.](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
+| Quest’anno | L&#39;attributo o l&#39;evento da confrontare **must** si verifica in questo anno di calendario. | No | ![Esempio del vincolo di tempo &quot;Quest&#39;anno&quot; in uso.](../images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
+| Data personalizzata | L&#39;attributo o l&#39;evento confrontato **deve** verificarsi alla data specificata. | Sì | ![Esempio del vincolo di data personalizzato in uso.](../images/ui/segment-builder/time-constraints/custom-date.png){width="100" zoomable="yes"} |
+| Nell’ultimo/a | L&#39;attributo o l&#39;evento confrontato **deve** verificarsi nell&#39;ultimo periodo di tempo scelto. Questo periodo di tempo è **inclusivo** fino al momento della valutazione. | No | ![Esempio del vincolo di tempo &quot;In last&quot; in uso.](../images/ui/segment-builder/time-constraints/in-last.png){width="100" zoomable="yes"} |
+| Da (a) | L&#39;attributo o l&#39;evento confrontato **deve** verificarsi entro le due date di calendario scelte. Questo periodo di tempo è **inclusivo** di entrambe le date. | Sì, se la data personalizzata | ![Esempio di utilizzo di &quot;Da a&quot;.](../images/ui/segment-builder/time-constraints/from-to.png){width="100" zoomable="yes"} |
+| Durante | L&#39;attributo o l&#39;evento confrontato **deve** verificarsi entro il mese o l&#39;anno selezionato. Se è selezionato un mese, è necessario scegliere sia il mese che l&#39;anno in cui si è verificato l&#39;attributo o l&#39;evento.  Se è selezionato un anno, è sufficiente scegliere l&#39;anno in cui si è verificato l&#39;attributo o l&#39;evento. Se selezioni un mese, puoi anche abilitare la casella di controllo [!UICONTROL Ignora anno]. | Sì | ![Esempio del vincolo di tempo &quot;Durante&quot; in uso.](../images/ui/segment-builder/time-constraints/during.png){width="100" zoomable="yes"} |
+| Entro (+/-) | L&#39;attributo o l&#39;evento confrontato **deve** verificarsi entro giorni, settimane, mesi o anni dalla data selezionata. Questo periodo di tempo è **inclusivo** di entrambe le date. La data selezionata può essere oggi, ieri o un’altra data personalizzata a tua scelta. | Sì | ![Esempio del vincolo di tempo &quot;Within&quot; in uso.](../images/ui/segment-builder/time-constraints/within.png){width="100" zoomable="yes"} |
+| Prima di | L&#39;attributo o l&#39;evento confrontato **deve** verificarsi prima della data selezionata. La data selezionata può essere una data personalizzata a tua scelta o una selezione tra giorni, settimane, mesi o anni fa. | Sì | ![Esempio del vincolo di tempo &quot;Prima&quot; in uso.](../images/ui/segment-builder/time-constraints/before.png){width="100" zoomable="yes"} |
+| Dopo | L&#39;attributo o l&#39;evento confrontato **deve** verificarsi dopo la data selezionata. La data selezionata può essere una data personalizzata a tua scelta o una selezione tra giorni, settimane, mesi o anni fa. | Sì | ![Esempio del vincolo di tempo &quot;After&quot; in uso.](../images/ui/segment-builder/time-constraints/after.png){width="100" zoomable="yes"} |
+| Intervallo continuo | L’attributo o l’evento confrontato deve verificarsi tra le due date relative. Le date possono essere rappresentate in secondi, minuti, ore, giorni, settimane, mesi o anni. | No | ![Esempio del vincolo di tempo &quot;Intervallo continuo&quot; in uso.](../images/ui/segment-builder/time-constraints/rolling-range.png){width="100" zoomable="yes"} |
+| In avanti | L’attributo o l’evento confrontato deve verificarsi nel periodo di tempo successivo selezionato. I periodi di tempo selezionati includono minuti, ore, giorni, settimane, mesi e anni. | No | ![Esempio del vincolo di orario &quot;In next&quot; in uso.](../images/ui/segment-builder/time-constraints/in-next.png){width="100" zoomable="yes"} |
+| Esiste | L’attributo esiste già. | No | ![Esempio del vincolo di tempo &quot;Esiste&quot; in uso.](../images/ui/segment-builder/time-constraints/exists.png){width="100" zoomable="yes"} |
+| Non esiste | L&#39;attributo non esiste. | No | ![Esempio del vincolo di tempo &quot;Non esiste&quot; in uso.](../images/ui/segment-builder/time-constraints/does-not-exist.png){width="100" zoomable="yes"} |
+
++++
+
+Quando applichi un vincolo di tempo a un evento, puoi applicarlo a livello di area di lavoro, a livello di scheda o tra eventi.
+
+#### Vincolo a livello di area di lavoro
+
+Per applicare un vincolo di tempo a livello di area di lavoro, selezionare l&#39;icona dell&#39;orologio visualizzata sopra la sequenza temporale degli eventi.
+
+![Il selettore dei vincoli di tempo a livello di area di lavoro è evidenziato.](../images/ui/segment-builder/time-constraints/canvas-level.png)
+
+Quando applichi un vincolo di tempo a livello di area di lavoro, questo si applica a **tutti** gli eventi nel pubblico.
+
+#### Vincolo a livello di scheda
+
+Per applicare un vincolo a livello di scheda, seleziona la scheda su cui desideri applicare il vincolo di tempo, seguito dall&#39;icona con i puntini di sospensione e **[!UICONTROL Applica regola temporale]**. Questo consente di selezionare un vincolo di tempo all&#39;interno del contenitore **[!UICONTROL Regole evento]**.
+
+![Il selettore dei vincoli di tempo a livello di scheda è evidenziato.](../images/ui/segment-builder/time-constraints/card-level.png)
+
+Quando applichi un vincolo di tempo a livello di scheda, questo applica il vincolo di tempo all&#39;evento **specified** nel pubblico.
+
+#### Vincolo tra eventi
+
+Per applicare un vincolo di tempo tra gli eventi, selezionare l&#39;icona dell&#39;orologio tra i due eventi su cui si desidera applicare il vincolo di tempo.
+
+![Il selettore dei vincoli di tempo tra gli eventi è evidenziato.](../images/ui/segment-builder/time-constraints/between-event.png)
+
+Quando applichi un vincolo di tempo tra gli eventi, questo applica il vincolo di tempo al tempo **tra** gli eventi.
+
+L&#39;elenco dei vincoli di tempo disponibili per questa operazione differisce dall&#39;elenco principale dei vincoli di tempo e sono i seguenti:
+
++++ Limiti di tempo disponibili
+
+| Attività Time constraint | Descrizione |
+| --------------- | ----------- |
+| Dopo | L&#39;ultimo evento **deve avere luogo almeno** dopo l&#39;evento precedente. |
+| Entro | I due eventi **must** si verificano durante il periodo di tempo indicato nel vincolo di tempo. |
+
+>[!NOTE]
+>
+>Quando si utilizza il vincolo di tempo &quot;After&quot; (Dopo), quest’ultimo evento può verificarsi più del tempo elencato all’interno del vincolo di tempo. >
+>Ad esempio, se disponi di un evento Visualizzazione pagina e di un evento Pagamento e tra questi due eventi si inserisce il vincolo di tempo &quot;Dopo 1 ora&quot;, si qualificherà una definizione del segmento con un evento Pagamento 2 ore dopo l’evento Visualizzazione pagina.
+>
+>Inoltre, questi due vincoli temporali possono essere utilizzati in coordinamento tra loro.
+>
+>Ad esempio, se disponi di un evento Visualizzazione pagina e di un evento Pagamento e imposti entrambi i vincoli di tempo &quot;Dopo 1 ora&quot; ed &quot;Entro 24 ore&quot;, una definizione di segmento con un evento Pagamento 12 ore dopo l’evento Visualizzazione pagina sarà idonea, ma una definizione di segmento con un evento Pagamento 36 ore dopo l’evento Visualizzazione pagina non sarà idonea.
+
++++
 
 ## Contenitori
 
