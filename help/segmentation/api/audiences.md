@@ -3,9 +3,9 @@ title: Endpoint API di Audiences
 description: Utilizza l’endpoint "audiences" nell’API del servizio di segmentazione di Adobe Experience Platform per creare, gestire e aggiornare in modo programmatico i tipi di pubblico per la tua organizzazione.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 5d5c1f903e6a54ea983b718c4c371ada2a937297
+source-git-commit: 9c50ca0db55ce4b21978273d7b4d1de9b5f9338d
 workflow-type: tm+mt
-source-wordcount: '1406'
+source-wordcount: '1438'
 ht-degree: 3%
 
 ---
@@ -30,6 +30,10 @@ L&#39;endpoint `/audiences` supporta diversi parametri di query per filtrare i r
 GET /audiences
 GET /audiences?{QUERY_PARAMETERS}
 ```
+
+>[!NOTE]
+>
+>Se utilizzi questo endpoint senza parametri di query, i tipi di pubblico inattivi **non** verranno restituiti. Tuttavia, se utilizzi questo endpoint insieme al parametro di query `property=audienceId`, verranno restituiti i tipi di pubblico inattivi **will**.
 
 Durante il recupero di un elenco di tipi di pubblico è possibile utilizzare i seguenti parametri di query:
 
