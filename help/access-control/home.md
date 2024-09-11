@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica sul controllo degli accessi
 description: Il controllo degli accessi per Adobe Experience Platform viene fornito tramite Adobe Admin Console. Questa funzionalità sfrutta i profili di prodotto di Admin Console, che collegano gli utenti con autorizzazioni e sandbox.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 734a34e9acf80300c28ca14587198fb7eaf83c17
+source-git-commit: 5d5c57dfb9e4abda6b1bca96147a95d063bc17c6
 workflow-type: tm+mt
-source-wordcount: '1731'
+source-wordcount: '1787'
 ht-degree: 1%
 
 ---
@@ -116,7 +116,11 @@ Nella tabella seguente vengono descritte le autorizzazioni disponibili, ad Exper
 | [!DNL Identity Management] | [!UICONTROL Gestione spazi dei nomi delle identità] | Accesso per leggere, creare, modificare ed eliminare spazi dei nomi di identità. |
 | [!DNL Identity Management] | [!UICONTROL Visualizza Spazi Dei Nomi Delle Identità] | Accesso in sola lettura per gli spazi dei nomi di identità. |
 | [!DNL Identity Management] | [!UICONTROL Visualizza grafico identità] | Accesso in sola lettura per i grafici di identità. |
-| [!DNL Profile Management] | [!UICONTROL Gestisci profili] | Accesso per leggere, creare, modificare ed eliminare i set di dati utilizzati per i profili dei clienti. Accesso in sola lettura ai profili disponibili. |
+| [!DNL Intelligent Services] | [!UICONTROL Visualizza Attribution AI] | Accesso in sola lettura per impostazioni e approfondimenti di Attribution AI. |
+| [!DNL Intelligent Services] | [!UICONTROL Gestisci Attribution AI] | Accesso per la lettura, la creazione, la modifica e l&#39;eliminazione di modelli di Attribution AI. |
+| [!DNL Intelligent Services] | [!UICONTROL Visualizza IA per l&#39;analisi dei clienti] | Accesso per leggere o visualizzare i modelli di IA per l’analisi dei clienti. |
+| [!DNL Intelligent Services] | [!UICONTROL Gestisci IA per l&#39;analisi dei clienti] | Accesso per creare, aggiornare, eliminare, abilitare o disabilitare modelli di IA per l’analisi dei clienti. |
+| [!DNL Profile Management] | [!UICONTROL Gestisci profili] | Acquisisci dati da più origini, crea profili affidabili per i singoli clienti e archivia dati abilitati per il profilo nel data lake e nell’archivio dati Profilo cliente in tempo reale. |
 | [!DNL Profile Management] | [!UICONTROL Visualizza profili] | Accesso in sola lettura ai profili disponibili. |
 | [!DNL Profile Management] | [!UICONTROL Gestisci segmenti] | Accesso per leggere, creare, modificare ed eliminare segmenti. |
 | [!DNL Profile Management] | [!UICONTROL Visualizza segmenti] | Accesso in sola lettura ai segmenti disponibili. |
