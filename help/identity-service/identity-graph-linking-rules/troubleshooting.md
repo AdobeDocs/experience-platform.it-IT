@@ -3,9 +3,9 @@ title: Guida alla risoluzione dei problemi per le regole di collegamento del gra
 description: Scopri come risolvere i problemi comuni nelle regole di collegamento del grafico delle identità.
 badge: Beta
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: edda302a1f24c9991074c16fd9e770f2bf262b7c
+source-git-commit: 7104781435c0cf3891f7216797af4e873b9b37f9
 workflow-type: tm+mt
-source-wordcount: '3181'
+source-wordcount: '3226'
 ht-degree: 0%
 
 ---
@@ -333,6 +333,8 @@ Questa sezione illustra un elenco di risposte alle domande più frequenti sulle 
 
 ### Algoritmo di ottimizzazione identità {#identity-optimization-algorithm}
 
+Leggi questa sezione per le risposte alle domande frequenti sull&#39;[algoritmo di ottimizzazione delle identità](./identity-optimization-algorithm.md).
+
 #### Ho un CRMID per ciascuna delle mie unità aziendali (CRMID B2C, CRMID B2B), ma non ho uno spazio dei nomi univoco tra tutti i miei profili. Cosa succede se contrassegno B2C CRMID e B2B CRMID come univoci e abilito le impostazioni di identità?
 
 Questo scenario non è supportato. Pertanto, è possibile che i grafici si riducano nei casi in cui un utente utilizza il proprio CRMID B2C per accedere e un altro utente utilizza il proprio CRMID B2B per accedere. Per ulteriori informazioni, consulta la sezione sul [requisito dello spazio dei nomi per singola persona](./configuration.md#single-person-namespace-requirement) nella pagina di implementazione.
@@ -367,6 +369,8 @@ I punti chiave da evidenziare sono i seguenti:
 
 ### Priorità dello spazio dei nomi
 
+Leggi questa sezione per le risposte alle domande frequenti sulla [priorità dello spazio dei nomi](./namespace-priority.md).
+
 #### Ho abilitato le impostazioni di identità. Cosa succede alle mie impostazioni se voglio aggiungere uno spazio dei nomi personalizzato dopo che le impostazioni sono state abilitate?
 
 Esistono due &quot;bucket&quot; di spazi dei nomi: spazi dei nomi delle persone e spazi dei nomi dispositivo/cookie. Il nuovo spazio dei nomi personalizzato creato avrà la priorità più bassa in ogni &quot;bucket&quot;, in modo che questo nuovo spazio dei nomi personalizzato non influisca sull’acquisizione dei dati esistenti.
@@ -384,6 +388,8 @@ No. La priorità dello spazio dei nomi si applica solo ai set di dati Experience
 L’algoritmo di ottimizzazione dell’identità verrà applicato per primo per garantire la rappresentazione dell’entità della persona. In seguito, se il grafo tenta di superare il [guardrail del grafo delle identità](../guardrails.md) (50 identità per grafo), verrà applicata questa logica. La priorità dello spazio dei nomi non influisce sulla logica di eliminazione del guardrail identità/grafico 50.
 
 ### Test
+
+Leggi questa sezione per le risposte alle domande frequenti sulle funzionalità di test e debug nelle regole di collegamento del grafico delle identità.
 
 #### Quali sono alcuni degli scenari che dovrei testare in un ambiente sandbox di sviluppo?
 
