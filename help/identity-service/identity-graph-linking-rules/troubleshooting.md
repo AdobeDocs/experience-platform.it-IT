@@ -3,9 +3,9 @@ title: Guida alla risoluzione dei problemi per le regole di collegamento del gra
 description: Scopri come risolvere i problemi comuni nelle regole di collegamento del grafico delle identità.
 badge: Beta
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 56e2e359812fcbfd011505ad917403d6f5317b4a
+source-git-commit: edda302a1f24c9991074c16fd9e770f2bf262b7c
 workflow-type: tm+mt
-source-wordcount: '2019'
+source-wordcount: '3181'
 ht-degree: 0%
 
 ---
@@ -132,12 +132,42 @@ Esistono diversi motivi che contribuiscono al motivo per cui i frammenti di even
 * [Errore di convalida nel profilo](../../xdm/classes/experienceevent.md).
    * Ad esempio, un evento esperienza deve contenere sia `_id` che `timestamp`.
    * Inoltre, `_id` deve essere univoco per ogni evento (record).
+* Lo spazio dei nomi con la priorità più alta è una stringa vuota.
 
-Nel contesto della priorità dello spazio dei nomi, Profile rifiuterà qualsiasi evento che contiene due o più identità con la priorità dello spazio dei nomi più elevata. Ad esempio, se GAID non è contrassegnato come spazio dei nomi univoco e sono presenti due identità con uno spazio dei nomi GAID e valori di identità diversi, l’evento non verrà memorizzato in Profilo.
+Nel contesto della priorità dello spazio dei nomi, il profilo rifiuterà:
+
+* Qualsiasi evento che contiene due o più identità con la priorità più elevata dello spazio dei nomi. Ad esempio, se GAID non è contrassegnato come spazio dei nomi univoco e sono presenti due identità con uno spazio dei nomi GAID e valori di identità diversi, l’evento non verrà memorizzato in Profilo.
+* Qualsiasi evento in cui lo spazio dei nomi con la priorità più elevata è una stringa vuota.
 
 **Risoluzione dei problemi**
 
-Per risolvere questo errore, leggere i passaggi per la risoluzione dei problemi descritti nella guida precedente su [errori di risoluzione dei problemi relativi ai dati non acquisiti in Identity Service](#my-identities-are-not-getting-ingested-into-identity-service).
+Se i dati vengono inviati al data lake, ma non al profilo, e ritieni che ciò sia dovuto all’invio di due o più identità con la priorità più elevata dello spazio dei nomi in un singolo evento, puoi eseguire la seguente query per verificare che siano presenti due valori di identità diversi inviati sullo stesso spazio dei nomi:
+
+>[!TIP]
+>
+>Nelle seguenti query è necessario:
+>
+>* Sostituire `_testimsorg.identification.core.email` con il percorso che invia l&#39;identità.
+>* Sostituisci `Email` con lo spazio dei nomi con la priorità più alta. Questo è lo stesso spazio dei nomi che non viene acquisito.
+>* Sostituire `dataset_name` con il set di dati da ricercare.
+
+```sql
+  SELECT identityMap, key, col.id as identityValue, _testimsorg.identification.core.email, _id, timestamp 
+  FROM (SELECT key, explode(value), * 
+  FROM (SELECT explode(identityMap), * 
+  FROM dataset_name)) WHERE col.id != _testimsorg.identification.core.email and key = 'Email' 
+```
+
+Puoi anche eseguire la seguente query per verificare se l’acquisizione nel profilo non avviene a causa di uno spazio dei nomi più alto con una stringa vuota:
+
+```sql
+  SELECT identityMap, key, col.id as identityValue, _testimsorg.identification.core.email, _id, timestamp 
+  FROM (SELECT key, explode(value), * 
+  FROM (SELECT explode(identityMap), * 
+  FROM dataset_name)) WHERE (col.id = '' or _testimsorg.identification.core.email = '') and key = 'Email' 
+```
+
+Queste due query presuppongono che un’identità venga inviata da identityMap e un’altra identità da un descrittore di identità. **NOTA**: negli schemi Experience Data Model (XDM), il descrittore di identità è il campo contrassegnato come identità.
 
 ### I miei frammenti di evento esperienza vengono acquisiti, ma hanno l’identità primaria &quot;errata&quot; nel profilo
 
@@ -296,3 +326,79 @@ Puoi utilizzare la seguente query nel set di dati di esportazione dello snapshot
 >[!TIP]
 >
 >Le due query elencate sopra produrranno i risultati previsti se la sandbox non è abilitata per l’approccio provvisorio per dispositivo condiviso e si comporterà in modo diverso dalle regole di collegamento del grafico delle identità.
+
+## Domande frequenti {#faq}
+
+Questa sezione illustra un elenco di risposte alle domande più frequenti sulle regole di collegamento del grafico delle identità.
+
+### Algoritmo di ottimizzazione identità {#identity-optimization-algorithm}
+
+#### Ho un CRMID per ciascuna delle mie unità aziendali (CRMID B2C, CRMID B2B), ma non ho uno spazio dei nomi univoco tra tutti i miei profili. Cosa succede se contrassegno B2C CRMID e B2B CRMID come univoci e abilito le impostazioni di identità?
+
+Questo scenario non è supportato. Pertanto, è possibile che i grafici si riducano nei casi in cui un utente utilizza il proprio CRMID B2C per accedere e un altro utente utilizza il proprio CRMID B2B per accedere. Per ulteriori informazioni, consulta la sezione sul [requisito dello spazio dei nomi per singola persona](./configuration.md#single-person-namespace-requirement) nella pagina di implementazione.
+
+#### L’algoritmo di ottimizzazione delle identità corregge i grafici compressi esistenti?
+
+I grafici compressi esistenti saranno interessati dall’algoritmo del grafico (&quot;fissi&quot;) solo se vengono aggiornati dopo il salvataggio delle nuove impostazioni.
+
+#### Se due persone effettuano l&#39;accesso e la disconnessione utilizzando lo stesso dispositivo, cosa succede agli eventi? Tutti gli eventi verranno trasferiti all’ultimo utente autenticato?
+
+* Gli eventi anonimi (eventi con ECID come identità primaria in Real-Time Customer Profile) verranno trasferiti all’ultimo utente autenticato. Questo perché l’ECID sarà collegato al CRMID dell’ultimo utente autenticato (su Identity Service).
+* Tutti gli eventi autenticati (eventi con CRMID definito come identità primaria) rimarranno con la persona.
+
+Per ulteriori informazioni, leggere la guida in [determinazione dell&#39;identità primaria per gli eventi esperienza](../identity-graph-linking-rules/namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events).
+
+#### Che impatto avrà sui percorsi in Adobe Journey Optimizer il trasferimento dell’ECID da una persona a un’altra?
+
+Il CRMID dell’ultimo utente autenticato verrà collegato all’ECID (dispositivo condiviso). Gli ECID possono essere riassegnati da una persona all’altra in base al comportamento dell’utente. L’impatto dipenderà da come verrà costruito il percorso, pertanto è importante che i clienti testino il percorso in un ambiente sandbox di sviluppo per convalidarne il comportamento.
+
+I punti chiave da evidenziare sono i seguenti:
+
+* Una volta che un profilo entra in un percorso, la riassegnazione di ECID non fa sì che il profilo esca dal percorso.
+   * Le uscite dal percorso non vengono attivate dalle modifiche apportate al grafico.
+* Se un profilo non è più associato a un ECID, ciò può comportare la modifica del percorso di percorso in presenza di una condizione che utilizza la qualificazione del pubblico.
+   * La rimozione di ECID può modificare gli eventi associati a un profilo, il che potrebbe comportare modifiche nella qualifica del pubblico.
+* Il reinserimento di un percorso dipende dalle proprietà del percorso.
+   * Se disattivi il reinserimento di un percorso, quando un profilo esce da quel percorso, lo stesso profilo non viene reinserito per 91 giorni (in base al timeout globale del percorso).
+* Se un percorso inizia con uno spazio dei nomi ECID, il profilo che entra e il profilo che riceve l’azione (ad es. e-mail, offerta) può variare a seconda di come è progettato il percorso.
+   * Ad esempio, se esiste una condizione di attesa tra le azioni e i trasferimenti ECID durante il periodo di attesa, è possibile eseguire il targeting di un profilo diverso.
+   * Con questa funzione, gli ECID non sono più sempre associati a un profilo.
+   * Si consiglia di iniziare i percorsi con gli spazi dei nomi delle persone (CRMID).
+
+### Priorità dello spazio dei nomi
+
+#### Ho abilitato le impostazioni di identità. Cosa succede alle mie impostazioni se voglio aggiungere uno spazio dei nomi personalizzato dopo che le impostazioni sono state abilitate?
+
+Esistono due &quot;bucket&quot; di spazi dei nomi: spazi dei nomi delle persone e spazi dei nomi dispositivo/cookie. Il nuovo spazio dei nomi personalizzato creato avrà la priorità più bassa in ogni &quot;bucket&quot;, in modo che questo nuovo spazio dei nomi personalizzato non influisca sull’acquisizione dei dati esistenti.
+
+#### Se Real-Time Customer Profile non utilizza più il flag &quot;primary&quot; in identityMap, è ancora necessario inviare questo valore?
+
+Sì, il flag &quot;primary&quot; su identityMap viene utilizzato da altri servizi. Per ulteriori informazioni, leggere la guida sulle [implicazioni della priorità dello spazio dei nomi su altri servizi Experience Platform](../identity-graph-linking-rules/namespace-priority.md#implications-on-other-experience-platform-services).
+
+#### La priorità dello spazio dei nomi si applica ai set di dati dei record Profilo in Real-Time Customer Profile?
+
+No. La priorità dello spazio dei nomi si applica solo ai set di dati Experience Event che utilizzano la classe XDM ExperienceEvent.
+
+#### Come funziona questa funzione insieme ai guardrail del grafo delle identità di 50 identità per grafo? La priorità dello spazio dei nomi influisce su questo guardrail definito dal sistema?
+
+L’algoritmo di ottimizzazione dell’identità verrà applicato per primo per garantire la rappresentazione dell’entità della persona. In seguito, se il grafo tenta di superare il [guardrail del grafo delle identità](../guardrails.md) (50 identità per grafo), verrà applicata questa logica. La priorità dello spazio dei nomi non influisce sulla logica di eliminazione del guardrail identità/grafico 50.
+
+### Test
+
+#### Quali sono alcuni degli scenari che dovrei testare in un ambiente sandbox di sviluppo?
+
+In generale, il test su una sandbox di sviluppo dovrebbe simulare i casi d’uso che intendi eseguire sulla sandbox di produzione. Per alcune aree chiave da convalidare durante l’esecuzione di test completi, consulta la tabella seguente:
+
+| Test case | Passaggi del test | Risultato previsto |
+| --- | --- | --- |
+| Rappresentazione accurata dell’entità della persona | <ul><li>Simulazione di navigazione anonima</li><li>Imita l’accesso di due persone (John, Jane) utilizzando lo stesso dispositivo</li></ul> | <ul><li>Sia John che Jane devono essere associati ai loro attributi e agli eventi autenticati.</li><li>L’ultimo utente autenticato deve essere associato agli eventi di navigazione anonimi.</li></ul> |
+| Segmentazione | Creare quattro definizioni di segmenti (**NOTA**: ogni coppia di definizioni di segmenti deve avere una valutata utilizzando il batch e l&#39;altra lo streaming.) <ul><li>Definizione del segmento A: qualificazione del segmento basata sugli eventi autenticati di John.</li><li>Definizione del segmento B: qualificazione del segmento basata sugli eventi autenticati di Jane.</li></ul> | Indipendentemente dagli scenari di dispositivi condivisi, John e Jane dovrebbero sempre qualificarsi per i rispettivi segmenti. |
+| Qualificazione del pubblico / percorsi unitari su Adobe Journey Optimizer | <ul><li>Crea un percorso che inizia con un’attività di qualificazione del pubblico (ad esempio la segmentazione in streaming creata in precedenza).</li><li>Crea un percorso che inizia con un evento unitario. Questo evento unitario deve essere un evento autenticato.</li><li>È necessario disattivare il reinserimento durante la creazione di questi percorsi.</li></ul> | <ul><li>Indipendentemente dagli scenari di dispositivi condivisi, John e Jane dovrebbero attivare i rispettivi percorsi in cui dovrebbero entrare.</li><li>John e Jane non devono rientrare nel percorso quando l’ECID viene trasferito nuovamente loro.</li></ul> |
+
+{style="table-layout:auto"}
+
+#### Come posso verificare che questa funzione funzioni come previsto?
+
+Utilizza lo strumento di simulazione del grafico [](./graph-simulation.md) per verificare che la funzione funzioni a un singolo livello di grafico.
+
+Per convalidare la funzionalità a livello di sandbox, fai riferimento alla sezione [!UICONTROL Conteggio dei grafici con più spazi dei nomi] nel dashboard delle identità.

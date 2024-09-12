@@ -1,16 +1,16 @@
 ---
-title: Guida alla configurazione delle regole di collegamento del grafico delle identità
+title: Guida all’implementazione per le regole di collegamento del grafico delle identità
 description: Scopri i passaggi consigliati da seguire per implementare i dati con le configurazioni delle regole di collegamento del grafico delle identità.
 badge: Beta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 3d96e057123a4dd0b4f6f34a64a93c756b583c9b
+source-git-commit: cfa2cd91f523d80fd42cb6fd2ba17e6eb3eca609
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1361'
+ht-degree: 2%
 
 ---
 
-# Guida alla configurazione delle regole di collegamento del grafico delle identità
+# Guida all’implementazione per le regole di collegamento del grafico delle identità
 
 >[!AVAILABILITY]
 >
@@ -102,7 +102,7 @@ Per qualsiasi feedback, utilizza l&#39;opzione **[!UICONTROL Feedback su Beta]**
 
 Leggi questa sezione per ulteriori informazioni a cui puoi fare riferimento durante l’implementazione delle impostazioni di identità e degli spazi dei nomi univoci.
 
-### Scenario dispositivo condiviso {#shared-device-scenario}
+### Requisito dello spazio dei nomi per singola persona {#single-person-namespace-requirement}
 
 È necessario assicurarsi che venga utilizzato un singolo spazio dei nomi in tutti i profili che rappresentano una persona. In questo modo, il servizio Identity rileva l’identificatore di persona appropriato in un dato grafico.
 
