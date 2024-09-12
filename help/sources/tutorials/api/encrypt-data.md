@@ -2,9 +2,9 @@
 title: Acquisizione di dati crittografati
 description: Scopri come acquisire i file crittografati tramite le origini batch di archiviazione cloud utilizzando l’API.
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: adb48b898c85561efb2d96b714ed98a0e3e4ea9b
+source-git-commit: 9a5599473f874d86e2b3c8449d1f4d0cf54b672c
 workflow-type: tm+mt
-source-wordcount: '1736'
+source-wordcount: '1806'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ Puoi acquisire i file di dati crittografati in Adobe Experience Platform utilizz
 
 Il processo di acquisizione dei dati crittografati è il seguente:
 
-1. [Creare una coppia di chiavi di crittografia utilizzando le API Experience Platform](#create-encryption-key-pair). La coppia di chiavi di crittografia è costituita da una chiave privata e da una chiave pubblica. Una volta creata, puoi copiare o scaricare la chiave pubblica, insieme all’ID della chiave pubblica e all’ora di scadenza corrispondenti. Durante questa procedura, la chiave privata verrà memorizzata da Experience Platform in un archivio protetto. **NOTA:** la chiave pubblica nella risposta è codificata in Base64 e deve essere decrittografata prima di utilizzare.
+1. [Creare una coppia di chiavi di crittografia utilizzando le API Experience Platform](#create-encryption-key-pair). La coppia di chiavi di crittografia è costituita da una chiave privata e da una chiave pubblica. Una volta creata, puoi copiare o scaricare la chiave pubblica, insieme all’ID della chiave pubblica e all’ora di scadenza corrispondenti. Durante questa procedura, la chiave privata verrà memorizzata da Experience Platform in un archivio protetto. **NOTA:** la chiave pubblica nella risposta è codificata in Base64 e deve essere decodificata prima di utilizzare.
 2. Utilizza la chiave pubblica per crittografare il file di dati che desideri acquisire.
 3. Inserisci il file crittografato nell’archiviazione cloud.
 4. Quando il file crittografato è pronto, [crea una connessione di origine e un flusso di dati per l&#39;origine dell&#39;archiviazione cloud](#create-a-dataflow-for-encrypted-data). Durante il passaggio di creazione del flusso, devi fornire un parametro `encryption` e includere l&#39;ID della chiave pubblica.
@@ -64,6 +64,10 @@ L’elenco delle estensioni di file supportate per i file crittografati è:
 
 ## Crea coppia di chiavi di crittografia {#create-encryption-key-pair}
 
+>[!IMPORTANT]
+>
+>Le chiavi di crittografia sono specifiche per una data sandbox. Pertanto, se desideri acquisire i dati crittografati in una sandbox diversa all’interno della tua organizzazione, devi creare nuove chiavi di crittografia.
+
 Il primo passaggio per l&#39;acquisizione di dati crittografati in Experience Platform consiste nel creare la coppia di chiavi di crittografia effettuando una richiesta POST all&#39;endpoint `/encryption/keys` dell&#39;API [!DNL Connectors].
 
 **Formato API**
@@ -87,6 +91,7 @@ curl -X POST \
   -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
   -H 'Content-Type: application/json' 
   -d '{
+      "name": "acme-encryption",
       "encryptionAlgorithm": "PGP",
       "params": {
           "passPhrase": "{{PASSPHRASE}}"
@@ -96,6 +101,7 @@ curl -X POST \
 
 | Parametro | Descrizione |
 | --- | --- |
+| `name` | Nome della coppia di chiavi di crittografia. |
 | `encryptionAlgorithm` | Tipo di algoritmo di crittografia in uso. I tipi di crittografia supportati sono `PGP` e `GPG`. |
 | `params.passPhrase` | La passphrase fornisce un ulteriore livello di protezione per le chiavi di crittografia. Al momento della creazione, Experience Platform memorizza la passphrase in un archivio protetto diverso dalla chiave pubblica. Specificare una stringa non vuota come passphrase. |
 
@@ -153,13 +159,15 @@ curl -X GET \
 
 +++Visualizza risposta di esempio
 
-In caso di esito positivo, la risposta restituisce l’algoritmo di crittografia, la chiave pubblica, l’ID della chiave pubblica e la corrispondente data di scadenza delle chiavi.
+In caso di esito positivo, la risposta restituisce l’algoritmo di crittografia, il nome, la chiave pubblica, l’ID della chiave pubblica, il tipo di chiave e la scadenza corrispondente delle chiavi.
 
 ```json
 {
     "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+    "name": "{NAME}",
     "publicKeyId": "{PUBLIC_KEY_ID}",
     "publicKey": "{PUBLIC_KEY}",
+    "keyType": "{KEY_TYPE}",
     "expiryTime": "{EXPIRY_TIME}"
 }
 ```
@@ -194,13 +202,15 @@ curl -X GET \
 
 +++Visualizza risposta di esempio
 
-In caso di esito positivo, la risposta restituisce l’algoritmo di crittografia, la chiave pubblica, l’ID della chiave pubblica e la corrispondente data di scadenza delle chiavi.
+In caso di esito positivo, la risposta restituisce l’algoritmo di crittografia, il nome, la chiave pubblica, l’ID della chiave pubblica, il tipo di chiave e la scadenza corrispondente delle chiavi.
 
 ```json
 {
     "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+    "name": "{NAME}",
     "publicKeyId": "{PUBLIC_KEY_ID}",
     "publicKey": "{PUBLIC_KEY}",
+    "keyType": "{KEY_TYPE}",
     "expiryTime": "{EXPIRY_TIME}"
 }
 ```
@@ -236,8 +246,12 @@ curl -X POST \
   -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
   -H 'Content-Type: application/json' 
   -d '{
+      "name": "acme-sign-verification-keys"
       "encryptionAlgorithm": {{ENCRYPTION_ALGORITHM}},       
-      "publicKey": {{BASE_64_ENCODED_PUBLIC_KEY}}
+      "publicKey": {{BASE_64_ENCODED_PUBLIC_KEY}},
+      "params": {
+          "passPhrase": {{PASS_PHRASE}}
+      }
     }'
 ```
 
@@ -261,6 +275,48 @@ curl -X POST \
 | Proprietà | Descrizione |
 | --- | --- |
 | `publicKeyId` | Questo ID di chiave pubblica viene restituito in risposta alla condivisione della chiave gestita dal cliente con Experience Platform. Puoi fornire questo ID di chiave pubblica come ID della chiave di verifica della firma durante la creazione di un flusso di dati per dati firmati e crittografati. |
+
++++
+
+### Recupera coppia di chiavi gestite dal cliente
+
+Per recuperare le chiavi gestite dal cliente, effettuare una richiesta GET all&#39;endpoint `/customer-keys`.
+
+**Formato API**
+
+```http
+GET /data/foundation/connectors/encryption/customer-keys
+```
+
+**Richiesta**
+
++++Visualizza richiesta di esempio
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/customer-keys' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**Risposta**
+
++++Visualizza risposta di esempio
+
+```json
+[
+    {
+        "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+        "name": "{NAME}",
+        "publicKeyId": "{PUBLIC_KEY_ID}",
+        "publicKey": "{PUBLIC_KEY}",
+        "keyType": "{KEY_TYPE}",
+    }
+]
+```
 
 +++
 
