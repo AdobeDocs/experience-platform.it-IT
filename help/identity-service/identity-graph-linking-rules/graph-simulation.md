@@ -3,9 +3,9 @@ title: Guida dell’interfaccia utente di Graph Simulation
 description: Scopri come utilizzare la simulazione del grafico nell’interfaccia utente del servizio Identity.
 badge: Beta
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
 workflow-type: tm+mt
-source-wordcount: '1435'
+source-wordcount: '1443'
 ht-degree: 1%
 
 ---
@@ -172,8 +172,10 @@ Nel grafico di esempio seguente, esiste una linea tratteggiata tra `{Email: tom@
 
 Dopo aver letto questo documento, saprai come utilizzare lo strumento [!DNL Graph Simulation] per comprendere meglio come vengono trattati i dati di identità in base a un particolare set di regole e configurazioni. Per ulteriori informazioni, leggere i seguenti documenti:
 
-* [Regole di collegamento del grafo delle identità](./overview.md)
-* [Guida alla configurazione](./configuration.md)
+* [Panoramica delle regole di collegamento del grafico delle identità](./overview.md)
 * [Algoritmo di ottimizzazione identità](./identity-optimization-algorithm.md)
+* [Guida all’implementazione](./implementation-guide.md)
+* [Risoluzione dei problemi e domande frequenti](./troubleshooting.md)
+* [Esempi di configurazioni di grafo](./example-configurations.md)
 * [Priorità dello spazio dei nomi](./namespace-priority.md)
-* [Esempio di configurazioni del grafico](./example-configurations.md)
+* [Interfaccia utente per le impostazioni delle identità](./identity-settings-ui.md)

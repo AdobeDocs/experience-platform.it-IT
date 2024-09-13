@@ -3,9 +3,9 @@ title: Interfaccia utente per le impostazioni delle identità
 description: Scopri come utilizzare l’interfaccia utente delle impostazioni di identità.
 badge: Beta
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 04b04807196bb5902e398403612429eae0de3988
+source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '539'
 ht-degree: 0%
 
 ---
@@ -24,8 +24,10 @@ Leggi questa guida per scoprire come configurare le impostazioni di identità ne
 
 Prima di iniziare a utilizzare le impostazioni di identità, leggi i seguenti documenti:
 
-* [Guida alla configurazione delle regole di collegamento del grafico delle identità](./configuration.md)
+* [Regole di collegamento del grafo delle identità](./overview.md)
 * [Algoritmo di ottimizzazione identità](./identity-optimization-algorithm.md)
+* [Guida all’implementazione](./implementation-guide.md)
+* [Esempi di configurazioni di grafo](./example-configurations.md)
 * [Priorità dello spazio dei nomi](./namespace-priority.md)
 * [Simulazione del grafico](./graph-simulation.md)
 
@@ -61,4 +63,12 @@ Viene visualizzato un messaggio di avviso che indica che i grafici esistenti sar
 
 ## Passaggi successivi
 
-Ora hai configurato le priorità dello spazio dei nomi e definito gli spazi dei nomi univoci utilizzando la pagina dell’interfaccia utente delle impostazioni delle identità. Per ulteriori informazioni, leggere la [panoramica delle regole di collegamento del grafico delle identità](./overview.md).
+Per ulteriori informazioni sulle regole di collegamento del grafico delle identità, consulta la documentazione seguente:
+
+* [Panoramica delle regole di collegamento del grafico delle identità](./overview.md)
+* [Algoritmo di ottimizzazione identità](./identity-optimization-algorithm.md)
+* [Guida all’implementazione](./implementation-guide.md)
+* [Esempi di configurazioni di grafo](./example-configurations.md)
+* [Risoluzione dei problemi e domande frequenti](./troubleshooting.md)
+* [Priorità dello spazio dei nomi](./namespace-priority.md)
+* [Interfaccia utente simulazione grafico](./graph-simulation.md)

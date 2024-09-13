@@ -1,11 +1,11 @@
 ---
-title: Panoramica delle regole di collegamento del grafico delle identità
-description: Scopri le regole di collegamento del grafico identità in Identity Service.
+title: Regole di collegamento del grafico delle identità
+description: Scopri le regole di collegamento del grafico delle identità in Identity Service.
 badge: Beta
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: 1ea840e2c6c44d5d5080e0a034fcdab4cbdc87f1
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1581'
 ht-degree: 1%
 
 ---
@@ -16,17 +16,19 @@ ht-degree: 1%
 >
 >Le regole di collegamento del grafo delle identità sono attualmente in versione beta. Contatta il team del tuo account di Adobe per informazioni sui criteri di partecipazione. La funzione e la documentazione sono soggette a modifiche.
 
-## Sommario 
+Con il servizio Adobe Experience Platform Identity e il profilo cliente in tempo reale, è facile presumere che i dati siano acquisiti perfettamente e che tutti i profili uniti rappresentino una singola persona tramite un identificatore di persona, come un CRMID. Tuttavia, esistono scenari possibili in cui alcuni dati potrebbero tentare di unire più profili disparati in un unico profilo (&quot;compressione del grafico&quot;). Per evitare queste unioni indesiderate, puoi utilizzare le configurazioni fornite tramite le regole di collegamento del grafico delle identità e consentire una personalizzazione accurata per i tuoi utenti.
 
-* [Panoramica](./overview.md)
+## Introduzione
+
+I seguenti documenti sono essenziali per comprendere le regole di collegamento del grafico delle identità.
+
 * [Algoritmo di ottimizzazione identità](./identity-optimization-algorithm.md)
+* [Guida all’implementazione](./implementation-guide.md)
+* [Esempi di configurazioni di grafo](./example-configurations.md)
+* [Risoluzione dei problemi e domande frequenti](./troubleshooting.md)
 * [Priorità dello spazio dei nomi](./namespace-priority.md)
 * [Interfaccia utente simulazione grafico](./graph-simulation.md)
 * [Interfaccia utente per le impostazioni delle identità](./identity-settings-ui.md)
-* [Esempio di configurazioni del grafico](./configuration.md)
-* [Scenari di esempio](./example-scenarios.md)
-
-Con il servizio Adobe Experience Platform Identity e il profilo cliente in tempo reale, è facile presumere che i dati siano acquisiti perfettamente e che tutti i profili uniti rappresentino una singola persona tramite un identificatore di persona, come un CRMID. Tuttavia, esistono scenari possibili in cui alcuni dati potrebbero tentare di unire più profili disparati in un unico profilo (&quot;compressione del grafico&quot;). Per evitare queste unioni indesiderate, puoi utilizzare le configurazioni fornite tramite le regole di collegamento del grafico delle identità e consentire una personalizzazione accurata per i tuoi utenti.
 
 ## Scenari di esempio in cui potrebbe verificarsi una compressione del grafico
 
@@ -34,7 +36,7 @@ Con il servizio Adobe Experience Platform Identity e il profilo cliente in tempo
 * **Numeri di telefono e di posta elettronica non validi**: i numeri di telefono e di posta elettronica non validi si riferiscono agli utenti finali che registrano informazioni di contatto non valide, ad esempio &quot;test<span>@test.com&quot; per la posta elettronica e &quot;+1-111-111-1111&quot; per il numero di telefono.
 * **Valori di identità errati o non validi**: i valori di identità errati o non validi fanno riferimento a valori di identità non univoci che potrebbero unire i valori CRMID. Ad esempio, mentre gli identificatori IDFA devono avere 36 caratteri (32 caratteri alfanumerici e quattro trattini), ci sono scenari in cui un identificatore IDFA con valore di identità &quot;user_null&quot; può essere acquisito. Allo stesso modo, i numeri di telefono supportano solo caratteri numerici, ma è possibile che venga acquisito uno spazio dei nomi telefonico con un valore di identità &quot;non specificato&quot;.
 
-Per ulteriori informazioni sugli scenari dei casi d&#39;uso per le regole di collegamento del grafo delle identità, leggere il documento in [scenari d&#39;esempio](./example-scenarios.md).
+Per ulteriori informazioni sugli scenari dei casi d&#39;uso per le regole di collegamento del grafo delle identità, leggere la sezione relativa a [scenari d&#39;esempio](#example-scenarios).
 
 ## Regole di collegamento del grafo delle identità {#identity-graph-linking-rules}
 
@@ -94,10 +96,63 @@ Nell’area di lavoro dell’interfaccia utente delle impostazioni delle identit
 
 Per ulteriori informazioni, leggere la guida sulla [priorità dello spazio dei nomi](./namespace-priority.md).
 
+## Esempi di scenari cliente risolti dalle regole di collegamento del grafico delle identità {#example-scenarios}
+
+Questa sezione descrive scenari di esempio da considerare durante la configurazione delle regole di collegamento del grafico delle identità.
+
+### Dispositivo condiviso
+
+Esistono casi in cui si possono verificare più accessi su un singolo dispositivo:
+
+| Dispositivo condiviso | Descrizione |
+| --- | --- |
+| Family computer e tablet | Marito e moglie accedono entrambi ai rispettivi conti bancari. |
+| Chiosco pubblico | I viaggiatori che si registrano in aeroporto utilizzando il proprio ID fedeltà per effettuare il check-in delle borse e stampare le carte d’imbarco. |
+| Call center | Il personale del call center accede a un singolo dispositivo per conto dei clienti che chiamano l’assistenza clienti per risolvere i problemi. |
+
+![Diagramma di alcuni dispositivi condivisi comuni.](../images/identity-settings/shared-devices.png)
+
+In questi casi, dal punto di vista del grafico, senza limiti abilitati, un singolo ECID sarà collegato a più CRMID.
+
+Con le regole di collegamento del grafico delle identità, puoi:
+
+* Configura l’ID utilizzato per l’accesso come identificatore univoco. Ad esempio, puoi limitare un grafico per memorizzare una sola identità con uno spazio dei nomi CRMID e quindi definire tale CRMID come identificatore univoco di un dispositivo condiviso.
+   * In questo modo, puoi evitare che i CRMID vengano uniti dall’ECID.
+
+### Scenari e-mail/telefono non validi
+
+Ci sono anche esempi di utenti che forniscono valori falsi come numeri di telefono e/o indirizzi e-mail al momento della registrazione. In questi casi, se i limiti non sono abilitati, le identità relative a telefono/e-mail finiranno per essere collegate a più CRMID diversi.
+
+![Diagramma che rappresenta scenari di posta elettronica o telefono non validi.](../images/identity-settings/invalid-email-phone.png)
+
+Con le regole di collegamento del grafico delle identità, puoi:
+
+* Configura il CRMID, il numero di telefono o l’indirizzo e-mail come identificatore univoco e limita quindi una persona a un solo CRMID, numero di telefono e/o indirizzo e-mail associato al suo account.
+
+### Valori di identità errati o errati
+
+In alcuni casi, valori di identità errati e non univoci vengono acquisiti nel sistema, indipendentemente dallo spazio dei nomi. Gli esempi includono:
+
+* Spazio dei nomi IDFA con valore di identità &quot;user_null&quot;.
+   * I valori di identità IDFA devono contenere 36 caratteri: 32 caratteri alfanumerici e quattro trattini.
+* Spazio dei nomi del numero di telefono con valore di identità &quot;non specificato&quot;.
+   * I numeri di telefono non devono contenere caratteri dell’alfabeto.
+
+Queste identità possono causare i seguenti grafici, in cui più identificatori CRMID vengono uniti insieme all’identità &quot;bad&quot;:
+
+![Esempio di grafico di dati di identità con valori di identità errati o non validi.](../images/identity-settings/bad-data.png)
+
+Con le regole di collegamento del grafico delle identità puoi configurare il CRMID come identificatore univoco per evitare la compressione del profilo indesiderata a causa di questo tipo di dati.
+
+
 ## Passaggi successivi
 
 Per ulteriori informazioni sulle regole di collegamento del grafico delle identità, consulta la documentazione seguente:
 
-* [Algoritmo di ottimizzazione identità](./identity-optimization-algorithm.md).
-* [Priorità spazio dei nomi](./namespace-priority.md).
-* [Scenari di esempio per la configurazione delle regole di collegamento del grafico delle identità](./example-scenarios.md).
+* [Algoritmo di ottimizzazione identità](./identity-optimization-algorithm.md)
+* [Guida all’implementazione](./implementation-guide.md)
+* [Esempi di configurazioni di grafo](./example-configurations.md)
+* [Risoluzione dei problemi e domande frequenti](./troubleshooting.md)
+* [Priorità dello spazio dei nomi](./namespace-priority.md)
+* [Interfaccia utente simulazione grafico](./graph-simulation.md)
+* [Interfaccia utente per le impostazioni delle identità](./identity-settings-ui.md)
