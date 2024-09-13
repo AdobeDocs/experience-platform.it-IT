@@ -2,14 +2,18 @@
 title: Panoramica dell’Assistente AI in Adobe Experience Platform
 description: Scopri l’Assistente IA, le relative sfaccettature e i casi di utilizzo, e come utilizzarlo per accelerare il flusso di lavoro con Adobe Experience Platform e Real-time Customer Data Platform.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: fc87c28d7019e123d974e4d2ad307928a3d3fe89
+source-git-commit: 6f95cae48b0f4c304eb3dbd2d95e01e00e0f01c9
 workflow-type: tm+mt
-source-wordcount: '915'
+source-wordcount: '927'
 ht-degree: 8%
 
 ---
 
 # Assistente AI in Adobe Experience Platform
+
+Il video seguente ha lo scopo di illustrare l’Assistente per l’intelligenza artificiale.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
 
 Leggi questo documento per scoprire di più sull’Assistente AI in Adobe Experience Platform.
 
