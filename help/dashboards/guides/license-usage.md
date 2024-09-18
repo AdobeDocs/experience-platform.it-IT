@@ -4,10 +4,10 @@ title: Dashboard utilizzo licenze
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale è possibile visualizzare informazioni importanti sull’utilizzo delle licenze della tua organizzazione.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: dedffe90e9107b70d4ddf65a7bf8079396ff8e8b
+source-git-commit: b1de61b2e7d0dedf2da8ef8ffb02fe5c15e82fb2
 workflow-type: tm+mt
-source-wordcount: '2641'
-ht-degree: 6%
+source-wordcount: '2720'
+ht-degree: 5%
 
 ---
 
@@ -17,6 +17,16 @@ ht-degree: 6%
 >id="testy-mctestface"
 >title="Finestra di dialogo di prova che non deve essere visibile"
 >abstract="L&#39;oggetto {name} è visualizzato il {date}."
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_core"
+>title="Tabella dei prodotti core"
+>abstract="I prodotti core elencati nella tabella hanno le proprie metriche, il tracciamento dell’utilizzo e viste drill-through a livello di sandbox. Questi prodotti core forniscono le metriche chiave per il tracciamento ed eventuali componenti aggiuntivi sono inclusi in queste metriche."
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_addons"
+>title="Tabella dei componenti aggiuntivi"
+>abstract="Nella tabella Componenti aggiuntivi sono elencati i prodotti i cui importi di licenza sono combinati con le metriche supportate dai prodotti di base. Questi componenti aggiuntivi non hanno metriche separate, ma migliorano il tracciamento dell’utilizzo dei prodotti core a cui sono associati."
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"
