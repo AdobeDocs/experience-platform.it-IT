@@ -3,9 +3,9 @@ title: Note sulla versione di Adobe Experience Platform Web SDK
 description: Note sulla versione più recente di Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;note sulla versione;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 73a82825dd6c9ae97db76018df5462ab20c7d15e
+source-git-commit: c1fb9fe7d4863e316b824d6c8dd2ff0d3405d7ea
 workflow-type: tm+mt
-source-wordcount: '1882'
+source-wordcount: '1920'
 ht-degree: 2%
 
 ---
@@ -16,11 +16,21 @@ ht-degree: 2%
 Questo documento descrive le note sulla versione di Adobe Experience Platform Web SDK.
 Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [note sulla versione dell&#39;estensione tag Web SDK](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
+## Versione 2.23.0 - 19 settembre 2024
+
+**Nuove funzioni**
+
+- È stato aggiunto il supporto per la richiesta dell&#39;[ID CORE](identity/overview.md#tracking-coreid-web-sdk) nel comando [getIdentity](commands/getidentity.md#get-identity-using-the-web-sdk-javascript-library).
+
+**Correzioni e miglioramenti**
+
+- È stato risolto un problema a causa del quale i cookie non venivano scritti correttamente durante l’esecuzione locale dell’SDK web.
+
 ## Versione 2.22.0 - 22 agosto 2024
 
 **Nuove funzioni**
 
-- Sono stati aggiunti i monitor di personalizzazione.
+- È stato aggiunto il supporto per gli hook di monitoraggio della personalizzazione.
 
 **Correzioni e miglioramenti**
 
