@@ -3,9 +3,9 @@ keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione
 title: Guida all’interfaccia utente di Real-Time Customer Profile
 description: Real-Time Customer Profile crea una visualizzazione olistica di ciascuno dei singoli clienti, combinando dati provenienti da più canali tra cui dati online, offline, del sistema CRM e di terze parti. Questo documento funge da guida per l’interazione con Real-Time Customer Profile nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: e6c64ebbde0301c796a4d681d962f1edb3d79a12
+source-git-commit: dc31258dad5cf03a8f4f60db4d4aefc29e8157c8
 workflow-type: tm+mt
-source-wordcount: '2155'
+source-wordcount: '2212'
 ht-degree: 0%
 
 ---
@@ -127,6 +127,11 @@ Una volta immesso il valore, selezionare **[!UICONTROL Visualizza]** e viene res
 ![Il profilo che corrisponde al valore di identità è evidenziato.](../images/user-guide/filtered-identity-value.png)
 
 ## Visualizza dettagli profilo {#profile-detail}
+
+>[!CONTEXTUALHELP]
+>id="platform_errors_uplib_201001_404"
+>title="Entità non trovata"
+>abstract="Platform non è riuscito a trovare l’entità richiesta. Per risolvere l&#39;errore, provare una delle soluzioni seguenti:<ul><li>Assicurati che l’ID profilo corretto sia elencato nell’URL dell’entità a cui stai tentando di accedere.</li><li>Assicurati di disporre della giusta combinazione di sandbox e organizzazione per l’entità a cui stai tentando di accedere.</li></ul>"
 
 Dopo aver selezionato un **[!UICONTROL ID profilo]**, viene aperta la scheda **[!UICONTROL Dettagli]**. Le informazioni di profilo visualizzate nella scheda **[!UICONTROL Dettagli]** sono state unite da più frammenti di profilo per formare un&#39;unica vista del singolo cliente. Ciò include i dettagli del cliente come attributi di base, identità collegate e preferenze di canale.
 
