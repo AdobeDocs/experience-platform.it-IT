@@ -4,9 +4,9 @@ title: Guida all’API del profilo cliente in tempo reale
 description: L’API Profilo cliente in tempo reale consente agli sviluppatori di esplorare e utilizzare i dati del profilo, tra cui la visualizzazione dei profili, la creazione e l’aggiornamento di criteri di unione, l’esportazione o l’esempio di dati del profilo e l’eliminazione dei dati del profilo che non sono più necessari o che sono stati aggiunti per errore. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
 role: Developer
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: cb276c55c010aa7ccc936947ad87bf74239d6e99
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '860'
 ht-degree: 2%
 
 ---
@@ -21,11 +21,7 @@ Per visualizzare tutti gli endpoint disponibili e le operazioni CRUD, visita il 
 
 Per una guida all&#39;utilizzo dei dati di [!DNL Real-Time Customer Profile] nell&#39;interfaccia utente di [!DNL Experience Platform], fare riferimento alla [guida utente del profilo](../ui/user-guide.md).
 
-## Attributi calcolati di [!BADGE Beta]{type=Informative} {#computed-attributes}
-
->[!IMPORTANT]
->
-La funzionalità degli attributi calcolati è disponibile in versione beta e non è disponibile per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.
+## Attributi calcolati {#computed-attributes}
 
 Gli attributi calcolati sono funzioni utilizzate per aggregare i dati a livello di evento negli attributi a livello di profilo. Queste funzioni vengono calcolate automaticamente in modo che possano essere utilizzate in segmentazione, attivazione e personalizzazione.
 
