@@ -2,9 +2,9 @@
 title: Creare una connessione Adobe Analytics Source nell’interfaccia utente
 description: Scopri come creare una connessione sorgente Adobe Analytics nell’interfaccia utente per inserire i dati dei consumatori in Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 40ad3101f643e6ce1b24d2a02c1817cfe04bd5d5
+source-git-commit: 71932d6f743d8cf767ce4e088231e61e9c2160e0
 workflow-type: tm+mt
-source-wordcount: '2577'
+source-wordcount: '2672'
 ht-degree: 3%
 
 ---
@@ -312,6 +312,13 @@ Per ulteriori informazioni sulla retrocompilazione, sui dati live e sulle rispet
 >[!NOTE]
 >
 >La pagina dell’attività del set di dati non visualizza informazioni sui batch, poiché il connettore di origine di Analytics è interamente gestito da Adobe. Puoi monitorare il flusso dei dati osservando le metriche relative ai record acquisiti.
+
+## Eliminare il flusso di dati {#delete-dataflow}
+
+Per eliminare il flusso di dati di Analytics, seleziona **[!UICONTROL Flussi di dati]** dall&#39;intestazione superiore dell&#39;area di lavoro origini. Utilizzare la pagina Flussi dati per individuare il flusso di dati di Analytics che si desidera eliminare, quindi selezionare i puntini di sospensione (`...`) accanto ad esso. Quindi, utilizzare il menu a discesa e selezionare **[!UICONTROL Elimina]**.
+
+* Se elimini il flusso di dati live Analytics, verrà eliminato anche il relativo set di dati sottostante.
+* L’eliminazione del flusso di dati di backfill di Analytics non elimina il set di dati sottostante, ma interrompe il processo di backfill per la suite di rapporti corrispondente. Se elimini il flusso di dati di retrocompilazione, i dati acquisiti possono comunque essere visualizzati attraverso il set di dati.
 
 ## Passaggi successivi e risorse aggiuntive
 
