@@ -1,11 +1,11 @@
 ---
-title: Collegare l'account Salesforce tramite l'interfaccia utente Experience Platform
-description: Scopri come collegare il tuo account Salesforce e portare i tuoi dati di gestione delle relazioni con i clienti a Experience Platform utilizzando l’interfaccia utente di.
+title: Collegare l’account Salesforce utilizzando l’interfaccia utente di Experience Platform
+description: Scopri come collegare il tuo account Salesforce e portare i tuoi dati di gestione delle relazioni con i clienti a Experience Platform utilizzando l’interfaccia utente.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: 5951b0f549c2fd2723945f8f4089d12f73b92e6c
+source-git-commit: ae322ee421edd73cd5a3fb8499267cd417491318
 workflow-type: tm+mt
-source-wordcount: '841'
-ht-degree: 3%
+source-wordcount: '935'
+ht-degree: 2%
 
 ---
 
@@ -71,7 +71,7 @@ Selezionare **[!DNL Salesforce]** nella categoria *[!UICONTROL CRM]*, quindi sel
 >
 >Le origini nel catalogo delle origini visualizzano l&#39;opzione **[!UICONTROL Configura]** quando un&#39;origine specificata non dispone ancora di un account autenticato. Quando esiste un account autenticato, questa opzione diventa **[!UICONTROL Aggiungi dati]**.
 
-![Catalogo delle origini nell&#39;interfaccia utente di Experience Platform con la scheda sorgente Salesforce selezionata.](../../../../images/tutorials/create/salesforce/catalog.png)
+![Catalogo delle origini nell&#39;interfaccia utente di Experience Platform con la scheda di origine di Salesforce selezionata.](../../../../images/tutorials/create/salesforce/catalog.png)
 
 Viene visualizzata la pagina **[!UICONTROL Connetti a Salesforce]**. In questa pagina è possibile utilizzare nuove credenziali o credenziali esistenti.
 
@@ -118,6 +118,12 @@ Al termine, selezionare **[!UICONTROL Connetti all&#39;origine]**.
 ![Interfaccia OAuth per la creazione dell&#39;account Salesforce.](../../../../images/tutorials/create/salesforce/oauth2.png)
 
 >[!ENDTABS]
+
+### Ignora anteprima dei dati di esempio {#skip-preview-of-sample-data}
+
+Durante il passaggio di selezione dei dati, potrebbe verificarsi un timeout durante l’acquisizione di tabelle o file di dati di grandi dimensioni. Puoi saltare l’anteprima dei dati per evitare il timeout e visualizzare comunque lo schema, anche senza dati di esempio. Per ignorare l&#39;anteprima dei dati, abilitare l&#39;interruttore **[!UICONTROL Ignora anteprima dati di esempio]**.
+
+Il resto del flusso di lavoro rimarrà invariato. L’unica avvertenza è che ignorare l’anteprima dei dati potrebbe impedire la convalida automatica dei campi calcolati e obbligatori durante il passaggio di mappatura, per cui dovrai convalidarli manualmente durante la mappatura.
 
 ## Passaggi successivi
 
