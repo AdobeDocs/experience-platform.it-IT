@@ -1,12 +1,11 @@
 ---
 title: Collegare l'account di streaming di Snowflake a Adobe Experience Platform
 description: Scopri come collegare Adobe Experience Platform a Streaming di Snowflake utilizzando l’API del servizio Flusso.
-badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3fc225a4-746c-4a91-aa77-bbeb091ec364
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 34b1676ebb5405d73cf37cd786d1e6c26cb8fdaa
 workflow-type: tm+mt
-source-wordcount: '864'
+source-wordcount: '845'
 ht-degree: 5%
 
 ---
@@ -15,8 +14,8 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->* L&#39;origine di streaming [!DNL Snowflake] è in versione beta. Per ulteriori informazioni sull&#39;utilizzo di origini con etichetta beta, leggere la [Panoramica origini](../../../../home.md#terms-and-conditions).
->* L&#39;origine di streaming [!DNL Snowflake] è disponibile nell&#39;API per gli utenti che hanno acquistato Real-time Customer Data Platform Ultimate.
+>
+> L&#39;origine di streaming [!DNL Snowflake] è disponibile nell&#39;API per gli utenti che hanno acquistato Real-time Customer Data Platform Ultimate.
 
 Questo tutorial illustra i passaggi necessari per collegare e inviare dati dall&#39;account [!DNL Snowflake] a Adobe Experience Platform utilizzando l&#39;[[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 

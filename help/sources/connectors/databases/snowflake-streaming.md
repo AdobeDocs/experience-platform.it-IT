@@ -1,13 +1,12 @@
 ---
 title: Panoramica del connettore Source per streaming di Snowflake
 description: Scopri come creare una connessione di origine e un flusso di dati per acquisire i dati in streaming dall’istanza di Snowflake a Adobe Experience Platform
-badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
-last-substantial-update: 2023-05-25T00:00:00Z
+last-substantial-update: 2023-09-24T00:00:00Z
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: e8ab39ce085a95eac898f65667706b71bdadd350
+source-git-commit: 34b1676ebb5405d73cf37cd786d1e6c26cb8fdaa
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '772'
 ht-degree: 1%
 
 ---
@@ -16,8 +15,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->* L&#39;origine di streaming [!DNL Snowflake] è in versione beta. Per ulteriori informazioni sull&#39;utilizzo di origini con etichetta beta, leggere la [Panoramica origini](../../home.md#terms-and-conditions).
->* L&#39;origine di streaming [!DNL Snowflake] è disponibile nell&#39;API per gli utenti che hanno acquistato Real-time Customer Data Platform Ultimate.
+> L&#39;origine di streaming [!DNL Snowflake] è disponibile nell&#39;API per gli utenti che hanno acquistato Real-time Customer Data Platform Ultimate.
 
 Adobe Experience Platform consente di acquisire i dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 
