@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica dell’interfaccia utente degli schemi
 description: Questa panoramica descrive le principali funzionalità dell’area di lavoro Schemi in Experience Platform.
 exl-id: b6e089ce-cf9e-4150-92ab-368382a75049
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 16d6090bc71dbdc9ab42db98eafa0ea5afb5967b
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '307'
 ht-degree: 9%
 
 ---
@@ -17,7 +17,7 @@ L&#39;area di lavoro [!UICONTROL Schemi] nell&#39;interfaccia utente di Adobe Ex
 
 Per accedere all&#39;area di lavoro nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Schemi]** nella barra a sinistra.
 
-![](../images/ui/overview/schemas-tab.png)
+![L&#39;area di lavoro Schemi con Schemi evidenziati nell&#39;interfaccia utente di Platform ha lasciato la navigazione.](../images/ui/overview/schemas-tab.png)
 
 ## Introduzione
 

@@ -5,10 +5,10 @@ title: Definire una relazione tra due schemi utilizzando l’Editor di schema
 description: Questo documento fornisce un tutorial per definire una relazione tra due schemi utilizzando l’Editor di schema nell’interfaccia utente di Experience Platform.
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5f9fdc9eff4d8bba049c03058d24e80e9b89e953
 workflow-type: tm+mt
-source-wordcount: '1158'
-ht-degree: 10%
+source-wordcount: '1376'
+ht-degree: 9%
 
 ---
 
@@ -109,19 +109,49 @@ Una volta definito un campo di riferimento dedicato per lo schema di origine, pu
 
 >[!NOTE]
 >
->I passaggi seguenti descrivono come definire un campo di relazione utilizzando i controlli nella barra a destra nell’area di lavoro. Se hai accesso a Real-Time CDP B2B Edition, puoi anche definire una relazione uno-a-uno utilizzando la [stessa finestra di dialogo](./relationship-b2b.md#relationship-field) come per la creazione di relazioni molti-a-uno.
+>Le relazioni possono essere supportate solo nei campi stringa o matrice di stringhe.
 
-Seleziona il campo `preferredHotel` nell&#39;area di lavoro, quindi scorri verso il basso in **[!UICONTROL Proprietà campo]** fino a visualizzare la casella di controllo **[!UICONTROL Relazione]**. Selezionare la casella di controllo per visualizzare i parametri richiesti per la configurazione di un campo relazione.
+Seleziona il campo `preferredHotel` nell&#39;area di lavoro, quindi seleziona **[!UICONTROL Aggiungi relazione]** nella barra laterale **[!UICONTROL Proprietà campo]**.
 
-![](../images/tutorials/relationship/relationship-checkbox.png)
+![L&#39;Editor di schema con la relazione Aggiungi evidenziata nella barra laterale delle proprietà del campo.](../images/tutorials/relationship/add-relationship.png)
 
-Selezionare il menu a discesa per **[!UICONTROL Schema di riferimento]** e selezionare lo schema di riferimento per la relazione (&quot;[!DNL Hotels]&quot; in questo esempio). In **[!UICONTROL Spazio dei nomi identità di riferimento]**, selezionare lo spazio dei nomi del campo di identità dello schema di riferimento (in questo caso, &quot;[!DNL Hotel ID]&quot;). Al termine, seleziona **[!UICONTROL Applica]**.
+Viene visualizzata la finestra di dialogo [!UICONTROL Aggiungi relazione]. Da questa finestra di dialogo è possibile impostare i parametri richiesti per la configurazione di un campo relazione. Per gli utenti di Real-Time CDP B2C, puoi **only** impostare una relazione uno-a-uno tra lo schema di origine e quello di riferimento.
 
-![](../images/tutorials/relationship/reference-schema-id-namespace.png)
+>[!NOTE]
+>
+>Se hai accesso a Real-Time CDP B2B Edition, puoi utilizzare i controlli della barra a destra dell&#39;area di lavoro per definire un campo di relazione e creare una relazione molti-a-uno utilizzando la [stessa finestra di dialogo](./relationship-b2b.md#relationship-field).
+
+![Finestra di dialogo Aggiungi relazione.](../images/tutorials/relationship/add-relationship-dialog.png)
+
+Utilizza il menu a discesa per **[!UICONTROL Schema di riferimento]** e seleziona lo schema di riferimento per la relazione (&quot;[!DNL Hotels]&quot; in questo esempio).
+
+>[!NOTE]
+>
+>Solo gli schemi che contengono un’identità primaria sono inclusi nel menu a discesa dello schema di riferimento. Questa protezione impedisce la creazione accidentale di una relazione con uno schema non ancora configurato correttamente.
+
+Lo spazio dei nomi dell&#39;identità dello schema di riferimento (in questo caso, &quot;[!DNL Hotel ID]&quot;) viene popolato automaticamente in **[!UICONTROL Spazio dei nomi dell&#39;identità di riferimento]**. Al termine, seleziona **[!UICONTROL Applica]**.
+
+![La finestra di dialogo Aggiungi relazione con i parametri di relazione configurati e Applica evidenziati.](../images/tutorials/relationship/apply-relationship.png)
 
 Il campo `preferredHotel` è ora evidenziato come relazione nell&#39;area di lavoro, con il nome dello schema di riferimento. Seleziona **[!UICONTROL Salva]** per salvare le modifiche e completare il flusso di lavoro.
 
-![](../images/tutorials/relationship/relationship-save.png)
+![Editor schema con i riferimenti di relazione e Salva evidenziati.](../images/tutorials/relationship/relationship-save.png)
+
+### Modifica un campo relazione esistente {#edit-relationship}
+
+Per modificare lo schema di riferimento, selezionare un campo con una relazione esistente, quindi selezionare **[!UICONTROL Modifica relazione]** nella barra laterale **[!UICONTROL Proprietà campo]**.
+
+![Editor di schema con relazione di modifica evidenziata.](../images/tutorials/relationship/edit-relationship.png)
+
+Viene visualizzata la finestra di dialogo [!UICONTROL Modifica relazione]. Da qui puoi seguire il processo descritto in [definizione di un campo relazione](#relationship-field) o eliminare la relazione. Selezionare **[!UICONTROL Elimina relazione]** per rimuovere la relazione con lo schema di riferimento.
+
+![Finestra di dialogo Modifica relazione.](../images/tutorials/relationship/edit-relationship-dialog.png)
+
+## Filtrare e cercare relazioni {#filter-and-search}
+
+Puoi filtrare e cercare relazioni specifiche all&#39;interno degli schemi dalla scheda [!UICONTROL Relazioni] dell&#39;area di lavoro [!UICONTROL Schemi]. È possibile utilizzare questa visualizzazione per individuare e gestire rapidamente le relazioni. Per istruzioni dettagliate sulle opzioni di filtro, leggi il documento su [esplorazione delle risorse dello schema](../ui/explore.md#lookup).
+
+![Scheda Relazioni nell&#39;area di lavoro Schemi.](../images/tutorials/relationship-b2b/relationship-tab.png)
 
 ## Passaggi successivi
 

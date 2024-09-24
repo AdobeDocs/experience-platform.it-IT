@@ -2,10 +2,10 @@
 title: Definire una relazione tra due schemi nell’edizione B2B di Real-time Customer Data Platform
 description: Scopri come definire una relazione molti-a-uno tra due schemi in Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 85d6cf10599d153a15c1bd56067f57439ddd0133
 workflow-type: tm+mt
-source-wordcount: '1363'
-ht-degree: 15%
+source-wordcount: '1769'
+ht-degree: 12%
 
 ---
 
@@ -65,19 +65,19 @@ Per tenere conto di ciò, tutte le classi B2B standard contengono campi &quot;ke
 
 A scopo di riferimento, le sezioni seguenti descrivono la struttura di ogni schema utilizzato in questo tutorial prima che sia stata definita una relazione. Tieni presente dove sono state definite le identità primarie nella struttura dello schema e gli spazi dei nomi personalizzati utilizzati.
 
-### Schema [!DNL Opportunities]
+### Schema delle opportunità
 
 Lo schema di origine &quot;[!DNL Opportunities]&quot; è basato sulla classe [!UICONTROL Opportunità di business XDM]. Uno dei campi forniti dalla classe, `opportunityKey`, funge da identificatore per lo schema. In particolare, il campo `sourceKey` nell&#39;oggetto `opportunityKey` viene impostato come identità primaria dello schema in uno spazio dei nomi personalizzato denominato [!DNL B2B Opportunity].
 
-Come visto in **[!UICONTROL Proprietà schema]**, questo schema è stato abilitato per l&#39;utilizzo in [!DNL Real-Time Customer Profile].
+Come visto in **[!UICONTROL Proprietà campo]**, questo schema è stato abilitato per l&#39;utilizzo in [!DNL Real-Time Customer Profile].
 
-![Schema opportunità](../images/tutorials/relationship-b2b/opportunities.png)
+![Lo schema Opportunità nell&#39;editor schema con l&#39;oggetto opportunitàKey e l&#39;interruttore Abilita per profilo evidenziato.](../images/tutorials/relationship-b2b/opportunities.png)
 
 ### Schema [!DNL Accounts]
 
 Lo schema di riferimento &quot;[!DNL Accounts]&quot; è basato sulla classe [!UICONTROL Account XDM]. Il campo `accountKey` a livello di radice contiene `sourceKey` che funge da identità primaria in uno spazio dei nomi personalizzato denominato [!DNL B2B Account]. Questo schema è stato abilitato anche per l’utilizzo nel profilo.
 
-![Schema account](../images/tutorials/relationship-b2b/accounts.png)
+![Lo schema Account nell&#39;Editor di schema con l&#39;oggetto accountKey e l&#39;interruttore Abilita per profilo evidenziato.](../images/tutorials/relationship-b2b/accounts.png)
 
 ## Definire un campo relazione per lo schema di origine {#relationship-field}
 
@@ -97,29 +97,64 @@ Per definire una relazione tra due schemi, lo schema di origine deve disporre di
 >
 >Attualmente, è possibile definire solo relazioni molti-a-uno e uno-a-uno da uno schema di origine a uno schema di riferimento. Per le relazioni uno-a-molti, devi definire il campo relazione nello schema che rappresenta il &quot;molti&quot;.
 
-Per impostare un campo di relazione, selezionare l&#39;icona freccia (![Icona freccia](/help/images/icons/alias.png)) accanto al campo in questione nell&#39;area di lavoro. Nel caso dello schema [!DNL Opportunities], questo è il campo `accountKey.sourceKey` poiché l&#39;obiettivo è quello di stabilire una relazione molti-a-uno con un account.
+Per impostare un campo di relazione, seleziona il campo in questione nell&#39;area di lavoro, seguito da **[!UICONTROL Aggiungi relazione]** nella barra laterale [!UICONTROL Proprietà schema]. Nel caso dello schema [!DNL Opportunities], questo è il campo `accountKey.sourceKey` poiché l&#39;obiettivo è quello di stabilire una relazione molti-a-uno con un account.
 
-![Pulsante Relazione](../images/tutorials/relationship-b2b/relationship-button.png)
+![Editor schema con il campo sourceKey e la relazione Add evidenziati.](../images/tutorials/relationship-b2b/add-relationship.png)
 
-Viene visualizzata una finestra di dialogo che consente di specificare i dettagli della relazione. Il tipo di relazione è impostato automaticamente su **[!UICONTROL Many-to-one]**.
+Viene visualizzata la finestra di dialogo [!UICONTROL Aggiungi relazione]. Utilizza questa finestra di dialogo per specificare i dettagli della relazione. Per impostazione predefinita, il tipo di relazione è impostato su **[!UICONTROL Many-to-one]**.
 
-![Finestra Di Dialogo Relazioni](../images/tutorials/relationship-b2b/relationship-dialog.png)
+![Finestra di dialogo Aggiungi relazione con relazione schema molti-a-uno evidenziata.](../images/tutorials/relationship-b2b/relationship-dialog.png)
 
-In **[!UICONTROL Schema di riferimento]**, utilizzare la barra di ricerca per trovare il nome dello schema di riferimento. Quando si evidenzia il nome dello schema di riferimento, il campo **[!UICONTROL Spazio dei nomi identità di riferimento]** viene aggiornato automaticamente allo spazio dei nomi dell&#39;identità primaria dello schema.
+In **[!UICONTROL Schema di riferimento]**, utilizzare la barra di ricerca o il menu a discesa per trovare il nome dello schema di riferimento. Quando si evidenzia il nome dello schema di riferimento, il campo **[!UICONTROL Spazio dei nomi identità di riferimento]** viene aggiornato automaticamente allo spazio dei nomi dell&#39;identità primaria dello schema di riferimento.
 
-![Schema di riferimento](../images/tutorials/relationship-b2b/reference-schema.png)
+>[!NOTE]
+>
+>L’elenco degli schemi di riferimento disponibili viene filtrato in modo da contenere solo schemi idonei. Agli schemi **must** è assegnata un&#39;identità primaria e possono essere una classe B2B o una classe Profilo individuale. Gli schemi di classi prospect non sono in grado di avere relazioni.
 
-In **[!UICONTROL Nome relazione da schema corrente]** e **[!UICONTROL Nome relazione da schema di riferimento]**, fornire nomi descrittivi per la relazione rispettivamente nel contesto degli schemi di origine e di riferimento. Al termine, selezionare **[!UICONTROL Salva]** per applicare le modifiche e salvare lo schema.
+![La finestra di dialogo Aggiungi relazione con i campi Schema di riferimento e Spazio dei nomi Identità di riferimento è evidenziata.](../images/tutorials/relationship-b2b/reference-schema.png)
 
-![Nome relazione](../images/tutorials/relationship-b2b/relationship-name.png)
+In **[!UICONTROL Nome relazione da schema corrente]** e **[!UICONTROL Nome relazione da schema di riferimento]**, fornire nomi descrittivi per la relazione rispettivamente nel contesto degli schemi di origine e di riferimento. Al termine, selezionare **[!UICONTROL Applica]** per confermare le modifiche e salvare la relazione.
+
+>[!NOTE]
+>
+>I nomi delle relazioni non possono contenere più di 35 caratteri.
+
+![Finestra di dialogo Aggiungi relazione con i campi Nome relazione evidenziati.](../images/tutorials/relationship-b2b/relationship-name.png)
 
 L’area di lavoro viene nuovamente visualizzata, con il campo relazione ora contrassegnato con il nome descrittivo fornito in precedenza. Il nome della relazione è elencato anche nella barra a sinistra per un riferimento semplice.
 
-![Relazione applicata](../images/tutorials/relationship-b2b/relationship-applied.png)
+![Editor di schema con il nuovo nome di relazione applicato.](../images/tutorials/relationship-b2b/relationship-applied.png)
 
 Se visualizzi la struttura dello schema di riferimento, l’indicatore di relazione viene visualizzato accanto al campo dell’identità primaria dello schema e nella barra a sinistra.
 
-![Indicatore di relazione schema di destinazione](../images/tutorials/relationship-b2b/destination-relationship.png)
+![Lo schema di destinazione nell&#39;Editor schema con il nuovo indicatore di relazione evidenziato.](../images/tutorials/relationship-b2b/destination-relationship.png)
+
+## Modificare una relazione tra schemi B2B {#edit-schema-relationship}
+
+Una volta stabilita una relazione con lo schema, selezionare il campo relazione nello schema di origine seguito da **[!UICONTROL Modifica relazione]**.
+
+>[!NOTE]
+>
+>Per visualizzare tutte le relazioni associate, seleziona il campo dell&#39;identità primaria nello schema di riferimento seguito da [!UICONTROL Visualizza relazioni].
+>![Editor di schema con un campo di relazione selezionato ed evidenziata Visualizza relazione.](../images/tutorials/relationship-b2b/view-relationships.png "Editor di schema con un campo di relazione selezionato e una relazione di visualizzazione evidenziata."){width="100" zoomable="yes"}
+
+![Editor di schema con campi di relazione e Modifica relazione evidenziati.](../images/tutorials/relationship-b2b/edit-b2b-relationship.png)
+
+Viene visualizzata la finestra di dialogo [!UICONTROL Modifica relazione]. Da questa finestra di dialogo è possibile modificare lo schema di riferimento e i nomi delle relazioni oppure eliminare la relazione. Impossibile modificare il tipo di relazione molti-a-uno.
+
+![Finestra di dialogo Modifica relazione.](../images/tutorials/relationship-b2b/edit-b2b-relationship-dialog.png)
+
+Per mantenere l’integrità dei dati ed evitare interruzioni nella segmentazione e in altri processi, considera le seguenti linee guida durante la gestione delle relazioni tra schemi e set di dati collegati:
+
+* Evita di eliminare direttamente le relazioni se uno schema è associato a un set di dati, in quanto ciò può influire negativamente sulla segmentazione. Elimina invece il set di dati associato prima di rimuovere la relazione.
+* Non è possibile modificare lo schema di riferimento senza prima eliminare la relazione esistente. Tuttavia, questo deve essere fatto con cautela, in quanto l’eliminazione di una relazione con un set di dati associato può causare conseguenze indesiderate.
+* L’aggiunta di nuove relazioni a uno schema con set di dati collegati esistenti potrebbe non funzionare come previsto e causare potenziali conflitti.
+
+## Filtrare e cercare relazioni {#filter-and-search}
+
+Puoi filtrare e cercare relazioni specifiche all&#39;interno degli schemi dalla scheda [!UICONTROL Relazioni] dell&#39;area di lavoro [!UICONTROL Schemi]. È possibile utilizzare questa visualizzazione per individuare e gestire rapidamente le relazioni. Per istruzioni dettagliate sulle opzioni di filtro, leggi il documento su [esplorazione delle risorse dello schema](../ui/explore.md#lookup).
+
+![Scheda Relazioni nell&#39;area di lavoro Schemi.](../images/tutorials/relationship-b2b/relationship-tab.png)
 
 ## Passaggi successivi
 
