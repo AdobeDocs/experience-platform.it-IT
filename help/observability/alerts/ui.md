@@ -4,10 +4,10 @@ title: Guida all’interfaccia utente per gli avvisi
 description: Scopri come gestire gli avvisi nell’interfaccia utente di Experience Platform.
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
-source-git-commit: 9004a2203996f0fd64833a03f211232ebf14e3e4
+source-git-commit: 2e0fc17fee9b1586b4c2b44c326e2c305c127fad
 workflow-type: tm+mt
-source-wordcount: '626'
-ht-degree: 0%
+source-wordcount: '797'
+ht-degree: 3%
 
 ---
 
@@ -23,7 +23,7 @@ Per iniziare, seleziona **[!UICONTROL Avvisi]** nel menu di navigazione a sinist
 
 ![Pagina Avvisi che evidenzia [!UICONTROL Avvisi] nel menu di navigazione a sinistra.](../images/alerts/ui/workspace.png)
 
-## Gestire le regole di avviso
+## Gestire le regole di avviso {#manage-rules}
 
 Nella scheda **[!UICONTROL Sfoglia]** sono elencate le regole disponibili che possono attivare un avviso.
 
@@ -37,7 +37,7 @@ Selezionare i puntini di sospensione (**...**) accanto al nome di una regola e u
 
 ![I puntini di sospensione selezionati mostrano il menu a discesa.](../images/alerts/ui/disable-subscribe.png)
 
-## Gestisci gli iscritti agli avvisi
+## Gestisci gli iscritti agli avvisi {#manage-subscribers}
 
 >[!NOTE]
 >
@@ -67,7 +67,7 @@ Gli utenti sono stati aggiunti all&#39;elenco di notifiche di avviso. Gli utenti
 
 ![Esempio di messaggio di posta elettronica della notifica di avviso ricevuta.](../images/alerts/ui/manage-alert-subscribers-email.png)
 
-## Abilita avvisi e-mail
+## Abilita avvisi e-mail {#enable-email}
 
 Le notifiche degli avvisi possono essere inviate direttamente al tuo indirizzo e-mail.
 
@@ -85,7 +85,35 @@ Scorri fino alla sezione **E-mail** nella parte inferiore della pagina e selezio
 
 Tutti gli avvisi a cui sei abbonato verranno ora inviati all’indirizzo e-mail connesso al tuo account Adobe ID.
 
-## Visualizza cronologia avvisi
+## Personalizzare la soglia di avviso {#alert-threshold}
+
+Le soglie di avviso possono essere personalizzate per i seguenti tipi di avviso:
+
+| Tipo di avviso | Parametro personalizzato |
+|---|---|
+| Ritardo processo segmento | Soglia di ritardo |
+| Ritardo esportazione segmento | Soglia di ritardo |
+| Ritardo esecuzione flusso destinazione | Soglia di ritardo |
+| Ritardo esecuzione flusso servizio identità | Soglia di ritardo |
+| Ritardo esecuzione flusso profilo | Soglia di ritardo |
+| Ritardo esecuzione flusso origini | Soglia di ritardo |
+| Ritardo esecuzione query | Soglia di ritardo |
+| Frequenza di salto attivazione superata | Soglia di errore |
+| Frequenza errori di acquisizione origini superata | Soglia di errore |
+
+Selezionare i puntini di sospensione (**...**) accanto al nome di una regola. In un elenco a discesa vengono visualizzati i controlli. Seleziona **[!UICONTROL Modifica]**.
+
+![L&#39;opzione [!UICONTROL Modifica] è evidenziata per la regola selezionata.](../images/alerts/ui/threshold-edit.png)
+
+Viene visualizzata la pagina **[!UICONTROL Personalizza avviso]**. Aggiorna la soglia ai minuti desiderati, quindi seleziona **[!UICONTROL Conferma]**.
+
+![La pagina di avviso Personalizza evidenziando [!UICONTROL Soglia] e [!UICONTROL Conferma] opzioni.](../images/alerts/ui/threshold-update.png)
+
+Sei tornato alla pagina **[!UICONTROL Avvisi]**. Per visualizzare le impostazioni di soglia per l&#39;avviso, selezionare la regola dall&#39;elenco. Nella barra a destra puoi vedere le impostazioni della soglia per l’avviso, inclusi dettagli quali lo stato e la gravità.
+
+![Un avviso evidenziato mostra i dettagli nella barra a destra ed evidenzia [!UICONTROL Soglia].](../images/alerts/ui/threshold-view.png)
+
+## Visualizza cronologia avvisi {#alert-history}
 
 La scheda **[!UICONTROL Cronologia]** mostra la cronologia degli avvisi ricevuti per l&#39;organizzazione, inclusa la regola che ha attivato l&#39;avviso, la data di attivazione e la data di risoluzione (se applicabile).
 
