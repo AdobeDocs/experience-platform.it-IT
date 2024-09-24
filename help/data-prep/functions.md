@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Funzioni di mappatura della preparazione dati
 description: Questo documento introduce le funzioni di mappatura utilizzate con la preparazione dati.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 5a4e0b3c97d315262ded35ca5bfada3612ed6db4
+source-git-commit: 1e06fa2f8a5685cf5debcc3b5279d7efab9af0c8
 workflow-type: tm+mt
-source-wordcount: '5805'
-ht-degree: 2%
+source-wordcount: '6024'
+ht-degree: 1%
 
 ---
 
@@ -178,6 +178,10 @@ Per informazioni sulla funzione di copia dell&#39;oggetto, vedere la sezione [so
 | size_of | Restituisce la dimensione dell&#39;input. | <ul><li>INPUT: **Obbligatorio** L&#39;oggetto di cui si sta tentando di trovare le dimensioni.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 | upsert_array_append | Questa funzione viene utilizzata per aggiungere tutti gli elementi dell’intero array di input alla fine dell’array in Profilo. Questa funzione è **solo** applicabile durante gli aggiornamenti. Se utilizzata nel contesto degli inserti, questa funzione restituisce l’input così com’è. | <ul><li>ARRAY: **Obbligatorio** array da aggiungere nel profilo.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123, 456] |
 | upsert_array_replace | Questa funzione viene utilizzata per sostituire gli elementi in un array. Questa funzione è **solo** applicabile durante gli aggiornamenti. Se utilizzata nel contesto degli inserti, questa funzione restituisce l’input così com’è. | <ul><li>MATRICE: **Obbligatoria** Matrice che sostituisce la matrice nel profilo.</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123, 456] |
+| [!BADGE Beta]{type=Informative} array_to_string | Unisce le rappresentazioni di stringa degli elementi in un array utilizzando il separatore specificato. Se l&#39;array è multidimensionale, viene appiattito prima di essere unito. **Nota**: questa funzione viene utilizzata nelle destinazioni. Per ulteriori informazioni, consulta la [documentazione](../destinations/ui/export-arrays-calculated-fields.md). | <ul><li>SEPARATORE: **Obbligatorio** Separatore utilizzato per unire gli elementi nell&#39;array.</li><li>MATRICE: **Obbligatoria** Matrice da unire (dopo la conversione).</li></ul> | array_to_string(SEPARATOR, ARRAY) | `array_to_string(";", ["Hello", "world"])` | &quot;Hello;world&quot; |
+| [!BADGE Beta]{type=Informative} filterArray* | Filtra l’array specificato in base a un predicato. **Nota**: questa funzione viene utilizzata nelle destinazioni. Per ulteriori informazioni, consulta la [documentazione](../destinations/ui/export-arrays-calculated-fields.md). | <ul><li>MATRICE: **Obbligatoria** Matrice da filtrare</li><li>PREDICATE: **Obbligatorio** Il predicato da applicare a ciascun elemento dell&#39;array specificato. | filterArray(ARRAY, PREDICATE) | `filterArray([5, -6, 0, 7], x -> x > 0)` | [5, 7] |
+| [!BADGE Beta]{type=Informative} transformArray* | Trasforma l’array specificato in base a un predicato. **Nota**: questa funzione viene utilizzata nelle destinazioni. Per ulteriori informazioni, consulta la [documentazione](../destinations/ui/export-arrays-calculated-fields.md). | <ul><li>MATRICE: **Obbligatoria** Matrice da trasformare.</li><li>PREDICATE: **Obbligatorio** Il predicato da applicare a ciascun elemento dell&#39;array specificato. | transformArray(ARRAY, PREDICATE) | ` transformArray([5, 6, 7], x -> x + 1)` | [6, 7, 8] |
+| [!BADGE Beta]{type=Informative} flattenArray* | Appiattisce la matrice (multidimensionale) specificata a una matrice unidimensionale. **Nota**: questa funzione viene utilizzata nelle destinazioni. Per ulteriori informazioni, consulta la [documentazione](../destinations/ui/export-arrays-calculated-fields.md). | <ul><li>MATRICE: **Obbligatoria** Matrice da appiattire.</li></ul> | flattenArray(ARRAY) | flattenArray([[&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;, &#39;d&#39;]], [[&#39;e&#39;], [&#39;f&#39;]]) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;] |
 
 {style="table-layout:auto"}
 
