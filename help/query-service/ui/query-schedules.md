@@ -2,9 +2,9 @@
 title: Pianificazioni query
 description: Scopri come automatizzare l’esecuzione di query pianificate, eliminare o disabilitare una pianificazione di query e utilizzare le opzioni di pianificazione disponibili tramite l’interfaccia utente di Adobe Experience Platform.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: 19f1f64434d655d3b19260460519018fc9c8e174
+source-git-commit: c69311b3188a8d066a24235466afad1e725d489c
 workflow-type: tm+mt
-source-wordcount: '1848'
+source-wordcount: '2051'
 ht-degree: 0%
 
 ---
@@ -141,7 +141,28 @@ In alternativa, per visualizzare un elenco delle esecuzioni pianificate di un mo
 
 Viene visualizzato l&#39;elenco delle query eseguite per la query pianificata.
 
+### Calcola ore a livello di processo {#compute-hours}
+
+Tieni traccia delle ore di calcolo utilizzate a livello di esecuzione delle query per le query batch CTAS/ITAS. Questa funzione offre informazioni approfondite sull’utilizzo dei calcoli, consentendoti di ottimizzare l’allocazione delle risorse e migliorare le prestazioni delle query.
+
+>[!AVAILABILITY]
+>
+>La funzionalità Compute Hours è esclusiva per gli utenti che hanno acquistato lo SKU [Data Distiller](../data-distiller/overview.md). Per ulteriori informazioni, contatta il rappresentante del tuo Adobe.
+
 ![La sezione dei dettagli dell&#39;area di lavoro Query pianificate con un elenco di query viene eseguita evidenziata per una query pianificata.](../images/ui/query-schedules/list-of-scheduled-runs.png)
+
+Nella tabella seguente vengono fornite le descrizioni di ogni colonna disponibile nella sezione dei dettagli in cui sono elencate le esecuzioni delle query pianificate.
+
+| Titolo colonna | Descrizione |
+|---------------------|----------------------------------|
+| [!UICONTROL ID esecuzione query] | Visualizza un identificatore univoco per ogni esecuzione di query, che consente di tenere traccia e fare riferimento a singole esecuzioni delle query pianificate. |
+| [!UICONTROL Inizio esecuzione query] | Indica la data e l’ora di inizio dell’esecuzione della query, per aiutarti a monitorare l’inizio di ogni esecuzione. |
+| [!UICONTROL Esecuzione query completata] | Mostra la data e l’ora di completamento dell’esecuzione della query, per fornire informazioni approfondite sulla durata e sullo stato dell’esecuzione. |
+| [!UICONTROL Stato] | Visualizza lo stato corrente dell&#39;esecuzione della query, ad esempio `Completed,` `Running,` o `Failed,` per valutare rapidamente il risultato. |
+| [!UICONTROL Set di dati] | Elenca i set di dati utilizzati nell’esecuzione della query, per mostrare quali origini dati sono state coinvolte nell’esecuzione. |
+| [!UICONTROL Calcola ore] | Mostra il tempo di calcolo utilizzato per ogni esecuzione della query, misurato in ore. Questo consente di tenere traccia dell’utilizzo delle risorse e di ottimizzare le prestazioni delle query. |
+
+{style="table-layout:auto"}
 
 Per informazioni complete su come monitorare lo stato di tutti i processi di query tramite l&#39;interfaccia utente, vedere la [guida monitoraggi pianificati per query](./monitor-queries.md#inline-actions).
 
