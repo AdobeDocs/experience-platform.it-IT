@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente dei set di dati
 description: Scopri come eseguire azioni comuni quando si lavora con i set di dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: a168f61fabddd06d586f7909fd92c0409fd2f51e
+source-git-commit: 0bb10754e2f5bc289567368c803d4397cec77bf6
 workflow-type: tm+mt
-source-wordcount: '3203'
-ht-degree: 6%
+source-wordcount: '3801'
+ht-degree: 5%
 
 ---
 
@@ -96,6 +96,7 @@ L’interfaccia utente dei set di dati ora offre una raccolta di azioni in linea
 * [[!UICONTROL Gestione dei dati ed etichette di accesso]](#manage-and-enforce-data-governance)
 * [[!UICONTROL Abilita profilo unificato]](#enable-profile)
 * [[!UICONTROL Gestione tag]](#manage-tags)
+* [(Beta) [!UICONTROL Imposta criteri di conservazione dei dati]](#data-retention-policy)
 * [[!UICONTROL Sposta in cartelle]](#move-to-folders)
 * [[!UICONTROL Elimina]](#delete).
 
@@ -168,6 +169,53 @@ La finestra di dialogo [!UICONTROL Gestisci tag] può anche rimuovere i tag esis
 Una volta aggiunto un tag a un set di dati, i set di dati possono essere filtrati in base al tag corrispondente. Per ulteriori informazioni, consulta la sezione su come [filtrare i set di dati per tag](#enable-profile).
 
 Per ulteriori informazioni su come classificare gli oggetti business per individuare e classificare più facilmente gli oggetti, vedere la guida alla [gestione delle tassonomie dei metadati](../../administrative-tags/ui/managing-tags.md). Questa guida descrive come un utente con le autorizzazioni appropriate può creare tag predefiniti, assegnare categorie ai tag ed eseguire tutte le operazioni CRUD correlate su tag e categorie di tag nell’interfaccia utente di Platform.
+
+### (Beta) Imposta i criteri di conservazione dei dati {#data-retention-policy}
+
+>[!AVAILABILITY]
+> 
+>Le impostazioni di conservazione dei dati sono attualmente in versione beta e sono disponibili solo in una **versione limitata** per alcune organizzazioni. L’interfaccia utente potrebbe non riflettere la funzione descritta di seguito.
+
+Gestisci i criteri di conservazione e scadenza del set di dati a livello di set di dati dalla scheda [!UICONTROL Sfoglia] dell&#39;area di lavoro [!UICONTROL Set di dati]. Puoi utilizzare questa funzione per configurare i criteri di conservazione per i dati già acquisiti nel data lake e nei servizi profilo. La data di scadenza si basa su quando i dati sono stati acquisiti in Platform e sulle tue regole di conservazione.
+
+Per aprire la finestra di dialogo [!UICONTROL Imposta conservazione dati], seleziona i puntini di sospensione accanto al set di dati seguito da **[!UICONTROL Imposta criteri di conservazione dati]** dal menu a discesa.
+
+![Scheda Sfoglia dell&#39;area di lavoro Set di dati con i puntini di sospensione e l&#39;opzione Imposta criteri di conservazione dati evidenziata.](../images/datasets/user-guide/set-data-retention-policy-dropdown.png)
+
+Viene visualizzata la finestra di dialogo [!UICONTROL Imposta conservazione dati]. La finestra di dialogo mostra le metriche di utilizzo delle licenze a livello di sandbox, i dettagli a livello di set di dati e le impostazioni del data lake. Queste metriche mostrano il tuo utilizzo rispetto ai tuoi diritti. I dettagli del set di dati includono il nome del set di dati, il tipo, lo stato di abilitazione del profilo e l’utilizzo corrente dell’archiviazione del data lake.
+
+>[!NOTE]
+>
+>Le metriche di archiviazione del data lake con licenza a livello di sandbox sono ancora in fase di sviluppo e non sono disponibili.
+
+![Finestra di dialogo Imposta conservazione dati.](../images/datasets/user-guide/set-data-retention-dialog.png)
+
+Prima di configurare i criteri di conservazione dei set di dati, la finestra di dialogo mostra le impostazioni di conservazione consigliate. Un mese è il periodo di conservazione consigliato predefinito. Per modificare i criteri di conservazione standard, selezionare e aggiornare il numero, quindi scegliere il periodo di tempo desiderato (giorni, mesi, anni). Puoi configurare le impostazioni di conservazione per il data lake e per il servizio profili in modo indipendente.
+
+>[!NOTE]
+> 
+>La durata minima di conservazione dei dati per il data lake è di 30 giorni. La durata minima di conservazione dei dati per il servizio Profilo è di un giorno.
+
+![Finestra di dialogo Imposta conservazione dati con il menu a discesa della durata e Salva evidenziato.](../images/datasets/user-guide/time-unit-dropdown.png)
+
+Consulta la [pagina delle domande frequenti](../catalog-faq.md) per ulteriori informazioni sulle regole che definiscono gli intervalli di date per la scadenza dei set di dati e sulle best practice per configurare i criteri di conservazione dei dati.
+
+#### (Beta) Maggiore visibilità dei periodi di conservazione e delle metriche di archiviazione {#retention-and-storage-metrics}
+
+Sono disponibili quattro nuove colonne per gli utenti beta che forniscono maggiore visibilità sulla gestione dei dati: **[!UICONTROL Archiviazione Data Lake]**, **[!UICONTROL Conservazione Data Lake]**, **[!UICONTROL Archiviazione profili]** e **[!UICONTROL Conservazione profili]**. Queste metriche mostrano la quantità di storage utilizzata dai dati e la relativa durata di conservazione sia nel data lake che nei servizi di profilo. Questi dettagli consentono di ottimizzare le regole di conservazione, tenere traccia dell&#39;utilizzo rispetto ai diritti e garantire la conformità agli standard organizzativi e normativi. Questa maggiore visibilità consente di prendere decisioni informate, gestire i costi, semplificare la governance e comprendere chiaramente il panorama dei dati.
+
+![Scheda Sfoglia dell&#39;area di lavoro Set di dati con le quattro nuove colonne di archiviazione e conservazione evidenziate.](../images/datasets/user-guide/storage-and-retention-columns.png)
+
+La tabella seguente fornisce una panoramica delle nuove metriche di conservazione e archiviazione disponibili nella versione beta. Descrive lo scopo di ogni colonna e come aiuta a gestire la conservazione e l’archiviazione dei dati nell’interfaccia utente di Platform.
+
+| Titolo colonna | Descrizione |
+|---|---|
+| [!UICONTROL Conservazione del data lake] | Mostra la durata di conservazione corrente per ogni set di dati. Questo valore può essere modificato nelle impostazioni di conservazione di ogni set di dati. I criteri di conservazione del data lake impostano regole per quanto tempo i dati vengono memorizzati e quando devono essere eliminati in diversi servizi. |
+| [!UICONTROL Archiviazione Data Lake] | Visualizza l’utilizzo corrente dell’archiviazione per ogni set di dati nel data lake. Questa metrica consente di tenere traccia dello spazio occupato da ogni set di dati, facilitando la gestione dei limiti di archiviazione e ottimizzando l’utilizzo. |
+| [!UICONTROL Archiviazione profili] | Mostra l’utilizzo corrente dell’archiviazione per ogni set di dati all’interno dei servizi profilo. Utilizzare queste informazioni per monitorare il consumo di storage e garantire che sia allineato agli obiettivi di gestione dei dati. |
+| [!UICONTROL Conservazione profilo] | Indica la durata di conservazione per ogni set di dati profilo. Questo valore può essere regolato nelle impostazioni di conservazione del set di dati per controllare per quanto tempo i dati profilo vengono memorizzati prima dell’eliminazione. |
+
+{style="table-layout:auto"}
 
 ### Sposta in cartelle {#move-to-folders}
 
@@ -344,3 +392,4 @@ Questa guida utente fornisce istruzioni per l&#39;esecuzione di azioni comuni du
 * [Creare un set di dati utilizzando le API](create.md)
 * [Eseguire query sui dati del set di dati utilizzando l’API di accesso ai dati](../../data-access/home.md)
 * [Configurare un set di dati per Real-Time Customer Profile e Identity Service tramite API](../../profile/tutorials/dataset-configuration.md)
+
