@@ -3,9 +3,9 @@ title: Note sulla versione per l’estensione Adobe Analytics Product String
 description: Note aggiornate sulla versione per l’estensione tag Adobe Analytics Product String in Adobe Experience Platform.
 exl-id: 3ddc3e6f-412c-42d5-8cbf-25273c1794d5
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '135'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 86%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 ## 31 gennaio 2020
 
