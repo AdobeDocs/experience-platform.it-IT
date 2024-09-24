@@ -3,10 +3,10 @@ title: Regole di collegamento del grafico delle identità
 description: Scopri le regole di collegamento del grafico delle identità in Identity Service.
 badge: Beta
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 1ea840e2c6c44d5d5080e0a034fcdab4cbdc87f1
+source-git-commit: a4e5ab14904fe17aa8bab2f8555ae6d535c856e8
 workflow-type: tm+mt
-source-wordcount: '1581'
-ht-degree: 1%
+source-wordcount: '1427'
+ht-degree: 2%
 
 ---
 
@@ -30,13 +30,53 @@ I seguenti documenti sono essenziali per comprendere le regole di collegamento d
 * [Interfaccia utente simulazione grafico](./graph-simulation.md)
 * [Interfaccia utente per le impostazioni delle identità](./identity-settings-ui.md)
 
-## Scenari di esempio in cui potrebbe verificarsi una compressione del grafico
+## Scenari di esempio in cui potrebbe verificarsi una compressione del grafico {#example-scenarios-where-graph-collapse-could-happen}
 
-* **Dispositivo condiviso**: il termine dispositivo condiviso si riferisce ai dispositivi utilizzati da più utenti. Alcuni esempi di dispositivi condivisi sono tablet, computer di libreria e chioschi.
-* **Numeri di telefono e di posta elettronica non validi**: i numeri di telefono e di posta elettronica non validi si riferiscono agli utenti finali che registrano informazioni di contatto non valide, ad esempio &quot;test<span>@test.com&quot; per la posta elettronica e &quot;+1-111-111-1111&quot; per il numero di telefono.
-* **Valori di identità errati o non validi**: i valori di identità errati o non validi fanno riferimento a valori di identità non univoci che potrebbero unire i valori CRMID. Ad esempio, mentre gli identificatori IDFA devono avere 36 caratteri (32 caratteri alfanumerici e quattro trattini), ci sono scenari in cui un identificatore IDFA con valore di identità &quot;user_null&quot; può essere acquisito. Allo stesso modo, i numeri di telefono supportano solo caratteri numerici, ma è possibile che venga acquisito uno spazio dei nomi telefonico con un valore di identità &quot;non specificato&quot;.
+Questa sezione descrive scenari di esempio da considerare durante la configurazione delle regole di collegamento del grafico delle identità.
 
-Per ulteriori informazioni sugli scenari dei casi d&#39;uso per le regole di collegamento del grafo delle identità, leggere la sezione relativa a [scenari d&#39;esempio](#example-scenarios).
+### Dispositivo condiviso
+
+Esistono casi in cui si possono verificare più accessi su un singolo dispositivo:
+
+| Dispositivo condiviso | Descrizione |
+| --- | --- |
+| Family computer e tablet | Marito e moglie accedono entrambi ai rispettivi conti bancari. |
+| Chiosco pubblico | I viaggiatori che si registrano in aeroporto utilizzando il proprio ID fedeltà per effettuare il check-in delle borse e stampare le carte d’imbarco. |
+| Call center | Il personale del call center accede a un singolo dispositivo per conto dei clienti che chiamano l’assistenza clienti per risolvere i problemi. |
+
+![Diagramma di alcuni dispositivi condivisi comuni.](../images/identity-settings/shared-devices.png)
+
+In questi casi, dal punto di vista del grafico, senza limiti abilitati, un singolo ECID sarà collegato a più CRMID.
+
+Con le regole di collegamento del grafico delle identità, puoi:
+
+* Configura l’ID utilizzato per l’accesso come identificatore univoco. Ad esempio, puoi limitare un grafico per memorizzare una sola identità con uno spazio dei nomi CRMID e quindi definire tale CRMID come identificatore univoco di un dispositivo condiviso.
+   * In questo modo, puoi evitare che i CRMID vengano uniti dall’ECID.
+
+### Scenari e-mail/telefono non validi
+
+Ci sono anche esempi di utenti che forniscono valori falsi come numeri di telefono e/o indirizzi e-mail al momento della registrazione. In questi casi, se i limiti non sono abilitati, le identità relative a telefono/e-mail finiranno per essere collegate a più CRMID diversi.
+
+![Diagramma che rappresenta scenari di posta elettronica o telefono non validi.](../images/identity-settings/invalid-email-phone.png)
+
+Con le regole di collegamento del grafico delle identità, puoi:
+
+* Configura il CRMID, il numero di telefono o l’indirizzo e-mail come identificatore univoco e limita quindi una persona a un solo CRMID, numero di telefono e/o indirizzo e-mail associato al suo account.
+
+### Valori di identità errati o errati
+
+In alcuni casi, valori di identità errati e non univoci vengono acquisiti nel sistema, indipendentemente dallo spazio dei nomi. Gli esempi includono:
+
+* Spazio dei nomi IDFA con valore di identità &quot;user_null&quot;.
+   * I valori di identità IDFA devono contenere 36 caratteri: 32 caratteri alfanumerici e quattro trattini.
+* Spazio dei nomi del numero di telefono con valore di identità &quot;non specificato&quot;.
+   * I numeri di telefono non devono contenere caratteri dell’alfabeto.
+
+Queste identità possono causare i seguenti grafici, in cui più identificatori CRMID vengono uniti insieme all’identità &quot;bad&quot;:
+
+![Esempio di grafico di dati di identità con valori di identità errati o non validi.](../images/identity-settings/bad-data.png)
+
+Con le regole di collegamento del grafico delle identità puoi configurare il CRMID come identificatore univoco per evitare la compressione del profilo indesiderata a causa di questo tipo di dati.
 
 ## Regole di collegamento del grafo delle identità {#identity-graph-linking-rules}
 
@@ -95,55 +135,6 @@ Nell’area di lavoro dell’interfaccia utente delle impostazioni delle identit
 * Se un evento esperienza ha due o più identità con la priorità più elevata per lo spazio dei nomi in identityMap, verrà rifiutato dall’acquisizione perché verrà considerato come &quot;dati non validi&quot;. Ad esempio, se identityMap contiene `{ECID: 111, CRMID: John, CRMID: Jane}`, l&#39;intero evento verrà rifiutato come dati non validi perché implica che l&#39;evento sia associato contemporaneamente a `CRMID: John` e `CRMID: Jane`.
 
 Per ulteriori informazioni, leggere la guida sulla [priorità dello spazio dei nomi](./namespace-priority.md).
-
-## Esempi di scenari cliente risolti dalle regole di collegamento del grafico delle identità {#example-scenarios}
-
-Questa sezione descrive scenari di esempio da considerare durante la configurazione delle regole di collegamento del grafico delle identità.
-
-### Dispositivo condiviso
-
-Esistono casi in cui si possono verificare più accessi su un singolo dispositivo:
-
-| Dispositivo condiviso | Descrizione |
-| --- | --- |
-| Family computer e tablet | Marito e moglie accedono entrambi ai rispettivi conti bancari. |
-| Chiosco pubblico | I viaggiatori che si registrano in aeroporto utilizzando il proprio ID fedeltà per effettuare il check-in delle borse e stampare le carte d’imbarco. |
-| Call center | Il personale del call center accede a un singolo dispositivo per conto dei clienti che chiamano l’assistenza clienti per risolvere i problemi. |
-
-![Diagramma di alcuni dispositivi condivisi comuni.](../images/identity-settings/shared-devices.png)
-
-In questi casi, dal punto di vista del grafico, senza limiti abilitati, un singolo ECID sarà collegato a più CRMID.
-
-Con le regole di collegamento del grafico delle identità, puoi:
-
-* Configura l’ID utilizzato per l’accesso come identificatore univoco. Ad esempio, puoi limitare un grafico per memorizzare una sola identità con uno spazio dei nomi CRMID e quindi definire tale CRMID come identificatore univoco di un dispositivo condiviso.
-   * In questo modo, puoi evitare che i CRMID vengano uniti dall’ECID.
-
-### Scenari e-mail/telefono non validi
-
-Ci sono anche esempi di utenti che forniscono valori falsi come numeri di telefono e/o indirizzi e-mail al momento della registrazione. In questi casi, se i limiti non sono abilitati, le identità relative a telefono/e-mail finiranno per essere collegate a più CRMID diversi.
-
-![Diagramma che rappresenta scenari di posta elettronica o telefono non validi.](../images/identity-settings/invalid-email-phone.png)
-
-Con le regole di collegamento del grafico delle identità, puoi:
-
-* Configura il CRMID, il numero di telefono o l’indirizzo e-mail come identificatore univoco e limita quindi una persona a un solo CRMID, numero di telefono e/o indirizzo e-mail associato al suo account.
-
-### Valori di identità errati o errati
-
-In alcuni casi, valori di identità errati e non univoci vengono acquisiti nel sistema, indipendentemente dallo spazio dei nomi. Gli esempi includono:
-
-* Spazio dei nomi IDFA con valore di identità &quot;user_null&quot;.
-   * I valori di identità IDFA devono contenere 36 caratteri: 32 caratteri alfanumerici e quattro trattini.
-* Spazio dei nomi del numero di telefono con valore di identità &quot;non specificato&quot;.
-   * I numeri di telefono non devono contenere caratteri dell’alfabeto.
-
-Queste identità possono causare i seguenti grafici, in cui più identificatori CRMID vengono uniti insieme all’identità &quot;bad&quot;:
-
-![Esempio di grafico di dati di identità con valori di identità errati o non validi.](../images/identity-settings/bad-data.png)
-
-Con le regole di collegamento del grafico delle identità puoi configurare il CRMID come identificatore univoco per evitare la compressione del profilo indesiderata a causa di questo tipo di dati.
-
 
 ## Passaggi successivi
 

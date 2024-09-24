@@ -3,9 +3,9 @@ title: Guida all’implementazione per le regole di collegamento del grafico del
 description: Scopri i passaggi consigliati da seguire per implementare i dati con le configurazioni delle regole di collegamento del grafico delle identità.
 badge: Beta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 1ea840e2c6c44d5d5080e0a034fcdab4cbdc87f1
+source-git-commit: 0dadff9e2719c9cd24dcc17b759ff7e732282888
 workflow-type: tm+mt
-source-wordcount: '1398'
+source-wordcount: '1470'
 ht-degree: 2%
 
 ---
@@ -20,16 +20,89 @@ Leggi questo documento per una guida dettagliata che puoi seguire durante l’im
 
 Descrizione dettagliata:
 
-1. [Creare gli spazi dei nomi di identità necessari](#namespace)
-2. [Utilizza lo strumento di simulazione del grafico per acquisire familiarità con l’algoritmo di ottimizzazione delle identità](#graph-simulation)
-3. [Utilizza lo strumento Identity Settings (Impostazioni identità) per designare gli spazi dei nomi univoci e configurare le classificazioni di priorità per i tuoi spazi dei nomi](#identity-settings)
-4. [Creare uno schema Experience Data Model (XDM)](#schema)
-5. [Creare un set di dati](#dataset)
-6. [Acquisire i dati in Experience Platform](#ingest)
 
-## Prerequisiti di pre-implementazione
+1. [Prerequisiti completi per l’implementazione](#prerequisites-for-implementation)
+2. [Creare gli spazi dei nomi di identità necessari](#namespace)
+3. [Utilizza lo strumento di simulazione del grafico per acquisire familiarità con l’algoritmo di ottimizzazione delle identità](#graph-simulation)
+4. [Utilizza lo strumento Identity Settings (Impostazioni identità) per designare gli spazi dei nomi univoci e configurare le classificazioni di priorità per i tuoi spazi dei nomi](#identity-settings)
+5. [Creare uno schema Experience Data Model (XDM)](#schema)
+6. [Creare un set di dati](#dataset)
+7. [Acquisire i dati in Experience Platform](#ingest)
 
-Prima di iniziare, è necessario assicurarsi che gli eventi autenticati nel sistema contengano sempre un identificatore di persona.
+## Prerequisiti per l’implementazione {#prerequisites-for-implementation}
+
+Questa sezione descrive i passaggi prerequisiti da completare prima di implementare le regole di collegamento del grafico delle identità ai dati.
+
+### Spazio dei nomi univoco
+
+#### Requisito dello spazio dei nomi per singola persona {#single-person-namespace-requirement}
+
+Assicurati che lo spazio dei nomi univoco con la priorità più elevata sia sempre presente in ogni profilo. In questo modo il servizio Identity è in grado di rilevare l’identificatore di persona appropriato in un dato grafico.
+
++++Seleziona questa opzione per visualizzare un esempio di grafico senza uno spazio dei nomi con un singolo identificatore di persona
+
+Se non disponi di uno spazio dei nomi univoco per rappresentare gli identificatori delle persone, potresti ottenere un grafico che collega più identificatori delle persone allo stesso ECID. In questo esempio, sia B2BCRM che B2CCRM sono collegati allo stesso ECID allo stesso tempo. Questo grafico suggerisce che Tom, usando il suo account di accesso B2C, ha condiviso un dispositivo con Summer, usando il suo account di accesso B2B. Tuttavia, il sistema riconoscerà che si tratta di un profilo (compressione del grafico).
+
+![Uno scenario grafico in cui due identificatori di persona sono collegati allo stesso ECID.](../images/graph-examples/multi_namespaces.png)
+
++++
+
++++Seleziona per visualizzare un esempio di grafico con uno spazio dei nomi con identificatore di persona singolo
+
+Dato uno spazio dei nomi univoco, (in questo caso un CRMID invece di due spazi dei nomi diversi), Identity Service è in grado di distinguere l’identificatore della persona più recente associato all’ECID. In questo esempio, poiché esiste un CRMID univoco, Identity Service è in grado di riconoscere uno scenario di &quot;dispositivo condiviso&quot;, in cui due entità condividono lo stesso dispositivo.
+
+![Uno scenario di grafico dei dispositivi condiviso, in cui due identificatori di persona sono collegati allo stesso ECID, ma il collegamento precedente viene rimosso.](../images/graph-examples/crmid_only_multi.png)
+
++++
+
+### Configurazione della priorità dello spazio dei nomi
+
+Se utilizzi il [connettore di origine Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) per acquisire i dati, devi assegnare agli ECID una priorità maggiore rispetto ad Adobe Analytics ID (AAID) perché Identity Service blocca AAID. Dando priorità a ECID, puoi dare istruzioni a Real-Time Customer Profile di memorizzare gli eventi non autenticati in ECID invece che in AAID.
+
+### Eventi esperienza XDM
+
+* Durante il processo di pre-implementazione, devi assicurarti che gli eventi autenticati che il sistema invierà ad Experience Platform contengano sempre un identificatore di persona, come CRMID.
+* Non inviare una stringa vuota come valore di identità quando invii eventi utilizzando eventi di esperienza XDM. In questo modo si verificheranno errori di sistema.
+
++++Seleziona per visualizzare un esempio di payload con una stringa vuota
+
+Nell&#39;esempio seguente viene restituito un errore perché il valore di identità per `Phone` viene inviato come stringa vuota.
+
+```json
+    "identityMap": {
+        "ECID": [
+            {
+                "id": "24165048599243194405404369473457348936",
+                "primary": false
+            }
+        ],
+        "Phone": [
+            {
+                "id": "",
+                "primary": true
+            }
+        ]
+    }
+```
+
++++
+
+Assicurati di disporre di un’identità completa quando invii eventi utilizzando gli eventi di esperienza XDM.
+
++++Seleziona per visualizzare un esempio di evento con un’identità completa
+
+```json
+    "identityMap": {
+        "ECID": [
+            {
+                "id": "24165048599243194405404369473457348936",
+                "primary": false
+            }
+        ]
+    }
+```
+
++++
 
 ## Impostare le autorizzazioni {#set-permissions}
 
@@ -72,12 +145,6 @@ Per istruzioni su come creare un set di dati, leggere la [guida dell&#39;interfa
 
 ## Inserire i dati {#ingest}
 
->[!WARNING]
->
->* Durante il processo di pre-implementazione, devi assicurarti che gli eventi autenticati che il sistema invierà ad Experience Platform contengano sempre un identificatore di persona, come CRMID.
->* Durante l’implementazione, devi assicurarti che lo spazio dei nomi univoco con la priorità più elevata sia sempre presente in ogni profilo. Consulta l&#39;[appendice](#appendix) per esempi di scenari di grafo risolti assicurando che ogni profilo contenga lo spazio dei nomi univoco con la priorità più elevata.
->* Se utilizzi il [connettore di origine Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) per acquisire i dati, devi assegnare agli ECID una priorità maggiore rispetto ad AAID perché Identity Service blocca AAID. Dando priorità a ECID, puoi dare istruzioni a Real-Time Customer Profile di memorizzare gli eventi non autenticati in ECID invece che in AAID.
-
 A questo punto, dovresti disporre dei seguenti elementi:
 
 * Le autorizzazioni necessarie per accedere alle funzioni di Identity Service.
@@ -101,26 +168,6 @@ Per qualsiasi feedback, utilizza l&#39;opzione **[!UICONTROL Feedback su Beta]**
 ## Appendice {#appendix}
 
 Leggi questa sezione per ulteriori informazioni a cui puoi fare riferimento durante l’implementazione delle impostazioni di identità e degli spazi dei nomi univoci.
-
-### Requisito dello spazio dei nomi per singola persona {#single-person-namespace-requirement}
-
-È necessario assicurarsi che venga utilizzato un singolo spazio dei nomi in tutti i profili che rappresentano una persona. In questo modo, il servizio Identity rileva l’identificatore di persona appropriato in un dato grafico.
-
->[!BEGINTABS]
-
->[!TAB Senza uno spazio dei nomi dell&#39;identificatore di persona]
-
-Se non disponi di uno spazio dei nomi univoco per rappresentare gli identificatori delle persone, potresti ottenere un grafico che collega più identificatori delle persone allo stesso ECID. In questo esempio, sia B2BCRM che B2CCRM sono collegati allo stesso ECID allo stesso tempo. Questo grafico suggerisce che Tom, usando il suo account di accesso B2C, ha condiviso un dispositivo con Summer, usando il suo account di accesso B2B. Tuttavia, il sistema riconoscerà che si tratta di un profilo (compressione del grafico).
-
-![Uno scenario grafico in cui due identificatori di persona sono collegati allo stesso ECID.](../images/graph-examples/multi_namespaces.png)
-
->[!TAB Con uno spazio dei nomi dell&#39;identificatore di persona]
-
-Dato uno spazio dei nomi univoco, (in questo caso un CRMID invece di due spazi dei nomi diversi), Identity Service è in grado di distinguere l’identificatore della persona più recente associato all’ECID. In questo esempio, poiché esiste un CRMID univoco, Identity Service è in grado di riconoscere uno scenario di &quot;dispositivo condiviso&quot;, in cui due entità condividono lo stesso dispositivo.
-
-![Uno scenario di grafico dei dispositivi condiviso, in cui due identificatori di persona sono collegati allo stesso ECID, ma il collegamento precedente viene rimosso.](../images/graph-examples/crmid_only_multi.png)
-
->[!ENDTABS]
 
 ### Scenario loginID con interferenza {#dangling-loginid-scenario}
 
