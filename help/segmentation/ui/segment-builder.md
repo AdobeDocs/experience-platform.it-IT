@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Segment Builder
 description: Il Generatore di segmenti nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro avanzata che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica di regole, ad esempio le tessere trascinate utilizzate per rappresentare le proprietà dei dati.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 7d2fe8d5e5abea768b3514d97ea7edfbb9334511
+source-git-commit: 6e1fecf2f986cbb39a2a92c28b05131e22d14b6e
 workflow-type: tm+mt
-source-wordcount: '4767'
+source-wordcount: '4717'
 ht-degree: 5%
 
 ---
@@ -111,8 +111,6 @@ Puoi passare il cursore del mouse sull’ⓘ accanto a un pubblico per visualizz
 
 ![Immagine che illustra il funzionamento della gerarchia di cartelle per i tipi di pubblico.](../images/ui/segment-builder/audience-folder-structure.png)
 
-Puoi anche cercare i tipi di pubblico utilizzando la barra di ricerca, che utilizza la sintassi di ricerca di [Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). Nella scheda **[!UICONTROL Tipi di pubblico]**, la selezione di una cartella di livello superiore determina la visualizzazione della barra di ricerca, che consente di eseguire ricerche all&#39;interno di tale cartella. I risultati della ricerca iniziano a essere compilati solo dopo l&#39;immissione di parole intere. Ad esempio, per trovare un pubblico denominato `Online Shoppers`, inizia a digitare &quot;Online&quot; nella barra di ricerca. Dopo aver digitato la parola &quot;Online&quot; completamente, vengono visualizzati i risultati della ricerca contenenti la parola &quot;Online&quot;.
-
 ## Area di lavoro del generatore di regole {#rule-builder-canvas}
 
 >[!IMPORTANT]
@@ -158,6 +156,11 @@ In alternativa, puoi aggiungere manualmente valori separati da virgole.
 ![Viene visualizzato un avviso che indica che è stato raggiunto il numero massimo di valori.](../images/ui/segment-builder/maximum-values.png)
 
 ### Aggiunta di tipi di pubblico
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_addaudiences"
+>title="Cerca aggiornamenti"
+>abstract="Il sistema di ricerca esistente è stato aggiornato per utilizzare la ricerca unificata. La ricerca unificata consente di cercare in modo più semplice e affidabile i tipi di pubblico per l’iscrizione ai segmenti."
 
 Puoi trascinare un pubblico dalla scheda **[!UICONTROL Pubblico]** nell&#39;area di lavoro del generatore di regole per fare riferimento all&#39;appartenenza al pubblico nella nuova definizione del segmento. Ciò ti consente di includere o escludere l’iscrizione al pubblico come attributo nelle nuove regole di definizione del segmento.
 
