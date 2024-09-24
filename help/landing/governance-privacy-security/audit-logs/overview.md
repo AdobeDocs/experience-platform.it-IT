@@ -2,10 +2,10 @@
 title: Panoramica dei registri di controllo
 description: Scopri come i registri di audit consentono di vedere chi ha eseguito determinate azioni in Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 7ae5e9dc79b4e1f08d2bf98876b02db1967ccbe1
 workflow-type: tm+mt
-source-wordcount: '1291'
-ht-degree: 36%
+source-wordcount: '1350'
+ht-degree: 35%
 
 ---
 
@@ -133,6 +133,22 @@ Per esportare l’elenco corrente dei registri di audit, seleziona **[!UICONTROL
 Nella finestra di dialogo visualizzata, seleziona il formato preferito (**[!UICONTROL CSV]** o **[!UICONTROL JSON]**), quindi seleziona **[!UICONTROL Scarica]**. Il browser scarica il file generato e lo salva nel computer.
 
 ![Finestra di dialogo per la selezione del formato file con [!UICONTROL Download] evidenziato.](../../images/audit-logs/select-download-format.png)
+
+## Abilita avvisi {#enable-alerts}
+
+Puoi abilitare gli avvisi di audit per ricevere notifiche per le seguenti regole:
+
+* Creazione di pubblico
+* Aggiornamento del pubblico
+* Eliminazione del pubblico
+* Creazione set di dati
+* Aggiornamento set di dati
+* Eliminazione set di dati
+* Creazione schema
+* Aggiornamento schema
+* Eliminazione schema
+
+Seleziona l’avviso desiderato dall’elenco per abbonarti e ricevere le notifiche. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento ad avvisi tramite l&#39;interfaccia utente](../../../observability/alerts/ui.md).
 
 ## Gestione dei registri di audit nell’API
 
