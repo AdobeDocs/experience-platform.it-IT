@@ -4,9 +4,9 @@ title: Introduzione ai playbook con casi d’uso
 description: Scopri come iniziare a utilizzare la funzionalità Playbook di casi d’uso.
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: 1781aa552107b6ca1fed357c053a4f892960dc55
+source-git-commit: 703c84e61af105bc3933e4750a3cb27df8ac19fe
 workflow-type: tm+mt
-source-wordcount: '990'
+source-wordcount: '989'
 ht-degree: 14%
 
 ---
@@ -105,11 +105,11 @@ Configura anche i canali per i playbook che contengono messaggi transazionali co
 
 ### Superficie di canale push
 
-Verifica che le superfici dell’app siano configurate dall’interfaccia Experience Platform o Data Collections. Questo è l’aspetto delle superfici dell’app nell’ambiente Raccolte dati.
+Verifica che le configurazioni del canale siano configurate dall’interfaccia Experience Platform o Data Collections. Questa è l’aspetto delle configurazioni del canale nell’ambiente Raccolta dati.
 
-<!-- ![App surfaces in Data collections](/help/use-case-playbooks/assets/playbooks/get-started/.png) -->
+<!-- ![Channel configurations in Data collections](/help/use-case-playbooks/assets/playbooks/get-started/.png) -->
 
-Quindi, seleziona il canale, le piattaforme e le app che hai visualizzato nelle configurazioni della superficie dell’app. Seleziona **Invia** per creare la superficie del canale push.
+Quindi, seleziona il canale, le piattaforme e le app che hai visualizzato nelle configurazioni del canale. Seleziona **Invia** per creare la superficie del canale push.
 
 Leggi la documentazione su [come impostare le superfici dei canali push](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html).
 

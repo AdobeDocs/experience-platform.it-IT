@@ -4,7 +4,7 @@ title: Passa a Playbook casi d’uso
 description: Scopri come navigare in una galleria di playbook e iniziare con una sandbox ispirativa.
 role: User
 exl-id: 1f5dae75-1136-4be3-9132-01d36a4066ca
-source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
+source-git-commit: 703c84e61af105bc3933e4750a3cb27df8ac19fe
 workflow-type: tm+mt
 source-wordcount: '717'
 ht-degree: 2%
@@ -67,7 +67,7 @@ Configura anche i canali per i playbook che contengono messaggi transazionali co
 
 ### Superficie di canale push
 
-Verifica che le superfici dell’app siano configurate dall’interfaccia Experience Platform o Data Collections. Questo è l’aspetto delle superfici dell’app nell’ambiente Raccolte dati.
+Verifica che le configurazioni del canale siano configurate dall’interfaccia Experience Platform o Data Collections. Questa è l’aspetto delle configurazioni del canale nell’ambiente Raccolta dati.
 
 ## Passaggi successivi {#next-steps}
 

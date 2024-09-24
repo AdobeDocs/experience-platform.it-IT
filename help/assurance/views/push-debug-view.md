@@ -2,10 +2,10 @@
 title: Visualizzazione debug push
 description: Questa guida contiene informazioni dettagliate sulla visualizzazione Debug push in Adobe Experience Platform Assurance.
 exl-id: a9558ee2-2e80-4b0d-ab45-2020be85e634
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f9cc088cdda4323c80e35978fcde373cbba9204d
 workflow-type: tm+mt
-source-wordcount: '940'
-ht-degree: 100%
+source-wordcount: '919'
+ht-degree: 86%
 
 ---
 
@@ -25,7 +25,7 @@ Questa vista è abilitata solo per un singolo client, quindi selezionando un cli
 
 ## Convalida configurazione
 
-La scheda **[!UICONTROL Convalida configurazione]** convalida e fornisce ulteriori dettagli sulla configurazione push dell’app. Sono disponibili tre pannelli che eseguono le convalide. Se tutte le convalide hanno esito positivo, verrà visualizzato un segno di spunta verde. Se sono presenti tre segni di spunta verdi, significa che l’app è stata configurata correttamente per i messaggi push, scrive token push nel profilo utente e ad essa è associata una superficie di app.
+La scheda **[!UICONTROL Convalida configurazione]** convalida e fornisce ulteriori dettagli sulla configurazione push dell’app. Sono disponibili tre pannelli che eseguono le convalide. Se tutte le convalide hanno esito positivo, verrà visualizzato un segno di spunta verde. Se sono presenti tre segni di spunta verdi, significa che l’app è stata configurata correttamente per i messaggi push, scrive token push nel profilo utente e dispone di una configurazione di canale associata.
 
 Se qualcosa non funziona come previsto, viene visualizzato un avviso con i dettagli su come risolvere il problema:
 
@@ -49,11 +49,9 @@ Infine, nella parte inferiore del pannello è presente un collegamento che conse
 
 ### Credenziali e configurazione di AppStore
 
-Questo pannello verifica che per l’ID app e la piattaforma di messaggistica salvati nel profilo sia stata creata una superficie di app corrispondente. Una superficie di app è il luogo in cui vengono caricate le credenziali push per l’applicazione.
+Questo pannello verifica che per l’ID app e la piattaforma di messaggistica salvati nel profilo sia stata creata una configurazione di canale corrispondente. In una configurazione di canale vengono caricate le credenziali push per l’applicazione.
 
-Se valido, sul profilo verranno visualizzati il nome della superficie dell’app, l’ID dell’app e il nome del servizio di messaggistica.
-
-Infine, nella parte inferiore del pannello è presente un collegamento che consente di aprire questa specifica superficie di app in una nuova scheda.
+Se valido, il profilo visualizzerà il nome della configurazione del canale, l’ID dell’app e il nome del servizio di messaggistica.
 
 ## Invia push di test
 
@@ -71,9 +69,9 @@ Nel riquadro **[!UICONTROL Messaggio]**, è possibile specificare un titolo e un
 
 ### Destinazione push
 
-Il pannello **[!UICONTROL Destinazione push]** consente di personalizzare quale token push e superficie dell’app utilizzare per l’invio del messaggio push.
+Il riquadro **[!UICONTROL Destinazione push]** consente di personalizzare il token push e la configurazione del canale da utilizzare per l&#39;invio del messaggio push.
 
-Queste informazioni vengono fornite per impostazione predefinita se la scheda **[!UICONTROL Convalida configurazione]** mostra tre segni di spunta verdi. Tuttavia, puoi specificare il token push e la superficie di app, anche se l’app non è completamente configurata.
+Queste informazioni vengono fornite per impostazione predefinita se la scheda **[!UICONTROL Convalida configurazione]** mostra tre segni di spunta verdi. Tuttavia, puoi fornire un token push personalizzato e la configurazione del canale, anche se l’app non è completamente configurata.
 
 ![Riquadro di destinazione](./images/push-debug-view/target-pane.png)
 
