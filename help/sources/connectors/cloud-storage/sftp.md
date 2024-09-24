@@ -4,41 +4,49 @@ solution: Experience Platform
 title: Panoramica del connettore Source SFTP
 description: Scopri come collegare un server SFTP a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
-source-git-commit: 6c22f8243269bb304b12a4e4978ed141ed092c67
+source-git-commit: 52c1c8e6bc332bd6ee579cad52a7343007615efd
 workflow-type: tm+mt
-source-wordcount: '750'
+source-wordcount: '1228'
 ht-degree: 0%
 
 ---
 
 # Connettore SFTP
 
->[!IMPORTANT]
+Adobe Experience Platform consente di acquisire i dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
+
+Leggere questo documento per i passaggi preliminari da completare per connettere correttamente l&#39;account [!DNL SFTP] all&#39;Experience Platform.
+
+>[!TIP]
 >
->Il server [!DNL SFTP] a cui Adobe Experience Platform si connette deve essere in grado di supportare il blocco, ovvero più connessioni a un singolo file. Se il server [!DNL SFTP] non supporta il blocco, è possibile che venga visualizzato un messaggio di errore che impedisce l&#39;acquisizione dei file.
+>Prima di connettersi, devi disattivare l’autenticazione interattiva da tastiera nella configurazione del server SFTP. La disattivazione dell’impostazione consente l’immissione manuale delle password anziché l’immissione tramite un servizio o un programma.
 
-Adobe Experience Platform fornisce connettività nativa per i provider di cloud come AWS, [!DNL Google Cloud Platform] e [!DNL Azure], consentendo di portare i dati da questi sistemi.
+## Prerequisiti {#prerequisites}
 
-Le origini di archiviazione cloud possono inserire i tuoi dati in [!DNL Platform] senza dover scaricare, formattare o caricare. I dati acquisiti possono essere formattati come XDM JSON, XDM Parquet o delimitati. Ogni passaggio del processo viene integrato nel flusso di lavoro Origini. [!DNL Platform] consente di inserire dati da un server FTP o SFTP tramite batch.
+Leggere questa sezione per i passaggi preliminari da completare per connettere correttamente l&#39;origine [!DNL SFTP] all&#39;Experience Platform.
 
-## ELENCO CONSENTITI di indirizzo IP
+### ELENCO CONSENTITI di indirizzo IP
 
 Prima di utilizzare i connettori di origine, è necessario aggiungere un elenco di indirizzi IP a un elenco consentiti. La mancata aggiunta all’elenco consentiti degli indirizzi IP specifici per l’area geografica potrebbe causare errori o prestazioni non ottimali durante l’utilizzo delle origini. Per ulteriori informazioni, vedere la pagina [elenco consentiti indirizzo IP](../../ip-address-allow-list.md).
 
-## Vincoli di denominazione per file e directory
+### Vincoli di denominazione per file e directory
 
 Di seguito è riportato un elenco di vincoli di cui è necessario tenere conto per la denominazione del file di archiviazione cloud o della directory.
 
-- I nomi dei componenti di directory e file non possono superare i 255 caratteri.
-- I nomi di file e directory non possono terminare con una barra (`/`). Se fornito, verrà rimosso automaticamente.
-- I seguenti caratteri URL riservati devono essere correttamente preceduti dall&#39;escape: `! ' ( ) ; @ & = + $ , % # [ ]`
-- I seguenti caratteri non sono consentiti: `" \ / : | < > * ?`.
-- Caratteri di percorso URL non validi non consentiti. I punti di codice come `\uE000`, sebbene validi nei nomi di file NTFS, non sono caratteri Unicode validi. Inoltre, alcuni caratteri ASCII o Unicode, come i caratteri di controllo (da 0x00 a 0x1F, \u0081, ecc.), non sono consentiti. Per le regole che regolano le stringhe Unicode in HTTP/1.1, vedere [RFC 2616, Sezione 2.2: Regole di base](https://www.ietf.org/rfc/rfc2616.txt) e [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
-- Non sono consentiti i seguenti nomi di file: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, carattere punto (.) e due caratteri punto (..).
+* I nomi dei componenti di directory e file non possono superare i 255 caratteri.
+* I nomi di file e directory non possono terminare con una barra (`/`). Se fornito, verrà rimosso automaticamente.
+* I seguenti caratteri URL riservati devono essere correttamente preceduti dall&#39;escape: `! ' ( ) ; @ & = + $ , % # [ ]`
+* I seguenti caratteri non sono consentiti: `" \ / : | < > * ?`.
+* Caratteri di percorso URL non validi non consentiti. I punti di codice come `\uE000`, sebbene validi nei nomi di file NTFS, non sono caratteri Unicode validi. Inoltre, alcuni caratteri ASCII o Unicode, come i caratteri di controllo (da 0x00 a 0x1F, \u0081, ecc.), non sono consentiti. Per le regole che regolano le stringhe Unicode in HTTP/1.1, vedere [RFC 2616, Sezione 2.2: Regole di base](https://www.ietf.org/rfc/rfc2616.txt) e [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
+* Non sono consentiti i seguenti nomi di file: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, carattere punto (.) e due caratteri punto (..).
 
-## Imposta una chiave privata OpenSSH con codifica Base64 per [!DNL SFTP]
+### Imposta una chiave privata OpenSSH con codifica Base64 per [!DNL SFTP]
 
 L&#39;origine [!DNL SFTP] supporta l&#39;autenticazione utilizzando la chiave privata OpenSSH con codifica [!DNL Base64]. Per informazioni su come generare la chiave privata OpenSSH con codifica Base64 e connettere [!DNL SFTP] a Platform, consulta i passaggi seguenti.
+
+>[!BEGINTABS]
+
+>[!TAB Windows]
 
 ### [!DNL Windows] utenti
 
@@ -92,6 +100,8 @@ C:\Users\lucy> [convert]::ToBase64String((Get-Content -path "C:\Users\lucy\.ssh\
 
 Il comando precedente salva la chiave privata con codifica [!DNL Base64] nel percorso del file designato. È quindi possibile utilizzare la chiave privata per l&#39;autenticazione in [!DNL SFTP] e la connessione a Platform.
 
+>[!TAB Mac]
+
 ### [!DNL Mac] utenti
 
 Se si utilizza un [!DNL Mac], aprire **Terminal** ed eseguire il comando seguente per generare la chiave privata (in questo caso, la chiave privata verrà salvata in `/Documents/id_rsa`):
@@ -142,21 +152,59 @@ Per verificare se la chiave pubblica è stata aggiunta correttamente, è possibi
 more ~/.ssh/authorized_keys
 ```
 
-## Connetti SFTP a [!DNL Platform]
+>[!ENDTABS]
 
->[!IMPORTANT]
->
->Prima della connessione, gli utenti devono disabilitare l’autenticazione interattiva da tastiera nella configurazione del server SFTP. La disattivazione dell’impostazione consente l’immissione manuale delle password anziché l’immissione tramite un servizio o un programma. Per ulteriori informazioni sull&#39;autenticazione interattiva da tastiera, vedere il documento [Component Pro](https://doc.componentpro.com/ComponentPro-Sftp/authenticating-with-a-keyboard-interactive-authentication).
+### Raccogli le credenziali richieste {#credentials}
 
-La documentazione seguente fornisce informazioni su come collegare un server SFTP a [!DNL Platform] utilizzando le API o l&#39;interfaccia utente:
+Per connettere il server [!DNL SFTP] a Experience Platform, è necessario fornire i valori per le credenziali seguenti.
+
+>[!BEGINTABS]
+
+>[!TAB Autenticazione di base]
+
+Specificare i valori appropriati per le credenziali seguenti per autenticare il server [!DNL SFTP] utilizzando l&#39;autenticazione di base.
+
+| Credenziali | Descrizione |
+| ---------- | ----------- |
+| `host` | Il nome o l&#39;indirizzo IP associato al server [!DNL SFTP]. |
+| `port` | Porta del server [!DNL SFTP] a cui ti stai connettendo. Se non specificato, il valore predefinito è `22`. |
+| `username` | Il nome utente con accesso al server [!DNL SFTP]. |
+| `password` | La password per il server [!DNL SFTP]. |
+| `maxConcurrentConnections` | Questo parametro consente di specificare un limite massimo per il numero di connessioni simultanee che Platform creerà durante la connessione al server SFTP. Devi impostare questo valore su un valore inferiore al limite impostato da SFTP. **Nota**: quando questa impostazione è abilitata per un account SFTP esistente, influirà solo sui flussi di dati futuri e non su quelli esistenti. |
+| `folderPath` | Percorso della cartella a cui desideri fornire l’accesso. Origine [!DNL SFTP], è possibile specificare il percorso della cartella per specificare l&#39;accesso utente alla sottocartella desiderata. |
+| `disableChunking` | Durante l&#39;acquisizione dei dati, l&#39;origine [!DNL SFTP] può recuperare prima la lunghezza del file, dividerlo in più parti e quindi leggerlo in parallelo. È possibile abilitare o disabilitare questo valore per specificare se il server [!DNL SFTP] può recuperare le lunghezze dei file o leggere i dati da un offset specifico. |
+| `connectionSpec.id` | (Solo API) La specifica di connessione restituisce le proprietà del connettore di un&#39;origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di origine. ID della specifica di connessione per [!DNL SFTP]: `b7bf2577-4520-42c9-bae9-cad01560f7bc`. |
+
+>[!TAB Autenticazione chiave pubblica SSH]
+
+Specificare i valori appropriati per le credenziali seguenti per autenticare il server [!DNL SFTP] tramite l&#39;autenticazione a chiave pubblica SSH.
+
+| Credenziali | Descrizione |
+| ---------- | ----------- |
+| `host` | Il nome o l&#39;indirizzo IP associato al server [!DNL SFTP]. |
+| `port` | Porta del server [!DNL SFTP] a cui ti stai connettendo. Se non specificato, il valore predefinito è `22`. |
+| `username` | Il nome utente con accesso al server [!DNL SFTP]. |
+| `password` | La password per il server [!DNL SFTP]. |
+| `privateKeyContent` | Il contenuto della chiave privata SSH con codifica Base64. Il tipo di chiave OpenSSH deve essere classificato come RSA o DSA. |
+| `passPhrase` | La passphrase o password per decrittografare la chiave privata se il file di chiave o il contenuto della chiave è protetto da una passphrase. Se PrivateKeyContent è protetto da password, questo parametro deve essere utilizzato con la passphrase di PrivateKeyContent come valore. |
+| `maxConcurrentConnections` | Questo parametro consente di specificare un limite massimo per il numero di connessioni simultanee che Platform creerà durante la connessione al server SFTP. Devi impostare questo valore su un valore inferiore al limite impostato da SFTP. **Nota**: quando questa impostazione è abilitata per un account SFTP esistente, influirà solo sui flussi di dati futuri e non su quelli esistenti. |
+| `folderPath` | Percorso della cartella a cui desideri fornire l’accesso. Origine [!DNL SFTP], è possibile specificare il percorso della cartella per specificare l&#39;accesso utente alla sottocartella desiderata. |
+| `disableChunking` | Durante l&#39;acquisizione dei dati, l&#39;origine [!DNL SFTP] può recuperare prima la lunghezza del file, dividerlo in più parti e quindi leggerlo in parallelo. È possibile abilitare o disabilitare questo valore per specificare se il server [!DNL SFTP] può recuperare le lunghezze dei file o leggere i dati da un offset specifico. |
+| `connectionSpec.id` | (Solo API) La specifica di connessione restituisce le proprietà del connettore di un&#39;origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di origine. ID della specifica di connessione per [!DNL SFTP]: `b7bf2577-4520-42c9-bae9-cad01560f7bc`. |
+
+>[!ENDTABS]
+
+## Connettere SFTP a Experience Platform
+
+La documentazione seguente fornisce informazioni su come collegare un server SFTP ad Experience Platform utilizzando le API o l’interfaccia utente:
 
 ### Utilizzo delle API di
 
-- [Creare una connessione di base SFTP utilizzando l’API del servizio Flusso](../../tutorials/api/create/cloud-storage/sftp.md)
-- [Esplorare la struttura dati e il contenuto di un’origine di archiviazione cloud utilizzando l’API del servizio Flusso](../../tutorials/api/explore/cloud-storage.md)
-- [Creare un flusso di dati per un’origine di archiviazione cloud utilizzando l’API del servizio Flusso](../../tutorials/api/collect/cloud-storage.md)
+* [Creare una connessione di base SFTP utilizzando l’API del servizio Flusso](../../tutorials/api/create/cloud-storage/sftp.md)
+* [Esplorare la struttura dati e il contenuto di un’origine di archiviazione cloud utilizzando l’API del servizio Flusso](../../tutorials/api/explore/cloud-storage.md)
+* [Creare un flusso di dati per un’origine di archiviazione cloud utilizzando l’API del servizio Flusso](../../tutorials/api/collect/cloud-storage.md)
 
 ### Utilizzo dell’interfaccia utente
 
-- [Creare una connessione sorgente SFTP nell’interfaccia utente](../../tutorials/ui/create/cloud-storage/sftp.md)
-- [Creare un flusso di dati per una connessione all’archiviazione cloud nell’interfaccia utente](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+* [Creare una connessione sorgente SFTP nell’interfaccia utente](../../tutorials/ui/create/cloud-storage/sftp.md)
+* [Creare un flusso di dati per una connessione all’archiviazione cloud nell’interfaccia utente](../../tutorials/ui/dataflow/batch/cloud-storage.md)

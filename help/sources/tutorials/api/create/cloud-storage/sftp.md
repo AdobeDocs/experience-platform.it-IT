@@ -2,10 +2,10 @@
 title: Creare una connessione di base SFTP utilizzando l’API del servizio Flusso
 description: Scopri come connettere Adobe Experience Platform a un server SFTP (Secure File Transfer Protocol) utilizzando l’API del servizio Flusso.
 exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
-source-git-commit: f6d1cc811378f2f37968bf0a42b428249e52efd8
+source-git-commit: 919e2c34bf8b9b4646936fe8bfbd4ee33d44407a
 workflow-type: tm+mt
-source-wordcount: '938'
-ht-degree: 2%
+source-wordcount: '753'
+ht-degree: 3%
 
 ---
 
@@ -30,19 +30,7 @@ Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conosce
 
 ### Raccogli le credenziali richieste
 
-Affinché [!DNL Flow Service] possa connettersi a [!DNL SFTP], è necessario fornire i valori per le proprietà di connessione seguenti:
-
-| Credenziali | Descrizione |
-| ---------- | ----------- |
-| `host` | Il nome o l&#39;indirizzo IP associato al server [!DNL SFTP]. |
-| `port` | Porta del server SFTP a cui ti stai connettendo. Se non specificato, il valore predefinito è `22`. |
-| `username` | Il nome utente con accesso al server [!DNL SFTP]. |
-| `password` | La password per il server [!DNL SFTP]. |
-| `privateKeyContent` | Il contenuto della chiave privata SSH con codifica Base64. Il tipo di chiave OpenSSH deve essere classificato come RSA o DSA. |
-| `passPhrase` | La passphrase o password per decrittografare la chiave privata se il file di chiave o il contenuto della chiave è protetto da una passphrase. Se `privateKeyContent` è protetto da password, questo parametro deve essere utilizzato con la passphrase del contenuto della chiave privata come valore. |
-| `maxConcurrentConnections` | Questo parametro consente di specificare un limite massimo per il numero di connessioni simultanee che Platform creerà durante la connessione al server SFTP. Devi impostare questo valore su un valore inferiore al limite impostato da SFTP. **Nota**: quando questa impostazione è abilitata per un account SFTP esistente, influirà solo sui flussi di dati futuri e non su quelli esistenti. |
-| `folderPath` | Percorso della cartella a cui desideri fornire l’accesso. Origine [!DNL SFTP], è possibile specificare il percorso della cartella per specificare l&#39;accesso utente alla sottocartella desiderata. |
-| `connectionSpec.id` | La specifica di connessione restituisce le proprietà del connettore di un&#39;origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di origine. ID della specifica di connessione per [!DNL SFTP]: `b7bf2577-4520-42c9-bae9-cad01560f7bc`. |
+Leggi la [[!DNL SFTP] guida all&#39;autenticazione](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials) per i passaggi dettagliati su come recuperare le credenziali di autenticazione.
 
 ### Utilizzo delle API di Platform
 
@@ -95,7 +83,8 @@ curl -X POST \
               "userName": "{USERNAME}",
               "password": "{PASSWORD}",
               "maxConcurrentConnections": 5,
-              "folderPath": "acme/business/customers/holidaySales"
+              "folderPath": "acme/business/customers/holidaySales",
+              "disableChunking": "true"
           }
       },
       "connectionSpec": {
@@ -113,6 +102,7 @@ curl -X POST \
 | `auth.params.password` | La password associata al server SFTP. |
 | `auth.params.maxConcurrentConnections` | Il numero massimo di connessioni simultanee specificate durante la connessione di Platform a SFTP. Se attivato, questo valore deve essere impostato su almeno 1. |
 | `auth.params.folderPath` | Percorso della cartella a cui desideri fornire l’accesso. |
+| `auth.params.disableChunking` | Valore booleano utilizzato per determinare se il server SFTP supporta o meno il chunking. |
 | `connectionSpec.id` | ID della specifica di connessione al server SFTP: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
 +++
@@ -154,7 +144,8 @@ curl -X POST \
               "privateKeyContent": "{PRIVATE_KEY_CONTENT}",
               "passPhrase": "{PASSPHRASE}",
               "maxConcurrentConnections": 5,
-              "folderPath": "acme/business/customers/holidaySales"
+              "folderPath": "acme/business/customers/holidaySales",
+              "disableChunking": "true"
           }
       },
       "connectionSpec": {
@@ -173,6 +164,7 @@ curl -X POST \
 | `auth.params.passPhrase` | La passphrase o password per decrittografare la chiave privata se il file di chiave o il contenuto della chiave è protetto da una passphrase. Se PrivateKeyContent è protetto da password, questo parametro deve essere utilizzato con la passphrase di PrivateKeyContent come valore. |
 | `auth.params.maxConcurrentConnections` | Il numero massimo di connessioni simultanee specificate durante la connessione di Platform a SFTP. Se attivato, questo valore deve essere impostato su almeno 1. |
 | `auth.params.folderPath` | Percorso della cartella a cui desideri fornire l’accesso. |
+| `auth.params.disableChunking` | Valore booleano utilizzato per determinare se il server SFTP supporta o meno il chunking. |
 | `connectionSpec.id` | ID della specifica di connessione al server [!DNL SFTP]: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
 +++
