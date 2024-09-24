@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida alla risoluzione dei problemi relativi alle sandbox
 description: Questo documento fornisce le risposte alle domande più frequenti sulle sandbox in Adobe Experience Platform.
 exl-id: 6a496509-a4e9-4e76-829b-32d67ccfcce6
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 7ee472294e8f255d9de3c15982a6f5d2d3654755
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '820'
 ht-degree: 8%
 
 ---
@@ -31,9 +31,9 @@ Le sandbox sono partizioni virtuali all’interno di una singola istanza di Expe
 
 In Experience Platform sono disponibili due tipi di sandbox:
 
-* **Sandbox di produzione**: una sandbox di produzione deve essere utilizzata con i profili nell&#39;ambiente di produzione. Platform consente di creare più sandbox di produzione per fornire la funzionalità giusta per i dati, mantenendo al contempo l’isolamento operativo. Questa funzione consente di dedicare specifiche sandbox di produzione a linee di business, marchi, progetti o aree geografiche distinte. Le sandbox di produzione supportano un volume di profili di produzione fino all&#39;impegno [!DNL Profile] concesso in licenza (misurato cumulativamente in tutte le sandbox di produzione autorizzate). Hai diritto a utilizzare il profilo medio concesso in licenza per [!DNL Profile] autorizzato (misurato cumulativamente in tutte le sandbox di produzione autorizzate).
+* **Sandbox di produzione**: una sandbox di produzione deve essere utilizzata con i profili nell&#39;ambiente di produzione. Platform consente di creare più sandbox di produzione per fornire la funzionalità giusta per i dati, mantenendo al contempo l’isolamento operativo. Questa funzione consente di dedicare specifiche sandbox di produzione a linee di business, marchi, progetti o aree geografiche distinte. Le sandbox di produzione supportano un volume di profili di produzione fino all&#39;impegno [!DNL Profile] concesso in licenza (misurato cumulativamente in tutte le sandbox di produzione autorizzate). Hai diritto a utilizzare l’intero volume totale di dati concesso in licenza (misurato cumulativamente in tutte le sandbox di produzione autorizzate).
+
 * **Sandbox di sviluppo**: una sandbox di sviluppo è una sandbox che può essere utilizzata esclusivamente per lo sviluppo e il test con profili non di produzione. Le sandbox di sviluppo supportano un volume di profili non di produzione fino al 10% dell&#39;impegno [!DNL Profile] concesso in licenza (misurato cumulativamente in tutte le sandbox di sviluppo autorizzate). Hai diritto a:
-   * Una ricchezza media di profilo non di produzione di 75 kilobyte per profilo non di produzione autorizzato (misurata cumulativamente in tutte le sandbox di sviluppo autorizzate);
    * Un processo di segmentazione batch al giorno, per sandbox di sviluppo;
    * Una media di 120 chiamate API [!DNL Profile], per [!DNL Profile], all&#39;anno (misurata cumulativamente in tutte le sandbox di sviluppo autorizzate.
 

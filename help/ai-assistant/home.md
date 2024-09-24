@@ -2,10 +2,10 @@
 title: Panoramica dell’Assistente AI in Adobe Experience Platform
 description: Scopri l’Assistente IA, le relative sfaccettature e i casi di utilizzo, e come utilizzarlo per accelerare il flusso di lavoro con Adobe Experience Platform e Real-time Customer Data Platform.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 6f95cae48b0f4c304eb3dbd2d95e01e00e0f01c9
+source-git-commit: 0926a0e8c7ae560bf5f4f9ff6853b191af047738
 workflow-type: tm+mt
-source-wordcount: '927'
-ht-degree: 8%
+source-wordcount: '926'
+ht-degree: 15%
 
 ---
 
@@ -17,7 +17,7 @@ Il video seguente ha lo scopo di illustrare l’Assistente per l’intelligenza 
 
 Leggi questo documento per scoprire di più sull’Assistente AI in Adobe Experience Platform.
 
-L’Assistente AI in Adobe Experience Platform è un’esperienza di conversazione che puoi utilizzare per accelerare i flussi di lavoro nelle applicazioni Adobe. È possibile utilizzare l’Assistente AI per comprendere meglio la conoscenza del prodotto, risolvere i problemi o eseguire ricerche attraverso le informazioni e trovare informazioni operative. L’Assistente AI supporta Experience Platform, Real-time Customer Data Platform, Adobe Journey Optimizer e Customer Journey Analytics.
+L’Assistente IA in Adobe Experience Platform è un’esperienza di conversazione che puoi utilizzare per accelerare i flussi di lavoro nelle applicazioni Adobe. È possibile utilizzare l’Assistente IA per accrescere la conoscenza del prodotto, risolvere i problemi o eseguire ricerche nelle informazioni e trovare approfondimenti operativi. L’Assistente IA supporta Experience Platform, Real-time Customer Data Platform, Adobe Journey Optimizer e Customer Journey Analytics.
 
 ![È stata attivata l&#39;interfaccia dell&#39;Assistente di intelligenza artificiale con la prima esperienza utente.](./images/ai-assistant-full.png)
 
@@ -53,7 +53,7 @@ Per conoscenza del prodotto si intendono i concetti e gli argomenti basati sulla
 
 | Conoscenza del prodotto | Esempi |
 | --- | --- |
-| Apprendimento puntato | <ul><li>Qual è la differenza tra un&#39;identità e una chiave primaria o esterna?</li><li>Come viene calcolata la ricchezza del profilo?</li></ul> |
+| Apprendimento puntato | <ul><li>Qual è la differenza tra un&#39;identità e una chiave primaria o esterna?</li><li>Cosa sono i tipi di pubblico simili?</li></ul> |
 | Rilevamento aperto | <ul><li>Come posso esportare questo set di dati?</li><li>Esistono schemi per i clienti del settore sanitario?</li></ul> |
 | Risoluzione dei problemi | <ul><li>Perché non posso attivare uno schema di proprietà di Adobe per il profilo?</li><li>Perché non posso eliminare un segmento?</li></ul> |
 

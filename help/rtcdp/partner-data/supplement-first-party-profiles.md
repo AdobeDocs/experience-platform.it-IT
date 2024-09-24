@@ -3,10 +3,10 @@ title: Integrare i profili di prime parti con gli attributi forniti dai partner
 description: Scopri come integrare i profili di prime parti con attributi di partner di dati affidabili, per migliorare le basi dati, acquisire nuove informazioni sulla clientela e una migliore ottimizzazione del pubblico.
 feature: Use Cases, Profile Enrichment
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
-source-git-commit: 9737508bd8435f4edf0e60a3559c1b4352ccb29f
+source-git-commit: 7ee472294e8f255d9de3c15982a6f5d2d3654755
 workflow-type: tm+mt
-source-wordcount: '1256'
-ht-degree: 79%
+source-wordcount: '1257'
+ht-degree: 77%
 
 ---
 
@@ -41,7 +41,7 @@ Se prendi in considerazione l’integrazione dei profili di prime parti con gli 
 
 >[!WARNING]
 >
->Gli attributi aggiuntivi forniti dal partner e acquisiti in Real-Time CDP influiscono sulla *ricchezza media del profilo*. Per ulteriori informazioni sulla ricchezza dei profili, consulta la [descrizione del prodotto Real-time Customer Data Platform](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform.html).
+>Gli attributi aggiuntivi forniti dal partner acquisiti in Real-Time CDP influiscono sul *volume totale di dati*. Per ulteriori informazioni sul volume totale dei dati, leggere la [descrizione del prodotto Real-time Customer Data Platform](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform.html).
 
 ## Procedura dettagliata del video {#video-walkthrough}
 

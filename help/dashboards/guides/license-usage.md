@@ -4,9 +4,9 @@ title: Dashboard utilizzo licenze
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale è possibile visualizzare informazioni importanti sull’utilizzo delle licenze della tua organizzazione.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: b1de61b2e7d0dedf2da8ef8ffb02fe5c15e82fb2
+source-git-commit: 0926a0e8c7ae560bf5f4f9ff6853b191af047738
 workflow-type: tm+mt
-source-wordcount: '2720'
+source-wordcount: '2702'
 ht-degree: 5%
 
 ---
@@ -205,7 +205,6 @@ Il dashboard utilizzo licenze riporta diverse metriche univoche applicabili a pi
 | [!UICONTROL Dimensione Audience Activation] | Dimensione totale dei profili attivati in una destinazione basata su file in un anno. Nota: non sono inclusi i profili inviati tramite destinazioni di streaming. |
 | [!UICONTROL Pubblico di riferimento] | La somma delle adesioni per il pubblico aziendale e per il pubblico dei consumatori. Un pubblico di consumatori è definito come il numero di profili di persone identificati come &quot;pubblico di consumatori&quot; nell’ordine di vendita. Per pubblico aziendale si intende il numero di profili di persona aziendale identificati come &quot;pubblico aziendale&quot; nell’ordine di vendita. |
 | [!UICONTROL Pacchetti utenti servizio query ad hoc] | Componente aggiuntivo per aumentare il diritto degli utenti autorizzati di Query Service di altri cinque utenti di Query Service simultanei e di un’ulteriore query ad hoc in esecuzione simultanea per pacchetto. È possibile concedere in licenza più pacchetti utente di Ad Hoc Query aggiuntivi. |
-| [!UICONTROL Ricchezza media profilo] | La somma di tutti i dati di produzione memorizzati nel servizio profili hub in qualsiasi momento, divisa per cinque volte il numero di profili di persona aziendale autorizzati. [!UICONTROL Ricchezza media profilo] è una caratteristica condivisa. |
 | [!UICONTROL Righe CJA disponibili] | La media giornaliera delle righe di dati disponibili per l’analisi nel Customer Journey Analytics. |
 | [!UICONTROL Attributi calcolati] | Numero totale di dati comportamentali aggregati del profilo. I dati comportamentali aggregati del profilo si basano su eventi di esperienza convertiti in un attributo di profilo e che possono essere inclusi in un profilo di persona o di persona aziendale. |
 | [!UICONTROL Pubblico consumer] | Il numero di profili di persona identificati come &quot;Pubblico consumatore&quot; nell’ordine cliente. |
@@ -216,9 +215,10 @@ Il dashboard utilizzo licenze riporta diverse metriche univoche applicabili a pi
 | [!UICONTROL Tipi di pubblico simili] | Il numero di tipi di pubblico generati modellando un pubblico consumer esistente per identificare profili di persone simili a quello esistente. |
 | [!UICONTROL Numero di modelli AMM] | Un conteggio del modello di apprendimento automatico (integrato nell’Adobe Mix Modeler) utilizzato per misurare e/o prevedere un risultato specifico in base ai tuoi investimenti. |
 | [!UICONTROL Numero di sandbox] | Numero di separazioni logiche all’interno dell’istanza di qualsiasi servizio Adobe On-demand che accede ai dati e alle operazioni di isolamento di Adobe Experience Platform. |
-| [!UICONTROL Numero di pacchetti Richness profilo] | Un aumento della Ricchezza media profilo autorizzata di 25 KB per profilo per ogni pacchetto Ricchezza profilo aggiuntiva. |
+| [!UICONTROL Numero di pacchetti Richness profilo] | Un aumento del volume totale di dati autorizzato di 25 KB per profilo per ogni pacchetto di ricchezza di profilo aggiuntivo. |
 | [!UICONTROL Ore di calcolo servizio query] | Misura del tempo impiegato dai motori di Query Service per leggere, elaborare e riscrivere i dati nel data lake quando viene eseguita una query batch. |
 | [!UICONTROL Segmentazione streaming n. di pacchetti] | I pacchetti aggiornano l’iscrizione al segmento per un profilo persona man mano che nuovi dati entrano nel servizio di segmentazione attraverso un flusso di streaming. L’iscrizione al segmento viene valutata in base agli attributi del profilo della persona corrente e al valore dell’evento corrente, senza tenere conto del comportamento storico. La segmentazione in streaming è una funzione condivisa. |
+| [!UICONTROL Volume di dati totale] | La quantità totale di dati disponibili per Adobe Experience Platform Profile Service da utilizzare nei flussi di lavoro di coinvolgimento. |
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
 

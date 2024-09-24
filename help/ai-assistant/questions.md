@@ -2,10 +2,10 @@
 title: Guida alle domande per l’Assistente AI
 description: Leggi questo documento per scoprire alcune domande di esempio che puoi utilizzare quando esegui una query sull’Assistente AI.
 exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
-source-git-commit: fc87c28d7019e123d974e4d2ad307928a3d3fe89
+source-git-commit: 0926a0e8c7ae560bf5f4f9ff6853b191af047738
 workflow-type: tm+mt
-source-wordcount: '1524'
-ht-degree: 1%
+source-wordcount: '1519'
+ht-degree: 3%
 
 ---
 
@@ -80,7 +80,6 @@ Le domande seguenti sono raggruppate per oggetti dati e sono classificate come [
    * In che modo i gruppi di utenti sono correlati ai ruoli?
    * Quando dovrei usare un tipo di dati rispetto a un gruppo di campi?
    * Qual è la differenza tra un&#39;identità e una chiave primaria o esterna?
-   * Come viene calcolata la ricchezza del profilo?
 * **Risoluzione dei problemi - Conoscenza del prodotto (Real-Time CDP e Journey Optimizer)**
    * Per cosa può essere utile l’Assistente IA?
    * Posso eliminare uno schema abilitato per il profilo dopo l’acquisizione dei dati?
