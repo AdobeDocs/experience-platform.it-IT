@@ -2,10 +2,10 @@
 title: Creare un filtro data
 description: Scopri come filtrare le informazioni personalizzate per data.
 exl-id: fa05d651-ea43-41f0-9b7d-f19c4a9ac256
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: 77cedd351b5628d15c279fceabde735f4f93f392
 workflow-type: tm+mt
-source-wordcount: '662'
-ht-degree: 0%
+source-wordcount: '922'
+ht-degree: 1%
 
 ---
 
@@ -22,6 +22,60 @@ Se non conosci i parametri di query, consulta la documentazione di [istruzioni s
 Per applicare un filtro data, seleziona **[!UICONTROL Aggiungi filtro]**, quindi **[!UICONTROL Filtro data]** dal menu a discesa della visualizzazione del dashboard.
 
 ![Dashboard personalizzato con filtro Aggiungi e menu a discesa evidenziato.](../../../images/query-pro-mode/add-filter.png)
+
+Vengono visualizzate le seguenti opzioni di filtro delle date.
+
+| Filtro | Descrizione |
+| --- | --- |
+| Nessuna data personalizzata | Seleziona una o più date personalizzate da più valori predefiniti. |
+| Intervallo di date personalizzato | Seleziona una o più date personalizzate da più valori predefiniti oppure specifica un intervallo di date personalizzato. |
+| Data personalizzata | Seleziona dai valori predefiniti o specifica la data di inizio per il dashboard. |
+
+![Finestra di dialogo Crea filtro data con le tre opzioni della selezione data personalizzate evidenziate.](../../../images/query-pro-mode/create-date-filter.png)
+
+### Creare un filtro data non personalizzato
+
+Per applicare un filtro di data predefinito, selezionare **[!UICONTROL Nessuna data personalizzata]**, quindi selezionare le opzioni di data predefinite che si desidera includere. Infine, utilizza il menu a discesa per selezionare l&#39;intervallo di date predefinito, quindi seleziona **[!UICONTROL Salva]**.
+
+![La finestra di dialogo Crea filtro data con il filtro data non personalizzato e salva è evidenziata.](../../../images/query-pro-mode/no-custom-date-filter.png)
+
+Viene visualizzata di nuovo la dashboard contenente l’intervallo date predefinito selezionato in precedenza. Utilizza il menu a discesa per selezionare un altro intervallo di date predefinito.
+
+![Dashboard personalizzato che mostra l&#39;intervallo di date predefinito con il menu a discesa evidenziato.](../../../images/query-pro-mode/no-custom-date-filter-results.png)
+
+### Creare un filtro per intervalli di date personalizzato
+
+Per applicare un filtro per intervalli di date personalizzato, seleziona **[!UICONTROL Intervallo di date personalizzato]**, quindi seleziona le opzioni di data predefinite che desideri includere. Infine, seleziona **[!UICONTROL Personalizzato]** per impostare l&#39;intervallo di date predefinito. Utilizza il calendario per specificare un intervallo di date, quindi seleziona **[!UICONTROL Salva]**.
+
+>[!NOTE]
+>
+>Non è necessario selezionare opzioni di data predefinite.
+
+![La finestra di dialogo per la creazione di un filtro per la data con il filtro per l&#39;intervallo di date personalizzato, personalizzato e salvato evidenziato.](../../../images/query-pro-mode/custom-date-range-filter.png)
+
+Viene visualizzata di nuovo la dashboard, che mostra l’intervallo di dati personalizzato precedentemente specificato. Utilizza il menu a discesa per selezionare un altro intervallo di date predefinito.
+
+![Dashboard personalizzato che mostra l&#39;intervallo di date predefinito con la data personalizzata evidenziata.](../../../images/query-pro-mode/custom-date-range-filter-results.png)
+
+### Creare un filtro data personalizzato
+
+Per applicare un filtro data personalizzato, selezionare **[!UICONTROL Data personalizzata]** e selezionare le opzioni date predefinite da includere. Infine, seleziona **[!UICONTROL Personalizzato]**, quindi utilizza il calendario per selezionare una data di inizio. Infine, selezionare **[!UICONTROL Salva]**.
+
+>[!NOTE]
+>
+>Non è necessario selezionare opzioni di data predefinite.
+
+![La finestra di dialogo Crea filtro data con il filtro data personalizzato, personalizzato e salva evidenziata.](../../../images/query-pro-mode/custom-date-filter.png)
+
+Viene visualizzata di nuovo la dashboard contenente i dati personalizzati precedentemente specificati. Utilizza il menu a discesa per selezionare un’altra data.
+
+![Dashboard personalizzato che mostra l&#39;intervallo di date predefinito con la data personalizzata evidenziata.](../../../images/query-pro-mode/custom-date-filter-results.png)
+
+## Eliminare un filtro data {#delete-date-filter}
+
+Per rimuovere il filtro di data, selezionare l&#39;icona Elimina filtro (![Icona Elimina filtro.](/help/images/icons/filter-delete.png)).
+
+![Dashboard personalizzato con l&#39;icona di eliminazione del filtro evidenziata.](../../../images/query-pro-mode/delete-date-filter.png)
 
 ## Modifica il codice SQL per includere i parametri di query della data {#include-date-parameters}
 
@@ -75,25 +129,3 @@ Quindi, seleziona i parametri di query appropriati dai menu a discesa.
 ![Il compositore widget con il menu a discesa Start_date evidenziato.](../../../images/sql-insights/widget-composer-date-filter-dropdown.png)
 
 Infine, seleziona **[!UICONTROL Salva e chiudi]** per tornare al dashboard. I filtri di data sono ora abilitati per tutte le informazioni che hanno parametri di data di inizio e di fine.
-
-## Utilizzare il filtro data
-
-Per utilizzare un filtro data personalizzato, seleziona l’icona del calendario e scegli un inizio e una fine dalla vista del calendario.
-
->[!IMPORTANT]
->
->La semplice aggiunta di un filtro per data non modificherà i grafici. Devi modificare ciascuna informazione per includere la data di inizio e di fine scelte.
-
-![Dashboard personalizzato con il calendario del filtro data evidenziato.](../../../images/query-pro-mode/date-filter.png)
-
-Dopo aver selezionato un intervallo di date dal dashboard, le informazioni che contengono parametri di data nel codice SQL visualizzeranno le opzioni del filtro data nel compositore widget.
-
->[!NOTE]
->
->Quando selezioni un intervallo di date sul dashboard, vengono visualizzati i pulsanti per i filtri di date nell’ambito del flusso di lavoro di creazione delle informazioni approfondite.
-
-## Eliminare un filtro data {#delete-date-filter}
-
-Per rimuovere il filtro di data, selezionare l&#39;icona Elimina filtro (![Icona Elimina filtro.](/help/images/icons/filter-delete.png)).
-
-![Dashboard personalizzato con l&#39;icona di eliminazione del filtro evidenziata.](../../../images/query-pro-mode/delete-date-filter.png)
