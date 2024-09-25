@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Query Editor
 description: L’editor delle query è uno strumento interattivo fornito da Adobe Experience Platform Query Service che consente di scrivere, convalidare ed eseguire query per i dati sull’esperienza del cliente all’interno dell’interfaccia utente di Experience Platform. Query Editor supporta lo sviluppo di query per l’analisi e l’esplorazione dei dati e consente di eseguire query interattive a scopo di sviluppo, nonché query non interattive per popolare i set di dati in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: d2bc580ba1cacdfab45bdc6356c630a63e7d0f6e
+source-git-commit: 7ba9eb6891657e7f3d7ebbd41314b7973e31ea61
 workflow-type: tm+mt
-source-wordcount: '2430'
+source-wordcount: '2802'
 ht-degree: 0%
 
 ---
@@ -49,6 +49,12 @@ Le query eseguite dall’editor delle query vengono eseguite in modo interattivo
 
 Utilizzando l’editor delle query, puoi scrivere, eseguire e salvare query per i dati sull’esperienza del cliente. Tutte le query eseguite o salvate nell’editor delle query sono disponibili per tutti gli utenti dell’organizzazione che hanno accesso a Query Service.
 
+### Selettore database {#database-selector}
+
+Selezionare un database per la query dal menu a discesa in alto a destra dell&#39;editor di query. Il database selezionato viene visualizzato nel menu a discesa.
+
+![Editor query con menu a discesa del database evidenziato.](../images/ui/query-editor/database-dropdown.png)
+
 ### Impostazioni {#settings}
 
 Un&#39;icona delle impostazioni sopra il campo di input di Query Editor include opzioni per abilitare/disabilitare il tema scuro o disabilitare/abilitare il completamento automatico.
@@ -66,9 +72,6 @@ Per attivare i temi scuri o chiari, selezionare l&#39;icona delle impostazioni (
 L&#39;editor delle query suggerisce automaticamente parole chiave SQL potenziali insieme ai dettagli di tabella o colonna per la query durante la scrittura. La funzione di completamento automatico è attivata per impostazione predefinita e può essere disattivata o attivata in qualsiasi momento dalle impostazioni dell’editor delle query.
 
 L’impostazione di configurazione del completamento automatico è per utente e viene memorizzata per gli accessi consecutivi per tale utente. La disattivazione di questa funzione interrompe l’elaborazione di diversi comandi di metadati e fornisce consigli che in genere migliorano la velocità dell’autore durante la modifica delle query.
-
-<!-- Currently editing the auto complete setting info. -->
-
 
 
 ### Eseguire più query sequenziali {#execute-multiple-sequential-queries}
@@ -112,17 +115,7 @@ Per ridurre al minimo il tempo di sviluppo, ti consigliamo di sviluppare le quer
 
 ## Strumenti di scrittura nell’editor delle query {#writing-tools}
 
-- **Evidenziazione automatica della sintassi:** Semplifica la lettura e l&#39;organizzazione di SQL.
-
-![Istruzione SQL nell&#39;editor query che illustra l&#39;evidenziazione dei colori della sintassi.](../images/ui/query-editor/syntax-highlight.png)
-
-- **Completamento automatico parola chiave SQL:** Inizia a digitare la query, quindi utilizza i tasti freccia per passare al termine desiderato e premi **Invio**.
-
-![Alcuni caratteri di SQL con il menu a discesa di completamento automatico che fornisce le opzioni dell&#39;editor di query.](../images/ui/query-editor/syntax-auto.png)
-
-- **Completamento automatico tabella e campo:** Inizia a digitare il nome della tabella da cui desideri `SELECT`, quindi utilizza i tasti freccia per passare alla tabella che stai cercando e premi **Invio**. Dopo aver selezionato una tabella, il completamento automatico riconosce i campi della tabella.
-
-![L&#39;input dell&#39;editor delle query che visualizza i suggerimenti relativi ai nomi delle tabelle a discesa.](../images/ui/query-editor/tables-auto.png)
+Utilizza gli strumenti di scrittura dell’editor delle query per migliorare il processo di creazione delle query. Le funzionalità includono opzioni per la formattazione del testo, la copia delle istruzioni SQL, la gestione dei dettagli delle query e il salvataggio o la pianificazione del lavoro in corso.
 
 ### Formatta testo {#format-text}
 
@@ -202,6 +195,43 @@ Se è stata pianificata una query, la scheda [!UICONTROL Query pianificate] forn
 >[!NOTE]
 >
 >Le query non eseguite non vengono salvate dal registro. Affinché la query sia disponibile in Query Service, deve essere eseguita o salvata in Query Editor.
+
+### Visualizzatore oggetti {#object-browser}
+
+>[!AVAILABILITY]
+>
+>La barra di navigazione del set di dati è disponibile solo per i clienti Data Distiller. L’interfaccia utente di Platform potrebbe non contenere la barra di navigazione del set di dati a sinistra.  Altre immagini in questo documento potrebbero non riflettere la barra di navigazione del set di dati. Per ulteriori informazioni, contatta il rappresentante del tuo Adobe.
+
+Utilizza il browser oggetti per cercare e filtrare facilmente i set di dati. Il browser oggetti riduce il tempo impiegato per la ricerca di tabelle e set di dati in ambienti di grandi dimensioni con numerosi set di dati. Grazie all’accesso semplificato ai dati e ai metadati rilevanti, puoi concentrarti di più sull’authoring delle query e meno sulla navigazione.
+
+Per spostarsi nel database con il Visualizzatore oggetti, immettere un nome di tabella nel campo di ricerca oppure selezionare **[!UICONTROL Tabelle]** per espandere l&#39;elenco dei set di dati e delle tabelle disponibili. Quando si utilizza il campo di ricerca, l’elenco delle tabelle disponibili viene filtrato in modo dinamico in base all’input.
+
+>[!NOTE]
+>
+>Ogni set di dati contenuto nel [database selezionato](#database-dropdown) è elencato in una barra di spostamento a sinistra dell&#39;editor di query.
+
+![Barra di navigazione del set di dati di Query Editor con l&#39;input di ricerca evidenziato.](../images/ui/query-editor/search-tables.png)
+
+Lo schema visualizzato nel browser oggetti è uno schema osservabile. Ciò significa che puoi utilizzarlo per monitorare le modifiche e gli aggiornamenti in tempo reale, man mano che le modifiche sono immediatamente visibili. Gli schemi osservabili consentono di garantire la sincronizzazione dei dati e supportano le attività di debug o di analisi.
+
+#### Limitazioni attuali {#current-limitations}
+
+Di seguito è riportato un elenco delle limitazioni correnti:
+
+- Esecuzione di query sequenziali: è possibile eseguire una sola query alla volta. Durante l&#39;esecuzione di una query, non è possibile aprire ulteriori tabelle nel menu di navigazione a sinistra, poiché le query vengono elaborate in sequenza.
+- Righe aggiuntive nei registri di query: nei registri è possibile che si verifichino query estranee etichettate come &quot;SHOW TABLES&quot; (MOSTRA TABELLE). che verranno rimossi nelle prossime versioni.
+
+#### Accedere ai metadati della tabella {#table-metadata}
+
+Oltre alle ricerche rapide, ora è possibile accedere facilmente ai metadati per qualsiasi tabella selezionando l’icona &quot;i&quot; accanto al nome della tabella. In questo modo vengono fornite informazioni dettagliate sulla tabella selezionata, che consentono di prendere decisioni informate durante la scrittura delle query.
+
+![Barra di navigazione del set di dati di Query Editor con l&#39;input di ricerca evidenziato.](../images/ui/query-editor/table-metadata.png)
+
+#### Esplora tabelle secondarie
+
+Per esplorare tabelle secondarie o collegate, seleziona la freccia a discesa accanto al nome di una tabella nell’elenco. In questo modo la tabella viene espansa per mostrare tutte le tabelle figlio associate e viene fornita una chiara visualizzazione della struttura dei dati e vengono consentite costruzioni di query più complesse. L’icona accanto al nome del campo indica il tipo di dati della colonna, per facilitarne l’identificazione durante query complesse.
+
+![L&#39;editor delle query con l&#39;elenco delle tabelle filtrate visualizzato.](../images/ui/query-editor/child-table-list.png)
 
 ## Esecuzione di query tramite Editor query {#executing-queries}
 
