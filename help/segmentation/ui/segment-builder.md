@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Segment Builder
 description: Il Generatore di segmenti nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro avanzata che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica di regole, ad esempio le tessere trascinate utilizzate per rappresentare le proprietà dei dati.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 6e1fecf2f986cbb39a2a92c28b05131e22d14b6e
+source-git-commit: 6ceb28b2c9bab3b9df212764a43b202980ae239c
 workflow-type: tm+mt
-source-wordcount: '4717'
+source-wordcount: '4784'
 ht-degree: 5%
 
 ---
@@ -98,6 +98,11 @@ Una volta mappate le suite di rapporti, puoi utilizzare questi campi appena mapp
 | Più suite di rapporti | Con le variabili generiche non sono inclusi descrittori di nomi descrittivi. <br><br>**Esempio:** eVar 2 | <ul><li>Qualsiasi campo con più descrittori viene visualizzato come generico. Ciò significa che nell’interfaccia utente non vengono visualizzati nomi descrittivi.</li><li>Le query possono utilizzare dati di qualsiasi set di dati che contiene l’eVar, il che può causare risultati misti o errati.</li></ul> | Le query utilizzano correttamente i risultati combinati da più set di dati. |
 
 ### Tipi di pubblico
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentBuilder_b2b_decomposition"
+>title="Valutazione complessa"
+>abstract="L’espressione seguente è troppo complicata per essere espressa come un singolo pubblico. Per utilizzare sia le regole B2B che gli eventi basati sulle persone nella stessa definizione di segmento, segui i passaggi riportati di seguito.<ol><li>Crea una definizione di segmento che si riferisca solo agli eventi basati sulle persone e salvala come propria definizione di segmento.</li><li>In una nuova definizione di segmento, importa la definizione di segmento creata in precedenza facendo riferimento alle regole B2B.</li></ol>"
 
 >[!NOTE]
 >
