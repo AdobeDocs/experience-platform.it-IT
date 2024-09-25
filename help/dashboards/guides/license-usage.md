@@ -4,9 +4,9 @@ title: Dashboard utilizzo licenze
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale è possibile visualizzare informazioni importanti sull’utilizzo delle licenze della tua organizzazione.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 0926a0e8c7ae560bf5f4f9ff6853b191af047738
+source-git-commit: 3b4a38be9b47ca65dc142bff4800ef595d3cacca
 workflow-type: tm+mt
-source-wordcount: '2702'
+source-wordcount: '2739'
 ht-degree: 5%
 
 ---
@@ -44,7 +44,7 @@ ht-degree: 5%
 
 Puoi visualizzare informazioni importanti sull&#39;utilizzo delle licenze della tua organizzazione tramite la dashboard [!UICONTROL Utilizzo licenze] di Adobe Experience Platform. Le informazioni visualizzate qui vengono acquisite durante un’istantanea giornaliera dell’istanza Platform.
 
-I rapporti sull’utilizzo delle licenze forniscono un elevato grado di granularità sulle metriche di utilizzo delle licenze. Il dashboard fornisce le metriche di utilizzo per ciascun prodotto acquistato, l’utilizzo consolidato delle metriche in tutte le sandbox di produzione o di sviluppo e la metrica di utilizzo da una sandbox specifica. Con le metriche di utilizzo è possibile tenere traccia delle seguenti applicazioni di Experience Platform: Real-time Customer Data Platform, Adobe Journey Optimizer e Customer Journey Analytics.
+I rapporti sull’utilizzo delle licenze forniscono un elevato grado di granularità sulle metriche di utilizzo delle licenze. Il dashboard fornisce le metriche di utilizzo per ciascun prodotto acquistato (e i relativi componenti aggiuntivi), l’utilizzo consolidato delle metriche in tutte le sandbox di produzione o di sviluppo e la metrica di utilizzo da una sandbox specifica. Con le metriche di utilizzo è possibile tenere traccia delle seguenti applicazioni di Experience Platform: Real-time Customer Data Platform, Adobe Journey Optimizer e Customer Journey Analytics.
 
 Questa guida illustra come accedere e utilizzare il dashboard utilizzo licenze nell’interfaccia utente di e fornisce ulteriori informazioni sulle visualizzazioni visualizzate nel dashboard.
 
@@ -52,7 +52,7 @@ Per una panoramica generale dell&#39;interfaccia utente di Platform, fare riferi
 
 ## [!UICONTROL Utilizzo licenza] dati dashboard
 
-Nel dashboard [!UICONTROL Utilizzo licenze] viene visualizzato un elenco di tutti i prodotti di Experience Platform acquistati. Da questo elenco, puoi trovare un’istantanea dei dati relativi alla licenza della tua organizzazione, ad Experience Platform, in qualsiasi sandbox associata.
+Nel dashboard [!UICONTROL Utilizzo licenze] viene visualizzato un elenco di tutti i prodotti di Experience Platform acquistati e dei relativi componenti aggiuntivi. Da questa dashboard è possibile trovare un’istantanea dei dati relativi alla licenza della tua organizzazione, ad Experience Platform in qualsiasi sandbox associata.
 
 I dati in questo dashboard vengono visualizzati esattamente come appaiono nel momento specifico in cui è stata acquisita l’istantanea. In altre parole, l’istantanea non è un’approssimazione o un campione dei dati e il dashboard non viene aggiornato in tempo reale.
 
@@ -72,12 +72,16 @@ Per passare al dashboard utilizzo licenze nell&#39;interfaccia utente di Platfor
 
 ## Scheda [!UICONTROL Panoramica] {#overview-tab}
 
-Questa dashboard mostra tutti i prodotti Adobe Experience Platform con licenza, inclusi i componenti aggiuntivi, in un formato tabella. La tabella fornisce informazioni chiave sull’utilizzo delle licenze in tutti i profili disponibili.
+Il dashboard [!UICONTROL Utilizzo licenze] visualizza due tabelle separate: **Prodotti core** e **Componenti aggiuntivi**.
+
+- **[!UICONTROL Prodotti core] tabella**: questa tabella elenca i principali prodotti Adobe Experience Platform concessi in licenza dalla tua organizzazione. Ogni prodotto di base ha le proprie metriche, il proprio tracciamento dell’utilizzo e viste drill-through a livello di sandbox. Questi prodotti core forniscono le metriche chiave per il tracciamento ed eventuali componenti aggiuntivi sono inclusi in queste metriche.
+
+- **[!UICONTROL Componenti aggiuntivi] tabella**: in questa tabella sono elencati prodotti aggiuntivi le cui quantità di licenze sono combinate con le metriche supportate dai prodotti di base. I componenti aggiuntivi non dispongono di metriche separate, ma migliorano il tracciamento dell’utilizzo dei prodotti core a cui sono associati.
 
 | Nome colonna | Descrizione |
 |---|---|
 | **[!UICONTROL Prodotto]** | La soluzione di Adobe concessa in licenza dalla tua organizzazione. |
-| **[!UICONTROL Metrica principale]** | La metrica principale utilizzata per il tracciamento in per quel prodotto. |
+| **[!UICONTROL Metrica principale]** | La metrica principale utilizzata per il tracciamento all’interno di quel prodotto. |
 | **[!UICONTROL Importo licenza]** | Il valore contrattuale per l’importo massimo della metrica principale come concordato nel contratto di licenza del prodotto. |
 | **[!UICONTROL Utilizzo]** | Quantità della metrica principale utilizzata. Questo valore fornisce l’utilizzo totale di quella metrica in tutte le sandbox, di produzione o di sviluppo. |
 | **[!UICONTROL Utilizzo %]** | La percentuale della metrica principale utilizzata in base alla quantità di licenza. |
@@ -85,9 +89,9 @@ Questa dashboard mostra tutti i prodotti Adobe Experience Platform con licenza, 
 
 >[!NOTE]
 >
->Le aggiunte alla [!UICONTROL quantità licenza] come risultato dei componenti aggiuntivi vengono aggiunte alla [!UICONTROL quantità licenza] per i prodotti di base come Real-time Customer Data Platform, Adobe Journey Optimizer e Customer Journey Analytics. L’utilizzo della quantità concessa in licenza (dopo i componenti aggiuntivi) viene monitorato attraverso i prodotti di base. Ad esempio, se acquisti una confezione di cinque sandbox, la quantità di cinque viene aggiunta a quella del prodotto di base. In questo caso, il componente aggiuntivo mostra un [!UICONTROL importo licenza] di uno e l&#39;utilizzo per tale componente aggiuntivo è &quot;vuoto&quot; in quanto l&#39;utilizzo viene tracciato attraverso il prodotto di base.
+>Gli importi delle licenze per i componenti aggiuntivi sono inclusi nella [!UICONTROL quantità di licenza] dei prodotti core. Ad esempio, se acquisti una confezione di cinque sandbox come componente aggiuntivo, l’importo viene aggiunto a quello del prodotto di base. La tabella dei componenti aggiuntivi mostra un [!UICONTROL importo licenza] specifico per il componente aggiuntivo, ma l&#39;utilizzo effettivo viene registrato attraverso il prodotto di base.
 
-La tabella indica la metrica principale per ciascun prodotto, in quanto ogni prodotto può tracciare numerose metriche.
+Le tabelle indicano la metrica principale per ciascun prodotto, in quanto ogni prodotto può tracciare numerose metriche.
 
 ### Utilizzo previsto {#predicted-usage}
 
@@ -111,8 +115,9 @@ Gestisci e ottimizza in modo proattivo le risorse di gestione delle licenze in b
 >
 >Le previsioni vengono aggiornate su base mensile. La data di aggiornamento è inclusa in un&#39;icona di informazioni (![Icona di informazioni.](../images/license-usage/info-icon.png)) sopra il titolo della colonna.
 
-Per visualizzare un riepilogo dell&#39;utilizzo di un prodotto, selezionare un prodotto dall&#39;elenco [!UICONTROL Panoramica].
+Per visualizzare un riepilogo dell&#39;utilizzo dei diritti di un prodotto, selezionare un prodotto dalla tabella [!UICONTROL Prodotti principali].
 
+<!-- update image ... -->
 ![Utilizzo della [!UICONTROL Licenza] [!UICONTROL Panoramica] con un prodotto ed evidenziata la colonna Utilizzo previsto.](../images/license-usage/product-predicted-usage.png)
 
 Viene visualizzata la scheda Riepilogo. Puoi utilizzare le previsioni granulari disponibili nelle schede [!UICONTROL Riepilogo] e [!UICONTROL Dettagli] per garantire un processo decisionale informato e un utilizzo efficiente delle licenze.
@@ -121,6 +126,7 @@ Viene visualizzata la scheda Riepilogo. Puoi utilizzare le previsioni granulari 
 >
 >Tieni presente che le previsioni sull’utilizzo delle licenze sono approssimazioni basate sull’utilizzo passato. L’utente è responsabile di comprendere l’utilizzo effettivo dell’organizzazione e di garantire che l’utilizzo non vada oltre l’ambito della licenza dell’organizzazione con Adobe.
 
+<!-- update image ... -->
 ![Visualizzazione di riepilogo di un prodotto Platform con la colonna Utilizzo previsto evidenziata.](../images/license-usage/summary-predicted-usage.png)
 
 La percentuale di utilizzo previsto è determinata come segue:
@@ -133,7 +139,7 @@ La percentuale di utilizzo previsto è determinata come segue:
 >
 >&quot;Quasi identici&quot; in questo contesto significa che i valori sono statisticamente significativi per due posizioni decimali (ad esempio, un limite inferiore di 0,342 e un limite superiore di 0,344 sono entrambi arrotondati al 34%).
 
-La funzione di utilizzo previsto supporta per le metriche seguenti:
+La funzione di utilizzo previsto supporta le metriche seguenti:
 
 - [!UICONTROL Pubblico indirizzabile]
 - [!UICONTROL Ricchezza media profilo]
@@ -163,7 +169,7 @@ I rapporti sul consumo per le sandbox sono cumulativi per tutte le sandbox dello
 >
 >1. Creare un profilo di prodotto in Adobe Admin Console.
 >2. In Autorizzazione nella categoria Sandbox, aggiungi tutte le sandbox da visualizzare nel dashboard utilizzo licenze.
->3. Nella categoria Autorizzazioni dashboard utenti, aggiungi l’autorizzazione &quot;Visualizza dashboard utilizzo licenze&quot;.
+>3. Nella categoria Autorizzazione dashboard utente, aggiungi l’autorizzazione &quot;Visualizza dashboard utilizzo licenze&quot;.
 
 ## Scheda [!UICONTROL Dettagli] {#details-tab}
 
@@ -229,7 +235,7 @@ Il dashboard utilizzo licenze riporta diverse metriche univoche applicabili a pi
 La disponibilità di queste metriche e la definizione specifica di ciascuna di esse varia a seconda delle licenze acquistate dalla tua organizzazione. Per le definizioni dettagliate di ciascuna metrica, consulta l’appropriata documentazione di descrizione del prodotto:
 
 | Licenza | Descrizione del prodotto |
-|---|---|
+| --- | --- |
 | <ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:OD STANDARD</li><li>ADOBE EXPERIENCE PLATFORM:INTENSO</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
 | <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform, servizi app e servizi intelligenti](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
 | <ul><li>RT CUSTOMER DATA PLATFORM:OD</li><li>RT CUSTOMER DATA PLATFORM:DA PRFL A 10M</li><li>RT CUSTOMER DATA PLATFORM:DA PRFL A 50M</li></ul> | [Adobe Real-time Customer Data Platform](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform.html) |
