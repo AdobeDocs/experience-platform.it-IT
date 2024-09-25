@@ -3,7 +3,7 @@ keywords: Experience Platform;servizio query;servizio query;strutture dati nidif
 title: Appiattire le strutture di dati nidificati da utilizzare con gli strumenti di business intelligence
 description: Questo documento spiega come appiattire gli schemi XDM per tutte le tabelle e le viste durante una sessione quando si utilizzano strumenti BI di terze parti con Query Service.
 exl-id: 7e534c0a-db6c-463e-85da-88d7b2534ece
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 5f2b44c364183b7becf69f491b41e9d5558accc2
 workflow-type: tm+mt
 source-wordcount: '857'
 ht-degree: 0%
@@ -56,7 +56,7 @@ prod:all?FLATTEN
 
 Lo schema di esempio utilizzato in questa guida utilizza il gruppo di campi standard [!UICONTROL Dettagli Commerce], che utilizza la struttura di oggetti `commerce` e l&#39;array `productListItems`. Consulta la documentazione XDM per [ulteriori informazioni sul gruppo di campi [!UICONTROL Dettagli Commerce]](../../xdm/field-groups/event/commerce-details.md). Una rappresentazione della struttura dello schema è visibile nell’immagine seguente.
 
-![Diagramma di schema del gruppo di campi Dettagli di Commerce che include le strutture `commerce` e `productListItems`.](../images/essential-concepts/commerce-details.png)
+![Diagramma di schema del gruppo di campi Dettagli di Commerce che include le strutture `commerce` e `productListItems`.](../images/key-concepts/commerce-details.png)
 
 Se lo strumento BI non supporta strutture di dati nidificate, può essere difficile fare riferimento ai campi nidificati se contengono valori serializzati, ad esempio `commerce` e `productListItems` nello schema di esempio. Questi valori possono essere visualizzati come parti di un singolo campo stringa `commerce` codificato e non sono realisticamente inutilizzabili.
 

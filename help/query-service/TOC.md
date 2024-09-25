@@ -5,10 +5,10 @@ breadcrumb-title: Guida di Query Service
 user-guide-description: Utilizza il linguaggio SQL standard per eseguire query sui dati nel data lake in Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: a7796a93d588b4e41c668f1a0f60bffbcb291550
 workflow-type: tm+mt
-source-wordcount: '322'
-ht-degree: 19%
+source-wordcount: '325'
+ht-degree: 23%
 
 ---
 
@@ -39,6 +39,7 @@ ht-degree: 19%
       - [Funzioni del tecnico per ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
       - [Esportare dati in ambienti ML](data-distiller/ml-feature-pipelines/export-data.md)
       - [Flusso di lavoro end-to-end per l’arricchimento della pipeline dati AI/ML](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
+- [Ipercubi Data Distiller](hypercubes.md)
 - Esempi {#use-cases}
    - [Panoramica](use-cases/overview.md)
    - [Sfoglia abbandonata](use-cases/abandoned-browse.md)
@@ -46,13 +47,13 @@ ht-degree: 19%
    - [Filtro bot](use-cases/bot-filtering.md)
    - [Creare un rapporto con tendenze degli eventi](use-cases/trended-report-of-events.md)
    - [Analisi del consenso](use-cases/consent-analysis.md)
-   - [Valore della durata del cliente](use-cases/customer-lifetime-value.md)
+   - [Valore del ciclo di vita del cliente](use-cases/customer-lifetime-value.md)
    - [Esplorazione dei dati](./use-cases/data-exploration.md)
-   - [Set di dati derivati basati sul decile](use-cases/deciles-use-case.md)
-   - [Corrispondenza fuzzy](use-cases/fuzzy-match.md)
+   - [Set di dati derivati basati su decile](use-cases/deciles-use-case.md)
+   - [Corrispondenza parziale](use-cases/fuzzy-match.md)
    - [Elencare le visualizzazioni di pagina di un utente](use-cases/list-visitor-sessions.md)
    - [Elencare i visitatori in base alle loro visualizzazioni di pagina](use-cases/visitors-by-number-of-page-views.md)
-   - [Punteggio tendenza](use-cases/propensity-score.md)
+   - [Punteggio di propensione](use-cases/propensity-score.md)
    - [Recuperare record simili con funzioni di ordine superiore](use-cases/retrieve-similar-records.md)
    - [Restituire e utilizzare le variabili di merchandising dai dati di Analytics](use-cases/merchandising-variables.md)
    - [SQLAlchemy](use-cases/sqlalchemy.md)

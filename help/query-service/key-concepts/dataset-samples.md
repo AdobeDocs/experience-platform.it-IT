@@ -2,10 +2,10 @@
 title: Esempi di set di dati
 description: I set di dati di esempio di Query Service consentono di eseguire query esplorative sui big data con tempi di elaborazione notevolmente ridotti a scapito della precisione delle query. Questa guida fornisce informazioni su come gestire gli esempi per l’elaborazione approssimativa delle query
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
-source-git-commit: 28fe8ec5a589b8d181ba2f888d50fa9d2d7d4996
+source-git-commit: 5f2b44c364183b7becf69f491b41e9d5558accc2
 workflow-type: tm+mt
-source-wordcount: '643'
-ht-degree: 0%
+source-wordcount: '632'
+ht-degree: 1%
 
 ---
 
@@ -17,12 +17,13 @@ Poiché molti utenti non hanno bisogno di una risposta esatta per un’operazion
 
 Per facilitare la gestione degli esempi per l’elaborazione approssimativa delle query, Query Service supporta le seguenti operazioni per gli esempi di set di dati:
 
-- [Crea un esempio di set di dati casuale uniforme.](#create-a-sample)
-- [Facoltativamente, specifica un criterio di filtro](##optional-filter-criteria)
-- [Visualizzare l&#39;elenco dei campioni per una tabella ADLS.](#view-list-of-samples)
-- [Eseguire direttamente una query sui set di dati di esempio.](#query-sample-datasets)
-- [Eliminare un campione.](#delete-a-sample)
-- Eliminare i campioni associati quando la tabella ADLS originale viene eliminata.
+- [Esempi di set di dati](#dataset-samples)
+   - [Introduzione {#get-started}](#getting-started-get-started)
+   - [Crea un esempio di set di dati casuale uniforme {#create-a-sample}](#create-a-uniform-random-dataset-sample-create-a-sample)
+   - [Facoltativamente specificare un criterio di filtro {#optional-filter-criteria}](#optionally-specify-a-filter-criteria-optional-filter-criteria)
+   - [Visualizza l&#39;elenco di campioni {#view-list-of-samples}](#view-the-list-of-samples-view-list-of-samples)
+   - [Eseguire una query sul set di dati di esempio {#query-sample-datasets}](#query-the-sample-dataset-query-sample-datasets)
+   - [Elimina esempi di set di dati {#delete-a-sample}](#delete-dataset-samples-delete-a-sample)
 
 ## Introduzione {#get-started}
 
@@ -32,7 +33,7 @@ Per utilizzare le funzionalità di elaborazione delle query approssimative di cr
 >
 >Devi abilitare il flag di sessione ogni volta che accedi a Platform.
 
-![Editor query con il comando &#39;SET aqp=true;&#39; evidenziato.](../images/essential-concepts/set-session-flag.png)
+![Editor query con il comando &#39;SET aqp=true;&#39; evidenziato.](../images/key-concepts/set-session-flag.png)
 
 ## Creare un esempio di set di dati casuale uniforme {#create-a-sample}
 
