@@ -5,10 +5,10 @@ breadcrumb-title: Guida di Query Service
 user-guide-description: Utilizza il linguaggio SQL standard per eseguire query sui dati nel data lake in Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: a7796a93d588b4e41c668f1a0f60bffbcb291550
+source-git-commit: bdd3d37baa05c8da3213f425657a00fef6afecb8
 workflow-type: tm+mt
-source-wordcount: '325'
-ht-degree: 23%
+source-wordcount: '333'
+ht-degree: 22%
 
 ---
 
@@ -39,7 +39,9 @@ ht-degree: 23%
       - [Funzioni del tecnico per ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
       - [Esportare dati in ambienti ML](data-distiller/ml-feature-pipelines/export-data.md)
       - [Flusso di lavoro end-to-end per l’arricchimento della pipeline dati AI/ML](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
-- [Ipercubi Data Distiller](hypercubes.md)
+- Pubblico di Data Distiller {#data-distiller-audiences}
+   - [Creare tipi di pubblico esterni tramite SQL](data-distiller-audiences/overview.md)
+- [IPERCUBI DI DATA DISTILLER](hypercubes.md)
 - Esempi {#use-cases}
    - [Panoramica](use-cases/overview.md)
    - [Sfoglia abbandonata](use-cases/abandoned-browse.md)
