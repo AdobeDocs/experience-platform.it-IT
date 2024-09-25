@@ -2,10 +2,10 @@
 title: Visualizza altro
 description: Scopri le diverse opzioni di visualizzazione per i dati analizzati SQL. Dal dashboard personalizzato è possibile visualizzare i risultati tabulati dell’analisi o scaricare i dati elaborati in formato CSV.
 exl-id: f57d85cf-dbd2-415c-bf01-8faa49871377
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: ed1565fad1c539d69b85fb644d4bc16d4a262673
 workflow-type: tm+mt
-source-wordcount: '286'
-ht-degree: 2%
+source-wordcount: '551'
+ht-degree: 1%
 
 ---
 
@@ -30,6 +30,38 @@ La funzionalità [!UICONTROL Visualizza altro] visualizza le coordinate specific
 >Il download del file CSV è limitato ai primi 500 record.
 
 ![Una finestra di dialogo che visualizza un&#39;anteprima delle informazioni e dei risultati tabulari dell&#39;istruzione SQL che ha generato le informazioni.](../../images/query-pro-mode/view-more-download-csv.png)
+
+## Ordina per colonna {#sort-column}
+
+Quando si visualizzano i risultati tabulati, è possibile utilizzare la funzionalità di ordinamento per colonna in ordine crescente o decrescente. Dal dashboard personalizzato, selezionare i puntini di sospensione (`...`) in qualsiasi tabella per accedere all&#39;opzione [!UICONTROL Visualizza altro].
+
+![Dashboard personalizzato con il menu a discesa dei puntini di sospensione di una tabella ed evidenziata l&#39;opzione Visualizza altro.](../../images/query-pro-mode/advanced-ellipses-dropdown.png)
+
+Puoi ordinare le colonne selezionando il menu a discesa accanto al nome della colonna, quindi selezionando **[!UICONTROL Ordine crescente]** o **[!UICONTROL Ordine decrescente]**.
+
+>[!NOTE]
+>
+>Le opzioni [!UICONTROL Ordinamento crescente] e [!UICONTROL Ordinamento decrescente] verranno visualizzate solo per le colonne configurate con [funzionalità di ordinamento](../overview.md/#advanced-attributes).
+
+![Elenco a discesa delle colonne della tabella che mostra le opzioni Ordinamento crescente e Ordinamento decrescente evidenziate.](../../images/query-pro-mode/advanced-sort-dropdown.png)
+
+## Ridimensionare una colonna {#resize-column}
+
+Puoi ridimensionare le colonne nei risultati tabulati per migliorare la leggibilità dei dati. Dal dashboard personalizzato, selezionare i puntini di sospensione (`...`) per consentire alla tabella di accedere all&#39;opzione [!UICONTROL Visualizza altro]. Utilizza il menu a discesa accanto al nome della colonna per ridimensionarla, quindi seleziona **[!UICONTROL Ridimensiona colonna]**.
+
+![Elenco a discesa delle colonne della tabella che mostra l&#39;opzione Ridimensiona colonna evidenziata.](../../images/query-pro-mode/advanced-resize-dropdown.png)
+
+Selezionare il dispositivo di scorrimento e trascinarlo a sinistra o a destra per regolare la dimensione della colonna in base alle esigenze.
+
+![Tabella in cui è evidenziata la barra di ridimensionamento colonne.](../../images/query-pro-mode/advanced-resize-column.png)
+
+## Paginazione tabella {#table-pagination}
+
+La paginazione viene applicata automaticamente alle tabelle nella funzionalità [!UICONTROL Visualizza altro], eliminando la necessità di modificare manualmente le query SQL. Questa funzione garantisce che i dati vengano presentati in un formato più gestibile, facilitando il processo di navigazione tra set di dati di grandi dimensioni.
+
+È possibile visualizzare fino a 500 record per pagina. Per spostarsi tra i record, utilizzare **[!UICONTROL >]** situato nella parte inferiore della pagina.
+
+![Risultati tabulati con risultati e impaginazione evidenziati.](../../images/query-pro-mode/advanced-table-pagination.png)
 
 ## Passaggi successivi
 

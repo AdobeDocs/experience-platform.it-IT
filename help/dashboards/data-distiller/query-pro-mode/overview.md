@@ -2,9 +2,9 @@
 title: Panoramica della modalità Query Pro
 description: Scopri come utilizzare le query SQL nell’interfaccia utente di Adobe Experience Platform per generare grafici per le dashboard personalizzate.
 exl-id: 15c664c4-8546-4e04-b81d-c78bf83500d3
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: ed1565fad1c539d69b85fb644d4bc16d4a262673
 workflow-type: tm+mt
-source-wordcount: '1062'
+source-wordcount: '1212'
 ht-degree: 0%
 
 ---
@@ -68,6 +68,26 @@ In questo esempio di grafico ad anello, le opzioni sono dimensione e colore. Il 
 Per modificare il tipo di grafico o il grafico del widget, seleziona tra le opzioni disponibili del menu a discesa [!UICONTROL Indicatori]. Le opzioni includono [!UICONTROL Riga], [!UICONTROL Anello], [!UICONTROL Numero grande] e [!UICONTROL Barra]. Una volta selezionata, viene generata una visualizzazione di anteprima delle impostazioni correnti del widget.
 
 ![Compositore widget con anteprima widget evidenziata.](../../images/sql-insights/widget-preview.png)
+
+## Attributi di tabella avanzati {#advanced-attributes}
+
+Per applicare le funzionalità di ordinamento automatico a una o a tutte le colonne delle tabelle, selezionare **[!UICONTROL Modifica]** per modificare l&#39;intero dashboard.
+
+![Dashboard personalizzato con Modifica evidenziata.](../../images/query-pro-mode/advanced-edit-dashboard.png)
+
+Selezionare i puntini di sospensione (`...`) nel grafico a tabella in cui si desidera aggiungere l&#39;ordinamento delle colonne, quindi selezionare **[!UICONTROL Modifica]**.
+
+![Tabella che mostra il menu con i puntini di sospensione evidenziata da Modifica.](../../images/query-pro-mode/advanced-table-edit.png)
+
+Per abilitare l&#39;ordinamento per qualsiasi colonna, selezionare le caselle **[!UICONTROL Ordinabile]**.
+
+![Pagina di modifica tabella con caselle di controllo ordinabili evidenziate.](../../images/query-pro-mode/advanced-table-sortable.png)
+
+Selezionare l&#39;icona delle proprietà (![Icona delle proprietà.](/help/images/icons/properties.png)) nella barra a destra per aprire il pannello [!UICONTROL Proprietà]. Nel pannello **[!UICONTROL Proprietà]**, utilizza il menu a discesa per selezionare la colonna **[!UICONTROL Ordinamento predefinito]**, quindi utilizza il menu a discesa per selezionare la **[!UICONTROL Direzione ordinamento]**. Infine, selezionare **[!UICONTROL Salva e chiudi]**.
+
+![Il compositore widget con l&#39;icona delle proprietà, l&#39;ordinamento predefinito, la direzione dell&#39;ordinamento, il salvataggio e la chiusura evidenziati.](../../images/query-pro-mode/advanced-table-properties.png)
+
+Per ulteriori informazioni sull&#39;utilizzo delle funzionalità di ordinamento, ridimensionamento delle colonne e impaginazione, vedere [Ulteriori informazioni](./view-more.md).
 
 ## Proprietà widget {#properties}
 
