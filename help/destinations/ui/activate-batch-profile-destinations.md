@@ -3,10 +3,10 @@ title: Attivare i tipi di pubblico per le destinazioni di esportazione dei profi
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico disponibili in Adobe Experience Platform inviandoli a destinazioni basate su profili in batch.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 21fd5957da8914be8b4abfad5c78d1929f76d6f6
+source-git-commit: ad33eaa48928b25502ef279f000b92f31e1667ca
 workflow-type: tm+mt
-source-wordcount: '4202'
-ht-degree: 12%
+source-wordcount: '4095'
+ht-degree: 11%
 
 ---
 
@@ -30,26 +30,6 @@ Questo articolo spiega il flusso di lavoro necessario per attivare i tipi di pub
 Per attivare i tipi di pubblico nelle destinazioni, devi avere [connesso correttamente a una destinazione](./connect-destination.md). Se non lo hai già fatto, vai al [catalogo delle destinazioni](../catalog/overview.md), sfoglia le destinazioni supportate e configura la destinazione che desideri utilizzare.
 
 ## Formati di file supportati per l’esportazione {#supported-file-formats-export}
-
->[!CONTEXTUALHELP]
->id="dataset_dataflow_needs_schedule_end_date_header"
->title="Aggiornare la data di fine per questo flusso di dati"
->abstract="Aggiornare la data di fine per questo flusso di dati"
-
->[!CONTEXTUALHELP]
->id="dataset_dataflow_needs_schedule_end_date_body"
->title="Aggiornare la data di fine per questo corpo del flusso di dati"
->abstract="A causa dei recenti aggiornamenti di questa destinazione, il flusso di dati ora richiede una data di fine. Adobe ha impostato una data di fine predefinita al 1° maggio 2025. Effettua l’aggiornamento alla data di fine desiderata altrimenti le esportazioni di dati si interromperanno alla fata predefinita."
-
->[!CONTEXTUALHELP]
->id="destinations_folder_name_template"
->title="Modificare il percorso della cartella"
->abstract="Utilizza diverse macro fornite per personalizzare il percorso della cartella in cui vengono esportati i set di dati."
-
->[!CONTEXTUALHELP]
->id="destinations_folder_name_template_preview"
->title="Anteprima del percorso della cartella del set di dati"
->abstract="Ottieni un’anteprima della struttura di cartelle creata nel percorso di archiviazione in base alle macro aggiunte in questa finestra."
 
 Durante l’esportazione dei tipi di pubblico sono supportati i seguenti formati di file:
 

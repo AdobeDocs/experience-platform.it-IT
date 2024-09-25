@@ -3,10 +3,10 @@ title: Esportare i set di dati nelle destinazioni di archiviazione cloud
 type: Tutorial
 description: Scopri come esportare i set di dati da Adobe Experience Platform nella posizione di archiviazione cloud preferita.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: e95c0e509931f141ff72c1defacebe5a29756157
+source-git-commit: ad33eaa48928b25502ef279f000b92f31e1667ca
 workflow-type: tm+mt
-source-wordcount: '1845'
-ht-degree: 4%
+source-wordcount: '2573'
+ht-degree: 6%
 
 ---
 
@@ -24,7 +24,7 @@ Puoi anche utilizzare le API Experience Platform per esportare i set di dati. Pe
 
 I set di dati che puoi esportare variano in base all’applicazione di Experience Platform (Real-Time CDP, Adobe Journey Optimizer), al livello (Prime o Ultimate) ed eventuali componenti aggiuntivi acquistati (ad esempio, Data Distiller).
 
-Scopri dalla tabella seguente quali tipi di set di dati puoi esportare in base all’applicazione, al livello di prodotto ed eventuali componenti aggiuntivi acquistati:
+Utilizza la tabella seguente per capire quali tipi di set di dati puoi esportare in base all’applicazione, al livello di prodotto ed eventuali componenti aggiuntivi acquistati:
 
 <table>
 <thead>
@@ -137,11 +137,29 @@ Utilizza le caselle di controllo a sinistra dei nomi dei set di dati per selezio
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_datasets_exportoptions"
 >title="Opzioni di esportazione dei file per i set di dati"
->abstract="Seleziona **Esporta file incrementali** per esportare solo i dati aggiunti al set di dati dopo l’ultima esportazione. <br> La prima esportazione di file incrementali include tutti i dati del set di dati, agendo come backfill. I file incrementali futuri includono solo i dati aggiunti al set di dati dopo la prima esportazione."
+>abstract="Seleziona **Esporta file incrementali** per esportare solo i dati aggiunti al set di dati dopo l’ultima esportazione. <br> La prima esportazione di file incrementali include tutti i dati del set di dati, agendo come backfill. I file incrementali futuri includono solo i dati aggiunti al set di dati dalla prima esportazione. <br> Seleziona **Esporta file completi** per esportare l&#39;appartenenza completa di ogni set di dati a ogni esportazione. "
 
-Nel passaggio **[!UICONTROL Pianificazione]**, puoi impostare una data di inizio e una cadenza di esportazione per le esportazioni dei set di dati.
+>[!CONTEXTUALHELP]
+>id="dataset_dataflow_needs_schedule_end_date_header"
+>title="Aggiornare la data di fine per questo flusso di dati"
+>abstract="Aggiornare la data di fine per questo flusso di dati"
 
-L&#39;opzione **[!UICONTROL Esporta file incrementali]** è selezionata automaticamente. Questo attiva un’esportazione di uno o più file che rappresentano un’istantanea completa del set di dati. I file successivi sono aggiunte incrementali al set di dati dall’esportazione precedente.
+>[!CONTEXTUALHELP]
+>id="dataset_dataflow_needs_schedule_end_date_body"
+>title="Aggiornare la data di fine per questo corpo del flusso di dati"
+>abstract="A causa dei recenti aggiornamenti di questa destinazione, il flusso di dati ora richiede una data di fine. Adobe ha impostato una data di fine predefinita al 1° maggio 2025. Effettua l’aggiornamento alla data di fine desiderata altrimenti le esportazioni di dati si interromperanno alla fata predefinita."
+
+Utilizza il passaggio **[!UICONTROL Pianificazione]** per:
+
+* Imposta una data di inizio e una data di fine, nonché una cadenza di esportazione per le esportazioni dei set di dati.
+* Configura se i file del set di dati esportati devono esportare l’appartenenza completa al set di dati o solo modifiche incrementali all’appartenenza a ogni occorrenza di esportazione.
+* Personalizza il percorso della cartella nel percorso di archiviazione in cui devono essere esportati i set di dati. Ulteriori informazioni su come [modificare il percorso della cartella di esportazione](#edit-folder-path).
+
+Utilizza il controllo **[!UICONTROL Modifica pianificazione]** nella pagina per modificare la frequenza di esportazione delle esportazioni e per scegliere se esportare file completi o incrementali.
+
+![Il controllo Modifica pianificazione è evidenziato nel passaggio Pianificazione.](/help/destinations/assets/ui/export-datasets/edit-schedule-control-highlight.png)
+
+L&#39;opzione **[!UICONTROL Esporta file incrementali]** è selezionata per impostazione predefinita. Questo attiva un’esportazione di uno o più file che rappresentano un’istantanea completa del set di dati. I file successivi sono aggiunte incrementali al set di dati dall’esportazione precedente. È inoltre possibile selezionare **[!UICONTROL Esporta file completi]**. In questo caso, seleziona la frequenza **[!UICONTROL Una volta]** per un&#39;esportazione completa una tantum del set di dati.
 
 >[!IMPORTANT]
 >
@@ -156,13 +174,37 @@ L&#39;opzione **[!UICONTROL Esporta file incrementali]** è selezionata automati
 
 2. Utilizza il selettore **[!UICONTROL Ora]** per scegliere l&#39;ora del giorno, in formato [!DNL UTC], in cui eseguire l&#39;esportazione.
 
-3. Utilizza il selettore **[!UICONTROL Data]** per scegliere l&#39;intervallo in cui deve essere eseguita l&#39;esportazione. Al momento non è possibile impostare una data di fine per le esportazioni. Per ulteriori informazioni, consulta la sezione [limitazioni note](#known-limitations).
+3. Utilizza il selettore **[!UICONTROL Data]** per scegliere l&#39;intervallo in cui deve essere eseguita l&#39;esportazione.
 
-4. Seleziona **[!UICONTROL Avanti]** per salvare la pianificazione e procedere al passaggio **[!UICONTROL Rivedi]**.
+4. Seleziona **[!UICONTROL Salva]** per salvare la pianificazione e procedere al passaggio **[!UICONTROL Rivedi]**.
 
 >[!NOTE]
 > 
 >Per le esportazioni di set di dati, i nomi dei file hanno un formato predefinito, predefinito, che non può essere modificato. Per ulteriori informazioni ed esempi di file esportati, vedere la sezione [Verifica dell&#39;esportazione del set di dati completata](#verify).
+
+## Modificare il percorso della cartella {#edit-folder-path}
+
+>[!CONTEXTUALHELP]
+>id="destinations_folder_name_template"
+>title="Modificare il percorso della cartella"
+>abstract="Utilizza diverse macro fornite per personalizzare il percorso della cartella in cui vengono esportati i set di dati."
+
+>[!CONTEXTUALHELP]
+>id="destinations_folder_name_template_preview"
+>title="Anteprima del percorso della cartella del set di dati"
+>abstract="Ottieni un’anteprima della struttura di cartelle creata nel percorso di archiviazione in base alle macro aggiunte in questa finestra."
+
+Seleziona **[!UICONTROL Modifica percorso cartella]** per personalizzare la struttura delle cartelle nel percorso di archiviazione in cui vengono depositati i set di dati esportati.
+
+![Il controllo del percorso della cartella di modifica è evidenziato nel passaggio di pianificazione.](/help/destinations/assets/ui/export-datasets/edit-folder-path.png)
+
+È possibile utilizzare diverse macro disponibili per personalizzare il nome di una cartella desiderata. Fare doppio clic su una macro per aggiungerla al percorso della cartella e utilizzare `/` tra le macro per separare le cartelle.
+
+![Selezione di macro evidenziata nella finestra modale della cartella personalizzata.](/help/destinations/assets/ui/export-datasets/custom-folder-path-macros.png)
+
+Dopo aver selezionato le macro desiderate, è possibile visualizzare un&#39;anteprima della struttura di cartelle che verrà creata nel percorso di archiviazione. Il primo livello nella struttura delle cartelle rappresenta il **[!UICONTROL percorso cartella]** indicato quando si è [connessi alla destinazione](/help/destinations/ui/connect-destination.md##set-up-connection-parameters) per esportare i set di dati.
+
+![Anteprima del percorso della cartella evidenziata nella finestra modale della cartella personalizzata.](/help/destinations/assets/ui/export-datasets/custom-folder-path-preview.png)
 
 ## Controlla {#review}
 
@@ -174,7 +216,11 @@ Nella pagina **[!UICONTROL Rivedi]** puoi visualizzare un riepilogo della selezi
 
 Durante l&#39;esportazione dei set di dati, Experience Platform crea uno o più file `.json` o `.parquet` nel percorso di archiviazione fornito. I nuovi file verranno archiviati nel percorso di archiviazione in base alla pianificazione di esportazione fornita.
 
-In Experience Platform viene creata una struttura di cartelle nel percorso di archiviazione specificato, in cui vengono depositati i file del set di dati esportati. Per ogni esportazione viene creata una nuova cartella, seguendo il modello riportato di seguito:
+In Experience Platform viene creata una struttura di cartelle nel percorso di archiviazione specificato, in cui vengono depositati i file del set di dati esportati. Il modello di esportazione delle cartelle predefinito è illustrato di seguito, ma è possibile [personalizzare la struttura delle cartelle con le macro preferite](#edit-folder-path).
+
+>[!TIP]
+> 
+>Il primo livello in questa struttura di cartelle - `folder-name-you-provided` - rappresenta il **[!UICONTROL percorso cartella]** che hai indicato quando [ti sei connesso alla destinazione](/help/destinations/ui/connect-destination.md##set-up-connection-parameters) per esportare i set di dati.
 
 `folder-name-you-provided/datasetID/exportTime=YYYYMMDDHHMM`
 
@@ -194,6 +240,8 @@ Quando vengono compressi, si noti la differenza di formato tra i due tipi di fil
 
 * Durante l&#39;esportazione di file JSON compressi, il formato del file esportato è `json.gz`
 * Durante l&#39;esportazione di file parquet compressi, il formato del file esportato è `gz.parquet`
+
+Le esportazioni in file JSON sono supportate *solo in modalità compressa*. Le esportazioni in file Parquet sono supportate in modalità compressa e non compressa.
 
 ## Rimuovere i set di dati dalle destinazioni {#remove-dataset}
 
@@ -227,7 +275,7 @@ I diritti all’esportazione di dati per diverse applicazioni non sono additivi.
 
 Se invece sono stati acquistati componenti aggiuntivi come Data Distiller, il limite di esportazione dei dati a cui hai diritto rappresenta la somma del livello prodotto e del componente aggiuntivo.
 
-Puoi visualizzare e tenere traccia delle esportazioni di profili in base ai limiti contrattuali nel dashboard delle licenze.
+Puoi visualizzare e tenere traccia delle esportazioni dei profili rispetto ai limiti contrattuali nel [dashboard utilizzo licenze](/help/landing/license-usage-and-guardrails/license-usage-dashboard.md).
 
 ## Limitazioni note {#known-limitations}
 
@@ -240,3 +288,59 @@ Tieni presente le seguenti limitazioni per il rilascio di disponibilità general
 * L’interfaccia utente non ti blocca attualmente l’eliminazione di un set di dati in fase di esportazione in una destinazione. Non eliminare i set di dati da esportare nelle destinazioni. [Rimuovere il set di dati](#remove-dataset) da un flusso di dati di destinazione prima di eliminarlo.
 * Le metriche di monitoraggio per le esportazioni di set di dati sono attualmente combinate con i numeri per le esportazioni di profili, pertanto non riflettono i numeri di esportazione effettivi.
 * I dati con una marca temporale precedente ai 365 giorni sono esclusi dalle esportazioni dei set di dati. Per ulteriori informazioni, visualizza [guardrail per esportazioni di set di dati pianificate](/help/destinations/guardrails.md#guardrails-for-scheduled-dataset-exports)
+
+## Domande frequenti {#faq}
+
+**È possibile generare un file senza una cartella se si salva solo in `/` come percorso della cartella? Inoltre, se non è necessario un percorso di cartella, in che modo verranno generati i file con nomi duplicati in una cartella o in un percorso?**
+
++++
+A partire dalla versione di settembre 2024, è possibile personalizzare il nome della cartella e persino utilizzare `/` per esportare i file per tutti i set di dati nella stessa cartella. Questo Adobe non è consigliato per le destinazioni che esportano più set di dati, in quanto i nomi di file generati dal sistema che appartengono a set di dati diversi verranno combinati nella stessa cartella.
++++
+
+**È possibile indirizzare il file manifesto a una cartella e i file di dati a un&#39;altra cartella?**
+
++++
+No, non è possibile copiare il file manifesto in una posizione diversa.
++++
+
+**È possibile controllare la sequenza o la tempistica di consegna dei file?**
+
++++
+Sono disponibili opzioni per pianificare l’esportazione. Non sono disponibili opzioni per ritardare o sequenziare la copia dei file. Vengono copiati nel percorso di archiviazione non appena vengono generati.
++++
+
+**Quali formati sono disponibili per il file manifesto?**
+
++++
+Il file manifesto è in formato .json.
++++
+
+**Esiste disponibilità API per il file manifesto?**
+
++++
+Non è disponibile alcuna API per il file manifesto, ma include un elenco di file che comprendono l’esportazione.
++++
+
+**È possibile aggiungere ulteriori dettagli al file manifesto (ad esempio, il numero di record)? In caso affermativo, in che modo?**
+
++++
+Non è possibile aggiungere ulteriori informazioni al file manifesto. Il conteggio dei record è disponibile tramite l&#39;entità `flowRun` (interrogabile tramite API). Ulteriori informazioni nel monitoraggio delle destinazioni.
++++
+
+**Come vengono suddivisi i file di dati? Quanti record per file?**
+
++++
+I file di dati vengono suddivisi in base al partizionamento predefinito nel data lake di Experience Platform. I set di dati più grandi hanno un numero più elevato di partizioni. Il partizionamento predefinito non è configurabile dall&#39;utente in quanto è ottimizzato per la lettura.
++++
+
+**È possibile impostare una soglia (numero di record per file)?**
+
++++
+No, non è possibile.
++++
+
+**Come si invia di nuovo un set di dati nel caso in cui l&#39;invio iniziale non sia valido?**
+
++++
+I tentativi vengono eseguiti automaticamente per la maggior parte dei tipi di errori di sistema.
++++
