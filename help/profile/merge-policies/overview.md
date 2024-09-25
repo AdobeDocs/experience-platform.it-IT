@@ -4,9 +4,9 @@ title: Panoramica sui criteri di unione
 type: Documentation
 description: Adobe Experience Platform consente di unire frammenti di dati provenienti da più origini e di combinarli per ottenere una visualizzazione completa dei singoli clienti. Quando si riuniscono questi dati, i criteri di unione sono le regole utilizzate da Platform per determinare come i dati avranno priorità e quali saranno combinati per creare la vista unificata.
 exl-id: a8ef527a-cfee-4129-9973-e8a212a3ad1e
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: 5e8bbdf5b7b07c31a36730c86b177fce6041e319
 workflow-type: tm+mt
-source-wordcount: '1265'
+source-wordcount: '1285'
 ht-degree: 1%
 
 ---
@@ -71,11 +71,11 @@ Un’organizzazione può creare un criterio di unione predefinito da utilizzare 
 
 Ogni organizzazione può creare più criteri di unione correlati a una singola classe di schema XDM, ma è possibile dichiarare un solo criterio di unione predefinito per ogni classe. Ad esempio, l&#39;organizzazione potrebbe disporre di un criterio di unione predefinito correlato alla classe [!DNL XDM Individual Profile] e di un criterio di unione predefinito diverso per una classe Product Inventory personalizzata.
 
-Se si crea un nuovo criterio di unione e lo si imposta come predefinito, il criterio di unione predefinito precedente verrà aggiornato automaticamente dal sistema in modo da non essere più quello predefinito.
+Se si crea un nuovo criterio di unione e lo si imposta come predefinito, il criterio di unione predefinito precedente verrà aggiornato automaticamente dal sistema in modo da non essere più quello predefinito. Tutti i tipi di pubblico creati dopo questo momento utilizzeranno questo nuovo criterio di unione predefinito.
 
 >[!WARNING]
 >
->Potrebbero essere interessati i conteggi dei profili e i tipi di pubblico associati a un criterio di unione predefinito esistente. Qualsiasi pubblico a cui è applicato un criterio di unione predefinito verrà aggiornato al nuovo criterio di unione predefinito.
+>Potrebbero essere interessati i conteggi dei profili e i tipi di pubblico associati a un criterio di unione predefinito esistente. Inoltre, i tipi di pubblico **non** verranno aggiornati automaticamente per utilizzare il nuovo criterio di unione predefinito e continueranno a utilizzare il criterio di unione precedente.
 
 ## Passaggi successivi
 
