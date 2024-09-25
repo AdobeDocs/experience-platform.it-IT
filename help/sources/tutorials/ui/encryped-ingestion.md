@@ -3,9 +3,9 @@ title: Acquisire dati crittografati nel Workspace dell’interfaccia utente Sour
 description: Scopri come acquisire i dati crittografati nell’area di lavoro dell’interfaccia utente delle origini.
 badge: Beta
 exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
-source-git-commit: 3eba8690dcf9c808495a00b7fd4558478606f628
+source-git-commit: 990be6351f1ea8b1a9288c55067bb81f075d1c4f
 workflow-type: tm+mt
-source-wordcount: '1458'
+source-wordcount: '1464'
 ht-degree: 2%
 
 ---
@@ -33,7 +33,7 @@ Prima di continuare con questa esercitazione, leggi i seguenti documenti per com
 * Crea una coppia di chiavi di crittografia utilizzando l’area di lavoro origini nell’interfaccia utente di Experience Platform.
    * Facoltativamente, puoi anche creare una coppia di chiavi di verifica dei segni personalizzata per fornire un ulteriore livello di sicurezza ai dati crittografati.
 * Utilizza la chiave pubblica della coppia di chiavi di crittografia per crittografare i dati.
-* Inserisci i dati crittografati nel provider di archiviazione cloud. Durante questo passaggio, devi inoltre assicurarti di disporre di un file di esempio che possa essere utilizzato come riferimento per mappare i dati di origine su uno schema Experience Data Model (XDM).
+* Inserisci i dati crittografati nell’archiviazione cloud. Durante questo passaggio, devi anche assicurarti di disporre di un file di esempio dei tuoi dati nell’archiviazione cloud che possa essere utilizzato come riferimento per mappare i dati di origine su uno schema Experience Data Model (XDM).
 * Utilizza l’origine del batch di archiviazione cloud e avvia il processo di acquisizione dei dati nell’area di lavoro origini nell’interfaccia utente di Experience Platform.
 * Durante il processo di creazione della connessione di origine, fornisci l’ID della chiave che corrisponde alla chiave pubblica utilizzata per crittografare i dati.
    * Se hai utilizzato anche il meccanismo di coppia di chiavi per la verifica dei segni, devi fornire anche l’ID della chiave per la verifica dei segni che corrisponde ai dati crittografati.

@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform di settembre 2024
 description: Note sulla versione di settembre 2024 per Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 50b0387dacb3e995d9c88206ef968ddc53edb14c
+source-git-commit: 0cb134fe6b0a87571e01ada7946c4bbb7d4c346b
 workflow-type: tm+mt
-source-wordcount: '1823'
-ht-degree: 29%
+source-wordcount: '1975'
+ht-degree: 27%
 
 ---
 
@@ -112,6 +112,12 @@ Per ulteriori informazioni su XDM, leggere la [Panoramica del sistema XDM](../..
 
 Utilizza Identity Service di Adobe Experience Platform per creare una panoramica completa della clientela e del relativo comportamento, collegando le identità attraverso diversi dispositivi e sistemi e consentendo di offrire esperienze digitali personali ed efficaci in tempo reale.
 
+**Funzione aggiornata**
+
+| Funzione | Descrizione |
+| --- | --- |
+| Disponibilità limitata delle regole di collegamento del grafico delle identità | Le regole di collegamento del grafo di identità sono una suite di strumenti in Identity Service che puoi utilizzare per garantire una personalizzazione accurata per i tuoi utenti. <ul><li>È ora possibile utilizzare l&#39;algoritmo di ottimizzazione delle identità [](../../identity-service/identity-graph-linking-rules/identity-optimization-algorithm.md) per assicurarsi che un grafo delle identità sia rappresentativo di una singola persona e, pertanto, impedisca l&#39;unione indesiderata di identità sul Profilo cliente in tempo reale.</li><li>Configura le [priorità dello spazio dei nomi](../../identity-service/identity-graph-linking-rules/namespace-priority.md) per definire l&#39;importanza dei rispettivi spazi dei nomi e influenzare il modo in cui i profili vengono formati e segmentati.</li><li>Utilizza lo strumento di simulazione del grafico [ nell&#39;interfaccia utente](../../identity-service/identity-graph-linking-rules/graph-simulation.md) per simulare grafici di identità con configurazioni diverse.</li><li>Utilizza l&#39;[interfaccia delle impostazioni di identità](../../identity-service/identity-graph-linking-rules/identity-settings-ui.md) per designare lo spazio dei nomi univoco e stabilire le priorità per tutti gli spazi dei nomi dell&#39;organizzazione.</li><li>Consulta la [dashboard delle identità](../../identity-service/identity-graph-linking-rules/implementation-guide.md#validate-your-graphs) per le metriche e le tendenze relative ai dati del grafico.</li></ul> Per provare le regole di collegamento del grafo delle identità, contatta il team degli account Adobi per accedere alle sandbox di sviluppo. |
+
 **Documentazione aggiornata**
 
 | Funzione | Descrizione |
@@ -131,7 +137,7 @@ Il Servizio query consente di utilizzare SQL standard per eseguire query sui dat
 
 | Funzione | Descrizione |
 | --- | --- |
-| Tipi di pubblico di Data Distiller | Crea, gestisci e attiva facilmente i tipi di pubblico con l’estensione SQL audience in Experience Platform Data Distiller. Definisci i segmenti di pubblico con comandi SQL direttamente dal data lake, evitando la necessità di dati non elaborati nei profili. Ottimizza le strategie di targeting e sincronizza automaticamente i tipi di pubblico con destinazioni basate su file con questo approccio flessibile e basato sui dati. Semplifica i flussi di lavoro, ottimizza la gestione dell&#39;audience e sfrutta appieno il potenziale dei dati. Leggi la [guida sull&#39;utilizzo dell&#39;estensione del pubblico SQL](../../query-service/home.md) per migliorare le strategie per i tipi di pubblico. |
+| Tipi di pubblico di Data Distiller | Crea, gestisci e attiva facilmente i tipi di pubblico con l’estensione SQL audience in Experience Platform Data Distiller. Definisci i segmenti di pubblico con comandi SQL direttamente dal data lake, evitando la necessità di dati non elaborati nei profili. Ottimizza le strategie di targeting e sincronizza automaticamente i tipi di pubblico con destinazioni basate su file con questo approccio flessibile e basato sui dati. Semplifica i flussi di lavoro, ottimizza la gestione dell&#39;audience e sfrutta appieno il potenziale dei dati. Leggi la [guida sull&#39;utilizzo dell&#39;estensione del pubblico SQL](../../query-service/data-distiller-audiences/overview.md) per migliorare le strategie per i tipi di pubblico. |
 | Statistiche di Data Distiller - Ipercubi | Ottimizza l’analisi dei big data con Hypercubes. Gestisci calcoli complessi, come i conteggi distinti e l’analisi multidimensionale, senza rielaborare i dati storici. Aggiorna i dati in modo incrementale, semplifica i flussi di lavoro e riduce i tempi di elaborazione mantenendo al contempo precisione ed efficienza. Ottieni informazioni più veloci, scalabili e convenienti che trasformano il processo decisionale. Esplora la [guida sull&#39;utilizzo di Hypercubes](../../query-service/hypercubes.md) per sbloccare l&#39;analisi avanzata. |
 | Browser oggetti editor query | Incrementa l’efficienza delle query con il nuovo Visualizzatore oggetti nell’Editor query. Cerca, filtra e accedi rapidamente ai set di dati per scrivere e perfezionare le query in modo più rapido. Con gli aggiornamenti in tempo reale degli schemi e i metadati istantanei delle tabelle, puoi semplificare i flussi di lavoro, ridurre i tempi di navigazione e migliorare l’esperienza di query. Sblocca il potenziale dei dati e ottimizza l’analisi. Per ulteriori informazioni, leggere la [guida all&#39;utilizzo del Visualizzatore oggetti](../../query-service/ui/user-guide.md#object-browser). |
 | Calcola ore | Ottieni il controllo sull’utilizzo delle risorse con la metrica Calcola ore appena visibile per le query pianificate. Visualizzare le ore di calcolo a livello di esecuzione della query per monitorare e ottimizzare l&#39;utilizzo delle risorse per le query batch CTAS/ITAS. Tenere traccia di orari di inizio, stato di completamento e tempo di calcolo per ogni esecuzione della query. Ottimizzazione delle prestazioni e riduzione dei costi senza problemi. Leggi la [guida su Calcola ore](../../query-service/ui/query-schedules.md#compute-hours-at-job-level) per informazioni su come massimizzare l&#39;efficienza delle query. |
