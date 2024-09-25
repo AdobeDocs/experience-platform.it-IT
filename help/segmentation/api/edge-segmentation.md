@@ -4,10 +4,10 @@ title: Segmentazione di Edge tramite l’API
 description: Questo documento contiene esempi su come utilizzare la segmentazione Edge con l’API del servizio di segmentazione di Adobe Experience Platform.
 role: Developer
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: 057db1432493a8443eb91b0fc371d0bdffb3de86
+source-git-commit: a1c9003a1b219325daf8fa38cda8bb1a019a55c6
 workflow-type: tm+mt
-source-wordcount: '806'
-ht-degree: 1%
+source-wordcount: '783'
+ht-degree: 2%
 
 ---
 
@@ -43,9 +43,7 @@ Affinché un segmento possa essere valutato utilizzando la segmentazione Edge, l
 
 | Tipo di query | Dettagli |
 | ---------- | ------- |
-| Evento singolo | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo senza restrizioni temporali. |
-| Singolo evento entro una finestra temporale relativa | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo. |
-| Evento singolo con finestra temporale | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo con una finestra temporale. |
+| Singolo evento entro un intervallo di tempo inferiore a 24 ore | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo entro un intervallo di tempo inferiore a 24 ore. |
 | Solo profilo | Qualsiasi definizione di segmento che fa riferimento solo a un attributo di profilo. |
 | Singolo evento con un attributo di profilo entro un intervallo di tempo relativo inferiore a 24 ore | Qualsiasi definizione di segmento che si riferisce a un singolo evento in arrivo, con uno o più attributi di profilo, e si verifica entro un intervallo di tempo relativo inferiore a 24 ore. |
 | Segmento di segmenti | Qualsiasi definizione di segmento che contiene uno o più segmenti batch o in streaming. **Nota:** se si utilizza un segmento di segmenti, l&#39;annullamento del profilo avverrà **ogni 24 ore**. |

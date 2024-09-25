@@ -4,9 +4,9 @@ title: Valutazione degli eventi in tempo quasi reale con segmentazione in stream
 description: Questo documento contiene esempi su come utilizzare la segmentazione in streaming con l’API del servizio di segmentazione di Adobe Experience Platform.
 role: Developer
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 914174de797d7d5f6c47769d75380c0ce5685ee2
+source-git-commit: a1c9003a1b219325daf8fa38cda8bb1a019a55c6
 workflow-type: tm+mt
-source-wordcount: '2050'
+source-wordcount: '2027'
 ht-degree: 4%
 
 ---
@@ -73,9 +73,7 @@ Affinché una definizione di segmento possa essere valutata utilizzando la segme
 
 | Tipo di query | Dettagli |
 | ---------- | ------- |
-| Evento singolo | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo senza restrizioni temporali. |
-| Singolo evento entro una finestra temporale relativa | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo. |
-| Evento singolo con finestra temporale | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo con una finestra temporale. |
+| Singolo evento entro un intervallo di tempo inferiore a 24 ore | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo entro un intervallo di tempo inferiore a 24 ore. |
 | Solo profilo | Qualsiasi definizione di segmento che fa riferimento solo a un attributo di profilo. |
 | Singolo evento con un attributo di profilo entro un intervallo di tempo relativo inferiore a 24 ore | Qualsiasi definizione di segmento che si riferisce a un singolo evento in arrivo, con uno o più attributi di profilo, e si verifica entro un intervallo di tempo relativo inferiore a 24 ore. |
 | Segmento di segmenti | Qualsiasi definizione di segmento che contiene uno o più segmenti batch o in streaming. **Nota:** se si utilizza un segmento di segmenti, l&#39;annullamento del profilo avverrà **ogni 24 ore**. |

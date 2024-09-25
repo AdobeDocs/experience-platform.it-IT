@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform di settembre 2024
 description: Note sulla versione di settembre 2024 per Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 0cb134fe6b0a87571e01ada7946c4bbb7d4c346b
+source-git-commit: e93d27ef67802c5fbdffdacb3a0649d373a41a2d
 workflow-type: tm+mt
-source-wordcount: '1975'
-ht-degree: 27%
+source-wordcount: '2144'
+ht-degree: 25%
 
 ---
 
@@ -50,9 +50,11 @@ Experience Platform fornisce più dashboard attraverso i quali è possibile visu
 
 | Funzione | Descrizione |
 | --- | --- |
+| Tabella dei componenti aggiuntivi per l’utilizzo della licenza | Ottieni una visibilità granulare sull’utilizzo delle licenze e gestisci le risorse Platform con tabelle dedicate per i prodotti di base e i componenti aggiuntivi. Monitora e analizza le metriche chiave per ogni prodotto di base con viste drill-through a livello di sandbox. Le metriche dei componenti aggiuntivi si integrano perfettamente con le metriche dei prodotti di base, offrendo una visione completa dell’utilizzo. La visibilità migliorata consente di ottimizzare la gestione delle licenze e di allineare le risorse alle esigenze organizzative. Per ulteriori dettagli, consulta la [[!UICONTROL guida del dashboard Utilizzo licenze]](../../dashboards/guides/license-usage.md#overview-tab). |
 | Modalità Query Pro - Aggiornamenti filtri globali | Migliora l’analisi con il nuovo filtro date della modalità Query Pro. Perfeziona le informazioni con parametri di data dinamici nelle query SQL e filtra i dati per intervalli di tempo specifici. Scegli intervalli di date predefiniti o personalizzati con un’interfaccia utente intuitiva, mantenendo le dashboard pertinenti per tutti gli utenti. Semplificare i flussi di lavoro, mantenere la precisione e prendere decisioni tempestive. Per ulteriori informazioni, consulta la [guida sulla creazione di filtri per date](../../dashboards/data-distiller/query-pro-mode/filters/global-filter.md). |
 | Modalità Query Pro: drill-through | Approfondisci le informazioni con la funzione Drill Through della modalità Query Pro e passa senza problemi dai grafici di alto livello alle dashboard dettagliate. Utilizza questa funzione per passare facilmente da riepiloghi ad analisi approfondite ed esplorare tendenze, comportamenti dei clienti e KPI. I pass-through automatici dei filtri e i drill-through a più livelli mantengono i dati coerenti, garantendo un&#39;esplorazione fluida. Semplificare i flussi di lavoro, mantenere il contesto e accelerare le decisioni. Per ulteriori informazioni, leggere la [guida dettagliata sulla creazione di drill-through](../../dashboards/data-distiller/query-pro-mode/drill-through.md). |
 | Modalità Query Pro - Attributi di tabella avanzati | Utilizza gli attributi di tabella avanzati in modalità Query Pro per semplificare la visualizzazione dei dati, migliorare l’efficienza del flusso di lavoro e migliorare la chiarezza dei dati. Puoi aggiungere alle tabelle l’ordinamento, il ridimensionamento e l’impaginazione automatici direttamente dai dashboard personalizzati. Ordina le colonne per assegnare la priorità ai dati chiave, ridimensionarle per garantire una leggibilità ottimale e navigare facilmente in set di dati di grandi dimensioni senza modificare le query SQL. Leggi la guida &#39;[Visualizza altro](../../dashboards/data-distiller/query-pro-mode/view-more.md)&#39; per scoprire come integrare queste funzionalità e migliorare le informazioni sui dati. |
+| Volume dati totale | La metrica &quot;Ricchezza media del profilo&quot; è stata sostituita dalla metrica &quot;Volume totale di dati&quot;. Il volume di dati totale si riferisce alla quantità totale di dati disponibili che possono essere utilizzati con Real-Time Customer Profile per flussi di lavoro di coinvolgimento e personalizzazione. Ulteriori dettagli su questa modifica sono disponibili nella [Guida del volume totale dei dati](../../landing/license-usage-and-guardrails/total-data-volume.md). |
 
 {style="table-layout:auto"}
 
@@ -153,7 +155,8 @@ Per ulteriori informazioni su Query Service, leggere la [Panoramica di Query Ser
 **Funzioni nuove o aggiornate**
 
 | Funzione | Descrizione |
-| --- | --- |
+| ------- | ----------- |
+| Aggiornamento dei criteri di segmentazione in streaming | A partire dalla versione di settembre 2024, i criteri per i tipi di pubblico per essere idonei alla segmentazione in streaming sono stati aggiornati. Ulteriori informazioni su queste modifiche sono disponibili nell&#39;aggiornamento dei criteri di idoneità alla segmentazione in streaming [](../../segmentation/eligibility-criteria-update.md). |
 | Implementazione di Unified Search | Il comportamento di ricerca nel Generatore di segmenti ora utilizza la Ricerca unificata. Ciò consente un’esperienza più solida durante la gestione e la ricerca di tipi di pubblico da riutilizzare per l’iscrizione ai segmenti. Per ulteriori informazioni su questa modifica, consulta la [guida del Generatore di segmenti](../../segmentation/ui/segment-builder.md#rule-builder-canvas). |
 
 {style="table-layout:auto"}
