@@ -1,13 +1,14 @@
 ---
 title: Destinazione connessioni Enterprise Merkury
 description: Scopri come creare una connessione di destinazione Merkury Enterprise Connections utilizzando l’interfaccia utente di Adobe Experience Platform.
-source-git-commit: 01ce38d26cf61706de84ec143e3dd8af720d0591
+last-substantial-update: 2024-07-20T00:00:00Z
+exl-id: dffc6f4d-b756-4c13-96f3-b1cc57caacdb
+source-git-commit: 2b84b5106105339ab243a9f4412b47692caedf3c
 workflow-type: tm+mt
 source-wordcount: '1375'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
-
 
 # Destinazione connessioni Enterprise Merkury
 
@@ -17,7 +18,7 @@ ht-degree: 3%
 
 ## Panoramica
 
-Utilizza la destinazione [!DNL Merkury Enterprise Connections] per inviare in modo sicuro i tipi di pubblico a [!DNL Merkury]. [!DNL Merkury] consente agli addetti al marketing di trovare e inviare facilmente i tipi di pubblico basati su persone alle connessioni indirizzabili 80+ Premium di TV/CTV, publisher e ad-tech di [!DNL Merkury]. [!DNL Merkury] è alimentato da un grafico completo di identità dei consumatori adulti degli Stati Uniti di oltre 268 milioni di persone.
+Utilizza la [!DNL Merkury Enterprise Connections] destinazione per inviare in modo sicuro i tipi di pubblico a [!DNL Merkury]. [!DNL Merkury] consente agli addetti al marketing di trovare e inviare facilmente i tipi di pubblico basati su persone alle connessioni indirizzabili 80+ Premium di TV/CTV, publisher e ad-tech di [!DNL Merkury]. [!DNL Merkury] è alimentato da un grafo completo delle identità dei consumatori adulti degli Stati Uniti di oltre 268 milioni di persone.
 
 ![Diagramma che mostra l&#39;interconnessione tra Merkury e Experience Platform, incluse l&#39;acquisizione e l&#39;attivazione](../../assets/catalog/data-partners/merkury-connections/media/image1.png)
 
@@ -60,7 +61,7 @@ Questa sezione descrive il tipo di pubblico che puoi esportare in questa destina
 
 | **Pubblico** | **Supportato** | **Origine descrizione** |
 |---|---|---|      
-| Servizio di segmentazione | ✓ | Tipi di pubblico generati tramite l&#39;Experience Platform [[Servizio di segmentazione]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home). |
+| Servizio di segmentazione | ✓ | Tipi di pubblico generati tramite l&#39;Experience Platform [[Servizio di segmentazione]](https://experienceleague.adobe.com/it/docs/experience-platform/segmentation/home). |
 | Caricamenti personalizzati | X | Tipi di pubblico [[importato]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
