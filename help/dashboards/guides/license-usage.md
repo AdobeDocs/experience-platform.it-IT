@@ -7,7 +7,7 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 source-git-commit: 3b4a38be9b47ca65dc142bff4800ef595d3cacca
 workflow-type: tm+mt
 source-wordcount: '2739'
-ht-degree: 5%
+ht-degree: 13%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 5%
 >[!CONTEXTUALHELP]
 >id="testy-mctestface"
 >title="Finestra di dialogo di prova che non deve essere visibile"
->abstract="L&#39;oggetto {name} è visualizzato il {date}."
+>abstract="L’oggetto {name} viene visualizzato il {date}."
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_core"
@@ -32,15 +32,15 @@ ht-degree: 5%
 >id="platform_dashboards_licenseUsage"
 >title="Dashboard utilizzo licenze"
 >abstract="La dashboard utilizzo licenze offre informazioni approfondite sui prodotti Adobe Experience Platform acquistati. La panoramica della dashboard mostra le metriche principali dei prodotti, incluso l’utilizzo da parte dell’utente per ciascuna metrica principale e l’importo della licenza contrattuale. Nell’area di lavoro dei dettagli viene visualizzato un raggruppamento delle metriche per ciascun prodotto all’interno di sandbox specifiche."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Scadenze di set di dati automatizzate"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Scadenza dati profili pseudonimi"
+>additional-url="https://experienceleague.adobe.com/it/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Scadenze di set di dati automatizzate"
+>additional-url="https://experienceleague.adobe.com/it/docs/experience-platform/profile/pseudonymous-profiles" text="Scadenza dei dati dei profili pseudonimi"
 
 >[!CONTEXTUALHELP]
 >id="platform_licenseusage"
 >title="Dashboard utilizzo licenze"
 >abstract="La dashboard utilizzo licenze offre informazioni approfondite sui prodotti Adobe Experience Platform acquistati. La panoramica della dashboard mostra le metriche principali dei prodotti, incluso l’utilizzo da parte dell’utente per ciascuna metrica principale e l’importo della licenza contrattuale. Nell’area di lavoro dei dettagli viene visualizzato un raggruppamento delle metriche per ciascun prodotto all’interno di sandbox specifiche."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Scadenze di set di dati automatizzate"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Scadenza dati profili pseudonimi"
+>additional-url="https://experienceleague.adobe.com/it/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Scadenze di set di dati automatizzate"
+>additional-url="https://experienceleague.adobe.com/it/docs/experience-platform/profile/pseudonymous-profiles" text="Scadenza dei dati dei profili pseudonimi"
 
 Puoi visualizzare informazioni importanti sull&#39;utilizzo delle licenze della tua organizzazione tramite la dashboard [!UICONTROL Utilizzo licenze] di Adobe Experience Platform. Le informazioni visualizzate qui vengono acquisite durante un’istantanea giornaliera dell’istanza Platform.
 
@@ -98,16 +98,16 @@ Le tabelle indicano la metrica principale per ciascun prodotto, in quanto ogni p
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage_prediction"
 >title="Utilizzo previsto"
->abstract="Le previsioni si basano sull’utilizzo negli ultimi 6-7 mesi e vengono generate il 15 di ogni mese. Tieni presente che le previsioni sull’utilizzo delle licenze sono approssimazioni basate sull’utilizzo passato. L’utente è responsabile di comprendere l’utilizzo effettivo dell’organizzazione e di garantire che l’utilizzo non vada oltre l’ambito della licenza dell’organizzazione con Adobe. Per ridurre l’utilizzo, puoi configurare le scadenze dei dati di set di dati o profili pseudonimi per sandbox e set di dati."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Scadenze di set di dati automatizzate"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Scadenza dati profili pseudonimi"
+>abstract="Le previsioni si basano sull’utilizzo negli ultimi 6-7 mesi e vengono generate il 15 di ogni mese. Tieni presente che le previsioni sull’utilizzo delle licenze sono approssimazioni basate sull’utilizzo passato. Sei responsabile della comprensione dell’utilizzo effettivo dell’organizzazione e di garantire che l’utilizzo non vada oltre l’ambito della licenza dell’organizzazione con Adobe. Per ridurre l’utilizzo, puoi configurare le scadenze del set di dati o dei profili pseudonimi per le sandbox e i set di dati."
+>additional-url="https://experienceleague.adobe.com/it/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Scadenze di set di dati automatizzate"
+>additional-url="https://experienceleague.adobe.com/it/docs/experience-platform/profile/pseudonymous-profiles" text="Scadenza dei dati dei profili pseudonimi"
 
 >[!CONTEXTUALHELP]
 >id="platform_licenseusage_prediction"
 >title="Utilizzo previsto"
->abstract="Le previsioni si basano sull’utilizzo negli ultimi 6-7 mesi e vengono generate il 15 di ogni mese. Tieni presente che le previsioni sull’utilizzo delle licenze sono approssimazioni basate sull’utilizzo passato. L’utente è responsabile di comprendere l’utilizzo effettivo dell’organizzazione e di garantire che l’utilizzo non vada oltre l’ambito della licenza dell’organizzazione con Adobe. Per ridurre l’utilizzo, puoi configurare le scadenze dei dati di set di dati o profili pseudonimi per sandbox e set di dati."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Scadenze di set di dati automatizzate"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Scadenza dati profili pseudonimi"
+>abstract="Le previsioni si basano sull’utilizzo negli ultimi 6-7 mesi e vengono generate il 15 di ogni mese. Tieni presente che le previsioni sull’utilizzo delle licenze sono approssimazioni basate sull’utilizzo passato. Sei responsabile della comprensione dell’utilizzo effettivo dell’organizzazione e di garantire che l’utilizzo non vada oltre l’ambito della licenza dell’organizzazione con Adobe. Per ridurre l’utilizzo, puoi configurare le scadenze del set di dati o dei profili pseudonimi per le sandbox e i set di dati."
+>additional-url="https://experienceleague.adobe.com/it/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Scadenze di set di dati automatizzate"
+>additional-url="https://experienceleague.adobe.com/it/docs/experience-platform/profile/pseudonymous-profiles" text="Scadenza dei dati dei profili pseudonimi"
 
 Gestisci e ottimizza in modo proattivo le risorse di gestione delle licenze in base a previsioni approfondite sull’utilizzo. La colonna [!UICONTROL Utilizzo previsto] prevede con precisione l&#39;utilizzo futuro delle licenze a livello di sandbox, in tutte le sandbox di produzione e sviluppo, per tutti i prodotti acquistati. Questa funzionalità di avviso fornisce una previsione dell’utilizzo della licenza per sei settimane nel futuro, in base all’utilizzo fino al 15 di questo mese di calendario. Le previsioni sono fornite con un limite inferiore e uno superiore.
 

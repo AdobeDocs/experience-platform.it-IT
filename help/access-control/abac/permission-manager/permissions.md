@@ -5,7 +5,7 @@ exl-id: 4c2b8b8e-ac4f-4c6e-a23f-66f658bb6e24
 source-git-commit: 7e65e88bc49ea28d567e8204db877d22ddb8d9a6
 workflow-type: tm+mt
 source-wordcount: '603'
-ht-degree: 1%
+ht-degree: 7%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 Utilizza query semplici in [!UICONTROL Gestione autorizzazioni] per creare rapporti concisi che ti aiuteranno a comprendere la gestione degli accessi e a risparmiare tempo nella convalida delle autorizzazioni di accesso in molti flussi di lavoro e livelli di granularità. È possibile utilizzare [!UICONTROL Gestione autorizzazioni] per trovare gli utenti che appartengono a un gruppo di utenti e dispongono dei privilegi di accesso specificati, nonché i ruoli con etichette specifiche.
 
-## Eseguire una ricerca di utenti all&#39;interno di un gruppo di utenti specificato {#search-users}
+## Eseguire una ricerca di utenti all’interno di un gruppo di utenti specificato {#search-users}
 
 >[!CONTEXTUALHELP]
 >id="platform_permission_manager"

@@ -6,7 +6,7 @@ exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
 source-git-commit: 990be6351f1ea8b1a9288c55067bb81f075d1c4f
 workflow-type: tm+mt
 source-wordcount: '1464'
-ht-degree: 2%
+ht-degree: 6%
 
 ---
 
@@ -44,7 +44,7 @@ Prima di continuare con questa esercitazione, leggi i seguenti documenti per com
 >[!CONTEXTUALHELP]
 >id="platform_sources_encrypted_encryptionKeyId"
 >title="ID chiave di crittografia"
->abstract="Specificare l&#39;ID della chiave di crittografia corrispondente alla chiave di crittografia utilizzata per crittografare i dati di origine."
+>abstract="Fornisci l’ID chiave di crittografia corrispondente alla chiave di crittografia utilizzata per crittografare i dati di origine."
 
 >[!BEGINSHADEBOX]
 
