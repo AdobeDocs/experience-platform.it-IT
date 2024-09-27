@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Sintassi SQL in Query Service
 description: Questo documento descrive e spiega la sintassi SQL supportata da Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: d2cb7c3d1968a33300d480e63c4cb007df3cce7b
+source-git-commit: 65eeeb1df1d512c4cd6c67892905a63cc1cc4fc5
 workflow-type: tm+mt
-source-wordcount: '4305'
+source-wordcount: '4291'
 ht-degree: 2%
 
 ---
@@ -707,11 +707,7 @@ I valori presi da `source_dataset` vengono utilizzati per popolare la tabella di
 | product-id-2 | (&quot;(&quot;(&quot;(AF, C, D,NULL)&quot;)&quot;)) | 6 | 40 |
 | product-id-4 | (&quot;(&quot;(&quot;(BM, pass, NA,NULL)&quot;)&quot;)) | 3 | 12 |
 
-## [!DNL Spark] comandi SQL
-
-La sottosezione seguente descrive i comandi SQL Spark supportati da Query Service.
-
-### IMPOSTA
+## IMPOSTA
 
 Il comando `SET` imposta una proprietà e restituisce il valore di una proprietà esistente oppure elenca tutte le proprietà esistenti. Se viene fornito un valore per una chiave di proprietà esistente, il valore precedente viene sovrascritto.
 

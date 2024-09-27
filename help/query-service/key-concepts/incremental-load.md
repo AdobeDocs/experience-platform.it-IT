@@ -2,9 +2,9 @@
 title: Carico incrementale in Query Service
 description: La funzione di caricamento incrementale utilizza sia le funzioni di blocco anonimo che di istantanea per fornire una soluzione quasi in tempo reale per spostare i dati dal data lake al data warehouse ignorando i dati corrispondenti.
 exl-id: 1418d041-29ce-4153-90bf-06bd8da8fb78
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 65eeeb1df1d512c4cd6c67892905a63cc1cc4fc5
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '671'
 ht-degree: 0%
 
 ---
@@ -125,10 +125,6 @@ I passaggi seguenti mostrano come creare e caricare i dati in modo incrementale 
 Questa logica può essere applicata a qualsiasi tabella per eseguire caricamenti incrementali.
 
 ## Snapshot scaduti
-
->[!IMPORTANT]
->
->I metadati dello snapshot scadono dopo **due** giorni. Uno snapshot scaduto invalida la logica dello script fornito in precedenza.
 
 Per risolvere il problema di un ID di snapshot scaduto, inserisci il seguente comando all’inizio del blocco anonimo. La seguente riga di codice sostituisce `@from_snapshot_id` con il primo `snapshot_id` disponibile dai metadati.
 

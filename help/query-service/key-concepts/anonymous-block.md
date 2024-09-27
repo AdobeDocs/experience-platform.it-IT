@@ -2,9 +2,9 @@
 title: Blocco anonimo in Query Service
 description: Il blocco anonimo è una sintassi SQL supportata da Adobe Experience Platform Query Service che consente di eseguire in modo efficiente una sequenza di query
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: 9193ba821409806cd7b4667c5de73a0cf2660c66
+source-git-commit: 65eeeb1df1d512c4cd6c67892905a63cc1cc4fc5
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '603'
 ht-degree: 0%
 
 ---
@@ -44,9 +44,7 @@ $$;
 
 Nell&#39;esempio seguente, `SET` mantiene il risultato di una query `SELECT` nella variabile locale specificata. La variabile ha l’ambito del blocco anonimo.
 
-L&#39;ID snapshot è archiviato come variabile locale (`@current_sid`). Viene quindi utilizzato nella query successiva per restituire risultati basati sullo SNAPSHOT dello stesso set di dati/tabella.
-
-Uno snapshot di database è una visualizzazione statica di sola lettura di un database di SQL Server. Per ulteriori [informazioni sulla clausola snapshot](../sql/syntax.md#SNAPSHOT-clause), vedere la documentazione relativa alla sintassi SQL.
+L&#39;ID snapshot è archiviato come variabile locale (`@current_sid`). Viene quindi utilizzato nella query successiva per restituire risultati basati sullo SNAPSHOT dello stesso set di dati/tabella. Per ulteriori [informazioni sulla clausola snapshot](../sql/syntax.md#SNAPSHOT-clause), vedere la documentazione relativa alla sintassi SQL.
 
 ```SQL
 $$ BEGIN                                             
