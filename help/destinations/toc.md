@@ -5,9 +5,9 @@ user-guide-description: Attiva i dati, noti e non, per campagne di marketing cro
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 029cd5bdf58a143f765b37190428b817825317b0
+source-git-commit: 7db60161b638cce1845c430f6086441599a0bc61
 workflow-type: tm+mt
-source-wordcount: '1247'
+source-wordcount: '1251'
 ht-degree: 6%
 
 ---
@@ -67,6 +67,7 @@ ht-degree: 6%
       * [Condivisione Experience Platform del pubblico](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
       * [Connessione Federated Audience Composition (disponibilità limitata)](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Destinazioni Advertising{#advertising}
+      * [(Beta) Distribuzione del pubblico di Acxiom](./catalog/advertising/acxiom-audience-distribution.md)
       * [Panoramica sulle destinazioni di Advertising](./catalog/advertising/overview.md)
       * [Connessione Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud-connection.md)
       * [Estensione Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud.md)
@@ -137,7 +138,7 @@ ht-degree: 6%
       * [Indirizzi IP di cui è stato eseguito il inserisco nell&#39;elenco Consentiti per le destinazioni di archiviazione cloud basate su file](./catalog/cloud-storage/ip-address-allow-list.md)
    * Destinazioni CRM (Customer Relationship Management) {#crm}
       * [Connessione Hubspot](./catalog/crm/hubspot.md)
-      * [Connessione CRM Salesforce](./catalog/crm/salesforce.md)
+      * [Connessione Salesforce CRM](./catalog/crm/salesforce.md)
       * [Connessione Microsoft Dynamics 365](./catalog/crm/microsoft-dynamics-365.md)
       * [Connessione di uscita](catalog/crm/outreach.md)
       * [Connessione Zendesk](catalog/crm/zendesk.md)
