@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform di settembre 2024
 description: Note sulla versione di settembre 2024 per Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: e93d27ef67802c5fbdffdacb3a0649d373a41a2d
+source-git-commit: 059ed53ace6d54a0c0fb406c2f0379588fea2c44
 workflow-type: tm+mt
-source-wordcount: '2144'
-ht-degree: 25%
+source-wordcount: '2149'
+ht-degree: 24%
 
 ---
 
@@ -15,15 +15,16 @@ ht-degree: 25%
 
 Aggiornamenti alle funzioni e alla documentazione esistenti in Adobe Experience Platform:
 
-- [Avvisi](#alerts)
-- [Dashboard](#dashboards)
-- [Preparazione dei dati](#data-prep)
-- [Destinazioni](#destinations)
-- [Experience Data Model (XDM)](#xdm)
-- [Identity Service](#identity-service)
-- [Servizio query](#query-service)
-- [Servizio di segmentazione](#segmentation-service)
-- [Origini](#sources)
+- [Note sulla versione di Adobe Experience Platform](#adobe-experience-platform-release-notes)
+   - [Avvisi {#alerts}](#alerts-alerts)
+   - [Dashboard {#dashboards}](#dashboards-dashboards)
+   - [Preparazione dati {#data-prep}](#data-prep-data-prep)
+   - [Destinazioni {#destinations}](#destinations-destinations)
+   - [Experience Data Model (XDM) {#xdm}](#experience-data-model-xdm-xdm)
+   - [Servizio identità {#identity-service}](#identity-service-identity-service)
+   - [Servizio query {#query-service}](#query-service-query-service)
+   - [Servizio di segmentazione {#segmentation-service}](#segmentation-service-segmentation-service)
+   - [Origini {#sources}](#sources-sources)
 
 ## Avvisi {#alerts}
 
@@ -140,7 +141,7 @@ Il Servizio query consente di utilizzare SQL standard per eseguire query sui dat
 | Funzione | Descrizione |
 | --- | --- |
 | Tipi di pubblico di Data Distiller | Crea, gestisci e attiva facilmente i tipi di pubblico con l’estensione SQL audience in Experience Platform Data Distiller. Definisci i segmenti di pubblico con comandi SQL direttamente dal data lake, evitando la necessità di dati non elaborati nei profili. Ottimizza le strategie di targeting e sincronizza automaticamente i tipi di pubblico con destinazioni basate su file con questo approccio flessibile e basato sui dati. Semplifica i flussi di lavoro, ottimizza la gestione dell&#39;audience e sfrutta appieno il potenziale dei dati. Leggi la [guida sull&#39;utilizzo dell&#39;estensione del pubblico SQL](../../query-service/data-distiller-audiences/overview.md) per migliorare le strategie per i tipi di pubblico. |
-| Statistiche di Data Distiller - Ipercubi | Ottimizza l’analisi dei big data con Hypercubes. Gestisci calcoli complessi, come i conteggi distinti e l’analisi multidimensionale, senza rielaborare i dati storici. Aggiorna i dati in modo incrementale, semplifica i flussi di lavoro e riduce i tempi di elaborazione mantenendo al contempo precisione ed efficienza. Ottieni informazioni più veloci, scalabili e convenienti che trasformano il processo decisionale. Esplora la [guida sull&#39;utilizzo di Hypercubes](../../query-service/hypercubes.md) per sbloccare l&#39;analisi avanzata. |
+| Statistiche di Data Distiller - Ipercubi | Ottimizza l’analisi dei big data con Hypercubes. Gestisci calcoli complessi, come i conteggi distinti e l’analisi multidimensionale, senza rielaborare i dati storici. Aggiorna i dati in modo incrementale, semplifica i flussi di lavoro e riduce i tempi di elaborazione mantenendo al contempo precisione ed efficienza. Ottieni informazioni più veloci, scalabili e convenienti che trasformano il processo decisionale. Esplora la [guida sull&#39;utilizzo di Hypercubes](../../query-service/hypercubes/overview.md) per sbloccare l&#39;analisi avanzata. |
 | Browser oggetti editor query | Incrementa l’efficienza delle query con il nuovo Visualizzatore oggetti nell’Editor query. Cerca, filtra e accedi rapidamente ai set di dati per scrivere e perfezionare le query in modo più rapido. Con gli aggiornamenti in tempo reale degli schemi e i metadati istantanei delle tabelle, puoi semplificare i flussi di lavoro, ridurre i tempi di navigazione e migliorare l’esperienza di query. Sblocca il potenziale dei dati e ottimizza l’analisi. Per ulteriori informazioni, leggere la [guida all&#39;utilizzo del Visualizzatore oggetti](../../query-service/ui/user-guide.md#object-browser). |
 | Calcola ore | Ottieni il controllo sull’utilizzo delle risorse con la metrica Calcola ore appena visibile per le query pianificate. Visualizzare le ore di calcolo a livello di esecuzione della query per monitorare e ottimizzare l&#39;utilizzo delle risorse per le query batch CTAS/ITAS. Tenere traccia di orari di inizio, stato di completamento e tempo di calcolo per ogni esecuzione della query. Ottimizzazione delle prestazioni e riduzione dei costi senza problemi. Leggi la [guida su Calcola ore](../../query-service/ui/query-schedules.md#compute-hours-at-job-level) per informazioni su come massimizzare l&#39;efficienza delle query. |
 

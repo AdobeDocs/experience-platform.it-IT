@@ -2,9 +2,9 @@
 title: Pianificazioni query
 description: Scopri come automatizzare l’esecuzione di query pianificate, eliminare o disabilitare una pianificazione di query e utilizzare le opzioni di pianificazione disponibili tramite l’interfaccia utente di Adobe Experience Platform.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: c69311b3188a8d066a24235466afad1e725d489c
+source-git-commit: c0d2f4b4f8e294d5a7b0a519ab9dad8b78558b26
 workflow-type: tm+mt
-source-wordcount: '2051'
+source-wordcount: '2066'
 ht-degree: 0%
 
 ---
@@ -163,6 +163,11 @@ Nella tabella seguente vengono fornite le descrizioni di ogni colonna disponibil
 | [!UICONTROL Calcola ore] | Mostra il tempo di calcolo utilizzato per ogni esecuzione della query, misurato in ore. Questo consente di tenere traccia dell’utilizzo delle risorse e di ottimizzare le prestazioni delle query. |
 
 {style="table-layout:auto"}
+
+>[!NOTE]
+>
+>I dati delle ore di calcolo sono disponibili a partire dal 08/15/2024. I dati precedenti a questa data vengono visualizzati come &#39;Non disponibile&#39;.
+
 
 Per informazioni complete su come monitorare lo stato di tutti i processi di query tramite l&#39;interfaccia utente, vedere la [guida monitoraggi pianificati per query](./monitor-queries.md#inline-actions).
 

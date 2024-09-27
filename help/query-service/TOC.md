@@ -5,9 +5,9 @@ breadcrumb-title: Guida di Query Service
 user-guide-description: Utilizza il linguaggio SQL standard per eseguire query sui dati nel data lake in Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: bdd3d37baa05c8da3213f425657a00fef6afecb8
+source-git-commit: 67d4bcbf2a055d4427218ba7d98355f09d860a8c
 workflow-type: tm+mt
-source-wordcount: '333'
+source-wordcount: '339'
 ht-degree: 22%
 
 ---
@@ -41,7 +41,6 @@ ht-degree: 22%
       - [Flusso di lavoro end-to-end per l’arricchimento della pipeline dati AI/ML](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
 - Pubblico di Data Distiller {#data-distiller-audiences}
    - [Creare tipi di pubblico esterni tramite SQL](data-distiller-audiences/overview.md)
-- [IPERCUBI DI DATA DISTILLER](hypercubes.md)
 - Esempi {#use-cases}
    - [Panoramica](use-cases/overview.md)
    - [Sfoglia abbandonata](use-cases/abandoned-browse.md)
@@ -70,6 +69,8 @@ ht-degree: 22%
    - [Deduplicazione dei dati](key-concepts/deduplication.md)
    - [Esempi di set di dati](key-concepts/dataset-samples.md)
    - [Calcolo delle statistiche del set di dati](key-concepts/dataset-statistics.md)
+- Ipercubi Data Distiller {#hypercubes}
+   - [Analisi dei big data efficiente con ipercubi](hypercubes/overview.md)
 - Connettere i client a Query Service {#clients}
    - [Panoramica delle connessioni client](clients/overview.md)
    - [Modalità SSL](./clients/ssl-modes.md)

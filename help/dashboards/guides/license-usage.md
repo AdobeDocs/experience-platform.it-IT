@@ -4,9 +4,9 @@ title: Dashboard utilizzo licenze
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale è possibile visualizzare informazioni importanti sull’utilizzo delle licenze della tua organizzazione.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 3b4a38be9b47ca65dc142bff4800ef595d3cacca
+source-git-commit: 67d4bcbf2a055d4427218ba7d98355f09d860a8c
 workflow-type: tm+mt
-source-wordcount: '2739'
+source-wordcount: '2738'
 ht-degree: 13%
 
 ---
