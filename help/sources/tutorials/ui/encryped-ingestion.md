@@ -3,9 +3,9 @@ title: Acquisire dati crittografati nel Workspace dell’interfaccia utente Sour
 description: Scopri come acquisire i dati crittografati nell’area di lavoro dell’interfaccia utente delle origini.
 badge: Beta
 exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
-source-git-commit: 990be6351f1ea8b1a9288c55067bb81f075d1c4f
+source-git-commit: 70bfebc747c7e6267939eb313048cb2d0e132202
 workflow-type: tm+mt
-source-wordcount: '1464'
+source-wordcount: '1456'
 ht-degree: 6%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 6%
 
 >[!AVAILABILITY]
 >
->Il supporto per l’acquisizione di dati crittografati nell’interfaccia utente di origine è in versione beta e potrebbe non essere disponibile per la tua organizzazione. La funzione e la documentazione sono soggette a modifiche.
+>Il supporto per l’acquisizione di dati crittografati nell’interfaccia utente delle sorgenti è in versione beta. La funzione e la documentazione sono soggette a modifiche.
 
 Puoi acquisire cartelle e file di dati crittografati in Adobe Experience Platform utilizzando origini batch di archiviazione cloud. Con l’acquisizione di dati crittografati, puoi sfruttare meccanismi di crittografia asimmetrica per trasferire in modo sicuro i dati batch in Experience Platform. I meccanismi di crittografia asimmetrica supportati sono PGP e GPG.
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gestione dei formati dei dati con la preparazione dati
 description: Questo documento offre una panoramica della gestione dei diversi tipi di dati nella preparazione dati.
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+source-git-commit: a49140853124f4f7beee87a739c8e670838947f4
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '626'
 ht-degree: 8%
 
 ---
@@ -75,6 +75,10 @@ Quando i campi stringa dei dati in arrivo vengono mappati su campi data negli sc
 > La preparazione dati cercherà di convertire le stringhe in date nel modo migliore possibile. Tuttavia, queste conversioni possono portare a risultati indesiderati. Ad esempio, il valore stringa &quot;12112020&quot; corrisponde al pattern &quot;MMddyyy&quot;, ma l’utente potrebbe aver impostato la data per la lettura con il pattern &quot;ddMMyyyy&quot;. Di conseguenza, gli utenti devono menzionare esplicitamente il formato della data per le stringhe.
 
 ### Stringhe di formato data/ora {#format}
+
+>[!TIP]
+>
+>Attualmente, la funzione data nell’acquisizione in batch rimuove millisecondi se i valori della data sono in questo formato: `2024-05-05 20:39:00.005` PST. Per mantenere i millisecondi, utilizzare questo formato: `2024-05-05 20:39:00.005-0800`
 
 Nella tabella seguente vengono illustrate le lettere di serie definite per le stringhe di formato. Le lettere fanno distinzione tra maiuscole e minuscole.
 
