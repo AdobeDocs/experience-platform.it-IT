@@ -5,9 +5,9 @@ user-guide-description: Attiva i dati, noti e non, per campagne di marketing cro
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 7db60161b638cce1845c430f6086441599a0bc61
+source-git-commit: 5e2e8996ee48d7816d78fc9cacf6ba102f7ae66f
 workflow-type: tm+mt
-source-wordcount: '1251'
+source-wordcount: '1253'
 ht-degree: 6%
 
 ---
@@ -77,6 +77,7 @@ ht-degree: 6%
       * [Estensione UET (Universal Event Tracking) di Bing Ads](./catalog/advertising/bing-ads.md)
       * [Estensione ramo](./catalog/advertising/branch.md)
       * [(Beta) Connessione critica](./catalog/advertising/criteo.md)
+      * [Connessione Demandbase](./catalog/advertising/demandbase.md)
       * [Estensione DoubleClick Floodlight (Beta)](./catalog/advertising/doubleclick-floodlight.md)
       * [Estensione facebook Pixel](./catalog/advertising/facebook-pixel.md)
       * [Estensione OneTag lampeggiante](./catalog/advertising/flashtalking.md)
