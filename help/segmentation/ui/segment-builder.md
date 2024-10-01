@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: 6ceb28b2c9bab3b9df212764a43b202980ae239c
 workflow-type: tm+mt
 source-wordcount: '4784'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
@@ -102,7 +102,7 @@ Una volta mappate le suite di rapporti, puoi utilizzare questi campi appena mapp
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentBuilder_b2b_decomposition"
 >title="Valutazione complessa"
->abstract="L’espressione seguente è troppo complicata per essere espressa come un singolo pubblico. Per utilizzare sia le regole B2B che gli eventi basati sulle persone nella stessa definizione di segmento, segui i passaggi riportati di seguito.<ol><li>Crea una definizione di segmento che si riferisca solo agli eventi basati sulle persone e salvala come propria definizione di segmento.</li><li>In una nuova definizione di segmento, importa la definizione di segmento creata in precedenza facendo riferimento alle regole B2B.</li></ol>"
+>abstract="L’espressione seguente è troppo complicata per essere espressa come un singolo pubblico. Per utilizzare sia le regole B2B che gli eventi basati sulle persone nella stessa definizione di segmento, segui i passaggi riportati di seguito.<ol><li>Crea una definizione di segmento che si riferisca solo agli eventi basati sulle persone e salvala come una definizione di segmento propria.</li><li>In una nuova definizione di segmento, importa la definizione di segmento creata in precedenza facendo riferimento alle regole B2B.</li></ol>"
 
 >[!NOTE]
 >
@@ -164,8 +164,8 @@ In alternativa, puoi aggiungere manualmente valori separati da virgole.
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_addaudiences"
->title="Cerca aggiornamenti"
->abstract="Il sistema di ricerca esistente è stato aggiornato per utilizzare la ricerca unificata. La ricerca unificata consente di cercare in modo più semplice e affidabile i tipi di pubblico per l’iscrizione ai segmenti."
+>title="Cercare aggiornamenti"
+>abstract="Il sistema di ricerca esistente è stato aggiornato per utilizzare la ricerca unificata. La ricerca unificata consente di cercare in modo più semplice e deciso i tipi di pubblico per l’appartenenza a un segmento."
 
 Puoi trascinare un pubblico dalla scheda **[!UICONTROL Pubblico]** nell&#39;area di lavoro del generatore di regole per fare riferimento all&#39;appartenenza al pubblico nella nuova definizione del segmento. Ciò ti consente di includere o escludere l’iscrizione al pubblico come attributo nelle nuove regole di definizione del segmento.
 

@@ -5,8 +5,8 @@ description: Scopri come esportare i set di dati da Adobe Experience Platform ne
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
 source-git-commit: ad33eaa48928b25502ef279f000b92f31e1667ca
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2573'
+ht-degree: 8%
 
 ---
 
@@ -137,7 +137,7 @@ Utilizza le caselle di controllo a sinistra dei nomi dei set di dati per selezio
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_datasets_exportoptions"
 >title="Opzioni di esportazione dei file per i set di dati"
->abstract="Seleziona **Esporta file incrementali** per esportare solo i dati aggiunti al set di dati dopo l’ultima esportazione. <br> La prima esportazione di file incrementali include tutti i dati del set di dati, agendo come backfill. I file incrementali futuri includono solo i dati aggiunti al set di dati dalla prima esportazione. <br> Seleziona **Esporta file completi** per esportare l&#39;appartenenza completa di ogni set di dati a ogni esportazione. "
+>abstract="Seleziona **Esporta file incrementali** per esportare solo i dati aggiunti al set di dati dopo l’ultima esportazione. <br> La prima esportazione di file incrementali include tutti i dati del set di dati, agendo come backfill. I file incrementali futuri includono solo i dati aggiunti al set di dati dopo la prima esportazione. <br> Seleziona **Esporta file completi** per esportare l’appartenenza completa di ogni set di dati a ogni esportazione. "
 
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_header"

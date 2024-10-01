@@ -7,7 +7,7 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 source-git-commit: 67d4bcbf2a055d4427218ba7d98355f09d860a8c
 workflow-type: tm+mt
 source-wordcount: '2738'
-ht-degree: 13%
+ht-degree: 16%
 
 ---
 
@@ -20,13 +20,13 @@ ht-degree: 13%
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_core"
->title="Tabella dei prodotti core"
->abstract="I prodotti core elencati nella tabella hanno le proprie metriche, il tracciamento dell’utilizzo e viste drill-through a livello di sandbox. Questi prodotti core forniscono le metriche chiave per il tracciamento ed eventuali componenti aggiuntivi sono inclusi in queste metriche."
+>title="Tabella dei prodotti principali"
+>abstract="I prodotti principali elencati nella tabella hanno metriche, tracciamento dell’utilizzo e viste drill-through a livello di sandbox proprie. Questi prodotti principali forniscono le metriche chiave per il tracciamento ed eventuali componenti aggiuntivi sono inclusi in queste metriche."
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_addons"
 >title="Tabella dei componenti aggiuntivi"
->abstract="Nella tabella Componenti aggiuntivi sono elencati i prodotti i cui importi di licenza sono combinati con le metriche supportate dai prodotti di base. Questi componenti aggiuntivi non hanno metriche separate, ma migliorano il tracciamento dell’utilizzo dei prodotti core a cui sono associati."
+>abstract="Nella tabella Componenti aggiuntivi sono elencati i prodotti le cui quantità di licenze sono combinate con le metriche supportate dai prodotti principali. Questi componenti aggiuntivi non dispongono di metriche separate, ma migliorano il tracciamento dell’utilizzo dei prodotti principali a cui sono associati."
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"
@@ -74,7 +74,7 @@ Per passare al dashboard utilizzo licenze nell&#39;interfaccia utente di Platfor
 
 Il dashboard [!UICONTROL Utilizzo licenze] visualizza due tabelle separate: **Prodotti core** e **Componenti aggiuntivi**.
 
-- **[!UICONTROL Prodotti core] tabella**: questa tabella elenca i principali prodotti Adobe Experience Platform concessi in licenza dalla tua organizzazione. Ogni prodotto di base ha le proprie metriche, il proprio tracciamento dell’utilizzo e viste drill-through a livello di sandbox. Questi prodotti core forniscono le metriche chiave per il tracciamento ed eventuali componenti aggiuntivi sono inclusi in queste metriche.
+- **[!UICONTROL Prodotti core] tabella**: questa tabella elenca i principali prodotti Adobe Experience Platform concessi in licenza dalla tua organizzazione. Ogni prodotto di base ha le proprie metriche, il proprio tracciamento dell’utilizzo e viste drill-through a livello di sandbox. Questi prodotti principali forniscono le metriche chiave per il tracciamento ed eventuali componenti aggiuntivi sono inclusi in queste metriche.
 
 - **[!UICONTROL Componenti aggiuntivi] tabella**: in questa tabella sono elencati prodotti aggiuntivi le cui quantità di licenze sono combinate con le metriche supportate dai prodotti di base. I componenti aggiuntivi non dispongono di metriche separate, ma migliorano il tracciamento dell’utilizzo dei prodotti core a cui sono associati.
 
