@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Ulteriori informazioni sull’utilizzo predefinito dell’attivazione dei dati e sui limiti di tariffa.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: 3ff20e51458cb9cccafb6da92414def9eeaaf821
 workflow-type: tm+mt
-source-wordcount: '1685'
+source-wordcount: '1686'
 ht-degree: 2%
 
 ---
@@ -178,7 +178,7 @@ Ulteriori informazioni sull&#39;esportazione di [set di dati](/help/destinations
 | Guardrail | Limite | Tipo limite | Descrizione |
 | --- | --- | --- | --- |
 | Numero massimo di [destinazioni personalizzate private](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) | 5 | Guardrail delle prestazioni | Puoi creare fino a 5 destinazioni private di flussi personalizzati o batch utilizzando Destination SDK. Se devi creare più di 5 di queste destinazioni, rivolgiti a un rappresentante dell’assistenza personalizzata. |
-| Criterio di esportazione profilo per Destination SDK | <ul><li>`maxBatchAgeInSecs` (minimo 1.800 e massimo 3.600)</li><li>`maxNumEventsInBatch` (minimo 1.000, massimo 10.000)</li></ul> | Guarddrail imposto dal sistema | Quando utilizzi l&#39;opzione di [aggregazione configurabile](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) per la destinazione, tieni presente i valori minimo e massimo che determinano la frequenza con cui i messaggi HTTP vengono inviati alla destinazione basata su API e il numero di profili che i messaggi devono includere. |
+| Criterio di esportazione profilo per Destination SDK | <ul><li>`maxBatchAgeInSecs` (minimo 1.800 e massimo 3.600)</li><li>`maxNumEventsInBatch` (minimo 1.000 e massimo 10.000)</li></ul> | Guarddrail imposto dal sistema | Quando utilizzi l&#39;opzione di [aggregazione configurabile](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) per la destinazione, tieni presente i valori minimo e massimo che determinano la frequenza con cui i messaggi HTTP vengono inviati alla destinazione basata su API e il numero di profili che i messaggi devono includere. |
 
 {style="table-layout:auto"}
 
