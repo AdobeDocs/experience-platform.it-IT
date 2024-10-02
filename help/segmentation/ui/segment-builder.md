@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Segment Builder
 description: Il Generatore di segmenti nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro avanzata che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica di regole, ad esempio le tessere trascinate utilizzate per rappresentare le proprietà dei dati.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 6ceb28b2c9bab3b9df212764a43b202980ae239c
+source-git-commit: e74d04119593dddcaf6a5c710b685c606f5998d6
 workflow-type: tm+mt
-source-wordcount: '4784'
+source-wordcount: '4955'
 ht-degree: 7%
 
 ---
@@ -28,6 +28,19 @@ ht-degree: 7%
 >abstract="I tre tipi di campi che compongono una definizione di segmento sono attributi, eventi e pubblico. Gli attributi consentono di utilizzare gli attributi di profilo che appartengono alla classe XDM Profilo individuale; gli eventi consentono di creare un pubblico basato su azioni o eventi che hanno luogo utilizzando gli elementi di dati XDM ExperienceEvent; i tipi di pubblico consentono di utilizzare tipi di pubblico importati da origini esterne."
 
 Gli elementi di base per le definizioni dei segmenti sono attributi ed eventi. Inoltre, gli attributi e gli eventi contenuti nei tipi di pubblico esistenti possono essere utilizzati come componenti per nuove definizioni.
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_summarydata"
+>title="Dati di riepilogo"
+>abstract="I dati di riepilogo vengono visualizzati solo per gli attributi del profilo e <b>non</b> per gli attributi evento o pubblico.<br/><br/>I dati di riepilogo per gli attributi del profilo potrebbero non essere visualizzati nelle seguenti circostanze: <ol><li>Alcuni valori dell&#39;attributo contengono più di 100 caratteri.</li><li>L&#39;attributo contiene più di 3000 valori univoci.</li></ol>"
+
+>[!NOTE]
+>
+>Se si seleziona la bolla di informazioni di un attributo, è possibile visualizzare la distribuzione dei valori del campo, nota anche come dati di riepilogo. Questi sono **solo** disponibili nella scheda Attributi e non sono disponibili per l&#39;utilizzo nella scheda Eventi o Tipi di pubblico.
+>
+>I dati di riepilogo verranno visualizzati se l&#39;attributo soddisfa i criteri seguenti: Tutti i valori dell&#39;attributo sono composti da un massimo di 100 caratteri e l&#39;attributo contiene un massimo di 3000 valori univoci.
+>
+>Tuttavia, un attributo **non** avrà dati di riepilogo se si tratta di dati con più entità collegati al profilo tramite una relazione. Ad esempio, se si dispone di uno schema personalizzato denominato `Vehicle`, le **proprietà** nello schema `Vehicle` **non** avranno dati di riepilogo.
 
 Questi blocchi predefiniti sono disponibili nella sezione **[!UICONTROL Fields]** sul lato sinistro dell&#39;area di lavoro [!DNL Segment Builder]. **[!UICONTROL I campi]** contengono una scheda per ciascuno dei blocchi predefiniti principali: &quot;[!UICONTROL Attributi]&quot;, &quot;[!UICONTROL Eventi]&quot; e &quot;[!UICONTROL Tipi di pubblico]&quot;.
 
