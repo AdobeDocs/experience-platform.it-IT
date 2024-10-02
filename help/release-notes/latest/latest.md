@@ -2,7 +2,7 @@
 title: Note sulla versione di Adobe Experience Platform di settembre 2024
 description: Note sulla versione di Adobe Experience Platform di settembre 2024.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: a342f38f09b84ef720d6135bc555844df12ee251
+source-git-commit: 33d1305aef7c763e7b0bd8c6db6a1a9417cc2a9d
 workflow-type: tm+mt
 source-wordcount: '2199'
 ht-degree: 24%
@@ -15,15 +15,15 @@ ht-degree: 24%
 
 Aggiornamenti alle funzioni e alla documentazione esistenti in Adobe Experience Platform:
 
-- [Avvisi {#alerts}](#alerts)
-- [Dashboard {#dashboards}](#dashboards)
-- [Preparazione dati {#data-prep}](#data-prep)
-- [Destinazioni {#destinations}](#destinations)
-- [Experience Data Model (XDM) {#xdm}](#xdm)
-- [Servizio identità {#identity-service}](#identity-service)
-- [Servizio query {#query-service}](#query-service)
-- [Servizio di segmentazione {#segmentation-service}](#segmentation-service)
-- [Origini {#sources}](#sources)
+- [Avvisi](#alerts)
+- [Dashboard](#dashboards)
+- [Preparazione dei dati](#data-prep)
+- [Destinazioni](#destinations)
+- [Experience Data Model (XDM)](#xdm)
+- [Identity Service](#identity-service)
+- [Servizio query](#query-service)
+- [Servizio di segmentazione](#segmentation-service)
+- [Origini](#sources)
 
 ## Avvisi {#alerts}
 
