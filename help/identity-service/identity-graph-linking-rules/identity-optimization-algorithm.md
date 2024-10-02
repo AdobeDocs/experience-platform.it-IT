@@ -1,11 +1,10 @@
 ---
 title: Algoritmo di ottimizzazione identità
 description: Scopri l’algoritmo di ottimizzazione delle identità in Identity Service.
-badge: Beta
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 1ea840e2c6c44d5d5080e0a034fcdab4cbdc87f1
+source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
 workflow-type: tm+mt
-source-wordcount: '1531'
+source-wordcount: '1528'
 ht-degree: 1%
 
 ---
@@ -14,7 +13,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->Le regole di collegamento del grafo delle identità sono attualmente in versione beta. Contatta il team del tuo account di Adobe per informazioni sui criteri di partecipazione. La funzione e la documentazione sono soggette a modifiche.
+>Le regole di collegamento del grafo identità sono attualmente a disponibilità limitata. Contatta il team del tuo account Adobe per informazioni su come accedere alla funzione nelle sandbox di sviluppo.
 
 L’algoritmo di ottimizzazione delle identità è un algoritmo grafico sul servizio Identity che garantisce che un grafico delle identità sia rappresentativo di una singola persona e, pertanto, impedisce l’unione indesiderata di identità sul profilo cliente in tempo reale.
 

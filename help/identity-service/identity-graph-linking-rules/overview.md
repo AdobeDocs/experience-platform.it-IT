@@ -1,11 +1,10 @@
 ---
 title: Regole di collegamento del grafico delle identità
 description: Scopri le regole di collegamento del grafico delle identità in Identity Service.
-badge: Beta
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: a4e5ab14904fe17aa8bab2f8555ae6d535c856e8
+source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
 workflow-type: tm+mt
-source-wordcount: '1427'
+source-wordcount: '1424'
 ht-degree: 2%
 
 ---
@@ -14,7 +13,7 @@ ht-degree: 2%
 
 >[!AVAILABILITY]
 >
->Le regole di collegamento del grafo delle identità sono attualmente in versione beta. Contatta il team del tuo account di Adobe per informazioni sui criteri di partecipazione. La funzione e la documentazione sono soggette a modifiche.
+>Le regole di collegamento del grafo identità sono attualmente a disponibilità limitata. Contatta il team del tuo account Adobe per informazioni su come accedere alla funzione nelle sandbox di sviluppo.
 
 Con il servizio Adobe Experience Platform Identity e il profilo cliente in tempo reale, è facile presumere che i dati siano acquisiti perfettamente e che tutti i profili uniti rappresentino una singola persona tramite un identificatore di persona, come un CRMID. Tuttavia, esistono scenari possibili in cui alcuni dati potrebbero tentare di unire più profili disparati in un unico profilo (&quot;compressione del grafico&quot;). Per evitare queste unioni indesiderate, puoi utilizzare le configurazioni fornite tramite le regole di collegamento del grafico delle identità e consentire una personalizzazione accurata per i tuoi utenti.
 

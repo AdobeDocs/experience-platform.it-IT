@@ -1,11 +1,10 @@
 ---
 title: Priorità dello spazio dei nomi
 description: Scopri la priorità dello spazio dei nomi in Identity Service.
-badge: Beta
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
 workflow-type: tm+mt
-source-wordcount: '1626'
+source-wordcount: '1605'
 ht-degree: 2%
 
 ---
@@ -14,7 +13,7 @@ ht-degree: 2%
 
 >[!AVAILABILITY]
 >
->Le regole di collegamento del grafo delle identità sono attualmente in versione beta. Contatta il team del tuo account di Adobe per informazioni sui criteri di partecipazione. La funzione e la documentazione sono soggette a modifiche.
+>Le regole di collegamento del grafo identità sono attualmente a disponibilità limitata. Contatta il team del tuo account Adobe per informazioni su come accedere alla funzione nelle sandbox di sviluppo.
 
 Ogni implementazione del cliente è unica e personalizzata per soddisfare gli obiettivi di una particolare organizzazione e, come tale, l’importanza di un dato spazio dei nomi varia da cliente a cliente. Esempi reali includono:
 
@@ -90,7 +89,7 @@ Per strutture di grafo relativamente complesse, la priorità dello spazio dei no
 >
 >* L’identità primaria è l’identità in cui è memorizzato un frammento di profilo in base a. Un frammento di profilo è un record di dati che memorizza informazioni su un determinato utente: attributi (di solito acquisiti tramite record di gestione delle relazioni con i clienti) o eventi (di solito acquisiti da eventi di esperienza o dati online).
 
-### Scenario con grafico di esempio
+### Scenario di esempio
 
 Questa sezione fornisce un esempio di come la configurazione della priorità può influenzare i dati.
 
@@ -110,11 +109,11 @@ Date le configurazioni sopra descritte, le azioni degli utenti e la determinazio
 
 | Azione utente (evento esperienza) | Stato di autenticazione | Origine dati | Mappa identità | Identità primaria (chiave primaria del frammento di profilo) |
 | --- | --- | --- | --- | --- |
-| Visualizza pagina offerta carta di credito | Non autenticato (anonimo) | SDK per web | {ECID} | ECID |
-| Visualizza pagina della guida | Non autenticato | Mobile SDK | {ECID, IDFA} | IDFA |
-| Visualizza saldo conto corrente | autenticato | SDK per web | {CRMID, ECID} | CRMID |
+| Visualizza pagina offerta carta di credito | Non autenticato (anonimo) | Web SDK | {ECID} | ECID |
+| Visualizza pagina della guida | Non autenticato | SDK mobile | {ECID, IDFA} | IDFA |
+| Visualizza saldo conto corrente | autenticato | Web SDK | {CRMID, ECID} | CRMID |
 | Iscriviti al prestito per la casa | autenticato | Connettore di origine di Analytics | {CRMID, ECID, AAID} | CRMID |
-| Trasferisci $1.000 dal controllo al risparmio | autenticato | Mobile SDK | {CRMID, GAID, ECID} | CRMID |
+| Trasferisci $1.000 dal controllo al risparmio | autenticato | SDK mobile | {CRMID, GAID, ECID} | CRMID |
 
 {style="table-layout:auto"}
 
@@ -184,6 +183,6 @@ Per ulteriori informazioni su, leggi i documenti su [Attribution AI](../../intel
 
 Per ulteriori informazioni, leggere la [Panoramica del servizio Privacy](../../privacy-service/home.md).
 
-### Personalizzazione Adobe Target e Edge
+### Adobe Target
 
-[Edge personalization](../../server-api/personalization-target.md) continuerà a fare riferimento a come hai configurato la casella di controllo &quot;Primary&quot; sul tipo di elemento dati in WebSDK (che si traduce in `primary=true` in identityMap).
+Puoi attivare la segmentazione in batch e in streaming solo su Adobe Target.

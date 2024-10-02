@@ -3,9 +3,9 @@ title: Guida all’implementazione per le regole di collegamento del grafico del
 description: Scopri i passaggi consigliati da seguire per implementare i dati con le configurazioni delle regole di collegamento del grafico delle identità.
 badge: Beta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: adfb1e83289435e6991d4cdd2e2a45e3d5a9b32f
+source-git-commit: 0bb99a359e7331f2235cd5385dcf546ab4c2b494
 workflow-type: tm+mt
-source-wordcount: '1546'
+source-wordcount: '1635'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 >[!AVAILABILITY]
 >
->Le regole di collegamento del grafo delle identità sono attualmente in versione beta. Contatta il team del tuo account di Adobe per informazioni sui criteri di partecipazione. La funzione e la documentazione sono soggette a modifiche.
+>Le regole di collegamento del grafo identità sono attualmente a disponibilità limitata. Contatta il team del tuo account Adobe per informazioni su come accedere alla funzione nelle sandbox di sviluppo.
 
 Leggi questo documento per una guida dettagliata che puoi seguire durante l’implementazione dei dati con il servizio Adobe Experience Platform Identity.
 
@@ -61,8 +61,67 @@ Se utilizzi il [connettore di origine Adobe Analytics](../../sources/tutorials/u
 
 ### Eventi esperienza XDM
 
-* Durante il processo di pre-implementazione, devi assicurarti che gli eventi autenticati che il sistema invierà ad Experience Platform contengano sempre un identificatore di persona, come CRMID.
-* Non inviare una stringa vuota come valore di identità quando invii eventi utilizzando eventi di esperienza XDM. In questo modo si verificheranno errori di sistema.
+Durante il processo di pre-implementazione, devi assicurarti che gli eventi autenticati che il sistema invierà ad Experience Platform contengano sempre un identificatore di persona, come CRMID.
+
+>[!BEGINTABS]
+
+>[!TAB Eventi autenticati con identificatore persona]
+
+```json
+{
+  "_id": "test_id",
+  "identityMap": {
+      "ECID": [
+          {
+              "id": "62486695051193343923965772747993477018",
+              "primary": false
+          }
+      ],
+      "CRMID": [
+          {
+              "id": "John",
+              "primary": true
+          }
+      ]
+  },
+  "timestamp": "2024-09-24T15:02:32+00:00",
+  "web": {
+      "webPageDetails": {
+          "URL": "https://business.adobe.com/",
+          "name": "Adobe Business"
+      }
+  }
+}
+```
+
+>[!TAB Eventi autenticati senza identificatore persona]
+
+
+```json
+{
+    "_id": "test_id"
+    "identityMap": {
+        "ECID": [
+            {
+                "id": "62486695051193343923965772747993477018",
+                "primary": false
+            }
+        ]
+    },
+    "timestamp": "2024-09-24T15:02:32+00:00",
+    "web": {
+        "webPageDetails": {
+            "URL": "https://business.adobe.com/",
+            "name": "Adobe Business"
+        }
+    }
+}
+```
+
+
+>[!ENDTABS]
+
+Non inviare una stringa vuota come valore di identità quando invii eventi utilizzando eventi di esperienza XDM. Se il valore di identità dello spazio dei nomi con priorità più elevata è una stringa vuota, il record verrà ignorato da Real-Time Customer Profile. Questo vale sia per identityMap, sia per i campi contrassegnati come identità.
 
 +++Seleziona per visualizzare un esempio di payload con una stringa vuota
 
@@ -170,6 +229,12 @@ Per qualsiasi feedback, utilizza l&#39;opzione **[!UICONTROL Feedback su Beta]**
 Utilizza il dashboard delle identità per ottenere informazioni sullo stato dei tuoi grafici delle identità, ad esempio il conteggio delle identità complessivo e le tendenze del conteggio dei grafici, il conteggio delle identità per spazio dei nomi e il conteggio dei grafici per dimensione. Puoi anche utilizzare il dashboard delle identità per visualizzare le tendenze su grafici con due o più identità, organizzati per spazio dei nomi.
 
 Selezionare i puntini di sospensione (`...`), quindi selezionare **[!UICONTROL Visualizza altri]** per ulteriori informazioni e per verificare che non siano presenti grafici compressi.
+
+![Dashboard delle identità nell&#39;area di lavoro dell&#39;interfaccia utente di Identity Service.](../images/implementation/identity_dashboard.png)
+
+Utilizzare la finestra visualizzata per visualizzare informazioni sui grafici compressi. In questo esempio, sia e-mail che telefono sono contrassegnati come spazio dei nomi univoco, pertanto, non vi sono grafici compressi nella sandbox.
+
+![Finestra popup per grafici con più identità.](../images/implementation/graphs.png)
 
 ## Appendice {#appendix}
 

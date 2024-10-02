@@ -1,12 +1,11 @@
 ---
 title: Interfaccia utente per le impostazioni delle identità
 description: Scopri come utilizzare l’interfaccia utente delle impostazioni di identità.
-badge: Beta
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
+source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
 workflow-type: tm+mt
-source-wordcount: '539'
-ht-degree: 0%
+source-wordcount: '536'
+ht-degree: 1%
 
 ---
 
@@ -14,7 +13,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Le regole di collegamento del grafo delle identità sono attualmente in versione beta. Contatta il team del tuo account di Adobe per informazioni sui criteri di partecipazione. La funzione e la documentazione sono soggette a modifiche.
+>Le regole di collegamento del grafo identità sono attualmente a disponibilità limitata. Contatta il team del tuo account Adobe per informazioni su come accedere alla funzione nelle sandbox di sviluppo.
 
 Le impostazioni di identità sono una funzione dell’interfaccia utente di Adobe Experience Platform Identity Service che consente di designare spazi dei nomi univoci e configurare la priorità dello spazio dei nomi.
 
@@ -29,7 +28,7 @@ Prima di iniziare a utilizzare le impostazioni di identità, leggi i seguenti do
 * [Guida all’implementazione](./implementation-guide.md)
 * [Esempi di configurazioni di grafo](./example-configurations.md)
 * [Priorità dello spazio dei nomi](./namespace-priority.md)
-* [Simulazione del grafico](./graph-simulation.md)
+* [Simulazione dei grafici](./graph-simulation.md)
 
 ## Configurare le impostazioni di identità
 

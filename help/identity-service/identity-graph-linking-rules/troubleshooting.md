@@ -1,20 +1,19 @@
 ---
 title: Guida alla risoluzione dei problemi per le regole di collegamento del grafico identità
 description: Scopri come risolvere i problemi comuni nelle regole di collegamento del grafico delle identità.
-badge: Beta
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
+source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
 workflow-type: tm+mt
-source-wordcount: '3226'
+source-wordcount: '3247'
 ht-degree: 0%
 
 ---
 
-# Guida alla risoluzione dei problemi per le regole di collegamento del grafico delle identità
+# Guida alla risoluzione dei problemi per le regole di collegamento del grafo identità
 
 >[!AVAILABILITY]
 >
->La funzione delle regole di collegamento del grafo delle identità è attualmente in versione beta. Contatta il team del tuo account di Adobe per informazioni sui criteri di partecipazione. La funzione e la documentazione sono soggette a modifiche.
+>Le regole di collegamento del grafo identità sono attualmente a disponibilità limitata. Contatta il team del tuo account Adobe per informazioni su come accedere alla funzione nelle sandbox di sviluppo.
 
 Durante il test e la convalida delle regole di collegamento del grafico delle identità, potresti riscontrare alcuni problemi relativi all’acquisizione dei dati e al comportamento del grafico. Leggi questo documento per scoprire come risolvere alcuni problemi comuni che potrebbero verificarsi quando utilizzi le regole di collegamento del grafico delle identità.
 
@@ -167,7 +166,10 @@ Puoi anche eseguire la seguente query per verificare se l’acquisizione nel pro
   FROM dataset_name)) WHERE (col.id = '' or _testimsorg.identification.core.email = '') and key = 'Email' 
 ```
 
-Queste due query presuppongono che un’identità venga inviata da identityMap e un’altra identità da un descrittore di identità. **NOTA**: negli schemi Experience Data Model (XDM), il descrittore di identità è il campo contrassegnato come identità.
+Queste due query presuppongono che:
+
+* Un’identità viene inviata da identityMap e un’altra identità da un descrittore di identità. **NOTA**: negli schemi Experience Data Model (XDM), il descrittore di identità è il campo contrassegnato come identità.
+* Il CRMID viene inviato tramite identityMap. Se il CRMID viene inviato come campo, rimuovere `key='Email'` dalla clausola WHERE.
 
 ### I miei frammenti di evento esperienza vengono acquisiti, ma hanno l’identità primaria &quot;errata&quot; nel profilo
 
@@ -398,7 +400,7 @@ In generale, il test su una sandbox di sviluppo dovrebbe simulare i casi d’uso
 | Test case | Passaggi del test | Risultato previsto |
 | --- | --- | --- |
 | Rappresentazione accurata dell’entità della persona | <ul><li>Simulazione di navigazione anonima</li><li>Imita l’accesso di due persone (John, Jane) utilizzando lo stesso dispositivo</li></ul> | <ul><li>Sia John che Jane devono essere associati ai loro attributi e agli eventi autenticati.</li><li>L’ultimo utente autenticato deve essere associato agli eventi di navigazione anonimi.</li></ul> |
-| Segmentazione | Creare quattro definizioni di segmenti (**NOTA**: ogni coppia di definizioni di segmenti deve avere una valutata utilizzando il batch e l&#39;altra lo streaming.) <ul><li>Definizione del segmento A: qualificazione del segmento basata sugli eventi autenticati di John.</li><li>Definizione del segmento B: qualificazione del segmento basata sugli eventi autenticati di Jane.</li></ul> | Indipendentemente dagli scenari di dispositivi condivisi, John e Jane dovrebbero sempre qualificarsi per i rispettivi segmenti. |
+| Segmentazione | Creare quattro definizioni di segmenti (**NOTA**: ogni coppia di definizioni di segmenti deve avere una valutata utilizzando il batch e l&#39;altra lo streaming.) <ul><li>Definizione del segmento A: qualificazione del segmento basata sugli eventi e/o attributi autenticati di John.</li><li>Definizione del segmento B: qualificazione del segmento basata sugli eventi e/o attributi autenticati di Jane.</li></ul> | Indipendentemente dagli scenari di dispositivi condivisi, John e Jane dovrebbero sempre qualificarsi per i rispettivi segmenti. |
 | Qualificazione del pubblico / percorsi unitari su Adobe Journey Optimizer | <ul><li>Crea un percorso che inizia con un’attività di qualificazione del pubblico (ad esempio la segmentazione in streaming creata in precedenza).</li><li>Crea un percorso che inizia con un evento unitario. Questo evento unitario deve essere un evento autenticato.</li><li>È necessario disattivare il reinserimento durante la creazione di questi percorsi.</li></ul> | <ul><li>Indipendentemente dagli scenari di dispositivi condivisi, John e Jane dovrebbero attivare i rispettivi percorsi in cui dovrebbero entrare.</li><li>John e Jane non devono rientrare nel percorso quando l’ECID viene trasferito nuovamente loro.</li></ul> |
 
 {style="table-layout:auto"}

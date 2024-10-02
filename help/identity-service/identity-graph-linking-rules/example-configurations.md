@@ -1,11 +1,10 @@
 ---
 title: Esempi di configurazioni dei grafici
 description: Scopri gli scenari di grafico comuni che potresti incontrare quando utilizzi le regole di collegamento del grafico delle identità e i dati di identità.
-badge: Beta
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: 6ad4709d8d361c16c22eddeef5f7ccdd1f4b2fb3
+source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
 workflow-type: tm+mt
-source-wordcount: '2786'
+source-wordcount: '2783'
 ht-degree: 6%
 
 ---
@@ -14,13 +13,12 @@ ht-degree: 6%
 
 >[!AVAILABILITY]
 >
->Le regole di collegamento del grafo delle identità sono attualmente in versione beta. Contatta il team del tuo account di Adobe per informazioni sui criteri di partecipazione. La funzione e la documentazione sono soggette a modifiche.
+>Le regole di collegamento del grafo identità sono attualmente a disponibilità limitata. Contatta il team del tuo account Adobe per informazioni su come accedere alla funzione nelle sandbox di sviluppo.
 
 >[!NOTE]
 >
 >* &quot;CRMID&quot; e &quot;loginID&quot; sono spazi dei nomi personalizzati. In questo documento, &quot;CRMID&quot; è un identificatore di persona e &quot;loginID&quot; è un identificatore di accesso associato a una determinata persona.
 >* Per simulare gli scenari del grafico di esempio descritti in questo documento, devi innanzitutto creare due spazi dei nomi personalizzati, uno con il simbolo di identità &quot;CRMID&quot; e un altro con il simbolo di identità &quot;loginID&quot;. I simboli di identità fanno distinzione tra maiuscole e minuscole.
-
 
 Questo documento illustra alcuni esempi di configurazione del grafico di scenari comuni che potresti incontrare quando lavori con regole di collegamento del grafico delle identità e dati di identità.
 
@@ -32,7 +30,7 @@ Questo è un esempio di un semplice scenario di implementazione in cui gli event
 
 | Namespace utilizzati | Metodo di raccolta del comportamento Web |
 | --- | --- |
-| CRMID, ECID | SDK per web |
+| CRMID, ECID | Web SDK |
 
 **Eventi:**
 
@@ -97,7 +95,7 @@ In questo scenario, viene acquisito un CRMID che rappresenta sia dati online (ev
 
 | Namespace utilizzati | Metodo di raccolta del comportamento Web |
 | --- | --- |
-| CRMID, E-mail_LC_SHA256, ECID | SDK per web |
+| CRMID, E-mail_LC_SHA256, ECID | Web SDK |
 
 **Eventi:**
 
@@ -185,7 +183,7 @@ Questo scenario è simile a quello precedente. Tuttavia, in questo scenario, le 
 
 | Namespace utilizzati | Metodo di raccolta del comportamento Web |
 | --- | --- |
-| CRMID, Email_LC_SHA256, Phone_SHA256, GAID, IDFA, ECID | SDK per web |
+| CRMID, Email_LC_SHA256, Phone_SHA256, GAID, IDFA, ECID | Web SDK |
 
 **Eventi:**
 
@@ -365,7 +363,7 @@ In questo scenario, esiste un singolo CRMID che rappresenta un’entità persona
 
 | Namespace utilizzati | Metodo di raccolta del comportamento Web |
 | --- | --- |
-| CRMID, loginID, ECID | SDK per web |
+| CRMID, loginID, ECID | Web SDK |
 
 **Eventi:**
 
@@ -651,7 +649,7 @@ Gli esempi di configurazione del grafico riportati in questa sezione descrivono 
 
 | Namespace utilizzati | Metodo di raccolta del comportamento Web |
 | --- | --- |
-| CRMID, E-mail, ECID | SDK per web |
+| CRMID, E-mail, ECID | Web SDK |
 
 **Eventi:**
 
