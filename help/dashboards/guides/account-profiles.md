@@ -2,14 +2,14 @@
 title: Dashboard dei profili account
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale puoi visualizzare informazioni importanti sui profili dell’account B2B della tua organizzazione.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: b6811d447f76a671adc98bddef6e760c8be8cd9b
+source-git-commit: 8caa10010109f9936271cb45a2166455f3678687
 workflow-type: tm+mt
-source-wordcount: '1763'
+source-wordcount: '1827'
 ht-degree: 1%
 
 ---
 
-# [!UICONTROL Profili account] dashboard
+# Dashboard dei profili account
 
 L’interfaccia utente di Adobe Experience Platform fornisce una dashboard attraverso la quale puoi visualizzare informazioni importanti sui profili dell’account, acquisite durante un’istantanea giornaliera. Questa guida illustra come accedere e lavorare con il dashboard [!UICONTROL Profili account] nell&#39;interfaccia utente e fornisce ulteriori informazioni sulle visualizzazioni visualizzate nel dashboard.
 
@@ -64,6 +64,11 @@ Seleziona [!UICONTROL ID profilo] dai risultati visualizzati nella scheda [!UICO
 Le informazioni sul profilo account visualizzate nella scheda [!UICONTROL Dettagli] sono state unite da più frammenti di profilo per formare un&#39;unica visualizzazione del singolo account. Per ulteriori informazioni sulle funzionalità di visualizzazione dei profili dell&#39;account nell&#39;interfaccia utente di Platform, consulta la documentazione su [esplorazione dei profili dell&#39;account in Adobe Real-time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles).
 
 ## Widget standard {#standard-widgets}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_accountprofiles_customersperaccountoverview"
+>title="Panoramica sui clienti per account"
+>abstract="Questo widget drill-through fornisce informazioni sulla struttura dei dati B2B. Consente di identificare quanti profili account non hanno profili cliente collegati o a cui sono associati uno o più profili cliente.<ul><li>Clienti diretti: sono profili cliente collegati direttamente a un account tramite il percorso `personComponents`.</li><li>Clienti indiretti: sono profili cliente collegati a un account tramite il percorso `Account-Person`.</li></ul>"
 
 Questo Adobe fornisce widget standard che puoi utilizzare per visualizzare diverse metriche relative ai profili del tuo account.
 

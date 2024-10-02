@@ -3,9 +3,9 @@ keywords: Indirizzo IP, intervallo IP, elenco consentiti, inserisco nell'elenco 
 title: INSERIRE NELL'ELENCO CONSENTITI Indirizzo IP per Query Service
 description: Questa pagina fornisce intervalli IP aggiornati che è possibile aggiungere al elenco Consentiti di per un accesso sicuro a Query Service.
 exl-id: f6745e0f-d387-45f2-9f72-054e721016ff
-source-git-commit: 029d0ad63460a71770e5ba3cd75a29cb04c0cb9c
+source-git-commit: a48b3995abc1ee2033e3827b12581f4771cdb2d7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '268'
 ht-degree: 0%
 
 ---
@@ -15,14 +15,11 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 > * L’Adobe consiglia di aggiungere un segnalibro a questa pagina e di visitarla nuovamente ogni tre mesi per verificare la presenza degli indirizzi IP più recenti. L’Adobe non fornisce la notifica dei nuovi intervalli IP.
-> * Sebbene Adobe supporti le esportazioni di dati ai server SFTP, i percorsi consigliati per l&#39;archiviazione cloud per l&#39;esportazione dei dati sono [!DNL Amazon S3] e [!DNL Azure Blob].
 > * Dal 15 ottobre 2024 i nuovi intervalli IP hanno sostituito quelli esistenti. Inserire nell&#39;elenco Consentiti Per evitare interruzioni del servizio, assicurati che gli IP vecchi e nuovi vengano aggiunti al tuo prima di questa data.
 
 ## Panoramica {#overview}
 
-Questa pagina fornisce indirizzi IP che puoi aggiungere al tuo inserisco nell&#39;elenco Consentiti di esportazione dei dati da Experience Platform al tuo [server SFTP](../destinations/catalog/cloud-storage/sftp.md) in modo sicuro.
-
-È possibile definire i controlli di accesso alla rete tramite il firewall di rete. Specificando l’intervallo IP appropriato, puoi consentire il traffico per il servizio di trasferimento dati.
+È possibile definire i controlli di accesso alla rete tramite il firewall di rete. Specificando l’intervallo IP appropriato, puoi consentire il traffico per l’accesso a Query Service.
 
 Come parte dei miglioramenti in corso, Adobe ha aggiornato gli intervalli IP utilizzati per l’accesso di rete a Query Service il 15 ottobre 2024. Gli indirizzi IP esistenti diventeranno obsoleti e i nuovi indirizzi IP sostituiranno quelli esistenti. Per garantire la continuità del servizio, è fondamentale aggiungere sia il vecchio che il nuovo intervallo IP al inserisco nell&#39;elenco Consentiti di.
 
