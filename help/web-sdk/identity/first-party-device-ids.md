@@ -2,9 +2,9 @@
 title: ID dispositivo di prime parti in Web SDK
 description: Scopri come configurare gli ID dispositivo di prime parti (FPID) in Adobe Experience Platform Web SDK.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: 1cb38e3eaa83f2ad0e7dffef185d5edaf5e6c38c
+source-git-commit: 04ef39cbfc614369cb15f4d947474b491c34ef33
 workflow-type: tm+mt
-source-wordcount: '1904'
+source-wordcount: '2055'
 ht-degree: 0%
 
 ---
@@ -219,6 +219,16 @@ La risposta di errore restituita dall’Edge Network in questo caso è simile al
     }
 }
 ```
+
+## Impostazione di un FPID sul proprio dominio {#setting-fpid-domain}
+
+Oltre a impostare [!DNL FPID] nella mappa delle identità, puoi impostare il cookie [!DNL FPID] sul tuo dominio, se hai configurato una raccolta dati di prime parti [!DNL CNAME].
+
+Quando la raccolta dati di prime parti viene abilitata utilizzando [!DNL CNAME], tutti i cookie per il dominio verranno inviati su richieste effettuate all&#39;endpoint di raccolta dati.
+
+Vengono eliminati tutti i cookie non rilevanti ai fini della raccolta dati di Adobe. Per [!DNL FPID], è possibile specificare il nome del cookie [!DNL FPID] nella configurazione dello stream di dati. In questo caso, l&#39;Edge Network leggerà il contenuto del cookie [!DNL FPID] invece di cercare [!DNL FPID] nella mappa delle identità.
+
+Per utilizzare questa funzionalità, è necessario impostare [!DNL FPID] al livello principale del dominio anziché a un sottodominio specifico. Se viene impostato su un sottodominio, il valore del cookie non verrà inviato all&#39;Edge Network e la soluzione [!DNL FPID] non funzionerà come previsto.
 
 ## Gerarchia ID {#id-hierarchy}
 
