@@ -2,9 +2,9 @@
 title: Condivisione di pacchetti tra organizzazioni tramite strumenti sandbox
 description: Scopri come utilizzare gli strumenti Sandbox in Adobe Experience Platform per condividere pacchetti tra diverse organizzazioni.
 badge: Beta
-source-git-commit: 492f1d9dc08965dba3f1c5b6e1d479ef645afd04
+source-git-commit: 209aaaf0c2bfdb321f75257309980c7a48cb1eb4
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '646'
 ht-degree: 0%
 
 ---
@@ -15,29 +15,27 @@ ht-degree: 0%
 >
 >La condivisione di pacchetti tra organizzazioni è attualmente in versione beta e disponibile solo per alcuni clienti beta.
 
-Questo documento illustra come utilizzare gli strumenti sandbox in Adobe Experience Platform per condividere pacchetti tra diverse organizzazioni.
+Migliora la precisione della configurazione nelle sandbox ed esporta e importa facilmente le configurazioni sandbox tra sandbox di diverse organizzazioni con la funzione di strumenti sandbox. Questo documento illustra come utilizzare gli strumenti sandbox in Adobe Experience Platform per condividere pacchetti tra diverse organizzazioni. Esistono due tipi di pacchetti condivisi:
 
-Migliora la precisione della configurazione nelle sandbox ed esporta e importa facilmente le configurazioni sandbox tra sandbox di diverse organizzazioni con la funzione di strumenti sandbox. Esistono due tipi di pacchetti condivisi:
+- **Pacchetto privato**
 
-**Pacchetto privato**
+[I pacchetti privati](#private-packages) possono essere condivisi solo con organizzazioni che hanno approvato la richiesta di condivisione dall&#39;organizzazione di origine tramite un elenco consentiti di consenso.
 
-I pacchetti privati possono essere condivisi solo con le organizzazioni che hanno approvato la richiesta di condivisione dall’organizzazione di origine tramite un elenco consentiti di consenso.
+- **Pacchetto pubblico**
 
-**Pacchetto pubblico**
+[I pacchetti pubblici](./sandbox-tooling.md/#export-and-import-an-entire-sandbox) sono disponibili per l&#39;importazione senza alcuna approvazione aggiuntiva. Questi pacchetti possono essere condivisi sul sito web, sul blog o sulla piattaforma di un partner. Il payload del pacchetto consente di copiare e incollare i pacchetti da questi canali nell’organizzazione di destinazione.
 
-I pacchetti pubblici sono disponibili per l’importazione senza alcuna approvazione aggiuntiva. Questi pacchetti possono essere condivisi sul sito web, sul blog o sulla piattaforma di un partner. Il payload del pacchetto consente di copiare e incollare i pacchetti da questi canali nell’organizzazione di destinazione.
-
-## Pacchetti privati
+## Pacchetti privati {#private-packages}
 
 >[!NOTE]
 >
 >Per avviare e approvare una richiesta di condivisione e condividere pacchetti tra organizzazioni, è necessario disporre dell&#39;autorizzazione di controllo dell&#39;accesso basata su ruolo **condivisione pacchetti**.
 
-La funzione di strumenti sandbox consente di creare partnership tra organizzazioni, monitorare gli stati di una richiesta di partnership, gestire le partnership esistenti e condividere pacchetti con le organizzazioni partner.
+Utilizza la funzione Strumenti sandbox per creare partnership, tenere traccia delle statistiche delle richieste di partnership, gestire le partnership esistenti e condividere pacchetti con le organizzazioni partner.
 
 ### Creare una richiesta di partnership organizzazione
 
-Per creare una richiesta di partnership organizzazione, passa alla scheda [!UICONTROL Sandbox] **[!UICONTROL Organizzazioni partner]**. Selezionare **[!UICONTROL Gestisci organizzazioni partner]**.
+Per creare una richiesta di partnership organizzazione, passa alla scheda **[!UICONTROL Sandbox]** **[!UICONTROL Organizzazioni partner]**. Selezionare **[!UICONTROL Gestisci organizzazioni partner]**.
 
 ![Interfaccia utente sandbox con le schede Organizzazioni partner e Gestisci organizzazioni partner evidenziate.](../images/ui/sandbox-tooling/private-manage-partner-orgs.png)
 
@@ -53,13 +51,13 @@ La richiesta di condivisione è stata inviata all&#39;organizzazione partner e s
 
 ![Scheda Organizzazioni partner con richiesta in uscita evidenziata.](../images/ui/sandbox-tooling/private-outgoing-request.png)
 
-### Autorizzare una richiesta di partnership
+### Autorizzare una richiesta di partnership {#authorize-request}
 
 Per autorizzare una richiesta di partnership tra organizzazioni, passa alla scheda [!UICONTROL Sandbox] **[!UICONTROL Organizzazioni partner]**. Selezionare **[!UICONTROL Richiesta in ingresso]**.
 
 ![L&#39;interfaccia utente delle sandbox con la scheda Organizzazioni partner e la richiesta in ingresso evidenziata.](../images/ui/sandbox-tooling/private-authorise-partner-org.png)
 
-Il **[!UICONTROL Stato]** corrente per la richiesta è **In sospeso**. Per approvare la richiesta, seleziona i puntini di sospensione (`...`) accanto alla richiesta selezionata, quindi seleziona **[!UICONTROL Approva]** dal menu a discesa.
+Il **[!UICONTROL Stato]** corrente per la richiesta in questa fase è **In sospeso**. Per approvare la richiesta, seleziona i puntini di sospensione (`...`) accanto alla richiesta selezionata, quindi seleziona **[!UICONTROL Approva]** dal menu a discesa.
 
 ![Elenco delle richieste in arrivo con il menu a discesa con Approva evidenziato.](../images/ui/sandbox-tooling/private-approve-partner-org.png)
 
@@ -71,9 +69,9 @@ Si è tornati alla pagina [!UICONTROL Richiesta in ingresso] e lo stato della ri
 
 ![Elenco delle richieste in arrivo con Approvato evidenziato.](../images/ui/sandbox-tooling/private-approved-partner-org.png)
 
-Ora puoi condividere i pacchetti tra la tua organizzazione e l’organizzazione di origine.
+Utilizza questo flusso di lavoro/processo per condividere i pacchetti tra la tua organizzazione e l’organizzazione di origine.
 
-### Condividere pacchetti con le organizzazioni partner
+### Condividere pacchetti con le organizzazioni partner {#share-package}
 
 >[!NOTE]
 >
@@ -85,14 +83,14 @@ Per condividere un pacchetto con un&#39;organizzazione partner approvata, passar
 
 Nella finestra di dialogo **[!UICONTROL Condividi pacchetto]**, seleziona il pacchetto da condividere dal menu a discesa **[!UICONTROL Condividi impostazioni]**, quindi seleziona **[!UICONTROL Conferma]**.
 
-![Finestra di dialogo Condividi pacchetto con impostazioni di condivisione e Conferma evidenziata.](../images/ui/sandbox-tooling/private-share-package-confirm.png)
-
 >[!TIP]
 >
 >È possibile selezionare più di un’organizzazione. Le organizzazioni selezionate verranno visualizzate sotto il menu a discesa [!UICONTROL Impostazioni condivisione].
 
-## Passaggi successivi
+![Finestra di dialogo Condividi pacchetto con impostazioni di condivisione e Conferma evidenziata.](../images/ui/sandbox-tooling/private-share-package-confirm.png)
+
+## Passaggi successivi {#next-steps}
 
 Questo documento illustra come utilizzare la funzione Strumenti Sandbox per condividere i pacchetti tra diverse organizzazioni. Per ulteriori informazioni, consulta la [guida agli strumenti sandbox](../ui/sandbox-tooling.md).
 
-Per i passaggi relativi all&#39;esecuzione di diverse operazioni tramite l&#39;API Sandbox, consulta la [guida per gli sviluppatori di sandbox](../api/getting-started.md). Per una panoramica di alto livello delle sandbox in Experience Platform, consulta la [documentazione sulla panoramica](../home.md).
+Per informazioni su come eseguire diverse operazioni utilizzando l&#39;API Sandbox, consulta la [guida per gli sviluppatori di sandbox](../api/getting-started.md). Per una panoramica di alto livello delle sandbox in Experience Platform, consulta la [documentazione sulla panoramica](../home.md).
