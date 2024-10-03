@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;connessione streaming;crea
 title: Creare una connessione in streaming API HTTP utilizzando l’API del servizio Flusso
 description: Questo tutorial illustra come creare una connessione in streaming utilizzando l’origine API HTTP per i dati grezzi e XDM mediante l’API del servizio Flusso
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 84ffbb86e8973c2795d19122d3866e980949759d
+source-git-commit: 6ea5eaf28f260f974d168db2bed9bc95fcfa52af
 workflow-type: tm+mt
-source-wordcount: '1658'
+source-wordcount: '1646'
 ht-degree: 4%
 
 ---
@@ -470,9 +470,9 @@ POST /flows
 
 >[!BEGINTABS]
 
->[!TAB Senza trasformazioni]
+>[!TAB XDM]
 
-La seguente richiesta crea un flusso di dati in streaming per l’API HTTP senza trasformazioni di dati.
+La seguente richiesta crea un flusso di dati in streaming per i dati XDM.
 
 ```shell
 curl -X POST \
@@ -498,9 +498,9 @@ curl -X POST \
     }'
 ```
 
->[!TAB Con trasformazioni]
+>[!TAB RAW]
 
-Le seguenti richieste creano un flusso di dati in streaming per l’API HTTP con le trasformazioni di mappatura applicate ai dati.
+Le seguenti richieste creano un flusso di dati in streaming per i dati non elaborati.
 
 Durante la creazione di un flusso di dati con trasformazioni, il parametro `name` non può essere modificato. Questo valore deve essere sempre impostato su `Mapping`.
 
@@ -559,7 +559,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 201 con i detta
 }
 ```
 
-## Dati Post da acquisire in Platform {#ingest-data}
+## Pubblica i dati da acquisire in Platform {#ingest-data}
 
 >[!NOTE]
 >
