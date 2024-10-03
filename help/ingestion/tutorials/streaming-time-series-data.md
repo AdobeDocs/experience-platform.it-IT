@@ -5,7 +5,7 @@ title: Trasmettere dati di serie temporali utilizzando le API Streaming Ingestio
 type: Tutorial
 description: Questa esercitazione ti aiuterà a iniziare a utilizzare le API Streaming Ingestion, che fanno parte delle API Adobe Experience Platform Data Ingestion Service.
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 35ccc39fdfef31ca1f59e2e11f0d3d762e423635
 workflow-type: tm+mt
 source-wordcount: '1210'
 ht-degree: 2%
@@ -307,12 +307,9 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=t
   -H "Content-Type: application/json" \
   -d '{
     "header": {
-        "schemaRef": {
-            "id": "{SCHEMA_REF_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;version=1"
-        },
-        "flowId": "{FLOW_ID}",
-        "datasetId": "{DATASET_ID}"
+    "datasetId": "{DATASET_ID}",
+    "flowId": "{FLOW_ID}",
+    "imsOrgID": "{ORG_ID}"
     },
     "body": {
         "xdmMeta": {
@@ -377,15 +374,12 @@ Se si desidera includere un nome di origine, nell&#39;esempio seguente viene ill
 
 ```json
     "header": {
-        "schemaRef": {
-            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;version=1"
-        },
-        "imsOrgId": "{ORG_ID}",
-        "datasetId": "{DATASET_ID}",
-        "source": {
-            "name": "Sample source name"
-        }
+    "datasetId": "{DATASET_ID}",
+    "flowId": "{FLOW_ID}",
+    "imsOrgID": "{ORG_ID}",
+      "source": {
+        "name": "ACME source"
+      }
     }
 ```
 
