@@ -2,9 +2,9 @@
 title: Condivisione di pacchetti tra organizzazioni tramite strumenti sandbox
 description: Scopri come utilizzare gli strumenti Sandbox in Adobe Experience Platform per condividere pacchetti tra diverse organizzazioni.
 badge: Beta
-source-git-commit: 209aaaf0c2bfdb321f75257309980c7a48cb1eb4
+source-git-commit: 0e280972feb990221272d272aa2a9e3852beb5e8
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '650'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Per creare una richiesta di partnership organizzazione, passa alla scheda **[!UI
 
 ![Interfaccia utente sandbox con le schede Organizzazioni partner e Gestisci organizzazioni partner evidenziate.](../images/ui/sandbox-tooling/private-manage-partner-orgs.png)
 
-Nella finestra di dialogo [!UICONTROL Gestione partner del pacchetto], immetti l&#39;ID organizzazione in **[!UICONTROL Immetti l&#39;ID organizzazione]** e premi Invio. L&#39;ID organizzazione viene visualizzato nella sezione **[!UICONTROL ID organizzazione selezionati]** di seguito. Dopo aver aggiunto gli ID, seleziona **[!UICONTROL Conferma]**.
+Nella finestra di dialogo [!UICONTROL Gestione partner pacchetti], immetti l&#39;ID organizzazione in **[!UICONTROL Immetti ID organizzazione]** e premi Invio (Windows) o Ritorno (Mac). L&#39;ID organizzazione viene visualizzato nella sezione **[!UICONTROL ID organizzazione selezionati]** di seguito. Dopo aver aggiunto gli ID, seleziona **[!UICONTROL Conferma]**.
 
 >[!TIP]
 >
