@@ -1,11 +1,11 @@
 ---
-title: Note sulla versione di Adobe Experience Platform
+title: Note sulla versione di Adobe Experience Platform - Ottobre 2023
 description: Note sulla versione di Adobe Experience Platform di ottobre 2023.
 exl-id: e9cf5299-8350-4b40-8f56-05e598846875
-source-git-commit: f2d0848952902d94b441566da677ef174518192e
+source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
 workflow-type: tm+mt
-source-wordcount: '1052'
-ht-degree: 32%
+source-wordcount: '1054'
+ht-degree: 39%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 32%
 
 **Data di rilascio: 25 ottobre 2023**
 
-Aggiornamenti alle funzioni esistenti in Experience Platform:
+Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
 - [Dashboard](#dashboards)
 - [Raccolta dati](#data-collection)
@@ -80,9 +80,9 @@ Per informazioni più generali sulle destinazioni, consulta la [panoramica sulle
 
 ## Sandbox {#sandboxes}
 
-Adobe Experience Platform è stato progettato per arricchire le applicazioni di esperienza digitale su scala globale. Le aziende spesso eseguono più applicazioni di esperienza digitale in parallelo e devono occuparsi di sviluppo, test e distribuzione di tali applicazioni, garantendo al contempo la conformità operativa. Per soddisfare questa esigenza, Experience Platform fornisce sandbox che suddividono una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+Adobe Experience Platform è stato progettato per arricchire le applicazioni di esperienza digitale su scala globale. Le aziende spesso eseguono più applicazioni di esperienza digitale in parallelo e devono occuparsi di sviluppo, test e distribuzione di tali applicazioni, garantendo al contempo la conformità operativa. Per rispondere a questa esigenza, Experience Platform fornisce ambienti sandbox che permettono di suddividere una singola istanza di Platform in ambienti virtuali separati, utili per le attività di sviluppo e evoluzione delle applicazioni di esperienza digitale.
 
-**Nuova funzionalità**
+**Nuova funzione**
 
 | Funzione | Descrizione |
 | --- | --- |
@@ -94,11 +94,11 @@ Per ulteriori informazioni sulle sandbox, consulta la [panoramica sulle sandbox]
 
 [!DNL Segmentation Service] consente di segmentare i dati memorizzati in [!DNL Experience Platform] che si riferiscono ai singoli utenti (come clienti, potenziali clienti, utenti o organizzazioni) in tipi di pubblico. Puoi creare tipi di pubblico tramite definizioni di segmenti o altre origini dai tuoi dati di [!DNL Real-Time Customer Profile]. Questi tipi di pubblico sono configurati e gestiti centralmente in [!DNL Platform] e sono facilmente accessibili da qualsiasi soluzione Adobe.
 
-**Nuova funzionalità**
+**Nuova funzione**
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Pubblico dell’account (GA limitato) | In Real-time Customer Data Platform B2B Edition, è ora possibile utilizzare la segmentazione dell’account per portare la piena facilità e sofisticatezza dell’esperienza di segmentazione di marketing da tipi di pubblico basati sulle persone a tipi di pubblico basati sull’account. Per ulteriori informazioni su questa funzione, leggere la [panoramica sui tipi di pubblico dell&#39;account](../../segmentation/ui/account-audiences.md). |
+| Pubblico dell’account (GA limitato) | In Real-time Customer Data Platform B2B edition, ora puoi utilizzare la segmentazione dell’account per rendere l’esperienza di segmentazione di marketing completamente semplice e sofisticata, dal pubblico basato sulle persone a quello basato sull’account. Per ulteriori informazioni su questa funzione, leggere la [panoramica sui tipi di pubblico dell&#39;account](../../segmentation/ui/account-audiences.md). |
 
 Per ulteriori informazioni sul servizio di segmentazione, leggere la [Panoramica del servizio di segmentazione](../../segmentation/home.md).
 

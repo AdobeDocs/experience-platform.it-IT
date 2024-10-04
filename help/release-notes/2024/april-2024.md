@@ -1,10 +1,10 @@
 ---
-title: Note sulla versione di Adobe Experience Platform
+title: Note sulla versione di Adobe Experience Platform - Aprile 2024
 description: Note sulla versione di Adobe Experience Platform di aprile 2024.
 exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
-source-git-commit: 14dccb993b38ca352c6de3ed851bafe7c44ca631
-workflow-type: ht
-source-wordcount: '1895'
+source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
+workflow-type: tm+mt
+source-wordcount: '1897'
 ht-degree: 100%
 
 ---
@@ -109,9 +109,9 @@ Utilizza la dashboard di monitoraggio nell’interfaccia utente di Experience Pl
 
 Per ulteriori informazioni, leggi la guida sull’[utilizzo della dashboard di monitoraggio](../../dataflows/ui/monitor.md).
 
-## Servizio query {#query-service}
+## Query Service {#query-service}
 
-Il Servizio query consente di utilizzare SQL standard per eseguire query sui dati in Adobe Experience Platform.[!DNL Data Lake] Puoi unire qualsiasi set di dati dal [!DNL Data Lake] e acquisire i risultati della query sotto forma di nuovo set di dati da utilizzare nel reporting, in Data Science Workspace o da acquisire nel profilo cliente in tempo reale.
+Il Servizio query consente di utilizzare SQL standard per eseguire query sui dati in Adobe Experience Platform [!DNL Data Lake]. Puoi unire qualsiasi set di dati dal [!DNL Data Lake] e acquisire i risultati della query sotto forma di nuovo set di dati da utilizzare nel reporting, in Data Science Workspace o da acquisire nel profilo cliente in tempo reale.
 
 **Funzioni aggiornate**
 

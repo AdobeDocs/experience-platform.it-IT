@@ -1,11 +1,11 @@
 ---
-title: Note sulla versione di Adobe Experience Platform
-description: Note sulla versione di agosto 2023 per Adobe Experience Platform.
+title: Note sulla versione di Adobe Experience Platform di agosto 2023
+description: Note sulla versione di Adobe Experience Platform di agosto 2023.
 exl-id: c67dca3a-eccb-427e-8ab3-b69c51b57938
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
 workflow-type: tm+mt
-source-wordcount: '1739'
-ht-degree: 35%
+source-wordcount: '1741'
+ht-degree: 43%
 
 ---
 
@@ -46,9 +46,9 @@ Per ulteriori informazioni, leggere la [panoramica di Real-Time CDP](../../rtcdp
 
 ## Controllo degli accessi basato su attributi {#abac}
 
-Il controllo degli accessi basato sugli attributi è una funzionalità di Adobe Experience Platform che offre ai brand attenti alla privacy una maggiore flessibilità per gestire l’accesso degli utenti. È possibile assegnare singoli oggetti, come campi e segmenti dello schema, ai ruoli utente. Questa funzione ti consente di concedere o revocare l’accesso a singoli oggetti per specifici utenti di Platform nella tua organizzazione.
+Il controllo degli accessi basato sugli attributi è una funzionalità di Adobe Experience Platform che offre ai brand attenti alla privacy una maggiore flessibilità per gestire l’accesso degli utenti. È possibile assegnare singoli oggetti, come campi e segmenti dello schema, ai ruoli utente. Questa funzione consente di concedere o revocare l’accesso a singoli oggetti per specifici utenti di Platform nell’organizzazione.
 
-Tramite il controllo dell’accesso basato su attributi, gli amministratori dell’organizzazione possono controllare l’accesso degli utenti a, dati personali sensibili (SPD), informazioni personali (PII) e altri tipi di dati personalizzati in tutti i flussi di lavoro e le risorse di Platform. Gli amministratori possono definire ruoli utente con accesso solo a campi e dati specifici che corrispondono a tali campi.
+Tramite il controllo dell’accesso basato su attributi, gli amministratori dell’organizzazione possono controllare l’accesso degli utenti a dati personali sensibili (SPD), informazioni personali (PII) e altri tipi di dati personalizzati in tutti i flussi di lavoro e le risorse di Platform. Gli amministratori possono definire ruoli utente con accesso solo a campi e dati specifici che corrispondono a tali campi.
 
 **Funzioni nuove o aggiornate**
 
@@ -58,7 +58,7 @@ Tramite il controllo dell’accesso basato su attributi, gli amministratori dell
 
 {style="table-layout:auto"}
 
-Per ulteriori informazioni sul controllo degli accessi basato su attributi, vedere la [panoramica sul controllo degli accessi basato su attributi](../../access-control/abac/overview.md). Per una guida completa sul flusso di lavoro di controllo degli accessi basato su attributi, leggere la [guida end-to-end per il controllo degli accessi basato su attributi](../../access-control/abac/end-to-end-guide.md).
+Per ulteriori informazioni sul controllo degli accessi basato su attributi, consulta la [panoramica sul controllo degli accessi basato su attributi](../../access-control/abac/overview.md). Per una guida completa sul flusso di lavoro del controllo degli accessi basato su attributi, leggi la [guida completa per il controllo degli accessi basato su attributi](../../access-control/abac/end-to-end-guide.md).
 
 ## Dashboard {#dashboards}
 

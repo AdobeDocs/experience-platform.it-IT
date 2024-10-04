@@ -1,11 +1,11 @@
 ---
-title: Note sulla versione di Adobe Experience Platform
-description: Note sulla versione di settembre 2023 per Adobe Experience Platform.
+title: Note sulla versione di Adobe Experience Platform di settembre 2023
+description: Note sulla versione di Adobe Experience Platform di settembre 2023.
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
 workflow-type: tm+mt
-source-wordcount: '2263'
-ht-degree: 24%
+source-wordcount: '2265'
+ht-degree: 31%
 
 ---
 
@@ -17,7 +17,7 @@ Nuove funzioni di Adobe Experience Platform:
 
 - [Attributi calcolati](#computed-attributes)
 
-Aggiornamenti alle funzioni esistenti in Experience Platform:
+Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
 - [Avvisi](#alerts)
 - [Dashboard](#dashboards)
@@ -27,7 +27,7 @@ Aggiornamenti alle funzioni esistenti in Experience Platform:
 - [Destinazioni](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Identity Service](#identity-service)
-- [Servizio query](#query-service)
+- [Query Service](#query-service)
 - [Servizio di segmentazione](#segmentation)
 - [Origini](#sources)
 
@@ -37,7 +37,7 @@ Gli attributi calcolati consentono di riepilogare facilmente i dati dell’event
 
 ## Avvisi {#alerts}
 
-Un Experience Platform consente di abbonarti agli avvisi basati su eventi per varie attività di Platform. Puoi abbonarti a diverse regole di avviso tramite la scheda [!UICONTROL Avvisi] nell&#39;interfaccia utente di Platform e scegliere di ricevere messaggi di avviso all&#39;interno dell&#39;interfaccia utente stessa o tramite notifiche e-mail.
+Experience Platform consente di abbonarti agli avvisi basati su eventi per varie attività di Platform. Puoi abbonarti a diverse regole di avviso tramite la scheda [!UICONTROL Avvisi] nell’interfaccia utente di Platform e scegliere di ricevere messaggi di avviso all’interno dell’interfaccia utente stessa o tramite notifiche e-mail.
 
 **Funzioni nuove o aggiornate**
 
@@ -74,7 +74,7 @@ Adobe Experience Platform fornisce una suite di tecnologie che consente di racco
 
 {style="table-layout:auto"}
 
-Per ulteriori informazioni sulla raccolta dati, leggere la [panoramica sulla raccolta dati](../../tags/home.md).
+Per ulteriori informazioni sulla raccolta dati, consulta la [panoramica sulla raccolta dati](../../tags/home.md).
 
 ## Governance dei dati {#data-governance}
 
@@ -92,7 +92,7 @@ Per ulteriori informazioni sulla governance dei dati, consulta la [panoramica su
 
 ## Igiene dei dati {#hygiene}
 
-Experience Platform fornisce una suite di funzionalità di igiene dei dati che consente di gestire i dati memorizzati tramite l’eliminazione programmatica di record e set di dati consumer. Utilizzando l&#39;area di lavoro [!UICONTROL Ciclo di vita dei dati] nell&#39;interfaccia utente o tramite chiamate all&#39;API di igiene dei dati, puoi gestire in modo efficace gli archivi di dati. Utilizza queste funzionalità per garantire che le informazioni vengano utilizzate come previsto, aggiornate quando è necessario correggere i dati errati e eliminate quando i criteri organizzativi lo ritengono necessario.
+Experience Platform fornisce una suite di funzionalità di igiene dei dati che consente di gestire i dati memorizzati tramite l’eliminazione programmatica di record e set di dati consumer. Utilizzando l&#39;area di lavoro [!UICONTROL Ciclo di vita dei dati] nell&#39;interfaccia utente o tramite chiamate all&#39;API di igiene dei dati, puoi gestire in modo efficace gli archivi di dati. Usa queste funzionaità per garantire che le informazioni vengano utilizzate come previsto, che vengano aggiornate quando è necessario correggere dati scorretti e che vengano eliminate quando i criteri organizzativi lo ritengono necessario.
 
 **Nuove funzioni**
 
@@ -195,11 +195,11 @@ Adobe Experience Platform Identity Service offre una panoramica completa della c
 
 {style="table-layout:auto"}
 
-Per ulteriori informazioni su Identity Service, consulta la [panoramica del servizio Identity](../../identity-service/home.md).
+Per ulteriori informazioni sull’Identity Service, leggi la [panoramica sull’Identity Service](../../identity-service/home.md).
 
-## Servizio query {#query-service}
+## Query Service {#query-service}
 
-Il Servizio query consente di utilizzare SQL standard per eseguire query sui dati in Adobe Experience Platform.[!DNL Data Lake] È possibile unire qualsiasi set di dati da [!DNL Data Lake] e acquisire i risultati della query come nuovo set di dati da utilizzare nel reporting, in Data Science Workspace o per l&#39;acquisizione in Real-Time Customer Profile.
+Il Servizio query consente di utilizzare SQL standard per eseguire query sui dati in Adobe Experience Platform [!DNL Data Lake]. Puoi unire qualsiasi set di dati dal [!DNL Data Lake] e acquisire i risultati della query sotto forma di nuovo set di dati da utilizzare nel reporting, in Data Science Workspace o da acquisire nel profilo cliente in tempo reale.
 
 **Funzioni aggiornate**
 
