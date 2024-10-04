@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Query Editor
 description: L’editor delle query è uno strumento interattivo fornito da Adobe Experience Platform Query Service che consente di scrivere, convalidare ed eseguire query per i dati sull’esperienza del cliente all’interno dell’interfaccia utente di Experience Platform. Query Editor supporta lo sviluppo di query per l’analisi e l’esplorazione dei dati e consente di eseguire query interattive a scopo di sviluppo, nonché query non interattive per popolare i set di dati in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 7ba9eb6891657e7f3d7ebbd41314b7973e31ea61
+source-git-commit: d83604b2bf6a8e2f2b5802a5e7f26447fbf7eb2e
 workflow-type: tm+mt
-source-wordcount: '2802'
+source-wordcount: '2821'
 ht-degree: 0%
 
 ---
@@ -102,6 +102,10 @@ Viene visualizzata una finestra di dialogo di conferma. Selezionare **[!UICONTRO
 ### Conteggio risultati {#result-count}
 
 L’editor delle query può contenere un massimo di 50.000 righe. Puoi scegliere il numero di righe da visualizzare contemporaneamente nella console dell’editor delle query. Per modificare il numero di righe visualizzate nella console, seleziona l&#39;elenco a discesa **[!UICONTROL Numero risultati]** e le opzioni 50, 100, 150, 300 e 500.
+
+>[!NOTE]
+>
+>Poiché l’interfaccia utente di Platform può supportare solo un massimo di 500 righe, il passaggio di un valore LIMIT superiore a 500 viene ignorato.
 
 ![Editor query con elenco a discesa Conteggio risultati evidenziato.](../images/ui/query-editor/result-count.png)
 
