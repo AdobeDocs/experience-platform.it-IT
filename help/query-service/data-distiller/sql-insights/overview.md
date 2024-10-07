@@ -2,7 +2,7 @@
 title: Informazioni SQL
 description: Scopri i casi d’uso, le funzionalità essenziali e i passaggi necessari per sviluppare un dashboard di SQL Insights con Data Distiller. Scopri in che modo la funzionalità SQL Insights in Data Distiller può migliorare la trasparenza e ottenere informazioni operative attraverso diverse dimensioni, come profili, tipi di pubblico, campagne, percorsi, autorizzazioni e consenso.
 exl-id: f807d0fd-c8ec-42d4-96a0-5ffc5681943b
-source-git-commit: 3435ddd4b235c1c66cd29c75b779bcca607a5d4f
+source-git-commit: 4e78a7983fba492ded866a8f1fc6f98e20510b2b
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Con SQL Insights di Data Distiller puoi creare modelli di dati di reporting personalizzati per estrarre informazioni più approfondite, ottimizzare le strategie e adattare le analisi per soddisfare esigenze aziendali specifiche. Utilizza la funzionalità SQL Insights per migliorare la trasparenza e ottenere informazioni operative dai dati Adobe Experience Platform in dimensioni quali profili, tipi di pubblico, campagne, percorsi, autorizzazioni e consenso. Questa funzionalità offre una soluzione versatile e adattiva per adattare i modelli di dati di reporting della tua organizzazione alle tue esigenze aziendali specifiche.
 
-Per [visualizzare SQL Insights](../../../dashboards/data-distiller/overview.md) puoi utilizzare la [modalità query pro](../../../dashboards/data-distiller/query-pro-mode/overview.md) per eseguire analisi complesse con query SQL personalizzate e trasformare i tuoi dati in grafici facilmente interpretabili. Utilizza la modalità query pro per creare informazioni e visualizzazioni personalizzate sulle dashboard e soddisfare i tipi di pubblico tecnici e non, scaricando le informazioni come file CSV.
+Per [visualizzare SQL Insights](../../../dashboards/data-distiller/sql-insights/overview.md) puoi utilizzare la [modalità query pro](../../../dashboards/data-distiller/query-pro-mode/overview.md) per eseguire analisi complesse con query SQL personalizzate e trasformare i tuoi dati in grafici facilmente interpretabili. Utilizza la modalità query pro per creare informazioni e visualizzazioni personalizzate sulle dashboard e soddisfare i tipi di pubblico tecnici e non, scaricando le informazioni come file CSV.
 
 Questo documento descrive i casi d’uso, le funzionalità essenziali e i passaggi necessari per sviluppare un dashboard di SQL Insights con Data Distiller.
 

@@ -2,7 +2,7 @@
 title: Visualizza altro
 description: Scopri le diverse opzioni di visualizzazione per i dati analizzati SQL. Dal dashboard personalizzato è possibile visualizzare i risultati tabulati dell’analisi o scaricare i dati elaborati in formato CSV.
 exl-id: f57d85cf-dbd2-415c-bf01-8faa49871377
-source-git-commit: ed1565fad1c539d69b85fb644d4bc16d4a262673
+source-git-commit: 1ef8208ccde2f44b6c5188bd5b9a57ff876da30f
 workflow-type: tm+mt
 source-wordcount: '551'
 ht-degree: 1%
@@ -41,7 +41,7 @@ Puoi ordinare le colonne selezionando il menu a discesa accanto al nome della co
 
 >[!NOTE]
 >
->Le opzioni [!UICONTROL Ordinamento crescente] e [!UICONTROL Ordinamento decrescente] verranno visualizzate solo per le colonne configurate con [funzionalità di ordinamento](../overview.md/#advanced-attributes).
+>Le opzioni [!UICONTROL Ordinamento crescente] e [!UICONTROL Ordinamento decrescente] verranno visualizzate solo per le colonne configurate con [funzionalità di ordinamento](./overview.md#advanced-attributes).
 
 ![Elenco a discesa delle colonne della tabella che mostra le opzioni Ordinamento crescente e Ordinamento decrescente evidenziate.](../../images/query-pro-mode/advanced-sort-dropdown.png)
 
