@@ -2,9 +2,9 @@
 title: Comportamento di esportazione del profilo
 description: Scopri come il comportamento di esportazione del profilo varia tra i diversi modelli di integrazione supportati nelle destinazioni di Experience Platform.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: 223734e2998568f3b9b78933fa5adf740b521f5f
+source-git-commit: 6c2d10cffa30d9feb4d342014ea1b712094bb673
 workflow-type: tm+mt
-source-wordcount: '2930'
+source-wordcount: '2939'
 ht-degree: 0%
 
 ---
@@ -192,7 +192,7 @@ Nella prima esportazione di file dopo la configurazione del flusso di lavoro di 
 
 >[!TIP]
 >
->Come promemoria, le modifiche nei valori degli attributi o nelle mappe di identità per un profilo non qualificano un profilo da includere in un’esportazione di file incrementale.
+>Le modifiche apportate alle mappe di identità per un profilo lo rendono idoneo per l’inclusione in un’esportazione incrementale di file. Le modifiche nei valori degli attributi *non* consentono l&#39;inclusione in un&#39;esportazione di file incrementale.
 
 ## Passaggi successivi {#next-steps}
 
