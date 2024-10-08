@@ -2,28 +2,32 @@
 title: Spazi dei nomi e schemi B2B
 description: Questo documento fornisce una panoramica degli spazi dei nomi personalizzati necessari per la creazione di un connettore di origine B2B.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 5e8bb04ca18159eab98b2f7f0bba8cb1488a1f26
+source-git-commit: ebbed5c6ff7037b138588a79a05e6ef13d1856d7
 workflow-type: tm+mt
-source-wordcount: '1620'
+source-wordcount: '1651'
 ht-degree: 11%
 
 ---
 
 # Spazi dei nomi e schemi B2B
 
+>[!AVAILABILITY]
+>
+>Devi avere accesso a [Adobe Real-time Customer Data Platform B2B edition](../../../../rtcdp/b2b-overview.md) per i tuoi schemi B2B per qualificarti in [Profilo cliente in tempo reale](../../../../profile/home.md).
+
 >[!NOTE]
 >
 >Puoi utilizzare i modelli nell’interfaccia utente di Adobe Experience Platform per accelerare la creazione delle risorse per i dati B2B e B2C. Per ulteriori informazioni, leggere la guida su [utilizzo dei modelli nell&#39;interfaccia utente di Platform](../../../tutorials/ui/templates.md).
 
-Questo documento fornisce informazioni sulla configurazione di base per gli spazi dei nomi e gli schemi da utilizzare con origini B2B. Questo documento fornisce anche dettagli sulla configurazione dell’utility di automazione Postman necessaria per generare spazi dei nomi e schemi B2B.
-
->[!IMPORTANT]
->
->Devi avere accesso a [Adobe Real-time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) per consentire agli schemi B2B di partecipare a [Real-Time Customer Profile](../../../../profile/home.md).
+Leggi questo documento per informazioni sulla configurazione di base per gli spazi dei nomi e gli schemi da utilizzare con origini B2B. Questo documento fornisce anche dettagli sulla configurazione dell’utility di automazione Postman necessaria per generare spazi dei nomi e schemi B2B.
 
 ## Configurare gli spazi dei nomi B2B e l’utility di generazione automatica dello schema
 
-Il primo passaggio nell’utilizzo dello spazio dei nomi B2B e dell’utility di generazione automatica dello schema consiste nell’impostare la console di sviluppo di Platform e l’ambiente [!DNL Postman].
+>[!IMPORTANT]
+>
+>Le credenziali dell’account di servizio (JWT) sono diventate obsolete. È necessario assicurarsi di migrare l’applicazione o l’integrazione alla nuova credenziale da server a server OAuth prima del 27 gennaio 2025. Per i passaggi dettagliati su [come eseguire la migrazione delle credenziali JWT alle credenziali da server a server OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/), consulta la documentazione seguente.
+
+Per informazioni sui prerequisiti per impostare l&#39;ambiente [!DNL Postman] per il supporto dello spazio dei nomi B2B e dell&#39;utilità di generazione automatica dello schema, fare riferimento alla seguente documentazione.
 
 - È possibile scaricare la raccolta di utilità di generazione automatica dello spazio dei nomi e dello schema e l&#39;ambiente da questo [archivio GitHub](https://github.com/adobe/experience-platform-postman-samples/tree/master/Postman%20Collections/CDP%20Namespaces%20and%20Schemas%20Utility).
 - Per informazioni sull&#39;utilizzo delle API di Platform, inclusi i dettagli su come raccogliere i valori per le intestazioni richieste e leggere chiamate API di esempio, consulta la guida introduttiva [alle API di Platform](../../../../landing/api-guide.md).
@@ -37,12 +41,10 @@ La tabella seguente contiene valori di esempio e informazioni aggiuntive sul pop
 | Variable | Descrizione | Esempio |
 | --- | --- | --- |
 | `CLIENT_SECRET` | Identificatore univoco utilizzato per generare `{ACCESS_TOKEN}`. Per informazioni su come recuperare `{CLIENT_SECRET}`, consulta il tutorial su [autenticazione e accesso alle API Experience Platform](../../../../landing/api-authentication.md). | `{CLIENT_SECRET}` |
-| `JWT_TOKEN` | Il JSON Web Token (JWT) è una credenziale di autenticazione utilizzata per generare {ACCESS_TOKEN}. Per informazioni su come generare `{JWT_TOKEN}`, consulta il tutorial su [autenticazione e accesso alle API Experience Platform](../../../../landing/api-authentication.md). | `{JWT_TOKEN}` |
 | `API_KEY` | Identificatore univoco utilizzato per autenticare le chiamate alle API Experience Platform. Per informazioni su come recuperare `{API_KEY}`, consulta il tutorial su [autenticazione e accesso alle API Experience Platform](../../../../landing/api-authentication.md). | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
 | `ACCESS_TOKEN` | Il token di autorizzazione necessario per completare le chiamate alle API Experience Platform. Per informazioni su come recuperare `{ACCESS_TOKEN}`, consulta il tutorial su [autenticazione e accesso alle API Experience Platform](../../../../landing/api-authentication.md). | `Bearer {ACCESS_TOKEN}` |
 | `META_SCOPE` | Per quanto riguarda [!DNL Marketo], questo valore è fisso ed è sempre impostato su: `ent_dataservices_sdk`. | `ent_dataservices_sdk` |
 | `CONTAINER_ID` | Il contenitore `global` contiene tutte le classi, i gruppi di campi dello schema, i tipi di dati e gli schemi standard forniti dal partner Adobe e Experience Platform. Per quanto riguarda [!DNL Marketo], questo valore è fisso ed è sempre impostato su `global`. | `global` |
-| `PRIVATE_KEY` | Credenziali utilizzate per autenticare l&#39;istanza [!DNL Postman] in Experience Platform API. Per istruzioni su come recuperare {PRIVATE_KEY}, consulta il tutorial sulla configurazione di Developer Console e [configurazione di Developer Console e [!DNL Postman]](../../../../landing/postman.md). | `{PRIVATE_KEY}` |
 | `TECHNICAL_ACCOUNT_ID` | Credenziali utilizzate per l&#39;integrazione in Adobe I/O. | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
 | `IMS` | Identity Management System (IMS) fornisce il framework per l’autenticazione nei servizi Adobe. Per quanto riguarda [!DNL Marketo], questo valore è fisso ed è sempre impostato su: `ims-na1.adobelogin.com`. | `ims-na1.adobelogin.com` |
 | `IMS_ORG` | Entità aziendale che può possedere o concedere in licenza prodotti e servizi e consentire l&#39;accesso ai propri membri. Per istruzioni su come recuperare le informazioni di `{ORG_ID}`, consulta il tutorial su [come configurare la console per sviluppatori e  [!DNL Postman]](../../../../landing/postman.md). | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
@@ -58,11 +60,11 @@ Dopo aver configurato la raccolta [!DNL Postman] e l&#39;ambiente, è ora possib
 
 Nell&#39;interfaccia [!DNL Postman], selezionare la cartella principale dell&#39;utilità di generazione automatica, quindi selezionare **[!DNL Run]** dall&#39;intestazione superiore.
 
-![cartella-radice](../images/marketo/root-folder.png)
+![Cartella principale del generatore di spazi dei nomi e schemi nell&#39;interfaccia utente di Postman. &quot;Runs&quot; è evidenziato nella barra dei menu superiore.](../images/marketo/root_folder.png)
 
 Viene visualizzata l&#39;interfaccia [!DNL Runner]. Da qui, assicurarsi che tutte le caselle di controllo siano selezionate, quindi selezionare **[!DNL Run Namespaces and Schemas Autogeneration Utility]**.
 
-![run-generator](../images/marketo/run-generator.png)
+![L&#39;interfaccia Runner dell&#39;interfaccia utente di Postman con diverse richieste nella raccolta di spazi dei nomi e schemi selezionata e il pulsante &quot;Esegui spazi dei nomi e schemi&quot; evidenziato a destra.](../images/marketo/run_generator.png)
 
 In caso di esito positivo, la richiesta crea gli spazi dei nomi e gli schemi necessari per B2B.
 
@@ -106,7 +108,7 @@ La tabella seguente contiene informazioni sulla configurazione sottostante degli
 >
 >Scorri verso sinistra o destra per visualizzare l’intero contenuto della tabella.
 
-| Nome dello schema | Classe base | Gruppi di campi | [!DNL Profile] nello schema | Identità primaria | Spazio dei nomi dell’identità primaria | Identità secondaria | Spazio dei nomi dell’identità secondaria | Relazione | Note |
+| Nome dello schema | Classe base | Gruppi di campi | [!DNL Profile] nello schema | Identità primaria | Spazio dei nomi identità primaria | Identità secondaria | Spazio dei nomi dell’identità secondaria | Relazione | Note |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Account B2B | [Account aziendale XDM](../../../../xdm/classes/b2b/business-account.md) | Dettagli dell’account aziendale XDM | Abilitata | `accountKey.sourceKey` nella classe base | Account B2B | `extSourceSystemAudit.externalKey.sourceKey` nella classe base | Account B2B | <ul><li>`accountParentKey.sourceKey` nel gruppo di campi Dettagli account aziendale XDM</li><li>Proprietà di destinazione: `/accountKey/sourceKey`</li><li>Tipo: uno a uno</li><li>Schema di riferimento: account B2B</li><li>Spazio dei nomi: Account B2B</li></ul> |
 | Persona B2B | [Profilo individuale XDM](../../../../xdm/classes/individual-profile.md) | <ul><li>Dettagli persona aziendale XDM</li><li>Componenti della persona aziendale di XDM</li><li>IdentityMap</li><li>Dettagli di consenso e preferenze</li></ul> | Abilitata | `b2b.personKey.sourceKey` nel gruppo di campi Dettagli persona aziendale XDM | Persona B2B | <ol><li>`extSourceSystemAudit.externalKey.sourceKey` del gruppo di campi Dettagli persona aziendale XDM</li><li>`workEmail.address` del gruppo di campi Dettagli persona aziendale XDM</ol></li> | <ol><li>Persona B2B</li><li>E-mail</li></ol> | <ul><li>`personComponents.sourceAccountKey.sourceKey` del gruppo di campi Componenti persona aziendale XDM</li><li>Tipo: molti-a-uno</li><li>Schema di riferimento: account B2B</li><li>Spazio dei nomi: Account B2B</li><li>Proprietà di destinazione: accountKey.sourceKey</li><li>Nome di relazione dallo schema corrente: Account</li><li>Nome di relazione dallo schema di riferimento: Persone</li></ul> |
