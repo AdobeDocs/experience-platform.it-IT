@@ -3,7 +3,7 @@ title: Note sulla versione di Adobe Experience Platform - Aprile 2024
 description: Note sulla versione di Adobe Experience Platform di aprile 2024.
 exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
 source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1897'
 ht-degree: 100%
 
