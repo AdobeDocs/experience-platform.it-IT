@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Tipo di dati elemento elenco prodotti
 description: Scopri il tipo di dati XDM per l’elemento dell’elenco dei prodotti.
 exl-id: 056fdb5b-6782-4e29-9d62-90b270c05795
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: ba6c6eb2c6b0fc1dfc4e7440fd16a85bc7b46457
 workflow-type: tm+mt
-source-wordcount: '342'
-ht-degree: 18%
+source-wordcount: '338'
+ht-degree: 20%
 
 ---
 
@@ -28,7 +28,7 @@ I valori acquisiti in questo tipo di dati possono differire dal record del prodo
 | `discountAmount` | [!UICONTROL Doppio] | Se il prodotto è scontato, ciò rappresenta la differenza tra il prezzo regolare e il prezzo speciale del prodotto. |
 | `name` | [!UICONTROL Stringa] | Il nome visualizzato del prodotto presentato all’utente per questa visualizzazione prodotto. |
 | `priceTotal` | [!UICONTROL Doppio] | Il prezzo totale della riga del prodotto. |
-| `product` | [!UICONTROL Stringa] (URI) | URI `$id` dello schema XDM che acquisisce il prodotto stesso. |
+| `product` | [!UICONTROL Stringa] (URI) | L’identificatore XDM del prodotto stesso. |
 | `productAddMethod` | [!UICONTROL Stringa] | Il metodo utilizzato dal visitatore per aggiungere un elemento di prodotto all’elenco. |
 | `productImageUrl` | [!UICONTROL Stringa] | Un URL per l’immagine principale del prodotto. |
 | `quantity` | [!UICONTROL Numero intero] | Il numero di unità del prodotto che il cliente ha indicato di voler acquistare. |
