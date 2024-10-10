@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Sintassi SQL in Query Service
 description: Questo documento descrive e spiega la sintassi SQL supportata da Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 65eeeb1df1d512c4cd6c67892905a63cc1cc4fc5
+source-git-commit: 654a8b6a3f961514ef96eaec879697cde36f8b1b
 workflow-type: tm+mt
-source-wordcount: '4291'
+source-wordcount: '4265'
 ht-degree: 2%
 
 ---
@@ -577,7 +577,7 @@ Nella tabella seguente viene illustrata la differenza di risultati dell&#39;impo
 
 ### Risolvi snapshot di fallback in caso di errore {#resolve-fallback-snapshot-on-failure}
 
-L&#39;opzione `resolve_fallback_snapshot_on_failure` viene utilizzata per risolvere il problema di un ID di snapshot scaduto. I metadati dello snapshot scadono dopo due giorni e uno snapshot scaduto può invalidare la logica di uno script. Questo problema può verificarsi quando si utilizzano blocchi anonimi.
+L&#39;opzione `resolve_fallback_snapshot_on_failure` viene utilizzata per risolvere il problema di un ID di snapshot scaduto.
 
 Impostare l&#39;opzione `resolve_fallback_snapshot_on_failure` su true per sostituire uno snapshot con un ID snapshot precedente.
 

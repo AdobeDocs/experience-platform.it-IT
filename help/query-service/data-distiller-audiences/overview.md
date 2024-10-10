@@ -1,9 +1,9 @@
 ---
 title: Creare tipi di pubblico con SQL
 description: Scopri come utilizzare l’estensione del pubblico SQL in Data Distiller di Adobe Experience Platform per creare, gestire e pubblicare tipi di pubblico utilizzando i comandi SQL. Questa guida tratta tutti gli aspetti del ciclo di vita del pubblico, inclusa la creazione, l’aggiornamento e l’eliminazione di profili, e l’utilizzo di definizioni di pubblico basate sui dati per eseguire il targeting di destinazioni basate su file.
-source-git-commit: fbfd232c4e101f29ae01328c33763786a0e4a8cb
+source-git-commit: 8b9a46d9dd35a60fc3f3087d5fd3c4dad395b1aa
 workflow-type: tm+mt
-source-wordcount: '1267'
+source-wordcount: '1280'
 ht-degree: 1%
 
 ---
@@ -137,41 +137,103 @@ Questa sezione tratta le domande frequenti sulla creazione e la gestione di tipi
 
 +++Seleziona per visualizzare domande e risposte
 
+**Domande**:
+
 - La creazione di tipi di pubblico è supportata solo per set di dati piatti?
-- Sono supportati anche i set di dati nidificati, ma nel pubblico sono disponibili solo gli attributi flat.
+
++++Risposta
+
+Sono supportati anche i set di dati nidificati, ma nel pubblico sono disponibili solo gli attributi flat.
+
++++
 
 - La creazione di tipi di pubblico si traduce in uno o più set di dati o varia a seconda della configurazione?
-- Esiste una mappatura uno-a-uno tra un pubblico e un set di dati.
+
++++Risposta
+
+Esiste una mappatura uno-a-uno tra un pubblico e un set di dati.
+
++++
 
 - Il set di dati creato durante la creazione del pubblico è contrassegnato per Profilo?
-- No, il set di dati creato durante la creazione del pubblico non è contrassegnato per il profilo.
+
++++Risposta
+
+No, il set di dati creato durante la creazione del pubblico non è contrassegnato per il profilo.
+
++++
 
 - Il set di dati è creato nel data lake?
-- Sì, il set di dati viene creato nel data lake.
+
++++Risposta
+
+Sì, il set di dati viene creato nel data lake.
+
++++
 
 - Gli attributi nel pubblico possono essere utilizzati solo in destinazioni basate su file batch dell&#39;organizzazione? (Sì o No)
-- Sì, gli attributi nel pubblico sono limitati all’utilizzo solo nelle destinazioni basate su file batch dell’organizzazione.
+
++++Risposta
+
+Sì, gli attributi nel pubblico sono limitati all’utilizzo solo nelle destinazioni basate su file batch dell’organizzazione.
+
++++
 
 - È possibile creare un pubblico di tipi di pubblico che utilizza un pubblico di Data Distiller?
-- Sì, puoi creare un pubblico di tipi di pubblico che utilizza un pubblico di Data Distiller.
+
++++Risposta
+
+Sì, puoi creare un pubblico di tipi di pubblico che utilizza un pubblico di Data Distiller.
+
++++
 
 - Questi tipi di pubblico vengono visualizzati in Adobe Journey Optimizer? In caso contrario, cosa succede quando creo un nuovo pubblico nel generatore di regole che include tutti i membri del pubblico?
-- I tipi di pubblico di Data Distiller non sono attualmente disponibili in Adobe Journey Optimizer. Devi creare un nuovo pubblico nel generatore di regole di Adobe Journey Optimizer affinché sia disponibile in Adobe Journey Optimizer.
+
++++Risposta
+
+I tipi di pubblico di Data Distiller non sono attualmente disponibili in Adobe Journey Optimizer. Devi creare un nuovo pubblico nel generatore di regole di Adobe Journey Optimizer affinché sia disponibile in Adobe Journey Optimizer.
+
++++
 
 - Come si creano due tipi di pubblico di Data Distiller con pianificazioni diverse? Quanti set di dati vengono creati e sono contrassegnati per il profilo?
-- Verranno creati due set di dati poiché ogni pubblico ha un set di dati sottostante. Tuttavia, questi set di dati non sono contrassegnati per il profilo. I due set di dati vengono gestiti in base alle singole pianificazioni.
+
++++Risposta
+
+Verranno creati due set di dati poiché ogni pubblico ha un set di dati sottostante. Tuttavia, questi set di dati non sono contrassegnati per il profilo. I due set di dati vengono gestiti in base alle singole pianificazioni.
+
++++
 
 - Come si elimina un pubblico?
-- Per eliminare un pubblico, puoi utilizzare il comando [`DROP AUDIENCE`](#delete-audience) nell&#39;interfaccia della riga di comando oppure le [azioni rapide dell&#39;area di lavoro Tipi di pubblico](../../segmentation/ui/audience-portal.md#quick-actions). NOTA: i tipi di pubblico utilizzati nelle destinazioni a valle o dipendenti da altri tipi di pubblico non possono essere eliminati.
+
++++Risposta
+
+Per eliminare un pubblico, puoi utilizzare il comando [`DROP AUDIENCE`](#delete-audience) nell&#39;interfaccia della riga di comando oppure le [azioni rapide dell&#39;area di lavoro Tipi di pubblico](../../segmentation/ui/audience-portal.md#quick-actions). NOTA: i tipi di pubblico utilizzati nelle destinazioni a valle o dipendenti da altri tipi di pubblico non possono essere eliminati.
+
++++
 
 - Quando pubblico un pubblico su Profilo, quanto presto questo sarà disponibile nell’interfaccia utente del generatore di segmenti e quando sarà disponibile nelle Destinazioni?
-- Una volta completata l’esportazione dello snapshot del profilo, i profili possono essere visualizzati nel pubblico.
+
++++Risposta
+
+Una volta completata l’esportazione dello snapshot del profilo, i profili possono essere visualizzati nel pubblico.
+
++++
 
 - I tipi di pubblico di Data Distiller vengono eliminati ogni 30 giorni poiché sono tipi di pubblico esterni?
-- Sì, i tipi di pubblico di Data Distiller vengono eliminati ogni 30 giorni poiché sono tipi di pubblico esterni.
+
++++Risposta
+
+Sì, i tipi di pubblico di Data Distiller vengono eliminati ogni 30 giorni poiché sono tipi di pubblico esterni.
+
++++
 
 - I tipi di pubblico di Data Distiller vengono visualizzati nell’inventario dei tipi di pubblico?
-- Sì, i tipi di pubblico di Data Distiller vengono visualizzati nell’inventario Tipi di pubblico con il nome di origine &quot;Data Distiller&quot;.
+
++++Risposta
+
+Sì, i tipi di pubblico di Data Distiller vengono visualizzati nell’inventario Tipi di pubblico con il nome di origine &quot;Data Distiller&quot;.
+
++++
 
 +++
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Definire i campi XDM nell’interfaccia utente
 description: Scopri come definire i campi XDM nell’interfaccia utente di Experience Platform.
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: 89519918aa830dc09365fa80449099229dc475d5
+source-git-commit: 807ce0b0304fd73a455f228529d75cfc68769bf5
 workflow-type: tm+mt
-source-wordcount: '1734'
-ht-degree: 1%
+source-wordcount: '1607'
+ht-degree: 2%
 
 ---
 
@@ -88,8 +88,7 @@ Quando definisci un nuovo campo, nella barra a destra possono essere visualizzat
 
 | Field, proprietà | Tipi compatibili | Descrizione |
 | --- | --- | --- |
-| [!UICONTROL Tipo di valore mappa] | [!UICONTROL Mappa] | La proprietà [!UICONTROL Tipo di valore mappa] viene visualizzata nell&#39;interfaccia utente solo se si seleziona il valore Mappa dalle opzioni a discesa [!UICONTROL Tipo]. Puoi scegliere tra i tipi di valore Stringa e Intero per la Mappa.<br>![Editor schemi con i campi Tipo e Tipo di valore mappa evidenziati.](../../images/ui/fields/overview/map-type.png "Editor schemi con i campi Tipo e Tipo di valore mappa evidenziati."){width="100" zoomable="yes"}<br>Nota: qualsiasi tipo di dati mappa creato tramite l&#39;API che non sia un tipo String o Integer viene visualizzato come tipo di dati &#39;[!UICONTROL Complex]&#39;. Impossibile creare tipi di dati &#39;[!UICONTROL Complex]&#39; tramite l&#39;interfaccia utente. |
-| [!UICONTROL Valore predefinito] | [!UICONTROL Stringa], [!UICONTROL Doppio], [!UICONTROL Lungo], [!UICONTROL Intero], [!UICONTROL Breve], [!UICONTROL Byte], [!UICONTROL Booleano] | Valore predefinito assegnato a questo campo se non viene fornito alcun altro valore durante l’acquisizione. Questo valore deve essere conforme al tipo selezionato del campo.<br><br>I valori predefiniti non vengono salvati nel set di dati al momento dell&#39;acquisizione, in quanto possono cambiare nel tempo. I valori predefiniti impostati nello schema vengono dedotti dai servizi e dalle applicazioni Platform a valle quando leggono i dati dal set di dati. Ad esempio, quando si esegue una query sui dati utilizzando Query Service, se l&#39;attributo ha un valore NULL, ma il valore predefinito è impostato su `5` a livello di schema, è previsto che Query Service restituisca `5` invece di NULL. Tieni presente che al momento questo comportamento non è uniforme in tutti i servizi AEP. |
+| [!UICONTROL Tipo di valore mappa] | [!UICONTROL Mappa] | La proprietà [!UICONTROL Tipo di valore mappa] viene visualizzata nell&#39;interfaccia utente solo se si seleziona il valore Mappa dalle opzioni a discesa [!UICONTROL Tipo]. Puoi scegliere tra i tipi di valore Stringa e Intero per la Mappa.<br>![Editor di schemi in cui sono evidenziati i campi Tipo e Tipo di valore mappa.](../../images/ui/fields/overview/map-type.png "Editor di schemi in cui sono evidenziati i campi Tipo e Tipo di valore mappa."){width="100" zoomable="yes"}<br>Nota: qualsiasi tipo di dati mappa creato tramite l&#39;API che non sia un tipo String o Integer viene visualizzato come tipo di dati &#39;[!UICONTROL Complex]&#39;. Impossibile creare tipi di dati &#39;[!UICONTROL Complex]&#39; tramite l&#39;interfaccia utente. |
 | [!UICONTROL Pattern] | [!UICONTROL Stringa] | [espressione regolare](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) a cui il valore di questo campo deve conformarsi per essere accettato durante l&#39;acquisizione. |
 | [!UICONTROL Formato] | [!UICONTROL Stringa] | Seleziona da un elenco di formati predefiniti per le stringhe a cui il valore deve essere conforme. I formati disponibili includono: <ul><li>[[!UICONTROL data-ora]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL e-mail]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL nome host]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL uri-reference]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL modello-url]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL puntatore-json]](https://tools.ietf.org/html/rfc6901)</li></ul> |
 | [!UICONTROL Lunghezza minima] | [!UICONTROL Stringa] | Numero minimo di caratteri che la stringa deve contenere per consentire l’accettazione del valore durante l’acquisizione. |
