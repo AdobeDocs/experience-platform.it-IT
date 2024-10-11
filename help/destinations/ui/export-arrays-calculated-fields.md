@@ -3,9 +3,9 @@ title: Utilizzare i campi calcolati per esportare matrici come stringhe
 type: Tutorial
 description: Scopri come utilizzare i campi calcolati per esportare gli array da Real-Time CDP a destinazioni di archiviazione cloud come stringhe.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 6fec0432f71e58d0e17ac75121fb1028644016e1
+source-git-commit: ea3ff80ed1e1de37d5d96bff96f73183a6fa3927
 workflow-type: tm+mt
-source-wordcount: '1513'
+source-wordcount: '1520'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ Ottieni informazioni complete sui campi calcolati: cosa sono e perché sono impo
 
 ## Array e altri tipi di oggetti in Platform {#arrays-strings-other-objects}
 
-Ad Experience Platform, puoi utilizzare [schemi XDM](/help/xdm/home.md) per gestire diversi tipi di campo. In precedenza, era possibile esportare nelle destinazioni desiderate campi di tipo coppia chiave-valore semplici, come stringhe di Experience Platform. Un esempio di questo campo precedentemente supportato per l&#39;esportazione è `personalEmail.address`:`johndoe@acme.org`.
+Ad Experience Platform, puoi utilizzare [schemi XDM](/help/xdm/home.md) per gestire diversi tipi di campo. Prima di aggiungere il supporto per le esportazioni di array, era possibile esportare semplici campi di tipo coppia chiave-valore, come stringhe di Experience Platform, nelle destinazioni desiderate. Un esempio di questo campo precedentemente supportato per l&#39;esportazione è `personalEmail.address`:`johndoe@acme.org`.
 
 Altri tipi di campo in Experience Platform includono i campi array. Ulteriori informazioni sulla [gestione dei campi array nell&#39;interfaccia utente Experience Platform](/help/xdm/ui/fields/array.md). Oltre ai tipi di campo supportati in precedenza, è ora possibile esportare oggetti array come l&#39;esempio seguente, concatenati in una stringa utilizzando la funzione `array_to_string`.
 
@@ -146,15 +146,6 @@ First_Name,Last_Name,Personal_Email,Organization
 John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':456,'orgName':'Superstar Inc','founded':2004,'latestInteraction':1692921600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
 ```
 
-### Funzione `flattenArray` per esportare array appiattiti
-
-Utilizzare la funzione `flattenArray` per appiattire una matrice multidimensionale esportata. È possibile combinare questa funzione con la funzione `array_to_string` descritta in precedenza.
-
-Continuando con l&#39;oggetto array `organizations` dall&#39;alto, è possibile scrivere una funzione come `array_to_string('_', flattenArray(organizations))`. La funzione `array_to_string` appiattisce l&#39;array di input per impostazione predefinita in una stringa.
-
-L&#39;output risultante è lo stesso della funzione `array_to_string` descritta in precedenza.
-
-
 ### Funzione `filterArray` per esportare array filtrati
 
 Utilizzare la funzione `filterArray` per filtrare gli elementi di un array esportato. È possibile combinare questa funzione con la funzione `array_to_string` descritta in precedenza.
@@ -210,6 +201,14 @@ In questo caso, il file di output si presenta come di seguito. Nota come i tre e
 `First_Name,Last_Name,Personal_Email,Organization_Member_2023
 John,Doe, johndoe@acme.org,"Marketing_Sales_Finance_2023"
 ```
+
+### Funzione `flattenArray` per esportare array appiattiti
+
+Utilizzare la funzione `flattenArray` per appiattire una matrice multidimensionale esportata. È possibile combinare questa funzione con la funzione `array_to_string` descritta in precedenza.
+
+Continuando con l&#39;oggetto array `organizations` dall&#39;alto, è possibile scrivere una funzione come `array_to_string('_', flattenArray(organizations))`. La funzione `array_to_string` appiattisce l&#39;array di input per impostazione predefinita in una stringa.
+
+L&#39;output risultante è lo stesso della funzione `array_to_string` descritta più sopra.
 
 ### Funzione `coalesce` per esportare array {#coalesce-function-export-arrays}
 
