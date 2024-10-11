@@ -5,10 +5,10 @@ title: Endpoint API per processi di privacy
 description: Scopri come gestire i processi sulla privacy per le applicazioni Experience Cloud utilizzando l’API Privacy Service.
 role: Developer
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 341cc4cb150717f08b2e59412ef58fbd6f7b3450
+source-git-commit: 02a95212ff8a018b2b7f0a06978307d08a6915af
 workflow-type: tm+mt
 source-wordcount: '1821'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -42,7 +42,7 @@ GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={ST
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{REGULATION}` | Tipo di regolamento per cui eseguire la query. I valori accettati includono: <ul><li>`apa_aus`</li><li>`cpa_usa`</li><li>`cpra_usa`</li><li>`ctdpa_usa`</li><li>`fdbr_usa`</li><li>`gdpr` - Nota: viene utilizzato anche per le richieste relative alle normative **ccpa**.</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`mhmda_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_usa`</li><li>`pdpa_tha`</li><li>`tdpsa_usa`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>Per ulteriori informazioni sulle normative sulla privacy rappresentate dai valori sopra riportati, consulta la panoramica sulle [normative supportate](../regulations/overview.md). |
+| `{REGULATION}` | Tipo di regolamento per cui eseguire la query. I valori accettati includono: <ul><li>`apa_aus`</li><li>`cpa_usa`</li><li>`cpra_usa`</li><li>`ctdpa_usa`</li><li>`fdbr_usa`</li><li>`gdpr` - Nota: viene utilizzato anche per le richieste relative alle normative **ccpa**.</li><li>`hipaa_usa`</li><li>`icdpa_usa`</li><li>`lgpd_bra`</li><li>`mcdpa_usa`</li><li>`mhmda_usa`</li><li>`ndpa_usa`</li><li>`nhpa_usa`</li><li>`njdpa_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_usa`</li><li>`pdpa_tha`</li><li>`tdpsa_usa`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>Per ulteriori informazioni sulle normative sulla privacy rappresentate dai valori sopra riportati, consulta la panoramica sulle [normative supportate](../regulations/overview.md). |
 | `{PAGE}` | Pagina di dati da visualizzare, utilizzando la numerazione basata su 0. Il valore predefinito è `0`. |
 | `{SIZE}` | Il numero di risultati da visualizzare su ogni pagina. Il valore predefinito è `100` e il massimo è `1000`. Se si supera il valore massimo, l’API restituisce un errore 400 codici. |
 | `{status}` | Il comportamento predefinito consiste nell’includere tutti gli stati. Se si specifica un tipo di stato, la richiesta restituisce solo i processi di privacy che corrispondono a tale tipo di stato. I valori accettati includono: <ul><li>`processing`</li><li>`complete`</li><li>`error`</li></ul> |
@@ -172,7 +172,7 @@ curl -X POST \
 | `users` **(Obbligatorio)** | Matrice contenente una raccolta di almeno un utente di cui si desidera accedere o eliminare le informazioni. Un massimo di 1000 utenti può essere fornito in una singola richiesta. Ogni oggetto utente contiene le seguenti informazioni: <ul><li>`key`: identificatore di un utente utilizzato per qualificare gli ID di processo separati nei dati di risposta. È consigliabile scegliere una stringa univoca e facilmente identificabile per questo valore in modo che possa essere facilmente referenziato o cercato in un secondo momento.</li><li>`action`: array che elenca le azioni desiderate da eseguire sui dati dell&#39;utente. A seconda delle azioni che si desidera eseguire, l&#39;array deve includere `access`, `delete` o entrambi.</li><li>`userIDs`: raccolta di identità per l&#39;utente. Il numero di identità che un singolo utente può avere è limitato a nove. Ogni identità è costituita da un `namespace`, un `value` e un qualificatore dello spazio dei nomi (`type`). Per ulteriori dettagli su queste proprietà obbligatorie, vedere l&#39;[appendice](appendix.md).</li></ul> Per una spiegazione più dettagliata di `users` e `userIDs`, vedere la [guida alla risoluzione dei problemi](../troubleshooting-guide.md#user-ids). |
 | `include` **(Obbligatorio)** | Array di prodotti di Adobe da includere nell’elaborazione. Se questo valore manca o è vuoto, la richiesta verrà rifiutata. Includi solo i prodotti con cui l’organizzazione ha un’integrazione. Per ulteriori informazioni, consulta la sezione sui [valori di prodotto accettati](appendix.md) nell&#39;appendice. |
 | `expandIDs` | Proprietà facoltativa che, se impostata su `true`, rappresenta un&#39;ottimizzazione per l&#39;elaborazione degli ID nelle applicazioni (attualmente supportata solo da [!DNL Analytics]). Se omesso, il valore predefinito sarà `false`. |
-| `priority` | Proprietà facoltativa utilizzata da Adobe Analytics che imposta la priorità per l’elaborazione delle richieste. I valori accettati sono `normal` e `low`. Se `priority` viene omesso, il comportamento predefinito è `normal`. |
+| `priority` | Proprietà facoltativa utilizzata da Adobe Analytics che imposta la priorità per l’elaborazione delle richieste. I valori consentiti sono `normal` e `low`. Se `priority` viene omesso, il comportamento predefinito è `normal`. |
 | `mergePolicyId` | Quando si eseguono richieste di accesso a dati personali per Real-Time Customer Profile (`profileService`), è possibile fornire facoltativamente l&#39;ID del [criterio di unione](../../profile/merge-policies/overview.md) specifico che si desidera utilizzare per l&#39;unione degli ID. Specificando un criterio di unione, le richieste di privacy possono includere informazioni sul pubblico quando si restituiscono dati su un cliente. È possibile specificare un solo criterio di unione per richiesta. Se non viene fornito alcun criterio di unione, le informazioni di segmentazione non vengono incluse nella risposta. |
 | `regulation` **(Obbligatorio)** | Il regolamento per il lavoro sulla privacy. Sono accettati i seguenti valori: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>Per ulteriori informazioni sulle normative sulla privacy rappresentate dai valori sopra riportati, consulta la panoramica sulle [normative supportate](../regulations/overview.md). |
 

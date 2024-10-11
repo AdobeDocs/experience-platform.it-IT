@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Terminologia delle normative sulla privacy
 description: Questo documento fornisce le definizioni dei termini chiave relativi alle normative sulla privacy supportate da Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: be219530f33209cb4f3fe70425bb293edff4b309
+source-git-commit: c4ca3dc975b13e2dce2e12784480e53bd0c4ee02
 workflow-type: tm+mt
-source-wordcount: '2020'
+source-wordcount: '2301'
 ht-degree: 0%
 
 ---
@@ -91,6 +91,8 @@ Questo documento fornisce le definizioni dei termini chiave relativi alle normat
 
 **ID organizzazione IMS**: fa riferimento a un token di autorizzazione di Adobe per l&#39;autenticazione da servizio a servizio, che non richiede l&#39;accesso utente. Viene rilasciato a un client IMS e non ha un utente associato. Un client IMS necessita di un token di servizio per autorizzare le richieste back-channel tra i servizi. (Il termine &quot;token di sistema&quot; viene talvolta utilizzato per indicare il token di servizio).
 
+**[!DNL Iowa Consumer Data Protection Act]**: una legge sulla privacy che concede ai residenti dell&#39;Iowa il diritto di accesso, cancellazione e rinuncia alla vendita dei propri dati personali. L&#39;ICDPA si applica alle aziende che elaborano dati per più di 100.000 residenti dell&#39;Iowa o che traggono oltre il 50% dei ricavi dalle vendite di dati. Le esenzioni di rilievo includono le organizzazioni non profit e le istituzioni educative. La legge prevede un periodo di cura di 90 giorni per consentire alle aziende di correggere le violazioni prima che vengano imposte sanzioni.
+
 ## J
 
 ## K
@@ -105,7 +107,16 @@ Questo documento fornisce le definizioni dei termini chiave relativi alle normat
 
 **MHMDAa**: [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&amp;full=true) migliora i diritti di privacy per i consumatori relativi ai dati di integrità. Impone la divulgazione, il consenso dei consumatori e i diritti di cancellazione per i dati sanitari e vieta la vendita di dati sanitari senza autorizzazione. Inoltre, la legge rende illegale l&#39;uso di recinti geografici intorno alle strutture sanitarie.
 
+**[!DNL Montana Consumer Data Privacy Act]**: Questa legge conferisce ai residenti del Montana il diritto di accedere ai propri dati personali, di correggerli, cancellarli e richiederne copia. L&#39;MCDPA si applica alle aziende che trattano dati per oltre 50.000 consumatori del Montana e sottolinea la protezione dei dati personali sensibili, come le informazioni biometriche e genetiche. Impone trasparenza sulle pratiche di raccolta, condivisione e vendita dei dati.
+
 ## N
+
+**[!DNL Nebraska Data Protection Act]**: una legge sulla privacy che garantisce ai cittadini del Nebraska il diritto di accesso, correzione, cancellazione e rinuncia alla vendita dei propri dati personali. Si applica alle aziende che soddisfano specifiche soglie di elaborazione dati e ricavi. L&#39;NDPA impone inoltre alle imprese di attuare misure ragionevoli di sicurezza dei dati e offre un periodo di cura di 30 giorni per risolvere le violazioni prima che vengano applicate le sanzioni.
+
+**[!DNL New Hampshire Data Privacy Act]**: questo regolamento protegge i dati personali dei residenti del New Hampshire concedendo loro il diritto di accesso, cancellazione e trasferimento dei propri dati. Obbliga le aziende a divulgare le loro pratiche di raccolta e condivisione dei dati e consente ai consumatori di rinunciare alle vendite di dati. L&#39;NHDPA si applica alle aziende che soddisfano determinate soglie di elaborazione dei dati.
+
+**[!DNL New Jersey Data Protection Act]**: una legge completa sulla privacy dello stato che fornisce ai residenti del New Jersey i diritti di accesso, correzione ed eliminazione dei dati personali. Include meccanismi di rinuncia per la vendita di dati e la pubblicità mirata. L&#39;NJDPA si applica alle imprese che trattano grandi quantità di dati dei consumatori e richiede trasparenza nel modo in cui le imprese gestiscono le informazioni personali.
+
 
 ## O
 
