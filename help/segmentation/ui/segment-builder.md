@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: e74d04119593dddcaf6a5c710b685c606f5998d6
 workflow-type: tm+mt
 source-wordcount: '4955'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 
@@ -32,7 +32,7 @@ Gli elementi di base per le definizioni dei segmenti sono attributi ed eventi. I
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_summarydata"
 >title="Dati di riepilogo"
->abstract="I dati di riepilogo vengono visualizzati solo per gli attributi del profilo e <b>non</b> per gli attributi evento o pubblico.<br/><br/>I dati di riepilogo per gli attributi del profilo potrebbero non essere visualizzati nelle seguenti circostanze: <ol><li>Alcuni valori dell&#39;attributo contengono più di 100 caratteri.</li><li>L&#39;attributo contiene più di 3000 valori univoci.</li></ol>"
+>abstract="I dati di riepilogo vengono visualizzati solo per gli attributi del profilo e <b>non</b> per gli attributi evento o pubblico.<br/><br/>I dati di riepilogo per gli attributi del profilo potrebbero non essere visualizzati nelle seguenti circostanze: <ol><li>Alcuni valori dell’attributo contengono più di 100 caratteri.</li><li>L’attributo contiene più di 3000 valori univoci.</li></ol>"
 
 >[!NOTE]
 >

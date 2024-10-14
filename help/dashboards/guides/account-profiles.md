@@ -5,7 +5,7 @@ exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
 source-git-commit: 8caa10010109f9936271cb45a2166455f3678687
 workflow-type: tm+mt
 source-wordcount: '1827'
-ht-degree: 1%
+ht-degree: 5%
 
 ---
 
@@ -68,7 +68,7 @@ Le informazioni sul profilo account visualizzate nella scheda [!UICONTROL Dettag
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_accountprofiles_customersperaccountoverview"
 >title="Panoramica sui clienti per account"
->abstract="Questo widget drill-through fornisce informazioni sulla struttura dei dati B2B. Consente di identificare quanti profili account non hanno profili cliente collegati o a cui sono associati uno o più profili cliente.<ul><li>Clienti diretti: sono profili cliente collegati direttamente a un account tramite il percorso `personComponents`.</li><li>Clienti indiretti: sono profili cliente collegati a un account tramite il percorso `Account-Person`.</li></ul>"
+>abstract="Questo widget drill-through fornisce informazioni sulla struttura dei dati B2B. Consente di identificare quanti profili account non hanno profili cliente collegati o hanno uno o più profili cliente associati.<ul><li>Clienti diretti: sono profili cliente collegati direttamente a un account tramite il percorso `personComponents`.</li><li>Clienti indiretti: sono profili cliente collegati a un account tramite il percorso `Account-Person`.</li></ul>"
 
 Questo Adobe fornisce widget standard che puoi utilizzare per visualizzare diverse metriche relative ai profili del tuo account.
 
