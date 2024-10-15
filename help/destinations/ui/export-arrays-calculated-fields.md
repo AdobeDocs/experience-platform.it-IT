@@ -3,9 +3,9 @@ title: Utilizzare i campi calcolati per esportare matrici come stringhe
 type: Tutorial
 description: Scopri come utilizzare i campi calcolati per esportare gli array da Real-Time CDP a destinazioni di archiviazione cloud come stringhe.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: ea3ff80ed1e1de37d5d96bff96f73183a6fa3927
+source-git-commit: 849d42e36921e60b6ac3a5e89336b954e64a35d7
 workflow-type: tm+mt
-source-wordcount: '1520'
+source-wordcount: '1556'
 ht-degree: 0%
 
 ---
@@ -76,6 +76,16 @@ Tieni presente le seguenti limitazioni note attualmente applicabili a questa fun
 [Connetti](/help/destinations/ui/connect-destination.md) a una destinazione di archiviazione cloud desiderata, segui i [passaggi di attivazione per le destinazioni di archiviazione cloud](/help/destinations/ui/activate-batch-profile-destinations.md) e procedi al passaggio [mappatura](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 
 ## Come esportare i campi calcolati {#how-to-export-calculated-fields}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_export_arrays_control"
+>title="Abilita schema di output gerarchico"
+>abstract="Attiva per esportare strutture gerarchiche come array."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_export_arrays_calculated_field_disabled"
+>title="Aggiungi campi calcolati disabilitati"
+>abstract="Questo controllo è disattivato perché è stata selezionata l&#39;esportazione di strutture piatte durante la connessione alla destinazione."
 
 Nel passaggio di mappatura del flusso di lavoro di attivazione per le destinazioni di archiviazione cloud, seleziona **[!UICONTROL Aggiungi campo calcolato]**.
 
