@@ -5,10 +5,10 @@ breadcrumb-title: Guida alle dashboard
 user-guide-description: Scopri come visualizzare i dati in Experience Platform tramite dashboard personalizzabili.
 feature: Dashboards
 role: Developer,User
-source-git-commit: 06e319a6f7e2294a9c5daea0f41e89a09d93efd2
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
-source-wordcount: '134'
-ht-degree: 35%
+source-wordcount: '128'
+ht-degree: 37%
 
 ---
 
@@ -18,21 +18,18 @@ ht-degree: 35%
 * [Panoramica delle dashboard](home.md)
 * [Autorizzazioni di accesso al dashboard](permissions.md)
 * [Inventario dei dashboard](inventory.md)
-* [Dashboard](user-defined-dashboards.md)
+* [Dashboard standard](standard-dashboards.md)
 * [Scarica dashboard in PDF](download.md)
-* Data Distiller {#data-distiller}
-   * Approfondimenti SQl per report app estesi {#sql-insights}
-      * [Panoramica](data-distiller/sql-insights/overview.md)
-   * Modalità Query Pro {#query-pro-mode}
-      * [Panoramica](data-distiller/query-pro-mode/overview.md)
-      * Filtri {#filters}
-         * [Filtro data](data-distiller/query-pro-mode/filters/date-filter.md)
-         * [Filtro globale](data-distiller/query-pro-mode/filters/global-filter.md)
-      * [Drill-through](data-distiller/query-pro-mode/drill-through.md)
-      * [Visualizza altro](data-distiller/query-pro-mode/view-more.md)
-      * [Visualizza SQL](data-distiller/query-pro-mode/view-sql.md)
-      * [Scarica come CSV](data-distiller/query-pro-mode/download-csv.md)
-      * [Esporta come PDF](data-distiller/query-pro-mode/export-pdf.md)
+* SQL Insights: modalità pro query {#sql-insights-query-pro-mode}
+   * [Panoramica](sql-insights-query-pro-mode/overview.md)
+   * Filtri {#filters}
+      * [Filtro data](sql-insights-query-pro-mode/filters/date-filter.md)
+      * [Filtro globale](sql-insights-query-pro-mode/filters/global-filter.md)
+   * [Drill-through](sql-insights-query-pro-mode/drill-through.md)
+   * [Visualizza altro](sql-insights-query-pro-mode/view-more.md)
+   * [Visualizza SQL](sql-insights-query-pro-mode/view-sql.md)
+   * [Scarica come CSV](sql-insights-query-pro-mode/download-csv.md)
+   * [Esporta come PDF](sql-insights-query-pro-mode/export-pdf.md)
 * Dashboard disponibili {#guides}
    * [Profili](guides/profiles.md)
    * [Profili account](guides/account-profiles.md)

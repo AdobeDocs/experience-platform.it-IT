@@ -2,7 +2,7 @@
 title: Audiences Insights
 description: Scopri il linguaggio SQL che attiva le informazioni sul pubblico e utilizza queste query per generare informazioni personalizzate per esplorare ulteriormente i dati sul pubblico da Adobe Experience Platform.
 exl-id: 99624234-c4e1-44bb-9567-505bc0c4723e
-source-git-commit: 34eb9151cc6bb8551553b0a8427e58871acb4dbb
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1124'
 ht-degree: 3%
@@ -17,7 +17,7 @@ Comprendi le informazioni sul pubblico accedendo all’SQL che li alimenta, quin
 
 Per ulteriori informazioni su come adattare l&#39;istruzione SQL delle informazioni direttamente tramite l&#39;interfaccia utente di Platform, vedere la [Visualizza documentazione SQL](../view-sql.md).
 
-Tutte le informazioni seguenti sono disponibili per l&#39;utilizzo come parte del [dashboard Tipi di pubblico](../guides/audiences.md) o di un [dashboard definito dall&#39;utente](../user-defined-dashboards.md) personalizzato. Consulta la [panoramica sulla personalizzazione](../customize/overview.md) per istruzioni su come personalizzare il dashboard o [creare e modificare nuovi widget](../customize/custom-widgets.md) nella libreria di widget e [dashboard definito dall&#39;utente](../user-defined-dashboards.md#create-widget).
+Tutte le informazioni seguenti sono disponibili per l&#39;utilizzo come parte del [dashboard Tipi di pubblico](../guides/audiences.md) o di un [dashboard definito dall&#39;utente](../standard-dashboards.md) personalizzato. Consulta la [panoramica sulla personalizzazione](../customize/overview.md) per istruzioni su come personalizzare il dashboard o [creare e modificare nuovi widget](../customize/custom-widgets.md) nella libreria di widget e [dashboard definito dall&#39;utente](../standard-dashboards.md#create-widget).
 
 Tutte le informazioni seguenti sono disponibili per l&#39;utilizzo come parte del [dashboard Tipi di pubblico](../guides/audiences.md) o di un dashboard personalizzato.
 

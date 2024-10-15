@@ -2,7 +2,7 @@
 title: Informazioni SQL
 description: Scopri i casi d’uso, le funzionalità essenziali e i passaggi necessari per sviluppare un dashboard di SQL Insights con Data Distiller. Scopri in che modo la funzionalità SQL Insights in Data Distiller può migliorare la trasparenza e ottenere informazioni operative attraverso diverse dimensioni, come profili, tipi di pubblico, campagne, percorsi, autorizzazioni e consenso.
 exl-id: f807d0fd-c8ec-42d4-96a0-5ffc5681943b
-source-git-commit: 4e78a7983fba492ded866a8f1fc6f98e20510b2b
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 0%
@@ -13,13 +13,13 @@ ht-degree: 0%
 
 Con SQL Insights di Data Distiller puoi creare modelli di dati di reporting personalizzati per estrarre informazioni più approfondite, ottimizzare le strategie e adattare le analisi per soddisfare esigenze aziendali specifiche. Utilizza la funzionalità SQL Insights per migliorare la trasparenza e ottenere informazioni operative dai dati Adobe Experience Platform in dimensioni quali profili, tipi di pubblico, campagne, percorsi, autorizzazioni e consenso. Questa funzionalità offre una soluzione versatile e adattiva per adattare i modelli di dati di reporting della tua organizzazione alle tue esigenze aziendali specifiche.
 
-Per [visualizzare SQL Insights](../../../dashboards/data-distiller/sql-insights/overview.md) puoi utilizzare la [modalità query pro](../../../dashboards/data-distiller/query-pro-mode/overview.md) per eseguire analisi complesse con query SQL personalizzate e trasformare i tuoi dati in grafici facilmente interpretabili. Utilizza la modalità query pro per creare informazioni e visualizzazioni personalizzate sulle dashboard e soddisfare i tipi di pubblico tecnici e non, scaricando le informazioni come file CSV.
+Per [visualizzare SQL Insights](../../../dashboards/sql-insights-query-pro-mode/overview.md) puoi utilizzare la [modalità query pro](../../../dashboards/sql-insights-query-pro-mode/overview.md) per eseguire analisi complesse con query SQL personalizzate e trasformare i tuoi dati in grafici facilmente interpretabili. Utilizza la modalità query pro per creare informazioni e visualizzazioni personalizzate sulle dashboard e soddisfare i tipi di pubblico tecnici e non, scaricando le informazioni come file CSV.
 
 Questo documento descrive i casi d’uso, le funzionalità essenziali e i passaggi necessari per sviluppare un dashboard di SQL Insights con Data Distiller.
 
 ## Prerequisiti
 
-Questa esercitazione utilizza dashboard definite dall’utente per visualizzare i dati dal modello dati personalizzato nell’interfaccia utente di Platform. Per ulteriori informazioni su questa funzione, consulta la [documentazione delle dashboard definite dall&#39;utente](../../../dashboards/user-defined-dashboards.md).
+Questa esercitazione utilizza dashboard definite dall’utente per visualizzare i dati dal modello dati personalizzato nell’interfaccia utente di Platform. Per ulteriori informazioni su questa funzione, consulta la [documentazione delle dashboard definite dall&#39;utente](../../../dashboards/standard-dashboards.md).
 
 ## Introduzione
 
@@ -72,7 +72,7 @@ Per sviluppare un dashboard di SQL Insights all’interno di Data Distiller, seg
 1. **Esplorazione di query ad hoc:** Eseguire query ad hoc `SELECT` per esplorare i dati non elaborati nel data lake. Ciò consente di eseguire al volo analisi dei dati esplorative per sperimentare e convalidare i dati laddove i risultati delle query non sono memorizzati nel data lake.
 1. **Utilizzo query batch:** Utilizzare query batch per [creare processi pianificati](../../api/scheduled-queries.md#create-a-new-scheduled-query) per la generazione di tabelle di aggregazione approfondimenti, garantendo un approccio sistematico e automatizzato all&#39;elaborazione dei dati. Le query batch eseguono `INSERT TABLE AS SELECT` e `CREATE TABLE AS SELECT` query per pulire, modellare, manipolare e arricchire i dati. I risultati di queste query vengono memorizzati nel data lake.
 1. **Caricamento delle informazioni aggregate:** Carica le informazioni aggregate generate nell&#39;archivio accelerato e utilizza SQL per testare le query e garantire l&#39;accuratezza e l&#39;efficienza del recupero dei dati. Per informazioni su come [eseguire query senza stato nell&#39;archivio accelerato](../../api/accelerated-queries.md), consulta la documentazione.
-1. **Accesso e integrazione:** Accesso senza problemi alle informazioni archiviate nell&#39;archivio accelerato tramite l&#39;integrazione con Adobe Experience Platform [Dashboard definiti dall&#39;utente](../../../dashboards/user-defined-dashboards.md) o altri strumenti di Business Intelligence preferiti (BI). Queste integrazioni con client di terze parti facilitano un’esperienza coerente e intuitiva per gli utenti.
+1. **Accesso e integrazione:** Accesso senza problemi alle informazioni archiviate nell&#39;archivio accelerato tramite l&#39;integrazione con Adobe Experience Platform [Dashboard definiti dall&#39;utente](../../../dashboards/standard-dashboards.md) o altri strumenti di Business Intelligence preferiti (BI). Queste integrazioni con client di terze parti facilitano un’esperienza coerente e intuitiva per gli utenti.
 
 ![Un&#39;infografica che illustra i quattro passaggi per SQL Insights in Data Distiller.](../../images/data-distiller/sql-insights/steps-to-customizable-insights.png)
 

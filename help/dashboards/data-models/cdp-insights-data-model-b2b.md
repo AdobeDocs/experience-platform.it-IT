@@ -1,10 +1,10 @@
 ---
 title: Edizione B2B di Real-time Customer Data Platform Insights Data Model
-description: Scopri come utilizzare le query SQL con Real-time Customer Data Platform Insights Data Models (B2B Edition) per personalizzare i rapporti di Real-Time CDP per i casi d’uso di marketing e KPI.
+description: Scopri come utilizzare le query SQL con Real-time Customer Data Platform Insights Data Models (B2B edition) per personalizzare i rapporti di Real-Time CDP per i casi d’uso di marketing e KPI.
 badgeB2B: label="Edizione B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Edizione B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 7b77ca19-e4c6-4e93-b9e7-c4ef77d6d6d1
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Edizione B2B del modello dati di Real-time Customer Data Platform Insights
 
-Il modello dati di Real-time Customer Data Platform Insights per l&#39;edizione B2B espone i modelli di dati e le istruzioni SQL che alimentano le informazioni per [profili account](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-overview). Puoi personalizzare questi modelli di query SQL per creare rapporti Real-Time CDP per i casi d’uso di marketing B2B e indicatori di prestazioni chiave (KPI, Key Performance Indicator). Queste informazioni possono quindi essere utilizzate come widget personalizzati per le dashboard.
+Il modello dati di Real-time Customer Data Platform Insights per B2B edition espone i modelli di dati e le istruzioni SQL che alimentano le informazioni per [profili account](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-overview). Puoi personalizzare questi modelli di query SQL per creare rapporti Real-Time CDP per i casi d’uso di marketing B2B e indicatori di prestazioni chiave (KPI, Key Performance Indicator). Queste informazioni possono quindi essere utilizzate come widget personalizzati per le dashboard.
 
 >[!AVAILABILITY]
 >
@@ -25,7 +25,7 @@ See the query accelerated store reporting insights documentation to learn [how t
 
 ## Prerequisiti
 
-Questa guida richiede una buona conoscenza delle dashboard personalizzate. Leggi la documentazione su [come creare un dashboard personalizzato](../user-defined-dashboards.md) prima di continuare con questa guida.
+Questa guida richiede una buona conoscenza delle dashboard personalizzate. Leggi la documentazione su [come creare un dashboard personalizzato](../standard-dashboards.md) prima di continuare con questa guida.
 
 ## Rapporti di approfondimento B2B di Real-Time CDP e casi d’uso {#B2B-insight-reports-and-use-cases}
 

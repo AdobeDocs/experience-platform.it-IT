@@ -1,11 +1,11 @@
 ---
 title: Note sulla versione di Adobe Experience Platform di settembre 2022
-description: Note sulla versione di settembre 2022 per Adobe Experience Platform.
+description: Note sulla versione di Adobe Experience Platform di settembre 2022.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '2762'
-ht-degree: 18%
+ht-degree: 26%
 
 ---
 
@@ -26,7 +26,7 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 - [Destinazioni](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Identity Service](#identity-service)
-- [Servizio query](#query-service)
+- [Query Service](#query-service)
 - [Origini](#sources)
 
 ## Controllo degli accessi basato su attributi {#abac}
@@ -35,16 +35,16 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 >
 >Il controllo degli accessi basato su attributi verrà abilitato a partire da ottobre 2022. Se desideri essere uno dei primi ad adottare, contatta il rappresentante del tuo Adobe.
 
-Il controllo degli accessi basato sugli attributi è una funzionalità di Adobe Experience Platform che offre ai brand attenti alla privacy una maggiore flessibilità per gestire l’accesso degli utenti. È possibile assegnare singoli oggetti, come campi e segmenti dello schema, ai ruoli utente. Questa funzione ti consente di concedere o revocare l’accesso a singoli oggetti per specifici utenti di Platform nella tua organizzazione.
+Il controllo degli accessi basato sugli attributi è una funzionalità di Adobe Experience Platform che offre ai brand attenti alla privacy una maggiore flessibilità per gestire l’accesso degli utenti. È possibile assegnare singoli oggetti, come campi e segmenti dello schema, ai ruoli utente. Questa funzione consente di concedere o revocare l’accesso a singoli oggetti per specifici utenti di Platform nell’organizzazione.
 
-Tramite il controllo dell’accesso basato su attributi, gli amministratori dell’organizzazione possono controllare l’accesso degli utenti a, dati personali sensibili (SPD), informazioni personali (PII) e altri tipi di dati personalizzati in tutti i flussi di lavoro e le risorse di Platform. Gli amministratori possono definire ruoli utente con accesso solo a campi e dati specifici che corrispondono a tali campi.
+Tramite il controllo dell’accesso basato su attributi, gli amministratori dell’organizzazione possono controllare l’accesso degli utenti a dati personali sensibili (SPD), informazioni personali (PII) e altri tipi di dati personalizzati in tutti i flussi di lavoro e le risorse di Platform. Gli amministratori possono definire ruoli utente con accesso solo a campi e dati specifici che corrispondono a tali campi.
 
 | Funzione | Descrizione |
 | --- | --- |
 | Controllo degli accessi basato su attributi | Il controllo dell’accesso basato su attributi consente di etichettare i campi e i segmenti dello schema Experience Data Model (XDM) con etichette che definiscono gli ambiti di utilizzo organizzativi o dei dati. In parallelo, gli amministratori possono utilizzare l’interfaccia di amministrazione di utenti e ruoli per definire i criteri di accesso che coprono i campi e i segmenti dello schema XDM per gestire meglio l’accesso concesso a utenti o gruppi di utenti (utenti interni, esterni o di terze parti). Per ulteriori informazioni, vedere la [panoramica sul controllo degli accessi basato su attributi](../../access-control/abac/overview.md). |
 | Autorizzazioni | Autorizzazioni è l’area di Experience Cloud in cui gli amministratori possono definire i ruoli utente e i criteri di accesso per gestire le autorizzazioni di accesso per funzioni e oggetti all’interno di un’applicazione di prodotto. Tramite le Autorizzazioni, puoi creare e gestire i ruoli, assegnare le autorizzazioni per le risorse desiderate per questi ruoli e creare criteri per sfruttare le etichette e definire quali ruoli utente hanno accesso a risorse Platform specifiche. Le autorizzazioni ti consentono inoltre di gestire le etichette, le sandbox e gli utenti associati a un ruolo specifico. Per ulteriori informazioni, vedere la [Guida dell&#39;interfaccia utente delle autorizzazioni](../../access-control/abac/ui/browse.md). |
 
-Per ulteriori informazioni sul controllo degli accessi basato su attributi, vedere la [panoramica sul controllo degli accessi basato su attributi](../../access-control/abac/overview.md). Per una guida completa sul flusso di lavoro di controllo degli accessi basato su attributi, leggere la [guida end-to-end per il controllo degli accessi basato su attributi](../../access-control/abac/end-to-end-guide.md).
+Per ulteriori informazioni sul controllo degli accessi basato su attributi, consulta la [panoramica sul controllo degli accessi basato su attributi](../../access-control/abac/overview.md). Per una guida completa sul flusso di lavoro del controllo degli accessi basato su attributi, leggi la [guida completa per il controllo degli accessi basato su attributi](../../access-control/abac/end-to-end-guide.md).
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
 
@@ -93,7 +93,7 @@ Adobe Experience Platform fornisce più dashboard attraverso le quali è possibi
 | Funzione | Descrizione |
 | --- | --- |
 | Etichetta in uso | Quando viene visualizzata nella libreria dei widget, l’etichetta in uso identifica facilmente la presenza di widget esistenti nel dashboard. Questo consente di evitare facilmente la duplicazione, anche se è comunque possibile aggiungere lo stesso widget più di una volta, se lo si desidera. |
-| Dashboard definite dall’utente | Le dashboard definite dall’utente consentono di velocizzare le informazioni approfondite e personalizzare le visualizzazioni creando e gestendo dashboard personalizzate. Con le dashboard definite dall’utente puoi creare, aggiungere e modificare widget personalizzati per visualizzare metriche chiave rilevanti per la tua organizzazione. Per ulteriori informazioni, consulta la [guida alle funzionalità](../../dashboards/user-defined-dashboards.md). |
+| Dashboard definite dall’utente | Le dashboard definite dall’utente consentono di velocizzare le informazioni approfondite e personalizzare le visualizzazioni creando e gestendo dashboard personalizzate. Con le dashboard definite dall’utente puoi creare, aggiungere e modificare widget personalizzati per visualizzare metriche chiave rilevanti per la tua organizzazione. Per ulteriori informazioni, consulta la [guida alle funzionalità](../../dashboards/standard-dashboards.md). |
 | Modello dati di Customer Data Platform Insights | La funzione Customer Data Platform (CDP) Insights Data Model espone i modelli di dati e le istruzioni SQL che alimentano le informazioni per vari widget di profilo, destinazione e segmentazione. Puoi personalizzare questi modelli di query SQL per creare rapporti CDP per i casi di utilizzo degli indicatori di prestazioni chiave e di marketing. Queste informazioni possono quindi essere utilizzate come widget personalizzati per le dashboard definite dall’utente. Per ulteriori informazioni, consulta la [guida alle funzioni del modello dati per approfondimenti CDP](../../dashboards/data-models/cdp-insights-data-model-b2c.md). |
 | Widget report di sovrapposizione pubblico | Questo widget è disponibile per entrambi i dashboard [!UICONTROL Profili] e [!UICONTROL Segmenti]. Il rapporto fornisce un elenco ordinato di tipi di pubblico classificati in base alle percentuali di sovrapposizione più alte o più basse per il segmento scelto. Dal dashboard [!UICONTROL Profili] puoi filtrare e visualizzare la sovrapposizione dei tipi di pubblico tramite il criterio di unione da tutti i segmenti disponibili. I dashboard [!UICONTROL Segmenti] ti consentono di filtrare la sovrapposizione del pubblico per un segmento specifico.<br>Utilizza questa analisi per creare nuovi segmenti ad alte prestazioni ed evitare di inviare lo stesso pubblico a destinazioni diverse. Il rapporto consente inoltre di identificare informazioni nascoste per migliorare la segmentazione o individuare profili univoci da perseguire. Per ulteriori informazioni, leggi le rispettive guide dei widget [profili](../../dashboards/guides/profiles.md#audience-overlap-report) e [segmenti](../../dashboards/guides/audiences.md#audience-overlap-report). |
 
@@ -107,9 +107,9 @@ Adobe Experience Platform fornisce una suite di tecnologie che consente di racco
 
 | Funzione | Descrizione |
 | --- | --- |
-| Integrazione della navigazione a sinistra nell’interfaccia utente di Platform | Tutte le funzionalità che in precedenza erano esclusive dell&#39;interfaccia utente di Data Collection (inclusi tag, inoltro eventi e flussi di dati) sono ora disponibili anche nella barra di navigazione a sinistra di Experience Platform, nella categoria **[!UICONTROL Raccolta dati]**. Questo elimina la necessità di passare da un’interfaccia utente all’altra quando si lavora con le funzionalità di raccolta dati in Platform. |
+| Integrazione della navigazione a sinistra nell’interfaccia utente di Platform | Tutte le funzionalità che in precedenza erano esclusive dell&#39;interfaccia utente di Data Collection (inclusi tag, inoltro eventi e flussi di dati) sono ora disponibili anche nella barra di navigazione a sinistra di Experience Platform, nella categoria **[!UICONTROL Raccolta dati]**. Questo elimina la necessità di passare da un’interfaccia utente all’altra quando si utilizzano le funzionalità di raccolta dati in Platform. |
 | Attribuzione degli utenti nei tag e nell’inoltro degli eventi | Quando si elencano le [!UICONTROL proprietà] disponibili nei tag e nell&#39;inoltro degli eventi, ogni proprietà elencata ora viene visualizzata quando è stato eseguito l&#39;ultimo aggiornamento e quale utente ha effettuato l&#39;aggiornamento. |
-| [[!DNL Snap Conversions API] estensione](https://exchange.adobe.com/apps/ec/108550) per l&#39;inoltro degli eventi | È ora possibile inviare dati a [!DNL Snapchat Conversions API] utilizzando un&#39;estensione [inoltro eventi](../../tags/ui/event-forwarding/overview.md). Per ulteriori informazioni su come autenticare e utilizzare l&#39;API, consulta la [[!DNL Snapchat Marketing API] documentazione](https://marketingapi.snapchat.com/docs/conversion.html). |
+| [[!DNL Snap Conversions API] estensione](https://exchange.adobe.com/apps/ec/108550) per l&#39;inoltro degli eventi | È ora possibile inviare dati a [!DNL Snapchat Conversions API] utilizzando un&#39;estensione [inoltro eventi](../../tags/ui/event-forwarding/overview.md). Per ulteriori informazioni su come autenticarsi e utilizzare l’API, consulta la [[!DNL Snapchat Marketing API] documentazione](https://marketingapi.snapchat.com/docs/conversion.html?lang=it). |
 | [User-Agent Client Hints in Web SDK](/help/web-sdk/use-cases/client-hints.md) | Web SDK ora supporta [User-Agent Client Hints](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Gli hint client consentono ai proprietari del sito Web di accedere a gran parte delle stesse informazioni disponibili nella stringa [!DNL User-Agent], ma in modo più sicuro per la privacy. |
 | [Migrazione dell&#39;SDK Web pagina per pagina](../../web-sdk/home.md#migrating-to-web-sdk) | È ora possibile migrare le proprietà Web esistenti da altre librerie Experience Cloud, ad esempio [!DNL at.js], a Web SDK, una pagina alla volta. Questo consente un approccio graduale alla migrazione dell’SDK web, senza la necessità di eseguire la migrazione di tutte le pagine contemporaneamente. |
 | [[!DNL Adobe Journey Optimizer] supporto per gli stream di dati](../../datastreams/overview.md#aep) | Il servizio Adobe Experience Platform per gli stream di dati ora supporta [!DNL Adobe Journey Optimizer]. Questa opzione consente di utilizzare i canali in entrata basati su Web e app in [!DNL Adobe Journey Optimizer]. |
@@ -190,7 +190,7 @@ XDM è una specifica open-source che fornisce strutture e definizioni comuni (sc
 
 {style="table-layout:auto"}
 
-Per ulteriori informazioni su XDM in Platform, consulta la [Panoramica sul sistema XDM](../../xdm/home.md).
+Per ulteriori informazioni su XDM in Platform, consulta la [panoramica sul sistema XDM](../../xdm/home.md).
 
 ## Identity Service {#identity-service}
 
@@ -206,9 +206,9 @@ Il servizio Adobe Experience Platform Identity consente di ottenere una visione 
 
 Per ulteriori informazioni su Identity Service, consulta la [Panoramica di Identity Service](../../identity-service/home.md).
 
-## Servizio query {#query-service}
+## Query Service {#query-service}
 
-Il Servizio query consente di utilizzare SQL standard per eseguire query sui dati in Adobe Experience Platform.[!DNL Data Lake] È possibile unire qualsiasi set di dati da [!DNL Data Lake] e acquisire i risultati della query come nuovo set di dati da utilizzare nel reporting, in Data Science Workspace o per l&#39;acquisizione in Real-Time Customer Profile.
+Il Servizio query consente di utilizzare SQL standard per eseguire query sui dati in Adobe Experience Platform [!DNL Data Lake]. Puoi unire qualsiasi set di dati dal [!DNL Data Lake] e acquisire i risultati della query sotto forma di nuovo set di dati da utilizzare nel reporting, in Data Science Workspace o da acquisire nel profilo cliente in tempo reale.
 
 **Funzioni aggiornate**
 

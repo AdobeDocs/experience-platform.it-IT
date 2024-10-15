@@ -4,7 +4,7 @@ description: Scopri il linguaggio SQL che attiva le informazioni sul profilo acc
 badgeB2B: label="Edizione B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Edizione B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '549'
 ht-degree: 1%
@@ -19,7 +19,7 @@ Grazie all’accesso al linguaggio SQL che potenzia le tue conoscenze, potrai co
 
 <!-- Add link to new generate insights with SQL workflow doc after April release.-->
 
-Tutte le informazioni seguenti sono disponibili per l&#39;utilizzo come parte del [dashboard dei profili account](../guides/account-profiles.md) o di un [dashboard personalizzato](../user-defined-dashboards.md). Consulta la [panoramica sulla personalizzazione](../customize/overview.md) per istruzioni su come personalizzare il dashboard o [creare e modificare nuovi widget](../customize/custom-widgets.md) nella libreria di widget e [dashboard definito dall&#39;utente](../user-defined-dashboards.md#create-widget).
+Tutte le informazioni seguenti sono disponibili per l&#39;utilizzo come parte del [dashboard dei profili account](../guides/account-profiles.md) o di un [dashboard personalizzato](../standard-dashboards.md). Consulta la [panoramica sulla personalizzazione](../customize/overview.md) per istruzioni su come personalizzare il dashboard o [creare e modificare nuovi widget](../customize/custom-widgets.md) nella libreria di widget e [dashboard definito dall&#39;utente](../standard-dashboards.md#create-widget).
 
 ## Profili account aggiunti {#account-profiles-added}
 

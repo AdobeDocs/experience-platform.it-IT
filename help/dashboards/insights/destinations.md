@@ -2,7 +2,7 @@
 title: Approfondimenti destinazioni
 description: Scopri le istruzioni SQL che alimentano gli insight sulle destinazioni e utilizza queste query per generare insights personalizzati per esplorare ulteriormente l’attivazione dei dati da Adobe Experience Platform.
 exl-id: 762a9960-e7a5-4796-80c7-ef745157cc04
-source-git-commit: d4baf6cfaa772e5d46cef470fb35818c7af868b1
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1139'
 ht-degree: 3%
@@ -17,7 +17,7 @@ Comprendi le informazioni sulla destinazione accedendo all’SQL che le alimenta
 
 Per ulteriori informazioni su come adattare l&#39;istruzione SQL delle informazioni direttamente tramite l&#39;interfaccia utente di Platform, vedere la [Visualizza documentazione SQL](../view-sql.md).
 
-Tutte le informazioni seguenti sono disponibili per l&#39;utilizzo come parte del [dashboard delle destinazioni](../guides/destinations.md) o di un [dashboard personalizzato definito dall&#39;utente](../user-defined-dashboards.md). Consulta la [panoramica sulla personalizzazione](../customize/overview.md) per istruzioni su come personalizzare il dashboard o [creare e modificare nuovi widget](../customize/custom-widgets.md) nella libreria di widget e [dashboard definito dall&#39;utente](../user-defined-dashboards.md#create-widget).
+Tutte le informazioni seguenti sono disponibili per l&#39;utilizzo come parte del [dashboard delle destinazioni](../guides/destinations.md) o di un [dashboard personalizzato definito dall&#39;utente](../standard-dashboards.md). Consulta la [panoramica sulla personalizzazione](../customize/overview.md) per istruzioni su come personalizzare il dashboard o [creare e modificare nuovi widget](../customize/custom-widgets.md) nella libreria di widget e [dashboard definito dall&#39;utente](../standard-dashboards.md#create-widget).
 
 ## Tipi di pubblico attivati {#activated-audiences}
 

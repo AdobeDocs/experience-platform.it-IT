@@ -2,7 +2,7 @@
 title: Guida di Informazioni su Query Accelerated Store Reporting
 description: Scopri come creare un modello dati per le informazioni di reporting tramite Query Service da utilizzare con dati di archivio accelerati e dashboard definiti dall’utente.
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1034'
 ht-degree: 0%
@@ -19,7 +19,7 @@ Il modello dati di Real-Time CDP di Adobe Experience Platform fornisce informazi
 
 ## Prerequisiti
 
-Questa esercitazione utilizza dashboard definite dall’utente per visualizzare i dati dal modello dati personalizzato nell’interfaccia utente di Platform. Per ulteriori informazioni su questa funzione, consulta la [documentazione delle dashboard definite dall&#39;utente](../../../dashboards/user-defined-dashboards.md).
+Questa esercitazione utilizza dashboard definite dall’utente per visualizzare i dati dal modello dati personalizzato nell’interfaccia utente di Platform. Per ulteriori informazioni su questa funzione, consulta la [documentazione delle dashboard definite dall&#39;utente](../../../dashboards/standard-dashboards.md).
 
 ## Introduzione
 
@@ -228,4 +228,4 @@ L’immagine seguente fornisce un esempio delle possibili visualizzazioni person
 
 ![Un conteggio delle corrispondenze per destinazione e widget di pubblico creato dal nuovo modello dati Reporting Insights.](../../images/data-distiller/sql-insights/user-defined-dashboard-widget.png)
 
-Il modello dati personalizzato si trova nell’elenco dei modelli dati disponibili nell’area di lavoro del dashboard definita dall’utente. Consulta la [guida alla dashboard definita dall&#39;utente](../../../dashboards/user-defined-dashboards.md) per informazioni su come utilizzare il modello dati personalizzato.
+Il modello dati personalizzato si trova nell’elenco dei modelli dati disponibili nell’area di lavoro del dashboard definita dall’utente. Consulta la [guida alla dashboard definita dall&#39;utente](../../../dashboards/standard-dashboards.md) per informazioni su come utilizzare il modello dati personalizzato.

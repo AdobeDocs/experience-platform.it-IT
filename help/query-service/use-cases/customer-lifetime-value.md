@@ -2,7 +2,7 @@
 title: Tracciamento dei segnali di dati per generare il valore del ciclo di vita del cliente
 description: Questa guida fornisce una dimostrazione end-to-end su come utilizzare Data Distiller e dashboard definiti dall’utente con Real-time Customer Data Platform per misurare e visualizzare il valore del ciclo di vita del cliente.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1263'
 ht-degree: 0%
@@ -62,7 +62,7 @@ Assicurati di impostare una pianificazione per aggiornare il modello dati person
 
 ## Creare un dashboard per acquisire informazioni {#build-a-custom-dashboard}
 
-Dopo aver creato il modello dati personalizzato, puoi visualizzare i dati con query personalizzate e dashboard definiti dall’utente. Per istruzioni complete su come [creare un dashboard personalizzato](../../dashboards/user-defined-dashboards.md), consulta la panoramica dei dashboard definiti dall&#39;utente. La guida dell’interfaccia utente include informazioni su:
+Dopo aver creato il modello dati personalizzato, puoi visualizzare i dati con query personalizzate e dashboard definiti dall’utente. Per istruzioni complete su come [creare un dashboard personalizzato](../../dashboards/standard-dashboards.md), consulta la panoramica dei dashboard definiti dall&#39;utente. La guida dell’interfaccia utente include informazioni su:
 
 * Come creare un widget.
 * Come utilizzare il compositore widget.

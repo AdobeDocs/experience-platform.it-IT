@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica di Query Service
 description: Scopri il ruolo di Query Service in Experience Platform.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '860'
 ht-degree: 0%
@@ -54,7 +54,7 @@ Questo [esempio di abbandono navigazione è incentrato sull&#39;utilizzo dei dat
 
 ## Generare informazioni approfondite con dashboard personalizzati {#custom-dashboards}
 
-Con Adobe Experience Platform puoi acquisire, archiviare, strutturare e richiamare tutti i set di dati memorizzati, inclusi i dati comportamentali, di gestione delle relazioni con i clienti e i dati dei punti vendita. Utilizzando [!DNL Experience Platform's Query Service], puoi eseguire query su questi set di dati e rispondere a domande specifiche sull&#39;azienda, per poi iniziare a generare informazioni di impatto. Scopri come creare e gestire dashboard personalizzate in cui creare, aggiungere e modificare widget personalizzati per visualizzare le metriche chiave con [dashboard definiti dall&#39;utente](../dashboards/user-defined-dashboards.md). Puoi anche [personalizzare i tuoi report Real-Time CDP](../dashboards/data-models/cdp-insights-data-model-b2c.md) per i tuoi casi d&#39;uso di marketing e KPI utilizzando query SQL con i modelli dati di Real-time Customer Data Platform Insights.
+Con Adobe Experience Platform puoi acquisire, archiviare, strutturare e richiamare tutti i set di dati memorizzati, inclusi i dati comportamentali, di gestione delle relazioni con i clienti e i dati dei punti vendita. Utilizzando [!DNL Experience Platform's Query Service], puoi eseguire query su questi set di dati e rispondere a domande specifiche sull&#39;azienda, per poi iniziare a generare informazioni di impatto. Scopri come creare e gestire dashboard personalizzate in cui creare, aggiungere e modificare widget personalizzati per visualizzare le metriche chiave con [dashboard definiti dall&#39;utente](../dashboards/standard-dashboards.md). Puoi anche [personalizzare i tuoi report Real-Time CDP](../dashboards/data-models/cdp-insights-data-model-b2c.md) per i tuoi casi d&#39;uso di marketing e KPI utilizzando query SQL con i modelli dati di Real-time Customer Data Platform Insights.
 
 ## Passaggi successivi e risorse aggiuntive
 

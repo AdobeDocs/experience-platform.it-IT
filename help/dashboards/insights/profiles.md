@@ -2,7 +2,7 @@
 title: Approfondimenti profilo
 description: Scopri il linguaggio SQL che attiva le informazioni sul profilo e utilizza queste query per generare informazioni personalizzate che esplorano ulteriormente i clienti e le loro esperienze utente.
 exl-id: f3792076-3e01-4e26-8788-32927202a2e5
-source-git-commit: 34eb9151cc6bb8551553b0a8427e58871acb4dbb
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1661'
 ht-degree: 3%
@@ -17,7 +17,7 @@ Comprendi le informazioni sul tuo profilo accedendo all’SQL che li alimenta, q
 
 Per ulteriori informazioni su come adattare le istruzioni SQL degli approfondimenti direttamente tramite l&#39;interfaccia utente di Platform, consulta la [Visualizza documentazione SQL](../view-sql.md).
 
-Tutte le informazioni seguenti sono disponibili per l&#39;utilizzo come parte del [dashboard dei profili](../guides/profiles.md) o di un [dashboard personalizzato definito dall&#39;utente](../user-defined-dashboards.md). Consulta la [panoramica sulla personalizzazione](../customize/overview.md) per istruzioni su come personalizzare il dashboard o [creare e modificare nuovi widget](../customize/custom-widgets.md) nella libreria di widget e [dashboard definito dall&#39;utente](../user-defined-dashboards.md#create-widget).
+Tutte le informazioni seguenti sono disponibili per l&#39;utilizzo come parte del [dashboard dei profili](../guides/profiles.md) o di un [dashboard personalizzato definito dall&#39;utente](../standard-dashboards.md). Consulta la [panoramica sulla personalizzazione](../customize/overview.md) per istruzioni su come personalizzare il dashboard o [creare e modificare nuovi widget](../customize/custom-widgets.md) nella libreria di widget e [dashboard definito dall&#39;utente](../standard-dashboards.md#create-widget).
 
 ## Sovrapposizione del pubblico con criterio di unione {#audience-overlap-by-merge-policy}
 

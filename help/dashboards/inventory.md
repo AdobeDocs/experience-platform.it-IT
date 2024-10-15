@@ -2,7 +2,7 @@
 title: Visualizza dashboard configurati
 description: Visualizza un elenco dei dashboard configurati della tua organizzazione all’interno dell’interfaccia utente di Experience Platform.
 exl-id: b1fdb1aa-2d09-4c21-9c84-be379f34a9b7
-source-git-commit: bc3db67b5b9e3bfb98571541d6e4dd2ca19b3303
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '202'
 ht-degree: 0%
@@ -27,4 +27,4 @@ Se questa opzione è selezionata, il dashboard viene aperto nell’interfaccia u
 
 ## Creare dashboard personalizzati
 
-Le dashboard di Adobe Experience Platform consentono di creare e gestire dashboard personalizzate in cui creare, aggiungere e modificare widget personalizzati per visualizzare metriche chiave rilevanti per la tua organizzazione. Per istruzioni complete sulla creazione e la configurazione di dashboard personalizzati, consulta la [guida alle dashboard definite dall&#39;utente](./user-defined-dashboards.md).
+Le dashboard di Adobe Experience Platform consentono di creare e gestire dashboard personalizzate in cui creare, aggiungere e modificare widget personalizzati per visualizzare metriche chiave rilevanti per la tua organizzazione. Per istruzioni complete sulla creazione e la configurazione di dashboard personalizzati, consulta la [guida alle dashboard definite dall&#39;utente](./standard-dashboards.md).

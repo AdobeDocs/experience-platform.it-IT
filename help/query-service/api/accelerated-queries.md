@@ -3,7 +3,7 @@ title: Endpoint "Accelerated Queries"
 description: Scopri come accedere alle query dell’archivio accelerato in modo stateless per restituire rapidamente risultati basati su dati aggregati. Questo documento fornisce un esempio di richiesta HTTP e di risposta per l’endpoint Query Service con query accelerate.
 role: Developer
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 1%
@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # Endpoint &quot;accelerated queries&quot;
 
-Come parte dello SKU di Data Distiller, l&#39;[API servizio query](https://developer.adobe.com/experience-platform-apis/references/query-service/) consente di eseguire query senza stato nell&#39;archivio accelerato. I risultati restituiti si basano su dati aggregati. La latenza ridotta dei risultati consente uno scambio di informazioni più interattivo. Le API per query accelerate vengono utilizzate anche per alimentare [dashboard definiti dall&#39;utente](../../dashboards/user-defined-dashboards.md).
+Come parte dello SKU di Data Distiller, l&#39;[API servizio query](https://developer.adobe.com/experience-platform-apis/references/query-service/) consente di eseguire query senza stato nell&#39;archivio accelerato. I risultati restituiti si basano su dati aggregati. La latenza ridotta dei risultati consente uno scambio di informazioni più interattivo. Le API per query accelerate vengono utilizzate anche per alimentare [dashboard definiti dall&#39;utente](../../dashboards/standard-dashboards.md).
 
 Prima di continuare con questa guida, assicurati di aver letto e compreso la [guida API di Query Service](./getting-started.md) per utilizzare correttamente l&#39;API di Query Service.
 

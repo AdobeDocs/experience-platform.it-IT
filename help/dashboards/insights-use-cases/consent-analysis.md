@@ -2,7 +2,7 @@
 title: Analisi e tracciamento del consenso
 description: Scopri come creare un dashboard di analisi del consenso per tenere traccia delle tendenze del consenso degli utenti nel tempo.
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1909'
 ht-degree: 0%
@@ -90,7 +90,7 @@ La finestra di dialogo Rapporto di sovrapposizione pubblico si espande per mostr
 
 ![Rapporto di sovrapposizione del pubblico, con gli utenti che hanno acconsentito all&#39;invio del pubblico per e-mail evidenziato.](../images/insights-use-cases/consent-analysis/additional-audience-overlap-reports.png)
 
-## Tendenze dimensione pubblico {#audience-size-trends}
+## Tendenze di dimensioni del pubblico {#audience-size-trends}
 
 Quando crei un pubblico basato sul consenso, viene automaticamente creata una tendenza fino a 12 mesi dalla data di creazione del pubblico. Per avere una tendenza completamente funzionale del consenso del cliente, aggiungi i seguenti widget alla pagina [!UICONTROL Segmenti] [!UICONTROL Panoramica]. Queste informazioni offrono un mezzo potente per monitorare come cambia il consenso nel tempo. Sono anche correlate a qualsiasi campagna eseguita in parallelo che potrebbe avere un impatto positivo o negativo sul consenso. Le descrizioni offerte per questi widget si applicano a un caso di utilizzo del consenso.
 
@@ -112,13 +112,13 @@ Dopo aver creato un pubblico correlato al consenso, ad esempio &quot;Utenti auto
 
 Puoi anche creare widget personalizzati con dashboard definite dall’utente. La creazione di un widget personalizzato offre il controllo completo sul tipo di widget, insieme alla flessibilità necessaria per aggiungere filtri e molto altro, direttamente in Adobe Real-Time CDP.
 
-Ad esempio, se desideri presentare più tipi di pubblico per il consenso nello stesso grafico, in modo da poter vedere nel tempo come ciascuna delle tue preferenze di consenso è cambiata. Questo tipo di visualizzazione è possibile con dashboard definiti dall’utente in passaggi minimi e una configurazione una tantum. Selezionare innanzitutto **[!UICONTROL Dashboard]** nell&#39;area di navigazione a sinistra. Viene visualizzata l&#39;area di lavoro [!UICONTROL Dashboards]. Quindi selezionare **[!UICONTROL Crea dashboard]**. Le istruzioni complete su come [creare un dashboard e un widget personalizzato](../user-defined-dashboards.md) sono disponibili nella guida delle dashboard definite dall&#39;utente.
+Ad esempio, se desideri presentare più tipi di pubblico per il consenso nello stesso grafico, in modo da poter vedere nel tempo come ciascuna delle tue preferenze di consenso è cambiata. Questo tipo di visualizzazione è possibile con dashboard definiti dall’utente in passaggi minimi e una configurazione una tantum. Selezionare innanzitutto **[!UICONTROL Dashboard]** nell&#39;area di navigazione a sinistra. Viene visualizzata l&#39;area di lavoro [!UICONTROL Dashboards]. Quindi selezionare **[!UICONTROL Crea dashboard]**. Le istruzioni complete su come [creare un dashboard e un widget personalizzato](../standard-dashboards.md) sono disponibili nella guida delle dashboard definite dall&#39;utente.
 
-![Area di lavoro delle dashboard con dashboard e Crea dashboard evidenziati.](../images/user-defined-dashboards/create-dashboard.png)
+![Area di lavoro delle dashboard con dashboard e Crea dashboard evidenziati.](../images/standard-dashboards/create-dashboard.png)
 
-Quando [selezioni il modello dati](../user-defined-dashboards.md#select-data-model) nel compositore widget, seleziona `CDPInsights` seguito da **[!UICONTROL Successivo]**. Viene visualizzata la finestra di dialogo [!UICONTROL Seleziona tabella].
+Quando [selezioni il modello dati](../standard-dashboards.md#select-data-model) nel compositore widget, seleziona `CDPInsights` seguito da **[!UICONTROL Successivo]**. Viene visualizzata la finestra di dialogo [!UICONTROL Seleziona tabella].
 
-![Finestra di dialogo Seleziona modello dati con il modello CDPInsights evidenziato.](../images/user-defined-dashboards/select-data-model-dialog.png)
+![Finestra di dialogo Seleziona modello dati con il modello CDPInsights evidenziato.](../images/standard-dashboards/select-data-model-dialog.png)
 
 Nella vista successiva viene visualizzato un elenco delle tabelle disponibili nella barra a sinistra. Seleziona `adwh_fact_profile_by_segment_and_namespace_trendlines`.
 
@@ -126,16 +126,16 @@ Nella vista successiva viene visualizzato un elenco delle tabelle disponibili ne
 
 Dopo aver popolato il compositore di widget con i dati della tabella scelta, effettua le seguenti operazioni:
 
-- [Cerca [!UICONTROL Attributi]](../user-defined-dashboards.md#add-filter-attributes) per `[!UICONTROL date]`, quindi utilizza l&#39;icona + per aggiungere l&#39;attributo `[!UICONTROL date]` all&#39;asse X dal menu a discesa.
-  ![Il compositore widget con l&#39;icona del componente aggiuntivo e il menu a discesa evidenziati.](../images/user-defined-dashboards/attributes-dropdown.png)
+- [Cerca [!UICONTROL Attributi]](../standard-dashboards.md#add-filter-attributes) per `[!UICONTROL date]`, quindi utilizza l&#39;icona + per aggiungere l&#39;attributo `[!UICONTROL date]` all&#39;asse X dal menu a discesa.
+  ![Il compositore widget con l&#39;icona del componente aggiuntivo e il menu a discesa evidenziati.](../images/standard-dashboards/attributes-dropdown.png)
 - Cerca [!UICONTROL Attributi] per `[!UICONTROL count_of_profiles]`, quindi utilizza l&#39;icona + per aggiungere l&#39;attributo `[!UICONTROL count_of_profiles]` all&#39;asse Y dal menu a discesa.
 - Seleziona l&#39;icona `...` (puntini di sospensione) nel campo [!UICONTROL Asse Y], quindi seleziona la funzione di aggregazione [!UICONTROL SUM] dal menu a discesa.
   ![Il widget Compositore widget Tendenze di consenso con il modello dati, la tabella, il menu a discesa dell&#39;asse Y e la funzione SOMMA evidenziati. ](../images/insights-use-cases/consent-analysis/y-axis-sum-function.png)
 - Selezionare il menu a discesa [!UICONTROL Indicatori] e modificare il tipo di grafico in [!UICONTROL Linea].
 - Cerca [!UICONTROL Attributi] per `[!UICONTROL segment_name]`, quindi utilizza l&#39;icona + per aggiungere `segment_name` come [!UICONTROL Filtro] dal menu a discesa. Viene visualizzata la finestra di dialogo [!UICONTROL Filter: Segment_name]. Seleziona i tipi di pubblico creati in precedenza che si riferiscono al consenso. Per questo esempio, seleziona **[!UICONTROL Utenti autorizzati alle chiamate]**, **[!UICONTROL Utenti autorizzati agli SMS]** e **[!UICONTROL Utenti autorizzati all&#39;invio di e-mail]**, seguiti da **[!UICONTROL Applica]**.
 - Cerca [!UICONTROL Attributi] per `[!UICONTROL segment_name]`, quindi seleziona l&#39;icona + per aggiungere `segment_name` come [!UICONTROL Colore] dal menu a discesa.
-- Apri [il pannello [!UICONTROL Proprietà]](../user-defined-dashboards.md#widget-properties) e fornisci un [!UICONTROL Titolo widget] e un&#39;etichetta [!UICONTROL Asse] appropriati.
-  ![Compositore widget con l&#39;icona delle proprietà e il titolo del widget evidenziati.](../images/user-defined-dashboards/properties-panel.png)
+- Apri [il pannello [!UICONTROL Proprietà]](../standard-dashboards.md#widget-properties) e fornisci un [!UICONTROL Titolo widget] e un&#39;etichetta [!UICONTROL Asse] appropriati.
+  ![Compositore widget con l&#39;icona delle proprietà e il titolo del widget evidenziati.](../images/standard-dashboards/properties-panel.png)
 - Seleziona **[!UICONTROL Salva e chiudi]** per confermare le impostazioni.
 
 >[!TIP]
