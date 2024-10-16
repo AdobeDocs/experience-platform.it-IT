@@ -2,9 +2,9 @@
 title: Panoramica di Audience Portal
 description: Scopri come utilizzare Audience Portal per visualizzare, gestire e creare tipi di pubblico in Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: b59f5ffeb8af6f3bab7ed79189219f39533d2f1b
+source-git-commit: 919e5c183296e3fbf1fc385c2a9c34dc36349660
 workflow-type: tm+mt
-source-wordcount: '4250'
+source-wordcount: '4298'
 ht-degree: 3%
 
 ---
@@ -209,6 +209,11 @@ Viene visualizzato l’elenco dei filtri disponibili.
 ![I filtri disponibili vengono visualizzati ed evidenziati nella pagina Sfoglia tipi di pubblico.](../images/ui/audience-portal/filter-audiences.png)
 
 #### Azioni in blocco {#bulk-actions}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_browse_flexibleaudienceevaluation"
+>title="Limiti flessibili per la valutazione del pubblico"
+>abstract="È possibile valutare fino a 20 tipi di pubblico in un’unica esecuzione flessibile di valutazione del pubblico.<br/><br/>Inoltre, mentre il processo di valutazione viene eseguito il prima possibile, potrebbero verificarsi ritardi di sistema poiché le valutazioni su richiesta <b>non possono</b> essere eseguite contemporaneamente a un&#39;altra valutazione su richiesta o in batch."
 
 Inoltre, puoi selezionare fino a 25 tipi di pubblico diversi ed eseguire varie azioni su di essi. Queste azioni includono [spostamento in una cartella](#folders), [modifica o applicazione di un tag](#tags), [applicazione di etichette di accesso](../../access-control/abac/ui/labels.md) e [eliminazione](#browse).
 
