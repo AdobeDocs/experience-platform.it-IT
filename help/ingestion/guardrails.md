@@ -3,9 +3,9 @@ keywords: Experience Platform;risoluzione dei problemi;guardrail;linee guida;
 title: Guardrail per l’acquisizione dei dati
 description: Scopri i guardrail per l’acquisizione dei dati in Adobe Experience Platform.
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 9c3f7f522ce6451e1d312a0221cc34287d3e8ae3
+source-git-commit: b8f64793b7f869e50c33ead3a5f02f3a8af51ff4
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '810'
 ht-degree: 0%
 
 ---
@@ -35,6 +35,7 @@ La tabella seguente illustra i guardrail da considerare quando si utilizza l&#39
 | Acquisizione in batch nel profilo | <ul><li>La dimensione massima di una classe di record è 100 KB (rigido).</li><li>La dimensione massima di una classe ExperienceEvent è 10 KB (rigido).</li></ul> | |
 | Numero di batch di profili o ExperienceEvent acquisiti al giorno | **Il numero massimo di batch di profili o ExperienceEvent acquisiti al giorno è 90.** Ciò significa che il totale combinato dei batch di profili ed ExperienceEvent acquisiti ogni giorno non può superare i 90. L&#39;acquisizione di batch aggiuntivi influisce sulle prestazioni del sistema. | Si tratta di un limite non vincolante. È possibile superare un limite non superabile, tuttavia, i limiti non superabili forniscono una linea guida consigliata per le prestazioni del sistema. |
 | Acquisizione di dati crittografati | La dimensione massima supportata per un singolo file crittografato è 1 GB. Ad esempio, mentre è possibile acquisire 2 o più GB di dati in una singola esecuzione del flusso di dati, nessun singolo file nell’esecuzione del flusso di dati può superare 1 GB. | Il processo di acquisizione dei dati crittografati potrebbe richiedere più tempo di quello di una normale acquisizione dei dati. Per ulteriori informazioni, consulta la [guida dell&#39;API per l&#39;acquisizione di dati crittografati](../sources/tutorials/api/encrypt-data.md). |
+| Acquisizione batch upsert | L&#39;acquisizione dei batch upsert può essere fino a 10 volte più lenta rispetto ai batch normali, pertanto è necessario **mantenere i batch upsert sotto i due milioni di record** per garantire un runtime efficiente ed evitare di bloccare l&#39;elaborazione di altri batch nella sandbox. | Anche se è possibile acquisire batch che superano i due milioni di record, il tempo di acquisizione sarà notevolmente più lungo a causa delle limitazioni delle piccole sandbox. |
 
 {style="table-layout:auto"}
 
