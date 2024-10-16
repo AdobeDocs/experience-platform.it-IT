@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida introduttiva all’API Schema Registry
 description: Questo documento fornisce un’introduzione ai concetti di base che è necessario conoscere prima di tentare di effettuare chiamate all’API Schema Registry.
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: eb1cf204e95591082b27dc97cd3c709a23b20b08
 workflow-type: tm+mt
-source-wordcount: '1345'
+source-wordcount: '1361'
 ht-degree: 5%
 
 ---
@@ -254,6 +254,7 @@ Il seguente campo di esempio illustra un campo XDM formattato correttamente, con
 * Il nome di un oggetto campo può contenere caratteri alfanumerici, trattini o trattini bassi, ma **non può** iniziare con un trattino basso.
    * **Corretto:** `fieldName`, `field_name2`, `Field-Name`, `field-name_3`
    * **Errato:** `_fieldName`
+* I nomi dei campi non fanno distinzione tra maiuscole e minuscole e devono avere nomi diversi allo stesso livello nello schema.
 * camelCase è da preferirsi per il nome dell&#39;oggetto campo. Esempio: `fieldName`
 * Il campo deve includere `title`, scritto con tutte le iniziali maiuscole. Esempio: `Field Name`
 * Il campo richiede `type`.

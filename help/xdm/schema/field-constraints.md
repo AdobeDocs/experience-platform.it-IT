@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Vincoli per il tipo di campo XDM
 description: Un riferimento per i vincoli dei tipi di campo in Experience Data Model (XDM), inclusi gli altri formati di serializzazione a cui possono essere mappati e come definire tipi di campo personalizzati nell’API.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: 88caea133bd2bf994587bda5b31cddd22f2c90cb
+source-git-commit: eb1cf204e95591082b27dc97cd3c709a23b20b08
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '683'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ Se prevedi di definire tipi di campo personalizzati nell&#39;API, ti consigliamo
 
 ## Struttura di base ed esempi {#basic-types}
 
-XDM è basato su schema JSON e pertanto i campi XDM ereditano una sintassi simile durante la definizione del relativo tipo. Informazioni sulla modalità di rappresentazione dei diversi tipi di campo nello schema JSON possono essere utili per indicare i vincoli di base di ciascun tipo.
+XDM è basato su schema JSON e pertanto i campi XDM ereditano una sintassi simile durante la definizione del relativo tipo. Informazioni sulla modalità di rappresentazione dei diversi tipi di campo nello schema JSON possono essere utili per indicare i vincoli di base di ciascun tipo. I nomi dei campi personalizzati non fanno distinzione tra maiuscole e minuscole e devono avere nomi diversi allo stesso livello nello schema.
 
 >[!NOTE]
 >
