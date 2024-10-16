@@ -2,9 +2,9 @@
 title: Panoramica di Audience Portal
 description: Scopri come utilizzare Audience Portal per visualizzare, gestire e creare tipi di pubblico in Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 919e5c183296e3fbf1fc385c2a9c34dc36349660
+source-git-commit: f74e91ba1fe2be58e1e933fa81f590566f02fff7
 workflow-type: tm+mt
-source-wordcount: '4298'
+source-wordcount: '4320'
 ht-degree: 3%
 
 ---
@@ -286,6 +286,10 @@ Le stime vengono generate utilizzando una dimensione campione dei dati di campio
 ### Dettagli dell’acquisizione {#ingestion-details}
 
 Per i tipi di pubblico con origine **[!UICONTROL Caricamento personalizzato]**, la sezione **[!UICONTROL Dettagli acquisizione]** mostra sia il totale del profilo che i dettagli del set di dati in cui è stato acquisito il pubblico generato esternamente.
+
+>[!NOTE]
+>
+>Potrebbero essere necessari fino a 30 minuti dopo il processo di esportazione per aggiornare completamente il conteggio dei profili del pubblico.
 
 ![Viene visualizzata la sezione dei dettagli di acquisizione per la pagina dei dettagli del pubblico.](../images/ui/audience-portal/audience-details-ingestion-details.png)
 
