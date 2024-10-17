@@ -3,10 +3,10 @@ solution: Experience Platform
 title: PAL Funzioni aritmetiche
 description: Le funzioni aritmetiche vengono utilizzate per eseguire calcoli di base sui valori in Profile Query Language (PQL).
 exl-id: 3540ef7c-dbe4-4302-a414-3cf85618f870
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '243'
-ht-degree: 4%
+source-wordcount: '258'
+ht-degree: 3%
 
 ---
 
@@ -16,7 +16,7 @@ Le funzioni aritmetiche vengono utilizzate per eseguire calcoli di base sui valo
 
 ## Add
 
-La funzione `+` (addizione) viene utilizzata per trovare la somma di due espressioni di argomento.
+La funzione `+` (addizione) viene utilizzata per trovare la somma di due espressioni di argomento come numero.
 
 **Formato**
 
@@ -34,7 +34,7 @@ product1.price + product2.price
 
 ## Moltiplica
 
-La funzione `*` (moltiplicazione) viene utilizzata per trovare il prodotto di due espressioni di argomento.
+La funzione `*` (moltiplicazione) viene utilizzata per trovare il prodotto di due espressioni di argomento come numero.
 
 **Formato**
 
@@ -52,7 +52,7 @@ product.inventory * product.price
 
 ## Sottrai
 
-La funzione `-` (sottrazione) viene utilizzata per trovare la differenza tra due espressioni di argomento.
+La funzione `-` (sottrazione) viene utilizzata per trovare la differenza di due espressioni di argomento come numero.
 
 **Formato**
 
@@ -70,7 +70,7 @@ product1.price - product2.price
 
 ## Dividi
 
-La funzione `/` (divisione) viene utilizzata per trovare il quoziente di due espressioni di argomento.
+La funzione `/` (divisione) viene utilizzata per trovare il quoziente di due espressioni di argomento come numero.
 
 **Formato**
 
@@ -88,7 +88,7 @@ totalProduct.price / totalProduct.sold
 
 ## Rimanente
 
-La funzione `%` (modulo/resto) viene utilizzata per trovare il resto dopo aver diviso le due espressioni di argomento.
+La funzione `%` (modulo/resto) viene utilizzata per trovare il resto dopo aver diviso le due espressioni di argomento come numero.
 
 **Formato**
 

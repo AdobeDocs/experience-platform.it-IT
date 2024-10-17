@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Funzioni di PQL Map
 description: Profile Query Language (PQL) offre funzioni per semplificare l’interazione con le mappe.
 exl-id: f23616f2-c0dd-40ce-8cfc-c757542fbd05
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '156'
-ht-degree: 6%
+source-wordcount: '169'
+ht-degree: 5%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 6%
 
 ## Ottieni
 
-La funzione `get` viene utilizzata per recuperare il valore di una mappa per una determinata chiave.
+La funzione `get` viene utilizzata per recuperare il valore di una mappa per una determinata chiave come oggetto.
 
 **Formato**
 
@@ -34,7 +34,7 @@ identityMap.get("example@example.com")
 
 ## Chiavi
 
-La funzione `keys` viene utilizzata per recuperare tutte le chiavi per una determinata mappa.
+La funzione `keys` viene utilizzata per recuperare tutte le chiavi per una determinata mappa come array o elenco.
 
 **Formato**
 
@@ -52,7 +52,7 @@ identityMap.keys()
 
 ## Valori
 
-La funzione `values` viene utilizzata per recuperare tutti i valori di una determinata mappa.
+La funzione `values` viene utilizzata per recuperare tutti i valori di una determinata mappa come array o elenco.
 
 **Formato**
 

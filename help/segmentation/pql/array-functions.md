@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Funzioni Array, List e Set PQL
 description: Profile Query Language (PQL) offre funzioni per semplificare l’interazione con array, elenchi e stringhe.
 exl-id: 5ff2b066-8857-4cde-9932-c8bf09e273d3
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '820'
 ht-degree: 4%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 4%
 
 ## In entrata
 
-La funzione `in` viene utilizzata per determinare se un elemento è membro di un array o di un elenco.
+La funzione `in` viene utilizzata per determinare se un elemento è membro di un array o di un elenco come booleano.
 
 **Formato**
 
@@ -34,7 +34,7 @@ person.birthMonth in [3, 6, 9]
 
 ## Non in
 
-La funzione `notIn` viene utilizzata per determinare se un elemento non è un membro di un array o di un elenco.
+La funzione `notIn` viene utilizzata per determinare se un elemento non è un membro di un array o di un elenco come booleano.
 
 >[!NOTE]
 >
@@ -56,7 +56,7 @@ person.birthMonth notIn [3, 6, 9]
 
 ## Interseca
 
-La funzione `intersects` viene utilizzata per determinare se due array o elenchi hanno almeno un membro comune.
+La funzione `intersects` viene utilizzata per determinare se due matrici o elenchi hanno almeno un membro comune come booleano.
 
 **Formato**
 
@@ -74,7 +74,7 @@ person.favoriteColors.intersects(["red", "blue", "green"])
 
 ## Intersezione 
 
-La funzione `intersection` viene utilizzata per determinare i membri comuni di due array o elenchi.
+La funzione `intersection` viene utilizzata per determinare i membri comuni di due array o elenchi come elenco.
 
 **Formato**
 
@@ -92,7 +92,7 @@ person1.favoriteColors.intersection(person2.favoriteColors) = ["red", "blue", "g
 
 ## Sottoinsieme di
 
-La funzione `subsetOf` viene utilizzata per determinare se un array specifico (array A) è un sottoinsieme di un altro array (array B). In altre parole, che tutti gli elementi nell&#39;array A sono elementi dell&#39;array B.
+La funzione `subsetOf` viene utilizzata per determinare se un array specifico (array A) è un sottoinsieme di un altro array (array B). In altre parole, che tutti gli elementi nell’array A sono elementi dell’array B come booleano.
 
 **Formato**
 
@@ -110,7 +110,7 @@ person.favoriteCities.subsetOf(person.visitedCities)
 
 ## Superset di
 
-La funzione `supersetOf` viene utilizzata per determinare se un array specifico (array A) è un superset di un altro array (array B). In altre parole, l’array A contiene tutti gli elementi dell’array B.
+La funzione `supersetOf` viene utilizzata per determinare se un array specifico (array A) è un superset di un altro array (array B). In altre parole, l’array A contiene tutti gli elementi dell’array B come booleano.
 
 **Formato**
 
@@ -128,7 +128,7 @@ person.eatenFoods.supersetOf(["sushi", "pizza"])
 
 ## Include
 
-La funzione `includes` viene utilizzata per determinare se un array o un elenco contiene un dato elemento.
+La funzione `includes` viene utilizzata per determinare se un array o un elenco contiene un dato elemento come booleano.
 
 **Formato**
 
@@ -146,7 +146,7 @@ person.favoriteColors.includes("red")
 
 ## Diverso
 
-La funzione `distinct` viene utilizzata per rimuovere i valori duplicati da un array o da un elenco.
+La funzione `distinct` viene utilizzata per rimuovere i valori duplicati da un array o da un elenco come array.
 
 **Formato**
 
@@ -164,12 +164,12 @@ person.orders.storeId.distinct().count() > 1
 
 ## Raggruppa per
 
-La funzione `groupBy` viene utilizzata per suddividere i valori di un array o di un elenco in un gruppo in base al valore dell&#39;espressione.
+La funzione `groupBy` viene utilizzata per suddividere i valori di un array o di un elenco in un gruppo in base al valore dell&#39;espressione come mappa da valori univoci dell&#39;espressione di raggruppamento ad array che sono partizioni del valore dell&#39;espressione di matrice.
 
 **Formato**
 
 ```sql
-{ARRAY}.groupBy({EXPRESSION)
+{ARRAY}.groupBy({EXPRESSION})
 ```
 
 | Argomento | Descrizione |
@@ -182,12 +182,12 @@ La funzione `groupBy` viene utilizzata per suddividere i valori di un array o di
 La query PQL seguente raggruppa tutti gli ordini in base ai quali è stato effettuato l&#39;ordine.
 
 ```sql
-orders.groupBy(storeId)
+xEvent[type="order"].groupBy(storeId)
 ```
 
 ## Filtro
 
-La funzione `filter` viene utilizzata per filtrare un array o un elenco in base a un&#39;espressione.
+La funzione `filter` viene utilizzata per filtrare un array o un elenco in base a un&#39;espressione come array o elenco, a seconda dell&#39;input.
 
 **Formato**
 
@@ -210,7 +210,7 @@ person.filter(age >= 21)
 
 ## Mappa
 
-La funzione `map` viene utilizzata per creare un nuovo array applicando un&#39;espressione a ogni elemento in un determinato array.
+La funzione `map` viene utilizzata per creare un nuovo array applicando un&#39;espressione a ogni elemento in un determinato array come array.
 
 **Formato**
 
@@ -228,7 +228,7 @@ numbers.map(square)
 
 ## Primi `n` nell&#39;array {#first-n}
 
-La funzione `topN` viene utilizzata per restituire i primi `N` elementi in un array, se ordinati in ordine crescente in base alla data espressione numerica.
+La funzione `topN` viene utilizzata per restituire i primi `N` elementi in un array, se ordinati in ordine crescente in base alla data espressione numerica come array.
 
 **Formato**
 
@@ -252,7 +252,7 @@ orders.topN(price, 5)
 
 ## Ultimi `n` nell&#39;array
 
-La funzione `bottomN` viene utilizzata per restituire gli ultimi `N` elementi in un array, se ordinati in ordine crescente in base alla data espressione numerica.
+La funzione `bottomN` viene utilizzata per restituire gli ultimi `N` elementi in un array, se ordinati in ordine crescente in base alla data espressione numerica come array.
 
 **Formato**
 
@@ -276,7 +276,7 @@ orders.bottomN(price, 5)
 
 ## Primo elemento
 
-La funzione `head` viene utilizzata per restituire il primo elemento dell&#39;array o dell&#39;elenco.
+La funzione `head` viene utilizzata per restituire il primo elemento dell&#39;array o dell&#39;elenco come oggetto.
 
 **Formato**
 

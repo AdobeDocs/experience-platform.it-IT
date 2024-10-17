@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Funzioni stringa PQL
 description: Profile Query Language (PQL) offre funzioni per semplificare l’interazione con le stringhe.
 exl-id: 9fd79d86-0802-4312-abce-f6ef5ba5bb34
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '848'
 ht-degree: 5%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 5%
 
 ## Simile a
 
-La funzione `like` viene utilizzata per determinare se una stringa corrisponde a un pattern specificato.
+La funzione `like` viene utilizzata per determinare se una stringa corrisponde a un modello specificato come booleano.
 
 **Formato**
 
@@ -39,7 +39,7 @@ city like "%es%"
 
 ## Inizia con
 
-La funzione `startsWith` viene utilizzata per determinare se una stringa inizia con una sottostringa specificata.
+La funzione `startsWith` viene utilizzata per determinare se una stringa inizia con una sottostringa specificata come booleano.
 
 **Formato**
 
@@ -63,7 +63,7 @@ person.name.startsWith("Joe")
 
 ## Non inizia con
 
-La funzione `doesNotStartWith` viene utilizzata per determinare se una stringa non inizia con una sottostringa specificata.
+La funzione `doesNotStartWith` viene utilizzata per determinare se una stringa non inizia con una sottostringa specificata come booleano.
 
 **Formato**
 
@@ -87,7 +87,7 @@ person.name.doesNotStartWith("Joe")
 
 ## Termina con
 
-La funzione `endsWith` viene utilizzata per determinare se una stringa termina con una sottostringa specificata.
+La funzione `endsWith` viene utilizzata per determinare se una stringa termina con una sottostringa specificata come booleano.
 
 **Formato**
 
@@ -111,7 +111,7 @@ person.emailAddress.endsWith(".com")
 
 ## Non termina con
 
-La funzione `doesNotEndWith` viene utilizzata per determinare se una stringa non termina con una sottostringa specificata.
+La funzione `doesNotEndWith` viene utilizzata per determinare se una stringa non termina con una sottostringa specificata come booleano.
 
 **Formato**
 
@@ -135,7 +135,7 @@ person.emailAddress.doesNotEndWith(".com")
 
 ## Contains
 
-La funzione `contains` viene utilizzata per determinare se una stringa contiene una sottostringa specificata.
+La funzione `contains` viene utilizzata per determinare se una stringa contiene una sottostringa specificata come booleano.
 
 **Formato**
 
@@ -159,7 +159,7 @@ person.emailAddress.contains("2010@gm")
 
 ## Non contiene
 
-La funzione `doesNotContain` viene utilizzata per determinare se una stringa non contiene una sottostringa specificata.
+La funzione `doesNotContain` viene utilizzata per determinare se una stringa non contiene una sottostringa specificata come booleano.
 
 **Formato**
 
@@ -183,7 +183,7 @@ person.emailAddress.doesNotContain("2010@gm")
 
 ## Uguale a
 
-La funzione `equals` viene utilizzata per determinare se una stringa è uguale alla stringa specificata.
+La funzione `equals` viene utilizzata per determinare se una stringa è uguale alla stringa specificata come booleano.
 
 **Formato**
 
@@ -206,7 +206,7 @@ person.name.equals("John")
 
 ## Non uguale a
 
-La funzione `notEqualTo` viene utilizzata per determinare se una stringa non è uguale alla stringa specificata.
+La funzione `notEqualTo` viene utilizzata per determinare se una stringa non è uguale alla stringa specificata come booleano.
 
 **Formato**
 
@@ -229,7 +229,7 @@ person.name.notEqualTo("John")
 
 ## Corrisponde a
 
-La funzione `matches` viene utilizzata per determinare se una stringa corrisponde a una specifica espressione regolare. Fare riferimento a [questo documento](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) per ulteriori informazioni sui pattern corrispondenti nelle espressioni regolari.
+La funzione `matches` viene utilizzata per determinare se una stringa corrisponde a una specifica espressione regolare. Fare riferimento a [questo documento](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) per ulteriori informazioni sui pattern corrispondenti nelle espressioni regolari come booleano.
 
 **Formato**
 
@@ -251,7 +251,7 @@ person.name.matches("(?i)^John")
 
 ## Gruppo di espressioni regolari
 
-La funzione `regexGroup` viene utilizzata per estrarre informazioni specifiche, in base all&#39;espressione regolare fornita.
+La funzione `regexGroup` viene utilizzata per estrarre informazioni specifiche, in base all&#39;espressione regolare fornita come stringa.
 
 **Formato**
 

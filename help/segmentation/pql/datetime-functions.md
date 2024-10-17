@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Funzioni data e ora di PQL
 description: Le funzioni di data e ora vengono utilizzate per eseguire operazioni di data e ora sui valori in Profile Query Language (PQL).
 exl-id: 8cbffcb6-1c25-454f-8f02-eca602318e5e
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '496'
 ht-degree: 2%
 
 ---
@@ -124,7 +124,7 @@ product.sale.getDayOfMonth() <= 15
 
 ## Si verifica
 
-La funzione `occurs` confronta la funzione data/ora specificata con un periodo di tempo fisso.
+La funzione `occurs` confronta la funzione timestamp specificata con un periodo di tempo fisso come booleano.
 
 **Formato**
 

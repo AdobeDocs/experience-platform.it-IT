@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Funzioni di aggregazione PQL
 description: Le funzioni di aggregazione vengono utilizzate per raggruppare più valori all’interno di array Profile Query Language (PQL) in modo da formare un unico valore di riepilogo.
 exl-id: 6c0c0f6d-98c5-4b5d-b440-3e5e18c0f34b
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '227'
-ht-degree: 6%
+source-wordcount: '242'
+ht-degree: 5%
 
 ---
 
@@ -16,7 +16,7 @@ Le funzioni di aggregazione vengono utilizzate per raggruppare più valori all&#
 
 ## Conteggio
 
-La funzione `count` restituisce il numero di elementi all&#39;interno dell&#39;array specificato.
+La funzione `count` restituisce il numero di elementi all&#39;interno dell&#39;array specificato come numero.
 
 **Formato**
 
@@ -34,7 +34,7 @@ orders.count()
 
 ## Somma
 
-La funzione `sum` restituisce la somma di tutti i valori selezionati all&#39;interno dell&#39;array.
+La funzione `sum` restituisce la somma di tutti i valori selezionati all&#39;interno dell&#39;array come un numero.
 
 **Formato**
 
@@ -52,7 +52,7 @@ orders.sum(order.price)
 
 ## Medio
 
-La funzione `average` restituisce la media aritmetica di tutti i valori selezionati all&#39;interno dell&#39;array.
+La funzione `average` restituisce come numero la media aritmetica di tutti i valori selezionati all&#39;interno dell&#39;array.
 
 **Formato**
 
@@ -70,7 +70,7 @@ orders.average(order.price)
 
 ## Minimo
 
-La funzione `min` restituisce il più piccolo di tutti i valori selezionati all&#39;interno dell&#39;array.
+La funzione `min` restituisce come numero il più piccolo di tutti i valori selezionati all&#39;interno dell&#39;array.
 
 **Formato**
 
@@ -88,7 +88,7 @@ orders.min(order.price)
 
 ## Massimo
 
-La funzione `max` restituisce il più grande di tutti i valori selezionati all&#39;interno dell&#39;array.
+La funzione `max` restituisce come numero il più grande di tutti i valori selezionati all&#39;interno dell&#39;array.
 
 **Formato**
 

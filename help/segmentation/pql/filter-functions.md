@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Funzioni filtro PQL
 description: Le funzioni di filtro vengono utilizzate per filtrare i dati all’interno di array in Profile Query Language (PQL).
 exl-id: 09d66be3-30dc-4488-84a1-cfd09c44470d
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 7c282594e66c8c7700471a94947448fd91596814
 workflow-type: tm+mt
-source-wordcount: '203'
+source-wordcount: '211'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ Le funzioni di filtro vengono utilizzate per filtrare i dati all&#39;interno di 
 
 ## Filtro
 
-La funzione `[]` (filtro) consente l&#39;applicazione di filtri a un array e la restituzione di un sottoinsieme dell&#39;array corrispondente alla condizione specificata.
+La funzione `[]` (filtro) consente l&#39;applicazione di filtri a un array e la restituzione di un sottoinsieme dell&#39;array corrispondente alla condizione specificata. Di conseguenza, questa funzione restituisce un array.
 
 **Formato**
 
