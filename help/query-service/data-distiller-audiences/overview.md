@@ -1,9 +1,9 @@
 ---
 title: Creare tipi di pubblico con SQL
 description: Scopri come utilizzare l’estensione del pubblico SQL in Data Distiller di Adobe Experience Platform per creare, gestire e pubblicare tipi di pubblico utilizzando i comandi SQL. Questa guida tratta tutti gli aspetti del ciclo di vita del pubblico, inclusa la creazione, l’aggiornamento e l’eliminazione di profili, e l’utilizzo di definizioni di pubblico basate sui dati per eseguire il targeting di destinazioni basate su file.
-source-git-commit: 8b9a46d9dd35a60fc3f3087d5fd3c4dad395b1aa
+source-git-commit: b790dc0a485011022ac637f9d9c55f21c882d5fc
 workflow-type: tm+mt
-source-wordcount: '1280'
+source-wordcount: '1166'
 ht-degree: 1%
 
 ---
@@ -135,15 +135,13 @@ Attiva i tipi di pubblico eseguendo il targeting su qualsiasi destinazione basat
 
 Questa sezione tratta le domande frequenti sulla creazione e la gestione di tipi di pubblico esterni tramite SQL in Data Distiller.
 
-+++Seleziona per visualizzare domande e risposte
-
 **Domande**:
 
 - La creazione di tipi di pubblico è supportata solo per set di dati piatti?
 
 +++Risposta
 
-Sono supportati anche i set di dati nidificati, ma nel pubblico sono disponibili solo gli attributi flat.
+Attualmente, la creazione di un pubblico è limitata agli attributi piatti (a livello di radice) durante la definizione del pubblico.
 
 +++
 
@@ -167,15 +165,15 @@ No, il set di dati creato durante la creazione del pubblico non è contrassegnat
 
 +++Risposta
 
-Sì, il set di dati viene creato nel data lake.
+Sì, il set di dati associato al pubblico viene creato sul data lake. Gli attributi di questo set di dati sono disponibili nel Compositore pubblico e nel flusso di destinazione come attributi arricchiti.
 
 +++
 
-- Gli attributi nel pubblico possono essere utilizzati solo in destinazioni basate su file batch dell&#39;organizzazione? (Sì o No)
+- Gli attributi nel pubblico sono limitati alle destinazioni basate su file batch dell&#39;organizzazione? (Sì o No)
 
 +++Risposta
 
-Sì, gli attributi nel pubblico sono limitati all’utilizzo solo nelle destinazioni basate su file batch dell’organizzazione.
+No. Gli attributi arricchiti nel pubblico sono disponibili per l’utilizzo sia nelle destinazioni Enterprise Batch che in quelle basate su file. Se riscontri un errore simile a &quot;I seguenti ID segmento hanno spazi dei nomi non consentiti per questa destinazione: e917f626-a038-42f7-944c-xyxyxyx&quot;, crea un nuovo segmento in Data Distiller e utilizzalo con qualsiasi destinazione disponibile.
 
 +++
 
@@ -195,45 +193,11 @@ I tipi di pubblico di Data Distiller non sono attualmente disponibili in Adobe J
 
 +++
 
-- Come si creano due tipi di pubblico di Data Distiller con pianificazioni diverse? Quanti set di dati vengono creati e sono contrassegnati per il profilo?
-
-+++Risposta
-
-Verranno creati due set di dati poiché ogni pubblico ha un set di dati sottostante. Tuttavia, questi set di dati non sono contrassegnati per il profilo. I due set di dati vengono gestiti in base alle singole pianificazioni.
-
-+++
-
-- Come si elimina un pubblico?
-
-+++Risposta
-
-Per eliminare un pubblico, puoi utilizzare il comando [`DROP AUDIENCE`](#delete-audience) nell&#39;interfaccia della riga di comando oppure le [azioni rapide dell&#39;area di lavoro Tipi di pubblico](../../segmentation/ui/audience-portal.md#quick-actions). NOTA: i tipi di pubblico utilizzati nelle destinazioni a valle o dipendenti da altri tipi di pubblico non possono essere eliminati.
-
-+++
-
-- Quando pubblico un pubblico su Profilo, quanto presto questo sarà disponibile nell’interfaccia utente del generatore di segmenti e quando sarà disponibile nelle Destinazioni?
-
-+++Risposta
-
-Una volta completata l’esportazione dello snapshot del profilo, i profili possono essere visualizzati nel pubblico.
-
-+++
-
 - I tipi di pubblico di Data Distiller vengono eliminati ogni 30 giorni poiché sono tipi di pubblico esterni?
 
 +++Risposta
 
 Sì, i tipi di pubblico di Data Distiller vengono eliminati ogni 30 giorni poiché sono tipi di pubblico esterni.
-
-+++
-
-- I tipi di pubblico di Data Distiller vengono visualizzati nell’inventario dei tipi di pubblico?
-
-+++Risposta
-
-Sì, i tipi di pubblico di Data Distiller vengono visualizzati nell’inventario Tipi di pubblico con il nome di origine &quot;Data Distiller&quot;.
-
-+++
 
 +++
 
