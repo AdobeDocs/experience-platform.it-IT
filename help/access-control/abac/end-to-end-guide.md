@@ -4,16 +4,16 @@ title: Guida end-to-end al controllo degli accessi basato su attributi
 description: Questo documento fornisce una guida end-to-end sul controllo degli accessi basato su attributi in Adobe Experience Platform
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: c89ae9befa3befbffab9d6468f3c207ab8e7b74f
+source-git-commit: 9c415b7721eeceff75d46463853f22dd3310cb9a
 workflow-type: tm+mt
 source-wordcount: '1736'
-ht-degree: 17%
+ht-degree: 18%
 
 ---
 
 # Guida end-to-end al controllo degli accessi basato su attributi
 
-Utilizza il controllo degli accessi basato sugli attributi su Adobe Experience Platform per offrire a te stesso e ad altri clienti multi-brand attenti alla privacy una maggiore flessibilità nella gestione degli accessi utente. L’accesso a singoli oggetti, come campi e segmenti dello schema, può essere concesso con criteri basati sugli attributi e sul ruolo dell’oggetto. Questa funzione ti consente di concedere o revocare l’accesso a singoli oggetti per specifici utenti di Platform nella tua organizzazione.
+Utilizza il controllo degli accessi basato sugli attributi su Adobe Experience Platform per offrire a te stesso e ad altri clienti multi-brand attenti alla privacy una maggiore flessibilità nella gestione degli accessi utente. L’accesso a singoli oggetti, come campi e segmenti dello schema, può essere concesso con criteri basati sugli attributi e sul ruolo dell’oggetto. Questa funzione consente di concedere o revocare l’accesso a singoli oggetti per specifici utenti di Platform nell’organizzazione.
 
 Questa funzionalità consente di categorizzare campi schema, segmenti e così via con etichette che definiscono ambiti di utilizzo organizzativi o dei dati. Puoi applicare queste stesse etichette a percorsi, Offerte e altri oggetti in Adobe Journey Optimizer. Parallelamente, gli amministratori possono definire i criteri di accesso relativi ai campi dello schema Experience Data Model (XDM) e gestire meglio quali utenti o gruppi (interni, esterni o di terze parti) possono accedere a tali campi.
 
@@ -45,8 +45,7 @@ Effettua le seguenti operazioni:
 
 * [Assegna un&#39;etichetta ai ruoli degli utenti](#label-roles): utilizza l&#39;esempio di un fornitore di assistenza sanitaria (ACME Business Group) il cui gruppo di marketing lavora con agenzie esterne.
 * [Assegna un&#39;etichetta alle risorse (campi e segmenti dello schema)](#label-resources): Assegna l&#39;etichetta **[!UICONTROL PHI/ Dati integrità regolamentati]** alle risorse e ai segmenti dello schema.
-* 
-   * [Attiva il criterio che li collegherà:](#policy): Abilita il criterio predefinito per impedire l&#39;accesso ai campi e ai segmenti dello schema collegando le etichette delle risorse alle etichette del tuo ruolo. Gli utenti con etichette corrispondenti avranno quindi accesso al campo e al segmento dello schema in tutte le sandbox.
+* [Attiva il criterio che li collegherà](#policy): Abilita il criterio predefinito per impedire l&#39;accesso ai campi e ai segmenti dello schema collegando le etichette delle risorse alle etichette del tuo ruolo. Gli utenti con etichette corrispondenti avranno quindi accesso al campo e al segmento dello schema in tutte le sandbox.
 
 ## Autorizzazioni
 
