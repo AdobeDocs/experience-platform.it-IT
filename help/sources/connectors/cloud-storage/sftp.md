@@ -1,12 +1,10 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;SFTP;sftp
-solution: Experience Platform
 title: Panoramica del connettore Source SFTP
 description: Scopri come collegare un server SFTP a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
-source-git-commit: 52c1c8e6bc332bd6ee579cad52a7343007615efd
+source-git-commit: 9e1edaa4183a8025b8391f58d480063adc834616
 workflow-type: tm+mt
-source-wordcount: '1228'
+source-wordcount: '1221'
 ht-degree: 0%
 
 ---

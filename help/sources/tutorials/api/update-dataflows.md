@@ -1,13 +1,10 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;servizio di flusso;aggiorna flussi di dati
-solution: Experience Platform
 title: Aggiornare i flussi di dati utilizzando l’API del servizio Flusso
-type: Tutorial
-description: Questo tutorial illustra i passaggi necessari per aggiornare un flusso di dati, compreso il nome, la descrizione e la pianificazione, mediante l’API del servizio Flusso.
+description: Scopri come creare un flusso di dati, compreso il nome, la descrizione e la pianificazione, utilizzando l’API del servizio Flusso.
 exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 9e1edaa4183a8025b8391f58d480063adc834616
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '656'
 ht-degree: 3%
 
 ---
@@ -15,6 +12,10 @@ ht-degree: 3%
 # Aggiornare i flussi di dati utilizzando l’API del servizio Flusso
 
 Questo tutorial illustra i passaggi necessari per aggiornare un flusso di dati, incluse le informazioni di base, la pianificazione e i set di mappatura mediante l&#39;[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+
+>[!TIP]
+>
+>La connessione di origine e la connessione di destinazione devono essere mappate su un singolo flusso di dati. Non aggiornare separatamente le connessioni di origine e di destinazione, poiché le modifiche non verranno riportate nel flusso di dati corrispondente. Se il caso d’uso richiede un aggiornamento delle connessioni di origine e di destinazione, devi creare una nuova coppia di connessioni di origine e di destinazione, nonché un nuovo flusso di dati.
 
 ## Introduzione
 
@@ -49,11 +50,11 @@ La richiesta seguente recupera informazioni aggiornate relative all’ID flusso.
 
 ```shell
 curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
+  'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Risposta**
