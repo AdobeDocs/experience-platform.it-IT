@@ -4,10 +4,10 @@ title: Dashboard utilizzo licenze
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale è possibile visualizzare informazioni importanti sull’utilizzo delle licenze della tua organizzazione.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 67d4bcbf2a055d4427218ba7d98355f09d860a8c
+source-git-commit: 80380fb1287d710460ad2c75d73ea5c2c38f5ebd
 workflow-type: tm+mt
-source-wordcount: '2738'
-ht-degree: 16%
+source-wordcount: '2855'
+ht-degree: 15%
 
 ---
 
@@ -117,7 +117,6 @@ Gestisci e ottimizza in modo proattivo le risorse di gestione delle licenze in b
 
 Per visualizzare un riepilogo dell&#39;utilizzo dei diritti di un prodotto, selezionare un prodotto dalla tabella [!UICONTROL Prodotti principali].
 
-<!-- update image ... -->
 ![Utilizzo della [!UICONTROL Licenza] [!UICONTROL Panoramica] con un prodotto ed evidenziata la colonna Utilizzo previsto.](../images/license-usage/product-predicted-usage.png)
 
 Viene visualizzata la scheda Riepilogo. Puoi utilizzare le previsioni granulari disponibili nelle schede [!UICONTROL Riepilogo] e [!UICONTROL Dettagli] per garantire un processo decisionale informato e un utilizzo efficiente delle licenze.
@@ -126,7 +125,6 @@ Viene visualizzata la scheda Riepilogo. Puoi utilizzare le previsioni granulari 
 >
 >Tieni presente che le previsioni sull’utilizzo delle licenze sono approssimazioni basate sull’utilizzo passato. L’utente è responsabile di comprendere l’utilizzo effettivo dell’organizzazione e di garantire che l’utilizzo non vada oltre l’ambito della licenza dell’organizzazione con Adobe.
 
-<!-- update image ... -->
 ![Visualizzazione di riepilogo di un prodotto Platform con la colonna Utilizzo previsto evidenziata.](../images/license-usage/summary-predicted-usage.png)
 
 La percentuale di utilizzo previsto è determinata come segue:
@@ -142,10 +140,9 @@ La percentuale di utilizzo previsto è determinata come segue:
 La funzione di utilizzo previsto supporta le metriche seguenti:
 
 - [!UICONTROL Pubblico indirizzabile]
-- [!UICONTROL Ricchezza media profilo]
 - [!UICONTROL Calcola ore]
 - [!UICONTROL Numero di righe del pubblico del Percorso di clienti]
-- [!UICONTROL Archiviazione totale]
+- [!UICONTROL Volume di dati totale]
 
 ## Scheda [!UICONTROL Riepilogo] {#summary-tab}
 
@@ -204,6 +201,10 @@ Puoi anche selezionare **[!UICONTROL Data personalizzata]** per scegliere il per
 
 ## Metriche disponibili {#available-metrics}
 
+>[!IMPORTANT]
+>
+>A partire dal 20 agosto, i clienti con diritti per &#39;[!UICONTROL Ricchezza media profilo]&#39; e &#39;[!UICONTROL Archiviazione totale]&#39; hanno invece visualizzato &#39;[!UICONTROL Volume totale dati]&#39; nel dashboard Utilizzo licenze. Non vi sono state modifiche alle adesioni dei clienti, ma solo una semplificazione delle metriche di tracciamento. [!UICONTROL Volume totale dati] rappresenta i dati disponibili nel servizio profili di Adobe Experience Platform per i flussi di lavoro di coinvolgimento e personalizzazione. Questa metrica semplificata ha migliorato la gestione e la misurazione dell’utilizzo del servizio profilo. I clienti sono stati invitati a contattare il proprio rappresentante di Adobe per ulteriori chiarimenti su questa modifica.
+
 Il dashboard utilizzo licenze riporta diverse metriche univoche applicabili a più prodotti dell’organizzazione. Le metriche disponibili sono:
 
 | Metrica | Descrizione |
@@ -211,6 +212,7 @@ Il dashboard utilizzo licenze riporta diverse metriche univoche applicabili a pi
 | [!UICONTROL Dimensione Audience Activation] | Dimensione totale dei profili attivati in una destinazione basata su file in un anno. Nota: non sono inclusi i profili inviati tramite destinazioni di streaming. |
 | [!UICONTROL Pubblico di riferimento] | La somma delle adesioni per il pubblico aziendale e per il pubblico dei consumatori. Un pubblico di consumatori è definito come il numero di profili di persone identificati come &quot;pubblico di consumatori&quot; nell’ordine di vendita. Per pubblico aziendale si intende il numero di profili di persona aziendale identificati come &quot;pubblico aziendale&quot; nell’ordine di vendita. |
 | [!UICONTROL Pacchetti utenti servizio query ad hoc] | Componente aggiuntivo per aumentare il diritto degli utenti autorizzati di Query Service di altri cinque utenti di Query Service simultanei e di un’ulteriore query ad hoc in esecuzione simultanea per pacchetto. È possibile concedere in licenza più pacchetti utente di Ad Hoc Query aggiuntivi. |
+| [!UICONTROL Ricchezza media profilo] | **Obsoleto** - Somma di tutti i dati di produzione archiviati nel servizio profili hub in qualsiasi momento, divisa per cinque volte il numero di profili di persona aziendale autorizzati. [!UICONTROL Ricchezza media profilo] è una caratteristica condivisa. |
 | [!UICONTROL Righe CJA disponibili] | La media giornaliera delle righe di dati disponibili per l’analisi nel Customer Journey Analytics. |
 | [!UICONTROL Attributi calcolati] | Numero totale di dati comportamentali aggregati del profilo. I dati comportamentali aggregati del profilo si basano su eventi di esperienza convertiti in un attributo di profilo e che possono essere inclusi in un profilo di persona o di persona aziendale. |
 | [!UICONTROL Pubblico consumer] | Il numero di profili di persona identificati come &quot;Pubblico consumatore&quot; nell’ordine cliente. |
