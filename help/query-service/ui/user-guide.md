@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Query Editor
 description: L’editor delle query è uno strumento interattivo fornito da Adobe Experience Platform Query Service che consente di scrivere, convalidare ed eseguire query per i dati sull’esperienza del cliente all’interno dell’interfaccia utente di Experience Platform. Query Editor supporta lo sviluppo di query per l’analisi e l’esplorazione dei dati e consente di eseguire query interattive a scopo di sviluppo, nonché query non interattive per popolare i set di dati in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: f68dd020b05d1eaf6d873b9cdc2a40007ad60c84
+source-git-commit: e66f3540d22a441089916183538921ea5654b312
 workflow-type: tm+mt
-source-wordcount: '2845'
+source-wordcount: '2843'
 ht-degree: 0%
 
 ---
@@ -200,12 +200,12 @@ Se è stata pianificata una query, la scheda [!UICONTROL Query pianificate] forn
 >
 >Le query non eseguite non vengono salvate dal registro. Affinché la query sia disponibile in Query Service, deve essere eseguita o salvata in Query Editor.
 
-### [!BADGE Beta]{type=Informative} Visualizzatore oggetti {#object-browser}
+### [!BADGE Disponibilità limitata]{type=Informative} Visualizzatore oggetti {#object-browser}
 
 >[!AVAILABILITY]
 >
 La barra di navigazione del set di dati è disponibile solo per i clienti Data Distiller. L’interfaccia utente di Platform potrebbe non contenere la barra di navigazione del set di dati a sinistra. Altre immagini in questo documento potrebbero non riflettere la barra di navigazione del set di dati. Per ulteriori informazioni, contatta il rappresentante del tuo Adobe.<br>
-Il browser oggetti è attualmente in versione beta e disponibile solo in una **versione limitata**. Contatta il rappresentante del tuo Adobe per ottenere l’accesso anticipato alla versione.
+Il browser oggetti è attualmente disponibile solo in una **versione limitata**. Contatta il rappresentante del tuo Adobe per ottenere l’accesso anticipato alla versione.
 
 Utilizza il browser oggetti per cercare e filtrare facilmente i set di dati. Il browser oggetti riduce il tempo impiegato per la ricerca di tabelle e set di dati in ambienti di grandi dimensioni con numerosi set di dati. Grazie all’accesso semplificato ai dati e ai metadati rilevanti, puoi concentrarti di più sull’authoring delle query e meno sulla navigazione.
 
