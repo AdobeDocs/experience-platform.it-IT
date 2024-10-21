@@ -2,9 +2,9 @@
 title: Guida all’implementazione per il servizio Identity
 description: Scopri come vengono elaborati i dati forniti a Adobe Experience Platform prima di essere utilizzati da Identity Service per creare grafici delle identità.
 exl-id: c961bbf6-6b46-470f-a671-93ff4173876c
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: 4ba25ed684ff126ab1c4f1a33e6503f0342e8720
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '600'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,7 @@ Ad esempio, etichettando i campi del numero di telefono come campi di identità,
 >
 >* I campi di tipo matrice e mappa non sono supportati e non possono essere contrassegnati ed etichettati come campi di identità.
 >* Lo spazio dei nomi delle identità risultanti viene fornito quando il campo viene etichettato.
+>* Un campo può essere contrassegnato come identità, purché non si trovi in un oggetto array.
 
 Per ulteriori informazioni, consulta la guida su [definizione dei campi di identità nell&#39;interfaccia utente](../xdm/ui/fields/identity.md).
 
