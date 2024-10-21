@@ -2,9 +2,9 @@
 title: Priorità dello spazio dei nomi
 description: Scopri la priorità dello spazio dei nomi in Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: aae82bc84eff7584098ddb35a481d7349ff837c4
+source-git-commit: b50633a8518f32051549158b23dfc503db255a82
 workflow-type: tm+mt
-source-wordcount: '1605'
+source-wordcount: '1700'
 ht-degree: 2%
 
 ---
@@ -107,7 +107,7 @@ Supponiamo che per una determinata sandbox siano stabilite le seguenti configura
 
 Date le configurazioni sopra descritte, le azioni degli utenti e la determinazione dell’identità primaria saranno risolte come tali:
 
-| Azione utente (evento esperienza) | Stato di autenticazione | Origine dati | Mappa identità | Identità primaria (chiave primaria del frammento di profilo) |
+| Azione utente (evento esperienza) | Stato di autenticazione | Origine dati | Spazi dei nomi nell’evento | Spazio dei nomi dell’identità primaria |
 | --- | --- | --- | --- | --- |
 | Visualizza pagina offerta carta di credito | Non autenticato (anonimo) | Web SDK | {ECID} | ECID |
 | Visualizza pagina della guida | Non autenticato | SDK mobile | {ECID, IDFA} | IDFA |
@@ -121,12 +121,16 @@ Date le configurazioni sopra descritte, le azioni degli utenti e la determinazio
 
 ![Diagramma dell&#39;archivio di appartenenza ai segmenti](../images/namespace-priority/segment-membership-storage.png)
 
-Per un determinato profilo unito, le appartenenze ai segmenti verranno memorizzate in base all’identità con lo spazio dei nomi con priorità più elevata.
+Per un determinato profilo unito, le appartenenze al segmento verranno memorizzate in base all’identità con la priorità più elevata dello spazio dei nomi.
 
 Ad esempio, si supponga che siano presenti due profili:
 
-* Il primo profilo rappresenta John.
-* Il secondo profilo rappresenta Jane.
+* Il profilo 1 rappresenta John.
+   * Il profilo di John si qualifica come S1 (appartenenza al segmento 1). Ad esempio, S1 potrebbe fare riferimento a un segmento di clienti che si identificano come maschi.
+   * Il profilo di John si qualifica anche per S2 (appartenenza al segmento 2). Potrebbe riferirsi a un segmento di clienti il cui stato di fedeltà è oro.
+* Il profilo 2 rappresenta Jane.
+   * Il profilo di Jane è idoneo per S3 (appartenenza al segmento 3). Questo potrebbe fare riferimento a un segmento di clienti che si identificano come donne.
+   * Il profilo di Jane è anche idoneo per S4 (appartenenza al segmento 4). Potrebbe riferirsi a un segmento di clienti il cui stato di fedeltà è platino.
 
 Se John e Jane condividono un dispositivo, allora l’ECID (browser web) si trasferisce da una persona all’altra. Tuttavia, questo non influenza le informazioni sull’iscrizione al segmento memorizzate per John e Jane.
 
@@ -141,15 +145,13 @@ Questa sezione illustra come la priorità dello spazio dei nomi può influenzare
 Il record di igiene dei dati elimina le richieste nel modo seguente, per una determinata identità:
 
 * Profilo cliente in tempo reale: elimina qualsiasi frammento di profilo con identità specificata come identità principale. **L&#39;identità primaria nel profilo verrà ora determinata in base alla priorità dello spazio dei nomi.**
-* Data lake: elimina qualsiasi record con l’identità specificata come identità primaria.
+* Data lake: elimina qualsiasi record con l’identità specificata come identità primaria. A differenza di Real-Time Customer Profile, l&#39;identità primaria nel data lake si basa sull&#39;identità primaria specificata in WebSDK (`primary=true`) o su un campo contrassegnato come identità primaria
 
 Per ulteriori informazioni, leggere la [panoramica sulla gestione avanzata del ciclo di vita](../../hygiene/home.md).
 
 ### Attributi calcolati
 
-Gli attributi calcolati non utilizzano la priorità dello spazio dei nomi per calcolare i valori. Se utilizzi attributi calcolati, assicurati che il CRMID sia designato come identità principale per WebSDK. Tale limitazione dovrebbe essere risolta nell&#39;agosto 2024.
-
-Per ulteriori informazioni, leggere la [guida dell&#39;interfaccia utente degli attributi calcolati](../../profile/computed-attributes/ui.md).
+Gli attributi calcolati non utilizzano la priorità dello spazio dei nomi per calcolare i valori. Se utilizzi attributi calcolati, assicurati che il CRMID sia designato come identità principale per WebSDK. Per ulteriori informazioni, leggere la [guida dell&#39;interfaccia utente degli attributi calcolati](../../profile/computed-attributes/ui.md).
 
 ### Data lake
 

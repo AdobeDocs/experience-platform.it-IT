@@ -2,9 +2,9 @@
 title: Interfaccia utente per le impostazioni delle identità
 description: Scopri come utilizzare l’interfaccia utente delle impostazioni di identità.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
+source-git-commit: 32229555a8bad3632bde974e3d97772a8cb21b71
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '538'
 ht-degree: 1%
 
 ---
@@ -56,7 +56,7 @@ Al termine, seleziona **[!UICONTROL Avanti]**. Viene visualizzato un messaggio d
 
 ![La pagina di convalida con Fine evidenziata.](../images/rules/finish.png)
 
-Viene visualizzato un messaggio di avviso che indica che i grafici esistenti saranno interessati dall&#39;algoritmo del grafico solo se i grafici vengono aggiornati **dopo il salvataggio delle impostazioni** e che l&#39;identità primaria dei frammenti di evento nel profilo cliente in tempo reale non verrà aggiornata anche dopo le modifiche della priorità dello spazio dei nomi. Inoltre, ti viene comunicato che saranno necessarie fino a **sei ore** per rendere effettive le nuove impostazioni. Per confermare, immetti il nome della sandbox, quindi seleziona **[!UICONTROL Conferma]**.
+Viene visualizzato un messaggio di avviso che indica che i grafici esistenti saranno interessati dall&#39;algoritmo del grafico solo se i grafici vengono aggiornati **dopo il salvataggio delle impostazioni** e che l&#39;identità primaria dei frammenti di evento nel profilo cliente in tempo reale non verrà aggiornata anche dopo le modifiche della priorità dello spazio dei nomi. Inoltre, ti viene comunicato che saranno necessarie fino a **sei ore** affinché le impostazioni nuove o aggiornate abbiano effetto. Per confermare, immetti il nome della sandbox, quindi seleziona **[!UICONTROL Conferma]**.
 
 ![Finestra di conferma che visualizza un avviso relativo a un ritardo di sei ore prima dell&#39;elaborazione delle configurazioni.](../images/rules/confirm-settings.png)
 
