@@ -2,9 +2,9 @@
 description: Questa pagina fornisce tutte le informazioni necessarie per inviare e rivedere una destinazione prodotta creata con Destination SDK.
 title: Invia per la revisione una destinazione prodotta creata in Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 2c778f98815af87453e84f24ba8bf077774349a1
+source-git-commit: 756c14c67e349a9ca906c027a07766e952485525
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '1052'
 ht-degree: 0%
 
 ---
@@ -32,6 +32,7 @@ In questa pagina sono elencate tutte le informazioni che è necessario fornire q
 * Una descrizione dei casi d’uso risolti dalla tua destinazione. Questa operazione è necessaria solo se si invia una nuova configurazione di destinazione.
 * Una descrizione del motivo dell’invio a destinazione. Questa opzione è necessaria solo se si sta aggiornando una configurazione di destinazione esistente.
 * Risultati del test dopo l’utilizzo dell’endpoint API di destinazione del test per eseguire una chiamata HTTP alla destinazione. Condividi con Adobe una chiamata API effettuata all’endpoint di destinazione e la risposta API ricevuta dall’endpoint di destinazione.
+* Una registrazione schermata che mostra l’esperienza utente per qualcuno che si connette alla destinazione e procede attraverso i passaggi di attivazione.
 * Requisiti aggiuntivi per le destinazioni basate su file:
    * Condividi una richiesta e un esempio di risposta dopo aver utilizzato l&#39;API di test per [testare la destinazione basata su file con profili di esempio](../testing-api/batch-destinations/file-based-destination-testing-api.md).
    * Allega un file di esempio generato dalla destinazione ed esportato nel percorso di archiviazione.
