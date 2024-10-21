@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Terminologia delle normative sulla privacy
 description: Questo documento fornisce le definizioni dei termini chiave relativi alle normative sulla privacy supportate da Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: c4ca3dc975b13e2dce2e12784480e53bd0c4ee02
+source-git-commit: 0a8d7c4414f6091025d36ed85dc09e057ee24df9
 workflow-type: tm+mt
 source-wordcount: '2301'
 ht-degree: 0%
@@ -113,7 +113,7 @@ Questo documento fornisce le definizioni dei termini chiave relativi alle normat
 
 **[!DNL Nebraska Data Protection Act]**: una legge sulla privacy che garantisce ai cittadini del Nebraska il diritto di accesso, correzione, cancellazione e rinuncia alla vendita dei propri dati personali. Si applica alle aziende che soddisfano specifiche soglie di elaborazione dati e ricavi. L&#39;NDPA impone inoltre alle imprese di attuare misure ragionevoli di sicurezza dei dati e offre un periodo di cura di 30 giorni per risolvere le violazioni prima che vengano applicate le sanzioni.
 
-**[!DNL New Hampshire Data Privacy Act]**: questo regolamento protegge i dati personali dei residenti del New Hampshire concedendo loro il diritto di accesso, cancellazione e trasferimento dei propri dati. Obbliga le aziende a divulgare le loro pratiche di raccolta e condivisione dei dati e consente ai consumatori di rinunciare alle vendite di dati. L&#39;NHDPA si applica alle aziende che soddisfano determinate soglie di elaborazione dei dati.
+**[!DNL New Hampshire Privacy Act]**: questo regolamento protegge i dati personali dei residenti del New Hampshire concedendo loro il diritto di accesso, cancellazione e trasferimento dei propri dati. Obbliga le aziende a divulgare le loro pratiche di raccolta e condivisione dei dati e consente ai consumatori di rinunciare alle vendite di dati. L&#39;NHDPA si applica alle aziende che soddisfano determinate soglie di elaborazione dei dati.
 
 **[!DNL New Jersey Data Protection Act]**: una legge completa sulla privacy dello stato che fornisce ai residenti del New Jersey i diritti di accesso, correzione ed eliminazione dei dati personali. Include meccanismi di rinuncia per la vendita di dati e la pubblicità mirata. L&#39;NJDPA si applica alle imprese che trattano grandi quantità di dati dei consumatori e richiede trasparenza nel modo in cui le imprese gestiscono le informazioni personali.
 
