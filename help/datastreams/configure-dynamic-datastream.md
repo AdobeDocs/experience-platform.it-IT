@@ -4,9 +4,9 @@ description: Scopri come creare configurazioni di flussi di dati dinamici, per i
 hide: true
 hidefromtoc: true
 badge: label="Beta" type="Informative"
-source-git-commit: 86416dc11f92a774cda5d95365d3981a637a5595
+source-git-commit: 615318744c233930fb9bc20e55ff42c3a396e651
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '577'
 ht-degree: 1%
 
 ---
@@ -57,7 +57,7 @@ Dopo che hai [creato uno stream di dati](configure.md) e [aggiunto un servizio](
 
    ![Immagine dell&#39;interfaccia utente dei flussi di dati che mostra la regola di configurazione dinamica.](assets/configure-dynamic-datastream/drag-resources.png)
 
-1. Nella sezione **[!UICONTROL Configurazione]**, attiva/disattiva i servizi che desideri abilitare o disabilitare per ogni regola, a seconda che si desideri che i dati vengano inviati a ogni servizio. Se si disattiva l&#39;interruttore, la regola è disabilitata e *tutti i dati* verranno inviati al servizio upstream.
+1. Nella sezione **[!UICONTROL Configurazione]**, attiva/disattiva i servizi che desideri abilitare o disabilitare per ogni regola, a seconda che si desideri che i dati vengano inviati a ogni servizio. Se si disattiva l&#39;interruttore, il routing del servizio è disabilitato e *nessun dato* verrà inviato al servizio upstream.
 
    ![Immagine dell&#39;interfaccia utente dei flussi di dati che mostra la regola di configurazione dinamica.](assets/configure-dynamic-datastream/enable-service.png)
 
