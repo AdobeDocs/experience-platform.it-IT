@@ -2,7 +2,7 @@
 title: Regole di collegamento del grafico delle identità
 description: Scopri le regole di collegamento del grafico delle identità in Identity Service.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
+source-git-commit: 5092421ed8d0ff61fb3ed7f0849d2271f1fa144c
 workflow-type: tm+mt
 source-wordcount: '1424'
 ht-degree: 2%
@@ -98,11 +98,11 @@ Puoi configurare uno spazio dei nomi in modo che sia univoco utilizzando l’are
 
 Considera lo scenario seguente:
 
-* Scott utilizza un tablet e apre il browser Google Chrome per visitare il sito nike<span>.com, dove effettua l&#39;accesso e cerca nuove scarpe da basket.
+* Scott utilizza un tablet e apre il browser Google Chrome per andare su acme<span>.com, dove accede e cerca nuove scarpe da basket.
    * Dietro le quinte, questo scenario registra le seguenti identità:
       * Uno spazio dei nomi e un valore ECID per rappresentare l’utilizzo del browser
       * Uno spazio dei nomi e un valore CRMID per rappresentare l&#39;utente autenticato (Scott ha effettuato l&#39;accesso con la combinazione di nome utente e password).
-* Suo figlio Peter utilizza quindi lo stesso tablet e utilizza anche Google Chrome per visitare il sito nike<span>.com, dove accede con il proprio account per cercare le attrezzature per il calcio.
+* Suo figlio Peter utilizza quindi lo stesso tablet e utilizza anche Google Chrome per visitare il sito acme<span>.com, dove accede con il proprio account per cercare attrezzature per il calcio.
    * Dietro le quinte, questo scenario registra le seguenti identità:
       * Lo stesso spazio dei nomi e valore ECID per rappresentare il browser.
       * Nuovo spazio dei nomi e valore CRMID per rappresentare l’utente autenticato.

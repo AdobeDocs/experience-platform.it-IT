@@ -2,9 +2,9 @@
 title: Guida all’implementazione per le regole di collegamento del grafico delle identità
 description: Scopri i passaggi consigliati da seguire per implementare i dati con le configurazioni delle regole di collegamento del grafico delle identità.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 5d1bcaa84875e55595996253fb72cf768af16e05
+source-git-commit: 720ffa1ca0ee69cfc802cd50aef26b6f38d2142c
 workflow-type: tm+mt
-source-wordcount: '1634'
+source-wordcount: '1668'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ Descrizione dettagliata:
 1. [Prerequisiti completi per l’implementazione](#prerequisites-for-implementation)
 2. [Creare gli spazi dei nomi di identità necessari](#namespace)
 3. [Utilizza lo strumento di simulazione del grafico per acquisire familiarità con l’algoritmo di ottimizzazione delle identità](#graph-simulation)
-4. [Utilizza lo strumento Identity Settings (Impostazioni identità) per designare gli spazi dei nomi univoci e configurare le classificazioni di priorità per i tuoi spazi dei nomi](#identity-settings)
+4. [Utilizza l’interfaccia utente delle impostazioni di identità per designare gli spazi dei nomi univoci e configurare le classificazioni di priorità per i tuoi spazi dei nomi](#identity-settings)
 5. [Creare uno schema Experience Data Model (XDM)](#schema)
 6. [Creare un set di dati](#dataset)
 7. [Acquisire i dati in Experience Platform](#ingest)
@@ -183,9 +183,13 @@ Creando diverse configurazioni, puoi utilizzare lo strumento di simulazione del 
 
 ## Configurare le impostazioni di identità {#identity-settings}
 
-Per avere un&#39;idea migliore del comportamento del grafico, passa allo strumento [impostazioni identità](./identity-settings-ui.md) nell&#39;area di lavoro dell&#39;interfaccia utente di Identity Service.
+Per avere un&#39;idea migliore del comportamento del grafico, passa alla [interfaccia utente delle impostazioni delle identità](./identity-settings-ui.md) nell&#39;area di lavoro dell&#39;interfaccia utente di Identity Service. Per accedere all&#39;interfaccia utente delle impostazioni delle identità, seleziona **[!UICONTROL Identità]** nell&#39;area di navigazione a sinistra, quindi seleziona **[!UICONTROL Impostazioni]**.
 
-Utilizza lo strumento Identity Settings (Impostazioni identità) per designare gli spazi dei nomi univoci e configurare gli spazi dei nomi in ordine di priorità. Una volta completata l’applicazione delle impostazioni, attendi almeno sei ore prima di poter procedere all’acquisizione dei dati, poiché sono necessarie almeno sei ore affinché le nuove impostazioni vengano applicate al servizio Identity.
+![Pagina di esplorazione delle identità con il pulsante Impostazioni evidenziato.](../images/implementation/settings.png)
+
+Utilizza l’interfaccia utente delle impostazioni di identità per designare gli spazi dei nomi univoci e configurare gli spazi dei nomi in ordine di priorità. Una volta completata l’applicazione delle impostazioni, attendi almeno sei ore prima di poter procedere all’acquisizione dei dati, poiché sono necessarie almeno sei ore affinché le nuove impostazioni vengano applicate al servizio Identity.
+
+Per ulteriori informazioni, leggere la [guida dell&#39;interfaccia utente per le impostazioni delle identità](./identity-settings-ui.md).
 
 ## Creare uno schema XDM {#schema}
 
