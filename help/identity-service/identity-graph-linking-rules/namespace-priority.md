@@ -2,9 +2,9 @@
 title: Priorità dello spazio dei nomi
 description: Scopri la priorità dello spazio dei nomi in Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: b50633a8518f32051549158b23dfc503db255a82
+source-git-commit: e8e8914c41d7a083395b0bf53aaac8021fcf9e9a
 workflow-type: tm+mt
-source-wordcount: '1700'
+source-wordcount: '1689'
 ht-degree: 2%
 
 ---
@@ -109,11 +109,11 @@ Date le configurazioni sopra descritte, le azioni degli utenti e la determinazio
 
 | Azione utente (evento esperienza) | Stato di autenticazione | Origine dati | Spazi dei nomi nell’evento | Spazio dei nomi dell’identità primaria |
 | --- | --- | --- | --- | --- |
-| Visualizza pagina offerta carta di credito | Non autenticato (anonimo) | Web SDK | {ECID} | ECID |
-| Visualizza pagina della guida | Non autenticato | SDK mobile | {ECID, IDFA} | IDFA |
-| Visualizza saldo conto corrente | autenticato | Web SDK | {CRMID, ECID} | CRMID |
-| Iscriviti al prestito per la casa | autenticato | Connettore di origine di Analytics | {CRMID, ECID, AAID} | CRMID |
-| Trasferisci $1.000 dal controllo al risparmio | autenticato | SDK mobile | {CRMID, GAID, ECID} | CRMID |
+| Visualizza pagina offerta carta di credito | Non autenticato (anonimo) | Web SDK | `{ECID}` | ECID |
+| Visualizza pagina della guida | Non autenticato | SDK mobile | `{ECID, IDFA}` | IDFA |
+| Visualizza saldo conto corrente | autenticato | Web SDK | `{CRMID, ECID}` | CRMID |
+| Iscriviti al prestito per la casa | autenticato | Connettore di origine di Analytics | `{CRMID, ECID, AAID}` | CRMID |
+| Trasferisci $1.000 dal controllo al risparmio | autenticato | SDK mobile | `{CRMID, GAID, ECID}` | CRMID |
 
 {style="table-layout:auto"}
 

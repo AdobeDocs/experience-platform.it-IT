@@ -2,7 +2,7 @@
 title: Filtrare I Dati A Livello Di Riga Per Un Source Utilizzando L’API Del Servizio Di Flusso
 description: Questo tutorial illustra i passaggi necessari per filtrare i dati a livello di origine utilizzando l’API del servizio Flow
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: 544bb7b5aff437fd49c30ac3d6261f103a609cac
+source-git-commit: e8e8914c41d7a083395b0bf53aaac8021fcf9e9a
 workflow-type: tm+mt
 source-wordcount: '1820'
 ht-degree: 5%
@@ -687,12 +687,12 @@ Per aggiornare la connessione di origine, effettuare una richiesta PATCH all&#39
 **Formato API**
 
 ```http
-GET /sourceConnections/{SOURCE_CONNECTION_ID}
+PATCH /sourceConnections/{SOURCE_CONNECTION_ID}
 ```
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{SOURCE_CONNECTION_ID}` | ID della connessione di origine che si desidera recuperare. |
+| `{SOURCE_CONNECTION_ID}` | ID della connessione sorgente che desideri aggiornare |
 
 +++Richiesta
 
