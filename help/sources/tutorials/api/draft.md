@@ -2,7 +2,7 @@
 title: Creare bozze dell’API delle entità del servizio Flow
 description: Scopri come creare bozze della connessione di base, della connessione di origine, della connessione di destinazione e del flusso di dati utilizzando l’API del servizio Flusso
 exl-id: aad6a302-1905-4a23-bc3d-39e76c9a22da
-source-git-commit: ebd650355a5a4c2a949739384bfd5c8df9577075
+source-git-commit: 9c40f6254b548027d271e5831bd1b03aec98df77
 workflow-type: tm+mt
 source-wordcount: '1188'
 ht-degree: 5%
@@ -589,7 +589,7 @@ La richiesta seguente crea bozza di connessione di base per l&#39;origine [!DNL 
 
 ```shell
 curl -X POST \
-  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  'https://platform.adobe.io/data/foundation/flowservice/connections?mode=draft' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
