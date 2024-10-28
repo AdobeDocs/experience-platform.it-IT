@@ -3,9 +3,9 @@ keywords: personalizzazione target; destinazione; destinazione experience platfo
 title: Connessione Adobe Target
 description: Adobe Target è un’applicazione che fornisce funzionalità di personalizzazione e sperimentazione basate sull’intelligenza artificiale in tempo reale per tutte le interazioni dei clienti in entrata tramite siti web, app mobili e altro ancora.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 14dccb993b38ca352c6de3ed851bafe7c44ca631
+source-git-commit: dae0cb108c62b078d0c7dd5bec466091d4937c53
 workflow-type: tm+mt
-source-wordcount: '1755'
+source-wordcount: '1768'
 ht-degree: 9%
 
 ---
@@ -126,7 +126,8 @@ Durante la [configurazione](../../ui/connect-destination.md) di questa destinazi
 
   >[!IMPORTANT]
   >
-  >L’ID dello stream di dati è univoco per ogni connessione di destinazione di Adobe Target. Se devi mappare gli stessi tipi di pubblico su più flussi di dati, devi [creare una nuova connessione di destinazione](../../ui/connect-destination.md) per ogni ID dello stream di dati e passare attraverso il [flusso di attivazione del pubblico](#activate).
+  >L’ID dello stream di dati è univoco per ogni connessione di destinazione di Adobe Target. Non puoi utilizzare lo stesso ID dello stream di dati per più connessioni di destinazione Adobe Target.
+  >Se devi mappare gli stessi tipi di pubblico su più flussi di dati, devi [creare una nuova connessione di destinazione](../../ui/connect-destination.md) per ogni ID dello stream di dati e passare attraverso il [flusso di attivazione del pubblico](#activate).
 
    * **[!UICONTROL Nessuno]**: selezionare questa opzione se è necessario configurare la personalizzazione Adobe Target ma non è possibile implementare [Experience Platform Web SDK](/help/web-sdk/home.md). Quando si utilizza questa opzione, i tipi di pubblico esportati da Experience Platform a Target supportano solo la personalizzazione della sessione successiva e la segmentazione Edge è disabilitata. Fai riferimento alla tabella nella sezione [casi d&#39;uso supportati](#supported-use-cases) per un confronto dei casi d&#39;uso disponibili per tipo di implementazione.
 
