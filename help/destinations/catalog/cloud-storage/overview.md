@@ -3,9 +3,9 @@ keywords: destinazione archiviazione cloud;archiviazione cloud
 title: Panoramica delle destinazioni di archiviazione cloud
 description: Adobe Experience Platform può distribuire i tipi di pubblico come file di dati ai percorsi di archiviazione cloud Amazon S3, AWS Kinesis, Azure Event Hub o SFTP.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 9c1699471d5b3c3c725e46581e256a0c07f08a49
+source-git-commit: 2e21e62de624c5e7e9fac4d36dbf41b46198062a
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '463'
 ht-degree: 5%
 
 ---
@@ -40,7 +40,7 @@ Per inviare i tipi di pubblico alle destinazioni di archiviazione cloud per le c
 
 >[!NOTE]
 >
-> La funzionalità descritta in questa sezione è attualmente disponibile solo per [destinazioni Amazon S3](amazon-s3.md).
+> La funzionalità descritta in questa sezione è disponibile per tutte le destinazioni di archiviazione cloud. Tuttavia, la destinazione [Amazon S3](amazon-s3.md) supporta attualmente solo le macro `%SEGMENT_ID%` e `%SEGMENT_NAME%`.
 
 Per creare una cartella personalizzata per file di pubblico nel percorso di archiviazione, puoi utilizzare le macro nel campo di input del percorso della cartella. Inserire le macro alla fine del campo di input, come illustrato di seguito.
 
