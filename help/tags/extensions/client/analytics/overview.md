@@ -2,10 +2,10 @@
 title: Panoramica dell’estensione Adobe Analytics
 description: Scopri le caratteristiche dell’estensione tag di Adobe Analytics in Adobe Experience Platform.
 exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 764a9a29df0be6064d36f952d2e8a61acfa9bd33
 workflow-type: tm+mt
-source-wordcount: '2105'
-ht-degree: 95%
+source-wordcount: '2331'
+ht-degree: 86%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 95%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Utilizza questo riferimento per informazioni sulla configurazione dell&#39;estensione Adobe Analytics e sulle opzioni disponibili quando utilizzi questa estensione per generare una regola.
 
@@ -289,7 +289,19 @@ L&#39;estensione Analytics fornisce le azioni seguenti:
 
 ### Imposta variabili {#set-variables}
 
-Importante: l&#39;utilizzo di un&#39;azione &quot;Imposta variabili&quot; non invierà il beacon. È necessario utilizzare l&#39;azione &quot;Invia beacon&quot;.
+>[!IMPORTANT]
+>
+>Non è possibile inviare il beacon con l&#39;azione &quot;imposta variabili&quot;. Per inviare il beacon, è necessario selezionare l&#39;azione &quot;send beacon&quot;.
+
+È possibile scegliere tra due visualizzazioni diverse in **Imposta variabili**:
+
+>[!BEGINTABS]
+
+>[!TAB Specificare attributi singoli]
+
+In questa visualizzazione è possibile specificare variabili diverse, ad esempio `eVars`, `Props`, `Events`.
+
+![Pagina di visualizzazione modulo di Adobe Analytics, in cui sono elencati attributi aggiuntivi.](../../../images/adobe_analytics_extension_form_view.png)
 
 #### eVar
 
@@ -319,6 +331,25 @@ Imposta uno o più [eventi](https://experienceleague.adobe.com/docs/analytics/im
 1. (Facoltativo) Seleziona o specifica un elemento dati usato per la [serializzazione degli eventi](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/events/event-serialization.html?lang=it).
 1. (Facoltativo) Fai clic su **[!UICONTROL Aggiungi evento]** per impostare altri eventi.
 1. Seleziona **[!UICONTROL Mantieni modifiche]**.
+
+>[!TAB Visualizzazione JSON]
+
+In questa visualizzazione è possibile visualizzare e modificare una versione JSON dell&#39;azione **Imposta variabili**.
+
+![Visualizzazione che rappresenta la configurazione corrente delle variabili del set in formato JSON nell&#39;estensione Adobe Analytics.](../../../images/adobe_analytics_extension_json_view.png)
+
+#### JSON
+
+Nell&#39;azione **Imposta variabili**, utilizza la visualizzazione JSON per caricare, copiare o scaricare dati JSON e archiviarli nel dispositivo.
+
+Tuttavia, esistono alcune limitazioni:
+
+* **Codice personalizzato**: se utilizzi un codice personalizzato per popolare le variabili, non verrà visualizzato nella visualizzazione JSON. Al contrario, durante la visualizzazione, la copia o il download del codice JSON viene visualizzato un avviso che indica che le modifiche effettuate tramite il codice personalizzato non saranno incluse.
+* **Copia dall&#39;attributo URL**: la copia di un valore da un URL non è supportata nella visualizzazione JSON. Viene visualizzato un avviso per indicare questa limitazione.
+* **Variabili ritirate**: le variabili ritirate o obsolete vengono visualizzate nella vista JSON e viene visualizzato un avviso che informa che le variabili ritirate sono state impostate.
+* **Elementi dati**: gli elementi dati sono rappresentati nella visualizzazione JSON. Se i dati JSON vengono copiati in un’altra proprietà Tags, gli elementi dati corrispondenti potrebbero non essere definiti in tale posizione e non verranno risolti correttamente durante l’esecuzione.
+
+>[!ENDTABS]
 
 #### Gerarchia
 
