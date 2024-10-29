@@ -1,29 +1,24 @@
 ---
 title: Condivisione di pacchetti tra organizzazioni tramite strumenti sandbox
 description: Scopri come utilizzare gli strumenti Sandbox in Adobe Experience Platform per condividere pacchetti tra diverse organizzazioni.
-badge: Beta
-source-git-commit: 0e280972feb990221272d272aa2a9e3852beb5e8
+source-git-commit: 77994c1cdd185cc8a2963c5aa2eb345c8702fe02
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '945'
 ht-degree: 0%
 
 ---
 
 # Condividere pacchetti tra organizzazioni utilizzando gli strumenti sandbox
 
->[!NOTE]
->
->La condivisione di pacchetti tra organizzazioni è attualmente in versione beta e disponibile solo per alcuni clienti beta.
-
 Migliora la precisione della configurazione nelle sandbox ed esporta e importa facilmente le configurazioni sandbox tra sandbox di diverse organizzazioni con la funzione di strumenti sandbox. Questo documento illustra come utilizzare gli strumenti sandbox in Adobe Experience Platform per condividere pacchetti tra diverse organizzazioni. Esistono due tipi di pacchetti condivisi:
 
 - **Pacchetto privato**
 
-[I pacchetti privati](#private-packages) possono essere condivisi solo con organizzazioni che hanno approvato la richiesta di condivisione dall&#39;organizzazione di origine tramite un elenco consentiti di consenso.
+[I pacchetti privati](#private-packages) possono essere condivisi solo con organizzazioni che hanno approvato la richiesta di condivisione dall&#39;organizzazione di origine.
 
 - **Pacchetto pubblico**
 
-[I pacchetti pubblici](./sandbox-tooling.md/#export-and-import-an-entire-sandbox) sono disponibili per l&#39;importazione senza alcuna approvazione aggiuntiva. Questi pacchetti possono essere condivisi sul sito web, sul blog o sulla piattaforma di un partner. Il payload del pacchetto consente di copiare e incollare i pacchetti da questi canali nell’organizzazione di destinazione.
+[I pacchetti pubblici](#public-packages) sono disponibili per l&#39;importazione senza alcuna approvazione aggiuntiva. Questi pacchetti possono essere condivisi sul sito web, sul blog o sulla piattaforma di un partner. Il payload del pacchetto consente di copiare e incollare i pacchetti da questi canali nell’organizzazione di destinazione.
 
 ## Pacchetti privati {#private-packages}
 
@@ -88,6 +83,52 @@ Nella finestra di dialogo **[!UICONTROL Condividi pacchetto]**, seleziona il pac
 >È possibile selezionare più di un’organizzazione. Le organizzazioni selezionate verranno visualizzate sotto il menu a discesa [!UICONTROL Impostazioni condivisione].
 
 ![Finestra di dialogo Condividi pacchetto con impostazioni di condivisione e Conferma evidenziata.](../images/ui/sandbox-tooling/private-share-package-confirm.png)
+
+## Pacchetti pubblici {#public-packages}
+
+Utilizza la funzione Strumenti sandbox per creare pacchetti pubblici condivisibili che non richiedono alcuna approvazione aggiuntiva e che vengono facilmente importati con l’utilizzo del payload del pacchetto.
+
+### Aggiorna la disponibilità del pacchetto al pubblico {#update-package}
+
+Per aggiornare il tipo di disponibilità di un pacchetto, passare alla scheda [!UICONTROL Sandbox] **[!UICONTROL Pacchetti]**. Selezionare quindi i puntini di sospensione (`...`) accanto al pacchetto, quindi selezionare **[!UICONTROL Aggiorna al pacchetto pubblico]** dal menu a discesa.
+
+![L&#39;interfaccia utente Sandbox con la scheda Pacchetti e il menu dell&#39;opzione a discesa con Aggiornamento al pacchetto pubblico evidenziato.](../images/ui/sandbox-tooling/update-to-public.png)
+
+Nella finestra di dialogo **[!UICONTROL Modifica la disponibilità del pacchetto in pubblica]**, verifica che il nome del pacchetto sia corretto e seleziona **[!UICONTROL Conferma]**.
+
+>[!IMPORTANT]
+>
+> Una volta reso pubblico, un pacchetto non può essere riconvertito in privato.
+
+![Modifica la disponibilità del pacchetto nella finestra di dialogo pubblica con Conferma evidenziata.](../images/ui/sandbox-tooling/change-package-availability.png)
+
+### Condividere pacchetti utilizzando il payload del pacchetto
+
+Per condividere il pacchetto pubblico, selezionare i puntini di sospensione (`...`) accanto al pacchetto, quindi selezionare **[!UICONTROL Copia payload pacchetto]**.
+
+![L&#39;interfaccia utente Sandbox mostra un menu a discesa dei singoli pacchetti con il payload del pacchetto Copy evidenziato.](../images/ui/sandbox-tooling/copy-package-payload.png)
+
+Nella finestra di dialogo **[!UICONTROL Copia payload del pacchetto]** vengono visualizzati il nome e il payload del pacchetto. Seleziona **[!UICONTROL Copia payload del pacchetto]** per copiare il payload associato al pacchetto.
+
+![Finestra di dialogo Copia payload pacchetto che mostra il payload JSON con il payload del pacchetto Copy evidenziato.](../images/ui/sandbox-tooling/confirm-payload-copy.png)
+
+### Creare un nuovo pacchetto utilizzando un payload del pacchetto
+
+Per creare un pacchetto utilizzando un payload, passa alla scheda [!UICONTROL Sandbox] **[!UICONTROL Pacchetti]**. Selezionare **[!UICONTROL Crea pacchetto]**.
+
+![L&#39;interfaccia utente delle sandbox mostra l&#39;evidenziazione di Crea pacchetto.](../images/ui/sandbox-tooling/create-package.png)
+
+Nella finestra di dialogo **[!UICONTROL Crea pacchetto]**, seleziona l&#39;opzione per **[!UICONTROL Incolla payload pacchetto]**, quindi seleziona **[!UICONTROL Seleziona]**.
+
+![Finestra di dialogo Crea pacchetto con payload del pacchetto selezionato e Seleziona evidenziato.](../images/ui/sandbox-tooling/create-package-options.png)
+
+Incolla il payload del pacchetto copiato nel campo di testo e seleziona **[!UICONTROL Crea]**.
+
+![Finestra di dialogo Crea pacchetto con il campo di testo vuoto ed Evidenzia Crea.](../images/ui/sandbox-tooling/paste-payload.png)
+
+Per visualizzare lo stato corrente della richiesta di condivisione, passa allo stato **[!UICONTROL Condivisione]**. Lo stato corrente della richiesta è visualizzato nella colonna **[!UICONTROL Stato condivisione]**.
+
+![La scheda dello stato di condivisione mostra una richiesta di payload in sospeso.](../images/ui/sandbox-tooling/sharing-status.png)
 
 ## Passaggi successivi {#next-steps}
 
