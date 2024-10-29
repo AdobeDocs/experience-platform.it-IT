@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Monitorare i flussi di dati per le destinazioni nell’interfaccia utente
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 27802292a7a06f2edaea9efc39d4a63507e0e7e1
+source-git-commit: 25dc27d890cb2e0e23f8fa797ac9edea929164fd
 workflow-type: tm+mt
-source-wordcount: '3542'
-ht-degree: 10%
+source-wordcount: '3639'
+ht-degree: 9%
 
 ---
 
@@ -94,6 +94,17 @@ Ogni singola esecuzione del flusso di dati mostra i seguenti dettagli:
 - **[!UICONTROL Identità attivate]**: numero totale di identità di profilo attivate correttamente nella destinazione selezionata durante l&#39;esecuzione del flusso di dati. Questa metrica include le identità create, aggiornate e rimosse dai tipi di pubblico esportati.
 - **[!UICONTROL Identità escluse]**: numero totale di identità di profilo escluse dall&#39;attivazione in base ad attributi mancanti e alla violazione del consenso.
 - **[!UICONTROL Identità non riuscite]** Il numero totale di identità di profilo non attivate nella destinazione a causa di errori.
+
+  >[!IMPORTANT]
+  >
+  > A partire da ottobre 2024, Adobe sta implementando un aggiornamento per aumentare la precisione dei rapporti per le destinazioni di streaming. Questo miglioramento garantisce un migliore allineamento tra il reporting dell’Experience Platform e quello delle piattaforme di destinazione.
+  >
+  > Prima di questo aggiornamento, **[!UICONTROL Identità non riuscite]** includeva tutti i tentativi di attivazione. Dopo questo aggiornamento, nel conteggio totale viene incluso solo l’ultimo tentativo di attivazione.
+  > 
+  > Questo miglioramento si applica attualmente alla [destinazione Customer Match di Google](../../destinations/catalog/advertising/google-customer-match.md), ma verrà introdotto gradualmente in altre destinazioni di streaming di Experienci Platform.
+  > In seguito a questo miglioramento, gli utenti della [destinazione Customer Match di Google](../../destinations/catalog/advertising/google-customer-match.md) potrebbero notare un calo previsto nel conteggio di **[!UICONTROL Identità non riuscite]**.
+
+
 - **[!UICONTROL Tasso di attivazione]**: percentuale di identità ricevute attivate o ignorate. La formula seguente illustra come viene calcolato questo valore:
   ![Formula del tasso di attivazione.](../assets/ui/monitor-destinations/activation-rate-formula.png)
 - **[!UICONTROL Stato]**: rappresenta lo stato in cui si trova il flusso di dati: [!UICONTROL Completato] o [!UICONTROL Elaborazione]. [!UICONTROL Completato] significa che tutte le identità per l&#39;esecuzione del flusso di dati corrispondente sono state esportate entro il periodo di un&#39;ora. [!UICONTROL Elaborazione] indica che l&#39;esecuzione del flusso di dati non è ancora terminata.
@@ -205,7 +216,7 @@ Per accedere al dashboard [!UICONTROL Monitoraggio], seleziona **[!UICONTROL Mon
 
 Utilizza il dashboard [!UICONTROL Destinazioni] per avere un&#39;idea generale dello stato dei flussi di attivazione. Inizia ottenendo informazioni su un livello aggregato per tutte le destinazioni di batch e streaming, quindi approfondisci le viste dettagliate per i flussi di dati, le esecuzioni dei flussi di dati e i tipi di pubblico attivati, per una panoramica approfondita dei dati di attivazione. Le schermate nel dashboard [!UICONTROL Monitoraggio] forniscono informazioni fruibili tramite metriche e descrizioni degli errori per aiutarti a risolvere eventuali problemi che potrebbero verificarsi negli scenari di attivazione.
 
-Puoi filtrare le informazioni visualizzate per tipo di dati: clienti, account (solo per l’edizione B2B di Adobe Real-Time CDP), potenziali clienti e arricchimento dell’account. Ulteriori informazioni su queste opzioni sono disponibili nella [guida del dashboard di monitoraggio](/help/dataflows/ui/monitor.md#monitoring-dashboard-overview).
+Puoi filtrare le informazioni visualizzate per tipo di dati: clienti, account (solo per Adobe Real-Time CDP B2B edition), potenziali clienti e arricchimento dell’account. Ulteriori informazioni su queste opzioni sono disponibili nella [guida del dashboard di monitoraggio](/help/dataflows/ui/monitor.md#monitoring-dashboard-overview).
 
 ![Filtro del tipo di dati evidenziato nella visualizzazione del dashboard di monitoraggio.](/help/dataflows/assets/ui/monitor-destinations/add-data-filter.png)
 
