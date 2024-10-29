@@ -3,9 +3,9 @@ title: Attivare i tipi di pubblico per le destinazioni di esportazione dei profi
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico disponibili in Adobe Experience Platform inviandoli a destinazioni basate su profili in batch.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: ad33eaa48928b25502ef279f000b92f31e1667ca
+source-git-commit: fdb92a0c03ce6a0d44cfc8eb20c2e3bd1583b1ce
 workflow-type: tm+mt
-source-wordcount: '4095'
+source-wordcount: '4151'
 ht-degree: 11%
 
 ---
@@ -133,11 +133,11 @@ Seleziona **[!UICONTROL Esporta file completi]** per attivare l&#39;esportazione
 
 2. Utilizza l&#39;interruttore **[!UICONTROL Ora]** per selezionare se l&#39;esportazione deve avvenire immediatamente dopo la valutazione del pubblico o su base pianificata, a un orario specificato. Quando selezioni l&#39;opzione **[!UICONTROL Pianificato]**, puoi utilizzare il selettore per scegliere l&#39;ora del giorno, in formato [!DNL UTC], in cui eseguire l&#39;esportazione.
 
-   >[!NOTE]
-   >
-   >L&#39;opzione **[!UICONTROL Dopo la valutazione del segmento]** descritta di seguito è disponibile solo per alcuni clienti Beta.
+   Utilizza l&#39;opzione **[!UICONTROL Dopo la valutazione del segmento]** per eseguire il processo di attivazione subito dopo il completamento del processo di segmentazione batch giornaliero di Platform. Questa opzione assicura che, durante l’esecuzione del processo di attivazione, i profili più aggiornati vengano esportati nella destinazione. Questo potrebbe comportare l&#39;esportazione di un pubblico più volte al giorno, in base alle azioni.
 
-   Utilizza l&#39;opzione **[!UICONTROL Dopo la valutazione del segmento]** per eseguire il processo di attivazione subito dopo il completamento del processo di segmentazione batch giornaliero di Platform. Questa opzione assicura che, durante l’esecuzione del processo di attivazione, i profili più aggiornati vengano esportati nella destinazione.
+   >[!IMPORTANT]
+   >
+   >Se esegui [valutazione flessibile del pubblico](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation) su tipi di pubblico già impostati per essere attivati dopo la valutazione dei segmenti, i tipi di pubblico verranno attivati al termine del processo di valutazione flessibile, indipendentemente da eventuali processi di attivazione giornalieri precedenti. Questo potrebbe comportare l&#39;esportazione di tipi di pubblico più volte al giorno, in base alle azioni eseguite.
 
    <!-- Batch segmentation currently runs at {{insert time of day}} and lasts for an average {{x hours}}. Adobe reserves the right to modify this schedule. -->
 
@@ -429,7 +429,7 @@ Se si presuppone la deduplicazione per la chiave composita `personalEmail + last
 | johndoe@example.com | D | John |
 | johndoe@example.com | Doe | John |
 
-L&#39;Adobe consiglia di selezionare uno spazio dei nomi di identità come [!DNL CRM ID] o un indirizzo e-mail come chiave di deduplicazione, per garantire che tutti i record di profilo siano identificati in modo univoco.
+Adobe consiglia di selezionare uno spazio dei nomi di identità, ad esempio [!DNL CRM ID] o un indirizzo e-mail, come chiave di deduplicazione, per garantire che tutti i record di profilo siano identificati in modo univoco.
 
 >[!NOTE]
 > 
@@ -442,7 +442,7 @@ L&#39;Adobe consiglia di selezionare uno spazio dei nomi di identità come [!DNL
 
 ### [!BADGE Beta]{type=Informative} Esporta array tramite campi calcolati {#export-arrays-calculated-fields}
 
-Alcuni clienti beta possono esportare gli oggetti array da Experience Platform a destinazioni di archiviazione cloud. Ulteriori informazioni sull&#39;esportazione di [array e campi calcolati](/help/destinations/ui/export-arrays-calculated-fields.md) e contattare il rappresentante di Adobe per accedere alla funzionalità.
+Alcuni clienti beta possono esportare gli oggetti array da Experience Platform a destinazioni di archiviazione cloud. Ulteriori informazioni sull&#39;[esportazione di array e campi calcolati](/help/destinations/ui/export-arrays-calculated-fields.md) e contattare il proprio rappresentante di Adobe per accedere alla funzionalità.
 
 ### Limitazioni note {#known-limitations}
 
@@ -485,7 +485,7 @@ Come soluzione alternativa temporanea, se devi aggiungere spazi dei nomi di iden
 > 
 Tutte le destinazioni di archiviazione cloud nel catalogo possono visualizzare un [[!UICONTROL Mapping] passaggio](#mapping) migliorato che sostituisce il passaggio **[!UICONTROL Seleziona attributi]** descritto in questa sezione.
 >
-Questo passaggio **[!UICONTROL Seleziona attributi]** è ancora visualizzato per le destinazioni e-mail del Marketing Cloud Adobe Campaign, Oracle Responsys, Oracle Eloqua e Salesforce.
+Questo passaggio **[!UICONTROL Seleziona attributi]** è ancora visualizzato per le destinazioni di e-mail marketing Adobe Campaign, Oracle Responsys, Oracle Eloqua e Salesforce Marketing Cloud.
 
 Per le destinazioni basate su profili, devi selezionare gli attributi del profilo che desideri inviare alla destinazione target.
 
