@@ -1,10 +1,10 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Ottobre 2024
 description: Note sulla versione di Adobe Experience Platform di ottobre 2024.
-source-git-commit: a381bdc45ee9c3c7ffb32bb7a7ec43a1233d1556
+source-git-commit: 5fc786058a187b161a147a8bd361d19c5f35105d
 workflow-type: tm+mt
-source-wordcount: '861'
-ht-degree: 41%
+source-wordcount: '1159'
+ht-degree: 35%
 
 ---
 
@@ -14,29 +14,30 @@ ht-degree: 41%
 
 Aggiornamenti alle funzioni e alla documentazione esistenti in Adobe Experience Platform:
 
-- [Raccolta dati](#data-collection)
-- [Destinazioni](#destinations)
-- [Servizio di segmentazione](#segmentation-service)
-- [Sandbox](#sandboxes)
-- [Origini](#sources)
+- [Dashboard {#dashboards}](#dashboards-dashboards)<!-- omit in toc -->
+- [Raccolta dati {#collection}](#data-collection-collection)
+- [Destinazioni {#destinations}](#destinations-destinations)
+- [Servizio di segmentazione {#segmentation-service}](#segmentation-service-segmentation-service)
+- [Sandbox {#sandboxes}](#sandboxes-sandboxes)
+- [Origini {#sources}](#sources-sources)
 
-<!-- ## Dashboards {#dashboards}
+## Dashboard {#dashboards}
 
-Experience Platform provides multiple dashboards through which you can view important insights about your organization's data, as captured during daily snapshots.
+Experience Platform fornisce più dashboard attraverso le quali è possibile visualizzare approfondimenti importanti sui dati della tua organizzazione, acquisiti durante le istantanee giornaliere.
 
-**New or updated features**
+**Funzioni nuove o aggiornate**
 
-| Feature | Description |
+| Funzione | Descrizione |
 | --- | --- |
-| Data Distiller Templates | Explore multiple templates to gain structured insights into audience data. Use dashboards like **Advanced [!UICONTROL Audience Overlaps]**, **[!UICONTROL Audience Comparison]**, **[!UICONTROL Audience Trends]**, and **[!UICONTROL Audience Identity Overlaps]** to make data-driven decisions, optimize segmentation, and enhance engagement strategies. See the [Data Distiller Templates guide](../../dashboards/sql-insights-query-pro-mode/templates/overview.md) for more details. |
-| Advanced Audience Overlaps | Quickly analyze audience intersections for specific audiences or view all overlaps to uncover valuable insights across your entire audience set. Use these insights to refine segmentation, reduce redundant messaging, and create more targeted campaigns for improved marketing efficiency. See the [Advanced Audience Overlaps guide](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md) for more details. |
-| Audience Comparison enhancements | View a side-by-side comparison of key metrics between different audience groups using the **Audience Comparison** dashboard. With this dashboard you can select specific time frames and KPIs, such as audience size and identity composition, to make more informed decisions about audience segmentation and targeting strategies. Read the [Audience Comparison guide](../../dashboards/sql-insights-query-pro-mode/templates/comparison.md) for more information. |
-| Audience Trends Visualization | Analyze audience metrics over time with the **[!UICONTROL Audience Trends]** dashboard. Visualize trends for audience size, number of identities, and number of single identity profiles to help you monitor audience evolution, measure growth, and refine your engagement strategies. See the [Audience Trends guide](../../dashboards/sql-insights-query-pro-mode/templates/trends.md) for more details. |
-| Identity Overlaps Analysis | Analyze identity overlaps in selected audiences with the **[!UICONTROL Audience Identity Overlaps]** dashboard. View identity trends and breakdowns to understand how different identity types relate within your audience, enhancing identity stitching and improving customer segmentation accuracy. Refer to the [Audience Identity Overlaps guide](../../dashboards/sql-insights-query-pro-mode/templates/identity-overlaps.md) for more details. |
+| Modelli di Data Distiller | Esplora più modelli per ottenere informazioni strutturate sui dati del pubblico. Utilizza dashboard come **Advanced [!UICONTROL Audience Overlaps]**, **[!UICONTROL Audience Comparison]**, **[!UICONTROL Audience Trends]** e **[!UICONTROL Audience Identity Overlaps]** per prendere decisioni basate sui dati, ottimizzare la segmentazione e migliorare le strategie di coinvolgimento. Per ulteriori dettagli, consulta la [Guida ai modelli di Data Distiller](../../dashboards/sql-insights-query-pro-mode/templates/overview.md). |
+| Sovrapposizioni del pubblico avanzate | Analizza rapidamente le intersezioni del pubblico per tipi di pubblico specifici o visualizza tutte le sovrapposizioni per scoprire informazioni importanti sull’intero set di pubblico. Utilizza queste informazioni per perfezionare la segmentazione, ridurre la messaggistica ridondante e creare campagne più mirate per migliorare l’efficienza del marketing. Per ulteriori dettagli, consulta la [guida Advanced Audience Overlaps](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md). |
+| Miglioramenti apportati al confronto dei tipi di pubblico | Visualizza un confronto affiancato delle metriche chiave tra gruppi di pubblico diversi utilizzando la dashboard **Confronto pubblico**. Con questa dashboard puoi selezionare intervalli di tempo e KPI specifici, ad esempio la dimensione e la composizione dell’identità del pubblico, per prendere decisioni più informate sulla segmentazione del pubblico e sulle strategie di targeting. Per ulteriori informazioni, leggere la [Guida al confronto dei tipi di pubblico](../../dashboards/sql-insights-query-pro-mode/templates/comparison.md). |
+| Visualizzazione tendenze pubblico | Analizza le metriche del pubblico nel tempo con la dashboard **[!UICONTROL Tendenze pubblico]**. Visualizza le tendenze relative alle dimensioni del pubblico, al numero di identità e al numero di profili di identità singoli, per monitorare l’evoluzione del pubblico, misurare la crescita e perfezionare le strategie di coinvolgimento. Per ulteriori dettagli, consulta la [guida sulle tendenze del pubblico](../../dashboards/sql-insights-query-pro-mode/templates/trends.md). |
+| Analisi delle sovrapposizioni delle identità | Analizza le sovrapposizioni di identità nei tipi di pubblico selezionati con il dashboard **[!UICONTROL Sovrapposizioni di identità del pubblico]**. Visualizza le tendenze e i raggruppamenti delle identità per comprendere come si relazionano i diversi tipi di identità nel pubblico, migliorando l’unione delle identità e la precisione della segmentazione del cliente. Per ulteriori informazioni, consulta la [Guida alle sovrapposizioni delle identità del pubblico](../../dashboards/sql-insights-query-pro-mode/templates/identity-overlaps.md). |
 
 {style="table-layout:auto"}
 
-For more information on dashboards, including how to grant access permissions and create custom widgets, begin by reading the [dashboards overview](../../dashboards/home.md). -->
+Per ulteriori informazioni sulle dashboard, tra cui come concedere le autorizzazioni di accesso e creare widget personalizzati, consulta la [panoramica sulle dashboard](../../dashboards/home.md).
 
 ## Raccolta dati {#collection}
 
