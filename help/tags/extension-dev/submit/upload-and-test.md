@@ -2,10 +2,10 @@
 title: Caricare e implementare test end-to-end per un’estensione
 description: Scopri come convalidare, caricare e testare l’estensione in Adobe Experience Platform.
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
-source-git-commit: 9b99ec5e526fcbe34a41d3ce397b34a9b4105819
+source-git-commit: 8e843ce14d726f18b77189b5523b823bfa4473be
 workflow-type: tm+mt
-source-wordcount: '2362'
-ht-degree: 91%
+source-wordcount: '2345'
+ht-degree: 86%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 91%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Per testare le estensioni dei tag in Adobe Experience Platform, utilizza l’API dei tag e/o strumenti per riga di comando per caricare i pacchetti di estensione. Quindi, utilizza l’interfaccia utente di Platform o di Data Collection per installare il pacchetto di estensione in una proprietà ed esercitarne le funzionalità all’interno di una libreria di tag e di una build.
 
@@ -43,9 +43,9 @@ Per informazioni sulla creazione di un account tecnico da utilizzare con i tag i
 
 >[!IMPORTANT]
 >
->Per creare un’integrazione in Adobe I/O è necessario essere un amministratore o uno sviluppatore dell’organizzazione Experience Cloud.
+>Per creare un’integrazione in Adobe I/O è necessario essere un amministratore dell’organizzazione Experience Cloud o uno sviluppatore dell’organizzazione Experience Cloud.
 
-Se non è possibile creare un’integrazione, è probabile che non si disponga delle autorizzazioni corrette. In tal caso, un amministratore dell’organizzazione dovrà completare i passaggi necessari oppure dovrà assegnarti il ruolo di sviluppatore.
+Se non riesci a creare un’integrazione, è probabile che tu non disponga delle autorizzazioni corrette. In tal caso, un amministratore dell’organizzazione dovrà completare i passaggi necessari oppure dovrà assegnarti il ruolo di sviluppatore.
 
 ## Caricare il pacchetto dell’estensione {#upload}
 
@@ -61,14 +61,16 @@ npx @adobe/reactor-uploader
 
 `npx` consente di scaricare ed eseguire un pacchetto npm senza installarlo sul computer. Questo è il modo più semplice per eseguire lo strumento Uploader.
 
-Nello strumento Uploader è necessario inserire diverse informazioni. L’ID dell’account tecnico, la chiave API e altre informazioni possono essere recuperati dalla console di Adobe I/O. Passa alla [pagina Integrations](https://console.adobe.io/integrations) (Integrazioni) nella console di I/O. Seleziona l’organizzazione adatta dal menu a discesa, individua l’integrazione corretta e seleziona **[!UICONTROL Visualizza]**.
+>[!NOTE]
+> Per impostazione predefinita, lo strumento Uploader prevede credenziali di Adobe I/O per un flusso Oauth da server a server. Le credenziali legacy di `jwt-auth`
+> può essere utilizzato eseguendo `npx @adobe/reactor-uploader@v5.2.0` fino a quando non diventerà obsoleto il 1° gennaio 2025. Parametri richiesti
+> per eseguire la versione `jwt-auth` è possibile trovare [qui](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452).
 
-- Percorso della chiave privata: /path/to/private.key. Si tratta del luogo in cui è stata salvata la chiave privata di cui al punto 2 qui sopra.
-- ID dell’organizzazione: è disponibile nella pagina di panoramica della console di I/O lasciata aperta in precedenza; usa Copia/Incolla.
-- ID account tecnico: è disponibile nella console I/O; usa Copia/Incolla.
-- Chiave API: è disponibile nella console I/O; usa Copia/Incolla.
-- Segreto cliente: è disponibile nella console I/O; usa Copia/Incolla.
-- Percorso del file extension_package da caricare: /path/to/extension_package.zip. Se richiami lo strumento Uploader dalla directory che contiene il pacchetto .zip, non occorre digitarne il persorso: è sufficiente selezionarlo dall’elenco.
+Lo strumento di caricamento richiede di inserire solo alcune informazioni. È possibile recuperare `clientId` e `clientSecret` dalla console Adobe I/O. Passa alla [pagina Integrations](https://console.adobe.io/integrations) (Integrazioni) nella console di I/O. Seleziona l’organizzazione adatta dal menu a discesa, individua l’integrazione corretta e seleziona **[!UICONTROL Visualizza]**.
+
+- Qual è `clientId`? è disponibile nella console I/O; usa Copia/Incolla.
+- Qual è `clientSecret`? è disponibile nella console I/O; usa Copia/Incolla.
+- Se richiami lo strumento Uploader dalla directory che contiene il pacchetto .zip, non occorre digitarne il persorso: è sufficiente selezionarlo dall’elenco.
 
 Il pacchetto dell’estensione verrà quindi caricato e lo strumento Uploader ti fornirà l’ID del file extension_package.
 
@@ -79,6 +81,8 @@ Il pacchetto dell’estensione verrà quindi caricato e lo strumento Uploader ti
 >[!NOTE]
 >
 >Se pensi di dover eseguire spesso lo strumento di caricamento, inserire tutte queste informazioni ogni volta può risultare laborioso. È possibile trasmettere questi elementi anche come argomenti dalla riga di comando. Per ulteriori informazioni, consulta la sezione sugli [argomenti della riga di comando](https://www.npmjs.com/package/@adobe/reactor-uploader#command-line-arguments) nella documentazione NPM.
+
+Se desideri gestire il caricamento dell&#39;estensione utilizzando direttamente le API, consulta l&#39;esempio di chiamate per [creare](../../api/endpoints/extension-packages.md/#create) o [aggiornare](../../api/endpoints/extension-packages.md#update) un pacchetto di estensione nella documentazione delle API.
 
 ## Creare una proprietà di sviluppo {#property}
 

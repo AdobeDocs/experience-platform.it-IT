@@ -6,9 +6,9 @@ user-guide-description: Scopri come distribuire e gestire i tag di analisi, mark
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 5cbc2f6809156bc1a554154527ff2c5e35d3a922
+source-git-commit: fa50e101e5756923eddcd2cab409bda2a629a8a3
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '778'
 ht-degree: 44%
 
 ---
@@ -87,7 +87,7 @@ ht-degree: 44%
       * [Adobe Analytics tramite Adobe Experience Platform Web SDK](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)
       * Adobe Audience Manager {#audience-manager}
          * [Panoramica](./extensions/client/audience-manager/overview.md)
-      * Adobe livello dati client {#client-data-layer}
+      * Livello dati client Adobe {#client-data-layer}
          * [Panoramica](./extensions/client/client-data-layer/overview.md)
          * [Note sulla versione](./extensions/client/client-data-layer/release-notes.md)
       * Adobe ContextHub {#contexthub}
@@ -161,7 +161,7 @@ ht-degree: 44%
       * [Decibel](https://exchange.adobe.com/apps/ec/100913)
       * [Demandbase](https://exchange.adobe.com/apps/ec/101605)
       * [Privacy differenziale](https://exchange.adobe.com/apps/ec/104535)
-      * [Visualizzatori Dynamic Medie](https://exchange.adobe.com/apps/ec/103048)
+      * [Visualizzatori Dynamic Media](https://exchange.adobe.com/apps/ec/103048)
       * [Helper EDDL](https://exchange.adobe.com/apps/ec/107691)
       * [OneTag intermittente](https://exchange.adobe.com/apps/ec/101392)
       * [InizioVedere](https://exchange.adobe.com/apps/ec/100164)
@@ -265,6 +265,7 @@ ht-degree: 44%
       * [Concedere l’accesso agli utenti](./extension-dev/submit/access.md)
       * [Sviluppare un’estensione](./extension-dev/submit/develop.md)
       * [Creare un’inserzione in Exchange](./extension-dev/submit/create-listing.md)
+      * [Creare un file zip del pacchetto di estensione](./extension-dev/submit/create-extension-package-zip.md)
       * [Caricare e implementare test end-to-end](./extension-dev/submit/upload-and-test.md)
       * [Rilasciare un’estensione](./extension-dev/submit/release.md)
    * [Configurazione dell&#39;estensione](./extension-dev/configuration.md)

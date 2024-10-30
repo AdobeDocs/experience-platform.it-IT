@@ -2,10 +2,10 @@
 title: Panoramica del processo di invio delle estensioni
 description: Scopri i passaggi per inviare l’estensione Adobe Experience Platform dallo sviluppo al rilascio.
 exl-id: 7a30ae5c-f9c7-45f9-b648-3fb31006b1ce
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: fa50e101e5756923eddcd2cab409bda2a629a8a3
 workflow-type: tm+mt
-source-wordcount: '230'
-ht-degree: 87%
+source-wordcount: '231'
+ht-degree: 93%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 87%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 L’invio di un’estensione al catalogo di raccolta dati in Adobe Experience Platform non è difficile come potrebbe sembrare. Questo documento fornisce una guida dettagliata all’invio dell’estensione, seguendo singole guide sequenziali. Per inviare l’estensione, è necessario completare i seguenti passaggi:
 
@@ -21,7 +21,7 @@ L’invio di un’estensione al catalogo di raccolta dati in Adobe Experience Pl
 1. [Concedere l’accesso agli utenti per lo sviluppo dell’estensione](./access.md)
 1. [Sviluppare un’estensione](./develop.md)
 1. [Creare un’inserzione in Exchange](./create-listing.md)
-1. Creare il pacchetto dell’estensione
+1. [Creare lo zip del pacchetto di estensione](./create-extension-package-zip.md)
 1. [Caricare e verificare l’estensione](./upload-and-test.md)
 1. [Rilasciare l’estensione](./release.md)
 
