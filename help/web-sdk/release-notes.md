@@ -3,10 +3,10 @@ title: Note sulla versione di Adobe Experience Platform Web SDK
 description: Note sulla versione più recente di Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;note sulla versione;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: c1fb9fe7d4863e316b824d6c8dd2ff0d3405d7ea
+source-git-commit: f31d250cfbe42680ee6f4d1334bf04a2ee8643a1
 workflow-type: tm+mt
-source-wordcount: '1920'
-ht-degree: 2%
+source-wordcount: '2044'
+ht-degree: 5%
 
 ---
 
@@ -15,6 +15,26 @@ ht-degree: 2%
 
 Questo documento descrive le note sulla versione di Adobe Experience Platform Web SDK.
 Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [note sulla versione dell&#39;estensione tag Web SDK](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Versione 2.24.0 - venerdì 31 ottobre 2024
+
+**Nuove funzioni**
+
+- [Le sostituzioni dello stream di dati](../datastreams/overrides.md) sono ora supportate all&#39;avvio di sessioni multimediali.
+
+- È stato aggiunto il supporto per i token di risposta di Adobe Target nel rendering. L’hook di monitoraggio è stato monitorato correttamente.
+
+**Correzioni e miglioramenti**
+
+- Quando vengono restituiti più messaggi in-app, viene visualizzato solo quello con la priorità più elevata. Gli altri vengono registrati come soppressi.
+- Le sostituzioni dello stream di dati vuote non vengono più inviate all’Edge Network, riducendo i potenziali conflitti con le configurazioni di routing lato server.
+- I seguenti nomi dei componenti dei messaggi di log sono stati rinominati, in allineamento con altri SDK di Adobe:
+   - `DecisioningEngine` è stato rinominato in `RulesEngine`
+   - `LegacyMediaAnalytics` è stato rinominato in `MediaAnalyticsBridge`
+   - `Privacy` è stato rinominato in `Consent`
+- È stato corretto un errore che si verificava durante il rendering degli elementi di contenuto predefiniti tramite [`applyPropositions`](../web-sdk/commands/applypropositions.md).
+- È stato corretto un errore CSS nelle azioni di spostamento e ridimensionamento di Adobe Target.
+- La chiave `machineLearning` è stata rimossa dalle risposte [`sendEvent`](../web-sdk/commands/sendevent/overview.md).
 
 ## Versione 2.23.0 - 19 settembre 2024
 
@@ -40,13 +60,13 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 - È stato risolto un problema del cliente relativo alla chiamata a ha.
 - È stato risolto un problema che causava il mancato funzionamento di [sendEvent](commands/sendevent/overview.md) chiamate a causa di una codifica URL non valida nel parametro `adobe_mc`.
 
-## Versione 2.21.1 - 18 luglio 2024
+## Versione 2.21.1 - venerdì 18 luglio 2024
 
 **Correzioni e miglioramenti**
 
 - È stato corretto un errore di compilazione che si verificava con l’utilizzo della libreria NPM.
 
-## Versione 2.21.0 - 16 luglio 2024
+## Versione 2.21.0 - mercoledì 16 luglio 2024
 
 **Nuove funzioni**
 
@@ -54,7 +74,7 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 - È stato aggiunto uno script di build personalizzato che fornisce un file alloy.js.
 - È stata migliorata la raccolta di clic con il supporto di ActivityMap e del raggruppamento di eventi.
 
-## Versione 2.20.0 - 21 maggio 2024
+## Versione 2.20.0, mercoledì 21 maggio 2024
 
 **Nuove funzioni**
 
@@ -64,7 +84,7 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 
 - È stato corretto un bug a causa del quale il contenuto predefinito veniva nascosto dal frammento pre-hiding quando il consenso veniva negato.
 
-## Versione 2.19.2 - 10 gennaio 2024
+## Versione 2.19.2 - giovedì 10 gennaio 2024
 
 **Correzioni e miglioramenti**
 
@@ -72,13 +92,13 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 - È stato risolto un problema che impediva l&#39;invio della parte inferiore delle chiamate della pagina in caso di una chiamata di inizio pagina con `renderDecisions` impostato su `false`.
 - È stato risolto un problema che impediva a Web SDK di leggere le identità tra domini in presenza di più parametri della stringa di query `adobe_mc`.
 
-## Versione 2.19.1 - 10 novembre 2023
+## Versione 2.19.1 - sabato 10 novembre 2023
 
 **Correzioni e miglioramenti**
 
 - È stato risolto un problema a causa del quale l&#39;array propositions restituito da `sendEvent` chiamate era sempre vuoto.
 
-## Versione 2.19.0 - 1 novembre 2023
+## Versione 2.19.0 - giovedì 1 novembre 2023
 
 **Nuove funzioni**
 
@@ -92,7 +112,7 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 - È stato risolto un problema a causa del quale i nomi delle visualizzazioni delle applicazioni a pagina singola facevano distinzione tra maiuscole e minuscole.
 - È stato risolto un problema relativo ai selettori di offerte personalizzati DOM ombra.
 
-## Versione 2.18.0 - 31 luglio 2023
+## Versione 2.18.0 - martedì 31 luglio 2023
 
 **Nuove funzioni**
 
@@ -103,7 +123,7 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 - È stato risolto un problema a causa del quale i collegamenti di uscita non venivano qualificati perché il dominio faceva parte della query.
 - `edgeConfigId` è stato dichiarato obsoleto a favore di `datastreamId` nella configurazione dell&#39;SDK Web.
 
-## Versione 2.17.0 - 17 maggio 2023
+## Versione 2.17.0, giovedì 17 maggio 2023
 
 **Correzioni e miglioramenti**
 
@@ -127,7 +147,7 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 - La raccolta di collegamenti ora include il nome del collegamento e l’area del visitatore.
 - Errore della console rimosso per le destinazioni URL non riuscite.
 
-## Versione 2.14.0 - 25 gennaio 2023
+## Versione 2.14.0 - giovedì 25 gennaio 2023
 
 - (Beta) È stato aggiunto il supporto per le superfici e le proposte Adobe Journey Optimizer.
 
@@ -138,9 +158,9 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 - È stato risolto un problema a causa del quale [le proprietà dell&#39;hint client dell&#39;agente utente](/help/web-sdk/use-cases/client-hints.md) potevano essere impostate su un tipo errato.
 - È stato risolto un problema a causa del quale `placeContext.localTime` non corrispondeva allo schema.
 
-## Versione 2.13.1 - 13 ottobre 2022
+## Versione 2.13.1 - venerdì 13 ottobre 2022
 
-- È stato risolto un problema che impediva il funzionamento della migrazione dei visitatori se window.Visitor veniva definito dopo la configurazione. Questo è un problema soprattutto quando si esegue con tag Adobe.
+- È stato risolto un problema che impediva il funzionamento della migrazione dei visitatori se window.Visitor veniva definito dopo la configurazione. Questo è un problema soprattutto quando si esegue con Adobe Tags.
 - È stato risolto un problema a causa del quale `device.screenWidth` e `device.screenHeight` venivano popolati come stringhe in alcuni ambienti.
 
 ## Versione 2.13.0 - 28 settembre 2022
@@ -160,12 +180,12 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 - Aggiunta convalida spazio dei nomi duplicato per il comando `getIdentity`.
 - Aggiunta della convalida dell&#39;ambito di decisione duplicata per il comando `sendEvent`.
 
-## Versione 2.12.0 - 29 giugno 2022
+## Versione 2.12.0 - giovedì 29 giugno 2022
 
 - Modificare le richieste nell&#39;Edge Network per utilizzare l&#39;hint di posizione del cookie `cluster` come parte dell&#39;URL. In questo modo, gli utenti che cambiano posizione (ad esempio tramite una VPN o guidando con dispositivi mobili, ecc.) durante una sessione raggiungono lo stesso limite e hanno lo stesso profilo di personalizzazione.
 - Stringif ha configurato le funzioni nella risposta del comando getLibraryInfo.
 
-## Versione 2.11.0 - 13 giugno 2022
+## Versione 2.11.0 - martedì 13 giugno 2022
 
 **Nuove funzioni**
 
@@ -179,7 +199,7 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 - È stato risolto un problema a causa del quale il contenuto personalizzato non veniva applicato correttamente quando si utilizzava lo pseudo selettore `eq`.
 - È stato risolto un problema che impediva a `localTimezoneOffset` di superare la convalida dell&#39;Experience Platform.
 
-## Versione 2.10.1 - 3 maggio 2022
+## Versione 2.10.1, mercoledì 3 maggio 2022
 
 - È stato risolto un problema che causava la creazione di più iframe persistenti per le sincronizzazioni ID e le destinazioni dei segmenti.
 
@@ -198,13 +218,13 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 - È stato risolto un problema che impediva il conteggio degli eventi di interazione in Adobe Target. Questo problema è stato risolto aggiungendo il nome della visualizzazione al file XDM in web.webPageDetails.viewName.
 - Correggi i collegamenti interrotti alla documentazione nei messaggi della console.
 
-## Versione 2.8.0 - 19 gennaio 2022
+## Versione 2.8.0 - giovedì 19 gennaio 2022
 
 - Supporta i selettori DOM shadow per la personalizzazione.
 - Tipi di eventi di personalizzazione rinominati. (`display` e `click` diventano `decisioning.propositionDisplay` e `decisioning.propositionInteract`)
 - È stato risolto un problema a causa del quale le offerte HTML con tag di script in linea aggiungevano i tag di script due volte alla pagina, anche se lo script veniva eseguito una sola volta.
 
-## Versione 2.7.0 - 26 ottobre 2021
+## Versione 2.7.0 - mercoledì 26 ottobre 2021
 
 - Esporre informazioni aggiuntive dall&#39;Edge Network nel valore restituito da `sendEvent`, inclusi `inferences` e `destinations`. Il formato di queste proprietà potrebbe cambiare in quanto queste funzioni vengono attualmente implementate come parte di un Beta.
 
@@ -220,11 +240,11 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 
 - È stato risolto un problema che causava la registrazione di un avviso relativo alla rimozione di `result.decisions` (fornito dal comando `sendEvent`) nella console anche quando non si accedeva alla proprietà `result.decisions`. Durante l&#39;accesso alla proprietà `result.decisions` non verrà registrato alcun avviso, ma la proprietà è ancora obsoleta.
 
-## Versione 2.6.1 - 29 luglio 2021
+## Versione 2.6.1 - venerdì 29 luglio 2021
 
 - È stato risolto un problema che causava un errore durante il rendering della personalizzazione per una visualizzazione app a pagina singola priva di contenuto di personalizzazione e il rifiuto della promessa restituita dal comando `sendEvent`.
 
-## Versione 2.6.0 - 27 luglio 2021
+## Versione 2.6.0 - mercoledì 27 luglio 2021
 
 - Fornisce ulteriori contenuti di personalizzazione nella promessa risolta `sendEvent`, inclusi i token di risposta di Adobe Target. Quando viene eseguito il comando `sendEvent`, viene restituita una promessa che viene infine risolta con un oggetto `result` contenente le informazioni ricevute dal server. In precedenza, questo oggetto risultato includeva una proprietà denominata `decisions`. Questa proprietà `decisions` è stata dichiarata obsoleta. È stata aggiunta una nuova proprietà, `propositions`. Questa nuova proprietà consente ai clienti di accedere a più contenuti di personalizzazione, inclusi [token di risposta](/help/web-sdk/personalization/adobe-target/accessing-response-tokens.md).
 

@@ -2,16 +2,25 @@
 title: Note sulla versione dell’estensione Adobe Experience Platform Web SDK
 description: Estensione tag Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: c1fb9fe7d4863e316b824d6c8dd2ff0d3405d7ea
+source-git-commit: c38456ab44f3e143a0120f1a756105213a46fab5
 workflow-type: tm+mt
-source-wordcount: '2291'
-ht-degree: 28%
+source-wordcount: '2332'
+ht-degree: 33%
 
 ---
 
 # Note sulla versione dell’estensione Adobe Experience Platform Web SDK
 
 Questo documento descrive le note sulla versione dell’estensione tag Adobe Experience Platform Web SDK. Per le ultime note sulla versione dell&#39;SDK, consulta le [note sulla versione di Platform Web SDK](/help/web-sdk/release-notes.md).
+
+## Versione 2.27.0 - venerdì 31 ottobre 2024
+
+**Nuove funzioni**
+
+- [Le sostituzioni dello stream di dati](../web-sdk/web-sdk-extension-configuration.md#datastream-overrides) ora includono le impostazioni per disabilitare le soluzioni Experience Cloud e i servizi Adobe Experience Platform.
+- È ora possibile creare [sostituzioni dello stream di dati](../web-sdk/web-sdk-extension-configuration.md) per le sessioni multimediali.
+
+Contiene la versione 2.24.0 di Adobe Experience Platform Web SDK.
 
 ## Versione 2.26.1 - 19 settembre 2024
 
@@ -35,7 +44,7 @@ Contiene la versione 2.23.0 di Adobe Experience Platform Web SDK.
 
 Contiene la versione 2.22.0 di Adobe Experience Platform Web SDK.
 
-## Versione 2.25.0 - 18 luglio 2024
+## Versione 2.25.0 - venerdì 18 luglio 2024
 
 **Nuove funzioni**
 
@@ -44,7 +53,7 @@ Contiene la versione 2.22.0 di Adobe Experience Platform Web SDK.
 
 Contiene la versione 2.21.1 di Adobe Experience Platform Web SDK.
 
-## Versione 2.24.0 - 5 giugno 2024
+## Versione 2.24.0 - giovedì 5 giugno 2024
 
 **Correzioni e miglioramenti**
 
@@ -55,7 +64,7 @@ Contiene la versione 2.21.1 di Adobe Experience Platform Web SDK.
 
 Contiene la versione 2.20.0 di Adobe Experience Platform Web SDK.
 
-## Versione 2.23.1 - 28 maggio 2024
+## Versione 2.23.1, mercoledì 28 maggio 2024
 
 **Nuove funzioni**
 
@@ -70,7 +79,7 @@ Contiene la versione 2.20.0 di Adobe Experience Platform Web SDK.
 - È stato corretto un errore che si verificava durante la ricerca di elementi dati nell&#39;azione [Aggiorna variabile](action-types.md#update-variable).
 - Sono stati rimossi i tipi di evento [!UICONTROL Media] dai tipi di evento suggeriti per l&#39;utilizzo nell&#39;azione `sendEvent`.
 
-## Versione 2.22.0 - 3 maggio 2024
+## Versione 2.22.0, sabato 3 maggio 2024
 
 **Nuove funzioni**
 
@@ -79,7 +88,7 @@ Contiene la versione 2.20.0 di Adobe Experience Platform Web SDK.
 
 Contiene la versione 2.19.2 di Adobe Experience Platform Web SDK.
 
-## Versione 2.21.4 - 10 gennaio 2024
+## Versione 2.21.4 - giovedì 10 gennaio 2024
 
 **Correzioni e miglioramenti**
 
@@ -88,7 +97,7 @@ Contiene la versione 2.19.2 di Adobe Experience Platform Web SDK.
 
 Contiene la versione 2.19.2 di Adobe Experience Platform Web SDK.
 
-## Versione 2.21.3 - 10 novembre 2023
+## Versione 2.21.3 - sabato 10 novembre 2023
 
 Contiene la versione 2.19.1 di Adobe Experience Platform Web SDK.
 
@@ -96,7 +105,7 @@ Contiene la versione 2.19.1 di Adobe Experience Platform Web SDK.
 
 - È stato risolto un problema a causa del quale l’array propositions disponibile negli eventi `Send event complete` era sempre vuoto.
 
-## Versione 2.21.2 - 1 novembre 2023
+## Versione 2.21.2 - giovedì 1 novembre 2023
 
 **Nuove funzioni**
 
@@ -122,7 +131,7 @@ Contiene la versione 2.19.1 di Adobe Experience Platform Web SDK.
 
 - È stata migliorata la convalida delle impostazioni di sostituzione dello stream di dati salvato.
 
-## Versione 2.20.0 - 31 luglio 2023
+## Versione 2.20.0 - martedì 31 luglio 2023
 
 **Nuove funzioni**
 
@@ -133,11 +142,11 @@ Contiene la versione 2.19.1 di Adobe Experience Platform Web SDK.
 - `edgeConfigId` è obsoleto a favore di `datastreamId` nella configurazione SDK.
 - Diversi miglioramenti all’esperienza utente per la configurazione dello stream di dati sostituiscono l’interfaccia utente di.
 
-## Versione 2.19.0 - 21 giugno 2023
+## Versione 2.19.0 - giovedì 21 giugno 2023
 
 - L&#39;elemento dati **[!UICONTROL Variable]** e le azioni **[!UICONTROL Update Variable]** sono ora generalmente disponibili.
 
-## Versione 2.18.0 - 18 maggio 2023
+## Versione 2.18.0, venerdì 18 maggio 2023
 
 - Contiene la versione 2.17.0 di Adobe Experience Platform Web SDK.
 
@@ -170,14 +179,14 @@ Contiene la versione 2.19.1 di Adobe Experience Platform Web SDK.
 - È stato risolto un problema che impediva il funzionamento degli elementi dati dell’oggetto XDM in presenza di un solo schema.
 - Contiene la versione 2.15.0 di Adobe Experience Platform Web SDK.
 
-## Versione 2.15.1 - 26 gennaio 2023
+## Versione 2.15.1 - venerdì 26 gennaio 2023
 
 - È stato risolto un problema che impediva agli utenti senza accesso ai flussi di dati di modificare la configurazione dell’estensione.
 - Aggiunta del supporto per le superfici nell&#39;azione `sendEvent`.
 
 Contiene la versione 2.14.0 di Adobe Experience Platform Web SDK.
 
-## Versione 2.14.1 - 13 ottobre 2022
+## Versione 2.14.1 - venerdì 13 ottobre 2022
 
 - È stato risolto un problema a causa del quale l’SDK per web non rispettava l’ID del servizio ID Experience Cloud.
 
@@ -191,13 +200,13 @@ Contiene la versione 2.13.1 della libreria Adobe Experience Platform Web SDK.
 
 Contiene la versione 2.13.0 della libreria Adobe Experience Platform Web SDK.
 
-## Versione 2.13.0 - 29 giugno 2022
+## Versione 2.13.0 - giovedì 29 giugno 2022
 
 - È stato corretto l’ordinamento delle proprietà numeriche nell’elemento dati dell’oggetto XDM, ad esempio le eVar.
 
 Contiene la versione 2.12.0 della libreria Adobe Experience Platform Web SDK.
 
-## Versione 2.12.0 - 13 giugno 2022
+## Versione 2.12.0 - martedì 13 giugno 2022
 
 - Aggiornamento dell&#39;elemento dati `identityMap` per popolare le opzioni dello spazio dei nomi in base alle sandbox definite dalle impostazioni di estensione.
 - Aggiunta azione **[!UICONTROL Reindirizza con identità]** per consentire la condivisione di identità tra domini diversi.
@@ -207,7 +216,7 @@ Contiene la versione 2.12.0 della libreria Adobe Experience Platform Web SDK.
 
 Contiene la versione 2.11.0 della libreria Adobe Experience Platform Web SDK.
 
-## Versione 2.11.2 - 3 maggio 2022
+## Versione 2.11.2, mercoledì 3 maggio 2022
 
 Contiene la versione 2.10.1 della libreria Adobe Experience Platform Web SDK.
 
@@ -230,11 +239,11 @@ Contiene la versione 2.10.0 della libreria Adobe Experience Platform Web SDK.
 
 Contiene la versione 2.9.0 della libreria dell’SDK per web di Adobe Experience Platform.
 
-## Versione 2.9.0 - 19 gennaio 2022
+## Versione 2.9.0 - giovedì 19 gennaio 2022
 
 Contiene la versione 2.8.0 della libreria dell’SDK per web di Adobe Experience Platform.
 
-## Versione 2.8.0 - 26 ottobre 2021
+## Versione 2.8.0 - mercoledì 26 ottobre 2021
 
 Contiene la versione 2.7.0 della libreria dell’SDK per web di Adobe Experience Platform.
 
@@ -262,7 +271,7 @@ Contiene la versione 2.6.2 della libreria dell’SDK per web di Adobe Experience
 
 Contiene la versione 2.6.1 della libreria dell’SDK per web di Adobe Experience Platform.
 
-## Versione 2.6.0 - 27 luglio 2021
+## Versione 2.6.0 - mercoledì 27 luglio 2021
 
 Contiene la versione 2.6.0 della libreria dell’SDK per web di Adobe Experience Platform.
 
@@ -273,7 +282,7 @@ Contiene la versione 2.6.0 della libreria dell’SDK per web di Adobe Experience
 - Il tipo di evento Decisioni ricevute è stato dichiarato obsoleto. Utilizza invece il tipo di evento Invia evento completato.
 - L’interfaccia utente e la gestione degli errori sono state generalmente migliorate.
 
-## Versione 2.5.0 - 1 giugno 2021
+## Versione 2.5.0 - mercoledì 1 giugno 2021
 
 Contiene la versione 2.5.0 della libreria dell’SDK per web di Adobe Experience Platform.
 
@@ -292,7 +301,7 @@ Contiene la versione 2.4.0 della libreria dell’SDK per web di Adobe Experience
 - Ora viene visualizzato un errore migliore nell’interfaccia utente dell’elemento dati di oggetti XDM se il token di accesso dell’utente non è valido o se il provisioning del token di accesso non è corretto.
 - È stato corretto un errore tra origini diverse (che non influisce sul funzionamento dell’estensione) visualizzato nella console di sviluppo del browser durante la visualizzazione di un elemento dati Oggetto XDM.
 
-## Versione 2.3.0 - 4 novembre 2020
+## Versione 2.3.0 - giovedì 4 novembre 2020
 
 Contiene la versione 2.3.0 della libreria dell’SDK per web di Adobe Experience Platform.
 
@@ -300,7 +309,7 @@ Contiene la versione 2.3.0 della libreria dell’SDK per web di Adobe Experience
 - È stata aggiunta la possibilità di cercare schemi XDM con il tipo elemento dati di oggetti XDM.
 - È stata aggiunta la duplicazione di dati XDM all’interno del tipo di azione Invia evento per garantire che eventuali modifiche successive all’oggetto dati XDM non vengano riportate nella richiesta.
 
-## Versione 2.2.0 - 1 ottobre 2020
+## Versione 2.2.0 - venerdì 1 ottobre 2020
 
 - Quando si tentava di creare un oggetto XDM da schemi sandbox, si verificavano problemi di autenticazione. L’API che chiama Platform ora riconosce gli ambienti e agli utenti vengono presentati solo gli schemi che possono modificare.
 - Quando si utilizza l&#39;elemento dati `identityMap`, gli spazi dei nomi vengono ora precompilati in un menu a discesa e non è più necessario compilarli manualmente.
@@ -320,11 +329,11 @@ Contiene la versione 2.3.0 della libreria dell’SDK per web di Adobe Experience
 - È supportato il passaggio di una mappa di identità nell’azione `setConsent`.
 - È supportata la scelta di una sandbox di Platform nell’elemento dati di oggetti XDM.
 
-## Versione 1.0.0 - 26 maggio 2020
+## Versione 1.0.0, mercoledì 26 maggio 2020
 
 - È supportata la selezione dell’ambiente dal servizio di configurazione.
 
-## Versione 0.1.2 - 4 maggio 2020
+## Versione 0.1.2, martedì 4 maggio 2020
 
 - `configId` è stato rinominato `edgeConfigId`.
 - `viewStart` è stato rinominato `renderDecisions` e impostato su false per impostazione predefinita. Se è impostato su true, le offerte di personalizzazione vengono recuperate e sottoposte a rendering automatico.
@@ -355,17 +364,17 @@ Queste decisioni sono restituite dal comando `sendEvent` solo se `renderDecision
 - Quando si esegue un comando non valido, nella console verrà registrato un elenco di nomi di comando validi.
 - È stata aggiunta una casella di controllo per attivare o disattivare il supporto dei cookie di terze parti per l’estensione tag. Questa funzione disattiva le chiamate a demdex.net.
 
-## Versione 0.0.5 - 20 dicembre 2019
+## Versione 0.0.5 - sabato 20 dicembre 2019
 
 - Aggiunta della configurazione Activity Tracker all’estensione tag
 - Comando esposizione di EventType ed EventMergeId su evento
 - Aggiunta della configurazione onBeforeEventSend all&#39;estensione tag
 - Aggiunta della configurazione edgeBasePath all’estensione tag
 
-## Versione 0.0.3 - 25 novembre 2019
+## Versione 0.0.3 - martedì 25 novembre 2019
 
 - Nuovi campi ID unione e Tipo nell’azione Invia evento. L&#39;ID unione è associato a `xdm.eventMergeID` nello schema XDM e il Tipo è associato a `xdm.eventType` nello schema XDM.
 
-## Versione 0.0.2 - 18 novembre 2019
+## Versione 0.0.2 - martedì 18 novembre 2019
 
 - Versione iniziale
