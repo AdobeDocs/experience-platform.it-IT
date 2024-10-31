@@ -3,9 +3,9 @@ title: Tipi di eventi nell’estensione Adobe Experience Platform Web SDK
 description: Scopri come utilizzare i tipi di evento forniti dall’estensione Adobe Experience Platform Web SDK in Adobe Experience Platform Launch.
 solution: Experience Platform
 exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
-source-git-commit: 666e8c6fcccf08d0841c5796677890409b22d794
+source-git-commit: b37bf09e3ec16f29d6acee3bca71463fa2c876ce
 workflow-type: tm+mt
-source-wordcount: '1127'
+source-wordcount: '1490'
 ht-degree: 0%
 
 ---
@@ -13,6 +13,34 @@ ht-degree: 0%
 # Tipi di evento
 
 Questa pagina descrive i tipi di evento Adobe Experience Platform forniti dall’estensione tag Adobe Experience Platform Web SDK. Sono utilizzati per [generare regole](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html?lang=it) e non devono essere confusi con il campo `eventType` nell&#39;oggetto [`xdm`](/help/web-sdk/commands/sendevent/xdm.md).
+
+## Hook di monitoraggio attivato {#monitoring-hook-triggered}
+
+Adobe Experience Platform Web SDK include hook di monitoraggio utilizzabili per monitorare vari eventi di sistema. Questi strumenti sono utili per sviluppare strumenti di debug personalizzati e per acquisire i registri dell’SDK web.
+
+Per informazioni complete sui parametri contenuti da ogni evento hook di monitoraggio, consulta la [documentazione sugli hook di monitoraggio dell&#39;SDK Web](../../../../web-sdk/monitoring-hooks.md).
+
+![Tag dell&#39;immagine dell&#39;interfaccia utente che mostra il tipo di evento hook di monitoraggio](assets/monitoring-hook-triggered.png)
+
+L’estensione tag Web SDK supporta i seguenti hook di monitoraggio:
+
+* **[!UICONTROL onInstanceCreated]**: questo evento hook di monitoraggio viene attivato quando si crea una nuova istanza Web SDK.
+* **[!UICONTROL onInstanceConfigured]**: questo evento hook di monitoraggio viene attivato dall&#39;SDK Web quando il comando [`configure`](../../../../web-sdk/commands/configure/overview.md) è stato risolto
+* **[!UICONTROL onBeforeCommand]**: questo evento hook di monitoraggio viene attivato da Web SDK prima dell&#39;esecuzione di qualsiasi altro comando. Puoi utilizzare questo hook di monitoraggio per recuperare le opzioni di configurazione di un comando specifico.
+* **[!UICONTROL onCommandResolved]**: questo evento hook di monitoraggio viene attivato prima della risoluzione della promessa di comando. È possibile utilizzare questa funzione per visualizzare le opzioni e i risultati del comando.
+* **[!UICONTROL onCommandRejected]**: questo evento hook di monitoraggio viene attivato quando una promessa di comando viene rifiutata e contiene informazioni sulla causa dell&#39;errore.
+* **[!UICONTROL onBeforeNetworkRequest]**: questo evento hook di monitoraggio viene attivato prima dell&#39;esecuzione di una richiesta di rete.
+* **[!UICONTROL onNetworkResponse]**: questo evento hook di monitoraggio viene attivato quando il browser riceve una risposta.
+* **[!UICONTROL onNetworkError]**: questo evento di monitoraggio dell&#39;hook viene attivato quando la richiesta di rete non è riuscita.
+* **[!UICONTROL onBeforeLog]**: questo evento hook di monitoraggio viene attivato prima che l&#39;SDK Web registri qualsiasi elemento nella console.
+* **[!UICONTROL onContentRendering]**: questo evento hook di monitoraggio è attivato dal componente `personalization` e consente di eseguire il debug del rendering del contenuto di personalizzazione. Questo evento può avere stati diversi:
+   * `rendering-started`: indica che Web SDK sta per eseguire il rendering delle proposte. Prima che l&#39;SDK Web inizi a eseguire il rendering di un ambito di decisione o di una visualizzazione, nell&#39;oggetto `data` è possibile visualizzare le proposte che stanno per essere sottoposte a rendering dal componente `personalization` e il nome dell&#39;ambito.
+   * `no-offers`: indica che non è stato ricevuto alcun payload per i parametri richiesti.
+   * `rendering-failed`: indica che Web SDK non è riuscito a eseguire il rendering di una proposta.
+   * `rendering-succeeded`: indica che il rendering è stato completato per un ambito di decisione.
+   * `rendering-redirect`: indica che Web SDK eseguirà una proposta di reindirizzamento.
+* **[!UICONTROL onContentHiding]**: questo evento hook di monitoraggio viene attivato quando viene applicato o rimosso uno stile di pre-hiding.
+
 
 ## [!UICONTROL Invio evento completato]
 

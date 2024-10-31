@@ -6,9 +6,9 @@ breadcrumb-title: Guida di SDK Web
 user-guide-description: Interagisci con i servizi di Experience Cloud tramite la rete Edge.
 feature: Web SDK
 role: Developer
-source-git-commit: da0d9d0976dc0f7244500e62bb364b11fab7baca
+source-git-commit: 02ae1fce01895d83d9c68248397e5288613ffe58
 workflow-type: tm+mt
-source-wordcount: '227'
+source-wordcount: '229'
 ht-degree: 23%
 
 ---
@@ -76,6 +76,7 @@ ht-degree: 23%
    * [Rendering di contenuti personalizzati](personalization/rendering-personalization-content.md)
    * [Personalization tramite implementazione ibrida](personalization/hybrid-personalization.md)
    * [Gestisci visualizzazione momentanea di altri contenuti](personalization/manage-flicker.md)
+   * [Hook di monitoraggio](monitoring-hooks.md)
    * Adobe Target {#adobe-target}
       * [Panoramica](personalization/adobe-target/target-overview.md)
       * [Implementazione di un&#39;applicazione a pagina singola](personalization/adobe-target/spa-implementation.md)

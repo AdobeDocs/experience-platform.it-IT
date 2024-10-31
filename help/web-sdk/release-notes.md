@@ -3,9 +3,9 @@ title: Note sulla versione di Adobe Experience Platform Web SDK
 description: Note sulla versione più recente di Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;note sulla versione;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: f31d250cfbe42680ee6f4d1334bf04a2ee8643a1
+source-git-commit: 3dacc991fd7760c1c358bec07aca83ffeb4f4f4d
 workflow-type: tm+mt
-source-wordcount: '2044'
+source-wordcount: '2042'
 ht-degree: 5%
 
 ---
@@ -22,7 +22,7 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 
 - [Le sostituzioni dello stream di dati](../datastreams/overrides.md) sono ora supportate all&#39;avvio di sessioni multimediali.
 
-- È stato aggiunto il supporto per i token di risposta di Adobe Target nel rendering. L’hook di monitoraggio è stato monitorato correttamente.
+- È stato aggiunto il supporto per i token di risposta di Adobe Target nell&#39;hook di monitoraggio [`onContentRendering`](monitoring-hooks.md#onContentRendering).
 
 **Correzioni e miglioramenti**
 
