@@ -2,9 +2,9 @@
 title: Strumenti sandbox
 description: Esporta e importa facilmente le configurazioni Sandbox tra sandbox.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 209aaaf0c2bfdb321f75257309980c7a48cb1eb4
+source-git-commit: 85476ea8a667cf3e74cd7a24da07d81c635e1628
 workflow-type: tm+mt
-source-wordcount: '2403'
+source-wordcount: '2431'
 ht-degree: 7%
 
 ---
@@ -31,7 +31,7 @@ Nella tabella seguente sono elencati [!DNL Adobe Real-Time Customer Data Platfor
 | --- | --- | --- |
 | Customer Data Platform | Origini | Le credenziali dell’account di origine non vengono replicate nella sandbox di destinazione per motivi di sicurezza e sarà necessario aggiornarle manualmente. Per impostazione predefinita, il flusso di dati di origine viene copiato in stato di bozza. |
 | Customer Data Platform | Tipi di pubblico | È supportato solo il tipo **[!UICONTROL Pubblico cliente]** **[!UICONTROL Servizio di segmentazione]**. Le etichette esistenti per il consenso e la governance verranno copiate nello stesso processo di importazione. Il sistema selezionerà automaticamente il criterio di unione predefinito nella sandbox di destinazione con la stessa classe XDM durante il controllo delle dipendenze dei criteri di unione. |
-| Customer Data Platform | Identità | Durante la creazione nella sandbox di destinazione, il sistema deduplica automaticamente gli spazi dei nomi di identità standard Adobe. I tipi di pubblico possono essere copiati solo quando tutti gli attributi nelle regole del pubblico sono abilitati nello schema di unione. Gli schemi necessari devono prima essere spostati e abilitati per il profilo unificato. |
+| Customer Data Platform | Identità | Gli spazi dei nomi delle identità standard di Adobe verranno deduplicati automaticamente durante la creazione nella sandbox di destinazione. I tipi di pubblico possono essere copiati solo quando tutti gli attributi nelle regole del pubblico sono abilitati nello schema di unione. Gli schemi necessari devono prima essere spostati e abilitati per il profilo unificato. |
 | Customer Data Platform | Schemi | Le etichette esistenti per il consenso e la governance verranno copiate nello stesso processo di importazione. L’utente dispone della flessibilità necessaria per importare schemi senza l’opzione Profilo unificato abilitata. Il caso edge delle relazioni di schema non è incluso nel pacchetto. |
 | Customer Data Platform | Set di dati | I set di dati vengono copiati con l’impostazione di profilo unificato disabilitata per impostazione predefinita. |
 | Customer Data Platform | Criteri di consenso e governance | Aggiungi a un pacchetto i criteri personalizzati creati da un utente e spostali tra le diverse sandbox. |
@@ -151,6 +151,8 @@ La pagina [!UICONTROL Oggetto pacchetto e dipendenze] fornisce un elenco di tutt
 >[!NOTE]
 >
 >Gli oggetti dipendenti possono essere sostituiti con quelli esistenti nella sandbox di destinazione, consentendo di riutilizzare gli oggetti esistenti anziché creare una nuova versione. Ad esempio, quando importi un pacchetto che include schemi, puoi riutilizzare gli spazi dei nomi dei gruppi di campi personalizzati e delle identità esistenti nella sandbox di destinazione. In alternativa, quando importi un pacchetto che include Percorsi, puoi riutilizzare i segmenti esistenti nella sandbox di destinazione.
+>
+>Gli strumenti sandbox non supportano attualmente l’aggiornamento o la sovrascrittura di oggetti esistenti. È possibile scegliere di creare un nuovo oggetto o continuare a utilizzare l&#39;oggetto esistente senza modifiche.
 
 Per utilizzare un oggetto esistente, selezionare l&#39;icona della matita accanto all&#39;oggetto dipendente.
 
