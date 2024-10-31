@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Nozioni di base sulla composizione dello schema
 description: Scopri gli schemi Experience Data Model (XDM) e gli elementi di base, i principi e le best practice per la composizione di schemi in Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 42038ecfeecc774b3a57e05d961bbd80f3178c21
+source-git-commit: 595d9bd6a0aa0c9f1059e485c54e89ce02b7ec68
 workflow-type: tm+mt
-source-wordcount: '4293'
+source-wordcount: '4365'
 ht-degree: 8%
 
 ---
@@ -27,7 +27,7 @@ Gli schemi XDM sono ideali per memorizzare grandi quantità di dati complessi in
 
 ### Flussi di lavoro basati su schema in Experience Platform {#schema-based-workflows}
 
-La standardizzazione è un concetto chiave alla base dell&#39;Experience Platform. XDM, guidato da Adobe, è un tentativo di standardizzare i dati sull’esperienza del cliente e definire schemi standard per la gestione della customer experience.
+La standardizzazione è un concetto chiave alla base dell&#39;Experience Platform. XDM, guidato da Adobe, è un tentativo di standardizzare i dati sulla customer experience e definire schemi standard per la gestione della customer experience.
 
 L&#39;infrastruttura su cui viene generato l&#39;Experience Platform, nota come [!DNL XDM System], semplifica i flussi di lavoro basati su schema e include [!DNL Schema Registry], [!DNL Schema Editor], i metadati dello schema e i modelli di consumo del servizio. Per ulteriori informazioni, consulta la [Panoramica del sistema XDM](../home.md).
 
@@ -181,7 +181,7 @@ La composizione di uno schema inizia assegnando una classe. Le classi definiscon
 
 La classe di uno schema determina quali gruppi di campi sono idonei per l’utilizzo in tale schema. Questo argomento viene discusso più dettagliatamente nella [sezione successiva](#field-group).
 
-Adobe fornisce diverse classi XDM standard (&quot;core&quot;). Due di queste classi, [!DNL XDM Individual Profile] e [!DNL XDM ExperienceEvent], sono necessarie per quasi tutti i processi di Platform downstream. Oltre a queste classi principali, puoi anche creare classi personalizzate per descrivere casi d’uso più specifici per la tua organizzazione. Le classi personalizzate vengono definite da un’organizzazione quando non sono disponibili classi core definite da Adobi per descrivere un caso d’uso univoco.
+Adobe fornisce diverse classi XDM standard (&quot;core&quot;). Due di queste classi, [!DNL XDM Individual Profile] e [!DNL XDM ExperienceEvent], sono necessarie per quasi tutti i processi di Platform downstream. Oltre a queste classi principali, puoi anche creare classi personalizzate per descrivere casi d’uso più specifici per la tua organizzazione. Le classi personalizzate vengono definite da un’organizzazione quando non sono disponibili classi core definite da Adobe per descrivere un caso d’uso univoco.
 
 La schermata seguente illustra come le classi sono rappresentate nell’interfaccia utente di Platform. Poiché lo schema di esempio visualizzato non contiene gruppi di campi, tutti i campi visualizzati vengono forniti dalla classe dello schema ([!UICONTROL Profilo individuale XDM]).
 
@@ -205,7 +205,7 @@ Un gruppo di campi è un componente riutilizzabile che definisce uno o più camp
 
 I gruppi di campi definiscono con quali classi sono compatibili, in base al comportamento dei dati che rappresentano (record o serie temporali). Ciò significa che non tutti i gruppi di campi sono disponibili per l&#39;utilizzo con tutte le classi.
 
-L&#39;Experience Platform include molti Adobi di campi standard, consentendo ai fornitori di definire gruppi di campi per i propri utenti e ai singoli utenti di definire gruppi di campi per concetti specifici.
+L&#39;Experience Platform include molti gruppi di campi di Adobe standard, consentendo ai fornitori di definire gruppi di campi per i propri utenti e ai singoli utenti di definire gruppi di campi per concetti specifici.
 
 Ad esempio, per acquisire dettagli quali &quot;[!UICONTROL Nome]&quot; e &quot;[!UICONTROL Indirizzo principale]&quot; per lo schema &quot;[!UICONTROL Membri fedeltà]&quot;, è possibile utilizzare gruppi di campi standard che definiscono tali concetti comuni. Tuttavia, concetti più specifici dell’organizzazione (ad esempio dettagli del programma fedeltà personalizzato o attributi di prodotto) che potrebbero non essere coperti dai gruppi di campi standard. In questo caso, è necessario definire un proprio gruppo di campi per acquisire queste informazioni.
 
@@ -223,6 +223,10 @@ La schermata seguente illustra come i gruppi di campi sono rappresentati nell’
 
 Per l&#39;elenco più aggiornato dei gruppi di campi XDM standard disponibili, fare riferimento al [archivio XDM ufficiale](https://github.com/adobe/xdm/tree/master/components/fieldgroups). In alternativa, se preferisci visualizzare le risorse nell&#39;interfaccia utente, consulta la guida su [esplorazione dei componenti XDM](../ui/explore.md).
 
+>[!NOTE]
+>
+> I gruppi di campi XDM standard sono sempre in evoluzione e alcuni gruppi di campi sono stati dichiarati obsoleti. Per l&#39;elenco aggiornato dei gruppi di campi obsoleti, fare riferimento alla [sezione dei gruppi di campi obsoleti](https://github.com/adobe/xdm/tree/master/components/fieldgroups/deprecated) nel repository XDM ufficiale.
+
 ### Tipo di dati {#data-type}
 
 I tipi di dati vengono utilizzati come tipi di campi di riferimento nelle classi o negli schemi allo stesso modo dei campi letterali di base. La differenza fondamentale consiste nel fatto che i tipi di dati possono definire più sottocampi nello stesso modo dei gruppi di campi. La differenza chiave tra di essi è che i tipi di dati possono essere inclusi ovunque in uno schema aggiungendolo come &quot;tipo di dati&quot; di un campo. Mentre i gruppi di campi sono compatibili solo con determinate classi, i tipi di dati possono essere inclusi in qualsiasi classe padre o gruppo di campi.
@@ -238,6 +242,10 @@ La schermata seguente illustra come i tipi di dati vengono rappresentati nell’
 ![Diagramma nell&#39;Editor schema per una singola persona con l&#39;oggetto Nome completo e gli attributi evidenziati.](../images/schema-composition/data-type.png)
 
 Per l&#39;elenco più aggiornato dei tipi di dati XDM standard disponibili, fare riferimento al [archivio XDM ufficiale](https://github.com/adobe/xdm/tree/master/components/datatypes). In alternativa, se preferisci visualizzare le risorse nell&#39;interfaccia utente, consulta la guida su [esplorazione dei componenti XDM](../ui/explore.md).
+
+>[!NOTE]
+>
+> I tipi di dati XDM standard sono sempre in evoluzione e alcuni tipi di dati sono stati dichiarati obsoleti. Per l&#39;elenco aggiornato dei tipi di dati obsoleti, fare riferimento alla [sezione dei tipi di dati obsoleti](https://github.com/adobe/xdm/tree/master/components/datatypes/deprecated) nel repository XDM ufficiale.
 
 ### Campo {#field}
 
