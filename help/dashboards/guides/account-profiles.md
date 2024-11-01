@@ -2,10 +2,10 @@
 title: Dashboard dei profili account
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale puoi visualizzare informazioni importanti sui profili dell’account B2B della tua organizzazione.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 8caa10010109f9936271cb45a2166455f3678687
+source-git-commit: 442fcee17cbe38a9e1608324581ebedee4ba7fe6
 workflow-type: tm+mt
-source-wordcount: '1827'
-ht-degree: 5%
+source-wordcount: '2362'
+ht-degree: 4%
 
 ---
 
@@ -17,17 +17,17 @@ In questo documento viene fornita una panoramica delle funzionalità della dashb
 
 ## Introduzione
 
-Devi avere diritto a [Adobe Real-time Customer Data Platform B2B Edition](../../rtcdp/b2b-overview.md) per accedere al dashboard [!UICONTROL Profili account] B2B.
+Devi avere diritto a [Adobe Real-time Customer Data Platform B2B edition](../../rtcdp/b2b-overview.md) per accedere alla dashboard [!UICONTROL Profili account] B2B.
 
 ## Dati dei profili account {#data}
 
 Nel dashboard [!UICONTROL Profili account] viene visualizzata un&#39;istantanea delle informazioni dell&#39;account unificato. Queste informazioni sull’account provengono dalle diverse origini nei vari canali di marketing e dai diversi sistemi attualmente utilizzati dalla tua organizzazione per archiviare le informazioni sull’account del cliente.
 
-I dati di profilo nello snapshot mostrano i dati esattamente come vengono visualizzati nel momento specifico in cui lo snapshot è stato creato. In altre parole, lo snapshot non è un&#39;approssimazione o un esempio dei dati e il dashboard [!UICONTROL Profili account] non viene aggiornato in tempo reale.
+The profile data in the snapshot shows the data exactly as it appears at the specific point in time when the snapshot was taken. In other words, the snapshot is not an approximation or sample of the data, and the [!UICONTROL Account Profiles] dashboard does not update in real-time.
 
 >[!NOTE]
 >
->Eventuali modifiche o aggiornamenti apportati ai dati dal momento in cui è stata acquisita l’istantanea non verranno riflessi nel dashboard fino all’acquisizione dell’istantanea successiva.
+>Any changes or updates made to the data since the snapshot was taken will not be reflected in the dashboard until the next snapshot is taken.
 
 ## Esplora il dashboard [!UICONTROL Profili account] {#explore}
 
@@ -39,13 +39,13 @@ Dal dashboard [!UICONTROL Profili account], puoi [sfogliare i profili account ac
 
 ### Filtro data {#date-filter}
 
-La scheda [!UICONTROL Panoramica] è composta da widget che forniscono metriche di sola lettura per trasmettere informazioni importanti sui profili dell&#39;account. Seleziona l&#39;icona o le date del calendario per modificare il filtro data globale per i widget.
+The [!UICONTROL Overview] tab is composed of widgets that provide read-only metrics to convey important information about your account profiles. Select the calendar icon or dates to change the global date filter for your widgets.
 
 >[!IMPORTANT]
 >
->L&#39;intervallo di date selezionato nel calendario a discesa influisce su tutte le informazioni tranne i due widget di punteggio predittivo ([distribuzione](#predictive-scoring-distribution) e [fattori influenti principali](#predictive-scoring-top-influential-factors)).
+>The date range that you select in the dropdown calendar affects all insights except the two predictive scoring widgets ([distribution](#predictive-scoring-distribution) and [top influential factors](#predictive-scoring-top-influential-factors)).
 
-![Scheda Panoramica dei profili account con il selettore di data e l&#39;icona del filtro evidenziati.](../images/account-profiles/date-filter.png)
+![The Account Profiles overview tab with the date selector and filter icon highlighted.](../images/account-profiles/date-filter.png)
 
 ### Configurare il lead per il servizio di corrispondenza account {#lead-to-account-matching-service}
 
@@ -70,7 +70,7 @@ Le informazioni sul profilo account visualizzate nella scheda [!UICONTROL Dettag
 >title="Panoramica sui clienti per account"
 >abstract="Questo widget drill-through fornisce informazioni sulla struttura dei dati B2B. Consente di identificare quanti profili account non hanno profili cliente collegati o hanno uno o più profili cliente associati.<ul><li>Clienti diretti: sono profili cliente collegati direttamente a un account tramite il percorso `personComponents`.</li><li>Clienti indiretti: sono profili cliente collegati a un account tramite il percorso `Account-Person`.</li></ul>"
 
-Questo Adobe fornisce widget standard che puoi utilizzare per visualizzare diverse metriche relative ai profili del tuo account.
+Adobe fornisce widget standard che puoi utilizzare per visualizzare diverse metriche correlate ai profili del tuo account.
 
 >[!IMPORTANT]
 >
@@ -79,6 +79,10 @@ Questo Adobe fornisce widget standard che puoi utilizzare per visualizzare diver
 Per ulteriori informazioni su ciascuno dei widget standard disponibili, selezionare il nome di un widget dall&#39;elenco seguente:
 
 * [Profili account aggiunti](#account-profiles-added)
+* [Panoramica sui clienti per account](#customers-per-account-overview)
+   * [Panoramica sulle opportunità per account](#opportunities-per-account-overview)
+   * [Dettagli opportunità per account](#opportunities-per-account-detail)
+   * [Dettagli clienti per account](#customers-per-account-detail)
 * [Nuovi account per settore](#accounts-by-industry)
 * [Nuovi account per tipo](#accounts-by-type)
 * [Nuove opportunità per ruolo persona](#opportunities-by-person-role)
@@ -94,6 +98,52 @@ Per ulteriori informazioni su ciascuno dei widget standard disponibili, selezion
 Il widget [!UICONTROL Profili account aggiunti] utilizza un grafico a linee per visualizzare il numero di profili account aggiunti ogni giorno in un periodo di tempo. Utilizza il filtro data globale che si trova nella parte superiore del dashboard per determinare il periodo di analisi. Se non viene fornito alcun filtro di data, il comportamento predefinito elenca i profili di account aggiunti per l’anno precedente a oggi. I risultati possono essere utilizzati per dedurre una tendenza nel numero di profili di account aggiunti.
 
 ![Il widget dei profili account è stato aggiunto.](../images/account-profiles/account-profiles-added.png)
+
+### Panoramica sui clienti per account {#customers-per-account-overview}
+
+Il grafico [!UICONTROL Clienti per account] fornisce un riepilogo degli account in base ai tipi di clienti. Visualizza una tabella a quattro righe che classifica i conti come clienti diretti o indiretti o senza. Fornisce il numero totale di conti per ogni categoria. Il grafico consente di identificare la distribuzione dei conti con clienti diretti e indiretti.
+
+I clienti diretti sono profili cliente collegati direttamente a un account tramite il percorso `personComponents`. Questa relazione è più semplice e implica un collegamento diretto ed esplicito tra il cliente e l’account.
+
+I clienti indiretti sono profili cliente collegati a un account tramite il percorso `Account-Person`. Questa relazione è meno semplice e coinvolge un’entità intermedia o una connessione più complessa tra il cliente e il conto, in genere attraverso altri conti o relazioni.
+
+![Il widget Panoramica clienti per account.](../images/account-profiles/customers-per-account-overview-widget.png)
+
+Per accedere a informazioni più dettagliate, seleziona l&#39;ellisse (**...**) nel grafico [!UICONTROL Panoramica clienti per account] e scegli **[!UICONTROL Espandi]** dal menu a discesa.
+
+![Il widget Panoramica clienti per account con il menu a discesa con i puntini di sospensione ed evidenziazione drill-through.](../images/account-profiles/customers-per-account-overview-dropdown.png)
+
+Viene visualizzata la vista drill-through. Quindi, esplora i grafici drill-through disponibili per comprendere meglio la struttura dei dati B2B. Puoi utilizzare questi grafici drill-through per identificare quanti profili account non hanno profili cliente collegati o a cui sono associati uno o più profili cliente. Puoi anche utilizzarli per identificare quanti clienti diretti o indiretti sono associati ai tuoi account.
+
+* [[!UICONTROL Customers per account detail]](#customers-per-account-detail)
+* [[!UICONTROL Accounts per opportunity overview]](#accounts-per-opportunity-overview)
+* [[!UICONTROL Dettagli opportunità per account]](#accounts-per-opportunity-detail)
+
+### [!UICONTROL Spostarsi tra le visualizzazioni del dashboard] {#dashboard-view-navigation}
+
+Per passare dal drill-through al dashboard Profili account e viceversa, selezionare l&#39;icona della cartella (![Icona della cartella.](../images/account-profiles/folder-icon.png)) seguita dalla visualizzazione corretta dal menu a discesa.
+
+![Visualizzazione drill-through nel dashboard Profili account con il menu a discesa di navigazione evidenziato.](../images/account-profiles/navigation-dropdown.png)
+
+To learn more about drill throughs in the Platform UI, see the [Drill Through guide](../sql-insights-query-pro-mode/drill-through.md).
+
+#### [!UICONTROL Customers per account detail] {#customers-per-account-detail}
+
+The [!UICONTROL Customers per account detail] chart provides more granular details about the number of accounts associated with different customer types. It displays a three-column table detailing the number of accounts by customer type (direct or indirect), and the range of customers associated with them. This chart helps you to understand how the customers are distributed across different customer categories and the total number of accounts associated with each.
+
+![Widget dettagli clienti per account.](../images/account-profiles/customers-per-account-detail.png)
+
+#### [!UICONTROL Panoramica sulle opportunità per account] {#opportunities-per-account-overview}
+
+Il grafico [!UICONTROL Opportunità per account] presenta un riepilogo degli account che hanno o non hanno opportunità. Questa tabella a due righe consente di determinare rapidamente il numero di account associati alle opportunità, fornendo un’istantanea del coinvolgimento delle opportunità tra gli account.
+
+![Il widget Panoramica opportunità per account.](../images/account-profiles/opportunities-per-account-overview.png)
+
+#### [!UICONTROL Dettagli opportunità per account] {#opportunities-per-account-detail}
+
+Il grafico [!UICONTROL Opportunità per account] offre un raggruppamento più dettagliato degli account in base al numero di opportunità disponibili. Nella tabella viene visualizzato il numero di account raggruppati per intervalli di conteggio delle opportunità, ad esempio 1-10 opportunità o oltre 100 opportunità. Questo grafico consente di identificare la modalità di distribuzione degli account in base al numero di opportunità gestite.
+
+![Widget dettagli opportunità per account.](../images/account-profiles/opportunities-per-account-detail.png)
 
 ### Nuovi account per settore {#accounts-by-industry}
 
@@ -163,9 +213,9 @@ Il menu a discesa all’interno del widget consente di selezionare il modello di
 
 ### Fattori influenti principali con punteggio predittivo {#predictive-scoring-top-influential-factors}
 
-Il widget [!UICONTROL Fattori influenti principali con punteggio predittivo] ti aiuta a comprendere i fattori più significativi che determinano i punteggi per ogni bucket di propensione.
+The [!UICONTROL Predictive scoring top influential factors] widget helps you to understand the most significant factors that drive the scores for each propensity bucket.
 
-Questo widget mostra i principali fattori di influenza per ciascuno dei bucket di propensione alta, media e bassa. Una barra per ciascun fattore influente indica la percentuale dei profili conto in quel bucket di propensione che contiene il fattore influente specifico.
+This widget shows the top influential factors for each of the high, medium, and low propensity buckets. Una barra per ciascun fattore influente indica la percentuale dei profili conto in quel bucket di propensione che contiene il fattore influente specifico.
 
 Il menu a discesa all’interno del widget consente di selezionare il modello di punteggio dell’account.
 
@@ -173,11 +223,11 @@ Il menu a discesa all’interno del widget consente di selezionare il modello di
 >
 >I filtri per l’intervallo di date globale non si applicano agli approfondimenti di valutazione predittiva. I widget con punteggio predittivo analizzano i dati in base al modello di punteggio dell’account selezionato nel menu a discesa.
 
-![Widget dei fattori influenti principali con punteggio predittivo.](../images/account-profiles/predictive-scoring-top-influential-factors.png)
+![The Predictive scoring top influential factors widget.](../images/account-profiles/predictive-scoring-top-influential-factors.png)
 
-## Errore nell’operazione di caricamento dati {#errors}
+## Unable to load data error {#errors}
 
-Se viene visualizzato un widget *[!UICONTROL Impossibile caricare. Riprova.]* poiché non sono disponibili dati per l&#39;entità B2B. Ad esempio, il widget visualizzato di seguito [!UICONTROL Nuove opportunità per ruolo persona] mostra il messaggio &quot;[!UICONTROL Impossibile caricare. Riprova.]&quot; poiché questa sandbox non dispone di dati di opportunità disponibili.
+If a widget displays *[!UICONTROL Unable to load. Try again.]* this is because there is no available data for the B2B entity. For example, the widget displayed below [!UICONTROL New opportunities by person role], shows the message &quot;[!UICONTROL Unable to load. Try again.]&quot; poiché questa sandbox non dispone di dati di opportunità disponibili.
 
 ![Errore Impossibile caricare l&#39;approfondimento.](../images/account-profiles/unable-to-load.png)
 
@@ -185,4 +235,4 @@ Per risolvere il problema, è necessario acquisire nella sandbox i dati dell&#39
 
 ## Passaggi successivi
 
-Seguendo questo documento, ora dovresti sapere come individuare la dashboard [!UICONTROL Profili account] e capire le metriche visualizzate nei widget disponibili. Per ulteriori informazioni sull&#39;utilizzo dei profili account come parte dei dati B2B nell&#39;interfaccia utente di Experience Platform, consulta la [panoramica dei profili account](../../rtcdp/accounts/account-profile-overview.md) per Adobe Real-Time CDP, versione B2B.
+Seguendo questo documento, ora dovresti sapere come individuare la dashboard [!UICONTROL Profili account] e capire le metriche visualizzate nei widget disponibili. Per ulteriori informazioni sull&#39;utilizzo dei profili account come parte dei dati B2B nell&#39;interfaccia utente di Experience Platform, consulta la [panoramica dei profili account](../../rtcdp/accounts/account-profile-overview.md) per Adobe Real-Time CDP, B2B edition.
