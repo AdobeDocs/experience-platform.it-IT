@@ -5,9 +5,9 @@ breadcrumb-title: Guida di Query Service
 user-guide-description: Utilizza il linguaggio SQL standard per eseguire query sui dati nel data lake in Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: 3583f6e0ac72e4f813abd87949cb640d0b20b6e2
+source-git-commit: c94213b37813730911d207cb0de773d8aac22c13
 workflow-type: tm+mt
-source-wordcount: '341'
+source-wordcount: '357'
 ht-degree: 22%
 
 ---
@@ -39,6 +39,16 @@ ht-degree: 22%
       - [Funzioni del tecnico per ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
       - [Esportare dati in ambienti ML](data-distiller/ml-feature-pipelines/export-data.md)
       - [Flusso di lavoro end-to-end per l’arricchimento della pipeline dati AI/ML](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
+- Statistiche di Data Distiller {#advanced-statistics}
+   - [Panoramica](advanced-statistics/overview.md)
+   - [Ingegneria delle funzioni](advanced-statistics/feature-engineering.md)
+   - [Modelli](advanced-statistics/models.md)
+Implementa modelli {#implement-models}
+      - [Implementare modelli](advanced-statistics/implement-models/implement-models.md)
+      - [Regressione](advanced-statistics/implement-models/regression.md)
+      - [Classificazione](advanced-statistics/implement-models/classification.md)
+      - [Clustering](advanced-statistics/implement-models/clustering.md)
+   - [Trasformazione delle feature](advanced-statistics/feature-transformation.md)
 - Pubblico di Data Distiller {#data-distiller-audiences}
    - [Creare tipi di pubblico esterni tramite SQL](data-distiller-audiences/overview.md)
 - Esempi {#use-cases}
