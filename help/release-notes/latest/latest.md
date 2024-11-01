@@ -1,11 +1,11 @@
 ---
-title: Note sulla versione di Adobe Experience Platform - Ottobre 2024
+title: Note sulla versione di Adobe Experience Platform di ottobre 2024
 description: Note sulla versione di Adobe Experience Platform di ottobre 2024.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: f30a124a40928abf69366d311131e353c2779191
 workflow-type: tm+mt
 source-wordcount: '1159'
-ht-degree: 35%
+ht-degree: 78%
 
 ---
 
@@ -48,7 +48,7 @@ Adobe Experience Platform fornisce una suite di tecnologie che consente di racco
 
 | Tipo | Funzione | Descrizione |
 | --- | --- | --- |
-| Tag ed estensioni | Visualizzazione JSON di Adobe Analytics | Ora puoi utilizzare l’estensione tag Adobe Analytics per esaminare eVar, prop ed impostazioni evento come JSON, che ora può essere incluso nell’estensione Web SDK ed esportato per la modifica. Puoi anche caricare o copiare questi dati e memorizzarli sul tuo dispositivo. Per ulteriori informazioni, consulta la [documentazione dell&#39;estensione Adobe Analytics](../../tags/extensions/client/analytics/overview.md). |
+| Tag ed estensioni | Visualizzazione JSON di Adobe Analytics | Ora è possibile utilizzare l’estensione dei tag Adobe Analytics per esaminare eVar, prop ed impostazioni evento come JSON, che adesso può essere incluso nell’estensione Web SDK ed esportato per la modifica. È possibile inoltre caricare o copiare questi dati e memorizzarli sul proprio dispositivo. Per ulteriori informazioni, consulta la [documentazione dell’estensione Adobe Analytics](../../tags/extensions/client/analytics/overview.md). |
 
 {style="table-layout:auto"}
 
@@ -62,9 +62,9 @@ Per ulteriori informazioni, consulta la [panoramica della raccolta dati](../../c
 
 | Funzione | Descrizione |
 | ----------- | ----------- |
-| [Supporto per l&#39;esportazione di array generalmente disponibile](../../destinations/ui/export-arrays-calculated-fields.md) | Tutti i clienti ora possono utilizzare l&#39;opzione **[!UICONTROL Aggiungi campo calcolato]** durante l&#39;attivazione dei tipi di pubblico *in destinazioni basate su file* per esportare intere matrici o elementi di matrici. È comunque necessario utilizzare la funzione `array_to_string` per appiattire l&#39;array in una stringa nel file di destinazione. <br> ![Aggiungere la selezione di campi calcolati con funzioni e campi.](../2024/assets/october/array-export.gif "Aggiungere un campo calcolato con una selezione della funzione array_to_string e dell&#39;array di organizzazioni."){width="250" align="center" zoomable="yes"} |
-| [Miglioramenti della precisione del reporting per le destinazioni di streaming](/help/destinations/ui/export-datasets.md) | A partire da ottobre 2024, Adobe sta implementando un aggiornamento per aumentare la precisione dei rapporti per le destinazioni di streaming. Questo miglioramento garantisce un migliore allineamento tra il reporting dell’Experience Platform e quello delle piattaforme di destinazione. <br> Prima di questo aggiornamento, **[!UICONTROL Identità non riuscite]** includeva tutti i tentativi di attivazione. Dopo questo aggiornamento, nel conteggio totale viene incluso solo l’ultimo tentativo di attivazione. <br> Questo miglioramento si applica attualmente alla [destinazione Customer Match di Google](../../destinations/catalog/advertising/google-customer-match.md), ma verrà introdotto gradualmente in altre destinazioni di streaming di Experienci Platform. In seguito a questo miglioramento, gli utenti della [destinazione Customer Match di Google](../../destinations/catalog/advertising/google-customer-match.md) potrebbero notare un calo previsto nel conteggio di **[!UICONTROL Identità non riuscite]**. |
-| Implicazioni di valutazione flessibile del pubblico in [attivazione batch del pubblico](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) | Se esegui [valutazione flessibile del pubblico](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation) su tipi di pubblico già impostati per essere attivati dopo la valutazione dei segmenti, i tipi di pubblico verranno attivati al termine del processo di valutazione flessibile, indipendentemente da eventuali processi di attivazione giornalieri precedenti. <br> Questo potrebbe comportare l&#39;esportazione di tipi di pubblico più volte al giorno, in base alle azioni eseguite. |
+| [Supporto per l’esportazione di array in disponibilità generale](../../destinations/ui/export-arrays-calculated-fields.md) | La clientela adesso può utilizzare l’opzione **[!UICONTROL Aggiungi campo calcolato]** durante l’attivazione dei tipi di pubblico *in destinazioni basate su file* per esportare interi array o elementi di array. È comunque necessario utilizzare la funzione `array_to_string` per ridurre l’array in una stringa nel file di destinazione. <br> ![Aggiungere la selezione di campo calcolato con funzioni e campi.](../2024/assets/october/array-export.gif "Aggiungere un campo calcolato con una selezione della funzione array_to_string e dell’array di organizzazioni."){width="250" align="center" zoomable="yes"} |
+| [Miglioramenti della precisione del reporting per le destinazioni di streaming](/help/destinations/ui/export-datasets.md) | A partire da ottobre 2024, Adobe implementerà un aggiornamento per aumentare la precisione dei rapporti per le destinazioni di streaming. Questo miglioramento garantisce un migliore allineamento tra il reporting di Experience Platform e quello delle piattaforme di destinazione. <br> Prima di questo aggiornamento, **[!UICONTROL Identità non riuscite]** includeva tutti i tentativi di attivazione. Dopo questo aggiornamento, nel conteggio totale viene incluso solo l’ultimo tentativo di attivazione. <br> Questo miglioramento è applicato attualmente alla [destinazione Customer Match di Google](../../destinations/catalog/advertising/google-customer-match.md), ma verrà implementata gradualmente in altre destinazioni di streaming di Experience Platform. In seguito a questo miglioramento, gli utenti della [destinazione Customer Match di Google](../../destinations/catalog/advertising/google-customer-match.md) potrebbero notare un calo previsto nel relativo conteggio delle **[!UICONTROL Identità non riuscite]**. |
+| Implicazioni della valutazione del pubblico flessibile in [attivazione del pubblico in batch](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) | Se si esegue una [valutazione del pubblico](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation) su tipi di pubblico già impostati per essere attivati dopo la valutazione del segmento, i tipi di pubblico verranno attivati al termine del processo di valutazione del pubblico flessibile, indipendentemente da ogni processo di attivazione giornaliero precedente. <br> Questo potrebbe comportare l’esportazione di tipi di pubblico più volte al giorno, in base alle azioni eseguite. |
 
 {style="table-layout:auto"}
 
@@ -78,7 +78,7 @@ Per ulteriori informazioni, leggi la [panoramica sulle destinazioni](../../desti
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| [!BADGE Disponibilità limitata]{type=Informative} Valutazione flessibile del pubblico | La valutazione flessibile del pubblico consente di creare rapidamente nuovi tipi di pubblico su richiesta per comunicazioni urgenti. Ulteriori informazioni su questa nuova funzionalità sono disponibili nella [documentazione di Audience Portal](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation). |
+| [!BADGE Disponibilità limitata]{type=Informative} Valutazione del pubblico flessibile | La valutazione del pubblico flessibile consente di creare rapidamente nuovi tipi di pubblico su richiesta per comunicazioni urgenti. Ulteriori informazioni su questa nuova funzione sono disponibili nella [documentazione di Audience Portal](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation). |
 
 {style="table-layout:auto"}
 
@@ -92,12 +92,12 @@ Adobe Experience Platform è stato progettato per arricchire le applicazioni di 
 
 | Funzione | Descrizione |
 | --- | --- |
-| Condivisione pacchetti di strumenti sandbox | È ora possibile utilizzare gli strumenti sandbox per esportare e importare facilmente le configurazioni sandbox tra sandbox di organizzazioni diverse. Sono ora disponibili due categorie di pacchetti condivisi:<br><ul><li>**[Pacchetto privato](../../sandboxes/ui/sharing-packages-across-orgs.md#private-packages):** Utilizza la condivisione di pacchetti privati con organizzazioni che hanno approvato la richiesta di condivisione dall&#39;organizzazione di origine.</li><li>**[Pacchetto pubblico](../../sandboxes/ui/sharing-packages-across-orgs.md#public-packages):** I pacchetti pubblici possono essere condivisi senza ulteriori approvazioni e possono essere importati facilmente utilizzando il payload del pacchetto.</li></ul><br>Per ulteriori informazioni su queste funzionalità, leggere la guida su [condivisione di pacchetti tra organizzazioni](../../sandboxes/ui/sharing-packages-across-orgs.md). |
-| [Condivisione pacchetti](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/sandbox-tooling-api/packages#org-linking) nell&#39;API di strumenti sandbox | Utilizzare l&#39;API per gli strumenti sandbox per effettuare richieste a due nuovi endpoint, `/handshake` e `/transfer` per la condivisione tra organizzazioni, il recupero e la creazione di richieste di condivisione dei pacchetti. È stata aggiunta una richiesta aggiuntiva all&#39;endpoint `/packages` per recuperare il payload di un pacchetto. |
+| Condivisione del pacchetto di strumenti sandbox | Ora puoi utilizzare gli strumenti sandbox per esportare e importare facilmente le configurazioni sandbox tra sandbox di organizzazioni diverse. Sono ora disponibili due categorie di pacchetti condivisi:<br><ul><li>**[Pacchetto privato](../../sandboxes/ui/sharing-packages-across-orgs.md#private-packages):** è possibile utilizzare la condivisione di un pacchetto privato con organizzazioni che hanno approvato la richiesta di condivisione dall’organizzazione di origine.</li><li>**[Pacchetto pubblico](../../sandboxes/ui/sharing-packages-across-orgs.md#public-packages):** i pacchetti pubblici possono essere condivisi senza approvazioni aggiuntive e possono essere importati facilmente utilizzando il payload del pacchetto.</li></ul><br>Per ulteriori informazioni su queste funzioni, consulta la guida su [condivisione di pacchetti tra organizzazioni](../../sandboxes/ui/sharing-packages-across-orgs.md). |
+| [Condivisione pacchetto](https://experienceleague.adobe.com/it/docs/experience-platform/sandbox/sandbox-tooling-api/packages#org-linking) nell’API di strumenti di sandbox | È possibile utilizzare l’API degli strumenti di sandbox per effettuare richieste a due nuovi endpoint `/handshake` e `/transfer` per la condivisione tra organizzazioni, il recupero e la creazione di richieste di condivisione del pacchetto. È stata aggiunta una richiesta aggiuntiva all’endpoint `/packages` per recuperare il payload di un pacchetto. |
 
 {style="table-layout:auto"}
 
-Per ulteriori informazioni sulle origini, consulta la [panoramica sulle origini](../../sandboxes/home.md).
+Per ulteriori informazioni sulle sandbox, consulta la [panoramica sulle sandbox](../../sandboxes/home.md).
 
 ## Origini {#sources}
 
@@ -109,7 +109,7 @@ Utilizza le origini in Experience Platform per acquisire dati da un’applicazio
 
 | Funzione | Descrizione |
 | --- | --- |
-| Supporto per il filtro delle entità attività standard in [!DNL Marketo Engage] | È possibile utilizzare l&#39;API [!DNL Flow Service] per filtrare le entità attività standard durante l&#39;acquisizione dei dati dall&#39;origine [!DNL Marketo Engage]. Per ulteriori informazioni, consulta la guida su [filtraggio [!DNL Marketo] dati attività standard](../../sources/tutorials/api/filter.md#filter-activity-entities-for-marketo-engage). |
+| Supporto per il filtro delle entità di attività standard in [!DNL Marketo Engage] | Ora è possibile utilizzare l’API [!DNL Flow Service] per filtrare le entità di attività standard durante l’acquisizione dei dati dall’origine [!DNL Marketo Engage]. Per ulteriori informazioni, consulta la guida su [filtro di  [!DNL Marketo] dati di attività standard](../../sources/tutorials/api/filter.md#filter-activity-entities-for-marketo-engage). |
 
 {style="table-layout:auto"}
 
