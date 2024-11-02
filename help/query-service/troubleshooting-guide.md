@@ -1,24 +1,43 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;servizio query;servizio query;guida alla risoluzione dei problemi;faq;risoluzione dei problemi;
 solution: Experience Platform
-title: Domande frequenti
-description: Questo documento contiene domande e risposte comuni relative a Query Service. Gli argomenti includono esportazione di dati, strumenti di terze parti ed errori PSQL.
+title: Domande frequenti su Query Service e Data Distiller
+description: Questo documento contiene domande e risposte comuni relative a Query Service e Data Distiller. Gli argomenti includono esportazione di dati, strumenti di terze parti ed errori PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 84f30a47102a51b40d6811cd4815c36f6ffd34b5
+source-git-commit: dc15ab9b94513d3acdf0e62ef0fec710c05a9fc9
 workflow-type: tm+mt
-source-wordcount: '4564'
+source-wordcount: '5055'
 ht-degree: 0%
 
 ---
 
-# Domande frequenti
+# Domande frequenti su Query Service e Data Distiller
 
-Questo documento fornisce le risposte alle domande più frequenti su Query Service e fornisce un elenco dei codici di errore più comuni durante l’utilizzo di Query Service. Per domande e risoluzione dei problemi relativi ad altri servizi in Adobe Experience Platform, consulta la [guida alla risoluzione dei problemi di Experience Platform](../landing/troubleshooting.md).
+Questo documento risponde alle domande frequenti su Query Service e Data Distiller. Include inoltre i codici di errore più comuni durante l’utilizzo del prodotto &quot;Query&quot; per la convalida dei dati o la scrittura di dati trasformati nel data lake. Per domande e risoluzione dei problemi relativi ad altri servizi Adobe Experience Platform, consulta la [guida alla risoluzione dei problemi di Experience Platform](../landing/troubleshooting.md).
+
+Per chiarire come Query Service e Data Distiller collaborano in Adobe Experience Platform, ecco due domande fondamentali.
+
+## Qual è la relazione tra Query Service e Data Distiller?
+
+Query Service e Data Distiller sono componenti distinti e complementari che forniscono funzionalità specifiche di query dei dati. Query Service è progettato per query ad hoc per esplorare, convalidare e sperimentare i dati acquisiti senza alterarne il data lake. Al contrario, Data Distiller si concentra su query batch che trasformano e arricchiscono i dati, con risultati memorizzati nuovamente nel data lake per utilizzi futuri. È possibile pianificare, monitorare e gestire query in batch in Data Distiller, supportando un’elaborazione e una manipolazione dei dati più approfondite che Query Service da solo non facilita.
+
+Insieme, Query Service facilita l’acquisizione di informazioni rapide, mentre Data Distiller consente trasformazioni approfondite e costanti dei dati.
+
+## Qual è la differenza tra Query Service e Data Distiller?
+
+**Query Service**: utilizzato per query SQL incentrate sull&#39;esplorazione, la convalida e la sperimentazione dei dati. Gli output non vengono memorizzati nel data lake e il tempo di esecuzione è limitato a 10 minuti. Le query ad hoc sono adatte per controlli e analisi dei dati interattivi e leggeri.
+
+**Data Distiller**: abilita query batch che elaborano, puliscono e arricchiscono dati, con risultati archiviati nuovamente nel data lake. Queste query supportano un’esecuzione più lunga (fino a 24 ore) e funzionalità aggiuntive come pianificazione, monitoraggio e reporting accelerato. Data Distiller è ideale per la manipolazione approfondita dei dati e per le attività di elaborazione pianificate dei dati.
+
+Per informazioni più dettagliate, consulta il [documento sulla creazione pacchetti di Query Service](./packaging.md).
+
+## Categorie di domande {#categories}
 
 Il seguente elenco di risposte alle domande frequenti è suddiviso nelle seguenti categorie:
 
 - [Generale](#general)
-- [Interfaccia utente query](#queries-ui) 
+- [Data Distiller](#data-distiller)
+- [Interfaccia query](#queries-ui)
 - [Esempi di set di dati](#dataset-samples)
 - [Esportazione dei dati](#exporting-data)
 - [Sintassi SQL](#sql-syntax) 
@@ -46,7 +65,7 @@ Una possibile causa è la funzione di completamento automatico. La funzione elab
 ### Posso usare [!DNL Postman] per l&#39;API Query Service?
 
 +++Risposta
-Sì, è possibile visualizzare e interagire con tutti i servizi API Adobe utilizzando [!DNL Postman] (un&#39;applicazione gratuita di terze parti). Consultare la [[!DNL Postman] guida all&#39;installazione](https://video.tv.adobe.com/v/28832) per istruzioni dettagliate sulla configurazione di un progetto in Adobe Developer Console e l&#39;acquisizione di tutte le credenziali necessarie per l&#39;utilizzo con [!DNL Postman]. Consulta la documentazione ufficiale per [istruzioni su come avviare, eseguire e condividere [!DNL Postman] le raccolte](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
+Sì, puoi visualizzare e interagire con tutti i servizi API di Adobe utilizzando [!DNL Postman] (un&#39;applicazione gratuita di terze parti). Consultare la [[!DNL Postman] guida all&#39;installazione](https://video.tv.adobe.com/v/28832) per istruzioni dettagliate sulla configurazione di un progetto in Adobe Developer Console e l&#39;acquisizione di tutte le credenziali necessarie per l&#39;utilizzo con [!DNL Postman]. Consulta la documentazione ufficiale per [istruzioni su come avviare, eseguire e condividere [!DNL Postman] le raccolte](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Esiste un limite al numero massimo di righe restituite da una query tramite l’interfaccia utente?
@@ -134,25 +153,25 @@ Per migliorare le prestazioni delle query sui set di dati contenenti array, è n
 +++Risposta
 Se la query ha richiesto molto tempo su un set di dati molto piccolo, contatta l’assistenza clienti.
 
-Un’interrogazione può essere bloccata durante l’elaborazione per diversi motivi. Per determinare la causa esatta è necessaria un’analisi approfondita caso per caso. [Contatta l&#39;Assistenza clienti di Adobe](#customer-support) per informazioni su questa procedura.
+Un’interrogazione può essere bloccata durante l’elaborazione per diversi motivi. Per determinare la causa esatta è necessaria un’analisi approfondita caso per caso. [Contatta l&#39;Assistenza clienti di Adobe](#customer-support) per completare questa procedura.
 +++
 
 ### Come posso contattare l’assistenza clienti Adobe? {#customer-support}
 
 +++Risposta
-[Nella pagina della guida di Adobe è disponibile un elenco completo dei numeri di telefono dell&#39;assistenza clienti](https://helpx.adobe.com/ca/contact/phone.html) di Adobe. In alternativa, è possibile trovare la guida online completando i passaggi seguenti:
+[Nella pagina della guida di Adobe è disponibile un elenco completo dei numeri di telefono del servizio clienti di Adobe](https://helpx.adobe.com/ca/contact/phone.html). In alternativa, è possibile trovare la guida online completando i passaggi seguenti:
 
 - Passa a [https://www.adobe.com/](https://www.adobe.com/it/) nel browser Web.
 - Sul lato destro della barra di navigazione superiore, seleziona **[!UICONTROL Accedi]**.
 
-![Sito Web di Adobe con l&#39;opzione Accedi evidenziata.](./images/troubleshooting/adobe-sign-in.png)
+![Sito Web Adobe con l&#39;opzione Accedi evidenziata.](./images/troubleshooting/adobe-sign-in.png)
 
-- Utilizza l’Adobe ID e la password registrati con la tua licenza di Adobe.
+- Utilizza l’Adobe ID e la password registrati con la tua licenza Adobe.
 - Seleziona **[!UICONTROL Guida e supporto]** dalla barra di navigazione superiore.
 
 ![Menu a discesa della barra di navigazione superiore con Guida in linea e supporto tecnico, Supporto Enterprise e Contattaci evidenziati.](./images/troubleshooting/help-and-support.png)
 
-Verrà visualizzato un banner a discesa contenente una sezione [!UICONTROL Guida e supporto tecnico]. Seleziona **[!UICONTROL Contattaci]** per aprire l&#39;Assistente virtuale dell&#39;Assistenza clienti Adobe oppure seleziona **[!UICONTROL Supporto Enterprise]** per assistenza dedicata alle organizzazioni di grandi dimensioni.
+Verrà visualizzato un banner a discesa contenente una sezione [!UICONTROL Guida e supporto tecnico]. Seleziona **[!UICONTROL Contattaci]** per aprire l&#39;Assistente virtuale dell&#39;Assistenza clienti di Adobe, oppure seleziona **[!UICONTROL Supporto Enterprise]** per assistenza dedicata alle organizzazioni di grandi dimensioni.
 +++
 
 ### Come si implementa una serie sequenziale di job senza eseguire i job successivi se il job precedente non viene completato correttamente?
@@ -168,7 +187,7 @@ Per ulteriori dettagli, consulta la [documentazione sui blocchi anonimi](./key-c
 +++Risposta
 Esistono due modi per implementare l’attribuzione personalizzata:
 
-1. Utilizza una combinazione di [funzioni definite dall&#39;Adobe](./sql/adobe-defined-functions.md) esistenti per identificare se le esigenze del caso d&#39;uso sono soddisfatte.
+1. Utilizza una combinazione di [funzioni definite da Adobe](./sql/adobe-defined-functions.md) esistenti per identificare se le esigenze del caso d&#39;uso sono soddisfatte.
 1. Se il suggerimento precedente non soddisfa il tuo caso d&#39;uso, devi utilizzare una combinazione di [funzioni finestra](./sql/adobe-defined-functions.md#window-functions). Le funzioni di finestra esaminano tutti gli eventi in una sequenza. Consentono inoltre di rivedere i dati storici e possono essere utilizzati in qualsiasi combinazione.
 +++
 
@@ -589,7 +608,7 @@ Sì, il controllo degli accessi basato su attributi viene applicato se configura
 No, Query Service non supporta il comando &quot;INSERT OVERWRITE INTO&quot;.
 +++
 
-### Con quale frequenza vengono aggiornati i dati di utilizzo nel dashboard utilizzo licenze per le ore di calcolo di Data Distiller?
+### Con quale frequenza vengono aggiornati i dati di utilizzo nel dashboard utilizzo licenze per Data Distiller Compute Hours?
 
 +++Risposta
 La dashboard utilizzo licenze per le ore computer di Data Distiller viene aggiornata quattro volte al giorno, ogni sei ore.
@@ -605,6 +624,38 @@ Sì, è possibile utilizzare il comando `CREATE VIEW` senza accedere a Data Dist
 
 +++Risposta
 Sì. Tuttavia, alcuni client di terze parti, come DbVisualizer, potrebbero richiedere un identificatore separato prima e dopo un blocco SQL per indicare che una parte di uno script deve essere gestita come una singola istruzione. Ulteriori dettagli sono disponibili nella [documentazione sui blocchi anonimi](./key-concepts/anonymous-block.md) o nella [documentazione ufficiale di DbVisualizer](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect).
++++
+
+## Data Distiller {#data-distiller}
+
+### Come viene monitorato l’utilizzo delle licenze di Data Distiller e dove posso visualizzare queste informazioni?
+
++++Risposta\
+La metrica principale utilizzata per tenere traccia dell’utilizzo delle query batch è l’Ora di calcolo. Puoi accedere a queste informazioni e al tuo utilizzo corrente tramite la [Dashboard utilizzo licenze](../dashboards/guides/license-usage.md).
++++
+
+### Che cos&#39;è un&#39;ora di calcolo?
+
++++Risposta\
+Le ore di calcolo sono la misura del tempo impiegato dai motori di Query Service per leggere, elaborare e riscrivere i dati nel data lake quando viene eseguita una query batch.
++++
+
+### Come vengono misurate le ore di calcolo?
+
++++Risposta\
+Le ore di calcolo vengono misurate cumulativamente in tutte le Sandbox autorizzate.
++++
+
+### Perché talvolta si nota una variazione nel consumo di ore di calcolo anche quando si esegue la stessa query consecutivamente?
+
++++Risposta\
+Le ore di calcolo per una query possono variare a causa di più fattori. Tra questi, il volume di dati elaborato, la complessità delle operazioni di trasformazione all&#39;interno della query SQL e così via. Query Service ridimensiona il cluster in base ai parametri di cui sopra per ogni query, il che può portare a differenze nelle ore di calcolo.
++++
+
+### È normale notare una riduzione delle ore di calcolo quando eseguo la stessa query utilizzando gli stessi dati per un periodo di tempo prolungato? Perché potrebbe succedere?
+
++++Risposta\
+L’infrastruttura back-end viene costantemente migliorata per ottimizzare l’utilizzo dell’Ora di calcolo e il tempo di elaborazione. Di conseguenza, potresti notare modifiche nel tempo man mano che vengono implementati miglioramenti delle prestazioni.
 +++
 
 ## Interfaccia query
