@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guida all’interfaccia utente di Audiences
 description: La funzione di composizione del pubblico nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro ricca che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica dei tipi di pubblico per la tua organizzazione.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: e17403f0529c5b94869d3bd4e860c798db620d31
+source-git-commit: 3c0fdab5d7561238a64e79e5bab5fd4843fccb0a
 workflow-type: tm+mt
-source-wordcount: '1951'
+source-wordcount: '1952'
 ht-degree: 0%
 
 ---
@@ -88,7 +88,7 @@ Dopo aver aggiunto una regola personalizzata, seleziona **[!UICONTROL Salva]** p
 
 ## [!UICONTROL Escludi] {#exclude-block}
 
-Il tipo di blocco **[!UICONTROL Escludi]** ti consente di escludere pubblici secondari o attributi specifici dal tuo nuovo pubblico più grande.
+Il tipo di blocco **[!UICONTROL Escludi]** ti consente di escludere uno o più attributi del pubblico secondario specificato dal nuovo pubblico più grande.
 
 Per aggiungere un blocco **[!UICONTROL Escludi]**, seleziona l&#39;icona **+**, seguita da **[!UICONTROL Escludi]**.
 
@@ -100,7 +100,7 @@ Il blocco **[!UICONTROL Escludi]** è stato aggiunto. Quando questo blocco è se
 
 ### Escludi per pubblico {#exclude-audience}
 
-Se escludi per pubblico, puoi selezionare i tipi di pubblico da escludere selezionando **[!UICONTROL Aggiungi pubblico]**.
+Se escludi per pubblico, puoi selezionare il pubblico da escludere selezionando **[!UICONTROL Aggiungi pubblico]**.
 
 ![È selezionato il pulsante [!UICONTROL Aggiungi pubblico], che consente di scegliere il pubblico da escludere.](../images/ui/audience-composition/add-excluded-audience.png)
 
@@ -108,7 +108,7 @@ Se escludi per pubblico, puoi selezionare i tipi di pubblico da escludere selezi
 >
 >È possibile utilizzare solo i tipi di pubblico **pubblicati** creati con Segment Builder. I tipi di pubblico creati mediante Composizione pubblico e quelli generati esternamente sono **non** disponibili.
 
-Viene visualizzato un elenco di tipi di pubblico. Seleziona **[!UICONTROL Aggiungi]** per aggiungere i tipi di pubblico da escludere al blocco di esclusione.
+Viene visualizzato un elenco di tipi di pubblico. Seleziona **[!UICONTROL Aggiungi]** per aggiungere il pubblico da escludere al blocco di esclusione.
 
 ![Viene visualizzato un elenco di tipi di pubblico. È possibile selezionare il pubblico da aggiungere da questa finestra di dialogo.](../images/ui/audience-composition/select-audience.png)
 
