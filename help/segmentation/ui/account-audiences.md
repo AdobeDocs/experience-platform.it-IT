@@ -1,13 +1,13 @@
 ---
 title: Pubblico dell’account
 description: Scopri come creare e utilizzare i tipi di pubblico dell’account per eseguire il targeting dei profili dell’account nelle destinazioni a valle.
-badgeB2B: label="Edizione B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Edizione B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
+source-git-commit: fd0a495d68d6a09ccca66c400993d2e72673321c
 workflow-type: tm+mt
-source-wordcount: '1130'
-ht-degree: 27%
+source-wordcount: '1518'
+ht-degree: 21%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 27%
 
 >[!AVAILABILITY]
 >
->I tipi di pubblico dell&#39;account sono disponibili solo nella [edizione B2B di Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2b) e nella [edizione B2P di Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2p).
+>I tipi di pubblico dell&#39;account sono disponibili solo in [B2B edition di Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2b) e nell&#39;edizione [B2P di Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2p).
 
 Con la segmentazione dell’account, Adobe Experience Platform ti consente di rendere l’esperienza di segmentazione del marketing completamente semplice e sofisticata, dal pubblico basato sulle persone a quello basato sull’account.
 
@@ -66,6 +66,39 @@ Nella scheda [!UICONTROL Tipi di pubblico] puoi aggiungere tipi di pubblico basa
 ![La scheda Tipi di pubblico nel Generatore di segmenti è evidenziata.](../images/ui/account-audiences/audiences.png)
 
 Per ulteriori informazioni sull&#39;utilizzo del Generatore di segmenti, leggere la [Guida dell&#39;interfaccia utente del Generatore di segmenti](./segment-builder.md).
+
+### Stabilire relazioni {#relationships}
+
+Per impostazione predefinita, per il pubblico dell’account, l’interfaccia utente di Segment Builder mostra la relazione diretta tra un account e una persona. Tuttavia, per il pubblico dell’account sono disponibili altri tipi di relazione.
+
+Per utilizzare i tipi di relazione alternativi, selezionare ![l&#39;icona delle impostazioni](../../images/icons/settings.png).
+
+![L&#39;icona delle impostazioni è evidenziata nella sezione Campi.](../images/ui/account-audiences/select-settings.png)
+
+Nella scheda [!UICONTROL Impostazioni], seleziona **[!UICONTROL Mostra selettori di relazioni]** nella sezione **[!UICONTROL Relazione di campi]**.
+
+![L&#39;opzione Mostra selettori di relazioni è selezionata nella sezione Relazioni dei campi della scheda Impostazioni.](../images/ui/account-audiences/show-relation-selectors.png)
+
+Seleziona di nuovo ![l&#39;icona impostazioni](../../images/icons/settings.png) per tornare alla scheda [!UICONTROL Campi]. È ora disponibile la sezione **[!UICONTROL Stabilire relazioni]**, che consente di stabilire come l&#39;account è connesso alla persona e come la persona è connessa all&#39;opportunità.
+
+![Viene evidenziata la sezione Stabilire relazioni, in cui sono visualizzate le opzioni per la connessione di un account a una persona e per la connessione di una persona a un&#39;opportunità.](../images/ui/account-audiences/establish-relationships.png)
+
+Quando connetti l’account alla persona, puoi scegliere tra le seguenti opzioni:
+
+| Opzione | Descrizione |
+| ------ | ----------- |
+| Relazione diretta | Il collegamento diretto tra l’account e la persona. Specifica gli account a cui ogni persona è collegata tramite l&#39;array di valori `accountID` nell&#39;array `personComponents` nello schema persona. Questo percorso è il più utilizzato. |
+| Relazione account-persona | Relazione tra l&#39;account e la persona, definita dall&#39;oggetto `accountPersonRelation`. Questo percorso consente inoltre a ogni persona di essere connessa a più account. Viene utilizzato quando l’organizzazione ha definito una tabella di relazione esplicita dai dati di origine. |
+| Relazione opportunità-persona | Relazione tra l&#39;opportunità e la persona, definita dall&#39;oggetto `opportunityPersonRelation`. Consente di collegare la persona a un account passando dalla persona-opportunità all’opportunità all’account. Questo consente di descrivere in quali aziende la persona è associata alle opportunità. |
+
+Quando connetti l’opportunità alla persona, puoi scegliere tra le seguenti opzioni:
+
+| Opzione | Descrizione |
+| ------ | ----------- |
+| Account | Il collegamento diretto tra l’account e l’opportunità. Quando lo utilizzi in un pubblico di account, questo percorso collega tutte le persone dell’azienda all’opportunità. |
+| Relazione opportunità-persona | La relazione tra l’opportunità e la persona, basata sull’oggetto opportunità-persona. Questo percorso collega solo le persone che sono state identificate come coinvolte in un’opportunità specifica a tale opportunità. |
+
+Dopo aver stabilito la relazione desiderata, puoi aggiungere i tipi di pubblico necessari alla definizione del segmento.
 
 ## Attiva pubblico {#activate}
 
