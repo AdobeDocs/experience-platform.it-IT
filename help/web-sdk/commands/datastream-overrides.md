@@ -2,10 +2,10 @@
 title: Override della configurazione dello stream di dati
 description: Scopri come configurare le sostituzioni dello stream di dati tramite Web SDK.
 exl-id: 8e327892-9520-43f5-abf4-d65a5ca34e6d
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: 2b8ca4bc1d5cf896820a5de95dcdfcd15edc2392
 workflow-type: tm+mt
-source-wordcount: '882'
-ht-degree: 14%
+source-wordcount: '1159'
+ht-degree: 10%
 
 ---
 
@@ -24,19 +24,14 @@ La sostituzione della configurazione dello stream di dati è un processo in due 
 1. Innanzitutto, devi definire la sostituzione della configurazione dello stream di dati nella [pagina di configurazione dello stream di dati](../../datastreams/configure.md), nell&#39;interfaccia utente dello stream di dati. Per istruzioni su come configurare le sostituzioni, consulta la documentazione sulle [sostituzioni della configurazione dello stream di dati](../../datastreams/overrides.md#configure-overrides).
 2. Dopo aver configurato la sostituzione dello stream di dati nell’interfaccia utente, è necessario inviare le sostituzioni all’Edge Network in uno dei seguenti modi:
    * Tramite l&#39;estensione tag [Web SDK](#tag-extension).
-   * Tramite i comandi Web SDK di `sendEvent` o `configure`.
-   * Tramite il comando Mobile SDK `sendEvent`.
+   * Tramite i comandi Web SDK di [`sendEvent`](../commands/sendevent/overview.md) o [`configure`](../commands/configure/overview.md).
+   * Tramite il comando Mobile SDK [`sendEvent`](https://developer.adobe.com/client-sdks/home/getting-started/track-events/#send-events-to-edge-network).
 
 Se imposti le sostituzioni sia nella configurazione dell&#39;SDK Web che in un comando specifico (ad esempio [`sendEvent`](sendevent/overview.md)), le sostituzioni nel comando specifico hanno la priorità.
 
-## Proprietà oggetto
-
-In questo oggetto sono disponibili le seguenti proprietà:
-
-* **Override dello stream di dati**: invia chiamate a uno stream di dati diverso. Se imposti questo valore, altre sostituzioni che richiedono la configurazione dello stream di dati devono essere configurate qui nello stream di dati impostato.
-* **Contenitore di sincronizzazione ID di terze parti**: l&#39;ID del contenitore di sincronizzazione ID di terze parti di destinazione in Adobe Audience Manager. Prima di utilizzare questo campo, è necessario configurare una sostituzione del contenitore ID di terze parti nelle impostazioni del flusso di dati.
-* **Token di proprietà di destinazione**: il token per la proprietà di destinazione in Adobe Target. Prima di utilizzare questo campo, è necessario configurare una sostituzione del token di proprietà Target nelle impostazioni del flusso di dati.
-* **Suite di rapporti**: ID suite di rapporti da escludere in Adobe Analytics. Prima di utilizzare questo campo, è necessario configurare le sostituzioni della suite di rapporti nelle impostazioni del flusso di dati.
+>[!NOTE]
+>
+>Se desideri che la configurazione sostituisca *disable* un servizio Experience Cloud, assicurati che il servizio sia il primo *enabled* nella configurazione dello stream di dati. Per informazioni dettagliate su come aggiungere servizi a un flusso di dati, consulta la documentazione su come [configurare i flussi di dati](../../datastreams/configure.md#add-services).
 
 ## Inviare le sostituzioni dello stream di dati all’Edge Network tramite l’estensione tag Web SDK {#tag-extension}
 
@@ -87,87 +82,143 @@ Le opzioni specificate a livello globale possono essere ignorate dall’opzione 
 
 ### Invia sostituzioni di configurazione tramite il comando Web SDK `sendEvent` {#send-event}
 
-L’esempio seguente mostra l’aspetto di un override della configurazione con un comando `sendEvent`.
+L&#39;esempio seguente mostra tutte le opzioni di configurazione dello stream di dati dinamici supportate in una chiamata `sendEvent`.
 
-```js {line-numbers="true" highlight="5-25"}
+Se nella configurazione dello stream di dati sono abilitati tutti i servizi supportati, l&#39;esempio seguente sovrascriverà questa impostazione e disabiliterà tutti i servizi (vedi l&#39;impostazione `enabled: false` su ciascun servizio).
+
+```js
 alloy("sendEvent", {
-  xdm: {
-    /* ... */
-  },
+  renderDecisions: true,
   edgeConfigOverrides: {
-    datastreamId: "{DATASTREAM_ID}"
+    datastreamId: "bfa8fe21-6157-42d3-b47a-78310920b39d",
     com_adobe_experience_platform: {
+      enabled: false,
       datasets: {
         event: {
-          datasetId: "SampleEventDatasetIdOverride"
-        }
-      }
+          datasetId: "64b6f949a8a6891ca8a28911",
+        },
+      },
+      com_adobe_edge_ode: {
+        enabled: false,
+      },
+      com_adobe_edge_segmentation: {
+        enabled: false,
+      },
+      com_adobe_edge_destinations: {
+        enabled: false,
+      },
+      com_adobe_edge_ajo: {
+        enabled: false,
+      },
     },
     com_adobe_analytics: {
-      reportSuites: [
-        "MyFirstOverrideReportSuite",
-        "MySecondOverrideReportSuite",
-        "MyThirdOverrideReportSuite"
-        ]
+      enabled: false,
+      reportSuites: ["ujslconfigoverrides3"],
     },
     com_adobe_identity: {
-      idSyncContainerId: "1234567"
+      idSyncContainerId: 34374,
     },
     com_adobe_target: {
-      propertyToken: "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
-    }
-  }
+      enabled: false,
+      propertyToken: "f3fd55e1-a06d-8650-9aa5-c8356c6e2223",
+    },
+    com_adobe_audience_manager: {
+      enabled: false,
+    },
+    com_adobe_launch_ssf: {
+      enabled: false,
+    },
+  },
 });
 ```
 
 | Parametro | Descrizione |
 |---|---|
+| `renderDecisions` |  |
 | `edgeConfigOverrides.datastreamId` | Utilizza questo parametro per consentire a una singola richiesta di passare a uno stream di dati diverso da quello definito dal comando `configure`. |
-| `com_adobe_analytics.reportSuites[]` | Array di stringhe che determina a quali suite di rapporti inviare dati di Analytics. |
-| `com_adobe_identity.idSyncContainerId` | Il contenitore di sincronizzazione ID di terze parti che desideri utilizzare in Audience Manager. |
+| `edgeConfigOverrides.com_adobe_experience_platform` | Definisce la configurazione dello stream di dati dinamico per il servizio Experience Platform. |
+| `edgeConfigOverrides.com_adobe_experience_platform.enabled` | Definisce se l’evento verrà inviato o meno al servizio Experience Platform. |
+| `edgeConfigOverrides.com_adobe_experience_platform.datasets` | Definisce i set di dati utilizzati per l’evento. |
+| `edgeConfigOverrides.com_adobe_experience_platform.com_adobe_edge_ode.enabled` | Definisce se l’evento viene inviato o meno al servizio Offer Decisioning. |
+| `edgeConfigOverrides.com_adobe_experience_platform.com_adobe_edge_segmentation.enabled` | Definisce se l’evento viene inviato o meno al servizio di segmentazione Edge. |
+| `edgeConfigOverrides.com_adobe_experience_platform.com_adobe_edge_destinations.enabled` | Definisce se i dati dell’evento vengono inviati o meno alle destinazioni edge. |
+| `edgeConfigOverrides.com_adobe_experience_platform.com_adobe_edge_ajo.enabled` | Definisce se i dati dell’evento vengono inviati o meno al servizio Adobe Journey Optimizer. |
+| `com_adobe_analytics.enabled` | Definisce se i dati dell’evento vengono inviati o meno ad Adobe Analytics. |
+| `com_adobe_analytics.reportSuites[]` | Array di stringhe che determina a quali suite di rapporti desideri inviare dati di Analytics. |
+| `com_adobe_identity.idSyncContainerId` | Il contenitore di sincronizzazione ID di terze parti che desideri utilizzare in Audience Manager. Affinché questo contenitore di sincronizzazione ID funzioni, è necessario impostare `com_adobe_audience_manager.enabled` su `true`. In caso contrario, il servizio Audience Manager è disabilitato. |
+| `com_adobe_target.enabled` | Definisce se i dati dell’evento vengono inviati ad Adobe Target. |
 | `com_adobe_target.propertyToken` | Token per la proprietà di destinazione Adobe Target. |
+| `com_adobe_audience_manager.enabled` | Definisce se i dati dell’evento vengono inviati al servizio Audience Manager. |
+| `com_adobe_launch_ssf` | Definisce se i dati dell&#39;evento vengono inviati all&#39;inoltro lato server. |
 
 ### Invia sostituzioni di configurazione tramite il comando Web SDK `configure` {#send-configure}
 
 L’esempio seguente mostra l’aspetto di un override della configurazione con un comando `configure`.
 
-```js {line-numbers="true" highlight="8-30"}
+Se nella configurazione dello stream di dati sono abilitati tutti i servizi supportati, l&#39;esempio seguente sovrascriverà questa impostazione e disabiliterà tutti i servizi (vedi l&#39;impostazione `enabled: false` su ciascun servizio).
+
+```js
 alloy("configure", {
-  defaultConsent: "in",
-  edgeDomain: "etc",
-  edgeBasePath: "ee",
-  datastreamId: "{DATASTREAM_ID}",
-  orgId: "org",
-  debugEnabled: true,
+  orgId: "97D1F3F459CE0AD80A495CBE@AdobeOrg",
+  datastreamId: "db9c70a1-6f11-4563-b0e9-b5964ab3a858",
   edgeConfigOverrides: {
-    "com_adobe_experience_platform": {
-      "datasets": {
-        "event": {
-          datasetId: "SampleProfileDatasetIdOverride"
-        }
-      }
+    com_adobe_experience_platform: {
+      enabled: false,
+      datasets: {
+        event: {
+          datasetId: "64b6f930753dd41ca8d4fd77",
+        },
+      },
+      com_adobe_edge_ode: {
+        enabled: false,
+      },
+      com_adobe_edge_segmentation: {
+        enabled: false,
+      },
+      com_adobe_edge_destinations: {
+        enabled: false,
+      },
+      com_adobe_edge_ajo: {
+        enabled: false,
+      },
     },
-    "com_adobe_analytics": {
-      "reportSuites": [
-        "MyFirstOverrideReportSuite",
-        "MySecondOverrideReportSuite",
-        "MyThirdOverrideReportSuite"
-      ]
+    com_adobe_analytics: {
+      enabled: false,
+      reportSuites: ["ujslconfigoverrides2"],
     },
-    "com_adobe_identity": {
-      "idSyncContainerId": "1234567"
+    com_adobe_identity: {
+      idSyncContainerId: 34373,
     },
-    "com_adobe_target": {
-      "propertyToken": "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
-    }
+    com_adobe_target: {
+      enabled: false,
+      propertyToken: "01dbc634-07c1-d8f9-ca69-b489a5ac5e94",
+    },
+    com_adobe_audience_manager: {
+      enabled: false,
+    },
+    com_adobe_launch_ssf: {
+      enabled: false,
+    },
   },
-  onBeforeEventSend: function() { /* … */ });
-};
+});
 ```
 
 | Parametro | Descrizione |
 |---|---|
+| `orgId` | L’ID dell’organizzazione IMS corrispondente al tuo account Adobe. |
 | `edgeConfigOverrides.datastreamId` | Utilizza questo parametro per consentire a una singola richiesta di passare a uno stream di dati diverso da quello definito dal comando `configure`. |
-| `com_adobe_analytics.reportSuites[]` | Array di stringhe che determina a quali suite di rapporti inviare dati di Analytics. |
-| `com_adobe_identity.idSyncContainerId` | Il contenitore di sincronizzazione ID di terze parti che desideri utilizzare in Audience Manager. |
+| `edgeConfigOverrides.com_adobe_experience_platform` | Definisce la configurazione dello stream di dati dinamico per il servizio Experience Platform. |
+| `edgeConfigOverrides.com_adobe_experience_platform.enabled` | Definisce se l’evento verrà inviato o meno al servizio Experience Platform. |
+| `edgeConfigOverrides.com_adobe_experience_platform.datasets` | Definisce i set di dati utilizzati per l’evento. |
+| `edgeConfigOverrides.com_adobe_experience_platform.com_adobe_edge_ode.enabled` | Definisce se l’evento viene inviato o meno al servizio Offer Decisioning. |
+| `edgeConfigOverrides.com_adobe_experience_platform.com_adobe_edge_segmentation.enabled` | Definisce se l’evento viene inviato o meno al servizio di segmentazione Edge. |
+| `edgeConfigOverrides.com_adobe_experience_platform.com_adobe_edge_destinations.enabled` | Definisce se i dati dell’evento vengono inviati o meno alle destinazioni edge. |
+| `edgeConfigOverrides.com_adobe_experience_platform.com_adobe_edge_ajo.enabled` | Definisce se i dati dell’evento vengono inviati o meno al servizio Adobe Journey Optimizer. |
+| `com_adobe_analytics.enabled` | Definisce se i dati dell’evento vengono inviati o meno ad Adobe Analytics. |
+| `com_adobe_analytics.reportSuites[]` | Array di stringhe che determina a quali suite di rapporti desideri inviare dati di Analytics. |
+| `com_adobe_identity.idSyncContainerId` | Il contenitore di sincronizzazione ID di terze parti che desideri utilizzare in Audience Manager. Affinché questo contenitore di sincronizzazione ID funzioni, è necessario impostare `com_adobe_audience_manager.enabled` su `true`. In caso contrario, il servizio Audience Manager è disabilitato. |
+| `com_adobe_target.enabled` | Definisce se i dati dell’evento vengono inviati ad Adobe Target. |
 | `com_adobe_target.propertyToken` | Token per la proprietà di destinazione Adobe Target. |
+| `com_adobe_audience_manager.enabled` | Definisce se i dati dell’evento vengono inviati al servizio Audience Manager. |
+| `com_adobe_launch_ssf` | Definisce se i dati dell&#39;evento vengono inviati all&#39;inoltro lato server. |
+

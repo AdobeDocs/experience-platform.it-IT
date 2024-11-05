@@ -2,10 +2,10 @@
 title: Configurare l’estensione tag Web SDK
 description: Scopri come configurare l’estensione tag Experience Platform Web SDK nell’interfaccia utente Tag.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: 660d4e72bd93ca65001092520539a249eae23bfc
+source-git-commit: f2f61c8e68fa794317e3b4f845f1950cebc59ec7
 workflow-type: tm+mt
-source-wordcount: '2012'
-ht-degree: 5%
+source-wordcount: '2525'
+ht-degree: 4%
 
 ---
 
@@ -40,8 +40,8 @@ Le opzioni di configurazione nella parte superiore della pagina indicano a Adobe
 ![Immagine che mostra le impostazioni generali dell&#39;estensione tag Web SDK nell&#39;interfaccia utente Tag](assets/web-sdk-ext-general.png)
 
 * **[!UICONTROL Nome]**: l&#39;estensione Adobe Experience Platform Web SDK supporta più istanze nella pagina. Il nome viene utilizzato per inviare dati a più organizzazioni con una configurazione di tag. Il nome dell&#39;istanza predefinito è `alloy`. È tuttavia possibile modificare il nome dell&#39;istanza in qualsiasi nome di oggetto JavaScript valido.
-* **[!UICONTROL ID organizzazione IMS]**: l&#39;ID dell&#39;organizzazione a cui si desidera inviare i dati in un Adobe. Nella maggior parte dei casi, utilizza il valore predefinito compilato automaticamente. Se sulla pagina sono presenti più istanze, compila questo campo con il valore della seconda organizzazione a cui desideri inviare i dati.
-* **[!UICONTROL Dominio Edge]**: dominio da cui l&#39;estensione invia e riceve i dati. L’Adobe consiglia di utilizzare un dominio di prima parte (CNAME) per questa estensione. Il dominio predefinito di terze parti funziona per gli ambienti di sviluppo ma non è adatto per gli ambienti di produzione. Le istruzioni su come impostare un first party CNAME sono disponibili [qui](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=it).
+* **[!UICONTROL ID organizzazione IMS]**: l&#39;ID dell&#39;organizzazione a cui si desidera inviare i dati in Adobe. Nella maggior parte dei casi, utilizza il valore predefinito compilato automaticamente. Se sulla pagina sono presenti più istanze, compila questo campo con il valore della seconda organizzazione a cui desideri inviare i dati.
+* **[!UICONTROL Dominio Edge]**: dominio da cui l&#39;estensione invia e riceve i dati. Per questa estensione, Adobe consiglia di utilizzare un dominio di prima parte (CNAME). Il dominio predefinito di terze parti funziona per gli ambienti di sviluppo ma non è adatto per gli ambienti di produzione. Le istruzioni su come impostare un first party CNAME sono disponibili [qui](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=it).
 
 ## Configurare le impostazioni dello stream di dati {#datastreams}
 
@@ -115,10 +115,10 @@ Gestisci le impostazioni di configurazione della raccolta dati. Impostazioni sim
 
 ![Immagine che mostra le impostazioni di raccolta dati dell&#39;estensione tag Web SDK nell&#39;interfaccia utente Tag.](assets/web-sdk-ext-collection.png)
 
-* **[!UICONTROL Attivato prima del callback di invio evento]**: funzione di callback per valutare e modificare il payload inviato all&#39;Adobe. Utilizza la variabile `content` all&#39;interno della funzione di callback per modificare il payload. Questo callback è l&#39;equivalente del tag [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) nella libreria JavaScript.
+* **[!UICONTROL Attivato prima del callback di invio dell&#39;evento]**: funzione di callback per valutare e modificare il payload inviato a Adobe. Utilizza la variabile `content` all&#39;interno della funzione di callback per modificare il payload. Questo callback è l&#39;equivalente del tag [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) nella libreria JavaScript.
 * **[!UICONTROL Raccogli clic sui collegamenti interni]**: casella di controllo che abilita la raccolta di dati di tracciamento dei collegamenti interni al sito o alla proprietà. Quando si attiva questa casella di controllo, vengono visualizzate le opzioni di raggruppamento degli eventi:
-   * **[!UICONTROL Nessun raggruppamento di eventi]**: i dati di tracciamento dei collegamenti vengono inviati all&#39;Adobe in eventi separati. I clic sui collegamenti inviati in eventi separati possono aumentare l’utilizzo contrattuale dei dati inviati a Adobe Experience Platform.
-   * **[!UICONTROL Raggruppamento eventi tramite archiviazione sessione]**: archivia i dati di tracciamento dei collegamenti nell&#39;archiviazione sessione fino all&#39;evento pagina successivo. Nella pagina seguente, i dati di tracciamento dei collegamenti e i dati di visualizzazione della pagina memorizzati vengono inviati ad Adobe contemporaneamente. L’Adobe consiglia di abilitare questa impostazione durante il tracciamento dei collegamenti interni.
+   * **[!UICONTROL Nessun raggruppamento di eventi]**: i dati di tracciamento dei collegamenti vengono inviati ad Adobe in eventi separati. I clic sui collegamenti inviati in eventi separati possono aumentare l’utilizzo contrattuale dei dati inviati a Adobe Experience Platform.
+   * **[!UICONTROL Raggruppamento eventi tramite archiviazione sessione]**: archivia i dati di tracciamento dei collegamenti nell&#39;archiviazione sessione fino all&#39;evento pagina successivo. Nella pagina seguente, i dati di tracciamento dei collegamenti memorizzati e i dati di visualizzazione della pagina vengono inviati a Adobe contemporaneamente. Adobe consiglia di abilitare questa impostazione durante il tracciamento dei collegamenti interni.
    * **[!UICONTROL Raggruppamento eventi tramite oggetto locale]**: memorizzare i dati di tracciamento dei collegamenti in un oggetto locale fino all&#39;evento della pagina successivo. Se un visitatore passa a una nuova pagina, i dati di tracciamento dei collegamenti andranno persi. Questa impostazione è particolarmente utile nel contesto delle applicazioni a pagina singola.
 * **[!UICONTROL Raccogli clic su un collegamento esterno]**: casella di controllo che abilita la raccolta di collegamenti esterni.
 * **[!UICONTROL Raccogliere i clic sul collegamento di download]**: casella di controllo che abilita la raccolta dei collegamenti di download.
@@ -133,7 +133,7 @@ Gestisci le impostazioni di configurazione della raccolta dati. Impostazioni sim
 
 >[!TIP]
 >
-Il campo **[!UICONTROL Il prima del clic sul collegamento invia]** è un callback obsoleto visibile solo per le proprietà per le quali è già configurato. Equivale al tag [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) nella libreria JavaScript. Utilizza il callback **[!UICONTROL Proprietà clic filtro]** per filtrare o modificare i dati dei clic oppure utilizza il callback **[!UICONTROL Attivato prima dell&#39;invio dell&#39;evento]** per filtrare o modificare il payload complessivo inviato all&#39;Adobe. Se sono impostati sia il callback **[!UICONTROL Proprietà clic filtro]** che il callback **[!UICONTROL Attivato prima del clic collegamento invia]**, verrà eseguito solo il callback **[!UICONTROL Proprietà clic filtro]**.
+Il campo **[!UICONTROL Il prima del clic sul collegamento invia]** è un callback obsoleto visibile solo per le proprietà per le quali è già configurato. Equivale al tag [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) nella libreria JavaScript. Utilizza il callback **[!UICONTROL Proprietà clic filtro]** per filtrare o modificare i dati dei clic oppure utilizza il callback **[!UICONTROL Attivato prima dell&#39;invio dell&#39;evento]** per filtrare o modificare il payload complessivo inviato ad Adobe. Se sono impostati sia il callback **[!UICONTROL Proprietà clic filtro]** che il callback **[!UICONTROL Attivato prima del clic collegamento invia]**, verrà eseguito solo il callback **[!UICONTROL Proprietà clic filtro]**.
 
 ## Configurare le impostazioni della raccolta di file multimediali {#media-collection}
 
@@ -170,6 +170,66 @@ In alternativa al passaggio delle sostituzioni tramite un comando Web SDK, puoi 
 Le sostituzioni dello stream di dati devono essere configurate in base all’ambiente. Gli ambienti di sviluppo, staging e produzione hanno tutti sostituzioni separate. Puoi copiare le impostazioni tra di esse utilizzando le opzioni dedicate mostrate nella schermata seguente.
 
 ![Immagine che mostra le sostituzioni della configurazione dello stream di dati tramite la pagina dell&#39;estensione tag di Web SDK.](assets/datastream-overrides.png)
+
+Per impostazione predefinita, la sostituzione della configurazione dello stream di dati è disabilitata. L&#39;opzione **[!UICONTROL Corrispondenza configurazione flusso di dati]** è selezionata per impostazione predefinita.
+
+![L&#39;interfaccia utente dell&#39;estensione tag Web SDK che mostra la configurazione dello stream di dati sostituisce l&#39;impostazione predefinita.](assets/datastream-override-default.png)
+
+Per abilitare le sostituzioni dello stream di dati nell&#39;estensione tag, seleziona **[!UICONTROL Abilitato]** dal menu a discesa.
+
+![Interfaccia utente dell&#39;estensione tag Web SDK che mostra le sostituzioni della configurazione dello stream di dati nell&#39;impostazione Abilitata.](assets/datastream-override-enabled.png)
+
+Dopo aver abilitato le sostituzioni della configurazione dello stream di dati, puoi configurare le sostituzioni per ciascun servizio descritto di seguito.
+
+Le seguenti impostazioni di sostituzione dello stream di dati sovrascriveranno tutte le configurazioni e le regole dello stream di dati lato server per l’ambiente selezionato.
+
+### Adobe Analytics {#analytics}
+
+Utilizza le impostazioni in questa sezione per sostituire l’indirizzamento dei dati al servizio Adobe Analytics.
+
+![Immagine dell&#39;interfaccia utente dell&#39;estensione tag Web SDK che mostra le impostazioni di sostituzione dello stream di dati di Adobe Analytics.](assets/datastream-override-analytics.png)
+
+* **[!UICONTROL Abilitato]** / **[!UICONTROL Disabilitato]**: utilizza questo menu a discesa per abilitare o disabilitare il routing dei dati al servizio Adobe Analytics.
+* **[!UICONTROL Suite di rapporti]**: gli ID delle suite di rapporti di destinazione in Adobe Analytics. Il valore deve essere una suite di rapporti di sostituzione preconfigurata (o un elenco di suite di rapporti separato da virgole) dalla configurazione dello stream di dati. Questa impostazione sostituisce le suite di rapporti principali.
+* **[!UICONTROL Aggiungi suite di rapporti]**: seleziona questa opzione per aggiungere altre suite di rapporti.
+
+### Adobe Audience Manager {#audience-manager}
+
+Utilizzare le impostazioni di questa sezione per sostituire il routing dei dati al servizio Adobe Audience Manager.
+
+![Immagine dell&#39;interfaccia utente dell&#39;estensione tag Web SDK che mostra le impostazioni di sostituzione dello stream di dati di Adobe Audience Manager.](assets/datastream-override-audience-manager.png)
+
+* **[!UICONTROL Abilitato]** / **[!UICONTROL Disabilitato]**: utilizza questo menu a discesa per abilitare o disabilitare il routing dei dati al servizio Adobe Audience Manager.
+* **[!UICONTROL Contenitore di sincronizzazione ID di terze parti]**: l&#39;ID del contenitore di sincronizzazione ID di terze parti di destinazione in Audience Manager. Il valore deve essere un contenitore secondario preconfigurato dalla configurazione dello stream di dati e sostituisce il contenitore principale.
+
+### Adobe Experience Platform {#experience-platform}
+
+Utilizzare le impostazioni di questa sezione per sostituire il routing dei dati al servizio Adobe Experience Platform.
+
+![Immagine dell&#39;interfaccia utente dell&#39;estensione tag Web SDK che mostra le impostazioni di sostituzione dello stream di dati di Adobe Experience Platform.](assets/datastream-override-experience-platform.png)
+
+* **[!UICONTROL Abilitato]** / **[!UICONTROL Disabilitato]**: utilizza questo menu a discesa per abilitare o disabilitare il routing dei dati al servizio Adobe Experience Platform.
+* **[!UICONTROL Set di dati evento]**: l&#39;ID del set di dati dell&#39;evento di destinazione in Adobe Experience Platform. Il valore deve essere un set di dati secondario preconfigurato dalla configurazione dello stream di dati.
+* **[!UICONTROL Offer decisioning]**: utilizzare questo menu a discesa per abilitare o disabilitare il routing dei dati al servizio [!DNL Offer Decisioning].
+* **[!UICONTROL Segmentazione di Edge]**: utilizzare questo menu a discesa per abilitare o disabilitare il routing dei dati al servizio [!DNL Edge Segmentation].
+* **[!UICONTROL Destinazioni Personalization]**: utilizza questo menu a discesa per abilitare o disabilitare il routing dei dati alle destinazioni di personalizzazione.
+* **[!UICONTROL Adobe Journey Optimizer]**: utilizzare questo menu a discesa per abilitare o disabilitare il routing dei dati al servizio [!DNL Adobe Journey Optimizer].
+
+### Inoltro eventi lato server di Adobe {#ssf}
+
+Utilizzare le impostazioni di questa sezione per sostituire il routing dei dati al servizio di inoltro eventi lato server di Adobe.
+
+![Immagine dell&#39;interfaccia utente dell&#39;estensione tag Web SDK che mostra le impostazioni di sostituzione dello stream di dati di inoltro degli eventi lato server di Adobe.](assets/datastream-override-ssf.png)
+
+* **[!UICONTROL Abilitato]** / **[!UICONTROL Disabilitato]**: utilizza questo menu a discesa per abilitare o disabilitare il routing dei dati al servizio di inoltro eventi lato server di Adobe.
+
+### Adobe Target {#target}
+
+Utilizza le impostazioni in questa sezione per sostituire l’indirizzamento dei dati al servizio Adobe Target.
+
+![Immagine dell&#39;interfaccia utente dell&#39;estensione tag Web SDK che mostra le impostazioni di sostituzione dello stream di dati di Adobe Target.](assets/datastream-override-target.png)
+
+* **[!UICONTROL Abilitato]** / **[!UICONTROL Disabilitato]**: utilizza questo menu a discesa per abilitare o disabilitare il routing dei dati al servizio Adobe Target.
 
 ## Configurare le impostazioni avanzate
 
