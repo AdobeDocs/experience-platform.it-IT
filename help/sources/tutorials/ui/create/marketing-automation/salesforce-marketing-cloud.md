@@ -1,10 +1,10 @@
 ---
-title: Connetti il tuo account di Marketing Cloud Salesforce a Experience Platform tramite l’interfaccia utente
-description: Scopri come collegare il tuo account di Marketing Cloud Salesforce a Experience Platform tramite l’interfaccia utente.
+title: Collega il tuo account di Marketing Cloud Salesforce ad Experience Platform tramite l’interfaccia utente
+description: Scopri come collegare il tuo account di Marketing Cloud Salesforce ad Experience Platform tramite l’interfaccia utente.
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
-source-git-commit: 30f1e8a0424ee0f81d8e98fb24886ad1480b270c
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '517'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->L&#39;acquisizione di oggetti personalizzati non è attualmente supportata dall&#39;integrazione di origine [!DNL Salesforce Marketing Cloud].
+>L&#39;origine [!DNL Salesforce Marketing Cloud] diventerà obsoleta alla fine di maggio 2025. In alternativa, è possibile utilizzare l&#39;origine [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md).
 
 Questo tutorial illustra i passaggi necessari per collegare l&#39;account [!DNL Salesforce Marketing Cloud] a Adobe Experience Platform tramite l&#39;interfaccia utente.
 
@@ -42,13 +42,17 @@ Per ulteriori informazioni sull&#39;autenticazione per [!DNL Salesforce Marketin
 
 ## Connetti il tuo account [!DNL Salesforce Marketing Cloud]
 
+>[!IMPORTANT]
+>
+>L&#39;acquisizione di oggetti personalizzati non è attualmente supportata dall&#39;integrazione di origine [!DNL Salesforce Marketing Cloud].
+
 Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Il [!UICONTROL catalogo] presenta diverse origini supportate da Experience Platform.
 
 È possibile selezionare la categoria appropriata dall&#39;elenco delle categorie. Puoi anche utilizzare la barra di ricerca per filtrare in base a un’origine specifica.
 
 Nella categoria [!UICONTROL Automazione marketing], selezionare **[!UICONTROL Marketing Cloud Salesforce]**, quindi **[!UICONTROL Configurazione]**.
 
-![Catalogo delle origini con l&#39;origine del Marketing Cloud Salesforce selezionata.](../../../../images/tutorials/create/salesforce-marketing-cloud/catalog.png)
+![Catalogo origini con origine Marketing Cloud Salesforce selezionata.](../../../../images/tutorials/create/salesforce-marketing-cloud/catalog.png)
 
 Viene visualizzata la pagina **[!UICONTROL Connetti al Marketing Cloud Salesforce]**. In questa pagina è possibile creare un nuovo account o utilizzare un account esistente.
 

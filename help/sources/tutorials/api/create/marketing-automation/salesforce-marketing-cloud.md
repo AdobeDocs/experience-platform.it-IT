@@ -1,11 +1,11 @@
 ---
 title: Creare una connessione di base al Marketing Cloud Salesforce utilizzando l’API del servizio Flow
-description: Scopri come autenticare l’account di Marketing Cloud Salesforce in base a Experience Platform utilizzando l’API del servizio Flow.
+description: Scopri come autenticare l’account di Marketing Cloud Salesforce rispetto a Experience Platform utilizzando l’API del servizio Flow.
 exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
-source-git-commit: 30f1e8a0424ee0f81d8e98fb24886ad1480b270c
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '489'
-ht-degree: 5%
+source-wordcount: '508'
+ht-degree: 4%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->L&#39;acquisizione di oggetti personalizzati non è attualmente supportata dall&#39;integrazione di origine [!DNL Salesforce Marketing Cloud].
+>L&#39;origine [!DNL Salesforce Marketing Cloud] diventerà obsoleta alla fine di maggio 2025. In alternativa, è possibile utilizzare l&#39;origine [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md).
 
 Una connessione di base rappresenta la connessione autenticata tra un&#39;origine e Adobe Experience Platform.
 
@@ -46,6 +46,10 @@ Affinché [!DNL Flow Service] possa connettersi a [!DNL Salesforce Marketing Clo
 Per ulteriori informazioni su come iniziare, consulta questo [[!DNL Salesforce Marketing Cloud] documento](<https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm>).
 
 ## Creare una connessione di base
+
+>[!IMPORTANT]
+>
+>L&#39;acquisizione di oggetti personalizzati non è attualmente supportata dall&#39;integrazione di origine [!DNL Salesforce Marketing Cloud].
 
 Una connessione di base mantiene le informazioni tra l’origine e Platform, incluse le credenziali di autenticazione dell’origine, lo stato corrente della connessione e l’ID univoco della connessione di base. L’ID della connessione di base consente di esplorare e navigare tra i file dall’interno dell’origine e identificare gli elementi specifici che desideri acquisire, comprese le informazioni relative ai tipi di dati e ai formati.
 

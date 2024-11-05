@@ -2,14 +2,18 @@
 title: Creare una connessione di base Phoenix utilizzando l’API del servizio Flow
 description: Scopri come collegare un database Phoenix a Adobe Experience Platform utilizzando l’API del servizio Flow.
 exl-id: b69d9593-06fe-4fff-88a9-7860e4e45eb7
-source-git-commit: efffd6ce1ed541ce20ee6500e42165465f2fa6a0
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '547'
-ht-degree: 2%
+source-wordcount: '566'
+ht-degree: 1%
 
 ---
 
 # Creare una connessione di base [!DNL Phoenix] utilizzando l&#39;API [!DNL Flow Service]
+
+>[!IMPORTANT]
+>
+>L&#39;origine [!DNL Phoenix] diventerà obsoleta alla fine di maggio 2025. In alternativa, è possibile utilizzare l&#39;origine [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md).
 
 Una connessione di base rappresenta la connessione autenticata tra un&#39;origine e Adobe Experience Platform.
 

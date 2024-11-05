@@ -3,14 +3,18 @@ keywords: Experience Platform;home;argomenti popolari;Oracle Service Cloud;oracl
 title: Creare un Oracle Service Cloud Source Connection nell’interfaccia utente
 description: Scopri come creare una connessione sorgente Oracle Service Cloud utilizzando l’interfaccia utente di Adobe Experience Platform.
 exl-id: e5869c09-b61e-4d23-a594-5a07769da3c4
-source-git-commit: 1695b7d638feb648d5cd7af07879f3ed13f938eb
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '468'
+source-wordcount: '487'
 ht-degree: 2%
 
 ---
 
 # Creare una connessione sorgente Oracle Service Cloud nell’interfaccia utente
+
+>[!IMPORTANT]
+>
+>L&#39;origine [!DNL Oracle Service Cloud] diventerà obsoleta alla fine di maggio 2025. In alternativa, è possibile utilizzare l&#39;origine [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md).
 
 Questo tutorial descrive i passaggi necessari per creare una connessione sorgente Oracle Service Cloud tramite l’interfaccia utente di Adobe Experience Platform.
 

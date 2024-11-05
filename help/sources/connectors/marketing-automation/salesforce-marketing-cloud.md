@@ -4,14 +4,18 @@ title: Panoramica di Salesforce Marketing Cloud Source
 description: Scopri come collegare il Marketing Cloud Salesforce a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
 last-substantial-update: 2023-05-25T00:00:00Z
-source-git-commit: bc37d41d0f7b0ff0cf4d52242f41467f2891d613
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '322'
+source-wordcount: '341'
 ht-degree: 0%
 
 ---
 
 # [!DNL Salesforce Marketing Cloud]
+
+>[!IMPORTANT]
+>
+>L&#39;origine [!DNL Salesforce Marketing Cloud] diventerà obsoleta alla fine di maggio 2025. In alternativa, è possibile utilizzare l&#39;origine [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md).
 
 Adobe Experience Platform consente di acquisire i dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 
@@ -40,7 +44,7 @@ Prima di utilizzare i connettori di origine, è necessario aggiungere un elenco 
 
 La documentazione seguente fornisce informazioni su come connettere [!DNL Salesforce Marketing Cloud] a Platform tramite API:
 
-* [Creare una connessione di base al Marketing Cloud Salesforce utilizzando l’API del servizio Flow](../../tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
+* [Creare una connessione di base al Marketing Cloud Salesforce utilizzando l’API del servizio Flusso](../../tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
 * [Esplorare le tabelle di dati utilizzando l’API del servizio Flusso](../../tutorials/api/explore/tabular.md)
 * [Creare un flusso di dati per un’origine di automazione marketing utilizzando l’API del servizio Flusso](../../tutorials/api/collect/marketing-automation.md)
 

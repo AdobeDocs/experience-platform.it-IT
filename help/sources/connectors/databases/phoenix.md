@@ -3,14 +3,18 @@ title: Panoramica di Phoenix Source
 description: Scopri come collegare il tuo account Phoenix a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 45e6ef18-a0b7-4bb2-b099-b2a878e96637
-source-git-commit: efffd6ce1ed541ce20ee6500e42165465f2fa6a0
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '203'
 ht-degree: 0%
 
 ---
 
 # [!DNL Phoenix]
+
+>[!IMPORTANT]
+>
+>L&#39;origine [!DNL Phoenix] diventerà obsoleta alla fine di maggio 2025. In alternativa, è possibile utilizzare l&#39;origine [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md).
 
 Origini Adobe Experience Platform supporta l&#39;acquisizione di dati da database di terze parti come [[!DNL Phoenix]](https://phoenix.apache.org/index.html). In questo documento vengono fornite informazioni sui prerequisiti prima di connettere l&#39;account [!DNL Phoenix] tramite l&#39;API [!DNL Flow Service] o l&#39;interfaccia utente Experience Platform.
 

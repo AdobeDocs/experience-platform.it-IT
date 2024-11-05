@@ -5,14 +5,18 @@ title: Creare una connessione di base di Zoho CRM utilizzando l’API del serviz
 type: Tutorial
 description: Scopri come collegare Adobe Experience Platform a Zoho CRM utilizzando l’API del servizio Flusso.
 exl-id: 33995927-8f5e-44c5-b809-4db8706bbd34
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '657'
 ht-degree: 3%
 
 ---
 
 # Creare una connessione di base [!DNL Zoho CRM] utilizzando l&#39;API [!DNL Flow Service]
+
+>[!IMPORTANT]
+>
+>L&#39;origine [!DNL Zoho CRM] diventerà obsoleta alla fine di maggio 2025. In alternativa, è possibile utilizzare l&#39;origine [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md).
 
 Una connessione di base rappresenta la connessione autenticata tra un&#39;origine e Adobe Experience Platform.
 

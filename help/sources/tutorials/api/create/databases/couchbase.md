@@ -5,18 +5,18 @@ title: Creare una connessione di base Couchbase utilizzando l’API del servizio
 type: Tutorial
 description: Scopri come collegare Couchbase a Adobe Experience Platform utilizzando l’API del servizio Flow.
 exl-id: 625e3acf-fc27-44cf-b4e6-becf1d107ff2
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '449'
 ht-degree: 5%
 
 ---
 
 # Creare una connessione di base [!DNL Couchbase] utilizzando l&#39;API [!DNL Flow Service]
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Il connettore [!DNL Couchbase] è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la [Panoramica origini](../../../../home.md#terms-and-conditions).
+>L&#39;origine [!DNL Couchbase] diventerà obsoleta alla fine di maggio 2025. In alternativa, è possibile utilizzare l&#39;origine [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md).
 
 Una connessione di base rappresenta la connessione autenticata tra un&#39;origine e Adobe Experience Platform.
 

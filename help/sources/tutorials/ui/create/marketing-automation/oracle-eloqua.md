@@ -2,14 +2,18 @@
 title: Creare una connessione sorgente Eloqua di Oracle utilizzando l’interfaccia utente di Platform
 description: Scopri come collegare Adobe Experience Platform ad Oracle Eloqua utilizzando l’interfaccia utente di Platform.
 exl-id: c4431d85-5948-4122-9a99-dbacdde5a09f
-source-git-commit: e8f54f06ad3431227e140219a9960e8e04f83ccc
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '512'
+source-wordcount: '531'
 ht-degree: 2%
 
 ---
 
 # Crea una connessione di origine [!DNL Oracle Eloqua] tramite l&#39;interfaccia utente di Platform
+
+>[!IMPORTANT]
+>
+>L&#39;origine [!DNL Oracle Eloqua] diventerà obsoleta alla fine di maggio 2025. In alternativa, è possibile utilizzare l&#39;origine [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md).
 
 Questo tutorial illustra i passaggi per la creazione di una connessione di origine [!DNL Oracle Eloqua] tramite l&#39;interfaccia utente di Adobe Experience Platform.
 
