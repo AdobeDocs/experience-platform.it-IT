@@ -2,9 +2,9 @@
 title: Panoramica di Audience Portal
 description: Scopri come utilizzare Audience Portal per visualizzare, gestire e creare tipi di pubblico in Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 0378cc313445ff22d1d2d003c9ae248d791b3707
+source-git-commit: a48df00b61fd5736cfb6fd29c60cf73a02342451
 workflow-type: tm+mt
-source-wordcount: '4530'
+source-wordcount: '4547'
 ht-degree: 3%
 
 ---
@@ -244,7 +244,7 @@ Viene visualizzato il popover **[!UICONTROL Valuta i tipi di pubblico su richies
 
 ![Vengono visualizzati i tipi di pubblico che possono essere valutati utilizzando la valutazione flessibile.](../images/ui/audience-portal/evaluate-audiences-modal.png)
 
-Dopo aver confermato che sono elencati i tipi di pubblico corretti, procedi con la richiesta e inizierà la valutazione flessibile del pubblico.
+Dopo aver confermato che sono elencati i tipi di pubblico corretti, puoi procedere con la richiesta e verrà avviata la valutazione flessibile del pubblico. È possibile visualizzare lo stato di questa valutazione del pubblico nella [visualizzazione di monitoraggio dei processi di valutazione](../../dataflows/ui/monitor-audiences.md#evaluation-job-details).
 
 >[!NOTE]
 >
