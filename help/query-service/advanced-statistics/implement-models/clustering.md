@@ -2,9 +2,9 @@
 title: Algoritmi di clustering
 description: Scopri come configurare e ottimizzare vari algoritmi di clustering con parametri chiave, descrizioni e codice di esempio per implementare modelli statistici avanzati.
 role: Developer
-source-git-commit: 4d4e9ae527deb149f02edb39716851e995c23d21
+source-git-commit: 4ee7ce2468c1ea5f0960349c288d406f43a8bb91
 workflow-type: tm+mt
-source-wordcount: '878'
+source-wordcount: '874'
 ht-degree: 4%
 
 ---
@@ -112,7 +112,7 @@ Create MODEL modelname OPTIONS(
 
 **Parametri**
 
-| Parametro | Descrizione | Valore predefinito | Valori possibili |                                                                                                                                                                  | Valore predefinito | Valori possibili |
+| Parametro | Descrizione | Valore predefinito | Valori possibili |
 |-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|------------------------------------------|
 | `MAX_ITER` | Numero massimo di iterazioni eseguite dall&#39;algoritmo. | 20 | (>= 0) |
 | `OPTIMIZER` | Algoritmo di ottimizzazione o di inferenza utilizzato per stimare il modello LDA. Le opzioni supportate sono `"online"` (Online Variational Bayes) e `"em"` (Expectation-Maximization). | &quot;online&quot; | `online`, `em` |
@@ -127,6 +127,8 @@ Create MODEL modelname OPTIONS(
 | `SUBSAMPLING_RATE` | Per l&#39;ottimizzatore `online`: la frazione del corpo campionata e utilizzata in ogni iterazione di discendenza sfumata mini-batch, nell&#39;intervallo `(0, 1]`. | 0,05 | `(0, 1]` |
 | `TOPIC_CONCENTRATION` | Parametro di concentrazione (&quot;beta&quot; o &quot;eta&quot;) per il precedente inserito sulle distribuzioni degli argomenti nei termini. | Automatico | (>= 0) |
 | `TOPIC_DISTRIBUTION_COL` | Colonna di output con le stime della distribuzione dell&#39;argomento miscela per ciascun documento. | NON IMPOSTATO | Qualsiasi stringa |
+
+{style="table-layout:auto"}
 
 **Esempio**
 
