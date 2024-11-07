@@ -2,9 +2,9 @@
 title: Guardrail delle prestazioni per Edge Network Server API
 description: Scopri come utilizzare l’API server all’interno di guardrail di prestazioni ottimali.
 exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: 316efe577274b389bd1bf50e896ad6ef53e44b7b
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '569'
 ht-degree: 2%
 
 ---
@@ -21,6 +21,8 @@ Adobe non è responsabile del deterioramento delle prestazioni causato dal super
 >[!IMPORTANT]
 >
 >Controlla i diritti di licenza nell&#39;ordine di vendita e la corrispondente [descrizione del prodotto](https://helpx.adobe.com/it/legal/product-descriptions.html) sui limiti di utilizzo effettivi, oltre a questa pagina di guardrail.
+
+Tutti i guardrail delle prestazioni descritti in questa pagina si applicano a livello di organizzazione IMS. Per gli utenti con più organizzazioni IMS configurate, ogni organizzazione è soggetta singolarmente ai guardrail delle prestazioni riportati di seguito. Per ulteriori dettagli su [!DNL IMS Organizations], vedere il [glossario di Experience Platform](../landing/glossary.md).
 
 ## Definizioni
 
@@ -43,10 +45,10 @@ Tutti i limiti vengono applicati e normalizzati su una **unità di richiesta (RU
 
 | Flussi a monte configurati per flusso di dati | Dimensione media della richiesta | Unità di richiesta |
 | --- | --- | --- |
-| 1 (piattaforma di Adobe) | 8 KB (1 frammento) | 1 |
-| 2 (piattaforma di Adobe, Adobe Target) | 8 KB (1 frammento) | 2 |
-| 2 (piattaforma di Adobe, Adobe Target) | 16 KB (2 frammenti) | 4 |
-| 2 (piattaforma di Adobe, Adobe Target) | 64 KB (8 frammenti) | 16 |
+| 1 (piattaforma Adobe) | 8 KB (1 frammento) | 1 |
+| 2 (Adobe Platform, Adobe Target) | 8 KB (1 frammento) | 2 |
+| 2 (Adobe Platform, Adobe Target) | 16 KB (2 frammenti) | 4 |
+| 2 (Adobe Platform, Adobe Target) | 64 KB (8 frammenti) | 16 |
 
 ### Limiti unità di richiesta
 
