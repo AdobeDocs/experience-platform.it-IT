@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gestire i processi relativi alla privacy nell’interfaccia utente di Privacy Service
 description: Scopri come utilizzare l’interfaccia utente di Privacy Service per coordinare e monitorare le richieste di accesso a dati personali tra le varie applicazioni Experience Cloud.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 0a8d7c4414f6091025d36ed85dc09e057ee24df9
+source-git-commit: c870b6be603073d6dd909b272c619deb5b246f05
 workflow-type: tm+mt
-source-wordcount: '1765'
+source-wordcount: '1770'
 ht-degree: 11%
 
 ---
@@ -22,7 +22,7 @@ In questo documento vengono descritti i passaggi per la creazione e la gestione 
 
 >[!IMPORTANT]
 >
->Privacy Service è destinato solo alle richieste degli interessati e dei diritti dei consumatori. Qualsiasi altro utilizzo di Privacy Service per la pulizia o la manutenzione dei dati non è supportato o consentito. L&#39;Adobe ha l&#39;obbligo giuridico di adempiere tali obblighi in modo tempestivo. Di conseguenza, il test di carico su Privacy Service non è consentito in quanto si tratta di un ambiente di sola produzione e crea un backlog inutile di richieste di privacy valide.
+>Privacy Service è destinato solo alle richieste degli interessati e dei diritti dei consumatori. Qualsiasi altro utilizzo di Privacy Service per la pulizia o la manutenzione dei dati non è supportato o consentito. Adobe ha l’obbligo giuridico di adempiere tali obblighi in modo tempestivo. Di conseguenza, il test di carico su Privacy Service non è consentito in quanto si tratta di un ambiente di sola produzione e crea un backlog inutile di richieste di privacy valide.
 >
 >È ora disponibile un limite massimo di caricamento giornaliero per evitare abusi del servizio. Se gli utenti rilevano un abuso del sistema, l’accesso al servizio verrà disattivato. Successivamente si terrà una riunione con i Privacy Service per discutere le loro azioni e l&#39;uso accettabile di tali strumenti.
 
@@ -43,6 +43,7 @@ Il dashboard per l&#39;interfaccia utente [!DNL Privacy Service] fornisce due wi
 | [!UICONTROL CPA_USA (Colorado)] | [!DNL Colorado Privacy Act] |
 | [!UICONTROL CPRA_USA (California)] | [!DNL California Consumer Privacy Rights Act (CPRA)] |
 | [!UICONTROL CTDPA_USA (Connecticut)] | [!DNL Connecticut Data Privacy Act] |
+| [!UICONTROL DPDPA_USA (Delaware)] | [!DNL Delaware Personal Data Privacy Act] |
 | [!UICONTROL FDBR_USA (Florida)] | [!DNL Florida Digital Bill of Rights] |
 | [!UICONTROL RGPD (Unione Europea)] | Il [!DNL General Data Protection Regulation] dell&#39;Unione Europea |
 | [!UICONTROL HIPPA_USA (Stati Uniti)] | [!DNL Health Insurance Portability and Accountability Act] |
@@ -56,6 +57,7 @@ Il dashboard per l&#39;interfaccia utente [!DNL Privacy Service] fornisce due wi
 | [!UICONTROL NJDPA_USA (New Jersey)] | [!DNL New Jersey Data Protection Act] |
 | [!UICONTROL OCPA USA (Oregon)] | [!DNL Oregon Consumer Privacy Act] |
 | [!UICONTROL PDPA_THA (Thailandia)] | Thailandese: [!DNL Personal Data Protection Act] |
+| [!UICONTROL QL25_CAN (Québec)] | [!DNL Quebec Law 25] |
 | [!UICONTROL TDPSA USA (Texas)] | [!DNL Texas Data Privacy and Security Act] |
 | [!UICONTROL UCPA_USA (Utah)] | [!DNL Utah Consumer Privacy Act] |
 | [!UICONTROL VCDPA_USA (Virginia)] | [!DNL Virginia Consumer Data Protection Act] |

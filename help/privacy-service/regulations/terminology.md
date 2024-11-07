@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Terminologia delle normative sulla privacy
 description: Questo documento fornisce le definizioni dei termini chiave relativi alle normative sulla privacy supportate da Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: 0a8d7c4414f6091025d36ed85dc09e057ee24df9
+source-git-commit: 16a3900e7cb54ae1525c11c9316b3928e5f43096
 workflow-type: tm+mt
-source-wordcount: '2301'
+source-wordcount: '2404'
 ht-degree: 0%
 
 ---
@@ -53,6 +53,8 @@ Questo documento fornisce le definizioni dei termini chiave relativi alle normat
 
 **Interessato**: persona fisica i cui dati personali vengono trattati da un titolare del trattamento o da un responsabile del trattamento.
 
+**[!DNL Delaware Personal Data Privacy Act]**: [!DNL Delaware Personal Data Privacy Act] fornisce ai residenti del Delaware i diritti di accesso, correzione, eliminazione e rinuncia alle vendite di dati personali e alla pubblicità mirata. La legge si applica alle aziende che elaborano dati per almeno 35.000 consumatori o che percepiscono oltre il 20% dei ricavi dalle vendite di dati che interessano più di 10.000 consumatori. Applicato dal Dipartimento di Giustizia, include pratiche obbligatorie di protezione dei dati e un periodo di 60 giorni per affrontare le violazioni.
+
 **Atti delegati**: Atti non legislativi adottati per integrare la legislazione esistente e fornire criteri o chiarezza.
 
 **Deroga**: un&#39;esenzione da una legge.
@@ -85,11 +87,11 @@ Questo documento fornisce le definizioni dei termini chiave relativi alle normat
 
 ## I
 
-**Servizi Identity Management (IMS)**: implementazione di Adobe di Federated ID e OAuth 2.0 per l&#39;autenticazione degli utenti di Adobe ID e l&#39;autorizzazione delle risorse di Adobe. Integra IMS con la tua applicazione o servizio di Adobe per consentire agli utenti di accedere e accedere ai servizi di Adobe. Gli utenti possono accedere direttamente con Renga (il provider di servizi di identità Adobe) oppure tramite un dominio di autenticazione di terze parti attendibile (ad esempio [!DNL Google], [!DNL Facebook] o un LDAP aziendale/organizzazione).
+**Servizi Identity Management (IMS)**: implementazione Adobe di Federated ID e OAuth 2.0 per l&#39;autenticazione degli utenti Adobe ID e l&#39;autorizzazione delle risorse Adobe. Integra IMS con la tua applicazione o servizio Adobe per consentire agli utenti di accedere e accedere ai servizi Adobe. Gli utenti possono effettuare l&#39;accesso direttamente con Renga (il provider di servizi Adobe Identity) oppure tramite un dominio di autenticazione di terze parti attendibile (ad esempio [!DNL Google], [!DNL Facebook] o un LDAP aziendale/organizzazione).
 
 **Consenso implicito**: noto anche come consenso non ambiguo. Il consenso implicito si riferisce al consenso che non è stato dato esplicitamente dalla persona interessata, ma che è comunque di natura inequivocabile. Ad esempio, durante il processo di iscrizione al sito web di un’azienda, viene comunicato che fornendo un indirizzo e-mail, l’interessato acconsente alla ricezione di e-mail su offerte speciali. Se l’interessato legge l’avviso, l’azione positiva consistente nell’inserire l’e-mail è sufficiente per essere considerata un consenso implicito.
 
-**ID organizzazione IMS**: fa riferimento a un token di autorizzazione di Adobe per l&#39;autenticazione da servizio a servizio, che non richiede l&#39;accesso utente. Viene rilasciato a un client IMS e non ha un utente associato. Un client IMS necessita di un token di servizio per autorizzare le richieste back-channel tra i servizi. (Il termine &quot;token di sistema&quot; viene talvolta utilizzato per indicare il token di servizio).
+**ID organizzazione IMS**: fa riferimento a un token di autorizzazione Adobe per l&#39;autenticazione da servizio a servizio, che non richiede l&#39;accesso utente. Viene rilasciato a un client IMS e non ha un utente associato. Un client IMS necessita di un token di servizio per autorizzare le richieste back-channel tra i servizi. (Il termine &quot;token di sistema&quot; viene talvolta utilizzato per indicare il token di servizio).
 
 **[!DNL Iowa Consumer Data Protection Act]**: una legge sulla privacy che concede ai residenti dell&#39;Iowa il diritto di accesso, cancellazione e rinuncia alla vendita dei propri dati personali. L&#39;ICDPA si applica alle aziende che elaborano dati per più di 100.000 residenti dell&#39;Iowa o che traggono oltre il 50% dei ricavi dalle vendite di dati. Le esenzioni di rilievo includono le organizzazioni non profit e le istituzioni educative. La legge prevede un periodo di cura di 90 giorni per consentire alle aziende di correggere le violazioni prima che vengano imposte sanzioni.
 
@@ -141,6 +143,8 @@ Questo documento fornisce le definizioni dei termini chiave relativi alle normat
 **Pseudonimizzazione**: il trattamento dei dati personali in modo che non possano più essere attribuiti a una singola persona interessata senza l&#39;utilizzo di dati aggiuntivi, purché tali dati aggiuntivi rimangano separati per garantire la non attribuzione.
 
 ## Q
+
+**[!DNL Quebec Law 25]**: [!DNL Quebec Law 25] migliora i diritti di privacy per i residenti, imponendo il consenso esplicito, la minimizzazione dei dati e i diritti di accesso, correzione, eliminazione e trasferimento dei dati personali. Le organizzazioni devono nominare un responsabile della privacy, condurre valutazioni di impatto sulla privacy e segnalare le violazioni. I termini di conformità e le sanzioni significative si applicano alle violazioni.
 
 ## R
 
