@@ -2,9 +2,9 @@
 title: Priorità dello spazio dei nomi
 description: Scopri la priorità dello spazio dei nomi in Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 07d54bf341ef2aacc6612ad323585609c0830824
+source-git-commit: a2a60f429836e26179f68a40fce91a90d73d8eee
 workflow-type: tm+mt
-source-wordcount: '1732'
+source-wordcount: '1788'
 ht-degree: 2%
 
 ---
@@ -176,7 +176,16 @@ Quando selezioni i dati, dovrai specificare uno spazio dei nomi, che verrà util
 
 Questa configurazione consente di calcolare i punteggi solo utilizzando eventi autenticati.
 
-Per ulteriori informazioni su, leggi i documenti su [Attribution AI](../../intelligent-services/attribution-ai/overview.md) e [IA per l&#39;analisi dei clienti](../../intelligent-services/customer-ai/overview.md).
+Per ulteriori informazioni, leggere i documenti in [Attribution AI](../../intelligent-services/attribution-ai/overview.md) e [IA per l&#39;analisi dei clienti](../../intelligent-services/customer-ai/overview.md).
+
+### Destinazioni create dai partner
+
+I risultati aggiornati di interdizione del pubblico per i profili associati a un dispositivo condiviso potrebbero non essere inviati alle destinazioni a valle. Ciò può verificarsi in alcuni rari casi in cui:
+
+* La qualificazione del pubblico si basa solo su un’attività anonima.
+* Gli accessi tra più profili si verificano in un breve periodo di tempo.
+
+Per ulteriori informazioni sulle destinazioni create dai partner, consulta la [panoramica sulle destinazioni](../../destinations/home.md#adobe-built-and-partner-built-destinations).
 
 ### Privacy Service
 
