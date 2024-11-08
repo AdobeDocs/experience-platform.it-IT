@@ -2,9 +2,9 @@
 title: Endpoint API per pacchetti di strumenti sandbox
 description: L’endpoint /packages nell’API degli strumenti sandbox consente di gestire in modo programmatico i pacchetti in Adobe Experience Platform.
 exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
-source-git-commit: 1e271a88890f41f66aad93d96dbef23a09d33077
+source-git-commit: e029380dd970195d1254ee3ea1cd68ba2574bbd3
 workflow-type: tm+mt
-source-wordcount: '2541'
+source-wordcount: '2543'
 ht-degree: 10%
 
 ---
@@ -1595,7 +1595,13 @@ In caso di esito positivo, la risposta restituisce un elenco di tutte le richies
 
 ### Aggiornamento della disponibilità del pacchetto da privato a pubblico {#update-availability}
 
-Modificare un pacchetto da privato a pubblico effettuando una richiesta GET all&#39;endpoint `/transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC`. Per impostazione predefinita, viene creato un pacchetto con disponibilità privata.
+Modificare un pacchetto da privato a pubblico effettuando una richiesta GET all&#39;endpoint `/packages/update`. Per impostazione predefinita, viene creato un pacchetto con disponibilità privata.
+
+**Formato API**
+
+```http
+GET `/packages/update`
+```
 
 **Richiesta**
 
@@ -1603,7 +1609,7 @@ La richiesta seguente modifica la disponibilità dei pacchetti da privato a pubb
 
 ```shell
 curl -X GET \
-  http://platform.adobe.io/data/foundation/transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC \
+  http://platform.adobe.io/data/foundation/exim/packages/update \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-type: application/json' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
