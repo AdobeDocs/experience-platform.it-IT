@@ -5,7 +5,7 @@ title: Creare una connessione Couchbase Source nell’interfaccia utente
 type: Tutorial
 description: Scopri come creare una connessione sorgente Couchbase utilizzando l’interfaccia utente di Adobe Experience Platform.
 exl-id: 4270a48a-843c-4f1e-b280-35b620581d68
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Crea una connessione sorgente [!DNL Couchbase] nell&#39;interfaccia utente
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >L&#39;origine [!DNL Couchbase] diventerà obsoleta alla fine di maggio 2025.
 

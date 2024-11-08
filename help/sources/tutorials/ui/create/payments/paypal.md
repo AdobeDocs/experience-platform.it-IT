@@ -5,7 +5,7 @@ title: Creare una connessione Source PayPal nell’interfaccia utente
 type: Tutorial
 description: Scopri come creare una connessione sorgente PayPal utilizzando l’interfaccia utente di Adobe Experience Platform.
 exl-id: bbd3f634-cb28-45d8-9b7b-ed3873101882
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '458'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Crea una connessione sorgente [!DNL PayPal] nell&#39;interfaccia utente
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >L&#39;origine [!DNL PayPal] diventerà obsoleta alla fine di maggio 2025.
 
