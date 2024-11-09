@@ -5,9 +5,9 @@ breadcrumb-title: Guida di Query Service
 user-guide-description: Utilizza il linguaggio SQL standard per eseguire query sui dati nel data lake in Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: c94213b37813730911d207cb0de773d8aac22c13
+source-git-commit: fed47e132e1ff46fdf3df1a5a3f9f3e99bd1340c
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '366'
 ht-degree: 22%
 
 ---
@@ -104,7 +104,7 @@ Implementa modelli {#implement-models}
    - [Monitorare le query pianificate](ui/monitor-queries.md)
    - [Guida alle credenziali](ui/credentials.md)
    - [Genera set di dati di output dai risultati della query](ui/create-datasets.md)
-- Endpoint API servizio query {#api}
+- API servizio query {#api}
    - [Introduzione](api/getting-started.md)
    - [Query](api/queries.md)
    - [Parametri di connessione](api/connection-parameters.md)
@@ -113,6 +113,11 @@ Implementa modelli {#implement-models}
    - [Modelli di query](api/query-templates.md)
    - [Query accelerate](api/accelerated-queries.md)
    - [Sottoscrizioni avvisi](api/alert-subscriptions.md)
+- API di autenticazione servizio query {#auth-api}
+   - [Panoramica](auth-api/overview.md)
+   - [Introduzione](auth-api/getting-started.md)
+   - [Accesso IP](auth-api/ip-access.md)
+   - [Convalidare](auth-api/validate.md)
 - Governance dei dati {#data-governance}
    - [Panoramica](data-governance/overview.md)
    - [Guida al registro di controllo](data-governance/audit-log-guide.md)
