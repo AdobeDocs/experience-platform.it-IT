@@ -4,9 +4,9 @@ title: Esportare i set di dati utilizzando l’API del servizio Flusso
 description: Scopri come utilizzare l’API del servizio Flusso per esportare i set di dati in determinate destinazioni.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 22a752e28fe3cc4cb3337b456e80ef1b273f6a71
+source-git-commit: c32d2801fe38183225d24f38284b42e3d78e2631
 workflow-type: tm+mt
-source-wordcount: '5107'
+source-wordcount: '5138'
 ht-degree: 3%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->* Questa funzionalità è disponibile per i clienti che hanno acquistato il pacchetto Real-Time CDP Prime e Ultimate, Adobe Journey Optimizer o il Customer Journey Analytics. Per ulteriori informazioni, contatta il rappresentante del tuo Adobe.
+>* Questa funzionalità è disponibile per i clienti che hanno acquistato il pacchetto Real-Time CDP Prime e Ultimate, Adobe Journey Optimizer o il Customer Journey Analytics. Per ulteriori informazioni, contatta il rappresentante Adobe.
 
 >[!IMPORTANT]
 >
->**Elemento azione**: la versione di Experience Platform](/help/release-notes/latest/latest.md#destinations) di [settembre 2024 introduce l&#39;opzione di impostare una data `endTime` per i flussi di dati del set di dati di esportazione. Adobe sta inoltre introducendo una data di fine predefinita del 1° maggio 2025 per tutti i flussi di dati di esportazione del set di dati creati *prima della versione di settembre*. Per uno qualsiasi di questi flussi di dati, è necessario aggiornare manualmente la data di fine nel flusso di dati prima della data di fine, altrimenti le esportazioni vengono interrotte in tale data. Utilizza l’interfaccia utente di Experience Platform per visualizzare quali flussi di dati verranno impostati per l’interruzione il 1° maggio.
+>**Elemento azione**: la versione di Experience Platform](/help/release-notes/latest/latest.md#destinations) di [settembre 2024 introduce l&#39;opzione di impostare una data `endTime` per i flussi di dati del set di dati di esportazione. Adobe introduce inoltre una data di fine predefinita del 1° maggio 2025 per tutti i flussi di dati di esportazione del set di dati creati *prima della versione di settembre*. Per uno qualsiasi di questi flussi di dati, è necessario aggiornare manualmente la data di fine nel flusso di dati prima della data di fine, altrimenti le esportazioni vengono interrotte in tale data. Utilizza l’interfaccia utente di Experience Platform per visualizzare quali flussi di dati verranno impostati per l’interruzione il 1° maggio.
 >
 >Analogamente, per qualsiasi flusso di dati creato senza specificare una data `endTime`, per impostazione predefinita questi flussi di dati hanno una fine di sei mesi dal momento in cui vengono creati.
 
@@ -1163,9 +1163,11 @@ Prendi nota dell’ID di connessione dalla risposta. Questo ID sarà richiesto n
 
 Successivamente, devi creare una connessione di destinazione in cui sono memorizzati i parametri di esportazione per i set di dati. I parametri di esportazione includono la posizione, il formato del file, la compressione e altri dettagli. Per informazioni sulle proprietà supportate per ciascun tipo di destinazione, fare riferimento alle proprietà `targetSpec` fornite nella specifica di connessione della destinazione. Fai riferimento alle schede seguenti per le proprietà `targetSpec` di tutte le destinazioni supportate.
 
->[!WARNING]
+>[!IMPORTANT]
 >
->Le esportazioni in file JSON sono supportate solo in modalità compressa. Le esportazioni in file [!DNL Parquet] sono supportate in modalità compressa e non compressa.
+>Le esportazioni in file JSON sono supportate solo in modalità compressa. Le esportazioni in file [!DNL Parquet] sono supportate sia in modalità compressa che non compressa.
+>
+>Il formato del file JSON esportato è NDJSON, che è il formato di interscambio standard nell&#39;ecosistema dei big data. Adobe consiglia di utilizzare un client compatibile con NDJSON per leggere i file esportati.
 
 >[!BEGINTABS]
 

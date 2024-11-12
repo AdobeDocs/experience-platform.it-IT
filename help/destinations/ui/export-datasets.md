@@ -3,9 +3,9 @@ title: Esportare i set di dati nelle destinazioni di archiviazione cloud
 type: Tutorial
 description: Scopri come esportare i set di dati da Adobe Experience Platform nella posizione di archiviazione cloud preferita.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: ad33eaa48928b25502ef279f000b92f31e1667ca
+source-git-commit: 74dcaff91a264062feec262784e056a296072fd7
 workflow-type: tm+mt
-source-wordcount: '2573'
+source-wordcount: '2603'
 ht-degree: 8%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 8%
 
 >[!AVAILABILITY]
 >
->* Questa funzionalità è disponibile per i clienti che hanno acquistato il pacchetto Real-Time CDP Prime o Ultimate, Adobe Journey Optimizer o il Customer Journey Analytics. Per ulteriori informazioni, contatta il rappresentante del tuo Adobe.
+>* Questa funzionalità è disponibile per i clienti che hanno acquistato il pacchetto Real-Time CDP Prime o Ultimate, Adobe Journey Optimizer o il Customer Journey Analytics. Per ulteriori informazioni, contatta il rappresentante Adobe.
 
 In questo articolo viene illustrato il flusso di lavoro necessario per esportare [set di dati](/help/catalog/datasets/overview.md) da Adobe Experience Platform nel percorso di archiviazione cloud preferito, ad esempio [!DNL Amazon S3], percorsi SFTP o [!DNL Google Cloud Storage] tramite l&#39;interfaccia utente di Experience Platform.
 
@@ -238,7 +238,7 @@ Nel flusso di lavoro [connetti a destinazione](/help/destinations/ui/connect-des
 
 Quando vengono compressi, si noti la differenza di formato tra i due tipi di file:
 
-* Durante l&#39;esportazione di file JSON compressi, il formato del file esportato è `json.gz`
+* Durante l&#39;esportazione di file JSON compressi, il formato del file esportato è `json.gz`. Il formato del JSON esportato è NDJSON, che è il formato di interscambio standard nell&#39;ecosistema dei big data. Adobe consiglia di utilizzare un client compatibile con NDJSON per leggere i file esportati.
 * Durante l&#39;esportazione di file parquet compressi, il formato del file esportato è `gz.parquet`
 
 Le esportazioni in file JSON sono supportate *solo in modalità compressa*. Le esportazioni in file Parquet sono supportate in modalità compressa e non compressa.
@@ -294,7 +294,7 @@ Tieni presente le seguenti limitazioni per il rilascio di disponibilità general
 **È possibile generare un file senza una cartella se si salva solo in `/` come percorso della cartella? Inoltre, se non è necessario un percorso di cartella, in che modo verranno generati i file con nomi duplicati in una cartella o in un percorso?**
 
 +++
-A partire dalla versione di settembre 2024, è possibile personalizzare il nome della cartella e persino utilizzare `/` per esportare i file per tutti i set di dati nella stessa cartella. Questo Adobe non è consigliato per le destinazioni che esportano più set di dati, in quanto i nomi di file generati dal sistema che appartengono a set di dati diversi verranno combinati nella stessa cartella.
+A partire dalla versione di settembre 2024, è possibile personalizzare il nome della cartella e persino utilizzare `/` per esportare i file per tutti i set di dati nella stessa cartella. Adobe Questo non è consigliato per le destinazioni che esportano più set di dati, in quanto i nomi di file generati dal sistema che appartengono a set di dati diversi verranno combinati nella stessa cartella.
 +++
 
 **È possibile indirizzare il file manifesto a una cartella e i file di dati a un&#39;altra cartella?**
