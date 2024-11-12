@@ -2,7 +2,7 @@
 title: applyPropositions
 description: Riesegui il rendering delle proposte di cui è già stato eseguito il rendering con sendEvent.
 exl-id: 6b79f334-4ea6-4ba4-8640-d35b7f90df98
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: 9aab41b338907f3c9fb15d08bfa877eb218f5627
 workflow-type: tm+mt
 source-wordcount: '352'
 ht-degree: 0%
@@ -46,7 +46,7 @@ Esegui il comando `applyPropositions` quando chiami l&#39;istanza configurata de
 * **`viewName`**: nome della visualizzazione di cui eseguire il rendering in un&#39;applicazione a pagina singola. Le notifiche di visualizzazione per queste decisioni sono memorizzate nella cache e possono essere incluse in un comando `sendEvent` successivo utilizzando `personalization.includePendingDisplayNotifications`.
 
 ```js
-alloy("applyPropositiions",{
+alloy("applyPropositions",{
   "propositions": [],
   "metadata": {},
   "viewName": ""
