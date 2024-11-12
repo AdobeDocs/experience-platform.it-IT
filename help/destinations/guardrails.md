@@ -6,10 +6,10 @@ product: experience platform
 type: Documentation
 description: Ulteriori informazioni sull’utilizzo predefinito dell’attivazione dei dati e sui limiti di tariffa.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 3ff20e51458cb9cccafb6da92414def9eeaaf821
+source-git-commit: d01e9b6d64e9040df11c45750c784079a0289477
 workflow-type: tm+mt
-source-wordcount: '1686'
-ht-degree: 2%
+source-wordcount: '1715'
+ht-degree: 1%
 
 ---
 
@@ -33,7 +33,7 @@ In questo documento sono disponibili due tipi di limiti predefiniti:
 
 | Tipo di guardrail | Descrizione |
 |----------|---------|
-| **Guardrail delle prestazioni (limite software)** | I guardrail di prestazioni sono limiti di utilizzo relativi all’ambito dei tuoi casi d’uso. Quando si superano i guardrail delle prestazioni, è possibile che si verifichi un peggioramento delle prestazioni e della latenza. L’Adobe non è responsabile di tale degrado delle prestazioni. I clienti che superano costantemente il limite di prestazioni possono scegliere di concedere licenze aggiuntive per evitare il degrado delle prestazioni. |
+| **Guardrail delle prestazioni (limite software)** | I guardrail di prestazioni sono limiti di utilizzo relativi all’ambito dei tuoi casi d’uso. Quando si superano i guardrail delle prestazioni, è possibile che si verifichi un peggioramento delle prestazioni e della latenza. Adobe non è responsabile di tale degrado delle prestazioni. I clienti che superano costantemente il limite di prestazioni possono scegliere di concedere licenze aggiuntive per evitare il degrado delle prestazioni. |
 | **Guardrail applicati dal sistema (limite rigido)** | I guardrail applicati dal sistema vengono applicati dall’interfaccia utente o dall’API di Real-Time CDP. Questi sono i limiti che non puoi superare, poiché l’interfaccia utente e l’API ti impediranno di farlo o restituiranno un errore. |
 
 {style="table-layout:auto"}
@@ -53,7 +53,7 @@ I guardrail di seguito si applicano generalmente all&#39;attivazione tramite [tu
 | Numero massimo di attributi mappati a una destinazione | 50 | Guardrail delle prestazioni | Nel caso di più destinazioni e tipi di destinazione, puoi selezionare gli attributi e le identità del profilo da mappare per l’esportazione. Per prestazioni ottimali, è necessario mappare un massimo di 50 attributi in un flusso di dati su una destinazione. |
 | Numero massimo di destinazioni | 100 | Guarddrail imposto dal sistema | Puoi creare un massimo di 100 destinazioni a cui connetterti e attivare i dati, *per sandbox*. [Le destinazioni di personalizzazione di Edge (Personalizzazione personalizzata)](#edge-destinations-activation) possono rappresentare un massimo di 10 delle 100 destinazioni consigliate. |
 | Tipo di dati attivati nelle destinazioni | Dati profilo, comprese identità e mappa identità | Guarddrail imposto dal sistema | Attualmente, è possibile esportare solo *attributi record profilo* nelle destinazioni. Al momento, gli attributi XDM che descrivono i dati dell’evento non sono supportati per l’esportazione. |
-| Tipo di dati attivati nelle destinazioni: supporto degli attributi di array e mappa | Non disponibile | Guarddrail imposto dal sistema | Al momento, è **impossibile** esportare *gli attributi di matrice o mappa* nelle destinazioni. L&#39;eccezione a questa regola è la [mappa identità](/help/xdm/field-groups/profile/identitymap.md), che viene esportata sia nello streaming che nelle attivazioni basate su file. |
+| Tipo di dati attivati nelle destinazioni: supporto degli attributi di array e mappa | Parzialmente disponibile | Guarddrail imposto dal sistema | Puoi esportare gli attributi dell&#39;array in [destinazioni basate su file](/help/destinations/destination-types.md#file-based). È comunque necessario utilizzare la funzione `array_to_string` per appiattire l&#39;array in una stringa nel file di destinazione. [Ulteriori informazioni](/help/release-notes/2024/october-2024.md#destinations-new-updated-functionality) sulla funzionalità. <br><br> Al momento, è **non** possibile esportare *attributi di mappa* nelle destinazioni. L&#39;eccezione a questa regola è la [mappa identità](/help/xdm/field-groups/profile/identitymap.md), che viene esportata sia nello streaming che nelle attivazioni basate su file. |
 
 {style="table-layout:auto"}
 
