@@ -6,10 +6,10 @@ user-guide-description: Scopri come distribuire e gestire i tag di analisi, mark
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: fa50e101e5756923eddcd2cab409bda2a629a8a3
+source-git-commit: 82d6d2e7d0d7f0f9484c4ebcd34339fd63e04b59
 workflow-type: tm+mt
 source-wordcount: '778'
-ht-degree: 44%
+ht-degree: 43%
 
 ---
 
@@ -261,7 +261,7 @@ ht-degree: 44%
    * [Browser supportati](./extension-dev/browsers.md)
    * Processo di invio {#submit}
       * [Panoramica](./extension-dev/submit/overview.md)
-      * [Configurazione della società](./extension-dev/submit/setup.md)
+      * [Configurazione dell’organizzazione](./extension-dev/submit/setup.md)
       * [Concedere l’accesso agli utenti](./extension-dev/submit/access.md)
       * [Sviluppare un’estensione](./extension-dev/submit/develop.md)
       * [Creare un’inserzione in Exchange](./extension-dev/submit/create-listing.md)
