@@ -3,14 +3,19 @@ keywords: Experience Platform; Query Service; controllo dell’accesso IP; autor
 title: Guida API per l’autorizzazione di Query Service
 description: Scopri come iniziare a richiedere l’autorizzazione e le restrizioni dell’intervallo IP per l’accesso sicuro ai dati in Adobe Experience Platform Query Service.
 role: Developer
-source-git-commit: eb6558c2cc3faebb2cb14f49f7517227d57f7162
+exl-id: d93ce774-c8b2-4f15-a4d9-117d9aa5d9e7
+source-git-commit: bf696c8836407a2fea82e9078201cb1f5004bcf8
 workflow-type: tm+mt
-source-wordcount: '461'
-ht-degree: 4%
+source-wordcount: '482'
+ht-degree: 6%
 
 ---
 
 # Guida API di autorizzazione di Query Service
+
+>[!AVAILABILITY]
+>
+>Questa funzionalità è disponibile per i clienti che hanno acquistato il componente aggiuntivo Data Distiller. Per ulteriori informazioni, contatta il tuo rappresentante Adobe.
 
 L’API di autorizzazione di Query Service offre alle organizzazioni un controllo più rigoroso sull’accesso ai dati tramite l’interfaccia SQL in Adobe Experience Platform. Puoi utilizzare questa API per definire le restrizioni IP, limitare l’accesso ai dati a reti specifiche e migliorare il monitoraggio della sicurezza.
 

@@ -3,14 +3,19 @@ keywords: Experience Platform; sicurezza; accesso ip; convalida; guida API; serv
 title: Endpoint di convalida IP
 description: Scopri come convalidare l’accesso IP per le sandbox in Query Service utilizzando l’endpoint API di convalida IP.
 role: Developer
-source-git-commit: ad1b6d8449a2a3ca9c8422e70769d12e33d8e255
+exl-id: 4ce9ab1c-e333-4ed5-a430-43ffec36a46d
+source-git-commit: bf696c8836407a2fea82e9078201cb1f5004bcf8
 workflow-type: tm+mt
-source-wordcount: '208'
-ht-degree: 1%
+source-wordcount: '229'
+ht-degree: 4%
 
 ---
 
 # Endpoint di convalida IP
+
+>[!AVAILABILITY]
+>
+>Questa funzionalità è disponibile per i clienti che hanno acquistato il componente aggiuntivo Data Distiller. Per ulteriori informazioni, contatta il tuo rappresentante Adobe.
 
 Utilizza l’endpoint API di convalida IP per verificare se a un indirizzo IP specificato è consentito l’accesso a una sandbox designata in Query Service. Questo controllo conferma se si applicano restrizioni di accesso o se a un indirizzo IP è consentito l’accesso ai dati all’interno di una sandbox.
 

@@ -2,14 +2,19 @@
 title: Guida API per l’autorizzazione di Query Service
 description: Scopri come utilizzare l’API di autorizzazione di Query Service per applicare restrizioni IP basate sulla rete per le connessioni sicure tramite SQL. Utilizza questa API per migliorare il controllo dell’accesso ai dati per i dati Adobe Experience Platform.
 role: Developer
-source-git-commit: f673d0d71458fe87491318f06be59719e4c9d76c
+exl-id: bcc5ea0e-cb6d-4c7b-bf9f-a0336f76c4c8
+source-git-commit: bf696c8836407a2fea82e9078201cb1f5004bcf8
 workflow-type: tm+mt
-source-wordcount: '365'
-ht-degree: 1%
+source-wordcount: '386'
+ht-degree: 2%
 
 ---
 
 # Guida API per l’autorizzazione di Query Service
+
+>[!AVAILABILITY]
+>
+>Questa funzionalità è disponibile per i clienti che hanno acquistato il componente aggiuntivo Data Distiller. Per ulteriori informazioni, contatta il tuo rappresentante Adobe.
 
 Per applicare le restrizioni basate su IP, utilizza l’API di autorizzazione del servizio di query. L&#39;applicazione di queste misure garantisce che solo le reti e i computer client approvati possano accedere ai dati tramite SQL in Adobe Experience Platform. Questi controlli consentono di soddisfare gli standard di sicurezza più severi e forniscono al contempo il monitoraggio e l&#39;avviso degli accessi in tempo reale.
 

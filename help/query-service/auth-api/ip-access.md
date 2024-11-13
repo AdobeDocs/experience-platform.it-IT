@@ -3,14 +3,19 @@ keywords: Experience Platform; sicurezza; accesso ip; QS-Auth; guida API; serviz
 title: Endpoint di accesso IP
 description: Scopri come gestire gli intervalli IP per l’accesso sandbox in Query Service utilizzando l’endpoint API per l’accesso IP.
 role: Developer
-source-git-commit: 23e5260133f0f16ac30d14346c227a21f251b7e1
+exl-id: fc15ab50-c125-4f00-a311-81fd41697c7d
+source-git-commit: bf696c8836407a2fea82e9078201cb1f5004bcf8
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 3%
+source-wordcount: '422'
+ht-degree: 5%
 
 ---
 
 # Endpoint di accesso IP
+
+>[!AVAILABILITY]
+>
+>Questa funzionalità è disponibile per i clienti che hanno acquistato il componente aggiuntivo Data Distiller. Per ulteriori informazioni, contatta il tuo rappresentante Adobe.
 
 Per proteggere l’accesso ai dati all’interno di una sandbox di Query Service specificata, utilizza l’endpoint di accesso IP per gestire gli intervalli IP consentiti. Puoi utilizzare questa API per recuperare, configurare o eliminare gli intervalli IP associati all’ID della tua organizzazione.
 
@@ -163,4 +168,3 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
   ]
 }
 ```
-
