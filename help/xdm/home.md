@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica del sistema XDM
 description: La standardizzazione e l'interoperabilità sono concetti chiave alla base di Adobe Experience Platform. Experience Data Model (XDM), guidato da Adobe, è un tentativo di standardizzare i dati sull’esperienza del cliente e definire schemi per la gestione della customer experience.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: 48caa318f0e951979db4fd2c94624a73311422d6
+source-git-commit: 442df54080b08b7fc3888e8bd5c7bd3e8f301240
 workflow-type: tm+mt
-source-wordcount: '2101'
+source-wordcount: '2124'
 ht-degree: 4%
 
 ---
@@ -105,7 +105,7 @@ Per iniziare a acquisire i dati in Experience Platform, puoi utilizzare Catalog 
 
 Per ulteriori informazioni, vedere [Panoramica di Catalog Service](../catalog/home.md). Per ulteriori informazioni sull&#39;acquisizione dati di Adobe Experience Platform, consulta la [panoramica sull&#39;acquisizione dati](../ingestion/home.md).
 
-### Servizio query {#query-service}
+### Query Service {#query-service}
 
 È possibile utilizzare SQL standard per eseguire query sui dati di Experience Platform per supportare molti casi d’uso diversi con Adobe Experience Platform Query Service.
 
@@ -129,9 +129,13 @@ Per ulteriori informazioni, vedere [Panoramica del profilo cliente in tempo real
 
 ### Data Science Workspace {#data-science-workspace}
 
+>[!NOTE]
+>
+>Data Science Workspace non è più disponibile per l’acquisto. Questa documentazione è destinata ai clienti esistenti che dispongono di diritti precedenti su Data Science Workspace.
+
 Adobe Experience Platform Data Science Workspace utilizza l’apprendimento automatico e l’intelligenza artificiale per acquisire informazioni dai dati memorizzati in Experience Platform. Data Science Workspace consente ai data scientist di creare ricette basate sui dati di [!UICONTROL XDM Individual Profile] e [!UICONTROL XDM ExperienceEvent] relativi ai clienti e alle loro attività. Queste ricette facilitano le previsioni come la propensione all&#39;acquisto e le offerte consigliate che l&#39;individuo è in grado di apprezzare e utilizzare.
 
-Con Data Science Workspace, i data scientist possono creare facilmente API di servizio intelligenti basate sull’apprendimento automatico. Questi servizi funzionano con altre soluzioni di Adobe, tra cui Adobe Target e Adobe Analytics Cloud, per aiutarti ad automatizzare esperienze digitali personalizzate e mirate.
+Con Data Science Workspace, i data scientist possono creare facilmente API di servizio intelligenti basate sull’apprendimento automatico. Questi servizi funzionano con altre soluzioni Adobe, tra cui Adobe Target e Adobe Analytics Cloud, per aiutarti ad automatizzare esperienze digitali personalizzate e mirate.
 
 Per ulteriori informazioni sull&#39;utilizzo dei dati di Experience Platform per approfondimenti, consulta la [Panoramica di Data Science Workspace](../data-science-workspace/home.md).
 
