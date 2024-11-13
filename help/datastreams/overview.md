@@ -1,17 +1,19 @@
 ---
 title: Panoramica sugli stream di dati
-description: Scopri come i flussi di dati consentono di collegare l’integrazione lato client dell’SDK Experience Platform con prodotti Adobe e destinazioni di terze parti.
+description: Scopri come i flussi di dati consentono di collegare l’integrazione lato client dell’SDK Experience Platform con i prodotti Adobe e le destinazioni di terze parti.
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
+source-git-commit: e3768a3f695abeedc9a3ce2fef591c6ecae9a897
 workflow-type: tm+mt
-source-wordcount: '727'
-ht-degree: 77%
+source-wordcount: '712'
+ht-degree: 70%
 
 ---
 
 # Panoramica sugli stream di dati
 
-Un flusso di dati rappresenta la configurazione lato server quando si implementano gli SDK Web e Mobile di Adobe Experience Platform. Mentre il comando [`configure`](/help/web-sdk/commands/configure/overview.md) nell&#39;SDK controlla gli elementi che devono essere gestiti sul client (ad esempio `edgeDomain`), gli stream di dati gestiscono tutte le altre configurazioni per l&#39;SDK. Quando viene inviata una richiesta ad Adobe Experience Platform Edge Network, il `datastreamId` viene utilizzato per fare riferimento allo stream di dati. Questo consente di aggiornare la configurazione lato server senza dover apportare modifiche al codice sul sito web.
+Un flusso di dati rappresenta la configurazione lato server per Adobe Experience Platform Web e Mobile SDK. Mentre il comando [`configure`](/help/web-sdk/commands/configure/overview.md) nell&#39;SDK gestisce le impostazioni lato client (come `edgeDomain`), gli stream di dati gestiscono tutte le altre configurazioni.
+
+Quando invii una richiesta all&#39;Edge Network, `datastreamId` fa riferimento allo stream di dati in cui vengono inviati i dati. Questo consente di aggiornare la configurazione lato server senza modificare il codice del sito web.
 
 Puoi creare e gestire gli stream di dati selezionando **[!UICONTROL Stream di dati]** nell’area di navigazione a sinistra all’interno dell’interfaccia utente di Adobe Experience Platform o di Raccolta dati.
 
@@ -27,7 +29,7 @@ Per ulteriori informazioni su come configurare uno stream di dati nell’interfa
 
 Le politiche aziendali di gestione dei dati e i requisiti normativi stanno aumentando le restrizioni su come i dati sensibili dei clienti possono essere raccolti, elaborati e utilizzati. Ciò include la raccolta, l’elaborazione e l’utilizzo di dati sanitari protetti (PHI), che sono soggetti a normative come l’Health Insurance Portability and Accountability Act (HIPAA).
 
-Gli stream di dati forniscono tre metodi per aiutarti a gestire in modo sicuro i tuoi dati sensibili:
+Gli stream di dati forniscono tre metodi per aiutarti a gestire in modo sicuro i dati sensibili:
 
 * [Crittografia avanzata](#encryption)
 * [Governance dei dati](#governance)

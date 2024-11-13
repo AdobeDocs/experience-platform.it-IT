@@ -2,24 +2,22 @@
 title: Configurare il rilevamento di bot per gli stream di dati
 description: Scopri come configurare il rilevamento di bot per i flussi di dati, per differenziare il traffico umano e non umano.
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: ff95e5e105f7b3e1213eab90456b9fa9000918d3
+source-git-commit: e3768a3f695abeedc9a3ce2fef591c6ecae9a897
 workflow-type: tm+mt
-source-wordcount: '1367'
+source-wordcount: '1358'
 ht-degree: 0%
 
 ---
 
 # Configurare il rilevamento di bot per gli stream di dati
 
-Il traffico proveniente da entità non umane, come programmi automatizzati, web scraper, ragni, scanner scriptati, può rendere più difficile identificare gli eventi che si verificano dai visitatori umani. Questo tipo di traffico può influenzare negativamente importanti metriche aziendali, portando a rapporti di traffico errati.
+Il traffico non umano proveniente da programmi automatizzati, web scraper, spider e scanner scriptati può rendere difficile identificare gli eventi provenienti dai visitatori umani. Questo tipo di traffico può influenzare negativamente importanti metriche aziendali, portando a rapporti di traffico errati.
 
 Il rilevamento dei bot consente di identificare gli eventi generati da [Web SDK](../web-sdk/home.md), [Mobile SDK](https://developer.adobe.com/client-sdks/home/) e [[!DNL Server API]](../server-api/overview.md) come generati da spider e bot noti.
 
-Configurando il rilevamento di bot per gli stream di dati, puoi identificare indirizzi IP, intervalli IP e intestazioni di richiesta specifici che desideri classificare come eventi bot.
+Configurando il rilevamento di bot per gli stream di dati, puoi identificare indirizzi IP, intervalli IP e intestazioni di richiesta specifici da classificare come eventi bot. Questo consente di fornire una misurazione più accurata dell’attività dell’utente sul sito o sull’app mobile.
 
-L’identificazione del traffico da bot può fornire una misurazione più accurata dell’attività degli utenti sul sito o sull’app mobile.
-
-Quando una richiesta all’Edge Network corrisponde a una qualsiasi delle regole di rilevamento di bot, lo schema XDM viene aggiornato con un punteggio bot (sempre impostato su 1), come mostrato di seguito.
+Quando una richiesta all’Edge Network corrisponde a una qualsiasi delle regole di rilevamento di bot, lo schema XDM viene aggiornato con un punteggio bot (sempre impostato su 1), come illustrato di seguito:
 
 ```json
 {
@@ -35,7 +33,7 @@ Questo punteggio bot consente alle soluzioni che ricevono la richiesta di identi
 >
 >Il rilevamento dei bot non elimina alcuna richiesta di bot. Aggiorna lo schema XDM solo con il punteggio bot e inoltra l&#39;evento al servizio [datastream](configure.md) configurato.
 >
->Le soluzioni di Adobe possono gestire il punteggio bot in diversi modi. Adobe Analytics, ad esempio, utilizza il proprio [servizio di filtro bot](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) e non utilizza il punteggio impostato dall&#39;Edge Network. I due servizi utilizzano lo stesso [elenco di bot IAB](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), pertanto il punteggio bot è identico.
+>Le soluzioni Adobe possono gestire il punteggio dei bot in modi diversi. Adobe Analytics, ad esempio, utilizza il proprio [servizio di filtro bot](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) e non utilizza il punteggio impostato dall&#39;Edge Network. I due servizi utilizzano lo stesso [elenco di bot IAB](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), pertanto il punteggio bot è identico.
 
 Dopo la creazione, le regole di rilevamento dei bot possono richiedere fino a 15 minuti per propagarsi nell’Edge Network.
 
@@ -66,9 +64,12 @@ Dalla pagina Regole di rilevamento bot, puoi configurare il rilevamento bot util
 
 ### Utilizzare l&#39;elenco internazionale Spiders e bot IAB/ABC {#iab-list}
 
-L&#39;[elenco internazionale Spider e bot IAB/ABC](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) è un elenco di terze parti standard di settore di spider e bot Internet che consente di identificare il traffico automatizzato, ad esempio i crawler dei motori di ricerca, gli strumenti di monitoraggio e altro traffico non umano che non si desidera visualizzare nei conteggi di analisi.
+L&#39;[IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) è un elenco standard di terze parti di spider e bot Internet. Questo elenco ti aiuta a identificare il traffico automatizzato, ad esempio i crawler dei motori di ricerca, gli strumenti di monitoraggio e altro traffico non umano che potresti non voler includere nei conteggi di analisi.
 
-Per configurare lo stream di dati per l&#39;utilizzo di [!DNL IAB/ABC International Spiders and Bots List], attiva l&#39;opzione **[!UICONTROL Usa elenco Spider e bot internazionali IAB/ABC per il rilevamento di bot in questo stream di dati]**, quindi seleziona Salva per applicare le impostazioni di rilevamento di bot allo stream di dati.
+Per configurare lo stream di dati per l’utilizzo dell’elenco internazionale Spiders e Bots IAB/ABC:
+
+1. Attiva l&#39;opzione **[!UICONTROL Usa elenco Spider e bot internazionali IAB/ABC per il rilevamento di bot in questo flusso di dati]**.
+2. Seleziona **[!UICONTROL Salva]** per applicare le impostazioni di rilevamento bot allo stream di dati.
 
 ![Elenco di spider e bot IAB abilitato.](assets/bot-detection/bot-detection-list.png)
 
