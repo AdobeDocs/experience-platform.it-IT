@@ -2,9 +2,9 @@
 title: Priorità dello spazio dei nomi
 description: Scopri la priorità dello spazio dei nomi in Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: a2a60f429836e26179f68a40fce91a90d73d8eee
+source-git-commit: 893d8a089dee01e65436b7ac035233ba556b231b
 workflow-type: tm+mt
-source-wordcount: '1788'
+source-wordcount: '1789'
 ht-degree: 2%
 
 ---
@@ -17,10 +17,10 @@ ht-degree: 2%
 
 Ogni implementazione del cliente è unica e personalizzata per soddisfare gli obiettivi di una particolare organizzazione e, come tale, l’importanza di un dato spazio dei nomi varia da cliente a cliente. Esempi reali includono:
 
-* Da un lato, lo spazio dei nomi E-mail potrebbe rappresentare un’entità persona e quindi essere univoco per persona. D’altra parte, un altro cliente potrebbe considerare lo spazio dei nomi E-mail come un identificatore non affidabile e, pertanto, potrebbe consentire l’associazione di un singolo CRMID a più identità con lo spazio dei nomi E-mail.
+* La tua azienda potrebbe considerare ogni indirizzo e-mail come un&#39;entità a persona singola e quindi utilizzare [le impostazioni di identità](./identity-settings-ui.md) per configurare lo spazio dei nomi e-mail come univoco. Un’altra società, tuttavia, potrebbe voler rappresentare entità a persona singola come se avessero più indirizzi e-mail e quindi configurare lo spazio dei nomi e-mail come non univoco. Queste aziende dovrebbero utilizzare un altro spazio dei nomi di identità come univoco, ad esempio uno spazio dei nomi CRMID, in modo da poter collegare un identificatore per singola persona ai diversi indirizzi e-mail.
 * È possibile raccogliere il comportamento in linea utilizzando uno spazio dei nomi &quot;ID accesso&quot;. Questo ID di accesso potrebbe avere una relazione 1:1 con il CRMID, che memorizza quindi gli attributi da un sistema di gestione delle relazioni con i clienti e può essere considerato lo spazio dei nomi più importante. In questo caso, stai quindi determinando che lo spazio dei nomi CRMID è una rappresentazione più accurata di una persona, mentre lo spazio dei nomi Login ID è il secondo più importante.
 
-Devi effettuare configurazioni in Identity Service che riflettano l’importanza degli spazi dei nomi, in quanto questo influisce sul modo in cui i profili vengono formati e segmentati.
+Devi creare configurazioni in Identity Service che riflettano l’importanza degli spazi dei nomi, in quanto questo influenza il modo in cui i profili e i relativi grafici delle identità vengono formati e suddivisi.
 
 ## Determinare le priorità
 
@@ -28,7 +28,7 @@ La determinazione della priorità dello spazio dei nomi si basa sui seguenti fat
 
 ### Struttura del grafico delle identità
 
-Se il grafico strutturato della tua organizzazione è a livelli, la priorità dello spazio dei nomi deve riflettere questo in modo che i collegamenti corretti vengano rimossi in caso di compressione del grafico.
+Se la struttura del grafico dell’organizzazione è a più livelli, la priorità dello spazio dei nomi deve riflettere questo aspetto, in modo che, in caso di compressione del grafico, i collegamenti corretti vengano rimossi.
 
 >[!TIP]
 >
@@ -52,11 +52,11 @@ Un altro modo per affrontare questo argomento è attraverso la cardinalità. Per
 
 ## Convalidare le impostazioni di priorità dello spazio dei nomi
 
-Una volta acquisita un’idea di come assegnare la priorità agli spazi dei nomi, puoi utilizzare lo strumento Simulazione grafico per verificare vari scenari di compressione dei grafici e assicurarti che le configurazioni di priorità restituiscano i risultati attesi. Per ulteriori informazioni, leggere la guida sull&#39;utilizzo dello strumento [Simulazione grafico](./graph-simulation.md).
+Una volta acquisita un’idea di come assegnare la priorità agli spazi dei nomi, puoi utilizzare lo strumento Simulazione grafico nell’interfaccia utente per testare vari scenari di compressione dei grafici e assicurarti che le configurazioni di priorità restituiscano i risultati attesi. Per ulteriori informazioni, leggere la guida sull&#39;utilizzo dello strumento [Simulazione grafico](./graph-simulation.md).
 
 ## Configurare la priorità dello spazio dei nomi
 
-È possibile configurare la priorità dello spazio dei nomi utilizzando [!UICONTROL Impostazioni identità]. Nell&#39;interfaccia [!UICONTROL Impostazioni identità] è possibile trascinare uno spazio dei nomi per determinarne l&#39;importanza relativa.
+La priorità dello spazio dei nomi può essere configurata utilizzando l&#39;[interfaccia utente delle impostazioni delle identità](./identity-settings-ui.md). Nell’interfaccia delle impostazioni di identità, puoi trascinare e rilasciare uno spazio dei nomi per determinarne l’importanza relativa.
 
 >[!IMPORTANT]
 >
@@ -74,20 +74,20 @@ Per strutture di grafo relativamente complesse, la priorità dello spazio dei no
 
 ### Real-Time Customer Profile: determinazione dell’identità primaria per gli eventi esperienza
 
-* Per gli eventi esperienza, una volta configurate le impostazioni di identità per una determinata sandbox, l’identità primaria sarà determinata dalla priorità più elevata dello spazio dei nomi.
+* Dopo aver configurato le impostazioni di identità per una data sandbox, l’identità primaria per gli eventi esperienza sarà determinata dalla priorità più alta dello spazio dei nomi nella configurazione.
    * Questo perché gli eventi di esperienza sono di natura dinamica. Una mappa di identità può contenere tre o più identità e la priorità dello spazio dei nomi assicura che lo spazio dei nomi più importante sia associato all’evento esperienza.
 * Di conseguenza, le seguenti configurazioni **non saranno più utilizzate da Real-Time Customer Profile**:
-   * La casella di controllo &quot;Primary&quot; sul tipo di elemento dati in WebSDK (che si traduce in `primary=true` in identityMap). **Nota**: lo spazio dei nomi dell&#39;identità e il valore dell&#39;identità continueranno a essere utilizzati nel profilo. Inoltre, devi ancora configurare le impostazioni della casella di controllo &quot;Primario&quot; perché i servizi esterni a Real-Time Customer Profile continueranno a fare riferimento a questa configurazione.
+   * La configurazione dell&#39;identità primaria (`primary=true`) durante l&#39;invio di identità in identityMap tramite Web SDK, Mobile SDK o Edge Network Server API (lo spazio dei nomi dell&#39;identità e il valore dell&#39;identità continueranno a essere utilizzati nel profilo). **Nota**: i servizi esterni al profilo cliente in tempo reale, come l&#39;archiviazione del data lake o Adobe Target, continueranno a utilizzare la configurazione dell&#39;identità primaria (`primary=true`).
    * Eventuali campi contrassegnati come identità primaria in uno schema XDM Experience Event Class.
    * Impostazioni di identità primaria predefinite nel connettore di origine di Adobe Analytics (ECID o AAID).
 * D&#39;altra parte, la priorità dello spazio dei nomi **non determina l&#39;identità primaria per i record di profilo**.
-   * Per i record di profilo, puoi utilizzare l’area di lavoro schemi nell’interfaccia utente di Experience Platform per definire i campi di identità, inclusa l’identità primaria. Per ulteriori informazioni, consulta la guida su [definizione dei campi di identità nell&#39;interfaccia utente](../../xdm/ui/fields/identity.md).
+   * Per i record di profilo, devi continuare a definire i campi di identità nello schema, inclusa l’identità primaria. Per ulteriori informazioni, consulta la guida su [definizione dei campi di identità nell&#39;interfaccia utente](../../xdm/ui/fields/identity.md).
 
 >[!TIP]
 >
 >* La priorità dello spazio dei nomi è **una proprietà di uno spazio dei nomi**. Si tratta di un valore numerico assegnato a uno spazio dei nomi per indicarne l’importanza relativa.
 >
->* L’identità primaria è l’identità in cui è memorizzato un frammento di profilo in base a. Un frammento di profilo è un record di dati che memorizza informazioni su un determinato utente: attributi (di solito acquisiti tramite record di gestione delle relazioni con i clienti) o eventi (di solito acquisiti da eventi di esperienza o dati online).
+>* L’identità primaria è l’identità in cui è memorizzato un frammento di profilo in base a. Un frammento di profilo è un record di dati che memorizza informazioni su un determinato utente: attributi (ad esempio, record di gestione delle relazioni con i clienti) o eventi (ad esempio, esplorazione del sito web).
 
 ### Scenario di esempio
 
@@ -151,9 +151,7 @@ Per ulteriori informazioni, leggere la [panoramica sulla gestione avanzata del c
 
 ### Attributi calcolati
 
-Attributi calcolati utilizza la priorità dello spazio dei nomi per memorizzare il valore dell’attributo calcolato. Per un dato evento, l’identità con la priorità più elevata dello spazio dei nomi avrà il valore dell’attributo calcolato scritto in base a esso. Per ulteriori informazioni, leggere la [guida dell&#39;interfaccia utente degli attributi calcolati](../../profile/computed-attributes/ui.md).
-
-Gli attributi calcolati non utilizzano la priorità dello spazio dei nomi per calcolare i valori. Se utilizzi attributi calcolati, assicurati che il CRMID sia designato come identità principale per WebSDK. Per ulteriori informazioni, leggere la [guida dell&#39;interfaccia utente degli attributi calcolati](../../profile/computed-attributes/ui.md).
+Se le impostazioni di identità sono abilitate, gli attributi calcolati utilizzeranno la priorità dello spazio dei nomi per memorizzare il valore dell’attributo calcolato. Per un dato evento, l’identità con la priorità più elevata dello spazio dei nomi avrà il valore dell’attributo calcolato scritto in base a esso. Per ulteriori informazioni, leggere la [guida dell&#39;interfaccia utente degli attributi calcolati](../../profile/computed-attributes/ui.md).
 
 ### Data lake
 
@@ -198,4 +196,4 @@ Per ulteriori informazioni, leggere la [Panoramica del servizio Privacy](../../p
 
 ### Adobe Target
 
-Adobe Target può generare un targeting utente imprevisto per scenari di dispositivi condivisi.
+Adobe Target può generare un targeting utente imprevisto per scenari di dispositivi condivisi quando si utilizza la segmentazione Edge.
