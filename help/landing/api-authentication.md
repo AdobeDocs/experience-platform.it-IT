@@ -4,9 +4,9 @@ title: Autenticazione e accesso alle API Experience Platform
 type: Tutorial
 description: Questo documento spiega passo-passo come accedere a un account sviluppatore di Adobe Experience Platform per effettuare chiamate alle API di Experience Platform.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 2fb0da385baeb96d5665ecc25bf353c7516ef9f7
+source-git-commit: a6da449725d0274ccacc6f6512c9ad395366b689
 workflow-type: tm+mt
-source-wordcount: '2149'
+source-wordcount: '2383'
 ht-degree: 3%
 
 ---
@@ -67,6 +67,10 @@ Per ulteriori informazioni, consulta la guida sulla gestione dei gruppi di utent
 >Se stai seguendo questo documento dalla [guida API di Privacy Service](../privacy-service/api/getting-started.md), ora puoi tornare a tale guida per generare le credenziali di accesso univoche per [!DNL Privacy Service].
 
 Dopo aver ottenuto l&#39;accesso utente e sviluppatore a Platform tramite [!DNL Admin Console], il passaggio successivo consiste nel generare le credenziali di `{ORG_ID}` e `{API_KEY}` in Adobe Developer Console. Queste credenziali devono essere generate solo una volta e possono essere riutilizzate nelle chiamate API future di Platform.
+
+>[!TIP]
+>
+>Invece di passare a Developer Console, puoi ottenere tutte le credenziali di autenticazione necessarie per utilizzare le API di Platform direttamente dalle pagine della documentazione di riferimento API. [Ulteriori informazioni](#get-credentials-functionality) sulla funzionalità.
 
 ### Aggiungere un Experience Platform a un progetto {#add-platform-to-project}
 
@@ -149,6 +153,26 @@ Il passaggio successivo consiste nel generare una credenziale `{ACCESS_TOKEN}` d
 >[!TIP]
 >
 Puoi inoltre utilizzare un ambiente e una raccolta Postman per generare i token di accesso. Per ulteriori informazioni, leggere la sezione relativa all&#39;utilizzo di [Postman per l&#39;autenticazione e il test delle chiamate API](#use-postman).
+
+## Crea e recupera le credenziali di autenticazione direttamente nella documentazione di riferimento dell’API {#get-credentials-functionality}
+
+A partire dalla versione di novembre 2024 di Experience Platform, è possibile ottenere le credenziali per utilizzare le API Experience Platform direttamente dalle pagine di riferimento API, senza dover passare a [!UICONTROL Developer Console]. Visualizza l&#39;esempio seguente dalla [pagina Destinazioni dell&#39;API del servizio di flusso](https://developer.adobe.com/experience-platform-apis/references/destinations/).
+
+![La funzionalità di recupero delle credenziali è evidenziata nella parte superiore di una pagina di riferimento API.](././images/api-authentication/get-credentials-highlighted.png)
+
+Per ottenere le credenziali per chiamare le API di Platform, passa a una pagina di riferimento API Experience Platform e seleziona **[!UICONTROL Accedi]** nella parte superiore della pagina. Accedi con il tuo **[!UICONTROL account personale]** o **[!UICONTROL account aziendale o scolastico]**.
+
+Dopo aver effettuato l&#39;accesso, selezionare **[!UICONTROL Crea nuova credenziale]** per creare un nuovo set di credenziali per accedere alle API di Platform.
+
+![Crea nuove credenziali per accedere alle API di Platform.](././images/api-authentication/create-credentials.gif)
+
+Quindi, utilizza il selettore a discesa per aprire la finestra delle credenziali, generare un token di accesso e ottenere la chiave API e l’ID organizzazione. Copia le credenziali nei blocchi [**[!UICONTROL Prova]**](/help/release-notes/2024/may-2024.md#interactive-api-documentation) nelle pagine di riferimento API per iniziare a lavorare con le API di Platform.
+
+![Utilizzare il selettore a discesa per visualizzare le credenziali e generare un token di accesso.](././images/api-authentication/view-copy-credentials.gif)
+
+>[!TIP]
+>
+Il blocco delle credenziali nella parte superiore della pagina rimane visualizzato mentre navighi tra pagine di endpoint diverse nella documentazione di riferimento dell’API Experience Platform.
 
 ## [!BADGE Deprecato]{type=negativo} genera un token web JSON (JWT) {#jwt}
 
