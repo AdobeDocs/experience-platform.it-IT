@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Scopri le prestazioni e i guardrail applicati dal sistema per i dati di profilo e la segmentazione al fine di garantire un utilizzo ottimale delle funzionalità di Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: 6962bb0ba4968ed4860e95819ac2e949bf744d79
 workflow-type: tm+mt
-source-wordcount: '2457'
+source-wordcount: '2461'
 ht-degree: 2%
 
 ---
@@ -41,7 +41,7 @@ In questo documento sono disponibili due tipi di limiti predefiniti:
 
 | Tipo di guardrail | Descrizione |
 | -------------- | ----------- |
-| **Guardrail delle prestazioni (limite software)** | I guardrail di prestazioni sono limiti di utilizzo relativi all’ambito dei tuoi casi d’uso. Quando si superano i guardrail delle prestazioni, è possibile che si verifichi un peggioramento delle prestazioni e della latenza. L’Adobe non è responsabile di tale degrado delle prestazioni. I clienti che superano costantemente il limite di prestazioni possono scegliere di concedere licenze aggiuntive per evitare il degrado delle prestazioni. |
+| **Guardrail delle prestazioni (limite software)** | I guardrail di prestazioni sono limiti di utilizzo relativi all’ambito dei tuoi casi d’uso. Quando si superano i guardrail delle prestazioni, è possibile che si verifichi un peggioramento delle prestazioni e della latenza. Adobe non è responsabile di tale degrado delle prestazioni. I clienti che superano costantemente il limite di prestazioni possono scegliere di concedere licenze aggiuntive per evitare il degrado delle prestazioni. |
 | **Guardrail applicati dal sistema (limite rigido)** | I guardrail applicati dal sistema vengono applicati dall’interfaccia utente o dall’API di Real-Time CDP. Questi sono i limiti che non puoi superare, poiché l’interfaccia utente e l’API ti impediranno di farlo o restituiranno un errore. |
 
 {style="table-layout:auto"}
@@ -174,7 +174,7 @@ In questo documento sono presenti diversi guardrail che fanno riferimento a &quo
 
 ### Criteri di unione {#merge-policies}
 
-Quando si riuniscono dati da più origini, i criteri di unione sono le regole utilizzate da Platform per determinare come i dati verranno prioritari e quali dati verranno combinati per creare tale vista unificata. Ad esempio, se un cliente interagisce con il tuo marchio su più canali, la tua organizzazione avrà più frammenti di profilo relativi a quel singolo cliente che appaiono in più set di dati. Quando questi frammenti vengono acquisiti in Platform, vengono uniti per creare un unico profilo per quel cliente. Quando i dati provenienti da più origini sono in conflitto, il criterio di unione determina quali informazioni includere nel profilo per la persona. È consentito un massimo di cinque (5) criteri di unione per organizzazione. Per ulteriori informazioni sui criteri di unione, leggere la [panoramica dei criteri di unione](merge-policies/overview.md).
+Quando si riuniscono dati da più origini, i criteri di unione sono le regole utilizzate da Platform per determinare come i dati verranno prioritari e quali dati verranno combinati per creare tale vista unificata. Ad esempio, se un cliente interagisce con il tuo marchio su più canali, la tua organizzazione avrà più frammenti di profilo relativi a quel singolo cliente che appaiono in più set di dati. Quando questi frammenti vengono acquisiti in Platform, vengono uniti per creare un unico profilo per quel cliente. Quando i dati provenienti da più origini sono in conflitto, il criterio di unione determina quali informazioni includere nel profilo per la persona. È consentito un massimo di cinque (5) criteri di unione che utilizzano lo schema `_xdm.context.profile` per sandbox. Per ulteriori informazioni sui criteri di unione, leggere la [panoramica dei criteri di unione](merge-policies/overview.md).
 
 ### Set di dati della suite di rapporti di Adobe Analytics in Platform {#aa-datasets}
 
