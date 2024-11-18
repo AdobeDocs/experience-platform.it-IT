@@ -1,16 +1,14 @@
 ---
 title: Destinazione batch Magnite
-description: Utilizza questa destinazione per fornire Adobi di pubblico CDP alla piattaforma Magnite Streaming in batch.
-badgeBeta: label="Beta" type="Informative"
-hide: true
-hidefromtoc: true
-source-git-commit: b8921e887b827fcc7b9115045a1954c41a37bce8
+description: Utilizza questa destinazione per distribuire in batch i tipi di pubblico di Adobe CDP alla piattaforma Magnite Streaming.
+last-substantial-update: 2024-11-18T00:00:00Z
+exl-id: 8cc3890f-84f8-49d1-a329-322c13f9e5af
+source-git-commit: 57e6dc4252c031d993592b963efc089f8427ce25
 workflow-type: tm+mt
-source-wordcount: '1663'
+source-wordcount: '1680'
 ht-degree: 1%
 
 ---
-
 
 # Magnite: connessione in batch {#magnite-streaming-batch}
 
@@ -31,8 +29,6 @@ Continua a leggere di seguito per ulteriori informazioni sulla destinazione Magn
 Per ulteriori informazioni sulla destinazione in tempo reale, consulta [questa pagina della documentazione](magnite-streaming.md).
 
 >[!IMPORTANT]
->
->Questo connettore di destinazione è in versione beta ed è disponibile solo per alcuni clienti. Per richiedere l’accesso, contatta il rappresentante del tuo Adobe.
 >
 >Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti dal team [!DNL Magnite]. Per richieste di informazioni o richieste di aggiornamento, contattale direttamente all&#39;indirizzo `adobe-tech@magnite.com`.
 
@@ -116,13 +112,17 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
 futuro.
 * **[!UICONTROL Descrizione]**: una descrizione che ti aiuterà a identificare questo
 connessione/istanza di destinazione in futuro.
-* **[!UICONTROL Nome del partner di origine]**: il nome che si desidera utilizzare come origine nella piattaforma di Magnite Streaming
+* **[!UICONTROL Nome società]**: nome cliente/società. Solo i client [!DNL Magnite Streaming] supportati sono disponibili per la selezione.
+
+>[!NOTE]
+>
+>Il nome società deve essere una stringa che corrisponde al nome del bucket di consegna Amazon S3 configurato con Magnite e configurato nel passaggio [esegui autenticazione nella destinazione](#authenticate). I caratteri supportati includono &quot;a-z&quot;, &quot;A-Z&quot;, &quot;0-9&quot;, &quot;-&quot;(trattino) o &quot;_&quot;(trattino basso).
 
 ![campi di autenticazione della configurazione di destinazione compilati](../../assets/catalog/advertising/magnite/destination-batch-config-auth-filled.png)
 
 >[!NOTE]
 >
->Se prevedi di inviare più tipi di ID (GAID, IDFA, ecc.) utilizzando la destinazione Batch, per ciascuna è necessaria una nuova connessione/istanza di destinazione. Per ulteriori informazioni, contatta il rappresentante dell’account Magnite.
+>Se prevedi di inviare più tipi ID (GAID, IDFA, ecc.) utilizzando la destinazione Batch, per ciascuno è necessaria una nuova connessione/istanza di destinazione. Per ulteriori informazioni, contatta il rappresentante dell’account Magnite.
 
 Puoi quindi procedere selezionando **[!UICONTROL Avanti]**
 
@@ -158,7 +158,7 @@ In questo esempio, abbiamo selezionato il **[!UICONTROL campo di destinazione]**
 
 >[!NOTE]
 >
->Se prevedi di inviare/mappare più tipi di ID (GAID, IDFA, ecc.) utilizzando la destinazione Batch, per ciascuna è necessaria una nuova connessione/istanza di destinazione. Per ulteriori informazioni, contatta il rappresentante dell’account Magnite.
+>Se prevedi di inviare/mappare più tipi di ID (GAID, IDFA, ecc.) utilizzando la destinazione Batch, per ciascuno è necessaria una nuova connessione/istanza di destinazione. Per ulteriori informazioni, contatta il rappresentante dell’account Magnite.
 
 
 Nella schermata &quot;Configure a filename and export schedule for each audience&quot; (Configurare un nome file ed esportare una pianificazione per ogni pubblico), ora devi configurare una data di inizio (obbligatoria), una data di fine (facoltativa) e un ID di mappatura (obbligatorio) per ogni pubblico.
