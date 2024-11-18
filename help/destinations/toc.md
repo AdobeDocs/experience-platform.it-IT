@@ -5,9 +5,9 @@ user-guide-description: Attiva i dati, noti e non, per campagne di marketing cro
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 8ccdf80885a04280c4a92e1cb3d18e45e2d9d9e5
+source-git-commit: 07e01847c6e24564682161e88122948d200ab733
 workflow-type: tm+mt
-source-wordcount: '1250'
+source-wordcount: '1248'
 ht-degree: 5%
 
 ---
@@ -60,7 +60,7 @@ ht-degree: 5%
 * Catalogo destinazioni {#catalog}
    * [Panoramica del catalogo delle destinazioni](./catalog/overview.md)
    * Destinazioni Adobe{#adobe}
-      * [Panoramica sulle destinazioni degli Adobi](./catalog/adobe/overview.md)
+      * [Panoramica sulle destinazioni di Adobe](./catalog/adobe/overview.md)
       * [Tipi di pubblico di Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
       * [Connessione Marketo Engage](./catalog/adobe/marketo-engage.md)
       * [Connessione Marketo Measure Ultimate](./catalog/adobe/marketo-measure-ultimate.md)
@@ -92,8 +92,8 @@ ht-degree: 5%
       * [Estensione tag linkedIn Insight](./catalog/advertising/linkedin.md)
       * [LiveRamp - Connessione di onboarding](./catalog/advertising/liveramp-onboarding.md)
       * [LiveRamp - Connessione di distribuzione](./catalog/advertising/liveramp-distribution.md)
-      * [(Beta) Batch Magnite](/help/destinations/catalog/advertising/magnite-batch.md)
-      * [(Beta) Connessione in tempo reale Magnite Streaming](/help/destinations/catalog/advertising/magnite-streaming.md)
+      * [Batch Magnite](/help/destinations/catalog/advertising/magnite-batch.md)
+      * [Connessione in tempo reale Magnite Streaming](/help/destinations/catalog/advertising/magnite-streaming.md)
       * [Connessione Microsoft Bing](./catalog/advertising/bing.md)
       * [Estensione per il tracciamento delle conversioni di pinterest](./catalog/advertising/pinterest-extension.md)
       * [Connessione a elenco clienti pinterest](./catalog/advertising/pinterest.md)
@@ -168,8 +168,8 @@ ht-degree: 5%
       * [(API) Connessione Eloqua Oracle](./catalog/email-marketing/oracle-eloqua-api.md)
       * [(File) Oracle di connessione Eloqua](./catalog/email-marketing/oracle-eloqua.md)
       * [Connessione Responsys Oracle](./catalog/email-marketing/oracle-responsys.md)
-      * [(API) Connessione Marketing Cloud Salesforce](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
-      * [(File) Connessione Marketing Cloud Salesforce](./catalog/email-marketing/salesforce-marketing-cloud.md)
+      * [(API) Connessione al Marketing Cloud Salesforce](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
+      * [(File) Connessione al Marketing Cloud Salesforce](./catalog/email-marketing/salesforce-marketing-cloud.md)
       * [[!DNL Salesforce Marketing Cloud Account Engagement]](./catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md)
       * [Connessione SendGrid](./catalog/email-marketing/sendgrid.md)
    * Estensioni tag {#launch-extensions}

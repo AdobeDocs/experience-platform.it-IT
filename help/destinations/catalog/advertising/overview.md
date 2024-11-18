@@ -2,10 +2,9 @@
 keywords: destinazioni pubblicitarie;destinazioni;destinazioni piattaforma pubblicitaria;advertising destinations;destinations;platform destinations
 title: Panoramica sulle destinazioni di Advertising
 description: Collega Adobe Experience Platform a una piattaforma pubblicitaria di terze parti (ad esempio DSP, ad network, SSP) e condividi tipi di pubblico pseudonimi su tali piattaforme.
-exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 7db60161b638cce1845c430f6086441599a0bc61
+source-git-commit: 07e01847c6e24564682161e88122948d200ab733
 workflow-type: tm+mt
-source-wordcount: '267'
+source-wordcount: '274'
 ht-degree: 1%
 
 ---
@@ -35,6 +34,8 @@ Per comprendere la differenza tra connessioni ed estensioni, vedere [Connessioni
 * [Connessione Google Ad Manager](google-ad-manager.md)
 * [(Beta) Connessione Google Ad Manager 360](google-ad-manager-360-connection.md)
 * [Connessione Customer Match di Google](google-customer-match.md)
+* [Connessione Batch Magnite](magnite-batch.md)
+* [Connessione in tempo reale Magnite Streaming](magnite-streaming.md)
 * [Connessione Microsoft Bing](bing.md)
 * [Connessione a elenco clienti pinterest](pinterest.md)
 * [Destinazione PubMatic Connect](pubmatic.md)

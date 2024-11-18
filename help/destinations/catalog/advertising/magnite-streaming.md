@@ -1,18 +1,16 @@
 ---
 title: Connessione di destinazione Magnite in tempo reale
-description: Utilizza questa destinazione per fornire Adobi di pubblico CDP alla piattaforma Magnite Streaming in tempo reale.
-badgeBeta: label="Beta" type="Informative"
-hide: true
-hidefromtoc: true
-source-git-commit: 8314aca706b47c4cbcb993418c287629f5563189
+description: Utilizza questa destinazione per distribuire in tempo reale i tipi di pubblico di Adobe CDP alla piattaforma Magnite Streaming.
+last-substantial-update: 2024-11-18T00:00:00Z
+exl-id: 4e08a14b-6800-41e1-95a5-826a6241144d
+source-git-commit: da05db9376893bdbe8f0aa291f19a507e4a73d4f
 workflow-type: tm+mt
-source-wordcount: '1297'
-ht-degree: 2%
+source-wordcount: '1317'
+ht-degree: 1%
 
 ---
 
-
-# (Beta) Magnite: Connessione di destinazione in tempo reale
+# Magnite: connessione di destinazione in tempo reale
 
 ## Panoramica {#overview}
 
@@ -28,8 +26,6 @@ Per attivare i tipi di pubblico in [!DNL Magnite Streaming], è necessario:
 Nota: quando si utilizza la destinazione in tempo reale, [!DNL Magnite Streaming] riceverà i tipi di pubblico in tempo reale, ma Magnite può memorizzare solo i tipi di pubblico in tempo reale temporaneamente nella propria piattaforma e verranno rimossi dal sistema entro un paio di giorni. Per questo motivo, se desideri utilizzare la destinazione Magnite: Real-Time, *anche* dovrai utilizzare la destinazione Magnite: Batch - ogni pubblico che attivi nella destinazione Real-Time, dovrai attivare anche nella destinazione Batch.
 
 >[!IMPORTANT]
->
->Questo connettore di destinazione è in versione beta ed è disponibile solo per alcuni clienti. Per richiedere l’accesso, contatta il rappresentante del tuo Adobe.
 >
 >Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti dal team [!DNL Magnite]. Per richieste di informazioni o richieste di aggiornamento, contattale direttamente all&#39;indirizzo `adobe-tech@magnite.com`.
 
@@ -101,7 +97,11 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
 
 * **[!UICONTROL Nome]**: un nome con cui riconoscerai questa destinazione in futuro.
 * **[!UICONTROL Descrizione]**: una descrizione che ti aiuterà a identificare questa destinazione in futuro.
-* **[!UICONTROL Nome del partner di origine]**: nome del cliente/della società. Solo i client [!DNL Magnite Streaming] supportati sono disponibili per la selezione.
+* **[!UICONTROL Nome società]**: nome cliente/società. Solo i client [!DNL Magnite Streaming] supportati sono disponibili per la selezione.
+
+>[!NOTE]
+>
+>Il nome società deve essere una stringa che corrisponde al nome del bucket di consegna Amazon S3 configurato con Magnite e configurato nel passaggio [esegui autenticazione nella destinazione](#authenticate). I caratteri supportati includono &quot;a-z&quot;, &quot;A-Z&quot;, &quot;0-9&quot;, &quot;-&quot;(trattino) o &quot;_&quot;(trattino basso).
 
 ![campi di autenticazione della configurazione di destinazione compilati](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-filled.png)
 
