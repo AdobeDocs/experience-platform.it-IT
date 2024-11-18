@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica del connettore Source BLOB di Azure
 description: Scopri come collegare BLOB di Azure a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 62adc74f-3570-42c7-9ae6-3ddbc09eccc7
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 8877e7dceeebfb1d4f31b63fef4544a69c72b38e
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '443'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Prima di utilizzare i connettori di origine, è necessario aggiungere un elenco 
 
 >[!IMPORTANT]
 >
->L&#39;origine [!DNL Azure Blob] non supporta la connettività della stessa area per Experience Platform. Se l’istanza di Azure utilizza la stessa area di rete di Experience Platform, non è possibile stabilire una connessione alle origini di Experience Platform. Non utilizzare le aree di Azure East US 2, Azure West Europe e Azure Australia East durante la configurazione dell&#39;origine [!DNL Azure Blob]. Attualmente, è supportata solo la connettività tra aree geografiche.
+>L&#39;origine [!DNL Azure Blob] non supporta la connettività della stessa area per Experience Platform. Se l&#39;istanza [!DNL Azure] utilizza la stessa area di rete di Experience Platform, non è possibile stabilire una connessione alle origini Experience Platform. Attualmente, è supportata solo la connettività tra aree geografiche.
 
 ## Vincoli di denominazione per file e directory
 
