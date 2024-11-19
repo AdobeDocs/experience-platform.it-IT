@@ -2,7 +2,7 @@
 title: Gestire gli eventi di visualizzazione in Web SDK
 description: Questo articolo spiega cosa sono gli eventi di visualizzazione e come utilizzarli in Web SDK.
 exl-id: 7150ad6e-7693-4f4d-917e-8d08a39a0b41
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 4c7313afdce6645ab638b2998573e5a4f7c5de8f
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 0%
@@ -31,7 +31,7 @@ L’invio automatico di eventi di visualizzazione fornisce metriche di analisi p
 Per inviare automaticamente gli eventi di visualizzazione dopo il rendering del contenuto personalizzato sulla pagina, devi configurare i seguenti parametri:
 
 * `renderDecisions: true`
-* `personalization.sendDisplayNotifications: true` o non specificato
+* `personalization.sendDisplayEvent: true` o non specificato
 
 Web SDK invia gli eventi di visualizzazione subito dopo aver eseguito il rendering di qualsiasi personalizzazione in seguito a una chiamata `sendEvent`.
 
@@ -50,9 +50,9 @@ Inoltre, l&#39;invio di eventi di visualizzazione nelle chiamate di `sendEvent` 
 Per inviare eventi di visualizzazione per le proposte sottoposte a rendering automatico, è necessario configurare i seguenti parametri nella chiamata `sendEvent`:
 
 * `renderDecisions: true`
-* `personalization.sendDisplayNotifications: false` per l&#39;hit di inizio pagina
+* `personalization.sendDisplayEvent: false` per l&#39;hit di inizio pagina
 
-Per inviare gli eventi di visualizzazione, chiamare `sendEvent` con `personalization.includePendingDisplayNotifications: true`
+Per inviare gli eventi di visualizzazione, chiamare `sendEvent` con `personalization.includeRenderedPropositions: true`
 
 ### Inviare eventi di visualizzazione per le proposte sottoposte a rendering manuale {#manually-rendered-propositions}
 
