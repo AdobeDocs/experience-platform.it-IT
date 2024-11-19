@@ -1,8 +1,10 @@
 ---
 title: Configurare e configurare le chiavi gestite dal cliente tramite l’interfaccia utente di Platform
 description: Scopri come configurare l’app CMK con il tenant di Azure e inviare l’ID della chiave di crittografia a Adobe Experience Platform.
+role: Developer
+feature: Privacy
 exl-id: 5f38997a-66f3-4f9d-9c2f-fb70266ec0a6
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '1090'
 ht-degree: 0%
@@ -82,7 +84,7 @@ Tutti i dettagli necessari per verificare gli strumenti di Azure sono inclusi ne
 
 ## Abilita la configurazione della chiave di crittografia su Experience Platform {#send-to-adobe}
 
-Dopo aver installato l&#39;app CMK in [!DNL Azure], puoi inviare ad Adobe l&#39;identificatore della chiave di crittografia. Selezionare **[!DNL Keys]** nel menu di navigazione a sinistra, seguito dal nome della chiave che si desidera inviare.
+Dopo aver installato l&#39;app CMK in [!DNL Azure], puoi inviare l&#39;identificatore della chiave di crittografia ad Adobe. Selezionare **[!DNL Keys]** nel menu di navigazione a sinistra, seguito dal nome della chiave che si desidera inviare.
 
 ![Dashboard di Microsoft Azure con l&#39;oggetto [!DNL Keys] e il nome della chiave evidenziato.](../../images/governance-privacy-security/customer-managed-keys/select-key.png)
 

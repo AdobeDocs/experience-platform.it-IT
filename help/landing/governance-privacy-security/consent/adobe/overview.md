@@ -3,8 +3,10 @@ keywords: Experience Platform;home;argomenti popolari
 solution: Experience Platform
 title: Elaborazione del consenso in Adobe Experience Platform
 description: Scopri come elaborare i segnali di consenso dei clienti in Adobe Experience Platform utilizzando lo standard Adobe 2.0.
+role: Developer
+feature: Consent
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '1557'
 ht-degree: 0%
@@ -125,6 +127,6 @@ Customer Journey Management can also send consent-change signals back to Platfor
 
 ## Passaggi successivi
 
-Questa guida illustra come configurare le operazioni di Platform per elaborare i dati sul consenso dei clienti utilizzando lo standard Adobe e come rappresentare tali attributi nei profili cliente. Ora puoi integrare le preferenze di consenso dei clienti come fattore determinante nella qualificazione dei segmenti e in altri casi d’uso a valle.
+Questa guida illustra come configurare le operazioni di Platform per elaborare i dati sul consenso dei clienti utilizzando Adobe Standard e come rappresentare tali attributi nei profili cliente. Ora puoi integrare le preferenze di consenso dei clienti come fattore determinante nella qualificazione dei segmenti e in altri casi d’uso a valle.
 
 Per ulteriori informazioni sulle funzionalità relative alla privacy di Experience Platform, consulta la panoramica su [governance, privacy e sicurezza in Platform](../../overview.md).

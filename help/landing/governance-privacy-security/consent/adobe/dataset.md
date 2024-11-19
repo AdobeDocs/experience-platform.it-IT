@@ -3,8 +3,10 @@ keywords: Experience Platform;home;argomenti popolari
 solution: Experience Platform
 title: Configurare un set di dati per acquisire dati su consenso e preferenze
 description: Scopri come configurare uno schema e un set di dati Experience Data Model (XDM) per acquisire i dati di consenso e preferenze in Adobe Experience Platform.
+role: Developer
+feature: Consent, Schemas, Datasets
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: 3f559601b50293723f601960dbd56fddf0285148
+source-git-commit: bf651967714745a0b501dcb27373379fe014c9e1
 workflow-type: tm+mt
 source-wordcount: '1573'
 ht-degree: 0%
@@ -94,7 +96,7 @@ Il gruppo di campi fornisce un singolo campo di tipo oggetto, `consents`, le cui
 
 ## Aggiungi i gruppi di campi richiesti allo schema [!DNL Profile] {#add-field-group}
 
-Per raccogliere i dati sul consenso utilizzando lo standard Adobe, è necessario disporre di uno schema abilitato per il profilo che contiene i due gruppi di campi seguenti:
+Per raccogliere i dati sul consenso utilizzando Adobe Standard, è necessario disporre di uno schema abilitato per il profilo che contiene i due gruppi di campi seguenti:
 
 * [[!UICONTROL Dettagli su consenso e preferenze]](../../../../xdm/field-groups/profile/consents.md)
 * [[!UICONTROL IdentityMap]](../../../../xdm/field-groups/profile/identitymap.md) (richiesto se si utilizza Platform Web SDK o Mobile SDK per inviare segnali di consenso)

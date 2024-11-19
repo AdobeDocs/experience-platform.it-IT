@@ -1,8 +1,10 @@
 ---
 title: Guida introduttiva all’API di query di audit
 description: L’API Query di audit consente di recuperare i dati delle metriche per varie funzioni di Adobe Experience Platform. Questo documento fornisce un’introduzione ai concetti fondamentali che è necessario conoscere prima di tentare di effettuare chiamate all’API Query di audit.
+role: Developer
+feature: Audits, API
 exl-id: 20eab0a8-98f7-4fee-8f91-88324e54ab18
-source-git-commit: c2c5778e0a3fff7f488ad7a672123c813cca59f1
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '389'
 ht-degree: 11%

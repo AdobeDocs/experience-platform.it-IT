@@ -1,8 +1,10 @@
 ---
 title: Elaborare dati di consenso dei clienti utilizzando Adobe Experience Platform Web SDK
 description: Scopri come integrare Adobe Experience Platform Web SDK per elaborare i dati sul consenso dei clienti in Adobe Experience Platform.
+role: Developer
+feature: Consent, Web SDK
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: bf651967714745a0b501dcb27373379fe014c9e1
 workflow-type: tm+mt
 source-wordcount: '1311'
 ht-degree: 1%
@@ -19,7 +21,7 @@ Adobe Experience Platform Web SDK consente di recuperare i segnali di consenso d
 
 Questa esercitazione presuppone che tu abbia già determinato come generare i dati sul consenso all’interno della tua CMP e che sia stato creato un set di dati contenente campi di consenso conformi allo standard Adobe o allo standard IAB Transparency and Consent Framework (TCF) 2.0. Se non hai ancora creato questo set di dati, consulta le seguenti esercitazioni prima di tornare a questa guida:
 
-* [Creare un set di dati utilizzando lo standard Adobe](./adobe/dataset.md)
+* [Creare un set di dati utilizzando Adobe standard](./adobe/dataset.md)
 * [Creare un set di dati utilizzando lo standard TCF 2.0](./iab/dataset.md)
 
 Questa guida segue il flusso di lavoro per la configurazione dell’SDK utilizzando l’estensione tag nell’interfaccia utente. Se non desideri utilizzare l&#39;estensione e preferisci incorporare direttamente la versione autonoma dell&#39;SDK sul tuo sito, consulta i seguenti documenti invece di questa guida:
@@ -110,7 +112,7 @@ Esistono due scenari in cui `setConsent` deve essere chiamato sul sito:
 
 ### Sintassi `setConsent`
 
-Il comando [`setConsent`](/help/web-sdk/commands/setconsent.md) prevede un oggetto payload contenente una singola proprietà di tipo array: `consent`. L&#39;array `consent` deve contenere almeno un oggetto che fornisca i campi di consenso richiesti per lo standard Adobe.
+Il comando [`setConsent`](/help/web-sdk/commands/setconsent.md) prevede un oggetto payload contenente una singola proprietà di tipo array: `consent`. L&#39;array `consent` deve contenere almeno un oggetto che fornisca i campi di consenso richiesti per Adobe Standard.
 
 I campi di consenso richiesti per lo standard Adobe sono mostrati nella seguente chiamata di esempio `setConsent`:
 
@@ -141,7 +143,7 @@ alloy("setConsent", {
 
 | Payload, proprietà | Descrizione |
 | --- | --- |
-| `standard` | Lo standard di consenso utilizzato. Per lo standard Adobe, questo valore deve essere impostato su `Adobe`. |
+| `standard` | Lo standard di consenso utilizzato. Per Adobe Standard, questo valore deve essere impostato su `Adobe`. |
 | `version` | Il numero di versione dello standard di consenso indicato in `standard`. Questo valore deve essere impostato su `2.0` per l&#39;elaborazione del consenso secondo lo standard Adobe. |
 | `value` | Le informazioni di consenso aggiornate del cliente, fornite come oggetto XDM conforme alla struttura dei campi di consenso del set di dati abilitati per il profilo. |
 
@@ -201,5 +203,5 @@ Dopo aver effettuato correttamente `setConsent` chiamate con l&#39;SDK, puoi uti
 
 Seguendo questa guida, hai configurato l’estensione Platform Web SDK per inviare i dati sul consenso ad Experience Platform. Per informazioni su come testare l’implementazione, consulta la documentazione dello standard di consenso che stai implementando:
 
-* [Standard Adobe](./adobe/overview.md#test)
+* [Adobe standard](./adobe/overview.md#test)
 * [Standard TCF 2.0](./iab/overview.md#test)

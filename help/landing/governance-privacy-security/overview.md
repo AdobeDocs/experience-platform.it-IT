@@ -3,8 +3,9 @@ keywords: Experience Platform;home;argomenti popolari
 solution: Experience Platform
 title: Panoramica su governance, privacy e sicurezza
 description: Adobe Experience Platform offre diversi servizi e strumenti che ti consentono di controllare in modo affidabile i dati delle esperienze raccolte al fine di rispettare le pratiche aziendali, gli obblighi legali e il processo di sviluppo.
+feature: Data Governance,Privacy
 exl-id: 1ab5a436-c5dd-4e7a-aba1-549f0613f224
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '857'
 ht-degree: 7%
@@ -57,7 +58,7 @@ Per ulteriori informazioni, consulta la [panoramica di Privacy Service](../../pr
 
 Molte normative legali sulla privacy hanno introdotto requisiti per il consenso attivo e specifico in materia di raccolta dati, personalizzazione e altri casi d’uso di marketing. Al fine di soddisfare questi requisiti, Experience Platform consente di acquisire informazioni sul consenso nei profili dei singoli clienti e di utilizzare tali preferenze come fattore determinante nel modo in cui i dati di ciascun cliente vengono utilizzati nei flussi di lavoro della piattaforma a valle.
 
-Per informazioni su come elaborare i dati relativi al consenso e alle preferenze del cliente utilizzando lo standard Adobe, consulta la panoramica sull&#39;elaborazione del consenso [nell&#39;Experience Platform](./consent/adobe/overview.md).
+Per informazioni su come elaborare i dati relativi al consenso e alle preferenze del cliente utilizzando Adobe Standard, consulta la panoramica sull&#39;elaborazione del consenso [nell&#39;Experience Platform](./consent/adobe/overview.md).
 
 Per informazioni su come elaborare i dati sul consenso dei clienti in conformità con IAB Transparency and Consent Framework (TCF) 2.0, consulta la panoramica sul supporto di [IAB TCF 2.0 in Platform](./consent/iab/overview.md).
 

@@ -1,11 +1,13 @@
 ---
 title: Panoramica dei registri di controllo
 description: Scopri come i registri di audit consentono di vedere chi ha eseguito determinate azioni in Adobe Experience Platform.
+role: Admin,Developer
+feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 7ae5e9dc79b4e1f08d2bf98876b02db1967ccbe1
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '1350'
-ht-degree: 35%
+ht-degree: 36%
 
 ---
 
@@ -138,9 +140,9 @@ Nella finestra di dialogo visualizzata, seleziona il formato preferito (**[!UICO
 
 Puoi abilitare gli avvisi di audit per ricevere notifiche per le seguenti regole:
 
-* Creazione di pubblico
-* Aggiornamento del pubblico
-* Eliminazione del pubblico
+* Creazione pubblico
+* Aggiornamento pubblico
+* Eliminazione pubblico
 * Creazione set di dati
 * Aggiornamento set di dati
 * Eliminazione set di dati

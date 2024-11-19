@@ -6,8 +6,10 @@ description: Trova le risposte alle domande frequenti e una guida per la risoluz
 landing-page-description: Trova le risposte alle domande frequenti e una guida per la risoluzione dei problemi relativi agli errori più comuni in Adobe Experience Platform.
 short-description: Trova le risposte alle domande frequenti e una guida per la risoluzione dei problemi relativi agli errori più comuni in Experience Platform.
 type: Documentation
+role: Developer
+feature: API, Audiences, Data Ingestion, Datasets, Destinations, Privacy, Queries, Schemas, Sandboxes, Sources
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
+source-git-commit: bf651967714745a0b501dcb27373379fe014c9e1
 workflow-type: tm+mt
 source-wordcount: '1812'
 ht-degree: 4%
@@ -34,7 +36,7 @@ Per ulteriori informazioni sulla formattazione delle richieste API, consulta la 
 
 ## Qual è la mia organizzazione? {#what-is-my-ims-organization}
 
-Un’organizzazione è una rappresentazione di Adobe di un cliente. Tutte le soluzioni di Adobe concesse in licenza sono integrate con questa organizzazione del cliente. Quando un&#39;organizzazione ha diritto a [!DNL Experience Platform], può assegnare l&#39;accesso agli sviluppatori. L&#39;ID organizzazione (`x-gw-ims-org-id`) rappresenta l&#39;organizzazione per la quale deve essere eseguita una chiamata API ed è pertanto richiesto come intestazione in tutte le richieste API. Questo ID si trova tramite [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui): nella scheda **Integrazioni**, accedi alla sezione **Panoramica** per trovare una particolare integrazione per l&#39;ID in **Credenziali client**. Per informazioni dettagliate su come eseguire l&#39;autenticazione in [!DNL Platform], vedere [esercitazione sull&#39;autenticazione](https://www.adobe.com/go/platform-api-authentication-en).
+Un&#39;organizzazione è una rappresentazione Adobe di un cliente. Tutte le soluzioni Adobe concesse in licenza sono integrate con questa organizzazione del cliente. Quando un&#39;organizzazione ha diritto a [!DNL Experience Platform], può assegnare l&#39;accesso agli sviluppatori. L&#39;ID organizzazione (`x-gw-ims-org-id`) rappresenta l&#39;organizzazione per la quale deve essere eseguita una chiamata API ed è pertanto richiesto come intestazione in tutte le richieste API. Questo ID si trova tramite [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui): nella scheda **Integrazioni**, accedi alla sezione **Panoramica** per trovare una particolare integrazione per l&#39;ID in **Credenziali client**. Per informazioni dettagliate su come eseguire l&#39;autenticazione in [!DNL Platform], vedere [esercitazione sull&#39;autenticazione](https://www.adobe.com/go/platform-api-authentication-en).
 
 ## Dove posso trovare la mia chiave API? {#where-can-i-find-my-api-key}
 

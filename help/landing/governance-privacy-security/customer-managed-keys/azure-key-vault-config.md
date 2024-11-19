@@ -1,8 +1,10 @@
 ---
 title: Configurare un archivio chiavi di Azure
 description: Scopri come creare un nuovo account Enterprise con Azure o utilizzare un account Enterprise esistente e creare l’insieme di credenziali delle chiavi.
+role: Developer
+feature: Privacy
 exl-id: 670e3ca3-a833-4b28-9ad4-73685fa5d74d
-source-git-commit: 4f08e8fcc8d53b981af60226f1397a1d1ac4d8dc
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '561'
 ht-degree: 0%
@@ -67,7 +69,7 @@ Utilizza il modulo fornito per fornire un nome per la chiave e seleziona **RSA**
 
 >[!NOTE]
 >
->Ricorda il nome fornito per la chiave, in quanto è necessario per inviarla all’Adobe.
+>Ricorda il nome fornito per la chiave, in quanto è necessario per inviarla ad Adobe.
 
 Utilizzare i controlli rimanenti per configurare la chiave che si desidera generare o importare in base alle proprie esigenze. Al termine, selezionare **[!DNL Create]**.
 

@@ -3,11 +3,13 @@ keywords: Experience Platform;home;argomenti popolari
 solution: Experience Platform
 title: Nozioni di base sulle API di Experience Platform
 description: Questo documento fornisce una breve panoramica di alcune delle tecnologie e sintassi sottostanti coinvolte con le API Experience Platform.
+role: Developer
+feature: API
 exl-id: cd69ba48-f78c-4da5-80d1-efab5f508756
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '506'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 

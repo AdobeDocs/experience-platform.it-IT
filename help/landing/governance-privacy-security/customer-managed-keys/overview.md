@@ -1,8 +1,10 @@
 ---
 title: Chiavi gestite dal cliente in Adobe Experience Platform
 description: Scopri come impostare le tue chiavi di crittografia per i dati memorizzati in Adobe Experience Platform.
+role: Developer
+feature: Privacy
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: 5a5d35dad5f1b89c0161f4b29722b76c3caf3609
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '752'
 ht-degree: 0%
@@ -39,7 +41,7 @@ Leggi la documentazione collegata per comprendere meglio il processo.
 
 ## Riepilogo del processo {#process-summary}
 
-La CMK è inclusa nell’offerta Healthcare Shield e nell’offerta Privacy and Security Shield di Adobe. Dopo che la tua organizzazione ha acquistato una licenza per una di queste offerte, puoi iniziare un processo una tantum per impostare la funzione.
+La CMK è inclusa nell’Healthcare Shield e nelle offerte Privacy and Security Shield di Adobe. Dopo che la tua organizzazione ha acquistato una licenza per una di queste offerte, puoi iniziare un processo una tantum per impostare la funzione.
 
 >[!WARNING]
 >
