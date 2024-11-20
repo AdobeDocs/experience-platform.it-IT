@@ -3,9 +3,9 @@ keywords: piattaforma;destinazioni;area di lavoro;area di lavoro;interfaccia ute
 title: Area di lavoro destinazioni
 description: 'L’area di lavoro Destinazioni è costituita da cinque sezioni: Panoramica, Catalogo, Sfoglia, Account e Visualizzazione sistema. Sono descritte nelle sezioni seguenti.'
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 78168493d712d2ec0974b811d288902fd94f3e40
 workflow-type: tm+mt
-source-wordcount: '1231'
+source-wordcount: '1233'
 ht-degree: 0%
 
 ---
@@ -77,11 +77,11 @@ La scheda **[!UICONTROL Account]** mostra i dettagli sulle connessioni stabilite
 
 | Elemento | Descrizione |
 |---|---|
-| [!UICONTROL Piattaforma] | La destinazione per la quale hai impostato la connessione. |
+| [!UICONTROL Destinazione] | Connettore di destinazione per il quale è stata impostata la connessione. |
 | [!UICONTROL Tipo di connessione] | Rappresenta il tipo di connessione dell’account al bucket di archiviazione o alla destinazione. A seconda della destinazione, le opzioni di autenticazione sono: <ul><li>Per le destinazioni di e-mail marketing: può essere S3, FTP o BLOB di Azure.</li><li>Per destinazioni pubblicitarie in tempo reale: server-to-server</li><li>Per le destinazioni dell’archiviazione cloud Amazon S3: chiave di accesso </li><li>Per le destinazioni di archiviazione cloud SFTP: autenticazione di base per SFTP</li><li>Autenticazione OAuth 1 o OAuth 2</li><li>Autenticazione token Bearer</li></ul> |
-| [!UICONTROL Nome utente] | Il nome utente selezionato nella procedura guidata [connetti destinazione](../catalog/email-marketing/overview.md#connect-destination). |
-| [!UICONTROL Destinazioni] | Rappresenta il numero di flussi di dati di destinazione univoci e riusciti connessi alle informazioni di base create per una destinazione. |
-| [!UICONTROL Autorizzato] | La data in cui la connessione a questa destinazione è stata autorizzata. |
+| [!UICONTROL Nome utente] | Il nome utente selezionato nel flusso di lavoro [connetti destinazione](../catalog/email-marketing/overview.md#connect-destination). |
+| [!UICONTROL Connessioni] | Rappresenta il numero di flussi di dati di destinazione univoci e riusciti connessi alle informazioni di base create per una destinazione. |
+| [!UICONTROL Data di autorizzazione] | La data in cui la connessione a questa destinazione è stata autorizzata. |
 
 {style="table-layout:auto"}
 
