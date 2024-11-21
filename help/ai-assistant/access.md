@@ -2,9 +2,9 @@
 title: Accedere all’Assistente AI in Experience Platform
 description: Scopri come accedere all’Assistente AI nell’interfaccia utente di Experience Cloud.
 exl-id: c4cdff25-512c-4b4c-be91-ad9360067a0a
-source-git-commit: 706a20e70aa20adb0f4a554d0ec35518811ea9a1
+source-git-commit: 8d69d7010442519ce02bb9a504d4228742b4f092
 workflow-type: tm+mt
-source-wordcount: '341'
+source-wordcount: '364'
 ht-degree: 0%
 
 ---
@@ -32,6 +32,12 @@ Utilizza l’interfaccia utente delle autorizzazioni per concedere le autorizzaz
 Una volta ottenute le autorizzazioni necessarie, è possibile accedere ad Assistente IA selezionando l’icona Assistente IA nell’intestazione superiore dell’applicazione in uso.
 
 ![Assistente AI con esperienza utente iniziale.](./images/ai-assistant.png)
+
+## Ottenere l’accesso all’Assistente AI
+
+Guarda il video seguente per scoprire come configurare l’accesso a AI Assistant per le organizzazioni e gli utenti.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3436470/?learn=on)
 
 ## Passaggi successivi
 
