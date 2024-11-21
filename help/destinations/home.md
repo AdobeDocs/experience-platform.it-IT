@@ -2,10 +2,10 @@
 title: Panoramica sulle destinazioni
 description: Le destinazioni sono integrazioni preconfigurate con piattaforme di destinazione che consentono l’attivazione fluida dei dati da Adobe Experience Platform. Puoi utilizzare le Destinazioni in Adobe Experience Platform per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 6dd6190f1b006ffb3346eea6dc917ce52e0aa1c6
+source-git-commit: 6d97f132788a249e0bf5c293e34d9d529325f099
 workflow-type: tm+mt
-source-wordcount: '1088'
-ht-degree: 4%
+source-wordcount: '1231'
+ht-degree: 3%
 
 ---
 
@@ -47,7 +47,7 @@ I controlli nell&#39;area di lavoro [destinazioni](./ui/destinations-workspace.m
 
 Ad Experience Platform, puoi attivare i dati per vari tipi di destinazioni, per soddisfare i casi d’uso di attivazione. Le destinazioni variano da integrazioni basate su API a integrazioni con sistemi di ricezione di file, destinazioni di ricerca dei profili e altro ancora. Per informazioni dettagliate su tutte le destinazioni disponibili, leggere la [panoramica sui tipi e sulle categorie di destinazione](./destination-types.md).
 
-## Destinazioni create da Adobi e da partner {#adobe-and-partner-built-destinations}
+## Destinazioni create da Adobe e dai partner {#adobe-and-partner-built-destinations}
 
 Alcuni dei connettori nel catalogo delle destinazioni Experience Platform sono generati e gestiti da Adobe, mentre altri sono generati e gestiti da società partner che utilizzano [Destination SDK](/help/destinations/destination-sdk/overview.md). Una nota nella parte superiore della pagina della documentazione per ciascun connettore creato dal partner richiama se una destinazione è stata creata e gestita dal partner. Il [connettore Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), ad esempio, è stato creato da Adobe, mentre il [connettore TikTok](/help/destinations/catalog/social/tiktok.md) è stato creato e gestito dal team TikTok.
 
@@ -115,3 +115,13 @@ Per ulteriori informazioni sulle violazioni dei criteri per i dati nel flusso di
 * [Attiva i dati del pubblico nelle destinazioni di esportazione del pubblico in streaming](./ui/activate-segment-streaming-destinations.md#review)
 * [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo di streaming](./ui/activate-streaming-profile-destinations.md#review)
 * [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](./ui/activate-batch-profile-destinations.md#review)
+
+## Termini e condizioni {#terms-and-conditions}
+
+Utilizzando una delle Destinazioni etichettate come beta (&quot;Beta&quot;), l&#39;Utente riconosce che il Beta è fornito ***&quot;così com&#39;è&quot; senza alcuna garanzia***.
+
+Adobe non ha alcun obbligo di mantenere, correggere, aggiornare, modificare, modificare o supportare in altro modo Beta. Si consiglia di utilizzare il materiale informativo e di non fare affidamento in alcun modo sul corretto funzionamento o sulle prestazioni di tale Beta e/o dei materiali di accompagnamento. Beta è considerata un&#39;informazione riservata di Adobe.
+
+Qualsiasi &quot;Feedback&quot; (informazioni relative a Beta, compresi, a titolo esemplificativo e non esaustivo, problemi o difetti riscontrati durante l’utilizzo di Beta, suggerimenti, miglioramenti e raccomandazioni) fornito dall’Utente a Adobe viene assegnato a Adobe con la presente, compresi tutti i diritti, il titolo e l’interesse per e per tale Feedback.
+
+Invia un feedback aperto o crea un ticket di supporto per condividere i suggerimenti o segnalare un bug, cercare un miglioramento delle funzioni.
