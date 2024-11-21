@@ -4,10 +4,10 @@ title: Guida end-to-end al controllo degli accessi basato su attributi
 description: Questo documento fornisce una guida end-to-end sul controllo degli accessi basato su attributi in Adobe Experience Platform
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: 9c415b7721eeceff75d46463853f22dd3310cb9a
+source-git-commit: b9ce27b6feb0300464507a21510f40900677c3be
 workflow-type: tm+mt
-source-wordcount: '1736'
-ht-degree: 18%
+source-wordcount: '1762'
+ht-degree: 17%
 
 ---
 
@@ -55,7 +55,7 @@ Tramite [!UICONTROL Autorizzazioni], puoi creare e gestire i ruoli e assegnare l
 
 Se non disponi dei privilegi di amministratore, contatta l’amministratore di sistema per ottenere l’accesso.
 
-Una volta ottenuti i privilegi di amministratore, vai a [Adobe Experience Cloud](https://experience.adobe.com/) e accedi con le credenziali di Adobe. Una volta effettuato l&#39;accesso, viene visualizzata la pagina **[!UICONTROL Panoramica]** per l&#39;organizzazione per la quale si dispone dei privilegi di amministratore. Questa pagina mostra i prodotti a cui la tua organizzazione è abbonata, insieme ad altri controlli per aggiungere utenti e amministratori all’organizzazione. Seleziona **[!UICONTROL Autorizzazioni]** per aprire l&#39;area di lavoro per l&#39;integrazione con Platform.
+Una volta ottenuti i privilegi di amministratore, vai a [Adobe Experience Cloud](https://experience.adobe.com/) e accedi utilizzando le tue credenziali di Adobe. Una volta effettuato l&#39;accesso, viene visualizzata la pagina **[!UICONTROL Panoramica]** per l&#39;organizzazione per la quale si dispone dei privilegi di amministratore. Questa pagina mostra i prodotti a cui la tua organizzazione è abbonata, insieme ad altri controlli per aggiungere utenti e amministratori all’organizzazione. Seleziona **[!UICONTROL Autorizzazioni]** per aprire l&#39;area di lavoro per l&#39;integrazione con Platform.
 
 ![Immagine che mostra il prodotto Autorizzazioni selezionato in Adobe Experience Cloud](../images/flac-ui/flac-select-product.png)
 
@@ -156,6 +156,10 @@ Viene visualizzata la finestra di dialogo **[!UICONTROL Modifica etichette]**, c
 ![Immagine che mostra la selezione dell&#39;etichetta RHD e il salvataggio in corso](../images/abac-end-to-end-user-guide/abac-select-segment-labels.png)
 
 Ripetere i passaggi precedenti con **[!UICONTROL Insulina &lt;50]**.
+
+>[!NOTE]
+>
+> Assegnare le etichette create nell&#39;area di lavoro [!UICONTROL Autorizzazioni] (come le etichette dei segmenti di cui sopra) a vari oggetti in Adobe Journey Optimizer utilizzando [Controllo dell&#39;accesso a livello di oggetto](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access).&quot;
 
 ## Attivare il criterio di controllo degli accessi {#policy}
 
