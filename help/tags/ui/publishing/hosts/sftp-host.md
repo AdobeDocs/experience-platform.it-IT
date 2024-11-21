@@ -2,10 +2,10 @@
 title: Host SFTP
 description: Scopri come configurare i tag in Adobe Experience Platform per distribuire le build della libreria a un server SFTP protetto e con hosting autonomo.
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 85bd78928b1b503bbb6bbc44075ed0f66e046a4c
 workflow-type: tm+mt
 source-wordcount: '811'
-ht-degree: 36%
+ht-degree: 38%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 36%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Adobe Experience Platform ti consente di distribuire le build della libreria di tag a un server SFTP protetto che ospiti, offrendoti un maggiore controllo su come vengono memorizzate e gestite le build. Questa guida illustra come impostare un host SFTP per una proprietà tag nell’interfaccia utente di Experience Platform o nell’interfaccia utente di Data Collection.
 
@@ -70,7 +70,7 @@ La finestra di dialogo si espande per includere opzioni di configurazione aggiun
 | [!UICONTROL Non utilizzare i collegamenti simbolici] | Per impostazione predefinita, tutti gli host SFTP utilizzano collegamenti simbolici (symlink) per fare riferimento alle [build](../builds.md) della libreria salvate nel server. Tuttavia, non tutti i server supportano l&#39;utilizzo di symlink. Quando questa opzione è selezionata, l’host utilizza un’operazione di copia per aggiornare direttamente le risorse della build invece di utilizzare i symlink. |
 | [!UICONTROL URL server SFTP] | Percorso URL di base per il server. |
 | [!UICONTROL Percorso] | Percorso da aggiungere all&#39;URL del server base per questo host. |
-| [!UICONTROL Porta] | Per la porta, scegli una delle seguenti possibilità:<ul><li>`21`</li><li>`22`</li><li>`80`</li><li>`200-299`</li><li>`443`</li><li>`2000-2999`</li><li>`4343`</li><li>`8080`</li><li>`8888`</li></ul>Come best practice per la sicurezza, Adobe limita il numero di porte che possono essere utilizzate per il traffico in uscita. Le porte selezionate sono solitamente consentite dai firewall aziendali e includono alcuni intervalli per garantire flessibilità. |
+| [!UICONTROL Porta] | Per la porta, scegli una delle seguenti possibilità:<ul><li>`21`</li><li>`22`</li><li>`201`</li><li>`200`</li><li>`2002`</li><li>`2018`</li><li>`2022`</li><li>`2200`</li><li>`2222`</li><li>`2333`</li><li>`2939`</li><li>`443`</li><li>`4343`</li><li>`80`</li><li>`8080`</li><li>`8888`</li></ul>Come best practice per la sicurezza, Adobe limita il numero di porte che possono essere utilizzate per il traffico in uscita. Le porte selezionate sono solitamente consentite dai firewall aziendali e includono alcuni intervalli per garantire flessibilità. |
 | [!UICONTROL Nome utente] | Nome utente da utilizzare per l&#39;accesso al server. |
 | [!UICONTROL Chiave privata crittografata] | La chiave privata crittografata creata in un [passaggio precedente](#access-key). |
 
