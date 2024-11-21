@@ -5,7 +5,7 @@ breadcrumb-title: Guida di Query Service
 user-guide-description: Utilizza il linguaggio SQL standard per eseguire query sui dati nel data lake in Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: fed47e132e1ff46fdf3df1a5a3f9f3e99bd1340c
+source-git-commit: ac29d10d3774a736d1e54255508ba244ff72f278
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 22%
@@ -113,7 +113,7 @@ Implementa modelli {#implement-models}
    - [Modelli di query](api/query-templates.md)
    - [Query accelerate](api/accelerated-queries.md)
    - [Sottoscrizioni avvisi](api/alert-subscriptions.md)
-- API di autenticazione servizio query {#auth-api}
+- API di autorizzazione Data Distiller {#auth-api}
    - [Panoramica](auth-api/overview.md)
    - [Introduzione](auth-api/getting-started.md)
    - [Accesso IP](auth-api/ip-access.md)

@@ -3,7 +3,7 @@ keywords: Indirizzo IP, intervallo IP, elenco consentiti, inserisco nell'elenco 
 title: INSERIRE NELL'ELENCO CONSENTITI Indirizzo IP per Query Service
 description: Questa pagina fornisce intervalli IP aggiornati che è possibile aggiungere al elenco Consentiti di per un accesso sicuro a Query Service.
 exl-id: f6745e0f-d387-45f2-9f72-054e721016ff
-source-git-commit: e6c148b943c68bff5330c7ff021ffa88ba131639
+source-git-commit: ac29d10d3774a736d1e54255508ba244ff72f278
 workflow-type: tm+mt
 source-wordcount: '312'
 ht-degree: 0%
@@ -47,7 +47,7 @@ L’Adobe consiglia di aggiungere i seguenti intervalli IP specifici per area ge
 
 ## Impostare restrizioni basate su IP {#set-ip-restrictions}
 
-Utilizza le [guide API per l&#39;autorizzazione dei servizi di query](./auth-api/overview.md) per impostare restrizioni basate su IP. Queste restrizioni basate su IP garantiscono che solo le reti e i computer client approvati possano accedere ai dati tramite SQL in Adobe Experience Platform. Scopri come configurare, applicare e monitorare le restrizioni IP per mantenere standard di sicurezza elevati, con funzionalità di tracciamento degli accessi in tempo reale e avvisi.
+Utilizza le [guide API per l&#39;autorizzazione di Data Distiller](./auth-api/overview.md) per impostare restrizioni basate su IP. Queste restrizioni basate su IP garantiscono che solo le reti e i computer client approvati possano accedere ai dati tramite SQL in Adobe Experience Platform. Scopri come configurare, applicare e monitorare le restrizioni IP per mantenere standard di sicurezza elevati, con funzionalità di tracciamento degli accessi in tempo reale e avvisi.
 
 * [Guida introduttiva](./auth-api/getting-started.md)
 * [Guida dell’endpoint di accesso IP](./auth-api/ip-access.md)

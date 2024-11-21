@@ -1,22 +1,22 @@
 ---
-title: Guida API per l’autorizzazione di Query Service
-description: Scopri come utilizzare l’API di autorizzazione di Query Service per applicare restrizioni IP basate sulla rete per le connessioni sicure tramite SQL. Utilizza questa API per migliorare il controllo dell’accesso ai dati per i dati Adobe Experience Platform.
+title: Guida all’API di autorizzazione di Data Distiller
+description: Scopri come utilizzare l’API di autorizzazione di Data Distiller per applicare restrizioni IP basate sulla rete per connessioni sicure tramite SQL. Utilizza questa API per migliorare il controllo dell’accesso ai dati per i dati Adobe Experience Platform.
 role: Developer
 exl-id: bcc5ea0e-cb6d-4c7b-bf9f-a0336f76c4c8
-source-git-commit: bf696c8836407a2fea82e9078201cb1f5004bcf8
+source-git-commit: ac29d10d3774a736d1e54255508ba244ff72f278
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 2%
 
 ---
 
-# Guida API per l’autorizzazione di Query Service
+# Guida all’API di autorizzazione di Data Distiller
 
 >[!AVAILABILITY]
 >
 >Questa funzionalità è disponibile per i clienti che hanno acquistato il componente aggiuntivo Data Distiller. Per ulteriori informazioni, contatta il tuo rappresentante Adobe.
 
-Per applicare le restrizioni basate su IP, utilizza l’API di autorizzazione del servizio di query. L&#39;applicazione di queste misure garantisce che solo le reti e i computer client approvati possano accedere ai dati tramite SQL in Adobe Experience Platform. Questi controlli consentono di soddisfare gli standard di sicurezza più severi e forniscono al contempo il monitoraggio e l&#39;avviso degli accessi in tempo reale.
+Utilizza Data Distiller Authorization API per applicare restrizioni basate su IP. L&#39;applicazione di queste misure garantisce che solo le reti e i computer client approvati possano accedere ai dati tramite SQL in Adobe Experience Platform. Questi controlli consentono di soddisfare gli standard di sicurezza più severi e forniscono al contempo il monitoraggio e l&#39;avviso degli accessi in tempo reale.
 
 Con questa API, puoi configurare, applicare e monitorare le restrizioni IP per l’accesso ai dati tramite l’interfaccia SQL. Questo documento fornisce una panoramica di alto livello delle funzioni principali dell’API, delle funzioni endpoint e delle funzionalità future.
 
@@ -39,4 +39,4 @@ Per ulteriori dettagli sulla registrazione di controllo, consulta la [documentaz
 
 ## Passaggi successivi
 
-Inizia a usare l&#39;API di autorizzazione di Query Service consultando la [Guida introduttiva](./getting-started.md) per i passaggi di configurazione essenziali, incluse le intestazioni richieste e le convenzioni di chiamata API. Quindi, esplora le guide specifiche per l&#39;endpoint in [Accesso IP](./ip-access.md) e [Convalida IP](./validate.md) per configurare e gestire l&#39;accesso sicuro ai dati.
+Inizia a usare l&#39;API di autorizzazione Data Distiller consultando la [Guida introduttiva](./getting-started.md) per i passaggi di configurazione essenziali, incluse le intestazioni richieste e le convenzioni di chiamata API. Quindi, esplora le guide specifiche per l&#39;endpoint in [Accesso IP](./ip-access.md) e [Convalida IP](./validate.md) per configurare e gestire l&#39;accesso sicuro ai dati.
