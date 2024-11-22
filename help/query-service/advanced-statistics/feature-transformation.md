@@ -2,9 +2,10 @@
 title: Tecniche di trasformazione delle feature
 description: Scopri le tecniche di pre-elaborazione essenziali come la trasformazione dei dati, la codifica e il ridimensionamento delle funzioni, che preparano i dati per l’apprendimento dei modelli statistici. Descrive l'importanza di gestire i valori mancanti e di convertire i dati di categoria per migliorare le prestazioni e la precisione del modello.
 role: Developer
-source-git-commit: b248e8f8420b617a117d36aabad615e5bbf66b58
+exl-id: ed7fa9b7-f74e-481b-afba-8690ce50c777
+source-git-commit: e7bc30c153f67c59e9c04e8c8df60394f48871d0
 workflow-type: tm+mt
-source-wordcount: '3437'
+source-wordcount: '3450'
 ht-degree: 8%
 
 ---
@@ -55,14 +56,14 @@ CREATE model modelname options(model_type='logistic_reg', label='rating') AS SEL
 
 Per definire la preelaborazione dei dati personalizzati nell&#39;istruzione `CREATE MODEL`, utilizzare la clausola `TRANSFORM` in combinazione con un numero qualsiasi di funzioni di trasformazione disponibili. Queste funzioni di pre-elaborazione manuale possono essere utilizzate anche al di fuori della clausola `TRANSFORM`. Tutte le trasformazioni descritte nella sezione [trasformatore seguente](#available-transformations) possono essere utilizzate per la preelaborazione manuale dei dati.
 
-### Caratteristiche principali
+### Caratteristiche principali {#key-characteristics}
 
 Di seguito sono riportate le caratteristiche chiave della trasformazione delle feature da considerare quando definite le funzioni di pre-elaborazione:
 
 - **Sintassi**: `TRANSFORM(functionName(colName, parameters) <aliasNAME>)`
    - Il nome alias è obbligatorio nella sintassi. È necessario fornire un nome di alias per evitare che la query abbia esito negativo.
 
-- **Parametri**: i parametri sono argomenti posizionali. Ciò significa che ogni parametro può accettare solo determinati valori. Per informazioni dettagliate su quale funzione utilizza un determinato argomento, consulta la documentazione pertinente.
+- **Parametri**: i parametri sono argomenti posizionali. Ciò significa che ogni parametro può accettare solo determinati valori e richiedere che tutti i parametri precedenti siano specificati se vengono forniti valori personalizzati. Per informazioni dettagliate su quale funzione utilizza un determinato argomento, consulta la documentazione pertinente.
 
 - **Trasformatori concatenamento**: l&#39;output di un trasformatore può diventare l&#39;input di un altro trasformatore.
 
@@ -180,7 +181,7 @@ transform(string_imputer(name, 'unknown_name') as name_imputed)
 | 1 | ml_unknown |
 | 2 | Alice |
 
-#### Imputer booleano {#imputer}
+#### Imputer booleano {#boolean-imputer}
 
 Il trasformatore **Boolean imputer** completa i valori mancanti in un set di dati per una colonna booleana. Le colonne di input e output devono essere di tipo `Boolean`.
 

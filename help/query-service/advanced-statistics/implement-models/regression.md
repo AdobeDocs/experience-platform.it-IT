@@ -2,9 +2,10 @@
 title: Algoritmi di regressione
 description: Scopri come configurare e ottimizzare vari algoritmi di regressione con parametri chiave, descrizioni e codice di esempio per implementare modelli statistici avanzati.
 role: Developer
-source-git-commit: b248e8f8420b617a117d36aabad615e5bbf66b58
+exl-id: d38733bb-0420-40bf-a70b-19e0e0e58730
+source-git-commit: 8b9cfb48a11701f0e4b358416c6b627bedf1db8b
 workflow-type: tm+mt
-source-wordcount: '2150'
+source-wordcount: '2384'
 ht-degree: 4%
 
 ---
@@ -23,18 +24,18 @@ La tabella seguente illustra i parametri chiave per la configurazione e l’otti
 
 | Parametro | Descrizione | Valore predefinito | Valori possibili |
 |------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------------------------------------|
-| `MAX_BINS` | Il numero massimo di raccoglitori determina il modo in cui le feature continue vengono suddivise in intervalli discreti. Questo influisce sul modo in cui le funzioni vengono suddivise in ciascun nodo della struttura decisionale. Più contenitori forniscono maggiore granularità. | 32 | Deve essere almeno 2 e il numero di categorie in qualsiasi funzione categorica. |
-| `CACHE_NODE_IDS` | Se `false`, l&#39;algoritmo passa gli alberi agli esecutori per far corrispondere le istanze con i nodi. Se `true`, l&#39;algoritmo memorizza nella cache gli ID nodo per ogni istanza. La memorizzazione nella cache può accelerare la formazione degli alberi più profondi. | false | `true` o `false` |
-| `CHECKPOINT_INTERVAL` | Specifica la frequenza di checkpoint per gli ID dei nodi memorizzati in cache. `10`, ad esempio, indica che la cache verrà sottoposta a checkpoint ogni 10 iterazioni. | 10 | (>=1) |
-| `IMPURITY` | Il criterio utilizzato per il calcolo dell’acquisizione di informazioni (senza distinzione tra maiuscole e minuscole). | `gini` | `entropy`, `gini` |
-| `MAX_DEPTH` | Profondità massima dell&#39;albero (non negativa). Ad esempio, profondità `0` significa 1 nodo foglia e profondità `1` significa 1 nodo interno e 2 nodi foglia. | 5 | [0, 30] |
-| `MIN_INFO_GAIN` | Il guadagno minimo di informazioni necessario affinché una suddivisione possa essere considerata in un nodo della struttura. | 0,0 | (>=0,0) |
-| `MIN_WEIGHT_FRACTION_PER_NODE` | Frazione minima del numero di campioni ponderati che ogni bambino deve avere dopo una divisione. Se una suddivisione fa sì che la frazione del peso totale in uno dei figli sia inferiore a questo valore, viene eliminata. | 0,0 | (>=0,0; 0,5) |
-| `MIN_INSTANCES_PER_NODE` | Il numero minimo di istanze che ogni figlio deve avere dopo una suddivisione. Se una suddivisione genera un numero di istanze inferiore a questo valore, la suddivisione viene eliminata. | 1 | (>=1) |
-| `MAX_MEMORY_IN_MB` | Memoria massima, in MB, allocata all&#39;aggregazione dell&#39;istogramma. Se la memoria è troppo piccola, viene diviso solo 1 nodo per iterazione, il che può causare il superamento delle dimensioni degli aggregati. | 256 |                                                                                                        |
-| `PREDICTION_COL` | Il parametro per il nome della colonna di previsione. | &quot;previsione&quot; | Qualsiasi stringa |
-| `SEED` | Il parametro per il valore di inizializzazione casuale. | N/D | Qualsiasi numero a 64 bit |
-| `WEIGHT_COL` | Parametro per il nome della colonna di rilevanza. Se non è impostato o è vuoto, tutti i pesi delle istanze vengono trattati come `1.0`. | non impostato |                                                                                                        |
+| `MAX_BINS` | Questo parametro specifica il numero massimo di raccoglitori utilizzati per determinare le feature continue e le divisioni in ogni nodo. Più raccoglitori offrono granularità e dettagli più precisi. | 32 | Deve essere almeno 2 e il numero di categorie in qualsiasi funzione categorica. |
+| `CACHE_NODE_IDS` | Questo parametro determina se memorizzare in cache gli ID dei nodi per ogni istanza. Se `false`, l&#39;algoritmo passa gli alberi agli esecutori per far corrispondere le istanze con i nodi. Se `true`, l&#39;algoritmo memorizza nella cache gli ID dei nodi per ogni istanza, in modo da velocizzare l&#39;addestramento degli alberi più profondi. Gli utenti possono configurare la frequenza di checkpoint della cache o disabilitarla impostando `CHECKPOINT_INTERVAL`. | false | `true` o `false` |
+| `CHECKPOINT_INTERVAL` | Questo parametro specifica la frequenza con cui gli ID dei nodi memorizzati in cache devono essere sottoposti a checkpoint. Ad esempio, impostandolo su `10`, la cache verrà sottoposta a checkpoint ogni 10 iterazioni. Applicabile solo se `CACHE_NODE_IDS` è impostato su `true` e la directory del punto di controllo è configurata in `org.apache.spark.SparkContext`. | 10 | (>=1) |
+| `IMPURITY` | Questo parametro specifica il criterio utilizzato per calcolare l&#39;incremento di informazioni. I valori supportati sono `entropy` e `gini`. | `gini` | `entropy`, `gini` |
+| `MAX_DEPTH` | Questo parametro specifica la profondità massima dell&#39;albero. Ad esempio, una profondità di `0` significa 1 nodo foglia, mentre una profondità di `1` significa 1 nodo interno e 2 nodi foglia. La profondità deve essere compresa nell&#39;intervallo `[0, 30]`. | 5 | [0, 30] |
+| `MIN_INFO_GAIN` | Questo parametro imposta il guadagno minimo di informazioni necessario affinché una suddivisione venga considerata valida in un nodo della struttura. | 0,0 | (>=0,0) |
+| `MIN_WEIGHT_FRACTION_PER_NODE` | Questo parametro specifica la frazione minima del numero di campioni ponderati che ogni nodo figlio deve avere dopo una suddivisione. Se uno dei nodi figlio ha una frazione inferiore a questo valore, la divisione verrà eliminata. | 0,0 | [0,0, 0,5] |
+| `MIN_INSTANCES_PER_NODE` | Questo parametro imposta il numero minimo di istanze che ogni nodo figlio deve avere dopo una divisione. Se una suddivisione genera un numero di istanze inferiore a questo valore, la suddivisione verrà eliminata in quanto non valida. | 1 | (>=1) |
+| `MAX_MEMORY_IN_MB` | Questo parametro specifica la memoria massima, in megabyte (MB), allocata per l&#39;aggregazione dell&#39;istogramma. Se la memoria è troppo piccola, verrà diviso un solo nodo per iterazione e i relativi aggregati potrebbero superare queste dimensioni. | 256 | Qualsiasi valore intero positivo |
+| `PREDICTION_COL` | Questo parametro specifica il nome della colonna utilizzata per memorizzare le previsioni. | &quot;previsione&quot; | Qualsiasi stringa |
+| `SEED` | Questo parametro imposta il valore di inizializzazione casuale utilizzato nel modello. | Nessuna | Qualsiasi numero a 64 bit |
+| `WEIGHT_COL` | Questo parametro specifica il nome della colonna di rilevanza. Se questo parametro non è impostato o è vuoto, tutti i pesi delle istanze vengono trattati come `1.0`. | Non impostato | Qualsiasi stringa |
 
 {style="table-layout:auto"}
 
@@ -53,22 +54,22 @@ CREATE MODEL modelname OPTIONS(
 
 **Parametri**
 
-La tabella seguente illustra i parametri chiave per la configurazione e l&#39;ottimizzazione delle prestazioni della regressione di [!DNL Factorization Machines].
+La tabella seguente descrive i parametri chiave per configurare e ottimizzare le prestazioni della regressione di [!DNL Factorization Machines].
 
 | Parametro | Descrizione | Valore predefinito | Valori possibili |
-|------------------------|--------------------------------------------------------------------------------------|---------------|----------------|
-| `TOL` | La tolleranza di convergenza. | `1E-6` | (>= 0) |
-| `FACTOR_SIZE` | La dimensionalità dei fattori. | 8 | (>= 0) |
-| `FIT_INTERCEPT` | Se adattare un termine di intercettazione. | `true` | `true`, `false` |
-| `FIT_LINEAR` | Se adattarsi al termine lineare (noto anche come termine a una via). | `true` | `true`, `false` |
-| `INIT_STD` | Deviazione standard dei coefficienti iniziali. | 0,01 | (>= 0) |
-| `MAX_ITER` | Il numero di iterazioni che l’algoritmo deve eseguire. | 100 | (>= 0) |
-| `MINI_BATCH_FRACTION` | Frazione mini-batch, che deve essere compresa nell&#39;intervallo `(0, 1]`. | 1,0 | `(0, 1]` |
-| `REG_PARAM` | Il parametro di regolarizzazione. | 0,0 | (>= 0) |
-| `SEED` | Il seme casuale. | NON IMPOSTATO | Qualsiasi numero a 64 bit |
-| `SOLVER` | L’algoritmo del risolutore utilizzato per l’ottimizzazione. | &quot;adamW&quot; | `gd`, `adamW` |
-| `STEP_SIZE` | Dimensione del passaggio iniziale per il primo passaggio (simile al tasso di apprendimento). | 1,0 |                   |
-| `PREDICTION_COL` | Nome della colonna di previsione. | &quot;previsione&quot; | Qualsiasi stringa |
+|------------------------|-------------------------------------------------------------------------------------------------|---------------|-----------------------|
+| `TOL` | Questo parametro specifica la tolleranza di convergenza per l&#39;algoritmo. Valori più elevati possono determinare una convergenza più rapida, ma una precisione minore. | `1E-6` | (>= 0) |
+| `FACTOR_SIZE` | Questo parametro definisce la dimensionalità dei fattori. Valori più alti aumentano la complessità del modello. | 8 | (>= 0) |
+| `FIT_INTERCEPT` | Questo parametro indica se il modello deve includere un termine di intercettazione. | `true` | `true`, `false` |
+| `FIT_LINEAR` | Questo parametro specifica se includere nel modello un termine lineare (detto anche termine a una via). | `true` | `true`, `false` |
+| `INIT_STD` | Questo parametro definisce la deviazione standard dei coefficienti iniziali utilizzati nel modello. | 0,01 | (>= 0) |
+| `MAX_ITER` | Questo parametro specifica il numero massimo di iterazioni per l&#39;algoritmo da eseguire. | 100 | (>= 0) |
+| `MINI_BATCH_FRACTION` | Questo parametro imposta la frazione mini-batch, che determina la porzione di dati utilizzata in ciascun batch. Deve essere compreso nell&#39;intervallo `(0, 1]`. | 1,0 | `(0, 1]` |
+| `REG_PARAM` | Questo parametro imposta il parametro di regolarizzazione per evitare l&#39;eccesso di adattamento. | 0,0 | (>= 0) |
+| `SEED` | Questo parametro specifica il valore di inizializzazione casuale utilizzato per l&#39;inizializzazione del modello. | Nessuna | Qualsiasi numero a 64 bit |
+| `SOLVER` | Questo parametro specifica l&#39;algoritmo del risolutore utilizzato per l&#39;ottimizzazione. | &quot;adamW&quot; | `gd` (discendenza sfumatura), `adamW` |
+| `STEP_SIZE` | Questo parametro specifica la dimensione del passaggio iniziale (o il tasso di apprendimento) per il primo passaggio di ottimizzazione. | 1,0 | Qualsiasi valore positivo |
+| `PREDICTION_COL` | Questo parametro specifica il nome della colonna in cui sono memorizzate le previsioni. | &quot;previsione&quot; | Qualsiasi stringa |
 
 {style="table-layout:auto"}
 
@@ -98,12 +99,12 @@ La tabella seguente descrive i parametri chiave per configurare e ottimizzare le
 | `FAMILY` | Parametro family che descrive la distribuzione degli errori utilizzata nel modello. Le opzioni supportate sono `gaussian`, `binomial`, `poisson`, `gamma` e `tweedie`. | &quot;gaussian&quot; | `gaussian`, `binomial`, `poisson`, `gamma`, `tweedie` |
 | `FIT_INTERCEPT` | Se adattare un termine di intercettazione. | `true` | `true`, `false` |
 | `LINK` | La funzione di collegamento, che definisce la relazione tra il predittore lineare e la media della funzione di distribuzione. Le opzioni supportate sono `identity`, `log`, `inverse`, `logit`, `probit`, `cloglog` e `sqrt`. | NON IMPOSTATO | `identity`, `log`, `inverse`, `logit`, `probit`, `cloglog`, `sqrt` |
-| `LINK_POWER` | L&#39;indice nella funzione di collegamento di alimentazione, applicabile alla famiglia [!DNL Tweedie]. Se non viene impostato, il valore predefinito è `1 - variancePower`, seguendo il pacchetto R `statmod`. Le potenze di collegamento di 0, 1, -1 e 0,5 corrispondono rispettivamente ai collegamenti Log, Identity, Inverse e Sqrt. | 1 |
+| `LINK_POWER` | Questo parametro specifica l&#39;indice nella funzione di collegamento di alimentazione. Il parametro è applicabile solo alla famiglia [!DNL Tweedie]. Se non viene impostato, il valore predefinito è `1 - variancePower`, che viene allineato con il pacchetto R `statmod`. Le potenze di collegamento specifiche di 0, 1, -1 e 0,5 corrispondono rispettivamente ai collegamenti Log, Identity, Inverse e Sqrt. | 1 | Qualsiasi valore numerico |
 | `SOLVER` | L’algoritmo del risolutore utilizzato per l’ottimizzazione. Opzione supportata: `irls` (riponderazione iterativa dei minimi quadrati). | &quot;irls&quot; | `irls` |
-| `VARIANCE_POWER` | La potenza della funzione di varianza della distribuzione [!DNL Tweedie], che definisce la relazione tra varianza e media. I valori supportati sono 0 e `[1, inf)`. | 0,0 | 0, `[1, inf)` |
+| `VARIANCE_POWER` | Questo parametro specifica la potenza della funzione di varianza della distribuzione [!DNL Tweedie], definendo la relazione tra varianza e media. I valori supportati sono 0 e `[1, inf)`. Le potenze di varianza di 0, 1 e 2 corrispondono rispettivamente alle famiglie Gaussian, Poisson e Gamma. | 0,0 | 0, `[1, inf)` |
 | `LINK_PREDICTION_COL` | Nome della colonna di previsione del collegamento (predicatore lineare). | NON IMPOSTATO | Qualsiasi stringa |
-| `OFFSET_COL` | Nome della colonna di offset. Se non è impostato, tutti gli offset di istanza vengono trattati come 0,0. La feature di offset ha un coefficiente costante di 1,0. | NON IMPOSTATO |                                                                        |
-| `WEIGHT_COL` | Nome della colonna di rilevanza. Se non è impostato o vuoto, tutti i pesi delle istanze vengono trattati come `1.0`. Nella famiglia Binomial, i pesi corrispondono al numero di prove e i pesi non interi sono arrotondati nel calcolo dell’AIC. | NON IMPOSTATO |                                                                        |
+| `OFFSET_COL` | Nome della colonna di offset. Se non è impostato, tutti gli offset di istanza vengono trattati come 0,0. La feature di offset ha un coefficiente costante di 1,0. | NON IMPOSTATO | Qualsiasi stringa |
+| `WEIGHT_COL` | Nome della colonna di rilevanza. Se non è impostato o vuoto, tutti i pesi delle istanze vengono trattati come `1.0`. Nella famiglia Binomial, i pesi corrispondono al numero di prove e i pesi non interi sono arrotondati nel calcolo dell’AIC. | NON IMPOSTATO | Qualsiasi stringa |
 
 {style="table-layout:auto"}
 
@@ -133,14 +134,14 @@ La tabella seguente descrive i parametri chiave per configurare e ottimizzare le
 | `MIN_INFO_GAIN` | Il guadagno minimo di informazioni necessario affinché una suddivisione possa essere considerata in un nodo della struttura. | 0,0 | (>= 0,0) |
 | `MIN_WEIGHT_FRACTION_PER_NODE` | Frazione minima del numero di campioni ponderati che ogni bambino deve avere dopo una divisione. Se una suddivisione fa sì che la frazione del peso totale in uno dei figli sia inferiore a questo valore, viene eliminata. | 0,0 | (>= 0,0, &lt;= 0,5) |
 | `MIN_INSTANCES_PER_NODE` | Il numero minimo di istanze che ogni figlio deve avere dopo una suddivisione. Se una suddivisione genera un numero di istanze inferiore a questo valore, la suddivisione viene eliminata. | 1 | (>= 1) |
-| `MAX_MEMORY_IN_MB` | Memoria massima, in MB, allocata all&#39;aggregazione dell&#39;istogramma. Se questo valore è troppo piccolo, viene diviso solo 1 nodo per iterazione e i relativi aggregati possono superare queste dimensioni. | 256 |                                                                                                      |
+| `MAX_MEMORY_IN_MB` | Memoria massima, in MB, allocata all&#39;aggregazione dell&#39;istogramma. Se questo valore è troppo piccolo, viene diviso solo 1 nodo per iterazione e i relativi aggregati possono superare queste dimensioni. | 256 | Qualsiasi valore intero positivo |
 | `PREDICTION_COL` | Nome della colonna per l’output di previsione. | &quot;previsione&quot; | Qualsiasi stringa |
 | `VALIDATION_INDICATOR_COL` | Il nome della colonna che indica se ogni riga è utilizzata per l’apprendimento o la convalida. `false` per la formazione e `true` per la convalida. | NON IMPOSTATO | Qualsiasi stringa |
 | `LEAF_COL` | Nome della colonna per gli indici foglia. L&#39;indice foglia previsto di ogni istanza in ogni albero, generato dall&#39;attraversamento del preordine. | &quot;&quot; | Qualsiasi stringa |
-| `FEATURE_SUBSET_STRATEGY` | Il numero di feature considerate per la suddivisione in ciascun nodo della struttura. | &quot;auto&quot; | `auto`, `all`, `onethird`, `sqrt`, `log2`, `n` (dove `n` è una frazione compresa tra 0 e 1,0) |
+| `FEATURE_SUBSET_STRATEGY` | Questo parametro specifica il numero di feature da considerare per le divisioni in ciascun nodo della struttura. | &quot;auto&quot; | `auto`, `all`, `onethird`, `sqrt`, `log2` o una frazione compresa tra 0 e 1,0 |
 | `SEED` | Il seme casuale. | NON IMPOSTATO | Qualsiasi numero a 64 bit |
-| `WEIGHT_COL` | Il nome della colonna, ad esempio pesi. Se non è impostato o vuoto, tutti i pesi delle istanze vengono trattati come `1.0`. | NON IMPOSTATO |                                                                                                      |
-| `LOSS_TYPE` | Funzione di perdita che il modello [!DNL Gradient Boosted Tree] tenta di ridurre a icona. | &quot;al quadrato&quot; | `squared` (L2) e `absolute` (L1). Nota: i valori non fanno distinzione tra maiuscole e minuscole. |
+| `WEIGHT_COL` | Il nome della colonna, ad esempio pesi. Se non è impostato o vuoto, tutti i pesi delle istanze vengono trattati come `1.0`. | NON IMPOSTATO | Qualsiasi stringa |
+| `LOSS_TYPE` | Questo parametro specifica la funzione di perdita ridotta a icona dal modello [!DNL Gradient Boosted Tree]. | &quot;al quadrato&quot; | `squared` (L2) e `absolute` (L1). Nota: i valori non fanno distinzione tra maiuscole e minuscole. |
 | `STEP_SIZE` | Dimensione del passaggio (nota anche come tasso di apprendimento) nell&#39;intervallo `(0, 1]`, utilizzata per ridurre il contributo di ogni stimatore. | 0,1 | `(0, 1]` |
 | `MAX_ITER` | Il numero massimo di iterazioni per l’algoritmo. | 20 | (>= 0) |
 | `SUBSAMPLING_RATE` | Frazione dei dati di formazione utilizzati per apprendere ogni albero decisionale, nell&#39;intervallo `(0, 1]`. | 1,0 | `(0, 1]` |
@@ -169,7 +170,7 @@ La tabella seguente illustra i parametri chiave per la configurazione e l&#39;ot
 | `ISOTONIC` | Specifica se la sequenza di output deve essere isotonica (crescente) quando `true` o antitonica (decrescente) quando `false`. | `true` | `true`, `false` |
 | `WEIGHT_COL` | Il nome della colonna, ad esempio pesi. Se non è impostato o vuoto, tutti i pesi delle istanze vengono trattati come `1.0`. | NON IMPOSTATO | Qualsiasi stringa |
 | `PREDICTION_COL` | Nome della colonna per l’output di previsione. | &quot;previsione&quot; | Qualsiasi stringa |
-| `FEATURE_INDEX` | L&#39;indice della funzionalità, applicabile quando `featuresCol` è una colonna vettoriale. Se non viene impostato, il valore predefinito è `0`. In caso contrario, non ha alcun effetto. | 0 |                 |
+| `FEATURE_INDEX` | L&#39;indice della funzionalità, applicabile quando `featuresCol` è una colonna vettoriale. Se non viene impostato, il valore predefinito è `0`. In caso contrario, non ha alcun effetto. | 0 | Qualsiasi numero intero non negativo |
 
 {style="table-layout:auto"}
 
@@ -221,14 +222,14 @@ La tabella seguente illustra i parametri chiave per la configurazione e l&#39;ot
 | `CACHE_NODE_IDS` | Se `false`, l&#39;algoritmo passa gli alberi agli esecutori per far corrispondere le istanze con i nodi. Se `true`, l&#39;algoritmo memorizza nella cache gli ID dei nodi per ogni istanza, velocizzando l&#39;addestramento di strutture più profonde. | `false` | `true`, `false` |
 | `CHECKPOINT_INTERVAL` | Specifica la frequenza di checkpoint per gli ID dei nodi memorizzati in cache. Ad esempio, `10` significa che la cache viene sottoposta a checkpoint ogni 10 iterazioni. | 10 | (>= 1) |
 | `IMPURITY` | Il criterio utilizzato per il calcolo dell’acquisizione di informazioni (senza distinzione tra maiuscole e minuscole). | entropia | `entropy`, `gini` |
-| `MAX_DEPTH` | Profondità massima dell&#39;albero (non negativa). Ad esempio, profondità `0` significa 1 nodo foglia e profondità `1` significa 1 nodo interno e 2 nodi foglia. | 5 | [0, 30] |
+| `MAX_DEPTH` | Profondità massima dell&#39;albero (non negativa). Ad esempio, profondità `0` significa 1 nodo foglia e profondità `1` significa 1 nodo interno e 2 nodi foglia. | 5 | Qualsiasi numero intero non negativo |
 | `MIN_INFO_GAIN` | Il guadagno minimo di informazioni necessario affinché una suddivisione possa essere considerata in un nodo della struttura. | 0,0 | (>= 0,0) |
 | `MIN_WEIGHT_FRACTION_PER_NODE` | Frazione minima del numero di campioni ponderati che ogni bambino deve avere dopo una divisione. Se una suddivisione fa sì che la frazione del peso totale in uno dei figli sia inferiore a questo valore, viene eliminata. | 0,0 | (>= 0,0, &lt;= 0,5) |
 | `MIN_INSTANCES_PER_NODE` | Il numero minimo di istanze che ogni figlio deve avere dopo una suddivisione. Se una suddivisione genera un numero di istanze inferiore a questo valore, la suddivisione viene eliminata. | 1 | (>= 1) |
-| `MAX_MEMORY_IN_MB` | Memoria massima, in MB, allocata all&#39;aggregazione dell&#39;istogramma. Se questo valore è troppo piccolo, viene diviso solo 1 nodo per iterazione e i relativi aggregati possono superare queste dimensioni. | 256 |                                                                                                      |
+| `MAX_MEMORY_IN_MB` | Memoria massima, in MB, allocata all&#39;aggregazione dell&#39;istogramma. Se questo valore è troppo piccolo, viene diviso solo 1 nodo per iterazione e i relativi aggregati possono superare queste dimensioni. | 256 | (>= 1) |
 | `BOOTSTRAP` | Se utilizzare i campioni di bootstrap durante la creazione di alberi. | TRUE | `true`, `false` |
 | `NUM_TREES` | Numero di alberi da addestrare (almeno 1). Se `1`, non viene utilizzato alcun bootstrapping. Se maggiore di `1`, viene applicato il bootstrapping. | 20 | (>= 1) |
-| `SUBSAMPLING_RATE` | Frazione di dati di addestramento utilizzata per addestrare ogni albero decisionale, nell&#39;intervallo `(0, 1]`. | 1,0 | `(0, 1]` |
+| `SUBSAMPLING_RATE` | Frazione di dati di addestramento utilizzata per addestrare ogni albero decisionale, nell&#39;intervallo `(0, 1]`. | 1,0 | (>= 0,0, &lt;= 1) |
 | `LEAF_COL` | Il nome della colonna per gli indici foglia, che è l&#39;indice foglia previsto di ogni istanza in ogni albero, generato dall&#39;attraversamento del preordine. | &quot;&quot; | Qualsiasi stringa |
 | `PREDICTION_COL` | Nome della colonna per l’output di previsione. | &quot;previsione&quot; | Qualsiasi stringa |
 | `SEED` | Il seme casuale. | NON IMPOSTATO | Qualsiasi numero a 64 bit |

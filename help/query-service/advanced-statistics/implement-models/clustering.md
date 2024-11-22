@@ -2,9 +2,10 @@
 title: Algoritmi di clustering
 description: Scopri come configurare e ottimizzare vari algoritmi di clustering con parametri chiave, descrizioni e codice di esempio per implementare modelli statistici avanzati.
 role: Developer
-source-git-commit: 4ee7ce2468c1ea5f0960349c288d406f43a8bb91
+exl-id: 273853c6-85d2-43e5-b51a-aa9d20b313ae
+source-git-commit: 69c08f688d355e689e78426dd4b0ed1f4934965c
 workflow-type: tm+mt
-source-wordcount: '874'
+source-wordcount: '1019'
 ht-degree: 4%
 
 ---
@@ -15,7 +16,7 @@ Gli algoritmi di clustering raggruppano i punti dati in cluster distinti in base
 
 >[!NOTE]
 >
->Assicurati di conoscere i requisiti dei parametri per l’algoritmo scelto. Alcuni parametri possono essere posizionati e richiedere che tutti i parametri precedenti siano specificati se vengono forniti valori personalizzati. Se si sceglie di non personalizzare determinati parametri, il sistema applica le impostazioni predefinite. Consulta la documentazione pertinente per comprendere la funzione di ciascun parametro e i valori predefiniti.
+>Assicurati di conoscere i requisiti dei parametri per l’algoritmo scelto. Se si sceglie di non personalizzare determinati parametri, il sistema applica le impostazioni predefinite. Consulta la documentazione pertinente per comprendere la funzione di ciascun parametro e i valori predefiniti.
 
 ## [!DNL K-Means] {#kmeans}
 
@@ -27,12 +28,12 @@ Quando si utilizza `K-Means`, è possibile impostare i seguenti parametri nella 
 
 | Parametro | Descrizione | Valore predefinito | Valori possibili |
 |---------------------|---------------------------------------------------------------------------------------------------------------|-----------------|----------------------------------|
-| `MAX_ITERATIONS` | Il numero di iterazioni che l’algoritmo deve eseguire. | `20` | (>= 0) |
+| `MAX_ITER` | Il numero di iterazioni che l’algoritmo deve eseguire. | `20` | (>= 0) |
 | `TOL` | Livello di tolleranza della convergenza. | `0.0001` | (>= 0) |
 | `NUM_CLUSTERS` | Numero di cluster da creare (`k`). | `2` | (>1) |
-| `DISTANCE_TYPE` | Algoritmo utilizzato per calcolare la distanza tra due punti. | `euclidean` | `euclidean`, `cosine` |
-| `KMEANS_INIT_METHOD` | Algoritmo di inizializzazione per i centri cluster. | `k-means` | `random`, `k-means` |
-| `INIT_STEPS` | Numero di passaggi per la modalità di inizializzazione `k-means`. | `2` | (>0) |
+| `DISTANCE_TYPE` | Algoritmo utilizzato per calcolare la distanza tra due punti. Il valore distingue tra maiuscole e minuscole. | `euclidean` | `euclidean`, `cosine` |
+| `KMEANS_INIT_METHOD` | Algoritmo di inizializzazione per i centri cluster. | `k-means\|\|` | `random`, `k-means\|\|` (versione parallela di k-mean++) |
+| `INIT_STEPS` | Numero di passaggi per la modalità di inizializzazione `k-means\|\|` (applicabile solo quando `KMEANS_INIT_METHOD` è `k-means\|\|`). | `2` | (>0) |
 | `PREDICTION_COL` | Nome della colonna in cui verranno memorizzate le previsioni. | `prediction` | Qualsiasi stringa |
 | `SEED` | Un seme casuale per la riproducibilità. | `-1689246527` | Qualsiasi numero a 64 bit |
 | `WEIGHT_COL` | Nome della colonna utilizzata per i pesi dell’istanza. Se non viene impostato, tutte le varianti vengono ponderate in modo uniforme. | `not set` | N/D |
@@ -87,10 +88,10 @@ Create MODEL modelname OPTIONS(
 | Parametro | Descrizione | Valore predefinito | Valori possibili |
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|------------------------------------------|
 | `MAX_ITER` | Il numero massimo di iterazioni per l’algoritmo da eseguire. | 100 | (>= 0) |
-| `WEIGHT_COL` | Il nome della colonna, ad esempio pesi. Se non è impostato o vuoto, tutti i pesi delle istanze vengono trattati come `1.0`. | NON IMPOSTATO | Qualsiasi stringa |
+| `WEIGHT_COL` | Il nome della colonna, ad esempio pesi. Se non è impostato o vuoto, tutti i pesi delle istanze vengono trattati come `1.0`. | NON IMPOSTATO | Qualsiasi nome di colonna valido o vuoto |
 | `NUM_CLUSTERS` | Il numero di distribuzioni gaussiane indipendenti nel modello di miscela. | 2 | (> 1) |
 | `SEED` | Valore di inizializzazione casuale utilizzato per controllare i processi casuali nell&#39;algoritmo. | NON IMPOSTATO | Qualsiasi numero a 64 bit |
-| `AGGREGATION_DEPTH` | Profondità utilizzata per l&#39;aggregazione durante il calcolo. | 2 | (>= 1) |
+| `AGGREGATION_DEPTH` | Questo parametro controlla la profondità degli alberi di aggregazione utilizzati durante il calcolo. | 2 | (>= 1) |
 | `PROBABILITY_COL` | Nome di colonna per le probabilità condizionali di classe previste. Questi devono essere trattati come punteggi di affidabilità piuttosto che come probabilità esatte. | &quot;probabilità&quot; | Qualsiasi stringa |
 | `TOL` | La tolleranza di convergenza per gli algoritmi iterativi. | 0,01 | (>= 0) |
 | `PREDICTION_COL` | Nome della colonna per l’output di previsione. | &quot;previsione&quot; | Qualsiasi stringa |
@@ -115,18 +116,18 @@ Create MODEL modelname OPTIONS(
 | Parametro | Descrizione | Valore predefinito | Valori possibili |
 |-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|------------------------------------------|
 | `MAX_ITER` | Numero massimo di iterazioni eseguite dall&#39;algoritmo. | 20 | (>= 0) |
-| `OPTIMIZER` | Algoritmo di ottimizzazione o di inferenza utilizzato per stimare il modello LDA. Le opzioni supportate sono `"online"` (Online Variational Bayes) e `"em"` (Expectation-Maximization). | &quot;online&quot; | `online`, `em` |
+| `OPTIMIZER` | Algoritmo di ottimizzazione o di inferenza utilizzato per stimare il modello LDA. Le opzioni supportate sono `"online"` (Online Variational Bayes) e `"em"` (Expectation-Maximization). | &quot;online&quot; | `online`, `em` (senza distinzione maiuscole/minuscole) |
 | `NUM_CLUSTERS` | Numero di cluster da creare (k). | 10 | (> 1) |
 | `CHECKPOINT_INTERVAL` | Specifica la frequenza di checkpoint per gli ID dei nodi memorizzati in cache. | 10 | (>= 1) |
-| `DOC_CONCENTRATION` | Parametro di concentrazione (&quot;alpha&quot;) per i precedenti inseriti nelle distribuzioni dei documenti su argomenti. Controlla la regolarizzazione (levigatura). | Automatico | Qualsiasi valore singolo o vettore di lunghezza k |
-| `KEEP_LAST_CHECKPOINT` | Indica se mantenere l&#39;ultimo punto di controllo quando si utilizza l&#39;ottimizzatore `em`. | `true` | `true`, `false` |
+| `DOC_CONCENTRATION` | Il parametro di concentrazione (&quot;alpha&quot;) determina le ipotesi precedenti relative alla distribuzione degli argomenti tra i documenti. Il comportamento predefinito è determinato dall&#39;ottimizzatore. Per l&#39;ottimizzatore `EM`, i valori alfa devono essere maggiori di 1,0 (impostazione predefinita: distribuiti uniformemente come (50/k) + 1), garantendo distribuzioni dell&#39;argomento simmetriche. Per l&#39;ottimizzatore `online`, i valori alfa possono essere uguali o superiori a 0 (impostazione predefinita: distribuiti uniformemente come 1,0/k), consentendo un&#39;inizializzazione più flessibile degli argomenti. | Automatico | Qualsiasi singolo valore o vettore di lunghezza k dove valori > 1 per EM |
+| `KEEP_LAST_CHECKPOINT` | Indica se mantenere l&#39;ultimo punto di controllo quando si utilizza l&#39;ottimizzatore `em`. L’eliminazione del punto di controllo può causare errori in caso di perdita di una partizione di dati. I punti di controllo vengono rimossi automaticamente dall&#39;archivio quando non sono più necessari, come determinato dal conteggio dei riferimenti. | `true` | `true`, `false` |
 | `LEARNING_DECAY` | Tasso di apprendimento per l&#39;ottimizzatore `online`, impostato come tasso di decadimento esponenziale tra `(0.5, 1.0]`. | 0,51 | `(0.5, 1.0]` |
 | `LEARNING_OFFSET` | Parametro di apprendimento per l&#39;ottimizzatore `online` che sottopone a downweight le iterazioni iniziali per ridurre il conteggio delle iterazioni iniziali. | 1024 | (> 0) |
 | `SEED` | Valore di inizializzazione casuale per il controllo dei processi casuali nell’algoritmo. | NON IMPOSTATO | Qualsiasi numero a 64 bit |
 | `OPTIMIZE_DOC_CONCENTRATION` | Per l&#39;ottimizzatore `online`: se ottimizzare `docConcentration` (parametro Dirichlet per la distribuzione di argomenti dei documenti) durante l&#39;apprendimento. | `false` | `true`, `false` |
 | `SUBSAMPLING_RATE` | Per l&#39;ottimizzatore `online`: la frazione del corpo campionata e utilizzata in ogni iterazione di discendenza sfumata mini-batch, nell&#39;intervallo `(0, 1]`. | 0,05 | `(0, 1]` |
-| `TOPIC_CONCENTRATION` | Parametro di concentrazione (&quot;beta&quot; o &quot;eta&quot;) per il precedente inserito sulle distribuzioni degli argomenti nei termini. | Automatico | (>= 0) |
-| `TOPIC_DISTRIBUTION_COL` | Colonna di output con le stime della distribuzione dell&#39;argomento miscela per ciascun documento. | NON IMPOSTATO | Qualsiasi stringa |
+| `TOPIC_CONCENTRATION` | Il parametro di concentrazione (&quot;beta&quot; o &quot;eta&quot;) definisce le ipotesi precedenti poste sulla distribuzione degli argomenti nei termini. Il valore predefinito è determinato dall&#39;ottimizzatore: Per `EM`, valori > 1,0 (valore predefinito = 0,1 + 1). Per `online`, i valori ≥ 0 (valore predefinito = 1,0/k). | Automatico | Qualsiasi valore singolo o vettore di lunghezza k, dove valori > 1 per EM |
+| `TOPIC_DISTRIBUTION_COL` | Questo parametro produce la distribuzione stimata della miscela di argomenti per ciascun documento, spesso indicata come &quot;theta&quot; in letteratura. Per i documenti vuoti, restituisce un vettore di zeri. Le stime sono derivate utilizzando un&#39;approssimazione variazionale (&quot;gamma&quot;). | NON IMPOSTATO | Qualsiasi stringa |
 
 {style="table-layout:auto"}
 

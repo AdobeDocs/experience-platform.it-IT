@@ -2,9 +2,10 @@
 title: Estensione SQL per Feature Engineering
 description: Scopri l’estensione SQL per la progettazione delle funzioni di Data Distiller, che consente di pre-elaborare i dati per la modellazione statistica avanzata. Vengono descritte le tecniche di estrazione, trasformazione e selezione delle feature disponibili.
 role: Developer
-source-git-commit: 1fcfb5c41750e853daaf036ceaae3527b805391c
+exl-id: 622c8ef3-9651-46b3-ad22-021a93190149
+source-git-commit: e7bc30c153f67c59e9c04e8c8df60394f48871d0
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '735'
 ht-degree: 1%
 
 ---
@@ -41,9 +42,10 @@ Oltre alle feature di estrazione, utilizzate i trasformatori generali riportati 
 
 Di seguito è riportato un elenco di strumenti per l’elaborazione di un’ampia gamma di tipi di dati al fine di migliorare il flusso di lavoro di preelaborazione dei dati.
 
-- **[Imputer numerico](./feature-transformation.md#numeric-imputer)**: riempie i valori mancanti nelle colonne numeriche con un
-- **[Input stringa](./feature-transformation.md#string-imputer)**: sostituire i valori stringa mancanti con un valore specificato
-- **[Assemblatore vettoriale](./feature-transformation.md#vector-assembler)**: combina più colonne in un&#39;unica colonna vettoriale.
+- **[Imputer numerico](./feature-transformation.md#numeric-imputer)**: riempie i valori mancanti nelle colonne numeriche con un valore specificato, ad esempio la media o la mediana.
+- **[Input stringa](./feature-transformation.md#string-imputer)**: sostituire i valori stringa mancanti con un valore specificato, ad esempio la stringa più frequente nella colonna.
+- **[Assemblatore vettoriale](./feature-transformation.md#vector-assembler)**: combina più colonne in un&#39;unica colonna vettoriale per preparare i dati per i modelli di apprendimento automatico.
+- **[Imputer booleano](./feature-transformation.md#boolean-imputer)**: compilare i valori booleani mancanti con un valore specificato, ad esempio `true` o `false`.
 
 #### Trasformatori numerici
 
@@ -88,7 +90,7 @@ Use a clustering algorithm to group data points into distinct clusters based on 
 
 ## Implementare la clausola OPTIONS {#options-clause}
 
-Quando si definisce il modello, utilizzare la clausola `OPTIONS` per specificare l&#39;algoritmo e i relativi parametri. Iniziare impostando il parametro `type` per indicare l&#39;algoritmo in uso, ad esempio `K-Means`. Definire quindi i parametri rilevanti nella clausola `OPTIONS` come coppie chiave-valore per ottimizzare il modello. Alcuni parametri possono essere posizionati e richiedere che tutti i parametri precedenti siano specificati se vengono forniti valori personalizzati. Se si sceglie di non personalizzare determinati parametri, il sistema applica le impostazioni predefinite. Consulta la documentazione pertinente per informazioni sulla funzione di ciascun parametro e sui valori predefiniti.
+Quando si definisce il modello, utilizzare la clausola `OPTIONS` per specificare l&#39;algoritmo e i relativi parametri. Iniziare impostando il parametro `type` per indicare l&#39;algoritmo in uso, ad esempio `K-Means`. Definire quindi i parametri rilevanti nella clausola `OPTIONS` come coppie chiave-valore per ottimizzare il modello. Se si sceglie di non personalizzare determinati parametri, il sistema applica le impostazioni predefinite. Consulta la documentazione pertinente per informazioni sulla funzione di ciascun parametro e sui valori predefiniti.
 
 ### Passaggi successivi
 
