@@ -4,9 +4,9 @@ title: Guida all’API di autorizzazione di Data Distiller
 description: Scopri come iniziare a richiedere l’autorizzazione e le restrizioni dell’intervallo IP per l’accesso sicuro ai dati in Adobe Experience Platform Query Service.
 role: Developer
 exl-id: d93ce774-c8b2-4f15-a4d9-117d9aa5d9e7
-source-git-commit: ac29d10d3774a736d1e54255508ba244ff72f278
+source-git-commit: 804eeb4ec976cf41fdd450bd8f307499c3ebae03
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '507'
 ht-degree: 5%
 
 ---
@@ -66,3 +66,5 @@ Una volta raccolte le autorizzazioni richieste e i valori di intestazione, puoi 
 Ogni esempio di chiamata API illustra come formattare le richieste e interpretare le risposte, per consentire di applicare un accesso sicuro ai dati in Query Service.
 
 Per istruzioni specifiche sulla configurazione e la convalida delle restrizioni IP, consulta la [documentazione dell&#39;endpoint di accesso IP](./ip-access.md) e la [documentazione dell&#39;endpoint di convalida IP](./validate.md).
+
+Consulta la [Documentazione di riferimento per OpenAPI per l&#39;autorizzazione dei Distiller dati](https://developer.adobe.com/experience-platform-apis/references/data-distiller-auth/) per visualizzare un formato standardizzato e leggibile al computer per semplificare l&#39;integrazione, i test e l&#39;esplorazione.

@@ -3,9 +3,9 @@ title: Guida all’API di autorizzazione di Data Distiller
 description: Scopri come utilizzare l’API di autorizzazione di Data Distiller per applicare restrizioni IP basate sulla rete per connessioni sicure tramite SQL. Utilizza questa API per migliorare il controllo dell’accesso ai dati per i dati Adobe Experience Platform.
 role: Developer
 exl-id: bcc5ea0e-cb6d-4c7b-bf9f-a0336f76c4c8
-source-git-commit: ac29d10d3774a736d1e54255508ba244ff72f278
+source-git-commit: 804eeb4ec976cf41fdd450bd8f307499c3ebae03
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '424'
 ht-degree: 2%
 
 ---
@@ -30,13 +30,17 @@ Le seguenti funzionalità consentono di definire restrizioni di accesso basate s
 
 ## Funzionalità di controllo e monitoraggio
 
-Per supportare le procedure di accesso ai dati protette, Query Service registra tutti gli IP client che accedono o tentano di accedere ad AEP. Gli eventi di controllo, comprese le connessioni negate, vengono inviati ai registri di controllo della piattaforma. Ciò consente di:
+Per supportare le procedure di accesso sicuro ai dati, Query Service registra tutti gli IP client che accedono o tentano di accedere ad Experience Platform. Gli eventi di controllo, comprese le connessioni negate, vengono inviati ai registri di controllo della piattaforma. Ciò consente di:
 
 - **Monitoraggio in tempo reale**: tieni traccia dei modelli di accesso basati su IP per garantire la conformità.
 - **Avvisi sull&#39;accesso non autorizzato**: identifica e risponde ai tentativi di accesso da IP non autorizzati.
 
-Per ulteriori dettagli sulla registrazione di controllo, consulta la [documentazione del servizio di controllo](https://experienceleague.adobe.com/docs/experience-platform/audit/audit-overview.html).
+Per ulteriori dettagli, consulta la [panoramica dei registri di controllo](../../landing/governance-privacy-security/audit-logs/overview.md).
 
 ## Passaggi successivi
 
 Inizia a usare l&#39;API di autorizzazione Data Distiller consultando la [Guida introduttiva](./getting-started.md) per i passaggi di configurazione essenziali, incluse le intestazioni richieste e le convenzioni di chiamata API. Quindi, esplora le guide specifiche per l&#39;endpoint in [Accesso IP](./ip-access.md) e [Convalida IP](./validate.md) per configurare e gestire l&#39;accesso sicuro ai dati.
+
+Consulta la [Documentazione di riferimento per OpenAPI per l&#39;autorizzazione dei Distiller dati](https://developer.adobe.com/experience-platform-apis/references/data-distiller-auth/) per visualizzare un formato standardizzato e leggibile al computer per semplificare l&#39;integrazione, i test e l&#39;esplorazione.
+
+Per informazioni sui vari parametri di risposta per ogni set di dati restituito, consulta la [documentazione per gli sviluppatori API dei set di dati](https://developer.adobe.com/experience-platform-apis/references/catalog/#tag/Datasets/operation/listDatasets).
