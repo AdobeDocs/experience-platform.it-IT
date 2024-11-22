@@ -3,7 +3,7 @@ title: Endpoint cartelle
 description: Scopri come creare, aggiornare, gestire ed eliminare cartelle utilizzando le API di Adobe Experience Platform.
 role: Developer
 exl-id: ee43d699-725d-4ffd-a71b-049eeb3b4d7c
-source-git-commit: 717a4ea0568200c940cf9b8f26f4dd2aa9c00a3e
+source-git-commit: 78aa48701abaadea963b25e390aa96d7b31386f4
 workflow-type: tm+mt
 source-wordcount: '818'
 ht-degree: 5%
@@ -31,7 +31,7 @@ Per recuperare un elenco di cartelle appartenenti alla tua organizzazione, devi 
 **Formato API**
 
 ```http
-GET /folder/{FOLDER_TYPE}/{PARENT_FOLDER_ID}/subfolders
+GET /folders/{FOLDER_TYPE}/{PARENT_FOLDER_ID}/subfolders
 ```
 
 | Parametro | Descrizione |
@@ -44,7 +44,7 @@ GET /folder/{FOLDER_TYPE}/{PARENT_FOLDER_ID}/subfolders
 +++Una richiesta di esempio per elencare tutte le cartelle di set di dati di livello principale
 
 ```shell
-curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/root/subfolders
+curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/root/subfolders
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -111,14 +111,14 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elen
 
 +++
 
-## Crea una nuova cartella {#create}
+## Creare una nuova cartella {#create}
 
 Per creare una nuova cartella, eseguire una richiesta POST all&#39;endpoint `/folder` e specificare il tipo di cartella.
 
 **Formato API**
 
 ```http
-POST /folder/{FOLDER_TYPE}
+POST /folders/{FOLDER_TYPE}
 ```
 
 | Parametro | Descrizione |
@@ -130,7 +130,7 @@ POST /folder/{FOLDER_TYPE}
 +++Richiesta di esempio per creare una nuova cartella.
 
 ```shell
-curl -X POST https://experience.adobe.io/unifiedfolders/folder/dataset
+curl -X POST https://experience.adobe.io/unifiedfolders/folders/dataset
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -190,7 +190,7 @@ Per recuperare una cartella specifica appartenente alla tua organizzazione, devi
 **Formato API**
 
 ```http
-GET /folder/{FOLDER_TYPE}/{FOLDER_ID}
+GET /folders/{FOLDER_TYPE}/{FOLDER_ID}
 ```
 
 | Parametro | Descrizione |
@@ -203,7 +203,7 @@ GET /folder/{FOLDER_TYPE}/{FOLDER_ID}
 +++Richiesta di esempio per recuperare una cartella specifica
 
 ```shell
-curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/83f8287c-767b-4106-b271-257282fd170e
+curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-767b-4106-b271-257282fd170e
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -261,7 +261,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 **Formato API**
 
 ```http
-GET /folder/{FOLDER_TYPE}/{FOLDER_ID}/validate
+GET /folders/{FOLDER_TYPE}/{FOLDER_ID}/validate
 ```
 
 | Parametro | Descrizione |
@@ -274,7 +274,7 @@ GET /folder/{FOLDER_TYPE}/{FOLDER_ID}/validate
 +++Richiesta di esempio per convalidare una cartella specifica
 
 ```shell
-curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/83f8287c-767b-4106-b271-257282fd170e/validate
+curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-767b-4106-b271-257282fd170e/validate
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -321,7 +321,7 @@ Per aggiornare i dettagli di una cartella specifica appartenente alla tua organi
 **Formato API**
 
 ```http
-PATCH /folder/{FOLDER_TYPE}/{FOLDER_ID}
+PATCH /folders/{FOLDER_TYPE}/{FOLDER_ID}
 ```
 
 | Parametro | Descrizione |
@@ -334,7 +334,7 @@ PATCH /folder/{FOLDER_TYPE}/{FOLDER_ID}
 +++Richiesta di esempio per aggiornare una cartella specifica
 
 ```shell
-curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/83f8287c-767b-4106-b271-257282fd170e
+curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-767b-4106-b271-257282fd170e
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -383,7 +383,7 @@ Per eliminare una cartella specifica appartenente alla tua organizzazione, devi 
 ***Formato API**
 
 ```http
-DELETE /folder/{FOLDER_TYPE}/{FOLDER_ID}
+DELETE /folders/{FOLDER_TYPE}/{FOLDER_ID}
 ```
 
 | Parametro | Descrizione |
@@ -396,7 +396,7 @@ DELETE /folder/{FOLDER_TYPE}/{FOLDER_ID}
 +++Richiesta di esempio per eliminare una cartella specifica
 
 ```shell
-curl -X DELETE https://experience.adobe.io/unifiedfolders/folder/dataset/83f8287c-767b-4106-b271-257282fd170e
+curl -X DELETE https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-767b-4106-b271-257282fd170e
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
