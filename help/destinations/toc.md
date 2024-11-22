@@ -5,9 +5,9 @@ user-guide-description: Attiva i dati, noti e non, per campagne di marketing cro
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 07e01847c6e24564682161e88122948d200ab733
+source-git-commit: 6414168c1deb047af30d8636ef8d61316f56aecf
 workflow-type: tm+mt
-source-wordcount: '1248'
+source-wordcount: '1257'
 ht-degree: 5%
 
 ---
@@ -42,6 +42,7 @@ ht-degree: 5%
       * [Attivare i tipi di pubblico per le destinazioni di esportazione dei profili di streaming](./ui/activate-streaming-profile-destinations.md)
       * [Attivare i tipi di pubblico per le destinazioni di esportazione dei profili in batch](./ui/activate-batch-profile-destinations.md)
       * [Attivare i tipi di pubblico per Edge Personalization Destinations](./ui/activate-edge-personalization-destinations.md)
+      * [Cercare in tempo reale gli attributi del profilo sul bordo](./ui/activate-edge-profile-lookup.md)
       * [Attiva i tipi di pubblico nelle destinazioni curate in base agli identificatori LiveRamp](./ui/activate-curated-destinations.md)
       * [Attiva i tipi di pubblico potenziali nelle destinazioni](./ui/activate-prospect-audiences.md)
       * [Attivare il pubblico dell’account nelle destinazioni](./ui/activate-account-audiences.md)
