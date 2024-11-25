@@ -4,18 +4,18 @@ title: Guida end-to-end al controllo degli accessi basato su attributi
 description: Questo documento fornisce una guida end-to-end sul controllo degli accessi basato su attributi in Adobe Experience Platform
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: b9ce27b6feb0300464507a21510f40900677c3be
+source-git-commit: 5b9200b9e534519ce2f3c1a529a30b032642ab7f
 workflow-type: tm+mt
-source-wordcount: '1762'
+source-wordcount: '1794'
 ht-degree: 17%
 
 ---
 
 # Guida end-to-end al controllo degli accessi basato su attributi
 
-Utilizza il controllo degli accessi basato sugli attributi su Adobe Experience Platform per offrire a te stesso e ad altri clienti multi-brand attenti alla privacy una maggiore flessibilità nella gestione degli accessi utente. L’accesso a singoli oggetti, come campi e segmenti dello schema, può essere concesso con criteri basati sugli attributi e sul ruolo dell’oggetto. Questa funzione consente di concedere o revocare l’accesso a singoli oggetti per specifici utenti di Platform nell’organizzazione.
+Utilizza il controllo degli accessi basato sugli attributi su Adobe Experience Platform per offrire a te stesso e ad altri clienti multi-brand attenti alla privacy una maggiore flessibilità nella gestione degli accessi utente. L’accesso ai singoli oggetti, come i campi dello schema e i tipi di pubblico, può essere concesso con criteri basati sugli attributi e sul ruolo dell’oggetto. Questa funzione consente di concedere o revocare l’accesso a singoli oggetti per specifici utenti di Platform nell’organizzazione.
 
-Questa funzionalità consente di categorizzare campi schema, segmenti e così via con etichette che definiscono ambiti di utilizzo organizzativi o dei dati. Puoi applicare queste stesse etichette a percorsi, Offerte e altri oggetti in Adobe Journey Optimizer. Parallelamente, gli amministratori possono definire i criteri di accesso relativi ai campi dello schema Experience Data Model (XDM) e gestire meglio quali utenti o gruppi (interni, esterni o di terze parti) possono accedere a tali campi.
+Questa funzionalità consente di categorizzare campi dello schema, tipi di pubblico e così via con etichette che definiscono ambiti di utilizzo organizzativi o dei dati. Puoi applicare queste stesse etichette a percorsi, Offerte e altri oggetti in Adobe Journey Optimizer. Parallelamente, gli amministratori possono definire i criteri di accesso relativi ai campi dello schema Experience Data Model (XDM) e gestire meglio quali utenti o gruppi (interni, esterni o di terze parti) possono accedere a tali campi.
 
 >[!NOTE]
 >
@@ -44,8 +44,8 @@ A questo scopo, devi configurare ruoli, risorse e criteri.
 Effettua le seguenti operazioni:
 
 * [Assegna un&#39;etichetta ai ruoli degli utenti](#label-roles): utilizza l&#39;esempio di un fornitore di assistenza sanitaria (ACME Business Group) il cui gruppo di marketing lavora con agenzie esterne.
-* [Assegna un&#39;etichetta alle risorse (campi e segmenti dello schema)](#label-resources): Assegna l&#39;etichetta **[!UICONTROL PHI/ Dati integrità regolamentati]** alle risorse e ai segmenti dello schema.
-* [Attiva il criterio che li collegherà](#policy): Abilita il criterio predefinito per impedire l&#39;accesso ai campi e ai segmenti dello schema collegando le etichette delle risorse alle etichette del tuo ruolo. Gli utenti con etichette corrispondenti avranno quindi accesso al campo e al segmento dello schema in tutte le sandbox.
+* [Assegna un&#39;etichetta alle risorse (campi dello schema e tipi di pubblico)](#label-resources): Assegna l&#39;etichetta **[!UICONTROL PHI/ Dati integrità regolamentati]** alle risorse dello schema e ai tipi di pubblico.
+* [Attiva i criteri che li collegheranno](#policy): abilita i criteri predefiniti per impedire l&#39;accesso ai campi dello schema e ai tipi di pubblico collegando le etichette delle risorse alle etichette del tuo ruolo. Gli utenti con etichette corrispondenti avranno quindi accesso al campo e al segmento dello schema in tutte le sandbox.
 
 ## Autorizzazioni
 
@@ -59,7 +59,7 @@ Una volta ottenuti i privilegi di amministratore, vai a [Adobe Experience Cloud]
 
 ![Immagine che mostra il prodotto Autorizzazioni selezionato in Adobe Experience Cloud](../images/flac-ui/flac-select-product.png)
 
-Viene visualizzata l&#39;area di lavoro Autorizzazioni per l&#39;interfaccia utente di Platform, che si apre nella pagina **[!UICONTROL Ruoli]**.
+Viene visualizzata l&#39;area di lavoro Autorizzazioni per l&#39;interfaccia utente di Platform, che si apre nella pagina **[!UICONTROL Panoramica]**.
 
 ## Applicare etichette a un ruolo {#label-roles}
 
@@ -94,15 +94,15 @@ Viene visualizzata l&#39;area di lavoro Autorizzazioni per l&#39;interfaccia ute
 
 I ruoli sono modi per categorizzare i tipi di utenti che interagiscono con l’istanza Platform e sono blocchi predefiniti dei criteri di controllo degli accessi. Un ruolo dispone di un determinato set di autorizzazioni e i membri dell’organizzazione possono essere assegnati a uno o più ruoli, a seconda dell’ambito di accesso di cui hanno bisogno.
 
-Per iniziare, seleziona **[!UICONTROL Gruppo aziendale ACME]** dalla pagina **[!UICONTROL Ruoli]**.
+Per iniziare, seleziona **[!UICONTROL Ruoli]** nell&#39;area di navigazione a sinistra, quindi seleziona **[!UICONTROL Gruppo aziendale ACME]**.
 
-![Immagine che mostra il ruolo aziendale ACME selezionato nei ruoli](../images/abac-end-to-end-user-guide/abac-select-role.png)
+![Immagine che mostra il business group ACME selezionato nei ruoli](../images/abac-end-to-end-user-guide/abac-select-role.png)
 
 Quindi, seleziona **[!UICONTROL Etichette]**, quindi seleziona **[!UICONTROL Aggiungi etichette]**.
 
 ![Immagine che mostra la selezione di Aggiungi etichette nella scheda Etichette](../images/abac-end-to-end-user-guide/abac-select-add-labels.png)
 
-Viene visualizzato un elenco di tutte le etichette dell’organizzazione. Selezionare **[!UICONTROL RHD]** per aggiungere l&#39;etichetta per **[!UICONTROL PHI/Regulated Health Data]**. Attendere alcuni istanti per visualizzare un segno di spunta blu accanto all&#39;etichetta, quindi selezionare **[!UICONTROL Salva]**.
+Viene visualizzato un elenco di tutte le etichette dell’organizzazione. Seleziona **[!UICONTROL RHD]** per aggiungere l&#39;etichetta per **[!UICONTROL PHI/Regulated Health Data]**, quindi seleziona **[!UICONTROL Salva]**.
 
 ![Immagine che mostra l&#39;etichetta RHD selezionata e salvata](../images/abac-end-to-end-user-guide/abac-select-role-label.png)
 
@@ -113,6 +113,10 @@ Viene visualizzato un elenco di tutte le etichette dell’organizzazione. Selezi
 ## Applica etichette ai campi schema {#label-resources}
 
 Dopo aver configurato un ruolo utente con l&#39;etichetta [!UICONTROL RHD], il passaggio successivo consiste nell&#39;aggiungere la stessa etichetta alle risorse che si desidera controllare per tale ruolo.
+
+Nella navigazione in alto, seleziona il **selettore di applicazioni**, rappresentato dall&#39;icona ![commutatore di applicazioni](/help/images/icons/apps.png), quindi seleziona **[!UICONTROL Experience Platform]**.
+
+![Immagine che mostra l&#39;Experience Platform selezionato dal menu a discesa del commutatore dell&#39;applicazione](../images/abac-end-to-end-user-guide/abac-select-experience-platform.png)
 
 Seleziona **[!UICONTROL Schemi]** nella barra di navigazione a sinistra, quindi seleziona **[!UICONTROL ACME Healthcare]** dall&#39;elenco degli schemi visualizzati.
 
@@ -130,30 +134,30 @@ Viene visualizzata la finestra di dialogo **[!UICONTROL Modifica etichette]**, c
 >
 >Quando un’etichetta viene aggiunta a un campo, viene applicata alla risorsa principale del campo (una classe o un gruppo di campi). Se la classe o il gruppo di campi padre è utilizzato da altri schemi, questi ereditano la stessa etichetta.
 
-## Applicare etichette ai segmenti
+## Applicare etichette ai tipi di pubblico
 
 >[!NOTE]
 >
->Qualsiasi segmento che utilizza un attributo etichettato deve essere etichettato allo stesso modo se desideri che ad esso vengano applicate le stesse restrizioni di accesso.
+>Anche i tipi di pubblico che utilizzano un attributo con etichetta devono essere etichettati, se desideri applicare le stesse restrizioni di accesso.
 
-Dopo aver completato l’etichettatura dei campi dello schema, ora puoi iniziare a etichettare i segmenti.
+Una volta completata l’etichettatura dei campi dello schema, puoi iniziare a etichettare i tipi di pubblico.
 
-Seleziona **[!UICONTROL Segmenti]** dalla navigazione a sinistra. Viene visualizzato un elenco dei segmenti disponibili nell’organizzazione. In questo esempio, i due segmenti seguenti devono essere etichettati in quanto contengono dati sanitari sensibili:
+Seleziona **[!UICONTROL Tipi di pubblico]** dalla barra di navigazione a sinistra nella sezione **[!UICONTROL Clienti]**. Viene visualizzato un elenco dei tipi di pubblico disponibili nell’organizzazione. In questo esempio, i due tipi di pubblico seguenti devono essere etichettati in quanto contengono dati sanitari sensibili:
 
 * Glucosio ematico > 100
 * Insulina &lt; 50
 
-Selezionare **[!UICONTROL Glucosio ematico >100]** per iniziare a etichettare il segmento.
+Seleziona **[!UICONTROL Glucosio ematico >100]** (in base al nome del pubblico, non alla casella di controllo) per iniziare a etichettare il pubblico.
 
-![Immagine che mostra la glicemia >100 selezionata dalla scheda Segmenti](../images/abac-end-to-end-user-guide/abac-select-segment.png)
+![Immagine che mostra la glicemia >100 selezionata dalla scheda Tipi di pubblico](../images/abac-end-to-end-user-guide/abac-select-audience.png)
 
 Viene visualizzata la schermata **[!UICONTROL Dettagli]** del segmento. Seleziona **[!UICONTROL Gestisci accesso]**.
 
-![Immagine che mostra la selezione dell&#39;accesso a Gestisci](../images/abac-end-to-end-user-guide/abac-segment-fields-manage-access.png)
+![Immagine che mostra la selezione dell&#39;accesso a Gestisci](../images/abac-end-to-end-user-guide/abac-audience-fields-manage-access.png)
 
-Viene visualizzata la finestra di dialogo **[!UICONTROL Modifica etichette]**, che consente di scegliere le etichette da applicare al segmento. Per questo caso d&#39;uso, seleziona l&#39;etichetta **[!UICONTROL PHI/ Regulated Health Data]**, quindi seleziona **[!UICONTROL Salva]**.
+Viene visualizzata la finestra di dialogo **[!UICONTROL Applica etichette di accesso e governance dei dati]**, che consente di scegliere le etichette da applicare al pubblico. Per questo caso d&#39;uso, seleziona l&#39;etichetta **[!UICONTROL PHI/ Regulated Health Data]**, quindi seleziona **[!UICONTROL Salva]**.
 
-![Immagine che mostra la selezione dell&#39;etichetta RHD e il salvataggio in corso](../images/abac-end-to-end-user-guide/abac-select-segment-labels.png)
+![Immagine che mostra la selezione dell&#39;etichetta RHD e il salvataggio in corso](../images/abac-end-to-end-user-guide/abac-select-audience-labels.png)
 
 Ripetere i passaggi precedenti con **[!UICONTROL Insulina &lt;50]**.
 
@@ -163,13 +167,13 @@ Ripetere i passaggi precedenti con **[!UICONTROL Insulina &lt;50]**.
 
 ## Attivare il criterio di controllo degli accessi {#policy}
 
-I criteri di controllo di accesso predefiniti sfrutteranno le etichette per definire quali ruoli utente hanno accesso a risorse Platform specifiche. In questo esempio, l’accesso ai campi e ai segmenti dello schema verrà negato in tutte le sandbox per gli utenti che non si trovano in un ruolo con le etichette corrispondenti nel campo schema.
+I criteri di controllo di accesso predefiniti sfrutteranno le etichette per definire quali ruoli utente hanno accesso a risorse Platform specifiche. In questo esempio, l’accesso ai campi dello schema e ai tipi di pubblico verrà negato in tutte le sandbox per gli utenti che non si trovano in un ruolo con le etichette corrispondenti nel campo dello schema.
 
 Per attivare il criterio di controllo degli accessi, selezionare [!UICONTROL Autorizzazioni] nell&#39;area di navigazione a sinistra, quindi selezionare **[!UICONTROL Criteri]**.
 
 ![Elenco dei criteri visualizzato](../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
-Quindi, selezionare i puntini di sospensione (`...`) accanto al nome dei criteri e un menu a discesa visualizza i controlli per modificare, attivare, eliminare o duplicare il ruolo. Seleziona **[!UICONTROL Attiva]** dal menu a discesa.
+Selezionare quindi i puntini di sospensione (`...`) accanto a **[!UICONTROL Default-Field-Level-Access-Control-Policy]** e un elenco a discesa visualizza i controlli per modificare, attivare, eliminare o duplicare il ruolo. Seleziona **[!UICONTROL Attiva]** dal menu a discesa.
 
 ![Elenco a discesa per attivare i criteri](../images/abac-end-to-end-user-guide/abac-policies-activate.png)
 
@@ -216,7 +220,7 @@ Access control policies leverage labels to define which user roles have access t
 >[!NOTE]
 >
 >A "deny policy" is created to grant access to sensitive resources because the role grants permission to the subjects. The written policy in this example **denies** you access if you are missing the required labels.
-
+a
 To create an access control policy, select **[!UICONTROL Permissions]** from the left navigation and then select **[!UICONTROL Policies]**. Next, select **[!UICONTROL Create policy]**.
 
 ![Image showing Create policy being selected in the Permissions](../images/abac-end-to-end-user-guide/abac-create-policy.png)
@@ -260,7 +264,7 @@ Select **[!UICONTROL Activate]** to activate the policy, and a dialog appears wh
 
 ## Passaggi successivi
 
-Hai completato l’applicazione delle etichette a un ruolo, ai campi dello schema e ai segmenti. L’agenzia esterna assegnata a questi ruoli non può visualizzare queste etichette e i relativi valori nella vista schema, set di dati e profilo. Inoltre, questi campi non possono essere utilizzati nella definizione del segmento quando si utilizza il Generatore di segmenti.
+Hai completato l’applicazione delle etichette a un ruolo, a campi di schema e a tipi di pubblico. L’agenzia esterna assegnata a questi ruoli non può visualizzare queste etichette e i relativi valori nella vista schema, set di dati e profilo. Inoltre, questi campi non possono essere utilizzati nella definizione del segmento quando si utilizza il Generatore di segmenti.
 
 Per ulteriori informazioni sul controllo degli accessi basato su attributi, vedere la [panoramica sul controllo degli accessi basato su attributi](./overview.md).
 
