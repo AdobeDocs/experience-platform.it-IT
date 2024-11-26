@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica di Privacy Service
 description: Scopri come Privacy Service può facilitare la conformità automatica alle normative legali sulla privacy nelle operazioni relative ai dati di Experience Cloud.
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
-source-git-commit: 19b33ddf2fc3f8d889d370eedfc732ac54178dcd
+source-git-commit: 61a5b4fd7af68e7379b456ddd37218d183e76256
 workflow-type: tm+mt
-source-wordcount: '1532'
+source-wordcount: '1660'
 ht-degree: 5%
 
 ---
@@ -21,7 +21,7 @@ Privacy Service fornisce un’API RESTful e un’interfaccia utente che consento
 
 >[!IMPORTANT]
 >
->Privacy Service è destinato solo alle richieste degli interessati e dei diritti dei consumatori. Qualsiasi altro utilizzo di Privacy Service per la pulizia o la manutenzione dei dati non è supportato o consentito. L&#39;Adobe ha l&#39;obbligo giuridico di adempiere tali obblighi in modo tempestivo. Di conseguenza, il test di carico su Privacy Service non è consentito in quanto si tratta di un ambiente di sola produzione e crea un backlog inutile di richieste di privacy valide.
+>Privacy Service è destinato solo alle richieste degli interessati e dei diritti dei consumatori. Qualsiasi altro utilizzo di Privacy Service per la pulizia o la manutenzione dei dati non è supportato o consentito. Adobe ha l’obbligo giuridico di adempiere tali obblighi in modo tempestivo. Di conseguenza, il test di carico su Privacy Service non è consentito in quanto si tratta di un ambiente di sola produzione e crea un backlog inutile di richieste di privacy valide.
 >
 >È ora disponibile un limite massimo di caricamento giornaliero per evitare abusi del servizio. Se gli utenti rilevano un abuso del sistema, l’accesso al servizio verrà disattivato. Successivamente si terrà una riunione con i Privacy Service per discutere le loro azioni e l&#39;uso accettabile di tali strumenti.
 
@@ -36,7 +36,7 @@ Queste decisioni possono essere riassunte attraverso le seguenti domande:
 1. **Ho etichettato correttamente i miei dati?**
    * I dati devono essere correttamente etichettati per il servizio per determinare quali campi accedere o eliminare durante i processi relativi alla privacy. Per ulteriori informazioni, consulta la sezione sui [dati di etichettatura](#label).
 1. **So quali ID inviare a Privacy Service?**
-   * Quando si inviano richieste di privacy, è necessario fornire gli ID dei singoli clienti specifici per particolari applicazioni Adobi. Per ulteriori informazioni, consulta le sezioni su [fornire dati di identità](#identity) e [effettuare richieste di privacy](#requests).
+   * Quando si inviano richieste di privacy, è necessario fornire gli ID dei singoli clienti specifici per particolari applicazioni di Adobe. Per ulteriori informazioni, consulta le sezioni su [fornire dati di identità](#identity) e [effettuare richieste di privacy](#requests).
 1. **Come si tiene traccia dei processi relativi alla privacy?**
    * Dopo aver effettuato le richieste di privacy, sono disponibili diverse opzioni per monitorarne lo stato e i risultati. Per ulteriori informazioni, consulta la sezione sul monitoraggio dei [processi per la privacy](#monitor).
 
@@ -54,7 +54,7 @@ Oltre alle normative legali, nel prendere queste decisioni è necessario tenere 
 
 ### Etichettare i dati per le richieste di privacy {#label}
 
-A seconda delle applicazioni [!DNL Experience Cloud] in uso, è necessario etichettare i campi di dati specifici a cui si desidera accedere o che devono essere eliminati in risposta alle richieste di accesso a dati personali. Il processo di etichettatura dei dati varia a seconda delle applicazioni. Per informazioni su come etichettare i dati per ogni applicazione di Adobe supportata, vedere il documento in [applicazioni di Experience Cloud](./experience-cloud-apps.md).
+A seconda delle applicazioni [!DNL Experience Cloud] in uso, è necessario etichettare i campi di dati specifici a cui si desidera accedere o che devono essere eliminati in risposta alle richieste di accesso a dati personali. Il processo di etichettatura dei dati varia a seconda delle applicazioni. Per informazioni su come etichettare i dati per ogni applicazione Adobe supportata, vedere il documento in [applicazioni Experience Cloud](./experience-cloud-apps.md).
 
 ### Determinare i tipi di dati di identità da inviare a Privacy Service {#identity}
 
@@ -62,11 +62,19 @@ Affinché Privacy Service possa elaborare una richiesta di accesso a dati person
 
 A seconda delle applicazioni [!DNL Experience Cloud] utilizzate dal sistema CRM, il tipo e il numero di valori di identità da fornire per ogni cliente variano. Alcune applicazioni utilizzano i propri valori ID cliente interni (come Adobe Target ID), mentre altre soluzioni si basano sugli identificatori globali di Adobe [!DNL Experience Cloud Identity Service] (ECID) che tengono traccia dell&#39;attività del cliente in tutte le applicazioni [!DNL Experience Cloud]. Inoltre, anche informazioni personali generiche come l’indirizzo e-mail o il numero di telefono possono fungere da dati di identità validi.
 
-Leggi il documento su [dati di identità per le richieste di privacy](./identity-data.md) per informazioni più dettagliate sui tipi di informazioni di identità accettati per Privacy Service. Il documento fornisce anche indicazioni su come applicare tecnologie Adobe per recuperare in modo efficace le informazioni di identità appropriate dai clienti durante l’interazione con il sito web e inviare tali dati a Privacy Service nelle richieste API.
+Leggi il documento su [dati di identità per le richieste di privacy](./identity-data.md) per informazioni più dettagliate sui tipi di informazioni di identità accettati per Privacy Service. Il documento fornisce anche indicazioni su come applicare le tecnologie Adobe per recuperare in modo efficace le informazioni di identità appropriate dai clienti durante l’interazione con il sito web e inviare tali dati a Privacy Service nelle richieste API.
 
 ### Inizia ad effettuare richieste di privacy {#requests}
 
 Dopo aver determinato le esigenze di privacy della tua azienda e stabilito quali valori di identità inviare a Privacy Service, puoi iniziare a effettuare richieste di privacy. Utilizza Privacy Service per inviare richieste di accesso a dati personali tramite l’API o l’interfaccia utente.
+
+#### Dettagli del file di richiesta di accesso {#access-requests}
+
+Nella risposta a una richiesta di accesso riuscita è presente un **URL di download** contenente più file. Viene fornito un file per ogni applicazione Adobe in cui sono stati richiesti i dati. Si noti che il formato del file per ogni applicazione può variare in base alla struttura dati dell&#39;applicazione.
+
+#### Richieste di cancellazione - Nessun URL di download {#delete-requests}
+
+Nella risposta per una **richiesta di eliminazione** non è presente alcun URL di download **, poiché non è in corso il recupero dei dati del cliente.**
 
 >[!IMPORTANT]
 >
@@ -97,6 +105,10 @@ Dopo aver eseguito i processi relativi alla privacy, puoi monitorare lo stato e 
 | Interfaccia utente di Privacy Service | Puoi visualizzare una rappresentazione visiva dello stato di tutte le richieste attive con il dashboard di monitoraggio dell’interfaccia utente Privacy Service. Per ulteriori informazioni, consulta la [guida utente di Privacy Service](ui/overview.md). |
 | API PRIVACY SERVICE | Puoi monitorare in modo programmatico lo stato dei processi di Privacy utilizzando gli endpoint di ricerca forniti dall’API Privacy Service. Consulta la [guida dell&#39;API Privacy Service](./api/overview.md) per i passaggi dettagliati su come utilizzare l&#39;API. |
 | [!DNL Privacy Events] | [!DNL Privacy Events] utilizza eventi di Adobe I/O inviati a un webhook configurato per facilitare l&#39;automazione efficiente delle richieste di processo. Riducono o eliminano la necessità di eseguire il polling dell’API Privacy Service per verificare se un processo è completo o se è stata raggiunta una determinata milestone all’interno di un flusso di lavoro. Per ulteriori informazioni, consulta il tutorial su [abbonamento a eventi sulla privacy](./privacy-events.md). |
+
+#### Risposte per utenti non esistenti {#non-existing-users}
+
+Quando si invia una richiesta di accesso o di eliminazione, anche se i dati utente non vengono trovati, la risposta restituirà sempre un `success` se la chiamata è stata completata correttamente. Ciò significa che anche se i dati non esistono, un accesso o un’eliminazione può essere completata senza che i dati vengano recuperati o eliminati.
 
 ## Passaggi successivi
 
