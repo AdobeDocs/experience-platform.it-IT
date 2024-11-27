@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica del connettore Source Couchbase
 description: Scopri come collegare Couchbase a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 4b1cc352-3b1a-4015-baee-b1d42c15a400
-source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
+source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->L&#39;origine [!DNL Couchbase] diventerà obsoleta alla fine di maggio 2025.
+>L&#39;origine [!DNL Couchbase] diventerà obsoleta alla fine di giugno 2025.
 
 Adobe Experience Platform fornisce connettività nativa per i provider di database come [!DNL Microsoft], MySQL e [!DNL Azure], consentendo di portare i dati da questi sistemi. Sono supportati diversi tipi di database di terze parti, inclusi data warehouse relazionali, NoSQL o di terze parti. Il supporto per i provider di database include [!DNL Couchbase].
 
