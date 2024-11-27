@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Best Practice Per La Modellazione Dei Dati
 description: Questo documento fornisce un’introduzione agli schemi Experience Data Model (XDM) e ai blocchi predefiniti, ai principi e alle best practice per la composizione degli schemi da utilizzare in Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 8e13918abe9a63b186970b24b87bf85d1c73c3a8
+source-git-commit: fed8502afad1dfcb0b4dc91141dd621eacda720c
 workflow-type: tm+mt
-source-wordcount: '3245'
+source-wordcount: '3227'
 ht-degree: 1%
 
 ---
@@ -210,18 +210,18 @@ Durante la progettazione degli schemi, eventuali chiavi primarie nelle tabelle d
 
 ### Adobe di gruppi di campi dello schema dell’applicazione {#adobe-application-schema-field-groups}
 
-L’Experience Platform fornisce diversi gruppi di campi di schema XDM predefiniti per l’acquisizione di dati relativi alle seguenti applicazioni di Adobe:
+L’Experience Platform fornisce diversi gruppi di campi di schema XDM predefiniti per l’acquisizione di dati relativi alle seguenti applicazioni Adobe:
 
 * Adobe Analytics
 * Adobe Audience Manager
 * Adobe Campaign
 * Adobe Target
 
-Ad esempio, puoi utilizzare il gruppo di campi ](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) del modello [[!UICONTROL Adobe Analytics ExperienceEvent] per mappare campi specifici di [!DNL Analytics] agli schemi XDM. A seconda delle applicazioni di Adobe con cui stai lavorando, dovresti utilizzare questi gruppi di campi forniti dall’Adobe nei tuoi schemi.
+Ad esempio, puoi utilizzare il gruppo di campi ](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) del modello [[!UICONTROL Adobe Analytics ExperienceEvent] per mappare campi specifici di [!DNL Analytics] agli schemi XDM. A seconda delle applicazioni di Adobe che utilizzi, nei tuoi schemi dovresti utilizzare i gruppi di campi forniti dall’Adobe.
 
 ![Un diagramma schema del [!UICONTROL modello Adobe Analytics ExperienceEvent].](../images/best-practices/analytics-field-group.png)
 
-Adobe i gruppi di campi applicazione assegnano automaticamente un&#39;identità primaria predefinita tramite l&#39;utilizzo del campo `identityMap`, che è un oggetto generato dal sistema e di sola lettura che mappa i valori di identità standard per un singolo cliente.
+I gruppi di campi dell&#39;applicazione Adobe assegnano automaticamente un&#39;identità primaria predefinita tramite l&#39;utilizzo del campo `identityMap`, che è un oggetto generato dal sistema e di sola lettura che mappa i valori di identità standard per un singolo cliente.
 
 Per Adobe Analytics, ECID è l’identità primaria predefinita. Se un valore ECID non viene fornito da un cliente, l’identità primaria utilizza per impostazione predefinita AAID.
 
@@ -245,13 +245,13 @@ Per impostare vincoli per un campo specifico, selezionare il campo dall&#39;Edit
 
 Di seguito è riportata una raccolta di suggerimenti per mantenere l&#39;integrità dei dati durante la creazione di uno schema.
 
-* **Considera le identità primarie**: ad Adobe, prodotti come Web SDK, Mobile SDK, Adobe Analytics e Adobe Journey Optimizer, il campo `identityMap` spesso funge da identità primaria. Evita di designare campi aggiuntivi come identità primarie per tale schema.
-* **Evita di utilizzare `_id` come identità**: evita di utilizzare il campo `_id` negli schemi Experience Event come identità. Ha lo scopo di garantire l&#39;univocità dei record e non di utilizzarli come identità.
+* **Considera le identità primarie**: per Adobe come Web SDK, Mobile SDK, Adobe Analytics e Adobe Journey Optimizer, il campo `identityMap` spesso funge da identità primaria. Evita di designare campi aggiuntivi come identità primarie per tale schema.
+* **Assicurarsi che `_id` non sia utilizzato come identità**: il campo `_id` negli schemi Experience Event non può essere utilizzato come identità in quanto è destinato all&#39;univocità dei record.
 * **Imposta vincoli di lunghezza**: è consigliabile impostare lunghezze minime e massime nei campi contrassegnati come identità. Un avviso viene attivato se si tenta di assegnare uno spazio dei nomi personalizzato a un campo di identità senza soddisfare i vincoli di lunghezza minima e massima. Queste limitazioni contribuiscono a mantenere la coerenza e la qualità dei dati.
 * **Applica pattern per valori coerenti**: se i valori di identità seguono un pattern specifico, è necessario utilizzare l&#39;impostazione **[!UICONTROL Pattern]** per applicare questo vincolo. Questa impostazione può includere solo regole come cifre, lettere maiuscole o minuscole o combinazioni di caratteri specifiche. Utilizza espressioni regolari per far corrispondere i pattern nelle stringhe.
 * **Limita le eVar negli schemi di Analytics**: in genere, uno schema di Analytics deve avere un solo eVar designato come identità. Se intendi utilizzare più di un eVar come identità, devi verificare nuovamente se la struttura dati può essere ottimizzata.
-* **Assicurare l&#39;univocità di un campo selezionato**: il campo scelto deve essere univoco rispetto all&#39;identità primaria nello schema. In caso contrario, non contrassegnarlo come identità. Ad esempio, se più clienti possono fornire lo stesso indirizzo e-mail, lo spazio dei nomi non è un’identità adatta. Questo principio si applica anche ad altri spazi dei nomi di identità come i numeri di telefono.
-* **I vincoli attivano gli avvisi per i campi dello spazio dei nomi personalizzato**: imposta i vincoli per attivare un avviso quando un campo dello schema è contrassegnato con uno spazio dei nomi personalizzato senza specificare la lunghezza minima e la lunghezza massima. L’avviso funge da importante avvertimento per mantenere l’integrità dei dati. Consulta la documentazione sulle [proprietà dei campi specifiche per il tipo](../ui/fields/overview.md#type-specific-properties) per informazioni su come impostare vincoli su un particolare campo.
+* **Assicurare l&#39;univocità di un campo selezionato**: il campo scelto deve essere univoco rispetto all&#39;identità primaria nello schema. In caso contrario, non contrassegnarlo come identità. Ad esempio, se più clienti possono fornire lo stesso indirizzo e-mail, lo spazio dei nomi non è un’identità adatta. Questo principio si applica anche ad altri spazi dei nomi di identità come i numeri di telefono. Se si contrassegna un campo non univoco come identità, si potrebbe verificare una compressione indesiderata del profilo.
+* **Verifica lunghezza minima stringa**: tutti i campi stringa devono contenere almeno un carattere, poiché i valori stringa non devono mai essere vuoti. I valori Null per i campi non obbligatori, tuttavia, sono accettabili.
 
 ## Passaggi successivi
 
