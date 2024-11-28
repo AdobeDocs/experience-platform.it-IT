@@ -2,10 +2,10 @@
 title: Tipo di dati attributi di controllo del sistema Source esterno
 description: Scopri il tipo di dati Experience Data Model (XDM) per gli attributi di controllo del sistema di Source esterno.
 exl-id: ebdd8707-9675-4232-a5b7-4e4a481d706a
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 03735e7099ffb2cfd44fc7fffd35e3a4a858e3ba
 workflow-type: tm+mt
-source-wordcount: '168'
-ht-degree: 7%
+source-wordcount: '186'
+ht-degree: 6%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 7%
 | `lastActivityDate` | Data e ora | Data dell’ultima attività per il sistema di origine. |
 | `lastReferencedDate` | Data e ora | Ultima data di riferimento per il sistema di origine. |
 | `lastUpdatedBy` | Stringa | Nome dell&#39;ultima persona che ha aggiornato il record. |
-| `lastUpdatedDate` | Data e ora | Data dell’ultimo aggiornamento per il sistema di origine. |
+| `lastUpdatedDate` | Data e ora | Data dell’ultimo aggiornamento per il sistema di origine. Questo valore viene utilizzato dal [criterio di unione attributi](../../profile/api/merge-policies.md#attribute-merge) per determinare la priorità in caso di conflitti di unione. |
 | `lastViewedDate` | Data e ora | Data dell&#39;ultima visualizzazione per il sistema di origine. |
 
 {style="table-layout:auto"}
