@@ -2,16 +2,16 @@
 title: Audiences Insights
 description: Scopri il linguaggio SQL che attiva le informazioni sul pubblico e utilizza queste query per generare informazioni personalizzate per esplorare ulteriormente i dati sul pubblico da Adobe Experience Platform.
 exl-id: 99624234-c4e1-44bb-9567-505bc0c4723e
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
 workflow-type: tm+mt
-source-wordcount: '1124'
+source-wordcount: '1122'
 ht-degree: 3%
 
 ---
 
 # Informazioni su Audiences
 
-Le informazioni derivate dall’analisi del modello dati rendono i dati di Adobe Real-time Customer Data Platform più accessibili, comprensibili e di impatto per il processo decisionale.
+Le informazioni derivate dall’analisi del modello dati rendono i dati di Adobe Real-Time CDP più accessibili, comprensibili e di impatto per il processo decisionale.
 
 Comprendi le informazioni sul pubblico accedendo all’SQL che li alimenta, quindi genera le tue informazioni per esplorare ulteriormente le identità e i profili che compongono i tipi di pubblico. Trasforma i dati non elaborati in nuove informazioni fruibili utilizzando l’SQL esistente del modello dati di Real-Time CDP come ispirazione per creare query per le tue esigenze aziendali specifiche.
 

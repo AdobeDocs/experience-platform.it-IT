@@ -1,9 +1,10 @@
 ---
 title: Creare tipi di pubblico con SQL
 description: Scopri come utilizzare l’estensione del pubblico SQL in Data Distiller di Adobe Experience Platform per creare, gestire e pubblicare tipi di pubblico utilizzando i comandi SQL. Questa guida tratta tutti gli aspetti del ciclo di vita del pubblico, inclusa la creazione, l’aggiornamento e l’eliminazione di profili, e l’utilizzo di definizioni di pubblico basate sui dati per eseguire il targeting di destinazioni basate su file.
-source-git-commit: b790dc0a485011022ac637f9d9c55f21c882d5fc
+exl-id: c35757c1-898e-4d65-aeca-4f7113173473
+source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
 workflow-type: tm+mt
-source-wordcount: '1166'
+source-wordcount: '1164'
 ht-degree: 1%
 
 ---
@@ -125,7 +126,7 @@ I tipi di pubblico creati con l’estensione SQL si registrano automaticamente i
 
 ![Area di lavoro Pubblico in Adobe Experience Platform, con i tipi di pubblico di Data Distiller pubblicati automaticamente e pronti per l&#39;uso.](../images/data-distiller/sql-audiences/audiences.png)
 
-## Attivare i tipi di pubblico nelle destinazioni {#activate-audiences}
+## Attiva tipi di pubblico nelle destinazioni {#activate-audiences}
 
 Attiva i tipi di pubblico eseguendo il targeting su qualsiasi destinazione basata su file, ad esempio [!DNL Amazon S3], [!DNL SFTP] o [!DNL Azure Blob]. Gli attributi del pubblico arricchiti sono disponibili per ulteriori perfezionamenti e filtri in base alle esigenze.
 
@@ -209,4 +210,4 @@ Successivamente, puoi leggere la seguente documentazione per sviluppare e ottimi
 
 - **Esplora valutazione del pubblico**: scopri i [metodi di valutazione del pubblico in Adobe Experience Platform](../../segmentation/home.md#evaluate-segments): segmentazione in streaming per aggiornamenti in tempo reale, segmentazione batch per elaborazione pianificata o su richiesta e segmentazione Edge per valutazione immediata nell&#39;Edge Network.
 - **Integrare con le destinazioni**: leggi la guida su come [esportare i file on-demand in destinazioni batch](../../destinations/ui/export-file-now.md) utilizzando l&#39;interfaccia utente delle destinazioni di Platform.
-- **Verifica prestazioni pubblico**: analizza le prestazioni dei tipi di pubblico definiti da SQL su canali diversi. Utilizza le informazioni sui dati per regolare e migliorare le definizioni dei tipi di pubblico e le strategie di targeting. Leggi il documento su [Audience Insights](../../dashboards/insights/audiences.md) per scoprire come accedere e adattare le query SQL per gli approfondimenti sul pubblico in Adobe Real-time Customer Data Platform. Puoi quindi creare informazioni personalizzate e trasformare i dati non elaborati in informazioni utilizzabili personalizzando la dashboard Tipi di pubblico per visualizzare e utilizzare in modo efficace tali informazioni per migliorare il processo decisionale.
+- **Verifica prestazioni pubblico**: analizza le prestazioni dei tipi di pubblico definiti da SQL su canali diversi. Utilizza le informazioni sui dati per regolare e migliorare le definizioni dei tipi di pubblico e le strategie di targeting. Leggi il documento su [Audience Insights](../../dashboards/insights/audiences.md) per scoprire come accedere e adattare le query SQL per gli approfondimenti sul pubblico in Adobe Real-Time CDP. Puoi quindi creare informazioni personalizzate e trasformare i dati non elaborati in informazioni utilizzabili personalizzando la dashboard Tipi di pubblico per visualizzare e utilizzare in modo efficace tali informazioni per migliorare il processo decisionale.

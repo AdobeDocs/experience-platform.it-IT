@@ -4,16 +4,16 @@ description: Scopri il linguaggio SQL che attiva le informazioni sul profilo acc
 badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Edizione B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
-source-git-commit: f9ef0e25dac1715bbb6d73db52d6368c543bf7ec
+source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '771'
 ht-degree: 0%
 
 ---
 
 # Informazioni sul profilo account
 
-[I profili account](../../rtcdp/accounts/account-profile-overview.md) vengono utilizzati per consolidare le informazioni sull&#39;account da varie origini, inclusi più canali di marketing e sistemi organizzativi. Questa visualizzazione unificata consente una comprensione completa degli account dei clienti, migliorando le campagne di marketing B2B. Le informazioni derivate dall’analisi del modello dati rendono i dati B2B di Adobe Real-time Customer Data Platform più accessibili, comprensibili e di impatto per il processo decisionale.
+[I profili account](../../rtcdp/accounts/account-profile-overview.md) vengono utilizzati per consolidare le informazioni sull&#39;account da varie origini, inclusi più canali di marketing e sistemi organizzativi. Questa visualizzazione unificata consente una comprensione completa degli account dei clienti, migliorando le campagne di marketing B2B. Le informazioni derivate dall’analisi del modello dati rendono i dati B2B di Adobe Real-Time CDP più accessibili, comprensibili e di impatto per il processo decisionale.
 
 Grazie all’accesso al linguaggio SQL che potenzia le tue conoscenze, potrai comprendere meglio i dati B2B e generare informazioni riutilizzabili personalizzate per esplorare ulteriormente le informazioni sull’account del cliente. Trasforma i dati non elaborati in nuove informazioni fruibili utilizzando l’SQL esistente del modello dati di Real-Time CDP come ispirazione per creare query per le tue esigenze aziendali specifiche.
 

@@ -2,16 +2,16 @@
 title: Approfondimenti destinazioni
 description: Scopri le istruzioni SQL che alimentano gli insight sulle destinazioni e utilizza queste query per generare insights personalizzati per esplorare ulteriormente l’attivazione dei dati da Adobe Experience Platform.
 exl-id: 762a9960-e7a5-4796-80c7-ef745157cc04
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
 workflow-type: tm+mt
-source-wordcount: '1139'
+source-wordcount: '1137'
 ht-degree: 3%
 
 ---
 
 # Informazioni sulle destinazioni
 
-Le informazioni derivate dall’analisi del modello dati rendono i dati di Adobe Real-time Customer Data Platform più accessibili, comprensibili e di impatto per il processo decisionale.
+Le informazioni derivate dall’analisi del modello dati rendono i dati di Adobe Real-Time CDP più accessibili, comprensibili e di impatto per il processo decisionale.
 
 Comprendi le informazioni sulla destinazione accedendo all’SQL che le alimenta, quindi genera informazioni personalizzate per esplorare ulteriormente l’attivazione dei dati da Adobe Experience Platform alle piattaforme di destinazione. Trasforma i dati non elaborati in nuove informazioni fruibili utilizzando l’SQL esistente del modello dati di Real-Time CDP come ispirazione per creare query per le tue esigenze aziendali specifiche.
 

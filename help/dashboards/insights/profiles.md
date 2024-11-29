@@ -2,16 +2,16 @@
 title: Approfondimenti profilo
 description: Scopri il linguaggio SQL che attiva le informazioni sul profilo e utilizza queste query per generare informazioni personalizzate che esplorano ulteriormente i clienti e le loro esperienze utente.
 exl-id: f3792076-3e01-4e26-8788-32927202a2e5
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
 workflow-type: tm+mt
-source-wordcount: '1661'
+source-wordcount: '1659'
 ht-degree: 3%
 
 ---
 
 # Approfondimenti profilo
 
-Le informazioni derivate dall’analisi del modello dati rendono i dati di Adobe Real-time Customer Data Platform più accessibili, comprensibili e di impatto per il processo decisionale.
+Le informazioni derivate dall’analisi del modello dati rendono i dati di Adobe Real-Time CDP più accessibili, comprensibili e di impatto per il processo decisionale.
 
 Comprendi le informazioni sul tuo profilo accedendo all’SQL che li alimenta, quindi genera le tue informazioni per esplorare ulteriormente i tuoi clienti e le loro esperienze utente che compongono i tuoi profili. Trasforma i dati non elaborati in nuove informazioni fruibili utilizzando l’SQL esistente del modello dati di Real-Time CDP come ispirazione per creare query per le tue esigenze aziendali specifiche.
 
