@@ -2,9 +2,9 @@
 title: Priorità dello spazio dei nomi
 description: Scopri la priorità dello spazio dei nomi in Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 893d8a089dee01e65436b7ac035233ba556b231b
+source-git-commit: 3efbb9614f08a74ad33eb1fbb4861c34c762b66b
 workflow-type: tm+mt
-source-wordcount: '1789'
+source-wordcount: '1788'
 ht-degree: 2%
 
 ---
@@ -48,7 +48,7 @@ Un’identità rappresenta un oggetto del mondo reale. Tre oggetti sono rapprese
 
 Gli spazi dei nomi delle persone sono relativamente immutabili rispetto ai dispositivi hardware (come IDFA, GAID), che sono relativamente immutabili rispetto ai browser web. In sostanza, tu (persona) sarà sempre un’unica entità, che può avere più dispositivi hardware (telefono, laptop, tablet, ecc.) e utilizzare più browser (Google Chrome, Safari, FireFox, ecc.)
 
-Un altro modo per affrontare questo argomento è attraverso la cardinalità. Per una determinata entità persona, quante identità verranno create? Nella maggior parte dei casi, una persona avrà un CRMID, una manciata di identificatori di dispositivi hardware (i ripristini IDFA/GAID non dovrebbero accadere spesso), e ancora più cookie (un individuo potrebbe pensare di visualizzare su più dispositivi, utilizzare la modalità in incognito, o reimpostare i cookie in qualsiasi momento). In genere, **la cardinalità inferiore indica uno spazio dei nomi con un valore superiore**.
+Un altro modo per affrontare questo argomento è attraverso la cardinalità. Per una determinata entità persona, quante identità verranno create? Nella maggior parte dei casi, una persona avrà un CRMID, una manciata di identificatori di dispositivi hardware (i ripristini IDFA/GAID non dovrebbero accadere spesso) e ancora più cookie (un individuo potrebbe ragionevolmente navigare su più dispositivi, utilizzare la modalità in incognito, o reimpostare i cookie in qualsiasi momento). In genere, **la cardinalità inferiore indica uno spazio dei nomi con un valore superiore**.
 
 ## Convalidare le impostazioni di priorità dello spazio dei nomi
 
@@ -151,7 +151,7 @@ Per ulteriori informazioni, leggere la [panoramica sulla gestione avanzata del c
 
 ### Attributi calcolati
 
-Se le impostazioni di identità sono abilitate, gli attributi calcolati utilizzeranno la priorità dello spazio dei nomi per memorizzare il valore dell’attributo calcolato. Per un dato evento, l’identità con la priorità più elevata dello spazio dei nomi avrà il valore dell’attributo calcolato scritto in base a esso. Per ulteriori informazioni, leggere la [guida dell&#39;interfaccia utente degli attributi calcolati](../../profile/computed-attributes/ui.md).
+Se le impostazioni di identità sono abilitate, gli attributi calcolati utilizzeranno la priorità dello spazio dei nomi per memorizzare il valore dell’attributo calcolato. Per un dato evento, l’identità con la priorità più elevata dello spazio dei nomi avrà il valore dell’attributo calcolato scritto in base a essa. Per ulteriori informazioni, leggere la [guida dell&#39;interfaccia utente degli attributi calcolati](../../profile/computed-attributes/ui.md).
 
 ### Data lake
 

@@ -2,9 +2,9 @@
 title: Assistente AI nella documentazione del prodotto Adobe Experience Platform
 description: Introduzione all’Assistente IA in Adobe Experience Platform.
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 653c97c8632eeaf4cad02accc63d3e4dbffb54dd
+source-git-commit: 3f43e120225bcca640cc46ebdce1e4d61100ad45
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '545'
 ht-degree: 1%
 
 ---
@@ -130,7 +130,7 @@ Per ulteriori informazioni sull&#39;Assistente di intelligenza artificiale, legg
 Sfoglia i collegamenti riportati di seguito per comprendere meglio i casi d’uso dell’Assistente all’intelligenza artificiale, le sue funzionalità e molto altro.
 
 <table style="table-layout:fixed"><tr style="border: 0;">
-<td><strong>Real-time Customer Data Platform</strong><br/>
+<td><strong>Real-Time CDP</strong><br/>
 <a href="./home.md" target="_blank">Documentazione</a> - <a href="./ui-guide.md" target="_blank">Guida interfaccia utente</a> - <a href="./access.md" target="_blank">Accesso all'Assistente IA</a> - <a href="./privacy.md" target="_blank">Privacy, sicurezza e governance</a> - <a href="./faq.md" target="_blank">Domande frequenti</a>
 </td>
 <td><strong>Adobe Journey Optimizer</strong><br/>
