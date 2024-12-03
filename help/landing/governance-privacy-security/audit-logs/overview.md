@@ -4,10 +4,10 @@ description: Scopri come i registri di audit consentono di vedere chi ha eseguit
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f6e413d2d8b644775b6714739113174f5d9cb0d9
 workflow-type: tm+mt
-source-wordcount: '1350'
-ht-degree: 36%
+source-wordcount: '1388'
+ht-degree: 35%
 
 ---
 
@@ -31,6 +31,10 @@ ht-degree: 36%
 Al fine di aumentare la trasparenza e la visibilità delle attività eseguite nel sistema, Adobe Experience Platform consente di controllare le attività degli utenti per vari servizi e funzionalità sotto forma di &quot;registri di audit&quot;. Questi registri costituiscono un audit trail che può essere utile per risolvere i problemi su Platform e aiutare la tua azienda a rispettare in modo efficace le politiche aziendali di gestione dei dati e i requisiti normativi.
 
 In un certo senso, un registro di controllo comunica a **chi** ha eseguito **cosa** azione e **quando**. Ogni azione registrata contiene metadati che indicano il tipo di azione, la data e l’ora, l’ID e-mail dell’utente che l’ha eseguita e altri attributi relativi al tipo di azione.
+
+>[!NOTE]
+>
+> I metadati per le azioni **Aggiungi utente** e **Rimuovi utente** nella risorsa **Ruolo** non conterranno l&#39;ID e-mail dell&#39;utente che ha eseguito l&#39;azione. Nei registri viene invece visualizzato l’ID e-mail generato dal sistema (system@adobe.com).
 
 Questo documento descrive i registri di audit in Platform, tra cui come visualizzarli e gestirli nell’interfaccia utente o nell’API.
 
