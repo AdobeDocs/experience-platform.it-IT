@@ -2,9 +2,9 @@
 title: Assistente AI nella documentazione del prodotto Adobe Experience Platform
 description: Introduzione all’Assistente IA in Adobe Experience Platform.
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 3f43e120225bcca640cc46ebdce1e4d61100ad45
+source-git-commit: 830daf12b1ae9718a16308d16774f4357f431f6c
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '581'
 ht-degree: 1%
 
 ---
@@ -29,15 +29,10 @@ Per iniziare, leggi il materiale incluso nei collegamenti riportati di seguito p
     <a href="./home.md#product-knowledge"><img src="./assets/landing/ai-audience.png" style="width:" 100%;max-height: 100%"></a>
     <div><strong>Migliora il tuo apprendimento</strong><br/>Scopri, risolvi i problemi e amplia la tua conoscenza dei prodotti senza interrompere i flussi di lavoro.</div>
     </td>
-    <td>
-    <a href="./access.md"><img src="./assets/landing/ai-access.png" style="width:" 100%;max-height: 100%"></a>
-    <div><strong>Applica le autorizzazioni in base all'utilizzo</strong><br/>Concedi e revoca le autorizzazioni di accesso in base ai ruoli dei membri del gruppo.</div>
-    </td>
   </tr>
   <tr style="border: 0;">
     <td align="center"><a href="./home.md"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     <td align="center"><a href="./home.md#product-knowledge"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
-    <td align="center"><a href="./access.md"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     </tr>
 </table>
 
@@ -84,11 +79,23 @@ Guarda il video seguente per una panoramica di Assistente AI.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
 
+Per ulteriori informazioni, leggere la [Guida all&#39;interfaccia utente dell&#39;Assistente IA](ui-guide.md).
+
 ### Ottenere l’accesso all’Assistente AI
 
 Guarda il video seguente per scoprire come configurare l’accesso a AI Assistant per le organizzazioni e gli utenti.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3436470/?learn=on)
+
+Per ulteriori informazioni, leggere la [Guida all&#39;accesso all&#39;Assistente AI](access.md).
+
+### Utilizza la conoscenza del prodotto di AI Assistant per ridurre i tempi di onboarding
+
+Guarda il video seguente e scopri come utilizzare le conoscenze del prodotto di AI Assistant per ridurre i tempi di onboarding.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
+
+Per ulteriori informazioni, consulta le [conoscenze del prodotto nell&#39;Assistente AI](home.md#product-knowledge)
 
 ### Utilizza l’Assistente AI per liberare il pubblico
 

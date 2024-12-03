@@ -2,9 +2,9 @@
 title: Panoramica dell’Assistente AI in Adobe Experience Platform
 description: Scopri l’Assistente IA, le relative sfaccettature e i casi di utilizzo, e come utilizzarlo per accelerare il flusso di lavoro con Adobe Experience Platform e Real-time Customer Data Platform.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 0926a0e8c7ae560bf5f4f9ff6853b191af047738
+source-git-commit: 1910ac68be2c154467d250a614d0d13d62ef6875
 workflow-type: tm+mt
-source-wordcount: '926'
+source-wordcount: '938'
 ht-degree: 15%
 
 ---
@@ -58,6 +58,10 @@ Per conoscenza del prodotto si intendono i concetti e gli argomenti basati sulla
 | Risoluzione dei problemi | <ul><li>Perché non posso attivare uno schema di proprietà di Adobe per il profilo?</li><li>Perché non posso eliminare un segmento?</li></ul> |
 
 {style="table-layout:auto"}
+
+Per ulteriori informazioni sulla conoscenza del prodotto di AI Assistant, guarda il seguente video:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
 
 ### Insight operativi {#operational-insights}
 
