@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Modello dati del settore delle telecomunicazioni ERD
 description: Visualizzare un ERD (Entity Relationship Diagramma) che descrive un modello dati standardizzato per il settore delle telecomunicazioni, compatibile con Experience Data Model (XDM) per l'utilizzo in Adobe Experience Platform.
 exl-id: 96f267ce-a177-4384-a512-841c89d942ba
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: 23bf89977b13a1f51e1ea7a0bb0561522a09745d
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 0%
@@ -21,13 +21,13 @@ Il seguente schema di relazione tra entità (ERD) rappresenta un modello di dati
 Utilizzare la seguente legenda per interpretare questa ERD:
 
 * Ogni entità mostrata in è basata su una classe sottostante di [Experience Data Model (XDM)](../composition.md#class).
-* Per una determinata entità, ogni riga contrassegnata in **bold** rappresenta un gruppo di campi o un tipo di dati, con i campi pertinenti forniti elencati di seguito in formato testo non in grassetto.
+* I campi rientrati sotto un campo padre rappresentano un campo figlio, o campo secondario, che appartiene al gruppo di campi padre.
 * I campi più importanti per una determinata entità sono evidenziati in rosso.
 * Tutte le proprietà che possono essere utilizzate per identificare i singoli clienti sono contrassegnate come &quot;identità&quot; e una di queste proprietà è contrassegnata come &quot;identità primaria&quot;.
 * Le relazioni tra entità sono contrassegnate come non dipendenti, poiché gli eventi basati su cookie spesso non possono determinare la persona o l’individuo che ha eseguito la transazione.
 
 
-![](../../images/industries/telecom.png)
+![Un esempio di ERD per un modello dati del settore delle telecomunicazioni](../../images/industries/telecom.png)
 
 >[!NOTE]
 >

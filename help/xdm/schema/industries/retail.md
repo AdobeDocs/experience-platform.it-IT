@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Modello dati del settore retail
 description: Visualizza un modello dati standardizzato per il settore retail, compatibile con Experience Data Model (XDM) per l’utilizzo in Adobe Experience Platform.
 exl-id: 40cbb243-668b-4280-815f-1f94a06b6b87
-source-git-commit: 5ceb261dbf1cac58d0cfe620875b8fa7c761abf2
+source-git-commit: 23bf89977b13a1f51e1ea7a0bb0561522a09745d
 workflow-type: tm+mt
 source-wordcount: '458'
 ht-degree: 0%
@@ -21,12 +21,12 @@ Il seguente diagramma di relazione tra entità (ERD) rappresenta un modello di d
 Utilizzare la seguente legenda per interpretare questa ERD:
 
 * Ogni entità mostrata in è basata su una classe sottostante di [Experience Data Model (XDM)](../composition.md#class).
-* Per una determinata entità, ogni riga contrassegnata in **bold** rappresenta un gruppo di campi o un tipo di dati, con i campi pertinenti forniti elencati di seguito in formato testo non in grassetto.
+* I campi rientrati sotto un campo padre rappresentano un campo figlio, o campo secondario, che appartiene al gruppo di campi padre.
 * I campi più importanti per una determinata entità sono evidenziati in rosso.
 * Tutte le proprietà che possono essere utilizzate per identificare i singoli clienti sono contrassegnate come &quot;identità&quot; e una di queste proprietà è contrassegnata come &quot;identità primaria&quot;.
 * Le relazioni tra entità sono contrassegnate come non dipendenti, poiché gli eventi basati su cookie spesso non possono determinare la persona o l’individuo che ha eseguito la transazione.
 
-![](../../images/industries/retail.png)
+![Un esempio di ERD per un modello dati del settore retail](../../images/industries/retail.png)
 
 >[!NOTE]
 >
