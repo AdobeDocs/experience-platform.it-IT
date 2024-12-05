@@ -2,24 +2,28 @@
 title: Creare tipi di pubblico con SQL
 description: Scopri come utilizzare l’estensione del pubblico SQL in Data Distiller di Adobe Experience Platform per creare, gestire e pubblicare tipi di pubblico utilizzando i comandi SQL. Questa guida tratta tutti gli aspetti del ciclo di vita del pubblico, inclusa la creazione, l’aggiornamento e l’eliminazione di profili, e l’utilizzo di definizioni di pubblico basate sui dati per eseguire il targeting di destinazioni basate su file.
 exl-id: c35757c1-898e-4d65-aeca-4f7113173473
-source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
+source-git-commit: 7db055f598e3fa7d5a50214a0cfa86e28e5bfe47
 workflow-type: tm+mt
-source-wordcount: '1164'
+source-wordcount: '1481'
 ht-degree: 1%
 
 ---
 
 # Creare tipi di pubblico con SQL
 
-Questo documento illustra come utilizzare l’estensione SQL audience in Data Distiller di Adobe Experience Platform per creare, gestire e pubblicare tipi di pubblico utilizzando i comandi SQL.
+Utilizza l’estensione SQL audience per creare tipi di pubblico con dati provenienti dal data lake, incluse eventuali entità dimensione esistenti (come attributi del cliente o informazioni di prodotto).
 
-Utilizza l’estensione SQL audience per creare tipi di pubblico con i dati del data lake, comprese eventuali entità dimensione esistenti. Questa estensione consente di definire i segmenti di pubblico direttamente utilizzando SQL, offrendo flessibilità senza la necessità di dati non elaborati nei profili. I tipi di pubblico creati con questo metodo vengono registrati automaticamente nell’area di lavoro Pubblico, dove puoi indirizzarli ulteriormente a destinazioni basate su file.
+L’utilizzo di questa estensione SQL migliora la possibilità di creare tipi di pubblico, in quanto non sono necessari dati non elaborati nei profili durante la definizione dei segmenti di pubblico. I tipi di pubblico creati con questo metodo vengono registrati automaticamente nell’area di lavoro Pubblico, dove puoi indirizzarli ulteriormente a destinazioni basate su file.
 
 ![Infografica che mostra il flusso di lavoro dell&#39;estensione del pubblico SQL. Le fasi includono la creazione di tipi di pubblico con Query Service mediante comandi SQL, la gestione nell&#39;interfaccia utente di Platform e l&#39;attivazione in destinazioni basate su file.](../images/data-distiller/sql-audiences/sql-audience-extension-workflow.png)
 
+Questo documento illustra come utilizzare l’estensione SQL audience in Data Distiller di Adobe Experience Platform per creare, gestire e pubblicare tipi di pubblico utilizzando i comandi SQL.
+
 ## Ciclo di vita della creazione di tipi di pubblico in Data Distiller {#audience-creation-lifecycle}
 
-Segui questi passaggi per gestire in modo efficace i tipi di pubblico. I tipi di pubblico creati si integrano perfettamente nel flusso di pubblico, consentendoti di creare segmenti da tali tipi di pubblico di base e di eseguire il targeting delle destinazioni basate su file per i clienti. Utilizza i seguenti comandi SQL per [creare](#create-audience), [modificare](#add-profiles-to-audience) e [eliminare](#delete-audience) tipi di pubblico in Adobe Experience Platform.
+Segui questi passaggi per creare, gestire e attivare i tipi di pubblico. I tipi di pubblico creati si integrano perfettamente nel &quot;flusso di pubblico&quot;, in modo da creare segmenti dai tipi di pubblico di base e indirizzarli a destinazioni basate su file (ad esempio, caricamenti CSV o posizioni di archiviazione cloud) per la sensibilizzazione dei clienti. Con &quot;flusso di pubblico&quot; si intende l’intero processo di creazione, gestione e attivazione dei tipi di pubblico, per garantire un’integrazione perfetta tra le destinazioni.
+
+Come parte del flusso di pubblico, utilizza i seguenti comandi SQL per [creare](#create-audience), [modificare](#add-profiles-to-audience) e [eliminare](#delete-audience) tipi di pubblico in Adobe Experience Platform.
 
 ### Creazione di un pubblico {#create-audience}
 
@@ -27,7 +31,7 @@ Utilizza il comando `CREATE AUDIENCE AS SELECT` per definire un nuovo pubblico. 
 
 ```sql
 CREATE AUDIENCE table_name  
-WITH (primary_identity='IdentitycolName', identity_namespace='Namespace for the identity used', [schema='target_schema_title']) 
+WITH (primary_identity='IdentitycolName', identity_namespace='Namespace for the identity used', [schema='target_schema_title'])
 AS (select_query)
 ```
 
@@ -40,35 +44,40 @@ Utilizza questi parametri per definire la query di creazione del pubblico SQL:
 | `schema` | Facoltativo. Definisce lo schema XDM per il set di dati creato dalla query. |
 | `table_name` | Nome della tabella e del pubblico. |
 | `primary_identity` | Specifica la colonna di identità primaria per il pubblico. |
-| `identity_namespace` | Spazio dei nomi dell’identità. |
+| `identity_namespace` | Spazio dei nomi dell’identità. Puoi utilizzare uno spazio dei nomi esistente o crearne uno nuovo. Per visualizzare gli spazi dei nomi disponibili, utilizzare il comando `SHOW NAMESPACE`. Per creare un nuovo spazio dei nomi, utilizzare `CREATE NAMESPACE`. Esempio: `CREATE NAMESPACE lumaCrmId WITH (code='testns', TYPE='Email')`. |
 | `select_query` | Un’istruzione SELECT che definisce il pubblico. La sintassi della query SELECT è disponibile nella sezione [Query SELECT](../sql/syntax.md#select-queries). |
 
 {style="table-layout:auto"}
+
+>[!NOTE]
+>
+>Per fornire maggiore flessibilità per strutture di dati complesse, puoi nidificare attributi arricchiti durante la definizione dei tipi di pubblico. Gli attributi arricchiti, come `orders`, `total_revenue`, `recency`, `frequency` e `monetization`, possono essere utilizzati per filtrare i tipi di pubblico in base alle esigenze.
 
 **Esempio:**
 
 L’esempio seguente illustra come strutturare la query di creazione del pubblico SQL:
 
 ```sql
-CREATE Audience aud_test 
-WITH (primary_identity=month, identity_namespace=queryService) 
-AS SELECT month FROM profile_dim_date LIMIT 5;
+CREATE Audience aud_test
+WITH (primary_identity=userId, identity_namespace=lumaCrmId)
+AS SELECT userId, orders, total_revenue, recency, frequency, monetization FROM profile_dim_customer;
 ```
+
+In questo esempio, la colonna `userId` è identificata come colonna Identity e viene assegnato uno spazio dei nomi appropriato (`lumaCrmId`). Le colonne rimanenti (`orders`, `total_revenue`, `recency`, `frequency` e `monetization`) sono attributi arricchiti che forniscono ulteriore contesto per il pubblico.
 
 **Limitazioni:**
 
 Tieni presente le seguenti limitazioni quando utilizzi SQL per la creazione di tipi di pubblico:
 
-- La colonna dell&#39;identità primaria **deve** essere a livello principale.
-- I nuovi batch sovrascrivono i set di dati esistenti; la funzionalità di aggiunta non è attualmente supportata.
-- Gli attributi nidificati non sono attualmente supportati.
+- La colonna di identità primaria **deve** trovarsi al livello più alto del set di dati, senza essere nidificata in altri attributi o categorie.
+- I tipi di pubblico esterni creati con comandi SQL hanno un periodo di conservazione di 30 giorni. Dopo 30 giorni, questi tipi di pubblico vengono eliminati automaticamente, un aspetto importante per la pianificazione delle strategie di gestione dell’audience.
 
 ### Aggiungere profili a un pubblico esistente {#add-profiles-to-audience}
 
-Utilizza il comando `INSERT INTO` per aggiungere profili a un pubblico esistente.
+Utilizza il comando `INSERT INTO` per aggiungere profili (o interi tipi di pubblico) a un pubblico esistente.
 
 ```sql
-INSERT INTO table_name 
+INSERT INTO table_name
 SELECT select_query
 ```
 
@@ -88,8 +97,80 @@ Nella tabella seguente sono illustrati i parametri necessari per il comando `INS
 Nell&#39;esempio seguente viene illustrato come aggiungere profili a un pubblico esistente con il comando `INSERT INTO`:
 
 ```sql
-INSERT INTO Audience aud_test 
-SELECT month FROM profile_dim_date LIMIT 10;
+INSERT INTO Audience aud_test
+SELECT userId, orders, total_revenue, recency, frequency, monetization FROM customer_ds;
+```
+
+### Esempio di pubblico del modello RFM {#rfm-model-audience-example}
+
+L’esempio seguente illustra come creare un pubblico utilizzando il modello Recency, Frequency, and Monetization (RFM). Questo esempio segmenta i clienti in base ai loro punteggi di attualità, frequenza e monetizzazione per identificare gruppi chiave, come clienti fedeli, nuovi clienti e clienti di alto valore.
+
+<!--  Q) Since the focus of this document is on external audiences, or should I just include this temporarily? We could simply provide a link to the separate RFM modeling documentation rather than including the full example here. (Add link to new RFM document when it is published) -->
+
+La query seguente crea uno schema per il pubblico RFM. L&#39;istruzione imposta i campi in modo che contengano informazioni sul cliente come `userId`, `days_since_last_purchase`, `orders`, `total_revenue` e così via.
+
+```sql
+CREATE Audience adls_rfm_profile
+WITH (primary_identity=userId, identity_namespace=lumaCrmId) AS
+SELECT
+    cast(NULL AS string) userId,
+    cast(NULL AS integer) days_since_last_purchase,
+    cast(NULL AS integer) orders,
+    cast(NULL AS decimal(18,2)) total_revenue,
+    cast(NULL AS integer) recency,
+    cast(NULL AS integer) frequency,
+    cast(NULL AS integer) monetization,
+    cast(NULL AS string) rfm_model
+WHERE false;
+```
+
+Dopo aver creato il pubblico, popolalo con i dati del cliente e segmentalo in base ai loro punteggi RFM. L&#39;istruzione SQL seguente utilizza la funzione `NTILE(4)` per classificare i clienti in quartili in base ai punteggi RFM (recency, frequenza, monetizzazione). Questi punteggi classificano i clienti in sei segmenti, ad esempio &quot;Core&quot;, &quot;Loyal&quot; e &quot;Whales&quot;. I dati cliente segmentati vengono quindi inseriti nella tabella `adls_rfm_profile` del pubblico.&quot;
+
+```sql
+INSERT INTO Audience adls_rfm_profile
+SELECT
+    userId,
+    days_since_last_purchase,
+    orders,
+    total_revenue,
+    recency,
+    frequency,
+    monetization,
+    CASE
+        WHEN Recency=1 AND Frequency=1 AND Monetization=1 THEN '1. Core - Your Best Customers'
+        WHEN Recency IN(1,2,3,4) AND Frequency=1 AND Monetization IN (1,2,3,4) THEN '2. Loyal - Your Most Loyal Customers'
+        WHEN Recency IN(1,2,3,4) AND Frequency IN (1,2,3,4) AND Monetization=1 THEN '3. Whales - Your Highest Paying Customers'
+        WHEN Recency IN(1,2,3,4) AND Frequency IN(1,2,3) AND Monetization IN(2,3,4) THEN '4. Promising - Faithful Customers'
+        WHEN Recency=1 AND Frequency=4 AND Monetization IN (1,2,3,4) THEN '5. Rookies - Your Newest Customers'
+        WHEN Recency IN (2,3,4) AND Frequency=4 AND Monetization IN (1,2,3,4) THEN '6. Slipping - Once Loyal, Now Gone'
+    END AS rfm_model
+FROM (
+    SELECT
+        userId,
+        days_since_last_purchase,
+        orders,
+        total_revenue,
+        NTILE(4) OVER (ORDER BY days_since_last_purchase) AS recency,
+        NTILE(4) OVER (ORDER BY orders DESC) AS frequency,
+        NTILE(4) OVER (ORDER BY total_revenue DESC) AS monetization
+    FROM (
+        SELECT
+            userid,
+            DATEDIFF(current_date, MAX(purchase_date)) AS days_since_last_purchase,
+            COUNT(purchaseid) AS orders,
+            CAST(SUM(total_revenue) AS double) AS total_revenue
+        FROM (
+            SELECT DISTINCT
+                ENDUSERIDS._EXPERIENCE.EMAILID.ID AS userid,
+                commerce.`ORDER`.purchaseid AS purchaseid,
+                commerce.`ORDER`.pricetotal AS total_revenue,
+                TO_DATE(timestamp) AS purchase_date
+            FROM sample_data_for_ootb_templates
+            WHERE commerce.`ORDER`.purchaseid IS NOT NULL
+        ) AS b
+        GROUP BY userId
+    )
+);
 ```
 
 ### Eliminare un pubblico (DROP AUDIENCE) {#delete-audience}
@@ -120,9 +201,11 @@ L’esempio seguente illustra come eliminare un pubblico utilizzando il comando 
 DROP AUDIENCE IF EXISTS aud_test;
 ```
 
-### Pubblicazione automatica dei tipi di pubblico {#auto-publish-audiences}
+### Registrazione e disponibilità automatiche del pubblico {#registration-and-availability}
 
-I tipi di pubblico creati con l’estensione SQL si registrano automaticamente in Data Distiller nell’area di lavoro Pubblico. Una volta registrati, questi tipi di pubblico sono disponibili per il targeting e possono essere utilizzati in destinazioni basate su file, migliorando la segmentazione e le strategie di targeting.
+I tipi di pubblico creati con l&#39;estensione SQL vengono registrati automaticamente in Data Distiller [!UICONTROL Origin] nell&#39;area di lavoro Pubblico. Una volta registrati, questi tipi di pubblico sono disponibili per il targeting in destinazioni basate su file, migliorando la segmentazione e le strategie di targeting. Questo processo non richiede alcuna configurazione aggiuntiva, semplificando la gestione dell’audience. Per ulteriori dettagli su come visualizzare, gestire e creare tipi di pubblico nell&#39;interfaccia utente di Platform, consulta la [panoramica di Audience Portal](../../segmentation/ui/audience-portal.md).
+
+<!-- Q) Do you know how long it takes for the audience to register? This info would help manage user expectations. -->
 
 ![Area di lavoro Pubblico in Adobe Experience Platform, con i tipi di pubblico di Data Distiller pubblicati automaticamente e pronti per l&#39;uso.](../images/data-distiller/sql-audiences/audiences.png)
 
@@ -190,7 +273,7 @@ Sì, puoi creare un pubblico di tipi di pubblico che utilizza un pubblico di Dat
 
 +++Risposta
 
-I tipi di pubblico di Data Distiller non sono attualmente disponibili in Adobe Journey Optimizer. Devi creare un nuovo pubblico nel generatore di regole di Adobe Journey Optimizer affinché sia disponibile in Adobe Journey Optimizer.
+I tipi di pubblico di Data Distiller sono disponibili anche in Adobe Journey Optimizer. Puoi utilizzare i tipi di pubblico di Data Distiller in Adobe Journey Optimizer e filtrare i risultati in base agli attributi arricchiti.
 
 +++
 
@@ -211,3 +294,4 @@ Successivamente, puoi leggere la seguente documentazione per sviluppare e ottimi
 - **Esplora valutazione del pubblico**: scopri i [metodi di valutazione del pubblico in Adobe Experience Platform](../../segmentation/home.md#evaluate-segments): segmentazione in streaming per aggiornamenti in tempo reale, segmentazione batch per elaborazione pianificata o su richiesta e segmentazione Edge per valutazione immediata nell&#39;Edge Network.
 - **Integrare con le destinazioni**: leggi la guida su come [esportare i file on-demand in destinazioni batch](../../destinations/ui/export-file-now.md) utilizzando l&#39;interfaccia utente delle destinazioni di Platform.
 - **Verifica prestazioni pubblico**: analizza le prestazioni dei tipi di pubblico definiti da SQL su canali diversi. Utilizza le informazioni sui dati per regolare e migliorare le definizioni dei tipi di pubblico e le strategie di targeting. Leggi il documento su [Audience Insights](../../dashboards/insights/audiences.md) per scoprire come accedere e adattare le query SQL per gli approfondimenti sul pubblico in Adobe Real-Time CDP. Puoi quindi creare informazioni personalizzate e trasformare i dati non elaborati in informazioni utilizzabili personalizzando la dashboard Tipi di pubblico per visualizzare e utilizzare in modo efficace tali informazioni per migliorare il processo decisionale.
+
