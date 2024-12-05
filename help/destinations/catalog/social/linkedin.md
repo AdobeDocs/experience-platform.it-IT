@@ -3,9 +3,9 @@ keywords: linkedin connessione;linkedin connessione;linkedin destinazioni;linked
 title: Connessione LinkedIn Matched Audiences
 description: Attiva profili per le campagne LinkedIn per il targeting, la personalizzazione e l’eliminazione del pubblico, in base alle e-mail con hash.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 74d7c48042b0d2b938705b588c185f3c3f96f1cd
 workflow-type: tm+mt
-source-wordcount: '1099'
+source-wordcount: '1095'
 ht-degree: 4%
 
 ---
@@ -149,7 +149,7 @@ Per istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione,
 
 ## Dati esportati {#exported-data}
 
-Se l&#39;attivazione ha esito positivo, verrà creato un pubblico personalizzato [!DNL LinkedIn] a livello di programmazione in [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/campaignmanager/login). L’iscrizione al pubblico viene aggiunta e rimossa quando gli utenti sono qualificati o squalificati per i tipi di pubblico attivati.
+Se l&#39;attivazione è riuscita, un pubblico personalizzato [!DNL LinkedIn] viene creato a livello di programmazione in [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/campaignmanager/login). L’iscrizione al pubblico viene regolata quando gli utenti vengono qualificati o squalificati per il pubblico attivato.
 
 >[!TIP]
 >

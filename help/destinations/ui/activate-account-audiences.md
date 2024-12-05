@@ -2,12 +2,12 @@
 title: Attivare il pubblico dell’account nelle destinazioni
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico dell’account nelle destinazioni
-badgeB2B: label="Edizione B2B" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="Edizione B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
+source-git-commit: 1c31dd978298191dd10500b60eb446d2ca37139c
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '836'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Questo articolo spiega il flusso di lavoro necessario per esportare [tipi di pub
 
 ## Destinazioni supportati {#supported-destinations}
 
-Vai a **[!UICONTROL Connessioni]** > **[!UICONTROL Destinazioni]** e seleziona la scheda **[!UICONTROL Catalogo]**. Utilizza il filtro **[!UICONTROL Tipi di dati]** e seleziona **[!UICONTROL Account]** per visualizzare le destinazioni che supportano l&#39;attivazione dei tipi di pubblico dell&#39;account. Attualmente, l&#39;esportazione dei tipi di pubblico dell&#39;account è disponibile solo per alcune destinazioni di archiviazione cloud ([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Azure Blob Storage](/help/destinations/catalog/cloud-storage/azure-blob.md), [Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md) e [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)) e per la destinazione [(Aziende) LinkedIn Matched Audiences](/help/destinations/catalog/social/linkedin.md).
+Vai a **[!UICONTROL Connessioni]** > **[!UICONTROL Destinazioni]** e seleziona la scheda **[!UICONTROL Catalogo]**. Utilizza il filtro **[!UICONTROL Tipi di dati]** e seleziona **[!UICONTROL Account]** per visualizzare le destinazioni che supportano l&#39;attivazione dei tipi di pubblico dell&#39;account. Attualmente, l&#39;esportazione dei tipi di pubblico dell&#39;account è disponibile solo per alcune destinazioni di archiviazione cloud ([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Azure Blob Storage](/help/destinations/catalog/cloud-storage/azure-blob.md), [Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md) e [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)) e per la destinazione di streaming [Demandbase](/help/destinations/catalog/advertising/demandbase.md) e [(Companies) LinkedIn Matched Audiences](/help/destinations/catalog/social/linkedin-b2b.md).
 
 ![Destinazioni che supportano i tipi di pubblico dell&#39;account.](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
 
@@ -57,7 +57,7 @@ Segui le istruzioni per selezionare una destinazione in cui puoi esportare i set
 >
 >Le destinazioni che possono esportare i tipi di pubblico dell&#39;account sono indicate da un&#39;icona nell&#39;angolo superiore destro della scheda, simile alla destinazione evidenziata di seguito, oppure è possibile utilizzare il filtro del tipo di dati per visualizzare solo le destinazioni che possono esportare i tipi di pubblico dell&#39;account, come [mostrato più in alto nella pagina](#supported-destinations).
 
-![Pagina di destinazione di Amazon S3 in grado di esportare i tipi di pubblico del profilo evidenziati.](/help/destinations/assets/ui/activate-account-audiences/amazon-s3-icon-activate-account-audiences.png)
+![Pagina di destinazione Demandbase in grado di esportare i tipi di pubblico del profilo evidenziati.](/help/destinations/assets/ui/activate-account-audiences/demandbase-icon-activate-account-audiences.png)
 
 1. Seleziona **[!UICONTROL Account tipo dati]**, seguito dalla connessione di destinazione in cui desideri esportare i set di dati, quindi seleziona **[!UICONTROL Avanti]**.
 

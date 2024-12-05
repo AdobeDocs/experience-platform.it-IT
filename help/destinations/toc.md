@@ -5,9 +5,9 @@ user-guide-description: Attiva i dati, noti e non, per campagne di marketing cro
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 6414168c1deb047af30d8636ef8d61316f56aecf
+source-git-commit: 3a66902ab169c555a52741e3630d2b9f50149155
 workflow-type: tm+mt
-source-wordcount: '1257'
+source-wordcount: '1262'
 ht-degree: 5%
 
 ---
@@ -201,6 +201,7 @@ ht-degree: 5%
    * Destinazioni social{#social}
       * [Panoramica sulle destinazioni social](./catalog/social/overview.md)
       * [Connessione facebook](./catalog/social/facebook.md)
+      * [(Aziende) LinkedIn Matched Audiences connection](./catalog/social/linkedin-b2b.md)
       * [Connessione di linkedIn Matched Audiences](./catalog/social/linkedin.md)
       * [Connessione TikTok](./catalog/social/tiktok.md)
       * [Connessione [!DNL Twitter Custom Audiences]](./catalog/social/twitter.md)
