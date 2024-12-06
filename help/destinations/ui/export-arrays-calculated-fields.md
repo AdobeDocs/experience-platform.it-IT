@@ -3,7 +3,7 @@ title: Utilizzare i campi calcolati per esportare matrici come stringhe
 type: Tutorial
 description: Scopri come utilizzare i campi calcolati per esportare gli array da Real-Time CDP a destinazioni di archiviazione cloud come stringhe.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 849d42e36921e60b6ac3a5e89336b954e64a35d7
+source-git-commit: 9b64e39d25ad94aa834c8e207396b37c2a121243
 workflow-type: tm+mt
 source-wordcount: '1556'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->* La funzionalità di esportazione di array tramite campi calcolati è generalmente disponibile.
+>La funzionalità di esportazione di array tramite campi calcolati è generalmente disponibile.
 
 Scopri come esportare array tramite campi calcolati da Real-Time CDP a [destinazioni di archiviazione cloud](/help/destinations/catalog/cloud-storage/overview.md) come stringhe. Leggi questo documento per comprendere i casi d’uso abilitati da questa funzionalità.
 

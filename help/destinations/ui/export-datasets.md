@@ -3,9 +3,9 @@ title: Esportare i set di dati nelle destinazioni di archiviazione cloud
 type: Tutorial
 description: Scopri come esportare i set di dati da Adobe Experience Platform nella posizione di archiviazione cloud preferita.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 74dcaff91a264062feec262784e056a296072fd7
+source-git-commit: 9b64e39d25ad94aa834c8e207396b37c2a121243
 workflow-type: tm+mt
-source-wordcount: '2603'
+source-wordcount: '2612'
 ht-degree: 8%
 
 ---
@@ -293,54 +293,54 @@ Tieni presente le seguenti limitazioni per il rilascio di disponibilità general
 
 **È possibile generare un file senza una cartella se si salva solo in `/` come percorso della cartella? Inoltre, se non è necessario un percorso di cartella, in che modo verranno generati i file con nomi duplicati in una cartella o in un percorso?**
 
-+++
++++Risposta
 A partire dalla versione di settembre 2024, è possibile personalizzare il nome della cartella e persino utilizzare `/` per esportare i file per tutti i set di dati nella stessa cartella. Adobe Questo non è consigliato per le destinazioni che esportano più set di dati, in quanto i nomi di file generati dal sistema che appartengono a set di dati diversi verranno combinati nella stessa cartella.
 +++
 
 **È possibile indirizzare il file manifesto a una cartella e i file di dati a un&#39;altra cartella?**
 
-+++
++++Risposta
 No, non è possibile copiare il file manifesto in una posizione diversa.
 +++
 
 **È possibile controllare la sequenza o la tempistica di consegna dei file?**
 
-+++
++++Risposta
 Sono disponibili opzioni per pianificare l’esportazione. Non sono disponibili opzioni per ritardare o sequenziare la copia dei file. Vengono copiati nel percorso di archiviazione non appena vengono generati.
 +++
 
 **Quali formati sono disponibili per il file manifesto?**
 
-+++
++++Risposta
 Il file manifesto è in formato .json.
 +++
 
 **Esiste disponibilità API per il file manifesto?**
 
-+++
++++Risposta
 Non è disponibile alcuna API per il file manifesto, ma include un elenco di file che comprendono l’esportazione.
 +++
 
 **È possibile aggiungere ulteriori dettagli al file manifesto (ad esempio, il numero di record)? In caso affermativo, in che modo?**
 
-+++
++++Risposta
 Non è possibile aggiungere ulteriori informazioni al file manifesto. Il conteggio dei record è disponibile tramite l&#39;entità `flowRun` (interrogabile tramite API). Ulteriori informazioni nel monitoraggio delle destinazioni.
 +++
 
 **Come vengono suddivisi i file di dati? Quanti record per file?**
 
-+++
++++Risposta
 I file di dati vengono suddivisi in base al partizionamento predefinito nel data lake di Experience Platform. I set di dati più grandi hanno un numero più elevato di partizioni. Il partizionamento predefinito non è configurabile dall&#39;utente in quanto è ottimizzato per la lettura.
 +++
 
 **È possibile impostare una soglia (numero di record per file)?**
 
-+++
++++Risposta
 No, non è possibile.
 +++
 
 **Come si invia di nuovo un set di dati nel caso in cui l&#39;invio iniziale non sia valido?**
 
-+++
++++Risposta
 I tentativi vengono eseguiti automaticamente per la maggior parte dei tipi di errori di sistema.
 +++
