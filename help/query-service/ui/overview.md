@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Query Service
 description: Adobe Experience Platform Query Service fornisce un’interfaccia utente che può essere utilizzata per scrivere ed eseguire query, visualizzare le query eseguite in precedenza e accedere a quelle salvate dagli utenti della tua organizzazione.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 3b36148aee490554672ee9e76db4e03c430dfae6
+source-git-commit: a4fc19599ea6639ee5762ee1542cb08b9ed3b6a8
 workflow-type: tm+mt
 source-wordcount: '2275'
 ht-degree: 1%
@@ -175,4 +175,3 @@ Nella scheda **[!UICONTROL Credenziali]** vengono visualizzate le credenziali si
 ## Passaggi successivi
 
 Ora che hai familiarità con l&#39;interfaccia utente di Query Service su [!DNL Platform], puoi accedere a Query Editor per iniziare a creare progetti di query personalizzati da condividere con altri utenti dell&#39;organizzazione. Per ulteriori informazioni sull&#39;authoring e l&#39;esecuzione di query in Query Editor, vedere la [guida utente di Query Editor](./user-guide.md).
-
