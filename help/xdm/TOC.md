@@ -5,10 +5,10 @@ breadcrumb-title: Guida di Experience Data Model (XDM)
 user-guide-description: Scopri una panoramica del sistema Experience Data Model (XDM) in Experience Platform e come utilizzare i gruppi di campi per classi e schemi per standardizzare i dati dell’esperienza.
 feature: Schemas
 role: Developer
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+source-git-commit: d2baf74bb5fd87045f5d25b2996911c7bce36f36
 workflow-type: tm+mt
-source-wordcount: '637'
-ht-degree: 45%
+source-wordcount: '719'
+ht-degree: 42%
 
 ---
 
@@ -29,6 +29,53 @@ ht-degree: 45%
       * [Assistenza sanitaria](./schema/industries/healthcare.md)
       * [Telecomunicazioni](./schema/industries/telecom.md)
       * [Viaggi e ospitalità](./schema/industries/travel-hospitality.md)
+   * Modello dati assistenza sanitaria V2 {#health-care-data-model-v2}
+      * [Settore sanitario V2](./schema/industries/healthcare-v2.md)
+      * Classi {#health-care-classes}
+         * [Posizione](./classes/location.md)
+      * Gruppi di campi {#health-care-v2-field-groups}
+         * Profilo individuale XDM {#health-care-v2-profile}
+            * [Account sanitario](./field-groups/profile/healthcare-account.md)
+            * [Piano di assistenza sanitaria](./field-groups/profile/healthcare-care-plan.md)
+            * [Obiettivo sanitario](./field-groups/profile/healthcare-goal.md)
+            * [Organizzazione sanitaria](./field-groups/profile/healthcare-organization.md)
+            * [Paziente sanitario](./field-groups/profile/healthcare-patient.md)
+            * [Operatore sanitario](./field-groups/profile/healthcare-practioner.md)
+            * [Programma sanitario](./field-groups/profile/healthcare-schedule.md)
+         * Evento esperienza XDM {#health-care-v2-event}
+            * [Immunizzazione Sanitaria](./field-groups/event/healthcare-immunization.md)
+         * Posizione {#health-care-v2-location}
+            * [Sede sanitaria](./field-groups/location/healthcare-location.md)
+         * Medicinale {#health-care-v2-medication}
+            * [Dispensazione di medicinali sanitari](./field-groups/medication/healthcare-medication-dispense.md)
+            * [Richiesta di trattamento medico](./field-groups/medication/healthcare-medication-request.md)
+            * [Medicinale sanitario](./field-groups/medication/healthcare-medication-v2.md)
+         * Piani {#health-care-v2-plans}
+            * [Copertura sanitaria](./field-groups/plan/healthcare-coverage.md)
+      * Tipi di dati {#health-care-v2-data-types}
+         * [Indirizzo](./data-types/healthcare/address.md)
+         * [Annotazione](./data-types/healthcare/annotation.md)
+         * [Disponibilità](./data-types/healthcare/availability.md)
+         * [Concetto codificabile](./data-types/healthcare/codeable-concept.md)
+         * [Riferimento codificabile](./data-types/healthcare/codeable-reference.md)
+         * [Codifica](./data-types/healthcare/coding.md)
+         * [Punto di contatto](./data-types/healthcare/contact-point.md)
+         * [Dosaggio](./data-types/healthcare/dosage.md)
+         * [Durata](./data-types/healthcare/duration.md)
+         * [Dettagli di contatto estesi](./data-types/healthcare/extended-contact-detail.md)
+         * [Nome umano](./data-types/healthcare/human-name.md)
+         * [Identificatore](./data-types/healthcare/identifier.md)
+         * [Denaro](./data-types/healthcare/money.md)
+         * [Periodo](./data-types/healthcare/period.md)
+         * [Persona](./data-types/healthcare/person.md)
+         * [Quantità](./data-types/healthcare/quantity.md)
+         * [Intervallo](./data-types/healthcare/range.md)
+         * [Proporzione](./data-types/healthcare/ratio.md)
+         * [Riferimenti](./data-types/healthcare/reference.md)
+         * [Ripeti](./data-types/healthcare/repeat.md)
+         * [Quantità semplice](./data-types/healthcare/simple-quantity.md)
+         * [Tempistica](./data-types/healthcare/timing.md)
+         * [Servizio virtuale](./data-types/healthcare/virtual-service-detail.md)
    * [Dizionario campo XDM](schema/field-dictionary.md)
 * Classi {#classes}
    * [Profilo individuale XDM](./classes/individual-profile.md)
@@ -54,9 +101,9 @@ ht-degree: 45%
    * Profilo individuale XDM {#profile}
       * [Consensi e preferenze](./field-groups/profile/consents.md)
       * [Dettagli demografici](./field-groups/profile/demographic-details.md)
+      * [Dettagli dei membri del settore sanitario](./field-groups/profile/healthcare-member-details.md)
       * [Consenso IAB TCF 2.0](./field-groups/profile/iab.md)
       * [IdentityMap](./field-groups/profile/identitymap.md)
-      * [Dettagli dei membri del settore sanitario](./field-groups/profile/healthcare-member-details.md)
       * [Dettagli fedeltà](./field-groups/profile/loyalty-details.md)
       * [Dettagli di contatto personali](./field-groups/profile/personal-contact-details.md)
       * [Arricchimento dei partner di profilo (esempio)](./field-groups/profile/profile-partner-enrichment.md)
@@ -236,7 +283,7 @@ ht-degree: 45%
    * [Deprecare un campo XDM nell’API](tutorials/field-deprecation-api.md)
    * [Definire una relazione di schema nell’interfaccia utente](tutorials/relationship-ui.md)
    * [Definire una relazione di schema nell’API](tutorials/relationship-api.md)
-   * [Definire una relazione di schema in Real-Time CDP B2B Edition](tutorials/relationship-b2b.md)
+   * [Definire una relazione di schema in Real-Time CDP B2B edition](tutorials/relationship-b2b.md)
    * [Gestire le etichette di utilizzo dei dati per uno schema](tutorials/labels.md)
    * [Creare uno schema ad hoc](tutorials/ad-hoc.md)
 * [Guida alla risoluzione dei problemi](troubleshooting-guide.md)
