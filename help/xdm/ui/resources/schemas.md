@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creare e modificare gli schemi nell’interfaccia utente
 description: Scopri le nozioni di base sulla creazione e la modifica degli schemi nell’interfaccia utente di Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: f530e4ff755ac89141ee67bef80700b46acf0868
+source-git-commit: 02b709c01347c1d03f870132dff437b97f239a9c
 workflow-type: tm+mt
-source-wordcount: '3859'
+source-wordcount: '4056'
 ht-degree: 1%
 
 ---
@@ -37,7 +37,7 @@ Nell&#39;area di lavoro [!UICONTROL Schemi], seleziona **[!UICONTROL Crea schema
 
 Viene visualizzata la finestra di dialogo [!UICONTROL Crea schema]. In questa finestra di dialogo, puoi scegliere di creare manualmente uno schema aggiungendo campi e gruppi di campi, oppure puoi caricare un file CSV e utilizzare algoritmi ML per generare uno schema. Seleziona un flusso di lavoro per la creazione di uno schema dalla finestra di dialogo.
 
-![Finestra di dialogo Crea schema con le opzioni del flusso di lavoro e seleziona evidenziato.](../../images/tutorials/create-schema/create-a-schema-dialog.png)
+![Finestra di dialogo Crea schema con le opzioni del flusso di lavoro e seleziona evidenziato.](../../images/ui/resources/schemas/create-a-schema-dialog.png)
 
 ### [!BADGE Beta]{type=Informative} Creazione manuale o assistita da ML dello schema {#manual-or-assisted}
 
@@ -49,15 +49,35 @@ Viene visualizzato il flusso di lavoro [!UICONTROL Crea schema]. Puoi scegliere 
 
 ![Il flusso di lavoro [!UICONTROL Crea schema] con le tre opzioni di classe e [!UICONTROL Successivo] evidenziato.](../../images/ui/resources/schemas/schema-class-options.png)
 
+Quando si sceglie **[!UICONTROL Altro]**, viene visualizzato un elenco delle classi disponibili. Da qui puoi sfogliare e filtrare le classi preesistenti.
+
+![Il flusso di lavoro [!UICONTROL Crea schema] con [!UICONTROL Altro] evidenziato nella sezione [!UICONTROL Dettagli schema].](../../images/ui/resources/schemas/other-schema-details.png)
+
+Selezionare un pulsante di opzione per filtrare le classi in base al fatto che si tratti di classi personalizzate o standard. Puoi anche filtrare i risultati disponibili in base al settore o cercare una classe specifica utilizzando il campo di ricerca.
+
+![Il flusso di lavoro [!UICONTROL Crea schema] con la barra di ricerca [!UICONTROL Personalizzato] e [!UICONTROL Industrie] evidenziati.](../../images/ui/resources/schemas/filter-and-search.png)
+
+Per aiutarti a decidere la classe appropriata, ci sono icone di informazioni e anteprima per ogni classe. Icona info (![Icona info.](/help/images/icons/info.png)) apre una finestra di dialogo che fornisce una descrizione della classe e del settore a cui è associata.
+
+![Icona informazioni e descrizione comando della classe selezionata evidenziati.](../../images/ui/resources/schemas/class-info.png)
+
+Icona di anteprima (![Icona di anteprima.](/help/images/icons/preview.png)) apre una finestra di dialogo di anteprima per la classe che contiene un diagramma schema e le relative proprietà.
+
+![Anteprima della classe selezionata con il diagramma dello schema e le proprietà della classe.](../../images/ui/resources/schemas/class-preview.png)
+
+Seleziona una riga per scegliere una classe, quindi seleziona **[!UICONTROL Successivo]** per confermare la scelta.
+
+![Il flusso di lavoro [!UICONTROL Crea schema] con una classe selezionata dalla tabella delle classi disponibili ed evidenziato [!UICONTROL Avanti].](../../images/ui/resources/schemas/select-class.png)
+
 Dopo aver selezionato una classe, viene visualizzata la sezione [!UICONTROL Name and review]. In questa sezione, fornisci un nome e una descrizione per identificare lo schema. &#x200B;La struttura di base dello schema (fornita dalla classe) viene visualizzata nell’area di lavoro per rivedere e verificare la struttura di classe e schema selezionata.
 
 Immetti un nome visualizzato dello schema [!UICONTROL descrittivo] nel campo di testo. Quindi, inserisci una descrizione adatta per identificare lo schema. Dopo aver rivisto la struttura dello schema e aver impostato correttamente le impostazioni, seleziona **[!UICONTROL Fine]** per creare lo schema.
 
 ![La sezione [!UICONTROL Name and review] del flusso di lavoro [!UICONTROL Create schema] con [!UICONTROL Schema display name], [!UICONTROL Description], e [!UICONTROL Finish] evidenziato.](../../images/ui/resources/schemas/name-and-review.png)
 
-Viene visualizzata la scheda [!UICONTROL Schema] [!UICONTROL Sfoglia]. Lo schema creato di recente è ora elencato nella Raccolta schemi e disponibile per la modifica in [!DNL Schema Editor].
+Viene visualizzato l’Editor di schema, con la struttura dello schema visualizzata nell’area di lavoro. Se lo desideri, ora puoi iniziare ad aggiungere [campi alla classe](../../ui/resources/classes.md#add-fields).
 
-![Nell&#39;area di lavoro Schemi della scheda Sfoglia viene visualizzato lo schema creato di recente.](../../images/ui/resources/schemas/example-schema.png)
+![Editor di schema con la struttura dello schema visualizzata nell&#39;area di lavoro.](../../images/ui/resources/schemas/edit.png)
 
 ## Modificare uno schema esistente {#edit}
 
@@ -139,7 +159,7 @@ Dopo aver scelto i gruppi di campi, seleziona **[!UICONTROL Aggiungi gruppi di c
 
 >[!NOTE]
 >
-Nell&#39;Editor schema, le classi e i gruppi di campi standard (generati da Adobi) sono indicati con l&#39;icona lucchetto (![Un&#39;icona lucchetto.](/help/images/icons/lock-closed.png). Il lucchetto viene visualizzato nella barra a sinistra accanto al nome della classe o del gruppo di campi, nonché accanto a qualsiasi campo nel diagramma dello schema che fa parte di una risorsa generata dal sistema.
+Nell&#39;Editor schema, le classi e i gruppi di campi standard (generati da Adobe) sono indicati con l&#39;icona lucchetto (![Un&#39;icona lucchetto.](/help/images/icons/lock-closed.png). Il lucchetto viene visualizzato nella barra a sinistra accanto al nome della classe o del gruppo di campi, nonché accanto a qualsiasi campo nel diagramma dello schema che fa parte di una risorsa generata dal sistema.
 >
 ![Editor schema con l&#39;icona lucchetto evidenziata](../../images/ui/explore/schema-editor-padlock-icon.png)
 
@@ -354,7 +374,7 @@ Per riassegnare una classe, selezionare **[!UICONTROL Assegna]** nella parte sin
 
 ![](../../images/ui/resources/schemas/assign-class-button.png)
 
-Viene visualizzata una finestra di dialogo in cui sono elencate tutte le classi disponibili, incluse quelle definite dall&#39;organizzazione (il proprietario è &quot;[!UICONTROL Cliente]&quot;) e le classi standard definite dall&#39;Adobe.
+Viene visualizzata una finestra di dialogo in cui sono elencate tutte le classi disponibili, incluse quelle definite dall&#39;organizzazione (il proprietario è &quot;[!UICONTROL Cliente]&quot;) e le classi standard definite da Adobe.
 
 Selezionare una classe dall&#39;elenco per visualizzarne la descrizione sul lato destro della finestra di dialogo. È inoltre possibile selezionare **[!UICONTROL Anteprima struttura di classe]** per visualizzare i campi e i metadati associati alla classe. Seleziona **[!UICONTROL Assegna classe]** per continuare.
 
