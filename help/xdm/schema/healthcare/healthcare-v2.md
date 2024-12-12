@@ -5,10 +5,10 @@ badgePrivateBeta: label="Beta privata" type="Informative"
 hide: true
 hidefromtoc: true
 exl-id: a796b58b-b36f-4277-870b-0d3939af8061
-source-git-commit: 36f1a443eda47917d5b6bd84d4765ff044b5093a
+source-git-commit: 8eaff2361e76a7856b3371156ed9fe5c542fec28
 workflow-type: tm+mt
-source-wordcount: '570'
-ht-degree: 12%
+source-wordcount: '552'
+ht-degree: 3%
 
 ---
 
@@ -18,179 +18,13 @@ ht-degree: 12%
 
 La tabella seguente illustra le classi e i gruppi di campi di schema consigliati per diversi casi d’uso comuni di assistenza sanitaria.
 
-<table>
-  <thead>
-    <tr>
-      <th>Casi d’uso</th>
-      <th>Gruppi di campi</th>
-      <th>Classi compatibili</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Crea/aggiorna paziente</strong>: quando un paziente arriva al front desk dell'ospedale, viene creata una cartella clinica del paziente contenente dettagli demografici come un identificatore (facoltativo), il nome del paziente, la data di nascita, il genere e l'indirizzo. Questo è un componente essenziale dell'IT per il settore sanitario.</td>
-      <td><a href="./field-groups/patient.md">Paziente</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">Profilo individuale XDM</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td rowspan="6"><strong>Vaccinazione</strong>: facilitazione del processo di vaccinazione, gestione dei record di vaccinazione dei pazienti e integrazione di EMR con i sistemi di gestione dei vaccini.</td>
-      <td><a href="./field-groups/immunization.md">Immunizzazione</a></td>
-      <td>
-        <li><a href="../../classes/experienceevent.md">Evento esperienza XDM</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/patient.md">Paziente</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">Profilo individuale XDM</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/location.md">Posizione</a></td>
-      <td>
-        <li><a href="./classes/location.md">Posizione</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/medication.md">Medicinale</a></td>
-      <td>
-        <li><a href="../../classes/medication.md">Medicinale</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/medication-dispense.md">Distribuzione di medicinali</a></td>
-      <td>
-        <li><a href="../../classes/medication.md">Medicinale</a></li>
-        <li><a href="../../classes/individual-profile.md">Profilo individuale XDM</a></li>
-        <li><a href="../../classes/provider.md">Provider</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/medication-request.md">Richiesta di medicinale</a></td>
-      <td>
-        <li><a href="../../classes/medication.md">Medicinale</a></li>
-        <li><a href="../../classes/individual-profile.md">Profilo individuale XDM</a></li>
-        <li><a href="../../classes/provider.md">Provider</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td rowspan="4"><strong>Adesione post-terapia</strong>: motivare i pazienti e gli assistenti a completare i piani di trattamento e ridurre le percentuali di rimesse.</td>
-      <td><a href="./field-groups/patient.md">Paziente</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">Profilo individuale XDM</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/location.md">Posizione</a></td>
-      <td>
-        <li><a href="./classes/location.md">Posizione</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/care-plan.md">Piano di assistenza</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">Profilo individuale XDM</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/goal.md">Obiettivo</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">Profilo individuale XDM</a></li>
-        <li><a href="../../classes/provider.md">Provider</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td rowspan="7"><strong>Esperienza del consumatore per l'assicurazione</strong>: migliora l'acquisizione digitale e le esperienze tra i consumatori che acquistano un'assicurazione. Gli esempi includono: 
-        <li> Comprensione del comportamento dei consumatori nell’inviare e-mail promozionali o annunci mirati di terze parti a persone che accedono a pagine contenenti informazioni generali (come piani, nomi dei piani/livelli, Medicaid o programmi per il benessere)
-        </li> 
-        <li> Invio di informazioni relative al vaccino sulla salute cardiaca per creare consapevolezza del marchio o richieste di programmazione di vaccini a persone alla ricerca di informazioni sulla salute cardiaca e sui vaccini.
-        </li>
-      </td>
-      <td><a href="./field-groups/patient.md">Paziente</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">Profilo individuale XDM</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/coverage.md">Copertura</a></td>
-      <td>
-        <li><a href="../../classes/plan.md">Piano</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/account.md">Account</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">Profilo individuale XDM</a></li>
-        <li><a href="../../classes/provider.md">Provider</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/location.md">Posizione</a></td>
-      <td>
-        <li><a href="./classes/location.md">Posizione</a></li>
-      </td>
-    </tr>
-      <tr>
-      <td><a href="./field-groups/medication.md">Medicinale</a></td>
-      <td>
-        <li><a href="../../classes/medication.md">Medicinale</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/medication-dispense.md">Distribuzione di medicinali</a></td>
-      <td>
-        <li><a href="../../classes/medication.md">Medicinale</a></li>
-        <li><a href="../../classes/individual-profile.md">Profilo individuale XDM</a></li>
-        <li><a href="../../classes/provider.md">Provider</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/medication-request.md">Richiesta di medicinale</a></td>
-      <td>
-        <li><a href="../../classes/medication.md">Medicinale</a></li>
-        <li><a href="../../classes/individual-profile.md">Profilo individuale XDM</a></li>
-        <li><a href="../../classes/provider.md">Provider</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td rowspan="5"><strong>Esperienza provider migliorata</strong>: utilizzo dei dati del provider dal sistema EMR per suggerire provider alternativi in base alla disponibilità, alla posizione e alla specializzazione degli appuntamenti. <br> <br>Miglioramento delle ricerche dei provider per visualizzare i risultati con la disponibilità desiderata, verifica che il provider selezionato faccia parte della rete di payor e fornitura di stime dei costi.
-      </td>
-      <td><a href="./field-groups/patient.md">Paziente</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">Profilo individuale XDM</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/location.md">Posizione</a></td>
-      <td>
-        <li><a href="./classes/location.md">Posizione</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/organization.md">Organizzazione</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">Profilo individuale XDM</a></li>
-        <li><a href="../../classes/provider.md">Provider</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/practioner.md">Professionista</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">Profilo individuale XDM</a></li>
-        <li><a href="../../classes/provider.md">Provider</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/schedule.md">Pianificazione</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">Profilo individuale XDM</a></li>
-        <li><a href="../../classes/provider.md">Provider</a></li>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Caso d’uso | Gruppi di campi e classi compatibili |
+| --- | --- |
+| **Crea/aggiorna paziente**: quando un paziente arriva al front desk dell&#39;ospedale, viene creata una cartella clinica del paziente contenente dettagli demografici come un identificatore (facoltativo), il nome del paziente, la data di nascita, il genere e l&#39;indirizzo. Questo è un componente essenziale dell&#39;IT per il settore sanitario. | <ul><li>**[Profili individuali XDM](../../classes/individual-profile.md)**:<ul><li>[Paziente](./field-groups/patient.md)</li></ul></li></ul> |
+| **Vaccinazione**: facilitazione del processo di vaccinazione, gestione dei record di vaccinazione dei pazienti e integrazione di EMR con i sistemi di gestione dei vaccini. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[Immunizzazione](./field-groups/immunization.md)</li></ul></li><li>**[Profilo individuale XDM](../../classes/individual-profile.md)**:<ul><li>[Distribuzione del medicinale](./field-groups/medication-dispense.md)</li><li>[Richiesta medicinale](./field-groups/medication-request.md)</li><li>[Paziente](./field-groups/patient.md)</li></ul></li><li>**[Posizione](./classes/location.md)**:<ul><li>[Posizione](./field-groups/location.md)</li></ul><li>**[Medicinale](../../classes/medication.md)**:<ul><li>[Medicinale](./field-groups/medication.md)</li><li>[Distribuzione del medicinale](./field-groups/medication-dispense.md)</li><li>[Richiesta medicinale](./field-groups/medication-request.md)</li></ul></li><li>**[Provider](../../classes/provider.md)**:<ul><li>[Distribuzione del medicinale](./field-groups/medication-dispense.md)</li><li>[Richiesta medicinale](./field-groups/medication-request.md)</li></ul></li></ul> |
+| **Adesione post-terapia**: motivare i pazienti e gli assistenti a completare i piani di trattamento e ridurre le percentuali di rimesse. | <ul><li>**[Profilo individuale XDM](../../classes/individual-profile.md)**:<ul><li>[Piano di assistenza](./field-groups/care-plan.md)</li><li>[Obiettivo](./field-groups/goal.md)</li><li>[Paziente](./field-groups/patient.md)</li></ul></li><li>**[Posizione](./classes/location.md)**:<ul><li>[Posizione](./field-groups/location.md)</li></ul><li>**[Provider](../../classes/provider.md)**:<ul><li>[Obiettivo](./field-groups/goal.md)</li></ul></li></ul> |
+| **Esperienza del consumatore per l&#39;assicurazione**: migliora l&#39;acquisizione digitale e le esperienze tra i consumatori che acquistano un&#39;assicurazione. Gli esempi includono: <li> Comprensione del comportamento dei consumatori nell’inviare e-mail promozionali o annunci mirati di terze parti a persone che accedono a pagine contenenti informazioni generali (come piani, nomi dei piani/livelli, Medicaid o programmi per il benessere)</li><li> Invio di informazioni relative al vaccino sulla salute cardiaca per creare consapevolezza del marchio o richieste di programmazione di vaccini a persone alla ricerca di informazioni sulla salute cardiaca e sui vaccini. </li> | <ul><li>**[Profilo individuale XDM](../../classes/individual-profile.md)**:<ul><li>[Account](./field-groups/account.md)</li><li>[Distribuzione del medicinale](./field-groups/medication-dispense.md)</li><li>[Richiesta medicinale](./field-groups/medication-request.md)</li><li>[Paziente](./field-groups/patient.md)</li></ul></li><li>**[Posizione](./classes/location.md)**:<ul><li>[Posizione](./field-groups/location.md)</li></ul><li>**[Medicinale](../../classes/medication.md)**:<ul><li>[Medicinale](./field-groups/medication.md)</li><li>[Distribuzione del medicinale](./field-groups/medication-dispense.md)</li><li>[Richiesta medicinale](./field-groups/medication-request.md)</li></ul></li><li>**[Provider](../../classes/provider.md)**:<ul><li>[Account](./field-groups/account.md)</li><li>[Distribuzione del medicinale](./field-groups/medication-dispense.md)</li><li>[Richiesta medicinale](./field-groups/medication-request.md)</li></ul><li>**[Piano](../../classes/plan.md)**:<ul><li>[Obiettivo](./field-groups/coverage.md)</li></ul></li></ul> |
+| **Esperienza provider migliorata**: utilizzo dei dati del provider dal sistema EMR per suggerire provider alternativi in base alla disponibilità, alla posizione e alla specializzazione degli appuntamenti. <br> <br>Miglioramento delle ricerche dei provider per visualizzare i risultati con la disponibilità desiderata, verifica che il provider selezionato faccia parte della rete di fornitori e fornitura di stime dei costi. | <ul><li>**[Profili individuali XDM](../../classes/individual-profile.md)**:<ul><li>[Organizzazione](./field-groups/organization.md)</li><li>[Paziente](./field-groups/patient.md)</li><li>[Professionista](./field-groups/practioner.md)</li><li>[Pianificazione](./field-groups/schedule.md)</li></ul></li><li>**[Posizione](./classes/location.md)**:<ul><li>[Posizione](./field-groups/location.md)</li></ul><li>**[Provider](../../classes/provider.md)**:<ul><li>[Organizzazione](./field-groups/organization.md)</li><li>[Professionista](./field-groups/practioner.md)</li><li>[Pianificazione](./field-groups/schedule.md)</li></ul></li></ul> |
 
 ## Tipi di dati {#data-types}
 
