@@ -3,9 +3,9 @@ title: Note sulla versione di Adobe Experience Platform Web SDK
 description: Note sulla versione più recente di Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;note sulla versione;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 3dacc991fd7760c1c358bec07aca83ffeb4f4f4d
+source-git-commit: 3a50468a7596b9ba870920a8188ae50b40aaef69
 workflow-type: tm+mt
-source-wordcount: '2042'
+source-wordcount: '2085'
 ht-degree: 5%
 
 ---
@@ -15,6 +15,12 @@ ht-degree: 5%
 
 Questo documento descrive le note sulla versione di Adobe Experience Platform Web SDK.
 Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [note sulla versione dell&#39;estensione tag Web SDK](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Versione 2.24.1 - sabato 6 dicembre 2024
+
+**Correzione e miglioramenti**
+
+- È stato risolto un problema di dipendenza relativo a [Adobe Experience Platform Rules Engine](https://github.com/adobe/aepsdk-rulesengine-typescript/), che causava errori in alcune integrazioni cliente. Il Web SDK richiede [Adobe Experience Platform Rules Engine](https://github.com/adobe/aepsdk-rulesengine-typescript/) versione 2.0.3 o successiva.
 
 ## Versione 2.24.0 - venerdì 31 ottobre 2024
 
@@ -44,7 +50,7 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 
 **Correzioni e miglioramenti**
 
-- È stato risolto un problema a causa del quale i cookie non venivano scritti correttamente durante l’esecuzione locale dell’SDK web.
+- È stato risolto un problema che impediva la corretta scrittura dei cookie durante l’esecuzione locale di Web SDK.
 
 ## Versione 2.22.0 - 22 agosto 2024
 
@@ -121,7 +127,7 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 **Correzioni e miglioramenti**
 
 - È stato risolto un problema a causa del quale i collegamenti di uscita non venivano qualificati perché il dominio faceva parte della query.
-- `edgeConfigId` è stato dichiarato obsoleto a favore di `datastreamId` nella configurazione dell&#39;SDK Web.
+- `edgeConfigId` è stato dichiarato obsoleto a favore di `datastreamId` nella configurazione del Web SDK.
 
 ## Versione 2.17.0, giovedì 17 maggio 2023
 
@@ -257,17 +263,17 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 
 ## Versione 2.4.0 - Marzo 2021
 
-- È ora possibile installare l&#39;SDK come pacchetto [NPM](/help/web-sdk/install/npm.md).
+- È ora possibile installare SDK come pacchetto [NPM](/help/web-sdk/install/npm.md).
 - È stato aggiunto il supporto per un&#39;opzione `out` durante la [configurazione del consenso predefinito](/help/web-sdk/commands/configure/defaultconsent.md), che elimina tutti gli eventi fino alla ricezione del consenso (l&#39;opzione `pending` esistente accoda gli eventi e li invia dopo la ricezione del consenso).
 - È ora possibile utilizzare il callback [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) per impedire l&#39;invio di un evento.
 - Ora utilizza un gruppo di campi dello schema XDM invece di `meta.personalization` per inviare eventi relativi a contenuti personalizzati di cui viene eseguito il rendering o su cui si fa clic.
 - Il comando [`getIdentity`](/help/web-sdk/commands/getidentity.md) ora restituisce l&#39;ID dell&#39;area Edge insieme all&#39;identità.
 - Gli avvisi e gli errori ricevuti dal server sono stati migliorati e vengono gestiti in modo più appropriato.
 - È stato aggiunto il supporto per lo standard Consent 2.0 di Adobe per il comando [`setConsent`](/help/web-sdk/commands/setconsent.md).
-- Le preferenze di consenso, quando ricevute, vengono sottoposte a hashing e memorizzate nell’archiviazione locale per un’integrazione ottimizzata tra CMP, Platform Web SDK e Edge Network di Platform. Se stai raccogliendo le preferenze di consenso, ti invitiamo ora a chiamare `setConsent` a ogni caricamento di pagina.
+- Le preferenze di consenso, quando ricevute, vengono sottoposte a hashing e memorizzate nell’archiviazione locale per un’integrazione ottimizzata tra CMP, Platform Web SDK e gli Edge Network di Platform. Se stai raccogliendo le preferenze di consenso, ti invitiamo ora a chiamare `setConsent` a ogni caricamento di pagina.
 - Sono stati aggiunti due [hook di monitoraggio](https://github.com/adobe/alloy/wiki/Monitoring-Hooks), `onCommandResolved` e `onCommandRejected`.
 - Correzione bug: gli eventi di notifica dell’interazione Personalization contenevano informazioni duplicate sulla stessa attività quando un utente passava a una nuova vista di app a pagina singola, tornava alla vista originale e faceva clic su un elemento idoneo per la conversione.
-- Correzione bug: se il primo evento inviato dall&#39;SDK fosse impostato su `true`, [`sendBeacon`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) verrebbe utilizzato per inviare l&#39;evento, causando un errore relativo a un&#39;identità non stabilita.`documentUnloading`
+- Correzione bug: se il primo evento inviato da SDK fosse impostato su `true`, [`sendBeacon`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) verrebbe utilizzato per inviare l&#39;evento, causando un errore relativo a un&#39;identità non stabilita.`documentUnloading`
 
 ## Versione 2.3.0 - novembre 2020
 
@@ -277,12 +283,12 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 - Correzione bug: `sendBeacon` non veniva utilizzato quando `documentUnloading` era impostato su `true` o quando i clic sui collegamenti venivano tracciati automaticamente.
 - Correzione bug: se l’elemento di ancoraggio conteneva contenuto HTML, non veniva tracciato automaticamente alcun collegamento.
 - Correzione bug: alcuni errori del browser contenenti una proprietà `message` di sola lettura non sono stati gestiti in modo appropriato, causando un errore diverso esposto al cliente.
-- Correzione bug: l’esecuzione dell’SDK all’interno di un iframe generava un errore se la pagina HTML dell’iframe proveniva da un sottodominio diverso rispetto alla pagina HTML della finestra principale.
+- Correzione bug: se si esegue SDK all’interno di un iframe, si verifica un errore se la pagina HTML dell’iframe proviene da un sottodominio diverso rispetto alla pagina HTML della finestra principale.
 
 ## Versione 2.2.0 - ottobre 2020
 
 - Correzione bug: l&#39;oggetto Opt-in impediva a Web SDK di effettuare chiamate quando `idMigrationEnabled` è `true`.
-- Correzione bug: rende Web SDK consapevole delle richieste che devono restituire offerte di personalizzazione per evitare problemi di sfarfallio.
+- Correzione bug: segnala a Web SDK le richieste che devono restituire offerte di personalizzazione per evitare problemi di sfarfallio.
 
 ## Versione 2.1.0 - Agosto 2020
 
