@@ -2,9 +2,9 @@
 title: Assistente AI nella documentazione del prodotto Adobe Experience Platform
 description: Introduzione all’Assistente IA in Adobe Experience Platform.
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: d2de642b7e84d3c4fad57cf0052afa67878dcac0
+source-git-commit: 26232fbf67418e0a75fe489b6e34890058cd4d81
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '629'
 ht-degree: 1%
 
 ---
@@ -77,57 +77,37 @@ Fai riferimento ai video seguenti per approfondire ulteriormente la tua conoscen
 
 Guarda il video seguente per una panoramica di Assistente AI.
 
-+++Seleziona per visualizzare un video introduttivo sull’Assistente AI
-
 >[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
 
 Per ulteriori informazioni, leggere la [Guida all&#39;interfaccia utente dell&#39;Assistente IA](ui-guide.md).
-
-+++
 
 ### Ottenere l’accesso all’Assistente AI
 
 Guarda il video seguente per scoprire come configurare l’accesso a AI Assistant per le organizzazioni e gli utenti.
 
-+++Seleziona per visualizzare un video su come ottenere l’accesso all’Assistente AI
-
 >[!VIDEO](https://video.tv.adobe.com/v/3436470/?learn=on)
 
 Per ulteriori informazioni, leggere la [Guida all&#39;accesso all&#39;Assistente AI](access.md).
-
-+++
 
 ### Utilizza la conoscenza del prodotto di AI Assistant per ridurre i tempi di onboarding
 
 Guarda il video seguente e scopri come utilizzare le conoscenze del prodotto di AI Assistant per ridurre i tempi di onboarding.
 
-+++Seleziona per visualizzare un video su come utilizzare l’Assistente AI per ridurre i tempi di onboarding
-
 >[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
 
 Per ulteriori informazioni, consulta le [conoscenze del prodotto nell&#39;Assistente AI](home.md#product-knowledge)
-
-+++
 
 ### Utilizza l’Assistente AI per liberare il pubblico
 
 Guarda il video seguente e scopri come utilizzare l’Assistente AI per ridurre l’ingombro del pubblico e ottimizzare le operazioni di marketing.
 
-+++Seleziona per visualizzare un video su come utilizzare l’Assistente AI per ridurre il numero di tipi di pubblico
-
 >[!VIDEO](https://video.tv.adobe.com/v/3435532?learn=on)
-
-+++
 
 ### Utilizzare il pannello di individuazione per iniziare
 
 Guarda il video seguente per scoprire il pannello Rilevabilità in AI Assistant e come utilizzarlo per iniziare a utilizzare AI Assistant
 
-+++Selezionare questa opzione per visualizzare un video sull&#39;individuazione
-
 >[!VIDEO](https://video.tv.adobe.com/v/3440962/?learn=on)
-
-+++
 
 ## Libreria di casi d’uso dell’Assistente IA
 
@@ -150,7 +130,7 @@ Guarda i video seguenti per ulteriori esempi di casi di utilizzo dell’Assisten
 
 >[!ENDTABS]
 
-## Risorse aggiuntive {#additional-resources}
+## Risorse aggiuntive
 
 >[!BEGINSHADEBOX]
 
