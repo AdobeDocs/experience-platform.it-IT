@@ -4,9 +4,9 @@ title: Valutazione degli eventi in tempo quasi reale con segmentazione in stream
 description: Questo documento contiene esempi su come utilizzare la segmentazione in streaming con l’API del servizio di segmentazione di Adobe Experience Platform.
 role: Developer
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: a1c9003a1b219325daf8fa38cda8bb1a019a55c6
+source-git-commit: e6e9abc7ffe27a2ff9c4ccf4ca243cabdae3d631
 workflow-type: tm+mt
-source-wordcount: '2027'
+source-wordcount: '2052'
 ht-degree: 4%
 
 ---
@@ -76,7 +76,7 @@ Affinché una definizione di segmento possa essere valutata utilizzando la segme
 | Singolo evento entro un intervallo di tempo inferiore a 24 ore | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo entro un intervallo di tempo inferiore a 24 ore. |
 | Solo profilo | Qualsiasi definizione di segmento che fa riferimento solo a un attributo di profilo. |
 | Singolo evento con un attributo di profilo entro un intervallo di tempo relativo inferiore a 24 ore | Qualsiasi definizione di segmento che si riferisce a un singolo evento in arrivo, con uno o più attributi di profilo, e si verifica entro un intervallo di tempo relativo inferiore a 24 ore. |
-| Segmento di segmenti | Qualsiasi definizione di segmento che contiene uno o più segmenti batch o in streaming. **Nota:** se si utilizza un segmento di segmenti, l&#39;annullamento del profilo avverrà **ogni 24 ore**. |
+| Segmento di segmenti | Qualsiasi definizione di segmento che contiene una o più definizioni di segmento batch o in streaming. **Nota:** se si utilizza un segmento di segmenti con definizioni di segmenti **batch**, l&#39;annullamento del profilo può richiedere **fino a 24 ore**. Se si utilizza un segmento di segmenti con le definizioni di segmenti **streaming**, l&#39;esclusione del profilo avverrà in modo streaming. |
 | Più eventi con un attributo di profilo | Qualsiasi definizione di segmento che fa riferimento a più eventi **nelle ultime 24 ore** e (facoltativamente) ha uno o più attributi di profilo. |
 
 Una definizione di segmento **non** verrà abilitata per la segmentazione in streaming nei seguenti scenari:

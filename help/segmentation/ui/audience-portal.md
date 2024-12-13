@@ -2,9 +2,9 @@
 title: Panoramica di Audience Portal
 description: Scopri come utilizzare Audience Portal per visualizzare, gestire e creare tipi di pubblico in Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: a48df00b61fd5736cfb6fd29c60cf73a02342451
+source-git-commit: 1aa10d9cbde66a174ddc64ba9ce11149436393c1
 workflow-type: tm+mt
-source-wordcount: '4547'
+source-wordcount: '4557'
 ht-degree: 3%
 
 ---
@@ -236,6 +236,7 @@ Quando si selezionano i tipi di pubblico per una valutazione flessibile del pubb
 - Tutti i tipi di pubblico **must** hanno origine &quot;Servizio di segmentazione&quot;.
 - Tutti i tipi di pubblico **devono** essere valutati utilizzando la segmentazione batch.
 - Tutti i tipi di pubblico **devono** essere basati sulle persone.
+- I tipi di pubblico possono **solo** essere attivati nelle destinazioni in Platform.
 - Puoi selezionare solo un massimo di 20 tipi di pubblico.
 
 ![Sono selezionati i tipi di pubblico per i quali si desidera utilizzare la valutazione flessibile del pubblico.](../images/ui/audience-portal/evaluate-audiences.png)

@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di segmentazione di Edge
 description: Scopri come utilizzare la segmentazione Edge per valutare le definizioni dei segmenti in Platform istantaneamente al limite, abilitando casi di utilizzo di personalizzazione della pagina stessa e successiva.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 057db1432493a8443eb91b0fc371d0bdffb3de86
+source-git-commit: e6e9abc7ffe27a2ff9c4ccf4ca243cabdae3d631
 workflow-type: tm+mt
-source-wordcount: '569'
+source-wordcount: '594'
 ht-degree: 1%
 
 ---
@@ -41,7 +41,7 @@ Una query può essere valutata con segmentazione Edge se soddisfa uno qualsiasi 
 | Evento singolo con finestra temporale | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo con una finestra temporale. |
 | Solo profilo | Qualsiasi definizione di segmento che fa riferimento solo a un attributo di profilo. |
 | Singolo evento con un attributo di profilo entro un intervallo di tempo relativo inferiore a 24 ore | Qualsiasi definizione di segmento che si riferisce a un singolo evento in arrivo, con uno o più attributi di profilo, e si verifica entro un intervallo di tempo relativo inferiore a 24 ore. |
-| Segmento di segmenti | Qualsiasi definizione di segmento che contiene uno o più segmenti batch o in streaming. **Nota:** se si utilizza un segmento di segmenti, l&#39;annullamento del profilo avverrà **ogni 24 ore**. |
+| Segmento di segmenti | Qualsiasi definizione di segmento che contiene una o più definizioni di segmento batch o in streaming. **Nota:** se si utilizza un segmento di segmenti con definizioni di segmenti **batch**, l&#39;annullamento del profilo può richiedere **fino a 24 ore**. Se si utilizza un segmento di segmenti con le definizioni di segmenti **streaming**, l&#39;esclusione del profilo avverrà in modo streaming. |
 | Più eventi con un attributo di profilo | Qualsiasi definizione di segmento che fa riferimento a più eventi **nelle ultime 24 ore** e (facoltativamente) ha uno o più attributi di profilo. |
 
 Una definizione di segmento **non** verrà abilitata per la segmentazione Edge nel seguente scenario:

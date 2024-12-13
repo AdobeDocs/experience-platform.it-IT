@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente Segmentazione streaming
 description: La segmentazione in streaming su Adobe Experience Platform consente di eseguire la segmentazione quasi in tempo reale concentrandosi sulla ricchezza dei dati. Con la segmentazione in streaming, la qualificazione dei segmenti ora avviene quando i dati arrivano in Platform, riducendo la necessità di pianificare ed eseguire processi di segmentazione. Con questa funzionalità, la maggior parte delle regole del segmento ora possono essere valutate quando i dati vengono passati in Platform, il che significa che l’iscrizione al segmento verrà mantenuta aggiornata senza eseguire processi di segmentazione pianificati.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: a1c9003a1b219325daf8fa38cda8bb1a019a55c6
+source-git-commit: e6e9abc7ffe27a2ff9c4ccf4ca243cabdae3d631
 workflow-type: tm+mt
-source-wordcount: '1443'
+source-wordcount: '1468'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Una query verrà valutata automaticamente con segmentazione in streaming se sodd
 | Singolo evento entro un intervallo di tempo inferiore a 24 ore | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo entro un intervallo di tempo inferiore a 24 ore. |
 | Solo profilo | Qualsiasi definizione di segmento che fa riferimento solo a un attributo di profilo. |
 | Singolo evento con un attributo di profilo entro un intervallo di tempo relativo inferiore a 24 ore | Qualsiasi definizione di segmento che si riferisce a un singolo evento in arrivo, con uno o più attributi di profilo, e si verifica entro un intervallo di tempo relativo inferiore a 24 ore. |
-| Segmento di segmenti | Qualsiasi definizione di segmento che contiene uno o più segmenti batch o in streaming. **Nota:** se si utilizza un segmento di segmenti, l&#39;annullamento del profilo avverrà **ogni 24 ore**. |
+| Segmento di segmenti | Qualsiasi definizione di segmento che contiene una o più definizioni di segmento batch o in streaming. **Nota:** se si utilizza un segmento di segmenti con definizioni di segmenti **batch**, l&#39;annullamento del profilo può richiedere **fino a 24 ore**. Se si utilizza un segmento di segmenti con le definizioni di segmenti **streaming**, l&#39;esclusione del profilo avverrà in modo streaming. |
 | Più eventi con un attributo di profilo | Qualsiasi definizione di segmento che fa riferimento a più eventi **nelle ultime 24 ore** e (facoltativamente) ha uno o più attributi di profilo. |
 
 Una definizione di segmento **non** verrà abilitata per la segmentazione in streaming nei seguenti scenari:
