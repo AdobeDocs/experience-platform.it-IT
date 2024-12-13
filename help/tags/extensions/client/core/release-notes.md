@@ -2,10 +2,10 @@
 title: Note sulla versione dell’estensione Core
 description: Note aggiornate sulla versione dell’estensione Core in Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
+source-git-commit: 1ce579fc1f8548d1eb5c01d63e9fa4e8b32e2a4f
 workflow-type: tm+mt
-source-wordcount: '1632'
-ht-degree: 60%
+source-wordcount: '1651'
+ht-degree: 61%
 
 ---
 
@@ -13,7 +13,13 @@ ht-degree: 60%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+
+## 23 ottobre 2024
+
+v3.4.2
+
+* Correggi l’errore di convalida dello schema per l’evento Form -> Change quando &quot;e con determinati valori di proprietà...&quot; è attivo.
 
 ## 29 marzo 2023
 
@@ -64,7 +70,7 @@ Nell&#39;elemento dati Valore condizionale sono state introdotte le seguenti mod
 * I valori numerici sono esposti come numeri nell’oggetto impostazioni.
 * Il valore condizionale non è più necessario in modo che possa comportarsi nello stesso modo del valore di fallback.
 
-## 17 settembre 2021
+## sabato 17 settembre 2021
 
 v3.1.1
 
@@ -88,7 +94,7 @@ v3.0.0
 
 * PDCL-6153: offre supporto per richiamare in modo affidabile l&#39;URL completo per le azioni del codice personalizzato memorizzato nella cache.
 
-La versione 3.0.0 dell&#39;estensione Core è associata alle modifiche in [v27.2.0 del Web Runtime di Turbine](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0), che consente agli utenti di caricare la propria libreria tra molte aree di hosting gestite da Adobe, se la società dell&#39;utente supporta CDN Premium.
+La versione 3.0.0 dell&#39;estensione Core è associata alle modifiche in [v27.2.0 del Web Runtime di Turbine](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0), che consente agli utenti di caricare la propria libreria tra molte aree di hosting gestite da Adobe se la società dell&#39;utente supporta CDN Premium.
 
 Questo aggiornamento è facoltativo e compatibile con le versioni precedenti per gli utenti senza CDN Premium e obbligatorio per i clienti che hanno CDN Premium abilitato nella propria azienda.
 
