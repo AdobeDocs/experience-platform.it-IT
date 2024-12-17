@@ -5,9 +5,9 @@ breadcrumb-title: Guida di Experience Data Model (XDM)
 user-guide-description: Scopri una panoramica del sistema Experience Data Model (XDM) in Experience Platform e come utilizzare i gruppi di campi per classi e schemi per standardizzare i dati dell’esperienza.
 feature: Schemas
 role: Developer
-source-git-commit: 3071d16b6b98040ea3f2e3a34efffae517253b8e
+source-git-commit: 25d74df335e3d7930b7f3a4f4836bd20556780ed
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '697'
 ht-degree: 44%
 
 ---
@@ -35,6 +35,7 @@ ht-degree: 44%
          * [Posizione](./schema/healthcare/classes/location.md)
       * Gruppi di campi {#field-groups}
          * [Account](./schema/healthcare/field-groups/account.md)
+         * [Appuntamento](./schema/healthcare/field-groups/appointment.md)
          * [Piano di assistenza](./schema/healthcare/field-groups/care-plan.md)
          * [Copertura](./schema/healthcare/field-groups/coverage.md)
          * [Obiettivo](./schema/healthcare/field-groups/goal.md)
