@@ -4,7 +4,8 @@ description: Scopri il gruppo di campi Schema appuntamento.
 badgePrivateBeta: label="Beta privata" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: 2a58f6f1663e95c1c7576cd4909fa937b41ae099
+exl-id: 8224a2ee-51ac-4512-b0e4-5f1ab6bfddc4
+source-git-commit: cb39966de77846758c16153f78fcf521f6a421e3
 workflow-type: tm+mt
 source-wordcount: '1227'
 ht-degree: 5%
@@ -120,3 +121,4 @@ Per ulteriori dettagli sul gruppo di campi, consulta l’archivio XDM pubblico:
 | [!UICONTROL ° settimana del mese] | `nthWeekOfMonth` | [[!UICONTROL Codifica]](../data-types/coding.md) | Indica l&#39;ennesima settimana del mese in cui l&#39;appuntamento deve essere registrato. |
 | [!UICONTROL Giorno Del Mese] | `dayOfMonth` | Intero | Indica che gli appuntamenti devono avvenire in questo giorno specifico del mese. |
 | [!UICONTROL Intervallo di mesi] | `monthInterval` | Intero | Indica che gli appuntamenti ricorrenti devono avvenire ogni mese. |
+

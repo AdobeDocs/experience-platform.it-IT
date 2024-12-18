@@ -5,7 +5,7 @@ badgePrivateBeta: label="Beta privata" type="Informative"
 hide: true
 hidefromtoc: true
 exl-id: a796b58b-b36f-4277-870b-0d3939af8061
-source-git-commit: 8520be2a000edfd2d92bfbc6ebed41b1536fffc1
+source-git-commit: cb39966de77846758c16153f78fcf521f6a421e3
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 3%
@@ -57,3 +57,4 @@ La tabella seguente illustra i tipi di dati creati in base alle specifiche [!DNL
 | [[!UICONTROL Quantità semplice]](./data-types/simple-quantity.md) | Un importo misurato o misurabile. |
 | [[!UICONTROL Intervallo]](./data-types/timing.md) | Informazioni su un evento che può verificarsi più volte. |
 | [[!UICONTROL Dettagli servizio virtuale]](./data-types/virtual-service-detail.md) | Dettagli di contatto del servizio virtuale. |
+
