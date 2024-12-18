@@ -4,9 +4,9 @@ title: Esportare i set di dati utilizzando l’API del servizio Flusso
 description: Scopri come utilizzare l’API del servizio Flusso per esportare i set di dati in determinate destinazioni.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 3bce663866e7a6e8288444121331fc931a74076a
+source-git-commit: 6f8922f972546d8cceeba63e1bb4d1a75f7ef5c3
 workflow-type: tm+mt
-source-wordcount: '5138'
+source-wordcount: '5146'
 ht-degree: 3%
 
 ---
@@ -2469,6 +2469,10 @@ Quando vengono compressi, si noti la differenza di formato tra i due tipi di fil
 ## Gestione degli errori API {#api-error-handling}
 
 Gli endpoint API in questa esercitazione seguono i principi generali dei messaggi di errore API di Experience Platform. Per ulteriori informazioni sull&#39;interpretazione delle risposte di errore, consultare [codici di stato API](/help/landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](/help/landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
+
+## Limitazioni note {#known-limitations}
+
+Visualizza [limitazioni note](/help/destinations/ui/export-datasets.md#known-limitations) relative alle esportazioni dei set di dati.
 
 ## Domande frequenti {#faq}
 
