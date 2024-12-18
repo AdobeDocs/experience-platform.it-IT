@@ -2,9 +2,9 @@
 title: Assistente AI nella documentazione del prodotto Adobe Experience Platform
 description: Introduzione all’Assistente IA in Adobe Experience Platform.
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 4d89ac33843acd536fbadc85a07bee90a50e6407
+source-git-commit: 38ce83fe0d1c5c558a2e03e0057ac4996097409b
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '712'
 ht-degree: 1%
 
 ---
@@ -66,6 +66,14 @@ Puoi utilizzare le funzionalità di stima del linguaggio naturale di AI Assistan
 Puoi utilizzare l’Assistente AI per individuare facilmente i campi XDM (Experience Data Model) che puoi utilizzare per creare tipi di pubblico target in Experience Platform.
 
 [![immagine](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/xdm-field-discovery.md)
+
+>[!TAB Assistente AI per l&#39;Assistenza clienti]
+
+### Assistente AI per l’assistenza clienti
+
+È possibile utilizzare l’Assistente AI per l’Assistenza clienti per risolvere facilmente i problemi senza uscire dai flussi di lavoro. Quando necessario, gli amministratori del supporto possono ora utilizzare l’Assistente all’intelligenza artificiale per l’Assistenza clienti per creare ticket di assistenza clienti, completi di dettagli sul contesto e sulla sessione derivanti dalle interazioni con l’Assistente all’intelligenza artificiale.
+
+[![immagine](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/customer-support.md)
 
 >[!ENDTABS]
 

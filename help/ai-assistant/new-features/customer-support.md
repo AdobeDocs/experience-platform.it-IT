@@ -2,7 +2,8 @@
 title: Assistente AI per l’assistenza clienti
 description: Scopri come utilizzare l’Assistente AI per semplificare la risoluzione dei problemi e il processo di archiviazione dei ticket di assistenza clienti.
 badge: Alpha
-source-git-commit: 746c40902a052f99db28a629a8e9c4da0559037f
+exl-id: 263b8a44-8902-42b9-8390-d7da8e9b5129
+source-git-commit: 88c4ba5fd7d5cd4fdd1e1da3f2eac43b03149e5e
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 0%
@@ -36,7 +37,7 @@ Ottieni risposte immediate alle domande più frequenti sul supporto, tratte dall
 * **Documentazione legale del prodotto** che fornisce informazioni accurate e orientate alle licenze.
    * Domande di esempio:
       * &quot;Qual è il limite per i processi di segmentazione batch in Adobe Experience Platform Activation?&quot;
-&quot;Qual è il limite medio di ricchezza del profilo in Adobe Experience Platform Activation?&quot;
+      * &quot;Qual è il limite medio di ricchezza del profilo in Adobe Experience Platform Activation?&quot;
 
 ## Creazione di casi di supporto
 
