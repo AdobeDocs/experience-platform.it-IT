@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Domande frequenti sulle normative sulla privacy
 description: Questo documento fornisce le risposte alle domande più frequenti sulle normative legali sulla privacy supportate e sulla loro implementazione in Adobe Experience Cloud.
 exl-id: ec553e53-664b-4e18-abb1-4e4063fdd2c9
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: d643b2aeadd4080fa89d6a7b0f84a9f6882d7b89
 workflow-type: tm+mt
-source-wordcount: '1631'
+source-wordcount: '1606'
 ht-degree: 1%
 
 ---
@@ -47,7 +47,7 @@ Le informazioni personali possono includere anche informazioni su Internet o su 
 * Cronologia ricerche
 * Informazioni relative all’interazione di un consumatore con un sito web, un’applicazione o un annuncio pubblicitario
 
-Anche se le normative sulla privacy coprono un&#39;ampia serie di informazioni personali, i termini contrattuali standard di Adobe impongono che le informazioni personali sensibili (come SSN, informazioni sulla patente di guida, informazioni finanziarie sul conto e dati biometrici) siano generalmente vietate dall&#39;importazione e dall&#39;uso in applicazioni di Experience Cloud.
+Anche se le normative sulla privacy coprono un&#39;ampia serie di informazioni personali, i termini contrattuali standard di Adobe impongono che le informazioni personali sensibili (come SSN, informazioni sulla patente di guida, informazioni finanziarie e dati biometrici) siano generalmente vietate dall&#39;importazione e dall&#39;uso in applicazioni per Experienci Cloud.
 
 ### Qual è la differenza tra un titolare del trattamento e un responsabile del trattamento dei dati?
 
@@ -87,7 +87,7 @@ Supponendo che l’azienda abbia raccolto informazioni personali e che possa aut
 | Regolamento | Intervallo temporale per la risposta | Note |
 | --- | --- | --- |
 | CCPA (California) | 45 giorni | |
-| RGPD (Unione europea) | 30 giorni | Se la richiesta è complessa o se la stessa persona interessata ha presentato numerose richieste, la richiesta può essere estesa a 60 giorni. |
+| RGPD (Unione europea) | 30 giorni | |
 | LGPD (Brasile) | 15 giorni | |
 | PDPA (Thailandia) | 30 giorni | Se una società non è in grado di rispondere alla richiesta di una persona interessata entro il periodo di conformità, essa disporrà di ulteriori 30 giorni dalla data in cui non è stata in grado di soddisfare la richiesta per rispondere per iscritto alla persona interessata. |
 
@@ -121,16 +121,16 @@ Le seguenti domande riguardano specificamente il CCPA.
 
 Secondo la definizione del CCPA, i seguenti ruoli si applicano ad Adobe e ai suoi clienti:
 
-* I clienti Adobi (la parte che richiede la raccolta e l&#39;utilizzo di informazioni personali dai residenti della California) sarebbero considerati un **Business**.
-* Adobe: nel ruolo di fornitura del servizio, verrà considerato un **provider di servizi**.
+* I clienti Adobe (la parte che richiede la raccolta e l&#39;utilizzo di informazioni personali dai residenti della California) sarebbero considerati un **Business**.
+* Adobe, nel ruolo di fornitore del servizio, verrà considerato un **provider di servizi**.
 
-In qualità di fornitore di servizi, Adobe raccoglie ed elabora informazioni personali per conto dell&#39;azienda ed è contrattualmente vincolato a utilizzare tali informazioni solo per le finalità specifiche stabilite nell&#39;accordo.
+In qualità di fornitore di servizi, Adobe raccoglie ed elabora informazioni personali per conto dell’azienda ed è contrattualmente vincolata a utilizzare tali informazioni solo per le finalità specifiche stabilite nell’accordo.
 
-Data questa relazione e il linguaggio contrattuale dell&#39;Adobe, la divulgazione all&#39;Adobe probabilmente non sarebbe considerata una &quot;vendita&quot; per la quale le aziende dovrebbero dare preavviso e richiedere il consenso.
+Data questa relazione e il linguaggio contrattuale di Adobe, la divulgazione ad Adobe probabilmente non sarebbe considerata una &quot;vendita&quot; per la quale le aziende dovrebbero dare preavviso e richiedere il consenso.
 
 Tuttavia, i servizi Adobe possono essere utilizzati per consentire alcuni trasferimenti di dati e di condivisione a terze parti. Questi trasferimenti di terze parti potrebbero essere considerati una &quot;vendita&quot; e per legge richiedono la divulgazione e il consenso. I clienti devono collaborare con il proprio consulente legale per valutare casi d’uso specifici e valutare i requisiti applicabili.
 
-### Adobe offre altri strumenti che potrebbero essere utili per soddisfare i requisiti del CCPA?
+### Adobe offre altri strumenti che possono essere utili per soddisfare i requisiti del CCPA?
 
 Le applicazioni Adobe Experience Cloud forniscono funzioni di gestione e governance dei dati che possono essere utili per le esigenze di privacy delle aziende. Tra questi strumenti ci sono l’etichettatura dell’utilizzo dei dati, i controlli dell’accesso basati sui ruoli, l’offuscamento dell’IP e le funzionalità di hashing.
 
