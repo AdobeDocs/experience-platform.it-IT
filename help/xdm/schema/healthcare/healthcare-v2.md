@@ -5,7 +5,7 @@ badgePrivateBeta: label="Beta privata" type="Informative"
 hide: true
 hidefromtoc: true
 exl-id: a796b58b-b36f-4277-870b-0d3939af8061
-source-git-commit: cb39966de77846758c16153f78fcf521f6a421e3
+source-git-commit: 6d1745b93d2ad7cf6ef96510bd5128a43de9ef03
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 3%
@@ -26,7 +26,7 @@ La tabella seguente illustra le classi e i gruppi di campi di schema consigliati
 | **Esperienza del consumatore per l&#39;assicurazione**: migliora l&#39;acquisizione digitale e le esperienze tra i consumatori che acquistano un&#39;assicurazione. Gli esempi includono: <li> Comprensione del comportamento dei consumatori nell’inviare e-mail promozionali o annunci mirati di terze parti a persone che accedono a pagine contenenti informazioni generali (come piani, nomi dei piani/livelli, Medicaid o programmi per il benessere)</li><li> Invio di informazioni relative al vaccino sulla salute cardiaca per creare consapevolezza del marchio o richieste di programmazione di vaccini a persone alla ricerca di informazioni sulla salute cardiaca e sui vaccini. </li> | <ul><li>**[Profilo individuale XDM](../../classes/individual-profile.md)**:<ul><li>[Account](./field-groups/account.md)</li><li>[Distribuzione del medicinale](./field-groups/medication-dispense.md)</li><li>[Richiesta medicinale](./field-groups/medication-request.md)</li><li>[Paziente](./field-groups/patient.md)</li></ul></li><li>**[Posizione](./classes/location.md)**:<ul><li>[Posizione](./field-groups/location.md)</li></ul><li>**[Medicinale](../../classes/medication.md)**:<ul><li>[Medicinale](./field-groups/medication.md)</li><li>[Distribuzione del medicinale](./field-groups/medication-dispense.md)</li><li>[Richiesta medicinale](./field-groups/medication-request.md)</li></ul></li><li>**[Provider](../../classes/provider.md)**:<ul><li>[Account](./field-groups/account.md)</li><li>[Distribuzione del medicinale](./field-groups/medication-dispense.md)</li><li>[Richiesta medicinale](./field-groups/medication-request.md)</li></ul><li>**[Piano](../../classes/plan.md)**:<ul><li>[Obiettivo](./field-groups/coverage.md)</li></ul></li></ul> |
 | **Esperienza provider migliorata**: utilizzo dei dati del provider dal sistema EMR per suggerire provider alternativi in base alla disponibilità, alla posizione e alla specializzazione degli appuntamenti. <br> <br>Miglioramento delle ricerche dei provider per visualizzare i risultati con la disponibilità desiderata, verifica che il provider selezionato faccia parte della rete di fornitori e fornitura di stime dei costi. | <ul><li>**[Profili individuali XDM](../../classes/individual-profile.md)**:<ul><li>[Appuntamento](./field-groups/appointment.md)</li><li>[Organizzazione](./field-groups/organization.md)</li><li>[Paziente](./field-groups/patient.md)</li><li>[Professionista](./field-groups/practioner.md)</li><li>[Pianificazione](./field-groups/schedule.md)</li></ul></li><li>**[Posizione](./classes/location.md)**:<ul><li>[Posizione](./field-groups/location.md)</li></ul><li>**[Provider](../../classes/provider.md)**:<ul><li>[Appuntamento](./field-groups/appointment.md)</li><li>[Organizzazione](./field-groups/organization.md)</li><li>[Professionista](./field-groups/practioner.md)</li><li>[Pianificazione](./field-groups/schedule.md)</li></ul></li></ul> |
 
-{style="table-layout:auto"}
+{style="table-layout:fixed"}
 
 ## Tipi di dati {#data-types}
 
