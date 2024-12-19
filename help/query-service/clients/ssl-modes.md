@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;Query service;query servic
 title: Opzioni SSL di Query Service
 description: Scopri il supporto SSL per le connessioni di terze parti a Adobe Experience Platform Query Service e come connettersi utilizzando la modalità SSL verify-full.
 exl-id: 41b0a71f-165e-49a2-8a7d-d809f5f683ae
-source-git-commit: 229ce98da8f1c97e421ef413826b0d23754d16df
+source-git-commit: 37c30fc1a040efbce0c221c10b36e105d5b1a962
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1008'
 ht-degree: 1%
 
 ---
@@ -30,8 +30,8 @@ I diversi valori dei parametri `sslmode` forniscono diversi livelli di protezion
 
 | sslmode | Protezione dalle intercettazioni | Protezione MITM | Descrizione |
 |---|---|---|---|
-| `allow` | Parziale | No | La sicurezza non è una priorità, ma è più importante disporre di velocità e di un sovraccarico di elaborazione ridotto. Questa modalità opta per la crittografia solo se il server insiste su di essa. |
-| `prefer` | Parziale | No | La crittografia non è necessaria, ma la comunicazione verrà crittografata se supportata dal server. |
+| `allow` | Sì | No | La crittografia è obbligatoria per tutte le comunicazioni. La rete è attendibile per la connessione al server corretto. |
+| `prefer` | Sì | No | La crittografia è obbligatoria per tutte le comunicazioni. La rete è attendibile per la connessione al server corretto. |
 | `require` | Sì | No | La crittografia è obbligatoria per tutte le comunicazioni. La rete è attendibile per la connessione al server corretto. La convalida del certificato SSL del server non è richiesta. |
 | `verify-ca` | Sì | Dipende dal criterio CA | La crittografia è obbligatoria per tutte le comunicazioni. La convalida del server è necessaria prima che i dati vengano condivisi. È necessario configurare un certificato radice nella home directory [!DNL PostgreSQL]. [I dettagli sono forniti di seguito](#instructions) |
 | `verify-full` | Sì | Sì | La crittografia è obbligatoria per tutte le comunicazioni. La convalida del server è necessaria prima che i dati vengano condivisi. È necessario configurare un certificato radice nella home directory [!DNL PostgreSQL]. [I dettagli sono forniti di seguito](#instructions). |
@@ -46,7 +46,7 @@ Quando si stabilisce una connessione di terze parti a un database di Platform, s
 
 >[!IMPORTANT]
 >
->I certificati TLS/SSL sugli ambienti di produzione per l’API Query Service Interactive Postgres sono stati aggiornati mercoledì 24 gennaio 2024.<br>Anche se si tratta di un requisito annuale, in questa occasione anche il certificato radice nella catena è cambiato in seguito all’aggiornamento della gerarchia dei certificati da parte del provider di certificati TLS/SSL di Adobe. Questo problema può interessare alcuni client Postgres se nell’elenco delle autorità di certificazione manca il certificato radice. Ad esempio, per un client CLI PSQL potrebbe essere necessario aggiungere i certificati radice a un file esplicito `~/postgresql/root.crt`. In caso contrario, potrebbe verificarsi un errore. Ad esempio, `psql: error: SSL error: certificate verify failed`. Per ulteriori informazioni su questo problema, consulta la [documentazione ufficiale di PostgreSQL](https://www.postgresql.org/docs/current/libpq-ssl.html#LIBQ-SSL-CERTIFICATES).<br>Il certificato radice da aggiungere può essere scaricato da [https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem).
+>I certificati TLS/SSL sugli ambienti di produzione per l’API Query Service Interactive Postgres sono stati aggiornati mercoledì 24 gennaio 2024.<br>Anche se si tratta di un requisito annuale, in questa occasione il certificato radice nella catena è cambiato anche quando il provider di certificati TLS/SSL di Adobe ha aggiornato la gerarchia dei certificati. Questo problema può interessare alcuni client Postgres se nell’elenco delle autorità di certificazione manca il certificato radice. Ad esempio, per un client CLI PSQL potrebbe essere necessario aggiungere i certificati radice a un file esplicito `~/postgresql/root.crt`. In caso contrario, potrebbe verificarsi un errore. Ad esempio, `psql: error: SSL error: certificate verify failed`. Per ulteriori informazioni su questo problema, consulta la [documentazione ufficiale di PostgreSQL](https://www.postgresql.org/docs/current/libpq-ssl.html#LIBQ-SSL-CERTIFICATES).<br>Il certificato radice da aggiungere può essere scaricato da [https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem).
 
 Per garantire una connessione sicura, l’utilizzo SSL deve essere configurato sia sul client che sul server prima che venga stabilita la connessione. Se SSL è configurato solo sul server, il client potrebbe inviare informazioni riservate come le password prima che venga stabilito che il server richiede un livello di protezione elevato.
 
