@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Definire i campi di identità nell’interfaccia utente
 description: Scopri come definire un campo di identità nell’interfaccia utente di Experience Platform.
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: d1b571fe72208cf2f2ae339273f05cc38dda9845
+source-git-commit: 6020f1c294f123cbf57629405128580efc5642ec
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 6%
@@ -59,3 +59,4 @@ Se hai definito un&#39;identità primaria per lo schema, ora puoi procedere con 
 Questa guida illustra come definire un campo di identità nell’interfaccia utente. Man mano che i dati vengono acquisiti utilizzando questo schema, i grafici di identità del cliente si aggiorneranno per riflettere i campi di identità dello schema. Per informazioni su come esplorare il grafico privato della tua organizzazione nell&#39;interfaccia utente, consulta la guida del [visualizzatore del grafico delle identità](../../../identity-service/features/identity-graph-viewer.md).
 
 Per informazioni su come definire altri tipi di campi XDM in [!DNL Schema Editor], consulta la panoramica su [definizione dei campi nell&#39;interfaccia utente](./overview.md#special).
+
