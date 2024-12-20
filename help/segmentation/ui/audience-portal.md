@@ -2,9 +2,9 @@
 title: Panoramica di Audience Portal
 description: Scopri come utilizzare Audience Portal per visualizzare, gestire e creare tipi di pubblico in Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 1aa10d9cbde66a174ddc64ba9ce11149436393c1
+source-git-commit: 260d63d5eebd62cc5a617fccc189af52fd4d0b09
 workflow-type: tm+mt
-source-wordcount: '4557'
+source-wordcount: '4571'
 ht-degree: 3%
 
 ---
@@ -249,7 +249,7 @@ Dopo aver confermato che sono elencati i tipi di pubblico corretti, puoi procede
 
 >[!NOTE]
 >
-Se esegui una valutazione flessibile del pubblico su tipi di pubblico già impostati per essere attivati [dopo la valutazione del segmento](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files), i tipi di pubblico verranno attivati al termine del processo di valutazione flessibile, indipendentemente da eventuali processi di attivazione giornalieri precedenti.
+Se esegui una valutazione flessibile del pubblico, assicurati che la frequenza sia impostata su **[!UICONTROL Dopo la valutazione del segmento]**. L&#39;esecuzione della valutazione flessibile del pubblico su tipi di pubblico già impostati per essere attivati [dopo la valutazione del segmento](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files), attiverà i tipi di pubblico al termine del processo di valutazione flessibile del pubblico, indipendentemente da eventuali processi di attivazione giornalieri precedenti.
 
 ## Dettagli del pubblico {#audience-details}
 

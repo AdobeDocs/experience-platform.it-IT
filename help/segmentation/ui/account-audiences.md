@@ -4,9 +4,9 @@ description: Scopri come creare e utilizzare i tipi di pubblico dell’account p
 badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Edizione B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: fd0a495d68d6a09ccca66c400993d2e72673321c
+source-git-commit: 260d63d5eebd62cc5a617fccc189af52fd4d0b09
 workflow-type: tm+mt
-source-wordcount: '1518'
+source-wordcount: '1495'
 ht-degree: 21%
 
 ---
@@ -195,10 +195,6 @@ La sezione seguente fornisce informazioni aggiuntive sui tipi di pubblico dell�
 >abstract="Il pubblico viola un vincolo. Per ulteriori informazioni, leggi il documento collegato."
 
 Quando si utilizzano i tipi di pubblico dell&#39;account, il pubblico **deve** rispettare i seguenti vincoli:
-
->[!NOTE]
->
->L&#39;elenco seguente mostra i vincoli **default** per i tipi di pubblico dell&#39;account. Questi valori **maggio** variano a seconda delle impostazioni implementate dall&#39;amministratore dell&#39;organizzazione.
 
 - L&#39;intervallo di lookback massimo per gli eventi esperienza è **30 giorni**.
 - La profondità massima dei contenitori nidificati è **5**.

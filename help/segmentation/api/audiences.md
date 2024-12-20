@@ -3,9 +3,9 @@ title: Endpoint API di Audiences
 description: Utilizza l’endpoint "audiences" nell’API del servizio di segmentazione di Adobe Experience Platform per creare, gestire e aggiornare in modo programmatico i tipi di pubblico per la tua organizzazione.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 9c50ca0db55ce4b21978273d7b4d1de9b5f9338d
+source-git-commit: 260d63d5eebd62cc5a617fccc189af52fd4d0b09
 workflow-type: tm+mt
-source-wordcount: '1438'
+source-wordcount: '1452'
 ht-degree: 3%
 
 ---
@@ -45,6 +45,7 @@ Durante il recupero di un elenco di tipi di pubblico è possibile utilizzare i s
 | `property` | Filtro che consente di specificare tipi di pubblico che **corrispondono esattamente** al valore di un attributo. Scritto nel formato `property=` | `property=audienceId==test-audience-id` |
 | `name` | Filtro che consente di specificare tipi di pubblico i cui nomi **contengono** il valore specificato. Questo valore non distingue tra maiuscole e minuscole. | `name=Sample` |
 | `description` | Un filtro che consente di specificare tipi di pubblico le cui descrizioni **contengono** il valore specificato. Questo valore non distingue tra maiuscole e minuscole. | `description=Test Description` |
+| `entityType` | Un filtro che ti consente di specificare il tipo di pubblico che stai cercando. | `entityType=_xdm.context.account` |
 
 **Richiesta**
 
