@@ -4,9 +4,9 @@ description: Scopri come impostare le tue chiavi di crittografia per i dati memo
 role: Developer
 feature: Privacy
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f2737355ca0652f434bd5f86acc65139f767e56f
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '828'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 0%
 # Chiavi gestite dal cliente in Adobe Experience Platform
 
 I dati memorizzati su Adobe Experience Platform vengono crittografati a riposo utilizzando chiavi a livello di sistema. Se utilizzi un’applicazione basata su Platform, puoi scegliere di utilizzare le tue chiavi di crittografia, garantendo un maggiore controllo sulla sicurezza dei dati.
+
+>[!AVAILABILITY]
+>
+>Se l’implementazione di Experience Platform viene eseguita su Amazon Web Services (AWS), puoi utilizzare il servizio di gestione delle chiavi (KMS) per la crittografia dei dati di Platform. Un Experience Platform in esecuzione su AWS è attualmente disponibile per un numero limitato di clienti. Per ulteriori informazioni sull&#39;infrastruttura Experience Platform supportata, consulta l&#39;[panoramica sul cloud multiplo di Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud). Per informazioni sulla creazione e la gestione delle chiavi di crittografia in AWS KMS, consulta la [guida alla crittografia dei dati di AWS KMS](../key-management-service/overview.md).
 
 >[!NOTE]
 >
