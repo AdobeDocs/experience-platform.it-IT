@@ -3,9 +3,9 @@ keywords: linkedin connessione;linkedin connessione;linkedin destinazioni;linked
 title: Connessione LinkedIn Matched Audiences
 description: Attiva profili per le campagne LinkedIn per il targeting, la personalizzazione e l’eliminazione del pubblico, in base alle e-mail con hash.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 74d7c48042b0d2b938705b588c185f3c3f96f1cd
+source-git-commit: 4f82aab78e74cb7cdd76b603a1e182fbd7fe627c
 workflow-type: tm+mt
-source-wordcount: '1095'
+source-wordcount: '1201'
 ht-degree: 4%
 
 ---
@@ -118,6 +118,22 @@ Il video seguente illustra inoltre i passaggi per configurare una destinazione [
 2. Selezionare **[!UICONTROL Connetti alla destinazione]**.
    ![Autentica in LinkedIn](/help/destinations/assets/catalog/social/linkedin/authenticate-linkedin-destination.png)
 3. Immetti le credenziali LinkedIn e seleziona **Accedi**.
+
+### Aggiorna credenziali di autenticazione {#refresh-authentication-credentials}
+
+I token linkedIn scadono ogni 60 giorni. Una volta scaduto il token, l’esportazione dei dati nella destinazione smette di funzionare. Per evitare questa situazione, eseguire nuovamente l&#39;autenticazione eseguendo le operazioni seguenti:
+
+1. Passa a **[!UICONTROL Destinazioni]** > **[!UICONTROL Account]**
+2. (Facoltativo) Utilizza i filtri disponibili nella pagina per visualizzare solo gli account LinkedIn.
+   ![Filtro per visualizzare solo gli account LinkedIn](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-filters.png)
+3. Selezionare l&#39;account da aggiornare, selezionare i puntini di sospensione e selezionare **[!UICONTROL Modifica dettagli]**.
+   ![Selezionare il controllo Modifica dettagli](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-edit-details.png)
+4. Nella finestra modale, seleziona **[!UICONTROL Riconnetti OAuth]** e autentica di nuovo con le credenziali LinkedIn.
+   ![Finestra modale con opzione Riconnetti OAuth](/help/destinations/assets/catalog/social/linkedin/reconnect-oauth-control.png)
+
+>[!SUCCESS]
+> 
+>Le credenziali di autenticazione vengono aggiornate e la scadenza viene reimpostata su 60 giorni.
 
 ### Inserire i dettagli della destinazione {#destination-details}
 

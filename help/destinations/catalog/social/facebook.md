@@ -3,10 +3,10 @@ keywords: connessione facebook;connessione facebook;destinazioni facebook;facebo
 title: Connessione facebook
 description: Attiva profili per le campagne Facebook per il targeting, la personalizzazione e l’eliminazione del pubblico in base alle e-mail con hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 742801c31a0371feb42df2c98b3a4ddb63ae2f48
+source-git-commit: 83e2c014e62509fee2843505d7975cde368665ef
 workflow-type: tm+mt
-source-wordcount: '1985'
-ht-degree: 7%
+source-wordcount: '2091'
+ht-degree: 6%
 
 ---
 
@@ -151,6 +151,22 @@ Il video seguente illustra inoltre i passaggi per configurare una destinazione [
 2. Selezionare **[!UICONTROL Connetti alla destinazione]**.
    ![Esegui l&#39;autenticazione in Facebook, passaggio visualizzato nel flusso di lavoro di attivazione.](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
 3. Immetti le credenziali Facebook e seleziona **Accedi**.
+
+### Aggiorna credenziali di autenticazione {#refresh-authentication-credentials}
+
+I token facebook scadono ogni 60 giorni. Una volta scaduto il token, l’esportazione dei dati nella destinazione smette di funzionare. Per evitare questa situazione, eseguire nuovamente l&#39;autenticazione eseguendo le operazioni seguenti:
+
+1. Passa a **[!UICONTROL Destinazioni]** > **[!UICONTROL Account]**
+2. (Facoltativo) Utilizza i filtri disponibili nella pagina per visualizzare solo gli account Facebook.
+   ![Filtro per visualizzare solo gli account Facebook](/help/destinations/assets/catalog/social/facebook/refresh-oauth-filters.png)
+3. Selezionare l&#39;account da aggiornare, selezionare i puntini di sospensione e selezionare **[!UICONTROL Modifica dettagli]**.
+   ![Selezionare il controllo Modifica dettagli](/help/destinations/assets/catalog/social/facebook/refresh-oauth-edit-details.png)
+4. Nella finestra modale, seleziona **[!UICONTROL Riconnetti OAuth]** e autentica di nuovo con le credenziali Facebook.
+   ![Finestra modale con opzione Riconnetti OAuth](/help/destinations/assets/catalog/social/facebook/reconnect-oauth-control.png)
+
+>[!SUCCESS]
+> 
+>Le credenziali di autenticazione vengono aggiornate e la scadenza viene reimpostata su 60 giorni.
 
 ### Inserire i dettagli della destinazione {#destination-details}
 

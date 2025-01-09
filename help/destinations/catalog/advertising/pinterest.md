@@ -2,10 +2,10 @@
 title: Connessione a elenco clienti pinterest
 description: Crea tipi di pubblico dagli elenchi dei clienti, dagli utenti che hanno visitato il tuo sito o dagli utenti che hanno già interagito con i tuoi contenuti su Pinterest.
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: 8a48ce4185f8044b8563d0435dcec17030b90830
+source-git-commit: 83e2c014e62509fee2843505d7975cde368665ef
 workflow-type: tm+mt
-source-wordcount: '722'
-ht-degree: 4%
+source-wordcount: '828'
+ht-degree: 3%
 
 ---
 
@@ -67,11 +67,27 @@ Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;ese
 
 ### Parametri di connessione {#parameters}
 
-Durante la [configurazione](../../ui/connect-destination.md) di questa destinazione, è necessario fornire le seguenti informazioni:
+Quando [configura](../../ui/connect-destination.md) questa destinazione, devi fornire le seguenti informazioni:
 
 * **[!UICONTROL Nome]**: un nome con cui riconoscerai questa destinazione in futuro.
 * **[!UICONTROL Descrizione]**: una descrizione che ti aiuterà a identificare questa destinazione in futuro.
 * **[!UICONTROL ID account annuncio]**: ID inserzionista Pinterest.
+
+### Aggiorna credenziali di autenticazione {#refresh-authentication-credentials}
+
+I token pinterest scadono ogni 30 giorni. Una volta scaduto il token, l’esportazione dei dati nella destinazione smette di funzionare. Per evitare questa situazione, eseguire nuovamente l&#39;autenticazione eseguendo le operazioni seguenti:
+
+1. Passa a **[!UICONTROL Destinazioni]** > **[!UICONTROL Account]**
+2. (Facoltativo) Utilizza i filtri disponibili nella pagina per visualizzare solo gli account Pinterest.
+   ![Filtro per visualizzare solo gli account Pinterest](/help/destinations/assets/catalog/advertising/pinterest-customer-list/refresh-oauth-filters.png)
+3. Selezionare l&#39;account da aggiornare, selezionare i puntini di sospensione e selezionare **[!UICONTROL Modifica dettagli]**.
+   ![Selezionare il controllo Modifica dettagli](/help/destinations/assets/catalog/advertising/pinterest-customer-list/refresh-oauth-edit-details.png)
+4. Nella finestra modale, seleziona **[!UICONTROL Riconnetti OAuth]** e autentica di nuovo con le credenziali Pinterest.
+   ![Finestra modale con opzione Riconnetti OAuth](/help/destinations/assets/catalog/advertising/pinterest-customer-list/reconnect-oauth-control.png)
+
+>[!SUCCESS]
+> 
+>Le credenziali di autenticazione vengono aggiornate e la scadenza viene reimpostata su 30 giorni.
 
 ### Abilita avvisi {#enable-alerts}
 
