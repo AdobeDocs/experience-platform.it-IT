@@ -2,9 +2,9 @@
 title: Assistente AI in Adobe Experience Platform
 description: Scopri come utilizzare l’Assistente AI per navigare e comprendere i concetti di Experience Platform e Real-time Customer Data Platform e le informazioni sull’utilizzo degli oggetti.
 exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
-source-git-commit: 6f95cae48b0f4c304eb3dbd2d95e01e00e0f01c9
+source-git-commit: 0ee9135b2b303f4abcc4d5e5c7345e2bff9332f3
 workflow-type: tm+mt
-source-wordcount: '1505'
+source-wordcount: '1759'
 ht-degree: 0%
 
 ---
@@ -75,10 +75,6 @@ L’Assistente IA aggiorna l’interfaccia e fornisce i collegamenti alla docume
 
 ![Menu a discesa delle citazioni fornite dall&#39;Assistente di IA per le domande sui concetti.](./images/citations.png)
 
-Puoi anche utilizzare i suggerimenti forniti dall&#39;Assistente AI in **[!UICONTROL Suggerimenti correlati]** per esplorare ulteriormente gli argomenti relativi alla domanda originale.
-
-![Elenco di suggerimenti fornito dall&#39;Assistente di IA.](./images/related-suggestions.png)
-
 +++
 
 ### Insight operativi {#operational-insights}
@@ -127,9 +123,9 @@ Quando viene eseguita una query con una domanda di approfondimenti operativi, l�
 
 +++
 
-### Usa completamento automatico {#use-auto-complete}
+### Usa completamento automatico entità {#use-entity-auto-complete}
 
-È possibile utilizzare la funzione di completamento automatico per ricevere un elenco di oggetti dati esistenti nella sandbox. I consigli di completamento automatico sono disponibili per i seguenti domini: pubblico, schemi, set di dati, origini e destinazioni.
+È possibile utilizzare la funzione di completamento automatico per ricevere un elenco di oggetti dati esistenti nella sandbox. I consigli di completamento automatico sono disponibili per i seguenti domini: pubblico, schemi, set di dati, percorsi, origini e destinazioni.
 
 +++Seleziona per visualizzare un esempio di completamento automatico
 
@@ -176,6 +172,44 @@ Per visualizzare il rilevamento, seleziona l’icona a forma di lampadina nell�
 Quindi, seleziona una categoria e seleziona un prompt dall’elenco fornito. Puoi utilizzare questa funzione per avere un’idea migliore dei tipi di domande a cui l’Assistente AI può rispondere. È inoltre possibile aggiornare i prompt preesistenti con dettagli specifici relativi alla sandbox utilizzando testo libero o [completamento automatico](#use-auto-complete).
 
 ![L&#39;Assistente IA richiede l&#39;individuazione.](./images/prompt.png)
+
++++
+
+### Usa completamento automatico domande {#use-question-autocomplete}
+
+È possibile utilizzare la funzione di completamento automatico delle domande dell’Assistente AI per selezionare una domanda da un elenco di consigli dell’Assistente AI.
+
++++Selezionare questa opzione per visualizzare un esempio di completamento automatico della domanda
+
+Per visualizzare il pannello di domande suggerite, digitare almeno sette (7) caratteri nella casella di immissione. Selezionare quindi la domanda desiderata dal menu visualizzato.
+
+![Pannello a comparsa con domande suggerite dall&#39;Assistente di intelligenza artificiale.](./images/suggested_questions.png)
+
+In alcuni casi, potrebbe essere necessario aggiornare i segnaposto quando una domanda suggerita include informazioni operative. Ad esempio, potrebbe essere necessario aggiungere il nome specifico di un set di dati o di un pubblico se il suggerimento dell’Assistente IA include segnaposto.
+
+![Suggerimento dell&#39;Assistente IA che include segnaposto.](./images/placeholder.png)
+
+I segnaposto sono evidenziati in blu. Seleziona il segnaposto per iniziare ad aggiornarne il valore. Per ottenere risultati ottimali con i segnaposto numerici, assicurati di utilizzare le cifre al posto del testo. È inoltre possibile utilizzare la funzione di completamento automatico entità per aggiornare i valori dei segnaposto. Non è possibile inviare una domanda contenente segnaposto non compilati.
+
+**NOTA**: i suggerimenti sono abilitati per impostazione predefinita. Seleziona l&#39;interruttore **[!UICONTROL Suggerisci idee]** per disabilitare la funzione.
+
+![Suggerimento dell&#39;Assistente IA con segnaposto aggiornati.](./images/updated_placeholder.png)
+
++++
+
+### Usa suggerimenti correlati {#use-related-suggestions}
+
+Per continuare la conversazione, puoi utilizzare la sezione dei suggerimenti correlati di ogni risposta dell’Assistente AI.
+
++++Seleziona per visualizzare un esempio di suggerimenti correlati
+
+I suggerimenti correlati vengono restituiti con ogni risposta dell’Assistente IA. Per continuare la conversazione, seleziona uno dei suggerimenti nella sezione dei suggerimenti correlati.
+
+![Elenco di suggerimenti correlati dall&#39;Assistente di IA.](./images/related_suggestions.png)
+
+Analogamente ai segnaposto in questione per il completamento automatico, è necessario aggiornare i segnaposto inclusi nei suggerimenti correlati prima di poter inviare la query.
+
+![Query da suggerimenti correlati con segnaposto aggiornati.](./images/related_suggestions_placeholder.png)
 
 +++
 
