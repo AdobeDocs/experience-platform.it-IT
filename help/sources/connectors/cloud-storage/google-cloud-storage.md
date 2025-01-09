@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Panoramica del connettore Source di archiviazione Google Cloud
 description: Scopri come collegare Google Cloud Storage a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: f7ebd213-f914-4c49-aebd-1df4514ffec0
-source-git-commit: ae22e423119bf378a068349d481f0717a75171bb
+source-git-commit: ee659ded9701132b12d5b93672b4c958e9720028
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '610'
 ht-degree: 0%
 
 ---
 
 # Connettore Google Cloud Storage
+
+>[!IMPORTANT]
+>
+>È ora possibile utilizzare l&#39;origine [!DNL Google Cloud Storage] quando si esegue Adobe Experience Platform su Amazon Web Services (AWS). Un Experience Platform in esecuzione su AWS è attualmente disponibile per un numero limitato di clienti. Per ulteriori informazioni sull&#39;infrastruttura Experience Platform supportata, consulta l&#39;[panoramica sul cloud multiplo di Experience Platform](../../../landing/multi-cloud.md).
 
 Adobe Experience Platform fornisce connettività nativa per i provider di cloud come AWS, [!DNL Google Cloud Platform] e [!DNL Azure], consentendo di portare i dati da questi sistemi.
 

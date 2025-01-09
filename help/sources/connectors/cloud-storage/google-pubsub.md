@@ -3,9 +3,9 @@ title: Panoramica di Google PubSub Source
 description: Scopri come collegare Google PubSub a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 7c78173d-2639-47cb-8935-77fb7841a121
-source-git-commit: c8fc447631f5382d49022b525a10edeadbd5ab46
+source-git-commit: 84d09038ded1f35269ebf67c6bc1a5dacaafe4ac
 workflow-type: tm+mt
-source-wordcount: '827'
+source-wordcount: '825'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->L&#39;origine [!DNL Google PubSub] è disponibile nel catalogo delle origini per gli utenti che hanno acquistato Real-time Customer Data Platform Ultimate.
+>L&#39;origine [!DNL Google PubSub] è disponibile nel catalogo delle origini per gli utenti che hanno acquistato Real-Time CDP Ultimate.
 
 Adobe Experience Platform fornisce connettività nativa per i provider di cloud come [!DNL AWS], [!DNL Google Cloud Platform] e [!DNL Azure], consentendo di inserire in Platform i dati di tali sistemi per utilizzarli nei servizi e nelle destinazioni downstream.
 

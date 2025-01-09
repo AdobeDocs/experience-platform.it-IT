@@ -3,9 +3,9 @@ title: Panoramica del connettore Source di Azure Event Hubs
 description: Scopri come collegare gli hub eventi di Azure a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: 12ddf87d594b7e25a0356cd419e990b262c1734e
+source-git-commit: 84d09038ded1f35269ebf67c6bc1a5dacaafe4ac
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '560'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,9 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->L&#39;origine [!DNL Azure Event Hubs] è disponibile nel catalogo delle origini per gli utenti che hanno acquistato Real-time Customer Data Platform Ultimate.
+>* L&#39;origine [!DNL Azure Event Hubs] è disponibile nel catalogo delle origini per gli utenti che hanno acquistato Real-Time CDP Ultimate.
+>
+>* È ora possibile utilizzare l&#39;origine [!DNL Azure Event Hubs] quando si esegue Adobe Experience Platform su Amazon Web Services (AWS). Un Experience Platform in esecuzione su AWS è attualmente disponibile per un numero limitato di clienti. Per ulteriori informazioni sull&#39;infrastruttura Experience Platform supportata, consulta l&#39;[panoramica sul cloud multiplo di Experience Platform](../../../landing/multi-cloud.md).
 
 Adobe Experience Platform fornisce connettività nativa per i provider di cloud come AWS, [!DNL Google Cloud Platform] e [!DNL Azure]. Puoi inserire in Platform i dati provenienti da questi sistemi.
 
@@ -32,7 +34,7 @@ Attualmente, il volume massimo di dati che puoi portare dal tuo account [!DNL Ev
 
 Il parallelismo si riferisce all&#39;esecuzione simultanea delle stesse attività su più unità di elaborazione al fine di aumentare la velocità e le prestazioni. È possibile aumentare il parallelismo sul lato [!DNL Event Hubs] aumentando la partizione o acquisendo più unità di elaborazione per l&#39;account [!DNL Event Hubs]. Per ulteriori informazioni, consulta questo [[!DNL Event Hubs] documento sul ridimensionamento](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability).
 
-Per aumentare la velocità di acquisizione sul lato Platform, Platform deve aumentare il numero di attività nel connettore di origine da leggere dalle partizioni [!DNL Event Hubs]. Una volta aumentato il parallelismo sul lato [!DNL Event Hubs], contatta il tuo rappresentante di Adobi per ridimensionare le attività di Platform in base alla nuova partizione. Attualmente, questo processo non è automatizzato.
+Per aumentare la velocità di acquisizione sul lato Platform, Platform deve aumentare il numero di attività nel connettore di origine da leggere dalle partizioni [!DNL Event Hubs]. Una volta aumentato il parallelismo sul lato [!DNL Event Hubs], contatta il tuo rappresentante di Adobe per ridimensionare le attività di Platform in base alla nuova partizione. Attualmente, questo processo non è automatizzato.
 
 ## Utilizzare una rete virtuale per connettersi a [!DNL Event Hubs] alla piattaforma
 

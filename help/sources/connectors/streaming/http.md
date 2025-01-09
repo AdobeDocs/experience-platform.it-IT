@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Panoramica del connettore Source API HTTP
 description: Scopri come creare connettori di streaming per connettersi a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 41e079f3-75b2-4033-8138-73162c31461a
-source-git-commit: 1127e85852b56cc9db3d1d0d483c1780c961b0bc
+source-git-commit: ee659ded9701132b12d5b93672b4c958e9720028
 workflow-type: tm+mt
-source-wordcount: '165'
+source-wordcount: '210'
 ht-degree: 0%
 
 ---
 
 # Connettore [!DNL HTTP API]
+
+>[!IMPORTANT]
+>
+>È ora possibile utilizzare l&#39;origine [!DNL HTTP API] quando si esegue Adobe Experience Platform su Amazon Web Services (AWS). Un Experience Platform in esecuzione su AWS è attualmente disponibile per un numero limitato di clienti. Per ulteriori informazioni sull&#39;infrastruttura Experience Platform supportata, consulta l&#39;[panoramica sul cloud multiplo di Experience Platform](../../../landing/multi-cloud.md).
 
 Adobe Experience Platform consente di acquisire dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi [!DNL Platform]. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 
