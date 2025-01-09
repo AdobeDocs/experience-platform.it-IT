@@ -3,18 +3,14 @@ keywords: Experience Platform;home;argomenti popolari; avvisi
 description: È possibile abbonarsi agli avvisi durante la creazione di un flusso di dati, per ricevere messaggi di avviso relativi allo stato, al completamento o al fallimento dell’esecuzione del flusso.
 title: Iscriviti agli avvisi contestuali nell’interfaccia utente di
 exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
-source-git-commit: 9120377f5f2048579d7e2a4740cfcbc56d49d61a
+source-git-commit: 0165aa60ca865c6d1cf269b16068dffa9349214c
 workflow-type: tm+mt
-source-wordcount: '842'
+source-wordcount: '819'
 ht-degree: 7%
 
 ---
 
 # Iscriviti agli avvisi per i flussi di dati di origini nell’interfaccia utente
-
->[!NOTE]
->
->Gli avvisi non sono supportati nelle sandbox non di produzione. Per abbonarti agli avvisi, devi assicurarti di utilizzare una sandbox di produzione.
 
 Adobe Experience Platform ti consente di abbonarti agli avvisi basati su eventi relativi alle attività di Adobe Experience Platform. Gli avvisi riducono o eliminano la necessità di eseguire il polling dell&#39;[[!DNL Observability Insights] API](../../../observability/api/overview.md) per verificare se un processo è stato completato, se è stata raggiunta una determinata fase cardine in un flusso di lavoro o se si sono verificati errori.
 
