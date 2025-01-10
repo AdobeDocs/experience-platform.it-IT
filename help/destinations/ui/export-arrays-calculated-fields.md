@@ -1,16 +1,16 @@
 ---
-title: Utilizzare i campi calcolati per esportare matrici come stringhe
+title: Esportazione di oggetti array da Real-Time CDP a destinazioni di archiviazione cloud
 type: Tutorial
 description: Scopri come utilizzare i campi calcolati per esportare gli array da Real-Time CDP a destinazioni di archiviazione cloud come stringhe.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 9b64e39d25ad94aa834c8e207396b37c2a121243
+source-git-commit: a99fc58b8296b2b9ce6e30d14857529570cd3e8a
 workflow-type: tm+mt
-source-wordcount: '1556'
+source-wordcount: '1622'
 ht-degree: 0%
 
 ---
 
-# Utilizzare i campi calcolati per esportare matrici come stringhe{#use-calculated-fields-to-export-arrays-as-strings}
+# Esportazione di oggetti array da Real-Time CDP a destinazioni di archiviazione cloud {#export-arrays-cloud-storage}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
@@ -21,22 +21,16 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->La funzionalità di esportazione di array tramite campi calcolati è generalmente disponibile.
+>La funzionalità per esportare array nelle destinazioni di archiviazione cloud è generalmente disponibile.
 
-Scopri come esportare array tramite campi calcolati da Real-Time CDP a [destinazioni di archiviazione cloud](/help/destinations/catalog/cloud-storage/overview.md) come stringhe. Leggi questo documento per comprendere i casi d’uso abilitati da questa funzionalità.
+Scopri come esportare gli array da Real-Time CDP a [destinazioni di archiviazione cloud](/help/destinations/catalog/cloud-storage/overview.md). Leggi questo documento per comprendere il flusso di lavoro di esportazione, i casi d’uso abilitati da questa funzionalità e le limitazioni note.
 
-Ottieni informazioni complete sui campi calcolati: cosa sono e perché sono importanti. Leggi le pagine collegate di seguito per un’introduzione ai campi calcolati in Preparazione dati e ulteriori informazioni su tutte le funzioni disponibili:
+Le matrici devono essere attualmente esportate come stringhe utilizzando la funzione `array_to_string`.
+
+Per esportare le matrici, è necessario utilizzare la funzionalità dei campi calcolati nel passaggio di mappatura del flusso di lavoro di esportazione, *a meno che non si esporti [singoli elementi di un array](#index-based-array-access)*. Per informazioni dettagliate sui campi calcolati, visita le pagine collegate di seguito. Questi includono un’introduzione ai campi calcolati nella preparazione dati e ulteriori informazioni su tutte le funzioni disponibili:
 
 * [Guida e panoramica dell’interfaccia utente](/help/data-prep/ui/mapping.md#calculated-fields)
 * [Funzioni di preparazione dati](/help/data-prep/functions.md)
-
-<!--
-
->[!IMPORTANT]
->
->Not all functions listed above are supported *when exporting fields to cloud storage destinations* using the calculated fields functionality. See the [supported functions section](#supported-functions) further below for more information.
-
--->
 
 ## Array e altri tipi di oggetti in Platform {#arrays-strings-other-objects}
 
@@ -259,6 +253,10 @@ johndoe@acme.org,"5"
 ```
 
 ### Accesso all&#39;array basato su indice {#index-based-array-access}
+
+>[!IMPORTANT]
+>
+>A differenza delle altre funzioni descritte in questa pagina, per esportare singoli elementi di un array non è necessario ** per utilizzare il controllo **[!UICONTROL Campi calcolati]** nell&#39;interfaccia utente.
 
 È possibile accedere a un indice di un array per esportare un singolo elemento dall’array. Ad esempio, come nell&#39;esempio precedente per la funzione `size_of`, se si desidera accedere ed esportare solo la prima volta che un cliente ha acquistato un determinato prodotto, è possibile utilizzare `purchaseTime[0]` per esportare il primo elemento del timestamp, `purchaseTime[1]` per esportare il secondo elemento del timestamp, `purchaseTime[2]` per esportare il terzo elemento del timestamp e così via.
 
