@@ -3,11 +3,11 @@ title: Lead per la corrispondenza dell’account in Real-Time CDP B2B
 type: Documentation
 description: Panoramica e ulteriori informazioni sulla funzione di corrispondenza lead-account in Experience Platform CDP B2B.
 feature: Get Started, Profiles, B2B
-badgeB2B: label="Edizione B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 2f853599-6bca-4ba6-bbba-131a49d8854e
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 4ba609e777716b1b38f5b143587e5476d851e344
 workflow-type: tm+mt
-source-wordcount: '605'
+source-wordcount: '408'
 ht-degree: 3%
 
 ---
@@ -24,7 +24,7 @@ Il marketing basato sull’account è una strategia sempre più importante per i
 - Riduzione dello spreco di risorse
 - Un ciclo di vendita più breve
 
-Il marketing basato su account consente di collegare ad account di vendita persone note e visitatori Web anonimi. Questo consente ai team di marketing di interagire con potenziali lead provenienti dagli account di destinazione nelle prime fasi del percorso del cliente per aumentare le possibilità di conversione. Un record di persona noto include in genere una parte o tutte le seguenti informazioni:
+Il marketing basato sull&#39;account consente di collegare i clienti noti agli account di vendita. Questo consente ai team di marketing di interagire con potenziali lead provenienti dagli account di destinazione nelle prime fasi del percorso del cliente per aumentare le possibilità di conversione. Un record di persona noto include in genere una parte o tutte le seguenti informazioni:
 
 - Nome della persona
 - Indirizzo e-mail
@@ -33,30 +33,6 @@ Il marketing basato su account consente di collegare ad account di vendita perso
 - Sito Web della società
 - Qualifica
 - Posizione
-
-La corrispondenza lead-account consente di unire profili di persone noti a profili di account. Puoi quindi segmentare ed eseguire il targeting dei dati in un contesto B2B, ad esempio account, opportunità e così via. I profili di persona possono essere classificati nelle tre categorie seguenti:
-
-- **Profilo persona account:** Il profilo persona è già associato ad almeno un profilo account tramite la relazione da un&#39;origine dati. Ciò implica che è presente almeno un frammento di contatto.
-
->[!NOTE]
->
-> I profili della persona dell’account non corrispondono quando si eseguono processi di corrispondenza lead-account.
-
-- **Profilo persona noto:** Il profilo persona NON è associato ad alcun profilo account e almeno uno dei seguenti attributi del profilo persona ha un valore:
-
-   - Indirizzo e-mail
-   - Nome società
-   - Sito Web della società
-
-- **Profilo persona anonimo:** Il profilo persona NON è associato ad alcun profilo account e nessuno dei seguenti attributi del profilo persona ha un valore:
-
-   - Indirizzo e-mail
-   - Nome società
-   - Sito Web della società
-
->[!NOTE]
->
-> Un profilo persona può essere correlato a più profili account. Tuttavia, il processo di corrispondenza lead-account corrisponderà solo alla corrispondenza migliore. Se è necessario un set più ampio di corrispondenze, associare il lead alla corrispondenza del conto con la funzione conti correlati.
 
 ## Come funziona {#how-it-works}
 
