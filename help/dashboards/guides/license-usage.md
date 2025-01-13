@@ -4,10 +4,10 @@ title: Dashboard utilizzo licenze
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale è possibile visualizzare informazioni importanti sull’utilizzo delle licenze della tua organizzazione.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 5d40af5c0645e9e4ee44f0c0c2133f3b3153bcb1
+source-git-commit: 7605ccef8553fc775ea5496c73971f92ed4c06ab
 workflow-type: tm+mt
-source-wordcount: '2908'
-ht-degree: 15%
+source-wordcount: '2947'
+ht-degree: 16%
 
 ---
 
@@ -46,6 +46,14 @@ ht-degree: 15%
 >id="platform_dashboards_licenseusage_predictedusage_computehours"
 >title="Ore di calcolo previste"
 >abstract="L’utilizzo potrebbe raggiungere la quantità concessa in licenza. Per valutare o ridurre le ore di calcolo, passare a Query > Registro per rivedere la cronologia delle query. Se non disponi delle autorizzazioni necessarie per accedere all’area di lavoro Query, contatta l’amministratore."
+>additional-url="https://experience.adobe.com/#/platform/query/log" text="Area di lavoro registro query"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_predictedusage_addressableaudience"
+>title="Pubblico indirizzabile previsto"
+>abstract="L’utilizzo potrebbe raggiungere la quantità concessa in licenza. Per ridurre l’utilizzo, puoi configurare le scadenze del set di dati o dei profili pseudonimi per le sandbox e i set di dati."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/event-expirations" text="Scadenze degli eventi esperienza"
+>additional-url="https://experienceleague.adobe.com/it/docs/experience-platform/profile/pseudonymous-profiles" text="Scadenza dei dati dei profili pseudonimi"
 
 Puoi visualizzare informazioni importanti sull&#39;utilizzo delle licenze della tua organizzazione tramite la dashboard [!UICONTROL Utilizzo licenze] di Adobe Experience Platform. Le informazioni visualizzate qui vengono acquisite durante un’istantanea giornaliera dell’istanza Platform.
 
