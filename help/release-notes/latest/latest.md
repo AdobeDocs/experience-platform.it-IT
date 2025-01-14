@@ -5,7 +5,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: 3f43e120225bcca640cc46ebdce1e4d61100ad45
 workflow-type: tm+mt
 source-wordcount: '852'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 98%
 
 >[!TIP]
 >
->È ora disponibile la nuova documentazione di [AI Assistant](../../ai-assistant/landing.md). Utilizza questa pagina come hub per tutte le risorse relative all’Assistente IA.
+>La nuova [documentazione di prodotto dell’Assistente IA](../../ai-assistant/landing.md) è ora disponibile. Utilizza questa pagina come hub per tutte le risorse relative all’Assistente IA.
 
 **Data di rilascio: 26 novembre 2024**
 
