@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Scopri le prestazioni e i guardrail applicati dal sistema per i dati di profilo e la segmentazione al fine di garantire un utilizzo ottimale delle funzionalità di Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 6962bb0ba4968ed4860e95819ac2e949bf744d79
+source-git-commit: 22daff3f422cd4ec5bbf5c77583e24dac6c53c76
 workflow-type: tm+mt
-source-wordcount: '2461'
+source-wordcount: '2472'
 ht-degree: 2%
 
 ---
@@ -67,7 +67,7 @@ Le seguenti protezioni forniscono i limiti consigliati per la modellazione dei d
 | Profondità JSON per il campo ID utilizzato nella relazione tra più entità | 4 | Guardrail delle prestazioni | La profondità JSON massima consigliata per un campo ID utilizzato nelle relazioni tra più entità è 4. Ciò significa che in uno schema altamente nidificato, i campi nidificati con profondità superiore a 4 livelli non devono essere utilizzati come campo ID in una relazione. |
 | Cardinalità dell’array in un frammento di profilo | &lt;=500 | Guardrail delle prestazioni | La cardinalità dell’array ottimale in un frammento di profilo (dati indipendenti dal tempo) è &lt;=500. |
 | Cardinalità dell’array in ExperienceEvent | &lt;=10 | Guardrail delle prestazioni | La cardinalità dell’array ottimale in un ExperienceEvent (dati di serie temporali) è &lt;=10. |
-| Grafico identità conteggio identità per singolo profilo | 50 | Guarddrail imposto dal sistema | **Il numero massimo di identità in un grafo identità per un singolo profilo è 50.** Tutti i profili con più di 50 identità sono esclusi da segmentazione, esportazioni e ricerche. |
+| Grafico identità conteggio identità per singolo profilo | 50 | Guarddrail imposto dal sistema | **Il numero massimo di identità in un grafo identità per un singolo profilo è 50.** Tutti i profili con più di 50 identità sono esclusi da segmentazione, esportazioni e ricerche. Per ulteriori informazioni, leggere la guida su [informazioni sulla logica di eliminazione delle identità](../identity-service/guardrails.md#understanding-the-deletion-logic-when-an-identity-graph-at-capacity-is-updated). |
 
 {style="table-layout:auto"}
 
