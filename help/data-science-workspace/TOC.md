@@ -6,7 +6,7 @@ user-guide-description: Utilizza l’apprendimento automatico per sviluppare, ad
 feature: Data Science Workspace
 solution: Experience Platform
 role: User, Developer
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '225'
 ht-degree: 32%
@@ -41,9 +41,9 @@ ht-degree: 32%
    * [Previsione di acquisto del prodotto](pre-built-recipes/product-purchase-prediction.md)
    * [Ricetta vendite al dettaglio](pre-built-recipes/retail-sales.md)
 * Authoring del modello {#authoring}
-   * [SDK per authoring modelli](authoring/sdk.md)
+   * [SDK di authoring modelli](authoring/sdk.md)
    * [Creare una tubazione di feature](authoring/feature-pipeline.md)
-   * [Creazione di modelli con l’SDK di Platform (Python)](authoring/platform-sdk.md)
+   * [Creazione di modelli con Platform SDK (Python)](authoring/platform-sdk.md)
    * [Accesso ai dati Python](authoring/python.md)
    * [Accesso ai dati Spark](authoring/spark.md)
 * Esercitazioni modello e ricetta {#models-recipes}
@@ -64,5 +64,5 @@ ht-degree: 32%
    * [Publish a model as a service (API)](models-recipes/publish-model-service-api.md)
    * [Pianificazione dell’apprendimento automatico e del punteggio in un servizio (interfaccia utente)](models-recipes/schedule-models-ui.md)
 * [Guida alla risoluzione dei problemi](troubleshooting-guide.md)
-* [Riferimento API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
+* [Riferimento API](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/)
 * [Note sulla versione della piattaforma](https://experienceleague.adobe.com/it/docs/experience-platform/release-notes/latest)

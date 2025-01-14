@@ -5,7 +5,7 @@ title: Guida API di apprendimento automatico di Sensei
 description: L’API di apprendimento automatico di Sensei consente agli sviluppatori di eseguire operazioni CRUD su varie risorse di Data Science Workspace. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
 role: Developer
 exl-id: d51d0eb2-b1e9-4cc1-889a-9487395703b0
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '255'
 ht-degree: 13%
@@ -22,7 +22,7 @@ ht-degree: 13%
 
 L&#39;API [!DNL Sensei Machine Learning] fornisce un meccanismo che consente ai data scientist di organizzare e gestire i servizi di machine learning, dall&#39;onboarding degli algoritmi alla sperimentazione e alla distribuzione dei servizi.
 
-Questa guida per gli sviluppatori descrive i passaggi necessari per iniziare a utilizzare l&#39;[API di apprendimento automatico di Sensei](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) e illustra le chiamate API per l&#39;esecuzione di operazioni CRUD su varie risorse Workspace di Data Science.
+Questa guida per gli sviluppatori descrive i passaggi necessari per iniziare a utilizzare l&#39;[API di apprendimento automatico di Sensei](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) e illustra le chiamate API per l&#39;esecuzione di operazioni CRUD su varie risorse Workspace di Data Science.
 
 ## Introduzione
 

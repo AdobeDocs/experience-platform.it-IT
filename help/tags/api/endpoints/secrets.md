@@ -2,7 +2,7 @@
 title: Endpoint Secrets
 description: Scopri come effettuare chiamate all’endpoint /secrets nell’API di Reactor.
 exl-id: 76875a28-5d13-402d-8543-24db7e2bee8e
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1239'
 ht-degree: 12%
@@ -17,7 +17,7 @@ Questa guida illustra come effettuare chiamate all&#39;endpoint `/secrets` nell&
 
 ## Introduzione
 
-L’endpoint utilizzato in questa guida fa parte dell’[API di Reactor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Prima di continuare, consulta la [guida introduttiva](../getting-started.md) per informazioni importanti su come eseguire l’autenticazione nell’API.
+L’endpoint utilizzato in questa guida fa parte dell’[API di Reactor](https://developer.adobe.com/experience-platform-apis/references/reactor/). Prima di continuare, consulta la [guida introduttiva](../getting-started.md) per informazioni importanti su come eseguire l’autenticazione nell’API.
 
 ## Recuperare un elenco di segreti per una proprietà {#list-property}
 

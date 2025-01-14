@@ -1,9 +1,9 @@
 ---
-title: Modello self-service della documentazione per l’API Streaming SDK
+title: Modello self-service di documentazione per Streaming SDK API
 description: Scopri come portare dati in streaming da un’origine a Adobe Experience Platform utilizzando l’API del servizio Flusso.
 exl-id: a06384a2-cd99-456d-9f00-babcf3f7b7d9
 badge: Beta
-source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1638'
 ht-degree: 2%
@@ -47,7 +47,7 @@ Per ulteriori informazioni su queste credenziali, vedere la documentazione relat
 
 ### Integra *YOURSOURCE* con il tuo webhook
 
-*L&#39;SDK di streaming richiede che l&#39;origine sia in grado di supportare i webhook per comunicare con Experience Platform. In questa sezione è necessario specificare i passaggi che gli utenti dovranno seguire per integrare YOURSOURCE con un webhook.*
+*Streaming SDK richiede che l&#39;origine supporti i webhook per comunicare con Experience Platform. In questa sezione è necessario specificare i passaggi che gli utenti dovranno seguire per integrare YOURSOURCE con un webhook.*
 
 ## Connetti *YOURSOURCE* a Platform utilizzando l&#39;API [!DNL Flow Service]
 
@@ -117,7 +117,7 @@ Per i passaggi dettagliati su come creare uno schema XDM di destinazione, consul
 
 ### Creare un set di dati di destinazione {#target-dataset}
 
-È possibile creare un set di dati di destinazione eseguendo una richiesta POST all&#39;API [Catalog Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), fornendo l&#39;ID dello schema di destinazione all&#39;interno del payload.
+È possibile creare un set di dati di destinazione eseguendo una richiesta POST all&#39;API [Catalog Service](https://developer.adobe.com/experience-platform-apis/references/catalog/), fornendo l&#39;ID dello schema di destinazione all&#39;interno del payload.
 
 Per i passaggi dettagliati su come creare un set di dati di destinazione, consulta l&#39;esercitazione su [creazione di un set di dati utilizzando l&#39;API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html).
 

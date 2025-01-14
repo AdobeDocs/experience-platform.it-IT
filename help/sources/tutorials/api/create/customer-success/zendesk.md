@@ -2,7 +2,7 @@
 title: Creare un flusso di dati per Zendesk utilizzando l’API del servizio Flow
 description: Scopri come collegare Adobe Experience Platform a Zendesk utilizzando l’API del servizio Flow.
 exl-id: 3e00e375-c6f8-407c-bded-7357ccf3482e
-source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1942'
 ht-degree: 2%
@@ -377,7 +377,7 @@ Per i passaggi dettagliati su come creare uno schema XDM di destinazione, consul
 
 ### Creare un set di dati di destinazione {#target-dataset}
 
-È possibile creare un set di dati di destinazione eseguendo una richiesta POST all&#39;API [Catalog Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), fornendo l&#39;ID dello schema di destinazione all&#39;interno del payload.
+È possibile creare un set di dati di destinazione eseguendo una richiesta POST all&#39;API [Catalog Service](https://developer.adobe.com/experience-platform-apis/references/catalog/), fornendo l&#39;ID dello schema di destinazione all&#39;interno del payload.
 
 Per i passaggi dettagliati su come creare un set di dati di destinazione, consulta l&#39;esercitazione su [creazione di un set di dati utilizzando l&#39;API](../../../../../catalog/api/create-dataset.md).
 

@@ -1,14 +1,14 @@
 ---
 title: Note sulla versione di Adobe Experience Platform di settembre 2019
-description: Note sulla versione di settembre 2019 per Adobe Experience Platform.
+description: Note sulla versione di Adobe Experience Platform di settembre 2019.
 doc-type: release notes
 last-update: September 13, 2019
 author: ens28527
 exl-id: 7f503046-a3b4-4fdb-833c-4205b6e9fa04
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '531'
-ht-degree: 5%
+ht-degree: 8%
 
 ---
 
@@ -24,7 +24,7 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
 ## [!DNL Data Ingestion] {#ingestion}
 
-Adobe Experience Platform offre un set completo di funzioni per acquisire qualsiasi tipo e latenza di dati. Adobe Experience Platform [!DNL Data Ingestion] offre diverse alternative per l&#39;acquisizione dei dati, tra cui API Batch, API Streaming, connettori Adobi nativi, partner di integrazione dati o interfaccia utente di Adobe Experience Platform.
+Adobe Experience Platform offre un set completo di funzioni per acquisire qualsiasi tipo e latenza di dati. Adobe Experience Platform [!DNL Data Ingestion] offre diverse alternative per l&#39;acquisizione dei dati, tra cui API Batch, API Streaming, connettori Adobe nativi, partner di integrazione dati o interfaccia utente di Adobe Experience Platform.
 
 **Nuove funzioni**
 
@@ -48,7 +48,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] è un servizio completam
 
 **Problemi noti**
 
-* Nessun metodo attualmente accessibile in [!DNL Service Gallery] per eliminare un servizio esistente. Nel frattempo, consulta il [riferimento all&#39;API di Sensei Machine Learning](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) per eliminare un servizio esistente tramite chiamate API.
+* Nessun metodo attualmente accessibile in [!DNL Service Gallery] per eliminare un servizio esistente. Nel frattempo, consulta il [riferimento all&#39;API di Sensei Machine Learning](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) per eliminare un servizio esistente tramite chiamate API.
 * [!DNL Service Gallery] non dispone del supporto per la paginazione per filtrare le esecuzioni di formazione e punteggio di un servizio.
 * Durante la configurazione dell&#39;apprendimento o del punteggio pianificato viene eseguito tramite [!DNL Service Gallery]. L&#39;impostazione della frequenza su Oraria impedisce l&#39;applicazione della pianificazione.
 
@@ -65,7 +65,7 @@ Per ulteriori informazioni, visitare la [Panoramica di Data Science Workspace](.
 | Funzione | Descrizione |
 | -----------| ---------- |
 | Miglioramenti a [!DNL Query Editor] | È stata aggiunta una funzione di salvataggio che consente di salvare una query e lavorarci in un secondo momento. È stata aggiunta una scheda &quot;Sfoglia&quot; all&#39;interfaccia utente di [!DNL Query Service] su Adobe Experience Platform che mostra le query salvate dagli utenti dell&#39;organizzazione. È stato implementato un pannello &quot;Dettagli query&quot; che visualizza metadati utili sulla query visualizzata. |
-| Nuove funzioni di attribuzione | Funzioni definite dall&#39;Adobe in [!DNL Query Service] per eseguire una query per l&#39;attribuzione del canale con parametri di scadenza. |
+| Nuove funzioni di attribuzione | Funzioni definite da Adobe in [!DNL Query Service] per eseguire una query per l&#39;attribuzione del canale con parametri di scadenza. |
 | Miglioramenti alla sintassi SQL | Supporto per la sintassi iLike. |
 | Generare set di dati con uno schema XDM definito | È stata aggiunta una nuova clausola nelle query Create Table as Select (CTAS) che consente di specificare uno schema di destinazione. |
 

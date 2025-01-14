@@ -2,7 +2,7 @@
 title: Creare una connessione di origine e un flusso di dati per gli account e i contatti di SugarCRM tramite l’API del servizio Flusso
 description: Scopri come collegare Adobe Experience Platform agli account e ai contatti di SugarCRM utilizzando l’API del servizio Flusso.
 exl-id: 2b422b39-5b86-4313-a214-725044d9812c
-source-git-commit: 0edc7a6a68ee4dc5ea24f16a8bc12aba85af0dff
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '2104'
 ht-degree: 2%
@@ -677,7 +677,7 @@ Per i passaggi dettagliati su come creare uno schema XDM di destinazione, consul
 
 ### Creare un set di dati di destinazione {#target-dataset}
 
-È possibile creare un set di dati di destinazione eseguendo una richiesta POST all&#39;API [Catalog Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), fornendo l&#39;ID dello schema di destinazione all&#39;interno del payload.
+È possibile creare un set di dati di destinazione eseguendo una richiesta POST all&#39;API [Catalog Service](https://developer.adobe.com/experience-platform-apis/references/catalog/), fornendo l&#39;ID dello schema di destinazione all&#39;interno del payload.
 
 Per i passaggi dettagliati su come creare un set di dati di destinazione, consulta l&#39;esercitazione su [creazione di un set di dati utilizzando l&#39;API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html).
 
