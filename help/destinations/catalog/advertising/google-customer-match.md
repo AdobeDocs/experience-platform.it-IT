@@ -1,12 +1,12 @@
 ---
 keywords: Google customer match;Google customer match;Google Customer Match
 title: Connessione Customer Match di Google
-description: Google Customer Match consente di utilizzare i dati online e offline per raggiungere e coinvolgere nuovamente i clienti nelle proprietà possedute e gestite da Google, come Search, Shopping, Gmail e YouTube.
+description: Google Customer Match consente di utilizzare i dati online e offline per raggiungere e coinvolgere nuovamente i clienti nelle proprietà possedute e gestite da Google, come Search, Shopping e Gmail.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 25dc27d890cb2e0e23f8fa797ac9edea929164fd
+source-git-commit: bbf48bb3478e90c1502083d0ea97e3cc0aef1bb9
 workflow-type: tm+mt
-source-wordcount: '2100'
-ht-degree: 2%
+source-wordcount: '2140'
+ht-degree: 3%
 
 ---
 
@@ -22,7 +22,11 @@ ht-degree: 2%
 ><br/>
 >I clienti che non hanno acquistato Adobe Privacy &amp; Security Shield devono utilizzare le funzionalità [segment definition](../../../segmentation/home.md#segment-definitions) all&#39;interno di [Segment Builder](../../../segmentation/ui/segment-builder.md) per filtrare i profili non autorizzati e continuare a utilizzare senza interruzioni le destinazioni Real-Time CDP Google esistenti.
 
-[[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) ti consente di utilizzare i tuoi dati online e offline per raggiungere e coinvolgere nuovamente i tuoi clienti nelle proprietà possedute e gestite da Google, ad esempio: [!DNL Search], [!DNL Shopping], [!DNL Gmail] e [!DNL YouTube].
+[[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) ti consente di utilizzare i tuoi dati online e offline per raggiungere e coinvolgere nuovamente i tuoi clienti nelle proprietà possedute e gestite da Google, ad esempio: [!DNL Search], [!DNL Shopping] e [!DNL Gmail].
+
+>[!TIP]
+>
+>Per raggiungere i clienti nell&#39;inventario [!DNL YouTube], utilizza la destinazione [Google Customer Match + DV360](/help/destinations/catalog/advertising/google-customer-match-dv360.md), che utilizza l&#39;API Google Audience Partner.
 
 ![Destinazione Customer Match di Google nell&#39;interfaccia utente di Adobe Experience Platform.](../../assets/catalog/advertising/google-customer-match/catalog.png)
 
@@ -35,6 +39,10 @@ Per aiutarti a capire meglio come e quando utilizzare la destinazione [!DNL Goog
 Un marchio di abbigliamento sportivo desidera raggiungere i clienti esistenti tramite [!DNL Google Search] e [!DNL Google Shopping] per personalizzare offerte ed articoli in base ai loro acquisti passati e alla cronologia di navigazione. Il marchio di abbigliamento può acquisire indirizzi e-mail dal proprio CRM per Experience Platform e creare tipi di pubblico dai propri dati offline. Quindi possono inviare questi tipi di pubblico a [!DNL Google Customer Match] per utilizzarli in [!DNL Search] e [!DNL Shopping], ottimizzando le loro spese pubblicitarie.
 
 ### #2 del caso d’uso
+
+>[!TIP]
+>
+>Per eseguire questo caso d&#39;uso nell&#39;inventario [!DNL YouTube], utilizzare la nuova destinazione [Google Customer Match + DV360](/help/destinations/catalog/advertising/google-customer-match-dv360.md), che utilizza l&#39;API Google Audience Partner.
 
 Un&#39;importante azienda tecnologica ha lanciato un nuovo telefono. Per promuovere questo nuovo modello di telefono, sono alla ricerca di far conoscere le nuove caratteristiche e funzionalità del telefono ai clienti che possiedono modelli precedenti dei loro telefoni.
 
@@ -222,7 +230,7 @@ Dopo la connessione alla destinazione e la definizione di un flusso di dati di d
 
 >[!IMPORTANT]
 >
-> A partire da ottobre 2024, Adobe sta implementando un aggiornamento per aumentare la precisione dei rapporti per le destinazioni di streaming. Questo miglioramento garantisce un migliore allineamento tra il reporting dell’Experience Platform e quello delle piattaforme di destinazione.
+> A partire da ottobre 2024, Adobe implementerà un aggiornamento per aumentare la precisione dei rapporti per le destinazioni di streaming. Questo miglioramento garantisce un migliore allineamento tra il reporting dell’Experience Platform e quello delle piattaforme di destinazione.
 >
 > Prima di questo aggiornamento, **[!UICONTROL Identità non riuscite]** includeva tutti i tentativi di attivazione. Dopo questo aggiornamento, nel conteggio totale viene incluso solo l’ultimo tentativo di attivazione.
 >
