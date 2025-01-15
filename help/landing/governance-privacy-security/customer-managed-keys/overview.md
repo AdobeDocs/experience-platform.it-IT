@@ -4,9 +4,9 @@ description: Scopri come impostare le tue chiavi di crittografia per i dati memo
 role: Developer
 feature: Privacy
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: f2737355ca0652f434bd5f86acc65139f767e56f
+source-git-commit: c1a28a4b1ce066a87bb7b34b2524800f9d8f1ca0
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '1098'
 ht-degree: 0%
 
 ---
@@ -17,13 +17,15 @@ I dati memorizzati su Adobe Experience Platform vengono crittografati a riposo u
 
 >[!AVAILABILITY]
 >
->Se l’implementazione di Experience Platform viene eseguita su Amazon Web Services (AWS), puoi utilizzare il servizio di gestione delle chiavi (KMS) per la crittografia dei dati di Platform. Un Experience Platform in esecuzione su AWS è attualmente disponibile per un numero limitato di clienti. Per ulteriori informazioni sull&#39;infrastruttura Experience Platform supportata, consulta l&#39;[panoramica sul cloud multiplo di Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud). Per informazioni sulla creazione e la gestione delle chiavi di crittografia in AWS KMS, consulta la [guida alla crittografia dei dati di AWS KMS](../key-management-service/overview.md).
+>Adobe Experience Platform supporta le chiavi gestite dal cliente (CMK) per Microsoft Azure e Amazon Web Services (AWS). Un Experience Platform in esecuzione su AWS è attualmente disponibile per un numero limitato di clienti. Se l’implementazione viene eseguita su AWS, puoi utilizzare il servizio di gestione delle chiavi (KMS) per la crittografia dei dati di Platform. Per ulteriori informazioni sull&#39;infrastruttura supportata, vedere l&#39;[Experience Platform di panoramica su più cloud](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
+>
+>Per informazioni sulla creazione e la gestione delle chiavi di crittografia in AWS KMS, consulta la [guida alla crittografia dei dati di AWS KMS](./aws/configure-kms.md). Per le implementazioni di Azure, vedere la [Guida alla configurazione di Azure Key Vault](./azure/azure-key-vault-config.md).
 
 >[!NOTE]
 >
->I dati del profilo cliente memorizzati nell&#39;archivio profili [!DNL Azure Data Lake] e [!DNL Azure Cosmos DB] di Platform sono crittografati esclusivamente tramite CMK, una volta abilitati. La revoca della chiave negli archivi dati primari può richiedere da **qualche minuto a 24 ore** e può richiedere più tempo, **fino a 7 giorni** per gli archivi dati transitori o secondari. Per ulteriori dettagli, consulta le [implicazioni della revoca dell&#39;accesso alla chiave](#revoke-access).
+>Per le istanze Platform ospitate [!DNL Azure], i dati del profilo cliente memorizzati nell&#39;archivio profili [!DNL Azure Data Lake] e [!DNL Azure Cosmos DB] di Platform vengono crittografati esclusivamente tramite CMK una volta abilitati. La revoca della chiave negli archivi dati primari può richiedere da **qualche minuto a 24 ore** e da **a 7 giorni** per gli archivi dati transitori o secondari. Per ulteriori dettagli, consulta le [implicazioni della revoca dell&#39;accesso alla chiave](#revoke-access).
 
-Questo documento fornisce una panoramica generale del processo di abilitazione della funzione CMK (Customer-Managed Key) in Platform e delle informazioni sui prerequisiti necessari per completare questi passaggi.
+Questo documento fornisce una panoramica di alto livello del processo di abilitazione della funzione Customer Managed Keys (CMK) in Platform in [!DNL Azure] e AWS, insieme alle informazioni sui prerequisiti necessari per completare questi passaggi.
 
 >[!NOTE]
 >
@@ -31,40 +33,64 @@ Questo documento fornisce una panoramica generale del processo di abilitazione d
 
 ## Prerequisiti
 
-Per visualizzare e visitare la sezione [!UICONTROL Crittografia] in Adobe Experience Platform, è necessario aver creato un ruolo e assegnato l&#39;autorizzazione [!UICONTROL Gestione chiave gestita dal cliente] a tale ruolo. Qualsiasi utente con l&#39;autorizzazione [!UICONTROL Gestione chiave gestita dal cliente] può abilitare la CMK per la propria organizzazione.
+Per abilitare CMK, l&#39;ambiente di hosting della piattaforma ([!DNL Azure] o AWS) deve soddisfare requisiti di configurazione specifici:
+
+### Prerequisiti generali
+
+Per visualizzare e accedere alla sezione [!UICONTROL Crittografia] in Adobe Experience Platform, è necessario aver creato un ruolo e aver assegnato a tale ruolo l&#39;autorizzazione [!UICONTROL Gestisci chiave gestita dal cliente].  Qualsiasi utente con l&#39;autorizzazione [!UICONTROL Gestisci chiave gestita dal cliente] può abilitare la CMK per la propria organizzazione.
 
 Per ulteriori informazioni sull&#39;assegnazione di ruoli e autorizzazioni in Experience Platform, consulta la [documentazione sulla configurazione delle autorizzazioni](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html).
 
-Per abilitare CMK, l&#39;insieme di credenziali delle chiavi [!DNL Azure] deve essere configurato con le impostazioni seguenti:
+### Prerequisiti specifici di Azure
 
-* [Abilita protezione eliminazione](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
-* [Abilita eliminazione temporanea](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
-* [Configurare l&#39;accesso utilizzando [!DNL Azure] il controllo dell&#39;accesso basato su ruolo](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
+Per le implementazioni ospitate da Azure, configurare l&#39;insieme di credenziali delle chiavi [!DNL Azure] con le impostazioni seguenti:
 
-Leggi la documentazione collegata per comprendere meglio il processo.
+- [Abilita protezione eliminazione](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
+- [Abilita eliminazione temporanea](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
+- [Configurare l&#39;accesso utilizzando [!DNL Azure] il controllo dell&#39;accesso basato su ruolo](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
+
+### Prerequisiti specifici per AWS
+
+Per le implementazioni ospitate su AWS, configura l’ambiente AWS come segue:
+
+- Assicurati di disporre delle autorizzazioni necessarie per gestire le chiavi di crittografia tramite AWS Identity and Access Management (IAM). Per informazioni dettagliate, vedere [Criteri IAM per AWS KMS](https://docs.aws.amazon.com/kms/latest/developerguide/iam-policies.html).
+- Configura AWS KMS con supporto per CMK. Consulta la [Guida alla crittografia dei dati di AWS KMS](./aws/configure-kms.md).
 
 ## Riepilogo del processo {#process-summary}
 
-La CMK è inclusa nell’Healthcare Shield e nelle offerte Privacy and Security Shield di Adobe. Dopo che la tua organizzazione ha acquistato una licenza per una di queste offerte, puoi iniziare un processo una tantum per impostare la funzione.
+Customer Managed Keys (CMK) è disponibile tramite le offerte di Adobe Healthcare Shield e Privacy and Security Shield. In Azure, la CMK è supportata sia per Healthcare Shield che per Privacy e Security Shield. In AWS, la CMK è supportata solo per Privacy e Security Shield e non è disponibile per Healthcare Shield. Una volta che la tua organizzazione ha acquistato una licenza per una di queste offerte, puoi iniziare il processo di configurazione una tantum per abilitare la CMK.
 
 >[!WARNING]
 >
->Dopo aver configurato la CMK, non è possibile ripristinare le chiavi gestite dal sistema. Sei responsabile della gestione sicura delle chiavi e dell&#39;accesso all&#39;app Key Vault, Key e CMK in [!DNL Azure] per evitare la perdita dell&#39;accesso ai tuoi dati.
+>Dopo aver configurato la CMK, non è possibile ripristinare le chiavi gestite dal sistema. È tua responsabilità gestire in modo sicuro le chiavi per evitare di perdere l’accesso ai tuoi dati.
 
 Il processo è il seguente:
 
-1. [Configura un  [!DNL Azure] Key Vault](./azure-key-vault-config.md) in base ai criteri della tua organizzazione, quindi [genera una chiave di crittografia](./azure-key-vault-config.md#generate-a-key) che verrà condivisa con Adobe.
-1. Configura l&#39;app CMK con il tuo tenant [!DNL Azure] tramite [chiamate API](./api-set-up.md#register-app) o la [interfaccia utente](./ui-set-up.md#register-app).
-1. Invia l&#39;ID della chiave di crittografia ad Adobe e avvia il processo di abilitazione per la funzionalità [nell&#39;interfaccia utente](./ui-set-up.md#send-to-adobe) o con una [chiamata API](./api-set-up.md#send-to-adobe).
-1. Controllare lo stato della configurazione per verificare se la CMK è stata abilitata [nell&#39;interfaccia utente](./ui-set-up.md#check-status) o con una [chiamata API](./api-set-up.md#check-status).
+### Per Azure {#azure-process-summary}
 
-Una volta completato il processo di configurazione, tutti i dati inseriti in Platform in tutte le sandbox verranno crittografati utilizzando la configurazione della chiave [!DNL Azure]. Per utilizzare CMK, sfrutterai la funzionalità [!DNL Microsoft Azure] che potrebbe far parte del [programma di anteprima pubblico](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
+1. [Configura un  [!DNL Azure] insieme di credenziali delle chiavi](./azure/azure-key-vault-config.md) in base ai criteri della tua organizzazione, quindi [genera una chiave di crittografia](./azure/azure-key-vault-config.md#generate-a-key) da condividere con Adobe.
+1. Configura l&#39;app CMK con il tuo tenant [!DNL Azure] tramite [chiamate API](./azure/api-set-up.md#register-app) o la [interfaccia utente](./azure/ui-set-up.md#register-app).
+1. Invia l&#39;ID della chiave di crittografia ad Adobe e avvia il processo di abilitazione per la funzione, [nell&#39;interfaccia utente](./azure/ui-set-up.md#send-to-adobe) o con una [chiamata API](./azure/api-set-up.md#send-to-adobe).
+1. Controllare lo stato della configurazione per verificare se CMK è stato abilitato, [nell&#39;interfaccia utente](./azure/ui-set-up.md#check-status) o con una [chiamata API](./azure/api-set-up.md#check-status).
+
+Una volta completato il processo di installazione per le istanze di Azure Hosted Platform, tutti i dati inseriti in Platform in tutte le sandbox verranno crittografati utilizzando l&#39;installazione della chiave [!DNL Azure]. Per utilizzare CMK, sfrutterai la funzionalità [!DNL Microsoft Azure] che potrebbe far parte del [programma di anteprima pubblico](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
+
+### Per AWS {#aws-process-summary}
+
+1. [Configura AWS KMS](./aws/configure-kms.md) configurando una chiave di crittografia da condividere con Adobe.
+2. Segui le istruzioni specifiche di AWS nella [Guida alla configurazione dell&#39;interfaccia utente](./aws/ui-set-up.md).
+3. Convalida la configurazione per verificare che i dati di Platform siano crittografati utilizzando la chiave ospitata da AWS.
+
+<!--  Pending: or [API setup guide]() -->
+
+Una volta completato il processo di configurazione per le istanze di Platform ospitate da AWS, tutti i dati inseriti in Platform in tutte le sandbox verranno crittografati utilizzando la configurazione del servizio di gestione delle chiavi (KMS) di AWS. Per utilizzare la CMK in AWS, puoi utilizzare il servizio AWS Key Management per creare e gestire le chiavi di crittografia in linea con i requisiti di sicurezza della tua organizzazione.
 
 ## Implicazioni della revoca dell&#39;accesso alla chiave {#revoke-access}
 
-La revoca o la disabilitazione dell’accesso all’insieme di credenziali delle chiavi, alla chiave o all’app CMK può causare interruzioni significative, tra cui l’interruzione delle modifiche alle operazioni della piattaforma. Una volta che queste chiavi sono disattivate, i dati in Platform potrebbero diventare inaccessibili e tutte le operazioni a valle che si basano su tali dati cesseranno di funzionare. È fondamentale comprendere appieno gli impatti a valle prima di apportare qualsiasi modifica alle configurazioni chiave.
+La revoca o la disabilitazione dell’accesso all’insieme di credenziali delle chiavi, alla chiave o all’app CMK in Azure o alla chiave di crittografia in AWS può causare interruzioni significative, inclusa l’interruzione delle modifiche alle operazioni della piattaforma. Una volta che le chiavi sono disattivate, i dati in Platform possono diventare inaccessibili e tutte le operazioni a valle che si basano su tali dati cesseranno di funzionare. È fondamentale comprendere appieno gli impatti a valle prima di apportare qualsiasi modifica alle configurazioni chiave.
 
-Se si decide di revocare l&#39;accesso di Platform ai dati, è possibile rimuovere il ruolo utente associato all&#39;applicazione dall&#39;insieme di credenziali delle chiavi in [!DNL Azure].
+Per revocare l&#39;accesso Platform ai dati in [!DNL Azure], rimuovere il ruolo utente associato all&#39;applicazione dall&#39;insieme di credenziali delle chiavi. Per AWS, puoi disabilitare la chiave o aggiornare l’istruzione dei criteri. Per istruzioni dettagliate sul processo di AWS, consulta la [sezione di revoca della chiave](./aws/ui-set-up.md#key-revocation).
+
 
 ### Timeline di propagazione {#propagation-timelines}
 
@@ -72,15 +98,22 @@ Dopo la revoca dell&#39;accesso alla chiave dall&#39;insieme di credenziali dell
 
 | **Tipo di archivio** | **Descrizione** | **Timeline** |
 |---|---|---|
-| Archivi dati primari | Questi archivi includono Azure Data Lake e gli archivi del profilo di database di Azure Cosmos. Una volta revocato l’accesso alla chiave, i dati diventano inaccessibili. | Da **pochi minuti a 24 ore**. |
-| Archivi di dati nella cache/transitori | Include gli archivi dati utilizzati per le prestazioni e le funzionalità principali delle applicazioni. L’impatto della revoca della chiave è ritardato. | **Fino a 7 giorni**. |
+| Archivi dati primari | Include i data lake (Azure Data Lake, AWS S3) e gli archivi del profilo di database di Azure Cosmos. Una volta revocato l’accesso alla chiave, i dati diventano inaccessibili. | Da **pochi minuti a 24 ore**. |
+| Archivi di dati nella cache/transitori | Include gli archivi dati secondari utilizzati per le prestazioni e le funzionalità principali delle applicazioni. L’impatto della revoca della chiave è ritardato. | **Fino a 7 giorni**. |
 
 Ad esempio, il dashboard Profilo continuerà a visualizzare i dati dalla cache fino a sette giorni prima della scadenza e verrà aggiornato. Analogamente, la riabilitazione dell’accesso all’applicazione richiede la stessa quantità di tempo per ripristinare la disponibilità dei dati in questi archivi.
 
 >[!NOTE]
 >
+>La riabilitazione dell’accesso all’applicazione può richiedere lo stesso tempo della revoca per ripristinare la disponibilità dei dati in questi archivi.
+
+>[!TIP]
+>
 >Esistono due eccezioni specifiche per casi d’uso alla scadenza di sette giorni del set di dati su dati non primari (memorizzati nella cache/transitori). Per ulteriori informazioni su queste funzioni, consulta la relativa documentazione.<ul><li>[Abbreviazione URL Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=it#message-preset-sms)</li><li>[Proiezioni Edge](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html#edge-projections)</li></ul>
 
 ## Passaggi successivi
 
-Per iniziare il processo, inizia [configurando un  [!DNL Azure] insieme di credenziali delle chiavi](./azure-key-vault-config.md) e [generando una chiave di crittografia](./azure-key-vault-config.md#generate-a-key) da condividere con Adobe.
+Per iniziare il processo:
+
+- Per Azure: iniziare [configurando un  [!DNL Azure] insieme di credenziali delle chiavi](./azure/azure-key-vault-config.md) e [generare una chiave di crittografia](./azure/azure-key-vault-config.md#generate-a-key) da condividere con Adobe.
+- Per AWS: [Configura AWS KMS](./aws/configure-kms.md) e assicurati che le configurazioni di IAM e KMS siano corrette prima di procedere alle guide di configurazione dell&#39;interfaccia utente o dell&#39;API.

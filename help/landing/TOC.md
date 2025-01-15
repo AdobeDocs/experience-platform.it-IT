@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Panoramica di Adobe Experience Platform
 breadcrumb-title: Panoramica di Experience Platform
 user-guide-description: Scopri come Experience Platform consente di offrire esperienze clienti personalizzate in tempo reale con guide, documentazione e tutorial.
-source-git-commit: b3fe3f50c133a819921aef05ee5b00af16b7f58f
+source-git-commit: 90b8a3253e8298a634c0deaf82ac8be05f478622
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '304'
 ht-degree: 24%
 
 ---
@@ -69,11 +69,13 @@ ht-degree: 24%
    * [Crittografia dei dati](./governance-privacy-security/encryption.md)
    * Chiavi gestite dal cliente {#customer-managed-keys}
       * [Chiavi gestite dal cliente](./governance-privacy-security/customer-managed-keys/overview.md)
-      * [Configurare un archivio chiavi di Azure](./governance-privacy-security/customer-managed-keys/azure-key-vault-config.md)
-      * [Utilizzare l’API per configurare la CMK](./governance-privacy-security/customer-managed-keys/api-set-up.md)
-      * [Utilizzare l’interfaccia utente per configurare la CMK](./governance-privacy-security/customer-managed-keys/ui-set-up.md)
-   * Servizio di gestione delle chiavi {#key-management-service}
-      * [Servizio gestione chiavi](./governance-privacy-security/key-management-service/overview.md)
+      * Azure {#azure}
+         * [Configurare un archivio chiavi di Azure](./governance-privacy-security/customer-managed-keys/azure/azure-key-vault-config.md)
+         * [Utilizzare l’API per configurare la CMK](./governance-privacy-security/customer-managed-keys/azure/api-set-up.md)
+         * [Utilizzare l’interfaccia utente per configurare la CMK](./governance-privacy-security/customer-managed-keys/azure/ui-set-up.md)
+      * Amazon Web Services {#aws}
+         * [Configurare AWS KMS per CMK](./governance-privacy-security/customer-managed-keys/aws/configure-kms.md)
+         * [Utilizzare l’interfaccia utente per configurare la CMK su AWS](./governance-privacy-security/customer-managed-keys/aws/ui-set-up.md)
 * Utilizzo licenze e guardrail {#license}
    * [Best practice per l&#39;adesione alle licenze di gestione dati](./license-usage-and-guardrails/data-management-best-practices.md)
    * [Dashboard utilizzo licenze](./license-usage-and-guardrails/license-usage-dashboard.md)
