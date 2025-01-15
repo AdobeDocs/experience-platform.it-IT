@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida alla risoluzione dei problemi del sistema XDM
 description: Risposte alle domande frequenti su Experience Data Model (XDM), compresi i passaggi per risolvere gli errori API più comuni.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: ae98a185fdfad5b6ba787e78ad17296928216d08
+source-git-commit: b345330595aadcfe2380dd1795802470b249cb4a
 workflow-type: tm+mt
-source-wordcount: '2390'
+source-wordcount: '2347'
 ht-degree: 0%
 
 ---
@@ -142,13 +142,7 @@ Lo schema non viene abilitato automaticamente per Real-Time Customer Profile. De
 
 Non puoi eliminare uno schema dopo che è stato abilitato per Real-Time Customer Profile. Una volta abilitato uno schema per il profilo, non è possibile disattivarlo o eliminarlo né rimuovere campi dallo schema. Pertanto, è fondamentale pianificare e verificare attentamente la configurazione dello schema prima di abilitarla per il profilo. Tuttavia, puoi eliminare un set di dati abilitato per il profilo. Le informazioni si trovano qui: <https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
 
->[!IMPORTANT]
->
->Per rimuovere uno schema abilitato per il profilo, è necessario l’aiuto del team di supporto della piattaforma XDM e procedere come segue:
->
-> 1. Elimina tutti i set di dati associati allo schema (abilitato per Profilo)
-> 2. Elimina lo snapshot di esportazione del profilo dalla sandbox (richiede l’aiuto del team di supporto della piattaforma XDM)
-> 3. Forza eliminazione schema dalla sandbox (operazione che può essere eseguita solo dal team di supporto della piattaforma XDM)
+Se non desideri più utilizzare uno schema abilitato per il profilo, è consigliabile rinominare lo schema per includere **Non utilizzare** o **Inattivo**.
 
 ## Modifica e restrizioni dello schema
 
