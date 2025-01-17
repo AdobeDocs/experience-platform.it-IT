@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Best Practice Per La Modellazione Dei Dati
 description: Questo documento fornisce un’introduzione agli schemi Experience Data Model (XDM) e ai blocchi predefiniti, ai principi e alle best practice per la composizione degli schemi da utilizzare in Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: fed8502afad1dfcb0b4dc91141dd621eacda720c
+source-git-commit: b144a93374fc627f9001b80695cad3f17e28a6fe
 workflow-type: tm+mt
-source-wordcount: '3227'
+source-wordcount: '3214'
 ht-degree: 1%
 
 ---
@@ -28,24 +28,24 @@ Poiché questa guida si concentra esclusivamente su considerazioni chiave relati
 L’approccio consigliato per la progettazione del modello dati da utilizzare in Experience Platform può essere riassunto come segue:
 
 1. Comprendi i casi d’uso aziendali per i tuoi dati.
-1. Identificare le origini dati primarie da inserire in [!DNL Platform] per risolvere questi casi d&#39;uso.
-1. Identifica eventuali fonti di dati secondari che potrebbero essere di interesse. Ad esempio, se attualmente solo una business unit dell&#39;organizzazione è interessata a trasferire i propri dati in [!DNL Platform], anche una simile business unit potrebbe essere interessata a trasferire dati simili in futuro. L’analisi di queste origini secondarie consente di standardizzare il modello dati dell’intera organizzazione.
+1. Identifica le origini di dati primarie da inserire in Platform per affrontare tali casi d’uso.
+1. Identifica eventuali fonti di dati secondari che potrebbero essere di interesse. Ad esempio, se attualmente solo una business unit dell’organizzazione è interessata a trasferire i propri dati su Platform, anche una simile business unit potrebbe essere interessata a trasferire dati simili in futuro. L’analisi di queste origini secondarie consente di standardizzare il modello dati dell’intera organizzazione.
 1. Creare un diagramma di relazione tra entità (ERD) di alto livello per le origini dati identificate.
-1. Convertire l&#39;ERD di alto livello in un ERD incentrato su [!DNL Platform] (inclusi profili, eventi di esperienza ed entità di ricerca).
+1. Converti l’ERD di alto livello in ERD incentrato sulla piattaforma (inclusi profili, eventi di esperienza ed entità di ricerca).
 
-I passaggi relativi all’identificazione delle origini dati applicabili necessari per eseguire i casi di utilizzo aziendali variano da organizzazione a organizzazione. Mentre il resto delle sezioni di questo documento si concentrano sugli ultimi passaggi dell&#39;organizzazione e della costruzione di un&#39;ERD dopo l&#39;identificazione delle origini dati, le spiegazioni dei vari componenti del diagramma potrebbero orientare le decisioni su quali origini dati migrare a [!DNL Platform].
+I passaggi relativi all’identificazione delle origini dati applicabili necessari per eseguire i casi di utilizzo aziendali variano da organizzazione a organizzazione. Mentre il resto delle sezioni di questo documento si concentrano sugli ultimi passaggi dell’organizzazione e della costruzione di un’ERD dopo l’identificazione delle sorgenti di dati, le spiegazioni dei vari componenti del diagramma possono orientare le decisioni su quali delle sorgenti di dati migrare a Platform.
 
 ## Creare un ERD di alto livello {#create-an-erd}
 
-Dopo aver determinato le origini dati da inserire in [!DNL Platform], crea un ERD di alto livello per guidare il processo di mappatura dei dati agli schemi XDM.
+Dopo aver determinato le origini dati da inserire in Platform, crea un ERD di alto livello per guidare il processo di mappatura dei dati sugli schemi XDM.
 
-L&#39;esempio seguente rappresenta un&#39;ERD semplificata per un&#39;azienda che desidera inserire dati in [!DNL Platform]. Il diagramma evidenzia le entità essenziali che devono essere ordinate in classi XDM, inclusi account cliente, hotel, indirizzi e diversi eventi di e-commerce comuni.
+L’esempio seguente rappresenta un’ERD semplificata per un’azienda che desidera inserire dati in Platform. Il diagramma evidenzia le entità essenziali che devono essere ordinate in classi XDM, inclusi account cliente, hotel e diversi eventi di e-commerce comuni.
 
 ![Diagramma relazionale di entità che evidenzia le entità essenziali da ordinare in classi XDM per l&#39;acquisizione dei dati.](../images/best-practices/erd.png)
 
 ## Ordinare le entità in categorie di profili, ricerche ed eventi {#sort-entities}
 
-Dopo aver creato un ERD per identificare le entità essenziali che si desidera inserire in [!DNL Platform], è necessario ordinare queste entità in categorie di profilo, ricerca ed eventi:
+Dopo aver creato un’ERD per identificare le entità essenziali da inserire in Platform, queste entità devono essere ordinate in categorie di profilo, ricerca ed eventi:
 
 | Categoria | Descrizione |
 | --- | --- |
@@ -79,7 +79,7 @@ Se un’entità contiene attributi relativi a un singolo cliente, è molto proba
 
 #### Tracciamento dei dati nel tempo {#track-data}
 
-Se desideri analizzare il modo in cui determinati attributi all’interno di un’entità cambiano nel tempo, è molto probabile che si tratti di un’entità evento. Ad esempio, l&#39;aggiunta di elementi di prodotto a un carrello può essere tracciata come eventi aggiuntivi al carrello in [!DNL Platform]:
+Se desideri analizzare il modo in cui determinati attributi all’interno di un’entità cambiano nel tempo, è molto probabile che si tratti di un’entità evento. Ad esempio, l’aggiunta di elementi di prodotto a un carrello può essere tracciata come evento aggiuntivo al carrello in Platform:
 
 | ID cliente | Tipo | ID prodotto | Quantità | Timestamp |
 | --- | --- | --- | --- | --- |
@@ -113,7 +113,7 @@ Ad esempio, un’azienda desidera creare un pubblico in base al numero di acquis
 
 >[!CAUTION]
 >
->Experience Platform al momento non esegue l’aggregazione automatica dei valori, anche se questa operazione è pianificata per le versioni future. Se si sceglie di utilizzare valori aggregati, è necessario eseguire i calcoli esternamente prima di inviare i dati a [!DNL Platform].
+>Experience Platform al momento non esegue l’aggregazione automatica dei valori, anche se questa operazione è pianificata per le versioni future. Se scegli di utilizzare valori aggregati, devi eseguire i calcoli esternamente prima di inviare i dati a Platform.
 
 #### Cardinalità {#cardinality}
 
@@ -127,9 +127,9 @@ La tabella seguente illustra alcune relazioni di entità comuni e le categorie c
 
 | Relazione | Cardinalità | Categorie di entità |
 | --- | --- | --- |
-| Clienti e carrello Pagamenti | Da uno a molti | Un singolo cliente può avere molti checkout nel carrello, che sono eventi che possono essere tracciati nel tempo. I clienti sarebbero quindi un’entità profilo, mentre Cart Checkouts sarebbe un’entità evento. |
-| Clienti e account fedeltà | Uno a uno | Un singolo cliente può avere un solo account fedeltà e un account fedeltà può appartenere a un solo cliente. Poiché la relazione è uno a uno, sia Clienti che Conti fedeltà rappresentano entità profilo. |
-| Clienti e abbonamenti | Da uno a molti | Un singolo cliente può avere molti abbonamenti. Poiché l’azienda si occupa solo degli abbonamenti correnti di un cliente, Clienti è un’entità profilo, mentre Abbonamenti è un’entità ricerca. |
+| Pagamento cliente e carrello | Da uno a molti | Un singolo cliente può avere molti checkout nel carrello, che sono eventi che possono essere tracciati nel tempo. Il cliente sarà quindi un’entità profilo, mentre Cart Checkout sarà un’entità evento. |
+| Account cliente e fedeltà | Uno a uno | Un singolo cliente può avere un solo account fedeltà e un account fedeltà può appartenere a un solo cliente. Poiché la relazione è uno a uno, sia l&#39;account cliente che l&#39;account fedeltà rappresentano entità profilo. |
+| Cliente e abbonamento | Da uno a molti | Un singolo cliente può avere molti abbonamenti. Poiché l’azienda si occupa solo degli abbonamenti correnti di un cliente, il cliente è un’entità profilo, mentre l’abbonamento è un’entità ricerca. |
 
 {style="table-layout:auto"}
 
@@ -146,9 +146,9 @@ In questo scenario, l’azienda ha due potenziali opzioni per rappresentare gli 
 
 #### Approccio 1: utilizzare gli attributi del profilo {#profile-approach}
 
-Il primo approccio consiste nell’includere un array di abbonamenti come attributi all’interno dell’entità profilo per i clienti. Gli oggetti in questa matrice conterrebbero campi per `category`, `status`, `planName`, `startDate` e `endDate`.
+Il primo approccio consiste nell&#39;includere un array di `subscriptionID` all&#39;interno dell&#39;entità profilo per il cliente.
 
-![Lo schema Clienti nell&#39;Editor di schema con la classe e la struttura evidenziate](../images/best-practices/profile-schema.png)
+![Schema cliente nell&#39;Editor schema con la classe e la struttura evidenziate](../images/best-practices/profile-schema.png)
 
 **Pro**
 
@@ -162,9 +162,9 @@ Il primo approccio consiste nell’includere un array di abbonamenti come attrib
 
 #### Approccio 2: utilizzare entità evento {#event-approach}
 
-Il secondo approccio consiste nell’utilizzare gli schemi evento per rappresentare gli abbonamenti. Ciò comporta l’acquisizione degli stessi campi di abbonamento del primo approccio, con l’aggiunta di un ID di abbonamento, un ID cliente e una marca temporale indicante quando si è verificato l’evento di abbonamento.
+Il secondo approccio consiste nell’utilizzare gli schemi di evento per rappresentare un evento di abbonamento. Questo includerebbe l’ID abbonamento insieme a un ID cliente e una marca temporale di quando si è verificato l’evento di abbonamento.
 
-![Diagramma dello schema degli eventi di sottoscrizione con la classe XDM Experience Event e la struttura delle sottoscrizioni evidenziate.](../images/best-practices/event-schema.png)
+![Diagramma dello schema Evento di sottoscrizione con la classe XDM Experience Event e la struttura delle sottoscrizioni evidenziate.](../images/best-practices/event-schema.png)
 
 **Pro**
 
@@ -192,7 +192,7 @@ La categoria in cui è stato ordinato un’entità deve determinare la classe XD
 >
 >Anche se le entità evento sono quasi sempre rappresentate da schemi separati, le entità nelle categorie di profilo o di ricerca possono essere combinate insieme in un singolo schema XDM, a seconda della loro cardinalità.
 >
->Ad esempio, poiché l&#39;entità Clienti ha una relazione uno-a-uno con l&#39;entità LoyaltyAccounts, lo schema per l&#39;entità Clienti potrebbe includere anche un oggetto `LoyaltyAccount` che contiene i campi fedeltà appropriati per ogni cliente. Se la relazione è uno a molti, tuttavia, l’entità che rappresenta il &quot;molti&quot; potrebbe essere rappresentata da uno schema separato o da un array di attributi di profilo, a seconda della complessità.
+>Ad esempio, poiché l&#39;entità cliente ha una relazione uno-a-uno con l&#39;entità LoyaltyAccount, lo schema per l&#39;entità cliente potrebbe includere anche un oggetto `LoyaltyAccount` per contenere i campi fedeltà appropriati per ogni cliente. Se la relazione è uno a molti, tuttavia, l’entità che rappresenta il &quot;molti&quot; potrebbe essere rappresentata da uno schema separato o da un array di attributi di profilo, a seconda della complessità.
 
 Le sezioni seguenti forniscono indicazioni generali sulla creazione di schemi basati sulla ERD.
 
