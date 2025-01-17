@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;origini;connettori;connett
 title: Creare una connessione sorgente Adobe Campaign Managed Cloud Services tramite l’interfaccia utente di Platform
 description: Scopri come collegare Adobe Experience Platform a Adobe Campaign Managed Cloud Services utilizzando l’interfaccia utente di Platform.
 exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 77d755e4ebf97521efa1dfdfe9ee40312800ad28
 workflow-type: tm+mt
-source-wordcount: '1149'
+source-wordcount: '1185'
 ht-degree: 6%
 
 ---
@@ -30,7 +30,7 @@ Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dal 
 
 Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. È inoltre possibile utilizzare la barra di ricerca per limitare le origini visualizzate.
 
-Nella categoria **[!UICONTROL Adobe applications]**, selezionare **[!UICONTROL Adobe Campaign Managed Cloud Services]**, quindi **[!UICONTROL Aggiungi dati]**.
+Nella categoria **[!UICONTROL Applicazioni Adobe]**, selezionare **[!UICONTROL Adobe Campaign Managed Cloud Services]**, quindi **[!UICONTROL Aggiungi dati]**.
 
 ![Catalogo origini che visualizza la scheda Adobe Campaign Managed Cloud Services.](../../../../images/tutorials/create/campaign/catalog.png)
 
@@ -101,6 +101,8 @@ Platform fornisce consigli intelligenti per campi mappati automaticamente in bas
 >[!IMPORTANT]
 >
 >Quando mappi i campi sorgente ai campi XDM di destinazione, assicurati di mappare il campo identità principale designato al relativo campo XDM di destinazione appropriato.
+>
+>Per ogni pubblico, puoi aggiungere fino a 20 campi da mappare su Adobe Campaign. È possibile modificare questo limite aggiornando il valore dell&#39;opzione `NmsCdp_Aep_Sources_Max_Columns` nella cartella Amministrazione > Piattaforma > Opzioni di Esplora campagne.
 
 Una volta mappati correttamente i dati di origine, seleziona **[!UICONTROL Avanti]**.
 
