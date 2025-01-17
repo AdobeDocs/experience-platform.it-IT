@@ -5,9 +5,9 @@ type: Documentation
 description: Adobe Experience Platform consente di eliminare un set di dati o un batch dall’archivio profili per rimuovere i dati Profilo cliente in tempo reale che non sono più necessari o che sono stati aggiunti per errore. A tal fine è necessario utilizzare l’API di profilo per creare un processo di sistema del profilo o eliminare una richiesta.
 role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: 3664d3d1f6433bce4678ab8b17c008c064d8e943
+source-git-commit: 16778d0edbad4539a4ff5084a2f22ca5f08e83ec
 workflow-type: tm+mt
-source-wordcount: '1977'
+source-wordcount: '2020'
 ht-degree: 2%
 
 ---
@@ -64,6 +64,8 @@ GET /system/jobs?{QUERY_PARAMETERS}
 
 >[!TAB Microsoft Azure]
 
++++ Richiesta di esempio per visualizzare i processi di sistema.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -72,11 +74,15 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
++++
+
 >[!TAB Amazon Web Services (AWS)]
 
 >[!IMPORTANT]
 >
 >**è necessario** utilizzare l&#39;intestazione di richiesta `x-sandbox-id` invece dell&#39;intestazione di richiesta `x-sandbox-name` quando si utilizza questo endpoint con AWS.
+
++++ Richiesta di esempio per visualizzare i processi di sistema.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
@@ -85,6 +91,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-id: {SANDBOX_ID}' \
 ```
+
++++
 
 >[!ENDTABS]
 
@@ -133,8 +141,6 @@ In caso di esito positivo, la risposta include un array &quot;figlio&quot; con u
 }
 ```
 
-+++
-
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `_page.count` | Numero totale di richieste. La risposta è stata troncata per motivi di spazio. |
@@ -142,6 +148,8 @@ In caso di esito positivo, la risposta include un array &quot;figlio&quot; con u
 | `jobType` | Tipo di processo da creare. In questo caso, restituirà sempre `"DELETE"`. |
 | `status` | Stato della richiesta di eliminazione. I valori possibili sono `"NEW"`, `"PROCESSING"`, `"COMPLETED"` e `"ERROR"`. |
 | `metrics` | Oggetto che include il numero di record elaborati (`"recordsProcessed"`) e il tempo in secondi di elaborazione della richiesta oppure il tempo impiegato per il completamento della richiesta (`"timeTakenInSec"`). |
+
++++
 
 >[!TAB Amazon Web Services (AWS)]
 
@@ -222,6 +230,8 @@ POST /system/jobs
 
 >[!TAB Microsoft Azure]
 
++++ Richiesta di esempio per eliminare un set di dati.
+
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/ups/system/jobs \
@@ -235,6 +245,8 @@ curl -X POST \
       }'
 ```
 
++++
+
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `dataSetId` | ID del set di dati da eliminare. |
@@ -244,6 +256,8 @@ curl -X POST \
 >[!IMPORTANT]
 >
 >**è necessario** utilizzare l&#39;intestazione di richiesta `x-sandbox-id` invece dell&#39;intestazione di richiesta `x-sandbox-name` quando si utilizza questo endpoint con AWS.
+
++++ Richiesta di esempio per eliminare un set di dati.
 
 ```shell
 curl -X POST \
@@ -257,6 +271,8 @@ curl -X POST \
         "dataSetId": "5c802d3cd83fc114b741c4b5"
       }'
 ```
+
++++
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
@@ -290,12 +306,12 @@ In caso di esito positivo, la risposta restituisce i dettagli della nuova richie
 }
 ```
 
-+++
-
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `id` | ID univoco generato dal sistema e di sola lettura della richiesta di eliminazione. |
 | `dataSetId` | ID del set di dati, come specificato nella richiesta POST. |
+
++++
 
 >[!TAB Amazon Web Services (AWS)]
 
@@ -322,14 +338,14 @@ In caso di esito positivo, la risposta restituisce i dettagli della richiesta di
 }
 ```
 
-+++
-
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `requestId` | ID del processo di sistema. |
 | `requestType` | Tipo di processo di sistema. I valori possibili sono `BACKFILL_TTL`, `DELETE_EE_BATCH` e `TRUNCATE_DATASET`. |
 | `status` | Stato del processo di sistema. I valori possibili includono `NEW`, `SUCCESS`, `ERROR`, `FAILED` e `IN-PROGRESS`. |
 | `properties` | Oggetto che contiene gli ID di batch e/o set di dati del processo di sistema. |
+
++++
 
 >[!ENDTABS]
 
@@ -359,6 +375,8 @@ POST /system/jobs
 
 >[!TAB Microsoft Azure]
 
++++ Richiesta di esempio per eliminare un batch.
+
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/ups/system/jobs \
@@ -373,6 +391,8 @@ curl -X POST \
       }'
 ```
 
++++
+
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `datasetId` | ID del set di dati per il batch da eliminare. |
@@ -383,6 +403,8 @@ curl -X POST \
 >[!IMPORTANT]
 >
 >**è necessario** utilizzare l&#39;intestazione di richiesta `x-sandbox-id` invece dell&#39;intestazione di richiesta `x-sandbox-name` quando si utilizza questo endpoint con AWS.
+
++++ Richiesta di esempio per eliminare un batch.
 
 ```shell
 curl -X POST \
@@ -398,13 +420,14 @@ curl -X POST \
       }'
 ```
 
++++
+
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `datasetId` | ID del set di dati per il batch da eliminare. |
 | `batchId` | ID del batch da eliminare. |
 
 >[!ENDTABS]
-
 
 **Risposta**
 
@@ -417,6 +440,8 @@ curl -X POST \
 >[!TAB Microsoft Azure]
 
 In caso di esito positivo, la risposta restituisce i dettagli della nuova richiesta di eliminazione creata, incluso un ID univoco di sola lettura generato dal sistema per la richiesta. Può essere utilizzato per cercare la richiesta e verificarne lo stato. Il `"status"` per la richiesta al momento della creazione è `"NEW"` fino a quando non inizia l&#39;elaborazione. Il valore `"batchId"` nella risposta deve corrispondere al valore `"batchId"` inviato nella richiesta.
+
++++ Risposta corretta per la creazione di una richiesta di eliminazione.
 
 ```json
 {
@@ -436,6 +461,8 @@ In caso di esito positivo, la risposta restituisce i dettagli della nuova richie
 | `id` | ID univoco generato dal sistema e di sola lettura della richiesta di eliminazione. |
 | `datasetId` | ID del set di dati specificato. |
 | `batchId` | ID del batch, come specificato nella richiesta POST. |
+
++++
 
 >[!TAB Amazon Web Services (AWS)]
 
@@ -462,14 +489,14 @@ In caso di esito positivo, la risposta restituisce i dettagli della richiesta di
 }
 ```
 
-+++
-
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `requestId` | ID del processo di sistema. |
 | `requestType` | Tipo di processo di sistema. I valori possibili sono `BACKFILL_TTL`, `DELETE_EE_BATCH` e `TRUNCATE_DATASET`. |
 | `status` | Stato del processo di sistema. I valori possibili includono `NEW`, `SUCCESS`, `ERROR`, `FAILED` e `IN-PROGRESS`. |
 | `properties` | Oggetto che contiene gli ID di batch e/o set di dati del processo di sistema. |
+
++++
 
 >[!ENDTABS]
 
@@ -517,13 +544,17 @@ GET /system/jobs/{DELETE_REQUEST_ID}
 
 >[!TAB Microsoft Azure]
 
++++ Richiesta di esempio per visualizzare un processo di profilo.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
+
++++
 
 >[!TAB Amazon Web Services (AWS)]
 
@@ -531,13 +562,17 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46
 >
 >**è necessario** utilizzare l&#39;intestazione di richiesta `x-sandbox-id` invece dell&#39;intestazione di richiesta `x-sandbox-name` quando si utilizza questo endpoint con AWS.
 
++++ Richiesta di esempio per visualizzare un processo di profilo.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-id: {SANDBOX_ID}' \
+  -H 'x-sandbox-id: {SANDBOX_ID}'
 ```
+
++++
 
 >[!ENDTABS]
 
@@ -553,6 +588,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46
 >[!TAB Microsoft Azure]
 
 La risposta fornisce i dettagli della richiesta di eliminazione, compreso il suo stato aggiornato. L&#39;ID della richiesta di eliminazione nella risposta (il valore `"id"`) deve corrispondere all&#39;ID inviato nel percorso della richiesta.
+
++++ Risposta corretta per la visualizzazione di una richiesta di eliminazione.
 
 ```json
 {
@@ -572,6 +609,8 @@ La risposta fornisce i dettagli della richiesta di eliminazione, compreso il suo
 | `jobType` | Tipo di processo in fase di creazione. In questo caso, restituirà sempre `"DELETE"`. |
 | `status` | Stato della richiesta di eliminazione. I valori possibili sono `NEW`, `PROCESSING`, `COMPLETED` e `ERROR`. |
 | `metrics` | Matrice che include il numero di record elaborati (`"recordsProcessed"`) e il tempo in secondi di elaborazione della richiesta oppure il tempo impiegato per il completamento della richiesta (`"timeTakenInSec"`). |
+
++++
 
 >[!TAB Amazon Web Services (AWS)]
 
@@ -598,14 +637,14 @@ In caso di esito positivo, la risposta restituisce i dettagli della richiesta di
 }
 ```
 
-+++
-
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `requestId` | ID del processo di sistema. |
 | `requestType` | Tipo di processo di sistema. I valori possibili sono `BACKFILL_TTL`, `DELETE_EE_BATCH` e `TRUNCATE_DATASET`. |
 | `status` | Stato del processo di sistema. I valori possibili includono `NEW`, `SUCCESS`, `ERROR`, `FAILED` e `IN-PROGRESS`. |
 | `properties` | Oggetto che contiene gli ID di batch e/o set di dati del processo di sistema. |
+
++++
 
 >[!ENDTABS]
 
@@ -626,45 +665,18 @@ DELETE /system/jobs/{DELETE_REQUEST_ID}
 ```
 
 | Parametro | Descrizione |
-|---|---|
+| --------- | ----------- |
 | {DELETE_REQUEST_ID} | ID della richiesta di eliminazione che desideri rimuovere. |
 
 **Richiesta**
 
->[!IMPORTANT]
->
->La richiesta seguente è diversa tra le istanze di Azure e AWS.
-
->[!BEGINTABS]
-
->[!TAB Microsoft Azure]
-
 ```shell
-curl -X POST \
-  https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
+curl -X POST https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
-
->[!TAB Amazon Web Services (AWS)]
-
->[!IMPORTANT]
->
->**è necessario** utilizzare l&#39;intestazione di richiesta `x-sandbox-id` invece dell&#39;intestazione di richiesta `x-sandbox-name` quando si utilizza questo endpoint con AWS.
-
-```shell
-curl -X POST \
-  https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-id: {SANDBOX_ID}' \
-```
-
->[!ENDTABS]
-
 
 **Risposta**
 
