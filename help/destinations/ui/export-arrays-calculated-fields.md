@@ -6,7 +6,7 @@ exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: a99fc58b8296b2b9ce6e30d14857529570cd3e8a
 workflow-type: tm+mt
 source-wordcount: '1622'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -14,8 +14,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
->title="Supporto per l&#39;esportazione di array"
->abstract="<p>Utilizzare il controllo **Add calculfield** per esportare matrici di valori int, string, boolean e object da Experience Platform alla destinazione di archiviazione cloud desiderata.</p><p> Le matrici devono essere esportate come stringhe utilizzando la funzione `array_to_string`. Consulta la documentazione per esempi esaurienti e altre funzioni supportate.</p>"
+>title="Supporto per gli array di esportazione"
+>abstract="<p>Utilizza il controllo **Aggiungi campo calcolato** per esportare semplici array di int, stringa o booleani da Experience Platform alla destinazione di archiviazione cloud desiderata.</p><p> Gli array devono essere esportati come stringhe utilizzando la funzione `array_to_string`. Consulta la documentazione per esempi esaurienti e ulteriori funzioni supportate.</p>"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html?lang=it#examples" text="Esempi"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html?lang=it#known-limitations" text="Limitazioni note"
 
