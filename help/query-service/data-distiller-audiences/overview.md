@@ -2,7 +2,7 @@
 title: Creare tipi di pubblico con SQL
 description: Scopri come utilizzare l’estensione del pubblico SQL in Data Distiller di Adobe Experience Platform per creare, gestire e pubblicare tipi di pubblico utilizzando i comandi SQL. Questa guida tratta tutti gli aspetti del ciclo di vita del pubblico, inclusa la creazione, l’aggiornamento e l’eliminazione di profili, e l’utilizzo di definizioni di pubblico basate sui dati per eseguire il targeting di destinazioni basate su file.
 exl-id: c35757c1-898e-4d65-aeca-4f7113173473
-source-git-commit: 7db055f598e3fa7d5a50214a0cfa86e28e5bfe47
+source-git-commit: c66a7cf779c1b6e55ace86916985087dfaa3363b
 workflow-type: tm+mt
 source-wordcount: '1481'
 ht-degree: 1%
@@ -44,7 +44,7 @@ Utilizza questi parametri per definire la query di creazione del pubblico SQL:
 | `schema` | Facoltativo. Definisce lo schema XDM per il set di dati creato dalla query. |
 | `table_name` | Nome della tabella e del pubblico. |
 | `primary_identity` | Specifica la colonna di identità primaria per il pubblico. |
-| `identity_namespace` | Spazio dei nomi dell’identità. Puoi utilizzare uno spazio dei nomi esistente o crearne uno nuovo. Per visualizzare gli spazi dei nomi disponibili, utilizzare il comando `SHOW NAMESPACE`. Per creare un nuovo spazio dei nomi, utilizzare `CREATE NAMESPACE`. Esempio: `CREATE NAMESPACE lumaCrmId WITH (code='testns', TYPE='Email')`. |
+| `identity_namespace` | Spazio dei nomi dell’identità. Puoi utilizzare uno spazio dei nomi esistente o crearne uno nuovo. Per visualizzare gli spazi dei nomi disponibili, utilizzare il comando `SHOW NAMESPACES`. Per creare un nuovo spazio dei nomi, utilizzare `CREATE NAMESPACE`. Esempio: `CREATE NAMESPACE lumaCrmId WITH (code='testns', TYPE='Email')`. |
 | `select_query` | Un’istruzione SELECT che definisce il pubblico. La sintassi della query SELECT è disponibile nella sezione [Query SELECT](../sql/syntax.md#select-queries). |
 
 {style="table-layout:auto"}
