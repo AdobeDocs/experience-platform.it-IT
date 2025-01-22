@@ -2,9 +2,9 @@
 title: Guida all’implementazione per le regole di collegamento del grafico delle identità
 description: Scopri i passaggi consigliati da seguire per implementare i dati con le configurazioni delle regole di collegamento del grafico delle identità.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 720ffa1ca0ee69cfc802cd50aef26b6f38d2142c
+source-git-commit: 79efdff6f6068af4768fc4bad15c0521cca3ed2a
 workflow-type: tm+mt
-source-wordcount: '1668'
+source-wordcount: '1585'
 ht-degree: 2%
 
 ---
@@ -119,31 +119,6 @@ Durante il processo di pre-implementazione, devi assicurarti che gli eventi aute
 
 
 >[!ENDTABS]
-
-Non inviare una stringa vuota come valore di identità quando invii eventi utilizzando eventi di esperienza XDM. Se il valore di identità dello spazio dei nomi con priorità più elevata è una stringa vuota, il record verrà ignorato da Real-Time Customer Profile. Questo vale sia per identityMap, sia per i campi contrassegnati come identità.
-
-+++Seleziona per visualizzare un esempio di payload con una stringa vuota
-
-Nell&#39;esempio seguente viene restituito un errore perché il valore di identità per `Phone` viene inviato come stringa vuota.
-
-```json
-    "identityMap": {
-        "ECID": [
-            {
-                "id": "24165048599243194405404369473457348936",
-                "primary": false
-            }
-        ],
-        "Phone": [
-            {
-                "id": "",
-                "primary": true
-            }
-        ]
-    }
-```
-
-+++
 
 Assicurati di disporre di un’identità completa quando invii eventi utilizzando gli eventi di esperienza XDM.
 

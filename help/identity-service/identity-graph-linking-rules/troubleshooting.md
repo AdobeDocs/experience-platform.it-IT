@@ -2,9 +2,9 @@
 title: Guida alla risoluzione dei problemi per le regole di collegamento del grafico identità
 description: Scopri come risolvere i problemi comuni nelle regole di collegamento del grafico delle identità.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: b50633a8518f32051549158b23dfc503db255a82
+source-git-commit: 79efdff6f6068af4768fc4bad15c0521cca3ed2a
 workflow-type: tm+mt
-source-wordcount: '3335'
+source-wordcount: '3286'
 ht-degree: 0%
 
 ---
@@ -149,12 +149,8 @@ Esistono diversi motivi che contribuiscono al motivo per cui i frammenti di even
 * [Errore di convalida nel profilo](../../xdm/classes/experienceevent.md).
    * Ad esempio, un evento esperienza deve contenere sia `_id` che `timestamp`.
    * Inoltre, `_id` deve essere univoco per ogni evento (record).
-* Lo spazio dei nomi con la priorità più alta è una stringa vuota.
 
-Nel contesto della priorità dello spazio dei nomi, il profilo rifiuterà:
-
-* Qualsiasi evento che contiene due o più identità con la priorità più elevata dello spazio dei nomi. Ad esempio, se GAID non è contrassegnato come spazio dei nomi univoco e sono presenti due identità con uno spazio dei nomi GAID e valori di identità diversi, l’evento non verrà memorizzato in Profilo.
-* Qualsiasi evento in cui lo spazio dei nomi con la priorità più elevata è una stringa vuota.
+Nel contesto della priorità dello spazio dei nomi, Profile rifiuterà qualsiasi evento che contiene due o più identità con la priorità dello spazio dei nomi più elevata. Ad esempio, se GAID non è contrassegnato come spazio dei nomi univoco e sono presenti due identità con uno spazio dei nomi GAID e valori di identità diversi, l’evento non verrà memorizzato in Profilo.
 
 **Risoluzione dei problemi**
 
@@ -175,16 +171,7 @@ Se i dati vengono inviati al data lake, ma non al profilo, e ritieni che ciò si
   FROM dataset_name)) WHERE col.id != _testimsorg.identification.core.email and key = 'Email' 
 ```
 
-Puoi anche eseguire la seguente query per verificare se l’acquisizione nel profilo non avviene a causa di uno spazio dei nomi più alto con una stringa vuota:
-
-```sql
-  SELECT identityMap, key, col.id as identityValue, _testimsorg.identification.core.email, _id, timestamp 
-  FROM (SELECT key, explode(value), * 
-  FROM (SELECT explode(identityMap), * 
-  FROM dataset_name)) WHERE (col.id = '' or _testimsorg.identification.core.email = '') and key = 'Email' 
-```
-
-Queste due query presuppongono che:
+Questa query presuppone che:
 
 * Un’identità viene inviata da identityMap e un’altra identità da un descrittore di identità. **NOTA**: negli schemi Experience Data Model (XDM), il descrittore di identità è il campo contrassegnato come identità.
 * Il CRMID viene inviato tramite identityMap. Se il CRMID viene inviato come campo, rimuovere `key='Email'` dalla clausola WHERE.
@@ -210,7 +197,7 @@ L&#39;algoritmo di ottimizzazione delle identità rispetterà [i collegamenti st
 Innanzitutto, devi raccogliere le seguenti informazioni:
 
 1. Il simbolo di identità (namespaceCode) dello spazio dei nomi del cookie (ad esempio ECID) e dello spazio dei nomi della persona (ad esempio CRMID) che sono stati inviati.
-1.1. Per le implementazioni dell’SDK per web, in genere si tratta degli spazi dei nomi inclusi in identityMap.
+1.1. Per le implementazioni di Web SDK, in genere si tratta degli spazi dei nomi inclusi in identityMap.
 1.2. Per le implementazioni del connettore di origine di Analytics, si tratta dell’identificatore del cookie incluso in identityMap. L’identificatore della persona è un campo eVar contrassegnato come identità.
 2. Set di dati in cui è stato inviato l’evento (dataset_name).
 3. Il valore di identità dello spazio dei nomi del cookie da cercare (identity_value).
@@ -225,7 +212,7 @@ Se non conosci il valore di identità dell’identificatore del cookie e desider
 
 >[!BEGINTABS]
 
->[!TAB Implementazione Web SDK]
+>[!TAB Implementazione di Web SDK]
 
 ```sql
   SELECT identityMap['ECID'][0]['id'], count(distinct identityMap['CRMID'][0]['id']) as crmidCount FROM dataset_name GROUP BY identityMap['ECID'][0]['id'] ORDER BY crmidCount desc 
@@ -245,7 +232,7 @@ Ora che hai identificato i valori dei cookie collegati a più ID persona, estran
 
 >[!BEGINTABS]
 
->[!TAB Implementazione Web SDK]
+>[!TAB Implementazione di Web SDK]
 
 ```sql
   SELECT identityMap['CRMID'][0]['id'] as personEntity, * 
