@@ -3,9 +3,9 @@ title: Note sulla versione di Adobe Experience Platform Web SDK
 description: Note sulla versione più recente di Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;note sulla versione;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 3a50468a7596b9ba870920a8188ae50b40aaef69
+source-git-commit: 08b07aa874b9ca9b5ea76850d6c0320bddddc85e
 workflow-type: tm+mt
-source-wordcount: '2085'
+source-wordcount: '2149'
 ht-degree: 5%
 
 ---
@@ -13,8 +13,20 @@ ht-degree: 5%
 
 # Note sulla versione
 
-Questo documento descrive le note sulla versione di Adobe Experience Platform Web SDK.
+Questo documento illustra le note sulla versione di Adobe Experience Platform Web SDK.
 Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [note sulla versione dell&#39;estensione tag Web SDK](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Versione 2.25.0 - mercoledì 23 gennaio 2024 {#2-25-0}
+
+**Correzione e miglioramenti**
+
+- Aggiunta della convalida dell&#39;opzione al comando `setDebug`.
+- È stato aggiunto un avviso durante la configurazione di una funzione `onBeforeLinkClickSend` o di un qualificatore per il collegamento di download quando la raccolta di clic è disabilitata.
+- È stato risolto un problema a causa del quale le proposte sottoposte a rendering non venivano incluse nelle notifiche di visualizzazione
+
+**Nuove funzionalità**
+
+- È stato implementato un fallback al dominio Edge configurato quando i cookie di terze parti sono abilitati e le richieste a adobedc.demdex.net sono bloccate.
 
 ## Versione 2.24.1 - sabato 6 dicembre 2024
 
@@ -133,7 +145,7 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 
 **Correzioni e miglioramenti**
 
-- L&#39;SDK Web ora codifica i valori di destinazione dei cookie di Audience Manager, in modo simile alla [Data Integration Library (DIL)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=it).
+- Il SDK Web ora codifica i valori di destinazione dei cookie di Audience Manager, in modo simile alla [Data Integration Library (DIL)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=it).
 
 ## Versione 2.16.0 - 25 aprile 2023
 

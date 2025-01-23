@@ -2,16 +2,29 @@
 title: Note sulla versione dell’estensione Adobe Experience Platform Web SDK
 description: Estensione tag Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: c38456ab44f3e143a0120f1a756105213a46fab5
+source-git-commit: 08b07aa874b9ca9b5ea76850d6c0320bddddc85e
 workflow-type: tm+mt
-source-wordcount: '2332'
-ht-degree: 33%
+source-wordcount: '2413'
+ht-degree: 31%
 
 ---
 
 # Note sulla versione dell’estensione Adobe Experience Platform Web SDK
 
-Questo documento descrive le note sulla versione dell’estensione tag Adobe Experience Platform Web SDK. Per le ultime note sulla versione dell&#39;SDK, consulta le [note sulla versione di Platform Web SDK](/help/web-sdk/release-notes.md).
+Questo documento descrive le note sulla versione dell’estensione tag Adobe Experience Platform Web SDK. Per le ultime note sulla versione di SDK, consulta le [note sulla versione di Platform Web SDK](/help/web-sdk/release-notes.md).
+
+## Versione 2.28.0 - mercoledì 23 gennaio 2024
+
+**Correzioni e miglioramenti**
+
+- È stato risolto un problema che impediva l’impostazione delle sostituzioni del contenitore di sincronizzazione ID senza abilitare l’Audience Manager.
+- È stato risolto un problema a causa del quale le sostituzioni della configurazione dello stream di dati venivano disabilitate durante l’aggiornamento alla versione più recente.
+- È stato risolto un problema che impediva agli utenti di salvare le impostazioni di raccolta dei clic automatici di Target.
+
+**Nuove funzionalità**
+
+- È stata aggiunta una nuova funzione per passare da nomi tecnici a nomi visualizzati nell’oggetto XDM.
+- Contiene [versione 2.25.0](../../../../web-sdk/release-notes.md#2-25-0) di Adobe Experience Platform Web SDK.
 
 ## Versione 2.27.0 - venerdì 31 ottobre 2024
 
@@ -26,7 +39,7 @@ Contiene la versione 2.24.0 di Adobe Experience Platform Web SDK.
 
 **Correzioni e miglioramenti**
 
-- È stato risolto un problema a causa del quale i cookie non venivano scritti correttamente durante l’esecuzione locale dell’SDK web.
+- È stato risolto un problema che impediva la corretta scrittura dei cookie durante l’esecuzione locale di Web SDK.
 
 Contiene la versione 2.23.0 di Adobe Experience Platform Web SDK.
 
@@ -188,7 +201,7 @@ Contiene la versione 2.14.0 di Adobe Experience Platform Web SDK.
 
 ## Versione 2.14.1 - venerdì 13 ottobre 2022
 
-- È stato risolto un problema a causa del quale l’SDK per web non rispettava l’ID del servizio ID Experience Cloud.
+- È stato risolto un problema che impediva al Web SDK di rispettare l&#39;ID del servizio ID di Experience Cloud.
 
 Contiene la versione 2.13.1 della libreria Adobe Experience Platform Web SDK.
 
@@ -341,7 +354,7 @@ Contiene la versione 2.3.0 della libreria dell’SDK per web di Adobe Experience
    - È stato rimosso il comando `getDecisions`.
    - È stata aggiunta un’opzione `scopes` al comando `sendEvent`. Le decisioni vengono restituite nella promessa risolta `sendEvent`.
    - È stato aggiunto un ambito integrato `__view__` che darà luogo alla restituzione di offerte di visualizzazione ampia della pagina (ad esempio le offerte VEC in Target).
-Queste decisioni sono restituite dal comando `sendEvent` solo se `renderDecisions` è impostato su false.
+Tali decisioni vengono restituite dal comando `sendEvent` solo se `renderDecisions` è impostato su false.
    - È stato aggiunto un evento `Decisions Received` che viene attivato quando le decisioni diventano disponibili.
 - Sono state unite più notifiche di personalizzazione in una singola chiamata server.
 - È stato risolto un problema in ID unione eventi a causa del quale veniva reimpostato ogni volta che si faceva riferimento all’elemento dati.
