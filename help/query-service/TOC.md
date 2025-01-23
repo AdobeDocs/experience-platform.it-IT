@@ -5,9 +5,9 @@ breadcrumb-title: Guida di Query Service
 user-guide-description: Utilizza il linguaggio SQL standard per eseguire query sui dati nel data lake in Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: c3065710e5f50541b074fc493df07130221d8078
+source-git-commit: 20869e76976ff3868f1d4dbc7c6d97b58682e5c3
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '397'
 ht-degree: 21%
 
 ---
@@ -50,6 +50,7 @@ Implementa modelli {#implement-models}
       - [Classificazione](advanced-statistics/implement-models/classification.md)
       - [Clustering](advanced-statistics/implement-models/clustering.md)
 Esempi {#examples}
+      - [Filtraggio dei bot tramite statistiche e apprendimento automatico](advanced-statistics/examples/statistics-and-ml-bot-filtering.md)
       - [Prevedere l&#39;abbandono dei clienti utilizzando la regressione logistica basata su SQL](advanced-statistics/examples/predict-customer-churn.md)
 - Pubblico di Data Distiller {#data-distiller-audiences}
    - [Creare tipi di pubblico esterni tramite SQL](data-distiller-audiences/overview.md)
@@ -58,6 +59,7 @@ Esempi {#examples}
    - [Sfoglia abbandonata](use-cases/abandoned-browse.md)
    - [Analisi dell’attribuzione](use-cases/attribution-analysis.md)
    - [Filtro bot](use-cases/bot-filtering.md)
+   - [Filtraggio dei bot tramite statistiche e introduzione all’apprendimento automatico](use-cases/statistics-and-ml-bot-filtering-stub.md)
    - [Creare un rapporto con tendenze degli eventi](use-cases/trended-report-of-events.md)
    - [Analisi del consenso](use-cases/consent-analysis.md)
    - [Valore del ciclo di vita del cliente](use-cases/customer-lifetime-value.md)
