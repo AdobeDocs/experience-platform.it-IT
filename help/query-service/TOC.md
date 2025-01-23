@@ -5,10 +5,10 @@ breadcrumb-title: Guida di Query Service
 user-guide-description: Utilizza il linguaggio SQL standard per eseguire query sui dati nel data lake in Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: 83d15e8d6488a400a87f111ec97f06401431b339
+source-git-commit: c3065710e5f50541b074fc493df07130221d8078
 workflow-type: tm+mt
-source-wordcount: '369'
-ht-degree: 22%
+source-wordcount: '382'
+ht-degree: 21%
 
 ---
 
@@ -43,12 +43,14 @@ ht-degree: 22%
    - [Panoramica](advanced-statistics/overview.md)
    - [Ingegneria delle funzioni](advanced-statistics/feature-engineering.md)
    - [Modelli](advanced-statistics/models.md)
+   - [Trasformazione funzionalità](advanced-statistics/feature-transformation.md)
 Implementa modelli {#implement-models}
       - [Implementare modelli](advanced-statistics/implement-models/implement-models.md)
       - [Regressione](advanced-statistics/implement-models/regression.md)
       - [Classificazione](advanced-statistics/implement-models/classification.md)
       - [Clustering](advanced-statistics/implement-models/clustering.md)
-   - [Trasformazione delle feature](advanced-statistics/feature-transformation.md)
+Esempi {#examples}
+      - [Prevedere l&#39;abbandono dei clienti utilizzando la regressione logistica basata su SQL](advanced-statistics/examples/predict-customer-churn.md)
 - Pubblico di Data Distiller {#data-distiller-audiences}
    - [Creare tipi di pubblico esterni tramite SQL](data-distiller-audiences/overview.md)
 - Esempi {#use-cases}
@@ -64,6 +66,7 @@ Implementa modelli {#implement-models}
    - [Corrispondenza parziale](use-cases/fuzzy-match.md)
    - [Elencare le visualizzazioni di pagina di un utente](use-cases/list-visitor-sessions.md)
    - [Elencare i visitatori in base alle loro visualizzazioni di pagina](use-cases/visitors-by-number-of-page-views.md)
+   - [Prevedere l&#39;abbandono dei clienti con SQL](use-cases/predict-customer-churn-stub.md)
    - [Punteggio di propensione](use-cases/propensity-score.md)
    - [Recuperare record simili con funzioni di ordine superiore](use-cases/retrieve-similar-records.md)
    - [Restituire e utilizzare le variabili di merchandising dai dati di Analytics](use-cases/merchandising-variables.md)
