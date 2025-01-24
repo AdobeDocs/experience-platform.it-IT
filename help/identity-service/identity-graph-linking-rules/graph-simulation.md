@@ -2,10 +2,10 @@
 title: Guida dell’interfaccia utente di Graph Simulation
 description: Scopri come utilizzare la simulazione del grafico nell’interfaccia utente del servizio Identity.
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
+source-git-commit: af36856dbf37e69cbc5c6952c583f583fd5b8e96
 workflow-type: tm+mt
-source-wordcount: '1440'
-ht-degree: 1%
+source-wordcount: '1489'
+ht-degree: 4%
 
 ---
 
@@ -50,6 +50,12 @@ Visualizzatore grafico simulato: il visualizzatore grafico simulato visualizza i
 >[!ENDTABS]
 
 ## Aggiungi eventi {#add-events}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_graphsimulation"
+>title="Aggiungi eventi"
+>abstract="Con la simulazione dei grafici potrai scoprire come Identity Service collega le identità e come funziona il relativo algoritmo di ottimizzazione."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=it#understanding-data-usage-labels" text="Panoramica delle etichette di utilizzo dei dati"
 
 Per iniziare, selezionare **[!UICONTROL Aggiungi eventi]**.
 
@@ -126,6 +132,16 @@ Per eliminare un evento, selezionare i puntini di sospensione (`...`) accanto a 
 ![Icona Elimina evento selezionata.](../images/graph-simulation/delete.png)
 
 ## Configurare l’algoritmo {#configure-algorithm}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_algorithmconfiguration"
+>title="Configurazione algoritmo"
+>abstract="Configura uno spazio dei nomi univoco e definiscine la priorità in base alle identità acquisite."
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_namespacepriority"
+>title="Configurazione algoritmo"
+>abstract="La priorità dello spazio dei nomi determina il modo in cui i collegamenti vengono rimossi dal grafo identità."
 
 >[!IMPORTANT]
 >

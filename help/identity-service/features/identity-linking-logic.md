@@ -2,10 +2,10 @@
 title: Logica di collegamento del servizio Identity
 description: Scopri in che modo il servizio Identity collega identità diverse per creare una visualizzazione completa di un cliente.
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f067f8d4628d76b4a87b9dd97d1d703c54688871
 workflow-type: tm+mt
-source-wordcount: '955'
-ht-degree: 0%
+source-wordcount: '968'
+ht-degree: 2%
 
 ---
 
@@ -29,7 +29,12 @@ Un’identità rappresenta un’entità del mondo reale. Se esiste un collegamen
 | Un utente finale accede utilizzando Google Chrome e quindi Firefox. | Il CRMID è collegato a due diversi ECID. | Una persona (CRMID) è associata a 2 browser Web (**Nota**: ogni browser avrà il proprio ECID). |
 | Un ingegnere dati acquisisce un record CRM che include due campi contrassegnati come identità: CRMID e E-mail. | CRMID ed E-mail sono collegati. | All’indirizzo e-mail è associata una persona (CRMID). |
 
-## Informazioni sulla logica di collegamento del servizio Identity
+## Informazioni sulla logica di collegamento del servizio Identity {#identity-linking-logic}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_simulatedgraph"
+>title="Grafico simulato"
+>abstract="Le identità sono collegate quando lo spazio dei nomi dell’identità e il valore della stessa corrispondono."
 
 Un’identità è costituita da uno spazio dei nomi dell’identità e da un valore di identità.
 
@@ -100,7 +105,7 @@ L&#39;identità primaria di ogni evento verrà determinata in base a [modalità 
 
 >[!NOTE]
 >
->* Se selezioni il CRMID come principale, gli eventi autenticati (eventi con mappa di identità contenente il CRMID e l’ECID) avranno un’identità primaria di CRMID. Per gli eventi non autenticati (gli eventi con la mappa di identità contenente solo ECID) avranno un’identità primaria di ECID. L’Adobe consiglia questa opzione.
+>* Se selezioni il CRMID come principale, gli eventi autenticati (eventi con mappa di identità contenente il CRMID e l’ECID) avranno un’identità primaria di CRMID. Per gli eventi non autenticati (gli eventi con la mappa di identità contenente solo ECID) avranno un’identità primaria di ECID. Adobe consiglia questa opzione.
 >
 >* Se selezioni l’ECID come principale, indipendentemente dallo stato di autenticazione, l’ECID diventa l’identità principale.
 

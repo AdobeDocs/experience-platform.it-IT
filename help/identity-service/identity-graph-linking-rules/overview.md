@@ -2,10 +2,10 @@
 title: Regole di collegamento del grafico delle identità
 description: Scopri le regole di collegamento del grafico delle identità in Identity Service.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 5092421ed8d0ff61fb3ed7f0849d2271f1fa144c
+source-git-commit: af36856dbf37e69cbc5c6952c583f583fd5b8e96
 workflow-type: tm+mt
-source-wordcount: '1424'
-ht-degree: 2%
+source-wordcount: '1440'
+ht-degree: 3%
 
 ---
 
@@ -34,6 +34,11 @@ I seguenti documenti sono essenziali per comprendere le regole di collegamento d
 Questa sezione descrive scenari di esempio da considerare durante la configurazione delle regole di collegamento del grafico delle identità.
 
 ### Dispositivo condiviso
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_graphcollapsescenarios"
+>title="Scenari di compressione dei grafici"
+>abstract="Esistono vari motivi per cui un grafico può essere compresso o rappresentare più entità persona."
 
 Esistono casi in cui si possono verificare più accessi su un singolo dispositivo:
 
@@ -117,7 +122,7 @@ Devi configurare uno spazio dei nomi univoco per informare l’algoritmo di otti
 
 La priorità dello spazio dei nomi si riferisce all’importanza relativa degli spazi dei nomi rispetto agli altri. La priorità dello spazio dei nomi è configurabile tramite l’interfaccia utente e puoi classificare gli spazi dei nomi in un dato grafico delle identità.
 
-Uno dei modi in cui viene utilizzata la priorità dello spazio dei nomi è determinare l’identità primaria dei frammenti di eventi esperienza (comportamento dell’utente) nel profilo cliente in tempo reale. Se sono configurate le impostazioni di priorità, l’impostazione di identità primaria su Web SDK non verrà più utilizzata per determinare quali frammenti di profilo sono memorizzati.
+Uno dei modi in cui viene utilizzata la priorità dello spazio dei nomi è determinare l’identità primaria dei frammenti di eventi esperienza (comportamento dell’utente) nel profilo cliente in tempo reale. Se sono configurate le impostazioni di priorità, l’impostazione di identità primaria sul Web SDK non verrà più utilizzata per determinare quali frammenti di profilo sono archiviati.
 
 Nell’area di lavoro dell’interfaccia utente delle impostazioni delle identità è possibile configurare spazi dei nomi e priorità dello spazio dei nomi univoci. Tuttavia, gli effetti delle loro configurazioni sono diversi:
 
