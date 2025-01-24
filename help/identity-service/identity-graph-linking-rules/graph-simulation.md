@@ -2,9 +2,9 @@
 title: Guida dell’interfaccia utente di Graph Simulation
 description: Scopri come utilizzare la simulazione del grafico nell’interfaccia utente del servizio Identity.
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: af36856dbf37e69cbc5c6952c583f583fd5b8e96
+source-git-commit: a9fcc93f4bc82880a52cc43179484a30e485369c
 workflow-type: tm+mt
-source-wordcount: '1489'
+source-wordcount: '1484'
 ht-degree: 4%
 
 ---
@@ -55,7 +55,6 @@ Visualizzatore grafico simulato: il visualizzatore grafico simulato visualizza i
 >id="platform_identities_graphsimulation"
 >title="Aggiungi eventi"
 >abstract="Con la simulazione dei grafici potrai scoprire come Identity Service collega le identità e come funziona il relativo algoritmo di ottimizzazione."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=it#understanding-data-usage-labels" text="Panoramica delle etichette di utilizzo dei dati"
 
 Per iniziare, selezionare **[!UICONTROL Aggiungi eventi]**.
 
