@@ -2,14 +2,19 @@
 title: Gestione delle autorizzazioni per la raccolta dati in Experience Platform
 description: Panoramica di alto livello su come gestire le autorizzazioni e controllare l’accesso alle funzioni di raccolta dati in Adobe Experience Platform.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 60590a77859320891717244eec58b556935354b5
+source-git-commit: 2d71eafb00098d958c8cff9350caa27bd3f0260d
 workflow-type: tm+mt
-source-wordcount: '1338'
+source-wordcount: '1356'
 ht-degree: 26%
 
 ---
 
-# Gestione delle autorizzazioni per la raccolta dati in Experience Platform
+# Gestione delle autorizzazioni per la raccolta dati in Experience Platform {#permission-management}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_permissions"
+>title="Autorizzazioni"
+>abstract="Scopri le autorizzazioni chiave necessarie per lavorare con flussi di dati, schemi, identità e sandbox in Adobe Experience Platform."
 
 [La raccolta dati in Adobe Experience Platform](./home.md) è composta da diverse tecnologie che collaborano per raccogliere e trasferire i dati. L’accesso a queste tecnologie è controllato tramite autorizzazioni granulari basate sui ruoli in Adobe Admin Console.
 

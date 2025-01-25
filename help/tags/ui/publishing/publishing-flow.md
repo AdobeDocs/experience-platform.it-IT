@@ -2,18 +2,23 @@
 title: Flusso di pubblicazione
 description: Scopri come creare librerie, testare le build e approvarle per la produzione in Adobe Experience Platform.
 exl-id: 4885f60b-6401-4ec7-aa1a-29c135087847
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 2d71eafb00098d958c8cff9350caa27bd3f0260d
 workflow-type: tm+mt
-source-wordcount: '1490'
+source-wordcount: '1509'
 ht-degree: 96%
 
 ---
 
-# Flusso di pubblicazione
+# Flusso di pubblicazione {#publishing-flow}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_publishing_flow"
+>title="Flusso di pubblicazione"
+>abstract="Comprendi i livelli di autorizzazioni utente necessari per il flusso di pubblicazione, tra cui le autorizzazioni di sviluppo, approvazione e Publish."
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Il flusso di pubblicazione dei tag in Adobe Experience Platform si riferisce al processo di creazione delle librerie, test delle build e approvazione per la produzione.
 
