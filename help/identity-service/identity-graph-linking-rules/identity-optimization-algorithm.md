@@ -2,7 +2,7 @@
 title: Algoritmo di ottimizzazione identità
 description: Scopri l’algoritmo di ottimizzazione delle identità in Identity Service.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: f067f8d4628d76b4a87b9dd97d1d703c54688871
+source-git-commit: c1aaad7d7169e63c49d62ab8a7a06c4c11c85cb4
 workflow-type: tm+mt
 source-wordcount: '1560'
 ht-degree: 1%
@@ -25,7 +25,7 @@ Leggi questa sezione per informazioni sugli spazi dei nomi univoci e sulla prior
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_uniquenamespace"
->title="Configurazione algoritmo"
+>title="Spazio dei nomi univoco"
 >abstract="Un grafico non può avere due identità con uno spazio dei nomi univoco. Se un grafico tenta di superare questo limite, vengono mantenuti i collegamenti più recenti e rimossi quelli più vecchi."
 
 Uno spazio dei nomi univoco determina i collegamenti che vengono rimossi in caso di compressione del grafico.
