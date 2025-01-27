@@ -2,20 +2,15 @@
 title: Endpoint API contenuto
 description: Scopri come recuperare i dati di accesso utilizzando l’API Privacy Service.
 role: Developer
-badgePrivateBeta: label="Private Beta" type="Informative"
 exl-id: b3b7ea0f-957d-4e51-bf92-121e9ae795f5
-source-git-commit: e3a453ad166fe244b82bd1f90e669579fcf09d17
+source-git-commit: ac54398ae8e9e06ea3581baf867ab1cf650042a2
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '669'
 ht-degree: 1%
 
 ---
 
 # Endpoint di contenuto
-
->[!IMPORTANT]
->
->L&#39;endpoint `/content` è attualmente in versione beta e la tua organizzazione potrebbe non averne ancora accesso. La funzionalità e la documentazione sono soggette a modifiche.
 
 Utilizza l&#39;endpoint `/content` per recuperare in modo sicuro *le informazioni di accesso* (le informazioni a cui un soggetto che si occupa di privacy può legittimamente richiedere di accedere) per i tuoi clienti. L&#39;URL di download fornito nella risposta a una richiesta di `/jobs/{JOB_ID}` GET punta a un endpoint del servizio Adobe. È quindi possibile effettuare una richiesta GET a `/jobs/:JOB_ID/content` per restituire i dati dei clienti in formato JSON. Questo metodo di accesso implementa più livelli di autenticazione e controllo degli accessi per migliorare la sicurezza.
 
