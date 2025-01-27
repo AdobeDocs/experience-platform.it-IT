@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Panoramica dell’interfaccia utente di Experience Platform
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: 9844a7bf5e7198e7d5112ec924220aba71cdc14b
+source-git-commit: 6210f78e79c6c528296378756c9d11e35d092736
 workflow-type: tm+mt
-source-wordcount: '1947'
-ht-degree: 2%
+source-wordcount: '1924'
+ht-degree: 1%
 
 ---
 
@@ -79,7 +79,7 @@ L&#39;elemento successivo sul lato destro della navigazione superiore è il **co
 
 ### Aiuto
 
-A destra del commutatore dell&#39;applicazione si trova il menu **Guida e supporto tecnico**, rappresentato dall&#39;icona ![punto interrogativo/Guida](/help/images/icons/help.png). Quando selezioni questa icona, viene visualizzato un menu a comparsa contenente diverse risorse di aiuto e supporto. Nella scheda **[!UICONTROL Guida]** è disponibile un elenco della documentazione relativa alla pagina in cui si è connessi. La scheda **[!UICONTROL Supporto]** consente di creare un ticket di supporto con il team di supporto Adobe. La scheda **[!UICONTROL Feedback]** consente di inviare ad Adobe commenti e suggerimenti su Platform.
+A destra del commutatore dell&#39;applicazione si trova il menu **Guida e supporto tecnico**, rappresentato dall&#39;icona ![punto interrogativo/Guida](/help/images/icons/help.png). Quando selezioni questa icona, viene visualizzato un menu a comparsa contenente diverse risorse di aiuto e supporto. Nella scheda **[!UICONTROL Guida]** è disponibile un elenco della documentazione relativa alla pagina in cui si è connessi. La scheda **[!UICONTROL Supporto]** consente di creare un ticket di supporto con il team di supporto Adobe. La scheda **[!UICONTROL Feedback]** consente di inviare ad Adobe i commenti e suggerimenti su Platform.
 
 ![](images/user-guide/homepage-help-clicked.png)
 
@@ -145,7 +145,7 @@ La sezione **[!UICONTROL Notebooks]** fornisce l&#39;accesso a JupyterLab, un am
 
 La sezione **[!UICONTROL Modelli]** consente di utilizzare l&#39;apprendimento automatico e l&#39;intelligenza artificiale per creare, sviluppare, addestrare e ottimizzare modelli per effettuare previsioni. Ulteriori informazioni sulla sezione Modelli sono disponibili nell&#39;esercitazione su [formazione e valutazione di un modello](../data-science-workspace/models-recipes/train-evaluate-model-ui.md).
 
-La sezione **[!UICONTROL Servizi]** ti consente di gestire i modelli pubblicati per l&#39;apprendimento pianificato e il punteggio, oppure di utilizzare Adobe Intelligent Services, un set di servizi di intelligenza artificiale che offre esperienze cliente personalizzate in tempo reale. Per ulteriori informazioni sulla sezione Servizi, vedere l&#39;esercitazione [Pubblicazione di un modello come servizio](../data-science-workspace/models-recipes/publish-model-service-ui.md).
+La sezione **[!UICONTROL Servizi]** ti consente di gestire i modelli pubblicati per l&#39;apprendimento e il punteggio pianificati oppure di utilizzare Adobe Intelligent Services, un insieme di servizi di intelligenza artificiale che offre esperienze cliente personalizzate in tempo reale. Per ulteriori informazioni sulla sezione Servizi, vedere l&#39;esercitazione [Pubblicazione di un modello come servizio](../data-science-workspace/models-recipes/publish-model-service-ui.md).
 
 ### [!UICONTROL Gestione dati]
 
@@ -157,7 +157,7 @@ La sezione **[!UICONTROL Query]** consente di creare e gestire query, registrare
 
 La sezione **[!UICONTROL Monitoraggio]** ti consente di monitorare l&#39;acquisizione in batch e in streaming. Ulteriori informazioni sul monitoraggio sono disponibili nella [guida utente per l&#39;acquisizione dei dati di monitoraggio](../ingestion/quality/monitor-data-ingestion.md).
 
-### [!UICONTROL Dati federati] (disponibilità limitata)
+### [!UICONTROL Dati federati]
 
 La sezione **[!UICONTROL Modelli]** consente di progettare e creare modelli di dati e schemi che definiscono la struttura, le relazioni e i vincoli dei dati. Puoi trovare ulteriori informazioni sui modelli di dati e gli schemi nella [guida utente Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/datamodel/schemas).
 
@@ -166,11 +166,7 @@ La sezione **[!UICONTROL Audit trail]** fornisce un record dettagliato e cronolo
 
 La sezione **[!UICONTROL Federated databases]** consente di connettere Adobe Experience Platform al data warehouse aziendale. Ulteriori informazioni sulla connessione ai database federati sono disponibili nella [guida utente Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/federated-db).
 
->[!AVAILABILITY]
->
->La composizione di pubblico federato è attualmente disponibile solo per un set di organizzazioni (disponibilità limitata). Per ulteriori informazioni, contatta il tuo rappresentante Adobe.
-
-### [!UICONTROL Decisioning]
+### [!UICONTROL Funzione decisioni]
 
 Adobe Journey Optimizer è un servizio applicativo basato su Experience Platform. Consente di utilizzare tecnologie decisionali potenti per offrire ai clienti l’offerta e l’esperienza migliore al momento giusto, in tutti i punti di contatto. Per ulteriori informazioni su Journey Optimizer, incluso l&#39;utilizzo di [!UICONTROL Offerte] e [!UICONTROL Attività], visita la [documentazione di Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=it).
 

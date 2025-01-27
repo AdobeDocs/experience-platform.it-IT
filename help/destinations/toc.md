@@ -5,9 +5,9 @@ user-guide-description: Attiva i dati, noti e non, per campagne di marketing cro
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: c5543997747daa336b0a5bb40c46aa720e8bcadd
+source-git-commit: 6210f78e79c6c528296378756c9d11e35d092736
 workflow-type: tm+mt
-source-wordcount: '1273'
+source-wordcount: '1271'
 ht-degree: 5%
 
 ---
@@ -49,7 +49,7 @@ ht-degree: 5%
       * [Esportare file on-demand in destinazioni batch utilizzando l’interfaccia utente di Experience Platform](./ui/export-file-now.md)
       * [Esportare i set di dati utilizzando l’interfaccia utente di Experience Platform](./ui/export-datasets.md)
       * [(Beta) Utilizza l’ultimo attributo XDM del tempo di qualifica nelle nuove destinazioni di archiviazione cloud beta](./ui/activate-last-qualification-time.md)
-      * [Utilizzare i campi calcolati per esportare matrici come stringhe](/help/destinations/ui/export-arrays-calculated-fields.md)
+      * [Utilizzare i campi calcolati per esportare array come stringhe](/help/destinations/ui/export-arrays-calculated-fields.md)
    * [Visualizzare i dettagli della destinazione](./ui/destination-details-page.md)
    * [Aggiorna account di destinazione](./ui/update-accounts.md)
    * [Elimina account di destinazione](./ui/delete-destination-account.md)
@@ -67,7 +67,7 @@ ht-degree: 5%
       * [(Beta) Connessione di sincronizzazione persona Marketo Engage](./catalog/adobe/marketo-engage-person-sync.md)
       * [Connessione Marketo Measure Ultimate](./catalog/adobe/marketo-measure-ultimate.md)
       * [Condivisione Experience Platform del pubblico](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
-      * [Connessione Federated Audience Composition (disponibilità limitata)](https://www.adobe.com/go/destinations-federated-audience-composition)
+      * [Connessione Federated Audience Composition](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Destinazioni Advertising{#advertising}
       * [(Beta) Distribuzione del pubblico di Acxiom](./catalog/advertising/acxiom-audience-distribution.md)
       * [Panoramica sulle destinazioni di Advertising](./catalog/advertising/overview.md)

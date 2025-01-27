@@ -1,24 +1,24 @@
 ---
 keywords: destinazioni;soluzioni experience cloud; target;destinazione target; ad cloud; advertising cloud; audience manager; destinazione adobe target; target; destinazione audience manager;
-title: Panoramica sulle destinazioni degli Adobi
+title: Panoramica sulle destinazioni di Adobe
 description: Gestisci la customer experience collegando i tuoi dati in Platform ad altre soluzioni Adobe Experience Cloud per il targeting di annunci, la personalizzazione, l’automazione del marketing e altro ancora
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
-source-git-commit: 515a7cc3ba12afe14aab3e882b7fd55d5cc09069
+source-git-commit: 6210f78e79c6c528296378756c9d11e35d092736
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: '229'
 ht-degree: 9%
 
 ---
 
-# Panoramica sulle destinazioni degli Adobi {#adobe-destinations}
+# Panoramica sulle destinazioni di Adobe {#adobe-destinations}
 
 ## Panoramica {#overview}
 
 Gestisci la customer experience collegando i tuoi dati in Adobe Experience Platform ad altre soluzioni Adobe Experience Cloud per il targeting di annunci, la personalizzazione, l’automazione del marketing e altro ancora.
 
-## Destinazioni di Adobe supportate {#supported-destinations}
+## Destinazioni Adobe supportate {#supported-destinations}
 
-Attualmente, Platform supporta le destinazioni di Adobe elencate di seguito.
+Attualmente, Platform supporta le destinazioni Adobe elencate di seguito.
 
 Per comprendere la differenza tra connessioni ed estensioni, vedere [Connessioni](../../destination-types.md#connections) nella pagina Tipi e categorie di destinazione.
 
@@ -30,7 +30,7 @@ Per comprendere la differenza tra connessioni ed estensioni, vedere [Connessioni
 * [(Beta) Experience Cloud di tipi di pubblico](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
 * [Connessione Marketo Engage](/help/destinations/catalog/adobe/marketo-engage.md)
 * [Connessione Marketo Measure Ultimate](/help/destinations/catalog/adobe/marketo-measure-ultimate.md)
-* [Connessione Federated Audience Composition](https://www.adobe.com/go/destinations-federated-audience-composition){target="_blank"} (disponibilità limitata)
+* [Connessione Federated Audience Composition](https://www.adobe.com/go/destinations-federated-audience-composition){target="_blank"}
 
 ### Estensioni
 
@@ -47,6 +47,6 @@ Per comprendere la differenza tra connessioni ed estensioni, vedere [Connessioni
 
 ## Experience Platform di condivisione del pubblico
 
-Utilizza la funzionalità di condivisione del pubblico Experience Platform per condividere i tipi di pubblico Experience Platform in altre destinazioni di Adobe. Per ulteriori informazioni, consulta la pagina seguente (si apre nel portale della documentazione di Audience Manager):
+Utilizza la funzionalità di condivisione del pubblico Experience Platform per condividere i tipi di pubblico Experience Platform in altre destinazioni Adobe. Per ulteriori informazioni, consulta la pagina seguente (si apre nel portale della documentazione di Audience Manager):
 
 * [Experience Platform di condivisione del pubblico con Adobe Audience Manager, Adobe Advertising Cloud e Adobe Target tramite l&#39;integrazione dei servizi core](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
