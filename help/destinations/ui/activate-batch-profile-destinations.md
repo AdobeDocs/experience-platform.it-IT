@@ -3,9 +3,9 @@ title: Attivare i tipi di pubblico per le destinazioni di esportazione dei profi
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico disponibili in Adobe Experience Platform inviandoli a destinazioni basate su profili in batch.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: de9c838c8a9d07165b4cc8a602df0c627a8b749c
+source-git-commit: b4b185cab4defbf9559089e5152075674dab52d1
 workflow-type: tm+mt
-source-wordcount: '4395'
+source-wordcount: '4387'
 ht-degree: 11%
 
 ---
@@ -439,25 +439,32 @@ Durante l’esportazione di profili in destinazioni basate su file, la deduplica
 
 * **Selezione deterministica**: quando più profili hanno chiavi di deduplicazione identiche e lo stesso timestamp di riferimento, la logica di deduplicazione determina il profilo da esportare ordinando i valori delle altre colonne selezionate (esclusi i tipi complessi come array, mappe o oggetti). I valori ordinati vengono valutati in ordine lessicografico e viene selezionato il primo profilo.
 
-* **Esempio di scenario**:\
-  Considera i seguenti dati, in cui la chiave di deduplicazione è la colonna `Email`:\
-  |Email*|first_name|last_name|timestamp|\
-  |—|—|—|—|—|\
-  |test1@test.com|John|Morris|2024-10-12T09:50|\
-  |test1@test.com|John|Doe|10-12T09:50|\
-  |test2@test.com|Frank|Smith|10-12T09:50|
+* **Scenario di esempio**
 
-  Dopo la deduplicazione, il file di esportazione conterrà:\
-  |Email*|first_name|last_name|timestamp|\
-  |—|—|—|—|—|\
-  |test1@test.com|John|Doe|10-12T09:50|\
-  |test2@test.com|Frank|Smith|10-12T09:50|
+Considera i seguenti dati, in cui la chiave di deduplicazione è la colonna `Email`:
 
-  **Spiegazione**: per `test1@test.com`, entrambi i profili condividono la stessa chiave di deduplicazione e la stessa marca temporale. L&#39;algoritmo ordina i valori delle colonne `first_name` e `last_name` in modo lessicografico. Poiché i nomi sono identici, il pareggio viene risolto utilizzando la colonna `last_name`, dove &quot;Doe&quot; precede &quot;Morris&quot;.
+| E-mail* | nome | cognome | timestamp |
+|---|---|---|---|  
+| `test1@test.com` | John | Morris | 2024-10-12T09:50 |
+| `test1@test.com` | John | Doe | 2024-10-12T09:50 |
+| `test2@test.com` | Frank | Smith | 2024-10-12T09:50 |
 
-* **Affidabilità migliorata**: questo processo di deduplicazione aggiornato garantisce che le esecuzioni successive con le stesse coordinate producano sempre gli stessi risultati, migliorando la coerenza.
+{style="table-layout:auto"}
 
-### [!BADGE Beta]{type=Informative} Esporta array tramite campi calcolati {#export-arrays-calculated-fields}
+Dopo la deduplicazione, il file di esportazione conterrà:
+
+| E-mail* | nome | cognome | timestamp |
+|---|---|---|---|  
+| `test1@test.com` | John | Doe | 2024-10-12T09:50 |
+| `test2@test.com` | Frank | Smith | 2024-10-12T09:50 |
+
+{style="table-layout:auto"}
+
+**Spiegazione**: per `test1@test.com`, entrambi i profili condividono la stessa chiave di deduplicazione e la stessa marca temporale. L&#39;algoritmo ordina i valori delle colonne `first_name` e `last_name` in modo lessicografico. Poiché i nomi sono identici, il pareggio viene risolto utilizzando la colonna `last_name`, dove &quot;Doe&quot; precede &quot;Morris&quot;.
+
+**Affidabilità migliorata**: questo processo di deduplicazione aggiornato garantisce che le esecuzioni successive con le stesse coordinate producano sempre gli stessi risultati, migliorando la coerenza.
+
+### Esportare array tramite campi calcolati {#export-arrays-calculated-fields}
 
 Alcuni clienti beta possono esportare gli oggetti array da Experience Platform a destinazioni di archiviazione cloud. Ulteriori informazioni sull&#39;[esportazione di array e campi calcolati](/help/destinations/ui/export-arrays-calculated-fields.md) e contattare il proprio rappresentante di Adobe per accedere alla funzionalità.
 
@@ -474,10 +481,10 @@ A causa di un limite noto, al momento non è possibile utilizzare la finestra **
 
 >[!NOTE]
 >
-Per le destinazioni dell’archiviazione cloud, i seguenti attributi vengono aggiunti alla mappatura per impostazione predefinita:
+>Per le destinazioni dell’archiviazione cloud, i seguenti attributi vengono aggiunti alla mappatura per impostazione predefinita:
 >
-* `segmentMembership.seg_namespace.seg_id.status`
-* `segmentMembership.seg_namespace.seg_id.lastQualificationTime`
+>* `segmentMembership.seg_namespace.seg_id.status`
+>* `segmentMembership.seg_namespace.seg_id.lastQualificationTime`
 
 Le esportazioni di file variano nei modi seguenti, a seconda che sia selezionato `segmentMembership.seg_namespace.seg_id.status`:
 
@@ -500,9 +507,9 @@ Come soluzione alternativa temporanea, se devi aggiungere spazi dei nomi di iden
 
 >[!IMPORTANT]
 > 
-Tutte le destinazioni di archiviazione cloud nel catalogo possono visualizzare un [[!UICONTROL Mapping] passaggio](#mapping) migliorato che sostituisce il passaggio **[!UICONTROL Seleziona attributi]** descritto in questa sezione.
+>Tutte le destinazioni di archiviazione cloud nel catalogo possono visualizzare un [[!UICONTROL Mapping] passaggio](#mapping) migliorato che sostituisce il passaggio **[!UICONTROL Seleziona attributi]** descritto in questa sezione.
 >
-Questo passaggio **[!UICONTROL Seleziona attributi]** è ancora visualizzato per le destinazioni di e-mail marketing Adobe Campaign, Oracle Responsys, Oracle Eloqua e Salesforce Marketing Cloud.
+>Questo passaggio **[!UICONTROL Seleziona attributi]** è ancora visualizzato per le destinazioni di e-mail marketing Adobe Campaign, Oracle Responsys, Oracle Eloqua e Salesforce Marketing Cloud.
 
 Per le destinazioni basate su profili, devi selezionare gli attributi del profilo che desideri inviare alla destinazione target.
 
@@ -522,15 +529,15 @@ Per le destinazioni basate su profili, devi selezionare gli attributi del profil
 
 >[!NOTE]
 >
-Adobe Experience Platform compila la selezione con quattro attributi consigliati e comunemente utilizzati dallo schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.seg_namespace.seg_id.status`.
+> Adobe Experience Platform compila la selezione con quattro attributi consigliati e comunemente utilizzati dallo schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.seg_namespace.seg_id.status`.
 
 ![Immagine che mostra gli attributi consigliati precompilati nel passaggio di mappatura del flusso di lavoro di attivazione del pubblico.](../assets/ui/activate-batch-profile-destinations/prefilled-fields.png)
 
 >[!IMPORTANT]
 >
-A causa di un limite noto, al momento non è possibile utilizzare la finestra **[!UICONTROL Seleziona campo]** per aggiungere `segmentMembership.seg_namespace.seg_id.status` alle esportazioni di file. È invece necessario incollare manualmente il valore `xdm: segmentMembership.seg_namespace.seg_id.status` nel campo schema, come illustrato di seguito.
+>A causa di un limite noto, al momento non è possibile utilizzare la finestra **[!UICONTROL Seleziona campo]** per aggiungere `segmentMembership.seg_namespace.seg_id.status` alle esportazioni di file. È invece necessario incollare manualmente il valore `xdm: segmentMembership.seg_namespace.seg_id.status` nel campo schema, come illustrato di seguito.
 >
-![Registrazione dello schermo che mostra la soluzione alternativa per l&#39;iscrizione al pubblico nel passaggio di mappatura del flusso di lavoro di attivazione.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
+>![Registrazione dello schermo che mostra la soluzione alternativa per l&#39;iscrizione al pubblico nel passaggio di mappatura del flusso di lavoro di attivazione.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
 Le esportazioni di file variano nei modi seguenti, a seconda che sia selezionato `segmentMembership.seg_namespace.seg_id.status`:
 * Se il campo `segmentMembership.seg_namespace.seg_id.status` è selezionato, i file esportati includono **[!UICONTROL membri attivi]** nello snapshot completo iniziale e **[!UICONTROL membri attivi]** e **[!UICONTROL membri scaduti]** nelle esportazioni incrementali successive.
@@ -538,14 +545,14 @@ Le esportazioni di file variano nei modi seguenti, a seconda che sia selezionato
 
 ## Selezionare attributi di arricchimento {#select-enrichment-attributes}
 
-[!CONTEXTUALHELP]
-id="platform_destinations_activate_exclude_enrichment_attributes"
-title="Escludi attributi di arricchimento"
-abstract="Abilita questa opzione per esportare i profili dai tipi di pubblico personalizzati caricati selezionati alla tua destinazione, escludendo tutti i loro attributi."
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_exclude_enrichment_attributes"
+>title="Escludi attributi di arricchimento"
+>abstract="Abilita questa opzione per esportare i profili dai tipi di pubblico personalizzati caricati selezionati alla tua destinazione, escludendo tutti i loro attributi."
 
 >[!IMPORTANT]
 >
-Questo passaggio viene visualizzato solo se hai selezionato **[!UICONTROL Tipi di pubblico per caricamento personalizzato]** durante il passaggio [Selezione pubblico](#select-audiences).
+>Questo passaggio viene visualizzato solo se hai selezionato **[!UICONTROL Tipi di pubblico per caricamento personalizzato]** durante il passaggio [Selezione pubblico](#select-audiences).
 
 Gli attributi di arricchimento corrispondono ai tipi di pubblico caricati personalizzati acquisiti in Experience Platform come **[!UICONTROL Caricamenti personalizzati]**. In questo passaggio puoi selezionare gli attributi da esportare nella destinazione per ogni pubblico esterno selezionato.
 
@@ -572,12 +579,12 @@ Seleziona **[!UICONTROL Avanti]** per passare al passaggio [Rivedi](#review).
 
 >[!NOTE]
 > 
-Se sono state applicate etichette di utilizzo dei dati a determinati campi all’interno di un set di dati (anziché all’intero set di dati), l’applicazione di tali etichette a livello di campo all’attivazione avviene nelle seguenti condizioni:
+>Se sono state applicate etichette di utilizzo dei dati a determinati campi all’interno di un set di dati (anziché all’intero set di dati), l’applicazione di tali etichette a livello di campo all’attivazione avviene nelle seguenti condizioni:
 >
-* I campi vengono utilizzati nella definizione del pubblico.
-* I campi sono configurati come attributi previsti per la destinazione target.
+>* I campi vengono utilizzati nella definizione del pubblico.
+>* I campi sono configurati come attributi previsti per la destinazione target.
 >
-Ad esempio, se il campo `person.name.firstName` contiene alcune etichette di utilizzo dei dati in conflitto con l&#39;azione di marketing della destinazione, nel passaggio di revisione verrà visualizzata una violazione dei criteri di utilizzo dei dati. Per ulteriori informazioni, vedere [Governance dei dati in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
+> Ad esempio, se il campo `person.name.firstName` contiene alcune etichette di utilizzo dei dati in conflitto con l&#39;azione di marketing della destinazione, nel passaggio di revisione verrà visualizzata una violazione dei criteri di utilizzo dei dati. Per ulteriori informazioni, vedere [Governance dei dati in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
 Nella pagina **[!UICONTROL Rivedi]** puoi visualizzare un riepilogo della selezione. Seleziona **[!UICONTROL Annulla]** per interrompere il flusso, **[!UICONTROL Indietro]** per modificare le impostazioni oppure **[!UICONTROL Fine]** per confermare la selezione e iniziare a inviare dati alla destinazione.
 
@@ -585,10 +592,10 @@ Nella pagina **[!UICONTROL Rivedi]** puoi visualizzare un riepilogo della selezi
 
 ### Valutazione dei criteri di consenso {#consent-policy-evaluation}
 
-[!CONTEXTUALHELP]
-id="platform_governance_policies_viewApplicableConsentPolicies"
-title="Visualizzare i criteri di consenso applicabili"
-abstract="Se l’organizzazione ha acquistato **Adobe Healthcare Shield** o **Adobe Privacy &amp; Security Shield**, seleziona **[!UICONTROL Visualizza i criteri di consenso applicabili]** per vedere quali criteri di consenso vengono applicati e quanti profili vengono inclusi di conseguenza nell’attivazione. Questa opzione è disabilitata se la tua azienda non ha accesso alle SKU menzionate qui sopra."
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_viewApplicableConsentPolicies"
+>title="Visualizzare i criteri di consenso applicabili"
+>abstract="Se l’organizzazione ha acquistato **Adobe Healthcare Shield** o **Adobe Privacy &amp; Security Shield**, seleziona **[!UICONTROL Visualizza i criteri di consenso applicabili]** per vedere quali criteri di consenso vengono applicati e quanti profili vengono inclusi di conseguenza nell’attivazione. Questa opzione è disabilitata se la tua azienda non ha accesso alle SKU menzionate qui sopra."
 
 Se l’organizzazione ha acquistato **Adobe Healthcare Shield** o **Adobe Privacy &amp; Security Shield**, seleziona **[!UICONTROL Visualizza i criteri di consenso applicabili]** per vedere quali criteri di consenso vengono applicati e quanti profili vengono inclusi di conseguenza nell’attivazione. Leggi informazioni sulla [valutazione dei criteri di consenso](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) per ulteriori informazioni.
 
