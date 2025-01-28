@@ -2,14 +2,20 @@
 title: Esempi di configurazioni dei grafici
 description: Scopri gli scenari di grafico comuni che potresti incontrare quando utilizzi le regole di collegamento del grafico delle identità e i dati di identità.
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
+source-git-commit: 0c5924b4e47cf4afcf76080a10d142b3e280c4d8
 workflow-type: tm+mt
-source-wordcount: '2783'
+source-wordcount: '2799'
 ht-degree: 6%
 
 ---
 
-# Esempi di configurazioni di grafo
+# Esempi di configurazioni di grafo {#examples-of-graph-configurations}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_algorithmconfiguration"
+>title="Configurazione algoritmo"
+>abstract="Configura uno spazio dei nomi univoco e definiscine la priorità in base alle identità acquisite."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/identity-graph-linking-rules/example-configurations" text="Ulteriori informazioni"
 
 >[!AVAILABILITY]
 >

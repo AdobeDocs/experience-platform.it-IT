@@ -2,9 +2,9 @@
 title: Regole di collegamento del grafico delle identità
 description: Scopri le regole di collegamento del grafico delle identità in Identity Service.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: c1aaad7d7169e63c49d62ab8a7a06c4c11c85cb4
+source-git-commit: 42c2b2afff49422a539d573280e9bc3f30369c3f
 workflow-type: tm+mt
-source-wordcount: '1440'
+source-wordcount: '1443'
 ht-degree: 3%
 
 ---
@@ -33,12 +33,13 @@ I seguenti documenti sono essenziali per comprendere le regole di collegamento d
 
 Questa sezione descrive scenari di esempio da considerare durante la configurazione delle regole di collegamento del grafico delle identità.
 
-### Dispositivo condiviso
+### Dispositivo condiviso {#shared-device}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphcollapsescenarios"
 >title="Scenari di compressione dei grafici"
 >abstract="Esistono vari motivi per cui un grafico può essere compresso o rappresentare più entità persona."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/identity-graph-linking-rules/overview" text="Ulteriori informazioni"
 
 Esistono casi in cui si possono verificare più accessi su un singolo dispositivo:
 

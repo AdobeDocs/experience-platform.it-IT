@@ -2,14 +2,20 @@
 title: Guida dell’interfaccia utente di Graph Simulation
 description: Scopri come utilizzare la simulazione del grafico nell’interfaccia utente del servizio Identity.
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: c1aaad7d7169e63c49d62ab8a7a06c4c11c85cb4
+source-git-commit: 0c5924b4e47cf4afcf76080a10d142b3e280c4d8
 workflow-type: tm+mt
-source-wordcount: '1484'
-ht-degree: 4%
+source-wordcount: '1461'
+ht-degree: 2%
 
 ---
 
-# Guida dell&#39;interfaccia utente di [!DNL Graph Simulation]
+# Guida dell&#39;interfaccia utente di [!DNL Graph Simulation] {#graph-simulation}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_graphsimulation"
+>title="Simulazione grafico"
+>abstract="Con la simulazione dei grafici potrai scoprire come Identity Service collega le identità e come funziona il relativo algoritmo di ottimizzazione."
+>additional-url="http://www.adobe.com/go/identity-graph-simulation" text="Ulteriori informazioni"
 
 >[!AVAILABILITY]
 >
@@ -50,12 +56,6 @@ Visualizzatore grafico simulato: il visualizzatore grafico simulato visualizza i
 >[!ENDTABS]
 
 ## Aggiungi eventi {#add-events}
-
->[!CONTEXTUALHELP]
->id="platform_identities_graphsimulation"
->title="Simulazione grafico"
->abstract="Con la simulazione dei grafici potrai scoprire come Identity Service collega le identità e come funziona il relativo algoritmo di ottimizzazione."
->text="Learn more in documentation"
 
 Per iniziare, selezionare **[!UICONTROL Aggiungi eventi]**.
 
@@ -132,16 +132,6 @@ Per eliminare un evento, selezionare i puntini di sospensione (`...`) accanto a 
 ![Icona Elimina evento selezionata.](../images/graph-simulation/delete.png)
 
 ## Configurare l’algoritmo {#configure-algorithm}
-
->[!CONTEXTUALHELP]
->id="platform_identities_algorithmconfiguration"
->title="Configurazione algoritmo"
->abstract="Configura uno spazio dei nomi univoco e definiscine la priorità in base alle identità acquisite."
-
->[!CONTEXTUALHELP]
->id="platform_identities_namespacepriority"
->title="Priorità dello spazio dei nomi"
->abstract="La priorità dello spazio dei nomi determina il modo in cui i collegamenti vengono rimossi dal grafo identità."
 
 >[!IMPORTANT]
 >

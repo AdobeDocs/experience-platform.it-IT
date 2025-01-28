@@ -2,14 +2,20 @@
 title: Logica di collegamento del servizio Identity
 description: Scopri in che modo il servizio Identity collega identità diverse per creare una visualizzazione completa di un cliente.
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: f067f8d4628d76b4a87b9dd97d1d703c54688871
+source-git-commit: 627b2e5ecde28b26e7d4717e13713c38c3c09651
 workflow-type: tm+mt
-source-wordcount: '968'
+source-wordcount: '971'
 ht-degree: 2%
 
 ---
 
-# Logica di collegamento del servizio Identity
+# Logica di collegamento del servizio Identity {#identity-service-linking-logic}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_simulatedgraph"
+>title="Grafico simulato"
+>abstract="Le identità sono collegate quando lo spazio dei nomi dell’identità e il valore della stessa corrispondono."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/identity-linking-logic" text="Ulteriori informazioni"
 
 Quando lo spazio dei nomi dell’identità e i valori dell’identità corrispondono, viene stabilito un collegamento tra due identità.
 
@@ -29,12 +35,7 @@ Un’identità rappresenta un’entità del mondo reale. Se esiste un collegamen
 | Un utente finale accede utilizzando Google Chrome e quindi Firefox. | Il CRMID è collegato a due diversi ECID. | Una persona (CRMID) è associata a 2 browser Web (**Nota**: ogni browser avrà il proprio ECID). |
 | Un ingegnere dati acquisisce un record CRM che include due campi contrassegnati come identità: CRMID e E-mail. | CRMID ed E-mail sono collegati. | All’indirizzo e-mail è associata una persona (CRMID). |
 
-## Informazioni sulla logica di collegamento del servizio Identity {#identity-linking-logic}
-
->[!CONTEXTUALHELP]
->id="platform_identities_simulatedgraph"
->title="Grafico simulato"
->abstract="Le identità sono collegate quando lo spazio dei nomi dell’identità e il valore della stessa corrispondono."
+## Informazioni sulla logica di collegamento del servizio Identity
 
 Un’identità è costituita da uno spazio dei nomi dell’identità e da un valore di identità.
 

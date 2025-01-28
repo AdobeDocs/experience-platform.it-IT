@@ -2,14 +2,20 @@
 title: Priorità dello spazio dei nomi
 description: Scopri la priorità dello spazio dei nomi in Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 3efbb9614f08a74ad33eb1fbb4861c34c762b66b
+source-git-commit: 0c5924b4e47cf4afcf76080a10d142b3e280c4d8
 workflow-type: tm+mt
-source-wordcount: '1788'
-ht-degree: 2%
+source-wordcount: '1804'
+ht-degree: 3%
 
 ---
 
-# Priorità dello spazio dei nomi
+# Priorità dello spazio dei nomi {#namespace-priority}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_namespacepriority"
+>title="Priorità dello spazio dei nomi"
+>abstract="La priorità dello spazio dei nomi determina il modo in cui i collegamenti vengono rimossi dal grafo identità."
+>additional-url="http://www.adobe.com/go/identity-namespace-priority" text="Ulteriori informazioni"
 
 >[!AVAILABILITY]
 >
@@ -77,7 +83,7 @@ Per strutture di grafo relativamente complesse, la priorità dello spazio dei no
 * Dopo aver configurato le impostazioni di identità per una data sandbox, l’identità primaria per gli eventi esperienza sarà determinata dalla priorità più alta dello spazio dei nomi nella configurazione.
    * Questo perché gli eventi di esperienza sono di natura dinamica. Una mappa di identità può contenere tre o più identità e la priorità dello spazio dei nomi assicura che lo spazio dei nomi più importante sia associato all’evento esperienza.
 * Di conseguenza, le seguenti configurazioni **non saranno più utilizzate da Real-Time Customer Profile**:
-   * La configurazione dell&#39;identità primaria (`primary=true`) durante l&#39;invio di identità in identityMap tramite Web SDK, Mobile SDK o Edge Network Server API (lo spazio dei nomi dell&#39;identità e il valore dell&#39;identità continueranno a essere utilizzati nel profilo). **Nota**: i servizi esterni al profilo cliente in tempo reale, come l&#39;archiviazione del data lake o Adobe Target, continueranno a utilizzare la configurazione dell&#39;identità primaria (`primary=true`).
+   * La configurazione dell&#39;identità primaria (`primary=true`) durante l&#39;invio di identità in identityMap tramite Web SDK, Mobile SDK o Edge Network Server API (lo spazio dei nomi dell&#39;identità e il valore dell&#39;identità continueranno a essere utilizzati in Profile). **Nota**: i servizi esterni al profilo cliente in tempo reale, come l&#39;archiviazione del data lake o Adobe Target, continueranno a utilizzare la configurazione dell&#39;identità primaria (`primary=true`).
    * Eventuali campi contrassegnati come identità primaria in uno schema XDM Experience Event Class.
    * Impostazioni di identità primaria predefinite nel connettore di origine di Adobe Analytics (ECID o AAID).
 * D&#39;altra parte, la priorità dello spazio dei nomi **non determina l&#39;identità primaria per i record di profilo**.

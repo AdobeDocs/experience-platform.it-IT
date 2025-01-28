@@ -2,14 +2,20 @@
 title: Algoritmo di ottimizzazione identità
 description: Scopri l’algoritmo di ottimizzazione delle identità in Identity Service.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: c1aaad7d7169e63c49d62ab8a7a06c4c11c85cb4
+source-git-commit: 0c5924b4e47cf4afcf76080a10d142b3e280c4d8
 workflow-type: tm+mt
-source-wordcount: '1560'
-ht-degree: 1%
+source-wordcount: '1563'
+ht-degree: 2%
 
 ---
 
-# Algoritmo di ottimizzazione identità
+# Algoritmo di ottimizzazione identità {#identity-optimization-algorithm}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_uniquenamespace"
+>title="Spazio dei nomi univoco"
+>abstract="Un grafico non può avere due identità con uno spazio dei nomi univoco. Se un grafico tenta di superare questo limite, vengono mantenuti i collegamenti più recenti e rimossi quelli più vecchi."
+>additional-url="http://www.adobe.com/go/identity-ido-algo" text="Ulteriori informazioni"
 
 >[!AVAILABILITY]
 >
@@ -22,11 +28,6 @@ L’algoritmo di ottimizzazione delle identità è un algoritmo grafico sul serv
 Leggi questa sezione per informazioni sugli spazi dei nomi univoci e sulla priorità dello spazio dei nomi. Questi due concetti fungono da parametri di input richiesti dall’algoritmo di ottimizzazione delle identità.
 
 ### Spazio dei nomi univoco {#unique-namespace}
-
->[!CONTEXTUALHELP]
->id="platform_identities_uniquenamespace"
->title="Spazio dei nomi univoco"
->abstract="Un grafico non può avere due identità con uno spazio dei nomi univoco. Se un grafico tenta di superare questo limite, vengono mantenuti i collegamenti più recenti e rimossi quelli più vecchi."
 
 Uno spazio dei nomi univoco determina i collegamenti che vengono rimossi in caso di compressione del grafico.
 
