@@ -1,30 +1,28 @@
 ---
-title: (Beta) Il Trade Desk - Connessione CRM
+title: Il Trade Desk - Connessione CRM
 description: Attiva i profili nel tuo account di Trade Desk per il targeting e l’eliminazione del pubblico in base ai dati CRM.
-last-substantial-update: 2023-01-25T00:00:00Z
+last-substantial-update: 2025-01-16T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 3c645ccf5b9dd17e4c3cc1267b60a9c4f1131668
+source-git-commit: a189a86749996c0ee7b6146bcd030d8495745e12
 workflow-type: tm+mt
-source-wordcount: '1148'
+source-wordcount: '1117'
 ht-degree: 5%
 
 ---
 
-# (Beta) Connessione [!DNL Trade Desk] - CRM
+# Connessione [!DNL Trade Desk] - CRM
 
 >[!IMPORTANT]
->
->La destinazione [!DNL The Trade Desk - CRM] in Platform è attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
 >
 >Con il rilascio dell’EUID (European Unified ID), nel [catalogo delle destinazioni](/help/destinations/catalog/overview.md) ora vengono visualizzate due destinazioni [!DNL The Trade Desk - CRM].
 >* Se i dati vengono originati nell’UE, utilizza la destinazione **[!DNL The Trade Desk - CRM (EU)]**.
 >* Se i dati vengono originati nelle aree geografiche APAC o NAMER, utilizza la destinazione **[!DNL The Trade Desk - CRM (NAMER & APAC)]**.
 >
->Entrambe le destinazioni in Experience Platform sono attualmente in versione beta. Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti dal team *[!DNL Trade Desk]*. Per richieste di informazioni o richieste di aggiornamento, contattare il proprio rappresentante [!DNL Trade Desk]. La documentazione e le funzionalità sono soggette a modifiche.
+>Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti dal team *[!DNL Trade Desk]*. Per richieste di informazioni o richieste di aggiornamento, contatta il tuo rappresentante [!DNL Trade Desk].
 
 ## Panoramica {#overview}
 
-Questo documento è progettato per aiutarti ad attivare i profili nel tuo account [!DNL Trade Desk] per il targeting e l&#39;eliminazione del pubblico in base ai dati CRM.
+Scopri come attivare i profili nell&#39;account [!DNL Trade Desk] per il targeting e l&#39;eliminazione del pubblico in base ai dati CRM.
 
 Questo connettore invia dati all&#39;endpoint di prime parti [!DNL The Trade Desk]. L&#39;integrazione tra Adobe Experience Platform e [!DNL The Trade Desk] non supporta l&#39;esportazione dei dati nell&#39;endpoint di terze parti [!DNL The Trade Desk].
 
@@ -36,7 +34,9 @@ Questo connettore invia dati all&#39;endpoint di prime parti [!DNL The Trade Des
 
 ## Prerequisiti {#prerequisites}
 
-Prima di poter attivare i tipi di pubblico in [!DNL The Trade Desk], è necessario contattare l&#39;account manager [!DNL The Trade Desk] per firmare il contratto di onboarding CRM. [!DNL The Trade Desk] concederà quindi l&#39;autorizzazione e condividerà il tuo ID inserzionista per configurare la tua destinazione.
+>[!IMPORTANT]
+>
+>Prima di poter attivare i tipi di pubblico per il Trade Desk, è necessario contattare l&#39;account manager [!DNL Trade Desk] per firmare il contratto di onboarding CRM. [!DNL The Trade Desk] abiliterà l&#39;uso di UID2/EUID e condividerà altri dettagli per aiutarti a configurare la tua destinazione.
 
 ## Requisiti di corrispondenza ID {#id-matching-requirements}
 
@@ -143,8 +143,8 @@ Selezione dei campi di destinazione:
 Per verificare che i dati siano correttamente esportati da Experience Platform in [!DNL The Trade Desk], trovare i tipi di pubblico nella sezione dati di Adobe 1PD all&#39;interno di [!DNL The Trade Desk] Data Management Platform (DMP). Di seguito sono riportati i passaggi per trovare l&#39;ID corrispondente nell&#39;interfaccia utente [!DNL Trade Desk]:
 
 1. Selezionare innanzitutto la scheda **[!UICONTROL Dati]** e rivedere la sezione **[!UICONTROL Prime parti]**.
-2. Scorri verso il basso la pagina, sotto **[!UICONTROL Dati importati]**, troverai **[!UICONTROL Adobe 1PD Tile]**.
-3. Fai clic sul riquadro**[!UICONTROL Adobe 1PD]** e verranno elencati tutti i tipi di pubblico attivati nella destinazione [!DNL Trade Desk] per l&#39;inserzionista. È inoltre possibile utilizzare la funzione di ricerca.
+2. Scorri verso il basso la pagina, sotto **[!UICONTROL Dati importati]**, troverai il **[!UICONTROL riquadro Adobe 1PD]**.
+3. Fai clic sulla sezione**[!UICONTROL Adobe 1 PD]** in cui verranno elencati tutti i tipi di pubblico attivati nella destinazione [!DNL Trade Desk] per l&#39;inserzionista. È inoltre possibile utilizzare la funzione di ricerca.
 4. L&#39;ID segmento # dell&#39;Experience Platform verrà visualizzato come Nome segmento nell&#39;interfaccia utente [!DNL Trade Desk].
 
 ## Utilizzo dei dati e governance {#data-usage-governance}
