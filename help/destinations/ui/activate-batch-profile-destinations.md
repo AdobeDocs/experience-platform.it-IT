@@ -3,9 +3,9 @@ title: Attivare i tipi di pubblico per le destinazioni di esportazione dei profi
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico disponibili in Adobe Experience Platform inviandoli a destinazioni basate su profili in batch.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: fdb92a0c03ce6a0d44cfc8eb20c2e3bd1583b1ce
+source-git-commit: de9c838c8a9d07165b4cc8a602df0c627a8b749c
 workflow-type: tm+mt
-source-wordcount: '4151'
+source-wordcount: '4395'
 ht-degree: 11%
 
 ---
@@ -137,7 +137,7 @@ Seleziona **[!UICONTROL Esporta file completi]** per attivare l&#39;esportazione
 
    >[!IMPORTANT]
    >
-   >Se esegui [valutazione flessibile del pubblico](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation) su tipi di pubblico già impostati per essere attivati dopo la valutazione dei segmenti, i tipi di pubblico verranno attivati al termine del processo di valutazione flessibile, indipendentemente da eventuali processi di attivazione giornalieri precedenti. Questo potrebbe comportare l&#39;esportazione di tipi di pubblico più volte al giorno, in base alle azioni eseguite.
+   >Se si esegue una [valutazione del pubblico](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation) su tipi di pubblico già impostati per essere attivati dopo la valutazione del segmento, i tipi di pubblico verranno attivati al termine del processo di valutazione del pubblico flessibile, indipendentemente da ogni processo di attivazione giornaliero precedente. Questo potrebbe comportare l&#39;esportazione di tipi di pubblico più volte al giorno, in base alle azioni eseguite.
 
    <!-- Batch segmentation currently runs at {{insert time of day}} and lasts for an average {{x hours}}. Adobe reserves the right to modify this schedule. -->
 
@@ -431,14 +431,31 @@ Se si presuppone la deduplicazione per la chiave composita `personalEmail + last
 
 Adobe consiglia di selezionare uno spazio dei nomi di identità, ad esempio [!DNL CRM ID] o un indirizzo e-mail, come chiave di deduplicazione, per garantire che tutti i record di profilo siano identificati in modo univoco.
 
->[!NOTE]
-> 
->Se sono state applicate etichette di utilizzo dei dati a determinati campi all’interno di un set di dati (anziché all’intero set di dati), l’applicazione di tali etichette a livello di campo all’attivazione avviene nelle seguenti condizioni:
->
->* I campi vengono utilizzati nella definizione del pubblico.
->* I campi sono configurati come attributi previsti per la destinazione target.
->
-> Ad esempio, se il campo `person.name.firstName` contiene alcune etichette di utilizzo dei dati in conflitto con l&#39;azione di marketing della destinazione, nel passaggio di revisione verrà visualizzata una violazione dei criteri di utilizzo dei dati. Per ulteriori informazioni, vedere [Governance dei dati in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
+### Comportamento di deduplicazione per profili con la stessa marca temporale {#deduplication-same-timestamp}
+
+Durante l’esportazione di profili in destinazioni basate su file, la deduplicazione assicura che venga esportato un solo profilo quando più profili condividono la stessa chiave di deduplicazione e la stessa marca temporale di riferimento. Questa marca temporale rappresenta il momento in cui l’iscrizione al pubblico o il grafico delle identità di un profilo è stato aggiornato per l’ultima volta. Per ulteriori informazioni sull&#39;aggiornamento e l&#39;esportazione dei profili, vedere il documento [comportamento di esportazione dei profili](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
+
+#### Considerazioni chiave
+
+* **Selezione deterministica**: quando più profili hanno chiavi di deduplicazione identiche e lo stesso timestamp di riferimento, la logica di deduplicazione determina il profilo da esportare ordinando i valori delle altre colonne selezionate (esclusi i tipi complessi come array, mappe o oggetti). I valori ordinati vengono valutati in ordine lessicografico e viene selezionato il primo profilo.
+
+* **Esempio di scenario**:\
+  Considera i seguenti dati, in cui la chiave di deduplicazione è la colonna `Email`:\
+  |Email*|first_name|last_name|timestamp|\
+  |—|—|—|—|—|\
+  |test1@test.com|John|Morris|2024-10-12T09:50|\
+  |test1@test.com|John|Doe|10-12T09:50|\
+  |test2@test.com|Frank|Smith|10-12T09:50|
+
+  Dopo la deduplicazione, il file di esportazione conterrà:\
+  |Email*|first_name|last_name|timestamp|\
+  |—|—|—|—|—|\
+  |test1@test.com|John|Doe|10-12T09:50|\
+  |test2@test.com|Frank|Smith|10-12T09:50|
+
+  **Spiegazione**: per `test1@test.com`, entrambi i profili condividono la stessa chiave di deduplicazione e la stessa marca temporale. L&#39;algoritmo ordina i valori delle colonne `first_name` e `last_name` in modo lessicografico. Poiché i nomi sono identici, il pareggio viene risolto utilizzando la colonna `last_name`, dove &quot;Doe&quot; precede &quot;Morris&quot;.
+
+* **Affidabilità migliorata**: questo processo di deduplicazione aggiornato garantisce che le esecuzioni successive con le stesse coordinate producano sempre gli stessi risultati, migliorando la coerenza.
 
 ### [!BADGE Beta]{type=Informative} Esporta array tramite campi calcolati {#export-arrays-calculated-fields}
 
@@ -552,6 +569,15 @@ Se desideri attivare tipi di pubblico esterni nelle destinazioni senza esportare
 Seleziona **[!UICONTROL Avanti]** per passare al passaggio [Rivedi](#review).
 
 ## Controlla {#review}
+
+>[!NOTE]
+> 
+Se sono state applicate etichette di utilizzo dei dati a determinati campi all’interno di un set di dati (anziché all’intero set di dati), l’applicazione di tali etichette a livello di campo all’attivazione avviene nelle seguenti condizioni:
+>
+* I campi vengono utilizzati nella definizione del pubblico.
+* I campi sono configurati come attributi previsti per la destinazione target.
+>
+Ad esempio, se il campo `person.name.firstName` contiene alcune etichette di utilizzo dei dati in conflitto con l&#39;azione di marketing della destinazione, nel passaggio di revisione verrà visualizzata una violazione dei criteri di utilizzo dei dati. Per ulteriori informazioni, vedere [Governance dei dati in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
 Nella pagina **[!UICONTROL Rivedi]** puoi visualizzare un riepilogo della selezione. Seleziona **[!UICONTROL Annulla]** per interrompere il flusso, **[!UICONTROL Indietro]** per modificare le impostazioni oppure **[!UICONTROL Fine]** per confermare la selezione e iniziare a inviare dati alla destinazione.
 
