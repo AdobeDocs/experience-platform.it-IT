@@ -2,10 +2,10 @@
 title: Algoritmo di ottimizzazione identità
 description: Scopri l’algoritmo di ottimizzazione delle identità in Identity Service.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 0c5924b4e47cf4afcf76080a10d142b3e280c4d8
+source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
-source-wordcount: '1563'
-ht-degree: 2%
+source-wordcount: '1560'
+ht-degree: 1%
 
 ---
 
@@ -15,7 +15,6 @@ ht-degree: 2%
 >id="platform_identities_uniquenamespace"
 >title="Spazio dei nomi univoco"
 >abstract="Un grafico non può avere due identità con uno spazio dei nomi univoco. Se un grafico tenta di superare questo limite, vengono mantenuti i collegamenti più recenti e rimossi quelli più vecchi."
->additional-url="http://www.adobe.com/go/identity-ido-algo" text="Ulteriori informazioni"
 
 >[!AVAILABILITY]
 >
