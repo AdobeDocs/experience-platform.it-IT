@@ -4,9 +4,9 @@ title: Playbook di casi d’uso disponibili per Real-time Customer Data Platform
 description: Elenco di tutti i playbook in Real-time Customer Data Platform e Adobe Journey Optimizer.
 role: User
 exl-id: 00f16761-3759-4de0-882d-b77e18f7c1fe
-source-git-commit: 5b1209ed96c78810b6bd7489825b19496d8b0b6a
+source-git-commit: 0cfe3e87ae4f9e8dc9ad53e9acb096efb590b72d
 workflow-type: tm+mt
-source-wordcount: '965'
+source-wordcount: '955'
 ht-degree: 2%
 
 ---
@@ -65,9 +65,9 @@ Leggi questa pagina per una panoramica di tutti i playbook disponibili che puoi 
 
 | Nome playbook | Descrizione |
 | ------------- | ----------- |
-| Esplorazione abbandonata: materiale promozionale, per l&#39;attivazione | Effettua il retargeting dei fan dopo che hanno lasciato il sito web o l’app dopo aver aggiunto la merce al carrello. |
-| Esplorazione abbandonata: prodotto, per l&#39;attivazione | Effettua il retargeting degli acquirenti dopo che hanno lasciato il sito web o l’app dopo aver aggiunto i prodotti al carrello. |
-| Esplorazione abbandonata: prenotazione - per attivazione | Effettua il retargeting degli ospiti dopo che hanno lasciato il sito web o l’app dopo aver aggiunto una nuova prenotazione al carrello. |
+| Esplorazione abbandonata: materiale promozionale, per l&#39;attivazione | Effettua il retargeting dei fan dopo che hanno lasciato il sito web o l’app dopo aver navigato nella merce. |
+| Esplorazione abbandonata: prodotto, per l&#39;attivazione | Effettua il retargeting degli acquirenti dopo che hanno lasciato il sito web o l’app dopo aver navigato in un prodotto. |
+| Esplorazione abbandonata: prenotazione - per attivazione | Effettua il retargeting degli ospiti dopo che hanno lasciato il sito web o l’app dopo aver sfogliato una potenziale prenotazione. |
 | Carrello abbandonato: materiale promozionale, per l&#39;attivazione | Effettua il retargeting degli appassionati dopo che hanno lasciato il sito web o l’app dopo aver aggiunto la merce sportiva al carrello. |
 | Carrello abbandonato: prodotto, per l&#39;attivazione | Effettua il retargeting degli acquirenti dopo che hanno lasciato il sito web o l’app dopo l’aggiunta di prodotti al carrello. |
 | Carrello abbandonato: prenotazione - per attivazione | Effettua il retargeting degli ospiti dopo che hanno lasciato il sito web o l’app dopo aver aggiunto una nuova prenotazione al carrello. |
