@@ -6,9 +6,9 @@ title: Risoluzione dei problemi di errore di Attribution AI
 description: Trova le risposte agli errori più comuni in Attribution AI.
 type: Documentation
 exl-id: c2ff700a-1e36-4ba2-876c-9f8b56344241
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '167'
+source-wordcount: '171'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Questo documento fornisce le risposte alle domande più frequenti su Attribution
 
 Gli errori di caricamento in modalità incognito di Google Chrome sono presenti a causa di aggiornamenti nelle impostazioni di protezione in modalità incognito di Google Chrome. Il problema è stato affrontato attivamente con Chrome per rendere experience.adobe.com un dominio affidabile.
 
-<img src="./images/faq/error.PNG" width="500" /><br />
+![Immagine di errore](./images/faq/error.PNG){width=500}
 
 ### Correzione consigliata
 

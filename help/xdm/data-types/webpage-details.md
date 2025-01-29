@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Tipo di dati Dettagli pagina web
 description: Scopri i dettagli della pagina web Tipo di dati Experience Data Model (XDM).
 exl-id: 31108e57-d416-485b-a6c3-4ebc4f5b1152
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '383'
+source-wordcount: '386'
 ht-degree: 11%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 11%
 
 Il tipo di dati è destinato ai dettagli dell’intera pagina e al caricamento della pagina iniziale delle applicazioni web a pagina singola (SPA). Per le interazioni che si verificano in una pagina caricata e che non attivano il caricamento di una nuova pagina, vedi il tipo di dati [interazione web](./web-interaction.md).
 
-<img src="../images/data-types/web-page-details.PNG" width="500" /><br />
+![dettagli pagina Web](../images/data-types/web-page-details.PNG){width="500"}
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |

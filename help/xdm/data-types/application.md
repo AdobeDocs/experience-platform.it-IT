@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Tipo di dati applicazione
 description: Scopri il tipo di dati Application Experience Data Model (XDM).
 exl-id: ac7d6761-7b58-4e0d-85e7-6f157fb2eea5
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '420'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 [!UICONTROL Applicazione] è un tipo di dati XDM (Experience Data Model) standard che descrive i dettagli relativi alle interazioni generate da un&#39;applicazione. Un’applicazione si riferisce a un’esperienza software, ad esempio un’applicazione mobile o desktop che può essere installata, eseguita, chiusa o disinstallata da un utente finale. Le proprietà di questo tipo di dati non sono intese a descrivere agenti come chatbot, plug-in basati su browser o altre esperienze che non si applicano alle applicazioni.
 
-<img src="../images/data-types/application.PNG" width="500" /><br />
+![immagine applicazione](../images/data-types/application.PNG){width=500}
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |

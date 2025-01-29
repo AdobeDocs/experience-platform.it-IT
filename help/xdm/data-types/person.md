@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Tipo di dati della persona
 description: Scopri il tipo di dati Person Experience Data Model (XDM).
 exl-id: f28a52be-90c7-4ed0-a460-97165bb58046
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '318'
+source-wordcount: '322'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 [!UICONTROL Persona] è un tipo di dati XDM (Experience Data Model) standard che descrive una singola persona. Questo tipo di dati può rappresentare una persona che svolge vari ruoli, ad esempio un cliente, un contatto o un proprietario.
 
-<img src="../images/data-types/person.PNG" width="500" /><br />
+![immagine persona](../images/data-types/person.PNG){width=500}
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |

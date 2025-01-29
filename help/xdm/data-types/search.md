@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Cerca tipo di dati
 description: Scopri il tipo di dati Search Experience Data Model (XDM).
 exl-id: 9893cb67-b0c7-4f91-a0d4-96f7b87d9510
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '160'
-ht-degree: 11%
+source-wordcount: '164'
+ht-degree: 10%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 11%
 
 [!UICONTROL Ricerca] è un tipo di dati XDM (Experience Data Model) standard che contiene informazioni sull&#39;attività di ricerca sul Web.
 
-<img src="../images/data-types/search.PNG" width="500" /><br />
+![cerca immagine](../images/data-types/search.PNG){width=500}
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
