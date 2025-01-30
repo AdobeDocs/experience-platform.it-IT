@@ -4,13 +4,13 @@ description: Scopri come creare configurazioni di flussi di dati dinamici, per i
 hide: true
 hidefromtoc: true
 badge: label="Beta" type="Informative"
-source-git-commit: 615318744c233930fb9bc20e55ff42c3a396e651
+exl-id: 528ddf89-ad87-4021-b5a6-8e25b4469ac4
+source-git-commit: 39e65f1f74b95fffffb3c5400ce1b7e60aa81bad
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '642'
 ht-degree: 1%
 
 ---
-
 
 # Creare configurazioni di flussi di dati dinamici
 
@@ -30,6 +30,14 @@ Per creare una configurazione dinamica per lo stream di dati, è necessario sodd
 * È necessario avere *almeno* un servizio Experience Cloud aggiunto allo stream di dati. Per informazioni dettagliate, consulta la documentazione su come [aggiungere un servizio](configure.md#add-services) a uno stream di dati.
 
 Dopo aver creato uno stream di dati e aggiunto un servizio di Experience Cloud, puoi [creare una configurazione dinamica](#create-dynamic-configuration).
+
+## Configurazioni dello stream di dati dinamici e sostituzioni della configurazione dello stream di dati {#dynamic-versus-overrides}
+
+Le configurazioni dello stream di dati dinamici e le [sostituzioni della configurazione dello stream di dati](overrides.md) si escludono a vicenda.
+
+Ciò significa che non è possibile utilizzare configurazioni dello stream di dati dinamiche insieme alle sostituzioni della configurazione dello stream di dati. Devi scegliere l&#39;uno o l&#39;altro.
+
+Se abiliti sia le configurazioni dello stream di dati dinamici che le sostituzioni della configurazione dello stream di dati, le sostituzioni della configurazione avranno la precedenza e le regole di configurazione dello stream di dati dinamici verranno ignorate.
 
 ## Creare una configurazione dello stream di dati dinamico {#create-dynamic-configuration}
 
