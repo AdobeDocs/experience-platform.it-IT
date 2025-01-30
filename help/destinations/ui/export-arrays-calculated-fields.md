@@ -6,7 +6,7 @@ exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: a99fc58b8296b2b9ce6e30d14857529570cd3e8a
 workflow-type: tm+mt
 source-wordcount: '1622'
-ht-degree: 3%
+ht-degree: 7%
 
 ---
 
@@ -73,13 +73,13 @@ Tieni presente le seguenti limitazioni note attualmente applicabili a questa fun
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_control"
->title="Abilita schema di output gerarchico"
->abstract="Attiva per esportare strutture gerarchiche come array."
+>title="Abilitare lo schema di output gerarchico"
+>abstract="Attiva se desideri esportare strutture gerarchiche come array."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_calculated_field_disabled"
->title="Aggiungi campi calcolati disabilitati"
->abstract="Questo controllo è disattivato perché è stata selezionata l&#39;esportazione di strutture piatte durante la connessione alla destinazione."
+>title="Aggiungere campi calcolati disabilitati"
+>abstract="Questo controllo è disabilitato in quanto è stato selezionato di esportare strutture semplici durante la connessione alla destinazione."
 
 Nel passaggio di mappatura del flusso di lavoro di attivazione per le destinazioni di archiviazione cloud, seleziona **[!UICONTROL Aggiungi campo calcolato]**.
 

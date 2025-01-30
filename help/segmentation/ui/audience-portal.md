@@ -5,7 +5,7 @@ exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
 source-git-commit: 4ef3f6dc07cb5d17146d48c7a41e3745fd9a3a58
 workflow-type: tm+mt
 source-wordcount: '4569'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -225,7 +225,7 @@ Quando applichi azioni in blocco ai tipi di pubblico, si applicano le seguenti c
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_browse_flexibleaudienceevaluation"
 >title="Limiti flessibili per la valutazione del pubblico"
-abstract="È possibile valutare fino a 20 tipi di pubblico in un’unica esecuzione flessibile di valutazione del pubblico.<br/><br/>Inoltre, mentre il processo di valutazione viene eseguito il prima possibile, potrebbero verificarsi ritardi di sistema poiché le valutazioni su richiesta <b>non possono</b> essere eseguite contemporaneamente a un&#39;altra valutazione su richiesta o in batch."
+abstract="È possibile valutare fino a 20 tipi di pubblico in un’unica esecuzione di valutazione del pubblico flessibile.<br/><br/>Inoltre, mentre il processo di valutazione viene eseguito il prima possibile, potrebbero verificarsi ritardi di sistema poiché le valutazioni su richiesta <b>non possono</b> essere eseguite contemporaneamente a un’altra valutazione su richiesta o in batch."
 
 La valutazione flessibile del pubblico consente di eseguire un processo di segmentazione su richiesta. Scegli i tipi di pubblico da valutare e seleziona **[!UICONTROL Valuta tipi di pubblico]**.
 
@@ -404,7 +404,7 @@ Selezionando **[!UICONTROL Componi pubblico]** puoi passare alla composizione de
 
 ![Viene visualizzata l&#39;area di lavoro di composizione del pubblico.](../images/ui/audience-portal/audience-composition.png)
 
-### Segment Builder {#segment-builder}
+### Generatore di segmenti {#segment-builder}
 
 Selezionando **[!UICONTROL Genera regola]** puoi passare al Generatore di segmenti. Questa area di lavoro fornisce controlli intuitivi per la creazione e la modifica delle definizioni dei segmenti, ad esempio le tessere trascinate utilizzate per rappresentare le proprietà dei dati. Per ulteriori informazioni sulla creazione delle definizioni dei segmenti, consulta la [guida del Generatore di segmenti](./segment-builder.md)
 

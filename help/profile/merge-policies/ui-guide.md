@@ -6,7 +6,7 @@ exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
 source-git-commit: 400b20578e9a13fa2f41462b188707a34a462ea9
 workflow-type: tm+mt
 source-wordcount: '2455'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -27,12 +27,12 @@ Questa guida richiede una buona conoscenza di diverse importanti funzionalità d
 * [Servizio Adobe Experience Platform Identity](../../identity-service/home.md): abilita il profilo cliente in tempo reale collegando le identità da diverse origini dati acquisite in [!DNL Platform].
 * [Experience Data Model (XDM)](../../xdm/home.md): framework standardizzato tramite il quale [!DNL Platform] organizza i dati sull&#39;esperienza del cliente.
 
-## Visualizza criteri di unione {#view-merge-policies}
+## Visualizzare i criteri di unione {#view-merge-policies}
 
 >[!CONTEXTUALHELP]
 >id="platform_errors_uplib_101221_404"
 >title="Criterio di unione non trovato"
->abstract="Platform non è riuscito a trovare il criterio di unione richiesto. Per risolvere l’errore, prova una delle soluzioni seguenti:<ul><li>Verifica che nell’URL sia elencato l’ID corretto del criterio di unione.</li><li>Assicurati di disporre della combinazione corretta di sandbox e organizzazione per il criterio di unione a cui stai tentando di accedere.</li></ul>"
+>abstract="Questo significa che Platform non è riuscito a trovare il criterio di unione richiesto. Per risolvere l’errore, prova una delle soluzioni seguenti:<ul><li>Assicurati che nell’URL sia elencato l’ID corretto del criterio di unione.</li><li>Assicurati di disporre della giusta combinazione di sandbox e organizzazione per il criterio di unione a cui stai tentando di accedere.</li></ul>"
 
 Nell&#39;interfaccia utente di [!DNL Experience Platform], è possibile iniziare a utilizzare i criteri di unione selezionando **[!UICONTROL Profili]** nell&#39;area di navigazione a sinistra e quindi selezionando la scheda **[!UICONTROL Criteri di unione]**.
 
