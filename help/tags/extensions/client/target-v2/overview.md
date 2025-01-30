@@ -2,10 +2,10 @@
 title: Panoramica dell’estensione Adobe Target v2
 description: Scopri le caratteristiche dell’estensione Tag di Adobe Target v2 in Adobe Experience Platform.
 exl-id: 8f491d67-86da-4e27-92bf-909cd6854be1
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 5b88692117c984cd6331e7886d5bf0846309acee
 workflow-type: tm+mt
-source-wordcount: '1318'
-ht-degree: 91%
+source-wordcount: '1351'
+ht-degree: 88%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 91%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Utilizza questo riferimento per informazioni sulle opzioni disponibili quando utilizzi questa estensione per creare una regola.
 
@@ -69,13 +69,15 @@ Aggiungi questa azione alla regola di tag nel punto più appropriato per caricar
 
 Non è necessaria alcuna configurazione.
 
-### Caricare Target con Decisioning sul dispositivo
+### Caricare Target con le decisioni sul dispositivo
 
-Aggiungi questa azione alla regola di tag nel punto più appropriato per caricare Target con [decisioning sul dispositivo](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html?lang=it) abilitato nel contesto della regola. In questo modo viene caricata nella pagina la libreria at.js con decisioning sul dispositivo abilitato. Nella maggior parte delle implementazioni, Target deve essere caricato su ogni pagina del sito. Adobe consiglia di utilizzare l’azione Carica Target con Decisioning sul dispositivo solo se è preceduta da una chiamata Target. In caso contrario, potrebbero verificarsi problemi come il ritardo della chiamata Analytics.
+Aggiungi questa azione alla regola di tag nel punto più appropriato per caricare Target con [decisioning sul dispositivo](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html?lang=it) abilitato nel contesto della regola. In questo modo viene caricata nella pagina la libreria at.js con decisioning sul dispositivo abilitato. Nella maggior parte delle implementazioni, Target deve essere caricato su ogni pagina del sito. Adobe consiglia di utilizzare l’azione Load Target con decisioning sul dispositivo solo se è preceduta da una chiamata Target. In caso contrario, potrebbero verificarsi problemi come il ritardo della chiamata Analytics.
 
-Non è necessaria alcuna configurazione.
+>[!IMPORTANT]
+>
+>Utilizza una richiesta di caricamento pagina con decisioni su dispositivo solo se è già configurata. L’aggiunta di questa azione alla regola aumenterà le dimensioni del bundle di lancio finale perché include il motore delle regole di decisioning sul dispositivo.
 
-### Aggiungi parametri a All Requests
+### Aggiungere parametri a Tutte le richieste
 
 Questo tipo di azione consente di aggiungere parametri a tutte le richieste Target. L&#39;azione Load Target deve essere utilizzata in precedenza.
 
