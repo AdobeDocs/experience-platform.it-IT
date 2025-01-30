@@ -5,9 +5,9 @@ breadcrumb-title: Guida di Query Service
 user-guide-description: Utilizza il linguaggio SQL standard per eseguire query sui dati nel data lake in Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: 20869e76976ff3868f1d4dbc7c6d97b58682e5c3
+source-git-commit: e63ecbd14db2e9e4f35fb89aaaa406a4c584416a
 workflow-type: tm+mt
-source-wordcount: '397'
+source-wordcount: '402'
 ht-degree: 21%
 
 ---
@@ -23,6 +23,7 @@ ht-degree: 21%
 - Data Distiller {#data-distiller}
    - [Panoramica](data-distiller/overview.md)
    - [Utilizzo delle licenze](data-distiller/license-usage.md)
+   - [Suggerimenti principali per massimizzare il valore](data-distiller/top-tips-to-maximize-value.md)
    - Set di dati derivati {#derived-datasets}
       - [Panoramica](data-distiller/derived-datasets/overview.md)
       - [Creare set di dati derivati con SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
@@ -43,13 +44,13 @@ ht-degree: 21%
    - [Panoramica](advanced-statistics/overview.md)
    - [Ingegneria delle funzioni](advanced-statistics/feature-engineering.md)
    - [Modelli](advanced-statistics/models.md)
-   - [Trasformazione funzionalità](advanced-statistics/feature-transformation.md)
-Implementa modelli {#implement-models}
+   - [Trasformazione delle feature](advanced-statistics/feature-transformation.md)
+   - Implementa modelli {#implement-models}
       - [Implementare modelli](advanced-statistics/implement-models/implement-models.md)
       - [Regressione](advanced-statistics/implement-models/regression.md)
       - [Classificazione](advanced-statistics/implement-models/classification.md)
       - [Clustering](advanced-statistics/implement-models/clustering.md)
-Esempi {#examples}
+   - Esempi {#examples}
       - [Filtraggio dei bot tramite statistiche e apprendimento automatico](advanced-statistics/examples/statistics-and-ml-bot-filtering.md)
       - [Prevedere l&#39;abbandono dei clienti utilizzando la regressione logistica basata su SQL](advanced-statistics/examples/predict-customer-churn.md)
 - Pubblico di Data Distiller {#data-distiller-audiences}
