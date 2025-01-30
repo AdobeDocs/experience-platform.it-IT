@@ -1,7 +1,8 @@
 ---
 title: Abilitare un centro di eccellenza utilizzando gli strumenti sandbox
 description: Abilita un centro di eccellenza utilizzando gli strumenti sandbox creando un pacchetto "sandbox d’oro" per standardizzare le best practice su più sandbox.
-source-git-commit: f0cbee2663682f0afae6d7e4b174f250fcb3df53
+exl-id: 6f242ad5-bb02-4a6d-b255-d196dd5fe4b8
+source-git-commit: d4df5606228347b5fb69fdaa24c637c329099895
 workflow-type: tm+mt
 source-wordcount: '881'
 ht-degree: 7%
@@ -12,7 +13,7 @@ ht-degree: 7%
 
 Abilita un centro di eccellenza utilizzando gli strumenti sandbox creando un pacchetto &quot;sandbox d’oro&quot; per standardizzare le best practice su più sandbox.
 
-![Panoramica sull&#39;esportazione di pacchetti tra organizzazioni diverse](../images/use-cases/packages-across-orgs.png)
+![Panoramica sull&#39;esportazione di pacchetti tra organizzazioni diverse](../images/use-cases/packages-across-orgs.png){zoomable="yes"}
 
 ## Perché considerare questo caso d’uso {#why-this-use-case}
 

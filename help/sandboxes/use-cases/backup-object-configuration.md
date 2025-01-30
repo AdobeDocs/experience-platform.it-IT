@@ -2,9 +2,9 @@
 title: Eseguire il backup delle configurazioni degli oggetti utilizzando gli strumenti sandbox
 description: Per ripristinare in modo sicuro le sandbox e aggiungere il supporto per il controllo delle versioni, esegui il backup delle configurazioni degli oggetti (o dei metadati) utilizzando pacchetti di strumenti sandbox. I pacchetti di backup impediscono la perdita di configurazioni critiche come schemi, set di dati e tipi di pubblico, soprattutto durante le iterazioni di sviluppo.
 exl-id: cccbaaf1-ee68-4a00-9a44-aa5db4a83a14
-source-git-commit: 2a700788d9b59bcdb4195e34d77eccd278803d42
+source-git-commit: d4df5606228347b5fb69fdaa24c637c329099895
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1166'
 ht-degree: 3%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 3%
 
 Per ripristinare in modo sicuro le sandbox e aggiungere il supporto per il controllo delle versioni, esegui il backup delle configurazioni degli oggetti (o dei metadati) utilizzando pacchetti di strumenti sandbox. I pacchetti di backup impediscono la perdita di configurazioni critiche come schemi, set di dati e tipi di pubblico, soprattutto durante le iterazioni di sviluppo.
 
-![Panoramica dei vantaggi offerti dagli strumenti sandbox](../images/use-cases/tooling-overview.png)
+![Panoramica dei vantaggi offerti dagli strumenti sandbox](../images/use-cases/tooling-overview.png){zoomable="yes"}
 
 ## Perché considerare questo caso d’uso {#why-this-use-case}
 
@@ -65,7 +65,7 @@ Prima di iniziare a creare il pacchetto di backup, è necessario considerare il 
 
 ### Esportare i metadati scelti in un pacchetto
 
-A questo punto, è possibile eseguire il backup della sandbox utilizzando l’interfaccia utente degli strumenti sandbox. Questo passaggio tratta sia il backup di un’intera sandbox che il backup di oggetti specifici.
+A questo punto, è possibile eseguire il backup della sandbox utilizzando l’interfaccia utente degli strumenti sandbox. Questo passaggio descrive sia il backup di un’intera sandbox che il backup di oggetti specifici.
 
 >[!NOTE]
 >
