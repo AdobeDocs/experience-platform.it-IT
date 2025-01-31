@@ -6,7 +6,7 @@ breadcrumb-title: Guida di SDK Web
 user-guide-description: Interagisci con i servizi di Experience Cloud tramite la rete Edge.
 feature: Web SDK
 role: Developer
-source-git-commit: 7231d3a5ad9553707392c32004d02e355e3c919f
+source-git-commit: d5bf1b207900009829454d0b7aa095a08c1e1718
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 23%
@@ -21,12 +21,12 @@ ht-degree: 23%
 * Installazione di Web SDK {#install}
    * [Panoramica](install/overview.md)
    * [Installare Web SDK utilizzando l’estensione tag](install/extension.md)
-   * [Installare l’SDK web utilizzando la libreria JavaScript](install/library.md)
-   * [Installare l’SDK per web utilizzando il pacchetto NPM](install/npm.md)
+   * [Installare il Web SDK utilizzando la libreria JavaScript](install/library.md)
+   * [Installare il Web SDK utilizzando il pacchetto NPM](install/npm.md)
 * Comandi {#commands}
    * configura {#configure}
       * [Panoramica](commands/configure/overview.md)
-      * [autoTrackPropositionInteractionsEnabled](commands/configure/autotrackpropositioninteractionsenabled.md)
+      * [autoCollectPropositionInteractions](commands/configure/autocollectpropositioninteractions.md)
       * [clickCollectionEnabled](commands/configure/clickcollectionenabled.md)
       * [clickCollection](commands/configure/clickcollection.md)
       * [contesto](commands/configure/context.md)
@@ -91,7 +91,7 @@ ht-degree: 23%
    * Adobe Journey Optimizer {#ajo}
       * [Panoramica](personalization/ajo/overview.md)
       * [Implementazione di un&#39;applicazione a pagina singola](personalization/ajo/web-spa-implementation.md)
-      * [Configurare il supporto per la messaggistica Web in-app in Web SDK](personalization/web-in-app-messaging.md)
+      * [Configurare il supporto per la messaggistica in-app web in Web SDK](personalization/web-in-app-messaging.md)
 
 * Consenso {#consent}
    * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
