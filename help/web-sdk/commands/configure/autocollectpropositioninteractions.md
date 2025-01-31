@@ -2,7 +2,7 @@
 title: autoCollectPropositionInteractions
 description: Scopri come configurare Experience Platform Web SDK per la raccolta automatica dei dati di collegamento.
 exl-id: c70db76a-3f2f-45a6-86ab-36efcb18d20f
-source-git-commit: 405f161dee633b7230be944cd17093616826e27f
+source-git-commit: 55c656e7fd08e98b75c20f0688a6697baf533291
 workflow-type: tm+mt
 source-wordcount: '595'
 ht-degree: 1%
@@ -123,11 +123,11 @@ alloy("sendEvent", {
 ## Abilitare il tracciamento automatico delle proposizioni e delle interazioni tramite clic attraverso l’estensione tag Web SDK {#tag-extension}
 
 1. Accedi a [experience.adobe.com](https://experience.adobe.com) utilizzando le tue credenziali Adobe ID.
-2. Passa a **Raccolta dati** > **Tag**.
-3. Seleziona la proprietà tag desiderata.
-4. Passa a **Estensioni**, quindi seleziona **Configura** nella scheda Adobe Experience Platform Web SDK.
-5. Scorri verso il basso fino alla sezione **[!UICONTROL Raccolta dati]**, quindi seleziona la casella di controllo **Abilita proposte e tracciamento collegamenti di interazione**.
-6. Seleziona **Salva**, quindi pubblica le modifiche.
+1. Passa a **Raccolta dati** > **Tag**.
+1. Seleziona la proprietà tag desiderata.
+1. Passa a **Estensioni**, quindi seleziona **Configura** nella scheda Adobe Experience Platform Web SDK.
+1. Scorri verso il basso fino alla sezione **[!UICONTROL Raccolta dati]**, quindi seleziona la casella di controllo **Abilita proposte e tracciamento collegamenti di interazione**.
+1. Seleziona **Salva**, quindi pubblica le modifiche.
 
 ## Abilitare il tracciamento automatico delle proposte e delle interazioni tramite la libreria JavaScript di Web SDK {#library}
 
