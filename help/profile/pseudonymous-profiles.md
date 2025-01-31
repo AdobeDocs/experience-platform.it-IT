@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Scadenza dati profilo pseudonimo
 description: Questo documento fornisce indicazioni generali sulla configurazione della scadenza dei dati per i profili pseudonimi in Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 9489156617f29d4aab2038b74f75a832ff4dc8eb
 workflow-type: tm+mt
-source-wordcount: '1004'
+source-wordcount: '1005'
 ht-degree: 0%
 
 ---
 
-# Scadenza dati profili pseudonimi
+# Scadenza dei dati dei profili pseudonimi
 
-In Adobe Experience Platform, puoi configurare i tempi di scadenza per i profili pseudonimi, consentendoti di rimuovere automaticamente dall’archivio profili i dati che non sono più validi o utili per i tuoi casi d’uso.
+In Adobe Experience Platform, puoi configurare i tempi di scadenza dei dati per i profili pseudonimi, consentendoti di rimuovere automaticamente dall’archivio profili i dati che non sono più validi o utili per i tuoi casi d’uso.
 
 ## Profilo pseudonimo {#pseudonymous-profile}
 
@@ -36,7 +36,7 @@ La scadenza dei dati del profilo pseudonimo non può essere configurata tramite 
 
 Nella sezione seguente sono elencate le domande frequenti relative alla scadenza dei dati dei profili pseudonimi:
 
-### Quali sono le differenze tra la scadenza dei dati del profilo pseudonimo e la scadenza dei dati dell’evento esperienza?
+### In che modo la scadenza dei dati di profilo pseudonimo differisce dalla scadenza dei dati di Experience Event?
 
 La scadenza dei dati del profilo pseudonimo e la scadenza dei dati dell’evento esperienza sono funzioni complementari.
 
@@ -60,15 +60,15 @@ La scadenza dei dati di Experience Event **only** rimuove gli eventi e **not** r
 
 ### In che modo la scadenza dei dati di profilo pseudonimo può essere utilizzata insieme alla scadenza dei dati di Experience Event?
 
-La scadenza dei dati del profilo pseudonimo e la scadenza dei dati dell’evento esperienza possono essere utilizzate per completarsi a vicenda.
+Puoi utilizzare la scadenza dei dati del profilo pseudonimo e la scadenza dei dati dell’evento esperienza per completarsi a vicenda.
 
-Devi **sempre** impostare la scadenza dei dati Experience Event nei set di dati in base alle tue esigenze di conservazione dei dati sui tuoi clienti noti. Una volta impostata la scadenza dei dati di Experience Event, puoi utilizzare la scadenza dei dati di profilo pseudonimo per rimuovere automaticamente i profili pseudonimi. In genere, il periodo di scadenza dei dati per i profili pseudonimi è inferiore al periodo di scadenza dei dati per gli eventi esperienza.
+Devi **sempre** impostare la scadenza dei dati di Experience Event nei set di dati, in base alle tue esigenze di conservazione dei dati sui tuoi clienti noti. Una volta impostata la scadenza dei dati di Experience Event, puoi utilizzare la scadenza dei dati di profilo pseudonimo per rimuovere automaticamente i profili pseudonimi. In genere, il periodo di scadenza dei dati per i profili pseudonimi è inferiore al periodo di scadenza dei dati per gli eventi esperienza.
 
 Per un caso d’uso tipico, puoi impostare la scadenza dei dati Experience Event in base ai valori dei dati utente noti e impostare la scadenza dei dati del profilo pseudonimo su una durata molto più breve per limitare l’impatto dei profili pseudonimi sulla conformità della licenza di Platform.
 
 ### Quali utenti dovrebbero utilizzare la scadenza dei dati dei profili pseudonimi?
 
-- Se utilizzi Web SDK per inviare direttamente i dati a Platform.
+- Se utilizzi Web SDK per inviare dati direttamente a Platform.
 - Se disponi di un sito web che serve in massa clienti non autenticati.
 - Se nei set di dati sono presenti conteggi di profilo eccessivi e hai confermato che tali conteggi sono dovuti a uno spazio dei nomi di identità anonimo basato su cookie.
    - Per determinare ciò, è necessario utilizzare il rapporto di sovrapposizione dello spazio dei nomi delle identità. Ulteriori informazioni su questo report sono disponibili nella sezione [report di sovrapposizione identità](./api/preview-sample-status.md#identity-overlap-report) della guida dell&#39;API per l&#39;anteprima dello stato di esempio.
