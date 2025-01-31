@@ -6,10 +6,10 @@ user-guide-description: Scopri come distribuire e gestire i tag di analisi, mark
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 82d6d2e7d0d7f0f9484c4ebcd34339fd63e04b59
+source-git-commit: 1b2f8e5a9cc85887efe9d623baa346956ae5d93d
 workflow-type: tm+mt
-source-wordcount: '778'
-ht-degree: 43%
+source-wordcount: '775'
+ht-degree: 44%
 
 ---
 
@@ -105,9 +105,9 @@ ht-degree: 43%
          * [Tipi di azioni](./extensions/client/web-sdk/action-types.md)
          * [Tipi di elementi dati](./extensions/client/web-sdk/data-element-types.md)
          * [Accesso all’ECID](./extensions/client/web-sdk/accessing-the-ecid.md)
-         * [Plug-in dell’SDK web](./extensions/client/web-sdk/web-sdk-plugins.md)
+         * [Plug-in di Web SDK](./extensions/client/web-sdk/web-sdk-plugins.md)
          * [Note sulla versione dell’estensione Web SDK](./extensions/client/web-sdk/web-sdk-ext-release-notes.md)
-         * [Note sulla versione dei plug-in SDK per web](./extensions/client/web-sdk/web-sdk-plugins-release-notes.md)
+         * [Note sulla versione dei plug-in Web SDK](./extensions/client/web-sdk/web-sdk-plugins-release-notes.md)
       * Informazioni su risorse Adobe Experience Manager {#asset-insights}
          * [Panoramica](./extensions/client/asset-insights/overview.md)
          * [Note sulla versione](./extensions/client/asset-insights/release-notes.md)
@@ -206,9 +206,8 @@ ht-degree: 43%
       * [Riproduzione Vimeo](https://exchange.adobe.com/apps/ec/108937)
       * [Dati vitali Web](https://exchange.adobe.com/apps/ec/106769)
       * [Compositore XDM](https://exchange.adobe.com/apps/ec/106062)
-      * [Punto Yahoo](https://exchange.adobe.com/apps/ec/106062)
       * [Tracciamento conversione testo](https://exchange.adobe.com/apps/ec/103174)
-      * [[!DNL Youtube] Riproduzione](https://exchange.adobe.com/apps/ec/103174)
+      * [[!DNL Youtube] Riproduzione](https://exchange.adobe.com/apps/ec/104160)
       * [!DNL YouTube] tracciamento video {#youtube}
          * [Panoramica](./extensions/client/youtube/overview.md)
          * [Note sulla versione](./extensions/client/youtube/release-notes.md)
