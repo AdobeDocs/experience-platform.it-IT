@@ -6,9 +6,9 @@ title: Risoluzione dei problemi di IA per l’analisi dei clienti
 description: Trova le risposte agli errori comuni in IA per l’analisi dei clienti.
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '1751'
+source-wordcount: '1755'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ IA per l’analisi dei clienti visualizza gli errori quando l’apprendimento de
 
 Se viene visualizzato **[!UICONTROL Non riuscito]** o **[!UICONTROL Problema di formazione]**, puoi selezionare lo stato di esecuzione per aprire un pannello laterale. Il pannello laterale contiene **[!UICONTROL Stato ultima esecuzione]** e **[!UICONTROL Dettagli ultima esecuzione]**. **[!UICONTROL Dettagli ultima esecuzione]** contiene informazioni sul motivo per cui l&#39;esecuzione non è riuscita. Nel caso in cui Customer AI non sia in grado di fornire dettagli sull’errore, contatta il supporto con il codice di errore fornito.
 
-<img src="./images/errors/last-run-details.png" width="300" /><br />
+![](./images/errors/last-run-details.png){width=300}
 
 ## Impossibile accedere ad IA per l’analisi dei clienti in incognito Chrome
 
@@ -39,7 +39,7 @@ Per risolvere questo problema è necessario aggiungere experience.adobe.com come
 
 Se ricevi l&#39;errore &quot;[!UICONTROL La qualità del modello è scarsa. È consigliabile creare una nuova app con la configurazione modificata]&quot;. Segui i passaggi consigliati di seguito per facilitare la risoluzione dei problemi.
 
-<img src="./images/errors/model-quality.png" width="300" /><br />
+![](./images/errors/model-quality.png){width=300}
 
 ### Correzione consigliata
 

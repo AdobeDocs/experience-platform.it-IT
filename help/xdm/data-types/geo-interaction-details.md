@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Tipo di dati Dettagli interazione geografica
 description: Scopri il tipo di dati XDM dei dettagli di interazione geografica.
 exl-id: c05b098b-3f12-4283-a6d5-5ebf96b9828d
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '135'
+source-wordcount: '137'
 ht-degree: 13%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 13%
 
 [!UICONTROL Dettagli interazione geografica] è un tipo di dati XDM standard che descrive lo stato corrente di inclusione in un&#39;area geografica definita.
 
-<img src="../images/data-types/geo-interaction-details.png" width="400" /><br />
+![](../images/data-types/geo-interaction-details.png){width=400}
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Tipo di dati ambiente
 description: Scopri il tipo di dati XDM per l’ambiente.
 exl-id: ec806ee5-ed65-4148-9dbe-e297d9e8cd73
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '442'
 ht-degree: 12%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 12%
 >
 >Tutti i valori devono essere allineati con il database [DeviceAtlas](https://deviceatlas.com), con licenza Adobe.
 
-<img src="../images/data-types/environment.png" width="400" /><br />
+![](../images/data-types/environment.png){width=400}
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |

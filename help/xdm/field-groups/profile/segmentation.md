@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Gruppo di campi dello schema dei dettagli dell’iscrizione al segmento
 description: Scopri il gruppo di campi dello schema Dettagli appartenenza al segmento.
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '398'
-ht-degree: 3%
+source-wordcount: '402'
+ht-degree: 2%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 3%
 >
 >Sebbene il campo `segmentMembership` debba essere aggiunto manualmente allo schema del profilo utilizzando questo gruppo di campi, non tentare di popolare o aggiornare manualmente questo campo. Il sistema aggiorna automaticamente la mappa `segmentMembership` per ciascun profilo durante l&#39;esecuzione dei processi di segmentazione.
 
-<img src="../../images/data-types/profile-segmentation.png" width="400" /><br />
+![segmentazione profilo](../../images/data-types/profile-segmentation.png){width=400}
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
