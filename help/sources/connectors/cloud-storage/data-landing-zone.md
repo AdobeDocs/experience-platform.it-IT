@@ -2,9 +2,9 @@
 title: Data Landing Zone Source
 description: Scopri come collegare Data Landing Zone a Adobe Experience Platform
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: 1530d7b9815688ab58fb6349ef77e92124741883
+source-git-commit: b9a409db2f1aee852faf9038a25236b78f76d4dd
 workflow-type: tm+mt
-source-wordcount: '1178'
+source-wordcount: '1282'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,15 @@ ht-degree: 0%
 
 [!DNL Data Landing Zone] supporta l&#39;autenticazione basata su SAS e i relativi dati sono protetti con meccanismi di protezione di archiviazione standard [!DNL Azure Blob] in modalità di riposo e transito. L&#39;autenticazione basata su SAS consente di accedere in modo sicuro al contenitore [!DNL Data Landing Zone] tramite una connessione Internet pubblica. Non sono necessarie modifiche di rete per accedere al contenitore [!DNL Data Landing Zone], pertanto non è necessario configurare elenchi consentiti o impostazioni per più aree geografiche per la rete. Experience Platform applica un tempo di scadenza di sette giorni rigoroso su tutti i file e le cartelle caricati in un contenitore [!DNL Data Landing Zone]. Tutti i file e le cartelle vengono eliminati dopo sette giorni.
 
+## Configura l&#39;origine [!DNL Data Landing Zone], ad Experience Platform in Azure {#azure}
+
+Segui i passaggi seguenti per scoprire come configurare l&#39;account [!DNL Data Landing Zone], ad Experience Platform in Azure.
+
 >[!NOTE]
 >
 >Se si desidera accedere a [!DNL Data Landing Zone] da [!DNL Azure Data Factory], è necessario creare un servizio collegato per [!DNL Data Landing Zone] utilizzando le [credenziali SAS](../../tutorials/ui/create/cloud-storage/data-landing-zone.md#retrieve-your-data-landing-zone-credentials) fornite da Experience Platform. Dopo aver creato il servizio collegato, puoi esplorare [!DNL Data Landing Zone] selezionando il percorso del contenitore invece del percorso principale predefinito.
 
-## Vincoli di denominazione per file e directory
+### Vincoli di denominazione per file e directory
 
 Di seguito è riportato un elenco di vincoli di cui è necessario tenere conto per la denominazione dei file o delle directory di archiviazione cloud.
 
@@ -34,17 +38,17 @@ Di seguito è riportato un elenco di vincoli di cui è necessario tenere conto p
 - Caratteri di percorso URL non validi non consentiti. I punti di codice come `\uE000`, sebbene validi nei nomi di file NTFS, non sono caratteri Unicode validi. Inoltre, alcuni caratteri ASCII o Unicode, come i caratteri di controllo (ad esempio da `0x00` a `0x1F`, `\u0081` e così via), non sono consentiti. Per le regole che regolano le stringhe Unicode in HTTP/1.1, vedere [RFC 2616, Sezione 2.2: Regole di base](https://www.ietf.org/rfc/rfc2616.txt) e [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
 - Non sono consentiti i seguenti nomi di file: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, carattere punto (.) e due caratteri punto (..).
 
-## Gestione dei contenuti dell’area di destinazione dati{#manage-the-contents-of-your-data-landing-zone}
+### Gestione dei contenuti dell’area di destinazione dati{#manage-the-contents-of-your-data-landing-zone}
 
 È possibile utilizzare [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/features/storage-explorer/) per gestire il contenuto del contenitore [!DNL Data Landing Zone].
 
 Nell&#39;interfaccia utente [!DNL Azure Storage Explorer], selezionare l&#39;icona di connessione nell&#39;area di navigazione a sinistra. Viene visualizzata la finestra **Seleziona risorsa** che fornisce le opzioni per la connessione. Selezionare **[!DNL Blob container]** per connettersi a [!DNL Data Landing Zone].
 
-![select-resource](../../images/tutorials/create/dlz/select-resource.png)
+![L&#39;area di lavoro della risorsa selezionata in Azure Explorer.](../../images/tutorials/create/dlz/select-resource.png)
 
 Selezionare **URL firma di accesso condiviso (SAS)** come metodo di connessione, quindi selezionare **Avanti**.
 
-![select-connection-method](../../images/tutorials/create/dlz/select-connection-method.png)
+![Il metodo di connessione selezionato in Azure Explorer, con la firma di accesso condiviso selezionata.](../../images/tutorials/create/dlz/select-connection-method.png)
 
 Dopo aver selezionato il metodo di connessione, è necessario fornire **nome visualizzato** e l&#39;URL SAS del contenitore **[!DNL Blob]** che corrisponde al contenitore [!DNL Data Landing Zone].
 
@@ -54,19 +58,19 @@ Dopo aver selezionato il metodo di connessione, è necessario fornire **nome vis
 
 Fornisci l&#39;URL SAS [!DNL Data Landing Zone] e seleziona **Avanti**
 
-![enter-connection-info](../../images/tutorials/create/dlz/enter-connection-info.png)
+![Immettere l&#39;area di lavoro delle informazioni di connessione in Azure Explorer in cui vengono immessi il nome visualizzato e l&#39;URL SAS.](../../images/tutorials/create/dlz/enter-connection-info.png)
 
 Viene visualizzata la finestra **Riepilogo** che fornisce una panoramica delle impostazioni, incluse informazioni sull&#39;endpoint [!DNL Blob] e sulle autorizzazioni. Al termine, selezionare **Connetti**.
 
-![riepilogo](../../images/tutorials/create/dlz/summary.png)
+![L&#39;area di lavoro di riepilogo di Azure Explorer che ridefinisce le impostazioni della connessione delle risorse.](../../images/tutorials/create/dlz/summary.png)
 
 Una connessione riuscita aggiorna l&#39;interfaccia utente di [!DNL Azure Storage Explorer] con il contenitore [!DNL Data Landing Zone].
 
-![dlz-user-container](../../images/tutorials/create/dlz/dlz-user-container.png)
+![Area di lavoro di navigazione dell&#39;area di destinazione dati in Azure Explorer.](../../images/tutorials/create/dlz/dlz-user-container.png)
 
 Con il contenitore [!DNL Data Landing Zone] connesso a [!DNL Azure Storage Explorer], ora puoi iniziare a caricare i file nel contenitore [!DNL Data Landing Zone]. Per caricare, selezionare **Carica**, quindi selezionare **Carica file**.
 
-![carica](../../images/tutorials/create/dlz/upload.png)
+![Area di lavoro di caricamento file di Azure Explorer.](../../images/tutorials/create/dlz/upload.png)
 
 Dopo aver selezionato il file da caricare, è necessario identificare il tipo [!DNL Blob] che si desidera caricare e la directory di destinazione desiderata. Al termine, selezionare **Carica**.
 
@@ -75,9 +79,9 @@ Dopo aver selezionato il file da caricare, è necessario identificare il tipo [!
 | Blocca [!DNL Blob] | Il blocco [!DNL Blobs] è ottimizzato per il caricamento di grandi quantità di dati in modo efficiente. Blocco [!DNL Blobs]: opzione predefinita per [!DNL Data Landing Zone]. |
 | Aggiungi [!DNL Blob] | Aggiunta di [!DNL Blobs] ottimizzata per l&#39;aggiunta di dati alla fine del file. |
 
-![upload-files](../../images/tutorials/create/dlz/upload-files.png)
+![Finestra Carica file di Azure Explorer in cui vengono visualizzati i file selezionati, il tipo di BLOB e la categoria di destinazione.](../../images/tutorials/create/dlz/upload-files.png)
 
-## Carica i file in [!DNL Data Landing Zone] tramite l&#39;interfaccia della riga di comando
+### Carica i file in [!DNL Data Landing Zone] tramite l&#39;interfaccia della riga di comando
 
 È inoltre possibile utilizzare l&#39;interfaccia della riga di comando del dispositivo e accedere ai file di caricamento in [!DNL Data Landing Zone].
 

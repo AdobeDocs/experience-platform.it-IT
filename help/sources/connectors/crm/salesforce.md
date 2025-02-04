@@ -2,9 +2,9 @@
 title: Panoramica di Salesforce Source Connector
 description: Scopri come collegare Salesforce a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: f62e13e97cc82fef759d06b94337f4cc25d4fb10
+source-git-commit: 77941e08df893fab6dfdaf987c56c4d5a3fd4757
 workflow-type: tm+mt
-source-wordcount: '1533'
+source-wordcount: '1560'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,15 @@ Adobe Experience Platform consente di acquisire i dati da origini esterne e allo
 
 Experience Platform fornisce supporto per l’acquisizione di dati da un sistema CRM di terze parti. Il supporto per i provider di gestione delle relazioni con i clienti include [!DNL Salesforce].
 
-## ELENCO CONSENTITI di indirizzo IP
+## Configura l&#39;origine [!DNL Salesforce], ad Experience Platform in Azure {#azure}
+
+Segui i passaggi seguenti per scoprire come configurare l&#39;account [!DNL Salesforce], ad Experience Platform in Azure.
+
+### ELENCO CONSENTITI di indirizzo IP
 
 Prima di utilizzare i connettori di origine, è necessario aggiungere un elenco di indirizzi IP a un elenco consentiti. La mancata aggiunta all’elenco consentiti degli indirizzi IP specifici per l’area geografica potrebbe causare errori o prestazioni non ottimali durante l’utilizzo delle origini. Per ulteriori informazioni, vedere la pagina [elenco consentiti indirizzo IP](../../ip-address-allow-list.md).
 
-## Mappatura campo da [!DNL Salesforce] a XDM
+### Mappatura campo da [!DNL Salesforce] a XDM
 
 Per stabilire una connessione di origine tra [!DNL Salesforce] e Platform, i campi dati di origine [!DNL Salesforce] devono essere mappati sui campi XDM di destinazione appropriati prima di essere acquisiti in Platform.
 
@@ -38,7 +42,7 @@ Per informazioni dettagliate sulle regole di mappatura dei campi tra [!DNL Sales
 - [Membri della campagna](../adobe-applications/mapping/salesforce.md#campaign-member)
 - [Relazione contatto account](../adobe-applications/mapping/salesforce.md#account-contact-relation)
 
-## Configurare l&#39;utilità di generazione automatica dello spazio dei nomi e dello schema [!DNL Salesforce]
+### Configurare l&#39;utilità di generazione automatica dello spazio dei nomi e dello schema [!DNL Salesforce]
 
 Per utilizzare l&#39;origine [!DNL Salesforce] come parte di [!DNL B2B-CDP], è necessario prima impostare un&#39;utilità [!DNL Postman] per generare automaticamente gli spazi dei nomi e gli schemi [!DNL Salesforce]. La documentazione seguente fornisce ulteriori informazioni sulla configurazione dell&#39;utilità [!DNL Postman]:
 
@@ -271,7 +275,7 @@ Dopo aver completato la configurazione dei prerequisiti per l&#39;account [!DNL 
 
 La documentazione seguente fornisce informazioni su come connettere [!DNL Salesforce] a Platform tramite API o tramite l&#39;interfaccia utente:
 
-- [Creare una connessione di base Salesforce utilizzando l’API del servizio Flusso](../../tutorials/api/create/crm/salesforce.md)
+- [Connettere Salesforce ad Experience Platform utilizzando l’API del servizio Flow](../../tutorials/api/create/crm/salesforce.md)
 - [Esplorare le tabelle di dati utilizzando l’API del servizio Flusso](../../tutorials/api/explore/tabular.md)
 - [Creare un flusso di dati per un’origine CRM utilizzando l’API del servizio Flusso](../../tutorials/api/collect/crm.md)
 
