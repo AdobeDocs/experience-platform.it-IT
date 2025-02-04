@@ -3,10 +3,10 @@ title: Guida introduttiva all’inoltro degli eventi
 description: Segui questa esercitazione passo per passo per iniziare a utilizzare l’inoltro degli eventi in Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 0a95d09eb1ce59e45d52372c4b08725c009001c3
+source-git-commit: e9f98e1f94aa6ae2ecf29940912d296813611d4c
 workflow-type: tm+mt
 source-wordcount: '887'
-ht-degree: 74%
+ht-degree: 76%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 74%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Per utilizzare Adobe Experience Platform, i dati devono essere inviati ad Adobe Experience Platform Edge Network utilizzando una o più delle tre opzioni seguenti:
 
@@ -33,9 +33,9 @@ Dopo aver inviato i dati a Edge Network, è possibile attivare le soluzioni Adob
 
 ## Prerequisiti
 
-* Adobe Real-Time CDP Connections, Prime o Ultimate (contatta il team del tuo account Adobe per informazioni sui prezzi)
+* Connessioni Adobe Real-Time CDP, Prime o Ultimate (contatta il team del tuo account Adobe per informazioni sui prezzi)
 * Inoltro di eventi in Adobe Experience Platform
-* Adobe Experience Platform Web SDK, Mobile SDK o Edge Network Server API configurati per inviare dati ad Edge Network
+* Adobe Experience Platform Web SDK, Mobile SDK o Edge Network Server API configurate per inviare dati ad Edge Network
 * Mappare i dati su Experience Data Model (XDM) (la mappatura può essere eseguita utilizzando i tag)
 
 ## Creare uno schema XDM
@@ -69,7 +69,7 @@ Nell&#39;area di lavoro **[!UICONTROL Tag]** creare una proprietà di tipo **[!U
 1. Seleziona **[!UICONTROL Salva]**.
 
 Dopo aver creato la proprietà, passa alla scheda **[!UICONTROL Ambienti]** per la nuova proprietà e annota
-gli ID dell’ambiente. Se l&#39;organizzazione Adobe utilizzata nel flusso di dati è diversa dall&#39;organizzazione Adobe utilizzata nell&#39;inoltro degli eventi, è possibile copiare l&#39;ID ambiente dalla scheda **[!UICONTROL Ambienti]** e incollarlo durante la creazione di un flusso di dati. In alternativa, è possibile selezionare l’ambiente da un menu a discesa.
+gli ID dell’ambiente. Se l&#39;organizzazione di Adobe Adobe utilizzata nel flusso di dati è diversa da quella utilizzata nell&#39;inoltro degli eventi, è possibile copiare l&#39;ID ambiente dalla scheda **[!UICONTROL Ambienti]** e incollarlo durante la creazione di un flusso di dati. In alternativa, è possibile selezionare l’ambiente da un menu a discesa.
 
 ## Creare un flusso di dati
 
@@ -82,7 +82,7 @@ La descrizione è utile per identificare le configurazioni, qualora ne siano ele
 
 1. Seleziona **[!UICONTROL Salva]**.
 
-## Abilitare l’inoltro degli eventi
+## Abilitare l’inoltro degli eventi {#enable-event-forwarding}
 
 Quindi configura Edge Network per inviare i dati all’inoltro di eventi e ad altri prodotti Adobe.
 
