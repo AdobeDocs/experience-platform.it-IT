@@ -2,7 +2,7 @@
 title: Dati di identità in Web SDK
 description: Scopri come recuperare e gestire gli ID Adobe Experience Cloud (ECID) utilizzando Adobe Experience Platform Web SDK.
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: c99831cf2bb1b862d65851701b38c6d3dfe99000
+source-git-commit: 3724c43090e37d21384e9dfe45e60ee2eec68a81
 workflow-type: tm+mt
 source-wordcount: '1554'
 ht-degree: 0%
@@ -14,18 +14,18 @@ ht-degree: 0%
 
 Adobe Experience Platform Web SDK utilizza [Adobe Experience Cloud ID (ECID)](../../identity-service/features/ecid.md) per monitorare il comportamento dei visitatori. Utilizzando [!DNL ECIDs], puoi verificare che ogni dispositivo abbia un identificatore univoco che può persistere in più sessioni, collegando a un dispositivo specifico tutti gli hit che si verificano durante e tra sessioni web.
 
-Questo documento fornisce una panoramica su come gestire [!DNL ECIDs] e [!DNL CORE IDs] tramite Web SDK.
+In questo documento viene fornita una panoramica sulla gestione di [!DNL ECIDs] e [!DNL CORE IDs] tramite Web SDK.
 
 ## Tracciamento degli ECID tramite Web SDK {#tracking-ecids-web-sdk}
 
-L&#39;SDK Web assegna e tiene traccia di [!DNL ECIDs] utilizzando i cookie, con più metodi disponibili per configurare la modalità di generazione di questi cookie.
+Il Web SDK assegna e tiene traccia di [!DNL ECIDs] utilizzando i cookie, con più metodi disponibili per configurare la modalità di generazione di questi cookie.
 
 Quando un nuovo utente arriva sul tuo sito Web, il [servizio Adobe Experience Cloud Identity](../../identity-service/home.md) tenta di impostare un cookie di identificazione del dispositivo per tale utente.
 
 * Per i nuovi visitatori, viene generato un [!DNL ECID] che viene restituito nella prima risposta dall&#39;Edge Network di Experience Platform.
 * Per i visitatori di ritorno, [!DNL ECID] viene recuperato dal cookie `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` e aggiunto al payload della richiesta dall&#39;Edge Network.
 
-Una volta impostato il cookie contenente [!DNL ECID], ogni richiesta successiva generata da Web SDK include un [!DNL ECID] codificato nel cookie `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity`.
+Una volta impostato il cookie contenente [!DNL ECID], ogni richiesta successiva generata dal Web SDK include un [!DNL ECID] codificato nel cookie `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity`.
 
 Quando si utilizzano i cookie per l’identificazione del dispositivo, è possibile interagire con l’Edge Network in due modi:
 
@@ -148,7 +148,7 @@ alloy("sendEvent", {
 
 >[!NOTE]
 >
->L&#39;Adobe consiglia di inviare spazi dei nomi che rappresentano una persona, ad esempio `CRMID`, come identità primaria.
+>Adobe consiglia di inviare spazi dei nomi che rappresentano una persona, ad esempio `CRMID`, come identità primaria.
 
 
 Ogni proprietà all&#39;interno di `identityMap` rappresenta identità appartenenti a un particolare [spazio dei nomi identità](../../identity-service/features/namespaces.md). Il nome della proprietà deve essere il simbolo dello spazio dei nomi dell&#39;identità, che puoi trovare elencato nell&#39;interfaccia utente di Adobe Experience Platform in &quot;[!UICONTROL Identities]&quot;. Il valore della proprietà deve essere un array di identità relative a tale spazio dei nomi di identità.
@@ -171,9 +171,9 @@ Se si utilizza il campo `identityMap` per identificare dispositivi o utenti, si 
 
 Durante la migrazione da utilizzando l’API visitatore, puoi anche eseguire la migrazione dei cookie AMCV esistenti. Per abilitare la migrazione ECID, imposta il parametro `idMigrationEnabled` nella configurazione. La migrazione degli ID abilita i seguenti casi d’uso:
 
-* Quando alcune pagine di un dominio utilizzano l’API Visitor e altre pagine utilizzano questo SDK. Per supportare questo caso, l’SDK legge i cookie AMCV esistenti e scrive un nuovo cookie con l’ECID esistente. Inoltre, l&#39;SDK scrive i cookie AMCV in modo che, se l&#39;ECID viene ottenuto per primo su una pagina instrumentata con l&#39;SDK, le pagine successive instrumentate con l&#39;API visitatore abbiano lo stesso ECID.
-* Quando Adobe Experience Platform Web SDK è configurato in una pagina che dispone anche dell’API visitatore. Per supportare questo caso, se il cookie AMCV non è impostato, l&#39;SDK cerca l&#39;API visitatore nella pagina e la chiama per ottenere l&#39;ECID.
-* Quando l’intero sito utilizza Adobe Experience Platform Web SDK e non dispone dell’API visitatore, è utile migrare gli ECID in modo che vengano conservate le informazioni sul visitatore restituite. Dopo che l&#39;SDK è stato distribuito con `idMigrationEnabled` per un certo periodo di tempo in modo che la maggior parte dei cookie del visitatore vengano migrati, l&#39;impostazione può essere disattivata.
+* Quando alcune pagine di un dominio utilizzano l’API Visitor e altre pagine utilizzano questo SDK. Per supportare questo caso, SDK legge i cookie AMCV esistenti e scrive un nuovo cookie con l’ECID esistente. Inoltre, SDK scrive i cookie AMCV in modo che, se l’ECID viene ottenuto per primo su una pagina instrumentata con SDK, le pagine successive instrumentate con API visitatore abbiano lo stesso ECID.
+* Quando Adobe Experience Platform Web SDK è configurato in una pagina che dispone anche dell’API visitatore. Per supportare questo caso, se il cookie AMCV non è impostato, SDK cerca l&#39;API visitatore nella pagina e la chiama per ottenere l&#39;ECID.
+* Quando l’intero sito utilizza Adobe Experience Platform Web SDK e non dispone dell’API visitatore, è utile migrare gli ECID in modo che vengano conservate le informazioni sul visitatore restituite. Dopo che SDK è stato distribuito con `idMigrationEnabled` per un certo periodo di tempo in modo che la maggior parte dei cookie del visitatore vengano migrati, l&#39;impostazione può essere disattivata.
 
 ### Aggiornamento delle caratteristiche per la migrazione
 
@@ -181,4 +181,4 @@ Quando si inviano dati in formato XDM a Audience Manager, questi devono essere c
 
 ## Utilizzo nell’inoltro degli eventi
 
-Se al momento hai abilitato [inoltro eventi](../../tags/ui/event-forwarding/overview.md) e utilizzi `appmeasurement.js` e `visitor.js`, puoi mantenere abilitata la funzione di inoltro eventi e non si verificheranno problemi. Nel back-end, Adobe recupera tutti i segmenti AAM e li aggiunge alla chiamata ad Analytics. Se la chiamata ad Analytics contiene tali segmenti, Analytics non chiamerà Audience Manager per inoltrare alcun dato, quindi non esiste una doppia raccolta di dati. Inoltre, non è necessario usare il suggerimento posizione quando si utilizza l’SDK per web, in quanto nel back-end vengono chiamati gli stessi endpoint di segmentazione.
+Se al momento hai abilitato [inoltro eventi](../../tags/ui/event-forwarding/overview.md) e utilizzi `appmeasurement.js` e `visitor.js`, puoi mantenere abilitata la funzione di inoltro eventi e non si verificheranno problemi. Nel back-end, Adobe recupera tutti i segmenti AAM e li aggiunge alla chiamata ad Analytics. Se la chiamata ad Analytics contiene tali segmenti, Analytics non chiamerà Audience Manager per inoltrare alcun dato, quindi non esiste una doppia raccolta di dati. Inoltre, non è necessario utilizzare il suggerimento posizione quando si utilizza il Web SDK, in quanto nel back-end vengono chiamati gli stessi endpoint di segmentazione.
