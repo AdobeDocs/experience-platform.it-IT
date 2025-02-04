@@ -3,14 +3,20 @@ keywords: Experience Platform;home;argomenti popolari;controllo degli accessi;co
 title: Autorizzazioni per la gestione dei ruoli di controllo dell'accesso basato su attributi
 description: Questo documento fornisce informazioni sulla configurazione delle autorizzazioni per un ruolo tramite l’interfaccia Autorizzazioni in Adobe Experience Cloud
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 0c275dc18dac101455f77aa58d33f0808122b77f
+source-git-commit: 207317d16a21cc2461ebd3f7867735735227c173
 workflow-type: tm+mt
-source-wordcount: '1476'
-ht-degree: 1%
+source-wordcount: '1608'
+ht-degree: 4%
 
 ---
 
-# Gestire le autorizzazioni per un ruolo
+# Gestire le autorizzazioni per un ruolo {#manage-role-permissions}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_about"
+>title="Cosa sono i ruoli?"
+>abstract="I ruoli definiscono l’accesso di un amministratore, uno specialista o un utente finale alle risorse della tua organizzazione. Classificano gli utenti che interagiscono con l’istanza Platform e sono gli elementi costitutivi dei criteri di controllo degli accessi. Un ruolo dispone di un determinato set di autorizzazioni e i membri dell’organizzazione possono essere assegnati a uno o più ruoli, a seconda dell’ambito di accesso di visualizzazione o scrittura necessario."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=it" text="Gestire i ruoli"
 
 >[!IMPORTANT]
 >
@@ -41,7 +47,14 @@ Per rimuovere un filtro, seleziona la &quot;X&quot; sull&#39;icona della pillola
 
 ![Dashboard dei ruoli nell&#39;interfaccia utente delle autorizzazioni con le selezioni X e Cancella tutte evidenziate nei filtri selezionati.](../../images/flac-ui/flac-clear-filters.png)
 
-## Dettagli ruolo
+## Dettagli ruolo {#role-details}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_details"
+>title="Panoramica del ruolo"
+>abstract="La finestra di dialogo per panoramica sul ruolo visualizza i dettagli del ruolo, incluse le risorse e le sandbox a cui un determinato ruolo può accedere. Per gestire etichette, utenti, gruppi di utenti e credenziali API per il ruolo, vai alla scheda corrispondente nell’area di lavoro del ruolo."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-labels-for-a-role" text="Gestire le etichette per un ruolo"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-users-for-a-role" text="Gestire gli utenti per un ruolo"
 
 Seleziona il ruolo dalla scheda **[!UICONTROL Ruoli]**, che aprirà la dashboard [!UICONTROL Dettagli] del ruolo.
 

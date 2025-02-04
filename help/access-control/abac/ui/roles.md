@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;controllo degli accessi;co
 title: Creazione di un ruolo tramite il controllo degli accessi basato su attributi
 description: Questo documento fornisce informazioni sulla gestione dei ruoli tramite l’interfaccia Autorizzazioni in Adobe Experience Cloud
 exl-id: 85699716-339d-4992-8390-95563c7ea7fe
-source-git-commit: d8f72bb5ae56daf5a41c763f821ca6306514bc48
+source-git-commit: 74980c6108a32ec6736ab5892d89590e04e8a500
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '618'
 ht-degree: 7%
 
 ---
@@ -14,7 +14,14 @@ ht-degree: 7%
 
 I ruoli definiscono l’accesso di un amministratore, uno specialista o un utente finale alle risorse della tua organizzazione. In un ambiente di controllo degli accessi basato su ruoli, il provisioning degli accessi utente è raggruppato in base a responsabilità e esigenze comuni. Un ruolo dispone di un determinato set di autorizzazioni e i membri dell’organizzazione possono essere assegnati a uno o più ruoli, a seconda dell’ambito di accesso di visualizzazione o scrittura necessario.
 
-## Creare un nuovo ruolo
+## Creare un nuovo ruolo {#create-new-role}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_about_create"
+>title="Creare un nuovo ruolo"
+>abstract="Crea nuovi ruoli per categorizzare meglio gli utenti che interagiscono con l’istanza Platform. Ad esempio, puoi creare un ruolo per un team di marketing interno e applicare a tale ruolo l’etichetta RHD (Regulated Health Data), consentendo al team di marketing interno di accedere a PHI (Protected Health Information). In alternativa, è possibile creare un ruolo per un&#39;agenzia esterna e negare a tale ruolo l&#39;accesso ai dati PHI non applicando l&#39;etichetta RHD a tale ruolo."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=it" text="Gestire un ruolo"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/end-to-end-guide#label-roles" text="Applicare etichette a un ruolo"
 
 Per creare un nuovo ruolo, seleziona la scheda **[!UICONTROL Ruoli]** nella barra laterale e seleziona **[!UICONTROL Crea ruolo]**.
 
