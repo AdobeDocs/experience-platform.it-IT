@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creare e modificare gli schemi nell’interfaccia utente
 description: Scopri le nozioni di base sulla creazione e la modifica degli schemi nell’interfaccia utente di Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 02b709c01347c1d03f870132dff437b97f239a9c
+source-git-commit: 24b26e256fb346ccd1a03984f3e0d199c640159c
 workflow-type: tm+mt
-source-wordcount: '4056'
+source-wordcount: '4072'
 ht-degree: 1%
 
 ---
@@ -354,7 +354,7 @@ Tieni presente che i nomi visualizzati dei campi che appartengono a classi o gru
 >
 Dopo aver apportato modifiche ai nomi visualizzati dei campi di uno schema, tali modifiche vengono immediatamente applicate a tutti i set di dati esistenti basati su tale schema.
 
-Per modificare il nome visualizzato di un campo schema, seleziona il campo nell’area di lavoro. Nella barra a destra, specifica il nuovo nome in **[!UICONTROL Nome visualizzato]**.
+Modifica i nomi dei campi con i nomi visualizzati attivando **[!UICONTROL Mostra nomi visualizzati per i campi]**. Per modificare il nome visualizzato di un campo schema, seleziona il campo nell’area di lavoro. Nella barra a destra, specifica il nuovo nome in **[!UICONTROL Nome visualizzato]**.
 
 ![](../../images/ui/resources/schemas/display-name.png)
 
