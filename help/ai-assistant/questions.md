@@ -2,10 +2,10 @@
 title: Guida alle domande per l’Assistente AI
 description: Leggi questo documento per scoprire alcune domande di esempio che puoi utilizzare quando esegui una query sull’Assistente AI.
 exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
-source-git-commit: 0926a0e8c7ae560bf5f4f9ff6853b191af047738
+source-git-commit: 7268895d0b1924f9d3e7cee24e549c79245ef099
 workflow-type: tm+mt
-source-wordcount: '1519'
-ht-degree: 3%
+source-wordcount: '2105'
+ht-degree: 2%
 
 ---
 
@@ -115,6 +115,75 @@ Le tabelle seguenti descrivono le best practice che è possibile seguire quando 
 | Omettere criteri o parametri. | Mostra i set di dati. |
 
 {style="table-layout:auto"}
+
+## Osservabilità del set di dati {#dataset-observability}
+
+L’Assistente AI ora può rispondere a domande su metriche specifiche dei set di dati, come le dimensioni di archiviazione e il conteggio delle righe.
+
+* Quali sono i set di dati più grandi in base alle dimensioni?
+* Qual è il set di dati più grande per righe?
+* Quanti set di dati sono vuoti?
+* Quali set di dati sono vuoti?
+
+Inoltre, puoi trasmettere un intento simile attraverso una serie di varianti diverse alle quattro domande sopra citate.
+
++++Seleziona per visualizzare le varianti accettate delle domande sull’osservabilità dei set di dati
+
+* Quali sono i primi cinque set di dati in base alle dimensioni?
+* Quale set di dati ha il maggior numero di righe?
+* Quanti set di dati non contengono dati?
+* Elencare i set di dati con dimensioni superiori a 10 MB?
+* Elencare i set di dati con righe inferiori a 10.
+* Puoi mostrarmi i set di dati completamente vuoti?
+* Qual è il set di dati più grande in base alle dimensioni di archiviazione?
+* Qual è il set di dati più piccolo in termini di conteggio delle righe?
+* Quanti dei miei set di dati contengono dati e quanti sono vuoti?
+* Qual è il conteggio delle righe per il set di dati denominato {DATASET_NAME}?
+* Come si confronta la dimensione di {DATASET_NAME} con gli altri set di dati?
+* Qual è la dimensione di {DATASET_NAME}?
+* Quante righe ha {DATASET_NAME}?
+* Quali sono le dimensioni e il numero di righe di {DATASET_NAME}?
+* È possibile elencare i set di dati più grandi e più piccoli in base alle dimensioni di archiviazione?
+
++++
+
+Puoi anche perfezionare le domande sull’osservabilità dei dati con un qualificatore per filtrare la query per un determinato periodo di tempo:
+
+* Set di dati che ricevono batch negli ultimi (x) giorni
+* I set di dati non ricevono batch negli ultimi (x) giorni
+* Set di dati con il maggior numero di dati acquisiti negli ultimi (x) giorni
+* Conteggio dei record per un set di dati specifico negli ultimi (x) giorni
+
++++Seleziona per visualizzare le varianti accettate delle domande sull’osservabilità dei set di dati
+
+* Quanti set di dati hanno ricevuto batch negli ultimi (x) giorni?
+* Quali set di dati hanno ricevuto batch negli ultimi (x) giorni?
+* È possibile elencare i set di dati con dati acquisiti negli ultimi (x) giorni?
+* Quanti set di dati hanno ricevuto nuovi batch nei giorni (x) precedenti?
+* Quali sono i set di dati aggiornati con i nuovi dati negli ultimi (x) giorni?
+* Elenca i set di dati che hanno avuto attività batch negli ultimi (x) giorni.
+* Quanti set di dati non hanno ricevuto batch negli ultimi (x) giorni?
+* Quali set di dati non hanno ricevuto batch negli ultimi (x) giorni?
+* È possibile identificare i set di dati senza acquisizione di dati negli ultimi (x) giorni?
+* Quanti set di dati non hanno ricevuto aggiornamenti negli ultimi (x) giorni?
+* Quali set di dati sono stati inattivi negli ultimi (x) giorni?
+* Elenca i set di dati che non hanno ottenuto nuovi batch negli ultimi (x) giorni.
+* Quando è stata l’ultima volta che i dati sono stati acquisiti sul set di dati (x)?
+* Quali sono i primi 10 set di dati in cui è stato acquisito il maggior numero di dati negli ultimi (x) giorni?
+* Quali sono i primi 10 set di dati per volume di dati acquisiti negli ultimi (x) giorni?
+* Quali 10 set di dati hanno avuto l’acquisizione di dati più grande negli ultimi (x) giorni?
+* Mostra i primi 10 set di dati con l’acquisizione di dati più elevata nei giorni (x) precedenti.
+* Quali sono i set di dati principali per dati ricevuti negli ultimi (x) giorni?
+* Elenca i primi 10 set di dati che hanno acquisito più dati negli ultimi (x) giorni.
+* Quanti record sono stati ricevuti nel set di dati (x) negli ultimi (y) giorni?
+* Quanti record ha ricevuto il set di dati (x) negli ultimi (y) giorni?
+* Qual è il conteggio dei record acquisiti per il set di dati (x) negli ultimi (y) giorni?
+* È possibile fornire il numero di record aggiunti al set di dati (x) negli ultimi (y) giorni?
+* Quanti dati sono stati ricevuti dal set di dati (x) negli ultimi (y) giorni?
+* Qual è il volume di record acquisiti per il set di dati (x) nei giorni (y) precedenti?
+
++++
+
 
 ## Esempi di domande non supportate {#unsupported-questions}
 
