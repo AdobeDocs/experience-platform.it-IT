@@ -2,10 +2,10 @@
 title: Panoramica dell’Assistente AI in Adobe Experience Platform
 description: Scopri l’Assistente IA, le relative sfaccettature e i casi di utilizzo, e come utilizzarlo per accelerare il flusso di lavoro con Adobe Experience Platform e Real-time Customer Data Platform.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 1910ac68be2c154467d250a614d0d13d62ef6875
+source-git-commit: 9a10db0da1985c5ccaaeb84e040eea9e76ec1ae4
 workflow-type: tm+mt
-source-wordcount: '938'
-ht-degree: 15%
+source-wordcount: '950'
+ht-degree: 14%
 
 ---
 
@@ -91,6 +91,10 @@ Puoi porre domande all’Assistente AI sulle informazioni operative nei seguenti
 {style="table-layout:auto"}
 
 Per le domande sulle informazioni operative, le risposte potrebbero non riflettere lo stato corrente dell’interfaccia utente. I dati che supportano queste domande vengono aggiornati una volta ogni 24 ore. Ad esempio, le modifiche apportate dagli utenti in Real-Time CDP durante il giorno vengono sincronizzate con gli archivi dati di notte e quindi diventano disponibili per le domande degli utenti di mattina. Dovrai accedere a una sandbox per informazioni su dati specifici relativi agli oggetti.
+
+Per ulteriori informazioni sulle informazioni operative di AI Assistant, guarda il video seguente:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3444031?learn=on&enablevpops)
 
 ### Ambito della funzione {#feature-scope}
 
