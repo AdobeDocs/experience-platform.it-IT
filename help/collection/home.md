@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Panoramica sulla raccolta dati
 description: Scopri le varie tecnologie coinvolte nella raccolta di dati sulle esperienze dei clienti in Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: b8332686043311c4dd3afeff12300fbd2827498c
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '472'
 ht-degree: 5%
 
 ---
 
 # Panoramica sulla raccolta dati
 
-Adobe Experience Platform fornisce una suite di tecnologie che consente di raccogliere i dati sull’esperienza del cliente da origini lato client e inviarli all’Edge Network di Adobe Experience Platform, dove possono essere arricchiti, trasformati e distribuiti in pochi secondi a destinazioni Adobi o non Adobi.
+Adobe Experience Platform fornisce una suite di tecnologie che consente di raccogliere i dati sull’esperienza del cliente da origini lato client e inviarli all’Edge Network di Adobe Experience Platform, dove possono essere arricchiti, trasformati e distribuiti in pochi secondi a destinazioni Adobe o non Adobe.
 
 La raccolta dei dati è supportata per le seguenti origini lato client:
 
@@ -34,15 +34,15 @@ La raccolta dei dati si concentra sulla reperibilità e sull’accessibilità de
 * [Experience Platform Assurance](../assurance/home.md)
 
 
-Questa guida fornisce un’introduzione di alto livello alla raccolta dei dati e spiega come funziona l’invio di dati a prodotti Adobe Experience Cloud e applicazioni non Adobi tramite l’Edge Network di Platform.
+Questa guida fornisce un’introduzione di alto livello alla raccolta dei dati e spiega come funziona l’invio di dati a prodotti Adobe Experience Cloud e applicazioni non Adobe tramite l’Edge Network della piattaforma.
 
 ## Tag, Web SDK e Mobile SDK
 
-Platform Web SDK e Platform Mobile SDK comprimono tutte le librerie di prodotti di Adobe in un unico kit di sviluppo, rispettivamente per le piattaforme web e mobili. Questi possono essere implementati utilizzando codice non elaborato o utilizzando [tag](../tags/home.md) tramite l&#39;interfaccia utente di Data Collection o Adobe Experience Platform.
+Platform Web SDK e Platform Mobile SDK comprimono tutte le librerie di prodotti Adobe in un unico kit di sviluppo, rispettivamente per le piattaforme web e mobili. Questi possono essere implementati utilizzando codice non elaborato o utilizzando [tag](../tags/home.md) tramite l&#39;interfaccia utente di Data Collection o Adobe Experience Platform.
 
 La compressione di queste librerie velocizza la raccolta dei dati e consolida le operazioni in un unico flusso dai dispositivi lato client all’Edge Network della piattaforma.
 
-![Tag, Web SDK, Mobile SDK](./images/home/tags-sdks.png)
+![Tag, Web SDK, SDK mobile](./images/home/tags-sdks.png)
 
 ## Edge Network della piattaforma e flussi di dati {#edge}
 
@@ -51,10 +51,6 @@ Platform Edge Network è una rete di server distribuita a livello globale, veloc
 Inoltre, gli stream di dati sono integrati con diverse funzionalità di Platform che consentono di garantire che tutti i dati sensibili che invii siano gestiti in modo appropriato in conformità alle politiche organizzative e alle normative legali. Per ulteriori informazioni, consulta la sezione sulla gestione di [dati sensibili](../datastreams/overview.md#sensitive) nella documentazione dei flussi di dati.
 
 ![Flussi di dati e soluzioni Adobe](./images/home/adobe-solutions.png)
-
->[!NOTE]
->
->Per un&#39;introduzione di alto livello all&#39;Edge Network di Platform, consulta la [presentazione interattiva del prodotto](https://adobe-ideacloud.forgedx.com/adobe-adobe-edge-collection/adobe-experience-edge/public/mx?SUID=hgb1a48ICSCpbM6MzBYHbxnsh9DgjUy1).
 
 ## Inoltro eventi
 
@@ -68,7 +64,7 @@ Inoltre, gli stream di dati sono integrati con diverse funzionalità di Platform
 
 ## Passaggi successivi
 
-Questo documento fornisce una panoramica di alto livello sul funzionamento della raccolta dei dati per automatizzare il processo di invio dei dati sulla customer experience raccolti ai prodotti Adobe e alle destinazioni di terze parti.
+Questo documento fornisce una panoramica di alto livello sul funzionamento della raccolta dei dati per automatizzare il processo di invio dei dati raccolti sull’esperienza del cliente ai prodotti Adobe e alle destinazioni di terze parti.
 
 ![Framework raccolta dati](./images/home/collection.png)
 
