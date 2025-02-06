@@ -3,10 +3,10 @@ title: Esportazione di oggetti array da Real-Time CDP a destinazioni di archivia
 type: Tutorial
 description: Scopri come utilizzare i campi calcolati per esportare gli array da Real-Time CDP a destinazioni di archiviazione cloud come stringhe.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: a99fc58b8296b2b9ce6e30d14857529570cd3e8a
+source-git-commit: 6b182df562ea59d537050aa26e3c813fc2007e9f
 workflow-type: tm+mt
-source-wordcount: '1622'
-ht-degree: 7%
+source-wordcount: '1698'
+ht-degree: 6%
 
 ---
 
@@ -72,6 +72,11 @@ Tieni presente le seguenti limitazioni note attualmente applicabili a questa fun
 ## Come esportare i campi calcolati {#how-to-export-calculated-fields}
 
 >[!CONTEXTUALHELP]
+>id="platform_destinations_export_arrays_maps_objects"
+>title="Abilitare lo schema di output gerarchico"
+>abstract="<p> Attiva questa impostazione **su** per abilitare l&#39;esportazione di array, mappe e oggetti in file JSON o Parquet.</p><p>Con questa opzione disattivata, puoi utilizzare l’opzione dei campi calcolati durante l’attivazione dei tipi di pubblico, ma non puoi esportare array, mappe e oggetti in file JSON o Parquet</p>"
+
+>[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_control"
 >title="Abilitare lo schema di output gerarchico"
 >abstract="Attiva se desideri esportare strutture gerarchiche come array."
@@ -79,7 +84,7 @@ Tieni presente le seguenti limitazioni note attualmente applicabili a questa fun
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_calculated_field_disabled"
 >title="Aggiungere campi calcolati disabilitati"
->abstract="Questo controllo è disabilitato in quanto è stato selezionato di esportare strutture semplici durante la connessione alla destinazione."
+>abstract="Questo controllo è disabilitato perché durante la configurazione della connessione di destinazione è stato selezionato **Esporta array, mappe, oggetti** attiva/disattiva *su*. Per utilizzare i campi calcolati e le funzioni disponibili all&#39;interno di, imposta una nuova connessione di destinazione con **Esporta array, mappe, oggetti** e attiva *off*."
 
 Nel passaggio di mappatura del flusso di lavoro di attivazione per le destinazioni di archiviazione cloud, seleziona **[!UICONTROL Aggiungi campo calcolato]**.
 
