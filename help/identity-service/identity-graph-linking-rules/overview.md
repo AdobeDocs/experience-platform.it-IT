@@ -5,7 +5,7 @@ exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
 source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
 source-wordcount: '1436'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -21,20 +21,20 @@ Con il servizio Adobe Experience Platform Identity e il profilo cliente in tempo
 
 I seguenti documenti sono essenziali per comprendere le regole di collegamento del grafico delle identità.
 
-* [Algoritmo di ottimizzazione identità](./identity-optimization-algorithm.md)
+* [Algoritmo di ottimizzazione delle identità](./identity-optimization-algorithm.md)
 * [Guida all’implementazione](./implementation-guide.md)
-* [Esempi di configurazioni di grafo](./example-configurations.md)
+* [Esempi di configurazioni del grafico](./example-configurations.md)
 * [Risoluzione dei problemi e domande frequenti](./troubleshooting.md)
 * [Priorità dello spazio dei nomi](./namespace-priority.md)
 * [Interfaccia utente simulazione grafico](./graph-simulation.md)
 * [Interfaccia utente per le impostazioni delle identità](./identity-settings-ui.md)
 
-## Scenari di compressione dei grafici {#graph-collapse-scenarios}
+## Scenari di collasso dei grafici {#graph-collapse-scenarios}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphcollapsescenarios"
->title="Scenari di compressione dei grafici"
->abstract="Esistono vari motivi per cui un grafico può essere compresso o rappresentare più entità persona."
+>title="Scenari di collasso dei grafici"
+>abstract="Ci sono più motivi per cui i grafici potrebbero “collassare” o rappresentare più entità persona."
 
 Questa sezione descrive scenari di esempio da considerare durante la configurazione delle regole di collegamento del grafico delle identità.
 
@@ -95,7 +95,7 @@ Con le regole di collegamento del grafico delle identità puoi:
 | --- | --- |
 | Spazio dei nomi univoco | Uno spazio dei nomi univoco è uno spazio dei nomi delle identità che è stato impostato per essere distinto all’interno del contesto di un grafo delle identità. Puoi configurare uno spazio dei nomi in modo che sia univoco utilizzando l’interfaccia utente. Una volta definito uno spazio dei nomi come univoco, un grafo può avere una sola identità che lo contiene. |
 | Priorità dello spazio dei nomi | La priorità dello spazio dei nomi si riferisce all’importanza relativa degli spazi dei nomi rispetto agli altri. La priorità dello spazio dei nomi è configurabile tramite l’interfaccia utente. Puoi classificare gli spazi dei nomi in un dato grafico delle identità. Una volta abilitata, la priorità dei nomi verrà utilizzata in vari scenari, ad esempio per l’input dell’algoritmo di ottimizzazione delle identità e per la determinazione dell’identità primaria dei frammenti di evento esperienza. |
-| Algoritmo di ottimizzazione identità | L’algoritmo di ottimizzazione delle identità garantisce che le linee guida create configurando uno spazio dei nomi e priorità dello spazio dei nomi univoci vengano applicate in un dato grafico delle identità. |
+| Algoritmo di ottimizzazione delle identità | L’algoritmo di ottimizzazione delle identità garantisce che le linee guida create configurando uno spazio dei nomi e priorità dello spazio dei nomi univoci vengano applicate in un dato grafico delle identità. |
 
 ### Spazio dei nomi univoco {#unique-namespace}
 
@@ -144,9 +144,9 @@ Per ulteriori informazioni, leggere la guida sulla [priorità dello spazio dei n
 
 Per ulteriori informazioni sulle regole di collegamento del grafico delle identità, consulta la documentazione seguente:
 
-* [Algoritmo di ottimizzazione identità](./identity-optimization-algorithm.md)
+* [Algoritmo di ottimizzazione delle identità](./identity-optimization-algorithm.md)
 * [Guida all’implementazione](./implementation-guide.md)
-* [Esempi di configurazioni di grafo](./example-configurations.md)
+* [Esempi di configurazioni del grafico](./example-configurations.md)
 * [Risoluzione dei problemi e domande frequenti](./troubleshooting.md)
 * [Priorità dello spazio dei nomi](./namespace-priority.md)
 * [Interfaccia utente simulazione grafico](./graph-simulation.md)

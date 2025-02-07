@@ -1,15 +1,15 @@
 ---
-title: Algoritmo di ottimizzazione identità
+title: Algoritmo di ottimizzazione delle identità
 description: Scopri l’algoritmo di ottimizzazione delle identità in Identity Service.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
 source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
 source-wordcount: '1560'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
-# Algoritmo di ottimizzazione identità {#identity-optimization-algorithm}
+# Algoritmo di ottimizzazione delle identità {#identity-optimization-algorithm}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_uniquenamespace"
@@ -167,7 +167,7 @@ Per ulteriori informazioni sulle regole di collegamento del grafico delle identi
 
 * [Panoramica delle regole di collegamento del grafico delle identità](./overview.md)
 * [Guida all’implementazione](./implementation-guide.md)
-* [Esempi di configurazioni di grafo](./example-configurations.md)
+* [Esempi di configurazioni del grafico](./example-configurations.md)
 * [Risoluzione dei problemi e domande frequenti](./troubleshooting.md)
 * [Priorità dello spazio dei nomi](./namespace-priority.md)
 * [Interfaccia utente simulazione grafico](./graph-simulation.md)

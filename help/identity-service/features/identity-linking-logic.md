@@ -14,7 +14,7 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_identities_simulatedgraph"
 >title="Grafico simulato"
->abstract="Le identità sono collegate quando lo spazio dei nomi dell’identità e il valore della stessa corrispondono."
+>abstract="Le identità sono collegate quando lo spazio dei nomi identità e il valore dell’identità corrispondono."
 
 Quando lo spazio dei nomi dell’identità e i valori dell’identità corrispondono, viene stabilito un collegamento tra due identità.
 

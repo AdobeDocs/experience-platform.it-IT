@@ -5,7 +5,7 @@ exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
 source-git-commit: 2d71eafb00098d958c8cff9350caa27bd3f0260d
 workflow-type: tm+mt
 source-wordcount: '1356'
-ht-degree: 26%
+ht-degree: 28%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 26%
 >[!CONTEXTUALHELP]
 >id="platform_tags_permissions"
 >title="Autorizzazioni"
->abstract="Scopri le autorizzazioni chiave necessarie per lavorare con flussi di dati, schemi, identità e sandbox in Adobe Experience Platform."
+>abstract="Scopri le autorizzazioni chiave necessarie per utilizzare flussi di dati, schemi, identità e sandbox all’interno di Adobe Experience Platform."
 
 [La raccolta dati in Adobe Experience Platform](./home.md) è composta da diverse tecnologie che collaborano per raccogliere e trasferire i dati. L’accesso a queste tecnologie è controllato tramite autorizzazioni granulari basate sui ruoli in Adobe Admin Console.
 

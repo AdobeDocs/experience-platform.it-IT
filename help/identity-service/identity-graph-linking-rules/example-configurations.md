@@ -9,12 +9,12 @@ ht-degree: 6%
 
 ---
 
-# Esempi di configurazioni di grafo {#examples-of-graph-configurations}
+# Esempi di configurazioni del grafico {#examples-of-graph-configurations}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_algorithmconfiguration"
 >title="Configurazione algoritmo"
->abstract="Configura uno spazio dei nomi univoco e definiscine la priorità in base alle identità acquisite."
+>abstract="Configura uno spazio dei nomi univoco e una priorità dello spazio dei nomi personalizzata in base alle identità acquisite."
 
 >[!AVAILABILITY]
 >
@@ -767,7 +767,7 @@ CRMID: Tom, ECID: 111
 Per ulteriori informazioni sulle regole di collegamento del grafico delle identità, consulta la documentazione seguente:
 
 * [Panoramica delle regole di collegamento del grafico delle identità](./overview.md)
-* [Algoritmo di ottimizzazione identità](./identity-optimization-algorithm.md)
+* [Algoritmo di ottimizzazione delle identità](./identity-optimization-algorithm.md)
 * [Guida all’implementazione](./implementation-guide.md)
 * [Risoluzione dei problemi e domande frequenti](./troubleshooting.md)
 * [Priorità dello spazio dei nomi](./namespace-priority.md)

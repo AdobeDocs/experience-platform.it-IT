@@ -5,16 +5,16 @@ exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
 source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
 source-wordcount: '1458'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
-# Guida dell&#39;interfaccia utente di [!DNL Graph Simulation] {#graph-simulation}
+# Guida dell&#39;interfaccia utente della [!DNL Graph Simulation] {#graph-simulation}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphsimulation"
->title="Simulazione grafico"
->abstract="Con la simulazione dei grafici potrai scoprire come Identity Service collega le identità e come funziona il relativo algoritmo di ottimizzazione."
+>title="Simulazione del grafico"
+>abstract="Simula grafici per comprendere come il servizio Identity collega le identità e come funziona l’algoritmo di ottimizzazione delle identità."
 
 >[!AVAILABILITY]
 >
@@ -177,9 +177,9 @@ Nel grafico di esempio seguente, esiste una linea tratteggiata tra `{Email: tom@
 Dopo aver letto questo documento, saprai come utilizzare lo strumento [!DNL Graph Simulation] per comprendere meglio come vengono trattati i dati di identità in base a un particolare set di regole e configurazioni. Per ulteriori informazioni, leggere i seguenti documenti:
 
 * [Panoramica delle regole di collegamento del grafico delle identità](./overview.md)
-* [Algoritmo di ottimizzazione identità](./identity-optimization-algorithm.md)
+* [Algoritmo di ottimizzazione delle identità](./identity-optimization-algorithm.md)
 * [Guida all’implementazione](./implementation-guide.md)
 * [Risoluzione dei problemi e domande frequenti](./troubleshooting.md)
-* [Esempi di configurazioni di grafo](./example-configurations.md)
+* [Esempi di configurazioni del grafico](./example-configurations.md)
 * [Priorità dello spazio dei nomi](./namespace-priority.md)
 * [Interfaccia utente per le impostazioni delle identità](./identity-settings-ui.md)
