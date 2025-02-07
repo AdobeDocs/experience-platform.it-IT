@@ -2,9 +2,9 @@
 title: Collegare Data Landing Zone a Platform tramite l’interfaccia utente
 description: Scopri come creare un connettore di origine per la Data Landing Zone utilizzando l’interfaccia utente di Platform.
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
-source-git-commit: 22f3b76c02e641d2f4c0dd7c0e5cc93038782836
+source-git-commit: cdcce07a5adf08bf9d5e6a08d6bc965d37458a5d
 workflow-type: tm+mt
-source-wordcount: '736'
+source-wordcount: '767'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,10 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe E
 * [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 ## Porta i tuoi file da [!DNL Data Landing Zone] a Platform
+
+>[!IMPORTANT]
+>
+> Per connettersi all&#39;origine, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL Visualizza origini]** e **[!UICONTROL Gestisci origini]**. Leggi la [panoramica sul controllo degli accessi](../../../../../access-control/home.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Nella schermata [!UICONTROL Catalogo] sono visualizzate diverse origini con cui è possibile creare un account.
 

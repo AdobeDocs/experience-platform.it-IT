@@ -2,9 +2,9 @@
 title: Data Landing Zone Source
 description: Scopri come collegare Data Landing Zone a Adobe Experience Platform
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: b9a409db2f1aee852faf9038a25236b78f76d4dd
+source-git-commit: 1d4dd60180ef2a3cbf6dcd565c2f09dd575716b9
 workflow-type: tm+mt
-source-wordcount: '1282'
+source-wordcount: '1316'
 ht-degree: 0%
 
 ---
@@ -299,6 +299,12 @@ Infine, passa all&#39;URL generato per accedere direttamente alla console AWS co
 
 ## Connetti [!DNL Data Landing Zone] a Experience Platform
 
+>[!IMPORTANT]
+>
+>- Per connettersi all&#39;origine, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL Visualizza origini]** e **[!UICONTROL Gestisci origini]**. Per ulteriori informazioni, leggere la [panoramica sul controllo degli accessi](../../../access-control/home.md) o contattare l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>
+>- I collegamenti privati non sono attualmente supportati per la connessione ad Experience Platform tramite [!DNL Data Landing Zone]. Gli unici metodi supportati per l&#39;accesso sono i metodi elencati [qui](#manage-the-contents-of-your-data-landing-zone).
+
 La documentazione seguente fornisce informazioni su come portare dati dal contenitore [!DNL Data Landing Zone] a Adobe Experience Platform utilizzando le API o l&#39;interfaccia utente.
 
 ### Utilizzo delle API
@@ -310,8 +316,4 @@ La documentazione seguente fornisce informazioni su come portare dati dal conten
 
 - [Connetti [!DNL Data Landing Zone] a Platform tramite l&#39;interfaccia utente](../../tutorials/ui/create/cloud-storage/data-landing-zone.md)
 - [Creare un flusso di dati per una connessione all’archiviazione cloud nell’interfaccia utente](../../tutorials/ui/dataflow/batch/cloud-storage.md)
-
->[!IMPORTANT]
->
->I collegamenti privati non sono attualmente supportati per la connessione ad Experience Platform tramite [!DNL Data Landing Zone]. Gli unici metodi supportati per l&#39;accesso sono i metodi elencati [qui](#manage-the-contents-of-your-data-landing-zone).
 
