@@ -2,9 +2,9 @@
 title: Domande frequenti sugli attributi calcolati
 description: Risposte alle domande frequenti sull’utilizzo degli attributi calcolati.
 exl-id: a4d3c06a-d135-453b-9637-4f98e62737a7
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 7d515401eb49ffd2ad5cf0bd074896b274c4fb05
 workflow-type: tm+mt
-source-wordcount: '1083'
+source-wordcount: '1091'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Poiché gli attributi calcolati vengono creati utilizzando i campi Evento esperi
 
 ## Esistono limiti al numero di attributi calcolati che è possibile creare?
 
-Sì, esiste un limite al numero di attributi calcolati che è possibile creare. Fai riferimento alla descrizione del prodotto o contatta l’Account Team di Adobi per ulteriori informazioni.
+Sì, esiste un limite al numero di attributi calcolati che è possibile creare. Questo limite si applica solo agli attributi calcolati **active**. Fai riferimento alla descrizione del prodotto o contatta l’Account Team di Adobe per ulteriori informazioni.
 
 ## Esistono implicazioni a valle per la disabilitazione di un attributo calcolato?
 
@@ -83,7 +83,7 @@ Entrambi gli aggiornamenti di **weekly** e **month** hanno luogo all&#39;inizio 
 
 >[!NOTE]
 >
->Il valore dell&#39;attributo calcolato è **not** aggiornato immediatamente nel profilo dopo ogni esecuzione della valutazione. Per garantire che il valore aggiornato sia presente nei profili, è necessario considerare un buffer di alcune ore tra il tempo di valutazione e l’utilizzo degli attributi calcolati. La pianificazione dell&#39;aggiornamento degli attributi calcolati è **determinata dal sistema** e **non può** essere modificata. Per ulteriori informazioni, contatta l’Assistenza clienti Adobe.
+>Il valore dell&#39;attributo calcolato è **not** aggiornato immediatamente nel profilo dopo ogni esecuzione della valutazione. Per garantire che il valore aggiornato sia presente nei profili, è necessario considerare un buffer di alcune ore tra il tempo di valutazione e l’utilizzo degli attributi calcolati. La pianificazione dell&#39;aggiornamento degli attributi calcolati è **determinata dal sistema** e **non può** essere modificata. Per ulteriori informazioni, contatta l’Assistenza clienti di Adobe.
 
 ## Come interagiscono gli attributi calcolati con i tipi di pubblico valutati utilizzando la segmentazione in streaming?
 
