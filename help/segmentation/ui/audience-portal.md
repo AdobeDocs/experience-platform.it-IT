@@ -2,9 +2,9 @@
 title: Panoramica di Audience Portal
 description: Scopri come utilizzare Audience Portal per visualizzare, gestire e creare tipi di pubblico in Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 4ef3f6dc07cb5d17146d48c7a41e3745fd9a3a58
+source-git-commit: 9f4facebcd55dc15761db1bf744acfef9ccb15ff
 workflow-type: tm+mt
-source-wordcount: '4569'
+source-wordcount: '4597'
 ht-degree: 4%
 
 ---
@@ -233,6 +233,8 @@ La valutazione flessibile del pubblico consente di eseguire un processo di segme
 >
 Quando si selezionano i tipi di pubblico per una valutazione flessibile del pubblico, si applicano le seguenti condizioni:
 >
+- Puoi utilizzare la valutazione flessibile del pubblico solo **due** al giorno. Questo limite viene ripristinato alla mezzanotte (UTC).
+- Hai un **massimo** di 50 esecuzioni flessibili di valutazione del pubblico all&#39;anno.
 - Tutti i tipi di pubblico **must** hanno origine &quot;Servizio di segmentazione&quot;.
 - Tutti i tipi di pubblico **devono** essere valutati utilizzando la segmentazione batch.
 - Tutti i tipi di pubblico **devono** essere basati sulle persone.
