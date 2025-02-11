@@ -3,9 +3,9 @@ title: Amazon Ads
 description: Amazon Ads offre una serie di opzioni per aiutarti a raggiungere i tuoi obiettivi pubblicitari per venditori registrati, fornitori di libri, autori di Kindle Direct Publishing (KDP), sviluppatori di app e/o agenzie. L’integrazione di Amazon Ads con Adobe Experience Platform fornisce un’integrazione chiavi in mano ai prodotti Amazon Ads, incluso Amazon DSP (ADSP). Utilizzando la destinazione Amazon Ads in Adobe Experience Platform, gli utenti possono definire i tipi di pubblico degli inserzionisti per il targeting e l’attivazione sull’DSP di Amazon.
 last-substantial-update: 2025-01-07T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 8543f76565f22b8cdfb0be71a1332696bc079ec7
+source-git-commit: 546ef0f9a5a9c37de3891aba02491540a5c6f8c9
 workflow-type: tm+mt
-source-wordcount: '1837'
+source-wordcount: '1819'
 ht-degree: 2%
 
 ---
@@ -98,10 +98,6 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
 >Dopo aver salvato la configurazione di destinazione, non potrai modificare l&#39;ID inserzionista [!DNL Amazon Ads], anche se effettui di nuovo l&#39;autenticazione tramite il tuo account Amazon. Per utilizzare un ID inserzionista [!DNL Amazon Ads] diverso, è necessario creare una nuova connessione di destinazione. Gli inserzionisti che sono già configurati su un’integrazione con ADSP per devono creare un nuovo flusso di destinazione se desiderano che i loro tipi di pubblico vengano consegnati ad AMC o a un altro account ADSP.
 
 * **[!UICONTROL Regione dell&#39;inserzionista]**: seleziona l&#39;area appropriata in cui è ospitato l&#39;inserzionista. Per ulteriori informazioni sui marketplace supportati da ogni area geografica, visita la [documentazione di Amazon Ads](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
-
->[!IMPORTANT]
->
->L&#39;aggiornamento per includere il **[!UICONTROL segnale di consenso di Amazon Ads]** è pianificato per essere pubblicato entro il 7 febbraio 2025.
 
 * **[!UICONTROL Segnale di consenso Amazon Ads]**: verifica che tutti i dati inviati tramite questa connessione abbiano acconsentito a utilizzare i dati personali per scopi pubblicitari. &quot;CONCESSO&quot; indica il consenso di Amazon all’utilizzo dei dati personali del cliente a scopo pubblicitario. I valori consentiti sono &quot;GRANT&quot; (CONCESSA) e &quot;DENIED&quot; (NEGATA). Tutti i record inviati tramite connessioni con &quot;NEGATO&quot; verranno rifiutati per un ulteriore utilizzo all’interno di Amazon Ads.
 

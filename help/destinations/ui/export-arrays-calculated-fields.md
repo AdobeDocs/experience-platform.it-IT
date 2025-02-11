@@ -3,10 +3,10 @@ title: Esportazione di oggetti array da Real-Time CDP a destinazioni di archivia
 type: Tutorial
 description: Scopri come utilizzare i campi calcolati per esportare gli array da Real-Time CDP a destinazioni di archiviazione cloud come stringhe.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 6b182df562ea59d537050aa26e3c813fc2007e9f
+source-git-commit: 546ef0f9a5a9c37de3891aba02491540a5c6f8c9
 workflow-type: tm+mt
-source-wordcount: '1698'
-ht-degree: 6%
+source-wordcount: '1730'
+ht-degree: 5%
 
 ---
 
@@ -73,8 +73,8 @@ Tieni presente le seguenti limitazioni note attualmente applicabili a questa fun
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_maps_objects"
->title="Abilitare lo schema di output gerarchico"
->abstract="<p> Attiva questa impostazione **su** per abilitare l&#39;esportazione di array, mappe e oggetti in file JSON o Parquet.</p><p>Con questa opzione disattivata, puoi utilizzare l’opzione dei campi calcolati durante l’attivazione dei tipi di pubblico, ma non puoi esportare array, mappe e oggetti in file JSON o Parquet</p>"
+>title="Esportazione di array, mappe e oggetti"
+>abstract="<p> Attiva questa impostazione <b>su</b> per abilitare l&#39;esportazione di array, mappe e oggetti in file JSON o Parquet. È possibile selezionare questi tipi di oggetto nella visualizzazione del campo di origine del passaggio di mappatura.</p><p>Con questo interruttore <b>off</b>, puoi utilizzare l&#39;opzione dei campi calcolati e applicare varie funzioni di trasformazione dei dati durante l&#39;attivazione dei tipi di pubblico. Tuttavia, è possibile <i>non</i> esportare array, mappe e oggetti in file JSON o Parquet e a tale scopo è necessario configurare una destinazione separata.</p>"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_control"
