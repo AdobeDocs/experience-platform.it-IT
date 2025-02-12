@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;argomenti popolari;Applicazione dei criteri;Applicazione automatica;Imposizione basata su API;governance dei dati
 solution: Experience Platform
 title: Applicazione automatica dei criteri
-description: Questo documento illustra come i criteri di utilizzo dei dati vengono applicati automaticamente quando si attivano i tipi di pubblico nelle destinazioni in Experience Platform.
+description: Questo documento illustra come i criteri di utilizzo dei dati vengono applicati automaticamente quando si attivano tipi di pubblico nelle destinazioni in Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: b0c4a26c2e8bb90a3494fcd6eb76c4d0d7421219
+source-git-commit: f9072a0fc287c8061a3d28972096577317a0a2c9
 workflow-type: tm+mt
-source-wordcount: '2118'
+source-wordcount: '2116'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ Quando un pubblico viene attivato per la prima volta, [!DNL Policy Service] cont
 
 >[!NOTE]
 >
->Se esistono etichette di utilizzo dei dati che sono state applicate solo a determinati campi all’interno di un set di dati (anziché all’intero set di dati), l’applicazione di tali etichette a livello di campo all’attivazione avviene solo nelle seguenti condizioni:
+>Se esistono etichette di utilizzo dei dati che sono state applicate solo a determinati campi, l’applicazione di tali etichette a livello di campo all’attivazione si verifica solo se è soddisfatta almeno una delle seguenti condizioni:
 >
 >* I campi vengono utilizzati nel pubblico.
 >* I campi sono configurati come attributi previsti per la destinazione target.
@@ -57,7 +57,7 @@ La derivazione dei dati svolge un ruolo chiave nel modo in cui i criteri vengono
 
 Nel contesto della governance dei dati, la derivazione consente alle etichette di utilizzo dei dati di propagarsi dagli schemi ai servizi a valle che utilizzano i loro dati, come Profilo cliente in tempo reale e Destinazioni. Questo consente di valutare e applicare i criteri in diversi punti chiave del percorso dei dati tramite Platform e fornisce ai consumatori di dati il contesto necessario per capire perché si è verificata una violazione dei criteri.
 
-Ad Experience Platform, l’applicazione delle policy riguarda la seguente derivazione:
+In Experience Platform, l’applicazione dei criteri riguarda la seguente derivazione:
 
 1. I dati vengono acquisiti in Platform e memorizzati in **set di dati**.
 1. I profili dei clienti vengono identificati e costruiti a partire da tali set di dati unendo i frammenti di dati in base al **criterio di unione**.
@@ -193,4 +193,4 @@ Se una delle azioni di cui sopra attiva una violazione, tale azione non può ess
 
 ## Passaggi successivi
 
-In questo documento viene illustrato il funzionamento dell’applicazione automatica delle policy in Experience Platform. Per i passaggi su come integrare a livello di programmazione l&#39;applicazione dei criteri nelle applicazioni utilizzando chiamate API, consulta la guida sull&#39;[applicazione basata su API](./api-enforcement.md).
+Questo documento illustra il funzionamento dell’applicazione automatica delle policy in Experience Platform. Per i passaggi su come integrare a livello di programmazione l&#39;applicazione dei criteri nelle applicazioni utilizzando chiamate API, consulta la guida sull&#39;[applicazione basata su API](./api-enforcement.md).
