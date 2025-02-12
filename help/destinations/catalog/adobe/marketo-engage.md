@@ -1,15 +1,15 @@
 ---
 title: Destinazione Marketo Engage
-description: Marketo Engage è l'unica soluzione end-to-end di gestione della customer experience (CXM) per il marketing, la pubblicità, l'analisi e il commerce. Consente di automatizzare e gestire le attività, dalla gestione dei lead CRM al coinvolgimento dei clienti, fino all’attribuzione dei ricavi e al marketing basato sull’account.
+description: Marketo Engage è l'unica soluzione CXM (Customer Experience Management) end-to-end per il marketing, la pubblicità, l'analisi e il commerce. Consente di automatizzare e gestire le attività, dalla gestione dei lead CRM al coinvolgimento dei clienti, fino all’attribuzione dei ricavi e al marketing basato sull’account.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 58be4f2f44312116a3aa2e8f5a7889424000fd9f
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '903'
 ht-degree: 1%
 
 ---
 
-# Marketo Engage di destinazione {#beta-marketo-engage-destination}
+# Destinazione Marketo Engage {#beta-marketo-engage-destination}
 
 ## Registro modifiche destinazione {#changelog}
 
@@ -57,7 +57,7 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 
 | Origine pubblico | Supportato | Descrizione |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite il servizio di segmentazione [Experience Platform](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
 | Caricamenti personalizzati | ✓ | Tipi di pubblico [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
@@ -88,8 +88,8 @@ Il video seguente illustra anche i passaggi per configurare una destinazione Mar
 >
 >Il video non riflette completamente la funzionalità corrente. Per le informazioni più aggiornate, consulta la guida collegata in precedenza. Le seguenti parti del video sono obsolete:
 > 
->* La scheda di destinazione da utilizzare nell&#39;interfaccia utente Experience Platform è **[!UICONTROL Marketo V2]**.
->* Il video non mostra il nuovo campo del selettore **[!UICONTROL Creazione persona]** nel flusso di lavoro di connessione alla destinazione.
+>* La scheda di destinazione da utilizzare nell&#39;interfaccia utente di Experience Platform è **[!UICONTROL Marketo V2]**.
+>* Il video non mostra il nuovo campo del selettore **[!UICONTROL Creazione persona]** nel flusso di lavoro di connessione alla destinazione. Per utilizzare questo campo, è necessario mappare sia il nome che il cognome durante il passaggio di mappatura degli attributi.
 >* Le due limitazioni indicate nel video non sono più applicabili. Ora puoi mappare molti altri campi dell’attributo del profilo, oltre alle informazioni sull’iscrizione al pubblico supportate al momento della registrazione del video. Puoi anche esportare i membri del pubblico in Marketo che non esistono ancora negli elenchi statici di Marketo e verranno aggiunti agli elenchi.
 >* Nel **[!UICONTROL passaggio Pianifica pubblico]** del flusso di lavoro di attivazione, in Marketo V1, era necessario aggiungere manualmente un **[!UICONTROL ID mappatura]** per esportare correttamente i dati in Marketo. Questo passaggio manuale non è più richiesto in Marketo V2.
 
