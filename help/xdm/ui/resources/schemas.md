@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creare e modificare gli schemi nell’interfaccia utente
 description: Scopri le nozioni di base sulla creazione e la modifica degli schemi nell’interfaccia utente di Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 24b26e256fb346ccd1a03984f3e0d199c640159c
+source-git-commit: 9691ce1ca560acce7a9512df7eb92e61962bc467
 workflow-type: tm+mt
 source-wordcount: '4072'
 ht-degree: 1%
@@ -23,7 +23,7 @@ Questa guida fornisce una panoramica su come creare, modificare e gestire gli sc
 
 ## Prerequisiti {#prerequisites}
 
-Questa guida richiede una buona conoscenza del sistema XDM. Per un&#39;introduzione al ruolo di XDM all&#39;interno dell&#39;ecosistema Experience Platform, fare riferimento alla [panoramica di XDM](../../home.md) e alle [nozioni di base sulla composizione dello schema](../../schema/composition.md) per una panoramica sulla costruzione degli schemi.
+Questa guida richiede una buona conoscenza del sistema XDM. Per un&#39;introduzione al ruolo di XDM nell&#39;ecosistema Experience Platform, consulta la [panoramica di XDM](../../home.md) e le [nozioni di base sulla composizione dello schema](../../schema/composition.md) per una panoramica sulla costruzione degli schemi.
 
 ## Crea un nuovo schema {#create}
 
@@ -159,7 +159,7 @@ Dopo aver scelto i gruppi di campi, seleziona **[!UICONTROL Aggiungi gruppi di c
 
 >[!NOTE]
 >
-Nell&#39;Editor schema, le classi e i gruppi di campi standard (generati da Adobe) sono indicati con l&#39;icona lucchetto (![Un&#39;icona lucchetto.](/help/images/icons/lock-closed.png). Il lucchetto viene visualizzato nella barra a sinistra accanto al nome della classe o del gruppo di campi, nonché accanto a qualsiasi campo nel diagramma dello schema che fa parte di una risorsa generata dal sistema.
+Nell&#39;Editor schema, le classi e i gruppi di campi standard (generati da Adobe) sono indicati con l&#39;icona a forma di lucchetto ![Icona a forma di lucchetto.](/help/images/icons/lock-closed.png). Il lucchetto viene visualizzato nella barra a sinistra accanto al nome della classe o del gruppo di campi, nonché accanto a qualsiasi campo nel diagramma dello schema che fa parte di una risorsa generata dal sistema.
 >
 ![Editor schema con l&#39;icona lucchetto evidenziata](../../images/ui/explore/schema-editor-padlock-icon.png)
 
