@@ -5,10 +5,10 @@ breadcrumb-title: Guida di Platform Identity Service
 user-guide-description: Collega le identità dei clienti su più dispositivi e sistemi per offrire esperienze digitali personalizzate.
 feature: Identities
 role: Admin,Developer
-source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
+source-git-commit: cbdfa76d546be631a8c1fa588896648835d2a159
 workflow-type: tm+mt
-source-wordcount: '146'
-ht-degree: 26%
+source-wordcount: '143'
+ht-degree: 30%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 26%
    - [Eliminazioni nel servizio Identity](./features/deletion.md)
    - Regole di collegamento del grafico delle identità {#identity-graph-linking-rules}
       - [Panoramica delle funzioni](./identity-graph-linking-rules/overview.md)
-      - [Algoritmo di ottimizzazione identità](./identity-graph-linking-rules/identity-optimization-algorithm.md)
+      - [Algoritmo di ottimizzazione delle identità](./identity-graph-linking-rules/identity-optimization-algorithm.md)
       - [Guida all’implementazione per le regole di collegamento del grafico delle identità](./identity-graph-linking-rules/implementation-guide.md)
       - [Esempio di configurazioni del grafico](./identity-graph-linking-rules/example-configurations.md)
       - [Risoluzione dei problemi relativi alle regole di collegamento del grafo delle identità](./identity-graph-linking-rules/troubleshooting.md)
@@ -44,7 +44,6 @@ ht-degree: 26%
    - [Creare uno spazio dei nomi personalizzato](api/create-custom-namespace.md)
    - [Elencare l’ID nativo di un’identità](api/list-native-id.md)
    - [Riferimento API](https://www.adobe.io/experience-platform-apis/references/identity-service)
-- [Rilevamento di dispositivi condivisi](shared-device-detection.md)
 - [Definire i campi di identità nell’interfaccia utente](label-identities.md)
 - [Elaborazione della richiesta di accesso a dati personali](privacy.md)
 - [Guida alla risoluzione dei problemi](troubleshooting-guide.md)

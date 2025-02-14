@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari
 title: Elaborazione delle richieste di privacy nel servizio Identity
 description: Adobe Experience Platform Privacy Service elabora le richieste dei clienti di accedere ai propri dati personali, rinunciarvi o cancellarli, come indicato da numerose normative sulla privacy. Questo documento descrive i concetti essenziali relativi all’elaborazione delle richieste di accesso a dati personali per il servizio Identity.
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: a75a5603eacc1b4625a19adfddbb2f4bb81f66d3
 workflow-type: tm+mt
-source-wordcount: '1016'
+source-wordcount: '1000'
 ht-degree: 1%
 
 ---
@@ -32,7 +32,7 @@ Prima di leggere questa guida, è consigliabile avere una buona conoscenza dei s
 
 ## Comprendere gli spazi dei nomi delle identità {#namespaces}
 
-Adobe Experience Platform [!DNL Identity Service] esegue il bridging dei dati di identità del cliente tra sistemi e dispositivi. [!DNL Identity Service] utilizza **spazi dei nomi di identità** per fornire contesto ai valori di identità tramite la relazione con il proprio sistema di origine. Uno spazio dei nomi può rappresentare un concetto generico come un indirizzo e-mail (&quot;E-mail&quot;) o associare l’identità a un’applicazione specifica, come un Adobe Advertising Cloud ID (&quot;AdCloud&quot;) o un Adobe Target ID (&quot;TNTID&quot;).
+Adobe Experience Platform [!DNL Identity Service] esegue il bridging dei dati di identità del cliente tra sistemi e dispositivi. [!DNL Identity Service] utilizza **spazi dei nomi di identità** per fornire contesto ai valori di identità tramite la relazione con il proprio sistema di origine. Uno spazio dei nomi può rappresentare un concetto generico come un indirizzo e-mail (&quot;E-mail&quot;) o associare l’identità a un’applicazione specifica, ad esempio un Adobe Advertising Cloud ID (&quot;AdCloud&quot;) o un Adobe Target ID (&quot;TNTID&quot;).
 
 Identity Service gestisce un archivio di spazi dei nomi di identità definiti a livello globale (standard) e definiti dall’utente (personalizzati). Gli spazi dei nomi standard sono disponibili per tutte le organizzazioni (ad esempio, &quot;E-mail&quot; e &quot;ECID&quot;), mentre l’organizzazione può anche creare spazi dei nomi personalizzati in base alle sue esigenze specifiche.
 
@@ -52,7 +52,7 @@ La richiesta seguente crea un nuovo processo di privacy in base al RGPD per i da
 
 >[!TIP]
 >
->Quando elimini uno spazio dei nomi personalizzato utilizzando l’API, devi specificare il simbolo di identità come spazio dei nomi, invece del nome visualizzato.
+>Quando elimini le identità tramite l’eliminazione tramite RGPD, devi specificare il simbolo di identità come spazio dei nomi invece del nome visualizzato.
 
 ```shell
 curl -X POST \
@@ -96,7 +96,7 @@ curl -X POST \
 
 >[!TIP]
 >
->Quando elimini uno spazio dei nomi personalizzato tramite l’interfaccia utente, è necessario specificare il simbolo di identità come spazio dei nomi, anziché il nome visualizzato. Inoltre, non è possibile eliminare spazi dei nomi personalizzati nell’interfaccia utente per le sandbox non di produzione.
+>Quando elimini le identità tramite l’eliminazione tramite RGPD, devi specificare il simbolo di identità come spazio dei nomi invece del nome visualizzato.
 
 Durante la creazione di richieste di processi nell&#39;interfaccia utente, assicurarsi di selezionare **[!UICONTROL Identità]** in **[!UICONTROL Prodotti]** per elaborare i processi per i dati archiviati in [!DNL Identity Service].
 
