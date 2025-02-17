@@ -1,20 +1,16 @@
 ---
 title: Utilizzo di Offer Decisioning con Platform Web SDK
 description: Adobe Experience Platform Web SDK può distribuire ed eseguire il rendering di offerte personalizzate gestite in Offer Decisioning. Puoi creare le offerte e altri oggetti correlati utilizzando l’interfaccia utente o l’API di Offer Decisioning.
-keywords: offer decisioning;decisioning;Web SDK;Platform Web SDK;offerte personalizzate;consegnare offerte;consegna offerte;personalizzazione delle offerte;
+keywords: Offer Decisioning;Decisioning;Web SDK;Platform Web SDK;offerte personalizzate;consegnare offerte;consegna offerte;personalizzazione delle offerte;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 22477c11a977059849d9b47871a5c2aef1da4b24
+source-git-commit: b2c3b1160782a81ea66f42e21e494e0a7d90e037
 workflow-type: tm+mt
-source-wordcount: '818'
+source-wordcount: '791'
 ht-degree: 3%
 
 ---
 
 # Utilizzo di Offer Decisioning con Platform Web SDK
-
->[!NOTE]
->
->L’utilizzo di Offer Decisioning in Adobe Experience Platform Web SDK è disponibile in accesso anticipato per alcuni utenti. Questa funzionalità non è disponibile per tutte le organizzazioni.
 
 Adobe Experience Platform [!DNL Web SDK] può distribuire ed eseguire il rendering di offerte personalizzate gestite in Offer Decisioning. Puoi creare le offerte e altri oggetti correlati utilizzando l’interfaccia utente o le API di Offer Decisioning.
 
@@ -26,9 +22,9 @@ Adobe Experience Platform [!DNL Web SDK] può distribuire ed eseguire il renderi
 
 ## Terminologia
 
-Quando si lavora con Offer Decisioning, è importante comprendere la seguente terminologia. Per ulteriori informazioni e per visualizzare altri termini, visitare il [glossario di Offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html).
+Quando si lavora con Offer Decisioning, è importante comprendere la seguente terminologia. Per ulteriori informazioni e per visualizzare altri termini, visitare il [glossario di Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html).
 
-* **Ambiti decisionali:** Ad Offer decisioning, gli ambiti decisionali sono le stringhe con codifica Base64 di JSON contenenti gli ID di attività e posizionamento che il servizio offer decisioning deve utilizzare per proporre le offerte.
+* **Ambiti decisionali:** Per Offer Decisioning, gli ambiti decisionali sono le stringhe con codifica Base64 di JSON contenenti gli ID di attività e posizionamento che il servizio offer decisioning deve utilizzare per proporre le offerte.
 
   *JSON ambito decisione:*
 
@@ -55,18 +51,18 @@ Quando si lavora con Offer Decisioning, è importante comprendere la seguente te
 
 * **Identità**: per ulteriori informazioni, leggere questa documentazione che illustra come [Platform Web SDK utilizza Identity Service](../../identity/overview.md).
 
-## Abilitazione Offer decisioning
+## Abilitazione di Offer Decisioning
 
-Per abilitare l’Offer decisioning, effettua le seguenti operazioni:
+Per abilitare Offer Decisioning, effettua le seguenti operazioni:
 
-1. Abilitazione di Adobe Experience Platform nello [stream di dati](/help/datastreams/overview.md) e selezione della casella &quot;Offer decisioning&quot;
+1. Abilitazione di Adobe Experience Platform nello [stream di dati](/help/datastreams/overview.md) e selezione della casella &quot;Offer Decisioning&quot;
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
-1. Segui le istruzioni per [installare l&#39;SDK](/help/web-sdk/install/overview.md) (l&#39;SDK può essere installato in modo autonomo o tramite l&#39;interfaccia utente. Per ulteriori informazioni, consulta la [guida rapida ai tag](/help/tags/quick-start/quick-start.md)).
-1. Configurare l&#39;SDK, ad Offer decisioning utilizzando `personalization.decisionScopes`. Di seguito sono riportati ulteriori passaggi specifici per Offer decisioning.
+1. Segui le istruzioni per [installare SDK](/help/web-sdk/install/overview.md) (SDK può essere installato in modo autonomo o tramite l&#39;interfaccia utente. Per ulteriori informazioni, consulta la [guida rapida ai tag](/help/tags/quick-start/quick-start.md)).
+1. Configurare SDK per Offer Decisioning utilizzando `personalization.decisionScopes`. Di seguito sono riportati ulteriori passaggi specifici per Offer Decisioning.
 
-   * Installare l’SDK autonomo
+   * Installare il SDK autonomo
 
       1. Configurare l&#39;azione &quot;sendEvent&quot; con `personalization.decisionScopes`
 
@@ -82,7 +78,7 @@ Per abilitare l’Offer decisioning, effettua le seguenti operazioni:
      });
      ```
 
-   * Installare l’SDK tramite tag
+   * Installare SDK tramite tag
 
       1. [Creare una proprietà tag](/help/tags/ui/administration/companies-and-properties.md)
       1. [Aggiungi il codice di incorporamento](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
@@ -92,7 +88,7 @@ Per abilitare l’Offer decisioning, effettua le seguenti operazioni:
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
 
-      1. Creare gli elementi dati [necessari](/help/tags/ui/managing-resources/data-elements.md). È necessario creare almeno una mappa identità di Platform Web SDK e un elemento dati di oggetti XDM di Platform Web SDK.
+      1. Creare gli elementi dati [necessari](/help/tags/ui/managing-resources/data-elements.md). È necessario creare almeno una mappa identità di Platform Web SDK e un elemento dati Platform Web SDK XDM Object.
 
          ![identity-map-data-element](./assets/identity-map-data-element.png)
 
@@ -100,7 +96,7 @@ Per abilitare l’Offer decisioning, effettua le seguenti operazioni:
 
       1. Crea le [regole](/help/tags/ui/managing-resources/rules.md).
 
-         * Aggiungi un&#39;azione Invia evento di Platform Web SDK e aggiungi `decisionScopes` alla configurazione di tale azione
+         * Aggiungi un&#39;azione Platform Web SDK Send Event e aggiungi `decisionScopes` alla configurazione di tale azione
 
          ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
 
@@ -332,4 +328,4 @@ Per abilitare l’Offer decisioning, effettua le seguenti operazioni:
 
 ## Limitazioni
 
-Alcuni vincoli di offerta non sono attualmente supportati con i flussi di lavoro di Edge Network per dispositivi mobili, ad esempio il limite. Il valore del campo Limite specifica quante volte un’offerta può essere presentata a tutti gli utenti. Per ulteriori dettagli, consulta [Documentazione su regole e vincoli di idoneità per le offerte](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility).
+Alcuni vincoli di offerta non sono attualmente supportati con i flussi di lavoro mobili di Edge Network, ad esempio il limite. Il valore del campo Limite specifica quante volte un’offerta può essere presentata a tutti gli utenti. Per ulteriori dettagli, consulta [Documentazione su regole e vincoli di idoneità per le offerte](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility).
