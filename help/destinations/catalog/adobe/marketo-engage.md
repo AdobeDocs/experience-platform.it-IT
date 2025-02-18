@@ -2,9 +2,9 @@
 title: Destinazione Marketo Engage
 description: Marketo Engage è l'unica soluzione CXM (Customer Experience Management) end-to-end per il marketing, la pubblicità, l'analisi e il commerce. Consente di automatizzare e gestire le attività, dalla gestione dei lead CRM al coinvolgimento dei clienti, fino all’attribuzione dei ricavi e al marketing basato sull’account.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 58be4f2f44312116a3aa2e8f5a7889424000fd9f
+source-git-commit: c57a519b5a230dc62699808cf5c020d48cc79083
 workflow-type: tm+mt
-source-wordcount: '903'
+source-wordcount: '967'
 ht-degree: 1%
 
 ---
@@ -95,22 +95,13 @@ Il video seguente illustra anche i passaggi per configurare una destinazione Mar
 
 >[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 
-<!--
+## Monitorare la destinazione {#monitor-destination}
 
-## Connect to the destination {#connect}
+Dopo la connessione alla destinazione e la definizione di un flusso di dati di destinazione, puoi utilizzare la [funzionalità di monitoraggio](/help/dataflows/ui/monitor-destinations.md) in Real-Time CDP per ottenere informazioni dettagliate sui record del profilo attivati nella destinazione in ogni esecuzione del flusso di dati.
 
-To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
-
--->
+Le informazioni di monitoraggio per la connessione [!DNL Marketo Engage] includono informazioni a livello di pubblico relative a identità attivate, escluse e non riuscite in ogni flusso di dati e flusso di dati eseguito. [Ulteriori informazioni](/help/dataflows/ui/monitor-destinations.md#segment-level-view) sulla nuova funzionalità.
 
 ## Utilizzo dei dati e governance {#data-usage-governance}
 
 Tutte le destinazioni [!DNL Adobe Experience Platform] sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] applica la governance dei dati, consulta la [panoramica sulla governance dei dati](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=it).
 
-<!--
-
-## Activate audiences to this destination {#activate}
-
-See [Activate audience data to streaming audience export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
-
--->

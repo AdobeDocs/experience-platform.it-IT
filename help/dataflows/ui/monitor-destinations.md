@@ -4,20 +4,20 @@ solution: Experience Platform
 title: Monitorare i flussi di dati per le destinazioni nell’interfaccia utente
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: f10706fbbde9cef112460f5431af24d09b0e0460
+source-git-commit: b814becaed88ce23527dc58f7ec056c05a48379f
 workflow-type: tm+mt
-source-wordcount: '3636'
+source-wordcount: '3637'
 ht-degree: 10%
 
 ---
 
 # Monitorare i flussi di dati per le destinazioni nell’interfaccia utente
 
-Utilizza le varie destinazioni nel catalogo di Experienci Platform per attivare i tuoi dati da Platform a innumerevoli partner esterni. Platform semplifica il processo di tracciamento del flusso di dati nelle destinazioni fornendo trasparenza con i flussi di dati.
+Utilizza le varie destinazioni nel catalogo Experience Platform per attivare i tuoi dati da Platform a innumerevoli partner esterni. Platform semplifica il processo di tracciamento del flusso di dati nelle destinazioni fornendo trasparenza con i flussi di dati.
 
 La dashboard di monitoraggio offre una rappresentazione visiva del percorso di un flusso di dati, inclusa la destinazione in cui vengono attivati i dati, il tipo di dati che stai visualizzando, i dati esportati per ogni esecuzione del flusso di dati e molto altro.
 
-Questa esercitazione fornisce istruzioni su come monitorare i flussi di dati direttamente nell’area di lavoro delle destinazioni o utilizzare il dashboard di monitoraggio per monitorare i flussi di dati per le destinazioni utilizzando l’interfaccia utente di Experience Platform.
+Questa esercitazione fornisce istruzioni su come monitorare i flussi di dati direttamente nell’area di lavoro delle destinazioni o utilizzare la dashboard di monitoraggio per monitorare i flussi di dati per le destinazioni tramite l’interfaccia utente di Experience Platform.
 
 ## Introduzione {#getting-started}
 
@@ -86,7 +86,7 @@ Viene visualizzato un elenco di singole esecuzioni e delle relative metriche spe
 
 Ogni singola esecuzione del flusso di dati mostra i seguenti dettagli:
 
-- **[!UICONTROL Inizio esecuzione flusso di dati]**: ora di inizio dell&#39;esecuzione del flusso di dati. Per le esecuzioni di flussi di dati in streaming, Experience Platform acquisisce metriche basate sull’inizio dell’esecuzione del flusso di dati, sotto forma di metriche orarie. Ciò significa che per l’esecuzione del flusso di dati in streaming, se un flusso di dati viene avviato, ad esempio, alle 22:30, la metrica mostra l’ora di inizio come 22:00 nell’interfaccia utente.
+- **[!UICONTROL Inizio esecuzione flusso di dati]**: ora di inizio dell&#39;esecuzione del flusso di dati. Per le esecuzioni dei flussi di dati in streaming, Experience Platform acquisisce metriche basate sull’inizio dell’esecuzione dei flussi di dati, sotto forma di metriche orarie. Ciò significa che per l’esecuzione del flusso di dati in streaming, se un flusso di dati viene avviato, ad esempio, alle 22:30, la metrica mostra l’ora di inizio come 22:00 nell’interfaccia utente.
 - **[!UICONTROL Tempo di elaborazione]**: tempo necessario all&#39;elaborazione del flusso di dati.
    - Per le esecuzioni di **[!UICONTROL completed]**, la metrica del tempo di elaborazione mostra sempre un&#39;ora.
    - Per le esecuzioni di flussi di dati che si trovano ancora in uno stato di **[!UICONTROL elaborazione]**, la finestra per acquisire tutte le metriche rimane aperta per più di un&#39;ora, per elaborare tutte le metriche che corrispondono all&#39;esecuzione del flusso di dati. Ad esempio, un’esecuzione di un flusso di dati avviata alle 09:30 potrebbe rimanere in uno stato di elaborazione per un’ora e trenta minuti per acquisire ed elaborare tutte le metriche. Quindi, una volta che la finestra di elaborazione si chiude e lo stato dell&#39;esecuzione del flusso di dati diventa **completato**, il tempo di elaborazione visualizzato viene modificato in un&#39;ora.
@@ -97,11 +97,11 @@ Ogni singola esecuzione del flusso di dati mostra i seguenti dettagli:
 
   >[!IMPORTANT]
   >
-  > A partire da ottobre 2024, Adobe implementerà un aggiornamento per aumentare la precisione dei rapporti per le destinazioni di streaming. Questo miglioramento garantisce un migliore allineamento tra il reporting dell’Experience Platform e quello delle piattaforme di destinazione.
+  > A partire da ottobre 2024, Adobe implementerà un aggiornamento per aumentare la precisione dei rapporti per le destinazioni di streaming. Questo miglioramento garantisce un migliore allineamento tra il reporting di Experience Platform e quello delle piattaforme di destinazione.
   >
   > Prima di questo aggiornamento, **[!UICONTROL Identità non riuscite]** includeva tutti i tentativi di attivazione. Dopo questo aggiornamento, nel conteggio totale viene incluso solo l’ultimo tentativo di attivazione.
   > 
-  > Questo miglioramento si applica attualmente alla [destinazione Customer Match di Google](../../destinations/catalog/advertising/google-customer-match.md), ma verrà introdotto gradualmente in altre destinazioni di streaming di Experienci Platform.
+  > Questo miglioramento si applica attualmente alla [destinazione Customer Match di Google](../../destinations/catalog/advertising/google-customer-match.md), ma verrà introdotto gradualmente in altre destinazioni di streaming di Experience Platform.
   > In seguito a questo miglioramento, gli utenti della [destinazione Customer Match di Google](../../destinations/catalog/advertising/google-customer-match.md) potrebbero notare un calo previsto nel relativo conteggio delle **[!UICONTROL Identità non riuscite]**.
 
 
@@ -121,7 +121,12 @@ Nella pagina dei dettagli viene inoltre visualizzato un elenco di identità con 
 
 #### (Beta) Monitoraggio dell’esecuzione dei flussi di dati a livello di pubblico per le destinazioni di streaming {#audience-level-dataflow-runs-for-streaming-destinations}
 
-Puoi visualizzare informazioni sulle identità attivate, escluse o non riuscite suddivise a livello di pubblico, per ogni pubblico che fa parte del flusso di dati. Il monitoraggio a livello di pubblico per le destinazioni di streaming è attualmente disponibile solo per la [[!DNL Google Customer Match + Display & Video 360] destinazione](/help/destinations/catalog/advertising/google-customer-match-dv360.md).
+Puoi visualizzare informazioni sulle identità attivate, escluse o non riuscite suddivise a livello di pubblico, per ogni pubblico che fa parte del flusso di dati.
+
+Il monitoraggio a livello di pubblico per le destinazioni di streaming è attualmente disponibile solo per le seguenti destinazioni:
+
+- [[!DNL Google Customer Match + Display & Video 360]](/help/destinations/catalog/advertising/google-customer-match-dv360.md)
+- [[!DNL Marketo Engage]](/help/destinations/catalog/adobe/marketo-engage.md)
 
 ![Monitoraggio a livello di pubblico per le destinazioni di streaming.](/help/dataflows/assets/ui/monitor-destinations/audience-level-monitoring-streaming.png)
 
@@ -205,7 +210,7 @@ Puoi anche scegliere di visualizzare informazioni dettagliate su un determinato 
 
 >[!NOTE]
 >
->La funzionalità di monitoraggio delle destinazioni è attualmente supportata per tutte le destinazioni nell&#39;Experience Platform *eccetto* le destinazioni [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) e [Personalizzazione personalizzata](/help/destinations/catalog/personalization/custom-personalization.md).
+>La funzionalità di monitoraggio delle destinazioni è attualmente supportata per tutte le destinazioni in Experience Platform *eccetto* le destinazioni [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) e [Personalizzazione personalizzata](/help/destinations/catalog/personalization/custom-personalization.md).
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"
