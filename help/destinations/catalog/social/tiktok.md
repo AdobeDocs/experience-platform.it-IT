@@ -3,9 +3,9 @@ title: Connessione TikTok
 description: Crea tipi di pubblico personalizzati su TikTok con i tuoi dati per il targeting con le campagne pubblicitarie. Questi tipi di pubblico possono essere costituiti da persone che hanno visitato il tuo sito web o interagito con il tuo contenuto. Invia in modo rapido e sicuro il pubblico desiderato da Adobe Experience Platform a TikTok utilizzando l’integrazione in tempo reale di Adobe con TikTok Ads Manager.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 9a80a9b49b1983e8e488d11b114c02130b045686
 workflow-type: tm+mt
-source-wordcount: '1027'
+source-wordcount: '1077'
 ht-degree: 3%
 
 ---
@@ -47,6 +47,18 @@ TikTok supporta l’attivazione delle identità descritte nella tabella seguente
 
 {style="table-layout:auto"}
 
+## Tipi di pubblico supportati {#supported-audiences}
+
+Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
+
+| Origine pubblico | Supportato | Descrizione |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
+| Caricamenti personalizzati | ✓ | Tipi di pubblico [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
+| [!DNL Federated Audience Composition] | ✓ | Tipi di pubblico importati in Experience Platform tramite [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences). |
+
+{style="table-layout:auto"}
+
 ## Tipo e frequenza di esportazione {#export-type-frequency}
 
 Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, consulta la tabella seguente.
@@ -68,7 +80,7 @@ Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;ese
 
 ### Autenticarsi nella destinazione {#authenticate}
 
-Per eseguire l&#39;autenticazione nella destinazione, verrai reindirizzato all&#39;account [!DNL TikTok Ads Manager] e autorizzerai l&#39;Adobe a gestire i tipi di pubblico per tuo conto.
+Per eseguire l&#39;autenticazione nella destinazione, verrai reindirizzato per accedere al tuo account [!DNL TikTok Ads Manager] e autorizzare Adobe a gestire i tipi di pubblico per tuo conto.
 
 ![Selezione autorizzazioni TikTok](/help/destinations/assets/catalog/social/tiktok/tiktok-authenticate-destination.png "Immagine dell&#39;interfaccia utente di TikTok per la selezione delle autorizzazioni")
 
