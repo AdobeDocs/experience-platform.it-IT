@@ -11,7 +11,7 @@ ht-degree: 16%
 
 ---
 
-# Panoramica delle etichette di utilizzo dei dati {#overview}
+# Panoramica sulle etichette di utilizzo dei dati {#overview}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsageLabels_description"
@@ -30,11 +30,11 @@ Le etichette di utilizzo dei dati applicate a livello di set di dati vengono pro
 
 [!DNL Platform] fornisce diverse etichette di utilizzo dei dati &quot;core&quot; pronte all&#39;uso, che coprono un&#39;ampia varietà di restrizioni comuni applicabili alla governance dei dati. Per ulteriori informazioni su queste etichette e sui criteri di governance che rappresentano, consulta la guida su [etichette di utilizzo dei dati di base](reference.md).
 
-Oltre alle etichette fornite dall’Adobe, puoi anche definire etichette personalizzate per la tua organizzazione. Per ulteriori informazioni, vedere la sezione relativa alla gestione di [etichette](#manage-labels).
+Oltre alle etichette fornite da Adobe, puoi anche definire etichette personalizzate per la tua organizzazione. Per ulteriori informazioni, vedere la sezione relativa alla gestione di [etichette](#manage-labels).
 
 ## Ereditarietà delle etichette per i segmenti di pubblico
 
-Tutti i segmenti di pubblico creati da [Adobe Experience Platform Segmentation Service](../../segmentation/home.md) ereditano le etichette di utilizzo dei set di dati corrispondenti. Questo consente agli Experienci Platform di fornire l’applicazione automatica delle policy durante l’attivazione dei segmenti nelle destinazioni.
+Tutti i segmenti di pubblico creati da [Adobe Experience Platform Segmentation Service](../../segmentation/home.md) ereditano le etichette di utilizzo dei set di dati corrispondenti. Questo consente ad Experience Platform di fornire l’applicazione automatica delle policy durante l’attivazione dei segmenti nelle destinazioni.
 
 Oltre a ereditare le etichette a livello di set di dati, per impostazione predefinita i segmenti ereditano tutte le etichette a livello di campo dai set di dati associati. Pertanto, puoi identificare più facilmente quali attributi devono essere esclusi dai segmenti e impedire loro di ereditare le etichette dai campi esclusi.
 
@@ -42,9 +42,9 @@ Per ulteriori informazioni sul funzionamento dell&#39;imposizione automatica in 
 
 ### Ereditarietà da controlli esportazione dati Adobe Audience Manager
 
-[!DNL Experience Platform] può condividere segmenti con Adobe Audience Manager. Qualsiasi controllo sull&#39;esportazione dei dati applicato ai segmenti Audience Manager viene convertito in etichette e azioni di marketing equivalenti riconosciute dalla governance dei dati di [!DNL Experience Platform].
+[!DNL Experience Platform] può condividere segmenti con Adobe Audience Manager. Qualsiasi controllo sull&#39;esportazione dei dati applicato ai segmenti di Audience Manager viene convertito in etichette e azioni di marketing equivalenti riconosciute dalla governance dei dati di [!DNL Experience Platform].
 
-Per informazioni su come specifici controlli sull&#39;esportazione dei dati vengono mappati alle etichette di utilizzo dei dati in [!DNL Platform], consulta la [documentazione di Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
+Per informazioni sul mapping di specifici controlli sull&#39;esportazione dei dati alle etichette di utilizzo dei dati in [!DNL Platform], consultare la [documentazione di Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
 
 ## Gestione delle etichette di utilizzo dei dati in [!DNL Experience Platform] {#manage-labels}
 

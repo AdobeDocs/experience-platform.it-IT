@@ -7,7 +7,7 @@ exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
 source-git-commit: 74980c6108a32ec6736ab5892d89590e04e8a500
 workflow-type: tm+mt
 source-wordcount: '1593'
-ht-degree: 3%
+ht-degree: 7%
 
 ---
 
@@ -25,7 +25,7 @@ Questa funzionalità consente di categorizzare campi dello schema, tipi di pubbl
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../xdm/home.md): framework standardizzato in base al quale Experience Platform organizza i dati sull&#39;esperienza del cliente.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../xdm/home.md): framework standardizzato tramite il quale Experience Platform organizza i dati sull&#39;esperienza del cliente.
    * [Nozioni di base sulla composizione dello schema](../../xdm/schema/composition.md): scopri i blocchi predefiniti di base degli schemi XDM, inclusi i principi chiave e le best practice nella composizione dello schema.
    * [Esercitazione sull&#39;editor di schemi](../../xdm/tutorials/create-schema-ui.md): scopri come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;editor di schemi.
 * [Servizio di segmentazione di Adobe Experience Platform](../../segmentation/home.md): il motore di segmentazione all&#39;interno di [!DNL Platform] utilizzava per creare segmenti di pubblico dai profili dei clienti in base ai comportamenti e agli attributi dei clienti.
@@ -55,7 +55,7 @@ Tramite [!UICONTROL Autorizzazioni], puoi creare e gestire i ruoli e assegnare l
 
 Se non disponi dei privilegi di amministratore, contatta l’amministratore di sistema per ottenere l’accesso.
 
-Una volta ottenuti i privilegi di amministratore, vai a [Adobe Experience Cloud](https://experience.adobe.com/) e accedi utilizzando le tue credenziali di Adobe. Una volta effettuato l&#39;accesso, viene visualizzata la pagina **[!UICONTROL Panoramica]** per l&#39;organizzazione per la quale si dispone dei privilegi di amministratore. Questa pagina mostra i prodotti a cui la tua organizzazione è abbonata, insieme ad altri controlli per aggiungere utenti e amministratori all’organizzazione. Seleziona **[!UICONTROL Autorizzazioni]** per aprire l&#39;area di lavoro per l&#39;integrazione con Platform.
+Una volta che hai i privilegi di amministratore, vai a [Adobe Experience Cloud](https://experience.adobe.com/) e accedi utilizzando le tue credenziali Adobe. Una volta effettuato l&#39;accesso, viene visualizzata la pagina **[!UICONTROL Panoramica]** per l&#39;organizzazione per la quale si dispone dei privilegi di amministratore. Questa pagina mostra i prodotti a cui la tua organizzazione è abbonata, insieme ad altri controlli per aggiungere utenti e amministratori all’organizzazione. Seleziona **[!UICONTROL Autorizzazioni]** per aprire l&#39;area di lavoro per l&#39;integrazione con Platform.
 
 ![Immagine che mostra il prodotto Autorizzazioni selezionato in Adobe Experience Cloud](../images/flac-ui/flac-select-product.png)
 
@@ -65,9 +65,9 @@ Viene visualizzata l&#39;area di lavoro Autorizzazioni per l&#39;interfaccia ute
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
->title="Cosa sono le etichette?"
->abstract="Utilizza le etichette per categorizzare set di dati e campi in base ai criteri di utilizzo e di accesso applicabili a tali dati. Platform fornisce diverse etichette di utilizzo dei dati <strong>core</strong> definite da Adobe, che coprono un&#39;ampia varietà di restrizioni comuni applicabili alla governance dei dati. Ad esempio, le etichette sensibili <strong>S</strong> come RHD (Regulated Health Data, dati sanitari regolamentati) consentono di categorizzare i dati che fanno riferimento alle informazioni sanitarie protette (PHI, Protected Health Information). Puoi anche definire etichette personalizzate che soddisfino le esigenze della tua organizzazione."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=it#understanding-data-usage-labels" text="Panoramica delle etichette di utilizzo dei dati"
+>title="Che cosa sono le etichette?"
+>abstract="Le etichette consentono di categorizzare set di dati e campi in base ai criteri di utilizzo e di accesso applicati a tali dati. Platform fornisce diverse etichette di utilizzo dei dati <strong>principali</strong> definite da Adobe che coprono un’ampia gamma di restrizioni comuni applicabili alla governance dei dati. Ad esempio, le etichette <strong>S</strong> sensibili, come RHD (Regulated Health Data, dati sanitari regolamentati) consentono di categorizzare i dati riferiti alle informazioni sanitarie protette (PHI, Protected Health Information). Puoi anche definire etichette personalizzate che soddisfino le esigenze della tua organizzazione."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=it#understanding-data-usage-labels" text="Panoramica sulle etichette di utilizzo dei dati"
 
 I ruoli sono modi per categorizzare i tipi di utenti che interagiscono con l’istanza Platform e sono blocchi predefiniti dei criteri di controllo degli accessi. Un ruolo dispone di un determinato set di autorizzazioni e i membri dell’organizzazione possono essere assegnati a uno o più ruoli, a seconda dell’ambito di accesso di cui hanno bisogno.
 
@@ -91,9 +91,9 @@ Viene visualizzato un elenco di tutte le etichette dell’organizzazione. Selezi
 
 Dopo aver configurato un ruolo utente con l&#39;etichetta [!UICONTROL RHD], il passaggio successivo consiste nell&#39;aggiungere la stessa etichetta alle risorse che si desidera controllare per tale ruolo.
 
-Nella navigazione in alto, seleziona il **selettore di applicazioni**, rappresentato dall&#39;icona ![commutatore di applicazioni](/help/images/icons/apps.png), quindi seleziona **[!UICONTROL Experience Platform]**.
+Nella navigazione in alto, seleziona il **selettore di applicazioni**, rappresentato dall&#39;icona ![selettore di applicazioni](/help/images/icons/apps.png), quindi seleziona **[!UICONTROL Experience Platform]**.
 
-![Immagine che mostra l&#39;Experience Platform selezionato dal menu a discesa del commutatore dell&#39;applicazione](../images/abac-end-to-end-user-guide/abac-select-experience-platform.png)
+![Immagine che mostra Experience Platform selezionato dal menu a discesa del commutatore dell&#39;applicazione](../images/abac-end-to-end-user-guide/abac-select-experience-platform.png)
 
 Seleziona **[!UICONTROL Schemi]** nella barra di navigazione a sinistra, quindi seleziona **[!UICONTROL ACME Healthcare]** dall&#39;elenco degli schemi visualizzati.
 

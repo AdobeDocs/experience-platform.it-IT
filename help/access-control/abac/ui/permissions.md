@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;controllo degli accessi;controllo degli accessi basato su attributi;ABAC
+keywords: Experience Platform;home;argomenti popolari;controllo degli accessi;controllo degli accessi basato su attributi;ABAC;;home;popular topic;access control;attribute-based access control;ABAC
 title: Autorizzazioni per la gestione dei ruoli di controllo dell'accesso basato su attributi
 description: Questo documento fornisce informazioni sulla configurazione delle autorizzazioni per un ruolo tramite l’interfaccia Autorizzazioni in Adobe Experience Cloud
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
 source-git-commit: 207317d16a21cc2461ebd3f7867735735227c173
 workflow-type: tm+mt
 source-wordcount: '1608'
-ht-degree: 4%
+ht-degree: 11%
 
 ---
 
@@ -14,8 +14,8 @@ ht-degree: 4%
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about"
->title="Cosa sono i ruoli?"
->abstract="I ruoli definiscono l’accesso di un amministratore, uno specialista o un utente finale alle risorse della tua organizzazione. Classificano gli utenti che interagiscono con l’istanza Platform e sono gli elementi costitutivi dei criteri di controllo degli accessi. Un ruolo dispone di un determinato set di autorizzazioni e i membri dell’organizzazione possono essere assegnati a uno o più ruoli, a seconda dell’ambito di accesso di visualizzazione o scrittura necessario."
+>title="Che cosa sono i ruoli?"
+>abstract="I ruoli definiscono l’accesso di un amministratore, uno specialista o un utente finale alle risorse della tua organizzazione. Categorizzano gli utenti che interagiscono con l’istanza di Platform e sono blocchi predefiniti dei criteri di controllo degli accessi. Un ruolo dispone di un determinato set di autorizzazioni e i membri dell’organizzazione possono essere assegnati a uno o più ruoli, a seconda dell’ambito di accesso di visualizzazione o scrittura necessario."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=it" text="Gestire i ruoli"
 
 >[!IMPORTANT]
@@ -47,14 +47,14 @@ Per rimuovere un filtro, seleziona la &quot;X&quot; sull&#39;icona della pillola
 
 ![Dashboard dei ruoli nell&#39;interfaccia utente delle autorizzazioni con le selezioni X e Cancella tutte evidenziate nei filtri selezionati.](../../images/flac-ui/flac-clear-filters.png)
 
-## Dettagli ruolo {#role-details}
+## Dettagli del ruolo {#role-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_details"
 >title="Panoramica del ruolo"
->abstract="La finestra di dialogo per panoramica sul ruolo visualizza i dettagli del ruolo, incluse le risorse e le sandbox a cui un determinato ruolo può accedere. Per gestire etichette, utenti, gruppi di utenti e credenziali API per il ruolo, vai alla scheda corrispondente nell’area di lavoro del ruolo."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-labels-for-a-role" text="Gestire le etichette per un ruolo"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-users-for-a-role" text="Gestire gli utenti per un ruolo"
+>abstract="La finestra di dialogo della panoramica sui ruoli mostra i dettagli del ruolo, incluse le risorse e le sandbox a cui un determinato ruolo può accedere. Per gestire etichette, utenti, gruppi di utenti e credenziali API per il ruolo, passa alla scheda corrispondente dell’area di lavoro del ruolo."
+>additional-url="https://experienceleague.adobe.com/it/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-labels-for-a-role" text="Gestire le etichette per un ruolo"
+>additional-url="https://experienceleague.adobe.com/it/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-users-for-a-role" text="Gestire gli utenti per un ruolo"
 
 Seleziona il ruolo dalla scheda **[!UICONTROL Ruoli]**, che aprirà la dashboard [!UICONTROL Dettagli] del ruolo.
 
@@ -124,7 +124,7 @@ Il video seguente ha lo scopo di aiutare a comprendere come creare un nuovo ruol
 >
 > Per utilizzare e gestire le credenziali API in [!UICONTROL Autorizzazioni], gli utenti devono disporre dei privilegi di amministratore di sistema.
 
-Per utilizzare le API Experience Platform come utente o sviluppatore, un amministratore di sistema deve aggiungere credenziali API oltre al set di autorizzazioni assegnato da un ruolo. Per una guida completa sulla creazione e l&#39;assegnazione delle credenziali API e sulle autorizzazioni necessarie, consulta l&#39;esercitazione dettagliata in [autenticare e accedere alle API Experience Platform](../../../landing/api-authentication.md#generate-credentials).
+Per utilizzare le API di Experience Platform come utente o sviluppatore, un amministratore di sistema deve aggiungere credenziali API oltre al set di autorizzazioni assegnato da un ruolo. Per una guida completa sulla creazione e l&#39;assegnazione delle credenziali API e sulle autorizzazioni necessarie, consulta l&#39;esercitazione dettagliata in [autenticare e accedere alle API di Experience Platform](../../../landing/api-authentication.md#generate-credentials).
 
 Seleziona la scheda **[!UICONTROL Credenziali API]** per aprire l&#39;area di lavoro delle credenziali API dei ruoli, quindi seleziona **[!UICONTROL Aggiungi credenziali API]** per assegnare le credenziali API al ruolo.
 
@@ -174,11 +174,11 @@ Viene visualizzata la finestra di dialogo **[!UICONTROL Rimuovi gruppo utenti]**
 
 Verrai reindirizzato alla scheda **[!UICONTROL Gruppi utenti]**.
 
-## Aggiungi utenti all&#39;Experience Platform
+## Aggiungere utenti ad Experience Platform
 
 In qualità di amministratore di sistema, puoi concedere agli sviluppatori l&#39;accesso a un utente in modo che possano [creare integrazioni](../../../landing/api-authentication.md#generate-credentials) in Adobe Developer Console.
 
-Per aggiungere un Experience Platform utente, accedere all&#39;[Admin Console](https://adminconsole.adobe.com) e selezionare **[!UICONTROL Aggiungi utenti]**.
+Per aggiungere un Experience Platform utente, accedi a [Admin Console](https://adminconsole.adobe.com) e seleziona **[!UICONTROL Aggiungi utenti]**.
 
 ![Dashboard di Adobe Admin Console con l&#39;opzione Aggiungi utenti evidenziata.](../../images/flac-ui/product-profile-add-users.png)
 

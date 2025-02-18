@@ -7,7 +7,7 @@ exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
 source-git-commit: 9d38fdae0fc65048d02a4337375004edafedd1b6
 workflow-type: tm+mt
 source-wordcount: '1065'
-ht-degree: 0%
+ht-degree: 6%
 
 ---
 
@@ -19,14 +19,14 @@ In Adobe Experience Platform, puoi configurare i tempi di scadenza dei dati per 
 
 >[!CONTEXTUALHELP]
 >id="platform_profile_pseudonymousprofile"
->title="Che cos&#39;è un profilo pseudonimo?"
->abstract="Un profilo pseudonimo è un profilo con uno spazio dei nomi di identità pseudonimo o sconosciuto o un profilo che non ha avuto luogo alcuna attività per un determinato periodo di tempo."
+>title="Che cos’è un profilo pseudonimo?"
+>abstract="Un profilo pseudonimo è un profilo con uno spazio dei nomi di identità pseudonimo o sconosciuto o un profilo che non ha presentato alcuna attività per un determinato periodo di tempo."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_profile_pseudonymousprofile_dataexpiration"
->title="Scadenza dati profilo pseudonimo"
->abstract="La scadenza dei dati del profilo pseudonimo rappresenta il numero di giorni in cui un profilo pseudonimo rimarrà in Adobe Experience Platform prima di essere rimosso."
+>title="Scadenza dei dati del profilo pseudonimo"
+>abstract="La scadenza dei dati di un profilo pseudonimo rappresenta il numero di giorni in cui un profilo pseudonimo rimarrà in Adobe Experience Platform prima di essere rimosso."
 
 Un profilo viene considerato per la scadenza dei dati pseudonimi se soddisfa le seguenti condizioni:
 

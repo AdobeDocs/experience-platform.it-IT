@@ -6,7 +6,7 @@ exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: 546ef0f9a5a9c37de3891aba02491540a5c6f8c9
 workflow-type: tm+mt
 source-wordcount: '1730'
-ht-degree: 5%
+ht-degree: 8%
 
 ---
 
@@ -34,9 +34,9 @@ Per esportare le matrici, è necessario utilizzare la funzionalità dei campi ca
 
 ## Array e altri tipi di oggetti in Platform {#arrays-strings-other-objects}
 
-Ad Experience Platform, puoi utilizzare [schemi XDM](/help/xdm/home.md) per gestire diversi tipi di campo. Prima di aggiungere il supporto per le esportazioni di array, era possibile esportare semplici campi di tipo coppia chiave-valore, come stringhe di Experience Platform, nelle destinazioni desiderate. Un esempio di questo campo precedentemente supportato per l&#39;esportazione è `personalEmail.address`:`johndoe@acme.org`.
+In Experience Platform puoi utilizzare [schemi XDM](/help/xdm/home.md) per gestire diversi tipi di campi. Prima di aggiungere il supporto per le esportazioni di array, era possibile esportare campi di tipo coppia chiave-valore semplici, come le stringhe, da Experience Platform nelle destinazioni desiderate. Un esempio di questo campo precedentemente supportato per l&#39;esportazione è `personalEmail.address`:`johndoe@acme.org`.
 
-Altri tipi di campo in Experience Platform includono i campi array. Ulteriori informazioni sulla [gestione dei campi array nell&#39;interfaccia utente Experience Platform](/help/xdm/ui/fields/array.md). Oltre ai tipi di campo supportati in precedenza, è ora possibile esportare oggetti array come l&#39;esempio seguente, concatenati in una stringa utilizzando la funzione `array_to_string`.
+Altri tipi di campo in Experience Platform includono i campi array. Ulteriori informazioni sulla gestione dei campi array nell&#39;interfaccia utente di Experience Platform ](/help/xdm/ui/fields/array.md). [ Oltre ai tipi di campo supportati in precedenza, è ora possibile esportare oggetti array come l&#39;esempio seguente, concatenati in una stringa utilizzando la funzione `array_to_string`.
 
 ```
 organizations = [{
@@ -84,13 +84,13 @@ Tieni presente le seguenti limitazioni note attualmente applicabili a questa fun
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_calculated_field_disabled"
 >title="Aggiungere campi calcolati disabilitati"
->abstract="Questo controllo è disabilitato perché durante la configurazione della connessione di destinazione è stato selezionato **Esporta array, mappe, oggetti** attiva/disattiva *su*. Per utilizzare i campi calcolati e le funzioni disponibili all&#39;interno di, imposta una nuova connessione di destinazione con **Esporta array, mappe, oggetti** e attiva *off*."
+>abstract="Questo controllo è disabilitato, perché durante la configurazione della connessione di destinazione hai selezionato **Esporta array, mappe, oggetti** su *Attivato*. Per utilizzare i campi calcolati e le funzioni disponibili all’interno, imposta una nuova connessione di destinazione con l’opzione **Esporta array, mappe, oggetti** su *Disattivato*."
 
 Nel passaggio di mappatura del flusso di lavoro di attivazione per le destinazioni di archiviazione cloud, seleziona **[!UICONTROL Aggiungi campo calcolato]**.
 
 ![Aggiungi campo calcolato evidenziato nel passaggio di mappatura del flusso di lavoro di attivazione batch.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
 
-Viene visualizzata una finestra modale in cui è possibile selezionare funzioni e campi per esportare attributi da Experience Platform.
+Viene visualizzata una finestra modale in cui è possibile selezionare funzioni e campi per esportare gli attributi da Experience Platform.
 
 ![Finestra modale della funzionalità del campo calcolato senza alcuna funzione ancora selezionata.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-2.png)
 
