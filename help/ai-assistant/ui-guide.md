@@ -1,10 +1,10 @@
 ---
 title: Assistente AI in Adobe Experience Platform
-description: Scopri come utilizzare l’Assistente AI per navigare e comprendere i concetti di Experience Platform e Real-time Customer Data Platform e le informazioni sull’utilizzo degli oggetti.
+description: Scopri come utilizzare l’Assistente AI per navigare e comprendere i concetti di Experience Platform e Real-Time Customer Data Platform e le informazioni sull’utilizzo degli oggetti.
 exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
-source-git-commit: 0ee9135b2b303f4abcc4d5e5c7345e2bff9332f3
+source-git-commit: 4fd40d66ecc2fe7604e157fcd230883c6c48d761
 workflow-type: tm+mt
-source-wordcount: '1759'
+source-wordcount: '1734'
 ht-degree: 0%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 Leggi questa guida per scoprire come utilizzare l’Assistente IA nell’interfaccia utente di Adobe Experience Platform.
 
-## Accedere all’Assistente AI nell’interfaccia utente di Experience Platform
+## Accedere all’Assistente IA nell’interfaccia utente di Experience Platform
 
-Per avviare l&#39;Assistente di intelligenza artificiale, seleziona l&#39;icona **[!UICONTROL Assistente di intelligenza artificiale]** dall&#39;intestazione superiore dell&#39;interfaccia utente di Experience Platform.
+Per avviare l&#39;Assistente IA, seleziona l&#39;icona **[!UICONTROL Assistente AI]** dall&#39;intestazione superiore dell&#39;interfaccia utente di Experience Platform.
 
-![Home page dell&#39;Experience Platform, con l&#39;icona Assistente AI selezionata e l&#39;interfaccia Assistente AI aperta.](./images/ai-assistant-full-icon.png)
+![Pagina Home di Experience Platform, con l&#39;icona Assistente AI selezionata e l&#39;interfaccia Assistente AI aperta.](./images/ai-assistant-full-icon.png)
 
 Viene visualizzata l’interfaccia di AI Assistant, che fornisce immediatamente le informazioni necessarie per iniziare. Puoi utilizzare le opzioni fornite in [!UICONTROL Idee per iniziare] a rispondere a domande e comandi quali:
 
@@ -29,23 +29,23 @@ Viene visualizzata l’interfaccia di AI Assistant, che fornisce immediatamente 
 
 >[!NOTE]
 >
->Il seguente flusso di lavoro è un esempio che utilizza il processo di creazione dello schema dell’evento esperienza per illustrare come utilizzare l’Assistente AI quando si utilizza l’interfaccia utente di Experience Platform.
+>Il seguente flusso di lavoro è un esempio che utilizza il processo di creazione dello schema evento esperienza per illustrare come utilizzare l’Assistente IA quando si utilizza l’interfaccia utente di Experience Platform.
 
 Considera un caso d&#39;uso in cui stai creando una **permuta di dispositivi nello schema evento**. Durante il processo di creazione dello schema dell&#39;evento esperienza, viene visualizzato il campo `eventType`. &quot;A questo punto, puoi scegliere di uscire dal flusso di lavoro e fare riferimento alla [nozioni di base di una composizione di schema](../xdm/schema/composition.md) oppure puoi utilizzare l&#39;Assistente IA per recuperare le risposte alle tue domande e trovare risorse aggiuntive tramite i collegamenti alla documentazione consigliati dall&#39;Assistente IA.&quot;
 
 Per iniziare, immettere la domanda nella casella di testo fornita. Nell&#39;esempio seguente, all&#39;Assistente IA viene fornita la domanda: &quot;**Qual è il campo eventType in uno schema ExperienceEvent?**&quot;
 
-![Assistente IA per Experience Platform con la seguente domanda preparata per la query: &quot;Qual è il campo eventType in uno schema ExperienceEvent?](./images/question.png)
+![Assistente AI per Experience Platform con la seguente domanda preparata per la query: &quot;Qual è il campo eventType in uno schema ExperienceEvent?](./images/question.png)
 
 L&#39;Assistente IA esegue quindi una query sulla knowledge base e calcola una risposta. Dopo alcuni istanti, l’Assistente IA restituisce una risposta e i suggerimenti correlati che puoi utilizzare come prompt di follow-up.
 
-![Assistente di IA, ad Experience Platform, con una risposta alla query precedente.](./images/answer.png)
+![Assistente AI per Experience Platform con una risposta alla query precedente.](./images/answer.png)
 
 Dopo aver ricevuto una risposta dall’Assistente AI, puoi scegliere tra una serie di opzioni per decidere come procedere.
 
 ### Funzioni di AI Assistant {#features}
 
-Questa sezione illustra le diverse funzioni di AI Assistant che è possibile utilizzare durante i flussi di lavoro in Experience Platform.
+Questa sezione descrive le diverse funzioni di AI Assistant che puoi utilizzare durante i flussi di lavoro su Experience Platform.
 
 ### Visualizzare gli oggetti dati operativi {#view-operational-data-objects}
 
@@ -87,7 +87,7 @@ Nell&#39;esempio seguente, all&#39;Assistente IA viene richiesta la seguente que
 
 ![Una domanda sulle informazioni operative.](./images/op-insights-question.png)
 
-L’Assistente IA risponde quindi con una tabella in cui sono elencati i flussi di dati e gli ID corrispondenti. Per visualizzare l’intera tabella di dati, seleziona l’icona di espansione in alto a destra.
+L’Assistente IA risponde quindi con una tabella in cui sono elencati i flussi di dati e gli ID corrispondenti. Selezionare l&#39;icona di download (![icona Download](/help/images/icons/download.png)) per scaricare la tabella come file CSV. Per visualizzare l&#39;intera tabella, selezionare l&#39;icona di espansione (![icona Espandi](/help/images/icons/expand.png)).
 
 ![Risposta di approfondimenti operativi](./images/op-insights-answer.png)
 
@@ -100,10 +100,6 @@ Quando viene richiesta una domanda di approfondimenti operativi, l’Assistente 
 ![Assistente di IA che fornisce una spiegazione su come ha calcolato la risposta.](./images/answer-explained.png)
 
 Puoi anche fornire filtri e modifiche alle domande, nonché istruire l’Assistente AI affinché esegua il rendering dei risultati in base ai filtri inclusi. Ad esempio, puoi chiedere all’Assistente AI di mostrare una tendenza del conteggio delle definizioni dei segmenti nell’ordine della data di creazione, rimuovere le definizioni dei segmenti con profili totali pari a zero e utilizzare i nomi dei mesi invece dei numeri interi durante la visualizzazione dei dati.
-
-**Nota:** le risposte di Operational Insights sono attualmente in versione beta. Seleziona l’icona con la descrizione comando nell’interfaccia utente di AI Assistant per visualizzare l’avviso di Beta e un collegamento alla documentazione.
-
-![Icona descrizione comando Assistente IA selezionata.](./images/op-insights-beta-note.png)
 
 +++
 

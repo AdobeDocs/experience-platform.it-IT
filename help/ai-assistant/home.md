@@ -2,10 +2,10 @@
 title: Panoramica dell’Assistente AI in Adobe Experience Platform
 description: Scopri l’Assistente IA, le relative sfaccettature e i casi di utilizzo, e come utilizzarlo per accelerare il flusso di lavoro con Adobe Experience Platform e Real-time Customer Data Platform.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 9a10db0da1985c5ccaaeb84e040eea9e76ec1ae4
+source-git-commit: e90333d09585c8aa0ef176dcfc4717e86364fd54
 workflow-type: tm+mt
-source-wordcount: '950'
-ht-degree: 14%
+source-wordcount: '927'
+ht-degree: 15%
 
 ---
 
@@ -65,10 +65,6 @@ Per ulteriori informazioni sulla conoscenza del prodotto di AI Assistant, guarda
 
 ### Insight operativi {#operational-insights}
 
->[!IMPORTANT]
->
->Le risposte di Operational Insights sono in versione beta. Chiunque abbia accesso all&#39;autorizzazione **Visualizza informazioni operative** avrà accesso alle risposte alle informazioni operative.
-
 Le informazioni operative si riferiscono alle risposte che l’Assistente AI genera sugli oggetti di metadati (attributi, tipi di pubblico, flussi di dati, set di dati, destinazioni, percorsi, schemi e origini), inclusi i conteggi, le ricerche e l’impatto sulla derivazione. Non esamina alcun dato all’interno della sandbox.
 
 * Quanti set di dati ho?
@@ -100,7 +96,7 @@ Per ulteriori informazioni sulle informazioni operative di AI Assistant, guarda 
 
 Attualmente, l’ambito di AI Assistant è il seguente:
 
-* [Conoscenza del prodotto](./home.md#product-knowledge): l&#39;Assistente all&#39;intelligenza artificiale può rispondere alle domande relative alla conoscenza del prodotto, ad Experience Platform, Real-time Customer Data Platform e Adobe Journey Optimizer. Puoi anche approfondire gli argomenti della conoscenza del prodotto per il Customer Journey Analytics, ma solo tramite l’interfaccia utente del Customer Journey Analytics.
+* [Conoscenza del prodotto](./home.md#product-knowledge): l&#39;Assistente all&#39;intelligenza artificiale può rispondere alle domande relative alla conoscenza del prodotto per Experience Platform, Real-Time Customer Data Platform e Adobe Journey Optimizer. Puoi anche approfondire gli argomenti della conoscenza del prodotto per Customer Journey Analytics, ma solo tramite l’interfaccia utente di Customer Journey Analytics.
 * [Informazioni operative](./home.md#operational-insights): puoi chiedere all&#39;Assistente AI domande sulle informazioni operative sui seguenti oggetti dati: attributi, tipi di pubblico, flussi di dati, set di dati, destinazioni, percorsi, schemi e origini.
 
 ## Passaggi successivi
