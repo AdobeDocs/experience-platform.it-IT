@@ -1,9 +1,9 @@
 ---
-keywords: connessione facebook;connessione facebook;destinazioni facebook;facebook;instagram;messenger;facebook messenger
-title: Connessione facebook
+keywords: connessione facebook;facebook connection;facebook destinations;facebook;instagram;messenger;facebook messenger
+title: Connessione Facebook
 description: Attiva profili per le campagne Facebook per il targeting, la personalizzazione e l’eliminazione del pubblico in base alle e-mail con hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 83e2c014e62509fee2843505d7975cde368665ef
+source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
 workflow-type: tm+mt
 source-wordcount: '2091'
 ht-degree: 6%
@@ -54,7 +54,7 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 
 | Origine pubblico | Supportato | Descrizione |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite il servizio di segmentazione [Experience Platform](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
 | Caricamenti personalizzati | ✓ | Tipi di pubblico [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
@@ -70,20 +70,23 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 {style="table-layout:auto"}
 
-## Prerequisiti per l’account facebook {#facebook-account-prerequisites}
+## Prerequisiti per l’account Facebook {#facebook-account-prerequisites}
 
 Prima di poter inviare i tipi di pubblico a [!DNL Facebook], assicurati di soddisfare i seguenti requisiti:
 
 * L&#39;account utente di [!DNL Facebook] deve avere accesso completo a [!DNL Facebook Business Account], proprietario dell&#39;account dell&#39;annuncio che si sta utilizzando.
 * L&#39;account utente [!DNL Facebook] deve avere l&#39;autorizzazione **[!DNL Manage campaigns]** abilitata per l&#39;account annuncio che intendi utilizzare.
 * L&#39;account aziendale **Adobe Experience Cloud** deve essere aggiunto come partner pubblicitario nel tuo [!DNL Facebook Ad Account]. Usa `business ID=206617933627973`. Per ulteriori informazioni, consulta [Aggiungere partner al tuo Business Manager](https://www.facebook.com/business/help/1717412048538897) nella documentazione di Facebook.
+
   >[!IMPORTANT]
   >
   > Durante la configurazione delle autorizzazioni per Adobe Experience Cloud, devi abilitare l&#39;autorizzazione **Gestisci campagne**. L&#39;autorizzazione è necessaria per l&#39;integrazione di [!DNL Adobe Experience Platform].
+
 * Leggi e firma le Condizioni per l&#39;utilizzo di [!DNL Facebook Custom Audiences]. Per farlo, vai a `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]&business_id=206617933627973`, dove `accountID` è il tuo [!DNL Facebook Ad Account ID]. Assicurati che la sezione `business_id=206617933627973` sia presente nell&#39;URL quando firmi i termini di servizio.
+
   >[!IMPORTANT]
   >
-  >Quando si firmano i termini di servizio di [!DNL Facebook Custom Audiences], assicurarsi di utilizzare lo stesso account utente utilizzato per l&#39;autenticazione nell&#39;API Facebook.
+  >Quando si firmano i termini di servizio di [!DNL Facebook Custom Audiences], assicurarsi di utilizzare lo stesso account utente utilizzato per l&#39;autenticazione nell&#39;API di Facebook.
 
 ## Requisiti di corrispondenza ID {#id-matching-requirements}
 
@@ -104,9 +107,9 @@ Esistono due metodi per attivare i numeri di telefono in [!DNL Facebook]:
 
 ## Requisiti di hashing delle e-mail {#email-hashing-requirements}
 
-Puoi eseguire l&#39;hashing degli indirizzi e-mail prima di acquisirli in Adobe Experience Platform, oppure utilizzare gli indirizzi e-mail in chiaro nell&#39;Experience Platform e disporre di [!DNL Platform] hashing al momento dell&#39;attivazione.
+Puoi eseguire l&#39;hashing degli indirizzi e-mail prima di acquisirli in Adobe Experience Platform, oppure utilizzare gli indirizzi e-mail in chiaro in Experience Platform e impostarli con [!DNL Platform] come hashing al momento dell&#39;attivazione.
 
-Per informazioni sull&#39;acquisizione degli indirizzi e-mail in Experience Platform, consulta la [panoramica sull&#39;acquisizione batch](/help/ingestion/batch-ingestion/overview.md) e la [panoramica sull&#39;acquisizione in streaming](/help/ingestion/streaming-ingestion/overview.md).
+Per informazioni sull&#39;acquisizione di indirizzi e-mail in Experience Platform, consulta la [panoramica sull&#39;acquisizione batch](/help/ingestion/batch-ingestion/overview.md) e la [panoramica sull&#39;acquisizione in streaming](/help/ingestion/streaming-ingestion/overview.md).
 
 Se scegli di eseguire l’hash degli indirizzi e-mail da solo, assicurati di soddisfare i seguenti requisiti:
 
@@ -143,25 +146,25 @@ Il video seguente illustra inoltre i passaggi per configurare una destinazione [
 
 >[!NOTE]
 >
->L’interfaccia utente di Experience Platform viene aggiornata frequentemente e potrebbe essere cambiata dopo la registrazione del video. Per informazioni aggiornate, fare riferimento al [tutorial sulla configurazione della destinazione](../../ui/connect-destination.md).
+>L’interfaccia utente di Experience Platform viene aggiornata frequentemente e potrebbe essere cambiata dopo la registrazione di questo video. Per informazioni aggiornate, fare riferimento al [tutorial sulla configurazione della destinazione](../../ui/connect-destination.md).
 
 ### Autenticarsi nella destinazione {#authenticate}
 
 1. Trova la destinazione Facebook nel catalogo di destinazione e seleziona **[!UICONTROL Configura]**.
 2. Selezionare **[!UICONTROL Connetti alla destinazione]**.
-   ![Esegui l&#39;autenticazione in Facebook, passaggio visualizzato nel flusso di lavoro di attivazione.](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
-3. Immetti le credenziali Facebook e seleziona **Accedi**.
+   ![Autentica su Facebook il passaggio visualizzato nel flusso di lavoro di attivazione.](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
+3. Immetti le credenziali di Facebook e seleziona **Accedi**.
 
 ### Aggiorna credenziali di autenticazione {#refresh-authentication-credentials}
 
-I token facebook scadono ogni 60 giorni. Una volta scaduto il token, l’esportazione dei dati nella destinazione smette di funzionare. Per evitare questa situazione, eseguire nuovamente l&#39;autenticazione eseguendo le operazioni seguenti:
+I token di Facebook scadono ogni 60 giorni. Una volta scaduto il token, l’esportazione dei dati nella destinazione smette di funzionare. Per evitare questa situazione, eseguire nuovamente l&#39;autenticazione eseguendo le operazioni seguenti:
 
 1. Passa a **[!UICONTROL Destinazioni]** > **[!UICONTROL Account]**
 2. (Facoltativo) Utilizza i filtri disponibili nella pagina per visualizzare solo gli account Facebook.
    ![Filtro per visualizzare solo gli account Facebook](/help/destinations/assets/catalog/social/facebook/refresh-oauth-filters.png)
 3. Selezionare l&#39;account da aggiornare, selezionare i puntini di sospensione e selezionare **[!UICONTROL Modifica dettagli]**.
    ![Selezionare il controllo Modifica dettagli](/help/destinations/assets/catalog/social/facebook/refresh-oauth-edit-details.png)
-4. Nella finestra modale, seleziona **[!UICONTROL Riconnetti OAuth]** e autentica di nuovo con le credenziali Facebook.
+4. Nella finestra modale, seleziona **[!UICONTROL Riconnetti OAuth]** e ripeti l&#39;autenticazione con le credenziali di Facebook.
    ![Finestra modale con opzione Riconnetti OAuth](/help/destinations/assets/catalog/social/facebook/reconnect-oauth-control.png)
 
 >[!SUCCESS]
@@ -271,6 +274,6 @@ Questo errore si verifica quando i clienti utilizzano account appena creati e le
 >
 >Assicurarsi di accettare [!DNL Facebook Custom Audience Terms of Service] in `business ID 206617933627973`, come mostrato nel modello URL nella sezione [prerequisiti account](#facebook-account-prerequisites).
 
-Se ricevi il messaggio di errore `400 Bad Request` dopo aver seguito i passaggi descritti in [Prerequisiti per l&#39;account Facebook](#facebook-account-prerequisites), attendi alcuni giorni per l&#39;entrata in vigore delle autorizzazioni [!DNL Facebook].
+Se ricevi il messaggio di errore `400 Bad Request` dopo aver seguito i passaggi descritti nei [prerequisiti dell&#39;account Facebook](#facebook-account-prerequisites), attendi alcuni giorni per l&#39;entrata in vigore delle autorizzazioni [!DNL Facebook].
 
 

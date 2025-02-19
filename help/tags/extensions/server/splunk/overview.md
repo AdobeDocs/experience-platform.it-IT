@@ -2,7 +2,7 @@
 title: Panoramica dell’estensione Splunk
 description: Scopri l’estensione Splunk per l’inoltro di eventi in Adobe Experience Platform.
 exl-id: 653b5897-493b-44f2-aeea-be492da2b108
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
 workflow-type: tm+mt
 source-wordcount: '976'
 ht-degree: 1%
@@ -11,7 +11,7 @@ ht-degree: 1%
 
 # Panoramica dell’estensione Splunk
 
-[Splunk](https://www.splunk.com) è una piattaforma di osservabilità che fornisce ricerche, analisi e visualizzazioni per approfondimenti fruibili sui tuoi dati. L&#39;estensione Splunk [inoltro eventi](../../../ui/event-forwarding/overview.md) sfrutta l&#39;API REST [Agente di raccolta eventi HTTP Splunk](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/HECRESTendpoints) per inviare eventi dall&#39;Edge Network Adobe Experience Platform all&#39;Agente di raccolta eventi HTTP [Splunk](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/UsetheHTTPEventCollector).
+[Splunk](https://www.splunk.com) è una piattaforma di osservabilità che fornisce ricerche, analisi e visualizzazioni per approfondimenti fruibili sui tuoi dati. L&#39;estensione Splunk [inoltro eventi](../../../ui/event-forwarding/overview.md) sfrutta l&#39;API REST [Splunk HTTP Event Collector](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/HECRESTendpoints) per inviare eventi da Adobe Experience Platform Edge Network all&#39;agente di raccolta eventi HTTP [Splunk](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/UsetheHTTPEventCollector).
 
 Splunk utilizza token bearer come meccanismo di autenticazione per comunicare con l’API Splunk Event Collector.
 
@@ -38,6 +38,7 @@ Per configurare l&#39;estensione è necessario disporre anche dei seguenti valor
 
 * Token [Raccolta eventi](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/UsetheHTTPEventCollector#Create_an_Event_Collector_token_on_Splunk_Cloud_Platform). I token sono in genere in formato UUIDv4 come segue: `12345678-1234-1234-1234-1234567890AB`.
 * L’indirizzo e la porta dell’istanza della piattaforma Splunk per la tua organizzazione. L&#39;indirizzo e la porta di un&#39;istanza della piattaforma avranno in genere il seguente formato: `mysplunkserver.example.com:443`.
+
   >[!IMPORTANT]
   >
   > Gli endpoint Splunk a cui si fa riferimento nell&#39;inoltro degli eventi devono utilizzare solo la porta `443`. Le porte non standard non sono attualmente supportate nelle implementazioni di inoltro degli eventi.
@@ -84,7 +85,7 @@ Il passaggio successivo consiste nel mappare le proprietà dell’evento Splunk 
 
 ### Convalidare i dati in Splunk {#validate}
 
-Dopo aver creato ed eseguito la regola di inoltro degli eventi, verifica se l’evento inviato all’API Splunk viene visualizzato come previsto nell’interfaccia utente di Splunk. Se la raccolta di eventi e l’integrazione di Experienci Platform hanno avuto esito positivo, nella console Splunk verranno visualizzati gli eventi seguenti:
+Dopo aver creato ed eseguito la regola di inoltro degli eventi, verifica se l’evento inviato all’API Splunk viene visualizzato come previsto nell’interfaccia utente di Splunk. Se la raccolta di eventi e l’integrazione di Experience Platform hanno avuto esito positivo, nella console Splunk verranno visualizzati gli eventi seguenti:
 
 ![Dati evento visualizzati nell&#39;interfaccia utente Splunk durante la convalida](../../../images/extensions/server/splunk/splunk-data.png)
 
