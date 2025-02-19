@@ -2,30 +2,32 @@
 keywords: Experience Platform;home;argomenti popolari;filtro;filtrare;filtrare dati;filtrare dati;intervallo date
 solution: Experience Platform
 title: Filtrare i dati del catalogo utilizzando i parametri di query
-description: L’API Catalog Service consente di filtrare i dati di risposta tramite l’utilizzo di parametri di query di richiesta. Una parte delle best practice per il catalogo consiste nell’utilizzare i filtri in tutte le chiamate API, in quanto riducono il carico sull’API e contribuiscono a migliorare le prestazioni complessive.
+description: Utilizza i parametri di query per filtrare i dati di risposta nell’API Catalog Service e recuperare solo le informazioni necessarie. Applica i filtri alle chiamate API per ridurre il carico e migliorare le prestazioni, garantendo un recupero dei dati più rapido ed efficiente.
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
-source-git-commit: 75099d39fbdb9488105a9254bbbcca9b12349238
+source-git-commit: 14ecb971af3f6cdcc605caa05ef6609ecb9b38fd
 workflow-type: tm+mt
-source-wordcount: '2117'
+source-wordcount: '2339'
 ht-degree: 2%
 
 ---
 
 # Filtra i dati di [!DNL Catalog] tramite parametri di query
 
-L&#39;API [!DNL Catalog Service] consente di filtrare i dati di risposta tramite l&#39;utilizzo di parametri di query di richiesta. Parte delle best practice per [!DNL Catalog] consiste nell&#39;utilizzare i filtri in tutte le chiamate API, in quanto riducono il carico sull&#39;API e contribuiscono a migliorare le prestazioni complessive.
+Per migliorare le prestazioni e recuperare i risultati rilevanti, utilizzare i parametri di query per filtrare i dati di risposta API [!DNL Catalog Service].
 
-Questo documento illustra i metodi più comuni per filtrare gli oggetti [!DNL Catalog] nell&#39;API. È consigliabile fare riferimento a questo documento durante la lettura della [Guida per gli sviluppatori di Catalog](getting-started.md) per ulteriori informazioni su come interagire con l&#39;API [!DNL Catalog]. Per ulteriori informazioni generali su [!DNL Catalog Service], vedere la [[!DNL Catalog] panoramica](../home.md).
+Scopri i metodi di filtro comuni per gli oggetti [!DNL Catalog] nell&#39;API. Utilizza questo documento insieme alla [Guida per gli sviluppatori di cataloghi](getting-started.md) per ulteriori dettagli sulle interazioni API. Per informazioni generali su [!DNL Catalog Service], vedere la [[!DNL Catalog] panoramica](../home.md).
 
-## Limita oggetti restituiti
+## Limita oggetti restituiti {#limit-returned-objects}
 
-Il parametro di query `limit` limita il numero di oggetti restituiti in una risposta. [!DNL Catalog] risposte vengono misurate automaticamente in base ai limiti configurati:
+Il parametro di query `limit` limita il numero di oggetti restituiti in una risposta. [!DNL Catalog] risposte seguono limiti predefiniti:
 
-* Se non si specifica un parametro `limit`, il numero massimo di oggetti per payload di risposta è 20.
+* Se il parametro `limit` non è specificato, il numero massimo di oggetti per risposta è 20.
 * Per le query di set di dati, se `observableSchema` viene richiesto utilizzando il parametro di query `properties`, il numero massimo di set di dati restituiti è 20.
-* Il limite globale per tutte le altre query Catalog è 100 oggetti.
-* I parametri `limit` non validi (incluso `limit=0`) generano risposte di errore a 400 livelli che delineano intervalli corretti.
-* I limiti o gli offset passati come parametri di query hanno la precedenza su quelli passati come intestazioni.
+* Per i token utente, il limite massimo è 1.
+* Per i token di servizio, il limite massimo è 20.
+* Il limite globale per altre query Catalog è di 100 oggetti.
+* I valori `limit` non validi (incluso `limit=0`) generano risposte di errore a 400 livelli che specificano intervalli corretti.
+* I limiti o gli offset passati come parametri di query hanno la precedenza su quelli nelle intestazioni.
 
 **Formato API**
 
@@ -35,8 +37,8 @@ GET /{OBJECT_TYPE}?limit={LIMIT}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{OBJECT_TYPE}` | Tipo di oggetto [!DNL Catalog] da recuperare. Gli oggetti validi sono: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
-| `{LIMIT}` | Numero intero che indica il numero di oggetti da restituire, compreso tra 1 e 100. |
+| `{OBJECT_TYPE}` | Tipo di oggetto [!DNL Catalog] da recuperare. Oggetti validi: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{LIMIT}` | Numero intero che specifica il numero di oggetti da restituire (intervallo: 1-100). |
 
 **Richiesta**
 
@@ -73,7 +75,7 @@ In caso di esito positivo, la risposta restituisce un elenco di set di dati, lim
 }
 ```
 
-## Limita proprietà visualizzate
+## Limita proprietà visualizzate {#limit-displayed-properties}
 
 Anche quando si filtra il numero di oggetti restituiti utilizzando il parametro `limit`, gli oggetti restituiti possono spesso contenere più informazioni di quelle effettivamente necessarie. Per ridurre ulteriormente il carico sul sistema, è consigliabile filtrare le risposte in modo da includere solo le proprietà necessarie.
 
@@ -158,7 +160,7 @@ In base alla risposta precedente, si può dedurre quanto segue:
 >
 >Nella proprietà `schemaRef` per ogni set di dati, il numero di versione indica la versione secondaria più recente dello schema. Per ulteriori informazioni, consulta la sezione sul controllo delle versioni dello schema [1} nella guida dell&#39;API XDM.](../../xdm/api/getting-started.md#versioning)
 
-## Indice di offset iniziale dell&#39;elenco di risposte
+## Indice di offset iniziale dell&#39;elenco di risposte {#offset-starting-index}
 
 Il parametro di query `start` determina l&#39;offset dell&#39;elenco di risposte in avanti in base a un numero specificato, utilizzando la numerazione basata su zero. Ad esempio, `start=2` distanzierebbe la risposta per iniziare dal terzo oggetto elencato.
 
@@ -207,7 +209,7 @@ Esistono alcune limitazioni da considerare quando si utilizzano i tag:
 
 * Gli unici oggetti Catalog che attualmente supportano i tag sono set di dati, batch e connessioni.
 * I nomi dei tag sono univoci per la tua organizzazione.
-* I processi Adobe possono sfruttare i tag per determinati comportamenti. I nomi di questi tag hanno il prefisso &quot;adobe&quot; come standard. Pertanto, è necessario evitare questa convenzione quando si dichiarano i nomi dei tag.
+* I processi di Adobe possono sfruttare i tag per determinati comportamenti. I nomi di questi tag hanno il prefisso &quot;adobe&quot; come standard. Pertanto, è necessario evitare questa convenzione quando si dichiarano i nomi dei tag.
 * I seguenti nomi di tag sono riservati per l&#39;utilizzo in [!DNL Experience Platform] e pertanto non possono essere dichiarati come nomi di tag per l&#39;organizzazione:
    * `unifiedProfile`: questo nome di tag è riservato per i set di dati da acquisire da [[!DNL Real-Time Customer Profile]](../../profile/home.md).
    * `unifiedIdentity`: questo nome di tag è riservato per i set di dati da acquisire da [[!DNL Identity Service]](../../identity-service/home.md).
@@ -455,6 +457,10 @@ Una risposta corretta contiene un elenco di [!DNL Catalog] oggetti ordinati in b
 * [Utilizzo di filtri semplici](#using-simple-filters): consente di filtrare in base alla corrispondenza di una proprietà specifica con un valore specifico.
 * [Utilizzo del parametro della proprietà](#using-the-property-parameter): utilizzare espressioni condizionali per filtrare in base all&#39;esistenza di una proprietà oppure se il valore di una proprietà corrisponde, si avvicina o si confronta con un altro valore specificato o con un&#39;espressione regolare.
 
+>[!NOTE]
+>
+>Qualsiasi attributo di un oggetto Catalog può essere utilizzato per filtrare i risultati nell’API Catalog Service.
+
 ### Utilizzo di filtri semplici {#using-simple-filters}
 
 I filtri semplici ti consentono di filtrare le risposte in base a valori di proprietà specifici. Un filtro semplice assume la forma di `{PROPERTY_NAME}={VALUE}`.
@@ -524,6 +530,22 @@ Una risposta corretta contiene un elenco di set di dati, esclusi i set di dati i
 
 Il parametro di query `property` offre maggiore flessibilità per i filtri basati su proprietà rispetto ai filtri semplici. Oltre a filtrare in base al valore specifico di una proprietà, il parametro `property` può utilizzare altri operatori di confronto, ad esempio &quot;più di&quot; (`>`) e &quot;meno di&quot; (`<`), nonché espressioni regolari per filtrare in base ai valori di proprietà. Può anche filtrare in base all’esistenza o meno di una proprietà, indipendentemente dal suo valore.
 
+Utilizzare una e commerciale (`&`) per combinare più filtri e perfezionare la query in un&#39;unica richiesta. Quando si filtra in base a più campi, per impostazione predefinita viene applicata una relazione `AND`.
+
+>[!NOTE]
+>
+>Se si combinano più parametri `property` in una singola query, almeno uno deve essere applicato al campo `id` o `created`. La query seguente restituisce oggetti in cui `id` è `abc123` **AND** `name` non è `test`:
+>
+>```http
+>GET /datasets?property=id==abc123&property=name!=test
+>```
+
+Se si utilizzano più parametri `property` sullo stesso campo, viene applicato solo l&#39;ultimo parametro specificato.
+
+>[!IMPORTANT]
+>
+>**impossibile** utilizzare un singolo parametro `property` per filtrare più campi contemporaneamente. Ogni campo deve avere il proprio parametro `property`. L&#39;esempio seguente (`property=id>abc,name==myDataset`) è consentito **not** perché tenta di applicare condizioni a `id` e `name` all&#39;interno di un **singolo parametro `property`**.
+
 Il parametro `property` può accettare qualsiasi proprietà oggetto di livello. `sampleKey` può essere utilizzato per filtrare utilizzando `?properties=subItem.sampleKey`.
 
 ```json
@@ -562,6 +584,8 @@ Il valore del parametro `property` supporta diversi tipi di espressioni condizio
 | &lt;= | Restituisce solo oggetti i cui valori di proprietà sono inferiori o uguali a una quantità specificata. | `property=version<=1.0.0` |
 | > | Restituisce solo oggetti i cui valori di proprietà sono maggiori (ma non uguali) di una quantità dichiarata. | `property=version>1.0.0` |
 | >= | Restituisce solo oggetti i cui valori di proprietà sono maggiori o uguali a una quantità specificata. | `property=version>=1.0.0` |
+| * | Un carattere jolly si applica a qualsiasi proprietà stringa e corrisponde a qualsiasi sequenza di caratteri. Utilizza `**` per eliminare un asterisco letterale. | `property=name==te*st` |
+| E | Combina più parametri `property` con una relazione `AND` tra di essi. | `property=id==abc&property=name!=test` |
 
 >[!NOTE]
 >
@@ -619,12 +643,38 @@ Una risposta corretta contiene un elenco di set di dati i cui numeri di versione
 }
 ```
 
-## Combinare più filtri
+## Filtrare gli array con il parametro della proprietà {#filter-arrays}
 
-Utilizzando una e commerciale (`&`), è possibile combinare più filtri in una singola richiesta. Quando vengono aggiunte condizioni aggiuntive a una richiesta, si presume una relazione AND.
+Utilizza gli operatori di uguaglianza e disuguaglianza per includere o escludere valori specifici quando filtri i risultati in base alle proprietà dell’array.
+
+### Filtri di uguaglianza {#equality-filters}
+
+Per filtrare un campo array in base a più valori, utilizzare parametri di proprietà separati per ciascun valore. Utilizzare i filtri di uguaglianza per restituire solo le voci nei dati dell&#39;array che corrispondono ai valori specificati.
+
+>[!NOTE]
+>
+>Il requisito di includere `id` o `created` quando si filtrano più campi **not** si applica quando si filtrano più valori all&#39;interno di un campo array.
+
+La query di esempio seguente restituisce solo i risultati dell&#39;array che include sia `val1` che `val2`.
 
 **Formato API**
 
 ```http
-GET /{OBJECT_TYPE}?{FILTER_1}={VALUE}&{FILTER_2}={VALUE}&{FILTER_3}={VALUE}
+GET /{OBJECT_TYPE}?property=arrayField=val1&property=arrayField=val2
 ```
+
+### Filtri di disuguaglianza {#inequality-filters}
+
+Utilizzare gli operatori di disuguaglianza (`!=`) in un campo array per escludere le voci nei dati in cui l&#39;array contiene i valori specificati.
+
+**Formato API**
+
+```http
+GET /{OBJECT_TYPE}?property=arrayField!=val1&property=arrayField!=val2
+```
+
+Questa query restituisce documenti in cui arrayField non contiene `val1` o `val2`.
+
+### Limiti dei filtri di uguaglianza e disuguaglianza {#equality-inequality-limitations}
+
+Impossibile applicare l&#39;uguaglianza (`=`) e la disuguaglianza (`!=`) allo stesso campo in una singola query.
