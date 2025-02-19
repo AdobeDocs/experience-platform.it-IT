@@ -3,19 +3,14 @@ keywords: Experience Platform;home;argomenti popolari;controllo degli accessi;co
 title: Panoramica sul controllo degli accessi basato su attributi
 description: Questo documento fornisce informazioni sul controllo degli accessi basato su attributi in Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 37131ce16b70bfaa737ee1cd896d0042e06bab15
 workflow-type: tm+mt
-source-wordcount: '1864'
-ht-degree: 13%
+source-wordcount: '1860'
+ht-degree: 14%
 
 ---
 
 # Panoramica sul controllo degli accessi basato su attributi {#attribute-based-access-control-overview}
-
->[!CONTEXTUALHELP]
->id="platform_accesscontrol_abac_labelusageaccesspolicy"
->title="Criterio di accesso all’utilizzo delle etichette"
->abstract=""
 
 Il controllo degli accessi basato sugli attributi è una funzionalità di Adobe Experience Platform che consente agli amministratori di controllare l’accesso a oggetti e/o funzionalità specifici in base agli attributi. Gli attributi possono essere metadati aggiunti a un oggetto, ad esempio un’etichetta aggiunta a un campo o a un segmento dello schema. Un amministratore definisce i criteri di accesso che includono attributi per gestire le autorizzazioni di accesso degli utenti.
 
@@ -75,11 +70,11 @@ La disponibilità del controllo degli accessi basato su attributi per i clienti 
 
 * Etichette: aggiungi, modifica e rimuovi etichette ai ruoli utente, ai campi dello schema, ai segmenti e ad altri oggetti supportati per sfruttare i criteri di controllo di accesso. **Nota:** Qualsiasi segmento che utilizza un attributo con etichetta deve essere etichettato allo stesso modo se desideri che ad esso vengano applicate le stesse restrizioni di accesso.
 
-I flussi di lavoro di amministrazione per tutte le applicazioni alimentate da Experienci Platform da Admin Console alla nuova interfaccia Autorizzazioni sono in fase di commutazione.
+I flussi di lavoro di amministrazione per tutte le applicazioni basate su Experience Platform da Admin Console alla nuova interfaccia Autorizzazioni sono in fase di commutazione.
 
 >[!IMPORTANT]
 >
->Quando l’organizzazione è abilitata, i ruoli vengono migrati automaticamente all’interfaccia Autorizzazioni. I ruoli nell’Admin Console rimarranno invariati per il momento. **non** modificare i ruoli dopo l&#39;abilitazione dell&#39;organizzazione.
+>Quando l’organizzazione è abilitata, i ruoli vengono migrati automaticamente all’interfaccia Autorizzazioni. I ruoli in Admin Console rimarranno invariati per il momento. **non** modificare i ruoli dopo l&#39;abilitazione dell&#39;organizzazione.
 
 Per ulteriori informazioni sul controllo degli accessi, vedere la [panoramica sul controllo degli accessi](../home.md).
 

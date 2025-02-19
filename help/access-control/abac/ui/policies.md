@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;controllo degli accessi;controllo degli accessi basato su attributi;ABAC
+keywords: Experience Platform;home;argomenti popolari;controllo degli accessi;controllo degli accessi basato su attributi;ABAC;;home;popular topic;access control;attribute-based access control;ABAC
 title: Gestire i criteri di controllo di accesso
 description: Questo documento fornisce informazioni sulla gestione dei criteri di controllo di accesso tramite l’interfaccia Autorizzazioni in Adobe Experience Cloud.
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: 7cafe1f7e9dd6789db4199631cb605be666ce48a
+source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
-source-wordcount: '613'
-ht-degree: 0%
+source-wordcount: '684'
+ht-degree: 2%
 
 ---
 
@@ -184,7 +184,13 @@ Viene visualizzata la finestra di dialogo **[!UICONTROL Rimuovi]** in cui viene 
 >
 >La sandbox selezionata è stata rimossa correttamente dal criterio.
 
-## Attivare un criterio
+## Attivare un criterio {#activate-policy}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_about"
+>title="Cosa sono i criteri?"
+>abstract="I criteri sono dichiarazioni che riuniscono alcuni attributi al fine di definire azioni ammissibili e non ammissibili. Ogni organizzazione viene fornita con una policy predefinita che è necessario attivare per iniziare a controllare l’accesso a oggetti specifici in base alle etichette. Le etichette applicate alle risorse negano l’accesso a meno che gli utenti non siano assegnati a un ruolo con un’etichetta corrispondente. Non è possibile modificare o eliminare i criteri predefiniti, ma è possibile attivarli o disattivarli."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/labels" text="Gestisci etichette"
 
 Per attivare un criterio esistente, selezionarlo dalla scheda **[!UICONTROL Criteri]**.
 

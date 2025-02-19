@@ -1,16 +1,22 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;controllo degli accessi;controllo degli accessi basato su attributi;ABAC
+keywords: Experience Platform;home;argomenti popolari;controllo degli accessi;controllo degli accessi basato su attributi;ABAC;;home;popular topic;access control;attribute-based access control;ABAC
 title: Gestione degli utenti con controllo dell'accesso basato su attributi
 description: Questo documento fornisce informazioni sulla gestione di utenti e gruppi di utenti tramite l’interfaccia Autorizzazioni in Adobe Experience Cloud
 exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
-source-git-commit: d410e7ea635471f2bbc93c9d332ad7e2f619d054
+source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
-source-wordcount: '257'
-ht-degree: 0%
+source-wordcount: '285'
+ht-degree: 1%
 
 ---
 
-# Gestione utenti
+# Gestione utenti {#manage-users}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_users_about"
+>title="Cosa sono gli utenti?"
+>abstract="Gli utenti sono i singoli utenti che hanno accesso ad Experience Platform. L’accesso di un singolo utente alle risorse di un’organizzazione viene gestito tramite i ruoli."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/roles" text="Gestire i ruoli"
 
 Se desideri visualizzare i dettagli utente e i ruoli a cui sono assegnati, seleziona la scheda **[!UICONTROL Utenti]**.
 

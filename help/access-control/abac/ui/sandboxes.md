@@ -1,18 +1,24 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;controllo degli accessi;controllo degli accessi basato su attributi;ABAC
+keywords: Experience Platform;home;argomenti popolari;controllo degli accessi;controllo degli accessi basato su attributi;ABAC;;home;popular topic;access control;attribute-based access control;ABAC
 title: Sandbox di controllo dell’accesso basate su attributi
 description: Questo documento fornisce informazioni sulla gestione delle sandbox tramite l’interfaccia Autorizzazioni in Adobe Experience Cloud
 exl-id: c21eb319-fc0d-442a-b778-bbfa2d6bb22d
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
-source-wordcount: '217'
+source-wordcount: '259'
 ht-degree: 0%
 
 ---
 
-# Gestione sandbox
+# Gestione sandbox {#mange-sandboxes}
 
-Le sandbox sono partizioni virtuali all’interno di un’unica istanza di Experience Platform, che consentono un’integrazione fluida con il processo di sviluppo delle applicazioni di esperienza digitale. Tutti i contenuti e le azioni eseguite all’interno di una sandbox sono limitati a tale sandbox e non influiscono su altre sandbox. Per ulteriori informazioni sulle sandbox, consulta la [Panoramica sulle sandbox](../../../sandboxes/home.md).
+>[!CONTEXTUALHELP]
+>id="platform_permissions_sandboxes_about"
+>title="Cosa sono le sandbox?"
+>abstract="Le sandbox sono partizioni virtuali all’interno di una singola istanza di Platform. Tutti i contenuti e le azioni eseguite all’interno di una sandbox sono limitati a tale sandbox e non influiscono su altre sandbox. L’accesso alle sandbox viene gestito tramite i ruoli."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/home" text="Panoramica sulle sandbox"
+
+Le sandbox sono partizioni virtuali all’interno di una singola istanza di Experience Platform, che consentono un’integrazione perfetta con il processo di sviluppo delle applicazioni di esperienza digitale. Tutti i contenuti e le azioni eseguite all’interno di una sandbox sono limitati a tale sandbox e non influiscono su altre sandbox. Per ulteriori informazioni sulle sandbox, consulta la [Panoramica sulle sandbox](../../../sandboxes/home.md).
 
 ## Configurare le sandbox
 
@@ -32,4 +38,4 @@ Seleziona la scheda **[!UICONTROL Ruoli]** per visualizzare i ruoli a cui è ass
 
 ## Passaggi successivi
 
-Ora hai imparato a visualizzare i dettagli della sandbox e i ruoli a cui è attualmente assegnata. Per una panoramica di alto livello delle sandbox nell&#39;Experience Platform, consulta la [documentazione di panoramica sulle sandbox](../../sanboxes/../ui/overview.md).
+Ora hai imparato a visualizzare i dettagli della sandbox e i ruoli a cui è attualmente assegnata. Per una panoramica di alto livello delle sandbox in Experience Platform, consulta la [documentazione panoramica sulle sandbox](../../sanboxes/../ui/overview.md).
