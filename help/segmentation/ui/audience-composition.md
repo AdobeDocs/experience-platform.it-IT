@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guida all’interfaccia utente di Audiences
 description: La funzione di composizione del pubblico nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro ricca che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica dei tipi di pubblico per la tua organizzazione.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 3c0fdab5d7561238a64e79e5bab5fd4843fccb0a
+source-git-commit: 65871f307468428ee0e3b67c1a6577e913f3a312
 workflow-type: tm+mt
-source-wordcount: '1952'
-ht-degree: 0%
+source-wordcount: '2228'
+ht-degree: 1%
 
 ---
 
@@ -36,7 +36,17 @@ L&#39;area di lavoro per la composizione del pubblico è composta da quattro div
 
 ## [!UICONTROL Pubblico] {#audience-block}
 
-Il tipo di blocco **[!UICONTROL Pubblico]** ti consente di aggiungere i sottogruppi di pubblico che desideri comporre il nuovo pubblico più grande. Per impostazione predefinita, un blocco **[!UICONTROL Pubblico]** è incluso nella parte superiore dell&#39;area di lavoro della composizione.
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_audience"
+>title="Blocco di pubblico"
+>abstract="Il blocco Pubblico consente di accedere ai sottogruppi di pubblico che desideri utilizzare per comporre il nuovo pubblico."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_merge_types"
+>title="Tipi di unione"
+>abstract="I tipi di unione determinano il modo in cui i sottogruppi di pubblico selezionati vengono combinati. I valori supportati includono Unione, Intersezione ed Escludi sovrapposizione."
+
+Il tipo di blocco **[!UICONTROL Pubblico]** ti consente di aggiungere i sottogruppi di pubblico che desideri utilizzare per comporre il nuovo pubblico più grande. Per impostazione predefinita, un blocco **[!UICONTROL Pubblico]** è incluso nella parte superiore dell&#39;area di lavoro della composizione.
 
 Quando selezioni il blocco **[!UICONTROL Pubblico]**, nella barra a destra vengono visualizzati i controlli per etichettare il pubblico, aggiungere tipi di pubblico al blocco e creare regole personalizzate per il blocco di pubblico.
 
@@ -88,6 +98,16 @@ Dopo aver aggiunto una regola personalizzata, seleziona **[!UICONTROL Salva]** p
 
 ## [!UICONTROL Escludi] {#exclude-block}
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_exclude"
+>title="Escludi blocco"
+>abstract="Il blocco Escludi consente di escludere pubblici o attributi specifici dalla composizione."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_exclude_type"
+>title="Tipo di esclusione"
+>abstract="Puoi escludere i profili appartenenti a un pubblico specifico (Escludi per pubblico) o escludere i profili basati su un attributo specifico (Escludi per attributo)."
+
 Il tipo di blocco **[!UICONTROL Escludi]** ti consente di escludere uno o più attributi del pubblico secondario specificato dal nuovo pubblico più grande.
 
 Per aggiungere un blocco **[!UICONTROL Escludi]**, seleziona l&#39;icona **+**, seguita da **[!UICONTROL Escludi]**.
@@ -127,6 +147,26 @@ Viene visualizzato un elenco di attributi di profilo. Seleziona il tipo di attri
 >Quando si esclude per attributo, è possibile specificare solo **un** valore da escludere. L&#39;utilizzo di qualsiasi tipo di separatore, ad esempio una virgola o un punto e virgola, determina l&#39;esclusione del valore esatto. Se ad esempio si imposta il valore come `red, blue`, il termine `red, blue` verrà escluso dall&#39;attributo, ma **non** comporterà l&#39;esclusione del termine `red` o `blue`.
 
 ## [!UICONTROL Arricchisci] {#enrich-block}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_enrich"
+>title="Arricchire il blocco"
+>abstract="Il blocco Enrich ti consente di arricchire il pubblico con attributi aggiuntivi provenienti dai set di dati di Adobe Experience Platform."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_dataset"
+>title="Set di dati di arricchimento"
+>abstract="Il set di dati di arricchimento contiene i dati da associare alla composizione."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_enrich_criteria"
+>title="Criteri di arricchimento"
+>abstract="I criteri di arricchimento includono la chiave di unione di Source e la chiave di unione del set di dati di arricchimento. Queste due chiavi riconciliano il set di dati di origine e il set di dati di arricchimento."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_enrich_attributes"
+>title="Attributi di arricchimento"
+>abstract="Gli attributi di arricchimento sono gli attributi che desiderate associare alla composizione."
 
 >[!IMPORTANT]
 >
@@ -206,6 +246,16 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 ## [!UICONTROL Classifica] {#rank-block}
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_ranking"
+>title="Blocco della classificazione"
+>abstract="Il blocco Classificazione consente di classificare i profili in base a un attributo specifico e di includerli nella composizione."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_rank_profilelimit_text"
+>title="Aggiungere un limite di profili"
+>abstract="L’opzione Aggiungi limite profilo consente di specificare un numero massimo di profili da includere nel processo di classificazione."
+
 Il tipo di blocco **[!UICONTROL Classifica]** consente di classificare e ordinare i profili in base a un attributo specificato e di includerli nella composizione.
 
 Per aggiungere un blocco **[!UICONTROL Classifica]**, seleziona l&#39;icona **+**, seguita da **[!UICONTROL Classifica]**.
@@ -231,6 +281,21 @@ Inoltre, puoi limitare il numero di profili restituiti abilitando l&#39;interrut
 ![L&#39;opzione Aggiungi limite profilo è evidenziata e consente di limitare il numero di profili restituiti.](../images/ui/audience-composition/add-profile-limit.png)
 
 ## [!UICONTROL Divisione] {#split-block}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split"
+>title="Dividi blocco"
+>abstract="Il blocco Dividi consente di dividere la composizione in più percorsi."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split_type"
+>title="Tipo di divisione"
+>abstract="Potete dividere la composizione per Divisione percentuale o Divisione attributo. La percentuale di [PROD143]e casuale divide i profili in più percorsi. La suddivisione degli attributi consente di suddividere i profili in base a un attributo specificato."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split_otherprofiles_text"
+>title="Altri profili"
+>abstract="L’opzione Altri profili consente di creare un percorso aggiuntivo con i profili rimanenti che non corrispondono a nessuna delle condizioni specificate degli altri percorsi."
 
 Il tipo di blocco **[!UICONTROL Dividi]** ti consente di suddividere il nuovo pubblico in vari sottogruppi. Puoi suddividere questo pubblico in base alla percentuale o a un attributo. Durante la suddivisione del pubblico in sottotargeting, la suddivisione è **non** persistente. Ciò significa che i profili possono trovarsi in diversi sottotipi di pubblico per ogni valutazione.
 
@@ -272,13 +337,13 @@ Inoltre, puoi abilitare l&#39;interruttore **[!UICONTROL Altri profili]** per cr
 >
 >Quando pubblichi la composizione del pubblico, tieni presente che potrebbero essere necessarie fino a 48 ore per valutarla e attivarla per l’utilizzo in servizi a valle come una destinazione Real-Time CDP o un canale Adobe Journey Optimizer.
 
-Dopo aver creato la composizione, puoi salvarla e pubblicarla selezionando **[!UICONTROL Publish]**.
+Dopo aver creato la composizione, puoi salvarla e pubblicarla selezionando **[!UICONTROL Pubblica]**.
 
-![Il pulsante Publish è evidenziato e mostra come salvare e pubblicare la composizione.](../images/ui/audience-composition/publish.png)
+![Il pulsante Pubblica è evidenziato e mostra come salvare e pubblicare la composizione.](../images/ui/audience-composition/publish.png)
 
 In caso di errori nella creazione del pubblico, viene visualizzato un avviso che informa su come risolvere il problema.
 
-![Il pulsante Publish è evidenziato e mostra come salvare e pubblicare la composizione.](../images/ui/audience-composition/audience-alert.png)
+![Il pulsante Pubblica è evidenziato e mostra come salvare e pubblicare la composizione.](../images/ui/audience-composition/audience-alert.png)
 
 ## Passaggi successivi
 
