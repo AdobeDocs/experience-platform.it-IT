@@ -3,20 +3,20 @@ keywords: pubblicità; criteri;
 title: Connessione critica
 description: Criteo potenzia la pubblicità di fiducia e di impatto per offrire esperienze più ricche a ogni consumatore attraverso l'internet aperto. Con il set di dati di e-commerce più grande al mondo e l’intelligenza artificiale migliore della classe, Criteo assicura che ogni punto di contatto nel percorso sia personalizzato per raggiungere i clienti con l’annuncio giusto, al momento giusto.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: e594e473ac78663203c9254623fe8e324985fa39
 workflow-type: tm+mt
-source-wordcount: '1029'
+source-wordcount: '1016'
 ht-degree: 3%
 
 ---
 
-# (Beta) Connessione critica
+# Connessione critica
 
 ## Panoramica {#overview}
 
 >[!IMPORTANT]
 >
->Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti da Criteo. Attualmente si tratta di un prodotto beta la cui funzionalità è soggetta a modifiche. Per richieste di informazioni o richieste di aggiornamento, contatta direttamente Criteo [qui](mailto:criteoTechnicalPartnerships@criteo.com).
+>Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti da Criteo. Per richieste di informazioni o richieste di aggiornamento, contatta direttamente Criteo [qui](mailto:criteoTechnicalPartnerships@criteo.com).
 
 Criteo potenzia la pubblicità di fiducia e di impatto per offrire esperienze più ricche a ogni consumatore attraverso l&#39;internet aperto. Con il set di dati di e-commerce più grande al mondo e l’intelligenza artificiale migliore della classe, Criteo assicura che ogni punto di contatto nel percorso sia personalizzato per raggiungere i clienti con l’annuncio giusto, al momento giusto.
 
@@ -57,11 +57,11 @@ Per aiutarti a capire meglio come utilizzare la destinazione [!DNL Criteo], ecco
 
 ### Caso d&#39;uso 1: recupero del traffico
 
-Presenta la tua azienda con offerte di prodotti pertinenti e creatività flessibile. Con consigli sui prodotti intelligenti, gli annunci presenteranno automaticamente i prodotti che hanno più probabilità di attivare visite e coinvolgimento. Il targeting flessibile ti consente di creare tipi di pubblico dal set di dati di e-commerce di Criteo o dai tuoi elenchi di potenziali clienti e dai segmenti CDP di Adobe.
+Presenta la tua azienda con offerte di prodotti pertinenti e creatività flessibile. Con consigli sui prodotti intelligenti, gli annunci presenteranno automaticamente i prodotti che hanno più probabilità di attivare visite e coinvolgimento. Il targeting flessibile consente di creare tipi di pubblico dal set di dati di e-commerce di Criteo o dai tuoi elenchi di potenziali clienti e dai segmenti Adobe CDP.
 
 ### Caso d’uso 2: aumentare le conversioni dei siti web
 
-Quando i visitatori lasciano il tuo sito web, ricorda loro cosa non riescono a fare con annunci di retargeting che aumentano le conversioni mostrando offerte speciali e offerte iperrilevanti, ovunque vadano dopo. Connetti il tuo pubblico Adobe di CDP per coinvolgere nuovamente i clienti esistenti o rivolgerti ai consumatori in modo simile ai tuoi acquirenti più fedeli.
+Quando i visitatori lasciano il tuo sito web, ricorda loro cosa non riescono a fare con annunci di retargeting che aumentano le conversioni mostrando offerte speciali e offerte iperrilevanti, ovunque vadano dopo. Connetti il pubblico di Adobe CDP per coinvolgere di nuovo i clienti esistenti o indirizzare l’attività ai consumatori in modo simile ai più fedeli.
 
 ## Connetti a criterio {#connect}
 

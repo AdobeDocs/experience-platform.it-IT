@@ -3,9 +3,9 @@ keywords: destinazioni pubblicitarie;destinazioni;destinazioni piattaforma pubbl
 title: Panoramica sulle destinazioni di Advertising
 description: Collega Adobe Experience Platform a una piattaforma pubblicitaria di terze parti (ad esempio DSP, ad network, SSP) e condividi tipi di pubblico pseudonimi su tali piattaforme.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: e2dfa2ee23d854ff3a8ecba4a1cf3e4a1e72f0f7
+source-git-commit: f6fb88cbc89d419e3dbb39c9cc8958f9455b2953
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '272'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 ## Panoramica {#overview}
 
-Collega Adobe Experience Platform a piattaforme pubblicitarie come DSP (demand-side platform), SSP (supply-side platform) e reti pubblicitarie per condividere pubblici noti e pseudonimi con queste piattaforme.
+Collega Adobe Experience Platform a piattaforme pubblicitarie come le piattaforme lato domanda (DSP), le piattaforme lato offerta (SSP) e le reti pubblicitarie per condividere tipi di pubblico noti e pseudonimi su tali piattaforme.
 
 Quando ti connetti a una destinazione pubblicitaria, i tipi di pubblico vengono inviati come ID alla piattaforma di destinazione, dove vengono mappati su un ID noto dalla piattaforma di destinazione.
 
@@ -29,7 +29,7 @@ Per comprendere la differenza tra connessioni ed estensioni, vedere [Connessioni
 * [(Beta) Distribuzione del pubblico di Acxiom](acxiom-audience-distribution.md)
 * [Connessione Adobe Advertising Cloud](adobe-advertising-cloud-connection.md)
 * [Connessione Amazon Ads](amazon-ads.md)
-* [(Beta) Connessione critica](criteo.md)
+* [Connessione critica](criteo.md)
 * [Google Display e connessione Video 360](google-dv360.md)
 * [Connessione Google Ads](google-ads-destination.md)
 * [Connessione Google Ad Manager](google-ad-manager.md)
@@ -38,7 +38,7 @@ Per comprendere la differenza tra connessioni ed estensioni, vedere [Connessioni
 * [Connessione Batch Magnite](magnite-batch.md)
 * [Connessione in tempo reale Magnite Streaming](magnite-streaming.md)
 * [Connessione Microsoft Bing](bing.md)
-* [Connessione a elenco clienti pinterest](pinterest.md)
+* [Connessione a elenco clienti Pinterest](pinterest.md)
 * [Destinazione PubMatic Connect](pubmatic.md)
 * [(Beta) Connessione Snapchat Ads](snap-inc.md)
 * [La connessione a Trade Desk](tradedesk.md)
@@ -53,13 +53,13 @@ Per comprendere la differenza tra connessioni ed estensioni, vedere [Connessioni
 * [Estensione di tracciamento degli eventi universali di Bing Ads](bing-ads.md)
 * [Estensione ramo](branch.md)
 * [Estensione DoubleClick Floodlight](doubleclick-floodlight.md)
-* [Estensione facebook Pixel](facebook-pixel.md)
+* [Estensione Facebook Pixel](facebook-pixel.md)
 * [Estensione OneTag lampeggiante](flashtalking.md)
 * [Estensione Google Ads](google-ads-extension.md)
 * [Estensione Google gtag](gtag-advertising.md)
-* [Estensione tag linkedIn Insight](linkedin.md)
-* [Estensione per il tracciamento delle conversioni di pinterest](pinterest-extension.md)
-* [Estensione tag twitter per sito Web universale](twitter-uwt.md)
+* [Estensione tag LinkedIn Insight](linkedin.md)
+* [Estensione per il tracciamento delle conversioni di Pinterest](pinterest-extension.md)
+* [Estensione tag per sito web Twitter Universal](twitter-uwt.md)
 
 ## Connetti a una nuova destinazione pubblicitaria {#connect-destination}
 
