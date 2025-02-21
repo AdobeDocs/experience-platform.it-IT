@@ -2,7 +2,7 @@
 title: Note sulla versione di Adobe Experience Platform di agosto 2023
 description: Note sulla versione di Adobe Experience Platform di agosto 2023.
 exl-id: c67dca3a-eccb-427e-8ab3-b69c51b57938
-source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '1741'
 ht-degree: 43%
@@ -29,7 +29,7 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
 ## Real-Time Customer Data Platform {#rtcdp}
 
-Basato su un Experience Platform, Real-time Customer Data Platform ([!DNL Real-Time CDP]) consente alle aziende di unire dati noti e sconosciuti per attivare i profili dei clienti con decisioni intelligenti in tutto il percorso di clienti.
+Basato su Experience Platform, Real-Time Customer Data Platform ([!DNL Real-Time CDP]) consente alle aziende di unire dati noti e sconosciuti per attivare i profili dei clienti con decisioni intelligenti in tutto il percorso di clienti.
 
 [!DNL Real-Time CDP] combina più origini dati aziendali per creare profili cliente in tempo reale. I segmenti generati da questi profili possono quindi essere inviati alle destinazioni a valle per fornire esperienze cliente personalizzate individuali su tutti i canali e i dispositivi.
 
@@ -82,7 +82,7 @@ Adobe Experience Platform fornisce una suite di tecnologie che consente di racco
 
 | Tipo | Funzione | Descrizione |
 | --- | --- | --- |
-| Tag e inoltro eventi | [Tag Experienci Platform (Cina)](/help/tags/ui/publishing/premium-cdn.md) | La nuova funzione Tag di Experience Platform (Cina) migliora l’affidabilità e la latenza del sito web, consentendo tempi di risposta più rapidi per i clienti che distribuiscono i tag sui siti web in Cina. I clienti ora possono utilizzare il codice JavaScript nella libreria Tag per implementare siti web in Cina. Questa funzione è stata aggiunta anche al protocollo UPP (Unified Provisioning Protocol), per consentire l’implementazione automatica del prodotto dopo l’acquisto. |
+| Tag e inoltro eventi | [Tag Experience Platform (Cina)](/help/tags/ui/publishing/premium-cdn.md) | La nuova funzione Tag di Experience Platform (Cina) migliora l’affidabilità e la latenza del sito web, velocizzando i tempi di risposta per i clienti che distribuiscono i tag sui siti web in Cina. I clienti ora possono utilizzare il codice JavaScript nella libreria Tag per implementare siti web in Cina. Questa funzione è stata aggiunta anche al protocollo UPP (Unified Provisioning Protocol), per consentire l’implementazione automatica del prodotto dopo l’acquisto. |
 
 {style="table-layout:auto"}
 
@@ -156,7 +156,7 @@ Adobe Experience Platform Identity Service offre una panoramica completa della c
 
 | Funzione | Descrizione |
 | --- | --- |
-| Modifiche ai limiti del grafo delle identità | Entro la fine di settembre, il grafo delle identità passerà a 50 identità per grafo, e verrà acquisita l’identità più recente. Di conseguenza, l’identità meno recente verrà eliminata in base alla marca temporale e al tipo di identità dell’acquisizione, e i tipi di identità dei cookie verranno eliminati per primi. Oggi, i grafici delle identità hanno un limite di 150 identità per grafico e, una volta raggiunto questo limite, i grafici non vengono più aggiornati. Contatta il rappresentante del tuo account per richiedere una modifica del tipo di identità se la sandbox di produzione contiene: <ul><li>uno spazio dei nomi personalizzato in cui gli identificatori della persona (come gli ID del sistema di gestione delle relazioni con i clienti) sono configurati come tipo di identità cookie/dispositivo.</li><li>uno spazio dei nomi personalizzato in cui gli identificatori cookie/dispositivo sono configurati come tipo di identità tra dispositivi.</li></ul> Queste richieste verranno elaborate manualmente da Adobe Engineering. Per ulteriori informazioni, leggere [guardrail per i dati del servizio Identity](../../identity-service/guardrails.md). |
+| Modifiche ai limiti del grafo delle identità | Entro la fine di settembre, il grafo delle identità passerà a 50 identità per grafo, e verrà acquisita l’identità più recente. Di conseguenza, l’identità meno recente verrà eliminata in base alla marca temporale e al tipo di identità dell’acquisizione, e i tipi di identità dei cookie verranno eliminati per primi. Oggi, i grafici delle identità hanno un limite di 150 identità per grafico e, una volta raggiunto questo limite, i grafici non vengono più aggiornati. Contatta il rappresentante del tuo account per richiedere una modifica del tipo di identità se la sandbox di produzione contiene: <ul><li>uno spazio dei nomi personalizzato in cui gli identificatori della persona (come gli ID del sistema di gestione delle relazioni con i clienti) sono configurati come tipo di identità cookie/dispositivo.</li><li>uno spazio dei nomi personalizzato in cui gli identificatori cookie/dispositivo sono configurati come tipo di identità tra dispositivi.</li></ul> I tecnici Adobe elaboreranno manualmente queste richieste. Per ulteriori informazioni, leggere [guardrail per i dati del servizio Identity](../../identity-service/guardrails.md). |
 
 Per ulteriori informazioni, leggere la [Panoramica del servizio Identity](../../identity-service/home.md).
 
@@ -168,7 +168,7 @@ Per ulteriori informazioni, leggere la [Panoramica del servizio Identity](../../
 
 | Funzione | Descrizione |
 | --- | --- |
-| Tipi di pubblico simili (disponibilità limitata) | I tipi di pubblico simili forniscono informazioni intelligenti su ciascun pubblico, sfruttando informazioni basate sull’apprendimento automatico per identificare e indirizzare i clienti di alto valore con le campagne di marketing. Con i tipi di pubblico simili, puoi creare tipi di pubblico espansi per rivolgerti a clienti con prestazioni simili a quelle dei tuoi tipi di pubblico con prestazioni migliori, oppure rivolgerti a clienti simili ai tipi di pubblico convertiti in precedenza. Per ulteriori informazioni sui tipi di pubblico per similarità, leggere la [Panoramica sui tipi di pubblico per similarità](../../segmentation/ui/lookalike-audiences.md). |
+| Tipi di pubblico simili (disponibilità limitata) | I tipi di pubblico simili forniscono informazioni intelligenti su ciascun pubblico, sfruttando informazioni basate sull’apprendimento automatico per identificare e indirizzare i clienti di alto valore con le campagne di marketing. Con i tipi di pubblico simili, puoi creare tipi di pubblico espansi per rivolgerti a clienti con prestazioni simili a quelle dei tuoi tipi di pubblico con prestazioni migliori, oppure rivolgerti a clienti simili ai tipi di pubblico convertiti in precedenza. Per ulteriori informazioni sui tipi di pubblico per similarità, leggere la [Panoramica sui tipi di pubblico per similarità](../../segmentation/types/account-audiences.md). |
 
 {style="table-layout:auto"}
 

@@ -2,8 +2,8 @@
 title: Note sulla versione di Adobe Experience Platform - Febbraio 2024
 description: Note sulla versione di Adobe Experience Platform di febbraio 2024.
 exl-id: 7e4b76b7-4027-4890-b869-1dbb79670c3e
-source-git-commit: aa33f7006b1a3abf7d19ffe3e0d5e5ee39fe9a5d
-workflow-type: ht
+source-git-commit: 02f2082e695d157415c9e0c59ca5d371c94bb991
+workflow-type: tm+mt
 source-wordcount: '1244'
 ht-degree: 100%
 
@@ -115,7 +115,7 @@ Per ulteriori informazioni sulle origini, consulta la [panoramica sulle origini]
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Pubblico dell’account | I tipi di pubblico dell’account sono ora generalmente disponibili. Ora puoi utilizzare la segmentazione dell’account per portare tutta la semplicità e la sofisticazione dell’esperienza di segmentazione del marketing, dai tipi di pubblico basati su persone a quelli basati su account, in entrambe le edizioni B2B e B2P di Real-Time Customer Platform. Questa versione consente di utilizzare i tipi di pubblico basati su persone come predicato per i tipi di pubblico basati su account, aggiunge funzionalità di ricerca, supporta l’utilizzo di entità personalizzate ed è conforme alla governance dei dati. Per ulteriori informazioni su questa funzione, leggere la [panoramica sui tipi di pubblico dell&#39;account](../../segmentation/ui/account-audiences.md). |
+| Pubblico dell’account | I tipi di pubblico dell’account sono ora generalmente disponibili. Ora puoi utilizzare la segmentazione dell’account per portare tutta la semplicità e la sofisticazione dell’esperienza di segmentazione del marketing, dai tipi di pubblico basati su persone a quelli basati su account, in entrambe le edizioni B2B e B2P di Real-Time Customer Platform. Questa versione consente di utilizzare i tipi di pubblico basati su persone come predicato per i tipi di pubblico basati su account, aggiunge funzionalità di ricerca, supporta l’utilizzo di entità personalizzate ed è conforme alla governance dei dati. Per ulteriori informazioni su questa funzione, leggere la [panoramica sui tipi di pubblico dell&#39;account](../../segmentation/types/account-audiences.md). |
 
 {style="table-layout:auto"}
 

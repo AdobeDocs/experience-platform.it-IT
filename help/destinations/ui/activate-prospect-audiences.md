@@ -3,7 +3,7 @@ title: Attiva i tipi di pubblico potenziali nelle destinazioni
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico potenziali per le destinazioni
 exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 13%
@@ -14,9 +14,9 @@ ht-degree: 13%
 
 >[!AVAILABILITY]
 >
->Questa funzionalità è disponibile per i clienti che hanno acquistato il pacchetto Real-Time CDP Prime e Ultimate. Per ulteriori informazioni, contatta il rappresentante del tuo Adobe.
+>Questa funzionalità è disponibile per i clienti che hanno acquistato il pacchetto Real-Time CDP Prime e Ultimate. Per ulteriori informazioni, contatta il rappresentante Adobe.
 
-Questo articolo spiega il flusso di lavoro necessario per esportare [tipi di pubblico potenziali](/help/segmentation/ui/prospect-audience.md) da Adobe Experience Platform nella destinazione preferita.
+Questo articolo spiega il flusso di lavoro necessario per esportare [tipi di pubblico potenziali](/help/segmentation/types/prospect-audiences.md) da Adobe Experience Platform nella destinazione preferita.
 
 ## Destinazioni supportati {#supported-destinations}
 
@@ -26,7 +26,7 @@ Vai a **[!UICONTROL Connessioni]** > **[!UICONTROL Destinazioni]** e seleziona l
 
 ## Prerequisiti {#prerequisites}
 
-* Devi innanzitutto acquisire [profili prospect](/help/profile/ui/prospect-profile.md) e creare [tipi di pubblico prospect](/help/segmentation/ui/prospect-audience.md) prima di poterli attivare nelle destinazioni a valle.
+* Devi innanzitutto acquisire [profili prospect](/help/profile/ui/prospect-profile.md) e creare [tipi di pubblico prospect](/help/segmentation/types/prospect-audiences.md) prima di poterli attivare nelle destinazioni a valle.
 * Per attivare i tipi di pubblico potenziali nelle destinazioni, è necessario essersi collegati correttamente a una destinazione. Se non lo hai già fatto, vai al [catalogo delle destinazioni](../catalog/overview.md), sfoglia le destinazioni supportate e configura la destinazione che desideri utilizzare. Per ulteriori informazioni, leggi l&#39;esercitazione dell&#39;interfaccia utente su [connessione alle destinazioni](./connect-destination.md).
 
 ### Autorizzazioni richieste {#permissions}

@@ -2,7 +2,7 @@
 title: Analisi e tracciamento del consenso
 description: Scopri come creare un dashboard di analisi del consenso per tenere traccia delle tendenze del consenso degli utenti nel tempo.
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: adc6d50f2784fe665d0590c3af053a057f8e4e38
 workflow-type: tm+mt
 source-wordcount: '1909'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Analisi e tracciamento del consenso
 
-Nell’attuale panorama di marketing, devi comprendere e rispettare le preferenze di consenso dei clienti. Adobe Real-time Customer Data Platform consente agli esperti di marketing di analizzare il consenso dei clienti per creare fiducia, rispettare le normative sulla privacy e fornire esperienze più personalizzate.
+Nell’attuale panorama di marketing, devi comprendere e rispettare le preferenze di consenso dei clienti. Adobe Real-Time Customer Data Platform consente agli esperti di marketing di analizzare il consenso dei clienti per creare fiducia, rispettare le normative sulla privacy e fornire esperienze più personalizzate.
 
 Questo documento illustra come creare un dashboard del consenso per vari casi di utilizzo di marketing per i dati di Real-Time CDP. In particolare, si concentra sulla creazione di un pubblico con gli attributi appropriati per le esigenze aziendali, e quindi utilizza le informazioni attraverso l’utilizzo di widget preconfigurati nell’interfaccia utente di Adobe Experience Platform. Viene inoltre presentato un metodo alternativo per la creazione di widget personalizzati con la funzione delle dashboard definite dall’utente.
 
@@ -24,7 +24,7 @@ I casi d’uso trattati in questa guida sono la tendenza del consenso e la sovra
 
 ## Creare tipi di pubblico consentiti {#create-consent-audiences}
 
-Per creare una dashboard di consenso, devi innanzitutto creare un pubblico di tutti i profili che hanno acconsentito a contattare. Per passare al Generatore di segmenti di Real-time Customer Data Platform, seleziona **[!UICONTROL Tipi di pubblico]** nell&#39;area di navigazione a sinistra dell&#39;interfaccia utente di Platform. Dalla scheda [!UICONTROL Cliente] della dashboard [!UICONTROL Tipi di pubblico], seleziona **[!UICONTROL Crea pubblico]** in alto a destra della visualizzazione, quindi **[!UICONTROL Genera regole]**.
+Per creare una dashboard di consenso, devi innanzitutto creare un pubblico di tutti i profili che hanno acconsentito a contattare. Per passare al Generatore di segmenti di Real-Time Customer Data Platform, seleziona **[!UICONTROL Tipi di pubblico]** nell&#39;area di navigazione a sinistra dell&#39;interfaccia utente di Platform. Dalla scheda [!UICONTROL Cliente] della dashboard [!UICONTROL Tipi di pubblico], seleziona **[!UICONTROL Crea pubblico]** in alto a destra della visualizzazione, quindi **[!UICONTROL Genera regole]**.
 
 ![Dashboard [!UICONTROL Tipi di pubblico] con [!UICONTROL Cliente], [!UICONTROL Tipi di pubblico] e [!UICONTROL Crea segmento] evidenziato.](../images/insights-use-cases/consent-analysis/create-audience.png)
 
@@ -36,9 +36,9 @@ Individua gli attributi del consenso tra le opzioni disponibili. Selezionare **[
 
 >[!NOTE]
 >
->Se hai mantenuto il consenso utente in un attributo diverso da quello del gruppo di campi consigliato dall’Adobe, devi selezionare tali attributi invece di quelli mostrati di seguito.
+>Se hai mantenuto il consenso utente in un attributo diverso dal gruppo di campi consigliato da Adobe, devi selezionare tali attributi invece di quelli mostrati di seguito.
 
-Ulteriori informazioni sono disponibili nella [gestione del consenso nella documentazione relativa alla segmentazione](../../segmentation/consents.md#handling-consent-in-segmentation).
+Ulteriori informazioni sono disponibili nella [gestione del consenso nella documentazione relativa alla segmentazione](../../segmentation/tutorials/consents.md#handling-consent-in-segmentation).
 
 ![Generatore di segmenti con la cartella degli attributi [!UICONTROL Consenso e preferenze] evidenziata.](../images/insights-use-cases/consent-analysis/consent-and-preferences.png)
 
@@ -68,7 +68,7 @@ Dopo aver creato i tipi di pubblico necessari, questi sono elencati nella scheda
 
 ## Consuma informazioni {#consume-insights}
 
-Adobe ha creato diverse informazioni che sono automaticamente disponibili nelle dashboard Profili, Tipi di pubblico e Destinazioni. Tutti i tipi di pubblico creati possono quindi essere utilizzati automaticamente con queste informazioni preconfigurate. Consulta la documentazione del widget standard per un elenco delle informazioni disponibili nei dashboard [Profili](../guides/profiles.md#standard-widgets), [Tipi di pubblico](../guides/audiences.md#standard-widgets) e [Destinazioni](../guides/destinations.md).
+Adobe ha creato varie informazioni che sono automaticamente disponibili nelle dashboard Profili, Tipi di pubblico e Destinazioni. Tutti i tipi di pubblico creati possono quindi essere utilizzati automaticamente con queste informazioni preconfigurate. Consulta la documentazione del widget standard per un elenco delle informazioni disponibili nei dashboard [Profili](../guides/profiles.md#standard-widgets), [Tipi di pubblico](../guides/audiences.md#standard-widgets) e [Destinazioni](../guides/destinations.md).
 
 ## Sovrapposizione del pubblico {#audience-overlap}
 

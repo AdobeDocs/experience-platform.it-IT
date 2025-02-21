@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente del servizio di segmentazione
 description: Scopri come creare e gestire tipi di pubblico e definizioni di segmenti nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 9844a7bf5e7198e7d5112ec924220aba71cdc14b
+source-git-commit: 276fd7c532843c9589e1d51b0bc7a76cb5c3eb9f
 workflow-type: tm+mt
 source-wordcount: '1043'
 ht-degree: 2%
@@ -92,7 +92,7 @@ Viene visualizzata la pagina Composizione pubblico con i blocchi predefiniti che
 
 ## Composizione di pubblico federato {#fac}
 
-Oltre alle composizioni del pubblico e alle definizioni dei segmenti, puoi utilizzare Adobe Federated Audience Composition per creare nuovi tipi di pubblico dai set di dati aziendali senza copiare i dati sottostanti e memorizzarli in Adobe Experience Platform Audience Portal. Puoi anche arricchire i tipi di pubblico esistenti in Adobe Experience Platform utilizzando dati di pubblico composti che sono stati federati dal data warehouse aziendale. Leggi la guida su [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+Oltre alle composizioni del pubblico e alle definizioni dei segmenti, puoi utilizzare la Composizione federativa del pubblico di Adobe per creare nuovi tipi di pubblico dai set di dati aziendali senza copiare i dati sottostanti e memorizzarli in Adobe Experience Platform Audience Portal. Puoi anche arricchire i tipi di pubblico esistenti in Adobe Experience Platform utilizzando dati di pubblico composti che sono stati federati dal data warehouse aziendale. Leggi la guida su [Federated Audience Composition](https://experienceleague.adobe.com/it/docs/federated-audience-composition/using/home).
 
 ![Elenco di tipi di pubblico creati in Federated Audience Composition per la tua organizzazione.](../images/ui/overview/federated-audience-composition.png)
 
@@ -100,7 +100,7 @@ Oltre alle composizioni del pubblico e alle definizioni dei segmenti, puoi utili
 
 La segmentazione in streaming consente di eseguire la segmentazione su [!DNL Platform] in tempo quasi reale, concentrandosi al contempo sulla ricchezza dei dati. Con la segmentazione in streaming, la qualificazione per la segmentazione ora avviene quando i dati arrivano in [!DNL Platform], riducendo la necessità di pianificare ed eseguire processi di segmentazione.
 
-Ulteriori informazioni sulla segmentazione streaming sono disponibili nella [guida utente per la segmentazione streaming](./streaming-segmentation.md).
+Ulteriori informazioni sulla segmentazione streaming sono disponibili nella [guida utente per la segmentazione streaming](../methods/streaming-segmentation.md).
 
 >[!NOTE]
 >
@@ -110,7 +110,7 @@ Ulteriori informazioni sulla segmentazione streaming sono disponibili nella [gui
 
 La segmentazione di Edge è la capacità di valutare i tipi di pubblico in Platform istantaneamente al limite, abilitando casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva.
 
-Ulteriori informazioni sulla segmentazione Edge sono disponibili nella [guida dell&#39;interfaccia utente per la segmentazione Edge](./edge-segmentation.md)
+Ulteriori informazioni sulla segmentazione Edge sono disponibili nella [guida dell&#39;interfaccia utente per la segmentazione Edge](../methods/edge-segmentation.md)
 
 ## Violazioni dei criteri
 

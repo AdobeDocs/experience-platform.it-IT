@@ -3,7 +3,7 @@ title: Attivare i tipi di pubblico per Edge Personalization Destinations
 description: Scopri come attivare tipi di pubblico da Adobe Experience Platform a destinazioni di personalizzazione Edge per casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 14dccb993b38ca352c6de3ed851bafe7c44ca631
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '1957'
 ht-degree: 2%
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 ## Panoramica {#overview}
 
-Adobe Experience Platform utilizza [la segmentazione Edge](../../segmentation/ui/edge-segmentation.md) insieme a [destinazioni Edge](/help/destinations/destination-types.md#edge-personalization-destinations) per consentire ai clienti di creare e indirizzare tipi di pubblico su larga scala, in tempo reale. Questa funzionalità consente di configurare casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva.
+Adobe Experience Platform utilizza [la segmentazione Edge](../../segmentation/methods/edge-segmentation.md) insieme a [destinazioni Edge](/help/destinations/destination-types.md#edge-personalization-destinations) per consentire ai clienti di creare e indirizzare tipi di pubblico su larga scala, in tempo reale. Questa funzionalità consente di configurare casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva.
 
 Esempi di destinazioni Edge sono le connessioni [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) e [Personalizzazione personalizzata](../../destinations/catalog/personalization/custom-personalization.md).
 
@@ -31,13 +31,13 @@ Esempi di destinazioni Edge sono le connessioni [Adobe Target](../../destination
 > 
 > Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Questo articolo spiega il flusso di lavoro necessario per attivare i tipi di pubblico nelle destinazioni edge di Adobe Experience Platform. Se utilizzate insieme alla [segmentazione Edge](../../segmentation/ui/edge-segmentation.md) e alla mappatura facoltativa degli attributi del profilo [](#mapping), queste destinazioni consentono casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva nelle proprietà Web e mobile.
+Questo articolo spiega il flusso di lavoro necessario per attivare i tipi di pubblico nelle destinazioni edge di Adobe Experience Platform. Se utilizzate insieme alla [segmentazione Edge](../../segmentation/methods/edge-segmentation.md) e alla mappatura facoltativa degli attributi del profilo [](#mapping), queste destinazioni consentono casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva nelle proprietà Web e mobile.
 
 Per una breve panoramica su come configurare la connessione Adobe Target per la personalizzazione Edge, guarda il video seguente.
 
 >[!NOTE]
 >
->L’interfaccia utente di Experience Platform viene aggiornata frequentemente e potrebbe essere cambiata dopo la registrazione del video. Per informazioni aggiornate, consulta i passaggi di configurazione descritti nelle sezioni seguenti.
+>L’interfaccia utente di Experience Platform viene aggiornata frequentemente e potrebbe essere cambiata dopo la registrazione di questo video. Per informazioni aggiornate, consulta i passaggi di configurazione descritti nelle sezioni seguenti.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
 
@@ -51,11 +51,11 @@ Utilizza le soluzioni di personalizzazione di Adobe, come Adobe Target, o le tue
 
 I casi d’uso descritti di seguito includono sia la personalizzazione del sito che la pubblicità mirata nel sito.
 
-Per abilitare questi casi d&#39;uso, i clienti hanno bisogno di un modo rapido e semplificato per recuperare da Experience Platform informazioni sia sui tipi di pubblico che sugli attributi del profilo e per inviarle alle connessioni [Adobe Target](../catalog/personalization/adobe-target-connection.md) o [Custom Personalization](../catalog/personalization/custom-personalization.md) nell&#39;interfaccia utente di Experience Platform.
+Per abilitare questi casi d&#39;uso, i clienti hanno bisogno di un modo rapido e semplice per recuperare da Experience Platform informazioni sugli attributi del profilo e sui tipi di pubblico e per inviarle alle connessioni [Adobe Target](../catalog/personalization/adobe-target-connection.md) o [Custom Personalization](../catalog/personalization/custom-personalization.md) nell&#39;interfaccia utente di Experience Platform.
 
 ### Personalizzazione della stessa pagina {#same-page}
 
-Un utente visita una pagina del sito web. Puoi utilizzare le informazioni sulla visita della pagina corrente (ad esempio, URL di riferimento, lingua del browser, informazioni sul prodotto incorporate) per selezionare l&#39;azione o la decisione successiva (ad esempio, personalizzazione) utilizzando la connessione [Personalizzazione personalizzata](../catalog/personalization/custom-personalization.md) per piattaforme non Adobi (ad esempio, [!DNL Pega], [!DNL Optimizely] o altre).
+Un utente visita una pagina del sito web. Puoi utilizzare le informazioni sulla visita della pagina corrente (ad esempio, URL di riferimento, lingua del browser, informazioni sul prodotto incorporate) per selezionare l&#39;azione o la decisione successiva (ad esempio, personalizzazione) utilizzando la connessione [Personalizzazione personalizzata](../catalog/personalization/custom-personalization.md) per piattaforme non Adobe (ad esempio, [!DNL Pega], [!DNL Optimizely] o altre).
 
 ### Personalizzazione della pagina successiva {#next-page}
 
@@ -75,7 +75,7 @@ Un’azienda di noleggio e vendita di immobili vuole personalizzare la propria p
 
 ### Configurare uno stream di dati nell’interfaccia utente di Data Collection {#configure-datastream}
 
-Il primo passaggio nella configurazione della destinazione di personalizzazione consiste nel configurare uno stream di dati per l’SDK per web di Experience Platform. Questa operazione viene eseguita nell’interfaccia utente di Data Collection.
+Il primo passaggio nella configurazione della destinazione di personalizzazione consiste nel configurare uno stream di dati per Experience Platform Web SDK. Questa operazione viene eseguita nell’interfaccia utente di Data Collection.
 
 Durante la configurazione dello stream di dati, in **[!UICONTROL Adobe Experience Platform]** assicurati che siano selezionate sia **[!UICONTROL Segmentazione Edge]** che **[!UICONTROL Destinazioni Personalization]**.
 
@@ -89,7 +89,7 @@ Per ulteriori dettagli sulla configurazione di un flusso di dati, seguire le ist
 
 ### Crea un criterio di unione [!DNL Active-On-Edge] {#create-merge-policy}
 
-Dopo aver creato la connessione di destinazione, è necessario creare un criterio di unione [!DNL Active-On-Edge]. Il criterio di unione [!DNL Active-On-Edge] garantisce che i tipi di pubblico vengano valutati costantemente [sul server Edge](../../segmentation/ui/edge-segmentation.md) e siano disponibili per casi di utilizzo di personalizzazione in tempo reale e nella pagina successiva.
+Dopo aver creato la connessione di destinazione, è necessario creare un criterio di unione [!DNL Active-On-Edge]. Il criterio di unione [!DNL Active-On-Edge] garantisce che i tipi di pubblico vengano valutati costantemente [sul server Edge](../../segmentation/methods/edge-segmentation.md) e siano disponibili per casi di utilizzo di personalizzazione in tempo reale e nella pagina successiva.
 
 >[!IMPORTANT]
 >
@@ -150,9 +150,9 @@ Puoi scegliere tra più tipi di pubblico, a seconda della loro origine:
 
 >[!IMPORTANT]
 >
->Gli attributi del profilo possono contenere dati sensibili. Per proteggere questi dati, la destinazione **[!UICONTROL Personalization]** personalizzata richiede l&#39;utilizzo dell&#39;[Edge Network Server API](../../server-api/overview.md) durante la configurazione della destinazione per la personalizzazione basata su attributi. Tutte le chiamate API server devono essere effettuate in un [contesto autenticato](../../server-api/authentication.md).
+>Gli attributi del profilo possono contenere dati sensibili. Per proteggere questi dati, la destinazione **[!UICONTROL Personalization]** personalizzata richiede l&#39;utilizzo della [API server Edge Network](../../server-api/overview.md) durante la configurazione della destinazione per la personalizzazione basata su attributi. Tutte le chiamate API server devono essere effettuate in un [contesto autenticato](../../server-api/authentication.md).
 >
-><br>Se utilizzi già Web SDK o Mobile SDK per l&#39;integrazione, puoi recuperare gli attributi tramite l&#39;API server aggiungendo un&#39;integrazione lato server.
+><br>Se per l&#39;integrazione si utilizza già Web SDK o Mobile SDK, è possibile recuperare gli attributi tramite l&#39;API server aggiungendo un&#39;integrazione lato server.
 >
 ><br>Se non segui i requisiti di cui sopra, la personalizzazione sarà basata solo sull&#39;iscrizione al pubblico.
 

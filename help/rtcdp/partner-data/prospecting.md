@@ -3,7 +3,7 @@ title: Coinvolgi e acquisisci nuovi clienti senza dipendere dai cookie di terze 
 description: Scopri come coinvolgere e acquisire nuovi clienti attraverso possibili casi d’uso, senza affidarti a cookie di terze parti.
 feature: Use Cases, Customer Acquisition
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
 workflow-type: tm+mt
 source-wordcount: '2074'
 ht-degree: 85%
@@ -24,7 +24,7 @@ Utilizza il supporto dati di terze parti in Real-Time CDP per espandere la tua b
 
 I brand si trovano ad affrontare contemporaneamente sfide impegnative relative all’esecuzione responsabile di casi d’uso di acquisizione clienti top-of-the-funnel senza dipendere dai cookie di terze parti, da budget limitati e da una maggiore domanda di trasparenza e ritorno sulla spesa pubblicitaria.
 
-Adobe Real-time Customer Data Platform può aiutare i brand a passare in modo sicuro i casi di utilizzo supportati dalla piattaforma di gestione dati (DMP, Data Management Platform) a alternative senza cookie, in modo da portare avanti la sofisticazione e la potenza complete della segmentazione self-service, della cura del pubblico e dell’attivazione in un unico sistema. Il tutto senza compromettere l&#39;attenzione costante di Adobe sull&#39;uso responsabile dei dati tramite un framework brevettato per la governance dei dati e il consenso.
+Adobe Real-Time Customer Data Platform può aiutare i brand a passare in modo sicuro i casi d’uso supportati dalla piattaforma di gestione dati (DMP) a alternative senza cookie, in modo da portare avanti la sofisticazione e la potenza complete della segmentazione self-service, della cura del pubblico e dell’attivazione in un unico sistema. Il tutto senza compromettere la costante attenzione di Adobe all’uso responsabile dei dati tramite un framework brevettato per la governance dei dati e il consenso.
 
 Ad esempio, segui i passaggi descritti in questo caso d’uso quando devi eseguire una campagna per attrarre potenziali utenti affinché diventino clienti noti.
 
@@ -71,7 +71,7 @@ Man mano che completi i passaggi per implementare il caso d’uso, utilizzerai l
 * [Set di dati](/help/catalog/datasets/overview.md)
 * [Origini](/help/sources/home.md)
 * [Profili potenziale cliente](/help/profile/ui/prospect-profile.md)
-* [Pubblico potenziale](/help/segmentation/ui/prospect-audience.md)
+* [Pubblico potenziale](/help/segmentation/types/prospect-audiences.md)
 * [Destinazioni](/help/destinations/home.md)
 
 ### Ottenere la licenza dei dettagli del profilo di terze parti dal partner {#license-profiles-from-partner}
@@ -213,7 +213,7 @@ L’esperienza di creazione del pubblico per profili di potenziali clienti è di
 * Solo valutazione del profilo in batch.
 * Non supporta la creazione di tipi di pubblico in base a eventi di serie temporali.
 
-Ulteriori informazioni su [tipi di pubblico potenziali](/help/segmentation/ui/prospect-audience.md).
+Ulteriori informazioni su [tipi di pubblico potenziali](/help/segmentation/types/prospect-audiences.md).
 
 ### Attivare profili di potenziali clienti nelle destinazioni {#activate-to-destinations}
 

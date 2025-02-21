@@ -1,25 +1,25 @@
 ---
-keywords: profilo;real-time customer profile;risoluzione dei problemi;guardrail;linee guida;limit;entity;primary entity;dimension entity;RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;real time customer data platform;real time cdp;b2b;cdp;
-title: Guardrail predefiniti per Real-time Customer Data Platform B2B Edition
+keywords: profilo;real-time customer profile;risoluzione dei problemi;guardrail;linee guida;limit;entity;primary entity;dimension entity;RTCDP;CDP;B2B edition;Real-Time Customer Data Platform;real time customer data platform;real time cdp;b2b;cdp;
+title: Guardrail predefiniti per Real-Time Customer Data Platform B2B edition
 type: Documentation
-description: Adobe Experience Platform utilizza un modello di dati ibridi altamente denormalizzati che differisce dal modello tradizionale di dati relazionali. Questo documento fornisce limiti predefiniti di utilizzo e tasso per aiutarti a modellare i tuoi dati per prestazioni di sistema ottimali utilizzando Adobe Real-time Customer Data Platform B2B Edition.
-badgeB2B: label="Edizione B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+description: Adobe Experience Platform utilizza un modello di dati ibridi altamente denormalizzati che differisce dal modello tradizionale di dati relazionali. Questo documento fornisce i limiti predefiniti di utilizzo e tasso per aiutarti a modellare i tuoi dati per ottenere prestazioni di sistema ottimali utilizzando Adobe Real-Time Customer Data Platform B2B edition.
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Guardrails, B2B
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: bc399f3af0524232671af780ea1380f1a71a5b7e
 workflow-type: tm+mt
 source-wordcount: '1817'
 ht-degree: 2%
 
 ---
 
-# Guardrail predefiniti per Real-time Customer Data Platform B2B Edition
+# Guardrail predefiniti per Real-Time Customer Data Platform B2B edition
 
 >[!NOTE]
 >
->I limiti descritti in questo documento rappresentano le modifiche abilitate da Real-time Customer Data Platform B2B Edition. Per un elenco completo dei limiti predefiniti per Real-Time CDP B2B Edition, combina questi limiti con i limiti generali di Adobe Experience Platform descritti nella [documentazione sui guardrail per i dati del profilo cliente in tempo reale](../profile/guardrails.md).
+>I limiti descritti in questo documento rappresentano le modifiche abilitate da Real-Time Customer Data Platform B2B edition. Per un elenco completo dei limiti predefiniti per Real-Time CDP B2B edition, combina questi limiti con i limiti generali di Adobe Experience Platform descritti nella [documentazione sui guardrail per i dati del profilo cliente in tempo reale](../profile/guardrails.md).
 
-Real-time Customer Data Platform B2B Edition consente di fornire esperienze cross-channel personalizzate basate su informazioni comportamentali e attributi del cliente sotto forma di profili cliente in tempo reale e profili account. Per supportare questo nuovo approccio ai profili, Experience Platform utilizza un modello di dati ibridi altamente denormalizzati che differisce dal modello tradizionale di dati relazionali.
+Real-Time Customer Data Platform B2B edition consente di fornire esperienze cross-channel personalizzate basate su informazioni comportamentali e attributi del cliente sotto forma di profili cliente in tempo reale e profili account. Per supportare questo nuovo approccio ai profili, Experience Platform utilizza un modello di dati ibridi altamente denormalizzati che differisce dal modello tradizionale di dati relazionali.
 
 >[!IMPORTANT]
 >
@@ -37,7 +37,7 @@ In questo documento sono disponibili due tipi di limiti predefiniti:
 
 | Tipo di guardrail | Descrizione |
 | -------------- | ----------- |
-| **Guardrail delle prestazioni (limite software)** | I guardrail di prestazioni sono limiti di utilizzo relativi all’ambito dei tuoi casi d’uso. Quando si superano i guardrail delle prestazioni, è possibile che si verifichi un peggioramento delle prestazioni e della latenza. L’Adobe non è responsabile di tale degrado delle prestazioni. I clienti che superano costantemente il limite di prestazioni possono scegliere di concedere licenze aggiuntive per evitare il degrado delle prestazioni. |
+| **Guardrail delle prestazioni (limite software)** | I guardrail di prestazioni sono limiti di utilizzo relativi all’ambito dei tuoi casi d’uso. Quando si superano i guardrail delle prestazioni, è possibile che si verifichi un peggioramento delle prestazioni e della latenza. Adobe non è responsabile di tale degrado delle prestazioni. I clienti che superano costantemente il limite di prestazioni possono scegliere di concedere licenze aggiuntive per evitare il degrado delle prestazioni. |
 | **Guardrail applicati dal sistema (limite rigido)** | I guardrail applicati dal sistema vengono applicati dall’interfaccia utente o dall’API di Real-Time CDP. Questi sono i limiti che non puoi superare, poiché l’interfaccia utente e l’API ti impediranno di farlo o restituiranno un errore. |
 
 >[!INFO]
@@ -52,20 +52,20 @@ Le seguenti protezioni forniscono i limiti consigliati per la modellazione dei d
 
 >[!NOTE]
 >
->I limiti del modello dati descritti in questa sezione rappresentano le modifiche abilitate da Real-time Customer Data Platform B2B Edition. Per un elenco completo dei limiti predefiniti per Real-Time CDP B2B Edition, combina questi limiti con i limiti generali di Adobe Experience Platform descritti nella [documentazione sui guardrail per i dati del profilo cliente in tempo reale](../profile/guardrails.md).
+>I limiti del modello dati descritti in questa sezione rappresentano le modifiche abilitate da Real-Time Customer Data Platform B2B edition. Per un elenco completo dei limiti predefiniti per Real-Time CDP B2B edition, combina questi limiti con i limiti generali di Adobe Experience Platform descritti nella [documentazione sui guardrail per i dati del profilo cliente in tempo reale](../profile/guardrails.md).
 
 | Guardrail | Limite | Tipo limite | Descrizione |
 | --------- | ----- | ---------- | ----------- |
-| Set di dati di classe XDM standard di Real-Time CDP B2B Edition | 60 | Guardrail delle prestazioni | Si consiglia un massimo di 60 set di dati che sfruttano le classi standard Experience Data Model (XDM) fornite da Real-Time CDP B2B Edition. Per un elenco completo delle classi XDM standard per i casi d&#39;uso B2B, consulta [gli schemi nella documentazione dell&#39;edizione B2B di Real-Time CDP](schemas/b2b.md). <br/><br/>*Nota: a causa della natura del modello di dati ibridi denormalizzati di Experience Platform, la maggior parte dei clienti non supera questo limite. Per domande su come modellare i dati o per ulteriori informazioni sui limiti personalizzati, contatta il rappresentante dell&#39;Assistenza clienti.* |
+| Set di dati della classe XDM standard di Real-Time CDP B2B edition | 60 | Guardrail delle prestazioni | Si consiglia un massimo di 60 set di dati che sfruttano le classi standard Experience Data Model (XDM) fornite da Real-Time CDP B2B edition. Per un elenco completo delle classi XDM standard per i casi di utilizzo B2B, consulta [gli schemi nella documentazione di Real-Time CDP B2B edition](schemas/b2b.md). <br/><br/>*Nota: a causa della natura del modello di dati ibridi denormalizzati di Experience Platform, la maggior parte dei clienti non supera questo limite. Per domande su come modellare i dati o per ulteriori informazioni sui limiti personalizzati, contatta il rappresentante dell&#39;Assistenza clienti.* |
 | Conteggio delle identità per un singolo account in un grafico delle identità | 50 | Guardrail delle prestazioni | Il numero massimo di identità in un grafico delle identità per un singolo account è 50. Tutti i profili con più di 50 identità sono esclusi da segmentazione, esportazioni e ricerche. |
 | Relazioni legacy tra più entità | 20 | Guardrail delle prestazioni | Si consiglia di definire un massimo di 20 relazioni tra più entità tra entità principali ed entità dimensione. Non è consigliabile eseguire mapping di relazioni aggiuntivi finché non viene rimossa o disabilitata una relazione esistente. |
 | Relazioni molti-a-uno per classe XDM | 2 | Guardrail delle prestazioni | Si consiglia un massimo di 2 relazioni molti-a-uno definite per classe XDM. Non è consigliabile creare una relazione aggiuntiva finché non viene rimossa o disabilitata una relazione esistente. Per i passaggi su come creare una relazione tra due schemi, consulta l&#39;esercitazione su [definizione delle relazioni tra schemi B2B](../xdm/tutorials/relationship-b2b.md). |
 
-### guardrail entità Dimension
+### guardrail di entità Dimension
 
 >[!NOTE]
 >
->I limiti del modello dati descritti in questa sezione rappresentano le modifiche abilitate da Real-time Customer Data Platform B2B Edition. Per un elenco completo dei limiti predefiniti per Real-Time CDP B2B Edition, combina questi limiti con i limiti generali di Adobe Experience Platform descritti nella [documentazione sui guardrail per i dati del profilo cliente in tempo reale](../profile/guardrails.md).
+>I limiti del modello dati descritti in questa sezione rappresentano le modifiche abilitate da Real-Time Customer Data Platform B2B edition. Per un elenco completo dei limiti predefiniti per Real-Time CDP B2B edition, combina questi limiti con i limiti generali di Adobe Experience Platform descritti nella [documentazione sui guardrail per i dati del profilo cliente in tempo reale](../profile/guardrails.md).
 
 | Guardrail | Limite | Tipo limite | Descrizione |
 | --------- | ----- | ---------- | ----------- |
@@ -86,17 +86,17 @@ I seguenti guardrail si riferiscono alle dimensioni dei dati e forniscono i limi
 
 >[!NOTE]
 >
->I limiti di dimensione dei dati descritti in questa sezione rappresentano le modifiche abilitate da Real-time Customer Data Platform B2B Edition. Per un elenco completo dei limiti predefiniti per Real-Time CDP B2B Edition, combina questi limiti con i limiti generali di Adobe Experience Platform descritti nella [documentazione sui guardrail per i dati del profilo cliente in tempo reale](../profile/guardrails.md).
+>I limiti di dimensione dei dati descritti in questa sezione rappresentano le modifiche abilitate da Real-Time Customer Data Platform B2B edition. Per un elenco completo dei limiti predefiniti per Real-Time CDP B2B edition, combina questi limiti con i limiti generali di Adobe Experience Platform descritti nella [documentazione sui guardrail per i dati del profilo cliente in tempo reale](../profile/guardrails.md).
 
 | Guardrail | Limite | Tipo limite | Descrizione |
 | --------- | ----- | ---------- | ----------- |
 | Batch acquisiti per classe XDM al giorno | 45 | Guardrail delle prestazioni | Il numero totale di batch acquisiti ogni giorno per classe XDM non deve superare 45. L&#39;acquisizione di batch aggiuntivi può impedire prestazioni ottimali. |
 
-### guardrail entità Dimension
+### guardrail di entità Dimension
 
 >[!NOTE]
 >
->I limiti di dimensione dei dati descritti in questa sezione rappresentano le modifiche abilitate da Real-time Customer Data Platform B2B Edition. Per un elenco completo dei limiti predefiniti per Real-Time CDP B2B Edition, combina questi limiti con i limiti generali di Adobe Experience Platform descritti nella [documentazione sui guardrail per i dati del profilo cliente in tempo reale](../profile/guardrails.md).
+>I limiti di dimensione dei dati descritti in questa sezione rappresentano le modifiche abilitate da Real-Time Customer Data Platform B2B edition. Per un elenco completo dei limiti predefiniti per Real-Time CDP B2B edition, combina questi limiti con i limiti generali di Adobe Experience Platform descritti nella [documentazione sui guardrail per i dati del profilo cliente in tempo reale](../profile/guardrails.md).
 
 | Guardrail | Limite | Tipo limite | Descrizione |
 | --------- | ----- | ---------- | ----------- |
@@ -110,7 +110,7 @@ I guardrail descritti in questa sezione si riferiscono al numero e alla natura d
 
 >[!NOTE]
 >
->I limiti di segmentazione descritti in questa sezione rappresentano le modifiche abilitate da Real-time Customer Data Platform B2B Edition. Per un elenco completo dei limiti predefiniti per Real-Time CDP B2B Edition, combina questi limiti con i limiti generali di Adobe Experience Platform descritti nella [documentazione sui guardrail per i dati del profilo cliente in tempo reale](../profile/guardrails.md).
+>I limiti di segmentazione descritti in questa sezione rappresentano le modifiche abilitate da Real-Time Customer Data Platform B2B edition. Per un elenco completo dei limiti predefiniti per Real-Time CDP B2B edition, combina questi limiti con i limiti generali di Adobe Experience Platform descritti nella [documentazione sui guardrail per i dati del profilo cliente in tempo reale](../profile/guardrails.md).
 
 | Guardrail | Limite | Tipo limite | Descrizione |
 | --------- | ----- | ---------- | ----------- |
@@ -118,7 +118,7 @@ I guardrail descritti in questa sezione si riferiscono al numero e alla natura d
 
 ## Passaggi successivi
 
-I limiti descritti in questo documento rappresentano le modifiche abilitate da Real-time Customer Data Platform B2B Edition. Per un elenco completo dei limiti predefiniti per Real-Time CDP B2B Edition, combina questi limiti con i limiti generali di Adobe Experience Platform descritti nella [documentazione sui guardrail per i dati del profilo cliente in tempo reale](../profile/guardrails.md).
+I limiti descritti in questo documento rappresentano le modifiche abilitate da Real-Time Customer Data Platform B2B edition. Per un elenco completo dei limiti predefiniti per Real-Time CDP B2B edition, combina questi limiti con i limiti generali di Adobe Experience Platform descritti nella [documentazione sui guardrail per i dati del profilo cliente in tempo reale](../profile/guardrails.md).
 
 ## Appendice
 
@@ -138,10 +138,10 @@ Gli attributi indipendenti dal tempo, noti anche come &quot;dati record&quot;, v
 
 #### Entità Dimension
 
-Anche se l’archivio dati profilo che gestisce i dati profilo non è un archivio relazionale, Profilo consente l’integrazione con entità dimensionali di piccole dimensioni per creare tipi di pubblico in modo semplificato e intuitivo. Questa integrazione è nota come [segmentazione con più entità](../segmentation/multi-entity-segmentation.md).
+Anche se l’archivio dati profilo che gestisce i dati profilo non è un archivio relazionale, Profilo consente l’integrazione con entità dimensionali di piccole dimensioni per creare tipi di pubblico in modo semplificato e intuitivo. Questa integrazione è nota come [segmentazione con più entità](../segmentation/tutorials/multi-entity-segmentation.md).
 
 La tua organizzazione può anche definire classi XDM per descrivere elementi diversi dai singoli utenti, ad esempio store, prodotti o proprietà. Questi schemi non [!DNL XDM Individual Profile] sono denominati &quot;entità dimensione&quot; (note anche come &quot;entità di ricerca&quot;) e non contengono dati di serie temporali. Gli schemi che rappresentano entità dimensione sono collegati alle entità profilo tramite l&#39;utilizzo di [relazioni schema](../xdm/tutorials/relationship-ui.md).
 
-Le entità di Dimension forniscono dati di ricerca che facilitano e semplificano le definizioni dei segmenti con più entità e devono essere sufficientemente piccole da consentire al motore di segmentazione di caricare l’intero set di dati in memoria per un’elaborazione ottimale (ricerca rapida dei punti).
+Le entità Dimension forniscono dati di ricerca che facilitano e semplificano le definizioni dei segmenti con più entità e devono essere sufficientemente piccole da consentire al motore di segmentazione di caricare l’intero set di dati in memoria per un’elaborazione ottimale (ricerca rapida dei punti).
 
 ![Infografica che mostra che un&#39;entità profilo è composta da entità dimensione.](../profile/images/guardrails/profile-and-dimension-entities.png)

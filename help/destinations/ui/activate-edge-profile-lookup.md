@@ -2,13 +2,13 @@
 title: Cercare gli attributi del profilo edge in tempo reale
 description: Scopri come cercare gli attributi del profilo Edge in tempo reale utilizzando la destinazione Personalization personalizzata e l’API di Edge Network
 type: Tutorial
-source-git-commit: 6414168c1deb047af30d8636ef8d61316f56aecf
+exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
+source-git-commit: 276fd7c532843c9589e1d51b0bc7a76cb5c3eb9f
 workflow-type: tm+mt
 source-wordcount: '1904'
 ht-degree: 2%
 
 ---
-
 
 # Cercare in tempo reale gli attributi del profilo sul bordo
 
@@ -27,14 +27,14 @@ Questa pagina descrive i passaggi da seguire per cercare i dati del profilo edge
 
 Quando configuri il caso d’uso descritto in questa pagina, utilizzerai i seguenti componenti di Platform:
 
-* [Datastream](../../datastreams/overview.md): un datastream riceve i dati evento in ingresso da Web SDK e risponde con i dati del profilo Edge.
+* [Datastream](../../datastreams/overview.md): un datastream riceve i dati evento in arrivo da Web SDK e risponde con i dati del profilo Edge.
 * [Criteri di unione](../../segmentation/ui/segment-builder.md#merge-policies): verrà creato un criterio di unione [!UICONTROL Attivo su Edge] per garantire che i profili edge utilizzino i dati di profilo corretti.
-* [Connessione Personalization personalizzata](../catalog/personalization/custom-personalization.md): verrà configurata una nuova connessione di personalizzazione personalizzata che invierà gli attributi del profilo all&#39;Edge Network.
-* [Edge Network API](../../server-api/overview.md): utilizzerai la funzionalità Edge Network API [raccolta dati interattiva](../../server-api/interactive-data-collection.md) per recuperare rapidamente gli attributi del profilo dai profili edge.
+* [Connessione Personalization personalizzata](../catalog/personalization/custom-personalization.md): verrà configurata una nuova connessione di personalizzazione personalizzata che invierà gli attributi del profilo a Edge Network.
+* [API Edge Network](../../server-api/overview.md): utilizzerai la funzionalità dell&#39;API Edge Network [raccolta dati interattiva](../../server-api/interactive-data-collection.md) per recuperare rapidamente gli attributi del profilo dai profili edge.
 
 ## Guardrail prestazioni {#guardrails}
 
-I casi di utilizzo della ricerca di profili Edge sono soggetti ai guardrail di prestazioni specifici descritti nella tabella seguente. Per ulteriori dettagli sui guardrail API Edge Network, consulta la [pagina della documentazione](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/) relativa ai guardrail.
+I casi di utilizzo della ricerca di profili Edge sono soggetti ai guardrail di prestazioni specifici descritti nella tabella seguente. Per ulteriori dettagli sui guardrail API di Edge Network, consulta la [pagina della documentazione](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/) relativa ai guardrail.
 
 | Servizio Edge Network | Segmentazione di Edge | Richieste al secondo |
 |---------|----------|---------|
@@ -61,7 +61,7 @@ Segui i passaggi descritti nella documentazione relativa alla [configurazione de
 
 La ricerca degli attributi del profilo sul server Edge richiede la configurazione dei tipi di pubblico per la valutazione Edge.
 
-Assicurarsi che il criterio di unione [Attivo su Edge](../../segmentation/ui/segment-builder.md#merge-policies) sia impostato come predefinito per i tipi di pubblico che si intende attivare. Il criterio di unione [!DNL Active-On-Edge] garantisce che i tipi di pubblico vengano valutati costantemente [sul server Edge](../../segmentation/ui/edge-segmentation.md) e siano disponibili per casi di utilizzo di personalizzazione in tempo reale.
+Assicurarsi che il criterio di unione [Attivo su Edge](../../segmentation/ui/segment-builder.md#merge-policies) sia impostato come predefinito per i tipi di pubblico che si intende attivare. Il criterio di unione [!DNL Active-On-Edge] garantisce che i tipi di pubblico vengano valutati costantemente [sul server Edge](../../segmentation/methods/edge-segmentation.md) e siano disponibili per casi di utilizzo di personalizzazione in tempo reale.
 
 Segui le istruzioni relative alla [creazione di un criterio di unione](../../profile/merge-policies/ui-guide.md#create-a-merge-policy) e assicurati di attivare/disattivare il criterio di unione **[!UICONTROL Attivo su Edge]**.
 
@@ -69,9 +69,9 @@ Segui le istruzioni relative alla [creazione di un criterio di unione](../../pro
 >
 >Se i tipi di pubblico utilizzano un criterio di unione diverso, non sarà possibile recuperare gli attributi del profilo dal server Edge e non sarà possibile eseguire la ricerca del profilo Edge.
 
-## Passaggio 3: invia i dati dell’attributo del profilo all’Edge Network{#configure-custom-personalization-connection}
+## Passaggio 3: inviare i dati degli attributi del profilo ad Edge Network{#configure-custom-personalization-connection}
 
-Per cercare in tempo reale i profili edge, inclusi gli attributi e i dati di iscrizione al pubblico, è necessario rendere disponibili i dati nell’Edge Network. A questo scopo, devi creare una connessione a una destinazione di **[!UICONTROL Personalization personalizzato con attributi]** e attivare i tipi di pubblico, inclusi gli attributi che desideri cercare nei profili edge.
+Per cercare in tempo reale i profili edge, inclusi gli attributi e i dati di iscrizione al pubblico, è necessario rendere disponibili i dati in Edge Network. A questo scopo, devi creare una connessione a una destinazione di **[!UICONTROL Personalization personalizzato con attributi]** e attivare i tipi di pubblico, inclusi gli attributi che desideri cercare nei profili edge.
 
 +++ Configurare una connessione Personalization con attributi personalizzata
 
@@ -85,7 +85,7 @@ Durante la configurazione della nuova destinazione, seleziona lo stream di dati 
 
 +++Attiva i tipi di pubblico nella connessione Personalization personalizzato con attributi
 
-Dopo aver creato una connessione **[!UICONTROL Personalization personalizzato con attributi]**, puoi inviare i dati del profilo all&#39;Edge Network.
+Dopo aver creato una connessione **[!UICONTROL Personalization personalizzato con attributi]**, puoi inviare i dati del profilo ad Edge Network.
 
 >[!IMPORTANT]
 > 
@@ -129,7 +129,7 @@ Dopo aver creato una connessione **[!UICONTROL Personalization personalizzato co
 
 Al termine della mappatura degli attributi del profilo, selezionare **[!UICONTROL Avanti]**.
 
-Nella pagina **[!UICONTROL Rivedi]** puoi visualizzare un riepilogo della selezione. Seleziona **[!UICONTROL Annulla]** per interrompere il flusso, **[!UICONTROL Indietro]** per modificare le impostazioni oppure **[!UICONTROL Fine]** per confermare la selezione e iniziare a inviare i dati del profilo all&#39;Edge Network.
+Nella pagina **[!UICONTROL Rivedi]** puoi visualizzare un riepilogo della selezione. Seleziona **[!UICONTROL Annulla]** per interrompere il flusso, **[!UICONTROL Indietro]** per modificare le impostazioni oppure **[!UICONTROL Fine]** per confermare la selezione e iniziare a inviare i dati del profilo ad Edge Network.
 
 ![Riepilogo selezioni nel passaggio di revisione.](../assets/ui/activate-edge-personalization-destinations/review.png)
 
@@ -160,13 +160,13 @@ Se si è soddisfatti della selezione e non sono state rilevate violazioni dei cr
 
 ## Passaggio 4: Cercare gli attributi del profilo sullo spigolo {#configure-edge-profile-lookup}
 
-A questo punto dovresti aver completato [la configurazione dello stream di dati](#create-datastream), [hai creato una nuova connessione di destinazione Personalization con attributi personalizzati](#configure-destination) e hai utilizzato questa connessione per [inviare gli attributi del profilo](#activate-audiences) che potrai cercare nell&#39;Edge Network.
+A questo punto dovresti aver completato [la configurazione dello stream di dati](#create-datastream), [hai creato una nuova connessione di destinazione Personalization con attributi personalizzati](#configure-destination) e hai utilizzato questa connessione per [inviare gli attributi del profilo](#activate-audiences) che potrai cercare in Edge Network.
 
 Il passaggio successivo consiste nel configurare la soluzione di personalizzazione per recuperare gli attributi del profilo dai profili edge.
 
 >[!IMPORTANT]
 >
->Gli attributi del profilo possono contenere dati sensibili. Per proteggere questi dati, è necessario recuperare gli attributi del profilo tramite l&#39;[API Edge Network](../../server-api/overview.md). Inoltre, per autenticare le chiamate API, è necessario recuperare gli attributi del profilo tramite l&#39;endpoint di raccolta dati interattivo [Edge Network API](../../server-api/interactive-data-collection.md).
+>Gli attributi del profilo possono contenere dati sensibili. Per proteggere questi dati, è necessario recuperare gli attributi del profilo tramite l&#39;[API Edge Network](../../server-api/overview.md). Inoltre, per autenticare le chiamate API, è necessario recuperare gli attributi del profilo tramite l&#39;endpoint [raccolta dati interattiva](../../server-api/interactive-data-collection.md) dell&#39;API Edge Network.
 ><br>Se non segui i requisiti di cui sopra, la personalizzazione sarà basata solo sull’iscrizione al pubblico e gli attributi di profilo non saranno disponibili.
 
 Lo stream di dati configurato nel [passaggio 1](#create-datastream) è ora pronto per accettare i dati dell&#39;evento in arrivo e rispondere con le informazioni del profilo Edge.
@@ -282,7 +282,7 @@ L&#39;oggetto `handle` fornisce le informazioni descritte nella tabella seguente
 | `attributes` | Questo array include gli attributi del profilo edge dei tipi di pubblico attivati nel [passaggio 3](#configure-custom-personalization-connection). |
 | `segments` | Questo array include i tipi di pubblico attivati in [passaggio 3](#configure-custom-personalization-connection). |
 | `type` | `handle` oggetti sono raggruppati per tipo. Per i casi di utilizzo di ricerca di profili edge, il tipo dell&#39;oggetto `handle` è sempre `activation:pull`. |
-| `eventIndex` | L’Edge Network riceve eventi dal client sotto forma di array. L’ordine degli eventi nell’array viene mantenuto durante l’elaborazione e rispecchiato da questo indice. L&#39;indicizzazione degli eventi inizia con `0`. |
+| `eventIndex` | Edge Network riceve gli eventi dal client sotto forma di array. L’ordine degli eventi nell’array viene mantenuto durante l’elaborazione e rispecchiato da questo indice. L&#39;indicizzazione degli eventi inizia con `0`. |
 
 >[!TAB Il profilo non esiste nel perimetro]
 
@@ -307,7 +307,7 @@ L&#39;oggetto `handle` fornisce le informazioni descritte nella tabella seguente
 |---------|----------|
 | `payload` | Quando il profilo non è presente nel perimetro, l&#39;oggetto `payload` è vuoto. |
 | `type` | `payload` oggetti sono raggruppati per tipo. Per i casi di utilizzo di ricerca di profili edge, il tipo dell&#39;oggetto `payload` è sempre `activation:pull`. |
-| `eventIndex` | L’Edge Network riceve eventi dal client sotto forma di array. L’ordine degli eventi nell’array viene mantenuto durante l’elaborazione e rispecchiato da questo indice. L&#39;indicizzazione degli eventi inizia con `0`. |
+| `eventIndex` | Edge Network riceve eventi dal client sotto forma di array. L’ordine degli eventi nell’array viene mantenuto durante l’elaborazione e rispecchiato da questo indice. L&#39;indicizzazione degli eventi inizia con `0`. |
 
 >[!ENDTABS]
 

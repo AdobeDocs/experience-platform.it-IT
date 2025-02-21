@@ -1,17 +1,17 @@
 ---
 keywords: governance dei dati rtcdp;rtcdp governance dei dati;real time customer data profile data governance;privacy rtcdp;rtcdp privacy
-title: Privacy in Real-time Customer Data Platform
-description: Adobe Real-time Customer Data Platform consente di semplificare il processo di conformità delle operazioni sui dati alle normative sulla privacy.
+title: Privacy in Real-Time Customer Data Platform
+description: Adobe Real-Time Customer Data Platform consente di semplificare il processo di conformità delle operazioni sui dati alle normative sulla privacy.
 feature: Get Started, Privacy
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
-source-git-commit: 82535ec3ac2dd27e685bb591fdf661d3ab5dd2c9
+source-git-commit: adc6d50f2784fe665d0590c3af053a057f8e4e38
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 0%
 
 ---
 
-# Privacy in Real-time Customer Data Platform
+# Privacy in Real-Time Customer Data Platform
 
 [!DNL Adobe Real-Time Customer Data Platform] ([!DNL Real-Time CDP]) consente ai professionisti del marketing di unire dati provenienti da più sistemi aziendali, consentendo loro di identificare, comprendere e coinvolgere meglio i propri clienti. Adobe considera la privacy dei dati dei consumatori un principio fondamentale della progettazione e fornisce vari controlli per aiutare gli esperti di marketing a gestire la privacy dei dati dei loro clienti.
 
@@ -29,13 +29,13 @@ Le normative legali sulla privacy, come il [!DNL General Data Protection Regulat
 
 [!DNL Real-Time CDP] consente ai clienti di non includere i propri dati personali nei casi di utilizzo della segmentazione. Le preferenze di rinuncia dei clienti vengono acquisite e memorizzate da [!DNL Real-Time Customer Profile] e possono essere applicate escludendo gli utenti che hanno rinunciato a un pubblico utilizzando la logica booleana (&quot;AND NOT&quot;) nel predicato del segmento.
 
-Per ulteriori informazioni, consulta il documento su [risposta alle richieste di rinuncia](../../segmentation/consents.md) nella documentazione del servizio di segmentazione di Adobe Experience Platform.
+Per ulteriori informazioni, consulta il documento su [risposta alle richieste di rinuncia](../../segmentation/tutorials/consents.md) nella documentazione del servizio di segmentazione di Adobe Experience Platform.
 
 ## Supporto IAB TCF 2.0
 
 [!DNL Real-Time CDP] è basato su Adobe Experience Platform, che fa parte dell&#39;[elenco fornitori](https://iabeurope.eu/vendor-list-tcf/) registrato per [!DNL Transparency & Consent Framework (TCF)], come indicato da [!DNL Interactive Advertising Bureau (IAB)]. In conformità ai requisiti TCF 2.0, Platform consente di raccogliere dati dettagliati sul consenso del cliente e di integrarli nei profili cliente memorizzati. Questi dati sul consenso possono quindi essere presi in considerazione per stabilire se alcuni profili sono inclusi nei tipi di pubblico esportati, a seconda del loro caso d’uso.
 
-Per ulteriori informazioni, vedere la panoramica sul supporto di [IAB TCF 2.0 nell&#39;Experience Platform](../../landing/governance-privacy-security/consent/iab/overview.md).
+Per ulteriori informazioni, vedere la panoramica sul supporto di [IAB TCF 2.0 in Experience Platform](../../landing/governance-privacy-security/consent/iab/overview.md).
 
 ## Passaggi successivi
 

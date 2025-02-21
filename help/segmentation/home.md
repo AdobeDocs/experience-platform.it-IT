@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Panoramica del servizio di segmentazione
 description: Scopri il servizio di segmentazione di Adobe Experience Platform e il ruolo che svolge nell’ecosistema della piattaforma.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 4ef3f6dc07cb5d17146d48c7a41e3745fd9a3a58
+source-git-commit: acc0c1b3f088e412c68557a4a7310889f2ad65a7
 workflow-type: tm+mt
-source-wordcount: '1679'
-ht-degree: 12%
+source-wordcount: '1665'
+ht-degree: 11%
 
 ---
 
@@ -54,7 +54,7 @@ Per informazioni sulla creazione di definizioni di segmenti utilizzando l&#39;AP
 
 ### Composizione di pubblico federato {#fac}
 
-Oltre alle composizioni del pubblico e alle definizioni dei segmenti, puoi utilizzare la Composizione federata del pubblico di Adobe per creare nuovi tipi di pubblico dai set di dati aziendali senza copiare i dati sottostanti e memorizzarli in Adobe Experience Platform Audience Portal. Puoi anche arricchire i tipi di pubblico esistenti in Adobe Experience Platform utilizzando dati di pubblico composti che sono stati federati dal data warehouse aziendale. Leggi la guida su [Federated Audience Composition](https://experienceleague.adobe.com/it/docs/federated-audience-composition/using/home).
+Oltre alle composizioni del pubblico e alle definizioni dei segmenti, puoi utilizzare la Composizione federativa del pubblico di Adobe per creare nuovi tipi di pubblico dai set di dati aziendali senza copiare i dati sottostanti e memorizzarli in Adobe Experience Platform Audience Portal. Puoi anche arricchire i tipi di pubblico esistenti in Adobe Experience Platform utilizzando dati di pubblico composti che sono stati federati dal data warehouse aziendale. Leggi la guida su [Federated Audience Composition](https://experienceleague.adobe.com/it/docs/federated-audience-composition/using/home).
 
 ## Valutare i tipi di pubblico {#evaluate-segments}
 
@@ -67,7 +67,6 @@ Oltre alle composizioni del pubblico e alle definizioni dei segmenti, puoi utili
 >id="platform_segments_evaluation_streaming"
 >title="Valutazione in streaming"
 >abstract="La segmentazione in streaming è un processo continuo di selezione di dati che aggiorna i tipi di pubblico in risposta all’attività dell’utente."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html?lang=it" text="Valutare gli eventi in tempo quasi reale con la segmentazione in streaming"
 
 Platform supporta attualmente tre metodi di valutazione dei tipi di pubblico: segmentazione in streaming, segmentazione in batch e segmentazione Edge.
 
@@ -75,7 +74,7 @@ Platform supporta attualmente tre metodi di valutazione dei tipi di pubblico: se
 
 La segmentazione in streaming è un processo continuo di selezione di dati che aggiorna i tipi di pubblico in risposta all’attività dell’utente. Una volta creato e salvato un pubblico, la definizione del segmento viene applicata ai dati in arrivo in [!DNL Real-Time Customer Profile]. Le aggiunte e le rimozioni al pubblico vengono elaborate regolarmente, in modo da garantire che il pubblico di destinazione rimanga pertinente.
 
-Per ulteriori informazioni sulla segmentazione streaming, consulta la [documentazione sulla segmentazione streaming](./api/streaming-segmentation.md).
+Per ulteriori informazioni sulla segmentazione streaming, consulta la [documentazione sulla segmentazione streaming](./methods/streaming-segmentation.md).
 
 ### Segmentazione in batch {#batch}
 
@@ -94,11 +93,10 @@ I tipi di pubblico in batch vengono valutati automaticamente ogni 24 ore. Se des
 >id="platform_segments_evaluation_edge"
 >title="Valutazione Edge"
 >abstract="La segmentazione Edge è la capacità di valutare all’istante i segmenti in Platform sulla reta Edge, per casi d’uso di personalizzazione sulla stessa pagina e sulla pagina successiva."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html?lang=it" text="Guida all’interfaccia utente per la segmentazione Edge"
 
-La segmentazione di Edge consente di valutare i segmenti in Platform [ istantaneamente nell’Edge Network](../web-sdk/home.md), abilitando casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva.
+La segmentazione di Edge consente di valutare i segmenti in Platform [ istantaneamente in Edge Network](../landing/edge-and-hub-comparison.md), abilitando casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva.
 
-Per ulteriori informazioni sulla segmentazione Edge, consulta la [documentazione API](./api/edge-segmentation.md) o la [documentazione interfaccia utente](./ui/edge-segmentation.md).
+Per ulteriori informazioni sulla segmentazione Edge, consulta la [documentazione API](./methods/edge-segmentation.md) o la [documentazione interfaccia utente](./methods/edge-segmentation.md).
 
 ## Accedere ai risultati della segmentazione
 
@@ -165,7 +163,7 @@ Assegnando una variabile all’attributo &quot;purchase state&quot;, la definizi
 
 ### Segmentazione di più entità {#multi-entity}
 
-Con la funzione di segmentazione avanzata di più entità, è possibile estendere i dati di [!DNL Real-Time Customer Profile] con dati aggiuntivi basati su prodotti, archivi o altre entità non personali, note anche come entità &quot;dimensionali&quot;. Di conseguenza, [!DNL Segmentation Service] può accedere a campi aggiuntivi durante la definizione del segmento come se fossero nativi dell&#39;archivio dati [!DNL Profile]. La segmentazione multi-entità offre flessibilità per identificare i tipi di pubblico in base ai dati pertinenti per le tue esigenze aziendali specifiche. Per ulteriori informazioni, inclusi casi d&#39;uso e flussi di lavoro, consulta la [guida alla segmentazione di più entità](multi-entity-segmentation.md).
+Con la funzione di segmentazione avanzata di più entità, è possibile estendere i dati di [!DNL Real-Time Customer Profile] con dati aggiuntivi basati su prodotti, archivi o altre entità non personali, note anche come entità &quot;dimensionali&quot;. Di conseguenza, [!DNL Segmentation Service] può accedere a campi aggiuntivi durante la definizione del segmento come se fossero nativi dell&#39;archivio dati [!DNL Profile]. La segmentazione multi-entità offre flessibilità per identificare i tipi di pubblico in base ai dati pertinenti per le tue esigenze aziendali specifiche. Per ulteriori informazioni, inclusi casi d&#39;uso e flussi di lavoro, consulta la [guida alla segmentazione di più entità](./tutorials/multi-entity-segmentation.md).
 
 ## [!DNL Segmentation Service] tipi di dati
 

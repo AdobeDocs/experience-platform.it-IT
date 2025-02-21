@@ -1,17 +1,17 @@
 ---
-title: Note sulla versione di Adobe Experience Platform - Ottobre 2023
+title: Note sulla versione di Adobe Experience Platform di ottobre 2023
 description: Note sulla versione di Adobe Experience Platform di ottobre 2023.
 exl-id: e9cf5299-8350-4b40-8f56-05e598846875
-source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '1054'
-ht-degree: 39%
+ht-degree: 40%
 
 ---
 
 # Note sulla versione di Adobe Experience Platform
 
-**Data di rilascio: 25 ottobre 2023**
+**Data di rilascio: giovedì 25 ottobre 2023**
 
 Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
@@ -45,7 +45,7 @@ Adobe Experience Platform fornisce una suite di tecnologie che consente di racco
 | Tipo | Funzione | Descrizione |
 | --- | --- | --- |
 | Estensioni | Miglioramento API conversioni [!DNL Meta] | Sono disponibili tre miglioramenti all&#39;estensione [Meta Conversions API](/help/tags/extensions/server/meta/overview.md): <ul><li>Integrazione con [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe): crea un&#39;esperienza di accesso fluida consentendo di condividere il pixelID e il token di accesso per l&#39;integrazione dell&#39;API di conversione con Adobe.</li><li>Integrazione con [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq): consente di inviare annunci pubblicitari a persone che hanno più probabilità di completare un&#39;azione desiderata e collegarla nuovamente agli annunci consegnati.</li><li>Integrazione con [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha): consente di trasmettere il RampID di LiveRamp nel campo CIP, eliminando la necessità di condividere i dati PII direttamente con i partner o con Meta. </li></ul> |
-| Estensioni | API per conversioni [!DNL LinkedIn] | L&#39;estensione [[!DNL LinkedIn] Conversions API](../../tags/extensions/server/linkedin/overview.md) consente di valutare l&#39;efficacia delle campagne di marketing LinkedIn inoltrando i dati dell&#39;evento Experience Platform a LinkedIn. |
+| Estensioni | API per conversioni [!DNL LinkedIn] | L&#39;estensione [[!DNL LinkedIn] Conversions API](../../tags/extensions/server/linkedin/overview.md) consente di valutare l&#39;efficacia delle campagne di marketing LinkedIn inoltrando i dati evento di Experience Platform a LinkedIn. |
 | Segreto | [!DNL LinkedIn] segreto OAuth 2 | Il segreto [[!DNL LinkedIn] OAuth 2](../../tags/ui/event-forwarding/secrets.md#linkedin-oauth-2) ti consente di inviare interazioni server-server a [!DNL LinkedIn] nell&#39;inoltro degli eventi. |
 | Inoltro eventi | Aggiornamento dei tag e inoltro degli eventi | Per mantenere le prestazioni di [Tag](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=it) e [Inoltro eventi](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html) in Platform, verranno mantenute solo le build di sviluppo e staging più recenti, sia riuscite che non riuscite. Tutte le build non più in uso verranno rimosse. Inoltre, è stata implementata una limitazione della velocità e della limitazione di limitazione per garantire che alcuni utilizzi API pesanti non danneggino le prestazioni API di altri. |
 | Estensioni | Elementi, regole ed estensioni | [Gli elementi, le regole e le estensioni](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/overview.html) sono ora ordinati nell&#39;output della libreria per garantire una maggiore coerenza tra più build e distribuzioni della stessa libreria. |
@@ -70,7 +70,7 @@ Per ulteriori informazioni sulla raccolta dati, consulta la [panoramica sulla ra
 | Funzionalità | Descrizione |
 | ----------- | ----------- |
 | (Beta) Supporto delle funzioni di hashing nei campi calcolati | Oltre alle funzioni specifiche per [esportare array](../../destinations/ui/export-arrays-calculated-fields.md) o elementi da un array, è ora possibile utilizzare ulteriori [funzioni di hashing](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) per eseguire l&#39;hashing degli attributi nei file esportati. Le funzioni di hashing supportate sono: `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
-| (GA limitato) Attiva i tipi di pubblico dell’account su determinate destinazioni | I clienti B2B di Real-Time CDP ora possono attivare [tipi di pubblico dell&#39;account](../../segmentation/ui/account-audiences.md) in determinate destinazioni. Per ulteriori informazioni su questa funzione, leggere l&#39;esercitazione [attivare il pubblico dell&#39;account](/help/destinations/ui/activate-account-audiences.md). |
+| (GA limitato) Attiva i tipi di pubblico dell’account su determinate destinazioni | I clienti B2B di Real-Time CDP ora possono attivare [tipi di pubblico dell&#39;account](../../segmentation/types/account-audiences.md) in determinate destinazioni. Per ulteriori informazioni su questa funzione, leggere l&#39;esercitazione [attivare il pubblico dell&#39;account](/help/destinations/ui/activate-account-audiences.md). |
 
 {style="table-layout:auto"}
 
@@ -98,7 +98,7 @@ Per ulteriori informazioni sulle sandbox, consulta la [panoramica sulle sandbox]
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Pubblico dell’account (GA limitato) | In Real-time Customer Data Platform B2B edition, ora puoi utilizzare la segmentazione dell’account per rendere l’esperienza di segmentazione di marketing completamente semplice e sofisticata, dal pubblico basato sulle persone a quello basato sull’account. Per ulteriori informazioni su questa funzione, leggere la [panoramica sui tipi di pubblico dell&#39;account](../../segmentation/ui/account-audiences.md). |
+| Pubblico dell’account (GA limitato) | In Real-Time Customer Data Platform B2B edition, ora puoi utilizzare la segmentazione dell’account per rendere l’esperienza di segmentazione di marketing completamente semplice e sofisticata, dal pubblico basato sulle persone a quello basato sull’account. Per ulteriori informazioni su questa funzione, leggere la [panoramica sui tipi di pubblico dell&#39;account](../../segmentation/types/account-audiences.md). |
 
 Per ulteriori informazioni sul servizio di segmentazione, leggere la [Panoramica del servizio di segmentazione](../../segmentation/home.md).
 

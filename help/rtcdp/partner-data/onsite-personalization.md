@@ -3,7 +3,7 @@ title: Personalizzare le esperienze nel sito per visitatori sconosciuti utilizza
 description: Scopri come utilizzare il riconoscimento visitatori assistito dal partner per offrire esperienze personalizzate nel sito a chi lo visita.
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: 02f2082e695d157415c9e0c59ca5d371c94bb991
 workflow-type: tm+mt
 source-wordcount: '2673'
 ht-degree: 89%
@@ -24,7 +24,7 @@ Scopri come utilizzare il riconoscimento assistito dal partner per fornire esper
 
 La frammentazione delle esperienze digitali in cui i consumatori interagiscono con i brand in una miriade di modi è molto reale ed è sempre più difficile da risolvere per. Le migliori strategie di customer engagement per esperienze coerenti, consigli mirati e interazioni personalizzate sono tutte vincolate dal riconoscimento degli utenti.
 
-In questo caso, il riconoscimento in tempo reale con l&#39;ausilio del partner può fare la differenza. Un Adobe consente ai partner di identità di collegarsi alle sofisticate offerte di raccolta dati lato client e ottimizzazione delle esperienze leader di mercato, per innalzare in modo efficace il livello di sicurezza nella distribuzione delle esperienze dalla prima visita in poi, senza precedenti esperienze o autenticazioni.
+In questo caso, il riconoscimento in tempo reale con l&#39;ausilio del partner può fare la differenza. Adobe consente ai partner di identità di collegarsi alle sofisticate offerte di raccolta dati lato client e ottimizzazione delle esperienze leader di mercato, per innalzare in modo efficace il livello di sicurezza nella distribuzione delle esperienze dalla prima visita in poi, senza precedenti esperienze o autenticazioni.
 
 Questo è particolarmente utile per i verticali che hanno tassi di autenticazione bassi, come beni di consumo confezionati, vendita al dettaglio online e altro ancora.
 
@@ -56,7 +56,7 @@ Per implementare correttamente questo caso d’uso, devi utilizzare più aree di
    * [Etichette di utilizzo dei dati](/help/data-governance/labels/overview.md)
    * [Set di dati](/help/catalog/datasets/overview.md)
 * Personalizzazione delle proprietà web
-   * [Segmentazione Edge](/help/segmentation/ui/edge-segmentation.md)
+   * [Segmentazione Edge](/help/segmentation/methods/edge-segmentation.md)
    * [Destinazioni di personalizzazione Edge](/help/destinations/destination-types.md#edge-personalization-destinations)
    * [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) (o una piattaforma di personalizzazione a tua scelta. Questo tutorial sui casi d’uso mette in evidenza Adobe Target come motore di personalizzazione)
 
@@ -263,7 +263,7 @@ Nell&#39;interfaccia utente di Platform, passa a **[!UICONTROL Cliente]** > **[!
 
 ![Visualizzazione di come accedere ai tipi di pubblico.](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
 
-Devi impostare il pubblico con [segmentazione Edge](/help/segmentation/ui/edge-segmentation.md) in modo che l&#39;appartenenza del pubblico dei visitatori venga valutata in tempo reale, quando visitano la tua proprietà Web.
+Devi impostare il pubblico con [segmentazione Edge](/help/segmentation/methods/edge-segmentation.md) in modo che l&#39;appartenenza del pubblico dei visitatori venga valutata in tempo reale, quando visitano la tua proprietà Web.
 
 Assicurati anche di impostare un [criterio di unione attivo su Edge](/help/destinations/ui/activate-edge-personalization-destinations.md#create-merge-policy) per i tipi di pubblico Edge.
 

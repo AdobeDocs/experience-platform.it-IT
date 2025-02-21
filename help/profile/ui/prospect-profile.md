@@ -3,7 +3,7 @@ title: Profili potenziali
 description: Scopri come creare e utilizzare i profili di potenziali clienti per raccogliere informazioni su clienti sconosciuti utilizzando informazioni di terze parti.
 type: Documentation
 exl-id: 194d25d6-88ae-4a7a-9b79-39120bced5c7
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
 workflow-type: tm+mt
 source-wordcount: '400'
 ht-degree: 1%
@@ -56,10 +56,10 @@ Viene visualizzata la finestra di dialogo [!UICONTROL Visualizza JSON]. Gli attr
 
 ## Casi d’uso consigliati {#use-cases}
 
-Per informazioni su come utilizzare la funzionalità dei profili di potenziale cliente in Experience Platform in combinazione con altre funzionalità di Platform, consulta la seguente documentazione sul caso d’uso:
+Per scoprire come utilizzare la funzionalità dei profili di potenziale cliente in Experience Platform in combinazione con altre funzionalità di Platform, leggi la seguente documentazione sul caso d’uso:
 
 - [Coinvolgi e acquisisci nuovi clienti tramite la funzionalità di ricerca di potenziali clienti](../../rtcdp/partner-data/prospecting.md)
 
 ## Passaggi successivi
 
-Dopo aver letto questa guida, ora capisci come i profili potenziali possono essere utilizzati in Adobe Experience Platform. Per scoprire come questi profili di prospect possono essere utilizzati nei tipi di pubblico, consulta la [guida dei tipi di pubblico di prospect](../../segmentation/ui/prospect-audience.md).
+Dopo aver letto questa guida, ora capisci come i profili potenziali possono essere utilizzati in Adobe Experience Platform. Per scoprire come questi profili di prospect possono essere utilizzati nei tipi di pubblico, consulta la [guida dei tipi di pubblico di prospect](../../segmentation/types/prospect-audiences.md).

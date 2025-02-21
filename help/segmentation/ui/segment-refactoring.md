@@ -2,8 +2,9 @@
 solution: Experience Platform
 title: Guida dell’interfaccia utente per i vincoli di tempo di segmentazione con refactoring
 description: Segment Builder offre un’area di lavoro avanzata che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica di regole, ad esempio le tessere trascinate utilizzate per rappresentare le proprietà dei dati.
+hidefromtoc: true
 exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
-source-git-commit: 665bbd1904e857336a4fb677230389d7977f6b60
+source-git-commit: c7d71113ddcef6aca8b2637814b46e589a6b7fdf
 workflow-type: tm+mt
 source-wordcount: '354'
 ht-degree: 9%

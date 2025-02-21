@@ -1,30 +1,30 @@
 ---
 title: Connessione Demandbase
-description: Utilizza questa destinazione per attivare i tipi di pubblico del tuo account per i casi d’uso di Account-Based Marketing (ABM). Effettua annunci a utenti tipo e ruoli rilevanti negli account target tramite il Demand Side Platform B2B (DSP) di DemandBase. Gli account di Target possono inoltre essere arricchiti con dati di terze parti Demandbase, per altri casi d’uso a valle nel marketing e nelle vendite.
-badgeB2B: label="Edizione B2B" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+description: Utilizza questa destinazione per attivare i tipi di pubblico del tuo account per i casi d’uso di Account-Based Marketing (ABM). Pubblicizza a persone e ruoli rilevanti negli account target tramite il Demand Side Platform B2B (DSP) di DemandBase. Gli account target possono inoltre essere arricchiti con dati di terze parti di DemandBase, per altri casi d’uso downstream nel marketing e nelle vendite.
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="Edizione B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 last-substantial-update: 2024-09-30T00:00:00Z
-source-git-commit: 92abae6bc63c13f1103364ae82cc9c04459ce00f
+exl-id: a84609a2-f1d3-4998-9db4-ad59c0a0b631
+source-git-commit: 08c2c7f5080f0e6afb7be53aad9f88ba0fccf923
 workflow-type: tm+mt
 source-wordcount: '696'
-ht-degree: 3%
+ht-degree: 17%
 
 ---
-
 
 # Connessione Demandbase {#demandbase}
 
 >[!AVAILABILITY]
 >
->>La funzionalità per attivare i tipi di pubblico dell&#39;account nella destinazione Demandbase è disponibile per le aziende che acquistano le edizioni [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) e [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) di Real-time Customer Data Platform.
+>>La funzionalità per attivare i tipi di pubblico dell&#39;account nella destinazione Demandbase è disponibile per le aziende che acquistano le edizioni [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) e [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) di Real-Time Customer Data Platform.
 
-Attiva profili per le campagne Demandbase per il targeting, la personalizzazione e l&#39;eliminazione del pubblico, in base a [tipi di pubblico dell&#39;account](/help/segmentation/ui/account-audiences.md) .
+Attiva profili per le campagne Demandbase per il targeting, la personalizzazione e l&#39;eliminazione del pubblico, in base a [tipi di pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) .
 
 ## Caso d’uso {#use-case}
 
-Utilizza questa destinazione per attivare i tipi di pubblico del tuo account per i casi d’uso di Account-Based Marketing (ABM). Effettua annunci a utenti tipo e ruoli rilevanti negli account target tramite il Demand Side Platform B2B (DSP) di DemandBase. Gli account di Target possono inoltre essere arricchiti con dati di terze parti Demandbase, per altri casi d’uso a valle nel marketing e nelle vendite.
+Utilizza questa destinazione per attivare i tipi di pubblico del tuo account per i casi d’uso di Account-Based Marketing (ABM). Pubblicizza a persone e ruoli rilevanti negli account target tramite il Demand Side Platform B2B (DSP) di DemandBase. Gli account target possono inoltre essere arricchiti con dati di terze parti di DemandBase, per altri casi d’uso downstream nel marketing e nelle vendite.
 
-Ad esempio, sfrutta l’DSP ad-tech di Demandbase per eseguire il targeting di ruoli o persone specifici all’interno di account chiave per la generazione di lead top-of-funnel, oppure per creare e incrementare i gruppi di acquisto. Utilizza la destinazione Demandbase per esplorare altri casi d’uso per eseguire il targeting efficace dei tuoi account.
+Ad esempio, sfrutta l’ad-tech DSP di Demandbase per eseguire il targeting di ruoli o persone specifici all’interno di account chiave per la generazione di lead top-of-funnel, oppure per creare e incrementare i gruppi di acquisto. Utilizza la destinazione Demandbase per esplorare altri casi d’uso per eseguire il targeting efficace dei tuoi account.
 
 Con questa integrazione, puoi anche personalizzare l’esperienza del sito web utilizzando la ricerca delle informazioni dell’account in tempo reale per ottimizzare il coinvolgimento.
 
@@ -34,7 +34,7 @@ Questa sezione descrive il tipo di pubblico che puoi esportare in questa destina
 
 | Origine pubblico | Supportato | Descrizione |
 ---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite il servizio di segmentazione [Experience Platform](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
 | Caricamenti personalizzati | X | Tipi di pubblico [importati](../../../segmentation/ui/overview.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
@@ -97,4 +97,4 @@ Leggi [Attiva pubblico account](/help/destinations/ui/activate-account-audiences
 ## Note aggiuntive e callout importanti {#additional-notes}
 
 * Se un pubblico di account con lo stesso nome è stato attivato in precedenza in Demandbase, non puoi attivarlo nuovamente tramite un flusso di dati diverso nella destinazione Demandbase.
-* Se hai esportato tipi di pubblico in Demandbase e le esportazioni hanno avuto esito positivo, ad Experience Platform, ma non tutti i dati raggiungono Demandbase, potresti aver riscontrato una limitazione API sul lato Demandbase. Rivolgiti a loro per chiarimenti.
+* Se hai esportato tipi di pubblico in Demandbase e le esportazioni hanno avuto esito positivo in Experience Platform, ma non tutti i dati raggiungono Demandbase, potresti aver riscontrato una limitazione API sul lato Demandbase. Rivolgiti a loro per chiarimenti.

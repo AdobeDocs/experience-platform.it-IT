@@ -3,14 +3,14 @@ keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione
 title: Guida all’interfaccia utente di Real-Time Customer Profile
 description: Real-Time Customer Profile crea una visualizzazione olistica di ciascuno dei singoli clienti, combinando dati provenienti da più canali tra cui dati online, offline, del sistema CRM e di terze parti. Questo documento funge da guida per l’interazione con Real-Time Customer Profile nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: dc31258dad5cf03a8f4f60db4d4aefc29e8157c8
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '2212'
 ht-degree: 3%
 
 ---
 
-# Guida dell&#39;interfaccia utente di [!DNL Real-Time Customer Profile]
+# Guida dell&#39;interfaccia utente della [!DNL Real-Time Customer Profile]
 
 [!DNL Real-Time Customer Profile] crea una visualizzazione olistica di ciascuno dei singoli clienti, combinando dati provenienti da più canali tra cui dati online, offline, CRM e di terze parti. Questo documento funge da guida per l&#39;interazione con i dati [!DNL Real-Time Customer Profile] nell&#39;interfaccia utente di Adobe Experience Platform.
 
@@ -54,7 +54,7 @@ Oltre a queste metriche, questa sezione fornisce una data e un’ora dell’ulti
 
 ### Conteggio dei profili {#profile-count}
 
-Nel conteggio dei profili viene visualizzato il numero totale di profili di cui dispone l’organizzazione in Experience Platform, dopo che il criterio di unione predefinito dell’organizzazione ha unito i frammenti di profilo per formare un singolo profilo per ogni singolo cliente. In altre parole, la tua organizzazione può avere più frammenti di profilo correlati a un singolo cliente che interagisce con il tuo marchio su canali diversi, ma questi frammenti verrebbero uniti (in base al criterio di unione predefinito) e restituirebbero un conteggio di &quot;1&quot; profilo perché sono tutti correlati alla stessa persona.
+Il conteggio dei profili mostra il numero totale di profili di cui dispone l’organizzazione in Experience Platform, dopo che il criterio di unione predefinito dell’organizzazione ha unito i frammenti di profilo per formare un singolo profilo per ogni singolo cliente. In altre parole, la tua organizzazione può avere più frammenti di profilo correlati a un singolo cliente che interagisce con il tuo marchio su canali diversi, ma questi frammenti verrebbero uniti (in base al criterio di unione predefinito) e restituirebbero un conteggio di &quot;1&quot; profilo perché sono tutti correlati alla stessa persona.
 
 Il conteggio dei profili include anche profili con attributi (dati record) e profili contenenti solo dati di serie temporali (eventi), come i profili di Adobe Analytics. Il conteggio dei profili viene aggiornato regolarmente per fornire un numero totale aggiornato di profili all’interno di Platform.
 
@@ -171,11 +171,11 @@ La scheda **[!UICONTROL Eventi]** contiene i dati dei 100 eventi ExperienceEvent
 
 Nella scheda **[!UICONTROL Appartenenza al pubblico]** viene visualizzato un elenco con il nome e la descrizione dei tipi di pubblico a cui appartiene attualmente il singolo profilo cliente. Questo elenco viene aggiornato automaticamente quando il profilo si qualifica o scade dai tipi di pubblico. Il numero totale di tipi di pubblico per i quali il profilo è attualmente qualificato viene visualizzato sul lato destro della scheda.
 
-Per ulteriori informazioni sulla segmentazione in Experience Platform, consulta la [documentazione del servizio di segmentazione di Experience Platform di Adobi](../../segmentation/home.md).
+Per ulteriori informazioni sulla segmentazione in Experience Platform, consulta la [documentazione del servizio di segmentazione di Adobe Experience Platform](../../segmentation/home.md).
 
 ![La scheda Appartenenza al pubblico è evidenziata. Vengono visualizzati i dettagli di appartenenza al pubblico del profilo.](../images/user-guide/audience-membership.png)
 
-Per visualizzare l&#39;appartenenza al pubblico dei profili disponibili in Edge, seleziona **[!UICONTROL Edge]** nel selettore del percorso dati. Ulteriori informazioni sulla segmentazione Edge sono disponibili nella [guida alla segmentazione Edge](../../segmentation/ui/edge-segmentation.md).
+Per visualizzare l&#39;appartenenza al pubblico dei profili disponibili in Edge, seleziona **[!UICONTROL Edge]** nel selettore del percorso dati. Ulteriori informazioni sulla segmentazione Edge sono disponibili nella [guida alla segmentazione Edge](../../segmentation/methods/edge-segmentation.md).
 
 ![Il selettore della posizione dei dati all&#39;interno della scheda Appartenenza al pubblico è evidenziato.](../images/user-guide/audience-membership-select.png)
 
@@ -205,4 +205,4 @@ Per ulteriori informazioni sugli attributi calcolati, leggere la [panoramica sug
 
 ## Passaggi successivi
 
-Leggendo questa guida, sai come visualizzare e gestire i dati del profilo della tua organizzazione utilizzando l’interfaccia utente di Experience Platform. Per informazioni su come utilizzare i dati del profilo utilizzando le API Experience Platform, consulta la [guida delle API del profilo cliente in tempo reale](../api/overview.md).
+Leggendo questa guida, sai come visualizzare e gestire i dati del profilo della tua organizzazione utilizzando l’interfaccia utente di Experience Platform. Per informazioni su come utilizzare i dati del profilo utilizzando le API di Experience Platform, consulta la [guida delle API del profilo cliente in tempo reale](../api/overview.md).

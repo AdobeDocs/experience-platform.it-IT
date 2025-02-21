@@ -5,7 +5,7 @@ product: experience platform
 type: Documentation
 description: Scopri le prestazioni e i guardrail applicati dal sistema per i dati di profilo e la segmentazione al fine di garantire un utilizzo ottimale delle funzionalità di Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 1f682fc5c109f3dc8a7ed8513260a1a3c3108bbb
+source-git-commit: 1150b7726a7cabe6df6bbc7a850fb4d48afa208e
 workflow-type: tm+mt
 source-wordcount: '2511'
 ht-degree: 2%
@@ -28,7 +28,7 @@ Questo documento fornisce i limiti predefiniti di utilizzo e tasso per aiutarti 
 
 ## Introduzione
 
-I seguenti servizi di Experience Platform sono coinvolti nella modellazione dei dati del Profilo cliente in tempo reale:
+I seguenti servizi Experience Platform sono coinvolti nella modellazione dei dati del Profilo cliente in tempo reale:
 
 * [[!DNL Real-Time Customer Profile]](home.md): creare profili consumer unificati utilizzando dati provenienti da più origini.
 * [Identità](../identity-service/home.md): identità Bridge da diverse origini dati acquisite in Platform.
@@ -71,7 +71,7 @@ Le seguenti protezioni forniscono i limiti consigliati per la modellazione dei d
 
 {style="table-layout:auto"}
 
-### guardrail entità Dimension
+### guardrail di entità Dimension
 
 | Guardrail | Limite | Tipo limite | Descrizione |
 | --------- | ----- | ---------- | ----------- |
@@ -102,7 +102,7 @@ I seguenti guardrail si riferiscono alle dimensioni dei dati e forniscono i limi
 
 {style="table-layout:auto"}
 
-### guardrail entità Dimension
+### guardrail di entità Dimension
 
 | Guardrail | Limite | Tipo limite | Descrizione |
 | --------- | ----- | ---------- | ----------- |
@@ -119,12 +119,12 @@ I guardrail descritti in questa sezione si riferiscono al numero e alla natura d
 | Guardrail | Limite | Tipo limite | Descrizione |
 | --------- | ----- | ---------- | ----------- |
 | Tipi di pubblico per sandbox | 4000 | Guardrail delle prestazioni | Puoi avere fino a 4000 **tipi di pubblico attivi** per sandbox. Puoi avere più di 4000 sandbox per organizzazione, purché ci siano meno di 4000 tipi di pubblico in ogni **singola** sandbox. Sono inclusi i tipi di pubblico batch, in streaming e edge. Il tentativo di creare ulteriori tipi di pubblico può influire sulle prestazioni del sistema. Ulteriori informazioni sulla [creazione di tipi di pubblico](/help/segmentation/ui/segment-builder.md) tramite il Generatore di segmenti. |
-| Tipi di pubblico di Edge per sandbox | 150 | Guardrail delle prestazioni | Puoi avere fino a 150 **tipi di pubblico edge attivi** per sandbox. Puoi avere più di 150 tipi di pubblico edge per organizzazione, purché in ogni sandbox **individuale** siano presenti meno di 150 tipi di pubblico edge. Il tentativo di creare un pubblico perimetrale aggiuntivo può influire sulle prestazioni del sistema. Ulteriori informazioni su [tipi di pubblico edge](/help/segmentation/ui/edge-segmentation.md). |
-| Throughput di Edge in tutte le sandbox | 1500 RPS | Guardrail delle prestazioni | La segmentazione di Edge supporta un valore di picco di 1500 eventi in entrata al secondo per l’accesso all’Edge Network Adobe Experience Platform. La segmentazione di Edge può richiedere fino a 350 millisecondi per elaborare un evento in entrata dopo che è entrato nell’Edge Network di Adobe Experience Platform. Ulteriori informazioni su [tipi di pubblico edge](/help/segmentation/ui/edge-segmentation.md). |
-| Tipi di pubblico in streaming per sandbox | 500 | Guardrail delle prestazioni | Puoi avere fino a 500 **tipi di pubblico in streaming** attivi per sandbox. Puoi avere più di 500 tipi di pubblico in streaming per organizzazione, purché ci siano meno di 500 tipi di pubblico in streaming in ogni **singola** sandbox. Ciò include sia i tipi di pubblico in streaming che quelli edge. Il tentativo di creare ulteriori tipi di pubblico in streaming può influire sulle prestazioni del sistema. Ulteriori informazioni su [tipi di pubblico in streaming](/help/segmentation/ui/streaming-segmentation.md). |
-| Velocità effettiva in streaming su tutte le sandbox | 1500 RPS | Guardrail delle prestazioni | La segmentazione in streaming supporta un valore di picco di 1500 eventi in entrata al secondo. La segmentazione in streaming può richiedere fino a 5 minuti per qualificare un profilo per l’iscrizione al segmento. Ulteriori informazioni su [tipi di pubblico in streaming](/help/segmentation/ui/streaming-segmentation.md). |
+| Tipi di pubblico di Edge per sandbox | 150 | Guardrail delle prestazioni | Puoi avere fino a 150 **tipi di pubblico edge attivi** per sandbox. Puoi avere più di 150 tipi di pubblico edge per organizzazione, purché in ogni sandbox **individuale** siano presenti meno di 150 tipi di pubblico edge. Il tentativo di creare un pubblico perimetrale aggiuntivo può influire sulle prestazioni del sistema. Ulteriori informazioni su [tipi di pubblico edge](/help/segmentation/methods/edge-segmentation.md). |
+| Throughput di Edge in tutte le sandbox | 1500 RPS | Guardrail delle prestazioni | La segmentazione di Edge supporta un valore di picco di 1500 eventi in entrata al secondo per l’accesso all’Edge Network di Adobe Experience Platform. La segmentazione di Edge può richiedere fino a 350 millisecondi per elaborare un evento in entrata dopo l’ingresso nell’Edge Network di Adobe Experience Platform. Ulteriori informazioni su [tipi di pubblico edge](/help/segmentation/methods/edge-segmentation.md). |
+| Tipi di pubblico in streaming per sandbox | 500 | Guardrail delle prestazioni | Puoi avere fino a 500 **tipi di pubblico in streaming** attivi per sandbox. Puoi avere più di 500 tipi di pubblico in streaming per organizzazione, purché ci siano meno di 500 tipi di pubblico in streaming in ogni **singola** sandbox. Ciò include sia i tipi di pubblico in streaming che quelli edge. Il tentativo di creare ulteriori tipi di pubblico in streaming può influire sulle prestazioni del sistema. Ulteriori informazioni su [tipi di pubblico in streaming](/help/segmentation/methods/streaming-segmentation.md). |
+| Velocità effettiva in streaming su tutte le sandbox | 1500 RPS | Guardrail delle prestazioni | La segmentazione in streaming supporta un valore di picco di 1500 eventi in entrata al secondo. La segmentazione in streaming può richiedere fino a 5 minuti per qualificare un profilo per l’iscrizione al segmento. Ulteriori informazioni su [tipi di pubblico in streaming](/help/segmentation/methods/streaming-segmentation.md). |
 | Pubblico in batch per sandbox | 4000 | Guardrail delle prestazioni | Puoi avere fino a 4000 **tipi di pubblico in batch attivi** per sandbox. Puoi avere più di 4000 tipi di pubblico in batch per organizzazione, purché in ogni sandbox **individuale** siano presenti meno di 4000 tipi di pubblico in batch. Il tentativo di creare un pubblico batch aggiuntivo può influire sulle prestazioni del sistema. |
-| Pubblico dell’account per sandbox | 50 | Guarddrail imposto dal sistema | Puoi creare un massimo di 50 tipi di pubblico di account in una sandbox. Dopo aver raggiunto 50 tipi di pubblico in una sandbox, il controllo **[!UICONTROL Crea pubblico]** è disabilitato quando si tenta di creare un nuovo pubblico account. Ulteriori informazioni su [tipi di pubblico dell&#39;account](/help/segmentation/ui/account-audiences.md). |
+| Pubblico dell’account per sandbox | 50 | Guarddrail imposto dal sistema | Puoi creare un massimo di 50 tipi di pubblico di account in una sandbox. Dopo aver raggiunto 50 tipi di pubblico in una sandbox, il controllo **[!UICONTROL Crea pubblico]** è disabilitato quando si tenta di creare un nuovo pubblico account. Ulteriori informazioni su [tipi di pubblico dell&#39;account](/help/segmentation/types/account-audiences.md). |
 | Composizioni pubblicate per sandbox | 10 | Guardrail delle prestazioni | Puoi avere un massimo di 10 composizioni pubblicate in una sandbox. Ulteriori informazioni sulla [composizione del pubblico nella guida dell&#39;interfaccia utente](/help/segmentation/ui/audience-composition.md). |
 | Dimensione massima del pubblico | 30% | Guardrail delle prestazioni | L’appartenenza massima consigliata a un pubblico è il 30% del numero totale di profili nel sistema. È possibile creare tipi di pubblico con più del 30% dei profili come membri o più tipi di pubblico di grandi dimensioni, ma questo influirà sulle prestazioni del sistema. |
 
@@ -160,17 +160,17 @@ Gli attributi indipendenti dal tempo, noti anche come &quot;dati record&quot;, v
 
 #### Entità Dimension
 
-Anche se l’archivio dati profilo che gestisce i dati profilo non è un archivio relazionale, Profilo consente l’integrazione con entità dimensionali di piccole dimensioni per creare tipi di pubblico in modo semplificato e intuitivo. Questa integrazione è nota come [segmentazione con più entità](../segmentation/multi-entity-segmentation.md).
+Anche se l’archivio dati profilo che gestisce i dati profilo non è un archivio relazionale, Profilo consente l’integrazione con entità dimensionali di piccole dimensioni per creare tipi di pubblico in modo semplificato e intuitivo. Questa integrazione è nota come [segmentazione con più entità](../segmentation/tutorials/multi-entity-segmentation.md).
 
 La tua organizzazione può anche definire classi XDM per descrivere elementi diversi dai singoli utenti, ad esempio store, prodotti o proprietà. Questi schemi non [!DNL XDM Individual Profile] sono denominati &quot;entità dimensione&quot; (note anche come &quot;entità di ricerca&quot;) e non contengono dati di serie temporali. Gli schemi che rappresentano entità dimensione sono collegati alle entità profilo tramite l&#39;utilizzo di [relazioni schema](../xdm/tutorials/relationship-ui.md).
 
-Le entità di Dimension forniscono dati di ricerca che facilitano e semplificano le definizioni dei segmenti con più entità e devono essere sufficientemente piccole da consentire al motore di segmentazione di caricare l’intero set di dati in memoria per un’elaborazione ottimale (ricerca rapida dei punti).
+Le entità Dimension forniscono dati di ricerca che facilitano e semplificano le definizioni dei segmenti con più entità e devono essere sufficientemente piccole da consentire al motore di segmentazione di caricare l’intero set di dati in memoria per un’elaborazione ottimale (ricerca rapida dei punti).
 
 ![Infografica che mostra che un&#39;entità profilo è composta da entità dimensione.](images/guardrails/profile-and-dimension-entities.png)
 
 ### Frammenti di profilo
 
-In questo documento sono presenti diversi guardrail che fanno riferimento a &quot;frammenti di profilo&quot;. Ad Experience Platform, più frammenti di profilo vengono uniti per formare Real-Time Customer Profile. Ogni frammento rappresenta un’identità primaria univoca e il record corrispondente o il set completo di dati evento per tale ID all’interno di un dato set di dati. Per ulteriori informazioni sui frammenti di profilo, consulta la [Panoramica profilo](home.md#profile-fragments-vs-merged-profiles).
+In questo documento sono presenti diversi guardrail che fanno riferimento a &quot;frammenti di profilo&quot;. In Experience Platform, più frammenti di profilo vengono uniti per formare Real-Time Customer Profile. Ogni frammento rappresenta un’identità primaria univoca e il record corrispondente o il set completo di dati evento per tale ID all’interno di un dato set di dati. Per ulteriori informazioni sui frammenti di profilo, consulta la [Panoramica profilo](home.md#profile-fragments-vs-merged-profiles).
 
 ### Criteri di unione {#merge-policies}
 
@@ -182,10 +182,10 @@ Quando si riuniscono dati da più origini, i criteri di unione sono le regole ut
 
 ## Passaggi successivi
 
-Consulta la seguente documentazione per ulteriori informazioni su altri guardrail dei servizi Experience Platform, informazioni sulla latenza end-to-end e informazioni sulle licenze dai documenti di descrizione del prodotto Real-Time CDP:
+Consulta la seguente documentazione per ulteriori informazioni su altri guardrail dei servizi Experience Platform, sulla latenza end-to-end e sulle licenze dai documenti di descrizione del prodotto Real-Time CDP:
 
 * [Guardrail Real-Time CDP](/help/rtcdp/guardrails/overview.md)
 * [Diagrammi di latenza end-to-end](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) per vari servizi Experience Platform.
-* [Real-time Customer Data Platform (Edizione B2C - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2P - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2B - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (Edizione B2C - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

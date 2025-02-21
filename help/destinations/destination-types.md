@@ -3,7 +3,7 @@ keywords: destinazioni;destinazione;tipi di destinazione;destinations;destinatio
 title: Tipi e categorie di destinazione
 description: Scopri i diversi tipi e categorie di destinazioni in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '805'
 ht-degree: 1%
@@ -18,7 +18,7 @@ Leggi questa pagina per comprendere i diversi tipi e categorie di destinazioni A
 
 In Adobe Experience Platform, distinguiamo tra diversi tipi di destinazione: connessioni, esportazioni di set di dati ed estensioni. Esistono diversi tipi di destinazioni di connessione che ti consentono di esportare dati in destinazioni basate su API, destinazioni social, piattaforme di gestione delle relazioni con i clienti e molto altro.
 
-Infine, è possibile distinguere le connessioni tra le destinazioni pubbliche disponibili in tutte le organizzazioni nel catalogo delle destinazioni e le destinazioni private che i clienti di Real-Time CDP Ultimate possono creare per soddisfare i propri casi di utilizzo specifici per l&#39;esportazione.
+Infine, è possibile distinguere le connessioni tra le destinazioni pubbliche disponibili in tutte le organizzazioni nel catalogo delle destinazioni e le destinazioni private che i clienti di Real-Time CDP Ultimate possono creare per soddisfare i propri casi di utilizzo specifici per l’esportazione.
 
 >[!BEGINSHADEBOX]
 
@@ -32,7 +32,7 @@ Infine, è possibile distinguere le connessioni tra le destinazioni pubbliche di
 
 ## Destinazioni di esportazione profilo {#profile-export}
 
-Le destinazioni di esportazione dei profili ricevono dati non elaborati, spesso con l’indirizzo e-mail come chiave primaria. Experience Platform supporta attualmente due tipi di destinazioni di esportazione del profilo:
+Le destinazioni di esportazione dei profili ricevono dati non elaborati, spesso con l’indirizzo e-mail come chiave primaria. Experience Platform supporta attualmente due tipi di destinazioni di esportazione dei profili:
 
 * [Destinazioni batch (basate su file)](#file-based)
 * [Destinazioni enterprise avanzate (destinazioni di esportazione del profilo di streaming)](#advanced-enterprise-destinations)
@@ -41,9 +41,9 @@ Le destinazioni di esportazione dei profili ricevono dati non elaborati, spesso 
 
 >[!IMPORTANT]
 >
->Le destinazioni enterprise avanzate, o destinazioni di esportazione del profilo di streaming, sono disponibili solo per [clienti Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform.html).
+>Le destinazioni enterprise avanzate, o destinazioni di esportazione del profilo di streaming, sono disponibili solo per [clienti Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform.html).
 
-Utilizza i connettori dati di destinazione aziendale avanzati per fornire profili Adobe Real-time Customer Data Platform in tempo reale a sistemi interni o ad altri sistemi di terze parti per casi di utilizzo di sincronizzazione, analisi e ulteriore arricchimento dei profili.
+Utilizza i connettori dati di destinazione aziendale avanzati per fornire profili Adobe Real-Time Customer Data Platform in tempo reale a sistemi interni o ad altri sistemi di terze parti per casi di utilizzo di sincronizzazione, analisi e ulteriore arricchimento dei profili.
 
 Queste destinazioni ricevono i dati di pubblico e profilo come flussi di dati di Experience Platform.
 
@@ -59,7 +59,7 @@ Le destinazioni basate su file ricevono `.csv` file contenenti profili e/o attri
 
 ## Destinazioni di esportazione del pubblico in streaming {#streaming-destinations}
 
-Le destinazioni di esportazione del pubblico ricevono i dati sul pubblico di Experienci Platform. Queste destinazioni utilizzano ID pubblico o ID utente. Advertising e destinazioni social come [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md) o [Facebook](catalog/social/facebook.md) sono esempi di tali destinazioni.
+Le destinazioni di esportazione del pubblico ricevono i dati sul pubblico di Experience Platform. Queste destinazioni utilizzano ID pubblico o ID utente. Advertising e destinazioni social come [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md) o [Facebook](catalog/social/facebook.md) sono esempi di tali destinazioni.
 
 ## Destinazioni di personalizzazione Edge {#edge-personalization-destinations}
 
@@ -81,7 +81,7 @@ Puoi esportare tre tipi di pubblico da Experience Platform in varie destinazioni
 * Pubblico dell’account
 * Pubblico potenziale
 
-Ulteriori informazioni sui [vari tipi di pubblico](/help/segmentation/ui/account-audiences.md#terminology).
+Ulteriori informazioni sui [vari tipi di pubblico](/help/segmentation/types/account-audiences.md#terminology).
 
 Un simbolo sulla scheda di destinazione mostra quali tipi di pubblico puoi esportare in ogni destinazione.
 

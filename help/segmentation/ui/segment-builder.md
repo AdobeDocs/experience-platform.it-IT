@@ -3,14 +3,14 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Segment Builder
 description: Il Generatore di segmenti nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro avanzata che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica di regole, ad esempio le tessere trascinate utilizzate per rappresentare le proprietà dei dati.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: e74d04119593dddcaf6a5c710b685c606f5998d6
+source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
 workflow-type: tm+mt
-source-wordcount: '4955'
+source-wordcount: '4976'
 ht-degree: 8%
 
 ---
 
-# Guida dell&#39;interfaccia utente di [!DNL Segment Builder]
+# Guida dell&#39;interfaccia utente della [!DNL Segment Builder]
 
 >[!NOTE]
 >
@@ -86,10 +86,10 @@ Ad esempio, considera una situazione in cui disponevi di due suite di rapporti c
 
 | Campo | Schema suite di rapporti A | Schema B suite di rapporti |
 | ----- | --------------------- | --------------------- |
-| EVAR 1 | Dominio di riferimento | Accesso effettuato S/N |
-| EVAR 2 | Nome pagina | ID fedeltà membro |
-| EVAR 3 | URL | Nome pagina |
-| EVAR 4 | Termini di ricerca | nome del prodotto |
+| EVAR1 | Dominio di riferimento | Accesso effettuato S/N |
+| EVAR2 | Nome pagina | ID fedeltà membro |
+| EVAR3 | URL | Nome pagina |
+| EVAR4 | Termini di ricerca | nome del prodotto |
 | event1 | Clic | Page Views |
 | event2 | Page Views | Aggiunte al carrello |
 | event3 | Aggiunte al carrello | Pagamenti |
@@ -108,7 +108,7 @@ Una volta mappate le suite di rapporti, puoi utilizzare questi campi appena mapp
 | Scenario | Esperienza schema di unione | Segmentazione variabile generica | Segmentazione mappata variabile |
 | -------- | ----------------------- | ----------------------------- | ---------------------------- |
 | Suite di rapporti singola | Il descrittore di nome descrittivo è incluso nelle variabili generiche. <br><br>**Esempio:** Nome pagina (eVar2) | <ul><li>Descrittore di nome intuitivo incluso con variabili generiche</li><li>Le query utilizzano i dati del set di dati specifico, in quanto è l’unico</li></ul> | Le query possono utilizzare dati di Adobe Analytics e potenzialmente altre origini. |
-| Più suite di rapporti | Con le variabili generiche non sono inclusi descrittori di nomi descrittivi. <br><br>**Esempio:** eVar 2 | <ul><li>Qualsiasi campo con più descrittori viene visualizzato come generico. Ciò significa che nell’interfaccia utente non vengono visualizzati nomi descrittivi.</li><li>Le query possono utilizzare dati di qualsiasi set di dati che contiene l’eVar, il che può causare risultati misti o errati.</li></ul> | Le query utilizzano correttamente i risultati combinati da più set di dati. |
+| Più suite di rapporti | Con le variabili generiche non sono inclusi descrittori di nomi descrittivi. <br><br>**Esempio:** eVar2 | <ul><li>Qualsiasi campo con più descrittori viene visualizzato come generico. Ciò significa che nell’interfaccia utente non vengono visualizzati nomi descrittivi.</li><li>Le query possono utilizzare dati di qualsiasi set di dati che contiene eVar, il che può causare risultati misti o errati.</li></ul> | Le query utilizzano correttamente i risultati combinati da più set di dati. |
 
 ### Tipi di pubblico
 
@@ -241,6 +241,10 @@ I vincoli di tempo consentono di applicare restrizioni temporali agli attributi 
 >[!IMPORTANT]
 >
 >Se hai creato una definizione del segmento con i vincoli di tempo &quot;Questo mese&quot; o &quot;Quest’anno&quot; prima di giugno 2024, dovrai salvare nuovamente le definizioni del segmento. Prima di giugno 2024, &quot;This month&quot; era basato su 30 giorni e &quot;This year&quot; era basato su 365 giorni.
+
+>[!NOTE]
+>
+>Sia il vincolo di tempo [ignore year time](./ignore-year.md) che il vincolo di tempo [rule-level](./segment-refactoring.md) sono stati precedentemente reimpostati, con ulteriori informazioni disponibili nelle panoramiche collegate.
 
 L&#39;elenco dei vincoli di tempo disponibili è il seguente:
 
@@ -394,7 +398,7 @@ Mentre continui a creare la definizione del segmento, puoi visualizzare un&#39;a
 
 Puoi anche selezionare il metodo di valutazione. Se si conosce il metodo di valutazione da utilizzare, è possibile selezionare il metodo di valutazione desiderato utilizzando l&#39;elenco a discesa. Se si desidera conoscere i tipi di valutazione per i quali questa definizione di segmento è idonea, è possibile selezionare l&#39;icona Sfoglia ![icona cartella con una lente di ingrandimento](/help/images/icons/folder-search.png) per visualizzare un elenco dei metodi di valutazione della definizione di segmento disponibili.
 
-Viene visualizzato il popover [!UICONTROL Idoneità al metodo di valutazione]. In questo popover vengono visualizzati i metodi di valutazione disponibili, ovvero batch, streaming e edge. Il popover mostra quali metodi di valutazione sono idonei e non idonei. A seconda dei parametri utilizzati nella definizione del segmento, questo potrebbe non essere idoneo per alcuni metodi di valutazione. Per ulteriori informazioni sui requisiti per ciascun metodo di valutazione, leggi le [panoramiche di segmentazione in streaming](./streaming-segmentation.md#query-types) o [segmentazione Edge](./edge-segmentation.md#query-types).
+Viene visualizzato il popover [!UICONTROL Idoneità al metodo di valutazione]. In questo popover vengono visualizzati i metodi di valutazione disponibili, ovvero batch, streaming e edge. Il popover mostra quali metodi di valutazione sono idonei e non idonei. A seconda dei parametri utilizzati nella definizione del segmento, questo potrebbe non essere idoneo per alcuni metodi di valutazione. Per ulteriori informazioni sui requisiti per ciascun metodo di valutazione, leggi le [panoramiche di segmentazione in streaming](../methods/streaming-segmentation.md#query-types) o [segmentazione Edge](../methods/edge-segmentation.md#query-types).
 
 Puoi anche modificare il metodo di valutazione della definizione del segmento al termine della creazione. Se modifichi il metodo di valutazione da Edge o Streaming a Batch, **non** potrà ripristinarlo in Edge o Streaming. La modifica al metodo di valutazione avrà effetto **solo** dopo aver selezionato **[!UICONTROL Salva]** nel popover. L&#39;annullamento della finestra di dialogo **manterrà** il metodo di valutazione originale.
 

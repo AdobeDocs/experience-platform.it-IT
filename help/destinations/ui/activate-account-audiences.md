@@ -5,7 +5,7 @@ description: Scopri come attivare i tipi di pubblico dell’account nelle destin
 badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="Edizione B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 1c31dd978298191dd10500b60eb446d2ca37139c
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '836'
 ht-degree: 0%
@@ -16,9 +16,9 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->La funzionalità per attivare i tipi di pubblico dell&#39;account nelle destinazioni è disponibile per le aziende che acquistano le edizioni [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) e [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) di Real-time Customer Data Platform.
+>La funzionalità per attivare i tipi di pubblico dell&#39;account nelle destinazioni è disponibile per le aziende che acquistano le edizioni [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) e [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) di Real-Time Customer Data Platform.
 
-Questo articolo spiega il flusso di lavoro necessario per esportare [tipi di pubblico dell&#39;account](/help/segmentation/ui/account-audiences.md) da Adobe Experience Platform nella destinazione preferita.
+Questo articolo spiega il flusso di lavoro necessario per esportare [tipi di pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) da Adobe Experience Platform nella destinazione preferita.
 
 ## Destinazioni supportati {#supported-destinations}
 
@@ -34,7 +34,7 @@ Guarda il video seguente per una panoramica sulla creazione e l’attivazione de
 
 ## Prerequisiti {#prerequisites}
 
-* Prima di poter essere attivati nelle destinazioni a valle, devi acquisire [profili account](/help/rtcdp/accounts/account-profile-overview.md) e creare [tipi di pubblico account](/help/segmentation/ui/account-audiences.md).
+* Prima di poter essere attivati nelle destinazioni a valle, devi acquisire [profili account](/help/rtcdp/accounts/account-profile-overview.md) e creare [tipi di pubblico account](/help/segmentation/types/account-audiences.md).
 * Per attivare i tipi di pubblico dell’account nelle destinazioni, è necessario essersi collegati correttamente a una destinazione. Se non lo hai già fatto, vai al [catalogo delle destinazioni](../catalog/overview.md), sfoglia le destinazioni supportate e configura la destinazione che desideri utilizzare. Per ulteriori informazioni, leggi l&#39;esercitazione dell&#39;interfaccia utente su [connessione alle destinazioni](./connect-destination.md).
 
 ### Autorizzazioni richieste {#permissions}
@@ -87,11 +87,11 @@ Per il resto del flusso di lavoro di attivazione per esportare i tipi di pubblic
 
 Tieni presente i seguenti callout importanti e le limitazioni note per la versione con disponibilità generale della funzionalità di attivazione dei tipi di pubblico dell’account.
 
-### Coppie di mappatura necessarie nel passaggio di mappatura durante l&#39;attivazione dei tipi di pubblico dell&#39;account nella destinazione **[!UICONTROL (Companies) LinkedIn Matched Audiences]** {#required-mappings}
+### Coppie di mappatura necessarie nel passaggio di mappatura durante l&#39;attivazione dei tipi di pubblico dell&#39;account nella destinazione **[!UICONTROL (Aziende) LinkedIn MatchedIn]** {#required-mappings}
 
 Quando si attivano i tipi di pubblico dell&#39;account nella destinazione **[!UICONTROL (Companies) LinkedIn Matched Audiences]**, si noti che le due coppie di mapping seguenti sono obbligatorie per esportare correttamente i dati:
 
-![Campi obbligatori per la mappatura di LinkedIn.](/help/destinations/assets/ui/activate-account-audiences/linkedin-mapping-required-fields.png)
+![Mappatura campi obbligatori LinkedIn.](/help/destinations/assets/ui/activate-account-audiences/linkedin-mapping-required-fields.png)
 
 | Campo di origine | Campo di destinazione |
 |---------|----------|

@@ -2,10 +2,10 @@
 title: Domande frequenti sui tipi di pubblico
 description: Trova le risposte alle domande più frequenti su tipi di pubblico e altri concetti correlati alla segmentazione.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 29d9445e6e71c60f4b596a5e645a56d2b70e133c
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
-source-wordcount: '4235'
-ht-degree: 0%
+source-wordcount: '4830'
+ht-degree: 2%
 
 ---
 
@@ -51,9 +51,9 @@ Sì, se gli identificatori primari corrispondono, il pubblico generato estername
 
 ### In che modo le preferenze di consenso del cliente vengono rispettate per i tipi di pubblico generati esternamente e importati in Audience Portal?{#consent}
 
-Poiché i dati del cliente vengono acquisiti da più canali, i criteri di unione e unione delle identità consentono di consolidarli in un unico profilo cliente in tempo reale. Le informazioni sulle preferenze di consenso dei clienti vengono memorizzate e valutate a livello di profilo.
+Poiché i dati della clientela vengono acquisiti da più canali, i criteri di unione e di unione delle identità consentono di consolidare tali dati in un unico profilo cliente in tempo reale. Le informazioni sulle preferenze di consenso della clientela vengono memorizzate e valutate a livello di profilo.
 
-Le destinazioni a valle verificano ogni profilo per informazioni sul consenso prima dell’attivazione. Le informazioni sul consenso di ciascun profilo vengono confrontate con i requisiti del consenso per una particolare destinazione. Se il profilo non soddisfa i requisiti, non viene inviato a una destinazione.
+Le destinazioni a valle verificano ogni profilo per informazioni sul consenso prima dell’attivazione. Le informazioni sul consenso di ciascun profilo vengono confrontate con i requisiti di consenso per una particolare destinazione. Se il profilo non soddisfa i requisiti, non viene inviato a una destinazione.
 
 Quando un pubblico esterno viene acquisito in Audience Portal, viene unito ai profili esistenti utilizzando un ID primario come e-mail o ECID. Di conseguenza, i criteri di consenso esistenti rimarranno in vigore per tutta la durata dell’attivazione.
 
@@ -180,7 +180,7 @@ Una volta che un pubblico è nello stato pubblicato, **non puoi** riportare il p
 
 ### Come si mette un pubblico nello stato pubblicato?
 
-Per i tipi di pubblico creati con Generatore di segmenti o Composizione pubblico, puoi impostare il pubblico sullo stato pubblicato selezionando &quot;[!UICONTROL Publish]&quot; nelle rispettive interfacce utente.
+Per i tipi di pubblico creati con Generatore di segmenti o Composizione pubblico, puoi impostare il pubblico sullo stato pubblicato selezionando &quot;[!UICONTROL Pubblica]&quot; nelle rispettive interfacce utente.
 
 I tipi di pubblico creati esternamente vengono automaticamente impostati su pubblicato.
 
@@ -194,7 +194,7 @@ Per rendere inattivo un pubblico pubblicato, apri il menu Azioni rapide in Audie
 >
 >Lo stato &quot;ripubblicato&quot; è lo stesso dello stato pubblicato per il comportamento del pubblico.
 
-È possibile ripubblicare un pubblico selezionando un pubblico che si trova nello stato inattivo, aprendo il menu Azioni rapide in Audience Portal e selezionando [!UICONTROL Publish].
+Puoi ripubblicare un pubblico selezionando un pubblico che si trova nello stato inattivo, aprendo il menu Azioni rapide in Audience Portal e selezionando [!UICONTROL Pubblica].
 
 ### Come posso impostare un pubblico come eliminato?
 
@@ -278,7 +278,7 @@ Il Generatore di segmenti è più adatto per la creazione del pubblico **create*
 
 La tabella seguente illustra la differenza tra i due servizi:
 
-| Segment Builder | Composizione del pubblico |
+| Generatore di segmenti | Composizione del pubblico |
 | --------------- | -------------------- |
 | <ul><li>Generazione di pubblico in un’unica fase</li><li>Crea i blocchi di base di tipi di pubblico da dati di profilo, serie temporali e più entità</li><li>Utilizzato per creare **un pubblico**</li></ul> | <ul><li>Generazione di tipi di pubblico in più fasi tramite operazioni basate su set</li><li>Utilizza i tipi di pubblico creati dal Generatore di segmenti e applica opzioni di arricchimento dei dati, come la classificazione degli attributi del profilo e la suddivisione in tipi di pubblico secondari</li><li>Utilizzato per creare **più** tipi di pubblico alla volta</li></ul> |
 
@@ -358,6 +358,16 @@ Nella sezione seguente sono elencate le domande relative all’iscrizione al pub
 
 Per confermare l’iscrizione al pubblico di un profilo, visita la pagina dei dettagli del profilo che desideri confermare. Seleziona **[!UICONTROL Attributi]**, seguito da **[!UICONTROL Visualizza JSON]** ed è possibile confermare che l&#39;oggetto `segmentMembership` contiene l&#39;ID del pubblico.
 
+### L’iscrizione al pubblico può spostarsi tra l’iscrizione ideale e quella effettiva?
+
+Sì, l&#39;appartenenza a un pubblico può spostarsi tra l&#39;appartenenza ideale e quella effettiva se un pubblico viene valutato utilizzando la segmentazione in streaming **e** che il pubblico è basato su un pubblico valutato utilizzando la segmentazione batch.
+
+Ad esempio, se il pubblico A è basato sul pubblico B e il pubblico B viene valutato utilizzando la segmentazione batch, poiché il pubblico B viene aggiornato solo ogni 24 ore, il pubblico A si allontanerà ulteriormente dai dati effettivi fino a sincronizzarsi nuovamente con gli aggiornamenti del pubblico B.
+
+## Segmentazione in batch {#batch-segmentation}
+
+Nella sezione seguente sono elencate le domande relative alla segmentazione batch.
+
 ### In che modo la segmentazione batch risolve l’appartenenza al profilo?
 
 I tipi di pubblico valutati utilizzando la segmentazione in batch si risolvono ogni giorno, registrando i risultati dell&#39;iscrizione all&#39;audience nell&#39;attributo `segmentMembership` del profilo. Le ricerche di profilo generano una nuova versione del profilo al momento della ricerca, ma **non** aggiorna i risultati della segmentazione batch.
@@ -380,3 +390,44 @@ Potrebbero essere necessarie fino a tre ore per la disponibilità dei dati in st
 
 Ad esempio, se un processo di segmentazione batch viene eseguito alle 21:00, può contenere i dati acquisiti in streaming **fino alle 21:00**. I dati acquisiti in streaming che sono stati acquisiti dopo le 18 ma prima delle 21 **maggio** verranno inclusi.
 
+## Segmentazione Edge {#edge-segmentation}
+
+Nella sezione seguente sono elencate le domande relative alla segmentazione Edge.
+
+### Quanto tempo ci vuole affinché una definizione del segmento sia disponibile su Edge Network?
+
+È necessaria fino a un’ora perché la definizione di un segmento sia disponibile in Edge Network.
+
+## Segmentazione in streaming {#streaming-segmentation}
+
+Nella sezione seguente sono elencate le domande relative alla segmentazione in streaming.
+
+### La segmentazione in streaming &quot;unqualification&quot; (non qualificazione) si verifica anche in tempo reale?
+
+Nella maggior parte dei casi, l’annullamento della qualifica per segmentazione in streaming avviene in tempo reale. Tuttavia, i segmenti di streaming che utilizzano segmenti di segmenti non **** sono idonei in tempo reale, ma vengono annullati dopo 24 ore.
+
+### Su quali dati funziona la segmentazione in streaming?
+
+La segmentazione in streaming funziona su tutti i dati acquisiti utilizzando un’origine di streaming. I dati acquisiti utilizzando un’origine basata su batch vengono valutati di notte, anche se sono idonei per la segmentazione in streaming. Gli eventi inviati in streaming al sistema con una marca temporale precedente alle 24 ore verranno elaborati nel processo batch successivo.
+
+### Come vengono definiti i segmenti come segmentazione in batch o in streaming?
+
+Una definizione di segmento è definita come batch, streaming o segmentazione Edge in base a una combinazione di tipo di query e durata della cronologia degli eventi. Nella sezione [tipi di query di segmentazione in streaming](#query-types) è disponibile un elenco dei segmenti che verranno valutati come definizione di segmento in streaming.
+
+Tieni presente che se una definizione di segmento contiene **both** un&#39;espressione `inSegment` e una catena di eventi singola diretta, non può essere qualificata per la segmentazione in streaming. Se desideri che questa definizione di segmento sia idonea per la segmentazione in streaming, devi rendere la catena di eventi singoli diretti un suo segmento.
+
+### Perché il numero di segmenti &quot;qualificati totali&quot; continua a crescere mentre il numero in &quot;Ultimi X giorni&quot; rimane pari a zero nella sezione dei dettagli di definizione del segmento?
+
+Il numero di segmenti qualificati totali viene ricavato dal processo di segmentazione giornaliero, che include tipi di pubblico idonei sia per i segmenti in batch che per quelli in streaming. Questo valore viene visualizzato sia per i segmenti batch che per quelli in streaming.
+
+Il numero in &quot;Ultimi X giorni&quot; **solo** include tipi di pubblico qualificati nella segmentazione in streaming e **solo** aumenta se i dati sono stati inviati in streaming al sistema e conta per tale definizione di streaming. Questo valore è **only** visualizzato per i segmenti di streaming. Di conseguenza, questo valore **maggio** viene visualizzato come 0 per i segmenti batch.
+
+Di conseguenza, se noti che il numero in &quot;Ultimi X giorni&quot; è zero e anche il grafico a linee riporta zero, hai **non** inviato in streaming nel sistema tutti i profili idonei per quel segmento.
+
+### Quanto tempo ci vuole affinché una definizione di segmento sia disponibile?
+
+È necessaria fino a un’ora perché la definizione di un segmento sia disponibile.
+
+### Ci sono limiti ai dati inviati in streaming?
+
+Affinché i dati in streaming possano essere utilizzati nella segmentazione in streaming, **deve** essere presente una spaziatura tra gli eventi in streaming. Se un numero eccessivo di eventi viene inviato in streaming nello stesso secondo, Platform tratterà tali eventi come dati generati da bot, che verranno eliminati. Come best practice, è necessario disporre di **almeno** cinque secondi tra i dati dell&#39;evento per garantire che vengano utilizzati correttamente.
