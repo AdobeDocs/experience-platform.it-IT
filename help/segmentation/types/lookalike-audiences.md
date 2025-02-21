@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Tipi di pubblico simili
 description: Scopri come eseguire il targeting di nuovi tipi di pubblico di alto valore in Adobe Experience Platform utilizzando tipi di pubblico simili.
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: acc0c1b3f088e412c68557a4a7310889f2ad65a7
+source-git-commit: f981b26a468a1d5ab9931a9cce59b176cd0fd9b3
 workflow-type: tm+mt
-source-wordcount: '2189'
+source-wordcount: '2192'
 ht-degree: 9%
 
 ---
@@ -118,6 +118,7 @@ La sezione Tipi di pubblico simili visualizza un elenco di tutti i tipi di pubbl
 >id="platform_audiences_lookAlike_influentialFactors"
 >title="Fattori di influenza"
 >abstract="I fattori di influenza sono attributi, eventi e appartenenze al pubblico importanti per spiegare la somiglianza di un profilo con i membri del pubblico di base. Le etichette e i criteri di utilizzo dei dati possono essere utilizzati per escludere alcuni dati dall’essere considerati fattori di influenza nei modelli Look-Alike."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/types/lookalike-audiences.html#exclude" text="Escludi dati"
 
 La sezione dei fattori influenti mostra i primi 100 fattori che influenzano il modello lookalike per il pubblico di base selezionato. Questi fattori influenti sono gli attributi del profilo, gli eventi di esperienza e le appartenenze al pubblico che sono i più importanti per spiegare le somiglianze nel pubblico di base. Comprendere i principali fattori influenti consente di personalizzare meglio i contenuti di marketing per questo pubblico e per qualsiasi pubblico simile che crei da esso. Non verranno visualizzati tutti i fattori influenti che influiscono sul modello lookalike.
 

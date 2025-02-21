@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Panoramica del servizio di segmentazione
 description: Scopri il servizio di segmentazione di Adobe Experience Platform e il ruolo che svolge nell’ecosistema della piattaforma.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: acc0c1b3f088e412c68557a4a7310889f2ad65a7
+source-git-commit: f981b26a468a1d5ab9931a9cce59b176cd0fd9b3
 workflow-type: tm+mt
-source-wordcount: '1665'
-ht-degree: 11%
+source-wordcount: '1678'
+ht-degree: 12%
 
 ---
 
@@ -67,6 +67,7 @@ Oltre alle composizioni del pubblico e alle definizioni dei segmenti, puoi utili
 >id="platform_segments_evaluation_streaming"
 >title="Valutazione in streaming"
 >abstract="La segmentazione in streaming è un processo continuo di selezione di dati che aggiorna i tipi di pubblico in risposta all’attività dell’utente."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/streaming-segmentation.html" text="Valutare gli eventi in tempo quasi reale con la segmentazione in streaming"
 
 Platform supporta attualmente tre metodi di valutazione dei tipi di pubblico: segmentazione in streaming, segmentazione in batch e segmentazione Edge.
 
@@ -93,6 +94,7 @@ I tipi di pubblico in batch vengono valutati automaticamente ogni 24 ore. Se des
 >id="platform_segments_evaluation_edge"
 >title="Valutazione Edge"
 >abstract="La segmentazione Edge è la capacità di valutare all’istante i segmenti in Platform sulla reta Edge, per casi d’uso di personalizzazione sulla stessa pagina e sulla pagina successiva."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/edge-segmentation.html" text="Guida alla segmentazione di Edge"
 
 La segmentazione di Edge consente di valutare i segmenti in Platform [ istantaneamente in Edge Network](../landing/edge-and-hub-comparison.md), abilitando casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva.
 

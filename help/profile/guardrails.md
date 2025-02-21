@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Scopri le prestazioni e i guardrail applicati dal sistema per i dati di profilo e la segmentazione al fine di garantire un utilizzo ottimale delle funzionalità di Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 1150b7726a7cabe6df6bbc7a850fb4d48afa208e
+source-git-commit: 5d972b6b4f59ca58ff3c4b76383db9ee7667dba3
 workflow-type: tm+mt
-source-wordcount: '2511'
+source-wordcount: '2523'
 ht-degree: 2%
 
 ---
@@ -118,7 +118,7 @@ I guardrail descritti in questa sezione si riferiscono al numero e alla natura d
 
 | Guardrail | Limite | Tipo limite | Descrizione |
 | --------- | ----- | ---------- | ----------- |
-| Tipi di pubblico per sandbox | 4000 | Guardrail delle prestazioni | Puoi avere fino a 4000 **tipi di pubblico attivi** per sandbox. Puoi avere più di 4000 sandbox per organizzazione, purché ci siano meno di 4000 tipi di pubblico in ogni **singola** sandbox. Sono inclusi i tipi di pubblico batch, in streaming e edge. Il tentativo di creare ulteriori tipi di pubblico può influire sulle prestazioni del sistema. Ulteriori informazioni sulla [creazione di tipi di pubblico](/help/segmentation/ui/segment-builder.md) tramite il Generatore di segmenti. |
+| Tipi di pubblico per sandbox | 4000 | Guardrail delle prestazioni | Puoi avere fino a 4000 **tipi di pubblico attivi** per sandbox. Puoi avere più di 4000 tipi di pubblico per organizzazione, purché ci siano meno di 4000 tipi di pubblico in ogni **singola** sandbox. Sono inclusi i tipi di pubblico batch, in streaming e edge. Il tentativo di creare ulteriori tipi di pubblico può influire sulle prestazioni del sistema. Ulteriori informazioni sulla [creazione di tipi di pubblico](/help/segmentation/ui/segment-builder.md) tramite il Generatore di segmenti. |
 | Tipi di pubblico di Edge per sandbox | 150 | Guardrail delle prestazioni | Puoi avere fino a 150 **tipi di pubblico edge attivi** per sandbox. Puoi avere più di 150 tipi di pubblico edge per organizzazione, purché in ogni sandbox **individuale** siano presenti meno di 150 tipi di pubblico edge. Il tentativo di creare un pubblico perimetrale aggiuntivo può influire sulle prestazioni del sistema. Ulteriori informazioni su [tipi di pubblico edge](/help/segmentation/methods/edge-segmentation.md). |
 | Throughput di Edge in tutte le sandbox | 1500 RPS | Guardrail delle prestazioni | La segmentazione di Edge supporta un valore di picco di 1500 eventi in entrata al secondo per l’accesso all’Edge Network di Adobe Experience Platform. La segmentazione di Edge può richiedere fino a 350 millisecondi per elaborare un evento in entrata dopo l’ingresso nell’Edge Network di Adobe Experience Platform. Ulteriori informazioni su [tipi di pubblico edge](/help/segmentation/methods/edge-segmentation.md). |
 | Tipi di pubblico in streaming per sandbox | 500 | Guardrail delle prestazioni | Puoi avere fino a 500 **tipi di pubblico in streaming** attivi per sandbox. Puoi avere più di 500 tipi di pubblico in streaming per organizzazione, purché ci siano meno di 500 tipi di pubblico in streaming in ogni **singola** sandbox. Ciò include sia i tipi di pubblico in streaming che quelli edge. Il tentativo di creare ulteriori tipi di pubblico in streaming può influire sulle prestazioni del sistema. Ulteriori informazioni su [tipi di pubblico in streaming](/help/segmentation/methods/streaming-segmentation.md). |
@@ -162,7 +162,7 @@ Gli attributi indipendenti dal tempo, noti anche come &quot;dati record&quot;, v
 
 Anche se l’archivio dati profilo che gestisce i dati profilo non è un archivio relazionale, Profilo consente l’integrazione con entità dimensionali di piccole dimensioni per creare tipi di pubblico in modo semplificato e intuitivo. Questa integrazione è nota come [segmentazione con più entità](../segmentation/tutorials/multi-entity-segmentation.md).
 
-La tua organizzazione può anche definire classi XDM per descrivere elementi diversi dai singoli utenti, ad esempio store, prodotti o proprietà. Questi schemi non [!DNL XDM Individual Profile] sono denominati &quot;entità dimensione&quot; (note anche come &quot;entità di ricerca&quot;) e non contengono dati di serie temporali. Gli schemi che rappresentano entità dimensione sono collegati alle entità profilo tramite l&#39;utilizzo di [relazioni schema](../xdm/tutorials/relationship-ui.md).
+La tua organizzazione può anche definire classi XDM per descrivere elementi diversi dai singoli utenti, ad esempio store, prodotti o proprietà. Questi schemi, modellati utilizzando classi XDM diverse dalla classe Profilo individuale XDM, sono denominati &quot;entità dimensione&quot; (anche note come &quot;entità di ricerca&quot;) e non contengono dati di serie temporali. Gli schemi che rappresentano entità dimensione sono collegati alle entità profilo tramite l&#39;utilizzo di [relazioni schema](../xdm/tutorials/relationship-ui.md).
 
 Le entità Dimension forniscono dati di ricerca che facilitano e semplificano le definizioni dei segmenti con più entità e devono essere sufficientemente piccole da consentire al motore di segmentazione di caricare l’intero set di dati in memoria per un’elaborazione ottimale (ricerca rapida dei punti).
 
