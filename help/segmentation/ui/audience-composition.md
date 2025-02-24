@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guida all’interfaccia utente di Audiences
 description: La funzione di composizione del pubblico nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro ricca che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica dei tipi di pubblico per la tua organizzazione.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 65871f307468428ee0e3b67c1a6577e913f3a312
+source-git-commit: f2abd9445c6b725c166f031407e330a2c15e9edb
 workflow-type: tm+mt
-source-wordcount: '2228'
+source-wordcount: '2342'
 ht-degree: 1%
 
 ---
@@ -39,7 +39,7 @@ L&#39;area di lavoro per la composizione del pubblico è composta da quattro div
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_audience"
 >title="Blocco di pubblico"
->abstract="Il blocco Pubblico consente di accedere ai sottogruppi di pubblico che desideri utilizzare per comporre il nuovo pubblico."
+>abstract="Il blocco Pubblico consente di aggiungere i sottogruppi di pubblico che desideri utilizzare per comporre il nuovo pubblico."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_merge_types"
@@ -83,6 +83,11 @@ I tipi di pubblico selezionati vengono ora visualizzati nella barra a destra qua
 | [!UICONTROL Escludi sovrapposizione] | I tipi di pubblico vengono combinati, con solo quelli condivisi in **uno, ma non tutti**. Equivale a un&#39;operazione XOR. |
 
 ### [!UICONTROL Genera regola] {#build-rule}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_rule_builder"
+>title="Generatore di segmenti"
+>abstract="Puoi utilizzare il Generatore di segmenti per aggiungere una regola personalizzata per la composizione."
 
 Per aggiungere una regola personalizzata al blocco Pubblico, seleziona **[!UICONTROL Genera regola]**.
 
@@ -134,7 +139,12 @@ Viene visualizzato un elenco di tipi di pubblico. Seleziona **[!UICONTROL Aggiun
 
 ### Escludi per attributo {#exclude-attribute}
 
-Se escludi per attributo, puoi selezionare gli attributi da escludere selezionando l&#39;icona ![filtro](/help/images/icons/project-edit.png) nella sezione **[!UICONTROL Regola di esclusione]**.
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_exclude_attribute"
+>title="Escludi per attributo"
+>abstract="Quando escludi per attributo, puoi escludere profili specifici dalla visualizzazione nella composizione in base agli attributi selezionati."
+
+Se escludi per attributo, puoi selezionare gli attributi da escludere selezionando l&#39;icona ![filtro](/help/images/icons/project-edit.png) nella sezione **[!UICONTROL Regola di esclusione]**. L’esclusione dell’attributo ti consente di escludere dal pubblico risultante tutti i profili che lo contengono.
 
 ![La sezione degli attributi è evidenziata e mostra dove scegliere l&#39;attributo da escludere.](../images/ui/audience-composition/exclude-attribute.png)
 
@@ -307,6 +317,16 @@ Quando dividi il pubblico, puoi dividerlo per percentuale o per attributo.
 
 ### Dividi per percentuale {#split-percentage}
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split_percentage"
+>title="Dividi per percentuale"
+>abstract="Puoi suddividere in modo casuale il pubblico in più tipi di pubblico, in base al numero di percorsi e alle percentuali forniti."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split_persistent"
+>title="Divisione persistente"
+>abstract="Per rendere persistente la suddivisione percentuale, abilita questa opzione e seleziona lo spazio dei nomi dell’identità su cui mantenere la suddivisione."
+
 Quando si suddivide in percentuale, il pubblico viene suddiviso in modo casuale, in base al numero di percorsi e alle percentuali fornite.
 
 Ad esempio, puoi avere tre percorsi, ciascuno con una percentuale diversa di profili.
@@ -331,7 +351,12 @@ Inoltre, puoi abilitare l&#39;interruttore **[!UICONTROL Altri profili]** per cr
 
 ![L&#39;opzione Altri profili è evidenziata.](../images/ui/audience-composition/split-other-profiles.png)
 
-## Pubblicazione del pubblico
+## Pubblicazione del pubblico {#publish}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_publish"
+>title="Pubblica"
+>abstract="Puoi pubblicare la tua composizione per creare i tipi di pubblico risultanti in Adobe Experience Platform."
 
 >[!IMPORTANT]
 >
