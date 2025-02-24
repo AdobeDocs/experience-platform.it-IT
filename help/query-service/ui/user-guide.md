@@ -2,20 +2,16 @@
 keywords: Experience Platform;home;argomenti popolari;editor query;editor query;servizio query;servizio query;
 solution: Experience Platform
 title: Guida dell’interfaccia utente di Query Editor
-description: L’editor delle query è uno strumento interattivo fornito da Adobe Experience Platform Query Service che consente di scrivere, convalidare ed eseguire query per i dati sull’esperienza del cliente all’interno dell’interfaccia utente di Experience Platform. Query Editor supporta lo sviluppo di query per l’analisi e l’esplorazione dei dati e consente di eseguire query interattive a scopo di sviluppo, nonché query non interattive per popolare i set di dati in Experience Platform.
+description: L’editor delle query è uno strumento interattivo fornito da Adobe Experience Platform Query Service che consente di scrivere, convalidare ed eseguire query per i dati sull’esperienza del cliente all’interno dell’interfaccia utente di Experience Platform. L’editor delle query supporta lo sviluppo di query per l’analisi e l’esplorazione dei dati e consente di eseguire query interattive a scopo di sviluppo, nonché query non interattive per popolare i set di dati in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 4c11a35ce914cd0b1aa0084368f5a5929f883963
+source-git-commit: e1ecdb5d701093d9c73b6a05dad9a4dd848e0083
 workflow-type: tm+mt
-source-wordcount: '2807'
+source-wordcount: '2745'
 ht-degree: 0%
 
 ---
 
 # Guida dell’interfaccia utente di Query Editor
-
->[!NOTE]
->
->L’editor legacy è stato dichiarato obsoleto il 24 maggio 2024. Non è più accessibile per l’uso. È ora possibile utilizzare [Editor query avanzato](#enhanced-editor-toggle) per scrivere, convalidare ed eseguire le query
 
 Query Editor è uno strumento interattivo fornito da Adobe Experience Platform Query Service che consente di scrivere, convalidare ed eseguire query per i dati sull&#39;esperienza del cliente nell&#39;interfaccia utente [!DNL Experience Platform]. L&#39;editor delle query supporta lo sviluppo di query per l&#39;analisi e l&#39;esplorazione dei dati e consente di eseguire query interattive a scopo di sviluppo e query non interattive per popolare i set di dati in [!DNL Experience Platform].
 
@@ -42,10 +38,6 @@ L’editor delle query impiega alcuni secondi per inizializzare e connettersi a 
 Le query eseguite dall’editor delle query vengono eseguite in modo interattivo, il che significa che se chiudi il browser o esci, la query viene annullata. Lo stesso vale per le query eseguite per generare set di dati dagli output delle query.
 
 ## Creazione di query tramite l’Editor di query avanzato {#query-authoring}
-
->[!NOTE]
->
->L’editor legacy è stato dichiarato obsoleto il 24 maggio 2024. Non è più accessibile per l’uso. Ora puoi utilizzare l’Editor query avanzato per scrivere, convalidare ed eseguire le query.
 
 Utilizzando l’editor delle query, puoi scrivere, eseguire e salvare query per i dati sull’esperienza del cliente. Tutte le query eseguite o salvate nell’editor delle query sono disponibili per tutti gli utenti dell’organizzazione che hanno accesso a Query Service.
 
@@ -101,11 +93,11 @@ Viene visualizzata una finestra di dialogo di conferma. Selezionare **[!UICONTRO
 
 ### Conteggio risultati {#result-count}
 
-L’editor delle query può contenere un massimo di 50.000 righe. Puoi scegliere il numero di righe da visualizzare contemporaneamente nella console dell’editor delle query. Per modificare il numero di righe visualizzate nella console, seleziona l&#39;elenco a discesa **[!UICONTROL Numero risultati]** e le opzioni 50, 100, 150, 300 e 500.
+L’editor delle query può contenere un massimo di 50.000 righe. Puoi scegliere il numero di righe da visualizzare contemporaneamente nella console dell’editor delle query. Per modificare il numero di righe visualizzate nella console, seleziona l&#39;elenco a discesa **[!UICONTROL Numero risultati]** e le opzioni 50, 100, 150, 300, 500 e 1000.
 
 >[!NOTE]
 >
->Poiché l’interfaccia utente di Platform può supportare solo un massimo di 500 righe, il passaggio di un valore LIMIT superiore a 500 viene ignorato.
+>Poiché l’interfaccia utente di Platform può supportare fino a 1000 righe, il passaggio di un valore LIMIT superiore a 1000 viene ignorato.
 
 ![Editor query con elenco a discesa Conteggio risultati evidenziato.](../images/ui/query-editor/result-count.png)
 
@@ -205,7 +197,7 @@ Se è stata pianificata una query, la scheda [!UICONTROL Query pianificate] forn
 >[!AVAILABILITY]
 >
 La barra di navigazione del set di dati è disponibile solo per i clienti Data Distiller. L’interfaccia utente di Platform potrebbe non contenere la barra di navigazione del set di dati a sinistra. Altre immagini in questo documento potrebbero non riflettere la barra di navigazione del set di dati. Per ulteriori informazioni, contatta il rappresentante Adobe.<br>
-Il browser oggetti è attualmente disponibile solo in una **versione limitata**. Contatta il rappresentante del tuo Adobe per ottenere l’accesso anticipato alla versione.
+Il browser oggetti è attualmente disponibile solo in una **versione limitata**. Contatta il rappresentante Adobe per ottenere l’accesso anticipato alle versioni.
 
 Utilizza il browser oggetti per cercare e filtrare facilmente i set di dati. Il browser oggetti riduce il tempo impiegato per la ricerca di tabelle e set di dati in ambienti di grandi dimensioni con numerosi set di dati. Grazie all’accesso semplificato ai dati e ai metadati rilevanti, puoi concentrarti di più sull’authoring delle query e meno sulla navigazione.
 
@@ -249,7 +241,7 @@ La console mostra solo gli errori derivanti dall’esecuzione di una query. Non 
 
 ### Risultati della query {#query-results}
 
-Al termine di una query, i risultati vengono visualizzati nella scheda **[!UICONTROL Risultati]**, accanto alla scheda **[!UICONTROL Console]**. Questa visualizzazione mostra l&#39;output tabulare della query, visualizzando tra 50 e 500 righe di risultati a seconda del [conteggio dei risultati](#result-count) scelto. Questa vista consente di verificare che la query produca l’output previsto. Per generare un set di dati con la query, rimuovere i limiti sulle righe restituite ed eseguire la query con `CREATE TABLE tablename AS SELECT` per generare un set di dati con l&#39;output. Per istruzioni su come generare un set di dati dai risultati delle query in Query Editor, consulta l&#39;[esercitazione sulla generazione di set di dati](./create-datasets.md).
+Al termine di una query, i risultati vengono visualizzati nella scheda **[!UICONTROL Risultati]**, accanto alla scheda **[!UICONTROL Console]**. Questa visualizzazione mostra l&#39;output tabulare della query, visualizzando tra 50 e 1000 righe di risultati a seconda del [conteggio dei risultati](#result-count) scelto. Questa vista consente di verificare che la query produca l’output previsto. Per generare un set di dati con la query, rimuovere i limiti sulle righe restituite ed eseguire la query con `CREATE TABLE tablename AS SELECT` per generare un set di dati con l&#39;output. Per istruzioni su come generare un set di dati dai risultati delle query in Query Editor, consulta l&#39;[esercitazione sulla generazione di set di dati](./create-datasets.md).
 
 ![Scheda Risultati della console Editor query che visualizza i risultati dell&#39;esecuzione di una query.](../images/ui/query-editor/query-results.png)
 
