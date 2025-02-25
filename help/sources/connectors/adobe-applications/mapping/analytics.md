@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Mappatura dei campi per il connettore Source di Adobe Analytics
 description: Mappa i campi Adobe Analytics ai campi XDM utilizzando il connettore Source di Analytics.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: 6cbd902c6a1159d062fb38bf124a09bb18ad1ba8
+source-git-commit: 15d63db308ea9d2daf7660b463785d04ff94e296
 workflow-type: tm+mt
-source-wordcount: '2388'
+source-wordcount: '2415'
 ht-degree: 8%
 
 ---
@@ -172,11 +172,11 @@ Questi campi hanno un&#39;unica origine, ma vengono mappati su **più** posizion
 | `hitid_low` | `_id` | stringa | Utilizzato con hitid_high per identificare in modo univoco un hit. |
 | `ip` | `environment.ipV4` | stringa | L’indirizzo IP, in base all’intestazione HTTP della richiesta di immagine. |
 | `j_jscript` | `environment.browserDetails.javaScriptEnabled` | booleano | Versione di JavaScript utilizzata. |
-| `mcvisid_high` + `mcvisid_low` | identityMap | oggetto | L’ID visitatore Experience Cloud. |
-| `mcvisid_high` + `mcvisid_low` | endUserIDs._experience.mcid.id | stringa | L’ID Experience Cloud (ECID) è noto anche come MCID e talvolta viene utilizzato negli spazi dei nomi. |
-| `mcvisid_high` | `endUserIDs._experience.mcid.primary` | booleano | L’ID Experience Cloud (ECID) è noto anche come MCID e talvolta viene utilizzato negli spazi dei nomi. |
-| `mcvisid_high` | `endUserIDs._experience.mcid.namespace.code` | stringa | L’ID Experience Cloud (ECID) è noto anche come MCID e talvolta viene utilizzato negli spazi dei nomi. |
-| `mcvisid_low` | `identityMap` | oggetto | L’ID visitatore Experience Cloud. |
+| `mcvisid_high` + `mcvisid_low` | identityMap | oggetto | L’ID visitatore di Experience Cloud. |
+| `mcvisid_high` + `mcvisid_low` | endUserIDs._experience.mcid.id | stringa | L’Experience Cloud ID (ECID) è noto anche come MCID e talvolta viene utilizzato negli spazi dei nomi. |
+| `mcvisid_high` | `endUserIDs._experience.mcid.primary` | booleano | L’Experience Cloud ID (ECID) è noto anche come MCID e talvolta viene utilizzato negli spazi dei nomi. |
+| `mcvisid_high` | `endUserIDs._experience.mcid.namespace.code` | stringa | L’Experience Cloud ID (ECID) è noto anche come MCID e talvolta viene utilizzato negli spazi dei nomi. |
+| `mcvisid_low` | `identityMap` | oggetto | L’ID visitatore di Experience Cloud. |
 | `sdid_high` + `sdid_low` | `_experience.target.supplementalDataID` | stringa | Hit Stitching ID. Il campo di analisi sdid_high e sdid_low è l’ID di dati supplementare utilizzato per unire due (o più) hit in arrivo. |
 | `mobilebeaconproximity` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.proximity` | stringa | Prossimità beacon di Mobile Services. |
 | `videochapter` | `media.mediaTimed.mediaChapter.`<br/>`chapterAssetReference._xmpDM.duration` | intero | Il nome del capitolo video. |
@@ -186,9 +186,11 @@ Questi campi hanno un&#39;unica origine, ma vengono mappati su **più** posizion
 
 ## Campi di mappatura avanzati
 
-I campi di selezione (noti come &quot;valori post&quot;) contengono dati dopo che Adobe ha regolato i loro valori utilizzando le Regole di elaborazione, le regole VISTA e le tabelle di ricerca. La maggior parte dei valori post ha una controparte pre-elaborata. L’organizzazione può decidere se utilizzare il campo pre-elaborato, il campo post-elaborato o entrambi.
+I campi di selezione (noti come &quot;valori di post&quot;) contengono dati dopo che Adobe ne ha regolato i valori utilizzando le Regole di elaborazione, le regole VISTA e le tabelle di ricerca. La maggior parte dei valori post ha una controparte pre-elaborata.
 
-Per ulteriori informazioni sull&#39;esecuzione di queste trasformazioni tramite Query Service, vedere [Funzioni definite dall&#39;Adobe](/help/query-service/sql/adobe-defined-functions.md) nella guida utente di Query Service.
+Il connettore di origine di Analytics invia dati preelaborati in un set di dati in Experience Platform. Puoi trasformare questi dati nella controparte post-elaborata utilizzando le trasformazioni. Per ulteriori informazioni sull&#39;esecuzione di queste trasformazioni tramite Query Service, vedere [Funzioni definite da Adobe](/help/query-service/sql/adobe-defined-functions.md) nella guida utente di Query Service.
+
+Per ulteriori informazioni sull&#39;esecuzione di queste trasformazioni tramite Query Service, vedere [Funzioni definite da Adobe](/help/query-service/sql/adobe-defined-functions.md) nella guida utente di Query Service.
 
 | Campo Analytics | Campo XDM | Tipo XDM | Descrizione |
 | --------------- | --------- | -------- | ---------- |
