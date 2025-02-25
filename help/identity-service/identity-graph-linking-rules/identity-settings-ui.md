@@ -2,10 +2,10 @@
 title: Interfaccia utente per le impostazioni delle identità
 description: Scopri come utilizzare l’interfaccia utente delle impostazioni di identità.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: ee0f6d6dbbbdf55a1a0f10038b785e48f2b41474
+source-git-commit: 7c2e5cad997b7e7b9e0a08d3a3a1f5c9b218329e
 workflow-type: tm+mt
 source-wordcount: '538'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -24,9 +24,9 @@ Leggi questa guida per scoprire come configurare le impostazioni di identità ne
 Prima di iniziare a utilizzare le impostazioni di identità, leggi i seguenti documenti:
 
 * [Regole di collegamento del grafo delle identità](./overview.md)
-* [Algoritmo di ottimizzazione identità](./identity-optimization-algorithm.md)
+* [Algoritmo di ottimizzazione delle identità](./identity-optimization-algorithm.md)
 * [Guida all’implementazione](./implementation-guide.md)
-* [Esempi di configurazioni di grafo](./example-configurations.md)
+* [Esempi di configurazioni del grafico](./example-configurations.md)
 * [Priorità dello spazio dei nomi](./namespace-priority.md)
 * [Simulazione dei grafici](./graph-simulation.md)
 
@@ -46,7 +46,7 @@ Per configurare la priorità dello spazio dei nomi, seleziona uno spazio dei nom
 
 ### Designare uno spazio dei nomi univoco
 
-Per designare uno spazio dei nomi univoco, selezionare la casella di controllo [!UICONTROL Univoco per grafico] che corrisponde a tale spazio dei nomi. Puoi selezionare più spazi dei nomi univoci per la configurazione delle impostazioni di identità.
+Per designare uno spazio dei nomi univoco, selezionare la casella di controllo [!UICONTROL Univoco per grafico] che corrisponde a tale spazio dei nomi. Puoi selezionare fino a tre spazi dei nomi univoci per la configurazione delle impostazioni di identità.
 
 ![Due spazi dei nomi selezionati e definiti come univoci.](../images/rules/unique-namespace.png)
 
@@ -65,9 +65,9 @@ Viene visualizzato un messaggio di avviso che indica che i grafici esistenti sar
 Per ulteriori informazioni sulle regole di collegamento del grafico delle identità, consulta la documentazione seguente:
 
 * [Panoramica delle regole di collegamento del grafico delle identità](./overview.md)
-* [Algoritmo di ottimizzazione identità](./identity-optimization-algorithm.md)
+* [Algoritmo di ottimizzazione delle identità](./identity-optimization-algorithm.md)
 * [Guida all’implementazione](./implementation-guide.md)
-* [Esempi di configurazioni di grafo](./example-configurations.md)
+* [Esempi di configurazioni del grafico](./example-configurations.md)
 * [Risoluzione dei problemi e domande frequenti](./troubleshooting.md)
 * [Priorità dello spazio dei nomi](./namespace-priority.md)
 * [Interfaccia utente simulazione grafico](./graph-simulation.md)
