@@ -2,7 +2,7 @@
 description: Questa pagina elenca e descrive i passaggi per configurare una destinazione di streaming con Destination SDK.
 title: Utilizzare Destination SDK per configurare una destinazione di streaming
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 804370a778a4334603f3235df94edaa91b650223
 workflow-type: tm+mt
 source-wordcount: '865'
 ht-degree: 0%
@@ -13,15 +13,15 @@ ht-degree: 0%
 
 ## Panoramica {#overview}
 
-Questa pagina descrive come utilizzare le informazioni in [Opzioni di configurazione nell&#39;SDK delle destinazioni](../functionality/configuration-options.md) e in altre funzionalità di Destination SDK e documenti di riferimento API per configurare una [destinazione di streaming](../../destination-types.md#streaming-destinations). I passaggi sono disposti in ordine sequenziale di seguito.
+In questa pagina viene descritto come utilizzare le informazioni in [Opzioni di configurazione in Destinazioni SDK](../functionality/configuration-options.md) e in altre funzionalità di Destination SDK e documenti di riferimento API per configurare una [destinazione di streaming](../../destination-types.md#streaming-destinations). I passaggi sono disposti in ordine sequenziale di seguito.
 
 ## Prerequisiti {#prerequisites}
 
-Prima di passare ai passaggi illustrati di seguito, leggere la pagina della [guida introduttiva](../getting-started.md) di Destination SDK per informazioni su come ottenere le credenziali di autenticazione Adobe I/O necessarie e altri prerequisiti per l&#39;utilizzo delle API Destination SDK. Ciò presuppone che tu abbia completato i prerequisiti di partnership e autorizzazione e che sia pronto per iniziare a sviluppare la tua destinazione.
+Prima di passare ai passaggi illustrati di seguito, leggere la pagina [Guida introduttiva di Destination SDK](../getting-started.md) per informazioni su come ottenere le credenziali di autenticazione di Adobe I/O necessarie e altri prerequisiti per l&#39;utilizzo delle API di Destination SDK. Ciò presuppone che tu abbia completato i prerequisiti di partnership e autorizzazione e che sia pronto per iniziare a sviluppare la tua destinazione.
 
 ## Passaggi per utilizzare le opzioni di configurazione in Destination SDK per impostare la destinazione {#steps}
 
-![Passaggi illustrati per l&#39;utilizzo degli endpoint Destination SDK](../assets/guides/destination-sdk-steps.png)
+![Passaggi illustrati per l&#39;utilizzo degli endpoint di Destination SDK](../assets/guides/destination-sdk-steps.png)
 
 ## Passaggio 1: creare una configurazione di server e modelli {#create-server-template-configuration}
 
@@ -117,12 +117,14 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
          "acceptsCustomNamespaces":true
       }
    },
-   "audienceMetadataConfig":{
+   "segmentMappingConfig":{
       "mapExperiencePlatformSegmentName":false,
       "mapExperiencePlatformSegmentId":false,
-      "mapUserInput":false,
+      "mapUserInput":false
+   },
+   "audienceMetadataConfig":{
       "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
-   },   
+   },  
    "aggregation":{
       "aggregationType":"CONFIGURABLE_AGGREGATION",
       "configurableAggregation":{
@@ -150,7 +152,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## Passaggio 3: creare un modello di trasformazione dei messaggi. Utilizza il linguaggio dei modelli per specificare il formato di output del messaggio {#create-transformation-template}
 
-In base ai payload supportati dalla destinazione, è necessario creare un modello che trasformi il formato dei dati esportati dal formato XDM Adobe in un formato supportato dalla destinazione. Vedi gli esempi di modelli nella sezione [Utilizzo di un linguaggio per modelli per le trasformazioni di identità, attributi e appartenenza a un pubblico](../functionality/destination-server/message-format.md#using-templating) e utilizzo dello [strumento per la creazione di modelli](../testing-api/streaming-destinations/create-template.md) fornito da Adobe.
+In base ai payload supportati dalla destinazione, è necessario creare un modello che trasformi il formato dei dati esportati dal formato Adobe XDM in un formato supportato dalla destinazione. Vedi gli esempi di modelli nella sezione [Utilizzo di un linguaggio per modelli per le trasformazioni di identità, attributi e appartenenza a un pubblico](../functionality/destination-server/message-format.md#using-templating) e utilizzo dello [strumento per la creazione di modelli](../testing-api/streaming-destinations/create-template.md) fornito da Adobe.
 
 Dopo aver creato un modello di trasformazione dei messaggi che funziona per te, aggiungilo al server e alla configurazione del modello creati nel passaggio 1.
 
@@ -176,7 +178,7 @@ Dopo aver creato un modello di trasformazione dei messaggi che funziona per te, 
 
 ## Passaggio 4: creare la configurazione dei metadati del pubblico {#create-audience-metadata-configuration}
 
-Per alcune destinazioni, Destination SDK richiede la configurazione di una configurazione di metadati di pubblico per creare, aggiornare o eliminare in modo programmatico i tipi di pubblico nella destinazione. Consulta [Gestione dei metadati del pubblico](../functionality/audience-metadata-management.md) per informazioni su quando devi configurare questa configurazione e su come farlo.
+Per alcune destinazioni, Destination SDK richiede di configurare una configurazione di metadati di pubblico per creare, aggiornare o eliminare in modo programmatico i tipi di pubblico nella destinazione. Consulta [Gestione dei metadati del pubblico](../functionality/audience-metadata-management.md) per informazioni su quando devi configurare questa configurazione e su come farlo.
 
 Se utilizzi una configurazione di metadati di pubblico, devi collegarla alla configurazione di destinazione creata nel passaggio 2. Aggiungi l&#39;ID istanza della configurazione dei metadati del pubblico alla configurazione di destinazione come `audienceTemplateId`.
 
@@ -229,10 +231,12 @@ Se utilizzi una configurazione di metadati di pubblico, devi collegarla alla con
          "acceptsCustomNamespaces":true
       }
    },
-   "audienceMetadataConfig":{
+   "segmentMappingConfig":{
       "mapExperiencePlatformSegmentName":false,
       "mapExperiencePlatformSegmentId":false,
-      "mapUserInput":false,
+      "mapUserInput":false
+   },
+   "audienceMetadataConfig":{
       "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
    },   
    "aggregation":{
@@ -277,12 +281,12 @@ Se hai selezionato `"authenticationRule": "PLATFORM_AUTHENTICATION"`, devi crear
 
 Dopo aver configurato la destinazione utilizzando gli endpoint di configurazione nei passaggi precedenti, puoi utilizzare lo [strumento di test della destinazione](../testing-api/streaming-destinations/streaming-destination-testing-overview.md) per testare l&#39;integrazione tra Adobe Experience Platform e la destinazione.
 
-Come parte del processo di test della destinazione, devi utilizzare l’interfaccia utente di Experience Platform per creare i segmenti, che attiverai nella destinazione. Per istruzioni su come creare un pubblico in Experience Platform, consulta le due risorse seguenti:
+Come parte del processo di test della destinazione, devi utilizzare l’interfaccia utente di Experience Platform per creare i segmenti che attiverai nella destinazione. Fai riferimento alle due risorse seguenti per istruzioni su come creare tipi di pubblico in Experience Platform:
 
 * [Creare una pagina di documentazione del pubblico](/help/segmentation/ui/audience-portal.md#create-audience)
 * [Procedura dettagliata per la creazione di un video per il pubblico](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
-## Passaggio 7: Publish la tua destinazione {#publish-destination}
+## Passaggio 7: pubblicare la destinazione {#publish-destination}
 
 >[!NOTE]
 >
@@ -296,12 +300,12 @@ Dopo aver configurato e testato la destinazione, utilizza l&#39;[API di pubblica
 >
 >Questo passaggio non è necessario se stai creando una destinazione privata per il tuo utilizzo e non stai cercando di pubblicarla nel catalogo delle destinazioni affinché altri clienti la possano utilizzare.
 
-Se sei un fornitore di software indipendente (ISV) o un integratore di sistemi (SI) che sta creando una [integrazione prodotta](../overview.md#productized-custom-integrations), utilizza la [procedura di documentazione self-service](../docs-framework/documentation-instructions.md) per creare una pagina di documentazione del prodotto per la tua destinazione nel [catalogo delle destinazioni di Experience Platform](/help/destinations/catalog/overview.md).
+Se sei un fornitore di software indipendente (ISV) o un integratore di sistemi (SI) che crea una [integrazione prodotta](../overview.md#productized-custom-integrations), utilizza il [processo di documentazione self-service](../docs-framework/documentation-instructions.md) per creare una pagina di documentazione del prodotto per la tua destinazione nel [catalogo delle destinazioni di Experience Platform](/help/destinations/catalog/overview.md).
 
-## Passaggio 9: inviare la destinazione per la revisione di Adobe {#submit-for-review}
+## Passaggio 9: invia la destinazione per la revisione di Adobe {#submit-for-review}
 
 >[!NOTE]
 >
 >Questo passaggio non è necessario se stai creando una destinazione privata per il tuo utilizzo e non stai cercando di pubblicarla nel catalogo delle destinazioni affinché altri clienti la possano utilizzare.
 
-Infine, prima che la destinazione possa essere pubblicata nel catalogo di Experienci Platform e visibile a tutti i clienti di Experienci Platform, devi inviare ufficialmente la destinazione per la revisione di Adobi. Trova informazioni complete su come [inviare per la revisione una destinazione prodotta creata in Destination SDK](../guides/submit-destination.md).
+Infine, prima che la destinazione possa essere pubblicata nel catalogo Experience Platform e visibile a tutti i clienti Experience Platform, devi inviarla ufficialmente per la revisione da parte di Adobe. Trova informazioni complete su come [inviare per la revisione una destinazione prodotta creata in Destination SDK](../guides/submit-destination.md).

@@ -2,9 +2,9 @@
 description: Scopri come configurare le impostazioni dei metadati del pubblico per le destinazioni create con Destination SDK.
 title: Configurazione dei metadati del pubblico
 exl-id: ae71df4f-b753-4084-835f-03559b4986cb
-source-git-commit: 20cb2dbfbfc8e73c765073818c8e7e561d4e6629
+source-git-commit: 804370a778a4334603f3235df94edaa91b650223
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '406'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ Destination SDK offre strumenti che puoi utilizzare per creare, aggiornare o eli
 
 Per capire dove questo componente si inserisce in un&#39;integrazione creata con Destination SDK, consulta il diagramma nella documentazione delle [opzioni di configurazione](../configuration-options.md) oppure consulta la guida su come [utilizzare Destination SDK per configurare una destinazione di streaming](../../guides/configure-destination-instructions.md#create-destination-configuration).
 
-Puoi configurare il modello di metadati del pubblico tramite l&#39;endpoint `/authoring/audience-templates`. Dopo aver creato la configurazione dei metadati del pubblico, puoi utilizzare l&#39;endpoint `/authoring/destinations` per configurare la sezione `audienceMetadataConfig`. Questa sezione indica alla destinazione quali metadati di pubblico deve mappare sul modello di pubblico.
+Puoi configurare il modello di metadati del pubblico tramite l&#39;endpoint `/authoring/audience-templates`. Dopo aver creato la configurazione dei metadati del pubblico, puoi utilizzare l&#39;endpoint `/authoring/destinations` per configurare le sezioni `segmentMappingConfig` e `audienceMetadataConfig`. Questa sezione indica alla destinazione quali metadati di pubblico deve mappare sul modello di pubblico.
 
 Consulta le seguenti pagine di riferimento API per esempi dettagliati di chiamate API, in cui puoi configurare i componenti mostrati in questa pagina.
 
@@ -44,18 +44,20 @@ Consulta la tabella seguente per informazioni dettagliate sui tipi di integrazio
 Quando crei la configurazione dei metadati del pubblico, puoi utilizzare i parametri descritti nella tabella seguente per configurare le impostazioni di mappatura del pubblico.
 
 ```json
-  "audienceMetadataConfig":{
+"segmentMappingConfig": {
    "mapExperiencePlatformSegmentName":false,
    "mapExperiencePlatformSegmentId":false,
    "mapUserInput":false,
+ },
+"audienceMetadataConfig":{
    "audienceTemplateId":"YOUR_AUDIENCE_TEMPLATE_ID"
 }
 ```
 
 | Parametro | Tipo | Descrizione |
 |---------|----------|------|
-| `mapExperiencePlatformSegmentName` | Booleano | Indica se il valore [[!UICONTROL ID mappatura]](../../../ui/activate-segment-streaming-destinations.md#scheduling) nel flusso di lavoro di attivazione della destinazione deve essere il nome del pubblico Experience Platform. |
-| `mapExperiencePlatformSegmentId` | Booleano | Indica se il valore [[!UICONTROL ID mappatura]](../../../ui/activate-segment-streaming-destinations.md#scheduling) nel flusso di lavoro di attivazione della destinazione deve essere l&#39;ID del pubblico Experience Platform. |
+| `mapExperiencePlatformSegmentName` | Booleano | Indica se il valore [[!UICONTROL ID mappatura]](../../../ui/activate-segment-streaming-destinations.md#scheduling) nel flusso di lavoro di attivazione della destinazione deve essere il nome del pubblico di Experience Platform. |
+| `mapExperiencePlatformSegmentId` | Booleano | Indica se il valore [[!UICONTROL ID mappatura]](../../../ui/activate-segment-streaming-destinations.md#scheduling) nel flusso di lavoro di attivazione della destinazione deve essere l&#39;ID del pubblico di Experience Platform. |
 | `mapUserInput` | Booleano | Attiva o disattiva l&#39;input dell&#39;utente per il valore [[!UICONTROL ID mappatura]](../../../ui/activate-segment-streaming-destinations.md#scheduling) nel flusso di lavoro di attivazione della destinazione. Se impostato su `true`, `audienceTemplateId` non può essere presente. |
 | `audienceTemplateId` | Stringa | `instanceId` del [modello di metadati del pubblico](../../metadata-api/create-audience-template.md) utilizzato per la destinazione. |
 
