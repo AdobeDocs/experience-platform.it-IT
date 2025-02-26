@@ -6,9 +6,9 @@ user-guide-description: Scopri come distribuire e gestire i tag di analisi, mark
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 18690a72c8a84c6426677b3e8993d8453a8e7cf1
+source-git-commit: 77432a559009d29711a8afa4ca6d8f6ea11d70cf
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '776'
 ht-degree: 44%
 
 ---
@@ -87,9 +87,11 @@ ht-degree: 44%
       * [Adobe Analytics tramite Adobe Experience Platform Web SDK](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)
       * Adobe Audience Manager {#audience-manager}
          * [Panoramica](./extensions/client/audience-manager/overview.md)
-      * Livello dati client Adobe {#client-data-layer}
+      * Adobe Client Data Layer {#client-data-layer}
          * [Panoramica](./extensions/client/client-data-layer/overview.md)
          * [Note sulla versione](./extensions/client/client-data-layer/release-notes.md)
+      * Analisi del contenuto di Adobe {#contentanalytics}
+         * [Panoramica](./extensions/client/content-analytics/overview.md)
       * Adobe ContextHub {#contexthub}
          * [Panoramica](./extensions/client/contexthub/overview.md)
       * [Adobe Experience Manager Forms](https://exchange.adobe.com/apps/ec/107493)
@@ -112,15 +114,15 @@ ht-degree: 44%
          * [Panoramica](./extensions/client/asset-insights/overview.md)
          * [Note sulla versione](./extensions/client/asset-insights/release-notes.md)
       * [Adobe Fonts](https://exchange.adobe.com/apps/ec/101538)
-      * Adobi Medium di Analytics per audio e video {#media-analytics}
+      * Adobe Media Analytics per audio e video {#media-analytics}
          * [Panoramica](./extensions/client/media-analytics/overview.md)
          * [Note sulla versione](./extensions/client/media-analytics/release-notes.md)
-      * Adobe Medium Analytics (SDK 3.x) {#media-analytics-3x}
+      * Adobe Media Analytics (SDK 3.x) {#media-analytics-3x}
          * [Panoramica](./extensions/client/media-analytics-3x/overview.md)
          * [Note sulla versione](./extensions/client/media-analytics-3x/release-notes.md)
       * Privacy Adobe {#privacy}
          * [Panoramica](./extensions/client/privacy/overview.md)
-      * [Selettore suite di rapporti di Adobe](https://exchange.adobe.com/apps/ec/100640)
+      * [Selettore suite di rapporti Adobe](https://exchange.adobe.com/apps/ec/100640)
       * Adobe Target {#target}
          * [Panoramica](./extensions/client/target/overview.md)
          * [Note sulla versione](./extensions/client/target/release-notes.md)
