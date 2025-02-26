@@ -6,7 +6,7 @@ user-guide-description: Scopri come distribuire e gestire i tag di analisi, mark
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 77432a559009d29711a8afa4ca6d8f6ea11d70cf
+source-git-commit: 5e3f1517b321cab756305cd61ad5f1def93d3de7
 workflow-type: tm+mt
 source-wordcount: '776'
 ht-degree: 44%
@@ -90,7 +90,7 @@ ht-degree: 44%
       * Adobe Client Data Layer {#client-data-layer}
          * [Panoramica](./extensions/client/client-data-layer/overview.md)
          * [Note sulla versione](./extensions/client/client-data-layer/release-notes.md)
-      * Analisi del contenuto di Adobe {#contentanalytics}
+      * Analisi del contenuto di Adobe {#content-analytics}
          * [Panoramica](./extensions/client/content-analytics/overview.md)
       * Adobe ContextHub {#contexthub}
          * [Panoramica](./extensions/client/contexthub/overview.md)
