@@ -2,7 +2,7 @@
 title: appendIdentityToUrl
 description: Distribuisci esperienze personalizzate in modo più preciso tra app, web e tra domini diversi.
 exl-id: 09dd03bd-66d8-4d53-bda8-84fc4caadea6
-source-git-commit: 153c5bae42c027c25a38a8b63070249d1b1a8f01
+source-git-commit: 7c262e5819f8e3488c5ddd5a0221d1c52c28c029
 workflow-type: tm+mt
 source-wordcount: '412'
 ht-degree: 0%
@@ -11,9 +11,9 @@ ht-degree: 0%
 
 # `appendIdentityToUrl`
 
-Il comando `appendIdentityToUrl` consente di aggiungere un identificatore utente all&#39;URL come stringa di query. Questa azione ti consente di trasmettere l’identità di un visitatore tra più domini, evitando conteggi duplicati dei visitatori per i set di dati che includono sia domini che canali. È disponibile su Web SDK versione 2.11.0 o successiva.
+Il comando `appendIdentityToUrl` consente di aggiungere un identificatore utente all&#39;URL come stringa di query. Questa azione ti consente di trasmettere l’identità di un visitatore tra più domini, evitando conteggi duplicati dei visitatori per i set di dati che includono sia domini che canali. È disponibile sul Web SDK versione 2.11.0 o successiva.
 
-La stringa di query generata e aggiunta all&#39;URL è `adobe_mc`. Se l&#39;SDK Web non è in grado di trovare un ECID, chiama l&#39;endpoint `/acquire` per generarne uno.
+La stringa di query generata e aggiunta all&#39;URL è `adobe_mc`. Se il Web SDK non è in grado di trovare un ECID, chiama l&#39;endpoint `/acquire` per generarne uno.
 
 >[!NOTE]
 >
@@ -72,12 +72,16 @@ Aggiungi l’identità all’URL.
 
 +++
 
-## Aggiungere identità all’URL utilizzando la libreria JavaScript dell’SDK web
+## Aggiungi identità all&#39;URL tramite la libreria JavaScript di Web SDK
 
 Eseguire il comando `appendIdentityToUrl` con un URL come parametro. Il metodo restituisce un URL con l’identificatore aggiunto come stringa di query.
 
 ```js
-alloy("appendIdentityToUrl",document.location);
+alloy("appendIdentityToUrl",
+  {
+    url: document.location.href
+  }
+);
 ```
 
 Puoi aggiungere un listener di eventi per tutti i clic ricevuti sulla pagina e verificare se l’URL corrisponde ai domini desiderati. In caso contrario, aggiungi l’identità all’URL e reindirizza l’utente.
