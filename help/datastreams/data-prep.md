@@ -2,10 +2,10 @@
 title: Preparazione dei dati per la raccolta dati
 description: Scopri come mappare i dati su uno schema evento Experience Data Model (XDM) durante la configurazione di uno stream di dati per Adobe Experience Platform Web e Mobile SDK.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: e90bd5abe502a7638ae54fca5eb0f051a925a2d8
 workflow-type: tm+mt
-source-wordcount: '1183'
-ht-degree: 60%
+source-wordcount: '1199'
+ht-degree: 59%
 
 ---
 
@@ -13,11 +13,11 @@ ht-degree: 60%
 
 La preparazione dati è un servizio di Adobe Experience Platform che consente di mappare, trasformare e convalidare i dati da e per [Experience Data Model (XDM)](../xdm/home.md). Durante la configurazione di uno [stream di dati](./overview.md), puoi utilizzare le funzionalità di preparazione dati per mappare i dati di origine su XDM quando li invii alla rete Edge di Platform.
 
-Tutti i dati inviati da una pagina web devono arrivare ad Experience Platform come XDM. Esistono 3 modi per tradurre i dati da un livello dati su pagina a XDM accettato da Experience Platform:
+Tutti i dati inviati da una pagina web devono pervenire ad Experience Platform come XDM. Esistono 3 modi per tradurre i dati da un livello dati su pagina a XDM accettato da Experience Platform:
 
 1. Riformattare il livello dati in XDM sulla pagina web stessa.
 2. Utilizza la funzionalità Tag elementi dati nativi per riformattare in XDM il formato di livello dati esistente di una pagina web.
-3. Riformattare il formato del livello dati esistente di una pagina web in XDM tramite l’Edge Network, utilizzando la preparazione dati per la raccolta dati.
+3. Riformattare il formato del livello dati esistente di una pagina web in XDM tramite Edge Network, utilizzando la preparazione dati per la raccolta dati.
 
 Questa guida si concentra sulla terza opzione.
 
@@ -25,10 +25,10 @@ Questa guida si concentra sulla terza opzione.
 
 Esistono due casi di utilizzo in cui la preparazione dei dati per la raccolta dei dati è utile:
 
-1. Il sito web ha un livello di dati ben formato, gestito e mantenuto ed è preferibile inviarlo direttamente all’Edge Network invece di utilizzare la manipolazione di JavaScript per convertirlo in XDM sulla pagina (tramite elementi dati Tag o tramite la manipolazione manuale di JavaScript).
+1. Il sito web ha un livello di dati ben formato, gestito e mantenuto ed è preferibile inviarlo direttamente ad Edge Network anziché utilizzare la manipolazione di JavaScript per convertirlo in XDM sulla pagina (tramite elementi dati Tag o tramite manipolazione manuale di JavaScript).
 2. Sul sito viene distribuito un sistema di assegnazione tag diverso dai tag.
 
-## Inviare un livello dati esistente all’Edge Network tramite Web SDK {#send-datalayer-via-websdk}
+## Inviare un livello dati esistente ad Edge Network tramite Web SDK {#send-datalayer-via-websdk}
 
 Il livello dati esistente deve essere inviato utilizzando l&#39;oggetto [`data`](/help/web-sdk/commands/sendevent/data.md) nel comando `sendEvent`.
 
@@ -166,6 +166,10 @@ Viene visualizzato il passaggio di **[!UICONTROL mappatura]**, consentendoti di 
 
 * [Crea regole di mappatura](#create-mapping) per questo flusso di dati tramite un processo manuale.
 * [Importare regole di mappatura](#import-mapping) da un flusso di dati esistente.
+
+>[!IMPORTANT]
+>
+>La mappatura della preparazione dati sostituisce i payload XDM `identityMap`, il che può influire ulteriormente sulla corrispondenza dei profili rispetto ai tipi di pubblico di Real-Time CDP.
 
 ### Creare regole di mappatura {#create-mapping}
 
