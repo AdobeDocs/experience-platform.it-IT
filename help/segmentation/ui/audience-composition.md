@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guida all’interfaccia utente di Audiences
 description: La funzione di composizione del pubblico nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro ricca che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica dei tipi di pubblico per la tua organizzazione.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: f2abd9445c6b725c166f031407e330a2c15e9edb
+source-git-commit: c4064771a384a90d94903ba1761fc9ee20f47747
 workflow-type: tm+mt
-source-wordcount: '2342'
+source-wordcount: '2313'
 ht-degree: 1%
 
 ---
@@ -60,7 +60,7 @@ Quando selezioni il blocco **[!UICONTROL Pubblico]**, nella barra a destra vengo
 
 Aggiungere tipi di pubblico al blocco Pubblico. selezionare **[!UICONTROL Aggiungi pubblico]**.
 
-![Il pulsante Aggiungi pubblico è evidenziato.](../images/ui/audience-composition/add-audience.png)
+![Il pulsante Aggiungi pubblico è evidenziato.](../images/ui/audience-composition/select-add-audience.png)
 
 >[!IMPORTANT]
 >
@@ -91,7 +91,7 @@ I tipi di pubblico selezionati vengono ora visualizzati nella barra a destra qua
 
 Per aggiungere una regola personalizzata al blocco Pubblico, seleziona **[!UICONTROL Genera regola]**.
 
-![Il pulsante Genera regola è evidenziato.](../images/ui/audience-composition/build-rule.png)
+![Il pulsante Genera regola è evidenziato.](../images/ui/audience-composition/select-build-rule.png)
 
 Viene visualizzato il Generatore di segmenti. Puoi utilizzare il Generatore di segmenti per creare una regola personalizzata che il pubblico dovrà seguire. Ulteriori informazioni sull&#39;utilizzo del Generatore di segmenti sono disponibili nella [guida del Generatore di segmenti](./segment-builder.md).
 
@@ -196,7 +196,7 @@ Per selezionare il set di dati con cui arricchire il pubblico, seleziona l&#39;i
 
 Viene visualizzato il popover **[!UICONTROL Seleziona set di dati]**. Seleziona il set di dati da aggiungere per l&#39;arricchimento, seguito da **[!UICONTROL Seleziona]** per aggiungere il set di dati per l&#39;arricchimento.
 
-![Il set di dati scelto è selezionato.](../images/ui/audience-composition/enrich-dataset-selected.png)
+![Il set di dati scelto è selezionato.](../images/ui/audience-composition/select-dataset.png)
 
 >[!IMPORTANT]
 >
@@ -212,27 +212,21 @@ La sezione **[!UICONTROL Criteri di arricchimento]** è ora visualizzata nella b
 
 Per selezionare la **[!UICONTROL chiave di join di Source]**, selezionare l&#39;icona ![filter](/help/images/icons/project-edit.png).
 
-![L&#39;icona del filtro per la [!UICONTROL chiave di join di Source] è evidenziata.](../images/ui/audience-composition/enrich-select-source-join-key.png)
-
 Viene visualizzato il popover **[!UICONTROL Seleziona un attributo di profilo]**. Seleziona l&#39;attributo di profilo che desideri utilizzare come chiave di join di origine, seguito da **[!UICONTROL Seleziona]** per scegliere tale attributo come chiave di join di origine.
 
-![L&#39;attributo che si desidera utilizzare come chiave di join di origine è evidenziato.](../images/ui/audience-composition/enrich-select-profile-attribute.png)
+![L&#39;attributo che si desidera utilizzare come chiave di join di origine è evidenziato.](../images/ui/audience-composition/select-source-join-key.png)
 
 Per selezionare la chiave di join del set di dati **[!UICONTROL Enrichment]**, selezionare l&#39;icona ![filter](/help/images/icons/project-edit.png).
 
-![L&#39;icona del filtro per la chiave di aggiunta al set di dati di arricchimento  è evidenziata.](../images/ui/audience-composition/enrich-select-enrichment-dataset-join-key.png)
-
 Viene visualizzato il popover **[!UICONTROL Attributi di arricchimento]**. Seleziona l&#39;attributo da utilizzare come chiave di join del set di dati di arricchimento, seguito da **[!UICONTROL Seleziona]** per scegliere tale attributo come chiave di join del set di dati di arricchimento.
 
-![L&#39;attributo che si desidera utilizzare come chiave di join del set di dati di arricchimento è evidenziato.](../images/ui/audience-composition/enrich-select-enrichment-dataset-attribute.png)
+![L&#39;attributo che si desidera utilizzare come chiave di join del set di dati di arricchimento è evidenziato.](../images/ui/audience-composition/select-enrichment-dataset-join-key.png)
 
 Dopo aver aggiunto entrambe le chiavi di join, viene visualizzata la sezione **[!UICONTROL Attributi di arricchimento]**. Ora puoi aggiungere l’attributo con cui desideri migliorare il pubblico. Per aggiungere questi attributi, selezionare **[!UICONTROL Aggiungi attributo]**.
 
-![Il pulsante [!UICONTROL Aggiungi attributo] è evidenziato.](../images/ui/audience-composition/enrich-select-add-attribute.png)
-
 Viene visualizzato il popover **[!UICONTROL Attributi di arricchimento]**. Puoi selezionare gli attributi dal set di dati con cui arricchire il pubblico, seguito da **[!UICONTROL Seleziona]** per aggiungere gli attributi al pubblico.
 
-![Gli attributi di arricchimento che desideri aggiungere sono evidenziati.](../images/ui/audience-composition/enrich-add-enrichment-attributes.png)
+![Gli attributi di arricchimento che desideri aggiungere sono evidenziati.](../images/ui/audience-composition/select-enrichment-attribute.png)
 
 <!-- ## [!UICONTROL Join] {#join-block}
 
@@ -282,13 +276,13 @@ Per selezionare l&#39;attributo in base al quale classificare i tipi di pubblico
 
 Viene visualizzato un elenco di attributi di profilo. In questo popover, puoi selezionare il tipo di attributo in base al quale classificare il pubblico. Seleziona **[!UICONTROL Seleziona]** per aggiungerlo al tuo blocco di classificazione. Tieni presente che l&#39;attributo selezionato può essere **solo** numeri.
 
-![Viene visualizzato un elenco di attributi.](../images/ui/audience-composition/select-attribute-rank.png)
+![Viene visualizzato un elenco di attributi.](../images/ui/audience-composition/rank-attribute.png)
 
 Dopo aver selezionato l’attributo, puoi selezionare l’ordine in base al quale classificarlo. In ordine crescente (dal più basso al più alto) o decrescente (dal più alto al più basso).
 
 Inoltre, puoi limitare il numero di profili restituiti abilitando l&#39;interruttore **[!UICONTROL Aggiungi limite profilo]**. Quando questa opzione è abilitata, puoi impostare il numero massimo di profili restituiti all&#39;interno del campo **[!UICONTROL Profili inclusi]**.
 
-![L&#39;opzione Aggiungi limite profilo è evidenziata e consente di limitare il numero di profili restituiti.](../images/ui/audience-composition/add-profile-limit.png)
+![L&#39;opzione Aggiungi limite profilo è evidenziata e consente di limitare il numero di profili restituiti.](../images/ui/audience-composition/add-profile-limit-rank.png)
 
 ## [!UICONTROL Divisione] {#split-block}
 
@@ -307,7 +301,7 @@ Inoltre, puoi limitare il numero di profili restituiti abilitando l&#39;interrut
 >title="Altri profili"
 >abstract="L’opzione Altri profili consente di creare un percorso aggiuntivo con i profili rimanenti che non corrispondono a nessuna delle condizioni specificate degli altri percorsi."
 
-Il tipo di blocco **[!UICONTROL Dividi]** ti consente di suddividere il nuovo pubblico in vari sottogruppi. Puoi suddividere questo pubblico in base alla percentuale o a un attributo. Durante la suddivisione del pubblico in sottotargeting, la suddivisione è **non** persistente. Ciò significa che i profili possono trovarsi in diversi sottotipi di pubblico per ogni valutazione.
+Il tipo di blocco **[!UICONTROL Dividi]** ti consente di suddividere il nuovo pubblico in vari sottogruppi. Puoi suddividere questo pubblico in base alla percentuale o a un attributo.
 
 Per aggiungere un blocco **[!UICONTROL Split]**, seleziona l&#39;icona **+**, seguita da **[!UICONTROL Split]**.
 
@@ -325,23 +319,25 @@ Quando dividi il pubblico, puoi dividerlo per percentuale o per attributo.
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split_persistent"
 >title="Divisione persistente"
->abstract="Per rendere persistente la suddivisione percentuale, abilita questa opzione e seleziona lo spazio dei nomi dell’identità su cui mantenere la suddivisione."
+>abstract="Per rendere persistente la suddivisione percentuale, abilita questa opzione e seleziona uno spazio dei nomi delle identità."
 
 Quando si suddivide in percentuale, il pubblico viene suddiviso in modo casuale, in base al numero di percorsi e alle percentuali fornite.
 
-Ad esempio, puoi avere tre percorsi, ciascuno con una percentuale diversa di profili.
+![La suddivisione percentuale è evidenziata.](../images/ui/audience-composition/split-by-percentage.png)
 
-![Viene visualizzata la suddivisione in numero di tipi di pubblico e percentuali salvati.](../images/ui/audience-composition/percentages.png)
+In alternativa, puoi anche fornire un’identità che renderebbe persistente la suddivisione basata su percentuale. I tipi di identità disponibili includono tutti gli spazi dei nomi delle identità disponibili nell’organizzazione.
+
+![La casella di controllo Dividi per identità è evidenziata. Viene inoltre evidenziato l&#39;elenco a discesa che consente di selezionare l&#39;identità in base alla quale dividere.](../images/ui/audience-composition/split-by-identity.png)
 
 ### Dividi per attributo {#split-attribute}
 
 Quando si divide per attributo, il pubblico viene diviso in base agli attributi forniti. Per selezionare l&#39;attributo da dividere, selezionare il blocco **[!UICONTROL Dividi]**, seguito dall&#39;icona ![filtro](/help/images/icons/project-edit.png).
 
-![Il pulsante di filtro è selezionato e mostra come filtrare per attributo.](../images/ui/audience-composition/select-split-attribute.png)
+![Il pulsante di filtro è selezionato e mostra come filtrare per attributo.](../images/ui/audience-composition/split-by-attribute.png)
 
 Viene visualizzato un elenco di attributi di profilo. Seleziona il tipo di attributo, seguito da **[!UICONTROL Seleziona]** per aggiungerlo al blocco di suddivisione.
 
-![Viene visualizzato un elenco di attributi.](../images/ui/audience-composition/select-attribute-exclude.png)
+![Viene visualizzato un elenco di attributi.](../images/ui/audience-composition/select-attribute.png)
 
 Dopo aver selezionato l&#39;attributo, puoi scegliere quali profili apparterranno a quale pubblico secondario aggiungendo i valori all&#39;interno del campo **[!UICONTROL Valori]**.
 

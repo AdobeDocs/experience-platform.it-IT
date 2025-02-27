@@ -1,10 +1,11 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Febbraio 2025
 description: Note sulla versione di Adobe Experience Platform di febbraio 2025.
-source-git-commit: 300be2f922f81f0666a794815cb27777802efb60
+exl-id: 734a9484-516e-4dd7-9503-8fcdc50cbaac
+source-git-commit: c4064771a384a90d94903ba1761fc9ee20f47747
 workflow-type: tm+mt
-source-wordcount: '1542'
-ht-degree: 94%
+source-wordcount: '1645'
+ht-degree: 91%
 
 ---
 
@@ -22,6 +23,7 @@ Aggiornamenti alle funzioni e alla documentazione esistenti in Adobe Experience 
 - [Servizio catalogo](#catalog-service)
 - [Preparazione dei dati](#data-prep)
 - [Destinazioni](#destinations)
+- [Servizio di segmentazione](#segmentation)
 - [Origini](#sources)
 - [Aggiornamenti della documentazione](#documentation-updates)
    - [Confronto tra rete Edge e hub](#edge)
@@ -107,6 +109,17 @@ Per ulteriori informazioni, consulta la [panoramica sulla preparazione dei dati]
 
 Per ulteriori informazioni, leggi la [panoramica sulle destinazioni](../../destinations/home.md).
 
+## Servizio di segmentazione {#segmentation-service}
+
+[!DNL Segmentation Service] definisce un particolare sottoinsieme di profili descrivendo i criteri che distinguono un gruppo di persone commerciabile all’interno della tua clientela. I segmenti possono essere basati su dati dei record (ad esempio informazioni demografiche) o su eventi della serie temporale che rappresentano le interazioni della clientela con il tuo marchio.
+
+**Funzioni nuove o aggiornate**
+
+| Funzione | Descrizione |
+| ------- | ----------- |
+| Divisione persistente | La composizione del pubblico ora supporta le suddivisioni persistenti. Puoi fare in modo che i tipi di pubblico suddivisi rimangano costanti quando si suddividono per profilo, aggiungendo uno spazio dei nomi delle identità al blocco di suddivisione. Ulteriori informazioni su questa funzione sono disponibili nella [documentazione sulla composizione del pubblico](../../segmentation/ui/audience-composition.md). |
+
+Per ulteriori informazioni su [!DNL Segmentation Service], consulta la [Panoramica sulla segmentazione](../../segmentation/home.md).
 
 ## Origini {#sources}
 

@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform - Febbraio 2025
 description: Note sulla versione di Adobe Experience Platform di febbraio 2025.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 300be2f922f81f0666a794815cb27777802efb60
+source-git-commit: c4064771a384a90d94903ba1761fc9ee20f47747
 workflow-type: tm+mt
-source-wordcount: '1542'
-ht-degree: 94%
+source-wordcount: '1645'
+ht-degree: 91%
 
 ---
 
@@ -24,6 +24,7 @@ Aggiornamenti alle funzioni e alla documentazione esistenti in Adobe Experience 
 - [Preparazione dei dati](#data-prep)
 - [Destinazioni](#destinations)
 - [Origini](#sources)
+- [Servizio di segmentazione](#segmentation)
 - [Aggiornamenti della documentazione](#documentation-updates)
    - [Confronto tra rete Edge e hub](#edge)
    - [API del servizio Flusso estesa per le origini](#flow-service)
@@ -107,6 +108,18 @@ Per ulteriori informazioni, consulta la [panoramica sulla preparazione dei dati]
 - Durante l’esportazione di profili in destinazioni basate su file, la deduplicazione assicura che venga esportato un solo profilo quando più profili condividono la stessa chiave di deduplicazione e la stessa marca temporale di riferimento. Questa versione include un aggiornamento del processo di deduplicazione, garantendo che le esecuzioni successive con le stesse coordinate producano sempre gli stessi risultati, migliorando la coerenza. [Ulteriori informazioni](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-same-timestamp).
 
 Per ulteriori informazioni, leggi la [panoramica sulle destinazioni](../../destinations/home.md).
+
+## Servizio di segmentazione {#segmentation-service}
+
+[!DNL Segmentation Service] definisce un particolare sottoinsieme di profili descrivendo i criteri che distinguono un gruppo di persone commerciabile all’interno della tua clientela. I segmenti possono essere basati su dati dei record (ad esempio informazioni demografiche) o su eventi della serie temporale che rappresentano le interazioni della clientela con il tuo marchio.
+
+**Funzioni nuove o aggiornate**
+
+| Funzione | Descrizione |
+| ------- | ----------- |
+| Divisione persistente | La composizione del pubblico ora supporta le suddivisioni persistenti. Puoi fare in modo che i tipi di pubblico suddivisi rimangano costanti quando si suddividono per profilo, aggiungendo uno spazio dei nomi delle identità al blocco di suddivisione. Ulteriori informazioni su questa funzione sono disponibili nella [documentazione sulla composizione del pubblico](../../segmentation/ui/audience-composition.md). |
+
+Per ulteriori informazioni su [!DNL Segmentation Service], consulta la [Panoramica sulla segmentazione](../../segmentation/home.md).
 
 ## Origini {#sources}
 
