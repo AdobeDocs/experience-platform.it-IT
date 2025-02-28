@@ -119,7 +119,7 @@ A questo scopo, devi creare nella console AWS un utente presunto per Adobe con l
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_bucket"
 >title="Nome del bucket"
->abstract="Deve contenere da 3 e 63 caratteri. Deve iniziare e terminare con una lettera o un numero. Deve contenere solo lettere minuscole, numeri o trattini (-). Non deve essere formattato come indirizzo IP (ad esempio, 192.100.1.1)."
+>abstract="Deve contenere da 3 e 63 caratteri. Deve iniziare e terminare con una lettera o un numero. Deve contenere solo lettere minuscole, numeri o trattini (-). Non deve essere formattato come un indirizzo IP (ad esempio, 192.100.1.1)."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_folderpath"

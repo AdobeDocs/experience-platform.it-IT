@@ -6,7 +6,7 @@ exl-id: 66820711-2db0-4621-908d-01187771de14
 source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
 source-wordcount: '684'
-ht-degree: 2%
+ht-degree: 11%
 
 ---
 
@@ -189,8 +189,8 @@ Viene visualizzata la finestra di dialogo **[!UICONTROL Rimuovi]** in cui viene 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_about"
 >title="Cosa sono i criteri?"
->abstract="I criteri sono dichiarazioni che riuniscono alcuni attributi al fine di definire azioni ammissibili e non ammissibili. Ogni organizzazione viene fornita con una policy predefinita che è necessario attivare per iniziare a controllare l’accesso a oggetti specifici in base alle etichette. Le etichette applicate alle risorse negano l’accesso a meno che gli utenti non siano assegnati a un ruolo con un’etichetta corrispondente. Non è possibile modificare o eliminare i criteri predefiniti, ma è possibile attivarli o disattivarli."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/labels" text="Gestisci etichette"
+>abstract="I criteri sono dichiarazioni che riuniscono alcuni attributi al fine di definire azioni ammissibili e non ammissibili. A ogni organizzazione viene fornito un criterio predefinito che è necessario attivare per iniziare a controllare l’accesso a oggetti specifici in base alle etichette. Le etichette applicate alle risorse negano l’accesso a meno che gli utenti non siano assegnati a un ruolo con un’etichetta corrispondente. Non è possibile modificare o eliminare i criteri predefiniti, ma è possibile attivarli o disattivarli."
+>additional-url="https://experienceleague.adobe.com/it/docs/experience-platform/access-control/abac/permissions-ui/labels" text="Gestire le etichette"
 
 Per attivare un criterio esistente, selezionarlo dalla scheda **[!UICONTROL Criteri]**.
 

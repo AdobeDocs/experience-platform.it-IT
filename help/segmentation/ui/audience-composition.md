@@ -6,7 +6,7 @@ exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
 source-git-commit: c4064771a384a90d94903ba1761fc9ee20f47747
 workflow-type: tm+mt
 source-wordcount: '2313'
-ht-degree: 1%
+ht-degree: 11%
 
 ---
 
@@ -34,7 +34,7 @@ Dopo aver aggiornato i dettagli della composizione, seleziona **[!UICONTROL Salv
 
 L&#39;area di lavoro per la composizione del pubblico è composta da quattro diversi tipi di blocchi: **[[!UICONTROL Pubblico]](#audience-block)**, **[[!UICONTROL Escludi]](#exclude-block)**, **[[!UICONTROL Classifica]](#rank-block)** e **[[!UICONTROL Dividi]](#split-block)**.
 
-## [!UICONTROL Pubblico] {#audience-block}
+## [!UICONTROL Destinatari] {#audience-block}
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_audience"
@@ -106,7 +106,7 @@ Dopo aver aggiunto una regola personalizzata, seleziona **[!UICONTROL Salva]** p
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_exclude"
 >title="Escludi blocco"
->abstract="Il blocco Escludi consente di escludere pubblici o attributi specifici dalla composizione."
+>abstract="Escludi blocco ti consente di escludere tipi di pubblico o attributi specifici dalla composizione."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_exclude_type"
@@ -161,22 +161,22 @@ Viene visualizzato un elenco di attributi di profilo. Seleziona il tipo di attri
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_enrich"
 >title="Arricchire il blocco"
->abstract="Il blocco Enrich ti consente di arricchire il pubblico con attributi aggiuntivi provenienti dai set di dati di Adobe Experience Platform."
+>abstract="Arricchisci blocco consente di arricchire il pubblico con attributi aggiuntivi provenienti dai set di dati di Adobe Experience Platform."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_dataset"
 >title="Set di dati di arricchimento"
->abstract="Il set di dati di arricchimento contiene i dati da associare alla composizione."
+>abstract="Il set di dati di arricchimento contiene i dati che desideri associare alla composizione."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_enrich_criteria"
 >title="Criteri di arricchimento"
->abstract="I criteri di arricchimento includono la chiave di unione di Source e la chiave di unione del set di dati di arricchimento. Queste due chiavi riconciliano il set di dati di origine e il set di dati di arricchimento."
+>abstract="I criteri di arricchimento includono la chiave di unione di Origine e la chiave di unione del set di dati di arricchimento. Queste due chiavi riconciliano il set di dati di origine e il set di dati di arricchimento."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_enrich_attributes"
 >title="Attributi di arricchimento"
->abstract="Gli attributi di arricchimento sono gli attributi che desiderate associare alla composizione."
+>abstract="Gli attributi di arricchimento sono gli attributi che desideri associare alla composizione."
 
 >[!IMPORTANT]
 >
@@ -248,17 +248,17 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 ![The audiences that were added as part of the Join are shown.](../images/ui/audience-composition/selected-audiences.png) -->
 
-## [!UICONTROL Classifica] {#rank-block}
+## [!UICONTROL Classificare] {#rank-block}
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_ranking"
->title="Blocco della classificazione"
->abstract="Il blocco Classificazione consente di classificare i profili in base a un attributo specifico e di includerli nella composizione."
+>title="Blocco di classificazione"
+>abstract="Il blocco di classificazione consente di classificare i profili in base a un attributo specifico e di includerli nella composizione."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_rank_profilelimit_text"
->title="Aggiungere un limite di profili"
->abstract="L’opzione Aggiungi limite profilo consente di specificare un numero massimo di profili da includere nel processo di classificazione."
+>title="Aggiungere un limite al profilo"
+>abstract="Il pulsante di attivazione Aggiungi limite profilo ti consente di specificare un numero massimo di profili da includere nel processo di classificazione."
 
 Il tipo di blocco **[!UICONTROL Classifica]** consente di classificare e ordinare i profili in base a un attributo specificato e di includerli nella composizione.
 
@@ -284,22 +284,22 @@ Inoltre, puoi limitare il numero di profili restituiti abilitando l&#39;interrut
 
 ![L&#39;opzione Aggiungi limite profilo è evidenziata e consente di limitare il numero di profili restituiti.](../images/ui/audience-composition/add-profile-limit-rank.png)
 
-## [!UICONTROL Divisione] {#split-block}
+## [!UICONTROL Dividere] {#split-block}
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split"
->title="Dividi blocco"
->abstract="Il blocco Dividi consente di dividere la composizione in più percorsi."
+>title="Blocco di divisione"
+>abstract="Il blocco di divisione consente di dividere la composizione in più percorsi."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split_type"
 >title="Tipo di divisione"
->abstract="Potete dividere la composizione per Divisione percentuale o Divisione attributo. La percentuale di [PROD143]e casuale divide i profili in più percorsi. La suddivisione degli attributi consente di suddividere i profili in base a un attributo specificato."
+>abstract="Puoi dividere la composizione per Divisione percentuale o Divisione attributo. La divisione percentuale divide a caso i profili in più percorsi. La divisione per attributo consente invece di dividere i profili in base a un attributo specifico."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split_otherprofiles_text"
 >title="Altri profili"
->abstract="L’opzione Altri profili consente di creare un percorso aggiuntivo con i profili rimanenti che non corrispondono a nessuna delle condizioni specificate degli altri percorsi."
+>abstract="Il pulsante di attivazione Altri profili consente di creare un percorso aggiuntivo con i profili rimanenti che non corrispondono a nessuna delle condizioni specificate degli altri percorsi."
 
 Il tipo di blocco **[!UICONTROL Dividi]** ti consente di suddividere il nuovo pubblico in vari sottogruppi. Puoi suddividere questo pubblico in base alla percentuale o a un attributo.
 

@@ -6,7 +6,7 @@ exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
 source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
 source-wordcount: '1699'
-ht-degree: 10%
+ht-degree: 16%
 
 ---
 
@@ -122,9 +122,9 @@ Il video seguente ha lo scopo di aiutare a comprendere come creare un nuovo ruol
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_apicredentials_about"
->title="Cosa sono le credenziali API?"
->abstract="Le credenziali API vengono assegnate a ruoli per consentire a utenti e sviluppatori di accedere alle API di Platform. Utilizzando le API di Platform, puoi eseguire in modo programmatico operazioni CRUD (Create, Read, Update, Delete) di base sui dati, ad esempio la configurazione di attributi calcolati, l’accesso a dati/entità, l’esportazione di dati, l’eliminazione di dati o batch non necessari e altro ancora."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-apis/api-guide" text="Guida all’API di Platform"
+>title="Che cosa sono le credenziali API?"
+>abstract="Le credenziali API vengono assegnate ai ruoli per concedere a utenti e sviluppatori di accedere alle API di Platform. Utilizzando le API di Platform, puoi eseguire in modo programmatico operazioni CRUD (Create, Read, Update, Delete) di base sui dati, ad esempio la configurazione di attributi calcolati, l’accesso a dati/entità, l’esportazione di dati, l’eliminazione di dati o batch non necessari e altro ancora."
+>additional-url="https://experienceleague.adobe.com/it/docs/experience-platform/landing/platform-apis/api-guide" text="Guida all’API di Platform"
 
 >[!IMPORTANT]
 >
@@ -158,9 +158,9 @@ Verrai reindirizzato alla scheda **[!UICONTROL Credenziali API]**.
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_usergroups_about"
->title="Cosa sono i gruppi di utenti?"
+>title="Che cosa sono i gruppi di utenti?"
 >abstract="I gruppi di utenti sono insiemi di più utenti che condividono l’accesso alle stesse funzioni. L’accesso alle risorse all’interno di un’organizzazione viene gestito tramite i ruoli assegnati ai gruppi di utenti."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/roles" text="Gestire i ruoli"
+>additional-url="https://experienceleague.adobe.com/it/docs/experience-platform/access-control/abac/permissions-ui/roles" text="Gestire i ruoli"
 
 I gruppi di utenti sono utenti multipli che sono stati raggruppati e hanno accesso per eseguire le stesse funzioni.
 

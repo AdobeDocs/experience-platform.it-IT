@@ -2,10 +2,11 @@
 title: Eseguire trasformazioni sui dati esportati nelle destinazioni di archiviazione cloud utilizzando campi calcolati
 type: Tutorial
 description: Scopri come utilizzare la funzionalità dei campi calcolati per eseguire trasformazioni sui dati esportati nelle destinazioni dell’archiviazione cloud
-source-git-commit: 6122ddc078101c26061e8662de3fcdcb1cb65992
+exl-id: 1e14f964-4c03-4d0c-be8d-c3dcb48a335a
+source-git-commit: 9ce451f54f180aa6ee1831ba08e178ba1a8c8e2f
 workflow-type: tm+mt
 source-wordcount: '1600'
-ht-degree: 3%
+ht-degree: 8%
 
 ---
 
@@ -14,7 +15,7 @@ ht-degree: 3%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
 >title="Aggiungere campi calcolati"
->abstract="<p>Utilizza il controllo **Aggiungi campo calcolato** per eseguire varie trasformazioni di dati sui dati esportati nelle destinazioni dell&#39;archiviazione cloud. Ad esempio, puoi applicare l’hashing ai dati, concatenare gli array in stringhe e altro ancora."
+>abstract="<p>Utilizza il controllo **Aggiungi campo calcolato** per eseguire varie trasformazioni sui dati esportati verso destinazioni di archiviazione cloud. Ad esempio, puoi applicare l’hashing ai dati, concatenare gli array in stringhe e altro ancora."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html?lang=it#examples" text="Esempi"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html?lang=it#known-limitations" text="Limitazioni note"
 
@@ -39,7 +40,7 @@ Per utilizzare i campi calcolati per le trasformazioni dei dati:
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_control"
 >title="Abilitare lo schema di output gerarchico"
->abstract="Attiva questa impostazione per abilitare l’esportazione di array, mappe e oggetti in file JSON o Parquet."
+>abstract="Attiva questa impostazione per abilitare l’esportazione di array, mappe e oggetti verso file JSON o Parquet."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_calculated_field_disabled"

@@ -38,7 +38,7 @@ I tipi di pubblico possono essere creati in due modi diversi su Adobe Experience
 
 Quando componi direttamente un pubblico su Platform, puoi utilizzare la Composizione del pubblico. Per informazioni su come utilizzare la composizione del pubblico per creare un pubblico, consulta la [guida alla composizione del pubblico](./ui/audience-composition.md) per ulteriori informazioni.
 
-### Definizioni dei segmenti
+### Definizioni del segmento
 
 Sia che vengano create utilizzando l&#39;API che utilizzando [!DNL Segment Builder], le definizioni dei segmenti vengono in ultima analisi definite utilizzando [!DNL Profile Query Language] (PQL). Qui viene descritta la definizione del segmento concettuale nel linguaggio generato per recuperare i profili che soddisfano i criteri. Per ulteriori informazioni, vedere [Panoramica di PQL](./pql/overview.md).
 
@@ -67,7 +67,7 @@ Oltre alle composizioni del pubblico e alle definizioni dei segmenti, puoi utili
 >id="platform_segments_evaluation_streaming"
 >title="Valutazione in streaming"
 >abstract="La segmentazione in streaming è un processo continuo di selezione di dati che aggiorna i tipi di pubblico in risposta all’attività dell’utente."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/streaming-segmentation.html" text="Valutare gli eventi in tempo quasi reale con la segmentazione in streaming"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/streaming-segmentation.html?lang=it" text="Valutare gli eventi in tempo quasi reale con la segmentazione in streaming"
 
 Platform supporta attualmente tre metodi di valutazione dei tipi di pubblico: segmentazione in streaming, segmentazione in batch e segmentazione Edge.
 
@@ -94,7 +94,7 @@ I tipi di pubblico in batch vengono valutati automaticamente ogni 24 ore. Se des
 >id="platform_segments_evaluation_edge"
 >title="Valutazione Edge"
 >abstract="La segmentazione Edge è la capacità di valutare all’istante i segmenti in Platform sulla reta Edge, per casi d’uso di personalizzazione sulla stessa pagina e sulla pagina successiva."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/edge-segmentation.html" text="Guida alla segmentazione di Edge"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/edge-segmentation.html?lang=it" text="Guida alla segmentazione Edge"
 
 La segmentazione di Edge consente di valutare i segmenti in Platform [ istantaneamente in Edge Network](../landing/edge-and-hub-comparison.md), abilitando casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva.
 
