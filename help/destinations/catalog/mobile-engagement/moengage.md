@@ -3,9 +3,9 @@ title: Connessione moenging
 description: Moengi è una piattaforma di coinvolgimento dei clienti che potenzia in tempo reale le interazioni incentrate sul cliente tra consumatori e marchi.
 last-substantial-update: 2023-10-11T00:00:00Z
 exl-id: 051f1a10-3c41-4c0a-b187-bf80de0565f0
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: 1e22ad63414876af45d156ed030b8103908de8a1
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '1036'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 Utilizza la destinazione [!DNL Moengage] per connettere e mappare i dati di Adobe (attributi utente, segmenti ed eventi) a MoEngage in tempo reale. I clienti possono quindi agire su questi dati, distribuendo esperienze personalizzate e mirate.
 
-Ad Adobe, l’integrazione è molto semplice e intuitiva. È sufficiente prendere un profilo utente di Adobe e mapparlo su un attributo utente MoEngage.
+Con Adobe, l’integrazione è molto semplice e intuitiva. È sufficiente acquisire un profilo utente di Adobe e mapparlo su un attributo utente di MoEngage.
 
 >[!IMPORTANT]
 >
@@ -143,7 +143,10 @@ Per aggiungere altre mappature, ripeti i passaggi precedenti.
 
 ## Dati esportati / Convalida esportazione dati {#exported-data}
 
-Per verificare se i dati sono stati esportati correttamente nella destinazione [!DNL Moengage], passare al profilo utente nell&#39;account [!DNL Moengage]. Visualizzerai un attributo utente denominato Segmento AEP.
+Per verificare se i dati sono stati esportati correttamente nella destinazione [!DNL Moengage], passare al profilo utente nell&#39;account [!DNL Moengage]. In questo caso è necessario trovare un attributo utente denominato `AEPSegments`, creato automaticamente e gli altri attributi personalizzati mappati nei passaggi precedenti di Adobe Experience Platform.
+
+`AEPSegments` è un attributo di tipo array in [!DNL Moengage]. Elenca tutti i nomi dei tipi di pubblico di Adobe a cui l’utente è associato in Experience Platform.
+
 
 ![Mappatura destinazione moenging completata](../../assets/catalog/mobile-engagement/moengage/validation.png)
 
