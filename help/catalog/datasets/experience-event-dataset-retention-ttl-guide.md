@@ -1,9 +1,10 @@
 ---
 title: Gestire la conservazione dei set di dati di Experience Event nel Data Lake tramite TTL
 description: Scopri come valutare, impostare e gestire la conservazione dei set di dati di Experience Event nel data lake utilizzando le configurazioni Time-To-Live (TTL) con le API di Adobe Experience Platform. Questa guida spiega come la scadenza a livello di riga TTL supporti le regole di conservazione dei dati, ottimizzi l'efficienza dello storage e garantisca un'efficace gestione del ciclo di vita dei dati. Inoltre, fornisce casi d’uso e best practice per aiutarti ad applicare il TTL in modo efficace.
-source-git-commit: 74b6e5f10f7532745180760adf1d96bc57e7b590
+exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
+source-git-commit: affaeb0869423292a44eb7ada8343482bb163ca6
 workflow-type: tm+mt
-source-wordcount: '2106'
+source-wordcount: '2196'
 ht-degree: 1%
 
 ---
@@ -28,6 +29,12 @@ Il TTL è utile per gestire dati sensibili al tempo che perdono rilevanza nel te
 - Migliora le prestazioni delle query riducendo al minimo i dati irrilevanti.
 - Mantenere l’igiene dei dati conservando solo le informazioni pertinenti.
 - Ottimizzazione della conservazione dei dati per supportare gli obiettivi aziendali.
+
+>[!NOTE]
+>
+>La conservazione dei set di dati di Experience Event si applica ai dati evento memorizzati nel data lake. Se gestisci la conservazione in Real-Time Customer Data Platform, puoi utilizzare [Scadenza evento esperienza](../../profile/event-expirations.md) e [Scadenza profilo pseudonimo](../../profile/pseudonymous-profiles.md) insieme alle impostazioni di conservazione del data lake.
+>
+>Le configurazioni TTL consentono di ottimizzare lo storage in base ai diritti. Anche se i dati dell’archivio profili (utilizzati in Real-Time CDP) possono essere considerati obsoleti e rimossi dopo 30 giorni, gli stessi dati evento nel data lake possono rimanere disponibili per 12-13 mesi (o più in base all’adesione) per i casi di utilizzo di Analytics e Data Distiller.
 
 ### Esempio di settore {#industry-example}
 
@@ -121,7 +128,7 @@ In caso di esito positivo, la risposta restituisce la configurazione TTL per il 
                 "rowExpiration": {
                     "defaultValue": "P12M",
                     "maxValue": "P12M",
-                    "minValue": "P7D"
+                    "minValue": "P30D"
                 }
             },
             "adobe_unifiedProfile": {  
@@ -254,7 +261,7 @@ In caso di esito positivo, la risposta mostra la configurazione TTL per il set d
 | `extensions` | Contenitore per metadati aggiuntivi correlati al set di dati. |
 | `extensions.adobe_lakeHouse` | Specifica le impostazioni relative all&#39;architettura di archiviazione, incluse le configurazioni di scadenza a livello di riga |
 | `rowExpiration` | L’oggetto contiene impostazioni TTL che definiscono il periodo di conservazione per il set di dati. |
-| `rowExpiration.ttlValue` | Definisce la durata prima della rimozione automatica dei record nel set di dati. Utilizza il formato del periodo ISO-8601 (ad esempio, `P3M` per 3 mesi o `P7D` per una settimana). |
+| `rowExpiration.ttlValue` | Definisce la durata prima della rimozione automatica dei record nel set di dati. Utilizza il formato del periodo ISO-8601 (ad esempio, `P3M` per 3 mesi o `P30D` per una settimana). |
 | `rowExpiration.valueStatus` | La stringa indica se l’impostazione TTL è un valore di sistema predefinito o un valore personalizzato impostato da un utente. I valori possibili sono: `default`, `custom`. |
 | `rowExpiration.setBy` | Specifica chi ha modificato per ultimo l’impostazione TTL. I valori possibili includono: `user` (impostato manualmente) o `service` (assegnato automaticamente). |
 | `rowExpiration.updated` | Il timestamp dell’ultimo aggiornamento TTL. Questo valore indica quando è stata apportata l’ultima modifica all’impostazione TTL. |
@@ -418,4 +425,3 @@ Dopo aver appreso come gestire le impostazioni TTL per la scadenza a livello di 
 - Processi di conservazione: scopri come pianificare e automatizzare le scadenze dei set di dati nell’interfaccia utente di Platform con la [guida dell’interfaccia utente del ciclo di vita dei dati](../../hygiene/ui/dataset-expiration.md), oppure controlla le configurazioni di conservazione dei set di dati e verifica che i record scaduti vengano eliminati.
 - [Guida dell&#39;endpoint API per la scadenza del set di dati](../../hygiene/api/dataset-expiration.md): scopri come eliminare interi set di dati anziché solo le righe. Scopri come pianificare, gestire e automatizzare la scadenza dei set di dati utilizzando l’API per garantire un’efficiente conservazione dei dati.
 - [Panoramica sui criteri di utilizzo dei dati](../../data-governance/policies/overview.md): scopri come allineare la strategia di conservazione dei dati con requisiti di conformità più ampi e restrizioni di utilizzo del marketing.
-
