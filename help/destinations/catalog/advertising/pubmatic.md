@@ -1,14 +1,15 @@
 ---
 title: Connessione PubMatic
 description: PubMatic massimizza il valore del cliente offrendo la catena di fornitura del futuro del marketing digitale programmatico. PubMatic Connect combina tecnologia di piattaforma e servizio dedicato per migliorare il modo in cui l’inventario e i dati vengono assemblati e scambiati.
-last-substantial-update: 2023-12-14T00:00:00Z
+last-substantial-update: 2025-02-12T00:00:00Z
 exl-id: 21e07d2c-9a6a-4cfa-a4b8-7ca48613956c
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 2041c06e660e24f63d4c44adc0e8f3082bb007ae
 workflow-type: tm+mt
-source-wordcount: '923'
+source-wordcount: '1056'
 ht-degree: 2%
 
 ---
+
 
 # Destinazione PubMatic Connect {#pubmatic-connect}
 
@@ -16,11 +17,21 @@ ht-degree: 2%
 
 Utilizza [!DNL PubMatic Connect] per massimizzare il valore del cliente distribuendo la catena di fornitura del marketing digitale programmatico del futuro. [!DNL PubMatic Connect] combina tecnologia Platform e servizio dedicato per migliorare il modo in cui l&#39;inventario e i dati vengono assemblati e scambiati.
 
-Utilizzare questa destinazione per inviare i dati del pubblico alla piattaforma [!DNL PubMatic Connect].
+Sono disponibili due destinazioni che ti consentono di inviare dati sul pubblico alla piattaforma PubMatic Connect. Le funzionalità sono leggermente diverse:
+
+1. Connessione PubMatic
+
+   Durante l’attivazione iniziale, questa destinazione registrerà automaticamente i tipi di pubblico nella piattaforma PubMatic e utilizzerà l’ID Adobe Experience Platform interno per la mappatura.
+
+2. PubMatic Connect (mappatura ID pubblico personalizzata)
+
+   Questa destinazione ti consentirà di aggiungere manualmente un ID di mappatura durante il flusso di lavoro di attivazione. Utilizza questa destinazione quando i dati devono essere inviati a tipi di pubblico esistenti nella piattaforma PubMatic o se è richiesto un &quot;ID pubblico di Source&quot; personalizzato.
+
+![Visualizzazione affiancata dei due connettori PubMatic nel catalogo delle destinazioni.](/help/destinations/assets/catalog/advertising/pubmatic/two-pubmatic-connectors-side-by-side.png)
 
 >[!IMPORTANT]
 >
->Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti dal team [!DNL PubMatic]. Per richieste di informazioni o richieste di aggiornamento, contattale direttamente all&#39;indirizzo `support@pubmatic.com`.
+> Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti dal team [!DNL PubMatic]. Per richieste di informazioni o richieste di aggiornamento, contattale direttamente all&#39;indirizzo `support@pubmatic.com`.
 
 ## Casi d’uso {#use-cases}
 
@@ -39,7 +50,7 @@ Rivolgiti al tuo Account Manager [!DNL PubMatic] per assicurarti che il tuo acco
 [!DNL PubMatic Connect] supporta l&#39;attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](/help/identity-service/features/namespaces.md).
 
 | Identità di destinazione | Descrizione | Considerazioni |
-| --------------- | ------ | --- |
+| --------------- | ------------------------ | ------------------------------------------------------------------------------- |
 | GAID | GOOGLE ADVERTISING ID | Seleziona l’identità di destinazione GAID quando l’identità di origine è uno spazio dei nomi GAID. |
 | IDFA | Apple ID per inserzionisti | Selezionare l&#39;identità di destinazione IDFA quando l&#39;identità di origine è uno spazio dei nomi IDFA. |
 | extern_id | ID utente personalizzati | Seleziona questa identità di destinazione quando l&#39;identità di origine è uno spazio dei nomi personalizzato. |
@@ -51,8 +62,8 @@ Rivolgiti al tuo Account Manager [!DNL PubMatic] per assicurarti che il tuo acco
 Questa sezione descrive il tipo di pubblico che puoi esportare in questa destinazione.
 
 | Origine pubblico | Supportato | Descrizione |
-| --- | --------- | ------ |
-| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite il servizio di segmentazione [Experience Platform](../../../segmentation/home.md). |
+| --------------------------- | --------- | -------------------------------------------------------------------------------------------------------------------------- |
+| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
 | Caricamenti personalizzati | ✓ | Tipi di pubblico [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
@@ -62,9 +73,9 @@ Questa sezione descrive il tipo di pubblico che puoi esportare in questa destina
 Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, consulta la tabella seguente.
 
 | Elemento | Tipo | Note |
-| --- | --- | --- |
+| ---------------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Tipo di esportazione | **[!UICONTROL Esportazione segmento]** | Stai esportando tutti i membri di un segmento (pubblico) con gli identificatori (nome, numero di telefono o altri) utilizzati nella destinazione PubMatic Connect. |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Quando un profilo viene aggiornato in Experience Platform in base alla valutazione del segmento, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni sulle [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Quando un profilo viene aggiornato in Experience Platform in base alla valutazione dei segmenti, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni sulle [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -128,6 +139,12 @@ Selezione dei campi di destinazione:
 - Selezionare il numero del tipo [!DNL PubMatic UID] che corrisponde all&#39;identificatore selezionato nel primo passaggio.
 
 ![Mappa attributi e identità](../..//assets/catalog/advertising/pubmatic/export-identities-to-destination.png)
+
+### Pianificazione del pubblico
+
+Se utilizzi la destinazione PubMatic Connect (Custom Audience ID Mapping), devi fornire un ID di mappatura per ogni pubblico che corrisponda all’ID pubblico Source nella piattaforma PubMatic.
+
+![Pianificazione del pubblico](../..//assets/catalog/advertising/pubmatic/audience-scheduling-mapping-id.png)
 
 ## Dati esportati / Convalida esportazione dati {#exported-data}
 
