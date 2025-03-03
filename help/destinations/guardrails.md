@@ -6,10 +6,10 @@ product: experience platform
 type: Documentation
 description: Ulteriori informazioni sull’utilizzo predefinito dell’attivazione dei dati e sui limiti di tariffa.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: d01e9b6d64e9040df11c45750c784079a0289477
+source-git-commit: 818d751996cb84440f620ada50c6e6ec33cff40d
 workflow-type: tm+mt
-source-wordcount: '1715'
-ht-degree: 1%
+source-wordcount: '1666'
+ht-degree: 2%
 
 ---
 
@@ -53,7 +53,7 @@ I guardrail di seguito si applicano generalmente all&#39;attivazione tramite [tu
 | Numero massimo di attributi mappati a una destinazione | 50 | Guardrail delle prestazioni | Nel caso di più destinazioni e tipi di destinazione, puoi selezionare gli attributi e le identità del profilo da mappare per l’esportazione. Per prestazioni ottimali, è necessario mappare un massimo di 50 attributi in un flusso di dati su una destinazione. |
 | Numero massimo di destinazioni | 100 | Guarddrail imposto dal sistema | Puoi creare un massimo di 100 destinazioni a cui connetterti e attivare i dati, *per sandbox*. [Le destinazioni di personalizzazione di Edge (Personalizzazione personalizzata)](#edge-destinations-activation) possono rappresentare un massimo di 10 delle 100 destinazioni consigliate. |
 | Tipo di dati attivati nelle destinazioni | Dati profilo, comprese identità e mappa identità | Guarddrail imposto dal sistema | Attualmente, è possibile esportare solo *attributi record profilo* nelle destinazioni. Al momento, gli attributi XDM che descrivono i dati dell’evento non sono supportati per l’esportazione. |
-| Tipo di dati attivati nelle destinazioni: supporto degli attributi di array e mappa | Parzialmente disponibile | Guarddrail imposto dal sistema | Puoi esportare gli attributi dell&#39;array in [destinazioni basate su file](/help/destinations/destination-types.md#file-based). È comunque necessario utilizzare la funzione `array_to_string` per appiattire l&#39;array in una stringa nel file di destinazione. [Ulteriori informazioni](/help/release-notes/2024/october-2024.md#destinations-new-updated-functionality) sulla funzionalità. <br><br> Al momento, è **non** possibile esportare *attributi di mappa* nelle destinazioni. L&#39;eccezione a questa regola è la [mappa identità](/help/xdm/field-groups/profile/identitymap.md), che viene esportata sia nello streaming che nelle attivazioni basate su file. |
+| Tipo di dati attivati nelle destinazioni: supporto degli attributi di array e mappa | Parzialmente disponibile | Guarddrail imposto dal sistema | Puoi esportare gli attributi dell&#39;array in [destinazioni basate su file](/help/destinations/destination-types.md#file-based). [Ulteriori informazioni](/help/destinations/ui/export-arrays-calculated-fields.md) sulla nuova funzionalità. |
 
 {style="table-layout:auto"}
 
@@ -63,7 +63,7 @@ I guardrail di seguito si applicano all&#39;attivazione tramite [destinazioni di
 
 | Guardrail | Limite | Tipo limite | Descrizione |
 | --- | --- | --- | --- |
-| Numero di attivazioni (messaggi HTTP con esportazioni profilo) al secondo | N/D | - | Al momento non esiste alcun limite al numero di messaggi al secondo inviati dagli endpoint API di Experience Platform alle destinazioni partner. <br> Eventuali limiti o latenze sono determinati dall&#39;endpoint in cui Experience Platform invia i dati. Verificare anche la pagina del [catalogo](/help/destinations/catalog/overview.md) della destinazione a cui si sta effettuando la connessione e l&#39;attivazione dei dati. |
+| Numero di attivazioni (messaggi HTTP con esportazioni profilo) al secondo | N/D | - | Al momento non esiste alcun limite al numero di messaggi al secondo inviati da Experience Platform agli endpoint API delle destinazioni partner. <br> Eventuali limiti o latenze sono determinati dall&#39;endpoint in cui Experience Platform invia i dati. Verificare anche la pagina del [catalogo](/help/destinations/catalog/overview.md) della destinazione a cui si sta effettuando la connessione e l&#39;attivazione dei dati. |
 
 {style="table-layout:auto"}
 
@@ -171,14 +171,14 @@ The guardrails below are the same whether you are exporting parquet of JSON file
 Ulteriori informazioni sull&#39;esportazione di [set di dati](/help/destinations/ui/export-datasets.md).
 
 
-### Destination SDK guardrail {#destination-sdk-guardrails}
+### Guardrail Destination SDK {#destination-sdk-guardrails}
 
-[Destination SDK](/help/destinations/destination-sdk/overview.md) è una suite di API di configurazione che ti consente di configurare i modelli di integrazione delle destinazioni, ad Experience Platform per fornire i dati di pubblico e profilo all&#39;endpoint, in base ai formati di dati e autenticazione scelti. I guardrail riportati di seguito si applicano alle destinazioni configurate mediante Destination SDK.
+[Destination SDK](/help/destinations/destination-sdk/overview.md) è una suite di API di configurazione che ti consente di configurare i modelli di integrazione delle destinazioni affinché Experience Platform distribuisca i dati di pubblico e profilo all&#39;endpoint, in base ai formati di dati e autenticazione scelti. I guardrail riportati di seguito si applicano alle destinazioni configurate con Destination SDK.
 
 | Guardrail | Limite | Tipo limite | Descrizione |
 | --- | --- | --- | --- |
-| Numero massimo di [destinazioni personalizzate private](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) | 5 | Guardrail delle prestazioni | Puoi creare fino a 5 destinazioni private di flussi personalizzati o batch utilizzando Destination SDK. Se devi creare più di 5 di queste destinazioni, rivolgiti a un rappresentante dell’assistenza personalizzata. |
-| Criterio di esportazione profilo per Destination SDK | <ul><li>`maxBatchAgeInSecs` (minimo 1.800 e massimo 3.600)</li><li>`maxNumEventsInBatch` (minimo 1.000 e massimo 10.000)</li></ul> | Guarddrail imposto dal sistema | Quando utilizzi l&#39;opzione di [aggregazione configurabile](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) per la destinazione, tieni presente i valori minimo e massimo che determinano la frequenza con cui i messaggi HTTP vengono inviati alla destinazione basata su API e il numero di profili che i messaggi devono includere. |
+| Numero massimo di [destinazioni personalizzate private](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) | 5 | Guardrail delle prestazioni | Puoi creare fino a 5 destinazioni private di flussi personalizzati o batch con Destination SDK. Se devi creare più di 5 di queste destinazioni, rivolgiti a un rappresentante dell’assistenza personalizzata. |
+| Criteri di esportazione profilo per Destination SDK | <ul><li>`maxBatchAgeInSecs` (minimo 1.800 e massimo 3.600)</li><li>`maxNumEventsInBatch` (minimo 1.000 e massimo 10.000)</li></ul> | Guarddrail imposto dal sistema | Quando utilizzi l&#39;opzione di [aggregazione configurabile](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) per la destinazione, tieni presente i valori minimo e massimo che determinano la frequenza con cui i messaggi HTTP vengono inviati alla destinazione basata su API e il numero di profili che i messaggi devono includere. |
 
 {style="table-layout:auto"}
 
@@ -188,16 +188,16 @@ Dettagli sulle soglie o limitazioni di limitazione per determinate destinazioni.
 
 | Tipo di destinazione | Descrizione |
 | --- | --- |
-| Destinazioni Enterprise (API HTTP, Amazon Kinesis, Azure EventHubs) | Nel 95% del tempo, Experience Platform tenta di offrire una latenza di velocità effettiva inferiore a 10 minuti per i messaggi inviati correttamente con una frequenza inferiore a 10.000 richieste al secondo per ogni flusso di dati verso una destinazione aziendale. <br> In caso di richieste non riuscite alla destinazione Enterprise, Experience Platform memorizza le richieste non riuscite e tenta di inviarle all&#39;endpoint due volte. |
+| Destinazioni Enterprise (API HTTP, Amazon Kinesis, Azure EventHubs) | Nel 95% dei casi, Experience Platform tenta di offrire una latenza di velocità effettiva inferiore a 10 minuti per i messaggi inviati con successo, con una frequenza inferiore a 10.000 richieste al secondo per ogni flusso di dati verso una destinazione aziendale. <br> In caso di richieste non riuscite alla destinazione Enterprise, Experience Platform memorizza le richieste non riuscite e tenta di inviarle all&#39;endpoint due volte. |
 
 {style="table-layout:auto"}
 
 ## Passaggi successivi
 
-Consulta la seguente documentazione per ulteriori informazioni su altri guardrail dei servizi Experience Platform, informazioni sulla latenza end-to-end e informazioni sulle licenze dai documenti di descrizione del prodotto Real-Time CDP:
+Consulta la seguente documentazione per ulteriori informazioni su altri guardrail dei servizi Experience Platform, sulla latenza end-to-end e sulle licenze dai documenti di descrizione del prodotto Real-Time CDP:
 
 * [Guardrail Real-Time CDP](/help/rtcdp/guardrails/overview.md)
 * [Diagrammi di latenza end-to-end](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) per vari servizi Experience Platform.
-* [Real-time Customer Data Platform (Edizione B2C - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2P - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2B - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (Edizione B2C - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
