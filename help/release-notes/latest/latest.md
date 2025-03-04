@@ -2,18 +2,14 @@
 title: Note sulla versione di Adobe Experience Platform - Febbraio 2025
 description: Note sulla versione di Adobe Experience Platform di febbraio 2025.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: e8c1d7d3b5cc205b9258b4fec5dc7fa68d0d3b27
 workflow-type: tm+mt
-source-wordcount: '1645'
+source-wordcount: '1628'
 ht-degree: 97%
 
 ---
 
 # Note sulla versione di Adobe Experience Platform
-
->[!TIP]
->
->Questa versione include miglioramenti al componente aggiuntivo Composizione di pubblico federato. Per ulteriori informazioni, consulta la [documentazione sulla composizione di pubblico federato](https://experienceleague.adobe.com/it/docs/federated-audience-composition/using/release-notes).
 
 **Data di rilascio: 18 febbraio 2025**
 
@@ -23,6 +19,7 @@ Aggiornamenti alle funzioni e alla documentazione esistenti in Adobe Experience 
 - [Servizio catalogo](#catalog-service)
 - [Preparazione dei dati](#data-prep)
 - [Destinazioni](#destinations)
+- [Composizione Pubblico Federato](https://experienceleague.adobe.com/it/docs/federated-audience-composition/using/release-notes){target="_blank"}
 - [Origini](#sources)
 - [Servizio di segmentazione](#segmentation)
 - [Aggiornamenti della documentazione](#documentation-updates)
