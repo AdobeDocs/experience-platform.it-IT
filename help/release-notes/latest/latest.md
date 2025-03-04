@@ -2,7 +2,7 @@
 title: Note sulla versione di Adobe Experience Platform - Febbraio 2025
 description: Note sulla versione di Adobe Experience Platform di febbraio 2025.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: c4064771a384a90d94903ba1761fc9ee20f47747
+source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
 workflow-type: tm+mt
 source-wordcount: '1645'
 ht-degree: 97%
@@ -97,7 +97,7 @@ Per ulteriori informazioni, consulta la [panoramica sulla preparazione dei dati]
 | Utilizzare le etichette di accesso per gestire l’accesso degli utenti ai flussi di dati di destinazione | Come parte della funzionalità del [[!UICONTROL controllo degli accessi basato su attributi]](/help/access-control/abac/overview.md) in Real-Time CDP, ora puoi applicare le etichette di accesso ai [flussi di dati di destinazione](/help/dataflows/ui/monitor-destinations.md). In questo modo, puoi garantire che solo un sottoinsieme di utenti dell’organizzazione abbia accesso a specifici flussi di dati di destinazione. <br> **Importante**: durante la ricerca dei flussi di dati di destinazione utilizzando la casella di ricerca nella parte superiore dell’interfaccia utente di Experience Platform, i risultati potrebbero includere flussi di dati di destinazione che le tue etichette di accesso utente non consentono di visualizzare. Questo comportamento verrà corretto nelle versioni future. |
 | [Reporting a livello di pubblico](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) per la [connessione Marketo Engage](/help/destinations/catalog/adobe/marketo-engage.md) | Ora puoi [visualizzare informazioni](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) sulle identità attivate, escluse o non riuscite suddivise a livello di pubblico, per ogni pubblico che fa parte dei flussi di dati per questa destinazione. |
 | Supporto di tipi di pubblico esterni per le connessioni [TikTok](/help/destinations/catalog/social/tiktok.md) e [Snap Inc](/help/destinations/catalog/advertising/snap-inc.md) | Puoi attivare tipi di pubblico esterni per queste destinazioni da [caricamenti personalizzati](../../segmentation/ui/audience-portal.md#import-audience) e dalla [composizione di pubblico federato](https://experienceleague.adobe.com/it/docs/federated-audience-composition/using/start/audiences). |
-| Esportare array, mappe e oggetti nelle destinazioni di archiviazione cloud | Attivando o disattivando il nuovo pulsante **[!UICONTROL Esporta array, mappe, oggetti]** durante la connessione a una destinazione di archiviazione cloud, ora puoi esportare oggetti complessi alle destinazioni selezionate. [Ulteriori informazioni](/help/destinations/ui/export-arrays-calculated-fields.md) sulla nuova funzionalità. |
+| Esportare array, mappe e oggetti nelle destinazioni di archiviazione cloud | Attivando o disattivando il nuovo pulsante **[!UICONTROL Esporta array, mappe, oggetti]** durante la connessione a una destinazione di archiviazione cloud, ora puoi esportare oggetti complessi alle destinazioni selezionate. [Ulteriori informazioni](/help/destinations/ui/export-arrays-maps-objects.md) sulla nuova funzionalità. |
 
 {style="table-layout:auto"}
 

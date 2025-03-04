@@ -2,7 +2,7 @@
 title: Note sulla versione di Adobe Experience Platform di ottobre 2023
 description: Note sulla versione di Adobe Experience Platform di ottobre 2023.
 exl-id: e9cf5299-8350-4b40-8f56-05e598846875
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
 workflow-type: tm+mt
 source-wordcount: '1054'
 ht-degree: 40%
@@ -69,7 +69,7 @@ Per ulteriori informazioni sulla raccolta dati, consulta la [panoramica sulla ra
 
 | Funzionalità | Descrizione |
 | ----------- | ----------- |
-| (Beta) Supporto delle funzioni di hashing nei campi calcolati | Oltre alle funzioni specifiche per [esportare array](../../destinations/ui/export-arrays-calculated-fields.md) o elementi da un array, è ora possibile utilizzare ulteriori [funzioni di hashing](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) per eseguire l&#39;hashing degli attributi nei file esportati. Le funzioni di hashing supportate sono: `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
+| (Beta) Supporto delle funzioni di hashing nei campi calcolati | Oltre alle funzioni specifiche per [esportare array](../../destinations/ui/export-arrays-maps-objects.md) o elementi da un array, è ora possibile utilizzare ulteriori [funzioni di hashing](../../destinations/ui/export-arrays-maps-objects.md#hashing-functions) per eseguire l&#39;hashing degli attributi nei file esportati. Le funzioni di hashing supportate sono: `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
 | (GA limitato) Attiva i tipi di pubblico dell’account su determinate destinazioni | I clienti B2B di Real-Time CDP ora possono attivare [tipi di pubblico dell&#39;account](../../segmentation/types/account-audiences.md) in determinate destinazioni. Per ulteriori informazioni su questa funzione, leggere l&#39;esercitazione [attivare il pubblico dell&#39;account](/help/destinations/ui/activate-account-audiences.md). |
 
 {style="table-layout:auto"}

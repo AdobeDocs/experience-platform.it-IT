@@ -2,7 +2,7 @@
 title: Note sulla versione di Adobe Experience Platform di settembre 2023
 description: Note sulla versione di Adobe Experience Platform di settembre 2023.
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
+source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
 workflow-type: tm+mt
 source-wordcount: '2265'
 ht-degree: 31%
@@ -55,7 +55,7 @@ In Adobe Experience Platform sono disponibili più [!DNL dashboards] tramite i q
 
 | Funzione | Descrizione |
 | --- | --- |
-| [Miglioramento dashboard utilizzo licenze](../../dashboards/guides/license-usage.md) | Mantenere il controllo dei contratti di licenza con rapporti migliorati e visualizzazioni delle metriche chiave relative all’utilizzo delle licenze della tua organizzazione. Questi miglioramenti forniscono un elevato grado di granularità sulle metriche di utilizzo della licenza per tutti i prodotti di Experience Platform acquistati. |
+| [Miglioramento dashboard utilizzo licenze](../../dashboards/guides/license-usage.md) | Mantenere il controllo dei contratti di licenza con rapporti migliorati e visualizzazioni delle metriche chiave relative all’utilizzo delle licenze della tua organizzazione. Questi miglioramenti forniscono un elevato grado di granularità sulle metriche di utilizzo delle licenze per tutti i prodotti Experience Platform acquistati. |
 
 {style="table-layout:auto"}
 
@@ -70,7 +70,7 @@ Adobe Experience Platform fornisce una suite di tecnologie che consente di racco
 | Tipo | Funzione | Descrizione |
 | --- | --- | --- |
 | Stream di dati | Supporto per la ricerca del dispositivo | Durante la configurazione di un flusso di dati, ora puoi selezionare il livello di informazioni di ricerca del dispositivo da raccogliere. Le informazioni sulla ricerca del dispositivo includono dati sul dispositivo, sull’hardware, sul sistema operativo e sul browser utilizzati per interagire con la pagina. Impossibile raccogliere le informazioni di ricerca del dispositivo <br> insieme agli hint dell&#39;agente utente e del client. La scelta di raccogliere informazioni sul dispositivo disabiliterà la raccolta di hint dell’agente utente e del client e viceversa. Tutte le informazioni di ricerca del dispositivo sono memorizzate nel gruppo di campi `xdm:device`. Ulteriori informazioni sono disponibili nella documentazione su [configurazione degli stream di dati](../../datastreams/configure.md#geolocation-device-lookup). |
-| Estensioni | Estensione API per [!DNL TikTok] eventi Web | L&#39;estensione [[!DNL TikTok] Web Events API](https://exchange.adobe.com/apps/ec/109834/tiktok-web-events-api) consente di sfruttare i dati acquisiti nell&#39;Edge Network di Adobe Experience Platform e di inviarli a [!DNL TikTok] sotto forma di eventi lato server utilizzando l&#39;API [!DNL TikTok] Web Events. |
+| Estensioni | Estensione API per [!DNL TikTok] eventi Web | L&#39;estensione [[!DNL TikTok] Web Events API](https://exchange.adobe.com/apps/ec/109834/tiktok-web-events-api) consente di sfruttare i dati acquisiti in Adobe Experience Platform Edge Network e di inviarli a [!DNL TikTok] sotto forma di eventi lato server utilizzando l&#39;API [!DNL TikTok] Web Events. |
 
 {style="table-layout:auto"}
 
@@ -92,7 +92,7 @@ Per ulteriori informazioni sulla governance dei dati, consulta la [panoramica su
 
 ## Igiene dei dati {#hygiene}
 
-Experience Platform fornisce una suite di funzionalità di igiene dei dati che consente di gestire i dati memorizzati tramite l’eliminazione programmatica di record e set di dati consumer. Utilizzando l&#39;area di lavoro [!UICONTROL Ciclo di vita dei dati] nell&#39;interfaccia utente o tramite chiamate all&#39;API di igiene dei dati, puoi gestire in modo efficace gli archivi di dati. Usa queste funzionaità per garantire che le informazioni vengano utilizzate come previsto, che vengano aggiornate quando è necessario correggere dati scorretti e che vengano eliminate quando i criteri organizzativi lo ritengono necessario.
+Experience Platform fornisce una suite di funzionalità di igiene dei dati che consente di gestire i dati memorizzati tramite l’eliminazione programmatica di record e set di dati dei consumatori. Utilizzando l&#39;area di lavoro [!UICONTROL Ciclo di vita dei dati] nell&#39;interfaccia utente o tramite chiamate all&#39;API di igiene dei dati, puoi gestire in modo efficace gli archivi di dati. Usa queste funzionaità per garantire che le informazioni vengano utilizzate come previsto, che vengano aggiornate quando è necessario correggere dati scorretti e che vengano eliminate quando i criteri organizzativi lo ritengono necessario.
 
 **Nuove funzioni**
 
@@ -133,9 +133,9 @@ Add these to release notes as they go out
 
 | Funzionalità | Descrizione |
 | ----------- | ----------- |
-| Esportazioni di dati in Real-Time CDP | La funzionalità [esportazione set di dati](../../destinations/ui/export-datasets.md) è ora generalmente disponibile. Vedi [quali set di dati puoi esportare in base all&#39;app Experience Platform](../../destinations/ui/export-datasets.md#datasets-to-export) che hai acquistato e controlla [guardrail per l&#39;esportazione dei set di dati](/help/destinations/guardrails.md#dataset-exports). |
-| (Beta) Supporto per l&#39;esportazione di oggetti di tipo array | Esporta array di valori primitivi (valori stringa, int o booleani) come file di schema flat nelle destinazioni di archiviazione cloud. Ulteriori informazioni sulle funzionalità sono disponibili nella [documentazione](../../destinations/ui/export-arrays-calculated-fields.md). |
-| Selettori dinamici a discesa nella Destination SDK | Durante la creazione di una destinazione tramite Destination SDK, è ora possibile utilizzare [selettori a discesa dinamici](../../destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors) per popolare i campi di un selettore a discesa con i valori recuperati da un&#39;API. |
+| Esportazioni di dati in Real-Time CDP | La funzionalità [esportazione set di dati](../../destinations/ui/export-datasets.md) è ora generalmente disponibile. Consulta [quali set di dati puoi esportare in base all&#39;app Experience Platform](../../destinations/ui/export-datasets.md#datasets-to-export) che hai acquistato e controlla [guardrail per l&#39;esportazione dei set di dati](/help/destinations/guardrails.md#dataset-exports). |
+| (Beta) Supporto per l&#39;esportazione di oggetti di tipo array | Esporta array di valori primitivi (valori stringa, int o booleani) come file di schema flat nelle destinazioni di archiviazione cloud. Ulteriori informazioni sulle funzionalità sono disponibili nella [documentazione](../../destinations/ui/export-arrays-maps-objects.md). |
+| Selettori dinamici a discesa in Destination SDK | Durante la creazione di una destinazione tramite Destination SDK, è ora possibile utilizzare [selettori a discesa dinamici](../../destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors) per popolare i campi di un selettore a discesa con i valori recuperati da un&#39;API. |
 
 **Correzioni di problemi e miglioramenti** {#destinations-fixes-and-enhancements}
 
@@ -153,7 +153,7 @@ XDM è una specifica open-source che fornisce strutture e definizioni comuni (sc
 | Funzione | Descrizione |
 | --- | --- |
 | Azioni rapide aggiunte all’Editor di schema | Sono state aggiunte nuove azioni rapide all’area di lavoro dell’editor di schemi. Ora puoi copiare la struttura JSON o eliminare lo schema direttamente dall’editor.<br>![Azioni rapide nell&#39;Editor di schema.](../2023/assets/schema-editor-copy-json.png "Editor schemi con altro e Copia in JSON evidenziati."){width="100" zoomable="yes"} |
-| Filtrare le risorse XDM per creatore personalizzato o standard | Gli elenchi di schemi, gruppi di campi, tipi di dati e classi disponibili ora sono prefiltrati in base al loro metodo di creazione. Questo consente di filtrare le risorse in base al fatto che siano state create o create dall’Adobe.<br>![Filtri standard e personalizzati nell&#39;area di lavoro Schemi.](../2023/assets/standard-and-custom-classes.png "Area di lavoro Schemi con i filtri Standard e Personalizzati evidenziati."){width="100" zoomable="yes"} <br> Per ulteriori informazioni, vedere la [documentazione relativa alla creazione e alla modifica delle risorse](../../xdm/ui/resources/classes.md#filter.md). |
+| Filtrare le risorse XDM per creatore personalizzato o standard | Gli elenchi di schemi, gruppi di campi, tipi di dati e classi disponibili ora sono prefiltrati in base al loro metodo di creazione. Questo ti consente di filtrare le risorse in base al fatto che siano state create o create da Adobe.<br>![Filtri standard e personalizzati nell&#39;area di lavoro Schemi.](../2023/assets/standard-and-custom-classes.png "Area di lavoro Schemi con i filtri Standard e Personalizzati evidenziati."){width="100" zoomable="yes"} <br> Per ulteriori informazioni, vedere la [documentazione relativa alla creazione e alla modifica delle risorse](../../xdm/ui/resources/classes.md#filter.md). |
 
 **Funzioni aggiornate**
 
@@ -191,7 +191,7 @@ Adobe Experience Platform Identity Service offre una panoramica completa della c
 | Funzione | Descrizione |
 | --- | --- |
 | Miglioramenti dell’interfaccia utente di Identity Service | Utilizza lo strumento di creazione dello spazio dei nomi personalizzato migliorato nell’interfaccia utente di Experience Platform per gestire meglio gli spazi dei nomi personalizzati e i corrispondenti tipi di identità. L’interfaccia utente avanzata del servizio Identity offre: <ul><li>Esperienza contestuale: suggerimenti visivi, chiarezza e contesto per definire lo spazio dei nomi e i tipi di identità.</li><li>Precisione: è stata migliorata la gestione degli errori, senza più nomi di identità duplicati.</li><li>Discoverability: accesso alla documentazione da una finestra di dialogo interna al prodotto.</li></ul> Per ulteriori informazioni, consulta la guida su [creazione di spazi dei nomi personalizzati](../../identity-service/features/namespaces.md#create-namespaces). |
-| Modifiche ai limiti del grafo delle identità | Il limite del grafico delle identità è cambiato da 150 a 50. Quando una nuova identità viene acquisita in un grafico completo, l’identità meno recente in base alla marca temporale e al tipo di identità dell’acquisizione viene eliminata. Ai tipi di identità dei cookie viene assegnata una priorità per l’eliminazione. Contatta il team dell’account Adobe per richiedere una modifica nel tipo di identità se la sandbox di produzione contiene: <ul><li>uno spazio dei nomi personalizzato in cui gli identificatori della persona (come gli ID del sistema di gestione delle relazioni con i clienti) sono configurati come tipo di identità cookie/dispositivo.</li><li>uno spazio dei nomi personalizzato in cui gli identificatori cookie/dispositivo sono configurati come tipo di identità tra dispositivi.</li></ul> Queste richieste verranno elaborate manualmente da Adobe Engineering. Per ulteriori informazioni, leggere [guardrail per i dati del servizio Identity](../../identity-service/guardrails.md) e la guida sulle [best practice per l&#39;adesione alle licenze di gestione dati](../../landing/license-usage-and-guardrails/data-management-best-practices.md). |
+| Modifiche ai limiti del grafo delle identità | Il limite del grafico delle identità è cambiato da 150 a 50. Quando una nuova identità viene acquisita in un grafico completo, l’identità meno recente in base alla marca temporale e al tipo di identità dell’acquisizione viene eliminata. Ai tipi di identità dei cookie viene assegnata una priorità per l’eliminazione. Contatta il team del tuo account Adobe per richiedere una modifica nel tipo di identità se la sandbox di produzione contiene: <ul><li>uno spazio dei nomi personalizzato in cui gli identificatori della persona (come gli ID del sistema di gestione delle relazioni con i clienti) sono configurati come tipo di identità cookie/dispositivo.</li><li>uno spazio dei nomi personalizzato in cui gli identificatori cookie/dispositivo sono configurati come tipo di identità tra dispositivi.</li></ul> I tecnici Adobe elaboreranno manualmente queste richieste. Per ulteriori informazioni, leggere [guardrail per i dati del servizio Identity](../../identity-service/guardrails.md) e la guida sulle [best practice per l&#39;adesione alle licenze di gestione dati](../../landing/license-usage-and-guardrails/data-management-best-practices.md). |
 
 {style="table-layout:auto"}
 
@@ -233,7 +233,7 @@ Experience Platform fornisce un’API RESTful e un’interfaccia utente interatt
 
 | Funzione | Descrizione |
 | --- | --- |
-| Nuovi parametri per la paginazione `offset` nelle origini self-service (SDK batch) | È ora possibile specificare `endConditionName` e `endConditionValue` per l&#39;origine quando si utilizza la paginazione `offset`. Questi parametri ti consentono di indicare la condizione che terminerà il ciclo di paginazione nella successiva richiesta HTTP. Per ulteriori informazioni, leggere la [guida all&#39;impaginazione per Self-Serve Sources (Batch SDK)](../../sources/sources-sdk/config/sourcespec.md#pagination). |
+| Nuovi parametri per la paginazione `offset` nelle origini self-service (Batch SDK) | È ora possibile specificare `endConditionName` e `endConditionValue` per l&#39;origine quando si utilizza la paginazione `offset`. Questi parametri ti consentono di indicare la condizione che terminerà il ciclo di paginazione nella successiva richiesta HTTP. Per ulteriori informazioni, leggere la [guida all&#39;impaginazione per le origini self-service (Batch SDK)](../../sources/sources-sdk/config/sourcespec.md#pagination). |
 
 {style="table-layout:auto"}
 

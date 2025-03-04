@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: Ulteriori informazioni sull’utilizzo predefinito dell’attivazione dei dati e sui limiti di tariffa.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 818d751996cb84440f620ada50c6e6ec33cff40d
+source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
 workflow-type: tm+mt
 source-wordcount: '1666'
 ht-degree: 2%
@@ -53,7 +53,7 @@ I guardrail di seguito si applicano generalmente all&#39;attivazione tramite [tu
 | Numero massimo di attributi mappati a una destinazione | 50 | Guardrail delle prestazioni | Nel caso di più destinazioni e tipi di destinazione, puoi selezionare gli attributi e le identità del profilo da mappare per l’esportazione. Per prestazioni ottimali, è necessario mappare un massimo di 50 attributi in un flusso di dati su una destinazione. |
 | Numero massimo di destinazioni | 100 | Guarddrail imposto dal sistema | Puoi creare un massimo di 100 destinazioni a cui connetterti e attivare i dati, *per sandbox*. [Le destinazioni di personalizzazione di Edge (Personalizzazione personalizzata)](#edge-destinations-activation) possono rappresentare un massimo di 10 delle 100 destinazioni consigliate. |
 | Tipo di dati attivati nelle destinazioni | Dati profilo, comprese identità e mappa identità | Guarddrail imposto dal sistema | Attualmente, è possibile esportare solo *attributi record profilo* nelle destinazioni. Al momento, gli attributi XDM che descrivono i dati dell’evento non sono supportati per l’esportazione. |
-| Tipo di dati attivati nelle destinazioni: supporto degli attributi di array e mappa | Parzialmente disponibile | Guarddrail imposto dal sistema | Puoi esportare gli attributi dell&#39;array in [destinazioni basate su file](/help/destinations/destination-types.md#file-based). [Ulteriori informazioni](/help/destinations/ui/export-arrays-calculated-fields.md) sulla nuova funzionalità. |
+| Tipo di dati attivati nelle destinazioni: supporto degli attributi di array e mappa | Parzialmente disponibile | Guarddrail imposto dal sistema | Puoi esportare gli attributi dell&#39;array in [destinazioni basate su file](/help/destinations/destination-types.md#file-based). [Ulteriori informazioni](/help/destinations/ui/export-arrays-maps-objects.md) sulla nuova funzionalità. |
 
 {style="table-layout:auto"}
 

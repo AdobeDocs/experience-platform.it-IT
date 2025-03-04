@@ -3,10 +3,10 @@ title: Attivare i tipi di pubblico per le destinazioni di esportazione dei profi
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico disponibili in Adobe Experience Platform inviandoli a destinazioni basate su profili in batch.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: b4b185cab4defbf9559089e5152075674dab52d1
+source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
 workflow-type: tm+mt
-source-wordcount: '4387'
-ht-degree: 11%
+source-wordcount: '4374'
+ht-degree: 12%
 
 ---
 
@@ -214,7 +214,7 @@ Il nome di destinazione e l’ID del pubblico non possono essere rimossi dai nom
 | **[!UICONTROL Testo personalizzato]** | Qualsiasi testo personalizzato che si desidera aggiungere ai nomi dei file. |
 | **[!UICONTROL ID destinazione]** | ID del flusso di dati di destinazione utilizzato per esportare il pubblico. |
 | **[!UICONTROL Nome destinazione]** | Il nome del flusso di dati di destinazione utilizzato per esportare il pubblico. |
-| **[!UICONTROL Nome organizzazione]** | Il nome della tua organizzazione in Experience Platform. |
+| **[!UICONTROL Nome organizzazione]** | Nome della tua organizzazione in Experience Platform. |
 | **[!UICONTROL Nome sandbox]** | ID della sandbox utilizzato per esportare il pubblico. |
 
 {style="table-layout:auto"}
@@ -429,11 +429,11 @@ Se si presuppone la deduplicazione per la chiave composita `personalEmail + last
 | johndoe@example.com | D | John |
 | johndoe@example.com | Doe | John |
 
-Adobe consiglia di selezionare uno spazio dei nomi di identità, ad esempio [!DNL CRM ID] o un indirizzo e-mail, come chiave di deduplicazione, per garantire che tutti i record di profilo siano identificati in modo univoco.
+Adobe consiglia di selezionare uno spazio dei nomi di identità come [!DNL CRM ID] o un indirizzo e-mail come chiave di deduplicazione, per garantire che tutti i record di profilo siano identificati in modo univoco.
 
 ### Comportamento di deduplicazione per profili con la stessa marca temporale {#deduplication-same-timestamp}
 
-Durante l’esportazione di profili in destinazioni basate su file, la deduplicazione assicura che venga esportato un solo profilo quando più profili condividono la stessa chiave di deduplicazione e la stessa marca temporale di riferimento. Questa marca temporale rappresenta il momento in cui l’iscrizione al pubblico o il grafico delle identità di un profilo è stato aggiornato per l’ultima volta. Per ulteriori informazioni sull&#39;aggiornamento e l&#39;esportazione dei profili, vedere il documento [comportamento di esportazione dei profili](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
+Durante l’esportazione di profili in destinazioni basate su file, la deduplica garantisce che venga esportato un solo profilo quando più profili condividono la stessa chiave di deduplica e la stessa marca temporale di riferimento. Questa marca temporale rappresenta il momento in cui l’iscrizione al pubblico o il grafico delle identità di un profilo è stato aggiornato per l’ultima volta. Per ulteriori informazioni sull&#39;aggiornamento e l&#39;esportazione dei profili, vedere il documento [comportamento di esportazione dei profili](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
 
 #### Considerazioni chiave
 
@@ -464,9 +464,9 @@ Dopo la deduplicazione, il file di esportazione conterrà:
 
 **Affidabilità migliorata**: questo processo di deduplicazione aggiornato garantisce che le esecuzioni successive con le stesse coordinate producano sempre gli stessi risultati, migliorando la coerenza.
 
-### Esportare array tramite campi calcolati {#export-arrays-calculated-fields}
+### Eseguire trasformazioni dei dati tramite campi calcolati {#calculated-fields}
 
-Alcuni clienti beta possono esportare gli oggetti array da Experience Platform a destinazioni di archiviazione cloud. Ulteriori informazioni sull&#39;[esportazione di array e campi calcolati](/help/destinations/ui/export-arrays-calculated-fields.md) e contattare il proprio rappresentante di Adobe per accedere alla funzionalità.
+È possibile utilizzare il controllo [Campi calcolati](/help/destinations/ui/data-transformations-calculated-fields.md) per eseguire varie trasformazioni di dati sui dati esportati in destinazioni basate su file.
 
 ### Limitazioni note {#known-limitations}
 
@@ -501,7 +501,7 @@ La selezione degli spazi dei nomi delle identità per l’esportazione, come ill
 
 Come soluzione alternativa temporanea, se devi aggiungere spazi dei nomi di identità ai file esportati durante la versione beta, puoi effettuare le seguenti operazioni:
 * Utilizza le destinazioni dell’archiviazione cloud legacy per i flussi di dati in cui desideri includere spazi dei nomi di identità nelle esportazioni
-* Carica le identità come attributi in Experience Platform, quindi esportale nelle destinazioni dell’archiviazione cloud.
+* Carica le identità come attributi in Experience Platform, per poi esportarle nelle destinazioni dell’archiviazione cloud.
 
 ## Seleziona attributi profilo {#select-attributes}
 
