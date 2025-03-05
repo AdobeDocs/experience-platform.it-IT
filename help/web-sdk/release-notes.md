@@ -3,9 +3,9 @@ title: Note sulla versione di Adobe Experience Platform Web SDK
 description: Note sulla versione più recente di Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;note sulla versione;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 5bf69773d0502185bbe8db3b13cb2684d6d06ac4
+source-git-commit: 8fd86a170433c4eb07a7370dbd3aa2cb3ef10922
 workflow-type: tm+mt
-source-wordcount: '2149'
+source-wordcount: '2285'
 ht-degree: 5%
 
 ---
@@ -16,6 +16,18 @@ ht-degree: 5%
 Questo documento illustra le note sulla versione di Adobe Experience Platform Web SDK.
 Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [note sulla versione dell&#39;estensione tag Web SDK](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
+## Versione 2.26.0 - 5 marzo 2025
+
+**Nuove funzioni**
+
+- È ora possibile utilizzare il pacchetto NPM di Web SDK per creare build personalizzate di Web SDK e selezionare solo i componenti della libreria necessari. Ciò consente di ridurre le dimensioni della libreria e di ottimizzare i tempi di caricamento. Consulta la documentazione su come [creare una build Web SDK personalizzata utilizzando il pacchetto NPM](install/create-custom-build.md).
+- Il comando [`getIdentity`](commands/getidentity.md) ora legge automaticamente l&#39;ECID direttamente dal cookie di identità `kndctr`. Se si chiama `getIdentity` con lo spazio dei nomi `ECID` ed è già presente un cookie di identità, Web SDK non richiede più ad Edge Network di ottenere l&#39;identità. Ora legge l’identità dal cookie.
+
+**Correzioni e miglioramenti**
+
+- È stato risolto un problema a causa del quale i comandi `getIdentity` non restituivano l&#39;identità dopo l&#39;invio di una chiamata `collect`.
+- È stato risolto un problema a causa del quale i reindirizzamenti di personalizzazione causavano uno sfarfallio del contenuto prima del reindirizzamento.
+
 ## Versione 2.25.0 - venerdì 23 gennaio 2025
 
 **Correzione e miglioramenti**
@@ -24,7 +36,7 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 - È stato aggiunto un avviso durante la configurazione di una funzione `onBeforeLinkClickSend` o di un qualificatore per il collegamento di download quando la raccolta di clic è disabilitata.
 - È stato risolto un problema a causa del quale le proposte sottoposte a rendering non venivano incluse nelle notifiche di visualizzazione.
 
-**Nuove funzionalità**
+**Nuove funzioni**
 
 - È stato implementato un fallback al dominio Edge configurato quando i cookie di terze parti sono abilitati e le richieste a adobedc.demdex.net sono bloccate.
 
@@ -45,8 +57,8 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 **Correzioni e miglioramenti**
 
 - Quando vengono restituiti più messaggi in-app, viene visualizzato solo quello con la priorità più elevata. Gli altri vengono registrati come soppressi.
-- Le sostituzioni dello stream di dati vuote non vengono più inviate all’Edge Network, riducendo i potenziali conflitti con le configurazioni di routing lato server.
-- I seguenti nomi dei componenti dei messaggi di log sono stati rinominati, in allineamento con altri SDK di Adobe:
+- Le sostituzioni dello stream di dati vuote non vengono più inviate ad Edge Network, riducendo i potenziali conflitti con le configurazioni di routing lato server.
+- I seguenti nomi dei componenti dei messaggi di registrazione sono stati rinominati, in allineamento con altri SDK di Adobe:
    - `DecisioningEngine` è stato rinominato in `RulesEngine`
    - `LegacyMediaAnalytics` è stato rinominato in `MediaAnalyticsBridge`
    - `Privacy` è stato rinominato in `Consent`
@@ -145,7 +157,7 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 
 **Correzioni e miglioramenti**
 
-- Il SDK Web ora codifica i valori di destinazione dei cookie di Audience Manager, in modo simile alla [Data Integration Library (DIL)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=it).
+- Il SDK Web ora codifica i valori di destinazione dei cookie di Audience Manager, in modo simile al [Data Integration Library (DIL)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=it).
 
 ## Versione 2.16.0 - 25 aprile 2023
 
@@ -172,13 +184,13 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 **Correzioni e miglioramenti**
 
 - È stato risolto un problema relativo alle azioni del codice personalizzato del Compositore esperienza visivo di Adobe Target a causa del quale il codice veniva inserito in una posizione alternativa rispetto a [!DNL at.js].
-- È stato risolto un problema a causa del quale, in alcuni casi, l’intestazione &quot;referer&quot; non veniva impostata correttamente nelle richieste all’Edge Network.
+- È stato risolto un problema a causa del quale, in alcuni casi, l’intestazione &quot;referer&quot; non veniva impostata correttamente nelle richieste inviate ad Edge Network.
 - È stato risolto un problema a causa del quale [le proprietà dell&#39;hint client dell&#39;agente utente](/help/web-sdk/use-cases/client-hints.md) potevano essere impostate su un tipo errato.
 - È stato risolto un problema a causa del quale `placeContext.localTime` non corrispondeva allo schema.
 
 ## Versione 2.13.1 - venerdì 13 ottobre 2022
 
-- È stato risolto un problema che impediva il funzionamento della migrazione dei visitatori se window.Visitor veniva definito dopo la configurazione. Questo è un problema soprattutto quando si esegue con Adobe Tags.
+- È stato risolto un problema che impediva il funzionamento della migrazione dei visitatori se window.Visitor veniva definito dopo la configurazione. Questo è un problema soprattutto quando si esegue con i tag di Adobe.
 - È stato risolto un problema a causa del quale `device.screenWidth` e `device.screenHeight` venivano popolati come stringhe in alcuni ambienti.
 
 ## Versione 2.13.0 - 28 settembre 2022
@@ -200,7 +212,7 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 
 ## Versione 2.12.0 - giovedì 29 giugno 2022
 
-- Modificare le richieste nell&#39;Edge Network per utilizzare l&#39;hint di posizione del cookie `cluster` come parte dell&#39;URL. In questo modo, gli utenti che cambiano posizione (ad esempio tramite una VPN o guidando con dispositivi mobili, ecc.) durante una sessione raggiungono lo stesso limite e hanno lo stesso profilo di personalizzazione.
+- Modificare le richieste in Edge Network per utilizzare l&#39;hint di posizione del cookie `cluster` come parte dell&#39;URL. In questo modo, gli utenti che cambiano posizione (ad esempio tramite una VPN o guidando con dispositivi mobili, ecc.) durante una sessione raggiungono lo stesso limite e hanno lo stesso profilo di personalizzazione.
 - Stringif ha configurato le funzioni nella risposta del comando getLibraryInfo.
 
 ## Versione 2.11.0 - martedì 13 giugno 2022
@@ -215,7 +227,7 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 
 - Sono state aggiornate le impostazioni dei cookie per utilizzare i flag `sameSite="none"` e `secure` nelle pagine [!DNL HTTPS].
 - È stato risolto un problema a causa del quale il contenuto personalizzato non veniva applicato correttamente quando si utilizzava lo pseudo selettore `eq`.
-- È stato risolto un problema che impediva a `localTimezoneOffset` di superare la convalida dell&#39;Experience Platform.
+- È stato risolto un problema a causa del quale `localTimezoneOffset` poteva non superare la convalida Experience Platform.
 
 ## Versione 2.10.1, mercoledì 3 maggio 2022
 
@@ -232,7 +244,7 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 - Sono stati ottimizzati gli eventi di modifica della visualizzazione per le applicazioni a pagina singola. La notifica di visualizzazione ora è inclusa nell’evento di modifica della visualizzazione quando vengono riprodotte esperienze personalizzate.
 - Avviso della console rimossa quando non è presente `eventType`.
 - È stato risolto un problema a causa del quale la proprietà `propositions` veniva restituita solo da un comando `sendEvent` quando le esperienze venivano richieste o recuperate dalla cache. La proprietà `propositions` verrà sempre definita come un array.
-- È stato risolto un problema che impediva la visualizzazione dei contenitori nascosti in caso di errore restituito dall’Edge Network.
+- È stato risolto un problema che impediva la visualizzazione dei contenitori nascosti in caso di errore restituito da Edge Network.
 - È stato risolto un problema che impediva il conteggio degli eventi di interazione in Adobe Target. Questo problema è stato risolto aggiungendo il nome della visualizzazione al file XDM in web.webPageDetails.viewName.
 - Correggi i collegamenti interrotti alla documentazione nei messaggi della console.
 
@@ -244,11 +256,11 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 
 ## Versione 2.7.0 - mercoledì 26 ottobre 2021
 
-- Esporre informazioni aggiuntive dall&#39;Edge Network nel valore restituito da `sendEvent`, inclusi `inferences` e `destinations`. Il formato di queste proprietà potrebbe cambiare in quanto queste funzioni vengono attualmente implementate come parte di un Beta.
+- Esporre informazioni aggiuntive da Edge Network nel valore restituito da `sendEvent`, inclusi `inferences` e `destinations`. Il formato di queste proprietà potrebbe cambiare in quanto queste funzioni vengono attualmente implementate come parte di un Beta.
 
 ## Versione 2.6.4 - 7 settembre 2021
 
-- È stato risolto un problema a causa del quale le azioni set HTML Adobe Target applicate all&#39;elemento `head` sostituivano l&#39;intero contenuto `head`. Ora le azioni set HTML applicate all&#39;elemento `head` vengono modificate in append HTML.
+- È stato risolto un problema a causa del quale le azioni HTML Adobe Target impostate applicate all&#39;elemento `head` sostituivano l&#39;intero contenuto `head`. Ora le azioni HTML impostate applicate all&#39;elemento `head` vengono modificate in modo da aggiungere HTML.
 
 ## Versione 2.6.3 - 16 agosto 2021
 
@@ -282,7 +294,7 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 - Il comando [`getIdentity`](/help/web-sdk/commands/getidentity.md) ora restituisce l&#39;ID dell&#39;area Edge insieme all&#39;identità.
 - Gli avvisi e gli errori ricevuti dal server sono stati migliorati e vengono gestiti in modo più appropriato.
 - È stato aggiunto il supporto per lo standard Consent 2.0 di Adobe per il comando [`setConsent`](/help/web-sdk/commands/setconsent.md).
-- Le preferenze di consenso, quando ricevute, vengono sottoposte a hashing e memorizzate nell’archiviazione locale per un’integrazione ottimizzata tra CMP, Platform Web SDK e gli Edge Network di Platform. Se stai raccogliendo le preferenze di consenso, ti invitiamo ora a chiamare `setConsent` a ogni caricamento di pagina.
+- Le preferenze di consenso, quando ricevute, vengono sottoposte a hashing e memorizzate nell’archiviazione locale per un’integrazione ottimizzata tra CMP, Platform Web SDK e Platform Edge Network. Se stai raccogliendo le preferenze di consenso, ti invitiamo ora a chiamare `setConsent` a ogni caricamento di pagina.
 - Sono stati aggiunti due [hook di monitoraggio](https://github.com/adobe/alloy/wiki/Monitoring-Hooks), `onCommandResolved` e `onCommandRejected`.
 - Correzione bug: gli eventi di notifica dell’interazione Personalization contenevano informazioni duplicate sulla stessa attività quando un utente passava a una nuova vista di app a pagina singola, tornava alla vista originale e faceva clic su un elemento idoneo per la conversione.
 - Correzione bug: se il primo evento inviato da SDK fosse impostato su `true`, [`sendBeacon`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) verrebbe utilizzato per inviare l&#39;evento, causando un errore relativo a un&#39;identità non stabilita.`documentUnloading`
@@ -295,7 +307,7 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 - Correzione bug: `sendBeacon` non veniva utilizzato quando `documentUnloading` era impostato su `true` o quando i clic sui collegamenti venivano tracciati automaticamente.
 - Correzione bug: se l’elemento di ancoraggio conteneva contenuto HTML, non veniva tracciato automaticamente alcun collegamento.
 - Correzione bug: alcuni errori del browser contenenti una proprietà `message` di sola lettura non sono stati gestiti in modo appropriato, causando un errore diverso esposto al cliente.
-- Correzione bug: se si esegue SDK all’interno di un iframe, si verifica un errore se la pagina HTML dell’iframe proviene da un sottodominio diverso rispetto alla pagina HTML della finestra principale.
+- Correzione bug: se si esegue SDK all’interno di un iframe, si verifica un errore se la pagina HTML dell’iframe proviene da un sottodominio diverso dalla pagina HTML della finestra principale.
 
 ## Versione 2.2.0 - ottobre 2020
 

@@ -2,10 +2,10 @@
 title: Note sulla versione dell’estensione Adobe Experience Platform Web SDK
 description: Estensione tag Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 5bf69773d0502185bbe8db3b13cb2684d6d06ac4
+source-git-commit: 8fd86a170433c4eb07a7370dbd3aa2cb3ef10922
 workflow-type: tm+mt
-source-wordcount: '2413'
-ht-degree: 31%
+source-wordcount: '2580'
+ht-degree: 29%
 
 ---
 
@@ -13,15 +13,28 @@ ht-degree: 31%
 
 Questo documento descrive le note sulla versione dell’estensione tag Adobe Experience Platform Web SDK. Per le ultime note sulla versione di SDK, consulta le [note sulla versione di Platform Web SDK](/help/web-sdk/release-notes.md).
 
+## Versione 2.29.0 - 5 marzo 2025
+
+**Nuove funzioni**
+
+- È ora possibile creare build personalizzate di Web SDK e scegliere i componenti necessari dall’interfaccia utente dell’estensione tag. Questo può comportare build più piccole escludendo i componenti inutilizzati. Consulta la documentazione sulla [creazione di una build Web SDK personalizzata](web-sdk-extension-configuration.md#custom-build).
+- Contiene [versione 2.26.0](../../../../web-sdk/release-notes.md#2-26-0) di Adobe Experience Platform Web SDK.
+
+**Correzioni e miglioramenti**
+
+- È stata aggiunta la gestione agevole degli elementi dati mancanti nelle azioni [aggiorna variabile](action-types.md#update-variable). In precedenza, la modifica di un’azione di aggiornamento variabile con un elemento dati mancante mostrava un messaggio di errore. Ora puoi scegliere un elemento dati diverso e tutte le impostazioni per l’azione aggiorna variabile vengono ancora applicate. Gli elementi dati possono mancare se vengono eliminati o se viene duplicata una proprietà Tags.
+- È stato aggiunto il supporto per l&#39;apertura di una nuova scheda con l&#39;azione [reindirizza con identità](action-types.md#redirect-with-identity). Ora, quando si utilizza l&#39;azione, viene utilizzato l&#39;attributo `target` del tag di ancoraggio durante il reindirizzamento del browser.
+- È stato risolto un problema che impediva la disattivazione di Adobe Audience Manager nelle sostituzioni della configurazione.
+
 ## Versione 2.28.0 - venerdì 23 gennaio 2025
 
 **Correzioni e miglioramenti**
 
-- È stato risolto un problema che impediva l’impostazione delle sostituzioni del contenitore di sincronizzazione ID senza abilitare l’Audience Manager.
+- È stato risolto un problema che impediva l’impostazione delle sostituzioni del contenitore di sincronizzazione ID senza abilitare Audience Manager.
 - È stato risolto un problema a causa del quale le sostituzioni della configurazione dello stream di dati venivano disabilitate durante l’aggiornamento alla versione più recente.
 - È stato risolto un problema che impediva agli utenti di salvare le impostazioni di raccolta dei clic automatici di Target.
 
-**Nuove funzionalità**
+**Nuove funzioni**
 
 - È stata aggiunta una nuova funzione per passare da nomi tecnici a nomi visualizzati nell’oggetto XDM.
 - Contiene [versione 2.25.0](../../../../web-sdk/release-notes.md#2-25-0) di Adobe Experience Platform Web SDK.
@@ -201,7 +214,7 @@ Contiene la versione 2.14.0 di Adobe Experience Platform Web SDK.
 
 ## Versione 2.14.1 - venerdì 13 ottobre 2022
 
-- È stato risolto un problema che impediva al Web SDK di rispettare l&#39;ID del servizio ID di Experience Cloud.
+- È stato risolto un problema che impediva al Web SDK di rispettare l&#39;ID del servizio Experience Cloud ID.
 
 Contiene la versione 2.13.1 della libreria Adobe Experience Platform Web SDK.
 
@@ -260,7 +273,7 @@ Contiene la versione 2.8.0 della libreria dell’SDK per web di Adobe Experience
 
 Contiene la versione 2.7.0 della libreria dell’SDK per web di Adobe Experience Platform.
 
-- Ulteriori informazioni dall&#39;Edge Network sono disponibili nell&#39;evento Send Event Complete, inclusi `inferences` e `destinations`. Il formato di queste proprietà potrebbe cambiare in quanto queste funzioni vengono attualmente implementate come parte di un Beta.
+- Ulteriori informazioni da Edge Network sono disponibili nell&#39;evento Send Event Complete, inclusi `inferences` e `destinations`. Il formato di queste proprietà potrebbe cambiare in quanto queste funzioni vengono attualmente implementate come parte di un Beta.
 
 ## Versione 2.7.3 - 7 settembre 2021
 
