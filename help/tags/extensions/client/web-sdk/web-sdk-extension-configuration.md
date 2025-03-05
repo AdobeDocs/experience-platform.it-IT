@@ -2,22 +2,22 @@
 title: Configurare l’estensione tag Web SDK
 description: Scopri come configurare l’estensione tag Experience Platform Web SDK nell’interfaccia utente Tag.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: f2f61c8e68fa794317e3b4f845f1950cebc59ec7
+source-git-commit: d267e816f42d1e0a751b188065f5164a5e2b6be9
 workflow-type: tm+mt
-source-wordcount: '2525'
+source-wordcount: '2874'
 ht-degree: 4%
 
 ---
 
 # Configurare l’estensione tag Web SDK
 
-L&#39;estensione tag [!DNL Web SDK] invia i dati a Adobe Experience Cloud dalle proprietà Web tramite l&#39;Edge Network di Experience Platform.
+L&#39;estensione tag [!DNL Web SDK] invia i dati a Adobe Experience Cloud dalle proprietà Web tramite Experience Platform Edge Network.
 
 L’estensione ti consente di inviare in streaming dati a Platform, sincronizzare le identità, elaborare i segnali di consenso dei clienti e raccogliere automaticamente i dati contestuali.
 
 Questo documento spiega come configurare l’estensione tag nell’interfaccia utente Tag.
 
-## Installare l’estensione tag Web SDK {#install}
+## Installare l&#39;estensione tag Web SDK {#install}
 
 L&#39;estensione tag Web SDK richiede una proprietà in cui installare. Se non lo hai già fatto, consulta la documentazione su [creazione di una proprietà tag](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html?lang=it).
 
@@ -33,6 +33,39 @@ Dopo aver selezionato **[!UICONTROL Installa]**, è necessario configurare l&#39
 >
 >L’estensione tag viene installata solo dopo il salvataggio della configurazione. Consulta le sezioni successive per scoprire come configurare l’estensione tag.
 
+## Creazione di una build Web SDK personalizzata {#custom-build}
+
+La libreria SDK Web include più moduli per varie funzioni come personalizzazione, identità, tracciamento dei collegamenti e altro ancora. A seconda dei casi di utilizzo, potresti aver bisogno solo di funzionalità specifiche invece che dell’intera libreria. La creazione di una build Web SDK personalizzata consente di selezionare solo i moduli necessari, riducendo le dimensioni della libreria e migliorando le prestazioni.
+
+Quando si crea una build di Web SDK personalizzata, questa viene utilizzata da tutte le istanze di Web SDK.
+
+>[!IMPORTANT]
+>
+>La disabilitazione dei componenti di Web SDK può interrompere l&#39;implementazione esistente. Ogni volta che disattivi un componente, accertati di testare a fondo l’implementazione per assicurarti che tutte le funzionalità necessarie funzionino come previsto.
+>Quando disattivi un componente, non puoi più modificarne le impostazioni.
+
+Per creare una build personalizzata di Web SDK utilizzando l’estensione tag Web SDK, segui la procedura riportata di seguito.
+
+1. Nella pagina di configurazione dell&#39;estensione tag, espandi la sezione **[!UICONTROL Componenti build personalizzati]**.
+1. Abilita o disabilita i componenti in base alle tue esigenze. Puoi scegliere tra i seguenti componenti:
+   * **[!UICONTROL Activity Collector]**: questo componente abilita la raccolta di collegamenti automatica e il tracciamento della Activity Map.
+   * **[!UICONTROL Tipi di pubblico]**: questi componenti abilitano l&#39;integrazione Audience Manager, incluse le destinazioni basate su URL e cookie e le sincronizzazioni degli ID.
+   * **[!UICONTROL Consenso]**: questo componente abilita le integrazioni del consenso. La disattivazione di questo componente disattiva i seguenti elementi:
+      * [Imposta tipo di azione consenso](action-types.md#set-consent)
+   * **[!UICONTROL Contesto]**: questo componente abilita la raccolta automatica dei dati contestuali.
+   * **[!UICONTROL Unione eventi]**: _Obsoleto_. La disattivazione di questo componente disattiva i seguenti elementi:
+      * [Elemento dati ID unione evento](action-types.md#data)
+      * **[!UICONTROL Reimposta tipo di azione ID unione evento]**
+   * **[!UICONTROL Bridge di Media Analytics]**: questo componente abilita Edge Network Streaming Media tramite l&#39;interfaccia di Media Analytics. La disattivazione di questo componente disattiva i seguenti elementi:
+      * [Ottieni tracciamento Media Analytics](action-types.md#get-media-analytics-tracker) tipo di azione
+   * **[!UICONTROL Personalization]**: questo componente abilita le integrazioni Adobe Target e Adobe Journey Optimizer. La disattivazione di questo componente disattiva i seguenti elementi:
+      * [Applica proposition action](action-types.md) type
+   * **[!UICONTROL Motore di regole]**: questo componente abilita le decisioni su dispositivo di Adobe Journey Optimizer. La disattivazione di questo componente disattiva i seguenti elementi:
+      * [Valuta il tipo di azione set di regole](action-types.md#evaluate-rulesets)
+      * [Sottoscrivi elementi set di regole](event-types.md#subscribe-ruleset-items) tipo di evento
+   * **[!UICONTROL Streaming media]**: questo componente abilita Edge Network Streaming Media. La disattivazione di questo componente disattiva i seguenti elementi:
+      * [Invia tipo di azione evento multimediale](action-types.md#send-media-event)
+
 ## Configurare le impostazioni delle istanze {#general}
 
 Le opzioni di configurazione nella parte superiore della pagina indicano a Adobe Experience Platform dove instradare i dati e quali configurazioni utilizzare sul server.
@@ -47,7 +80,7 @@ Le opzioni di configurazione nella parte superiore della pagina indicano a Adobe
 
 Questa sezione consente di selezionare gli stream di dati da utilizzare per ciascuno dei tre ambienti disponibili (produzione, staging e sviluppo).
 
-Quando viene inviata una richiesta all’Edge Network, viene utilizzato un ID dello stream di dati per fare riferimento alla configurazione lato server. Puoi aggiornare la configurazione senza dover apportare modifiche al codice sul tuo sito web.
+Quando viene inviata una richiesta ad Edge Network, viene utilizzato un ID dello stream di dati per fare riferimento alla configurazione lato server. Puoi aggiornare la configurazione senza dover apportare modifiche al codice sul tuo sito web.
 
 Per informazioni su come configurare uno stream di dati, consulta la guida sugli [stream di dati](../../../../datastreams/overview.md).
 
@@ -57,7 +90,7 @@ Puoi scegliere uno stream di dati dai menu a discesa disponibili oppure selezion
 
 ## Configurare le impostazioni della privacy {#privacy}
 
-Questa sezione ti consente di configurare il modo in cui Web SDK gestisce i segnali di consenso degli utenti dal sito web. In particolare, consente di selezionare il livello predefinito di consenso presunto di un utente se non è stata fornita alcuna preferenza di consenso esplicito.
+Questa sezione ti consente di configurare il modo in cui Web SDK gestisce i segnali di consenso degli utenti provenienti dal tuo sito web. In particolare, consente di selezionare il livello predefinito di consenso presunto di un utente se non è stata fornita alcuna preferenza di consenso esplicito.
 
 Il livello di consenso predefinito non viene salvato nel profilo utente.
 
@@ -76,12 +109,12 @@ Il livello di consenso predefinito non viene salvato nel profilo utente.
 
 ## Configurare le impostazioni di identità {#identity}
 
-Questa sezione ti consente di definire il comportamento dell’SDK web quando si tratta di gestire l’identificazione dell’utente.
+Questa sezione ti consente di definire il comportamento del Web SDK quando si tratta di gestire l’identificazione dell’utente.
 
 ![Immagine che mostra le impostazioni di identità dell&#39;estensione tag Web SDK nell&#39;interfaccia utente Tag](assets/web-sdk-ext-identity.png)
 
-* **[!UICONTROL Migra ECID da VisitorAPI]**: questa opzione è abilitata per impostazione predefinita. Quando questa funzione è abilitata, l&#39;SDK può leggere i cookie `AMCV` e `s_ecid` e impostare il cookie `AMCV` utilizzato da [!DNL Visitor.js]. Questa funzione è importante durante la migrazione a Web SDK, poiché alcune pagine potrebbero usare ancora [!DNL Visitor.js]. Questa opzione consente all&#39;SDK di continuare a utilizzare lo stesso [!DNL ECID] in modo che gli utenti non vengano identificati come due utenti separati.
-* **[!UICONTROL Usa cookie di terze parti]**: quando questa opzione è abilitata, Web SDK tenta di memorizzare un identificatore utente in un cookie di terze parti. In caso di esito positivo, l’utente viene identificato come un singolo utente mentre si sposta tra più domini, anziché essere identificato come un utente separato su ciascun dominio. Se questa opzione è abilitata, l’SDK potrebbe ancora non essere in grado di memorizzare l’identificatore utente in un cookie di terze parti se il browser non supporta i cookie di terze parti o se è stato configurato dall’utente per non consentire i cookie di terze parti. In questo caso, l’SDK memorizza l’identificatore solo nel dominio di prime parti.
+* **[!UICONTROL Migra ECID da VisitorAPI]**: questa opzione è abilitata per impostazione predefinita. Quando questa funzione è abilitata, SDK può leggere i cookie `AMCV` e `s_ecid` e impostare il cookie `AMCV` utilizzato da [!DNL Visitor.js]. Questa caratteristica è importante durante la migrazione a Web SDK, poiché alcune pagine potrebbero utilizzare ancora [!DNL Visitor.js]. Questa opzione consente a SDK di continuare a utilizzare lo stesso [!DNL ECID] in modo che gli utenti non vengano identificati come due utenti separati.
+* **[!UICONTROL Usa cookie di terze parti]**: quando questa opzione è abilitata, Web SDK tenta di memorizzare un identificatore utente in un cookie di terze parti. In caso di esito positivo, l’utente viene identificato come un singolo utente mentre si sposta tra più domini, anziché essere identificato come un utente separato su ciascun dominio. Se questa opzione è abilitata, SDK potrebbe non essere ancora in grado di memorizzare l’identificatore utente in un cookie di terze parti se il browser non supporta i cookie di terze parti o è stato configurato dall’utente per non consentire i cookie di terze parti. In questo caso, SDK memorizza l’identificatore solo nel dominio di prime parti.
 
   >[!IMPORTANT]
   >>I cookie di terze parti non sono compatibili con la funzionalità [ID dispositivo di prima parte](../../../../web-sdk/identity/first-party-device-ids.md) in Web SDK.
@@ -93,7 +126,7 @@ Questa sezione ti consente di configurare come nascondere determinate parti di u
 
 ![Immagine che mostra le impostazioni di personalizzazione dell&#39;estensione tag Web SDK nell&#39;interfaccia utente Tag](assets/web-sdk-ext-personalization.png)
 
-* **[!UICONTROL Migra Target da at.js a Web SDK]**: utilizza questa opzione per abilitare [!DNL Web SDK] alla lettura e scrittura dei cookie legacy `mbox` e `mboxEdgeCluster` utilizzati dalle librerie at.js `1.x` o `2.x`. In questo modo è possibile mantenere il profilo visitatore durante lo spostamento da una pagina che utilizza l’SDK per web a una pagina che utilizza le librerie at.js `1.x` o `2.x` e viceversa.
+* **[!UICONTROL Migra Target da at.js al Web SDK]**: utilizzare questa opzione per consentire a [!DNL Web SDK] di leggere e scrivere i cookie legacy `mbox` e `mboxEdgeCluster` utilizzati dalle librerie at.js `1.x` o `2.x`. In questo modo è possibile mantenere il profilo visitatore durante lo spostamento da una pagina che utilizza il Web SDK a una pagina che utilizza le librerie at.js `1.x` o `2.x` e viceversa.
 
 ### Stile pre-hiding {#prehiding-style}
 
@@ -101,7 +134,7 @@ L’editor di stili che nasconde anticipatamente ti consente di definire regole 
 
 ### Frammento pre-hiding {#prehiding-snippet}
 
-Il frammento pre-hiding è utile quando la libreria SDK Web viene caricata in modo asincrono. In questa situazione, per evitare sfarfallii, consigliamo di nascondere il contenuto prima che venga caricata la libreria dell’SDK web.
+Il frammento pre-hiding è utile quando la libreria Web SDK viene caricata in modo asincrono. In questa situazione, per evitare sfarfallii, è consigliabile nascondere il contenuto prima di caricare la libreria SDK Web.
 
 Per utilizzare il frammento pre-hiding, copiarlo e incollarlo nell&#39;elemento `<head>` della pagina.
 
@@ -115,10 +148,10 @@ Gestisci le impostazioni di configurazione della raccolta dati. Impostazioni sim
 
 ![Immagine che mostra le impostazioni di raccolta dati dell&#39;estensione tag Web SDK nell&#39;interfaccia utente Tag.](assets/web-sdk-ext-collection.png)
 
-* **[!UICONTROL Attivato prima del callback di invio dell&#39;evento]**: funzione di callback per valutare e modificare il payload inviato a Adobe. Utilizza la variabile `content` all&#39;interno della funzione di callback per modificare il payload. Questo callback è l&#39;equivalente del tag [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) nella libreria JavaScript.
+* **[!UICONTROL Attivato prima del callback dell&#39;evento]**: funzione di callback per valutare e modificare il payload inviato ad Adobe. Utilizza la variabile `content` all&#39;interno della funzione di callback per modificare il payload. Questo callback è l&#39;equivalente del tag [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) nella libreria JavaScript.
 * **[!UICONTROL Raccogli clic sui collegamenti interni]**: casella di controllo che abilita la raccolta di dati di tracciamento dei collegamenti interni al sito o alla proprietà. Quando si attiva questa casella di controllo, vengono visualizzate le opzioni di raggruppamento degli eventi:
    * **[!UICONTROL Nessun raggruppamento di eventi]**: i dati di tracciamento dei collegamenti vengono inviati ad Adobe in eventi separati. I clic sui collegamenti inviati in eventi separati possono aumentare l’utilizzo contrattuale dei dati inviati a Adobe Experience Platform.
-   * **[!UICONTROL Raggruppamento eventi tramite archiviazione sessione]**: archivia i dati di tracciamento dei collegamenti nell&#39;archiviazione sessione fino all&#39;evento pagina successivo. Nella pagina seguente, i dati di tracciamento dei collegamenti memorizzati e i dati di visualizzazione della pagina vengono inviati a Adobe contemporaneamente. Adobe consiglia di abilitare questa impostazione durante il tracciamento dei collegamenti interni.
+   * **[!UICONTROL Raggruppamento eventi tramite archiviazione sessione]**: archivia i dati di tracciamento dei collegamenti nell&#39;archiviazione sessione fino all&#39;evento pagina successivo. Nella pagina seguente, i dati di tracciamento dei collegamenti e i dati di visualizzazione della pagina memorizzati vengono inviati ad Adobe contemporaneamente. Adobe consiglia di abilitare questa impostazione durante il tracciamento dei collegamenti interni.
    * **[!UICONTROL Raggruppamento eventi tramite oggetto locale]**: memorizzare i dati di tracciamento dei collegamenti in un oggetto locale fino all&#39;evento della pagina successivo. Se un visitatore passa a una nuova pagina, i dati di tracciamento dei collegamenti andranno persi. Questa impostazione è particolarmente utile nel contesto delle applicazioni a pagina singola.
 * **[!UICONTROL Raccogli clic su un collegamento esterno]**: casella di controllo che abilita la raccolta di collegamenti esterni.
 * **[!UICONTROL Raccogliere i clic sul collegamento di download]**: casella di controllo che abilita la raccolta dei collegamenti di download.
@@ -159,7 +192,7 @@ Questo consente di attivare comportamenti diversi dello stream di dati rispetto 
 L’override della configurazione dello stream di dati è un processo costituito da due passaggi:
 
 1. Innanzitutto, devi definire gli override della configurazione dello stream di dati nella [pagina di configurazione dello stream di dati](/help/datastreams/configure.md).
-2. Quindi, devi inviare le sostituzioni all’Edge Network tramite un comando Web SDK o utilizzando l’estensione tag Web SDK.
+2. Quindi, devi inviare le sostituzioni ad Edge Network tramite un comando Web SDK o utilizzando l’estensione tag Web SDK.
 
 Per istruzioni dettagliate su come ignorare le configurazioni dello stream di dati, consulta la [documentazione sulle sostituzioni della configurazione](/help/datastreams/overrides.md) dello stream di dati.
 
@@ -187,7 +220,7 @@ Le seguenti impostazioni di sostituzione dello stream di dati sovrascriveranno t
 
 Utilizza le impostazioni in questa sezione per sostituire l’indirizzamento dei dati al servizio Adobe Analytics.
 
-![Immagine dell&#39;interfaccia utente dell&#39;estensione tag Web SDK che mostra le impostazioni di sostituzione dello stream di dati di Adobe Analytics.](assets/datastream-override-analytics.png)
+![Immagine dell&#39;interfaccia utente dell&#39;estensione tag Web SDK con le impostazioni di sostituzione dello stream di dati di Adobe Analytics.](assets/datastream-override-analytics.png)
 
 * **[!UICONTROL Abilitato]** / **[!UICONTROL Disabilitato]**: utilizza questo menu a discesa per abilitare o disabilitare il routing dei dati al servizio Adobe Analytics.
 * **[!UICONTROL Suite di rapporti]**: gli ID delle suite di rapporti di destinazione in Adobe Analytics. Il valore deve essere una suite di rapporti di sostituzione preconfigurata (o un elenco di suite di rapporti separato da virgole) dalla configurazione dello stream di dati. Questa impostazione sostituisce le suite di rapporti principali.
@@ -197,7 +230,7 @@ Utilizza le impostazioni in questa sezione per sostituire l’indirizzamento dei
 
 Utilizzare le impostazioni di questa sezione per sostituire il routing dei dati al servizio Adobe Audience Manager.
 
-![Immagine dell&#39;interfaccia utente dell&#39;estensione tag Web SDK che mostra le impostazioni di sostituzione dello stream di dati di Adobe Audience Manager.](assets/datastream-override-audience-manager.png)
+![Immagine dell&#39;interfaccia utente dell&#39;estensione tag Web SDK con le impostazioni di sostituzione dello stream di dati di Adobe Audience Manager.](assets/datastream-override-audience-manager.png)
 
 * **[!UICONTROL Abilitato]** / **[!UICONTROL Disabilitato]**: utilizza questo menu a discesa per abilitare o disabilitare il routing dei dati al servizio Adobe Audience Manager.
 * **[!UICONTROL Contenitore di sincronizzazione ID di terze parti]**: l&#39;ID del contenitore di sincronizzazione ID di terze parti di destinazione in Audience Manager. Il valore deve essere un contenitore secondario preconfigurato dalla configurazione dello stream di dati e sostituisce il contenitore principale.
@@ -206,20 +239,20 @@ Utilizzare le impostazioni di questa sezione per sostituire il routing dei dati 
 
 Utilizzare le impostazioni di questa sezione per sostituire il routing dei dati al servizio Adobe Experience Platform.
 
-![Immagine dell&#39;interfaccia utente dell&#39;estensione tag Web SDK che mostra le impostazioni di sostituzione dello stream di dati di Adobe Experience Platform.](assets/datastream-override-experience-platform.png)
+![Immagine dell&#39;interfaccia utente dell&#39;estensione tag Web SDK con le impostazioni di sostituzione dello stream di dati di Adobe Experience Platform.](assets/datastream-override-experience-platform.png)
 
 * **[!UICONTROL Abilitato]** / **[!UICONTROL Disabilitato]**: utilizza questo menu a discesa per abilitare o disabilitare il routing dei dati al servizio Adobe Experience Platform.
 * **[!UICONTROL Set di dati evento]**: l&#39;ID del set di dati dell&#39;evento di destinazione in Adobe Experience Platform. Il valore deve essere un set di dati secondario preconfigurato dalla configurazione dello stream di dati.
-* **[!UICONTROL Offer decisioning]**: utilizzare questo menu a discesa per abilitare o disabilitare il routing dei dati al servizio [!DNL Offer Decisioning].
+* **[!UICONTROL Offer Decisioning]**: utilizzare questo menu a discesa per abilitare o disabilitare il routing dei dati al servizio [!DNL Offer Decisioning].
 * **[!UICONTROL Segmentazione di Edge]**: utilizzare questo menu a discesa per abilitare o disabilitare il routing dei dati al servizio [!DNL Edge Segmentation].
 * **[!UICONTROL Destinazioni Personalization]**: utilizza questo menu a discesa per abilitare o disabilitare il routing dei dati alle destinazioni di personalizzazione.
 * **[!UICONTROL Adobe Journey Optimizer]**: utilizzare questo menu a discesa per abilitare o disabilitare il routing dei dati al servizio [!DNL Adobe Journey Optimizer].
 
 ### Inoltro eventi lato server di Adobe {#ssf}
 
-Utilizzare le impostazioni di questa sezione per sostituire il routing dei dati al servizio di inoltro eventi lato server di Adobe.
+Utilizza le impostazioni in questa sezione per sostituire il routing dei dati al servizio Adobe Server-Side Event Forwarding.
 
-![Immagine dell&#39;interfaccia utente dell&#39;estensione tag Web SDK che mostra le impostazioni di sostituzione dello stream di dati di inoltro degli eventi lato server di Adobe.](assets/datastream-override-ssf.png)
+![Immagine dell&#39;interfaccia utente dell&#39;estensione tag Web SDK che mostra le impostazioni di sostituzione dello stream di dati di inoltro eventi lato server di Adobe.](assets/datastream-override-ssf.png)
 
 * **[!UICONTROL Abilitato]** / **[!UICONTROL Disabilitato]**: utilizza questo menu a discesa per abilitare o disabilitare il routing dei dati al servizio di inoltro eventi lato server di Adobe.
 
@@ -227,12 +260,12 @@ Utilizzare le impostazioni di questa sezione per sostituire il routing dei dati 
 
 Utilizza le impostazioni in questa sezione per sostituire l’indirizzamento dei dati al servizio Adobe Target.
 
-![Immagine dell&#39;interfaccia utente dell&#39;estensione tag Web SDK che mostra le impostazioni di sostituzione dello stream di dati di Adobe Target.](assets/datastream-override-target.png)
+![Immagine dell&#39;interfaccia utente dell&#39;estensione tag Web SDK con le impostazioni di sostituzione dello stream di dati di Adobe Target.](assets/datastream-override-target.png)
 
 * **[!UICONTROL Abilitato]** / **[!UICONTROL Disabilitato]**: utilizza questo menu a discesa per abilitare o disabilitare il routing dei dati al servizio Adobe Target.
 
 ## Configurare le impostazioni avanzate
 
-Utilizza il campo **[!UICONTROL Percorso base Edge]** se devi modificare il percorso base utilizzato per interagire con l&#39;Edge Network. Questo non dovrebbe richiedere l’aggiornamento, ma nel caso in cui partecipi a una versione beta o alpha, Adobe potrebbe chiederti di modificare questo campo.
+Utilizza il campo **[!UICONTROL Percorso base Edge]** se devi modificare il percorso base utilizzato per interagire con Edge Network. Questo non dovrebbe richiedere l’aggiornamento, ma nel caso in cui partecipi a una versione beta o alpha, Adobe potrebbe chiederti di modificare questo campo.
 
 ![Immagine che mostra le impostazioni avanzate utilizzando la pagina dell&#39;estensione tag Web SDK.](assets/advanced-settings.png)

@@ -6,10 +6,10 @@ breadcrumb-title: Guida di SDK Web
 user-guide-description: Interagisci con i servizi di Experience Cloud tramite la rete Edge.
 feature: Web SDK
 role: Developer
-source-git-commit: d5bf1b207900009829454d0b7aa095a08c1e1718
+source-git-commit: bed63cb9be1ffe39a538d1c3f8be9065ffb2ca28
 workflow-type: tm+mt
-source-wordcount: '229'
-ht-degree: 23%
+source-wordcount: '239'
+ht-degree: 22%
 
 ---
 
@@ -23,6 +23,7 @@ ht-degree: 23%
    * [Installare Web SDK utilizzando l’estensione tag](install/extension.md)
    * [Installare il Web SDK utilizzando la libreria JavaScript](install/library.md)
    * [Installare il Web SDK utilizzando il pacchetto NPM](install/npm.md)
+   * [Creare una build Web SDK personalizzata utilizzando il pacchetto NPM](install/create-custom-build.md)
 * Comandi {#commands}
    * configura {#configure}
       * [Panoramica](commands/configure/overview.md)
@@ -86,7 +87,7 @@ ht-degree: 23%
          * [Panoramica](personalization/adobe-target/analytics-logging/overview.md)
          * [Registrazione lato client](personalization/adobe-target/analytics-logging/client-side.md)
          * [Registrazione lato server](personalization/adobe-target/analytics-logging/server-side.md)
-   * Offer decisioning {#offer-decisioning}
+   * Offer Decisioning {#offer-decisioning}
       * [Panoramica](personalization/offer-decisioning/offer-decisioning-overview.md)
    * Adobe Journey Optimizer {#ajo}
       * [Panoramica](personalization/ajo/overview.md)
