@@ -2,9 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;acquisizione dati;dati acquisiti;streaming;panoramica;acquisizione streaming;latenza;latenza streaming;
 solution: Experience Platform
 title: Panoramica sull’acquisizione in streaming
-description: L’acquisizione in streaming per Adobe Experience Platform offre agli utenti un metodo per inviare in tempo reale dati da dispositivi lato client e lato server a Experience Platform.
+description: L’acquisizione in streaming per Adobe Experience Platform offre agli utenti un metodo per inviare in tempo reale dati da dispositivi lato client e lato server ad Experience Platform.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: d6424e2a9afc046f4bff329797954fd43939a819
+source-git-commit: 9b2d0c8fad1ed328725129664be94cf1800f6631
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 2%
@@ -53,7 +53,7 @@ La tabella seguente mostra le linee guida sui limiti di richiesta al secondo per
 | Limite RPS | Note |
 | --- | --- |
 | 1000 richieste al secondo | Questi possono contenere più messaggi quando si utilizza l&#39;endpoint `/collection/batch`. |
-| 10000 singoli messaggi al secondo | I messaggi possono essere raggruppati in un numero inferiore di richieste effettive quando si utilizza l&#39;endpoint `/collection/batch`. |
+| 10000 singoli messaggi al secondo | I messaggi possono essere raggruppati in un numero inferiore di richieste effettive quando si utilizza l&#39;endpoint `/collection/`. |
 
 >[!IMPORTANT]
 >
@@ -61,4 +61,4 @@ La tabella seguente mostra le linee guida sui limiti di richiesta al secondo per
 
 ## Estensione Adobe Experience Platform
 
-Puoi utilizzare l’estensione Adobe Experience Platform per creare una nuova connessione in streaming. L&#39;estensione [!DNL Experience Platform] fornisce azioni per inviare beacon formattati in [!DNL Experience Data Model] (XDM) per l&#39;acquisizione in tempo reale in [!DNL Experience Platform]. Per ulteriori informazioni, consulta la documentazione dell&#39;estensione [Experience Platform](../../tags/extensions/client/web-sdk/overview.md).
+Puoi utilizzare l’estensione Adobe Experience Platform per creare una nuova connessione in streaming. L&#39;estensione [!DNL Experience Platform] fornisce azioni per inviare beacon formattati in [!DNL Experience Data Model] (XDM) per l&#39;acquisizione in tempo reale in [!DNL Experience Platform]. Per ulteriori informazioni, consulta la documentazione dell&#39;[estensione Experience Platform](../../tags/extensions/client/web-sdk/overview.md).
