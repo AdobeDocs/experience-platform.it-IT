@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;accesso ai dati;python sdk;spark sdk;API di accesso ai dati;esportare;Export;Home;popular topic;data access;python sdk;spark sdk;data access api;export;Export
+keywords: Experience Platform;home;argomenti popolari;accesso ai dati;python sdk;spark sdk;API di accesso ai dati;esportare;Export;;home;popular topic;data access;python sdk;spark sdk;data access api;export;Export
 solution: Experience Platform
 title: Guida dell’API di accesso ai dati
-description: L’API di accesso ai dati supporta Adobe Experience Platform fornendo agli sviluppatori un’interfaccia RESTful incentrata sulla reperibilità e l’accessibilità dei set di dati acquisiti in Experience Platform.
+description: L’API di accesso ai dati supporta Adobe Experience Platform fornendo agli sviluppatori un’interfaccia RESTful incentrata sulla reperibilità e l’accessibilità dei set di dati acquisiti all’interno di Experience Platform.
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
-source-git-commit: 804eeb4ec976cf41fdd450bd8f307499c3ebae03
+source-git-commit: 78dbb735bad70e2115cbbaabb6cf74bf38983460
 workflow-type: tm+mt
 source-wordcount: '566'
 ht-degree: 5%
@@ -154,7 +154,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `data.name` | Nome del file, ad esempio `profiles.csv`. |
+| `data.name` | Nome del file, ad esempio `profiles.parquet`. |
 | `data.length` | Dimensione del file (in byte). |
 | `data._links.self.href` | URL per il download del file. |
 
@@ -201,7 +201,7 @@ Quando viene restituita una directory, questa contiene una matrice di tutti i fi
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `data.name` | Nome del file, ad esempio `profiles.csv`. |
+| `data.name` | Nome del file, ad esempio `profiles.parquet`. |
 | `data._links.self.href` | URL per il download del file. |
 
 ## Accedere al contenuto di un file {#access-file-contents}
@@ -231,7 +231,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `{FILE_ID}` | ID del file all’interno di un set di dati. |
-| `{FILE_NAME}` | Nome completo del file, ad esempio `profiles.csv`. |
+| `{FILE_NAME}` | Nome completo del file, ad esempio `profiles.parquet`. |
 
 **Risposta**
 
@@ -243,4 +243,4 @@ Per ulteriori esempi, consulta l&#39;[esercitazione sull&#39;accesso ai dati](tu
 
 ## Iscriviti agli eventi di acquisizione dati {#subscribe-to-data-ingestion-events}
 
-È possibile sottoscrivere eventi specifici di valore elevato tramite [Adobe Developer Console](https://developer.adobe.com/console/). Ad esempio, puoi abbonarti agli eventi di acquisizione dati per ricevere notifiche su potenziali ritardi e errori. Per ulteriori informazioni, consulta il tutorial su [abbonamento alle notifiche degli eventi Adobe](../observability/alerts/subscribe.md).
+È possibile sottoscrivere eventi specifici di valore elevato tramite [Adobe Developer Console](https://developer.adobe.com/console/). Ad esempio, puoi abbonarti agli eventi di acquisizione dati per ricevere notifiche su potenziali ritardi e errori. Per ulteriori informazioni, consulta il tutorial su [abbonamento alle notifiche degli eventi di Adobe](../observability/alerts/subscribe.md).
