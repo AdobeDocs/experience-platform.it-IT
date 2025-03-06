@@ -2,9 +2,9 @@
 title: Pianificazioni query
 description: Scopri come automatizzare l’esecuzione di query pianificate, eliminare o disabilitare una pianificazione di query e utilizzare le opzioni di pianificazione disponibili tramite l’interfaccia utente di Adobe Experience Platform.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: c0d2f4b4f8e294d5a7b0a519ab9dad8b78558b26
+source-git-commit: db0ba3bb32b5458ab3a32525c3c63939fe804ab4
 workflow-type: tm+mt
-source-wordcount: '2066'
+source-wordcount: '2027'
 ht-degree: 0%
 
 ---
@@ -119,10 +119,6 @@ Per una panoramica degli avvisi in Adobe Experience Platform, inclusa la struttu
 
 ### Impostare i parametri per una query con parametri pianificata {#set-parameters}
 
->[!IMPORTANT]
->
->La funzionalità dell&#39;interfaccia utente per query con parametri è attualmente disponibile solo in una **versione limitata** e non è disponibile per tutti i clienti. Se non hai accesso alle query con parametri, continua con la sezione [elimina o disabilita una pianificazione](#delete-schedule).
-
 Se si crea una query pianificata per una query con parametri, è necessario impostare i valori dei parametri per queste esecuzioni della query.
 
 ![Sezione Dettagli pianificazione del flusso di lavoro di creazione della pianificazione con la sezione Parametri query evidenziata.](../images/ui/query-schedules/scheduled-query-parameter.png)
@@ -147,7 +143,7 @@ Tieni traccia delle ore di calcolo utilizzate a livello di esecuzione delle quer
 
 >[!AVAILABILITY]
 >
->La funzionalità Compute Hours è esclusiva per gli utenti che hanno acquistato lo SKU [Data Distiller](../data-distiller/overview.md). Per ulteriori informazioni, contatta il rappresentante del tuo Adobe.
+>La funzionalità Compute Hours è esclusiva per gli utenti che hanno acquistato lo SKU [Data Distiller](../data-distiller/overview.md). Per ulteriori informazioni, contatta il rappresentante Adobe.
 
 ![La sezione dei dettagli dell&#39;area di lavoro Query pianificate con un elenco di query viene eseguita evidenziata per una query pianificata.](../images/ui/query-schedules/list-of-scheduled-runs.png)
 

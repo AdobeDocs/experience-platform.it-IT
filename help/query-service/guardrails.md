@@ -3,9 +3,9 @@ keywords: Experience Platform;query;servizio query;risoluzione dei problemi;guar
 title: Guardrail per Query Service
 description: In questo documento vengono fornite informazioni sui limiti di utilizzo per i dati di Query Service, utili per ottimizzare l’utilizzo delle query.
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: 23c7a4590b365a49edb066567b6ebe2ac08c67e8
 workflow-type: tm+mt
-source-wordcount: '1181'
+source-wordcount: '1168'
 ht-degree: 2%
 
 ---
@@ -27,7 +27,7 @@ Prima di continuare con questo documento, è necessario avere una buona conoscen
 
 * **Query batch**: per l&#39;esecuzione di `INSERT TABLE AS SELECT` e `CREATE TABLE AS SELECT` query per pulire, modellare, manipolare e arricchire dati. I risultati di queste query **sono archiviati** nel data lake. La metrica per misurare il consumo di questa funzionalità è costituita dalle ore di calcolo.
 
-* **Utenti Query Service**: gli utenti Query Service forniti nella licenza corrente per Customer Journey Analytics, Adobe Real-time Customer Data Platform e/o Adobe Journey Optimizer possono essere utilizzati anche con Data Distiller. Gli utenti di Query Service sono condivisi tra le varie funzionalità.
+* **Utenti Query Service**: gli utenti Query Service forniti nella licenza corrente per Customer Journey Analytics, Adobe Real-Time Customer Data Platform e/o Adobe Journey Optimizer possono essere utilizzati anche con Data Distiller. Gli utenti di Query Service sono condivisi tra le varie funzionalità.
 
 * **Utenti ad hoc**: gli utenti ad hoc eseguono query ad hoc.
 
@@ -35,15 +35,13 @@ Prima di continuare con questo documento, è necessario avere una buona conoscen
 
 * **API di reporting**: API per l&#39;esecuzione di chiamate di recupero dati (internamente o esternamente). I modelli dati per rapporti estesi sono derivati dai modelli dati nativi per rapporti in Adobe Experience Platform, ad esempio il modello dati delle dashboard di Real-Time CDP.
 
-L’illustrazione seguente riepiloga il modo in cui le funzionalità di Query Service sono attualmente incluse in pacchetti e concesse in licenza:
-
 ## Tipi di guardrail
 
 In questo documento sono disponibili due tipi di limiti predefiniti:
 
 | Tipo di guardrail | Descrizione |
 |----------|---------|
-| **Guardrail delle prestazioni (limite software)** | I guardrail di prestazioni sono limiti di utilizzo relativi all’ambito dei tuoi casi d’uso. Quando si superano i guardrail delle prestazioni, è possibile che si verifichi un peggioramento delle prestazioni e della latenza. L’Adobe non è responsabile di tale degrado delle prestazioni. I clienti che superano costantemente il limite di prestazioni possono scegliere di concedere licenze aggiuntive per evitare il degrado delle prestazioni. |
+| **Guardrail delle prestazioni (limite software)** | I guardrail di prestazioni sono limiti di utilizzo relativi all’ambito dei tuoi casi d’uso. Quando si superano i guardrail delle prestazioni, è possibile che si verifichi un peggioramento delle prestazioni e della latenza. Adobe non è responsabile di tale degrado delle prestazioni. I clienti che superano costantemente il limite di prestazioni possono scegliere di concedere licenze aggiuntive per evitare il degrado delle prestazioni. |
 | **Guardrail applicati dal sistema (limite rigido)** | I guardrail applicati dal sistema vengono applicati dall’interfaccia utente o dall’API di Real-Time CDP. Questi sono i limiti che non puoi superare, poiché l’interfaccia utente e l’API ti impediranno di farlo o restituiranno un errore. |
 
 {style="table-layout:auto"}
@@ -101,10 +99,10 @@ Per ulteriori informazioni su Query Service, consulta la seguente documentazione
 * [API servizio query](./api/getting-started.md)
 * [Interfaccia utente di Query Service](./ui/overview.md)
 
-Consulta la seguente documentazione per ulteriori informazioni su altri guardrail dei servizi Experience Platform, informazioni sulla latenza end-to-end e informazioni sulle licenze dai documenti di descrizione del prodotto Real-Time CDP:
+Consulta la seguente documentazione per ulteriori informazioni su altri guardrail dei servizi Experience Platform, sulla latenza end-to-end e sulle licenze dai documenti di descrizione del prodotto Real-Time CDP:
 
 * [Guardrail Real-Time CDP](/help/rtcdp/guardrails/overview.md)
 * [Diagrammi di latenza end-to-end](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) per vari servizi Experience Platform.
-* [Real-time Customer Data Platform (Edizione B2C - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2P - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2B - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (Edizione B2C - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

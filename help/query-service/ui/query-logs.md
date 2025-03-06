@@ -2,18 +2,14 @@
 title: Registri query
 description: I registri delle query vengono generati automaticamente ogni volta che viene eseguita una query e sono disponibili tramite l’interfaccia utente per facilitare la risoluzione dei problemi. Questo documento illustra come utilizzare e navigare nella sezione Registri di Query Service dell’interfaccia utente.
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: db0ba3bb32b5458ab3a32525c3c63939fe804ab4
 workflow-type: tm+mt
-source-wordcount: '1012'
+source-wordcount: '948'
 ht-degree: 0%
 
 ---
 
 # Registri query
-
->[!IMPORTANT]
->
->Alcune funzioni dei registri di query sono attualmente in una versione limitata e non sono disponibili per tutti i clienti. L’interfaccia utente potrebbe apparire leggermente diversa senza un’icona di modifica. È inoltre possibile che il processo di selezione di un nome di query passi all&#39;editor query anziché alla visualizzazione [!UICONTROL Dettagli registro query].
 
 Adobe Experience Platform mantiene un registro di tutti gli eventi di query che si verificano sia tramite l’API che tramite l’interfaccia utente. Queste informazioni sono disponibili nell&#39;interfaccia utente di Query Service dalla scheda [!UICONTROL Registri].
 
@@ -52,10 +48,6 @@ Nel pannello dei dettagli del registro, potete eseguire diverse azioni. È possi
 >L&#39;opzione [!UICONTROL Esegui come CTAS] è disponibile solo per una query SELECT.
 
 ![L&#39;area di lavoro Registro query con una riga selezionata, Esegui come CTAS, Elimina query e l&#39;icona Copia SQL evidenziata.](../images/ui/query-log/edit-output-dataset.png)
-
->[!IMPORTANT]
->
->Alcune funzioni dei registri di query sono attualmente in una versione limitata e non sono disponibili per tutti i clienti.
 
 È inoltre possibile selezionare il nome di un modello di query dalla colonna [!UICONTROL Nome] per passare direttamente alla visualizzazione [!UICONTROL Dettagli registro query].
 
