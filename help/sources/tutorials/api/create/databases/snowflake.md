@@ -1,24 +1,22 @@
 ---
-title: Creare una connessione di base al Snowflake utilizzando l’API del servizio Flusso
-description: Scopri come collegare Adobe Experience Platform al Snowflake utilizzando l’API del servizio Flusso.
+title: Connettere Snowflake ad Experience Platform utilizzando l’API del servizio Flow
+description: Scopri come collegare Adobe Experience Platform a Snowflake utilizzando l’API del servizio Flusso.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 0ef34d30-7b4c-43f5-8e2e-cde05da05aa5
-source-git-commit: d89e0c81bd250e41a863b8b28d358cc6ddea1c37
+source-git-commit: cde31b692e9a11b15cf91a505133f75f69604cba
 workflow-type: tm+mt
-source-wordcount: '955'
-ht-degree: 4%
+source-wordcount: '1187'
+ht-degree: 3%
 
 ---
 
-# Creare una connessione di base [!DNL Snowflake] utilizzando l&#39;API [!DNL Flow Service]
+# Connetti [!DNL Snowflake] ad Experience Platform utilizzando l&#39;API [!DNL Flow Service]
 
 >[!IMPORTANT]
 >
->L&#39;origine [!DNL Snowflake] è disponibile nel catalogo delle origini per gli utenti che hanno acquistato Real-time Customer Data Platform Ultimate.
+>L&#39;origine [!DNL Snowflake] è disponibile nel catalogo delle origini per gli utenti che hanno acquistato Real-Time Customer Data Platform Ultimate.
 
-Una connessione di base rappresenta la connessione autenticata tra un&#39;origine e Adobe Experience Platform.
-
-Utilizzare il seguente tutorial per scoprire come creare una connessione di base per [!DNL Snowflake] utilizzando [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
+Leggi questa guida per scoprire come collegare l&#39;account di origine [!DNL Snowflake] a Adobe Experience Platform utilizzando [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Introduzione
 
@@ -32,6 +30,10 @@ Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Expe
 Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida in [guida introduttiva alle API di Platform](../../../../../landing/api-guide.md).
 
 La sezione seguente fornisce informazioni aggiuntive che è necessario conoscere per connettersi correttamente a [!DNL Snowflake] utilizzando l&#39;API [!DNL Flow Service].
+
+## Connetti [!DNL Snowflake] ad Experience Platform su Azure {#azure}
+
+Per informazioni su come collegare l&#39;origine [!DNL Snowflake] ad Experience Platform su Azure, leggere la procedura seguente.
 
 ### Raccogli le credenziali richieste
 
@@ -59,10 +61,10 @@ Per utilizzare l&#39;autenticazione con coppia di chiavi, è necessario generare
 | --- | --- |
 | `account` | Un nome di account identifica in modo univoco un account all’interno dell’organizzazione. In questo caso, è necessario identificare in modo univoco un account tra diverse [!DNL Snowflake] organizzazioni. A questo scopo, devi anteporre il nome della tua organizzazione al nome dell’account. Esempio: `orgname-account_name`. Per ulteriori informazioni, consulta la guida in [recupero dell&#39;identificatore dell&#39;account [!DNL Snowflake] ](../../../../connectors/databases/snowflake.md#retrieve-your-account-identifier). Per ulteriori informazioni, consulta la [[!DNL Snowflake] documentazione](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
 | `username` | Il nome utente dell&#39;account [!DNL Snowflake]. |
-| `privateKey` | La chiave privata con codifica [!DNL Base64-] del tuo account [!DNL Snowflake]. Puoi generare chiavi private crittografate o non crittografate. Se utilizzi una chiave privata crittografata, devi anche fornire una passphrase di chiave privata durante l’autenticazione in base a Experience Platform. Per ulteriori informazioni, consulta la guida in [recupero della tua [!DNL Snowflake] chiave privata](../../../../connectors/databases/snowflake.md). |
+| `privateKey` | La chiave privata con codifica [!DNL Base64-] del tuo account [!DNL Snowflake]. Puoi generare chiavi private crittografate o non crittografate. Se utilizzi una chiave privata crittografata, devi fornire anche una passphrase di chiave privata durante l’autenticazione in Experience Platform. Per ulteriori informazioni, consulta la guida in [recupero della tua [!DNL Snowflake] chiave privata](../../../../connectors/databases/snowflake.md). |
 | `privateKeyPassphrase` | La passphrase per chiave privata è un ulteriore livello di sicurezza da utilizzare per l&#39;autenticazione con una chiave privata crittografata. Se si utilizza una chiave privata non crittografata, non è necessario fornire la passphrase. |
-| `database` | Il database [!DNL Snowflake] che contiene i dati da acquisire per l&#39;Experience Platform. |
-| `warehouse` | Il data warehouse [!DNL Snowflake] gestisce il processo di esecuzione delle query per l&#39;applicazione. Ogni data warehouse [!DNL Snowflake] è indipendente l&#39;uno dall&#39;altro e deve essere accessibile singolarmente quando si trasferiscono i dati all&#39;Experience Platform. |
+| `database` | Il database [!DNL Snowflake] che contiene i dati da acquisire in Experience Platform. |
+| `warehouse` | Il data warehouse [!DNL Snowflake] gestisce il processo di esecuzione delle query per l&#39;applicazione. Ogni data warehouse [!DNL Snowflake] è indipendente l&#39;uno dall&#39;altro e deve essere accessibile singolarmente quando si trasferiscono i dati ad Experience Platform. |
 
 Per ulteriori informazioni su questi valori, fare riferimento alla [[!DNL Snowflake] guida all&#39;autenticazione con coppia di chiavi](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
 
@@ -70,13 +72,13 @@ Per ulteriori informazioni su questi valori, fare riferimento alla [[!DNL Snowfl
 
 >[!NOTE]
 >
->È necessario impostare il flag `PREVENT_UNLOAD_TO_INLINE_URL` su `FALSE` per consentire lo scaricamento dei dati dal database [!DNL Snowflake] su Experience Platform.
+>Impostare il flag `PREVENT_UNLOAD_TO_INLINE_URL` su `FALSE` per consentire lo scaricamento dei dati dal database [!DNL Snowflake] in Experience Platform.
 
-## Creare una connessione di base
+### Crea una connessione di base per [!DNL Snowflake] in Experience Platform su Azure {#azure-base}
 
 Una connessione di base mantiene le informazioni tra l’origine e Platform, incluse le credenziali di autenticazione dell’origine, lo stato corrente della connessione e l’ID univoco della connessione di base. L’ID della connessione di base consente di esplorare e navigare tra i file dall’interno dell’origine e identificare gli elementi specifici che desideri acquisire, comprese le informazioni relative ai tipi di dati e ai formati.
 
-Per creare un ID di connessione di base, effettuare una richiesta POST all&#39;endpoint `/connections` fornendo le credenziali di autenticazione [!DNL Snowflake] come parte del corpo della richiesta.
+Per creare un ID di connessione di base, eseguire una richiesta POST all&#39;endpoint `/connections` fornendo le credenziali di autenticazione [!DNL Snowflake] come parte del corpo della richiesta.
 
 **Formato API**
 
@@ -252,6 +254,85 @@ In caso di esito positivo, la risposta restituisce la connessione appena creata,
 +++
 
 >[!ENDTABS]
+
+## Connetti [!DNL Snowflake] ad Experience Platform su Amazon Web Services (AWS) {#aws}
+
+>[!AVAILABILITY]
+>
+>Questa sezione si applica alle implementazioni di Experience Platform in esecuzione su Amazon Web Services (AWS). Experience Platform in esecuzione su AWS è attualmente disponibile per un numero limitato di clienti. Per ulteriori informazioni sull&#39;infrastruttura Experience Platform supportata, consulta la [Panoramica multi-cloud di Experience Platform](../../../../../landing/multi-cloud.md).
+
+Per informazioni su come collegare l&#39;origine [!DNL Snowflake] ad Experience Platform su AWS, leggere i passaggi seguenti.
+
+### Crea una connessione di base per [!DNL Snowflake] su Experience Platform in AWS {#aws-base}
+
+**Formato API**
+
+```http
+POST /connections
+```
+
+**Richiesta**
+
+La richiesta seguente crea una connessione di base per [!DNL Snowflake] per acquisire la data in Experience Platform su AWS:
+
++++Seleziona per visualizzare l’esempio
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Snowflake base connection for Experience Platform on AWS",
+      "description": "Snowflake base connection for Experience Platform on AWS",
+      "auth": {
+          "specName": "Basic Authentication",
+          "params": {
+              "host": "acme.snowflakecomputing.com",
+              "port": "443",
+              "username": "acme-cj123",
+              "password": "{PASSWORD}",
+              "database": "ACME_DB",
+              "warehouse": "COMPUTE_WH",
+              "schema": "{SCHEMA}"
+          }
+      },
+      "connectionSpec": {
+          "id": "b2e08744-4f1a-40ce-af30-7abac3e23cf3",
+          "version": "1.0"
+      }
+  }'
+```
+
+| Proprietà | Descrizione |
+| --- | --- |
+| `auth.params.host` | L&#39;URL host al quale il tuo account [!DNL Snowflake] si connette. |
+| `auth.params.port` | Numero di porta utilizzato da [!DNL Snowflake] per la connessione a un server tramite Internet. |
+| `auth.params.username` | Il nome utente associato al tuo account [!DNL Snowflake]. |
+| `auth.params.database` | Il database [!DNL Snowflake] da cui verranno estratti i dati. |
+| `auth.params.password` | La password associata al tuo account [!DNL Snowflake]. |
+| `auth.params.warehouse` | Il data warehouse [!DNL Snowflake] in uso. |
+| `auth.params.schema` | Il nome dello schema associato al database [!DNL Snowflake]. È necessario assicurarsi che anche l&#39;utente a cui si desidera concedere l&#39;accesso al database abbia accesso a questo schema. |
+
++++
+
+**Risposta**
+
+In caso di esito positivo, la risposta restituisce i dettagli della connessione appena creata, incluso il relativo identificatore univoco (`id`). Questo ID è necessario per esplorare lo spazio di archiviazione nella prossima esercitazione.
+
++++Seleziona per visualizzare l’esempio
+
+```json
+{
+    "id": "4cb0c374-d3bb-4557-b139-5712880adc55",
+    "etag": "\"1700d77b-0000-0200-0000-5e3b41a10000\""
+}
+```
+
++++
 
 Seguendo questa esercitazione, è stata creata una connessione di base [!DNL Snowflake] utilizzando l&#39;API [!DNL Flow Service]. Puoi utilizzare questo ID connessione di base nelle seguenti esercitazioni:
 
