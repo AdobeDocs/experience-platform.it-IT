@@ -2,9 +2,9 @@
 title: Domande frequenti sui tipi di pubblico
 description: Trova le risposte alle domande più frequenti su tipi di pubblico e altri concetti correlati alla segmentazione.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: 16ffdd0e28687c04b4b8a2b33f10ddceea9ec03a
 workflow-type: tm+mt
-source-wordcount: '4830'
+source-wordcount: '4832'
 ht-degree: 2%
 
 ---
@@ -83,7 +83,7 @@ Il criterio di unione predefinito specifico per l’organizzazione viene applica
 
 ### Dove posso attivare i tipi di pubblico generati esternamente in?
 
-Un pubblico generato esternamente può essere mappato su qualsiasi destinazione e utilizzato nelle campagne Adobe Journey Optimizer.
+Un pubblico generato esternamente può essere mappato su qualsiasi destinazione e utilizzato nelle campagne e nei percorsi Adobe Journey Optimizer.
 
 ### Posso eliminare un pubblico generato esternamente?
 
@@ -308,12 +308,12 @@ Il posizionamento del componente di composizione segue una struttura rigida come
 
 Inoltre, le seguenti restrizioni(?) applica quando si utilizzano questi blocchi:
 
-- Dividi blocco
+- Blocco di divisione
    - Questo blocco supporta solo tipi di dati **String**. Il blocco Split **non** supporta il tipo di dati data o booleano.
    - Inoltre, questo blocco **non** supporta gli attributi di arricchimento.
 - Escludi blocco
    - Questo blocco **non** supporta il tipo di dati data o booleano.
-- Blocco della classificazione
+- Blocco di classificazione
    - Questo blocco **non** supporta gli attributi di arricchimento.
 
 Per ulteriori dettagli sull&#39;utilizzo di Audience Composition, leggere la [guida dell&#39;interfaccia utente di Audience Composition](./ui/audience-composition.md).
