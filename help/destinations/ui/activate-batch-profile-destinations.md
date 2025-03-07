@@ -3,9 +3,9 @@ title: Attivare i tipi di pubblico per le destinazioni di esportazione dei profi
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico disponibili in Adobe Experience Platform inviandoli a destinazioni basate su profili in batch.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: 8a1ac01c503bd1e5b9873714514d438b22f45cfb
 workflow-type: tm+mt
-source-wordcount: '4374'
+source-wordcount: '4405'
 ht-degree: 12%
 
 ---
@@ -64,18 +64,18 @@ Per selezionare i tipi di pubblico che si desidera attivare nella destinazione, 
 Puoi scegliere tra più tipi di pubblico, a seconda della loro origine:
 
 * **[!UICONTROL Servizio di segmentazione]**: tipi di pubblico generati in Experience Platform dal servizio di segmentazione. Per ulteriori dettagli, consulta la [documentazione sulla segmentazione](../../segmentation/ui/overview.md).
-* **[!UICONTROL Caricamento personalizzato]**: pubblico generato al di fuori di Experience Platform e caricato in Platform come file CSV. Per ulteriori informazioni sui tipi di pubblico esterni, consulta la documentazione su [importazione di un pubblico](../../segmentation/ui/audience-portal.md#import-audience).
+* **[!UICONTROL Caricamento personalizzato]**: pubblico generato al di fuori di Experience Platform e caricato in Platform come file CSV. Per ulteriori informazioni sui tipi di pubblico esterni, consulta la documentazione su [importazione di un pubblico](../../segmentation/ui/audience-portal.md#import-audience). La selezione dei tipi di pubblico provenienti da **[!UICONTROL Caricamenti personalizzati]** abilita automaticamente il passaggio [Seleziona attributi di arricchimento](#select-enrichment-attributes).
 * Altri tipi di pubblico, provenienti da altre soluzioni Adobe, ad esempio [!DNL Audience Manager].
+
+>[!IMPORTANT]
+>
+>Quando si attivano tipi di pubblico per caricamento personalizzati su destinazioni basate su file in batch, esiste un limite di 10 tipi di pubblico che è possibile attivare in un flusso di dati.
 
 ![Caselle di controllo visualizzate quando si selezionano uno o più tipi di pubblico da attivare.](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
 
 >[!TIP]
 >
->La selezione dei tipi di pubblico provenienti da **[!UICONTROL Caricamenti personalizzati]** abilita automaticamente il passaggio [Seleziona attributi di arricchimento](#select-enrichment-attributes).
-
->[!TIP]
->
->Puoi rimuovere i tipi di pubblico dai flussi di attivazione esistenti dalla pagina **[!UICONTROL Dati attivazione]**. Per informazioni dettagliate, consulta la [documentazione dedicata](../ui/destination-details-page.md#bulk-remove).
+>Per rimuovere i tipi di pubblico dai flussi di attivazione esistenti, utilizzare la pagina **[!UICONTROL Dati attivazione]**. Per ulteriori informazioni, consulta la sezione su come [rimuovere più tipi di pubblico dai flussi di attivazione](../ui/destination-details-page.md#bulk-remove).
 
 ## Pianificare l’esportazione del pubblico {#scheduling}
 

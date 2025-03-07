@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Ulteriori informazioni sull’utilizzo predefinito dell’attivazione dei dati e sui limiti di tariffa.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: 8a1ac01c503bd1e5b9873714514d438b22f45cfb
 workflow-type: tm+mt
-source-wordcount: '1666'
+source-wordcount: '1718'
 ht-degree: 2%
 
 ---
@@ -76,6 +76,7 @@ I guardrail riportati di seguito si applicano all&#39;attivazione tramite [desti
 | Frequenza di attivazione | Un’esportazione completa giornaliera o esportazioni incrementali più frequenti ogni 3, 6, 8 o 12 ore. | Guarddrail imposto dal sistema | Per ulteriori informazioni sugli incrementi di frequenza per le esportazioni batch, leggere le sezioni della documentazione [esporta file completi](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [esporta file incrementali](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files). |
 | Numero massimo di tipi di pubblico che possono essere esportati in una determinata ora | 100 | Guardrail delle prestazioni | Si consiglia di aggiungere un massimo di 100 tipi di pubblico ai flussi di dati di destinazione batch. |
 | Numero massimo di righe (record) per file da attivare | 5 milioni | Guarddrail imposto dal sistema | Adobe Experience Platform divide automaticamente i file esportati in 5 milioni di record (righe) per file. Ogni riga rappresenta un profilo. Ai nomi dei file suddivisi viene aggiunto un numero che indica che il file fa parte di un&#39;esportazione più grande: `filename.csv`, `filename_2.csv`, `filename_3.csv`. Per ulteriori informazioni, leggere la [sezione di pianificazione](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) dell&#39;esercitazione attivare destinazioni batch. |
+| Numero massimo di tipi di pubblico di caricamento personalizzati da attivare in un flusso di dati | 10 | Guarddrail imposto dal sistema | Quando si attivano [tipi di pubblico per caricamento personalizzati](/help/segmentation/ui/audience-portal.md#import-audience) in destinazioni basate su file batch, esiste un limite di 10 tipi di pubblico di questo tipo che è possibile attivare in un flusso di dati. Ulteriori informazioni sul flusso di lavoro per [attivare tipi di pubblico di caricamento personalizzati nelle destinazioni basate su file batch](/help/destinations/ui/activate-batch-profile-destinations.md#select-audiences). |
 
 {style="table-layout:auto"}
 
