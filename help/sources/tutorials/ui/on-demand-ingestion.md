@@ -2,9 +2,9 @@
 title: Acquisizione su richiesta per flussi di dati di origini nell’interfaccia utente
 description: Scopri come creare flussi di dati on-demand per le connessioni sorgente utilizzando l’interfaccia utente di Experience Platform.
 exl-id: e5a70044-2484-416a-8098-48e6d99c2d98
-source-git-commit: 38da1c1d5e563ea3f66cc25a69ad726f709784d0
+source-git-commit: 7a287c8de3c3fd0670cbdf29cd58558b30982122
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: '549'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Le esecuzioni del flusso rappresentano un’istanza dell’esecuzione del flusso
 >
 >Per creare un’esecuzione del flusso, devi innanzitutto disporre dell’ID di flusso di un flusso di dati pianificato per l’acquisizione una tantum.
 
-Questo documento richiede una buona conoscenza dei seguenti elementi di Experience Platform:
+Questo documento richiede una buona conoscenza dei seguenti componenti di Experience Platform:
 
 * [Origini](../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
 * [Flussi dati](../../../dataflows/home.md): un flusso di dati è una rappresentazione dei processi di dati che spostano i dati in Platform. I flussi di dati sono configurati tra servizi diversi, consentendo di spostare i dati dai connettori di origine ai set di dati di destinazione, al servizio Identity, al profilo cliente in tempo reale e alle destinazioni.
@@ -57,7 +57,7 @@ Seleziona **[!UICONTROL Pianifica]** e attendi alcuni istanti per l&#39;attivazi
 
 ![Finestra di configurazione della pianificazione per l&#39;acquisizione su richiesta.](../../images/tutorials/on-demand/configure-schedule.png)
 
-Seleziona il nome del flusso di dati per visualizzare l’attività del flusso di dati. Qui verrà visualizzato un elenco delle esecuzioni del flusso di dati che sono state elaborate. Seleziona un&#39;esecuzione del flusso di dati, quindi seleziona **[!UICONTROL Riprova]** dalla barra a destra per riprovare l&#39;acquisizione per un&#39;iterazione di esecuzione del flusso di dati selezionata.
+Seleziona il nome del flusso di dati per visualizzare l’attività del flusso di dati. Qui verrà visualizzato un elenco delle esecuzioni del flusso di dati che sono state elaborate. È possibile eseguire nuovamente singole iterazioni del flusso di dati indipendentemente dal fatto che abbiano avuto esito negativo o positivo. Per le iterazioni di esecuzione non riuscite, è possibile utilizzare **[!UICONTROL Riprova]** per avviare nuovamente l&#39;esecuzione dopo aver diagnosticato e risolto eventuali errori riscontrati durante il processo di creazione.
 
 ![Un elenco di flussi elaborati viene eseguito per un flusso di dati selezionato.](../../images/tutorials/on-demand/processed.png)
 
