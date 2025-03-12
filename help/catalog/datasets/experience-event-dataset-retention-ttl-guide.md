@@ -2,10 +2,10 @@
 title: Gestire la conservazione dei set di dati di Experience Event nel Data Lake tramite TTL
 description: Scopri come valutare, impostare e gestire la conservazione dei set di dati di Experience Event nel data lake utilizzando le configurazioni Time-To-Live (TTL) con le API di Adobe Experience Platform. Questa guida spiega come la scadenza a livello di riga TTL supporti le regole di conservazione dei dati, ottimizzi l'efficienza dello storage e garantisca un'efficace gestione del ciclo di vita dei dati. Inoltre, fornisce casi d’uso e best practice per aiutarti ad applicare il TTL in modo efficace.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: affaeb0869423292a44eb7ada8343482bb163ca6
+source-git-commit: 3b5fcc3eec6f2c2e749c86a7baf9995fb88b27d6
 workflow-type: tm+mt
-source-wordcount: '2196'
-ht-degree: 1%
+source-wordcount: '2336'
+ht-degree: 0%
 
 ---
 
@@ -416,6 +416,20 @@ Il reporting storico sull’utilizzo dei set di dati non è al momento disponibi
 
 +++Risposta
 No, una volta applicati i criteri di conservazione, tutti i dati precedenti al periodo di conservazione vengono eliminati definitivamente e non possono essere recuperati.
++++
+
+### Qual è il TTL minimo che posso configurare su un set di dati Experience Event di un data lake?
+
++++Risposta
+Il TTL minimo per un set di dati Experience Event del data lake è di 30 giorni. Il data lake funziona come un sistema di elaborazione di backup e ripristino durante l’acquisizione e l’elaborazione iniziali. Di conseguenza, i dati devono rimanere nel data lake per almeno 30 giorni dopo l’acquisizione, prima che possa scadere.
++++
+
+### Cosa succede se devo conservare alcuni campi del data lake più a lungo di quanto consenta il mio criterio TTL?
+
++++Risposta
+Utilizza Data Distiller per mantenere campi specifici oltre il TTL del set di dati, mantenendo al contempo i limiti di utilizzo. Crea un processo che scrive regolarmente solo i campi necessari in un set di dati derivato. Questo flusso di lavoro garantisce la conformità con un TTL più breve, preservando al contempo i dati critici per un uso esteso.
+
+Per ulteriori dettagli, vedere la [guida Creare set di dati derivati con SQL](../../query-service/data-distiller/derived-datasets/create-derived-datasets-with-sql.md).
 +++
 
 ## Passaggi successivi {#next-steps}
