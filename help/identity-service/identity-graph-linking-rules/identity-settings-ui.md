@@ -2,9 +2,9 @@
 title: Interfaccia utente per le impostazioni delle identità
 description: Scopri come utilizzare l’interfaccia utente delle impostazioni di identità.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 7c2e5cad997b7e7b9e0a08d3a3a1f5c9b218329e
+source-git-commit: f2e2c094b42248369b4a59d0ad6f950e62e0a7c1
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '571'
 ht-degree: 4%
 
 ---
@@ -34,7 +34,7 @@ Prima di iniziare a utilizzare le impostazioni di identità, leggi i seguenti do
 
 Per accedere alle impostazioni di identità, passa all&#39;area di lavoro del servizio Identity nell&#39;interfaccia utente di Adobe Experience Platform, quindi seleziona **[!UICONTROL Impostazioni]**.
 
-![Pulsante delle impostazioni di identità selezionato.](../images/rules/identities-ui.png)
+![Interfaccia del dashboard delle identità con il pulsante &quot;Impostazioni&quot; selezionato.](../images/rules/dashboard.png)
 
 La pagina delle impostazioni delle identità è divisa in due sezioni: [!UICONTROL Spazi dei nomi delle persone] e [!UICONTROL Spazi dei nomi dei dispositivi o dei cookie]. Gli spazi dei nomi delle persone sono identificatori di singoli individui. Possono essere ID multi-dispositivo, indirizzi e-mail e numeri di telefono. Gli spazi dei nomi dei dispositivi o dei cookie sono identificatori per dispositivi e browser web e non possono avere una priorità maggiore degli spazi dei nomi delle persone. Inoltre, non è possibile designare un dispositivo o uno spazio dei nomi cookie come spazio dei nomi univoco.
 
@@ -46,19 +46,25 @@ Per configurare la priorità dello spazio dei nomi, seleziona uno spazio dei nom
 
 ### Designare uno spazio dei nomi univoco
 
-Per designare uno spazio dei nomi univoco, selezionare la casella di controllo [!UICONTROL Univoco per grafico] che corrisponde a tale spazio dei nomi. Puoi selezionare fino a tre spazi dei nomi univoci per la configurazione delle impostazioni di identità.
-
-![Due spazi dei nomi selezionati e definiti come univoci.](../images/rules/unique-namespace.png)
+Per designare uno spazio dei nomi univoco, selezionare la casella di controllo [!UICONTROL Univoco per grafico] che corrisponde a tale spazio dei nomi. Puoi selezionare **fino a un massimo di tre spazi dei nomi univoci** per la configurazione delle impostazioni di identità.
 
 Una volta stabiliti gli spazi dei nomi univoci, i grafici non saranno più in grado di avere più identità che contengono uno spazio dei nomi univoco. Ad esempio, se hai designato CRMID come spazio dei nomi univoco, un grafo può avere una sola identità con lo spazio dei nomi CRMID. Per ulteriori informazioni, leggere la [panoramica dell&#39;algoritmo di ottimizzazione delle identità](./identity-optimization-algorithm.md#unique-namespace).
 
-Al termine, seleziona **[!UICONTROL Avanti]**. Viene visualizzato un messaggio di conferma. Utilizzare questa opportunità per verificare che le configurazioni siano corrette, quindi selezionare **[!UICONTROL Fine]**.
+Al termine delle configurazioni, seleziona **[!UICONTROL Avanti]** per continuare.
 
-![La pagina di convalida con Fine evidenziata.](../images/rules/finish.png)
+![Due spazi dei nomi selezionati e definiti come univoci.](../images/rules/unique-namespace.png)
 
-Viene visualizzato un messaggio di avviso che indica che i grafici esistenti saranno interessati dall&#39;algoritmo del grafico solo se i grafici vengono aggiornati **dopo il salvataggio delle impostazioni** e che l&#39;identità primaria dei frammenti di evento nel profilo cliente in tempo reale non verrà aggiornata anche dopo le modifiche della priorità dello spazio dei nomi. Inoltre, ti viene comunicato che saranno necessarie fino a **sei ore** affinché le impostazioni nuove o aggiornate abbiano effetto. Per confermare, immetti il nome della sandbox, quindi seleziona **[!UICONTROL Conferma]**.
+Da qui, è necessario confermare quanto segue prima di procedere al passaggio finale:
 
-![Finestra di conferma che visualizza un avviso relativo a un ritardo di sei ore prima dell&#39;elaborazione delle configurazioni.](../images/rules/confirm-settings.png)
+1. Gli spazi dei nomi univoci selezionati.
+2. L’esistenza di un’identità con lo spazio dei nomi univoco con la priorità più elevata in ciascun profilo noto.
+3. Ordine della priorità dello spazio dei nomi.
+
+![Finestra di conferma con il pulsante &quot;conferma&quot; selezionato.](../images/rules/confirmation.png)
+
+Il passaggio finale è un altro messaggio di conferma che indica che i grafici esistenti saranno interessati dall&#39;algoritmo grafico **solo se i grafici vengono aggiornati dopo il salvataggio delle impostazioni** e che l&#39;identità primaria dei frammenti di evento nel profilo cliente in tempo reale non verrà aggiornata anche dopo le modifiche della priorità dello spazio dei nomi. Inoltre, ti viene comunicato che saranno necessarie fino a **sei ore** affinché le impostazioni nuove o aggiornate abbiano effetto. Per confermare, immetti il nome della sandbox, quindi seleziona **[!UICONTROL Conferma]**.
+
+![Finestra di conferma che visualizza un avviso relativo a un ritardo di sei ore prima dell&#39;elaborazione delle configurazioni.](../images/rules/complete.png)
 
 ## Passaggi successivi
 
