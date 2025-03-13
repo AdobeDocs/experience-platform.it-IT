@@ -4,10 +4,10 @@ description: Scopri come i registri di audit consentono di vedere chi ha eseguit
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: f6e413d2d8b644775b6714739113174f5d9cb0d9
+source-git-commit: acbd46b5810a491d838f1c4c3366d19c91c15d51
 workflow-type: tm+mt
-source-wordcount: '1388'
-ht-degree: 35%
+source-wordcount: '1466'
+ht-degree: 32%
 
 ---
 
@@ -46,12 +46,12 @@ La tabella seguente illustra le azioni per le quali le risorse vengono registrat
 | --- | --- |
 | [Criteri di controllo dell&#39;accesso (controllo dell&#39;accesso basato su attributi)](../../../access-control/home.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
 | [Account (Adobe)](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
-| [istanza Attribution AI](../../../intelligent-services/attribution-ai/overview.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita</li><li>Disabilita</li></ul> |
+| [Istanza di IA per l&#39;attribuzione](../../../intelligent-services/attribution-ai/overview.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita</li><li>Disabilita</li></ul> |
 | [Registri di controllo](../../../landing/governance-privacy-security/audit-logs/overview.md) | <ul><li>Esporta</li></ul> |
 | [Classe](../../../xdm/schema/composition.md#class) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
 | Attributo calcolato | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
 | [Istanza di Customer AI](../../../intelligent-services/customer-ai/overview.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita</li><li>Disabilita</li></ul> |
-| [Set di dati](../../../catalog/datasets/overview.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita per [Profilo cliente in tempo reale](../../../profile/home.md)</li><li>Disattiva per profilo</li><li>Aggiungi dati</li><li>Elimina batch</li></ul> |
+| [Set di dati](../../../catalog/datasets/overview.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita per [Profilo cliente in tempo reale](../../../profile/home.md)</li><li>Disabilita per profilo</li><li>Aggiungi dati</li><li>Elimina batch</li></ul> |
 | [Stream di dati](../../../datastreams/overview.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita</li><li>Disabilita</li><li>[Modifica mapping](../../../datastreams/data-prep.md)</li></ul> |
 | [Tipi di dati](../../../xdm/schema/composition.md#data-type) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
 | [Destinazione](../../../destinations/home.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita</li><li>Disabilita</li><li>Attivazione set di dati</li><li>Rimozione set di dati</li><li>Attivazione profilo</li><li>Rimuovi profilo</li></ul> |
@@ -87,7 +87,9 @@ Puoi visualizzare i registri di controllo per diverse funzioni di Experience Pla
 
 ![La dashboard Audit evidenzia Audit nel menu a sinistra.](../../images/audit-logs/audits.png)
 
-I registri di audit vengono conservati per 365 giorni dopo i quali verranno eliminati dal sistema. Pertanto, puoi tornare indietro solo per un periodo massimo di 365 giorni. Se hai bisogno di dati per più di 365 giorni, devi esportare i registri a cadenza regolare per soddisfare i requisiti delle politiche interne.
+I registri di audit vengono conservati per 365 giorni dopo i quali verranno eliminati dal sistema. Se hai bisogno di dati per più di 365 giorni, devi esportare i registri a cadenza regolare per soddisfare i requisiti delle politiche interne.
+
+Il metodo utilizzato per richiedere i registri di audit cambia il periodo di tempo consentito e il numero di record a cui potrai accedere. [L&#39;esportazione dei registri](#export-audit-logs) consente di tornare indietro di 365 giorni (a intervalli di 90 giorni) a un massimo di 1000 record, dove come [interfaccia utente del registro attività](#filter-audit-logs) in Experience Platform visualizza gli ultimi 90 giorni a un massimo di 1000 record.
 
 Seleziona un evento dall’elenco per visualizzarne i dettagli nella barra a destra.
 
@@ -95,12 +97,11 @@ Seleziona un evento dall’elenco per visualizzarne i dettagli nella barra a des
 
 ### Filtrare i registri di audit
 
+Selezionare l&#39;icona funnel (![icona filtro](/help/images/icons/filter.png)) per visualizzare un elenco di controlli filtro che consentono di limitare i risultati.
+
 >[!NOTE]
 >
->Poiché si tratta di una nuova funzione, i dati visualizzati risalgono solo a marzo 2022. A seconda della risorsa selezionata, i dati precedenti potrebbero essere disponibili da gennaio 2022.
-
-
-Selezionare l&#39;icona funnel (![icona filtro](/help/images/icons/filter.png)) per visualizzare un elenco di controlli filtro che consentono di limitare i risultati. Vengono visualizzati solo gli ultimi 1.000 record, indipendentemente dai filtri selezionati.
+>Nell’interfaccia utente di Experience Platform vengono visualizzati solo gli ultimi 90 giorni e un massimo di 1000 record, indipendentemente dai filtri applicati. Se hai bisogno di registri oltre questo (fino a un massimo di 365 giorni), dovrai [esportare i registri di audit](#export-audit-logs).
 
 ![Dashboard dei controlli di audit con il registro attività filtrato evidenziato.](../../images/audit-logs/filters.png)
 
@@ -130,9 +131,13 @@ I dati del registro di controllo restituiti contengono le seguenti informazioni 
 
 ![Dashboard dei controlli di audit con il registro attività filtrato evidenziato.](../../images/audit-logs/filtered.png)
 
-### Esportare i registri di audit
+### Esportare i registri di audit {#export-audit-logs}
 
 Per esportare l’elenco corrente dei registri di audit, seleziona **[!UICONTROL Scarica registro]**.
+
+>[!NOTE]
+>
+>I registri possono essere richiesti con intervalli di 90 giorni, fino a 365 giorni nel passato. Tuttavia, il numero massimo di registri che possono essere restituiti durante una singola esportazione è 10.000.
 
 ![Dashboard dei controlli con [!UICONTROL Registro di download] evidenziato.](../../images/audit-logs/download.png)
 
