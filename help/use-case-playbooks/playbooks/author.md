@@ -1,19 +1,19 @@
 ---
 solution: Experience Platform
-title: 'Assistente AI per casi d’uso: crea e condividi le tue playbook.'
+title: Scopri come creare e condividere i tuoi playbook utilizzando l’Assistente AI.
 description: Come creare e condividere i tuoi playbook per casi d’uso.
 role: User
-source-git-commit: f813db7599409a8fc048480f7803ed86c9f397fe
+exl-id: 0bc49710-ad9e-4509-b7e6-55f9b9037aa9
+source-git-commit: f76db5c8d397c6c7b006c70147c054dc0a67be04
 workflow-type: tm+mt
-source-wordcount: '1111'
+source-wordcount: '1112'
 ht-degree: 0%
 
 ---
 
-
 # Creazione e condivisione di playbook
 
-Il **Playbook Authoring Framework**, basato sull&#39;Assistente AI di Adobe, consente di creare, gestire e condividere playbook in modo efficiente in Adobe Experience Platform.
+[!DNL Playbook Authoring Framework], basato su AI Assistant in Adobe Experience Platform, consente di creare, gestire e condividere i playbook in modo efficiente in Adobe Experience Platform.
 
 Il framework segue un processo in tre fasi:
 
@@ -23,35 +23,33 @@ Il framework segue un processo in tre fasi:
 
 3. **Distribuzione playbook**: condividi playbook tra organizzazioni diverse. Ad esempio, il Martech Center of Excellence di ACME in Germania può creare un playbook &quot;d&#39;oro&quot; e distribuirlo a organizzazioni regionali in Thailandia, Australia, ecc. per contribuire a standardizzare il caso di utilizzo del marketing.
 
-## Creare un playbook con l’Assistente AI di Adobe
+## Creare un playbook
+
+Puoi creare un playbook in due modi: utilizzando l’Assistente AI o manualmente. Leggi le sezioni seguenti per scoprire come.
 
 ### Panoramica playbook
 
-Puoi creare un playbook in due modi: utilizzando l’Assistente AI di Adobe o manualmente.
+Per creare un playbook con l’Assistente AI, segui la procedura riportata di seguito:
 
-Segui questi passaggi per creare un playbook con Adobe AI Assistant:
-
-1. Nel riquadro di spostamento a sinistra, selezionare **Playbook**.
+Nel pannello di navigazione a sinistra, seleziona **[!UICONTROL Playbook]**.
 
 ![&quot;Playbook&quot; evidenziati nel riquadro di navigazione a sinistra nell&#39;interfaccia utente.](/help/use-case-playbooks/assets/playbooks/authoring/playbooks.png)
 
-1. Seleziona **Nuovo playbook**, quindi seleziona **Genera playbook con Assistente AI**.
+Seleziona **[!UICONTROL Nuovo playbook]**, quindi seleziona **Genera playbook con Assistente AI**.
 
-![Selezionare il pulsante &quot;New Playbook&quot;.](/help/use-case-playbooks/assets/playbooks/authoring/new-playbook.png)
+![Interfaccia playbook con l&#39;opzione &quot;Genera playbook con Assistente AI&quot; selezionata.](/help/use-case-playbooks/assets/playbooks/authoring/generate-playbook.png)
 
-![Selezionare il pulsante &quot;Generate playbook with AI Assistant&quot; (Genera playbook con Assistente IA) evidenziato.](/help/use-case-playbooks/assets/playbooks/authoring/generate-playbook.png)
-
-1. Nel campo prompt, descrivi il caso d’uso.
+Nel campo prompt, descrivi il caso d’uso.
 
 **Esempio**: &quot;Coinvolgi i clienti ACME che hanno cercato scarpe da corsa ma non hanno completato l&#39;acquisto.&quot;
 
-![Selezionare il pulsante &quot;Genera playbook con Assistente AI&quot;.](/help/use-case-playbooks/assets/playbooks/authoring/prompt.png)
+![L&#39;interfaccia del playbook con l&#39;area del modulo Web evidenziata.](/help/use-case-playbooks/assets/playbooks/authoring/prompt.png)
 
-1. Seleziona **Genera** per creare i metadati del playbook.
+Seleziona **[!UICONTROL Genera]** per creare i metadati del playbook.
 
 ![L&#39;area di richiesta con il pulsante &quot;Genera&quot; playbook evidenziato.](/help/use-case-playbooks/assets/playbooks/authoring/generate.png)
 
-1. Una volta generati, selezionare **[!UICONTROL Modifica]** per modificare il titolo, la descrizione e i metadati generati in base alle esigenze.
+Una volta generati, selezionare **[!UICONTROL Modifica]** per modificare il titolo, la descrizione e i metadati generati in base alle esigenze.
 
 ![Il playbook generato con il pulsante &quot;Modifica&quot; evidenziato.](/help/use-case-playbooks/assets/playbooks/authoring/edit.png)
 
@@ -63,15 +61,13 @@ Per garantire che i data engineer dispongano di tutti i dettagli necessari per i
 
 ![Sezione dei dettagli del playbook con il pulsante &quot;Modifica&quot; evidenziato.](/help/use-case-playbooks/assets/playbooks/authoring/edit-details.png)
 
-Una volta generati i metadati, selezionare il pulsante **Modifica mappa percorso** per modificare i passaggi nella mappa percorso in base alle esigenze.
+Una volta generati i metadati, selezionare **[!UICONTROL Modifica mappa percorso]** per modificare i passaggi nella mappa percorso in base alle esigenze.
 
 ![Modifica il pulsante Mappa percorso.](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map-button.png)
 
 ![Modifica la mappa del percorso dopo aver acquisito i metadati del playbook.](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map.png)
 
-Quindi procedi ad associare il playbook alle risorse tecniche.
-
-Per creare manualmente un playbook, selezionare **Crea playbook manualmente**.
+Quindi, procedi ad associare il playbook alle risorse tecniche. Per creare manualmente un playbook, selezionare **[!UICONTROL Crea playbook manualmente]**.
 
 ![Crea playbook manualmente](/help/use-case-playbooks/assets/playbooks/authoring/create-manually.png)
 
@@ -79,13 +75,13 @@ Viene visualizzato un modello di playbook vuoto. Compila dettagli come **Titolo*
 
 ## Associa playbook a risorse tecniche
 
-Indipendentemente dal fatto che si crei un playbook manualmente o con l&#39;Assistente AI, è necessario associarlo alle risorse tecniche richieste. Passa alla scheda **[!UICONTROL Assets tecnico]** e seleziona il prodotto richiesto. Scegliere **[!UICONTROL Journey Optimizer]**.
+Indipendentemente dal fatto che si crei un playbook manualmente o con l&#39;Assistente AI, è necessario associarlo alle risorse tecniche richieste. Passa alla scheda **[!UICONTROL Assets tecnico]** e seleziona il prodotto richiesto. Selezionare **[!UICONTROL Journey Optimizer]**.
 
 >[!NOTE]
 >
-> Il supporto per Real-Time Customer Data Platform verrà aggiunto in una versione futura.
+> Il supporto per Real-Time CDP verrà aggiunto in una versione futura.
 
-![ scheda &quot;Risorse tecniche&quot; e il pulsante &quot;Aggiungi prodotto richiesto&quot; sono evidenziati.](/help/use-case-playbooks/assets/playbooks/authoring/technical-assets-add-required-product.png)
+![La scheda &quot;Risorse tecniche&quot; e il pulsante &quot;Aggiungi prodotto richiesto&quot; sono evidenziati.](/help/use-case-playbooks/assets/playbooks/authoring/technical-assets-add-required-product.png)
 
 Scegli **[!UICONTROL Seleziona una risorsa]** per associare il playbook a un percorso, come illustrato nell&#39;immagine seguente. Quindi seleziona **Pubblica playbook** per finalizzare il playbook.
 
@@ -162,4 +158,4 @@ Se un playbook viene segnalato come contenuto inappropriato o offensivo, viene a
 
 ## Passaggi successivi
 
-Ora che sai come creare e pubblicare playbook utilizzando l&#39;Assistente AI di Adobe, scopri come iniziare a utilizzare i playbook disponibili e scegli quello giusto per il tuo caso d&#39;uso da [Elenco playbook](/help/use-case-playbooks/playbooks/choose.md).
+Ora che sai come creare e pubblicare playbook utilizzando l&#39;Assistente AI, scopri come iniziare a utilizzare i playbook disponibili e scegli quello giusto per il tuo caso d&#39;uso da [Elenco playbook](/help/use-case-playbooks/playbooks/choose.md).
