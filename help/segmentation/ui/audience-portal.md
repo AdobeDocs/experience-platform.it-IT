@@ -2,9 +2,9 @@
 title: Panoramica di Audience Portal
 description: Scopri come utilizzare Audience Portal per visualizzare, gestire e creare tipi di pubblico in Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 9f4facebcd55dc15761db1bf744acfef9ccb15ff
+source-git-commit: a862e532382472eadf29aee2568c550b1a71211a
 workflow-type: tm+mt
-source-wordcount: '4597'
+source-wordcount: '4609'
 ht-degree: 4%
 
 ---
@@ -62,7 +62,7 @@ Accanto a ogni pubblico è presente un’icona con i puntini di sospensione. Sel
 | [!UICONTROL Sposta nella cartella] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Gestisce la cartella a cui appartiene il pubblico. Per ulteriori informazioni su questa funzione, leggere la sezione relativa al filtro e all&#39;assegnazione di tag [1.](#manage-audiences) |
 | [!UICONTROL Copia] | Servizio di segmentazione | Duplica il pubblico selezionato. Ulteriori informazioni su questa funzione sono disponibili nelle [Domande frequenti sulla segmentazione](../faq.md#copy). |
 | [!UICONTROL Applica etichette di accesso] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Gestisce le etichette di accesso che appartengono al pubblico. Per ulteriori informazioni sulle etichette di accesso, consulta la documentazione su [gestione delle etichette](../../access-control/abac/ui/labels.md). |
-| [!UICONTROL Publish] | Caricamento personalizzato, servizio di segmentazione | Pubblica il pubblico selezionato. Per ulteriori informazioni sulla gestione dello stato del ciclo di vita, consulta la sezione [stato del ciclo di vita nelle Domande frequenti sulla segmentazione](../faq.md#lifecycle-states). |
+| [!UICONTROL Pubblica] | Caricamento personalizzato, servizio di segmentazione | Pubblica il pubblico selezionato. Per ulteriori informazioni sulla gestione dello stato del ciclo di vita, consulta la sezione [stato del ciclo di vita nelle Domande frequenti sulla segmentazione](../faq.md#lifecycle-states). |
 | [!UICONTROL Disattivare] | Caricamento personalizzato, servizio di segmentazione | Disattiva il pubblico selezionato. Per ulteriori informazioni sulla gestione dello stato del ciclo di vita, consulta la sezione [stato del ciclo di vita nelle Domande frequenti sulla segmentazione](../faq.md#lifecycle-states). |
 | [!UICONTROL Elimina] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Elimina il pubblico selezionato. I tipi di pubblico utilizzati nelle destinazioni a valle o dipendenti in altri tipi di pubblico **non possono** essere eliminati. Per ulteriori informazioni sull&#39;eliminazione del pubblico, leggere le [domande frequenti sulla segmentazione](../faq.md#lifecycle-states). |
 | [!UICONTROL Aggiungi al pacchetto] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Sposta il pubblico da una sandbox all’altra. Per ulteriori informazioni su questa funzione, leggere la [guida agli strumenti della sandbox](../../sandboxes/ui/sandbox-tooling.md). |
@@ -97,7 +97,7 @@ Puoi aggiungere campi aggiuntivi a Audience Portal selezionando ![l&#39;icona de
 | ----- | ----------- |
 | [!UICONTROL Nome] | Il nome del pubblico. |
 | [!UICONTROL Conteggio dei profili] | Il numero totale di profili idonei per il pubblico. |
-| [!UICONTROL Origin] | L’origine del pubblico. Indica da dove proviene il pubblico. I valori possibili includono Servizio di segmentazione, Caricamento personalizzato, Composizione del pubblico e Audience Manager. |
+| [!UICONTROL Origin] | L’origine del pubblico. Indica da dove proviene il pubblico. I valori possibili includono Segmentation Service, Caricamento personalizzato, Composizione pubblico e Audience Manager. |
 | [!UICONTROL Stato del ciclo di vita] | Stato del pubblico. I valori possibili per questo campo includono `Draft`, `Inactive` e `Published`. Ulteriori informazioni sugli stati del ciclo di vita, compreso il significato dei diversi stati e come spostare i tipi di pubblico in diversi stati del ciclo di vita, sono disponibili nella sezione [lifecycle status delle domande frequenti sulla segmentazione](../faq.md#lifecycle-status). |
 | [!UICONTROL Frequenza aggiornamento] | Valore che indica la frequenza con cui vengono aggiornati i dati del pubblico. I valori possibili per questo campo includono [!UICONTROL Batch], [!UICONTROL Streaming], [!UICONTROL Edge] e [!UICONTROL Non pianificato]. |
 | [!UICONTROL Ultimo aggiornamento eseguito da] | Nome dell’ultima persona che ha aggiornato il pubblico. |
@@ -113,9 +113,9 @@ Se il raggruppamento è selezionato, la visualizzazione mostra un grafico a barr
 
 | Stato | Descrizione |
 | ------ | ----------- |
-| [!UICONTROL Realizzato] | Numero di profili qualificati **** per il segmento nelle ultime 24 ore dall&#39;ultima esecuzione del processo di segmentazione batch. |
-| [!UICONTROL Esistente] | Numero di profili **rimasti** nel segmento nelle ultime 24 ore dall&#39;ultima esecuzione del processo di segmentazione batch. |
-| [!UICONTROL Uscita] | Il numero di profili che **sono usciti** dal segmento nelle ultime 24 ore dall&#39;ultima esecuzione del processo di segmentazione batch. |
+| [!UICONTROL Realizzato] | Il numero di profili che **hanno qualificato** per il pubblico nelle ultime 24 ore dall&#39;ultima esecuzione del processo di segmentazione batch. |
+| [!UICONTROL Esistente] | Numero di profili **rimasti** nel pubblico nelle ultime 24 ore dall&#39;ultima esecuzione del processo di segmentazione batch. Questo campo è **calcolato** e non viene visualizzato nell&#39;oggetto `segmentMembership`. |
+| [!UICONTROL Uscita] | Il numero di profili che **sono usciti** dal pubblico nelle ultime 24 ore dall&#39;ultima esecuzione del processo di segmentazione batch. |
 
 Dopo aver selezionato i campi da visualizzare, è possibile ridimensionare anche la larghezza delle colonne visualizzate. Per eseguire questa operazione, trascinare l&#39;area tra le colonne o selezionare l&#39;![icona freccia](/help/images/icons/chevron-down.png) della colonna da ridimensionare, seguita da **[!UICONTROL Ridimensiona colonna]**.
 
@@ -414,7 +414,7 @@ Selezionando **[!UICONTROL Genera regola]** puoi passare al Generatore di segmen
 
 ### Composizione di pubblico federato {#fac}
 
-Oltre alle composizioni del pubblico e alle definizioni dei segmenti, puoi utilizzare la Composizione federata del pubblico di Adobe per creare nuovi tipi di pubblico dai set di dati aziendali senza copiare i dati sottostanti e memorizzarli in Adobe Experience Platform Audience Portal. Puoi anche arricchire i tipi di pubblico esistenti in Adobe Experience Platform utilizzando dati di pubblico composti che sono stati federati dal data warehouse aziendale. Leggi la guida su [Federated Audience Composition](https://experienceleague.adobe.com/it/docs/federated-audience-composition/using/home).
+Oltre alle composizioni del pubblico e alle definizioni dei segmenti, puoi utilizzare la Composizione federativa del pubblico di Adobe per creare nuovi tipi di pubblico dai set di dati aziendali senza copiare i dati sottostanti e memorizzarli in Adobe Experience Platform Audience Portal. Puoi anche arricchire i tipi di pubblico esistenti in Adobe Experience Platform utilizzando dati di pubblico composti che sono stati federati dal data warehouse aziendale. Leggi la guida su [Federated Audience Composition](https://experienceleague.adobe.com/it/docs/federated-audience-composition/using/home).
 
 ![Elenco di tipi di pubblico creati in Federated Audience Composition per la tua organizzazione.](../images/ui/overview/federated-audience-composition.png)
 
