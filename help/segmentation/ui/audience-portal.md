@@ -2,7 +2,7 @@
 title: Panoramica di Audience Portal
 description: Scopri come utilizzare Audience Portal per visualizzare, gestire e creare tipi di pubblico in Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: a862e532382472eadf29aee2568c550b1a71211a
+source-git-commit: 5220fa9be3f567d72f864d35596f6b219f15fb9d
 workflow-type: tm+mt
 source-wordcount: '4609'
 ht-degree: 4%
@@ -114,7 +114,7 @@ Se il raggruppamento è selezionato, la visualizzazione mostra un grafico a barr
 | Stato | Descrizione |
 | ------ | ----------- |
 | [!UICONTROL Realizzato] | Il numero di profili che **hanno qualificato** per il pubblico nelle ultime 24 ore dall&#39;ultima esecuzione del processo di segmentazione batch. |
-| [!UICONTROL Esistente] | Numero di profili **rimasti** nel pubblico nelle ultime 24 ore dall&#39;ultima esecuzione del processo di segmentazione batch. Questo campo è **calcolato** e non viene visualizzato nell&#39;oggetto `segmentMembership`. |
+| [!UICONTROL Esistente] | Numero di profili **rimasti** nel pubblico nelle ultime 24 ore dall&#39;ultima esecuzione del processo di segmentazione batch. Questo campo è **calcolato** e non viene visualizzato nell&#39;oggetto [`segmentMembership`](../../xdm/field-groups/profile/segmentation.md). |
 | [!UICONTROL Uscita] | Il numero di profili che **sono usciti** dal pubblico nelle ultime 24 ore dall&#39;ultima esecuzione del processo di segmentazione batch. |
 
 Dopo aver selezionato i campi da visualizzare, è possibile ridimensionare anche la larghezza delle colonne visualizzate. Per eseguire questa operazione, trascinare l&#39;area tra le colonne o selezionare l&#39;![icona freccia](/help/images/icons/chevron-down.png) della colonna da ridimensionare, seguita da **[!UICONTROL Ridimensiona colonna]**.
