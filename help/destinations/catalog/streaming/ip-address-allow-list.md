@@ -1,12 +1,12 @@
 ---
-keywords: Indirizzo IP, intervallo IP, destinazioni di elenco consentiti, di elenco Consentiti inserii nell'elenco Consentiti, destinazioni di streaming di
+keywords: Indirizzo IP, intervallo IP, destinazioni di elenco consentiti, di elenco Consentiti inserì nell'elenco Consentiti, destinazioni di streaming di
 title: INSERIRE NELL'ELENCO CONSENTITI Indirizzo IP per le destinazioni di streaming
 type: Documentation
-description: Questa pagina fornisce intervalli IP che è possibile aggiungere all’elenco consentiti per esportare in modo sicuro i dati da Experience Platform all’endpoint API REST HTTP, all’istanza di Amazon Kinesis o all’istanza di Azure Event Hubs.
+description: Questa pagina fornisce intervalli IP che è possibile aggiungere all’elenco consentiti per esportare in modo sicuro i dati da Experience Platform all’endpoint API REST HTTP, Amazon Kinesis o all’istanza dei Azure Event Hubs.
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: ccb0f80334241afd3f8d8b6ce2833cfd39b223ac
+source-git-commit: 118b0b5e6a1936b644da4153fe7bfeb872ae137e
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '307'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> * L’Adobe consiglia di aggiungere un segnalibro a questa pagina e di visitarla nuovamente ogni tre mesi per verificare la presenza degli indirizzi IP più recenti. L’Adobe non fornisce la notifica dei nuovi intervalli IP.
+> * Adobe consiglia di applicare un segnalibro a questa pagina e di visitarla nuovamente ogni tre mesi per verificare la presenza degli indirizzi IP più recenti. Adobe non fornisce la notifica dei nuovi intervalli IP.
 > * L&#39;elenco degli IP qui documentati *non* si applica alle destinazioni create con [[!DNL Destination SDK]](/help/destinations/destination-sdk/overview.md).
 
 ## Panoramica {#overview}
@@ -26,13 +26,13 @@ Gli intervalli IP qui documentati si applicano alle seguenti destinazioni:
 * [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
 * [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
 
-Il traffico in uscita da Experience Platform a queste destinazioni passa sempre attraverso gli IP elencati in questa pagina.
+Il traffico in uscita da Experience Platform verso queste destinazioni passa sempre attraverso gli IP elencati in questa pagina.
 
-In questa pagina sono disponibili intervalli IP che è possibile aggiungere al inserisco nell&#39;elenco Consentiti di per esportare in modo sicuro i dati da Experience Platform all&#39;endpoint HTTP, [!DNL Amazon Kinesis] o all&#39;istanza [!DNL Azure Event Hubs]. Questa funzionalità è particolarmente utile se l’endpoint HTTP si trova dietro un firewall aziendale o se gli standard di sicurezza e conformità dell’azienda richiedono la inserisce nell&#39;elenco Consentiti di un elenco di intervalli IP.
+Questa pagina fornisce intervalli IP che è possibile aggiungere al inserisco nell&#39;elenco Consentiti di per esportare in modo sicuro i dati da Experience Platform all&#39;endpoint HTTP, [!DNL Amazon Kinesis] o all&#39;istanza [!DNL Azure Event Hubs]. Questa funzionalità è particolarmente utile se l’endpoint HTTP si trova dietro un firewall aziendale o se gli standard di sicurezza e conformità dell’azienda richiedono la inserisce nell&#39;elenco Consentiti di un elenco di intervalli IP.
 
 È possibile definire i controlli di accesso alla rete tramite il firewall di rete. Specificando l’intervallo IP appropriato, puoi consentire il traffico per il servizio di trasferimento dati.
 
-L’Adobe consiglia di aggiungere i seguenti intervalli IP a un inserisco nell&#39;elenco Consentiti di prima di lavorare con le destinazioni menzionate in precedenza in questa pagina. La mancata aggiunta dell’intervallo IP specifico per la tua regione al inserisco nell&#39;elenco Consentiti di potrebbe causare errori o non prestazioni durante l’utilizzo di queste destinazioni di streaming.
+Adobe consiglia di aggiungere i seguenti intervalli IP a un inserisco nell&#39;elenco Consentiti di prima di lavorare con le destinazioni menzionate in questa pagina. La mancata aggiunta dell’intervallo IP specifico per la tua regione al inserisco nell&#39;elenco Consentiti di potrebbe causare errori o non prestazioni durante l’utilizzo di queste destinazioni di streaming.
 
 ## VA7: clienti USA e America {#us-americas}
 
@@ -57,6 +57,12 @@ L’Adobe consiglia di aggiungere i seguenti intervalli IP a un inserisco nell&#
 `52.254.107.0/28`
 `52.254.107.144/28`
 `20.22.83.112`
+
+## VA6: clienti americani e americani in esecuzione su AWS {#aws}
+
+L’intervallo IP riportato di seguito si applica ai clienti di Experience Platform che eseguono su Amazon Web Services (AWS). Per ulteriori informazioni, consulta [Panoramica di Experience Platform Multi-Cloud](../../../landing/multi-cloud.md).
+
+`66.117.18.0/24`
 
 ## NLD2: clienti EMEA {#emea}
 
