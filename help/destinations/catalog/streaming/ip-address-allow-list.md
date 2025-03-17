@@ -4,9 +4,9 @@ title: INSERIRE NELL'ELENCO CONSENTITI Indirizzo IP per le destinazioni di strea
 type: Documentation
 description: Questa pagina fornisce intervalli IP che è possibile aggiungere all’elenco consentiti per esportare in modo sicuro i dati da Experience Platform all’endpoint API REST HTTP, Amazon Kinesis o all’istanza dei Azure Event Hubs.
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: 118b0b5e6a1936b644da4153fe7bfeb872ae137e
+source-git-commit: ee4c42a2298c588590b1535524ed8f3dfe13b603
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '275'
 ht-degree: 0%
 
 ---
@@ -57,12 +57,12 @@ Adobe consiglia di aggiungere i seguenti intervalli IP a un inserisco nell&#39;e
 `52.254.107.0/28`
 `52.254.107.144/28`
 `20.22.83.112`
+<!-- 
+## VA6: US and Americas customers running on AWS {#aws}
 
-## VA6: clienti americani e americani in esecuzione su AWS {#aws}
+The IP range below applies to Experience Platform customers running on Amazon Web Services (AWS). See the [Experience Platform Multi-Cloud overview](../../../landing/multi-cloud.md) for more information.
 
-L’intervallo IP riportato di seguito si applica ai clienti di Experience Platform che eseguono su Amazon Web Services (AWS). Per ulteriori informazioni, consulta [Panoramica di Experience Platform Multi-Cloud](../../../landing/multi-cloud.md).
-
-`66.117.18.0/24`
+`66.117.18.0/24` -->
 
 ## NLD2: clienti EMEA {#emea}
 

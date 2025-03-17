@@ -3,9 +3,9 @@ title: ELENCO CONSENTITI di indirizzo IP per destinazioni di archiviazione cloud
 type: Documentation
 description: Questa pagina fornisce intervalli IP che puoi aggiungere al tuo elenco consentiti per esportare in modo sicuro i dati da Experience Platform alle destinazioni dell’archiviazione cloud.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
-source-git-commit: 118b0b5e6a1936b644da4153fe7bfeb872ae137e
+source-git-commit: ee4c42a2298c588590b1535524ed8f3dfe13b603
 workflow-type: tm+mt
-source-wordcount: '299'
+source-wordcount: '249'
 ht-degree: 1%
 
 ---
@@ -40,14 +40,14 @@ Adobe consiglia di aggiungere i seguenti intervalli IP a un inserisco nell&#39;e
 ## Obbligatorio per tutti i clienti {#all-customers}
 
 * `52.247.108.70`
+<!-- 
+## US customers running on AWS {#aws}
 
-## Clienti statunitensi in esecuzione su AWS {#aws}
-
-L’intervallo IP riportato di seguito si applica ai clienti di Experience Platform che eseguono su Amazon Web Services (AWS). Per ulteriori informazioni, consulta [Panoramica di Experience Platform Multi-Cloud](../../../landing/multi-cloud.md).
+The IP range below applies to Experience Platform customers running on Amazon Web Services (AWS). See the [Experience Platform Multi-Cloud overview](../../../landing/multi-cloud.md) for more information.
 
 >[!NOTE]
 >
->Questo intervallo IP non è supportato per i clienti che eseguono su AWS e utilizzano destinazioni basate su file per esportare dati in Amazon S3.
+>This IP range is not supported for customers running on AWS who use file-based destinations to export data to Amazon S3. -->
 
 * `66.117.18.0/24`
 
