@@ -4,7 +4,7 @@ description: Scopri come i registri di audit consentono di vedere chi ha eseguit
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: acbd46b5810a491d838f1c4c3366d19c91c15d51
+source-git-commit: 9bc80c2ee01e7a739db55cc7fc77ea19e609b265
 workflow-type: tm+mt
 source-wordcount: '1466'
 ht-degree: 32%
@@ -89,7 +89,7 @@ Puoi visualizzare i registri di controllo per diverse funzioni di Experience Pla
 
 I registri di audit vengono conservati per 365 giorni dopo i quali verranno eliminati dal sistema. Se hai bisogno di dati per più di 365 giorni, devi esportare i registri a cadenza regolare per soddisfare i requisiti delle politiche interne.
 
-Il metodo utilizzato per richiedere i registri di audit cambia il periodo di tempo consentito e il numero di record a cui potrai accedere. [L&#39;esportazione dei registri](#export-audit-logs) consente di tornare indietro di 365 giorni (a intervalli di 90 giorni) a un massimo di 1000 record, dove come [interfaccia utente del registro attività](#filter-audit-logs) in Experience Platform visualizza gli ultimi 90 giorni a un massimo di 1000 record.
+Il metodo utilizzato per richiedere i registri di audit cambia il periodo di tempo consentito e il numero di record a cui potrai accedere. [L&#39;esportazione dei registri](#export-audit-logs) consente di tornare indietro di 365 giorni (a intervalli di 90 giorni) a un massimo di 10.000 record, dove come [interfaccia utente registro attività](#filter-audit-logs) in Experience Platform visualizza gli ultimi 90 giorni a un massimo di 1000 record.
 
 Seleziona un evento dall’elenco per visualizzarne i dettagli nella barra a destra.
 
