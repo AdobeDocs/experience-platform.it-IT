@@ -2,10 +2,10 @@
 title: Priorità dello spazio dei nomi
 description: Scopri la priorità dello spazio dei nomi in Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
+source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
 workflow-type: tm+mt
 source-wordcount: '1801'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -14,11 +14,11 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_identities_namespacepriority"
 >title="Priorità dello spazio dei nomi"
->abstract="La priorità dello spazio dei nomi determina il modo in cui i collegamenti vengono rimossi dal grafo identità."
+>abstract="La priorità dello spazio dei nomi determina il modo in cui i collegamenti vengono rimossi dal grafico delle identità."
 
 >[!AVAILABILITY]
 >
->Le regole di collegamento del grafo identità sono attualmente a disponibilità limitata. Contatta il team del tuo account Adobe per informazioni su come accedere alla funzione nelle sandbox di sviluppo.
+>Le regole di collegamento del grafo delle identità sono attualmente a disponibilità limitata. Contatta il team del tuo account Adobe per informazioni su come accedere alla funzione nelle sandbox di sviluppo.
 
 Ogni implementazione del cliente è unica e personalizzata per soddisfare gli obiettivi di una particolare organizzazione e, come tale, l’importanza di un dato spazio dei nomi varia da cliente a cliente. Esempi reali includono:
 
@@ -141,9 +141,9 @@ Se John e Jane condividono un dispositivo, allora l’ECID (browser web) si tras
 
 Se i criteri di qualificazione del segmento si basassero esclusivamente su eventi anonimi memorizzati in base all’ECID, Jane si qualificherebbe per quel segmento
 
-## Implicazioni su altri servizi Experienci Platform {#implications}
+## Implicazioni su altri servizi Experience Platform {#implications}
 
-Questa sezione illustra come la priorità dello spazio dei nomi può influenzare altri servizi Experience Platform.
+Questa sezione illustra come la priorità dello spazio dei nomi può influenzare altri servizi di Experience Platform.
 
 ### Gestione avanzata del ciclo di vita dei dati
 
@@ -162,7 +162,7 @@ Se le impostazioni di identità sono abilitate, gli attributi calcolati utilizze
 
 L&#39;acquisizione dei dati nel data lake continuerà a rispettare le impostazioni dell&#39;identità primaria configurate in [Web SDK](../../tags/extensions/client/web-sdk/data-element-types.md#identity-map) e negli schemi.
 
-Il data lake non determinerà l’identità primaria in base alla priorità dello spazio dei nomi. Ad esempio, Adobe Customer Journey Analytics continuerà a utilizzare i valori nella mappa delle identità anche dopo l’abilitazione della priorità dello spazio dei nomi (ad esempio, l’aggiunta di un set di dati a una nuova connessione), perché il Customer Journey Analytics utilizza i propri dati dal data lake.
+Il data lake non determinerà l’identità primaria in base alla priorità dello spazio dei nomi. Ad esempio, Adobe Customer Journey Analytics continuerà a utilizzare i valori nella mappa delle identità anche dopo l’abilitazione della priorità dello spazio dei nomi (ad esempio, l’aggiunta di un set di dati a una nuova connessione), perché Customer Journey Analytics utilizza i propri dati dal data lake.
 
 ### Schemi Experience Data Model (XDM)
 
@@ -179,7 +179,7 @@ Quando selezioni i dati, dovrai specificare uno spazio dei nomi, che verrà util
 
 Questa configurazione consente di calcolare i punteggi solo utilizzando eventi autenticati.
 
-Per ulteriori informazioni, leggere i documenti in [Attribution AI](../../intelligent-services/attribution-ai/overview.md) e [IA per l&#39;analisi dei clienti](../../intelligent-services/customer-ai/overview.md).
+Per ulteriori informazioni, leggere i documenti in [IA per l&#39;attribuzione](../../intelligent-services/attribution-ai/overview.md) e [IA per l&#39;analisi dei clienti](../../intelligent-services/customer-ai/overview.md).
 
 ### Destinazioni create dai partner
 

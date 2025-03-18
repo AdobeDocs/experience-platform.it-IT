@@ -2,9 +2,9 @@
 title: Guida dell’interfaccia utente di Graph Simulation
 description: Scopri come utilizzare la simulazione del grafico nell’interfaccia utente del servizio Identity.
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: 31d4c895294e779ef39639710fad0e517fa03cf2
+source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
 workflow-type: tm+mt
-source-wordcount: '1504'
+source-wordcount: '1502'
 ht-degree: 3%
 
 ---
@@ -18,9 +18,9 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->* Le regole di collegamento del grafo identità sono attualmente a disponibilità limitata. Contatta il team del tuo account Adobe per informazioni su come accedere alla funzione nelle sandbox di sviluppo.
+>* Le regole di collegamento del grafo delle identità sono attualmente a disponibilità limitata. Contatta il team del tuo account Adobe per informazioni su come accedere alla funzione nelle sandbox di sviluppo.
 >
->* Per accedere allo strumento [!DNL Graph Simulation], è necessario eseguire il provisioning del tuo account con l&#39;autorizzazione **Visualizza grafico identità**. Per ulteriori informazioni, leggere la [guida sulle autorizzazioni nel controllo degli accessi basato su attributi](../../access-control/abac/ui/permissions.md).
+>* Per accedere allo strumento [!DNL Graph Simulation], il tuo account deve disporre dell&#39;autorizzazione **Visualizza grafico identità**. Per ulteriori informazioni, leggere la [guida sulle autorizzazioni nel controllo degli accessi basato su attributi](../../access-control/abac/ui/permissions.md).
 
 [!DNL Graph Simulation] è uno strumento nell&#39;interfaccia utente di Identity Service che consente di simulare il comportamento di un grafo delle identità in base a una combinazione specifica di identità e alla configurazione dell&#39;[algoritmo di ottimizzazione delle identità](./identity-optimization-algorithm.md).
 

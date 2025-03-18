@@ -2,7 +2,7 @@
 title: Guida alla risoluzione dei problemi per le regole di collegamento del grafico identità
 description: Scopri come risolvere i problemi comuni nelle regole di collegamento del grafico delle identità.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 4d9954dd61b56125ae1e828432c8cc359806d280
+source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
 workflow-type: tm+mt
 source-wordcount: '3286'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Le regole di collegamento del grafo identità sono attualmente a disponibilità limitata. Contatta il team del tuo account Adobe per informazioni su come accedere alla funzione nelle sandbox di sviluppo.
+>Le regole di collegamento del grafo delle identità sono attualmente a disponibilità limitata. Contatta il team del tuo account Adobe per informazioni su come accedere alla funzione nelle sandbox di sviluppo.
 
 Durante il test e la convalida delle regole di collegamento del grafico delle identità, potresti riscontrare alcuni problemi relativi all’acquisizione dei dati e al comportamento del grafico. Leggi questo documento per scoprire come risolvere alcuni problemi comuni che potrebbero verificarsi quando utilizzi le regole di collegamento del grafico delle identità.
 
@@ -26,7 +26,7 @@ Il diagramma seguente è una rappresentazione semplificata del modo in cui i dat
 È importante notare i seguenti fattori:
 
 * Per i dati in streaming, Real-Time Customer Profile, Identity Service e data lake inizieranno a elaborare i dati quando vengono inviati. Tuttavia, la latenza per completare l’elaborazione dei dati dipende dal servizio. In genere, l’elaborazione del data lake richiede un tempo più lungo rispetto a Profilo e Identità.
-   * Se i dati non vengono visualizzati durante l’esecuzione di una query su un set di dati anche dopo un paio d’ore, è probabile che i dati non siano stati acquisiti in Experience Platform.
+   * Se i dati non vengono visualizzati durante l’esecuzione di una query su un set di dati anche dopo un paio d’ore, è probabile che non siano stati acquisiti in Experience Platform.
 * Per i dati batch, tutti i dati fluiranno prima nel data lake, quindi i dati verranno propagati a Profilo e Identità se il set di dati è abilitato per Profilo e Identità.
 * Per i problemi relativi all’acquisizione, è importante che il problema venga isolato a livello di servizio per consentire una risoluzione accurata dei problemi e il debug. Esistono tre tipi di problemi potenziali da considerare:
 
@@ -40,7 +40,7 @@ Il diagramma seguente è una rappresentazione semplificata del modo in cui i dat
 
 >[!NOTE]
 >
->* Questa sezione presuppone che i dati siano stati correttamente acquisiti nel data lake e che non ci sia stata alcuna sintassi o altri errori che avrebbero impedito, in primo luogo, l’acquisizione dei dati in Experience Platform.
+>* Questa sezione presuppone che i dati siano stati correttamente acquisiti nel data lake e che non ci sia stata alcuna sintassi o altri errori che avrebbero impedito l’acquisizione dei dati in Experience Platform.
 >
 >* Negli esempi vengono utilizzati ECID come spazio dei nomi dei cookie e CRMID come spazio dei nomi della persona.
 
@@ -128,7 +128,7 @@ Dopo aver eseguito la query, individua il record dell’evento che si prevedeva 
 La priorità dello spazio dei nomi svolge un ruolo importante nel modo in cui i frammenti di evento determinano l’identità primaria.
 
 * Dopo aver configurato e salvato le [impostazioni identità](./identity-settings-ui.md) per una data sandbox, il profilo utilizzerà [priorità spazio dei nomi](namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events) per determinare l&#39;identità primaria. Nel caso di identityMap, il profilo non utilizzerà più il flag `primary=true`.
-* Anche se il profilo non farà più riferimento a questo flag, gli altri servizi in Experience Platform potrebbero continuare a utilizzare il flag `primary=true`.
+* Anche se il profilo non farà più riferimento a questo flag, gli altri servizi su Experience Platform potrebbero continuare a utilizzare il flag `primary=true`.
 
 Affinché [eventi utente autenticati](implementation-guide.md#ingest-your-data) siano associati allo spazio dei nomi della persona, tutti gli eventi autenticati devono contenere lo spazio dei nomi della persona (CRMID). Ciò significa che anche dopo che un utente effettua l’accesso, lo spazio dei nomi della persona deve essere ancora presente in ogni evento autenticato.
 
@@ -198,7 +198,7 @@ Innanzitutto, devi raccogliere le seguenti informazioni:
 
 1. Il simbolo di identità (namespaceCode) dello spazio dei nomi del cookie (ad esempio ECID) e dello spazio dei nomi della persona (ad esempio CRMID) che sono stati inviati.
 1.1. Per le implementazioni di Web SDK, in genere si tratta degli spazi dei nomi inclusi in identityMap.
-1.2. Per le implementazioni del connettore di origine di Analytics, si tratta dell’identificatore del cookie incluso in identityMap. L’identificatore della persona è un campo eVar contrassegnato come identità.
+1.2. Per le implementazioni del connettore di origine di Analytics, si tratta dell’identificatore del cookie incluso in identityMap. L’identificatore della persona è un campo di eVar contrassegnato come identità.
 2. Set di dati in cui è stato inviato l’evento (dataset_name).
 3. Il valore di identità dello spazio dei nomi del cookie da cercare (identity_value).
 
@@ -250,7 +250,7 @@ WHERE identitymap['ECID'][0].id ='identity_value'
 ORDER BY timestamp desc 
 ```
 
-**Nota**: questo esempio presuppone che `eVar10` sia contrassegnato come identità. Per le configurazioni, devi modificare l’eVar in base all’implementazione dell’organizzazione.
+**Nota**: questo esempio presuppone che `eVar10` sia contrassegnato come identità. Per le configurazioni, devi modificare eVar in base all’implementazione della tua organizzazione.
 
 >[!ENDTABS]
 
@@ -320,7 +320,7 @@ Puoi utilizzare la seguente query nel set di dati di esportazione dello snapshot
 
 Questa sezione illustra un elenco di risposte alle domande più frequenti sulle regole di collegamento del grafico delle identità.
 
-## Algoritmo di ottimizzazione identità {#identity-optimization-algorithm}
+## Algoritmo di ottimizzazione delle identità {#identity-optimization-algorithm}
 
 Leggi questa sezione per le risposte alle domande frequenti sull&#39;[algoritmo di ottimizzazione delle identità](./identity-optimization-algorithm.md).
 

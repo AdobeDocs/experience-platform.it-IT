@@ -2,9 +2,9 @@
 title: Guida all’implementazione per le regole di collegamento del grafico delle identità
 description: Scopri i passaggi consigliati da seguire per implementare i dati con le configurazioni delle regole di collegamento del grafico delle identità.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 79efdff6f6068af4768fc4bad15c0521cca3ed2a
+source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
 workflow-type: tm+mt
-source-wordcount: '1585'
+source-wordcount: '1688'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 >[!AVAILABILITY]
 >
->Le regole di collegamento del grafo identità sono attualmente a disponibilità limitata. Contatta il team del tuo account Adobe per informazioni su come accedere alla funzione nelle sandbox di sviluppo.
+>Le regole di collegamento del grafo delle identità sono attualmente a disponibilità limitata. Contatta il team del tuo account Adobe per informazioni su come accedere alla funzione nelle sandbox di sviluppo.
 
 Leggi questo documento per una guida dettagliata che puoi seguire durante l’implementazione dei dati con il servizio Adobe Experience Platform Identity.
 
@@ -60,7 +60,7 @@ Se utilizzi il [connettore di origine Adobe Analytics](../../sources/tutorials/u
 
 ### Eventi esperienza XDM
 
-Durante il processo di pre-implementazione, devi assicurarti che gli eventi autenticati che il sistema invierà ad Experience Platform contengano sempre un identificatore di persona, come CRMID.
+Durante il processo di preimplementazione, assicurati che gli eventi autenticati inviati dal sistema ad Experience Platform contengano sempre un identificatore di persona, ad esempio CRMID.
 
 >[!BEGINTABS]
 
@@ -120,26 +120,28 @@ Durante il processo di pre-implementazione, devi assicurarti che gli eventi aute
 
 >[!ENDTABS]
 
-Assicurati di disporre di un’identità completa quando invii eventi utilizzando gli eventi di esperienza XDM.
+Durante il processo di pre-implementazione, devi assicurarti che gli eventi autenticati che il tuo sistema invierà ad Experience Platform contengano sempre un **singolo** identificatore di persona, ad esempio un CRMID.
 
-+++Seleziona per visualizzare un esempio di evento con un’identità completa
+* (Consigliato) Eventi autenticati con un identificatore di persona.
+* (Non consigliato) Eventi autenticati con due identificatori di persona.
+* (Sconsigliato) Eventi autenticati senza identificatori di persona.
 
-```json
-    "identityMap": {
-        "ECID": [
-            {
-                "id": "24165048599243194405404369473457348936",
-                "primary": false
-            }
-        ]
-    }
-```
+Se il sistema invia due identificatori di persona, l’implementazione potrebbe non soddisfare il requisito relativo allo spazio dei nomi per singola persona. Ad esempio, se identityMap nell’implementazione di webSDK contiene un CRMID, un customerID e uno spazio dei nomi ECID, due utenti che condividono un dispositivo potrebbero venire associati in modo errato a spazi dei nomi diversi.
+
+In Identity Service, questa implementazione potrebbe essere simile alla seguente:
+
+* `timestamp1` = John effettua l&#39;accesso -> il sistema acquisisce `CRMID: John, ECID: 111`.
+* `timestamp2` = accesso di Jane -> il sistema acquisisce `customerID: Jane, ECID: 111`.
+
++++Visualizza l’aspetto dell’implementazione nella simulazione dei grafici
+
+![L&#39;interfaccia utente di simulazione del grafico con un grafico di esempio sottoposto a rendering.](../images/implementation/example-graph.png)
 
 +++
 
 ## Impostare le autorizzazioni {#set-permissions}
 
-Il primo passaggio nella procedura di implementazione per Identity Service consiste nell’assicurarsi che l’account di Experience Platform venga aggiunto a un ruolo provvisto delle autorizzazioni necessarie. L’amministratore può configurare le autorizzazioni per il tuo account passando all’interfaccia utente Autorizzazioni in Adobe Experience Cloud. A questo punto, è necessario aggiungere il tuo account a un ruolo con le seguenti autorizzazioni:
+Il primo passaggio nel processo di implementazione del servizio Identity consiste nell’assicurarsi che l’account Experience Platform venga aggiunto a un ruolo provvisto delle autorizzazioni necessarie. L’amministratore può configurare le autorizzazioni per il tuo account passando all’interfaccia utente Autorizzazioni in Adobe Experience Cloud. A questo punto, è necessario aggiungere il tuo account a un ruolo con le seguenti autorizzazioni:
 
 * [!UICONTROL Visualizza impostazioni identità]: applica questa autorizzazione per poter visualizzare spazi dei nomi e priorità dello spazio dei nomi univoci nella pagina di esplorazione dello spazio dei nomi delle identità.
 * [!UICONTROL Modifica impostazioni identità]: applica questa autorizzazione per poter modificare e salvare le impostazioni di identità.
@@ -190,7 +192,7 @@ A questo punto, dovresti disporre dei seguenti elementi:
 * Almeno uno schema XDM. (A seconda dei dati e del caso d’uso specifico, potrebbe essere necessario creare schemi sia di profilo che di evento esperienza.)
 * Un set di dati basato sullo schema.
 
-Una volta che hai tutti gli elementi elencati sopra, puoi iniziare ad acquisire i dati da Experience Platform. Puoi eseguire l’acquisizione dei dati in diversi modi. Per Experience Platform i dati, puoi utilizzare i seguenti servizi:
+Una volta che hai tutti gli elementi elencati sopra, puoi iniziare ad acquisire i dati in Experience Platform. Puoi eseguire l’acquisizione dei dati in diversi modi. Per trasferire i dati ad Experience Platform puoi utilizzare i seguenti servizi:
 
 * [Acquisizione in batch e in streaming](../../ingestion/home.md)
 * [Raccolta dati in Experience Platform](../../collection/home.md)
@@ -251,8 +253,8 @@ In questo esempio viene inoltre mostrato che Tom e Summer devono separare le ent
 Per ulteriori informazioni sulle regole di collegamento del grafico delle identità, consulta la documentazione seguente:
 
 * [Panoramica delle regole di collegamento del grafico delle identità](./overview.md)
-* [Algoritmo di ottimizzazione identità](./identity-optimization-algorithm.md)
-* [Esempi di configurazioni di grafo](./example-configurations.md)
+* [Algoritmo di ottimizzazione delle identità](./identity-optimization-algorithm.md)
+* [Esempi di configurazioni del grafico](./example-configurations.md)
 * [Risoluzione dei problemi e domande frequenti](./troubleshooting.md)
 * [Priorità dello spazio dei nomi](./namespace-priority.md)
 * [Interfaccia utente simulazione grafico](./graph-simulation.md)
