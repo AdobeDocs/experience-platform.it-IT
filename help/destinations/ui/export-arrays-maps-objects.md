@@ -3,10 +3,10 @@ title: Esportazione di array, mappe e oggetti da Real-Time CDP a destinazioni di
 type: Tutorial
 description: Scopri come esportare array, mappe e oggetti da Real-Time CDP a destinazioni di archiviazione cloud.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: 99093e0bbcd3c3560ebe201fdac72e83e67dae43
 workflow-type: tm+mt
-source-wordcount: '884'
-ht-degree: 15%
+source-wordcount: '862'
+ht-degree: 16%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 15%
 
 >[!AVAILABILITY]
 >
->La funzionalità per esportare array nelle destinazioni di archiviazione cloud è generalmente disponibile per le seguenti destinazioni: [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md), [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md),
+>La funzionalità per esportare array e altri oggetti complessi nelle destinazioni di archiviazione cloud è generalmente disponibile per le seguenti destinazioni: [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md), [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md),
 
-Scopri come esportare gli array da Real-Time CDP a [destinazioni di archiviazione cloud](/help/destinations/catalog/cloud-storage/overview.md). Leggi questo documento per comprendere il flusso di lavoro di esportazione, i casi d’uso abilitati da questa funzionalità e le limitazioni note.
+Scopri come esportare array, mappe e oggetti da Real-Time CDP in [destinazioni di archiviazione cloud](/help/destinations/catalog/cloud-storage/overview.md). Leggi questo documento per comprendere il flusso di lavoro di esportazione, i casi d’uso abilitati da questa funzionalità e le limitazioni note.
 
 Considera questa pagina come il tuo punto di riferimento per tutto ciò che desideri sapere sull’esportazione di array, mappe e altri tipi di oggetti da Experience Platform.
 
@@ -52,8 +52,6 @@ organizations = [{
   latestInteraction: "2024-09-08"
 }]
 ```
-
-Di seguito sono riportati [estesi esempi](#examples) di come utilizzare varie funzioni per accedere a elementi di array, trasformare e filtrare array, unire elementi di array in una stringa e altro ancora.
 
 Oltre agli array, puoi anche esportare mappe e oggetti da Experience Platform alla destinazione di archiviazione cloud desiderata. Ulteriori informazioni su [mappe](/help/xdm/ui/fields/map.md) e [oggetti](/help/xdm/ui/fields/object.md) in Experience Platform.
 
