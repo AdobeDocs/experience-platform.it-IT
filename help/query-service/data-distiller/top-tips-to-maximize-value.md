@@ -1,17 +1,15 @@
 ---
-title: Suggerimenti principali per massimizzare il valore con Adobe Experience Platform Data Distiller
+title: Principali suggerimenti per massimizzare il valore con Adobe Experience Platform Data Distiller - OS656
 description: Scopri come massimizzare il valore con Adobe Experience Platform Data Distiller arricchendo i dati Real-Time Customer Profile e utilizzando informazioni comportamentali per creare tipi di pubblico mirati. Questa risorsa include un set di dati di esempio e un caso di studio che illustra come applicare il modello Recency, Frequency, Monetary (RFM) per la segmentazione del cliente.
-hide: true
-hidefromtoc: true
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
-source-git-commit: c7a6a37679541dc37bdfed33b72d2396db7ce054
+source-git-commit: 9eee0f65c4aa46c61b699b734aba9fe2deb0f44a
 workflow-type: tm+mt
-source-wordcount: '3506'
+source-wordcount: '3657'
 ht-degree: 0%
 
 ---
 
-# Suggerimenti principali per massimizzare il valore con Adobe Experience Platform Data Distiller
+# Suggerimenti per massimizzare il valore con Adobe Experience Platform Data Distiller - OS656
 
 Questa pagina contiene il set di dati di esempio per applicare ciò che hai imparato nella sessione Adobe Summit &quot;OS656 - Suggerimenti principali per massimizzare il valore con Adobe Experience Platform Data Distiller&quot;. Scoprirai come accelerare le implementazioni di Adobe Real-Time Customer Data Platform e Journey Optimizer arricchendo i dati dei profili cliente in tempo reale. Questo arricchimento sfrutta informazioni approfondite sui modelli di comportamento dei clienti per creare tipi di pubblico per la distribuzione e l’ottimizzazione delle esperienze.
 
@@ -53,7 +51,7 @@ Per caricare un file CSV in Adobe Experience Platform, segui la procedura riport
 
 #### Creare un set di dati da un file CSV {#create-a-dataset}
 
-Nell&#39;interfaccia utente di Experience Platform, passa a selezionare **[!UICONTROL Flussi di lavoro]** nella barra di navigazione a sinistra e seleziona **[!UICONTROL Crea set di dati da file CSV]** tra le opzioni disponibili. A destra dello schermo viene visualizzata una nuova barra laterale. Selezionare **[!UICONTROL Avvia]**.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Set di dati]** nella barra di navigazione a sinistra, seguito da **[!UICONTROL Crea set di dati]**. Quindi seleziona **[!UICONTROL Crea set di dati dal file CSV]** tra le opzioni disponibili.
 
 Viene visualizzato il pannello [!UICONTROL Configura set di dati]. Nel campo **[!UICONTROL Name]**, inserisci il nome del set di dati come &quot;luma_web_data&quot; e seleziona **[!UICONTROL Next]**.
 
@@ -135,7 +133,7 @@ Le query seguenti mostrano come identificare ed escludere gli ordini annullati d
 Questa prima query seleziona tutti gli ID acquisto non nulli associati a un annullamento e li aggrega utilizzando `GROUP BY`. Gli ID acquisto risultanti devono essere esclusi dal set di dati.
 
 ```sql
-CREATE OR replace VIEW orders_cancelled
+CREATE VIEW orders_cancelled
 AS
   SELECT purchase_id
   FROM   luma_web_data
@@ -241,7 +239,7 @@ I risultati sono simili all’immagine riportata di seguito.
 Per migliorare l&#39;efficienza delle query e la riutilizzabilità, creare un `VIEW` per memorizzare i valori RFM aggregati.
 
 ```sql
-CREATE OR replace VIEW rfm_values
+CREATE VIEW rfm_values
 AS
   SELECT userid,
          DATEDIFF(current_date, MAX(purchase_date)) AS days_since_last_purchase,
@@ -258,7 +256,7 @@ Il risultato è simile all&#39;immagine seguente ma con un ID diverso.
 Come best practice, esegui una semplice query di esplorazione per esaminare i dati nella visualizzazione. Utilizza l’istruzione seguente.
 
 ```sql
-SELECT * FROM RFM_Values;
+SELECT * FROM rfm_values;
 ```
 
 La schermata seguente mostra un esempio di risultato della query, con i valori RFM calcolati per ciascun utente. Il risultato corrisponde all&#39;ID visualizzazione della query `CREATE VIEW`.
@@ -289,7 +287,7 @@ SELECT userid,
        NTILE(4)
          OVER (
            ORDER BY total_revenue DESC)                AS monetization
-FROM   rfm_val ues; 
+FROM rfm_values; 
 ```
 
 I risultati sono simili alle immagini seguenti.
@@ -320,6 +318,10 @@ AS
              ORDER BY total_revenue DESC)                AS monetization
   FROM   rfm_values;
 ```
+
+Il risultato è simile all&#39;immagine seguente ma con un ID di visualizzazione diverso.
+
+![Finestra di dialogo Risultati query per la visualizzazione &#39;rfm_scores&#39;.](../images/data-distiller/top-tips-to-maximize-value/rfm_score-view-result.png)
 
 #### Modelli di segmenti RFM {#model-rfm-segments}
 
@@ -398,7 +400,7 @@ Nelle schermate seguenti viene visualizzato un risultato di esempio della query 
 
 ### Passaggio 4: utilizzare SQL per inserire in batch i dati RFM nel profilo cliente in tempo reale {#sql-batch-ingest-rfm-data}
 
-Il, acquisisce in batch i dati dei clienti arricchiti da RFM in Real-Time Customer Profile. Per prima cosa, crea un set di dati abilitato per il profilo e inserisci i dati trasformati utilizzando SQL.
+Successivamente, acquisire in batch i dati dei clienti arricchiti da RFM in Real-Time Customer Profile. Per prima cosa, crea un set di dati abilitato per il profilo e inserisci i dati trasformati utilizzando SQL.
 
 #### Creare un set di dati derivato per memorizzare gli attributi RFM {#create-a-derived-dataset}
 
@@ -426,7 +428,13 @@ In questa istruzione SQL:
 >
 >Per ulteriori informazioni sulla definizione dei campi di identità e sull&#39;utilizzo degli spazi dei nomi di identità, consulta la [documentazione di Identity Service](../../identity-service/home.md) o la guida su [definizione di un campo di identità nell&#39;interfaccia utente di Adobe Experience Platform](../../xdm/ui/fields/identity.md).
 
-Nell&#39;istruzione SQL seguente viene creata una tabella abilitata per il profilo per memorizzare gli attributi RFM
+Poiché l&#39;editor delle query supporta l&#39;esecuzione sequenziale, è possibile includere le query di creazione tabella e di inserimento dati in una singola sessione. Nell&#39;istruzione SQL seguente viene innanzitutto creata una tabella abilitata per il profilo per memorizzare gli attributi RFM. Quindi inserisce i dati del cliente arricchiti da RFM da `rfm_model_segment` nella tabella `adls_rfm_profile`, strutturando ogni record nello spazio dei nomi specifico del tenant richiesto per l&#39;acquisizione del profilo cliente in tempo reale.
+
+Poiché l&#39;editor delle query supporta l&#39;esecuzione sequenziale, è possibile eseguire le query di creazione tabella e di inserimento dati in una singola sessione. Nell&#39;istruzione SQL seguente viene innanzitutto creata una tabella abilitata per il profilo per memorizzare gli attributi RFM. Quindi inserisce i dati del cliente arricchiti da RFM da `rfm_model_segment` nella tabella `adls_rfm_profile`, assicurandosi che ogni record sia strutturato correttamente nello spazio dei nomi specifico del tenant (`_{TENANT_ID}`). Questo spazio dei nomi è essenziale per l’acquisizione del profilo cliente in tempo reale e per una risoluzione accurata delle identità.
+
+>[!IMPORTANT]
+>
+>Sostituisci `_{TENANT_ID}` con lo spazio dei nomi tenant della tua organizzazione. Questo spazio dei nomi è univoco per la tua organizzazione e assicura che tutti i dati acquisiti siano correttamente assegnati in Adobe Experience Platform.
 
 ```sql
 CREATE TABLE IF NOT EXISTS adls_rfm_profile (
@@ -439,11 +447,16 @@ CREATE TABLE IF NOT EXISTS adls_rfm_profile (
     monetization INTEGER, -- Monetary score
     rfm_model TEXT -- RFM segment classification
 ) WITH (LABEL = 'PROFILE'); -- Enable the table for Real-Time Customer Profile
+
+INSERT INTO adls_rfm_profile
+SELECT STRUCT(userId, days_since_last_purchase, orders, total_revenue, recency,
+              frequency, monetization, rfm_model) _{TENANT_ID}
+FROM rfm_model_segment;
 ```
 
 Il risultato di questa query assomiglia alle creazioni di set di dati precedenti in questo playbook, ma con un ID diverso.
 
-Dopo aver creato il set di dati, passa a Set di dati > Sfoglia > `adls_rfm_profile` per verificare che il set di dati sia vuoto.
+Dopo aver creato il set di dati, passa a **[!UICONTROL Set di dati]** > **[!UICONTROL Sfoglia]** > `adls_rfm_profile` per verificare che il set di dati sia vuoto.
 
 ![Area di lavoro dei set di dati con i dettagli del set di dati &#39;adls_rfm_profile&#39; visualizzati ed evidenziati.](../images/data-distiller/top-tips-to-maximize-value/profile-enabled-toggle.png)
 
@@ -464,7 +477,7 @@ Verificare che l&#39;ordine dei campi nella query `SELECT` dell&#39;istruzione `
 ```sql
 INSERT INTO adls_rfm_profile
 SELECT Struct(userid, days_since_last_purchase, orders, total_revenue, recency,
-              frequency, monetization, rfm_model) _pfreportingonprod
+              frequency, monetization, rfm_model) _{TENANT_ID}
 FROM   rfm_model_segment; 
 ```
 
@@ -490,10 +503,10 @@ Per ulteriori dettagli sulla pianificazione delle query, consulta la [documentaz
 
 Viene visualizzata la visualizzazione [!UICONTROL Dettagli pianificazione]. Da qui, inserisci i seguenti dettagli per configurare la pianificazione:
 
-- **[!UICONTROL Frequenza di esecuzione]**: **Annuale**
-- **[!UICONTROL Giorno dell&#39;esecuzione]**: **Aprile 30**
-- **[!UICONTROL Ora di esecuzione pianificata]**: **11 PM UTC**
-- **[!UICONTROL Periodo di pianificazione]**: **1 aprile - 31 maggio 2024**
+- **[!UICONTROL Frequenza di esecuzione]**: **Settimanale**
+- **[!UICONTROL Giorno dell&#39;esecuzione]**: **Lunedì e martedì**
+- **[!UICONTROL Ora di esecuzione pianificata]**: **10:10 ora UTC**
+- **[!UICONTROL Periodo di pianificazione]**: **17 marzo - 30 aprile 2025**
 
 Seleziona **[!UICONTROL Salva]** per confermare la pianificazione.
 
@@ -518,11 +531,11 @@ Scegli l&#39;approccio più adatto al tuo flusso di lavoro.
 
 Utilizza il comando `CREATE AUDIENCE AS SELECT` per definire un nuovo pubblico. Il pubblico creato viene salvato in un set di dati e registrato nell&#39;area di lavoro **[!UICONTROL Tipi di pubblico]** in **[!UICONTROL Data Distiller]**.
 
-I tipi di pubblico creati con l&#39;estensione SQL vengono registrati automaticamente nell&#39;origine [!UICONTROL Data Distiller] nell&#39;area di lavoro [!UICONTROL Tipi di pubblico]. Dall&#39;interfaccia utente di [!UICONTROL Tipi di pubblico] puoi visualizzare, gestire e attivare i tipi di pubblico in base alle esigenze.
+I tipi di pubblico creati con l&#39;estensione SQL vengono registrati automaticamente nell&#39;origine [!UICONTROL Data Distiller] nell&#39;area di lavoro [!UICONTROL Tipi di pubblico]. Da [Audience Portal](../../segmentation/ui/audience-portal.md) puoi visualizzare, gestire e attivare i tipi di pubblico in base alle esigenze.
 
-![L&#39;area di lavoro Tipi di pubblico mostra i tipi di pubblico disponibili.](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-1.png)
+![Il Portale pubblico mostra i tipi di pubblico disponibili.](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-1.png)
 
-![L&#39;area di lavoro Tipi di pubblico mostra i tipi di pubblico disponibili con la barra laterale del filtro e Data Distiller selezionati.](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-2.png)
+![Il Portale pubblico mostra i tipi di pubblico disponibili con la barra laterale del filtro e Data Distiller selezionati.](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-2.png)
 
 Per ulteriori dettagli sui tipi di pubblico SQL, consulta la [documentazione sui tipi di pubblico di Data Distiller](../data-distiller-audiences/overview.md). Per informazioni su come gestire i tipi di pubblico nell&#39;interfaccia utente, consulta la [panoramica del portale dei tipi di pubblico](../../segmentation/ui/audience-portal.md#audience-list).
 
@@ -534,19 +547,19 @@ Per creare un pubblico, utilizza i seguenti comandi SQL:
 -- Define an audience for best customers based on RFM scores
 CREATE AUDIENCE rfm_best_customer 
 WITH (
-    primary_identity = _pfreportingonprod.userId, 
+    primary_identity = _{TENANT_ID}.userId, 
     identity_namespace = queryService
 ) AS ( 
     SELECT * FROM adls_rfm_profile 
-    WHERE _pfreportingonprod.recency = 1 
-        AND _pfreportingonprod.frequency = 1 
-        AND _pfreportingonprod.monetization = 1 
+    WHERE _{TENANT_ID}.recency = 1 
+        AND _{TENANT_ID}.frequency = 1 
+        AND _{TENANT_ID}.monetization = 1 
 );
 
 -- Define an audience that includes all customers
 CREATE AUDIENCE rfm_all_customer 
 WITH (
-    primary_identity = _pfreportingonprod.userId, 
+    primary_identity = _{TENANT_ID}.userId, 
     identity_namespace = queryService
 ) AS ( 
     SELECT * FROM adls_rfm_profile 
@@ -555,33 +568,33 @@ WITH (
 -- Define an audience for core customers based on email identity
 CREATE AUDIENCE rfm_core_customer 
 WITH (
-    primary_identity = _pfreportingonprod.userId, 
+    primary_identity = _{TENANT_ID}.userId, 
     identity_namespace = Email
 ) AS ( 
     SELECT * FROM adls_rfm_profile 
-    WHERE _pfreportingonprod.recency = 1 
-        AND _pfreportingonprod.frequency = 1 
-        AND _pfreportingonprod.monetization = 1 
+    WHERE _{TENANT_ID}.recency = 1 
+        AND _{TENANT_ID}.frequency = 1 
+        AND _{TENANT_ID}.monetization = 1 
 );
 ```
 
 #### Inserire un pubblico {#insert-an-audience}
 
-Per aggiungere profili a un pubblico esistente, utilizzare il comando `INSERT INTO`. Questo consente di aggiungere singoli profili o interi segmenti di pubblico a un set di dati di pubblico esistente.
+Per aggiungere profili a un pubblico esistente, utilizzare il comando `INSERT INTO`. Questo consente di aggiungere profili singoli o interi tipi di pubblico a un set di dati pubblico esistente.
 
 ```sql
 -- Insert profiles into the audience dataset
 INSERT INTO AUDIENCE adls_rfm_audience 
 SELECT 
-    _pfreportingonprod.userId, 
-    _pfreportingonprod.days_since_last_purchase, 
-    _pfreportingonprod.orders, 
-    _pfreportingonprod.total_revenue, 
-    _pfreportingonprod.recency, 
-    _pfreportingonprod.frequency, 
-    _pfreportingonprod.monetization 
+    _{TENANT_ID}.userId, 
+    _{TENANT_ID}.days_since_last_purchase, 
+    _{TENANT_ID}.orders, 
+    _{TENANT_ID}.total_revenue, 
+    _{TENANT_ID}.recency, 
+    _{TENANT_ID}.frequency, 
+    _{TENANT_ID}.monetization 
 FROM adls_rfm_profile 
-WHERE _pfreportingonprod.rfm_model = '6. Slipping - Once Loyal, Now Gone';
+WHERE _{TENANT_ID}.rfm_model = '6. Slipping - Once Loyal, Now Gone';
 ```
 
 #### Aggiungere profili a un pubblico {#add-profiles-to-audience}
@@ -649,4 +662,4 @@ Per creare un pubblico utilizzando gli attributi RFM, trascina e rilascia l&#39;
 
 Per finalizzare il pubblico, seleziona **[!UICONTROL Salva e pubblica]** nell&#39;angolo in alto a destra. Dopo il salvataggio, il pubblico appena creato viene visualizzato nell&#39;area di lavoro [!UICONTROL Tipi di pubblico], in cui puoi esaminarne il riepilogo e i criteri di qualificazione.
 
-Utilizza il Generatore di segmenti per accedere agli attributi RFM derivati e progettare tipi di pubblico aggiuntivi. Attiva il pubblico SQL appena creato in base ai punteggi RFM e invialo a qualsiasi destinazione preferita, incluso Adobe Journey Optimizer.
+Utilizza Segment Builder (Generatore segmenti) per accedere agli attributi RFM derivati e progettare tipi di pubblico aggiuntivi. Attiva il pubblico SQL appena creato in base ai punteggi RFM e invialo a qualsiasi destinazione preferita, incluso Adobe Journey Optimizer.

@@ -5,9 +5,9 @@ breadcrumb-title: Guida di Query Service
 user-guide-description: Utilizza il linguaggio SQL standard per eseguire query sui dati nel data lake in Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: e63ecbd14db2e9e4f35fb89aaaa406a4c584416a
+source-git-commit: 9eee0f65c4aa46c61b699b734aba9fe2deb0f44a
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '400'
 ht-degree: 21%
 
 ---
@@ -23,7 +23,6 @@ ht-degree: 21%
 - Data Distiller {#data-distiller}
    - [Panoramica](data-distiller/overview.md)
    - [Utilizzo delle licenze](data-distiller/license-usage.md)
-   - [Suggerimenti principali per massimizzare il valore](data-distiller/top-tips-to-maximize-value.md)
    - Set di dati derivati {#derived-datasets}
       - [Panoramica](data-distiller/derived-datasets/overview.md)
       - [Creare set di dati derivati con SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
@@ -40,6 +39,7 @@ ht-degree: 21%
       - [Funzioni del tecnico per ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
       - [Esportare dati in ambienti ML](data-distiller/ml-feature-pipelines/export-data.md)
       - [Flusso di lavoro end-to-end per l’arricchimento della pipeline dati AI/ML](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
+   - [Sessione del vertice 2025](data-distiller/top-tips-to-maximize-value.md)
 - Statistiche di Data Distiller e apprendimento automatico {#advanced-statistics}
    - [Panoramica](advanced-statistics/overview.md)
    - [Ingegneria delle funzioni](advanced-statistics/feature-engineering.md)
