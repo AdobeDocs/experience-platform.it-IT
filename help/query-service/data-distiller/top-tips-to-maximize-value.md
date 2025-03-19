@@ -2,7 +2,7 @@
 title: Principali suggerimenti per massimizzare il valore con Adobe Experience Platform Data Distiller - OS656
 description: Scopri come massimizzare il valore con Adobe Experience Platform Data Distiller arricchendo i dati Real-Time Customer Profile e utilizzando informazioni comportamentali per creare tipi di pubblico mirati. Questa risorsa include un set di dati di esempio e un caso di studio che illustra come applicare il modello Recency, Frequency, Monetary (RFM) per la segmentazione del cliente.
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
-source-git-commit: 9eee0f65c4aa46c61b699b734aba9fe2deb0f44a
+source-git-commit: fac4ca20f15bdfd765b73fde9db8dd7e2fc1a149
 workflow-type: tm+mt
 source-wordcount: '3657'
 ht-degree: 0%
@@ -328,11 +328,11 @@ Il risultato è simile all&#39;immagine seguente ma con un ID di visualizzazione
 Con il calcolo dei punteggi RFM, i clienti possono essere suddivisi nei seguenti sei segmenti prioritari:
 
 1. `Core`: migliori clienti con elevata recency, frequenza e valore monetario (recency = 1, frequenza = 1, monetario = 1).
-2. `Loyal`: clienti frequenti coerenti ma senza spese principali (frequenza = 1).
-3. `Whales`: spese più elevate, indipendentemente da recency e frequenza (monetario = 1).
-4. `Promising`: spese frequenti ma inferiori (frequenza = 1, 2, 3; monetaria = 2, 3, 4).
-5. `Rookies`: nuovi clienti con bassa frequenza (recency = 1, frequency = 4).
-6. `Slipping`: clienti precedentemente fedeli con attività ridotta (recency = 2, 3, 4; frequenza = 4).
+1. `Loyal`: clienti frequenti coerenti ma senza spese principali (frequenza = 1).
+1. `Whales`: spese più elevate, indipendentemente da recency e frequenza (monetario = 1).
+1. `Promising`: spese frequenti ma inferiori (frequenza = 1, 2, 3; monetaria = 2, 3, 4).
+1. `Rookies`: nuovi clienti con bassa frequenza (recency = 1, frequency = 4).
+1. `Slipping`: clienti precedentemente fedeli con attività ridotta (recency = 2, 3, 4; frequenza = 4).
 
 Per semplificare l&#39;accesso e il riutilizzo, creare un `VIEW` che memorizzi i segmenti, i punteggi e i valori RFM.
 
