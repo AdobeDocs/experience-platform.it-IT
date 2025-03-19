@@ -3,9 +3,10 @@ title: Panoramica dell’estensione Adobe Content Analytics
 description: Scopri l’estensione tag Adobe Content Analytics in Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: d6288d9515d7efaf874cb056f06d04b2002fd369
+exl-id: fcc46c86-e765-4bc7-bfdf-b8b10e8afacc
+source-git-commit: 80bfaeb7fec229e77c83230a01b75a200cf37e29
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '645'
 ht-degree: 0%
 
 ---
@@ -22,14 +23,14 @@ Questo documento spiega come configurare l’estensione tag nell’interfaccia u
 
 >[!NOTE]
 >
->L&#39;estensione tag di Adobe Content Analytics viene installata automaticamente come parte della proprietà tag creata automaticamente quando si utilizza la [Configurazione guidata di Content Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided){target="_blank"}.
+>L&#39;estensione tag Adobe Content Analytics viene installata automaticamente come parte della proprietà tag creata automaticamente quando si utilizza la [configurazione guidata di Content Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided){target="_blank"}.
 
 
 ### Installazione manuale
 
 In caso di configurazione manuale, l’estensione tag Adobe Content Analytics deve essere installata su. Se non lo hai già fatto, consulta la documentazione su [creazione di una proprietà tag](https://experienceleague.adobe.com/en/docs/platform-learn/implement-in-websites/configure-tags/create-a-property).
 
-Dopo aver creato una proprietà o quando selezioni la proprietà creata utilizzando la [Configurazione guidata di Content Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided), apri la proprietà e seleziona la scheda **[!UICONTROL Estensioni]** sulla barra laterale sinistra.
+Dopo la creazione di una proprietà o quando si seleziona la proprietà creata mediante la [Configurazione guidata di Content Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided), aprire la proprietà e selezionare la scheda **[!UICONTROL Estensioni]** sulla barra laterale sinistra.
 
 Selezionare la scheda **[!UICONTROL Catalogo]**. Nell&#39;elenco delle estensioni disponibili, trovare l&#39;estensione **[!DNL Adobe Content Analytics]** e selezionare **[!UICONTROL Installa]**.
 
@@ -57,22 +58,33 @@ La [Configurazione guidata di Content Analytics](https://experienceleague.adobe.
 
 ![Immagine che mostra la configurazione Datastreams dell&#39;estensione tag Adobe Content Analytics nell&#39;interfaccia utente Tag](assets/aca-tag-datastreams.png)
 
-Puoi sovrascrivere i valori selezionati automaticamente per **[!UICONTROL Sandbox]** e **[!UICONTROL Production Datastream]** nel caso in cui desideri utilizzare Content Analytics su una sandbox diversa e con flussi di dati diversi. Durante questa operazione, puoi selezionare una sandbox e gli stream di dati dai menu a discesa disponibili, oppure selezionare **[!UICONTROL Immetti i valori]** e immettere un ID dello stream di dati personalizzato per ogni ambiente.
+Puoi sovrascrivere i valori selezionati automaticamente per **[!UICONTROL Sandbox]** e **[!UICONTROL Production Datastream]** nel caso in cui desideri utilizzare Content Analytics in una sandbox diversa e con flussi di dati diversi. Durante questa operazione, puoi selezionare una sandbox e gli stream di dati dai menu a discesa disponibili, oppure selezionare **[!UICONTROL Immetti i valori]** e immettere un ID dello stream di dati personalizzato per ogni ambiente.
 
 >[!IMPORTANT]
 >
 >Quando configuri un’altra sandbox e altri flussi di dati, assicurati che
 >
->* la sandbox selezionata non è già associata a un’altra configurazione di Content Analytics e
+>* la sandbox selezionata non è già associata a un’altra configurazione Content Analytics e
 >* qualsiasi stream di dati selezionato dispone del servizio Experience Platform configurato con un set di dati evento esperienza di Content Analytics abilitato.
 
 Per informazioni su come configurare uno stream di dati, consulta la guida sugli [stream di dati](../../../../datastreams/overview.md).
 
+## Configurare l’acquisizione e la definizione dell’esperienza
 
+Nella sezione **[!UICONTROL Acquisizione esperienze e definizione]**, puoi abilitare **[!UICONTROL Includi esperienze]** per includere le esperienze durante la raccolta dei dati per Content Analytics.
 
-## Configura filtro eventi
+![Immagine che mostra la sezione Acquisizione esperienza e definizione nell&#39;estensione](assets/aca-tag-experiencecapture.png)
 
-Nella sezione **[!UICONTROL Filtro eventi]**, puoi modificare le espressioni regolari per filtrare **[!UICONTROL URL pagina]** e **[!UICONTROL URL Assets]** durante la raccolta di dati per Content Analytics. Le espressioni regolari definite nella [Configurazione guidata di Content Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided) vengono popolate automaticamente.
+1. Abilita **[!UICONTROL Includi esperienze]**.
+1. Facoltativamente. specifica i parametri per il rendering del contenuto sul sito web. I parametri sono zero o più combinazioni di **[!UICONTROL Espressione regolare dominio]** e **[!UICONTROL Parametri query]**.
+   1. Immettere un&#39;espressione regolare **[!UICONTROL Dominio]**, ad esempio `^(?!.*\b(store|help|admin)\b)`.
+   1. Specifica un elenco separato da virgole di **[!UICONTROL Parametri query,]** ad esempio `outdoors, patio, kitchen`.
+1. Selezionare **[!UICONTROL Rimuovi]** se si desidera rimuovere una combinazione di espressioni regolari di dominio e parametri di query.
+1. Selezionare **[!UICONTROL Aggiungi Regex]** se si desidera aggiungere un&#39;altra combinazione di un&#39;espressione regolare e parametri di query.
+
+## Configurare il filtro degli eventi
+
+Nella sezione **[!UICONTROL Filtro eventi]**, puoi modificare le espressioni regolari per filtrare **[!UICONTROL URL di pagina]** e **[!UICONTROL URL di Assets]** durante la raccolta di dati per Content Analytics. Le espressioni regolari definite nella [Configurazione guidata di Content Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided) vengono popolate automaticamente.
 
 ![Immagine che mostra le impostazioni di filtro degli eventi dell&#39;estensione tag Adobe Content Analytics nell&#39;interfaccia utente Tag](assets/aca-tag-eventfiltering.png)
 
@@ -80,7 +92,7 @@ Nella sezione **[!UICONTROL Filtro eventi]**, puoi modificare le espressioni reg
 ### Esempi
 
 * Desideri escludere tutte le pagine della documentazione da Content Analytics.<br/>Utilizza la seguente espressione regolare: `^(?!.*documentation).*`
-* Desideri escludere tutte le immagini JPEG e SVG con logo da Content Analytics.<br/>Utilizza la seguente espressione regolare: `^(?!.*(logo\.jpg|\.svg)).*$`
+* Si desidera escludere da Content Analytics tutte le immagini JPEG e SVG con logo.<br/>Utilizza la seguente espressione regolare: `^(?!.*(logo\.jpg|\.svg)).*$`
 
 Puoi usare **[!UICONTROL Test Regex]** per testare la tua espressione regolare nel **[!UICONTROL Tester espressioni regolari]**.
 
