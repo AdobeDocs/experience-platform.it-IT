@@ -2,14 +2,19 @@
 title: Regole di collegamento del grafico delle identità
 description: Scopri le regole di collegamento del grafico delle identità in Identity Service.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: 9243da3ebe5e963ec457da5ae3e300e852787d37
 workflow-type: tm+mt
-source-wordcount: '1449'
-ht-degree: 5%
+source-wordcount: '1476'
+ht-degree: 4%
 
 ---
 
-# Panoramica delle regole di collegamento del grafico delle identità
+# Panoramica delle regole di collegamento del grafico delle identità {#identity-graph-linking-rules-overview}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_linkingrules_overview"
+>title="Regole di collegamento del grafo delle identità"
+>abstract="Per evitare queste unioni indesiderate, puoi utilizzare le configurazioni fornite tramite le regole di collegamento del grafico delle identità e consentire una personalizzazione accurata per i tuoi utenti."
 
 >[!AVAILABILITY]
 >
