@@ -2,9 +2,9 @@
 title: Principali suggerimenti per massimizzare il valore con Adobe Experience Platform Data Distiller - OS656
 description: Scopri come massimizzare il valore con Adobe Experience Platform Data Distiller arricchendo i dati Real-Time Customer Profile e utilizzando informazioni comportamentali per creare tipi di pubblico mirati. Questa risorsa include un set di dati di esempio e un caso di studio che illustra come applicare il modello Recency, Frequency, Monetary (RFM) per la segmentazione del cliente.
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
-source-git-commit: cfa8395e68ed828be5095a979d5bf0ea6e9a9ae9
+source-git-commit: 30db967fc94d8f5b9ded22ce81da3d51001610af
 workflow-type: tm+mt
-source-wordcount: '3658'
+source-wordcount: '3704'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,16 @@ Tramite il caso di studio Luma, analizzerai i dati comportamentali degli utenti 
 ## Prerequisito
 
 Per eseguire questo caso d&#39;uso, l&#39;istanza di Adobe Experience Platform deve essere concessa in licenza per [Data Distiller](./overview.md). Per ulteriori informazioni, contatta il rappresentante Adobe.
+
+È inoltre necessario conoscere l&#39;ID tenant **dell&#39;organizzazione**, necessario per l&#39;esecuzione delle query. L’ID tenant è la prima parte dell’URL quando accedi ad Experience Platform, e viene visualizzato immediatamente dopo il simbolo @.
+
+Ad esempio, nell’URL seguente:
+
+```http
+https://experience.adobe.com/#/@pfreportingonprod/sname:prod/platform/home
+```
+
+ID tenant: `pfreportingonprod`.
 
 ## Panoramica del modello RFM {#rfm-overview}
 
