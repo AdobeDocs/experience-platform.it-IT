@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;servizio query;servizio query;guida alla risoluzione dei problemi;faq;risoluzione dei problemi;
+keywords: Experience Platform;home;argomenti popolari;servizio query;servizio query;guida alla risoluzione dei problemi;FAQ;risoluzione dei problemi;
 solution: Experience Platform
 title: Domande frequenti su Query Service e Data Distiller
 description: Questo documento contiene domande e risposte comuni relative a Query Service e Data Distiller. Gli argomenti includono esportazione di dati, strumenti di terze parti ed errori PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: dc15ab9b94513d3acdf0e62ef0fec710c05a9fc9
+source-git-commit: ef4c7f20710f56ca0de7c0dfdb99751ff2fe8ebe
 workflow-type: tm+mt
-source-wordcount: '5055'
+source-wordcount: '5024'
 ht-degree: 0%
 
 ---
@@ -86,17 +86,6 @@ Nelle query batch, l’aggiornamento di una riga all’interno del set di dati n
 No. Non vi è alcun limite alla dimensione dei dati, ma esiste un limite di timeout della query di 10 minuti da una sessione interattiva. Se la query viene eseguita come CTAS batch, non è applicabile un timeout di 10 minuti. Per ulteriori dettagli, consulta le linee guida sull&#39;[esecuzione di query interattive](./best-practices/writing-queries.md#interactive-query-execution).
 +++
 
-### Come si aggira il limite del numero di righe di output da una query SELECT?
-
-+++Risposta
-Per ignorare il limite di righe di output, applica &quot;LIMIT 0&quot; nella query. Ad esempio:
-
-```sql
-SELECT * FROM customers LIMIT 0;
-```
-
-+++
-
 ### Come posso evitare che le query scadano in 10 minuti?
 
 +++Risposta
@@ -126,7 +115,7 @@ Alcune parole chiave riservate non possono essere utilizzate come nome di colonn
 +++Risposta
 I passaggi seguenti descrivono come visualizzare una vista a tabella di un set di dati tramite l’interfaccia utente, inclusi tutti i campi e le colonne nidificati in un modulo appiattito.
 
-- Dopo aver effettuato l&#39;accesso a Experience Platform, seleziona **[!UICONTROL Set di dati]** nell&#39;area di navigazione a sinistra dell&#39;interfaccia utente per passare a [!UICONTROL Set di dati] dashboard.
+- Dopo aver effettuato l&#39;accesso ad Experience Platform, seleziona **[!UICONTROL Set di dati]** nell&#39;area di navigazione a sinistra dell&#39;interfaccia utente per passare a [!UICONTROL Set di dati] dashboard.
 - Si apre la scheda [!UICONTROL Sfoglia] dei set di dati. Puoi utilizzare la barra di ricerca per perfezionare le opzioni disponibili. Seleziona un set di dati dall’elenco visualizzato.
 
 ![Dashboard dei set di dati nell&#39;interfaccia utente di Platform con la barra di ricerca e un set di dati evidenziati.](./images/troubleshooting/dataset-selection.png)
@@ -153,20 +142,20 @@ Per migliorare le prestazioni delle query sui set di dati contenenti array, è n
 +++Risposta
 Se la query ha richiesto molto tempo su un set di dati molto piccolo, contatta l’assistenza clienti.
 
-Un’interrogazione può essere bloccata durante l’elaborazione per diversi motivi. Per determinare la causa esatta è necessaria un’analisi approfondita caso per caso. [Contatta l&#39;Assistenza clienti di Adobe](#customer-support) per completare questa procedura.
+Un’interrogazione può essere bloccata durante l’elaborazione per diversi motivi. Per determinare la causa esatta è necessaria un’analisi approfondita caso per caso. [Contatta l&#39;Assistenza clienti Adobe](#customer-support) per partecipare a questo processo.
 +++
 
-### Come posso contattare l’assistenza clienti Adobe? {#customer-support}
+### Come posso contattare l’Assistenza clienti di Adobe? {#customer-support}
 
 +++Risposta
-[Nella pagina della guida di Adobe è disponibile un elenco completo dei numeri di telefono del servizio clienti di Adobe](https://helpx.adobe.com/ca/contact/phone.html). In alternativa, è possibile trovare la guida online completando i passaggi seguenti:
+[Nella pagina della guida di Adobe è disponibile un elenco completo dei numeri di telefono dell&#39;Assistenza clienti di Adobe](https://helpx.adobe.com/ca/contact/phone.html). In alternativa, è possibile trovare la guida online completando i passaggi seguenti:
 
 - Passa a [https://www.adobe.com/](https://www.adobe.com/it/) nel browser Web.
 - Sul lato destro della barra di navigazione superiore, seleziona **[!UICONTROL Accedi]**.
 
 ![Sito Web Adobe con l&#39;opzione Accedi evidenziata.](./images/troubleshooting/adobe-sign-in.png)
 
-- Utilizza l’Adobe ID e la password registrati con la tua licenza Adobe.
+- Utilizza l’Adobe ID e la password registrati con la licenza Adobe.
 - Seleziona **[!UICONTROL Guida e supporto]** dalla barra di navigazione superiore.
 
 ![Menu a discesa della barra di navigazione superiore con Guida in linea e supporto tecnico, Supporto Enterprise e Contattaci evidenziati.](./images/troubleshooting/help-and-support.png)
@@ -204,7 +193,7 @@ Per recuperare i registri degli errori per una query specifica, devi prima utili
 
 Utilizzare il comando GET per recuperare più query. Le informazioni su come effettuare una chiamata all&#39;API sono disponibili nella [documentazione di esempio sulle chiamate API](./api/queries.md#sample-api-calls).
 
-Dalla risposta, identifica la query da esaminare e invia un&#39;altra richiesta GET utilizzando il relativo valore `id`. Le istruzioni complete sono disponibili nella [documentazione relativa al recupero di una query in base all&#39;ID](./api/queries.md#retrieve-a-query-by-id).
+Dalla risposta, identifica la query da analizzare e invia un&#39;altra richiesta GET utilizzando il relativo valore `id`. Le istruzioni complete sono disponibili nella [documentazione relativa al recupero di una query in base all&#39;ID](./api/queries.md#retrieve-a-query-by-id).
 
 In caso di esito positivo, la risposta restituisce lo stato HTTP 200 e contiene l’array `errors`. La risposta è stata ridotta per brevità.
 
@@ -518,7 +507,7 @@ WHERE T2.ID IS NULL
 ### È possibile creare un set di dati utilizzando una query CTAS con un doppio nome di sottolineatura come quelli visualizzati nell’interfaccia utente? Esempio: `test_table_001`.
 
 +++Risposta
-No, si tratta di una limitazione intenzionale per tutto l’Experience Platform che si applica a tutti i servizi Adobe, incluso Query Service. Un nome con due trattini bassi è accettabile come nome di schema e set di dati, ma il nome della tabella per il set di dati può contenere solo un singolo trattino basso.
+No, si tratta di una limitazione intenzionale in Experience Platform che si applica a tutti i servizi Adobe, incluso Query Service. Un nome con due trattini bassi è accettabile come nome di schema e set di dati, ma il nome della tabella per il set di dati può contenere solo un singolo trattino basso.
 +++
 
 ### Quante query simultanee è possibile eseguire alla volta?
@@ -578,13 +567,13 @@ Esistono tre approcci per limitare l’accesso. Essi sono i seguenti:
 
 - Query Service supporta il controllo degli accessi basato su attributi. Puoi limitare l’accesso ai dati a livello di colonna/foglia e/o di struttura. Per ulteriori informazioni sul controllo degli accessi basato su attributi, consulta la documentazione.
 
-### È possibile specificare una modalità SSL per la connessione a un client di terze parti? È possibile, ad esempio, utilizzare &quot;verify-full&quot; con Power BI?
+### È possibile specificare una modalità SSL per la connessione a un client di terze parti? Ad esempio, posso utilizzare &quot;verify-full&quot; con Power BI?
 
 +++Risposta
 Sì, sono supportate le modalità SSL. Consulta la [documentazione sulle modalità SSL](./clients/ssl-modes.md) per informazioni dettagliate sulle diverse modalità SSL disponibili e sul livello di protezione fornito.
 +++
 
-### Usiamo TLS 1.2 per tutte le connessioni dai client Power BI al servizio di query?
+### Utilizziamo TLS 1.2 per tutte le connessioni dai client Power BI al servizio query?
 
 +++Risposta
 Sì. I dati in transito sono sempre conformi a HTTPS. La versione attualmente supportata è TLS1.2.
@@ -768,7 +757,7 @@ Qualsiasi editor SQL di terze parti compatibile con PSQL o client [!DNL Postgres
 ### È possibile collegare lo strumento Power BI a Query Service?
 
 +++Risposta
-Sì, è possibile collegare Power BI a Query Service. Consulta la documentazione per [istruzioni sulla connessione dell&#39;app desktop Power BI a Query Service](./clients/power-bi.md).
+Sì, è possibile connettere Power BI a Query Service. Consulta la documentazione per [istruzioni sulla connessione dell&#39;app desktop Power BI a Query Service](./clients/power-bi.md).
 +++
 
 ### Perché il caricamento delle dashboard richiede molto tempo quando si è connessi a Query Service?
@@ -776,7 +765,7 @@ Sì, è possibile collegare Power BI a Query Service. Consulta la documentazione
 +++Risposta
 Quando il sistema è connesso a Query Service, è connesso a un motore di elaborazione interattivo o batch. Questo può comportare tempi di caricamento più lunghi per riflettere i dati elaborati.
 
-Se desideri migliorare i tempi di risposta per i dashboard, devi implementare un server di Business Intelligence (BI) come livello di caching tra gli strumenti Query Service e BI. In genere, la maggior parte degli strumenti di business intelligence dispone di un&#39;offerta aggiuntiva per un server.
+Se desideri migliorare i tempi di risposta per i dashboard, devi implementare un server Business Intelligence (BI) come livello di caching tra Query Service e gli strumenti BI. In genere, la maggior parte degli strumenti di business intelligence dispone di un&#39;offerta aggiuntiva per un server.
 
 Lo scopo dell’aggiunta del livello del server di cache è quello di memorizzare in cache i dati da Query Service e utilizzarli ugualmente per i dashboard per velocizzare la risposta. Ciò è possibile in quanto i risultati per le query eseguite verrebbero memorizzati nella cache del server di business intelligence ogni giorno. Il server di caching fornisce quindi questi risultati a tutti gli utenti con la stessa query per ridurre la latenza. Per ulteriori informazioni su questa configurazione, consulta la documentazione dell’utility o dello strumento di terze parti in uso.
 +++

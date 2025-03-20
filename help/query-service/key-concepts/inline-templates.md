@@ -2,7 +2,7 @@
 title: Modelli in linea
 description: Scopri come riutilizzare più condizioni in numerose query con modelli in linea.
 exl-id: 78959070-f9e5-4736-b72a-a8ef518bfa4f
-source-git-commit: 37aeff5131b9f67dbc99f6199918403e699478c8
+source-git-commit: ef4c7f20710f56ca0de7c0dfdb99751ff2fe8ebe
 workflow-type: tm+mt
 source-wordcount: '486'
 ht-degree: 1%
@@ -42,7 +42,7 @@ Durante l’esecuzione della query, Query Service sostituisce il nome del modell
 
 È possibile utilizzare i modelli per memorizzare una o più condizioni. Non è necessario che siano query complete di per sé. Se il modello contiene una query valida, è possibile eseguirla semplicemente chiamando il nome del modello preceduto da un simbolo hash. Se ad esempio si archivia `SELECT * FROM JUNE_2023_LOYALTY_MEMBERS;` come modello denominato `JUNE_2023_LOYALTY_MEMBERS`, il comando `#JUNE_2023_LOYALTY_MEMBERS;` eseguirà la query valida contenuta nel modello.
 
->
+>[!NOTE]
 >
 >Nell’interfaccia utente di Adobe Experience Platform, i modelli in linea sotto forma di query con parametri sono supportati solo a livello principale. Ciò significa che le query con parametri funzionano solo se utilizzate nel modello originale. Il modello figlio deve essere statico e non può avere parametri dinamici. Per ulteriori informazioni, consulta la [documentazione sulle query con parametri](../ui/parameterized-queries.md).
 
