@@ -2,10 +2,10 @@
 title: Panoramica di Audience Portal
 description: Scopri come utilizzare Audience Portal per visualizzare, gestire e creare tipi di pubblico in Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 5220fa9be3f567d72f864d35596f6b219f15fb9d
+source-git-commit: a0543777e9a72f3a9ed6ff19e8b11973eb647b6b
 workflow-type: tm+mt
-source-wordcount: '4609'
-ht-degree: 4%
+source-wordcount: '4561'
+ht-degree: 3%
 
 ---
 
@@ -221,11 +221,6 @@ Quando applichi azioni in blocco ai tipi di pubblico, si applicano le seguenti c
 - Se selezioni un filtro, i tipi di pubblico selezionati **verranno reimpostati**.
 
 #### [!BADGE Disponibilità limitata]{type=Informative} Valutazione flessibile del pubblico {#flexible-audience-evaluation}
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_browse_flexibleaudienceevaluation"
->title="Limiti flessibili per la valutazione del pubblico"
-abstract="È possibile valutare fino a 20 tipi di pubblico in un’unica esecuzione di valutazione del pubblico flessibile.<br/><br/>Inoltre, mentre il processo di valutazione viene eseguito il prima possibile, potrebbero verificarsi ritardi di sistema poiché le valutazioni su richiesta <b>non possono</b> essere eseguite contemporaneamente a un’altra valutazione su richiesta o in batch."
 
 La valutazione flessibile del pubblico consente di eseguire un processo di segmentazione su richiesta. Scegli i tipi di pubblico da valutare e seleziona **[!UICONTROL Valuta tipi di pubblico]**.
 
