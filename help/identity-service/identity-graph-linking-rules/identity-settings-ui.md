@@ -2,9 +2,9 @@
 title: Interfaccia utente per le impostazioni delle identità
 description: Scopri come utilizzare l’interfaccia utente delle impostazioni di identità.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: 0b4d9a493df6125decc6c46ddcd404f0bb1c9c6a
 workflow-type: tm+mt
-source-wordcount: '601'
+source-wordcount: '641'
 ht-degree: 3%
 
 ---
@@ -13,9 +13,7 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->* Le regole di collegamento del grafo delle identità sono attualmente a disponibilità limitata. Contatta il team del tuo account Adobe per informazioni su come accedere alla funzione nelle sandbox di sviluppo.
->
->* Per accedere alle impostazioni di identità nell&#39;interfaccia utente, il tuo account deve disporre dell&#39;autorizzazione **Visualizza grafo identità**. Per ulteriori informazioni, leggere la [guida sulle autorizzazioni nel controllo degli accessi basato su attributi](../../access-control/abac/ui/permissions.md).
+>Le regole di collegamento del grafo delle identità sono attualmente a disponibilità limitata. Contatta il team del tuo account Adobe per informazioni su come accedere alla funzione nelle sandbox di sviluppo.
 
 Le impostazioni di identità sono una funzione dell’interfaccia utente di Adobe Experience Platform Identity Service che consente di designare spazi dei nomi univoci e configurare la priorità dello spazio dei nomi.
 
@@ -31,6 +29,15 @@ Prima di iniziare a utilizzare le impostazioni di identità, leggi i seguenti do
 * [Esempi di configurazioni del grafico](./example-configurations.md)
 * [Priorità dello spazio dei nomi](./namespace-priority.md)
 * [Simulazione dei grafici](./graph-simulation.md)
+
+### Impostare le autorizzazioni {#set-permissions}
+
+Successivamente, assicurati che al tuo account siano state assegnate le seguenti autorizzazioni:
+
+* **[!UICONTROL Visualizza impostazioni identità]**: applica questa autorizzazione per poter visualizzare spazi dei nomi e priorità dello spazio dei nomi univoci nella pagina di esplorazione dello spazio dei nomi delle identità.
+* **[!UICONTROL Modifica impostazioni identità]**: applica questa autorizzazione per poter modificare e salvare le impostazioni di identità.
+
+Se non disponi di queste autorizzazioni, contatta l’amministratore. Per ulteriori informazioni, leggere la [guida alle autorizzazioni](../../access-control/abac/ui/permissions.md).
 
 ## Configurare le impostazioni di identità
 
