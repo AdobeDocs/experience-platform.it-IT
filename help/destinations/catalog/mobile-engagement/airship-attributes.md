@@ -1,22 +1,30 @@
 ---
 keywords: attributi dirigibile;destinazione dirigibile
 title: Connessione attributi dirigibili
-description: Trasmettere facilmente i dati del pubblico Adobe a Airship come attributi del pubblico per il targeting all'interno di Airship.
+description: Trasmetti facilmente i dati del pubblico di Adobe a Airship come attributi del pubblico per il targeting all’interno di Airship.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 453884612e787439ea58f312d8080622ee0441f7
 workflow-type: tm+mt
-source-wordcount: '1039'
+source-wordcount: '1150'
 ht-degree: 2%
 
 ---
 
 # Connessione [!DNL Airship Attributes] {#airship-attributes-destination}
 
+>[!IMPORTANT]
+>
+>* A partire dal 25 marzo 2025, è possibile visualizzare due schede [!DNL Airship Attributes] affiancate nel catalogo delle destinazioni. Ciò è dovuto a un aggiornamento interno al servizio destinazioni. Il connettore di destinazione [!DNL Airship Attributes] esistente è stato rinominato in **[!UICONTROL (obsoleto) Attributi dirigibili]** ed è ora disponibile una nuova scheda con il nome **[!UICONTROL Attributi dirigibili]**.
+>* Utilizza la connessione **[!UICONTROL Attributi dirigibili]** nel catalogo per i nuovi flussi di dati di attivazione. Se sono presenti flussi di dati attivi per la destinazione **[!UICONTROL (Obsoleto) Attributi dirigibili]**, questi verranno aggiornati automaticamente, pertanto non è richiesta alcuna azione da parte dell&#39;utente.
+>* Se si creano flussi di dati tramite l&#39;[API del servizio Flow](https://developer.adobe.com/experience-platform-apis/references/destinations/), è necessario aggiornare [!DNL flow spec ID] e [!DNL connection spec ID] ai valori seguenti:
+>   * ID specifica di flusso: `a862e0be-966e-4e5a-80d3-1bb566461986`
+>   * ID specifica di connessione: `594bc002-4a47-49b7-8a98-ac0d21045502`
+
 ## Panoramica {#overview}
 
 [!DNL Airship] è la principale piattaforma di Customer Engagement e ti aiuta a fornire messaggi omnicanale significativi e personalizzati ai tuoi utenti in ogni fase del ciclo di vita del cliente.
 
-Questa integrazione trasmette i dati del profilo di Adobe in [!DNL Airship] come [Attributi](https://docs.airship.com/guides/audience/attributes/) per il targeting o l&#39;attivazione.
+Questa integrazione trasmette i dati del profilo Adobe in [!DNL Airship] come [Attributi](https://docs.airship.com/guides/audience/attributes/) per il targeting o l&#39;attivazione.
 
 Per ulteriori informazioni su [!DNL Airship], consulta i [documenti dirigibili](https://docs.airship.com).
 
@@ -41,7 +49,7 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 
 | Origine pubblico | Supportato | Descrizione |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite il servizio di segmentazione [Experience Platform](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
 | Caricamenti personalizzati | ✓ | Tipi di pubblico [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
@@ -69,7 +77,7 @@ Vai a **[!UICONTROL Impostazioni]**&quot; **[!UICONTROL API e integrazioni]** ne
 
 Fai clic su **[!UICONTROL Crea token]**.
 
-Specifica un nome descrittivo per il token, ad esempio &quot;Destinazione attributi Adobi&quot;, e seleziona &quot;Tutti gli accessi&quot; per il ruolo.
+Specifica un nome descrittivo per il token, ad esempio &quot;Destinazione attributi Adobe&quot;, e seleziona &quot;Accesso completo&quot; per il ruolo.
 
 Fai clic su **[!UICONTROL Crea token]** e salva i dettagli come riservati.
 
@@ -83,7 +91,7 @@ Sfrutta i dati di profilo raccolti in Adobe Experience Platform per la personali
 
 ### #2 del caso d’uso
 
-Sfrutta gli attributi di Adobe Experience Platform per arricchire ulteriormente i profili [!DNL Airship] e combinarli con l&#39;SDK o con i dati predittivi [!DNL Airship]. Ad esempio, un rivenditore può creare un pubblico con lo stato di fedeltà e i dati sulla posizione (attributi da Platform) e [!DNL Airship] prevede di abbandonarli per inviare messaggi altamente mirati agli utenti con lo stato di fedeltà all&#39;oro che vivono a Las Vegas, NV, e hanno un&#39;alta probabilità di abbandono.
+Sfrutta gli attributi di Adobe Experience Platform per arricchire ulteriormente i profili [!DNL Airship] e combinarli con SDK o [!DNL Airship] dati predittivi. Ad esempio, un rivenditore può creare un pubblico con lo stato di fedeltà e i dati sulla posizione (attributi da Platform) e [!DNL Airship] prevede di abbandonarli per inviare messaggi altamente mirati agli utenti con lo stato di fedeltà all&#39;oro che vivono a Las Vegas, NV, e hanno un&#39;alta probabilità di abbandono.
 
 ## Connettersi alla destinazione {#connect}
 
