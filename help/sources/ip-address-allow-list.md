@@ -1,27 +1,29 @@
 ---
-description: Scopri gli indirizzi IP da aggiungere all’elenco consentiti per utilizzare correttamente le origini Adobe Experience Platform.
-title: ELENCO CONSENTITI di indirizzo IP per origini
+description: Scopri gli indirizzi IP che devi aggiungere al tuo inserisco nell'elenco Consentiti per utilizzare correttamente le origini Adobe Experience Platform.
+title: INSERIRE NELL'ELENCO CONSENTITI Indirizzo IP per origini
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-source-git-commit: bb0e84ff26027e92d617b7fd0b85979dff501a7d
+source-git-commit: 719f1bca20d5118de14ebe324675bb0aab6161e8
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '242'
 ht-degree: 0%
 
 ---
 
-# ELENCO CONSENTITI di indirizzo IP
+# Indirizzo IP inserisco nell&#39;elenco Consentiti
 
-È possibile definire i controlli di accesso alla rete tramite il firewall di rete. Specificando l’intervallo IP di origine appropriato, puoi consentire il flusso di traffico per il servizio di trasferimento dati. Prima di utilizzare i connettori di origine, è necessario aggiungere i seguenti indirizzi IP a un elenco consentiti. La mancata aggiunta all’elenco consentiti degli indirizzi IP specifici per l’area geografica potrebbe causare errori o prestazioni non ottimali durante l’utilizzo delle origini.
+È possibile definire i controlli di accesso alla rete tramite il firewall di rete. Specificando l’intervallo IP di origine appropriato, puoi consentire il flusso di traffico per il servizio di trasferimento dati. Prima di utilizzare i connettori di origine, è necessario aggiungere i seguenti indirizzi IP a un inserisco nell&#39;elenco Consentiti di. La mancata aggiunta di indirizzi IP specifici per l’area geografica al elenco Consentiti può causare errori o non prestazioni durante l’utilizzo delle origini.
 
-## ELENCO CONSENTITI di indirizzo IP per origini batch {#batch}
+## Indirizzi IP che si trovano in inserita nell&#39;elenco Consentiti di origini che si connettono ad Experience Platform il [!DNL Azure] {#azure}
 
-Devi aggiungere i seguenti indirizzi IP all’elenco consentiti per consentire il flusso del traffico per il servizio di trasferimento dati per le origini batch.
+### Origini batch in Experience Platform su [!DNL Azure] {#batch}
+
+Per consentire il flusso del traffico per il servizio di trasferimento dati per origini batch, è necessario aggiungere i seguenti indirizzi IP al inserisco nell&#39;elenco Consentiti di trasferimento dei dati del.
 
 >[!BEGINTABS]
 
 >[!TAB VA7: Nord America]
 
-### VA7: Nord America
+#### VA7: Nord America
 
 - `20.42.2.0/23`
 - `20.42.4.0/26`
@@ -48,7 +50,7 @@ Devi aggiungere i seguenti indirizzi IP all’elenco consentiti per consentire i
 
 >[!TAB NLD2: Europa]
 
-### NLD2: Europa
+#### NLD2: Europa
 
 - `13.69.67.192/28`
 - `13.69.107.112/28`
@@ -60,7 +62,7 @@ Devi aggiungere i seguenti indirizzi IP all’elenco consentiti per consentire i
 
 >[!TAB AUS5: Australia]
 
-### AUS5: Australia
+#### AUS5: Australia
 
 - `13.70.74.144/28`
 - `20.37.193.0/25`
@@ -75,7 +77,7 @@ Devi aggiungere i seguenti indirizzi IP all’elenco consentiti per consentire i
 
 >[!TAB CAN2: Canada]
 
-### CAN2: Canada
+#### CAN2: Canada
 
 - `13.71.175.80/28`
 - `20.38.147.224/28`
@@ -88,7 +90,7 @@ Devi aggiungere i seguenti indirizzi IP all’elenco consentiti per consentire i
 
 >[!TAB IND2: India]
 
-### IND2: India
+#### IND2: India
 
 - `20.43.121.48/28`
 - `20.192.42.0/24`
@@ -102,15 +104,15 @@ Devi aggiungere i seguenti indirizzi IP all’elenco consentiti per consentire i
 
 >[!ENDTABS]
 
-## ELENCO CONSENTITI di indirizzo IP per origini di streaming {#streaming}
+### Origini di streaming in Experience Platform su [!DNL Azure] {#streaming}
 
-È necessario aggiungere i seguenti indirizzi IP all&#39;elenco consentiti per consentire il flusso del traffico per il servizio di trasferimento dati per le origini di streaming come [[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md), [[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md), [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md) e [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md).
+È necessario aggiungere i seguenti indirizzi IP al inserisco nell&#39;elenco Consentiti di per consentire il flusso del traffico per il servizio di trasferimento dati per le origini di streaming come [[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md), [[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md), [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md) e [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md).
 
 >[!BEGINTABS]
 
 >[!TAB VA7: Nord America]
 
-### VA7: Nord America
+#### VA7: Nord America
 
 - `52.254.106.240/28`
 - `52.254.107.144/28`
@@ -137,7 +139,7 @@ Devi aggiungere i seguenti indirizzi IP all’elenco consentiti per consentire i
 
 >[!TAB NLD2: Europa]
 
-### NLD2: Europa
+#### NLD2: Europa
 
 - `51.138.17.0/28`
 - `51.138.16.176/28`
@@ -164,7 +166,7 @@ Devi aggiungere i seguenti indirizzi IP all’elenco consentiti per consentire i
 
 >[!TAB AUS5: Australia]
 
-### AUS5: Australia
+#### AUS5: Australia
 
 - `20.40.188.194`
 - `20.53.206.128`
@@ -194,7 +196,7 @@ Devi aggiungere i seguenti indirizzi IP all’elenco consentiti per consentire i
 
 >[!TAB CAN2: Canada]
 
-### CAN2: Canada
+#### CAN2: Canada
 
 - `20.200.70.240/28`
 - `20.200.94.116`
@@ -224,7 +226,7 @@ Devi aggiungere i seguenti indirizzi IP all’elenco consentiti per consentire i
 
 >[!TAB GBR9: Regno Unito]
 
-### GBR9: Regno Unito
+#### GBR9: Regno Unito
 
 - `20.254.2.128/28`
 - `20.26.131.71`
@@ -254,7 +256,7 @@ Devi aggiungere i seguenti indirizzi IP all’elenco consentiti per consentire i
 
 >[!TAB IND2: India]
 
-### IND2: India
+#### IND2: India
 
 - `4.224.74.0/28`
 - `20.244.79.80/28`
@@ -285,3 +287,9 @@ Devi aggiungere i seguenti indirizzi IP all’elenco consentiti per consentire i
 - `4.188.4.138`
 
 >[!ENDTABS]
+
+## INSERIRE NELL&#39;ELENCO CONSENTITI Indirizzi IP da per la connessione delle origini ad Experience Platform su [!DNL Amazon Web Services] (AWS) {#aws}
+
+Per collegare l’origine a Experience on AWS, aggiungi il seguente indirizzo IP al inserisco nell&#39;elenco Consentiti di:
+
+- `66.117.18.0/24`
