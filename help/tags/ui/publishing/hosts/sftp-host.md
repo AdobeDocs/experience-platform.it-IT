@@ -2,10 +2,10 @@
 title: Host SFTP
 description: Scopri come configurare i tag in Adobe Experience Platform per distribuire le build della libreria a un server SFTP protetto e con hosting autonomo.
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
-source-git-commit: b3c3bf0a39a30e8c9baf81ec20945497acef5465
+source-git-commit: 5b362d28eb3be5e2a45464390c694f7ae59f899c
 workflow-type: tm+mt
-source-wordcount: '810'
-ht-degree: 38%
+source-wordcount: '875'
+ht-degree: 35%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 38%
 >
 >Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
-Un Experience Platform consente di distribuire le build della libreria di tag a un server SFTP protetto che ospiti, offrendoti un maggiore controllo su come vengono memorizzate e gestite le build. Questa guida illustra come impostare un host SFTP per una proprietà tag nell’interfaccia utente di Experience Platform o nell’interfaccia utente di Data Collection.
+Experience Platform ti consente di distribuire le build della libreria di tag a un server SFTP protetto che ospiti, offrendoti un maggiore controllo su come vengono memorizzate e gestite le build. Questa guida illustra come impostare un host SFTP per una proprietà tag nell’interfaccia utente di Experience Platform o nell’interfaccia utente di Data Collection.
 
 >[!NOTE]
 >
@@ -36,6 +36,22 @@ Sul server SFTP deve essere installata una coppia di chiave pubblica/privata. Pu
 La chiave privata viene utilizzata per crittografare la chiave pubblica. Dovrai fornire la tua chiave privata durante il processo di creazione dell’host SFTP. Per istruzioni sulla crittografia delle chiavi pubbliche, consulta la sezione su [valori di crittografia](../../../api/guides/encrypting-values.md) nella guida dell&#39;API di Reactor. Utilizza la chiave GPG dell’ambiente di produzione a meno che tu non sappia di aver bisogno di una chiave specifica. Infine, puoi crittografare la tua chiave privata da qualsiasi computer, per cui non devi installare GPG sul server per completare questo passaggio.
 
 ### Inserire nell&#39;elenco Consentiti gli indirizzi IP della piattaforma
+
+>[!IMPORTANT]
+>
+> Il 23 giugno 2025, Adobe Launch aggiorna gli indirizzi IP esterni utilizzati per supportare il tipo di host SFTP e la funzionalità API di callback. Per continuare a utilizzare una di queste funzionalità, assicurati che le regole del firewall consentano il traffico dai nuovi indirizzi IP.
+>
+> Per mantenere un accesso ininterrotto, consigliamo di aggiungere ora i nuovi IP e rimuovere quelli vecchi dopo il 23 giugno 2025.
+>
+>**Indirizzi IP precedenti:**
+> * `184.72.239.68`
+> * `23.20.85.113`
+> * `54.226.193.184`
+>
+>**Nuovi indirizzi IP:**
+> * `34.227.138.75 `
+> * `44.194.43.191`
+> * `3.215.163.18`
 
 Per consentire a Platform di raggiungere e connettersi al server SFTP, potrebbe essere necessario approvare un set di indirizzi IP da utilizzare all’interno del firewall aziendale. Questi indirizzi IP sono:
 
