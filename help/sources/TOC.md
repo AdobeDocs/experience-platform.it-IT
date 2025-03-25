@@ -5,9 +5,9 @@ breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da diverse origini. Scopri come strutturare, etichettare e migliorare i dati già acquisiti.
 feature: Sources
 role: Developer
-source-git-commit: b900ef8cbbab78071d462484f088e17eb20fe9b6
+source-git-commit: 3ada2136e712abd1dad956cd579d6877b3e729c9
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1059'
 ht-degree: 30%
 
 ---
@@ -236,6 +236,7 @@ ht-degree: 30%
    - [Elimina flussi di dati](tutorials/api/delete-dataflows.md)
    - [Acquisire dati crittografati](tutorials/api/encrypt-data.md)
    - [Salvare un flusso di dati come bozza](tutorials/api/draft.md)
+   - [Applicare le etichette di accesso a un flusso di dati](tutorials/api/labels.md)
 - Tutorial dell&#39;interfaccia utente {#ui-tutorials}
    - Crea una connessione di origine {#create}
       - Applicazioni Adobe {#adobe-applications}
@@ -361,6 +362,7 @@ ht-degree: 30%
    - [Elimina flussi di dati](tutorials/ui/delete.md)
    - [Iscriversi agli avvisi delle origini](tutorials/ui/alerts.md)
    - [Salvare un flusso di dati come bozza](tutorials/ui/draft.md)
+   - [Applicare le etichette di accesso a un flusso di dati](tutorials/ui/labels.md)
 - Origini self-service (SDK batch) {#sdk}
    - [Panoramica](sources-sdk/overview.md)
    - Configura la specifica di connessione {#config}
