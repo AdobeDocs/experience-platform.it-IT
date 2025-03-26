@@ -5,10 +5,10 @@ breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da diverse origini. Scopri come strutturare, etichettare e migliorare i dati già acquisiti.
 feature: Sources
 role: Developer
-source-git-commit: 3ada2136e712abd1dad956cd579d6877b3e729c9
+source-git-commit: 86f17ed4dc012481c2b4a7f1a40b492bfac5e137
 workflow-type: tm+mt
-source-wordcount: '1059'
-ht-degree: 30%
+source-wordcount: '1061'
+ht-degree: 29%
 
 ---
 
@@ -95,6 +95,7 @@ ht-degree: 30%
    - Partner dati e identità {#data-partner}
       - [Acquisizione dei dati Acxiom](connectors/data-partners/acxiom-data-ingestion.md)
       - [Importazione di dati potenziali Acxiom](connectors/data-partners/acxiom-prospecting-data-import.md)
+      - [Intento Bombora](connectors/data-partners/bombora.md)
       - [Risoluzione Merkury Enterprise Identity](connectors/data-partners/merkury.md)
    - eCommerce {#ecommerce}
       - [COMMERCE SAP](connectors/ecommerce/sap-commerce.md)
