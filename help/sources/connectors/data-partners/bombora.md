@@ -2,9 +2,10 @@
 title: Intento Bombora
 description: Scopri la fonte dell’Intento di Bombora su Experience Platform.
 last-substantial-update: 2025-03-26T00:00:00Z
-source-git-commit: c558ed7c5ce5fcb26d98a47ad7b7c1461192dc9b
+exl-id: d2e81207-8ef5-4e52-bbac-a2fa262d8d08
+source-git-commit: 39bbd9505b931b82aa925cba0bf8675f25dbf498
 workflow-type: tm+mt
-source-wordcount: '1609'
+source-wordcount: '1605'
 ht-degree: 1%
 
 ---
@@ -39,9 +40,9 @@ Utilizzando piattaforme di annunci native, puoi assicurarti che i contenuti ragg
 
 Leggere le sezioni seguenti per i passaggi preliminari prima di connettere [!DNL Bombora] ad Experience Platform.
 
-### ELENCO CONSENTITI di indirizzo IP
+### Indirizzo IP inserisco nell&#39;elenco Consentiti
 
-Prima di utilizzare i connettori di origine, è necessario aggiungere un elenco di indirizzi IP a un elenco consentiti. La mancata aggiunta all’elenco consentiti degli indirizzi IP specifici per l’area geografica potrebbe causare errori o prestazioni non ottimali durante l’utilizzo delle origini. Per ulteriori informazioni, vedere la pagina [elenco consentiti indirizzo IP](../../ip-address-allow-list.md).
+Prima di utilizzare i connettori di origine, è necessario aggiungere un elenco di indirizzi IP a un inserisco nell&#39;elenco Consentiti di. La mancata aggiunta di indirizzi IP specifici per l’area geografica al elenco Consentiti può causare errori o non prestazioni durante l’utilizzo delle origini. Per ulteriori informazioni, vedere la pagina [Indirizzo IP/inserisco nell&#39;elenco Consentiti di](../../ip-address-allow-list.md).
 
 ### Configurare le autorizzazioni su Experience Platform
 

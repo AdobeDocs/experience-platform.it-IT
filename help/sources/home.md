@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;connettori di origine;connettore di origine;origini;origini dati;origine dati;connessione origine dati
+keywords: Experience Platform;home;argomenti popolari;connettori di origine;connettore di origine;origini;origini dati;origine dati;connessione origine dati;;home;popular topic;source connectors;source connector;sources;data source connection
 solution: Experience Platform
 title: Panoramica dei connettori Source
-description: Adobe Experience Platform consente di acquisire i dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
+description: Adobe Experience Platform consente di acquisire i dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 8541af0e2c0a2f5709f1621877ca204b0d3d64bd
+source-git-commit: 0a6a9fe759d71fd62e3eaf5c93a091614f3c76a0
 workflow-type: tm+mt
-source-wordcount: '1548'
+source-wordcount: '1552'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ Adobe Experience Platform consente di acquisire i dati da origini esterne e allo
 
 [!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da diverse origini in Platform. Il servizio fornisce un’interfaccia utente e un’API RESTful che consentono di impostare facilmente le connessioni sorgente a vari provider di dati. Queste connessioni di origine ti consentono di autenticare i sistemi di terze parti, impostare i tempi per le esecuzioni dell’acquisizione e gestire la velocità effettiva di acquisizione dei dati.
 
-Ad Experience Platform, puoi centralizzare i dati raccolti da fonti diverse e utilizzare le informazioni acquisite per fare di più.
+Con Experience Platform, puoi centralizzare i dati raccolti da origini diverse e utilizzare le informazioni acquisite per fare di più.
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -28,7 +28,7 @@ Ad Experience Platform, puoi centralizzare i dati raccolti da fonti diverse e ut
 
 ## Origini aziendali avanzate {#advanced-enterprise-sources}
 
-Le seguenti origini sono disponibili solo per [clienti Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+Le seguenti origini sono disponibili solo per [clienti Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 - [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) [!BADGE Streaming]{type=Positive}
 - [[!DNL Amazon Redshift]](connectors/databases/redshift.md) [!BADGE Batch]{type=Informative}
@@ -39,11 +39,11 @@ Le seguenti origini sono disponibili solo per [clienti Adobe Real-time Customer 
 - [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) [!BADGE Streaming]{type=Positive}
 - [[!DNL Snowflake]](connectors/databases/snowflake.md) [!BADGE Batch]{type=Informative}
 
-## Sorgenti create da Adobi e da partner {#adobe-and-partner-built-sources}
+## Sorgenti create da Adobe e dai partner {#adobe-and-partner-built-sources}
 
-Alcuni dei connettori nel catalogo di origini Experience Platform sono generati e gestiti da Adobe, mentre altri sono generati e gestiti da società partner tramite [Sources SDK](/help/sources/sources-sdk/overview.md). Una nota nella parte superiore della pagina della documentazione per ciascun connettore creato dal partner richiama se un’origine viene creata e gestita dal partner. Il [connettore Amazon S3](/help/sources/connectors/cloud-storage/s3.md), ad esempio, viene creato da Adobe, mentre il [connettore RainFocus](/help/sources/connectors/analytics/rainfocus.md) viene creato e gestito dal team RainFocus.
+Alcuni dei connettori nel catalogo origini di Experience Platform sono generati e gestiti da Adobe, mentre altri sono generati e gestiti da società partner utilizzando [Origini SDK](/help/sources/sources-sdk/overview.md). Una nota nella parte superiore della pagina della documentazione per ciascun connettore creato dal partner richiama se un’origine viene creata e gestita dal partner. Ad esempio, il [connettore Amazon S3](/help/sources/connectors/cloud-storage/s3.md) è creato da Adobe, mentre il [connettore RainFocus](/help/sources/connectors/analytics/rainfocus.md) è creato e gestito dal team RainFocus.
 
-Per i connettori creati e gestiti dal partner, ciò significa che potrebbe essere necessario risolvere i problemi con il connettore dal team partner (metodo di contatto fornito nella nota nella pagina della documentazione). Per i problemi relativi ai connettori creati e gestiti da Adobe, contatta il rappresentante dell’Adobe o l’Assistenza clienti.
+Per i connettori creati e gestiti dal partner, ciò significa che potrebbe essere necessario risolvere i problemi con il connettore dal team partner (metodo di contatto fornito nella nota nella pagina della documentazione). Per i problemi relativi ai connettori creati e gestiti da Adobe, contatta il rappresentante Adobe o l’Assistenza clienti.
 
 ## Categorie di origini
 
@@ -62,7 +62,7 @@ Experience Platform consente di acquisire i dati da altre applicazioni Adobe, tr
 - [Panoramica origine Adobe Campaign Managed Cloud Services](connectors/adobe-applications/campaign.md)
    - [Creare una connessione sorgente Adobe Campaign Managed Cloud Services nell’interfaccia utente](./tutorials/ui/create/adobe-applications/campaign.md)
 - [Panoramica sull’origine di Adobe Commerce](connectors/adobe-applications/commerce.md)
-- [Panoramica sull’origine di Adobe Data Collection](connectors/adobe-applications/data-collection.md)
+- [Panoramica dell’origine di raccolta dati di Adobe](connectors/adobe-applications/data-collection.md)
    - [Creare una connessione sorgente Attributi del cliente nell’interfaccia utente](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [Panoramica dell&#39;origine [!DNL Marketo Engage]](connectors/adobe-applications/marketo/marketo.md)
    - [Crea una connessione di origine  [!DNL Marketo Engage]  nell&#39;interfaccia utente](./tutorials/ui/create/adobe-applications/marketo.md)
@@ -76,7 +76,7 @@ Experience Platform fornisce supporto per l’acquisizione di dati da un sistema
 
 ### Analytics {#analytics}
 
-Experience Platform fornisce supporto per l’acquisizione di dati da una piattaforma di analisi di terze parti. Per ulteriori informazioni, leggere i seguenti documenti correlati:
+Experience Platform fornisce supporto per l’acquisizione dei dati da una piattaforma di analisi di terze parti. Per ulteriori informazioni, leggere i seguenti documenti correlati:
 
 - [[!DNL Mixpanel]](connectors/analytics/mixpanel.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Pendo]](connectors/analytics/pendo-webhook.md) [!BADGE Streaming]{type=Positive}
@@ -115,7 +115,7 @@ I sistemi di gestione delle relazioni con i clienti forniscono dati che possono 
 
 ### Customer Success {#customer-success}
 
-Experience Platform fornisce supporto per l’acquisizione di dati da un’applicazione di successo per un cliente di terze parti. Per ulteriori informazioni, consulta i seguenti documenti correlati:
+Experience Platform fornisce supporto per l’acquisizione di dati da un’applicazione di successo per clienti di terze parti. Per ulteriori informazioni, consulta i seguenti documenti correlati:
 
 - [[!DNL Oracle Service Cloud]](connectors/customer-success/oracle-service-cloud.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md) [!BADGE Batch]{type=Informative}
@@ -144,15 +144,17 @@ Experience Platform fornisce supporto per l’acquisizione di dati da un databas
 
 ### Partner di dati e identità {#data-partner}
 
-Experience Platform fornisce supporto per l’acquisizione di dati da un database di terze parti. Per ulteriori informazioni su connettori di origine specifici, consulta i seguenti documenti correlati:
+Experience Platform fornisce supporto per l’acquisizione dei dati da un partner dati e identità. Per ulteriori informazioni su connettori di origine specifici, consulta i seguenti documenti correlati:
 
 - [[!DNL Acxiom Data Ingestion]](connectors/data-partners/acxiom-data-ingestion.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Acxiom Prospecting Data Import]](connectors/data-partners/acxiom-prospecting-data-import.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Bombora Intent]](connectors/data-partners/bombora.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Demandbase Intent]](connectors/data-partners/demandbase.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Merkury Enterprise Identity Resolution]](connectors/data-partners/merkury.md) [!BADGE Batch]{type=Informative}
 
 ### eCommerce {#ecommerce}
 
-Experience Platform fornisce supporto per l’acquisizione di dati da un sistema eCommerce di terze parti. Per ulteriori informazioni su connettori di origine specifici, consulta i seguenti documenti correlati:
+Experience Platform fornisce supporto per l’acquisizione di dati da un sistema di e-commerce di terze parti. Per ulteriori informazioni su connettori di origine specifici, consulta i seguenti documenti correlati:
 
 - [[!DNL SAP Commerce]](connectors/ecommerce/sap-commerce.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Shopify]](connectors/ecommerce/shopify.md) [!BADGE Batch]{type=Informative}
@@ -160,13 +162,13 @@ Experience Platform fornisce supporto per l’acquisizione di dati da un sistema
 
 ### Sistema locale {#local-system}
 
-Experience Platform fornisce supporto per l’acquisizione di dati dal sistema locale. Per ulteriori informazioni su connettori di origine specifici, consulta i seguenti documenti correlati:
+Experience Platform fornisce supporto per l’acquisizione dei dati dal sistema locale. Per ulteriori informazioni su connettori di origine specifici, consulta i seguenti documenti correlati:
 
 - [Caricamento di file locali](connectors/local-system/local-file-upload.md)
 
 ### Marketing Automation {#marketing-automation}
 
-Experience Platform fornisce supporto per l’acquisizione di dati da un sistema di automazione del marketing di terze parti. Per ulteriori informazioni su connettori di origine specifici, consulta i seguenti documenti correlati:
+Experience Platform fornisce supporto per l’acquisizione dei dati da un sistema di automazione del marketing di terze parti. Per ulteriori informazioni su connettori di origine specifici, consulta i seguenti documenti correlati:
 
 - [[!DNL Braze]](connectors/marketing-automation/braze.md) [!BADGE Streaming]{type=Positive}
 - [[!DNL Chatlio]](connectors/marketing-automation/chatlio-webhook.md) [!BADGE Streaming]{type=Positive}
@@ -183,7 +185,7 @@ Experience Platform fornisce supporto per l’acquisizione di dati da un sistema
 
 ### Pagamenti {#payments}
 
-Experience Platform fornisce supporto per l’acquisizione di dati da un sistema di pagamenti di terze parti. Per ulteriori informazioni su connettori di origine specifici, consulta i seguenti documenti correlati:
+Experience Platform fornisce supporto per l’acquisizione dei dati da un sistema di pagamenti di terze parti. Per ulteriori informazioni su connettori di origine specifici, consulta i seguenti documenti correlati:
 
 - [[!DNL PayPal]](connectors/payments/paypal.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Square]](connectors/payments/square.md) [!BADGE Batch]{type=Informative}
@@ -197,7 +199,7 @@ Experience Platform fornisce supporto per l’acquisizione di dati da origini di
 
 ### Protocolli {#protocols}
 
-Experience Platform supporta l’acquisizione di dati da un sistema di protocolli di terze parti. Per ulteriori informazioni su connettori di origine specifici, consulta i seguenti documenti correlati:
+Experience Platform fornisce supporto per l’acquisizione di dati da un sistema di protocolli di terze parti. Per ulteriori informazioni su connettori di origine specifici, consulta i seguenti documenti correlati:
 
 - [[!DNL Generic OData]](connectors/protocols/odata.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Generic REST API]](connectors/protocols/generic-rest.md) [!BADGE Batch]{type=Informative}
@@ -214,7 +216,7 @@ La tabella seguente illustra il comportamento dell’interfaccia utente in base 
 | **[!UICONTROL Gestisci origini]** su | Oltre alle funzioni incluse in **[!UICONTROL Visualizza origini]**, consente l&#39;accesso all&#39;opzione **[!UICONTROL Connetti Source]** in **[!UICONTROL Catalogo]** e all&#39;opzione **[!UICONTROL Seleziona dati]** in **[!UICONTROL Sfoglia]**. **[!UICONTROL Gestisci origini]** consente inoltre di abilitare o disabilitare **[!UICONTROL Flussi dati]** e di modificarne le pianificazioni. |
 | **[!UICONTROL Visualizza origini]** disattivato e **[!UICONTROL Gestisci origini]** disattivato | Revoca l&#39;accesso alle origini. |
 
-Per ulteriori informazioni sulle autorizzazioni disponibili concesse tramite Autorizzazioni Adobe, leggere la [panoramica sul controllo degli accessi](../access-control/home.md).
+Per ulteriori informazioni sulle autorizzazioni disponibili concesse tramite le autorizzazioni Adobe, leggere la [panoramica sul controllo degli accessi](../access-control/home.md).
 
 ### Controllo degli accessi basato su attributi
 
@@ -238,8 +240,8 @@ Per ulteriori informazioni sul controllo degli accessi basato su attributi, legg
 
 Utilizzando una delle origini etichettate come beta (&quot;Beta&quot;), l&#39;utente riconosce che il Beta è fornito ***&quot;così com&#39;è&quot; senza alcuna garanzia***.
 
-Adobe non ha alcun obbligo di mantenere, correggere, aggiornare, modificare, modificare o supportare in altro modo la Beta. Si consiglia di utilizzare il materiale informativo e di non fare affidamento in alcun modo sul corretto funzionamento o sulle prestazioni di tale Beta e/o dei materiali di accompagnamento. La Beta è considerata un&#39;informazione riservata di Adobe.
+Adobe non ha alcun obbligo di mantenere, correggere, aggiornare, modificare, modificare o supportare in altro modo Beta. Si consiglia di utilizzare il materiale informativo e di non fare affidamento in alcun modo sul corretto funzionamento o sulle prestazioni di tale Beta e/o dei materiali di accompagnamento. Beta è considerata un&#39;informazione riservata di Adobe.
 
-Qualsiasi &quot;Feedback&quot; (informazioni relative a Beta, inclusi ma non limitati a problemi o difetti riscontrati durante l’utilizzo di Beta, suggerimenti, miglioramenti e raccomandazioni) fornito dall’Utente a Adobe viene assegnato a Adobe, inclusi tutti i diritti, il titolo, l’interesse e il feedback.
+Qualsiasi &quot;Feedback&quot; (informazioni relative a Beta, compresi, a titolo esemplificativo e non esaustivo, problemi o difetti riscontrati durante l’utilizzo di Beta, suggerimenti, miglioramenti e raccomandazioni) fornito dall’Utente a Adobe viene assegnato ad Adobe, inclusi tutti i diritti, i titoli e gli interessi relativi a tale Feedback.
 
 Invia un feedback aperto o crea un ticket di supporto per condividere i suggerimenti o segnalare un bug, cercare un miglioramento delle funzioni.
