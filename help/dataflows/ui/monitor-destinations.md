@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Monitorare i flussi di dati per le destinazioni nell’interfaccia utente
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: b814becaed88ce23527dc58f7ec056c05a48379f
+source-git-commit: 7f3560eaccecc8f42bbfa7d27b82ad71397df035
 workflow-type: tm+mt
-source-wordcount: '3637'
-ht-degree: 10%
+source-wordcount: '3620'
+ht-degree: 9%
 
 ---
 
@@ -97,12 +97,12 @@ Ogni singola esecuzione del flusso di dati mostra i seguenti dettagli:
 
   >[!IMPORTANT]
   >
-  > A partire da ottobre 2024, Adobe implementerà un aggiornamento per aumentare la precisione dei rapporti per le destinazioni di streaming. Questo miglioramento garantisce un migliore allineamento tra il reporting di Experience Platform e quello delle piattaforme di destinazione.
+  > A partire da marzo 2025, Adobe sta implementando un aggiornamento per aumentare la precisione dei rapporti per le destinazioni di streaming. Questo miglioramento garantisce un migliore allineamento tra il reporting in Experience Platform e le piattaforme di destinazione.
   >
   > Prima di questo aggiornamento, **[!UICONTROL Identità non riuscite]** includeva tutti i tentativi di attivazione. Dopo questo aggiornamento, nel conteggio totale viene incluso solo l’ultimo tentativo di attivazione.
   > 
-  > Questo miglioramento si applica attualmente alla [destinazione Customer Match di Google](../../destinations/catalog/advertising/google-customer-match.md), ma verrà introdotto gradualmente in altre destinazioni di streaming di Experience Platform.
-  > In seguito a questo miglioramento, gli utenti della [destinazione Customer Match di Google](../../destinations/catalog/advertising/google-customer-match.md) potrebbero notare un calo previsto nel relativo conteggio delle **[!UICONTROL Identità non riuscite]**.
+  > Questo miglioramento si applica a tutte le destinazioni di streaming.
+  > In seguito a questo miglioramento, gli utenti delle destinazioni di streaming potrebbero notare un calo previsto nel conteggio di **[!UICONTROL Identità non riuscite]**.
 
 
 - **[!UICONTROL Tasso di attivazione]**: percentuale di identità ricevute attivate correttamente. La formula seguente illustra come viene calcolato questo valore:
