@@ -2,9 +2,9 @@
 title: Panoramica di Audience Portal
 description: Scopri come utilizzare Audience Portal per visualizzare, gestire e creare tipi di pubblico in Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: a0543777e9a72f3a9ed6ff19e8b11973eb647b6b
+source-git-commit: 9eb5ccc24db58a887473f61c66a83aa92e16efa7
 workflow-type: tm+mt
-source-wordcount: '4561'
+source-wordcount: '4310'
 ht-degree: 3%
 
 ---
@@ -220,33 +220,9 @@ Quando applichi azioni in blocco ai tipi di pubblico, si applicano le seguenti c
 - **impossibile** eliminare un pubblico utilizzato in un&#39;attivazione di destinazione.
 - Se selezioni un filtro, i tipi di pubblico selezionati **verranno reimpostati**.
 
-#### [!BADGE Disponibilità limitata]{type=Informative} Valutazione flessibile del pubblico {#flexible-audience-evaluation}
+#### Valutazione flessibile del pubblico {#flexible-audience-evaluation}
 
-La valutazione flessibile del pubblico consente di eseguire un processo di segmentazione su richiesta. Scegli i tipi di pubblico da valutare e seleziona **[!UICONTROL Valuta tipi di pubblico]**.
-
->[!IMPORTANT]
->
-Quando si selezionano i tipi di pubblico per una valutazione flessibile del pubblico, si applicano le seguenti condizioni:
->
-- Puoi utilizzare la valutazione flessibile del pubblico solo **due** al giorno. Questo limite viene ripristinato alla mezzanotte (UTC).
-- Hai un **massimo** di 50 esecuzioni flessibili di valutazione del pubblico all&#39;anno.
-- Tutti i tipi di pubblico **must** hanno origine &quot;Servizio di segmentazione&quot;.
-- Tutti i tipi di pubblico **devono** essere valutati utilizzando la segmentazione batch.
-- Tutti i tipi di pubblico **devono** essere basati sulle persone.
-- I tipi di pubblico possono **solo** essere attivati nelle destinazioni in Platform.
-- Puoi selezionare solo un massimo di 20 tipi di pubblico.
-
-![Sono selezionati i tipi di pubblico per i quali si desidera utilizzare la valutazione flessibile del pubblico.](../images/ui/audience-portal/evaluate-audiences.png)
-
-Viene visualizzato il popover **[!UICONTROL Valuta i tipi di pubblico su richiesta]**, in cui viene visualizzato l&#39;elenco dei tipi di pubblico che verranno valutati con il processo di segmentazione su richiesta. Se un pubblico non è idoneo per la valutazione su richiesta, verrà rimosso automaticamente dal processo di valutazione. Verifica che i tipi di pubblico elencati siano quelli che desideri valutare.
-
-![Vengono visualizzati i tipi di pubblico che possono essere valutati utilizzando la valutazione flessibile.](../images/ui/audience-portal/evaluate-audiences-modal.png)
-
-Dopo aver confermato che sono elencati i tipi di pubblico corretti, puoi procedere con la richiesta e verrà avviata la valutazione flessibile del pubblico. È possibile visualizzare lo stato di questa valutazione del pubblico nella [visualizzazione di monitoraggio dei processi di valutazione](../../dataflows/ui/monitor-audiences.md#evaluation-job-details).
-
->[!NOTE]
->
-Se esegui una valutazione flessibile del pubblico, assicurati che la frequenza sia impostata su **[!UICONTROL Dopo la valutazione del segmento]**. L&#39;esecuzione della valutazione flessibile del pubblico su tipi di pubblico già impostati per essere attivati [dopo la valutazione del segmento](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files), attiverà i tipi di pubblico al termine del processo di valutazione flessibile del pubblico, indipendentemente da eventuali processi di attivazione giornalieri precedenti.
+La valutazione flessibile del pubblico consente di eseguire un processo di segmentazione su richiesta. Per ulteriori informazioni sulla valutazione flessibile del pubblico, consulta la [guida alla valutazione flessibile del pubblico](../methods/flexible-audience-evaluation.md).
 
 ## Dettagli del pubblico {#audience-details}
 
@@ -302,7 +278,7 @@ Per il pubblico e le composizioni generati da Platform, la sezione **[!UICONTROL
 
 >[!NOTE]
 >
-Potrebbero essere necessari fino a 30 minuti per aggiornare il conteggio totale del pubblico dopo il completamento del processo di esportazione.
+>Potrebbero essere necessari fino a 30 minuti per aggiornare il conteggio totale del pubblico dopo il completamento del processo di esportazione.
 
 Le stime vengono generate utilizzando una dimensione campione dei dati di campionamento di quel giorno. Se nell’archivio Profili sono presenti meno di 1 milione di entità, viene utilizzato l’intero set di dati; per un numero di entità compreso tra 1 e 20 milioni, vengono utilizzate 1 milione di entità; e per più di 20 milioni di entità, viene utilizzato il 5% del totale delle entità. Ulteriori informazioni sulla generazione di stime sono disponibili nella [sezione sulla generazione di stime](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) dell&#39;esercitazione sulla creazione di tipi di pubblico.
 
@@ -312,7 +288,7 @@ Per i tipi di pubblico con origine **[!UICONTROL Caricamento personalizzato]**, 
 
 >[!NOTE]
 >
-Potrebbero essere necessari fino a 30 minuti dopo il processo di esportazione per aggiornare completamente il conteggio dei profili del pubblico.
+>Potrebbero essere necessari fino a 30 minuti dopo il processo di esportazione per aggiornare completamente il conteggio dei profili del pubblico.
 
 ![Viene visualizzata la sezione dei dettagli di acquisizione per la pagina dei dettagli del pubblico.](../images/ui/audience-portal/audience-details-ingestion-details.png)
 
@@ -330,7 +306,7 @@ Potrebbero essere necessari fino a 30 minuti dopo il processo di esportazione pe
 
 >[!NOTE]
 >
-L’applicazione delle etichette di utilizzo dei dati allo schema è la best practice. **impossibile** applicare un&#39;etichetta di utilizzo dati direttamente al pubblico.
+>L’applicazione delle etichette di utilizzo dei dati allo schema è la best practice. **impossibile** applicare un&#39;etichetta di utilizzo dati direttamente al pubblico.
 
 ### Destinazioni attivate {#activated-destinations}
 
@@ -338,7 +314,7 @@ La sezione **[!UICONTROL Destinazioni attivate]** mostra le destinazioni per le 
 
 >[!NOTE]
 >
-Le destinazioni sono una funzionalità disponibile con [!DNL Adobe Real-Time Customer Data Platform] e consentono di esportare dati in piattaforme esterne. Per ulteriori informazioni sulle destinazioni, leggere la [panoramica sulle destinazioni](../../destinations/home.md). Per informazioni su come attivare un segmento in una destinazione, consulta [panoramica sull&#39;attivazione](../../destinations/ui/activation-overview.md).
+> Le destinazioni sono una funzionalità disponibile con [!DNL Adobe Real-Time Customer Data Platform] e consentono di esportare dati in piattaforme esterne. Per ulteriori informazioni sulle destinazioni, leggere la [panoramica sulle destinazioni](../../destinations/home.md). Per informazioni su come attivare un segmento in una destinazione, consulta [panoramica sull&#39;attivazione](../../destinations/ui/activation-overview.md).
 
 ### Esempi di profilo {#profile-samples}
 
@@ -364,10 +340,10 @@ Per informazioni più dettagliate su ogni [!DNL Profile], seleziona l&#39;ID [!D
 
 ## Segmentazione pianificata {#scheduled-segmentation}
 
-[!CONTEXTUALHELP]
-id="platform_segments_browse_addallsegmentstoschedule"
-title="Aggiungi tutti i tipi di pubblico alla pianificazione"
-abstract="Abilita questa opzione per includere tutti i tipi di pubblico valutati utilizzando la segmentazione in batch nell’aggiornamento pianificato giornaliero. Disabilita questa opzione per rimuovere tutti i tipi di pubblico dall’aggiornamento pianificato."
+>[!CONTEXTUALHELP]
+>id="platform_segments_browse_addallsegmentstoschedule"
+>title="Aggiungi tutti i tipi di pubblico alla pianificazione"
+>abstract="Abilita questa opzione per includere tutti i tipi di pubblico valutati utilizzando la segmentazione in batch nell’aggiornamento pianificato giornaliero. Disabilita questa opzione per rimuovere tutti i tipi di pubblico dall’aggiornamento pianificato."
 
 Una volta creati i tipi di pubblico, puoi valutarli tramite valutazione on-demand o pianificata (continua). Per valutazione si intende lo spostamento di [!DNL Real-Time Customer Profile] dati attraverso processi di segmento per produrre tipi di pubblico corrispondenti. Una volta creati, i tipi di pubblico vengono salvati e memorizzati in modo che possano essere esportati utilizzando le API [!DNL Experience Platform].
 
@@ -379,7 +355,7 @@ Abilitare i tipi di pubblico per la valutazione pianificata può essere fatto ut
 
 >[!NOTE]
 >
-È possibile abilitare la valutazione pianificata per le sandbox con un massimo di cinque (5) criteri di unione per [!DNL XDM Individual Profile]. Se nell&#39;organizzazione sono presenti più di cinque criteri di unione per [!DNL XDM Individual Profile] in un singolo ambiente sandbox, non sarà possibile utilizzare la valutazione pianificata.
+>È possibile abilitare la valutazione pianificata per le sandbox con un massimo di cinque (5) criteri di unione per [!DNL XDM Individual Profile]. Se nell&#39;organizzazione sono presenti più di cinque criteri di unione per [!DNL XDM Individual Profile] in un singolo ambiente sandbox, non sarà possibile utilizzare la valutazione pianificata.
 
 Al momento è possibile creare pianificazioni solo utilizzando l’API. Per i passaggi dettagliati sulla creazione, la modifica e l&#39;utilizzo delle pianificazioni tramite l&#39;API, segui il tutorial per la valutazione e l&#39;accesso ai risultati della segmentazione, in particolare la sezione sulla [valutazione pianificata tramite l&#39;API](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
 
@@ -393,7 +369,7 @@ Puoi selezionare **[!UICONTROL Crea pubblico]** per creare un pubblico.
 
 Viene visualizzato un popover che consente di scegliere se comporre un pubblico o creare regole.
 
-![Un popover che visualizza i due tipi of tipi di pubblico che è possibile creare.](../images/ui/audience-portal/create-audience-type.png)
+![Un popover che visualizza i due tipi di pubblico che è possibile creare.](../images/ui/audience-portal/create-audience-type.png)
 
 ### Composizione del pubblico {#audience-composition}
 
@@ -417,7 +393,7 @@ Oltre alle composizioni del pubblico e alle definizioni dei segmenti, puoi utili
 
 >[!IMPORTANT]
 >
-Per importare un pubblico generato esternamente, **devi** disporre delle seguenti autorizzazioni: [!UICONTROL Visualizza segmenti], [!UICONTROL Gestisci segmenti] e [!UICONTROL Importa pubblico]. Per ulteriori informazioni su queste autorizzazioni, leggere la [panoramica sul controllo degli accessi](../../access-control/home.md#permissions).
+>Per importare un pubblico generato esternamente, **devi** disporre delle seguenti autorizzazioni: [!UICONTROL Visualizza segmenti], [!UICONTROL Gestisci segmenti] e [!UICONTROL Importa pubblico]. Per ulteriori informazioni su queste autorizzazioni, leggere la [panoramica sul controllo degli accessi](../../access-control/home.md#permissions).
 
 Puoi selezionare **[!UICONTROL Importa pubblico]** per importare un pubblico generato esternamente.
 
@@ -429,11 +405,11 @@ Viene visualizzato il flusso di lavoro **[!UICONTROL Importa CSV]** del pubblico
 
 >[!NOTE]
 >
-Il pubblico generato esterno **deve** essere in formato CSV, avere un **massimo** di 25 colonne e essere inferiore a 1 GB.
+>Il pubblico generato esterno **deve** essere in formato CSV, avere un **massimo** di 25 colonne e essere inferiore a 1 GB.
 >
-Inoltre, **non puoi** utilizzare spazi o trattini nella prima riga o nelle colonne associate del file CSV.
+>Inoltre, **non puoi** utilizzare spazi o trattini nella prima riga o nelle colonne associate del file CSV.
 >
-Ad esempio, il valore della prima riga può essere &quot;FirstName&quot; o &quot;First_Name&quot;, ma non può essere &quot;First Name&quot; o &quot;First-Name&quot;.
+>Ad esempio, il valore della prima riga può essere &quot;FirstName&quot; o &quot;First_Name&quot;, ma non può essere &quot;First Name&quot; o &quot;First-Name&quot;.
 
 Dopo aver selezionato il file CSV da importare, viene visualizzato un elenco di dati di esempio per questo pubblico generato esternamente. Dopo aver verificato la correttezza dei dati di esempio, seleziona **[!UICONTROL Avanti]**.
 
@@ -449,10 +425,10 @@ Facoltativamente, puoi anche aggiungere alcuni dettagli aggiuntivi al pubblico g
 
 >[!NOTE]
 >
-Se utilizzi un ID pubblico esterno personalizzato, questo deve rispettare le seguenti linee guida:
+>Se utilizzi un ID pubblico esterno personalizzato, questo deve rispettare le seguenti linee guida:
 >
-- **deve** iniziare con una lettera (a-z o A-Z), un carattere di sottolineatura (_) o un simbolo del dollaro ($).
-- Tutti i caratteri successivi possono essere alfanumerici (a-z, A-Z, 0-9), trattini bassi (_) o segni di dollaro ($).
+> - **deve** iniziare con una lettera (a-z o A-Z), un carattere di sottolineatura (_) o un simbolo del dollaro ($).
+> - Tutti i caratteri successivi possono essere alfanumerici (a-z, A-Z, 0-9), trattini bassi (_) o segni di dollaro ($).
 
 Dopo aver inserito i dettagli del pubblico, seleziona **[!UICONTROL Successivo]**.
 
@@ -466,11 +442,11 @@ Dopo aver confermato che i dettagli sono corretti, seleziona **[!UICONTROL Fine]
 
 >[!IMPORTANT]
 >
-Per impostazione predefinita, i tipi di pubblico generati esternamente hanno una scadenza dei dati di 30 giorni. La scadenza dei dati viene reimpostata se il pubblico viene aggiornato o modificato in qualsiasi modo.
+>Per impostazione predefinita, i tipi di pubblico generati esternamente hanno una scadenza dei dati di 30 giorni. La scadenza dei dati viene reimpostata se il pubblico viene aggiornato o modificato in qualsiasi modo.
 >
-Inoltre, se il pubblico generato esternamente contiene informazioni riservate e/o relative all&#39;assistenza sanitaria, **devi** applicare le etichette di utilizzo dei dati necessarie prima di attivarle in qualsiasi destinazione. Poiché le variabili provenienti da tipi di pubblico generati esternamente vengono memorizzate nel data lake anziché nel profilo cliente in tempo reale, **non** includere i dati sul consenso nel file CSV.
+>Inoltre, se il pubblico generato esternamente contiene informazioni riservate e/o relative all&#39;assistenza sanitaria, **devi** applicare le etichette di utilizzo dei dati necessarie prima di attivarle in qualsiasi destinazione. Poiché le variabili provenienti da tipi di pubblico generati esternamente vengono memorizzate nel data lake anziché nel profilo cliente in tempo reale, **non** includere i dati sul consenso nel file CSV.
 >
-Per ulteriori informazioni sull&#39;applicazione delle etichette di utilizzo dei dati, leggere la documentazione su [gestione delle etichette](../../access-control/abac/ui/labels.md). Per informazioni sulle etichette di utilizzo dei dati in Platform in generale, consulta la [panoramica delle etichette di utilizzo dei dati](../../data-governance/labels/overview.md). Per scoprire come funziona il consenso nei tipi di pubblico generati esternamente, leggi le [domande frequenti sui tipi di pubblico](../faq.md#consent).
+>Per ulteriori informazioni sull&#39;applicazione delle etichette di utilizzo dei dati, leggere la documentazione su [gestione delle etichette](../../access-control/abac/ui/labels.md). Per informazioni sulle etichette di utilizzo dei dati in Platform in generale, consulta la [panoramica delle etichette di utilizzo dei dati](../../data-governance/labels/overview.md). Per scoprire come funziona il consenso nei tipi di pubblico generati esternamente, leggi le [domande frequenti sui tipi di pubblico](../faq.md#consent).
 
 ## Passaggi successivi
 

@@ -4,10 +4,10 @@ title: Endpoint API per processi di segmento
 description: L’endpoint per i processi di segmento nell’API del servizio di segmentazione di Adobe Experience Platform consente di gestire in modo programmatico i processi di segmento per la tua organizzazione.
 role: Developer
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: f35fb6aae6aceb75391b1b615ca067a72918f4cf
+source-git-commit: 9eb5ccc24db58a887473f61c66a83aa92e16efa7
 workflow-type: tm+mt
-source-wordcount: '1648'
-ht-degree: 2%
+source-wordcount: '1232'
+ht-degree: 3%
 
 ---
 
@@ -64,13 +64,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elenco di processi di segmento per l’organizzazione specificata come JSON. Tuttavia, la risposta sarà diversa, a seconda del numero di definizioni di segmento all’interno del processo di segmentazione.
-
->[!BEGINTABS]
-
->[!TAB Definizioni di segmenti minori o uguali a 1500 nel processo di segmentazione]
-
-Se nel processo di segmentazione vengono eseguite meno di 1500 definizioni di segmento, nell&#39;attributo `children.segments` verrà visualizzato un elenco completo di tutte le definizioni di segmento.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elenco di processi di segmento per l’organizzazione specificata come JSON. Nell&#39;attributo `children.segments` verrà visualizzato un elenco completo di tutte le definizioni di segmento.
 
 >[!NOTE]
 >
@@ -178,105 +172,6 @@ Se nel processo di segmentazione vengono eseguite meno di 1500 definizioni di se
 }
 ```
 
-+++
-
->[!TAB Più di 1500 definizioni di segmenti]
-
-Se nel processo di segmentazione vengono eseguite più di 1500 definizioni di segmento, l&#39;attributo `children.segments` visualizzerà `*`, indicando che tutte le definizioni di segmento sono in fase di valutazione.
-
->[!NOTE]
->
->La seguente risposta è stata troncata per motivi di spazio e mostrerà solo il primo processo restituito.
-
-+++ Una risposta di esempio durante la visualizzazione di un elenco di processi di segmentazione.
-
-```json
-{
-    "_page": {
-        "totalCount": 14,
-        "pageSize": 14
-    },
-    "children": [
-        {
-            "id": "b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-            "imsOrgId": "E95186D65A28ABF00A495D82@AdobeOrg",
-            "sandbox": {
-                "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
-                "sandboxName": "prod",
-                "type": "production",
-                "default": true
-            },
-            "profileInstanceId": "ups",
-            "source": "scheduler",
-            "status": "SUCCEEDED",
-            "batchId": "678f53bc-e21d-4c47-a7ec-5ad0064f8e4c",
-            "computeJobId": 8811,
-            "computeGatewayJobId": "9ea97b25-a0f5-410e-ae87-b2d85e58f399",
-            "segments": [
-                {
-                    "segmentId": "*",
-                }
-            ],
-            "metrics": {
-                "totalTime": {
-                    "startTimeInMs": 1573203617195,
-                    "endTimeInMs": 1573204395655,
-                    "totalTimeInMs": 778460
-                },
-                "profileSegmentationTime": {
-                    "startTimeInMs": 1573204266727,
-                    "endTimeInMs": 1573204395655,
-                    "totalTimeInMs": 128928
-                },
-                "totalProfiles": 13146432,
-                "segmentedProfileCounter":{
-                    "94509dba-7387-452f-addc-5d8d979f6ae8":1033
-                },
-                "segmentedProfileByNamespaceCounter":{
-                    "94509dba-7387-452f-addc-5d8d979f6ae8":{
-                        "tenantiduserobjid":1033,
-                        "campaign_profile_mscom_mkt_prod2":1033
-                    }
-                },
-                "segmentedProfileByStatusCounter":{
-                    "94509dba-7387-452f-addc-5d8d979f6ae8":{
-                        "exited":144646,
-                        "realized":2056
-                    }
-                },
-                "totalProfilesByMergePolicy":{
-                    "25c548a0-ca7f-4dcd-81d5-997642f178b9":13146432
-                }
-            },
-            "requestId": "4e538382-dbd8-449e-988a-4ac639ebe72b-1573203600264",
-            "schema": {
-                "name": "_xdm.context.profile"
-            },
-            "properties": {
-                "scheduleId": "4e538382-dbd8-449e-988a-4ac639ebe72b",
-                "runId": "e6c1308d-0d4b-4246-b2eb-43697b50a149"
-            },
-            "_links": {
-                "cancel": {
-                    "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-                    "method": "DELETE"
-                },
-                "checkStatus": {
-                    "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-                    "method": "GET"
-                }
-            },
-            "updateTime": 1573204395000,
-            "creationTime": 1573203600535,
-            "updateEpoch": 1573204395
-        }
-    ],
-    "_links": {
-        "next": {}
-    }
-}
-```
-
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `id` | Identificatore di sola lettura generato dal sistema per il processo di segmentazione. |
@@ -294,23 +189,15 @@ Se nel processo di segmentazione vengono eseguite più di 1500 definizioni di se
 
 +++
 
->[!ENDTABS]
-
 ## Crea un nuovo processo di segmentazione {#create}
 
-Per creare un nuovo processo di segmentazione, devi eseguire una richiesta POST all&#39;endpoint `/segment/jobs` e includere nel corpo l&#39;ID della definizione del segmento da cui desideri creare un nuovo pubblico.
+Per creare un nuovo processo di segmento, devi eseguire una richiesta POST all&#39;endpoint `/segment/jobs` e includere gli ID della definizione del segmento nel corpo della richiesta.
 
 **Formato API**
 
 ```http
 POST /segment/jobs
 ```
-
-Quando crei un nuovo processo di segmentazione, la richiesta e la risposta variano a seconda del numero di definizioni di segmento all’interno del processo di segmentazione.
-
->[!BEGINTABS]
-
->[!TAB Minore o uguale a 1500 segmenti nel processo del segmento]
 
 **Richiesta**
 
@@ -335,7 +222,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `segmentId` | ID della definizione del segmento per cui desideri creare un processo di segmentazione. Queste definizioni dei segmenti possono appartenere a diversi criteri di unione. Ulteriori informazioni sulle definizioni dei segmenti sono disponibili nella [guida dell&#39;endpoint di definizione dei segmenti](./segment-definitions.md). |
+| `segmentId` | ID della definizione del segmento che desideri valutare. Queste definizioni dei segmenti possono appartenere a diversi criteri di unione. Ulteriori informazioni sulle definizioni dei segmenti sono disponibili nella [guida dell&#39;endpoint di definizione dei segmenti](./segment-definitions.md). |
 
 +++
 
@@ -460,139 +347,9 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 
 +++
 
->[!TAB Definizione di più di 1500 segmenti nel processo di segmentazione]
-
-**Richiesta**
-
->[!NOTE]
->
->Anche se è possibile creare un processo di segmentazione con più di 1500 definizioni di segmenti, si tratta di **operazione non consigliata**.
-
-+++ Richiesta di esempio per la creazione di un processo di segmentazione.
-
-```shell
-curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
- -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {ORG_ID}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}' \
- -d '{
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "segments": [
-        {
-            "segmentId": "*"
-        }
-    ]
- }'
-```
-
-| Proprietà | Descrizione |
-| -------- | ----------- |
-| `schema.name` | Nome dello schema per le definizioni dei segmenti. |
-| `segments.segmentId` | Quando si esegue un processo di segmentazione con più di 1500 segmenti, è necessario passare `*` come ID segmento per indicare che si desidera eseguire un processo di segmentazione con tutti i segmenti. |
-
-+++
-
-**Risposta**
-
-In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i dettagli del processo di segmentazione appena creato.
-
-+++ Una risposta di esempio durante la creazione di un processo di segmentazione.
-
-```json
-{
-    "id": "b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-    "imsOrgId": "E95186D65A28ABF00A495D82@AdobeOrg",
-    "sandbox": {
-        "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
-        "sandboxName": "prod",
-        "type": "production",
-        "default": true
-    },
-    "profileInstanceId": "ups",
-    "source": "scheduler",
-    "status": "PROCESSING",
-    "batchId": "678f53bc-e21d-4c47-a7ec-5ad0064f8e4c",
-    "computeJobId": 8811,
-    "computeGatewayJobId": "9ea97b25-a0f5-410e-ae87-b2d85e58f399",
-    "segments": [
-        {
-            "segmentId": "*"
-        }
-    ],
-    "metrics": {
-        "totalTime": {
-            "startTimeInMs": 1573203617195,
-            "endTimeInMs": 1573204395655,
-            "totalTimeInMs": 778460
-        },
-        "profileSegmentationTime": {
-            "startTimeInMs": 1573204266727,
-            "endTimeInMs": 1573204395655,
-            "totalTimeInMs": 128928
-        },
-        "segmentedProfileCounter":{
-            "7863c010-e092-41c8-ae5e-9e533186752e":1033
-        },
-        "segmentedProfileByNamespaceCounter":{
-            "7863c010-e092-41c8-ae5e-9e533186752e":{
-                "tenantiduserobjid":1033,
-                "campaign_profile_mscom_mkt_prod2":1033
-            }
-        },
-        "segmentedProfileByStatusCounter":{
-            "7863c010-e092-41c8-ae5e-9e533186752e":{
-                "exited":144646,
-                "realized":2056
-            }
-        },
-        "totalProfiles":13146432,
-        "totalProfilesByMergePolicy":{
-            "25c548a0-ca7f-4dcd-81d5-997642f178b9":13146432
-        }
-    },
-    "requestId": "4e538382-dbd8-449e-988a-4ac639ebe72b-1573203600264",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "properties": {
-        "scheduleId": "4e538382-dbd8-449e-988a-4ac639ebe72b",
-        "runId": "e6c1308d-0d4b-4246-b2eb-43697b50a149"
-    },
-    "_links": {
-        "cancel": {
-            "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-            "method": "DELETE"
-        },
-        "checkStatus": {
-            "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-            "method": "GET"
-        }
-    },
-    "updateTime": 1573204395000,
-    "creationTime": 1573203600535,
-    "updateEpoch": 1573204395
-}
-```
-
-| Proprietà | Descrizione |
-| -------- | ----------- |
-| `id` | Identificatore di sola lettura generato dal sistema per il processo di segmentazione appena creato. |
-| `status` | Lo stato corrente del processo di segmentazione. Poiché il processo di segmentazione è stato appena creato, lo stato sarà sempre `NEW`. |
-| `segments` | Oggetto contenente informazioni sulle definizioni dei segmenti per cui è in esecuzione questo processo di segmentazione. |
-| `segments.segment.id` | `*` significa che questo processo di segmentazione è in esecuzione per tutte le definizioni di segmenti all&#39;interno della tua organizzazione. |
-
-+++
-
->[!ENDTABS]
-
-
 ## Recuperare un processo di segmento specifico {#get}
 
-Per recuperare informazioni dettagliate su un processo di segmentazione specifico, effettua una richiesta di GET all&#39;endpoint `/segment/jobs` e fornisci l&#39;ID del processo di segmentazione da recuperare nel percorso della richiesta.
+Per recuperare informazioni dettagliate su un processo di segmentazione specifico, effettua una richiesta GET all&#39;endpoint `/segment/jobs` e fornisci l&#39;ID del processo di segmentazione da recuperare nel percorso della richiesta.
 
 **Formato API**
 
@@ -620,13 +377,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informazioni dettagliate sul processo di segmentazione specificato.  Tuttavia, la risposta varia a seconda del numero di definizioni di segmento all’interno del processo di segmentazione.
-
->[!BEGINTABS]
-
->[!TAB Definizioni di segmenti minori o uguali a 1500 nel processo di segmentazione]
-
-Se nel processo di segmentazione vengono eseguite meno di 1500 definizioni di segmento, nell&#39;attributo `children.segments` verrà visualizzato un elenco completo di tutte le definizioni di segmento.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informazioni dettagliate sul processo di segmentazione specificato. Nell&#39;attributo `children.segments` verrà visualizzato un elenco completo di tutte le definizioni di segmento.
 
 +++ Risposta di esempio per recuperare un processo di segmentazione.
 
@@ -690,90 +441,6 @@ Se nel processo di segmentazione vengono eseguite meno di 1500 definizioni di se
 }
 ```
 
-+++
-
->[!TAB Più di 1500 definizioni di segmenti]
-
-Se nel processo di segmentazione vengono eseguite più di 1500 definizioni di segmento, l&#39;attributo `children.segments` visualizzerà `*`, indicando che tutte le definizioni di segmento sono in fase di valutazione.
-
-+++ Risposta di esempio per recuperare un processo di segmentazione.
-
-```json
-{
-    "id": "b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-    "imsOrgId": "E95186D65A28ABF00A495D82@AdobeOrg",
-    "sandbox": {
-        "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
-        "sandboxName": "prod",
-        "type": "production",
-        "default": true
-    },
-    "profileInstanceId": "ups",
-    "source": "scheduler",
-    "status": "SUCCEEDED",
-    "batchId": "678f53bc-e21d-4c47-a7ec-5ad0064f8e4c",
-    "computeJobId": 8811,
-    "computeGatewayJobId": "9ea97b25-a0f5-410e-ae87-b2d85e58f399",
-    "segments": [
-        {
-            "segmentId": "*"
-        }
-    ],
-    "metrics": {
-        "totalTime": {
-            "startTimeInMs": 1573203617195,
-            "endTimeInMs": 1573204395655,
-            "totalTimeInMs": 778460
-        },
-        "profileSegmentationTime": {
-            "startTimeInMs": 1573204266727,
-            "endTimeInMs": 1573204395655,
-            "totalTimeInMs": 128928
-        },
-        "segmentedProfileCounter":{
-            "7863c010-e092-41c8-ae5e-9e533186752e":1033
-        },
-        "segmentedProfileByNamespaceCounter":{
-            "7863c010-e092-41c8-ae5e-9e533186752e":{
-                "tenantiduserobjid":1033,
-                "campaign_profile_mscom_mkt_prod2":1033
-            }
-        },
-        "segmentedProfileByStatusCounter":{
-            "7863c010-e092-41c8-ae5e-9e533186752e":{
-                "exited":144646,
-                "realized":2056
-            }
-        },
-        "totalProfiles":13146432,
-        "totalProfilesByMergePolicy":{
-            "25c548a0-ca7f-4dcd-81d5-997642f178b9":13146432
-        }
-    },
-    "requestId": "4e538382-dbd8-449e-988a-4ac639ebe72b-1573203600264",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "properties": {
-        "scheduleId": "4e538382-dbd8-449e-988a-4ac639ebe72b",
-        "runId": "e6c1308d-0d4b-4246-b2eb-43697b50a149"
-    },
-    "_links": {
-        "cancel": {
-            "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-            "method": "DELETE"
-        },
-        "checkStatus": {
-            "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-            "method": "GET"
-        }
-    },
-    "updateTime": 1573204395000,
-    "creationTime": 1573203600535,
-    "updateEpoch": 1573204395
-}
-```
-
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `id` | Identificatore di sola lettura generato dal sistema per il processo di segmentazione. |
@@ -824,7 +491,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce lo stato HTTP 207 con i processi di segmento richiesti. Tuttavia, il valore dell&#39;attributo `children.segments` varia se il processo di segmentazione è in esecuzione per più di 1500 definizioni di segmenti.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 207 con i processi di segmento richiesti.
 
 >[!NOTE]
 >
@@ -867,7 +534,20 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 207 con i proce
             "status": "SUCCEEDED",
             "segments": [
                 {
-                    "segmentId": "*"
+                    "segmentId": "30230300-d78c-48ad-8012-c5563a007069",
+                    "segment": {
+                        "id": "30230300-d78c-48ad-8012-c5563a007069",
+                        "expression": {
+                            "type": "PQL",
+                            "format": "pql/json",
+                            "value": "{PQL_EXPRESSION}"
+                        },
+                        "mergePolicyId": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
+                        "mergePolicy": {
+                            "id": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
+                            "version": 1
+                        }
+                    }
                 }
             ],
             "updateTime": 1573204395000,
@@ -890,7 +570,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 207 con i proce
 
 ## Annullare o eliminare un processo di segmento specifico {#delete}
 
-Per eliminare un processo di segmentazione specifico, devi eseguire una richiesta DELETE all&#39;endpoint `/segment/jobs` e fornire l&#39;ID del processo di segmentazione da eliminare nel percorso della richiesta.
+È possibile eliminare un processo di segmento specifico effettuando una richiesta DELETE all&#39;endpoint `/segment/jobs` e fornendo l&#39;ID del processo di segmento che si desidera eliminare nel percorso della richiesta.
 
 >[!NOTE]
 >

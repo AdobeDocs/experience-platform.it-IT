@@ -2,12 +2,10 @@
 title: Guida alla valutazione del pubblico flessibile
 description: Scopri come utilizzare la valutazione flessibile del pubblico per eseguire processi di segmentazione in batch su richiesta.
 role: Developer, User
-hide: true
-hidefromtoc: true
-source-git-commit: a0543777e9a72f3a9ed6ff19e8b11973eb647b6b
+source-git-commit: 5c86161a2f9442d99426f2c05fb762cf50004049
 workflow-type: tm+mt
-source-wordcount: '893'
-ht-degree: 6%
+source-wordcount: '996'
+ht-degree: 5%
 
 ---
 
@@ -32,6 +30,10 @@ Quando esegui una valutazione flessibile del pubblico, tieni presente le seguent
 - Tutti i tipi di pubblico **devono** essere valutati utilizzando la segmentazione batch.
 - Tutti i tipi di pubblico **devono** essere basati sulle persone.
 - Puoi selezionare solo un massimo di 20 tipi di pubblico per ogni esecuzione di valutazione flessibile del pubblico.
+
+>[!NOTE]
+>
+>*puoi* acquistare ulteriori esecuzioni di valutazione flessibile del pubblico all&#39;anno. Per ulteriori informazioni, contatta l’Assistenza clienti di Adobe.
 
 ## Accesso {#access}
 
@@ -308,11 +310,17 @@ Dopo aver confermato che sono elencati i tipi di pubblico corretti, puoi procede
 
 >[!NOTE]
 >
->Se esegui una valutazione flessibile del pubblico, assicurati che la frequenza sia impostata su **[!UICONTROL Dopo la valutazione del segmento]**. L&#39;esecuzione della valutazione flessibile del pubblico su tipi di pubblico già impostati per essere attivati [dopo la valutazione del segmento](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files), attiverà i tipi di pubblico al termine del processo di valutazione flessibile del pubblico, indipendentemente da eventuali processi di attivazione giornalieri precedenti.
+>Lo stato del processo di segmentazione può essere segnalato come nello stato &quot;In coda&quot; all’interno del dashboard di monitoraggio. Per visualizzare lo stato più aggiornato del processo di segmentazione, effettua una richiesta GET all&#39;endpoint `/segment/jobs`, fornendo l&#39;ID del processo di segmentazione nel percorso della richiesta. Ulteriori informazioni sull’utilizzo di questo endpoint sono disponibili nella scheda API.
+>
+>Se esegui una valutazione flessibile del pubblico e vuoi che la valutazione attivi il pubblico in una destinazione, devi assicurarti che la frequenza sia impostata su **[!UICONTROL Dopo la valutazione del segmento]**. L&#39;esecuzione della valutazione flessibile del pubblico su tipi di pubblico già impostati per essere attivati [dopo la valutazione del segmento](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files), attiverà i tipi di pubblico al termine del processo di valutazione flessibile del pubblico, indipendentemente da eventuali processi di attivazione giornalieri precedenti.
 
 >[!ENDTABS]
 
-## Passaggi successivi {#next-steps}
+## Video {#video}
+
+Il video seguente illustra come accedere e utilizzare la valutazione flessibile del pubblico in Experience Platform.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3453640?)
 
 ## Domande frequenti {#faq}
 

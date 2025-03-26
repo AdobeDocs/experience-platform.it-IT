@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Scopri le prestazioni e i guardrail applicati dal sistema per i dati di profilo e la segmentazione al fine di garantire un utilizzo ottimale delle funzionalità di Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 5d972b6b4f59ca58ff3c4b76383db9ee7667dba3
+source-git-commit: 31f725fc30b8fd9a045c0aac5ee65832cd995363
 workflow-type: tm+mt
-source-wordcount: '2523'
+source-wordcount: '2611'
 ht-degree: 2%
 
 ---
@@ -127,6 +127,9 @@ I guardrail descritti in questa sezione si riferiscono al numero e alla natura d
 | Pubblico dell’account per sandbox | 50 | Guarddrail imposto dal sistema | Puoi creare un massimo di 50 tipi di pubblico di account in una sandbox. Dopo aver raggiunto 50 tipi di pubblico in una sandbox, il controllo **[!UICONTROL Crea pubblico]** è disabilitato quando si tenta di creare un nuovo pubblico account. Ulteriori informazioni su [tipi di pubblico dell&#39;account](/help/segmentation/types/account-audiences.md). |
 | Composizioni pubblicate per sandbox | 10 | Guardrail delle prestazioni | Puoi avere un massimo di 10 composizioni pubblicate in una sandbox. Ulteriori informazioni sulla [composizione del pubblico nella guida dell&#39;interfaccia utente](/help/segmentation/ui/audience-composition.md). |
 | Dimensione massima del pubblico | 30% | Guardrail delle prestazioni | L’appartenenza massima consigliata a un pubblico è il 30% del numero totale di profili nel sistema. È possibile creare tipi di pubblico con più del 30% dei profili come membri o più tipi di pubblico di grandi dimensioni, ma questo influirà sulle prestazioni del sistema. |
+| Esecuzioni flessibili per la valutazione del pubblico | 50 all&#39;anno (sandbox di produzione)<br/>100 all&#39;anno (sandbox di sviluppo) | Guarddrail imposto dal sistema | Hai un massimo di 50 esecuzioni flessibili di valutazione del pubblico all&#39;anno per **sandbox di produzione**. Hai un massimo di 100 esecuzioni flessibili di valutazione del pubblico all&#39;anno per sandbox **sviluppo**. |
+| Esecuzioni flessibili per la valutazione del pubblico | 2 al giorno | Guarddrail imposto dal sistema | Hai un massimo di 2 esecuzioni al giorno per sandbox. |
+| Pubblico per esecuzione flessibile di valutazione del pubblico | 20 | Guarddrail imposto dal sistema | Puoi avere un massimo di 20 tipi di pubblico per esecuzione flessibile di valutazione del pubblico. |
 
 {style="table-layout:auto"}
 

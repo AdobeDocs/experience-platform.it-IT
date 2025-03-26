@@ -1,13 +1,13 @@
 ---
 title: Metodi di valutazione del pubblico
 description: Scopri i diversi tipi di metodi di valutazione disponibili su Adobe Experience Platform.
-source-git-commit: cffd7bad831f0f58bd2b62585bfd0b84280b1732
+exl-id: 54513369-42fa-4bab-803a-21d6dcd87660
+source-git-commit: 9eb5ccc24db58a887473f61c66a83aa92e16efa7
 workflow-type: tm+mt
-source-wordcount: '215'
-ht-degree: 5%
+source-wordcount: '241'
+ht-degree: 4%
 
 ---
-
 
 # Metodi di valutazione del pubblico
 
@@ -18,6 +18,10 @@ Adobe Experience Platform offre una varietà di metodi di valutazione per segmen
 La segmentazione batch è un metodo di valutazione della segmentazione che puoi utilizzare per spostare i dati di profilo in una sola volta per creare i tipi di pubblico corrispondenti. Puoi utilizzare la segmentazione batch per creare tipi di pubblico dettagliati e avanzati per eseguire il targeting di gruppi di profili di grandi dimensioni.
 
 Per ulteriori informazioni sulla segmentazione batch, consulta la [panoramica sulla segmentazione batch](./batch-segmentation.md).
+
+### Valutazione flessibile del pubblico
+
+La valutazione flessibile del pubblico consente di eseguire un processo di segmentazione batch su richiesta. Per ulteriori informazioni, consulta la [guida alla valutazione flessibile del pubblico](./flexible-audience-evaluation.md).
 
 ## Segmentazione in streaming
 
