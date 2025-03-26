@@ -1,10 +1,10 @@
 ---
 keywords: segmentazione; segmentazione rtcdp;real time customer data platform segmentation
-title: Servizio di segmentazione in Real-time Customer Data Platform
-description: Adobe Real-time Customer Data Platform è basato su Adobe Experience Platform e utilizza molti dei servizi e delle funzionalità Experienci Platform. Utilizzando il servizio di segmentazione, puoi offrire servizi di marketing personalizzati dividendo i clienti in gruppi più piccoli con caratteristiche simili.
+title: Servizio di segmentazione in Real-Time Customer Data Platform
+description: Adobe Real-Time Customer Data Platform è basato su Adobe Experience Platform e utilizza molti dei servizi e delle funzionalità di Experience Platform. Utilizzando il servizio di segmentazione, puoi offrire servizi di marketing personalizzati dividendo i clienti in gruppi più piccoli con caratteristiche simili.
 feature: Get Started, Audiences, Segments
 exl-id: 140667c0-e288-40c4-8c45-c275e348b84a
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 96c5df4f172815d3b1904ab6614b1ce02d11dbaf
 workflow-type: tm+mt
 source-wordcount: '543'
 ht-degree: 0%
@@ -21,13 +21,13 @@ Real-Time CDP è basato su Adobe Experience Platform e utilizza molti servizi e 
 
 La segmentazione è il processo di definizione di attributi o comportamenti specifici condivisi da un sottoinsieme di profili dall’archivio Profili per distinguere un gruppo commerciabile di persone dalla base clienti. Ad esempio, in una campagna e-mail denominata &quot;Hai dimenticato di acquistare le tue scarpe da ginnastica?&quot;, potresti desiderare un pubblico di tutti gli utenti che hanno cercato scarpe da corsa negli ultimi 30 giorni, ma che non hanno completato un acquisto. Utilizzando diverse definizioni di segmenti, puoi concentrarti sui vari tipi di pubblico, fornendo un’esperienza di marketing più personalizzata.
 
-## [!DNL Segment Builder]
+## [!DNL Audience Builder]
 
-[!DNL Platform] consente di creare e accedere facilmente alle definizioni dei segmenti e di utilizzare diversi blocchi predefiniti per caratterizzare ulteriormente i tipi di pubblico. Per ulteriori informazioni su come utilizzare il Generatore di segmenti, consulta la [guida del Generatore di segmenti](./segment-builder-guide.md).
+[!DNL Platform] consente di creare e accedere facilmente alle definizioni dei segmenti e di utilizzare diversi blocchi predefiniti per caratterizzare ulteriormente i tipi di pubblico. Per ulteriori informazioni su come utilizzare Audience Builder, consulta la [guida di Audience Builder](./audience-builder.md).
 
 ## IA per l’analisi dei clienti
 
-IA per l’analisi dei clienti, inclusa in Real-time Customer Data Platform, consente di generare previsioni sui clienti a livello individuale con spiegazioni.
+IA per l’analisi dei clienti, inclusa in Real-Time Customer Data Platform, consente di generare previsioni sui clienti a livello individuale con spiegazioni.
 
 Con l’aiuto di fattori influenti, IA per l’analisi dei clienti può dirti cosa potrebbe fare un cliente e perché. Inoltre, puoi sfruttare le previsioni e le informazioni di Customer AI per personalizzare le esperienze dei clienti fornendo le offerte e i messaggi più appropriati. IA per l’analisi dei clienti può fornire assistenza per:
 

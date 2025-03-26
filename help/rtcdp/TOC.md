@@ -5,7 +5,7 @@ audience: user
 user-guide-title: Guida di Real-time Customer Data Platform
 user-guide-description: Riunisci dati noti e anonimi provenienti da più origini aziendali per creare profili cliente, tipi di pubblico da tali profili e attivare tali tipi di pubblico in destinazioni di terze parti.
 role: Admin
-source-git-commit: 9327cf8545caa306acd8077d089041d50a30e556
+source-git-commit: 4c2431148f584f2ffd5de20b8880a6b4a10ff95e
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 66%
@@ -35,7 +35,7 @@ ht-degree: 66%
    * [Panoramica sull’amministrazione](administration/admin-overview.md)
 * Tipi di pubblico e segmentazione {#segmentation}
    * [Panoramica sulla segmentazione](segmentation/segmentation-overview.md)
-   * [Guida al Generatore di segmenti](segmentation/segment-builder-guide.md)
+   * [Guida di Audience Builder](segmentation/audience-builder.md)
    * [Segmentazione nell’Edizione B2B di Real-Time CDP](segmentation/b2b.md)
    * [IA per l’analisi dei clienti](segmentation/customer-ai.md)
 * Set di dati {#datasets}
