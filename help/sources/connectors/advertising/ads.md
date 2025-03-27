@@ -1,36 +1,52 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;Google Ads;google ads
 title: Panoramica di Google Ads Source
 description: Scopri come collegare Google Ads a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 1f6257e0-213c-4723-a240-511c11c5833c
-source-git-commit: ce3dabe4ab08a41e581b97b74b3abad352e3267c
+source-git-commit: ac90eea69f493bf944a8f9920426a48d62faaa6c
 workflow-type: tm+mt
-source-wordcount: '247'
+source-wordcount: '562'
 ht-degree: 0%
 
 ---
 
 # Origine [!DNL Google Ads]
 
->[!WARNING]
->
->Origine [!DNL Google Ads] temporaneamente non disponibile. Adobe sta lavorando per risolvere i problemi con questa origine.
-
 >[!NOTE]
 >
 >L&#39;origine [!DNL Google Ads] è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la [Panoramica origini](../../home.md#terms-and-conditions).
 
-Adobe Experience Platform consente di acquisire dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi [!DNL Platform]. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
+Adobe Experience Platform consente di acquisire dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Experience Platform. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 
-[!DNL Experience Platform] fornisce supporto per l&#39;acquisizione di dati da un sistema pubblicitario di terze parti. Il supporto per i provider pubblicitari include [!DNL Google Ads].
+Experience Platform fornisce supporto per l’acquisizione di dati da un sistema pubblicitario di terze parti. Il supporto per i provider pubblicitari include [!DNL Google Ads].
 
-## ELENCO CONSENTITI di indirizzo IP
+## Prerequisiti {#prerequisites}
+
+### ELENCO CONSENTITI di indirizzo IP
 
 Prima di utilizzare i connettori di origine, è necessario aggiungere un elenco di indirizzi IP a un elenco consentiti. La mancata aggiunta all’elenco consentiti degli indirizzi IP specifici per l’area geografica potrebbe causare errori o prestazioni non ottimali durante l’utilizzo delle origini. Per ulteriori informazioni, vedere la pagina [elenco consentiti indirizzo IP](../../ip-address-allow-list.md).
 
-## Connetti [!DNL Google Ads] a Platform
+### Configurare le autorizzazioni su Experience Platform
 
-La documentazione seguente fornisce informazioni su come connettere [!DNL Google Ads] a Platform tramite API o tramite l&#39;interfaccia utente:
+Per connettere l&#39;account [!DNL Google Ads] ad Experience Platform, è necessario che per l&#39;account siano abilitate le autorizzazioni **[!UICONTROL Visualizza origini]** e **[!UICONTROL Gestisci origini]**. Contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie. Per ulteriori informazioni, leggere la [guida all&#39;interfaccia utente per il controllo degli accessi](../../../access-control/ui/overview.md).
+
+### Raccogli le credenziali richieste
+
+Per connettere correttamente l&#39;account [!DNL Google Ads] ad Experience Platform, è necessario fornire i valori appropriati alle credenziali seguenti.
+
+| Credenziali | Descrizione |
+| --- | --- |
+| `clientCustomerId` | L&#39;ID cliente client è il numero di account corrispondente all&#39;account client [!DNL Google Ads] che si desidera gestire con l&#39;API [!DNL Google Ads]. Questo ID segue il modello di `123-456-7890`. |
+| `loginCustomerId` | L&#39;ID cliente di accesso è il numero di account che corrisponde all&#39;account manager [!DNL Google Ads] e viene utilizzato per recuperare i dati del report da un cliente operativo specifico. Per ulteriori informazioni sull&#39;ID cliente di accesso, leggere la [[!DNL Google Ads] documentazione API](https://developers.google.com/search-ads/reporting/concepts/login-customer-id). |
+| `developerToken` | Il token sviluppatore consente di accedere all&#39;API [!DNL Google Ads]. Puoi utilizzare lo stesso token sviluppatore per effettuare richieste su tutti gli account [!DNL Google Ads]. Recupera il token di sviluppo [accedendo al tuo account manager](https://ads.google.com/home/tools/manager-accounts/) e quindi passando alla pagina [!DNL API Center]. |
+| `refreshToken` | Il token di aggiornamento fa parte dell&#39;autenticazione [!DNL OAuth2]. Questo token ti consente di rigenerare i token di accesso dopo la scadenza. |
+| `clientId` | L&#39;ID client viene utilizzato insieme al segreto client come parte dell&#39;autenticazione [!DNL OAuth2]. Insieme, l&#39;ID client e il segreto client consentono all&#39;applicazione di funzionare per conto dell&#39;account identificando l&#39;applicazione in [!DNL Google]. |
+| `clientSecret` | Il segreto client viene utilizzato insieme all&#39;ID client come parte dell&#39;autenticazione [!DNL OAuth2]. Insieme, l&#39;ID client e il segreto client consentono all&#39;applicazione di funzionare per conto dell&#39;account identificando l&#39;applicazione in [!DNL Google]. |
+| `googleAdsApiVersion` | La versione API corrente supportata da [!DNL Google Ads]. Mentre la versione più recente è `v18`, la versione più recente supportata su Experience Platform è `v17`. |
+| `connectionSpec.id` | La specifica di connessione restituisce le proprietà del connettore di un&#39;origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di origine. ID della specifica di connessione per [!DNL Google Ads]: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. Questo valore è necessario se si connette l&#39;account [!DNL Google Ads] tramite l&#39;API [!DNL Flow Service]. |
+
+## Connetti [!DNL Google Ads] ad Experience Platform
+
+La documentazione seguente fornisce informazioni su come connettere [!DNL Google Ads] ad Experience Platform tramite API o tramite l&#39;interfaccia utente:
 
 ### Utilizzo delle API
 
