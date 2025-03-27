@@ -5,9 +5,9 @@ user-guide-description: Attiva i dati, noti e non, per campagne di marketing cro
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 9b9cecc9e1a6e5979fa8eb454cef677b8995f1b6
+source-git-commit: 9b41ec996c254840952ae3c45dfdddd8ac172085
 workflow-type: tm+mt
-source-wordcount: '1276'
+source-wordcount: '1278'
 ht-degree: 5%
 
 ---
@@ -78,6 +78,7 @@ ht-degree: 5%
       * [Estensione tag di conversione per inserzionista Awin](./catalog/advertising/awin-conversiontag.md)
       * [Estensione Awin Advertiser Mastertag](./catalog/advertising/awin-mastertag.md)
       * [Estensione UET (Universal Event Tracking) di Bing Ads](./catalog/advertising/bing-ads.md)
+      * [Connessione Bombora](./catalog/advertising/bombora.md)
       * [Estensione ramo](./catalog/advertising/branch.md)
       * [Connessione critica](./catalog/advertising/criteo.md)
       * [Connessione Demandbase](./catalog/advertising/demandbase.md)
