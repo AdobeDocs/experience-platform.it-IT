@@ -3,7 +3,7 @@ keywords: Experience Platform;home;argomenti popolari;origini;connettori;source 
 title: Configurare le specifiche di autenticazione per le origini self-service (Batch SDK)
 description: Questo documento fornisce una panoramica delle configurazioni da preparare per utilizzare le origini self-service (Batch SDK).
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
-source-git-commit: 984de21c134d2fc94ef7dc5f5e449f7a39732bc6
+source-git-commit: 8517532f991413a239e0da890bf53b1bf5b621f0
 workflow-type: tm+mt
 source-wordcount: '770'
 ht-degree: 3%

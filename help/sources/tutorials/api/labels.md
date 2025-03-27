@@ -1,9 +1,8 @@
 ---
 title: Applicare le etichette di accesso per gestire l’accesso degli utenti ai flussi di dati delle origini utilizzando l’API
 description: Scopri come utilizzare l’API del servizio Flusso per applicare le etichette di accesso e gestire l’accesso degli utenti ai flussi di dati delle origini.
-hide: true
-hidefromtoc: true
-source-git-commit: 80fb60abdf33eb2a7ca691a9a48a811c632b34fc
+exl-id: 572d6838-3e4c-4fd5-89fa-32cad6280325
+source-git-commit: f57fa04e668fa9c61b9b15778e74969edffae0fa
 workflow-type: tm+mt
 source-wordcount: '567'
 ht-degree: 4%
