@@ -1,16 +1,16 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;origini;connettori;sorgente connettori;sorgenti sdk;sdk;SDK
-title: Configurare le specifiche di autenticazione per le origini self-service (SDK batch)
-description: Questo documento fornisce una panoramica delle configurazioni da preparare per utilizzare Self-Service Sources (SDK batch).
+keywords: Experience Platform;home;argomenti popolari;origini;connettori;source connectors;sources sdk;sdk;SDK
+title: Configurare le specifiche di autenticazione per le origini self-service (Batch SDK)
+description: Questo documento fornisce una panoramica delle configurazioni da preparare per utilizzare le origini self-service (Batch SDK).
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 984de21c134d2fc94ef7dc5f5e449f7a39732bc6
 workflow-type: tm+mt
-source-wordcount: '522'
-ht-degree: 1%
+source-wordcount: '770'
+ht-degree: 3%
 
 ---
 
-# Configurare le specifiche di autenticazione per le origini self-service (SDK batch)
+# Configurare le specifiche di autenticazione per le origini self-service (Batch SDK)
 
 Le specifiche di autenticazione definiscono il modo in cui gli utenti di Adobe Experience Platform possono connettersi all’origine.
 
@@ -18,11 +18,13 @@ L&#39;array `authSpec` contiene informazioni sui parametri di autenticazione nec
 
 ## Specifiche di autenticazione
 
-Origini self-service (SDK batch) supporta i codici di aggiornamento OAuth 2 e l’autenticazione di base. Consulta le tabelle seguenti per indicazioni sull’utilizzo di un codice di aggiornamento OAuth 2 e di un’autenticazione di base
+Origini self-service (Batch SDK) supporta i codici di aggiornamento OAuth 2 e l’autenticazione di base. Consulta le tabelle seguenti per indicazioni sull’utilizzo di un codice di aggiornamento OAuth 2 e di un’autenticazione di base
 
 ### Codice di aggiornamento OAuth 2
 
 Un codice di aggiornamento OAuth 2 consente l’accesso sicuro a un’applicazione generando un token di accesso temporaneo e un token di aggiornamento. Il token di accesso ti consente di accedere in modo sicuro alle risorse senza dover fornire altre credenziali, mentre il token di aggiornamento ti consente di generare un nuovo token di accesso, una volta scaduto il token di accesso.
+
++++Visualizza un esempio di codice di aggiornamento OAuth 2
 
 ```json
 {
@@ -132,10 +134,13 @@ Un codice di aggiornamento OAuth 2 consente l’accesso sicuro a un’applicazio
 
 {style="table-layout:auto"}
 
++++
 
 ### Autenticazione di base
 
 L’autenticazione di base è un tipo di autenticazione che ti consente di accedere all’applicazione utilizzando una combinazione del nome utente dell’account e della password dell’account.
+
++++ Visualizza esempio di autenticazione di base
 
 ```json
 {
@@ -175,13 +180,109 @@ L’autenticazione di base è un tipo di autenticazione che ti consente di acced
 | `authSpec.spec.properties` | Contiene informazioni sulle credenziali utilizzate per l’autenticazione. |
 | `authSpec.spec.properties.username` | Il nome utente dell’account associato all’applicazione. |
 | `authSpec.spec.properties.password` | La password dell&#39;account associata all&#39;applicazione. |
-| `authSpec.spec.required` | Specifica i campi obbligatori da inserire in Platform. | `username` |
+| `authSpec.spec.required` | Specifica i campi obbligatori come valori obbligatori da immettere in Experience Platform. | `username` |
 
 {style="table-layout:auto"}
+
++++
+
+### Autenticazione chiave API {#api-key-authentication}
+
+L’autenticazione tramite chiave API è un metodo sicuro per accedere alle API, fornendo una chiave API e altri parametri di autenticazione rilevanti nelle richieste. A seconda delle informazioni API specifiche, puoi inviare la chiave API come parte dell’intestazione della richiesta, dei parametri della query o del corpo.
+
+I seguenti parametri sono generalmente necessari quando si utilizza l’autenticazione con chiave API:
+
+| Parametro | Tipo | Obbligatorio | Descrizione |
+| --- | --- | --- | --- |
+| `host` | stringa | No | URL della risorsa. |
+| `authKey1` | stringa | Sì | La prima chiave di autenticazione necessaria per l’accesso API. In genere viene inviato nell’intestazione della richiesta o nei parametri di query. |
+| `authKey2` | stringa | Facoltativo | Una seconda chiave di autenticazione. Se necessario, questo sistema operativo chiave viene spesso utilizzato per convalidare ulteriormente le richieste. |
+| `authKeyN` | stringa | Facoltativo | Variabile di autenticazione aggiuntiva che può essere utilizzata in base alle esigenze, ma con l’API. |
+
+{style="table-layout:auto"}
+
+Autenticazione chiave API +++View
+
+```json
+{
+  "name": "API Key Authentication",
+  "type": "KeyBased",
+  "spec": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "description": "Define authentication parameters required for API access",
+    "properties": {
+      "host": {
+        "type": "string",
+        "description": "Enter resource URL host path"
+      },
+      "authKey1": {
+        "type": "string",
+        "format": "password",
+        "title": "Authentication Key 1",
+        "description": "Primary authentication key for accessing the API",
+        "restAttributes": {
+          "headerParamName": "X-Auth-Key1"
+        }
+      },
+      "authKey2": {
+        "type": "string",
+        "format": "password",
+        "title": "Authentication Key 2",
+        "description": "Secondary authentication key, if required",
+        "restAttributes": {
+          "headerParamName": "X-Auth-Key2"
+        }
+      },
+      ..
+      ..
+      "authKeyN": {
+        "type": "string",
+        "format": "password",
+        "title": "Additional Authentication Key",
+        "description": "Additional authentication keys as needed by the API",
+        "restAttributes": {
+          "headerParamName": "X-Auth-KeyN"
+        }
+      }
+    },
+    "required": [
+      "authKey1"
+    ]
+  }
+}
+```
+
++++
+
+### Comportamento di autenticazione
+
+È possibile utilizzare il parametro `restAttributes` per definire la modalità di inclusione della chiave API nella richiesta. Ad esempio, nell&#39;esempio seguente, l&#39;attributo `headerParamName` indica che `X-Auth-Key1` deve essere inviato come intestazione.
+
+```json
+  "restAttributes": {
+      "headerParamName": "X-Auth-Key1"
+  }
+```
+
+Ogni chiave di autenticazione (ad esempio `authKey1`, `authKey2` e così via) può essere associata a `restAttributes` per determinare la modalità di invio come richieste.
+
+Se `authKey1` ha `"headerParamName": "X-Auth-Key1"`. L&#39;intestazione della richiesta deve quindi includere `X-Auth-Key:{YOUR_AUTH_KEY1}`. Inoltre, il nome della chiave e `headerParamName` non devono necessariamente essere uguali. Ad esempio:
+
+* `authKey1` può avere `headerParamName: X-Custom-Auth-Key`. Ciò significa che l&#39;intestazione della richiesta utilizzerà `X-Custom-Auth-Key` invece di `authKey1`.
+* `authKey1` può invece avere `headerParamName: authKey1`. Ciò significa che il nome dell’intestazione della richiesta rimane invariato.
+
+**Esempio di formato API**
+
+```http
+GET /data?X-Auth-Key1={YOUR_AUTH_KEY1}&X-Auth-Key2={YOUR_AUTH_KEY2}
+```
 
 ## Esempio di specifica di autenticazione
 
 Di seguito è riportato un esempio di specifica di autenticazione completata che utilizza un&#39;origine [[!DNL MailChimp Members]](../../tutorials/api/create/marketing-automation/mailchimp-members.md).
+
++++Visualizza esempio di specifica di autenticazione
 
 ```json
   "authSpec": [
@@ -234,6 +335,8 @@ Di seguito è riportato un esempio di specifica di autenticazione completata che
     }
   ],
 ```
+
++++
 
 ## Passaggi successivi
 
