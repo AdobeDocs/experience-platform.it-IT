@@ -1,10 +1,11 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Marzo 2025
 description: Note sulla versione di Adobe Experience Platform di marzo 2025.
-source-git-commit: f0efd73830eac85936cb134ebb40dcd0f79aec52
+exl-id: 3da1c912-2581-4afa-bd21-0b8303531dcd
+source-git-commit: 16056a35624b4a053e9f50acef0ec3f63254a065
 workflow-type: tm+mt
-source-wordcount: '1185'
-ht-degree: 27%
+source-wordcount: '1227'
+ht-degree: 26%
 
 ---
 
@@ -44,6 +45,8 @@ Per ulteriori informazioni sulle dashboard, tra cui come concedere le autorizzaz
 
 | Destinazione | Descrizione |
 | --- | --- |
+| [Connessione a Demandbase People](/help/destinations/catalog/advertising/demandbase-people.md) | Utilizza la connessione [!DNL Demandbase People] per attivare profili per le campagne Demandbase per il targeting, la personalizzazione e l&#39;eliminazione del pubblico. |
+| [Connessione account Bombora](/help/destinations/catalog/advertising/bombora.md) | Utilizza la connessione [!DNL Bombora] per attivare profili per le campagne Bombora per il targeting, la personalizzazione e l&#39;eliminazione del pubblico, in base a [tipi di pubblico dell&#39;account](/help/segmentation/types/account-audiences.md). |
 | Aggiornamento di [Attributi dirigibili](/help/destinations/catalog/mobile-engagement/airship-attributes.md) | A partire dal 25 marzo 2025, puoi visualizzare due schede **[!UICONTROL Attributi dirigibili]** affiancate nel catalogo delle destinazioni. Ciò è dovuto a un aggiornamento interno al servizio destinazioni. Il connettore di destinazione **[!UICONTROL Attributi dirigibile]** esistente è stato rinominato in **[!UICONTROL (obsoleto) Attributi dirigibile]** ed è ora disponibile una nuova scheda denominata **[!UICONTROL Attributi dirigibile]**. <br> Utilizza la connessione **[!UICONTROL Attributi dirigibili]** nel catalogo per i nuovi flussi di dati di attivazione. Se sono presenti flussi di dati attivi nella destinazione [!DNL (Deprecated) Airship Attributes], questi verranno aggiornati automaticamente, pertanto non è richiesta alcuna azione da parte dell&#39;utente. <br> Se si creano flussi di dati tramite l&#39;[API del servizio Flusso](https://developer.adobe.com/experience-platform-apis/references/destinations/), è necessario aggiornare [!DNL flow spec ID] e [!DNL connection spec ID] ai seguenti valori: <ul><li> ID specifica di flusso: `a862e0be-966e-4e5a-80d3-1bb566461986`</li><li> ID specifica di connessione: `594bc002-4a47-49b7-8a98-ac0d21045502`</li> </ul> |
 
 {style="table-layout:auto"}
