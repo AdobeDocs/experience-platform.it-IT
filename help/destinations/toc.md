@@ -5,9 +5,9 @@ user-guide-description: Attiva i dati, noti e non, per campagne di marketing cro
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: 26125b0496b8b08443e9a1ccb13a384bf33ab4be
 workflow-type: tm+mt
-source-wordcount: '1278'
+source-wordcount: '1274'
 ht-degree: 5%
 
 ---
@@ -49,7 +49,7 @@ ht-degree: 5%
       * [Esportare file on-demand in destinazioni batch utilizzando l’interfaccia utente di Experience Platform](./ui/export-file-now.md)
       * [Esportare i set di dati utilizzando l’interfaccia utente di Experience Platform](./ui/export-datasets.md)
       * [(Beta) Utilizza l’ultimo attributo XDM del tempo di qualifica nelle nuove destinazioni di archiviazione cloud beta](./ui/activate-last-qualification-time.md)
-      * [Esportare array, mappe e oggetti nelle destinazioni di archiviazione cloud](/help/destinations/ui/export-arrays-maps-objects.md)
+      * [Esportare array, mappe e oggetti](/help/destinations/ui/export-arrays-maps-objects.md)
       * [Eseguire trasformazioni sui dati esportati nelle destinazioni di archiviazione cloud](/help/destinations/ui/data-transformations-calculated-fields.md)
    * [Visualizzare i dettagli della destinazione](./ui/destination-details-page.md)
    * [Aggiorna account di destinazione](./ui/update-accounts.md)

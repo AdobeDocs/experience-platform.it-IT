@@ -1,22 +1,36 @@
 ---
-title: Esportazione di array, mappe e oggetti da Real-Time CDP a destinazioni di archiviazione cloud
+title: Esportazione di array, mappe e oggetti da Real-Time CDP
 type: Tutorial
 description: Scopri come esportare array, mappe e oggetti da Real-Time CDP a destinazioni di archiviazione cloud.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 99093e0bbcd3c3560ebe201fdac72e83e67dae43
+source-git-commit: 2d59a92d7ff1e0be7977a90df460190a3b417809
 workflow-type: tm+mt
-source-wordcount: '862'
-ht-degree: 16%
+source-wordcount: '1095'
+ht-degree: 13%
 
 ---
 
-# Esportazione di array, mappe e oggetti da Real-Time CDP a destinazioni di archiviazione cloud {#export-arrays-cloud-storage}
+# Esportazione di array, mappe e oggetti da Real-Time CDP {#export-arrays-cloud-storage}
 
 >[!AVAILABILITY]
 >
->La funzionalità per esportare array e altri oggetti complessi nelle destinazioni di archiviazione cloud è generalmente disponibile per le seguenti destinazioni: [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md), [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md),
+>La funzionalità per esportare array e altri oggetti complessi nelle destinazioni di archiviazione cloud è generalmente disponibile per le seguenti destinazioni: [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md), [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md).
+>
+>Inoltre, puoi esportare i campi di tipo mappa nelle seguenti destinazioni: [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [HTTP API](/help/destinations/catalog/streaming/http-destination.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md).
 
-Scopri come esportare array, mappe e oggetti da Real-Time CDP in [destinazioni di archiviazione cloud](/help/destinations/catalog/cloud-storage/overview.md). Leggi questo documento per comprendere il flusso di lavoro di esportazione, i casi d’uso abilitati da questa funzionalità e le limitazioni note.
+
+Scopri come esportare array, mappe e oggetti da Real-Time CDP in [destinazioni di archiviazione cloud](/help/destinations/catalog/cloud-storage/overview.md). Inoltre, puoi esportare i campi di tipo mappa in [destinazioni enterprise](/help/destinations/destination-types.md#advanced-enterprise-destinations) e in [destinazioni di personalizzazione edge](/help/destinations/destination-types.md#edge-personalization-destinations) limitate. Leggi questo documento per comprendere il flusso di lavoro di esportazione, i casi d’uso abilitati da questa funzionalità e le limitazioni note. Visualizza la tabella seguente per comprendere le funzionalità disponibili per tipo di destinazione.
+
+| Tipo di destinazione | Possibilità di esportare array, mappe e altri oggetti personalizzati |
+|---|---|
+| Destinazioni dell’archiviazione cloud creata da Adobe (Amazon S3, Azure Blob, Azure Data Lake Storage Gen2, Data Landing Zone, Google Cloud Storage, SFTP) | Sì, con l&#39;opzione Abilita esportazione di array, mappe e oggetti attivata quando si imposta una connessione di destinazione. |
+| Destinazioni di e-mail marketing basate su file (Adobe Campaign, Oracle Eloqua, Oracle Responsys, Salesforce Marketing Cloud) | No |
+| Destinazioni di archiviazione cloud personalizzate create dai partner (destinazioni personalizzate basate su file create tramite Destination SDK) | No |
+| Destinazioni Enterprise (Amazon Kinesis, Azure Event Hubs, API HTTP) | Parzialmente. Puoi selezionare ed esportare oggetti di tipo mappa nel passaggio di mappatura del flusso di lavoro di attivazione. |
+| Destinazioni di streaming (ad esempio: Facebook, Braze, Google Customer Match e altro) | No |
+| Destinazioni di personalizzazione di Edge (Adobe Target) | Parzialmente. Puoi selezionare ed esportare oggetti di tipo mappa nel passaggio di mappatura del flusso di lavoro di attivazione. |
+
+{style="table-layout:auto"}
 
 Considera questa pagina come il tuo punto di riferimento per tutto ciò che desideri sapere sull’esportazione di array, mappe e altri tipi di oggetti da Experience Platform.
 
@@ -24,9 +38,9 @@ Considera questa pagina come il tuo punto di riferimento per tutto ciò che desi
 
 Ottieni le informazioni più importanti sulle funzionalità in questa sezione e continua di seguito con le altre sezioni del documento per informazioni dettagliate.
 
-* La possibilità di esportare array, mappe e oggetti dipende dalla selezione dell&#39;interruttore **Esporta array, mappe, oggetti**. Ulteriori informazioni [più in basso nella pagina](#export-arrays-maps-objects-toggle).
-* È possibile esportare array, mappe e oggetti solo nelle destinazioni di archiviazione cloud, in `JSON` e `Parquet` file. Sono supportati gli utenti e i potenziali tipi di pubblico, ma non i tipi di pubblico dell’account.
-* *è possibile* esportare matrici, mappe e oggetti in file CSV, ma solo utilizzando la funzionalità dei campi calcolati e concatenandoli in una stringa utilizzando la funzione `array_to_string`.
+* Per le destinazioni di archiviazione cloud, la possibilità di esportare array, mappe e oggetti dipende dalla selezione dell&#39;interruttore **Esporta array, mappe, oggetti**. Ulteriori informazioni [più in basso nella pagina](#export-arrays-maps-objects-toggle).
+* È possibile esportare array, mappe e oggetti nelle destinazioni di archiviazione cloud in `JSON` e `Parquet` file. Per le destinazioni di personalizzazione enterprise e edge, il tipo di dati esportato è `JSON`. Sono supportati gli utenti e i potenziali tipi di pubblico, ma non i tipi di pubblico dell’account.
+* Per le destinazioni dell&#39;archiviazione cloud basata su file, *è possibile* esportare array, mappe e oggetti in file CSV, ma solo utilizzando la funzionalità dei campi calcolati e concatenandoli in una stringa utilizzando la funzione `array_to_string`.
 
 ## Array e altri tipi di oggetti in Platform {#arrays-strings-other-objects}
 
@@ -59,6 +73,10 @@ Oltre agli array, puoi anche esportare mappe e oggetti da Experience Platform al
 
 [Connetti](/help/destinations/ui/connect-destination.md) a una destinazione di archiviazione cloud desiderata, segui i [passaggi di attivazione per le destinazioni di archiviazione cloud](/help/destinations/ui/activate-batch-profile-destinations.md) e procedi al passaggio [mappatura](/help/destinations/ui/activate-batch-profile-destinations.md#mapping). Quando ti connetti alla destinazione cloud desiderata, devi selezionare l&#39;opzione **[!UICONTROL Esporta array, mappe, oggetti]**. Per ulteriori informazioni, consulta la sezione seguente.
 
+>[!NOTE]
+>
+>Per le destinazioni di personalizzazione enterprise e edge, il supporto per l&#39;esportazione di campi di tipo mappa è disponibile senza la necessità di selezionare l&#39;opzione **[!UICONTROL Esporta array, mappe, oggetti]**. Questa opzione non è disponibile o richiesta per la connessione a questi tipi di destinazioni.
+
 ## Pulsante di attivazione per esportazione di array, mappe e oggetti {#export-arrays-maps-objects-toggle}
 
 >[!CONTEXTUALHELP]
@@ -66,7 +84,7 @@ Oltre agli array, puoi anche esportare mappe e oggetti da Experience Platform al
 >title="Esportare array, mappe e oggetti"
 >abstract="<p> <b>Attiva</b> questa impostazione per abilitare l’esportazione di array, mappe e oggetti in file JSON o Parquet. Puoi selezionare questi tipi di oggetto nella visualizzazione del campo di origine del passaggio della mappatura. Con l’impostazione attivata, non puoi utilizzare l’opzione dei campi calcolati nel passaggio di mappatura.</p><p>Con questa impostazione <b>disattivata</b>, puoi utilizzare l’opzione dei campi calcolati e applicare varie funzioni di trasformazione dei dati durante l’attivazione dei tipi di pubblico. Tuttavia, è possibile <i>non</i> esportare array, mappe e oggetti in file JSON o Parquet e, a tale scopo, è necessario configurare una destinazione separata.</p>"
 
-Quando ti connetti a una destinazione di archiviazione cloud, puoi impostare l&#39;attivazione o la disattivazione di **[!UICONTROL Esporta array, mappe, oggetti]**.
+Durante la connessione a una destinazione di archiviazione cloud basata su file, è possibile impostare l&#39;attivazione o la disattivazione di **[!UICONTROL Esporta array, mappe, oggetti]**.
 
 ![Esporta array, mappe, oggetti con un&#39;impostazione di attivazione o disattivazione ed evidenzia la finestra a comparsa.](/help/destinations/assets/ui/export-arrays-calculated-fields/export-objects-toggle.gif)
 
