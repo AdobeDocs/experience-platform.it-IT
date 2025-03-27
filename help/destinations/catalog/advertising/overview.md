@@ -3,9 +3,9 @@ keywords: destinazioni pubblicitarie;destinazioni;destinazioni piattaforma pubbl
 title: Panoramica sulle destinazioni di Advertising
 description: Collega Adobe Experience Platform a una piattaforma pubblicitaria di terze parti (ad esempio DSP, ad network, SSP) e condividi tipi di pubblico pseudonimi su tali piattaforme.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: b193a7458e4e6e02a748dcac0bbf5550b2979899
+source-git-commit: cbc626dbb12f69114c48a0920bf56ec2aabe13de
 workflow-type: tm+mt
-source-wordcount: '274'
+source-wordcount: '279'
 ht-degree: 1%
 
 ---
@@ -31,6 +31,8 @@ Per comprendere la differenza tra connessioni ed estensioni, vedere [Connessioni
 * [Connessione Amazon Ads](amazon-ads.md)
 * [Connessione Bombora](bombora.md)
 * [Connessione critica](criteo.md)
+* [Connessione Demandbase](demandbase.md)
+* [Connessione Demandbase People](demandbase-people.md)
 * [Google Display e connessione Video 360](google-dv360.md)
 * [Connessione Google Ads](google-ads-destination.md)
 * [Connessione Google Ad Manager](google-ad-manager.md)

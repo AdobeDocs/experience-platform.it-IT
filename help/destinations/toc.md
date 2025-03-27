@@ -5,9 +5,9 @@ user-guide-description: Attiva i dati, noti e non, per campagne di marketing cro
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 9b41ec996c254840952ae3c45dfdddd8ac172085
+source-git-commit: cbc626dbb12f69114c48a0920bf56ec2aabe13de
 workflow-type: tm+mt
-source-wordcount: '1278'
+source-wordcount: '1281'
 ht-degree: 5%
 
 ---
@@ -82,6 +82,7 @@ ht-degree: 5%
       * [Estensione ramo](./catalog/advertising/branch.md)
       * [Connessione critica](./catalog/advertising/criteo.md)
       * [Connessione Demandbase](./catalog/advertising/demandbase.md)
+      * [Connessione Demandbase People](./catalog/advertising/demandbase-people.md)
       * [Estensione DoubleClick Floodlight (Beta)](./catalog/advertising/doubleclick-floodlight.md)
       * [Estensione Facebook Pixel](./catalog/advertising/facebook-pixel.md)
       * [Estensione OneTag lampeggiante](./catalog/advertising/flashtalking.md)
