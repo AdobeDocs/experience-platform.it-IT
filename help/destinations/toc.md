@@ -5,9 +5,9 @@ user-guide-description: Attiva i dati, noti e non, per campagne di marketing cro
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 26125b0496b8b08443e9a1ccb13a384bf33ab4be
+source-git-commit: 9b9cecc9e1a6e5979fa8eb454cef677b8995f1b6
 workflow-type: tm+mt
-source-wordcount: '1274'
+source-wordcount: '1276'
 ht-degree: 5%
 
 ---
@@ -139,6 +139,7 @@ ht-degree: 5%
       * [Data Landing Zone](./catalog/cloud-storage/data-landing-zone.md)
       * [Google Cloud Storage](./catalog/cloud-storage/google-cloud-storage.md)
       * [Connessione SFTP](./catalog/cloud-storage/sftp.md)
+      * [Connessione Snowflake](./catalog/cloud-storage/snowflake.md)
       * [Indirizzi IP di cui è stato eseguito il inserisco nell&#39;elenco Consentiti per le destinazioni di archiviazione cloud basate su file](./catalog/cloud-storage/ip-address-allow-list.md)
    * Destinazioni CRM (Customer Relationship Management) {#crm}
       * [Connessione Hubspot](./catalog/crm/hubspot.md)
