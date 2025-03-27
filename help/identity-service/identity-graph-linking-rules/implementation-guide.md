@@ -2,9 +2,9 @@
 title: Guida all’implementazione per le regole di collegamento del grafico delle identità
 description: Scopri i passaggi consigliati da seguire per implementare i dati con le configurazioni delle regole di collegamento del grafico delle identità.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 2dadb3a0a79f4d187dd096177130802f511a6917
+source-git-commit: 83815c4911f867329d5fb7731763141d950f85bf
 workflow-type: tm+mt
-source-wordcount: '1778'
+source-wordcount: '1819'
 ht-degree: 2%
 
 ---
@@ -67,10 +67,9 @@ Se utilizzi il [connettore di origine Adobe Analytics](../../sources/tutorials/u
 
 Durante il processo di pre-implementazione, devi assicurarti che gli eventi autenticati che il tuo sistema invierà ad Experience Platform contengano sempre un **singolo** identificatore di persona, ad esempio un CRMID.
 
-* (Consigliato) Eventi autenticati con un identificatore di persona.
-* (Non consigliato) Eventi autenticati con due identificatori di persona.
-* (Sconsigliato) Eventi autenticati senza identificatori di persona.
-
+* (Consigliato) Eventi autenticati con un identificatore persona univoco.
+* (Non consigliato) Eventi autenticati con due identificatori di persona univoci. Se disponi di più di un identificatore persona univoco, potresti riscontrare una compressione indesiderata del grafico.
+* (Sconsigliato) Eventi autenticati senza identificatori di persona univoci. Se non disponi di identificatori di persona univoci, verranno memorizzati sia gli eventi non autenticati che quelli autenticati in base all’ECID.
 
 >[!BEGINTABS]
 
