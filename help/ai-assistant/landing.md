@@ -3,9 +3,9 @@ title: Assistente AI nella documentazione del prodotto Adobe Experience Platform
 description: Introduzione all’Assistente IA in Adobe Experience Platform.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: b26a1f12c9ea07d4dd077f1f3c1578e6c69866a7
+source-git-commit: a34c3cae803c9e70530dbd382fbec2ece17fc71a
 workflow-type: tm+mt
-source-wordcount: '1059'
+source-wordcount: '1095'
 ht-degree: 0%
 
 ---
@@ -97,11 +97,9 @@ For more information about AI Assistant, read the [security fact sheet for AI As
 
 >[!ENDSHADEBOX] -->
 
-## Raccolta video
+## Nozioni di base
 
-Guarda i video seguenti per approfondire la tua conoscenza sulle funzionalità e sui casi d’uso di AI Assistant:
-
-### Nozioni di base
+Guarda i video seguenti per scoprire alcuni degli aspetti fondamentali di AI Assistant.
 
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
 <div class="columns">
@@ -252,7 +250,9 @@ Guarda i video seguenti per approfondire la tua conoscenza sulle funzionalità e
 </div>
 <!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
 
-### Libreria dei casi d’uso
+## Libreria dei casi d’uso
+
+Guarda i video seguenti per scoprire i casi di utilizzo dell’Assistente di intelligenza artificiale.
 
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
 <div class="columns">
@@ -416,7 +416,7 @@ Guarda i video seguenti per approfondire la tua conoscenza sulle funzionalità e
 </div>
 <!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
 
-## Libreria di casi d’uso dell’Assistente IA
+## Casi d’uso aggiuntivi
 
 >[!BEGINTABS]
 
@@ -439,6 +439,14 @@ Guarda i video seguenti per ulteriori esempi di casi di utilizzo dell’Assisten
 * [Sblocca le informazioni operative con l&#39;Assistente AI](https://www.youtube.com/watch?v=fGgFwAOZle8)
 
 >[!ENDTABS]
+
+### Aumenta la produttività con AI Assistant
+
+Leggi quanto segue per una guida pratica su come aumentare la produttività con AI Assistant.
+
+* [Migliora la tua produttività con AI Assistant](./assets/landing/ai-assistant-lab-workbook.pdf)
+
+## Passaggi successivi
 
 Sfoglia i collegamenti riportati di seguito per comprendere meglio i casi d’uso dell’Assistente all’intelligenza artificiale, le sue funzionalità e molto altro.
 
