@@ -3,9 +3,9 @@ title: Endpoint API di Audiences
 description: Utilizza l’endpoint "audiences" nell’API del servizio di segmentazione di Adobe Experience Platform per creare, gestire e aggiornare in modo programmatico i tipi di pubblico per la tua organizzazione.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 260d63d5eebd62cc5a617fccc189af52fd4d0b09
+source-git-commit: 7b1dedeab8df9678134474045cb87b27550f7fb6
 workflow-type: tm+mt
-source-wordcount: '1452'
+source-wordcount: '1590'
 ht-degree: 3%
 
 ---
@@ -325,7 +325,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 
 ## Cercare un pubblico specificato {#get}
 
-Per cercare informazioni dettagliate su un pubblico specifico, effettua una richiesta di GET all&#39;endpoint `/audiences` e specifica l&#39;ID del pubblico da recuperare nel percorso della richiesta.
+Per cercare informazioni dettagliate su un pubblico specifico, effettua una richiesta GET all&#39;endpoint `/audiences` e specifica l&#39;ID del pubblico da recuperare nel percorso della richiesta.
 
 **Formato API**
 
@@ -422,7 +422,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 
 +++
 
-## Aggiornare un pubblico {#put}
+## Sovrascrivere un pubblico {#put}
 
 È possibile aggiornare (sovrascrivere) un pubblico specifico effettuando una richiesta PUT all&#39;endpoint `/audiences` e fornendo l&#39;ID del pubblico che si desidera aggiornare nel percorso della richiesta.
 
@@ -453,6 +453,11 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
     "namespace": "AEPSegments",
     "description": "Last 30 days",
     "type": "SegmentDefinition",
+    "expression": {
+        "type": "PQL",
+        "format": "pql/text",
+        "value": "workAddress.country=\"US\""
+    }
     "lifecycleState": "published",
     "datasetId": "6254cf3c97f8e31b639fb14d",
     "labels": [
@@ -468,6 +473,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 | `namespace` | Lo spazio dei nomi per il pubblico. |
 | `description` | Una descrizione del pubblico. |
 | `type` | Campo generato dal sistema che indica se il pubblico è generato da Platform o da un pubblico generato esternamente. I valori possibili includono `SegmentDefinition` e `ExternalSegment`. Un `SegmentDefinition` fa riferimento a un pubblico generato in Platform, mentre un `ExternalSegment` fa riferimento a un pubblico non generato in Platform. |
+| `expression` | Oggetto che contiene l’espressione PQL del pubblico. |
 | `lifecycleState` | Stato del pubblico. I valori possibili sono `draft`, `published` e `inactive`. `draft` rappresenta quando viene creato il pubblico, `published` quando il pubblico viene pubblicato e `inactive` quando il pubblico non è più attivo. |
 | `datasetId` | ID del set di dati in cui è possibile trovare i dati sul pubblico. |
 | `labels` | Etichette di controllo dell’accesso basate su attributi e utilizzo dati a livello di oggetto rilevanti per il pubblico. |
@@ -496,6 +502,81 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
     "description": "Last 30 days",
     "type": "SegmentDefinition",
     "lifecycleState": "published",
+    "createdBy": "{CREATED_BY_ID}",
+    "datasetId": "6254cf3c97f8e31b639fb14d",
+    "_etag": "\"f4102699-0000-0200-0000-625cd61a0000\"",
+    "creationTime": 1650251290000,
+    "updateEpoch": 1650251290,
+    "updateTime": 1650251290000,
+    "createEpoch": 1650251290
+}
+```
+
++++
+
+## Aggiornare un pubblico {#patch}
+
+Per aggiornare un pubblico specifico, devi eseguire una richiesta PATCH all&#39;endpoint `/audiences` e fornire l&#39;ID del pubblico da aggiornare nel percorso della richiesta.
+
+**Formato API**
+
+```http
+PATCH /audiences/{AUDIENCE_ID}
+```
+
+| Parametro | Descrizione |
+| --------- | ----------- |
+| `{AUDIENCE_ID}` | ID del pubblico che desideri aggiornare. Tieni presente che si tratta del campo `id` e che **non** è il campo `audienceId`. |
+
+**Richiesta**
+
++++ Una richiesta di esempio per aggiornare un pubblico.
+
+```shell
+curl -X PATCH https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180-97a5-58af4aa285ab5
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '[
+    {
+        "op": "add",
+        "path": "/lifecycleState",
+        "value": "inactive"
+    }
+ ]'
+```
+
+| Proprietà | Descrizione |
+| -------- | ----------- |
+| `op` | Tipo di operazione PATCH eseguita. Per questo endpoint, il valore è **always** `/add`. |
+| `path` | Percorso del campo da aggiornare. Impossibile modificare i campi generati dal sistema, ad esempio `id`, `audienceId` e `namespace` **4}.** |
+| `value` | Il nuovo valore assegnato alla proprietà specificata in `path`. |
+
++++
+
+**Risposta**
+
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con il pubblico aggiornato.
+
++++Una risposta di esempio durante l’applicazione della patch a un campo in un pubblico.
+
+```json
+{
+    "id": "60ccea95-1435-4180-97a5-58af4aa285ab5",
+    "audienceId": "test-platform-audience-id",
+    "name": "New Platform audience",
+    "namespace": "AEPSegments",
+    "imsOrgId": "{ORG_ID}",
+    "sandbox": {
+        "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
+        "sandboxName": "prod",
+        "type": "production",
+        "default": true
+    },
+    "description": "Last 30 days",
+    "type": "SegmentDefinition",
+    "lifecycleState": "inactive",
     "createdBy": "{CREATED_BY_ID}",
     "datasetId": "6254cf3c97f8e31b639fb14d",
     "_etag": "\"f4102699-0000-0200-0000-625cd61a0000\"",
