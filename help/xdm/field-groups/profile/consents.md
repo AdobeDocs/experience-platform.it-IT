@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Gruppo di campi schema Consensi e preferenze
 description: Scopri il gruppo di campi schema Consensi e preferenze.
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
+source-git-commit: be35c5398cd96cdfe424c5088db288ba4061ac4a
 workflow-type: tm+mt
 source-wordcount: '933'
 ht-degree: 0%
@@ -90,7 +90,7 @@ Il seguente codice JSON mostra un esempio del tipo di dati che il gruppo di camp
 
 >[!TIP]
 >
->Puoi generare dati JSON di esempio per qualsiasi schema XDM definito in Experience Platform per aiutare a visualizzare in che modo devono essere mappati i dati sul consenso dei clienti e sulle preferenze. Per ulteriori informazioni, consulta la seguente documentazione:
+>Puoi generare dati JSON di esempio per qualsiasi schema XDM definito in Experience Platform al fine di aiutare a visualizzare come mappare i dati sul consenso dei clienti e sulle preferenze. Per ulteriori informazioni, consulta la seguente documentazione:
 >
 >* [Genera dati di esempio nell&#39;interfaccia utente](../../ui/sample.md)
 >* [Genera dati di esempio nell&#39;API](../../api/sample-data.md)
@@ -169,7 +169,7 @@ Il consenso `adID` rappresenta il consenso del cliente per l&#39;utilizzo di un 
 
 >[!NOTE]
 >
->Non è previsto che questo valore venga impostato direttamente, poiché l’SDK di Adobe Experience Platform Mobile lo imposta automaticamente quando appropriato.
+>Non è previsto che questo valore venga impostato direttamente, poiché Adobe Experience Platform Mobile SDK lo imposta automaticamente quando appropriato.
 
 ## Acquisizione di dati tramite il gruppo di campi {#ingest}
 
@@ -185,7 +185,7 @@ Consulta l&#39;esercitazione sulla [creazione di uno schema nell&#39;interfaccia
 
 ## Gestione delle modifiche di consenso e preferenze
 
-Quando un cliente cambia il proprio consenso o le proprie preferenze sul sito Web, le modifiche devono essere raccolte e applicate immediatamente tramite [Adobe Experience Platform Web SDK](../../../web-sdk/commands/setconsent.md). Se un cliente rinuncia alla raccolta dei dati, tutta la raccolta dei dati deve cessare immediatamente. Se un cliente rinuncia alla personalizzazione, significa che non dovrebbe essere presente alcuna personalizzazione nella pagina successiva in cui visita.
+Quando un cliente modifica il proprio consenso o le proprie preferenze sul sito Web, le modifiche devono essere raccolte e applicate immediatamente tramite [Adobe Experience Platform Web SDK](../../../web-sdk/commands/setconsent.md). Se un cliente rinuncia alla raccolta dei dati, tutta la raccolta dei dati deve cessare immediatamente. Se un cliente rinuncia alla personalizzazione, non dovrebbe essere presente alcuna personalizzazione nella pagina successiva che carica.
 
 ## Passaggi successivi
 
