@@ -4,9 +4,9 @@ title: Dashboard utilizzo licenze
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale è possibile visualizzare informazioni importanti sull’utilizzo delle licenze della tua organizzazione.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 03b35ecf940f9b1cb40d8b1243ff530f38bcdcd4
+source-git-commit: 243a99748d31cddcb8a550d52f9bb390726644be
 workflow-type: tm+mt
-source-wordcount: '3367'
+source-wordcount: '3408'
 ht-degree: 14%
 
 ---
@@ -144,11 +144,11 @@ Per una panoramica generale dell&#39;interfaccia utente di Platform, fare riferi
 
 Nel dashboard [!UICONTROL Utilizzo licenze] viene visualizzato un elenco di tutti i prodotti Experience Platform acquistati e dei relativi componenti aggiuntivi. Da questa dashboard è possibile trovare un’istantanea dei dati relativi alla licenza dell’organizzazione per Experience Platform in qualsiasi sandbox associata.
 
-I dati in questo dashboard vengono visualizzati esattamente come appaiono nel momento specifico in cui è stata acquisita l’istantanea. In altre parole, l’istantanea non è un’approssimazione o un esempio dei dati e il dashboard non viene aggiornato in tempo reale.
+I dati in questo dashboard vengono visualizzati esattamente come apparivano nel momento specifico in cui è stata acquisita l’istantanea. Non si tratta di un’approssimazione o di un esempio, ma il dashboard non viene aggiornato in tempo reale.
 
 >[!NOTE]
 >
->Eventuali modifiche o aggiornamenti apportati ai dati dal momento in cui è stata acquisita l’istantanea non verranno riflessi nel dashboard fino all’acquisizione dell’istantanea successiva.
+>La maggior parte delle metriche nel dashboard viene aggiornata ogni giorno, in base a un’istantanea dell’istanza Platform. [!UICONTROL Righe CJA disponibili] è un&#39;eccezione ed è aggiornato mensilmente. Le metriche etichettate con &quot;pacchetti&quot;, ad esempio [!UICONTROL Pacchetti utenti Adobe Query Service], [!UICONTROL Numero di pacchetti di ricchezza profilo] e [!UICONTROL Numero di pacchetti di segmentazione streaming], riflettono i diritti di licenza per le offerte di componenti aggiuntivi e non tengono traccia dell&#39;utilizzo corrente. Le modifiche apportate dopo lo snapshot non sono visibili fino allo snapshot successivo.
 
 ## Esplorazione del dashboard utilizzo licenze {#explore}
 
