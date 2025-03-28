@@ -2,15 +2,19 @@
 title: Guida alla valutazione del pubblico flessibile
 description: Scopri come utilizzare la valutazione flessibile del pubblico per eseguire processi di segmentazione in batch su richiesta.
 role: Developer, User
-source-git-commit: 5c86161a2f9442d99426f2c05fb762cf50004049
+exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
+source-git-commit: 71818ee273749bb5053286c5b8bbd07a4429c341
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '1049'
 ht-degree: 5%
 
 ---
 
-
 # Guida alla valutazione flessibile del pubblico
+
+>[!AVAILABILITY]
+>
+>La valutazione flessibile del pubblico è **only** disponibile nelle istanze di Experience Platform in esecuzione su [!DNL Microsoft Azure]. Per ulteriori informazioni sull&#39;infrastruttura Experience Platform supportata, consulta la [Panoramica multi-cloud di Experience Platform](../../landing/multi-cloud.md).
 
 La valutazione flessibile del pubblico consente di eseguire un processo di segmentazione batch su richiesta. Con una valutazione flessibile del pubblico, puoi eseguire campagne ad hoc, comunicazioni just-in-time o altre attività che richiedono tempo.
 
@@ -33,7 +37,7 @@ Quando esegui una valutazione flessibile del pubblico, tieni presente le seguent
 
 >[!NOTE]
 >
->*puoi* acquistare ulteriori esecuzioni di valutazione flessibile del pubblico all&#39;anno. Per ulteriori informazioni, contatta l’Assistenza clienti di Adobe.
+>È possibile acquistare ulteriori esecuzioni di valutazione del pubblico flessibili all’anno. Per ulteriori informazioni, contatta l’Assistenza clienti di Adobe.
 
 ## Accesso {#access}
 
@@ -326,6 +330,14 @@ Il video seguente illustra come accedere e utilizzare la valutazione flessibile 
 
 Nella sezione seguente sono elencate le domande frequenti relative alla valutazione flessibile del pubblico.
 
+### Quando posso attivare un pubblico utilizzando una valutazione flessibile del pubblico?
+
++++ Risposta
+
+Puoi attivare un pubblico utilizzando la valutazione flessibile del pubblico subito dopo la sua creazione.
+
++++
+
 ### È possibile eseguire la pianificazione con una valutazione flessibile del pubblico?
 
 +++ Risposta
@@ -373,4 +385,3 @@ Per una valutazione flessibile del pubblico sono supportati solo i tipi di pubbl
 Versioni di valutazione del pubblico flessibili che sono state create utilizzando l’API o il conteggio dell’interfaccia utente verso il limite massimo. Tuttavia, l&#39;esecuzione del processo di segmentazione batch giornaliera su base notturna **non** contribuisce a questo limite.
 
 +++
-
