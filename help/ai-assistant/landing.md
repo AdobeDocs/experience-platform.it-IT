@@ -3,9 +3,9 @@ title: Assistente AI nella documentazione del prodotto Adobe Experience Platform
 description: Introduzione all’Assistente IA in Adobe Experience Platform.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: a34c3cae803c9e70530dbd382fbec2ece17fc71a
+source-git-commit: eb62627e81f361d21026cba368802ebace4a8dde
 workflow-type: tm+mt
-source-wordcount: '1095'
+source-wordcount: '1156'
 ht-degree: 0%
 
 ---
@@ -441,6 +441,10 @@ Guarda i video seguenti per ulteriori esempi di casi di utilizzo dell’Assisten
 >[!ENDTABS]
 
 ### Aumenta la produttività con AI Assistant
+
+>[!NOTE]
+>
+>Questa cartella di lavoro è stata aggiornata il 31 marzo 2025. Da allora, alcune funzionalità potrebbero essersi evolute o espanse. Inoltre, alcune funzioni a cui si fa riferimento in questa guida potrebbero essere ancora in accesso anticipato. Se scopri qualcosa che non è ancora disponibile nel tuo ambiente e ti interessa esplorarlo, contatta il team del tuo account Adobe per richiedere l’accesso anticipato.
 
 Leggi quanto segue per una guida pratica su come aumentare la produttività con AI Assistant.
 

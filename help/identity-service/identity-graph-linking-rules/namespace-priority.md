@@ -2,7 +2,7 @@
 title: Priorità dello spazio dei nomi
 description: Scopri la priorità dello spazio dei nomi in Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: 8157eaf3d79523995fd50d02234e7873cffcea14
 workflow-type: tm+mt
 source-wordcount: '1801'
 ht-degree: 3%
@@ -73,11 +73,11 @@ Attualmente, la priorità dello spazio dei nomi influenza il comportamento del s
 
 ![Diagramma dell&#39;ambito dell&#39;applicazione con priorità dello spazio dei nomi](../images/namespace-priority/application-scope.png)
 
-### Servizio Identity: algoritmo di ottimizzazione delle identità
+## Servizio Identity: algoritmo di ottimizzazione delle identità
 
 Per strutture di grafo relativamente complesse, la priorità dello spazio dei nomi svolge un ruolo importante nel garantire che i collegamenti corretti vengano rimossi quando si verificano scenari di collasso del grafo. Per ulteriori informazioni, leggere la [panoramica dell&#39;algoritmo di ottimizzazione delle identità](../identity-graph-linking-rules/identity-optimization-algorithm.md).
 
-### Real-Time Customer Profile: determinazione dell’identità primaria per gli eventi esperienza
+## Real-Time Customer Profile: determinazione dell’identità primaria per gli eventi esperienza
 
 * Dopo aver configurato le impostazioni di identità per una data sandbox, l’identità primaria per gli eventi esperienza sarà determinata dalla priorità più alta dello spazio dei nomi nella configurazione.
    * Questo perché gli eventi di esperienza sono di natura dinamica. Una mappa di identità può contenere tre o più identità e la priorità dello spazio dei nomi assicura che lo spazio dei nomi più importante sia associato all’evento esperienza.
@@ -122,7 +122,7 @@ Date le configurazioni sopra descritte, le azioni degli utenti e la determinazio
 
 {style="table-layout:auto"}
 
-### Servizio di segmentazione: archiviazione dei metadati di iscrizione al segmento
+## Servizio di segmentazione: archiviazione dei metadati di iscrizione al segmento
 
 ![Diagramma dell&#39;archivio di appartenenza ai segmenti](../images/namespace-priority/segment-membership-storage.png)
 
@@ -139,7 +139,7 @@ Ad esempio, si supponga che siano presenti due profili:
 
 Se John e Jane condividono un dispositivo, allora l’ECID (browser web) si trasferisce da una persona all’altra. Tuttavia, questo non influenza le informazioni sull’iscrizione al segmento memorizzate per John e Jane.
 
-Se i criteri di qualificazione del segmento si basassero esclusivamente su eventi anonimi memorizzati in base all’ECID, Jane si qualificherebbe per quel segmento
+Se i criteri di qualificazione dei segmenti si basassero esclusivamente su eventi anonimi memorizzati in base all’ECID, Jane si qualificherebbe per quel segmento.
 
 ## Implicazioni su altri servizi Experience Platform {#implications}
 
