@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;schema;schema;gruppo di campi;gruppo di campi;gruppi di campi;gruppi di campi;tipo di dati;tipi di dati;tipi di dati;tipo di dati;progettazione schema;tipo di dati;tipo di dati;tipo di dati;tipo di dati;schemi;schemi;progettazione schema;mappa;mappa;
+keywords: Experience Platform;home;argomenti popolari;schema;schema;gruppo di campi;gruppo di campi;gruppi di campi;gruppi di campi;tipo di dati;tipi di dati;tipi di dati;tipo di dati;schema;tipo di dati;tipo di dati;tipo di dati;tipo di dati;schemi;schema;mappa;mappa;
 solution: Experience Platform
 title: Vincoli per il tipo di campo XDM
 description: Un riferimento per i vincoli dei tipi di campo in Experience Data Model (XDM), inclusi gli altri formati di serializzazione a cui possono essere mappati e come definire tipi di campo personalizzati nell’API.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: eb1cf204e95591082b27dc97cd3c709a23b20b08
+source-git-commit: ca8859c7b71d1b0aad30880ff066d2b4b33b0a35
 workflow-type: tm+mt
 source-wordcount: '683'
 ht-degree: 1%
@@ -130,7 +130,7 @@ La tabella seguente illustra come ogni tipo XDM viene rappresentato nello schema
       <td>[!UICONTROL Boolean]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{"type": "string"}</pre>
+{"type": "boolean"}</pre>
       </td>
       <td><code>true</code></td>
     </tr>
