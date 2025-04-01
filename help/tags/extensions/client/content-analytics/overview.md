@@ -1,12 +1,10 @@
 ---
 title: Panoramica dell’estensione Adobe Content Analytics
 description: Scopri l’estensione tag Adobe Content Analytics in Adobe Experience Platform.
-hide: true
-hidefromtoc: true
 exl-id: fcc46c86-e765-4bc7-bfdf-b8b10e8afacc
-source-git-commit: 80bfaeb7fec229e77c83230a01b75a200cf37e29
+source-git-commit: 5f852b69b0eb0a5e6a9119f14eb9e1f51c8a2e33
 workflow-type: tm+mt
-source-wordcount: '645'
+source-wordcount: '658'
 ht-degree: 0%
 
 ---
@@ -78,7 +76,8 @@ Nella sezione **[!UICONTROL Acquisizione esperienze e definizione]**, puoi abili
 1. Abilita **[!UICONTROL Includi esperienze]**.
 1. Facoltativamente. specifica i parametri per il rendering del contenuto sul sito web. I parametri sono zero o più combinazioni di **[!UICONTROL Espressione regolare dominio]** e **[!UICONTROL Parametri query]**.
    1. Immettere un&#39;espressione regolare **[!UICONTROL Dominio]**, ad esempio `^(?!.*\b(store|help|admin)\b)`.
-   1. Specifica un elenco separato da virgole di **[!UICONTROL Parametri query,]** ad esempio `outdoors, patio, kitchen`.
+   1. Specificare un elenco separato da virgole di **[!UICONTROL Parametri query]**, ad esempio `outdoors, patio, kitchen`.
+Utilizza ![Chiudi](./assets/CrossSize300.svg) per eliminare i singoli parametri, oppure **[!UICONTROL Cancella tutto]** per eliminare tutti i parametri.
 1. Selezionare **[!UICONTROL Rimuovi]** se si desidera rimuovere una combinazione di espressioni regolari di dominio e parametri di query.
 1. Selezionare **[!UICONTROL Aggiungi Regex]** se si desidera aggiungere un&#39;altra combinazione di un&#39;espressione regolare e parametri di query.
 
