@@ -5,7 +5,7 @@ title: Attivare i tipi di pubblico su destinazioni batch tramite l’API di atti
 description: Questo articolo illustra il flusso di lavoro end-to-end per l’attivazione dei tipi di pubblico tramite l’API di attivazione ad hoc, inclusi i processi di segmentazione che si verificano prima dell’attivazione.
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: deecaf0af269b64af507126dba0523d2b16a5721
+source-git-commit: f01a044d3d12ef457c6242a0b93acbfeeaf48588
 workflow-type: tm+mt
 source-wordcount: '1612'
 ht-degree: 0%
@@ -30,13 +30,11 @@ Il diagramma seguente illustra il flusso di lavoro end-to-end per l’attivazion
 
 ![attivazione ad hoc](../assets/api/ad-hoc-activation/ad-hoc-activation-overview.png)
 
-
-
 ## Casi d’uso {#use-cases}
 
-### Vendite o promozioni Flash
+### Vendite o promozioni flash
 
-Un rivenditore online sta preparando una vendita flash limitata e desidera avvisare i clienti con un breve preavviso. Tramite l’API di attivazione ad hoc di Experience Platform, il team di marketing può esportare i tipi di pubblico on-demand e inviare rapidamente e-mail promozionali alla base clienti.
+Un retailer online sta preparando una vendita flash limitata e vuole avvisare i clienti con un breve preavviso. Tramite l’API di attivazione ad hoc di Experience Platform, il team marketing può esportare i tipi di pubblico on-demand e inviare rapidamente e-mail promozionali alla base clienti.
 
 ### Attualità o ultime notizie
 
@@ -63,7 +61,7 @@ Adobe Experience Platform esegue processi di segmentazione pianificati una volta
 Prima di poter effettuare chiamate alle API di Adobe Experience Platform, assicurati di soddisfare i seguenti prerequisiti:
 
 * Hai un account organizzazione con accesso a Adobe Experience Platform.
-* Nel tuo account di Experience Platform sono abilitati i ruoli `developer` e `user` per il profilo di prodotto API Adobe Experience Platform. Contatta l&#39;amministratore [Admin Console](../../access-control/home.md) per abilitare questi ruoli per il tuo account.
+* Per il tuo account Experience Platform sono abilitati i ruoli `developer` e `user` per il profilo di prodotto API Adobe Experience Platform. Contatta l&#39;amministratore [Admin Console](../../access-control/home.md) per abilitare questi ruoli per il tuo account.
 * Hai un Adobe ID. Se non hai un Adobe ID, passa a [Adobe Developer Console](https://developer.adobe.com/console) e crea un nuovo account.
 
 ## Passaggio 2: raccogliere le credenziali {#credentials}
@@ -74,7 +72,7 @@ Per effettuare chiamate alle API di Platform, devi prima completare l&#39;[eserc
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-Le risorse di Experience Platform possono essere isolate in specifiche sandbox virtuali. Nelle richieste alle API di Platform, puoi specificare il nome e l’ID della sandbox in cui verrà eseguita l’operazione. Si tratta di parametri facoltativi.
+Le risorse in Experience Platform possono essere isolate in specifiche sandbox virtuali. Nelle richieste alle API di Platform, puoi specificare il nome e l’ID della sandbox in cui verrà eseguita l’operazione. Si tratta di parametri facoltativi.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -126,7 +124,7 @@ Adobe Experience Platform esegue processi di segmentazione pianificati una volta
 
 >[!IMPORTANT]
 >
->Nota il seguente vincolo occasionale: prima di eseguire un processo di attivazione ad hoc, assicurati che siano trascorsi almeno 20 minuti dal momento in cui il pubblico è stato attivato per la prima volta in base alla pianificazione impostata in [Passaggio 3: creare il flusso di attivazione nell&#39;interfaccia utente di Platform](#activation-flow).
+>Nota il seguente vincolo occasionale: prima di eseguire un processo di attivazione ad hoc, assicurati che sia trascorsa almeno un&#39;ora dal momento in cui il pubblico è stato attivato per la prima volta in base alla pianificazione impostata in [Passaggio 3 - Creare il flusso di attivazione nell&#39;interfaccia utente di Platform](#activation-flow).
 
 Prima di eseguire un processo di attivazione ad hoc, assicurati che il processo di esportazione pianificato per il pubblico sia stato completato. Per informazioni su come monitorare lo stato dei flussi di attivazione, vedere [monitoraggio del flusso di dati di destinazione](../../dataflows/ui/monitor-destinations.md). Ad esempio, se il flusso di dati di attivazione mostra uno stato **[!UICONTROL Elaborazione]**, attendi che termini prima di eseguire il processo di attivazione ad hoc per esportare un file completo.
 

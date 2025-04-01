@@ -3,10 +3,10 @@ title: Attivare i tipi di pubblico per le destinazioni di esportazione dei profi
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico disponibili in Adobe Experience Platform inviandoli a destinazioni basate su profili in batch.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 8a1ac01c503bd1e5b9873714514d438b22f45cfb
+source-git-commit: f01a044d3d12ef457c6242a0b93acbfeeaf48588
 workflow-type: tm+mt
-source-wordcount: '4405'
-ht-degree: 12%
+source-wordcount: '4452'
+ht-degree: 11%
 
 ---
 
@@ -145,6 +145,10 @@ Seleziona **[!UICONTROL Esporta file completi]** per attivare l&#39;esportazione
 Utilizza l&#39;opzione **[!UICONTROL Pianificato]** per eseguire il processo di attivazione a un orario fisso. Questa opzione assicura che i dati del profilo di Experience Platform vengano esportati ogni giorno alla stessa ora. Tuttavia, i profili esportati potrebbero non essere quelli più aggiornati, a seconda che il processo di segmentazione batch sia stato completato prima dell’avvio del processo di attivazione.
 
    ![Immagine che evidenzia l&#39;opzione Pianificato nel flusso di attivazione per le destinazioni batch e che mostra il selettore dell&#39;ora.](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
+
+   >[!IMPORTANT]
+   >
+   >Quando esegui la mappatura di un pubblico creato nelle ultime 24 ore e valutato tramite [segmentazione batch](../../segmentation/methods/batch-segmentation.md), imposta la pianificazione dell&#39;esportazione giornaliera in modo che inizi non prima del giorno successivo. In questo modo, il processo di valutazione batch giornaliero viene eseguito per primo e si esportano dati completi sul pubblico.
 
 3. Utilizza il selettore **[!UICONTROL Data]** per scegliere il giorno o l&#39;intervallo in cui eseguire l&#39;esportazione. Per le esportazioni giornaliere, si consiglia di impostare la data di inizio e la data di fine in base alla durata delle campagne nelle piattaforme a valle.
 
@@ -575,7 +579,7 @@ Se desideri attivare tipi di pubblico esterni nelle destinazioni senza esportare
 
 Seleziona **[!UICONTROL Avanti]** per passare al passaggio [Rivedi](#review).
 
-## Controlla {#review}
+## Rivisione {#review}
 
 >[!NOTE]
 > 

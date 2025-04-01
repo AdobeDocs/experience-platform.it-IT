@@ -1,9 +1,9 @@
 ---
 title: Esportare file on-demand in destinazioni batch utilizzando l’interfaccia utente di Experience Platform
 type: Tutorial
-description: Scopri come esportare file on-demand in destinazioni batch utilizzando l’interfaccia utente di Experience Platform.
+description: Scopri come esportare i file on-demand nelle destinazioni batch utilizzando l’interfaccia utente di Experience Platform.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: 47d0e2a7fae973edfda035d046f66c88d34bf8b2
+source-git-commit: d3bd76f5b36b6a6afcb67fe923eb8e4f3d7a9415
 workflow-type: tm+mt
 source-wordcount: '690'
 ht-degree: 9%
@@ -24,11 +24,11 @@ ht-degree: 9%
 >title="Esporta subito i file"
 >abstract="Seleziona questa opzione per fornire un’esportazione di file completa in aggiunta a eventuali esportazioni già pianificate. L’esportazione dei file viene attivata subito e raccoglie i risultati più recenti delle esecuzioni di segmentazione di Experience Platform."
 
-In questo articolo viene illustrato come utilizzare l&#39;interfaccia utente di Experience Platform per esportare file su richiesta in destinazioni batch come [archiviazione cloud](/help/destinations/catalog/cloud-storage/overview.md) e [destinazioni di e-mail marketing](/help/destinations/catalog/email-marketing/overview.md).
+Questo articolo spiega come utilizzare l&#39;interfaccia utente di Experience Platform per esportare i file on-demand in destinazioni batch come [archiviazione cloud](/help/destinations/catalog/cloud-storage/overview.md) e [destinazioni e-mail marketing](/help/destinations/catalog/email-marketing/overview.md).
 
 Il controllo **[!UICONTROL Esporta file ora]** consente di esportare un file completo senza interrompere la pianificazione di esportazione corrente di un pubblico pianificato in precedenza. Questa esportazione si verifica in aggiunta alle esportazioni pianificate in precedenza e non modifica la frequenza di esportazione del pubblico. L’esportazione dei file viene attivata subito e raccoglie i risultati più recenti delle esecuzioni di segmentazione di Experience Platform.
 
-A questo scopo, puoi anche utilizzare le API Experience Platform. Scopri come [attivare i tipi di pubblico su richiesta nelle destinazioni batch tramite l&#39;API di attivazione ad hoc](/help/destinations/api/ad-hoc-activation-api.md).
+A questo scopo puoi anche utilizzare le API di Experience Platform. Scopri come [attivare i tipi di pubblico su richiesta nelle destinazioni batch tramite l&#39;API di attivazione ad hoc](/help/destinations/api/ad-hoc-activation-api.md).
 
 ## Prerequisiti {#prerequisites}
 
@@ -63,7 +63,7 @@ Per esportare i file su richiesta in destinazioni batch, è necessario avere [co
 Quando si utilizza il controllo **[!UICONTROL Esporta file ora]**, tenere presenti le considerazioni seguenti:
 
 * **[!UICONTROL Il file di esportazione ora]** funziona solo per i tipi di pubblico la cui pianificazione nel flusso di dati di attivazione batch si sovrappone alla data corrente. Sono inclusi i tipi di pubblico con pianificazioni senza data di fine (frequenza di esportazione di **[!UICONTROL Una volta]**) o per i quali la data di fine non è ancora stata superata.
-* Quando aggiungi un pubblico a un flusso di dati esistente, attendi almeno 15 minuti prima di utilizzare il controllo **[!UICONTROL Esporta file ora]**.
+* Quando aggiungi un pubblico a un flusso di dati esistente, attendi almeno **un&#39;ora** prima di utilizzare il controllo **[!UICONTROL Export file now]**.
 * Se modifichi il criterio di unione di un pubblico o se crei un pubblico che utilizza un nuovo criterio di unione, attendi 24 ore prima di utilizzare il controllo **[!UICONTROL Esporta file ora]**.
 
 ## Messaggi di errore dell’interfaccia utente {#ui-error-messages}
@@ -77,5 +77,5 @@ Quando si utilizza il controllo **[!UICONTROL Esporta file ora]**, è possibile 
 
 ## Informazioni correlate {#related-information}
 
-* [Attiva i tipi di pubblico su richiesta nelle destinazioni batch utilizzando le API Experience Platform](/help/destinations/api/ad-hoc-activation-api.md)
+* [Attiva i tipi di pubblico su richiesta nelle destinazioni batch utilizzando le API di Experience Platform](/help/destinations/api/ad-hoc-activation-api.md)
 * [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](/help/destinations/ui/activate-batch-profile-destinations.md)
