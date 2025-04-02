@@ -2,9 +2,9 @@
 title: Panoramica sulle destinazioni
 description: Le destinazioni sono integrazioni preconfigurate con piattaforme di destinazione che consentono l’attivazione fluida dei dati da Adobe Experience Platform. Puoi utilizzare le Destinazioni in Adobe Experience Platform per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 6d97f132788a249e0bf5c293e34d9d529325f099
+source-git-commit: 8d57694ffe0ac962b988ebcf9f35fbb7bf816c04
 workflow-type: tm+mt
-source-wordcount: '1231'
+source-wordcount: '1359'
 ht-degree: 3%
 
 ---
@@ -45,13 +45,13 @@ I controlli nell&#39;area di lavoro [destinazioni](./ui/destinations-workspace.m
 
 ## Tipi e categorie di destinazione {#types-and-categories}
 
-Ad Experience Platform, puoi attivare i dati per vari tipi di destinazioni, per soddisfare i casi d’uso di attivazione. Le destinazioni variano da integrazioni basate su API a integrazioni con sistemi di ricezione di file, destinazioni di ricerca dei profili e altro ancora. Per informazioni dettagliate su tutte le destinazioni disponibili, leggere la [panoramica sui tipi e sulle categorie di destinazione](./destination-types.md).
+Con Experience Platform, puoi attivare i dati su vari tipi di destinazioni, per soddisfare i casi d’uso di attivazione. Le destinazioni variano da integrazioni basate su API a integrazioni con sistemi di ricezione di file, destinazioni di ricerca dei profili e altro ancora. Per informazioni dettagliate su tutte le destinazioni disponibili, leggere la [panoramica sui tipi e sulle categorie di destinazione](./destination-types.md).
 
 ## Destinazioni create da Adobe e dai partner {#adobe-and-partner-built-destinations}
 
-Alcuni dei connettori nel catalogo delle destinazioni Experience Platform sono generati e gestiti da Adobe, mentre altri sono generati e gestiti da società partner che utilizzano [Destination SDK](/help/destinations/destination-sdk/overview.md). Una nota nella parte superiore della pagina della documentazione per ciascun connettore creato dal partner richiama se una destinazione è stata creata e gestita dal partner. Il [connettore Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), ad esempio, è stato creato da Adobe, mentre il [connettore TikTok](/help/destinations/catalog/social/tiktok.md) è stato creato e gestito dal team TikTok.
+Alcuni dei connettori nel catalogo delle destinazioni di Experience Platform sono generati e gestiti da Adobe, mentre altri sono generati e gestiti da società partner che utilizzano [Destination SDK](/help/destinations/destination-sdk/overview.md). Una nota nella parte superiore della pagina della documentazione per ciascun connettore creato dal partner richiama se una destinazione è stata creata e gestita dal partner. Ad esempio, il [connettore Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md) è creato da Adobe, mentre il [connettore TikTok](/help/destinations/catalog/social/tiktok.md) è creato e gestito dal team TikTok.
 
-Per i connettori creati e gestiti dal partner, ciò significa che potrebbe essere necessario risolvere i problemi con il connettore dal team partner (metodo di contatto fornito nella nota nella pagina della documentazione). Per i problemi relativi ai connettori creati e gestiti da Adobe, contatta il rappresentante dell’Adobe o l’Assistenza clienti.
+Per i connettori creati e gestiti dal partner, ciò significa che potrebbe essere necessario risolvere i problemi con il connettore dal team partner (metodo di contatto fornito nella nota nella pagina della documentazione). Per i problemi relativi ai connettori creati e gestiti da Adobe, contatta il rappresentante Adobe o l’Assistenza clienti.
 
 ## Destinazioni e controlli di accesso {#access-controls}
 
@@ -84,13 +84,21 @@ Con il controllo degli accessi basato su attributi, puoi applicare configurazion
 
 Per ulteriori informazioni sul funzionamento delle destinazioni con i controlli di accesso basati su attributi, leggere la [panoramica sul controllo di accesso basato su attributi](../access-control/abac/overview.md#destinations).
 
+## Rimozione del profilo dalle destinazioni {#profile-removal}
+
+Quando un profilo viene rimosso da un pubblico attivato su una destinazione, viene rimosso anche dal pubblico corrispondente nella piattaforma di destinazione. Ad esempio, se un profilo viene rimosso da un pubblico precedentemente attivato su LinkedIn, verrà rimosso dal [!UICONTROL pubblico corrispondente a LinkedIn] associato.
+
+La rimozione del profilo dalle destinazioni (o rimozione dai segmenti) avviene con la stessa frequenza della segmentazione. Non appena un profilo viene rimosso da un pubblico in Experience Platform, il successivo flusso di dati pianificato per la destinazione riflette tale modifica e rimuove il profilo dal pubblico di destinazione.
+
+La velocità effettiva alla quale la rimozione del profilo ha effetto nella piattaforma di destinazione può variare in base al comportamento di acquisizione ed elaborazione della destinazione.
+
 ## Controllo delle destinazioni {#destinations-monitoring}
 
 Dopo aver stabilito una connessione a una destinazione e aver completato il flusso di lavoro di attivazione, puoi monitorare le esportazioni di dati nel sistema di ricezione. Per ulteriori informazioni, leggere la [guida sul monitoraggio dei flussi di dati nelle destinazioni nell&#39;interfaccia utente](/help/dataflows/ui/monitor-destinations.md).
 
 ![Esempio di pagina di monitoraggio delle destinazioni.](./assets/overview/monitoring-page-example.png)
 
-Puoi anche verificare se i dati arrivano correttamente alla destinazione. La maggior parte delle pagine della documentazione di destinazione nel catalogo dispone di una *sezione Convalida esportazione dati*, che indica come verificare nella piattaforma di destinazione che i dati sono stati correttamente importati da Experience Platform. Visualizza un esempio di questa sezione per la [destinazione Amazon Ads](/help/destinations/catalog/advertising/amazon-ads.md#exported-data).
+Puoi anche verificare se i dati arrivano correttamente alla destinazione. La maggior parte delle pagine della documentazione di destinazione nel catalogo dispone di una *sezione Convalida esportazione dati*, che indica come verificare nella piattaforma di destinazione che i dati siano stati correttamente importati da Experience Platform. Visualizza un esempio di questa sezione per la [destinazione Amazon Ads](/help/destinations/catalog/advertising/amazon-ads.md#exported-data).
 
 ## Restrizioni alla governance dei dati per l’attivazione dei dati nelle destinazioni {#data-governance}
 
@@ -122,6 +130,6 @@ Utilizzando una delle Destinazioni etichettate come beta (&quot;Beta&quot;), l&#
 
 Adobe non ha alcun obbligo di mantenere, correggere, aggiornare, modificare, modificare o supportare in altro modo Beta. Si consiglia di utilizzare il materiale informativo e di non fare affidamento in alcun modo sul corretto funzionamento o sulle prestazioni di tale Beta e/o dei materiali di accompagnamento. Beta è considerata un&#39;informazione riservata di Adobe.
 
-Qualsiasi &quot;Feedback&quot; (informazioni relative a Beta, compresi, a titolo esemplificativo e non esaustivo, problemi o difetti riscontrati durante l’utilizzo di Beta, suggerimenti, miglioramenti e raccomandazioni) fornito dall’Utente a Adobe viene assegnato a Adobe con la presente, compresi tutti i diritti, il titolo e l’interesse per e per tale Feedback.
+Qualsiasi &quot;Feedback&quot; (informazioni relative a Beta, compresi, a titolo esemplificativo e non esaustivo, problemi o difetti riscontrati durante l’utilizzo di Beta, suggerimenti, miglioramenti e raccomandazioni) fornito dall’Utente a Adobe viene assegnato ad Adobe, inclusi tutti i diritti, i titoli e gli interessi relativi a tale Feedback.
 
 Invia un feedback aperto o crea un ticket di supporto per condividere i suggerimenti o segnalare un bug, cercare un miglioramento delle funzioni.
