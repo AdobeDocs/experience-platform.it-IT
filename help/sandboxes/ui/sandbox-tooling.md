@@ -2,9 +2,9 @@
 title: Strumenti sandbox
 description: Esporta e importa facilmente le configurazioni Sandbox tra sandbox.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 85476ea8a667cf3e74cd7a24da07d81c635e1628
+source-git-commit: 3cedf019cff7ef0aa06da1242798a533196f9b2a
 workflow-type: tm+mt
-source-wordcount: '2431'
+source-wordcount: '2485'
 ht-degree: 7%
 
 ---
@@ -23,7 +23,7 @@ Migliora la precisione della configurazione nelle sandbox ed esporta e importa f
 
 La funzionalità di strumenti sandbox consente di esportare [!DNL Adobe Real-Time Customer Data Platform] e [!DNL Adobe Journey Optimizer] oggetti in un pacchetto.
 
-### Oggetti Real-time Customer Data Platform {#real-time-cdp-objects}
+### Oggetti di Real-time Customer Data Platform {#real-time-cdp-objects}
 
 Nella tabella seguente sono elencati [!DNL Adobe Real-Time Customer Data Platform] oggetti attualmente supportati per gli strumenti sandbox:
 
@@ -31,7 +31,7 @@ Nella tabella seguente sono elencati [!DNL Adobe Real-Time Customer Data Platfor
 | --- | --- | --- |
 | Customer Data Platform | Origini | Le credenziali dell’account di origine non vengono replicate nella sandbox di destinazione per motivi di sicurezza e sarà necessario aggiornarle manualmente. Per impostazione predefinita, il flusso di dati di origine viene copiato in stato di bozza. |
 | Customer Data Platform | Tipi di pubblico | È supportato solo il tipo **[!UICONTROL Pubblico cliente]** **[!UICONTROL Servizio di segmentazione]**. Le etichette esistenti per il consenso e la governance verranno copiate nello stesso processo di importazione. Il sistema selezionerà automaticamente il criterio di unione predefinito nella sandbox di destinazione con la stessa classe XDM durante il controllo delle dipendenze dei criteri di unione. |
-| Customer Data Platform | Identità | Gli spazi dei nomi delle identità standard di Adobe verranno deduplicati automaticamente durante la creazione nella sandbox di destinazione. I tipi di pubblico possono essere copiati solo quando tutti gli attributi nelle regole del pubblico sono abilitati nello schema di unione. Gli schemi necessari devono prima essere spostati e abilitati per il profilo unificato. |
+| Customer Data Platform | Identità | Durante la creazione nella sandbox di destinazione, il sistema deduplica automaticamente gli spazi dei nomi di identità standard di Adobe. I tipi di pubblico possono essere copiati solo quando tutti gli attributi nelle regole del pubblico sono abilitati nello schema di unione. Gli schemi necessari devono prima essere spostati e abilitati per il profilo unificato. |
 | Customer Data Platform | Schemi | Le etichette esistenti per il consenso e la governance verranno copiate nello stesso processo di importazione. L’utente dispone della flessibilità necessaria per importare schemi senza l’opzione Profilo unificato abilitata. Il caso edge delle relazioni di schema non è incluso nel pacchetto. |
 | Customer Data Platform | Set di dati | I set di dati vengono copiati con l’impostazione di profilo unificato disabilitata per impostazione predefinita. |
 | Customer Data Platform | Criteri di consenso e governance | Aggiungi a un pacchetto i criteri personalizzati creati da un utente e spostali tra le diverse sandbox. |
@@ -60,6 +60,7 @@ Nella tabella seguente sono elencati [!DNL Adobe Journey Optimizer] oggetti attu
 | [!DNL Adobe Journey Optimizer] | Percorso | L’aggiunta di un intero percorso a un pacchetto, copia la maggior parte degli oggetti da cui dipende il percorso, inclusi tipi di pubblico, schemi, eventi e azioni. |
 | [!DNL Adobe Journey Optimizer] | Modello di contenuto | Un modello di contenuto può essere copiato come oggetto dipendente dell&#39;oggetto percorso. I modelli autonomi consentono di riutilizzare facilmente i contenuti personalizzati nelle campagne e nei percorsi Journey Optimizer. |
 | [!DNL Adobe Journey Optimizer] | Frammento | Un frammento può essere copiato come oggetto dipendente dell’oggetto percorso. I frammenti sono componenti riutilizzabili a cui è possibile fare riferimento in una o più e-mail in campagne e percorsi Journey Optimizer. |
+| [!DNL Adobe Journey Optimizer] | Campagne | Le campagne possono essere copiate insieme a tutti gli elementi relativi al profilo, al pubblico, allo schema, ai messaggi in linea e agli oggetti dipendenti. Alcuni elementi non vengono copiati, ad esempio elementi decisionali, etichette di utilizzo dei dati e impostazioni della lingua. Per un elenco completo degli oggetti che non possono essere copiati, fare riferimento alla guida [esportazione di oggetti in un&#39;altra sandbox](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox). |
 
 Le superfici (ad esempio i predefiniti) non vengono copiate. Il sistema seleziona automaticamente la corrispondenza più simile possibile nella sandbox di destinazione in base al tipo di messaggio e al nome della superficie. Se nella sandbox di destinazione non è presente alcuna superficie, la copia della superficie avrà esito negativo e la copia del messaggio avrà esito negativo perché un messaggio richiede che una superficie sia disponibile per l’impostazione. In questo caso, affinché la copia funzioni, è necessario creare almeno una superficie per il canale destro del messaggio.
 
@@ -114,13 +115,13 @@ Viene visualizzata la finestra di dialogo **[!UICONTROL Aggiungi al pacchetto]**
 
 ![[!UICONTROL Finestra di dialogo Aggiungi al pacchetto], che mostra un pacchetto selezionato dal menu a discesa.](../images/ui/sandbox-tooling/add-to-existing-package.png)
 
-Viene elencato l&#39;elenco degli oggetti aggiunti al pacchetto. Per pubblicare il pacchetto e renderlo disponibile per l&#39;importazione in sandbox, selezionare **[!UICONTROL Publish]**.
+Viene elencato l&#39;elenco degli oggetti aggiunti al pacchetto. Per pubblicare il pacchetto e renderlo disponibile per l&#39;importazione in sandbox, selezionare **[!UICONTROL Pubblica]**.
 
-![Elenco di oggetti nel pacchetto, con evidenziazione dell&#39;opzione [!UICONTROL Publish].](../images/ui/sandbox-tooling/publish-package.png)
+![Elenco di oggetti nel pacchetto, con evidenziazione dell&#39;opzione [!UICONTROL Pubblica].](../images/ui/sandbox-tooling/publish-package.png)
 
-Selezionare **[!UICONTROL Publish]** per confermare la pubblicazione del pacchetto.
+Seleziona **[!UICONTROL Pubblica]** per confermare la pubblicazione del pacchetto.
 
-![Finestra di dialogo di conferma del pacchetto Publish, con evidenziazione dell&#39;opzione [!UICONTROL Publish].](../images/ui/sandbox-tooling/publish-package-confirmation.png)
+![Finestra di dialogo di conferma della pubblicazione del pacchetto, con evidenziazione dell&#39;opzione [!UICONTROL Pubblica].](../images/ui/sandbox-tooling/publish-package-confirmation.png)
 
 >[!NOTE]
 >
@@ -174,7 +175,7 @@ Sei tornato alla pagina [!UICONTROL Oggetto pacchetto e dipendenze]. Da qui, sel
 
 >[!NOTE]
 >
->Attualmente, per l’esportazione o l’importazione di un’intera sandbox sono supportati solo gli oggetti Real-time Customer Data Platform. Al momento, oggetti Adobe Journey Optimizer come i percorsi non sono supportati.
+>Attualmente, durante l’esportazione o l’importazione di un’intera sandbox sono supportati solo gli oggetti Real-time Customer Data Platform. Al momento, oggetti Adobe Journey Optimizer come i percorsi non sono supportati.
 
 Puoi esportare tutti i tipi di oggetto supportati in un pacchetto sandbox completo, quindi importare il pacchetto in varie sandbox per replicare le configurazioni degli oggetti. Ad esempio, questa funzionalità consente di:
 
@@ -191,7 +192,7 @@ Selezionare **[!UICONTROL Tutta la sandbox]** per il [!UICONTROL Tipo di pacchet
 
 ![La finestra di dialogo [!UICONTROL Crea pacchetto] mostra i campi completati ed evidenzia [!UICONTROL Crea].](../images/ui/sandbox-tooling/create-package-dialog.png)
 
-Creazione del pacchetto completata. Selezionare **[!UICONTROL Publish]** per pubblicare il pacchetto.
+Creazione del pacchetto completata. Selezionare **[!UICONTROL Pubblica]** per pubblicare il pacchetto.
 
 ![Elenco dei pacchetti sandbox che evidenziano il nuovo pacchetto pubblicato.](../images/ui/sandbox-tooling/publish-entire-sandbox-packages.png)
 
