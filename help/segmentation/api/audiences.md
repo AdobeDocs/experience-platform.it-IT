@@ -3,9 +3,9 @@ title: Endpoint API di Audiences
 description: Utilizza l’endpoint "audiences" nell’API del servizio di segmentazione di Adobe Experience Platform per creare, gestire e aggiornare in modo programmatico i tipi di pubblico per la tua organizzazione.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 7b1dedeab8df9678134474045cb87b27550f7fb6
+source-git-commit: 2ec6bacb44dc9b31fcd5cb4c457ba109a921aa84
 workflow-type: tm+mt
-source-wordcount: '1590'
+source-wordcount: '1592'
 ht-degree: 3%
 
 ---
@@ -472,7 +472,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 | `name` | Il nome del pubblico. |
 | `namespace` | Lo spazio dei nomi per il pubblico. |
 | `description` | Una descrizione del pubblico. |
-| `type` | Campo generato dal sistema che indica se il pubblico è generato da Platform o da un pubblico generato esternamente. I valori possibili includono `SegmentDefinition` e `ExternalSegment`. Un `SegmentDefinition` fa riferimento a un pubblico generato in Platform, mentre un `ExternalSegment` fa riferimento a un pubblico non generato in Platform. |
+| `type` | Campo generato dal sistema che indica se il pubblico è generato da Platform o da un pubblico generato esternamente. I valori possibili includono `SegmentDefinition` e `ExternalSegment`. `SegmentDefinition` fa riferimento a un pubblico generato in Experience Platform, mentre `ExternalSegment` fa riferimento a un pubblico non generato in Experience Platform. |
 | `expression` | Oggetto che contiene l’espressione PQL del pubblico. |
 | `lifecycleState` | Stato del pubblico. I valori possibili sono `draft`, `published` e `inactive`. `draft` rappresenta quando viene creato il pubblico, `published` quando il pubblico viene pubblicato e `inactive` quando il pubblico non è più attivo. |
 | `datasetId` | ID del set di dati in cui è possibile trovare i dati sul pubblico. |
@@ -482,7 +482,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i dettagli del pubblico appena aggiornato. Tieni presente che i dettagli del pubblico variano a seconda che si tratti di un pubblico generato da Platform o da un pubblico generato esternamente.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i dettagli del pubblico appena aggiornato. Tieni presente che i dettagli del pubblico variano a seconda che si tratti di un pubblico generato da Experience Platform o da un pubblico generato esternamente.
 
 +++Una risposta di esempio durante l’aggiornamento di un intero pubblico.
 
@@ -490,7 +490,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 {
     "id": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
     "audienceId": "test-platform-audience-id",
-    "name": "New Platform audience",
+    "name": "New Experience Platform audience",
     "namespace": "AEPSegments",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
@@ -565,7 +565,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con il pubb
 {
     "id": "60ccea95-1435-4180-97a5-58af4aa285ab5",
     "audienceId": "test-platform-audience-id",
-    "name": "New Platform audience",
+    "name": "New Experience Platform audience",
     "namespace": "AEPSegments",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {

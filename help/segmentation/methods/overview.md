@@ -2,9 +2,9 @@
 title: Metodi di valutazione del pubblico
 description: Scopri i diversi tipi di metodi di valutazione disponibili su Adobe Experience Platform.
 exl-id: 54513369-42fa-4bab-803a-21d6dcd87660
-source-git-commit: 9eb5ccc24db58a887473f61c66a83aa92e16efa7
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '242'
 ht-degree: 4%
 
 ---
@@ -25,7 +25,7 @@ La valutazione flessibile del pubblico consente di eseguire un processo di segme
 
 ## Segmentazione in streaming
 
-La segmentazione in streaming è un metodo di valutazione della segmentazione che puoi utilizzare per valutare i tipi di pubblico in tempo quasi reale concentrandoti sulla ricchezza dei dati. Puoi utilizzare la segmentazione in streaming per segmentare rapidamente i dati in streaming quando arrivano in Platform.
+La segmentazione in streaming è un metodo di valutazione della segmentazione che puoi utilizzare per valutare i tipi di pubblico in tempo quasi reale concentrandoti sulla ricchezza dei dati. Puoi utilizzare la segmentazione in streaming per segmentare rapidamente i dati in streaming man mano che arrivano in Experience Platform.
 
 Per ulteriori informazioni sulla segmentazione in streaming, consulta la [panoramica sulla segmentazione in streaming](./streaming-segmentation.md).
 

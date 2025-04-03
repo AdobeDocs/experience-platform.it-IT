@@ -3,9 +3,9 @@ title: Pubblico potenziale
 description: Scopri come creare e utilizzare i tipi di pubblico potenziali per eseguire il targeting di clienti sconosciuti utilizzando informazioni di terze parti.
 type: Documentation
 exl-id: b48cc0cf-f1c4-46fe-bb1d-cad53a9439dc
-source-git-commit: 78cb7fd24b858859226c737affbb4e93783c884d
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '393'
 ht-degree: 2%
 
 ---
@@ -56,7 +56,7 @@ Per ulteriori informazioni sull&#39;utilizzo del Generatore di segmenti, leggere
 
 ## Casi d’uso consigliati {#use-cases}
 
-Per scoprire come utilizzare la funzionalità dei tipi di pubblico potenziali in Experience Platform in combinazione con altre funzionalità di Platform, leggi la seguente documentazione sul caso d’uso:
+Per scoprire come utilizzare la funzionalità dei tipi di pubblico potenziali in Experience Platform in combinazione con altre funzionalità di Experience Platform, leggi la seguente documentazione sul caso d’uso:
 
 - [Coinvolgi e acquisisci nuovi clienti tramite la funzionalità di ricerca di potenziali clienti](../../rtcdp/partner-data/prospecting.md)
 

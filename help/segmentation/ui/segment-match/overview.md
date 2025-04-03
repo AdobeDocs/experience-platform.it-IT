@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Segment Match;segment match;home;popular topic;segmentation;Segmentation;Segment Match;segment match
+keywords: Experience Platform;home;argomenti popolari;segmentazione;Segmentation;Segment Match;segment match;;home topic;segmentation;Segmentation;Segment Match;segment match
 solution: Experience Platform
 title: Panoramica sulla corrispondenza dei segmenti
-description: Segment Match è un servizio di condivisione dei segmenti in Adobe Experience Platform che consente a due o più utenti di Platform di scambiarsi i dati dei segmenti in modo sicuro, gestito e rispettoso della privacy.
+description: Segment Match è un servizio di condivisione dei segmenti in Adobe Experience Platform che consente a due o più utenti di Experience Platform di scambiarsi i dati dei segmenti in modo sicuro, gestito e rispettoso della privacy.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
+source-git-commit: 0a9028beca36b46d6228c0038366bbac5d32603c
 workflow-type: tm+mt
-source-wordcount: '1968'
-ht-degree: 2%
+source-wordcount: '1978'
+ht-degree: 3%
 
 ---
 
 # Panoramica di [!DNL Segment Match]
 
-Adobe Experience Platform Segment Match è un servizio di condivisione dei segmenti che consente a due o più utenti di Platform di scambiarsi i dati dei segmenti in modo sicuro, gestito e rispettoso della privacy. [!DNL Segment Match] utilizza gli standard di privacy di Platform e gli identificatori personali, ad esempio e-mail con hash, numeri di telefono con hash e identificatori di dispositivo come IDFA e GAID.
+Adobe Experience Platform Segment Match è un servizio di condivisione dei segmenti che consente a due o più utenti di Experience Platform di scambiarsi i dati dei segmenti in modo sicuro, gestito e rispettoso della privacy. [!DNL Segment Match] utilizza gli standard sulla privacy di Experience Platform e gli identificatori personali, ad esempio e-mail con hash, numeri di telefono con hash e identificatori di dispositivo come IDFA e GAID.
 
 Con [!DNL Segment Match] è possibile:
 
@@ -44,9 +44,9 @@ L’elenco degli spazi dei nomi supportati è il seguente:
 
 | Namespace | Descrizione |
 | --------- | ----------- |
-| E-mail (SHA256, in minuscolo) | Uno spazio dei nomi per l’indirizzo e-mail con hash predefinito. I valori forniti in questo spazio dei nomi vengono convertiti in minuscolo prima dell’hashing con SHA256. Gli spazi iniziali e finali devono essere tagliati prima che un indirizzo e-mail venga normalizzato. Questa impostazione non può essere modificata retroattivamente. Platform offre due metodi per supportare l&#39;hashing sulla raccolta dati, tramite [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) e tramite [preparazione dati](../../../data-prep/functions.md#hashing). |
-| Telefono (SHA256_E.164) | Uno spazio dei nomi che rappresenta i numeri di telefono non elaborati con hash che devono essere eseguiti utilizzando sia il formato SHA256 che il formato E.164. |
-| ECID | Uno spazio dei nomi che rappresenta un valore ID Experience Cloud (ECID). A questo spazio dei nomi possono fare riferimento anche i seguenti alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Per ulteriori informazioni, vedere [Panoramica ECID](../../../identity-service/features/ecid.md). |
+| E-mail (SHA256, in minuscolo) | Uno spazio dei nomi per l’indirizzo e-mail con hash predefinito. I valori forniti in questo spazio dei nomi vengono convertiti in minuscolo prima dell’hashing con SHA256. Gli spazi iniziali e finali devono essere tagliati prima che un indirizzo e-mail venga normalizzato. Questa impostazione non può essere modificata retroattivamente. Experience Platform offre due metodi per supportare l&#39;hashing sulla raccolta dati, tramite [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) e tramite [preparazione dati](../../../data-prep/functions.md#hashing). |
+| Telefono (SHA256_E.164) | Uno spazio dei nomi che rappresenta numeri di telefono non elaborati che devono essere sottoposti a hashing utilizzando sia il formato SHA256 che il formato E.164. |
+| ECID | Uno spazio dei nomi che rappresenta un valore Experience Cloud ID (ECID). A questo spazio dei nomi possono fare riferimento anche i seguenti alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Per ulteriori informazioni, vedere [Panoramica ECID](../../../identity-service/features/ecid.md). |
 | Apple IDFA (ID per inserzionisti) | Spazio dei nomi che rappresenta l’ID di Apple per gli inserzionisti. Per ulteriori informazioni, consulta il seguente documento sugli [annunci basati su interessi](https://support.apple.com/en-us/HT202074). |
 | ID Google Ad | Uno spazio dei nomi che rappresenta un ID di Google Advertising. Per ulteriori informazioni, consulta il seguente documento su [Google Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en). |
 
@@ -56,7 +56,7 @@ L’elenco degli spazi dei nomi supportati è il seguente:
 
 La verifica del consenso di consenso e rinuncia determina se puoi operare con il consenso alla condivisione dei dati utente per impostazione predefinita. Se la configurazione predefinita del consenso è impostata su `opt-out`, i dati utente possono essere condivisi, a meno che un utente non neghi esplicitamente la rinuncia. Se l&#39;impostazione predefinita è `opt-in`, i dati utente non possono essere condivisi, a meno che un utente non acconsenta esplicitamente.
 
-La configurazione del consenso predefinita per [!DNL Segment Match] è impostata su `opt-out`. Per applicare un modello di consenso ai dati, invia una richiesta e-mail al team del tuo account Adobe.
+La configurazione del consenso predefinita per [!DNL Segment Match] è impostata su `opt-out`. Per applicare un modello di consenso ai dati, invia una richiesta e-mail al team del tuo account di Adobe.
 
 Per ulteriori informazioni sull&#39;attributo `share` utilizzato per impostare il valore del consenso per la condivisione dei dati, vedere la seguente documentazione sul gruppo di campi [privacy e consensi](../../../xdm/field-groups/profile/consents.md). Per informazioni sul gruppo di campi specifico utilizzato per acquisire il consenso del consumatore alla raccolta e all&#39;utilizzo dei dati relativi alle preferenze di privacy, personalizzazione e marketing, vedi l&#39;esempio seguente di [consenso per la privacy, Personalization e preferenze di marketing su GitHub](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md).
 
@@ -64,7 +64,7 @@ Per ulteriori informazioni sull&#39;attributo `share` utilizzato per impostare i
 
 L’ultimo prerequisito da stabilire è configurare una nuova etichetta di utilizzo dati per impedire la condivisione dei dati. Tramite le etichette di utilizzo dei dati è possibile gestire i dati che possono essere condivisi tramite [!DNL Segment Match].
 
-Le etichette di utilizzo dei dati consentono di categorizzare set di dati e campi in base ai criteri di utilizzo applicabili a tali dati. Le etichette possono essere applicate in qualsiasi momento, offrendo flessibilità nella scelta di come gestire i dati. Le best practice incoraggiano i dati di etichettatura non appena vengono acquisiti in Experience Platform o non appena i dati diventano disponibili per l’utilizzo in Platform.
+Le etichette di utilizzo dei dati consentono di categorizzare set di dati e campi in base ai criteri di utilizzo applicabili a tali dati. Le etichette possono essere applicate in qualsiasi momento, offrendo flessibilità nella scelta di come gestire i dati. Le best practice incoraggiano i dati di etichettatura non appena vengono acquisiti in Experience Platform o non appena i dati diventano disponibili per l’utilizzo in Experience Platform.
 
 [!DNL Segment Match] utilizza l&#39;etichetta C11, un&#39;etichetta di contratto specifica di [!DNL Segment Match] che puoi aggiungere manualmente a qualsiasi set di dati o attributo per assicurarti che sia escluso dal processo di condivisione partner [!DNL Segment Match]. L&#39;etichetta C11 indica i dati che non devono essere utilizzati nei processi [!DNL Segment Match]. Dopo aver determinato i set di dati e/o i campi da escludere da [!DNL Segment Match] e aggiunto di conseguenza l&#39;etichetta C11, l&#39;etichetta viene automaticamente applicata dal flusso di lavoro [!DNL Segment Match]. [!DNL Segment Match] abilita automaticamente i criteri di base [!UICONTROL Limita condivisione dati]. Per istruzioni specifiche su come applicare le etichette di utilizzo dei dati ai set di dati, consulta l&#39;esercitazione su [gestione delle etichette di utilizzo dei dati nell&#39;interfaccia utente](../../../data-governance/labels/user-guide.md).
 
@@ -87,7 +87,7 @@ Dopo aver configurato i dati di identità e gli spazi dei nomi, la configurazion
 
 ### Gestisci partner
 
-Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Segmenti]** dalla barra di navigazione a sinistra, quindi seleziona **[!UICONTROL Feed]** dall&#39;intestazione superiore.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Segmenti]** dalla barra di navigazione a sinistra, quindi seleziona **[!UICONTROL Feed]** dall&#39;intestazione superiore.
 
 ![segments-feed.png](./images/segments-feed.png)
 
@@ -95,7 +95,7 @@ La pagina [!UICONTROL Feed] contiene un elenco dei feed ricevuti dai partner e d
 
 ![manage-partners.png](./images/manage-partners.png)
 
-Una connessione tra due partner è un &quot;handshake bidirezionale&quot; che funge da metodo self-service per consentire agli utenti di connettere le organizzazioni Platform a livello di sandbox. La connessione è necessaria per informare Platform che è stato stipulato un accordo e che Platform può facilitare la condivisione di servizi tra l’utente e i suoi partner.
+Una connessione tra due partner è un &quot;handshake bidirezionale&quot; che funge da metodo self-service per consentire agli utenti di connettere le proprie organizzazioni Experience Platform a livello di sandbox. La connessione è necessaria per informare Experience Platform che è stato stabilito un contratto e che Experience Platform può facilitare la condivisione di servizi tra te e i tuoi partner.
 
 >[!NOTE]
 >
@@ -121,7 +121,7 @@ Per connettere un partner utilizzando il relativo [!UICONTROL ID connessione], i
 >abstract="I casi d’uso di marketing con restrizioni forniscono indicazioni ai partner per garantire che i segmenti condivisi vengano utilizzati correttamente in base alle restrizioni di governance dei dati."
 >text="Learn more in documentation"
 
-Un **feed** è un raggruppamento di dati (segmenti), le regole per l&#39;esposizione o l&#39;utilizzo di tali dati e le configurazioni che determinano la corrispondenza dei dati con i dati dei partner. Un feed può essere gestito in modo indipendente e scambiato con altri utenti di Platform tramite [!DNL Segment Match].
+Un **feed** è un raggruppamento di dati (segmenti), le regole per l&#39;esposizione o l&#39;utilizzo di tali dati e le configurazioni che determinano la corrispondenza dei dati con i dati dei partner. Un feed può essere gestito in modo indipendente e scambiato con altri utenti di Experience Platform tramite [!DNL Segment Match].
 
 Per creare un nuovo feed, selezionare **[!UICONTROL Crea feed]** dal dashboard [!UICONTROL Feed].
 

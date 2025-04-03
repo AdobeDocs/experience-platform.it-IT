@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Tipi di pubblico simili
 description: Scopri come eseguire il targeting di nuovi tipi di pubblico di alto valore in Adobe Experience Platform utilizzando tipi di pubblico simili.
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: f981b26a468a1d5ab9931a9cce59b176cd0fd9b3
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '2192'
+source-wordcount: '2193'
 ht-degree: 9%
 
 ---
@@ -33,7 +33,7 @@ Prima di iniziare a utilizzare tipi di pubblico simili, assicurati di comprender
 
 Per utilizzare informazioni simili, il pubblico di base **deve** soddisfare i seguenti criteri di idoneità:
 
-- Il pubblico di base **deve** essere creato in Platform.
+- Il pubblico di base **deve** essere creato in Experience Platform.
    - I tipi di pubblico generati esternamente sono **non** idonei per approfondimenti simili.
 - Il pubblico di base **deve** essere nel criterio di unione predefinito.
 - Il pubblico di base **deve** non utilizzare campi limitati dalla governance dei dati.

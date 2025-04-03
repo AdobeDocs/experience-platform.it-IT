@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guida all’interfaccia utente di Audiences
 description: La funzione di composizione del pubblico nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro ricca che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica dei tipi di pubblico per la tua organizzazione.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 758ec9de9bf3e6bb9853c9455c69e0b5ca7948d5
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '2344'
+source-wordcount: '2345'
 ht-degree: 11%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 11%
 >- Gestisci profili
 >- Gestisci criteri di unione
 >
->Ulteriori informazioni sulle autorizzazioni in Platform sono disponibili nella [panoramica sul controllo degli accessi](../../access-control/home.md#permissions).
+>Ulteriori informazioni sulle autorizzazioni in Experience Platform sono disponibili nella [panoramica sul controllo degli accessi](../../access-control/home.md#permissions).
 
 >[!NOTE]
 >
@@ -328,7 +328,7 @@ Quando dividi il pubblico, puoi dividerlo per percentuale o per attributo.
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split_persistent"
->title="Divisione persistente"
+>title="Suddivisione persistente"
 >abstract="Per rendere persistente la suddivisione percentuale, abilita questa opzione e seleziona uno spazio dei nomi delle identità."
 
 Quando si suddivide in percentuale, il pubblico viene suddiviso in modo casuale, in base al numero di percorsi e alle percentuali fornite.

@@ -4,9 +4,9 @@ description: Scopri come creare e utilizzare i tipi di pubblico dell’account p
 badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Edizione B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 78cb7fd24b858859226c737affbb4e93783c884d
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '1494'
+source-wordcount: '1495'
 ht-degree: 21%
 
 ---
@@ -53,7 +53,7 @@ Per creare un pubblico per un account, seleziona **[!UICONTROL Crea pubblico]** 
 
 ![Il pulsante [!UICONTROL Crea pubblico] è evidenziato nella pagina di navigazione del pubblico dell&#39;account.](../images/types/account/select-create-audience.png)
 
-Viene visualizzato il Generatore di segmenti. Gli attributi dell’account e i tipi di pubblico vengono visualizzati sulla barra di navigazione a sinistra. Nella scheda [!UICONTROL Attributi] puoi aggiungere attributi personalizzati e creati da Platform.
+Viene visualizzato il Generatore di segmenti. Gli attributi dell’account e i tipi di pubblico vengono visualizzati sulla barra di navigazione a sinistra. Nella scheda [!UICONTROL Attributi] puoi aggiungere sia gli attributi creati da Experience Platform che quelli personalizzati.
 
 ![Viene visualizzato il Generatore di segmenti. Si noti che vengono visualizzati solo gli attributi e i tipi di pubblico.](../images/types/account/segment-builder.png)
 
@@ -116,7 +116,7 @@ Viene visualizzata la pagina [!UICONTROL Attiva destinazione]. Per ulteriori inf
 
 ## Passaggi successivi {#next-steps}
 
-Dopo aver letto questa guida, ora hai una migliore comprensione di come creare e utilizzare i tipi di pubblico del tuo account in Adobe Experience Platform. Per scoprire come utilizzare altri tipi di pubblico in Platform, leggi la [panoramica sul tipo di pubblico](./overview.md).
+Dopo aver letto questa guida, ora hai una migliore comprensione di come creare e utilizzare i tipi di pubblico del tuo account in Adobe Experience Platform. Per scoprire come utilizzare altri tipi di pubblico in Experience Platform, leggi la [panoramica sul tipo di pubblico](./overview.md).
 
 ## Appendice {#appendix}
 

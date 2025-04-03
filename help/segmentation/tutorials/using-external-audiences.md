@@ -5,9 +5,9 @@ description: Segui questo tutorial per scoprire come utilizzare i tipi di pubbli
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
 hide: true
 hidefromtoc: true
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '1724'
+source-wordcount: '1732'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 >
 >Questa documentazione contiene informazioni provenienti da una versione precedente della documentazione di Audiences e, di conseguenza, è obsoleta.
 
-Adobe Experience Platform supporta la possibilità di importare tipi di pubblico esterni, che possono essere successivamente utilizzati come componenti per un nuovo pubblico. Questo documento fornisce un tutorial per configurare Experience Platform per importare e utilizzare tipi di pubblico esterni.
+Adobe Experience Platform supporta la possibilità di importare tipi di pubblico esterni, che possono essere successivamente utilizzati come componenti per un nuovo pubblico. Questo documento fornisce un’esercitazione per configurare Experience Platform per importare e utilizzare tipi di pubblico esterni.
 
 ## Introduzione
 
@@ -26,7 +26,7 @@ Questo tutorial richiede una buona conoscenza dei vari servizi [!DNL Adobe Exper
 
 - [Servizio di segmentazione](../home.md): consente di creare tipi di pubblico dai dati del profilo cliente in tempo reale.
 - [Profilo cliente in tempo reale](../../profile/home.md): fornisce un profilo consumatore unificato in tempo reale basato su dati aggregati provenienti da più origini.
-- [Experience Data Model (XDM)](../../xdm/home.md): framework standardizzato in base al quale Platform organizza i dati sull&#39;esperienza del cliente. Per utilizzare al meglio la segmentazione, assicurati che i dati vengano acquisiti come profili ed eventi in base alle [best practice per la modellazione dei dati](../../xdm/schema/best-practices.md).
+- [Experience Data Model (XDM)](../../xdm/home.md): framework standardizzato in base al quale Experience Platform organizza i dati sull&#39;esperienza del cliente. Per utilizzare al meglio la segmentazione, assicurati che i dati vengano acquisiti come profili ed eventi in base alle [best practice per la modellazione dei dati](../../xdm/schema/best-practices.md).
 - [Set di dati](../../catalog/datasets/overview.md): il costrutto di archiviazione e gestione per la persistenza dei dati in Experience Platform.
 - [Acquisizione in streaming](../../ingestion/streaming-ingestion/overview.md): in che modo Experience Platform acquisisce e memorizza in tempo reale i dati da dispositivi lato client e lato server.
 
@@ -44,7 +44,7 @@ Le definizioni dei segmenti includono informazioni quali il nome, la descrizione
 
 ## Creare uno spazio dei nomi delle identità per il pubblico esterno
 
-Il primo passaggio per utilizzare tipi di pubblico esterni consiste nella creazione di uno spazio dei nomi delle identità. Gli spazi dei nomi di identità consentono a Platform di associarsi da dove proviene un pubblico.
+Il primo passaggio per utilizzare tipi di pubblico esterni consiste nella creazione di uno spazio dei nomi delle identità. Gli spazi dei nomi di identità consentono ad Experience Platform di associarsi da dove proviene un pubblico.
 
 Per creare uno spazio dei nomi di identità, segui le istruzioni riportate nella [guida dello spazio dei nomi di identità](../../identity-service/features/namespaces.md#manage-namespaces). Durante la creazione del namespace Identity, aggiungi i dettagli di origine allo spazio dei nomi Identity e contrassegna il relativo [!UICONTROL Tipo] come **[!UICONTROL Identificatore non persone]**.
 
@@ -70,7 +70,7 @@ Dopo aver contrassegnato il campo `_id` come identità principale, seleziona il 
 
 ![L&#39;attivazione dello schema per il profilo è evidenziata nell&#39;Editor schema.](../images/tutorials/external-audiences/schema-profile.png)
 
-Ora questo schema è abilitato per il profilo, con l’identificazione principale assegnata allo spazio dei nomi dell’identità non persona creato. Di conseguenza, i metadati del segmento importati in Platform utilizzando questo schema verranno acquisiti in Profile senza essere uniti ad altri dati di profilo relativi alle persone.
+Ora questo schema è abilitato per il profilo, con l’identificazione principale assegnata allo spazio dei nomi dell’identità non persona creato. Di conseguenza, i metadati del segmento importati in Experience Platform utilizzando questo schema verranno acquisiti nel profilo senza essere uniti con i dati del profilo relativi ad altre persone.
 
 ## Creare un set di dati per lo schema
 
@@ -86,7 +86,7 @@ Dopo aver creato il set di dati, continua a seguire le istruzioni riportate nell
 
 ## Impostare e importare i dati sul pubblico
 
-Con il set di dati abilitato, ora i dati possono essere inviati a Platform tramite l’interfaccia utente o utilizzando le API Experience Platform. Puoi acquisire questi dati tramite una connessione in batch o in streaming.
+Ora che il set di dati è abilitato, i dati possono essere inviati ad Experience Platform tramite l’interfaccia o utilizzando le API di Experience Platform. Puoi acquisire questi dati tramite una connessione in batch o in streaming.
 
 ### Acquisire dati utilizzando una connessione batch
 
@@ -102,7 +102,7 @@ Dopo aver creato la connessione in streaming, potrai accedere all’endpoint di 
 
 ## Struttura dei metadati del pubblico
 
-Dopo aver creato una connessione, ora puoi acquisire i dati in Platform.
+Dopo aver creato una connessione, ora puoi acquisire i dati in Experience Platform.
 
 Di seguito è riportato un esempio dei metadati del payload del pubblico esterno:
 
@@ -163,7 +163,7 @@ Ora che puoi utilizzare i tipi di pubblico esterni nei segmenti, puoi utilizzare
 
 ## Appendice
 
-Oltre a utilizzare i metadati di pubblico esterno importati e a utilizzarli per la creazione di segmenti, puoi anche importare le appartenenze a segmenti esterni in Platform.
+Oltre a utilizzare i metadati di pubblico esterno importati e a utilizzarli per la creazione di segmenti, puoi anche importare le appartenenze a segmenti esterni in Experience Platform.
 
 ### Configurare uno schema di destinazione di iscrizione a un segmento esterno
 
@@ -193,7 +193,7 @@ Dopo aver creato il set di dati, continua a seguire le istruzioni riportate nell
 
 ## Impostare e importare i dati di iscrizione del pubblico esterno
 
-Con il set di dati abilitato, ora i dati possono essere inviati a Platform tramite l’interfaccia utente o utilizzando le API Experience Platform. Puoi acquisire questi dati tramite una connessione in batch o in streaming.
+Ora che il set di dati è abilitato, i dati possono essere inviati ad Experience Platform tramite l’interfaccia o utilizzando le API di Experience Platform. Puoi acquisire questi dati tramite una connessione in batch o in streaming.
 
 ### Acquisire dati utilizzando una connessione batch
 
@@ -209,7 +209,7 @@ Dopo aver creato la connessione in streaming, potrai accedere all’endpoint di 
 
 ## Struttura di iscrizione al segmento
 
-Dopo aver creato una connessione, ora puoi acquisire i dati in Platform.
+Dopo aver creato una connessione, ora puoi acquisire i dati in Experience Platform.
 
 Di seguito è riportato un esempio del payload di iscrizione al pubblico esterno:
 

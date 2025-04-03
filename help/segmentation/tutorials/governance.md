@@ -4,7 +4,7 @@ title: Applicare la conformità dell’utilizzo dati per un segmento di pubblico
 type: Tutorial
 description: Questo tutorial illustra i passaggi necessari per applicare le definizioni dei segmenti di conformità per l’utilizzo dei dati utilizzando le API.
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-source-git-commit: 914174de797d7d5f6c47769d75380c0ce5685ee2
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
 source-wordcount: '1348'
 ht-degree: 6%
@@ -19,16 +19,16 @@ Questo tutorial illustra i passaggi necessari per applicare la conformità all�
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di [!DNL Adobe Experience Platform]:
 
-- [[!DNL Real-Time Customer Profile]](../../profile/home.md): [!DNL Real-Time Customer Profile] è un archivio di entità di ricerca generico e viene utilizzato per gestire i dati di [!DNL Experience Data Model (XDM)] all&#39;interno di [!DNL Platform]. Il profilo unisce i dati tra diverse risorse di dati aziendali e consente di accedere a tali dati in una presentazione unificata.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): [!DNL Real-Time Customer Profile] è un archivio di entità di ricerca generico e viene utilizzato per gestire i dati di [!DNL Experience Data Model (XDM)] all&#39;interno di [!DNL Experience Platform]. Il profilo unisce i dati tra diverse risorse di dati aziendali e consente di accedere a tali dati in una presentazione unificata.
    - [Criteri di unione](../../profile/api/merge-policies.md): regole utilizzate da [!DNL Real-Time Customer Profile] per determinare quali dati possono essere uniti in una visualizzazione unificata in determinate condizioni. I criteri di unione possono essere configurati a scopo di governance dei dati.
 - [[!DNL Segmentation]](../home.md): [!DNL Real-Time Customer Profile] divide un gruppo elevato di individui contenuti nell&#39;archivio profili in gruppi più piccoli che condividono caratteristiche simili e risponderanno in modo simile alle strategie di marketing.
 - [Governance dei dati](../../data-governance/home.md): la governance dei dati fornisce l&#39;infrastruttura per l&#39;etichettatura e l&#39;applicazione dell&#39;utilizzo dei dati, utilizzando i seguenti componenti:
    - [Etichette di utilizzo dati](../../data-governance/labels/user-guide.md): etichette utilizzate per descrivere set di dati e campi in termini di livello di riservatezza con cui gestire i rispettivi dati.
    - [Criteri di utilizzo dati](../../data-governance/policies/overview.md): configurazioni che indicano quali azioni di marketing sono consentite nei dati classificati da particolari etichette di utilizzo dati.
    - [Applicazione dei criteri](../../data-governance/enforcement/overview.md): consente di applicare i criteri di utilizzo dei dati e di impedire operazioni sui dati che costituiscono violazioni dei criteri.
-- [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza di [!DNL Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+- [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza di [!DNL Experience Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per effettuare correttamente chiamate alle API [!DNL Platform].
+Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per effettuare correttamente chiamate alle API [!DNL Experience Platform].
 
 ### Lettura delle chiamate API di esempio
 
@@ -36,19 +36,19 @@ Questo tutorial fornisce esempi di chiamate API per dimostrare come formattare l
 
 ### Raccogliere i valori per le intestazioni richieste
 
-Per effettuare chiamate alle API [!DNL Platform], devi prima completare l&#39;[esercitazione di autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
+Per effettuare chiamate alle API [!DNL Experience Platform], devi prima completare l&#39;[esercitazione di autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
 
 - Autorizzazione: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-Tutte le risorse in [!DNL Experience Platform] sono isolate in specifiche sandbox virtuali. Tutte le richieste alle API [!DNL Platform] richiedono un&#39;intestazione che specifichi il nome della sandbox in cui verrà eseguita l&#39;operazione:
+Tutte le risorse in [!DNL Experience Platform] sono isolate in specifiche sandbox virtuali. Tutte le richieste alle API [!DNL Experience Platform] richiedono un&#39;intestazione che specifichi il nome della sandbox in cui verrà eseguita l&#39;operazione:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulle sandbox in [!DNL Platform], consulta la [documentazione di panoramica sulle sandbox](../../sandboxes/home.md).
+>Per ulteriori informazioni sulle sandbox in [!DNL Experience Platform], consulta la [documentazione di panoramica sulle sandbox](../../sandboxes/home.md).
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione aggiuntiva:
 
@@ -187,7 +187,7 @@ In caso di esito positivo, la risposta restituisce i dettagli del criterio di un
 
 Dopo aver ottenuto gli ID dei set di dati di origine del criterio di unione, è possibile utilizzare l&#39;[API del servizio criteri](https://www.adobe.io/experience-platform-apis/references/policy-service/) per valutare tali set di dati rispetto a specifiche azioni di marketing al fine di verificare la presenza di violazioni dei criteri di utilizzo dei dati.
 
-Per valutare i set di dati, devi fornire il nome dell’azione di marketing nel percorso di una richiesta POST, fornendo al contempo gli ID dei set di dati nel corpo della richiesta, come mostrato nell’esempio di seguito.
+Per valutare i set di dati, devi fornire il nome dell’azione di marketing nel percorso di una richiesta POST, fornendo al contempo gli ID dei set di dati all’interno del corpo della richiesta, come mostrato nell’esempio di seguito.
 
 **Formato API**
 

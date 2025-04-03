@@ -2,16 +2,16 @@
 title: Domande frequenti sui tipi di pubblico
 description: Trova le risposte alle domande più frequenti su tipi di pubblico e altri concetti correlati alla segmentazione.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 16ffdd0e28687c04b4b8a2b33f10ddceea9ec03a
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '4832'
+source-wordcount: '4842'
 ht-degree: 2%
 
 ---
 
 # Domande frequenti
 
-Adobe Experience Platform [!DNL Segmentation Service] fornisce un&#39;interfaccia utente e un&#39;API RESTful che consentono di creare tipi di pubblico tramite definizioni di segmenti o altre origini dai dati di [!DNL Real-Time Customer Profile]. Questi tipi di pubblico sono configurati e gestiti centralmente su Platform e sono facilmente accessibili da qualsiasi soluzione Adobe. Di seguito è riportato un elenco di domande frequenti relative a tipi di pubblico e segmentazione.
+Adobe Experience Platform [!DNL Segmentation Service] fornisce un&#39;interfaccia utente e un&#39;API RESTful che consentono di creare tipi di pubblico tramite definizioni di segmenti o altre origini dai dati di [!DNL Real-Time Customer Profile]. Questi tipi di pubblico sono configurati e gestiti centralmente su Experience Platform e sono facilmente accessibili da qualsiasi soluzione Adobe. Di seguito è riportato un elenco di domande frequenti relative a tipi di pubblico e segmentazione.
 
 ## Audience Portal
 
@@ -35,7 +35,7 @@ Per caricare tipi di pubblico generati esternamente, devi disporre delle autoriz
 
 Quando carichi un pubblico generato esternamente, viene creato un set di dati che sarà visibile nell’inventario dei set di dati. Il nome del set di dati sarà **uguale** come nome del pubblico generato esternamente e caricato.
 
-### Di cosa è composto un pubblico generato esternamente e cosa accade a questi dati quando vengono importati in Platform?
+### Di cosa è composto un pubblico generato esternamente e cosa accade a questi dati quando vengono importati in Experience Platform?
 
 Durante il flusso di lavoro di importazione del pubblico esterno, è necessario specificare quale colonna nel file CSV corrisponde all&#39;**identità primaria**. Un esempio di identità primaria include l’indirizzo e-mail, l’ECID o uno spazio dei nomi di identità personalizzato specifico per l’organizzazione.
 
@@ -45,9 +45,9 @@ Tutti gli altri dati all&#39;interno del pubblico generato esternamente sono con
 
 Anche se è possibile fare riferimento al pubblico generato esternamente durante la creazione di tipi di pubblico utilizzando il Generatore di segmenti, non è possibile utilizzare i singoli attributi di profilo **1}.**
 
-### È possibile riconciliare i dati sul pubblico generato esternamente con un profilo esistente in Platform?
+### Posso riconciliare i dati del pubblico generato esternamente con un profilo esistente in Experience Platform?
 
-Sì, se gli identificatori primari corrispondono, il pubblico generato esternamente verrà unito al profilo esistente in Platform. La riconciliazione di questi dati può richiedere fino a 24 ore. Se i dati del profilo non esistono già, verrà creato un nuovo profilo durante l’acquisizione dei dati.
+Sì, se gli identificatori primari corrispondono, il pubblico generato esternamente verrà unito al profilo esistente in Experience Platform. La riconciliazione di questi dati può richiedere fino a 24 ore. Se i dati del profilo non esistono già, verrà creato un nuovo profilo durante l’acquisizione dei dati.
 
 ### In che modo le preferenze di consenso del cliente vengono rispettate per i tipi di pubblico generati esternamente e importati in Audience Portal?{#consent}
 
@@ -135,7 +135,7 @@ Il grafico seguente spiega i diversi stati del ciclo di vita, cosa rappresentano
 | --- | --- | --- | --- | --- | --- | --- | --- | -- |
 | Bozza | Un pubblico in stato **Bozza** è un pubblico ancora in fase di sviluppo e non ancora pronto per essere utilizzato in altri servizi. | Sì, ma può essere nascosto. | No | Sì | Può essere importato o aggiornato durante il processo di ottimizzazione. | Valutato per ottenere conteggi di pubblicazione precisi. | Sì, ma non è consigliabile utilizzarlo. | Sì |
 | Pubblicato | Un pubblico con stato **Pubblicato** è un pubblico pronto per l&#39;uso in tutti i servizi a valle. | Sì | Sì | Sì | Può essere importato o aggiornato. | Valutato utilizzando la segmentazione batch, in streaming o edge. | Sì | Sì |
-| Non attivo | Un pubblico con stato **Inattivo** è un pubblico attualmente non in uso. Esiste ancora in Platform, ma **non** sarà utilizzabile fino a quando non verrà contrassegnato come bozza o pubblicato. | No, ma può essere visualizzato. | No | No | Non più aggiornato. | Non più valutato o aggiornato da Platform. | No | Sì |
+| Non attivo | Un pubblico con stato **Inattivo** è un pubblico attualmente non in uso. Esiste ancora in Experience Platform, ma **non** sarà utilizzabile fino a quando non sarà contrassegnato come bozza o pubblicato. | No, ma può essere visualizzato. | No | No | Non più aggiornato. | Non più valutato o aggiornato da Experience Platform. | No | Sì |
 | Eliminato | Un pubblico nello stato **Eliminato** è un pubblico che è stato eliminato. L’effettiva eliminazione dei dati potrebbe richiedere alcuni minuti. | No | No | No | I dati sottostanti vengono eliminati. | Al termine dell’eliminazione non viene eseguita alcuna valutazione o esecuzione dei dati. | No | No |
 
 ### In quali stati posso modificare i tipi di pubblico in?
@@ -272,7 +272,7 @@ Nella sezione seguente sono elencate le domande relative alla composizione del p
 
 ### Quando dovrei usare la composizione del pubblico invece di usare il Generatore di segmenti?
 
-Sia Audience Composition che Segment Builder hanno ruoli importanti nella creazione di tipi di pubblico in Platform.
+Sia Audience Composition che Segment Builder hanno ruoli importanti nella creazione di tipi di pubblico in Experience Platform.
 
 Il Generatore di segmenti è più adatto per la creazione del pubblico **create** (per la creazione di un pubblico da zero), mentre la composizione del pubblico è più adatta per il pubblico **curation and personalization** (per la creazione di nuovi tipi di pubblico in base a un pubblico esistente).
 
@@ -376,9 +376,9 @@ Di conseguenza, quando vengono apportate modifiche al profilo, ad esempio l&#39;
 
 Ad esempio, supponiamo che tu abbia creato due tipi di pubblico reciprocamente esclusivi: il pubblico A è per le persone che vivono a Washington e il pubblico B è per le persone che fanno **non** vivono a Washington. Ci sono due profili: il profilo 1 per una persona che vive a Washington e il profilo 2 per una persona che vive in Oregon.
 
-Quando viene eseguito il processo di valutazione della segmentazione batch, il profilo 1 passa al pubblico A, mentre il profilo 2 passa al pubblico B. Successivamente, ma prima dell’esecuzione del processo di valutazione della segmentazione batch del giorno successivo, entra in Platform un evento che riconcilia i due profili. Di conseguenza, viene creato un singolo profilo unito contenente i profili 1 e 2.
+Quando viene eseguito il processo di valutazione della segmentazione batch, il profilo 1 passa al pubblico A, mentre il profilo 2 passa al pubblico B. Successivamente, ma prima dell’esecuzione del processo di valutazione della segmentazione batch del giorno successivo, in Experience Platform entra un evento che riconcilia i due profili. Di conseguenza, viene creato un singolo profilo unito contenente i profili 1 e 2.
 
-Fino all&#39;esecuzione del successivo processo di valutazione del segmento batch, il nuovo profilo unito avrà l&#39;iscrizione al pubblico in **entrambi** il profilo 1 e il profilo 2. Di conseguenza, sarà membro di **entrambi** il pubblico A e il pubblico B, nonostante questi tipi di pubblico abbiano definizioni contraddittorie. Per l&#39;utente finale, questa è la **stessa identica situazione** di prima che i profili fossero connessi, poiché c&#39;era sempre una sola persona coinvolta e Platform ha appena avuto **informazioni insufficienti** per connettere i due profili.
+Fino all&#39;esecuzione del successivo processo di valutazione del segmento batch, il nuovo profilo unito avrà l&#39;iscrizione al pubblico in **entrambi** il profilo 1 e il profilo 2. Di conseguenza, sarà membro di **entrambi** il pubblico A e il pubblico B, nonostante questi tipi di pubblico abbiano definizioni contraddittorie. Per l&#39;utente finale, questa è la **stessa situazione** di prima che i profili fossero connessi, in quanto c&#39;era sempre una sola persona coinvolta e Experience Platform ha appena avuto **informazioni insufficienti** per connettere i due profili.
 
 Se utilizzi la ricerca profili per recuperare il profilo appena creato e controllarne l&#39;appartenenza a un pubblico, verrà mostrato che è membro di **entrambi** i tipi di pubblico A e B, nonostante entrambi presentino definizioni contraddittorie. Una volta eseguito il processo di valutazione della segmentazione batch giornaliera, l’iscrizione al pubblico verrà aggiornata per riflettere questo stato aggiornato dei dati del profilo.
 
@@ -430,4 +430,4 @@ Di conseguenza, se noti che il numero in &quot;Ultimi X giorni&quot; è zero e a
 
 ### Ci sono limiti ai dati inviati in streaming?
 
-Affinché i dati in streaming possano essere utilizzati nella segmentazione in streaming, **deve** essere presente una spaziatura tra gli eventi in streaming. Se un numero eccessivo di eventi viene inviato in streaming nello stesso secondo, Platform tratterà tali eventi come dati generati da bot, che verranno eliminati. Come best practice, è necessario disporre di **almeno** cinque secondi tra i dati dell&#39;evento per garantire che vengano utilizzati correttamente.
+Affinché i dati in streaming possano essere utilizzati nella segmentazione in streaming, **deve** essere presente una spaziatura tra gli eventi in streaming. Se troppi eventi vengono inviati in streaming nello stesso secondo, Experience Platform tratterà questi eventi come dati generati da bot e verranno scartati. Come best practice, è necessario disporre di **almeno** cinque secondi tra i dati dell&#39;evento per garantire che vengano utilizzati correttamente.

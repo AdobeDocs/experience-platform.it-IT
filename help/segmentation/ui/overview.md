@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente del servizio di segmentazione
 description: Scopri come creare e gestire tipi di pubblico e definizioni di segmenti nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 276fd7c532843c9589e1d51b0bc7a76cb5c3eb9f
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '1043'
+source-wordcount: '1046'
 ht-degree: 2%
 
 ---
@@ -20,12 +20,12 @@ L&#39;utilizzo dei tipi di pubblico e delle definizioni dei segmenti richiede la
 
 - [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] consente di segmentare in gruppi più piccoli i dati archiviati in [!DNL Experience Platform] relativi a singoli utenti (ad esempio clienti, potenziali clienti, utenti o organizzazioni).
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
-- [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): consente la creazione di profili cliente collegando identità da origini dati diverse acquisite in [!DNL Platform].
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): framework standardizzato tramite il quale [!DNL Platform] organizza i dati sull&#39;esperienza del cliente. Per utilizzare al meglio la segmentazione, assicurati che i dati vengano acquisiti come profili ed eventi in base alle [best practice per la modellazione dei dati](../../xdm/schema/best-practices.md).
+- [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): consente la creazione di profili cliente collegando identità da origini dati diverse acquisite in [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): framework standardizzato tramite il quale [!DNL Experience Platform] organizza i dati sull&#39;esperienza del cliente. Per utilizzare al meglio la segmentazione, assicurati che i dati vengano acquisiti come profili ed eventi in base alle [best practice per la modellazione dei dati](../../xdm/schema/best-practices.md).
 
 Devi inoltre comprendere i seguenti termini chiave utilizzati in questo documento e la loro differenza:
 
-- **Pubblico**: un insieme di persone che condividono comportamenti e/o caratteristiche simili. Questa raccolta di persone può essere generata da Adobe Experience Platform utilizzando le definizioni dei segmenti (pubblico generato da Platform), la composizione del pubblico o da fonti esterne, come caricamenti personalizzati (pubblico generato esternamente).
+- **Pubblico**: un insieme di persone che condividono comportamenti e/o caratteristiche simili. Questa raccolta di persone può essere generata da Adobe Experience Platform utilizzando le definizioni dei segmenti (pubblico generato da Experience Platform), la composizione del pubblico o da fonti esterne, come caricamenti personalizzati (pubblico generato esternamente).
 - **Definizione del segmento**: le regole utilizzate da Adobe Experience Platform per descrivere le caratteristiche o il comportamento chiave di un pubblico di destinazione.
 - **Segmento**: azione di separazione dei profili in tipi di pubblico.
 
@@ -35,7 +35,7 @@ Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Tipi
 
 >[!NOTE]
 >
->Se la tua organizzazione ha poca esperienza con Platform e non dispone ancora di set di dati di profilo attivi o criteri di unione creati, la dashboard [!UICONTROL Tipi di pubblico] non è visibile. Nella scheda [!UICONTROL Panoramica] sono invece visualizzati collegamenti e documentazione per aiutarti a iniziare a utilizzare i tipi di pubblico.
+>Se la tua organizzazione ha poca esperienza con Experience Platform e non dispone ancora di set di dati di profilo attivi o criteri di unione creati, la dashboard [!UICONTROL Tipi di pubblico] non è visibile. Nella scheda [!UICONTROL Panoramica] sono invece visualizzati collegamenti e documentazione per aiutarti a iniziare a utilizzare i tipi di pubblico.
 
 ### [!UICONTROL Tipi di pubblico] dashboard {#segments-dashboard}
 
@@ -49,7 +49,7 @@ Per ulteriori informazioni, visita la [guida dashboard tipi di pubblico](../../d
 
 Seleziona la scheda **[!UICONTROL Sfoglia]** per visualizzare il Portale pubblico. Audience Portal fornisce un elenco di tutti i tipi di pubblico che appartengono alla tua organizzazione e alla sandbox e include dettagli quali il conteggio dei profili, l’origine, la data di creazione, la data dell’ultima modifica, i tag e il raggruppamento.
 
-Inoltre, Audience Portal consente di creare nuovi tipi di pubblico utilizzando Segment Builder (Generatore di segmenti) o Audience Composition (Composizione pubblico), nonché di importare in Platform tipi di pubblico generati esternamente.
+Inoltre, Audience Portal consente di creare nuovi tipi di pubblico utilizzando Segment Builder (Generatore di segmenti) o Audience Composition (Composizione pubblico), nonché di importare tipi di pubblico generati esternamente in Experience Platform.
 
 Per ulteriori informazioni su Audience Portal, consulta la [panoramica di Audience Portal](./audience-portal.md).
 
@@ -98,7 +98,7 @@ Oltre alle composizioni del pubblico e alle definizioni dei segmenti, puoi utili
 
 ## Segmentazione in streaming {#streaming-segmentation}
 
-La segmentazione in streaming consente di eseguire la segmentazione su [!DNL Platform] in tempo quasi reale, concentrandosi al contempo sulla ricchezza dei dati. Con la segmentazione in streaming, la qualificazione per la segmentazione ora avviene quando i dati arrivano in [!DNL Platform], riducendo la necessità di pianificare ed eseguire processi di segmentazione.
+La segmentazione in streaming consente di eseguire la segmentazione su [!DNL Experience Platform] in tempo quasi reale, concentrandosi al contempo sulla ricchezza dei dati. Con la segmentazione in streaming, la qualificazione per la segmentazione ora avviene quando i dati arrivano in [!DNL Experience Platform], riducendo la necessità di pianificare ed eseguire processi di segmentazione.
 
 Ulteriori informazioni sulla segmentazione streaming sono disponibili nella [guida utente per la segmentazione streaming](../methods/streaming-segmentation.md).
 
@@ -108,7 +108,7 @@ Ulteriori informazioni sulla segmentazione streaming sono disponibili nella [gui
 
 ## Segmentazione Edge {#edge-segmentation}
 
-La segmentazione di Edge è la capacità di valutare i tipi di pubblico in Platform istantaneamente al limite, abilitando casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva.
+La segmentazione di Edge è la capacità di valutare i tipi di pubblico in Experience Platform istantaneamente al limite, abilitando casi di utilizzo di personalizzazione della pagina stessa e successiva.
 
 Ulteriori informazioni sulla segmentazione Edge sono disponibili nella [guida dell&#39;interfaccia utente per la segmentazione Edge](../methods/edge-segmentation.md)
 

@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guida alla segmentazione in streaming
 description: Scopri la segmentazione in streaming, compresi cosa è, come creare un pubblico valutato utilizzando la segmentazione in streaming e come visualizzare i tipi di pubblico creati utilizzando la segmentazione in streaming.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 3f0cfd6c36344f481751bf05236df4fb288eab60
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '1253'
+source-wordcount: '1256'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 La segmentazione in streaming è la capacità di valutare i tipi di pubblico in Adobe Experience Platform in tempo quasi reale concentrandosi sulla ricchezza dei dati.
 
-Con la segmentazione in streaming, la qualificazione del pubblico ora avviene quando i dati in streaming arrivano in Platform, alleviando la necessità di pianificare ed eseguire processi di segmentazione. Questo consente di valutare i dati trasmessi in Platform, e di mantenere automaticamente aggiornata l’iscrizione del pubblico.
+Con la segmentazione in streaming, la qualificazione del pubblico ora avviene quando i dati in streaming arrivano in Experience Platform, alleviando la necessità di pianificare ed eseguire processi di segmentazione. Questo consente di valutare i dati trasmessi in Experience Platform, e di mantenere automaticamente aggiornata l’iscrizione al pubblico.
 
 ## Tipi di query idonei {#query-types}
 
@@ -312,7 +312,7 @@ All&#39;interno dei filtri disponibili, vai a **[!UICONTROL Frequenza di aggiorn
 
 ![È selezionata la frequenza di aggiornamento in streaming, con tutti i tipi di pubblico dell&#39;organizzazione valutati mediante la segmentazione in streaming.](../images/methods/streaming/filter-streaming.png)
 
-Per ulteriori informazioni sulla visualizzazione dei tipi di pubblico in Platform, consulta la [guida di Audience Portal](../ui/audience-portal.md).
+Per ulteriori informazioni sulla visualizzazione dei tipi di pubblico in Experience Platform, consulta la [guida di Audience Portal](../ui/audience-portal.md).
 
 >[!ENDTABS]
 

@@ -4,7 +4,7 @@ title: Valutare e accedere ai risultati dei segmenti
 type: Tutorial
 description: Segui questo tutorial per scoprire come valutare le definizioni dei segmenti e accedere ai risultati della segmentazione utilizzando l’API del servizio di segmentazione di Adobe Experience Platform.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
 source-wordcount: '1594'
 ht-degree: 2%
@@ -22,25 +22,25 @@ Questo tutorial richiede una buona conoscenza dei vari servizi [!DNL Adobe Exper
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): fornisce un profilo cliente unificato in tempo reale basato su dati aggregati provenienti da più origini.
 - [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): consente di creare tipi di pubblico dai dati di [!DNL Real-Time Customer Profile].
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): framework standardizzato in base al quale Platform organizza i dati sull’esperienza del cliente. Per utilizzare al meglio la segmentazione, assicurati che i dati vengano acquisiti come profili ed eventi in base alle [best practice per la modellazione dei dati](../../xdm/schema/best-practices.md).
-- [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza di [!DNL Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+- [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza di [!DNL Experience Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 ### Intestazioni richieste
 
-Questo tutorial richiede anche di aver completato l&#39;[esercitazione di autenticazione](https://www.adobe.com/go/platform-api-authentication-en) per effettuare correttamente le chiamate alle API [!DNL Platform]. Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
+Questo tutorial richiede anche di aver completato l&#39;[esercitazione di autenticazione](https://www.adobe.com/go/platform-api-authentication-en) per effettuare correttamente le chiamate alle API [!DNL Experience Platform]. Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
 
 - Autorizzazione: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-Tutte le risorse in [!DNL Experience Platform] sono isolate in specifiche sandbox virtuali. Le richieste alle API [!DNL Platform] richiedono un&#39;intestazione che specifichi il nome della sandbox in cui verrà eseguita l&#39;operazione:
+Tutte le risorse in [!DNL Experience Platform] sono isolate in specifiche sandbox virtuali. Le richieste alle API [!DNL Experience Platform] richiedono un&#39;intestazione che specifichi il nome della sandbox in cui verrà eseguita l&#39;operazione:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulle sandbox in [!DNL Platform], consulta la [documentazione di panoramica sulle sandbox](../../sandboxes/home.md).
+>Per ulteriori informazioni sulle sandbox in [!DNL Experience Platform], consulta la [documentazione di panoramica sulle sandbox](../../sandboxes/home.md).
 
-Tutte le richieste di POST, PUT e PATCH richiedono un’intestazione aggiuntiva:
+Tutte le richieste POST, PUT e PATCH richiedono un’intestazione aggiuntiva:
 
 - Content-Type: application/json
 
@@ -62,7 +62,7 @@ Tramite la valutazione pianificata, l’organizzazione può creare una pianifica
 
 ### Creare una pianificazione
 
-Effettuando una richiesta POST all&#39;endpoint `/config/schedules`, è possibile creare una pianificazione e includere l&#39;ora specifica in cui attivare la pianificazione.
+Effettuando una richiesta POST all&#39;endpoint `/config/schedules`, puoi creare una pianificazione e includere l&#39;ora specifica in cui attivare la pianificazione.
 
 Informazioni più dettagliate sull&#39;utilizzo di questo endpoint sono disponibili nella [guida degli endpoint di pianificazione](../api/schedules.md#create)
 
@@ -98,7 +98,7 @@ Informazioni più dettagliate sull&#39;utilizzo di questo endpoint sono disponib
 
 ## Interpretare i risultati del processo segmento
 
-Quando i processi di segmentazione vengono eseguiti correttamente, la mappa `segmentMembership` viene aggiornata per ogni profilo incluso nella definizione del segmento. `segmentMembership` memorizza anche eventuali tipi di pubblico pre-valutati che vengono acquisiti in [!DNL Platform], consentendo l&#39;integrazione con altre soluzioni come [!DNL Adobe Audience Manager].
+Quando i processi di segmentazione vengono eseguiti correttamente, la mappa `segmentMembership` viene aggiornata per ogni profilo incluso nella definizione del segmento. `segmentMembership` memorizza anche eventuali tipi di pubblico pre-valutati che vengono acquisiti in [!DNL Experience Platform], consentendo l&#39;integrazione con altre soluzioni come [!DNL Adobe Audience Manager].
 
 Nell&#39;esempio seguente viene illustrato l&#39;aspetto dell&#39;attributo `segmentMembership` per ogni singolo record di profilo:
 
@@ -218,7 +218,7 @@ Informazioni più dettagliate sull&#39;utilizzo di questo endpoint sono disponib
 
 ### Monitorare l’avanzamento dell’esportazione
 
-Durante l&#39;elaborazione di un processo di esportazione, è possibile monitorarne lo stato effettuando una richiesta di GET all&#39;endpoint `/export/jobs` e includendo `id` del processo di esportazione nel percorso. Il processo di esportazione viene completato quando il campo `status` restituisce il valore &quot;SUCCESSEDED&quot;.
+Durante l&#39;elaborazione di un processo di esportazione, è possibile monitorarne lo stato effettuando una richiesta GET all&#39;endpoint `/export/jobs` e includendo `id` del processo di esportazione nel percorso. Il processo di esportazione viene completato quando il campo `status` restituisce il valore &quot;SUCCESSEDED&quot;.
 
 Informazioni più dettagliate sull&#39;utilizzo di questo endpoint sono disponibili nella [guida dell&#39;endpoint dei processi di esportazione](../api/export-jobs.md#get)
 

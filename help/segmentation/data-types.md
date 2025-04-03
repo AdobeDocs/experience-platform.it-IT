@@ -1,11 +1,11 @@
 ---
 solution: Experience Platform
 title: Tipi di dati supportati nel servizio di segmentazione
-description: Tutti i tipi di dati Experience Data Model (XDM) sono supportati all’interno del servizio di segmentazione Adobe. Le regole che costituiscono una definizione di segmento sono contestualizzate dai seguenti tipi di dati.
+description: Tutti i tipi di dati Experience Data Model (XDM) sono supportati nel servizio di segmentazione di Adobe. Le regole che costituiscono una definizione di segmento sono contestualizzate dai seguenti tipi di dati.
 exl-id: 73f932a7-f864-4566-ade7-c148a12dc83c
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 0a9028beca36b46d6228c0038366bbac5d32603c
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '480'
 ht-degree: 3%
 
 ---
@@ -37,7 +37,7 @@ I dati sulla data consentono di assegnare un contesto basato sul tempo alle defi
 
 ## Eventi esperienza
 
-Come schema di Adobe Experience Platform, [!DNL XDM ExperienceEvents] registra le interazioni cliente esplicite e implicite con le applicazioni integrate in [!DNL Platform], inclusa un&#39;istantanea del sistema nel momento in cui si è verificata l&#39;interazione. [!DNL ExperienceEvents] sono record dei fatti. Di conseguenza, sono un’origine dati disponibile durante la definizione del segmento.
+Come schema di Adobe Experience Platform, [!DNL XDM ExperienceEvents] registra le interazioni esplicite e implicite dei clienti con le applicazioni integrate in Experience Platform, inclusa un&#39;istantanea del sistema nel momento in cui si è verificata l&#39;interazione. [!DNL ExperienceEvents] sono record dei fatti. Di conseguenza, sono un’origine dati disponibile durante la definizione del segmento.
 
 Come mostrato nella tabella seguente, i dati dell’evento vengono riprodotti utilizzando parole chiave che aiutano a perfezionare il comportamento dell’evento e a specificare gli attributi dell’evento.
 
@@ -52,11 +52,11 @@ Come mostrato nella tabella seguente, i dati dell’evento vengono riprodotti ut
 
 I tipi di pubblico esterni possono essere utilizzati anche come componenti di una nuova definizione di segmento, aggiungendo le relative regole di attributo alle nuove definizioni di segmento.
 
-Attualmente, solo Adobe Audience Manager è supportato come pubblico esterno, con fonti aggiuntive abilitate in futuro. Ulteriori informazioni sull&#39;utilizzo dei tipi di pubblico di Adobe Audience Manager con Platform sono disponibili nella [guida alla condivisione del pubblico all&#39;interno della documentazione di Adobe Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html).
+Attualmente, solo Adobe Audience Manager è supportato come pubblico esterno, con fonti aggiuntive abilitate in futuro. Ulteriori informazioni sull&#39;utilizzo dei tipi di pubblico di Adobe Audience Manager con Experience Platform sono disponibili nella [guida alla condivisione del pubblico all&#39;interno della documentazione di Adobe Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html).
 
 ### Condivisione della definizione del segmento
 
-Le definizioni dei segmenti create in Platform possono essere utilizzate in altri [Servizi core Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=it). Per abilitare questa funzione, contatta l’architetto della soluzione o il consulente.
+Le definizioni dei segmenti create in Experience Platform possono essere utilizzate in altri [servizi core Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=it). Per abilitare questa funzione, contatta l’architetto della soluzione o il consulente.
 
 ## Altri tipi di dati
 

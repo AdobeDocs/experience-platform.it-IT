@@ -1,13 +1,13 @@
 ---
 title: Guida alla segmentazione batch
 description: Scopri la segmentazione in batch, compresi cosa è, come creare un pubblico valutato utilizzando la segmentazione in batch e come visualizzare i tipi di pubblico creati utilizzando la segmentazione in batch.
-source-git-commit: cffd7bad831f0f58bd2b62585bfd0b84280b1732
+exl-id: b6fba2fb-8eec-4429-92fd-ece5c79d379d
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '550'
 ht-degree: 2%
 
 ---
-
 
 # Guida alla segmentazione batch
 
@@ -279,7 +279,7 @@ All&#39;interno dei filtri disponibili, vai a **[!UICONTROL Frequenza di aggiorn
 
 ![È selezionata la frequenza di aggiornamento batch, con tutti i tipi di pubblico dell&#39;organizzazione valutati mediante segmentazione batch.](../images/methods/batch/filter-batch.png)
 
-Per ulteriori informazioni sulla visualizzazione dei tipi di pubblico in Platform, consulta la [guida di Audience Portal](../ui/audience-portal.md).
+Per ulteriori informazioni sulla visualizzazione dei tipi di pubblico in Experience Platform, consulta la [guida di Audience Portal](../ui/audience-portal.md).
 
 >[!ENDTABS]
 

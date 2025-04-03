@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Rispetto del consenso nelle definizioni dei segmenti
 description: Scopri come rispettare le preferenze di consenso del cliente per la raccolta di dati personali e la condivisione nelle operazioni di segmentazione.
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
-source-git-commit: bf0e5065e771b748ee9d6ae3c431e76f08552983
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '680'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Se un cliente ha revocato o negato il consenso alla condivisione dei propri dati
 
 Per rispettare i valori di consenso del cliente è necessario conoscere i vari servizi [!DNL Adobe Experience Platform] coinvolti. Prima di iniziare questo tutorial, assicurati di avere familiarità con i seguenti servizi:
 
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): framework standardizzato in base al quale Platform organizza i dati sull’esperienza del cliente.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): framework standardizzato tramite il quale Experience Platform organizza i dati sull&#39;esperienza del cliente.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): fornisce un profilo cliente unificato in tempo reale basato su dati aggregati provenienti da più origini.
 * [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): consente di creare tipi di pubblico dai dati di [!DNL Real-Time Customer Profile].
 
@@ -75,7 +75,7 @@ Con l&#39;aggiunta dei valori di consenso **[!UICONTROL Raccolta dati]** e **[!U
 
 Seguendo questa esercitazione, avrai una migliore comprensione di come rispettare i consensi e le preferenze del cliente durante la creazione delle definizioni dei segmenti in Experience Platform.
 
-Per ulteriori informazioni sulla gestione del consenso in Platform, consulta la seguente documentazione:
+Per ulteriori informazioni sulla gestione del consenso in Experience Platform, consulta la seguente documentazione:
 
 * [Elaborazione del consenso tramite lo standard Adobe](../../landing/governance-privacy-security/consent/adobe/overview.md)
 * [Elaborazione del consenso utilizzando lo standard IAB TCF 2.0](../../landing/governance-privacy-security/consent/iab/overview.md)

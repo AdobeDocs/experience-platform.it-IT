@@ -3,9 +3,9 @@ title: Guida API del servizio di segmentazione
 description: L’API del servizio di segmentazione consente agli sviluppatori di gestire in modo programmatico le operazioni di segmentazione in Adobe Experience Platform. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
 role: Developer
 exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '557'
 ht-degree: 3%
 
 ---
@@ -20,7 +20,7 @@ Per visualizzare tutti gli endpoint disponibili e le operazioni CRUD, consulta i
 
 ## Tipi di pubblico
 
-I tipi di pubblico sono una raccolta di persone che condividono comportamenti e/o caratteristiche simili. Questi possono essere generati utilizzando Platform o da sorgenti esterne. È possibile utilizzare l&#39;endpoint `/audiences` per recuperare tutti i tipi di pubblico, creare un nuovo pubblico, recuperare i dettagli di un pubblico specifico, aggiornare un pubblico specifico o eliminare un pubblico specifico.
+I tipi di pubblico sono una raccolta di persone che condividono comportamenti e/o caratteristiche simili. Questi possono essere generati utilizzando Experience Platform o da fonti esterne. È possibile utilizzare l&#39;endpoint `/audiences` per recuperare tutti i tipi di pubblico, creare un nuovo pubblico, recuperare i dettagli di un pubblico specifico, aggiornare un pubblico specifico o eliminare un pubblico specifico.
 
 Per ulteriori informazioni sull&#39;utilizzo di questo endpoint, leggere la [guida dell&#39;endpoint dei tipi di pubblico](./audiences.md).
 
@@ -44,7 +44,7 @@ Le pianificazioni sono uno strumento che può essere utilizzato per eseguire aut
 
 Per ulteriori informazioni sull&#39;utilizzo di questo endpoint, leggere la [guida degli endpoint di pianificazione](./schedules.md).
 
-## Definizioni dei segmenti
+## Definizioni del segmento
 
 Le definizioni dei segmenti definiscono quali profili faranno parte di quale pubblico. È possibile utilizzare l&#39;endpoint `/segment/definitions` per gestire le definizioni dei segmenti.
 
@@ -62,4 +62,4 @@ La ricerca dei segmenti viene utilizzata per cercare i campi contenuti in divers
 
 ## Passaggi successivi
 
-Per iniziare a utilizzare l&#39;API [!DNL Segmentation Service], consulta le diverse guide degli endpoint per i passaggi dettagliati su come effettuare chiamate ai vari endpoint del servizio. Per ulteriori informazioni sull&#39;utilizzo dei segmenti tramite l&#39;interfaccia utente [!DNL Platform], consulta la [Guida utente per la segmentazione](../ui/overview.md).
+Per iniziare a utilizzare l&#39;API [!DNL Segmentation Service], consulta le diverse guide degli endpoint per i passaggi dettagliati su come effettuare chiamate ai vari endpoint del servizio. Per ulteriori informazioni sull&#39;utilizzo dei segmenti tramite l&#39;interfaccia utente [!DNL Experience Platform], consulta la [Guida utente per la segmentazione](../ui/overview.md).

@@ -1,15 +1,15 @@
 ---
 title: Guida alla segmentazione di Edge
-description: Scopri come utilizzare la segmentazione Edge per valutare i tipi di pubblico in Platform istantaneamente al limite, abilitando casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva.
+description: Scopri come utilizzare la segmentazione Edge per valutare i tipi di pubblico in Experience Platform istantaneamente al limite, abilitando casi di utilizzo di personalizzazione della pagina stessa e successiva.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 7ed92ed7573f82a2da2fc96f0868fe6f97a61899
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '1152'
-ht-degree: 1%
+source-wordcount: '1154'
+ht-degree: 2%
 
 ---
 
-# Guida alla segmentazione di Edge
+# Guida alla segmentazione Edge
 
 La segmentazione di Edge consente di valutare istantaneamente le definizioni dei segmenti in Adobe Experience Platform [sul server Edge](../../landing/edge-and-hub-comparison.md), abilitando casi di utilizzo di personalizzazione della pagina corrente e successiva.
 
@@ -302,7 +302,7 @@ All&#39;interno dei filtri disponibili, vai a **Frequenza di aggiornamento** e s
 
 ![È selezionata la frequenza di aggiornamento di Edge, con tutti i tipi di pubblico dell&#39;organizzazione valutati tramite la segmentazione Edge.](../images/methods/edge/filter-edge.png)
 
-Per ulteriori informazioni sulla visualizzazione dei tipi di pubblico in Platform, consulta la [guida di Audience Portal](../ui/audience-portal.md).
+Per ulteriori informazioni sulla visualizzazione dei tipi di pubblico in Experience Platform, consulta la [guida di Audience Portal](../ui/audience-portal.md).
 
 >[!ENDTABS]
 

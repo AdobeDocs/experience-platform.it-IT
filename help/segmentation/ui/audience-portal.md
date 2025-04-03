@@ -2,9 +2,9 @@
 title: Panoramica di Audience Portal
 description: Scopri come utilizzare Audience Portal per visualizzare, gestire e creare tipi di pubblico in Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 9eb5ccc24db58a887473f61c66a83aa92e16efa7
+source-git-commit: c1f06b14cb33a0fc29a50a2851c1fb52ae82c45d
 workflow-type: tm+mt
-source-wordcount: '4310'
+source-wordcount: '4356'
 ht-degree: 3%
 
 ---
@@ -26,6 +26,7 @@ In Audience Portal, puoi eseguire le seguenti attività:
    - [Utilizza Segment Builder (Generatore di segmenti) per creare un pubblico](#segment-builder)
    - [Utilizzare la composizione del pubblico per creare un pubblico](#audience-composition)
    - [Utilizza Federated Audience Composition per creare un pubblico utilizzando i dati del data warehouse esistente](#fac)
+   - [Utilizzare Data Distiller per creare un pubblico](#data-distiller)
 - [Importare tipi di pubblico generati esternamente](#import-audience)
 
 Per aprire Audience Portal, seleziona la scheda **[!UICONTROL Sfoglia]** nella sezione Segmentazione.
@@ -57,7 +58,7 @@ Accanto a ogni pubblico è presente un’icona con i puntini di sospensione. Sel
 | [!UICONTROL Modifica] | Servizio di segmentazione | Apre Segment Builder (Generatore di segmenti) per modificare il pubblico. Tieni presente che se il pubblico è stato creato tramite l&#39;API, **non** sarà in grado di modificarlo utilizzando Segment Builder. Per ulteriori informazioni sull&#39;utilizzo del Generatore di segmenti, leggere la [Guida dell&#39;interfaccia utente del Generatore di segmenti](./segment-builder.md). |
 | [!UICONTROL Apri composizione] | Composizione del pubblico | Apre la composizione Pubblico per visualizzare il pubblico. Per ulteriori informazioni sulla composizione del pubblico, consulta la [guida dell&#39;interfaccia utente per la composizione del pubblico](./audience-composition.md). |
 | [!UICONTROL Attiva nella destinazione] | Servizio di segmentazione | Attiva il pubblico in una destinazione. Per informazioni più dettagliate sull&#39;attivazione di un pubblico in una destinazione, leggere la [panoramica sull&#39;attivazione](../../destinations/ui/activation-overview.md). |
-| [!UICONTROL Condividi con i partner] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Condivide il pubblico con altri utenti di Platform. Per ulteriori informazioni su questa funzione, consulta la [Panoramica sulla corrispondenza dei segmenti](./segment-match/overview.md). |
+| [!UICONTROL Condividi con i partner] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Condivide il pubblico con altri utenti di Experience Platform. Per ulteriori informazioni su questa funzione, consulta la [Panoramica sulla corrispondenza dei segmenti](./segment-match/overview.md). |
 | [!UICONTROL Gestione tag] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Gestisce i tag definiti dall’utente che appartengono al pubblico. Per ulteriori informazioni su questa funzione, leggere la sezione relativa al filtro e all&#39;assegnazione di tag [1.](#manage-audiences) |
 | [!UICONTROL Sposta nella cartella] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Gestisce la cartella a cui appartiene il pubblico. Per ulteriori informazioni su questa funzione, leggere la sezione relativa al filtro e all&#39;assegnazione di tag [1.](#manage-audiences) |
 | [!UICONTROL Copia] | Servizio di segmentazione | Duplica il pubblico selezionato. Ulteriori informazioni su questa funzione sono disponibili nelle [Domande frequenti sulla segmentazione](../faq.md#copy). |
@@ -274,7 +275,7 @@ Selezionando **[!UICONTROL Modifica proprietà]** potrai modificare i dettagli d
 
 ### Totale pubblico {#audience-total}
 
-Per il pubblico e le composizioni generati da Platform, la sezione **[!UICONTROL Pubblico totale]** mostra il numero totale di profili idonei per il pubblico.
+Per i tipi di pubblico e le composizioni generati da Experience Platform, la sezione **[!UICONTROL Pubblico totale]** mostra il numero totale di profili idonei per il pubblico.
 
 >[!NOTE]
 >
@@ -297,7 +298,7 @@ Per i tipi di pubblico con origine **[!UICONTROL Caricamento personalizzato]**, 
 | Conteggio dei profili | Il numero totale di profili idonei per il pubblico. |
 | Nome del set di dati | Il nome del set di dati in cui è stato acquisito il pubblico. Puoi selezionare il nome del set di dati per ulteriori informazioni su di esso. Per ulteriori informazioni sui set di dati, leggere la [guida dell&#39;interfaccia utente del set di dati](../../catalog/datasets/user-guide.md). |
 | Batch di set di dati | ID del set di dati in cui è stato acquisito il pubblico. Per ulteriori informazioni sul batch, puoi selezionare l’ID del batch. Per ulteriori informazioni sui batch, leggere la [guida all&#39;acquisizione dei dati di monitoraggio](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
-| Batch di profili | ID del batch che ha creato i profili su Platform. Per ulteriori informazioni sul batch, puoi selezionare l’ID del batch. Per ulteriori informazioni sui batch, leggere la [guida all&#39;acquisizione dei dati di monitoraggio](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
+| Batch di profili | ID del batch che ha creato i profili su Experience Platform. Per ulteriori informazioni sul batch, puoi selezionare l’ID del batch. Per ulteriori informazioni sui batch, leggere la [guida all&#39;acquisizione dei dati di monitoraggio](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
 | Schema | Il nome dello schema a cui appartiene il pubblico. Puoi selezionare il nome dello schema per visualizzare informazioni sulla struttura dello schema e applicare le etichette di utilizzo dei dati. Per ulteriori informazioni, leggere la sezione [Gestione delle etichette di utilizzo dei dati per una guida allo schema](../../xdm/tutorials/labels.md). |
 | Record acquisiti | Il numero di record acquisiti nel set di dati. |
 | Record con errori | Il numero di record che non sono stati in grado di essere acquisiti nel set di dati. |
@@ -385,9 +386,17 @@ Selezionando **[!UICONTROL Genera regola]** puoi passare al Generatore di segmen
 
 ### Composizione di pubblico federato {#fac}
 
-Oltre alle composizioni del pubblico e alle definizioni dei segmenti, puoi utilizzare la Composizione federativa del pubblico di Adobe per creare nuovi tipi di pubblico dai set di dati aziendali senza copiare i dati sottostanti e memorizzarli in Adobe Experience Platform Audience Portal. Puoi anche arricchire i tipi di pubblico esistenti in Adobe Experience Platform utilizzando dati di pubblico composti che sono stati federati dal data warehouse aziendale. Leggi la guida su [Federated Audience Composition](https://experienceleague.adobe.com/it/docs/federated-audience-composition/using/home).
+Puoi utilizzare la Federated Audience Composition di Adobe per creare nuovi tipi di pubblico dai set di dati aziendali senza copiare i dati sottostanti e memorizzarli in Adobe Experience Platform Audience Portal.
+
+Puoi anche arricchire i tipi di pubblico esistenti in Adobe Experience Platform utilizzando dati di pubblico composti che sono stati federati dal data warehouse aziendale. Leggi la guida su [Federated Audience Composition](https://experienceleague.adobe.com/it/docs/federated-audience-composition/using/home).
 
 ![Elenco di tipi di pubblico creati in Federated Audience Composition per la tua organizzazione.](../images/ui/overview/federated-audience-composition.png)
+
+### Data Distiller {#data-distiller}
+
+Puoi utilizzare l’estensione SQL di Data Distiller per creare tipi di pubblico dal data lake. Questi dati includono entità dimensione esistenti, come attributi del cliente o informazioni sul prodotto.
+
+Ulteriori informazioni su Data Distiller sono disponibili nella [guida alla creazione di tipi di pubblico tramite SQL](../../query-service/data-distiller-audiences/overview.md).
 
 ## Importazione di un pubblico {#import-audience}
 
@@ -446,7 +455,7 @@ Dopo aver confermato che i dettagli sono corretti, seleziona **[!UICONTROL Fine]
 >
 >Inoltre, se il pubblico generato esternamente contiene informazioni riservate e/o relative all&#39;assistenza sanitaria, **devi** applicare le etichette di utilizzo dei dati necessarie prima di attivarle in qualsiasi destinazione. Poiché le variabili provenienti da tipi di pubblico generati esternamente vengono memorizzate nel data lake anziché nel profilo cliente in tempo reale, **non** includere i dati sul consenso nel file CSV.
 >
->Per ulteriori informazioni sull&#39;applicazione delle etichette di utilizzo dei dati, leggere la documentazione su [gestione delle etichette](../../access-control/abac/ui/labels.md). Per informazioni sulle etichette di utilizzo dei dati in Platform in generale, consulta la [panoramica delle etichette di utilizzo dei dati](../../data-governance/labels/overview.md). Per scoprire come funziona il consenso nei tipi di pubblico generati esternamente, leggi le [domande frequenti sui tipi di pubblico](../faq.md#consent).
+>Per ulteriori informazioni sull&#39;applicazione delle etichette di utilizzo dei dati, leggere la documentazione su [gestione delle etichette](../../access-control/abac/ui/labels.md). Per informazioni generali sulle etichette di utilizzo dei dati in Experience Platform, consulta la [panoramica delle etichette di utilizzo dei dati](../../data-governance/labels/overview.md). Per scoprire come funziona il consenso nei tipi di pubblico generati esternamente, leggi le [domande frequenti sui tipi di pubblico](../faq.md#consent).
 
 ## Passaggi successivi
 

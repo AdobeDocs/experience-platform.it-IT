@@ -1,13 +1,13 @@
 ---
 title: Tipi di pubblico
 description: Scopri i diversi tipi di pubblico che puoi creare su Adobe Experience Platform.
-source-git-commit: c7d71113ddcef6aca8b2637814b46e589a6b7fdf
+exl-id: c95c6276-d1a4-4d92-95cf-60d895c3fe10
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '251'
 ht-degree: 2%
 
 ---
-
 
 # Tipi di pubblico
 
@@ -19,7 +19,7 @@ Un pubblico di persone è un pubblico creato utilizzando i dati del profilo **cl
 
 Per informazioni più dettagliate sui tipi di pubblico delle persone, consulta la [panoramica sul pubblico delle persone](./people-audiences.md).
 
-## [!BADGE Edizione B2C] Pubblico simile
+## [!BADGE Pubblico simile a B2C Edition]
 
 Un pubblico simile è un pubblico creato analizzando un pubblico di alto valore con un modello di apprendimento automatico simile. Il modello lookalike può creare un pubblico che corrisponde alla soglia di somiglianza del pubblico di alto valore analizzato.
 
@@ -39,4 +39,4 @@ Per informazioni più dettagliate sui tipi di pubblico potenziali, consulta la [
 
 ## Passaggi successivi
 
-Dopo aver letto questa panoramica, acquisisci una migliore comprensione dei diversi tipi di of pubblico disponibile su Platform. Per informazioni sui diversi metodi di valutazione, leggere la [panoramica sul metodo di valutazione](../methods/overview.md).
+Dopo aver letto questa panoramica, acquisisci una migliore comprensione dei diversi tipi di of pubblico disponibile su Experience Platform. Per informazioni sui diversi metodi di valutazione, leggere la [panoramica sul metodo di valutazione](../methods/overview.md).

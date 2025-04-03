@@ -1,18 +1,18 @@
 ---
 solution: Experience Platform
 title: Panoramica del servizio di segmentazione
-description: Scopri il servizio di segmentazione di Adobe Experience Platform e il ruolo che svolge nell’ecosistema della piattaforma.
+description: Scopri Adobe Experience Platform Segmentation Service e il ruolo che svolge nell’ecosistema Experience Platform.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: f981b26a468a1d5ab9931a9cce59b176cd0fd9b3
+source-git-commit: 0a9028beca36b46d6228c0038366bbac5d32603c
 workflow-type: tm+mt
-source-wordcount: '1678'
-ht-degree: 12%
+source-wordcount: '1679'
+ht-degree: 9%
 
 ---
 
 # Panoramica di [!DNL Segmentation Service]
 
-Adobe Experience Platform [!DNL Segmentation Service] fornisce un&#39;interfaccia utente e un&#39;API RESTful che consentono di creare tipi di pubblico tramite definizioni di segmenti o altre origini dai dati di [!DNL Real-Time Customer Profile]. Questi tipi di pubblico sono configurati e gestiti centralmente in [!DNL Platform] e sono facilmente accessibili da qualsiasi soluzione Adobe.
+Adobe Experience Platform [!DNL Segmentation Service] fornisce un&#39;interfaccia utente e un&#39;API RESTful che consentono di creare tipi di pubblico tramite definizioni di segmenti o altre origini dai dati di [!DNL Real-Time Customer Profile]. Questi tipi di pubblico sono configurati e gestiti centralmente in [!DNL Experience Platform] e sono facilmente accessibili da qualsiasi soluzione Adobe.
 
 Questo documento fornisce una panoramica di [!DNL Segmentation Service] e del ruolo che svolge in Adobe Experience Platform.
 
@@ -20,7 +20,7 @@ Questo documento fornisce una panoramica di [!DNL Segmentation Service] e del ru
 
 Devi comprendere i seguenti termini chiave usati in questo documento:
 
-- **Pubblico**: un insieme di persone che condividono comportamenti e/o caratteristiche simili. Questa raccolta di persone può essere generata da Adobe Experience Platform utilizzando le definizioni dei segmenti (pubblico generato da Platform) o da fonti esterne (pubblico generato esternamente).
+- **Pubblico**: un insieme di persone che condividono comportamenti e/o caratteristiche simili. Questa raccolta di persone può essere generata da Adobe Experience Platform utilizzando le definizioni dei segmenti (pubblico generato da Experience Platform) o da fonti esterne (pubblico generato esternamente).
 - **Definizione del segmento**: il set di regole utilizzato da Adobe Experience Platform per descrivere le caratteristiche o il comportamento chiave di un pubblico di destinazione.
 - **Segmento**: azione di separazione dei profili in tipi di pubblico.
 
@@ -28,15 +28,15 @@ Devi comprendere i seguenti termini chiave usati in questo documento:
 
 La segmentazione è il processo di definizione di attributi o comportamenti specifici condivisi da un sottoinsieme di profili dall’archivio Profili per distinguere un gruppo commerciabile di persone dalla base clienti. Ad esempio, in una campagna e-mail denominata &quot;Hai dimenticato di acquistare le tue scarpe da ginnastica?&quot;, potresti desiderare un pubblico di tutti gli utenti che hanno cercato scarpe da corsa negli ultimi 30 giorni, ma che non hanno completato un acquisto.
 
-Una volta definito concettualmente un pubblico, questo viene generato in [!DNL Experience Platform]. In genere, i tipi di pubblico vengono creati dall’addetto al marketing o dallo specialista del pubblico, anche se alcune organizzazioni preferiscono che vengano creati dal proprio reparto di marketing, in collaborazione con i propri analisti di dati. Dopo aver esaminato i dati inviati a [!DNL Platform], l&#39;analista dati può creare il pubblico in due modi: creando una definizione di segmento selezionando i campi e i valori da utilizzare per creare le regole o le condizioni del pubblico oppure componendo un pubblico utilizzando la Composizione pubblico.
+Una volta definito concettualmente un pubblico, questo viene generato in [!DNL Experience Platform]. In genere, i tipi di pubblico vengono creati dall’addetto al marketing o dallo specialista del pubblico, anche se alcune organizzazioni preferiscono che vengano creati dal proprio reparto di marketing, in collaborazione con i propri analisti di dati. Dopo aver esaminato i dati inviati a [!DNL Experience Platform], l&#39;analista dati può creare il pubblico in due modi: creando una definizione di segmento selezionando i campi e i valori da utilizzare per creare le regole o le condizioni del pubblico oppure componendo un pubblico utilizzando la Composizione pubblico.
 
 ## Creare tipi di pubblico
 
-I tipi di pubblico possono essere creati in due modi diversi su Adobe Experience Platform: direttamente composti come tipi di pubblico o tramite definizioni di segmenti derivate da Platform.
+Puoi creare tipi di pubblico in diversi modi su Adobe Experience Platform, tra cui tramite composizioni, definizioni di segmenti, dati federati e Data Distiller.
 
 ### Composizione del pubblico
 
-Quando componi direttamente un pubblico su Platform, puoi utilizzare la Composizione del pubblico. Per informazioni su come utilizzare la composizione del pubblico per creare un pubblico, consulta la [guida alla composizione del pubblico](./ui/audience-composition.md) per ulteriori informazioni.
+Quando composizioni direttamente un pubblico su Experience Platform, puoi utilizzare la Composizione del pubblico. Per informazioni su come utilizzare la composizione del pubblico per creare un pubblico, consulta la [guida alla composizione del pubblico](./ui/audience-composition.md) per ulteriori informazioni.
 
 ### Definizioni del segmento
 
@@ -61,7 +61,7 @@ Oltre alle composizioni del pubblico e alle definizioni dei segmenti, puoi utili
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation"
 >title="Metodi di valutazione"
->abstract="Platform supporta attualmente tre metodi di valutazione dei tipi di pubblico: segmentazione in streaming, segmentazione in batch e segmentazione Edge."
+>abstract="Experience Platform supporta attualmente tre metodi di valutazione dei tipi di pubblico: segmentazione in streaming, segmentazione batch e segmentazione Edge."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
@@ -69,7 +69,7 @@ Oltre alle composizioni del pubblico e alle definizioni dei segmenti, puoi utili
 >abstract="La segmentazione in streaming è un processo continuo di selezione di dati che aggiorna i tipi di pubblico in risposta all’attività dell’utente."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/streaming-segmentation.html?lang=it" text="Valutare gli eventi in tempo quasi reale con la segmentazione in streaming"
 
-Platform supporta attualmente tre metodi di valutazione dei tipi di pubblico: segmentazione in streaming, segmentazione in batch e segmentazione Edge.
+Experience Platform supporta attualmente tre metodi di valutazione dei tipi di pubblico: segmentazione in streaming, segmentazione batch e segmentazione Edge.
 
 ### Segmentazione in streaming {#streaming}
 
@@ -93,12 +93,12 @@ I tipi di pubblico in batch vengono valutati automaticamente ogni 24 ore. Se des
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_edge"
 >title="Valutazione Edge"
->abstract="La segmentazione Edge è la capacità di valutare all’istante i segmenti in Platform sulla reta Edge, per casi d’uso di personalizzazione sulla stessa pagina e sulla pagina successiva."
+>abstract="La segmentazione di Edge è la capacità di valutare i segmenti in Experience Platform istantaneamente su Edge Network, abilitando i casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/edge-segmentation.html?lang=it" text="Guida alla segmentazione Edge"
 
-La segmentazione di Edge consente di valutare i segmenti in Platform [ istantaneamente in Edge Network](../landing/edge-and-hub-comparison.md), abilitando casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva.
+La segmentazione di Edge consente di valutare i segmenti in Experience Platform [ istantaneamente in Edge Network](../landing/edge-and-hub-comparison.md), abilitando casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva.
 
-Per ulteriori informazioni sulla segmentazione Edge, consulta la [documentazione API](./methods/edge-segmentation.md) o la [documentazione interfaccia utente](./methods/edge-segmentation.md).
+Per ulteriori informazioni sulla segmentazione Edge, consulta la [panoramica sulla segmentazione Edge](./methods/edge-segmentation.md).
 
 ## Accedere ai risultati della segmentazione
 
@@ -122,7 +122,7 @@ Quando crei una nuova definizione di segmento, devi fornire un nome. Il nome del
 
 I criteri di unione sono regole utilizzate da [!DNL Profile] per determinare come assegnare la priorità ai dati e combinarli in una visualizzazione unificata in determinate condizioni.
 
-Se non è definito alcun criterio di unione, verrà utilizzato il criterio di unione predefinito [!DNL Platform]. Se preferisci utilizzare un criterio di unione specifico per la tua organizzazione, puoi crearne uno personalizzato e contrassegnarlo come predefinito della tua organizzazione.
+Se non è definito alcun criterio di unione, verrà utilizzato il criterio di unione predefinito [!DNL Experience Platform]. Se preferisci utilizzare un criterio di unione specifico per la tua organizzazione, puoi crearne uno personalizzato e contrassegnarlo come predefinito della tua organizzazione.
 
 Ulteriori informazioni sui criteri di unione sono disponibili nella [guida dei criteri di unione](../profile/api/merge-policies.md).
 
@@ -137,6 +137,7 @@ Oltre al nome e al criterio di unione, [!DNL Segment Builder] offre un campo di 
 ## Funzioni di segmentazione avanzate
 
 Le definizioni dei segmenti possono essere configurate in modo da generare continuamente un pubblico combinando [l&#39;acquisizione di dati in streaming](../ingestion/streaming-ingestion/overview.md) con una delle seguenti funzioni di segmentazione avanzate:
+
 - [Segmentazione sequenziale](#sequential)
 - [Segmentazione dinamica](#dynamic)
 - [Segmentazione di più entità](#multi-entity)

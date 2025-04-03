@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Segment Builder
 description: Il Generatore di segmenti nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro avanzata che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica di regole, ad esempio le tessere trascinate utilizzate per rappresentare le proprietà dei dati.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: dc36c5e2eb109d1728f2290ee61e69f458929ba7
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '4976'
-ht-degree: 8%
+source-wordcount: '4980'
+ht-degree: 7%
 
 ---
 
@@ -76,11 +76,11 @@ Per impostazione predefinita, vengono visualizzati solo i campi schema compilati
 
 Puoi utilizzare i dati di una singola o più suite di rapporti di Adobe Analytics come eventi all’interno della segmentazione.
 
-Quando si utilizzano dati da una singola suite di rapporti di Analytics, Platform aggiungerà automaticamente descrittori e nomi descrittivi alle eVar, semplificando la ricerca di tali campi in [!DNL Segment Builder].
+Quando si utilizzano dati da una singola suite di rapporti di Analytics, Experience Platform aggiungerà automaticamente descrittori e nomi descrittivi alle eVar, semplificando la ricerca di tali campi in [!DNL Segment Builder].
 
 ![Immagine che mostra come le variabili generiche (eVar) sono mappate con un nome descrittivo.](../images/ui/segment-builder/single-report-suite.png)
 
-Quando si utilizzano dati provenienti da più suite di rapporti di Analytics, Platform **non può** aggiungere automaticamente descrittori o nomi descrittivi alle eVar. Di conseguenza, prima di utilizzare i dati delle suite di rapporti di Analytics, devi eseguirne il mapping ai campi XDM. Ulteriori informazioni sulla mappatura delle variabili di Analytics a XDM sono disponibili nella [guida alla connessione di origine di Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md#mapping).
+Quando si utilizzano dati provenienti da più suite di rapporti di Analytics, Experience Platform **non può** aggiungere automaticamente descrittori o nomi descrittivi alle eVar. Di conseguenza, prima di utilizzare i dati delle suite di rapporti di Analytics, devi eseguirne il mapping ai campi XDM. Ulteriori informazioni sulla mappatura delle variabili di Analytics a XDM sono disponibili nella [guida alla connessione di origine di Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md#mapping).
 
 Ad esempio, considera una situazione in cui disponevi di due suite di rapporti con le seguenti variabili:
 
@@ -119,7 +119,7 @@ Una volta mappate le suite di rapporti, puoi utilizzare questi campi appena mapp
 
 >[!NOTE]
 >
->Per i tipi di pubblico creati all&#39;interno di Platform, verranno visualizzati solo i tipi di pubblico con il criterio di unione **same**.
+>Per i tipi di pubblico creati all&#39;interno di Experience Platform, verranno visualizzati solo i tipi di pubblico con **uguale** criterio di unione.
 
 Nella scheda **[!UICONTROL Tipi di pubblico]** sono elencati tutti i tipi di pubblico importati da origini esterne, ad esempio Adobe Audience Manager o Customer Journey Analytics, nonché quelli creati in [!DNL Experience Platform].
 
@@ -182,7 +182,7 @@ In alternativa, puoi aggiungere manualmente valori separati da virgole.
 
 Puoi trascinare un pubblico dalla scheda **[!UICONTROL Pubblico]** nell&#39;area di lavoro del generatore di regole per fare riferimento all&#39;appartenenza al pubblico nella nuova definizione del segmento. Ciò ti consente di includere o escludere l’iscrizione al pubblico come attributo nelle nuove regole di definizione del segmento.
 
-Per i tipi di pubblico [!DNL Platform] creati con [!DNL Segment Builder], è possibile convertire il pubblico nel set di regole utilizzato nella definizione del segmento per tale pubblico. Questa conversione crea una copia della logica della regola, che può quindi essere modificata senza influire sulla definizione del segmento originale. Assicurati di aver salvato le modifiche recenti alla definizione del segmento prima di convertirla nella logica della regola.
+Per i tipi di pubblico [!DNL Experience Platform] creati con [!DNL Segment Builder], è possibile convertire il pubblico nel set di regole utilizzato nella definizione del segmento per tale pubblico. Questa conversione crea una copia della logica della regola, che può quindi essere modificata senza influire sulla definizione del segmento originale. Assicurati di aver salvato le modifiche recenti alla definizione del segmento prima di convertirla nella logica della regola.
 
 >[!NOTE]
 >
@@ -349,11 +349,11 @@ Dopo aver selezionato **[!UICONTROL Annulla wrapping contenitore]**, il contenit
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
 >title="Criteri di unione"
->abstract="Un criterio di unione consente l’unione di set di dati diversi per formare il profilo. Platform ha fornito un criterio di unione predefinito, in alternativa puoi crearne uno nuovo in Profili. Scegli un criterio di unione che corrisponda allo scopo di marketing per questo pubblico."
+>abstract="Un criterio di unione consente l’unione di set di dati diversi per formare il profilo. Experience Platform ha fornito un criterio di unione predefinito oppure puoi crearne uno nuovo in Profili. Scegli un criterio di unione che corrisponda allo scopo di marketing per questo pubblico."
 
-[!DNL Experience Platform] consente di unire dati provenienti da più origini e combinarli per ottenere una visualizzazione completa di ogni singolo cliente. Quando si riuniscono questi dati, i criteri di unione sono le regole utilizzate da [!DNL Platform] per determinare la priorità dei dati e i dati che verranno combinati per creare un profilo.
+[!DNL Experience Platform] consente di unire dati provenienti da più origini e combinarli per ottenere una visualizzazione completa di ogni singolo cliente. Quando si riuniscono questi dati, i criteri di unione sono le regole utilizzate da [!DNL Experience Platform] per determinare la priorità dei dati e i dati che verranno combinati per creare un profilo.
 
-È possibile selezionare un criterio di unione corrispondente allo scopo di marketing per questo pubblico o utilizzare il criterio di unione predefinito fornito da [!DNL Platform]. È possibile creare più criteri di unione specifici per l’organizzazione, inclusa la creazione di un criterio di unione predefinito. Per istruzioni dettagliate sulla creazione di criteri di unione per l&#39;organizzazione, leggere la [panoramica dei criteri di unione](../../profile/merge-policies/overview.md).
+È possibile selezionare un criterio di unione corrispondente allo scopo di marketing per questo pubblico o utilizzare il criterio di unione predefinito fornito da [!DNL Experience Platform]. È possibile creare più criteri di unione specifici per l’organizzazione, inclusa la creazione di un criterio di unione predefinito. Per istruzioni dettagliate sulla creazione di criteri di unione per l&#39;organizzazione, leggere la [panoramica dei criteri di unione](../../profile/merge-policies/overview.md).
 
 Per selezionare un criterio di unione per la definizione del segmento, seleziona l&#39;icona a forma di ingranaggio nella scheda **[!UICONTROL Campi]**, quindi utilizza il menu a discesa **[!UICONTROL Criterio di unione]** per selezionare il criterio di unione da utilizzare.
 
