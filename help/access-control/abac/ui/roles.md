@@ -3,10 +3,10 @@ keywords: Experience Platform;home;argomenti popolari;controllo degli accessi;co
 title: Creazione di un ruolo tramite il controllo degli accessi basato su attributi
 description: Questo documento fornisce informazioni sulla gestione dei ruoli tramite l’interfaccia Autorizzazioni in Adobe Experience Cloud
 exl-id: 85699716-339d-4992-8390-95563c7ea7fe
-source-git-commit: 74980c6108a32ec6736ab5892d89590e04e8a500
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '618'
-ht-degree: 23%
+source-wordcount: '619'
+ht-degree: 21%
 
 ---
 
@@ -19,7 +19,7 @@ I ruoli definiscono l’accesso di un amministratore, uno specialista o un utent
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about_create"
 >title="Creare un nuovo ruolo"
->abstract="Crea nuovi ruoli per categorizzare meglio gli utenti che interagiscono con l’istanza di Platform. Ad esempio, puoi creare un ruolo per un team di marketing interno e applicare l’etichetta per dati sanitari regolamentati (RHD, Regulated Health Data) a tale ruolo, consentendo al team di accedere alle informazioni sanitarie protette (PHI, Protected Health Information). In alternativa, è possibile anche creare un ruolo per un’agenzia esterna e negargli l’accesso ai dati PHI non applicando l’etichetta RHD per quel ruolo."
+>abstract="Crea nuovi ruoli per categorizzare meglio gli utenti che interagiscono con la tua istanza di Experience Platform. Ad esempio, puoi creare un ruolo per un team di marketing interno e applicare l’etichetta per dati sanitari regolamentati (RHD, Regulated Health Data) a tale ruolo, consentendo al team di accedere alle informazioni sanitarie protette (PHI, Protected Health Information). In alternativa, è possibile anche creare un ruolo per un’agenzia esterna e negargli l’accesso ai dati PHI non applicando l’etichetta RHD per quel ruolo."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=it" text="Gestire un ruolo"
 >additional-url="https://experienceleague.adobe.com/it/docs/experience-platform/access-control/abac/end-to-end-guide#label-roles" text="Applicare etichette a un ruolo"
 

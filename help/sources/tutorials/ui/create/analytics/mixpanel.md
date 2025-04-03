@@ -2,16 +2,16 @@
 title: Creare una connessione Source Mixpanel nell’interfaccia utente
 description: Scopri come creare una connessione sorgente Mixpanel utilizzando l’interfaccia utente di Adobe Experience Platform.
 exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '797'
-ht-degree: 11%
+source-wordcount: '805'
+ht-degree: 8%
 
 ---
 
 # Crea una connessione sorgente [!DNL Mixpanel] nell&#39;interfaccia utente
 
-Questo tutorial illustra i passaggi per la creazione di una connessione di origine [!DNL Mixpanel] tramite l&#39;interfaccia utente di Adobe Experience Platform Platform.
+Questo tutorial illustra i passaggi per la creazione di una connessione di origine [!DNL Mixpanel] tramite l&#39;interfaccia utente di Adobe Experience Platform Experience Platform.
 
 ## Introduzione
 
@@ -24,7 +24,7 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di Experie
 
 ### Raccogli le credenziali richieste
 
-Per connettere [!DNL Mixpanel] a Platform, è necessario fornire i valori per le seguenti proprietà di connessione:
+Per connettere [!DNL Mixpanel] ad Experience Platform, è necessario fornire i valori per le seguenti proprietà di connessione:
 
 | Credenziali | Descrizione | Esempio |
 | --- | --- | --- |
@@ -37,7 +37,7 @@ Per ulteriori informazioni sull&#39;autenticazione dell&#39;origine [!DNL Mixpan
 
 ## Connetti il tuo account [!DNL Mixpanel]
 
-Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Nella schermata [!UICONTROL Catalogo] sono visualizzate diverse origini con cui è possibile creare un account.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Nella schermata [!UICONTROL Catalogo] sono visualizzate diverse origini con cui è possibile creare un account.
 
 Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
 
@@ -64,12 +64,12 @@ Se stai creando un nuovo account, seleziona **[!UICONTROL Nuovo account]**, quin
 >[!CONTEXTUALHELP]
 >id="platform_sources_mixpanel_timezone"
 >title="Impostare un fuso orario per l’acquisizione da Mixpanel"
->abstract="Il fuso orario deve corrispondere a quello impostato nel tuo profilo Mixpanel, poiché Platform utilizza il fuso orario del progetto designato per acquisire i dati rilevanti da Mixpanel. Prima di registrare l’evento in un suo archivio dati, Mixpanel regolerà il proprio fuso orario in base a quello del tuo progetto."
+>abstract="Il fuso orario deve essere uguale a quello del profilo Mixpanel, in quanto Experience Platform utilizza quello del progetto per acquisire i dati rilevanti da Mixpanel. Prima di registrare l’evento in un suo archivio dati, Mixpanel regolerà il proprio fuso orario in base a quello del tuo progetto."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/analytics/mixpanel.html?lang=it#project-id-and-timezone" text="Ulteriori informazioni sono disponibili nella documentazione"
 
 Una volta autenticata l&#39;origine, fornisci l&#39;ID progetto e il fuso orario, quindi seleziona **[!UICONTROL Seleziona]**.
 
-Il fuso orario designato prima dell&#39;acquisizione dei dati [!DNL Mixpanel] in Platform deve essere uguale all&#39;impostazione del fuso orario del profilo [!DNL Mixpanel]. Eventuali modifiche al fuso orario dei dati verranno applicate solo ai nuovi eventi e i vecchi eventi rimarranno nel fuso orario precedentemente designato. [!DNL Mixpanel] è compatibile con l&#39;ora legale e regolerà in modo appropriato il timestamp di acquisizione. Per ulteriori informazioni sull&#39;effetto dei fusi orari sui dati, vedere la guida di [!DNL Mixpanel] alla gestione dei fusi orari per i progetti [.](https://help.mixpanel.com/hc/en-us/articles/115004547203-Manage-Timezones-for-Projects-in-Mixpanel)
+Il fuso orario designato prima dell&#39;acquisizione dei dati [!DNL Mixpanel] in Experience Platform deve essere uguale all&#39;impostazione del fuso orario del profilo [!DNL Mixpanel]. Eventuali modifiche al fuso orario dei dati verranno applicate solo ai nuovi eventi e i vecchi eventi rimarranno nel fuso orario precedentemente designato. [!DNL Mixpanel] è compatibile con l&#39;ora legale e regolerà in modo appropriato il timestamp di acquisizione. Per ulteriori informazioni sull&#39;effetto dei fusi orari sui dati, vedere la guida di [!DNL Mixpanel] alla gestione dei fusi orari per i progetti [.](https://help.mixpanel.com/hc/en-us/articles/115004547203-Manage-Timezones-for-Projects-in-Mixpanel)
 
 Dopo alcuni istanti, l’interfaccia corretta viene aggiornata a un pannello di anteprima, che consente di esaminare lo schema prima di creare un flusso di dati. Al termine, selezionare **[!UICONTROL Avanti]**.
 
@@ -77,7 +77,7 @@ Dopo alcuni istanti, l’interfaccia corretta viene aggiornata a un pannello di 
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai stabilito una connessione al tuo account [!DNL Mixpanel]. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per inserire dati di analisi in Platform](../../dataflow/analytics.md).
+Seguendo questa esercitazione, hai stabilito una connessione al tuo account [!DNL Mixpanel]. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per inserire dati di analisi in Experience Platform](../../dataflow/analytics.md).
 
 ## Risorse aggiuntive {#additional-resources}
 
@@ -85,9 +85,9 @@ Le sezioni seguenti forniscono ulteriori risorse a cui è possibile fare riferim
 
 ### Convalida {#validation}
 
-Di seguito vengono descritti i passaggi che è possibile eseguire per verificare che la connessione all&#39;origine [!DNL Mixpanel] sia stata completata e che gli eventi [!DNL Mixpanel] vengano acquisiti in Platform.
+Di seguito vengono descritti i passaggi che è possibile eseguire per verificare che la connessione all&#39;origine [!DNL Mixpanel] sia stata eseguita correttamente e che gli eventi [!DNL Mixpanel] vengano acquisiti in Experience Platform.
 
-Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Set di dati]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Set di dati]. Nella schermata [!UICONTROL Attività set di dati] vengono visualizzati i dettagli delle esecuzioni.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Set di dati]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Set di dati]. Nella schermata [!UICONTROL Attività set di dati] vengono visualizzati i dettagli delle esecuzioni.
 
 ![attività-set di dati](../../../../images/tutorials/create/mixpanel-export-events/dataset-activity.png)
 

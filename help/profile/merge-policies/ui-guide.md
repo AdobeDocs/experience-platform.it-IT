@@ -3,9 +3,9 @@ title: Guida dell’interfaccia utente per i criteri di unione
 type: Documentation
 description: Scopri come utilizzare i criteri di unione utilizzando l’interfaccia utente di Adobe Experience Platform.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
-source-git-commit: 400b20578e9a13fa2f41462b188707a34a462ea9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2455'
+source-wordcount: '2458'
 ht-degree: 2%
 
 ---
@@ -13,26 +13,26 @@ ht-degree: 2%
 
 # Guida all’interfaccia dei criteri di unione
 
-Adobe Experience Platform consente di unire frammenti di dati provenienti da più origini e di combinarli in modo da ottenere una visualizzazione completa di ciascuno dei singoli clienti. Quando si riuniscono questi dati, i criteri di unione sono le regole utilizzate da [!DNL Platform] per determinare la priorità dei dati e i dati che verranno combinati per creare la visualizzazione unificata.
+Adobe Experience Platform consente di unire frammenti di dati provenienti da più origini e di combinarli in modo da ottenere una visualizzazione completa di ciascuno dei singoli clienti. Quando si riuniscono questi dati, i criteri di unione sono le regole utilizzate da [!DNL Experience Platform] per determinare la priorità dei dati e i dati che verranno combinati per creare la visualizzazione unificata.
 
 Utilizzando le API RESTful o l’interfaccia utente di, puoi creare nuovi criteri di unione, gestire i criteri esistenti e impostare un criterio di unione predefinito per la tua organizzazione. Questa guida fornisce istruzioni dettagliate per l’utilizzo dei criteri di unione tramite l’interfaccia utente di Adobe Experience Platform.
 
-Per ulteriori informazioni sui criteri di unione e sul ruolo che svolgono all&#39;interno di Experience Platform, leggere la [panoramica dei criteri di unione](overview.md).
+Per ulteriori informazioni sui criteri di unione e sul ruolo che svolgono all&#39;interno di Experience Platform, consulta la [panoramica dei criteri di unione](overview.md).
 
 ## Introduzione
 
 Questa guida richiede una buona conoscenza di diverse importanti funzionalità di [!DNL Experience Platform]. Prima di seguire questa guida, consulta la documentazione relativa ai seguenti servizi:
 
 * [Profilo cliente in tempo reale](../home.md): fornisce un profilo consumatore unificato in tempo reale basato su dati aggregati provenienti da più origini.
-* [Servizio Adobe Experience Platform Identity](../../identity-service/home.md): abilita il profilo cliente in tempo reale collegando le identità da diverse origini dati acquisite in [!DNL Platform].
-* [Experience Data Model (XDM)](../../xdm/home.md): framework standardizzato tramite il quale [!DNL Platform] organizza i dati sull&#39;esperienza del cliente.
+* [Servizio Adobe Experience Platform Identity](../../identity-service/home.md): abilita il profilo cliente in tempo reale collegando le identità da diverse origini dati acquisite in [!DNL Experience Platform].
+* [Experience Data Model (XDM)](../../xdm/home.md): framework standardizzato tramite il quale [!DNL Experience Platform] organizza i dati sull&#39;esperienza del cliente.
 
 ## Visualizzare i criteri di unione {#view-merge-policies}
 
 >[!CONTEXTUALHELP]
 >id="platform_errors_uplib_101221_404"
 >title="Criterio di unione non trovato"
->abstract="Questo significa che Platform non è riuscito a trovare il criterio di unione richiesto. Per risolvere l’errore, prova una delle soluzioni seguenti:<ul><li>Assicurati che nell’URL sia elencato l’ID corretto del criterio di unione.</li><li>Assicurati di disporre della giusta combinazione di sandbox e organizzazione per il criterio di unione a cui stai tentando di accedere.</li></ul>"
+>abstract="Experience Platform non è riuscito a trovare il criterio di unione richiesto. Per risolvere l’errore, prova una delle soluzioni seguenti:<ul><li>Assicurati che nell’URL sia elencato l’ID corretto del criterio di unione.</li><li>Assicurati di disporre della giusta combinazione di sandbox e organizzazione per il criterio di unione a cui stai tentando di accedere.</li></ul>"
 
 Nell&#39;interfaccia utente di [!DNL Experience Platform], è possibile iniziare a utilizzare i criteri di unione selezionando **[!UICONTROL Profili]** nell&#39;area di navigazione a sinistra e quindi selezionando la scheda **[!UICONTROL Criteri di unione]**.
 
@@ -77,7 +77,7 @@ Quando crei o modifichi un criterio di unione, puoi visualizzare lo schema di un
 
 ![Il pulsante &quot;Visualizza schema unione&quot; è evidenziato nel flusso di lavoro del nuovo criterio di unione.](../images/merge-policies/view-union-schema.png)
 
-Verrà aperta la finestra di dialogo [!UICONTROL Visualizza schema unione], in cui sono visualizzati tutti gli schemi, le identità e le relazioni associati allo schema di unione. Puoi utilizzare la finestra di dialogo per esplorare lo schema di unione nello stesso modo in cui accedi alla scheda [!UICONTROL Schema di unione] nella sezione [!UICONTROL Profili] dell&#39;interfaccia utente di Platform.
+Verrà aperta la finestra di dialogo [!UICONTROL Visualizza schema unione], in cui sono visualizzati tutti gli schemi, le identità e le relazioni associati allo schema di unione. Puoi utilizzare la finestra di dialogo per esplorare lo schema di unione nello stesso modo in cui accedi alla scheda [!UICONTROL Schema di unione] nella sezione [!UICONTROL Profili] dell&#39;interfaccia utente di Experience Platform.
 
 Per informazioni dettagliate sugli schemi di unione, tra cui come interagire con essi nella scheda [!UICONTROL Schema unione] o nella finestra di dialogo [!UICONTROL Visualizza schema unione] visualizzata nel flusso di lavoro dei criteri di unione, visita la [guida dell&#39;interfaccia utente dello schema unione](../ui/union-schema.md).
 
@@ -207,7 +207,7 @@ Dopo aver apportato le modifiche necessarie, rivedi il criterio di unione e sele
 
 ## Violazioni dei criteri di governance dei dati
 
-Durante la creazione o l’aggiornamento di un criterio di unione, viene eseguito un controllo per determinare se tale criterio viola uno dei criteri di utilizzo dei dati definiti dall’organizzazione. I criteri di utilizzo dei dati fanno parte della governance dei dati di Adobe Experience Platform e sono regole che descrivono i tipi di azioni di marketing che è consentito eseguire o meno su dati specifici di [!DNL Platform].
+Durante la creazione o l’aggiornamento di un criterio di unione, viene eseguito un controllo per determinare se tale criterio viola uno dei criteri di utilizzo dei dati definiti dall’organizzazione. I criteri di utilizzo dei dati fanno parte della governance dei dati di Adobe Experience Platform e sono regole che descrivono i tipi di azioni di marketing che è consentito eseguire o meno su dati specifici di [!DNL Experience Platform].
 
 Ad esempio, se per creare un pubblico che si è attivato in una destinazione di terze parti è stato utilizzato un criterio di unione e nell&#39;organizzazione sono stati rilevati criteri di utilizzo dei dati che impediscono l&#39;esportazione di dati specifici a terze parti, durante il tentativo di salvataggio del criterio di unione verrà visualizzata una notifica di **[!UICONTROL violazione del criterio di governance dei dati]**.
 
@@ -217,4 +217,4 @@ Per ulteriori informazioni sulle modalità di esecuzione della governance dei da
 
 ## Passaggi successivi
 
-Dopo aver creato e configurato i criteri di unione per la tua organizzazione, puoi utilizzarli per regolare la visualizzazione dei profili dei clienti in Platform e per creare tipi di pubblico dai dati del profilo. Per ulteriori informazioni su come creare e utilizzare i tipi di pubblico utilizzando l&#39;interfaccia utente e le API di [!DNL Experience Platform], consulta la [panoramica sulla segmentazione](../../segmentation/home.md).
+Dopo aver creato e configurato i criteri di unione per l’organizzazione, puoi utilizzarli per regolare la visualizzazione dei profili dei clienti in Experience Platform e per creare tipi di pubblico dai dati del profilo. Per ulteriori informazioni su come creare e utilizzare i tipi di pubblico utilizzando l&#39;interfaccia utente e le API di [!DNL Experience Platform], consulta la [panoramica sulla segmentazione](../../segmentation/home.md).

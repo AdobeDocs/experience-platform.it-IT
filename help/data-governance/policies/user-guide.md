@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;governance dei dati;guida utente per i criteri di utilizzo dei dati
+keywords: Experience Platform;home;argomenti popolari;governance dei dati;guida utente sui criteri di utilizzo dei dati
 solution: Experience Platform
 title: Gestire i criteri di utilizzo dei dati nell’interfaccia utente
-description: La governance dei dati di Adobe Experience Platform fornisce un’interfaccia utente che consente di creare e gestire i criteri di utilizzo dei dati. Questo documento fornisce una panoramica delle azioni che è possibile eseguire nell’area di lavoro Criteri nell’interfaccia utente di Experience Platform.
+description: La governance dei dati di Adobe Experience Platform fornisce un’interfaccia utente che consente di creare e gestire i criteri di utilizzo dei dati. Questo documento fornisce una panoramica delle azioni che possono essere eseguite nell’area di lavoro Criteri nell’interfaccia utente di Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1768'
-ht-degree: 16%
+source-wordcount: '1769'
+ht-degree: 15%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 16%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_description"
 >title="Integrare e applicare il consenso dei clienti nei dati di profilo"
->abstract="<h2>Descrizione</h2><p>Con Platform è possibile integrare i dati di consenso raccolti dai clienti nei rispettivi profili. Puoi quindi impostare i criteri di consenso per determinare se tali dati possono essere inclusi nei segmenti attivati per determinate destinazioni.</p>"
+>abstract="<h2>Descrizione</h2><p>Experience Platform ti consente di integrare i dati sul consenso raccolti dai clienti nei rispettivi profili. Puoi quindi impostare i criteri di consenso per determinare se tali dati possono essere inclusi nei segmenti attivati per determinate destinazioni.</p>"
 
 Questo documento illustra come utilizzare l&#39;area di lavoro **[!UICONTROL Criteri]** nell&#39;interfaccia utente di Adobe Experience Platform per creare e gestire i criteri di utilizzo dei dati.
 
@@ -26,7 +26,7 @@ Questo documento illustra come utilizzare l&#39;area di lavoro **[!UICONTROL Cri
 
 >[!IMPORTANT]
 >
->Tutti i criteri di utilizzo dei dati (inclusi i criteri principali forniti da Adobe) sono disabilitati per impostazione predefinita. Affinché un singolo criterio possa essere preso in considerazione per l’applicazione, è necessario abilitarlo manualmente. Consulta la sezione su [abilitazione dei criteri](#enable) per i passaggi su come eseguire questa operazione nell&#39;interfaccia utente.
+>Tutti i criteri di utilizzo dei dati (inclusi i criteri core forniti da Adobe) sono disabilitati per impostazione predefinita. Affinché un singolo criterio possa essere preso in considerazione per l’applicazione, è necessario abilitarlo manualmente. Consulta la sezione su [abilitazione dei criteri](#enable) per i passaggi su come eseguire questa operazione nell&#39;interfaccia utente.
 
 ## Prerequisiti
 
@@ -73,7 +73,7 @@ Utilizzando questo comportamento, puoi impostare una combinazione di criteri e r
 
 ![Un&#39;infografica che illustra i passaggi necessari per utilizzare insieme i criteri di governance e di consenso al fine di creare solide regole per i tipi di pubblico che gestiscono.](../images/policies/governance-and-consent-policies-infographic.png)
 
-### Creare un criterio di governance dei dati {#create-governance-policy}
+### Creare criteri di governance dei dati {#create-governance-policy}
 
 Viene visualizzato il flusso di lavoro **[!UICONTROL Crea criterio]**. Per iniziare, specifica un nome e una descrizione per il nuovo criterio.
 
@@ -114,7 +114,7 @@ Se hai scelto di creare un criterio di consenso, viene visualizzata una nuova sc
 
 ![](../images/policies/consent-policy-dialog.png)
 
-Per utilizzare i criteri di consenso, devi disporre di attributi di consenso presenti nei dati del profilo. Consulta la guida sull’[elaborazione del consenso nell’Experience Platform](../../landing/governance-privacy-security/consent/adobe/overview.md) per i passaggi dettagliati su come includere gli attributi richiesti nello schema di unione.
+Per utilizzare i criteri di consenso, devi disporre di attributi di consenso presenti nei dati del profilo. Consulta la guida sull&#39;elaborazione del [consenso in Experience Platform](../../landing/governance-privacy-security/consent/adobe/overview.md) per i passaggi dettagliati su come includere gli attributi richiesti nello schema di unione.
 
 I criteri di consenso sono composti da due componenti logici:
 
@@ -173,7 +173,7 @@ Dopo aver creato e abilitato un criterio di consenso, puoi visualizzare in antep
 
 ## Abilitare o disabilitare un criterio {#enable}
 
-Tutti i criteri di utilizzo dei dati (inclusi i criteri principali forniti da Adobe) sono disabilitati per impostazione predefinita. Affinché un singolo criterio possa essere preso in considerazione per l’applicazione, devi abilitarlo manualmente tramite l’API o l’interfaccia utente.
+Tutti i criteri di utilizzo dei dati (inclusi i criteri core forniti da Adobe) sono disabilitati per impostazione predefinita. Affinché un singolo criterio possa essere preso in considerazione per l’applicazione, devi abilitarlo manualmente tramite l’API o l’interfaccia utente.
 
 È possibile abilitare o disabilitare i criteri dalla scheda **[!UICONTROL Sfoglia]** nell&#39;area di lavoro **[!UICONTROL Criteri]**. Seleziona un criterio personalizzato dall’elenco per visualizzarne i dettagli a destra. In **[!UICONTROL Stato]**, selezionare il pulsante di attivazione/disattivazione per attivare o disattivare il criterio.
 
@@ -203,7 +203,7 @@ L&#39;azione appena creata viene visualizzata nella scheda **[!UICONTROL Azioni 
 
 >[!NOTE]
 >
->È possibile modificare solo le azioni di marketing personalizzate definite dall’organizzazione. Le azioni di marketing definite dall’Adobe non possono essere modificate o eliminate.
+>È possibile modificare solo le azioni di marketing personalizzate definite dall’organizzazione. Le azioni di marketing definite da Adobe non possono essere modificate o eliminate.
 
 Nell&#39;area di lavoro **[!UICONTROL Criteri]**, seleziona la scheda **[!UICONTROL Azioni di marketing]** per visualizzare un elenco delle azioni di marketing disponibili definite da Adobe e dalla tua organizzazione. Seleziona un’azione di marketing personalizzata dall’elenco, quindi utilizza i campi forniti nella sezione di destra per modificarne i dettagli.
 

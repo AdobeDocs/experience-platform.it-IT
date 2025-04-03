@@ -4,10 +4,10 @@ description: Scopri come i registri di audit consentono di vedere chi ha eseguit
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 9bc80c2ee01e7a739db55cc7fc77ea19e609b265
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1466'
-ht-degree: 32%
+source-wordcount: '1476'
+ht-degree: 27%
 
 ---
 
@@ -16,19 +16,19 @@ ht-degree: 32%
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_actions"
 >title="Azioni principali"
->abstract="Questo widget mostra i principali tipi di azioni che sono state eseguite in Experience Platform nell’intervallo di tempo selezionato. Per visualizzare l’elenco di tutte le azioni registrate in Platform, seleziona **Audit** nella barra di navigazione a sinistra."
+>abstract="Questo widget mostra i principali tipi di azioni che sono state eseguite in Experience Platform nell’intervallo di tempo selezionato. Per visualizzare l&#39;elenco completo delle azioni registrate in Experience Platform, seleziona **Audit** nel menu di navigazione a sinistra."
 
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_users"
 >title="Utenti principali"
->abstract="Questo widget mostra gli utenti che hanno eseguito il maggior numero di azioni in Experience Platform nell’intervallo temporale selezionato. Per visualizzare l’elenco di tutte le azioni registrate in Platform, seleziona **Audit** nella barra di navigazione a sinistra."
+>abstract="Questo widget mostra gli utenti che hanno eseguito il maggior numero di azioni in Experience Platform nell’intervallo temporale selezionato. Per visualizzare l&#39;elenco completo delle azioni registrate in Experience Platform, seleziona **Audit** nel menu di navigazione a sinistra."
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_description"
->title="Monitorare le attività degli utenti in Platform"
->abstract="<h2>Descrizione</h2><p>Puoi monitorare l’attività degli utenti per vari servizi e funzionalità di Platform in forma di registri di audit. Questi registri formano un audit trail che registra <b>chi</b> ha eseguito <b>quale</b> azione e <b>quando</b>. I registri di audit possono essere utili per risolvere eventuali problemi relativi a Platform e aiutare la tua azienda a rispettare in modo efficace le politiche di gestione dei dati aziendali e i requisiti normativi.</p>"
+>title="Monitorare le attività degli utenti in Experience Platform"
+>abstract="<h2>Descrizione</h2><p>Puoi monitorare l’attività degli utenti per vari servizi e funzionalità di Experience Platform sotto forma di registri di audit. Questi registri formano un audit trail che registra <b>chi</b> ha eseguito <b>quale</b> azione e <b>quando</b>. I registri di audit possono essere utili per risolvere eventuali problemi su Experience Platform e aiutare la tua azienda a rispettare in modo efficace le politiche aziendali di gestione dei dati e i requisiti normativi.</p>"
 
-Al fine di aumentare la trasparenza e la visibilità delle attività eseguite nel sistema, Adobe Experience Platform consente di controllare le attività degli utenti per vari servizi e funzionalità sotto forma di &quot;registri di audit&quot;. Questi registri costituiscono un audit trail che può essere utile per risolvere i problemi su Platform e aiutare la tua azienda a rispettare in modo efficace le politiche aziendali di gestione dei dati e i requisiti normativi.
+Al fine di aumentare la trasparenza e la visibilità delle attività eseguite nel sistema, Adobe Experience Platform consente di controllare le attività degli utenti per vari servizi e funzionalità sotto forma di &quot;registri di audit&quot;. Questi registri costituiscono un audit trail che può essere utile per risolvere eventuali problemi in Experience Platform e aiutare la tua azienda a rispettare in modo efficace le politiche aziendali di gestione dei dati e i requisiti normativi.
 
 In un certo senso, un registro di controllo comunica a **chi** ha eseguito **cosa** azione e **quando**. Ogni azione registrata contiene metadati che indicano il tipo di azione, la data e l’ora, l’ID e-mail dell’utente che l’ha eseguita e altri attributi relativi al tipo di azione.
 
@@ -36,7 +36,7 @@ In un certo senso, un registro di controllo comunica a **chi** ha eseguito **cos
 >
 > I metadati per le azioni **Aggiungi utente** e **Rimuovi utente** nella risorsa **Ruolo** non conterranno l&#39;ID e-mail dell&#39;utente che ha eseguito l&#39;azione. Nei registri viene invece visualizzato l’ID e-mail generato dal sistema (system@adobe.com).
 
-Questo documento descrive i registri di audit in Platform, tra cui come visualizzarli e gestirli nell’interfaccia utente o nell’API.
+Questo documento descrive i registri di audit in Experience Platform e spiega come visualizzarli e gestirli nell’interfaccia utente o nell’API.
 
 ## Tipi di eventi acquisiti dai registri di audit {#category}
 
@@ -74,7 +74,7 @@ La tabella seguente illustra le azioni per le quali le risorse vengono registrat
 
 Quando la funzione è abilitata per la tua organizzazione, i registri di audit vengono raccolti automaticamente quando si verifica un’attività. Non è necessario abilitare manualmente la raccolta dei registri.
 
-Per visualizzare ed esportare i registri di audit, è necessario disporre dell&#39;autorizzazione di controllo dell&#39;accesso **[!UICONTROL Visualizza registro attività utente]** concessa (nella categoria [!UICONTROL Governance dei dati]). Per informazioni su come gestire le singole autorizzazioni per le funzionalità di Platform, consulta la [documentazione sul controllo degli accessi](../../../access-control/home.md).
+Per visualizzare ed esportare i registri di audit, è necessario disporre dell&#39;autorizzazione di controllo dell&#39;accesso **[!UICONTROL Visualizza registro attività utente]** concessa (nella categoria [!UICONTROL Governance dei dati]). Per informazioni su come gestire le singole autorizzazioni per le funzionalità di Experience Platform, consulta la [documentazione sul controllo degli accessi](../../../access-control/home.md).
 
 ## Gestione dei registri di audit nell’interfaccia utente {#managing-audit-logs-in-the-ui}
 
@@ -83,7 +83,7 @@ Per visualizzare ed esportare i registri di audit, è necessario disporre dell&#
 >title="Istruzioni"
 >abstract="<ul><li>Seleziona <b>Audit</b> nel pannello di navigazione a sinistra. L’area di lavoro Audit mostra un elenco di registri registrati, ordinati per impostazione predefinita dalla più recente alla meno recente.</li>   <li> NOTA: i registri di audit vengono conservati per 365 giorni dopo i quali verranno cancellati dal sistema. Pertanto, puoi tornare indietro solo per un periodo massimo di 365 giorni. Se è necessario esaminare i dati più vecchi di 365 giorni, devi esportare i registri a cadenza regolare per soddisfare i requisiti dei criteri interni. </li><li>Seleziona un evento dall’elenco per visualizzarne i dettagli nella barra a destra. </li><li>Seleziona l’icona a imbuto (filtro) per visualizzare un elenco di filtri con cui limitare i risultati. Vengono visualizzati solo gli ultimi 1.000 record, a prescindere dai filtri selezionati. </li><li>Per esportare l’elenco corrente dei registri di audit, seleziona **Scarica registro**.</li><li>Per ulteriori informazioni su questa funzione, consulta la sezione <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=it">panoramica dei registri di audit</a> su Experience League.</li></ul>"
 
-Puoi visualizzare i registri di controllo per diverse funzioni di Experience Platform nell&#39;area di lavoro **[!UICONTROL Audit]** nell&#39;interfaccia utente di Platform. Nell’area di lavoro viene visualizzato un elenco dei registri registrati, per impostazione predefinita ordinati dal più recente al meno recente.
+Puoi visualizzare i registri di controllo per diverse funzioni di Experience Platform nell&#39;area di lavoro **[!UICONTROL Audit]** nell&#39;interfaccia utente di Experience Platform. Nell’area di lavoro viene visualizzato un elenco dei registri registrati, per impostazione predefinita ordinati dal più recente al meno recente.
 
 ![La dashboard Audit evidenzia Audit nel menu a sinistra.](../../images/audit-logs/audits.png)
 
@@ -171,7 +171,7 @@ Per informazioni su come gestire i registri di audit per le attività in Adobe A
 
 ## Passaggi successivi e risorse aggiuntive
 
-Questa guida illustra come gestire i registri di audit in Experience Platform. Per ulteriori informazioni su come monitorare le attività di Platform, consulta la documentazione su [Observability Insights](../../../observability/home.md) e [Monitoring data ingestion](../../../ingestion/quality/monitor-data-ingestion.md).
+Questa guida illustra come gestire i registri di audit in Experience Platform. Per ulteriori informazioni su come monitorare le attività di Experience Platform, consulta la documentazione su [Observability Insights](../../../observability/home.md) e [Monitoring data ingestion](../../../ingestion/quality/monitor-data-ingestion.md).
 
 Per comprendere meglio i registri di audit in Experience Platform, guarda il video seguente:
 

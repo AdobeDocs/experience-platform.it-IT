@@ -1,12 +1,12 @@
 ---
 description: Scopri come utilizzare i modelli nell’interfaccia utente di Adobe Experience Platform per accelerare il processo di acquisizione dei dati per i dati B2B.
 title: Creare un flusso di dati di origini utilizzando i modelli nell’interfaccia utente
-badge1: "Beta"
+badge1: Beta
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2241'
-ht-degree: 10%
+source-wordcount: '2250'
+ht-degree: 9%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 10%
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_marketo_mapping"
->title="Modelli per origini nell’interfaccia di Platform"
+>title="Modelli per origini nell’interfaccia utente di Experience Platform"
 >abstract="I modelli includono risorse generate automaticamente come schemi, set di dati, identità, regole di mappatura, spazi dei nomi delle identità e flussi di dati che è possibile utilizzare per importare dati da un’origine all’Experience Platform. Puoi aggiornare le risorse generate automaticamente per la personalizzazione in base ai tuoi casi d’uso."
 
 >[!IMPORTANT]
@@ -27,7 +27,7 @@ ht-degree: 10%
 >
 >La documentazione e le funzionalità sono soggette a modifiche.
 
-Adobe Experience Platform fornisce modelli preconfigurati che puoi utilizzare per accelerare il processo di acquisizione dei dati. I modelli includono risorse generate automaticamente come schemi, set di dati, identità, regole di mappatura, spazi dei nomi delle identità e flussi di dati che è possibile utilizzare per importare dati da un’origine all’Experience Platform.
+Adobe Experience Platform fornisce modelli preconfigurati che puoi utilizzare per accelerare il processo di acquisizione dei dati. I modelli includono risorse generate automaticamente come schemi, set di dati, identità, regole di mappatura, spazi dei nomi delle identità e flussi di dati che puoi utilizzare per importare dati da un’origine ad Experience Platform.
 
 Con i modelli, puoi:
 
@@ -35,17 +35,17 @@ Con i modelli, puoi:
 * Riduci al minimo gli errori che possono verificarsi durante il processo manuale di acquisizione dei dati.
 * Aggiorna le risorse generate automaticamente in qualsiasi momento in base ai tuoi casi d’uso.
 
-Il seguente tutorial illustra i passaggi da seguire per utilizzare i modelli nell’interfaccia utente di Platform.
+Il seguente tutorial descrive come utilizzare i modelli nell’interfaccia utente di Experience Platform.
 
 ## Guida introduttuva
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Experience Platform:
 
-* [Origini](../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../xdm/home.md): framework standardizzato in base al quale Experience Platform organizza i dati sull&#39;esperienza del cliente.
-* [Sandbox](../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Origini](../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Experience Platform.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../xdm/home.md): framework standardizzato tramite il quale Experience Platform organizza i dati sull&#39;esperienza del cliente.
+* [Sandbox](../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Experience Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
-## Utilizzare i modelli nell’interfaccia utente di Platform {#use-templates-in-the-platform-ui}
+## Utilizzare i modelli nell’interfaccia utente di Experience Platform {#use-templates-in-the-platform-ui}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_templates_accounttype"
@@ -53,7 +53,7 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di Experie
 >abstract="Seleziona il tipo di azienda appropriato per il tuo caso d’uso. L’accesso può variare a seconda dell’account di abbonamento Real-time Customer Data Platform."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=it" text="Panoramica di Real-Time CDP"
 
-Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini] e visualizzare un catalogo delle origini disponibili in Experience Platform.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini] e visualizzare un catalogo delle origini disponibili in Experience Platform.
 
 Utilizza il menu *[!UICONTROL Categorie]* per filtrare le origini per categoria. In alternativa, immettere un nome di origine nella barra di ricerca per trovare un&#39;origine specifica dal catalogo.
 
@@ -206,7 +206,7 @@ Durante questo passaggio, puoi anche abilitare **backfill** e definire una colon
 
 Dopo aver completato la configurazione della pianificazione di acquisizione, seleziona **[!UICONTROL Fine]**.
 
-![Interfaccia di pianificazione per i modelli Dynamics e Salesforce con backfill abilitato.](../../images/tutorials/templates/backfill.png)
+![Interfaccia di pianificazione per i modelli Dynamics e Salesforce con retrocompilazione abilitata.](../../images/tutorials/templates/backfill.png)
 
 ### Esaminare le risorse {#review-assets}
 
@@ -237,7 +237,7 @@ Puoi utilizzare la vista dell’editor schema per apportare aggiornamenti allo s
 >
 >![Elenco dei flussi di dati esistenti nel catalogo dei flussi di dati dell&#39;area di lavoro di origine.](../../images/tutorials/templates/dataflows.png)
 
-### Publish il flusso di dati
+### Pubblicare il flusso di dati
 
 Inizia il processo di pubblicazione passando dal flusso di lavoro origini. Dopo aver selezionato [!UICONTROL Flusso di dati di aggiornamento], si passa al passaggio *[!UICONTROL Aggiungi dati]* del flusso di lavoro. Seleziona **[!UICONTROL Avanti]** per procedere.
 
@@ -267,8 +267,8 @@ Seguendo questa esercitazione, hai creato flussi di dati e risorse come schemi, 
 
 I modelli sono supportati dagli avvisi di Adobe Experience Platform e puoi utilizzare il pannello notifiche per ricevere aggiornamenti sullo stato delle risorse e anche tornare alla pagina di revisione.
 
-Seleziona l’icona di notifica nell’intestazione superiore dell’interfaccia utente di Platform, quindi seleziona l’avviso di stato per visualizzare le risorse da rivedere.
+Seleziona l’icona di notifica nell’intestazione superiore dell’interfaccia utente di Experience Platform, quindi seleziona l’avviso di stato per visualizzare le risorse da rivedere.
 
-![Il pannello delle notifiche nell&#39;interfaccia utente di Platform con un avviso di notifica relativo a un flusso di dati non riuscito evidenziato.](../../images/tutorials/templates/notifications.png)
+![Il pannello delle notifiche nell&#39;interfaccia utente di Experience Platform con un avviso di notifica relativo a un flusso di dati non riuscito evidenziato.](../../images/tutorials/templates/notifications.png)
 
-Puoi aggiornare le impostazioni degli avvisi dei modelli per ricevere notifiche e-mail e in-Platform sullo stato dei flussi di dati. Per ulteriori informazioni sulla configurazione degli avvisi, consulta la guida su [sottoscrivere avvisi per i flussi di dati di origine](../ui/alerts.md).
+Puoi aggiornare le impostazioni degli avvisi dei modelli per ricevere notifiche e-mail e in-Experience Platform sullo stato dei flussi di dati. Per ulteriori informazioni sulla configurazione degli avvisi, consulta la guida su [sottoscrivere avvisi per i flussi di dati di origine](../ui/alerts.md).

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Gestire le etichette di utilizzo dei dati nell’interfaccia utente
 description: Questa guida descrive i passaggi per lavorare con le etichette di utilizzo dei dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: a5efc45f0043cd6eb4a209737b9e430c85ea2f14
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1548'
-ht-degree: 17%
+source-wordcount: '1552'
+ht-degree: 14%
 
 ---
 
@@ -15,16 +15,16 @@ ht-degree: 17%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_description"
->title="Gestire l’utilizzo dei dati in Platform"
+>title="Gestire l’utilizzo dei dati in Experience Platform"
 >abstract="<h2>Descrizione</h2><p>Il framework della governance dei dati in Experience Platform consente di etichettare gli attributi e i set di dati in base alle restrizioni di utilizzo dei dati e di impostare criteri che identifichino e rispettino tali restrizioni per azioni di marketing specifiche.</p>"
 
 Questa guida utente descrive i passaggi per l&#39;utilizzo delle etichette di utilizzo dei dati nell&#39;interfaccia utente [!DNL Experience Platform].
 
-## Gestisci etichette {#manage-labels}
+## Gestire le etichette {#manage-labels}
 
 Per applicare le etichette ai dati, è necessario disporre dell&#39;autorizzazione **[!UICONTROL Gestisci etichette di utilizzo]** per l&#39;utilizzo nella sandbox di produzione predefinita denominata &quot;prod&quot;. Per creare un’etichetta personalizzata, devi anche disporre di diritti di amministrazione sul profilo del prodotto. Ogni organizzazione dispone di un solo elenco di etichette applicabili. **impossibile** eliminare le etichette. È invece possibile rimuoverli dai set di dati o dai campi a cui sono applicati.
 
-Per ulteriori informazioni su come assegnare un&#39;autorizzazione, vedere la guida su come [configurare le autorizzazioni](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) o la [panoramica sul controllo degli accessi](../../access-control/home.md). Se non hai accesso all’Admin Console per la tua organizzazione, contatta l’amministratore della tua organizzazione.
+Per ulteriori informazioni su come assegnare un&#39;autorizzazione, vedere la guida su come [configurare le autorizzazioni](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) o la [panoramica sul controllo degli accessi](../../access-control/home.md). Se non hai accesso ad Admin Console per la tua organizzazione, contatta l’amministratore della tua organizzazione.
 
 ## Gestire le etichette a livello di schema
 
@@ -61,11 +61,11 @@ Viene visualizzata una finestra di dialogo che consente di applicare e gestire l
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_instructions"
 >title="Istruzioni"
->abstract="<ol><li>Seleziona <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html?lang=it">Set di dati</a> nella barra di navigazione a sinistra, quindi seleziona il set di dati a cui desideri imporre limitazioni.</li><li>Dalla visualizzazione dei dettagli del set di dati, seleziona la scheda <b>Governance dei dati</b>.</li><li>Seleziona i campi del set di dati che desideri limitare, quindi seleziona <b>Modifica etichette di governance</b> per etichettare i dati in base a restrizioni di utilizzo.</li><li>Dopo aver etichettato i dati, seleziona <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=it">Criteri</a> nella barra di navigazione a sinistra, quindi seleziona <b>Crea criterio</b>.</li><li>Scegli di creare un <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=it#create-governance-policy">Criterio di governance dei dati</a>, quindi seleziona le etichette di utilizzo dei dati applicabili al criterio.</li><li>Seleziona le azioni di marketing che il criterio dovrà rifiuterà per i dati contenenti tali etichette. Dopo aver creato il criterio, selezionalo dall’elenco e abilitalo utilizzando l’interruttore nella barra a destra.</li><li>Per ogni criterio abilitato, Platform impedisce che i dati contenenti le etichette specificate possano essere utilizzati nelle azioni di marketing definite. Questo viene eseguito automaticamente quando si tenta di attivare i dati con la relativa etichetta in una destinazione a cui sono associate le specifiche azioni di marketing (casi d’uso).</li></ol>"
+>abstract="<ol><li>Seleziona <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html?lang=it">Set di dati</a> nella barra di navigazione a sinistra, quindi seleziona il set di dati a cui desideri imporre limitazioni.</li><li>Dalla visualizzazione dei dettagli del set di dati, seleziona la scheda <b>Governance dei dati</b>.</li><li>Seleziona i campi del set di dati che desideri limitare, quindi seleziona <b>Modifica etichette di governance</b> per etichettare i dati in base a restrizioni di utilizzo.</li><li>Dopo aver etichettato i dati, seleziona <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=it">Criteri</a> nella barra di navigazione a sinistra, quindi seleziona <b>Crea criterio</b>.</li><li>Scegli di creare un <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=it#create-governance-policy">Criterio di governance dei dati</a>, quindi seleziona le etichette di utilizzo dei dati applicabili al criterio.</li><li>Seleziona le azioni di marketing che il criterio dovrà rifiuterà per i dati contenenti tali etichette. Dopo aver creato il criterio, selezionalo dall’elenco e abilitalo utilizzando l’interruttore nella barra a destra.</li><li>Per ogni criterio abilitato, Experience Platform impedisce l’utilizzo di dati contenenti le etichette specificate per le azioni di marketing definite. Questo viene eseguito automaticamente quando si tenta di attivare i dati con la relativa etichetta in una destinazione a cui sono associate le specifiche azioni di marketing (casi d’uso).</li></ol>"
 
 >[!IMPORTANT]
 >
->Le etichette non possono più essere applicate ai campi a livello di set di dati. Questo flusso di lavoro è stato dichiarato obsoleto a favore dell’applicazione di etichette a livello di schema. Eventuali etichette applicate in precedenza a livello di oggetto del set di dati continueranno a essere supportate tramite l’interfaccia utente di Platform fino al 31 maggio 2024. Per garantire che le etichette siano coerenti in tutti gli schemi, tutte le etichette precedentemente associate ai campi a livello di set di dati devono essere migrate a livello di schema da te nel corso dell’anno successivo. Consulta la documentazione per le istruzioni su [come migrare le etichette applicate in precedenza dal set di dati al livello dello schema](../e2e.md#migrate-labels).
+>Le etichette non possono più essere applicate ai campi a livello di set di dati. Questo flusso di lavoro è stato dichiarato obsoleto a favore dell’applicazione di etichette a livello di schema. Eventuali etichette applicate in precedenza a livello di oggetto set di dati continueranno a essere supportate tramite l’interfaccia utente di Experience Platform fino al 31 maggio 2024. Per garantire che le etichette siano coerenti in tutti gli schemi, tutte le etichette precedentemente associate ai campi a livello di set di dati devono essere migrate a livello di schema da te nel corso dell’anno successivo. Consulta la documentazione per le istruzioni su [come migrare le etichette applicate in precedenza dal set di dati al livello dello schema](../e2e.md#migrate-labels).
 
 Le etichette possono essere applicate all&#39;intero set di dati dalla scheda **[!UICONTROL Governance dei dati]** dell&#39;area di lavoro **[!UICONTROL Set di dati]**. L’area di lavoro ti consente di gestire le etichette di utilizzo dei dati a livello di set di dati.
 
@@ -120,7 +120,7 @@ L&#39;opzione **[!UICONTROL Mostra etichette ereditate]** è attivata per impost
 >[!CONTEXTUALHELP]
 >id="platform_governance_createlabels"
 >title="Create labels (Creare etichette)"
->abstract="Le etichette consentono di classificare set di dati e campi in base ai criteri di utilizzo applicati a tali dati. Platform fornisce un set standard di etichette da utilizzare, ma puoi anche creare etichette personalizzate specifiche per la tua organizzazione."
+>abstract="Le etichette consentono di classificare set di dati e campi in base ai criteri di utilizzo applicati a tali dati. Experience Platform fornisce un set standard di etichette da utilizzare, ma puoi anche creare etichette personalizzate specifiche per la tua organizzazione."
 
 Puoi creare etichette di utilizzo personalizzate all&#39;interno dell&#39;area di lavoro **[!UICONTROL Criteri]** nell&#39;interfaccia utente [!DNL Experience Platform]. Seleziona **[!UICONTROL Criteri]** nell&#39;area di navigazione a sinistra, quindi seleziona **[!UICONTROL Etichette]** per visualizzare un elenco di etichette esistenti. Da qui, seleziona **[!UICONTROL Crea etichetta]**.
 
