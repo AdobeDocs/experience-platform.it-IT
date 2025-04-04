@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Endpoint API delle metriche
 description: Scopri come recuperare le metriche di osservabilità in Experience Platform utilizzando l’API Observability Insights.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 3b217f7bcb60f762b5d380d82076cfb17d7a2d13
 workflow-type: tm+mt
-source-wordcount: '1278'
+source-wordcount: '1294'
 ht-degree: 4%
 
 ---
@@ -277,7 +277,7 @@ Nella tabella seguente sono elencati i diversi codici di errore che possono esse
 
 | Codice errore | Titolo | Descrizione |
 | --- | --- | --- |
-| `INSGHT-1000-400` | Payload di richiesta non valido | Si è verificato un errore nel payload della richiesta. Assicurati di avere la stessa formattazione del payload mostrata [sopra](#v2). Questo errore può essere attivato da uno dei motivi seguenti:<ul><li>Campi obbligatori mancanti come `aggregator`</li><li>Metriche non valide</li><li>La richiesta contiene un aggregatore non valido</li><li>Una data di inizio segue una data di fine</li></ul> |
+| `INSGHT-1000-400` | Payload di richiesta non valido | Si è verificato un errore nel payload della richiesta. Assicurati di avere la stessa formattazione del payload mostrata [sopra](#v2). Questo errore può essere attivato da uno dei motivi seguenti:<ul><li>Campi obbligatori mancanti come `aggregator`</li><li>Metriche non valide</li><li>La richiesta contiene un aggregatore non valido</li><li>Una data di inizio segue una data di fine</li><li>La richiesta ha un intervallo di tempo (tra la data di inizio e la data di fine) superiore a 32 giorni</li></ul> |
 | `INSGHT-1001-400` | Query delle metriche non riuscita | Si è verificato un errore durante il tentativo di eseguire una query sul database delle metriche a causa di una richiesta non valida o perché la query stessa non è analizzabile. Prima di riprovare, assicurati che la richiesta sia formattata correttamente. |
 | `INSGHT-1001-500` | Query delle metriche non riuscita | Si è verificato un errore durante il tentativo di eseguire una query sul database delle metriche a causa di un errore del server. Riprova e, se il problema persiste, contatta il supporto Adobe. |
 | `INSGHT-1002-500` | Errore di servizio | Impossibile elaborare la richiesta a causa di un errore interno. Riprova e, se il problema persiste, contatta il supporto Adobe. |
