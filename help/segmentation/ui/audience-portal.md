@@ -2,9 +2,9 @@
 title: Panoramica di Audience Portal
 description: Scopri come utilizzare Audience Portal per visualizzare, gestire e creare tipi di pubblico in Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: c1f06b14cb33a0fc29a50a2851c1fb52ae82c45d
+source-git-commit: cfa8b24784ed24384131fe1248bb3f7dd41214c6
 workflow-type: tm+mt
-source-wordcount: '4356'
+source-wordcount: '4371'
 ht-degree: 3%
 
 ---
@@ -98,7 +98,7 @@ Puoi aggiungere campi aggiuntivi a Audience Portal selezionando ![l&#39;icona de
 | ----- | ----------- |
 | [!UICONTROL Nome] | Il nome del pubblico. |
 | [!UICONTROL Conteggio dei profili] | Il numero totale di profili idonei per il pubblico. |
-| [!UICONTROL Origin] | L’origine del pubblico. Indica da dove proviene il pubblico. I valori possibili includono Segmentation Service, Caricamento personalizzato, Composizione pubblico e Audience Manager. |
+| [!UICONTROL Origin] | L’origine del pubblico. Indica da dove proviene il pubblico. I valori possibili includono [Servizio di segmentazione](#segment-builder), [Caricamento personalizzato](#import-audience), [Composizione pubblico](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [Pubblico simile](../types/lookalike-audiences.md), [Composizione pubblico federato](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [Data Distiller](#data-distiller) e [AJO B2B](https://experienceleague.adobe.com/it/docs/journey-optimizer-b2b/user/guide-overview). |
 | [!UICONTROL Stato del ciclo di vita] | Stato del pubblico. I valori possibili per questo campo includono `Draft`, `Inactive` e `Published`. Ulteriori informazioni sugli stati del ciclo di vita, compreso il significato dei diversi stati e come spostare i tipi di pubblico in diversi stati del ciclo di vita, sono disponibili nella sezione [lifecycle status delle domande frequenti sulla segmentazione](../faq.md#lifecycle-status). |
 | [!UICONTROL Frequenza aggiornamento] | Valore che indica la frequenza con cui vengono aggiornati i dati del pubblico. I valori possibili per questo campo includono [!UICONTROL Batch], [!UICONTROL Streaming], [!UICONTROL Edge] e [!UICONTROL Non pianificato]. |
 | [!UICONTROL Ultimo aggiornamento eseguito da] | Nome dell’ultima persona che ha aggiornato il pubblico. |

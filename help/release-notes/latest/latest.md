@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform - Marzo 2025
 description: Note sulla versione di Adobe Experience Platform di marzo 2025.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: edcdf84a8cb954c15f7dd235fb14cf14e11e22c8
+source-git-commit: f0879683629ba10ed1b799e52f0adf332f079daf
 workflow-type: tm+mt
 source-wordcount: '1250'
-ht-degree: 95%
+ht-degree: 93%
 
 ---
 
@@ -89,8 +89,8 @@ Utilizza le origini in Experience Platform per acquisire dati da un’applicazio
 
 | Funzione | Descrizione |
 | --- | --- |
-| [!DNL Bombora Intent] | L’origine [!DNL Bombora Intent] è ora disponibile nel catalogo delle origini. Utilizza questa origine per: <ul><li>Integrare i dati relativi all’intento di aumento dell’azienda Bombora per identificare gli account che stanno ricercando attivamente i tuoi prodotti o servizi.</li><li>Dare la priorità agli account nel mercato per creare segmenti precisi ed eseguire campagne ABM iper-mirate, affinché le tue attività di marketing si concentrino sugli account che hanno più probabilità di conversione.</li><li>Sfruttare strategie basate sull’intento per ottimizzare la spesa pubblicitaria, aumentare il coinvolgimento e massimizzare il ROI.</li></ul> Per ulteriori informazioni, consulta la guida sulla [connessione del tuo account [!DNL Bombora]  a Experience Platform](../../sources/tutorials/ui/create/data-partners/bombora.md). |
-| [!DNL Demandbase Intent] | L’origine [!DNL Demandbase Intent] è ora disponibile nel catalogo delle origini. Utilizza questa origine per: <ul><li>Integrare i dati di Intento account di Demandbase per identificare gli account con interessi elevati in base a coinvolgimenti in tempo reale.</li><li>Dando priorità ai segnali di intento più forti, puoi creare segmenti precisi e distribuire campagne iper-mirate per garantire che le attività di marketing si concentrino sugli account che hanno più probabilità di conversione.</li><li>Attivare strategie basate sull’intento per consentire l’ottimizzazione della spesa pubblicitaria, un maggiore coinvolgimento e un ROI più elevato.</li></ul> Per ulteriori informazioni, consulta la guida sulla [connessione del tuo account  [!DNL Demandbase]  a Experience Platform](../../sources/tutorials/ui/create/data-partners/demandbase.md). |
+| [!DNL Bombora Intent] | L&#39;origine [!DNL Bombora Intent] è ora disponibile nel catalogo delle origini. Utilizza questa origine per: <ul><li>Integrare i dati relativi all’intento di aumento dell’azienda Bombora per identificare gli account che stanno ricercando attivamente i tuoi prodotti o servizi.</li><li>Dare la priorità agli account nel mercato per creare segmenti precisi ed eseguire campagne ABM iper-mirate, affinché le tue attività di marketing si concentrino sugli account che hanno più probabilità di conversione.</li><li>Sfruttare strategie basate sull’intento per ottimizzare la spesa pubblicitaria, aumentare il coinvolgimento e massimizzare il ROI.</li></ul> Per ulteriori informazioni, consulta la guida sulla [connessione del tuo account [!DNL Bombora]  a Experience Platform](../../sources/tutorials/ui/create/data-partners/bombora.md). |
+| [!DNL Demandbase Intent] | Il codice sorgente di [!DNL Demandbase Intent] è ora disponibile nel catalogo delle sorgenti. Utilizza questa origine per: <ul><li>Integrare i dati di Intento account di Demandbase per identificare gli account con interessi elevati in base a coinvolgimenti in tempo reale.</li><li>Dando priorità ai segnali di intento più forti, puoi creare segmenti precisi e distribuire campagne iper-mirate per garantire che le attività di marketing si concentrino sugli account che hanno più probabilità di conversione.</li><li>Attivare strategie basate sull’intento per consentire l’ottimizzazione della spesa pubblicitaria, un maggiore coinvolgimento e un ROI più elevato.</li></ul> Per ulteriori informazioni, consulta la guida sulla [connessione del tuo account  [!DNL Demandbase]  a Experience Platform](../../sources/tutorials/ui/create/data-partners/demandbase.md). |
 
 {style="table-layout:auto"}
 
