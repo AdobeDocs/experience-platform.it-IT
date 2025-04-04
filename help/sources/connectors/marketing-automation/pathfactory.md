@@ -4,9 +4,9 @@ description: Scopri come collegare PathFactory a Adobe Experience Platform utili
 last-substantial-update: 2024-04-30T00:00:00Z
 badge: Beta
 exl-id: befb73c4-fd6a-4512-9124-d23a1c27e0e0
-source-git-commit: ca17854830edabaf2bd74265258d6f0096f2888e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '467'
 ht-degree: 3%
 
 ---
@@ -45,7 +45,7 @@ Prima di iniziare a integrare i connettori [[!DNL PathFactory]](https://www.path
 
 ### Ottenere credenziali e token di accesso {#gather-credentials}
 
-Per connettere [!DNL PathFactory] a Experience Platform, è necessario fornire le credenziali seguenti:
+Per connettere [!DNL PathFactory] ad Experience Platform, è necessario fornire le seguenti credenziali:
 
 | Credenziali | Descrizione | Endpoint |
 | --- | --- | --- |
@@ -61,12 +61,12 @@ Per istruzioni dettagliate su come ottenere il nome utente, la password, il domi
 
 ### Configurare le autorizzazioni su Experience Platform
 
-Per connettere l&#39;account [!DNL PathFactory] all&#39;Experience Platform, è necessario avere entrambe le autorizzazioni **[!UICONTROL Visualizza origini]** e **[!UICONTROL Gestisci origini]** abilitate per il proprio account. Contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie. Per ulteriori informazioni, leggere la [guida all&#39;interfaccia utente per il controllo degli accessi](../../../access-control/ui/overview.md).
+Per connettere l&#39;account [!DNL PathFactory] ad Experience Platform, è necessario che per l&#39;account siano abilitate le autorizzazioni **[!UICONTROL Visualizza origini]** e **[!UICONTROL Gestisci origini]**. Contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie. Per ulteriori informazioni, leggere la [guida all&#39;interfaccia utente per il controllo degli accessi](../../../access-control/ui/overview.md).
 
-## Connetti [!DNL PathFactory] a Platform {#pathfactory-connect}
+## Connetti [!DNL PathFactory] ad Experience Platform {#pathfactory-connect}
 
-La documentazione seguente fornisce informazioni su come connettere [!DNL PathFactory] a Platform tramite API o tramite l&#39;interfaccia utente:
+La documentazione seguente fornisce informazioni su come connettere [!DNL PathFactory] ad Experience Platform tramite API o tramite l&#39;interfaccia utente:
 
-* [Crea una connessione di origine e un flusso di dati per portare [!DNL PathFactory] dati in Platform tramite API](../../tutorials/api/create/marketing-automation/pathfactory.md).
+* [Crea una connessione di origine e un flusso di dati per portare [!DNL PathFactory] dati ad Experience Platform tramite API](../../tutorials/api/create/marketing-automation/pathfactory.md).
 * [Connetti il tuo account [!DNL PathFactory] ad Experience Platform utilizzando l&#39;interfaccia utente](../../tutorials/ui/create/marketing-automation/pathfactory.md).
 * [Creare un flusso di dati per una connessione di origine utilizzando l&#39;interfaccia utente](../../tutorials/ui/dataflow/marketing-automation.md).

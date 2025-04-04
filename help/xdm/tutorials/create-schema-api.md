@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;modello dati;modello dati;modello dati;modello dati;registro schema;schema;schema;schemi;schemi;creare
+keywords: Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;Experience data model;Experience data model;Experience Data Model;modello dati;modello dati;modello dati;modello dati;registro schema;schema;schema;schema;schemi;creare;;home;popular topic;api;API;XDM;XDM system;experience data model;Experience data model;data model;data model;Data model;schema registry;schema Registry;schema;schema;schema;schemi;creare
 solution: Experience Platform
 title: Creare uno schema utilizzando l’API Schema Registry
 type: Tutorial
 description: Questa esercitazione utilizza l’API Schema Registry per illustrare i passaggi necessari per comporre uno schema utilizzando una classe standard.
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
-source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2583'
+source-wordcount: '2584'
 ht-degree: 3%
 
 ---
 
 # Creare uno schema utilizzando l&#39;API [!DNL Schema Registry]
 
-[!DNL Schema Registry] viene utilizzato per accedere a [!DNL Schema Library] in Adobe Experience Platform. [!DNL Schema Library] contiene le risorse rese disponibili da Adobe, dai partner [!DNL Experience Platform] e dai fornitori di cui utilizzi le applicazioni. Il Registro di sistema fornisce un’interfaccia utente e un’API RESTful da cui tutte le risorse di libreria disponibili sono accessibili.
+[!DNL Schema Registry] viene utilizzato per accedere a [!DNL Schema Library] in Adobe Experience Platform. [!DNL Schema Library] contiene le risorse rese disponibili da Adobe, dai partner di [!DNL Experience Platform] e dai fornitori di cui utilizzi le applicazioni. Il Registro di sistema fornisce un’interfaccia utente e un’API RESTful da cui tutte le risorse di libreria disponibili sono accessibili.
 
 Questa esercitazione utilizza l&#39;API [!DNL Schema Registry] per illustrare i passaggi necessari per comporre uno schema utilizzando una classe standard. Se si preferisce utilizzare l&#39;interfaccia utente in [!DNL Experience Platform], l&#39;[esercitazione sull&#39;editor di schemi](create-schema-ui.md) fornisce istruzioni dettagliate per l&#39;esecuzione di azioni simili nell&#39;editor di schemi.
 
 >[!NOTE]
 >
->Se acquisisci dati CSV in Platform, puoi [mappare tali dati su uno schema XDM creato dai consigli generati dall&#39;intelligenza artificiale](../../ingestion/tutorials/map-csv/recommendations.md) (attualmente in versione beta) senza dover creare manualmente lo schema.
+>Se acquisisci dati CSV in Experience Platform, puoi [mappare tali dati su uno schema XDM creato dai consigli generati dall&#39;intelligenza artificiale](../../ingestion/tutorials/map-csv/recommendations.md) (attualmente in versione beta) senza dover creare manualmente lo schema.
 
 ## Introduzione
 
@@ -29,7 +29,7 @@ Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Expe
 * [[!DNL Experience Data Model (XDM) System]](../home.md): framework standardizzato tramite il quale [!DNL Experience Platform] organizza i dati sull&#39;esperienza del cliente.
    * [Nozioni di base sulla composizione dello schema](../schema/composition.md): scopri i blocchi predefiniti di base degli schemi XDM, inclusi i principi chiave e le best practice nella composizione dello schema.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza [!DNL Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza [!DNL Experience Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 Prima di iniziare questo tutorial, consulta la [guida per gli sviluppatori](../api/getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente le chiamate all&#39;API [!DNL Schema Registry]. Ciò include `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni necessarie per effettuare le richieste (con particolare attenzione all&#39;intestazione `Accept` e ai suoi possibili valori).
 
@@ -43,7 +43,7 @@ Uno schema può essere considerato come il blueprint per i dati che desideri acq
 
 Il processo di composizione dello schema inizia con la selezione di una classe. La classe definisce gli aspetti comportamentali chiave dei dati (record vs serie temporali), nonché i campi minimi necessari per descrivere i dati che verranno acquisiti.
 
-Lo schema che si sta creando in questa esercitazione utilizza la classe [!DNL XDM Individual Profile]. [!DNL XDM Individual Profile] è una classe standard fornita da Adobe per la definizione del comportamento del record. Ulteriori informazioni sul comportamento sono disponibili in [nozioni di base sulla composizione dello schema](../schema/composition.md).
+Lo schema che si sta creando in questa esercitazione utilizza la classe [!DNL XDM Individual Profile]. [!DNL XDM Individual Profile] è una classe standard fornita da Adobe per la definizione del comportamento dei record. Ulteriori informazioni sul comportamento sono disponibili in [nozioni di base sulla composizione dello schema](../schema/composition.md).
 
 Per assegnare una classe, viene effettuata una chiamata API per creare (POST) un nuovo schema nel contenitore tenant. Questa chiamata include la classe che lo schema implementerà. Ogni schema può implementare una sola classe.
 
@@ -700,7 +700,7 @@ curl -X PATCH \
 
 ### Visualizza lo schema corrente
 
-Ora puoi eseguire una richiesta di GET per visualizzare lo schema corrente e vedere come i gruppi di campi aggiunti hanno contribuito alla struttura complessiva dello schema.
+Ora puoi eseguire una richiesta GET per visualizzare lo schema corrente e vedere come i gruppi di campi aggiunti hanno contribuito alla struttura generale dello schema.
 
 **Formato API**
 
@@ -1065,7 +1065,7 @@ La risposta ora include un riferimento (`$ref`) al tipo di dati nell&#39;oggetto
 }
 ```
 
-Se si esegue una richiesta di GET per cercare lo schema ora, la proprietà `loyaltyTier` mostra il riferimento al tipo di dati in `meta:referencedFrom`:
+Se si esegue una richiesta GET per cercare lo schema ora, la proprietà `loyaltyTier` mostra il riferimento al tipo di dati in `meta:referencedFrom`:
 
 ```JSON
 "_{TENANT_ID}": {
@@ -1185,7 +1185,7 @@ Dopo aver applicato un descrittore di identità primaria allo schema, è possibi
 
 ### Aggiungi un tag `union`
 
-Per includere uno schema nella visualizzazione unione unita, è necessario aggiungere il tag `union` all&#39;attributo `meta:immutableTags` dello schema. Questa operazione viene eseguita tramite una richiesta PATCH per aggiornare lo schema e aggiungere un array `meta:immutableTags` con un valore di `union`.
+Per includere uno schema nella visualizzazione unione unita, è necessario aggiungere il tag `union` all&#39;attributo `meta:immutableTags` dello schema. Questa operazione viene eseguita tramite una richiesta di PATCH per aggiornare lo schema e aggiungere un array `meta:immutableTags` con un valore di `union`.
 
 **Formato API**
 
@@ -1298,7 +1298,7 @@ La risposta mostra che l&#39;operazione è stata eseguita correttamente e lo sch
 
 ### Elencare schemi in un’unione
 
-Lo schema è stato aggiunto all&#39;unione [!DNL XDM Individual Profile]. Per visualizzare un elenco di tutti gli schemi che fanno parte della stessa unione, puoi eseguire una richiesta di GET utilizzando i parametri di query per filtrare la risposta.
+Lo schema è stato aggiunto all&#39;unione [!DNL XDM Individual Profile]. Per visualizzare un elenco di tutti gli schemi che fanno parte della stessa unione, puoi eseguire una richiesta GET utilizzando i parametri di query per filtrare la risposta.
 
 Utilizzando il parametro di query `property`, è possibile specificare che vengano restituiti solo gli schemi contenenti un campo `meta:immutableTags` con un `meta:class` uguale a `$id` della classe [!DNL XDM Individual Profile].
 
@@ -1374,7 +1374,7 @@ Seguendo questa esercitazione, hai composto correttamente uno schema utilizzando
 
 Lo schema Membri fedeltà completo, creato durante questa esercitazione, è disponibile nell’appendice che segue. Osservando lo schema, puoi vedere come i gruppi di campi contribuiscono alla struttura complessiva e quali campi sono disponibili per l’acquisizione dei dati.
 
-Dopo aver creato più di uno schema, puoi definire le relazioni tra di essi tramite l’utilizzo di descrittori di relazione. Per ulteriori informazioni, consulta l&#39;esercitazione per [definire una relazione tra due schemi](relationship-api.md). Per esempi dettagliati su come eseguire tutte le operazioni (GET, POST, PUT, PATCH e DELETE) nel Registro di sistema, fare riferimento alla [Guida per gli sviluppatori del Registro di sistema](../api/getting-started.md) durante l&#39;utilizzo dell&#39;API.
+Dopo aver creato più di uno schema, puoi definire le relazioni tra di essi tramite l’utilizzo di descrittori di relazione. Per ulteriori informazioni, consulta l&#39;esercitazione per [definire una relazione tra due schemi](relationship-api.md). Per esempi dettagliati su come eseguire tutte le operazioni (GET, POST, PUT, PATCH e DELETE) nel Registro di sistema, consulta la [Guida per gli sviluppatori del Registro di sistema](../api/getting-started.md) durante l&#39;utilizzo dell&#39;API.
 
 ## Appendice {#appendix}
 

@@ -2,9 +2,9 @@
 title: Panoramica dell’estensione Adobe Media Analytics for Audio and Video
 description: Scopri l’estensione tag Adobe Media Analytics for Audio and Video in Adobe Experience Platform.
 exl-id: 426cfd08-aead-4b35-824c-45494bca2fc8
-source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '949'
+source-wordcount: '950'
 ht-degree: 97%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 97%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Utilizza questa documentazione per avere maggiori informazioni sull&#39;installazione, la configurazione e l&#39;implementazione dell&#39;estensione Adobe Media Analytics for Audio and Video (estensione Media Analytics). Sono incluse le opzioni disponibili quando si utilizza questa estensione per generare una regola, insieme a esempi e collegamenti a campioni.
 
@@ -178,7 +178,7 @@ L&#39;estensione MA espone i moduli condivisi `get-instance` e `media-heartbeat`
 
 >[!NOTE]
 >
->**Test:** per questa versione, per testare l’estensione devi caricarla in [Platform](../../../extension-dev/submit/upload-and-test.md), dove puoi accedere a tutte le estensioni dipendenti.
+>**Test:** Per questa versione, per testare l&#39;estensione devi caricarla in [Experience Platform](../../../extension-dev/submit/upload-and-test.md), dove puoi accedere a tutte le estensioni dipendenti.
 
 
 <!--

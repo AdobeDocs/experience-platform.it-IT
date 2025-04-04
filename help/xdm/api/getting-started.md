@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;api;API;XDM;XDM system;Experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;
+keywords: Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;Experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;
 solution: Experience Platform
 title: Guida introduttiva all’API Schema Registry
 description: Questo documento fornisce un’introduzione ai concetti di base che è necessario conoscere prima di tentare di effettuare chiamate all’API Schema Registry.
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
-source-git-commit: eb1cf204e95591082b27dc97cd3c709a23b20b08
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1361'
+source-wordcount: '1364'
 ht-degree: 5%
 
 ---
@@ -22,29 +22,29 @@ L’utilizzo della guida per sviluppatori richiede una buona conoscenza dei segu
 * [[!DNL Experience Data Model (XDM) System]](../home.md): framework standardizzato tramite il quale [!DNL Experience Platform] organizza i dati sull&#39;esperienza del cliente.
    * [Nozioni di base sulla composizione dello schema](../schema/composition.md): scopri i blocchi predefiniti di base degli schemi XDM.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza [!DNL Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza [!DNL Experience Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 XDM utilizza la formattazione dello schema JSON per descrivere e convalidare la struttura dei dati acquisiti sull’esperienza del cliente. È pertanto consigliabile rivedere la [documentazione ufficiale dello schema JSON](https://json-schema.org/) per comprendere meglio questa tecnologia sottostante.
 
 ## Lettura delle chiamate API di esempio
 
-La documentazione API [!DNL Schema Registry] fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere le chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di Experience Platform.
+La documentazione API [!DNL Schema Registry] fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di Experience Platform.
 
 ## Raccogliere i valori per le intestazioni richieste
 
-Per effettuare chiamate alle API [!DNL Platform], devi prima completare l&#39;[esercitazione di autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
+Per effettuare chiamate alle API [!DNL Experience Platform], devi prima completare l&#39;[esercitazione di autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Tutte le risorse in [!DNL Experience Platform], incluse quelle appartenenti a [!DNL Schema Registry], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API [!DNL Platform] richiedono un&#39;intestazione che specifichi il nome della sandbox in cui verrà eseguita l&#39;operazione:
+Tutte le risorse in [!DNL Experience Platform], incluse quelle appartenenti a [!DNL Schema Registry], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API [!DNL Experience Platform] richiedono un&#39;intestazione che specifichi il nome della sandbox in cui verrà eseguita l&#39;operazione:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulle sandbox in [!DNL Platform], consulta la [documentazione sulle sandbox](../../sandboxes/home.md).
+>Per ulteriori informazioni sulle sandbox in [!DNL Experience Platform], consulta la [documentazione sulle sandbox](../../sandboxes/home.md).
 
 Tutte le richieste di ricerca (GET) per [!DNL Schema Registry] richiedono un&#39;intestazione `Accept` aggiuntiva, il cui valore determina il formato delle informazioni restituite dall&#39;API. Per ulteriori dettagli, consulta la sezione [Accept header](#accept) di seguito.
 
@@ -54,7 +54,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’
 
 ## Conoscere il TENANT_ID {#know-your-tenant_id}
 
-Nelle guide API verranno visualizzati i riferimenti a `TENANT_ID`. Questo ID viene utilizzato per garantire che le risorse create abbiano uno spazio dei nomi corretto e siano contenute all’interno dell’organizzazione. Se non conosci il tuo ID, puoi accedervi eseguendo la seguente richiesta di GET:
+Nelle guide API verranno visualizzati i riferimenti a `TENANT_ID`. Questo ID viene utilizzato per garantire che le risorse create abbiano uno spazio dei nomi corretto e siano contenute all’interno dell’organizzazione. Se non conosci il tuo ID, puoi accedervi eseguendo la seguente richiesta GET:
 
 **Formato API**
 
@@ -158,7 +158,7 @@ Le chiamate all&#39;API [!DNL Schema Registry] richiedono l&#39;utilizzo di `CON
 
 ### Contenitore globale
 
-Il contenitore `global` contiene tutti gli Adobi standard e [!DNL Experience Platform] classi, gruppi di campi di schema, tipi di dati e schemi forniti dal partner. È possibile eseguire solo richieste di elenco e ricerca (GET) per il contenitore `global`.
+Il contenitore `global` contiene tutte le classi, i gruppi di campi dello schema, i tipi di dati e gli schemi standard forniti da Adobe e dal partner [!DNL Experience Platform]. È possibile eseguire solo richieste di elenco e ricerca (GET) sul contenitore `global`.
 
 Un esempio di chiamata che utilizza il contenitore `global` si presenta come segue:
 
@@ -216,13 +216,13 @@ Nella tabella seguente sono elencati i valori di intestazione `Accept` compatibi
 
 >[!NOTE]
 >
->Platform attualmente supporta una sola versione principale per ogni schema (`1`). Pertanto, il valore per `version` deve essere sempre `1` durante l&#39;esecuzione delle richieste di ricerca per restituire la versione secondaria più recente dello schema. Per ulteriori informazioni sul controllo delle versioni dello schema, consulta la sottosezione seguente.
+>Experience Platform attualmente supporta una sola versione principale per ogni schema (`1`). Pertanto, il valore per `version` deve essere sempre `1` durante l&#39;esecuzione delle richieste di ricerca per restituire la versione secondaria più recente dello schema. Per ulteriori informazioni sul controllo delle versioni dello schema, consulta la sottosezione seguente.
 
 ### Controllo delle versioni degli schemi {#versioning}
 
-Alle versioni dello schema viene fatto riferimento da `Accept` intestazioni nell&#39;API Schema Registry e nelle proprietà `schemaRef.contentType` nei payload API del servizio Platform a valle.
+Alle versioni dello schema viene fatto riferimento da `Accept` intestazioni nell&#39;API Schema Registry e nelle proprietà `schemaRef.contentType` nei payload API del servizio Experience Platform a valle.
 
-Attualmente, Platform supporta solo una singola versione principale (`1`) per ogni schema. In base alle [regole di evoluzione dello schema](../schema/composition.md#evolution), ogni aggiornamento a uno schema deve essere non distruttivo, il che significa che le nuove versioni secondarie di uno schema (`1.2`, `1.3`, ecc.) sono sempre compatibili con le versioni precedenti di versioni secondarie. Pertanto, quando si specifica `version=1`, il registro dello schema restituisce sempre la **ultima** versione principale `1` di uno schema, il che significa che le versioni secondarie precedenti non vengono restituite.
+Al momento, Experience Platform supporta solo una singola versione principale (`1`) per ogni schema. In base alle [regole di evoluzione dello schema](../schema/composition.md#evolution), ogni aggiornamento a uno schema deve essere non distruttivo, il che significa che le nuove versioni secondarie di uno schema (`1.2`, `1.3`, ecc.) sono sempre compatibili con le versioni secondarie precedenti. Pertanto, quando si specifica `version=1`, il registro dello schema restituisce sempre la **ultima** versione principale `1` di uno schema, il che significa che le versioni secondarie precedenti non vengono restituite.
 
 >[!NOTE]
 >

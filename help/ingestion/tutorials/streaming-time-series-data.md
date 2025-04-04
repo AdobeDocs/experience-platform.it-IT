@@ -5,9 +5,9 @@ title: Trasmettere dati di serie temporali utilizzando le API Streaming Ingestio
 type: Tutorial
 description: Questa esercitazione ti aiuterà a iniziare a utilizzare le API Streaming Ingestion, che fanno parte delle API Adobe Experience Platform Data Ingestion Service.
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
-source-git-commit: 35ccc39fdfef31ca1f59e2e11f0d3d762e423635
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1210'
+source-wordcount: '1214'
 ht-degree: 2%
 
 ---
@@ -20,15 +20,15 @@ Questo tutorial ti aiuterà a iniziare a utilizzare le API Streaming Ingestion, 
 
 Questo tutorial richiede una conoscenza operativa di vari servizi Adobe Experience Platform. Prima di iniziare questo tutorial, consulta la documentazione dei seguenti servizi:
 
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): framework standardizzato tramite il quale [!DNL Platform] organizza i dati dell&#39;esperienza.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): framework standardizzato tramite il quale [!DNL Experience Platform] organizza i dati dell&#39;esperienza.
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): fornisce un profilo consumer unificato in tempo reale basato su dati aggregati provenienti da più origini.
 - [Guida per gli sviluppatori del Registro di schema](../../xdm/api/getting-started.md): guida completa che descrive ogni endpoint disponibile dell&#39;API [!DNL Schema Registry] e spiega come effettuare chiamate a tali endpoint. Ciò include la conoscenza di `{TENANT_ID}`, che viene visualizzato nelle chiamate in tutto questo tutorial, e di come creare schemi, utilizzati nella creazione di un set di dati per l’acquisizione.
 
 Inoltre, questo tutorial richiede che tu abbia già creato una connessione in streaming. Per ulteriori informazioni sulla creazione di una connessione in streaming, leggere l&#39;esercitazione [creare una connessione in streaming](./create-streaming-connection.md).
 
-### Utilizzo delle API di Platform
+### Utilizzo delle API di Experience Platform
 
-Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida in [guida introduttiva alle API di Platform](../../landing/api-guide.md).
+Per informazioni su come effettuare correttamente chiamate alle API di Experience Platform, consulta la guida introduttiva [alle API di Experience Platform](../../landing/api-guide.md).
 
 ## Componi uno schema basato sulla classe XDM ExperienceEvent
 
@@ -275,7 +275,7 @@ Per ulteriori informazioni sulla creazione di una connessione in streaming, legg
 
 ## Acquisire dati di serie temporali nella connessione streaming
 
-Dopo aver creato il set di dati, la connessione in streaming e il flusso di dati, puoi acquisire record JSON formattati XDM per acquisire i dati della serie temporale entro [!DNL Platform].
+Dopo aver creato il set di dati, la connessione in streaming e il flusso di dati, puoi acquisire record JSON formattati XDM per acquisire i dati della serie temporale entro [!DNL Experience Platform].
 
 **Formato API**
 
@@ -292,7 +292,7 @@ POST /collection/{CONNECTION_ID}?syncValidation=true
 
 L’acquisizione di dati di serie temporali in una connessione in streaming può essere eseguita con o senza il nome dell’origine.
 
-L’esempio di richiesta seguente acquisisce in Platform i dati di serie temporali con un nome di origine mancante. Se nei dati manca il nome dell’origine, questo aggiungerà l’ID di origine dalla definizione della connessione in streaming.
+La richiesta di esempio seguente acquisisce i dati della serie temporale con un nome di origine mancante in Experience Platform. Se nei dati manca il nome dell’origine, questo aggiungerà l’ID di origine dalla definizione della connessione in streaming.
 
 Sia `xdmEntity._id` che `xdmEntity.timestamp` sono campi obbligatori per i dati della serie temporale. L&#39;attributo `xdmEntity._id` rappresenta un identificatore univoco per il record stesso, **non** un ID univoco della persona o del dispositivo di cui è il record.
 
@@ -401,7 +401,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `{CONNECTION_ID}` | `inletId` della connessione in streaming creata in precedenza. |
-| `xactionId` | Un identificatore univoco generato lato server per il record appena inviato. Questo ID aiuta gli Adobi a tracciare il ciclo di vita di questo record attraverso vari sistemi e con il debug. |
+| `xactionId` | Un identificatore univoco generato lato server per il record appena inviato. Questo ID consente ad Adobe di tracciare il ciclo di vita di questo record attraverso vari sistemi e con il debug. |
 | `receivedTimeMs`: una marca temporale (epoca in millisecondi) che mostra l&#39;ora in cui è stata ricevuta la richiesta. |
 | `syncValidation.status` | Poiché è stato aggiunto il parametro di query `syncValidation=true`, verrà visualizzato questo valore. Se la convalida ha esito positivo, lo stato sarà `pass`. |
 
@@ -509,6 +509,6 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 
 ## Passaggi successivi
 
-Dopo aver letto questo documento, sarai in grado di acquisire i dati dei record in [!DNL Platform] utilizzando connessioni in streaming. Puoi provare a effettuare più chiamate con valori diversi e a recuperare i valori aggiornati. Inoltre, puoi iniziare a monitorare i dati acquisiti tramite l&#39;interfaccia utente [!DNL Platform]. Per ulteriori informazioni, consulta la [guida al monitoraggio dell&#39;acquisizione dei dati](../quality/monitor-data-ingestion.md).
+Dopo aver letto questo documento, sarai in grado di acquisire i dati dei record in [!DNL Experience Platform] utilizzando connessioni in streaming. Puoi provare a effettuare più chiamate con valori diversi e a recuperare i valori aggiornati. Inoltre, puoi iniziare a monitorare i dati acquisiti tramite l&#39;interfaccia utente [!DNL Experience Platform]. Per ulteriori informazioni, consulta la [guida al monitoraggio dell&#39;acquisizione dei dati](../quality/monitor-data-ingestion.md).
 
 Per ulteriori informazioni sull&#39;acquisizione in streaming in generale, consulta la [panoramica sull&#39;acquisizione in streaming](../streaming-ingestion/overview.md).

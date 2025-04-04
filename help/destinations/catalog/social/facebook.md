@@ -3,7 +3,7 @@ keywords: connessione facebook;facebook connection;facebook destinations;faceboo
 title: Connessione Facebook
 description: Attiva profili per le campagne Facebook per il targeting, la personalizzazione e l’eliminazione del pubblico in base alle e-mail con hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '2091'
 ht-degree: 6%
@@ -26,7 +26,7 @@ Per aiutarti a capire meglio come e quando utilizzare la destinazione [!DNL Face
 
 ### #1 del caso d’uso
 
-Un rivenditore online desidera raggiungere i clienti esistenti tramite piattaforme social e mostrare loro offerte personalizzate basate sui loro ordini precedenti. Il rivenditore online può acquisire gli indirizzi e-mail dal proprio CRM a Adobe Experience Platform, creare tipi di pubblico dai propri dati offline e inviare tali tipi di pubblico alla piattaforma social [!DNL Facebook], ottimizzando le spese pubblicitarie.
+Un retailer online vuole raggiungere i clienti esistenti tramite piattaforme social e mostrare loro offerte personalizzate basate sui loro ordini precedenti. Il retailer online può acquisire gli indirizzi e-mail dal proprio CRM per Adobe Experience Platform, creare tipi di pubblico dai propri dati offline e inviare tali tipi di pubblico alla piattaforma social [!DNL Facebook], ottimizzando le spese pubblicitarie.
 
 ### #2 del caso d’uso
 
@@ -44,8 +44,8 @@ Successivamente, possono utilizzare i propri dati offline, inclusi gli ID di isc
 |---|---|---|
 | GAID | GOOGLE ADVERTISING ID | Seleziona l’identità di destinazione GAID quando l’identità di origine è uno spazio dei nomi GAID. |
 | IDFA | Apple ID per inserzionisti | Selezionare l&#39;identità di destinazione IDFA quando l&#39;identità di origine è uno spazio dei nomi IDFA. |
-| phone_sha256 | Numeri di telefono con hash con algoritmo SHA256 | I numeri di telefono con hash SHA256 e testo normale sono supportati da Adobe Experience Platform. Segui le istruzioni riportate nella sezione [Requisiti di corrispondenza ID](#id-matching-requirements-id-matching-requirements) e utilizza gli spazi dei nomi appropriati rispettivamente per i numeri di telefono con testo normale e con hash. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Applica trasformazione]** per impostare [!DNL Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. |
-| email_lc_sha256 | Indirizzi e-mail con hash con algoritmo SHA256 | Adobe Experience Platform supporta sia gli indirizzi di posta elettronica in testo normale che quelli con hash SHA256. Segui le istruzioni riportate nella sezione [Requisiti di corrispondenza ID](#id-matching-requirements-id-matching-requirements) e utilizza gli spazi dei nomi appropriati rispettivamente per gli indirizzi e-mail in testo normale e con hash. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Applica trasformazione]** per impostare [!DNL Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. |
+| phone_sha256 | Numeri di telefono con hash con algoritmo SHA256 | I numeri di telefono con hash SHA256 e testo normale sono supportati da Adobe Experience Platform. Segui le istruzioni riportate nella sezione [Requisiti di corrispondenza ID](#id-matching-requirements-id-matching-requirements) e utilizza gli spazi dei nomi appropriati rispettivamente per i numeri di telefono con testo normale e con hash. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Applica trasformazione]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. |
+| email_lc_sha256 | Indirizzi e-mail con hash con algoritmo SHA256 | Adobe Experience Platform supporta sia gli indirizzi di posta elettronica in testo normale che quelli con hash SHA256. Segui le istruzioni riportate nella sezione [Requisiti di corrispondenza ID](#id-matching-requirements-id-matching-requirements) e utilizza gli spazi dei nomi appropriati rispettivamente per gli indirizzi e-mail in testo normale e con hash. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Applica trasformazione]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. |
 | extern_id | ID utente personalizzati | Seleziona questa identità di destinazione quando l&#39;identità di origine è uno spazio dei nomi personalizzato. |
 
 ## Tipi di pubblico supportati {#supported-audiences}
@@ -98,8 +98,8 @@ A seconda del tipo di ID inseriti in Adobe Experience Platform, devi rispettare 
 
 Esistono due metodi per attivare i numeri di telefono in [!DNL Facebook]:
 
-* **Acquisizione di numeri di telefono non elaborati**: è possibile acquisire numeri di telefono non elaborati nel formato [!DNL E.164] in [!DNL Platform]. Viene eseguito automaticamente l’hash al momento dell’attivazione. Se si sceglie questa opzione, assicurarsi di inserire sempre i numeri di telefono non elaborati nello spazio dei nomi `Phone_E.164`.
-* **Inserimento di numeri di telefono con hash**: è possibile inserire i numeri di telefono con hash prima dell&#39;acquisizione in [!DNL Platform]. Se scegli questa opzione, assicurati di acquisire sempre i numeri di telefono con hash nello spazio dei nomi `Phone_SHA256`.
+* **Acquisizione di numeri di telefono non elaborati**: è possibile acquisire numeri di telefono non elaborati nel formato [!DNL E.164] in [!DNL Experience Platform]. Viene eseguito automaticamente l’hash al momento dell’attivazione. Se si sceglie questa opzione, assicurarsi di inserire sempre i numeri di telefono non elaborati nello spazio dei nomi `Phone_E.164`.
+* **Inserimento di numeri di telefono con hash**: è possibile inserire i numeri di telefono con hash prima dell&#39;acquisizione in [!DNL Experience Platform]. Se scegli questa opzione, assicurati di acquisire sempre i numeri di telefono con hash nello spazio dei nomi `Phone_SHA256`.
 
 >[!NOTE]
 >
@@ -107,7 +107,7 @@ Esistono due metodi per attivare i numeri di telefono in [!DNL Facebook]:
 
 ## Requisiti di hashing delle e-mail {#email-hashing-requirements}
 
-Puoi eseguire l&#39;hashing degli indirizzi e-mail prima di acquisirli in Adobe Experience Platform, oppure utilizzare gli indirizzi e-mail in chiaro in Experience Platform e impostarli con [!DNL Platform] come hashing al momento dell&#39;attivazione.
+Puoi eseguire l&#39;hashing degli indirizzi e-mail prima di acquisirli in Adobe Experience Platform, oppure utilizzare gli indirizzi e-mail in chiaro in Experience Platform e impostarli con [!DNL Experience Platform] come hashing al momento dell&#39;attivazione.
 
 Per informazioni sull&#39;acquisizione di indirizzi e-mail in Experience Platform, consulta la [panoramica sull&#39;acquisizione batch](/help/ingestion/batch-ingestion/overview.md) e la [panoramica sull&#39;acquisizione in streaming](/help/ingestion/streaming-ingestion/overview.md).
 
@@ -122,8 +122,8 @@ Se scegli di eseguire l’hash degli indirizzi e-mail da solo, assicurati di sod
 
 >[!NOTE]
 >
->I dati degli spazi dei nomi senza hash vengono automaticamente sottoposti a hashing da [!DNL Platform] al momento dell&#39;attivazione.
-> L&#39;hash dei dati di origine degli attributi non viene eseguito automaticamente. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Applica trasformazione]** per impostare [!DNL Platform] per l&#39;hashing automatico dei dati all&#39;attivazione.
+>I dati degli spazi dei nomi senza hash vengono automaticamente sottoposti a hashing da [!DNL Experience Platform] al momento dell&#39;attivazione.
+> L&#39;hash dei dati di origine degli attributi non viene eseguito automaticamente. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Applica trasformazione]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione.
 > L&#39;opzione **[!UICONTROL Applica trasformazione]** viene visualizzata solo quando si selezionano gli attributi come campi di origine. Non viene visualizzato quando si scelgono gli spazi dei nomi.
 
 ![Applica controllo di trasformazione evidenziato nel passaggio di mappatura.](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
@@ -230,9 +230,9 @@ Di seguito è riportato un esempio di corretta mappatura identità durante l&#39
 Selezione dei campi di origine:
 
 * Selezionare lo spazio dei nomi `Email` come identità di origine se gli indirizzi e-mail utilizzati non sono con hash.
-* Seleziona lo spazio dei nomi `Email_LC_SHA256` come identità di origine se esegui l&#39;hashing degli indirizzi e-mail dei clienti al momento dell&#39;acquisizione dei dati in [!DNL Platform], in base a [!DNL Facebook] [requisiti di hashing delle e-mail](#email-hashing-requirements).
-* Selezionare lo spazio dei nomi `PHONE_E.164` come identità di origine se i dati sono costituiti da numeri di telefono senza hash. [!DNL Platform] eseguirà l&#39;hash dei numeri di telefono per soddisfare i requisiti di [!DNL Facebook].
-* Seleziona lo spazio dei nomi `Phone_SHA256` come identità di origine se hai aggiunto l&#39;hashing ai numeri di telefono al momento dell&#39;acquisizione dei dati in [!DNL Platform], in base ai [!DNL Facebook] [requisiti di hashing dei numeri di telefono](#phone-number-hashing-requirements).
+* Seleziona lo spazio dei nomi `Email_LC_SHA256` come identità di origine se esegui l&#39;hashing degli indirizzi e-mail dei clienti al momento dell&#39;acquisizione dei dati in [!DNL Experience Platform], in base a [!DNL Facebook] [requisiti di hashing delle e-mail](#email-hashing-requirements).
+* Selezionare lo spazio dei nomi `PHONE_E.164` come identità di origine se i dati sono costituiti da numeri di telefono senza hash. [!DNL Experience Platform] eseguirà l&#39;hash dei numeri di telefono per soddisfare i requisiti di [!DNL Facebook].
+* Seleziona lo spazio dei nomi `Phone_SHA256` come identità di origine se hai aggiunto l&#39;hashing ai numeri di telefono al momento dell&#39;acquisizione dei dati in [!DNL Experience Platform], in base ai [!DNL Facebook] [requisiti di hashing dei numeri di telefono](#phone-number-hashing-requirements).
 * Selezionare lo spazio dei nomi `IDFA` come identità di origine se i dati sono costituiti da [!DNL Apple] ID dispositivo.
 * Selezionare lo spazio dei nomi `GAID` come identità di origine se i dati sono costituiti da [!DNL Android] ID dispositivo.
 * Selezionare lo spazio dei nomi `Custom` come identità di origine se i dati sono costituiti da altri tipi di identificatori.
@@ -246,9 +246,9 @@ Selezione dei campi di destinazione:
 
 >[!IMPORTANT]
 >
->I dati degli spazi dei nomi senza hash vengono automaticamente sottoposti a hashing da [!DNL Platform] al momento dell&#39;attivazione.
+>I dati degli spazi dei nomi senza hash vengono automaticamente sottoposti a hashing da [!DNL Experience Platform] al momento dell&#39;attivazione.
 > 
->L&#39;hash dei dati di origine degli attributi non viene eseguito automaticamente. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Applica trasformazione]** per impostare [!DNL Platform] per l&#39;hashing automatico dei dati all&#39;attivazione.
+>L&#39;hash dei dati di origine degli attributi non viene eseguito automaticamente. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Applica trasformazione]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione.
 
 ![Applica controllo di trasformazione evidenziato nel passaggio di mappatura.](../../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 

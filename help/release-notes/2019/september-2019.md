@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: September 13, 2019
 author: ens28527
 exl-id: 7f503046-a3b4-4fdb-833c-4205b6e9fa04
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '531'
 ht-degree: 8%
@@ -36,13 +36,13 @@ Per ulteriori informazioni, consulta la [documentazione sull&#39;acquisizione de
 
 ## [!DNL Data Science Workspace] {#dsw}
 
-Adobe Experience Platform [!DNL Data Science Workspace] è un servizio completamente gestito all&#39;interno di [!DNL Experience Platform] che consente ai data scientist di generare senza problemi informazioni da dati e contenuti tra soluzioni Adobe e sistemi di terze parti tramite la creazione e l&#39;operazionalizzazione di modelli di apprendimento automatico. [!DNL Data Science Workspace] è strettamente integrato con [!DNL Platform] e potenzia il ciclo di vita end-to-end della data science, inclusa l&#39;esplorazione e la preparazione dei dati XDM, seguito dallo sviluppo e dall&#39;operazionalizzazione dei modelli per arricchire automaticamente [!DNL Real-Time Customer Profile] con Machine Learning Insights.
+Adobe Experience Platform [!DNL Data Science Workspace] è un servizio completamente gestito all&#39;interno di [!DNL Experience Platform] che consente ai data scientist di generare informazioni da dati e contenuti in soluzioni Adobe e sistemi di terze parti tramite la creazione e l&#39;operazionalizzazione di modelli di apprendimento automatico. [!DNL Data Science Workspace] è strettamente integrato con [!DNL Experience Platform] e potenzia il ciclo di vita end-to-end della data science, inclusa l&#39;esplorazione e la preparazione dei dati XDM, seguito dallo sviluppo e dall&#39;operazionalizzazione dei modelli per arricchire automaticamente [!DNL Real-Time Customer Profile] con Machine Learning Insights.
 
 **Nuove funzioni**
 
 | Funzione | Descrizione |
 | -----------| ---------- |
-| Pianificazione dei servizi tramite l’interfaccia utente | Integrato con il servizio di orchestrazione [!DNL Platform] per automatizzare l&#39;apprendimento e il punteggio del modello con pianificazioni definite dall&#39;utente tramite l&#39;interfaccia utente. |
+| Pianificazione dei servizi tramite l’interfaccia utente | Integrato con il servizio di orchestrazione [!DNL Experience Platform] per automatizzare l&#39;apprendimento e il punteggio del modello con pianificazioni definite dall&#39;utente tramite l&#39;interfaccia utente. |
 | [!DNL Service Gallery] | Sfoglia, monitora e accedi ai servizi di apprendimento automatico con la possibilità di pianificare processi di formazione e valutazione automatizzati, il tutto all&#39;interno di [!DNL Service Gallery] riprogettato. |
 | [!DNL JupyterLab] 5.0.0 | [!DNL JupyterLab] miglioramenti all&#39;interfaccia utente. |
 

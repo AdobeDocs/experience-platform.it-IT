@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;cloud storage data;streaming data;streaming data;streaming
+keywords: Experience Platform;home;argomenti popolari;archiviazione cloud dati;streaming dati;streaming dati;home;popular topic;cloud storage data;streaming data;streaming data;streaming
 solution: Experience Platform
 title: Creare un flusso di dati in streaming per i dati non elaborati utilizzando l’API del servizio Flusso
 type: Tutorial
-description: Questo tutorial illustra i passaggi per recuperare i dati in streaming e importarli in Platform utilizzando i connettori e le API di origine.
+description: Questo tutorial illustra i passaggi necessari per recuperare i dati in streaming e inviarli ad Experience Platform utilizzando i connettori e le API di origine.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1169'
+source-wordcount: '1180'
 ht-degree: 3%
 
 ---
@@ -20,16 +20,16 @@ Questa esercitazione descrive i passaggi per recuperare dati non elaborati da un
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): framework standardizzato in base al quale Experience Platform organizza i dati sull&#39;esperienza del cliente.
+- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): framework standardizzato tramite il quale Experience Platform organizza i dati sull&#39;esperienza del cliente.
    - [Nozioni di base sulla composizione dello schema](../../../../xdm/schema/composition.md): scopri i blocchi predefiniti di base degli schemi XDM, inclusi i principi chiave e le best practice nella composizione dello schema.
    - [Guida per gli sviluppatori del Registro di schema](../../../../xdm/api/getting-started.md): include informazioni importanti che è necessario conoscere per eseguire correttamente le chiamate all&#39;API del Registro di schema. Ciò include `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni necessarie per effettuare le richieste (con particolare attenzione all&#39;intestazione Accept e ai suoi possibili valori).
-- [[!DNL Catalog Service]](../../../../catalog/home.md): il catalogo è il sistema di registrazione per la posizione e la derivazione dei dati all&#39;interno di Experience Platform.
-- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md): l&#39;acquisizione in streaming per Platform fornisce agli utenti un metodo per inviare dati da dispositivi lato client e lato server a Experience Platform in tempo reale.
-- [Sandbox](../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+- [[!DNL Catalog Service]](../../../../catalog/home.md): il catalogo è il sistema di registrazione per la posizione e la derivazione dei dati in Experience Platform.
+- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md): l&#39;acquisizione in streaming per Experience Platform fornisce agli utenti un metodo per inviare dati in tempo reale da dispositivi lato client e lato server ad Experience Platform.
+- [Sandbox](../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Experience Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
-### Utilizzo delle API di Platform
+### Utilizzo delle API di Experience Platform
 
-Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida in [guida introduttiva alle API di Platform](../../../../landing/api-guide.md).
+Per informazioni su come effettuare correttamente chiamate alle API di Experience Platform, consulta la guida introduttiva [alle API di Experience Platform](../../../../landing/api-guide.md).
 
 ### Creare una connessione sorgente {#source}
 
@@ -41,7 +41,7 @@ Questo tutorial richiede anche un ID di connessione sorgente valido per un conne
 
 ## Creare uno schema XDM di destinazione {#target-schema}
 
-Per utilizzare i dati sorgente in Platform, è necessario creare uno schema di destinazione che strutturi i dati sorgente in base alle tue esigenze. Lo schema di destinazione viene quindi utilizzato per creare un set di dati di Platform in cui sono contenuti i dati di origine. Questo schema XDM di destinazione estende anche la classe XDM [!DNL Individual Profile].
+Affinché i dati sorgente possano essere utilizzati in Experience Platform, è necessario creare uno schema di destinazione per strutturare i dati sorgente in base alle tue esigenze. Lo schema di destinazione viene quindi utilizzato per creare un set di dati Experience Platform in cui sono contenuti i dati di origine. Questo schema XDM di destinazione estende anche la classe XDM [!DNL Individual Profile].
 
 Per creare uno schema XDM di destinazione, effettua una richiesta POST all&#39;endpoint `/schemas` dell&#39;[[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
@@ -204,9 +204,9 @@ In caso di esito positivo, la risposta restituisce un array contenente l’ID de
 
 ## Creare una connessione di destinazione {#target-connection}
 
-Le connessioni di Target creano e gestiscono una connessione di destinazione a Platform o a qualsiasi posizione in cui verranno recapitati i dati trasferiti. Le connessioni di Target contengono informazioni relative alla destinazione dei dati, al formato dei dati e all’ID della connessione di Target necessari per creare un flusso di dati. Le istanze di connessione di Target sono specifiche per un tenant e un’organizzazione.
+Le connessioni di Target creano e gestiscono una connessione di destinazione ad Experience Platform o a qualsiasi posizione a cui verranno recapitati i dati trasferiti. Le connessioni di Target contengono informazioni relative alla destinazione dei dati, al formato dei dati e all’ID della connessione di Target necessari per creare un flusso di dati. Le istanze di connessione di Target sono specifiche per un tenant e un’organizzazione.
 
-Per creare una connessione di destinazione, effettuare una richiesta POST all&#39;endpoint `/targetConnections` dell&#39;API [!DNL Flow Service]. Come parte della richiesta, devi fornire il formato dati, `dataSetId` recuperato nel passaggio precedente e l&#39;ID della specifica di connessione fissa associato a [!DNL Data Lake]. Questo ID è `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Per creare una connessione di destinazione, eseguire una richiesta POST all&#39;endpoint `/targetConnections` dell&#39;API [!DNL Flow Service]. Come parte della richiesta, devi fornire il formato dati, `dataSetId` recuperato nel passaggio precedente e l&#39;ID della specifica di connessione fissa associato a [!DNL Data Lake]. Questo ID è `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
 **Formato API**
 
@@ -325,7 +325,7 @@ In caso di esito positivo, la risposta restituisce i dettagli della mappatura ap
 
 ## Recuperare un elenco di specifiche del flusso di dati {#specs}
 
-Un flusso di dati è responsabile della raccolta dei dati dalle origini e della loro introduzione in Platform. Per creare un flusso di dati, devi prima ottenere le specifiche del flusso di dati eseguendo una richiesta di GET all&#39;API [!DNL Flow Service].
+Un flusso di dati è responsabile della raccolta dei dati dalle origini e della loro integrazione in Experience Platform. Per creare un flusso di dati, devi prima ottenere le specifiche del flusso di dati eseguendo una richiesta GET all&#39;API [!DNL Flow Service].
 
 **Formato API**
 
@@ -566,7 +566,7 @@ Gli esempi seguenti si applicano a tutti:
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato un flusso di dati per raccogliere i dati di streaming dal connettore di streaming. I dati in arrivo possono ora essere utilizzati dai servizi Platform a valle come [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i seguenti documenti:
+Seguendo questa esercitazione, hai creato un flusso di dati per raccogliere i dati di streaming dal connettore di streaming. I dati in arrivo possono ora essere utilizzati dai servizi Experience Platform a valle come [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i seguenti documenti:
 
 - [Panoramica di profilo cliente in tempo reale](../../../../profile/home.md)
 - [Panoramica di Data Science Workspace](../../../../data-science-workspace/home.md)

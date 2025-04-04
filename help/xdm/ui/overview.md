@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica dell’interfaccia utente degli schemi
 description: Questa panoramica descrive le principali funzionalità dell’area di lavoro Schemi in Experience Platform.
 exl-id: b6e089ce-cf9e-4150-92ab-368382a75049
-source-git-commit: 16d6090bc71dbdc9ab42db98eafa0ea5afb5967b
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '310'
 ht-degree: 9%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 9%
 
 L&#39;area di lavoro [!UICONTROL Schemi] nell&#39;interfaccia utente di Adobe Experience Platform consente di gestire le risorse Experience Data Model (XDM), inclusi schemi, classi, gruppi di campi di schema e tipi di dati. Puoi visualizzare ed esplorare le risorse di base fornite da Adobe e creare risorse e schemi personalizzati per la tua organizzazione.
 
-Per accedere all&#39;area di lavoro nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Schemi]** nella barra a sinistra.
+Per accedere all&#39;area di lavoro nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Schemi]** nella barra a sinistra.
 
-![L&#39;area di lavoro Schemi con Schemi evidenziati nell&#39;interfaccia utente di Platform ha lasciato la navigazione.](../images/ui/overview/schemas-tab.png)
+![L&#39;area di lavoro Schemi con Schemi evidenziati nell&#39;interfaccia utente di Experience Platform ha lasciato la navigazione.](../images/ui/overview/schemas-tab.png)
 
 ## Introduzione
 
@@ -40,4 +40,4 @@ Classi, gruppi di campi e tipi di dati sono tutti campi che contribuiscono a uno
 
 ## Passaggi successivi
 
-Questo documento fornisce un&#39;introduzione all&#39;area di lavoro [!UICONTROL Schemi] nell&#39;interfaccia utente di Platform. Per ulteriori informazioni su come gestire gli schemi e altre risorse XDM, consulta la documentazione disponibile in questa panoramica.
+Questo documento fornisce un&#39;introduzione all&#39;area di lavoro [!UICONTROL Schemi] nell&#39;interfaccia utente di Experience Platform. Per ulteriori informazioni su come gestire gli schemi e altre risorse XDM, consulta la documentazione disponibile in questa panoramica.

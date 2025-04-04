@@ -1,10 +1,10 @@
 ---
 title: Modelli di query
-description: I modelli di query sono query SQL salvate riutilizzabili che possono essere riutilizzate da altri utenti per risparmiare tempo e fatica. Possono essere create utilizzando Query Editor o Query Service API e sono disponibili per l’utilizzo su tutti i set di dati di Experience Platform.
+description: I modelli di query sono query SQL salvate riutilizzabili che possono essere riutilizzate da altri utenti per risparmiare tempo e fatica. Possono essere create utilizzando Query Editor o l’API Query Service e sono disponibili per l’utilizzo su tutti i set di dati di Experience Platform.
 exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
-source-git-commit: 1a44be939a4678078b414658199472e07dee153b
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '590'
+source-wordcount: '593'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Questo documento fornisce le informazioni necessarie per creare modelli di query
 
 ## Prerequisiti
 
-Per accedere all&#39;editor delle query e visualizzare il dashboard delle query nell&#39;interfaccia utente di Platform, è necessario che sia abilitata l&#39;autorizzazione [!UICONTROL Gestisci query]. L&#39;autorizzazione è abilitata tramite l&#39;Adobe [Admin Console](https://adminconsole.adobe.com/). Se non disponi dei privilegi di amministratore per abilitare questa autorizzazione, contatta l’amministratore della tua organizzazione. Consulta la documentazione sul controllo degli accessi per [istruzioni complete sull&#39;aggiunta di autorizzazioni tramite Admin Console](../../access-control/home.md).
+Per accedere all&#39;editor delle query e visualizzare il dashboard delle query nell&#39;interfaccia utente di Experience Platform, è necessario che sia abilitata l&#39;autorizzazione [!UICONTROL Gestisci query]. L&#39;autorizzazione è abilitata tramite Adobe [Admin Console](https://adminconsole.adobe.com/). Se non disponi dei privilegi di amministratore per abilitare questa autorizzazione, contatta l’amministratore della tua organizzazione. Consulta la documentazione sul controllo degli accessi per [istruzioni complete sull&#39;aggiunta di autorizzazioni tramite Admin Console](../../access-control/home.md).
 
 ## Creare un modello di query
 
@@ -33,7 +33,7 @@ Consulta la documentazione per istruzioni su come utilizzare l&#39;editor query 
 
 ## Sfoglia modelli di query {#browse}
 
-Dall&#39;area di lavoro Query dell&#39;interfaccia utente di Platform, selezionare **[!UICONTROL Modelli]** per visualizzare l&#39;elenco delle query salvate disponibili.
+Dall&#39;area di lavoro Query dell&#39;interfaccia utente di Experience Platform, selezionare **[!UICONTROL Modelli]** per visualizzare l&#39;elenco delle query salvate disponibili.
 
 ![Area di lavoro query con la scheda Modelli evidenziata.](../images/ui/query-templates/query-templates.png)
 
@@ -55,7 +55,7 @@ Per istruzioni su [come creare un modello di query](../api/query-templates.md#cr
 
 >[!NOTE]
 >
->I modelli creati utilizzando l’API sono visibili anche nella scheda Modelli del servizio di query dell’interfaccia utente di Platform.
+>I modelli creati utilizzando l’API sono visibili anche nella scheda Modelli del servizio di query dell’interfaccia utente di Experience Platform.
 
 ## Passaggi successivi
 

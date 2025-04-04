@@ -3,9 +3,9 @@ title: Categorie di interesse Mailchimp
 description: Mailchimp (noto anche come Intuit Mailchimp) è un popolare piattaforma di automazione del marketing e servizio di e-mail marketing utilizzato dalle aziende per gestire e parlare con i contatti (clienti, clienti o altre parti interessate) utilizzando mailing list e campagne di e-mail marketing. Utilizza questo connettore per ordinare i contatti in base ai loro interessi e preferenze.
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: bdce8295-7305-4d54-81c1-7fa3e580ce70
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2299'
+source-wordcount: '2312'
 ht-degree: 3%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 3%
 Compared to [!DNL Mailchimp Tags] which you would use for internal classification, [!DNL Mailchimp Interest Categories] is meant to manage subscriptions to topics of interest that your contacts might be interested in. *Note, Experience Platform also has a connection for [!DNL Mailchimp Tags], you can check it out on the [[!DNL Mailchimp Tags]](/help/destinations/catalog/email-marketing/mailchimp-tags.md) page.*
 -->
 
-Questa [!DNL Adobe Experience Platform] [destinazione](/help/destinations/home.md) utilizza l&#39;API [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) per creare [categorie di interesse](https://mailchimp.com/developer/marketing/api/interest-categories/) e quindi aggiungere i contatti di ciascuno dei tipi di pubblico di Platform selezionati in una categoria di interesse corrispondente. È possibile **aggiungere nuovi contatti** o **aggiornare le informazioni di [!DNL Mailchimp] contatti esistenti**, quindi **aggiungerli o rimuoverli dai gruppi desiderati** all&#39;interno di un pubblico [!DNL Mailchimp] esistente dopo averli attivati all&#39;interno di un nuovo segmento. [!DNL Mailchimp Interest Groups] utilizza i nomi del pubblico selezionati da Platform come categorie di interesse in [!DNL Mailchimp].
+Questa [!DNL Adobe Experience Platform] [destinazione](/help/destinations/home.md) utilizza l&#39;API [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) per creare [categorie di interesse](https://mailchimp.com/developer/marketing/api/interest-categories/) e quindi aggiungere i contatti di ciascuno dei tipi di pubblico di Experience Platform selezionati in una categoria di interesse corrispondente. È possibile **aggiungere nuovi contatti** o **aggiornare le informazioni di [!DNL Mailchimp] contatti esistenti**, quindi **aggiungerli o rimuoverli dai gruppi desiderati** all&#39;interno di un pubblico [!DNL Mailchimp] esistente dopo averli attivati all&#39;interno di un nuovo segmento. [!DNL Mailchimp Interest Groups] utilizza i nomi del pubblico selezionati da Experience Platform come categorie di interesse in [!DNL Mailchimp].
 
 ## Casi d’uso {#use-cases}
 
@@ -28,7 +28,7 @@ Per aiutarti a capire meglio come e quando utilizzare la destinazione [!DNL Mail
 
 ### Invia e-mail ai contatti per campagne di marketing {#use-case-send-emails}
 
-Il reparto vendite di un sito Web di articoli sportivi vuole trasmettere una campagna di marketing via e-mail a un elenco di contatti che si sono identificati come interessati al calcio. Gli elenchi dei contatti sono separati come batch nell’esportazione dei dati ricevuti dal team di sviluppo del sito web e devono quindi essere tracciati. Il team identifica un pubblico [!DNL Mailchimp] esistente e inizia a creare i tipi di pubblico Experienci Platform in cui vengono aggiunti i contatti di ogni elenco. Dopo aver inviato questi tipi di pubblico a [!DNL Mailchimp Interest Categories], se non esistono contatti nel pubblico [!DNL Mailchimp] selezionato, questi vengono aggiunti a un gruppo con il nome del pubblico a cui appartiene il contatto. Se esistono già contatti nel pubblico o nel gruppo [!DNL Mailchimp], le relative informazioni vengono aggiornate. Una volta inviati i dati a [!DNL Mailchimp Interest Categories], il team vendite può selezionare e inviare l&#39;e-mail della campagna di marketing al gruppo di interesse di calcio all&#39;interno del pubblico [!DNL Mailchimp].
+Il reparto vendite di un sito Web di articoli sportivi vuole trasmettere una campagna di marketing via e-mail a un elenco di contatti che si sono identificati come interessati al calcio. Gli elenchi dei contatti sono separati come batch nell’esportazione dei dati ricevuti dal team di sviluppo del sito web e devono quindi essere tracciati. Il team identifica un pubblico [!DNL Mailchimp] esistente e inizia a creare i tipi di pubblico di Experience Platform in cui vengono aggiunti i contatti di ogni elenco. Dopo aver inviato questi tipi di pubblico a [!DNL Mailchimp Interest Categories], se non esistono contatti nel pubblico [!DNL Mailchimp] selezionato, questi vengono aggiunti a un gruppo con il nome del pubblico a cui appartiene il contatto. Se esistono già contatti nel pubblico o nel gruppo [!DNL Mailchimp], le relative informazioni vengono aggiornate. Una volta inviati i dati a [!DNL Mailchimp Interest Categories], il team vendite può selezionare e inviare l&#39;e-mail della campagna di marketing al gruppo di interesse di calcio all&#39;interno del pubblico [!DNL Mailchimp].
 
 ## Prerequisiti {#prerequisites}
 
@@ -40,7 +40,7 @@ Prima di attivare i dati nella destinazione [!DNL Mailchimp Interest Categories]
 
 ### Prerequisiti per la destinazione [!DNL Mailchimp Interest Categories] {#prerequisites-destination}
 
-Per esportare i dati da Platform al tuo account [!DNL Mailchimp], tieni presente i seguenti prerequisiti:
+Per esportare i dati da Experience Platform al tuo account [!DNL Mailchimp], tieni presente i seguenti prerequisiti:
 
 #### Devi avere un account [!DNL Mailchimp] {#prerequisites-account}
 
@@ -92,7 +92,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
-| Tipo di esportazione | **[!UICONTROL Basato su profilo]** | <ul><li>Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati *(ad esempio: indirizzo e-mail, numero di telefono, cognome)*, in base al mapping dei campi.</li><li> Per ogni pubblico selezionato in Platform, lo stato del segmento [!DNL Mailchimp Interest Categories] corrispondente viene aggiornato da Platform in base allo stato del pubblico.</li></ul> |
+| Tipo di esportazione | **[!UICONTROL Basato su profilo]** | <ul><li>Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati *(ad esempio: indirizzo e-mail, numero di telefono, cognome)*, in base al mapping dei campi.</li><li> Per ogni pubblico selezionato in Experience Platform, lo stato del segmento [!DNL Mailchimp Interest Categories] corrispondente viene aggiornato da Experience Platform in base allo stato del pubblico.</li></ul> |
 | Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Quando un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni sulle [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -118,7 +118,7 @@ Per eseguire l&#39;autenticazione nella destinazione, compilare i campi obbligat
 
 {style="table-layout:auto"}
 
-![Schermata dell&#39;interfaccia utente di Platform che mostra come eseguire l&#39;autenticazione.](../../assets/catalog/email-marketing/mailchimp-interest-categories/authenticate-destination.png)
+![Schermata dell&#39;interfaccia utente di Experience Platform che mostra come eseguire l&#39;autenticazione.](../../assets/catalog/email-marketing/mailchimp-interest-categories/authenticate-destination.png)
 
 Se i dettagli forniti sono validi, nell&#39;interfaccia utente viene visualizzato lo stato **[!UICONTROL Connesso]** con un segno di spunta verde. A questo punto è possibile procedere al passaggio successivo.
 
@@ -126,15 +126,15 @@ Se i dettagli forniti sono validi, nell&#39;interfaccia utente viene visualizzat
 
 Per configurare i dettagli per la destinazione, compila i campi obbligatori e facoltativi seguenti. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 
-![Schermata dell&#39;interfaccia utente di Platform che mostra i dettagli della destinazione.](../../assets/catalog/email-marketing/mailchimp-interest-categories/destination-details.png)
+![Schermata dell&#39;interfaccia utente di Experience Platform con i dettagli della destinazione.](../../assets/catalog/email-marketing/mailchimp-interest-categories/destination-details.png)
 
 | Campo | Descrizione |
 | --- | --- |
 | **[!UICONTROL Nome]** | Un nome con cui riconoscerai questa destinazione in futuro. |
 | **[!UICONTROL Descrizione]** | Una descrizione che ti aiuterà a identificare questa destinazione in futuro. |
 | **[!UICONTROL Data center]** | Il tuo account [!DNL Mailchimp] `data center`. Per ulteriori informazioni, consulta la sezione [Identificare [!DNL Mailchimp] il centro dati](#identify-data-center). |
-| **[!UICONTROL Nome pubblico (selezionare prima il centro dati)]** | Dopo aver selezionato il **[!UICONTROL centro dati]**, questo menu a discesa viene compilato automaticamente con i nomi del pubblico del tuo account [!DNL Mailchimp]. Seleziona il pubblico da aggiornare con i dati di Platform. |
-| **[!UICONTROL Categoria di interesse (selezionare prima il centro dati e il nome del pubblico)]** | Dopo aver selezionato **[!UICONTROL Nome pubblico]**, questo menu a discesa viene compilato automaticamente con i nomi delle categorie dei gruppi di interesse dell&#39;account [!DNL Mailchimp]. Seleziona il nome della categoria da aggiornare con i dati di Platform. |
+| **[!UICONTROL Nome pubblico (selezionare prima il centro dati)]** | Dopo aver selezionato il **[!UICONTROL centro dati]**, questo menu a discesa viene compilato automaticamente con i nomi del pubblico del tuo account [!DNL Mailchimp]. Seleziona il pubblico da aggiornare con i dati di Experience Platform. |
+| **[!UICONTROL Categoria di interesse (selezionare prima il centro dati e il nome del pubblico)]** | Dopo aver selezionato **[!UICONTROL Nome pubblico]**, questo menu a discesa viene compilato automaticamente con i nomi delle categorie dei gruppi di interesse dell&#39;account [!DNL Mailchimp]. Seleziona il nome della categoria da aggiornare con i dati di Experience Platform. |
 
 {style="table-layout:auto"}
 
@@ -159,7 +159,7 @@ Leggi [Attivare profili e tipi di pubblico nelle destinazioni di esportazione de
 
 ### Considerazioni sulla mappatura ed esempio {#mapping-considerations-example}
 
-Per inviare correttamente i dati sul pubblico da Adobe Experience Platform alla destinazione [!DNL Mailchimp Interest Categories], è necessario eseguire il passaggio di mappatura dei campi. La mappatura consiste nella creazione di un collegamento tra i campi dello schema Experience Data Model (XDM) nell’account Platform e i corrispondenti equivalenti dalla destinazione.
+Per inviare correttamente i dati sul pubblico da Adobe Experience Platform alla destinazione [!DNL Mailchimp Interest Categories], è necessario eseguire il passaggio di mappatura dei campi. La mappatura consiste nella creazione di un collegamento tra i campi dello schema Experience Data Model (XDM) nell’account Experience Platform e i corrispondenti equivalenti dalla destinazione.
 
 Per mappare correttamente i campi XDM ai campi di destinazione [!DNL Mailchimp Interest Categories], effettua le seguenti operazioni:
 
@@ -192,7 +192,7 @@ Per mappare correttamente i campi XDM ai campi di destinazione [!DNL Mailchimp I
    Ad esempio, si desidera aggiornare il valore per `country` con i valori del campo indirizzo esistente del contatto `addr1`, `city`, `state` e `zip` come `132, My Street, Kingston`, `New York`, `New York` e `12401`. Per aggiornare `country` è necessario passare i valori esistenti con le modifiche *(se presenti)* e il nuovo valore per paese. I valori nel set di dati devono essere `132, My Street, Kingston`, `New York`, `New York`, `12401` e `US`. Per ripetere, se passi solo `country` e non fornisci valori per `addr1`, `city`, `state` e `zip`, verranno sovrascritti da `NULL`.
 
    Di seguito è riportato un esempio con le mappature completate:
-   ![Esempio di schermata dell&#39;interfaccia utente di Platform che mostra le mappature dei campi.](../../assets/catalog/email-marketing/mailchimp-interest-categories/mappings.png)
+   ![Esempio di schermata dell&#39;interfaccia utente di Experience Platform che mostra le mappature dei campi.](../../assets/catalog/email-marketing/mailchimp-interest-categories/mappings.png)
 
 Dopo aver fornito le mappature per la connessione di destinazione, seleziona **[!UICONTROL Avanti]**.
 
@@ -204,7 +204,7 @@ Per verificare di aver impostato correttamente la destinazione, segui i passaggi
 
 ![Schermata dell&#39;interfaccia utente Mailchimp che mostra la pagina del gruppo di tipi di pubblico.](../../assets/catalog/email-marketing/mailchimp-interest-categories/audience-groups.png)
 
-* Seleziona il Gruppo e controlla se i tipi di pubblico selezionati sono creati come categorie con il nome del pubblico di Platform, che può essere seguito da un suffisso generato automaticamente.
+* Seleziona il Gruppo e controlla se i tipi di pubblico selezionati sono creati come categorie con il nome del pubblico di Experience Platform, che può essere seguito da un suffisso generato automaticamente.
    * Questa destinazione utilizza i nomi dei segmenti selezionati per creare la categoria di interesse utilizzando l&#39;[[!DNL Mailchimp] Aggiungi API categoria di interesse](https://mailchimp.com/developer/marketing/api/interest-categories/add-interest-category/). Se crei una nuova destinazione e attivi di nuovo gli stessi tipi di pubblico, [!DNL Mailchimp] aggiunge un suffisso per distinguere i segmenti esistenti da quelli nuovi.
 * I contatti le cui e-mail non esistevano nel gruppo vengono aggiunti alla categoria appena creata.
 * Per i contatti già presenti nel gruppo, i dati del campo attributo vengono aggiornati e il contatto viene aggiunto alla categoria appena creata.
@@ -221,7 +221,7 @@ Tutte le destinazioni [!DNL Adobe Experience Platform] sono conformi ai criteri 
 
 Se la chiave API fornita nel campo **[!UICONTROL Password]** o il valore **[!UICONTROL Data center]** non sono corretti, l&#39;interfaccia utente visualizza una risposta di errore API [!DNL Mailchimp]: *`No options are available. Please verify the values selected for the following dependent fields: dataCenter`* come illustrato di seguito. In questo caso, non è possibile selezionare un valore dal campo **[!UICONTROL Nome pubblico (selezionare prima il centro dati)]**.
 
-![Schermata dell&#39;interfaccia utente di Platform che mostra un errore se la chiave API Mailchimp o i valori del centro dati non sono corretti.](../../assets/catalog/email-marketing/mailchimp-interest-categories/error.png)
+![Schermata dell&#39;interfaccia utente di Experience Platform che mostra l&#39;errore se la chiave API Mailchimp o i valori del datacenter non sono corretti.](../../assets/catalog/email-marketing/mailchimp-interest-categories/error.png)
 
 Per correggere questo errore e procedere al passaggio successivo, è necessario fornire i valori corretti. Consulta [Identificare [!DNL Mailchimp] il centro dati](#identify-data-center) e
 [Raccogli [!DNL Mailchimp] le sezioni della chiave API](#gather-credentials) se hai bisogno di assistenza.

@@ -1,11 +1,11 @@
 ---
 title: Creazione di una connessione di origine e di un flusso di dati per SAP Commerce mediante l'API del servizio Flow
-description: Scopri come creare una connessione di origine e un flusso di dati per portare i dati SAP Commerce all’Experience Platform utilizzando l’API del servizio Flusso.
+description: Scopri come creare una connessione di origine e un flusso di dati per portare i dati SAP Commerce in Experience Platform utilizzando l’API del servizio Flusso.
 badge: Beta
 exl-id: 580731b9-0c04-4f83-a475-c1890ac5b7cd
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2314'
+source-wordcount: '2325'
 ht-degree: 1%
 
 ---
@@ -22,14 +22,14 @@ Il seguente tutorial illustra i passaggi necessari per creare una connessione di
 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Experience Platform:
 
-* [Origini](../../../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
-* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Origini](../../../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Experience Platform.
+* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Experience Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per connettersi correttamente a [!DNL SAP Commerce] utilizzando l&#39;API [!DNL Flow Service].
 
 ### Raccogli le credenziali richieste
 
-Per connettere [!DNL SAP Commerce] a Experience Platform, è necessario fornire i valori per le seguenti proprietà di connessione:
+Per connettere [!DNL SAP Commerce] ad Experience Platform, è necessario fornire i valori per le seguenti proprietà di connessione:
 
 | Credenziali | Descrizione |
 | --- | --- |
@@ -40,15 +40,15 @@ Per connettere [!DNL SAP Commerce] a Experience Platform, è necessario fornire 
 
 Per ulteriori informazioni su queste credenziali, consulta la [[!DNL SAP Commerce] documentazione](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/c5fcaf96daff4c7a8520188e4d8a1843.html).
 
-## Connetti [!DNL SAP Commerce] a Platform utilizzando l&#39;API [!DNL Flow Service]
+## Connetti [!DNL SAP Commerce] ad Experience Platform utilizzando l&#39;API [!DNL Flow Service]
 
-Di seguito vengono illustrati i passaggi necessari per autenticare l&#39;origine [!DNL SAP Commerce], creare una connessione di origine e creare un flusso di dati per l&#39;Experience Platform dei dati di account e contatti.
+Di seguito vengono descritti i passaggi necessari per autenticare l&#39;origine [!DNL SAP Commerce], creare una connessione di origine e creare un flusso di dati per portare i dati degli account e dei contatti in Experience Platform.
 
 ### Creare una connessione di base {#base-connection}
 
-Una connessione di base mantiene le informazioni tra l’origine e Platform, incluse le credenziali di autenticazione dell’origine, lo stato corrente della connessione e l’ID univoco della connessione di base. L’ID della connessione di base consente di esplorare e navigare tra i file dall’interno dell’origine e identificare gli elementi specifici che desideri acquisire, comprese le informazioni relative ai tipi di dati e ai formati.
+Una connessione di base mantiene le informazioni tra l’origine e Experience Platform, incluse le credenziali di autenticazione dell’origine, lo stato corrente della connessione e l’ID univoco della connessione di base. L’ID della connessione di base consente di esplorare e navigare tra i file dall’interno dell’origine e identificare gli elementi specifici che desideri acquisire, comprese le informazioni relative ai tipi di dati e ai formati.
 
-Per creare un ID di connessione di base, effettuare una richiesta POST all&#39;endpoint `/connections` fornendo le credenziali di autenticazione [!DNL SAP Commerce] come parte del corpo della richiesta.
+Per creare un ID di connessione di base, eseguire una richiesta POST all&#39;endpoint `/connections` fornendo le credenziali di autenticazione [!DNL SAP Commerce] come parte del corpo della richiesta.
 
 **Formato API**
 
@@ -92,7 +92,7 @@ curl -X POST \
 | `name` | Nome della connessione di base. Verificare che il nome della connessione di base sia descrittivo, in quanto è possibile utilizzarlo per cercare informazioni sulla connessione di base. |
 | `description` | Valore facoltativo che è possibile includere per fornire ulteriori informazioni sulla connessione di base. |
 | `connectionSpec.id` | ID della specifica di connessione dell&#39;origine. Questo ID può essere recuperato dopo che l&#39;origine è stata registrata e approvata tramite l&#39;API [!DNL Flow Service]. |
-| `auth.specName` | Tipo di autenticazione utilizzato per autenticare l’origine in Platform. |
+| `auth.specName` | Tipo di autenticazione utilizzato per autenticare l’origine in Experience Platform. |
 | `auth.params.region` | La posizione del centro dati. L&#39;area è presente in `url` e ha un valore simile a `eu10` o `us10`. Ad esempio, se `url` è `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`, sarà necessario `eu10`. |
 | `auth.params.clientId` | Il valore di `clientId` dalla chiave del servizio. |
 | `auth.params.clientSecret` | Il valore di `clientSecret` dalla chiave del servizio. |
@@ -111,7 +111,7 @@ In caso di esito positivo, la risposta restituisce la connessione di base appena
 
 ### Esplora l’origine {#explore}
 
-Una volta ottenuto l&#39;ID connessione di base, è ora possibile esplorare il contenuto e la struttura dei dati di origine eseguendo una richiesta di GET all&#39;endpoint `/connections` e fornendo l&#39;ID connessione di base come parametro di query.
+Una volta ottenuto l&#39;ID connessione di base, è ora possibile esplorare il contenuto e la struttura dei dati di origine eseguendo una richiesta GET all&#39;endpoint `/connections` e fornendo l&#39;ID connessione di base come parametro di query.
 
 **Formato API**
 
@@ -119,16 +119,16 @@ Una volta ottenuto l&#39;ID connessione di base, è ora possibile esplorare il c
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=rest&object={OBJECT}&fileType={FILE_TYPE}&preview={PREVIEW}&sourceParams={SOURCE_PARAMS}
 ```
 
-Quando si eseguono richieste di GET per esplorare la struttura e il contenuto dei file dell’origine, è necessario includere i parametri di query elencati nella tabella seguente:
+Quando esegui le richieste di GET per esplorare la struttura e il contenuto dei file dell’origine, devi includere i parametri di query elencati nella tabella seguente:
 
 | Parametro | Descrizione |
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | ID della connessione di base generato nel passaggio precedente. |
 | `objectType=rest` | Tipo di oggetto che si desidera esplorare. Attualmente, questo valore è sempre impostato su `rest`. |
 | `{OBJECT}` | Questo parametro è necessario solo quando si visualizza una directory specifica. Il relativo valore rappresenta il percorso della directory che desideri esplorare. Per questa origine il valore sarebbe `json`. |
-| `fileType=json` | Il tipo di file che desideri portare su Platform. Attualmente, `json` è l&#39;unico tipo di file supportato. |
+| `fileType=json` | Il tipo di file che desideri portare in Experience Platform. Attualmente, `json` è l&#39;unico tipo di file supportato. |
 | `{PREVIEW}` | Valore booleano che definisce se il contenuto della connessione supporta l’anteprima. |
-| `{SOURCE_PARAMS}` | Definisce i parametri per il file sorgente da portare a Platform. Per recuperare il tipo di formato accettato per `{SOURCE_PARAMS}`, è necessario codificare l&#39;intera stringa in base64. <br> [!DNL SAP Commerce] supporta più API. A seconda del tipo di oggetto utilizzato, passare una delle seguenti operazioni: <ul><li>`customers`</li><li>`contacts`</li></ul> |
+| `{SOURCE_PARAMS}` | Definisce i parametri per il file di origine che desideri portare in Experience Platform. Per recuperare il tipo di formato accettato per `{SOURCE_PARAMS}`, è necessario codificare l&#39;intera stringa in base64. <br> [!DNL SAP Commerce] supporta più API. A seconda del tipo di oggetto utilizzato, passare una delle seguenti operazioni: <ul><li>`customers`</li><li>`contacts`</li></ul> |
 
 L&#39;origine [!DNL SAP Commerce] supporta più API. Di seguito è riportato un esempio di oggetto a seconda del tipo di oggetto che si sta sfruttando per la richiesta da inviare:
 
@@ -684,7 +684,7 @@ In caso di esito positivo, la risposta restituisce l&#39;identificatore univoco 
 
 ### Creare uno schema XDM di destinazione {#target-schema}
 
-Per utilizzare i dati sorgente in Platform, è necessario creare uno schema di destinazione che strutturi i dati sorgente in base alle tue esigenze. Lo schema di destinazione viene quindi utilizzato per creare un set di dati di Platform in cui sono contenuti i dati di origine.
+Affinché i dati sorgente possano essere utilizzati in Experience Platform, è necessario creare uno schema di destinazione per strutturare i dati sorgente in base alle tue esigenze. Lo schema di destinazione viene quindi utilizzato per creare un set di dati Experience Platform in cui sono contenuti i dati di origine.
 
 È possibile creare uno schema XDM di destinazione eseguendo una richiesta POST all&#39;API [Schema Registry](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
 
@@ -986,7 +986,7 @@ In caso di esito positivo, la risposta restituisce i dettagli della mappatura ap
 
 ### Creare un flusso {#flow}
 
-L&#39;ultimo passaggio per portare i dati da [!DNL SAP Commerce] a Platform consiste nel creare un flusso di dati. A questo punto sono stati preparati i seguenti valori obbligatori:
+L&#39;ultimo passaggio per portare dati da [!DNL SAP Commerce] ad Experience Platform consiste nella creazione di un flusso di dati. A questo punto sono stati preparati i seguenti valori obbligatori:
 
 * [ID connessione Source](#source-connection)
 * [ID connessione di destinazione](#target-connection)
@@ -1046,7 +1046,7 @@ curl -X POST \
 | `flowSpec.version` | Versione corrispondente dell&#39;ID della specifica di flusso. Il valore predefinito è `1.0`. |
 | `sourceConnectionIds` | L&#39;[ID connessione di origine](#source-connection) generato in un passaggio precedente. |
 | `targetConnectionIds` | L&#39;ID [connessione di destinazione](#target-connection) generato in un passaggio precedente. |
-| `transformations` | Questa proprietà contiene le varie trasformazioni che devono essere applicate ai dati. Questa proprietà è necessaria per portare dati non conformi a XDM su Platform. |
+| `transformations` | Questa proprietà contiene le varie trasformazioni che devono essere applicate ai dati. Questa proprietà è necessaria quando si importano dati non conformi a XDM in Experience Platform. |
 | `transformations.name` | Nome assegnato alla trasformazione. |
 | `transformations.params.mappingId` | L&#39;[ID mappatura](#mapping) generato in un passaggio precedente. |
 | `transformations.params.mappingVersion` | Versione corrispondente dell&#39;ID di mappatura. Il valore predefinito è `0`. |
@@ -1079,7 +1079,7 @@ Aggiorna i dettagli del flusso di dati, ad esempio il nome e la descrizione, non
 
 ### Aggiornare l’account
 
-Aggiornare il nome, la descrizione e le credenziali dell&#39;account di origine eseguendo una richiesta PATCH all&#39;API [!DNL Flow Service] e fornendo l&#39;ID connessione di base come parametro di query. Quando si effettua una richiesta PATCH, è necessario fornire `etag` univoco dell&#39;account di origine nell&#39;intestazione `If-Match`. Per esempi API completi, consulta la guida in [aggiornamento dell&#39;account di origine tramite l&#39;API](../../update.md).
+Aggiornare il nome, la descrizione e le credenziali dell&#39;account di origine eseguendo una richiesta PATCH all&#39;API [!DNL Flow Service] e fornendo l&#39;ID connessione di base come parametro di query. Quando si effettua una richiesta PATCH, è necessario fornire l&#39;univoco `etag` dell&#39;account di origine nell&#39;intestazione `If-Match`. Per esempi API completi, consulta la guida in [aggiornamento dell&#39;account di origine tramite l&#39;API](../../update.md).
 
 ### Eliminare il flusso di dati
 

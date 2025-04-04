@@ -1,10 +1,10 @@
 ---
-title: Mappare un file CSV a uno schema XDM utilizzando la funzione di Recommendations generata da IA
+title: Mappare un file CSV su uno schema XDM utilizzando i consigli generati dall’intelligenza artificiale
 description: Questo tutorial illustra come mappare un file CSV a uno schema XDM utilizzando i consigli generati dall’intelligenza artificiale.
 exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
-source-git-commit: cbebee894d68f60f82e1154f41dcecc76c706a3b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1179'
 ht-degree: 1%
 
 ---
@@ -13,24 +13,24 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Per informazioni sulle funzionalità di mappatura CSV generalmente disponibili in Platform, consulta il documento [mappatura di un file CSV su uno schema esistente](./existing-schema.md).
+>Per informazioni sulle funzionalità di mappatura CSV generalmente disponibili in Experience Platform, consulta il documento [mappatura di un file CSV su uno schema esistente](./existing-schema.md).
 
-Per acquisire i dati CSV in [!DNL Adobe Experience Platform], i dati devono essere mappati su uno schema [!DNL Experience Data Model] (XDM). Puoi scegliere di mappare a [uno schema esistente](./existing-schema.md), ma se non sai esattamente quale schema utilizzare o come dovrebbe essere strutturato, puoi invece utilizzare consigli dinamici basati su modelli di apprendimento automatico (ML) nell&#39;interfaccia utente di Platform.
+Per acquisire i dati CSV in [!DNL Adobe Experience Platform], i dati devono essere mappati su uno schema [!DNL Experience Data Model] (XDM). Puoi scegliere di mappare a [uno schema esistente](./existing-schema.md), ma se non sai esattamente quale schema utilizzare o come dovrebbe essere strutturato, puoi invece utilizzare consigli dinamici basati su modelli di apprendimento automatico (ML) nell&#39;interfaccia utente di Experience Platform.
 
 ## Introduzione
 
-Questo tutorial richiede una buona conoscenza dei seguenti componenti di [!DNL Platform]:
+Questo tutorial richiede una buona conoscenza dei seguenti componenti di [!DNL Experience Platform]:
 
-* [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md): framework standardizzato tramite il quale [!DNL Platform] organizza i dati sull&#39;esperienza del cliente.
+* [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md): framework standardizzato tramite il quale [!DNL Experience Platform] organizza i dati sull&#39;esperienza del cliente.
    * Devi comprendere almeno il concetto di [comportamenti in XDM](../../../xdm/home.md#data-behaviors), in modo da poter decidere se mappare i dati a una classe [!UICONTROL Profile] (comportamento record) o [!UICONTROL ExperienceEvent] (comportamento serie temporale).
-* [Acquisizione batch](../../batch-ingestion/overview.md): metodo con cui [!DNL Platform] acquisisce i dati dai file di dati forniti dall&#39;utente.
+* [Acquisizione batch](../../batch-ingestion/overview.md): metodo con cui [!DNL Experience Platform] acquisisce i dati dai file di dati forniti dall&#39;utente.
 * [Preparazione dati di Adobe Experience Platform](../../batch-ingestion/overview.md): suite di funzionalità che consente di mappare e trasformare i dati acquisiti per adeguarli agli schemi XDM. La documentazione sulle [funzioni di preparazione dati](../../../data-prep/functions.md) è specifica per la mappatura dello schema.
 
 ## Fornisci i dettagli del flusso di dati
 
 Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** nell&#39;area di navigazione a sinistra. Nella visualizzazione **[!UICONTROL Catalogo]**, passare alla categoria **[!UICONTROL Sistema locale]**. In **[!UICONTROL Caricamento file locale]**, selezionare **[!UICONTROL Aggiungi dati]**.
 
-![Il catalogo [!UICONTROL Sources] nell&#39;interfaccia utente di Platform, con [!UICONTROL Aggiungi dati] in [!UICONTROL Caricamento file locale] selezionato.](../../images/tutorials/map-csv-recommendations/local-file-upload.png)
+![Il catalogo [!UICONTROL Sources] nell&#39;interfaccia utente di Experience Platform, con [!UICONTROL Aggiungi dati] in [!UICONTROL Caricamento file locale] selezionato.](../../images/tutorials/map-csv-recommendations/local-file-upload.png)
 
 Il flusso di lavoro **[!UICONTROL Mappa schema XDM CSV]** viene visualizzato a partire dal passaggio **[!UICONTROL Dettagli flusso di dati]**.
 
@@ -47,7 +47,7 @@ Facoltativamente, prima di procedere, puoi configurare le seguenti funzioni aggi
 | [!UICONTROL Descrizione] | Descrizione del flusso di dati. |
 | [!UICONTROL Diagnostica errori] | Quando questa opzione è attivata, vengono generati messaggi di errore per i batch appena acquisiti, che possono essere visualizzati quando si recupera il batch corrispondente nell&#39;[API](../../batch-ingestion/api-overview.md). |
 | [!UICONTROL Acquisizione parziale] | Quando questa opzione è attivata, i record validi per i nuovi dati batch verranno acquisiti entro una soglia di errore specificata. Questa soglia consente di configurare la percentuale di errori accettabili prima che l’intero batch abbia esito negativo. |
-| [!UICONTROL Dettagli flusso di dati] | Fornisci un nome e una descrizione facoltativa per il flusso di dati che inserirà i dati CSV in Platform. All’avvio di questo flusso di lavoro, al flusso di dati viene automaticamente assegnato un nome predefinito. La modifica del nome è facoltativa. |
+| [!UICONTROL Dettagli flusso di dati] | Fornisci un nome e una descrizione facoltativa per il flusso di dati che inserirà i dati CSV in Experience Platform. All’avvio di questo flusso di lavoro, al flusso di dati viene automaticamente assegnato un nome predefinito. La modifica del nome è facoltativa. |
 | [!UICONTROL Avvisi] | Seleziona da un elenco di [avvisi interni al prodotto](../../../observability/alerts/overview.md) che desideri ricevere relativi allo stato del flusso di dati una volta avviato. |
 
 {style="table-layout:auto"}
@@ -76,7 +76,7 @@ I modelli ML vengono eseguiti per generare un nuovo schema basato sulla configur
 >
 >Puoi filtrare tutti i campi nello schema in base a diversi criteri durante il flusso di lavoro di mappatura dei campi da origine a destinazione. Per impostazione predefinita, vengono visualizzati tutti i campi mappati. Per modificare i campi visualizzati, selezionare l&#39;icona del filtro accanto al campo di input di ricerca e scegliere tra le opzioni del menu a discesa.<br> ![Fase di mappatura del flusso di lavoro di creazione dello schema da CSV a XDM con l&#39;icona del filtro e il menu a discesa evidenziati.](../../images/tutorials/map-csv-recommendations/source-field-to-target-mapping-filter.png "Fase di mappatura del flusso di lavoro di creazione dello schema da CSV a XDM con l&#39;icona del filtro e il menu a discesa evidenziati."){width="100" zoomable="yes"}
 
-Da qui puoi [modificare i mapping dei campi](#edit-mappings) o [modificare i gruppi di campi a cui sono associati](#edit-schema) in base alle tue esigenze. Al termine, selezionare **[!UICONTROL Fine]** per completare la mappatura e avviare il flusso di dati configurato in precedenza. I dati CSV vengono acquisiti nel sistema e popolano un set di dati in base alla struttura dello schema generato, pronto per essere utilizzato dai servizi Platform a valle.
+Da qui puoi [modificare i mapping dei campi](#edit-mappings) o [modificare i gruppi di campi a cui sono associati](#edit-schema) in base alle tue esigenze. Al termine, selezionare **[!UICONTROL Fine]** per completare la mappatura e avviare il flusso di dati configurato in precedenza. I dati CSV vengono acquisiti nel sistema e popolano un set di dati in base alla struttura dello schema generato, pronto per essere utilizzato dai servizi Experience Platform a valle.
 
 ![Il pulsante [!UICONTROL Fine] è stato selezionato e ha completato il processo di mappatura CSV.](../../images/tutorials/map-csv-recommendations/finish-mapping.png)
 
@@ -98,8 +98,8 @@ Al termine della regolazione dei consigli di schema per i campi sorgente, selezi
 
 ## Passaggi successivi
 
-Questa guida illustra come mappare un file CSV a uno schema XDM utilizzando i consigli generati dall’intelligenza artificiale, per portare tali dati in Platform tramite l’acquisizione batch.
+Questa guida illustra come mappare un file CSV a uno schema XDM utilizzando i consigli generati dall’intelligenza artificiale, per portare tali dati in Experience Platform tramite l’acquisizione batch.
 
-Per i passaggi sulla mappatura di un file CSV a uno schema esistente, consulta il [flusso di lavoro di mappatura schema esistente](./existing-schema.md). Per informazioni sullo streaming in tempo reale dei dati a Platform tramite connessioni di origine predefinite, consulta la [panoramica sulle origini](../../../sources/home.md).
+Per i passaggi sulla mappatura di un file CSV a uno schema esistente, consulta il [flusso di lavoro di mappatura schema esistente](./existing-schema.md). Per informazioni sullo streaming dei dati in Experience Platform in tempo reale tramite connessioni di origine predefinite, consulta la [panoramica sulle origini](../../../sources/home.md).
 
 È inoltre possibile utilizzare gli algoritmi di Machine Learning (ML) per **generare uno schema dai dati CSV di esempio**. Questo flusso di lavoro crea automaticamente un nuovo schema basato sulla struttura e sul contenuto del file CSV. Questo schema appena creato corrisponde al formato dei dati per consentirti di risparmiare tempo e migliorare la precisione durante la definizione della struttura, dei campi e dei tipi di dati per set di dati complessi di grandi dimensioni. Per ulteriori informazioni su questo flusso di lavoro, consulta la [Guida alla creazione di schemi assistiti da ML](../../../xdm/ui/ml-assisted-schema-creation.md).

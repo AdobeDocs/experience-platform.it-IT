@@ -4,16 +4,16 @@ title: Anteprima endpoint API di stato campione (anteprima profilo)
 description: L’endpoint per lo stato di anteprima del campione dell’API Real-Time Customer Profile ti consente di visualizzare in anteprima l’ultimo campione riuscito dei dati del profilo, di elencare la distribuzione del profilo per set di dati e per identità e di generare rapporti che mostrano la sovrapposizione dei set di dati, la sovrapposizione delle identità e i profili non uniti.
 role: Developer
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 49196473f304585193e87393f8dc5dc37be7e4d9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2906'
+source-wordcount: '2909'
 ht-degree: 1%
 
 ---
 
 # Endpoint dello stato del campione di anteprima (anteprima profilo)
 
-Adobe Experience Platform consente di acquisire i dati dei clienti da più origini per creare un profilo solido e unificato per ciascuno dei singoli clienti. Quando i dati vengono acquisiti in Platform, viene eseguito un processo di esempio per aggiornare il conteggio dei profili e altre metriche relative ai dati del profilo cliente in tempo reale.
+Adobe Experience Platform consente di acquisire i dati dei clienti da più origini per creare un profilo solido e unificato per ciascuno dei singoli clienti. Quando i dati vengono acquisiti in Experience Platform, viene eseguito un processo di esempio per aggiornare il conteggio dei profili e altre metriche relative ai dati del profilo cliente in tempo reale.
 
 I risultati di questo processo di esempio possono essere visualizzati utilizzando l&#39;endpoint `/previewsamplestatus`, parte dell&#39;API Real-Time Customer Profile. Questo endpoint può essere utilizzato anche per elencare le distribuzioni di profilo per set di dati e spazio dei nomi delle identità, nonché per generare più rapporti al fine di ottenere visibilità nella composizione dell’archivio profili della tua organizzazione. Questa guida descrive i passaggi necessari per visualizzare queste metriche utilizzando l&#39;endpoint API `/previewsamplestatus`.
 
@@ -31,26 +31,26 @@ Questa guida fa riferimento sia a &quot;frammenti di profilo&quot; che a &quot;p
 
 Ogni singolo profilo cliente è composto da più frammenti di profilo che sono stati uniti per formare un’unica vista di quel cliente. Ad esempio, se un cliente interagisce con il tuo marchio su più canali, è probabile che la tua organizzazione disponga di più frammenti di profilo relativi a quel singolo cliente che compaiono in più set di dati.
 
-Quando i frammenti di profilo vengono acquisiti in Platform, vengono uniti insieme (in base a un criterio di unione) per creare un singolo profilo per quel cliente. Pertanto, è probabile che il numero totale di frammenti di profilo sia sempre superiore al numero totale di profili uniti, in quanto ogni profilo è composto da più frammenti.
+Quando i frammenti di profilo vengono acquisiti in Experience Platform, vengono uniti insieme (in base a un criterio di unione) per creare un singolo profilo per quel cliente. Pertanto, è probabile che il numero totale di frammenti di profilo sia sempre superiore al numero totale di profili uniti, in quanto ogni profilo è composto da più frammenti.
 
-Per ulteriori informazioni sui profili e sul loro ruolo in Experience Platform, consulta la [Panoramica del profilo cliente in tempo reale](../home.md).
+Per ulteriori informazioni sui profili e sul loro ruolo in Experience Platform, consulta la [Panoramica sul profilo cliente in tempo reale](../home.md).
 
 ## Modalità di attivazione del processo di esempio
 
-Poiché i dati abilitati per Real-Time Customer Profile vengono acquisiti in [!DNL Platform], vengono memorizzati nell&#39;archivio dati del profilo. Quando l’acquisizione dei record nell’archivio profili aumenta o diminuisce il conteggio totale dei profili di oltre il 5%, viene attivato un processo di campionamento per aggiornare il conteggio. Il modo in cui il campione viene attivato dipende dal tipo di acquisizione utilizzata:
+Poiché i dati abilitati per Real-Time Customer Profile vengono acquisiti in [!DNL Experience Platform], vengono memorizzati nell&#39;archivio dati del profilo. Quando l’acquisizione dei record nell’archivio profili aumenta o diminuisce il conteggio totale dei profili di oltre il 5%, viene attivato un processo di campionamento per aggiornare il conteggio. Il modo in cui il campione viene attivato dipende dal tipo di acquisizione utilizzata:
 
 * Per **flussi di lavoro di dati in streaming**, viene eseguito un controllo su base oraria per determinare se la soglia di aumento o di diminuzione del 5% è stata raggiunta. In caso affermativo, viene attivato automaticamente un processo di esempio per aggiornare il conteggio.
 * Per l&#39;**acquisizione batch**, entro 15 minuti dalla corretta acquisizione di un batch nell&#39;archivio profili, se viene raggiunta la soglia di aumento o riduzione del 5%, viene eseguito un processo per aggiornare il conteggio. Utilizzando l’API di profilo è possibile visualizzare in anteprima l’ultimo processo di esempio riuscito, nonché elencare la distribuzione del profilo per set di dati e per spazio dei nomi dell’identità.
 
-Il conteggio dei profili e i profili per metrica dello spazio dei nomi sono disponibili anche nella sezione [!UICONTROL Profiles] dell&#39;interfaccia utente di Experience Platform. Per informazioni su come accedere ai dati del profilo tramite l&#39;interfaccia utente, visitare la [[!DNL Profile] guida dell&#39;interfaccia utente](../ui/user-guide.md).
+Il conteggio dei profili e i profili per metrica dello spazio dei nomi sono disponibili anche nella sezione [!UICONTROL Profili] dell&#39;interfaccia utente di Experience Platform. Per informazioni su come accedere ai dati del profilo tramite l&#39;interfaccia utente, visitare la [[!DNL Profile] guida dell&#39;interfaccia utente](../ui/user-guide.md).
 
 ## Visualizza ultimo stato del campione {#view-last-sample-status}
 
-È possibile eseguire una richiesta di GET all&#39;endpoint `/previewsamplestatus` per visualizzare i dettagli dell&#39;ultimo processo di esempio eseguito correttamente per l&#39;organizzazione. Ciò include il numero totale di profili nel campione, nonché la metrica di conteggio dei profili o il numero totale di profili di cui dispone la tua organizzazione in Experience Platform.
+È possibile eseguire una richiesta GET all&#39;endpoint `/previewsamplestatus` per visualizzare i dettagli dell&#39;ultimo processo di esempio eseguito correttamente per l&#39;organizzazione. Ciò include il numero totale di profili nel campione, nonché la metrica di conteggio dei profili o il numero totale di profili di cui dispone la tua organizzazione in Experience Platform.
 
 Il conteggio dei profili viene generato dopo l’unione dei frammenti di profilo per formare un singolo profilo per ogni singolo cliente. In altre parole, quando i frammenti di profilo vengono uniti tra loro, viene restituito un conteggio di &quot;1&quot; profilo perché sono tutti correlati allo stesso individuo.
 
-Il conteggio dei profili include anche profili con attributi (dati record) e profili contenenti solo dati di serie temporali (eventi), come i profili di Adobe Analytics. Il processo di esempio viene aggiornato regolarmente man mano che i dati di profilo vengono acquisiti, in modo da fornire un numero totale aggiornato di profili in Platform.
+Il conteggio dei profili include anche profili con attributi (dati record) e profili contenenti solo dati di serie temporali (eventi), come i profili di Adobe Analytics. Il processo di esempio viene aggiornato regolarmente man mano che vengono acquisiti i dati del profilo, in modo da fornire un numero totale aggiornato di profili all’interno di Experience Platform.
 
 **Formato API**
 
@@ -75,7 +75,7 @@ La risposta include i dettagli dell’ultimo processo di esempio riuscito esegui
 
 >[!NOTE]
 >
->In questo esempio di risposta, `numRowsToRead` e `totalRows` sono uguali tra loro. A seconda del numero di profili di cui dispone l’organizzazione, questo può accadere in Experience Platform. Tuttavia, in genere questi due numeri sono diversi, con `numRowsToRead` che è il numero minore perché rappresenta il campione come sottoinsieme del numero totale di profili (`totalRows`).
+>In questo esempio di risposta, `numRowsToRead` e `totalRows` sono uguali tra loro. Questo può accadere in base al numero di profili di cui dispone la tua organizzazione in Experience Platform. Tuttavia, in genere questi due numeri sono diversi, con `numRowsToRead` che è il numero minore perché rappresenta il campione come sottoinsieme del numero totale di profili (`totalRows`).
 
 ```json
 {
@@ -207,7 +207,7 @@ La risposta include un array `data`, contenente un elenco di oggetti set di dati
 
 ## Distribuzione del profilo di elenco per spazio dei nomi delle identità
 
-È possibile eseguire una richiesta di GET all&#39;endpoint `/previewsamplestatus/report/namespace` per visualizzare la suddivisione per spazio dei nomi identità in tutti i profili uniti nell&#39;archivio profili. Sono incluse sia le identità standard fornite da Adobe, sia le identità personalizzate definite dall’organizzazione.
+È possibile eseguire una richiesta GET all&#39;endpoint `/previewsamplestatus/report/namespace` per visualizzare la suddivisione per spazio dei nomi identità in tutti i profili uniti nell&#39;archivio profili. Sono incluse sia le identità standard fornite da Adobe, sia quelle personalizzate definite dalla tua organizzazione.
 
 Gli spazi dei nomi di identità sono un componente importante del servizio Adobe Experience Platform Identity che fungono da indicatori del contesto a cui si riferiscono i dati dei clienti. Per ulteriori informazioni, leggere la [panoramica dello spazio dei nomi delle identità](../../identity-service/features/namespaces.md).
 
@@ -299,14 +299,14 @@ La risposta include un array `data`, con singoli oggetti contenenti i dettagli d
 | `fullIDsFragmentCount` | Numero totale di frammenti di profilo nello spazio dei nomi. |
 | `fullIDsCount` | Numero totale di profili uniti nello spazio dei nomi. |
 | `fullIDsPercentage` | Il `fullIDsCount` come percentuale del totale dei profili uniti (il valore `totalRows` restituito nel [ultimo stato campione](#view-last-sample-status)), espresso in formato decimale. |
-| `code` | `code` per lo spazio dei nomi. Questo si trova quando si lavora con spazi dei nomi utilizzando l&#39;[API del servizio Adobe Experience Platform Identity](../../identity-service/api/list-namespaces.md) ed è anche indicato come [!UICONTROL simbolo di identità] nell&#39;interfaccia utente di Experience Platform. Per ulteriori informazioni, visita la [panoramica dello spazio dei nomi delle identità](../../identity-service/features/namespaces.md). |
+| `code` | `code` per lo spazio dei nomi. Questo è possibile quando si lavora con spazi dei nomi utilizzando l&#39;[API del servizio Adobe Experience Platform Identity](../../identity-service/api/list-namespaces.md) ed è anche indicato come [!UICONTROL simbolo di identità] nell&#39;interfaccia utente di Experience Platform. Per ulteriori informazioni, visita la [panoramica dello spazio dei nomi delle identità](../../identity-service/features/namespaces.md). |
 | `value` | Il valore `id` per lo spazio dei nomi. Questo problema si verifica quando si lavora con spazi dei nomi utilizzando l&#39;[API del servizio Identity](../../identity-service/api/list-namespaces.md). |
 
 ## Generare il rapporto di sovrapposizione del set di dati
 
 Il rapporto di sovrapposizione dei set di dati fornisce visibilità sulla composizione dell’archivio profili della tua organizzazione esponendo i set di dati che contribuiscono maggiormente al pubblico indirizzabile (profili uniti). Oltre a fornire informazioni approfondite sui dati, questo rapporto può aiutarti a intraprendere azioni per ottimizzare l’utilizzo della licenza, ad esempio impostare le scadenze per determinati set di dati.
 
-È possibile generare il report di sovrapposizione del set di dati eseguendo una richiesta di GET all&#39;endpoint `/previewsamplestatus/report/dataset/overlap`.
+È possibile generare il report di sovrapposizione dei set di dati eseguendo una richiesta GET all&#39;endpoint `/previewsamplestatus/report/dataset/overlap`.
 
 Per istruzioni dettagliate su come generare il report di sovrapposizione dei set di dati utilizzando la riga di comando o l&#39;interfaccia utente di Postman, consulta l&#39;[esercitazione sulla generazione del report di sovrapposizione dei set di dati](../tutorials/dataset-overlap-report.md).
 
@@ -445,7 +445,7 @@ In caso di esito positivo, la richiesta restituisce lo stato HTTP 200 (OK) e il 
 | Proprietà | Descrizione |
 |---|---|
 | `data` | L&#39;oggetto `data` contiene elenchi separati da virgole con combinazioni univoche di codici dello spazio dei nomi delle identità e dei rispettivi conteggi dei profili. |
-| Codici dello spazio dei nomi | `code` è un formato breve per ogni nome spazio dei nomi delle identità. È possibile trovare una mappatura di ogni `code` al relativo `name` utilizzando [API del servizio Adobe Experience Platform Identity](../../identity-service/api/list-namespaces.md). `code` è anche indicato come [!UICONTROL simbolo di identità] nell&#39;interfaccia utente Experience Platform. Per ulteriori informazioni, visita la [panoramica dello spazio dei nomi delle identità](../../identity-service/features/namespaces.md). |
+| Codici dello spazio dei nomi | `code` è un formato breve per ogni nome spazio dei nomi delle identità. È possibile trovare una mappatura di ogni `code` al relativo `name` utilizzando [API del servizio Adobe Experience Platform Identity](../../identity-service/api/list-namespaces.md). `code` è anche indicato come [!UICONTROL simbolo di identità] nell&#39;interfaccia utente di Experience Platform. Per ulteriori informazioni, visita la [panoramica dello spazio dei nomi delle identità](../../identity-service/features/namespaces.md). |
 | `reportTimestamp` | Il timestamp del rapporto. Se durante la richiesta è stato fornito un parametro `date`, il rapporto restituito si riferisce alla data specificata. Se non viene fornito alcun parametro `date`, viene restituito il report più recente. |
 
 ### Interpretazione del rapporto di sovrapposizione dello spazio dei nomi delle identità
@@ -559,7 +559,7 @@ In caso di esito positivo, la richiesta restituisce lo stato HTTP 200 (OK) e il 
 
 ### Interpretazione del rapporto sui profili non uniti
 
-I risultati del rapporto possono fornire informazioni sul numero di profili non uniti e inattivi presenti nell’archivio profili della tua organizzazione.
+I risultati del rapporto possono fornire ad insight il numero di profili non uniti e inattivi presenti nell’archivio profili della tua organizzazione.
 
 Considerare l&#39;estratto seguente dell&#39;oggetto `data`:
 

@@ -4,9 +4,9 @@ title: Guida all’API del profilo cliente in tempo reale
 description: L’API Profilo cliente in tempo reale consente agli sviluppatori di esplorare e utilizzare i dati del profilo, tra cui la visualizzazione dei profili, la creazione e l’aggiornamento di criteri di unione, l’esportazione o l’esempio di dati del profilo e l’eliminazione dei dati del profilo che non sono più necessari o che sono stati aggiunti per errore. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
 role: Developer
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: cb276c55c010aa7ccc936947ad87bf74239d6e99
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '862'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ Ogni attributo calcolato contiene un’espressione, o &quot;regola&quot;, che va
 
 ## Entità ([!DNL Profile] accesso) {#entities}
 
-Tramite Adobe Experience Platform è possibile accedere ai dati di [!DNL Real-Time Customer Profile] utilizzando le API RESTful o l&#39;interfaccia utente. Per informazioni su come accedere alle entità, più comunemente note come &quot;profili&quot;, utilizzando l&#39;API, segui i passaggi descritti nella [guida dell&#39;endpoint entità](entities.md). Per accedere ai profili tramite l&#39;interfaccia utente [!DNL Platform], fare riferimento alla [Guida utente del profilo](../ui/user-guide.md).
+Tramite Adobe Experience Platform è possibile accedere ai dati di [!DNL Real-Time Customer Profile] utilizzando le API RESTful o l&#39;interfaccia utente. Per informazioni su come accedere alle entità, più comunemente note come &quot;profili&quot;, utilizzando l&#39;API, segui i passaggi descritti nella [guida dell&#39;endpoint entità](entities.md). Per accedere ai profili tramite l&#39;interfaccia utente [!DNL Experience Platform], fare riferimento alla [Guida utente del profilo](../ui/user-guide.md).
 
 ## Processi di esportazione ([!DNL Profile] esportazione) {#profile-export}
 
@@ -39,17 +39,17 @@ I dati [!DNL Real-Time Customer Profile] possono essere esportati in un set di d
 
 ## Criteri di unione {#merge-policies}
 
-Quando si riuniscono dati provenienti da più origini in [!DNL Experience Platform], i criteri di unione sono le regole utilizzate da [!DNL Platform] per determinare la priorità dei dati e i dati che verranno combinati per creare profili cliente individuali. Utilizzando l&#39;API [!DNL Real-Time Customer Profile], è possibile creare nuovi criteri di unione, gestire i criteri esistenti e impostare un criterio di unione predefinito per l&#39;organizzazione. Per utilizzare i criteri di unione tramite l&#39;API, visita la [guida dell&#39;endpoint dei criteri di unione](merge-policies.md).
+Quando si riuniscono dati provenienti da più origini in [!DNL Experience Platform], i criteri di unione sono le regole utilizzate da [!DNL Experience Platform] per determinare la priorità dei dati e i dati che verranno combinati per creare profili cliente individuali. Utilizzando l&#39;API [!DNL Real-Time Customer Profile], è possibile creare nuovi criteri di unione, gestire i criteri esistenti e impostare un criterio di unione predefinito per l&#39;organizzazione. Per utilizzare i criteri di unione tramite l&#39;API, visita la [guida dell&#39;endpoint dei criteri di unione](merge-policies.md).
 
-Per ulteriori informazioni sui criteri di unione e sul loro ruolo in Platform, consulta la [panoramica dei criteri di unione](../merge-policies/overview.md).
+Per ulteriori informazioni sui criteri di unione e sul loro ruolo in Experience Platform, consulta la [panoramica dei criteri di unione](../merge-policies/overview.md).
 
 ## Anteprima stato campione ([!DNL Profile] anteprima) {#profile-preview}
 
-Quando i dati vengono acquisiti in Platform, viene eseguito un processo di esempio per aggiornare il conteggio dei profili e altre metriche relative ai dati del profilo cliente in tempo reale. I risultati di questo processo di esempio possono essere visualizzati utilizzando l&#39;endpoint `/previewsamplestatus`, parte dell&#39;API Real-Time Customer Profile. Questo endpoint può essere utilizzato anche per elencare le distribuzioni di profilo per set di dati e spazio dei nomi delle identità, nonché per generare più rapporti al fine di ottenere visibilità nella composizione dell’archivio profili della tua organizzazione.  Per iniziare a utilizzare l&#39;endpoint `/profilepreviewstatus`, fare riferimento alla [guida dell&#39;endpoint di stato di esempio di anteprima](preview-sample-status.md).
+Quando i dati vengono acquisiti in Experience Platform, viene eseguito un processo di esempio per aggiornare il conteggio dei profili e altre metriche relative ai dati del profilo cliente in tempo reale. I risultati di questo processo di esempio possono essere visualizzati utilizzando l&#39;endpoint `/previewsamplestatus`, parte dell&#39;API Real-Time Customer Profile. Questo endpoint può essere utilizzato anche per elencare le distribuzioni di profilo per set di dati e spazio dei nomi delle identità, nonché per generare più rapporti al fine di ottenere visibilità nella composizione dell’archivio profili della tua organizzazione.  Per iniziare a utilizzare l&#39;endpoint `/profilepreviewstatus`, fare riferimento alla [guida dell&#39;endpoint di stato di esempio di anteprima](preview-sample-status.md).
 
 ## Processi di sistema del profilo {#profile-system-jobs}
 
-I dati abilitati per il profilo acquisiti in [!DNL Platform] sono memorizzati nell&#39;archivio dati [!DNL Data Lake] e [!DNL Real-Time Customer Profile]. Talvolta può essere necessario eliminare i dati di profilo associati a un set di dati dall’archivio Profili per rimuovere i dati non più necessari o che sono stati aggiunti per errore. È necessario utilizzare l&#39;API per creare un [!DNL Profile System Job], noto anche come &quot;[!DNL delete request]&quot;, che può essere modificato, monitorato o eliminato se necessario. Per informazioni su come gestire le richieste di eliminazione utilizzando l&#39;endpoint `/system/jobs` nell&#39;API [!DNL Real-Time Customer Profile], seguire i passaggi descritti nella [guida dell&#39;endpoint dei processi di sistema del profilo](profile-system-jobs.md).
+I dati abilitati per il profilo acquisiti in [!DNL Experience Platform] sono memorizzati nell&#39;archivio dati [!DNL Data Lake] e [!DNL Real-Time Customer Profile]. Talvolta può essere necessario eliminare i dati di profilo associati a un set di dati dall’archivio Profili per rimuovere i dati non più necessari o che sono stati aggiunti per errore. È necessario utilizzare l&#39;API per creare un [!DNL Profile System Job], noto anche come &quot;[!DNL delete request]&quot;, che può essere modificato, monitorato o eliminato se necessario. Per informazioni su come gestire le richieste di eliminazione utilizzando l&#39;endpoint `/system/jobs` nell&#39;API [!DNL Real-Time Customer Profile], seguire i passaggi descritti nella [guida dell&#39;endpoint dei processi di sistema del profilo](profile-system-jobs.md).
 
 ## Aggiornare gli attributi dei profili {#update-profile}
 

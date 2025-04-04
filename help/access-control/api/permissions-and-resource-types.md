@@ -5,7 +5,7 @@ title: Endpoint API di riferimento
 description: L’endpoint di riferimento nell’API di controllo degli accessi consente di visualizzare i nomi delle autorizzazioni e dei tipi di risorse disponibili, che possono quindi essere utilizzati per visualizzare criteri di controllo degli accessi efficaci per l’utente corrente.
 role: Developer
 exl-id: 18d84d54-9258-4451-9aa8-7c647b45a8da
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 2%
@@ -20,7 +20,7 @@ ht-degree: 2%
 
 È possibile elencare i nomi di tutte le autorizzazioni e i tipi di risorse effettuando una richiesta GET all&#39;endpoint `/acl/reference`. Questi nomi possono quindi essere utilizzati nelle chiamate API per [visualizzare i criteri di controllo di accesso effettivi](./effective-policies.md) per l&#39;utente corrente.
 
-Un’autorizzazione è un criterio gestito tramite Adobe Admin Console e mappato a zero o più criteri di tipo risorsa. Un tipo di risorsa è un criterio che abilita le funzionalità di lettura, scrittura e/o eliminazione per un tipo specifico di risorsa [!DNL Platform] (ad esempio set di dati o schemi).
+Un’autorizzazione è un criterio gestito tramite Adobe Admin Console e mappato a zero o più criteri di tipo risorsa. Un tipo di risorsa è un criterio che abilita le funzionalità di lettura, scrittura e/o eliminazione per un tipo specifico di risorsa [!DNL Experience Platform] (ad esempio set di dati o schemi).
 
 **Formato API**
 

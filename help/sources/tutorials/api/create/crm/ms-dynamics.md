@@ -1,10 +1,10 @@
 ---
 title: Creare una connessione di base Microsoft Dynamics utilizzando l’API del servizio Flow
-description: Scopri come connettere Platform a un account Microsoft Dynamics utilizzando l’API del servizio Flusso.
+description: Scopri come connettere Experience Platform a un account Microsoft Dynamics utilizzando l’API del servizio Flusso.
 exl-id: 423c6047-f183-4d92-8d2f-cc8cc26647ef
-source-git-commit: 4e119056c0ab89cfc79eeb46e6f870c89356dc7d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1330'
+source-wordcount: '1338'
 ht-degree: 5%
 
 ---
@@ -17,14 +17,14 @@ Leggi questa guida per scoprire come collegare l&#39;origine [!DNL Microsoft Dyn
 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Origini](../../../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
-* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Origini](../../../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Experience Platform.
+* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Experience Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
-### Utilizzo delle API di Platform
+### Utilizzo delle API di Experience Platform
 
-Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida in [guida introduttiva alle API di Platform](../../../../../landing/api-guide.md).
+Per informazioni su come effettuare correttamente chiamate alle API di Experience Platform, consulta la guida introduttiva [alle API di Experience Platform](../../../../../landing/api-guide.md).
 
-Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per connettere correttamente Platform a un account Dynamics utilizzando l&#39;API [!DNL Flow Service].
+Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per connettere correttamente Experience Platform a un account Dynamics utilizzando l&#39;API [!DNL Flow Service].
 
 ### Raccogli le credenziali richieste
 
@@ -693,4 +693,4 @@ In caso di esito positivo, la risposta restituisce l’ID della connessione sorg
 Seguendo questa esercitazione, è stata creata una connessione di base [!DNL Microsoft Dynamics] utilizzando l&#39;API [!DNL Flow Service]. Puoi utilizzare questo ID connessione di base nelle seguenti esercitazioni:
 
 * [Esplora la struttura e il contenuto delle tabelle dati utilizzando l&#39;API  [!DNL Flow Service] ](../../explore/tabular.md)
-* [Crea un flusso di dati per portare i dati CRM in Platform utilizzando l&#39;API  [!DNL Flow Service] ](../../collect/crm.md)
+* [Crea un flusso di dati per portare i dati CRM in Experience Platform utilizzando l&#39;API  [!DNL Flow Service] ](../../collect/crm.md)

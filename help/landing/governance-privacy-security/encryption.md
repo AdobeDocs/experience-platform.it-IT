@@ -2,41 +2,41 @@
 title: Crittografia dei dati in Adobe Experience Platform
 description: Scopri come i dati vengono crittografati in transito e a riposo in Adobe Experience Platform.
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
-source-git-commit: f0b9d414d7b08015478c132de6910629d86c9cf9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '749'
 ht-degree: 0%
 
 ---
 
 # Crittografia dei dati in Adobe Experience Platform
 
-Adobe Experience Platform è un sistema potente ed estensibile che centralizza e standardizza i dati sull’esperienza del cliente nelle soluzioni aziendali. Tutti i dati utilizzati da Platform sono crittografati in transito e inattivi per proteggerli. Questo documento descrive i processi di crittografia di Platform ad alto livello.
+Adobe Experience Platform è un sistema potente ed estensibile che centralizza e standardizza i dati sull’esperienza del cliente nelle soluzioni aziendali. Tutti i dati utilizzati da Experience Platform sono crittografati in transito e inattivi per proteggerli. Questo documento descrive i processi di crittografia di Experience Platform ad alto livello.
 
-Il diagramma di flusso seguente illustra il modo in cui Experience Platform acquisisce, crittografa e salva i dati in modo permanente:
+Il seguente diagramma di flusso del processo illustra come Experience Platform acquisisce, crittografa e salva in modo permanente i dati:
 
-![Diagramma che illustra il modo in cui i dati vengono acquisiti, crittografati e memorizzati dall&#39;Experience Platform.](../images/governance-privacy-security/encryption/flow.png)
+![Diagramma che illustra il modo in cui Experience Platform acquisisce, crittografa e mantiene i dati.](../images/governance-privacy-security/encryption/flow.png)
 
 ## Dati in transito {#in-transit}
 
-Tutti i dati in transito tra Platform e qualsiasi componente esterno vengono condotti su connessioni sicure e crittografate utilizzando HTTPS [TLS v1.2](https://datatracker.ietf.org/doc/html/rfc5246).
+Tutti i dati in transito tra Experience Platform e qualsiasi componente esterno vengono condotti su connessioni sicure e crittografate utilizzando HTTPS [TLS v1.2](https://datatracker.ietf.org/doc/html/rfc5246).
 
-In generale, i dati vengono inseriti in Platform in tre modi:
+In generale, i dati vengono inseriti in Experience Platform in tre modi:
 
-- Le funzionalità di [Raccolta dati](../../collection/home.md) consentono a siti Web e applicazioni mobili di inviare dati all&#39;Edge Network di Platform per la gestione temporanea e la preparazione per l&#39;acquisizione.
-- [I connettori Source](../../sources/home.md) inviano i dati direttamente a Platform dalle applicazioni Adobe Experience Cloud e da altre origini dati aziendali.
-- Gli strumenti ETL (Extract, Transform, Load, cioè Estrai, Trasforma, Carica) non di Adobe inviano i dati all&#39;[API di acquisizione batch](../../ingestion/batch-ingestion/overview.md) per l&#39;utilizzo.
+- Le funzionalità di [Raccolta dati](../../collection/home.md) consentono a siti Web e applicazioni mobili di inviare dati ad Experience Platform Edge Network per la gestione temporanea e la preparazione per l&#39;acquisizione.
+- [I connettori Source](../../sources/home.md) inviano dati in streaming direttamente ad Experience Platform dalle applicazioni Adobe Experience Cloud e da altre origini dati aziendali.
+- Gli strumenti ETL (Extract, Transform, Load, cioè Estrai, Trasforma, Carica) non Adobe inviano i dati all&#39;[API di acquisizione batch](../../ingestion/batch-ingestion/overview.md) per l&#39;utilizzo.
 
-Dopo che i dati sono stati introdotti nel sistema e [crittografati all&#39;arresto](#at-rest), i servizi Platform arricchiscono ed esportano i dati nei modi seguenti:
+Dopo che i dati sono stati introdotti nel sistema e [crittografati all&#39;arresto](#at-rest), i servizi Experience Platform arricchiscono ed esportano i dati nei modi seguenti:
 
 - [Le destinazioni](../../destinations/home.md) ti consentono di attivare i dati nelle applicazioni Adobe e nelle applicazioni partner.
-- Anche le applicazioni della piattaforma nativa come [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=it) e [Adobe Journey Optimizer](https://experienceleague.adobe.com/it/docs/journey-optimizer/using/ajo-home) possono utilizzare i dati.
+- Anche le applicazioni Experience Platform native come [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=it) e [Adobe Journey Optimizer](https://experienceleague.adobe.com/it/docs/journey-optimizer/using/ajo-home) possono utilizzare i dati.
 
 ### Supporto del protocollo mTLS {#mtls-protocol-support}
 
-È ora possibile utilizzare Mutual Transport Layer Security (mTLS) per garantire una maggiore sicurezza nelle connessioni in uscita alla [destinazione API HTTP](../../destinations/catalog/streaming/http-destination.md) e alle [azioni personalizzate](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions) di Adobe Journey Optimizer. mTLS è un metodo di sicurezza end-to-end per l’autenticazione reciproca che garantisce che entrambe le parti che condividono le informazioni siano chi affermano di essere prima che i dati vengano condivisi. mTLS include un ulteriore passaggio rispetto a TLS, in cui il server richiede anche il certificato del client e lo verifica alla loro fine.
+È ora possibile utilizzare Mutual Transport Layer Security (mTLS) per garantire una maggiore sicurezza nelle connessioni in uscita alla [destinazione API HTTP](../../destinations/catalog/streaming/http-destination.md) e alle [azioni personalizzate](https://experienceleague.adobe.com/it/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions) di Adobe Journey Optimizer. mTLS è un metodo di sicurezza end-to-end per l’autenticazione reciproca che garantisce che entrambe le parti che condividono le informazioni siano chi affermano di essere prima che i dati vengano condivisi. mTLS include un ulteriore passaggio rispetto a TLS, in cui il server richiede anche il certificato del client e lo verifica alla loro fine.
 
-Se si desidera [utilizzare mTLS con le azioni personalizzate di Adobe Journey Optimizer](https://experienceleague.adobe.com/it/docs/journey-optimizer/using/configuration/configure-journeys/action-journeys/about-custom-action-configuration) e i flussi di lavoro di destinazione di Experience Platform HTTP API, l&#39;indirizzo del server inserito nell&#39;interfaccia utente delle azioni dei clienti di Adobe Journey Optimizer o nell&#39;interfaccia utente delle destinazioni deve avere i protocolli TLS disabilitati e solo mTLS abilitato. Se il protocollo TLS 1.2 è ancora abilitato su tale endpoint, non viene inviato alcun certificato per l’autenticazione client. Ciò significa che per utilizzare mTLS con questi flussi di lavoro, l&#39;endpoint del server &quot;ricevente&quot; deve essere un endpoint di connessione abilitato per mTLS **only**.
+Se desideri [utilizzare mTLS con le azioni personalizzate di Adobe Journey Optimizer](https://experienceleague.adobe.com/it/docs/journey-optimizer/using/configuration/configure-journeys/action-journeys/about-custom-action-configuration) e i flussi di lavoro di destinazione delle API HTTP di Experience Platform, l&#39;indirizzo del server inserito nell&#39;interfaccia utente delle azioni dei clienti di Adobe Journey Optimizer o nell&#39;interfaccia utente delle destinazioni deve avere i protocolli TLS disabilitati e solo mTLS abilitato. Se il protocollo TLS 1.2 è ancora abilitato su tale endpoint, non viene inviato alcun certificato per l’autenticazione client. Ciò significa che per utilizzare mTLS con questi flussi di lavoro, l&#39;endpoint del server &quot;ricevente&quot; deve essere un endpoint di connessione abilitato per mTLS **only**.
 
 >[!IMPORTANT]
 >
@@ -59,10 +59,10 @@ Puoi anche recuperare in modo sicuro i certificati pubblici effettuando una rich
 
 ## Dati a riposo {#at-rest}
 
-I dati acquisiti e utilizzati da Platform vengono memorizzati nel data lake, un archivio di dati altamente granulare contenente tutti i dati gestiti dal sistema, indipendentemente dall’origine o dal formato del file. Tutti i dati persistenti nel data lake vengono crittografati, archiviati e gestiti in un&#39;istanza [[!DNL Microsoft Azure Data Lake] Storage](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) isolata, univoca per la tua organizzazione.
+I dati acquisiti e utilizzati da Experience Platform vengono memorizzati nel data lake, un archivio di dati altamente granulare contenente tutti i dati gestiti dal sistema, indipendentemente dall’origine o dal formato del file. Tutti i dati persistenti nel data lake vengono crittografati, archiviati e gestiti in un&#39;istanza [[!DNL Microsoft Azure Data Lake] Storage](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) isolata, univoca per la tua organizzazione.
 
 Per informazioni dettagliate sulla modalità di crittografia dei dati inattivi nell&#39;archiviazione di Azure Data Lake, vedere la [documentazione ufficiale di Azure](https://learn.microsoft.com/en-us/azure/storage/common/storage-service-encryption).
 
 ## Passaggi successivi
 
-Questo documento fornisce una panoramica di alto livello sul modo in cui i dati vengono crittografati in Platform. Per ulteriori informazioni sulle procedure di sicurezza in Platform, consulta l&#39;Experience League Panoramica su [governance, privacy e sicurezza](./overview.md) oppure il [white paper sulla sicurezza di Platform](https://www.adobe.com/content/dam/cc/en/security/pdfs/AEP_SecurityOverview.pdf).
+Questo documento fornisce una panoramica di alto livello sul modo in cui i dati vengono crittografati in Experience Platform. Per ulteriori informazioni sulle procedure di sicurezza in Experience Platform, consulta la panoramica su [governance, privacy e sicurezza](./overview.md) in Experience League oppure consulta il [white paper sulla sicurezza in Experience Platform](https://www.adobe.com/content/dam/cc/en/security/pdfs/AEP_SecurityOverview.pdf).

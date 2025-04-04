@@ -3,9 +3,9 @@ title: Connessione SAP Commerce
 description: Utilizzare il connettore di destinazione SAP Commerce per aggiornare i record dei clienti nell'account SAP.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 3bd1a2a7-fb56-472d-b9bd-603b94a8937e
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2246'
+source-wordcount: '2268'
 ht-degree: 3%
 
 ---
@@ -28,19 +28,19 @@ I clienti [!DNL SAP Commerce] memorizzano informazioni su singoli utenti o entit
 
 Consultare le sezioni seguenti per eventuali prerequisiti da impostare in Experience Platform e [!DNL SAP Commerce] e per informazioni da raccogliere prima di utilizzare la destinazione [!DNL SAP Commerce].
 
-### Experience Platform prerequisiti {#prerequisites-in-experience-platform}
+### Prerequisiti di Experience Platform {#prerequisites-in-experience-platform}
 
 Prima di attivare i dati nella destinazione [!DNL SAP Commerce], è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) e [tipi di pubblico](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) creati in [!DNL Experience Platform].
 
-Se hai bisogno di indicazioni sugli stati del pubblico, consulta la documentazione di Experience Platform per il gruppo di campi dello schema [Dettagli appartenenza pubblico](/help/xdm/field-groups/profile/segmentation.md).
+Se hai bisogno di indicazioni sugli stati del pubblico, consulta la documentazione di Experience Platform per il gruppo di campi dello schema [Dettagli sull&#39;iscrizione al pubblico](/help/xdm/field-groups/profile/segmentation.md).
 
 ### Prerequisiti per la destinazione [!DNL SAP Commerce] {#prerequisites-destination}
 
-Per esportare i dati da Platform al tuo account [!DNL SAP Commerce], tieni presente i seguenti prerequisiti:
+Per esportare i dati da Experience Platform al tuo account [!DNL SAP Commerce], tieni presente i seguenti prerequisiti:
 
 #### Devi avere un account [!DNL SAP Subscription Billing] {#prerequisites-account}
 
-Per esportare i dati da Platform all&#39;account [!DNL SAP Commerce], è necessario disporre di un account [!DNL SAP Subscription Billing]. Se non disponi di un account di fatturazione valido, contatta il tuo account manager [!DNL SAP]. Per ulteriori informazioni, consultare il documento [[!DNL SAP] Configurazione piattaforma](https://help.sap.com/doc/5fd179965d5145fbbe7f2a7aa1272338/latest/en-US/PlatformConfiguration.pdf).
+Per esportare dati da Experience Platform all&#39;account [!DNL SAP Commerce], è necessario disporre di un account [!DNL SAP Subscription Billing]. Se non disponi di un account di fatturazione valido, contatta il tuo account manager [!DNL SAP]. Per ulteriori informazioni, consultare il documento [[!DNL SAP] Configurazione piattaforma](https://help.sap.com/doc/5fd179965d5145fbbe7f2a7aa1272338/latest/en-US/PlatformConfiguration.pdf).
 
 #### Generare una chiave di servizio {#prerequisites-service-key}
 
@@ -79,9 +79,9 @@ Per esportare i dati da Platform all&#39;account [!DNL SAP Commerce], è necessa
 
 #### Crea riferimenti personalizzati in [!DNL SAP Subscription Billing] {#prerequisites-custom-reference}
 
-Per aggiornare lo stato del pubblico di Experience Platform in [!DNL SAP Subscription Billing], è necessario un campo di riferimento personalizzato per ogni pubblico selezionato in Platform.
+Per aggiornare lo stato del pubblico di Experience Platform in [!DNL SAP Subscription Billing], è necessario un campo di riferimento personalizzato per ogni pubblico selezionato in Experience Platform.
 
-Per creare i riferimenti personalizzati, accedere all&#39;account [!DNL SAP Subscription Billing] e passare alla pagina **[Dati e configurazione principali]** > **[Riferimenti personalizzati]**. Quindi, seleziona **[!UICONTROL Crea]** per aggiungere un nuovo riferimento per ogni pubblico selezionato in Platform. Questi nomi dei campi di riferimento saranno necessari nel passaggio successivo di [Pianifica esportazione pubblico ed esempio](#schedule-segment-export-example).
+Per creare i riferimenti personalizzati, accedere all&#39;account [!DNL SAP Subscription Billing] e passare alla pagina **[Dati e configurazione principali]** > **[Riferimenti personalizzati]**. Quindi, seleziona **[!UICONTROL Crea]** per aggiungere un nuovo riferimento per ogni pubblico selezionato in Experience Platform. Questi nomi dei campi di riferimento saranno necessari nel passaggio successivo di [Pianifica esportazione pubblico ed esempio](#schedule-segment-export-example).
 
 Di seguito è riportato un esempio di come creare un **[!UICONTROL tipo di riferimento]** personalizzato in [!DNL SAP Subscription Billing]:
 ![Immagine che mostra dove creare un riferimento personalizzato nella fatturazione dell&#39;abbonamento SAP.](../../assets/catalog/ecommerce/sap-commerce/create-custom-reference.png)
@@ -90,7 +90,7 @@ Per ulteriori informazioni, consulta la documentazione [!DNL SAP Subscription Bi
 
 ### Raccogli le credenziali richieste {#gather-credentials}
 
-Per connettere [!DNL SAP Commerce] a Experience Platform, è necessario fornire i valori per le proprietà di connessione seguenti:
+Per connettere [!DNL SAP Commerce] ad Experience Platform, è necessario fornire i valori per le seguenti proprietà di connessione:
 
 | Credenziali | Descrizione |
 | --- | --- |
@@ -115,13 +115,13 @@ Le richieste API a [!DNL SAP Cloud Management service] sono soggette a [Limiti d
 
 Questa sezione descrive tutti i tipi di pubblico che puoi esportare in questa destinazione.
 
-Questa destinazione supporta l&#39;attivazione di tutti i tipi di pubblico generati tramite l&#39;Experience Platform [Servizio di segmentazione](../../../segmentation/home.md).
+Questa destinazione supporta l&#39;attivazione di tutti i tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md).
 
 Questa destinazione supporta anche l’attivazione dei tipi di pubblico descritti nella tabella seguente.
 
 | Tipo di pubblico | Supportato | Descrizione |
 | ------------- | --------- | ----------- |
-| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite il servizio di segmentazione [Experience Platform](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
 | Caricamenti personalizzati | ✓ | Tipi di pubblico [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
@@ -132,7 +132,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
-| Tipo di esportazione | **[!UICONTROL Basato su profilo]** | <ul><li>Stai esportando tutti i membri di un pubblico, insieme ai campi di schema desiderati *(ad esempio: indirizzo e-mail, numero di telefono, cognome)*, in base al mapping dei campi.</li><li> Per ogni pubblico selezionato in Platform, l&#39;attributo aggiuntivo [!DNL SAP Commerce] corrispondente viene aggiornato con il relativo stato da Platform.</li></ul> |
+| Tipo di esportazione | **[!UICONTROL Basato su profilo]** | <ul><li>Stai esportando tutti i membri di un pubblico, insieme ai campi di schema desiderati *(ad esempio: indirizzo e-mail, numero di telefono, cognome)*, in base al mapping dei campi.</li><li> Per ogni pubblico selezionato in Experience Platform, l&#39;attributo aggiuntivo [!DNL SAP Commerce] corrispondente viene aggiornato con il relativo stato di pubblico da Experience Platform.</li></ul> |
 | Frequenza di esportazione | **[!UICONTROL Streaming]** | <ul><li>Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Quando un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni sulle [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
@@ -159,14 +159,14 @@ Compila i campi obbligatori di seguito. Per ulteriori informazioni, consultare l
 | **[!UICONTROL Area]** | La posizione del centro dati. L&#39;area è presente in `url` e ha un valore simile a `eu10` o `us10`. Ad esempio, se `url` è `https://eu10.revenue.cloud.sap/api`, è necessario `eu10`. |
 
 Per eseguire l&#39;autenticazione nella destinazione, selezionare **[!UICONTROL Connetti alla destinazione]**.
-![Immagine dall&#39;interfaccia utente di Platform che mostra come eseguire l&#39;autenticazione nella destinazione.](../../assets/catalog/ecommerce/sap-commerce/authenticate-destination.png)
+![Immagine dall&#39;interfaccia utente di Experience Platform che mostra come eseguire l&#39;autenticazione nella destinazione.](../../assets/catalog/ecommerce/sap-commerce/authenticate-destination.png)
 
 Se i dettagli forniti sono validi, nell&#39;interfaccia utente viene visualizzato lo stato **[!UICONTROL Connesso]** con un segno di spunta verde. A questo punto è possibile procedere al passaggio successivo.
 
 ### Inserire i dettagli della destinazione {#destination-details}
 
 Per configurare i dettagli per la destinazione, compila i campi obbligatori e facoltativi seguenti. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
-![Immagine dall&#39;interfaccia utente di Platform che mostra i dettagli della destinazione da compilare dopo l&#39;autenticazione.](../../assets/catalog/ecommerce/sap-commerce/destination-details.png)
+![Immagine dall&#39;interfaccia utente di Experience Platform che mostra i dettagli della destinazione da compilare dopo l&#39;autenticazione.](../../assets/catalog/ecommerce/sap-commerce/destination-details.png)
 
 * **[!UICONTROL Nome]**: un nome con cui riconoscerai questa destinazione in futuro.
 * **[!UICONTROL Descrizione]**: una descrizione che ti aiuterà a identificare questa destinazione in futuro.
@@ -189,36 +189,36 @@ Leggi [Attivare profili e tipi di pubblico nelle destinazioni di esportazione de
 
 ### Mappare attributi e identità {#map}
 
-Per inviare correttamente i dati sul pubblico da Adobe Experience Platform alla destinazione [!DNL SAP Commerce], è necessario eseguire il passaggio di mappatura dei campi. La mappatura consiste nella creazione di un collegamento tra i campi dello schema Experience Data Model (XDM) nell’account Platform e i corrispondenti equivalenti dalla destinazione. Per mappare correttamente i campi XDM ai campi di destinazione [!DNL SAP Commerce], effettua le seguenti operazioni:
+Per inviare correttamente i dati sul pubblico da Adobe Experience Platform alla destinazione [!DNL SAP Commerce], è necessario eseguire il passaggio di mappatura dei campi. La mappatura consiste nella creazione di un collegamento tra i campi dello schema Experience Data Model (XDM) nell’account Experience Platform e i corrispondenti equivalenti dalla destinazione. Per mappare correttamente i campi XDM ai campi di destinazione [!DNL SAP Commerce], effettua le seguenti operazioni:
 
 #### Mappa l&#39;identità `customerNumberSAP`
 
 L&#39;identità `customerNumberSAP` è una mappatura obbligatoria per questa destinazione. Segui i passaggi seguenti per mapparla:
 
 1. Nel passaggio **[!UICONTROL Mapping]**, seleziona **[!UICONTROL Aggiungi nuovo mapping]**. Ora è possibile visualizzare una nuova riga di mappatura sullo schermo.
-   ![Schermata dell&#39;interfaccia utente di Platform con il pulsante Aggiungi nuova mappatura evidenziato.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
+   ![Schermata dell&#39;interfaccia utente di Experience Platform con il pulsante Aggiungi nuova mappatura evidenziato.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
 1. Nella finestra **[!UICONTROL Seleziona campo di origine]**, scegli **[!UICONTROL Seleziona spazio dei nomi identità]** e seleziona `customerNumberSAP`.
-   ![Schermata dell&#39;interfaccia utente di Platform che seleziona e-mail come attributo di origine da mappare come identità.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-source-identity.png)
+   ![Schermata dell&#39;interfaccia utente di Experience Platform che seleziona l&#39;e-mail come attributo di origine da mappare come identità.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-source-identity.png)
 1. Nella finestra **[!UICONTROL Seleziona campo di destinazione]**, scegli **[!UICONTROL Seleziona spazio dei nomi identità]** e seleziona l&#39;identità `customerNumber`.
-   ![Schermata dell&#39;interfaccia utente di Platform che seleziona le e-mail come attributo di destinazione da mappare come identità.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-target-identity.png)
+   ![Schermata dell&#39;interfaccia utente di Experience Platform che seleziona le e-mail come attributo di destinazione da mappare come identità.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-target-identity.png)
 
 | Campo origine | Campo di destinazione | Obbligatorio |
 | --- | --- | --- |
 | `IdentityMap: customerNumberSAP` | `Identity: customerNumber` | Sì |
 
 Di seguito è riportato un esempio con la mappatura di identità:
-![Immagine dall&#39;interfaccia utente di Platform che mostra un esempio di mapping di identità customerNumber.](../../assets/catalog/ecommerce/sap-commerce/mapping-identities.png)
+![Immagine dall&#39;interfaccia utente di Experience Platform che mostra un esempio di mapping di identità customerNumber.](../../assets/catalog/ecommerce/sap-commerce/mapping-identities.png)
 
 #### Mappatura degli attributi
 
 Per aggiungere altri attributi da aggiornare tra lo schema del profilo XDM e l&#39;account [!DNL SAP Subscription Billing], ripeti i passaggi seguenti:
 
 1. Nel passaggio **[!UICONTROL Mapping]**, seleziona **[!UICONTROL Aggiungi nuovo mapping]**. Ora è possibile visualizzare una nuova riga di mappatura sullo schermo.
-   ![Schermata dell&#39;interfaccia utente di Platform con il pulsante Aggiungi nuova mappatura evidenziato.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
+   ![Schermata dell&#39;interfaccia utente di Experience Platform con il pulsante Aggiungi nuova mappatura evidenziato.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
 1. Nella finestra **[!UICONTROL Seleziona campo di origine]**, scegli la categoria **[!UICONTROL Seleziona attributi]** e seleziona l&#39;attributo XDM.
-   ![Schermata dell&#39;interfaccia utente di Platform che seleziona Cognome come attributo di origine.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-source-attribute.png)
+   ![Schermata dell&#39;interfaccia utente di Experience Platform che seleziona Cognome come attributo di origine.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-source-attribute.png)
 1. Nella finestra **[!UICONTROL Seleziona campo di destinazione]**, scegli la categoria **[!UICONTROL Seleziona attributi personalizzati]** e digita il nome dell&#39;attributo [!DNL SAP Subscription Billing] dall&#39;elenco degli attributi [schema](https://api.sap.com/api/BusinessPartner_APIs/schema) del cliente.
-   ![Schermata dell&#39;interfaccia utente di Platform in cui lastName è definito come attributo di destinazione.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-target-attribute.png)
+   ![Schermata dell&#39;interfaccia utente di Experience Platform in cui lastName è definito come attributo di destinazione.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-target-attribute.png)
 
 >[!IMPORTANT]
 >
@@ -261,7 +261,7 @@ Puoi quindi aggiungere altre mappature tra lo schema del profilo XDM e gli attri
 | `xdm: workAddress.city` | `Attribute: city` | No |
 
 Di seguito è riportato un esempio con mappature di attributi obbligatorie e facoltative in cui il cliente è un singolo utente:
-![Immagine dall&#39;interfaccia utente di Platform che mostra un esempio con mapping di attributi obbligatori e facoltativi in cui il cliente è un singolo utente.](../../assets/catalog/ecommerce/sap-commerce/mapping-attributes-individual.png)
+![Immagine dall&#39;interfaccia utente di Experience Platform che mostra un esempio con mapping di attributi obbligatori e facoltativi in cui il cliente è un singolo utente.](../../assets/catalog/ecommerce/sap-commerce/mapping-attributes-individual.png)
 
 >[!TAB Cliente aziendale]
 
@@ -271,7 +271,7 @@ Di seguito è riportato un esempio con mappature di attributi obbligatorie e fac
 | `xdm: workAddress.city` | `Attribute: city` | No |
 
 Di seguito è riportato un esempio con mappature di attributi obbligatorie e facoltative in cui il cliente è un’azienda:
-![Immagine dall&#39;interfaccia utente di Platform che mostra un esempio con mapping di attributi obbligatori e facoltativi in cui il cliente è un&#39;azienda.](../../assets/catalog/ecommerce/sap-commerce/mapping-attributes-corporate.png)
+![Immagine dall&#39;interfaccia utente di Experience Platform che mostra un esempio con mapping di attributi obbligatori e facoltativi in cui il cliente è un&#39;azienda.](../../assets/catalog/ecommerce/sap-commerce/mapping-attributes-corporate.png)
 
 >[!ENDTABS]
 
@@ -279,10 +279,10 @@ Al termine della fornitura dei mapping per la connessione di destinazione, selez
 
 ### Esempio di esportazione e pianificazione di un pubblico {#schedule-segment-export-example}
 
-Quando esegui il passaggio [Pianifica esportazione pubblico](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling), devi mappare manualmente i tipi di pubblico di Platform agli [attributi](#prerequisites-attribute) in [!DNL SAP Subscription Billing].
+Quando esegui il passaggio [Pianifica esportazione pubblico](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling), devi mappare manualmente i tipi di pubblico di Experience Platform agli [attributi](#prerequisites-attribute) in [!DNL SAP Subscription Billing].
 
 Di seguito è riportato un esempio del passaggio di esportazione Pianifica pubblico, con la posizione dell&#39;[!DNL SAP Commerce] **[!UICONTROL ID mappatura]** evidenziato:
-![Immagine da Platform che mostra l&#39;esportazione del pubblico di pianificazione con ID di mappatura popolati.](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export.png)
+![Immagine da Experience Platform che mostra l&#39;esportazione del pubblico di pianificazione con ID mappatura popolati.](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export.png)
 
 A questo scopo, seleziona ogni segmento, quindi immetti il nome del riferimento personalizzato da [!DNL SAP Subscription Billing] nel campo del connettore di destinazione [!DNL SAP Commerce] **[!UICONTROL ID mappatura]**. Per istruzioni sulla creazione di riferimenti personalizzati, consulta la sezione [Creare riferimenti personalizzati in [!DNL SAP Subscription Billing]](#prerequisites-custom-reference).
 
@@ -297,11 +297,11 @@ Di seguito è riportato un esempio di **[!UICONTROL tipo di riferimento]** da [!
 ![Immagine che mostra dove creare un riferimento personalizzato nella fatturazione dell&#39;abbonamento SAP.](../../assets/catalog/ecommerce/sap-commerce/create-custom-reference.png)
 
 Di seguito è riportato un esempio del passaggio Pianifica esportazione pubblico, con un pubblico selezionato e il corrispondente [!DNL SAP Commerce] **[!UICONTROL ID mappatura]** evidenziato:
-![Immagine da Platform che mostra l&#39;esportazione del pubblico di pianificazione con ID di mappatura popolati.](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export-example.png)
+![Immagine da Experience Platform che mostra l&#39;esportazione del pubblico di pianificazione con ID mappatura popolati.](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export-example.png)
 
 Come mostrato, il valore all&#39;interno del campo **[!UICONTROL ID mappatura]** deve corrispondere esattamente al valore [!DNL SAP Subscription Billing] **[!UICONTROL Tipo riferimento]**.
 
-Ripeti questa sezione per ogni pubblico di Platform attivato.
+Ripeti questa sezione per ogni pubblico Experience Platform attivato.
 
 In base all’immagine mostrata sopra in cui hai selezionato due tipi di pubblico, la mappatura sarà la seguente:
 

@@ -4,9 +4,9 @@ title: Panoramica delle destinazioni di e-mail marketing
 type: Tutorial
 description: I provider di servizi e-mail (ESP) ti consentono di gestire le attività di e-mail marketing, ad esempio per l’invio di campagne e-mail promozionali. Scopri quali ESP sono supportati come destinazioni di Experience Platform.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: 4566d5241f287801569e0cfa5b86ea6210fd1638
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '377'
 ht-degree: 4%
 
 ---
@@ -25,7 +25,7 @@ Adobe Experience Platform supporta le seguenti destinazioni di e-mail marketing:
 * [Adobe Campaign Managed Cloud Services](adobe-campaign-managed-services.md)
 * [Categorie di interesse Mailchimp](mailchimp-interest-categories.md)
 * [Tag Mailchimp](mailchimp-tags.md)
-* [Eloqua Oracle (API)](oracle-eloqua-api.md)
+* [(API) Oracle Eloqua](oracle-eloqua-api.md)
 * [(API) [!DNL Salesforce Marketing Cloud]](salesforce-marketing-cloud-exact-target.md)
 * [(File) Oracle Eloqua](oracle-eloqua.md)
 * [(File) [!DNL Salesforce Marketing Cloud]](salesforce-marketing-cloud.md)
@@ -35,13 +35,13 @@ Adobe Experience Platform supporta le seguenti destinazioni di e-mail marketing:
 
 ## Connettersi a una nuova destinazione di e-mail marketing {#connect-destination}
 
-Per inviare i tipi di pubblico a destinazioni di e-mail marketing per le campagne, Platform deve prima connettersi alla destinazione. Per informazioni dettagliate sulla configurazione di una nuova destinazione, consulta il [tutorial sulla creazione della destinazione](../../ui/connect-destination.md).
+Per inviare i tipi di pubblico a destinazioni di e-mail marketing per le campagne, Experience Platform deve prima connettersi alla destinazione. Per informazioni dettagliate sulla configurazione di una nuova destinazione, consulta il [tutorial sulla creazione della destinazione](../../ui/connect-destination.md).
 
 ## Best practice per l’attivazione dei tipi di pubblico nelle destinazioni di e-mail marketing {#best-practices}
 
 ### Selezione identità {#identity}
 
-L&#39;Adobe consiglia di selezionare un identificatore univoco dallo [schema di unione](../../../profile/home.md#profile-fragments-and-union-schemas). Questo è il campo da cui le identità utente sono ricavate. Nella maggior parte dei casi, questo campo è l’indirizzo e-mail, ma può anche essere un ID programma fedeltà o un numero di telefono. Fai riferimento alla tabella seguente per gli identificatori univoci più comuni e il relativo campo XDM nello schema.
+Adobe consiglia di selezionare un identificatore univoco dallo [schema di unione](../../../profile/home.md#profile-fragments-and-union-schemas). Questo è il campo da cui le identità utente sono ricavate. Nella maggior parte dei casi, questo campo è l’indirizzo e-mail, ma può anche essere un ID programma fedeltà o un numero di telefono. Fai riferimento alla tabella seguente per gli identificatori univoci più comuni e il relativo campo XDM nello schema.
 
 | Identificatore univoco | Campo XDM nello schema unificato |
 |----------------- | ---------------------------|

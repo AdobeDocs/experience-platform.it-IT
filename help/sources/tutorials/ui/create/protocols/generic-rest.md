@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;API REST generica
 title: Creare una connessione Source API REST generica nell’interfaccia utente
 type: Tutorial
 description: Scopri come creare una connessione sorgente REST API generica utilizzando l’interfaccia utente di Adobe Experience Platform.
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '641'
+source-wordcount: '647'
 ht-degree: 3%
 
 ---
@@ -20,14 +20,14 @@ Questo tutorial illustra i passaggi per la creazione di un connettore di origine
 
 ## Introduzione
 
-Questo tutorial richiede una buona conoscenza dei seguenti componenti di Platform:
+Questo tutorial richiede una buona conoscenza dei seguenti componenti di Experience Platform:
 
-* [Origini](../../../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
-* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Origini](../../../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Experience Platform.
+* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Experience Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 ### Raccogli le credenziali richieste
 
-Per accedere al tuo account [!DNL Generic REST API] su Platform, devi fornire credenziali valide per il tipo di autenticazione desiderato. L’API REST generica supporta sia il codice di aggiornamento OAuth 2 che l’autenticazione di base. Per informazioni sulle credenziali per i due tipi di autenticazione supportati, vedere le tabelle seguenti.
+Per accedere al tuo account [!DNL Generic REST API] su Experience Platform, devi fornire credenziali valide per il tipo di autenticazione desiderato. L’API REST generica supporta sia il codice di aggiornamento OAuth 2 che l’autenticazione di base. Per informazioni sulle credenziali per i due tipi di autenticazione supportati, vedere le tabelle seguenti.
 
 #### Codice di aggiornamento OAuth 2
 
@@ -53,7 +53,7 @@ Per accedere al tuo account [!DNL Generic REST API] su Platform, devi fornire cr
 
 ## Connettere l’account API REST generico
 
-Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Nella schermata [!UICONTROL Catalogo] sono visualizzate diverse origini con cui è possibile creare un account.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Nella schermata [!UICONTROL Catalogo] sono visualizzate diverse origini con cui è possibile creare un account.
 
 Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare la fonte specifica che si desidera utilizzare utilizzando la barra di ricerca.
 
@@ -89,4 +89,4 @@ Per utilizzare l&#39;autenticazione di base, selezionare **[!UICONTROL Autentica
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai stabilito una connessione all’account API REST generico. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per inserire dati in Platform](../../dataflow/protocols.md).
+Seguendo questa esercitazione, hai stabilito una connessione all’account API REST generico. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per inserire dati in Experience Platform](../../dataflow/protocols.md).

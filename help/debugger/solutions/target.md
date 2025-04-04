@@ -2,34 +2,34 @@
 title: Testare un’implementazione di Adobe Target con Adobe Experience Platform Debugger
 description: Scopri come utilizzare Adobe Experience Platform Debugger per testare ed eseguire il debug di un sito web abilitato con Adobe Target.
 exl-id: f99548ff-c6f2-4e99-920b-eb981679de2d
-source-git-commit: bc6069f2cfa4459860fe98588b293ffeed7fb1f1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1035'
+source-wordcount: '1047'
 ht-degree: 2%
 
 ---
 
 # Testare un’implementazione di Adobe Target con Adobe Experience Platform Debugger
 
-Adobe Experience Platform Debugger fornisce una suite di utili strumenti per testare e eseguire il debug di un sito web che è stato dotato di un’implementazione di Adobe Target. Questa guida descrive alcuni flussi di lavoro comuni e best practice per l’utilizzo di Platform Debugger su un sito web abilitato per Target.
+Adobe Experience Platform Debugger fornisce una suite di strumenti utili per testare e eseguire il debug di un sito web che è stato dotato di un’implementazione Adobe Target. Questa guida descrive alcuni flussi di lavoro comuni e best practice per l’utilizzo di Experience Platform Debugger su un sito web abilitato per Target.
 
 ## Prerequisiti
 
-Per utilizzare Platform Debugger per Target, il sito Web deve utilizzare la [libreria at.js](https://developer.adobe.com/target/implement/client-side/atjs/how-atjs-works/) versione 1.x o successiva. Le versioni precedenti non sono supportate.
+Per utilizzare Experience Platform Debugger per Target, il sito Web deve utilizzare la [libreria at.js](https://developer.adobe.com/target/implement/client-side/atjs/how-atjs-works/) versione 1.x o successiva. Le versioni precedenti non sono supportate.
 
-## Inizializzazione di Platform Debugger
+## Inizializzazione di Experience Platform Debugger
 
-Apri il sito web da testare in un browser, quindi apri l’estensione Platform Debugger.
+Apri il sito web da testare in un browser, quindi apri l’estensione Experience Platform Debugger.
 
-Selezionare **[!DNL Target]** nel menu di navigazione a sinistra. Se Platform Debugger rileva che sul sito è in esecuzione una versione compatibile di at.js, vengono visualizzati i dettagli di implementazione di Adobe Target.
+Selezionare **[!DNL Target]** nel menu di navigazione a sinistra. Se Experience Platform Debugger rileva che sul sito è in esecuzione una versione compatibile di at.js, vengono visualizzati i dettagli di implementazione di Adobe Target.
 
-![Visualizzazione di destinazione selezionata in Platform Debugger, che indica che Adobe Target è attivo nella pagina del browser attualmente visualizzata](../images/solutions/target/target-initialized.png)
+![Visualizzazione di destinazione selezionata in Experience Platform Debugger, che indica che Adobe Target è attivo nella pagina del browser attualmente visualizzata](../images/solutions/target/target-initialized.png)
 
 ## Informazioni di configurazione globali
 
-Le informazioni sulla configurazione globale dell’implementazione vengono visualizzate nella parte superiore della vista Target in Platform Debugger.
+Le informazioni sulla configurazione globale dell’implementazione vengono visualizzate nella parte superiore della vista Target in Experience Platform Debugger.
 
-![Informazioni di configurazione globali per Target evidenziate in Platform Debugger](../images/solutions/target/global-config.png)
+![Informazioni di configurazione globali per Target evidenziate in Experience Platform Debugger](../images/solutions/target/global-config.png)
 
 | Nome | Descrizione |
 | --- | --- |
@@ -44,11 +44,11 @@ Le informazioni sulla configurazione globale dell’implementazione vengono visu
 
 Selezionare **[!DNL Network Requests]** per visualizzare informazioni di riepilogo su ogni richiesta di rete effettuata nella pagina.
 
-![La sezione [!DNL Network Requests] per Target selezionata in Platform Debugger](../images/solutions/target/network-requests.png)
+![La sezione [!DNL Network Requests] per Target selezionata in Experience Platform Debugger](../images/solutions/target/network-requests.png)
 
 Quando esegui azioni sulla pagina (compreso il ricaricamento della pagina), vengono aggiunte automaticamente nuove colonne alla tabella, che ti consentono di visualizzare la sequenza delle azioni e il modo in cui i valori vengono modificati tra ogni richiesta.
 
-![La sezione [!DNL Network Requests] per Target selezionata in Platform Debugger](../images/solutions/target/new-request.png)
+![La sezione [!DNL Network Requests] per Target selezionata in Experience Platform Debugger](../images/solutions/target/new-request.png)
 
 Vengono acquisiti i seguenti valori:
 
@@ -68,8 +68,8 @@ Vengono acquisiti i seguenti valori:
 | [!DNL Initiator] | Iniziatore della richiesta. In altre parole, chi ha presentato la richiesta? |
 | [!DNL clientCode] | L’identificatore dell’account della tua organizzazione come riconosciuto da Target. |
 | [!DNL requestType] | API utilizzata per la richiesta. Se utilizzi at.js 1.x, il valore è `/json`. Se utilizzi at.js 2.x, il valore è `delivery`. |
-| [!DNL Audience Manager Blob] | Fornisce informazioni sui metadati di Audience Manager crittografati denominati BLOB. |
-| [!DNL Audience Location Hint] | L&#39;ID della regione di raccolta dati. Questo è un identificatore numerico per la posizione geografica di un particolare datacenter del servizio ID. Per ulteriori informazioni, consulta la documentazione di Audience Manager su [ID regioni DCS, posizioni e nomi host](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html?lang=it) e la guida di Experience Cloud Identity Service su [`getLocationHint`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/getlocationhint.html#reference-a761030ff06c4439946bb56febf42d4c). |
+| [!DNL Audience Manager Blob] | Fornisce informazioni sui metadati Audience Manager crittografati denominati BLOB. |
+| [!DNL Audience Location Hint] | L&#39;ID della regione di raccolta dati. Questo è un identificatore numerico per la posizione geografica di un particolare datacenter del servizio ID. Per ulteriori informazioni, consulta la documentazione di Audience Manager su [ID regioni DCS, posizioni e nomi host](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html?lang=it) e la guida del servizio Experience Cloud Identity in [`getLocationHint`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/getlocationhint.html#reference-a761030ff06c4439946bb56febf42d4c). |
 | [!DNL Browser Height] | Altezza del browser in pixel. |
 | [!DNL Browser Time Offset] | Offset orario del browser associato al relativo fuso orario. |
 | [!DNL Browser Width] | Larghezza del browser in pixel. |
@@ -77,8 +77,8 @@ Vengono acquisiti i seguenti valori:
 | [!DNL context] | Oggetto che contiene informazioni contestuali sul browser utilizzato per effettuare la richiesta, incluse le dimensioni dello schermo e la piattaforma client. |
 | [!DNL prefetch] | Parametri utilizzati in durante l&#39;elaborazione di `prefetch`. |
 | [!DNL execute] | Parametri utilizzati durante l&#39;elaborazione di `execute`. |
-| [!DNL Experience Cloud Visitor ID] | Se ne viene rilevato uno, fornisce informazioni sull&#39;ID Experience Cloud [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=it) assegnato al visitatore del sito corrente. |
-| [!DNL experienceCloud] | Contiene gli ID Experience Cloud per questa sessione utente specifica: un [ID dati supplementare](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/before-implement.html?#section_2C1F745A2B7D41FE9E30915539226E3A) di A4T e un [ID visitatore (ECID)](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=it). |
+| [!DNL Experience Cloud Visitor ID] | Se ne viene rilevato uno, fornisce informazioni sull&#39;[Experience Cloud ID (ECID)](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=it) assegnato al visitatore del sito corrente. |
+| [!DNL experienceCloud] | Contiene gli Experience Cloud ID per questa sessione utente specifica: un A4T [ID dati supplementare](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/before-implement.html?#section_2C1F745A2B7D41FE9E30915539226E3A) e un [ID visitatore (ECID)](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=it). |
 | [!DNL id] | [ID destinazione](https://developers.adobetarget.com/api/delivery-api/#section/Identifying-Visitors/Target-ID) per il visitatore. |
 | [!DNL Mbox Host] | L&#39;[host](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html?lang=it) a cui è stata effettuata la richiesta di Target. |
 | [!DNL Mbox PC] | Stringa che incapsula l&#39;ID sessione [`mbox`](https://developer.adobe.com/target/implement/client-side/atjs/global-mbox/global-mbox-overview/) e l&#39;hint percorso [Adobe Target Edge](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html#concept_0AE2ED8E9DE64288A8B30FCBF1040934). Questo valore viene utilizzato da at.js per garantire che la sessione e la posizione di Edge rimangano permanenti. |
@@ -91,20 +91,20 @@ Vengono acquisiti i seguenti valori:
 | [!DNL Screen Height] | Altezza dello schermo in pixel. |
 | [!DNL Screen Width] | Larghezza dello schermo in pixel. |
 | [!DNL Supplemental Data ID] | ID generato dal sistema e utilizzato per associare i visitatori alle chiamate corrispondenti di Adobe Target e Adobe Analytics. Per ulteriori informazioni, vedere la [Guida alla risoluzione dei problemi di A4T](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/troubleshoot-a4t/a4t-troubleshooting.html?#section_75002584FA63456D8D9086172925DD8D). |
-| [!DNL vst] | [Configurazione API servizio Identity Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/configurations/function-vars.html). |
+| [!DNL vst] | Configurazione dell&#39;API del servizio [Experience Cloud Identity](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/configurations/function-vars.html). |
 | [!DNL webGLRenderer] | Fornisce informazioni sul renderer WebGL utilizzato nella pagina, se applicabile. |
 
 {style="table-layout:auto"}
 
 Per visualizzare i dettagli di un parametro in un particolare evento di rete, selezionare la cella della tabella in questione. Viene visualizzata una finestra a comparsa che fornisce ulteriori informazioni sul parametro, inclusa una descrizione e il relativo valore. Se il valore è un oggetto JSON, la finestra di dialogo include una visualizzazione completamente navigabile della struttura dell’oggetto.
 
-![La sezione [!DNL Network Requests] per Target selezionata in Platform Debugger](../images/solutions/target/request-param-details.png)
+![La sezione [!DNL Network Requests] per Target selezionata in Experience Platform Debugger](../images/solutions/target/request-param-details.png)
 
 ## [!DNL Configuration]
 
 Selezionare **[!DNL Configuration]** per abilitare o disabilitare una selezione di strumenti di debug aggiuntivi per Target.
 
-![La sezione [!DNL Configuration Requests] per Target selezionata in Platform Debugger](../images/solutions/target/configuration.png)
+![La sezione [!DNL Configuration Requests] per Target selezionata in Experience Platform Debugger](../images/solutions/target/configuration.png)
 
 | Strumento di debug | Descrizione |
 | --- | --- |

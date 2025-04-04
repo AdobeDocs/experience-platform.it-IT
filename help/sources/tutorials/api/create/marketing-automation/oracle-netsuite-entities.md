@@ -1,13 +1,13 @@
 ---
-title: Creazione di una connessione di origine e di un flusso di dati per le entità NetSuite di Oracle mediante l'API del servizio Flusso
-description: Scopri come creare una connessione sorgente e un flusso di dati per portare a Experience Platform i contatti e i dati dei clienti Oracle NetSuite utilizzando l’API del servizio Flow.
+title: Creare una connessione di origine e un flusso di dati per le entità Oracle NetSuite mediante l'API del servizio Flusso
+description: Scopri come creare una connessione sorgente e un flusso di dati per portare i contatti e i dati dei clienti di Oracle NetSuite in Experience Platform utilizzando l’API del servizio Flusso.
 hide: true
 hidefromtoc: true
 badge: Beta
 exl-id: ddbb413e-a6ca-49df-b68d-37c9d2aab61b
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2163'
+source-wordcount: '2177'
 ht-degree: 2%
 
 ---
@@ -24,8 +24,8 @@ Leggi l&#39;esercitazione seguente per scoprire come portare i contatti e i dati
 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Experience Platform:
 
-* [Origini](../../../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
-* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Origini](../../../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Experience Platform.
+* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Experience Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per connettersi correttamente a [!DNL Oracle NetSuite Entities] utilizzando l&#39;API [!DNL Flow Service].
 
@@ -33,19 +33,19 @@ Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conosce
 
 Leggi la [[!DNL Oracle NetSuite] panoramica](../../../../connectors/marketing-automation/oracle-netsuite.md) per informazioni su come recuperare le credenziali di autenticazione.
 
-### Utilizzo delle API di Platform
+### Utilizzo delle API di Experience Platform
 
-Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida in [guida introduttiva alle API di Platform](../../../../../landing/api-guide.md).
+Per informazioni su come effettuare correttamente chiamate alle API di Experience Platform, consulta la guida introduttiva [alle API di Experience Platform](../../../../../landing/api-guide.md).
 
-## Connetti [!DNL Oracle NetSuite Entities] a Platform utilizzando l&#39;API [!DNL Flow Service]
+## Connetti [!DNL Oracle NetSuite Entities] ad Experience Platform utilizzando l&#39;API [!DNL Flow Service]
 
-Di seguito vengono descritti i passaggi necessari per autenticare l&#39;origine [!DNL Oracle NetSuite Entities], creare una connessione di origine e creare un flusso di dati per portare in Experience Platform i dati di clienti e contatti.
+Di seguito vengono descritti i passaggi necessari per autenticare l&#39;origine [!DNL Oracle NetSuite Entities], creare una connessione di origine e creare un flusso di dati per portare i dati dei clienti e dei contatti in Experience Platform.
 
 ### Creare una connessione di base {#base-connection}
 
-Una connessione di base mantiene le informazioni tra l’origine e Platform, incluse le credenziali di autenticazione dell’origine, lo stato corrente della connessione e l’ID univoco della connessione di base. L’ID della connessione di base consente di esplorare e navigare tra i file dall’interno dell’origine e identificare gli elementi specifici che desideri acquisire, comprese le informazioni relative ai tipi di dati e ai formati.
+Una connessione di base mantiene le informazioni tra l’origine e Experience Platform, incluse le credenziali di autenticazione dell’origine, lo stato corrente della connessione e l’ID univoco della connessione di base. L’ID della connessione di base consente di esplorare e navigare tra i file dall’interno dell’origine e identificare gli elementi specifici che desideri acquisire, comprese le informazioni relative ai tipi di dati e ai formati.
 
-Per creare un ID di connessione di base, effettuare una richiesta POST all&#39;endpoint `/connections` fornendo le credenziali di autenticazione [!DNL Oracle NetSuite Entities] come parte del corpo della richiesta.
+Per creare un ID di connessione di base, eseguire una richiesta POST all&#39;endpoint `/connections` fornendo le credenziali di autenticazione [!DNL Oracle NetSuite Entities] come parte del corpo della richiesta.
 
 **Formato API**
 
@@ -89,7 +89,7 @@ curl -X POST \
 | `name` | Nome della connessione di base. Verificare che il nome della connessione di base sia descrittivo, in quanto è possibile utilizzarlo per cercare informazioni sulla connessione di base. |
 | `description` | Valore facoltativo che è possibile includere per fornire ulteriori informazioni sulla connessione di base. |
 | `connectionSpec.id` | ID della specifica di connessione dell&#39;origine. Questo ID può essere recuperato dopo che l&#39;origine è stata registrata e approvata tramite l&#39;API [!DNL Flow Service]. |
-| `auth.specName` | Tipo di autenticazione utilizzato per autenticare l’origine in Platform. |
+| `auth.specName` | Tipo di autenticazione utilizzato per autenticare l’origine in Experience Platform. |
 | `auth.params.clientId` | Il valore ID client quando crei il record di integrazione. Il processo per la creazione di un record di integrazione è disponibile [qui](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981). Il valore è una stringa di 64 caratteri simile a `7fce.....b42f`. |
 | `auth.params.clientSecret` | Il valore ID client quando crei il record di integrazione. Il processo per la creazione di un record di integrazione è disponibile [qui](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981). Il valore è una stringa di 64 caratteri simile a `5c98.....1b46`. |
 | `auth.params.accessTokenUrl` | L&#39;URL del token di accesso [!DNL NetSuite], simile a `https://{ACCOUNT_ID}.suitetalk.api.netsuite.com/services/rest/auth/oauth2/v1/token`, in cui sostituirai ACCOUNT_ID con l&#39;ID account [!DNL NetSuite]. |
@@ -108,7 +108,7 @@ In caso di esito positivo, la risposta restituisce la connessione di base appena
 
 ### Esplora l’origine {#explore}
 
-Una volta ottenuto l&#39;ID connessione di base, è ora possibile esplorare il contenuto e la struttura dei dati di origine eseguendo una richiesta di GET all&#39;endpoint `/connections` e fornendo l&#39;ID connessione di base come parametro di query.
+Una volta ottenuto l&#39;ID connessione di base, è ora possibile esplorare il contenuto e la struttura dei dati di origine eseguendo una richiesta GET all&#39;endpoint `/connections` e fornendo l&#39;ID connessione di base come parametro di query.
 
 **Formato API**
 
@@ -118,16 +118,16 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=rest&object={OBJECT}&fi
 
 **Richiesta**
 
-Quando si eseguono richieste di GET per esplorare la struttura e il contenuto dei file dell’origine, è necessario includere i parametri di query elencati nella tabella seguente:
+Quando esegui le richieste di GET per esplorare la struttura e il contenuto dei file dell’origine, devi includere i parametri di query elencati nella tabella seguente:
 
 | Parametro | Descrizione |
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | ID della connessione di base generato nel passaggio precedente. |
 | `objectType=rest` | Tipo di oggetto che si desidera esplorare. Attualmente, questo valore è sempre impostato su `rest`. |
 | `{OBJECT}` | Questo parametro è necessario solo quando si visualizza una directory specifica. Il relativo valore rappresenta il percorso della directory che desideri esplorare. Per questa origine il valore sarebbe `json`. |
-| `fileType=json` | Il tipo di file che desideri portare su Platform. Attualmente, `json` è l&#39;unico tipo di file supportato. |
+| `fileType=json` | Il tipo di file che desideri portare in Experience Platform. Attualmente, `json` è l&#39;unico tipo di file supportato. |
 | `{PREVIEW}` | Valore booleano che definisce se il contenuto della connessione supporta l’anteprima. |
-| `{SOURCE_PARAMS}` | Definisce i parametri per il file sorgente da portare a Platform. Per recuperare il tipo di formato accettato per `{SOURCE_PARAMS}`, è necessario codificare l&#39;intera stringa in base64. <br> [!DNL Oracle NetSuite Entities] supporta sia il recupero dei dati dei clienti che dei contatti. A seconda del tipo di oggetto utilizzato, passare una delle seguenti operazioni: <ul><li>`customer` : recupera dati cliente specifici, inclusi dettagli quali nomi cliente, indirizzi e identificatori chiave.</li><li>`contact` : Recupera i nomi dei contatti, le e-mail, i numeri di telefono ed eventuali campi personalizzati relativi ai contatti associati ai clienti.</li></ul> |
+| `{SOURCE_PARAMS}` | Definisce i parametri per il file di origine che desideri portare in Experience Platform. Per recuperare il tipo di formato accettato per `{SOURCE_PARAMS}`, è necessario codificare l&#39;intera stringa in base64. <br> [!DNL Oracle NetSuite Entities] supporta sia il recupero dei dati dei clienti che dei contatti. A seconda del tipo di oggetto utilizzato, passare una delle seguenti operazioni: <ul><li>`customer` : recupera dati cliente specifici, inclusi dettagli quali nomi cliente, indirizzi e identificatori chiave.</li><li>`contact` : Recupera i nomi dei contatti, le e-mail, i numeri di telefono ed eventuali campi personalizzati relativi ai contatti associati ai clienti.</li></ul> |
 
 >[!BEGINTABS]
 
@@ -747,7 +747,7 @@ In caso di esito positivo, la risposta restituisce l&#39;identificatore univoco 
 
 ### Creare uno schema XDM di destinazione {#target-schema}
 
-Per utilizzare i dati sorgente in Platform, è necessario creare uno schema di destinazione che strutturi i dati sorgente in base alle tue esigenze. Lo schema di destinazione viene quindi utilizzato per creare un set di dati di Platform in cui sono contenuti i dati di origine.
+Affinché i dati sorgente possano essere utilizzati in Experience Platform, è necessario creare uno schema di destinazione per strutturare i dati sorgente in base alle tue esigenze. Lo schema di destinazione viene quindi utilizzato per creare un set di dati Experience Platform in cui sono contenuti i dati di origine.
 
 È possibile creare uno schema XDM di destinazione eseguendo una richiesta POST all&#39;API [Schema Registry](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
 
@@ -905,7 +905,7 @@ In caso di esito positivo, la risposta restituisce i dettagli della mappatura ap
 
 ### Creare un flusso {#flow}
 
-L&#39;ultimo passaggio per portare i dati da [!DNL Oracle NetSuite Entities] a Platform consiste nel creare un flusso di dati. A questo punto sono stati preparati i seguenti valori obbligatori:
+L&#39;ultimo passaggio per portare dati da [!DNL Oracle NetSuite Entities] ad Experience Platform consiste nella creazione di un flusso di dati. A questo punto sono stati preparati i seguenti valori obbligatori:
 
 * [ID connessione Source](#source-connection)
 * [ID connessione di destinazione](#target-connection)
@@ -965,7 +965,7 @@ curl -X POST \
 | `flowSpec.version` | Versione corrispondente dell&#39;ID della specifica di flusso. Il valore predefinito è `1.0`. |
 | `sourceConnectionIds` | L&#39;[ID connessione di origine](#source-connection) generato in un passaggio precedente. |
 | `targetConnectionIds` | L&#39;ID [connessione di destinazione](#target-connection) generato in un passaggio precedente. |
-| `transformations` | Questa proprietà contiene le varie trasformazioni che devono essere applicate ai dati. Questa proprietà è necessaria per portare dati non conformi a XDM su Platform. |
+| `transformations` | Questa proprietà contiene le varie trasformazioni che devono essere applicate ai dati. Questa proprietà è necessaria quando si importano dati non conformi a XDM in Experience Platform. |
 | `transformations.name` | Nome assegnato alla trasformazione. |
 | `transformations.params.mappingId` | L&#39;[ID mappatura](#mapping) generato in un passaggio precedente. |
 | `transformations.params.mappingVersion` | Versione corrispondente dell&#39;ID di mappatura. Il valore predefinito è `0`. |
@@ -998,7 +998,7 @@ Aggiorna i dettagli del flusso di dati, ad esempio il nome e la descrizione, non
 
 ### Aggiornare l’account
 
-Aggiornare il nome, la descrizione e le credenziali dell&#39;account di origine eseguendo una richiesta PATCH all&#39;API [!DNL Flow Service] e fornendo l&#39;ID connessione di base come parametro di query. Quando si effettua una richiesta PATCH, è necessario fornire `etag` univoco dell&#39;account di origine nell&#39;intestazione `If-Match`. Per esempi API completi, consulta la guida in [aggiornamento dell&#39;account di origine tramite l&#39;API](../../update.md).
+Aggiornare il nome, la descrizione e le credenziali dell&#39;account di origine eseguendo una richiesta PATCH all&#39;API [!DNL Flow Service] e fornendo l&#39;ID connessione di base come parametro di query. Quando si effettua una richiesta PATCH, è necessario fornire l&#39;univoco `etag` dell&#39;account di origine nell&#39;intestazione `If-Match`. Per esempi API completi, consulta la guida in [aggiornamento dell&#39;account di origine tramite l&#39;API](../../update.md).
 
 ### Eliminare il flusso di dati
 

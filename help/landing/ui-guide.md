@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica dell’interfaccia utente di Experience Platform
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: 6210f78e79c6c528296378756c9d11e35d092736
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1924'
+source-wordcount: '1938'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 Questa guida offre un’introduzione all’utilizzo dell’interfaccia utente di Adobe Experience Platform, spiegando a cosa servono i vari componenti e fornendo collegamenti verso ulteriori informazioni.
 
-Per ulteriori informazioni su Adobe Experience Platform, leggere l&#39;[panoramica dell&#39;Experience Platform](home.md).
+Per ulteriori informazioni su Adobe Experience Platform, leggere la [panoramica di Experience Platform](home.md).
 
 ## Schermata iniziale
 
@@ -59,9 +59,9 @@ La sezione **[!UICONTROL Apprendimento consigliato]** fornisce collegamenti a do
 
 ## Barra di navigazione superiore
 
-La barra di navigazione superiore nell’interfaccia utente di Platform mostra l’organizzazione a cui sei attualmente connesso e fornisce diversi controlli importanti.
+La barra di navigazione superiore nell’interfaccia utente di Experience Platform mostra l’organizzazione a cui sei attualmente connesso e fornisce diversi controlli importanti.
 
-Sul lato sinistro della barra di navigazione è presente il logo Adobe Experience Platform. Se selezioni questo logo in qualsiasi momento, torna alla schermata iniziale dell’interfaccia utente di Platform.
+Sul lato sinistro della barra di navigazione è presente il logo Adobe Experience Platform. Se selezioni questo logo in qualsiasi momento, torna alla schermata iniziale dell’interfaccia utente di Experience Platform.
 
 ![](./images/user-guide/homepage-top-nav-bar.png)
 
@@ -79,7 +79,7 @@ L&#39;elemento successivo sul lato destro della navigazione superiore è il **co
 
 ### Aiuto
 
-A destra del commutatore dell&#39;applicazione si trova il menu **Guida e supporto tecnico**, rappresentato dall&#39;icona ![punto interrogativo/Guida](/help/images/icons/help.png). Quando selezioni questa icona, viene visualizzato un menu a comparsa contenente diverse risorse di aiuto e supporto. Nella scheda **[!UICONTROL Guida]** è disponibile un elenco della documentazione relativa alla pagina in cui si è connessi. La scheda **[!UICONTROL Supporto]** consente di creare un ticket di supporto con il team di supporto Adobe. La scheda **[!UICONTROL Feedback]** consente di inviare ad Adobe i commenti e suggerimenti su Platform.
+A destra del commutatore dell&#39;applicazione si trova il menu **Guida e supporto tecnico**, rappresentato dall&#39;icona ![punto interrogativo/Guida](/help/images/icons/help.png). Quando selezioni questa icona, viene visualizzato un menu a comparsa contenente diverse risorse di aiuto e supporto. Nella scheda **[!UICONTROL Guida]** è disponibile un elenco della documentazione relativa alla pagina in cui si è connessi. La scheda **[!UICONTROL Supporto]** consente di creare un ticket di supporto con il team di supporto di Adobe. La scheda **[!UICONTROL Feedback]** consente di inviare ad Adobe i commenti e i suggerimenti su Experience Platform.
 
 ![](images/user-guide/homepage-help-clicked.png)
 
@@ -91,17 +91,17 @@ Nella sezione **notifications**, rappresentata dall&#39;icona ![bell/Notificatio
 
 L&#39;elemento finale nella barra di navigazione superiore è rappresentato dalle **impostazioni utente**, rappresentate dall&#39;icona ![impostazioni utente/Profilo utente](images/user-guide/profile-icon.png). Seleziona questa icona per modificare le preferenze o uscire.
 
-Puoi alternare tra il tema chiaro e scuro per l’interfaccia Platform con lo switch che si trova appena sotto il tuo nome e l’e-mail. Seleziona il tema desiderato.
+Puoi alternare tra il tema chiaro e scuro per l’interfaccia Experience Platform con lo switch che si trova appena sotto il tuo nome e l’e-mail. Seleziona il tema desiderato.
 
 ![](images/theme.png)
 
 ### Sandbox
 
-La barra della sandbox si trova immediatamente sotto la barra di navigazione superiore. Questa barra mostra quale sandbox stai utilizzando attualmente per Platform. Ulteriori informazioni sulle sandbox sono disponibili nella [panoramica sulle sandbox](../sandboxes/home.md).
+La barra della sandbox si trova immediatamente sotto la barra di navigazione superiore. Questa barra mostra quale sandbox stai utilizzando attualmente per Experience Platform. Ulteriori informazioni sulle sandbox sono disponibili nella [panoramica sulle sandbox](../sandboxes/home.md).
 
 ## Pannello di navigazione a sinistra {#left-nav}
 
-Nella barra di navigazione a sinistra della schermata sono elencati tutti i diversi servizi supportati nell’interfaccia utente di Platform.
+Nella barra di navigazione a sinistra della schermata sono elencati tutti i diversi servizi supportati nell’interfaccia utente di Experience Platform.
 
 Fai clic sull’icona del menu per mostrare o nascondere il pannello di navigazione a sinistra.
 
@@ -115,15 +115,15 @@ Per bloccare la navigazione in posizione aperta, fai nuovamente clic su dopo ave
 
 ![](images/user-guide/homepage-left.png)
 
-La sezione **[!UICONTROL Home]** ti consente di tornare alla home page dell&#39;interfaccia utente di Platform.
+La sezione **[!UICONTROL Home]** ti consente di tornare alla home page dell&#39;interfaccia utente di Experience Platform.
 
-La sezione **[!UICONTROL Flussi di lavoro]** mostra un elenco di flussi di lavoro con più passaggi per l&#39;esecuzione di operazioni in Platform. Ulteriori informazioni sui flussi di lavoro sono disponibili nella [panoramica dei flussi di lavoro](./workflows.md).
+La sezione **[!UICONTROL Flussi di lavoro]** mostra un elenco di flussi di lavoro con più passaggi per l&#39;esecuzione di operazioni in Experience Platform. Ulteriori informazioni sui flussi di lavoro sono disponibili nella [panoramica dei flussi di lavoro](./workflows.md).
 
 ### [!UICONTROL Connessioni]
 
-La sezione **[!UICONTROL Origini]** consente di creare, aggiornare ed eliminare connessioni di origine, consentendo di acquisire dati da origini esterne in Platform. Ulteriori informazioni sulle origini sono disponibili nella [panoramica delle origini](../sources/home.md).
+La sezione **[!UICONTROL Origini]** consente di creare, aggiornare ed eliminare connessioni di origine, consentendo di acquisire dati da origini esterne in Experience Platform. Ulteriori informazioni sulle origini sono disponibili nella [panoramica delle origini](../sources/home.md).
 
-La sezione **[!UICONTROL Destinazioni]** ti consente di creare, aggiornare ed eliminare destinazioni, consentendoti di esportare dati da Platform in molte destinazioni esterne. Ulteriori informazioni sulle destinazioni sono disponibili nella [panoramica sulle destinazioni](../destinations/home.md).
+La sezione **[!UICONTROL Destinazioni]** ti consente di creare, aggiornare ed eliminare destinazioni, consentendoti di esportare dati da Experience Platform in molte destinazioni esterne. Ulteriori informazioni sulle destinazioni sono disponibili nella [panoramica sulle destinazioni](../destinations/home.md).
 
 ### [!UICONTROL Cliente]
 
@@ -131,13 +131,13 @@ La sezione **[!UICONTROL Profili]** consente di sfogliare i profili dei clienti,
 
 La sezione **[!UICONTROL Tipi di pubblico]** consente di creare e gestire le definizioni dei segmenti. Per ulteriori informazioni sull&#39;utilizzo della sezione [!UICONTROL Tipi di pubblico], consulta la [guida utente per la segmentazione](../segmentation/ui/overview.md). Ulteriori informazioni sul servizio di segmentazione sono disponibili nella [Panoramica del servizio di segmentazione](../segmentation/home.md).
 
-La sezione **[!UICONTROL Identità]** ti consente di creare e gestire gli spazi dei nomi delle identità. Per ulteriori informazioni sulla sezione [!UICONTROL Identità], incluse informazioni sugli spazi dei nomi delle identità e su come utilizzare le identità nell&#39;interfaccia utente di Platform, consulta la [panoramica dello spazio dei nomi delle identità](../identity-service/features/namespaces.md).
+La sezione **[!UICONTROL Identità]** ti consente di creare e gestire gli spazi dei nomi delle identità. Per ulteriori informazioni sulla sezione [!UICONTROL Identità], incluse informazioni sugli spazi dei nomi delle identità e su come utilizzare le identità nell&#39;interfaccia utente di Experience Platform, consulta la [panoramica dello spazio dei nomi delle identità](../identity-service/features/namespaces.md).
 
 ### [!UICONTROL Privacy]
 
 La sezione **[!UICONTROL Criteri]** ti consente di creare e gestire i criteri di utilizzo dei dati. Per ulteriori informazioni sull&#39;utilizzo della sezione Criteri, leggere la [guida utente dei criteri di utilizzo dei dati](../data-governance/policies/user-guide.md). Ulteriori informazioni sui criteri di utilizzo dei dati sono disponibili nella [panoramica dei criteri di utilizzo dei dati](../data-governance/policies/overview.md).
 
-La sezione **[!UICONTROL Richieste]** consente di creare e gestire le richieste di accesso a dati personali. Tieni presente che per poter accedere all’interfaccia utente di Privacy Service devi essere inserito nell&#39;elenco Consentiti. Per ulteriori informazioni sull&#39;utilizzo della sezione Richieste, leggere la [guida utente di Privacy Service](../privacy-service/ui/user-guide.md). Ulteriori informazioni su Privacy Service sono disponibili nella [panoramica di Privacy Service](../privacy-service/home.md).
+La sezione **[!UICONTROL Richieste]** consente di creare e gestire le richieste di accesso a dati personali. Tieni presente che per poter accedere all’interfaccia utente di Privacy Service devi essere inserito nell&#39;elenco Consentiti. Per ulteriori informazioni sull&#39;utilizzo della sezione Richieste, leggere la [guida utente di Privacy Service](../privacy-service/ui/user-guide.md). Ulteriori informazioni su Privacy Service sono disponibili nella [Panoramica di Privacy Service](../privacy-service/home.md).
 
 ### [!UICONTROL Data Science]
 
@@ -166,13 +166,13 @@ La sezione **[!UICONTROL Audit trail]** fornisce un record dettagliato e cronolo
 
 La sezione **[!UICONTROL Federated databases]** consente di connettere Adobe Experience Platform al data warehouse aziendale. Ulteriori informazioni sulla connessione ai database federati sono disponibili nella [guida utente Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/federated-db).
 
-### [!UICONTROL Funzione decisioni]
+### [!UICONTROL Funzione Decisioni]
 
 Adobe Journey Optimizer è un servizio applicativo basato su Experience Platform. Consente di utilizzare tecnologie decisionali potenti per offrire ai clienti l’offerta e l’esperienza migliore al momento giusto, in tutti i punti di contatto. Per ulteriori informazioni su Journey Optimizer, incluso l&#39;utilizzo di [!UICONTROL Offerte] e [!UICONTROL Attività], visita la [documentazione di Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=it).
 
 ### [!UICONTROL Amministrazione]
 
-L’interfaccia utente di Platform fornisce una dashboard attraverso la quale puoi visualizzare informazioni importanti sull’utilizzo delle licenze della tua organizzazione, acquisite durante un’istantanea giornaliera. Accedi a questo dashboard selezionando **[!UICONTROL Utilizzo licenze]** nell&#39;area di navigazione. Per ulteriori informazioni sul dashboard di utilizzo delle licenze, visitare la [guida del dashboard di utilizzo delle licenze](./license-usage-and-guardrails/license-usage-dashboard.md).
+L’interfaccia utente di Experience Platform fornisce una dashboard attraverso la quale puoi visualizzare informazioni importanti sull’utilizzo delle licenze della tua organizzazione, acquisite durante un’istantanea giornaliera. Accedi a questo dashboard selezionando **[!UICONTROL Utilizzo licenze]** nell&#39;area di navigazione. Per ulteriori informazioni sul dashboard di utilizzo delle licenze, visitare la [guida del dashboard di utilizzo delle licenze](./license-usage-and-guardrails/license-usage-dashboard.md).
 
 >[!IMPORTANT]
 >
@@ -180,4 +180,4 @@ L’interfaccia utente di Platform fornisce una dashboard attraverso la quale pu
 
 ## Passaggi successivi
 
-Una volta letta questa guida, potrai conoscere la home page e i principali elementi di navigazione dell’interfaccia utente di Platform. Per informazioni più dettagliate su come lavorare nell’interfaccia utente, consulta la documentazione per ogni singolo servizio di Platform. I collegamenti a questa documentazione sono forniti nella sezione [navigazione a sinistra](#left-nav) trovata in precedenza in questo documento.
+Dopo aver letto questa guida, trovi la pagina Home e i principali elementi di navigazione dell’interfaccia utente di Experience Platform. Per informazioni più dettagliate su come lavorare nell’interfaccia utente, consulta la documentazione di ogni singolo servizio Experience Platform. I collegamenti a questa documentazione sono forniti nella sezione [navigazione a sinistra](#left-nav) trovata in precedenza in questo documento.

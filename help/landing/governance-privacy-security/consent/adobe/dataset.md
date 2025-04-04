@@ -6,9 +6,9 @@ description: Scopri come configurare uno schema e un set di dati Experience Data
 role: Developer
 feature: Consent, Schemas, Datasets
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: bf651967714745a0b501dcb27373379fe014c9e1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1573'
+source-wordcount: '1581'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Affinché Adobe Experience Platform possa elaborare i dati di consenso/preferenza del cliente, questi devono essere inviati a un set di dati il cui schema contiene campi relativi ai consensi e ad altre autorizzazioni. In particolare, questo set di dati deve essere basato sulla classe [!DNL XDM Individual Profile] e abilitato per l&#39;utilizzo in [!DNL Real-Time Customer Profile].
 
-Questo documento descrive i passaggi per configurare un set di dati per elaborare i dati sul consenso in Experience Platform. Per una panoramica del flusso di lavoro completo per l&#39;elaborazione dei dati di consenso/preferenza in Platform, consulta la [panoramica sull&#39;elaborazione del consenso](./overview.md).
+Questo documento descrive i passaggi da seguire per configurare un set di dati per elaborare i dati sul consenso in Experience Platform. Per una panoramica del flusso di lavoro completo per l&#39;elaborazione dei dati di consenso/preferenza in Experience Platform, consulta la [panoramica sull&#39;elaborazione del consenso](./overview.md).
 
 >[!IMPORTANT]
 >
@@ -39,7 +39,7 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe E
 
 >[!IMPORTANT]
 >
->Questo tutorial presuppone che tu conosca lo schema [!DNL Profile] in Platform che desideri utilizzare per acquisire le informazioni sugli attributi del cliente. Indipendentemente dal metodo utilizzato per raccogliere i dati sul consenso, questo schema deve essere [abilitato per Real-Time Customer Profile](../../../../xdm/ui/resources/schemas.md#profile). Inoltre, l’identità primaria dello schema non può essere un campo direttamente identificabile di cui non è consentito l’utilizzo in pubblicità basata su interessi, ad esempio un indirizzo e-mail. Se non sei sicuro di quali campi sono soggetti a restrizioni, rivolgiti al tuo consulente legale.
+>Questo tutorial presuppone che tu conosca lo schema [!DNL Profile] in Experience Platform che desideri utilizzare per acquisire le informazioni sugli attributi del cliente. Indipendentemente dal metodo utilizzato per raccogliere i dati sul consenso, questo schema deve essere [abilitato per Real-Time Customer Profile](../../../../xdm/ui/resources/schemas.md#profile). Inoltre, l’identità primaria dello schema non può essere un campo direttamente identificabile di cui non è consentito l’utilizzo in pubblicità basata su interessi, ad esempio un indirizzo e-mail. Se non sei sicuro di quali campi sono soggetti a restrizioni, rivolgiti al tuo consulente legale.
 
 ## [!UICONTROL Dettagli sul consenso e sulle preferenze] struttura del gruppo di campi {#structure}
 
@@ -96,12 +96,12 @@ Il gruppo di campi fornisce un singolo campo di tipo oggetto, `consents`, le cui
 
 ## Aggiungi i gruppi di campi richiesti allo schema [!DNL Profile] {#add-field-group}
 
-Per raccogliere i dati sul consenso utilizzando Adobe Standard, è necessario disporre di uno schema abilitato per il profilo che contiene i due gruppi di campi seguenti:
+Per raccogliere i dati sul consenso utilizzando lo standard Adobe, è necessario disporre di uno schema abilitato per il profilo che contiene i due gruppi di campi seguenti:
 
 * [[!UICONTROL Dettagli su consenso e preferenze]](../../../../xdm/field-groups/profile/consents.md)
-* [[!UICONTROL IdentityMap]](../../../../xdm/field-groups/profile/identitymap.md) (richiesto se si utilizza Platform Web SDK o Mobile SDK per inviare segnali di consenso)
+* [[!UICONTROL IdentityMap]](../../../../xdm/field-groups/profile/identitymap.md) (richiesto se si utilizza Experience Platform Web o Mobile SDK per inviare segnali di consenso)
 
-Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Schemi]** nell&#39;area di navigazione a sinistra, quindi seleziona la scheda **[!UICONTROL Sfoglia]** per visualizzare un elenco degli schemi esistenti. Da qui, seleziona il nome dello schema abilitato per [!DNL Profile] a cui desideri aggiungere i campi del consenso. Le schermate di questa sezione utilizzano lo schema &quot;Membri fedeltà&quot; creato nell&#39;esercitazione [sulla creazione dello schema](../../../../xdm/tutorials/create-schema-ui.md) come esempio.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Schemi]** nell&#39;area di navigazione a sinistra, quindi seleziona la scheda **[!UICONTROL Sfoglia]** per visualizzare un elenco degli schemi esistenti. Da qui, seleziona il nome dello schema abilitato per [!DNL Profile] a cui desideri aggiungere i campi del consenso. Le schermate di questa sezione utilizzano lo schema &quot;Membri fedeltà&quot; creato nell&#39;esercitazione [sulla creazione dello schema](../../../../xdm/tutorials/create-schema-ui.md) come esempio.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/select-schema.png)
 
@@ -129,7 +129,7 @@ L&#39;area di lavoro viene nuovamente visualizzata, mostrando che i campi `conse
 >
 >Se si crea un nuovo schema o si modifica uno schema esistente non abilitato per il profilo, è necessario [abilitare lo schema per il profilo](../../../../xdm/ui/resources/schemas.md#profile) prima di salvare.
 
-Se lo schema modificato è utilizzato dal [!UICONTROL set di dati profilo] specificato nel flusso di dati di Platform Web SDK, il set di dati includerà ora i nuovi campi di consenso. Ora puoi tornare alla [guida all&#39;elaborazione del consenso](./overview.md#merge-policies) per continuare la procedura di configurazione dell&#39;Experience Platform per l&#39;elaborazione dei dati sul consenso. Se non hai creato un set di dati per questo schema, segui i passaggi descritti nella sezione successiva.
+Se lo schema modificato è utilizzato dal [!UICONTROL Set di dati profilo] specificato nel flusso di dati di Experience Platform Web SDK, il set di dati includerà ora i nuovi campi di consenso. Ora puoi tornare alla [guida all&#39;elaborazione del consenso](./overview.md#merge-policies) per continuare il processo di configurazione di Experience Platform per l&#39;elaborazione dei dati sul consenso. Se non hai creato un set di dati per questo schema, segui i passaggi descritti nella sezione successiva.
 
 ## Creare un set di dati in base allo schema di consenso {#dataset}
 
@@ -161,13 +161,13 @@ Infine, selezionare **[!UICONTROL Abilita]** nel popover di conferma per abilita
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/enable-dataset.png)
 
-Il set di dati è ora salvato e abilitato per l&#39;utilizzo in [!DNL Profile]. Se intendi utilizzare Platform Web SDK per inviare i dati del consenso al profilo, seleziona questo set di dati come [!UICONTROL Set di dati profilo] durante la configurazione dello [stream di dati](../../../../datastreams/overview.md).
+Il set di dati è ora salvato e abilitato per l&#39;utilizzo in [!DNL Profile]. Se intendi utilizzare Experience Platform Web SDK per inviare i dati del consenso al profilo, devi selezionare questo set di dati come [!UICONTROL Set di dati profilo] durante la configurazione del [flusso di dati](../../../../datastreams/overview.md).
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai aggiunto dei campi di consenso a uno schema abilitato per [!DNL Profile], il cui set di dati verrà utilizzato per acquisire i dati di consenso utilizzando Platform Web SDK o l&#39;acquisizione diretta di XDM.
+Seguendo questa esercitazione, hai aggiunto dei campi di consenso a uno schema abilitato per [!DNL Profile], il cui set di dati verrà utilizzato per acquisire i dati di consenso utilizzando Experience Platform Web SDK o l&#39;acquisizione diretta di XDM.
 
-Ora puoi tornare alla [panoramica sull&#39;elaborazione del consenso](./overview.md#merge-policies) per continuare a configurare l&#39;Experience Platform per l&#39;elaborazione dei dati sul consenso.
+Ora puoi tornare alla [panoramica sull&#39;elaborazione del consenso](./overview.md#merge-policies) per continuare a configurare Experience Platform per l&#39;elaborazione dei dati sul consenso.
 
 ## Appendice
 
@@ -179,7 +179,7 @@ Se devi acquisire segnali di consenso aggiuntivi al di fuori di quelli rappresen
 
 >[!IMPORTANT]
 >
->Platform Web SDK e Mobile SDK non supportano i campi personalizzati nei loro comandi di modifica del consenso. Attualmente, l&#39;unico modo per acquisire i campi di consenso personalizzati nel profilo è tramite [acquisizione batch](../../../../ingestion/batch-ingestion/overview.md) o una [connessione sorgente](../../../../sources/home.md).
+>Gli SDK per web e dispositivi mobili di Experience Platform non supportano i campi personalizzati nei loro comandi di modifica del consenso. Attualmente, l&#39;unico modo per acquisire i campi di consenso personalizzati nel profilo è tramite [acquisizione batch](../../../../ingestion/batch-ingestion/overview.md) o una [connessione sorgente](../../../../sources/home.md).
 
 Ti consigliamo vivamente di utilizzare il gruppo di campi [!UICONTROL Dettagli consenso e preferenze] come base di riferimento per la struttura dei dati sul consenso e di aggiungere altri campi in base alle esigenze, anziché tentare di creare l&#39;intera struttura da zero.
 

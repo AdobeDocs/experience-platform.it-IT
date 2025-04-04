@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;monitorare identità;monitorare flussi di dati;flussi di dati;identità;
-description: Il servizio Adobe Experience Platform Identity offre una panoramica completa dei clienti e del loro comportamento, collegando le identità attraverso diversi dispositivi e sistemi e consentendo di offrire esperienze digitali personali e di forte impatto in tempo reale. Questo tutorial fornisce istruzioni su come monitorare i flussi di dati con le identità utilizzando l’interfaccia utente di Experience Platform.
+description: Il servizio Adobe Experience Platform Identity offre una panoramica completa dei clienti e del loro comportamento, collegando le identità attraverso diversi dispositivi e sistemi e consentendo di offrire esperienze digitali personali e di forte impatto in tempo reale. Questo tutorial fornisce istruzioni su come monitorare i flussi di dati con le identità tramite l’interfaccia utente di Experience Platform.
 title: Monitorare i flussi di dati per le identità nell’interfaccia utente
 type: Tutorial
 exl-id: 735b0e52-74f6-47fe-98c6-e12a633b6f57
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1151'
+source-wordcount: '1155'
 ht-degree: 9%
 
 ---
@@ -19,10 +19,10 @@ La dashboard di monitoraggio offre una rappresentazione visiva dell’attività 
 
 ## Introduzione {#getting-started}
 
-- [Flussi dati](../home.md): i flussi dati sono una rappresentazione dei processi di dati che spostano i dati in Platform. I flussi di dati sono configurati tra servizi diversi, consentendo di spostare i dati dai connettori di origine ai set di dati di destinazione, a [!DNL Identity] e [!DNL Profile] e a [!DNL Destinations].
+- [Flussi dati](../home.md): i flussi dati sono una rappresentazione dei processi di dati che spostano i dati in Experience Platform. I flussi di dati sono configurati tra servizi diversi, consentendo di spostare i dati dai connettori di origine ai set di dati di destinazione, a [!DNL Identity] e [!DNL Profile] e a [!DNL Destinations].
    - [Esecuzioni flusso di dati](../../sources/notifications.md): le esecuzioni del flusso di dati sono i processi pianificati ricorrenti in base alla configurazione della frequenza dei flussi di dati selezionati.
 - [Identity Service](../../identity-service/home.md): ottieni una migliore visione dei singoli clienti e del loro comportamento collegando le identità tra dispositivi e sistemi.
-- [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza di [!DNL Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+- [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza di [!DNL Experience Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 ## Dashboard di monitoraggio delle identità {#identity-metrics}
 
@@ -54,7 +54,7 @@ Per questa visualizzazione dashboard sono disponibili le metriche seguenti:
 | Metriche delle identità | Descrizione |
 | ---------------- | ----------- |
 | **[!UICONTROL Record ricevuti]** | Numero di record ricevuti dal data lake. |
-| **[!UICONTROL Record non riusciti]** | Il numero di record che non sono stati acquisiti in Platform a causa di errori nei dati. |
+| **[!UICONTROL Record non riusciti]** | Il numero di record che non sono stati acquisiti in Experience Platform a causa di errori nei dati. |
 | **[!UICONTROL Record ignorati]** | Numero di record acquisiti, ma non in [!DNL Identity Service] perché nella riga del record era presente un solo identificatore. |
 | **[!UICONTROL Record acquisiti]** | Numero di record acquisiti in [!DNL Identity Service]. |
 | **[!UICONTROL Identità aggiunte]** | Numero di nuovi identificatori aggiunti a [!DNL Identity Service]. |
@@ -78,7 +78,7 @@ Per questa visualizzazione dashboard sono disponibili le metriche seguenti:
 | **[!UICONTROL Set di dati]** | Nome del set di dati in cui il flusso di dati viene inserito. |
 | **[!UICONTROL Nome Source]** | Nome dell’origine a cui appartiene il flusso di dati. |
 | **[!UICONTROL Record ricevuti]** | Numero di record ricevuti dal data lake. |
-| **[!UICONTROL Record non riusciti]** | Il numero di record che non sono stati acquisiti in Platform a causa di errori nei dati. |
+| **[!UICONTROL Record non riusciti]** | Il numero di record che non sono stati acquisiti in Experience Platform a causa di errori nei dati. |
 | **[!UICONTROL Record ignorati]** | Numero di record acquisiti, ma non in [!DNL Identity Service] perché nella riga del record era presente un solo identificatore. |
 | **[!UICONTROL Record acquisiti]** | Numero di record acquisiti in [!DNL Identity Service]. |
 | **[!UICONTROL Record totali]** | Numero totale di tutti i record, inclusi quelli con errori, quelli ignorati, quelli con identità aggiunte e quelli duplicati. |
@@ -100,7 +100,7 @@ Per questa visualizzazione dashboard sono disponibili le metriche seguenti:
 | Metrica | Descrizione |
 | -------| ----------- |
 | **[!UICONTROL Record ricevuti]** | Numero di record ricevuti dal data lake. |
-| **[!UICONTROL Record non riusciti]** | Il numero di record che non sono stati acquisiti in Platform a causa di errori nei dati. |
+| **[!UICONTROL Record non riusciti]** | Il numero di record che non sono stati acquisiti in Experience Platform a causa di errori nei dati. |
 | **[!UICONTROL Record ignorati]** | Numero di record acquisiti, ma non in [!DNL Identity Service] perché nella riga del record era presente un solo identificatore. |
 | **[!UICONTROL Record acquisiti]** | Numero di record acquisiti in [!DNL Identity Service]. |
 | **[!UICONTROL Identità aggiunte]** | Numero di nuovi identificatori aggiunti a [!DNL Identity Service]. |

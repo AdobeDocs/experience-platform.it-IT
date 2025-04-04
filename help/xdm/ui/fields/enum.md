@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Definire i campi enum e i valori suggeriti nell’interfaccia utente
 description: Scopri come definire le enumerazioni e i valori consigliati per i campi stringa nell’interfaccia utente di Experience Platform.
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1256'
+source-wordcount: '1257'
 ht-degree: 8%
 
 ---
@@ -86,7 +86,7 @@ See the [section below](#evolution) for more information on the rules for updati
 
 ## Regole di evoluzione per enum e valori suggeriti {#evolution}
 
-Dopo aver utilizzato uno schema con un campo enum per acquisire i dati in Platform, eventuali ulteriori modifiche apportate alla definizione dello schema devono essere conformi ai dati già presenti nel sistema. In generale, le modifiche apportate a un campo esistente possono solo rendere il campo **meno** restrittivo. Un campo non può essere reso più restrittivo di quanto non lo sia già.
+Dopo aver utilizzato uno schema con un campo enum per acquisire i dati in Experience Platform, eventuali ulteriori modifiche apportate alla definizione dello schema devono essere conformi ai dati già presenti nel sistema. In generale, le modifiche apportate a un campo esistente possono solo rendere il campo **meno** restrittivo. Un campo non può essere reso più restrittivo di quanto non lo sia già.
 
 Per quanto riguarda le enumerazioni e i valori suggeriti, dopo l’acquisizione si applicano le seguenti regole:
 

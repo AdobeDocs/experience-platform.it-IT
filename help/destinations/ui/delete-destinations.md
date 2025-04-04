@@ -4,7 +4,7 @@ title: Elimina destinazioni
 type: Tutorial
 description: Questa esercitazione elenca i passaggi per eliminare una destinazione esistente nell'interfaccia utente di Adobe Experience Platform
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 0%
@@ -19,7 +19,7 @@ Nell’interfaccia utente di Adobe Experience Platform, puoi eliminare le connes
 
 L’eliminazione di una destinazione rimuove tutti i flussi di dati esistenti in tale destinazione. Tutti i tipi di pubblico attivati nelle destinazioni eliminate vengono annullati prima dell’eliminazione del flusso di dati.
 
-Esistono due modi per eliminare le destinazioni da [!DNL Platform] [!DNL UI]. Puoi eseguire le seguenti operazioni:
+Esistono due modi per eliminare le destinazioni da [!DNL Experience Platform] [!DNL UI]. Puoi eseguire le seguenti operazioni:
 
 * [Elimina destinazioni dalla scheda [!UICONTROL Sfoglia]](#delete-browse-tab)
 * [Eliminare le destinazioni dalla pagina dei dettagli della destinazione](#delete-destination-details-page)
@@ -28,7 +28,7 @@ Esistono due modi per eliminare le destinazioni da [!DNL Platform] [!DNL UI]. Pu
 
 Segui i passaggi seguenti per eliminare una destinazione dalla scheda [!UICONTROL Sfoglia].
 
-1. Accedi a [interfaccia utente Experience Platform](https://platform.adobe.com/) e seleziona **[!UICONTROL Destinazioni]** dalla barra di navigazione a sinistra. Per visualizzare le destinazioni esistenti, seleziona **[!UICONTROL Sfoglia]** dall&#39;intestazione superiore.
+1. Accedi all&#39;[interfaccia utente di Experience Platform](https://platform.adobe.com/) e seleziona **[!UICONTROL Destinazioni]** dalla barra di navigazione a sinistra. Per visualizzare le destinazioni esistenti, seleziona **[!UICONTROL Sfoglia]** dall&#39;intestazione superiore.
 
    ![Sfoglia destinazioni](../assets/ui/delete-destinations/browse-destinations.png)
 
@@ -47,7 +47,7 @@ Segui i passaggi seguenti per eliminare una destinazione dalla scheda [!UICONTRO
 
 Per eliminare una destinazione dalla pagina dei dettagli della destinazione, segui la procedura riportata di seguito.
 
-1. Accedi a [interfaccia utente Experience Platform](https://platform.adobe.com/) e seleziona **[!UICONTROL Destinazioni]** dalla barra di navigazione a sinistra. Per visualizzare le destinazioni esistenti, seleziona **[!UICONTROL Sfoglia]** dall&#39;intestazione superiore.
+1. Accedi all&#39;[interfaccia utente di Experience Platform](https://platform.adobe.com/) e seleziona **[!UICONTROL Destinazioni]** dalla barra di navigazione a sinistra. Per visualizzare le destinazioni esistenti, seleziona **[!UICONTROL Sfoglia]** dall&#39;intestazione superiore.
 
    ![Sfoglia destinazioni](../assets/ui/delete-destinations/browse-destinations.png)
 
@@ -77,4 +77,4 @@ Per eliminare una destinazione dalla pagina dei dettagli della destinazione, seg
 
    >[!NOTE]
    >
-   >A seconda del carico del server, l&#39;eliminazione della destinazione può richiedere alcuni minuti per [!DNL Platform].
+   >A seconda del carico del server, l&#39;eliminazione della destinazione può richiedere alcuni minuti per [!DNL Experience Platform].

@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;sandbox;sandbox;test;Testing
+keywords: Experience Platform;home;argomenti popolari;sandbox;sandbox;test;Test;;home;popular topic;sandbox;Sandbox;testing;Testing
 solution: Experience Platform
 title: Panoramica sulle sandbox
-description: Le sandbox sono partizioni virtuali all’interno di un’unica istanza di Experience Platform, che consentono un’integrazione fluida con il processo di sviluppo delle applicazioni di esperienza digitale.
+description: Le sandbox sono partizioni virtuali all’interno di una singola istanza di Experience Platform, che consentono un’integrazione perfetta con il processo di sviluppo delle applicazioni di esperienza digitale.
 exl-id: b760a979-8134-4a44-8433-ec6fb49bc508
-source-git-commit: 7ee472294e8f255d9de3c15982a6f5d2d3654755
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '971'
+source-wordcount: '976'
 ht-degree: 2%
 
 ---
@@ -15,25 +15,25 @@ ht-degree: 2%
 
 Adobe Experience Platform è stato progettato per arricchire le applicazioni di esperienza digitale su scala globale. Le aziende spesso eseguono più applicazioni di esperienza digitale in parallelo e devono occuparsi di sviluppo, test e distribuzione di tali applicazioni, garantendo al contempo la conformità operativa.
 
-Per soddisfare questa esigenza, Experience Platform fornisce sandbox che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+Per soddisfare questa esigenza, Experience Platform fornisce ambienti sandbox che permettono di suddividere una singola istanza Experience Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 Questo documento fornisce una panoramica di alto livello delle sandbox in Experience Platform.
 
 ## Informazioni sulle sandbox
 
-Le sandbox sono partizioni virtuali all’interno di un’unica istanza di Experience Platform, che consentono un’integrazione fluida con il processo di sviluppo delle applicazioni di esperienza digitale. Tutti i contenuti e le azioni eseguite all’interno di una sandbox sono limitati a tale sandbox e non influiscono su altre sandbox. Ad Experience Platform, sono supportati due tipi di sandbox:
+Le sandbox sono partizioni virtuali all’interno di una singola istanza di Experience Platform, che consentono un’integrazione perfetta con il processo di sviluppo delle applicazioni di esperienza digitale. Tutti i contenuti e le azioni eseguite all’interno di una sandbox sono limitati a tale sandbox e non influiscono su altre sandbox. In Experience Platform sono supportati due tipi di sandbox:
 
-* **Sandbox di produzione**: una sandbox di produzione deve essere utilizzata con i profili nell&#39;ambiente di produzione. Platform consente di creare più sandbox di produzione per fornire la funzionalità giusta per i dati, mantenendo al contempo l’isolamento operativo. Questa funzione consente di dedicare specifiche sandbox di produzione a linee di business, marchi, progetti o aree geografiche distinte. Le sandbox di produzione supportano un volume di profili di produzione fino all&#39;impegno [!DNL Profile] concesso in licenza (misurato cumulativamente in tutte le sandbox di produzione autorizzate). Hai diritto a utilizzare l’intero volume totale di dati concesso in licenza (misurato cumulativamente in tutte le sandbox di produzione autorizzate).
+* **Sandbox di produzione**: una sandbox di produzione deve essere utilizzata con i profili nell&#39;ambiente di produzione. Experience Platform consente di creare più sandbox di produzione per fornire la funzionalità giusta per i dati, mantenendo al contempo l’isolamento operativo. Questa funzione consente di dedicare specifiche sandbox di produzione a linee di business, marchi, progetti o aree geografiche distinte. Le sandbox di produzione supportano un volume di profili di produzione fino all&#39;impegno [!DNL Profile] concesso in licenza (misurato cumulativamente in tutte le sandbox di produzione autorizzate). Hai diritto a utilizzare l’intero volume totale di dati concesso in licenza (misurato cumulativamente in tutte le sandbox di produzione autorizzate).
 
 * **Sandbox di sviluppo**: una sandbox di sviluppo è una sandbox che può essere utilizzata esclusivamente per lo sviluppo e il test con profili non di produzione. Le sandbox di sviluppo supportano un volume di profili non di produzione fino al 10% dell&#39;impegno [!DNL Profile] concesso in licenza (misurato cumulativamente in tutte le sandbox di sviluppo autorizzate). Hai diritto a:
    * Un processo di segmentazione batch al giorno, per sandbox di sviluppo;
    * Una media di 120 chiamate API [!DNL Profile], per [!DNL Profile], all&#39;anno (misurata cumulativamente in tutte le sandbox di sviluppo autorizzate.
 
-Un’istanza di Experience Platform supporta più sandbox di produzione e sviluppo, ognuna delle quali mantiene la propria libreria indipendente di risorse Platform (inclusi schemi, set di dati, profili e così via). Inoltre, sia le sandbox di produzione che quelle di sviluppo dispongono di una funzione di ripristino che rimuove tutte le risorse create dal cliente dalla sandbox. Le sandbox di sviluppo non possono essere convertite in sandbox di produzione.
+Un’istanza di Experience Platform supporta più sandbox di produzione e sviluppo; ogni sandbox mantiene la propria libreria indipendente di risorse di Experience Platform (inclusi schemi, set di dati, profili e così via). Inoltre, sia le sandbox di produzione che quelle di sviluppo dispongono di una funzione di ripristino che rimuove tutte le risorse create dal cliente dalla sandbox. Le sandbox di sviluppo non possono essere convertite in sandbox di produzione.
 
-Una licenza di Experience Platform predefinita ti concede un totale di cinque sandbox, che puoi classificare come produzione o sviluppo. Puoi concedere in licenza pacchetti aggiuntivi di 10 sandbox per un massimo di 75 sandbox in totale. Queste sandbox aggiuntive possono essere utilizzate per creare sandbox di produzione e di sviluppo. Per ulteriori informazioni, contatta l’amministratore dell’organizzazione o il rappresentante commerciale Adobe.
+Una licenza Experience Platform predefinita ti consente di ottenere un totale di cinque sandbox, che puoi classificare come produzione o sviluppo. Puoi concedere in licenza pacchetti aggiuntivi di 10 sandbox per un massimo di 75 sandbox in totale. Queste sandbox aggiuntive possono essere utilizzate per creare sandbox di produzione e di sviluppo. Per ulteriori informazioni, contatta l’amministratore dell’organizzazione o il rappresentante commerciale Adobe.
 
-Infine, la sandbox di produzione predefinita è la prima sandbox di produzione creata al momento della creazione di un’organizzazione. La sandbox di produzione predefinita consente di acquisire o utilizzare dati da Platform, nonché di accettare richieste che non includono valori per il nome di una sandbox o l’ID di una sandbox.
+Infine, la sandbox di produzione predefinita è la prima sandbox di produzione creata al momento della creazione di un’organizzazione. La sandbox di produzione predefinita consente di acquisire o utilizzare dati da Experience Platform, nonché di accettare richieste che non includono valori per il nome di una sandbox o per un ID di sandbox.
 
 >[!NOTE]
 >
@@ -59,7 +59,7 @@ Nell&#39;interfaccia utente di [Experience Platform](https://platform.adobe.com)
 
 ## Sandbox nelle API di Experience Platform
 
-Quando si effettuano chiamate alle API Experience Platform, è necessario fornire un nome di sandbox sotto l&#39;intestazione `x-sandbox-name`. Ad esempio, quando si effettua una chiamata a [[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/) per visualizzare tutti i set di dati all&#39;interno della sandbox di produzione, il nome della sandbox (&quot;prod&quot;) viene fornito come intestazione nella richiesta API:
+Quando si effettuano chiamate alle API di Experience Platform, è necessario fornire un nome di sandbox sotto l&#39;intestazione `x-sandbox-name`. Ad esempio, quando si effettua una chiamata a [[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/) per visualizzare tutti i set di dati all&#39;interno della sandbox di produzione, il nome della sandbox (&quot;prod&quot;) viene fornito come intestazione nella richiesta API:
 
 ```shell
 curl -X GET \
@@ -70,7 +70,7 @@ curl -X GET \
   -H 'x-sandbox-name: prod'
 ```
 
-Se `x-sandbox-name` non è incluso in una chiamata API, il sistema utilizzerà una sandbox predefinita. Tuttavia, la best practice prevede di includere sempre questa intestazione in tutte le chiamate API, anche quando si utilizza la sandbox predefinita. Per questo motivo, nella documentazione API di Experience Platform `x-sandbox-name` viene considerato come intestazione obbligatoria.
+Se `x-sandbox-name` non è incluso in una chiamata API, il sistema utilizzerà una sandbox predefinita. Tuttavia, la best practice prevede di includere sempre questa intestazione in tutte le chiamate API, anche quando si utilizza la sandbox predefinita. Per questo motivo, la documentazione API per Experience Platform considera `x-sandbox-name` come intestazione obbligatoria.
 
 ### API sandbox
 
@@ -78,6 +78,6 @@ L’API Sandbox consente di gestire le sandbox utilizzando le operazioni API RES
 
 ## Passaggi successivi
 
-Una volta letto questo documento, avrai introdotto i concetti essenziali relativi alle sandbox in questo Experience Platform. Per i passaggi dettagliati su come gestire le sandbox, consulta la [guida utente](ui/overview.md) per l&#39;interfaccia utente o la [guida per sviluppatori](./api/getting-started.md) per l&#39;API.
+Una volta letto questo documento, avrai introdotto i concetti essenziali relativi alle sandbox in Experience Platform. Per i passaggi dettagliati su come gestire le sandbox, consulta la [guida utente](ui/overview.md) per l&#39;interfaccia utente o la [guida per sviluppatori](./api/getting-started.md) per l&#39;API.
 
-Anche se le sandbox sono uno strumento utile per isolare gli ambienti Platform per il team di sviluppo, puoi anche gestire un controllo degli accessi più granulare utilizzando Adobe Admin Console. Per ulteriori informazioni, vedere [panoramica sul controllo degli accessi](../access-control/home.md).
+Le sandbox sono uno strumento utile per isolare gli ambienti Experience Platform per il team di sviluppo, ma puoi anche gestire un controllo degli accessi più granulare utilizzando Adobe Admin Console. Per ulteriori informazioni, vedere [panoramica sul controllo degli accessi](../access-control/home.md).

@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;profilo;profilo cliente in tempo reale;interfaccia utente;personalizzazione;dashboard profilo;profilo;profile;real-time customer profile;user interface;UI;customization;profile dashboard;dashboard
+keywords: Experience Platform;profilo;profilo cliente in tempo reale;interfaccia utente;personalizzazione;dashboard profilo;;profile;real-time customer profile;user interface;UI;customization;profile dashboard;dashboard
 title: Dashboard dei profili
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale puoi visualizzare informazioni importanti sui dati Real-Time Customer Profile della tua organizzazione.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4997'
+source-wordcount: '5005'
 ht-degree: 9%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 9%
 
 L&#39;interfaccia utente di Adobe Experience Platform fornisce un dashboard attraverso il quale è possibile visualizzare informazioni importanti sui dati di [!DNL Real-Time Customer Profile] acquisiti durante uno snapshot giornaliero. Questa guida illustra come accedere e utilizzare il dashboard Profili nell’interfaccia utente di e fornisce informazioni sulle metriche visualizzate nel dashboard.
 
-Consulta la [Guida all&#39;interfaccia utente del profilo cliente in tempo reale](../../profile/ui/user-guide.md) per una panoramica delle funzioni di profilo nell&#39;interfaccia utente di Experience Platform.
+Per una panoramica delle funzioni del profilo nell&#39;interfaccia utente di Experience Platform, consulta la [guida dell&#39;interfaccia utente del profilo cliente in tempo reale](../../profile/ui/user-guide.md).
 
 ## Dati dashboard profilo
 
-Nel dashboard Profili viene visualizzata un’istantanea dei dati attributo (record) di cui dispone la tua organizzazione nell’archivio Profili di Experience Platform. Lo snapshot non include dati di eventi (serie temporali).
+Nel dashboard Profili viene visualizzata un’istantanea dei dati attributo (record) di cui dispone la tua organizzazione nell’archivio Profili in Experience Platform. Lo snapshot non include dati di eventi (serie temporali).
 
 I dati attributo nello snapshot mostrano i dati esattamente come vengono visualizzati nel momento specifico in cui lo snapshot è stato creato. In altre parole, l’istantanea non è un’approssimazione o un esempio dei dati e il dashboard Profilo non viene aggiornato in tempo reale.
 
@@ -29,11 +29,11 @@ I dati attributo nello snapshot mostrano i dati esattamente come vengono visuali
 
 ## Esplorare il dashboard Profili {#explore-dashboard}
 
-Per passare al dashboard Profili nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Profili]** nella barra a sinistra, quindi seleziona la scheda **[!UICONTROL Panoramica]** per visualizzare il dashboard.
+Per passare al dashboard Profili nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Profili]** nella barra a sinistra, quindi seleziona la scheda **[!UICONTROL Panoramica]** per visualizzare il dashboard.
 
 >[!NOTE]
 >
->Se la tua organizzazione ha poca esperienza con Platform e non dispone ancora di set di dati di profilo attivi o criteri di unione creati, il dashboard Profili non è visibile. Nella scheda [!UICONTROL Panoramica] sono invece visualizzati collegamenti e documentazione per aiutarti a iniziare a utilizzare Profilo cliente in tempo reale.
+>Se la tua organizzazione ha poca esperienza con Experience Platform e non dispone ancora di set di dati di profilo attivi o criteri di unione creati, il dashboard Profili non è visibile. Nella scheda [!UICONTROL Panoramica] sono invece visualizzati collegamenti e documentazione per aiutarti a iniziare a utilizzare Profilo cliente in tempo reale.
 
 ![Dashboard dei profili di Experience Platform con profili e panoramica evidenziati.](../images/profiles/dashboard-overview.png)
 
@@ -53,7 +53,7 @@ Dalla libreria dei widget è possibile sfogliare la selezione di widget di pubbl
 
 ### Visualizza SQL {#view-sql}
 
-Puoi visualizzare il codice SQL che genera le informazioni visualizzate nel tuo dashboard con un interruttore nell&#39;area di lavoro [!UICONTROL Panoramica]. Puoi trarre ispirazione dall’SQL delle informazioni esistenti per creare nuove query che derivano informazioni univoche dai dati di Platform in base alle esigenze aziendali. Per ulteriori informazioni su questa funzionalità, vedere la [Guida dell&#39;interfaccia utente SQL](../view-sql.md).
+Puoi visualizzare il codice SQL che genera le informazioni visualizzate nel tuo dashboard con un interruttore nell&#39;area di lavoro [!UICONTROL Panoramica]. Puoi trarre ispirazione dall’SQL delle informazioni esistenti per creare nuove query che derivano informazioni univoche dai dati di Experience Platform in base alle esigenze aziendali. Per ulteriori informazioni su questa funzionalità, vedere la [Guida dell&#39;interfaccia utente SQL](../view-sql.md).
 
 <!-- ## (Beta) Profile efficacy insights {#profile-efficacy-insights}
 
@@ -115,12 +115,12 @@ Il widget [!UICONTROL Preferenze canale] visualizza i canali di comunicazione da
 
 ![Widget preferenze canale.](../images/profiles/channel-preferences.png)
 
-Il consenso del cliente e le preferenze di contatto sono argomenti complessi. Per scoprire come raccogliere, elaborare e filtrare le preferenze di consenso e contesto in questo Experience Platform, ti consigliamo di leggere i seguenti documenti:
+Il consenso del cliente e le preferenze di contatto sono argomenti complessi. Per scoprire come raccogliere, elaborare e filtrare le preferenze di consenso e contesto in Experience Platform, ti consigliamo di leggere i seguenti documenti:
 
 * Per informazioni sui gruppi di campi dello schema necessari per [raccogliere i dati sul consenso in base allo standard Adobe](../../landing/governance-privacy-security/consent/adobe/overview.md), consulta la documentazione su questi gruppi di campi dello schema abilitati per il profilo.
    * [[!UICONTROL Dettagli su consenso e preferenze]](../../xdm/field-groups/profile/consents.md)
-   * [[!UICONTROL IdentityMap]](../../xdm/field-groups/profile/identitymap.md) (richiesto se si utilizza Platform Web SDK o Mobile SDK per inviare segnali di consenso)
-* Per informazioni su come elaborare i dati relativi al consenso e alle preferenze del cliente utilizzando lo standard Adobe, consulta la panoramica sull&#39;elaborazione del consenso [nell&#39;Experience Platform](../../landing/governance-privacy-security/consent/adobe/overview.md).
+   * [[!UICONTROL IdentityMap]](../../xdm/field-groups/profile/identitymap.md) (richiesto se si utilizza Experience Platform Web o Mobile SDK per inviare segnali di consenso)
+* Per informazioni su come elaborare i dati relativi al consenso e alle preferenze del cliente utilizzando lo standard Adobe, consulta la panoramica sull&#39;elaborazione del consenso [in Experience Platform](../../landing/governance-privacy-security/consent/adobe/overview.md).
 * È possibile utilizzare una governance dei dati e un criterio di consenso combinati per filtrare i profili per la segmentazione in base alle loro preferenze di consenso e alle regole organizzative stabilite. Per informazioni su come creare e utilizzare questi criteri combinati, consulta la guida utente su [gestione dei criteri di utilizzo dei dati](../../data-governance/policies/user-guide.md#combine-policies).
 
 ### Aggiungi widget {#add-widgets}
@@ -169,7 +169,7 @@ Il dashboard [!UICONTROL Schema unione] visualizza lo schema di unione per una c
 
 Gli schemi di unione sono composti da più schemi che condividono la stessa classe e sono stati abilitati per Profilo. Consentono di visualizzare in un&#39;unica vista, una combinazione di ogni campo contenuto all&#39;interno di ogni schema che condivide la stessa classe.
 
-Per ulteriori informazioni sulla [visualizzazione degli schemi di unione nell&#39;interfaccia utente di Platform](../../profile/ui/union-schema.md#view-union-schemas), consulta la guida dell&#39;interfaccia utente dello schema di unione.
+Per ulteriori informazioni sulla [visualizzazione degli schemi di unione nell&#39;interfaccia utente di Experience Platform](../../profile/ui/union-schema.md#view-union-schemas), consulta la guida dell&#39;interfaccia utente dello schema di unione.
 
 ## Widget e metriche
 
@@ -248,7 +248,7 @@ Il menu a discesa sotto il titolo del widget fornisce un elenco di tutti i model
 >
 >Il numero totale di profili calcolati dipende dal criterio di unione scelto. Per modificare il criterio di unione utilizzato, seleziona il menu a discesa immediatamente sotto la scheda della panoramica. Consulta la sezione sui [criteri di unione](#merge-policies) per una breve descrizione o la [panoramica dei criteri di unione](../../profile/merge-policies/overview.md) per ulteriori dettagli.
 
-![Dashboard dei tipi di pubblico di Experience Platform con widget di riepilogo del punteggio di IA per l&#39;analisi dei clienti evidenziato.](../images/segments/customer-ai-scoring-summary.png)
+![Dashboard di Experience Platform Audiences con widget di riepilogo punteggio IA per l&#39;analisi dei clienti evidenziato.](../images/segments/customer-ai-scoring-summary.png)
 
 Per passare alla pagina delle informazioni dettagliate per il modello di IA per l&#39;analisi dei clienti selezionato, selezionare **[!UICONTROL Visualizza dettagli modello]**. Ulteriori informazioni su IA per l&#39;analisi dei clienti sono disponibili nella [guida dell&#39;interfaccia utente di individuazione approfondimenti](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
 
@@ -314,7 +314,7 @@ Il widget **[!UICONTROL Modifica conteggio profili]** visualizza il numero di pr
 >
 >Il widget [!UICONTROL Modifica conteggio profili] riflette il numero di profili aggiunti **dopo** l&#39;acquisizione iniziale del profilo e la configurazione dell&#39;archivio profili. In altre parole, se la tua organizzazione ha configurato l&#39;archivio profili e ne ha acquisiti 4.000.000 il Giorno 1, entro 24 ore la dashboard sarà disponibile; tuttavia, il widget [!UICONTROL Modifica conteggio profili] sarà impostato su 0. Questo metodo di conteggio consente di evitare un picco associato all’acquisizione iniziale dei profili nel sistema. Nei prossimi 30 giorni, la tua organizzazione acquisirà altri 1.000.000 di profili nell’archivio Profili. Una volta acquisita l&#39;istantanea successiva, il widget [!UICONTROL Modifica conteggio profili] mostrerebbe un totale di 1.000.000 profili aggiunti, mentre il widget [!UICONTROL Conteggio profili] mostrerebbe un totale di 5.000.000 profili.
 
-![Il dashboard dei profili dell&#39;interfaccia utente di Platform con il widget di modifica del conteggio dei profili evidenziato.](../images/profiles/profile-count-change.png)
+![Il dashboard dei profili dell&#39;interfaccia utente di Experience Platform con il widget di modifica del conteggio dei profili evidenziato.](../images/profiles/profile-count-change.png)
 
 ### [!UICONTROL Tendenza di modifica del conteggio dei profili] {#profiles-count-change-trend}
 
@@ -323,7 +323,7 @@ Il widget **[!UICONTROL Modifica conteggio profili]** visualizza il numero di pr
 >title="Tendenza di modifica del conteggio dei profili"
 >abstract="Questo widget visualizza il numero di profili uniti che sono stati aggiunti quotidianamente all’archivio dei profili negli ultimi 30 giorni, 90 giorni o 12 mesi. Il numero dipende anche dal criterio di unione selezionato applicato ai dati dei profili."
 
-Il widget **[!UICONTROL Tendenza di modifica del conteggio dei profili]** visualizza il numero totale di profili uniti che sono stati aggiunti all&#39;archivio profili ogni giorno negli ultimi 30 giorni, 90 giorni o 12 mesi. Questo numero viene aggiornato ogni giorno in cui viene acquisita l’istantanea, pertanto se si acquisiscono profili in Platform, il numero di profili non viene riportato fino all’acquisizione dell’istantanea successiva. Il numero di profili aggiunti è il risultato dell’applicazione del criterio di unione selezionato ai dati del profilo per unire i frammenti di profilo in modo da formare un singolo profilo per ogni singolo utente.
+Il widget **[!UICONTROL Tendenza di modifica del conteggio dei profili]** visualizza il numero totale di profili uniti che sono stati aggiunti all&#39;archivio profili ogni giorno negli ultimi 30 giorni, 90 giorni o 12 mesi. Questo numero viene aggiornato ogni giorno in cui viene acquisita l’istantanea, pertanto se si acquisiscono profili in Experience Platform, il numero di profili non viene riportato fino all’acquisizione dell’istantanea successiva. Il numero di profili aggiunti è il risultato dell’applicazione del criterio di unione selezionato ai dati del profilo per unire i frammenti di profilo in modo da formare un singolo profilo per ogni singolo utente.
 
 Per ulteriori informazioni, consulta la sezione [sui criteri di unione più indietro in questo documento](#merge-policies).
 
@@ -514,7 +514,7 @@ Questo widget utilizza un diagramma di Venn per visualizzare la sovrapposizione 
 
 Quando il widget mostra il crossover visivo delle definizioni dei segmenti, puoi ottimizzare la strategia di segmentazione studiando le somiglianze tra le definizioni dei segmenti.
 
-![Dashboard dei profili dell&#39;interfaccia utente di Platform con elenco a discesa dei criteri di unione e elenco a discesa dei tipi di pubblico dei widget evidenziati.](../images/profiles/audience-overlap-by-merge-policy.png)
+![Dashboard dei profili dell&#39;interfaccia utente di Experience Platform con menu a discesa dei criteri di unione ed evidenziati gli elenchi a discesa dei tipi di pubblico dei widget.](../images/profiles/audience-overlap-by-merge-policy.png)
 
 
 <!-- ## (Beta) Profile efficacy widgets {#profile-efficacy-widgets}

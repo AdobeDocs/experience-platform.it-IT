@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;api;API;XDM;XDM system;experience data model;data model;ui;workspace;field group;field groups;
+keywords: Experience Platform;home;argomenti popolari;api;API;XDM;XDM system;experience data model;data model;ui;workspace;gruppo di campi;gruppi di campi;
 solution: Experience Platform
 title: Creare e modificare gruppi di campi schema nell’interfaccia utente
 description: Scopri come creare e modificare i gruppi di campi dello schema nell’interfaccia utente di Experience Platform.
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '999'
+source-wordcount: '1001'
 ht-degree: 8%
 
 ---
@@ -22,11 +22,11 @@ In Experience Data Model (XDM), i gruppi di campi di schema sono componenti riut
 
 Un gruppo di campi definisce le classi con cui è compatibile, in base al comportamento dei dati che il gruppo di campi rappresenta (record o serie temporali). Ciò significa che non tutti i gruppi di campi sono disponibili per l&#39;utilizzo con tutte le classi.
 
-Adobe Experience Platform fornisce molti gruppi di campi standard che coprono un&#39;ampia gamma di casi d&#39;uso di marketing. Tuttavia, puoi anche creare e modificare i tuoi gruppi di campi personalizzati per definire concetti aggiuntivi relativi alla tua attività all’interno degli schemi XDM. Questa guida fornisce una panoramica su come creare, modificare e gestire gruppi di campi personalizzati per la tua organizzazione nell’interfaccia utente di Platform.
+Adobe Experience Platform fornisce molti gruppi di campi standard che coprono un&#39;ampia gamma di casi d&#39;uso di marketing. Tuttavia, puoi anche creare e modificare i tuoi gruppi di campi personalizzati per definire concetti aggiuntivi relativi alla tua attività all’interno degli schemi XDM. Questa guida fornisce una panoramica su come creare, modificare e gestire gruppi di campi personalizzati per la tua organizzazione nell’interfaccia utente di Experience Platform.
 
 ## Prerequisiti {#prerequisites}
 
-Questa guida richiede una buona conoscenza del sistema XDM. Consulta la [panoramica di XDM](../../home.md) per un&#39;introduzione al ruolo di XDM all&#39;interno dell&#39;ecosistema Experience Platform e le [nozioni di base sulla composizione dello schema](../../schema/composition.md) per informazioni sul modo in cui i gruppi di campi contribuiscono agli schemi XDM.
+Questa guida richiede una buona conoscenza del sistema XDM. Consulta la [panoramica di XDM](../../home.md) per un&#39;introduzione al ruolo di XDM nell&#39;ecosistema Experience Platform e le [nozioni di base sulla composizione dello schema](../../schema/composition.md) per informazioni sul modo in cui i gruppi di campi contribuiscono agli schemi XDM.
 
 Sebbene non sia necessario per questa guida, è consigliabile seguire l&#39;esercitazione su [composizione di uno schema nell&#39;interfaccia utente](../../tutorials/create-schema-ui.md) per acquisire familiarità con le varie funzionalità di [!DNL Schema Editor].
 
@@ -48,7 +48,7 @@ Nella finestra di dialogo visualizzata, seleziona **[!UICONTROL Crea nuovo grupp
 
 ## Filtra gruppi di campi {#filter}
 
-L’elenco dei gruppi di campi disponibili viene prefiltrato in base alla modalità di creazione. Per impostazione predefinita vengono visualizzati i gruppi di campi definiti dall&#39;Adobe. Tuttavia, puoi anche filtrare l’elenco per mostrare quelli creati dalla tua organizzazione. Selezionare il pulsante di opzione per scegliere tra le opzioni [!UICONTROL Standard] e [!UICONTROL Personalizzato]. L&#39;opzione [!UICONTROL Standard] mostra le entità create da Adobe e l&#39;opzione [!UICONTROL Custom] mostra le entità create all&#39;interno dell&#39;organizzazione.
+L’elenco dei gruppi di campi disponibili viene prefiltrato in base alla modalità di creazione. L’impostazione predefinita visualizza i gruppi di campi definiti da Adobe. Tuttavia, puoi anche filtrare l’elenco per mostrare quelli creati dalla tua organizzazione. Selezionare il pulsante di opzione per scegliere tra le opzioni [!UICONTROL Standard] e [!UICONTROL Personalizzato]. L&#39;opzione [!UICONTROL Standard] mostra le entità create da Adobe e l&#39;opzione [!UICONTROL Custom] mostra le entità create all&#39;interno dell&#39;organizzazione.
 
 ![Scheda [!UICONTROL Gruppi di campi] dell&#39;area di lavoro [!UICONTROL Schemi] con [!UICONTROL Standard] e [!UICONTROL Personalizzato] evidenziati.](../../images/ui/resources/field-groups/standard-and-custom-field-groups.png)
 
@@ -56,7 +56,7 @@ L’elenco dei gruppi di campi disponibili viene prefiltrato in base alla modali
 
 >[!NOTE]
 >
->Solo i gruppi di campi personalizzati definiti dall’organizzazione possono essere completamente modificati e personalizzati. Per i gruppi di campi principali definiti da Adobe, è possibile modificare solo i nomi visualizzati dei relativi campi nel contesto dei singoli schemi. Nell&#39;Editor schema sono indicati da un&#39;icona lucchetto (![Un&#39;icona lucchetto.](/help/images/icons/lock-closed.png)). Per ulteriori informazioni, consulta la sezione sulla [modifica dei nomi visualizzati per i campi dello schema](./schemas.md#display-names).
+>Solo i gruppi di campi personalizzati definiti dall’organizzazione possono essere completamente modificati e personalizzati. Per i gruppi di campi di base definiti da Adobe, è possibile modificare solo i nomi visualizzati dei relativi campi nel contesto dei singoli schemi. Nell&#39;Editor schema sono indicati da un&#39;icona lucchetto (![Un&#39;icona lucchetto.](/help/images/icons/lock-closed.png)). Per ulteriori informazioni, consulta la sezione sulla [modifica dei nomi visualizzati per i campi dello schema](./schemas.md#display-names).
 >
 >Dopo aver salvato e utilizzato un gruppo di campi personalizzato in uno schema per l’acquisizione dei dati, è possibile apportare al gruppo di campi solo modifiche aggiuntive. Per ulteriori informazioni, consulta le [regole dell&#39;evoluzione dello schema](../../schema/composition.md#evolution).
 
@@ -92,6 +92,6 @@ Se lo stesso gruppo di campi è già utilizzato in altri schemi, i campi appena 
 
 ## Passaggi successivi {#next-steps}
 
-Questa guida illustra come creare e modificare i gruppi di campi utilizzando l’interfaccia utente di Platform. Per ulteriori informazioni sulle funzionalità dell&#39;area di lavoro [!UICONTROL Schemi], vedere la panoramica dell&#39;area di lavoro [[!UICONTROL Schemi]](../overview.md).
+Questa guida illustra come creare e modificare i gruppi di campi utilizzando l’interfaccia utente di Experience Platform. Per ulteriori informazioni sulle funzionalità dell&#39;area di lavoro [!UICONTROL Schemi], vedere la panoramica dell&#39;area di lavoro [[!UICONTROL Schemi]](../overview.md).
 
 Per informazioni su come gestire i gruppi di campi utilizzando l&#39;API [!DNL Schema Registry], consulta la [guida dell&#39;endpoint dei gruppi di campi](../../api/field-groups.md).

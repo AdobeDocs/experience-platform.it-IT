@@ -4,9 +4,9 @@ description: Scopri come collegare Oracle NetSuite a Adobe Experience Platform u
 last-substantial-update: 2024-01-30T00:00:00Z
 badge: Beta
 exl-id: 1dd30660-c990-4d3f-a64f-2a17e426f56d
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '748'
+source-wordcount: '756'
 ht-degree: 2%
 
 ---
@@ -17,13 +17,13 @@ ht-degree: 2%
 >
 >L&#39;origine [!DNL Oracle NetSuite] è in versione beta. Per ulteriori informazioni sull&#39;utilizzo di origini con etichetta beta, leggere la [panoramica delle origini](../../home.md#terms-and-conditions).
 
-Adobe Experience Platform consente di acquisire i dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
+Adobe Experience Platform consente di acquisire dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Experience Platform. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 
 Experience Platform fornisce supporto per l’acquisizione dei dati da parte di sistemi di automazione del marketing di terze parti. Il supporto per i provider di automazione marketing include [!DNL Oracle NetSuite].
 
 [[!DNL Oracle NetSuite]](https://www.netsuite.com/) è una suite di gestione aziendale basata su cloud che include soluzioni ERP/finanziarie, CRM ed e-commerce.
 
-È possibile utilizzare due origini diverse per acquisire i dati da [!DNL Oracle NetSuite] all&#39;Experience Platform:
+È possibile utilizzare due origini diverse per acquisire dati da [!DNL Oracle NetSuite] ad Experience Platform:
 
 * Utilizza l&#39;origine [!DNL Oracle NetSuite Activities] per acquisire i dati degli eventi.
 * Utilizza l&#39;origine [!DNL Oracle NetSuite Entities] per acquisire i dati dei clienti e dei contatti.
@@ -42,7 +42,7 @@ Prima di utilizzare i connettori di origine, potrebbe essere necessario aggiunge
 
 ## Prerequisiti {#prerequisites}
 
-Prima di poter portare i dati di [!DNL Oracle NetSuite] all&#39;Experience Platform, è necessario assicurarsi di disporre dei seguenti elementi:
+Prima di poter trasferire i dati di [!DNL Oracle NetSuite] ad Experience Platform, è necessario assicurarsi di disporre dei seguenti elementi:
 
 * **Un account [!DNL Oracle NetSuite]**.
    * Contattare [[!DNL Oracle NetSuite]](https://www.NetSuite.com/portal/company/contactus.shtml) se non si dispone già di un account valido.
@@ -58,7 +58,7 @@ Prima di poter portare i dati di [!DNL Oracle NetSuite] all&#39;Experience Platf
 
 ### Raccogli le credenziali richieste {#gather-credentials}
 
-Per connettere [!DNL Oracle NetSuite] a Platform, è necessario fornire i valori per le seguenti proprietà di connessione:
+Per connettere [!DNL Oracle NetSuite] ad Experience Platform, è necessario fornire i valori per le seguenti proprietà di connessione:
 
 | Credenziali | Descrizione | Esempio |
 | --- | --- | --- |
@@ -73,18 +73,18 @@ Per connettere [!DNL Oracle NetSuite] a Platform, è necessario fornire i valori
 >
 >Dopo la scadenza di un token di aggiornamento, devi creare un nuovo account in Experience Platform con i token aggiornati.
 
-## Connetti [!DNL Oracle NetSuite Activities] a Platform {#oracle-netsuite-activities}
+## Connetti [!DNL Oracle NetSuite Activities] ad Experience Platform {#oracle-netsuite-activities}
 
-La documentazione seguente fornisce informazioni su come connettere [!DNL Oracle NetSuite Activities] a Platform tramite API o tramite l&#39;interfaccia utente:
+La documentazione seguente fornisce informazioni su come connettere [!DNL Oracle NetSuite Activities] ad Experience Platform tramite API o tramite l&#39;interfaccia utente:
 
-* [Crea una connessione di origine e un flusso di dati per portare [!DNL Oracle NetSuite Activities] dati in Platform tramite API](../../tutorials/api/create/marketing-automation/oracle-netsuite-activities.md).
+* [Crea una connessione di origine e un flusso di dati per portare [!DNL Oracle NetSuite Activities] dati ad Experience Platform tramite API](../../tutorials/api/create/marketing-automation/oracle-netsuite-activities.md).
 * [Connetti il tuo account [!DNL Oracle NetSuite Activities] ad Experience Platform utilizzando l&#39;interfaccia utente](../../tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md).
 * [Creare un flusso di dati per una connessione di origine utilizzando l&#39;interfaccia utente](../../tutorials/ui/dataflow/marketing-automation.md).
 
-## Connetti [!DNL Oracle NetSuite Entities] a Platform {#oracle-netsuite-entities}
+## Connetti [!DNL Oracle NetSuite Entities] ad Experience Platform {#oracle-netsuite-entities}
 
-La documentazione seguente fornisce informazioni su come connettere [!DNL Oracle NetSuite Entities] a Platform tramite API o tramite l&#39;interfaccia utente:
+La documentazione seguente fornisce informazioni su come connettere [!DNL Oracle NetSuite Entities] ad Experience Platform tramite API o tramite l&#39;interfaccia utente:
 
-* [Crea una connessione di origine e un flusso di dati per portare [!DNL Oracle NetSuite Entities] dati in Platform tramite API](../../tutorials/api/create/marketing-automation/oracle-netsuite-entities.md).
+* [Crea una connessione di origine e un flusso di dati per portare [!DNL Oracle NetSuite Entities] dati ad Experience Platform tramite API](../../tutorials/api/create/marketing-automation/oracle-netsuite-entities.md).
 * [Connetti il tuo account [!DNL Oracle NetSuite Entities] ad Experience Platform utilizzando l&#39;interfaccia utente](../../tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md).
 * [Creare un flusso di dati per una connessione di origine utilizzando l&#39;interfaccia utente](../../tutorials/ui/dataflow/marketing-automation.md).

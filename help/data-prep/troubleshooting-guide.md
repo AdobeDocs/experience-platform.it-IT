@@ -3,16 +3,16 @@ keywords: Experience Platform;home;argomenti popolari;
 title: Guida alla risoluzione dei problemi della preparazione dati
 description: Questo documento fornisce le risposte alle domande più frequenti sulla preparazione dati di Adobe Experience Platform.
 exl-id: 810cfb2f-f80a-4aa7-ab3c-beb5de78708e
-source-git-commit: ff8f660c2b3a04d8b4b9d4f19891816a44069088
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1256'
+source-wordcount: '1257'
 ht-degree: 0%
 
 ---
 
 # Guida alla risoluzione dei problemi di [!DNL Data Prep]
 
-Questo documento contiene le risposte alle domande frequenti su Adobe Experience Platform [!DNL Data Prep] e una guida alla risoluzione dei problemi relativi agli errori più comuni. Per domande e informazioni sulla risoluzione dei problemi relativi alle API di Platform in generale, consulta la [guida alla risoluzione dei problemi API di Adobe Experience Platform](../landing/troubleshooting.md).
+Questo documento contiene le risposte alle domande frequenti su Adobe Experience Platform [!DNL Data Prep] e una guida alla risoluzione dei problemi relativi agli errori più comuni. Per domande e informazioni sulla risoluzione dei problemi relativi alle API di Experience Platform in generale, consulta la [guida alla risoluzione dei problemi API di Adobe Experience Platform](../landing/troubleshooting.md).
 
 ## Domande frequenti
 
@@ -38,7 +38,7 @@ I campi calcolati hanno una lunghezza massima di 4096 caratteri.
 
 Assicurati che il tipo di dati per ogni campo corrisponda al tipo definito nello schema. Inoltre, è necessario rispettare vincoli quali &quot;Obbligatorio&quot;, &quot;enum&quot; e &quot;formato&quot;.
 
-I dati da acquisire devono essere conformi allo schema Experience Data Model (XDM) definito nell’Experience Platform. Se l’attributo non corrisponde al tipo o al formato previsto specificato nello schema, l’acquisizione non riuscirà.
+I dati da acquisire devono essere conformi allo schema Experience Data Model (XDM) definito in Experience Platform. Se l’attributo non corrisponde al tipo o al formato previsto specificato nello schema, l’acquisizione non riuscirà.
 
 Se vengono utilizzate le funzioni di preparazione dati, assicurati che la trasformazione risulti negli attributi corretti. È possibile esaminare gli attributi durante il processo di impostazione del flusso di lavoro origini. Durante il passaggio di mappatura, selezionare **[!UICONTROL Nuovo tipo di campo]**, quindi selezionare **[!UICONTROL Aggiungi campo calcolato]**. Quindi, utilizza l’interfaccia del campo calcolato per visualizzare in anteprima ogni funzione.
 
@@ -58,7 +58,7 @@ Dopo l’acquisizione, puoi utilizzare il distillatore di dati per pulire, model
 >
 >* Servizio identità: non è possibile rimuovere i record in modo definitivo in Identity Service. Dovrai eliminare l’intero profilo e ricaricarlo con i record corretti utilizzando l’API di eliminazione profilo.
 
-### Qual è la best practice per utilizzare i campi calcolati nei dati GIF?
+### Quali sono le best practice per utilizzare i campi calcolati nei dati di GIF?
 
 Puoi utilizzare le funzioni di mappatura della preparazione dati durante il passaggio di mappatura dei dati di origine sullo schema XDM per creare un nuovo campo calcolato.
 

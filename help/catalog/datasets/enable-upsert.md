@@ -4,9 +4,9 @@ title: Abilitare un set di dati per gli aggiornamenti del profilo utilizzando le
 type: Tutorial
 description: Questa esercitazione mostra come utilizzare le API di Adobe Experience Platform per abilitare un set di dati con funzionalità di "upsert" per apportare aggiornamenti ai dati del profilo cliente in tempo reale.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1067'
+source-wordcount: '1069'
 ht-degree: 7%
 
 ---
@@ -21,14 +21,14 @@ Questa esercitazione illustra il processo di abilitazione di un set di dati con 
 
 ## Introduzione
 
-Questo tutorial richiede una buona conoscenza di diversi servizi Adobe Experience Platform coinvolti nella gestione dei set di dati abilitati per il profilo. Prima di iniziare questo tutorial, consulta la documentazione di questi servizi [!DNL Platform] correlati:
+Questo tutorial richiede una buona conoscenza di diversi servizi Adobe Experience Platform coinvolti nella gestione dei set di dati abilitati per il profilo. Prima di iniziare questo tutorial, consulta la documentazione di questi servizi [!DNL Experience Platform] correlati:
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 - [[!DNL Catalog Service]](../../catalog/home.md): API RESTful che consente di creare set di dati e configurarli per [!DNL Real-Time Customer Profile] e [!DNL Identity Service].
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): framework standardizzato tramite il quale [!DNL Platform] organizza i dati sull&#39;esperienza del cliente.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): framework standardizzato tramite il quale [!DNL Experience Platform] organizza i dati sull&#39;esperienza del cliente.
 - [Acquisizione batch](../../ingestion/batch-ingestion/overview.md): l&#39;API di acquisizione batch consente di acquisire dati in Experience Platform come file batch.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per effettuare correttamente le chiamate alle API di Platform.
+Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per effettuare correttamente le chiamate alle API di Experience Platform.
 
 ### Lettura delle chiamate API di esempio
 
@@ -36,7 +36,7 @@ Questo tutorial fornisce esempi di chiamate API per dimostrare come formattare l
 
 ### Raccogliere i valori per le intestazioni richieste
 
-Per effettuare chiamate alle API [!DNL Platform], devi prima completare l&#39;[esercitazione di autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
+Per effettuare chiamate alle API [!DNL Experience Platform], devi prima completare l&#39;[esercitazione di autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -44,7 +44,7 @@ Per effettuare chiamate alle API [!DNL Platform], devi prima completare l&#39;[e
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione `Content-Type` aggiuntiva. Il valore corretto per questa intestazione viene mostrato nelle richieste di esempio, se necessario.
 
-Tutte le risorse in [!DNL Experience Platform] sono isolate in specifiche sandbox virtuali. Tutte le richieste alle API [!DNL Platform] richiedono un&#39;intestazione `x-sandbox-name` che specifichi il nome della sandbox in cui verrà eseguita l&#39;operazione. Per ulteriori informazioni sulle sandbox in [!DNL Platform], consulta la [documentazione di panoramica sulle sandbox](../../sandboxes/home.md).
+Tutte le risorse in [!DNL Experience Platform] sono isolate in specifiche sandbox virtuali. Tutte le richieste alle API [!DNL Experience Platform] richiedono un&#39;intestazione `x-sandbox-name` che specifichi il nome della sandbox in cui verrà eseguita l&#39;operazione. Per ulteriori informazioni sulle sandbox in [!DNL Experience Platform], consulta la [documentazione di panoramica sulle sandbox](../../sandboxes/home.md).
 
 ## Creare un set di dati abilitato per gli aggiornamenti del profilo
 
@@ -179,7 +179,7 @@ Nella proprietà `tags` è presente `unifiedProfile` con il valore `enabled:true
 
 ### Disattiva il set di dati per il profilo
 
-Per configurare un set di dati abilitato per il profilo per gli aggiornamenti, è innanzitutto necessario disabilitare i tag `unifiedProfile` e `unifiedIdentity` e quindi abilitarli nuovamente insieme al tag `isUpsert`. Questa operazione viene eseguita utilizzando due richieste PATCH, una per disabilitare e una per riabilitare.
+Per configurare un set di dati abilitato per il profilo per gli aggiornamenti, è innanzitutto necessario disabilitare i tag `unifiedProfile` e `unifiedIdentity` e quindi abilitarli nuovamente insieme al tag `isUpsert`. Questa operazione viene eseguita utilizzando due richieste PATCH, una per la disattivazione e una per la riattivazione.
 
 >[!WARNING]
 >
@@ -197,7 +197,7 @@ PATCH /dataSets/{DATASET_ID}
 
 **Richiesta**
 
-Il primo corpo della richiesta PATCH include `path` in `unifiedProfile` e `path` in `unifiedIdentity`, impostando `value` in `enabled:false` per entrambi i percorsi al fine di disabilitare i tag.
+Il primo corpo della richiesta di PATCH include `path` in `unifiedProfile` e `path` in `unifiedIdentity`, impostando `value` in `enabled:false` per entrambi i percorsi al fine di disabilitare i tag.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
@@ -222,7 +222,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a2
 
 **Risposta**
 
-In caso di esito positivo, la richiesta PATCH restituisce lo stato HTTP 200 (OK) e una matrice contenente l’ID del set di dati aggiornato. Questo ID deve corrispondere a quello inviato nella richiesta PATCH. I tag `unifiedProfile` e `unifiedIdentity` sono stati disabilitati.
+In caso di esito positivo, la richiesta di PATCH restituisce lo stato HTTP 200 (OK) e un array contenente l’ID del set di dati aggiornato. Questo ID deve corrispondere a quello inviato nella richiesta PATCH. I tag `unifiedProfile` e `unifiedIdentity` sono stati disabilitati.
 
 ```json
 [
@@ -236,7 +236,7 @@ In caso di esito positivo, la richiesta PATCH restituisce lo stato HTTP 200 (OK)
 
 >[!IMPORTANT]
 >
->Quando abiliti il set di dati per il profilo, accertati che lo schema a cui è associato il set di dati sia **anche** abilitato per il profilo. Se lo schema non è abilitato per il profilo, il set di dati **non** verrà visualizzato come abilitato per il profilo nell&#39;interfaccia utente di Platform.
+>Quando abiliti il set di dati per il profilo, accertati che lo schema a cui è associato il set di dati sia **anche** abilitato per il profilo. Se lo schema non è abilitato per il profilo, il set di dati **non** verrà visualizzato come abilitato per il profilo nell&#39;interfaccia utente di Experience Platform.
 
 **Formato API**
 
@@ -280,7 +280,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a2
 
 **Risposta**
 
-In caso di esito positivo, la richiesta PATCH restituisce lo stato HTTP 200 (OK) e una matrice contenente l’ID del set di dati aggiornato. Questo ID deve corrispondere a quello inviato nella richiesta PATCH. Il tag `unifiedProfile` e il tag `unifiedIdentity` sono stati abilitati e configurati per gli aggiornamenti degli attributi.
+In caso di esito positivo, la richiesta di PATCH restituisce lo stato HTTP 200 (OK) e un array contenente l’ID del set di dati aggiornato. Questo ID deve corrispondere a quello inviato nella richiesta PATCH. Il tag `unifiedProfile` e il tag `unifiedIdentity` sono stati abilitati e configurati per gli aggiornamenti degli attributi.
 
 ```json
 [

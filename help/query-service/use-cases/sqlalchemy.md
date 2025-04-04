@@ -1,27 +1,27 @@
 ---
-title: Gestire i dati della piattaforma utilizzando Python e SQLAlchemy
-description: Scopri come utilizzare SQLAlchemy per gestire i dati di Platform utilizzando Python anziché SQL.
+title: Gestire i dati di Experience Platform utilizzando Python e SQLAlchemy
+description: Scopri come utilizzare SQLAlchemy per gestire i dati di Experience Platform utilizzando Python anziché SQL.
 exl-id: 9fba942e-9b3d-4efe-ae94-aed685025dea
-source-git-commit: 8644b78c947fd015f6a169c9440b8d1df71e5e17
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '570'
+source-wordcount: '578'
 ht-degree: 0%
 
 ---
 
-# Gestisci i dati di Platform tramite [!DNL Python] e [!DNL SQLAlchemy]
+# Gestire i dati di Experience Platform utilizzando [!DNL Python] e [!DNL SQLAlchemy]
 
 Scopri come utilizzare SQLAlchemy per una maggiore flessibilità nella gestione dei dati Adobe Experience Platform. Per coloro che non hanno familiarità con SQL, SQLAlchemy può migliorare notevolmente i tempi di sviluppo quando si lavora con i database relazionali. In questo documento vengono fornite istruzioni ed esempi per connettere [!DNL SQLAlchemy] a Query Service e iniziare a utilizzare Python per interagire con i database.
 
-[!DNL SQLAlchemy] è un Object Relational Mapper (ORM) e una libreria di codici [!DNL Python] in grado di trasferire i dati archiviati in un database SQL in oggetti [!DNL Python]. È quindi possibile eseguire operazioni CRUD sui dati contenuti nel data lake di Platform utilizzando il codice [!DNL Python]. Questo elimina la necessità di gestire i dati utilizzando solo PSQL.
+[!DNL SQLAlchemy] è un Object Relational Mapper (ORM) e una libreria di codici [!DNL Python] in grado di trasferire i dati archiviati in un database SQL in oggetti [!DNL Python]. È quindi possibile eseguire operazioni CRUD sui dati contenuti nel data lake di Experience Platform utilizzando il codice [!DNL Python]. Questo elimina la necessità di gestire i dati utilizzando solo PSQL.
 
 ## Introduzione
 
-Per acquisire le credenziali necessarie per la connessione di [!DNL SQLAlchemy] a Experience Platform, è necessario avere accesso all&#39;area di lavoro Query nell&#39;interfaccia utente di Platform. Se al momento non disponi dell’accesso all’area di lavoro Query, contatta l’amministratore dell’organizzazione.
+Per acquisire le credenziali necessarie per la connessione di [!DNL SQLAlchemy] ad Experience Platform, è necessario avere accesso all&#39;area di lavoro Query nell&#39;interfaccia utente di Experience Platform. Se al momento non disponi dell’accesso all’area di lavoro Query, contatta l’amministratore dell’organizzazione.
 
 ## [!DNL Query Service] credenziali {#credentials}
 
-Per trovare le credenziali, accedi all&#39;interfaccia utente di Platform e seleziona **[!UICONTROL Query]** dal menu di navigazione a sinistra, seguito da **[!UICONTROL Credenziali]**. Per le istruzioni complete su come trovare le credenziali di accesso, leggere la [guida delle credenziali](../ui/credentials.md).
+Per trovare le credenziali, accedi all&#39;interfaccia utente di Experience Platform e seleziona **[!UICONTROL Query]** dal menu di navigazione a sinistra, seguito da **[!UICONTROL Credenziali]**. Per le istruzioni complete su come trovare le credenziali di accesso, leggere la [guida delle credenziali](../ui/credentials.md).
 
 ![La scheda Credenziali con le credenziali in scadenza per Query Service è evidenziata.](../images/use-cases/credentials.png)
 
@@ -59,7 +59,7 @@ password = quote('''
 
 >[!NOTE]
 >
->La password fornita per connettere [!DNL SQLAlchemy] a Experience Platform scadrà se si utilizzano credenziali in scadenza. Per ulteriori informazioni, vedere la [sezione delle credenziali](#credentials).
+>La password fornita per connettere [!DNL SQLAlchemy] ad Experience Platform scadrà se si utilizzano le credenziali in scadenza. Per ulteriori informazioni, vedere la [sezione delle credenziali](#credentials).
 
 ### Crea un&#39;istanza del motore [#create-engine]
 
@@ -69,7 +69,7 @@ Dopo aver creato le variabili, importare la funzione `create_engine` e creare un
 >
 >`create_engine`restituisce un&#39;istanza di un motore. Tuttavia, non apre la connessione a Query Service finché non viene chiamata una query che richiede una connessione.
 
-SSL deve essere abilitato quando si accede a Platform utilizzando client di terze parti. Come parte del motore, utilizzare `connect_args` per immettere argomenti aggiuntivi per parole chiave. Si consiglia di impostare la modalità SSL su `require`. Consulta la [documentazione sulle modalità SSL](../clients/ssl-modes.md) per ulteriori informazioni sui valori accettati.
+SSL deve essere abilitato quando si accede ad Experience Platform utilizzando client di terze parti. Come parte del motore, utilizzare `connect_args` per immettere argomenti aggiuntivi per parole chiave. Si consiglia di impostare la modalità SSL su `require`. Consulta la [documentazione sulle modalità SSL](../clients/ssl-modes.md) per ulteriori informazioni sui valori accettati.
 
 Nell&#39;esempio seguente viene visualizzato il codice [!DNL Python] necessario per inizializzare un motore e una stringa di connessione.
 
@@ -89,9 +89,9 @@ engine = create_engine(db_string, connect_args={'sslmode':'require'})
 
 >[!NOTE]
 >
->La password fornita per connettere [!DNL SQLAlchemy] a Experience Platform scadrà se si utilizzano credenziali in scadenza. Per ulteriori informazioni, vedere la [sezione delle credenziali](#credentials).
+>La password fornita per connettere [!DNL SQLAlchemy] ad Experience Platform scadrà se si utilizzano le credenziali in scadenza. Per ulteriori informazioni, vedere la [sezione delle credenziali](#credentials).
 
-È ora possibile eseguire query sui dati di Platform utilizzando [!DNL Python]. L’esempio riportato di seguito restituisce una matrice di nomi di tabella di Query Service.
+È ora possibile eseguire query sui dati di Experience Platform utilizzando [!DNL Python]. L’esempio riportato di seguito restituisce una matrice di nomi di tabella di Query Service.
 
 ```python
 from sqlalchemy import inspect

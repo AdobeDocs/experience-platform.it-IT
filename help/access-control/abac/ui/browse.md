@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;controllo degli accessi;controllo degli accessi basato su attributi;ABAC
+keywords: Experience Platform;home;argomenti popolari;controllo degli accessi;controllo degli accessi basato su attributi;ABAC;;home;popular topic;access control;attribute-based access control;ABAC
 title: Sfoglia controllo accesso basato su attributi
 description: Questo documento fornisce informazioni sull’utilizzo dell’interfaccia Autorizzazioni in Adobe Experience Platform
 exl-id: 39634bde-8858-44a6-b39a-776846654fc1
-source-git-commit: 73d9c81aa80d82525bd04904ba5de83fb57dbeb3
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '343'
+source-wordcount: '346'
 ht-degree: 2%
 
 ---
@@ -23,15 +23,15 @@ Con [!UICONTROL Autorizzazioni], puoi configurare:
 * [Sandbox](./sandboxes.md)
 * [Utenti](./users.md)
 
-Per accedere alle autorizzazioni di controllo degli accessi basate su attributi per [!DNL Adobe Experience Platform], è necessario essere un amministratore dell&#39;organizzazione con una sottoscrizione a [!DNL Adobe Experience Platform]. Sebbene Adobe supporti gerarchie di amministratori flessibili per le organizzazioni, è necessario essere un amministratore di prodotto per [!DNL Adobe Experience Platform] per configurare le autorizzazioni. Per ulteriori informazioni, consulta l&#39;articolo di Adobe Help Center su [ruoli amministrativi](https://helpx.adobe.com/it/enterprise/using/admin-roles.html).
+Per accedere alle autorizzazioni di controllo degli accessi basate su attributi per [!DNL Adobe Experience Platform], è necessario essere un amministratore dell&#39;organizzazione con una sottoscrizione a [!DNL Adobe Experience Platform]. Sebbene Adobe supporti gerarchie di amministratori flessibili per le organizzazioni, è necessario essere un amministratore di prodotto per [!DNL Adobe Experience Platform] per configurare le autorizzazioni. Per ulteriori informazioni, consulta l&#39;articolo del Centro assistenza Adobe su [ruoli amministrativi](https://helpx.adobe.com/it/enterprise/using/admin-roles.html).
 
 Se non disponi dei privilegi di amministratore, contatta l’amministratore di sistema per ottenere l’accesso.
 
-Una volta che hai i privilegi di amministratore, vai a [Adobe Experience Platform](https://experience.adobe.com/) e accedi con le tue credenziali [!DNL Adobe]. Una volta effettuato l&#39;accesso, viene visualizzata la pagina **[!UICONTROL Panoramica]** per l&#39;organizzazione per la quale si dispone dei privilegi di amministratore. Questa pagina mostra i prodotti a cui la tua organizzazione è abbonata, insieme ad altri controlli per aggiungere utenti e amministratori all’organizzazione nel suo complesso. Seleziona **[!UICONTROL Autorizzazioni]** per aprire l&#39;area di lavoro di controllo degli accessi basata su attributi per l&#39;integrazione con Platform.
+Una volta che hai i privilegi di amministratore, vai a [Adobe Experience Platform](https://experience.adobe.com/) e accedi con le tue credenziali [!DNL Adobe]. Una volta effettuato l&#39;accesso, viene visualizzata la pagina **[!UICONTROL Panoramica]** per l&#39;organizzazione per la quale si dispone dei privilegi di amministratore. Questa pagina mostra i prodotti a cui la tua organizzazione è abbonata, insieme ad altri controlli per aggiungere utenti e amministratori all’organizzazione nel suo complesso. Seleziona **[!UICONTROL Autorizzazioni]** per aprire l&#39;area di lavoro di controllo degli accessi basata su attributi per l&#39;integrazione Experience Platform.
 
 ![flac-select-product](../../images/flac-ui/flac-select-product.png)
 
-Viene visualizzata l&#39;area di lavoro di controllo degli accessi basata su attributi per Platform, che si apre nella pagina **[!UICONTROL Ruoli]**. Questa pagina consente di visualizzare tutti i ruoli e di gestire le varie impostazioni come descritto in questo documento.
+Viene visualizzata l&#39;area di lavoro di controllo degli accessi basata su attributi per Experience Platform, che si apre nella pagina **[!UICONTROL Ruoli]**. Questa pagina consente di visualizzare tutti i ruoli e di gestire le varie impostazioni come descritto in questo documento.
 
 >[!IMPORTANT]
 >
@@ -41,7 +41,7 @@ Viene visualizzata l&#39;area di lavoro di controllo degli accessi basata su att
 
 ![flac-select-roles](../../images/flac-ui/flac-select-roles.png)
 
-Questa guida utente illustra come utilizzare [!DNL Adobe Experience Platform] per assegnare le autorizzazioni di accesso a Platform. Per ulteriori informazioni generali su come spostarsi in [!DNL Admin Console], vedere la [guida utente di Admin Console](https://helpx.adobe.com/it/enterprise/using/admin-console.html).
+Questa guida utente illustra come utilizzare [!DNL Adobe Experience Platform] per assegnare le autorizzazioni di accesso ad Experience Platform. Per informazioni generali su come navigare in [!DNL Admin Console], consulta la [guida utente di Admin Console](https://helpx.adobe.com/it/enterprise/using/admin-console.html).
 
 ## Passaggi successivi
 

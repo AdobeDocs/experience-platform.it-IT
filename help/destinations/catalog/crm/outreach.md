@@ -3,9 +3,9 @@ keywords: crm;CRM;destinazioni crm;Outreach;Outreach crm destination
 title: Connessione di uscita
 description: La destinazione Outreach ti consente di esportare i dati del tuo account e attivarli in Outreach per le tue esigenze aziendali.
 exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1678'
+source-wordcount: '1698'
 ht-degree: 2%
 
 ---
@@ -26,15 +26,15 @@ In qualità di addetto al marketing, puoi fornire esperienze personalizzate ai p
 
 ## Prerequisiti {#prerequisites}
 
-### Experience Platform prerequisiti {#prerequisites-in-experience-platform}
+### Prerequisiti di Experience Platform {#prerequisites-in-experience-platform}
 
 Prima di attivare i dati nella destinazione [!DNL Outreach], è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) e [segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) creati in [!DNL Experience Platform].
 
-Se hai bisogno di indicazioni sugli stati del pubblico, consulta la documentazione di Adobe per il gruppo di campi dello schema [Dettagli appartenenza a pubblico](/help/xdm/field-groups/profile/segmentation.md).
+Se hai bisogno di indicazioni sugli stati del pubblico, consulta la documentazione di Adobe per il gruppo di campi per lo schema [Dettagli appartenenza pubblico](/help/xdm/field-groups/profile/segmentation.md).
 
 ### Prerequisiti per l’estensione {#prerequisites-destination}
 
-Per esportare i dati da Platform al tuo account [!DNL Outreach], tieni presente i seguenti prerequisiti in [!DNL Outreach]:
+Per esportare i dati da Experience Platform al tuo account [!DNL Outreach], tieni presente i seguenti prerequisiti in [!DNL Outreach]:
 
 #### Devi avere un account Outreach {#prerequisites-account}
 
@@ -83,7 +83,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
-| Tipo di esportazione | **[!UICONTROL Basato su profilo]** | <ul><li> Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati *(ad esempio: indirizzo e-mail, numero di telefono, cognome)*, in base al mapping dei campi.</li><li> Ogni stato del segmento in [!DNL Outreach] viene aggiornato con lo stato del pubblico corrispondente da Platform, in base al valore [!UICONTROL ID mappatura] fornito durante il passaggio [pianificazione del pubblico](#schedule-segment-export-example).</li></ul> |
+| Tipo di esportazione | **[!UICONTROL Basato su profilo]** | <ul><li> Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati *(ad esempio: indirizzo e-mail, numero di telefono, cognome)*, in base al mapping dei campi.</li><li> Ogni stato del segmento in [!DNL Outreach] viene aggiornato con lo stato del pubblico corrispondente da Experience Platform, in base al valore [!UICONTROL ID mappatura] fornito durante il passaggio [pianificazione del pubblico](#schedule-segment-export-example).</li></ul> |
 | Frequenza di esportazione | **[!UICONTROL Streaming]** | <ul><li> Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni sulle [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
@@ -102,7 +102,7 @@ All&#39;interno di **[!UICONTROL Destinazioni]** > **[!UICONTROL Catalogo]**, ce
 
 Per eseguire l&#39;autenticazione nella destinazione, selezionare **[!UICONTROL Connetti alla destinazione]**.
 
-![Schermata dell&#39;interfaccia utente di Platform che mostra come eseguire l&#39;autenticazione in Outreach.](../../assets/catalog/crm/outreach/authenticate-destination.png)
+![Schermata dell&#39;interfaccia utente di Experience Platform che mostra come eseguire l&#39;autenticazione in Outreach.](../../assets/catalog/crm/outreach/authenticate-destination.png)
 
 Verrà visualizzata la pagina di accesso [!DNL Outreach]. Immetti l’e-mail.
 
@@ -120,7 +120,7 @@ Se i dettagli forniti sono validi, nell&#39;interfaccia utente viene visualizzat
 ### Inserire i dettagli della destinazione {#destination-details}
 
 Per configurare i dettagli per la destinazione, compila i campi obbligatori e facoltativi seguenti. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
-![Schermata dell&#39;interfaccia utente di Platform che mostra come compilare i dettagli per la destinazione di Outreach.](../../assets/catalog/crm/outreach/destination-details.png)
+![Schermata dell&#39;interfaccia utente di Experience Platform che mostra come compilare i dettagli per la destinazione di Outreach.](../../assets/catalog/crm/outreach/destination-details.png)
 
 * **[!UICONTROL Nome]**: un nome con cui riconoscerai questa destinazione in futuro.
 * **[!UICONTROL Descrizione]**: una descrizione che ti aiuterà a identificare questa destinazione in futuro.
@@ -142,17 +142,17 @@ Leggi [Attivare profili e tipi di pubblico nelle destinazioni di esportazione de
 
 ### Considerazioni sulla mappatura ed esempio {#mapping-considerations-example}
 
-Per inviare correttamente i dati sul pubblico da Adobe Experience Platform alla destinazione [!DNL Outreach], è necessario eseguire il passaggio di mappatura dei campi. La mappatura consiste nella creazione di un collegamento tra i campi dello schema Experience Data Model (XDM) nell’account Platform e i corrispondenti equivalenti dalla destinazione. Per mappare correttamente i campi XDM ai campi di destinazione [!DNL Outreach], effettua le seguenti operazioni:
+Per inviare correttamente i dati sul pubblico da Adobe Experience Platform alla destinazione [!DNL Outreach], è necessario eseguire il passaggio di mappatura dei campi. La mappatura consiste nella creazione di un collegamento tra i campi dello schema Experience Data Model (XDM) nell’account Experience Platform e i corrispondenti equivalenti dalla destinazione. Per mappare correttamente i campi XDM ai campi di destinazione [!DNL Outreach], effettua le seguenti operazioni:
 
 1. Nel passaggio [!UICONTROL Mapping], fare clic su **[!UICONTROL Aggiungi nuovo mapping]**. Viene visualizzata una nuova riga di mappatura.
-   ![Schermata dell&#39;interfaccia utente di Platform che mostra come aggiungere una nuova mappatura](../../assets/catalog/crm/outreach/add-new-mapping.png)
+   ![Schermata dell&#39;interfaccia utente di Experience Platform che mostra come aggiungere una nuova mappatura](../../assets/catalog/crm/outreach/add-new-mapping.png)
 
 1. Nella finestra [!UICONTROL Seleziona campo di origine], scegli la categoria **[!UICONTROL Seleziona spazio dei nomi identità]** e aggiungi i mapping desiderati.
-   ![Schermata dell&#39;interfaccia utente di Platform che mostra la mappatura di Source](../../assets/catalog/crm/outreach/source-mapping.png)
+   ![Schermata dell&#39;interfaccia utente di Experience Platform che mostra la mappatura di Source](../../assets/catalog/crm/outreach/source-mapping.png)
 
 1. Nella finestra [!UICONTROL Seleziona campo di destinazione], seleziona il tipo di campo di destinazione a cui vuoi mappare il campo di origine.
    * **[!UICONTROL Seleziona lo spazio dei nomi delle identità]**: seleziona questa opzione per mappare il campo di origine a uno spazio dei nomi delle identità dall&#39;elenco.
-     ![Schermata dell&#39;interfaccia utente di Platform che mostra la mappatura di Target tramite OutreachId.](../../assets/catalog/crm/outreach/target-mapping.png)
+     ![Schermata dell&#39;interfaccia utente di Experience Platform che mostra la mappatura di Target tramite OutreachId.](../../assets/catalog/crm/outreach/target-mapping.png)
 
    * Aggiungi la seguente mappatura tra lo schema del profilo XDM e l&#39;istanza [!DNL Outreach]:
 
@@ -161,7 +161,7 @@ Per inviare correttamente i dati sul pubblico da Adobe Experience Platform alla 
      | `Oid` | `OutreachId` | Sì |
 
    * **[!UICONTROL Seleziona attributi personalizzati]**: seleziona questa opzione per mappare il campo di origine a un attributo personalizzato definito nel campo [!UICONTROL Nome attributo]. Per un elenco completo degli attributi supportati, consulta la [[!DNL Outreach] documentazione del prospect](https://api.outreach.io/api/v2/docs#prospect).
-     ![Schermata dell&#39;interfaccia utente di Platform che mostra la mappatura di Target tramite LastName.](../../assets/catalog/crm/outreach/target-mapping-lastname.png)
+     ![Schermata dell&#39;interfaccia utente di Experience Platform che mostra la mappatura di Target tramite LastName.](../../assets/catalog/crm/outreach/target-mapping-lastname.png)
 
    * Ad esempio, a seconda dei valori che desideri aggiornare, aggiungi la seguente mappatura tra lo schema del profilo XDM e l&#39;istanza [!DNL Outreach]:
 
@@ -171,11 +171,11 @@ Per inviare correttamente i dati sul pubblico da Adobe Experience Platform alla 
      | `person.name.lastName` | `lastName` |
 
    * Di seguito è riportato un esempio che utilizza queste mappature:
-     ![Esempio di schermata dell&#39;interfaccia utente di Platform che mostra le mappature di Target.](../../assets/catalog/crm/outreach/mappings.png)
+     ![Esempio di schermata dell&#39;interfaccia utente di Experience Platform che mostra le mappature di Target.](../../assets/catalog/crm/outreach/mappings.png)
 
 ### Esempio di esportazione e pianificazione di un pubblico {#schedule-segment-export-example}
 
-* Durante l&#39;esecuzione del passaggio [Pianifica esportazione pubblico](../../ui/activate-segment-streaming-destinations.md) è necessario mappare manualmente i tipi di pubblico di Platform all&#39;attributo del campo personalizzato in [!DNL Outreach].
+* Durante l&#39;esecuzione del passaggio [Pianifica esportazione pubblico](../../ui/activate-segment-streaming-destinations.md) è necessario mappare manualmente i tipi di pubblico di Experience Platform all&#39;attributo del campo personalizzato in [!DNL Outreach].
 
 * A questo scopo, seleziona ogni segmento, quindi immetti il valore numerico corrispondente che corrisponde al campo *Campo personalizzato `N` Etichetta* di [!DNL Outreach] nel campo **[!UICONTROL ID mappatura]**.
 
@@ -188,29 +188,29 @@ Per inviare correttamente i dati sul pubblico da Adobe Experience Platform alla 
 
    * Ad esempio:
 
-     | Campo [!DNL Outreach] | ID mappatura piattaforma |
+     | Campo [!DNL Outreach] | ID mappatura Experience Platform |
      |---|---|
      | Etichetta campo personalizzato `4` | `4` |
 
-     ![Schermata dell&#39;interfaccia utente di Platform che mostra un ID di mappatura di esempio durante l&#39;esportazione pianificata del pubblico.](../../assets/catalog/crm/outreach/schedule-segment-export.png)
+     ![Schermata dell&#39;interfaccia utente di Experience Platform che mostra un ID di mappatura di esempio durante l&#39;esportazione pianificata del pubblico.](../../assets/catalog/crm/outreach/schedule-segment-export.png)
 
 ## Convalidare l’esportazione dei dati {#exported-data}
 
 Per verificare di aver impostato correttamente la destinazione, segui i passaggi seguenti:
 
 1. Seleziona **[!UICONTROL Destinazioni]** > **[!UICONTROL Sfoglia]** per passare all&#39;elenco delle destinazioni.
-   ![Schermata dell&#39;interfaccia utente di Platform che mostra le destinazioni di navigazione.](../../assets/catalog/crm/outreach/browse-destinations.png)
+   ![Schermata dell&#39;interfaccia utente di Experience Platform che mostra le destinazioni di navigazione.](../../assets/catalog/crm/outreach/browse-destinations.png)
 
 1. Selezionare la destinazione e verificare che lo stato sia **[!UICONTROL abilitato]**.
-   ![Schermata dell&#39;interfaccia utente di Platform che mostra le destinazioni di esecuzione del flusso di dati per la destinazione selezionata.](../../assets/catalog/crm/outreach/destination-dataflow-run.png)
+   ![Schermata dell&#39;interfaccia utente di Experience Platform che mostra le destinazioni dell&#39;esecuzione del flusso di dati per la destinazione selezionata.](../../assets/catalog/crm/outreach/destination-dataflow-run.png)
 
 1. Passa alla scheda **[!DNL Activation data]**, quindi seleziona un nome di pubblico.
-   ![Schermata dell&#39;interfaccia utente di Platform che mostra i dati di attivazione delle destinazioni.](../../assets/catalog/crm/outreach/destinations-activation-data.png)
+   ![Schermata dell&#39;interfaccia utente di Experience Platform che mostra i dati di attivazione delle destinazioni.](../../assets/catalog/crm/outreach/destinations-activation-data.png)
 
 1. Controlla il riepilogo del pubblico e assicurati che il conteggio dei profili corrisponda al conteggio creato all’interno del segmento.
-   ![Schermata dell&#39;interfaccia utente di Platform che mostra il riepilogo dei segmenti.](../../assets/catalog/crm/outreach/segment.png)
+   ![Schermata dell&#39;interfaccia utente di Experience Platform che mostra il riepilogo dei segmenti.](../../assets/catalog/crm/outreach/segment.png)
 
-1. Accedi al sito Web [!DNL Outreach], quindi passa alla pagina [!DNL Apps] > [!DNL Contacts] e controlla se i profili del pubblico sono stati aggiunti. È possibile vedere che ogni stato del pubblico in [!DNL Outreach] è stato aggiornato con lo stato del pubblico corrispondente da Platform, in base al valore [!UICONTROL ID mappatura] fornito durante il passaggio [pianificazione del pubblico](#schedule-segment-export-example).
+1. Accedi al sito Web [!DNL Outreach], quindi passa alla pagina [!DNL Apps] > [!DNL Contacts] e controlla se i profili del pubblico sono stati aggiunti. È possibile vedere che ogni stato del pubblico in [!DNL Outreach] è stato aggiornato con lo stato del pubblico corrispondente da Experience Platform, in base al valore [!UICONTROL ID mappatura] fornito durante il passaggio [pianificazione del pubblico](#schedule-segment-export-example).
 
 ![Schermata dell&#39;interfaccia utente di Outreach che mostra la pagina Prospect di Outreach con gli stati di pubblico aggiornati.](../../assets/catalog/crm/outreach/outreach-prospect.png)
 
@@ -222,9 +222,9 @@ Tutte le destinazioni [!DNL Adobe Experience Platform] sono conformi ai criteri 
 
 Durante il controllo di un&#39;esecuzione del flusso di dati, è possibile che venga visualizzato il seguente messaggio di errore: `Bad request reported while pushing events to the destination. Please contact the administrator and try again.`
 
-![Schermata dell&#39;interfaccia utente di Platform che mostra l&#39;errore di richiesta non valida.](../../assets/catalog/crm/outreach/error.png)
+![Schermata dell&#39;interfaccia utente di Experience Platform che mostra l&#39;errore di richiesta non valida.](../../assets/catalog/crm/outreach/error.png)
 
-Per correggere questo errore, verifica che l&#39;[!UICONTROL ID mappatura] fornito in Platform per il pubblico [!DNL Outreach] sia valido ed esista in [!DNL Outreach].
+Per correggere questo errore, verifica che l&#39;[!UICONTROL ID mappatura] fornito in Experience Platform per il tuo pubblico [!DNL Outreach] sia valido ed esista in [!DNL Outreach].
 
 ## Risorse aggiuntive {#additional-resources}
 

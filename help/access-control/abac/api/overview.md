@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;api;controllo degli accessi basato su attributi;Controllo degli accessi basato su attributi
+keywords: Experience Platform;home;argomenti popolari;api;controllo degli accessi basato su attributi;Controllo degli accessi basato su attributi;;home;popular topic;api;attribute-based access control;Attribute-Based Access Control
 solution: Experience Platform
 title: Guida dell’API di controllo dell’accesso basato su attributi
 description: L’API di controllo dell’accesso basata su attributi consente di gestire in modo programmatico i ruoli e i criteri di accesso all’interno di Adobe Experience Platform. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
 role: Developer
 exl-id: 0fc32354-4869-4392-9501-b1dbea1bc55e
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '450'
-ht-degree: 8%
+source-wordcount: '451'
+ht-degree: 11%
 
 ---
 
@@ -20,7 +20,7 @@ L’API di controllo dell’accesso basata su attributi viene utilizzata per acc
 
 >[!IMPORTANT]
 >
->Il controllo dell’accesso basato su attributi non deve essere confuso con le funzionalità di governance dei dati di Experience Platform, che consentono di utilizzare etichette e criteri per controllare il modo in cui i dati vengono utilizzati in Platform, anziché gli utenti dell’organizzazione che vi hanno accesso. Consulta la [Guida API del servizio criteri](../../../data-governance/api/overview.md) per informazioni su come sfruttare queste funzionalità a livello di programmazione.
+>Il controllo dell’accesso basato sugli attributi non deve essere confuso con le funzionalità di governance dei dati di Experience Platform, che consentono di utilizzare etichette e criteri per controllare il modo in cui i dati vengono utilizzati in Experience Platform anziché gli utenti dell’organizzazione che vi hanno accesso. Consulta la [Guida API del servizio criteri](../../../data-governance/api/overview.md) per informazioni su come sfruttare queste funzionalità a livello di programmazione.
 
 Questi endpoint sono descritti di seguito. Per informazioni dettagliate, consulta le guide dei singoli endpoint e fai riferimento alla [guida introduttiva](./getting-started.md) per informazioni importanti sulle intestazioni richieste, sulla lettura delle chiamate API di esempio e altro ancora.
 

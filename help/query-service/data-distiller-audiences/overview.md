@@ -2,9 +2,9 @@
 title: Creare tipi di pubblico con SQL
 description: Scopri come utilizzare l’estensione del pubblico SQL in Data Distiller di Adobe Experience Platform per creare, gestire e pubblicare tipi di pubblico utilizzando i comandi SQL. Questa guida tratta tutti gli aspetti del ciclo di vita del pubblico, inclusa la creazione, l’aggiornamento e l’eliminazione di profili, e l’utilizzo di definizioni di pubblico basate sui dati per eseguire il targeting di destinazioni basate su file.
 exl-id: c35757c1-898e-4d65-aeca-4f7113173473
-source-git-commit: c66a7cf779c1b6e55ace86916985087dfaa3363b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1481'
+source-wordcount: '1485'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ Utilizza l’estensione SQL audience per creare tipi di pubblico con dati proven
 
 L’utilizzo di questa estensione SQL migliora la possibilità di creare tipi di pubblico, in quanto non sono necessari dati non elaborati nei profili durante la definizione dei segmenti di pubblico. I tipi di pubblico creati con questo metodo vengono registrati automaticamente nell’area di lavoro Pubblico, dove puoi indirizzarli ulteriormente a destinazioni basate su file.
 
-![Infografica che mostra il flusso di lavoro dell&#39;estensione del pubblico SQL. Le fasi includono la creazione di tipi di pubblico con Query Service mediante comandi SQL, la gestione nell&#39;interfaccia utente di Platform e l&#39;attivazione in destinazioni basate su file.](../images/data-distiller/sql-audiences/sql-audience-extension-workflow.png)
+![Infografica che mostra il flusso di lavoro dell&#39;estensione del pubblico SQL. Le fasi includono la creazione di tipi di pubblico con Query Service mediante comandi SQL, la gestione nell&#39;interfaccia utente di Experience Platform e l&#39;attivazione in destinazioni basate su file.](../images/data-distiller/sql-audiences/sql-audience-extension-workflow.png)
 
 Questo documento illustra come utilizzare l’estensione SQL audience in Data Distiller di Adobe Experience Platform per creare, gestire e pubblicare tipi di pubblico utilizzando i comandi SQL.
 
@@ -203,7 +203,7 @@ DROP AUDIENCE IF EXISTS aud_test;
 
 ### Registrazione e disponibilità automatiche del pubblico {#registration-and-availability}
 
-I tipi di pubblico creati con l&#39;estensione SQL vengono registrati automaticamente in Data Distiller [!UICONTROL Origin] nell&#39;area di lavoro Pubblico. Una volta registrati, questi tipi di pubblico sono disponibili per il targeting in destinazioni basate su file, migliorando la segmentazione e le strategie di targeting. Questo processo non richiede alcuna configurazione aggiuntiva, semplificando la gestione dell’audience. Per ulteriori dettagli su come visualizzare, gestire e creare tipi di pubblico nell&#39;interfaccia utente di Platform, consulta la [panoramica di Audience Portal](../../segmentation/ui/audience-portal.md).
+I tipi di pubblico creati con l&#39;estensione SQL vengono registrati automaticamente in Data Distiller [!UICONTROL Origin] nell&#39;area di lavoro Pubblico. Una volta registrati, questi tipi di pubblico sono disponibili per il targeting in destinazioni basate su file, migliorando la segmentazione e le strategie di targeting. Questo processo non richiede alcuna configurazione aggiuntiva, semplificando la gestione dell’audience. Per ulteriori dettagli su come visualizzare, gestire e creare tipi di pubblico nell&#39;interfaccia utente di Experience Platform, consulta la [Panoramica di Audience Portal](../../segmentation/ui/audience-portal.md).
 
 <!-- Q) Do you know how long it takes for the audience to register? This info would help manage user expectations. -->
 
@@ -289,9 +289,9 @@ Sì, i tipi di pubblico di Data Distiller vengono eliminati ogni 30 giorni poich
 
 Dopo aver letto questo documento, hai imparato a utilizzare l’estensione del pubblico SQL in Data Distiller per creare, gestire e pubblicare in modo efficace i tipi di pubblico utilizzando i comandi SQL. Ora puoi personalizzare le definizioni dei tipi di pubblico in base ai tuoi requisiti aziendali specifici e attivarle su varie destinazioni, ottimizzando le strategie di marketing e le decisioni basate sui dati.
 
-Successivamente, puoi leggere la seguente documentazione per sviluppare e ottimizzare ulteriormente le strategie di gestione dell’audience di Platform:
+Successivamente, puoi leggere la seguente documentazione per sviluppare e ottimizzare ulteriormente le strategie di gestione dell’audience di Experience Platform:
 
-- **Esplora valutazione del pubblico**: scopri i [metodi di valutazione del pubblico in Adobe Experience Platform](../../segmentation/home.md#evaluate-segments): segmentazione in streaming per aggiornamenti in tempo reale, segmentazione batch per elaborazione pianificata o su richiesta e segmentazione Edge per valutazione immediata nell&#39;Edge Network.
-- **Integrare con le destinazioni**: leggi la guida su come [esportare i file on-demand in destinazioni batch](../../destinations/ui/export-file-now.md) utilizzando l&#39;interfaccia utente delle destinazioni di Platform.
+- **Esplora valutazione del pubblico**: scopri i [metodi di valutazione del pubblico in Adobe Experience Platform](../../segmentation/home.md#evaluate-segments): segmentazione in streaming per aggiornamenti in tempo reale, segmentazione batch per elaborazione pianificata o su richiesta e segmentazione Edge per valutazione immediata in Edge Network.
+- **Integrare con le destinazioni**: leggi la guida su come [esportare i file on-demand in destinazioni batch](../../destinations/ui/export-file-now.md) utilizzando l&#39;interfaccia utente delle destinazioni di Experience Platform.
 - **Verifica prestazioni pubblico**: analizza le prestazioni dei tipi di pubblico definiti da SQL su canali diversi. Utilizza le informazioni sui dati per regolare e migliorare le definizioni dei tipi di pubblico e le strategie di targeting. Leggi il documento su [Audience Insights](../../dashboards/insights/audiences.md) per scoprire come accedere e adattare le query SQL per gli approfondimenti sul pubblico in Adobe Real-Time CDP. Puoi quindi creare informazioni personalizzate e trasformare i dati non elaborati in informazioni utilizzabili personalizzando la dashboard Tipi di pubblico per visualizzare e utilizzare in modo efficace tali informazioni per migliorare il processo decisionale.
 

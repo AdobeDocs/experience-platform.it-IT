@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;profilo;profilo cliente in tempo reale;interfaccia utente;personalizzazione;dashboard profilo;profilo;profile;real-time customer profile;user interface;UI;customization;profile dashboard;dashboard
+keywords: Experience Platform;profilo;profilo cliente in tempo reale;interfaccia utente;personalizzazione;dashboard profilo;;profile;real-time customer profile;user interface;UI;customization;profile dashboard;dashboard
 title: Dashboard delle destinazioni
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale puoi visualizzare informazioni importanti sulle destinazioni attive della tua organizzazione.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: a8b5ed09e8e28075a3a4f37ad30f01c1cc389b9c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3243'
+source-wordcount: '3246'
 ht-degree: 19%
 
 ---
@@ -27,15 +27,15 @@ Nel dashboard Destinazioni viene visualizzata un’istantanea delle destinazioni
 
 ## Esplora il dashboard [!UICONTROL Destinazioni] {#explore}
 
-Per passare al dashboard delle destinazioni all&#39;interno dell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Destinazioni]** nella barra a sinistra, quindi seleziona la scheda **[!UICONTROL Panoramica]** per visualizzare il dashboard.
+Per passare al dashboard delle destinazioni all&#39;interno dell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Destinazioni]** nella barra a sinistra, quindi seleziona la scheda **[!UICONTROL Panoramica]** per visualizzare il dashboard.
 
 La data e l&#39;ora dello snapshot più recente vengono visualizzate nella parte superiore della [!UICONTROL Panoramica] accanto al menu a discesa di destinazione. Tutti i dati del widget sono accurati a partire da quella data e ora. Il timestamp dell’istantanea viene fornito in UTC; non si trova nel fuso orario del singolo utente o organizzazione.
 
 >[!NOTE]
 >
->Se la tua organizzazione non ha ancora Experienci Platform e non dispone ancora di destinazioni attive, la dashboard Destinazioni e la scheda [!UICONTROL Panoramica] non sono visibili. Se invece selezioni [!UICONTROL Destinazioni] dalla navigazione a sinistra, viene visualizzata la scheda [!UICONTROL Catalogo]. Per ulteriori informazioni sulla scheda [!UICONTROL Catalogo], consulta la guida dell&#39;area di lavoro [[!UICONTROL Destinazioni]](../../destinations/ui/destinations-workspace.md).
+>Se la tua organizzazione ha poca esperienza con Experience Platform e non dispone ancora di destinazioni attive, la dashboard Destinazioni e la scheda [!UICONTROL Panoramica] non sono visibili. Se invece selezioni [!UICONTROL Destinazioni] dalla navigazione a sinistra, viene visualizzata la scheda [!UICONTROL Catalogo]. Per ulteriori informazioni sulla scheda [!UICONTROL Catalogo], consulta la guida dell&#39;area di lavoro [[!UICONTROL Destinazioni]](../../destinations/ui/destinations-workspace.md).
 
-![Panoramica delle destinazioni dell&#39;interfaccia utente di Platform con lo snapshot più recente evidenziato.](../images/destinations/snapshot-timestamp.png)
+![Panoramica delle destinazioni dell&#39;interfaccia utente di Experience Platform con lo snapshot più recente evidenziato.](../images/destinations/snapshot-timestamp.png)
 
 ### Modifica il dashboard [!UICONTROL Destinazioni] {#modify}
 
@@ -53,7 +53,7 @@ Dalla libreria dei widget, puoi sfogliare la selezione di widget di pubblico sta
 
 ### Visualizza SQL {#view-sql}
 
-Puoi visualizzare il codice SQL che genera le informazioni visualizzate nel tuo dashboard con un interruttore nell&#39;area di lavoro [!UICONTROL Panoramica]. Puoi trarre ispirazione dall’SQL delle informazioni esistenti per creare nuove query che derivano informazioni univoche dai dati di Platform in base alle esigenze aziendali. Per ulteriori informazioni su questa funzionalità, vedere la [Guida dell&#39;interfaccia utente SQL](../view-sql.md).
+Puoi visualizzare il codice SQL che genera le informazioni visualizzate nel tuo dashboard con un interruttore nell&#39;area di lavoro [!UICONTROL Panoramica]. Puoi trarre ispirazione dall’SQL delle informazioni esistenti per creare nuove query che derivano informazioni univoche dai dati di Experience Platform in base alle esigenze aziendali. Per ulteriori informazioni su questa funzionalità, vedere la [Guida dell&#39;interfaccia utente SQL](../view-sql.md).
 
 ## Widget predefiniti {#default-widgets}
 
@@ -80,7 +80,7 @@ Prima di continuare con le descrizioni dei widget standard, accertati di conosce
 * **Pubblico**: un set di persone, account, famiglie o altre entità che hanno in comune caratteristiche e/o comportamenti specifici.
 * **Mappato/Mappatura**: la mappatura dei dati è il processo di mappatura dei campi dei dati di origine ai campi di destinazione correlati in una destinazione.
 * **Identità**: un&#39;identità è un identificatore che rappresenta in modo univoco un singolo cliente, ad esempio un ID cookie, un ID dispositivo o un ID e-mail.
-* **Attiva**: attiva è l&#39;azione intrapresa da un utente per mappare uno o più profili di pubblico a una destinazione come Oracle Eloqua, Google o il Marketing Cloud Salesforce.
+* **Attiva**: attiva è l&#39;azione intrapresa da un utente per mappare uno o più profili di pubblico a una destinazione come Oracle Eloqua, Google o Salesforce Marketing Cloud.
 
 Per ulteriori informazioni su ciascuno dei widget standard disponibili, selezionare il nome di un widget dall&#39;elenco seguente:
 
@@ -107,7 +107,7 @@ Per ulteriori informazioni su ciascuno dei widget standard disponibili, selezion
 >title="Destinazioni più utilizzate"
 >abstract="Questo widget visualizza le destinazioni più attive dell&#39;organizzazione in base al numero di tipi di pubblico mappati. Questi numeri sono precisi al momento dell’ultimo snapshot. Questa classificazione fornisce informazioni sulle destinazioni attualmente più utilizzate, evidenziando quelle che potrebbero essere sottoutilizzate."
 
-Il widget **[!UICONTROL Destinazioni più utilizzate]** visualizza le destinazioni principali della tua organizzazione in base al numero di tipi di pubblico mappati, all&#39;ultima istantanea. Questa classificazione fornisce informazioni approfondite sulle destinazioni utilizzate, mostrando potenzialmente anche quelle che potrebbero essere sottoutilizzate.
+Il widget **[!UICONTROL Destinazioni più utilizzate]** visualizza le destinazioni principali della tua organizzazione in base al numero di tipi di pubblico mappati, all&#39;ultima istantanea. Questa classificazione fornisce ad insight le destinazioni utilizzate, ma mostra anche quelle che potrebbero essere sottoutilizzate.
 
 Ad esempio, se ieri hai configurato una destinazione ma non hai mappato alcun pubblico su di essa, potresti vedere che la destinazione è attualmente sottoutilizzata.
 
@@ -253,7 +253,7 @@ Tutte le dimensioni del pubblico nel sistema sono ordinate da un pubblico di dim
 
 Se il conteggio dei profili di pubblico mappati non rientra in una deviazione standard dalla dimensione media dei profili mappati negli ultimi 30 giorni, ciò indica un’anomalia nel sistema che deve essere esaminata.
 
-Se un pubblico all&#39;interno del widget [!UICONTROL Integrità del pubblico mappato] si sta deviando di un ampio margine, è necessario fare riferimento al grafico di tendenza delle dimensioni del pubblico e individuare il pubblico anomalo. Questa tendenza può fornire ulteriori informazioni sullo stato di salute del pubblico.
+Se un pubblico all&#39;interno del widget [!UICONTROL Integrità del pubblico mappato] si sta deviando di un ampio margine, è necessario fare riferimento al grafico di tendenza delle dimensioni del pubblico e individuare il pubblico anomalo. Questa tendenza può fornire ulteriore insight allo stato di salute del pubblico.
 
 >[!NOTE]
 >

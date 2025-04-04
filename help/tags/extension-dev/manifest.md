@@ -2,10 +2,10 @@
 title: Manifesto dell’estensione
 description: Scopri come configurare un file manifest JSON che informi Adobe Experience Platform su come utilizzare correttamente l’estensione.
 exl-id: 7cac020b-3cfd-4a0a-a2d1-edee1be125d0
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2591'
-ht-degree: 98%
+source-wordcount: '2606'
+ht-degree: 86%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Nella directory di base dell’estensione è necessario creare un file denominato `extension.json`. Contiene informazioni critiche sull’estensione che consentono a Adobe Experience Platform di utilizzarla correttamente. Alcuni contenuti sono creati secondo le regole [npm per `package.json`](https://docs.npmjs.com/files/package.json).
 
@@ -26,12 +26,12 @@ Un manifesto dell’estensione deve essere costituito dai seguenti elementi:
 | `name` | Nome dell’estensione. Deve essere univoco rispetto a tutte le altre estensioni e deve essere conforme alle [regole di denominazione](#naming-rules). **Viene usato dai tag come identificatore e non deve essere modificato dopo la pubblicazione dell’estensione.** |
 | `platform` | Piattaforma per l’estensione. Al momento l’unico valore accettato è `web`. |
 | `version` | Versione dell’estensione. Deve seguire il formato di controllo delle versioni [semver](https://semver.org/). È conforme al [campo npm version](https://docs.npmjs.com/files/package.json#version). |
-| `displayName` | Nome leggibile dell’estensione. Verrà mostrato agli utenti di Platform. Non è necessario indicare “tag” o “Estensione”; gli utenti sapranno già che si tratta di un’estensione tag. |
-| `description` | Descrizione dell’estensione. Verrà mostrato agli utenti di Platform. Se l’estensione consente agli utenti di implementare il prodotto sul loro sito web, descrivi le funzioni del prodotto. Non è necessario indicare “tag” o “Estensione”; gli utenti sapranno già che si tratta di un’estensione tag. |
-| `iconPath` *(Facoltativo)* | Percorso relativo per l’icona che verrà visualizzata per l’estensione. Non può iniziare con una barra. Deve fare riferimento a un file SVG con estensione `.svg`. Il file SVG deve essere quadrato e può essere ridimensionato da Platform. |
+| `displayName` | Nome leggibile dell’estensione. Verrà mostrato agli utenti di Experience Platform. Non è necessario indicare “tag” o “Estensione”; gli utenti sapranno già che si tratta di un’estensione tag. |
+| `description` | Descrizione dell’estensione. Verrà mostrato agli utenti di Experience Platform. Se l’estensione consente agli utenti di implementare il prodotto sul loro sito web, descrivi le funzioni del prodotto. Non è necessario indicare “tag” o “Estensione”; gli utenti sapranno già che si tratta di un’estensione tag. |
+| `iconPath` *(Facoltativo)* | Percorso relativo per l’icona che verrà visualizzata per l’estensione. Non può iniziare con una barra. Deve fare riferimento a un file SVG con estensione `.svg`. Il SVG deve essere quadrato e può essere ridimensionato da Experience Platform. |
 | `author` | L’oggetto “author” deve essere strutturato nel modo seguente: <ul><li>`name`: nome dell’autore dell’estensione. In alternativa, qui è possibile utilizzare il nome della società.</li><li>`url` *(facoltativo)*: URL in cui si possono trovare ulteriori informazioni sull’autore dell’estensione.</li><li>`email` *(facoltativo)*: indirizzo e-mail dell’autore dell’estensione.</li></ul>È conforme alle regole [npm per il campo author](https://docs.npmjs.com/files/package.json#people-fields-author-contributors). |
 | `exchangeUrl` *(richiesto per le estensioni pubbliche)* | URL dell’inserzione relativa all’estensione su Adobe Exchange. Deve corrispondere al pattern `https://www.adobeexchange.com/experiencecloud.details.######.html`. |
-| `viewBasePath` | Percorso relativo della sottodirectory contenente tutte le viste e le relative risorse (HTML, JavaScript, CSS, immagini). Platform ospita su un server web questa directory, da cui carica i contenuti iframe. Questo campo è obbligatorio e non deve iniziare con una barra. Ad esempio, se tutte le viste sono contenute in `src/view/`, il valore di `viewBasePath` sarà `src/view/`. |
+| `viewBasePath` | Percorso relativo della sottodirectory contenente tutte le viste e le relative risorse (HTML, JavaScript, CSS, immagini). Experience Platform ospita su un server web questa directory, da cui carica i contenuti iframe. Questo campo è obbligatorio e non deve iniziare con una barra. Ad esempio, se tutte le viste sono contenute in `src/view/`, il valore di `viewBasePath` sarà `src/view/`. |
 | `hostedLibFiles` *(Facoltativo)* | Molti dei nostri utenti preferiscono ospitare tutti i file relativi ai tag sul proprio server. Questo offre agli utenti una maggiore certezza sulla disponibilità dei file in fase di esecuzione e consente loro di analizzare facilmente il codice per individuare eventuali vulnerabilità di sicurezza. Se la porzione libreria dell’estensione deve caricare dei file JavaScript in fase di esecuzione, è consigliabile elencare tali file mediante questa proprietà. I file elencati saranno ospitati insieme alla libreria runtime dei tag. L’estensione può quindi caricare i file tramite un URL recuperato utilizzando il metodo [getHostedLibFileUrl](./turbine.md#get-hosted-lib-file).<br><br>Questa opzione contiene un array con i percorsi relativi dei file libreria di terze parti che devono essere ospitati. |
 | `main` *(Facoltativo)* | Percorso relativo di un modulo libreria da eseguire in fase runtime.<br><br>Questo modulo sarà sempre incluso nella libreria runtime ed eseguito. Poiché il modulo verrà sempre incluso nella libreria runtime, si consiglia di utilizzare un modulo “main” solo se è assolutamente necessario e di mantenerne minima la dimensione del codice.<br><br>Non è garantito che questo modulo sia eseguito per primo; è possibile che altri moduli vengano eseguiti prima di esso. |
 | `configuration` *(Facoltativo)* | Descrive la porzione di [configurazione](./configuration.md) dell’estensione. Questa proprietà è necessaria se gli utenti dovranno fornire le impostazioni globali per l’estensione. Per informazioni dettagliate sulla struttura del campo, consulta l’[appendice](#config-object). |
@@ -72,7 +72,7 @@ L’oggetto di configurazione deve essere strutturato nel modo seguente:
     </tr>
     <tr>
       <td><code>schema</code></td>
-      <td>Oggetto dello <a href="https://json-schema.org/">schema JSON</a> che descrive il formato di un oggetto valido salvato dalla vista di configurazione dell’estensione. In quanto sviluppatore della vista di configurazione, devi assicurarti che tutti gli oggetti impostazioni salvati siano conformi a questo schema. Questo schema verrà utilizzato anche per la convalida quando gli utenti tenteranno di salvare i dati tramite i servizi di Platform <br><br>Esempio di un oggetto schema:
+      <td>Oggetto dello <a href="https://json-schema.org/">schema JSON</a> che descrive il formato di un oggetto valido salvato dalla vista di configurazione dell’estensione. In quanto sviluppatore della vista di configurazione, devi assicurarti che tutti gli oggetti impostazioni salvati siano conformi a questo schema. Questo schema verrà utilizzato anche per la convalida quando gli utenti tenteranno di salvare i dati utilizzando i servizi di Experience Platform.<br><br>Esempio di un oggetto schema:
 <pre class="JSON language-JSON hljs">
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
@@ -128,11 +128,11 @@ La definizione di un tipo è un oggetto utilizzato per descrivere un tipo di eve
     </tr>
     <tr>
       <td><code>viewPath</code> <em>(Facoltativo)</em></td>
-      <td>URL relativo per la vista del tipo. Deve essere relativo a <code>viewBasePath</code> e non deve iniziare con una barra. Deve fare riferimento a un file HTML con estensione <code>.html</code>. È possibile utilizzare identificatori di stringhe di query e frammenti (hash). Se il modulo libreria del tipo non utilizza impostazioni configurate da un utente, è possibile escludere questa proprietà e Platform al suo posto mostrerà un segnaposto che informa che non è necessaria alcuna configurazione.</td>
+      <td>URL relativo per la vista del tipo. Deve essere relativo a <code>viewBasePath</code> e non deve iniziare con una barra. Deve fare riferimento a un file HTML con estensione <code>.html</code>. È possibile utilizzare identificatori di stringhe di query e frammenti (hash). Se il modulo libreria del tipo non utilizza impostazioni configurate da un utente, è possibile escludere questa proprietà e Experience Platform al suo posto mostrerà un segnaposto che indica che non è necessaria alcuna configurazione.</td>
     </tr>
     <tr>
       <td><code>schema</code></td>
-      <td>Oggetto con <a href="https://json-schema.org/">schema JSON</a> che descrive il formato di un oggetto impostazioni valido che può essere salvato dall’utente. Le impostazioni vengono generalmente configurate e salvate da un utente che utilizza l’interfaccia di Data Collection. In questi casi, la vista dell’estensione può eseguire i passaggi necessari per convalidare le impostazioni fornite dall’utente. Alcuni utenti preferiscono invece utilizzare direttamente le API dei tag senza l’ausilio di alcuna interfaccia utente. Lo scopo di questo schema è consentire a Platform di convalidare correttamente che gli oggetti impostazioni salvati dagli utenti siano in un formato compatibile con il modulo libreria che agirà in base all’oggetto impostazioni stesso in fase di esecuzione, indipendentemente dall’utilizzo o meno di un'interfaccia utente.<br><br>Esempio di oggetto schema:<br>
+      <td>Oggetto con <a href="https://json-schema.org/">schema JSON</a> che descrive il formato di un oggetto impostazioni valido che può essere salvato dall’utente. Le impostazioni vengono generalmente configurate e salvate da un utente che utilizza l’interfaccia di Data Collection. In questi casi, la vista dell’estensione può eseguire i passaggi necessari per convalidare le impostazioni fornite dall’utente. Alcuni utenti preferiscono invece utilizzare direttamente le API dei tag senza l’ausilio di alcuna interfaccia utente. Lo scopo di questo schema è consentire ad Experience Platform di convalidare correttamente che gli oggetti impostazioni salvati dagli utenti siano in un formato compatibile con il modulo libreria che agirà in base all’oggetto impostazioni in fase di esecuzione, indipendentemente dall’utilizzo o meno di un’interfaccia utente.<br><br>Esempio di oggetto schema:<br>
 <pre class="JSON language-JSON hljs">
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
@@ -160,9 +160,9 @@ La definizione di un tipo è un oggetto utilizzato per descrivere un tipo di eve
 
 ### Trasformazioni {#transforms}
 
-Per alcuni casi d’uso specifici, le estensioni richiedono che gli oggetti impostazioni salvati da una vista siano trasformati da Platform prima che vengano emessi nella relativa libreria runtime dei tag. È possibile richiedere che una o più di queste trasformazioni siano effettuate impostando la proprietà `transforms` quando si imposta la definizione di un tipo all’interno di `extension.json`. La proprietà `transforms` è un array di oggetti in cui ogni oggetto rappresenta una trasformazione che deve essere eseguita.
+Per alcuni casi d’uso specifici, le estensioni richiedono che gli oggetti impostazioni salvati da una vista siano trasformati da Experience Platform prima che vengano emessi nella libreria runtime dei tag. È possibile richiedere che una o più di queste trasformazioni siano effettuate impostando la proprietà `transforms` quando si imposta la definizione di un tipo all’interno di `extension.json`. La proprietà `transforms` è un array di oggetti in cui ogni oggetto rappresenta una trasformazione che deve essere eseguita.
 
-Tutte le trasformazioni richiedono `type` e `propertyPath`. Il valore di `type` può essere `function`, `remove` o `file` e descrive il tipo di trasformazione che verrà applicata da Platform all’oggetto impostazioni. Il valore di `propertyPath` è una stringa delimitata da punti che indica ai tag dove trovare la proprietà da modificate all’interno dell’oggetto impostazioni. Di seguito è riportato un oggetto impostazioni di esempio e alcuni `propertyPath`:
+Tutte le trasformazioni richiedono `type` e `propertyPath`. `type` deve essere uno di `function`, `remove` e `file` e descrive quale trasformazione Experience Platform deve essere applicata all&#39;oggetto impostazioni. Il valore di `propertyPath` è una stringa delimitata da punti che indica ai tag dove trovare la proprietà da modificate all’interno dell’oggetto impostazioni. Di seguito è riportato un oggetto impostazioni di esempio e alcuni `propertyPath`:
 
 ```js
 {
@@ -191,7 +191,7 @@ Le sezioni seguenti descrivono le trasformazioni disponibili e come utilizzarle.
 
 #### Trasformazione tramite funzione
 
-La trasformazione tramite funzione consente di eseguire il codice scritto dagli utenti di Platform tramite un modulo libreria all’interno della libreria runtime di tag emessa.
+La trasformazione tramite funzione consente di eseguire il codice scritto dagli utenti di Experience Platform tramite un modulo libreria all’interno della libreria runtime di tag emessa.
 
 Supponiamo di voler fornire un tipo di azione “script personalizzato”. La visualizzazione dell’azione “script personalizzato” potrebbe fornire un’area di testo in cui l’utente potrà immettere il codice. Supponiamo che un utente abbia immesso il seguente codice nell’area di testo:
 
@@ -211,7 +211,7 @@ Quando una regola che utilizza questa azione viene attivata nella libreria runti
 
 Quando l’oggetto impostazioni viene salvato dalla vista del tipo di azione, il codice dell’utente è semplicemente una stringa. Questo va bene perché può essere correttamente serializzato da e verso JSON; tuttavia, si tratta anche di un problema perché generalmente viene emesso nella libreria runtime dei tag anche come una stringa, anziché come una funzione eseguibile. Anche se è possibile tentare di eseguire il codice all’interno del modulo libreria del tipo di azione utilizzando [`eval`](https://developer.mozilla.org/it-IT/docs/Web/JavaScript/Reference/Global_Objects/eval) o un [costruttore di funzione](https://developer.mozilla.org/it-IT/docs/Web/JavaScript/Reference/Global_Objects/Function), è altamente sconsigliato a causa di [criteri per la sicurezza dei contenuti](https://developer.mozilla.org/en-US/docs/Web/Security/CSP) che potrebbero bloccare l’esecuzione.
 
-Per ovviare a questa situazione, l’utilizzo della trasformazione tramite funzione indica a Platform di racchiudere il codice dell’utente in una funzione eseguibile quando viene emesso nella libreria runtime dei tag. Per risolvere il problema di questo esempio, definiamo la trasformazione sulla definizione del tipo in `extension.json` nel modo seguente:
+Per ovviare a questa situazione, l’utilizzo della trasformazione tramite funzione indica ad Experience Platform di racchiudere il codice dell’utente in una funzione eseguibile quando viene emesso nella libreria runtime dei tag. Per risolvere il problema di questo esempio, definiamo la trasformazione sulla definizione del tipo in `extension.json` nel modo seguente:
 
 ```json
 {
@@ -226,7 +226,7 @@ Per ovviare a questa situazione, l’utilizzo della trasformazione tramite funzi
 ```
 
 * `type` definisce il tipo di trasformazione da applicare all’oggetto impostazioni.
-* `propertyPath` è una stringa delimitata da punti che indica a Platform dove trovare la proprietà da modificare all’interno dell’oggetto delle impostazioni.
+* `propertyPath` è una stringa delimitata da punti che indica ad Experience Platform dove trovare la proprietà da modificare all&#39;interno dell&#39;oggetto impostazioni.
 * `parameters` è un array di nomi dei parametri da includere nella firma della funzione di wrapping.
 
 Quando l’oggetto impostazioni viene emesso nella libreria runtime dei tag, verrà trasformato nel modo seguente:
@@ -245,7 +245,7 @@ Il modulo libreria può quindi richiamare la funzione contenente il codice dell�
 
 #### Trasformazione tramite file
 
-La trasformazione tramite file consente di emettere il codice scritto dagli utenti di Platform in un file separato dalla libreria runtime dei tag. Il file sarà ospitato accanto alla libreria runtime dei tag e, se necessario, può essere caricato dall’estensione in fase di esecuzione.
+La trasformazione tramite file consente di emettere il codice scritto dagli utenti di Experience Platform in un file separato dalla libreria runtime dei tag. Il file sarà ospitato accanto alla libreria runtime dei tag e, se necessario, può essere caricato dall’estensione in fase di esecuzione.
 
 Supponiamo di voler fornire un tipo di azione “script personalizzato”. La visualizzazione del tipo di azione potrebbe fornire un’area di testo in cui l’utente può immettere alcuni codici. Supponiamo che un utente abbia immesso il seguente codice nell’area di testo:
 
@@ -275,7 +275,7 @@ Il codice dell’utente dovrebbe essere inserito in un file separato, invece di 
 ```
 
 * `type` definisce il tipo di trasformazione da applicare all’oggetto impostazioni.
-* `propertyPath` è una stringa delimitata da punti che indica a Platform dove trovare la proprietà da modificare all’interno dell’oggetto delle impostazioni.
+* `propertyPath` è una stringa delimitata da punti che indica ad Experience Platform dove trovare la proprietà da modificare all&#39;interno dell&#39;oggetto impostazioni.
 
 Quando l’oggetto impostazioni viene emesso nella libreria runtime dei tag, verrà trasformato nel modo seguente:
 
@@ -321,7 +321,7 @@ La proprietà `bar` non dovrebbe essere inclusa nella libreria runtime dei tag. 
 ```
 
 * `type` definisce il tipo di trasformazione da applicare all’oggetto impostazioni.
-* `propertyPath` è una stringa delimitata da punti che indica a Platform dove trovare la proprietà da modificare all’interno dell’oggetto delle impostazioni.
+* `propertyPath` è una stringa delimitata da punti che indica ad Experience Platform dove trovare la proprietà da modificare all&#39;interno dell&#39;oggetto impostazioni.
 
 Quando l’oggetto impostazioni viene emesso nella libreria runtime dei tag, verrà trasformato nel modo seguente:
 

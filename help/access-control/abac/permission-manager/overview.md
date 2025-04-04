@@ -1,9 +1,10 @@
 ---
 title: Panoramica di Gestione autorizzazioni
 description: Scopri in che modo Gestione autorizzazioni in Adobe Experience Platform può aiutarti a generare rapporti su più flussi di lavoro.
-source-git-commit: d70e105e801ebc663cabba468f4efa863e5cd478
+exl-id: 807297e2-f06e-4b1c-92f7-b42a53c934b7
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '291'
+source-wordcount: '293'
 ht-degree: 1%
 
 ---
@@ -23,13 +24,13 @@ Con [!UICONTROL Gestione autorizzazioni], puoi eseguire ricerche in base a:
 
 Puoi limitare la ricerca selezionando risorse, azioni e sandbox specifiche.
 
-Per accedere a [!UICONTROL Gestione autorizzazioni] per [!DNL Experience Platform], è necessario essere un amministratore per un&#39;organizzazione con accesso a Platform. Sebbene Adobe consenta gerarchie di amministratori personalizzabili all&#39;interno dell&#39;organizzazione, è necessario essere un amministratore di prodotto per [!DNL Adobe Experience Platform]. Per ulteriori dettagli, consulta l&#39;articolo di Adobe Help Center su [ruoli di amministrazione](https://helpx.adobe.com/it/enterprise/using/admin-roles.html).
+Per accedere a [!UICONTROL Gestione autorizzazioni] per [!DNL Experience Platform], è necessario essere un amministratore per un&#39;organizzazione con accesso ad Experience Platform. Sebbene Adobe consenta gerarchie di amministratori personalizzabili all&#39;interno dell&#39;organizzazione, è necessario essere un amministratore di prodotto per [!DNL Adobe Experience Platform]. Per ulteriori dettagli, consulta l&#39;articolo del Centro assistenza Adobe su [ruoli di amministrazione](https://helpx.adobe.com/it/enterprise/using/admin-roles.html).
 
 Accedi a [Adobe Experience Platform](https://experience.adobe.com/) utilizzando le tue credenziali [!DNL Adobe].  Dopo aver effettuato l&#39;accesso, verrà visualizzata la pagina **[!UICONTROL Panoramica]** per la tua organizzazione. In questa pagina vengono visualizzati i prodotti a cui la tua organizzazione è abbonata. Per avviare l&#39;area di lavoro di controllo degli accessi basata su attributi per l&#39;integrazione con la piattaforma, selezionare **[!UICONTROL Autorizzazioni]**.
 
 ![Autorizzazioni evidenziate dalla panoramica di Adobe Experience Platform.](../../images/flac-ui/flac-select-product.png)
 
-Viene visualizzata l&#39;area di lavoro di controllo degli accessi basata su attributi per Platform, che si apre nella pagina **[!UICONTROL Panoramica]**. Questa pagina consente di visualizzare tutti i ruoli e di gestire le varie impostazioni come descritto in questo documento.
+Viene visualizzata l&#39;area di lavoro di controllo degli accessi basata su attributi per Experience Platform, che si apre nella pagina **[!UICONTROL Panoramica]**. Questa pagina consente di visualizzare tutti i ruoli e di gestire le varie impostazioni come descritto in questo documento.
 
 Seleziona **[!UICONTROL Gestione autorizzazioni]** dal menu di navigazione a sinistra.
 

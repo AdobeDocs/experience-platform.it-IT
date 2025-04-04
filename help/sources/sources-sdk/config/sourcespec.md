@@ -1,16 +1,16 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;origini;connettori;sorgente connettori;sorgenti sdk;sdk;SDK
-title: Configurare le specifiche di origine per le origini self-service (SDK batch)
-description: Questo documento fornisce una panoramica delle configurazioni da preparare per utilizzare Self-Service Sources (SDK batch).
+keywords: Experience Platform;home;argomenti popolari;origini;connettori;source connectors;sources sdk;sdk;SDK
+title: Configurare le specifiche di origine per le origini self-service (Batch SDK)
+description: Questo documento fornisce una panoramica delle configurazioni da preparare per utilizzare le origini self-service (Batch SDK).
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: 1fdce7c798d8aff49ab4953298ad7aa8dddb16bd
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2084'
+source-wordcount: '2090'
 ht-degree: 1%
 
 ---
 
-# Configurare le specifiche di origine per le origini self-service (SDK batch)
+# Configurare la specifica di origine per le origini self-service (Batch SDK)
 
 Le specifiche Source contengono informazioni specifiche per un&#39;origine, inclusi gli attributi relativi alla categoria, allo stato beta e all&#39;icona del catalogo di un&#39;origine. Contengono anche informazioni utili come parametri URL, contenuto, intestazione e pianificazione. Le specifiche Source descrivono anche lo schema dei parametri necessari per creare una connessione sorgente da una connessione di base. Lo schema è necessario per creare una connessione di origine.
 
@@ -233,21 +233,21 @@ Per un esempio di specifica di origine completa, vedere l&#39;[appendice](#sourc
 | `sourceSpec.attributes.uiAttributes` | Visualizza informazioni sull&#39;origine specifica dell&#39;interfaccia utente. |
 | `sourceSpec.attributes.uiAttributes.isBeta` | Attributo booleano che indica se l’origine richiede più feedback dai clienti per aggiungere alle sue funzionalità. | <ul><li>`true`</li><li>`false`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.category` | Definisce la categoria dell’origine. | <ul><li>`advertising`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
-| `sourceSpec.attributes.uiAttributes.icon` | Definisce l’icona utilizzata per il rendering dell’origine nell’interfaccia utente di Platform. | `mailchimp-icon.svg` |
+| `sourceSpec.attributes.uiAttributes.icon` | Definisce l’icona utilizzata per il rendering dell’origine nell’interfaccia utente di Experience Platform. | `mailchimp-icon.svg` |
 | `sourceSpec.attributes.uiAttributes.description` | Visualizza una breve descrizione dell&#39;origine. |
-| `sourceSpec.attributes.uiAttributes.label` | Visualizza l’etichetta da utilizzare per il rendering dell’origine nell’interfaccia utente di Platform. |
+| `sourceSpec.attributes.uiAttributes.label` | Visualizza l’etichetta da utilizzare per il rendering dell’origine nell’interfaccia utente di Experience Platform. |
 | `sourceSpec.attributes.spec.properties.urlParams` | Contiene informazioni sul percorso della risorsa URL, sul metodo e sui parametri di query supportati. |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.path` | Definisce il percorso della risorsa da cui recuperare i dati. | `/3.0/reports/${campaignId}/email-activity` |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.method` | Definisce il metodo HTTP da utilizzare per effettuare la richiesta alla risorsa di recupero dei dati. | `GET`, `POST` |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.queryParams` | Definisce i parametri di query supportati che possono essere utilizzati per aggiungere l’URL di origine quando si effettua una richiesta di recupero dei dati. **Nota**: qualsiasi valore di parametro fornito dall&#39;utente deve essere formattato come segnaposto. Esempio: `${USER_PARAMETER}`. | `"queryParams" : {"key" : "value", "key1" : "value1"}` verrà aggiunto all&#39;URL di origine come: `/?key=value&key1=value1` |
 | `sourceSpec.attributes.spec.properties.spec.properties.headerParams` | Definisce le intestazioni che devono essere fornite nella richiesta HTTP all’URL di origine durante il recupero dei dati. | `"headerParams" : {"Content-Type" : "application/json", "x-api-key" : "key"}` |
 | `sourceSpec.attributes.spec.properties.bodyParams` | Questo attributo può essere configurato per inviare il corpo HTTP tramite una richiesta POST. |
-| `sourceSpec.attributes.spec.properties.contentPath` | Definisce il nodo che contiene l’elenco degli elementi da acquisire in Platform. Questo attributo deve seguire una sintassi di percorso JSON valida e deve puntare a un array specifico. | Visualizzare la [sezione risorse aggiuntive](#content-path) per un esempio della risorsa contenuta in un percorso di contenuto. |
-| `sourceSpec.attributes.spec.properties.contentPath.path` | Percorso che punta ai record della raccolta da acquisire in Platform. | `$.emails` |
+| `sourceSpec.attributes.spec.properties.contentPath` | Definisce il nodo che contiene l’elenco degli elementi da acquisire in Experience Platform. Questo attributo deve seguire una sintassi di percorso JSON valida e deve puntare a un array specifico. | Visualizzare la [sezione risorse aggiuntive](#content-path) per un esempio della risorsa contenuta in un percorso di contenuto. |
+| `sourceSpec.attributes.spec.properties.contentPath.path` | Percorso che punta ai record della raccolta da acquisire in Experience Platform. | `$.emails` |
 | `sourceSpec.attributes.spec.properties.contentPath.skipAttributes` | Questa proprietà ti consente di identificare elementi specifici dalla risorsa identificata nel percorso del contenuto che devono essere esclusi dall’acquisizione. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.contentPath.keepAttributes` | Questa proprietà consente di specificare in modo esplicito i singoli attributi che si desidera mantenere. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.contentPath.overrideWrapperAttribute` | Questa proprietà consente di ignorare il valore del nome dell&#39;attributo specificato in `contentPath`. | `email` |
-| `sourceSpec.attributes.spec.properties.explodeEntityPath` | Questa proprietà consente di &quot;appiattire&quot; due array e trasformare i dati delle risorse in risorse Platform. |
+| `sourceSpec.attributes.spec.properties.explodeEntityPath` | Questa proprietà consente di &quot;appiattire&quot; due array e trasformare i dati delle risorse in risorse Experience Platform. |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.path` | Percorso che punta ai record della raccolta che si desidera appiattire. | `$.email.activity` |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.skipAttributes` | Questa proprietà ti consente di identificare elementi specifici dalla risorsa identificata nel percorso dell’entità che devono essere esclusi dall’acquisizione. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.keepAttributes` | Questa proprietà consente di specificare in modo esplicito i singoli attributi che si desidera mantenere. | `[total_items]` |
@@ -379,7 +379,7 @@ Di seguito è riportata una specifica di origine completata utilizzando [!DNL Ma
 
 ### Configurare diversi tipi di impaginazione per l’origine {#pagination}
 
-Di seguito sono riportati alcuni esempi di altri tipi di impaginazione supportati da Self-Service Sources (Batch SDK):
+Di seguito sono riportati alcuni esempi di altri tipi di impaginazione supportati dalle origini self-service (Batch SDK):
 
 >[!BEGINTABS]
 
@@ -509,7 +509,7 @@ Il tipo di impaginazione `PAGE` consente di scorrere i dati restituiti per numer
 
 >[!TAB Nessuno]
 
-Il tipo di impaginazione `NONE` può essere utilizzato per le origini che non supportano nessuno dei tipi di impaginazione disponibili. Le origini che utilizzano il tipo di impaginazione di `NONE` restituiscono semplicemente tutti i record recuperabili quando viene effettuata una richiesta di GET.
+Il tipo di impaginazione `NONE` può essere utilizzato per le origini che non supportano nessuno dei tipi di impaginazione disponibili. Le origini che utilizzano il tipo di impaginazione di `NONE` restituiscono semplicemente tutti i record recuperabili quando viene effettuata una richiesta GET.
 
 ```json
 "paginationParams": {
@@ -519,7 +519,7 @@ Il tipo di impaginazione `NONE` può essere utilizzato per le origini che non su
 
 >[!ENDTABS]
 
-### Pianificazione avanzata per origini self-service (SDK batch)
+### Pianificazione avanzata per origini self-service (Batch SDK)
 
 Configura la pianificazione incrementale e di backfill dell’origine utilizzando la pianificazione avanzata. La proprietà `incremental` consente di configurare una pianificazione in cui l&#39;origine acquisirà solo record nuovi o modificati, mentre la proprietà `backfill` consente di creare una pianificazione per acquisire i dati storici.
 
@@ -659,4 +659,4 @@ Di seguito è riportato un esempio di schema personalizzato che è possibile agg
 
 ## Passaggi successivi
 
-Con le specifiche sorgente compilate, puoi procedere alla configurazione delle specifiche di esplorazione per l’origine che desideri integrare in Platform. Per ulteriori informazioni, consulta il documento sulla [configurazione delle specifiche di esplorazione](./explorespec.md).
+Con le specifiche sorgente compilate, puoi procedere alla configurazione delle specifiche di esplorazione per l’origine che desideri integrare in Experience Platform. Per ulteriori informazioni, consulta il documento sulla [configurazione delle specifiche di esplorazione](./explorespec.md).

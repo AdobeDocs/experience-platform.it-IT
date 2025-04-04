@@ -5,9 +5,9 @@ role: Developer
 hide: true
 hidefromtoc: true
 exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '481'
 ht-degree: 6%
 
 ---
@@ -28,7 +28,7 @@ Questa sezione fornisce un’introduzione ai concetti di base che è necessario 
 
 ### Raccogliere i valori per le intestazioni richieste
 
-Per effettuare chiamate all’API di igiene dei dati, devi prima raccogliere le credenziali di autenticazione. Si tratta delle stesse credenziali utilizzate per accedere all’API Privacy Service. Consulta la [panoramica API](./overview.md#getting-started) per generare valori per ciascuna delle intestazioni richieste per l&#39;API di igiene dei dati, come illustrato di seguito:
+Per effettuare chiamate all’API di igiene dei dati, devi prima raccogliere le credenziali di autenticazione. Si tratta delle stesse credenziali utilizzate per accedere all’API di Privacy Service. Consulta la [panoramica API](./overview.md#getting-started) per generare valori per ciascuna delle intestazioni richieste per l&#39;API di igiene dei dati, come illustrato di seguito:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -40,7 +40,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’
 
 ### Lettura delle chiamate API di esempio
 
-Questo documento fornisce un esempio di chiamata API per dimostrare come formattare le richieste. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere le chiamate API di esempio](../../landing/api-guide.md#sample-api) nella guida introduttiva per le API di Experience Platform.
+Questo documento fornisce un esempio di chiamata API per dimostrare come formattare le richieste. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere chiamate API di esempio](../../landing/api-guide.md#sample-api) nella guida introduttiva per le API di Experience Platform.
 
 ## Creare un processo di eliminazione
 
@@ -109,7 +109,7 @@ curl -X POST \
 | Proprietà | Descrizione |
 | --- | --- |
 | `companyContexts` | Array contenente le informazioni di autenticazione per l’organizzazione. Deve contenere un singolo oggetto con le seguenti proprietà: <ul><li>`namespace`: deve essere impostato su `imsOrgID`.</li><li>`value`: ID organizzazione. È lo stesso valore fornito nell&#39;intestazione `x-gw-ims-org-id`.</li></ul> |
-| `users` | Matrice contenente una raccolta di almeno un utente di cui si desidera eliminare le informazioni. Ogni oggetto utente contiene le seguenti informazioni: <ul><li>`key`: identificatore di un utente utilizzato per qualificare gli ID di processo separati nei dati di risposta. È consigliabile scegliere una stringa univoca e facilmente identificabile per questo valore, in modo che sia possibile farvi riferimento o cercarlo in un secondo momento.</li><li>`action`: array che elenca le azioni desiderate da eseguire sui dati dell&#39;utente. Deve contenere un singolo valore stringa: `delete`.</li><li>`userIDs`: raccolta di identità per l&#39;utente. Il numero di identità che un singolo utente può avere è limitato a nove. Ogni identità contiene le seguenti proprietà: <ul><li>`namespace`: [spazio dei nomi identità](../../identity-service/features/namespaces.md) associato all&#39;ID. Può trattarsi di uno spazio dei nomi [standard](../../privacy-service/api/appendix.md#standard-namespaces) riconosciuto da Platform oppure di uno spazio dei nomi personalizzato definito dall&#39;organizzazione. Il tipo di spazio dei nomi utilizzato deve essere riflesso nella proprietà `type`.</li><li>`value`: valore di identità.</li><li>`type`: deve essere impostato su `standard` se si utilizza uno spazio dei nomi riconosciuto a livello globale oppure su `custom` se si utilizza uno spazio dei nomi definito dall&#39;organizzazione.</li></ul></li></ul> |
+| `users` | Matrice contenente una raccolta di almeno un utente di cui si desidera eliminare le informazioni. Ogni oggetto utente contiene le seguenti informazioni: <ul><li>`key`: identificatore di un utente utilizzato per qualificare gli ID di processo separati nei dati di risposta. È consigliabile scegliere una stringa univoca e facilmente identificabile per questo valore, in modo che sia possibile farvi riferimento o cercarlo in un secondo momento.</li><li>`action`: array che elenca le azioni desiderate da eseguire sui dati dell&#39;utente. Deve contenere un singolo valore stringa: `delete`.</li><li>`userIDs`: raccolta di identità per l&#39;utente. Il numero di identità che un singolo utente può avere è limitato a nove. Ogni identità contiene le seguenti proprietà: <ul><li>`namespace`: [spazio dei nomi identità](../../identity-service/features/namespaces.md) associato all&#39;ID. Può trattarsi di uno [spazio dei nomi standard](../../privacy-service/api/appendix.md#standard-namespaces) riconosciuto da Experience Platform oppure di uno spazio dei nomi personalizzato definito dall&#39;organizzazione. Il tipo di spazio dei nomi utilizzato deve essere riflesso nella proprietà `type`.</li><li>`value`: valore di identità.</li><li>`type`: deve essere impostato su `standard` se si utilizza uno spazio dei nomi riconosciuto a livello globale oppure su `custom` se si utilizza uno spazio dei nomi definito dall&#39;organizzazione.</li></ul></li></ul> |
 
 {style="table-layout:auto"}
 

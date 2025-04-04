@@ -6,9 +6,9 @@ user-guide-description: Scopri come distribuire e gestire i tag di analisi, mark
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 5e3f1517b321cab756305cd61ad5f1def93d3de7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '776'
+source-wordcount: '777'
 ht-degree: 44%
 
 ---
@@ -90,7 +90,7 @@ ht-degree: 44%
       * Adobe Client Data Layer {#client-data-layer}
          * [Panoramica](./extensions/client/client-data-layer/overview.md)
          * [Note sulla versione](./extensions/client/client-data-layer/release-notes.md)
-      * Analisi del contenuto di Adobe {#content-analytics}
+      * Adobe Content Analytics {#content-analytics}
          * [Panoramica](./extensions/client/content-analytics/overview.md)
       * Adobe ContextHub {#contexthub}
          * [Panoramica](./extensions/client/contexthub/overview.md)
@@ -329,5 +329,5 @@ ht-degree: 44%
 * [Domande frequenti](./faq.md)
 * [Aggiornamenti terminologici](./term-updates.md)
 * [Supporto obsoleto per Internet Explorer 10 e 11](./ie-deprecation.md)
-* [Note sulla versione della piattaforma](https://experienceleague.adobe.com/it/docs/experience-platform/release-notes/latest)
+* [Note sulla versione di Experience Platform](https://experienceleague.adobe.com/it/docs/experience-platform/release-notes/latest)
 

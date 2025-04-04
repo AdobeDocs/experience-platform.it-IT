@@ -1,12 +1,12 @@
 ---
 keywords: Amazon Kinesis;destinazione cinesi;kinesis
 title: Connessione Amazon Kinesis
-description: Crea una connessione in uscita in tempo reale allo storage Amazon Kinesis per inviare dati da Adobe Experience Platform.
+description: Crea una connessione in uscita in tempo reale allo storage Amazon Kinesis per eseguire lo streaming dei dati da Adobe Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1984'
+source-wordcount: '1989'
 ht-degree: 5%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
-> Questa destinazione è disponibile solo per [clienti Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform.html).
+> Questa destinazione è disponibile solo per [clienti Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform.html).
 
 Il servizio [!DNL Kinesis Data Streams] di [!DNL Amazon Web Services] consente di raccogliere ed elaborare flussi di dati di grandi dimensioni in tempo reale.
 
@@ -25,7 +25,7 @@ Il servizio [!DNL Kinesis Data Streams] di [!DNL Amazon Web Services] consente d
 
 * Per ulteriori informazioni su [!DNL Amazon Kinesis], consulta la [documentazione di Amazon](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
 * Per connettersi a [!DNL Amazon Kinesis] a livello di programmazione, vedere l&#39;esercitazione sull&#39;API delle [destinazioni di streaming](../../api/streaming-destinations.md).
-* Per connettersi a [!DNL Amazon Kinesis] tramite l&#39;interfaccia utente di Platform, vedere le sezioni seguenti.
+* Per connettersi a [!DNL Amazon Kinesis] tramite l&#39;interfaccia utente di Experience Platform, vedere le sezioni seguenti.
 
 ![Amazon Kinesis nell&#39;interfaccia utente](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
 
@@ -41,7 +41,7 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 
 | Origine pubblico | Supportato | Descrizione |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite il servizio di segmentazione [Experience Platform](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
 | Caricamenti personalizzati | ✓ | Tipi di pubblico [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
@@ -59,7 +59,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 ## Indirizzo IP inserisco nell&#39;elenco Consentiti {#ip-address-allowlist}
 
-Per soddisfare i requisiti di sicurezza e conformità dei clienti, Experience Platform inserire nell&#39;elenco Consentiti fornisce un elenco di IP statici che è possibile per la destinazione [!DNL Amazon Kinesis]. Per l&#39;elenco completo degli IP da elenco consentiti, consulta l&#39;[elenco Consentiti di indirizzo IP per le destinazioni di streaming](/help/destinations/catalog/streaming/ip-address-allow-list.md).
+Per soddisfare i requisiti di sicurezza e conformità dei clienti, Experience Platform inserire nell&#39;elenco Consentiti fornisce un elenco di IP statici che puoi per la destinazione [!DNL Amazon Kinesis]. Per l&#39;elenco completo degli IP da elenco consentiti, consulta l&#39;[elenco Consentiti di indirizzo IP per le destinazioni di streaming](/help/destinations/catalog/streaming/ip-address-allow-list.md).
 
 ## Autorizzazioni [!DNL Amazon Kinesis] richieste {#required-kinesis-permission}
 
@@ -69,7 +69,7 @@ Per connettersi ed esportare correttamente i dati nei flussi [!DNL Amazon Kinesi
 * `kinesis:PutRecord`
 * `kinesis:PutRecords`
 
-Queste autorizzazioni sono organizzate tramite la console [!DNL Kinesis] e vengono verificate da Platform dopo che la destinazione Kinesis è stata configurata nell&#39;interfaccia utente di Platform.
+Queste autorizzazioni sono organizzate tramite la console [!DNL Kinesis] e vengono verificate da Experience Platform dopo aver configurato la destinazione Kinesis nell&#39;interfaccia utente di Experience Platform.
 
 Nell&#39;esempio seguente vengono visualizzati i diritti di accesso minimi necessari per esportare correttamente i dati in una destinazione [!DNL Kinesis].
 
@@ -116,7 +116,7 @@ Immettere i campi seguenti e selezionare **[!UICONTROL Connetti alla destinazion
 
 ![Immagine della schermata dell&#39;interfaccia utente che mostra i campi completati per i dettagli di autenticazione di Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-authentication-fields.png)
 
-* Chiave di accesso **[!DNL Amazon Web Services]e chiave segreta**: in [!DNL Amazon Web Services], genera una coppia `access key - secret access key` per concedere a Platform l&#39;accesso al tuo account [!DNL Amazon Kinesis]. Ulteriori informazioni sono disponibili nella [documentazione di Amazon Web Services](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* Chiave di accesso **[!DNL Amazon Web Services]e chiave segreta**: in [!DNL Amazon Web Services], genera una coppia `access key - secret access key` per concedere l&#39;accesso Experience Platform al tuo account [!DNL Amazon Kinesis]. Ulteriori informazioni sono disponibili nella [documentazione di Amazon Web Services](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **[!UICONTROL Area]**: indicare a quale area [!DNL Amazon Web Services] inviare i dati in streaming.
 
 ### Inserire i dettagli della destinazione {#destination-details}
@@ -137,7 +137,7 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
 
 * **[!UICONTROL Nome]**: specifica un nome per la connessione a [!DNL Amazon Kinesis]
 * **[!UICONTROL Descrizione]**: fornire una descrizione per la connessione a [!DNL Amazon Kinesis].
-* **[!UICONTROL Flusso]**: fornisci il nome di un flusso di dati esistente nel tuo account [!DNL Amazon Kinesis]. Platform esporterà i dati in questo flusso.
+* **[!UICONTROL Flusso]**: fornisci il nome di un flusso di dati esistente nel tuo account [!DNL Amazon Kinesis]. Experience Platform esporterà i dati in questo flusso.
 * **[!UICONTROL Includi nomi segmento]**: attiva questa opzione se vuoi che l&#39;esportazione dei dati includa i nomi dei tipi di pubblico che stai esportando. Per un esempio di esportazione di dati con questa opzione selezionata, consulta la sezione [Dati esportati](#exported-data) più avanti.
 * **[!UICONTROL Includi marche temporali segmento]**: attiva questa opzione se desideri che l&#39;esportazione dei dati includa la marca temporale UNIX di quando i tipi di pubblico sono stati creati e aggiornati, nonché la marca temporale UNIX di quando i tipi di pubblico sono stati mappati alla destinazione per l&#39;attivazione. Per un esempio di esportazione di dati con questa opzione selezionata, consulta la sezione [Dati esportati](#exported-data) più avanti.
 
@@ -145,7 +145,7 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
 
 >[!IMPORTANT]
 >
->Platform needs `write` permissions on the bucket object where the export files will be delivered.
+>Experience Platform needs `write` permissions on the bucket object where the export files will be delivered.
 
 -->
 
@@ -182,13 +182,13 @@ Per quanto riguarda i dati esportati per un determinato profilo, è importante c
 
 | Cosa determina un’esportazione di destinazione | Cosa è incluso nell’esportazione di destinazione |
 |---------|----------|
-| <ul><li>Gli attributi e i tipi di pubblico mappati fungono da spunto per un’esportazione di destinazione. Ciò significa che se uno dei tipi di pubblico mappati cambia stato (da `null` a `realized` o da `realized` a `exiting`) o se uno qualsiasi degli attributi mappati viene aggiornato, viene avviata un&#39;esportazione di destinazione.</li><li>Poiché al momento non è possibile mappare le identità alle destinazioni [!DNL Amazon Kinesis], le modifiche in qualsiasi identità su un determinato profilo determinano anche le esportazioni di destinazione.</li><li>Per modifica di un attributo si intende qualsiasi aggiornamento dell&#39;attributo, indipendentemente dal fatto che si tratti o meno dello stesso valore. Ciò significa che una sovrascrittura su un attributo è considerata una modifica anche se il valore stesso non è cambiato.</li></ul> | <ul><li>L&#39;oggetto `segmentMembership` include il pubblico mappato nel flusso di dati di attivazione, per il quale lo stato del profilo è cambiato a seguito di un evento di qualificazione o uscita dal pubblico. Tieni presente che altri tipi di pubblico non mappati per i quali il profilo si è qualificato possono far parte dell&#39;esportazione di destinazione, se tali tipi di pubblico appartengono allo stesso [criterio di unione](/help/profile/merge-policies/overview.md) del pubblico mappato nel flusso di dati di attivazione. </li><li>Sono incluse anche tutte le identità nell&#39;oggetto `identityMap` (l&#39;Experience Platform attualmente non supporta il mapping delle identità nella destinazione [!DNL Amazon Kinesis]).</li><li>Nell’esportazione della destinazione sono inclusi solo gli attributi mappati.</li></ul> |
+| <ul><li>Gli attributi e i tipi di pubblico mappati fungono da spunto per un’esportazione di destinazione. Ciò significa che se uno dei tipi di pubblico mappati cambia stato (da `null` a `realized` o da `realized` a `exiting`) o se uno qualsiasi degli attributi mappati viene aggiornato, viene avviata un&#39;esportazione di destinazione.</li><li>Poiché al momento non è possibile mappare le identità alle destinazioni [!DNL Amazon Kinesis], le modifiche in qualsiasi identità su un determinato profilo determinano anche le esportazioni di destinazione.</li><li>Per modifica di un attributo si intende qualsiasi aggiornamento dell&#39;attributo, indipendentemente dal fatto che si tratti o meno dello stesso valore. Ciò significa che una sovrascrittura su un attributo è considerata una modifica anche se il valore stesso non è cambiato.</li></ul> | <ul><li>L&#39;oggetto `segmentMembership` include il pubblico mappato nel flusso di dati di attivazione, per il quale lo stato del profilo è cambiato a seguito di un evento di qualificazione o uscita dal pubblico. Tieni presente che altri tipi di pubblico non mappati per i quali il profilo si è qualificato possono far parte dell&#39;esportazione di destinazione, se tali tipi di pubblico appartengono allo stesso [criterio di unione](/help/profile/merge-policies/overview.md) del pubblico mappato nel flusso di dati di attivazione. </li><li>Sono incluse anche tutte le identità nell&#39;oggetto `identityMap` (Experience Platform attualmente non supporta la mappatura identità nella destinazione [!DNL Amazon Kinesis]).</li><li>Nell’esportazione della destinazione sono inclusi solo gli attributi mappati.</li></ul> |
 
 {style="table-layout:fixed"}
 
 Consideriamo ad esempio questo flusso di dati su una destinazione [!DNL Amazon Kinesis] in cui tre tipi di pubblico sono selezionati nel flusso di dati e quattro attributi sono mappati alla destinazione.
 
-![Flusso di dati di destinazione di Amazon Kinesis](../../assets/catalog/http/profile-export-example-dataflow.png)
+![Flusso di dati di destinazione Amazon Kinesis](../../assets/catalog/http/profile-export-example-dataflow.png)
 
 Un&#39;esportazione di profilo nella destinazione può essere determinata da un profilo idoneo o in uscita da uno dei *tre segmenti mappati*. Tuttavia, nell&#39;esportazione dei dati, nell&#39;oggetto `segmentMembership` (vedi la sezione [Dati esportati](#exported-data) di seguito), potrebbero essere visualizzati altri tipi di pubblico non mappati, se quel particolare profilo è un membro di essi e se questi condividono lo stesso criterio di unione del pubblico che ha attivato l&#39;esportazione. Se un profilo è idoneo per il pubblico **Cliente con auto DeLorean** ma è anche membro del pubblico **Guardato &quot;Ritorno al futuro&quot;** e **Fantascienza**, anche questi altri due tipi di pubblico saranno presenti nell&#39;oggetto `segmentMembership` dell&#39;esportazione dati, anche se non sono mappati nel flusso di dati, se condividono lo stesso criterio di unione con il segmento **Cliente con auto DeLorean**.
 
@@ -196,7 +196,7 @@ Dal punto di vista degli attributi di profilo, eventuali modifiche ai quattro at
 
 ## Recupero dati storici {#historical-data-backfill}
 
-Quando aggiungi un nuovo pubblico a una destinazione esistente o quando crei una nuova destinazione e mappi i tipi di pubblico a essa, Experience Platform esporta i dati storici di qualificazione del pubblico nella destinazione. I profili qualificati per il pubblico *prima* che il pubblico sia stato aggiunto alla destinazione vengono esportati nella destinazione entro circa un&#39;ora.
+Quando aggiungi un nuovo pubblico a una destinazione esistente o crei una nuova destinazione e mappi i tipi di pubblico a essa, Experience Platform esporta i dati storici di qualificazione del pubblico nella destinazione. I profili qualificati per il pubblico *prima* che il pubblico sia stato aggiunto alla destinazione vengono esportati nella destinazione entro circa un&#39;ora.
 
 ## Dati esportati {#exported-data}
 
@@ -298,7 +298,7 @@ Di seguito sono riportati ulteriori esempi di dati esportati, a seconda delle im
 
 ## Limiti e criteri per nuovi tentativi {#limits-retry-policy}
 
-Nel 95% del tempo, Experience Platform tenta di offrire una latenza di velocità effettiva inferiore a 10 minuti per i messaggi inviati correttamente con una frequenza inferiore a 10.000 richieste al secondo per ogni flusso di dati a una destinazione HTTP.
+Nel 95% dei casi, Experience Platform tenta di offrire una latenza di velocità effettiva inferiore a 10 minuti per i messaggi inviati con successo, con una frequenza inferiore a 10.000 richieste al secondo per ogni flusso di dati verso una destinazione HTTP.
 
 In caso di richieste non riuscite alla destinazione API HTTP, Experience Platform memorizza le richieste non riuscite e tenta di inviarle all’endpoint due volte.
 

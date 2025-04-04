@@ -3,11 +3,11 @@ keywords: Experience Platform;home;argomenti popolari;streaming;cloud storage co
 solution: Experience Platform
 title: Creare un flusso di dati in streaming per un’origine di archiviazione cloud nell’interfaccia utente
 type: Tutorial
-description: Un flusso di dati è un’attività pianificata che recupera e acquisisce dati da un’origine a un set di dati di Platform. Questo tutorial descrive come configurare un nuovo flusso di dati utilizzando il connettore di archiviazione cloud.
+description: Un flusso di dati è un’attività pianificata che recupera e acquisisce dati da un’origine a un set di dati di Experience Platform. Questo tutorial descrive come configurare un nuovo flusso di dati utilizzando il connettore di archiviazione cloud.
 exl-id: 75deead6-ef3c-48be-aed2-c43d1f432178
-source-git-commit: 6419ae7648a91dc7f9432281c1960beccc65bdb0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1071'
+source-wordcount: '1078'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 Un flusso di dati è un’attività pianificata che recupera e acquisisce dati da un’origine a un set di dati Adobe Experience Platform. Questo tutorial descrive come creare un flusso di dati in streaming per un’origine di archiviazione cloud nell’interfaccia utente.
 
-Prima di provare questa esercitazione, è necessario stabilire una connessione valida e autenticata tra l’account di archiviazione cloud e Platform. Se non disponi già di una connessione autenticata, consulta una delle seguenti esercitazioni per informazioni sull’autenticazione degli account di archiviazione cloud in streaming:
+Prima di provare questa esercitazione, è necessario stabilire una connessione valida e autenticata tra l’account di archiviazione cloud e Experience Platform. Se non disponi già di una connessione autenticata, consulta una delle seguenti esercitazioni per informazioni sull’autenticazione degli account di archiviazione cloud in streaming:
 
 - [[!DNL Amazon Kinesis]](../../../ui/create/cloud-storage/kinesis.md)
 - [[!DNL Azure Event Hubs]](../../../ui/create/cloud-storage/eventhub.md)
@@ -26,7 +26,7 @@ Prima di provare questa esercitazione, è necessario stabilire una connessione v
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-- [Flussi dati](../../../../../dataflows/home.md): i flussi dati sono una rappresentazione dei processi di dati che spostano i dati in Platform. I flussi di dati sono configurati in servizi diversi, dalle origini a [!DNL Identity Service], a [!DNL Profile] e a [!DNL Destinations].
+- [Flussi dati](../../../../../dataflows/home.md): i flussi dati sono una rappresentazione dei processi di dati che spostano i dati in Experience Platform. I flussi di dati sono configurati in servizi diversi, dalle origini a [!DNL Identity Service], a [!DNL Profile] e a [!DNL Destinations].
 - [Preparazione dati](../../../../../data-prep/home.md): la preparazione dati consente ai data engineer di mappare, trasformare e convalidare i dati da e verso Experience Data Model (XDM). La preparazione dati viene visualizzata come un passaggio &quot;Mappa&quot; nei processi di acquisizione dati, incluso il flusso di lavoro di acquisizione CSV.
 - [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): framework standardizzato tramite il quale [!DNL Experience Platform] organizza i dati sull&#39;esperienza del cliente.
    - [Nozioni di base sulla composizione dello schema](../../../../../xdm/schema/composition.md): scopri i blocchi predefiniti di base degli schemi XDM, inclusi i principi chiave e le best practice nella composizione dello schema.
@@ -39,7 +39,7 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe E
 >
 >Puoi creare un solo flusso di dati di origine per gruppo di consumer per un determinato hub eventi.
 
-Dopo aver creato l&#39;autenticazione dell&#39;account di archiviazione cloud in streaming, viene visualizzato il passaggio **[!UICONTROL Seleziona dati]**, che fornisce un&#39;interfaccia per selezionare il flusso di dati da trasferire a Platform.
+Dopo aver creato l&#39;autenticazione dell&#39;account di archiviazione cloud in streaming, viene visualizzato il passaggio **[!UICONTROL Seleziona dati]**, che fornisce un&#39;interfaccia per selezionare il flusso di dati da portare in Experience Platform.
 
 - La parte sinistra dell’interfaccia è un browser che ti consente di visualizzare i flussi di dati disponibili all’interno del tuo account;
 - La parte destra dell’interfaccia consente di visualizzare in anteprima fino a 100 righe di dati da un file JSON.
@@ -62,7 +62,7 @@ Al termine, selezionare **[!UICONTROL Avanti]**.
 
 ## Mappatura
 
-Viene visualizzato il passaggio **[!UICONTROL Mappatura]** che fornisce un&#39;interfaccia per mappare i dati di origine su un set di dati di Platform.
+Viene visualizzato il passaggio **[!UICONTROL Mappatura]** che fornisce un&#39;interfaccia per mappare i dati di origine su un set di dati di Experience Platform.
 
 Scegli un set di dati per i dati in entrata da acquisire in. Puoi utilizzare un set di dati esistente o crearne uno nuovo.
 
@@ -106,7 +106,7 @@ Dopo aver stabilito il set di dati e lo schema, viene visualizzata l&#39;interfa
 
 >[!TIP]
 >
->Platform fornisce consigli intelligenti per campi mappati automaticamente in base allo schema o al set di dati di destinazione selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi d’uso.
+>Experience Platform fornisce consigli intelligenti per campi mappati automaticamente in base allo schema o al set di dati di destinazione selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi d’uso.
 
 In base alle tue esigenze, puoi scegliere di mappare i campi direttamente o utilizzare le funzioni di preparazione dati per trasformare i dati sorgente in modo da derivare valori calcolati o calcolati. Per i passaggi completi sull&#39;utilizzo dell&#39;interfaccia mapper e dei campi calcolati, consulta la [guida dell&#39;interfaccia utente della preparazione dati](../../../../../data-prep/ui/mapping.md).
 
@@ -122,7 +122,7 @@ Immetti i valori per il flusso di dati e seleziona **[!UICONTROL Avanti]**.
 
 ![dettagli flusso di dati](../../../../images/tutorials/dataflow/cloud-storage/streaming/dataflow-detail.png)
 
-### Controlla
+### Rivisione
 
 Viene visualizzato il passaggio **[!UICONTROL Rivedi]**, che consente di rivedere il nuovo flusso di dati prima che venga creato. I dettagli sono raggruppati nelle seguenti categorie:
 
@@ -139,7 +139,7 @@ Una volta creato il flusso di dati di archiviazione cloud in streaming, puoi mon
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato correttamente un flusso di dati per inviare dati da un’origine di archiviazione cloud. I dati in arrivo possono ora essere utilizzati dai servizi Platform a valle come [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i seguenti documenti:
+Seguendo questa esercitazione, hai creato correttamente un flusso di dati per inviare dati da un’origine di archiviazione cloud. I dati in arrivo possono ora essere utilizzati dai servizi Experience Platform a valle come [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i seguenti documenti:
 
 - [Panoramica di [!DNL Real-Time Customer Profile]](../../../../../profile/home.md)
 - [Panoramica di [!DNL Data Science Workspace]](../../../../../data-science-workspace/home.md)

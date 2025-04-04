@@ -4,7 +4,7 @@ title: Connessione di brasatura
 description: Braze è una piattaforma completa per il coinvolgimento dei clienti che offre esperienze pertinenti e memorabili tra i clienti e i marchi che amano.
 last-substantial-update: 2024-08-20T00:00:00Z
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 2b84b5106105339ab243a9f4412b47692caedf3c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1125'
 ht-degree: 2%
@@ -51,7 +51,7 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 
 | Origine pubblico | Supportato | Descrizione |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite il servizio di segmentazione [Experience Platform](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
 | Caricamenti personalizzati | ✓ | Tipi di pubblico [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
@@ -108,7 +108,7 @@ Per istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione,
 
 Per inviare correttamente i dati sul pubblico da [!DNL Adobe Experience Platform] alla destinazione [!DNL Braze], è necessario eseguire il passaggio di mappatura dei campi.
 
-La mappatura consiste nella creazione di un collegamento tra i campi dello schema [!DNL Experience Data Model] (XDM) nell&#39;account [!DNL Platform] e gli equivalenti corrispondenti dalla destinazione.
+La mappatura consiste nella creazione di un collegamento tra i campi dello schema [!DNL Experience Data Model] (XDM) nell&#39;account [!DNL Experience Platform] e gli equivalenti corrispondenti dalla destinazione.
 
 Per mappare correttamente i campi XDM ai campi di destinazione [!DNL Braze], effettua le seguenti operazioni:
 
@@ -125,7 +125,7 @@ Nella finestra [!UICONTROL Seleziona campo di origine] è possibile scegliere tr
 
 ![Mappatura destinazione Braze Attributo Source](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
 
-* [!UICONTROL Selezionare lo spazio dei nomi dell&#39;identità]: utilizzare questa opzione per mappare uno spazio dei nomi dell&#39;identità [!DNL Platform] a uno spazio dei nomi [!DNL Braze].
+* [!UICONTROL Seleziona lo spazio dei nomi dell&#39;identità]: utilizzare questa opzione per mappare uno spazio dei nomi dell&#39;identità [!DNL Experience Platform] a uno spazio dei nomi [!DNL Braze].
 
 ![Mappatura destinazione Braze Spazio dei nomi Source](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png)
 
@@ -136,7 +136,7 @@ Nella sezione [!UICONTROL Campo di destinazione], fai clic sull&#39;icona di map
 ![Mappatura destinazione Braze](../../assets/catalog/mobile-engagement/braze/mapping-target.png)
 
 Nella finestra [!UICONTROL Seleziona campo di destinazione] è possibile scegliere tra due categorie di campi di destinazione:
-* [!UICONTROL Seleziona lo spazio dei nomi dell&#39;identità]: utilizzare questa opzione per mappare gli spazi dei nomi dell&#39;identità [!DNL Platform] agli spazi dei nomi dell&#39;identità [!DNL Braze].
+* [!UICONTROL Seleziona lo spazio dei nomi dell&#39;identità]: utilizzare questa opzione per mappare gli spazi dei nomi dell&#39;identità [!DNL Experience Platform] agli spazi dei nomi dell&#39;identità [!DNL Braze].
 * [!UICONTROL Seleziona attributi personalizzati]: utilizza questa opzione per mappare gli attributi XDM agli attributi [!DNL Braze] personalizzati definiti nell&#39;account [!DNL Braze]. <br> È inoltre possibile utilizzare questa opzione per rinominare gli attributi XDM esistenti in [!DNL Braze]. Ad esempio, il mapping di un attributo XDM `lastName` a un attributo `Last_Name` personalizzato in [!DNL Braze] creerà l&#39;attributo `Last_Name` in [!DNL Braze], se non esiste già, e mapperà l&#39;attributo XDM `lastName` a esso.
 
 ![Sfumatura campi di mappatura destinazione](../../assets/catalog/mobile-engagement/braze/mapping-target-fields.png)

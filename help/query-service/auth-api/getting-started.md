@@ -4,9 +4,9 @@ title: Guida all’API di autorizzazione di Data Distiller
 description: Scopri come iniziare a richiedere l’autorizzazione e le restrizioni dell’intervallo IP per l’accesso sicuro ai dati in Adobe Experience Platform Query Service.
 role: Developer
 exl-id: d93ce774-c8b2-4f15-a4d9-117d9aa5d9e7
-source-git-commit: 804eeb4ec976cf41fdd450bd8f307499c3ebae03
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '510'
 ht-degree: 5%
 
 ---
@@ -27,21 +27,21 @@ Le sezioni seguenti forniscono informazioni sulla preparazione dei valori di aut
 
 ### Autorizzazioni richieste {#required-permissions}
 
-Per abilitare le restrizioni di accesso ai dati protetti in Query Service, devi disporre dell&#39;autorizzazione **[!UICONTROL Gestisci Elenco Consentiti]**. Questa autorizzazione consente alle organizzazioni di definire intervalli IP specifici (in formato IPv4 o IPv6) autorizzati ad accedere ai dati in Platform tramite l’interfaccia SQL. L’accesso viene gestito a livello di sandbox, dove gli utenti possono configurare un elenco di indirizzi IP approvati o blocchi CIDR che limitano l’accesso solo alle reti consentite.
+Per abilitare le restrizioni di accesso ai dati protetti in Query Service, devi disporre dell&#39;autorizzazione **[!UICONTROL Gestisci Elenco Consentiti]**. Questa autorizzazione consente alle organizzazioni di definire intervalli IP specifici (in formato IPv4 o IPv6) autorizzati ad accedere ai dati in Experience Platform tramite l’interfaccia SQL. L’accesso viene gestito a livello di sandbox, dove gli utenti possono configurare un elenco di indirizzi IP approvati o blocchi CIDR che limitano l’accesso solo alle reti consentite.
 
 >[!NOTE]
 >
->Gli amministratori di sistema possono impostare le autorizzazioni utente dall&#39;Adobe [Admin Console](https://adminconsole.adobe.com/). Per ulteriori informazioni, consulta la [Guida utente di Admin Console](https://helpx.adobe.com/it/enterprise/using/admin-console.html).
+>Gli amministratori di sistema possono configurare le autorizzazioni utente da Adobe [Admin Console](https://adminconsole.adobe.com/). Per ulteriori informazioni, consulta la [Guida utente di Admin Console](https://helpx.adobe.com/it/enterprise/using/admin-console.html).
 
 Le funzionalità seguenti sono disponibili con l&#39;autorizzazione **[!UICONTROL Gestisci Elenco Consentiti]**:
 
-- **Definire gli intervalli IP consentiti**: solo gli indirizzi IP o i blocchi CIDR di questi intervalli definiti possono accedere ai dati in Platform utilizzando SQL tramite Query Service.
+- **Definisci intervalli IP consentiti**: solo gli indirizzi IP o i blocchi CIDR di questi intervalli definiti possono accedere ai dati in Experience Platform utilizzando SQL tramite Query Service.
 - **Applica controlli intervallo IP**: le connessioni da IP che non rientrano negli intervalli consentiti vengono negate.
 - **Funzionalità di controllo e avvisi**: tutti i tentativi di accesso, incluse le connessioni negate, vengono registrati come eventi di controllo. Questi eventi sono disponibili nei [registri di controllo di Adobe Experience Platform](../../landing/governance-privacy-security/audit-logs/overview.md), che consentono il monitoraggio di potenziali violazioni della sicurezza.
 
 ### Raccogliere i valori per le intestazioni richieste {#gather-values-for-required-headers}
 
-Per effettuare chiamate all&#39;API di autorizzazione di Data Distiller, è necessario completare l&#39;esercitazione sull&#39;autenticazione dell&#39;API [Platform](../../landing/api-authentication.md), che fornisce i valori per le intestazioni richieste nelle chiamate API. Includi le seguenti intestazioni in ogni richiesta:
+Per effettuare chiamate all&#39;API di autorizzazione di Data Distiller, devi completare l&#39;[esercitazione sull&#39;autenticazione dell&#39;API Experience Platform](../../landing/api-authentication.md), che fornisce i valori per le intestazioni richieste nelle chiamate API. Includi le seguenti intestazioni in ogni richiesta:
 
 - **Autorizzazione**: `Bearer {ACCESS_TOKEN}`
 - **x-api-key**: `{API_KEY}`

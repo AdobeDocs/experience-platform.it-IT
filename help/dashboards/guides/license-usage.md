@@ -4,9 +4,9 @@ title: Dashboard utilizzo licenze
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale è possibile visualizzare informazioni importanti sull’utilizzo delle licenze della tua organizzazione.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 243a99748d31cddcb8a550d52f9bb390726644be
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3408'
+source-wordcount: '3413'
 ht-degree: 14%
 
 ---
@@ -132,13 +132,13 @@ ht-degree: 14%
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=it" text="Scadenze degli eventi esperienza"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
 
-Puoi visualizzare informazioni importanti sull&#39;utilizzo delle licenze della tua organizzazione tramite la dashboard [!UICONTROL Utilizzo licenze] di Adobe Experience Platform. Le informazioni visualizzate qui vengono acquisite durante un’istantanea giornaliera dell’istanza Platform.
+Puoi visualizzare informazioni importanti sull&#39;utilizzo delle licenze della tua organizzazione tramite la dashboard [!UICONTROL Utilizzo licenze] di Adobe Experience Platform. Le informazioni visualizzate qui vengono acquisite durante un’istantanea giornaliera dell’istanza Experience Platform.
 
 I rapporti sull’utilizzo delle licenze forniscono un elevato grado di granularità. La maggior parte delle metriche è condivisa tra più prodotti e riflette l’utilizzo aggregato tra tutti i prodotti che li utilizzano, non i totali per prodotto. Il dashboard fornisce l’utilizzo consolidato di queste metriche in tutte le sandbox di produzione o di sviluppo e la metrica di utilizzo da una sandbox specifica. Con le metriche di utilizzo è possibile tenere traccia delle seguenti applicazioni Experience Platform: Real-Time Customer Data Platform, Adobe Journey Optimizer e Customer Journey Analytics.
 
 Questa guida illustra come accedere e utilizzare il dashboard utilizzo licenze nell’interfaccia utente di e fornisce ulteriori informazioni sulle visualizzazioni visualizzate nel dashboard.
 
-Per una panoramica generale dell&#39;interfaccia utente di Platform, fare riferimento alla [guida dell&#39;interfaccia utente di Experience Platform](../../landing/ui-guide.md).
+Per una panoramica generale dell&#39;interfaccia utente di Experience Platform, consulta la [guida dell&#39;interfaccia utente di Experience Platform](../../landing/ui-guide.md).
 
 ## [!UICONTROL Utilizzo licenza] dati dashboard
 
@@ -148,11 +148,11 @@ I dati in questo dashboard vengono visualizzati esattamente come apparivano nel 
 
 >[!NOTE]
 >
->La maggior parte delle metriche nel dashboard viene aggiornata ogni giorno, in base a un’istantanea dell’istanza Platform. [!UICONTROL Righe CJA disponibili] è un&#39;eccezione ed è aggiornato mensilmente. Le metriche etichettate con &quot;pacchetti&quot;, ad esempio [!UICONTROL Pacchetti utenti Adobe Query Service], [!UICONTROL Numero di pacchetti di ricchezza profilo] e [!UICONTROL Numero di pacchetti di segmentazione streaming], riflettono i diritti di licenza per le offerte di componenti aggiuntivi e non tengono traccia dell&#39;utilizzo corrente. Le modifiche apportate dopo lo snapshot non sono visibili fino allo snapshot successivo.
+>La maggior parte delle metriche nel dashboard viene aggiornata ogni giorno, in base a un’istantanea dell’istanza di Experience Platform. [!UICONTROL Righe CJA disponibili] è un&#39;eccezione ed è aggiornato mensilmente. Le metriche etichettate con &quot;pacchetti&quot;, ad esempio [!UICONTROL Pacchetti utenti Adobe Query Service], [!UICONTROL Numero di pacchetti di ricchezza profilo] e [!UICONTROL Numero di pacchetti di segmentazione streaming], riflettono i diritti di licenza per le offerte di componenti aggiuntivi e non tengono traccia dell&#39;utilizzo corrente. Le modifiche apportate dopo lo snapshot non sono visibili fino allo snapshot successivo.
 
 ## Esplorazione del dashboard utilizzo licenze {#explore}
 
-Per passare al dashboard utilizzo licenze nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Utilizzo licenze]** nella barra a sinistra. Il dashboard contiene due schede: **[!UICONTROL Metriche]** e **[!UICONTROL Prodotti]**.
+Per passare al dashboard utilizzo licenze nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Utilizzo licenze]** nella barra a sinistra. Il dashboard contiene due schede: **[!UICONTROL Metriche]** e **[!UICONTROL Prodotti]**.
 
 >[!NOTE]
 >
@@ -338,4 +338,4 @@ La disponibilità di queste metriche e la definizione specifica di ciascuna di e
 
 Dopo aver letto questo documento, potrai individuare la dashboard di utilizzo della licenza e visualizzare le metriche di utilizzo per ciascun prodotto acquistato, per tutte le sandbox di produzione o di sviluppo e per una sandbox specifica. Puoi trovare ulteriori informazioni sulle metriche disponibili per la tua organizzazione, in base alle licenze acquistate dalla tua organizzazione.
 
-Per ulteriori informazioni sulle altre funzionalità disponibili nell&#39;interfaccia utente di Experience Platform, consulta la [Guida dell&#39;interfaccia utente di Platform](../../landing/ui-guide.md).
+Per ulteriori informazioni sulle altre funzionalità disponibili nell&#39;interfaccia utente di Experience Platform, consulta la [guida dell&#39;interfaccia utente di Experience Platform](../../landing/ui-guide.md).

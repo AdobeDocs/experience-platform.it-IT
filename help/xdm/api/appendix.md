@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;Experience data model;Experience data model;Experience Data Model;modello dati;modello dati;modello dati;modello dati;modello dati;registro schema;registro schema;compatibilità;compatibilità;modalità compatibilità;modalità compatibilità;modalità compatibilità;tipo di campo;tipi di campo;
+keywords: Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;Experience data model;Experience data model;Experience Data Model;modello dati;modello dati;modello dati;modello dati;registro schema;registro schema;compatibilità;compatibilità;modalità compatibilità;modalità compatibilità;modalità compatibilità;tipo di campo;tipi di campo;
 solution: Experience Platform
 title: Appendice alla guida API del registro dello schema
 description: Questo documento fornisce informazioni supplementari relative all’utilizzo dell’API Schema Registry.
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-source-git-commit: 28891cf37dc9ffcc548f4c0565a77f62432c0b44
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '986'
 ht-degree: 0%
@@ -57,9 +57,9 @@ I parametri di query più comuni per il paging includono:
 
 ## Modalità di compatibilità {#compatibility}
 
-[!DNL Experience Data Model] (XDM) è una specifica pubblicamente documentata, guidata da Adobe per migliorare l&#39;interoperabilità, l&#39;espressività e la potenza delle esperienze digitali. Adobe mantiene il codice sorgente e le definizioni XDM formali in un progetto [open source su GitHub](https://github.com/adobe/xdm/). Queste definizioni sono scritte in Notazione standard XDM, utilizzando JSON-LD (JavaScript Object Notation for Linked Data) e lo schema JSON come grammatica per la definizione degli schemi XDM.
+[!DNL Experience Data Model] (XDM) è una specifica pubblicamente documentata, guidata da Adobe per migliorare l&#39;interoperabilità, l&#39;espressività e la potenza delle esperienze digitali. Adobe mantiene il codice sorgente e le definizioni XDM formali in un [progetto open source su GitHub](https://github.com/adobe/xdm/). Queste definizioni sono scritte in Notazione standard XDM, utilizzando JSON-LD (JavaScript Object Notation for Linked Data) e lo schema JSON come grammatica per la definizione degli schemi XDM.
 
-Quando esamini le definizioni XDM formali nell’archivio pubblico, puoi notare che XDM standard è diverso da quello visualizzato in Adobe Experience Platform. Ciò che visualizzi in [!DNL Experience Platform] è chiamato Modalità di compatibilità e fornisce una semplice mappatura tra XDM standard e il modo in cui viene utilizzato in [!DNL Platform].
+Quando esamini le definizioni XDM formali nell’archivio pubblico, puoi notare che XDM standard è diverso da quello visualizzato in Adobe Experience Platform. Ciò che visualizzi in [!DNL Experience Platform] è chiamato Modalità di compatibilità e fornisce una semplice mappatura tra XDM standard e il modo in cui viene utilizzato in [!DNL Experience Platform].
 
 ### Funzionamento della modalità di compatibilità
 
@@ -132,6 +132,6 @@ Adobe Experience Platform è progettato per lavorare con più soluzioni e serviz
 
 La maggior parte dei servizi [!DNL Experience Platform], tra cui [!DNL Catalog], [!DNL Data Lake] e [!DNL Real-Time Customer Profile], utilizza [!DNL Compatibility Mode] al posto di XDM standard. Anche l&#39;API [!DNL Schema Registry] utilizza [!DNL Compatibility Mode] e gli esempi in questo documento sono tutti visualizzati utilizzando [!DNL Compatibility Mode].
 
-È utile sapere che viene eseguita una mappatura tra XDM standard e il modo in cui è operazionalizzato in [!DNL Experience Platform], ma non dovrebbe influire sull&#39;utilizzo dei servizi [!DNL Platform].
+È utile sapere che viene eseguita una mappatura tra XDM standard e il modo in cui è operazionalizzato in [!DNL Experience Platform], ma non dovrebbe influire sull&#39;utilizzo dei servizi [!DNL Experience Platform].
 
 Il progetto open source è disponibile, ma quando si tratta di interagire con le risorse tramite [!DNL Schema Registry], gli esempi di API in questo documento forniscono le best practice da conoscere e seguire.

@@ -1,11 +1,11 @@
 ---
-title: Implementazione di un'applicazione a pagina singola per Adobe Experience Platform Web SDK
+title: Implementazione di applicazioni a pagina singola per Adobe Experience Platform Web SDK
 description: Scopri come creare un’implementazione di un’applicazione a pagina singola (SPA) di Adobe Experience Platform Web SDK utilizzando Adobe Target.
-keywords: target;adobe target;visualizzazioni xdm; visualizzazioni;applicazioni a pagina singola;SPA;SPA lifecycle;lato client;test AB;AB;Targeting esperienza;XT;VEC
+keywords: target;adobe target;visualizzazioni xdm; visualizzazioni;applicazioni a pagina singola;SPA;ciclo di vita SPA;lato client;test AB;AB;Targeting esperienza;XT;VEC
 exl-id: cc48c375-36b9-433e-b45f-60e6c6ea4883
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1817'
+source-wordcount: '1818'
 ht-degree: 0%
 
 ---
@@ -13,25 +13,25 @@ ht-degree: 0%
 
 # Implementazione di un&#39;applicazione a pagina singola
 
-Adobe Experience Platform Web SDK offre funzioni avanzate che consentono di eseguire personalizzazioni su tecnologie lato client di nuova generazione, come le applicazioni a pagina singola (SPA).
+Adobe Experience Platform Web SDK offre funzioni avanzate che consentono di eseguire personalizzazioni su tecnologie lato client di nuova generazione, ad esempio applicazioni a pagina singola (SPA).
 
 I siti web tradizionali funzionavano su modelli di navigazione &quot;da pagina a pagina&quot;, altrimenti noti come Applicazioni a più pagine, in cui le progettazioni del sito web erano strettamente collegate a URL e le transizioni da una pagina web a un’altra richiedevano un caricamento di pagina.
 
 Le applicazioni web moderne, come le applicazioni a pagina singola, hanno invece adottato un modello che attiva rapidamente il rendering dell’interfaccia utente del browser, spesso indipendente dai ricaricamenti delle pagine. Queste esperienze possono essere attivate dalle interazioni dei clienti, ad esempio scorrimento, clic e movimenti del cursore. Con l’evolversi dei paradigmi del web moderno, la rilevanza degli eventi generici tradizionali, come il caricamento di una pagina, per distribuire personalizzazione e sperimentazione non funziona più.
 
-![Diagramma che mostra il ciclo di vita dell&#39;SPA rispetto al ciclo di vita tradizionale delle pagine.](assets/spa-vs-traditional-lifecycle.png)
+![Diagramma che mostra il ciclo di vita delle applicazioni a pagina singola rispetto al ciclo di vita tradizionale.](assets/spa-vs-traditional-lifecycle.png)
 
-## Vantaggi di Platform Web SDK per SPA
+## Vantaggi di Experience Platform Web SDK per applicazioni a pagina singola
 
-Di seguito sono riportati alcuni vantaggi dell’utilizzo di Adobe Experience Platform Web SDK per le applicazioni a pagina singola:
+Di seguito sono riportati alcuni vantaggi dell&#39;utilizzo di Adobe Experience Platform Web SDK per le applicazioni a pagina singola:
 
 * Possibilità di memorizzare nella cache tutte le offerte al caricamento di pagina per ridurre più chiamate server a una singola chiamata server.
 * Migliora enormemente l’esperienza utente sul sito, in quanto le offerte appaiono immediatamente tramite la cache senza il ritardo causato dalle chiamate al server tradizionali.
-* Una singola riga di codice e una configurazione per sviluppatori una tantum consentono agli esperti di marketing di creare ed eseguire attività A/B e di targeting dell’esperienza (XT) tramite il Compositore esperienza visivo sull’SPA.
+* Una singola riga di codice e una configurazione per sviluppatori una tantum consentono agli esperti di marketing di creare ed eseguire attività A/B e di Targeting esperienza (XT) tramite il Compositore esperienza visivo sull’applicazione a pagina singola.
 
 ## Visualizzazioni XDM e applicazioni a pagina singola
 
-Il Compositore esperienza visivo di Adobe Target per l’SPA sfrutta un concetto chiamato Visualizzazioni: un gruppo logico di elementi visivi che insieme formano un’esperienza SPA. Un’applicazione a pagina singola può, pertanto, essere considerata come in fase di transizione tra le visualizzazioni, anziché tra gli URL, in base alle interazioni dell’utente. In genere, una visualizzazione può rappresentare un intero sito o elementi visivi raggruppati all’interno di un sito.
+Il Compositore esperienza visivo di Adobe Target per le applicazioni a pagina singola sfrutta un concetto denominato Visualizzazioni: un gruppo logico di elementi visivi che insieme formano un’esperienza SPA. Un’applicazione a pagina singola può, pertanto, essere considerata come in fase di transizione tra le visualizzazioni, anziché tra gli URL, in base alle interazioni dell’utente. In genere, una visualizzazione può rappresentare un intero sito o elementi visivi raggruppati all’interno di un sito.
 
 Per spiegare ulteriormente cosa sono le visualizzazioni, nell’esempio seguente viene utilizzato un ipotetico sito di e-commerce online implementato in React per esplorare le visualizzazioni di esempio.
 
@@ -59,7 +59,7 @@ Il concetto di Viste può essere esteso molto di più. Questi sono solo alcuni e
 
 ## Implementazione delle visualizzazioni XDM
 
-Le visualizzazioni XDM possono essere utilizzate in Adobe Target per consentire agli addetti al marketing di eseguire test A/B e XT sull’SPA tramite il Compositore esperienza visivo. Per completare la configurazione per sviluppatori una tantum, è necessario eseguire i passaggi seguenti:
+Le visualizzazioni XDM possono essere utilizzate in Adobe Target per consentire agli addetti al marketing di eseguire test A/B e XT sulle applicazioni a pagina singola tramite il Compositore esperienza visivo. Per completare la configurazione per sviluppatori una tantum, è necessario eseguire i passaggi seguenti:
 
 1. Installa [Adobe Experience Platform Web SDK](/help/web-sdk/install/overview.md)
 2. Determina tutte le visualizzazioni XDM nell’applicazione a pagina singola che desideri personalizzare.
@@ -84,7 +84,7 @@ Le visualizzazioni XDM possono essere utilizzate in Adobe Target per consentire 
 
 ## `sendEvent()` esempi di funzioni
 
-In questa sezione vengono illustrati tre esempi che illustrano come richiamare la funzione `sendEvent()` in React per un ipotetico SPA di e-commerce.
+In questa sezione vengono illustrati tre esempi che illustrano come richiamare la funzione `sendEvent()` in React per un&#39;ipotetica applicazione a pagina singola per e-commerce.
 
 ### Esempio 1: home page per test A/B
 
@@ -215,13 +215,13 @@ class Checkout extends Component {
 } 
 ```
 
-## Utilizzo del Compositore esperienza visivo per un SPA
+## Utilizzo del Compositore esperienza visivo per un’applicazione a pagina singola
 
 Una volta completata la definizione delle viste XDM e implementato `sendEvent()` con le viste XDM passate, il Compositore esperienza visivo sarà in grado di rilevare tali viste e consentire agli utenti di creare azioni e modifiche per le attività A/B o XT.
 
 >[!NOTE]
 >
->Per utilizzare il Compositore esperienza visivo per l&#39;SPA, è necessario installare e attivare l&#39;estensione [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) o [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper.
+>Per utilizzare il Compositore esperienza visivo per l&#39;applicazione a pagina singola, è necessario installare e attivare l&#39;estensione [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) o [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper.
 
 ### Pannello delle modifiche
 
@@ -243,7 +243,7 @@ Facendo clic su un’azione viene evidenziato l’elemento del sito in cui quest
 | Sposta | Sposta l’azione in un evento di caricamento pagina o in un’altra visualizzazione già esistente nel pannello delle modifiche.<br/><br/>**Evento di caricamento pagina:** Tutte le azioni corrispondenti all&#39;evento di caricamento pagina vengono applicate al caricamento iniziale della pagina dell&#39;applicazione Web. <br/><br/>**Nota:** dopo un&#39;operazione di spostamento, passa alla visualizzazione nel Compositore esperienza visivo tramite Sfoglia per verificare che lo spostamento sia un&#39;operazione valida. Se non può essere applicata alla visualizzazione, viene visualizzato un errore. |
 | Elimina | Elimina l’azione. |
 
-## Utilizzo del Compositore esperienza visivo per esempi di SPA
+## Esempi di utilizzo del Compositore esperienza visivo per le applicazioni a pagina singola
 
 Questa sezione descrive tre esempi per utilizzare il Compositore esperienza visivo per creare azioni e modifiche per le attività A/B o XT.
 

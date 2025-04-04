@@ -5,7 +5,7 @@ title: Creare una connessione Source OData generica nell’interfaccia utente
 type: Tutorial
 description: Scopri come creare una connessione sorgente Generic Open Data Protocol utilizzando l’interfaccia utente di Adobe Experience Platform.
 exl-id: aad6b6f7-622c-4ab6-bf6d-1221fe1132d1
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '448'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Crea una connessione sorgente [!DNL Generic OData] nell&#39;interfaccia utente
 
-I connettori Source in Adobe Experience Platform consentono di acquisire dati di origine esterna in base a una pianificazione. Questo tutorial descrive i passaggi necessari per creare un connettore di origine [!DNL Generic Open Data Protocol] (di seguito &quot;[!DNL OData]&quot;) utilizzando l&#39;interfaccia utente [!DNL Platform].
+I connettori Source in Adobe Experience Platform consentono di acquisire dati di origine esterna in base a una pianificazione. Questo tutorial descrive i passaggi necessari per creare un connettore di origine [!DNL Generic Open Data Protocol] (di seguito &quot;[!DNL OData]&quot;) utilizzando l&#39;interfaccia utente [!DNL Experience Platform].
 
 ## Introduzione
 
@@ -29,7 +29,7 @@ Se disponi già di una connessione [!DNL OData] valida, puoi saltare il resto de
 
 ### Raccogli le credenziali richieste
 
-Per accedere all&#39;account [!DNL OData] in [!DNL Platform], è necessario fornire i seguenti valori:
+Per accedere all&#39;account [!DNL OData] in [!DNL Experience Platform], è necessario fornire i seguenti valori:
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
@@ -39,7 +39,7 @@ Per ulteriori informazioni su come iniziare, fare riferimento a [questo [!DNL OD
 
 ## Connetti il tuo account [!DNL OData]
 
-Dopo aver raccolto le credenziali richieste, puoi seguire i passaggi seguenti per collegare l&#39;account [!DNL OData] a [!DNL Platform].
+Dopo aver raccolto le credenziali richieste, puoi seguire i passaggi seguenti per collegare l&#39;account [!DNL OData] a [!DNL Experience Platform].
 
 Accedi a [Adobe Experience Platform](https://platform.adobe.com), quindi seleziona **[!UICONTROL Origini]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro **[!UICONTROL Origini]**. Nella schermata **[!UICONTROL Catalogo]** sono visualizzate diverse origini per le quali è possibile creare un account con.
 
@@ -65,4 +65,4 @@ Per connettere un account esistente, seleziona l&#39;account [!DNL OData] con cu
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai stabilito una connessione al tuo account [!DNL OData]. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per inserire i dati dei protocolli in [!DNL Platform]](../../dataflow/protocols.md).
+Seguendo questa esercitazione, hai stabilito una connessione al tuo account [!DNL OData]. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per inserire i dati dei protocolli in [!DNL Experience Platform]](../../dataflow/protocols.md).

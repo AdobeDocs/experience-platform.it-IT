@@ -2,16 +2,16 @@
 title: Caso di utilizzo dei set di dati derivati basati su Decile
 description: Questa guida illustra i passaggi necessari per utilizzare Query Service per creare set di dati derivati basati su decile da utilizzare con i dati del profilo.
 exl-id: 0ec6b511-b9fd-4447-b63d-85aa1f235436
-source-git-commit: 2ffb8724b2aca54019820335fb21038ec7e69a7f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1511'
+source-wordcount: '1512'
 ht-degree: 0%
 
 ---
 
 # Caso di utilizzo dei set di dati derivati basati su Decile
 
-I set di dati derivati semplificano casi d’uso complessi per l’analisi di dati provenienti dal data lake che possono essere utilizzati con altri servizi Platform a valle o pubblicati nei dati del profilo cliente in tempo reale.
+I set di dati derivati semplificano casi d’uso complessi per l’analisi di dati provenienti dal data lake che possono essere utilizzati con altri servizi Experience Platform a valle o pubblicati nei dati del profilo cliente in tempo reale.
 
 Questo caso d’uso di esempio illustra come creare set di dati derivati basati su decile da utilizzare con i dati del profilo cliente in tempo reale. Utilizzando come esempio uno scenario di fidelizzazione di una compagnia aerea, questa guida ti spiega come creare un set di dati che utilizza decili per categoria per segmentare e creare tipi di pubblico in base agli attributi classificati.
 

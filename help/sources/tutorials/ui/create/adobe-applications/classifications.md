@@ -2,9 +2,9 @@
 description: Scopri come creare un connettore di origine Adobe Analytics nell’interfaccia utente per inserire i dati delle classificazioni in Adobe Experience Platform.
 title: Creare una connessione Source Adobe Analytics per i dati delle classificazioni nell’interfaccia utente
 exl-id: d606720d-f1ca-47cc-919b-643a8fc61e07
-source-git-commit: 02b5c5f963c21247adbb1d13114f92b22f8758de
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '514'
 ht-degree: 0%
 
 ---
@@ -21,17 +21,17 @@ Leggi questo tutorial per i passaggi su come acquisire i dati delle classificazi
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): framework standardizzato in base al quale Experience Platform organizza i dati sull&#39;esperienza del cliente.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): framework standardizzato tramite il quale Experience Platform organizza i dati sull&#39;esperienza del cliente.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
-* [[!DNL Sandboxes]](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [[!DNL Sandboxes]](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Experience Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
-Il connettore di origine delle classificazioni di Analytics richiede che i dati siano stati migrati nella nuova infrastruttura di classificazioni di Adobe Analytics prima dell’utilizzo. Per confermare lo stato di migrazione dei tuoi dati, contatta il team del tuo account di Adobe.
+Il connettore di origine delle classificazioni di Analytics richiede che i dati siano stati migrati nella nuova infrastruttura di classificazioni di Adobe Analytics prima dell’utilizzo. Per confermare lo stato di migrazione dei dati, contatta il team del tuo account Adobe.
 
 ## Seleziona le classificazioni
 
-Nell&#39;interfaccia utente di Experience Platform, selezionare **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
 
-Nella categoria *Adobe applications*, selezionare **[!UICONTROL Adobe Analytics]**, quindi **[!UICONTROL Configura]**.
+Nella categoria *Applicazioni Adobe*, selezionare **[!UICONTROL Adobe Analytics]**, quindi **[!UICONTROL Configurazione]**.
 
 >[!TIP]
 >
@@ -39,9 +39,9 @@ Nella categoria *Adobe applications*, selezionare **[!UICONTROL Adobe Analytics]
 
 ![Catalogo delle origini nell&#39;interfaccia utente di Experience Platform con l&#39;origine di Adobe Analytics selezionata.](../../../../images/tutorials/create/classifications/catalog.png)
 
-Quindi seleziona [!UICONTROL Classificazioni] e seleziona i set di dati di classificazione da acquisire per l&#39;Experience Platform.
+Quindi seleziona [!UICONTROL Classificazioni] e seleziona i set di dati di classificazione da acquisire in Experience Platform.
 
-Puoi selezionare fino a 30 set di dati di classificazioni diversi da includere nell’Experience Platform. Tutti i set di dati selezionati verranno visualizzati nella barra a destra. Al termine, selezionare [!UICONTROL Avanti] per continuare.
+Puoi selezionare fino a 30 set di dati di classificazioni diversi da inserire in Experience Platform. Tutti i set di dati selezionati verranno visualizzati nella barra a destra. Al termine, selezionare [!UICONTROL Avanti] per continuare.
 
 ![Pagina delle classificazioni con diversi set di dati di classificazione selezionati.](../../../../images/tutorials/create/classifications/select.png)
 
@@ -59,7 +59,7 @@ Dopo aver rivisto il flusso di dati, fai clic su **[!UICONTROL Fine]** e attendi
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato un connettore sata per le classificazioni di Analytics che porta in Experience Platform i dati delle classificazioni. Per ulteriori informazioni su [!DNL Analytics] e sui dati delle classificazioni, vedere i seguenti documenti:
+Seguendo questa esercitazione, hai creato un connettore sata per le classificazioni di Analytics che porta i dati delle classificazioni in Experience Platform. Per ulteriori informazioni su [!DNL Analytics] e sui dati delle classificazioni, vedere i seguenti documenti:
 
 * [Panoramica del connettore di origine di Adobe Analytics](../../../../connectors/adobe-applications/analytics.md)
 * [Creare una connessione di origine di Analytics per i dati della suite di rapporti nell’interfaccia utente](./analytics.md)

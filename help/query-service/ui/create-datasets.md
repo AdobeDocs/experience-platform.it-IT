@@ -5,9 +5,9 @@ title: Genera set di dati di output dai risultati della query
 type: Tutorial
 description: Adobe Experience Platform Query Service consente di creare set di dati dall’interfaccia utente. Dopo la creazione di un set di dati, è possibile accedervi come qualsiasi altro set di dati nel Data Lake e utilizzarlo per diversi casi d’uso.
 exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
-source-git-commit: 59d2d74b2d77f3bbaca381af908de5295af24e5b
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '502'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Per creare set di dati dall’interfaccia utente di Adobe Experience Platform, e
 
 1. Crea una query utilizzando un client connesso e convalida l’output. Per informazioni su come scrivere query utilizzando [!DNL Query Editor], leggere la guida dell&#39;interfaccia utente [!DNL Query Editor] [per la scrittura di query](./user-guide.md#writing-queries).
 
-2. Nell&#39;interfaccia utente di Platform, passa a **[!UICONTROL Query]** seguito dalla scheda **[!UICONTROL Modelli]** e seleziona la query creata. Per ulteriori dettagli su come visualizzare le query create e salvate per la tua organizzazione nell&#39;interfaccia utente di Platform, consulta la [[!DNL Query Service] panoramica](./overview.md#browse).
+2. Nell&#39;interfaccia utente di Experience Platform, passa a **[!UICONTROL Query]** seguito dalla scheda **[!UICONTROL Modelli]** e seleziona la query creata. Per ulteriori dettagli su come visualizzare le query create e salvate per la tua organizzazione nell&#39;interfaccia utente di Experience Platform, leggi la [[!DNL Query Service] panoramica](./overview.md#browse).
 
 3. Nel pannello Dettagli query, selezionare **[!UICONTROL Esegui come CTAS]**.
 
@@ -34,7 +34,7 @@ Per creare set di dati dall’interfaccia utente di Adobe Experience Platform, e
 
    ![La finestra di dialogo del set di dati di output con i dettagli del set di dati e [!UICONTROL Esegui come CTAS] è evidenziata](../images/ui/create-datasets/run-query.png)
 
-6. Una volta completata l&#39;esecuzione della query, passa a **[!UICONTROL Set di dati]** per visualizzare il set di dati creato. Per ulteriori informazioni su come eseguire azioni comuni quando si utilizzano i set di dati nell&#39;interfaccia utente di Platform, consulta la [guida all&#39;interfaccia utente dei set di dati](../../catalog/datasets/user-guide.md).
+6. Una volta completata l&#39;esecuzione della query, passa a **[!UICONTROL Set di dati]** per visualizzare il set di dati creato. Per ulteriori informazioni su come eseguire azioni comuni quando si utilizzano i set di dati nell&#39;interfaccia utente di Experience Platform, consulta la [guida all&#39;interfaccia utente dei set di dati](../../catalog/datasets/user-guide.md).
 
 Dopo la creazione di un set di dati, è possibile accedervi come qualsiasi altro set di dati in [!DNL Data Lake] e utilizzarlo per diversi casi d&#39;uso.
 
@@ -52,4 +52,4 @@ I set di dati creati tramite questa funzionalità vengono generati con uno schem
 
 ## Passaggi successivi
 
-Dopo aver letto questo documento, sarai in grado di utilizzare [!DNL Query Service] per generare set di dati dall&#39;interfaccia utente di Platform. Per ulteriori informazioni su come accedere, scrivere ed eseguire query nell&#39;interfaccia utente di Platform, vedere la [[!DNL Query Service] panoramica dell&#39;interfaccia utente](./overview.md).
+Dopo aver letto questo documento, sarai in grado di utilizzare [!DNL Query Service] per generare set di dati dall&#39;interfaccia utente di Experience Platform. Per ulteriori informazioni su come accedere, scrivere ed eseguire query nell&#39;interfaccia utente di Experience Platform, consulta la [[!DNL Query Service] panoramica dell&#39;interfaccia utente](./overview.md).

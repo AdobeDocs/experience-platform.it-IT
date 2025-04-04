@@ -1,10 +1,10 @@
 ---
-description: Questa pagina descrive come eseguire l’autenticazione e iniziare a utilizzare il Adobe Experience Platform Destination SDK. Include istruzioni su come ottenere le credenziali di autenticazione Adobe I/O, il nome di una sandbox e l’autorizzazione di controllo dell’accesso per l’authoring della destinazione.
+description: Questa pagina descrive come eseguire l’autenticazione e iniziare a utilizzare Adobe Experience Platform Destination SDK. Include istruzioni su come ottenere le credenziali di autenticazione di Adobe I/O, il nome di una sandbox e l’autorizzazione di controllo dell’accesso per l’authoring della destinazione.
 title: Guida introduttiva a Destination SDK
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
-source-git-commit: f652faac7d771b590b30f591616b53d0cd2ff1eb
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '594'
 ht-degree: 1%
 
 ---
@@ -13,17 +13,17 @@ ht-degree: 1%
 
 ## Panoramica {#overview}
 
-Questa pagina descrive come eseguire l’autenticazione e iniziare a utilizzare il Adobe Experience Platform Destination SDK. Include istruzioni su come ottenere le credenziali di autenticazione Adobe I/O, il nome di una sandbox e l’autorizzazione di controllo dell’accesso per l’authoring della destinazione.
+Questa pagina descrive come eseguire l’autenticazione e iniziare a utilizzare Adobe Experience Platform Destination SDK. Include istruzioni su come ottenere le credenziali di autenticazione di Adobe I/O, il nome di una sandbox e l’autorizzazione di controllo dell’accesso per l’authoring della destinazione.
 
 ## Terminologia {#terminology}
 
-Questa guida utilizza concetti specifici di Platform, ad esempio organizzazione e sandbox. Consulta il [glossario di Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html) per le definizioni di questi termini. Per informazioni sui termini direttamente correlati a questa funzionalità, consultare il [glossario di Destination SDK](/help/destinations/destination-sdk/glossary.md).
+Questa guida utilizza concetti specifici di Experience Platform, ad esempio organizzazione e sandbox. Consulta il [glossario di Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html) per le definizioni di questi termini. Consulta il [glossario di Destination SDK](/help/destinations/destination-sdk/glossary.md) per informazioni sui termini direttamente correlati a questa funzionalità.
 
 ## Ottenere le credenziali di autenticazione richieste {#obtain-authentication-credentials}
 
-Destination SDK utilizza il gateway [Adobe I/O](https://www.adobe.io/) per l&#39;autenticazione. Per effettuare chiamate API agli endpoint Destination SDK, devi fornire determinate intestazioni nelle chiamate API. Collabora con il team di Adobi Exchange per configurare l&#39;autenticazione per te in [Adobe Developer Console](https://developer.adobe.com/console).
+Destination SDK utilizza il gateway [Adobe I/O](https://www.adobe.io/) per l&#39;autenticazione. Per effettuare chiamate API agli endpoint Destination SDK, devi fornire determinate intestazioni nelle chiamate API. Collabora con il team di Adobe Exchange per configurare l&#39;autenticazione per te in [Adobe Developer Console](https://developer.adobe.com/console).
 
-Per effettuare correttamente le chiamate agli endpoint API Destination SDK, segui l&#39;[esercitazione di autenticazione di Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=it). Avvia l&#39;esercitazione dal passaggio &quot;[Generate an API key, organization ID, and client secret](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)&quot; (Genera una chiave API, un ID organizzazione e un segreto client). Il team di Adobe Exchange gestirà i passaggi precedenti per te. Il completamento del tutorial di autenticazione fornisce i valori per ciascuna delle intestazioni richieste nelle chiamate API Destination SDK, come mostrato di seguito:
+Per effettuare correttamente le chiamate agli endpoint API di Destination SDK, segui l&#39;[esercitazione sull&#39;autenticazione di Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=it). Avvia l&#39;esercitazione dal passaggio &quot;[Generate an API key, organization ID, and client secret](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)&quot; (Genera una chiave API, un ID organizzazione e un segreto client). Il team Adobe Exchange gestirà i passaggi precedenti per te. Il completamento del tutorial di autenticazione fornisce i valori per ciascuna delle intestazioni richieste nelle chiamate API di Destination SDK, come mostrato di seguito:
 
 * `x-api-key: {API_KEY}`, noto anche come ID client
 * `x-gw-ims-org-id: {ORG_ID}`, noto anche come ID organizzazione
@@ -48,19 +48,19 @@ You now have the required authentication headers `x-api-key: {API_KEY}`, `x-gw-i
 
 ## Proprietà della destinazione e sandbox {#destination-ownership}
 
-Tutte le risorse in Experience Platform sono isolate in specifiche sandbox virtuali. Le richieste di Destination SDK richiedono intestazioni che specificano il nome della sandbox in cui si svolge l’operazione:
+Tutte le risorse in Experience Platform sono isolate in specifiche sandbox virtuali. Le richieste a Destination SDK richiedono intestazioni che specificano il nome della sandbox in cui si svolge l’operazione:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-Il team di Adobi Exchange fornisce il nome della sandbox, che è necessario utilizzare nelle chiamate agli endpoint API Destination SDK.
+Il team di Adobe Exchange fornisce il nome della sandbox, che è necessario utilizzare nelle chiamate agli endpoint API di Destination SDK.
 
 ## Controllo degli accessi basato sul ruolo (RBAC) {#rbac}
 
-Per utilizzare gli endpoint API Destination SDK descritti nella [documentazione di riferimento](functionality/configuration-options.md), è necessario disporre dell&#39;autorizzazione per il controllo degli accessi **[!UICONTROL Authoring delle destinazioni]**. Collabora con il team di Adobi Exchange per ottenere questa autorizzazione in [Adobe Admin Console](https://adminconsole.adobe.com/).
+Per utilizzare gli endpoint API di Destination SDK descritti nella [documentazione di riferimento](functionality/configuration-options.md), è necessario disporre dell&#39;autorizzazione di controllo degli accessi **[!UICONTROL Authoring delle destinazioni]**. Collabora con il team di Adobe Exchange per ottenere questa autorizzazione in [Adobe Admin Console](https://adminconsole.adobe.com/).
 
 ![Autorizzazione per l&#39;authoring delle destinazioni](./assets/destination-authoring-permission.png)
 
-Per ulteriori informazioni, leggere i seguenti Experienci Platform di documenti di controllo dell&#39;accesso:
+Per ulteriori informazioni, leggere i seguenti documenti di controllo dell&#39;accesso di Experience Platform:
 
 * [Gestire le autorizzazioni per un profilo di prodotto](/help/access-control/ui/permissions.md)
 * [Autorizzazioni disponibili per Experience Platform](/help/access-control/home.md#permissions)

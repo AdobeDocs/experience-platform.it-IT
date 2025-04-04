@@ -3,7 +3,7 @@ keywords: e-mail;e-mail;destinazioni e-mail;adobe campaign;campaign
 title: Connessione Adobe Campaign
 description: Adobe Campaign è un insieme di soluzioni che consentono di personalizzare e distribuire campagne su tutti i canali online e offline.
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '906'
 ht-degree: 5%
@@ -24,7 +24,7 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 
 | Origine pubblico | Supportato | Descrizione |
 | ---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite il servizio di segmentazione [Experience Platform](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
 | Caricamenti personalizzati | ✓ | Tipi di pubblico [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
@@ -42,9 +42,9 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 ## Indirizzo IP inserisco nell&#39;elenco Consentiti {#allow-list}
 
-Quando configuri le destinazioni di e-mail marketing con l’archiviazione SFTP, l’Adobe inserii nell&#39;elenco Consentiti consiglia di aggiungere determinati intervalli IP al tuo.
+Quando configuri le destinazioni di e-mail marketing con l’archiviazione SFTP, Adobe consiglia di aggiungere determinati intervalli IP al inserisco nell&#39;elenco Consentiti di e-mail marketing.
 
-Se hai bisogno di aggiungere IP Adobi al inserisco nell&#39;elenco Consentiti di, consulta la [inserisce nell&#39;elenco Consentiti di indirizzi IP per le destinazioni SFTP](../cloud-storage/ip-address-allow-list.md).
+Se hai bisogno di aggiungere IP Adobe al tuo inserisco nell&#39;elenco Consentiti di, consulta la [inserisce nell&#39;elenco Consentiti di indirizzo IP per le destinazioni SFTP](../cloud-storage/ip-address-allow-list.md).
 
 ## Connettersi alla destinazione {#connect}
 
@@ -74,8 +74,8 @@ Durante la [configurazione](../../ui/connect-destination.md) di questa destinazi
 * In alternativa, è possibile allegare la chiave pubblica in formato RSA per aggiungere la crittografia con PGP/GPG ai file esportati nella sezione **[!UICONTROL Chiave]**. La chiave pubblica deve essere scritta come stringa con codifica [!DNL Base64].
 * **[!UICONTROL Nome]**: scegliere un nome appropriato per la destinazione.
 * **[!UICONTROL Descrizione]**: immetti una descrizione per la destinazione.
-* **[!UICONTROL Nome Bucket]**: *Per connessioni S3*. Immetti il percorso del bucket S3 in cui [!DNL Platform] depositerà i dati di esportazione come file CSV.
-* **[!UICONTROL Percorso cartella]**: fornisci il percorso nel percorso di archiviazione in cui [!DNL Platform] depositerà i dati di esportazione come file CSV.
+* **[!UICONTROL Nome Bucket]**: *Per connessioni S3*. Immetti il percorso del bucket S3 in cui [!DNL Experience Platform] depositerà i dati di esportazione come file CSV.
+* **[!UICONTROL Percorso cartella]**: fornisci il percorso nel percorso di archiviazione in cui [!DNL Experience Platform] depositerà i dati di esportazione come file CSV.
 * **[!UICONTROL Contenitore]**: *Per connessioni BLOB*. Il contenitore che contiene il BLOB nel percorso della cartella si trova in.
 * **[!UICONTROL Formato file]**: seleziona **CSV** per esportare i file CSV nel percorso di archiviazione.
 
@@ -101,7 +101,7 @@ Quando si attivano i tipi di pubblico in questa destinazione, Adobe consiglia di
 
 ## Dati esportati {#exported-data}
 
-Per [!DNL Adobe Campaign] destinazioni, [!DNL Platform] crea un file `.csv` nel percorso di archiviazione fornito. Per ulteriori informazioni sui file, consulta la sezione [verifica attivazione pubblico](../../ui/activate-batch-profile-destinations.md#verify) nell&#39;esercitazione di attivazione pubblico.
+Per [!DNL Adobe Campaign] destinazioni, [!DNL Experience Platform] crea un file `.csv` nel percorso di archiviazione fornito. Per ulteriori informazioni sui file, consulta la sezione [verifica attivazione pubblico](../../ui/activate-batch-profile-destinations.md#verify) nell&#39;esercitazione di attivazione pubblico.
 
 ## Configurare l’importazione dei dati in Adobe Campaign {#import-data-into-campaign}
 
@@ -111,6 +111,6 @@ Per [!DNL Adobe Campaign] destinazioni, [!DNL Platform] crea un file `.csv` nel 
 >* È necessario pianificare, importare e mappare i segmenti esportati in Adobe Campaign utilizzando [!DNL Campaign] flussi di lavoro. Consulta [Configurazione di un&#39;importazione ricorrente](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html) nella documentazione di Adobe Campaign Classic e [Informazioni sulle attività di gestione dati](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html) nella documentazione di Adobe Campaign Standard.
 >* Il metodo preferito per inviare dati ad Adobe Campaign è tramite [!DNL Amazon S3] o [!DNL Azure Blob].
 
-Dopo aver connesso [!DNL Platform] all&#39;archivio [!DNL Amazon S3] o [!DNL Azure Blob], è necessario configurare l&#39;importazione dei dati dal percorso di archiviazione in Adobe Campaign. Per informazioni su come eseguire questa operazione, consulta le seguenti pagine della documentazione di Adobe Campaign:
+Dopo aver connesso [!DNL Experience Platform] all&#39;archivio [!DNL Amazon S3] o [!DNL Azure Blob], è necessario configurare l&#39;importazione dei dati dal percorso di archiviazione in Adobe Campaign. Per informazioni su come eseguire questa operazione, consulta le seguenti pagine della documentazione di Adobe Campaign:
 * [Introduzione all&#39;importazione ed esportazione dei dati](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/importing-and-exporting-data/get-started-data-import-export.html?lang=it) e [Caricamento dei dati (file)](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/action-activities/data-loading--file-.html) nella documentazione di Adobe Campaign Classic.
 * [Introduzione ai processi e alla gestione dei dati](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/get-started-workflows.html) e [Carica file](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/load-file.html) nella documentazione di Adobe Campaign Standard.

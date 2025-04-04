@@ -3,9 +3,9 @@ title: Creare una connessione Source a un catalogo nell’interfaccia utente
 description: Scopri come creare una connessione sorgente di Chatlio utilizzando l’interfaccia utente di Adobe Experience Platform.
 badge: Beta
 exl-id: 55c10bcb-0332-45ff-970b-272d375b591d
-source-git-commit: 8de45a54607bed17fd79bbed693666beb09c0502
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1156'
+source-wordcount: '1167'
 ht-degree: 1%
 
 ---
@@ -48,25 +48,25 @@ Prima di creare una connessione di origine [!DNL Chatlio], è necessario specifi
 }
 ```
 
-### Crea uno schema di Platform per [!DNL Chatlio] {#create-platform-schema}
+### Crea uno schema Experience Platform per [!DNL Chatlio] {#create-platform-schema}
 
-Devi anche assicurarti di creare uno schema Platform da utilizzare per la tua origine. Leggi l&#39;esercitazione sulla [creazione di uno schema di Platform](../../../../../xdm/schema/composition.md) per i passaggi completi sulla creazione di uno schema.
+Devi anche assicurarti di creare uno schema Experience Platform da utilizzare per la tua origine. Leggi l&#39;esercitazione sulla [creazione di uno schema Experience Platform](../../../../../xdm/schema/composition.md) per i passaggi completi sulla creazione di uno schema.
 
-![L&#39;interfaccia utente di Platform mostra uno schema di esempio per Chatlio](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/schema.png)
+![L&#39;interfaccia utente di Experience Platform mostra un esempio di schema per Chatlio](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/schema.png)
 
 ## Connetti il tuo account [!DNL Chatlio] {#connect-account}
 
-Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini] e visualizzare un catalogo delle origini disponibili in Experience Platform.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini] e visualizzare un catalogo delle origini disponibili in Experience Platform.
 
 Utilizza il menu *[!UICONTROL Categorie]* per filtrare le origini per categoria. In alternativa, immettere un nome di origine nella barra di ricerca per trovare un&#39;origine specifica dal catalogo.
 
 Vai alla categoria [!UICONTROL Automazione marketing] per visualizzare la scheda di origine [!DNL Chatlio]. Per iniziare, selezionare **[!UICONTROL Aggiungi dati]**.
 
-![Catalogo dell&#39;interfaccia utente di Platform con scheda Chatlio](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/catalog.png)
+![Catalogo dell&#39;interfaccia utente di Experience Platform con scheda Chatlio](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/catalog.png)
 
 ## Selezionare i dati {#select-data}
 
-Viene visualizzato il passaggio **[!UICONTROL Seleziona dati]**, che fornisce un&#39;interfaccia per la selezione dei dati da inserire in Platform.
+Viene visualizzato il passaggio **[!UICONTROL Seleziona dati]**, che fornisce un&#39;interfaccia per la selezione dei dati da portare in Experience Platform.
 
 * La parte sinistra dell’interfaccia è un browser che ti consente di visualizzare i flussi di dati disponibili all’interno del tuo account;
 * La parte destra dell’interfaccia consente di visualizzare in anteprima fino a 100 righe di dati da un file JSON.
@@ -93,7 +93,7 @@ Al termine, selezionare **[!UICONTROL Avanti]**.
 
 Viene visualizzato il passaggio [!UICONTROL Mappatura] che fornisce un&#39;interfaccia per mappare i campi sorgente dallo schema sorgente ai campi XDM di destinazione appropriati nello schema di destinazione.
 
-Platform fornisce consigli intelligenti per campi mappati automaticamente in base allo schema o al set di dati di destinazione selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi d’uso. In base alle tue esigenze, puoi scegliere di mappare i campi direttamente o utilizzare le funzioni di preparazione dati per trasformare i dati sorgente in modo da derivare valori calcolati o calcolati. Per i passaggi completi sull&#39;utilizzo dell&#39;interfaccia mapper e dei campi calcolati, consulta la [guida dell&#39;interfaccia utente della preparazione dati](../../../../../data-prep/ui/mapping.md).
+Experience Platform fornisce consigli intelligenti per campi mappati automaticamente in base allo schema o al set di dati di destinazione selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi d’uso. In base alle tue esigenze, puoi scegliere di mappare i campi direttamente o utilizzare le funzioni di preparazione dati per trasformare i dati sorgente in modo da derivare valori calcolati o calcolati. Per i passaggi completi sull&#39;utilizzo dell&#39;interfaccia mapper e dei campi calcolati, consulta la [guida dell&#39;interfaccia utente della preparazione dati](../../../../../data-prep/ui/mapping.md).
 
 Le mappature elencate di seguito sono obbligatorie e devono essere configurate prima di procedere alla fase [!UICONTROL Revisione].
 
@@ -105,7 +105,7 @@ Una volta mappati correttamente i dati di origine, seleziona **[!UICONTROL Avant
 
 ![Passaggio di mappatura del flusso di lavoro di origine.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/mapping.png)
 
-## Controlla {#review}
+## Rivisione {#review}
 
 Viene visualizzato il passaggio **[!UICONTROL Rivedi]**, che consente di rivedere il nuovo flusso di dati prima che venga creato. I dettagli sono raggruppati nelle seguenti categorie:
 
@@ -151,7 +151,7 @@ Selezionare quindi la scheda **[!DNL Behavior]** e aggiungere l&#39;URL del webh
 
 ## Passaggi successivi {#next-steps}
 
-Seguendo questa esercitazione hai configurato correttamente un flusso di dati in streaming per portare i tuoi dati di [!DNL Chatlio] all&#39;Experience Platform. Per monitorare i dati che vengono acquisiti, consulta la guida su [monitoraggio dei flussi di dati in streaming tramite l&#39;interfaccia utente di Platform](../../monitor-streaming.md).
+Seguendo questa esercitazione hai configurato correttamente un flusso di dati in streaming per portare i tuoi dati [!DNL Chatlio] in Experience Platform. Per monitorare i dati che vengono acquisiti, consulta la guida su [monitoraggio dei flussi di dati in streaming tramite l&#39;interfaccia utente di Experience Platform](../../monitor-streaming.md).
 
 ## Risorse aggiuntive {#additional-resources}
 
@@ -165,8 +165,8 @@ Per verificare la corretta configurazione dell&#39;origine e l&#39;acquisizione 
 
 ![Schermata dell&#39;interfaccia utente di Chatlio che mostra la cronologia chat](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/chatlio-chat-history.png)
 
-* Nell&#39;interfaccia utente di Platform, selezionare **[!UICONTROL Visualizza flussi di dati]** accanto al menu della scheda [!DNL Chatlio] nel catalogo delle origini. Selezionare **[!UICONTROL Anteprima set di dati]** per verificare i dati acquisiti per i webhook configurati in [!DNL Chatlio].
+* Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Visualizza flussi di dati]** accanto al menu della scheda [!DNL Chatlio] nel catalogo delle origini. Selezionare **[!UICONTROL Anteprima set di dati]** per verificare i dati acquisiti per i webhook configurati in [!DNL Chatlio].
 
-![Schermata dell&#39;interfaccia utente di Platform che mostra gli eventi acquisiti](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/platform-dataset.png)
+![Schermata dell&#39;interfaccia utente di Experience Platform che mostra gli eventi acquisiti](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/platform-dataset.png)
 
 Per ulteriori informazioni su [!DNL Chatlio], visita la [[!DNL Chatlio] documentazione](https://chatlio.com/docs/) e le [domande frequenti](https://chatlio.com/pricing/#FAQ).

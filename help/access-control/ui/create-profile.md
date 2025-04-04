@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;product profile
+keywords: Experience Platform;home;argomenti popolari;profilo prodotto;product profile
 solution: Experience Platform
 title: Creare un nuovo profilo di prodotto in Adobe Admin Console
 description: Questo documento descrive i passaggi necessari per creare un nuovo profilo di prodotto in Adobe Admin Console. Per iniziare a creare un nuovo profilo, accedi alla scheda Profili di prodotto e fai clic su Nuovo profilo.
 exl-id: 47558f03-c3f7-4ead-affb-fcbfd7f1e918
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '313'
+source-wordcount: '314'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Al termine, selezionare **[!UICONTROL Avanti]**.
 
 ![create-new-product-profile](../images/create-new-product-profile.png)
 
-Nella schermata successiva viene richiesto di scegliere quali servizi Platform includere nel profilo. Seleziona il pulsante di attivazione/disattivazione accanto a un servizio per disabilitarlo. Se un servizio è disabilitato, tutte le funzioni associate a quel servizio non saranno disponibili per gli utenti assegnati a questo profilo di prodotto. Al termine, selezionare **[!UICONTROL Salva]**.
+Nella schermata successiva viene richiesto di scegliere quali servizi Experience Platform includere nel profilo. Seleziona il pulsante di attivazione/disattivazione accanto a un servizio per disabilitarlo. Se un servizio è disabilitato, tutte le funzioni associate a quel servizio non saranno disponibili per gli utenti assegnati a questo profilo di prodotto. Al termine, selezionare **[!UICONTROL Salva]**.
 
 ![enable-services](../images/enable-services.png)
 

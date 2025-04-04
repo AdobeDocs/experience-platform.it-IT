@@ -3,9 +3,9 @@ title: Attivare i tipi di pubblico per Edge Personalization Destinations
 description: Scopri come attivare tipi di pubblico da Adobe Experience Platform a destinazioni di personalizzazione Edge per casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1957'
+source-wordcount: '1961'
 ht-degree: 2%
 
 ---
@@ -85,7 +85,7 @@ Durante la configurazione dello stream di dati, in **[!UICONTROL Adobe Experienc
 
 ![Configurazione dello stream di dati con segmentazione Edge e destinazioni Personalization evidenziate!](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
-Per ulteriori dettagli sulla configurazione di un flusso di dati, seguire le istruzioni descritte nella [documentazione di Platform Web SDK](../../datastreams/configure.md#aep).
+Per ulteriori dettagli sulla configurazione di un flusso di dati, seguire le istruzioni descritte nella [documentazione di Experience Platform Web SDK](../../datastreams/configure.md#aep).
 
 ### Crea un criterio di unione [!DNL Active-On-Edge] {#create-merge-policy}
 
@@ -97,9 +97,9 @@ Dopo aver creato la connessione di destinazione, è necessario creare un criteri
 
 Segui le istruzioni relative alla [creazione di un criterio di unione](../../profile/merge-policies/ui-guide.md#create-a-merge-policy) e assicurati di attivare/disattivare il criterio di unione **[!UICONTROL Attivo su Edge]**.
 
-### Creare un nuovo pubblico in Platform {#create-audience}
+### Creare un nuovo pubblico in Experience Platform {#create-audience}
 
-Dopo aver creato il criterio di unione [!DNL Active-On-Edge], è necessario creare un nuovo pubblico in Platform.
+Dopo aver creato il criterio di unione [!DNL Active-On-Edge], è necessario creare un nuovo pubblico in Experience Platform.
 
 Segui la guida di [audience builder](../../segmentation/ui/segment-builder.md) per creare il nuovo pubblico e assicurati di [assegnargli](../../segmentation/ui/segment-builder.md#merge-policies) il criterio di unione [!DNL Active-On-Edge] creato nel passaggio precedente.
 
@@ -141,7 +141,7 @@ Per selezionare i tipi di pubblico che si desidera attivare nella destinazione, 
 Puoi scegliere tra più tipi di pubblico, a seconda della loro origine:
 
 * **[!UICONTROL Servizio di segmentazione]**: tipi di pubblico generati in Experience Platform dal servizio di segmentazione. Per ulteriori dettagli, consulta la [documentazione sulla segmentazione](../../segmentation/ui/overview.md).
-* **[!UICONTROL Caricamento personalizzato]**: pubblico generato al di fuori di Experience Platform e caricato in Platform come file CSV. Per ulteriori informazioni sui tipi di pubblico esterni, consulta la documentazione su [importazione di un pubblico](../../segmentation/ui/audience-portal.md#import-audience).
+* **[!UICONTROL Caricamento personalizzato]**: pubblico generato al di fuori di Experience Platform e caricato in Experience Platform come file CSV. Per ulteriori informazioni sui tipi di pubblico esterni, consulta la documentazione su [importazione di un pubblico](../../segmentation/ui/audience-portal.md#import-audience).
 * Altri tipi di pubblico, provenienti da altre soluzioni Adobe, ad esempio [!DNL Audience Manager].
 
 ![Selezionare il passaggio dei tipi di pubblico del flusso di lavoro di attivazione evidenziando diversi tipi di pubblico.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
@@ -192,7 +192,7 @@ Nella pagina **[!UICONTROL Pianificazione pubblico]**, seleziona ogni pubblico, 
 
 Seleziona **[!UICONTROL Avanti]** per passare alla pagina [!UICONTROL Rivedi].
 
-## Controlla {#review}
+## Rivisione {#review}
 
 Nella pagina **[!UICONTROL Rivedi]** puoi visualizzare un riepilogo della selezione. Seleziona **[!UICONTROL Annulla]** per interrompere il flusso, **[!UICONTROL Indietro]** per modificare le impostazioni oppure **[!UICONTROL Fine]** per confermare la selezione e iniziare a inviare dati alla destinazione.
 

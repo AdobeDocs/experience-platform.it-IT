@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Domande frequenti su Query Service e Data Distiller
 description: Questo documento contiene domande e risposte comuni relative a Query Service e Data Distiller. Gli argomenti includono esportazione di dati, strumenti di terze parti ed errori PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: ef4c7f20710f56ca0de7c0dfdb99751ff2fe8ebe
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '5024'
+source-wordcount: '5029'
 ht-degree: 0%
 
 ---
@@ -118,7 +118,7 @@ I passaggi seguenti descrivono come visualizzare una vista a tabella di un set d
 - Dopo aver effettuato l&#39;accesso ad Experience Platform, seleziona **[!UICONTROL Set di dati]** nell&#39;area di navigazione a sinistra dell&#39;interfaccia utente per passare a [!UICONTROL Set di dati] dashboard.
 - Si apre la scheda [!UICONTROL Sfoglia] dei set di dati. Puoi utilizzare la barra di ricerca per perfezionare le opzioni disponibili. Seleziona un set di dati dall’elenco visualizzato.
 
-![Dashboard dei set di dati nell&#39;interfaccia utente di Platform con la barra di ricerca e un set di dati evidenziati.](./images/troubleshooting/dataset-selection.png)
+![Dashboard dei set di dati nell&#39;interfaccia utente di Experience Platform con la barra di ricerca e un set di dati evidenziati.](./images/troubleshooting/dataset-selection.png)
 
 - Viene visualizzata la schermata [!UICONTROL Attività set di dati]. Seleziona **[!UICONTROL Anteprima set di dati]** per aprire una finestra di dialogo dello schema XDM e una visualizzazione a tabella dei dati appiattiti dal set di dati selezionato. Ulteriori dettagli sono disponibili nella [anteprima della documentazione di un set di dati](../catalog/datasets/user-guide.md#preview-a-dataset)
 
@@ -287,7 +287,7 @@ SELECT count(1) FROM myTableName
 ### Posso campionare i miei dati?
 
 +++Risposta
-Questa funzione è attualmente in corso di lavorazione. I dettagli saranno disponibili nelle [note sulla versione](../release-notes/latest/latest.md) e nelle finestre di dialogo dell&#39;interfaccia utente di Platform quando la funzione sarà pronta per il rilascio.
+Questa funzione è attualmente in corso di lavorazione. I dettagli saranno disponibili nelle [note sulla versione](../release-notes/latest/latest.md) e nelle finestre di dialogo dell&#39;interfaccia utente di Experience Platform quando la funzione sarà pronta per il rilascio.
 +++
 
 ### Quali funzioni di assistenza sono supportate da Query Service?
@@ -522,7 +522,7 @@ Non esiste alcun limite di concorrenza per le query, poiché le query batch veng
 Sono disponibili funzionalità di monitoraggio e di avviso per verificare le attività e gli stati delle query. Per ulteriori informazioni, vedere i documenti [Integrazione del registro di controllo di Query Service](./data-governance/audit-log-guide.md) e [registri di query](./ui/overview.md#log).
 +++
 
-### Esiste un modo per eseguire il rollback degli aggiornamenti? Ad esempio, in caso di errore o se alcuni calcoli devono essere riconfigurati durante la scrittura di dati in Platform, come deve essere gestito lo scenario?
+### Esiste un modo per eseguire il rollback degli aggiornamenti? Ad esempio, in caso di errore o se alcuni calcoli devono essere riconfigurati durante la scrittura di dati in Experience Platform, come deve essere gestito lo scenario?
 
 +++Risposta
 Attualmente, non sono supportati rollback o aggiornamenti in questo modo.
@@ -563,7 +563,7 @@ Esistono tre approcci per limitare l’accesso. Essi sono i seguenti:
 
 +++
 
-### Una volta che i dati sono stati restituiti da Query Service, vengono eseguiti alcuni controlli da parte di Platform per verificare che non siano stati restituiti dati protetti?
+### Una volta che i dati sono stati restituiti da Query Service, esistono controlli che possono essere eseguiti da Experience Platform per verificare che non siano stati restituiti dati protetti?
 
 - Query Service supporta il controllo degli accessi basato su attributi. Puoi limitare l’accesso ai dati a livello di colonna/foglia e/o di struttura. Per ulteriori informazioni sul controllo degli accessi basato su attributi, consulta la documentazione.
 
@@ -652,7 +652,7 @@ L’infrastruttura back-end viene costantemente migliorata per ottimizzare l’u
 ### Quando si tenta di connettersi a Query Service, la &quot;Crea query&quot; si blocca su &quot;Inizializzazione della connessione in corso...&quot;. Come posso risolvere il problema?
 
 +++Risposta
-Se la &quot;Query di creazione&quot; è bloccata su &quot;Inizializzazione della connessione in corso...&quot;, è probabile che si tratti di un problema di connessione o di sessione. Aggiorna il browser se utilizzi l’interfaccia utente di Platform e riprova.
+Se la &quot;Query di creazione&quot; è bloccata su &quot;Inizializzazione della connessione in corso...&quot;, è probabile che si tratti di un problema di connessione o di sessione. Aggiorna il browser se utilizzi l’interfaccia utente di Experience Platform e riprova.
 +++
 
 ## Esempi di set di dati

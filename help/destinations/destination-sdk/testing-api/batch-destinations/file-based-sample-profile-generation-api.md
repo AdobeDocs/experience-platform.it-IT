@@ -2,9 +2,9 @@
 description: Questa pagina spiega come utilizzare l’endpoint API /sample-profiles di Destination SDK per generare profili di esempio in base a uno schema di origine. Puoi utilizzare questi profili di esempio per testare la configurazione della destinazione basata su file.
 title: Generare profili di esempio in base a uno schema di origine
 exl-id: aea50d2e-e916-4ef0-8864-9333a4eafe80
-source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '654'
 ht-degree: 2%
 
 ---
@@ -24,15 +24,15 @@ Prima di continuare, consulta la [guida introduttiva](../../getting-started.md) 
 
 Prima di poter utilizzare l&#39;endpoint `/sample-profiles`, verificare di soddisfare le seguenti condizioni:
 
-* Hai già una destinazione basata su file creata tramite la Destination SDK e la puoi visualizzare nel [catalogo delle destinazioni](../../../ui/destinations-workspace.md).
-* Nell’interfaccia utente di Experience Platform è stato creato almeno un flusso di attivazione per la destinazione. L&#39;endpoint `/sample-profiles` crea i profili in base allo schema di origine definito nel flusso di attivazione. Per informazioni su come creare un flusso di attivazione, consulta l&#39;[esercitazione sull&#39;attivazione](../../../ui/activate-batch-profile-destinations.md).
-* Per eseguire correttamente la richiesta API, è necessario disporre dell’ID dell’istanza di destinazione corrispondente all’istanza di destinazione da testare. Ottieni dall’URL l’ID dell’istanza di destinazione da utilizzare nella chiamata API per la navigazione di una connessione con la destinazione nell’interfaccia utente di Platform.
+* Hai già una destinazione basata su file creata tramite Destination SDK e la puoi visualizzare nel [catalogo delle destinazioni](../../../ui/destinations-workspace.md).
+* Hai creato almeno un flusso di attivazione per la tua destinazione nell’interfaccia utente di Experience Platform. L&#39;endpoint `/sample-profiles` crea i profili in base allo schema di origine definito nel flusso di attivazione. Per informazioni su come creare un flusso di attivazione, consulta l&#39;[esercitazione sull&#39;attivazione](../../../ui/activate-batch-profile-destinations.md).
+* Per eseguire correttamente la richiesta API, è necessario disporre dell’ID dell’istanza di destinazione corrispondente all’istanza di destinazione da testare. Ottieni dall’URL l’ID dell’istanza di destinazione da utilizzare nella chiamata API per la navigazione di una connessione con la destinazione nell’interfaccia utente di Experience Platform.
 
   ![Immagine dell&#39;interfaccia utente che mostra come ottenere l&#39;ID dell&#39;istanza di destinazione dall&#39;URL.](../../assets/testing-api/get-destination-instance-id.png)
 
 ## Generare profili di esempio per il test della destinazione {#generate-sample-profiles}
 
-È possibile generare profili di esempio in base allo schema di origine effettuando una richiesta di GET all&#39;endpoint `/sample-profiles` con l&#39;ID dell&#39;istanza di destinazione della destinazione da testare.
+È possibile generare profili di esempio in base allo schema di origine effettuando una richiesta GET all&#39;endpoint `/sample-profiles` con l&#39;ID dell&#39;istanza di destinazione della destinazione che si desidera verificare.
 
 **Formato API**
 
@@ -114,7 +114,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con il nume
 
 ## Gestione degli errori API {#api-error-handling}
 
-Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](../../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
+Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](../../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Experience Platform.
 
 ## Passaggi successivi
 

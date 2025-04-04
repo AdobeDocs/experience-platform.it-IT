@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;servizio query;servizio query;query;home;popular topic;query service;Query service;query service;query service;query
+keywords: Experience Platform;home;argomenti popolari;servizio query;servizio query;query;;home;popular topic;query service;Query service;Query service;query
 solution: Experience Platform
 title: Panoramica di Query Service
 description: Scopri il ruolo di Query Service in Experience Platform.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '861'
 ht-degree: 0%
 
 ---
 
 # Panoramica di Query Service
 
-Adobe Experience Platform acquisisce dati da un’ampia varietà di origini. Una delle principali sfide per gli esperti di marketing è quella di dare un senso a questi dati per ottenere informazioni approfondite sui loro clienti. Per eseguire query sui dati in Platform, puoi utilizzare SQL e Adobe Experience Platform Query Service standard. È possibile utilizzare Query Service per unire qualsiasi set di dati nel data lake e acquisire i risultati della query come nuovo set di dati da utilizzare nel reporting, nell&#39;apprendimento automatico o per l&#39;acquisizione in [!DNL Real-Time Customer Profile]. Questo documento fornisce una panoramica del ruolo di Query Service in Experience Platform.
+Adobe Experience Platform acquisisce dati da un’ampia varietà di origini. Una delle principali sfide per gli esperti di marketing è quella di dare un senso a questi dati per ottenere informazioni approfondite sui loro clienti. Per eseguire query sui dati in Experience Platform, puoi utilizzare SQL e Adobe Experience Platform Query Service standard. È possibile utilizzare Query Service per unire qualsiasi set di dati nel data lake e acquisire i risultati della query come nuovo set di dati da utilizzare nel reporting, nell&#39;apprendimento automatico o per l&#39;acquisizione in [!DNL Real-Time Customer Profile]. Questo documento fornisce una panoramica del ruolo di Query Service all’interno di Experience Platform.
 
 Puoi utilizzare Query Service per collegare il percorso di clienti online-offline e comprendere l’attribuzione omni-channel per il brand. Il video seguente mostra come un’azienda che si occupa di esperienze può utilizzare Query Service per risolvere casi d’uso chiave e come funziona Query Service.
 
@@ -32,9 +32,9 @@ Per iniziare rapidamente a utilizzare le funzioni di Query Service, si consiglia
 - [Sintassi SQL in Query Service](./sql/syntax.md)
 - [Creare set di dati derivati con SQL](./data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
 
-## Servizi Query Service e Experience Platform {#experience-platform-services}
+## Servizio query e servizi Experience Platform {#experience-platform-services}
 
-Query Service interagisce e può essere utilizzato con più servizi Experience Platform. Per trarre il massimo dalle funzionalità di Query Service, è necessario acquisire familiarità con questi servizi e con il modo in cui interagiscono con Query Service. La pagina di destinazione della documentazione di Experience Platform [](https://experienceleague.adobe.com/docs/experience-platform.html) fornisce riepiloghi e collegamenti alle funzionalità della piattaforma.
+Query Service interagisce e può essere utilizzato con più servizi Experience Platform. Per trarre il massimo dalle funzionalità di Query Service, è necessario acquisire familiarità con questi servizi e con il modo in cui interagiscono con Query Service. La [pagina di destinazione della documentazione di Experience Platform](https://experienceleague.adobe.com/docs/experience-platform.html) fornisce riepiloghi e collegamenti alle funzionalità della piattaforma.
 
 ### [!DNL Data Science Workspace] {#data-science-workspace}
 
@@ -50,15 +50,15 @@ Query Service offre un approccio flessibile all’elaborazione dei dati, utile p
 
 ### Abbandono navigazione Adobe Analytics {#abandon-browse}
 
-Questo [esempio di abbandono navigazione è incentrato sull&#39;utilizzo dei dati Adobe [!DNL Analytics]](./use-cases/abandoned-browse.md) per creare un pubblico specifico utilizzabile. Query Service soddisfa una logica complessa per la segmentazione per calcolare vari attributi personalizzati da utilizzare a valle o per semplificare notevolmente la modalità di creazione dei tipi di pubblico.
+Questo [esempio di abbandono navigazione è incentrato sull&#39;utilizzo dei dati di Adobe [!DNL Analytics]](./use-cases/abandoned-browse.md) per creare un particolare pubblico actionable. Query Service soddisfa una logica complessa per la segmentazione per calcolare vari attributi personalizzati da utilizzare a valle o per semplificare notevolmente la modalità di creazione dei tipi di pubblico.
 
 ## Generare informazioni approfondite con dashboard personalizzati {#custom-dashboards}
 
-Con Adobe Experience Platform puoi acquisire, archiviare, strutturare e richiamare tutti i set di dati memorizzati, inclusi i dati comportamentali, di gestione delle relazioni con i clienti e i dati dei punti vendita. Utilizzando [!DNL Experience Platform's Query Service], puoi eseguire query su questi set di dati e rispondere a domande specifiche sull&#39;azienda, per poi iniziare a generare informazioni di impatto. Scopri come creare e gestire dashboard personalizzate in cui creare, aggiungere e modificare widget personalizzati per visualizzare le metriche chiave con [dashboard definiti dall&#39;utente](../dashboards/standard-dashboards.md). Puoi anche [personalizzare i tuoi report Real-Time CDP](../dashboards/data-models/cdp-insights-data-model-b2c.md) per i tuoi casi d&#39;uso di marketing e KPI utilizzando query SQL con i modelli dati di Real-time Customer Data Platform Insights.
+Con Adobe Experience Platform puoi acquisire, archiviare, strutturare e richiamare tutti i set di dati memorizzati, inclusi i dati comportamentali, di gestione delle relazioni con i clienti e i dati dei punti vendita. Utilizzando [!DNL Experience Platform's Query Service], puoi eseguire query su questi set di dati e rispondere a domande specifiche sull&#39;azienda, per poi iniziare a generare informazioni di impatto. Scopri come creare e gestire dashboard personalizzate in cui creare, aggiungere e modificare widget personalizzati per visualizzare le metriche chiave con [dashboard definiti dall&#39;utente](../dashboards/standard-dashboards.md). Puoi anche [personalizzare i tuoi report Real-Time CDP](../dashboards/data-models/cdp-insights-data-model-b2c.md) per i tuoi casi d&#39;uso di marketing e KPI utilizzando query SQL con i modelli dati di Real-Time Customer Data Platform Insights.
 
 ## Passaggi successivi e risorse aggiuntive
 
-Dopo aver letto questo documento, hai imparato a utilizzare Query Service e a come funziona all’interno dell’ambito di applicazione più ampio di Experience Platform. Per continuare a conoscere le funzioni di Query Service, ti consigliamo di leggere i seguenti documenti:
+Dopo aver letto questo documento, hai scoperto Query Service e come funziona all’interno dell’ambito più ampio di Experience Platform. Per continuare a conoscere le funzioni di Query Service, ti consigliamo di leggere i seguenti documenti:
 
 - [Guida per gli sviluppatori di Query Service](api/getting-started.md): per ulteriori informazioni sull&#39;interazione con vari endpoint nell&#39;API di Query Service.
 - [Guida all&#39;interfaccia utente di Query Service](ui/overview.md): per ulteriori informazioni sull&#39;utilizzo di Query Editor e dell&#39;interfaccia utente.

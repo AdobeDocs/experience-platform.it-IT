@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione dei problemi;API;profilo unificato;Profilo unificato;unificato;Profilo;rtcp;XDM
-title: Soluzioni personalizzate per l’accessibilità, ad Experience Platform
+keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione dei problemi;API;profilo unificato;profilo unificato;unificato;Profilo;rtcp;XDM
+title: Soluzioni personalizzate per l’accessibilità per Experience Platform
 type: Documentation
 description: Ulteriori informazioni sulle soluzioni di accessibilità personalizzate nell’interfaccia utente di Adobe Experience Platform.
 exl-id: cb5ad99e-8a95-4c9e-aae6-1d0036ecf052
-source-git-commit: 2cf28acb5b0ddb4965b2d5120333659e0ac460bf
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1663'
+source-wordcount: '1664'
 ht-degree: 0%
 
 ---
 
-# Soluzioni di accessibilità personalizzate, ad Experience Platform
+# Soluzioni personalizzate per l’accessibilità per Experience Platform
 
 Adobe Experience Platform viene continuamente migliorato per soddisfare le esigenze di tutti i tipi di utenti e aderire agli standard mondiali che includono le persone con disabilità visive, uditive, di mobilità o di altro tipo. Questo documento illustra le soluzioni di accessibilità personalizzate all’interno dell’interfaccia utente di Experience Platform.
 
 ## Panoramica della pagina principale e dell’interfaccia utente
 
-L’interfaccia utente di Experience Platform soddisfa le proporzioni di contrasto richieste per i componenti normali di testo, grafica e interfaccia utente. I colori dell’interfaccia utente sono stati scelti anche per supportare l’accessibilità per tutti gli utenti, inclusi quelli con disabilità visive.
+L’interfaccia utente di Experience Platform soddisfa le proporzioni di contrasto richieste per i normali componenti testo, grafici e interfaccia utente. I colori dell’interfaccia utente sono stati scelti anche per supportare l’accessibilità per tutti gli utenti, inclusi quelli con disabilità visive.
 
-In Platform, gli elementi dell’interfaccia utente cliccabili o utilizzabili con un puntatore possono essere attivati anche utilizzando una tastiera. Ciò include la navigazione a sinistra, lettori video, tabelle e altro ancora.
+In, è possibile attivare tramite tastiera anche gli elementi dell’interfaccia utente cliccabili o utilizzabili con un puntatore. Ciò include la navigazione a sinistra, lettori video, tabelle e altro ancora.
 
 Experience Platform si impegna a soddisfare gli standard internazionali di accessibilità, tra cui le linee guida per l’accessibilità dei contenuti web 2.1, di livello A e AA, e gli standard web WAI-ARIA (Accessible Rich Internet Applications) dell’iniziativa per l’accessibilità dei contenuti web.
 
@@ -27,27 +27,27 @@ Experience Platform si impegna a soddisfare gli standard internazionali di acces
 
 ## Pannello di navigazione a sinistra
 
-La barra di navigazione a sinistra nell’interfaccia utente di Experience Platform è accessibile da tastiera e fornisce un contrasto del colore negli stati normale, al passaggio del mouse e di selezione che soddisfano gli standard di accessibilità.
+La barra di navigazione a sinistra nell’interfaccia utente di Experience Platform è accessibile da tastiera e fornisce un contrasto del colore in stati normali, al passaggio del mouse e di selezione che soddisfano gli standard di accessibilità.
 
 Dalla schermata Home, gli utenti possono passare alla navigazione a sinistra. Selezionando **Maiusc + Tab** l&#39;utente torna alla schermata iniziale.
 
-![L&#39;Experience Platform ha lasciato la navigazione.](images/left-navigation-select.png)
+![Navigazione a sinistra di Experience Platform.](images/left-navigation-select.png)
 
 Attivando la barra di navigazione a sinistra, **Tab** porta gli utenti all&#39;interazione di espansione e compressione. La possibilità di espandere o comprimere la navigazione a sinistra è attivata con **Invio (restituito)**.
 
-![La navigazione a sinistra dell&#39;Experience Platform è stata compressa.](images/left-navigation-collapse.png)
+![Navigazione a sinistra di Experience Platform compressa.](images/left-navigation-collapse.png)
 
 Attivando la barra di navigazione a sinistra, i tasti freccia su e freccia giù consentono di passare a ciascun elemento della barra di navigazione e di scorrere continuamente (in altre parole, lo stato attivo non si sposta finché l&#39;utente non si sposta dalla barra di navigazione a sinistra). Se questa opzione è selezionata, lo stato attivo viene visualizzato per gli elementi di navigazione. La selezione corrente viene visualizzata con un testo evidenziato e in grassetto. Quando si seleziona un elemento di navigazione a sinistra, **Invio (restituito)** apre l&#39;elemento di interfaccia utente selezionato nel pannello di destra, tuttavia lo stato attivo rimane nella navigazione a sinistra finché l&#39;utente non si sposta.
 
-![L&#39;Experience Platform ha lasciato la navigazione con Origini selezionate.](images/left-navigation-sources.png)
+![Navigazione a sinistra di Experience Platform con Origini selezionate.](images/left-navigation-sources.png)
 
-Alcune funzioni di Platform non sono abilitate per tutti gli utenti. Questi elementi vengono visualizzati nella navigazione ma non possono essere selezionati. Durante la navigazione con una tastiera, questi elementi vengono ignorati durante la navigazione con le frecce e non possono essere selezionati utilizzando **Invio**.
+Alcune funzioni di Experience Platform non sono abilitate per tutti gli utenti. Questi elementi vengono visualizzati nella navigazione ma non possono essere selezionati. Durante la navigazione con una tastiera, questi elementi vengono ignorati durante la navigazione con le frecce e non possono essere selezionati utilizzando **Invio**.
 
-![Impossibile selezionare le sezioni del pannello di navigazione sinistro dell&#39;Experience Platform non abilitate per l&#39;utente.](images/left-navigation-sections-disabled.png)
+![Impossibile selezionare le sezioni del pannello di navigazione sinistro di Experience Platform non abilitate per l&#39;utente.](images/left-navigation-sections-disabled.png)
 
 ## Finestra di dialogo del video incorporato
 
-I video possono essere visualizzati in Experience Platform utilizzando la navigazione da tastiera per evidenziare e selezionare un collegamento video disponibile. Viene aperta una finestra di dialogo con video incorporato nell’interfaccia utente di Platform.
+I video possono essere visualizzati in Experience Platform utilizzando la navigazione da tastiera per evidenziare e selezionare un collegamento video disponibile. Viene aperta una finestra di dialogo con video incorporato nell’interfaccia utente di Experience Platform.
 
 ![Un bordo blu visualizzato intorno a un elemento selezionato per indicare che lo stato attivo è applicato.](images/profile-overview-tab.png)
 
@@ -74,7 +74,7 @@ La finestra di dialogo del video incorporato può essere visualizzata anche util
 
 ## Trascinamento file
 
-Ad Experience Platform, tutte le zone di trascinamento della selezione dei file sono accessibili da tastiera. Se si utilizza **Tab** per evidenziare **[!UICONTROL Scegli i file]** e si utilizza **Invio o la barra spaziatrice** per selezionarla, viene richiamata l&#39;interfaccia utente di selezione dei file del sistema operativo.
+In Experience Platform, tutte le zone di trascinamento della selezione dei file sono accessibili da tastiera. Se si utilizza **Tab** per evidenziare **[!UICONTROL Scegli i file]** e si utilizza **Invio o la barra spaziatrice** per selezionarla, viene richiamata l&#39;interfaccia utente di selezione dei file del sistema operativo.
 
 Dopo il caricamento di un file, l’icona Elimina diventa navigabile da tastiera per rimuovere il file selezionato e caricarne uno nuovo. Gli utenti possono utilizzare **Tab** per concentrarsi sull&#39;icona di eliminazione e **Invio o barra spaziatrice** per selezionarla. Una volta rimosso il file, **[!UICONTROL Scegli i file]** è automaticamente attivo ed è possibile selezionarlo.
 

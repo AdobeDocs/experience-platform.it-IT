@@ -2,9 +2,9 @@
 description: Questa pagina spiega come utilizzare l’endpoint API /testing/destinationInstance per visualizzare i dettagli completi dei risultati del test. Questo endpoint API restituisce lo stesso risultato che si otterrebbe quando si utilizza l’API del servizio Flusso per monitorare i flussi di dati.
 title: Visualizza risultati di attivazione dettagliati
 exl-id: a7b27beb-825e-47fd-8939-f499c3298f68
-source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '547'
 ht-degree: 2%
 
 ---
@@ -31,16 +31,16 @@ Prima di continuare, consulta la [guida introduttiva](../../getting-started.md) 
 
 Prima di poter utilizzare l&#39;endpoint `/testing/destinationInstance`, verificare di soddisfare le seguenti condizioni:
 
-* Hai già una destinazione basata su file creata tramite la Destination SDK e la puoi visualizzare nel [catalogo delle destinazioni](../../../ui/destinations-workspace.md).
-* Nell’interfaccia utente di Experience Platform è stato creato almeno un flusso di attivazione per la destinazione.
-* Per eseguire correttamente la richiesta API, è necessario disporre dell’ID dell’istanza di destinazione corrispondente all’istanza di destinazione da testare. Ottieni dall’URL l’ID dell’istanza di destinazione da utilizzare nella chiamata API per la navigazione di una connessione con la destinazione nell’interfaccia utente di Platform.
+* Hai già una destinazione basata su file creata tramite Destination SDK e la puoi visualizzare nel [catalogo delle destinazioni](../../../ui/destinations-workspace.md).
+* Hai creato almeno un flusso di attivazione per la tua destinazione nell’interfaccia utente di Experience Platform.
+* Per eseguire correttamente la richiesta API, è necessario disporre dell’ID dell’istanza di destinazione corrispondente all’istanza di destinazione da testare. Ottieni dall’URL l’ID dell’istanza di destinazione da utilizzare nella chiamata API per la navigazione di una connessione con la destinazione nell’interfaccia utente di Experience Platform.
 
   ![Immagine dell&#39;interfaccia utente che mostra come ottenere l&#39;ID dell&#39;istanza di destinazione dall&#39;URL.](../../assets/testing-api/get-destination-instance-id.png)
 * Hai precedentemente [testato la configurazione di destinazione](file-based-destination-testing-api.md) e ricevuto una risposta API valida, che include una proprietà `results`. Il valore `results` verrà utilizzato per testare ulteriormente la destinazione.
 
 ## Visualizzare i risultati dettagliati dei test di destinazione {#test-activation-results}
 
-Dopo aver [convalidato la configurazione di destinazione](file-based-destination-testing-api.md), puoi visualizzare i risultati dettagliati dell&#39;attivazione effettuando una richiesta di GET all&#39;endpoint `authoring/testing/destinationInstance/` e fornendo l&#39;ID dell&#39;istanza di destinazione della destinazione che stai testando e gli ID di esecuzione del flusso dei tipi di pubblico attivati.
+Dopo aver [convalidato la configurazione di destinazione](file-based-destination-testing-api.md), puoi visualizzare i risultati dettagliati dell&#39;attivazione effettuando una richiesta GET all&#39;endpoint `authoring/testing/destinationInstance/` e fornendo l&#39;ID dell&#39;istanza di destinazione della destinazione che stai testando e gli ID di esecuzione del flusso dei tipi di pubblico attivati.
 
 È possibile trovare l&#39;URL API completo da utilizzare nella proprietà `results` restituita nella [risposta della chiamata di test di destinazione](file-based-destination-testing-api.md).
 
@@ -213,10 +213,10 @@ La risposta contiene i dettagli completi del flusso di attivazione. È possibile
 
 ## Gestione degli errori API {#api-error-handling}
 
-Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](../../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
+Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](../../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Experience Platform.
 
 ## Passaggi successivi
 
 Dopo aver letto questo documento, sai come verificare la configurazione di destinazione basata su file e visualizzare tutti i dettagli dei risultati dell’attivazione.
 
-Se stai creando una destinazione pubblica, ora puoi [inviare la configurazione di destinazione](../../guides/submit-destination.md) all&#39;Adobe per la revisione.
+Se stai creando una destinazione pubblica, ora puoi [inviare la configurazione di destinazione](../../guides/submit-destination.md) ad Adobe per la revisione.

@@ -2,9 +2,9 @@
 title: Creare una connessione di base BLOB di Azure utilizzando l’API del servizio di flusso
 description: Scopri come connettere Adobe Experience Platform a Azure Blob utilizzando l’API del servizio Flusso.
 exl-id: 4ab8033f-697a-49b6-8d9c-1aadfef04a04
-source-git-commit: d22c71fb77655c401f4a336e339aaf8b3125d1b6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '772'
 ht-degree: 3%
 
 ---
@@ -19,8 +19,8 @@ Questo tutorial illustra i passaggi necessari per creare una connessione di base
 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Origini](../../../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
-* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Origini](../../../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Experience Platform.
+* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Experience Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per creare correttamente una connessione di origine [!DNL Blob] utilizzando l&#39;API [!DNL Flow Service].
 
@@ -48,9 +48,9 @@ Affinché [!DNL Flow Service] possa connettersi all&#39;archivio [!DNL Blob], è
 
 >[!ENDTABS]
 
-### Utilizzo delle API di Platform
+### Utilizzo delle API di Experience Platform
 
-Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida in [guida introduttiva alle API di Platform](../../../../../landing/api-guide.md).
+Per informazioni su come effettuare correttamente chiamate alle API di Experience Platform, consulta la guida introduttiva [alle API di Experience Platform](../../../../../landing/api-guide.md).
 
 ## Creare una connessione di base
 
@@ -58,13 +58,13 @@ Per informazioni su come effettuare correttamente chiamate alle API di Platform,
 >
 >Una volta creata, non è possibile modificare il tipo di autenticazione di una connessione di base [!DNL Blob]. Per modificare il tipo di autenticazione, è necessario creare una nuova connessione di base.
 
-Una connessione di base mantiene le informazioni tra l’origine e Platform, incluse le credenziali di autenticazione dell’origine, lo stato corrente della connessione e l’ID univoco della connessione di base. L’ID della connessione di base consente di esplorare e navigare tra i file dall’interno dell’origine e identificare gli elementi specifici che desideri acquisire, comprese le informazioni relative ai tipi di dati e ai formati.
+Una connessione di base mantiene le informazioni tra l’origine e Experience Platform, incluse le credenziali di autenticazione dell’origine, lo stato corrente della connessione e l’ID univoco della connessione di base. L’ID della connessione di base consente di esplorare e navigare tra i file dall’interno dell’origine e identificare gli elementi specifici che desideri acquisire, comprese le informazioni relative ai tipi di dati e ai formati.
 
 L&#39;origine [!DNL Blob] supporta sia la stringa di connessione che l&#39;autenticazione della firma di accesso condiviso (SAS). Un URI di firma di accesso condiviso (SAS) consente l&#39;autorizzazione delegata protetta per l&#39;account [!DNL Blob]. È possibile utilizzare SAS per creare credenziali di autenticazione con diversi gradi di accesso, in quanto un&#39;autenticazione basata su SAS consente di impostare autorizzazioni, date di inizio e di scadenza, nonché disposizioni a risorse specifiche.
 
 Durante questo passaggio, puoi anche designare le sottocartelle a cui il tuo account avrà accesso definendo il nome del contenitore e il percorso della sottocartella.
 
-Per creare un ID di connessione di base, effettuare una richiesta POST all&#39;endpoint `/connections` fornendo le credenziali di autenticazione [!DNL Blob] come parte dei parametri della richiesta.
+Per creare un ID connessione di base, eseguire una richiesta POST all&#39;endpoint `/connections` fornendo le credenziali di autenticazione [!DNL Blob] come parte dei parametri della richiesta.
 
 **Formato API**
 
@@ -130,7 +130,7 @@ In caso di esito positivo, la risposta restituisce i dettagli della connessione 
 
 >[!TAB Autenticazione URI SAS]
 
-Per creare una connessione [!DNL Blob] utilizzando l&#39;URI della firma di accesso condiviso, eseguire una richiesta POST all&#39;API [!DNL Flow Service] fornendo i valori per l&#39;elemento [!DNL Blob] `sasUri`.
+Per creare una connessione [!DNL Blob] utilizzando l&#39;URI della firma di accesso condiviso, eseguire una richiesta POST all&#39;API [!DNL Flow Service] fornendo i valori per [!DNL Blob] `sasUri`.
 
 +++Richiesta
 

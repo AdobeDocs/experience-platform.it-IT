@@ -2,9 +2,9 @@
 title: Connettore di destinazione Adobe Commerce
 description: Scopri come i commercianti di Adobe Commerce e Real-Time CDP possono personalizzare l’esperienza di acquisto distribuendo contenuti e promozioni del sito altamente pertinenti, personalizzati per il pubblico dei clienti e creati e gestiti in Real-Time CDP.
 exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '697'
 ht-degree: 3%
 
 ---
@@ -25,7 +25,7 @@ Per utilizzare questa connessione di destinazione, assicurati di avere accesso a
 - [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/). Con l&#39;accesso alla console per sviluppatori, puoi visualizzare le informazioni sull&#39;account del servizio e sulle credenziali necessarie per [completare la configurazione](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html#configure-the-extension) dell&#39;estensione in Adobe Commerce.
 - [Adobe Commerce Cloud versione 2.4.4 o successiva](https://business.adobe.com/products/magento/magento-commerce.html)
 
-Ad Experience Platform, crea quanto segue:
+In Experience Platform, crea quanto segue:
 
 - [Schema](../../../xdm/schema/composition.md). Lo schema creato rappresenta i dati che intendi acquisire da Adobe Commerce. [Ulteriori informazioni](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/update-xdm.html) su come creare uno schema contenente gruppi di campi specifici di Commerce.
 - [Set di dati](../../../catalog/datasets/user-guide.md#create). Un set di dati è un costrutto di archiviazione e gestione per una raccolta di dati. Crea questo set di dati dallo schema creato in precedenza.
@@ -41,7 +41,7 @@ Dopo aver completato i prerequisiti, connettersi alla destinazione [!DNL Commerc
 
 Per connettersi alla destinazione [!DNL Adobe Commerce]:
 
-1. Nell&#39;interfaccia [Platform](https://experience.adobe.com/platform/), vai a **[!UICONTROL Destinazioni]** > **[!UICONTROL Catalogo]**.
+1. Nell&#39;interfaccia [Experience Platform](https://experience.adobe.com/platform/), vai a **[!UICONTROL Destinazioni]** > **[!UICONTROL Catalogo]**.
 1. Seleziona **[!UICONTROL Personalization]**.
 1. Seleziona la destinazione Adobe Commerce per evidenziarla, quindi seleziona **[!UICONTROL Configurazione]**.
 1. Segui i passaggi descritti nell&#39;[esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md).
@@ -52,7 +52,7 @@ Durante la [configurazione](../../ui/connect-destination.md) di questa destinazi
 
 - **[!UICONTROL Nome]**: immettere il nome preferito per la destinazione.
 - **[!UICONTROL Descrizione]**: immetti una descrizione per la destinazione. Ad esempio, puoi indicare per quale campagna stai utilizzando questa destinazione. Questo campo è facoltativo.
-- **[!UICONTROL Alias di integrazione]**: questo valore viene inviato all&#39;SDK Web Experience Platform come nome di oggetto JSON.
+- **[!UICONTROL Alias di integrazione]**: questo valore viene inviato al SDK Web Experience Platform come nome di oggetto JSON.
 - **[!UICONTROL ID flusso di dati]**: determina quale flusso di dati della raccolta dati contiene i tipi di pubblico inclusi nella risposta alla pagina. Il menu a discesa mostra solo gli stream di dati in cui è abilitata la configurazione della destinazione. Per ulteriori dettagli, vedere [Configurazione di uno stream di dati](../../../datastreams/overview.md).
 
 ### Abilita avvisi {#enable-alerts}

@@ -5,7 +5,7 @@ title: Creare una connessione Shopify Source nell’interfaccia utente
 type: Tutorial
 description: Scopri come creare una connessione sorgente Shopify utilizzando l’interfaccia utente di Adobe Experience Platform.
 exl-id: 527cac95-3d9a-4089-98e4-66d746641b85
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '445'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Crea una connessione sorgente [!DNL Shopify] nell&#39;interfaccia utente
 
-I connettori Source in Adobe Experience Platform consentono di acquisire dati di origine esterna in base a una pianificazione. Questo tutorial illustra i passaggi per la creazione di un connettore di origine [!DNL Shopify] tramite l&#39;interfaccia utente [!DNL Platform].
+I connettori Source in Adobe Experience Platform consentono di acquisire dati di origine esterna in base a una pianificazione. Questo tutorial illustra i passaggi per la creazione di un connettore di origine [!DNL Shopify] tramite l&#39;interfaccia utente [!DNL Experience Platform].
 
 ## Introduzione
 
@@ -29,7 +29,7 @@ Se disponi già di una connessione [!DNL Shopify], puoi saltare il resto del doc
 
 ### Raccogli le credenziali richieste
 
-Per accedere all&#39;account [!DNL Shopify] in [!DNL Platform], è necessario fornire i seguenti valori:
+Per accedere all&#39;account [!DNL Shopify] in [!DNL Experience Platform], è necessario fornire i seguenti valori:
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
@@ -40,7 +40,7 @@ Per ulteriori informazioni su come iniziare, consulta questo [[!DNL Shopify] doc
 
 ## Connetti il tuo account [!DNL Shopify]
 
-Dopo aver raccolto le credenziali richieste, puoi seguire i passaggi seguenti per collegare l&#39;account [!DNL Shopify] a [!DNL Platform].
+Dopo aver raccolto le credenziali richieste, puoi seguire i passaggi seguenti per collegare l&#39;account [!DNL Shopify] a [!DNL Experience Platform].
 
 Accedi a [Adobe Experience Platform](https://platform.adobe.com), quindi seleziona **[!UICONTROL Origini]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro **[!UICONTROL Origini]**. Nella schermata **[!UICONTROL Catalogo]** sono visualizzate diverse origini per le quali è possibile creare un account con.
 
@@ -66,4 +66,4 @@ Per connettere un account esistente, seleziona l&#39;account [!DNL Shopify] con 
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai stabilito una connessione al tuo account [!DNL Shopify]. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per inserire dati eCommerce in [!DNL Platform]](../../dataflow/ecommerce.md).
+Seguendo questa esercitazione, hai stabilito una connessione al tuo account [!DNL Shopify]. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per inserire dati eCommerce in [!DNL Experience Platform]](../../dataflow/ecommerce.md).

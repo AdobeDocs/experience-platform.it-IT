@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;Oracle DB;oracle db
 solution: Experience Platform
-title: Creare un Oracle di connessione DB Source nell’interfaccia utente
+title: Creare una connessione Oracle DB Source nell’interfaccia utente
 type: Tutorial
-description: Scopri come creare una connessione sorgente del database Oracle utilizzando l’interfaccia utente di Adobe Experience Platform.
+description: Scopri come creare una connessione sorgente di Oracle DB utilizzando l’interfaccia utente di Adobe Experience Platform.
 exl-id: 4ca6ecc6-0382-4cee-acc5-1dec7eeb9443
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '459'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
 # Crea una connessione di origine [!DNL Oracle DB] nell&#39;interfaccia utente
 
-I connettori Source in Adobe Experience Platform consentono di acquisire dati di origine esterna in base a una pianificazione. Questo tutorial illustra i passaggi per la creazione di un connettore di origine [!DNL Oracle DB] tramite l&#39;interfaccia utente [!DNL Platform].
+I connettori Source in Adobe Experience Platform consentono di acquisire dati di origine esterna in base a una pianificazione. Questo tutorial illustra i passaggi per la creazione di un connettore di origine [!DNL Oracle DB] tramite l&#39;interfaccia utente [!DNL Experience Platform].
 
 ## Introduzione
 
@@ -29,7 +29,7 @@ Se disponi già di una connessione [!DNL Oracle DB] valida, puoi saltare il rest
 
 ### Raccogli le credenziali richieste
 
-Per accedere all&#39;account [!DNL Oracle DB] in [!DNL Platform], è necessario fornire i seguenti valori:
+Per accedere all&#39;account [!DNL Oracle DB] in [!DNL Experience Platform], è necessario fornire i seguenti valori:
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
@@ -40,17 +40,17 @@ Per ulteriori informazioni su come iniziare, consulta [questo documento di Oracl
 
 ## Connetti il tuo account [!DNL Oracle DB]
 
-Dopo aver raccolto le credenziali richieste, puoi seguire i passaggi seguenti per collegare il tuo account [!DNL Oracle DB] per connettersi a [!DNL Platform].
+Dopo aver raccolto le credenziali richieste, puoi seguire i passaggi seguenti per collegare il tuo account [!DNL Oracle DB] per connettersi a [!DNL Experience Platform].
 
 Accedi a [Adobe Experience Platform](https://platform.adobe.com), quindi seleziona **[!UICONTROL Origini]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro **[!UICONTROL Origini]**. Nella schermata **[!UICONTROL Catalogo]** sono visualizzate diverse origini per le quali è possibile creare un account con.
 
 Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
 
-Nella categoria **[!UICONTROL Database]**, selezionare **[!UICONTROL Database Oracle]**. Se è la prima volta che usi questo connettore, seleziona **[!UICONTROL Configura]**. In caso contrario, selezionare **[!UICONTROL Aggiungi dati]** per creare un nuovo connettore [!DNL Oracle DB].
+Nella categoria **[!UICONTROL Database]**, selezionare **[!UICONTROL Oracle DB]**. Se è la prima volta che usi questo connettore, seleziona **[!UICONTROL Configura]**. In caso contrario, selezionare **[!UICONTROL Aggiungi dati]** per creare un nuovo connettore [!DNL Oracle DB].
 
 ![catalogo](../../../../images/tutorials/create/oracle/catalog.png)
 
-Viene visualizzata la pagina **[!UICONTROL Connetti a Oracle DB]**. In questa pagina è possibile utilizzare nuove credenziali o credenziali esistenti.
+Viene visualizzata la pagina **[!UICONTROL Connetti ad Oracle DB]**. In questa pagina è possibile utilizzare nuove credenziali o credenziali esistenti.
 
 ### Nuovo account
 
@@ -66,4 +66,4 @@ Per connettere un account esistente, seleziona l&#39;account [!DNL Oracle DB] co
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai stabilito una connessione al tuo account [!DNL Oracle DB]. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per inserire dati in [!DNL Platform]](../../dataflow/databases.md).
+Seguendo questa esercitazione, hai stabilito una connessione al tuo account [!DNL Oracle DB]. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per inserire dati in [!DNL Experience Platform]](../../dataflow/databases.md).

@@ -3,10 +3,10 @@ title: Guida introduttiva all’inoltro degli eventi
 description: Segui questa esercitazione passo per passo per iniziare a utilizzare l’inoltro degli eventi in Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: e9f98e1f94aa6ae2ecf29940912d296813611d4c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '887'
-ht-degree: 76%
+source-wordcount: '893'
+ht-degree: 72%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 76%
 
 >[!NOTE]
 >
->L’inoltro di eventi è una funzione a pagamento inclusa nelle offerte Adobe Real-time Customer Data Platform Connections, Prime o Ultimate.
+>L’inoltro di eventi è una funzione a pagamento inclusa nelle offerte Adobe Real-Time Customer Data Platform Connections, Prime o Ultimate.
 
 >[!NOTE]
 >
@@ -27,7 +27,7 @@ Per utilizzare Adobe Experience Platform, i dati devono essere inviati ad Adobe 
 * [API del server di rete Edge](/help/server-api/overview.md)
 
 >[!NOTE]
->Platform Web SDK e Platform Mobile SDK non richiedono l’implementazione tramite tag in Adobe Experience Platform. Tuttavia, l’utilizzo di tag per distribuire questi SDK è l’approccio consigliato.
+>Experience Platform Web SDK e Experience Platform Mobile SDK non richiedono la distribuzione tramite tag in Adobe Experience Platform. Tuttavia, l’utilizzo di tag per distribuire questi SDK è l’approccio consigliato.
 
 Dopo aver inviato i dati a Edge Network, è possibile attivare le soluzioni Adobe a cui inviare i dati. Per inviare dati a una soluzione non Adobe, impostala nell’inoltro degli eventi.
 
@@ -69,7 +69,7 @@ Nell&#39;area di lavoro **[!UICONTROL Tag]** creare una proprietà di tipo **[!U
 1. Seleziona **[!UICONTROL Salva]**.
 
 Dopo aver creato la proprietà, passa alla scheda **[!UICONTROL Ambienti]** per la nuova proprietà e annota
-gli ID dell’ambiente. Se l&#39;organizzazione di Adobe Adobe utilizzata nel flusso di dati è diversa da quella utilizzata nell&#39;inoltro degli eventi, è possibile copiare l&#39;ID ambiente dalla scheda **[!UICONTROL Ambienti]** e incollarlo durante la creazione di un flusso di dati. In alternativa, è possibile selezionare l’ambiente da un menu a discesa.
+gli ID dell’ambiente. Se l&#39;organizzazione Adobe utilizzata nel flusso di dati è diversa dall&#39;organizzazione Adobe utilizzata nell&#39;inoltro degli eventi, puoi copiare l&#39;ID ambiente dalla scheda **[!UICONTROL Ambienti]** e incollarlo durante la creazione di un flusso di dati. In alternativa, è possibile selezionare l’ambiente da un menu a discesa.
 
 ## Creare un flusso di dati
 
@@ -100,17 +100,17 @@ Quindi configura Edge Network per inviare i dati all’inoltro di eventi e ad al
 
 Dopo la configurazione, annota gli ID ambiente per la nuova proprietà.
 
-## Configura l’estensione Platform Web SDK per inviare dati allo stream di dati creato in precedenza
+## Configura l’estensione Experience Platform Web SDK per inviare dati allo stream di dati creato in precedenza
 
 Crea la tua proprietà nell&#39;area di lavoro **[!UICONTROL Tag]**, quindi passa a **[!UICONTROL Estensioni]** e seleziona l&#39;estensione Experience Platform Web SDK dal catalogo per configurarla e installarla.
 
 Per informazioni dettagliate sulle opzioni di configurazione, consulta la [documentazione dell&#39;estensione Web SDK](../../extensions/client/web-sdk/overview.md).
 
-## Creare una regola di tag per inviare dati all’SDK per web di Platform
+## Creare una regola di tag per inviare dati ad Experience Platform Web SDK
 
 Dopo aver eseguito le operazioni descritte qui sopra, puoi creare tutti gli elementi che sfruttano sia l’inoltro degli eventi che i tag ma che richiedono una sola richiesta dalla pagina, come le definizioni di dati, le regole e così via.
 
-Crea una regola di caricamento della pagina utilizzando l’estensione Platform Web SDK e il tipo di azione &quot;Invia evento&quot;:
+Crea una regola di caricamento della pagina utilizzando l’estensione Experience Platform Web SDK e il tipo di azione &quot;Invia evento&quot;:
 
 1. Apri la scheda **[!UICONTROL Regole]**, quindi seleziona **[!UICONTROL Crea nuova regola]**.
 
@@ -120,7 +120,7 @@ Crea una regola di caricamento della pagina utilizzando l’estensione Platform 
 
 1. Aggiungi un evento scegliendo un&#39;estensione e uno dei tipi di evento disponibili per tale estensione, quindi configura le impostazioni dell&#39;evento. Ad esempio, seleziona **[!UICONTROL Core - Window Loaded]**.
 
-1. Aggiungi un&#39;azione utilizzando l&#39;estensione Platform SDK Web. Seleziona **[!UICONTROL Invia evento]** dall&#39;elenco **[!UICONTROL Tipo di azione]**, scegli l’istanza desiderata (istanza di Alloy già configurata in precedenza), quindi seleziona un elemento dati da aggiungere al blocco dati XDM all’interno del riscontro di Alloy.
+1. Aggiungi un’azione utilizzando l’estensione Experience Platform Web SDK. Seleziona **[!UICONTROL Invia evento]** dall&#39;elenco **[!UICONTROL Tipo di azione]**, scegli l’istanza desiderata (istanza di Alloy già configurata in precedenza), quindi seleziona un elemento dati da aggiungere al blocco dati XDM all’interno del riscontro di Alloy.
 
 1. Lascia le altre impostazioni predefinite per questo esempio, quindi seleziona **[!UICONTROL Salva]**.
 

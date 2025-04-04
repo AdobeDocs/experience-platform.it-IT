@@ -3,9 +3,9 @@ title: Panoramica di Google PubSub Source
 description: Scopri come collegare Google PubSub a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 7c78173d-2639-47cb-8935-77fb7841a121
-source-git-commit: 84d09038ded1f35269ebf67c6bc1a5dacaafe4ac
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '829'
 ht-degree: 0%
 
 ---
@@ -16,13 +16,13 @@ ht-degree: 0%
 >
 >L&#39;origine [!DNL Google PubSub] è disponibile nel catalogo delle origini per gli utenti che hanno acquistato Real-Time CDP Ultimate.
 
-Adobe Experience Platform fornisce connettività nativa per i provider di cloud come [!DNL AWS], [!DNL Google Cloud Platform] e [!DNL Azure], consentendo di inserire in Platform i dati di tali sistemi per utilizzarli nei servizi e nelle destinazioni downstream.
+Adobe Experience Platform fornisce connettività nativa per i provider cloud come [!DNL AWS], [!DNL Google Cloud Platform] e [!DNL Azure], consentendo di inserire dati da questi sistemi in Experience Platform per l&#39;utilizzo in servizi e destinazioni downstream.
 
-Le origini di archiviazione cloud possono inserire i dati in Platform senza dover scaricare, formattare o caricare. I dati acquisiti possono essere formattati come XDM JSON, XDM Parquet o delimitati. Ogni fase del processo viene integrata nel flusso di lavoro delle origini. Platform consente di inserire dati da [!DNL Google PubSub] in tempo reale.
+Le origini di archiviazione cloud possono inserire i dati in Experience Platform senza dover scaricare, formattare o caricare. I dati acquisiti possono essere formattati come XDM JSON, XDM Parquet o delimitati. Ogni fase del processo viene integrata nel flusso di lavoro delle origini. Experience Platform consente di inserire dati da [!DNL Google PubSub] in tempo reale.
 
 ## Prerequisiti {#prerequisites}
 
-Questa sezione descrive i prerequisiti che è necessario completare prima di collegare l&#39;account [!DNL Google PubSub] all&#39;Experience Platform.
+Questa sezione descrive i prerequisiti da completare prima di collegare l&#39;account [!DNL Google PubSub] ad Experience Platform.
 
 ### Crea account del servizio {#create-service-account}
 
@@ -49,7 +49,7 @@ Per generare le chiavi per l&#39;account di servizio, selezionare l&#39;intestaz
 
 ![Finestra Aggiungi chiave in Google Developer Console](../../images/tutorials/create/google-pubsub/add-key.png)
 
-Se l&#39;operazione ha esito positivo, verrà visualizzato un messaggio che indica che la chiave privata è stata salvata nel computer e che verrà scaricato un file. È quindi possibile utilizzare il contenuto del file come credenziali durante la creazione dell&#39;account [!DNL Google PubSub] in Experience Platform.
+Se l&#39;operazione ha esito positivo, verrà visualizzato un messaggio che indica che la chiave privata è stata salvata nel computer e che verrà scaricato un file. È quindi possibile utilizzare il contenuto di questo file come credenziali durante la creazione dell&#39;account [!DNL Google PubSub] in Experience Platform.
 
 ### Concedere le autorizzazioni a livello di argomento e di abbonamento {#grant-permissions}
 
@@ -81,9 +81,9 @@ Abilita **[!DNL exactly one delivery]**. Questa configurazione informa [!DNL Goo
 >
 >È possibile creare un solo flusso di dati di origine per ogni sottoscrizione [!DNL Google PubSub]. Il riutilizzo di un abbonamento, anche tra sandbox diverse, comporta la perdita di dati.
 
-## Connetti [!DNL Google PubSub] a Experience Platform
+## Connetti [!DNL Google PubSub] ad Experience Platform
 
-La documentazione seguente fornisce informazioni su come connettere [!DNL Google PubSub] a Platform tramite API o tramite l&#39;interfaccia utente:
+La documentazione seguente fornisce informazioni su come connettere [!DNL Google PubSub] ad Experience Platform tramite API o tramite l&#39;interfaccia utente:
 
 ### Utilizzo delle API
 

@@ -3,10 +3,10 @@ title: Creare una connessione Source Azure Event Hubs nell’interfaccia utente
 description: Scopri come creare una connessione di origine Azure Event Hubs utilizzando l’interfaccia utente di Adobe Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 7e67e213-8ccb-4fa5-b09f-ae77aba8614c
-source-git-commit: 1256f0c76b29edad4808fc4be1d61399bfbae8fa
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1097'
-ht-degree: 2%
+source-wordcount: '1098'
+ht-degree: 3%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->L&#39;origine [!DNL Azure Event Hubs] è disponibile nel catalogo delle origini per gli utenti che hanno acquistato Real-time Customer Data Platform Ultimate.
+>L&#39;origine [!DNL Azure Event Hubs] è disponibile nel catalogo delle origini per gli utenti che hanno acquistato Real-Time Customer Data Platform Ultimate.
 
 Leggere questo tutorial per scoprire come creare un account [!DNL Azure Event Hubs] utilizzando l&#39;interfaccia utente di Adobe Experience Platform.
 
@@ -77,11 +77,11 @@ Per ulteriori informazioni su [!DNL Azure Active Directory], leggere la [Guida d
 
 >[!ENDTABS]
 
-Dopo aver raccolto le credenziali richieste, puoi seguire i passaggi seguenti per collegare l&#39;account [!DNL Event Hubs] all&#39;Experience Platform.
+Dopo aver raccolto le credenziali richieste, puoi seguire i passaggi seguenti per collegare l&#39;account [!DNL Event Hubs] ad Experience Platform.
 
 ## Connetti il tuo account [!DNL Event Hubs]
 
-Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Nella schermata [!UICONTROL Catalogo] sono visualizzate diverse origini con cui è possibile creare un account.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Nella schermata [!UICONTROL Catalogo] sono visualizzate diverse origini con cui è possibile creare un account.
 
 Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
 
@@ -142,4 +142,4 @@ Per creare un account [!DNL Event Hubs] con autenticazione Azure Active Director
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai connesso il tuo account [!DNL Event Hubs] a Experience Platform. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per inserire dati dall&#39;archiviazione cloud in Experience Platform](../../dataflow/streaming/cloud-storage-streaming.md).
+Seguendo questa esercitazione, hai connesso il tuo account [!DNL Event Hubs] ad Experience Platform. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per portare dati dall&#39;archiviazione cloud in Experience Platform](../../dataflow/streaming/cloud-storage-streaming.md).

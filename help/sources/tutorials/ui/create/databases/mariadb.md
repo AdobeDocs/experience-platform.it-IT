@@ -5,7 +5,7 @@ title: Creare una connessione Source MariaDB nell’interfaccia utente
 type: Tutorial
 description: Scopri come creare una connessione sorgente Maria DB utilizzando l’interfaccia utente di Adobe Experience Platform.
 exl-id: 259ca112-01f1-414a-bf9f-d94caf4c69df
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Crea una connessione sorgente [!DNL MariaDB] nell&#39;interfaccia utente
 
-I connettori Source in Adobe Experience Platform consentono di acquisire dati di origine esterna in base a una pianificazione. Questo tutorial descrive i passaggi necessari per creare un connettore di origine Maria DB utilizzando l&#39;interfaccia utente [!DNL Platform].
+I connettori Source in Adobe Experience Platform consentono di acquisire dati di origine esterna in base a una pianificazione. Questo tutorial descrive i passaggi necessari per creare un connettore di origine Maria DB utilizzando l&#39;interfaccia utente [!DNL Experience Platform].
 
 ## Introduzione
 
@@ -29,7 +29,7 @@ Se disponi già di una connessione [!DNL MariaDB], puoi saltare il resto del doc
 
 ### Raccogli le credenziali richieste
 
-Per accedere al tuo account [!DNL MariaDB] su [!DNL Platform], devi fornire il seguente valore:
+Per accedere al tuo account [!DNL MariaDB] su [!DNL Experience Platform], devi fornire il seguente valore:
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
@@ -39,7 +39,7 @@ Per ulteriori informazioni su come iniziare, consulta questo [[!DNL MariaDB] doc
 
 ## Connetti il tuo account [!DNL Maria DB]
 
-Dopo aver raccolto le credenziali richieste, puoi seguire i passaggi seguenti per collegare l&#39;account [!DNL Maria DB] a [!DNL Platform].
+Dopo aver raccolto le credenziali richieste, puoi seguire i passaggi seguenti per collegare l&#39;account [!DNL Maria DB] a [!DNL Experience Platform].
 
 Accedi a [Adobe Experience Platform](https://platform.adobe.com), quindi seleziona **[!UICONTROL Origini]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro **[!UICONTROL Origini]**. Nella schermata **[!UICONTROL Catalogo]** sono visualizzate diverse origini per le quali è possibile creare un account con.
 
@@ -63,4 +63,4 @@ Per connettere un account esistente, seleziona l&#39;account [!DNL MariaDB] con 
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai stabilito una connessione al tuo account [!DNL MariaDB]. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per inserire dati in [!DNL Platform]](../../dataflow/databases.md).
+Seguendo questa esercitazione, hai stabilito una connessione al tuo account [!DNL MariaDB]. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per inserire dati in [!DNL Experience Platform]](../../dataflow/databases.md).

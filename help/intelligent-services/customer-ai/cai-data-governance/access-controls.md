@@ -5,10 +5,10 @@ feature: Customer AI
 title: Controllo dell’accesso per IA per l’analisi dei clienti
 description: Questo documento fornisce informazioni sul controllo degli accessi basato su attributi per IA per l’analisi dei clienti.
 exl-id: 02e3b6a4-304a-4ac4-b07c-010531101feb
-source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '519'
-ht-degree: 0%
+source-wordcount: '520'
+ht-degree: 4%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Questa funzionalità consente di etichettare i campi dello schema Experience Data Model (XDM) con etichette che definiscono gli ambiti di utilizzo organizzativi o dei dati. Parallelamente, gli amministratori possono utilizzare l’interfaccia di amministrazione di utenti e ruoli per definire i criteri di accesso relativi ai campi dello schema XDM e gestire in modo migliore l’accesso concesso a utenti o gruppi di utenti (utenti interni, esterni o di terze parti). Inoltre, il controllo dell’accesso basato su attributi consente agli amministratori di gestire l’accesso a segmenti specifici.
 
-Tramite il controllo degli accessi basato su attributi, gli amministratori dell’organizzazione possono controllare l’accesso degli utenti sia ai dati personali sensibili (SPD) che alle informazioni personali (PII) in tutti i flussi di lavoro e le risorse di Platform. Gli amministratori possono definire ruoli utente con accesso solo a campi e dati specifici che corrispondono a tali campi.
+Tramite il controllo dell’accesso basato su attributi, gli amministratori dell’organizzazione possono controllare l’accesso degli utenti sia ai dati personali sensibili (SPD) che alle informazioni personali (PII) in tutti i flussi di lavoro e le risorse di Experience Platform. Gli amministratori possono definire ruoli utente con accesso solo a campi e dati specifici che corrispondono a tali campi.
 
 A causa del controllo dell’accesso basato su attributi, alcuni campi e funzionalità avrebbero accesso limitato e non sarebbero disponibili per alcuni modelli di servizio di IA per l’analisi dei clienti. Alcuni esempi includono &quot;Identity&quot;, &quot;Score Definition&quot; e &quot;Clone&quot;.
 
@@ -46,4 +46,4 @@ Consulta la documentazione per scoprire [come assegnare le autorizzazioni per il
 
 ## Passaggi successivi
 
-La lettura di questa guida ti ha introdotto i principi fondamentali del controllo degli accessi in [!DNL Experience Platform]. È ora possibile passare alla [guida utente per il controllo degli accessi](../overview.md) per i passaggi dettagliati su come utilizzare [!DNL Admin Console] per creare profili di prodotto e assegnare autorizzazioni per [!DNL Platform].
+La lettura di questa guida ti ha introdotto i principi fondamentali del controllo degli accessi in [!DNL Experience Platform]. È ora possibile passare alla [guida utente per il controllo degli accessi](../overview.md) per i passaggi dettagliati su come utilizzare [!DNL Admin Console] per creare profili di prodotto e assegnare autorizzazioni per [!DNL Experience Platform].

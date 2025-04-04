@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;controllo degli accessi;controllo degli accessi basato su attributi;ABAC
+keywords: Experience Platform;home;argomenti popolari;controllo degli accessi;controllo degli accessi basato su attributi;ABAC;;home;popular topic;access control;attribute-based access control;ABAC
 title: Etichette di gestione del controllo dell'accesso basate su attributi
 description: Questo documento fornisce informazioni sulla gestione delle etichette tramite l’interfaccia Autorizzazioni in Adobe Experience Cloud
 exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
-source-git-commit: 71a2e91b6c23021aa11c19d84096d6b23f0de112
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '247'
+source-wordcount: '249'
 ht-degree: 24%
 
 ---
 
-# Gestisci etichette
+# Gestire le etichette
 
 >[!NOTE]
 >
 >Per creare o visualizzare attributi calcolati con campi contenenti una determinata etichetta, è necessario avere accesso a tale etichetta.
 
-Le etichette consentono di categorizzare set di dati e campi in base ai criteri di utilizzo e di accesso applicabili a tali dati. Le etichette possono essere applicate in qualsiasi momento, offrendo flessibilità nella scelta di come gestire i dati. Le best practice incoraggiano i dati di etichettatura non appena vengono acquisiti in Platform o non appena i dati diventano disponibili per l’utilizzo in Platform.
+Le etichette consentono di categorizzare set di dati e campi in base ai criteri di utilizzo e di accesso applicabili a tali dati. Le etichette possono essere applicate in qualsiasi momento, offrendo flessibilità nella scelta di come gestire i dati. Le best practice incoraggiano i dati di etichettatura non appena vengono acquisiti in Experience Platform o non appena i dati diventano disponibili per l’utilizzo in Experience Platform.
 
 ## Creare una nuova etichetta {#create-new-label}
 

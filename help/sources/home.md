@@ -2,20 +2,20 @@
 keywords: Experience Platform;home;argomenti popolari;connettori di origine;connettore di origine;origini;origini dati;origine dati;connessione origine dati;;home;popular topic;source connectors;source connector;sources;data source connection
 solution: Experience Platform
 title: Panoramica dei connettori Source
-description: Adobe Experience Platform consente di acquisire i dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
+description: Adobe Experience Platform consente di acquisire dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Experience Platform. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 0a6a9fe759d71fd62e3eaf5c93a091614f3c76a0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1552'
+source-wordcount: '1557'
 ht-degree: 2%
 
 ---
 
 # Panoramica dei connettori Source
 
-Adobe Experience Platform consente di acquisire i dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archivi basati su cloud, database e molte altre.
+Adobe Experience Platform consente di acquisire dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Experience Platform. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archivi basati su cloud, database e molte altre.
 
-[!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da diverse origini in Platform. Il servizio fornisce un’interfaccia utente e un’API RESTful che consentono di impostare facilmente le connessioni sorgente a vari provider di dati. Queste connessioni di origine ti consentono di autenticare i sistemi di terze parti, impostare i tempi per le esecuzioni dell’acquisizione e gestire la velocità effettiva di acquisizione dei dati.
+[!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da diverse origini in Experience Platform. Il servizio fornisce un’interfaccia utente e un’API RESTful che consentono di impostare facilmente le connessioni sorgente a vari provider di dati. Queste connessioni di origine ti consentono di autenticare i sistemi di terze parti, impostare i tempi per le esecuzioni dell’acquisizione e gestire la velocità effettiva di acquisizione dei dati.
 
 Con Experience Platform, puoi centralizzare i dati raccolti da origini diverse e utilizzare le informazioni acquisite per fare di più.
 
@@ -84,7 +84,7 @@ Experience Platform fornisce supporto per l’acquisizione dei dati da una piatt
 
 ### Archiviazione cloud {#cloud-storage}
 
-Le origini di archiviazione cloud possono inserire i tuoi dati in Platform senza dover scaricare, formattare o caricare. I dati acquisiti possono essere formattati come XDM JSON, XDM Parquet o delimitati. Ogni passaggio del processo viene integrato nel flusso di lavoro Origini tramite l’interfaccia utente di. Per ulteriori informazioni, consulta i seguenti documenti correlati:
+Le origini di archiviazione cloud possono inserire i tuoi dati in Experience Platform senza dover scaricare, formattare o caricare. I dati acquisiti possono essere formattati come XDM JSON, XDM Parquet o delimitati. Ogni passaggio del processo viene integrato nel flusso di lavoro Origini tramite l’interfaccia utente di. Per ulteriori informazioni, consulta i seguenti documenti correlati:
 
 - [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Azure Blob]](connectors/cloud-storage/blob.md) [!BADGE Batch]{type=Informative}
@@ -228,7 +228,7 @@ Con il controllo degli accessi basato su attributi, puoi applicare configurazion
 
 >[!TIP]
 >
->Il controllo degli accessi basato su attributi funziona come segue: **i ruoli** vengono creati per categorizzare i tipi di utenti che interagiscono con l&#39;istanza Platform. **Le etichette** sono applicate a **ruoli** per designare l&#39;accesso di quel determinato ruolo. **Le etichette** sono applicate anche a risorse come campi e segmenti dello schema. Per consentire a un utente di accedere a determinati campi e segmenti dello schema, è necessario aggiungerli a *un ruolo con la stessa etichetta assegnata alla risorsa su cui è stata eseguita la query*. Per ulteriori informazioni, leggere la [guida end-to-end per il controllo degli accessi basato su attributi](../access-control/abac/end-to-end-guide.md).
+>Il controllo degli accessi basato su attributi funziona come segue: **i ruoli** vengono creati per categorizzare i tipi di utenti che interagiscono con l&#39;istanza Experience Platform. **Le etichette** sono applicate a **ruoli** per designare l&#39;accesso di quel determinato ruolo. **Le etichette** sono applicate anche a risorse come campi e segmenti dello schema. Per consentire a un utente di accedere a determinati campi e segmenti dello schema, è necessario aggiungerli a *un ruolo con la stessa etichetta assegnata alla risorsa su cui è stata eseguita la query*. Per ulteriori informazioni, leggere la [guida end-to-end per il controllo degli accessi basato su attributi](../access-control/abac/end-to-end-guide.md).
 
 - Applica le etichette ai campi dello schema per definire l’accesso a specifici campi dello schema nella tua organizzazione. Una volta stabilito l’accesso a campi dello schema specifici, gli utenti potranno creare mappature solo per i campi a cui hanno accesso.
 - Gli utenti che non dispongono dei ruoli appropriati non potranno creare o aggiornare flussi di dati con mappature che coinvolgono campi schema inaccessibili. Inoltre, gli utenti non autorizzati non possono aggiornare, eliminare, abilitare o disabilitare flussi di dati esistenti con campi schema inaccessibili.

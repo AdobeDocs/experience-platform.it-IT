@@ -1,27 +1,27 @@
 ---
-title: Collega il tuo account Phoenix utilizzando l'interfaccia utente Experience Platform
-description: Scopri come collegare il tuo account Phoenix e portare i dati dal tuo database Phoenix ad Experience Platform utilizzando l'interfaccia utente.
+title: Collega il tuo account Phoenix tramite l'interfaccia utente di Experience Platform
+description: Scopri come collegare il tuo account Phoenix e portare i dati dal database Phoenix ad Experience Platform utilizzando l’interfaccia utente.
 exl-id: 2ed469bc-1c72-4f04-a5f0-6a0bb519a6c2
-source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '614'
 ht-degree: 1%
 
 ---
 
-# Connetti il tuo account [!DNL Phoenix] ad Experience Platform utilizzando l&#39;interfaccia utente
+# Connetti il tuo account [!DNL Phoenix] ad Experience Platform tramite l&#39;interfaccia utente
 
 >[!WARNING]
 >
 >L&#39;origine [!DNL Phoenix] diventerà obsoleta alla fine di giugno 2025.
 
-Questo tutorial illustra i passaggi necessari per collegare l&#39;account [!DNL Phoenix] e portare all&#39;Experience Platform i dati dal database [!DNL Phoenix].
+Questo tutorial illustra i passaggi necessari per collegare l&#39;account [!DNL Phoenix] e trasferire i dati dal database [!DNL Phoenix] ad Experience Platform.
 
 ## Introduzione
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): framework standardizzato in base al quale Experience Platform organizza i dati sull&#39;esperienza del cliente.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): framework standardizzato tramite il quale Experience Platform organizza i dati sull&#39;esperienza del cliente.
    * [Nozioni di base sulla composizione dello schema](../../../../../xdm/schema/composition.md): scopri i blocchi predefiniti di base degli schemi XDM, inclusi i principi chiave e le best practice nella composizione dello schema.
    * [Esercitazione sull&#39;editor di schemi](../../../../../xdm/tutorials/create-schema-ui.md): scopri come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;editor di schemi.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
@@ -30,7 +30,7 @@ Se disponi già di un account [!DNL Phoenix] autenticato, puoi saltare il resto 
 
 ### Raccogli le credenziali richieste
 
-Per accedere all&#39;account [!DNL Phoenix] su Experience Platform, è necessario fornire i seguenti valori:
+Per accedere al tuo account [!DNL Phoenix] su Experience Platform, devi fornire i seguenti valori:
 
 | Credenziali | Descrizione |
 | --- | --- |
@@ -43,11 +43,11 @@ Per accedere all&#39;account [!DNL Phoenix] su Experience Platform, è necessari
 
 Per ulteriori informazioni su come iniziare, consulta [questo [!DNL Phoenix] documento](https://python-phoenixdb.readthedocs.io/en/latest/api.html).
 
-Dopo aver raccolto le credenziali richieste, puoi seguire i passaggi seguenti per collegare l&#39;account [!DNL Phoenix] all&#39;Experience Platform.
+Dopo aver raccolto le credenziali richieste, puoi seguire i passaggi seguenti per collegare l&#39;account [!DNL Phoenix] ad Experience Platform.
 
 ## Connetti il tuo account [!DNL Phoenix]
 
-Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro delle origini. Nella schermata *[!UICONTROL Catalogo]* sono visualizzate diverse origini disponibili nel catalogo delle origini Experienci Platform.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro delle origini. Nella schermata *[!UICONTROL Catalogo]* sono visualizzate diverse origini disponibili nel catalogo delle origini di Experience Platform.
 
 Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare un’origine specifica utilizzando l’opzione di ricerca.
 

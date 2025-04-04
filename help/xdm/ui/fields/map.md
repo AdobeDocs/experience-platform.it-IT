@@ -2,9 +2,9 @@
 title: Definire i campi mappa nell’interfaccia utente
 description: Scopri come definire un campo mappa nell’interfaccia utente di Experience Platform.
 exl-id: 657428a2-f184-4d7c-b657-4fc60d77d5c6
-source-git-commit: ee27fc42a1ee23ef650d320df64e5970a84d0d38
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: '455'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ Adobe Experience Platform consente di personalizzare completamente la struttura 
 
 Nell’Editor schema puoi anche definire i campi mappa per modellare strutture di dati flessibili e dinamiche o archiviare una raccolta di coppie chiave-valore.
 
-Quando definisci un nuovo campo nell&#39;interfaccia utente di Platform, utilizza il menu a discesa **[!UICONTROL Tipo]** e seleziona &quot;**[!UICONTROL Mappa]**&quot; dall&#39;elenco.
+Quando definisci un nuovo campo nell&#39;interfaccia utente di Experience Platform, utilizza il menu a discesa **[!UICONTROL Tipo]** e seleziona &quot;**[!UICONTROL Mappa]**&quot; dall&#39;elenco.
 
 ![Editor schemi con elenco a discesa Tipo e valore mappa evidenziato.](../../images/ui/fields/special/map.png)
 
@@ -44,10 +44,10 @@ Assicurati di utilizzare campi di tipo mappa solo quando assolutamente necessari
 
 >[!NOTE]
 >
->L’interfaccia utente di Platform presenta limitazioni su come estrarre le chiavi dei campi di tipo mappa. Mentre i campi di tipo oggetto possono essere espansi, le mappe vengono visualizzate come un singolo campo. I campi di mapping creati tramite l&#39;API Schema Registry che non sono tipi di dati stringa o interi vengono visualizzati come tipi di dati &quot;[!UICONTROL Complex]&quot;.
+>L’interfaccia utente di Experience Platform presenta limitazioni su come estrarre le chiavi dei campi di tipo mappa. Mentre i campi di tipo oggetto possono essere espansi, le mappe vengono visualizzate come un singolo campo. I campi di mapping creati tramite l&#39;API Schema Registry che non sono tipi di dati stringa o interi vengono visualizzati come tipi di dati &quot;[!UICONTROL Complex]&quot;.
 
 ## Passaggi successivi
 
-Dopo aver letto questo documento, ora puoi definire i campi mappa nell’interfaccia utente di Platform. È possibile utilizzare solo classi e gruppi di campi per aggiungere campi agli schemi. Per ulteriori informazioni su come gestire queste risorse nell&#39;interfaccia utente, consulta le guide sulla creazione e la modifica di [classi](../resources/classes.md) e [gruppi di campi](../resources/field-groups.md).
+Dopo aver letto questo documento, ora puoi definire i campi mappa nell’interfaccia utente di Experience Platform. È possibile utilizzare solo classi e gruppi di campi per aggiungere campi agli schemi. Per ulteriori informazioni su come gestire queste risorse nell&#39;interfaccia utente, consulta le guide sulla creazione e la modifica di [classi](../resources/classes.md) e [gruppi di campi](../resources/field-groups.md).
 
 Per ulteriori informazioni sulle funzionalità dell&#39;area di lavoro [!UICONTROL Schemi], vedere la panoramica dell&#39;area di lavoro [[!UICONTROL Schemi]](../overview.md).

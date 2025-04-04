@@ -2,9 +2,9 @@
 title: Panoramica sullo sviluppo di estensioni
 description: Scopri i componenti principali di diverse estensioni di tag e il processo di sviluppo delle stesse in Adobe Experience Platform.
 exl-id: b72df3df-f206-488d-a690-0f086973c5b6
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '935'
+source-wordcount: '938'
 ht-degree: 23%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 23%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
-Uno degli obiettivi principali dei tag in Adobe Experience Platform è la creazione di un ecosistema aperto che consenta anche ai tecnici che non fanno parte di Adobe di pubblicare funzionalità aggiuntive sui loro siti web e sulle loro applicazioni mobili. Questa operazione viene eseguita tramite le estensioni tag. Una volta installata un’estensione su una proprietà tag, la relativa funzionalità diventa disponibile per tutti gli utenti della proprietà.
+Uno degli obiettivi principali dei tag in Adobe Experience Platform è la creazione di un ecosistema aperto che consenta anche ai tecnici che non fanno parte di Adobe di pubblicare funzionalità aggiuntive sui propri siti web e applicazioni mobili. Questa operazione viene eseguita tramite le estensioni tag. Una volta installata un’estensione su una proprietà tag, la relativa funzionalità diventa disponibile per tutti gli utenti della proprietà.
 
 Questo documento illustra i componenti principali di un’estensione e fornisce i collegamenti a ulteriore documentazione per aiutarti a fornire una guida nel processo di sviluppo.
 
@@ -37,13 +37,13 @@ Ad esempio, se stai creando un tipo di azione denominato &quot;send beacon&quot;
 
 ### Viste
 
-Una visualizzazione è un file HTML che può essere caricato in un elemento [`iframe`](https://developer.mozilla.org/it-IT/docs/Web/HTML/Element/iframe) all&#39;interno dell&#39;applicazione dei tag, in particolare tramite l&#39;interfaccia utente di Platform e l&#39;interfaccia utente di Data Collection. Per comunicare con l’applicazione, la vista deve includere uno script fornito dall’estensione e deve essere conforme a una piccola API.
+Una visualizzazione è un file HTML che può essere caricato in un elemento [`iframe`](https://developer.mozilla.org/it-IT/docs/Web/HTML/Element/iframe) all&#39;interno dell&#39;applicazione dei tag, in particolare tramite l&#39;interfaccia utente di Experience Platform e l&#39;interfaccia utente di Data Collection. Per comunicare con l’applicazione, la vista deve includere uno script fornito dall’estensione e deve essere conforme a una piccola API.
 
 La configurazione è il file di visualizzazione più importante per qualsiasi estensione. Per ulteriori informazioni, consulta la sezione sulle [configurazioni delle estensioni](#configuration).
 
-Non sono previste restrizioni per le modalità di utilizzo delle librerie nelle viste. In altre parole, è possibile utilizzare jQuery, Underscore, React, Angular, Bootstrap o altri. Tuttavia, si consiglia comunque di conferire all’estensione un aspetto simile a quello dell’interfaccia utente.
+Non sono previste restrizioni per le modalità di utilizzo delle librerie nelle viste. In altre parole, puoi utilizzare jQuery, Underscore, React, Angular, Bootstrap o altri. Tuttavia, si consiglia comunque di conferire all’estensione un aspetto simile a quello dell’interfaccia utente.
 
-Si consiglia di inserire tutti i file relativi alla vista (HTML, CSS, JavaScript) in una singola sottodirectory, isolata dai file del modulo libreria. In `extension.json` è possibile descrivere la posizione di questa sottodirectory di visualizzazione. Platform metterà a disposizione questa sottodirectory (e solo questa sottodirectory) dai propri server web.
+Si consiglia di inserire tutti i file relativi alla vista (HTML, CSS, JavaScript) in una singola sottodirectory, isolata dai file del modulo libreria. In `extension.json` è possibile descrivere la posizione di questa sottodirectory di visualizzazione. Experience Platform distribuirà quindi questa sottodirectory (e solo questa sottodirectory) dai propri server web.
 
 ## Componenti libreria {#components}
 
@@ -55,7 +55,7 @@ A seconda che tu stia sviluppando un’estensione web o un’estensione edge, i 
 
 Nelle estensioni web, le regole vengono attivate attraverso gli eventi, che possono eseguire azioni specifiche se viene soddisfatta una determinata serie di condizioni. Per ulteriori informazioni, consulta la panoramica sul [flusso dei moduli nelle estensioni web](./web/flow.md).
 
-Oltre ai [moduli core](./web/core.md) forniti dall&#39;Adobe, è possibile definire i seguenti componenti libreria nelle estensioni Web:
+Oltre ai [moduli core](./web/core.md) forniti da Adobe, è possibile definire i seguenti componenti libreria nelle estensioni Web:
 
 * [Eventi](./web/event-types.md)
 * [Condizioni](./web/condition-types.md)
@@ -93,4 +93,4 @@ Per ulteriori informazioni, consulta la guida sulle [configurazioni delle estens
 
 ## Invio di estensioni
 
-Una volta completata la creazione dell’estensione, puoi inviarla per essere elencata nel catalogo delle estensioni in Platform. Per ulteriori informazioni, consulta la [panoramica del processo di invio dell&#39;estensione](./submit/overview.md).
+Una volta completata la creazione dell’estensione, puoi inviarla per essere elencata nel catalogo delle estensioni in Experience Platform. Per ulteriori informazioni, consulta la [panoramica del processo di invio dell&#39;estensione](./submit/overview.md).

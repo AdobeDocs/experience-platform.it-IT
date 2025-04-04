@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;qualità dei dati;qualità;convalida supportata;convalida;convalida supportata;
+keywords: Experience Platform;home;argomenti comuni;qualità dei dati;qualità;convalida supportata;convalida;convalida supportata;
 solution: Experience Platform
 title: Qualità dei dati
 description: Il seguente documento fornisce un riepilogo dei controlli e dei comportamenti di convalida supportati per l’acquisizione in batch e in streaming in Adobe Experience Platform.
 exl-id: 7ef40859-235a-4759-9492-c63e5fd80c8e
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '427'
 ht-degree: 5%
@@ -54,7 +54,7 @@ Per l’acquisizione in streaming vengono eseguite le seguenti convalide:
 | Set di dati | Assicura che il set di dati sia specificato, abilitato e non sia stato rimosso. |
 | Header | Verifica che l’intestazione sia specificata e valida. |
 
-Ulteriori informazioni sul modo in cui [!DNL Platform] monitora e convalida i dati sono disponibili nella [documentazione dei flussi di dati di monitoraggio](./monitor-data-ingestion.md).
+Ulteriori informazioni sul modo in cui [!DNL Experience Platform] monitora e convalida i dati sono disponibili nella [documentazione dei flussi di dati di monitoraggio](./monitor-data-ingestion.md).
 
 ## Convalida del valore identità
 

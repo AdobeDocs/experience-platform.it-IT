@@ -2,9 +2,9 @@
 title: Flussi di dati bozza nell’interfaccia utente
 description: Scopri come salvare i flussi di dati come bozza e pubblicarli in un secondo momento, quando utilizzi l’area di lavoro origini.
 exl-id: ee00798e-152a-4618-acb3-db40f2f55fae
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '593'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,11 @@ Questo documento descrive come salvare i flussi di dati quando si utilizza l’a
 
 Questo documento richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Origini](../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
+* [Origini](../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Experience Platform.
 
 ## Salvare un flusso di dati come bozza
 
-Puoi mettere in pausa l’avanzamento della creazione del flusso di dati in qualsiasi momento dopo aver selezionato i dati da portare in Platform.
+Puoi mettere in pausa l’avanzamento della creazione del flusso di dati in qualsiasi momento dopo aver selezionato i dati da inserire in Experience Platform.
 
 Ad esempio, se desideri salvare l&#39;avanzamento durante il passaggio dei dettagli del flusso di dati, seleziona **[!UICONTROL Salva come bozza]**.
 
@@ -51,7 +51,7 @@ Puoi accedere ai flussi di dati bozza anche tramite il catalogo dei flussi di da
 
 ![Elenco di flussi di dati per una determinata organizzazione.](../../images/tutorials/draft/catalog-access.png)
 
-## Publish flusso di dati bozza
+## Pubblicare il flusso di dati della bozza
 
 Sei tornato al passaggio [!UICONTROL Aggiungi dati] del flusso di lavoro origini, in cui puoi riconfermare il formato dei dati e continuare a progredire nel flusso di dati.
 

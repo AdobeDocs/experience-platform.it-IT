@@ -1,11 +1,11 @@
 ---
 keywords: etichetta dirigibile;destinazione dirigibile
 title: Connessione tag dirigibili
-description: Trasmetti facilmente i dati del pubblico Adobe a Airship come tag del pubblico per il targeting all’interno di Airship.
+description: Trasmetti facilmente i dati del pubblico di Adobe a Airship come tag del pubblico per il targeting all’interno di Airship.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '970'
+source-wordcount: '972'
 ht-degree: 2%
 
 ---
@@ -42,7 +42,7 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 
 | Origine pubblico | Supportato | Descrizione |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite il servizio di segmentazione [Experience Platform](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
 | Caricamenti personalizzati | ✓ | Tipi di pubblico [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
@@ -60,13 +60,13 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 ## Gruppi di tag
 
-Il concetto di pubblico in Adobe Experience Platform è simile a [Tag](https://docs.airship.com/guides/audience/tags/) in Airship, con lievi differenze nell&#39;implementazione. Questa integrazione mappa lo stato dell&#39;appartenenza [di un utente in un segmento di Experience Platform](../../../xdm/field-groups/profile/segmentation.md) alla presenza o meno di un tag [!DNL Airship]. Ad esempio, in un pubblico di Platform in cui `xdm:status` diventa `realized`, il tag viene aggiunto al canale [!DNL Airship] o all&#39;utente con nome a cui è mappato questo profilo. Se `xdm:status` diventa `exited`, il tag viene rimosso.
+Il concetto di pubblico in Adobe Experience Platform è simile a [Tag](https://docs.airship.com/guides/audience/tags/) in Airship, con lievi differenze nell&#39;implementazione. Questa integrazione associa lo stato dell&#39;[appartenenza di un utente in un segmento di Experience Platform](../../../xdm/field-groups/profile/segmentation.md) alla presenza o meno di un tag [!DNL Airship]. Ad esempio, in un pubblico di Experience Platform in cui `xdm:status` diventa `realized`, il tag viene aggiunto al canale [!DNL Airship] o all&#39;utente con nome a cui è mappato questo profilo. Se `xdm:status` diventa `exited`, il tag viene rimosso.
 
 Per abilitare questa integrazione, creare un *gruppo di tag* in [!DNL Airship] denominato `adobe-segments`.
 
 >[!IMPORTANT]
 >
->Durante la creazione del nuovo gruppo di tag **Non selezionare** il pulsante di opzione &quot;[!DNL Allow these tags to be set only from your server]&quot;. In questo modo l’integrazione dei tag di Adobe avrà esito negativo.
+>Durante la creazione del nuovo gruppo di tag **Non selezionare** il pulsante di opzione &quot;[!DNL Allow these tags to be set only from your server]&quot;. In questo modo l’integrazione dei tag Adobe avrà esito negativo.
 
 Per istruzioni sulla creazione del gruppo di tag, consulta [Gestisci gruppi di tag](https://docs.airship.com/tutorials/manage-project/messaging/tag-groups).
 
@@ -92,7 +92,7 @@ I rivenditori o le piattaforme di intrattenimento possono creare profili utente 
 
 Attivare messaggi uno-a-uno in tempo reale quando gli utenti entrano o escono da un pubblico specifico all’interno di Adobe Experience Platform.
 
-Ad esempio, un rivenditore imposta in Platform un pubblico specifico per il brand dei jeans. Il rivenditore può attivare un messaggio mobile non appena qualcuno imposta la propria preferenza jeans a una marca specifica.
+Ad esempio, un retailer imposta un pubblico specifico per il marchio jeans in Experience Platform. Che retailer ora può attivare un messaggio mobile non appena qualcuno imposta la propria preferenza jeans a un marchio specifico.
 
 ## Connettersi alla destinazione {#connect}
 

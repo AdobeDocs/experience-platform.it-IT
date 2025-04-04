@@ -2,9 +2,9 @@
 title: Best practice per l’organizzazione delle risorse dati in Query Service
 description: Questo documento illustra un modo logico di organizzare i dati per facilitarne l’utilizzo con Query Service.
 exl-id: 12d6af99-035a-4f80-b7c0-c6413aa50697
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '786'
+source-wordcount: '787'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Questo documento fornisce indicazioni sulle best practice per organizzare le risorse dati, tra cui set di dati, viste e tabelle temporanee da utilizzare con Adobe Experience Platform Query Service. Vengono inoltre fornite informazioni su come strutturare i dati e su come accedere, aggiornare ed eliminare tali informazioni.
 
-È importante organizzare in modo logico le risorse dati in Platform [!DNL Data Lake] man mano che aumentano. Query Service estende i costrutti SQL che consentono di raggruppare in modo logico le risorse di dati all’interno di una sandbox. Questo metodo di organizzazione consente la condivisione di risorse di dati tra schemi senza la necessità di spostarli fisicamente.
+È importante organizzare in modo logico le risorse dati in Experience Platform [!DNL Data Lake] man mano che aumentano. Query Service estende i costrutti SQL che consentono di raggruppare in modo logico le risorse di dati all’interno di una sandbox. Questo metodo di organizzazione consente la condivisione di risorse di dati tra schemi senza la necessità di spostarli fisicamente.
 
 ## Introduzione
 

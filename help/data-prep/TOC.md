@@ -4,10 +4,10 @@ user-guide-title: Guida alla preparazione dei dati
 user-guide-description: Prepara i dati per l’acquisizione in Adobe Experience Platform e scopri come la preparazione dati può aiutarti a mapparli, trasformarli e convalidarli.
 feature: Data Prep
 role: Developer
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '61'
-ht-degree: 60%
+source-wordcount: '62'
+ht-degree: 66%
 
 ---
 
@@ -27,4 +27,4 @@ ht-degree: 60%
 - [Set di mappatura](mapping-set.md)
 - [Upsert di flusso](upserts.md)
 - [Guida alla risoluzione dei problemi](troubleshooting-guide.md)
-- [Note sulla versione della piattaforma](https://experienceleague.adobe.com/it/docs/experience-platform/release-notes/latest)
+- [Note sulla versione di Experience Platform](https://experienceleague.adobe.com/it/docs/experience-platform/release-notes/latest)

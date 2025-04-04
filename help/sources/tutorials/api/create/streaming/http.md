@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;connessione streaming;crea
 title: Creare una connessione in streaming API HTTP utilizzando l’API del servizio Flusso
 description: Questo tutorial illustra come creare una connessione in streaming utilizzando l’origine API HTTP per i dati grezzi e XDM mediante l’API del servizio Flusso
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1646'
+source-wordcount: '1656'
 ht-degree: 4%
 
 ---
@@ -21,14 +21,14 @@ Questo tutorial utilizza l&#39;[[!DNL Flow Service] API](https://www.adobe.io/ex
 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): framework standardizzato tramite il quale [!DNL Platform] organizza i dati dell&#39;esperienza.
+* [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): framework standardizzato tramite il quale [!DNL Experience Platform] organizza i dati dell&#39;esperienza.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): fornisce un profilo consumer unificato in tempo reale basato su dati aggregati provenienti da più origini.
 
 Inoltre, la creazione di una connessione in streaming richiede uno schema XDM di destinazione e un set di dati. Per informazioni su come crearli, leggere l&#39;esercitazione su [dati record in streaming](../../../../../ingestion/tutorials/streaming-record-data.md) o l&#39;esercitazione su [dati serie temporali in streaming](../../../../../ingestion/tutorials/streaming-time-series-data.md).
 
-### Utilizzo delle API di Platform
+### Utilizzo delle API di Experience Platform
 
-Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida in [guida introduttiva alle API di Platform](../../../../../landing/api-guide.md).
+Per informazioni su come effettuare correttamente chiamate alle API di Experience Platform, consulta la guida introduttiva [alle API di Experience Platform](../../../../../landing/api-guide.md).
 
 ## Creare una connessione di base
 
@@ -36,9 +36,9 @@ Una connessione di base specifica l’origine e contiene le informazioni necessa
 
 ### Connessione non autenticata
 
-Le connessioni non autenticate sono la connessione streaming standard che puoi creare quando desideri inviare dati a Platform.
+Le connessioni non autenticate sono la connessione streaming standard che puoi creare quando desideri inviare dati ad Experience Platform.
 
-Per creare una connessione di base non autenticata, effettuare una richiesta POST all&#39;endpoint `/connections` fornendo un nome per la connessione, il tipo di dati e l&#39;ID di specifica della connessione API HTTP. Questo ID è `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
+Per creare una connessione di base non autenticata, eseguire una richiesta POST all&#39;endpoint `/connections` fornendo un nome per la connessione, il tipo di dati e l&#39;ID di specifica della connessione API HTTP. Questo ID è `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
 
 **Formato API**
 
@@ -130,7 +130,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 201 con i detta
 
 ### Connessione autenticata
 
-Le connessioni autenticate devono essere utilizzate quando è necessario distinguere tra record provenienti da fonti attendibili e non attendibili. Gli utenti che desiderano inviare informazioni con dati personali (PII, Personally Identifiable Information) devono creare una connessione autenticata durante lo streaming di informazioni su Platform.
+Le connessioni autenticate devono essere utilizzate quando è necessario distinguere tra record provenienti da fonti attendibili e non attendibili. Gli utenti che desiderano inviare informazioni con dati personali (PII, Personally Identifiable Information) devono creare una connessione autenticata durante lo streaming di informazioni in Experience Platform.
 
 Per creare una connessione di base autenticata, è necessario includere il parametro `authenticationRequired` nella richiesta e specificarne il valore come `true`. Durante questo passaggio, puoi anche fornire un ID sorgente per la connessione di base autenticata. Questo parametro è facoltativo e utilizzerà lo stesso valore dell&#39;attributo `name`, se non viene fornito.
 
@@ -332,7 +332,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 201 con informa
 
 ## Creare uno schema XDM di destinazione {#target-schema}
 
-Per utilizzare i dati sorgente in Platform, è necessario creare uno schema di destinazione che strutturi i dati sorgente in base alle tue esigenze. Lo schema di destinazione viene quindi utilizzato per creare un set di dati di Platform in cui sono contenuti i dati di origine.
+Affinché i dati sorgente possano essere utilizzati in Experience Platform, è necessario creare uno schema di destinazione per strutturare i dati sorgente in base alle tue esigenze. Lo schema di destinazione viene quindi utilizzato per creare un set di dati Experience Platform in cui sono contenuti i dati di origine.
 
 È possibile creare uno schema XDM di destinazione eseguendo una richiesta POST all&#39;API [Schema Registry](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
@@ -346,7 +346,7 @@ Per i passaggi dettagliati su come creare un set di dati di destinazione, consul
 
 ## Creare una connessione di destinazione {#target}
 
-Una connessione di destinazione rappresenta la connessione alla destinazione in cui arrivano i dati acquisiti. Per creare una connessione di destinazione, invia una richiesta POST a `/targetConnections` fornendo al tempo stesso gli ID per il set di dati di destinazione e lo schema XDM di destinazione. Durante questo passaggio, devi anche fornire l’ID di specifica della connessione al data lake. Questo ID è `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Una connessione di destinazione rappresenta la connessione alla destinazione in cui arrivano i dati acquisiti. Per creare una connessione di destinazione, effettua una richiesta POST a `/targetConnections` fornendo gli ID per il set di dati di destinazione e lo schema XDM di destinazione. Durante questo passaggio, devi anche fornire l’ID di specifica della connessione al data lake. Questo ID è `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
 **Formato API**
 
@@ -559,7 +559,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 201 con i detta
 }
 ```
 
-## Pubblica i dati da acquisire in Platform {#ingest-data}
+## Pubblica i dati da acquisire in Experience Platform {#ingest-data}
 
 >[!NOTE]
 >
@@ -575,7 +575,7 @@ POST /collection/{INLET_URL}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{INLET_URL}` | URL dell&#39;endpoint di streaming. È possibile recuperare questo URL effettuando una richiesta di GET all&#39;endpoint `/connections` e fornendo l&#39;ID connessione di base. |
+| `{INLET_URL}` | URL dell&#39;endpoint di streaming. È possibile recuperare questo URL effettuando una richiesta GET all&#39;endpoint `/connections` e fornendo l&#39;ID connessione di base. |
 | `{FLOW_ID}` | ID del flusso di dati in streaming API HTTP. Questo ID è richiesto sia per i dati XDM che per quelli RAW. |
 
 **Richiesta**
@@ -686,15 +686,15 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `{BASE_CONNECTION_ID}` | ID della connessione in streaming creata in precedenza. |
-| `xactionId` | Un identificatore univoco generato lato server per il record appena inviato. Questo ID consente ad Adobe di tracciare il ciclo di vita del record attraverso vari sistemi e con il debug. |
+| `xactionId` | Un identificatore univoco generato lato server per il record appena inviato. Questo ID consente ad Adobe di tracciare il ciclo di vita di questo record attraverso vari sistemi e con il debug. |
 | `receivedTimeMs` | Un timestamp (epoca in millisecondi) che mostra l’ora in cui è stata ricevuta la richiesta. |
 
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato una connessione HTTP in streaming, che consente di utilizzare l’endpoint di streaming per acquisire i dati in Platform. Per istruzioni su come creare una connessione in streaming nell&#39;interfaccia utente, leggere l&#39;esercitazione [creazione di una connessione in streaming](../../../ui/create/streaming/http.md).
+Seguendo questa esercitazione, hai creato una connessione HTTP in streaming, che consente di utilizzare l’endpoint di streaming per acquisire i dati in Experience Platform. Per istruzioni su come creare una connessione in streaming nell&#39;interfaccia utente, leggere l&#39;esercitazione [creazione di una connessione in streaming](../../../ui/create/streaming/http.md).
 
-Per informazioni su come inviare dati a Platform in streaming, leggi l&#39;esercitazione su [dati di streaming serie temporale](../../../../../ingestion/tutorials/streaming-time-series-data.md) o l&#39;esercitazione su [dati di streaming record](../../../../../ingestion/tutorials/streaming-record-data.md).
+Per informazioni su come inviare dati ad Experience Platform in streaming, leggi l&#39;esercitazione su [dati di streaming serie temporale](../../../../../ingestion/tutorials/streaming-time-series-data.md) o l&#39;esercitazione su [dati di streaming record](../../../../../ingestion/tutorials/streaming-record-data.md).
 
 ## Appendice
 

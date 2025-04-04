@@ -1,11 +1,11 @@
 ---
-keywords: e-mail;E-mail;Destinazioni e-mail;Destinazione oracle responsys
-title: Connessione Responsys Oracle
+keywords: e-mail;E-mail;Destinazioni e-mail;destinazione oracle responsys
+title: Connessione Oracle Responsys
 description: Responsys è uno strumento di e-mail marketing aziendale per campagne di marketing cross-channel offerto da Oracle per personalizzare le interazioni tra e-mail, dispositivi mobili, display e social network.
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '707'
+source-wordcount: '709'
 ht-degree: 3%
 
 ---
@@ -24,7 +24,7 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 
 | Origine pubblico | Supportato | Descrizione |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite il servizio di segmentazione [Experience Platform](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
 | Caricamenti personalizzati | ✓ | Tipi di pubblico [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
@@ -44,7 +44,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 Quando configuri le destinazioni di e-mail marketing con l’archiviazione SFTP, Adobe consiglia di aggiungere determinati intervalli IP all’elenco consentiti.
 
-Se devi aggiungere degli IP di Adobe all&#39;elenco consentiti, consulta l&#39;[elenco consentiti di indirizzo IP per le destinazioni SFTP](../cloud-storage/ip-address-allow-list.md).
+Se devi aggiungere degli IP Adobe elenco consentiti all&#39;elenco consentiti, consulta l&#39;[indirizzo IP per le destinazioni SFTP](../cloud-storage/ip-address-allow-list.md).
 
 ## Connettersi alla destinazione {#connect}
 
@@ -76,14 +76,14 @@ Durante la [configurazione](../../ui/connect-destination.md) di questa destinazi
 * In alternativa, è possibile allegare la chiave pubblica in formato RSA per aggiungere la crittografia con PGP/GPG ai file esportati nella sezione **[!UICONTROL Chiave]**. La chiave pubblica deve essere scritta come stringa con codifica [!DNL Base64].
 * **[!UICONTROL Nome]**: scegliere un nome appropriato per la destinazione.
 * **[!UICONTROL Descrizione]**: immetti una descrizione per la destinazione.
-* **[!UICONTROL Percorso cartella]**: specifica il percorso nel percorso di archiviazione in cui Platform depositerà i dati di esportazione come file CSV.
+* **[!UICONTROL Percorso cartella]**: specifica il percorso nel percorso di archiviazione in cui Experience Platform depositerà i dati di esportazione come file CSV.
 * **[!UICONTROL Formato file]**: seleziona **CSV** per esportare i file CSV nel percorso di archiviazione.
 
 <!--
 
 Commenting out Amazon S3 bucket part for now until support is clarified
 
-- **[!UICONTROL Bucket name]**: Your Amazon S3 bucket, where Platform will deposit the data export. Your input must be between 3 and 63 characters long. Must begin and end with a letter or number. Must contain only lowercase letters, numbers, or hyphens ( - ). Must not be formatted as an IP address (for example, 192.100.1.1).
+- **[!UICONTROL Bucket name]**: Your Amazon S3 bucket, where Experience Platform will deposit the data export. Your input must be between 3 and 63 characters long. Must begin and end with a letter or number. Must contain only lowercase letters, numbers, or hyphens ( - ). Must not be formatted as an IP address (for example, 192.100.1.1).
 
 -->
 
@@ -108,8 +108,8 @@ Quando si attivano i tipi di pubblico in questa destinazione, Adobe consiglia di
 
 ## Dati esportati {#exported-data}
 
-Per [!DNL Oracle Responsys] destinazioni, Platform crea un file `.csv` nel percorso di archiviazione fornito. Per ulteriori informazioni sui file, vedi [verificare l&#39;attivazione del pubblico](../../ui/activate-batch-profile-destinations.md#verify) nell&#39;esercitazione di attivazione del pubblico.
+Per le destinazioni [!DNL Oracle Responsys], Experience Platform crea un file `.csv` nel percorso di archiviazione fornito. Per ulteriori informazioni sui file, vedi [verificare l&#39;attivazione del pubblico](../../ui/activate-batch-profile-destinations.md#verify) nell&#39;esercitazione di attivazione del pubblico.
 
 ## Configura l&#39;importazione dei dati in [!DNL Oracle Responsys] {#import-data-into-responsys}
 
-Dopo aver connesso [!DNL Platform] all&#39;archivio [!DNL SFTP], è necessario configurare l&#39;importazione dei dati dal percorso di archiviazione in [!DNL Oracle Responsys]. Per informazioni su come eseguire questa operazione, vedere [Importazione di contatti o account](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCEA/Connect_WizardUpload.htm) in [!DNL Oracle Responsys Help Center].
+Dopo aver connesso [!DNL Experience Platform] all&#39;archivio [!DNL SFTP], è necessario configurare l&#39;importazione dei dati dal percorso di archiviazione in [!DNL Oracle Responsys]. Per informazioni su come eseguire questa operazione, vedere [Importazione di contatti o account](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCEA/Connect_WizardUpload.htm) in [!DNL Oracle Responsys Help Center].

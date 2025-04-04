@@ -1,12 +1,12 @@
 ---
 keywords: estensione inoltro eventi;mixpanel;estensione inoltro eventi mixpanel
 title: Estensione inoltro eventi API Mixpanel Track Events
-description: Questa estensione di inoltro degli eventi Adobe Experience Platform invia eventi di Edge Network a Mixpanel.
+description: Questa estensione per l’inoltro di eventi Adobe Experience Platform invia gli eventi Edge Network a Mixpanel.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 21e2e0fa-4949-4be4-859f-d449d21d8f41
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '892'
+source-wordcount: '893'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 ## Casi d’uso
 
-Questa estensione deve essere utilizzata se si desidera utilizzare i dati dell&#39;Edge Network in [!DNL Mixpanel] per sfruttare le funzionalità di analisi del prodotto.
+Questa estensione deve essere utilizzata se si desidera utilizzare i dati di Edge Network in [!DNL Mixpanel] per sfruttare le funzionalità di analisi dei prodotti.
 
 Ad esempio, considera un’organizzazione di vendita al dettaglio con una presenza multicanale (sito web e dispositivi mobili). L&#39;organizzazione acquisisce input transazionali o conversazionali come dati evento dalle proprie piattaforme e li carica in [!DNL Mixpanel] utilizzando l&#39;estensione di inoltro degli eventi.
 
@@ -47,7 +47,7 @@ In [!DNL Mixpanel] un cluster di identità contiene una raccolta di `distinct_id
 
 [!DNL Mixpanel] risolve i cluster di identità tramite due metodi:
 
-* **Identifica**: [!DNL Mixpanel] collega l&#39;identificatore scelto a un `distinct_id` anonimo. Se l&#39;SDK [!DNL Mixpanel] del tuo sito Web è abilitato, Platform utilizzerà `distinct_id` assegnato all&#39;utente attualmente connesso.
+* **Identifica**: [!DNL Mixpanel] collega l&#39;identificatore scelto a un `distinct_id` anonimo. Se nel sito Web è abilitato il SDK [!DNL Mixpanel], Experience Platform utilizzerà il `distinct_id` assegnato all&#39;utente attualmente connesso.
 * **Alias**: [!DNL Mixpanel] combina due `distinct id` non anonimi se vengono soddisfatti criteri di unione aggiuntivi.
 
 >[!NOTE]
@@ -74,7 +74,7 @@ Seleziona **[!UICONTROL Estensioni]** nel menu di navigazione a sinistra. Nella 
 
 ## Crea una regola [!DNL Send Event]
 
-Inizia a creare una nuova regola nella proprietà di inoltro degli eventi. In **[!UICONTROL Azioni]**, aggiungi una nuova azione e imposta l&#39;estensione su **[!UICONTROL Mixpanel]**. Impostare quindi il tipo di azione su **[!UICONTROL Traccia evento]** per inviare eventi di Edge Network a [!DNL Mixpanel].
+Inizia a creare una nuova regola nella proprietà di inoltro degli eventi. In **[!UICONTROL Azioni]**, aggiungi una nuova azione e imposta l&#39;estensione su **[!UICONTROL Mixpanel]**. Impostare quindi il tipo di azione su **[!UICONTROL Traccia evento]** per inviare eventi Edge Network a [!DNL Mixpanel].
 
 | Input | Descrizione | Obbligatorio |
 | --- | --- | --- |
@@ -95,7 +95,7 @@ Una volta aggiunta l&#39;azione [!UICONTROL Traccia evento] alla regola, è poss
 
 >[!IMPORTANT]
 >
->Se il tuo sito Web utilizza l&#39;SDK [!DNL Mixpanel], puoi passare al passaggio successivo di [convalida dei dati entro [!DNL Mixpanel]](#validate). Se non utilizzi l&#39;SDK [!DNL Mixpanel], devi [creare una regola di tracciamento identità separata](#create-an-identity-tracking-rule) per garantire che gli eventi appropriati e i valori `distinct_id` vengano inviati a [!DNL Mixpanel] quando si verifica un evento di identificazione utente.
+>Se il tuo sito Web utilizza il SDK [!DNL Mixpanel], puoi passare al passaggio successivo di [convalida dei dati entro [!DNL Mixpanel]](#validate). Se non utilizzi il SDK [!DNL Mixpanel], devi [creare una regola di tracciamento identità separata](#create-an-identity-tracking-rule) per garantire che gli eventi appropriati e i valori `distinct_id` vengano inviati a [!DNL Mixpanel] quando si verifica un evento di identificazione utente.
 
 ## Convalida dati in [!DNL Mixpanel] {#validate}
 
@@ -105,7 +105,7 @@ Verifica se [!DNL Mixpanel] ha unito gli eventi di post-accesso compilati con va
 
 ## Passaggi successivi
 
-Questa guida illustra come inviare eventi di conversione a [!DNL Mixpanel] tramite l&#39;inoltro di eventi. Questa estensione per l&#39;inoltro degli eventi sfrutta l&#39;SDK [!DNL Mixpanel] e l&#39;API JavaScript. Per ulteriori informazioni su queste tecnologie di base, consulta la documentazione ufficiale:
+Questa guida illustra come inviare eventi di conversione a [!DNL Mixpanel] tramite l&#39;inoltro di eventi. Questa estensione per l&#39;inoltro degli eventi sfrutta l&#39;API SDK e JavaScript di [!DNL Mixpanel]. Per ulteriori informazioni su queste tecnologie di base, consulta la documentazione ufficiale:
 
 * [[!DNL Mixpanel] SDK](https://developer.mixpanel.com/docs/nodejs)
 * [[!DNL Mixpanel] API JavaScript](https://developer.mixpanel.com/docs/javascript-full-api-reference#mixpanelidentify)

@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;guida introduttiva;Attribution ai;argomenti comuni;Attribution ai input;Attribution ai output;
 feature: Attribution AI
-title: Input e output in Attribution AI
-description: Il documento seguente illustra i diversi input e output utilizzati in Attribution AI.
+title: Input e output in IA per l’attribuzione
+description: Il documento seguente illustra i diversi input e output utilizzati in IA per l’attribuzione.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2467'
-ht-degree: 2%
+source-wordcount: '2474'
+ht-degree: 3%
 
 ---
 
@@ -17,13 +17,13 @@ Il documento seguente illustra i diversi input e output utilizzati in [!DNL Attr
 
 ## [!DNL Attribution AI] dati di input
 
-Attribution AI funziona analizzando i seguenti set di dati per calcolare i punteggi algoritmici:
+IA per l’attribuzione funziona analizzando i seguenti set di dati per calcolare i punteggi algoritmici:
 
 - Set di dati di Adobe Analytics che utilizzano il [connettore di origine di Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
 - Set di dati di Experience Event (EE) in generale dallo schema di Adobe Experience Platform
 - Set di dati di Consumer Experience Event (CEE)
 
-Ora puoi aggiungere più set di dati da origini diverse in base al **mapping delle identità** (campo) se ciascuno dei set di dati condivide lo stesso tipo di identità (spazio dei nomi), ad esempio un ECID. Dopo aver selezionato un’identità e uno spazio dei nomi, vengono visualizzate le metriche di completezza della colonna ID che indicano il volume di dati uniti. Per ulteriori informazioni sull&#39;aggiunta di più set di dati, visitare la [guida utente di Attribution AI](./user-guide.md#identity).
+Ora puoi aggiungere più set di dati da origini diverse in base al **mapping delle identità** (campo) se ciascuno dei set di dati condivide lo stesso tipo di identità (spazio dei nomi), ad esempio un ECID. Dopo aver selezionato un’identità e uno spazio dei nomi, vengono visualizzate le metriche di completezza della colonna ID che indicano il volume di dati uniti. Per ulteriori informazioni sull&#39;aggiunta di più set di dati, visita la [Guida utente di IA per l&#39;attribuzione](./user-guide.md#identity).
 
 Per impostazione predefinita, le informazioni sul canale non vengono sempre mappate. In alcuni casi, se mediaChannel (campo) è vuoto, non sarà possibile &quot;continuare&quot; finché non si mappa un campo su mediaChannel in quanto si tratta di una colonna obbligatoria. Se il canale viene rilevato nel set di dati, viene mappato su mediaChannel per impostazione predefinita. Le altre colonne, ad esempio **tipo di supporto** e **azione supporto**, sono ancora facoltative.
 
@@ -31,11 +31,11 @@ Dopo aver mappato il campo del canale, continua con il passaggio &quot;Definisci
 
 >[!IMPORTANT]
 >
->Il connettore di origine di Adobe Analytics può richiedere fino a quattro settimane per la retrocompilazione dei dati. Se hai impostato di recente un connettore, devi verificare che il set di dati abbia la lunghezza minima dei dati richiesta per l’Attribution AI. Rivedi la sezione [dati storici](#data-requirements) per verificare di disporre di dati sufficienti per calcolare punteggi algoritmici accurati.
+>Il connettore di origine di Adobe Analytics può richiedere fino a quattro settimane per la retrocompilazione dei dati. Se hai impostato di recente un connettore, devi verificare che il set di dati abbia la lunghezza minima di dati richiesta per IA per l’attribuzione. Rivedi la sezione [dati storici](#data-requirements) per verificare di disporre di dati sufficienti per calcolare punteggi algoritmici accurati.
 
 Per ulteriori dettagli sulla configurazione dello schema [!DNL Consumer Experience Event] (CEE), fare riferimento alla [Guida alla preparazione dei dati di Intelligent Services](../data-preparation.md). Per ulteriori informazioni sulla mappatura dei dati di Adobe Analytics, consulta la documentazione sulle [mappature dei campi di Analytics](../../sources/connectors/adobe-applications/analytics.md).
 
-Non tutte le colonne dello schema [!DNL Consumer Experience Event] (CEE) sono obbligatorie per l&#39;Attribution AI.
+Non tutte le colonne dello schema [!DNL Consumer Experience Event] (CEE) sono obbligatorie per IA per l&#39;attribuzione.
 
 Puoi configurare i punti di contatto utilizzando qualsiasi campo consigliato di seguito nello schema o nel set di dati selezionato.
 
@@ -51,7 +51,7 @@ Puoi configurare i punti di contatto utilizzando qualsiasi campo consigliato di 
 | Marketing.campaigngroup | Punto di contatto |
 | Commerce | Conversione |
 
-In genere, l’attribuzione viene eseguita su colonne di conversione come ordine, acquisti e pagamenti in &quot;commerce&quot;. Le colonne per &quot;canale&quot; e &quot;marketing&quot; vengono utilizzate per definire i punti di contatto per le Attribution AI (ad esempio, `channel._type = 'https://ns.adobe.com/xdm/channel-types/email'`). Per risultati e informazioni ottimali, si consiglia vivamente di includere il maggior numero possibile di colonne di conversione e di punti di contatto. Inoltre, non sei limitato alle sole colonne di cui sopra. Puoi includere qualsiasi altra colonna consigliata o personalizzata come definizione di conversione o punto di contatto.
+In genere, l’attribuzione viene eseguita su colonne di conversione come ordine, acquisti e pagamenti in &quot;commerce&quot;. Le colonne per &quot;channel&quot; e &quot;marketing&quot; vengono utilizzate per definire i punti di contatto per IA per l’attribuzione (ad esempio, `channel._type = 'https://ns.adobe.com/xdm/channel-types/email'`). Per risultati e informazioni ottimali, si consiglia vivamente di includere il maggior numero possibile di colonne di conversione e di punti di contatto. Inoltre, non sei limitato alle sole colonne di cui sopra. Puoi includere qualsiasi altra colonna consigliata o personalizzata come definizione di conversione o punto di contatto.
 
 I set di dati dell’evento esperienza (EE) non devono disporre esplicitamente di mixin di canale e marketing, purché le informazioni sul canale o sulla campagna rilevanti per la configurazione di un punto di contatto siano presenti in uno dei campi mixin o pass-through.
 
@@ -63,15 +63,15 @@ I set di dati dell’evento esperienza (EE) non devono disporre esplicitamente d
 
 >[!IMPORTANT]
 >
-> La quantità minima di dati necessaria per il funzionamento di Attribution AI è la seguente:
+> La quantità minima di dati necessaria per il funzionamento di IA per l’attribuzione è la seguente:
 > - Devi fornire almeno 3 mesi (90 giorni) di dati per eseguire un buon modello.
 > - Sono necessarie almeno 1000 conversioni.
 
-Attribution AI richiede dati storici come input per l’apprendimento dei modelli. La durata dei dati richiesta è determinata principalmente da due fattori chiave: l’intervallo di formazione e l’intervallo di lookback. Gli input con finestre di formazione più brevi sono più sensibili alle tendenze recenti, mentre finestre di formazione più lunghe contribuiscono a produrre modelli più stabili e precisi. È importante modellare l’obiettivo con dati storici che rappresentino al meglio i tuoi obiettivi aziendali.
+IA per l’attribuzione richiede dati storici come input per l’apprendimento dei modelli. La durata dei dati richiesta è determinata principalmente da due fattori chiave: l’intervallo di formazione e l’intervallo di lookback. Gli input con finestre di formazione più brevi sono più sensibili alle tendenze recenti, mentre finestre di formazione più lunghe contribuiscono a produrre modelli più stabili e precisi. È importante modellare l’obiettivo con dati storici che rappresentino al meglio i tuoi obiettivi aziendali.
 
 La [configurazione della finestra di formazione](./user-guide.md#training-window) filtra gli eventi di conversione impostati per essere inclusi nell&#39;apprendimento del modello in base al tempo di occorrenza. Attualmente, la finestra di formazione minima è di 1 trimestre (90 giorni). L&#39;[intervallo di lookback](./user-guide.md#lookback-window) fornisce un intervallo di tempo che indica quanti giorni prima devono essere inclusi i punti di contatto dell&#39;evento di conversione correlati a questo evento di conversione. Questi due concetti determinano insieme la quantità di dati di input (misurati in giorni) necessari per un&#39;applicazione.
 
-Per impostazione predefinita, Attribution AI definisce l’intervallo di formazione come i 2 trimestri (6 mesi) più recenti e l’intervallo di lookback come 56 giorni. In altre parole, il modello prenderà in considerazione tutti gli eventi di conversione definiti che si sono verificati negli ultimi 2 trimestri e cercherà tutti i punti di contatto che si sono verificati entro 56 giorni prima degli eventi di conversione associati.
+Per impostazione predefinita, IA per l’attribuzione definisce l’intervallo di formazione come i 2 trimestri (6 mesi) più recenti e l’intervallo di lookback come 56 giorni. In altre parole, il modello prenderà in considerazione tutti gli eventi di conversione definiti che si sono verificati negli ultimi 2 trimestri e cercherà tutti i punti di contatto che si sono verificati entro 56 giorni prima degli eventi di conversione associati.
 
 **Formula**:
 
@@ -85,9 +85,9 @@ Esempio:
 
 - Desideri attribuire gli eventi di conversione che si sono verificati negli ultimi 90 giorni (3 mesi) e tenere traccia di tutti i punti di contatto che si sono verificati nelle 4 settimane precedenti l’evento di conversione. La durata dei dati di input deve essere compresa negli ultimi 90 giorni + 28 giorni (4 settimane). L’intervallo di formazione è di 90 giorni e l’intervallo di lookback è di 28 giorni, per un totale di 118 giorni.
 
-## Attribution AI dati di output
+## Dati di output di IA per l’attribuzione
 
-Attribution AI produce i seguenti risultati:
+IA per l’attribuzione produce i seguenti output:
 
 - [Punteggi granulari non elaborati](#raw-granular-scores)
 - [Punteggi aggregati](#aggregated-attribution-scores)
@@ -98,7 +98,7 @@ Attribution AI produce i seguenti risultati:
 
 ### Punteggi granulari non elaborati {#raw-granular-scores}
 
-Attribution AI restituisce i punteggi di attribuzione nel livello più granulare possibile, in modo da poter suddividere i punteggi in base a qualsiasi colonna di punteggio. Per visualizzare questi punteggi nell&#39;interfaccia utente, leggi la sezione su [visualizzazione dei percorsi di punteggio non elaborati](#raw-score-path). Per scaricare i punteggi utilizzando l&#39;API, visita il documento [download dei punteggi in Attribution AI](./download-scores.md).
+IA per l’attribuzione restituisce i punteggi di attribuzione nel livello più granulare possibile, in modo da poter suddividere i punteggi in base a qualsiasi colonna di punteggio. Per visualizzare questi punteggi nell&#39;interfaccia utente, leggi la sezione su [visualizzazione dei percorsi di punteggio non elaborati](#raw-score-path). Per scaricare i punteggi utilizzando l&#39;API, visita il documento [download dei punteggi in IA per l&#39;attribuzione](./download-scores.md).
 
 >[!NOTE]
 >
@@ -116,7 +116,7 @@ La tabella seguente illustra i campi dello schema nell’output dell’esempio d
 | eventMergeId (Stringa) | True | ID per correlare o unire più [!DNL Experience Events] che sono essenzialmente lo stesso evento o che devono essere uniti. Questo deve essere compilato dal produttore dei dati prima dell’acquisizione. <br> **Esempio:** 575525617716-0-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
 | _id (stringa) | False | Un identificatore univoco dell’evento della serie temporale. <br> **Esempio:** 4461-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
 | _tenantId (oggetto) | False | Contenitore di oggetti di primo livello corrispondente all&#39;ID tentante. <br> **Esempio:** _atsdsnrmmsv2 |
-| your_schema_name (Oggetto) | False | Riga di punteggio con evento di conversione tutti gli eventi punto di contatto associati a esso e i relativi metadati. <br> **Esempio:** Punteggi Attribution AI - Nome modello__2020 |
+| your_schema_name (Oggetto) | False | Riga di punteggio con evento di conversione tutti gli eventi punto di contatto associati a esso e i relativi metadati. <br> **Esempio:** Punteggi di IA per l&#39;attribuzione - Nome modello__2020 |
 | segmentazione (stringa) | True | Segmento di conversione come la segmentazione geografica rispetto alla quale viene generato il modello. In caso di assenza di segmenti, il segmento è uguale a conversionName. <br> **Esempio:** ORDER_US |
 | conversionName (String) | True | Nome della conversione configurata durante la configurazione. <br> **Esempio:** Ordine, lead, visita |
 | Conversione (oggetto) | False | Colonne di metadati di conversione. |
@@ -135,7 +135,7 @@ La tabella seguente illustra i campi dello schema nell’output dell’esempio d
 | commerce_order_purchaseCity (Stringa) | True | Colonna aggiuntiva del set di dati di punteggio. <br> **Esempio:** città: San Jose |
 | customerProfile (oggetto) | False | Dettagli di identità dell’utente utilizzato per generare il modello. |
 | identità (oggetto) | False | Contiene i dettagli dell&#39;utente utilizzato per generare il modello, ad esempio `id` e `namespace`. |
-| id (Stringa) | True | ID identità dell&#39;utente come ID cookie, Adobe Analytics ID (AAID) o ID Experience Cloud (ECID, noto anche come MCID o come ID visitatore) ecc. <br> **Esempio:** 17348762725408656344688320891369597404 |
+| id (Stringa) | True | ID identità dell&#39;utente come ID cookie, Adobe Analytics ID (AAID) o Experience Cloud ID (ECID, noto anche come MCID o come ID visitatore) ecc. <br> **Esempio:** 17348762725408656344688320891369597404 |
 | namespace (String) | True | Spazio dei nomi identità utilizzato per creare i percorsi e quindi il modello. <br> **Esempio:** aaid |
 | touchpointsDetail (array di oggetti) | True | L’elenco dei dettagli del punto di contatto che conducono alla conversione ordinata da | occorrenza del punto di contatto o marca temporale. |
 | touchpointName (stringa) | True | Nome del punto di contatto configurato durante la configurazione. <br> **Esempio:** PAID_SEARCH_CLICK |
@@ -144,7 +144,7 @@ La tabella seguente illustra i campi dello schema nell’output dell’esempio d
 
 ### Visualizzazione dei percorsi di punteggio non elaborati (UI) {#raw-score-path}
 
-Puoi visualizzare il percorso dei punteggi non elaborati nell’interfaccia utente. Inizia selezionando **[!UICONTROL Schemi]** nell&#39;interfaccia utente di Platform, quindi cerca e seleziona lo schema dei punteggi di IA per l&#39;attribuzione dalla scheda **[!UICONTROL Sfoglia]**.
+Puoi visualizzare il percorso dei punteggi non elaborati nell’interfaccia utente. Inizia selezionando **[!UICONTROL Schemi]** nell&#39;interfaccia utente di Experience Platform, quindi cerca e seleziona lo schema dei punteggi di IA per l&#39;attribuzione dalla scheda **[!UICONTROL Sfoglia]**.
 
 ![Scegli lo schema](./images/input-output/schemas_browse.png)
 
@@ -154,13 +154,13 @@ Quindi, seleziona un campo nella finestra **[!UICONTROL Struttura]** dell&#39;in
 
 ### Punteggi di attribuzione aggregati {#aggregated-attribution-scores}
 
-I punteggi aggregati possono essere scaricati in formato CSV dall’interfaccia utente di Platform se l’intervallo di date è inferiore a 30 giorni.
+I punteggi aggregati possono essere scaricati in formato CSV dall’interfaccia utente di Experience Platform se l’intervallo di date è inferiore a 30 giorni.
 
-Attribution AI supporta due categorie di punteggi di attribuzione, algoritmici e basati su regole.
+IA per l’attribuzione supporta due categorie di punteggi di attribuzione, algoritmici e basati su regole.
 
-Attribution AI produce due diversi tipi di punteggi algoritmici, incrementali e influenzati. Un punteggio influenzato è la frazione della conversione di cui è responsabile ogni punto di contatto di marketing. Un punteggio incrementale è la quantità di impatto marginale causato direttamente dal punto di contatto di marketing. La differenza principale tra il punteggio incrementale e il punteggio influenzato è che il punteggio incrementale tiene conto dell’effetto al basale. Non presuppone che una conversione sia causata esclusivamente dai precedenti punti di contatto di marketing.
+IA per l’attribuzione produce due diversi tipi di punteggi algoritmici, incrementali e influenzati. Un punteggio influenzato è la frazione della conversione di cui è responsabile ogni punto di contatto di marketing. Un punteggio incrementale è la quantità di impatto marginale causato direttamente dal punto di contatto di marketing. La differenza principale tra il punteggio incrementale e il punteggio influenzato è che il punteggio incrementale tiene conto dell’effetto al basale. Non presuppone che una conversione sia causata esclusivamente dai precedenti punti di contatto di marketing.
 
-Ecco un esempio di output con schema di Attribution AI dall’interfaccia utente di Adobe Experience Platform:
+Di seguito è riportato un esempio di output dello schema di IA per l’attribuzione dall’interfaccia utente di Adobe Experience Platform:
 
 ![](./images/input-output/schema_screenshot.png)
 
@@ -178,7 +178,7 @@ Per ulteriori dettagli su ciascuno di questi punteggi di attribuzione, consulta 
 
 **Riferimento punteggio non elaborato (punteggi di attribuzione)**
 
-La tabella seguente mappa i punteggi di attribuzione in base ai punteggi non elaborati. Se desideri scaricare i tuoi punteggi non elaborati, visita la sezione [download dei punteggi nella documentazione di Attribution AI](./download-scores.md).
+La tabella seguente mappa i punteggi di attribuzione in base ai punteggi non elaborati. Se desideri scaricare i punteggi non elaborati, visita la sezione [download dei punteggi nella documentazione di Attribution AI](./download-scores.md).
 
 | Punteggi di attribuzione | Colonna di riferimento punteggio non elaborato |
 | --- | --- |
@@ -192,7 +192,7 @@ La tabella seguente mappa i punteggi di attribuzione in base ai punteggi non ela
 
 ### Punteggi aggregati {#aggregated-scores}
 
-I punteggi aggregati possono essere scaricati in formato CSV dall’interfaccia utente di Platform se l’intervallo di date è inferiore a 30 giorni. Per ulteriori dettagli su ciascuna di queste colonne aggregate, consulta la tabella seguente.
+I punteggi aggregati possono essere scaricati in formato CSV dall’interfaccia utente di Experience Platform se l’intervallo di date è inferiore a 30 giorni. Per ulteriori dettagli su ciascuna di queste colonne aggregate, consulta la tabella seguente.
 
 | Nome colonna | Vincolo | Nullable | Descrizione |
 | --- | --- | --- | --- |
@@ -213,7 +213,7 @@ I punteggi aggregati possono essere scaricati in formato CSV dall’interfaccia 
 
 **Riferimento punteggio non elaborato (aggregato)**
 
-La tabella seguente mappa i punteggi aggregati sui punteggi non elaborati. Se desideri scaricare i tuoi punteggi non elaborati, visita la sezione [download dei punteggi nella documentazione di Attribution AI](./download-scores.md). Per visualizzare i percorsi di punteggio non elaborati dall&#39;interfaccia utente, visitare la sezione [visualizzazione dei percorsi di punteggio non elaborati](#raw-score-path) in questo documento.
+La tabella seguente mappa i punteggi aggregati sui punteggi non elaborati. Se desideri scaricare i punteggi non elaborati, visita la sezione [download dei punteggi nella documentazione di Attribution AI](./download-scores.md). Per visualizzare i percorsi di punteggio non elaborati dall&#39;interfaccia utente, visitare la sezione [visualizzazione dei percorsi di punteggio non elaborati](#raw-score-path) in questo documento.
 
 | Nome colonna | Colonna di riferimento Punteggio non elaborato |
 | --- | --- |
@@ -234,10 +234,10 @@ La tabella seguente mappa i punteggi aggregati sui punteggi non elaborati. Se de
 
 >[!IMPORTANT]
 >
-> - Attribution AI utilizza solo dati aggiornati per l’ulteriore formazione e il punteggio. Allo stesso modo, quando richiedi di eliminare i dati, IA per l’analisi dei clienti si astiene dall’utilizzare i dati eliminati.
-> - Attribution AI sfrutta i set di dati di Platform. Per supportare le richieste di diritti dei consumatori che un brand può ricevere, i brand devono utilizzare Platform Privacy Service per inviare ai consumatori le richieste di accesso e cancellazione per rimuovere i propri dati attraverso il data lake, il servizio Identity e il profilo cliente in tempo reale.
-> - Tutti i set di dati utilizzati per l’input/output dei modelli seguiranno le linee guida di Platform. Platform Data Encryption si applica ai dati in transito e a riposo. Per ulteriori informazioni sulla [crittografia dei dati](../../../help/landing/governance-privacy-security/encryption.md), consulta la documentazione
+> - IA per l’attribuzione utilizza solo dati aggiornati per l’ulteriore formazione e il punteggio. Allo stesso modo, quando richiedi di eliminare i dati, IA per l’analisi dei clienti si astiene dall’utilizzare i dati eliminati.
+> - IA per l’attribuzione sfrutta i set di dati di Experience Platform. Per supportare le richieste di diritti dei consumatori che un brand può ricevere, i brand devono utilizzare Experience Platform Privacy Service per inviare ai consumatori le richieste di accesso e cancellazione per rimuovere i propri dati attraverso il data lake, il servizio Identity e il profilo cliente in tempo reale.
+> - Tutti i set di dati utilizzati per l’input/output dei modelli seguiranno le linee guida di Experience Platform. Crittografia dei dati di Experience Platform si applica ai dati in transito e a riposo. Per ulteriori informazioni sulla [crittografia dei dati](../../../help/landing/governance-privacy-security/encryption.md), consulta la documentazione
 
 ## Passaggi successivi {#next-steps}
 
-Dopo aver preparato i dati e aver impostato tutte le credenziali e gli schemi, inizia seguendo la [guida utente di Attribution AI](./user-guide.md). Questa guida illustra come creare un’istanza per Attribution AI.
+Dopo aver preparato i dati e aver impostato tutte le credenziali e gli schemi, inizia seguendo la [guida utente di IA per l&#39;attribuzione](./user-guide.md). Questa guida illustra come creare un’istanza per IA per l’attribuzione.

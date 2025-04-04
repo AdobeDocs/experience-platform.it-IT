@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;argomenti comuni;set di dati;set di dati;creare un set di dati;home;popular topic;dataset;Dataset;create a dataset;create dataset
+keywords: Experience Platform;home;argomenti popolari;set di dati;set di dati;creare un set di dati;;home;popular topic;dataset;Dataset;create a dataset;create a dataset
 solution: Experience Platform
 title: Creare un set di dati utilizzando le API
 description: Questo documento descrive i passaggi generali per la creazione di un set di dati utilizzando le API di Adobe Experience Platform e per il popolamento del set di dati utilizzando un file.
 exl-id: 3a5f48cf-ad05-4b9e-be1d-ff213a26a477
-source-git-commit: e2f16f532b98e6948ffd7f331e630137b3972f0f
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1302'
 ht-degree: 7%
@@ -21,9 +21,9 @@ Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Expe
 
 * [Acquisizione batch](../../ingestion/batch-ingestion/overview.md): [!DNL Experience Platform] consente di acquisire dati come file batch.
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): framework standardizzato tramite il quale [!DNL Experience Platform] organizza i dati sull&#39;esperienza del cliente.
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza [!DNL Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza [!DNL Experience Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per effettuare correttamente chiamate alle API [!DNL Platform].
+Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per effettuare correttamente chiamate alle API [!DNL Experience Platform].
 
 ### Lettura delle chiamate API di esempio
 
@@ -31,19 +31,19 @@ Questo tutorial fornisce esempi di chiamate API per dimostrare come formattare l
 
 ### Raccogliere i valori per le intestazioni richieste
 
-Per effettuare chiamate alle API [!DNL Platform], devi prima completare l&#39;[esercitazione di autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
+Per effettuare chiamate alle API [!DNL Experience Platform], devi prima completare l&#39;[esercitazione di autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Tutte le risorse in [!DNL Experience Platform] sono isolate in specifiche sandbox virtuali. Tutte le richieste alle API [!DNL Platform] richiedono un&#39;intestazione che specifichi il nome della sandbox in cui verrà eseguita l&#39;operazione:
+Tutte le risorse in [!DNL Experience Platform] sono isolate in specifiche sandbox virtuali. Tutte le richieste alle API [!DNL Experience Platform] richiedono un&#39;intestazione che specifichi il nome della sandbox in cui verrà eseguita l&#39;operazione:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulle sandbox in [!DNL Platform], consulta la [documentazione di panoramica sulle sandbox](../../sandboxes/home.md).
+>Per ulteriori informazioni sulle sandbox in [!DNL Experience Platform], consulta la [documentazione di panoramica sulle sandbox](../../sandboxes/home.md).
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione `Content-Type: application/json` aggiuntiva. Per le richieste JSON+PATCH, `Content-Type` deve essere `application/json-patch+json`.
 
@@ -466,7 +466,7 @@ I passaggi dettagliati per l&#39;utilizzo dell&#39;API di accesso ai dati sono d
 
 ## Aggiornare lo schema del set di dati
 
-Puoi aggiungere campi e acquisire dati aggiuntivi nei set di dati creati. A questo scopo, devi innanzitutto aggiornare lo schema aggiungendo ulteriori proprietà che definiscono i nuovi dati. Questa operazione può essere eseguita utilizzando operazioni PATCH e/o PUT per aggiornare lo schema esistente.
+Puoi aggiungere campi e acquisire dati aggiuntivi nei set di dati creati. A questo scopo, devi innanzitutto aggiornare lo schema aggiungendo ulteriori proprietà che definiscono i nuovi dati. Questa operazione può essere eseguita utilizzando le operazioni di PATCH e/o PUT per aggiornare lo schema esistente.
 
 Per ulteriori informazioni sull&#39;aggiornamento degli schemi, vedere la [Guida per gli sviluppatori API del registro degli schemi](../../xdm/api/getting-started.md).
 

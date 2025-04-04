@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;Microsoft Dynamics;microsoft dynamics;Dynamics;dynamics;home;popular topic;Dynamics;microsoft dynamics;Dynamics;dynamics
+keywords: Experience Platform;home;argomenti popolari;Microsoft Dynamics;microsoft dynamics;Dynamics;dynamics;home;popular topic;;microsoft dynamics;Dynamics;dynamics
 solution: Experience Platform
-title: Creare una connessione Microsoft Dynamics Source nell’interfaccia utente
+title: Creare una connessione Source di Microsoft Dynamics nell’interfaccia utente
 type: Tutorial
-description: Scopri come creare una connessione di origine Microsoft Dynamics utilizzando l’interfaccia utente di Adobe Experience Platform.
+description: Scopri come creare una connessione sorgente Microsoft Dynamics utilizzando l’interfaccia utente di Adobe Experience Platform.
 exl-id: 1a7a66de-dc57-4a72-8fdd-5fd80175db69
-source-git-commit: d22c71fb77655c401f4a336e339aaf8b3125d1b6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '617'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ Questo tutorial illustra i passaggi necessari per creare una connessione di orig
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): framework standardizzato in base al quale Experience Platform organizza i dati sull&#39;esperienza del cliente.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): framework standardizzato tramite il quale Experience Platform organizza i dati sull&#39;esperienza del cliente.
    * [Nozioni di base sulla composizione dello schema](../../../../../xdm/schema/composition.md): scopri i blocchi predefiniti di base degli schemi XDM, inclusi i principi chiave e le best practice nella composizione dello schema.
    * [Esercitazione sull&#39;editor di schemi](../../../../../xdm/tutorials/create-schema-ui.md): scopri come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;editor di schemi.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
@@ -54,7 +54,7 @@ Per ulteriori informazioni, consulta [questo [!DNL Dynamics] documento](https://
 
 ## Connetti il tuo account [!DNL Dynamics]
 
-Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Nella schermata [!UICONTROL Catalogo] sono visualizzate diverse origini con cui è possibile creare un account.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Nella schermata [!UICONTROL Catalogo] sono visualizzate diverse origini con cui è possibile creare un account.
 
 Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
 
@@ -86,7 +86,7 @@ Durante la creazione di un account [!DNL Dynamics] è possibile utilizzare l&#39
 
 >[!TAB Autenticazione di base]
 
-Per creare un account [!DNL Dynamics] con autenticazione di base, selezionare [!UICONTROL Autenticazione di base], quindi specificare i valori per l&#39;[!UICONTROL URI servizio], [!UICONTROL Nome utente] e [!UICONTROL Password]. **Nota**: l&#39;autenticazione di base in [!DNL Dynamics] potrebbe essere bloccata da un&#39;autenticazione a due fattori, attualmente non supportata da Platform. In questo caso, si consiglia di utilizzare l&#39;autenticazione basata su chiave per creare un connettore di origine utilizzando [!DNL Dynamics].
+Per creare un account [!DNL Dynamics] con autenticazione di base, selezionare [!UICONTROL Autenticazione di base], quindi specificare i valori per l&#39;[!UICONTROL URI servizio], [!UICONTROL Nome utente] e [!UICONTROL Password]. **Nota**: l&#39;autenticazione di base in [!DNL Dynamics] potrebbe essere bloccata da un&#39;autenticazione a due fattori, attualmente non supportata da Experience Platform. In questo caso, si consiglia di utilizzare l&#39;autenticazione basata su chiave per creare un connettore di origine utilizzando [!DNL Dynamics].
 
 Al termine, selezionare **[!UICONTROL Connetti all&#39;origine]** e quindi attendere un po&#39; di tempo per l&#39;impostazione del nuovo account.
 
@@ -104,4 +104,4 @@ Al termine, selezionare **[!UICONTROL Connetti all&#39;origine]** e quindi atten
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai stabilito una connessione al tuo account [!DNL Dynamics]. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per inserire dati in Platform](../../dataflow/crm.md).
+Seguendo questa esercitazione, hai stabilito una connessione al tuo account [!DNL Dynamics]. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per inserire dati in Experience Platform](../../dataflow/crm.md).

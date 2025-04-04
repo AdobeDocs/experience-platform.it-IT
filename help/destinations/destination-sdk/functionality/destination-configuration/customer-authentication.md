@@ -1,10 +1,10 @@
 ---
-description: Scopri come impostare un meccanismo di autenticazione per la destinazione e ottenere informazioni approfondite su ciò che gli utenti vedranno nell’interfaccia utente a seconda del metodo di autenticazione selezionato.
+description: Scopri come impostare un meccanismo di autenticazione per la destinazione e ottenere da insight ciò che gli utenti vedranno nell’interfaccia utente a seconda del metodo di autenticazione selezionato.
 title: Configurazione autenticazione cliente
 exl-id: 3912012e-0870-47d2-9a6f-7f1fc469a781
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1101'
+source-wordcount: '1103'
 ht-degree: 0%
 
 ---
@@ -20,11 +20,11 @@ Per capire dove questo componente si inserisce in un&#39;integrazione creata con
 * [Utilizzare Destination SDK per configurare una destinazione di streaming](../../guides/configure-destination-instructions.md#create-destination-configuration)
 * [Utilizzare Destination SDK per configurare una destinazione basata su file](../../guides/configure-file-based-destination-instructions.md#create-destination-configuration)
 
-Prima che i clienti possano esportare i dati da Platform alla destinazione, devono creare una nuova connessione tra Experience Platform e la destinazione, seguendo i passaggi descritti nell&#39;esercitazione [connessione di destinazione](../../../ui/connect-destination.md).
+Prima che i clienti possano esportare i dati da Experience Platform nella tua destinazione, devono creare una nuova connessione tra Experience Platform e la tua destinazione seguendo i passaggi descritti nell&#39;esercitazione [connessione di destinazione](../../../ui/connect-destination.md).
 
 Durante la [creazione di una destinazione](../../authoring-api/destination-configuration/create-destination-configuration.md) tramite Destination SDK, la sezione `customerAuthenticationConfigurations` definisce ciò che i clienti visualizzano nella [schermata di autenticazione](../../../ui/connect-destination.md#authenticate). A seconda del tipo di autenticazione di destinazione, i clienti devono fornire vari dettagli di autenticazione, ad esempio:
 
-* Per le destinazioni che utilizzano l&#39;[autenticazione di base](#basic), gli utenti devono fornire un nome utente e una password direttamente nella pagina di autenticazione dell&#39;interfaccia utente Experience Platform.
+* Per le destinazioni che utilizzano l&#39;[autenticazione di base](#basic), gli utenti devono fornire nome utente e password direttamente nella pagina di autenticazione dell&#39;interfaccia utente di Experience Platform.
 * Per le destinazioni che utilizzano l&#39;[autenticazione bearer](#bearer), gli utenti devono fornire un token bearer.
 * Per le destinazioni che utilizzano l&#39;[autorizzazione OAuth2](#oauth2), gli utenti vengono reindirizzati alla pagina di accesso della destinazione in cui possono accedere con le proprie credenziali.
 * Per [destinazioni Amazon S3](#s3), gli utenti devono fornire la propria chiave di accesso [!DNL Amazon S3] e la propria chiave segreta.
@@ -35,11 +35,11 @@ Durante la [creazione di una destinazione](../../authoring-api/destination-confi
 * [Creare una configurazione di destinazione](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [Aggiornare una configurazione di destinazione](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-Questo articolo descrive tutte le configurazioni di autenticazione dei clienti supportate che è possibile utilizzare per la destinazione e mostra ciò che i clienti vedranno nell’interfaccia utente di Experience Platform in base al metodo di autenticazione configurato per la destinazione.
+Questo articolo descrive tutte le configurazioni di autenticazione dei clienti supportate che puoi utilizzare per la tua destinazione e mostra cosa vedranno i clienti nell’interfaccia utente di Experience Platform in base al metodo di autenticazione configurato per la tua destinazione.
 
 >[!IMPORTANT]
 >
->La configurazione dell’autenticazione del cliente non richiede la configurazione di alcun parametro. Puoi copiare e incollare i snippet mostrati in questa pagina nelle chiamate API quando [crei](../../authoring-api/destination-configuration/create-destination-configuration.md) o [aggiorni](../../authoring-api/destination-configuration/update-destination-configuration.md) una configurazione di destinazione e gli utenti vedranno la schermata di autenticazione corrispondente nell&#39;interfaccia utente di Platform.
+>La configurazione dell’autenticazione del cliente non richiede la configurazione di alcun parametro. Puoi copiare e incollare i snippet mostrati in questa pagina nelle chiamate API quando [crei](../../authoring-api/destination-configuration/create-destination-configuration.md) o [aggiorni](../../authoring-api/destination-configuration/update-destination-configuration.md) una configurazione di destinazione e gli utenti vedranno la schermata di autenticazione corrispondente nell&#39;interfaccia utente di Experience Platform.
 
 >[!IMPORTANT]
 >
@@ -105,7 +105,7 @@ Per impostare l&#39;autenticazione di tipo Bearer per la destinazione, configura
 
 ## Autenticazione OAuth 2 {#oauth2}
 
-Gli utenti selezionano **[!UICONTROL Connetti alla destinazione]** per attivare il flusso di autenticazione OAuth 2 nella tua destinazione, come mostrato nell&#39;esempio seguente per la destinazione Twitter Tipi di pubblico personalizzati. Per informazioni dettagliate sulla configurazione dell&#39;autenticazione OAuth 2 per l&#39;endpoint di destinazione, leggere la pagina dedicata [Destination SDK autenticazione OAuth 2](oauth2-authorization.md).
+Gli utenti selezionano **[!UICONTROL Connetti alla destinazione]** per attivare il flusso di autenticazione OAuth 2 nella tua destinazione, come mostrato nell&#39;esempio seguente per la destinazione Twitter Custom Audiences. Per informazioni dettagliate sulla configurazione dell&#39;autenticazione OAuth 2 per l&#39;endpoint di destinazione, leggere la pagina dedicata di autenticazione di [Destination SDK OAuth 2](oauth2-authorization.md).
 
 ![Rendering interfaccia utente con autenticazione OAuth 2](../../assets/functionality/destination-configuration/oauth2-authentication-ui.png)
 

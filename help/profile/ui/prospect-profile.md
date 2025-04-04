@@ -3,9 +3,9 @@ title: Profili potenziali
 description: Scopri come creare e utilizzare i profili di potenziali clienti per raccogliere informazioni su clienti sconosciuti utilizzando informazioni di terze parti.
 type: Documentation
 exl-id: 194d25d6-88ae-4a7a-9b79-39120bced5c7
-source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '400'
+source-wordcount: '401'
 ht-degree: 1%
 
 ---
@@ -56,7 +56,7 @@ Viene visualizzata la finestra di dialogo [!UICONTROL Visualizza JSON]. Gli attr
 
 ## Casi d’uso consigliati {#use-cases}
 
-Per scoprire come utilizzare la funzionalità dei profili di potenziale cliente in Experience Platform in combinazione con altre funzionalità di Platform, leggi la seguente documentazione sul caso d’uso:
+Per scoprire come utilizzare la funzionalità dei profili di potenziale cliente in Experience Platform in combinazione con altre funzionalità di Experience Platform, leggi la seguente documentazione sul caso d’uso:
 
 - [Coinvolgi e acquisisci nuovi clienti tramite la funzionalità di ricerca di potenziali clienti](../../rtcdp/partner-data/prospecting.md)
 

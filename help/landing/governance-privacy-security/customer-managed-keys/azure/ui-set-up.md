@@ -1,21 +1,21 @@
 ---
-title: Configurare le chiavi gestite dal cliente per Azure tramite l’interfaccia utente della piattaforma
+title: Configurare le chiavi gestite dal cliente per Azure tramite l’interfaccia utente di Experience Platform
 description: Scopri come configurare l’app CMK con il tenant di Azure e inviare l’ID della chiave di crittografia a Adobe Experience Platform.
 role: Developer
 feature: Privacy
 exl-id: 5f38997a-66f3-4f9d-9c2f-fb70266ec0a6
-source-git-commit: 58bc7a650ff58f877550fa8838c6f8e2908f0090
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1138'
+source-wordcount: '1146'
 ht-degree: 0%
 
 ---
 
-# Configurare le chiavi gestite dal cliente per Azure tramite l’interfaccia utente della piattaforma
+# Configurare le chiavi gestite dal cliente per Azure tramite l’interfaccia utente di Experience Platform
 
-Questo documento descrive le istruzioni specifiche di Azure per abilitare la funzione Customer Managed Keys (CMK) in Platform tramite l’interfaccia utente di. Per istruzioni specifiche per AWS, consulta la [Guida all&#39;installazione di AWS](../aws/ui-set-up.md).
+Questo documento descrive le istruzioni specifiche di Azure per abilitare la funzione Chiavi gestite dal cliente (CMK) in Experience Platform utilizzando l’interfaccia utente. Per istruzioni specifiche per AWS, consulta la [Guida all&#39;installazione di AWS](../aws/ui-set-up.md).
 
-Per istruzioni su come completare questo processo per le istanze della piattaforma ospitata da Azure tramite l&#39;API, fare riferimento al documento di installazione della CMK [API](./api-set-up.md).
+Per istruzioni su come completare questo processo per le istanze di Experience Platform ospitate da Azure tramite l&#39;API, fare riferimento al [documento di installazione CMK API](./api-set-up.md).
 
 ## Prerequisiti
 
@@ -50,13 +50,13 @@ Selezionare l&#39;icona Copia (![Icona Copia.](../../../../images/icons/copy.png
 
 ![Visualizzazione della [!UICONTROL configurazione delle chiavi gestite dal cliente] con la sezione URL di autenticazione dell&#39;applicazione evidenziata.](../../../images/governance-privacy-security/customer-managed-keys/application-authentication-url.png)
 
-Copiare e incollare l&#39;[!UICONTROL URL di autenticazione applicazione] in un browser per aprire una finestra di dialogo di autenticazione. Selezionare **[!DNL Accept]** per aggiungere l&#39;entità servizio app CMK al tenant [!DNL Azure]. La conferma dell’autenticazione ti reindirizza alla pagina di destinazione di Experience Cloud.
+Copiare e incollare l&#39;[!UICONTROL URL di autenticazione applicazione] in un browser per aprire una finestra di dialogo di autenticazione. Selezionare **[!DNL Accept]** per aggiungere l&#39;entità servizio app CMK al tenant [!DNL Azure]. La conferma dell’autenticazione ti reindirizzerà alla pagina di destinazione di Experience Cloud.
 
 ![Finestra di dialogo per la richiesta di autorizzazione di Microsoft con [!UICONTROL Accept] evidenziato.](../../../images/governance-privacy-security/customer-managed-keys/app-permission.png)
 
 >[!IMPORTANT]
 >
->Se disponi di più sottoscrizioni a [!DNL Microsoft Azure], potresti collegare potenzialmente l&#39;istanza Platform all&#39;insieme di credenziali delle chiavi errato. In questa situazione, è necessario sostituire la sezione `common` del nome URL di autenticazione dell&#39;applicazione con l&#39;ID di directory CMK.<br>Copiare l&#39;ID della directory CMK dalla pagina Impostazioni portale, Directory e Sottoscrizioni dell&#39;applicazione [!DNL Microsoft Azure]<br>![La pagina Impostazioni portale applicazioni, Directory e Sottoscrizioni di [!DNL Microsoft Azure] con l&#39;ID della directory evidenziato.](../../../images/governance-privacy-security/customer-managed-keys/directory-id.png)<br>Incollalo nella barra degli indirizzi del browser.<br>![Una pagina del browser Google con la sezione &#39;common&#39; dell&#39;URL di autenticazione dell&#39;applicazione evidenziata.](../../../images/governance-privacy-security/customer-managed-keys/common-url-section.png)
+>Se disponi di più sottoscrizioni a [!DNL Microsoft Azure], potresti potenzialmente collegare l&#39;istanza di Experience Platform all&#39;insieme di credenziali delle chiavi errato. In questa situazione, è necessario sostituire la sezione `common` del nome URL di autenticazione dell&#39;applicazione con l&#39;ID di directory CMK.<br>Copiare l&#39;ID della directory CMK dalla pagina Impostazioni portale, Directory e Sottoscrizioni dell&#39;applicazione [!DNL Microsoft Azure]<br>![La pagina Impostazioni portale applicazioni, Directory e Sottoscrizioni di [!DNL Microsoft Azure] con l&#39;ID della directory evidenziato.](../../../images/governance-privacy-security/customer-managed-keys/directory-id.png)<br>Incollalo nella barra degli indirizzi del browser.<br>![Una pagina del browser Google con la sezione &#39;common&#39; dell&#39;URL di autenticazione dell&#39;applicazione evidenziata.](../../../images/governance-privacy-security/customer-managed-keys/common-url-section.png)
 
 ### Assegnare l&#39;app CMK a un ruolo {#assign-to-role}
 
@@ -82,9 +82,9 @@ Nella schermata successiva, scegli **[!DNL Select members]** per aprire una fine
 
 ![La [!UICONTROL configurazione chiavi gestite dal cliente] con [!UICONTROL ID applicazione] evidenziato.](../../../images/governance-privacy-security/customer-managed-keys/application-id.png)
 
-Tutti i dettagli necessari per verificare gli strumenti di Azure sono inclusi nell’interfaccia utente di Platform. Questo livello di granularità viene fornito in quanto molti utenti desiderano utilizzare altri strumenti di Azure per migliorare la propria capacità di monitorare e registrare l’accesso di queste applicazioni al proprio archivio chiavi. Comprendere questi identificatori è fondamentale a tal fine e per aiutare i servizi Adobe ad accedere alla chiave.
+Tutti i dettagli necessari per verificare gli strumenti di Azure sono inclusi nell’interfaccia utente di Experience Platform. Questo livello di granularità viene fornito in quanto molti utenti desiderano utilizzare altri strumenti di Azure per migliorare la propria capacità di monitorare e registrare l’accesso di queste applicazioni al proprio archivio chiavi. Comprendere questi identificatori è fondamentale a tal fine e per aiutare i servizi Adobe ad accedere alla chiave.
 
-## Abilita la configurazione della chiave di crittografia su Experience Platform {#send-to-adobe}
+## Abilitare la configurazione della chiave di crittografia in Experience Platform {#send-to-adobe}
 
 Dopo aver installato l&#39;app CMK in [!DNL Azure], puoi inviare l&#39;identificatore della chiave di crittografia ad Adobe. Selezionare **[!DNL Keys]** nel menu di navigazione a sinistra, seguito dal nome della chiave che si desidera inviare.
 
@@ -110,11 +110,11 @@ Sei tornato al [!UICONTROL Dashboard configurazioni di crittografia]. Lo stato d
 
 ## Verificare lo stato della configurazione {#check-status}
 
-Consenti una quantità significativa di tempo per l’elaborazione. Per verificare lo stato della configurazione, torna alla visualizzazione [!UICONTROL Configurazione chiavi gestite dal cliente] e scorri verso il basso fino allo [!UICONTROL Stato configurazione]. La barra di avanzamento è avanzata al passaggio 1 di tre e spiega che il sistema sta convalidando l’accesso di Platform all’insieme di credenziali delle chiavi.
+Consenti una quantità significativa di tempo per l’elaborazione. Per verificare lo stato della configurazione, torna alla visualizzazione [!UICONTROL Configurazione chiavi gestite dal cliente] e scorri verso il basso fino allo [!UICONTROL Stato configurazione]. La barra di avanzamento è avanzata al primo dei tre passaggi e spiega che il sistema sta verificando che Experience Platform abbia accesso all’insieme di credenziali delle chiavi.
 
 Sono disponibili quattro stati potenziali della configurazione CMK. Essi sono i seguenti:
 
-* Passaggio 1: verifica che Platform sia in grado di accedere all’insieme di credenziali delle chiavi.
+* Passaggio 1: verifica che Experience Platform sia in grado di accedere all’insieme di credenziali delle chiavi e delle chiavi.
 * Passaggio 2: l’insieme di credenziali delle chiavi e il nome della chiave sono in fase di aggiunta a tutti gli archivi di dati dell’organizzazione.
 * Passaggio 3: l’insieme di credenziali delle chiavi e il nome della chiave sono stati aggiunti correttamente agli archivi dati.
 * `FAILED`: si è verificato un problema, principalmente relativo alla chiave, all&#39;insieme di credenziali delle chiavi o alla configurazione di app multi-tenant.

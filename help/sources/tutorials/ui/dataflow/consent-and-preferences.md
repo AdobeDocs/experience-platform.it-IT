@@ -3,30 +3,30 @@ keywords: Experience Platform;home;argomenti popolari;consenso e preferenze;cons
 solution: Experience Platform
 title: Creare un flusso di dati utilizzando un Source di consenso e preferenze nell’interfaccia utente
 type: Tutorial
-description: Un flusso di dati è un’attività pianificata che recupera e acquisisce dati da un’origine a un set di dati di Platform. Questo tutorial illustra i passaggi necessari per creare un flusso di dati per un’origine di consenso e preferenze tramite l’interfaccia utente di Platform.
+description: Un flusso di dati è un’attività pianificata che recupera e acquisisce dati da un’origine a un set di dati di Experience Platform. Questo tutorial descrive come creare un flusso di dati per un’origine di consenso e preferenze utilizzando l’interfaccia utente di Experience Platform.
 exl-id: 340b5945-baa1-4f79-88fa-2572606f6083
-source-git-commit: d048109141168b33795753c4706dac64cdf29ca5
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1617'
+source-wordcount: '1626'
 ht-degree: 1%
 
 ---
 
 # Creare un flusso di dati utilizzando un’origine di consenso e preferenze nell’interfaccia utente
 
-Un flusso di dati è un’attività pianificata che recupera e acquisisce dati da un’origine a un set di dati in Adobe Experience Platform. Questo tutorial illustra come creare un flusso di dati per un’origine di consenso e preferenze utilizzando l’interfaccia utente di Platform.
+Un flusso di dati è un’attività pianificata che recupera e acquisisce dati da un’origine a un set di dati in Adobe Experience Platform. Questa esercitazione descrive come creare un flusso di dati per un’origine di consenso e preferenze utilizzando l’interfaccia utente di Experience Platform.
 
 >[!NOTE]
 >
 >* Per creare un flusso di dati, è necessario disporre già di un account autenticato con l&#39;origine [!DNL OneTrust Integration]. Per ulteriori informazioni, consulta l&#39;esercitazione sulla [creazione di una connessione di origine [!DNL OneTrust Integration] nell&#39;interfaccia utente](../../ui/create/consent-and-preferences/onetrust.md).
->* Ad Experience Platform, per acquisire i dati, i fusi orari per tutte le origini batch basate su tabelle devono essere configurati in formato UTC.
+>* Affinché Experience Platform possa acquisire i dati, i fusi orari per tutte le origini batch basate su tabelle devono essere configurati in formato UTC.
 
 ## Introduzione
 
-Questo tutorial richiede una buona conoscenza dei seguenti componenti di Platform:
+Questo tutorial richiede una buona conoscenza dei seguenti componenti di Experience Platform:
 
-* [Origini](../../../home.md): Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi [!DNL Platform].
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../xdm/home.md): framework standardizzato in base al quale Experience Platform organizza i dati sull&#39;esperienza del cliente.
+* [Origini](../../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi [!DNL Experience Platform].
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../xdm/home.md): framework standardizzato tramite il quale Experience Platform organizza i dati sull&#39;esperienza del cliente.
    * [Nozioni di base sulla composizione dello schema](../../../../xdm/schema/composition.md): scopri i blocchi predefiniti di base degli schemi XDM, inclusi i principi chiave e le best practice nella composizione dello schema.
    * [Esercitazione sull&#39;editor di schemi](../../../../xdm/tutorials/create-schema-ui.md): scopri come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;editor di schemi.
 * [[!DNL Real-Time Customer Profile]](../../../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
@@ -85,11 +85,11 @@ Dopo aver fornito i dettagli al flusso di dati, seleziona **[!UICONTROL Avanti]*
 
 >[!IMPORTANT]
 >
->Non è possibile mappare valori di coppia di chiavi dinamiche come oggetto da [!DNL OneTrust] a Platform e è necessario specificare tali chiavi nello schema di destinazione per mappare i dati durante l&#39;acquisizione.
+>Non è possibile mappare valori di coppia di chiavi dinamiche come oggetto da [!DNL OneTrust] ad Experience Platform e è necessario specificare tali chiavi nello schema di destinazione per mappare i dati durante l&#39;acquisizione.
 
 Viene visualizzato il passaggio [!UICONTROL Mappatura] che fornisce un&#39;interfaccia per mappare i campi sorgente dallo schema sorgente ai campi XDM di destinazione appropriati nello schema di destinazione.
 
-Platform fornisce consigli intelligenti per campi mappati automaticamente in base allo schema o al set di dati di destinazione selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi d’uso. In base alle tue esigenze, puoi scegliere di mappare i campi direttamente o utilizzare le funzioni di preparazione dati per trasformare i dati sorgente in modo da derivare valori calcolati o calcolati. Per i passaggi completi sull&#39;utilizzo dell&#39;interfaccia mapper e dei campi calcolati, consulta la [guida dell&#39;interfaccia utente della preparazione dati](../../../../data-prep/ui/mapping.md).
+Experience Platform fornisce consigli intelligenti per campi mappati automaticamente in base allo schema o al set di dati di destinazione selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi d’uso. In base alle tue esigenze, puoi scegliere di mappare i campi direttamente o utilizzare le funzioni di preparazione dati per trasformare i dati sorgente in modo da derivare valori calcolati o calcolati. Per i passaggi completi sull&#39;utilizzo dell&#39;interfaccia mapper e dei campi calcolati, consulta la [guida dell&#39;interfaccia utente della preparazione dati](../../../../data-prep/ui/mapping.md).
 
 Una volta mappati correttamente i dati di origine, seleziona **[!UICONTROL Avanti]**.
 
@@ -143,7 +143,7 @@ Una volta creato il flusso di dati, puoi monitorare i dati che vengono acquisiti
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato correttamente un flusso di dati per portare i dati dall’origine del consenso e delle preferenze a Platform. I dati in arrivo possono ora essere utilizzati da servizi [!DNL Platform] downstream come [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i seguenti documenti:
+Seguendo questa esercitazione, hai creato correttamente un flusso di dati per portare i dati dall’origine del consenso e delle preferenze ad Experience Platform. I dati in arrivo possono ora essere utilizzati da servizi [!DNL Experience Platform] downstream come [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i seguenti documenti:
 
 * [Panoramica di [!DNL Real-Time Customer Profile]](../../../../profile/home.md)
 * [Panoramica di [!DNL Data Science Workspace]](../../../../data-science-workspace/home.md)
@@ -151,6 +151,6 @@ Seguendo questa esercitazione, hai creato correttamente un flusso di dati per po
 
 >[!WARNING]
 >
-> L’interfaccia utente di Platform mostrata nel video seguente non è aggiornata. Per le schermate e le funzionalità più recenti dell’interfaccia utente, consulta la documentazione precedente.
+> L’interfaccia utente di Experience Platform mostrata nel video seguente non è aggiornata. Per le schermate e le funzionalità più recenti dell’interfaccia utente, consulta la documentazione precedente.
 >
 >[!VIDEO](https://video.tv.adobe.com/v/29711?quality=12&learn=on)

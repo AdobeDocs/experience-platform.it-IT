@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform - Febbraio 2024
 description: Note sulla versione di Adobe Experience Platform di febbraio 2024.
 exl-id: 7e4b76b7-4027-4890-b869-1dbb79670c3e
-source-git-commit: 02f2082e695d157415c9e0c59ca5d371c94bb991
-workflow-type: ht
-source-wordcount: '1244'
-ht-degree: 100%
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+workflow-type: tm+mt
+source-wordcount: '1248'
+ht-degree: 91%
 
 ---
 
@@ -24,7 +24,7 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
 ## Avvisi {#alerts}
 
-Experience Platform consente di abbonarti agli avvisi basati su eventi per varie attività di Platform. Puoi abbonarti a diverse regole di avviso tramite la scheda [!UICONTROL Avvisi] nell’interfaccia utente di Platform e scegliere di ricevere messaggi di avviso all’interno dell’interfaccia utente stessa o tramite notifiche e-mail.
+Experience Platform ti consente di abbonarti agli avvisi basati su eventi per varie attività di Experience Platform. Puoi abbonarti a diverse regole di avviso tramite la scheda [!UICONTROL Avvisi] nell&#39;interfaccia utente di Experience Platform e scegliere di ricevere messaggi di avviso all&#39;interno dell&#39;interfaccia utente stessa o tramite notifiche e-mail.
 
 **Funzioni nuove o aggiornate**
 
@@ -95,7 +95,7 @@ Per informazioni più generali sulle destinazioni, consulta la [panoramica sulle
 
 ## Sandbox {#sandboxes}
 
-Adobe Experience Platform è stato progettato per arricchire le applicazioni di esperienza digitale su scala globale. Le aziende spesso eseguono più applicazioni di esperienza digitale in parallelo e devono occuparsi di sviluppo, test e distribuzione di tali applicazioni, garantendo al contempo la conformità operativa. Per rispondere a questa esigenza, Experience Platform fornisce ambienti sandbox che permettono di suddividere una singola istanza di Platform in ambienti virtuali separati, utili per le attività di sviluppo e evoluzione delle applicazioni di esperienza digitale.
+Adobe Experience Platform è stato progettato per arricchire le applicazioni di esperienza digitale su scala globale. Le aziende spesso eseguono più applicazioni di esperienza digitale in parallelo e devono occuparsi di sviluppo, test e distribuzione di tali applicazioni, garantendo al contempo la conformità operativa. Per soddisfare questa esigenza, Experience Platform fornisce ambienti sandbox che permettono di suddividere una singola istanza Experience Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 **Funzioni nuove o aggiornate**
 
@@ -109,13 +109,13 @@ Per ulteriori informazioni sulle origini, consulta la [panoramica sulle origini]
 
 ## Servizio di segmentazione {#segmentation}
 
-[!DNL Segmentation Service] consente di segmentare i dati memorizzati in [!DNL Experience Platform] che si riferiscono ai singoli utenti (come clienti, potenziali clienti, utenti o organizzazioni) in tipi di pubblico. Puoi creare tipi di pubblico tramite definizioni di segmenti o altre origini dai tuoi dati di [!DNL Real-Time Customer Profile]. Questi tipi di pubblico sono configurati e gestiti centralmente in [!DNL Platform] e sono facilmente accessibili da qualsiasi soluzione Adobe.
+[!DNL Segmentation Service] consente di segmentare i dati memorizzati in [!DNL Experience Platform] che si riferiscono ai singoli utenti (come clienti, potenziali clienti, utenti o organizzazioni) in tipi di pubblico. Puoi creare tipi di pubblico tramite definizioni di segmenti o altre origini dai tuoi dati di [!DNL Real-Time Customer Profile]. Questi tipi di pubblico sono configurati e gestiti centralmente in [!DNL Experience Platform] e sono facilmente accessibili da qualsiasi soluzione Adobe.
 
 **Nuova funzione**
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Pubblico dell’account | I tipi di pubblico dell’account sono ora generalmente disponibili. Ora puoi utilizzare la segmentazione dell’account per portare tutta la semplicità e la sofisticazione dell’esperienza di segmentazione del marketing, dai tipi di pubblico basati su persone a quelli basati su account, in entrambe le edizioni B2B e B2P di Real-Time Customer Platform. Questa versione consente di utilizzare i tipi di pubblico basati su persone come predicato per i tipi di pubblico basati su account, aggiunge funzionalità di ricerca, supporta l’utilizzo di entità personalizzate ed è conforme alla governance dei dati. Per ulteriori informazioni su questa funzione, leggere la [panoramica sui tipi di pubblico dell&#39;account](../../segmentation/types/account-audiences.md). |
+| Pubblico dell’account | I tipi di pubblico dell’account sono ora generalmente disponibili. Ora puoi utilizzare la segmentazione dell’account per rendere più semplice e sofisticata l’esperienza di segmentazione marketing, dai tipi di pubblico basati sulle persone a quelli basati sull’account, sia nelle edizioni B2B che B2P di Real-time Customer Experience Platform. Questa versione consente di utilizzare i tipi di pubblico basati su persone come predicato per i tipi di pubblico basati su account, aggiunge funzionalità di ricerca, supporta l’utilizzo di entità personalizzate ed è conforme alla governance dei dati. Per ulteriori informazioni su questa funzione, leggere la [panoramica sui tipi di pubblico dell&#39;account](../../segmentation/types/account-audiences.md). |
 
 {style="table-layout:auto"}
 

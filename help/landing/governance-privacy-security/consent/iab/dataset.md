@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;IAB;IAB 2.0;consenso;Consenso;Consenso
+keywords: Experience Platform;home;IAB;IAB 2.0;consenso;Consenso;;home;IAB;IAB 2.0;consent;Consent
 solution: Experience Platform
 title: Creare set di dati per l’acquisizione di dati sul consenso IAB TCF 2.0
 description: Questo documento descrive i passaggi per configurare i due set di dati richiesti per raccogliere i dati sul consenso di IAB TCF 2.0.
 role: Developer
 feature: Consent, Schemas, Datasets
 exl-id: 36b2924d-7893-4c55-bc33-2c0234f1120e
-source-git-commit: bf651967714745a0b501dcb27373379fe014c9e1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1674'
+source-wordcount: '1680'
 ht-degree: 0%
 
 ---
@@ -24,9 +24,9 @@ In particolare, per acquisire i dati di consenso TCF 2.0 sono necessari due set 
 
 >[!IMPORTANT]
 >
->Platform applica solo le stringhe TCF raccolte nel set di dati Profilo individuale. Anche se è ancora necessario un set di dati ExperienceEvent per creare un flusso di dati come parte di questo flusso di lavoro, è sufficiente acquisire i dati nel set di dati del profilo. Il set di dati ExperienceEvent può ancora essere utilizzato se desideri tenere traccia degli eventi di modifica del consenso nel tempo, ma questi valori non vengono utilizzati in durante l’applicazione all’attivazione dei segmenti.
+>Experience Platform applica solo le stringhe TCF raccolte nel set di dati Profilo individuale. Anche se è ancora necessario un set di dati ExperienceEvent per creare un flusso di dati come parte di questo flusso di lavoro, è sufficiente acquisire i dati nel set di dati del profilo. Il set di dati ExperienceEvent può ancora essere utilizzato se desideri tenere traccia degli eventi di modifica del consenso nel tempo, ma questi valori non vengono utilizzati in durante l’applicazione all’attivazione dei segmenti.
 
-Questo documento descrive la procedura per impostare questi due set di dati. Per una panoramica del flusso di lavoro completo per configurare le operazioni sui dati di Platform per TCF 2.0, consulta la [panoramica sulla conformità IAB TCF 2.0](./overview.md).
+Questo documento descrive la procedura per impostare questi due set di dati. Per una panoramica del flusso di lavoro completo per configurare le operazioni sui dati di Experience Platform per TCF 2.0, consulta la [panoramica sulla conformità IAB TCF 2.0](./overview.md).
 
 ## Prerequisiti
 
@@ -54,7 +54,7 @@ Per ulteriori informazioni sulla struttura e sul caso d&#39;uso di questo gruppo
 
 Se desideri tenere traccia degli eventi di modifica del consenso nel tempo, puoi aggiungere il gruppo di campi [!UICONTROL Dettagli consenso IAB TCF 2.0] allo schema [!UICONTROL XDM ExperienceEvent].
 
-Se non prevedi di tenere traccia degli eventi di modifica del consenso nel tempo, non è necessario includere questo gruppo di campi nello schema dell’evento. Quando si applicano automaticamente i valori di consenso TCF, Experience Platform utilizza solo le informazioni di consenso più recenti acquisite nel gruppo di campi [profilo](#profile-field-group). I valori di consenso acquisiti dagli eventi non partecipano ai flussi di lavoro di applicazione automatica.
+Se non prevedi di tenere traccia degli eventi di modifica del consenso nel tempo, non è necessario includere questo gruppo di campi nello schema dell’evento. Quando applica automaticamente i valori di consenso TCF, Experience Platform utilizza solo le informazioni di consenso più recenti acquisite nel gruppo di campi [profilo](#profile-field-group). I valori di consenso acquisiti dagli eventi non partecipano ai flussi di lavoro di applicazione automatica.
 
 Per ulteriori informazioni sulla struttura e sul caso d&#39;uso di questo gruppo di campi, consulta la [guida di riferimento](../../../../xdm/field-groups/event/iab.md).
 
@@ -62,9 +62,9 @@ Per ulteriori informazioni sulla struttura e sul caso d&#39;uso di questo gruppo
 
 Per creare set di dati che acquisiscano i dati del consenso, devi prima creare schemi XDM su cui basare tali set di dati.
 
-Come indicato nella sezione precedente, per applicare il consenso nei flussi di lavoro a valle di Platform è necessario uno schema che utilizza la classe [!UICONTROL XDM Individual Profile]. Facoltativamente, puoi anche creare uno schema separato basato su [!UICONTROL XDM ExperienceEvent] se desideri tenere traccia delle modifiche del consenso nel tempo. Entrambi gli schemi devono contenere un campo `identityMap` e un gruppo di campi TCF 2.0 appropriato.
+Come indicato nella sezione precedente, per applicare il consenso nei flussi di lavoro Experience Platform a valle è necessario uno schema che utilizza la classe [!UICONTROL XDM Individual Profile]. Facoltativamente, puoi anche creare uno schema separato basato su [!UICONTROL XDM ExperienceEvent] se desideri tenere traccia delle modifiche del consenso nel tempo. Entrambi gli schemi devono contenere un campo `identityMap` e un gruppo di campi TCF 2.0 appropriato.
 
-Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Schemi]** nell&#39;area di navigazione a sinistra per aprire l&#39;area di lavoro [!UICONTROL Schemi]. Da qui, segui i passaggi descritti nelle sezioni seguenti per creare ogni schema richiesto.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Schemi]** nell&#39;area di navigazione a sinistra per aprire l&#39;area di lavoro [!UICONTROL Schemi]. Da qui, segui i passaggi descritti nelle sezioni seguenti per creare ogni schema richiesto.
 
 >[!NOTE]
 >
@@ -102,7 +102,7 @@ Se stai modificando uno schema esistente già abilitato per l&#39;utilizzo in [!
 
 #### Abilita lo schema da utilizzare in [!DNL Real-Time Customer Profile]
 
-Per consentire a Platform di associare i dati sul consenso ricevuti a profili cliente specifici, lo schema di consenso deve essere abilitato per l&#39;utilizzo in [!DNL Real-Time Customer Profile].
+Affinché Experience Platform associ i dati sul consenso ricevuti a profili cliente specifici, lo schema di consenso deve essere abilitato per l&#39;utilizzo in [!DNL Real-Time Customer Profile].
 
 >[!NOTE]
 >
@@ -192,4 +192,4 @@ Seguendo questa esercitazione, hai creato almeno un set di dati che ora può ess
 * Un set di dati basato su record abilitato per l’utilizzo in Real-Time Customer Profile. **(Obbligatorio)**
 * Set di dati basato su serie temporali non abilitato per [!DNL Profile]. (Facoltativo)
 
-È ora possibile tornare alla [panoramica di IAB TCF 2.0](./overview.md#merge-policies) per continuare il processo di configurazione della piattaforma per la conformità a TCF 2.0.
+È ora possibile tornare alla [panoramica di IAB TCF 2.0](./overview.md#merge-policies) per continuare il processo di configurazione di Experience Platform per la conformità a TCF 2.0.

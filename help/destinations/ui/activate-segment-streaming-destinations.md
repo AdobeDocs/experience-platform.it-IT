@@ -3,9 +3,9 @@ title: Attivare i dati sul pubblico nelle destinazioni di streaming
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico disponibili in Adobe Experience Platform mappandoli su destinazioni di streaming.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1188'
+source-wordcount: '1189'
 ht-degree: 6%
 
 ---
@@ -52,7 +52,7 @@ Per selezionare i tipi di pubblico che si desidera attivare nella destinazione, 
 Puoi scegliere tra più tipi di pubblico, a seconda della loro origine:
 
 * **[!UICONTROL Servizio di segmentazione]**: tipi di pubblico generati in Experience Platform dal servizio di segmentazione. Per ulteriori dettagli, consulta la [documentazione sulla segmentazione](../../segmentation/ui/overview.md).
-* **[!UICONTROL Caricamento personalizzato]**: pubblico generato al di fuori di Experience Platform e caricato in Platform come file CSV. Per ulteriori informazioni sui tipi di pubblico esterni, consulta la documentazione su [importazione di un pubblico](../../segmentation/ui/audience-portal.md#import-audience).
+* **[!UICONTROL Caricamento personalizzato]**: pubblico generato al di fuori di Experience Platform e caricato in Experience Platform come file CSV. Per ulteriori informazioni sui tipi di pubblico esterni, consulta la documentazione su [importazione di un pubblico](../../segmentation/ui/audience-portal.md#import-audience).
 * Altri tipi di pubblico, provenienti da altre soluzioni Adobe, ad esempio [!DNL Audience Manager].
 
 ![Sono stati evidenziati diversi tipi di pubblico nel passaggio Seleziona tipi di pubblico.](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)
@@ -125,7 +125,7 @@ Per visualizzare tutti i tipi di pubblico attivati nella destinazione, utilizza 
 
      ![Elenco a discesa ID mappatura evidenziato.](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
 
-   * Alcune destinazioni richiedono di mappare manualmente [!DNL Platform] tipi di pubblico alla controparte nella destinazione di destinazione. A questo scopo, seleziona ogni pubblico, quindi immetti l&#39;ID pubblico corrispondente dalla piattaforma di destinazione nel campo **[!UICONTROL ID mappatura]**. Se la destinazione non include questo campo, salta questo passaggio.
+   * Alcune destinazioni richiedono di mappare manualmente [!DNL Experience Platform] tipi di pubblico alla controparte nella destinazione di destinazione. A questo scopo, seleziona ogni pubblico, quindi immetti l&#39;ID pubblico corrispondente dalla piattaforma di destinazione nel campo **[!UICONTROL ID mappatura]**. Se la destinazione non include questo campo, salta questo passaggio.
 
      ![Elenco a discesa Origine del pubblico evidenziato.](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
 
@@ -135,7 +135,7 @@ Per visualizzare tutti i tipi di pubblico attivati nella destinazione, utilizza 
 
 1. Seleziona **[!UICONTROL Avanti]** per passare alla pagina [!UICONTROL Rivedi].
 
-## Controlla {#review}
+## Rivisione {#review}
 
 Nella pagina **[!UICONTROL Rivedi]** puoi visualizzare un riepilogo della selezione. Seleziona **[!UICONTROL Annulla]** per interrompere il flusso, **[!UICONTROL Indietro]** per modificare le impostazioni oppure **[!UICONTROL Fine]** per confermare la selezione e iniziare a inviare dati alla destinazione.
 

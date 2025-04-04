@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;argomenti comuni;DB2;db2;IBM DB2;ibm db2
+keywords: Experience Platform;home;argomenti popolari;DB2;db2;IBM DB2;ibm db2
 solution: Experience Platform
 title: Creare una connessione Source IBM DB2 nell’interfaccia utente
 type: Tutorial
 description: Scopri come creare una connessione sorgente IBM DB2 utilizzando l’interfaccia utente di Adobe Experience Platform.
 exl-id: 69c99f94-9cb9-43ff-9315-ce166ab35a60
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '527'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 >
 > Il connettore IBM DB2 è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la [Panoramica origini](../../../../home.md#terms-and-conditions).
 
-I connettori Source in Adobe Experience Platform consentono di acquisire dati di origine esterna in base a una pianificazione. Questo tutorial descrive i passaggi per la creazione di un connettore di origine IBM DB2 (di seguito &quot;DB2&quot;) tramite l&#39;interfaccia utente [!DNL Platform].
+I connettori Source in Adobe Experience Platform consentono di acquisire dati di origine esterna in base a una pianificazione. Questo tutorial descrive i passaggi per la creazione di un connettore di origine IBM DB2 (di seguito &quot;DB2&quot;) tramite l&#39;interfaccia utente [!DNL Experience Platform].
 
 ## Introduzione
 
@@ -46,7 +46,7 @@ Per ulteriori informazioni su come iniziare, consultare [questo documento DB2](h
 
 ## Connetti il tuo account IBM DB2
 
-Dopo aver raccolto le credenziali richieste, è possibile eseguire la procedura seguente per collegare l&#39;account DB2 a [!DNL Platform].
+Dopo aver raccolto le credenziali richieste, è possibile eseguire la procedura seguente per collegare l&#39;account DB2 a [!DNL Experience Platform].
 
 Accedi a [Adobe Experience Platform](https://platform.adobe.com), quindi seleziona **[!UICONTROL Origini]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro **[!UICONTROL Origini]**. Nella schermata **[!UICONTROL Catalogo]** sono visualizzate diverse origini per le quali è possibile creare un account con.
 
@@ -72,4 +72,4 @@ Per connettere un account esistente, selezionare l&#39;account DB2 con cui si de
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, è stata stabilita una connessione all&#39;account DB2. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per inserire dati in [!DNL Platform]](../../dataflow/databases.md).
+Seguendo questa esercitazione, è stata stabilita una connessione all&#39;account DB2. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per inserire dati in [!DNL Experience Platform]](../../dataflow/databases.md).

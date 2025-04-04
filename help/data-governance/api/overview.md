@@ -2,13 +2,13 @@
 keywords: Experience Platform;home;argomenti popolari
 solution: Experience Platform
 title: Guida API del servizio criteri
-description: L’API del servizio criteri consente agli sviluppatori di gestire le etichette e i criteri di utilizzo dei dati, ad Experience Platform. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
+description: L’API del servizio criteri consente agli sviluppatori di gestire le etichette e i criteri di utilizzo dei dati in Experience Platform. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
 role: Developer
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '543'
-ht-degree: 4%
+source-wordcount: '545'
+ht-degree: 5%
 
 ---
 
@@ -22,7 +22,7 @@ Per visualizzare tutti gli endpoint disponibili e le operazioni CRUD, visita il 
 
 ## Etichette
 
-Applica le etichette di utilizzo dei dati agli schemi per categorizzare set di dati e campi in base ai criteri di utilizzo applicabili a tali dati. Le etichette possono essere applicate in qualsiasi momento, offrendo flessibilità nella scelta di come gestire i dati. Le best practice incoraggiano l&#39;assegnazione delle etichette non appena vengono acquisite in [!DNL Experience Platform] o non appena i dati diventano disponibili per l&#39;utilizzo in [!DNL Platform]. È possibile creare, visualizzare, modificare ed eliminare etichette utilizzando l&#39;endpoint `/labels`. Per informazioni su come utilizzare questo endpoint, visita la [guida dell&#39;endpoint delle etichette](./labels.md).
+Applica le etichette di utilizzo dei dati agli schemi per categorizzare set di dati e campi in base ai criteri di utilizzo applicabili a tali dati. Le etichette possono essere applicate in qualsiasi momento, offrendo flessibilità nella scelta di come gestire i dati. Le best practice incoraggiano l&#39;assegnazione delle etichette non appena vengono acquisite in [!DNL Experience Platform] o non appena i dati diventano disponibili per l&#39;utilizzo in [!DNL Experience Platform]. È possibile creare, visualizzare, modificare ed eliminare etichette utilizzando l&#39;endpoint `/labels`. Per informazioni su come utilizzare questo endpoint, visita la [guida dell&#39;endpoint delle etichette](./labels.md).
 
 ## Azioni marketing
 
@@ -34,7 +34,7 @@ I criteri di governance dei dati sono regole che descrivono i tipi di azioni di 
 
 >[!NOTE]
 >
->I criteri di governance dei dati non devono essere confusi con i criteri di controllo degli accessi, che determinano gli attributi di dati specifici a cui possono accedere alcuni utenti di Platform nella tua organizzazione. Per ulteriori informazioni, vedere la guida sul controllo degli accessi basato su [attributi](../../access-control/abac/overview.md).
+>I criteri di governance dei dati non devono essere confusi con i criteri di controllo degli accessi, che determinano gli attributi di dati specifici a cui possono accedere alcuni utenti di Experience Platform nella tua organizzazione. Per ulteriori informazioni, vedere la guida sul controllo degli accessi basato su [attributi](../../access-control/abac/overview.md).
 
 Un criterio di governance dei dati è definito dai seguenti elementi:
 
@@ -45,7 +45,7 @@ Per informazioni su come gestire i criteri nell&#39;API, consulta la [guida dell
 
 ## Valutazione
 
-Dopo aver applicato le etichette di utilizzo dei dati agli schemi di Platform e aver definito i criteri di utilizzo dei dati per le azioni di marketing relative a tali etichette, le funzionalità di governance dei dati consentono di applicare tali criteri e impedire operazioni sui dati che costituiscono violazioni dei criteri.
+Dopo aver applicato le etichette di utilizzo dei dati agli schemi di Experience Platform e aver definito i criteri di utilizzo dei dati per le azioni di marketing su tali etichette, le funzionalità di governance dei dati ti consentono di applicare tali criteri e impedire operazioni sui dati che costituiscono violazioni dei criteri.
 
 L&#39;API [!DNL Policy Service] fornisce endpoint che consentono di testare azioni di marketing in base a set di dati o combinazioni arbitrarie di etichette di utilizzo dati per verificare se si verificano violazioni dei criteri. In base alla risposta API, puoi quindi configurare i protocolli all’interno dell’applicazione Experience per applicare in modo appropriato la conformità ai criteri di utilizzo dei dati. Per ulteriori informazioni, consulta la [guida degli endpoint di valutazione](./evaluation.md).
 

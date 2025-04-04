@@ -4,9 +4,9 @@ title: Generare il rapporto di sovrapposizione del set di dati
 type: Tutorial
 description: Questa esercitazione illustra i passaggi necessari per generare il rapporto di sovrapposizione dei set di dati utilizzando l’API Profilo cliente in tempo reale.
 exl-id: 90894ed3-b09e-435d-a9e3-18fd6dc8e907
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '889'
+source-wordcount: '890'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ Questo tutorial illustra i passaggi necessari per generare il report di sovrappo
 
 ## Introduzione
 
-Per utilizzare le API di Adobe Experience Platform, devi prima completare l&#39;[esercitazione di autenticazione](https://www.adobe.com/go/platform-api-authentication-en) per raccogliere i valori necessari per le intestazioni richieste. Per ulteriori informazioni sulle API Experience Platform, consulta la [guida introduttiva alle API Platform](../../landing/api-guide.md).
+Per utilizzare le API di Adobe Experience Platform, devi prima completare l&#39;[esercitazione di autenticazione](https://www.adobe.com/go/platform-api-authentication-en) per raccogliere i valori necessari per le intestazioni richieste. Per ulteriori informazioni sulle API Experience Platform, consulta la [guida introduttiva alle API Experience Platform](../../landing/api-guide.md).
 
 Le intestazioni richieste per tutte le chiamate API in questa esercitazione sono:
 
@@ -33,7 +33,7 @@ Dopo aver completato il tutorial di autenticazione e raccolto i valori per le in
 
 ## Genera report di sovrapposizione set di dati utilizzando la riga di comando
 
-Se si ha familiarità con l&#39;utilizzo della riga di comando, è possibile utilizzare la seguente richiesta cURL per generare il report di sovrapposizione del set di dati eseguendo una richiesta GET a `/previewsamplestatus/report/dataset/overlap`.
+Se si ha familiarità con l&#39;utilizzo della riga di comando, è possibile utilizzare la seguente richiesta cURL per generare il report di sovrapposizione dei set di dati eseguendo una richiesta GET a `/previewsamplestatus/report/dataset/overlap`.
 
 **Richiesta**
 

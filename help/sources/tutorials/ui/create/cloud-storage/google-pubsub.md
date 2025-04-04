@@ -1,11 +1,11 @@
 ---
 title: Creare una connessione Google PubSub Source nell'interfaccia utente
-description: Scopri come creare un connettore di origine Google PubSub utilizzando l’interfaccia utente di Platform.
+description: Scopri come creare un connettore di origine Google PubSub utilizzando l’interfaccia utente di Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: fcac805e151d6142886eb8e05da0eb1babad2f69
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1098'
+source-wordcount: '1106'
 ht-degree: 1%
 
 ---
@@ -14,22 +14,22 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->L&#39;origine [!DNL Google PubSub] è disponibile nel catalogo delle origini per gli utenti che hanno acquistato Real-time Customer Data Platform Ultimate.
+>L&#39;origine [!DNL Google PubSub] è disponibile nel catalogo delle origini per gli utenti che hanno acquistato Real-Time Customer Data Platform Ultimate.
 
-Questo tutorial descrive i passaggi necessari per creare [!DNL Google PubSub] (di seguito &quot;[!DNL PubSub]&quot;) utilizzando l&#39;interfaccia utente di Platform.
+Questo tutorial illustra i passaggi per la creazione di [!DNL Google PubSub] (di seguito &quot;[!DNL PubSub]&quot;) tramite l&#39;interfaccia utente di Experience Platform.
 
 ## Introduzione
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Origini](../../../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
-* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Origini](../../../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Experience Platform.
+* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Experience Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 Se disponi già di una connessione [!DNL PubSub] valida, puoi saltare il resto del documento e passare all&#39;esercitazione [configurazione di un flusso di dati](../../dataflow/batch/cloud-storage.md).
 
 ### Raccogli le credenziali richieste
 
-Per connettere l&#39;account [!DNL PubSub] all&#39;Experience Platform, è necessario fornire i valori per le proprietà di connessione descritte di seguito. Per ulteriori informazioni sull&#39;autenticazione e sulla configurazione dei prerequisiti, leggere la [[!DNL PubSub source] panoramica](../../../../connectors/cloud-storage/google-pubsub.md#prerequisites).
+È necessario fornire i valori per le proprietà di connessione descritte di seguito per connettere l&#39;account [!DNL PubSub] ad Experience Platform. Per ulteriori informazioni sull&#39;autenticazione e sulla configurazione dei prerequisiti, leggere la [[!DNL PubSub source] panoramica](../../../../connectors/cloud-storage/google-pubsub.md#prerequisites).
 
 
 >[!BEGINTABS]
@@ -57,11 +57,11 @@ Per ulteriori informazioni su questi valori, consulta il seguente documento di [
 >
 >Se utilizzi l’autenticazione basata sull’account del servizio, assicurati di aver concesso un accesso utente sufficiente all’account del servizio e di non inserire spazi vuoti aggiuntivi nel JSON quando copi e incolla le credenziali.
 
-Dopo aver raccolto le credenziali richieste, puoi seguire i passaggi seguenti per collegare l&#39;account [!DNL PubSub] a Platform.
+Dopo aver raccolto le credenziali richieste, puoi seguire i passaggi seguenti per collegare l&#39;account [!DNL PubSub] ad Experience Platform.
 
 ## Connetti il tuo account [!DNL PubSub]
 
-Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Nella schermata [!UICONTROL Catalogo] sono visualizzate diverse origini con cui è possibile creare un account.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Nella schermata [!UICONTROL Catalogo] sono visualizzate diverse origini con cui è possibile creare un account.
 
 Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
 
@@ -112,7 +112,7 @@ Per creare un account con accesso limitato solo a un argomento e a una sottoscri
 
 ## Selezionare i dati
 
-Se l&#39;autenticazione ha esito positivo, viene visualizzato il passaggio [!UICONTROL Seleziona dati], in cui è possibile spostarsi nella gerarchia dei dati di [!DNL PubSub] e selezionare i dati da portare in Experience Platform.
+Se l&#39;autenticazione ha esito positivo, viene visualizzato il passaggio [!UICONTROL Seleziona dati], in cui è possibile spostarsi nella gerarchia dei dati di [!DNL PubSub] e selezionare i dati che si desidera portare in Experience Platform.
 
 >[!BEGINTABS]
 
@@ -136,4 +136,4 @@ Se hai eseguito l&#39;autenticazione con un argomento e un accesso basato su abb
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato una connessione tra il tuo account [!DNL PubSub] e Platform. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per portare dati in streaming dall&#39;archiviazione cloud in Platform](../../dataflow/streaming/cloud-storage-streaming.md).
+Seguendo questa esercitazione, hai creato una connessione tra il tuo account [!DNL PubSub] e Experience Platform. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per portare dati in streaming dall&#39;archiviazione cloud in Experience Platform](../../dataflow/streaming/cloud-storage-streaming.md).

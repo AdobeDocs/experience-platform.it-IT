@@ -2,9 +2,9 @@
 title: Analisi e tracciamento del consenso
 description: Scopri come creare un dashboard di analisi del consenso per tenere traccia delle tendenze del consenso degli utenti nel tempo.
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: adc6d50f2784fe665d0590c3af053a057f8e4e38
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1909'
+source-wordcount: '1910'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ I casi d’uso trattati in questa guida sono la tendenza del consenso e la sovra
 
 ## Creare tipi di pubblico consentiti {#create-consent-audiences}
 
-Per creare una dashboard di consenso, devi innanzitutto creare un pubblico di tutti i profili che hanno acconsentito a contattare. Per passare al Generatore di segmenti di Real-Time Customer Data Platform, seleziona **[!UICONTROL Tipi di pubblico]** nell&#39;area di navigazione a sinistra dell&#39;interfaccia utente di Platform. Dalla scheda [!UICONTROL Cliente] della dashboard [!UICONTROL Tipi di pubblico], seleziona **[!UICONTROL Crea pubblico]** in alto a destra della visualizzazione, quindi **[!UICONTROL Genera regole]**.
+Per creare una dashboard di consenso, devi innanzitutto creare un pubblico di tutti i profili che hanno acconsentito a contattare. Per passare al Generatore di segmenti di Real-Time Customer Data Platform, seleziona **[!UICONTROL Tipi di pubblico]** nell&#39;area di navigazione a sinistra dell&#39;interfaccia utente di Experience Platform. Dalla scheda [!UICONTROL Cliente] della dashboard [!UICONTROL Tipi di pubblico], seleziona **[!UICONTROL Crea pubblico]** in alto a destra della visualizzazione, quindi **[!UICONTROL Genera regole]**.
 
 ![Dashboard [!UICONTROL Tipi di pubblico] con [!UICONTROL Cliente], [!UICONTROL Tipi di pubblico] e [!UICONTROL Crea segmento] evidenziato.](../images/insights-use-cases/consent-analysis/create-audience.png)
 
@@ -72,7 +72,7 @@ Adobe ha creato varie informazioni che sono automaticamente disponibili nelle da
 
 ## Sovrapposizione del pubblico {#audience-overlap}
 
-Per rivedere la sovrapposizione tra due tipi di pubblico di consenso, aggiungi [!UICONTROL Sovrapposizione pubblico per criterio di unione] alla dashboard Profili e seleziona i tipi di pubblico desiderati nei menu a discesa. Consulta la documentazione per istruzioni su come aggiungere un widget al dashboard di [*Sovrapposizione del pubblico tramite criterio di unione*](../guides/profiles.md#audience-overlap-by-merge-policy) per ulteriori informazioni.
+Per rivedere la sovrapposizione tra due tipi di pubblico di consenso, aggiungi [!UICONTROL Sovrapposizione pubblico per criterio di unione] alla dashboard Profili e seleziona i tipi di pubblico desiderati nei menu a discesa. Per ulteriori informazioni su insight, consulta la documentazione per istruzioni su come aggiungere un widget al dashboard [*Sovrapposizione del pubblico tramite criterio di unione*](../guides/profiles.md#audience-overlap-by-merge-policy).
 
 <!-- Image needs updating to night mode -->
 

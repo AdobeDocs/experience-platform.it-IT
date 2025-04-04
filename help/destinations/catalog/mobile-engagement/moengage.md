@@ -3,7 +3,7 @@ title: Connessione moenging
 description: Moengi è una piattaforma di coinvolgimento dei clienti che potenzia in tempo reale le interazioni incentrate sul cliente tra consumatori e marchi.
 last-substantial-update: 2023-10-11T00:00:00Z
 exl-id: 051f1a10-3c41-4c0a-b187-bf80de0565f0
-source-git-commit: 1e22ad63414876af45d156ed030b8103908de8a1
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1036'
 ht-degree: 2%
@@ -100,7 +100,7 @@ Per istruzioni sull&#39;attivazione dei segmenti di pubblico in questa destinazi
 
 Per inviare correttamente i dati sul pubblico da [!DNL Adobe Experience Platform] alla destinazione [!DNL Moengage], è necessario eseguire il passaggio di mappatura dei campi.
 
-La mappatura consiste nella creazione di un collegamento tra i campi dello schema [!DNL Experience Data Model] (XDM) nell&#39;account [!DNL Platform] e gli equivalenti corrispondenti dalla destinazione.
+La mappatura consiste nella creazione di un collegamento tra i campi dello schema [!DNL Experience Data Model] (XDM) nell&#39;account [!DNL Experience Platform] e gli equivalenti corrispondenti dalla destinazione.
 
 Per mappare correttamente i campi XDM ai campi di destinazione [!DNL Moengage], effettua le seguenti operazioni:
 
@@ -128,7 +128,7 @@ Nella sezione [!UICONTROL Campo di destinazione], seleziona l&#39;icona di mappa
 ![Mappatura destinazione moengdestinazione](../../assets/catalog/mobile-engagement/moengage/mapping-target.png)
 
 Nella finestra [!UICONTROL Seleziona campo di destinazione] è possibile scegliere tra due categorie di campi di destinazione:
-* [!UICONTROL Seleziona lo spazio dei nomi dell&#39;identità]: utilizzare questa opzione per mappare gli spazi dei nomi dell&#39;identità [!DNL Platform] agli spazi dei nomi dell&#39;identità [!DNL Moengage].
+* [!UICONTROL Seleziona lo spazio dei nomi dell&#39;identità]: utilizzare questa opzione per mappare gli spazi dei nomi dell&#39;identità [!DNL Experience Platform] agli spazi dei nomi dell&#39;identità [!DNL Moengage].
 * [!UICONTROL Seleziona attributi personalizzati]: utilizza questa opzione per mappare gli attributi XDM agli attributi [!DNL Moengage] personalizzati definiti nell&#39;account [!DNL Moengage]. <br> È inoltre possibile utilizzare questa opzione per rinominare gli attributi XDM esistenti in [!DNL Moengage]. Ad esempio, il mapping di un attributo XDM `lastName` a un attributo `Last_Name` personalizzato in [!DNL Moengage] creerà l&#39;attributo `Last_Name` in [!DNL Moengage], se non esiste già, e mapperà l&#39;attributo XDM `lastName` a esso.
 
 ![Campi di mappatura destinazione moenging](../../assets/catalog/mobile-engagement/moengage/mapping-target-fields.png)

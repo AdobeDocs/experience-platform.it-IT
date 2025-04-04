@@ -2,10 +2,10 @@
 title: Caricare e implementare test end-to-end per un’estensione
 description: Scopri come convalidare, caricare e testare l’estensione in Adobe Experience Platform.
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
-source-git-commit: 8e843ce14d726f18b77189b5523b823bfa4473be
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2345'
-ht-degree: 86%
+source-wordcount: '2347'
+ht-degree: 84%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 86%
 >
 >Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
-Per testare le estensioni dei tag in Adobe Experience Platform, utilizza l’API dei tag e/o strumenti per riga di comando per caricare i pacchetti di estensione. Quindi, utilizza l’interfaccia utente di Platform o di Data Collection per installare il pacchetto di estensione in una proprietà ed esercitarne le funzionalità all’interno di una libreria di tag e di una build.
+Per testare le estensioni dei tag in Adobe Experience Platform, utilizza l’API dei tag e/o strumenti per riga di comando per caricare i pacchetti di estensione. Quindi, utilizza l’interfaccia utente di Experience Platform o di Data Collection per installare il pacchetto di estensione in una proprietà ed esercitarne le funzionalità all’interno di una libreria di tag e di una build.
 
 Questo documento illustra come implementare test end-to-end per l’estensione.
 
@@ -62,7 +62,7 @@ npx @adobe/reactor-uploader
 `npx` consente di scaricare ed eseguire un pacchetto npm senza installarlo sul computer. Questo è il modo più semplice per eseguire lo strumento Uploader.
 
 >[!NOTE]
-> Per impostazione predefinita, lo strumento Uploader prevede credenziali di Adobe I/O per un flusso Oauth da server a server. Le credenziali legacy di `jwt-auth`
+> Per impostazione predefinita, lo strumento Uploader richiede le credenziali di Adobe I/O per un flusso OAuth da server a server. Le credenziali legacy di `jwt-auth`
 > può essere utilizzato eseguendo `npx @adobe/reactor-uploader@v5.2.0` fino a quando non diventerà obsoleto il 1° gennaio 2025. Parametri richiesti
 > per eseguire la versione `jwt-auth` è possibile trovare [qui](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452).
 
@@ -114,7 +114,7 @@ Per aggiungere la tua estensione, seleziona la scheda **Catalogo**.
 
 ![](../images/getting-started/catalog.png)
 
-Il catalogo presenta le icone delle schede di ogni estensione disponibile. Se l’estensione non viene visualizzata nel catalogo, assicurati di aver completato i passaggi descritti nelle sezioni precedenti sull’impostazione di Adobe Admin Console e sulla creazione del pacchetto di estensione. Se Platform non ha completato l’elaborazione iniziale, il pacchetto di estensione potrebbe essere visualizzato come In sospeso.
+Il catalogo presenta le icone delle schede di ogni estensione disponibile. Se l’estensione non viene visualizzata nel catalogo, assicurati di aver completato i passaggi descritti nelle sezioni precedenti sull’impostazione di Adobe Admin Console e sulla creazione del pacchetto di estensione. Se Experience Platform non ha completato l’elaborazione iniziale, il pacchetto di estensione potrebbe essere visualizzato come In sospeso.
 
 Se hai seguito i passaggi precedenti e non vedi ancora un pacchetto di estensione in sospeso o non riuscito nel catalogo, controlla lo stato del pacchetto di estensione direttamente utilizzando l’API. Per informazioni su come effettuare la chiamata API appropriata, leggi [Recuperare un pacchetto di estensione](../../api/endpoints/extension-packages.md#lookup) nella documentazione dell’API.
 
@@ -146,7 +146,7 @@ Le estensioni possono definire i tipi di elementi dati necessari per il funziona
 
 Quando un utente seleziona l’estensione dal menu a discesa **Estensione**, il menu a discesa **Tipo di elemento dati** viene compilato con i tipi di elemento dati fornito dall’estensione. L’utente può quindi mappare ogni elemento dati al relativo valore sorgente. Gli elementi dati possono essere utilizzati quando si creano regole nell’evento di modifica dell’elemento dati o nell’evento Codice personalizzato per attivare una regola da eseguire. Un elemento dati può essere utilizzato anche nella Condizione elemento dati o in altre Condizioni, Eccezioni o Azioni in una regola.
 
-Una volta creato l’elemento dati (impostandone la mappatura), gli utenti possono fare riferimento ai dati sorgente semplicemente facendo riferimento a tale elemento dati. Se la sorgente del valore cambia (in seguito alla riprogettazione del sito, ecc.) gli utenti devono aggiornare la mappatura solo una volta nell’interfaccia utente e tutti gli elementi dati riceveranno automaticamente il nuovo valore sorgente.
+Una volta creato l’elemento dati (impostandone la mappatura), gli utenti possono fare riferimento ai dati sorgente semplicemente facendo riferimento a tale elemento dati. Se l’origine del valore cambia (se il sito viene riprogettato, ecc.), gli utenti dovranno aggiornare la mappatura solo una volta nell’interfaccia utente e tutti gli elementi dati riceveranno automaticamente il nuovo valore sorgente.
 
 ### Regole
 

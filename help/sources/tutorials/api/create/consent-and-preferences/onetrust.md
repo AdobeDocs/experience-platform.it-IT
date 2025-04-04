@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creare un flusso di dati per un'origine di integrazione OneTrust tramite l'API del servizio Flusso
 description: Scopri come collegare Adobe Experience Platform all’integrazione OneTrust utilizzando l’API del servizio Flow.
 exl-id: e224efe0-4756-4b8a-b446-a3e1066f2050
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1913'
+source-wordcount: '1924'
 ht-degree: 2%
 
 ---
@@ -25,23 +25,23 @@ Il seguente tutorial illustra i passaggi necessari per creare una connessione di
 >
 >Il connettore di origine [!DNL OneTrust Integration] e la documentazione sono stati creati dal team [!DNL OneTrust Integration]. Per richieste di informazioni o richieste di aggiornamento, contatta direttamente il [[!DNL OneTrust] team](https://my.onetrust.com/s/contactsupport?language=en_US).
 
-Prima di poter connettere [!DNL OneTrust Integration] a Platform, è necessario recuperare il token di accesso. Per istruzioni dettagliate su come trovare il token di accesso, consulta la [[!DNL OneTrust Integration] guida OAuth 2](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token).
+Prima di poter connettere [!DNL OneTrust Integration] ad Experience Platform, devi recuperare il token di accesso. Per istruzioni dettagliate su come trovare il token di accesso, consulta la [[!DNL OneTrust Integration] guida OAuth 2](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token).
 
 Il token di accesso non viene aggiornato automaticamente dopo la scadenza perché i token di aggiornamento da sistema a sistema non sono supportati da [!DNL OneTrust]. Pertanto, è necessario assicurarsi che il token di accesso sia aggiornato nella connessione prima della scadenza. La durata massima configurabile per un token di accesso è di un anno. Per ulteriori informazioni sull&#39;aggiornamento del token di accesso, consulta il documento [[!DNL OneTrust] sulla gestione delle credenziali client OAuth 2.0](https://developer.onetrust.com/docs/documentation/ZG9jOjIyODk1MTUw-managing-o-auth-2-0-client-credentials).
 
-## Connetti [!DNL OneTrust Integration] a Platform utilizzando l&#39;API [!DNL Flow Service]
+## Connetti [!DNL OneTrust Integration] ad Experience Platform utilizzando l&#39;API [!DNL Flow Service]
 
 >[!NOTE]
 >
 >Le specifiche API [!DNL OneTrust Integration] sono condivise con Adobe per l&#39;acquisizione dei dati.
 
-Il seguente tutorial illustra i passaggi necessari per creare una connessione di origine [!DNL OneTrust Integration] e un flusso di dati per portare dati [!DNL OneTrust Integration] in Platform utilizzando l&#39;API [[!DNL Flow Service] 3}.](https://www.adobe.io/experience-platform-apis/references/flow-service/)
+Il seguente tutorial illustra i passaggi necessari per creare una connessione di origine [!DNL OneTrust Integration] e un flusso di dati per portare dati [!DNL OneTrust Integration] in Experience Platform utilizzando l&#39;[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ### Creare una connessione di base {#base-connection}
 
-Una connessione di base mantiene le informazioni tra l’origine e Platform, incluse le credenziali di autenticazione dell’origine, lo stato corrente della connessione e l’ID univoco della connessione di base. L’ID della connessione di base consente di esplorare e navigare tra i file dall’interno dell’origine e identificare gli elementi specifici che desideri acquisire, comprese le informazioni relative ai tipi di dati e ai formati.
+Una connessione di base mantiene le informazioni tra l’origine e Experience Platform, incluse le credenziali di autenticazione dell’origine, lo stato corrente della connessione e l’ID univoco della connessione di base. L’ID della connessione di base consente di esplorare e navigare tra i file dall’interno dell’origine e identificare gli elementi specifici che desideri acquisire, comprese le informazioni relative ai tipi di dati e ai formati.
 
-Per creare un ID di connessione di base, effettuare una richiesta POST all&#39;endpoint `/connections` fornendo le credenziali di autenticazione [!DNL OneTrust Integration] come parte del corpo della richiesta.
+Per creare un ID di connessione di base, eseguire una richiesta POST all&#39;endpoint `/connections` fornendo le credenziali di autenticazione [!DNL OneTrust Integration] come parte del corpo della richiesta.
 
 **Formato API**
 
@@ -63,7 +63,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{
       "name": "ONETRUST base connection",
-      "description": "ONETRUST base connection to authenticate to Platform",
+      "description": "ONETRUST base connection to authenticate to Experience Platform",
       "connectionSpec": {
           "id": "cf16d886-c627-4872-9936-fb08d6cba8cc",
           "version": "1.0"
@@ -82,7 +82,7 @@ curl -X POST \
 | `name` | Nome della connessione di base. Verificare che il nome della connessione di base sia descrittivo, in quanto è possibile utilizzarlo per cercare informazioni sulla connessione di base. |
 | `description` | Valore facoltativo che è possibile includere per fornire ulteriori informazioni sulla connessione di base. |
 | `connectionSpec.id` | ID della specifica di connessione dell&#39;origine. Questo ID può essere recuperato dopo che l&#39;origine è stata registrata e approvata tramite l&#39;API [!DNL Flow Service]. |
-| `auth.specName` | Tipo di autenticazione utilizzato per autenticare l’origine in Platform. |
+| `auth.specName` | Tipo di autenticazione utilizzato per autenticare l’origine in Experience Platform. |
 | `auth.params.` | Contiene le credenziali necessarie per autenticare l’origine, incluso il token di accesso per la connessione all’API. |
 | `auth.params.accessToken` | Il token di accesso corrispondente al tuo account [!DNL OneTrust Integration]. |
 
@@ -99,9 +99,9 @@ In caso di esito positivo, la risposta restituisce la connessione di base appena
 
 ### Esplora l’origine {#explore}
 
-Utilizzando l’ID connessione di base generato nel passaggio precedente, puoi esplorare file e directory eseguendo richieste GET.
+Utilizzando l’ID connessione di base generato nel passaggio precedente, puoi esplorare file e directory eseguendo le richieste di GET.
 
-Utilizzare le seguenti chiamate per trovare il percorso del file che si desidera inserire in [!DNL Platform]:
+Utilizzare le seguenti chiamate per trovare il percorso del file che si desidera inserire in [!DNL Experience Platform]:
 
 **Formato API**
 
@@ -109,7 +109,7 @@ Utilizzare le seguenti chiamate per trovare il percorso del file che si desidera
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=rest&object={OBJECT}&fileType={FILE_TYPE}&preview={PREVIEW}
 ```
 
-Quando si eseguono richieste di GET per esplorare la struttura e il contenuto dei file dell’origine, è necessario includere i parametri di query elencati nella tabella seguente:
+Quando esegui le richieste di GET per esplorare la struttura e il contenuto dei file dell’origine, devi includere i parametri di query elencati nella tabella seguente:
 
 
 | Parametro | Descrizione |
@@ -117,7 +117,7 @@ Quando si eseguono richieste di GET per esplorare la struttura e il contenuto de
 | `{BASE_CONNECTION_ID}` | ID della connessione di base generato nel passaggio precedente. |
 | `objectType=rest` | Tipo di oggetto che si desidera esplorare. Attualmente, questo valore è sempre impostato su `rest`. |
 | `{OBJECT}` | Questo parametro è necessario solo quando si visualizza una directory specifica. Il relativo valore rappresenta il percorso della directory che desideri esplorare. |
-| `fileType=json` | Il tipo di file che desideri portare su Platform. Attualmente, `json` è l&#39;unico tipo di file supportato. |
+| `fileType=json` | Il tipo di file che desideri portare in Experience Platform. Attualmente, `json` è l&#39;unico tipo di file supportato. |
 | `{PREVIEW}` | Valore booleano che definisce se il contenuto della connessione supporta l’anteprima. |
 
 **Richiesta**
@@ -621,7 +621,7 @@ In caso di esito positivo, la risposta restituisce l&#39;identificatore univoco 
 
 ### Creare uno schema XDM di destinazione {#target-schema}
 
-Per utilizzare i dati sorgente in Platform, è necessario creare uno schema di destinazione che strutturi i dati sorgente in base alle tue esigenze. Lo schema di destinazione viene quindi utilizzato per creare un set di dati di Platform in cui sono contenuti i dati di origine.
+Affinché i dati sorgente possano essere utilizzati in Experience Platform, è necessario creare uno schema di destinazione per strutturare i dati sorgente in base alle tue esigenze. Lo schema di destinazione viene quindi utilizzato per creare un set di dati Experience Platform in cui sono contenuti i dati di origine.
 
 È possibile creare uno schema XDM di destinazione eseguendo una richiesta POST all&#39;API [Schema Registry](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
 
@@ -678,7 +678,7 @@ curl -X POST \
 | `name` | Nome della connessione di destinazione. Assicurati che il nome della connessione di destinazione sia descrittivo, in quanto può essere utilizzato per cercare informazioni sulla connessione di destinazione. |
 | `description` | Valore facoltativo che è possibile includere per fornire ulteriori informazioni sulla connessione di destinazione. |
 | `connectionSpec.id` | ID della specifica di connessione corrispondente a [!DNL Data Lake]. ID corretto: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | Il formato dei dati [!DNL OneTrust Integration] che desideri portare in Platform. |
+| `data.format` | Formato dei dati [!DNL OneTrust Integration] che si desidera portare in Experience Platform. |
 | `params.dataSetId` | ID del set di dati di destinazione recuperato in un passaggio precedente. |
 
 
@@ -786,7 +786,7 @@ In caso di esito positivo, la risposta restituisce i dettagli della mappatura ap
 
 ### Creare un flusso {#flow}
 
-L&#39;ultimo passaggio per portare i dati da [!DNL OneTrust Integration] a Platform consiste nel creare un flusso di dati. A questo punto sono stati preparati i seguenti valori obbligatori:
+L&#39;ultimo passaggio per portare dati da [!DNL OneTrust Integration] ad Experience Platform consiste nella creazione di un flusso di dati. A questo punto sono stati preparati i seguenti valori obbligatori:
 
 * [ID connessione Source](#source-connection)
 * [ID connessione di destinazione](#target-connection)
@@ -849,7 +849,7 @@ curl -X POST \
 | `flowSpec.version` | Versione corrispondente dell&#39;ID della specifica di flusso. Il valore predefinito è `1.0`. |
 | `sourceConnectionIds` | L&#39;[ID connessione di origine](#source-connection) generato in un passaggio precedente. |
 | `targetConnectionIds` | L&#39;ID [connessione di destinazione](#target-connection) generato in un passaggio precedente. |
-| `transformations` | Questa proprietà contiene le varie trasformazioni che devono essere applicate ai dati. Questa proprietà è necessaria per portare dati non conformi a XDM su Platform. |
+| `transformations` | Questa proprietà contiene le varie trasformazioni che devono essere applicate ai dati. Questa proprietà è necessaria quando si importano dati non conformi a XDM in Experience Platform. |
 | `transformations.name` | Nome assegnato alla trasformazione. |
 | `transformations.params.mappingId` | L&#39;[ID mappatura](#mapping) generato in un passaggio precedente. |
 | `transformations.params.mappingVersion` | Versione corrispondente dell&#39;ID di mappatura. Il valore predefinito è `0`. |
@@ -882,7 +882,7 @@ Aggiorna i dettagli del flusso di dati, ad esempio il nome e la descrizione, non
 
 ### Aggiornare l’account
 
-Aggiornare il nome, la descrizione e le credenziali dell&#39;account di origine eseguendo una richiesta PATCH all&#39;API [!DNL Flow Service] e fornendo l&#39;ID connessione di base come parametro di query. Quando si effettua una richiesta PATCH, è necessario fornire `etag` univoco dell&#39;account di origine nell&#39;intestazione `If-Match`. Per esempi API completi, consulta la guida in [aggiornamento dell&#39;account di origine tramite l&#39;API](../../update.md).
+Aggiornare il nome, la descrizione e le credenziali dell&#39;account di origine eseguendo una richiesta PATCH all&#39;API [!DNL Flow Service] e fornendo l&#39;ID connessione di base come parametro di query. Quando si effettua una richiesta PATCH, è necessario fornire l&#39;univoco `etag` dell&#39;account di origine nell&#39;intestazione `If-Match`. Per esempi API completi, consulta la guida in [aggiornamento dell&#39;account di origine tramite l&#39;API](../../update.md).
 
 ### Eliminare il flusso di dati
 

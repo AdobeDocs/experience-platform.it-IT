@@ -2,10 +2,10 @@
 title: Self-hosting delle librerie
 description: Scopri come implementare il self-hosting per le build delle librerie di tag in Adobe Experience Platform.
 exl-id: 8c3bf202-de7a-46e0-801f-0cede24865fd
-source-git-commit: 91b28fc284344b42020b0e49b64ac023e492d572
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '489'
-ht-degree: 96%
+source-wordcount: '491'
+ht-degree: 90%
 
 ---
 
@@ -13,17 +13,17 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 I tag in Adobe Experience Platform consentono la produzione di un set di file denominato [build](../builds.md). Questo insieme di file controlla il comportamento dell’applicazione in fase di esecuzione.
 
 Le build devono essere ospitate in un punto in modo da consentire ai dispositivi client di recuperarle in fase di esecuzione, in base alle esigenze.
 
-Platform può gestire l’hosting di questi file oppure puoi farlo autonomamente.
+Experience Platform può gestire l’hosting di questi file oppure puoi farlo autonomamente.
 
 ## Gestito da Adobe {#managed-by-adobe}
 
-Adobe non opera nel settore del hosting web. Se scegli l&#39;hosting gestito da Adobe, le build vengono distribuite a una rete di distribuzione di contenuti (CDN) di terze parti con la quale abbiamo stipulato un contratto.
+Adobe non opera nel settore del hosting web. Se scegli l’hosting gestito da Adobe, le build vengono distribuite a una rete per la consegna dei contenuti (CDN) di terze parti con la quale abbiamo stipulato un contratto.
 
 Attualmente, il provider CDN principale è Akamai. I file in hosting su Akamai hanno un dominio `assets.adobedtm.com`.
 
@@ -33,7 +33,7 @@ Il motivo principale per utilizzare l&#39;hosting gestito è la comodità. Crear
 
 ## Hosting autonomo
 
-Se non desideri che Adobe gestisca i file ospitati, devi ospitarli personalmente. Per ospitare i file, devi ottenere le build completate da Platform ed essere responsabile di ottenere i file tramite il processo di pubblicazione aziendale sui server gestiti della società.
+Se non desideri che Adobe gestisca i file ospitati, devi ospitarli personalmente. Per ospitare i file, devi ottenere le build completate da Experience Platform ed essere responsabile di ottenere i file tramite il ciclo di rilascio della tua azienda sui server gestiti della società.
 
 ### Perché utilizzare l&#39;hosting autonomo?
 

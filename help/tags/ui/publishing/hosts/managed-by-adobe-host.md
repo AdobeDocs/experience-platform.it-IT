@@ -2,10 +2,10 @@
 title: Panoramica degli host gestiti da Adobe
 description: Scopri l’opzione di hosting predefinita per la distribuzione delle build della libreria di tag in Adobe Experience Platform.
 exl-id: 9042c313-b0d3-4f6e-963d-0051d760fd16
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1177'
-ht-degree: 88%
+source-wordcount: '1181'
+ht-degree: 82%
 
 ---
 
@@ -13,17 +13,17 @@ ht-degree: 88%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 L’impostazione predefinita per la distribuzione delle build delle librerie di tag in Adobe Experience Platform prevede l’utilizzo di host gestiti da Adobe. Quando si crea una nuova proprietà tramite l’interfaccia utente di Data Collection, viene creato automaticamente un host predefinito gestito da Adobe.
 
-Con gli host gestiti da Adobe, le build delle librerie vengono distribuite a una rete per la distribuzione di contenuti (CDN) di terze parti con cui Adobe ha stipulato un contratto. Essendo indipendenti da Adobe, tali CDN funzionano anche quando Platform è in manutenzione o non disponibile, e il codice distribuito continuerà a funzionare normalmente sui tuoi siti e sulle tue applicazioni. Il codice da incorporare per un host gestito da Adobe fa riferimento al file della libreria principale sulla rete CDN, in modo che un dispositivo client possa recuperare i file in fase di esecuzione.
+Con gli host gestiti da Adobe, le build delle librerie vengono distribuite a una rete per la consegna dei contenuti (CDN) di terze parti con cui Adobe ha stipulato un contratto. Poiché queste CDN operano in modo indipendente da Adobe, anche quando Experience Platform è in manutenzione o non disponibile, il codice distribuito continuerà a funzionare normalmente sui tuoi siti e sulle tue applicazioni. Il codice da incorporare per un host gestito da Adobe fa riferimento al file della libreria principale sulla rete CDN, in modo che un dispositivo client possa recuperare i file in fase di esecuzione.
 
-Questo documento fornisce una panoramica sugli host gestiti da Adobe in Platform e descrive come creare un nuovo host gestito da Adobe.
+Questo documento fornisce una panoramica sugli host gestiti da Adobe in Experience Platform e descrive come creare un nuovo host gestito da Adobe.
 
 ## Akamai
 
-Attualmente, il fornitore CDN principale per Adobe è [Akamai](https://www.akamai.com/it). La solida rete CDN di Akamai è stata realizzata per distribuire i contenuti a un pubblico globale e per elevati volumi di visitatori web. Comprende reti ridondanti di nodi con bilanciamento del carico e ottimizzati in base alla posizione geografica, al fine di fornire i contenuti il più rapidamente possibile ai visitatori da ogni parte del mondo.
+Attualmente, il fornitore CDN principale per Adobe è [Akamai](https://www.akamai.com/it). La solida rete CDN di Akamai è stata realizzata per distribuire i contenuti a un pubblico globale e per elevati volumi di visitatori web. La CDN esegue reti ridondanti di nodi con bilanciamento del carico e ottimizzati in base alla posizione geografica, al fine di fornire i contenuti il più rapidamente possibile ai visitatori da ogni parte del mondo.
 
 Nello specifico, Akamai esegue più di 137.000 server in 87 paesi in oltre 1150 reti. In termini di ridondanza, la rete CDN non solo effettua l’instradamento da un server all’altro, ma può anche essere indirizzata da un nodo di server a un altro, a seconda delle necessità. In altre parole, ogni nodo è costituito da più server; nell’eventualità in cui un server non sia disponibile, subentrano altri server dello stesso nodo in modo da evitare che si verifichino problemi.
 
@@ -33,7 +33,7 @@ I file in hosting su Akamai hanno un dominio `assets.adobedtm.com`. Questo può 
 
 >[!WARNING]
 >
->Se la libreria non è disponibile dalla rete Akamai, Platform non è in grado di evitare eventuali errori di rete che potrebbero verificarsi.
+>Se la libreria non è disponibile dalla rete Akamai, Experience Platform non è in grado di evitare eventuali errori di rete che potrebbero verificarsi.
 
 ## Memorizzazione nella cache delle build delle librerie
 
@@ -88,9 +88,9 @@ Come riportato in questa tabella, la memorizzazione nella cache del browser non 
 
 Le intestazioni per il controllo della cache sono applicabili solo alla build della libreria principale. Le risorse secondarie rispetto alla libreria principale sono sempre considerate nuove e quindi non è necessario memorizzarle nella cache del browser.
 
-## Utilizzo dell’hosting gestito da Adobe nell’interfaccia utente di
+## Utilizzo dell’hosting gestito da Adobe nell’interfaccia utente
 
-La prima volta che crei una proprietà nell’interfaccia utente di Platform o di Data Collection, viene automaticamente creato un host gestito da Adobe. Anche tutti gli ambienti disponibili con proprietà immediatamente utilizzabili vengono assegnati per impostazione predefinita all’host gestito da Adobe.
+La prima volta che crei una proprietà nell’interfaccia di Experience Platform o nell’interfaccia di Data Collection, viene automaticamente creato un host gestito da Adobe. Anche tutti gli ambienti disponibili con proprietà immediatamente utilizzabili vengono assegnati per impostazione predefinita all’host gestito da Adobe.
 
 >[!NOTE]
 >

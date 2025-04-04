@@ -5,9 +5,9 @@ title: Attivare i tipi di pubblico su destinazioni batch tramite l’API di atti
 description: Questo articolo illustra il flusso di lavoro end-to-end per l’attivazione dei tipi di pubblico tramite l’API di attivazione ad hoc, inclusi i processi di segmentazione che si verificano prima dell’attivazione.
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: f01a044d3d12ef457c6242a0b93acbfeeaf48588
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1612'
+source-wordcount: '1623'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ L’API di attivazione ad hoc consente agli addetti al marketing di attivare in 
 
 Utilizza l’API di attivazione ad hoc per esportare file completi nel sistema di ricezione dei file desiderato. L&#39;attivazione di un pubblico ad hoc è supportata solo da [destinazioni basate su file batch](../destination-types.md#file-based).
 
-Il diagramma seguente illustra il flusso di lavoro end-to-end per l’attivazione dei tipi di pubblico tramite l’API di attivazione ad-hoc, inclusi i processi di segmentazione che si svolgono in Platform ogni 24 ore.
+Il diagramma seguente illustra il flusso di lavoro end-to-end per l’attivazione dei tipi di pubblico tramite l’API di attivazione ad-hoc, inclusi i processi di segmentazione che si svolgono in Experience Platform ogni 24 ore.
 
 ![attivazione ad hoc](../assets/api/ad-hoc-activation/ad-hoc-activation-overview.png)
 
@@ -66,13 +66,13 @@ Prima di poter effettuare chiamate alle API di Adobe Experience Platform, assicu
 
 ## Passaggio 2: raccogliere le credenziali {#credentials}
 
-Per effettuare chiamate alle API di Platform, devi prima completare l&#39;[esercitazione di autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento del tutorial di autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di Experience Platform, come mostrato di seguito:
+Per effettuare chiamate alle API di Experience Platform, devi prima completare l&#39;[esercitazione di autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento del tutorial di autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di Experience Platform, come mostrato di seguito:
 
 * Autorizzazione: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-Le risorse in Experience Platform possono essere isolate in specifiche sandbox virtuali. Nelle richieste alle API di Platform, puoi specificare il nome e l’ID della sandbox in cui verrà eseguita l’operazione. Si tratta di parametri facoltativi.
+Le risorse in Experience Platform possono essere isolate in specifiche sandbox virtuali. Nelle richieste alle API di Experience Platform, puoi specificare il nome e l’ID della sandbox in cui verrà eseguita l’operazione. Si tratta di parametri facoltativi.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -84,13 +84,13 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’
 
 * Tipo di contenuto: `application/json`
 
-## Passaggio 3: creare un flusso di attivazione nell’interfaccia utente di Platform {#activation-flow}
+## Passaggio 3: creare un flusso di attivazione nell’interfaccia utente di Experience Platform {#activation-flow}
 
-Prima di poter attivare i tipi di pubblico tramite l’API di attivazione ad hoc, è necessario aver configurato un flusso di attivazione nell’interfaccia utente di Platform, per la destinazione scelta.
+Prima di poter attivare i tipi di pubblico tramite l’API di attivazione ad hoc, è necessario aver configurato un flusso di attivazione nell’interfaccia utente di Experience Platform, per la destinazione scelta.
 
 Ciò include l’accesso al flusso di lavoro di attivazione, la selezione dei tipi di pubblico, la configurazione di una pianificazione e l’attivazione di questi. Puoi utilizzare l’interfaccia o l’API per creare un flusso di attivazione:
 
-* [Utilizza l’interfaccia utente di Platform per creare un flusso di attivazione per le destinazioni di esportazione del profilo batch](../ui/activate-batch-profile-destinations.md)
+* [Utilizza l’interfaccia utente di Experience Platform per creare un flusso di attivazione per le destinazioni di esportazione del profilo batch](../ui/activate-batch-profile-destinations.md)
 * [Utilizza l’API del servizio Flusso per connettersi alle destinazioni di esportazione dei profili batch e attivare i dati](../api/connect-activate-batch-destinations.md)
 
 ## Passaggio 4: ottieni l’ID del processo di esportazione del pubblico più recente (non richiesto nella versione v2) {#segment-export-id}
@@ -124,7 +124,7 @@ Adobe Experience Platform esegue processi di segmentazione pianificati una volta
 
 >[!IMPORTANT]
 >
->Nota il seguente vincolo occasionale: prima di eseguire un processo di attivazione ad hoc, assicurati che sia trascorsa almeno un&#39;ora dal momento in cui il pubblico è stato attivato per la prima volta in base alla pianificazione impostata in [Passaggio 3 - Creare il flusso di attivazione nell&#39;interfaccia utente di Platform](#activation-flow).
+>Nota il seguente vincolo occasionale: prima di eseguire un processo di attivazione ad hoc, assicurati che sia trascorsa almeno un&#39;ora dal momento in cui il pubblico è stato attivato per la prima volta in base alla pianificazione impostata in [Passaggio 3 - Creazione del flusso di attivazione nell&#39;interfaccia utente di Experience Platform](#activation-flow).
 
 Prima di eseguire un processo di attivazione ad hoc, assicurati che il processo di esportazione pianificato per il pubblico sia stato completato. Per informazioni su come monitorare lo stato dei flussi di attivazione, vedere [monitoraggio del flusso di dati di destinazione](../../dataflows/ui/monitor-destinations.md). Ad esempio, se il flusso di dati di attivazione mostra uno stato **[!UICONTROL Elaborazione]**, attendi che termini prima di eseguire il processo di attivazione ad hoc per esportare un file completo.
 
@@ -164,8 +164,8 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/d
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Gli ID delle istanze di destinazione a cui desideri attivare i tipi di pubblico. Puoi ottenere questi ID dall&#39;interfaccia utente di Platform, passando a **[!UICONTROL Destinazioni]** > **[!UICONTROL Sfoglia]** scheda e facendo clic sulla riga di destinazione desiderata per visualizzare l&#39;ID di destinazione nella barra a destra. Per ulteriori informazioni, consulta la [documentazione dell&#39;area di lavoro delle destinazioni](/help/destinations/ui/destinations-workspace.md#browse). |
-| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | Gli ID dei tipi di pubblico che desideri attivare nella destinazione selezionata. Puoi utilizzare l’API ad hoc per esportare i tipi di pubblico generati da Platform e quelli esterni (caricamento personalizzato). Quando attivi un pubblico esterno, utilizza l’ID generato dal sistema invece dell’ID del pubblico. L&#39;ID generato dal sistema è disponibile nella visualizzazione di riepilogo del pubblico nell&#39;interfaccia utente dei tipi di pubblico. <br> ![Visualizzazione dell&#39;ID del pubblico che non deve essere selezionato.](/help/destinations/assets/api/ad-hoc-activation/audience-id-do-not-use.png "Visualizzazione dell&#39;ID del pubblico che non deve essere selezionato."){width="100" zoomable="yes"} <br> ![Visualizzazione dell&#39;ID del pubblico generato dal sistema che deve essere utilizzato.](/help/destinations/assets/api/ad-hoc-activation/system-generated-id-to-use.png "Visualizzazione dell&#39;ID del pubblico generato dal sistema che deve essere utilizzato."){width="100" zoomable="yes"} |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Gli ID delle istanze di destinazione a cui desideri attivare i tipi di pubblico. Puoi ottenere questi ID dall&#39;interfaccia utente di Experience Platform, passando a **[!UICONTROL Destinazioni]** > **[!UICONTROL Sfoglia]** scheda e facendo clic sulla riga di destinazione desiderata per visualizzare l&#39;ID di destinazione nella barra a destra. Per ulteriori informazioni, consulta la [documentazione dell&#39;area di lavoro delle destinazioni](/help/destinations/ui/destinations-workspace.md#browse). |
+| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | Gli ID dei tipi di pubblico che desideri attivare nella destinazione selezionata. Puoi utilizzare l’API ad hoc per esportare i tipi di pubblico generati da Experience Platform e quelli esterni (caricamento personalizzato). Quando attivi un pubblico esterno, utilizza l’ID generato dal sistema invece dell’ID del pubblico. L&#39;ID generato dal sistema è disponibile nella visualizzazione di riepilogo del pubblico nell&#39;interfaccia utente dei tipi di pubblico. <br> ![Visualizzazione dell&#39;ID del pubblico che non deve essere selezionato.](/help/destinations/assets/api/ad-hoc-activation/audience-id-do-not-use.png "Visualizzazione dell&#39;ID del pubblico che non deve essere selezionato."){width="100" zoomable="yes"} <br> ![Visualizzazione dell&#39;ID del pubblico generato dal sistema che deve essere utilizzato.](/help/destinations/assets/api/ad-hoc-activation/system-generated-id-to-use.png "Visualizzazione dell&#39;ID del pubblico generato dal sistema che deve essere utilizzato."){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -205,7 +205,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Gli ID delle istanze di destinazione a cui desideri attivare i tipi di pubblico. Puoi ottenere questi ID dall&#39;interfaccia utente di Platform, passando a **[!UICONTROL Destinazioni]** > **[!UICONTROL Sfoglia]** scheda e facendo clic sulla riga di destinazione desiderata per visualizzare l&#39;ID di destinazione nella barra a destra. Per ulteriori informazioni, consulta la [documentazione dell&#39;area di lavoro delle destinazioni](/help/destinations/ui/destinations-workspace.md#browse). |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Gli ID delle istanze di destinazione a cui desideri attivare i tipi di pubblico. Puoi ottenere questi ID dall&#39;interfaccia utente di Experience Platform, passando a **[!UICONTROL Destinazioni]** > **[!UICONTROL Sfoglia]** scheda e facendo clic sulla riga di destinazione desiderata per visualizzare l&#39;ID di destinazione nella barra a destra. Per ulteriori informazioni, consulta la [documentazione dell&#39;area di lavoro delle destinazioni](/help/destinations/ui/destinations-workspace.md#browse). |
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | Gli ID dei tipi di pubblico che desideri attivare nella destinazione selezionata. |
 | <ul><li>`exportId1`</li></ul> | L&#39;ID restituito nella risposta del processo [esportazione pubblico](../../segmentation/api/export-jobs.md#retrieve-list). Per istruzioni su come trovare questo ID, consulta [Passaggio 4: ottieni l&#39;ID del processo di esportazione più recente](#segment-export-id). |
 
@@ -237,7 +237,7 @@ Una risposta corretta restituisce lo stato HTTP 200.
 
 ## Gestione degli errori API {#api-error-handling}
 
-Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
+Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Experience Platform.
 
 ### Codici di errore API e messaggi specifici per l’API di attivazione ad hoc {#specific-error-messages}
 

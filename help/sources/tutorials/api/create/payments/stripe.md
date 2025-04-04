@@ -1,16 +1,16 @@
 ---
-title: Acquisisci i dati dei pagamenti dal tuo account [!DNL Stripe]  per Experience Platform utilizzando le API
-description: Scopri come acquisire i dati dei pagamenti dall’account di Stripe all’Experience Platform utilizzando l’API del servizio Flow
+title: Acquisisci i dati dei pagamenti dal tuo account  [!DNL Stripe]  ad Experience Platform utilizzando le API
+description: Scopri come acquisire i dati dei pagamenti dall’account Stripe ad Experience Platform utilizzando l’API del servizio Flow
 badge: Beta
 exl-id: a9cb3ef6-aab0-4a5b-894e-ce90b82f35a8
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2020'
+source-wordcount: '2028'
 ht-degree: 2%
 
 ---
 
-# Acquisisci i dati dei pagamenti dal tuo account [!DNL Stripe] per Experience Platform utilizzando le API
+# Acquisire i dati dei pagamenti dall&#39;account [!DNL Stripe] ad Experience Platform tramite API
 
 >[!NOTE]
 >
@@ -22,26 +22,26 @@ Leggi il seguente tutorial per scoprire come acquisire i dati di pagamento da [!
 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Experience Platform:
 
-* [Origini](../../../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
-* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Origini](../../../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Experience Platform.
+* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Experience Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 ### Autenticazione
 
 Leggi la [[!DNL Stripe] panoramica](../../../../connectors/payments/stripe.md) per informazioni su come recuperare le credenziali di autenticazione.
 
-### Utilizzo delle API di Platform
+### Utilizzo delle API di Experience Platform
 
-Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida in [guida introduttiva alle API di Platform](../../../../../landing/api-guide.md).
+Per informazioni su come effettuare correttamente chiamate alle API di Experience Platform, consulta la guida introduttiva [alle API di Experience Platform](../../../../../landing/api-guide.md).
 
-## Connetti [!DNL Stripe] a Experience Platform
+## Connetti [!DNL Stripe] ad Experience Platform
 
-Segui la guida seguente per scoprire come autenticare l&#39;origine [!DNL Stripe], creare una connessione di origine e creare un flusso di dati per portare i dati dei pagamenti a Experience Platform.
+Segui la guida seguente per scoprire come autenticare l&#39;origine [!DNL Stripe], creare una connessione di origine e creare un flusso di dati per portare i dati dei pagamenti in Experience Platform.
 
 ### Creare una connessione di base {#base-connection}
 
-Una connessione di base mantiene le informazioni tra l&#39;origine e l&#39;Experience Platform, incluse le credenziali di autenticazione dell&#39;origine, lo stato corrente della connessione e l&#39;ID univoco della connessione di base. Puoi esplorare e navigare nei file dall’interno della tua origine utilizzando l’ID connessione di base. Inoltre, puoi identificare gli elementi specifici che desideri acquisire, compresi i dettagli sui tipi di dati e i formati di tali elementi.
+Una connessione di base mantiene le informazioni tra l’origine e Experience Platform, incluse le credenziali di autenticazione dell’origine, lo stato corrente della connessione e l’ID univoco della connessione di base. Puoi esplorare e navigare nei file dall’interno della tua origine utilizzando l’ID connessione di base. Inoltre, puoi identificare gli elementi specifici che desideri acquisire, compresi i dettagli sui tipi di dati e i formati di tali elementi.
 
-Per creare un ID di connessione di base, effettuare una richiesta POST all&#39;endpoint `/connections` fornendo le credenziali di autenticazione [!DNL Stripe] come parte del corpo della richiesta.
+Per creare un ID di connessione di base, eseguire una richiesta POST all&#39;endpoint `/connections` fornendo le credenziali di autenticazione [!DNL Stripe] come parte del corpo della richiesta.
 
 **Formato API**
 
@@ -82,7 +82,7 @@ curl -X POST \
 | `name` | Nome della connessione di base. Verificare che il nome della connessione di base sia descrittivo, in quanto è possibile utilizzarlo per cercare informazioni sulla connessione di base. |
 | `description` | Valore facoltativo che è possibile includere per fornire ulteriori informazioni sulla connessione di base. |
 | `connectionSpec.id` | ID della specifica di connessione dell&#39;origine. L&#39;ID della specifica di connessione per [!DNL Stripe] è `cc2c31d6-7b8c-4581-b49f-5c8698aa3ab3` e questo ID è corretto. |
-| `auth.specName` | Tipo di autenticazione utilizzato per autenticare l&#39;origine in Experience Platform. |
+| `auth.specName` | Tipo di autenticazione utilizzato per autenticare l’origine in Experience Platform. |
 | `auth.params.accessToken` | Token di accesso dell&#39;account [!DNL Stripe]. Leggi la [[!DNL Stripe] guida all&#39;autenticazione](../../../../connectors/payments/stripe.md#prerequisites) per i passaggi su come recuperare il token di accesso. |
 
 **Risposta**
@@ -98,7 +98,7 @@ In caso di esito positivo, la risposta restituisce la connessione di base appena
 
 ### Esplora l’origine {#explore}
 
-Una volta ottenuto l&#39;ID connessione di base, è ora possibile esplorare il contenuto e la struttura dei dati di origine eseguendo una richiesta di GET all&#39;endpoint `/connections` e fornendo l&#39;ID connessione di base come parametro di query.
+Una volta ottenuto l&#39;ID connessione di base, è ora possibile esplorare il contenuto e la struttura dei dati di origine eseguendo una richiesta GET all&#39;endpoint `/connections` e fornendo l&#39;ID connessione di base come parametro di query.
 
 **Formato API**
 
@@ -108,14 +108,14 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=rest&object={OBJECT}&fi
 
 **Richiesta**
 
-Quando si eseguono richieste di GET per esplorare la struttura e il contenuto dei file dell’origine, è necessario includere i parametri di query elencati nella tabella seguente:
+Quando esegui le richieste di GET per esplorare la struttura e il contenuto dei file dell’origine, devi includere i parametri di query elencati nella tabella seguente:
 
 | Parametro | Descrizione |
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | ID della connessione di base generato nel passaggio precedente. |
 | `objectType=rest` | Tipo di oggetto da esplorare. Questo valore è sempre impostato su `rest`. |
 | `{OBJECT}` | Questo parametro è necessario solo quando si visualizza una directory specifica. Il relativo valore rappresenta il percorso della directory che desideri esplorare. Per questa origine il valore sarebbe `json`. |
-| `fileType=json` | Il tipo di file che desideri portare su Platform. Attualmente, `json` è l&#39;unico tipo di file supportato. |
+| `fileType=json` | Il tipo di file che desideri portare in Experience Platform. Attualmente, `json` è l&#39;unico tipo di file supportato. |
 | `{PREVIEW}` | Valore booleano che definisce se il contenuto della connessione supporta l’anteprima. |
 | `{SOURCE_PARAMS}` | Una stringa con codifica [!DNL Base64-] che punta al percorso della risorsa da esplorare. Il percorso della risorsa deve essere codificato in [!DNL Base64] per ottenere il formato approvato per `{SOURCE_PARAMS}`. Ad esempio, `{"resourcePath":"charges"}` è codificato come `eyJyZXNvdXJjZVBhdGgiOiJjaGFyZ2VzIn0%3D`. L’elenco dei percorsi delle risorse disponibili include: <ul><li>`charges`</li><li>`subscriptions`</li><li>`refunds`</li><li>`balance_transactions`</li><li>`customers`</li><li>`prices`</li></ul> |
 
@@ -463,7 +463,7 @@ In caso di esito positivo, la risposta restituisce l&#39;identificatore univoco 
 
 ### Creare uno schema XDM di destinazione {#target-schema}
 
-Per utilizzare i dati di origine in Experience Platform, è necessario creare uno schema di destinazione per strutturare i dati di origine in base alle tue esigenze. Lo schema di destinazione viene quindi utilizzato per creare un set di dati di Platform in cui sono contenuti i dati di origine.
+Affinché i dati sorgente possano essere utilizzati in Experience Platform, è necessario creare uno schema di destinazione per strutturare i dati sorgente in base alle tue esigenze. Lo schema di destinazione viene quindi utilizzato per creare un set di dati Experience Platform in cui sono contenuti i dati di origine.
 
 È possibile creare uno schema XDM di destinazione eseguendo una richiesta POST all&#39;API [Schema Registry](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
 
@@ -814,7 +814,7 @@ In caso di esito positivo, la risposta restituisce i dettagli della mappatura ap
 
 ### Creare un flusso {#flow}
 
-L&#39;ultimo passaggio per portare i dati da [!DNL Stripe] a Platform consiste nel creare un flusso di dati. A questo punto sono stati preparati i seguenti valori obbligatori:
+L&#39;ultimo passaggio per portare dati da [!DNL Stripe] ad Experience Platform consiste nella creazione di un flusso di dati. A questo punto sono stati preparati i seguenti valori obbligatori:
 
 * [ID connessione Source](#source-connection)
 * [ID connessione di destinazione](#target-connection)
@@ -875,7 +875,7 @@ curl -X POST \
 | `flowSpec.version` | Versione corrispondente dell&#39;ID della specifica di flusso. Il valore predefinito è `1.0`. |
 | `sourceConnectionIds` | L&#39;[ID connessione di origine](#source-connection) generato in un passaggio precedente. |
 | `targetConnectionIds` | L&#39;ID [connessione di destinazione](#target-connection) generato in un passaggio precedente. |
-| `transformations` | Questa proprietà contiene le varie trasformazioni che devono essere applicate ai dati. Questa proprietà è necessaria quando si inseriscono dati non conformi a XDM in Experience Platform. |
+| `transformations` | Questa proprietà contiene le varie trasformazioni che devono essere applicate ai dati. Questa proprietà è necessaria quando si importano dati non conformi a XDM in Experience Platform. |
 | `transformations.name` | Nome assegnato alla trasformazione. |
 | `transformations.params.mappingId` | L&#39;[ID mappatura](#mapping) generato in un passaggio precedente. |
 | `transformations.params.mappingVersion` | Versione corrispondente dell&#39;ID di mappatura. Il valore predefinito è `0`. |
@@ -908,7 +908,7 @@ Aggiorna i dettagli del flusso di dati, ad esempio il nome e la descrizione, non
 
 ### Aggiornare l’account
 
-Aggiornare il nome, la descrizione e le credenziali dell&#39;account di origine eseguendo una richiesta PATCH all&#39;API [!DNL Flow Service] e fornendo l&#39;ID connessione di base come parametro di query. Quando si effettua una richiesta PATCH, è necessario fornire `etag` univoco dell&#39;account di origine nell&#39;intestazione `If-Match`. Per esempi API completi, consulta la guida in [aggiornamento dell&#39;account di origine tramite l&#39;API](../../update.md).
+Aggiornare il nome, la descrizione e le credenziali dell&#39;account di origine eseguendo una richiesta PATCH all&#39;API [!DNL Flow Service] e fornendo l&#39;ID connessione di base come parametro di query. Quando si effettua una richiesta PATCH, è necessario fornire l&#39;univoco `etag` dell&#39;account di origine nell&#39;intestazione `If-Match`. Per esempi API completi, consulta la guida in [aggiornamento dell&#39;account di origine tramite l&#39;API](../../update.md).
 
 ### Eliminare il flusso di dati
 

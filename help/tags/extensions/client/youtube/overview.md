@@ -2,10 +2,10 @@
 title: Panoramica dell’estensione di tracciamento di video YouTube
 description: Scopri l’estensione tag per il tracciamento di video YouTube in Adobe Experience Platform.
 exl-id: 703f7b04-f72f-415f-80d6-45583fa661bc
-source-git-commit: 627835011784ffca8487d446c04c6948dfff059d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '895'
-ht-degree: 81%
+source-wordcount: '897'
+ht-degree: 78%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 81%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 **Prerequisiti**
 
@@ -98,7 +98,7 @@ Devono essere inclusi i seguenti oggetti di estensione video.
 
 >[!TIP]
 > 
->Per le implementazioni in cui non è possibile utilizzare più eVar o proprietà per ciascun elemento video, i valori degli elementi dati possono essere concatenati in Platform, analizzati nei rapporti di classificazione utilizzando lo strumento Generatore regole di classificazione, come spiegato in [https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=it](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=it), e quindi applicati come segmento in Analysis Workspace.
+>Per le implementazioni in cui non è possibile utilizzare più eVar o proprietà per ciascun elemento video, i valori degli elementi dati possono essere concatenati in Experience Platform, analizzati nei report di classificazione utilizzando lo strumento Generatore regole di classificazione, come spiegato in [https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=it), e quindi applicati come segmento in Analysis Workspace.
 
 Per concatenare i valori delle informazioni video, crea un nuovo elemento dati denominato &quot;Video Meta Data&quot; e programmalo per richiamare e assemblare tutti gli elementi dati video (elencati sopra). Ad esempio:
 
@@ -114,4 +114,4 @@ r.push(_satellite.getVar('Extension Version'));
 return r.join('|');
 ```
 
-Per ulteriori informazioni su come creare e sfruttare efficacemente gli elementi dati in Platform, consulta la documentazione di [elementi dati](../../../ui/managing-resources/data-elements.md).
+Per ulteriori informazioni su come creare e sfruttare in modo efficace gli elementi dati in Experience Platform, consulta la documentazione di [elementi dati](../../../ui/managing-resources/data-elements.md).

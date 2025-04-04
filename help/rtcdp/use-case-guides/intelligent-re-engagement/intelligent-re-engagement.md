@@ -1,11 +1,11 @@
 ---
 title: Nuovo coinvolgimento intelligente
-description: Offri esperienze coinvolgenti e connesse durante i momenti chiave della conversione, per coinvolgere nuovamente in modo intelligente la clientela poco frequente.
+description: Offri esperienze coinvolgenti e connesse durante i momenti chiave della conversione, per coinvolgere nuovamente la clientela poco frequente.
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3894'
+source-wordcount: '3896'
 ht-degree: 4%
 
 ---
@@ -20,7 +20,7 @@ Coinvolgi nuovamente i clienti che hanno abbandonato una conversione in modo int
 
 Utilizza considerazioni in tempo reale, prendi in considerazione tutte le qualità e i comportamenti dei consumatori e offri una riqualificazione rapida in base a eventi online e offline.
 
-Di seguito è riportata una panoramica dell’architettura di alto livello dei vari componenti di Real-Time CDP e Journey Optimizer. Questo diagramma mostra il modo in cui i dati fluiscono attraverso le due app di Experience Platform, dalla raccolta dati al punto in cui vengono attivati tramite percorsi o campagne verso le destinazioni, per ottenere il caso d’uso descritto in questa pagina.
+Di seguito è riportata una panoramica dell’architettura di alto livello dei vari componenti di Real-Time CDP e Journey Optimizer. Questo diagramma mostra il modo in cui i dati scorrono tra le due app Experience Platform dalla raccolta dati al punto in cui vengono attivati tramite percorsi o campagne verso le destinazioni, per ottenere il caso d’uso descritto in questa pagina.
 
 ![Panoramica visiva di alto livello sul coinvolgimento intelligente.](../intelligent-re-engagement/images/step-by-step.png)
 
@@ -147,7 +147,7 @@ Questo gruppo di campi ti consente di testare il percorso prima che venga pubbli
 
 #### Schema transazioni digitali cliente
 
-Questo schema viene utilizzato per strutturare e fare riferimento ai dati dell’evento che costituisce l’attività del cliente che si verifica sul sito web o sulle piattaforme digitali associate. Questi dati vengono in genere acquisiti in [!DNL Adobe Experience Platform] tramite [Web SDK](/help/web-sdk/home.md) e sono necessari per fare riferimento ai vari eventi di navigazione e conversione utilizzati per l&#39;attivazione di percorsi, l&#39;analisi dettagliata dei clienti online, le funzionalità avanzate del pubblico e la messaggistica personalizzata.
+Questo schema viene utilizzato per strutturare e fare riferimento ai dati dell’evento che costituisce l’attività del cliente che si verifica sul sito web o sulle piattaforme digitali associate. Questi dati vengono generalmente acquisiti in [!DNL Adobe Experience Platform] tramite [Web SDK](/help/web-sdk/home.md) ed è necessario per fare riferimento ai vari eventi di navigazione e conversione utilizzati per l&#39;attivazione di percorsi, l&#39;analisi dettagliata dei clienti online, le funzionalità avanzate del pubblico e la messaggistica personalizzata.
 
 Lo schema delle transazioni digitali del cliente è rappresentato da una classe [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md).
 
@@ -165,16 +165,16 @@ La classe [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.m
 
 +++Dettagli ID utente finale (gruppo di campi)
 
-Il gruppo di campi [Dettagli ID utente finale](/help/xdm/field-groups/event/enduserids.md) viene utilizzato per descrivere le informazioni sull&#39;identità di un individuo in diverse applicazioni di Adobe.
+Il gruppo di campi [Dettagli ID utente finale](/help/xdm/field-groups/event/enduserids.md) viene utilizzato per descrivere le informazioni sull&#39;identità di un individuo in diverse applicazioni Adobe.
 
 | Campi | Descrizione |
 | --- | --- |
 | `endUserIDs._experience.emailid.authenticatedState` | Stato di autenticazione dell’ID dell’indirizzo e-mail dell’utente finale. |
 | `endUserIDs._experience.emailid.id` | ID indirizzo e-mail utente finale. |
 | `endUserIDs._experience.emailid.namespace.code` | Codice spazio dei nomi dell’indirizzo e-mail dell’utente finale. |
-| `endUserIDs._experience.mcid.authenticatedState` | Stato di autenticazione dell&#39;ID Marketing Cloud (MCID) [!DNL Adobe]. Il MCID è ora noto come ID Experience Cloud (ECID). |
-| `endUserIDs._experience.mcid.id` | ID Marketing Cloud [!DNL Adobe] (MCID). Il MCID è ora noto come ID Experience Cloud (ECID). |
-| `endUserIDs._experience.mcid.namespace.code` | Codice spazio dei nomi ID Marketing Cloud (MCID) [!DNL Adobe]. |
+| `endUserIDs._experience.mcid.authenticatedState` | Stato di autenticazione di [!DNL Adobe] Marketing Cloud ID (MCID). Il MCID è ora noto come Experience Cloud ID (ECID). |
+| `endUserIDs._experience.mcid.id` | ID Marketing Cloud (MCID) [!DNL Adobe]. Il MCID è ora noto come Experience Cloud ID (ECID). |
+| `endUserIDs._experience.mcid.namespace.code` | Codice spazio dei nomi [!DNL Adobe] Marketing Cloud ID (MCID). |
 
 +++
 
@@ -205,7 +205,7 @@ External Source System Audit Attributes è un tipo di dati standard Experience D
 
 #### Schema transazioni cliente offline
 
-Questo schema viene utilizzato per strutturare e fare riferimento ai dati dell’evento che costituisce l’attività del cliente che si verifica su piattaforme al di fuori del sito web. Questi dati vengono generalmente acquisiti in [!DNL Adobe Experience Platform] da un POS (o sistema simile) e il più delle volte inviati in streaming a Platform tramite una connessione API. Il suo scopo è quello di fare riferimento ai vari eventi di conversione offline utilizzati per attivare percorsi, analisi approfondite dei clienti online e offline, funzionalità di pubblico avanzate e messaggi personalizzati.
+Questo schema viene utilizzato per strutturare e fare riferimento ai dati dell’evento che costituisce l’attività del cliente che si verifica su piattaforme al di fuori del sito web. Questi dati vengono generalmente acquisiti in [!DNL Adobe Experience Platform] da un POS (o sistema simile) e il più delle volte inviati in streaming ad Experience Platform tramite una connessione API. Il suo scopo è quello di fare riferimento ai vari eventi di conversione offline utilizzati per attivare percorsi, analisi approfondite dei clienti online e offline, funzionalità di pubblico avanzate e messaggi personalizzati.
 
 Lo schema di transazioni cliente offline è rappresentato da una classe [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md).
 
@@ -288,9 +288,9 @@ Il gruppo di campi [Adobe Analytics ExperienceEvent](/help/xdm/field-groups/even
 | `endUserIDs._experience.emailid.authenticatedState` | Stato di autenticazione dell’ID dell’indirizzo e-mail dell’utente finale. |
 | `endUserIDs._experience.emailid.id` | ID indirizzo e-mail utente finale. |
 | `endUserIDs._experience.emailid.namespace.code` | Codice spazio dei nomi dell’indirizzo e-mail dell’utente finale. |
-| `endUserIDs._experience.mcid.authenticatedState` | Stato di autenticazione dell&#39;ID Marketing Cloud (MCID) [!DNL Adobe]. Il MCID è ora noto come ID Experience Cloud (ECID). |
-| `endUserIDs._experience.mcid.id` | ID Marketing Cloud [!DNL Adobe] (MCID). Il MCID è ora noto come ID Experience Cloud (ECID). |
-| `endUserIDs._experience.mcid.namespace.code` | Codice spazio dei nomi ID Marketing Cloud (MCID) [!DNL Adobe]. |
+| `endUserIDs._experience.mcid.authenticatedState` | Stato di autenticazione di [!DNL Adobe] Marketing Cloud ID (MCID). Il MCID è ora noto come Experience Cloud ID (ECID). |
+| `endUserIDs._experience.mcid.id` | ID Marketing Cloud (MCID) [!DNL Adobe]. Il MCID è ora noto come Experience Cloud ID (ECID). |
+| `endUserIDs._experience.mcid.namespace.code` | Codice spazio dei nomi [!DNL Adobe] Marketing Cloud ID (MCID). |
 
 +++
 
@@ -350,7 +350,7 @@ Per ulteriori informazioni su come creare un pubblico, leggere la [guida dell&#3
 
 Per ulteriori informazioni su come comporre direttamente [Tipi di pubblico](/help/segmentation/home.md), consulta la [Guida dell&#39;interfaccia utente Composizione pubblico](/help/segmentation/ui/audience-composition.md).
 
-Per ulteriori informazioni su come creare tipi di pubblico tramite le definizioni di pubblico derivate da Platform, consulta la [guida dell&#39;interfaccia utente di Audience Builder](/help/segmentation/ui/segment-builder.md).
+Per ulteriori informazioni su come creare tipi di pubblico tramite le definizioni derivate da Experience Platform, consulta la [Guida dell&#39;interfaccia utente di Audience Builder](/help/segmentation/ui/segment-builder.md).
 
 >[!BEGINTABS]
 
@@ -775,7 +775,7 @@ Puoi attivare la navigazione nei prodotti abbandonati e abbandonare il pubblico 
    * [Advertising](/help/destinations/catalog/advertising/overview.md)/[File multimediali a pagamento e social](/help/destinations/catalog/social/overview.md)
    * [Dispositivi mobili](/help/destinations/catalog/mobile-engagement/overview.md)
    * [Destinazione streaming](/help/destinations/catalog/streaming/http-destination.md)
-   * [Destinazione personalizzata creata con Destination SDK.](/help/destinations/destination-sdk/overview.md). Se sei un cliente di Real-Time CDP Ultimate, puoi anche creare una [destinazione personalizzata privata utilizzando Destination SDK](/help/destinations/destination-sdk/overview.md#productized-and-custom-integrations)
+   * [Destinazione personalizzata creata tramite Destination SDK.](/help/destinations/destination-sdk/overview.md). Se sei un cliente Real-Time CDP Ultimate, puoi anche creare una [destinazione personalizzata privata utilizzando Destination SDK](/help/destinations/destination-sdk/overview.md#productized-and-custom-integrations)
 
 ## Passaggi successivi {#next-steps}
 

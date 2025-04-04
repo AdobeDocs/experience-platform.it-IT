@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform - Gennaio 2024
 description: Note sulla versione di Adobe Experience Platform di gennaio 2024.
 exl-id: d4b3c5b2-3adb-41fd-91ad-f4c0f21d2325
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
-workflow-type: ht
-source-wordcount: '1659'
-ht-degree: 100%
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+workflow-type: tm+mt
+source-wordcount: '1662'
+ht-degree: 95%
 
 ---
 
@@ -43,9 +43,9 @@ Per iniziare a utilizzare i [!UICONTROL playbook di casi d’uso], leggi le segu
 
 ## Controllo degli accessi basato su attributi {#abac}
 
-Il controllo degli accessi basato sugli attributi è una funzionalità di Adobe Experience Platform che offre ai brand attenti alla privacy una maggiore flessibilità per gestire l’accesso degli utenti. È possibile assegnare singoli oggetti, come campi e segmenti dello schema, ai ruoli utente. Questa funzione consente di concedere o revocare l’accesso a singoli oggetti per specifici utenti di Platform nell’organizzazione.
+Il controllo degli accessi basato sugli attributi è una funzionalità di Adobe Experience Platform che offre ai brand attenti alla privacy una maggiore flessibilità per gestire l’accesso degli utenti. È possibile assegnare singoli oggetti, come campi e segmenti dello schema, ai ruoli utente. Questa funzione ti consente di concedere o revocare l’accesso a singoli oggetti per specifici utenti di Experience Platform all’interno della tua organizzazione.
 
-Tramite il controllo dell’accesso basato su attributi, gli amministratori dell’organizzazione possono controllare l’accesso degli utenti a dati personali sensibili (SPD), informazioni personali (PII) e altri tipi di dati personalizzati in tutti i flussi di lavoro e le risorse di Platform. Gli amministratori possono definire ruoli utente con accesso solo a campi e dati specifici che corrispondono a tali campi.
+Tramite il controllo dell’accesso basato su attributi, gli amministratori dell’organizzazione possono controllare l’accesso degli utenti a, dati personali sensibili (SPD), informazioni personali (PII) e altri tipi di dati personalizzati in tutti i flussi di lavoro e le risorse di Experience Platform. Gli amministratori possono definire ruoli utente con accesso solo a campi e dati specifici che corrispondono a tali campi.
 
 **Documentazione nuova o aggiornata**
 
@@ -79,7 +79,7 @@ Adobe Experience Platform fornisce più dashboard attraverso le quali è possibi
 
 | Funzione | Descrizione |
 | --- | --- |
-| Visualizza SQL | Ora puoi visualizzare le istruzioni SQL sottostanti i profili, i tipi di pubblico, le destinazioni e le informazioni personalizzate con l’interruttore Visualizza SQL, quindi eseguire la query su richiesta tramite l’editor di query. L’accesso a SQL che alimenta le informazioni di Real-time Customer Data Platform consente di comprendere la logica alla base dell’analisi del modello dati. Questa trasparenza rende i dati Real-time CDP di Adobe più accessibili, comprensibili e di impatto per il processo decisionale.<br>Puoi trarre spunto dal codice SQL di oltre 40 insight esistenti per creare nuove query e ottenere informazioni esclusive dai dati di Platform in base alle tue specifiche esigenze di business. SQL è disponibile anche per gli approfondimenti su [Profili](../../dashboards/insights/profiles.md), [Tipi di pubblico](../../dashboards/insights/audiences.md) e [Destinazioni](../../dashboards/insights/destinations.md) nella documentazione di Experience League. Questi documenti evidenziano i casi d’uso aziendali a cui è possibile rispondere con gli approfondimenti standard. Per ulteriori informazioni, leggi la guida sulla [visualizzazione di approfondimenti SQL](../../dashboards/view-sql.md). |
+| Visualizza SQL | Ora puoi visualizzare le istruzioni SQL sottostanti i profili, i tipi di pubblico, le destinazioni e le informazioni personalizzate con l’interruttore Visualizza SQL, quindi eseguire la query su richiesta tramite l’editor di query. L’accesso a SQL che alimenta le informazioni di Real-time Customer Data Platform consente di comprendere la logica alla base dell’analisi del modello dati. Questa trasparenza rende i dati Real-time CDP di Adobe più accessibili, comprensibili e di impatto per il processo decisionale.<br>Ispirati all&#39;SQL di oltre 40 insights esistenti, crea nuove query che derivano informazioni univoche dai dati di Experience Platform in base alle tue esigenze aziendali. SQL è disponibile anche per gli approfondimenti su [Profili](../../dashboards/insights/profiles.md), [Tipi di pubblico](../../dashboards/insights/audiences.md) e [Destinazioni](../../dashboards/insights/destinations.md) nella documentazione di Experience League. Questi documenti evidenziano i casi d’uso aziendali a cui è possibile rispondere con gli approfondimenti standard. Per ulteriori informazioni, leggi la guida sulla [visualizzazione di approfondimenti SQL](../../dashboards/view-sql.md). |
 
 {style="table-layout:auto"}
 

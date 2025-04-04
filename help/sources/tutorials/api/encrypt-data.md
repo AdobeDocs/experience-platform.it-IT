@@ -2,9 +2,9 @@
 title: Acquisizione di dati crittografati
 description: Scopri come acquisire i file crittografati tramite le origini batch di archiviazione cloud utilizzando l’API.
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: 9a5599473f874d86e2b3c8449d1f4d0cf54b672c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1806'
+source-wordcount: '1816'
 ht-degree: 3%
 
 ---
@@ -15,29 +15,29 @@ Puoi acquisire i file di dati crittografati in Adobe Experience Platform utilizz
 
 Il processo di acquisizione dei dati crittografati è il seguente:
 
-1. [Creare una coppia di chiavi di crittografia utilizzando le API Experience Platform](#create-encryption-key-pair). La coppia di chiavi di crittografia è costituita da una chiave privata e da una chiave pubblica. Una volta creata, puoi copiare o scaricare la chiave pubblica, insieme all’ID della chiave pubblica e all’ora di scadenza corrispondenti. Durante questa procedura, la chiave privata verrà memorizzata da Experience Platform in un archivio protetto. **NOTA:** la chiave pubblica nella risposta è codificata in Base64 e deve essere decodificata prima di utilizzare.
+1. [Creare una coppia di chiavi di crittografia utilizzando le API di Experience Platform](#create-encryption-key-pair). La coppia di chiavi di crittografia è costituita da una chiave privata e da una chiave pubblica. Una volta creata, puoi copiare o scaricare la chiave pubblica, insieme all’ID della chiave pubblica e all’ora di scadenza corrispondenti. Durante questo processo, la chiave privata verrà memorizzata da Experience Platform in un archivio protetto. **NOTA:** la chiave pubblica nella risposta è codificata in Base64 e deve essere decodificata prima di utilizzare.
 2. Utilizza la chiave pubblica per crittografare il file di dati che desideri acquisire.
 3. Inserisci il file crittografato nell’archiviazione cloud.
 4. Quando il file crittografato è pronto, [crea una connessione di origine e un flusso di dati per l&#39;origine dell&#39;archiviazione cloud](#create-a-dataflow-for-encrypted-data). Durante il passaggio di creazione del flusso, devi fornire un parametro `encryption` e includere l&#39;ID della chiave pubblica.
-5. L’Experience Platform recupera la chiave privata dall’archivio protetto per decrittografare i dati al momento dell’acquisizione.
+5. Experience Platform recupera la chiave privata dall’archivio protetto per decrittografare i dati al momento dell’acquisizione.
 
 >[!IMPORTANT]
 >
 >La dimensione massima di un singolo file crittografato è di 1 GB. Ad esempio, puoi acquisire dati per un valore di 2 GB in una singola esecuzione del flusso di dati; tuttavia, qualsiasi singolo file in tali dati non può superare 1 GB.
 
-In questo documento vengono descritti i passaggi necessari per generare una coppia di chiavi di crittografia per crittografare i dati e acquisirli per l’Experience Platform utilizzando origini di archiviazione cloud.
+In questo documento vengono descritti i passaggi necessari per generare una coppia di chiavi di crittografia per crittografare i dati e acquisirli in Experience Platform utilizzando origini di archiviazione cloud.
 
 ## Introduzione {#get-started}
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Origini](../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
-   * [Origini archiviazione cloud](../api/collect/cloud-storage.md): crea un flusso di dati per portare all&#39;Experience Platform i dati batch dall&#39;origine archiviazione cloud.
-* [Sandbox](../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Origini](../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Experience Platform.
+   * [Origini archiviazione cloud](../api/collect/cloud-storage.md): crea un flusso di dati per portare i dati batch dall&#39;origine archiviazione cloud ad Experience Platform.
+* [Sandbox](../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Experience Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
-### Utilizzo delle API di Platform
+### Utilizzo delle API di Experience Platform
 
-Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida in [guida introduttiva alle API di Platform](../../../landing/api-guide.md).
+Per informazioni su come effettuare correttamente chiamate alle API di Experience Platform, consulta la guida introduttiva [alle API di Experience Platform](../../../landing/api-guide.md).
 
 ### Estensioni di file supportate per i file crittografati {#supported-file-extensions-for-encrypted-files}
 
@@ -68,7 +68,7 @@ L’elenco delle estensioni di file supportate per i file crittografati è:
 >
 >Le chiavi di crittografia sono specifiche per una data sandbox. Pertanto, se desideri acquisire i dati crittografati in una sandbox diversa all’interno della tua organizzazione, devi creare nuove chiavi di crittografia.
 
-Il primo passaggio per l&#39;acquisizione di dati crittografati in Experience Platform consiste nel creare la coppia di chiavi di crittografia effettuando una richiesta POST all&#39;endpoint `/encryption/keys` dell&#39;API [!DNL Connectors].
+Il primo passaggio per acquisire dati crittografati in Experience Platform consiste nel creare la coppia di chiavi di crittografia effettuando una richiesta POST all&#39;endpoint `/encryption/keys` dell&#39;API [!DNL Connectors].
 
 **Formato API**
 
@@ -123,15 +123,15 @@ In caso di esito positivo, la risposta restituisce la chiave pubblica con codifi
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `publicKey` | La chiave pubblica viene utilizzata per crittografare i dati nell’archiviazione cloud. Questa chiave corrisponde alla chiave privata creata durante questo passaggio. Tuttavia, la chiave privata viene immediatamente recapitata all’Experience Platform. |
-| `publicKeyId` | L’ID della chiave pubblica viene utilizzato per creare un flusso di dati e acquisire i dati di archiviazione cloud crittografati per Experience Platform. |
+| `publicKey` | La chiave pubblica viene utilizzata per crittografare i dati nell’archiviazione cloud. Questa chiave corrisponde alla chiave privata creata durante questo passaggio. Tuttavia, la chiave privata viene inviata immediatamente ad Experience Platform. |
+| `publicKeyId` | L’ID della chiave pubblica viene utilizzato per creare un flusso di dati e acquisire i dati di archiviazione cloud crittografati in Experience Platform. |
 | `expiryTime` | L&#39;ora di scadenza definisce la data di scadenza della coppia di chiavi di crittografia. Questa data viene impostata automaticamente su 180 giorni dopo la data di generazione della chiave e viene visualizzata in formato timestamp unix. |
 
 +++
 
 ### Recuperare le chiavi di crittografia {#retrieve-encryption-keys}
 
-Per recuperare tutte le chiavi di crittografia dell&#39;organizzazione, eseguire una richiesta di GET all&#39;endpoint `/encryption/keys`=nt.
+Per recuperare tutte le chiavi di crittografia dell&#39;organizzazione, eseguire una richiesta GET all&#39;endpoint `/encryption/keys`=nt.
 
 **Formato API**
 
@@ -176,7 +176,7 @@ In caso di esito positivo, la risposta restituisce l’algoritmo di crittografia
 
 ### Recupera chiavi di crittografia per ID {#retrieve-encryption-keys-by-id}
 
-Per recuperare un set specifico di chiavi di crittografia, effettuare una richiesta GET all&#39;endpoint `/encryption/keys` e fornire l&#39;ID della chiave pubblica come parametro di intestazione.
+Per recuperare un set specifico di chiavi di crittografia, effettua una richiesta GET all&#39;endpoint `/encryption/keys` e fornisci l&#39;ID della chiave pubblica come parametro di intestazione.
 
 **Formato API**
 
@@ -221,9 +221,9 @@ In caso di esito positivo, la risposta restituisce l’algoritmo di crittografia
 
 Facoltativamente, puoi creare una coppia di chiavi per la verifica della firma per firmare e acquisire i dati crittografati.
 
-Durante questa fase, devi generare la tua combinazione di chiave privata e chiave pubblica e quindi utilizzare la tua chiave privata per firmare i dati crittografati. Successivamente, devi codificare la chiave pubblica in Base64 e condividerla con Experience Platform affinché Platform possa verificare la firma.
+Durante questa fase, devi generare la tua combinazione di chiave privata e chiave pubblica e quindi utilizzare la tua chiave privata per firmare i dati crittografati. Successivamente, devi codificare la chiave pubblica in Base64 e condividerla con Experience Platform affinché Experience Platform possa verificare la firma.
 
-### Condividi la chiave pubblica per Experience Platform
+### Condividere la chiave pubblica in Experience Platform
 
 Per condividere la chiave pubblica, effettuare una richiesta POST all&#39;endpoint `/customer-keys` fornendo al contempo l&#39;algoritmo di crittografia e la chiave pubblica con codifica Base64.
 
@@ -322,9 +322,9 @@ curl -X GET \
 
 ## Connetti l&#39;origine dell&#39;archiviazione cloud ad Experience Platform utilizzando l&#39;API [!DNL Flow Service]
 
-Dopo aver recuperato la coppia di chiavi di crittografia, ora puoi procedere e creare una connessione di origine per l’origine dell’archiviazione cloud e trasferire i dati crittografati a Platform.
+Dopo aver recuperato la coppia di chiavi di crittografia, ora puoi procedere con la creazione di una connessione di origine per l’origine dell’archiviazione cloud e trasferire i dati crittografati ad Experience Platform.
 
-Innanzitutto, devi creare una connessione di base per autenticare l’origine su Platform. Per creare una connessione di base e autenticare l&#39;origine, selezionare dall&#39;elenco seguente l&#39;origine che si desidera utilizzare:
+Innanzitutto, devi creare una connessione di base per autenticare l’origine su Experience Platform. Per creare una connessione di base e autenticare l&#39;origine, selezionare dall&#39;elenco seguente l&#39;origine che si desidera utilizzare:
 
 * [Amazon S3](../api/create/cloud-storage/s3.md)
 * [[!DNL Apache HDFS]](../api/create/cloud-storage/hdfs.md)
@@ -413,8 +413,8 @@ curl -X POST \
 | Proprietà | Descrizione |
 | --- | --- |
 | `flowSpec.id` | ID della specifica di flusso che corrisponde alle origini dell’archiviazione cloud. |
-| `sourceConnectionIds` | ID della connessione di origine. Questo ID rappresenta il trasferimento di dati dall’origine a Platform. |
-| `targetConnectionIds` | ID della connessione di destinazione. Questo ID rappresenta dove arrivano i dati una volta trasferiti a Platform. |
+| `sourceConnectionIds` | ID della connessione di origine. Questo ID rappresenta il trasferimento di dati dall’origine ad Experience Platform. |
+| `targetConnectionIds` | ID della connessione di destinazione. Questo ID rappresenta dove arrivano i dati una volta trasferiti ad Experience Platform. |
 | `transformations[x].params.mappingId` | ID di mappatura. |
 | `transformations.name` | Durante l&#39;acquisizione di file crittografati, devi fornire `Encryption` come parametro di trasformazione aggiuntivo per il flusso di dati. |
 | `transformations[x].params.publicKeyId` | ID della chiave pubblica creato. Questo ID è la metà della coppia di chiavi di crittografia utilizzata per crittografare i dati di archiviazione cloud. |
@@ -541,7 +541,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 204 (nessun con
 
 ### Convalidare le chiavi di crittografia {#validate-encryption-keys}
 
-Per convalidare le chiavi di crittografia, effettuare una richiesta di GET all&#39;endpoint `/encryption/keys/validate/` e fornire l&#39;ID della chiave pubblica da convalidare come parametro di intestazione.
+Per convalidare le chiavi di crittografia, effettua una richiesta GET all&#39;endpoint `/encryption/keys/validate/` e fornisci l&#39;ID della chiave pubblica da convalidare come parametro di intestazione.
 
 ```http
 GET /data/foundation/connectors/encryption/keys/validate/{PUBLIC_KEY_ID}

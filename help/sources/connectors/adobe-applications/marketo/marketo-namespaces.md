@@ -2,9 +2,9 @@
 title: Spazi dei nomi e schemi B2B
 description: Questo documento fornisce una panoramica degli spazi dei nomi personalizzati necessari per la creazione di un connettore di origine B2B.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: ebbed5c6ff7037b138588a79a05e6ef13d1856d7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1651'
+source-wordcount: '1659'
 ht-degree: 11%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 11%
 
 >[!AVAILABILITY]
 >
->Devi avere accesso a [Adobe Real-time Customer Data Platform B2B edition](../../../../rtcdp/b2b-overview.md) per i tuoi schemi B2B per qualificarti in [Profilo cliente in tempo reale](../../../../profile/home.md).
+>Devi avere accesso a [Adobe Real-Time Customer Data Platform B2B edition](../../../../rtcdp/b2b-overview.md) per i tuoi schemi B2B per qualificarti in [Profilo cliente in tempo reale](../../../../profile/home.md).
 
 >[!NOTE]
 >
->Puoi utilizzare i modelli nell’interfaccia utente di Adobe Experience Platform per accelerare la creazione delle risorse per i dati B2B e B2C. Per ulteriori informazioni, leggere la guida su [utilizzo dei modelli nell&#39;interfaccia utente di Platform](../../../tutorials/ui/templates.md).
+>Puoi utilizzare i modelli nell’interfaccia utente di Adobe Experience Platform per accelerare la creazione delle risorse per i dati B2B e B2C. Per ulteriori informazioni, consulta la guida su [utilizzo dei modelli nell&#39;interfaccia utente di Experience Platform](../../../tutorials/ui/templates.md).
 
 Leggi questo documento per informazioni sulla configurazione di base per gli spazi dei nomi e gli schemi da utilizzare con origini B2B. Questo documento fornisce anche dettagli sulla configurazione dell’utility di automazione Postman necessaria per generare spazi dei nomi e schemi B2B.
 
@@ -30,22 +30,22 @@ Leggi questo documento per informazioni sulla configurazione di base per gli spa
 Per informazioni sui prerequisiti per impostare l&#39;ambiente [!DNL Postman] per il supporto dello spazio dei nomi B2B e dell&#39;utilità di generazione automatica dello schema, fare riferimento alla seguente documentazione.
 
 - È possibile scaricare la raccolta di utilità di generazione automatica dello spazio dei nomi e dello schema e l&#39;ambiente da questo [archivio GitHub](https://github.com/adobe/experience-platform-postman-samples/tree/master/Postman%20Collections/CDP%20Namespaces%20and%20Schemas%20Utility).
-- Per informazioni sull&#39;utilizzo delle API di Platform, inclusi i dettagli su come raccogliere i valori per le intestazioni richieste e leggere chiamate API di esempio, consulta la guida introduttiva [alle API di Platform](../../../../landing/api-guide.md).
-- Per informazioni su come generare le credenziali per le API di Platform, consulta l&#39;esercitazione su [autenticazione e accesso alle API di Experience Platform](../../../../landing/api-authentication.md).
-- Per informazioni sulla configurazione di [!DNL Postman] per le API di Platform, consulta l&#39;esercitazione su [configurazione della console per sviluppatori e  [!DNL Postman]](../../../../landing/postman.md).
+- Per informazioni sull&#39;utilizzo delle API di Experience Platform, inclusi i dettagli su come raccogliere i valori per le intestazioni richieste e leggere chiamate API di esempio, consulta la guida introduttiva [alle API di Experience Platform](../../../../landing/api-guide.md).
+- Per informazioni su come generare le credenziali per le API Experience Platform, consulta l&#39;esercitazione su [autenticazione e accesso alle API Experience Platform](../../../../landing/api-authentication.md).
+- Per informazioni sulla configurazione di [!DNL Postman] per le API di Experience Platform, consulta l&#39;esercitazione su [configurazione della console per sviluppatori e  [!DNL Postman]](../../../../landing/postman.md).
 
-Con una console per sviluppatori Platform e [!DNL Postman] configurati, puoi iniziare ad applicare i valori di ambiente appropriati all&#39;ambiente [!DNL Postman].
+Con una console per sviluppatori Experience Platform e la configurazione di [!DNL Postman], puoi iniziare ad applicare i valori di ambiente appropriati all&#39;ambiente [!DNL Postman].
 
 La tabella seguente contiene valori di esempio e informazioni aggiuntive sul popolamento dell&#39;ambiente [!DNL Postman]:
 
 | Variable | Descrizione | Esempio |
 | --- | --- | --- |
-| `CLIENT_SECRET` | Identificatore univoco utilizzato per generare `{ACCESS_TOKEN}`. Per informazioni su come recuperare `{CLIENT_SECRET}`, consulta il tutorial su [autenticazione e accesso alle API Experience Platform](../../../../landing/api-authentication.md). | `{CLIENT_SECRET}` |
-| `API_KEY` | Identificatore univoco utilizzato per autenticare le chiamate alle API Experience Platform. Per informazioni su come recuperare `{API_KEY}`, consulta il tutorial su [autenticazione e accesso alle API Experience Platform](../../../../landing/api-authentication.md). | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
-| `ACCESS_TOKEN` | Il token di autorizzazione necessario per completare le chiamate alle API Experience Platform. Per informazioni su come recuperare `{ACCESS_TOKEN}`, consulta il tutorial su [autenticazione e accesso alle API Experience Platform](../../../../landing/api-authentication.md). | `Bearer {ACCESS_TOKEN}` |
+| `CLIENT_SECRET` | Identificatore univoco utilizzato per generare `{ACCESS_TOKEN}`. Per informazioni su come recuperare `{CLIENT_SECRET}`, consulta il tutorial su [autenticazione e accesso alle API di Experience Platform](../../../../landing/api-authentication.md). | `{CLIENT_SECRET}` |
+| `API_KEY` | Identificatore univoco utilizzato per autenticare le chiamate alle API di Experience Platform. Per informazioni su come recuperare `{API_KEY}`, consulta il tutorial su [autenticazione e accesso alle API di Experience Platform](../../../../landing/api-authentication.md). | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
+| `ACCESS_TOKEN` | Il token di autorizzazione necessario per completare le chiamate alle API di Experience Platform. Per informazioni su come recuperare `{ACCESS_TOKEN}`, consulta il tutorial su [autenticazione e accesso alle API di Experience Platform](../../../../landing/api-authentication.md). | `Bearer {ACCESS_TOKEN}` |
 | `META_SCOPE` | Per quanto riguarda [!DNL Marketo], questo valore è fisso ed è sempre impostato su: `ent_dataservices_sdk`. | `ent_dataservices_sdk` |
-| `CONTAINER_ID` | Il contenitore `global` contiene tutte le classi, i gruppi di campi dello schema, i tipi di dati e gli schemi standard forniti dal partner Adobe e Experience Platform. Per quanto riguarda [!DNL Marketo], questo valore è fisso ed è sempre impostato su `global`. | `global` |
-| `TECHNICAL_ACCOUNT_ID` | Credenziali utilizzate per l&#39;integrazione in Adobe I/O. | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
+| `CONTAINER_ID` | Il contenitore `global` contiene tutte le classi, i gruppi di campi di schema, i tipi di dati e gli schemi standard forniti dai partner Adobe e Experience Platform. Per quanto riguarda [!DNL Marketo], questo valore è fisso ed è sempre impostato su `global`. | `global` |
+| `TECHNICAL_ACCOUNT_ID` | Credenziali utilizzate per l’integrazione in Adobe I/O. | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
 | `IMS` | Identity Management System (IMS) fornisce il framework per l’autenticazione nei servizi Adobe. Per quanto riguarda [!DNL Marketo], questo valore è fisso ed è sempre impostato su: `ims-na1.adobelogin.com`. | `ims-na1.adobelogin.com` |
 | `IMS_ORG` | Entità aziendale che può possedere o concedere in licenza prodotti e servizi e consentire l&#39;accesso ai propri membri. Per istruzioni su come recuperare le informazioni di `{ORG_ID}`, consulta il tutorial su [come configurare la console per sviluppatori e  [!DNL Postman]](../../../../landing/postman.md). | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
 | `SANDBOX_NAME` | Nome della partizione sandbox virtuale in uso. | `prod` |
@@ -98,7 +98,7 @@ La tabella seguente contiene informazioni sull’impostazione sottostante per gl
 
 Experience Platform utilizza gli schemi per descrivere la struttura dei dati in modo coerente e riutilizzabile. Definendo i dati in modo coerente tra i sistemi, diventa più semplice mantenere un significato e quindi ottenere valore dai dati.
 
-Prima di poter acquisire i dati in Platform, è necessario comporre uno schema per descrivere la struttura dei dati e fornire vincoli al tipo di dati che possono essere contenuti all’interno di ciascun campo. Gli schemi sono costituiti da una classe base e da zero o più gruppi di campi schema.
+Prima che i dati possano essere acquisiti in Experience Platform, è necessario comporre uno schema per descrivere la struttura dei dati e fornire vincoli al tipo di dati che possono essere contenuti all’interno di ciascun campo. Gli schemi sono costituiti da una classe base e da zero o più gruppi di campi schema.
 
 Per ulteriori informazioni sul modello di composizione dello schema, inclusi i principi di progettazione e le best practice, vedere le [nozioni di base sulla composizione dello schema](../../../../xdm/schema/composition.md).
 
@@ -125,4 +125,4 @@ La tabella seguente contiene informazioni sulla configurazione sottostante degli
 
 ## Passaggi successivi
 
-Per informazioni su come collegare i dati di [!DNL Marketo] a Platform, consulta l&#39;esercitazione su [creazione di un connettore di origine Marketo nell&#39;interfaccia utente](../../../tutorials/ui/create/adobe-applications/marketo.md).
+Per informazioni su come collegare i dati di [!DNL Marketo] ad Experience Platform, consulta l&#39;esercitazione sulla [creazione di un connettore di origine Marketo nell&#39;interfaccia utente](../../../tutorials/ui/create/adobe-applications/marketo.md).

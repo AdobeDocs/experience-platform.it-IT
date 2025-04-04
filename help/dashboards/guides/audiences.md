@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;profilo;pubblico;pubblico;segmentazione;interfaccia utente;personalizzazione;dashboard pubblico;dashboard
+keywords: Experience Platform;profilo;pubblico;pubblico;segmentazione;interfaccia utente;personalizzazione;dashboard pubblico;;profile;audience;segmentation;user interface;UI;customization;audience dashboard;dashboard
 title: Dashboard dei tipi di pubblico
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale puoi visualizzare informazioni importanti sui tipi di pubblico creati dalla tua organizzazione.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3132'
+source-wordcount: '3136'
 ht-degree: 9%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 9%
 
 L’interfaccia utente di Adobe Experience Platform fornisce una dashboard attraverso la quale puoi visualizzare informazioni importanti sui tipi di pubblico, acquisite durante un’istantanea giornaliera. Questa guida illustra come accedere e lavorare con il dashboard [!UICONTROL Tipi di pubblico] nell&#39;interfaccia utente e fornisce ulteriori informazioni sulle visualizzazioni visualizzate nel dashboard.
 
-Per una panoramica di tutte le funzionalità del servizio di segmentazione di Adobe Experience Platform nell&#39;interfaccia utente di Platform, visita la [guida dell&#39;interfaccia utente del servizio di segmentazione](../../segmentation/ui/overview.md).
+Per una panoramica di tutte le funzionalità del servizio di segmentazione di Adobe Experience Platform nell&#39;interfaccia utente di Experience Platform, visita la [guida dell&#39;interfaccia utente del servizio di segmentazione](../../segmentation/ui/overview.md).
 
 ## [!UICONTROL Tipi di pubblico] dati dashboard
 
@@ -29,11 +29,11 @@ I dati attributo nello snapshot mostrano i dati esattamente come vengono visuali
 
 ## Esplora il dashboard [!UICONTROL Tipi di pubblico] {#explore}
 
-Per passare al dashboard [!UICONTROL Tipi di pubblico] nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Tipi di pubblico]** nella barra a sinistra, quindi seleziona la scheda **[!UICONTROL Panoramica]** per visualizzare il dashboard.
+Per passare alla dashboard [!UICONTROL Tipi di pubblico] nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Tipi di pubblico]** nella barra a sinistra, quindi seleziona la scheda **[!UICONTROL Panoramica]** per visualizzare la dashboard.
 
 >[!NOTE]
 >
->Se la tua organizzazione ha poca esperienza con Platform e non dispone ancora di set di dati di profilo attivi o criteri di unione creati, la dashboard [!UICONTROL Tipi di pubblico] non è visibile. Nella scheda [!UICONTROL Panoramica] sono invece visualizzati collegamenti e documentazione per aiutarti a iniziare con la segmentazione.
+>Se la tua organizzazione ha poca esperienza con Experience Platform e non dispone ancora di set di dati di profilo attivi o criteri di unione creati, la dashboard [!UICONTROL Tipi di pubblico] non è visibile. Nella scheda [!UICONTROL Panoramica] sono invece visualizzati collegamenti e documentazione per aiutarti a iniziare con la segmentazione.
 
 ![La scheda [!UICONTROL Tipi di pubblico] della dashboard [!UICONTROL Panoramica] con [!UICONTROL Tipi di pubblico] e [!UICONTROL Panoramica] evidenziati.](../images/audiences/dashboard-overview.png)
 
@@ -53,7 +53,7 @@ Dalla libreria dei widget, puoi sfogliare la selezione di widget di pubblico sta
 
 ### Visualizza SQL {#view-sql}
 
-Puoi visualizzare il codice SQL che genera le informazioni visualizzate nel tuo dashboard con un interruttore nell&#39;area di lavoro [!UICONTROL Panoramica]. Puoi trarre ispirazione dall’SQL delle informazioni esistenti per creare nuove query che derivano informazioni univoche dai dati di Platform in base alle esigenze aziendali. Per ulteriori informazioni su questa funzionalità, vedere la [Guida dell&#39;interfaccia utente SQL](../view-sql.md).
+Puoi visualizzare il codice SQL che genera le informazioni visualizzate nel tuo dashboard con un interruttore nell&#39;area di lavoro [!UICONTROL Panoramica]. Puoi trarre ispirazione dall’SQL delle informazioni esistenti per creare nuove query che derivano informazioni univoche dai dati di Experience Platform in base alle esigenze aziendali. Per ulteriori informazioni su questa funzionalità, vedere la [Guida dell&#39;interfaccia utente SQL](../view-sql.md).
 
 ## Selezionare un pubblico {#select-audience}
 
@@ -146,13 +146,13 @@ Il menu a discesa sotto il titolo del widget fornisce un elenco di tutti i model
 >
 >Il numero totale di profili calcolati dipende dal criterio di unione scelto. Per modificare il criterio di unione utilizzato, seleziona il menu a discesa immediatamente sotto la scheda della panoramica. Consulta la sezione sui [criteri di unione](#merge-policies) per una breve descrizione o la [panoramica dei criteri di unione](../../profile/merge-policies/overview.md) per ulteriori dettagli.
 
-![Dashboard dei tipi di pubblico di Experience Platform con widget di riepilogo del punteggio di IA per l&#39;analisi dei clienti evidenziato.](../images/segments/customer-ai-scoring-summary.png)
+![Dashboard di Experience Platform Audiences con widget di riepilogo punteggio IA per l&#39;analisi dei clienti evidenziato.](../images/segments/customer-ai-scoring-summary.png)
 
 Seleziona **[!UICONTROL Visualizza dettagli modello]** per passare alla pagina Approfondimenti dettagliati per il modello di IA per l&#39;analisi dei clienti selezionato. Ulteriori informazioni su IA per l&#39;analisi dei clienti sono disponibili nella [guida dell&#39;interfaccia utente di individuazione approfondimenti](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
 
 ## Widget standard {#standard-widgets}
 
-Adobe fornisce più widget standard che puoi utilizzare per visualizzare diverse metriche relative ai tipi di pubblico. Puoi anche creare widget personalizzati da condividere con la tua organizzazione utilizzando la [!UICONTROL Libreria widget]. Per ulteriori informazioni sulla creazione di widget personalizzati, leggere la [Panoramica della libreria di widget](../customize/widget-library.md).
+Adobe fornisce più widget standard da utilizzare per visualizzare diverse metriche relative ai tipi di pubblico. Puoi anche creare widget personalizzati da condividere con la tua organizzazione utilizzando la [!UICONTROL Libreria widget]. Per ulteriori informazioni sulla creazione di widget personalizzati, leggere la [Panoramica della libreria di widget](../customize/widget-library.md).
 
 Per ulteriori informazioni su ciascuno dei widget standard disponibili, selezionare il nome di un widget dall&#39;elenco seguente:
 

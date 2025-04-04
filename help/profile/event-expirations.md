@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Scadenze degli eventi esperienza
 description: Questo documento fornisce indicazioni generali sulla configurazione dei tempi di scadenza per singoli eventi esperienza all’interno di un set di dati di Adobe Experience Platform.
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '858'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 In Adobe Experience Platform puoi configurare i tempi di scadenza per tutti gli eventi esperienza acquisiti in un set di dati abilitato per [Profilo cliente in tempo reale](./home.md). Questo ti consente di rimuovere automaticamente dall’archivio profili i dati che non sono più validi o utili per i tuoi casi d’uso.
 
-Le scadenze degli eventi esperienza non possono essere configurate tramite l’interfaccia utente o le API di Platform. Al contrario, devi contattare il supporto per abilitare le scadenze degli eventi esperienza nei set di dati richiesti.
+Le scadenze degli eventi esperienza non possono essere configurate tramite l’interfaccia utente o le API di Experience Platform. Al contrario, devi contattare il supporto per abilitare le scadenze degli eventi esperienza nei set di dati richiesti.
 
 >[!IMPORTANT]
 >
@@ -23,7 +23,7 @@ Le scadenze degli eventi esperienza non possono essere configurate tramite l’i
 
 ## Processo di scadenza automatizzato
 
-Dopo aver abilitato le scadenze degli eventi esperienza in un set di dati abilitato per il profilo, Platform applica automaticamente i valori di scadenza per ogni evento acquisito in un processo in due fasi:
+Dopo aver abilitato le scadenze degli eventi esperienza in un set di dati abilitato per il profilo, Experience Platform applica automaticamente i valori di scadenza per ogni evento acquisito in un processo in due fasi:
 
 1. A tutti i nuovi dati acquisiti nel set di dati viene applicato il valore di scadenza al momento dell’acquisizione in base alla marca temporale dell’evento.
 1. A tutti i dati esistenti nel set di dati viene applicato retroattivamente il valore di scadenza come processo di sistema di backfill una tantum. Una volta inserito il valore di scadenza nel set di dati, gli eventi precedenti al valore di scadenza vengono immediatamente eliminati non appena viene eseguito il processo di sistema. Tutti gli altri eventi verranno eliminati non appena raggiungono i valori di scadenza dalla marca temporale dell’evento. Se tutti gli eventi esperienza sono stati rimossi e il profilo non ha più attributi di profilo, questo non esisterà più.
@@ -76,4 +76,4 @@ La scadenza dei dati del profilo pseudonimo e la scadenza dei dati dell’evento
 
 Devi **sempre** impostare la scadenza dei dati Experience Event nei set di dati in base alle tue esigenze di conservazione dei dati sui tuoi clienti noti. Una volta impostata la scadenza dei dati di Experience Event, puoi utilizzare la scadenza dei dati di profilo pseudonimo per rimuovere automaticamente i profili pseudonimi. In genere, il periodo di scadenza dei dati per i profili pseudonimi è inferiore al periodo di scadenza dei dati per gli eventi esperienza.
 
-Per un caso d’uso tipico, puoi impostare la scadenza dei dati Experience Event in base ai valori dei dati utente noti e impostare la scadenza dei dati del profilo pseudonimo su una durata molto più breve per limitare l’impatto dei profili pseudonimi sulla conformità della licenza di Platform.
+Per un caso d’uso tipico, puoi impostare la scadenza dei dati Experience Event in base ai valori dei dati utente noti e impostare la scadenza dei dati del profilo pseudonimo su una durata molto più breve per limitare l’impatto dei profili pseudonimi sulla conformità della licenza di Experience Platform.

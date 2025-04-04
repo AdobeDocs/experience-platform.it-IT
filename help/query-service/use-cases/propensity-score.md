@@ -1,10 +1,10 @@
 ---
 title: Determinare Un Punteggio Di Propensione Utilizzando Un Modello Predittivo Generato Dall’Apprendimento Automatico
-description: Scopri come utilizzare Query Service per applicare il modello predittivo ai dati di Platform. Questo documento illustra come utilizzare i dati di Platform per prevedere la propensione di un cliente all’acquisto per ogni visita.
+description: Scopri come utilizzare Query Service per applicare il modello predittivo ai dati di Experience Platform. Questo documento illustra come utilizzare i dati di Experience Platform per prevedere la propensione di un cliente all’acquisto per ogni visita.
 exl-id: 29587541-50dd-405c-bc18-17947b8a5942
-source-git-commit: 40c27a52fdae2c7d38c5e244a6d1d6ae3f80f496
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1304'
+source-wordcount: '1309'
 ht-degree: 0%
 
 ---
@@ -35,9 +35,9 @@ numpy
 tqdm
 ```
 
-## Importa tabelle di analisi da Platform in [!DNL Jupyter Notebook] {#import-analytics-tables}
+## Importa tabelle di analisi da Experience Platform in [!DNL Jupyter Notebook] {#import-analytics-tables}
 
-Per generare un modello di punteggio tendenza, è necessario importare in [!DNL Jupyter Notebook] una proiezione dei dati di analisi memorizzati in Platform. Da un [!DNL Python] 3 [!DNL Jupyter Notebook] connesso a Query Service, i seguenti comandi importano un set di dati di comportamento del cliente da Luma, un archivio di abbigliamento fittizio. Poiché i dati di Platform vengono memorizzati utilizzando il formato Experience Data Model (XDM), è necessario generare un oggetto JSON di esempio conforme alla struttura dello schema. Per istruzioni su come [generare l&#39;oggetto JSON di esempio](../../xdm/ui/sample.md), vedere la documentazione.
+Per generare un modello di punteggio tendenza, è necessario importare in [!DNL Jupyter Notebook] una proiezione dei dati di analisi memorizzati in Experience Platform. Da un [!DNL Python] 3 [!DNL Jupyter Notebook] connesso a Query Service, i seguenti comandi importano un set di dati di comportamento del cliente da Luma, un archivio di abbigliamento fittizio. Poiché i dati di Experience Platform vengono memorizzati utilizzando il formato Experience Data Model (XDM), è necessario generare un oggetto JSON di esempio conforme alla struttura dello schema. Per istruzioni su come [generare l&#39;oggetto JSON di esempio](../../xdm/ui/sample.md), vedere la documentazione.
 
 ![Dashboard [!DNL Jupyter Notebook] con diversi comandi evidenziati.](../images/use-cases/jupyter-commands.png)
 
@@ -161,7 +161,7 @@ Dal grafico a barre è possibile individuare diversi pattern. Gli argomenti POS 
 
 ## Utilizzare Query Service per applicare il modello addestrato {#use-query-service-to-apply-trained-model}
 
-Dopo la creazione del modello addestrato, questo deve essere applicato ai dati contenuti in Experience Platform. A questo scopo, la logica della pipeline di machine learning deve essere convertita in SQL. I due componenti chiave di questa transizione sono i seguenti:
+Una volta creato il modello addestrato, questo deve essere applicato ai dati contenuti in Experience Platform. A questo scopo, la logica della pipeline di machine learning deve essere convertita in SQL. I due componenti chiave di questa transizione sono i seguenti:
 
 - Innanzitutto, SQL deve sostituire il modulo [!DNL Logistics Regression] per ottenere la probabilità di un&#39;etichetta di previsione. Il modello creato dalla regressione logistica ha prodotto il modello di regressione `y = wX + c`, dove i pesi `w` e l&#39;intercetta `c` sono l&#39;output del modello. Le funzionalità SQL possono essere utilizzate per moltiplicare i pesi per ottenere una probabilità.
 

@@ -3,14 +3,14 @@ title: Integrare il supporto IAB TCF 2.0 utilizzando Adobe Experience Platform W
 description: Scopri come impostare il supporto IAB TCF 2.0 per il tuo sito web senza utilizzare i tag.
 seo-description: Learn how to set up IAB TCF 2.0 consent with Adobe Experience Platform Web SDK
 exl-id: 14f1802a-0f8d-487f-ae17-5daaaab05162
-source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '615'
+source-wordcount: '617'
 ht-degree: 0%
 
 ---
 
-# Integrare il supporto IAB TCF 2.0 con Platform Web SDK
+# Integrare il supporto IAB TCF 2.0 con Experience Platform Web SDK
 
 Questa guida illustra come integrare Interactive Advertising Bureau Transparency &amp; Consent Framework, versione 2.0 (IAB TCF 2.0) con Adobe Experience Platform Web SDK senza utilizzare i tag. Per una panoramica sull&#39;integrazione con IAB TCF 2.0, leggere la [panoramica](./overview.md). Per una guida su come eseguire l&#39;integrazione con i tag, leggere la [guida IAB TCF 2.0 per i tag](./with-tags.md).
 
@@ -106,4 +106,4 @@ L&#39;altro modo per aggiungere le informazioni sul consenso a ogni richiesta è
 
 ## Passaggi successivi
 
-Ora che hai imparato a utilizzare IAB TCF 2.0 con l’estensione Platform Web SDK, puoi anche scegliere di integrarla con altre soluzioni di Adobe come Adobe Analytics o Adobe Real-time Customer Data Platform. Per ulteriori informazioni, consulta la [panoramica su IAB Transparency &amp; Consent Framework 2.0](./overview.md).
+Ora che hai imparato a utilizzare IAB TCF 2.0 con l’estensione Experience Platform Web SDK, puoi anche scegliere di integrarla con altre soluzioni Adobe come Adobe Analytics o Adobe Real-Time Customer Data Platform. Per ulteriori informazioni, consulta la [panoramica su IAB Transparency &amp; Consent Framework 2.0](./overview.md).

@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;flusso di dati;flusso di dati
+keywords: Experience Platform;home;argomenti popolari;flusso di dati;Flusso di dati
 title: Configurare un flusso di dati per acquisire dati in batch da un Source di archiviazione cloud nell’interfaccia utente
 description: Questo tutorial illustra come configurare un nuovo flusso di dati per acquisire dati batch da un’origine di archiviazione cloud nell’interfaccia utente
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: 48aef63cffbdc52a6a96ef69e5db4f54274144b6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1926'
+source-wordcount: '1929'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ Questa esercitazione descrive come configurare un flusso di dati per portare dat
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): framework standardizzato in base al quale Experience Platform organizza i dati sull&#39;esperienza del cliente.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): framework standardizzato tramite il quale Experience Platform organizza i dati sull&#39;esperienza del cliente.
    * [Nozioni di base sulla composizione dello schema](../../../../../xdm/schema/composition.md): scopri i blocchi predefiniti di base degli schemi XDM, inclusi i principi chiave e le best practice nella composizione dello schema.
    * [Esercitazione sull&#39;editor di schemi](../../../../../xdm/tutorials/create-schema-ui.md): scopri come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;editor di schemi.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
@@ -38,7 +38,7 @@ Le origini dell’archiviazione cloud per i dati batch supportano i seguenti for
 
 ## Aggiungi dati
 
-Dopo aver creato l&#39;account di archiviazione cloud, viene visualizzato il passaggio **[!UICONTROL Aggiungi dati]** che fornisce un&#39;interfaccia per esplorare la gerarchia dei file di archiviazione cloud e selezionare la cartella o il file specifico da portare in Platform.
+Dopo aver creato l&#39;account di archiviazione cloud, viene visualizzato il passaggio **[!UICONTROL Aggiungi dati]** che fornisce un&#39;interfaccia per esplorare la gerarchia dei file di archiviazione cloud e selezionare la cartella o il file specifico da portare in Experience Platform.
 
 * La parte sinistra dell’interfaccia è un browser di directory che visualizza la gerarchia dei file di archiviazione cloud.
 * La parte destra dell’interfaccia consente di visualizzare in anteprima fino a 100 righe di dati da una cartella o un file compatibile.
@@ -83,7 +83,7 @@ Nel passaggio [!UICONTROL Seleziona dati], seleziona un file compresso per l&#39
 
 ![](../../../../images/tutorials/dataflow/cloud-batch/custom.png)
 
-Per portare un file specifico su Platform, seleziona una cartella e quindi il file da acquisire. Durante questo passaggio, potete anche visualizzare in anteprima il contenuto di altri file all&#39;interno di una determinata cartella utilizzando l&#39;icona di anteprima accanto al nome di un file.
+Per trasferire un file specifico in Experience Platform, seleziona una cartella e quindi fai clic sul file da acquisire. Durante questo passaggio, potete anche visualizzare in anteprima il contenuto di altri file all&#39;interno di una determinata cartella utilizzando l&#39;icona di anteprima accanto al nome di un file.
 
 Al termine, selezionare **[!UICONTROL Avanti]**.
 
@@ -127,7 +127,7 @@ Dopo aver fornito i dettagli al flusso di dati, seleziona **[!UICONTROL Avanti]*
 
 Viene visualizzato il passaggio [!UICONTROL Mappatura] che fornisce un&#39;interfaccia per mappare i campi sorgente dallo schema sorgente ai campi XDM di destinazione appropriati nello schema di destinazione.
 
-Platform fornisce consigli intelligenti per campi mappati automaticamente in base allo schema o al set di dati di destinazione selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi d’uso. In base alle tue esigenze, puoi scegliere di mappare i campi direttamente o utilizzare le funzioni di preparazione dati per trasformare i dati sorgente in modo da derivare valori calcolati o calcolati. Per i passaggi completi sull&#39;utilizzo dell&#39;interfaccia mapper e dei campi calcolati, consulta la [guida dell&#39;interfaccia utente della preparazione dati](../../../../../data-prep/ui/mapping.md).
+Experience Platform fornisce consigli intelligenti per campi mappati automaticamente in base allo schema o al set di dati di destinazione selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi d’uso. In base alle tue esigenze, puoi scegliere di mappare i campi direttamente o utilizzare le funzioni di preparazione dati per trasformare i dati sorgente in modo da derivare valori calcolati o calcolati. Per i passaggi completi sull&#39;utilizzo dell&#39;interfaccia mapper e dei campi calcolati, consulta la [guida dell&#39;interfaccia utente della preparazione dati](../../../../../data-prep/ui/mapping.md).
 
 Una volta mappati correttamente i dati di origine, seleziona **[!UICONTROL Avanti]**.
 
@@ -183,14 +183,14 @@ Dopo aver rivisto il flusso di dati, fai clic su **[!UICONTROL Fine]** e attendi
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato correttamente un flusso di dati per inserire dati da un’archiviazione cloud esterna e hai ottenuto informazioni approfondite sul monitoraggio dei set di dati. Per ulteriori informazioni sulla creazione di flussi di dati, guarda il video seguente per integrare il tuo apprendimento. Inoltre, i dati in arrivo possono ora essere utilizzati da servizi [!DNL Platform] downstream come [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i seguenti documenti:
+Seguendo questa esercitazione, hai creato correttamente un flusso di dati per inserire dati da un’archiviazione cloud esterna e hai ottenuto insight sul monitoraggio dei set di dati. Per ulteriori informazioni sulla creazione di flussi di dati, guarda il video seguente per integrare il tuo apprendimento. Inoltre, i dati in arrivo possono ora essere utilizzati da servizi [!DNL Experience Platform] downstream come [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i seguenti documenti:
 
 * [Panoramica di [!DNL Real-Time Customer Profile]](../../../../../profile/home.md)
 * [Panoramica di [!DNL Data Science Workspace]](../../../../../data-science-workspace/home.md)
 
 >[!WARNING]
 >
-> L&#39;interfaccia utente [!DNL Platform] mostrata nel video seguente non è aggiornata. Per le schermate e le funzionalità più recenti dell’interfaccia utente, consulta la documentazione precedente.
+> L&#39;interfaccia utente [!DNL Experience Platform] mostrata nel video seguente non è aggiornata. Per le schermate e le funzionalità più recenti dell’interfaccia utente, consulta la documentazione precedente.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29695?quality=12&learn=on)
 

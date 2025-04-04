@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;guida introduttiva;customer ai;argomenti più comuni;customer ai input;customer ai output; requisiti dei dati
+keywords: Experience Platform;guida introduttiva;customer ai;argomenti più comuni;input customer ai;output customer ai; requisiti dei dati
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Requisiti dei dati in Customer AI
 topic-legacy: Getting started
 description: Scopri di più sugli eventi, gli input e gli output richiesti utilizzati da Customer AI.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 63bdb48936070d23d1801d8e6143db3aefad5f6e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2545'
+source-wordcount: '2551'
 ht-degree: 1%
 
 ---
@@ -62,20 +62,20 @@ La tabella seguente illustra alcuni termini comuni utilizzati in questo document
 
 | Termine | Definizione |
 | --- | --- |
-| [Experience Data Model (XDM)](../../xdm/home.md) | XDM è il framework fondamentale che consente a Adobe Experience Cloud, con tecnologia Adobe Experience Platform, di inviare il messaggio giusto alla persona giusta, sul canale giusto, nel momento esatto giusto. Platform utilizza il sistema XDM per organizzare i dati in un modo che ne semplifica l’utilizzo per i servizi Platform. |
-| [Schema XDM](../../xdm/schema/composition.md) | Experience Platform utilizza gli schemi per descrivere la struttura dei dati in modo coerente e riutilizzabile. Definendo i dati in modo coerente tra i sistemi, diventa più semplice mantenere un significato e quindi ottenere valore dai dati. Prima di poter acquisire i dati in Platform, è necessario comporre uno schema per descrivere la struttura dei dati e fornire vincoli al tipo di dati che possono essere contenuti all’interno di ciascun campo. Gli schemi sono costituiti da una classe XDM di base e da zero o più gruppi di campi schema. |
+| [Experience Data Model (XDM)](../../xdm/home.md) | XDM è il framework fondamentale che consente a Adobe Experience Cloud, con tecnologia Adobe Experience Platform, di inviare il messaggio giusto alla persona giusta, sul canale giusto, nel momento esatto giusto. Experience Platform utilizza il sistema XDM per organizzare i dati in un modo che semplifica l’utilizzo per i servizi Experience Platform. |
+| [Schema XDM](../../xdm/schema/composition.md) | Experience Platform utilizza gli schemi per descrivere la struttura dei dati in modo coerente e riutilizzabile. Definendo i dati in modo coerente tra i sistemi, diventa più semplice mantenere un significato e quindi ottenere valore dai dati. Prima che i dati possano essere acquisiti in Experience Platform, è necessario comporre uno schema per descrivere la struttura dei dati e fornire vincoli al tipo di dati che possono essere contenuti all’interno di ciascun campo. Gli schemi sono costituiti da una classe XDM di base e da zero o più gruppi di campi schema. |
 | [Classe XDM](../../xdm/schema/field-constraints.md) | Tutti gli schemi XDM descrivono dati che possono essere classificati come `Experience Event`. Il comportamento dei dati di uno schema è definito dalla classe dello schema, che viene assegnata a uno schema al momento della creazione. Le classi XDM descrivono il minor numero di proprietà che uno schema deve contenere per rappresentare un particolare comportamento di dati. |
 | [Gruppi di campi](../../xdm/schema/composition.md) | Componente che definisce uno o più campi in uno schema. I gruppi di campi impongono il modo in cui i loro campi vengono visualizzati nella gerarchia dello schema e pertanto presentano la stessa struttura in ogni schema in cui sono inclusi. I gruppi di campi sono compatibili solo con classi specifiche, identificate dal relativo attributo `meta:intendedToExtend`. |
 | [Tipo di dati](../../xdm/schema/composition.md) | Componente che può anche fornire uno o più campi per uno schema. Tuttavia, a differenza dei gruppi di campi, i tipi di dati non sono vincolati a una particolare classe. Questo rende i tipi di dati un’opzione più flessibile per descrivere strutture di dati comuni riutilizzabili in più schemi con classi potenzialmente diverse. I tipi di dati descritti in questo documento sono supportati dagli schemi CEE e Adobe Analytics. |
-| [Profilo cliente in tempo reale](../../profile/home.md) | Real-time Customer Profile fornisce un profilo consumer centralizzato per una gestione mirata e personalizzata delle esperienze. Ogni profilo contiene dati aggregati in tutti i sistemi, nonché resoconti con marca temporale utilizzabili di eventi che hanno coinvolto l’individuo che si sono verificati in qualsiasi sistema utilizzato con Experience Platform. |
+| [Profilo cliente in tempo reale](../../profile/home.md) | Real-time Customer Profile fornisce un profilo consumer centralizzato per una gestione mirata e personalizzata delle esperienze. Ogni profilo contiene dati aggregati per tutti i sistemi, nonché account con marca temporale utilizzabili di eventi che coinvolgono l’individuo che si sono verificati in qualsiasi sistema utilizzato con Experience Platform. |
 
 ## Dati di input di IA per l’analisi dei clienti {#customer-ai-input-data}
 
 Per i set di dati di input, come Adobe Analytics e Adobe Audience Manager, i rispettivi connettori di origine mappano direttamente gli eventi in questi gruppi di campi standard (Commerce, Web, Application e Search) per impostazione predefinita durante il processo di connessione. La tabella seguente mostra i campi evento nei gruppi di campi standard predefiniti per IA per l’analisi dei clienti.
 
-Per ulteriori informazioni sulla mappatura dei dati di Adobe Analytics o di Audience Manager, consulta la guida alle mappature dei campi di Analytics o l&#39;Audience Manager [guida alle mappature dei campi](../../sources/connectors/adobe-applications/mapping/audience-manager.md).
+Per ulteriori informazioni sulla mappatura dei dati di Adobe Analytics o di Audience Manager, consulta la guida Mappature campi di Analytics o la [guida alle mappature campi](../../sources/connectors/adobe-applications/mapping/audience-manager.md) di Audience Manager.
 
-Puoi utilizzare gli schemi XDM di Experience Event o Consumer Experience Event per set di dati di input che non vengono compilati tramite uno dei connettori precedenti. Durante il processo di creazione dello schema è possibile aggiungere altri gruppi di campi XDM. I gruppi di campi possono essere forniti per Adobe, come i gruppi di campi standard o i gruppi di campi personalizzati, che corrispondono alla rappresentazione dei dati in Platform.
+Puoi utilizzare gli schemi XDM di Experience Event o Consumer Experience Event per set di dati di input che non vengono compilati tramite uno dei connettori precedenti. Durante il processo di creazione dello schema è possibile aggiungere altri gruppi di campi XDM. I gruppi di campi possono essere forniti da Adobe come i gruppi di campi standard o un gruppo di campi personalizzato, che corrisponde alla rappresentazione dei dati in Experience Platform.
 
 >[!IMPORTANT]
 >
@@ -91,7 +91,7 @@ Gli Eventi di esperienza vengono utilizzati per determinare i vari comportamenti
 
 IA per l’analisi dei clienti utilizza gli eventi in questi quattro gruppi di campi standard per impostazione predefinita: Commerce, Web, Application e Search. Non è necessario disporre di dati per ogni evento nei gruppi di campi standard elencati di seguito, ma per alcuni scenari sono richiesti determinati eventi. Se sono disponibili eventi nei gruppi di campi standard, si consiglia di includerli nello schema. Ad esempio, se desideri creare un modello di IA per l’analisi dei clienti per prevedere gli eventi di acquisto, è utile disporre di dati dai gruppi di campi Commerce e Dettagli pagina web.
 
-Per visualizzare un gruppo di campi nell&#39;interfaccia utente di Platform, seleziona la scheda **[!UICONTROL Schemi]** nella barra a sinistra, quindi la scheda **[!UICONTROL Gruppi di campi]**.
+Per visualizzare un gruppo di campi nell&#39;interfaccia utente di Experience Platform, seleziona la scheda **[!UICONTROL Schemi]** nella barra a sinistra, quindi la scheda **[!UICONTROL Gruppi di campi]**.
 
 | Gruppo di campi | Tipo di evento | Percorso campo XDM |
 | --- | --- | --- |
@@ -135,7 +135,7 @@ I migliori candidati per gli eventi personalizzati sono i dati che contengono co
 
 - Registrati per l&#39;account
 
-- Iscriviti alla newsletter
+- Abbonati alla newsletter
 
 - Effettuare una chiamata al servizio clienti
 
@@ -211,7 +211,7 @@ Anche se IA per l’analisi dei clienti richiede un periodo di tempo minimo per 
 
 IA per l’analisi dei clienti genera diversi attributi per singoli profili ritenuti idonei. Esistono due modi per utilizzare il punteggio (output) in base al provisioning. Se disponi di un set di dati abilitato per Real-time Customer Profile, puoi sfruttare le informazioni provenienti da Real-time Customer Profile nel [Generatore di segmenti](../../segmentation/ui/segment-builder.md). Se non disponi di un set di dati abilitato per il profilo, puoi [scaricare l&#39;output di IA per l&#39;analisi dei clienti](./user-guide/download-scores.md) set di dati disponibile nel data lake.
 
-Puoi trovare il set di dati di output nell&#39;area di lavoro **Set di dati** di Platform. Tutti i set di dati di output di IA per l&#39;analisi dei clienti iniziano con il nome **Punteggi di IA per l&#39;analisi dei clienti - NAME_OF_APP**. Analogamente, tutti gli schemi di output di IA per l&#39;analisi dei clienti iniziano con il nome **Schema di IA per l&#39;analisi dei clienti - Name_of_app**.
+Puoi trovare il set di dati di output nell&#39;area di lavoro **Set di dati** di Experience Platform. Tutti i set di dati di output di IA per l&#39;analisi dei clienti iniziano con il nome **Punteggi di IA per l&#39;analisi dei clienti - NAME_OF_APP**. Analogamente, tutti gli schemi di output di IA per l&#39;analisi dei clienti iniziano con il nome **Schema di IA per l&#39;analisi dei clienti - Name_of_app**.
 
 ![Nome dei set di dati di output in Customer AI](./images/user-guide/cai-schema-name-of-app.png)
 

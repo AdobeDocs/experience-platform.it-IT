@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;origini;connettori;sorgente connettori;sorgenti sdk;sdk;SDK
+keywords: Experience Platform;home;argomenti popolari;origini;connettori;source connectors;sources sdk;sdk;SDK
 solution: Experience Platform
 title: Utilizzare un editor di testo nell’ambiente locale per creare una pagina della documentazione di Sources
 description: Questo documento descrive come utilizzare l’ambiente locale per creare la documentazione per la tua origine e inviare una richiesta di pull (PR).
 exl-id: 4cc89d1d-bc42-473d-ba54-ab3d1a2cd0d6
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '601'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Questo documento descrive come utilizzare l’ambiente locale per creare la docu
 
 >[!TIP]
 >
->I seguenti documenti della guida introduttiva di Adobe possono essere utilizzati per supportare ulteriormente la procedura di documentazione: <ul><li>[Installare gli strumenti di creazione Git e Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[Configurazione locale dell&#39;archivio Git per la documentazione](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[Flusso di lavoro contributi GitHub per modifiche principali](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
+>Per supportare ulteriormente il processo di documentazione, puoi utilizzare i seguenti documenti della guida per i collaboratori di Adobe: <ul><li>[Installare gli strumenti di creazione Git e Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[Configurazione locale dell&#39;archivio Git per la documentazione](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[Flusso di lavoro contributi GitHub per modifiche principali](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
 
 ## Prerequisiti
 
@@ -29,7 +29,7 @@ Il primo passaggio nella configurazione dell&#39;ambiente di authoring locale co
 
 ![repository-piattaforma](../assets/platform-repo.png)
 
-Nella pagina principale dell&#39;archivio GitHub di Platform, seleziona **Fork**.
+Nella pagina principale dell&#39;archivio GitHub di Experience Platform, seleziona **Fork**.
 
 ![fork](../assets/fork.png)
 
@@ -53,7 +53,7 @@ Nel pannello popover visualizzato, immettere un nome descrittivo per il ramo, qu
 
 ![create-branch-vs](../assets/create-branch-vs.png)
 
-Quindi, selezionare **Ramo Publish**.
+Selezionare **Pubblica ramo**.
 
 ![ramo-pubblicazione](../assets/publish-branch.png)
 
@@ -61,7 +61,7 @@ Quindi, selezionare **Ramo Publish**.
 
 Dopo aver clonato l&#39;archivio nel computer locale e creato un nuovo ramo, è ora possibile iniziare a creare la pagina della documentazione per la nuova origine tramite l&#39;[editor di testo desiderato](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html#understand-markdown-editors).
 
-L&#39;Adobe consiglia di utilizzare [Visual Studio Code](https://code.visualstudio.com/) e di installare l&#39;estensione di authoring Markdown dell&#39;Adobe. Per installare l&#39;estensione, avviare Visual Studio Code, quindi selezionare la scheda **Estensioni** dal menu di navigazione a sinistra.
+Adobe consiglia di utilizzare [Visual Studio Code](https://code.visualstudio.com/) e di installare l&#39;estensione Adobe Markdown Authoring. Per installare l&#39;estensione, avviare Visual Studio Code, quindi selezionare la scheda **Estensioni** dal menu di navigazione a sinistra.
 
 ![ Estensione](../assets/extension.png)
 
@@ -89,11 +89,11 @@ Per creare una richiesta pull, selezionare **Crea richiesta pull**.
 
 ![create-pr-vs](../assets/create-pr-vs.png)
 
-Assicurati che i rami di base e di confronto siano corretti. Aggiungi una nota alla PR, descrivendo l&#39;aggiornamento, quindi seleziona **Crea richiesta di pull**. Verrà aperta una PR per unire il ramo di lavoro nel ramo principale dell’archivio di Adobi.
+Assicurati che i rami di base e di confronto siano corretti. Aggiungi una nota alla PR, descrivendo l&#39;aggiornamento, quindi seleziona **Crea richiesta di pull**. Verrà aperto un PR per unire il ramo di lavoro nel ramo principale dell’archivio Adobe.
 
 >[!TIP]
 >
->Lascia selezionata la casella di controllo **Consenti modifiche da parte dei responsabili della manutenzione** per garantire che il team della documentazione di Adobe possa apportare modifiche alla PR.
+>Lascia selezionata la casella di controllo **Consenti modifiche da parte dei responsabili della manutenzione** per garantire che il team di documentazione di Adobe possa apportare modifiche alla PR.
 
 ![create-pr](../assets/create-pr.png)
 

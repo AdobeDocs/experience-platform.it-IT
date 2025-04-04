@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;argomenti popolari; notifiche
-description: Iscrivendoti a Adobe I/O Events, puoi utilizzare i webhook per ricevere notifiche relative agli stati di esecuzione del flusso delle connessioni di origine. Queste notifiche contengono informazioni sul successo dell’esecuzione del flusso o sugli errori che hanno contribuito al suo errore.
+description: Con l’abbonamento a Adobe I/O Events, puoi utilizzare i webhook per ricevere notifiche relative agli stati di esecuzione del flusso delle connessioni di origine. Queste notifiche contengono informazioni sul successo dell’esecuzione del flusso o sugli errori che hanno contribuito al suo errore.
 solution: Experience Platform
 title: Notifiche esecuzione flusso
 exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '770'
 ht-degree: 1%
@@ -13,11 +13,11 @@ ht-degree: 1%
 
 # Notifiche di esecuzione del flusso
 
-Adobe Experience Platform consente di acquisire dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi [!DNL Platform]. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
+Adobe Experience Platform consente di acquisire dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi [!DNL Experience Platform]. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 
-[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie origini diverse in [!DNL Platform]. Il servizio fornisce un’interfaccia utente e un’API RESTful da cui tutte le sorgenti supportate sono collegabili.
+[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie origini diverse in [!DNL Experience Platform]. Il servizio fornisce un’interfaccia utente e un’API RESTful da cui tutte le sorgenti supportate sono collegabili.
 
-Con Eventi di Adobe I/O, puoi abbonarti agli eventi e utilizzare i webhook per ricevere notifiche sullo stato delle esecuzioni del flusso. Queste notifiche contengono informazioni sul successo dell’esecuzione del flusso o sugli errori che hanno contribuito al suo errore.
+Con Adobe I/O Events, puoi abbonarti agli eventi e utilizzare i webhook per ricevere notifiche sullo stato delle esecuzioni del flusso. Queste notifiche contengono informazioni sul successo dell’esecuzione del flusso o sugli errori che hanno contribuito al suo errore.
 
 Questo documento descrive come abbonarsi a eventi, registrare webhook e ricevere notifiche contenenti informazioni sullo stato delle esecuzioni del flusso.
 
@@ -37,8 +37,8 @@ Segui l&#39;esercitazione su [abbonarti alle notifiche [!DNL I/O Event]](../obse
 >
 >Durante il processo di sottoscrizione, assicurarsi di selezionare **[!UICONTROL Notifiche piattaforma]** come provider di eventi e selezionare le sottoscrizioni di eventi seguenti:
 >
->* **[!UICONTROL Esecuzione del flusso Experience Platform Source completata]**
->* **[!UICONTROL Esecuzione del flusso Experience Platform Source non riuscita]**
+>* **[!UICONTROL Esecuzione del flusso di Experience Platform Source completata]**
+>* **[!UICONTROL Esecuzione del flusso di Experience Platform Source non riuscita]**
 
 ## Ricevi notifiche di esecuzione del flusso
 
@@ -323,9 +323,9 @@ Le sezioni seguenti forniscono informazioni aggiuntive sull’utilizzo delle not
 
 ### Informazioni sui messaggi di errore {#errors}
 
-Gli errori di acquisizione possono verificarsi quando i dati vengono copiati dall&#39;origine o quando i dati copiati vengono elaborati in [!DNL Platform]. Per ulteriori informazioni su errori specifici, consulta la tabella seguente.
+Gli errori di acquisizione possono verificarsi quando i dati vengono copiati dall&#39;origine o quando i dati copiati vengono elaborati in [!DNL Experience Platform]. Per ulteriori informazioni su errori specifici, consulta la tabella seguente.
 
 | Errore | Descrizione |
 | ---------- | ----------- |
 | `CONNECTOR-1001-500` | Si è verificato un errore durante la copia dei dati da un&#39;origine. |
-| `CONNECTOR-2001-500` | Errore durante l&#39;elaborazione dei dati copiati in [!DNL Platform]. Questo errore può riguardare l’analisi, la convalida o la trasformazione. |
+| `CONNECTOR-2001-500` | Errore durante l&#39;elaborazione dei dati copiati in [!DNL Experience Platform]. Questo errore può riguardare l’analisi, la convalida o la trasformazione. |

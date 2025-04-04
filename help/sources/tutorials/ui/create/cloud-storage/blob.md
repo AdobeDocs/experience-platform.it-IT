@@ -1,23 +1,23 @@
 ---
 title: Creare una connessione Source Azure Blob nell’interfaccia utente
-description: Scopri come creare un connettore di origine BLOB di Azure utilizzando l’interfaccia utente di Platform.
+description: Scopri come creare un connettore di origine BLOB di Azure utilizzando l’interfaccia utente di Experience Platform.
 exl-id: 0e54569b-7305-4065-981e-951623717648
-source-git-commit: d22c71fb77655c401f4a336e339aaf8b3125d1b6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '819'
 ht-degree: 2%
 
 ---
 
 # Crea una connessione di origine [!DNL Azure Blob] nell&#39;interfaccia utente
 
-Questo tutorial descrive i passaggi necessari per creare una connessione di origine [!DNL Azure Blob] (di seguito &quot;[!DNL Blob]&quot;) tramite l&#39;interfaccia utente di Platform.
+Questo tutorial descrive i passaggi per la creazione di una connessione di origine [!DNL Azure Blob] (di seguito &quot;[!DNL Blob]&quot;) tramite l&#39;interfaccia utente di Experience Platform.
 
 ## Introduzione
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): framework standardizzato per l&#39;organizzazione dei dati sull&#39;esperienza del cliente in Experience Platform.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): framework standardizzato per organizzare i dati sull&#39;esperienza del cliente in Experience Platform.
    * [Nozioni di base sulla composizione dello schema](../../../../../xdm/schema/composition.md): scopri i blocchi predefiniti di base degli schemi XDM, inclusi i principi chiave e le best practice nella composizione dello schema.
    * [Esercitazione sull&#39;editor di schemi](../../../../../xdm/tutorials/create-schema-ui.md): scopri come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;editor di schemi.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
@@ -34,7 +34,7 @@ Experience Platform supporta i seguenti formati di file da acquisire da archivi 
 
 ### Raccogli le credenziali richieste
 
-Per accedere all&#39;archivio [!DNL Blob] su Experience Platform, è necessario fornire valori validi per le credenziali seguenti:
+Per accedere all&#39;archivio [!DNL Blob] su Experience Platform, è necessario fornire valori validi per le seguenti credenziali:
 
 >[!BEGINTABS]
 
@@ -54,17 +54,17 @@ Per accedere all&#39;archivio [!DNL Blob] su Experience Platform, è necessario 
 
 >[!ENDTABS]
 
-Dopo aver raccolto le credenziali richieste, puoi seguire i passaggi seguenti per collegare l&#39;archivio [!DNL Blob] a Experience Platform
+Dopo aver raccolto le credenziali richieste, puoi seguire i passaggi seguenti per collegare l&#39;archiviazione [!DNL Blob] ad Experience Platform
 
 ## Connetti il tuo account [!DNL Blob]
 
-Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Nella schermata [!UICONTROL Catalogo] sono visualizzate diverse origini con cui è possibile creare un account.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Nella schermata [!UICONTROL Catalogo] sono visualizzate diverse origini con cui è possibile creare un account.
 
 Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare la fonte specifica che si desidera utilizzare utilizzando la barra di ricerca.
 
 Nella categoria [!UICONTROL Archiviazione cloud], seleziona **[!UICONTROL Archiviazione BLOB di Azure]**, quindi seleziona **[!UICONTROL Aggiungi dati]**.
 
-![Catalogo delle origini di Experience Platform con l&#39;origine dell&#39;archiviazione BLOB di Azure selezionata.](../../../../images/tutorials/create/blob/catalog.png)
+![Catalogo delle origini di Experience Platform con l&#39;origine Archiviazione BLOB di Azure selezionata.](../../../../images/tutorials/create/blob/catalog.png)
 
 Viene visualizzata la pagina **[!UICONTROL Connetti ad Azure Blob Storage]**. In questa pagina è possibile utilizzare nuove credenziali o credenziali esistenti.
 
@@ -108,4 +108,4 @@ Per eseguire l&#39;autenticazione con una firma di accesso condiviso, selezionar
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai stabilito una connessione al tuo account [!DNL Blob]. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per portare i dati dall&#39;archiviazione cloud in Platform](../../dataflow/batch/cloud-storage.md).
+Seguendo questa esercitazione, hai stabilito una connessione al tuo account [!DNL Blob]. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per portare dati dall&#39;archiviazione cloud in Experience Platform](../../dataflow/batch/cloud-storage.md).

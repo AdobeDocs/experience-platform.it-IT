@@ -3,9 +3,9 @@ title: Elimina record
 description: Scopri come eliminare i record nell’interfaccia utente di Adobe Experience Platform.
 badgeBeta: label="Beta" type="Informative"
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1567'
+source-wordcount: '1574'
 ht-degree: 8%
 
 ---
@@ -25,17 +25,17 @@ Utilizza l&#39;area di lavoro [[!UICONTROL Ciclo di vita dati]](./overview.md) p
 
 L’eliminazione dei record richiede una buona conoscenza del funzionamento dei campi di identità in Experience Platform. In particolare, devi conoscere i valori dello spazio dei nomi delle identità delle entità di cui desideri eliminare i record, a seconda del set di dati (o dei set di dati) da cui li stai eliminando.
 
-Per ulteriori informazioni sulle identità in Platform, consulta la seguente documentazione:
+Per ulteriori informazioni sulle identità in Experience Platform, consulta la seguente documentazione:
 
 * [Servizio Adobe Experience Platform Identity](../../identity-service/home.md): collega le identità tra dispositivi e sistemi, collegando i set di dati in base ai campi di identità definiti dagli schemi XDM a cui sono conformi.
 * [Spazi dei nomi di identità](../../identity-service/features/namespaces.md): gli spazi dei nomi di identità definiscono i diversi tipi di informazioni di identità che possono riferirsi a una singola persona e sono un componente obbligatorio per ogni campo di identità.
 * [Profilo cliente in tempo reale](../../profile/home.md): utilizza i grafici delle identità per fornire profili di consumatori unificati basati su dati aggregati provenienti da più origini, aggiornati quasi in tempo reale.
-* [Experience Data Model (XDM)](../../xdm/home.md): fornisce definizioni e strutture standard per i dati di Platform tramite l&#39;utilizzo di schemi. Tutti i set di dati di Platform sono conformi a uno schema XDM specifico e lo schema definisce quali campi sono identità.
+* [Experience Data Model (XDM)](../../xdm/home.md): fornisce definizioni e strutture standard per i dati di Experience Platform tramite l&#39;utilizzo di schemi. Tutti i set di dati di Experience Platform sono conformi a uno schema XDM specifico e lo schema definisce quali campi sono identità.
 * [Campi identità](../../xdm/ui/fields/identity.md): scopri come viene definito un campo identità in uno schema XDM.
 
 ## Creare una richiesta {#create-request}
 
-Per avviare il processo, seleziona **[!UICONTROL Ciclo di vita dati]** nell&#39;area di navigazione a sinistra dell&#39;interfaccia utente di Platform. Viene visualizzata l&#39;area di lavoro [!UICONTROL Richieste del ciclo di vita dei dati]. Quindi, seleziona **[!UICONTROL Crea richiesta]** dalla pagina principale nell&#39;area di lavoro.
+Per avviare il processo, seleziona **[!UICONTROL Ciclo di vita dati]** nell&#39;area di navigazione a sinistra dell&#39;interfaccia utente di Experience Platform. Viene visualizzata l&#39;area di lavoro [!UICONTROL Richieste del ciclo di vita dei dati]. Quindi, seleziona **[!UICONTROL Crea richiesta]** dalla pagina principale nell&#39;area di lavoro.
 
 ![L&#39;area di lavoro [!UICONTROL Richieste del ciclo di vita dei dati] con [!UICONTROL Crea richiesta] selezionata.](../images/ui/record-delete/create-request-button.png)
 
@@ -75,13 +75,13 @@ Per eliminare record da tutti i set di dati, selezionare **[!UICONTROL Tutti i s
 >title="Valore dell’identità primaria"
 >abstract="In questa colonna è necessario specificare il valore per lo spazio dei nomi identità del record, che deve corrispondere al tipo di identità specificato nella colonna a sinistra. Se il tipo di spazio dei nomi identità è `email`, il valore deve corrispondere all’indirizzo e-mail del record. Per ulteriori informazioni, consulta la guida all’interfaccia utente del ciclo di vita dei dati."
 
-Quando si eliminano i record, è necessario fornire informazioni sull&#39;identità in modo che il sistema possa determinare quali record devono essere eliminati. Per qualsiasi set di dati in Platform, i record vengono eliminati in base al campo **spazio dei nomi identità** definito dallo schema del set di dati.
+Quando si eliminano i record, è necessario fornire informazioni sull&#39;identità in modo che il sistema possa determinare quali record devono essere eliminati. Per qualsiasi set di dati in Experience Platform, i record vengono eliminati in base al campo **spazio dei nomi identità** definito dallo schema del set di dati.
 
-Come tutti i campi di identità in Platform, uno spazio dei nomi di identità è composto da due elementi: un **tipo** (a volte indicato come spazio dei nomi di identità) e un **valore**. Il tipo di identità fornisce contesto su come il campo identifica un record (ad esempio un indirizzo e-mail). Il valore rappresenta l&#39;identità specifica di un record per quel tipo, ad esempio `jdoe@example.com` per il tipo di identità `email`. I campi più comuni utilizzati come identità includono informazioni sull’account, ID dispositivo e ID cookie.
+Come tutti i campi di identità in Experience Platform, uno spazio dei nomi di identità è composto da due elementi: un **tipo** (a volte indicato come spazio dei nomi di identità) e un **valore**. Il tipo di identità fornisce contesto su come il campo identifica un record (ad esempio un indirizzo e-mail). Il valore rappresenta l&#39;identità specifica di un record per quel tipo, ad esempio `jdoe@example.com` per il tipo di identità `email`. I campi più comuni utilizzati come identità includono informazioni sull’account, ID dispositivo e ID cookie.
 
 >[!TIP]
 >
->Se non conosci lo spazio dei nomi delle identità per un particolare set di dati, puoi trovarlo nell’interfaccia utente di Platform. Nell&#39;area di lavoro **[!UICONTROL Set di dati]** selezionare il set di dati in questione dall&#39;elenco. Nella pagina dei dettagli del set di dati, passa il cursore sul nome dello schema del set di dati nella barra a destra. Lo spazio dei nomi dell’identità viene visualizzato insieme al nome e alla descrizione dello schema.
+>Se non conosci lo spazio dei nomi delle identità per un particolare set di dati, puoi trovarlo nell’interfaccia utente di Experience Platform. Nell&#39;area di lavoro **[!UICONTROL Set di dati]** selezionare il set di dati in questione dall&#39;elenco. Nella pagina dei dettagli del set di dati, passa il cursore sul nome dello schema del set di dati nella barra a destra. Lo spazio dei nomi dell’identità viene visualizzato insieme al nome e alla descrizione dello schema.
 >
 >![Dashboard dei set di dati con un set di dati selezionato e una finestra di dialogo schema aperta dal pannello dei dettagli del set di dati. L&#39;ID primario del set di dati è evidenziato.](../images/ui/record-delete/dataset-primary-identity.png)
 
@@ -140,7 +140,7 @@ Dopo aver aggiunto le identità alla richiesta, in **[!UICONTROL Impostazioni ri
 
 >[!IMPORTANT]
 > 
->Esistono limiti diversi per il numero totale di eliminazioni di record di identità univoci che possono essere inviate ogni mese. Questi limiti sono basati sul contratto di licenza. Le organizzazioni che hanno acquistato tutte le edizioni di Adobe Real-time Customer Data Platform o Adobe Journey Optimizer possono inviare fino a 100.000 record di identità eliminati ogni mese. Le organizzazioni che hanno acquistato **Adobe Healthcare Shield** o **Adobe Privacy &amp; Security Shield** possono inviare fino a 600.000 record di identità eliminati ogni mese.<br>Una richiesta di eliminazione di un singolo record tramite l&#39;interfaccia utente consente di inviare contemporaneamente 10.000 ID. Il metodo [API per eliminare i record](../api/workorder.md#create) consente di inviare contemporaneamente 100.000 ID.<br>È consigliabile inviare il maggior numero possibile di ID per richiesta, fino al limite di ID. Quando intendi eliminare un volume elevato di ID, devi evitare di inviare un volume basso o un singolo ID per richiesta di cancellazione del record.
+>Esistono limiti diversi per il numero totale di eliminazioni di record di identità univoci che possono essere inviate ogni mese. Questi limiti sono basati sul contratto di licenza. Le organizzazioni che hanno acquistato tutte le edizioni di Adobe Real-Time Customer Data Platform o Adobe Journey Optimizer possono inviare fino a 100.000 record di identità eliminati ogni mese. Le organizzazioni che hanno acquistato **Adobe Healthcare Shield** o **Adobe Privacy &amp; Security Shield** possono inviare fino a 600.000 record di identità eliminati ogni mese.<br>Una richiesta di eliminazione di un singolo record tramite l&#39;interfaccia utente consente di inviare contemporaneamente 10.000 ID. Il metodo [API per eliminare i record](../api/workorder.md#create) consente di inviare contemporaneamente 100.000 ID.<br>È consigliabile inviare il maggior numero possibile di ID per richiesta, fino al limite di ID. Quando intendi eliminare un volume elevato di ID, devi evitare di inviare un volume basso o un singolo ID per richiesta di cancellazione del record.
 
 ![I campi [!UICONTROL Name] e [!UICONTROL Description] dell&#39;impostazione della richiesta sono evidenziati da [!UICONTROL Submit].](../images/ui/record-delete/submit.png)
 

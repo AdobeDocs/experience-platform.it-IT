@@ -1,17 +1,17 @@
 ---
 keywords: rtcdp amministrazione cenni generali;amministrazione cenni generali
-title: Panoramica dell’amministrazione di Real-time Customer Data Platform
-description: Questo documento fornisce una panoramica delle funzionalità di amministrazione di Adobe Real-time Customer Data Platform, basate su Adobe Experience Platform.
+title: Panoramica dell’amministrazione di Real-Time Customer Data Platform
+description: Questo documento fornisce una panoramica delle funzionalità di amministrazione di Adobe Real-Time Customer Data Platform, basate su Adobe Experience Platform.
 feature: Access Control, Get Started, Sandboxes
 exl-id: c5bdeac6-345a-4ef1-bc5a-a993f565b9d6
-source-git-commit: a8c9543bb003a99dcd85712d202482511c0a5608
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '316'
 ht-degree: 0%
 
 ---
 
-# Panoramica sull’amministrazione di Real-time Customer Data Platform
+# Panoramica sull’amministrazione di Real-Time Customer Data Platform
 
 In questo documento viene fornita una panoramica delle funzionalità di amministrazione di [!DNL Adobe Real-Time Customer Data Platform], con tecnologia Adobe Experience Platform.
 
@@ -33,6 +33,6 @@ Per ulteriori informazioni sul controllo degli accessi, vedere la [panoramica su
 
 Adobe Experience Platform (e Real-Time CDP per estensione) è stato progettato per arricchire le applicazioni di esperienza digitale su scala globale. Le aziende spesso eseguono più applicazioni di esperienza digitale in parallelo e devono occuparsi di sviluppo, test e distribuzione di tali applicazioni, garantendo al contempo la conformità operativa.
 
-Per soddisfare questa esigenza, Adobe Experience Platform fornisce *sandbox*, che consentono di suddividere una singola istanza [!DNL Platform] in ambienti virtuali separati che possono essere utilizzati per sviluppare ed evolvere applicazioni di esperienza digitale. Puoi utilizzare la funzione di strumenti sandbox per migliorare la precisione della configurazione tra le sandbox ed esportare e importare facilmente le configurazioni sandbox tra di esse. Segui i passaggi forniti nella [guida dell&#39;interfaccia utente per gli strumenti della sandbox](../../sandboxes/ui/sandbox-tooling.md).
+Per soddisfare questa esigenza, Adobe Experience Platform fornisce *sandbox*, che consentono di suddividere una singola istanza [!DNL Experience Platform] in ambienti virtuali separati che possono essere utilizzati per sviluppare ed evolvere applicazioni di esperienza digitale. Puoi utilizzare la funzione di strumenti sandbox per migliorare la precisione della configurazione tra le sandbox ed esportare e importare facilmente le configurazioni sandbox tra di esse. Segui i passaggi forniti nella [guida dell&#39;interfaccia utente per gli strumenti della sandbox](../../sandboxes/ui/sandbox-tooling.md).
 
 Per ulteriori informazioni sulle sandbox, consulta la [panoramica sulle sandbox](../../sandboxes/home.md) nella documentazione di [!DNL Experience Platform].

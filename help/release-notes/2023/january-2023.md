@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform - Gennaio 2023
 description: Note sulla versione di Adobe Experience Platform di gennaio 2023.
 exl-id: 461898ce-5683-4ab1-9167-ac25843a1ff8
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2224'
-ht-degree: 99%
+source-wordcount: '2227'
+ht-degree: 97%
 
 ---
 
@@ -163,7 +163,7 @@ XDM è una specifica open-source che fornisce strutture e definizioni comuni (sc
 
 {style="table-layout:auto"}
 
-Per ulteriori informazioni su XDM in Platform, consulta la [Panoramica sul sistema XDM](../../xdm/home.md).
+Per ulteriori informazioni su XDM in Experience Platform, consulta la [Panoramica del sistema XDM](../../xdm/home.md).
 
 ## Profilo cliente in tempo reale {#profile}
 
@@ -189,7 +189,7 @@ Per ulteriori informazioni sul Profilo cliente in tempo reale, inclusi tutorial 
 | ------- | ----------- |
 | Importazione in blocco dei valori in Segment Builder | Segment Builder ora supporta l’importazione di più valori, caricando un file CSV o TSV oppure inserendo manualmente valori separati da virgola. Ulteriori informazioni sono disponibili nella sezione [Guida a Segment Builder](../../segmentation/ui/segment-builder.md#rule-builder-canvas). |
 | Scadenza appartenenza al pubblico esterno | Per impostazione predefinita, le appartenenze a un pubblico esterno vengono mantenute per 30 giorni. Per conservarle più a lungo, utilizza il campo `validUntil` durante l’acquisizione dei dati sul pubblico. |
-| Scadenza dell’appartenenza a un segmento generata dalla piattaforma | Qualsiasi appartenenza a un segmento nello stato di `Exited` per più di 30 giorni, basato sul campo `lastQualificationTime` sarà soggetta a eliminazione. |
+| Scadenza iscrizione al segmento generato da Experience Platform | Qualsiasi appartenenza a un segmento nello stato di `Exited` per più di 30 giorni, basato sul campo `lastQualificationTime` sarà soggetta a eliminazione. |
 
 {style="table-layout:auto"}
 
@@ -197,7 +197,7 @@ Per ulteriori informazioni su [!DNL Segmentation Service], consulta la [Panorami
 
 ## Origini {#sources}
 
-Adobe Experience Platform può acquisire dati da origini esterne e consente di strutturarli, etichettarli e migliorarli utilizzando i servizi di Platform. Puoi acquisire dati da diverse origini, ad esempio da applicazioni Adobe, dall’archiviazione basata su cloud, da software di terze parti e dal sistema CRM.
+Adobe Experience Platform può acquisire dati da origini esterne e consente di strutturarli, etichettarli e migliorarli utilizzando i servizi di Experience Platform. Puoi acquisire dati da diverse origini, ad esempio da applicazioni Adobe, dall’archiviazione basata su cloud, da software di terze parti e dal sistema CRM.
 
 Experience Platform fornisce un’API RESTful e un’interfaccia utente interattiva per impostare facilmente le connessioni di origine per vari provider di dati. Queste connessioni di origine consentono di autenticarti e connetterti a sistemi di archiviazione esterni e servizi di gestione delle relazioni con i clienti, impostare i tempi per le esecuzioni dell’acquisizione e gestire la velocità effettiva di acquisizione dei dati.
 

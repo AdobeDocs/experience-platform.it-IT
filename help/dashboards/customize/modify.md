@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;interfaccia utente;dashboard;dashboard;profili;segmenti;destinazioni;utilizzo licenze;user interface;UI;dashboards;dashboard;profiles;segments;destinations
-title: Modificare le dashboard di Platform nell’interfaccia utente
+keywords: Experience Platform;interfaccia utente;dashboard;dashboard;profili;segmenti;destinazioni;utilizzo licenze;;user interface;UI;dashboards;dashboard;profiles;segments;destinations
+title: Modificare le dashboard di Experience Platform nell’interfaccia utente
 description: Questa guida fornisce istruzioni dettagliate per personalizzare la modalità di visualizzazione dei dati Adobe Experience Platform dell’organizzazione nei dashboard.
 exl-id: 75e4aea7-b521-434d-9cd5-32a00d00550d
-source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '498'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ Nell’interfaccia utente di Adobe Experience Platform puoi visualizzare e inter
 >
 >Tutti gli aggiornamenti apportati alle dashboard sono per organizzazione e per sandbox.
 
-Questa guida fornisce istruzioni dettagliate per personalizzare la modalità di visualizzazione dei dati del dashboard nelle dashboard [!UICONTROL Profili], [!UICONTROL Segmenti] e [!UICONTROL Destinazioni] nell&#39;interfaccia utente di Platform.
+Questa guida fornisce istruzioni dettagliate per personalizzare la modalità di visualizzazione dei dati del dashboard nelle dashboard [!UICONTROL Profili], [!UICONTROL Segmenti] e [!UICONTROL Destinazioni] nell&#39;interfaccia utente di Experience Platform.
 
 ## Introduzione
 

@@ -1,11 +1,11 @@
 ---
 keywords: crm;CRM;crm destinazioni;salesforce crm;salesforce crm destinazione
-title: Connessione CRM Salesforce
-description: La destinazione di gestione delle relazioni con i clienti di Salesforce ti consente di esportare i dati del tuo account e di attivarli all’interno di Salesforce CRM per le tue esigenze aziendali.
+title: Connessione Salesforce CRM
+description: La destinazione di Salesforce CRM ti consente di esportare i dati del tuo account e di attivarli in Salesforce CRM per le tue esigenze aziendali.
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
-source-git-commit: d9ff92138a5de774f011dd9b2e5f1cdc3371bacf
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2821'
+source-wordcount: '2845'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ Questa [!DNL Adobe Experience Platform] [destinazione](/help/destinations/home.m
 
 Quando [attivi segmenti](#activate), puoi selezionare lead o contatti e aggiornare attributi e dati sul pubblico in [!DNL Salesforce CRM].
 
-[!DNL Salesforce CRM] utilizza OAuth 2 con concessione password come meccanismo di autenticazione per comunicare con l&#39;API REST Salesforce. Le istruzioni per l&#39;autenticazione nell&#39;istanza [!DNL Salesforce CRM] sono riportate di seguito, nella sezione [Autentica nella destinazione](#authenticate).
+[!DNL Salesforce CRM] utilizza OAuth 2 con concessione password come meccanismo di autenticazione per comunicare con l&#39;API REST di Salesforce. Le istruzioni per l&#39;autenticazione nell&#39;istanza [!DNL Salesforce CRM] sono riportate di seguito, nella sezione [Autentica nella destinazione](#authenticate).
 
 ## Casi d’uso {#use-cases}
 
@@ -33,11 +33,11 @@ In qualità di addetto al marketing, puoi fornire esperienze personalizzate ai t
 
 ### Prerequisiti in Experience Platform {#prerequisites-in-experience-platform}
 
-Prima di attivare i dati nella destinazione di gestione delle relazioni con i clienti di Salesforce, è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) e [segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) creati in [!DNL Experience Platform].
+Prima di attivare i dati nella destinazione di Salesforce CRM, è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) e [segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) creati in [!DNL Experience Platform].
 
 ### Prerequisiti in [!DNL Salesforce CRM] {#prerequisites-destination}
 
-Per esportare i dati da Platform al tuo account Salesforce, tieni presente i seguenti prerequisiti in [!DNL Salesforce CRM]:
+Per esportare i dati da Experience Platform al tuo account Salesforce, tieni presente i seguenti prerequisiti in [!DNL Salesforce CRM]:
 
 #### Devi avere un account [!DNL Salesforce] {#prerequisites-account}
 
@@ -66,36 +66,36 @@ Infine, assicurati che la sovvenzione `password` sia abilitata nel tuo account [
 
 >[!IMPORTANT]
 >
->Se l&#39;amministratore dell&#39;account [!DNL Salesforce] ha limitato l&#39;accesso agli intervalli IP attendibili, è necessario contattarli per inserire nell&#39;elenco Consentiti [IP Experienci Platform](/help/destinations/catalog/streaming/ip-address-allow-list.md). Se hai bisogno di ulteriori indicazioni, consulta la documentazione [!DNL Salesforce] [Limita l&#39;accesso agli intervalli IP attendibili per un&#39;app connessa](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&amp;type=5).
+>Se l&#39;amministratore dell&#39;account [!DNL Salesforce] ha limitato l&#39;accesso agli intervalli IP attendibili, è necessario contattarli per inserire nell&#39;elenco Consentiti [gli IP di Experience Platform](/help/destinations/catalog/streaming/ip-address-allow-list.md). Se hai bisogno di ulteriori indicazioni, consulta la documentazione [!DNL Salesforce] [Limita l&#39;accesso agli intervalli IP attendibili per un&#39;app connessa](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&amp;type=5).
 
 #### Crea campi personalizzati in [!DNL Salesforce] {#prerequisites-custom-field}
 
 Quando si attivano i tipi di pubblico nella destinazione [!DNL Salesforce CRM], è necessario immettere un valore nel campo **[!UICONTROL ID mappatura]** per ogni pubblico attivato, nel passaggio **[Pianificazione pubblico](#schedule-segment-export-example)**.
 
-[!DNL Salesforce CRM] richiede questo valore per leggere e interpretare correttamente i tipi di pubblico provenienti da Experience Platform e per aggiornare il loro stato di pubblico entro [!DNL Salesforce]. Se hai bisogno di indicazioni sugli stati del pubblico, consulta la documentazione dell&#39;Experience Platform per il gruppo di campi [Dettagli appartenenza pubblico](/help/xdm/field-groups/profile/segmentation.md).
+[!DNL Salesforce CRM] richiede questo valore per leggere e interpretare correttamente i tipi di pubblico provenienti da Experience Platform e per aggiornare il loro stato di pubblico entro [!DNL Salesforce]. Se hai bisogno di indicazioni sugli stati del pubblico, consulta la documentazione di Experience Platform per il gruppo di campi dello schema [Dettagli sull&#39;iscrizione al pubblico](/help/xdm/field-groups/profile/segmentation.md).
 
-Per ogni pubblico che si attiva da Platform a [!DNL Salesforce CRM], è necessario creare un campo personalizzato di tipo `Text Area (Long)` entro [!DNL Salesforce]. Puoi definire la lunghezza del carattere di campo di qualsiasi dimensione compresa tra 256 e 131.072 caratteri in base alle tue esigenze aziendali. Per ulteriori informazioni sui tipi di campi personalizzati, vedere la pagina della documentazione [!DNL Salesforce] [Tipi di campi personalizzati](https://help.salesforce.com/s/articleView?id=sf.custom_field_types.htm&amp;type=5). Consulta anche la documentazione di [!DNL Salesforce] per [creare campi personalizzati](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&amp;type=5&amp;language=en_US) in caso di assistenza nella creazione dei campi.
+Per ogni pubblico che si attiva da Experience Platform a [!DNL Salesforce CRM], è necessario creare un campo personalizzato di tipo `Text Area (Long)` entro [!DNL Salesforce]. Puoi definire la lunghezza del carattere di campo di qualsiasi dimensione compresa tra 256 e 131.072 caratteri in base alle tue esigenze aziendali. Per ulteriori informazioni sui tipi di campi personalizzati, vedere la pagina della documentazione [!DNL Salesforce] [Tipi di campi personalizzati](https://help.salesforce.com/s/articleView?id=sf.custom_field_types.htm&amp;type=5). Consulta anche la documentazione di [!DNL Salesforce] per [creare campi personalizzati](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&amp;type=5&amp;language=en_US) in caso di assistenza nella creazione dei campi.
 
 >[!IMPORTANT]
 >
 >Non includere spazi nel nome del campo. Utilizzare invece il carattere di sottolineatura `(_)` come separatore.
->In [!DNL Salesforce] è necessario creare campi personalizzati con un **[!UICONTROL Nome campo]** che corrisponda esattamente al valore specificato in **[!UICONTROL ID mappatura]** per ogni segmento di Platform attivato. Ad esempio, la schermata seguente mostra un campo personalizzato denominato `crm_2_seg`. Quando attivi un pubblico in questa destinazione, aggiungi `crm_2_seg` come **[!UICONTROL ID mappatura]** per popolare i tipi di pubblico da Experience Platform in questo campo personalizzato.
+>In [!DNL Salesforce] è necessario creare campi personalizzati con un **[!UICONTROL Nome campo]** che corrisponda esattamente al valore specificato in **[!UICONTROL ID mappatura]** per ogni segmento Experience Platform attivato. Ad esempio, la schermata seguente mostra un campo personalizzato denominato `crm_2_seg`. Quando attivi un pubblico in questa destinazione, aggiungi `crm_2_seg` come **[!UICONTROL ID mappatura]** per popolare i tipi di pubblico da Experience Platform in questo campo personalizzato.
 
 Di seguito è riportato un esempio di creazione di campi personalizzati in [!DNL Salesforce], *Passaggio 1 - Seleziona il tipo di dati*:
-![Schermata dell&#39;interfaccia utente di Salesforce che mostra la creazione di campi personalizzati, passaggio 1 - Seleziona il tipo di dati.](../../assets/catalog/crm/salesforce/create-salesforce-custom-field-step-1.png)
+![Schermata dell&#39;interfaccia utente di Salesforce che mostra la creazione di campi personalizzati, passaggio 1 - Selezionare il tipo di dati.](../../assets/catalog/crm/salesforce/create-salesforce-custom-field-step-1.png)
 
 Di seguito è riportato un esempio di creazione di campi personalizzati in [!DNL Salesforce], *Passaggio 2 - Immettere i dettagli per il campo personalizzato*:
 ![Schermata dell&#39;interfaccia utente di Salesforce che mostra la creazione di campi personalizzati, passaggio 2 - Immetti i dettagli per il campo personalizzato.](../../assets/catalog/crm/salesforce/create-salesforce-custom-field-step-2.png)
 
 >[!TIP]
 >
->* Per distinguere tra i campi personalizzati utilizzati per i tipi di pubblico di Platform e altri campi personalizzati all&#39;interno di [!DNL Salesforce], è possibile includere un prefisso o un suffisso riconoscibile durante la creazione del campo personalizzato. Ad esempio, invece di `test_segment`, utilizzare `Adobe_test_segment` o `test_segment_Adobe`
->* Se in [!DNL Salesforce] sono già stati creati altri campi personalizzati, è possibile utilizzare lo stesso nome del segmento Platform per identificare facilmente il pubblico in [!DNL Salesforce].
+>* Per distinguere tra i campi personalizzati utilizzati per i tipi di pubblico di Experience Platform e altri campi personalizzati all&#39;interno di [!DNL Salesforce], è possibile includere un prefisso o un suffisso riconoscibile durante la creazione del campo personalizzato. Ad esempio, invece di `test_segment`, utilizzare `Adobe_test_segment` o `test_segment_Adobe`
+>* Se in [!DNL Salesforce] sono già stati creati altri campi personalizzati, è possibile utilizzare lo stesso nome del segmento Experience Platform per identificare facilmente il pubblico in [!DNL Salesforce].
 
 >[!NOTE]
 >
 >* Gli oggetti in Salesforce sono limitati a 25 campi esterni. Vedere [Attributi di campo personalizzati](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&amp;type=5).
->* Questa restrizione implica che è possibile avere solo un massimo di 25 iscrizioni di pubblico Experience Platform attive in qualsiasi momento.
+>* Questa restrizione implica che puoi avere solo un massimo di 25 iscrizioni di pubblico Experience Platform attive in qualsiasi momento.
 >* Se hai raggiunto questo limite in Salesforce, prima di poter utilizzare un nuovo **[!UICONTROL ID mappatura]** devi rimuovere da Salesforce gli attributi personalizzati utilizzati per memorizzare lo stato del pubblico rispetto ai tipi di pubblico precedenti in Experience Platform.
 
 #### Raccogli [!DNL Salesforce CRM] credenziali {#gather-credentials}
@@ -115,7 +115,7 @@ Annotare gli elementi riportati di seguito prima di eseguire l&#39;autenticazion
 
 [!DNL Salesforce] bilancia i carichi delle transazioni imponendo limiti di richiesta, frequenza e timeout. Per ulteriori informazioni, consulta [Limiti di richieste e allocazioni API](https://developer.salesforce.com/docs/atlas.en-us.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_platform_api.htm).
 
-Se l&#39;amministratore dell&#39;account [!DNL Salesforce] ha applicato restrizioni IP, sarà necessario aggiungere [indirizzi IP Experienci Platform](/help/destinations/catalog/streaming/ip-address-allow-list.md) agli intervalli IP attendibili degli account [!DNL Salesforce]. Se hai bisogno di ulteriori indicazioni, consulta la documentazione [!DNL Salesforce] [Limita l&#39;accesso agli intervalli IP attendibili per un&#39;app connessa](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&amp;type=5).
+Se l&#39;amministratore dell&#39;account [!DNL Salesforce] ha applicato restrizioni IP, sarà necessario aggiungere [indirizzi IP Experience Platform](/help/destinations/catalog/streaming/ip-address-allow-list.md) agli intervalli IP attendibili degli account [!DNL Salesforce]. Se hai bisogno di ulteriori indicazioni, consulta la documentazione [!DNL Salesforce] [Limita l&#39;accesso agli intervalli IP attendibili per un&#39;app connessa](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&amp;type=5).
 
 >[!IMPORTANT]
 >
@@ -135,7 +135,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 | Elemento | Tipo | Note |
 |---------|----------|---------|
-| Tipo di esportazione | **[!UICONTROL Basato su profilo]** | <ul><li>Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati *(ad esempio: indirizzo e-mail, numero di telefono, cognome)*, in base al mapping dei campi.</li><li> Ogni stato del pubblico in [!DNL Salesforce CRM] viene aggiornato con lo stato del pubblico corrispondente da Platform, in base al valore **[!UICONTROL ID mappatura]** fornito durante il passaggio [pianificazione del pubblico](#schedule-segment-export-example).</li></ul> |
+| Tipo di esportazione | **[!UICONTROL Basato su profilo]** | <ul><li>Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati *(ad esempio: indirizzo e-mail, numero di telefono, cognome)*, in base al mapping dei campi.</li><li> Ogni stato del pubblico in [!DNL Salesforce CRM] viene aggiornato con lo stato del pubblico corrispondente da Experience Platform, in base al valore **[!UICONTROL ID mappatura]** fornito durante il passaggio [pianificazione del pubblico](#schedule-segment-export-example).</li></ul> |
 | Frequenza di esportazione | **[!UICONTROL Streaming]** | <ul><li>Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni sulle [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
@@ -162,7 +162,7 @@ Per eseguire l&#39;autenticazione nella destinazione, compilare i campi obbligat
 | **[!UICONTROL ID client]** | L&#39;app `Consumer Key` connessa a [!DNL Salesforce]. |
 | **[!UICONTROL Segreto client]** | L&#39;app `Consumer Secret` connessa a [!DNL Salesforce]. |
 
-![Schermata dell&#39;interfaccia utente di Platform che mostra come eseguire l&#39;autenticazione.](../../assets/catalog/crm/salesforce/authenticate-destination.png)
+![Schermata dell&#39;interfaccia utente di Experience Platform che mostra come eseguire l&#39;autenticazione.](../../assets/catalog/crm/salesforce/authenticate-destination.png)
 
 Se i dettagli forniti sono validi, nell&#39;interfaccia utente viene visualizzato lo stato **[!UICONTROL Connesso]** con un segno di spunta verde. Sarà quindi possibile procedere al passaggio successivo.
 
@@ -175,7 +175,7 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
    * Selezionare **[!UICONTROL Contatto]** se le identità che si desidera esportare o aggiornare sono di tipo *Contatto*.
    * Selezionare **[!UICONTROL Lead]** se le identità che si desidera esportare o aggiornare sono di tipo *Lead*.
 
-![Schermata dell&#39;interfaccia utente di Platform che mostra i dettagli della destinazione.](../../assets/catalog/crm/salesforce/destination-details.png)
+![Schermata dell&#39;interfaccia utente di Experience Platform con i dettagli della destinazione.](../../assets/catalog/crm/salesforce/destination-details.png)
 
 ### Abilita avvisi {#enable-alerts}
 
@@ -194,7 +194,7 @@ Leggi [Attivare profili e tipi di pubblico nelle destinazioni di esportazione de
 
 ### Considerazioni sulla mappatura ed esempio {#mapping-considerations-example}
 
-Per inviare correttamente i dati sul pubblico da Adobe Experience Platform alla destinazione [!DNL Salesforce CRM], è necessario eseguire il passaggio di mappatura dei campi. La mappatura consiste nella creazione di un collegamento tra i campi dello schema Experience Data Model (XDM) nell’account Platform e i corrispondenti equivalenti dalla destinazione.
+Per inviare correttamente i dati sul pubblico da Adobe Experience Platform alla destinazione [!DNL Salesforce CRM], è necessario eseguire il passaggio di mappatura dei campi. La mappatura consiste nella creazione di un collegamento tra i campi dello schema Experience Data Model (XDM) nell’account Experience Platform e i corrispondenti equivalenti dalla destinazione.
 
 Gli attributi specificati nel campo **[!UICONTROL Target]** devono essere denominati esattamente come descritto nella tabella dei mapping degli attributi, in quanto tali attributi formeranno il corpo della richiesta.
 
@@ -203,7 +203,7 @@ Gli attributi specificati nel campo **[!UICONTROL Source]** non seguono alcuna r
 Per mappare correttamente i campi XDM ai campi di destinazione [!DNL (API) Salesforce CRM], effettua le seguenti operazioni:
 
 1. Nel passaggio **[!UICONTROL Mapping]**, seleziona **[!UICONTROL Aggiungi nuovo mapping]**, verrà visualizzata una nuova riga di mapping sullo schermo.
-   ![Esempio di schermata dell&#39;interfaccia utente di Platform per aggiungere una nuova mappatura.](../../assets/catalog/crm/salesforce/add-new-mapping.png)
+   ![Esempio di schermata dell&#39;interfaccia utente di Experience Platform per aggiungere una nuova mappatura.](../../assets/catalog/crm/salesforce/add-new-mapping.png)
 1. Nella finestra **[!UICONTROL Seleziona campo di origine]**, scegli la categoria **[!UICONTROL Seleziona attributi]** e seleziona l&#39;attributo XDM oppure scegli lo spazio dei nomi **[!UICONTROL Seleziona identità]** e seleziona un&#39;identità.
 1. Nella finestra **[!UICONTROL Seleziona campo di destinazione]**, scegli **[!UICONTROL Seleziona spazio dei nomi identità]** e seleziona un&#39;identità oppure scegli **[!UICONTROL Seleziona attributi personalizzati]** categoria e seleziona un attributo o definiscine uno utilizzando il campo **[!UICONTROL Nome attributo]**, in base alle esigenze. Per informazioni sugli attributi supportati, consulta la [[!DNL Salesforce CRM] documentazione](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&amp;type=5).
    * Ripeti questi passaggi per aggiungere le seguenti mappature tra lo schema del profilo XDM e [!DNL (API) Salesforce CRM]:
@@ -222,11 +222,11 @@ Per mappare correttamente i campi XDM ai campi di destinazione [!DNL (API) Sales
      | `xdm: personalEmail.address` | `Attribute: Email` | L’indirizzo e-mail del contatto. |
 
    * Di seguito è riportato un esempio che utilizza queste mappature:
-     ![Esempio di schermata dell&#39;interfaccia utente di Platform che mostra le mappature di Target.](../../assets/catalog/crm/salesforce/mappings-contacts.png)
+     ![Esempio di schermata dell&#39;interfaccia utente di Experience Platform che mostra le mappature di Target.](../../assets/catalog/crm/salesforce/mappings-contacts.png)
 
    **Utilizzo dei lead**
 
-   * Se lavori con *Lead* all&#39;interno del segmento, fai riferimento al Riferimento agli oggetti in Salesforce per [Lead](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_lead.htm) per definire le mappature per i campi da aggiornare.
+   * Se lavori con *Lead* all&#39;interno del segmento, fai riferimento al Riferimento agli oggetti in Salesforce per [Lead](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_lead.htm) per definire i mapping per i campi da aggiornare.
    * Puoi identificare i campi obbligatori cercando la parola *Obbligatorio*, indicata nelle descrizioni dei campi nel collegamento precedente.
    * A seconda dei campi che desideri esportare o aggiornare, aggiungi mappature tra lo schema del profilo XDM e [!DNL (API) Salesforce CRM]:
 
@@ -238,23 +238,23 @@ Per mappare correttamente i campi XDM ai campi di destinazione [!DNL (API) Sales
      | `xdm: personalEmail.address` | `Attribute: Email` | Indirizzo e-mail del lead. |
 
    * Di seguito è riportato un esempio che utilizza queste mappature:
-     ![Esempio di schermata dell&#39;interfaccia utente di Platform che mostra le mappature di Target.](../../assets/catalog/crm/salesforce/mappings-leads.png)
+     ![Esempio di schermata dell&#39;interfaccia utente di Experience Platform che mostra le mappature di Target.](../../assets/catalog/crm/salesforce/mappings-leads.png)
 
 Dopo aver fornito le mappature per la connessione di destinazione, seleziona **[!UICONTROL Avanti]**.
 
 ### Esempio di esportazione e pianificazione di un pubblico {#schedule-segment-export-example}
 
-Durante l&#39;esecuzione del passaggio [Pianifica esportazione pubblico](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) è necessario mappare manualmente i tipi di pubblico attivati da Platform al relativo campo personalizzato in [!DNL Salesforce].
+Durante l&#39;esecuzione del passaggio [Pianifica esportazione pubblico](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) è necessario mappare manualmente i tipi di pubblico attivati da Experience Platform al campo personalizzato corrispondente in [!DNL Salesforce].
 
 A tale scopo, selezionare ogni segmento, quindi immettere il nome del campo personalizzato da [!DNL Salesforce] nel campo [!DNL Salesforce CRM] **[!UICONTROL ID mappatura]**. Consulta la sezione [Creare campi personalizzati all&#39;interno di [!DNL Salesforce]](#prerequisites-custom-field) per indicazioni e best practice sulla creazione di campi personalizzati in [!DNL Salesforce].
 
-Se ad esempio il campo personalizzato [!DNL Salesforce] è `crm_2_seg`, specificare questo valore in [!DNL Salesforce CRM] **[!UICONTROL ID mappatura]** per popolare i tipi di pubblico da Experience Platform in questo campo personalizzato.
+Ad esempio, se il campo personalizzato [!DNL Salesforce] è `crm_2_seg`, specifica questo valore in [!DNL Salesforce CRM] **[!UICONTROL ID mappatura]** per popolare il pubblico da Experience Platform in questo campo personalizzato.
 
 Di seguito è riportato un esempio di campo personalizzato da [!DNL Salesforce]:
 Schermata dell&#39;interfaccia utente ![[!DNL Salesforce] che mostra il campo personalizzato.](../../assets/catalog/crm/salesforce/salesforce-custom-field.png)
 
 Di seguito è riportato un esempio che indica la posizione dell&#39;[!DNL Salesforce CRM] **[!UICONTROL ID mappatura]**:
-![Esempio di schermata dell&#39;interfaccia utente di Platform che mostra l&#39;esportazione pianificata del pubblico.](../../assets/catalog/crm/salesforce/schedule-segment-export.png)
+![Esempio di schermata dell&#39;interfaccia utente di Experience Platform che mostra l&#39;esportazione pianificata del pubblico.](../../assets/catalog/crm/salesforce/schedule-segment-export.png)
 
 Come mostrato sopra il [!DNL Salesforce] **[!UICONTROL Nome campo]** corrisponde esattamente al valore specificato in [!DNL Salesforce CRM] **[!UICONTROL ID mappatura]**.
 
@@ -265,41 +265,41 @@ A seconda del caso d&#39;uso, tutti i tipi di pubblico attivati possono essere m
 | crm_1_seg | `crm_1_seg` | `crm_1_seg` |
 | crm_2_seg | `crm_2_seg` | `crm_2_seg` |
 
-Ripeti questa sezione per ogni segmento di Platform attivato.
+Ripeti questa sezione per ogni segmento di Experience Platform attivato.
 
 ## Convalidare l’esportazione dei dati {#exported-data}
 
 Per verificare di aver impostato correttamente la destinazione, segui i passaggi seguenti:
 
 1. Seleziona **[!UICONTROL Destinazioni]** > **[!UICONTROL Sfoglia]** per passare all&#39;elenco delle destinazioni.
-   ![Schermata dell&#39;interfaccia utente di Platform che mostra le destinazioni di navigazione.](../../assets/catalog/crm/salesforce/browse-destinations.png)
+   ![Schermata dell&#39;interfaccia utente di Experience Platform che mostra le destinazioni di navigazione.](../../assets/catalog/crm/salesforce/browse-destinations.png)
 
 1. Selezionare la destinazione e verificare che lo stato sia **[!UICONTROL abilitato]**.
-   ![Schermata dell&#39;interfaccia utente di Platform che mostra l&#39;esecuzione del flusso di dati delle destinazioni.](../../assets/catalog/crm/salesforce/destination-dataflow-run.png)
+   ![Schermata dell&#39;interfaccia utente di Experience Platform che mostra le destinazioni dell&#39;esecuzione del flusso di dati.](../../assets/catalog/crm/salesforce/destination-dataflow-run.png)
 
 1. Passa alla scheda **[!UICONTROL Dati attivazione]**, quindi seleziona un nome per il pubblico.
-   ![Esempio di schermata dell&#39;interfaccia utente di Platform che mostra i dati di attivazione delle destinazioni.](../../assets/catalog/crm/salesforce/destinations-activation-data.png)
+   ![Esempio di schermata dell&#39;interfaccia utente di Experience Platform che mostra i dati di attivazione delle destinazioni.](../../assets/catalog/crm/salesforce/destinations-activation-data.png)
 
 1. Controlla il riepilogo del pubblico e assicurati che il conteggio dei profili corrisponda al conteggio creato all’interno del segmento.
-   ![Esempio di schermata dell&#39;interfaccia utente di Platform che mostra il segmento.](../../assets/catalog/crm/salesforce/segment.png)
+   ![Esempio di schermata dell&#39;interfaccia utente di Experience Platform che mostra il segmento.](../../assets/catalog/crm/salesforce/segment.png)
 
 1. Infine, accedi al sito web Salesforce e verifica se i profili del pubblico sono stati aggiunti o aggiornati.
 
    **Utilizzo dei contatti**
 
-   * Se hai selezionato *Contatti* nel segmento Platform, passa alla pagina **[!DNL Apps]** > **[!DNL Contacts]**.
-     ![Schermata del sistema CRM di Salesforce che mostra la pagina Contatti con i profili del segmento.](../../assets/catalog/crm/salesforce/contacts.png)
+   * Se hai selezionato *Contatti* all&#39;interno del segmento Experience Platform, passa alla pagina **[!DNL Apps]** > **[!DNL Contacts]**.
+     ![Schermata di Salesforce CRM che mostra la pagina dei contatti con i profili del segmento.](../../assets/catalog/crm/salesforce/contacts.png)
 
-   * Seleziona un *Contatto* e verifica se i campi sono aggiornati. È possibile vedere che ogni stato del pubblico in [!DNL Salesforce CRM] è stato aggiornato con lo stato del pubblico corrispondente da Platform, in base al valore **[!UICONTROL ID mappatura]** fornito durante la [pianificazione del pubblico](#schedule-segment-export-example).
-     ![Schermata del sistema CRM di Salesforce che mostra la pagina Dettagli contatto con gli stati aggiornati del pubblico.](../../assets/catalog/crm/salesforce/contact-info.png)
+   * Seleziona un *Contatto* e verifica se i campi sono aggiornati. È possibile vedere che ogni stato del pubblico in [!DNL Salesforce CRM] è stato aggiornato con lo stato del pubblico corrispondente da Experience Platform, in base al valore **[!UICONTROL ID mappatura]** fornito durante la [pianificazione del pubblico](#schedule-segment-export-example).
+     ![Schermata di Salesforce CRM che mostra la pagina Dettagli contatto con gli stati aggiornati del pubblico.](../../assets/catalog/crm/salesforce/contact-info.png)
 
    **Utilizzo dei lead**
 
-   * Se hai selezionato *Lead* nel segmento Platform, passa alla pagina **[!DNL Apps]** > **[!DNL Leads]**.
-     ![Schermata del sistema CRM di Salesforce che mostra la pagina Lead con i profili del segmento.](../../assets/catalog/crm/salesforce/leads.png)
+   * Se hai selezionato *Lead* nel segmento Experience Platform, passa alla pagina **[!DNL Apps]** > **[!DNL Leads]**.
+     ![Schermata di Salesforce CRM che mostra la pagina Lead con i profili del segmento.](../../assets/catalog/crm/salesforce/leads.png)
 
-   * Seleziona un *lead* e controlla se i campi sono aggiornati. È possibile vedere che ogni stato del pubblico in [!DNL Salesforce CRM] è stato aggiornato con lo stato del pubblico corrispondente da Platform, in base al valore **[!UICONTROL ID mappatura]** fornito durante la [pianificazione del pubblico](#schedule-segment-export-example).
-     ![Schermata del sistema CRM di Salesforce che mostra la pagina Dettagli lead con stati di pubblico aggiornati.](../../assets/catalog/crm/salesforce/lead-info.png)
+   * Seleziona un *lead* e controlla se i campi sono aggiornati. È possibile vedere che ogni stato del pubblico in [!DNL Salesforce CRM] è stato aggiornato con lo stato del pubblico corrispondente da Experience Platform, in base al valore **[!UICONTROL ID mappatura]** fornito durante la [pianificazione del pubblico](#schedule-segment-export-example).
+     ![Schermata di Salesforce CRM che mostra la pagina Dettagli lead con stati di pubblico aggiornati.](../../assets/catalog/crm/salesforce/lead-info.png)
 
 ## Utilizzo dei dati e governance {#data-usage-governance}
 
@@ -310,16 +310,16 @@ Tutte le destinazioni [!DNL Adobe Experience Platform] sono conformi ai criteri 
 ### Sono stati riscontrati errori sconosciuti durante la trasmissione degli eventi alla destinazione {#unknown-errors}
 
 * Durante il controllo di un&#39;esecuzione del flusso di dati, è possibile che venga visualizzato il seguente messaggio di errore: `Unknown errors encountered while pushing events to the destination. Please contact the administrator and try again.`
-  ![Schermata dell&#39;interfaccia utente di Platform che mostra l&#39;errore.](../../assets/catalog/crm/salesforce/error.png)
+  ![Schermata dell&#39;interfaccia utente di Experience Platform che mostra l&#39;errore.](../../assets/catalog/crm/salesforce/error.png)
 
    * Per correggere questo errore, verificare che l&#39;ID **[!UICONTROL Mapping]** fornito nel flusso di lavoro di attivazione alla destinazione [!DNL Salesforce CRM] corrisponda esattamente al valore del tipo di campo personalizzato creato in [!DNL Salesforce]. Consulta la sezione [Creare campi personalizzati all&#39;interno di [!DNL Salesforce]](#prerequisites-custom-field).
 
 * Quando si attiva un segmento, è possibile che venga visualizzato un messaggio di errore: `The client's IP address is unauthorized for this account. Allowlist the client's IP address...`
-   * Per risolvere l&#39;errore, contattare l&#39;amministratore dell&#39;account [!DNL Salesforce] per aggiungere [indirizzi IP Experienci Platform](/help/destinations/catalog/streaming/ip-address-allow-list.md) agli intervalli IP attendibili degli account [!DNL Salesforce]. Se hai bisogno di ulteriori indicazioni, consulta la documentazione [!DNL Salesforce] [Limita l&#39;accesso agli intervalli IP attendibili per un&#39;app connessa](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&amp;type=5).
+   * Per risolvere l&#39;errore, contattare l&#39;amministratore dell&#39;account [!DNL Salesforce] per aggiungere [indirizzi IP Experience Platform](/help/destinations/catalog/streaming/ip-address-allow-list.md) agli intervalli IP attendibili degli account [!DNL Salesforce]. Se hai bisogno di ulteriori indicazioni, consulta la documentazione [!DNL Salesforce] [Limita l&#39;accesso agli intervalli IP attendibili per un&#39;app connessa](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&amp;type=5).
 
 ## Risorse aggiuntive {#additional-resources}
 
-Ulteriori informazioni utili dal [portale per sviluppatori Salesforce](https://developer.salesforce.com/):
+Ulteriori informazioni utili dal [portale per sviluppatori di Salesforce](https://developer.salesforce.com/):
 * [Guida introduttiva](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart.htm)
 * [Crea un record](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_sobject_create.htm)
 * [Tipi di pubblico per consigli personalizzati](https://developer.salesforce.com/docs/atlas.en-us.236.0.chatterapi.meta/chatterapi/connect_resources_recommendation_audiences_list.htm)

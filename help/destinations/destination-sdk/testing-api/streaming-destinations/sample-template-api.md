@@ -2,9 +2,9 @@
 description: Scopri come utilizzare l’API di test di destinazione per generare un modello di trasformazione dei messaggi di test per la destinazione.
 title: Genera un esempio di modello di trasformazione dei messaggi
 exl-id: d18a06f7-0c3a-4b4d-a7d5-011690d00e2c
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '377'
 ht-degree: 2%
 
 ---
@@ -24,7 +24,7 @@ Prima di continuare, consulta la [guida introduttiva](../../getting-started.md) 
 
 ## Ottieni modello di esempio {#generate-sample-template}
 
-Per ottenere un modello di esempio, devi eseguire una richiesta di GET all&#39;endpoint `authoring/testing/template/sample/` e fornire l&#39;ID di destinazione della configurazione di destinazione in base alla quale stai creando il modello.
+Per ottenere un modello di esempio, devi eseguire una richiesta GET all&#39;endpoint `authoring/testing/template/sample/` e fornire l&#39;ID di destinazione della configurazione di destinazione in base alla quale stai creando il modello.
 
 >[!TIP]
 >
@@ -132,7 +132,7 @@ Se l&#39;ID di destinazione fornito corrisponde a un modello del server di desti
 
 ## Gestione degli errori API {#api-error-handling}
 
-Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](../../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
+Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](../../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Experience Platform.
 
 ## Passaggi successivi {#next-steps}
 

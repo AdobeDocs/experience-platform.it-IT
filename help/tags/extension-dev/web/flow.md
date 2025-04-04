@@ -2,10 +2,10 @@
 title: Flusso per estensioni web
 description: Scopri come i componenti di estensione web interagiscono tra loro in fase di runtime in Adobe Experience Platform.
 exl-id: 90a0c64c-d240-4e2c-876b-22f05d6f3f82
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 93%
+source-wordcount: '272'
+ht-degree: 89%
 
 ---
 
@@ -13,11 +13,11 @@ ht-degree: 93%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [document](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [document](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Ogni evento, condizione, azione e tipo di elemento dati nelle estensioni Web dispone di una vista mediante la quale gli utenti possono modificare le impostazioni e di un modulo libreria che agisce in base alle impostazioni definite dall&#39;utente.
 
-Come mostra il diagramma di alto livello riportato di seguito, la vista del tipo di evento dell’estensione verrà visualizzata all’interno di un iframe nell’applicazione integrata con Adobe Experience Platform. L’utente utilizza questa vista per modificare le impostazioni che vengono quindi salvate in Platform. Quando viene generata la libreria runtime di tag, vengono inclusi sia il modulo libreria dei tipi di evento dell’estensione sia le impostazioni definite dall’utente. In fase di runtime, Platform inserisce le impostazioni definite dall’utente nel modulo libreria.
+Come mostra il diagramma di alto livello riportato di seguito, la vista del tipo di evento dell’estensione verrà visualizzata all’interno di un iframe nell’applicazione integrata con Adobe Experience Platform. L’utente utilizza questa vista per modificare le impostazioni che vengono quindi salvate in Experience Platform. Quando viene generata la libreria runtime di tag, vengono inclusi sia il modulo libreria dei tipi di evento dell’estensione sia le impostazioni definite dall’utente. In fase di runtime, Experience Platform inserisce le impostazioni definite dall’utente nel modulo libreria.
 
 ![diagramma del flusso per le estensioni](../images/flow/web/extension-flow.png)
 

@@ -5,16 +5,16 @@ title: Creare una connessione Source Azure File Storage nell’interfaccia utent
 type: Tutorial
 description: Scopri come creare una connessione di origine Azure File Storage utilizzando l’interfaccia utente di Adobe Experience Platform.
 exl-id: 25d483b6-3975-4e80-9dbe-28b7b91cb063
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '463'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
 # Crea una connessione di origine [!DNL Azure File Storage] nell&#39;interfaccia utente
 
-I connettori Source in Adobe Experience Platform consentono di acquisire dati di origine esterna in base a una pianificazione. Questa esercitazione fornisce i passaggi per autenticare un connettore di origine [!DNL Azure File Storage] tramite l&#39;interfaccia utente [!DNL Platform].
+I connettori Source in Adobe Experience Platform consentono di acquisire dati di origine esterna in base a una pianificazione. Questa esercitazione fornisce i passaggi per autenticare un connettore di origine [!DNL Azure File Storage] tramite l&#39;interfaccia utente [!DNL Experience Platform].
 
 ## Introduzione
 
@@ -41,7 +41,7 @@ Per ulteriori informazioni su come iniziare, fare riferimento a [questo [!DNL Az
 
 ## Connetti il tuo account [!DNL Azure File Storage]
 
-Dopo aver raccolto le credenziali richieste, puoi seguire i passaggi seguenti per collegare l&#39;account [!DNL Azure File Storage] a [!DNL Platform].
+Dopo aver raccolto le credenziali richieste, puoi seguire i passaggi seguenti per collegare l&#39;account [!DNL Azure File Storage] a [!DNL Experience Platform].
 
 Accedi a [Adobe Experience Platform](https://platform.adobe.com), quindi seleziona **[!UICONTROL Origini]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro **[!UICONTROL Origini]**. Nella schermata **[!UICONTROL Catalogo]** sono visualizzate diverse origini per le quali è possibile creare un account con.
 
@@ -67,4 +67,4 @@ Per connettere un account esistente, seleziona l&#39;account [!DNL Azure File St
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai stabilito una connessione al tuo account [!DNL Azure File Storage]. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per portare i dati dall&#39;archiviazione cloud in [!DNL Platform]](../../dataflow/batch/cloud-storage.md).
+Seguendo questa esercitazione, hai stabilito una connessione al tuo account [!DNL Azure File Storage]. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per portare i dati dall&#39;archiviazione cloud in [!DNL Experience Platform]](../../dataflow/batch/cloud-storage.md).

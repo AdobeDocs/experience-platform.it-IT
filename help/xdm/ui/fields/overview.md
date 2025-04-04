@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Definire i campi XDM nell’interfaccia utente
 description: Scopri come definire i campi XDM nell’interfaccia utente di Experience Platform.
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: 0360d0eb9f4a01e12ce8619e8d2c5bac9301631f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1606'
+source-wordcount: '1607'
 ht-degree: 2%
 
 ---
@@ -102,7 +102,7 @@ Quando definisci un nuovo campo, nella barra a destra possono essere visualizzat
 
 ## Tipi di campo speciali {#special}
 
-La barra a destra fornisce diverse caselle di controllo per designare ruoli speciali per il campo selezionato. I casi d’uso per alcune di queste opzioni richiedono considerazioni importanti sulla strategia di modellazione dei dati e su come intendi utilizzare i servizi Platform a valle.
+La barra a destra fornisce diverse caselle di controllo per designare ruoli speciali per il campo selezionato. I casi d’uso per alcune di queste opzioni richiedono considerazioni importanti sulla strategia di modellazione dei dati e su come intendi utilizzare i servizi Experience Platform a valle.
 
 Per ulteriori informazioni su questi tipi speciali, consulta la seguente documentazione:
 

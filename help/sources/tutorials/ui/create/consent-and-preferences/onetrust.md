@@ -5,9 +5,9 @@ title: Creare una connessione Source OneTrust nell’interfaccia utente
 type: Tutorial
 description: Scopri come creare una connessione di origine OneTrust utilizzando l’interfaccia utente di Adobe Experience Platform.
 exl-id: 6af0604d-cbb6-4c8e-b017-3eb82ec6ee1c
-source-git-commit: 35095ec8c22106ba0a8f11e0a970ed7989a7f06c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '502'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 2%
 >
 >L&#39;origine [!DNL OneTrust Integration] supporta solo l&#39;acquisizione dei dati di consenso e preferenze e non dei cookie.
 
-Questo tutorial illustra i passaggi per la creazione di una connessione di origine [[!DNL OneTrust Integration]](https://my.onetrust.com/s/contactsupport?language=en_US) per acquisire in Adobe Experience Platform dati di consenso storici e pianificati tramite l&#39;interfaccia utente di Platform.
+Questo tutorial illustra i passaggi per la creazione di una connessione di origine [[!DNL OneTrust Integration]](https://my.onetrust.com/s/contactsupport?language=en_US) per acquisire in Adobe Experience Platform dati di consenso storici e pianificati tramite l&#39;interfaccia utente di Experience Platform.
 
 ## Prerequisiti
 
@@ -26,13 +26,13 @@ Questo tutorial illustra i passaggi per la creazione di una connessione di origi
 >
 >Il connettore di origine [!DNL OneTrust Integration] e la documentazione sono stati creati dal team [!DNL OneTrust Integration]. Per richieste di informazioni o richieste di aggiornamento, contatta direttamente il [[!DNL OneTrust] team](https://my.onetrust.com/s/contactsupport?language=en_US).
 
-Prima di poter connettere [!DNL OneTrust Integration] a Platform, è necessario recuperare il token di accesso. Per istruzioni dettagliate su come trovare il token di accesso, consulta la [[!DNL OneTrust Integration] guida OAuth 2](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token).
+Prima di poter connettere [!DNL OneTrust Integration] ad Experience Platform, devi recuperare il token di accesso. Per istruzioni dettagliate su come trovare il token di accesso, consulta la [[!DNL OneTrust Integration] guida OAuth 2](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token).
 
 Il token di accesso non viene aggiornato automaticamente dopo la scadenza perché i token di aggiornamento da sistema a sistema non sono supportati da [!DNL OneTrust]. Pertanto, è necessario assicurarsi che il token di accesso sia aggiornato nella connessione prima della scadenza. La durata massima configurabile per un token di accesso è di un anno. Per ulteriori informazioni sull&#39;aggiornamento del token di accesso, consulta il documento [[!DNL OneTrust] sulla gestione delle credenziali client OAuth 2.0](https://developer.onetrust.com/docs/documentation/ZG9jOjIyODk1MTUw-managing-o-auth-2-0-client-credentials).
 
 ### Raccogli le credenziali richieste
 
-Per connettere [!DNL OneTrust Integration] a Platform, è necessario fornire i valori per le credenziali di autenticazione seguenti:
+Per connettere [!DNL OneTrust Integration] ad Experience Platform, è necessario fornire i valori per le credenziali di autenticazione seguenti:
 
 | Credenziali | Descrizione | Esempio |
 | --- | --- | --- |
@@ -48,13 +48,13 @@ Per ulteriori informazioni su queste credenziali, consulta la [[!DNL OneTrust In
 >
 >Le specifiche API [!DNL OneTrust Integration] sono condivise con Adobe per l&#39;acquisizione dei dati.
 
-Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini] per un catalogo di origini disponibili in Experience Platform.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini] per un catalogo di origini disponibili in Experience Platform.
 
 Utilizza il menu *[!UICONTROL Categorie]* per filtrare le origini per categoria. In alternativa, immettere un nome di origine nella barra di ricerca per trovare un&#39;origine specifica dal catalogo.
 
 Vai alla categoria [!UICONTROL Consenso e preferenze] per la scheda di origine [!DNL OneTrust Integration]. Per iniziare, selezionare **[!UICONTROL Aggiungi dati]**.
 
-![Catalogo delle origini dell&#39;interfaccia utente Experience Platform.](../../../../images/tutorials/create/onetrust/catalog.png)
+![Catalogo delle origini dell&#39;interfaccia utente di Experience Platform.](../../../../images/tutorials/create/onetrust/catalog.png)
 
 Viene visualizzata la pagina **[!UICONTROL Connetti account di integrazione OneTrust]**. In questa pagina è possibile utilizzare nuove credenziali o credenziali esistenti.
 
@@ -72,4 +72,4 @@ Se stai creando un nuovo account, seleziona **[!UICONTROL Nuovo account]**, quin
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai stabilito una connessione al tuo account [!DNL OneTrust Integration]. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per inserire i dati sul consenso in Platform](../../dataflow/consent-and-preferences.md).
+Seguendo questa esercitazione, hai stabilito una connessione al tuo account [!DNL OneTrust Integration]. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per inserire i dati sul consenso in Experience Platform](../../dataflow/consent-and-preferences.md).

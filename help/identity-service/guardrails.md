@@ -3,9 +3,9 @@ keywords: Experience Platform;identità;servizio identità;risoluzione dei probl
 title: Guardrail per il servizio Identity
 description: Questo documento fornisce informazioni sui limiti di utilizzo e di tariffa per i dati del servizio Identity, utili per ottimizzare l’utilizzo del grafico delle identità.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1585'
+source-wordcount: '1586'
 ht-degree: 1%
 
 ---
@@ -20,9 +20,9 @@ In questo documento vengono fornite informazioni sui limiti di utilizzo e di fre
 
 ## Introduzione
 
-I seguenti servizi di Experience Platform sono coinvolti nella modellazione dei dati di identità:
+I seguenti servizi Experience Platform sono coinvolti nella modellazione dei dati di identità:
 
-* [Identità](home.md): identità Bridge da diverse origini dati acquisite in Platform.
+* [Identità](home.md): identità Bridge da diverse origini dati acquisite in Experience Platform.
 * [[!DNL Real-Time Customer Profile]](../profile/home.md): creare profili consumer unificati utilizzando dati provenienti da più origini.
 
 ## Limiti del modello dati
@@ -60,7 +60,7 @@ A partire dal 31 marzo 2023, il servizio Identity bloccherà l’acquisizione di
 
 ## Guardrail prestazioni {#performance-guardrails}
 
-Il servizio Identity monitora continuamente i dati in arrivo per garantire prestazioni e affidabilità elevate su larga scala. Tuttavia, un afflusso di dati di eventi di esperienza in un breve periodo può portare a un deterioramento delle prestazioni e alla latenza. L’Adobe non è responsabile di tale degrado delle prestazioni.
+Il servizio Identity monitora continuamente i dati in arrivo per garantire prestazioni e affidabilità elevate su larga scala. Tuttavia, un afflusso di dati di eventi di esperienza in un breve periodo può portare a un deterioramento delle prestazioni e alla latenza. Adobe non è responsabile di tale degrado delle prestazioni.
 
 ## Informazioni sulla logica di eliminazione quando viene aggiornato un grafico delle identità alla capacità {#deletion-logic}
 
@@ -90,12 +90,12 @@ Le sezioni seguenti descrivono le implicazioni della logica di eliminazione per 
 
 #### Identity Service: modifiche al tipo di identità dello spazio dei nomi personalizzato
 
-Contatta il team del tuo account di Adobe per richiedere una modifica nel tipo di identità se la sandbox di produzione contiene:
+Contatta il team del tuo account Adobe per richiedere una modifica nel tipo di identità se la sandbox di produzione contiene:
 
 * Uno spazio dei nomi personalizzato in cui gli identificatori della persona (come CRMID) sono configurati come tipo di identità cookie/dispositivo.
 * Uno spazio dei nomi personalizzato in cui gli identificatori cookie/dispositivo sono configurati come tipo di identità per più dispositivi.
 
-Quando questa funzione sarà disponibile, i grafici che superano il limite di 50 identità verranno ridotti a un massimo di 50 identità. Per Real-Time CDP B2C Edition, ciò poteva comportare un aumento minimo del numero di profili idonei per un pubblico, in quanto questi profili venivano precedentemente ignorati da Segmentation and Activation.
+Quando questa funzione sarà disponibile, i grafici che superano il limite di 50 identità verranno ridotti a un massimo di 50 identità. Per Real-Time CDP B2C Edition, ciò poteva comportare un aumento minimo del numero di profili idonei per un pubblico, in quanto in precedenza questi profili venivano ignorati da Segmentation and Activation.
 
 #### Real-Time Customer Profile: impatto su tipi di pubblico indirizzabili
 
@@ -196,10 +196,10 @@ Per ulteriori informazioni su [!DNL Identity Service], vedere la seguente docume
 * [Panoramica di [!DNL Identity Service]](home.md)
 * [Visualizzatore del grafico delle identità](features/identity-graph-viewer.md)
 
-Consulta la seguente documentazione per ulteriori informazioni su altri guardrail dei servizi Experience Platform, informazioni sulla latenza end-to-end e informazioni sulle licenze dai documenti di descrizione del prodotto Real-Time CDP:
+Consulta la seguente documentazione per ulteriori informazioni su altri guardrail dei servizi Experience Platform, sulla latenza end-to-end e sulle licenze dai documenti di descrizione del prodotto Real-Time CDP:
 
 * [Guardrail Real-Time CDP](/help/rtcdp/guardrails/overview.md)
 * [Diagrammi di latenza end-to-end](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) per vari servizi Experience Platform.
-* [Real-time Customer Data Platform (Edizione B2C - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2P - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2B - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (Edizione B2C - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;monitoraggio;monitorare;flussi di dati;monitorare l'acquisizione;inserimento dati;acquisizione dati;visualizzare record;visualizzare batch;
+keywords: Experience Platform;home;argomenti popolari;monitoraggio;monitorare;flussi di dati;monitorare l’acquisizione;inserimento dati;acquisizione dati;visualizzare record;visualizzare batch;
 solution: Experience Platform
 title: Monitoraggio dell’acquisizione dei dati
 description: Questa guida utente descrive come monitorare i dati nell’interfaccia utente di Adobe Experience Platform. Questa guida richiede un Adobe ID e l’accesso a Adobe Experience Platform.
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
-source-git-commit: 9399a242b855e151e5822035bc952efa89fe4bf0
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '649'
 ht-degree: 4%
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 # Monitoraggio dell’acquisizione dei dati
 
-L’acquisizione dei dati consente di acquisire i dati da Adobe Experience Platform. È possibile utilizzare l&#39;acquisizione in batch, che consente di inserire i dati utilizzando vari tipi di file (ad esempio CSV), oppure l&#39;acquisizione in streaming, che consente di acquisire i dati in [!DNL Platform] utilizzando endpoint di streaming in tempo reale.
+L’acquisizione dei dati consente di acquisire i dati da Adobe Experience Platform. È possibile utilizzare l&#39;acquisizione in batch, che consente di inserire i dati utilizzando vari tipi di file (ad esempio CSV), oppure l&#39;acquisizione in streaming, che consente di acquisire i dati in [!DNL Experience Platform] utilizzando endpoint di streaming in tempo reale.
 
 Questa guida utente descrive come monitorare i dati nell’interfaccia utente di Adobe Experience Platform. Questa guida richiede un Adobe ID e l’accesso a Adobe Experience Platform.
 
@@ -32,7 +32,7 @@ Questa guida utente descrive come monitorare i dati nell’interfaccia utente di
 
 Nell&#39;[interfaccia utente di Experience Platform](https://platform.adobe.com), seleziona **[!UICONTROL Monitoraggio]** nel menu di navigazione a sinistra, seguito da **[!UICONTROL Streaming end-to-end]**.
 
-Viene visualizzata la pagina di monitoraggio **[!UICONTROL Streaming end-to-end]**. In questa area di lavoro è disponibile un grafico che visualizza la frequenza degli eventi in streaming ricevuti da [!DNL Platform], un grafico che visualizza la frequenza degli eventi in streaming elaborati correttamente da [[!DNL Real-Time Customer Profile]](../../profile/home.md) e un elenco dettagliato dei dati in arrivo.
+Viene visualizzata la pagina di monitoraggio **[!UICONTROL Streaming end-to-end]**. In questa area di lavoro è disponibile un grafico che visualizza la frequenza degli eventi in streaming ricevuti da [!DNL Experience Platform], un grafico che visualizza la frequenza degli eventi in streaming elaborati correttamente da [[!DNL Real-Time Customer Profile]](../../profile/home.md) e un elenco dettagliato dei dati in arrivo.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 

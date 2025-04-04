@@ -2,9 +2,9 @@
 description: Scopri come configurare gli attributi dell’interfaccia utente, ad esempio il collegamento alla documentazione, la categoria della scheda di destinazione e il tipo e la frequenza di connessione della destinazione, per le destinazioni create con Destination SDK.
 title: Attributi dell’interfaccia utente
 exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
-source-git-commit: 995e464ca43e0738c16dd4e0ec928d27e5a8b029
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '800'
+source-wordcount: '802'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Per capire dove questo componente si inserisce in un&#39;integrazione creata con
 Quando [crei una destinazione](../../authoring-api/destination-configuration/create-destination-configuration.md) tramite Destination SDK, la sezione `uiAttributes` definisce le seguenti proprietà visive della scheda di destinazione:
 
 * URL della pagina della documentazione di destinazione nel [catalogo di destinazione](../../../catalog/overview.md).
-* La categoria in cui la destinazione sarà visibile nell’interfaccia utente di Platform.
+* La categoria in cui la destinazione sarà visibile nell’interfaccia utente di Experience Platform.
 * La frequenza di esportazione dei dati per la destinazione.
 * Il tipo di connessione di destinazione, ad esempio Amazon S3, BLOB di Azure e così via.
 * L’URL in cui hai ospitato l’icona da visualizzare nella scheda del catalogo delle destinazioni.
@@ -31,9 +31,9 @@ Quando [crei una destinazione](../../authoring-api/destination-configuration/cre
 * [Creare una configurazione di destinazione](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [Aggiornare una configurazione di destinazione](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-Questo articolo descrive tutti gli attributi supportati dell’interfaccia utente che puoi utilizzare per la tua destinazione e mostra cosa vedranno i clienti nell’interfaccia utente di Experience Platform.
+Questo articolo descrive tutti gli attributi dell’interfaccia utente supportati che è possibile utilizzare per la destinazione e mostra cosa vedranno i clienti nell’interfaccia utente di Experience Platform.
 
-![Schermata dell&#39;interfaccia utente che mostra gli attributi dell&#39;interfaccia utente nell&#39;interfaccia Experience Platform](../../assets/functionality/destination-configuration/ui-attributes.png)
+![Schermata dell&#39;interfaccia utente che mostra gli attributi dell&#39;interfaccia utente nell&#39;interfaccia di Experience Platform](../../assets/functionality/destination-configuration/ui-attributes.png)
 
 >[!IMPORTANT]
 >
@@ -112,11 +112,11 @@ A questo scopo, puoi utilizzare il parametro `isBeta: "true"` nella sezione degl
 
 ![Immagine dell&#39;interfaccia utente che mostra il percorso dell&#39;icona.](../../assets/functionality/destination-configuration/ui-attributes-icon.png)
 
-Per aggiungere un logo alla scheda di destinazione, devi condividere l&#39;immagine desiderata con il team di Adobi quando [invii la destinazione per la revisione](../../guides/submit-destination.md#logo).
+Per aggiungere un logo alla scheda di destinazione, devi condividere l&#39;immagine desiderata con il team di Adobe quando [invii la destinazione per la revisione](../../guides/submit-destination.md#logo).
 
 ## Passaggi successivi {#next-steps}
 
-Dopo aver letto questo articolo, sarai in grado di capire meglio quali attributi dell’interfaccia utente puoi configurare per la tua destinazione e dove gli utenti potranno visualizzarli nell’interfaccia di Platform.
+Dopo aver letto questo articolo, sarai in grado di capire meglio quali attributi dell’interfaccia utente puoi configurare per la tua destinazione e dove gli utenti potranno visualizzarli nell’interfaccia di Experience Platform.
 
 Per ulteriori informazioni sugli altri componenti di destinazione, consulta i seguenti articoli:
 

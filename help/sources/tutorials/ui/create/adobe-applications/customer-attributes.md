@@ -5,9 +5,9 @@ title: Creare una connessione Source per gli attributi del cliente nell’interf
 type: Tutorial
 description: Scopri come creare una connessione sorgente nell’interfaccia utente per inserire i dati del profilo degli attributi del cliente in Adobe Experience Platform.
 exl-id: 66bdab8f-c00e-4ebe-8b8e-f9e12cf86bbe
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '617'
+source-wordcount: '620'
 ht-degree: 0%
 
 ---
@@ -26,11 +26,11 @@ Questo tutorial descrive i passaggi necessari per creare una connessione sorgent
 >
 >Se hai già stabilito una connessione di origine per i dati del profilo Attributi del cliente, l’opzione per connettersi con l’origine è disabilitata.
 
-Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Nella schermata [!UICONTROL Catalogo] sono visualizzate diverse origini con cui è possibile creare una connessione.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Nella schermata [!UICONTROL Catalogo] sono visualizzate diverse origini con cui è possibile creare una connessione.
 
 Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare la fonte specifica che si desidera utilizzare utilizzando la barra di ricerca.
 
-Nella categoria [!UICONTROL Applicazioni di Adobe], selezionare **[!UICONTROL Attributi del cliente]**, quindi **[!UICONTROL Aggiungi dati]**.
+Nella categoria [!UICONTROL Applicazioni Adobe], selezionare **[!UICONTROL Attributi del cliente]**, quindi **[!UICONTROL Aggiungi dati]**.
 
 ![catalogo](../../../../images/tutorials/create/customer-attributes/catalog.png)
 
@@ -42,7 +42,7 @@ Nella schermata [!UICONTROL Aggiungi dati] sono elencate tutte le origini dati d
 >
 >I gruppi di campi, gli schemi e i set di dati vengono creati come parte del provisioning del flusso. Rimarranno invariate e dovrai eliminarle manualmente, se necessario.
 
-L’evoluzione dello schema non è supportata dall’origine degli attributi del cliente. Se l’input dello schema di un’origine dati degli attributi del cliente viene modificato, diventa incompatibile con Platform. Come soluzione alternativa, puoi eliminare un flusso di dati attributi del cliente esistente, insieme al set di dati, allo schema e al gruppo di campi associati, quindi crearne uno nuovo con lo schema e l’origine dati aggiornati.
+L’evoluzione dello schema non è supportata dall’origine degli attributi del cliente. Se l’input dello schema di un’origine dati degli attributi del cliente viene modificato, diventa incompatibile con Experience Platform. Come soluzione alternativa, puoi eliminare un flusso di dati attributi del cliente esistente, insieme al set di dati, allo schema e al gruppo di campi associati, quindi crearne uno nuovo con lo schema e l’origine dati aggiornati.
 
 >[!IMPORTANT]
 >
@@ -75,7 +75,7 @@ Viene visualizzato il passaggio [!UICONTROL Rivedi], che consente di rivedere il
 
 ## Passaggi successivi
 
-Una volta creata la connessione, vengono automaticamente creati uno schema di destinazione e un set di dati per contenere i dati in arrivo. Al termine dell&#39;acquisizione iniziale, i dati del profilo degli attributi del cliente possono essere utilizzati dai servizi Platform a valle come [!DNL Real-Time Customer Profile] e [!DNL Segmentation Service]. Per ulteriori informazioni, consulta i seguenti documenti:
+Una volta creata la connessione, vengono automaticamente creati uno schema di destinazione e un set di dati per contenere i dati in arrivo. Al termine dell&#39;acquisizione iniziale, i dati del profilo degli attributi del cliente possono essere utilizzati dai servizi Experience Platform a valle come [!DNL Real-Time Customer Profile] e [!DNL Segmentation Service]. Per ulteriori informazioni, consulta i seguenti documenti:
 
 * [Panoramica di [!DNL Real-Time Customer Profile]](../../../../../profile/home.md)
 * [Panoramica di [!DNL Segmentation Service]](../../../../../segmentation/home.md)

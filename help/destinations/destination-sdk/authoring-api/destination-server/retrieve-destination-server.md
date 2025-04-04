@@ -1,10 +1,10 @@
 ---
-description: Questa pagina esemplifica la chiamata API utilizzata per recuperare una configurazione del server di destinazione tramite il Adobe Experience Platform Destination SDK.
+description: Questa pagina esemplifica la chiamata API utilizzata per recuperare una configurazione del server di destinazione tramite Adobe Experience Platform Destination SDK.
 title: Recuperare una configurazione del server di destinazione
 exl-id: 1b375343-e793-4c91-856f-af66fe71822e
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '467'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ Questa pagina esemplifica la richiesta API e il payload che è possibile utilizz
 
 Per una descrizione dettagliata delle funzionalità utilizzate dai server di destinazione, leggi i seguenti articoli:
 
-* [Specifiche del server per le destinazioni create con Destination SDK](../../../destination-sdk/functionality/destination-server/server-specs.md)
+* [Specifiche server per le destinazioni create con Destination SDK](../../../destination-sdk/functionality/destination-server/server-specs.md)
 * [Specifiche di modello per le destinazioni create con Destination SDK](../../../destination-sdk/functionality/destination-server/templating-specs.md)
 * [Formato del messaggio](../../../destination-sdk/functionality/destination-server/message-format.md)
 * [Configurazione formattazione file](../../../destination-sdk/functionality/destination-server/file-formatting.md)
@@ -221,11 +221,11 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con la conf
 
 ## Gestione degli errori API {#error-handling}
 
-Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](../../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
+Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](../../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Experience Platform.
 
 ## Passaggi successivi {#next-steps}
 
-Dopo aver letto questo documento, ora sai come recuperare una configurazione del server di destinazione tramite l&#39;endpoint API Destination SDK `/authoring/destination-servers`.
+Dopo aver letto questo documento, ora sai come recuperare una configurazione del server di destinazione tramite l&#39;endpoint API di Destination SDK `/authoring/destination-servers`.
 
 Per ulteriori informazioni su cosa è possibile fare con questo endpoint, consulta i seguenti articoli:
 

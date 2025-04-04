@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;servizio di flusso;
 title: Creare un’esecuzione del flusso per l’acquisizione su richiesta utilizzando l’API del servizio Flusso
 description: Scopri come creare un’esecuzione del flusso per l’acquisizione on-demand utilizzando l’API del servizio Flusso
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '797'
+source-wordcount: '801'
 ht-degree: 2%
 
 ---
@@ -26,12 +26,12 @@ Questo tutorial illustra i passaggi per utilizzare l&#39;acquisizione su richies
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Origini](../../home.md): [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini e consente di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi [!DNL Platform].
-* [Sandbox](../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza di [!DNL Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Origini](../../home.md): [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini e consente di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi [!DNL Experience Platform].
+* [Sandbox](../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza di [!DNL Experience Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
-### Utilizzo delle API di Platform
+### Utilizzo delle API di Experience Platform
 
-Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida in [guida introduttiva alle API di Platform](../../../landing/api-guide.md).
+Per informazioni su come effettuare correttamente chiamate alle API di Experience Platform, consulta la guida introduttiva [alle API di Experience Platform](../../../landing/api-guide.md).
 
 ## Creare un&#39;esecuzione di flusso per un&#39;origine basata su tabella
 
@@ -125,7 +125,7 @@ In caso di esito positivo, la risposta restituisce i dettagli della nuova esecuz
 
 ## Creare un&#39;esecuzione di flusso per un&#39;origine basata su file
 
-Per creare un flusso per un&#39;origine basata su file, effettuare una richiesta POST all&#39;API [!DNL Flow Service] fornendo l&#39;ID del flusso su cui si desidera creare i valori e per l&#39;ora di inizio e di fine.
+Per creare un flusso per un&#39;origine basata su file, eseguire una richiesta POST all&#39;API [!DNL Flow Service] fornendo l&#39;ID del flusso su cui si desidera creare i valori e per l&#39;ora di inizio e di fine.
 
 >[!TIP]
 >
@@ -189,4 +189,4 @@ In caso di esito positivo, la risposta restituisce i dettagli della nuova esecuz
 
 ## Monitorare le esecuzioni del flusso
 
-Una volta creata l’esecuzione del flusso, puoi monitorare i dati che vengono acquisiti tramite di essa per visualizzare informazioni sulle esecuzioni del flusso, sullo stato di completamento e sugli errori. Per monitorare il flusso eseguito utilizzando l&#39;API, consulta l&#39;esercitazione sul [monitoraggio dei flussi di dati nell&#39;API](./monitor.md). Per monitorare le esecuzioni del flusso tramite l&#39;interfaccia utente di Platform, consulta la guida su [flussi di dati di origine monitoraggio tramite il dashboard di monitoraggio](../../../dataflows/ui/monitor-sources.md).
+Una volta creata l’esecuzione del flusso, puoi monitorare i dati che vengono acquisiti tramite di essa per visualizzare informazioni sulle esecuzioni del flusso, sullo stato di completamento e sugli errori. Per monitorare il flusso eseguito utilizzando l&#39;API, consulta l&#39;esercitazione sul [monitoraggio dei flussi di dati nell&#39;API](./monitor.md). Per monitorare le esecuzioni del flusso tramite l&#39;interfaccia utente di Experience Platform, consulta la guida su [flussi di dati di origine monitoraggio tramite il dashboard di monitoraggio](../../../dataflows/ui/monitor-sources.md).

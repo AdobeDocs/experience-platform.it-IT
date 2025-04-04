@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Connetti Postico a Query Service
 description: Questo documento contiene il collegamento per l’installazione del client di backup Postico per Adobe Experience Platform Query Service.
 exl-id: a19abfc8-b431-4e57-b44d-c6130041af4a
-source-git-commit: 9fe7e618d251867c90c88f8bee6ef5863ae78f60
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '406'
 ht-degree: 0%
 
 ---
@@ -28,14 +28,14 @@ Per connettere [!DNL Postico] a Query Service, apri [!DNL Postico] e seleziona *
 | **[!DNL Host]:** | Nome host del server PostgreSQL. |
 | **[!DNL Port]:** | Porta per [!DNL Query Service]. Per connettersi a [!DNL Query Service], è necessario utilizzare la porta **80** o **5432**. |
 | **[!DNL User]** | Crea un nome per la connessione specifica. Lascia vuoto il campo per usare il nome di accesso di Mac. |
-| **[!DNL Password]** | Questa stringa alfanumerica è la credenziale **[!UICONTROL Password]** di Experience Platform. Se si desidera utilizzare credenziali senza scadenza, questo valore corrisponde agli argomenti concatenati di `technicalAccountID` e `credential` scaricati nel file JSON di configurazione. Il valore della password assume la forma: {technicalAccountId}:{credential}. Il file JSON di configurazione per le credenziali senza scadenza è un download una tantum durante l’inizializzazione di, Adobe di cui non conserva una copia. |
-| **[!DNL Database]** | Utilizza il valore delle credenziali dell&#39;Experience Platform **[!UICONTROL Database]**: `prod:all`. |
+| **[!DNL Password]** | Questa stringa alfanumerica è la tua credenziale Experience Platform **[!UICONTROL Password]**. Se si desidera utilizzare credenziali senza scadenza, questo valore corrisponde agli argomenti concatenati di `technicalAccountID` e `credential` scaricati nel file JSON di configurazione. Il valore della password assume la forma: {technicalAccountId}:{credential}. Il file JSON di configurazione per le credenziali senza scadenza è un download una tantum durante l’inizializzazione di cui Adobe non conserva una copia. |
+| **[!DNL Database]** | Utilizza il valore delle credenziali del **[!UICONTROL database]** di Experience Platform: `prod:all`. |
 
-Per ulteriori informazioni su come trovare il nome del database, l&#39;host, la porta e le credenziali di accesso, leggere la [guida delle credenziali](../ui/credentials.md). Per trovare le credenziali, accedi a [!DNL Platform], quindi seleziona **[!UICONTROL Query]**, seguito da **[!UICONTROL Credenziali]**.
+Per ulteriori informazioni su come trovare il nome del database, l&#39;host, la porta e le credenziali di accesso, leggere la [guida delle credenziali](../ui/credentials.md). Per trovare le credenziali, accedi a [!DNL Experience Platform], quindi seleziona **[!UICONTROL Query]**, seguito da **[!UICONTROL Credenziali]**.
 
 Dopo aver inserito le credenziali, selezionare **[!DNL Connect]** per connettersi a Query Service.
 
-Dopo la connessione a Platform, potrai visualizzare un elenco di tutte le relazioni precedentemente stabilite con Query Service.
+Dopo la connessione ad Experience Platform, potrai visualizzare un elenco di tutte le relazioni precedentemente stabilite con Query Service.
 
 ## Creare istruzioni SQL
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Applicazione automatica dei criteri
 description: Questo documento illustra come i criteri di utilizzo dei dati vengono applicati automaticamente quando si attivano tipi di pubblico nelle destinazioni in Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: f9072a0fc287c8061a3d28972096577317a0a2c9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2116'
+source-wordcount: '2126'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Le etichette e i criteri di utilizzo dei dati sono disponibili per tutti gli utenti di Adobe Experience Platform. Definisci i criteri di utilizzo dei dati e applica le etichette di utilizzo dei dati per garantire che tutti i dati sensibili, identificabili o contrattuali vengano gestiti in modo accurato. Queste misure aiutano a applicare le regole di governance dei dati della tua organizzazione su come accedere ai dati, elaborarli, memorizzarli e condividerli.
 
-Per proteggere la tua organizzazione da potenziali rischi e responsabilità, Platform applica automaticamente i criteri di utilizzo nel caso in cui si verifichino violazioni durante l’attivazione dei tipi di pubblico nelle destinazioni.
+Per proteggere la tua organizzazione da potenziali rischi e responsabilità, Experience Platform applica automaticamente i criteri di utilizzo nel caso in cui si verifichino violazioni durante l’attivazione dei tipi di pubblico nelle destinazioni.
 
 >[!IMPORTANT]
 >
@@ -25,12 +25,12 @@ Questo documento si concentra sull’applicazione della governance dei dati e de
 
 ## Prerequisiti
 
-Questa guida richiede una buona conoscenza dei servizi Platform coinvolti nell’applicazione automatica. Per ulteriori informazioni, consulta la seguente documentazione prima di continuare con questa guida:
+Questa guida richiede una buona conoscenza dei servizi Experience Platform coinvolti nell’applicazione automatica. Per ulteriori informazioni, consulta la seguente documentazione prima di continuare con questa guida:
 
-* [Governance dei dati di Adobe Experience Platform](../home.md): framework tramite il quale Platform impone la conformità dell&#39;utilizzo dei dati tramite l&#39;utilizzo di etichette e criteri.
+* [Governance dei dati di Adobe Experience Platform](../home.md): framework tramite il quale Experience Platform impone la conformità in materia di utilizzo dei dati tramite l&#39;utilizzo di etichette e criteri.
 * [Profilo cliente in tempo reale](../../profile/home.md): fornisce un profilo consumatore unificato in tempo reale basato su dati aggregati provenienti da più origini.
-* [Servizio di segmentazione di Adobe Experience Platform](../../segmentation/home.md): il motore di segmentazione in [!DNL Platform] utilizzato per creare tipi di pubblico dai profili dei clienti in base ai comportamenti e agli attributi dei clienti.
-* [Destinazioni](../../destinations/home.md): le destinazioni sono integrazioni predefinite con applicazioni di uso comune che consentono l&#39;attivazione diretta dei dati da Platform per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e altro ancora.
+* [Servizio di segmentazione di Adobe Experience Platform](../../segmentation/home.md): il motore di segmentazione in [!DNL Experience Platform] utilizzato per creare tipi di pubblico dai profili dei clienti in base ai comportamenti e agli attributi dei clienti.
+* [Destinazioni](../../destinations/home.md): le destinazioni sono integrazioni predefinite con applicazioni di uso comune che consentono l&#39;attivazione diretta dei dati da Experience Platform per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e altro ancora.
 
 ## Flusso di applicazione {#flow}
 
@@ -53,13 +53,13 @@ Quando un pubblico viene attivato per la prima volta, [!DNL Policy Service] cont
 
 ## Derivazione dei dati {#lineage}
 
-La derivazione dei dati svolge un ruolo chiave nel modo in cui i criteri vengono applicati in Platform. In termini generali, la derivazione dei dati si riferisce all’origine di un set di dati e a cosa gli accade (o dove si sposta) nel tempo.
+La derivazione dei dati svolge un ruolo chiave nel modo in cui i criteri vengono applicati in Experience Platform. In termini generali, la derivazione dei dati si riferisce all’origine di un set di dati e a cosa gli accade (o dove si sposta) nel tempo.
 
-Nel contesto della governance dei dati, la derivazione consente alle etichette di utilizzo dei dati di propagarsi dagli schemi ai servizi a valle che utilizzano i loro dati, come Profilo cliente in tempo reale e Destinazioni. Questo consente di valutare e applicare i criteri in diversi punti chiave del percorso dei dati tramite Platform e fornisce ai consumatori di dati il contesto necessario per capire perché si è verificata una violazione dei criteri.
+Nel contesto della governance dei dati, la derivazione consente alle etichette di utilizzo dei dati di propagarsi dagli schemi ai servizi a valle che utilizzano i loro dati, come Profilo cliente in tempo reale e Destinazioni. Questo consente di valutare e applicare i criteri in diversi punti chiave del percorso dei dati tramite Experience Platform e fornisce ai consumatori di dati il contesto necessario per capire perché si è verificata una violazione dei criteri.
 
 In Experience Platform, l’applicazione dei criteri riguarda la seguente derivazione:
 
-1. I dati vengono acquisiti in Platform e memorizzati in **set di dati**.
+1. I dati vengono acquisiti in Experience Platform e memorizzati in **set di dati**.
 1. I profili dei clienti vengono identificati e costruiti a partire da tali set di dati unendo i frammenti di dati in base al **criterio di unione**.
 1. I gruppi di profili sono divisi in **tipi di pubblico** in base agli attributi comuni.
 1. I tipi di pubblico sono attivati nelle **destinazioni** a valle.
@@ -69,7 +69,7 @@ Ciascuna fase del calendario di cui sopra rappresenta un’entità che può cont
 | Fase di derivazione dei dati | Ruolo nell’applicazione dei criteri |
 | --- | --- |
 | Set di dati | I set di dati contengono etichette di utilizzo dei dati (applicate a livello di campo schema o di intero set di dati) che definiscono i casi di utilizzo per i quali è possibile utilizzare l’intero set di dati o campi specifici. Se un set di dati o un campo contenente determinate etichette viene utilizzato per uno scopo limitato da un criterio, si verificheranno violazioni dei criteri.<br><br>Nei set di dati vengono memorizzati anche tutti gli attributi di consenso raccolti dai clienti. Se hai accesso ai criteri di consenso, tutti i profili che non soddisfano i requisiti di attributo del consenso dei tuoi criteri verranno esclusi dai tipi di pubblico attivati per una destinazione. |
-| Criterio di unione | I criteri di unione sono le regole utilizzate da Platform per determinare il modo in cui assegnare la priorità ai dati quando si uniscono frammenti da più set di dati. Se i criteri di unione sono configurati in modo che i set di dati con etichette con restrizioni vengano attivati in una destinazione, si verificheranno violazioni dei criteri. Per ulteriori informazioni, vedere [panoramica dei criteri di unione](../../profile/merge-policies/overview.md). |
+| Criterio di unione | I criteri di unione sono le regole utilizzate da Experience Platform per determinare il modo in cui assegnare la priorità ai dati quando si uniscono frammenti da più set di dati. Se i criteri di unione sono configurati in modo che i set di dati con etichette con restrizioni vengano attivati in una destinazione, si verificheranno violazioni dei criteri. Per ulteriori informazioni, vedere [panoramica dei criteri di unione](../../profile/merge-policies/overview.md). |
 | Pubblico | Le regole di segmentazione definiscono quali attributi devono essere inclusi dai profili dei clienti. A seconda dei campi inclusi in una definizione di segmento, il pubblico erediterà tutte le etichette di utilizzo applicate per tali campi. Se tenti di attivare un pubblico le cui etichette ereditate sono limitate dai criteri applicabili della destinazione target, in base al caso di utilizzo di marketing, si verificheranno violazioni dei criteri. |
 | Destinazione | Durante la configurazione di una destinazione, è possibile definire un’azione di marketing (talvolta denominata caso di utilizzo di marketing). Questo caso d’uso è correlato a un’azione di marketing definita in un criterio. In altre parole, l’azione di marketing che definisci per una destinazione determina quali criteri di utilizzo dei dati e criteri di consenso sono applicabili a tale destinazione.<br><br>Le violazioni dei criteri di utilizzo dei dati si verificano se si tenta di attivare un pubblico le cui etichette di utilizzo sono limitate per l&#39;azione di marketing della destinazione.<br><br>(Beta) Quando un pubblico viene attivato, tutti i profili che non contengono gli attributi di consenso richiesti per l&#39;azione di marketing (come definiti dai criteri di consenso) vengono esclusi dal pubblico attivato. |
 
@@ -83,7 +83,7 @@ Quando si verificano violazioni dei criteri, i messaggi risultanti visualizzati 
 
 ## Messaggi di applicazione dei criteri {#enforcement}
 
-Le sezioni seguenti descrivono i diversi messaggi di applicazione dei criteri visualizzati nell’interfaccia utente di Platform:
+Le sezioni seguenti descrivono i diversi messaggi di applicazione dei criteri visualizzati nell’interfaccia utente di Experience Platform:
 
 * [Violazione dei criteri di utilizzo dei dati](#data-usage-violation)
 * [Valutazione dei criteri di consenso](#consent-policy-evaluation)
@@ -146,7 +146,7 @@ Una volta raggiunto il passaggio **[!UICONTROL Rivedi]** quando [attivi una dest
 
 Viene visualizzata una finestra di dialogo di verifica dei criteri, con un’anteprima di come i criteri di consenso influiscono sul pubblico autorizzato dei tipi di pubblico da attivare.
 
-![Finestra di dialogo per la verifica dei criteri di consenso nell&#39;interfaccia utente di Platform](../images/enforcement/consent-policy-check.png)
+![Finestra di dialogo per la verifica dei criteri di consenso nell&#39;interfaccia utente di Experience Platform](../images/enforcement/consent-policy-check.png)
 
 La finestra di dialogo mostra il pubblico autorizzato per un pubblico alla volta. Per visualizzare la valutazione dei criteri per un pubblico diverso, utilizza il menu a discesa sopra il diagramma per selezionarne uno dall’elenco.
 

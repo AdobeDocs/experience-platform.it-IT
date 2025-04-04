@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Query Service
 description: Adobe Experience Platform Query Service fornisce un’interfaccia utente che può essere utilizzata per scrivere ed eseguire query, visualizzare le query eseguite in precedenza e accedere a quelle salvate dagli utenti della tua organizzazione.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: a4fc19599ea6639ee5762ee1542cb08b9ed3b6a8
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2275'
+source-wordcount: '2276'
 ht-degree: 1%
 
 ---
@@ -142,7 +142,7 @@ La scheda **[!UICONTROL Modelli]** mostra le query salvate dagli utenti dell&#39
 | **[!UICONTROL Modificato da]** | Ultimo utente che ha modificato la query. Qualsiasi utente dell’organizzazione con accesso a Query Service può modificare le query. |
 | **[!UICONTROL Ultima modifica]** | La data e l’ora dell’ultima modifica alla query, nel fuso orario del browser. |
 
-Per ulteriori informazioni sui modelli nell&#39;interfaccia utente di Platform, consulta la documentazione dei [modelli di query](./query-templates.md).
+Per ulteriori informazioni sui modelli nell&#39;interfaccia utente di Experience Platform, consulta la documentazione dei [modelli di query](./query-templates.md).
 
 ## Registro {#log}
 
@@ -174,4 +174,4 @@ Nella scheda **[!UICONTROL Credenziali]** vengono visualizzate le credenziali si
 
 ## Passaggi successivi
 
-Ora che hai familiarità con l&#39;interfaccia utente di Query Service su [!DNL Platform], puoi accedere a Query Editor per iniziare a creare progetti di query personalizzati da condividere con altri utenti dell&#39;organizzazione. Per ulteriori informazioni sull&#39;authoring e l&#39;esecuzione di query in Query Editor, vedere la [guida utente di Query Editor](./user-guide.md).
+Ora che hai familiarità con l&#39;interfaccia utente di Query Service su [!DNL Experience Platform], puoi accedere a Query Editor per iniziare a creare progetti di query personalizzati da condividere con altri utenti dell&#39;organizzazione. Per ulteriori informazioni sull&#39;authoring e l&#39;esecuzione di query in Query Editor, vedere la [guida utente di Query Editor](./user-guide.md).

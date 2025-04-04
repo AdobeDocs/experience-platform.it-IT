@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;approfondimenti;customer ai;argomenti più comuni;customer ai insights
+keywords: Experience Platform;insights;analisi dei clienti;argomenti più comuni;analisi dei clienti;customer ai insights
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Scopri gli approfondimenti con IA per l’analisi dei clienti
 description: Questo documento funge da guida per l’interazione con le informazioni approfondite sull’istanza del servizio nell’interfaccia utente di IA per l’analisi dei clienti di Intelligent Services.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2098'
+source-wordcount: '2099'
 ht-degree: 1%
 
 ---
@@ -164,7 +164,7 @@ Il generatore di segmenti viene utilizzato per definire un segmento. Quando si s
 
 ![Compilazione segmento](../images/insights/segment-saving.png)
 
-Per visualizzare il nuovo segmento nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Segmenti]** nell&#39;area di navigazione a sinistra. Viene visualizzata la pagina **[!UICONTROL Sfoglia]** in cui sono visualizzati tutti i segmenti disponibili.
+Per visualizzare il nuovo segmento nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Segmenti]** nel menu di navigazione a sinistra. Viene visualizzata la pagina **[!UICONTROL Sfoglia]** in cui sono visualizzati tutti i segmenti disponibili.
 
 ![Tutti i tuoi segmenti](../images/insights/Segments-dashboard.png)
 

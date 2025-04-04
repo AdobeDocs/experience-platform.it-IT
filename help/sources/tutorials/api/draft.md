@@ -2,9 +2,9 @@
 title: Creare bozze dell’API delle entità del servizio Flow
 description: Scopri come creare bozze della connessione di base, della connessione di origine, della connessione di destinazione e del flusso di dati utilizzando l’API del servizio Flusso
 exl-id: aad6a302-1905-4a23-bc3d-39e76c9a22da
-source-git-commit: 9c40f6254b548027d271e5831bd1b03aec98df77
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1188'
+source-wordcount: '1193'
 ht-degree: 5%
 
 ---
@@ -21,12 +21,12 @@ Questo tutorial illustra come impostare le entità [!DNL Flow Service] su uno st
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Origini](../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
-* [Sandbox](../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Origini](../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Experience Platform.
+* [Sandbox](../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Experience Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
-### Utilizzo delle API di Platform
+### Utilizzo delle API di Experience Platform
 
-Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida in [guida introduttiva alle API di Platform](../../../landing/api-guide.md).
+Per informazioni su come effettuare correttamente chiamate alle API di Experience Platform, consulta la guida introduttiva [alle API di Experience Platform](../../../landing/api-guide.md).
 
 ### Verifica il supporto della modalità bozza
 
@@ -624,7 +624,7 @@ In caso di esito positivo, la risposta restituisce l’ID della connessione di b
 }
 ```
 
-## Publish connessione base bozza {#publish-your-draft-base-connection}
+## Pubblicare la bozza di connessione di base {#publish-your-draft-base-connection}
 
 Una volta che la bozza è pronta per la pubblicazione, invia una richiesta POST all&#39;endpoint `/connections` e fornisci l&#39;ID della bozza di connessione di base da pubblicare, nonché un&#39;operazione di pubblicazione.
 
@@ -665,7 +665,7 @@ In caso di esito positivo, la risposta restituisce l’ID e l’e-mail corrispon
 
 ## Creare una bozza di connessione sorgente {#create-a-draft-source-connection}
 
-Per creare una bozza di connessione di origine, effettuare una richiesta POST all&#39;endpoint `/sourceConnections` dell&#39;API [!DNL Flow Service] e fornire `mode=draft` come parametro di query.
+Per creare una bozza della connessione di origine, effettuare una richiesta POST all&#39;endpoint `/sourceConnections` dell&#39;API [!DNL Flow Service] e fornire `mode=draft` come parametro di query.
 
 **Formato API**
 
@@ -716,7 +716,7 @@ In caso di esito positivo, la risposta restituisce l’ID della connessione sorg
 }
 ```
 
-## Publish la bozza della connessione sorgente {#publish-your-draft-source-connection}
+## Pubblicare la bozza della connessione sorgente {#publish-your-draft-source-connection}
 
 >[!NOTE]
 >
@@ -813,13 +813,13 @@ In caso di esito positivo, la risposta restituisce l’ID della connessione di d
 }
 ```
 
-## Publish la bozza di connessione di destinazione {#publish-your-draft-target-connection}
+## Pubblicare la bozza di connessione di destinazione {#publish-your-draft-target-connection}
 
 >[!NOTE]
 >
 >Non è possibile pubblicare una connessione di destinazione se la connessione di base associata è ancora in stato di bozza. Prima di pubblicare la connessione di destinazione, assicurati che la connessione di base sia pubblicata.
 
-Quando la bozza è pronta per la pubblicazione, effettua una richiesta POST all&#39;endpoint `/targetConnections` e fornisci l&#39;ID della bozza di connessione di destinazione da pubblicare, nonché un&#39;operazione di pubblicazione.
+Quando la bozza è pronta per essere pubblicata, effettua una richiesta POST all&#39;endpoint `/targetConnections` e fornisci l&#39;ID della bozza di connessione di destinazione da pubblicare, nonché un&#39;operazione di pubblicazione.
 
 **Formato API**
 
@@ -858,7 +858,7 @@ In caso di esito positivo, la risposta restituisce l’ID e l’e-mail corrispon
 
 ## Creare un flusso di dati 2D {#create-a-draft-dataflow}
 
-Per impostare un flusso di dati come bozza, effettua una richiesta POST all&#39;endpoint `/flows` durante l&#39;aggiunta di `mode=draft` come parametro di query. Questo consente di creare un flusso di dati e salvarlo come bozza.
+Per impostare un flusso di dati come bozza, effettuare una richiesta POST all&#39;endpoint `/flows` durante l&#39;aggiunta di `mode=draft` come parametro di query. Questo consente di creare un flusso di dati e salvarlo come bozza.
 
 **Formato API**
 
@@ -908,7 +908,7 @@ In caso di esito positivo, la risposta restituisce l’ID di flusso e l’eTag c
 }
 ```
 
-## Publish flusso di dati bozza {#publish-your-draft-dataflow}
+## Pubblicare il flusso di dati della bozza {#publish-your-draft-dataflow}
 
 >[!NOTE]
 >

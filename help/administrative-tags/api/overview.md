@@ -3,16 +3,16 @@ title: Panoramica API dei tag unificati
 description: Scopri come utilizzare l’API Unified Tags per gestire tag e cartelle unificate in Adobe Experience Platform.
 role: Developer
 exl-id: f4da5850-d5b0-4746-9f28-88ce836db800
-source-git-commit: 717a4ea0568200c940cf9b8f26f4dd2aa9c00a3e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '236'
 ht-degree: 1%
 
 ---
 
 # Panoramica dell’API Unified Tags
 
-L’API Tag unificati consente di categorizzare e gestire gli oggetti business in Adobe Experience Platform. Puoi creare sia cartelle che tag, da utilizzare per organizzare meglio gli oggetti di Platform, ad esempio tipi di pubblico o set di dati, utilizzando gli endpoint in questa API.
+L’API Tag unificati consente di categorizzare e gestire gli oggetti business in Adobe Experience Platform. Puoi creare sia cartelle che tag, da utilizzare per organizzare meglio gli oggetti di Experience Platform, ad esempio tipi di pubblico o set di dati, utilizzando gli endpoint in questa API.
 
 Prima di leggere le guide dei singoli endpoint, consulta la [guida introduttiva](./getting-started.md) per informazioni importanti sulle intestazioni richieste, sulla lettura di chiamate API di esempio e altro ancora.
 

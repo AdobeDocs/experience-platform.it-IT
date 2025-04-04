@@ -2,9 +2,9 @@
 title: Panoramica di Advanced Data Lifecycle Management
 description: Advanced Data Lifecycle Management consente di gestire il ciclo di vita dei dati aggiornando o eliminando record obsoleti o imprecisi.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 6ef09957d1eb2c07e5607105c782c36f20344bfa
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '832'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 Adobe Experience Platform fornisce un solido set di strumenti per gestire operazioni di dati complesse e di grandi dimensioni al fine di orchestrare le esperienze dei consumatori. Man mano che i dati vengono acquisiti nel sistema nel tempo, diventa sempre più importante gestire gli archivi di dati in modo che vengano utilizzati come previsto, vengano aggiornati quando i dati errati devono essere corretti e vengano eliminati quando le politiche organizzative lo ritengono necessario.
 
-<!-- Platform's data lifecycle capabilities allow you to manage your stored data through the following:
+<!-- Experience Platform's data lifecycle capabilities allow you to manage your stored data through the following:
 
 * Scheduling automated dataset expirations
 * Deleting individual records from one or all datasets
@@ -26,11 +26,11 @@ Queste attività possono essere eseguite utilizzando l&#39;area di lavoro dell&#
 
 >[!NOTE]
 >
->Advanced Data Lifecycle Management supporta le eliminazioni dei dataset tramite l&#39;[endpoint di scadenza del dataset](./api/dataset-expiration.md) e le eliminazioni degli ID (dati a livello di riga) utilizzando le identità primarie tramite l&#39;[endpoint workorder](./api/workorder.md). Puoi anche gestire [scadenze set di dati](./ui/dataset-expiration.md) e [eliminazioni record](./ui/record-delete.md) tramite l&#39;interfaccia utente di Platform. Per ulteriori informazioni, consulta la documentazione collegata. Il ciclo di vita dei dati non supporta l’eliminazione in batch.
+>Advanced Data Lifecycle Management supporta le eliminazioni dei dataset tramite l&#39;[endpoint di scadenza del dataset](./api/dataset-expiration.md) e le eliminazioni degli ID (dati a livello di riga) utilizzando le identità primarie tramite l&#39;[endpoint workorder](./api/workorder.md). Puoi anche gestire [scadenze set di dati](./ui/dataset-expiration.md) e [eliminazioni record](./ui/record-delete.md) tramite l&#39;interfaccia utente di Experience Platform. Per ulteriori informazioni, consulta la documentazione collegata. Il ciclo di vita dei dati non supporta l’eliminazione in batch.
 
 ## [!UICONTROL Ciclo di vita dati] area di lavoro interfaccia utente {#ui}
 
-L&#39;area di lavoro [!UICONTROL Ciclo di vita dei dati] nell&#39;interfaccia utente di Platform consente di configurare e pianificare le operazioni del ciclo di vita dei dati, per garantire che i record vengano mantenuti come previsto.
+L&#39;area di lavoro [!UICONTROL Ciclo di vita dei dati] nell&#39;interfaccia utente di Experience Platform consente di configurare e pianificare le operazioni del ciclo di vita dei dati, per garantire che i record vengano mantenuti come previsto.
 
 Per i passaggi dettagliati sulla gestione delle attività del ciclo di vita dei dati nell&#39;interfaccia utente, consulta la [guida dell&#39;interfaccia utente del ciclo di vita dei dati](./ui/overview.md).
 
@@ -58,7 +58,7 @@ Di seguito è riportato un evento che si verifica quando viene creata una [richi
 
 >[!IMPORTANT]
 >
->Le eliminazioni dei set di dati in Amazon Web Services (AWS) sono soggette a una latenza di circa tre ore prima che le modifiche vengano completamente applicate. Questo include fino a due ore per il set di dati da contrassegnare per l’eliminazione, seguite da un’ora in più prima che venga completamente eliminato dal sistema. Al contrario, le richieste di eliminazione per le istanze di Platform che utilizzano Azure Data Lake generano modifiche immediate in tutte le funzioni aziendali.
+>Le eliminazioni dei set di dati in Amazon Web Services (AWS) sono soggette a una latenza di circa tre ore prima che le modifiche vengano completamente applicate. Questo include fino a due ore per il set di dati da contrassegnare per l’eliminazione, seguite da un’ora in più prima che venga completamente eliminato dal sistema. Al contrario, le richieste di eliminazione per le istanze di Experience Platform che utilizzano Azure Data Lake generano modifiche immediate in tutte le funzioni aziendali.
 >
 >Per gli utenti di AWS, questo ritardo può influire sulla segmentazione batch, sulla segmentazione in streaming, sulle anteprime, sulle stime, sulle esportazioni e sull’accesso ai dati. Questa latenza influisce solo sui clienti che utilizzano AWS, in quanto gli utenti di Azure Data Lake ricevono aggiornamenti immediati. Per gli utenti di AWS, la propagazione completa delle richieste di eliminazione attraverso tutti i sistemi interessati potrebbe richiedere fino a tre ore. Modifica le tue aspettative di conseguenza.
 
@@ -80,4 +80,4 @@ The following takes place when a [record delete request](./ui/record-delete.md) 
 
 ## Passaggi successivi
 
-Questo documento fornisce una panoramica delle funzionalità del ciclo di vita dei dati di Platform. Per iniziare a effettuare richieste di igiene dei dati nell&#39;interfaccia utente, consulta la [guida dell&#39;interfaccia utente](./ui/overview.md). Per informazioni su come creare processi del ciclo di vita dei dati a livello di programmazione, consulta la [guida dell&#39;API di igiene dei dati](./api/overview.md)
+Questo documento fornisce una panoramica delle funzionalità del ciclo di vita dei dati di Experience Platform. Per iniziare a effettuare richieste di igiene dei dati nell&#39;interfaccia utente, consulta la [guida dell&#39;interfaccia utente](./ui/overview.md). Per informazioni su come creare processi del ciclo di vita dei dati a livello di programmazione, consulta la [guida dell&#39;API di igiene dei dati](./api/overview.md)

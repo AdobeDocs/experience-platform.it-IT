@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Scopri le prestazioni e i guardrail applicati dal sistema per i dati di profilo e la segmentazione al fine di garantire un utilizzo ottimale delle funzionalità di Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 31f725fc30b8fd9a045c0aac5ee65832cd995363
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2611'
+source-wordcount: '2617'
 ht-degree: 2%
 
 ---
@@ -31,9 +31,9 @@ Questo documento fornisce i limiti predefiniti di utilizzo e tasso per aiutarti 
 I seguenti servizi Experience Platform sono coinvolti nella modellazione dei dati del Profilo cliente in tempo reale:
 
 * [[!DNL Real-Time Customer Profile]](home.md): creare profili consumer unificati utilizzando dati provenienti da più origini.
-* [Identità](../identity-service/home.md): identità Bridge da diverse origini dati acquisite in Platform.
-* [Schemi](../xdm/home.md): gli schemi Experience Data Model (XDM) sono il framework standardizzato in base al quale Platform organizza i dati sull&#39;esperienza del cliente.
-* [Tipi di pubblico](../segmentation/home.md): il motore di segmentazione in Platform viene utilizzato per creare tipi di pubblico dai profili dei clienti in base ai comportamenti e agli attributi dei clienti.
+* [Identità](../identity-service/home.md): identità Bridge da diverse origini dati acquisite in Experience Platform.
+* [Schemi](../xdm/home.md): gli schemi Experience Data Model (XDM) sono il framework standardizzato in base al quale Experience Platform organizza i dati sull&#39;esperienza del cliente.
+* [Tipi di pubblico](../segmentation/home.md): il motore di segmentazione in Experience Platform viene utilizzato per creare tipi di pubblico dai profili dei clienti in base ai comportamenti e agli attributi dei clienti.
 
 ## Tipi di limite
 
@@ -177,9 +177,9 @@ In questo documento sono presenti diversi guardrail che fanno riferimento a &quo
 
 ### Criteri di unione {#merge-policies}
 
-Quando si riuniscono dati da più origini, i criteri di unione sono le regole utilizzate da Platform per determinare come i dati verranno prioritari e quali dati verranno combinati per creare tale vista unificata. Ad esempio, se un cliente interagisce con il tuo marchio su più canali, la tua organizzazione avrà più frammenti di profilo relativi a quel singolo cliente che appaiono in più set di dati. Quando questi frammenti vengono acquisiti in Platform, vengono uniti per creare un unico profilo per quel cliente. Quando i dati provenienti da più origini sono in conflitto, il criterio di unione determina quali informazioni includere nel profilo per la persona. È consentito un massimo di cinque (5) criteri di unione che utilizzano lo schema `_xdm.context.profile` per sandbox. Per ulteriori informazioni sui criteri di unione, leggere la [panoramica dei criteri di unione](merge-policies/overview.md).
+Quando si riuniscono dati provenienti da più origini, i criteri di unione sono le regole utilizzate da Experience Platform per determinare la modalità di assegnazione delle priorità e i dati da combinare per creare tale vista unificata. Ad esempio, se un cliente interagisce con il tuo marchio su più canali, la tua organizzazione avrà più frammenti di profilo relativi a quel singolo cliente che appaiono in più set di dati. Quando questi frammenti vengono acquisiti in Experience Platform, vengono uniti per creare un unico profilo per quel cliente. Quando i dati provenienti da più origini sono in conflitto, il criterio di unione determina quali informazioni includere nel profilo per la persona. È consentito un massimo di cinque (5) criteri di unione che utilizzano lo schema `_xdm.context.profile` per sandbox. Per ulteriori informazioni sui criteri di unione, leggere la [panoramica dei criteri di unione](merge-policies/overview.md).
 
-### Set di dati della suite di rapporti di Adobe Analytics in Platform {#aa-datasets}
+### Set di dati della suite di rapporti di Adobe Analytics in Experience Platform {#aa-datasets}
 
 È possibile abilitare più suite di rapporti per il profilo, purché tutti i conflitti di dati siano stati risolti. Puoi utilizzare la funzionalità Preparazione dati per risolvere i conflitti di dati tra eVar, Elenchi e Proprietà. Per ulteriori informazioni su come utilizzare la funzionalità Preparazione dati, consulta la [guida dell&#39;interfaccia utente del connettore Adobe Analytics](../sources/tutorials/ui/create/adobe-applications/analytics.md).
 

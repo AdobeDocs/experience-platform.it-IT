@@ -2,16 +2,16 @@
 title: Ordinamento e filtraggio delle risposte nell’API del servizio Flusso
 description: Questa esercitazione descrive la sintassi per l’ordinamento e il filtraggio utilizzando i parametri di query nell’API del servizio Flusso, inclusi alcuni casi d’uso avanzati.
 exl-id: 029c3199-946e-4f89-ba7a-dac50cc40c09
-source-git-commit: c7ff379b260edeef03f8b47f932ce9040eef3be2
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '830'
 ht-degree: 2%
 
 ---
 
 # Ordinamento e filtraggio delle risposte nell’API del servizio Flusso
 
-Quando si eseguono richieste di elenco (GET) nell&#39;API [Flow Service](https://www.adobe.io/experience-platform-apis/references/flow-service/), è possibile utilizzare i parametri di query per ordinare e filtrare le risposte. Questa guida fornisce un riferimento su come utilizzare questi parametri per diversi casi d’uso.
+Quando si eseguono richieste di elenchi (GET) nell&#39;API [Flow Service](https://www.adobe.io/experience-platform-apis/references/flow-service/), è possibile utilizzare i parametri di query per ordinare e filtrare le risposte. Questa guida fornisce un riferimento su come utilizzare questi parametri per diversi casi d’uso.
 
 ## Ordinamento
 
@@ -197,7 +197,7 @@ A seconda dell’entità Servizio flusso che stai recuperando, è possibile util
 
 ## Casi d’uso {#use-cases}
 
-Leggi questa sezione per alcuni esempi specifici su come utilizzare i filtri e l’ordinamento per restituire informazioni su determinati connettori o per assistenza nei problemi di debug. Adobe Se ci sono altri casi d&#39;uso che desideri aggiungere, utilizza le **[!UICONTROL opzioni di feedback dettagliate]** nella pagina per inviare una richiesta.
+Leggi questa sezione per alcuni esempi specifici su come utilizzare i filtri e l’ordinamento per restituire informazioni su determinati connettori o per assistenza nei problemi di debug. Se ci sono altri casi d&#39;uso che vorresti fossero aggiunti da Adobe, usa le **[!UICONTROL Opzioni di feedback dettagliate]** nella pagina per inviare una richiesta.
 
 **Filtro per restituire solo le connessioni a una determinata destinazione**
 
@@ -249,4 +249,4 @@ GET /runs?property=flowId==<flow-id>&property=metrics.statusSummary.status==Fail
 
 ## Passaggi successivi
 
-Questa guida illustra come utilizzare i parametri di query `orderby` e `property` per ordinare e filtrare le risposte nell&#39;API del servizio Flusso. Per guide dettagliate sull&#39;utilizzo dell&#39;API per i flussi di lavoro comuni in Platform, consulta i tutorial sull&#39;API contenuti nella documentazione di [sources](../../sources/home.md) e [destinations](../../destinations/home.md).
+Questa guida illustra come utilizzare i parametri di query `orderby` e `property` per ordinare e filtrare le risposte nell&#39;API del servizio Flusso. Per guide dettagliate sull&#39;utilizzo dell&#39;API per i flussi di lavoro più comuni in Experience Platform, consulta i tutorial sull&#39;API contenuti nella documentazione di [sources](../../sources/home.md) e [destinations](../../destinations/home.md).

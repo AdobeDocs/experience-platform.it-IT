@@ -2,9 +2,9 @@
 title: Connettere Salesforce Ad Experience Platform Utilizzando L’API Del Servizio Flusso
 description: Scopri come collegare Adobe Experience Platform a un account Salesforce utilizzando l’API del servizio Flow.
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: 01f655df8679383f57d60796be5274acd9b5df68
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1077'
+source-wordcount: '1082'
 ht-degree: 3%
 
 ---
@@ -17,16 +17,16 @@ Leggi questa guida per scoprire come collegare l&#39;account di origine [!DNL Sa
 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Origini](../../../../home.md): [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini e consente di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi [!DNL Platform].
-* [Sandbox](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza di [!DNL Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Origini](../../../../home.md): [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini e consente di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi [!DNL Experience Platform].
+* [Sandbox](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza di [!DNL Experience Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
-### Utilizzo delle API di Platform
+### Utilizzo delle API di Experience Platform
 
-Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida in [guida introduttiva alle API di Platform](../../../../../landing/api-guide.md).
+Per informazioni su come effettuare correttamente chiamate alle API di Experience Platform, consulta la guida introduttiva [alle API di Experience Platform](../../../../../landing/api-guide.md).
 
-## Connetti [!DNL Salesforce] a Experience Platform il [!DNL Azure] {#azure}
+## Connetti [!DNL Salesforce] ad Experience Platform il [!DNL Azure] {#azure}
 
-Per informazioni su come collegare l&#39;origine [!DNL Salesforce] all&#39;Experience Platform il [!DNL Azure], leggere la procedura seguente.
+Per informazioni su come collegare l&#39;origine [!DNL Salesforce] ad Experience Platform, leggere la procedura seguente il [!DNL Azure].
 
 ### Raccogli le credenziali richieste
 
@@ -67,9 +67,9 @@ Per ulteriori informazioni sull&#39;utilizzo di OAuth per [!DNL Salesforce], leg
 
 ### Crea una connessione di base per [!DNL Salesforce] in Experience Platform su [!DNL Azure]
 
-Una connessione di base mantiene le informazioni tra l’origine e Platform, incluse le credenziali di autenticazione dell’origine, lo stato corrente della connessione e l’ID univoco della connessione di base. L’ID della connessione di base consente di esplorare e navigare tra i file dall’interno dell’origine e identificare gli elementi specifici che desideri acquisire, comprese le informazioni relative ai tipi di dati e ai formati.
+Una connessione di base mantiene le informazioni tra l’origine e Experience Platform, incluse le credenziali di autenticazione dell’origine, lo stato corrente della connessione e l’ID univoco della connessione di base. L’ID della connessione di base consente di esplorare e navigare tra i file dall’interno dell’origine e identificare gli elementi specifici che desideri acquisire, comprese le informazioni relative ai tipi di dati e ai formati.
 
-Per creare una connessione di base e connettere l&#39;account [!DNL Salesforce] all&#39;Experience Platform il [!DNL Azure], effettuare una richiesta POST all&#39;endpoint `/connections` e fornire le credenziali di autenticazione [!DNL Salesforce] nel corpo della richiesta.
+Per creare una connessione di base e connettere l&#39;account [!DNL Salesforce] ad Experience Platform il [!DNL Azure], effettuare una richiesta POST all&#39;endpoint `/connections` e fornire le credenziali di autenticazione [!DNL Salesforce] nel corpo della richiesta.
 
 **Formato API**
 
@@ -198,17 +198,17 @@ In caso di esito positivo, la risposta restituisce la connessione di base appena
 
 >[!AVAILABILITY]
 >
->Questa sezione si applica alle implementazioni di Experience Platform in esecuzione su Amazon Web Services (AWS). Un Experience Platform in esecuzione su AWS è attualmente disponibile per un numero limitato di clienti. Per ulteriori informazioni sull&#39;infrastruttura Experience Platform supportata, consulta l&#39;[panoramica sul cloud multiplo di Experience Platform](../../../../../landing/multi-cloud.md).
+>Questa sezione si applica alle implementazioni di Experience Platform in esecuzione su Amazon Web Services (AWS). Experience Platform in esecuzione su AWS è attualmente disponibile per un numero limitato di clienti. Per ulteriori informazioni sull&#39;infrastruttura Experience Platform supportata, consulta la [Panoramica multi-cloud di Experience Platform](../../../../../landing/multi-cloud.md).
 
-Per informazioni su come collegare l&#39;origine [!DNL Salesforce] all&#39;Experience Platform su AWS, leggere la procedura seguente.
+Per informazioni su come collegare l&#39;origine [!DNL Salesforce] ad Experience Platform su AWS, leggere i passaggi seguenti.
 
 ### Prerequisiti
 
-Per informazioni su come configurare l&#39;account [!DNL Salesforce] per connettersi all&#39;Experience Platform su AWS, leggere la [[!DNL Salesforce] panoramica](../../../../connectors/crm/salesforce.md#aws).
+Per informazioni su come configurare l&#39;account [!DNL Salesforce] per connettersi ad Experience Platform su AWS, leggere la [[!DNL Salesforce] panoramica](../../../../connectors/crm/salesforce.md#aws).
 
 ### Crea una connessione di base per [!DNL Salesforce] su Experience Platform su AWS
 
-Per creare una connessione di base e connettere l&#39;account [!DNL Salesforce] a Experience Platform su AWS, effettuare una richiesta POST all&#39;endpoint `/connections` e fornire i valori appropriati per le credenziali.
+Per creare una connessione di base e connettere l&#39;account [!DNL Salesforce] ad Experience Platform su AWS, effettuare una richiesta POST all&#39;endpoint `/connections` e fornire i valori appropriati per le credenziali.
 
 **Formato API**
 
@@ -248,7 +248,7 @@ curl -X POST \
   }'
 ```
 
-Per informazioni su come recuperare [!DNL Salesforce] `jwtToken`, leggere la guida in [come configurare un&#39;origine  [!DNL Salesforce] per la connessione a Experience Platform su AWS](../../../../connectors/crm/salesforce.md#aws).
+Per informazioni su come recuperare [!DNL Salesforce] `jwtToken`, leggere la guida in [come configurare un&#39;origine [!DNL Salesforce] per la connessione ad Experience Platform su AWS](../../../../connectors/crm/salesforce.md#aws).
 
 +++
 
@@ -269,7 +269,7 @@ In caso di esito positivo, la risposta restituisce la connessione di base appena
 
 ### Verifica lo stato della connessione
 
-Per verificare lo stato della connessione, effettuare una richiesta di GET all&#39;endpoint `/connections` e fornire l&#39;ID connessione di base generato nel passaggio di creazione.
+Per verificare lo stato della connessione, effettuare una richiesta GET all&#39;endpoint `/connections` e fornire l&#39;ID connessione di base generato nel passaggio di creazione.
 
 **Formato API**
 
@@ -394,4 +394,4 @@ Nella risposta seguente vengono visualizzate le informazioni per l&#39;ID connes
 Seguendo questa esercitazione, è stata creata una connessione di base [!DNL Salesforce] utilizzando l&#39;API [!DNL Flow Service]. Puoi utilizzare questo ID connessione di base nelle seguenti esercitazioni:
 
 * [Esplora la struttura e il contenuto delle tabelle dati utilizzando l&#39;API  [!DNL Flow Service] ](../../explore/tabular.md)
-* [Crea un flusso di dati per portare i dati CRM in Platform utilizzando l&#39;API  [!DNL Flow Service] ](../../collect/crm.md)
+* [Crea un flusso di dati per portare i dati CRM in Experience Platform utilizzando l&#39;API  [!DNL Flow Service] ](../../collect/crm.md)

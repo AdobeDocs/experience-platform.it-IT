@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;Oracle archiviazione oggetti;oracle archiviazione oggetti
+keywords: Experience Platform;home;argomenti comuni;Oracle Object Storage;oracle object storage
 solution: Experience Platform
-title: Creare un Oracle di connessione Source Object Storage nell’interfaccia utente
+title: Creare una connessione Source Oracle Object Storage nell’interfaccia utente
 type: Tutorial
-description: Scopri come creare una connessione sorgente di archiviazione oggetti di Oracle utilizzando l’interfaccia utente di Adobe Experience Platform.
+description: Scopri come creare una connessione sorgente di Oracle Object Storage utilizzando l’interfaccia utente di Adobe Experience Platform.
 exl-id: 32284163-5dde-4171-8977-f76ceeebcef2
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '454'
+source-wordcount: '459'
 ht-degree: 1%
 
 ---
@@ -20,8 +20,8 @@ Questo tutorial descrive i passaggi per la creazione di una connessione di origi
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Origini](../../../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
-* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Origini](../../../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Experience Platform.
+* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Experience Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 ### Raccogli le credenziali richieste
 
@@ -37,11 +37,11 @@ In per connettersi a [!DNL Oracle Object Storage], è necessario fornire i valor
 
 Per ulteriori informazioni su come ottenere questi valori, fare riferimento alla [Guida all&#39;autenticazione di Oracle Object Storage](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials).
 
-Dopo aver raccolto le credenziali richieste, puoi creare un nuovo account Oracle Object Storage per connettersi a Platform seguendo la procedura riportata di seguito.
+Dopo aver raccolto le credenziali richieste, puoi creare un nuovo account Oracle Object Storage per connettersi ad Experience Platform seguendo la procedura riportata di seguito.
 
-## Connessione a Oracle Object Storage
+## Connessione ad Oracle Object Storage
 
-Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Nella schermata [!UICONTROL Catalogo] sono visualizzate diverse origini con cui è possibile creare un account.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Nella schermata [!UICONTROL Catalogo] sono visualizzate diverse origini con cui è possibile creare un account.
 
 Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare la fonte specifica che si desidera utilizzare utilizzando la barra di ricerca.
 
@@ -63,4 +63,4 @@ Se stai creando un nuovo account, seleziona **[!UICONTROL Nuovo account]**, quin
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai stabilito una connessione al tuo account [!DNL Oracle Object Storage]. Ora puoi passare alla prossima esercitazione su [configurazione di un flusso di dati per portare dati dall&#39;archiviazione cloud in Platform](../../dataflow/batch/cloud-storage.md).
+Seguendo questa esercitazione, hai stabilito una connessione al tuo account [!DNL Oracle Object Storage]. Ora puoi passare alla prossima esercitazione su [configurazione di un flusso di dati per portare dati dall&#39;archiviazione cloud in Experience Platform](../../dataflow/batch/cloud-storage.md).

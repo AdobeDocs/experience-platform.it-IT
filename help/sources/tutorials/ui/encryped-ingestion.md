@@ -3,9 +3,9 @@ title: Acquisire dati crittografati nel Workspace dell’interfaccia utente Sour
 description: Scopri come acquisire i dati crittografati nell’area di lavoro dell’interfaccia utente delle origini.
 badge: Beta
 exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
-source-git-commit: 70bfebc747c7e6267939eb313048cb2d0e132202
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1456'
+source-wordcount: '1457'
 ht-degree: 6%
 
 ---
@@ -22,10 +22,10 @@ Leggi questa guida per scoprire come acquisire dati crittografati con origini ba
 
 ## Introduzione
 
-Prima di continuare con questa esercitazione, leggi i seguenti documenti per comprendere meglio le funzioni e i concetti di questo Experience Platform.
+Prima di continuare con questa esercitazione, leggi i seguenti documenti per comprendere meglio le funzioni e i concetti di Experience Platform seguenti.
 
 * [Origini](../../home.md): utilizza le origini in Experience Platform per acquisire dati da un&#39;applicazione Adobe o da un&#39;origine dati di terze parti.
-* [Flussi dati](../../../dataflows/home.md): i flussi dati sono rappresentazioni di processi di dati che spostano i dati in Experience Platform. Puoi utilizzare l’area di lavoro origini per creare flussi di dati che acquisiscono dati da una determinata origine a Experience Platform.
+* [Flussi dati](../../../dataflows/home.md): i flussi dati sono rappresentazioni dei processi di dati che spostano i dati in Experience Platform. Puoi utilizzare l’area di lavoro origini per creare flussi di dati che acquisiscono dati da una determinata origine in Experience Platform.
 * [Sandbox](../../../sandboxes/home.md): utilizza le sandbox in Experience Platform per creare partizioni virtuali tra le istanze Experience Platform e creare ambienti dedicati allo sviluppo o alla produzione.
 
 ### Profilo di alto livello
@@ -34,7 +34,7 @@ Prima di continuare con questa esercitazione, leggi i seguenti documenti per com
    * Facoltativamente, puoi anche creare una coppia di chiavi di verifica dei segni personalizzata per fornire un ulteriore livello di sicurezza ai dati crittografati.
 * Utilizza la chiave pubblica della coppia di chiavi di crittografia per crittografare i dati.
 * Inserisci i dati crittografati nell’archiviazione cloud. Durante questo passaggio, devi anche assicurarti di disporre di un file di esempio dei tuoi dati nell’archiviazione cloud che possa essere utilizzato come riferimento per mappare i dati di origine su uno schema Experience Data Model (XDM).
-* Utilizza l’origine del batch di archiviazione cloud e avvia il processo di acquisizione dei dati nell’area di lavoro origini nell’interfaccia utente di Experience Platform.
+* Utilizza l’origine del batch di archiviazione cloud e inizia il processo di acquisizione dei dati nell’area di lavoro origini nell’interfaccia utente di Experience Platform.
 * Durante il processo di creazione della connessione di origine, fornisci l’ID della chiave che corrisponde alla chiave pubblica utilizzata per crittografare i dati.
    * Se hai utilizzato anche il meccanismo di coppia di chiavi per la verifica dei segni, devi fornire anche l’ID della chiave per la verifica dei segni che corrisponde ai dati crittografati.
 * Procedi ai passaggi di creazione del flusso di dati.
@@ -52,11 +52,11 @@ Prima di continuare con questa esercitazione, leggi i seguenti documenti per com
 
 Una coppia di chiavi di crittografia è un meccanismo di crittografia asimmetrico costituito da una chiave pubblica e da una chiave privata. La chiave pubblica viene utilizzata per crittografare i dati e la chiave privata per decrittografarli.
 
-Puoi creare la coppia di chiavi di crittografia tramite l’interfaccia utente di Experience Platform. Una volta generata, riceverai una chiave pubblica e un ID di chiave corrispondente. Utilizza la chiave pubblica per crittografare i dati e quindi utilizza l’ID della chiave per confermare la tua identità quando stai acquisendo i dati crittografati. La chiave privata viene automaticamente trasferita in Experience Platform, dove viene archiviata in un archivio protetto e verrà utilizzata solo quando i dati sono pronti per la decrittografia.
+Puoi creare la coppia di chiavi di crittografia tramite l’interfaccia utente di Experience Platform. Una volta generata, riceverai una chiave pubblica e un ID di chiave corrispondente. Utilizza la chiave pubblica per crittografare i dati e quindi utilizza l’ID della chiave per confermare la tua identità quando stai acquisendo i dati crittografati. La chiave privata viene inviata automaticamente ad Experience Platform, dove viene archiviata in un archivio protetto, e verrà utilizzata solo quando i dati sono pronti per la decrittografia.
 
 >[!ENDSHADEBOX]
 
-Nell&#39;interfaccia utente di Platform, passa all&#39;area di lavoro origini e seleziona [!UICONTROL Coppie di chiavi] dall&#39;intestazione superiore.
+Nell&#39;interfaccia utente di Experience Platform, passa all&#39;area di lavoro origini e seleziona [!UICONTROL Coppie di chiavi] dall&#39;intestazione superiore.
 
 ![Catalogo delle origini con l&#39;intestazione &quot;Coppie di chiavi&quot; selezionata.](../../images/tutorials/edi/catalog.png)
 
@@ -91,7 +91,7 @@ Per visualizzare le informazioni su una chiave di crittografia esistente, selezi
 
 **Che cos&#39;è una chiave di verifica della firma?**
 
-Una chiave di verifica del segno è un altro meccanismo di crittografia che coinvolge una chiave privata e una chiave pubblica. In questo caso, puoi creare la coppia di chiavi di verifica della firma e utilizzare la chiave privata per firmare e fornire un ulteriore livello di crittografia ai dati. A questo punto condividerai con Experience Platform la chiave pubblica corrispondente. Durante l’acquisizione, Experience Platform utilizzerà la chiave pubblica per verificare la firma associata alla chiave privata.
+Una chiave di verifica del segno è un altro meccanismo di crittografia che coinvolge una chiave privata e una chiave pubblica. In questo caso, puoi creare la coppia di chiavi di verifica della firma e utilizzare la chiave privata per firmare e fornire un ulteriore livello di crittografia ai dati. Quindi condividerai la chiave pubblica corrispondente con Experience Platform. Durante l’acquisizione, Experience Platform utilizzerà la chiave pubblica per verificare la firma associata alla chiave privata.
 
 >[!ENDSHADEBOX]
 

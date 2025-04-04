@@ -2,9 +2,9 @@
 title: Visualizzatore grafico identità
 description: Un grafo di identità è una mappa delle relazioni tra identità diverse per un particolare cliente, che fornisce una rappresentazione visiva di come il cliente interagisce con il brand su canali diversi.
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1402'
+source-wordcount: '1407'
 ht-degree: 6%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 6%
 
 Un grafo di identità è una mappa delle relazioni tra identità diverse per un particolare cliente, che fornisce una rappresentazione visiva di come il cliente interagisce con il brand su canali diversi. Tutti i grafici dell’identità del cliente vengono gestiti e aggiornati collettivamente da Adobe Experience Platform Identity Service in tempo quasi reale, in risposta all’attività del cliente.
 
-Il visualizzatore del grafico delle identità nell’interfaccia utente di Platform consente di visualizzare e comprendere meglio quali identità dei clienti sono unite tra loro e in quali modi. Il visualizzatore consente di trascinare e interagire con diverse parti del grafico, consentendoti di esaminare relazioni di identità complesse, eseguire il debug in modo più efficiente e beneficiare di una maggiore trasparenza nell’utilizzo delle informazioni.
+Il visualizzatore del grafico delle identità nell’interfaccia utente di Experience Platform consente di visualizzare e comprendere meglio quali identità dei clienti sono unite tra loro e in quali modi. Il visualizzatore consente di trascinare e interagire con diverse parti del grafico, consentendoti di esaminare relazioni di identità complesse, eseguire il debug in modo più efficiente e beneficiare di una maggiore trasparenza nell’utilizzo delle informazioni.
 
-Il documento seguente illustra come accedere e utilizzare il visualizzatore del grafico delle identità nell’interfaccia utente di Platform.
+Il documento seguente illustra come accedere e utilizzare il visualizzatore del grafico delle identità nell’interfaccia utente di Experience Platform.
 
 ## Video tutorial
 
@@ -38,9 +38,9 @@ L’utilizzo del visualizzatore del grafo delle identità richiede una comprensi
 
 ## Accedere al visualizzatore del grafico delle identità {#access-identity-graph-viewer}
 
-Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Identità]** nell&#39;area di navigazione a sinistra, quindi seleziona **[!UICONTROL Grafico identità]** dall&#39;elenco di schede nell&#39;intestazione.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Identità]** nell&#39;area di navigazione a sinistra, quindi seleziona **[!UICONTROL Grafico identità]** dall&#39;elenco di schede nell&#39;intestazione.
 
-![Area di lavoro Identità nell&#39;interfaccia utente di Experience Platform, con la scheda Grafo identità selezionata.](../images/graph-viewer/identity-graph.png)
+![Area di lavoro Identità nell&#39;interfaccia utente di Experience Platform, con la scheda Grafico identità selezionata.](../images/graph-viewer/identity-graph.png)
 
 Per visualizzare un grafo delle identità, fornisci uno spazio dei nomi delle identità e il relativo valore corrispondente, quindi seleziona **[!UICONTROL Visualizza]**.
 
@@ -135,7 +135,7 @@ Nella finestra di anteprima, seleziona un’icona di impronta digitale per visua
 
 ## Passaggi successivi
 
-Dopo aver letto questo documento, hai imparato a esplorare i grafici delle identità dei tuoi clienti nell’interfaccia utente di Platform. Per ulteriori informazioni sulle identità in Platform, consulta la [Panoramica del servizio Identity](../home.md)
+Dopo aver letto questo documento, hai imparato a esplorare i grafici delle identità dei tuoi clienti nell’interfaccia utente di Experience Platform. Per ulteriori informazioni sulle identità in Experience Platform, consulta la [Panoramica del servizio Identity](../home.md)
 
 ## Changelog
 

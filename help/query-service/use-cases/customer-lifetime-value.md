@@ -1,23 +1,23 @@
 ---
 title: Tracciamento dei segnali di dati per generare il valore del ciclo di vita del cliente
-description: Questa guida fornisce una dimostrazione end-to-end su come utilizzare Data Distiller e dashboard definiti dall’utente con Real-time Customer Data Platform per misurare e visualizzare il valore del ciclo di vita del cliente.
+description: Questa guida fornisce una dimostrazione end-to-end su come utilizzare Data Distiller e dashboard definiti dall’utente con Real-Time Customer Data Platform per misurare e visualizzare il valore del ciclo di vita del cliente.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1263'
+source-wordcount: '1266'
 ht-degree: 0%
 
 ---
 
 # Tracciare i segnali di dati per generare valore nel ciclo di vita del cliente
 
-Puoi utilizzare Real-time Customer Data Platform per tenere traccia del valore del ciclo di vita del cliente (CLV, Customer Lifetime Value) e visualizzare tale metrica con dashboard definite dall’utente. Utilizzando Data Distiller e dashboard definiti dall’utente, puoi misurare il valore di un cliente per la tua azienda in tutta la relazione. La conoscenza di CLV consente di sviluppare strategie aziendali per acquisire nuovi clienti mantenendo quelli esistenti e mantenendo i margini di profitto.
+Puoi utilizzare Real-Time Customer Data Platform per tenere traccia del valore del ciclo di vita del cliente (CLV, Customer Lifetime Value) e visualizzare tale metrica con dashboard definite dall’utente. Utilizzando Data Distiller e dashboard definiti dall’utente, puoi misurare il valore di un cliente per la tua azienda in tutta la relazione. La conoscenza di CLV consente di sviluppare strategie aziendali per acquisire nuovi clienti mantenendo quelli esistenti e mantenendo i margini di profitto.
 
 L’infografica seguente illustra il ciclo di raccolta, manipolazione, analisi e attuazione dei dati che genera dati ad alte prestazioni per migliorare le campagne di marketing.
 
 ![L&#39;infografica di andata e ritorno dei dati dall&#39;osservazione all&#39;analisi all&#39;azione.](../images/use-cases/infographic-use-case-cycle.png)
 
-Questo caso d’uso end-to-end illustra come acquisire e modificare i segnali di dati per calcolare l’attributo derivato del valore del ciclo di vita del cliente. Questi set di dati derivati possono quindi essere applicati ai dati del profilo di Real-Time CDP e sono disponibili per l’utilizzo con dashboard definiti dall’utente per creare una dashboard per l’analisi approfondita. Tramite Data Distiller, puoi estendere il modello dati di Real-Time CDP Insights e utilizzare i set di dati derivati da CLV e le informazioni della dashboard per creare un nuovo pubblico e attivarlo nella destinazione desiderata. Questi tipi di pubblico ad alte prestazioni possono quindi essere utilizzati per sviluppare la tua prossima campagna di marketing.
+Questo caso d’uso end-to-end illustra come acquisire e modificare i segnali di dati per calcolare l’attributo derivato del valore del ciclo di vita del cliente. Questi set di dati derivati possono quindi essere applicati ai dati del profilo di Real-Time CDP e sono disponibili per l’utilizzo con dashboard definiti dall’utente per creare una dashboard per l’analisi di insight. Tramite Data Distiller, puoi estendere il modello dati di Real-Time CDP Insights e utilizzare i set di dati derivati da CLV e le informazioni della dashboard per creare un nuovo pubblico e attivarlo nella destinazione desiderata. Questi tipi di pubblico ad alte prestazioni possono quindi essere utilizzati per sviluppare la tua prossima campagna di marketing.
 
 Questa guida è stata progettata per aiutarti a comprendere meglio la customer experience misurando i segnali di dati tra i punti di contatto chiave che guidano CLV e implementando un caso d’uso simile nell’ambiente. L’intero processo è riassunto nell’immagine seguente.
 
@@ -51,12 +51,12 @@ Successivamente, devi creare un modello dati personalizzato o estendere un model
 
 * Crea un modello per la generazione di rapporti di approfondimenti con Data Distiller.
 * Crea tabelle, relazioni e popola i dati.
-* Eseguire una query sul modello dati di reporting insight.
+* Eseguire una query sul modello dati di reporting di insight.
 * Estendi il modello dati con il modello dati di Real-Time CDP Insights.
 * Crea tabelle dimensione per estendere il modello di reporting insights.
 * Eseguire una query sul modello dati Exaccelerated Store Reporting Insights
 
-Per informazioni su come [personalizzare i modelli di query SQL per creare rapporti Real-Time CDP per i casi d&#39;uso di indicatori di prestazioni chiave (KPI) e marketing, consulta la documentazione del modello dati di Real-time Customer Data Platform Insights](../../dashboards/data-models/cdp-insights-data-model-b2c.md).
+Per informazioni su come [personalizzare i modelli di query SQL per creare rapporti Real-Time CDP per i casi d&#39;uso di indicatori di prestazioni chiave (KPI) e marketing, consulta la documentazione del modello dati di Real-Time Customer Data Platform Insights](../../dashboards/data-models/cdp-insights-data-model-b2c.md).
 
 Assicurati di impostare una pianificazione per aggiornare il modello dati personalizzato a intervalli regolari. In questo modo i dati vengono reinseriti come parte della pipeline di acquisizione in base alle esigenze e popolano le dashboard definite dall’utente. Per informazioni su come impostare la pianificazione, consulta la [guida alla pianificazione delle query](../ui/query-schedules.md#create-schedule).
 
@@ -73,7 +73,7 @@ Di seguito sono riportati alcuni esempi di widget CLV personalizzati che utilizz
 
 ## Creare e attivare tipi di pubblico ad alte prestazioni {#create-and-activate-audiences}
 
-Il passaggio successivo consiste nel creare una definizione di segmento e generare tipi di pubblico dai dati dei profili cliente in tempo reale. Per informazioni su come [creare e attivare tipi di pubblico in Platform](../../segmentation/ui/segment-builder.md), consulta la guida dell&#39;interfaccia utente di Segment Builder. La guida fornisce sezioni su come:
+Il passaggio successivo consiste nel creare una definizione di segmento e generare tipi di pubblico dai dati dei profili cliente in tempo reale. Per informazioni su come [creare e attivare tipi di pubblico in Experience Platform](../../segmentation/ui/segment-builder.md), consulta la guida dell&#39;interfaccia utente di Segment Builder. La guida fornisce sezioni su come:
 
 * Crea definizioni di segmenti utilizzando una combinazione di attributi, eventi e tipi di pubblico esistenti come blocchi predefiniti.
 * Utilizza l’area di lavoro e i contenitori del generatore di regole per controllare l’ordine in cui vengono eseguite le regole di segmentazione.
@@ -85,9 +85,9 @@ In alternativa, è disponibile anche un&#39;esercitazione video [per la generazi
 
 ## Attivare il pubblico per una campagna e-mail {#activate-audience-for-campaign}
 
-Una volta creato il pubblico, puoi attivarlo in una destinazione. Platform supporta diversi provider di servizi e-mail (ESP) che consentono di gestire le attività di marketing e-mail, ad esempio l’invio di campagne e-mail promozionali.
+Una volta creato il pubblico, puoi attivarlo in una destinazione. Experience Platform supporta diversi provider di servizi e-mail (ESP) che consentono di gestire le attività di marketing e-mail, ad esempio l’invio di campagne e-mail promozionali.
 
-Controlla la [panoramica delle destinazioni di e-mail marketing](../../destinations/catalog/email-marketing/overview.md#connect-destination) per ottenere un elenco delle destinazioni supportate in cui desideri esportare i dati (ad esempio la pagina [Oracle Eloqua](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)).
+Controlla la [panoramica delle destinazioni di e-mail marketing](../../destinations/catalog/email-marketing/overview.md#connect-destination) per ottenere un elenco delle destinazioni supportate in cui desideri esportare i dati (ad esempio la [pagina Oracle Eloqua](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)).
 
 ## Visualizzare i dati di analisi restituiti dalla campagna {#post-campaign-data-analysis}
 
@@ -107,11 +107,11 @@ Queste informazioni possono a loro volta aiutarti a sviluppare le tue strategie 
 
 ## Passaggi successivi
 
-La lettura di questo documento consente di comprendere meglio come utilizzare Real-time Customer Data Platform per monitorare e visualizzare la metrica CLV (Customer Lifetime Value). Per ulteriori informazioni sui molti casi d’uso aziendali risolti tramite Query Service e l’Experience Platform, si consiglia di leggere i seguenti documenti:
+La lettura di questo documento consente di comprendere meglio come utilizzare Real-Time Customer Data Platform per monitorare e visualizzare la metrica CLV (Customer Lifetime Value). Per ulteriori informazioni sui molti casi d’uso aziendali risolti tramite Query Service e Experience Platform, si consiglia di leggere i seguenti documenti:
 
 * [Un esempio end-to-end di un caso d’uso di navigazione abbandonato che dimostra la versatilità e i vantaggi di Query Service.](./abandoned-browse.md)
 * [Come utilizzare Query Service e l’apprendimento automatico per determinare e filtrare l’attività bot dal traffico autentico dei visitatori del sito web online](./bot-filtering.md)
-* [Come eseguire una corrispondenza sui dati di Platform che combini i risultati di più set di dati facendo corrispondere approssimativamente una stringa scelta.](./fuzzy-match.md)
+* [Come eseguire una corrispondenza sui dati di Experience Platform che combina i risultati di più set di dati approssimativamente corrispondendo una stringa di tua scelta.](./fuzzy-match.md)
 
 <!-- "Data signals are actions taken by consumers while online that offer clues about intent that can be acted upon. This includes anything from visiting a website to filling out a change of address or clicking an ad."  -->
 

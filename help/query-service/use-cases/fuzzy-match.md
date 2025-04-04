@@ -1,10 +1,10 @@
 ---
 title: Corrispondenza fuzzy in Query Service
-description: Scopri come eseguire una corrispondenza sui dati di Platform che combina i risultati di più set di dati approssimativamente corrispondendo una stringa di tua scelta.
+description: Scopri come eseguire una corrispondenza sui dati di Experience Platform che combina i risultati di più set di dati approssimativamente corrispondendo una stringa di tua scelta.
 exl-id: ec1e2dda-9b80-44a4-9fd5-863c45bc74a7
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '813'
+source-wordcount: '815'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ cur = conn.cursor()
 
 L&#39;istanza [!DNL Jupyter Notebook] è ora connessa a Query Service. Se la connessione ha esito positivo, non viene visualizzato alcun messaggio. Se la connessione non è riuscita, viene visualizzato un errore.
 
-### Dati Draw dal set di dati Luma {#luma-dataset}
+### Disegnare dati dal set di dati Luma {#luma-dataset}
 
 I dati per l’analisi vengono estratti dal primo set di dati con i seguenti comandi. Per brevità, gli esempi sono stati limitati ai primi 10 risultati della colonna.
 
@@ -96,7 +96,7 @@ array(['Deluxe King Or Queen Room', 'Kona Tower City / Mountain View',
 
 +++
 
-### Dati Draw dal set di dati Acme {#acme-dataset}
+### Disegnare dati dal set di dati Acme {#acme-dataset}
 
 I dati per l’analisi vengono ora estratti dal secondo set di dati con i seguenti comandi. Anche in questo caso, per brevità, gli esempi sono stati limitati ai primi 10 risultati della colonna.
 
@@ -350,7 +350,7 @@ Seleziona **Output** per visualizzare i risultati di questo join.
 
 +++
 
-### Salva risultati di corrispondenza approssimativi in Platform {#save-to-platform}
+### Salva risultati di corrispondenza approssimativi in Experience Platform {#save-to-platform}
 
 Infine, i risultati della corrispondenza fuzzy possono essere salvati come set di dati da utilizzare in Adobe Experience Platform utilizzando SQL.
 

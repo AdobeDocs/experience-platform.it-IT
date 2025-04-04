@@ -2,16 +2,16 @@
 title: Messaggi di errore del servizio Flusso
 description: Scopri i messaggi di errore che possono verificarsi quando utilizzi il servizio Flusso per le origini.
 exl-id: af79c547-25d0-459a-8de7-eb14206a8694
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1667'
+source-wordcount: '1668'
 ht-degree: 35%
 
 ---
 
 # Messaggi di errore del servizio Flusso
 
-Il Servizio Flusso viene utilizzato per raccogliere e centralizzare i dati dei clienti da diverse origini all’interno di Platform. Il servizio fornisce un’interfaccia utente e un’API RESTful che consentono di impostare facilmente le connessioni sorgente a vari provider di dati. Queste connessioni di origine ti consentono di autenticare i sistemi di terze parti, impostare i tempi per le esecuzioni dell’acquisizione e gestire la velocità effettiva di acquisizione dei dati.
+Il Servizio Flusso viene utilizzato per raccogliere e centralizzare i dati dei clienti da diverse origini all’interno di Experience Platform. Il servizio fornisce un’interfaccia utente e un’API RESTful che consentono di impostare facilmente le connessioni sorgente a vari provider di dati. Queste connessioni di origine ti consentono di autenticare i sistemi di terze parti, impostare i tempi per le esecuzioni dell’acquisizione e gestire la velocità effettiva di acquisizione dei dati.
 
 Questo documento fornisce un catalogo di messaggi di errore, descrizioni e risoluzioni consigliate relativi al servizio Flow.
 

@@ -4,16 +4,16 @@ description: Scopri come configurare l’app CMK con il tenant di Azure e inviar
 role: Developer
 feature: API, Privacy
 exl-id: c9a1888e-421f-4bb4-b4c7-968fb1d61746
-source-git-commit: 53598f86e1876bc6d1807e95a26584da4d7db3f2
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1029'
+source-wordcount: '1035'
 ht-degree: 1%
 
 ---
 
 # Configurare e configurare le chiavi gestite dal cliente per Azure utilizzando l’API
 
-Questo documento descrive le istruzioni specifiche di Azure per abilitare le chiavi gestite dal cliente (CMK) in Adobe Experience Platform utilizzando l’API. Per istruzioni su come completare questo processo utilizzando l&#39;interfaccia utente per le istanze della piattaforma ospitata da Azure, fare riferimento al [documento di installazione CMK per l&#39;interfaccia utente](./ui-set-up.md).
+Questo documento descrive le istruzioni specifiche di Azure per abilitare le chiavi gestite dal cliente (CMK) in Adobe Experience Platform utilizzando l’API. Per istruzioni su come completare questo processo utilizzando l&#39;interfaccia utente per le istanze di Experience Platform ospitate da Azure, fare riferimento al documento di installazione CMK [UI](./ui-set-up.md).
 
 Per istruzioni specifiche per AWS, consulta la [Guida all&#39;installazione di AWS](../aws/ui-set-up.md).
 
@@ -23,7 +23,7 @@ Per visualizzare e visitare la sezione [!UICONTROL Crittografia] in Adobe Experi
 
 Per ulteriori informazioni sull&#39;assegnazione di ruoli e autorizzazioni in Experience Platform, consulta la [documentazione sulla configurazione delle autorizzazioni](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html).
 
-Per abilitare CMK per le istanze della piattaforma ospitata da Azure, è necessario configurare l&#39;insieme di credenziali delle chiavi [[!DNL Azure] ](./azure-key-vault-config.md) con le impostazioni seguenti:
+Per abilitare CMK per le istanze Experience Platform ospitate da Azure, è necessario configurare l&#39;insieme di credenziali delle chiavi [[!DNL Azure] ](./azure-key-vault-config.md) con le impostazioni seguenti:
 
 * [Abilita protezione eliminazione](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
 * [Abilita eliminazione temporanea](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
@@ -36,7 +36,7 @@ Dopo aver configurato l&#39;insieme di credenziali delle chiavi, il passaggio su
 
 ### Introduzione
 
-La registrazione dell’app CMK richiede di effettuare chiamate alle API di Platform. Per informazioni dettagliate su come raccogliere le intestazioni di autenticazione necessarie per effettuare queste chiamate, consulta la [Guida all&#39;autenticazione API di Platform](../../../api-authentication.md).
+La registrazione dell’app CMK richiede di effettuare chiamate alle API di Experience Platform. Per informazioni dettagliate su come raccogliere le intestazioni di autenticazione necessarie per effettuare queste chiamate, consulta la [guida all&#39;autenticazione API di Experience Platform](../../../api-authentication.md).
 
 Mentre la guida all&#39;autenticazione fornisce istruzioni su come generare un valore univoco per l&#39;intestazione richiesta `x-api-key` richiesta richiesta, tutte le operazioni API in questa guida utilizzano il valore statico `acp_provisioning`. È comunque necessario fornire valori personalizzati per `{ACCESS_TOKEN}` e `{ORG_ID}`.
 
@@ -44,7 +44,7 @@ In tutte le chiamate API mostrate in questa guida, `platform.adobe.io` viene uti
 
 ### Recuperare un URL di autenticazione {#fetch-authentication-url}
 
-GET Per avviare il processo di registrazione, effettua una richiesta all’endpoint di registrazione dell’app per recuperare l’URL di autenticazione richiesto per la tua organizzazione.
+Per avviare il processo di registrazione, effettua una richiesta GET all’endpoint di registrazione dell’app per recuperare l’URL di autenticazione richiesto per l’organizzazione.
 
 **Richiesta**
 
@@ -94,7 +94,7 @@ Nella schermata successiva, scegli **[!DNL Select members]** per aprire una fine
 >
 >Se l&#39;applicazione non è presente nell&#39;elenco, l&#39;entità servizio non è stata accettata nel tenant. Per assicurarsi di disporre dei privilegi corretti, rivolgersi all&#39;amministratore o al rappresentante [!DNL Azure].
 
-## Abilita la configurazione della chiave di crittografia su Experience Platform {#send-to-adobe}
+## Abilitare la configurazione della chiave di crittografia in Experience Platform {#send-to-adobe}
 
 Dopo aver installato l&#39;app CMK in [!DNL Azure], puoi inviare l&#39;identificatore della chiave di crittografia ad Adobe. Selezionare **[!DNL Keys]** nel menu di navigazione a sinistra, seguito dal nome della chiave che si desidera inviare.
 
@@ -114,7 +114,7 @@ Dopo aver ottenuto l’URI dell’insieme di credenziali delle chiavi, puoi invi
 
 >[!NOTE]
 >
->Con Adobe vengono memorizzati solo l’insieme di credenziali delle chiavi e il nome della chiave, non la versione della chiave.
+>Solo l’insieme di credenziali delle chiavi e il nome della chiave sono memorizzati in Adobe, non nella versione della chiave.
 
 **Richiesta**
 
@@ -221,13 +221,13 @@ curl -X GET \
 
 L&#39;attributo `status` può avere uno dei quattro valori con i seguenti significati:
 
-1. `RUNNING`: verifica che Platform possa accedere all&#39;insieme di credenziali chiave e chiave.
+1. `RUNNING`: verifica che Experience Platform possa accedere all&#39;insieme di credenziali chiave e chiave.
 1. `UPDATE_EXISTING_RESOURCES`: il sistema sta aggiungendo l&#39;insieme di credenziali e il nome della chiave agli archivi dati in tutte le sandbox dell&#39;organizzazione.
 1. `COMPLETED`: l&#39;insieme di credenziali delle chiavi e il nome della chiave sono stati aggiunti agli archivi dati.
 1. `FAILED`: si è verificato un problema, principalmente relativo alla chiave, all&#39;insieme di credenziali delle chiavi o alla configurazione di app multi-tenant.
 
 ## Passaggi successivi
 
-Completando i passaggi precedenti, hai abilitato correttamente la CMK per la tua organizzazione. Per le istanze della piattaforma ospitata da Azure, i dati acquisiti negli archivi dati primari verranno ora crittografati e decrittografati utilizzando le chiavi nell&#39;insieme di credenziali delle chiavi [!DNL Azure].
+Completando i passaggi precedenti, hai abilitato correttamente la CMK per la tua organizzazione. Per le istanze Experience Platform ospitate da Azure, i dati acquisiti negli archivi dati primari verranno ora crittografati e decrittografati utilizzando le chiavi nell&#39;insieme di credenziali delle chiavi [!DNL Azure].
 
 Per ulteriori informazioni sulla crittografia dei dati in Adobe Experience Platform, consulta la [documentazione sulla crittografia](../../encryption.md).

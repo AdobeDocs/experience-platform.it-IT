@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;Oracle archiviazione oggetti;oracle archiviazione oggetti
+keywords: Experience Platform;home;argomenti comuni;Oracle Object Storage;oracle object storage
 solution: Experience Platform
-title: Panoramica del connettore Source Oracle Object Storage
+title: Panoramica del connettore Source di Oracle Object Storage
 description: Scopri come collegare Oracle Object Storage a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 5e8b85c8-9f01-49a6-9556-7b9c7518fb4b
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '421'
+source-wordcount: '425'
 ht-degree: 0%
 
 ---
 
 # Connettore Oracle Object Storage
 
-Adobe Experience Platform fornisce connettività nativa per i provider di cloud come AWS, [!DNL Google Cloud Platform], consentendo di inserire in Platform i dati di tali sistemi per l’utilizzo in servizi e destinazioni downstream.
+Adobe Experience Platform fornisce connettività nativa per i provider cloud come AWS, [!DNL Google Cloud Platform], consentendo di inserire in Experience Platform i dati di tali sistemi per l&#39;utilizzo in servizi e destinazioni downstream.
 
-Le origini di archiviazione cloud possono inserire i dati in Platform senza dover scaricare, formattare o caricare. I dati acquisiti possono essere formattati come XDM JSON, XDM Parquet o delimitati. Ogni fase del processo viene integrata nel flusso di lavoro delle origini. Platform consente di inserire dati da [!DNL Oracle Object Storage] tramite batch.
+Le origini di archiviazione cloud possono inserire i dati in Experience Platform senza dover scaricare, formattare o caricare. I dati acquisiti possono essere formattati come XDM JSON, XDM Parquet o delimitati. Ogni fase del processo viene integrata nel flusso di lavoro delle origini. Experience Platform consente di inserire dati da [!DNL Oracle Object Storage] tramite batch.
 
 ## ELENCO CONSENTITI di indirizzo IP
 
@@ -32,17 +32,17 @@ Di seguito è riportato un elenco di vincoli di cui è necessario tenere conto p
 - Caratteri di percorso URL non validi non consentiti. I punti di codice come `\uE000`, sebbene validi nei nomi di file NTFS, non sono caratteri Unicode validi. Inoltre, alcuni caratteri ASCII o Unicode non sono consentiti, ad esempio i caratteri di controllo (da 0x00 a 0x1F, \u0081, ecc.). Per le regole che regolano le stringhe Unicode in HTTP/1.1, vedere [RFC 2616, Sezione 2.2: Regole di base](https://www.ietf.org/rfc/rfc2616.txt) e [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
 - Non sono consentiti i seguenti nomi di file: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, carattere punto (.) e due caratteri punto (..).
 
-## Connetti [!DNL Oracle Object Storage] a Platform
+## Connetti [!DNL Oracle Object Storage] ad Experience Platform
 
 La documentazione seguente fornisce informazioni su come collegare Oracle Object Storage a Adobe Experience Platform utilizzando le API o l’interfaccia utente:
 
 ### Utilizzo delle API
 
-- [Creare una connessione di base di Oracle Object Storage utilizzando l&#39;API del servizio Flow](../../tutorials/api/create/cloud-storage/oracle-object-storage.md)
+- [Creare una connessione di base di Oracle Object Storage utilizzando l’API del servizio Flow](../../tutorials/api/create/cloud-storage/oracle-object-storage.md)
 - [Esplorare la struttura dati e il contenuto di un’origine di archiviazione cloud utilizzando l’API del servizio Flusso](../../tutorials/api/explore/cloud-storage.md)
 - [Creare un flusso di dati per un’origine di archiviazione cloud utilizzando l’API del servizio Flusso](../../tutorials/api/collect/cloud-storage.md)
 
 ### Utilizzo dell’interfaccia utente
 
-- [Creare una connessione sorgente Oracle Object Storage nell’interfaccia utente](../../tutorials/ui/create/cloud-storage/oracle-object-storage.md)
+- [Creare una connessione sorgente di Oracle Object Storage nell’interfaccia utente](../../tutorials/ui/create/cloud-storage/oracle-object-storage.md)
 - [Creare un flusso di dati per una connessione all’archiviazione cloud nell’interfaccia utente](../../tutorials/ui/dataflow/batch/cloud-storage.md)

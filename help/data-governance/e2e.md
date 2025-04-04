@@ -2,9 +2,9 @@
 title: Guida end-to-end alla governance dei dati
 description: Segui il processo completo per applicare i vincoli di utilizzo dei dati per campi e set di dati in Adobe Experience Platform.
 exl-id: f18ae032-027a-4c97-868b-e04753237c81
-source-git-commit: 9f3fa696ed60ce85fa93515e39716d89ec80f1ec
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1882'
+source-wordcount: '1885'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ Per controllare quali azioni di marketing possono essere eseguite su determinati
 
 Dopo aver completato la configurazione delle etichette, dei criteri di governance e delle azioni di marketing, puoi [verificare l&#39;applicazione dei criteri](#test) per assicurarti che funzioni come previsto.
 
-Questa guida illustra l’intero processo di configurazione e applicazione di un criterio di governance dei dati nell’interfaccia utente di Platform. Per informazioni più dettagliate sulle funzioni utilizzate in questa guida, consulta la documentazione di panoramica sui seguenti argomenti:
+Questa guida illustra l’intero processo di configurazione e applicazione di un criterio di governance dei dati nell’interfaccia utente di Experience Platform. Per informazioni più dettagliate sulle funzioni utilizzate in questa guida, consulta la documentazione di panoramica sui seguenti argomenti:
 
 * [Governance dei dati Adobe Experience Platform](./home.md)
 * [Etichette di utilizzo dei dati](./labels/overview.md)
@@ -28,13 +28,13 @@ Questa guida illustra l’intero processo di configurazione e applicazione di un
 
 >[!NOTE]
 >
->Questa guida illustra come impostare e applicare i criteri per l’utilizzo o l’attivazione dei dati in Experience Platform. Se stai tentando di limitare l&#39;**accesso** ai dati stessi per alcuni utenti di Platform all&#39;interno della tua organizzazione, consulta invece la guida end-to-end sul [controllo dell&#39;accesso basato su attributi](../access-control/abac/end-to-end-guide.md). Anche il controllo dell’accesso basato su attributi utilizza etichette e criteri, ma per un caso d’uso diverso dalla governance dei dati.
+>Questa guida illustra come impostare e applicare i criteri per l’utilizzo o l’attivazione dei dati in Experience Platform. Se stai tentando di limitare l&#39;**accesso** ai dati stessi per alcuni utenti di Experience Platform all&#39;interno della tua organizzazione, consulta invece la guida end-to-end sul [controllo dell&#39;accesso basato su attributi](../access-control/abac/end-to-end-guide.md). Anche il controllo dell’accesso basato su attributi utilizza etichette e criteri, ma per un caso d’uso diverso dalla governance dei dati.
 
 ## Applica etichette {#labels}
 
 >[!IMPORTANT]
 >
->Le etichette non possono più essere applicate ai singoli campi a livello di set di dati. Questo flusso di lavoro è stato dichiarato obsoleto a favore dell’applicazione di etichette a livello di schema. Tuttavia, puoi ancora etichettare un intero set di dati. Eventuali etichette applicate in precedenza ai singoli campi dei set di dati continueranno a essere supportate tramite l’interfaccia utente di Platform fino al 31 maggio 2024. Per garantire che le etichette siano coerenti in tutti gli schemi, tutte le etichette precedentemente associate ai campi a livello di set di dati devono essere migrate a livello di schema da te nel corso dell’anno successivo. Per istruzioni su come eseguire questa operazione, consulta la sezione sulla [migrazione delle etichette applicate in precedenza](#migrate-labels).
+>Le etichette non possono più essere applicate ai singoli campi a livello di set di dati. Questo flusso di lavoro è stato dichiarato obsoleto a favore dell’applicazione di etichette a livello di schema. Tuttavia, puoi ancora etichettare un intero set di dati. Eventuali etichette applicate in precedenza ai singoli campi dei set di dati continueranno a essere supportate tramite l’interfaccia utente di Experience Platform fino al 31 maggio 2024. Per garantire che le etichette siano coerenti in tutti gli schemi, tutte le etichette precedentemente associate ai campi a livello di set di dati devono essere migrate a livello di schema da te nel corso dell’anno successivo. Per istruzioni su come eseguire questa operazione, consulta la sezione sulla [migrazione delle etichette applicate in precedenza](#migrate-labels).
 
 È possibile [applicare etichette a uno schema](#schema-labels) in modo che tutti i set di dati basati su tale schema ereditino le stesse etichette. Questo consente di gestire le etichette per la governance dei dati, il consenso e il controllo degli accessi in un’unica posizione. Applicando vincoli di utilizzo dei dati a livello di schema, l’effetto si propaga a valle a tutti i set di dati basati su tale schema. Le etichette applicate a livello di campo dello schema supportano casi di utilizzo di governance dei dati e sono individuabili nell&#39;area di lavoro Set di dati [!UICONTROL Scheda Governance dei dati] nella colonna [!UICONTROL Nome campo] come etichette di sola lettura.
 

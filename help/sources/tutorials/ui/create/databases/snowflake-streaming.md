@@ -1,15 +1,15 @@
 ---
-title: Trasmetti dati dal database del Snowflake all’Experience Platform utilizzando l’interfaccia utente
-description: Scopri come inviare dati dal database Snwoflake all’Experience Platform
+title: Trasmettere dati dal database Snowflake ad Experience Platform utilizzando l’interfaccia utente
+description: Scopri come inviare dati dal database Snwoflake ad Experience Platform
 exl-id: 49d488f1-90d8-452a-9f3e-02afdcc79b09
-source-git-commit: 34b1676ebb5405d73cf37cd786d1e6c26cb8fdaa
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1647'
+source-wordcount: '1648'
 ht-degree: 3%
 
 ---
 
-# Trasmetti dati dal database [!DNL Snowflake] all&#39;Experience Platform utilizzando l&#39;interfaccia utente
+# Trasmetti dati dal database [!DNL Snowflake] ad Experience Platform utilizzando l&#39;interfaccia utente
 
 Scopri come utilizzare l&#39;interfaccia utente per inviare dati dal database [!DNL Snowflake] a Adobe Experience Platform seguendo questa guida.
 
@@ -24,11 +24,11 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di Experie
 
 ### Autenticazione
 
-Leggi la guida sulla [configurazione dei prerequisiti per [!DNL Snowflake] dati in streaming](../../../../connectors/databases/snowflake-streaming.md) per informazioni sui passaggi da completare prima di acquisire i dati in streaming da [!DNL Snowflake] a Experience Platform.
+Leggi la guida sulla [configurazione dei prerequisiti per [!DNL Snowflake] dati in streaming](../../../../connectors/databases/snowflake-streaming.md) per informazioni sui passaggi da completare prima di acquisire i dati in streaming da [!DNL Snowflake] ad Experience Platform.
 
-## Utilizza l&#39;origine [!DNL Snowflake Streaming] per eseguire lo streaming dei dati di [!DNL Snowflake] per l&#39;Experience Platform
+## Utilizza l&#39;origine [!DNL Snowflake Streaming] per inviare dati [!DNL Snowflake] ad Experience Platform
 
-Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
 
 Nella categoria *Database* selezionare **[!DNL Snowflake Streaming]**, quindi **[!UICONTROL Aggiungi dati]**.
 
@@ -36,9 +36,9 @@ Nella categoria *Database* selezionare **[!DNL Snowflake Streaming]**, quindi **
 >
 >Le origini che non dispongono di un account autenticato nel catalogo delle origini visualizzano l&#39;opzione **[!UICONTROL Configura]**. Quando esiste un account autenticato, questa opzione diventa **[!UICONTROL Aggiungi dati]**.
 
-![Catalogo origini nell&#39;interfaccia utente di Experience Platform, con la scheda origine Streaming di Snowflake selezionata.](../../../../images/tutorials/create/snowflake-streaming/catalog.png)
+![Catalogo delle origini nell&#39;interfaccia utente di Experience Platform, con la scheda di origine Streaming Snowflake selezionata.](../../../../images/tutorials/create/snowflake-streaming/catalog.png)
 
-Viene visualizzata la pagina **[!UICONTROL Connetti account Streaming di Snowflake]**. In questa pagina è possibile utilizzare credenziali nuove o esistenti.
+Viene visualizzata la pagina **[!UICONTROL Connetti account Snowflake Streaming]**. In questa pagina è possibile utilizzare credenziali nuove o esistenti.
 
 >[!BEGINTABS]
 
@@ -53,8 +53,8 @@ Al termine, selezionare **[!UICONTROL Connetti all&#39;origine]** e quindi atten
 | Credenziali | Descrizione |
 | --- | --- |
 | Account | Il nome dell&#39;account [!DNL Snowflake]. Per le convenzioni sui nomi degli account, leggere la [[!DNL Snowflake Streaming] guida all&#39;autenticazione](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials). |
-| Data warehouse | Nome del data warehouse [!DNL Snowflake]. I warehouse gestiscono l&#39;esecuzione delle query in [!DNL Snowflake]. Ogni data warehouse [!DNL Snowflake] è indipendente l&#39;uno dall&#39;altro e deve essere accessibile singolarmente per portare i dati all&#39;Experience Platform. |
-| Database | Nome del database [!DNL Snowflake]. Il database contiene i dati da portare all&#39;Experience Platform. |
+| Data warehouse | Nome del data warehouse [!DNL Snowflake]. I warehouse gestiscono l&#39;esecuzione delle query in [!DNL Snowflake]. Ogni data warehouse [!DNL Snowflake] è indipendente l&#39;uno dall&#39;altro e deve essere accessibile singolarmente per portare i dati ad Experience Platform. |
+| Database | Nome del database [!DNL Snowflake]. Il database contiene i dati che desideri portare in Experience Platform. |
 | Schema | (Facoltativo) Lo schema di database associato al tuo account [!DNL Snowflake]. |
 | Nome utente | Il nome utente dell&#39;account [!DNL Snowflake]. |
 | Password | La password per il tuo account [!DNL Snowflake]. |
@@ -76,13 +76,13 @@ Seleziona **[!UICONTROL Avanti]** per procedere.
 
 >[!IMPORTANT]
 >
->* Per poter creare un flusso di dati in streaming, nella tabella sorgente deve esistere una colonna di marca temporale. La marca temporale è necessaria ad Experience Platform per sapere quando verranno acquisiti i dati e quando verranno inviati in streaming i dati incrementali. Puoi aggiungere retroattivamente una colonna timestamp per una connessione esistente e creare un nuovo flusso di dati.
+>* Per poter creare un flusso di dati in streaming, nella tabella sorgente deve esistere una colonna di marca temporale. La marca temporale è necessaria per Experience Platform per sapere quando verranno acquisiti i dati e quando verranno trasmessi i dati incrementali. Puoi aggiungere retroattivamente una colonna timestamp per una connessione esistente e creare un nuovo flusso di dati.
 >
 >* Verificare che il caso dei campi dati nel file di dati di origine di esempio sia conforme alle indicazioni di [!DNL Snowflake] sulla risoluzione dei casi per gli identificatori. Per ulteriori informazioni, leggere il documento [[!DNL Snowflake] sul case dell&#39;identificatore](https://docs.snowflake.com/en/sql-reference/identifiers-syntax#label-identifier-casing).
 
-Viene visualizzato il passaggio [!UICONTROL Seleziona dati]. In questo passaggio, devi selezionare i dati da importare in Experience Platform, configurare marche temporali e fusi orari e fornire un file di dati sorgente di esempio per l’acquisizione di dati non elaborati.
+Viene visualizzato il passaggio [!UICONTROL Seleziona dati]. In questo passaggio, devi selezionare i dati da importare in Experience Platform, configurare marche temporali e fusi orari e fornire un file di dati di origine di esempio per l’acquisizione di dati non elaborati.
 
-Utilizzare la directory del database a sinistra dello schermo e selezionare la tabella che si desidera importare in Experience Platform.
+Utilizza la directory del database a sinistra dello schermo e seleziona la tabella da importare in Experience Platform.
 
 ![Interfaccia di selezione dei dati con una tabella di database selezionata.](../../../../images/tutorials/create/snowflake-streaming/select-table.png)
 

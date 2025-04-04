@@ -5,10 +5,10 @@ breadcrumb-title: Guida all’acquisizione dei dati
 user-guide-description: Trasmetti i dati a Experience Platform tramite l’acquisizione in batch o in streaming.
 feature: Data Ingestion
 role: Developer
-source-git-commit: 1070c34bcd4577fcc5f0ac160196450db3aab9b0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 19%
+source-wordcount: '143'
+ht-degree: 21%
 
 ---
 
@@ -48,4 +48,4 @@ ht-degree: 19%
 - [Connettori Source](source-connectors.md)
 - [Riferimento API per l&#39;acquisizione in batch](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
 - [Riferimento API Streaming Ingestion](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
-- [Note sulla versione della piattaforma](https://experienceleague.adobe.com/it/docs/experience-platform/release-notes/latest)
+- [Note sulla versione di Experience Platform](https://experienceleague.adobe.com/it/docs/experience-platform/release-notes/latest)

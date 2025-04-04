@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari; avvisi;destinazioni
 description: È possibile abbonarsi agli avvisi durante la creazione di un flusso di dati, per ricevere messaggi di avviso relativi allo stato, al completamento o al fallimento dell’esecuzione del flusso.
 title: Iscriviti agli avvisi contestuali sulle destinazioni
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '953'
 ht-degree: 8%
 
 ---
@@ -23,8 +23,8 @@ Questo documento descrive come abbonarsi e ricevere messaggi di avviso per i flu
 Questo documento richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
 * [Destinazioni](../home.md): integrazioni predefinite con le piattaforme di destinazione che consentono l&#39;attivazione diretta dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
-* [Osservabilità](../../observability/home.md): [!DNL Observability Insights] consente di monitorare le attività di Platform tramite l&#39;utilizzo di metriche statistiche e notifiche di eventi.
-   * [Avvisi](../../observability/alerts/overview.md): quando viene raggiunto un determinato set di condizioni nelle operazioni di Platform (ad esempio un potenziale problema quando il sistema supera una soglia), Platform può inviare messaggi di avviso a tutti gli utenti dell&#39;organizzazione che si sono iscritti a tali condizioni.
+* [Osservabilità](../../observability/home.md): [!DNL Observability Insights] consente di monitorare le attività di Experience Platform tramite l&#39;utilizzo di metriche statistiche e notifiche di eventi.
+   * [Avvisi](../../observability/alerts/overview.md): quando viene raggiunto un determinato set di condizioni nelle operazioni di Experience Platform (ad esempio un potenziale problema quando il sistema supera una soglia), Experience Platform può inviare messaggi di avviso a tutti gli utenti dell&#39;organizzazione che sono abbonati.
 
 ## Iscriversi agli avvisi nell’interfaccia utente {#subscribe-destination-alerts}
 
@@ -36,7 +36,7 @@ Questo documento richiede una buona conoscenza dei seguenti componenti di Adobe 
 
 >[!IMPORTANT]
 >
->Devi abilitare le notifiche istantanee delle e-mail per il tuo account Platform per ricevere le notifiche di avviso basate su e-mail per i flussi di dati.
+>Devi abilitare le notifiche istantanee delle e-mail per il tuo account Experience Platform per ricevere le notifiche di avviso basate su e-mail per i flussi di dati.
 
 Puoi abilitare gli avvisi per i flussi di dati durante il passaggio [!UICONTROL Configura nuova destinazione] del flusso di lavoro [connessione di destinazione](connect-destination.md).
 
@@ -51,7 +51,7 @@ Gli avvisi disponibili per i flussi di dati di destinazione sono descritti nella
 
 | Avvisi | Descrizione |
 | --- | --- |
-| Ritardo esecuzione flusso di destinazione | Questo avviso notifica quando l’esecuzione di un flusso di destinazione richiede più di 150 minuti per attivare un pubblico. |
+| Ritardo esecuzione flusso destinazione | Questo avviso notifica quando l’esecuzione di un flusso di destinazione richiede più di 150 minuti per attivare un pubblico. |
 | Errore di esecuzione del flusso di destinazione | Questo avviso notifica quando si verifica un errore durante l’attivazione di un pubblico in una destinazione. |
 | Esecuzione del flusso di destinazione completata | Questo avviso ti avvisa quando un pubblico viene attivato correttamente su una destinazione. |
 | Inizio esecuzione flusso di destinazione | Questo avviso notifica quando l’esecuzione di un flusso di destinazione avvia l’attivazione di un pubblico. |
@@ -63,9 +63,9 @@ Una volta eseguito il flusso di dati di destinazione, puoi ricevere avvisi trami
 
 ### Ricezione di avvisi nell’interfaccia utente {#receiving-alerts-in-ui}
 
-Gli avvisi sono rappresentati nell’interfaccia utente da un’icona di notifica nell’intestazione superiore dell’interfaccia utente di Platform. Seleziona l’icona di notifica per visualizzare messaggi di avviso specifici relativi ai flussi di dati.
+Gli avvisi sono rappresentati nell’interfaccia utente da un’icona di notifica nell’intestazione superiore dell’interfaccia utente di Experience Platform. Seleziona l’icona di notifica per visualizzare messaggi di avviso specifici relativi ai flussi di dati.
 
-![Immagine dell&#39;interfaccia utente con l&#39;icona di notifica nell&#39;Experience Platform](../assets/ui/alerts/notification.png)
+![Immagine dell&#39;interfaccia utente che mostra l&#39;icona di notifica in Experience Platform](../assets/ui/alerts/notification.png)
 
 Viene visualizzato il pannello delle notifiche, con un elenco degli aggiornamenti di stato sul flusso di dati creato.
 

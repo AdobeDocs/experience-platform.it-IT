@@ -3,9 +3,9 @@ keywords: Experience Platform;interfaccia utente;dashboard;dashboard;profili;seg
 title: Creazione di widget personalizzati per dashboard
 description: Questa guida fornisce istruzioni dettagliate per la creazione di widget personalizzati da utilizzare nelle dashboard di Adobe Experience Platform.
 exl-id: 0168ab1e-0b7d-4faf-852e-7208a2b09a04
-source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '979'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 In Adobe Experience Platform, puoi visualizzare e interagire con i dati della tua organizzazione utilizzando più dashboard. È inoltre possibile aggiornare alcune dashboard aggiungendo nuovi widget alla vista dashboard. Oltre ai widget standard forniti da Adobe, puoi anche creare widget personalizzati e condividerli all’interno dell’organizzazione.
 
-Questa guida fornisce istruzioni dettagliate per creare e aggiungere widget personalizzati alle dashboard [!UICONTROL Profili], [!UICONTROL Segmenti] e [!UICONTROL Destinazioni] nell&#39;interfaccia utente di Platform.
+Questa guida fornisce istruzioni dettagliate per la creazione e l&#39;aggiunta di widget personalizzati alle dashboard [!UICONTROL Profili], [!UICONTROL Segmenti] e [!UICONTROL Destinazioni] nell&#39;interfaccia utente di Experience Platform.
 
 >[!NOTE]
 >
@@ -94,7 +94,7 @@ Per visualizzare i widget nascosti, selezionare **[!UICONTROL Mostra widget nasc
 
 >[!WARNING]
 >
->Se si nasconde un widget nella libreria, questo non viene rimosso dalle dashboard dei singoli utenti. Se un widget non deve più essere utilizzato nella tua organizzazione, assicurati di comunicarlo direttamente a tutti gli utenti di Platform in quanto dovranno rimuovere il widget dalle loro dashboard.
+>Se si nasconde un widget nella libreria, questo non viene rimosso dalle dashboard dei singoli utenti. Se un widget non deve più essere utilizzato nella tua organizzazione, assicurati di comunicarlo direttamente a tutti gli utenti di Experience Platform in quanto dovranno rimuovere il widget dalle loro dashboard.
 
 ![Scheda Personalizzata dell&#39;area di lavoro raccolta widget con le opzioni del menu a discesa widget e Mostra widget nascosti evidenziati.](../images/customization/hide-widget.png)
 
@@ -108,7 +108,7 @@ Nella finestra di dialogo **[!UICONTROL Modifica widget]**, puoi modificare il t
 
 >[!WARNING]
 >
->La modifica di un widget nella libreria non aggiorna il widget per i singoli utenti. Se un widget è stato aggiornato, assicurati di comunicarlo direttamente a tutti gli utenti di Platform in quanto dovranno rimuovere il widget obsoleto dalle loro dashboard, quindi seleziona e aggiungi il widget aggiornato dalla libreria di widget.
+>La modifica di un widget nella libreria non aggiorna il widget per i singoli utenti. Se un widget è stato aggiornato, assicurati di comunicarlo direttamente a tutti gli utenti di Experience Platform, in quanto dovranno rimuovere il widget obsoleto dalle loro dashboard, quindi seleziona e aggiungi il widget aggiornato dalla libreria di widget.
 
 ![Finestra di dialogo Modifica widget.](../images/customization/edit-widget.png)
 

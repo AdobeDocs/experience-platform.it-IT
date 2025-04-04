@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;ui;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;schema Registry;schema;schema;schemi;schemi;creare;tipo di dati;tipi di dati;
+keywords: Experience Platform;home;argomenti popolari;ui;XDM;sistema XDM;Experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;schema Registry;schema;schema;schemi;schemi;creare;tipo di dati;tipi di dati;
 solution: Experience Platform
 title: Creare e modificare i tipi di dati tramite l’interfaccia utente
 type: Tutorial
 description: Scopri come creare e modificare i tipi di dati nell’interfaccia utente di Experience Platform.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1384'
+source-wordcount: '1387'
 ht-degree: 6%
 
 ---
@@ -27,17 +27,17 @@ Adobe Experience Platform fornisce molti tipi di dati standard che possono esser
 >
 >Se un campo è definito come tipo di dati specifico, non è possibile creare lo stesso campo con un tipo di dati diverso in un altro schema. Questo vincolo si applica a tutto il tenant dell’organizzazione.
 
-Questo tutorial illustra i passaggi necessari per creare e modificare tipi di dati personalizzati nell’interfaccia utente di Platform.
+Questo tutorial illustra i passaggi necessari per creare e modificare i tipi di dati personalizzati nell’interfaccia utente di Experience Platform.
 
 ## Prerequisiti {#prerequisites}
 
-Questa guida richiede una buona conoscenza del sistema XDM. Consulta la [panoramica di XDM](../../home.md) per un&#39;introduzione al ruolo di XDM all&#39;interno dell&#39;ecosistema Experience Platform e le [nozioni di base sulla composizione dello schema](../../schema/composition.md) per informazioni sul modo in cui i tipi di dati contribuiscono agli schemi XDM.
+Questa guida richiede una buona conoscenza del sistema XDM. Consulta la [panoramica di XDM](../../home.md) per un&#39;introduzione al ruolo di XDM nell&#39;ecosistema Experience Platform e le [nozioni di base sulla composizione dello schema](../../schema/composition.md) per informazioni sul modo in cui i tipi di dati contribuiscono agli schemi XDM.
 
 Sebbene non sia necessario per questa guida, è consigliabile seguire l&#39;esercitazione su [composizione di uno schema nell&#39;interfaccia utente](../../tutorials/create-schema-ui.md) per acquisire familiarità con le varie funzionalità di [!DNL Schema Editor].
 
 ## Apri [!DNL Schema Editor] per un tipo di dati {#data-type}
 
-Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Schemi]** nell&#39;area di navigazione a sinistra per aprire l&#39;area di lavoro [!UICONTROL Schemi], quindi seleziona la scheda **[!UICONTROL Tipi di dati]**. Viene visualizzato un elenco dei tipi di dati disponibili. L’elenco dei tipi di dati viene filtrato automaticamente in base alla modalità di creazione. L&#39;impostazione predefinita visualizza i tipi di dati definiti da Adobe. Puoi anche filtrare l’elenco per visualizzare quelli creati dall’organizzazione.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Schemi]** nell&#39;area di navigazione a sinistra per aprire l&#39;area di lavoro [!UICONTROL Schemi], quindi seleziona la scheda **[!UICONTROL Tipi di dati]**. Viene visualizzato un elenco dei tipi di dati disponibili. L’elenco dei tipi di dati viene filtrato automaticamente in base alla modalità di creazione. L’impostazione predefinita visualizza i tipi di dati definiti da Adobe. Puoi anche filtrare l’elenco per visualizzare quelli creati dall’organizzazione.
 
 ![Area di lavoro [!UICONTROL Schemi] con [!UICONTROL Schemi] nella barra di navigazione a sinistra e [!UICONTROL Tipi di dati] evidenziati.](../../images/ui/resources/data-types/data-types-tab.png)
 
@@ -125,6 +125,6 @@ L&#39;area di lavoro aggiorna il tipo di dati del campo da &quot;[!UICONTROL Ogg
 
 ## Passaggi successivi {#next-steps}
 
-Questa guida illustra come creare e modificare i tipi di dati utilizzando l’interfaccia utente di Platform. Per ulteriori informazioni sulle funzionalità dell&#39;area di lavoro [!UICONTROL Schemi], vedere la panoramica dell&#39;area di lavoro [[!UICONTROL Schemi]](../overview.md).
+Questa guida illustra come creare e modificare i tipi di dati utilizzando l’interfaccia utente di Experience Platform. Per ulteriori informazioni sulle funzionalità dell&#39;area di lavoro [!UICONTROL Schemi], vedere la panoramica dell&#39;area di lavoro [[!UICONTROL Schemi]](../overview.md).
 
 Per informazioni su come gestire i tipi di dati utilizzando l&#39;API [!DNL Schema Registry], vedere la [guida dell&#39;endpoint dei tipi di dati](../../api/data-types.md).

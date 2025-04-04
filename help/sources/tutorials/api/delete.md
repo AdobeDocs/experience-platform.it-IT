@@ -5,9 +5,9 @@ title: Eliminare un account utilizzando l’API del servizio Flusso
 type: Tutorial
 description: Scopri come eliminare un account utilizzando l’API del servizio Flusso.
 exl-id: 3d07ab7d-c012-472e-8db4-b19e3936dcba
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '336'
+source-wordcount: '339'
 ht-degree: 3%
 
 ---
@@ -24,12 +24,12 @@ Questo tutorial richiede un ID di connessione valido. Se non disponi di un ID di
 
 Questo tutorial richiede anche una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Origini](../../home.md): [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini e consente di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi [!DNL Platform].
-* [Sandbox](../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza di [!DNL Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Origini](../../home.md): [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini e consente di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi [!DNL Experience Platform].
+* [Sandbox](../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza di [!DNL Experience Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
-### Utilizzo delle API di Platform
+### Utilizzo delle API di Experience Platform
 
-Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida in [guida introduttiva alle API di Platform](../../../landing/api-guide.md).
+Per informazioni su come effettuare correttamente chiamate alle API di Experience Platform, consulta la guida introduttiva [alle API di Experience Platform](../../../landing/api-guide.md).
 
 ## Elimina account
 
@@ -37,7 +37,7 @@ Per informazioni su come effettuare correttamente chiamate alle API di Platform,
 >
 >Prima di eliminare l’account di origine, devi eliminare tutti i flussi di dati esistenti associati all’account di origine. Per eliminare i flussi di dati esistenti, consulta l&#39;esercitazione su [eliminazione dei flussi di dati di origine](./delete-dataflows.md).
 
-Per eliminare un account, effettuare una richiesta DELETE all&#39;API [!DNL Flow Service] fornendo l&#39;ID connessione di base corrispondente all&#39;account che si desidera eliminare.
+Per eliminare un account, eseguire una richiesta DELETE all&#39;API [!DNL Flow Service] fornendo l&#39;ID connessione di base corrispondente all&#39;account che si desidera eliminare.
 
 **Formato API**
 

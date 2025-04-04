@@ -5,7 +5,7 @@ type: Documentation
 description: Real-Time Customer Profile consente di creare una singola visualizzazione dei singoli clienti all’interno di Adobe Experience Platform riunendo dati provenienti da più origini, inclusi sia i dati degli attributi che i dati comportamentali. I dati profilo possono quindi essere esportati in un set di dati per ulteriore elaborazione.
 role: Developer
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: fd5042bee9b09182ac643bcc69482a0a2b3f8faa
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1512'
 ht-degree: 2%
@@ -30,7 +30,7 @@ Gli endpoint API utilizzati in questa guida fanno parte dell&#39;API [!DNL Real-
 
 ## Creare un processo di esportazione
 
-L&#39;esportazione dei dati [!DNL Profile] richiede prima la creazione di un set di dati in cui verranno esportati i dati, quindi l&#39;avvio di un nuovo processo di esportazione. Entrambi i passaggi possono essere eseguiti utilizzando le API Experience Platform, con la prima che utilizza l’API Catalog Service e la seconda che utilizza l’API Profilo cliente in tempo reale. Le istruzioni dettagliate per il completamento di ciascun passaggio sono descritte nelle sezioni che seguono.
+L&#39;esportazione dei dati [!DNL Profile] richiede prima la creazione di un set di dati in cui verranno esportati i dati, quindi l&#39;avvio di un nuovo processo di esportazione. Entrambi i passaggi possono essere eseguiti utilizzando le API di Experience Platform, con la prima che utilizza l’API Catalog Service e la seconda che utilizza l’API Profilo cliente in tempo reale. Le istruzioni dettagliate per il completamento di ciascun passaggio sono descritte nelle sezioni che seguono.
 
 ### Creare un set di dati di destinazione
 
@@ -38,7 +38,7 @@ Durante l&#39;esportazione dei dati [!DNL Profile], è necessario creare prima u
 
 Una delle considerazioni chiave è lo schema su cui si basa il set di dati (`schemaRef.id` nella richiesta di esempio API seguente). Per esportare i dati del profilo, il set di dati deve essere basato sullo schema di unione [!DNL XDM Individual Profile] (`https://ns.adobe.com/xdm/context/profile__union`). Uno schema di unione è uno schema di sola lettura generato dal sistema che aggrega i campi degli schemi che condividono la stessa classe. In questo caso, questa è la classe [!DNL XDM Individual Profile]. Per ulteriori informazioni sugli schemi di visualizzazione unione, consulta la sezione [union nella guida di base della composizione dello schema](../../xdm/schema/composition.md#union).
 
-I passaggi seguenti in questa esercitazione descrivono come creare un set di dati che fa riferimento allo schema di unione [!DNL XDM Individual Profile] utilizzando l&#39;API [!DNL Catalog]. È inoltre possibile utilizzare l&#39;interfaccia utente [!DNL Platform] per creare un set di dati che faccia riferimento allo schema di unione. I passaggi per l&#39;utilizzo dell&#39;interfaccia utente sono descritti in [questa esercitazione dell&#39;interfaccia utente per l&#39;esportazione di tipi di pubblico](../../segmentation/tutorials/create-dataset-export-segment.md), ma sono applicabili anche qui. Una volta completato, puoi tornare a questo tutorial per procedere con i passaggi per [l&#39;avvio di un nuovo processo di esportazione](#initiate).
+I passaggi seguenti in questa esercitazione descrivono come creare un set di dati che fa riferimento allo schema di unione [!DNL XDM Individual Profile] utilizzando l&#39;API [!DNL Catalog]. È inoltre possibile utilizzare l&#39;interfaccia utente [!DNL Experience Platform] per creare un set di dati che faccia riferimento allo schema di unione. I passaggi per l&#39;utilizzo dell&#39;interfaccia utente sono descritti in [questa esercitazione dell&#39;interfaccia utente per l&#39;esportazione di tipi di pubblico](../../segmentation/tutorials/create-dataset-export-segment.md), ma sono applicabili anche qui. Una volta completato, puoi tornare a questo tutorial per procedere con i passaggi per [l&#39;avvio di un nuovo processo di esportazione](#initiate).
 
 Se disponi già di un set di dati compatibile e conosci il relativo ID, puoi procedere direttamente al passaggio per [avviare un nuovo processo di esportazione](#initiate).
 
@@ -85,7 +85,7 @@ In caso di esito positivo, la risposta restituisce un array contenente l’ID un
 
 ### Avvia processo di esportazione {#initiate}
 
-Dopo aver creato un set di dati persistente nell’unione, puoi creare un processo di esportazione per rendere persistenti i dati profilo nel set di dati eseguendo una richiesta POST all’endpoint `/export/jobs` nell’API Profilo cliente in tempo reale e fornendo i dettagli dei dati da esportare nel corpo della richiesta.
+Dopo aver creato un set di dati persistente nell’unione, puoi creare un processo di esportazione per rendere persistenti i dati profilo nel set di dati effettuando una richiesta POST all’endpoint `/export/jobs` nell’API Profilo cliente in tempo reale e fornendo i dettagli dei dati da esportare nel corpo della richiesta.
 
 **Formato API**
 
@@ -179,7 +179,7 @@ In caso di esito positivo, la risposta restituisce un set di dati popolato con d
 
 ## Elenca tutti i processi di esportazione
 
-È possibile restituire un elenco di tutti i processi di esportazione per una particolare organizzazione eseguendo una richiesta di GET all&#39;endpoint `export/jobs`. La richiesta supporta anche i parametri di query `limit` e `offset`, come illustrato di seguito.
+È possibile restituire un elenco di tutti i processi di esportazione per una particolare organizzazione eseguendo una richiesta GET all&#39;endpoint `export/jobs`. La richiesta supporta anche i parametri di query `limit` e `offset`, come illustrato di seguito.
 
 **Formato API**
 
@@ -324,7 +324,7 @@ La risposta include un oggetto `records` contenente i processi di esportazione c
 
 ## Monitorare l’avanzamento dell’esportazione
 
-Per visualizzare i dettagli di un processo di esportazione specifico o monitorarne lo stato durante l&#39;elaborazione, è possibile effettuare una richiesta di GET all&#39;endpoint `/export/jobs` e includere `id` del processo di esportazione nel percorso. Il processo di esportazione viene completato quando il campo `status` restituisce il valore &quot;SUCCESSEDED&quot;.
+Per visualizzare i dettagli di un processo di esportazione specifico o monitorarne lo stato durante l&#39;elaborazione, è possibile effettuare una richiesta GET all&#39;endpoint `/export/jobs` e includere `id` del processo di esportazione nel percorso. Il processo di esportazione viene completato quando il campo `status` restituisce il valore &quot;SUCCESSEDED&quot;.
 
 **Formato API**
 

@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;schema;schema;xdm;experience data model;namespace;namespace;modalità compatibilità;xed;
+keywords: Experience Platform;home;argomenti popolari;schema;schema;xdm;experience data model;namespace;namespace;modalità compatibilità;mista;
 solution: Experience Platform
 title: Namespace in Experience Data Model (XDM)
 description: Scopri come lo spazio dei nomi in Experience Data Model (XDM) consente di estendere gli schemi e prevenire conflitti di campi quando diversi componenti dello schema vengono uniti.
 exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
-source-git-commit: d26a0586a992948e1b278bae91a985fe3d9f1ee8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '669'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Le sezioni seguenti mostrano come gli spazi dei nomi vengono assegnati nella sin
 
 ### XDM standard {#standard}
 
-La sintassi XDM standard fornisce informazioni approfondite sul modo in cui gli spazi dei nomi vengono rappresentati negli schemi (incluso [come vengono tradotti in Adobe Experience Platform](#compatibility)).
+La sintassi XDM standard fornisce ad insight informazioni sul modo in cui gli spazi dei nomi vengono rappresentati negli schemi (incluso [come vengono tradotti in Adobe Experience Platform](#compatibility)).
 
 XDM standard utilizza la sintassi [JSON-LD](https://www.w3.org/TR/json-ld11/#basic-concepts) per assegnare spazi dei nomi ai campi. Questo spazio dei nomi ha la forma di un URI (ad esempio `https://ns.adobe.com/xdm` per lo spazio dei nomi `xdm`) o di un prefisso abbreviato configurato nell&#39;attributo `@context` di uno schema.
 
@@ -89,7 +89,7 @@ Di seguito è riportato uno schema di esempio per un prodotto con sintassi XDM s
 
 ### Modalità di compatibilità {#compatibility}
 
-In Adobe Experience Platform, gli schemi XDM sono rappresentati nella sintassi [Modalità di compatibilità](../api/appendix.md#compatibility), che non utilizza la sintassi JSON-LD per rappresentare gli spazi dei nomi. Piattaforma converte invece lo spazio dei nomi in un campo principale (partendo da un carattere di sottolineatura) e nidifica i campi al di sotto di esso.
+In Adobe Experience Platform, gli schemi XDM sono rappresentati nella sintassi [Modalità di compatibilità](../api/appendix.md#compatibility), che non utilizza la sintassi JSON-LD per rappresentare gli spazi dei nomi. Al contrario, Experience Platform converte lo spazio dei nomi in un campo principale (partendo da un carattere di sottolineatura) e nidifica i campi al di sotto di esso.
 
 Ad esempio, l&#39;XDM standard `repo:createdDate` è convertito in `_repo.createdDate` e verrà visualizzato nella seguente struttura in modalità di compatibilità:
 

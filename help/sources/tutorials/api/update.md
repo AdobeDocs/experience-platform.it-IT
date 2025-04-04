@@ -2,9 +2,9 @@
 title: Aggiornare gli account utilizzando l’API del servizio Flusso
 description: Questo tutorial illustra i passaggi necessari per aggiornare i dettagli e le credenziali di un account tramite l’API del servizio Flow.
 exl-id: a93385fd-ed36-457f-8882-41e37f6f209d
-source-git-commit: 9e1edaa4183a8025b8391f58d480063adc834616
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '544'
 ht-degree: 3%
 
 ---
@@ -25,16 +25,16 @@ Questo tutorial richiede una connessione esistente e un ID connessione valido. S
 
 Questo tutorial richiede anche una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Origini](../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
-* [Sandbox](../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Origini](../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Experience Platform.
+* [Sandbox](../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Experience Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
-### Utilizzo delle API di Platform
+### Utilizzo delle API di Experience Platform
 
-Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida in [guida introduttiva alle API di Platform](../../../landing/api-guide.md).
+Per informazioni su come effettuare correttamente chiamate alle API di Experience Platform, consulta la guida introduttiva [alle API di Experience Platform](../../../landing/api-guide.md).
 
 ## Cerca dettagli di connessione
 
-Il primo passaggio nell’aggiornamento della connessione consiste nel recuperarne i dettagli utilizzando il tuo ID connessione. Per recuperare i dettagli correnti della connessione, effettuare una richiesta di GET all&#39;API [!DNL Flow Service] fornendo l&#39;ID della connessione che si desidera aggiornare.
+Il primo passaggio nell’aggiornamento della connessione consiste nel recuperarne i dettagli utilizzando il tuo ID connessione. Per recuperare i dettagli correnti della connessione, effettuare una richiesta GET all&#39;API [!DNL Flow Service] fornendo l&#39;ID della connessione che si desidera aggiornare.
 
 **Formato API**
 
@@ -158,7 +158,7 @@ curl -X PATCH \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce l’ID di connessione e un tag aggiornato. È possibile verificare l&#39;aggiornamento effettuando una richiesta di GET all&#39;API [!DNL Flow Service] e fornendo l&#39;ID di connessione.
+In caso di esito positivo, la risposta restituisce l’ID di connessione e un tag aggiornato. È possibile verificare l&#39;aggiornamento effettuando una richiesta GET all&#39;API [!DNL Flow Service] e fornendo l&#39;ID di connessione.
 
 ```json
 {

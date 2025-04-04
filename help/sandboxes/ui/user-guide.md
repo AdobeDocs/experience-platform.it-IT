@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida all’interfaccia utente Sandbox
 description: In questo documento sono descritti i passaggi necessari per eseguire varie operazioni relative alle sandbox nell’interfaccia utente di Adobe Experience Platform.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: b9b00f41f146b34a1326c4c2ac104c022a416dc9
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1115'
+source-wordcount: '1116'
 ht-degree: 4%
 
 ---
@@ -23,7 +23,7 @@ Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Sand
 
 ## Passare da una sandbox all’altra
 
-L’indicatore della sandbox si trova nell’intestazione superiore dell’interfaccia utente di Platform e mostra il titolo, l’area e il tipo della sandbox in cui ti trovi attualmente.
+L’indicatore della sandbox si trova nell’intestazione superiore dell’interfaccia utente di Experience Platform e mostra il titolo, l’area e il tipo della sandbox in cui ti trovi attualmente.
 
 ![Dashboard delle sandbox con l&#39;indicatore della sandbox evidenziato.](../images/ui/sandbox-indicator.png)
 

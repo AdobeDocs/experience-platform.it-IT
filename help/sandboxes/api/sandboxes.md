@@ -5,16 +5,16 @@ title: Endpoint API per la gestione delle sandbox
 description: L’endpoint /sandbox nell’API Sandbox consente di gestire in modo programmatico le sandbox in Adobe Experience Platform.
 role: Developer
 exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
-source-git-commit: c15b24990835746a51a50a3e7e7b6a85701c0eb9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1474'
+source-wordcount: '1477'
 ht-degree: 4%
 
 ---
 
 # Endpoint di gestione sandbox
 
-Le sandbox in Adobe Experience Platform forniscono ambienti di sviluppo isolati che consentono di testare le funzioni, eseguire esperimenti e creare configurazioni personalizzate senza influire sull’ambiente di produzione. L&#39;endpoint `/sandboxes` nell&#39;API [!DNL Sandbox] consente di gestire in modo programmatico le sandbox in Platform.
+Le sandbox in Adobe Experience Platform forniscono ambienti di sviluppo isolati che consentono di testare le funzioni, eseguire esperimenti e creare configurazioni personalizzate senza influire sull’ambiente di produzione. L&#39;endpoint `/sandboxes` nell&#39;API [!DNL Sandbox] consente di gestire programmaticamente le sandbox in Experience Platform.
 
 ## Introduzione
 
@@ -228,7 +228,7 @@ curl -X POST \
 | Proprietà | Descrizione |
 | --- | --- |
 | `name` | Identificatore che verrà utilizzato per accedere alla sandbox nelle richieste future. Questo valore deve essere univoco e si consiglia di renderlo il più descrittivo possibile. Questo valore non può contenere spazi o caratteri speciali. |
-| `title` | Nome leggibile utilizzato a scopo di visualizzazione nell’interfaccia utente di Platform. |
+| `title` | Nome leggibile utilizzato a scopo di visualizzazione nell’interfaccia utente di Experience Platform. |
 | `type` | Tipo di sandbox da creare. Per una sandbox non di produzione, questo valore deve essere `development`. |
 
 **Risposta**
@@ -281,7 +281,7 @@ curl -X POST \
 | Proprietà | Descrizione |
 | --- | --- |
 | `name` | Identificatore che verrà utilizzato per accedere alla sandbox nelle richieste future. Questo valore deve essere univoco e si consiglia di renderlo il più descrittivo possibile. Questo valore non può contenere spazi o caratteri speciali. |
-| `title` | Nome leggibile utilizzato a scopo di visualizzazione nell’interfaccia utente di Platform. |
+| `title` | Nome leggibile utilizzato a scopo di visualizzazione nell’interfaccia utente di Experience Platform. |
 | `type` | Tipo di sandbox da creare. Per una sandbox di produzione, questo valore deve essere `production`. |
 
 **Risposta**
@@ -485,7 +485,7 @@ Per eliminare una sandbox, devi eseguire una richiesta DELETE che includa nel pe
 
 >[!NOTE]
 >
->Con questa chiamata API, la proprietà `status` della sandbox viene aggiornata a &quot;eliminata&quot; e disattivata. Le richieste GET possono comunque recuperare i dettagli della sandbox anche dopo la sua eliminazione.
+>Con questa chiamata API, la proprietà `status` della sandbox viene aggiornata a &quot;eliminata&quot; e disattivata. Le richieste di GET possono comunque recuperare i dettagli della sandbox dopo che è stata eliminata.
 
 **Formato API**
 

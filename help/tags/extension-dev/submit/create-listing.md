@@ -2,9 +2,9 @@
 title: Creare un’inserzione in Exchange per un’estensione
 description: Scopri come aggiungere l’estensione al catalogo pubblico in Adobe Experience Platform.
 exl-id: 0395fc99-5e2b-46d6-a067-f8f167733e02
-source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1193'
+source-wordcount: '1194'
 ht-degree: 69%
 
 ---
@@ -23,7 +23,7 @@ Adobe Experience Platform dispone di un singolo catalogo unificato in cui gli ut
 
 A parte le estensioni nel catalogo dei prodotti, le estensioni pubbliche sono anche disponibili come inserzioni in [Experience Cloud Exchange App Marketplace](https://exchange.adobe.com/apps/browse/ec).
 
-Queste consentono agli sviluppatori di estensioni di pubblicare descrizioni delle funzionalità, fornire collegamenti per supporto aggiuntivo o documentazione, e presentare le estensioni a potenziali utenti che potrebbero non essere a conoscenza della società o della funzionalità dell’estensione. In questo marketplace, all’estensione è associata un’inserzione pubblica che può essere visualizzata senza che l’utente sia autenticato su Platform. Per le estensioni pubbliche, la creazione di questa inserzione su Exchange è un passaggio obbligatorio.
+Queste consentono agli sviluppatori di estensioni di pubblicare descrizioni delle funzionalità, fornire collegamenti per supporto aggiuntivo o documentazione, e presentare le estensioni a potenziali utenti che potrebbero non essere a conoscenza della società o della funzionalità dell’estensione. In questo marketplace, all’estensione è associata un’inserzione pubblica che può essere visualizzata senza che l’utente sia autenticato su Experience Platform. Per le estensioni pubbliche, la creazione di questa inserzione su Exchange è un passaggio obbligatorio.
 
 >[!TIP]
 >

@@ -2,9 +2,9 @@
 title: Governance dei dati in Query Service
 description: Questa panoramica descrive i principali elementi di governance dei dati in Experience Platform Query Service.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3129'
+source-wordcount: '3142'
 ht-degree: 0%
 
 ---
@@ -29,12 +29,12 @@ Questo documento esamina ciascuna delle diverse aree di governance e illustra co
 
 ## Sicurezza {#security}
 
-La sicurezza dei dati è il processo di protezione dei dati da accessi non autorizzati e di garanzia di accesso sicuro per tutto il loro ciclo di vita. L’accesso sicuro viene mantenuto in Experience Platform attraverso l’applicazione di ruoli e autorizzazioni da parte di funzionalità quali il controllo dell’accesso basato su ruoli e il controllo dell’accesso basato su attributi. Credenziali, SSL e crittografia dei dati vengono utilizzati anche per garantire la protezione dei dati in Platform.
+La sicurezza dei dati è il processo di protezione dei dati da accessi non autorizzati e di garanzia di accesso sicuro per tutto il loro ciclo di vita. L’accesso sicuro viene mantenuto in Experience Platform tramite l’applicazione di ruoli e autorizzazioni tramite funzionalità quali il controllo degli accessi basato su ruoli e il controllo degli accessi basato su attributi. Credenziali, SSL e crittografia dei dati vengono utilizzati anche per garantire la protezione dei dati in Experience Platform.
 
 La sicurezza relativa a Query Service è suddivisa nelle seguenti categorie:
 
 * [Controllo dell&#39;accesso](#access-control): l&#39;accesso è controllato tramite ruoli e autorizzazioni che includono set di dati e autorizzazioni a livello di colonna.
-* Protezione dei dati tramite [connettività](#connectivity): i dati vengono protetti tramite Platform e client esterni tramite una connessione limitata con credenziali in scadenza o credenziali senza scadenza.
+* Protezione dei dati tramite [connettività](#connectivity): i dati vengono protetti tramite Experience Platform e client esterni tramite una connessione limitata con credenziali in scadenza o credenziali senza scadenza.
 * Protezione dei dati tramite [crittografia e chiavi gestite dal cliente](#encryption-and-customer-managed-keys): accesso controllato tramite crittografia quando i dati sono inattivi.
 
 ### Controllo degli accessi {#access-control}
@@ -103,7 +103,7 @@ L’accesso degli utenti alle singole colonne può quindi essere controllato dal
 
 ### Connettività {#connectivity}
 
-Query Service è accessibile tramite l’interfaccia utente di Platform o creando una connessione con client esterni compatibili. L’accesso a tutti i fronti disponibili è controllato da un set di credenziali.
+Query Service è accessibile tramite l’interfaccia utente di Experience Platform o creando una connessione con client esterni compatibili. L’accesso a tutti i fronti disponibili è controllato da un set di credenziali.
 
 #### Connettività tramite client esterni
 
@@ -127,7 +127,7 @@ Una volta completato il flusso di lavoro dei prerequisiti, gli utenti autorizzat
 
 #### Crittografia dei dati SSL
 
-Per una maggiore sicurezza, Query Service fornisce supporto nativo per le connessioni SSL per crittografare le comunicazioni client/server. Platform supporta varie opzioni SSL per soddisfare le tue esigenze di sicurezza dei dati e bilanciare il sovraccarico di elaborazione della crittografia e dello scambio di chiavi.
+Per una maggiore sicurezza, Query Service fornisce supporto nativo per le connessioni SSL per crittografare le comunicazioni client/server. Experience Platform supporta varie opzioni SSL per soddisfare le tue esigenze di sicurezza dei dati e bilanciare il sovraccarico di elaborazione dovuto alla crittografia e allo scambio di chiavi.
 
 Per ulteriori informazioni, tra cui come connettersi utilizzando il valore del parametro SSL `verify-full`, vedere la guida sulle [opzioni SSL disponibili per le connessioni client di terze parti a Query Service](../clients/ssl-modes.md).
 
@@ -144,13 +144,13 @@ I dati in transito sono sempre conformi HTTPS. Analogamente, quando i dati sono 
 
 Query Service registra l’attività dell’utente e la categorizza in diversi tipi di registro. I registri forniscono informazioni su **chi** ha eseguito **cosa** e **quando**. Ogni azione registrata contiene metadati che indicano il tipo di azione, la data e l’ora, l’ID e-mail dell’utente che l’ha eseguita e altri attributi relativi al tipo di azione.
 
-Un utente di Platform può richiedere una qualsiasi delle categorie di registro. Questa sezione fornisce dettagli sul tipo di informazioni acquisite per Query Service e su dove è possibile accedere a tali informazioni.
+Qualsiasi categoria di registro può essere richiesta come desiderato da un utente di Experience Platform. Questa sezione fornisce dettagli sul tipo di informazioni acquisite per Query Service e su dove è possibile accedere a tali informazioni.
 
 ### Registri query {#query-logs}
 
 L’interfaccia utente dei registri di query ti consente di monitorare e rivedere i dettagli di esecuzione di tutte le query eseguite tramite l’editor delle query o l’API del servizio di query. Ciò garantisce trasparenza alle attività di Query Service, consentendo di controllare i metadati per **tutte** le query eseguite in Query Service. Include tutti i tipi di query, sia quelle esplorative, batch o pianificate.
 
-È possibile accedere ai registri delle query tramite l&#39;interfaccia utente di Platform nella scheda [!UICONTROL Registri] dell&#39;area di lavoro [!UICONTROL Query].
+È possibile accedere ai registri delle query tramite l&#39;interfaccia utente di Experience Platform nella scheda [!UICONTROL Registri] dell&#39;area di lavoro [!UICONTROL Query].
 
 ![Scheda Registro query con il pannello dei dettagli evidenziato.](../images/data-governance/overview/queries-log.png)
 
@@ -158,7 +158,7 @@ L’interfaccia utente dei registri di query ti consente di monitorare e riveder
 
 I registri di audit contengono informazioni più dettagliate rispetto ai registri di query e consentono di filtrare i registri in base ad attributi quali utente, data, tipo di query e così via. Oltre ai dettagli disponibili nell’interfaccia utente del registro delle query, i registri di controllo memorizzano i dettagli sui singoli utenti, insieme ai relativi dati di sessione o alla connettività a un client di terze parti.
 
-Grazie alla registrazione esatta delle azioni degli utenti, un audit trail può essere utile per risolvere eventuali problemi e aiutare la tua azienda a rispettare in modo efficace le politiche aziendali di gestione dei dati e i requisiti normativi. I registri di audit forniscono un registro di tutte le attività di Platform. Utilizzando i registri di audit è possibile controllare le azioni degli utenti relative all’esecuzione delle query, ai modelli e alle query pianificate per aumentare la trasparenza e la visibilità delle azioni eseguite dagli utenti in Query Service.
+Grazie alla registrazione esatta delle azioni degli utenti, un audit trail può essere utile per risolvere eventuali problemi e aiutare la tua azienda a rispettare in modo efficace le politiche aziendali di gestione dei dati e i requisiti normativi. I registri di audit forniscono un registro di tutte le attività di Experience Platform. Utilizzando i registri di audit è possibile controllare le azioni degli utenti relative all’esecuzione delle query, ai modelli e alle query pianificate per aumentare la trasparenza e la visibilità delle azioni eseguite dagli utenti in Query Service.
 
 La tabella seguente indica le categorie di query acquisite dai registri di audit e i tipi di azioni da essi registrati:
 
@@ -178,7 +178,7 @@ Consulta la [panoramica dei registri di audit](../../landing/governance-privacy-
 
 ## Utilizzo dati {#data-usage}
 
-Il framework per la governance dei dati in Platform fornisce un modo uniforme per utilizzare in modo responsabile i dati in tutte le soluzioni, i servizi e le piattaforme di Adobi. Coordina l&#39;approccio sistemico per l&#39;acquisizione, la comunicazione e l&#39;utilizzo dei metadati in tutto Adobe Experience Cloud. Questo a sua volta, aiuta i titolari del trattamento dei dati ad etichettare i dati in base alle azioni di marketing necessarie e alle restrizioni imposte a tali dati da tali azioni di marketing previste. Per ulteriori informazioni su come la governance dei dati consente di applicare etichette di utilizzo ai set di dati e ai campi, consulta la panoramica sulle [etichette di utilizzo dei dati](../../data-governance/labels/overview.md).
+Il framework per la governance dei dati in Experience Platform fornisce un modo uniforme per utilizzare in modo responsabile i dati in tutte le soluzioni, i servizi e le piattaforme di Adobe. Coordina l&#39;approccio sistemico per l&#39;acquisizione, la comunicazione e l&#39;utilizzo dei metadati in tutto Adobe Experience Cloud. Questo a sua volta, aiuta i titolari del trattamento dei dati ad etichettare i dati in base alle azioni di marketing necessarie e alle restrizioni imposte a tali dati da tali azioni di marketing previste. Per ulteriori informazioni su come la governance dei dati consente di applicare etichette di utilizzo ai set di dati e ai campi, consulta la panoramica sulle [etichette di utilizzo dei dati](../../data-governance/labels/overview.md).
 
 È buona prassi lavorare per garantire la conformità dei dati in ogni fase del percorso dei dati. A tal fine, i set di dati derivati che utilizzano schemi ad hoc dovrebbero essere etichettati in modo appropriato come parte del framework di governance dei dati. Esistono due tipi di set di dati derivati formati da Query Service: set di dati che utilizzano uno schema standard e set di dati che utilizzano uno schema ad hoc.
 
@@ -186,13 +186,13 @@ Il framework per la governance dei dati in Platform fornisce un modo uniforme pe
 >
 >I set di dati creati con Query Service sono denominati &quot;set di dati derivati&quot;.
 
-Poiché gli schemi ad hoc vengono creati da un singolo utente per uno scopo specifico, i campi dello schema XDM hanno un namespace per quel particolare set di dati e non sono destinati all’utilizzo in set di dati diversi. Di conseguenza, gli schemi ad hoc non sono visibili per impostazione predefinita nell’interfaccia utente di Experience Platform. Sebbene non vi siano differenze nell’applicazione delle etichette di utilizzo dei dati tra schemi standard e ad hoc, gli schemi ad hoc creati da Query Service a scopo di etichettatura devono prima essere resi visibili nell’interfaccia utente di Platform. Per ulteriori dettagli, consulta la guida su [individuazione di schemi ad hoc nell&#39;interfaccia utente di Platform](./ad-hoc-schema-labels.md#discover-ad-hoc-schemas).
+Poiché gli schemi ad hoc vengono creati da un singolo utente per uno scopo specifico, i campi dello schema XDM hanno un namespace per quel particolare set di dati e non sono destinati all’utilizzo in set di dati diversi. Di conseguenza, gli schemi ad hoc non sono visibili per impostazione predefinita nell’interfaccia utente di Experience Platform. Sebbene non vi siano differenze nell’applicazione delle etichette di utilizzo dei dati tra schemi standard e ad hoc, gli schemi ad hoc creati da Query Service ai fini dell’etichettatura devono prima essere resi visibili nell’interfaccia utente di Experience Platform. Per ulteriori dettagli, consulta la guida su [individuazione di schemi ad hoc nell&#39;interfaccia utente di Experience Platform](./ad-hoc-schema-labels.md#discover-ad-hoc-schemas).
 
 Dopo aver effettuato l&#39;accesso allo schema, è possibile [applicare etichette ai singoli campi](../../xdm/tutorials/labels.md). Una volta etichettato uno schema, tutti i set di dati derivati da tale schema ereditano tali etichette. Da qui puoi impostare criteri di utilizzo dei dati che possono limitare l’attivazione di dati con determinate etichette per determinate destinazioni. Per ulteriori informazioni, consulta la panoramica sui [criteri di utilizzo dei dati](../../data-governance/policies/overview.md).
 
 ## Privacy {#privacy}
 
-[Privacy Service](../../privacy-service/home.md) consente di gestire le richieste dei clienti di accedere ai propri dati ed eliminarli in conformità alle normative legali sulla privacy. A tale scopo, cerca nei dati gli identificatori preesistenti e accede o elimina tali dati a seconda del processo di privacy richiesto. I dati devono essere correttamente etichettati affinché il servizio possa determinare quali campi accedere o eliminare durante i processi relativi alla privacy. I dati oggetto di richieste di accesso a dati personali devono contenere informazioni sull’identità del cliente, in modo da collegare le diverse parti di dati con la singola persona a cui si applica la richiesta di accesso a dati personali. Query Service può arricchire i dati utilizzati con un identificatore univoco allo scopo di soddisfare i processi relativi alla privacy.
+[Privacy Service](../../privacy-service/home.md) ti consente di gestire le richieste dei clienti di accedere ai loro dati ed eliminarli in conformità alle normative legali sulla privacy. A tale scopo, cerca nei dati gli identificatori preesistenti e accede o elimina tali dati a seconda del processo di privacy richiesto. I dati devono essere correttamente etichettati affinché il servizio possa determinare quali campi accedere o eliminare durante i processi relativi alla privacy. I dati oggetto di richieste di accesso a dati personali devono contenere informazioni sull’identità del cliente, in modo da collegare le diverse parti di dati con la singola persona a cui si applica la richiesta di accesso a dati personali. Query Service può arricchire i dati utilizzati con un identificatore univoco allo scopo di soddisfare i processi relativi alla privacy.
 
 Le richieste di accesso ai dati personali possono essere inviate al data lake o all’archivio dati del profilo. I record eliminati dal data lake non determinano l’eliminazione dei profili creati da tali record. Inoltre, un processo di privacy per eliminare le informazioni personali dal data lake non elimina il loro profilo, pertanto tutte le informazioni (che contengono tale ID profilo) acquisite dopo il completamento del processo di privacy lo aggiornano come di consueto. Ciò ribadisce la necessità di identificare correttamente i dati utilizzati negli schemi ad hoc.
 
@@ -200,13 +200,13 @@ Consulta la documentazione di Privacy Service per ulteriori informazioni su [dat
 
 Le funzioni di Query Service per la governance dei dati semplificano e semplificano il processo di categorizzazione dei dati e il rispetto delle normative sull’utilizzo dei dati. Una volta identificati i dati, Query Service consente di allocare l’identità primaria a tutti i set di dati di output. **devi** aggiungere identità al set di dati per facilitare le richieste di privacy dei dati e lavorare per la conformità dei dati.
 
-I campi dati dello schema possono essere impostati come campo di identità tramite l&#39;interfaccia utente di Platform e Query Service consente inoltre di [contrassegnare le identità primarie utilizzando il comando SQL &#39;ALTER TABLE&#39;](../sql/syntax.md#alter-table). L&#39;impostazione di un&#39;identità tramite il comando `ALTER TABLE` è particolarmente utile quando i set di dati vengono creati utilizzando SQL anziché direttamente da uno schema tramite l&#39;interfaccia utente di Platform. Consulta la documentazione per istruzioni su come [definire i campi di identità nell&#39;interfaccia utente](../../xdm/ui/fields/identity.md) quando si utilizzano schemi standard.
+I campi dati dello schema possono essere impostati come campo di identità tramite l&#39;interfaccia utente di Experience Platform e Query Service consente inoltre di [contrassegnare le identità primarie utilizzando il comando SQL &#39;ALTER TABLE&#39;](../sql/syntax.md#alter-table). L&#39;impostazione di un&#39;identità tramite il comando `ALTER TABLE` è particolarmente utile quando i set di dati vengono creati utilizzando SQL anziché direttamente da uno schema tramite l&#39;interfaccia utente di Experience Platform. Consulta la documentazione per istruzioni su come [definire i campi di identità nell&#39;interfaccia utente](../../xdm/ui/fields/identity.md) quando si utilizzano schemi standard.
 
 ## Igiene dei dati {#data-hygiene}
 
 Per &quot;igiene dei dati&quot; si intende il processo di riparazione o rimozione di dati che potrebbero essere obsoleti, imprecisi, formattati in modo errato, duplicati o incompleti. Questi processi garantiscono l’accuratezza e la coerenza dei set di dati in tutti i sistemi. È importante garantire un’igiene dei dati adeguata in ogni fase del percorso dei dati e anche dal luogo di archiviazione iniziale. In Experience Platform Query Service, si tratta del data lake o dell’archivio accelerato.
 
-Puoi assegnare un’identità a un set di dati derivato per consentirne la gestione seguendo i servizi centralizzati di igiene dei dati di Platform.
+Puoi assegnare un’identità a un set di dati derivato per consentirne la gestione seguendo i servizi di igiene dei dati centralizzati di Experience Platform.
 
 Al contrario, quando si crea un set di dati aggregato nell’archivio accelerato, i dati aggregati non possono essere utilizzati per derivare i dati originali. In seguito a questa aggregazione di dati, viene eliminata la necessità di inoltrare richieste di igiene dei dati.
 

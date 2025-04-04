@@ -3,7 +3,7 @@ title: Destinazione connessioni Enterprise Merkury
 description: Scopri come creare una connessione di destinazione Merkury Enterprise Connections utilizzando l’interfaccia utente di Adobe Experience Platform.
 last-substantial-update: 2024-07-20T00:00:00Z
 exl-id: dffc6f4d-b756-4c13-96f3-b1cc57caacdb
-source-git-commit: 2b84b5106105339ab243a9f4412b47692caedf3c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1375'
 ht-degree: 4%
@@ -49,8 +49,8 @@ Segui i passaggi descritti in questa pagina della documentazione per creare una 
 | GAID | GOOGLE ADVERTISING ID | Seleziona l’identità di destinazione GAID quando l’identità di origine è uno spazio dei nomi GAID. |
 | IDFA | Apple ID per inserzionisti | Selezionare l&#39;identità di destinazione IDFA quando l&#39;identità di origine è uno spazio dei nomi IDFA. |
 | ECID | Experience Cloud ID | Uno spazio dei nomi che rappresenta ECID. A questo spazio dei nomi possono fare riferimento anche i seguenti alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Per ulteriori informazioni, consulta il seguente documento su [ECID](/help/identity-service/features/ecid.md). |
-| phone_sha256 | Numeri di telefono con hash con algoritmo SHA256 | I numeri di telefono con hash SHA256 e testo normale sono supportati da Adobe Experience Platform. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Applica trasformazione]** per impostare [!DNL Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. |
-| email_lc_sha256 | Indirizzi e-mail con hash con algoritmo SHA256 | Adobe Experience Platform supporta sia gli indirizzi di posta elettronica in testo normale che quelli con hash SHA256. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Applica trasformazione]** per impostare [!DNL Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. |
+| phone_sha256 | Numeri di telefono con hash con algoritmo SHA256 | I numeri di telefono con hash SHA256 e testo normale sono supportati da Adobe Experience Platform. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Applica trasformazione]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. |
+| email_lc_sha256 | Indirizzi e-mail con hash con algoritmo SHA256 | Adobe Experience Platform supporta sia gli indirizzi di posta elettronica in testo normale che quelli con hash SHA256. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Applica trasformazione]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. |
 | extern_id | ID utente personalizzati | Seleziona questa identità di destinazione quando l&#39;identità di origine è uno spazio dei nomi personalizzato. |
 
 {style="table-layout:auto"}
@@ -59,9 +59,9 @@ Segui i passaggi descritti in questa pagina della documentazione per creare una 
 
 Questa sezione descrive il tipo di pubblico che puoi esportare in questa destinazione.
 
-| **Pubblico** | **Supportato** | **Origine descrizione** |
+| **Destinatari** | **Supportato** | **Origine descrizione** |
 |---|---|---|      
-| Servizio di segmentazione | ✓ | Tipi di pubblico generati tramite l&#39;Experience Platform [[Servizio di segmentazione]](https://experienceleague.adobe.com/it/docs/experience-platform/segmentation/home). |
+| Servizio di segmentazione | ✓ | Tipi di pubblico generati tramite Experience Platform [[Servizio di segmentazione]](https://experienceleague.adobe.com/it/docs/experience-platform/segmentation/home). |
 | Caricamenti personalizzati | X | Tipi di pubblico [[importato]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
@@ -112,7 +112,7 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
 * **Descrizione** - Breve spiegazione dello scopo della destinazione
 * **Nome bucket (obbligatorio)** - Nome del bucket Amazon S3 configurato in S3
 * **Percorso cartella (obbligatorio)** - Se vengono utilizzate sottodirectory in un bucket, è necessario definire un percorso oppure &#39;/&#39; per fare riferimento al percorso principale.
-* Experienci Platform **Tipo file** - Selezionare il formato da utilizzare per i file esportati. Consulta il team di Merkury per il tipo di file previsto per il tuo account.
+* **Tipo file** - Selezionare il formato che Experience Platform deve utilizzare per i file esportati. Consulta il team di Merkury per il tipo di file previsto per il tuo account.
 
 >[!NOTE]
 >
@@ -150,7 +150,7 @@ I suggerimenti di mappatura sono forniti nella tabella seguente che elenca gli a
 
 | Campo di destinazione | Descrizione Source |
 |---|---|
-| id | Campo di identità da utilizzare per mappare i dati [!DNL Merkury] all&#39;Experience Platform tramite il connettore Source [!DNL Merkury Enterprise Identity] |
+| id | Campo di identità da utilizzare per mappare i dati [!DNL Merkury] su Experience Platform tramite il connettore Source [!DNL Merkury Enterprise Identity] |
 | Input_First_Name | Il valore `person.name.firstName` in Experience Platform. |
 | Input_Last_Name | Il valore `person.name.lastName` in Experience Platform. |
 | Input_Address_Line_1 | Il valore `mailingAddress.street` in Experience Platform. |

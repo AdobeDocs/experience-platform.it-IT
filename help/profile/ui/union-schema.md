@@ -2,26 +2,26 @@
 keywords: Experience Platform;profilo;profilo cliente in tempo reale;profilo unificato;Profilo unificato;unificato;Profilo;rtcp;abilita profilo;Abilita profilo;Schema unione;PROFILO UNIONE;profilo unione
 title: Guida dell’interfaccia utente dello schema di unione
 type: Documentation
-description: Nell’interfaccia utente di Adobe Experience Platform puoi visualizzare facilmente qualsiasi schema di unione all’interno della tua organizzazione e visualizzare in anteprima campi, identità, relazioni e schemi contributivi per una classe specifica. Questa guida fornisce informazioni dettagliate su come visualizzare ed esplorare gli schemi di unione tramite l’interfaccia utente di Platform.
+description: Nell’interfaccia utente di Adobe Experience Platform puoi visualizzare facilmente qualsiasi schema di unione all’interno della tua organizzazione e visualizzare in anteprima campi, identità, relazioni e schemi contributivi per una classe specifica. Questa guida fornisce informazioni dettagliate su come visualizzare ed esplorare gli schemi di unione tramite l’interfaccia utente di Experience Platform.
 exl-id: 52af0d77-e37d-4ed8-9dee-71a50b337b4e
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1199'
+source-wordcount: '1204'
 ht-degree: 0%
 
 ---
 
 # [!UICONTROL Guida dell&#39;interfaccia utente dello schema di unione]
 
-Nell’interfaccia utente di Adobe Experience Platform puoi visualizzare facilmente qualsiasi schema di unione all’interno della tua organizzazione e visualizzare in anteprima campi, identità, relazioni e schemi contributivi per una classe specifica. Questa guida fornisce informazioni dettagliate su come visualizzare ed esplorare gli schemi di unione tramite l’interfaccia utente di Platform.
+Nell’interfaccia utente di Adobe Experience Platform puoi visualizzare facilmente qualsiasi schema di unione all’interno della tua organizzazione e visualizzare in anteprima campi, identità, relazioni e schemi contributivi per una classe specifica. Questa guida fornisce informazioni dettagliate su come visualizzare ed esplorare gli schemi di unione tramite l’interfaccia utente di Experience Platform.
 
 ## Introduzione
 
 Questa guida dell&#39;interfaccia utente richiede una conoscenza dei vari servizi [!DNL Experience Platform] coinvolti nella gestione dei dati del profilo cliente in tempo reale. Prima di leggere questa guida o di lavorare nell’interfaccia utente, consulta la documentazione dei seguenti servizi:
 
 * [[!DNL Real-Time Customer Profile]](../home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
-* [[!DNL Identity Service]](../../identity-service/home.md): abilita [!DNL Real-Time Customer Profile] collegando identità da origini dati diverse durante l&#39;acquisizione in [!DNL Platform].
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): framework standardizzato tramite il quale [!DNL Platform] organizza i dati sull&#39;esperienza del cliente.
+* [[!DNL Identity Service]](../../identity-service/home.md): abilita [!DNL Real-Time Customer Profile] collegando identità da origini dati diverse durante l&#39;acquisizione in [!DNL Experience Platform].
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): framework standardizzato tramite il quale [!DNL Experience Platform] organizza i dati sull&#39;esperienza del cliente.
 
 ## Informazioni sugli schemi di unione
 
@@ -33,7 +33,7 @@ L’utilizzo degli schemi di unione richiede una conoscenza approfondita degli s
 
 ## Visualizza schemi di unione
 
-Per passare agli schemi unione nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Profili]** nell&#39;area di navigazione a sinistra, quindi seleziona la scheda **[!UICONTROL Schema unione]**. Viene visualizzata la scheda [!UICONTROL Schema unione] per visualizzare lo schema di unione per la classe attualmente selezionata.
+Per passare agli schemi unione nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Profili]** nell&#39;area di navigazione a sinistra, quindi seleziona la scheda **[!UICONTROL Schema unione]**. Viene visualizzata la scheda [!UICONTROL Schema unione] per visualizzare lo schema di unione per la classe attualmente selezionata.
 
 ![Viene visualizzata la pagina Schema di unione con le schede Profilo e Schema di unione evidenziate.](../images/union-schema/landing.png)
 
@@ -63,7 +63,7 @@ Per ulteriori informazioni sui set di dati, tra cui la visualizzazione dell&#39;
 
 ## Visualizzare gli schemi contributivi
 
-Puoi anche visualizzare quali schemi specifici contribuiscono allo schema di unione selezionando **[!UICONTROL Tutti gli schemi che contribuiscono]** per espandere l&#39;elenco degli schemi. A seconda della classe selezionata e del numero di schemi creati dall’organizzazione all’interno di Platform, potrebbe trattarsi di un elenco breve contenente un singolo schema o di un elenco lungo contenente più schemi.
+Puoi anche visualizzare quali schemi specifici contribuiscono allo schema di unione selezionando **[!UICONTROL Tutti gli schemi che contribuiscono]** per espandere l&#39;elenco degli schemi. A seconda della classe selezionata e del numero di schemi creati dall’organizzazione all’interno di Experience Platform, potrebbe trattarsi di un elenco breve contenente un singolo schema o di un elenco lungo contenente più schemi.
 
 ![L&#39;elenco degli schemi che contribuiscono allo schema di unione è evidenziato.](../images/union-schema/contributing-schemas.png)
 
@@ -99,4 +99,4 @@ Selezionando un campo di relazione dall’elenco, lo schema visualizzato viene a
 
 ## Passaggi successivi
 
-Dopo aver letto questa guida, saprai come visualizzare e navigare tra gli schemi di unione utilizzando l&#39;interfaccia utente [!DNL Experience Platform]. Per ulteriori informazioni sugli schemi, compreso il modo in cui vengono utilizzati in Platform, leggere la [panoramica del sistema XDM](../../xdm/home.md).
+Dopo aver letto questa guida, saprai come visualizzare e navigare tra gli schemi di unione utilizzando l&#39;interfaccia utente [!DNL Experience Platform]. Per ulteriori informazioni sugli schemi, compreso il modo in cui vengono utilizzati in Experience Platform, consulta la [panoramica del sistema XDM](../../xdm/home.md).

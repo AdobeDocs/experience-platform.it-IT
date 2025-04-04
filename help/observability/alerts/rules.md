@@ -4,9 +4,9 @@ title: Regole di avviso standard
 description: Questo documento descrive le regole di avviso predefinite fornite da Experience Platform.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: 3a800560376973a85f9f77a481ffead3c28a05aa
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4277'
+source-wordcount: '4279'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 Adobe Experience Platform fornisce diverse regole di avviso predefinite che è possibile abilitare per l’organizzazione. Questo documento descrive i dettagli delle regole di avviso fornite da Adobe. Per informazioni più generali sugli avvisi in Experience Platform, consulta la [panoramica degli avvisi](./overview.md).
 
-Quando [visualizzi le regole di avviso nell&#39;interfaccia utente di Platform](./ui.md), puoi sottoscrivere ogni regola singolarmente. Quando si sottoscrivono avvisi tramite [Notifiche evento I/O](./subscribe.md), tuttavia, le regole di avviso sono organizzate in pacchetti di abbonamento diversi. Nelle tabelle seguenti, ogni regola viene visualizzata con il nome dell’abbonamento all’evento di I/O corrispondente.
+Quando [visualizzi le regole di avviso nell&#39;interfaccia utente di Experience Platform](./ui.md), puoi sottoscrivere ogni regola singolarmente. Quando si sottoscrivono avvisi tramite [Notifiche evento I/O](./subscribe.md), tuttavia, le regole di avviso sono organizzate in pacchetti di abbonamento diversi. Nelle tabelle seguenti, ogni regola viene visualizzata con il nome dell’abbonamento all’evento di I/O corrispondente.
 
 ## Origini {#sources}
 
@@ -36,7 +36,7 @@ Se in precedenza è stato eseguito l&#39;abbonamento al tipo di avviso seguente,
 
 | Iscrizione evento di I/O | Regola di avviso | Descrizione |
 | --- | --- | --- |
-| Ritardi, errori ed errori dell’esecuzione del flusso di Source | Mancanza di acquisizione | Questo avviso ti invia un messaggio se l’acquisizione subisce un ritardo di oltre sette ore e nessun dato viene acquisito in Platform. |
+| Ritardi, errori ed errori dell’esecuzione del flusso di Source | Mancanza di acquisizione | Questo avviso ti invia un messaggio se l’acquisizione subisce un ritardo di oltre sette ore e i dati non vengono acquisiti in Experience Platform. |
 
 {style="table-layout:auto"}
 

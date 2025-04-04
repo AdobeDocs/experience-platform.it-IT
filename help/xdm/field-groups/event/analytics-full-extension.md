@@ -2,9 +2,9 @@
 title: Gruppo di campi dello schema di estensione completa Adobe Analytics ExperienceEvent
 description: Scopri il gruppo di campi schema Estensione completa Adobe Analytics ExperienceEvent.
 exl-id: b5e17f4a-a582-4059-bbcb-435d46932775
-source-git-commit: 5eb15a7dfff7e6d8ba815ae4f89142ba50166620
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '811'
+source-wordcount: '812'
 ht-degree: 5%
 
 ---
@@ -17,7 +17,7 @@ Questo documento descrive la struttura e il caso d’uso del gruppo di campi del
 
 >[!NOTE]
 >
->A causa delle dimensioni e del numero di elementi ripetuti in questo gruppo di campi, molti dei campi mostrati in questa guida sono stati compressi per risparmiare spazio. Per esplorare la struttura completa di questo gruppo di campi, puoi [cercarlo nell&#39;interfaccia utente di Platform](../../ui/explore.md) o visualizzare lo schema completo nel [archivio XDM pubblico](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json).
+>A causa delle dimensioni e del numero di elementi ripetuti in questo gruppo di campi, molti dei campi mostrati in questa guida sono stati compressi per risparmiare spazio. Per esplorare la struttura completa di questo gruppo di campi, puoi [cercarlo nell&#39;interfaccia utente di Experience Platform](../../ui/explore.md) o visualizzare lo schema completo nel [archivio XDM pubblico](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json).
 
 ## Struttura del gruppo di campi
 
@@ -103,4 +103,4 @@ Ogni oggetto pari utilizza il tipo di dati [[!UICONTROL Measure]](../../data-typ
 
 Questo documento descrive la struttura e il caso d’uso per il gruppo di campi dell’estensione Analytics. Per ulteriori dettagli sul gruppo di campi stesso, consulta l&#39;[archivio XDM pubblico](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json).
 
-Se utilizzi questo gruppo di campi per raccogliere dati di Analytics tramite Adobe Experience Platform Web SDK, consulta la guida sulla [configurazione di uno stream di dati](../../../datastreams/overview.md) per scoprire come mappare i dati su XDM sul lato server.
+Se utilizzi questo gruppo di campi per raccogliere dati di Analytics tramite Adobe Experience Platform Web SDK, consulta la guida sulla [configurazione di uno stream di dati](../../../datastreams/overview.md) per scoprire come mappare i dati a XDM sul lato server.

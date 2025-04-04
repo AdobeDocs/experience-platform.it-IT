@@ -5,9 +5,9 @@ feature: Customer AI
 title: Configurare un’istanza di Customer AI
 description: I servizi AI/ML forniscono IA per l’analisi dei clienti come servizio Adobe Sensei semplice da utilizzare che può essere configurato per diversi casi d’uso. Le sezioni seguenti illustrano i passaggi per la configurazione di un’istanza di Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2827'
+source-wordcount: '2829'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ I servizi AI/ML forniscono IA per l’analisi dei clienti come servizio Adobe Se
 
 ## Creare un’istanza {#set-up-your-instance}
 
-Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Servizi]** nell&#39;area di navigazione a sinistra. Verrà visualizzato il browser **[!UICONTROL Servizi]** in cui sono visualizzati tutti i servizi disponibili. Nel contenitore di IA per l&#39;analisi dei clienti, seleziona **[!UICONTROL Apri]**.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Servizi]** nell&#39;area di navigazione a sinistra. Verrà visualizzato il browser **[!UICONTROL Servizi]** in cui sono visualizzati tutti i servizi disponibili. Nel contenitore di IA per l&#39;analisi dei clienti, seleziona **[!UICONTROL Apri]**.
 
 ![](../images/user-guide/navigate-to-service.png)
 
@@ -35,7 +35,7 @@ Le istanze del servizio possono essere modificate, clonate ed eliminate utilizza
 
 - **[!UICONTROL Modifica]**: la selezione di **[!UICONTROL Modifica]** consente di modificare un&#39;istanza del servizio esistente. Puoi modificare il nome, la descrizione e la frequenza di punteggio dell’istanza.
 - **[!UICONTROL Clone]**: se si seleziona **[!UICONTROL Clone]**, viene copiata la configurazione dell&#39;istanza del servizio attualmente selezionata. Puoi quindi modificare il flusso di lavoro per apportare modifiche minori e rinominarlo come nuova istanza.
-- **[!UICONTROL Elimina]**: è possibile eliminare un&#39;istanza del servizio, incluse le esecuzioni cronologiche. Il set di dati di output corrispondente verrà eliminato da Platform. Tuttavia, i punteggi sincronizzati con Real-Time Customer Profile non vengono eliminati.
+- **[!UICONTROL Elimina]**: è possibile eliminare un&#39;istanza del servizio, incluse le esecuzioni cronologiche. Il set di dati di output corrispondente verrà eliminato da Experience Platform. Tuttavia, i punteggi sincronizzati con Real-Time Customer Profile non vengono eliminati.
 - **[!UICONTROL Origine dati]**: collegamento al set di dati utilizzato da questa istanza. Se vengono utilizzati più set di dati, quando si seleziona il testo del collegamento ipertestuale viene aperto il popover di anteprima del set di dati.
 - **[!UICONTROL Dettagli ultima esecuzione]**: questa opzione viene visualizzata solo quando un&#39;esecuzione non riesce. Qui vengono visualizzate le informazioni sul motivo per cui l’esecuzione non è riuscita, ad esempio i codici di errore.
 - **[!UICONTROL Definizione punteggio]**: panoramica rapida dell&#39;obiettivo configurato per questa istanza.

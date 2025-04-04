@@ -6,10 +6,10 @@ last-update: March 10, 2020
 author: ens71067
 keywords: note sulla versione;
 exl-id: 407c2bac-4c8a-4939-b3dd-788250f15650
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '858'
-ht-degree: 17%
+source-wordcount: '859'
+ht-degree: 20%
 
 ---
 
@@ -27,9 +27,9 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
 ## Governance dei dati {#governance}
 
-[!DNL Experience Platform] consente alle aziende di unire dati provenienti da più sistemi aziendali per consentire agli addetti al marketing di identificare, comprendere e coinvolgere i clienti. [!DNL Experience Platform] include un&#39;infrastruttura di governance dei dati end-to-end per garantire l&#39;utilizzo corretto dei dati all&#39;interno di [!DNL Platform] e durante la condivisione tra i sistemi.
+[!DNL Experience Platform] consente alle aziende di unire dati provenienti da più sistemi aziendali per consentire agli addetti al marketing di identificare, comprendere e coinvolgere i clienti. [!DNL Experience Platform] include un&#39;infrastruttura di governance dei dati end-to-end per garantire l&#39;utilizzo corretto dei dati all&#39;interno di [!DNL Experience Platform] e durante la condivisione tra i sistemi.
 
-La governance dei dati di Adobe Experience Platform è una serie di strategie e tecnologie utilizzate per gestire i dati della clientela e garantire la conformità a normative, restrizioni e criteri applicabili all’utilizzo dei dati. Svolge un ruolo chiave all&#39;interno di [!DNL Experience Platform] a vari livelli, tra cui catalogazione, derivazione dati, etichettatura di utilizzo dati, criteri di accesso ai dati e controllo degli accessi ai dati per le azioni di marketing.
+La governance dei dati di Adobe Experience Platform è una serie di strategie e tecnologie utilizzate per gestire i dati della clientela e garantire la conformità a normative, restrizioni e criteri applicabili all’utilizzo dei dati. Svolge un ruolo chiave all’interno di [!DNL Experience Platform] a vari livelli, tra cui catalogazione, derivazione dei dati, etichettatura dell’utilizzo dei dati, criteri di accesso ai dati e controllo degli accessi ai dati per le azioni di marketing.
 
 **Nuove funzioni**
 
@@ -51,7 +51,7 @@ Per ulteriori informazioni sulla governance dei dati, vedere [Panoramica sulla g
 
 ## Acquisizione dei dati {#ingestion}
 
-Adobe Experience Platform offre un set completo di funzioni per acquisire qualsiasi tipo e latenza di dati. Adobe Experience Platform [!DNL Data Ingestion] offre diverse alternative per l&#39;acquisizione dei dati, tra cui API Batch, API Streaming, connettori Adobi nativi, partner di integrazione dati o interfaccia utente di Adobe Experience Platform.
+Adobe Experience Platform offre un set completo di funzioni per acquisire qualsiasi tipo e latenza di dati. Adobe Experience Platform [!DNL Data Ingestion] offre diverse alternative per l&#39;acquisizione dei dati, tra cui API Batch, API Streaming, connettori Adobe nativi, partner di integrazione dati o interfaccia utente di Adobe Experience Platform.
 
 **Nuove funzioni**
 
@@ -63,12 +63,12 @@ Adobe Experience Platform offre un set completo di funzioni per acquisire qualsi
 
 * Nessuna
 
-Per ulteriori informazioni sull&#39;acquisizione di dati in Platform, consulta la [documentazione sull&#39;acquisizione dei dati](../../ingestion/home.md).
+Per ulteriori informazioni sull&#39;acquisizione di dati in Experience Platform, consulta la [documentazione sull&#39;acquisizione dei dati](../../ingestion/home.md).
 
 
 ## Destinazioni {#destinations}
 
-In [Real-time Customer Data Platform](../../rtcdp/overview.md), le destinazioni sono integrazioni predefinite con piattaforme di destinazione che attivano i dati per tali partner in modo semplice.
+In [Real-Time Customer Data Platform](../../rtcdp/overview.md), le destinazioni sono integrazioni predefinite con piattaforme di destinazione che attivano i dati per tali partner in modo semplice.
 
 **Nuove destinazioni**
 
@@ -101,7 +101,7 @@ Per ulteriori informazioni su [!DNL Identity Service], consulta la [Panoramica d
 
 ## Origini {#sources}
 
-Adobe Experience Platform può acquisire dati da origini esterne e allo stesso tempo consentire di strutturare, etichettare e migliorare tali dati utilizzando i servizi [!DNL Platform]. Puoi acquisire dati da diverse origini, ad esempio da applicazioni Adobe, dall’archiviazione basata su cloud, da software di terze parti e dal sistema CRM.
+Adobe Experience Platform può acquisire dati da origini esterne e allo stesso tempo consentire di strutturare, etichettare e migliorare tali dati utilizzando i servizi [!DNL Experience Platform]. Puoi acquisire dati da diverse origini, ad esempio da applicazioni Adobe, dall’archiviazione basata su cloud, da software di terze parti e dal sistema CRM.
 
 [!DNL Experience Platform] fornisce un&#39;API RESTful e un&#39;interfaccia utente interattiva che consente di configurare facilmente le connessioni di origine per vari provider di dati. Queste connessioni di origine consentono di autenticarti e connetterti a sistemi di archiviazione esterni e servizi di gestione delle relazioni con i clienti, impostare i tempi per le esecuzioni dell’acquisizione e gestire la velocità effettiva di acquisizione dei dati.
 

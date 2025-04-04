@@ -2,9 +2,9 @@
 title: Note sulla versione di Adobe Experience Platform - Aprile 2022
 description: Note sulla versione di Adobe Experience Platform di aprile 2022.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2670'
+source-wordcount: '2679'
 ht-degree: 19%
 
 ---
@@ -26,9 +26,9 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
 ## [!DNL Dashboards] {#dashboards}
 
-Platform fornisce più dashboard attraverso i quali è possibile visualizzare informazioni importanti sui dati dell’organizzazione, acquisite durante le istantanee giornaliere.
+Experience Platform fornisce più dashboard attraverso i quali è possibile visualizzare informazioni importanti sui dati dell’organizzazione, acquisite durante le istantanee giornaliere.
 
-Le dashboard forniscono opzioni di reporting preconfigurate per i dati dell’organizzazione e sono integrate direttamente nel flusso di lavoro degli addetti al marketing in Platform. Queste dashboard sono disponibili senza la necessità di ulteriore supporto IT o il tempo e l’impegno altrimenti necessari per esportare ed elaborare i dati con una progettazione e un’implementazione aggiuntive di data warehousing.
+Le dashboard forniscono opzioni di reporting preconfigurate per i dati dell’organizzazione e sono integrate direttamente nel flusso di lavoro degli addetti al marketing in Experience Platform. Queste dashboard sono disponibili senza la necessità di ulteriore supporto IT o il tempo e l’impegno altrimenti necessari per esportare ed elaborare i dati con una progettazione e un’implementazione aggiuntive di data warehousing.
 
 I seguenti widget sono disponibili nella libreria Widget nei rispettivi dashboard. Per ulteriori informazioni su [come aggiungere widget tramite la libreria Widget](../../dashboards/customize/widget-library.md), vedere la documentazione.
 
@@ -61,9 +61,9 @@ Per ulteriori informazioni sulle dashboard [[!DNL Profiles]](../../dashboards/gu
 
 ## Flussi di dati {#dataflows}
 
-In Platform, i dati vengono acquisiti da diverse origini, analizzati all’interno del sistema e attivati in un’ampia varietà di destinazioni. Platform semplifica il processo di tracciamento di questo flusso di dati potenzialmente non lineare fornendo trasparenza con i flussi di dati.
+In Experience Platform, i dati vengono acquisiti da diverse origini, analizzati all’interno del sistema e attivati in un’ampia varietà di destinazioni. Experience Platform semplifica il processo di tracciamento di questo flusso di dati potenzialmente non lineare fornendo trasparenza con i flussi di dati.
 
-I flussi di dati sono una rappresentazione dei processi che spostano i dati in Platform. Questi flussi di dati sono configurati tra servizi diversi, aiutando a spostare i dati dai connettori di origine ai set di dati di destinazione, dove vengono quindi utilizzati dal servizio Identity e dal profilo cliente in tempo reale prima di essere attivati nelle destinazioni.
+I flussi di dati sono una rappresentazione dei processi che spostano i dati in Experience Platform. Questi flussi di dati sono configurati tra servizi diversi, aiutando a spostare i dati dai connettori di origine ai set di dati di destinazione, dove vengono quindi utilizzati dal servizio Identity e dal profilo cliente in tempo reale prima di essere attivati nelle destinazioni.
 
 **Nuove funzioni**
 
@@ -84,7 +84,7 @@ Per informazioni più generali sui flussi di dati, consulta la [panoramica sui f
 | Supporto per origine Adobe Analytics | L’origine di Adobe Analytics ora supporta le funzioni di preparazione dati, che consentono di mappare i dati della suite di rapporti di Analytics su uno schema XDM di destinazione durante la creazione di un flusso di dati. Per ulteriori informazioni, consulta il tutorial su [creazione di una connessione di origine Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md). |
 | Supporto per l’importazione di regole di mappatura esistenti | Ora puoi importare le regole di mappatura da un flusso di dati esistente per accelerare le configurazioni del flusso di dati e limitare gli errori. Per ulteriori informazioni, consulta l&#39;esercitazione sull&#39;[importazione delle regole di mappatura esistenti](../../data-prep/ui/mapping.md). |
 
-Per ulteriori informazioni su [!DNL Data Prep], vedere la [[!DNL Data Prep] panoramica](../../data-prep/home.md).
+Per ulteriori informazioni su [!DNL Data Prep], consulta la [[!DNL Data Prep] panoramica](../../data-prep/home.md).
 
 ## [!DNL Destinations] {#destinations}
 
@@ -94,18 +94,18 @@ Per ulteriori informazioni su [!DNL Data Prep], vedere la [[!DNL Data Prep] pano
 
 | Funzione | Descrizione |
 | ----------- | ----------- |
-| Connettori di destinazione Enterprise avanzati | Tre connettori di destinazione Enterprise sono ora generalmente disponibili: [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md), [[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md) e [[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md). <br> La disponibilità generale dei connettori di destinazione aziendali include tutte le funzionalità offerte in precedenza nella fase Beta e altro ancora: <ul><li>Nuove funzionalità di autenticazione, tra cui [Firma di accesso condiviso negli hub eventi di Azure](../../destinations/catalog/cloud-storage/azure-event-hubs.md#sas-authentication) e altri [tipi di autenticazione](../../destinations/catalog/streaming/http-destination.md#authentication-information) (token Bearer, OAuth 2) nella destinazione API HTTP;</li><li>[Backfill dei dati storici del profilo](../../destinations/catalog/streaming/http-destination.md#historical-data-backfill) (invio di profili storici qualificati per il segmento alla prima attivazione);</li><li>Le metriche di esecuzione del flusso di dati sono ora supportate per queste destinazioni;</li><li>[Metadati aggiuntivi del segmento](../../destinations/catalog/streaming/http-destination.md#destination-details) inclusi nel payload dei dati, inclusi i nomi dei segmenti e le marche temporali dei segmenti;</li><li>Supporto per [indirizzi IP statici](/help/destinations/catalog/streaming/ip-address-allow-list.md) per i clienti che devono eseguire il di Experienci Platform di inserisce nell&#39;elenco Consentiti.</li></ul> |
+| Connettori di destinazione Enterprise avanzati | Tre connettori di destinazione Enterprise sono ora generalmente disponibili: [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md), [[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md) e [[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md). <br> La disponibilità generale dei connettori di destinazione aziendali include tutte le funzionalità offerte in precedenza nella fase Beta e altro ancora: <ul><li>Nuove funzionalità di autenticazione, tra cui [Firma di accesso condiviso negli hub eventi di Azure](../../destinations/catalog/cloud-storage/azure-event-hubs.md#sas-authentication) e altri [tipi di autenticazione](../../destinations/catalog/streaming/http-destination.md#authentication-information) (token Bearer, OAuth 2) nella destinazione API HTTP;</li><li>[Backfill dei dati storici del profilo](../../destinations/catalog/streaming/http-destination.md#historical-data-backfill) (invio di profili storici qualificati per il segmento alla prima attivazione);</li><li>Le metriche di esecuzione del flusso di dati sono ora supportate per queste destinazioni;</li><li>[Metadati aggiuntivi del segmento](../../destinations/catalog/streaming/http-destination.md#destination-details) inclusi nel payload dei dati, inclusi i nomi dei segmenti e le marche temporali dei segmenti;</li><li>Inserire nell&#39;elenco Consentiti Supporto per [indirizzi IP statici](/help/destinations/catalog/streaming/ip-address-allow-list.md) per i clienti che devono Experience Platform.</li></ul> |
 | Avvisi contestuali per i flussi di dati di destinazione | È ora possibile [abbonarsi agli avvisi](../../destinations/ui/alerts.md) durante la creazione di un flusso di dati di destinazione, per ricevere messaggi di avviso relativi allo stato, al completamento o al fallimento dell&#39;esecuzione del flusso di dati. Puoi scegliere di ricevere gli avvisi nell’interfaccia utente di Experience Platform o tramite e-mail. |
 
 ### Processo di rilascio per connettori di destinazione aziendali avanzati {#release-process-enterprise-destinations}
 
-Per le destinazioni Amazon Kinesis, Azure Event Hub e HTTP API, durante il processo di rilascio (a partire dal 27 aprile), nel catalogo delle destinazioni verranno visualizzate sia la scheda di destinazione precedente a Beta che la nuova scheda di destinazione generalmente disponibile (GA). Eventuali flussi di dati configurati dai clienti che utilizzano le destinazioni beta verranno migrati nei prossimi giorni alla versione GA della stessa destinazione. La migrazione dovrebbe concludersi entro la fine della giornata di venerdì 29 aprile. Le destinazioni di Beta continueranno a essere visibili durante questo breve intervallo di tempo ed etichettate come **obsolete**.
+Per le destinazioni Amazon Kinesis, Azure Event Hubs e HTTP API, durante il processo di rilascio (a partire dal 27 aprile), nel catalogo delle destinazioni verranno visualizzate sia la scheda di destinazione Beta precedente che la nuova scheda di destinazione generalmente disponibile (GA). Eventuali flussi di dati configurati dai clienti che utilizzano le destinazioni beta verranno migrati nei prossimi giorni alla versione GA della stessa destinazione. La migrazione dovrebbe concludersi entro la fine della giornata di venerdì 29 aprile. Le destinazioni di Beta continueranno a essere visibili durante questo breve intervallo di tempo ed etichettate come **obsolete**.
 
 Se hai utilizzato queste destinazioni nella fase Beta, tieni presente quanto segue:
 
 - Se in precedenza è stato in Beta con una qualsiasi delle 3 destinazioni, non è necessaria alcuna azione. Tutti i flussi di dati configurati come parte di Beta continueranno a funzionare e verranno migrati alla versione GA.
 - Se desideri impostare queste destinazioni a partire dal 27 aprile, esegui questa operazione con la nuova versione GA delle destinazioni.
-- Le schede beta contrassegnate come obsolete verranno rimosse una volta completata l’operazione di rilascio, stimata entro la fine della giornata di venerdì 29 aprile. Il team di progettazione Experience Platform sta monitorando attentamente la corretta esecuzione dell’operazione di rilascio.
+- Le schede beta contrassegnate come obsolete verranno rimosse una volta completata l’operazione di rilascio, stimata entro la fine della giornata di venerdì 29 aprile. Il team di progettazione di Experience Platform sta monitorando attentamente la corretta esecuzione dell’operazione di rilascio.
 
 **Nuove destinazioni**
 
@@ -147,7 +147,7 @@ XDM è una specifica open-source che fornisce strutture e definizioni comuni (sc
 | Tipo di dati | [[!UICONTROL Spedizione]](https://github.com/adobe/xdm/blob/master/components/datatypes/shipping.schema.json) | Acquisisce le informazioni di spedizione per uno o più prodotti. |
 | Tipo di dati | [[!UICONTROL Ricerca sito]](https://github.com/adobe/xdm/blob/master/components/datatypes/sitesearch.schema.json) | Acquisisce informazioni sull’attività di ricerca del sito. |
 | Estensione (Workfront) | [[!UICONTROL Attributi attività operative]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/opTask.schema.json) | Acquisisce i dettagli relativi a un’attività operativa. |
-| Estensione (Workfront) | [[!UICONTROL Attributi Portfolio di lavoro]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/portfolio.schema.json) | Acquisisce i dettagli relativi a un portfolio di lavoro. |
+| Estensione (Workfront) | [[!UICONTROL Attributi Portfolio Di Lavoro]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/portfolio.schema.json) | Acquisisce i dettagli relativi a un portfolio di lavoro. |
 | Estensione (Workfront) | [[!UICONTROL Attributi Programma Di Lavoro]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/program.schema.json) | Acquisisce i dettagli relativi a un programma di lavoro. |
 | Estensione (Workfront) | [[!UICONTROL Attributi progetto di lavoro]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/project.schema.json) | Acquisisce i dettagli relativi a un progetto di lavoro. |
 
@@ -169,7 +169,7 @@ XDM è una specifica open-source che fornisce strutture e definizioni comuni (sc
 
 {style="table-layout:auto"}
 
-Per ulteriori informazioni su XDM in Platform, consulta la [Panoramica sul sistema XDM](../../xdm/home.md).
+Per ulteriori informazioni su XDM in Experience Platform, consulta la [Panoramica del sistema XDM](../../xdm/home.md).
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai/ml-services}
 
@@ -183,13 +183,13 @@ Attribution AI viene utilizzato per attribuire il merito ai punti di contatto da
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Supporto per più set di dati | La funzione Set di dati multipli ora supporta tutti i set di dati Experience Event e la selezione di Identity Map come identità. I clienti possono selezionare Identity Map ed eventuali ID associati, purché sia presente uno spazio dei nomi di identità comune tra i set di dati. Attribution AI supporta i seguenti schemi: Adobe Analytics, Experience Event, Consumer Experience Event. Per ulteriori informazioni sul supporto di più set di dati in Attribution AI, consulta la [guida utente di Attribution AI](../../intelligent-services/attribution-ai/user-guide.md). |
+| Supporto per più set di dati | La funzione Set di dati multipli ora supporta tutti i set di dati Experience Event e la selezione di Identity Map come identità. I clienti possono selezionare Identity Map ed eventuali ID associati, purché sia presente uno spazio dei nomi di identità comune tra i set di dati. Attribution AI supporta i seguenti schemi: Adobe Analytics, Experience Event, Consumer Experience Event. Per ulteriori informazioni sul supporto di più set di dati in IA per l&#39;attribuzione, consulta la [guida utente di IA per l&#39;attribuzione](../../intelligent-services/attribution-ai/user-guide.md). |
 
-Per ulteriori informazioni su [!DNL Intelligent Services], vedere la [[!DNL Intelligent Services] panoramica](../../intelligent-services/home.md).
+Per ulteriori informazioni su [!DNL Intelligent Services], consulta la [[!DNL Intelligent Services] panoramica](../../intelligent-services/home.md).
 
 ### IA per l’analisi dei clienti
 
-IA per l’analisi dei clienti disponibile in Real-time Customer Data Platform, viene utilizzato per generare punteggi di propensione personalizzati, come abbandono e conversione per singoli profili su larga scala. Per poter usufruire di queste funzioni non occorre trasformare le esigenze aziendali in problematiche di apprendimento automatico né scegliere un algoritmo, e non sono richieste formazione o implementazioni specifiche.
+IA per l’analisi dei clienti disponibile in Real-Time Customer Data Platform, viene utilizzato per generare punteggi di propensione personalizzati, come abbandono e conversione per singoli profili su larga scala. Per poter usufruire di queste funzioni non occorre trasformare le esigenze aziendali in problematiche di apprendimento automatico né scegliere un algoritmo, e non sono richieste formazione o implementazioni specifiche.
 
 **Funzioni aggiornate**
 
@@ -198,7 +198,7 @@ IA per l’analisi dei clienti disponibile in Real-time Customer Data Platform, 
 | Supporto per più set di dati | La funzione Set di dati multipli ora supporta tutti i set di dati Experience Event e la selezione di Identity Map come identità. I clienti possono selezionare Identity Map ed eventuali ID associati, purché sia presente uno spazio dei nomi di identità comune tra i set di dati. IA per l’analisi dei clienti supporta i seguenti schemi: Adobe Analytics, Experience Event, Consumer Experience Event e Adobe Audience Manager schema. Per ulteriori informazioni sul supporto di più set di dati in IA per l&#39;analisi dei clienti, consulta la [guida utente di IA per l&#39;analisi dei clienti](../../intelligent-services/customer-ai/user-guide/configure.md). |
 | Nuove metriche di valutazione del modello in IA per l’analisi dei clienti | I nuovi grafici dei guadagni in IA per l’analisi dei clienti consentono agli addetti al marketing di determinare le dimensioni del gruppo di destinazione in base al budget e agli obiettivi di ROI. I nuovi grafici Lift misurano la qualità del modello, fornendo una migliore visibilità dell’incremento ottenuto rispetto al targeting casuale. Per ulteriori informazioni, consulta il documento [Approfondimenti sull&#39;individuazione con IA per l&#39;analisi dei clienti](../../intelligent-services/customer-ai/user-guide/discover-insights.md). |
 
-Per ulteriori informazioni su [!DNL Intelligent Services], vedere la [[!DNL Intelligent Services] panoramica](../../intelligent-services/home.md).
+Per ulteriori informazioni su [!DNL Intelligent Services], consulta la [[!DNL Intelligent Services] panoramica](../../intelligent-services/home.md).
 
 ## Edizione B2B di Real-Time Customer Data Platform {#B2B}
 
@@ -210,11 +210,11 @@ L’Edizione B2B di Real-Time CDP, basata su Real-Time Customer Data Platform (R
 | --- | --- |
 | Supporto per la funzionalità `isDeleted` | Tutti i [!DNL Marketo] set di dati tranne `Activities` ora supportano la mappatura `isDeleted`. La nuova mappatura viene aggiunta automaticamente ai flussi di dati B2B esistenti. È possibile utilizzare il mapping `isDeleted` per filtrare i record eliminati in modo che i dati in [!DNL Data Lake] siano coerenti con i dati di origine. Per ulteriori informazioni su `isDeleted`, consulta la [[!DNL Marketo] guida dei campi di mappatura](../../sources/connectors/adobe-applications/mapping/marketo.md). |
 
-Per ulteriori informazioni sull&#39;edizione B2B di Real-time Customer Data Platform, vedere la [panoramica B2B](../../rtcdp/b2b-overview.md).
+Per ulteriori informazioni su Real-Time Customer Data Platform B2B edition, consulta la [panoramica B2B](../../rtcdp/b2b-overview.md).
 
 ## Origini {#sources}
 
-Adobe Experience Platform può acquisire dati da origini esterne e allo stesso tempo strutturarli, etichettarli e migliorarli utilizzando i servizi di Platform. Puoi acquisire dati da diverse origini, ad esempio da applicazioni Adobe, dall’archiviazione basata su cloud, da software di terze parti e dal sistema CRM.
+Adobe Experience Platform può acquisire dati da origini esterne e allo stesso tempo strutturare, etichettare e migliorare tali dati utilizzando i servizi di Experience Platform. Puoi acquisire dati da diverse origini, ad esempio da applicazioni Adobe, dall’archiviazione basata su cloud, da software di terze parti e dal sistema CRM.
 
 Experience Platform fornisce un’API RESTful e un’interfaccia utente interattiva per impostare facilmente le connessioni di origine per vari provider di dati. Queste connessioni di origine consentono di autenticarti e connetterti a sistemi di archiviazione esterni e servizi di gestione delle relazioni con i clienti, impostare i tempi per le esecuzioni dell’acquisizione e gestire la velocità effettiva di acquisizione dei dati.
 
@@ -222,8 +222,8 @@ Experience Platform fornisce un’API RESTful e un’interfaccia utente interatt
 
 | Funzione | Descrizione |
 | --- | --- |
-| Supporto per [!DNL OneTrust Integration] | È ora possibile utilizzare l&#39;origine [!DNL OneTrust Integration] per acquisire i dati di consenso e preferenze dall&#39;account [!DNL OneTrust] a Platform. Per ulteriori informazioni, consulta la documentazione sulla [creazione di una [!DNL OneTrust Integration] connessione di origine](../../sources/connectors/consent-and-preferences/onetrust.md). |
-| Supporto per [!DNL Square] | È ora possibile utilizzare l&#39;origine [!DNL Square] per acquisire i dati dei pagamenti dall&#39;account [!DNL Square] a Platform. |
+| Supporto per [!DNL OneTrust Integration] | È ora possibile utilizzare l&#39;origine [!DNL OneTrust Integration] per acquisire i dati di consenso e preferenze dall&#39;account [!DNL OneTrust] ad Experience Platform. Per ulteriori informazioni, consulta la documentazione sulla [creazione di una [!DNL OneTrust Integration] connessione di origine](../../sources/connectors/consent-and-preferences/onetrust.md). |
+| Supporto per [!DNL Square] | È ora possibile utilizzare l&#39;origine [!DNL Square] per acquisire i dati dei pagamenti dall&#39;account [!DNL Square] ad Experience Platform. |
 | Supporto per l’eliminazione dei flussi di dati Attributi del cliente | Ora puoi eliminare i flussi di dati creati con il connettore di origine Attributi del cliente. |
 
 Per ulteriori informazioni sulle origini, vedere [panoramica delle origini](../../sources/home.md).

@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;servizio query;servizio qu
 title: Creare un rapporto con tendenze degli eventi
 description: Scopri come scrivere query che utilizzano Eventi esperienza per creare un rapporto con tendenze degli eventi in un intervallo di date specificato, raggruppati per data.
 exl-id: 8f7ed5b5-c265-4a1e-a360-4293d1e86e97
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '381'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 In questo documento viene fornito un esempio delle istruzioni SQL necessarie per creare un report con tendenze degli eventi per giorno in un intervallo di date specifico. Adobe Experience Platform Query Service consente di scrivere query che utilizzano [!DNL Experience Events] per acquisire diversi casi d&#39;uso. Gli eventi esperienza sono rappresentati dalla classe ExperienceEvent di Experience Data Model (XDM), che acquisisce un’istantanea immutabile e non aggregata del sistema quando un utente interagisce con un sito web o un servizio. Gli eventi esperienza possono essere utilizzati anche per l’analisi del dominio temporale. Consulta la [sezione passaggi successivi](#next-steps) per altri casi d&#39;uso che coinvolgono [!DNL Experience Events] per generare rapporti sui visitatori.
 
-I rapporti consentono di accedere ai dati della piattaforma per sfruttare al meglio le informazioni strategiche di business della tua organizzazione. Con questi rapporti puoi esaminare i dati di Platform in diversi modi, visualizzare metriche chiave in formati facili da comprendere e condividere le informazioni risultanti.
+I rapporti consentono di accedere ai dati di Experience Platform per sfruttare al meglio le informazioni strategiche di business della tua organizzazione. Con questi rapporti puoi esaminare i dati di Experience Platform in diversi modi, visualizzare metriche chiave in formati facili da comprendere e condividere le informazioni risultanti.
 
 Ulteriori informazioni su XDM e [!DNL Experience Events] sono disponibili nella [[!DNL XDM System] panoramica](../../xdm/home.md). Combinando Query Service con [!DNL Experience Events], puoi tenere traccia in modo efficace delle tendenze comportamentali tra i tuoi utenti. Il documento seguente fornisce esempi di query che coinvolgono [!DNL Experience Events].
 

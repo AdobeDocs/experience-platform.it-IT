@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;servizio query;servizio query;strutture dati nidificate;dati nidificati;query service;Query service;nested data structures;nested data;
+keywords: Experience Platform;servizio query;servizio query;strutture dati nidificate;dati nidificati;;query service;Query service;nested data structures;nested data;
 title: Utilizzo delle strutture di dati nidificati in Query Service
 description: In questo documento viene fornito un esempio di funzionamento per l'elaborazione e la trasformazione di campi dati nidificati mediante istruzioni CTAS e INSERT INTO.
 exl-id: 593379fb-88ad-4b14-8d2e-aa6d18129974
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '790'
 ht-degree: 2%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 2%
 
 Adobe Experience Platform Query Service supporta l’utilizzo di campi dati nidificati. La complessità delle strutture di dati aziendali può complicare la trasformazione o l&#39;elaborazione di tali dati. Questo documento fornisce esempi su come creare, elaborare o trasformare set di dati con tipi di dati complessi, comprese le strutture di dati nidificate.
 
-Query Service fornisce un&#39;interfaccia [!DNL PostgreSQL] per eseguire query SQL su tutti i set di dati gestiti da Experience Platform. Platform supporta l’utilizzo di tipi di dati primitivi o complessi nelle colonne di tabella, ad esempio struct, array, mappe e strutture, array e mappe annidati in profondità. I set di dati possono anche contenere strutture nidificate in cui il tipo di dati della colonna può essere complesso come una matrice di strutture nidificate o una mappa di mappe in cui il valore di una coppia chiave-valore può essere una struttura con più livelli di nidificazione.
+Query Service fornisce un&#39;interfaccia [!DNL PostgreSQL] per eseguire query SQL su tutti i set di dati gestiti da Experience Platform. Experience Platform supporta l’utilizzo di tipi di dati primitivi o complessi nelle colonne di una tabella, ad esempio struct, array, mappe e strutture, array e mappe annidati in profondità. I set di dati possono anche contenere strutture nidificate in cui il tipo di dati della colonna può essere complesso come una matrice di strutture nidificate o una mappa di mappe in cui il valore di una coppia chiave-valore può essere una struttura con più livelli di nidificazione.
 
 ## Introduzione
 
-Questo tutorial richiede l’utilizzo di un client PSQL di terze parti o dello strumento editor di query per scrivere, convalidare ed eseguire query nell’interfaccia utente di Experience Platform. Per informazioni dettagliate su come eseguire query tramite l&#39;interfaccia utente, consulta la [guida dell&#39;interfaccia utente di Query Editor](../ui/user-guide.md). Per un elenco dettagliato dei client desktop di terze parti che possono connettersi a Query Service, vedere la [panoramica delle connessioni client](../clients/overview.md).
+Questa esercitazione richiede l’utilizzo di un client PSQL di terze parti o dello strumento editor di query per scrivere, convalidare ed eseguire query nell’interfaccia utente di Experience Platform. Per informazioni dettagliate su come eseguire query tramite l&#39;interfaccia utente, consulta la [guida dell&#39;interfaccia utente di Query Editor](../ui/user-guide.md). Per un elenco dettagliato dei client desktop di terze parti che possono connettersi a Query Service, vedere la [panoramica delle connessioni client](../clients/overview.md).
 
 È inoltre necessario avere una buona conoscenza della sintassi `INSERT INTO` e `CTAS`. Informazioni specifiche sul loro utilizzo sono disponibili nelle sezioni [`INSERT INTO`](../sql/syntax.md#insert-into) e [`CTAS`](../sql/syntax.md#create-table-as-select) della [documentazione di riferimento sulla sintassi SQL](../sql/syntax.md).
 

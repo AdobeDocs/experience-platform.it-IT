@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;servizio query;servizio query;Power BI;power bi;connettersi al servizio query;
+keywords: Experience Platform;home;argomenti popolari;servizio query;servizio query;Power BI;power bi;connect to query service;
 solution: Experience Platform
-title: Connetti Power BI a Query Service
-description: Questo documento illustra i passaggi necessari per la connessione di Power BI con Adobe Experience Platform Query Service.
+title: Connettere Power BI a Query Service
+description: Questo documento illustra i passaggi necessari per la connessione di Power BI a Adobe Experience Platform Query Service.
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-source-git-commit: 2b76b99d1e22d75faf8d758edd6cf08acdec7c21
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1011'
+source-wordcount: '1014'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Questa guida richiede che tu abbia già accesso all&#39;app desktop [!DNL Power 
 >
 > L&#39;applicazione desktop [!DNL Power BI] è **only** disponibile sui dispositivi Windows.
 
-Per acquisire le credenziali necessarie per la connessione di [!DNL Power BI] a Experience Platform, è necessario avere accesso all&#39;area di lavoro Query nell&#39;interfaccia utente di Platform. Se al momento non disponi dell’accesso all’area di lavoro query, contatta l’amministratore dell’organizzazione.
+Per acquisire le credenziali necessarie per la connessione di [!DNL Power BI] ad Experience Platform, è necessario avere accesso all&#39;area di lavoro Query nell&#39;interfaccia utente di Experience Platform. Se al momento non disponi dell’accesso all’area di lavoro query, contatta l’amministratore dell’organizzazione.
 
 ## Connetti [!DNL Power BI] a Query Service {#connect-power-bi}
 
@@ -31,13 +31,13 @@ Per connettere [!DNL Power BI] a Query Service, apri [!DNL Power BI] e seleziona
 
 Viene visualizzata la finestra di dialogo del database [!DNL PostgreSQL] in cui vengono richiesti i valori per il server e il database. Ulteriori istruzioni su come [connettersi a un database PostgreSQL da Power Query Desktop](https://learn.microsoft.com/en-us/power-query/connectors/postgresql#connect-to-a-postgresql-database-from-power-query-desktop) sono disponibili nella documentazione ufficiale di [!DNL PowerBI].
 
-Questi valori richiesti vengono ricavati dalle credenziali Adobe Experience Platform. Per trovare le credenziali, accedi all&#39;interfaccia utente di Platform e seleziona **[!UICONTROL Query]** dal menu di navigazione a sinistra, seguito da **[!UICONTROL Credenziali]**. Per ulteriori informazioni su come trovare il nome del database, l&#39;host, la porta e le credenziali di accesso, leggere la [guida delle credenziali](../ui/credentials.md).
+Questi valori richiesti vengono ricavati dalle credenziali Adobe Experience Platform. Per trovare le credenziali, accedi all&#39;interfaccia utente di Experience Platform e seleziona **[!UICONTROL Query]** dal menu di navigazione a sinistra, seguito da **[!UICONTROL Credenziali]**. Per ulteriori informazioni su come trovare il nome del database, l&#39;host, la porta e le credenziali di accesso, leggere la [guida delle credenziali](../ui/credentials.md).
 
 >[!IMPORTANT]
 >
->In qualità di utente Power BI o Tableau, puoi collegare il Customer Journey Analytics agli strumenti di business intelligence dalla scheda Credenziali di Query Service. Consulta la documentazione sulle credenziali per istruzioni su come [collegare gli strumenti di business intelligence al Customer Journey Analytics](../ui/credentials.md#connect-to-customer-journey-analytics).
+>In qualità di utente Power BI o Tableau, puoi collegare Customer Journey Analytics ai tuoi strumenti di business intelligence dalla scheda Credenziali di Query Service. Consulta la documentazione sulle credenziali per istruzioni su come [collegare gli strumenti di business intelligence a Customer Journey Analytics](../ui/credentials.md#connect-to-customer-journey-analytics).
 
-![L&#39;area di lavoro Query di Experience Platform con la scheda Credenziali e le credenziali in scadenza evidenziate.](../images/clients/power-bi/query-service-credentials-page.png)
+![L&#39;area di lavoro Query Experience Platform con la scheda Credenziali e le credenziali in scadenza evidenziate.](../images/clients/power-bi/query-service-credentials-page.png)
 
 Nel campo **[!DNL Server]** della finestra di dialogo [!DNL PostgreSQL database], immettere il valore per l&#39;host trovato nella sezione [!UICONTROL Credenziali] del servizio query. Per la produzione, aggiungere la porta `:80` alla fine della stringa host. Ad esempio, `made-up.platform-query.adobe.io:80`.
 
@@ -75,7 +75,7 @@ Per importare una tabella, immettere i dettagli del server e del database [come 
 
 ### Importare tabelle utilizzando SQL personalizzato
 
-[!DNL Power BI] e altri strumenti di terze parti come [!DNL Tableau] non consentono attualmente agli utenti di importare oggetti nidificati, ad esempio oggetti XDM in Platform. Per tenere conto di ciò, [!DNL Power BI] consente di utilizzare SQL personalizzato per accedere a questi campi nidificati e creare una visualizzazione semplificata dei dati. [!DNL Power BI] carica quindi questa vista appiattita dei dati precedentemente nidificati come una normale tabella.
+[!DNL Power BI] e altri strumenti di terze parti come [!DNL Tableau] non consentono attualmente agli utenti di importare oggetti nidificati, ad esempio oggetti XDM in Experience Platform. Per tenere conto di ciò, [!DNL Power BI] consente di utilizzare SQL personalizzato per accedere a questi campi nidificati e creare una visualizzazione semplificata dei dati. [!DNL Power BI] carica quindi questa vista appiattita dei dati precedentemente nidificati come una normale tabella.
 
 Dalla finestra di dialogo [!DNL PostgreSQL database], selezionare **[!DNL Advanced options]** per immettere una query SQL personalizzata nella sezione **[!DNL SQL statement]**. Questa query personalizzata deve essere utilizzata per &quot;appiattire&quot; le coppie nome-valore JSON in un formato di tabella. La documentazione ufficiale fornisce inoltre informazioni su come [connettere PowerBI utilizzando un&#39;istruzione SQL nelle opzioni avanzate](https://learn.microsoft.com/en-us/power-query/connectors/postgresql#connect-using-advanced-options).
 

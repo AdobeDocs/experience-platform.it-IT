@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform - Febbraio 2023
 description: Note sulla versione di Adobe Experience Platform di febbraio 2023.
 exl-id: 1c30a646-d9f8-4749-ac25-40bc48365a40
-source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1255'
-ht-degree: 97%
+source-wordcount: '1259'
+ht-degree: 91%
 
 ---
 
@@ -92,11 +92,11 @@ XDM è una specifica open-source che fornisce strutture e definizioni comuni (sc
 
 {style="table-layout:auto"}
 
-Per ulteriori informazioni su XDM in Platform, consulta la [Panoramica sul sistema XDM](../../xdm/home.md).
+Per ulteriori informazioni su XDM in Experience Platform, consulta la [Panoramica del sistema XDM](../../xdm/home.md).&#x200B;
 
-## Servizio query {#query-service}
+## Query Service {#query-service}
 
-Il Servizio query consente di utilizzare SQL standard per eseguire query sui dati in Adobe Experience Platform.[!DNL Data Lake] Puoi unire qualsiasi set di dati dal data lake e acquisire i risultati della query sotto forma di nuovo set di dati da utilizzare nel reporting, in Data Science Workspace o da acquisire nel profilo cliente in tempo reale.
+Il Servizio query consente di utilizzare SQL standard per eseguire query sui dati in Adobe Experience Platform [!DNL Data Lake]. Puoi unire qualsiasi set di dati dal data lake e acquisire i risultati della query sotto forma di nuovo set di dati da utilizzare nel reporting, in Data Science Workspace o da acquisire nel profilo cliente in tempo reale.
 
 **Funzioni aggiornate**
 
@@ -128,7 +128,7 @@ Per ulteriori informazioni sull’Edizione B2B di Real-Time CDP, consulta la [Pa
 
 ## Origini {#sources}
 
-Adobe Experience Platform può acquisire dati da origini esterne e consente di strutturarli, etichettarli e migliorarli utilizzando i servizi di Platform. Puoi acquisire dati da diverse origini, ad esempio da applicazioni Adobe, dall’archiviazione basata su cloud, da software di terze parti e dal sistema CRM.
+Adobe Experience Platform può acquisire dati da origini esterne e consente di strutturarli, etichettarli e migliorarli utilizzando i servizi di Experience Platform. Puoi acquisire dati da diverse origini, ad esempio da applicazioni Adobe, dall’archiviazione basata su cloud, da software di terze parti e dal sistema CRM.
 
 Experience Platform fornisce un’API RESTful e un’interfaccia utente interattiva per impostare facilmente le connessioni di origine per vari provider di dati. Queste connessioni di origine consentono di autenticarti e connetterti a sistemi di archiviazione esterni e servizi di gestione delle relazioni con i clienti, impostare i tempi per le esecuzioni dell’acquisizione e gestire la velocità effettiva di acquisizione dei dati.
 
@@ -136,8 +136,8 @@ Experience Platform fornisce un’API RESTful e un’interfaccia utente interatt
 
 | Funzione | Descrizione |
 | --- | --- |
-| Specificare l’accesso a livello di abbonamento con [!DNL Google PubSub] | È ora possibile definire l’accesso a un abbonamento di argomento specifico quando si utilizza [!DNL Google PubSub] fornendo l’ID dell’abbonamento al momento dell’autenticazione. Per ulteriori informazioni, consulta il [!DNL Google PubSub]tutorial sull’autenticazione [utilizzando l’API del servizio Flow](../../sources/tutorials/api/create/cloud-storage/google-pubsub.md) oppure l’[Interfaccia utente di Platform](../../sources/tutorials/ui/create/cloud-storage/google-pubsub.md). |
-| Acquisire dati di attività personalizzati da [!DNL Marketo] | Ora puoi importare dati di attività personalizzati dalla tua istanza di [!DNL Marketo] a Experience Platform. Per acquisire dati personalizzati sulle attività, devi impostare gruppi di campi attività personalizzati nello schema Attività B2B e creare un flusso di dati utilizzando il set di dati attività. Una volta completato il flusso di dati, il set di dati acquisito conterrà sia le attività standard che quelle personalizzate dell’istanza [!DNL Marketo]. Puoi quindi utilizzare il [Servizio query](../../query-service/home.md) per accedere ai record di attività personalizzati su Platform. Per ulteriori informazioni, consulta la guida sulla [creazione di un flusso di dati per dati di attività personalizzati](../../sources/tutorials/ui/create/adobe-applications/marketo-custom-activities.md). |
+| Specificare l’accesso a livello di abbonamento con [!DNL Google PubSub] | È ora possibile definire l’accesso a un abbonamento di argomento specifico quando si utilizza [!DNL Google PubSub] fornendo l’ID dell’abbonamento al momento dell’autenticazione. Per ulteriori informazioni, leggere il tutorial di autenticazione [!DNL Google PubSub] [tramite l&#39;API del servizio Flusso](../../sources/tutorials/api/create/cloud-storage/google-pubsub.md) o l&#39;[interfaccia utente di Experience Platform](../../sources/tutorials/ui/create/cloud-storage/google-pubsub.md). |
+| Acquisire dati di attività personalizzati da [!DNL Marketo] | Ora puoi importare dati di attività personalizzati dalla tua istanza di [!DNL Marketo] a Experience Platform. Per acquisire dati personalizzati sulle attività, devi impostare gruppi di campi attività personalizzati nello schema Attività B2B e creare un flusso di dati utilizzando il set di dati attività. Una volta completato il flusso di dati, il set di dati acquisito conterrà sia le attività standard che quelle personalizzate dell’istanza [!DNL Marketo]. Puoi quindi utilizzare [Query Service](../../query-service/home.md) per accedere ai tuoi record di attività personalizzati su Experience Platform. Per ulteriori informazioni, consulta la guida sulla [creazione di un flusso di dati per dati di attività personalizzati](../../sources/tutorials/ui/create/adobe-applications/marketo-custom-activities.md). |
 | Escludere account non rivendicati da [!DNL Marketo] | Ora è possibile configurare se desideri escludere o includere account non rivendicati dall’acquisizione durante la creazione di un flusso di dati per i dati aziendali. Per ulteriori informazioni, consulta la guida sulla [creazione di una connessione di origine e di un flusso di dati per  [!DNL Marketo]](../../sources/tutorials/ui/create/adobe-applications/marketo.md). |
 
 {style="table-layout:auto"}

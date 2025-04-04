@@ -2,10 +2,10 @@
 title: Host SFTP
 description: Scopri come configurare i tag in Adobe Experience Platform per distribuire le build della libreria a un server SFTP protetto e con hosting autonomo.
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
-source-git-commit: 5b362d28eb3be5e2a45464390c694f7ae59f899c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '875'
-ht-degree: 35%
+source-wordcount: '880'
+ht-degree: 34%
 
 ---
 
@@ -25,7 +25,7 @@ Experience Platform ti consente di distribuire le build della libreria di tag a 
 
 ## Configurare una chiave di accesso per il server {#access-key}
 
-Platform si collega al tuo sito SFTP utilizzando una chiave crittografata. Sono disponibili alcuni passaggi per eseguire correttamente la configurazione:
+Experience Platform si connette al tuo sito SFTP utilizzando una chiave crittografata. Sono disponibili alcuni passaggi per eseguire correttamente la configurazione:
 
 ### Creare una coppia di chiavi pubblica/privata
 
@@ -35,7 +35,7 @@ Sul server SFTP deve essere installata una coppia di chiave pubblica/privata. Pu
 
 La chiave privata viene utilizzata per crittografare la chiave pubblica. Dovrai fornire la tua chiave privata durante il processo di creazione dell’host SFTP. Per istruzioni sulla crittografia delle chiavi pubbliche, consulta la sezione su [valori di crittografia](../../../api/guides/encrypting-values.md) nella guida dell&#39;API di Reactor. Utilizza la chiave GPG dell’ambiente di produzione a meno che tu non sappia di aver bisogno di una chiave specifica. Infine, puoi crittografare la tua chiave privata da qualsiasi computer, per cui non devi installare GPG sul server per completare questo passaggio.
 
-### Inserire nell&#39;elenco Consentiti gli indirizzi IP della piattaforma
+### Inserire nell&#39;elenco Consentiti indirizzi IP Experience Platform
 
 >[!IMPORTANT]
 >
@@ -53,7 +53,7 @@ La chiave privata viene utilizzata per crittografare la chiave pubblica. Dovrai 
 > * `44.194.43.191`
 > * `3.215.163.18`
 
-Per consentire a Platform di raggiungere e connettersi al server SFTP, potrebbe essere necessario approvare un set di indirizzi IP da utilizzare all’interno del firewall aziendale. Questi indirizzi IP sono:
+Per consentire ad Experience Platform di raggiungere e connettersi al server SFTP, potrebbe essere necessario approvare un set di indirizzi IP da utilizzare all’interno del firewall aziendale. Questi indirizzi IP sono:
 
 * `184.72.239.68`
 * `23.20.85.113`
@@ -94,7 +94,7 @@ Seleziona **[!UICONTROL Salva]** per creare l&#39;host con la configurazione sel
 
 ![Immagine che mostra l&#39;host SFTP in fase di salvataggio](../../../images/ui/publishing/sftp-hosts/save-host.png)
 
-Quando selezioni **[!UICONTROL Salva]**, viene verificata la connessione e la capacità di consegnare i file al server SFTP. Platform crea una cartella, scrive un file all’interno della cartella, verifica che il file sia presente, quindi si ripulisce in seguito. Se l’account utente sul server SFTP (quello associato al certificato protetto fornito a Platform) non dispone delle autorizzazioni necessarie per eseguire questa azione, l’host passa a uno stato &quot;Non riuscito&quot;.
+Quando selezioni **[!UICONTROL Salva]**, viene verificata la connessione e la capacità di consegnare i file al server SFTP. Experience Platform crea una cartella, scrive un file all’interno della cartella, verifica che il file sia presente, quindi si ripulisce in seguito. Se l’account utente sul server SFTP (quello associato al certificato protetto fornito ad Experience Platform) non dispone delle autorizzazioni necessarie per eseguire questa azione, l’host passa a uno stato &quot;Non riuscito&quot;.
 
 ## Passaggi successivi
 

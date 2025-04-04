@@ -2,9 +2,9 @@
 title: Aggiungere campi specifici a uno schema utilizzando l’API Schema Registry
 description: Scopri come aggiungere singoli campi da gruppi di campi preesistenti a uno schema Experience Data Model (XDM) utilizzando l’API Schema Registry.
 exl-id: 696cce2b-bbde-416a-9f52-12ab4da9c2c6
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '626'
 ht-degree: 2%
 
 ---
@@ -190,7 +190,7 @@ In caso di esito positivo, la risposta restituisce i dettagli dello schema aggio
 
 >[!NOTE]
 >
->Per informazioni più dettagliate sulle richieste PUT per gli schemi, consulta la [guida dell&#39;endpoint Schemas](../api/schemas.md#put).
+>Per informazioni più dettagliate sulle richieste di PUT per gli schemi, consulta la [guida dell&#39;endpoint degli schemi](../api/schemas.md#put).
 
 ## Aggiungere campi con un’operazione PATCH
 
@@ -281,10 +281,10 @@ In caso di esito positivo, la risposta restituisce i dettagli dello schema aggio
 
 >[!NOTE]
 >
->Per informazioni più dettagliate sulle richieste PATCH per gli schemi, consulta la [guida dell&#39;endpoint Schemas](../api/schemas.md#patch).
+>Per informazioni più dettagliate sulle richieste di PATCH per gli schemi, consulta la [guida dell&#39;endpoint degli schemi](../api/schemas.md#patch).
 
 ## Passaggi successivi
 
-Questa guida illustra come utilizzare le chiamate API per aggiungere singoli campi da un gruppo di campi esistente a uno schema. Per informazioni dettagliate su come eseguire attività simili basate sui campi nell&#39;interfaccia utente di Platform, consulta la guida sui [flussi di lavoro basati sui campi](../ui/field-based-workflows.md).
+Questa guida illustra come utilizzare le chiamate API per aggiungere singoli campi da un gruppo di campi esistente a uno schema. Per informazioni dettagliate su come eseguire attività simili basate sui campi nell&#39;interfaccia utente di Experience Platform, consulta la guida sui [flussi di lavoro basati sui campi](../ui/field-based-workflows.md).
 
 Per ulteriori informazioni sulle funzionalità dell&#39;API Schema Registry, fare riferimento alla [panoramica API](../api/overview.md) per un elenco completo degli endpoint e dei processi.

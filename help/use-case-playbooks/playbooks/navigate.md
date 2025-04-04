@@ -4,9 +4,9 @@ title: Passa a Playbook casi d’uso
 description: Scopri come navigare in una galleria di playbook e iniziare con una sandbox ispirativa.
 role: User
 exl-id: 1f5dae75-1136-4be3-9132-01d36a4066ca
-source-git-commit: 703c84e61af105bc3933e4750a3cb27df8ac19fe
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '718'
 ht-degree: 2%
 
 ---
@@ -67,8 +67,8 @@ Configura anche i canali per i playbook che contengono messaggi transazionali co
 
 ### Superficie di canale push
 
-Verifica che le configurazioni del canale siano configurate dall’interfaccia Experience Platform o Data Collections. Questa è l’aspetto delle configurazioni del canale nell’ambiente Raccolta dati.
+Conferma che le configurazioni del canale siano configurate dall’interfaccia di Experience Platform o di Data Collections. Questa è l’aspetto delle configurazioni del canale nell’ambiente Raccolta dati.
 
 ## Passaggi successivi {#next-steps}
 
-Dopo aver letto questo documento, dovresti sapere come impostare una sandbox ispiratrice e conoscere diversi modi per accedere ai playbook dei casi d’uso in Platform. Come passo successivo, leggi come [scegliere](/help/use-case-playbooks/playbooks/choose.md) il playbook corretto.
+Ora che hai letto questo documento, dovresti sapere come impostare una sandbox ispiratrice e conoscere diversi modi di accedere ai playbook dei casi d’uso in Experience Platform. Come passo successivo, leggi come [scegliere](/help/use-case-playbooks/playbooks/choose.md) il playbook corretto.

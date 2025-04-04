@@ -2,9 +2,9 @@
 title: Gruppo di campi dello schema dei componenti della persona aziendale XDM
 description: Scopri il gruppo di campi dello schema XDM Business Person Components.
 exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '515'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 [!UICONTROL XDM Business Person Components] è un gruppo di campi di schema standard per la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) che acquisisce più record di origine per una persona e altri attributi necessari per la segmentazione della persona.
 
-Quando viene creato un profilo per una persona tramite [Real-Time Customer Profile](../../../profile/home.md) nell&#39;edizione B2B di Real-Time CDP, le informazioni utilizzate per creare tale profilo potrebbero provenire potenzialmente da molti record di origine. Ad esempio, se una persona lavora per due aziende diverse, molti sistemi di gestione delle relazioni con i clienti creano una copia intenzionalmente duplicata di tale persona in modo che una copia sia collegata alla società A, mentre l’altra sia collegata alla società B. Quando si inseriscono tali dati in Adobe Experience Platform, questo gruppo di campi viene utilizzato per unire i diversi record di origine in un’unica rappresentazione.
+Quando viene creato un profilo per una persona tramite [Real-Time Customer Profile](../../../profile/home.md) in B2B edition of Real-Time CDP, le informazioni utilizzate per creare tale profilo potrebbero provenire potenzialmente da molti record di origine. Ad esempio, se una persona lavora per due aziende diverse, molti sistemi di gestione delle relazioni con i clienti creano una copia intenzionalmente duplicata di tale persona in modo che una copia sia collegata alla società A, mentre l’altra sia collegata alla società B. Quando si inseriscono tali dati in Adobe Experience Platform, questo gruppo di campi viene utilizzato per unire i diversi record di origine in un’unica rappresentazione.
 
 Il gruppo di campi fornisce un campo `personComponents` a livello di radice, che è un array di oggetti. Ogni oggetto nell&#39;array rappresenta un record di origine diverso.
 
@@ -21,8 +21,8 @@ Il gruppo di campi fornisce un campo `personComponents` a livello di radice, che
 >
 >Devi seguire i pattern di acquisizione descritti nella [documentazione delle origini](../../../rtcdp/sources/b2b.md). Non è garantito il funzionamento di altri metodi di mappatura dei campi.
 >
->Ad esempio, ogni oggetto dell&#39;array `personComponents` viene inviato singolarmente durante i modelli di acquisizione standard e quindi aggiunto all&#39;array da Platform. L’aggiunta manuale di un array di oggetti al componente Persona aziendale restituisce un errore.
->Utilizza l’utilità di generazione automatica quando crei schemi per i dati B2B. Per istruzioni sull&#39;utilizzo dello spazio dei nomi [B2B e dell&#39;utilità di generazione automatica dello schema](../../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md), vedere la documentazione. Se non utilizzi l&#39;utilità di generazione automatica e desideri mappare manualmente il modello dati, leggi la documentazione sulle [classi XDM di Adobe Real-time Customer Data Platform B2B Edition](../../../rtcdp/schemas/b2b.md) prima di mappare i dati.
+>Ad esempio, ogni oggetto dell&#39;array `personComponents` viene inviato singolarmente durante i modelli di acquisizione standard e quindi aggiunto all&#39;array da Experience Platform. L’aggiunta manuale di un array di oggetti al componente Persona aziendale restituisce un errore.
+>Utilizza l’utilità di generazione automatica quando crei schemi per i dati B2B. Per istruzioni sull&#39;utilizzo dello spazio dei nomi [B2B e dell&#39;utilità di generazione automatica dello schema](../../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md), vedere la documentazione. Se non utilizzi l&#39;utilità di generazione automatica e desideri mappare manualmente il modello dati, leggi la documentazione sulle [classi XDM di Adobe Real-Time Customer Data Platform B2B edition](../../../rtcdp/schemas/b2b.md) prima di mappare i dati.
 >
 >Per informazioni sui flussi di lavoro consigliati per i dati B2B, consulta il [tutorial end-to-end](../../../rtcdp/b2b-tutorial.md).
 

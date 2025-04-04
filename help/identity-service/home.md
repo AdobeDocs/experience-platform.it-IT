@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica del servizio Identity
 description: Il servizio Adobe Experience Platform Identity consente di ottenere una visione migliore del cliente e del suo comportamento, collegando le identità tra dispositivi e sistemi diversi e consentendo di fornire esperienze digitali personali e di impatto in tempo reale.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1555'
+source-wordcount: '1556'
 ht-degree: 2%
 
 ---
@@ -45,7 +45,7 @@ Prima di immergerti nei dettagli del servizio Identity, leggi la tabella seguent
 
 ## Cos’è il servizio Identity?
 
-![Unione identità in Platform](./images/identity-service-stitching.png)
+![Unione identità in Experience Platform](./images/identity-service-stitching.png)
 
 In un contesto Business-To-Customer (B2C), i clienti interagiscono con la tua azienda e stabiliscono una relazione con il tuo marchio. Un cliente tipico può essere attivo in qualsiasi numero di sistemi all’interno dell’infrastruttura dati della tua organizzazione. Qualsiasi cliente può essere attivo all’interno dei sistemi di e-commerce, fedeltà e help desk. Lo stesso cliente può anche utilizzare sia in modo anonimo che tramite mezzi autenticati su qualsiasi numero di dispositivi diversi.
 
@@ -76,7 +76,7 @@ Il servizio Identity fornisce le seguenti operazioni per raggiungere la sua miss
 
 Quando lo spazio dei nomi dell’identità e i valori dell’identità corrispondono, viene stabilito un collegamento tra due identità.
 
-Un tipico evento di accesso **invia due identità** in Experience Platform:
+Un evento di accesso tipico **invia due identità** ad Experience Platform:
 
 * L’identificatore della persona (ad esempio un CRMID) che rappresenta un utente autenticato.
 * L’identificatore del browser (ad esempio un ECID) che rappresenta il browser web.
@@ -113,5 +113,5 @@ Il servizio Identity svolge un ruolo fondamentale all’interno di Experience Pl
 * [Profilo cliente in tempo reale](../profile/home.md): prima dell&#39;unione degli attributi e degli eventi per un determinato profilo, il profilo cliente in tempo reale può fare riferimento al grafico delle identità. Per ulteriori informazioni, consulta la guida su [informazioni sulla relazione tra Identity Service e Real-Time Customer Profile](./identity-and-profile.md).
 * [Destinazioni](../destinations/home.md): le destinazioni possono inviare informazioni sul profilo ad altri sistemi in base a uno spazio dei nomi di identità, ad esempio e-mail con hash.
 * [Corrispondenza segmento](../segmentation/ui/segment-match/overview.md): la corrispondenza del segmento corrisponde a due profili in due sandbox diverse che hanno lo stesso spazio dei nomi e lo stesso valore di identità.
-* [Privacy Service](../privacy-service/home.md): se la richiesta di eliminazione include `identity`, è possibile eliminare da Identity Service la combinazione di spazio dei nomi e valore di identità specificata utilizzando la funzionalità di elaborazione delle richieste di privacy in Privacy Service.
+* [Privacy Service](../privacy-service/home.md): se la richiesta di eliminazione include `identity`, la combinazione di spazio dei nomi e valore di identità specificata può essere eliminata da Identity Service utilizzando la funzionalità di elaborazione delle richieste di privacy in Privacy Service.
 

@@ -2,9 +2,9 @@
 title: Gestire la conservazione dei set di dati di Experience Event nel Data Lake tramite TTL
 description: Scopri come valutare, impostare e gestire la conservazione dei set di dati di Experience Event nel data lake utilizzando le configurazioni Time-To-Live (TTL) con le API di Adobe Experience Platform. Questa guida spiega come la scadenza a livello di riga TTL supporti le regole di conservazione dei dati, ottimizzi l'efficienza dello storage e garantisca un'efficace gestione del ciclo di vita dei dati. Inoltre, fornisce casi d’uso e best practice per aiutarti ad applicare il TTL in modo efficace.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: 3b5fcc3eec6f2c2e749c86a7baf9995fb88b27d6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2336'
+source-wordcount: '2341'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Il TTL è utile per gestire dati sensibili al tempo che perdono rilevanza nel te
 
 ### Esempio di settore {#industry-example}
 
-Ad esempio, considera un servizio di streaming video che tiene traccia delle interazioni degli utenti, come visualizzazioni video, ricerche e consigli. Anche se i dati di coinvolgimento recenti sono fondamentali per la personalizzazione, i registri di attività più datati (ad esempio, le interazioni di più di un anno fa) perdono rilevanza. Utilizzando la scadenza a livello di riga, Platform rimuove automaticamente i registri obsoleti, garantendo che solo i dati correnti e significativi vengano utilizzati per le analisi e i consigli.
+Ad esempio, considera un servizio di streaming video che tiene traccia delle interazioni degli utenti, come visualizzazioni video, ricerche e consigli. Anche se i dati di coinvolgimento recenti sono fondamentali per la personalizzazione, i registri di attività più datati (ad esempio, le interazioni di più di un anno fa) perdono rilevanza. Utilizzando la scadenza a livello di riga, Experience Platform rimuove automaticamente i registri obsoleti, garantendo che solo i dati correnti e significativi vengano utilizzati per le analisi e i consigli.
 
 ## Valuta idoneità TTL
 
@@ -76,7 +76,7 @@ Per iniziare la gestione TTL, controlla innanzitutto le impostazioni TTL corrent
 
 >[!TIP]
 >
->L&#39;URL di Platform Gateway e il percorso di base per l&#39;API del servizio catalogo sono: `https://platform.adobe.io/data/foundation/catalog`.
+>L&#39;URL del gateway Experience Platform e il percorso di base per l&#39;API del servizio catalogo sono: `https://platform.adobe.io/data/foundation/catalog`.
 
 **Formato API**
 
@@ -375,13 +375,13 @@ Puoi applicare i criteri di conservazione ai set di dati creati utilizzando la c
 ### Quando il processo di conservazione del set di dati eliminerà i dati dai servizi del data lake?
 
 +++Risposta
-I TTL dei set di dati vengono valutati ed elaborati settimanalmente, eliminando tutti i record scaduti. Un evento è considerato scaduto se è stato acquisito in Platform più di 30 giorni fa (data di acquisizione > 30 giorni) e la sua data evento supera il periodo di conservazione definito (TTL).
+I TTL dei set di dati vengono valutati ed elaborati settimanalmente, eliminando tutti i record scaduti. Un evento è considerato scaduto se è stato acquisito in Experience Platform più di 30 giorni fa (data di acquisizione > 30 giorni) e la sua data evento supera il periodo di conservazione definito (TTL).
 +++
 
 ### Quando il processo di conservazione del set di dati eliminerà i dati dai servizi profilo?
 
 +++Risposta
-Una volta impostati i criteri di conservazione, gli eventi esistenti in Platform vengono immediatamente eliminati se il relativo timestamp dell’evento supera il periodo di conservazione (TTL). I nuovi eventi vengono eliminati dopo che il loro timestamp supera il periodo di conservazione.
+Una volta impostati i criteri di conservazione, gli eventi esistenti in Experience Platform vengono immediatamente eliminati se la relativa marca temporale supera il periodo di conservazione (TTL). I nuovi eventi vengono eliminati dopo che il loro timestamp supera il periodo di conservazione.
 
 Ad esempio, se applichi un criterio di scadenza di 30 giorni il 15 maggio, si verifica quanto segue:
 
@@ -436,6 +436,6 @@ Per ulteriori dettagli, vedere la [guida Creare set di dati derivati con SQL](..
 
 Dopo aver appreso come gestire le impostazioni TTL per la scadenza a livello di riga, consulta la seguente documentazione per comprendere meglio la gestione TTL:
 
-- Processi di conservazione: scopri come pianificare e automatizzare le scadenze dei set di dati nell’interfaccia utente di Platform con la [guida dell’interfaccia utente del ciclo di vita dei dati](../../hygiene/ui/dataset-expiration.md), oppure controlla le configurazioni di conservazione dei set di dati e verifica che i record scaduti vengano eliminati.
+- Processi di conservazione: scopri come pianificare e automatizzare le scadenze dei set di dati nell’interfaccia utente di Experience Platform con la [guida dell’interfaccia utente del ciclo di vita dei dati](../../hygiene/ui/dataset-expiration.md), oppure controlla le configurazioni di conservazione dei set di dati e verifica che i record scaduti vengano eliminati.
 - [Guida dell&#39;endpoint API per la scadenza del set di dati](../../hygiene/api/dataset-expiration.md): scopri come eliminare interi set di dati anziché solo le righe. Scopri come pianificare, gestire e automatizzare la scadenza dei set di dati utilizzando l’API per garantire un’efficiente conservazione dei dati.
 - [Panoramica sui criteri di utilizzo dei dati](../../data-governance/policies/overview.md): scopri come allineare la strategia di conservazione dei dati con requisiti di conformità più ampi e restrizioni di utilizzo del marketing.

@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;archiviazione cloud;archiv
 title: Esplorare le cartelle di archiviazione cloud utilizzando l’API del servizio Flusso
 description: Questa esercitazione utilizza l’API Flow Service per esplorare un sistema di archiviazione cloud di terze parti.
 exl-id: ba1a9bff-43a6-44fb-a4e7-e6a45b7eeebd
-source-git-commit: 9b9803b4d2aeb2a86ef980f34ee34909679ea3d9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: '695'
 ht-degree: 4%
 
 ---
@@ -22,18 +22,18 @@ Questo tutorial illustra come esplorare e visualizzare in anteprima la struttura
 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Origini](../../../home.md): [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini e consente di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi [!DNL Platform].
-* [Sandbox](../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza di [!DNL Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Origini](../../../home.md): [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini e consente di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi [!DNL Experience Platform].
+* [Sandbox](../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza di [!DNL Experience Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
-### Utilizzo delle API di Platform
+### Utilizzo delle API di Experience Platform
 
-Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida in [guida introduttiva alle API di Platform](../../../../landing/api-guide.md).
+Per informazioni su come effettuare correttamente chiamate alle API di Experience Platform, consulta la guida introduttiva [alle API di Experience Platform](../../../../landing/api-guide.md).
 
 ## Esplora le cartelle di archiviazione cloud
 
-È possibile recuperare informazioni sulla struttura delle cartelle di archiviazione cloud effettuando una richiesta di GET all&#39;API [!DNL Flow Service] e fornendo l&#39;ID di connessione di base dell&#39;origine.
+È possibile recuperare informazioni sulla struttura delle cartelle di archiviazione cloud effettuando una richiesta GET all&#39;API [!DNL Flow Service] e fornendo l&#39;ID di connessione di base dell&#39;origine.
 
-Quando esegui richieste GET per esplorare l’archiviazione cloud, devi includere i parametri di query elencati nella tabella seguente:
+Quando esegui le richieste di GET per esplorare l’archiviazione cloud, devi includere i parametri di query elencati nella tabella seguente:
 
 | Parametro | Descrizione |
 | --------- | ----------- |
@@ -94,11 +94,11 @@ In caso di esito positivo, la risposta restituisce un array di file e cartelle p
 ]
 ```
 
-## Inspect: struttura di un file
+## Controllare la struttura di un file
 
-Per controllare la struttura del file di dati dall’archiviazione cloud, esegui una richiesta di GET fornendo il percorso del file e digita come parametro di query.
+Per controllare la struttura del file di dati dall’archiviazione cloud, esegui una richiesta GET fornendo il percorso del file e digita come parametro di query.
 
-Puoi controllare la struttura di un file di dati dall’origine dell’archiviazione cloud eseguendo una richiesta di GET e fornendo il percorso e il tipo del file. Puoi anche esaminare diversi tipi di file, come CSV, TSV o JSON compresso e file delimitati specificandone i tipi come parte dei parametri di query.
+Puoi controllare la struttura di un file di dati dall’origine dell’archiviazione cloud eseguendo una richiesta GET e fornendo il percorso e il tipo del file. Puoi anche esaminare diversi tipi di file, come CSV, TSV o JSON compresso e file delimitati specificandone i tipi come parte dei parametri di query.
 
 **Formato API**
 
@@ -168,4 +168,4 @@ In caso di esito positivo, la risposta restituisce la struttura del file oggetto
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai esplorato il sistema di archiviazione cloud, trovato il percorso del file che desideri importare in [!DNL Platform] e ne hai visualizzato la struttura. Puoi utilizzare queste informazioni nel prossimo tutorial per [raccogliere dati dall&#39;archiviazione cloud e inserirli in Platform](../collect/cloud-storage.md).
+Seguendo questa esercitazione, hai esplorato il sistema di archiviazione cloud, trovato il percorso del file che desideri importare in [!DNL Experience Platform] e ne hai visualizzato la struttura. Puoi utilizzare queste informazioni nel prossimo tutorial per [raccogliere dati dall&#39;archivio cloud e inserirli in Experience Platform](../collect/cloud-storage.md).

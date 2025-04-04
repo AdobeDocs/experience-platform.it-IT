@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;servizio query;servizio query;scrittura query;scrittura query;home;popular topic;query service;Query service;writing queries;writing query;
+keywords: Experience Platform;home;argomenti popolari;servizio query;servizio query;scrivere query;;home;popular topic;query service;Query service;writing queries;writing query;
 solution: Experience Platform
 title: Linee guida generali per l’esecuzione di query in Query Service
 type: Tutorial
 description: Questo documento illustra dettagli importanti da conoscere durante la scrittura di query in Adobe Experience Platform Query Service.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1088'
+source-wordcount: '1089'
 ht-degree: 2%
 
 ---
@@ -50,7 +50,7 @@ Per accedere a un campo all&#39;interno di un oggetto nella query, è possibile 
 
 >[!NOTE]
 >
->L’ID Experience Cloud (ECID) è noto anche come MCID e continua a essere utilizzato nei namespace.
+>L’Experience Cloud ID (ECID) è anche noto come MCID e continua a essere utilizzato nei namespace.
 
 ```sql
 SELECT endUserIds._experience.mcid
@@ -201,7 +201,7 @@ Le virgolette posteriori sono **non** necessarie se si utilizza la notazione tra
 
 ## Visualizzazione delle informazioni della tabella
 
-Dopo la connessione a Query Service, puoi visualizzare tutte le tabelle disponibili su Platform utilizzando i comandi `\d` o `SHOW TABLES`.
+Dopo la connessione a Query Service, puoi visualizzare tutte le tabelle disponibili su Experience Platform utilizzando i comandi `\d` o `SHOW TABLES`.
 
 ### Vista tabella standard
 

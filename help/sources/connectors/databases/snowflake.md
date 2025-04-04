@@ -1,11 +1,11 @@
 ---
-title: Panoramica del connettore Source di Snowflake
-description: Scopri come collegare il Snowflake a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
+title: Panoramica di Snowflake Source Connector
+description: Scopri come collegare Snowflake a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
-source-git-commit: 8d6baef1549498e137d336ac2c8a42428496dedf
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '689'
+source-wordcount: '694'
 ht-degree: 0%
 
 ---
@@ -14,17 +14,17 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->* L&#39;origine [!DNL Snowflake] è disponibile nel catalogo delle origini per gli utenti che hanno acquistato Real-time Customer Data Platform Ultimate.
->* Per impostazione predefinita, l&#39;origine [!DNL Snowflake] interpreta `null` come una stringa vuota. Contatta il tuo rappresentante di Adobe per assicurarti che i valori `null` siano scritti correttamente come `null` in Adobe Experience Platform.
->* Ad Experience Platform, per acquisire i dati, i fusi orari per tutte le origini batch basate su tabelle devono essere configurati in formato UTC. L&#39;unico indicatore orario supportato per l&#39;origine [!DNL Snowflake] è TIMESTAMP_NTZ con ora UTC.
+>* L&#39;origine [!DNL Snowflake] è disponibile nel catalogo delle origini per gli utenti che hanno acquistato Real-Time Customer Data Platform Ultimate.
+>* Per impostazione predefinita, l&#39;origine [!DNL Snowflake] interpreta `null` come una stringa vuota. Contatta il tuo rappresentante Adobe per assicurarti che i valori `null` siano scritti correttamente come `null` in Adobe Experience Platform.
+>* Affinché Experience Platform possa acquisire i dati, i fusi orari per tutte le origini batch basate su tabelle devono essere configurati in formato UTC. L&#39;unico indicatore orario supportato per l&#39;origine [!DNL Snowflake] è TIMESTAMP_NTZ con ora UTC.
 
-Adobe Experience Platform consente di acquisire i dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
+Adobe Experience Platform consente di acquisire dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Experience Platform. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 
-Experience Platform fornisce supporto per l’acquisizione di dati da un database di terze parti. Platform può connettersi a diversi tipi di database, ad esempio database relazionali, NoSQL o data warehouse. Il supporto per i provider di database include [!DNL Snowflake].
+Experience Platform fornisce supporto per l’acquisizione di dati da un database di terze parti. Experience Platform può connettersi a diversi tipi di database, ad esempio database relazionali, NoSQL o data warehouse. Il supporto per i provider di database include [!DNL Snowflake].
 
 ## Prerequisiti {#prerequisites}
 
-In questa sezione vengono illustrate le attività di installazione che è necessario completare prima di connettere l&#39;origine [!DNL Snowflake] all&#39;Experience Platform.
+Questa sezione descrive le attività di installazione che è necessario completare prima di poter connettere l&#39;origine [!DNL Snowflake] ad Experience Platform.
 
 ### Recupera l’identificatore dell’account {#retrieve-your-account-identifier}
 
@@ -36,11 +36,11 @@ Per recuperare l’identificatore dell’account:
 * Nel menu di navigazione a sinistra, seleziona **[!DNL Accounts]**, seguito da **[!DNL Active Accounts]** dall&#39;intestazione.
 * Quindi, seleziona l’icona delle informazioni, quindi fai clic sul nome di dominio dell’URL corrente e copialo.
 
-![Dashboard dell&#39;interfaccia utente del Snowflake con il nome di dominio selezionato.](../../images/tutorials/create/snowflake/snowflake-dashboard.png)
+![Dashboard dell&#39;interfaccia utente di Snowflake con il nome di dominio selezionato.](../../images/tutorials/create/snowflake/snowflake-dashboard.png)
 
 ### Recupera la chiave privata {#retrieve-your-private-key}
 
-Se si utilizza l&#39;autenticazione con coppia di chiavi per la connessione [!DNL Snowflake], è necessario generare anche la chiave privata prima di connettersi a Experience Platform.
+Se si utilizza l&#39;autenticazione con coppia di chiavi per la connessione [!DNL Snowflake], è necessario generare anche la chiave privata prima di connettersi ad Experience Platform.
 
 >[!BEGINTABS]
 
@@ -85,7 +85,7 @@ Quindi, prendere la chiave privata e codificarla in [!DNL Base64]. Assicurati di
 Prima di poter creare una connessione di origine per i dati di [!DNL Snowflake], è necessario verificare che siano soddisfatte le seguenti configurazioni:
 
 * Il magazzino predefinito assegnato a un determinato utente deve essere uguale al magazzino immesso durante l&#39;autenticazione in Experience Platform.
-* Il ruolo predefinito assegnato a un determinato utente deve avere accesso allo stesso database immesso durante l’autenticazione in Experience Platform.
+* Il ruolo predefinito assegnato a un determinato utente deve avere accesso allo stesso database inserito durante l’autenticazione in Experience Platform.
 
 Per verificare il ruolo e il magazzino:
 
@@ -94,23 +94,23 @@ Per verificare il ruolo e il magazzino:
 * Nella finestra [!DNL Edit user] visualizzata, passa a [!DNL Default Role] per visualizzare il ruolo associato all&#39;utente specificato.
 * Nella stessa finestra passare a [!DNL Default Warehouse] per visualizzare il magazzino associato all&#39;utente specificato.
 
-![Interfaccia utente del Snowflake in cui è possibile verificare il proprio ruolo e il proprio data warehouse.](../../images/tutorials/create/snowflake/snowflake-configs.png)
+![Interfaccia utente di Snowflake in cui è possibile verificare il proprio ruolo e il proprio data warehouse.](../../images/tutorials/create/snowflake/snowflake-configs.png)
 
-Una volta codificata correttamente, è possibile utilizzare la chiave privata con codifica [!DNL Base64] su Experience Platform per autenticare l&#39;account [!DNL Snowflake].
+Una volta codificata correttamente, è possibile utilizzare la chiave privata con codifica [!DNL Base64] in Experience Platform per autenticare l&#39;account [!DNL Snowflake].
 
 ## ELENCO CONSENTITI di indirizzo IP
 
 Prima di utilizzare i connettori di origine, è necessario aggiungere un elenco di indirizzi IP a un elenco consentiti. La mancata aggiunta all’elenco consentiti degli indirizzi IP specifici per l’area geografica potrebbe causare errori o prestazioni non ottimali durante l’utilizzo delle origini. Per ulteriori informazioni, vedere la pagina [elenco consentiti indirizzo IP](../../ip-address-allow-list.md).
 
-La documentazione seguente fornisce informazioni su come connettere [!DNL Snowflake] a Platform tramite API o tramite l&#39;interfaccia utente:
+La documentazione seguente fornisce informazioni su come connettere [!DNL Snowflake] ad Experience Platform tramite API o tramite l&#39;interfaccia utente:
 
-## Connetti [!DNL Snowflake] a Platform tramite API
+## Connetti [!DNL Snowflake] ad Experience Platform tramite API
 
-* [Creare una connessione di base al Snowflake utilizzando l’API del servizio Flusso](../../tutorials/api/create/databases/snowflake.md)
+* [Creare una connessione di base Snowflake utilizzando l’API del servizio Flusso](../../tutorials/api/create/databases/snowflake.md)
 * [Esplorare le tabelle di dati utilizzando l’API del servizio Flusso](../../tutorials/api/explore/tabular.md)
 * [Creare un flusso di dati per un’origine di database utilizzando l’API del servizio Flusso](../../tutorials/api/collect/database-nosql.md)
 
-## Connetti [!DNL Snowflake] a Platform tramite l&#39;interfaccia utente
+## Connetti [!DNL Snowflake] ad Experience Platform tramite l&#39;interfaccia utente
 
-* [Creare una connessione sorgente del Snowflake nell’interfaccia utente](../../tutorials/ui/create/databases/snowflake.md)
+* [Creare una connessione sorgente Snowflake nell’interfaccia utente](../../tutorials/ui/create/databases/snowflake.md)
 * [Creare un flusso di dati per una connessione di origine al database nell’interfaccia utente](../../tutorials/ui/dataflow/databases.md)

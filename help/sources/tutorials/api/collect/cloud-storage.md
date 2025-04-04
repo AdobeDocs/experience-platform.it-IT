@@ -3,18 +3,18 @@ keywords: Experience Platform;home;argomenti popolari;cloud storage data
 solution: Experience Platform
 title: Creare un flusso di dati per le origini di archiviazione cloud utilizzando l’API del servizio Flusso
 type: Tutorial
-description: Questo tutorial illustra i passaggi necessari per recuperare i dati da un’archiviazione cloud di terze parti e importarli in Platform utilizzando i connettori e le API di origine.
+description: Questo tutorial illustra i passaggi necessari per recuperare i dati da un’archiviazione cloud di terze parti e inviarli ad Experience Platform utilizzando i connettori e le API di origine.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1742'
+source-wordcount: '1756'
 ht-degree: 3%
 
 ---
 
 # Creare un flusso di dati per le origini di archiviazione cloud utilizzando l&#39;API [!DNL Flow Service]
 
-Questa esercitazione descrive i passaggi per recuperare i dati da un&#39;origine di archiviazione cloud e portarli a Platform utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Questo tutorial descrive i passaggi per recuperare i dati da un&#39;origine di archiviazione cloud e portarli ad Experience Platform utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
@@ -24,20 +24,20 @@ Questa esercitazione descrive i passaggi per recuperare i dati da un&#39;origine
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): framework standardizzato in base al quale Experience Platform organizza i dati sull&#39;esperienza del cliente.
+- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): framework standardizzato tramite il quale Experience Platform organizza i dati sull&#39;esperienza del cliente.
    - [Nozioni di base sulla composizione dello schema](../../../../xdm/schema/composition.md): scopri i blocchi predefiniti di base degli schemi XDM, inclusi i principi chiave e le best practice nella composizione dello schema.
    - [Guida per gli sviluppatori del Registro di schema](../../../../xdm/api/getting-started.md): include informazioni importanti che è necessario conoscere per eseguire correttamente le chiamate all&#39;API del Registro di schema. Ciò include `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni necessarie per effettuare le richieste (con particolare attenzione all&#39;intestazione Accept e ai suoi possibili valori).
-- [[!DNL Catalog Service]](../../../../catalog/home.md): il catalogo è il sistema di registrazione per la posizione e la derivazione dei dati all&#39;interno di Experience Platform.
+- [[!DNL Catalog Service]](../../../../catalog/home.md): il catalogo è il sistema di registrazione per la posizione e la derivazione dei dati in Experience Platform.
 - [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): l&#39;API di acquisizione batch consente di acquisire dati in Experience Platform come file batch.
-- [Sandbox](../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+- [Sandbox](../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Experience Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
-### Utilizzo delle API di Platform
+### Utilizzo delle API di Experience Platform
 
-Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida in [guida introduttiva alle API di Platform](../../../../landing/api-guide.md).
+Per informazioni su come effettuare correttamente chiamate alle API di Experience Platform, consulta la guida introduttiva [alle API di Experience Platform](../../../../landing/api-guide.md).
 
 ## Creare una connessione sorgente {#source}
 
-È possibile creare una connessione di origine effettuando una richiesta POST all&#39;endpoint `sourceConnections` dell&#39;API [!DNL Flow Service] e fornendo l&#39;ID della connessione di base, il percorso del file di origine che si desidera acquisire e l&#39;ID della specifica di connessione corrispondente dell&#39;origine.
+È possibile creare una connessione di origine effettuando una richiesta POST all&#39;endpoint `sourceConnections` dell&#39;API [!DNL Flow Service] e fornendo l&#39;ID connessione di base, il percorso del file di origine che si desidera acquisire e l&#39;ID della specifica di connessione corrispondente dell&#39;origine.
 
 Quando si crea una connessione di origine, è necessario definire anche un valore enum per l&#39;attributo del formato dati.
 
@@ -93,10 +93,10 @@ curl -X POST \
 | Proprietà | Descrizione |
 | --- | --- |
 | `baseConnectionId` | ID della connessione di base dell’origine di archiviazione cloud. |
-| `data.format` | Il formato dei dati che desideri inserire in Platform. I valori supportati sono: `delimited`, `JSON` e `parquet`. |
+| `data.format` | Il formato dei dati che desideri portare in Experience Platform. I valori supportati sono: `delimited`, `JSON` e `parquet`. |
 | `data.properties` | (Facoltativo) Insieme di proprietà che è possibile applicare ai dati durante la creazione di una connessione di origine. |
 | `data.properties.columnDelimiter` | (Facoltativo) Un delimitatore di colonna a carattere singolo che è possibile specificare durante la raccolta di file flat. Qualsiasi valore di carattere singolo è un delimitatore di colonna consentito. Se non viene specificato, verrà utilizzata una virgola (`,`) come valore predefinito. **Nota**: la proprietà `columnDelimiter` può essere utilizzata solo durante l&#39;acquisizione di file delimitati. |
-| `data.properties.encoding` | (Facoltativo) Proprietà che definisce il tipo di codifica da utilizzare per l’acquisizione dei dati in Platform. I tipi di codifica supportati sono: `UTF-8` e `ISO-8859-1`. **Nota**: il parametro `encoding` è disponibile solo per l&#39;acquisizione di file CSV delimitati. Altri tipi di file verranno acquisiti con la codifica predefinita, `UTF-8`. |
+| `data.properties.encoding` | (Facoltativo) Proprietà che definisce il tipo di codifica da utilizzare per l’acquisizione dei dati in Experience Platform. I tipi di codifica supportati sono: `UTF-8` e `ISO-8859-1`. **Nota**: il parametro `encoding` è disponibile solo per l&#39;acquisizione di file CSV delimitati. Altri tipi di file verranno acquisiti con la codifica predefinita, `UTF-8`. |
 | `data.properties.compressionType` | (Facoltativo) Proprietà che definisce il tipo di file compresso da acquisire. I tipi di file compressi supportati sono: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip` e `tar`. **Nota**: la proprietà `compressionType` può essere utilizzata solo durante l&#39;acquisizione di file delimitati o JSON. |
 | `params.path` | Percorso del file di origine a cui si sta effettuando l&#39;accesso. Questo parametro punta a un singolo file o a un&#39;intera cartella.  **Nota**: è possibile utilizzare un asterisco al posto del nome del file per specificare l&#39;acquisizione di un&#39;intera cartella. Ad esempio: `/acme/summerCampaign/*.csv` acquisirà l&#39;intera cartella `/acme/summerCampaign/`. |
 | `params.type` | Tipo di file del file di dati di origine che si sta acquisendo. Utilizzare il tipo `file` per acquisire un singolo file e il tipo `folder` per acquisire un&#39;intera cartella. |
@@ -115,7 +115,7 @@ In caso di esito positivo, la risposta restituisce l&#39;identificatore univoco 
 
 ### Utilizza espressioni regolari per selezionare un set specifico di file da acquisire {#regex}
 
-È possibile utilizzare espressioni regolari per acquisire un particolare set di file dall’origine a Platform durante la creazione di una connessione sorgente.
+È possibile utilizzare espressioni regolari per acquisire un particolare set di file dall’origine ad Experience Platform durante la creazione di una connessione sorgente.
 
 **Formato API**
 
@@ -196,7 +196,7 @@ curl -X POST \
 
 ## Creare uno schema XDM di destinazione {#target-schema}
 
-Per utilizzare i dati sorgente in Platform, è necessario creare uno schema di destinazione che strutturi i dati sorgente in base alle tue esigenze. Lo schema di destinazione viene quindi utilizzato per creare un set di dati di Platform in cui sono contenuti i dati di origine.
+Affinché i dati sorgente possano essere utilizzati in Experience Platform, è necessario creare uno schema di destinazione per strutturare i dati sorgente in base alle tue esigenze. Lo schema di destinazione viene quindi utilizzato per creare un set di dati Experience Platform in cui sono contenuti i dati di origine.
 
 È possibile creare uno schema XDM di destinazione eseguendo una richiesta POST all&#39;API [Schema Registry](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
@@ -348,7 +348,7 @@ In caso di esito positivo, la risposta restituisce i dettagli della mappatura ap
 
 ## Recuperare le specifiche del flusso di dati {#specs}
 
-Un flusso di dati è responsabile della raccolta dei dati dalle origini e della loro introduzione in Platform. Per creare un flusso di dati, devi innanzitutto ottenere le specifiche del flusso di dati responsabili della raccolta dei dati dell’archiviazione cloud.
+Un flusso di dati è responsabile della raccolta dei dati dalle origini e della loro integrazione in Experience Platform. Per creare un flusso di dati, devi innanzitutto ottenere le specifiche del flusso di dati responsabili della raccolta dei dati dell’archiviazione cloud.
 
 **Formato API**
 
@@ -374,7 +374,7 @@ curl -X GET \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce i dettagli della specifica del flusso di dati responsabili dell’importazione di dati dall’origine in Platform. La risposta include la specifica di flusso univoca `id` necessaria per creare un nuovo flusso di dati.
+In caso di esito positivo, la risposta restituisce i dettagli della specifica del flusso di dati responsabili dell’importazione di dati dall’origine in Experience Platform. La risposta include la specifica di flusso univoca `id` necessaria per creare un nuovo flusso di dati.
 
 ```json
 {
@@ -624,8 +624,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Cloud Storage flow to Platform",
-        "description": "Cloud Storage flow to Platform",
+        "name": "Cloud Storage flow to Experience Platform",
+        "description": "Cloud Storage flow to Experience Platform",
         "flowSpec": {
             "id": "9753525b-82c7-4dce-8a9b-5ccfce2b9876",
             "version": "1.0"
@@ -680,7 +680,7 @@ Una volta creato il flusso di dati, puoi monitorare i dati che vengono acquisiti
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato un connettore di origine per raccogliere i dati dall’archiviazione cloud in base a una pianificazione. I dati in arrivo possono ora essere utilizzati dai servizi Platform a valle come [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i seguenti documenti:
+Seguendo questa esercitazione, hai creato un connettore di origine per raccogliere i dati dall’archiviazione cloud in base a una pianificazione. I dati in arrivo possono ora essere utilizzati dai servizi Experience Platform a valle come [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i seguenti documenti:
 
 - [Panoramica di profilo cliente in tempo reale](../../../../profile/home.md)
 - [Panoramica di Data Science Workspace](../../../../data-science-workspace/home.md)
@@ -694,7 +694,7 @@ Nella sezione seguente sono elencati i diversi connettori di origine dell’arch
 | Nome connettore | Specifica di connessione |
 | -------------- | --------------- |
 | [!DNL Amazon S3] (S3) | `ecadc60c-7455-4d87-84dc-2a0e293d997b` |
-| [!DNL Amazon Kinesis] (Kinesis) | `86043421-563b-46ec-8e6c-e23184711bf6` |
+| [!DNL Amazon Kinesis] (cinesi) | `86043421-563b-46ec-8e6c-e23184711bf6` |
 | [!DNL Azure Blob] (BLOB) | `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 | [!DNL Azure Data Lake Storage Gen2] (ADLS Gen2) | `b3ba5556-48be-44b7-8b85-ff2b69b46dc4` |
 | [!DNL Azure Event Hubs] (hub eventi) | `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |

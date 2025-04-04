@@ -3,10 +3,10 @@ keywords: destinazione archiviazione cloud;archiviazione cloud
 title: Panoramica delle destinazioni di archiviazione cloud
 description: Adobe Experience Platform può distribuire i tipi di pubblico come file di dati ai percorsi di archiviazione cloud Amazon S3, AWS Kinesis, Azure Event Hub o SFTP.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 2e21e62de624c5e7e9fac4d36dbf41b46198062a
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '463'
-ht-degree: 5%
+source-wordcount: '464'
+ht-degree: 6%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 5%
 
 ## Panoramica {#overview}
 
-Adobe Experience Platform può distribuire i tipi di pubblico come file di dati alle posizioni di archiviazione cloud. Questo consente di inviare i tipi di pubblico e i relativi attributi di profilo ai sistemi interni, tramite file CSV per [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage Gen2], [!DNL Data Landing Zone], [!DNL Google Cloud Storage] e SFTP. Per le destinazioni [!DNL Amazon Kinesis] e [!DNL Azure Event Hubs], i dati vengono inviati in streaming dall&#39;Experience Platform in formato [!DNL JSON].
+Adobe Experience Platform può distribuire i tipi di pubblico come file di dati alle posizioni di archiviazione cloud. Questo consente di inviare i tipi di pubblico e i relativi attributi di profilo ai sistemi interni, tramite file CSV per [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage Gen2], [!DNL Data Landing Zone], [!DNL Google Cloud Storage] e SFTP. Per le destinazioni [!DNL Amazon Kinesis] e [!DNL Azure Event Hubs], i dati vengono inviati in streaming da Experience Platform in formato [!DNL JSON].
 
-![Destinazioni Adobi di archiviazione cloud](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
+![Destinazioni archiviazione cloud Adobe](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
 
 ## Destinazioni di archiviazione cloud supportate {#supported-destinations}
 
@@ -33,7 +33,7 @@ Adobe Experience Platform supporta le esportazioni di dati verso le seguenti des
 
 ## Connettersi a una nuova destinazione di archiviazione cloud {#connect-destination}
 
-Per inviare i tipi di pubblico alle destinazioni di archiviazione cloud per le campagne, Platform deve prima connettersi alla destinazione. Per informazioni dettagliate sulla configurazione di una nuova destinazione, consulta il [tutorial sulla creazione della destinazione](../../ui/connect-destination.md).
+Per inviare i tipi di pubblico alle destinazioni di archiviazione cloud per le campagne, Experience Platform deve prima connettersi alla destinazione. Per informazioni dettagliate sulla configurazione di una nuova destinazione, consulta il [tutorial sulla creazione della destinazione](../../ui/connect-destination.md).
 
 
 ## Utilizzare le macro per creare una cartella nel percorso di archiviazione {#use-macros}
@@ -74,7 +74,7 @@ Analogamente agli esempi precedenti, è possibile utilizzare ulteriori macro per
 
 Le destinazioni di archiviazione cloud supportano i seguenti tipi di esportazione:
 * **Esportazione basata su profilo**. Ciò significa che stai esportando dettagli sulle persone nel pubblico. Questi dettagli sono necessari per la personalizzazione e possono includere attributi, eventi, appartenenze a un pubblico e altro ancora.
-* **Esportazione set di dati**. Questa funzionalità consente di esportare interi set di dati in destinazioni di archiviazione cloud. [Ulteriori informazioni](/help/destinations/ui/export-datasets.md) sulla funzionalità.
+* **Esportazione set di dati**. Questa funzionalità consente di esportare interi set di dati in destinazioni di archiviazione cloud. [Ulteriori informazioni](/help/destinations/ui/export-datasets.md) sulla nuova funzionalità.
 
 ## Passaggi successivi {#next-steps}
 

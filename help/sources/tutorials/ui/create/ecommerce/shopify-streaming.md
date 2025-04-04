@@ -1,18 +1,18 @@
 ---
 title: Creare Una Connessione In Streaming Shopify E Un Flusso Di Dati Nell’Interfaccia Utente
-description: Scopri come creare una connessione sorgente e un flusso di dati Shopify Streaming utilizzando l’interfaccia utente di Platform
+description: Scopri come creare una connessione sorgente e un flusso di dati Shopify Streaming utilizzando l’interfaccia utente di Experience Platform
 badge: Beta
 exl-id: d53f4ab5-8bdc-4647-83d5-ee898abda0f2
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '790'
 ht-degree: 1%
 
 ---
 
 # Crea una connessione di origine e un flusso di dati per i dati [!DNL Shopify Streaming] tramite l&#39;interfaccia utente
 
-Questo tutorial descrive i passaggi per creare una connessione di origine [!DNL Shopify Streaming] e un flusso di dati utilizzando l&#39;interfaccia utente di Platform.
+Questo tutorial illustra i passaggi per la creazione di una connessione di origine [!DNL Shopify Streaming] e di un flusso di dati tramite l&#39;interfaccia utente di Experience Platform.
 
 ## Introduzione {#getting-started}
 
@@ -29,17 +29,17 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di Experie
 
 ## Connetti il tuo account [!DNL Shopify Streaming]
 
-Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Nella schermata [!UICONTROL Catalogo] sono visualizzate diverse origini con cui è possibile creare un account.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Nella schermata [!UICONTROL Catalogo] sono visualizzate diverse origini con cui è possibile creare un account.
 
 Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
 
 Nella categoria **eCommerce**, selezionare [!DNL Shopify Streaming], quindi **[!UICONTROL Aggiungi dati]**.
 
-![Catalogo origini Experienci Platform](../../../../images/tutorials/create/shopify-streaming/catalog.png)
+![Catalogo origini Experience Platform](../../../../images/tutorials/create/shopify-streaming/catalog.png)
 
 ## Selezionare i dati
 
-Viene visualizzato il passaggio **[!UICONTROL Seleziona dati]**, che fornisce un&#39;interfaccia per la selezione dei dati da inserire in Platform.
+Viene visualizzato il passaggio **[!UICONTROL Seleziona dati]**, che fornisce un&#39;interfaccia per la selezione dei dati da portare in Experience Platform.
 
 * La parte sinistra dell’interfaccia è un browser che ti consente di visualizzare i flussi di dati disponibili all’interno del tuo account;
 * La parte destra dell’interfaccia consente di visualizzare in anteprima fino a 100 righe di dati da un file JSON.
@@ -66,13 +66,13 @@ Al termine, selezionare **[!UICONTROL Avanti]**.
 
 Viene visualizzato il passaggio [!UICONTROL Mappatura] che fornisce un&#39;interfaccia per mappare i campi sorgente dallo schema sorgente ai campi XDM di destinazione appropriati nello schema di destinazione.
 
-Platform fornisce consigli intelligenti per campi mappati automaticamente in base allo schema o al set di dati di destinazione selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi d’uso. In base alle tue esigenze, puoi scegliere di mappare i campi direttamente o utilizzare le funzioni di preparazione dati per trasformare i dati sorgente in modo da derivare valori calcolati o calcolati. Per i passaggi completi sull&#39;utilizzo dell&#39;interfaccia mapper e dei campi calcolati, consulta la [guida dell&#39;interfaccia utente della preparazione dati](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html).
+Experience Platform fornisce consigli intelligenti per campi mappati automaticamente in base allo schema o al set di dati di destinazione selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi d’uso. In base alle tue esigenze, puoi scegliere di mappare i campi direttamente o utilizzare le funzioni di preparazione dati per trasformare i dati sorgente in modo da derivare valori calcolati o calcolati. Per i passaggi completi sull&#39;utilizzo dell&#39;interfaccia mapper e dei campi calcolati, consulta la [guida dell&#39;interfaccia utente della preparazione dati](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html).
 
 Una volta mappati correttamente i dati di origine, seleziona **[!UICONTROL Avanti]**.
 
 ![Passaggio di mappatura del flusso di lavoro di origine.](../../../../images/tutorials/create/shopify-streaming/mapping.png)
 
-## Controlla
+## Rivisione
 
 Viene visualizzato il passaggio **[!UICONTROL Rivedi]**, che consente di rivedere il nuovo flusso di dati prima che venga creato. I dettagli sono raggruppati nelle seguenti categorie:
 

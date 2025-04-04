@@ -1,13 +1,13 @@
 ---
 title: Crea una connessione di origine  [!DNL Oracle NetSuite Activities]  nell'interfaccia utente
-description: Scopri come creare un Oracle di connessione all’origine delle attività NetSuite utilizzando l’interfaccia utente di Adobe Experience Platform.
+description: Scopri come creare una connessione all’origine delle attività di Oracle NetSuite utilizzando l’interfaccia utente di Adobe Experience Platform.
 hide: true
 hidefromtoc: true
 badge: Beta
 exl-id: 99ef0b50-c8d6-48d6-895f-46b7ade47520
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '618'
+source-wordcount: '624'
 ht-degree: 2%
 
 ---
@@ -37,33 +37,33 @@ Se disponi già di un account [!DNL Oracle NetSuite] valido, puoi saltare il res
 
 ## Connetti il tuo account [!DNL Oracle NetSuite] {#connect-account}
 
-Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
 
 Nella categoria *Marketing Automation*, selezionare **[!DNL Oracle NetSuite Activities]**, quindi **[!UICONTROL Aggiungi dati]**.
 
-![Schermata dell&#39;interfaccia utente di Platform per il catalogo con la scheda Attività NetSuite di Oracle](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/catalog-card.png)
+![Schermata dell&#39;interfaccia utente di Experience Platform per il catalogo con la scheda Attività di Oracle NetSuite](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/catalog-card.png)
 
-Viene visualizzata la pagina dell&#39;account **[!UICONTROL Connect Oracle NetSuite Activities]**. In questa pagina è possibile utilizzare nuove credenziali o credenziali esistenti.
+Viene visualizzata la pagina **[!UICONTROL Connetti account attività di Oracle NetSuite]**. In questa pagina è possibile utilizzare nuove credenziali o credenziali esistenti.
 
 >[!IMPORTANT]
 >
->Il token di aggiornamento scade dopo sette giorni. Una volta scaduto il token, devi creare l’account su Experience Platform con il token aggiornato. Se non si crea un nuovo account con il token aggiornato, è possibile che venga visualizzato il seguente messaggio di errore: `The request could not be processed. Error from flow provider: The request could not be processed. Rest call failed with client error, status code 401 Unauthorized, please check your activity settings.`
+>Il token di aggiornamento scade dopo sette giorni. Una volta scaduto il token, devi creare un account su Experience Platform con il token aggiornato. Se non si crea un nuovo account con il token aggiornato, è possibile che venga visualizzato il seguente messaggio di errore: `The request could not be processed. Error from flow provider: The request could not be processed. Rest call failed with client error, status code 401 Unauthorized, please check your activity settings.`
 
 ### Account esistente {#existing-account}
 
 Per utilizzare un account esistente, seleziona l&#39;account [!DNL Oracle NetSuite Activities] con cui vuoi creare un nuovo flusso di dati, quindi seleziona **[!UICONTROL Successivo]** per continuare.
 
-![Schermata dell&#39;interfaccia utente di Platform per collegare l&#39;account Oracle NetSuite Activities a un account esistente](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/existing.png)
+![Schermata dell&#39;interfaccia utente di Experience Platform per collegare l&#39;account Oracle NetSuite Activities a un account esistente](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/existing.png)
 
 ### Nuovo account {#new-account}
 
 Se stai creando un nuovo account, seleziona **[!UICONTROL Nuovo account]**, quindi fornisci un nome, una descrizione facoltativa e le tue credenziali. Al termine, selezionare **[!UICONTROL Connetti all&#39;origine]** e quindi attendere un po&#39; di tempo per stabilire la nuova connessione.
 
-![Schermata dell&#39;interfaccia utente di Platform per collegare l&#39;account Oracle NetSuite Activities con un nuovo account](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/new.png)
+![Schermata dell&#39;interfaccia utente di Experience Platform per collegare l&#39;account Oracle NetSuite Activities con un nuovo account](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/new.png)
 
 ## Passaggi successivi {#next-steps}
 
-Seguendo questa esercitazione, hai stabilito una connessione al tuo account [!DNL Oracle NetSuite Activities]. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per inserire dati in Platform](../../dataflow/marketing-automation.md).
+Seguendo questa esercitazione, hai stabilito una connessione al tuo account [!DNL Oracle NetSuite Activities]. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per inserire dati in Experience Platform](../../dataflow/marketing-automation.md).
 
 ## Risorse aggiuntive {#additional-resources}
 
@@ -71,7 +71,7 @@ Le sezioni seguenti forniscono ulteriori risorse a cui fare riferimento quando s
 
 ### Mappatura {#mapping}
 
-Platform fornisce consigli intelligenti per campi mappati automaticamente in base allo schema o al set di dati di destinazione selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi d’uso. In base alle tue esigenze, puoi scegliere di mappare i campi direttamente o utilizzare le funzioni di preparazione dati per trasformare i dati sorgente in modo da derivare valori calcolati o calcolati. Per i passaggi completi sull&#39;utilizzo dell&#39;interfaccia mapper e dei campi calcolati, consulta la [guida dell&#39;interfaccia utente della preparazione dati](../../../../../data-prep/ui/mapping.md).
+Experience Platform fornisce consigli intelligenti per campi mappati automaticamente in base allo schema o al set di dati di destinazione selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi d’uso. In base alle tue esigenze, puoi scegliere di mappare i campi direttamente o utilizzare le funzioni di preparazione dati per trasformare i dati sorgente in modo da derivare valori calcolati o calcolati. Per i passaggi completi sull&#39;utilizzo dell&#39;interfaccia mapper e dei campi calcolati, consulta la [guida dell&#39;interfaccia utente della preparazione dati](../../../../../data-prep/ui/mapping.md).
 
 >[!NOTE]
 >

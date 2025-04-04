@@ -4,10 +4,10 @@ description: Scopri come creare un flusso di dati per l’account Braze utilizza
 last-substantial-update: 2024-01-30T00:00:00Z
 badge: Beta
 exl-id: 6e94414a-176c-4810-80ff-02cf9e797756
-source-git-commit: 59600165328181e41750b9b2a1f4fbf162dd1df5
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1001'
-ht-degree: 1%
+source-wordcount: '1003'
+ht-degree: 2%
 
 ---
 
@@ -45,9 +45,9 @@ Se disponi già di una connessione [!DNL Braze], puoi saltare il resto del docum
 
 >[!TIP]
 >
->Se questa è la prima volta che crei una connessione [!DNL Braze Currents], devi creare uno schema Experience Data Model (XDM). Se hai già creato uno schema per [!DNL Braze Currents], puoi saltare questo passaggio e passare a [connettere il tuo account a Experience Platform](#connect).
+>Se questa è la prima volta che crei una connessione [!DNL Braze Currents], devi creare uno schema Experience Data Model (XDM). Se hai già creato uno schema per [!DNL Braze Currents], puoi saltare questo passaggio e passare a [connettere il tuo account ad Experience Platform](#connect).
 
-Nell&#39;interfaccia utente di Platform, utilizza la barra di navigazione a sinistra, quindi seleziona **[!UICONTROL Schemi]** per accedere all&#39;area di lavoro [!UICONTROL Schemi]. Selezionare **[!UICONTROL Crea schema]**, quindi **[!UICONTROL Evento esperienza]**. Per continuare, selezionare **[!UICONTROL Avanti]**.
+Nell&#39;interfaccia utente di Experience Platform, utilizza il menu di navigazione a sinistra, quindi seleziona **[!UICONTROL Schemi]** per accedere all&#39;area di lavoro [!UICONTROL Schemi]. Selezionare **[!UICONTROL Crea schema]**, quindi **[!UICONTROL Evento esperienza]**. Per continuare, selezionare **[!UICONTROL Avanti]**.
 
 ![Uno schema completato.](../../../../images/tutorials/create/braze/schema.png)
 
@@ -55,9 +55,9 @@ Immetti un nome e una descrizione per lo schema. Quindi, utilizza il pannello [!
 
 Per ulteriori informazioni sugli schemi, leggere la guida a [creazione di schemi nell&#39;interfaccia utente](../../../../../xdm/tutorials/create-schema-ui.md).
 
-## Connetti il tuo account [!DNL Braze] a Experience Platform {#connect}
+## Connetti il tuo account [!DNL Braze] ad Experience Platform {#connect}
 
-Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
 
 Nella categoria *Marketing Automation*, selezionare **[!UICONTROL Braze Current]**, quindi selezionare **[!UICONTROL Add data]**.
 
@@ -84,7 +84,7 @@ Una volta aggiunto il nuovo campo calcolato, seleziona **[!UICONTROL Mappa campo
 
 >[!IMPORTANT]
 >
->I timestamp di brasatura non sono espressi in millisecondi, ma in secondi. Affinché i timestamp in Experience Platform vengano rispecchiati accuratamente, è necessario creare campi calcolati in millisecondi. Un calcolo di &quot;tempo * 1000&quot; convertirà correttamente in millisecondi, adatto per la mappatura a un campo marca temporale in Experience Platform.
+>I timestamp di brasatura non sono espressi in millisecondi, ma in secondi. Affinché i timestamp in Experience Platform vengano rispecchiati accuratamente, devi creare campi calcolati in millisecondi. Un calcolo di &quot;tempo * 1000&quot; convertirà correttamente in millisecondi, adatti per la mappatura a un campo marca temporale in Experience Platform.
 >
 >![Creazione di un campo calcolato per la marca temporale ](../../../../images/tutorials/create/braze/create-calculated-field.png)
 
@@ -94,16 +94,16 @@ Al termine, selezionare **[!UICONTROL Avanti]**. Utilizzare la pagina Revisione 
 
 ### Raccogli le credenziali richieste
 
-Una volta creata la connessione, è necessario raccogliere i seguenti valori delle credenziali, che verranno quindi forniti nel dashboard Braze per inviare i dati ad Experience Platform. Per ulteriori informazioni, leggere la [!DNL Braze] [guida per l&#39;esplorazione di Correnti](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
+Una volta creata la connessione, devi raccogliere i seguenti valori delle credenziali, che fornirai nel dashboard Braze per inviare dati ad Experience Platform. Per ulteriori informazioni, leggere la [!DNL Braze] [guida per l&#39;esplorazione di Correnti](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
 
 | Campo | Descrizione |
 | --- | --- |
-| ID client | L’ID client associato alla sorgente dell’Experience Platform. |
+| ID client | L’ID client associato alla tua sorgente Experience Platform. |
 | Segreto client | Il segreto client associato alla tua origine Experience Platform. |
-| ID tenant | L’ID tenant associato alla tua origine Experience Platform. |
-| Nome sandbox | La sandbox associata alla sorgente di Experience Platform. |
+| ID tenant | L’ID tenant associato alla tua sorgente Experience Platform. |
+| Nome sandbox | La sandbox associata alla tua origine Experience Platform. |
 | ID flusso di dati | L’ID del flusso di dati associato alla sorgente di Experience Platform. |
-| Endpoint di streaming | L’endpoint di streaming associato alla sorgente di Experience Platform. **Nota**: [!DNL Braze] converte automaticamente questo elemento nell&#39;endpoint di streaming batch. |
+| Endpoint di streaming | L’endpoint di streaming associato alla tua origine Experience Platform. **Nota**: [!DNL Braze] converte automaticamente questo elemento nell&#39;endpoint di streaming batch. |
 
 ### Configura [!DNL Braze Currents] per inviare dati all&#39;origine dati in streaming
 
@@ -111,4 +111,4 @@ All&#39;interno di [!DNL Braze Dashboard], passa a Integrations partner **->** D
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai stabilito una connessione al tuo account [!DNL Braze]. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per inserire dati di sistema di automazione marketing in [!DNL Platform]](../../dataflow/marketing-automation.md).
+Seguendo questa esercitazione, hai stabilito una connessione al tuo account [!DNL Braze]. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per inserire dati di sistema di automazione marketing in [!DNL Experience Platform]](../../dataflow/marketing-automation.md).

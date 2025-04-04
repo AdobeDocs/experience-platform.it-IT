@@ -4,9 +4,9 @@ description: Audit Query è un’API RESTful che consente agli sviluppatori di v
 role: Developer
 feature: Audits, API
 exl-id: 9ed291c6-ff8b-4d9b-9fed-d1e3fa8f92fb
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '171'
+source-wordcount: '172'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ Per visualizzare tutti gli endpoint disponibili e le operazioni CRUD, visita il 
 
 ## Eventi
 
-Gli eventi di audit forniscono informazioni approfondite sulle azioni dell’utente in Platform, tra cui il tipo di azione, la data e l’ora, l’ID e-mail dell’utente che ha eseguito l’azione e gli attributi aggiuntivi relativi al tipo di azione per varie funzioni di Adobe Experience Platform. Per informazioni su come recuperare le metriche utilizzando l&#39;API, consulta la [guida dell&#39;endpoint eventi](./events.md).
+Gli eventi di controllo forniscono informazioni approfondite sulle azioni dell’utente in Experience Platform, tra cui il tipo di azione, la data e l’ora, l’ID e-mail dell’utente che ha eseguito l’azione e gli attributi aggiuntivi relativi al tipo di azione per varie funzioni di Adobe Experience Platform. Per informazioni su come recuperare le metriche utilizzando l&#39;API, consulta la [guida dell&#39;endpoint eventi](./events.md).
 
 ## Esporta
 

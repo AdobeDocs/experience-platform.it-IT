@@ -5,14 +5,14 @@ seo-description: How to configure Experience Platform Debugger
 seo-title: Configure Experience Platform Debugger
 title: Configurare Experience Platform Debugger
 exl-id: ddc90b52-56d4-4efc-aad7-5a2c430e7dfe
-source-git-commit: df1a67e4b6f3d2eaeaba2b8d3c9b1588ee0b1461
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '160'
-ht-degree: 45%
+source-wordcount: '163'
+ht-degree: 47%
 
 ---
 
-# Configurare Platform Debugger
+# Configurare Experience Platform Debugger
 
 Puoi configurare alcuni aspetti dell’aspetto e del funzionamento di Adobe Experience Platform Debugger.
 
@@ -20,7 +20,7 @@ Puoi configurare alcuni aspetti dell’aspetto e del funzionamento di Adobe Expe
 
 ## Modalità chiara o scura
 
-Una volta avviato Platform Debugger, puoi applicare l&#39;aspetto desiderato da **[!UICONTROL Impostazioni]** e selezionare **Modalità scura** (impostazione predefinita) o **Modalità chiara**.
+Una volta avviato Experience Platform Debugger, puoi applicare l&#39;aspetto desiderato da **[!UICONTROL Impostazioni]** e selezionare **Modalità scura** (impostazione predefinita) o **Modalità chiara**.
 
 ## Ripristino
 
@@ -28,7 +28,7 @@ Selezionare **[!UICONTROL Reimposta tutti i dati e le impostazioni]** per cancel
 
 ## Bloccare Experience Platform Debugger su una pagina
 
-Quando modifichi una pagina del sito, la finestra di Experience Platform Debugger si aggiorna e mostra le informazioni di tale pagina. Il nome della pagina a cui sei connesso compare nella parte inferiore della schermata. Per mantenere Experience Platform Debugger bloccato su una pagina, seleziona **[!UICONTROL Blocca]** nell&#39;angolo inferiore destro della finestra di Platform Debugger.
+Quando modifichi una pagina del sito, la finestra di Experience Platform Debugger si aggiorna e mostra le informazioni di tale pagina. Il nome della pagina a cui sei connesso compare nella parte inferiore della schermata. Per mantenere Experience Platform Debugger bloccato su una pagina, seleziona **[!UICONTROL Blocca]** nell&#39;angolo inferiore destro della finestra di Experience Platform Debugger.
 
 ![](images/lock.jpg)
 

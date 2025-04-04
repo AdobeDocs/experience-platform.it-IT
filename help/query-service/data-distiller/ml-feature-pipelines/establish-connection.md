@@ -2,9 +2,9 @@
 title: Connessione a Data Distiller da un notebook Jupyter
 description: Scopri come connettersi a Data Distiller da un Jupyter Notebook.
 exl-id: e6238b00-aaeb-40c0-a90f-9aebb1a1c421
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '685'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Questa guida presuppone che tu abbia familiarità con i notebook interattivi [!D
 
 ### Ottenere le credenziali di connessione {#obtain-credentials}
 
-Per connettersi a Data Distiller e ad altri servizi Adobe Experience Platform, è necessario disporre di una credenziale API Experience Platform. Le credenziali API possono essere create in [Adobe Developer Console](https://developer.adobe.com/console/projects) da un utente con accesso per sviluppatori all&#39;Experience Platform. Ti consigliamo di creare una credenziale API OAuth2 specifica per i flussi di lavoro di data science e di chiedere a un amministratore di Adobe della tua organizzazione di assegnare la credenziale a un ruolo con le autorizzazioni appropriate.
+Per connettersi a Data Distiller e ad altri servizi Adobe Experience Platform, è necessario disporre di una credenziale API Experience Platform. Le credenziali API possono essere create in [Adobe Developer Console](https://developer.adobe.com/console/projects) da un utente con accesso per sviluppatori a Experience Platform. Ti consigliamo di creare una credenziale API OAuth2 specifica per i flussi di lavoro di data science e chiedere a un amministratore di sistema Adobe della tua organizzazione di assegnare le credenziali a un ruolo con le autorizzazioni appropriate.
 
 Per istruzioni dettagliate sulla creazione di credenziali API e sull&#39;ottenimento delle autorizzazioni necessarie, vedere [Autenticazione e accesso alle API Experience Platform](../../../landing/api-authentication.md).
 
@@ -32,11 +32,11 @@ Le autorizzazioni consigliate per la data science includono:
 - Destinazioni: [!UICONTROL Gestire e attivare le destinazioni del set di dati]
 - Servizio query: [!UICONTROL Gestisci query]
 
-Per impostazione predefinita, a un ruolo (e alle credenziali API assegnate a tale ruolo) viene impedito l’accesso ai dati con etichetta. In base ai criteri di governance dei dati dell’organizzazione, un amministratore di sistema può concedere al ruolo l’accesso a determinati dati etichettati ritenuti appropriati per l’utilizzo della scienza dei dati. I clienti di Platform hanno la responsabilità di gestire in modo appropriato l’accesso alle etichette e le policy al fine di rispettare le normative e le politiche organizzative pertinenti.
+Per impostazione predefinita, a un ruolo (e alle credenziali API assegnate a tale ruolo) viene impedito l’accesso ai dati con etichetta. In base ai criteri di governance dei dati dell’organizzazione, un amministratore di sistema può concedere al ruolo l’accesso a determinati dati etichettati ritenuti appropriati per l’utilizzo della scienza dei dati. I clienti Experience Platform hanno la responsabilità di gestire in modo appropriato l’accesso alle etichette e le relative policy al fine di rispettare le normative e le politiche organizzative pertinenti.
 
 ### Memorizza le credenziali in un file di configurazione separato {#store-credentials}
 
-Per proteggere le credenziali, è consigliabile evitare di scrivere le informazioni direttamente nel codice. Le informazioni sulle credenziali vengono invece conservate in un file di configurazione separato e lette nei valori necessari per la connessione a Experience Platform e Data Distiller.
+Per proteggere le credenziali, è consigliabile evitare di scrivere le informazioni direttamente nel codice. Le informazioni sulle credenziali vengono invece conservate in un file di configurazione separato e lette nei valori necessari per la connessione ad Experience Platform e Data Distiller.
 
 Ad esempio, è possibile creare un file denominato `config.ini` e includere le seguenti informazioni (insieme a qualsiasi altra informazione, ad esempio gli ID dei set di dati, che risulterebbero utili per il salvataggio tra le sessioni):
 

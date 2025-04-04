@@ -1,11 +1,11 @@
 ---
 title: Autenticazione e accesso all’API di Privacy Service
-description: Scopri come eseguire l’autenticazione nell’API Privacy Service e come interpretare le chiamate API di esempio nella documentazione.
+description: Scopri come eseguire l’autenticazione nell’API di Privacy Service e come interpretare le chiamate API di esempio nella documentazione.
 role: Developer
 exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '851'
+source-wordcount: '852'
 ht-degree: 15%
 
 ---
@@ -16,13 +16,13 @@ Questa guida fornisce un’introduzione ai concetti di base che devi conoscere p
 
 ## Prerequisiti {#prerequisites}
 
-Questa guida richiede una buona conoscenza di [Privacy Service](../home.md) e di come consente di gestire le richieste di accesso ed eliminazione da parte degli interessati (clienti) in tutte le applicazioni Adobe Experience Cloud.
+Questa guida richiede una buona conoscenza di [Privacy Service](../home.md) e del modo in cui consente di gestire le richieste di accesso ed eliminazione da parte degli interessati (clienti) nelle applicazioni Adobe Experience Cloud.
 
-Per creare le credenziali di accesso per l’API, un amministratore dell’organizzazione deve aver precedentemente configurato i profili di prodotto per Privacy Service in Adobe Admin Console. Il profilo di prodotto assegnato a un’integrazione API determina di quali autorizzazioni dispone l’integrazione quando si accede alle funzionalità di Privacy Service. Per ulteriori informazioni, consulta la guida su [gestione delle autorizzazioni di Privacy Service](../permissions.md).
+Per creare le credenziali di accesso per l’API, un amministratore dell’organizzazione deve aver precedentemente configurato i profili di prodotto per Privacy Service in Adobe Admin Console. Il profilo di prodotto assegnato a un’integrazione API determina le autorizzazioni di tale integrazione per accedere alle funzionalità di Privacy Service. Per ulteriori informazioni, consulta la guida sulla [gestione delle autorizzazioni di Privacy Service](../permissions.md).
 
 ## Raccogliere i valori per le intestazioni richieste {#gather-values-required-headers}
 
-Per effettuare chiamate all’API Privacy Service, devi innanzitutto raccogliere le credenziali di accesso da utilizzare nelle intestazioni richieste:
+Per effettuare chiamate all’API Privacy Service, devi prima raccogliere le credenziali di accesso da utilizzare nelle intestazioni richieste:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -42,13 +42,13 @@ Dopo aver creato un nuovo progetto, seleziona **[!UICONTROL Aggiungi al progetto
 
 #### Seleziona l’API Privacy Service {#select-privacy-service-api}
 
-Viene visualizzata la schermata **[!UICONTROL Add an API]** (Aggiungi un’API). Seleziona **[!UICONTROL Experience Cloud]** per restringere l&#39;elenco delle API disponibili, quindi seleziona la scheda per **[!UICONTROL API Privacy Service]** prima di selezionare **[!UICONTROL Next]**.
+Viene visualizzata la schermata **[!UICONTROL Add an API]** (Aggiungi un’API). Seleziona **[!UICONTROL Experience Cloud]** per restringere l&#39;elenco delle API disponibili, quindi seleziona la scheda per **[!UICONTROL Privacy Service API]** prima di selezionare **[!UICONTROL Next]**.
 
 ![Scheda API Privacy Service selezionata dall&#39;elenco delle API disponibili](../images/api/getting-started/add-privacy-service-api.png)
 
 >[!TIP]
 >
->Seleziona l&#39;opzione **[!UICONTROL Visualizza documenti]** per passare alla documentazione completa di riferimento dell&#39;[API Privacy Service](https://developer.adobe.com/experience-platform-apis/references/privacy-service/) in una finestra del browser separata.
+>Selezionare l&#39;opzione **[!UICONTROL Visualizza documenti]** per passare in una finestra del browser separata alla [documentazione di riferimento API Privacy Service](https://developer.adobe.com/experience-platform-apis/references/privacy-service/) completa.
 
 Quindi, seleziona il tipo di autenticazione per generare token di accesso e accedere all’API Privacy Service.
 
@@ -96,11 +96,11 @@ Viene generato un nuovo token di accesso, e un pulsante consente di copiarlo neg
 
 #### Generazione automatica dei token {#auto-token}
 
-Puoi inoltre utilizzare un ambiente e una raccolta Postman per generare i token di accesso. Per ulteriori informazioni, leggere la sezione relativa all&#39;utilizzo di [Postman per l&#39;autenticazione e il test delle chiamate API](/help/landing/api-authentication.md#use-postman) nella guida di Experience Platform per l&#39;autenticazione API.
+Puoi inoltre utilizzare un ambiente e una raccolta Postman per generare i token di accesso. Per ulteriori informazioni, leggere la sezione relativa all&#39;utilizzo di [Postman per l&#39;autenticazione e il test delle chiamate API](/help/landing/api-authentication.md#use-postman) nella guida all&#39;autenticazione API di Experience Platform.
 
 ## Lettura delle chiamate API di esempio {#read-sample-api-calls}
 
-Ogni guida dell’endpoint fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere chiamate API di esempio](../../landing/api-guide.md#sample-api) nella guida introduttiva per le API di Platform.
+Ogni guida dell’endpoint fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere chiamate API di esempio](../../landing/api-guide.md#sample-api) nella guida introduttiva per le API di Experience Platform.
 
 ## Passaggi successivi {#next-steps}
 

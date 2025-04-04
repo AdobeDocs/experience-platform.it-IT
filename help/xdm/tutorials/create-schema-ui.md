@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;ui;interfaccia utente;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;editor schema;schema;schema;schemi;schemi;creare
+keywords: Experience Platform;home;argomenti popolari;ui;interfaccia utente;XDM;sistema XDM;Experience data model;Experience data model;Experience Data Model;data model;Data Model;editor schema;schema;schema;schemi;schemi;creare;;home;popular topic;ui;UI;XDM;XDM system;experience data model;Experience data model;data model;Data Model;schema editor;schema;schema;schema;schema;schemi;creare
 solution: Experience Platform
 title: Creare uno schema tramite l’Editor di schema
 type: Tutorial
 description: Questa esercitazione illustra i passaggi necessari per creare uno schema utilizzando Schema Editor all’interno di Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: f530e4ff755ac89141ee67bef80700b46acf0868
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4914'
+source-wordcount: '4915'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ A scopo dimostrativo, i passaggi di questa esercitazione comportano la creazione
 
 >[!NOTE]
 >
->Se acquisisci dati CSV in Platform, puoi [mappare tali dati su uno schema XDM creato dai consigli generati dall&#39;intelligenza artificiale](../../ingestion/tutorials/map-csv/recommendations.md) (attualmente in versione beta) senza dover creare manualmente lo schema.
+>Se acquisisci dati CSV in Experience Platform, puoi [mappare tali dati su uno schema XDM creato dai consigli generati dall&#39;intelligenza artificiale](../../ingestion/tutorials/map-csv/recommendations.md) (attualmente in versione beta) senza dover creare manualmente lo schema.
 >
 >Se preferisci comporre uno schema utilizzando l&#39;API [!DNL Schema Registry], inizia leggendo la [[!DNL Schema Registry] guida per gli sviluppatori](../api/getting-started.md) prima di provare l&#39;esercitazione su [creazione di uno schema utilizzando l&#39;API](create-schema-api.md).
 
@@ -28,13 +28,13 @@ A scopo dimostrativo, i passaggi di questa esercitazione comportano la creazione
 
 Questo tutorial richiede una buona conoscenza dei vari aspetti di Adobe Experience Platform coinvolti nella creazione dello schema. Prima di iniziare questo tutorial, consulta la documentazione per i seguenti concetti:
 
-* [[!DNL Experience Data Model (XDM)]](../home.md): framework standardizzato tramite il quale [!DNL Platform] organizza i dati sull&#39;esperienza del cliente.
+* [[!DNL Experience Data Model (XDM)]](../home.md): framework standardizzato tramite il quale [!DNL Experience Platform] organizza i dati sull&#39;esperienza del cliente.
    * [Nozioni di base sulla composizione dello schema](../schema/composition.md): panoramica degli schemi XDM e dei relativi blocchi predefiniti, inclusi classi, gruppi di campi dello schema, tipi di dati e singoli campi.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
 ## Apri l&#39;area di lavoro [!UICONTROL Schemi] {#browse}
 
-L&#39;area di lavoro [!UICONTROL Schemi] nell&#39;interfaccia utente [!DNL Platform] fornisce una visualizzazione di [!DNL Schema Library], che consente di visualizzare e gestire gli schemi disponibili per l&#39;organizzazione. L&#39;area di lavoro include anche [!DNL Schema Editor], l&#39;area di lavoro in cui è possibile comporre uno schema in questa esercitazione.
+L&#39;area di lavoro [!UICONTROL Schemi] nell&#39;interfaccia utente [!DNL Experience Platform] fornisce una visualizzazione di [!DNL Schema Library], che consente di visualizzare e gestire gli schemi disponibili per l&#39;organizzazione. L&#39;area di lavoro include anche [!DNL Schema Editor], l&#39;area di lavoro in cui è possibile comporre uno schema in questa esercitazione.
 
 Dopo aver effettuato l&#39;accesso a [!DNL Experience Platform], seleziona **[!UICONTROL Schemi]** nella barra di navigazione a sinistra per aprire l&#39;area di lavoro **[!UICONTROL Schemi]**. La scheda **[!UICONTROL Sfoglia]** visualizza un elenco di schemi (una rappresentazione di [!DNL Schema Library]) da visualizzare e personalizzare. L’elenco include il nome, il tipo, la classe e il comportamento (record o serie temporale) su cui è basato lo schema, nonché la data e l’ora dell’ultima modifica dello schema.
 
@@ -126,7 +126,7 @@ Viene visualizzata di nuovo l’area di lavoro dello schema. Nella sezione **[!U
 
 >[!NOTE]
 >
-Nell&#39;Editor schema, le classi e i gruppi di campi standard (generati da Adobi) sono indicati con l&#39;icona lucchetto (![Un&#39;icona lucchetto.](/help/images/icons/lock-closed.png). Il lucchetto viene visualizzato nella barra a sinistra accanto al nome della classe o del gruppo di campi, nonché accanto a qualsiasi campo nel diagramma dello schema che fa parte di una risorsa generata dal sistema.
+Nell&#39;Editor schema, le classi e i gruppi di campi standard (generati da Adobe) sono indicati con l&#39;icona lucchetto (![Un&#39;icona lucchetto.](/help/images/icons/lock-closed.png). Il lucchetto viene visualizzato nella barra a sinistra accanto al nome della classe o del gruppo di campi, nonché accanto a qualsiasi campo nel diagramma dello schema che fa parte di una risorsa generata dal sistema.
 >
 ![Editor schema con l&#39;icona lucchetto evidenziata](../images/ui/explore/padlock-icon-highlight.png)
 
@@ -395,7 +395,7 @@ Selezionare **[!UICONTROL Copia struttura JSON]** per generare un payload di esp
 
 Dopo aver composto lo schema, nell’area di lavoro puoi vedere lo schema completo. Seleziona **[!UICONTROL Salva]** e lo schema verrà salvato in [!DNL Schema Library], rendendolo accessibile da [!DNL Schema Registry].
 
-Ora è possibile utilizzare il nuovo schema per acquisire dati in [!DNL Platform]. Ricorda che una volta utilizzato lo schema per acquisire i dati, è possibile apportare solo modifiche aggiuntive. Per ulteriori informazioni sul controllo delle versioni dello schema, vedere le [nozioni di base sulla composizione dello schema](../schema/composition.md).
+Ora è possibile utilizzare il nuovo schema per acquisire dati in [!DNL Experience Platform]. Ricorda che una volta utilizzato lo schema per acquisire i dati, è possibile apportare solo modifiche aggiuntive. Per ulteriori informazioni sul controllo delle versioni dello schema, vedere le [nozioni di base sulla composizione dello schema](../schema/composition.md).
 
 Ora puoi seguire l&#39;esercitazione su [definizione di una relazione di schema nell&#39;interfaccia utente](./relationship-ui.md) per aggiungere un nuovo campo di relazione allo schema &quot;Membri fedeltà&quot;.
 
@@ -405,9 +405,9 @@ Ora puoi seguire l&#39;esercitazione su [definizione di una relazione di schema 
 
 >[!WARNING]
 >
-L&#39;interfaccia utente di [!DNL Platform] mostrata nei video seguenti non è aggiornata. Per le schermate e le funzionalità più recenti dell’interfaccia utente, consulta la documentazione precedente.
+L&#39;interfaccia utente di [!DNL Experience Platform] mostrata nei video seguenti non è aggiornata. Per le schermate e le funzionalità più recenti dell’interfaccia utente, consulta la documentazione precedente.
 
-Nel video seguente viene illustrato come creare uno schema semplice nell&#39;interfaccia utente [!DNL Platform].
+Nel video seguente viene illustrato come creare uno schema semplice nell&#39;interfaccia utente [!DNL Experience Platform].
 
 >[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
 

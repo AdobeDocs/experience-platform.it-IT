@@ -2,16 +2,16 @@
 description: Scopri come creare campi di input nell’interfaccia utente di Experience Platform, che consentono agli utenti di specificare varie informazioni rilevanti per la connessione e l’esportazione di dati nella destinazione.
 title: Campi dati cliente
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
-source-git-commit: b35f584d13fb241c06b4045b525d84775ef8317c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1742'
+source-wordcount: '1750'
 ht-degree: 1%
 
 ---
 
 # Configurare l’input dell’utente tramite i campi dati del cliente
 
-Quando ti connetti alla destinazione nell’interfaccia utente di Experience Platform, potrebbe essere necessario che gli utenti forniscano dettagli di configurazione specifici o selezionino le opzioni specifiche che rendi disponibili. In Destination SDK, queste opzioni sono denominate campi dati del cliente.
+Quando ti connetti alla destinazione nell’interfaccia utente di Experience Platform, potrebbe essere necessario che gli utenti forniscano dettagli di configurazione specifici o selezionino opzioni specifiche che rendi disponibili. In Destination SDK, queste opzioni sono denominate campi dati del cliente.
 
 Per capire dove questo componente si inserisce in un&#39;integrazione creata con Destination SDK, consulta il diagramma nella documentazione delle [opzioni di configurazione](../configuration-options.md) oppure vedi le seguenti pagine di panoramica sulla configurazione di destinazione:
 
@@ -53,10 +53,10 @@ Quando crei campi dati del cliente personalizzati, puoi utilizzare i parametri d
 
 | Parametro | Tipo | Obbligatorio/facoltativo | Descrizione |
 |---------|----------|------|---|
-| `name` | Stringa | Obbligatorio | Immetti un nome per il campo personalizzato che stai presentando. Questo nome non è visibile nell&#39;interfaccia utente di Platform, a meno che il campo `title` non sia vuoto o mancante. |
+| `name` | Stringa | Obbligatorio | Immetti un nome per il campo personalizzato che stai presentando. Questo nome non è visibile nell&#39;interfaccia utente di Experience Platform, a meno che il campo `title` non sia vuoto o mancante. |
 | `type` | Stringa | Obbligatorio | Indica il tipo di campo personalizzato che si sta introducendo. Valori accettati: <ul><li>`string`</li><li>`object`</li><li>`integer`</li></ul> |
-| `title` | Stringa | Facoltativo | Indica il nome del campo, così come viene visualizzato dai clienti nell’interfaccia utente di Platform. Se questo campo è vuoto o mancante, l&#39;interfaccia utente eredita il nome del campo dal valore `name`. |
-| `description` | Stringa | Facoltativo | Fornisci una descrizione per il campo personalizzato. Questa descrizione non è visibile nell’interfaccia utente di Platform. |
+| `title` | Stringa | Facoltativo | Indica il nome del campo, così come viene visualizzato dai clienti nell’interfaccia utente di Experience Platform. Se questo campo è vuoto o mancante, l&#39;interfaccia utente eredita il nome del campo dal valore `name`. |
+| `description` | Stringa | Facoltativo | Fornisci una descrizione per il campo personalizzato. Questa descrizione non è visibile nell’interfaccia utente di Experience Platform. |
 | `isRequired` | Booleano | Facoltativo | Indica se gli utenti devono fornire un valore per questo campo nel flusso di lavoro di configurazione di destinazione. |
 | `pattern` | Stringa | Facoltativo | Se necessario, applica un pattern per il campo personalizzato. Utilizza espressioni regolari per applicare un pattern. Ad esempio, se gli ID cliente non includono numeri o trattini bassi, immetti `^[A-Za-z]+$` in questo campo. |
 | `enum` | Stringa | Facoltativo | Esegue il rendering del campo personalizzato come menu a discesa ed elenca le opzioni disponibili per l&#39;utente. |
@@ -67,7 +67,7 @@ Quando crei campi dati del cliente personalizzati, puoi utilizzare i parametri d
 
 {style="table-layout:auto"}
 
-Nell’esempio seguente, la sezione `customerDataFields` definisce due campi che gli utenti devono inserire nell’interfaccia utente di Platform per connettersi alla destinazione:
+Nell&#39;esempio seguente, la sezione `customerDataFields` definisce due campi che gli utenti devono inserire nell&#39;interfaccia utente di Experience Platform per connettersi alla destinazione:
 
 * `Account ID`: un ID account utente per la piattaforma di destinazione.
 * `Endpoint region`: l&#39;endpoint regionale dell&#39;API a cui si connetteranno. La sezione `enum` crea un menu a discesa con i valori definiti in disponibili per la selezione da parte degli utenti.
@@ -103,7 +103,7 @@ L’esperienza dell’interfaccia utente risultante è illustrata nell’immagin
 
 ## Nomi e descrizioni delle connessioni di destinazione {#names-description}
 
-Durante la creazione di una nuova destinazione, Destination SDK aggiunge automaticamente i campi **[!UICONTROL Nome]** e **[!UICONTROL Descrizione]** alla schermata di connessione della destinazione nell&#39;interfaccia utente di Platform. Come puoi vedere nell&#39;esempio precedente, i campi **[!UICONTROL Nome]** e **[!UICONTROL Descrizione]** vengono visualizzati nell&#39;interfaccia utente senza essere inclusi nella configurazione dei campi dati del cliente.
+Durante la creazione di una nuova destinazione, Destination SDK aggiunge automaticamente i campi **[!UICONTROL Nome]** e **[!UICONTROL Descrizione]** alla schermata di connessione della destinazione nell&#39;interfaccia utente di Experience Platform. Come puoi vedere nell&#39;esempio precedente, i campi **[!UICONTROL Nome]** e **[!UICONTROL Descrizione]** vengono visualizzati nell&#39;interfaccia utente senza essere inclusi nella configurazione dei campi dati del cliente.
 
 >[!IMPORTANT]
 >
@@ -111,7 +111,7 @@ Durante la creazione di una nuova destinazione, Destination SDK aggiunge automat
 
 ## Campi dati cliente ordine {#ordering}
 
-L’ordine in cui si aggiungono i campi dati del cliente nella configurazione di destinazione si riflette nell’interfaccia utente di Platform.
+L’ordine in cui si aggiungono i campi dati del cliente nella configurazione di destinazione si riflette nell’interfaccia utente di Experience Platform.
 
 Ad esempio, la configurazione seguente si riflette di conseguenza nell&#39;interfaccia utente, con le opzioni visualizzate nell&#39;ordine **[!UICONTROL Nome]**, **[!UICONTROL Descrizione]**, **[!UICONTROL Nome bucket]**, **[!UICONTROL Percorso cartella]**, **[!UICONTROL Tipo file]**, **[!UICONTROL Formato compressione]**.
 
@@ -559,7 +559,7 @@ Di seguito è riportata la schermata risultante dell’interfaccia utente, in ba
 
 ## Accesso ai campi dati cliente con modelli {#accessing-templatized-fields}
 
-Quando la destinazione richiede l’input dell’utente, devi fornire agli utenti una selezione di campi dati del cliente che possono compilare tramite l’interfaccia utente di Platform. Quindi devi configurare il server di destinazione in modo da leggere correttamente l’input dell’utente dai campi dei dati del cliente. Questa operazione viene eseguita tramite campi con modelli.
+Quando la destinazione richiede l’input dell’utente, devi fornire agli utenti una selezione di campi dati del cliente, che possono compilare tramite l’interfaccia utente di Experience Platform. Quindi devi configurare il server di destinazione in modo da leggere correttamente l’input dell’utente dai campi dei dati del cliente. Questa operazione viene eseguita tramite campi con modelli.
 
 I campi con modello utilizzano il formato `{{customerData.fieldName}}`, dove `fieldName` è il nome del campo dati cliente da cui si stanno leggendo le informazioni. Tutti i campi dati cliente con modelli sono preceduti da `customerData.` e racchiusi tra parentesi graffe `{{ }}`.
 
@@ -592,7 +592,7 @@ Prendiamo ad esempio in considerazione la seguente configurazione di destinazion
 
 Questa configurazione richiede agli utenti di immettere il nome del bucket [!DNL Amazon S3] e il percorso della cartella nei rispettivi campi dati del cliente.
 
-Ad Experience Platform, per connettersi correttamente a [!DNL Amazon S3], il server di destinazione deve essere configurato in modo da leggere i valori da questi due campi dati cliente, come illustrato di seguito:
+Affinché Experience Platform si connetta correttamente a [!DNL Amazon S3], il server di destinazione deve essere configurato in modo da leggere i valori da questi due campi dati cliente, come illustrato di seguito:
 
 ```json
  "fileBasedS3Destination":{
@@ -613,7 +613,7 @@ Per ulteriori informazioni su come configurare il server di destinazione per la 
 
 ## Passaggi successivi {#next-steps}
 
-Dopo aver letto questo articolo, dovresti capire meglio come consentire agli utenti di inserire informazioni nell’interfaccia utente di Experience Platform tramite i campi dati del cliente. Ora sai anche come selezionare il campo dati cliente corretto per il caso d’uso e configurare, ordinare e raggruppare i campi dati cliente nell’interfaccia utente di Platform.
+Dopo aver letto questo articolo, dovresti capire meglio come consentire agli utenti di inserire informazioni nell’interfaccia utente di Experience Platform tramite i campi dati del cliente. Ora sai anche come selezionare il campo dati cliente corretto per il tuo caso d’uso e configurare, ordinare e raggruppare i campi dati cliente nell’interfaccia utente di Experience Platform.
 
 Per ulteriori informazioni sugli altri componenti di destinazione, consulta i seguenti articoli:
 

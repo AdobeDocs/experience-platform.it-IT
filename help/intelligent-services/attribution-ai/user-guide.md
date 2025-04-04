@@ -1,31 +1,31 @@
 ---
-keywords: Experience Platform;guida utente;attribuzione ai;argomenti popolari;area geografica;user guide;attribution ai;popular topic;region
+keywords: Experience Platform;guida utente;attribuzione ai;argomenti popolari;area geografica;;user guide;attribution ai;popular topic;region
 feature: Attribution AI
-title: Guida all’interfaccia utente di Attribution AI
+title: Guida dell’interfaccia utente di Attribution AI
 description: Questo documento funge da guida per l’interazione con Attribution AI nell’interfaccia utente di Intelligent Services.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2450'
+source-wordcount: '2451'
 ht-degree: 0%
 
 ---
 
-# Guida all’interfaccia utente di Attribution AI
+# Guida dell’interfaccia utente di IA per l’attribuzione
 
-Attribution AI, parte di Intelligent Services è un servizio di attribuzione algoritmica multicanale che calcola l’influenza e l’impatto incrementale delle interazioni dei clienti rispetto a risultati specifici. Con Attribution AI, gli esperti di marketing possono misurare e ottimizzare le spese di marketing e pubblicitarie comprendendo l’impatto di ogni singola interazione con i clienti in ogni fase dei loro percorsi.
+IA per l’attribuzione, parte di Intelligent Services è un servizio di attribuzione algoritmica multicanale che calcola l’influenza e l’impatto incrementale delle interazioni dei clienti rispetto a risultati specifici. Con Attribution AI, gli esperti di marketing possono misurare e ottimizzare le spese di marketing e pubblicitarie comprendendo l’impatto di ogni singola interazione con i clienti in ogni fase dei percorsi dei clienti.
 
 Questo documento funge da guida per l’interazione con Attribution AI nell’interfaccia utente di Intelligent Services.
 
 ## Creare un modello
 
-Nell&#39;interfaccia utente di [!DNL Adobe Experience Platform], selezionare **[!UICONTROL Servizi]** nell&#39;area di navigazione a sinistra. Verrà visualizzato il browser **[!UICONTROL Servizi]** che visualizza i servizi intelligenti Adobe disponibili. Nel contenitore per Attribution AI, selezionare **[!UICONTROL Apri]**.
+Nell&#39;interfaccia utente di [!DNL Adobe Experience Platform], selezionare **[!UICONTROL Servizi]** nell&#39;area di navigazione a sinistra. Verrà visualizzato il browser **[!UICONTROL Servizi]** in cui sono visualizzati i servizi intelligenti di Adobe disponibili. Nel contenitore di IA per l&#39;attribuzione, selezionare **[!UICONTROL Apri]**.
 
 ![Accesso al modello](./images/user-guide/open_Attribution_ai.png)
 
-Viene visualizzata la pagina Servizio di Attribution AI. In questa pagina sono elencati i modelli di servizio di Attribution AI e vengono visualizzate informazioni su di essi, tra cui il nome del modello, gli eventi di conversione, la frequenza di esecuzione del modello e lo stato dell&#39;ultimo aggiornamento.
+Viene visualizzata la pagina del servizio di Attribution AI. Questa pagina elenca i modelli di servizio di IA per l’attribuzione e visualizza informazioni su di essi, tra cui il nome del modello, gli eventi di conversione, la frequenza di esecuzione del modello e lo stato dell’ultimo aggiornamento.
 
-Puoi trovare la metrica **[!UICONTROL Totale eventi di conversione valutati]** nella parte inferiore destra del contenitore **[!UICONTROL Crea modello]**. Questa metrica tiene traccia del numero totale di eventi di conversione valutati dalle Attribution AI per l’anno civile corrente, inclusi tutti gli ambienti sandbox ed eventuali modelli di servizio eliminati.
+Puoi trovare la metrica **[!UICONTROL Totale eventi di conversione valutati]** nella parte inferiore destra del contenitore **[!UICONTROL Crea modello]**. Questa metrica tiene traccia del numero totale di eventi di conversione valutati da IA per l’attribuzione per l’anno civile corrente, inclusi tutti gli ambienti sandbox ed eventuali modelli di servizio eliminati.
 
 ![conversioni totali](./images/user-guide/total_conversions.png)
 
@@ -33,8 +33,8 @@ I modelli di servizio possono essere modificati, clonati ed eliminati utilizzand
 
 - **[!UICONTROL Modifica]**: la selezione di **[!UICONTROL Modifica]** consente di modificare un modello di servizio esistente. Puoi modificare il nome, la descrizione, lo stato, la frequenza di punteggio del modello e colonne aggiuntive del set di dati di punteggio.
 - **[!UICONTROL Clone]**: selezionando **[!UICONTROL Clone]** viene copiato il modello di servizio selezionato. Puoi quindi modificare il flusso di lavoro per apportare modifiche minori e rinominarlo come nuovo modello.
-- **[!UICONTROL Elimina]**: è possibile eliminare un modello di servizio, incluse le esecuzioni cronologiche. Il set di dati di output corrispondente verrà eliminato da Platform. Tuttavia, i punteggi sincronizzati con Real-Time Customer Profile non vengono eliminati.
-- **[!UICONTROL Origine dati]**: collegamento al set di dati in uso. Se un’Attribution AI utilizza più set di dati, viene visualizzato &quot;Multiple&quot; seguito dal numero di set di dati. Quando si seleziona il collegamento ipertestuale, viene visualizzato il popover di anteprima dei set di dati.
+- **[!UICONTROL Elimina]**: è possibile eliminare un modello di servizio, incluse le esecuzioni cronologiche. Il set di dati di output corrispondente verrà eliminato da Experience Platform. Tuttavia, i punteggi sincronizzati con Real-Time Customer Profile non vengono eliminati.
+- **[!UICONTROL Origine dati]**: collegamento al set di dati in uso. Se utilizzi più set di dati da IA per l’attribuzione, viene visualizzato &quot;Multiplo&quot; seguito dal numero di set di dati. Quando si seleziona il collegamento ipertestuale, viene visualizzato il popover di anteprima dei set di dati.
 - **[!UICONTROL Dettagli ultima esecuzione]**: questa opzione viene visualizzata solo quando un&#39;esecuzione non riesce. Qui vengono visualizzate le informazioni sul motivo per cui l’esecuzione non è riuscita, ad esempio i codici di errore.
 
 ![Riquadro laterale](./images/user-guide/multiple-datasets-pane.png)
@@ -49,7 +49,7 @@ Seleziona **[!UICONTROL Crea modello]** per iniziare.
 
 ![Crea modello](./images/user-guide/landing_page.png)
 
-Viene quindi visualizzata la pagina di configurazione di Attribution AI, in cui è possibile specificare un nome e una descrizione facoltativa per il modello di servizio.
+Viene quindi visualizzata la pagina di configurazione di IA per l’attribuzione, in cui è possibile fornire un nome e una descrizione facoltativa per il modello di servizio.
 
 ![denominazione di un modello](./images/user-guide/naming_instance.png)
 
@@ -57,7 +57,7 @@ Viene quindi visualizzata la pagina di configurazione di Attribution AI, in cui 
 
 <!-- https://www.adobe.com/go/aai-select-data -->
 
-Per impostazione predefinita, Attribution AI può utilizzare i dati di Adobe Analytics, Experience event e Consumer Experience Event per calcolare i punteggi di attribuzione. Quando selezioni un set di dati, vengono elencati solo quelli compatibili con Attribution AI. Per selezionare un set di dati, seleziona il simbolo (**+**) accanto al nome del set di dati oppure seleziona la casella di controllo per aggiungere più set di dati contemporaneamente. Puoi anche utilizzare l’opzione di ricerca per trovare rapidamente i set di dati che ti interessano.
+Per impostazione predefinita, IA per l’attribuzione può utilizzare i dati di Adobe Analytics, evento esperienza e evento esperienza del consumatore per calcolare i punteggi di attribuzione. Quando selezioni un set di dati, vengono elencati solo quelli compatibili con IA per l’attribuzione. Per selezionare un set di dati, seleziona il simbolo (**+**) accanto al nome del set di dati oppure seleziona la casella di controllo per aggiungere più set di dati contemporaneamente. Puoi anche utilizzare l’opzione di ricerca per trovare rapidamente i set di dati che ti interessano.
 
 Dopo aver selezionato i set di dati da utilizzare, seleziona il pulsante **[!UICONTROL Aggiungi]** per aggiungere i set di dati al riquadro di anteprima dei set di dati.
 
@@ -71,7 +71,7 @@ L’anteprima del set di dati contiene dati quali l’ora dell’ultimo aggiorna
 
 Seleziona **[!UICONTROL Salva]** per salvare le bozze durante lo spostamento nel flusso di lavoro. Puoi anche salvare le configurazioni del modello di bozza e passare al passaggio successivo nel flusso di lavoro. Usa **[!UICONTROL Salva e continua]** per creare e salvare le bozze durante le configurazioni del modello. La funzione consente di creare e salvare le bozze della configurazione del modello ed è particolarmente utile quando è necessario definire molti campi nel flusso di lavoro di configurazione.
 
-![Flusso di lavoro di creazione della scheda Attribution AI di Data Science Services con Salva e salva e continua evidenziati.](./images/user-guide/aai-save-save-&-exit.png)
+![Il flusso di lavoro Crea della scheda IA per l&#39;attribuzione dei servizi di Data Science con Salva e Salva e continua evidenziato.](./images/user-guide/aai-save-save-&-exit.png)
 
 ### Completezza del set di dati {#dataset-completeness}
 
@@ -81,7 +81,7 @@ Nell’anteprima del set di dati è un valore percentuale di completezza del set
 
 >[!NOTE]
 >
->La completezza del set di dati viene calcolata utilizzando la finestra di formazione massima per le Attribution AI (un anno). Ciò significa che i dati che hanno più di un anno non vengono presi in considerazione durante la visualizzazione del valore di completezza del set di dati.
+>La completezza del set di dati viene calcolata utilizzando la finestra di formazione massima per IA per l’attribuzione (un anno). Ciò significa che i dati che hanno più di un anno non vengono presi in considerazione durante la visualizzazione del valore di completezza del set di dati.
 
 ![Completezza set di dati](./images/user-guide/dataset-completeness.png)
 
@@ -109,7 +109,7 @@ Se in uno spazio dei nomi sono disponibili più identità, assicurati di selezio
 
 <!-- https://www.adobe.com/go/aai-mapping -->
 
-Dopo aver selezionato e aggiunto i set di dati, viene visualizzato il passaggio di configurazione **Mappa**. Attribution AI richiede la mappatura del campo Canale media per ogni set di dati selezionato nel passaggio precedente. Questo perché senza la mappatura del canale Media tra set di dati, le informazioni derivate da Attribution AI potrebbero non essere visualizzate correttamente, rendendo la pagina delle informazioni difficile da interpretare. Anche se è richiesto solo il canale Media, è consigliabile mappare alcuni dei campi facoltativi, ad esempio Azione su media, Nome campagna, Gruppo campagna e Tag campagna. In questo modo le Attribution AI possono fornire informazioni più chiare e risultati ottimali.
+Dopo aver selezionato e aggiunto i set di dati, viene visualizzato il passaggio di configurazione **Mappa**. IA per l’attribuzione richiede di mappare il campo Canale media per ogni set di dati selezionato nel passaggio precedente. Questo perché senza la mappatura del canale Media tra set di dati, le informazioni derivate da IA per l’attribuzione potrebbero non essere visualizzate correttamente, rendendo la pagina delle informazioni difficile da interpretare. Anche se è richiesto solo il canale Media, è consigliabile mappare alcuni dei campi facoltativi, ad esempio Azione su media, Nome campagna, Gruppo campagna e Tag campagna. In questo modo IA per l’attribuzione può fornire informazioni più chiare e risultati ottimali.
 
 ![mappatura](./images/user-guide/mapping-save-&-exit.png)
 
@@ -205,7 +205,7 @@ Dopo aver definito tutti i punti di contatto necessari, scorri verso l&#39;alto 
 
 ## Configurazione avanzata di formazione e punteggio
 
-La pagina finale in Attribution AI è la pagina **[!UICONTROL Avanzate]** utilizzata per impostare l&#39;apprendimento e il punteggio.
+La pagina finale in IA per l&#39;attribuzione è la pagina **[!UICONTROL Avanzate]** utilizzata per impostare l&#39;apprendimento e il punteggio.
 
 ![nuove opzioni del set di pagine](./images/user-guide/advanced_settings_set_options.png)
 
@@ -267,10 +267,10 @@ Dopo aver selezionato la finestra di formazione, seleziona **[!UICONTROL Fine]**
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato correttamente un’istanza del servizio in Attribution AI. Una volta terminato il punteggio dell&#39;istanza (attendi fino a 24 ore), puoi [scoprire approfondimenti sulle Attribution AI](./discover-insights.md). Inoltre, se desideri scaricare i risultati del punteggio, visita la documentazione [download dei punteggi](./download-scores.md).
+Seguendo questa esercitazione, hai creato correttamente un’istanza del servizio in IA per l’attribuzione. Una volta terminato il punteggio dell&#39;istanza (massimo 24 ore), puoi [individuare gli approfondimenti di IA per l&#39;attribuzione](./discover-insights.md). Inoltre, se desideri scaricare i risultati del punteggio, visita la documentazione [download dei punteggi](./download-scores.md).
 
 ## Risorse aggiuntive
 
-Il video seguente illustra un flusso di lavoro end-to-end per la creazione di una nuova istanza in Attribution AI.
+Il video seguente illustra un flusso di lavoro end-to-end per la creazione di una nuova istanza in IA per l’attribuzione.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32668?learn=on&quality=12)

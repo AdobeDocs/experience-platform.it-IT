@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;Square;square;square;home;popular topic;Square;square
+keywords: Experience Platform;home;argomenti popolari;quadrato;;home;popular topic;Square;square
 title: Creare una connessione Square Source (quadrato) nell’interfaccia utente
 description: Scopri come creare una connessione sorgente Square utilizzando l’interfaccia utente di Adobe Experience Platform.
 exl-id: 7cdfeb36-c989-4875-bb94-e6594ddf30da
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: '458'
 ht-degree: 3%
 
 ---
 
 # Crea una connessione sorgente [!DNL Square] nell&#39;interfaccia utente
 
-Questo tutorial illustra i passaggi per la creazione di un connettore di origine [!DNL Square] tramite l&#39;interfaccia utente di Platform.
+Questo tutorial descrive i passaggi per la creazione di un connettore di origine [!DNL Square] tramite l&#39;interfaccia utente di Experience Platform.
 
 ## Introduzione
 
@@ -25,7 +25,7 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe E
 
 ### Raccogli le credenziali richieste
 
-Per accedere alla piattaforma dell&#39;account [!DNL Square], è necessario fornire i seguenti valori:
+Per accedere all&#39;Experience Platform dell&#39;account [!DNL Square], è necessario fornire i valori seguenti:
 
 | Credenziali | Descrizione |
 | --- | --- |
@@ -37,11 +37,11 @@ Per accedere alla piattaforma dell&#39;account [!DNL Square], è necessario forn
 
 Per ulteriori informazioni su queste credenziali e su come ottenerle, consulta la [[!DNL Square] documentazione su OAuth](https://developer.squareup.com/docs/oauth-api/receive-and-manage-tokens).
 
-Dopo aver raccolto le credenziali richieste, puoi seguire i passaggi seguenti per collegare l&#39;account [!DNL Square] a Platform.
+Dopo aver raccolto le credenziali richieste, puoi seguire i passaggi seguenti per collegare l&#39;account [!DNL Square] ad Experience Platform.
 
 ## Connetti il tuo account [!DNL Square]
 
-Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Nella schermata [!UICONTROL Catalogo] sono visualizzate diverse origini con cui è possibile creare un account.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Nella schermata [!UICONTROL Catalogo] sono visualizzate diverse origini con cui è possibile creare un account.
 
 Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
 
@@ -65,4 +65,4 @@ Se stai creando un nuovo account, seleziona **[!UICONTROL Nuovo account]**, quin
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai autenticato e creato una connessione di origine tra l&#39;account [!DNL Square] e Platform. Ora puoi continuare con l&#39;esercitazione successiva e [creare un flusso di dati per inserire i dati dei pagamenti in Platform](../../dataflow/payments.md).
+Seguendo questa esercitazione, hai autenticato e creato una connessione sorgente tra il tuo account [!DNL Square] e Experience Platform. Ora puoi continuare con l&#39;esercitazione successiva e [creare un flusso di dati per inserire i dati dei pagamenti in Experience Platform](../../dataflow/payments.md).

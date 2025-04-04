@@ -1,16 +1,16 @@
 ---
-title: Guardrail delle prestazioni per Edge Network Server API
+title: Guardrail delle prestazioni per l’API server di Edge Network
 description: Scopri come utilizzare l’API server all’interno di guardrail di prestazioni ottimali.
 exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
-source-git-commit: 6414168c1deb047af30d8636ef8d61316f56aecf
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '569'
+source-wordcount: '573'
 ht-degree: 2%
 
 ---
 
 
-# Guardrail delle prestazioni per Edge Network Server API
+# Guardrail delle prestazioni per l’API server di Edge Network
 
 ## Panoramica {#overview}
 
@@ -22,16 +22,16 @@ Adobe non è responsabile del deterioramento delle prestazioni causato dal super
 >
 >Controlla i diritti di licenza nell&#39;ordine di vendita e la corrispondente [descrizione del prodotto](https://helpx.adobe.com/it/legal/product-descriptions.html) sui limiti di utilizzo effettivi, oltre a questa pagina di guardrail.
 
-Tutti i guardrail delle prestazioni descritti in questa pagina si applicano a livello di organizzazione IMS. Per gli utenti con più organizzazioni IMS configurate, ogni organizzazione è soggetta singolarmente ai guardrail delle prestazioni riportati di seguito. Per ulteriori dettagli su [!DNL IMS Organizations], vedere il [glossario di Experience Platform](../landing/glossary.md).
+Tutti i guardrail delle prestazioni descritti in questa pagina si applicano a livello di organizzazione IMS. Per gli utenti con più organizzazioni IMS configurate, ogni organizzazione è soggetta singolarmente ai guardrail delle prestazioni riportati di seguito. Per ulteriori dettagli su [!DNL IMS Organizations], vedere il glossario di [Experience Platform](../landing/glossary.md).
 
 ## Definizioni
 
-* **Disponibilità** viene calcolata per ogni intervallo di cinque minuti come percentuale di richieste elaborate dall&#39;Edge Network di Experience Platform che non hanno esito negativo con errori e si riferiscono solo alle API di Edge Network con provisioning. Se un tenant non ha effettuato richieste in un determinato intervallo di cinque minuti, tale intervallo viene considerato disponibile al 100%.
+* **Disponibilità** viene calcolata per ogni intervallo di cinque minuti come percentuale di richieste elaborate da Experience Platform Edge Network che non presentano errori e si riferiscono esclusivamente alle API di Edge Network con provisioning. Se un tenant non ha effettuato richieste in un determinato intervallo di cinque minuti, tale intervallo viene considerato disponibile al 100%.
 * **La percentuale di tempo di attività mensile** per una determinata area viene calcolata come media della disponibilità per tutti gli intervalli di cinque minuti in un mese.
-* Un **upstream** è un servizio dietro l&#39;Edge Network, abilitato per un flusso di dati specifico, ad esempio Adobe Server Side Forwarding, Adobe Edge Segmentation o Adobe Target.
+* Un **upstream** è un servizio dietro Edge Network, abilitato per uno stream di dati specifico, ad esempio Adobe Server Side Forwarding, Adobe Edge Segmentation o Adobe Target.
 * Una **unità di richiesta** corrisponde a un frammento di 8 KB di una richiesta e una a monte configurata per uno stream di dati.
 * Una **richiesta** è un singolo messaggio inviato da un&#39;applicazione di proprietà del cliente a [!DNL Server API]. Una richiesta può contenere una o più unità di richiesta.
-* Un **errore** è una richiesta non riuscita a causa di un errore del servizio interno di Edge Network [](error-handling.md).
+* Un **errore** è una richiesta non riuscita a causa di un [errore del servizio interno](error-handling.md) di Edge Network.
 
 ## Limiti del servizio
 
@@ -45,10 +45,10 @@ Tutti i limiti vengono applicati e normalizzati su una **unità di richiesta (RU
 
 | Flussi a monte configurati per flusso di dati | Dimensione media della richiesta | Unità di richiesta |
 | --- | --- | --- |
-| 1 (piattaforma Adobe) | 8 KB (1 frammento) | 1 |
-| 2 (Adobe Platform, Adobe Target) | 8 KB (1 frammento) | 2 |
-| 2 (Adobe Platform, Adobe Target) | 16 KB (2 frammenti) | 4 |
-| 2 (Adobe Platform, Adobe Target) | 64 KB (8 frammenti) | 16 |
+| 1 (Adobe Experience Platform) | 8 KB (1 frammento) | 1 |
+| 2 (Adobe Experience Platform, Adobe Target) | 8 KB (1 frammento) | 2 |
+| 2 (Adobe Experience Platform, Adobe Target) | 16 KB (2 frammenti) | 4 |
+| 2 (Adobe Experience Platform, Adobe Target) | 64 KB (8 frammenti) | 16 |
 
 ### Limiti unità di richiesta
 
@@ -72,10 +72,10 @@ La tabella seguente mostra i valori limite predefiniti. Se hai bisogno di limiti
 
 ## Passaggi successivi
 
-Consulta la seguente documentazione per ulteriori informazioni su altri guardrail dei servizi Experience Platform, informazioni sulla latenza end-to-end e informazioni sulle licenze dai documenti di descrizione del prodotto Real-Time CDP:
+Consulta la seguente documentazione per ulteriori informazioni su altri guardrail dei servizi Experience Platform, sulla latenza end-to-end e sulle licenze dai documenti di descrizione del prodotto Real-Time CDP:
 
 * [Guardrail Real-Time CDP](/help/rtcdp/guardrails/overview.md)
 * [Diagrammi di latenza end-to-end](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) per vari servizi Experience Platform.
-* [Real-time Customer Data Platform (Edizione B2C - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2P - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2B - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (Edizione B2C - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

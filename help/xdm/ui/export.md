@@ -4,9 +4,9 @@ title: Esportare gli schemi XDM nell’interfaccia utente
 description: Scopri come esportare uno schema esistente in una sandbox o organizzazione diversa nell’interfaccia utente di Adobe Experience Platform.
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '657'
 ht-degree: 11%
 
 ---
@@ -28,11 +28,11 @@ Per soddisfare questa esigenza, l&#39;area di lavoro [!UICONTROL Schemi] nell&#3
 
 ## Prerequisiti
 
-Anche se l’interfaccia utente di Platform consente di esportare risorse XDM, è necessario utilizzare l’API Schema Registry per importare tali risorse in altre sandbox o organizzazioni per completare il flusso di lavoro. Consulta la guida [guida introduttiva all&#39;API Schema Registry](../api/getting-started.md) per informazioni importanti sulle intestazioni di autenticazione richieste prima di seguire questa guida.
+Anche se l’interfaccia utente di Experience Platform consente di esportare risorse XDM, è necessario utilizzare l’API Schema Registry per importare tali risorse in altre sandbox o organizzazioni per completare il flusso di lavoro. Consulta la guida [guida introduttiva all&#39;API Schema Registry](../api/getting-started.md) per informazioni importanti sulle intestazioni di autenticazione richieste prima di seguire questa guida.
 
 ## Generare un payload di esportazione {#generate-export-payload}
 
-I payload di esportazione possono essere generati nell&#39;interfaccia utente di Platform dal pannello dei dettagli nella scheda [!UICONTROL Sfoglia] o direttamente dall&#39;area di lavoro dello schema nell&#39;Editor di schema.
+I payload di esportazione possono essere generati nell&#39;interfaccia utente di Experience Platform dal pannello dei dettagli nella scheda [!UICONTROL Sfoglia] o direttamente dall&#39;area di lavoro dello schema nell&#39;Editor di schema.
 
 Per generare un payload di esportazione, seleziona **[!UICONTROL Schemi]** nell&#39;area di navigazione a sinistra. Nell&#39;area di lavoro [!UICONTROL Schemi], selezionare la riga dello schema da esportare per visualizzare i dettagli dello schema nella barra laterale a destra.
 

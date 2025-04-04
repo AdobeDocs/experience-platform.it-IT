@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;inserimento;inserire dati batch;esercitazione;inserimento batch;tutorial;guida interfaccia utente;
+keywords: Experience Platform;home;argomenti popolari;inserimento;inserire dati batch;tutorial;batch ingestion;tutorial;ui guide;
 solution: Experience Platform
-title: Acquisire dati in Experience Platform
+title: Inserire Dati In Experience Platform
 type: Tutorial
 description: Adobe Experience Platform consente di importare facilmente i dati come file batch sotto forma di file Parquet o dati conformi a uno schema Experience Data Model (XDM) noto.
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: 8351f6907a0dc4a4bba01c7f6e9dec7c376c8575
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1321'
+source-wordcount: '1322'
 ht-degree: 0%
 
 ---
 
 # Inserire dati in Adobe Experience Platform
 
-Adobe Experience Platform consente di importare facilmente i dati in [!DNL Platform] come file batch. Esempi di dati da acquisire possono includere dati di profilo da un file flat in un sistema CRM (ad esempio un file Parquet) o dati conformi a uno schema [!DNL Experience Data Model] (XDM) noto nel registro degli schemi.
+Adobe Experience Platform consente di importare facilmente i dati in [!DNL Experience Platform] come file batch. Esempi di dati da acquisire possono includere dati di profilo da un file flat in un sistema CRM (ad esempio un file Parquet) o dati conformi a uno schema [!DNL Experience Data Model] (XDM) noto nel registro degli schemi.
 
 ## Introduzione
 
@@ -80,7 +80,7 @@ Nella scheda Info è presente anche un interruttore **[!UICONTROL Profilo]** uti
 
 ## Abilita set di dati per [!DNL Real-Time Customer Profile]
 
-I set di dati vengono utilizzati per acquisire i dati in [!DNL Experience Platform] e tali dati vengono utilizzati per identificare i singoli utenti e unire le informazioni provenienti da più origini. Queste informazioni unite sono denominate [!DNL Real-Time Customer Profile]. Affinché [!DNL Platform] sappia quali informazioni includere in [!DNL Real-Time Profile], i set di dati possono essere contrassegnati per l&#39;inclusione utilizzando l&#39;interruttore **[!UICONTROL Profilo]**.
+I set di dati vengono utilizzati per acquisire i dati in [!DNL Experience Platform] e tali dati vengono utilizzati per identificare i singoli utenti e unire le informazioni provenienti da più origini. Queste informazioni unite sono denominate [!DNL Real-Time Customer Profile]. Affinché [!DNL Experience Platform] sappia quali informazioni includere in [!DNL Real-Time Profile], i set di dati possono essere contrassegnati per l&#39;inclusione utilizzando l&#39;interruttore **[!UICONTROL Profilo]**.
 
 Per impostazione predefinita, questa opzione è disattivata. Se scegli di attivare [!DNL Profile], tutti i dati acquisiti nel set di dati verranno utilizzati per identificare un individuo e unire il suo [!DNL Real-Time Profile].
 
@@ -106,13 +106,13 @@ Per iniziare ad aggiungere dati al set di dati, fai clic sulla scheda **[!UICONT
 
 >[!NOTE]
 >
->Platform supporta due tipi di file per l’acquisizione dei dati, Parquet o JSON. È possibile aggiungere fino a cinque file alla volta, con la dimensione massima di ogni file pari a 1 GB.
+>Experience Platform supporta due tipi di file per l’acquisizione dei dati, Parquet o JSON. È possibile aggiungere fino a cinque file alla volta, con la dimensione massima di ogni file pari a 1 GB.
 
 ![Aggiungi scheda Dati](../images/tutorials/ingest-batch-data/drag-and-drop.png)
 
 ## Carica un file {#upload-file}
 
-Dopo aver trascinato e rilasciato (o sfogliato e selezionato) un file Parquet o JSON da caricare, [!DNL Platform] inizierà immediatamente a elaborare il file e verrà visualizzata una finestra di dialogo **[!UICONTROL Caricamento]** nella scheda **[!UICONTROL Aggiungi dati]** che mostra l&#39;avanzamento del caricamento del file.
+Dopo aver trascinato e rilasciato (o sfogliato e selezionato) un file Parquet o JSON da caricare, [!DNL Experience Platform] inizierà immediatamente a elaborare il file e verrà visualizzata una finestra di dialogo **[!UICONTROL Caricamento]** nella scheda **[!UICONTROL Aggiungi dati]** che mostra l&#39;avanzamento del caricamento del file.
 
 ![Finestra di dialogo di caricamento](../images/tutorials/ingest-batch-data/uploading-file.png)
 
@@ -150,6 +150,6 @@ Per ulteriori informazioni sull&#39;acquisizione in batch, leggi la [panoramica 
 
 >[!WARNING]
 >
->L&#39;interfaccia utente [!DNL Platform] mostrata nel video seguente non è aggiornata. Per le schermate e le funzionalità più recenti dell’interfaccia utente, consulta la documentazione precedente.
+>L&#39;interfaccia utente [!DNL Experience Platform] mostrata nel video seguente non è aggiornata. Per le schermate e le funzionalità più recenti dell’interfaccia utente, consulta la documentazione precedente.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27269?quality=12&learn=on)

@@ -2,19 +2,19 @@
 title: Profili partecipanti RainFocus
 description: Scopri come utilizzare il connettore di destinazione dei profili partecipante RainFocus per sincronizzare i profili di pubblico con il profilo partecipante globale RainFocus.
 last-substantial-update: 2024-12-17T00:00:00Z
-source-git-commit: a3dcf49d3ed9afacd3ffef10d6f280c71ebdf584
+exl-id: 27c3848c-411a-4305-a5d5-00b145b95287
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1000'
-ht-degree: 2%
+ht-degree: 5%
 
 ---
-
 
 # Profili partecipanti RainFocus {#rainfocus-destination}
 
 ## Panoramica {#overview}
 
-Utilizzare la destinazione [!DNL RainFocus Attendee Profiles] per eseguire lo streaming dei profili cliente da Adobe Experience Platform alla piattaforma [!DNL RainFocus] per creare e aggiornare i profili dei partecipanti.
+Utilizza la destinazione [!DNL RainFocus Attendee Profiles] per eseguire lo streaming dei profili cliente da Adobe Experience Platform alla piattaforma [!DNL RainFocus] per creare e aggiornare i profili dei partecipanti.
 
 >[!IMPORTANT]
 >
@@ -48,7 +48,7 @@ Prima di poter utilizzare la destinazione [!DNL RainFocus], assicurarsi di soddi
 
 | Identità di destinazione | Descrizione | Considerazioni |
 |---|---|---|
-| email_lc_sha256 | Indirizzi e-mail con hash con algoritmo SHA256 | Adobe Experience Platform supporta sia gli indirizzi di posta elettronica in testo normale che quelli con hash SHA256. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Applica trasformazione]** per impostare [!DNL Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. |
+| email_lc_sha256 | Indirizzi e-mail con hash con algoritmo SHA256 | Adobe Experience Platform supporta sia gli indirizzi di posta elettronica in testo normale che quelli con hash SHA256. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Applica trasformazione]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. |
 
 {style="table-layout:auto"}
 
@@ -58,7 +58,7 @@ Questa sezione descrive il tipo di pubblico che puoi esportare in questa destina
 
 | Origine pubblico | Supportato | Descrizione |
 ---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite il servizio di segmentazione [Experience Platform](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
 | Caricamenti personalizzati | ✓ | Tipi di pubblico [importati](../../../segmentation/ui/overview.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}

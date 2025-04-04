@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;IAB;IAB 2.0;consenso;Consenso;Consenso
+keywords: Experience Platform;home;IAB;IAB 2.0;consenso;Consenso;;home;IAB;IAB 2.0;consent;Consent
 solution: Experience Platform
 title: Supporto IAB TCF 2.0 in Experience Platform
 description: Scopri come configurare le operazioni sui dati e gli schemi per trasmettere le scelte di consenso dei clienti quando si attivano i segmenti nelle destinazioni in Adobe Experience Platform.
 role: Developer
 feature: Consent
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2492'
+source-wordcount: '2524'
 ht-degree: 0%
 
 ---
@@ -21,13 +21,13 @@ Il [!DNL Transparency & Consent Framework] (TCF), come descritto da [!DNL Intera
 >
 >Ulteriori informazioni su TCF 2.0 sono disponibili sul sito Web [IAB Europe](https://iabeurope.eu/), inclusi i materiali di supporto e le specifiche tecniche.
 
-Adobe Experience Platform fa parte dell&#39;elenco fornitori [IAB TCF 2.0 registrato](https://iabeurope.eu/vendor-list-tcf/), con ID **565**. In conformità ai requisiti TCF 2.0, Platform consente di raccogliere i dati sul consenso dei clienti e di integrarli nei profili dei clienti memorizzati. Questi dati sul consenso possono quindi essere presi in considerazione per stabilire se i profili sono inclusi nei segmenti di pubblico esportati, a seconda del loro caso d’uso.
+Adobe Experience Platform fa parte dell&#39;elenco fornitori [IAB TCF 2.0 registrato](https://iabeurope.eu/vendor-list-tcf/), con ID **565**. In conformità ai requisiti TCF 2.0, Experience Platform consente di raccogliere i dati sul consenso dei clienti e di integrarli nei profili dei clienti memorizzati. Questi dati sul consenso possono quindi essere presi in considerazione per stabilire se i profili sono inclusi nei segmenti di pubblico esportati, a seconda del loro caso d’uso.
 
 >[!IMPORTANT]
 >
->Platform è in grado di rispettare solo la versione 2.0 del TCF (o successiva). Le versioni precedenti di TCF non sono supportate.
+>Experience Platform è in grado di rispettare solo la versione 2.0 del TCF (o successiva). Le versioni precedenti di TCF non sono supportate.
 
-Questo documento fornisce una panoramica su come configurare le operazioni sui dati e gli schemi di profilo per accettare i dati sul consenso dei clienti generati dalla piattaforma di gestione dei consensi (CMP, Consent Management Platform). Inoltre, illustra come Platform trasmette le scelte di consenso degli utenti durante l’esportazione di segmenti.
+Questo documento fornisce una panoramica su come configurare le operazioni sui dati e gli schemi di profilo per accettare i dati sul consenso dei clienti generati dalla piattaforma di gestione dei consensi (CMP, Consent Management Platform). Inoltre, illustra come Experience Platform trasmette le scelte di consenso degli utenti durante l’esportazione dei segmenti.
 
 ## Prerequisiti
 
@@ -35,18 +35,18 @@ Per seguire insieme a questa guida, devi utilizzare una CMP, commerciale o tua, 
 
 >[!IMPORTANT]
 >
->Se l’ID della CMP non è valido, Platform continua a elaborare i dati così come sono. Per applicare il TCF 2.0, prima di inviare i dati a Platform è necessario confermare che la CMP dispone di un ID valido registrato con il TCF IAB 2.0.
+>Se l’ID della CMP non è valido, Experience Platform continua a elaborare i dati così come sono. Per applicare TCF 2.0, è necessario confermare che la CMP dispone di un ID valido registrato con IAB TCF 2.0 prima di inviare i dati ad Experience Platform.
 
-Questa guida richiede anche una buona conoscenza dei seguenti servizi di Platform:
+Questa guida richiede anche una buona conoscenza dei seguenti servizi Experience Platform:
 
 * [Experience Data Model (XDM)](/help/xdm/home.md): framework standardizzato in base al quale Experience Platform organizza i dati sull&#39;esperienza del cliente.
 * [Servizio Adobe Experience Platform Identity](/help/identity-service/home.md): risolve il problema fondamentale della frammentazione dei dati sull&#39;esperienza del cliente, collegando le identità tra dispositivi e sistemi.
 * [Profilo cliente in tempo reale](/help/profile/home.md): utilizza [!DNL Identity Service] per creare profili cliente dettagliati dai set di dati in tempo reale. [!DNL Real-Time Customer Profile] estrae dati dal Data Lake e mantiene i profili cliente nel proprio archivio dati separato.
-* [Adobe Experience Platform Web SDK](/help/web-sdk/home.md): libreria JavaScript lato client che consente di integrare vari servizi Platform nel sito Web rivolto al cliente.
-   * [Comandi di consenso SDK](../../../../web-sdk/commands/setconsent.md): panoramica del caso d&#39;uso dei comandi SDK relativi al consenso mostrata in questa guida.
+* [Adobe Experience Platform Web SDK](/help/web-sdk/home.md): una libreria JavaScript lato client che consente di integrare vari servizi Experience Platform nel sito Web rivolto al cliente.
+   * [Comandi per il consenso di SDK](../../../../web-sdk/commands/setconsent.md): panoramica del caso d&#39;uso dei comandi SDK relativi al consenso mostrati in questa guida.
 * [Servizio di segmentazione di Adobe Experience Platform](/help/segmentation/home.md): consente di dividere i dati di [!DNL Real-Time Customer Profile] in gruppi di individui che condividono caratteristiche simili e rispondono in modo simile alle strategie di marketing.
 
-Oltre ai servizi di Platform elencati in precedenza, dovresti avere familiarità con [destinazioni](/help/data-governance/home.md) e con il loro ruolo nell&#39;ecosistema di Platform.
+Oltre ai servizi Experience Platform elencati sopra, dovresti conoscere anche [destinazioni](/help/data-governance/home.md) e il loro ruolo nell&#39;ecosistema Experience Platform.
 
 ## Riepilogo del flusso di consenso del cliente {#summary}
 
@@ -54,26 +54,26 @@ Le sezioni seguenti descrivono come i dati sul consenso vengono raccolti e appli
 
 ### Raccolta dati di consenso
 
-Platform consente di raccogliere i dati sul consenso del cliente tramite il seguente processo:
+Experience Platform consente di raccogliere i dati sul consenso del cliente tramite la seguente procedura:
 
 1. Un cliente fornisce le proprie preferenze di consenso per la raccolta dei dati tramite una finestra di dialogo sul sito web.
 1. La tua CMP rileva la modifica della preferenza di consenso e genera di conseguenza i dati sul consenso TCF.
-1. Utilizzando Platform Web SDK, i dati del consenso generati (restituiti dalla CMP) vengono inviati a Adobe Experience Platform.
+1. Utilizzando Experience Platform Web SDK, i dati del consenso generati (restituiti dalla CMP) vengono inviati a Adobe Experience Platform.
 1. I dati di consenso raccolti vengono acquisiti in un set di dati abilitato per [!DNL Profile] il cui schema contiene campi di consenso TCF.
 
 Oltre ai comandi SDK attivati dagli hook di modifica del consenso di CMP, i dati del consenso possono anche fluire in Experience Platform tramite qualsiasi dato XDM generato dal cliente e caricato direttamente in un set di dati abilitato per [!DNL Profile].
 
-Tutti i segmenti condivisi con Platform da Adobe Audience Manager (tramite il connettore di origine [!DNL Audience Manager] o altro) possono contenere anche dati sul consenso se i campi appropriati sono stati applicati a tali segmenti tramite [!DNL Experience Cloud Identity Service]. Per ulteriori informazioni sulla raccolta dei dati sul consenso in [!DNL Audience Manager], consulta il documento sul plug-in [Adobe Audience Manager per IAB TCF](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html?lang=it).
+Tutti i segmenti condivisi con Experience Platform da Adobe Audience Manager (tramite il connettore di origine [!DNL Audience Manager] o altro) possono contenere anche dati di consenso se i campi appropriati sono stati applicati a tali segmenti tramite [!DNL Experience Cloud Identity Service]. Per ulteriori informazioni sulla raccolta dei dati sul consenso in [!DNL Audience Manager], consulta il documento sul plug-in [Adobe Audience Manager per IAB TCF](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html?lang=it).
 
 ### Applicazione del consenso a valle
 
-Una volta acquisiti correttamente i dati di consenso TCF, i seguenti processi hanno luogo nei servizi Platform a valle:
+Una volta acquisiti correttamente i dati di consenso TCF, i seguenti processi hanno luogo nei servizi Experience Platform a valle:
 
 1. [!DNL Real-Time Customer Profile] aggiorna i dati di consenso archiviati per il profilo del cliente.
-1. Platform elabora gli ID cliente solo se per ogni ID in un cluster viene fornita l’autorizzazione del fornitore per Platform (565).
-1. Durante l’esportazione di segmenti in destinazioni appartenenti a membri dell’elenco di fornitori TCF 2.0, Platform include profili solo se le autorizzazioni del fornitore per Platform (565) *e* sono fornite per ogni ID in un cluster.
+1. Experience Platform elabora gli ID cliente solo se per ogni ID di un cluster viene fornita l’autorizzazione del fornitore per Experience Platform (565).
+1. Durante l’esportazione di segmenti in destinazioni appartenenti a membri dell’elenco di fornitori TCF 2.0, Experience Platform include profili solo se le autorizzazioni del fornitore per Experience Platform (565) *e* sono fornite per ogni ID in un cluster.
 
-Le altre sezioni di questo documento forniscono indicazioni su come configurare Platform e le operazioni sui dati per soddisfare i requisiti di raccolta e applicazione descritti in precedenza.
+Le altre sezioni di questo documento forniscono indicazioni su come configurare Experience Platform e le operazioni sui dati per soddisfare i requisiti di raccolta e applicazione descritti in precedenza.
 
 ## Determinare come generare i dati sul consenso dei clienti all’interno della CMP {#consent-data}
 
@@ -85,14 +85,14 @@ Questa finestra di dialogo deve consentire al cliente di effettuare o meno il co
 
 | Opzione di consenso | Descrizione |
 | --- | --- |
-| **Finalità** | Le finalità definiscono per quali finalità di tecnologia pubblicitaria un brand può utilizzare i dati di un cliente. Per consentire a Platform di elaborare gli ID cliente, è necessario accettare le seguenti finalità: <ul><li>**Scopo 1**: archiviare e/o accedere a informazioni su un dispositivo</li><li>**Scopo 10**: sviluppare e migliorare i prodotti</li></ul> |
+| **Finalità** | Le finalità definiscono per quali finalità di tecnologia pubblicitaria un brand può utilizzare i dati di un cliente. Per consentire ad Experience Platform di elaborare gli ID cliente, è necessario accettare le seguenti finalità: <ul><li>**Scopo 1**: archiviare e/o accedere a informazioni su un dispositivo</li><li>**Scopo 10**: sviluppare e migliorare i prodotti</li></ul> |
 | **Autorizzazioni fornitore** | Oltre a scopi di tecnologia per annunci, la finestra di dialogo deve anche consentire al cliente di acconsentire o rinunciare all’utilizzo dei propri dati da parte di fornitori specifici, tra cui Adobe Experience Platform (565). |
 
 ### Stringhe di consenso {#consent-strings}
 
 Indipendentemente dal metodo utilizzato per raccogliere i dati, l’obiettivo è generare un valore stringa in base alle opzioni di consenso scelte dal cliente, denominato stringa di consenso.
 
-Nella specifica TCF, le stringhe di consenso vengono utilizzate per codificare dettagli rilevanti sulle impostazioni di consenso di un cliente, in termini di finalità di marketing specifiche, come definite dalle politiche e dai fornitori. Platform utilizza queste stringhe per memorizzare le impostazioni di consenso per ciascun cliente, pertanto ogni volta che tali impostazioni cambiano deve essere generata una nuova stringa di consenso.
+Nella specifica TCF, le stringhe di consenso vengono utilizzate per codificare dettagli rilevanti sulle impostazioni di consenso di un cliente, in termini di finalità di marketing specifiche, come definite dalle politiche e dai fornitori. Experience Platform utilizza queste stringhe per memorizzare le impostazioni di consenso per ciascun cliente, pertanto ogni volta che tali impostazioni cambiano deve essere generata una nuova stringa di consenso.
 
 Le stringhe di consenso possono essere create solo da una CMP registrata con IAB TCF. Per ulteriori informazioni su come generare stringhe di consenso utilizzando la tua CMP specifica, consulta la [guida alla formattazione delle stringhe di consenso](https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework/blob/master/TCFv2/IAB%20Tech%20Lab%20-%20Consent%20string%20and%20vendor%20list%20formats%20v2.md) nell&#39;archivio GitHub IAB TCF.
 
@@ -114,20 +114,20 @@ Per ulteriori informazioni su come utilizzare i criteri di unione, consulta la [
 >
 >[!DNL Experience Cloud Identity Service] è ancora supportato per l&#39;elaborazione del consenso in Adobe Audience Manager, tuttavia la conformità con TCF 2.0 richiede solo che la libreria sia aggiornata alla [versione 5.0](https://github.com/Adobe-Marketing-Cloud/id-service/releases).
 
-Dopo aver configurato la CMP per generare le stringhe di consenso, è necessario integrare l’SDK per web di Experience Platform per raccogliere tali stringhe e inviarle a Platform. Platform SDK fornisce due comandi che possono essere utilizzati per inviare i dati di consenso TCF a Platform (descritti nelle sottosezioni seguenti). Questi comandi devono essere utilizzati quando un cliente fornisce informazioni sul consenso per la prima volta e in seguito ogni volta che tale consenso cambia.
+Dopo aver configurato la CMP per generare le stringhe di consenso, è necessario integrare Experience Platform Web SDK per raccogliere tali stringhe e inviarle ad Experience Platform. Il SDK di Experience Platform fornisce due comandi che possono essere utilizzati per inviare i dati di consenso TCF ad Experience Platform (descritti nelle sottosezioni seguenti). Questi comandi devono essere utilizzati quando un cliente fornisce informazioni sul consenso per la prima volta e in seguito ogni volta che tale consenso cambia.
 
-**L&#39;SDK non si interfaccia con CMP predefiniti**. Sta a te determinare come integrare l’SDK nel tuo sito web, ascoltare le modifiche del consenso nella CMP e chiamare il comando appropriato.
+**SDK non si interfaccia con CMP predefiniti**. Sta a te determinare come integrare il SDK nel tuo sito web, ascoltare le modifiche del consenso nella CMP e chiamare il comando appropriato.
 
 ### Creare un flusso di dati
 
-Affinché l’SDK possa inviare dati all’Experience Platform, devi prima creare un flusso di dati per Platform. I passaggi specifici per la creazione di uno stream di dati sono forniti nella [documentazione SDK](/help/datastreams/overview.md).
+Affinché SDK possa inviare dati ad Experience Platform, devi prima creare un flusso di dati per Experience Platform. I passaggi specifici per la creazione di uno stream di dati sono forniti nella [documentazione di SDK](/help/datastreams/overview.md).
 
 Dopo aver fornito un nome univoco per lo stream di dati, seleziona il pulsante accanto a **[!UICONTROL Adobe Experience Platform]**. Quindi, utilizzare i valori seguenti per completare il resto del modulo:
 
 | Campo stream di dati | Valore |
 | --- | --- |
-| [!UICONTROL Sandbox] | Il nome della piattaforma [sandbox](/help/sandboxes/home.md) che contiene la connessione streaming e i set di dati necessari per impostare lo stream di dati. |
-| [!UICONTROL Ingresso streaming] | Ad Experience Platform, una connessione in streaming valida. Se non disponi di un ingresso di streaming, consulta l&#39;esercitazione sulla [creazione di una connessione di streaming](/help/ingestion/tutorials/create-streaming-connection-ui.md). |
+| [!UICONTROL Sandbox] | Il nome della [sandbox](/help/sandboxes/home.md) Experience Platform che contiene la connessione streaming e i set di dati necessari per impostare lo stream di dati. |
+| [!UICONTROL Ingresso streaming] | Una connessione in streaming valida per Experience Platform. Se non disponi di un ingresso di streaming, consulta l&#39;esercitazione sulla [creazione di una connessione di streaming](/help/ingestion/tutorials/create-streaming-connection-ui.md). |
 | [!UICONTROL Set di dati di evento] | Seleziona il set di dati [!DNL XDM ExperienceEvent] creato nel [passaggio precedente](#datasets). Se hai incluso il gruppo di campi [[!UICONTROL IAB TCF 2.0 Consent]](/help/xdm/field-groups/event/iab.md) nello schema di questo set di dati, puoi tenere traccia degli eventi di modifica del consenso nel tempo utilizzando il comando [`sendEvent`](#sendEvent), memorizzando tali dati in questo set di dati. Tieni presente che i valori di consenso memorizzati in questo set di dati sono **non** utilizzati nei flussi di lavoro di applicazione automatica. |
 | [!UICONTROL Set di dati di profilo] | Seleziona il set di dati [!DNL XDM Individual Profile] creato nel [passaggio precedente](#datasets). Quando si risponde agli hook di modifica del consenso di CMP tramite il comando [`setConsent`](#setConsent), i dati raccolti vengono memorizzati in questo set di dati. Poiché questo set di dati è abilitato per il profilo, i valori del consenso memorizzati in questo set di dati vengono rispettati durante i flussi di lavoro di applicazione automatica. |
 
@@ -137,7 +137,7 @@ Al termine, seleziona **[!UICONTROL Salva]** nella parte inferiore della scherma
 
 ### Esecuzione di comandi per la modifica del consenso
 
-Dopo aver creato lo stream di dati descritto nella sezione precedente, puoi iniziare a utilizzare i comandi SDK per inviare i dati del consenso a Platform. Le sezioni seguenti forniscono esempi di come ogni comando SDK può essere utilizzato in scenari diversi.
+Dopo aver creato lo stream di dati descritto nella sezione precedente, puoi iniziare a utilizzare i comandi di SDK per inviare i dati del consenso ad Experience Platform. Le sezioni seguenti forniscono esempi di come ogni comando di SDK può essere utilizzato in scenari diversi.
 
 #### Utilizzo degli hook per la modifica del consenso di CMP {#setConsent}
 
@@ -193,7 +193,7 @@ OneTrust.OnConsentChanged(function () {
 
 #### Utilizzo degli eventi {#sendEvent}
 
-È inoltre possibile raccogliere i dati sul consenso TCF 2.0 su ogni evento attivato in Platform utilizzando il comando `sendEvent`.
+È inoltre possibile raccogliere i dati sul consenso TCF 2.0 su ogni evento attivato in Experience Platform utilizzando il comando `sendEvent`.
 
 >[!NOTE]
 >
@@ -224,7 +224,7 @@ alloy("sendEvent", {
 
 ### Gestione delle risposte SDK
 
-Molti comandi Web SDK restituiscono promesse che indicano se la chiamata è riuscita o meno. Puoi quindi utilizzare queste risposte per una logica aggiuntiva, ad esempio per visualizzare i messaggi di conferma al cliente. Per ulteriori informazioni, vedere [Risposte ai comandi](/help/web-sdk/commands/command-responses.md).
+Molti comandi di Web SDK restituiscono promesse che indicano se la chiamata è riuscita o meno. Puoi quindi utilizzare queste risposte per una logica aggiuntiva, ad esempio per visualizzare i messaggi di conferma al cliente. Per ulteriori informazioni, vedere [Risposte ai comandi](/help/web-sdk/commands/command-responses.md).
 
 ## Esportare segmenti {#export}
 
@@ -241,11 +241,11 @@ I clienti devono acconsentire alle seguenti finalità (come indicato da [Criteri
 * **Scopo 1**: archiviare e/o accedere a informazioni su un dispositivo
 * **Scopo 10**: sviluppare e migliorare i prodotti
 
-TCF 2.0 richiede inoltre che l’origine dei dati verifichi l’autorizzazione del fornitore della destinazione prima di inviare i dati a tale destinazione. Platform controlla quindi se l’autorizzazione del fornitore della destinazione ha acconsentito a tutti gli ID nel cluster prima di includere i dati associati a tale destinazione.
+TCF 2.0 richiede inoltre che l’origine dei dati verifichi l’autorizzazione del fornitore della destinazione prima di inviare i dati a tale destinazione. Di conseguenza, Experience Platform controlla se l’autorizzazione del fornitore della destinazione ha acconsentito a tutti gli ID nel cluster prima di includere i dati associati a tale destinazione.
 
 >[!NOTE]
 >
->Tutti i segmenti condivisi con Adobe Audience Manager contengono gli stessi valori di consenso TCF 2.0 delle controparti di Platform. Poiché [!DNL Audience Manager] condivide lo stesso ID fornitore di Platform (565), sono necessari gli stessi scopi e le stesse autorizzazioni del fornitore. Per ulteriori informazioni, vedere il documento sul plug-in [Adobe Audience Manager per IAB TCF](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html?lang=it).
+>Tutti i segmenti condivisi con Adobe Audience Manager contengono gli stessi valori di consenso TCF 2.0 delle controparti Experience Platform. Poiché [!DNL Audience Manager] condivide lo stesso ID fornitore di Experience Platform (565), sono necessari gli stessi scopi e le stesse autorizzazioni del fornitore. Per ulteriori informazioni, vedere il documento sul plug-in [Adobe Audience Manager per IAB TCF](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html?lang=it).
 
 ## Testare l’implementazione {#test-implementation}
 
@@ -257,4 +257,4 @@ Dopo aver configurato l’implementazione di TCF 2.0 e aver esportato i segmenti
 
 ## Passaggi successivi
 
-In questo documento viene descritto il processo di configurazione delle operazioni relative ai dati di Platform per soddisfare gli obblighi aziendali descritti dal TCF 2.0. Per ulteriori informazioni sulle funzionalità relative alla privacy di Platform, consulta la panoramica su [governance, privacy e sicurezza](../../overview.md).
+Questo documento descrive il processo di configurazione delle operazioni sui dati di Experience Platform per soddisfare gli obblighi aziendali descritti dal TCF 2.0. Per ulteriori informazioni sulle funzionalità relative alla privacy di Experience Platform, consulta la panoramica su [governance, privacy e sicurezza](../../overview.md).

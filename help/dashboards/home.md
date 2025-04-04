@@ -4,9 +4,9 @@ title: Panoramica delle dashboard
 type: Documentation
 description: Esplora più dashboard in Adobe Experience Platform per visualizzare informazioni importanti sui dati dell’organizzazione, acquisite durante le istantanee giornaliere.
 exl-id: d56cb139-392d-4bbc-97ec-202a0c8a2863
-source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '307'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Adobe Experience Platform fornisce più dashboard attraverso i quali è possibil
 
 ## Introduzione alle dashboard
 
-Le dashboard forniscono rapporti predefiniti sui dati dell’organizzazione e sono integrate direttamente nel flusso di lavoro degli addetti al marketing all’interno di Platform. Queste dashboard sono disponibili senza la necessità di ulteriore supporto IT o il tempo e l’impegno altrimenti necessari per esportare ed elaborare i dati con una progettazione e un’implementazione aggiuntive di data warehousing.
+Le dashboard forniscono rapporti predefiniti sui dati dell’organizzazione e sono integrate direttamente nel flusso di lavoro degli addetti al marketing in Experience Platform. Queste dashboard sono disponibili senza la necessità di ulteriore supporto IT o il tempo e l’impegno altrimenti necessari per esportare ed elaborare i dati con una progettazione e un’implementazione aggiuntive di data warehousing.
 
 ## Guida introduttiva alle dashboard
 

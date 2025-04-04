@@ -1,18 +1,18 @@
 ---
 title: LiveRamp - Connessione di onboarding
-description: Scopri come utilizzare il connettore LiveRamp per integrare i tipi di pubblico da Adobe Real-time Customer Data Platform a LiveRamp Connect.
+description: Scopri come utilizzare il connettore LiveRamp per integrare i tipi di pubblico da Adobe Real-Time Customer Data Platform a LiveRamp Connect.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1941'
+source-wordcount: '1948'
 ht-degree: 3%
 
 ---
 
 # Connessione [!DNL LiveRamp - Onboarding] {#liveramp-onboarding}
 
-Utilizza la connessione [!DNL LiveRamp - Onboarding] per integrare i tipi di pubblico da Adobe Real-time Customer Data Platform a [!DNL LiveRamp Connect].
+Utilizza la connessione [!DNL LiveRamp - Onboarding] per integrare i tipi di pubblico da Adobe Real-Time Customer Data Platform a [!DNL LiveRamp Connect].
 
 ## Casi d’uso {#use-cases}
 
@@ -24,7 +24,7 @@ In qualità di addetto al marketing, desidero inviare tipi di pubblico da Adobe 
 
 La connessione [!DNL LiveRamp - Onboarding] esporta i file utilizzando l&#39;archiviazione SFTP](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html) di [LiveRamp.
 
-Prima di poter inviare dati da Experience Platform a [!DNL LiveRamp - Onboarding], sono necessarie le credenziali [!DNL LiveRamp]. Rivolgiti al tuo rappresentante [!DNL LiveRamp] per ottenere le tue credenziali, se non le hai già.
+Per poter inviare dati da Experience Platform a [!DNL LiveRamp - Onboarding], sono necessarie le credenziali [!DNL LiveRamp]. Rivolgiti al tuo rappresentante [!DNL LiveRamp] per ottenere le tue credenziali, se non le hai già.
 
 ## Identità supportate {#supported-identities}
 
@@ -38,7 +38,7 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 
 | Origine pubblico | Supportato | Descrizione |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite il servizio di segmentazione [Experience Platform](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
 | Caricamenti personalizzati | ✓ | Tipi di pubblico [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
@@ -104,7 +104,7 @@ Per eseguire l&#39;autenticazione nella destinazione, compilare i campi obbligat
 
 Per configurare i dettagli per la destinazione, compila i campi obbligatori e facoltativi seguenti. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 
-![Schermata dell&#39;interfaccia utente di Platform che mostra come compilare i dettagli per la destinazione](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-destination-details.png)
+![Schermata dell&#39;interfaccia utente di Experience Platform che mostra come inserire i dettagli per la destinazione](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-destination-details.png)
 
 * **[!UICONTROL Nome]**: un nome con cui riconoscerai questa destinazione in futuro.
 * **[!UICONTROL Descrizione]**: una descrizione che ti aiuterà a identificare questa destinazione in futuro.
@@ -135,13 +135,13 @@ Nel passaggio [!UICONTROL Pianificazione], crea una pianificazione di esportazio
 * **[!UICONTROL Frequenza]**: [!UICONTROL Giornaliera]
 * **[!UICONTROL Data]**: seleziona l&#39;ora di inizio e di fine dell&#39;esportazione come preferisci.
 
-![Schermata dell&#39;interfaccia utente di Platform che mostra il passaggio di pianificazione del pubblico.](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
+![Schermata dell&#39;interfaccia utente di Experience Platform che mostra il passaggio di pianificazione del pubblico.](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
 
 Il nome del file esportato non è attualmente configurabile dall&#39;utente. Tutti i file esportati nella destinazione [!DNL LiveRamp - Onboarding] vengono denominati automaticamente in base al seguente modello:
 
 `%ORGANIZATION_NAME%_%DESTINATION%_%DESTINATION_INSTANCE_ID%_%DATETIME%`
 
-![Schermata dell&#39;interfaccia utente di Platform che mostra il modello di nome file esportato.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-file-name.png)
+![Schermata dell&#39;interfaccia utente di Experience Platform che mostra il modello di nome file esportato.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-file-name.png)
 
 Ad esempio, il nome di un file esportato per un&#39;organizzazione denominata [!DNL Luma] potrebbe essere simile al seguente:
 
@@ -169,7 +169,7 @@ Nel passaggio **[!UICONTROL Mappatura]**, la mappatura **[!UICONTROL Campo di de
 
 2. Nella finestra **[!UICONTROL Seleziona campo di origine]**, scegli la categoria **[!UICONTROL Seleziona attributi]** e seleziona l&#39;attributo XDM da mappare, oppure scegli la categoria **[!UICONTROL Seleziona spazio dei nomi identità]** e seleziona un&#39;identità da mappare alla destinazione.
 
-   ![Screeshot dell&#39;interfaccia utente di Experience Platform che mostra la schermata di mappatura dell&#39;origine.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-source-mapping.png)
+   ![Schermate dell&#39;interfaccia utente di Experience Platform che mostrano la schermata di mappatura dell&#39;origine.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-source-mapping.png)
 
 3. Nella finestra **[!UICONTROL Seleziona campo di destinazione]**, immettere il nome dell&#39;attributo a cui si desidera mappare il campo di origine selezionato. Il nome dell’attributo qui definito si rifletterà nel file CSV esportato come intestazione di colonna.
 
@@ -187,7 +187,7 @@ I dati vengono esportati nel percorso di archiviazione [!DNL LiveRamp - Onboardi
 
 I file esportati hanno una dimensione massima di 10 milioni di righe. Experience Platform genera più file per consegna se il pubblico selezionato supera i 10 milioni di righe. Se prevedi di superare il limite per i singoli file, contatta il rappresentante [!DNL LiveRamp] e chiedi loro di configurare l&#39;acquisizione batch.
 
-Durante l&#39;esportazione dei file nella destinazione [!DNL LiveRamp - Onboarding], Platform genera un file CSV per ogni [ID del criterio di unione](../../../profile/merge-policies/overview.md).
+Durante l&#39;esportazione dei file nella destinazione [!DNL LiveRamp - Onboarding], Experience Platform genera un file CSV per ogni [ID del criterio di unione](../../../profile/merge-policies/overview.md).
 
 Ad esempio, prendiamo in considerazione i seguenti tipi di pubblico:
 
@@ -196,7 +196,7 @@ Ad esempio, prendiamo in considerazione i seguenti tipi di pubblico:
 * Pubblico C (criterio di unione 1)
 * Pubblico D (criterio di unione 1)
 
-Platform esporterà due file CSV in [!DNL LiveRamp - Onboarding]:
+Experience Platform esporterà due file CSV in [!DNL LiveRamp - Onboarding]:
 
 * Un file CSV contenente i tipi di pubblico A, C e D;
 * Un file CSV contenente il pubblico B.
@@ -211,7 +211,7 @@ I profili inclusi nei file esportati possono corrispondere a uno dei seguenti st
 * `Expired`: il profilo non è più qualificato per il pubblico, ma lo è già stato in passato.
 * `""`(stringa vuota): il profilo non è mai qualificato per il pubblico.
 
-Ad esempio, un file CSV esportato con un attributo `email`, due tipi di pubblico provenienti dall&#39;Experience Platform [Servizio di segmentazione](../../../segmentation/home.md) e un pubblico esterno [importato](../../../segmentation/ui/audience-portal.md#import-audience) potrebbe essere simile al seguente:
+Ad esempio, un file CSV esportato con un attributo `email`, due tipi di pubblico provenienti da Experience Platform [Segmentation Service](../../../segmentation/home.md) e un pubblico esterno [imported](../../../segmentation/ui/audience-portal.md#import-audience) potrebbe essere simile al seguente:
 
 ```csv
 email,ups_aa2e3d98-974b-4f8b-9507-59f65b6442df,ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e
@@ -223,15 +223,15 @@ abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
 
-Nell&#39;esempio precedente, le sezioni `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` e `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` descrivono i tipi di pubblico provenienti dal servizio di segmentazione, mentre `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` descrive un pubblico importato in Platform come [caricamento personalizzato](../../../segmentation/ui/audience-portal.md#import-audience).
+Nell&#39;esempio precedente, le sezioni `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` e `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` descrivono i tipi di pubblico provenienti dal servizio di segmentazione, mentre `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` descrive un pubblico importato in Experience Platform come [caricamento personalizzato](../../../segmentation/ui/audience-portal.md#import-audience).
 
-Dal momento che Platform genera un file CSV per ogni [ID del criterio di unione](../../../profile/merge-policies/overview.md), genera anche un flusso di dati separato per ogni ID del criterio di unione.
+Poiché Experience Platform genera un file CSV per ogni [ID del criterio di unione](../../../profile/merge-policies/overview.md), genera anche un flusso di dati separato per ogni ID del criterio di unione.
 
 Ciò significa che le metriche **[!UICONTROL Identità attivate]** e **[!UICONTROL Profili ricevuti]** nella pagina [esecuzioni del flusso di dati](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) sono aggregate per ogni gruppo di tipi di pubblico che utilizzano lo stesso criterio di unione, anziché essere visualizzate per ogni pubblico.
 
 In seguito alla generazione del flusso di dati per un gruppo di tipi di pubblico che utilizzano lo stesso criterio di unione, i nomi dei tipi di pubblico non vengono visualizzati nel [dashboard di monitoraggio](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations).
 
-![Screeshot dell&#39;interfaccia utente di Experience Platform che mostra la metrica delle identità attivate.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-metrics.png)
+![Screeshot dell&#39;interfaccia utente di Experience Platform che mostra le identità attivate dalla metrica.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-metrics.png)
 
 ## Caricare i dati esportati su LiveRamp {#upload-to-liveramp}
 

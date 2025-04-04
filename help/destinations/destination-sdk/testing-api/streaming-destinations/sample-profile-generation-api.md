@@ -2,9 +2,9 @@
 description: Scopri come utilizzare l’API di test di destinazione per generare profili di esempio per la destinazione di streaming, che puoi utilizzare nel test di destinazione.
 title: Generare profili di esempio in base a uno schema di origine
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '979'
+source-wordcount: '980'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ In questa pagina sono elencate e descritte tutte le operazioni API che è possib
 >* generare profili da utilizzare quando [si crea e si verifica un modello di trasformazione dei messaggi](create-template.md) - utilizzando *ID destinazione* come parametro di query.
 >* genera profili da utilizzare quando si effettuano chiamate a [test se la destinazione è configurata correttamente](streaming-destination-testing-overview.md) - utilizzando *ID istanza di destinazione* come parametro di query.
 
-Puoi generare profili di esempio in base allo schema di origine XDM di Adobe (da utilizzare durante il test della destinazione) o allo schema di destinazione supportato dalla destinazione (da utilizzare per la creazione del modello). Per capire la differenza tra lo schema di origine XDM Adobe e lo schema di destinazione, leggi la sezione panoramica dell&#39;articolo [Formato del messaggio](../../functionality/destination-server/message-format.md).
+Puoi generare profili di esempio in base allo schema di origine XDM di Adobe (da utilizzare durante il test della destinazione) o allo schema di destinazione supportato dalla destinazione (da utilizzare per la creazione del modello). Per comprendere la differenza tra lo schema di origine XDM di Adobe e lo schema di destinazione, leggi la sezione panoramica dell&#39;articolo [Formato del messaggio](../../functionality/destination-server/message-format.md).
 
 Si noti che gli scopi per i quali è possibile utilizzare i profili di esempio non sono intercambiabili. I profili generati in base al *ID destinazione* possono essere utilizzati solo per creare i modelli di trasformazione dei messaggi e i profili generati in base al *ID istanza destinazione* possono essere utilizzati solo per testare l&#39;endpoint di destinazione.
 
@@ -40,9 +40,9 @@ Prima di continuare, consulta la [guida introduttiva](../../getting-started.md) 
 >
 >Aggiungi i profili di esempio generati qui alle chiamate HTTP quando [esegui il test della destinazione](streaming-destination-testing-overview.md).
 
-GET È possibile generare profili di esempio in base allo schema di origine effettuando una richiesta all&#39;endpoint `authoring/sample-profiles/` e fornendo l&#39;ID di un&#39;istanza di destinazione creata in base alla configurazione di destinazione da testare.
+È possibile generare profili di esempio in base allo schema di origine effettuando una richiesta GET all&#39;endpoint `authoring/sample-profiles/` e fornendo l&#39;ID di un&#39;istanza di destinazione creata in base alla configurazione di destinazione da testare.
 
-Per ottenere l’ID di un’istanza di destinazione, devi innanzitutto creare una connessione nell’interfaccia utente di Experience Platform con la destinazione prima di tentare di testare la destinazione. Leggi l&#39;esercitazione [attiva destinazione](../../../ui/activation-overview.md) e vedi il suggerimento di seguito per ottenere l&#39;ID istanza delle destinazioni da utilizzare per questa API.
+Per ottenere l’ID di un’istanza di destinazione, devi innanzitutto creare una connessione nell’interfaccia utente di Experience Platform alla destinazione prima di tentare di testare la destinazione. Leggi l&#39;esercitazione [attiva destinazione](../../../ui/activation-overview.md) e vedi il suggerimento di seguito per ottenere l&#39;ID istanza delle destinazioni da utilizzare per questa API.
 
 >[!IMPORTANT]
 >
@@ -193,7 +193,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con il nume
 >
 >Utilizza i profili di esempio generati qui durante la creazione del modello, nel [passaggio del modello di rendering](render-template-api.md#multiple-profiles-with-body).
 
-È possibile generare profili di esempio in base allo schema di destinazione effettuando una richiesta di GET all&#39;endpoint `authoring/sample-profiles/` e fornendo l&#39;ID di destinazione della configurazione di destinazione in base alla quale si sta creando il modello.
+È possibile generare profili di esempio in base allo schema di destinazione effettuando una richiesta GET all&#39;endpoint `authoring/sample-profiles/` e fornendo l&#39;ID di destinazione della configurazione di destinazione in base alla quale si sta creando il modello.
 
 >[!TIP]
 >
@@ -373,7 +373,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con il nume
 
 ## Gestione degli errori API {#api-error-handling}
 
-Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](../../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
+Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](../../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Experience Platform.
 
 ## Passaggi successivi
 

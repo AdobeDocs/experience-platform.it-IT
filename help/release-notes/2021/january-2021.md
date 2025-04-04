@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: January 27, 2021
 author: ens60013
 exl-id: 6fb92e35-922c-47ba-8cf4-44edd92acfa1
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '720'
 ht-degree: 27%
 
 ---
@@ -61,14 +61,14 @@ Adobe Experience Platform ti consente di promuovere esperienze coordinate, coere
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Elimina set di dati dall’archivio profili | Quando elimini un set di dati dal Data Lake di Experience Platform, questo viene eliminato automaticamente anche dall’archivio Profili. Non è più necessario utilizzare l’endpoint API dei processi del sistema di profili per effettuare una richiesta di eliminazione al fine di eliminare esplicitamente il set di dati dall’archivio profili. Per ulteriori informazioni, consulta la [guida dell&#39;endpoint API dei processi di sistema ](../../profile/api/profile-system-jobs.md). |
+| Elimina set di dati dall’archivio profili | Quando elimini un set di dati da Experience Platform Data Lake, questo viene eliminato automaticamente anche dall’archivio profili. Non è più necessario utilizzare l’endpoint API dei processi del sistema di profili per effettuare una richiesta di eliminazione al fine di eliminare esplicitamente il set di dati dall’archivio profili. Per ulteriori informazioni, consulta la [guida dell&#39;endpoint API dei processi di sistema ](../../profile/api/profile-system-jobs.md). |
 | Conteggio stimato dello spazio dei nomi ID per un dato segmento | Per i conteggi dei profili stimati, l’API di anteprima ora riporta:<ul><li>Numero totale di profili stimati in un segmento per un dato spazio dei nomi.</li><li>Numero totale di profili stimati nello schema di unione profili per un dato spazio dei nomi.</li></ul>Per ulteriori informazioni, consulta la [guida dell&#39;endpoint API di anteprima del profilo](../../profile/api/preview-sample-status.md). |
 
 Per ulteriori informazioni su Real-Time Customer Profile, inclusi tutorial e best practice per l&#39;utilizzo dei dati di [!DNL Profile], leggere la [Panoramica sul profilo cliente in tempo reale](../../profile/home.md).
 
 ## [!DNL Sources] {#sources}
 
-Adobe Experience Platform può acquisire dati da origini esterne e allo stesso tempo strutturarli, etichettarli e migliorarli utilizzando i servizi di Platform. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, software di terze parti e sistema CRM.
+Adobe Experience Platform può acquisire dati da origini esterne e allo stesso tempo strutturare, etichettare e migliorare tali dati utilizzando i servizi di Experience Platform. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, software di terze parti e sistema di gestione delle relazioni con i clienti.
 
 Experience Platform fornisce un’API RESTful e un’interfaccia utente interattiva per impostare facilmente le connessioni di origine per vari provider di dati. Queste connessioni di origine consentono di autenticarti e connetterti a sistemi di archiviazione esterni e servizi di gestione delle relazioni con i clienti, impostare i tempi per le esecuzioni dell’acquisizione e gestire la velocità effettiva di acquisizione dei dati.
 
@@ -76,7 +76,7 @@ Experience Platform fornisce un’API RESTful e un’interfaccia utente interatt
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Miglioramenti al connettore di origine Adobe Audience Manager | Ora puoi filtrare e selezionare singoli segmenti di prime parti dall’Audience Manager per acquisirli in Platform, nonché filtrare le caratteristiche di prime parti. Per ulteriori informazioni, vedere l&#39;esercitazione sulla [creazione di un connettore di origine Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md). |
+| Miglioramenti al connettore di origine Adobe Audience Manager | Ora puoi filtrare e selezionare singoli segmenti di prime parti da Audience Manager da acquisire in Experience Platform, nonché filtrare le caratteristiche di prime parti. Per ulteriori informazioni, consulta l&#39;esercitazione sulla [creazione di un connettore di origine Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md). |
 | Miglioramenti al connettore di origine [!DNL Google BigQuery] | È ora possibile acquisire file di dimensioni superiori a 10 GB in un&#39;unica esecuzione del flusso utilizzando il connettore di origine [!DNL BigQuery]. Per ulteriori informazioni, vedere [[!DNL BigQuery] panoramica del connettore di origine](../../sources/connectors/databases/bigquery.md). |
 | Supporto per tipi di dati complessi per gli archivi cloud | Ora è possibile acquisire tipi di dati complessi, ad esempio array in file JSON, quando si utilizza un connettore di origine dell’archiviazione cloud. Per ulteriori informazioni, consulta i tutorial sulla creazione di un flusso di dati nell&#39;archiviazione cloud [ nell&#39;interfaccia utente](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) o [utilizzando l&#39; [!DNL Flow Service] API](../../sources/tutorials/api/collect/cloud-storage.md). |
 | Supporto per l&#39;autenticazione basata su chiave dell&#39;entità servizio per l&#39;origine [!DNL Microsoft Dynamics] | È ora possibile eseguire l&#39;autenticazione nell&#39;account [!DNL Dynamics] utilizzando una chiave dell&#39;entità servizio in alternativa all&#39;autenticazione basata su password. Per ulteriori informazioni, vedere [[!DNL Dynamics] panoramica del connettore di origine](../../sources/connectors/crm/ms-dynamics.md). |

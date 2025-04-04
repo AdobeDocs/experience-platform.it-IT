@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform - Marzo 2024
 description: Note sulla versione di Adobe Experience Platform di marzo 2024.
 exl-id: cab47a76-04f3-48ec-82aa-d17645e4eb15
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
-workflow-type: ht
-source-wordcount: '1190'
-ht-degree: 100%
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+workflow-type: tm+mt
+source-wordcount: '1192'
+ht-degree: 97%
 
 ---
 
@@ -98,15 +98,15 @@ XDM è una specifica open-source che fornisce strutture e definizioni comuni (sc
 
 | Funzione | Descrizione |
 | --- | --- |
-| Supporto del tipo di dati per la mappa dell’interfaccia utente di Experience Platform | Personalizza ulteriormente la struttura dati Experience Data Model (XDM) definendo i campi della mappa nell’interfaccia utente di Platform. Ora puoi creare campi mappa nell’editor di schemi per modellare strutture di dati flessibili o archiviare in modo efficiente coppie chiave-valore. Seleziona “Mappa” dal menu a discesa Tipo quando definisci un nuovo campo per configurare i sottocampi e assegnarli ai gruppi di campo. I tipi di valori mappa supportati sono stringa e nemero intero.<br>![Editor di schemi in cui sono evidenziati i campi Tipo e Tipo di valore mappa.](../2024/assets/march/maps.png "Editor di schemi in cui sono evidenziati i campi Tipo e Tipo di valore mappa."){width="100" zoomable="yes"}<br> Per sapere come [definire i campi mappa nell’interfaccia utente](../../xdm/ui/fields/map.md), consulta la guida dell’interfaccia utente. |
+| Supporto del tipo di dati per la mappa dell’interfaccia utente di Experience Platform | Personalizza ulteriormente la struttura dati Experience Data Model (XDM) definendo i campi mappa nell’interfaccia utente di Experience Platform. Ora puoi creare campi mappa nell’editor di schemi per modellare strutture di dati flessibili o archiviare in modo efficiente coppie chiave-valore. Seleziona “Mappa” dal menu a discesa Tipo quando definisci un nuovo campo per configurare i sottocampi e assegnarli ai gruppi di campo. I tipi di valori mappa supportati sono stringa e nemero intero.<br>![Editor di schemi in cui sono evidenziati i campi Tipo e Tipo di valore mappa.](../2024/assets/march/maps.png "Editor di schemi in cui sono evidenziati i campi Tipo e Tipo di valore mappa."){width="100" zoomable="yes"}<br> Per sapere come [definire i campi mappa nell’interfaccia utente](../../xdm/ui/fields/map.md), consulta la guida dell’interfaccia utente. |
 
 {style="table-layout:auto"}
 
-Per ulteriori informazioni su XDM in Platform, consulta la [Panoramica sul sistema XDM](../../xdm/home.md).
+Per ulteriori informazioni su XDM in Experience Platform, consulta la [Panoramica del sistema XDM](../../xdm/home.md).
 
 ## Servizio di segmentazione {#segmentation}
 
-[!DNL Segmentation Service] consente di segmentare i dati memorizzati in [!DNL Experience Platform] che si riferiscono ai singoli utenti (come clienti, potenziali clienti, utenti o organizzazioni) in tipi di pubblico. Puoi creare tipi di pubblico tramite definizioni di segmenti o altre origini dai tuoi dati di [!DNL Real-Time Customer Profile]. Questi tipi di pubblico sono configurati e gestiti centralmente in [!DNL Platform] e sono facilmente accessibili da qualsiasi soluzione Adobe.
+[!DNL Segmentation Service] consente di segmentare i dati memorizzati in [!DNL Experience Platform] che si riferiscono ai singoli utenti (come clienti, potenziali clienti, utenti o organizzazioni) in tipi di pubblico. Puoi creare tipi di pubblico tramite definizioni di segmenti o altre origini dai tuoi dati di [!DNL Real-Time Customer Profile]. Questi tipi di pubblico sono configurati e gestiti centralmente in [!DNL Experience Platform] e sono facilmente accessibili da qualsiasi soluzione Adobe.
 
 **Nuova funzione**
 

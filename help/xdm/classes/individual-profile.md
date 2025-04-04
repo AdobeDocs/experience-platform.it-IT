@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;profilo individuale;campi;schemi;schemi;identityMap;mappa identità;mappa identità;mappa identità;progettazione schema;mappa;mappa;schema;unione;home;popular topic;schema;schema;XDM;individual profile;fields;schemas;schemas;identityMap;identity map;Identity map;schema map;schema;schema;map;map;map;map;union
+keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;profilo individuale;campi;schemi;schemi;identityMap;identity map;Identity map;schema;schema;schema;mapping;unione;;home;popular topic;schema;Schema;XDM;individual profile;fields;schemas;schemas;identityMap;identity map;Identity map;Schema design;schema;map;map;map;map;union
 solution: Experience Platform
 title: Classe profilo individuale XDM
 description: Scopri la classe Profilo individuale XDM.
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: ce937f1335283382189fa40f65aa268735c02715
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '553'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 [!DNL XDM Individual Profile] è una classe XDM (Experience Data Model) standard che forma una singola rappresentazione (o &quot;profilo&quot;) di una singola persona. In particolare, la classe (e i suoi gruppi di campi compatibili) acquisisce gli attributi e gli interessi sia di individui identificati che parzialmente identificati che interagiscono con il tuo marchio.
 
-I profili possono variare da segnali comportamentali anonimi (come i cookie del browser) a profili altamente identificati contenenti informazioni dettagliate come nome, data di nascita, posizione e indirizzo e-mail. Man mano che un profilo cresce, diventa un solido archivio di informazioni personali, identità, dettagli di contatto e preferenze di comunicazione per un individuo. Per ulteriori informazioni di alto livello sull&#39;utilizzo di questa classe nell&#39;ecosistema Platform, fare riferimento alla [panoramica XDM](../home.md#data-behaviors).
+I profili possono variare da segnali comportamentali anonimi (come i cookie del browser) a profili altamente identificati contenenti informazioni dettagliate come nome, data di nascita, posizione e indirizzo e-mail. Man mano che un profilo cresce, diventa un solido archivio di informazioni personali, identità, dettagli di contatto e preferenze di comunicazione per un individuo. Per ulteriori informazioni di alto livello sull&#39;utilizzo di questa classe nell&#39;ecosistema Experience Platform, consulta la [panoramica XDM](../home.md#data-behaviors).
 
 ![Diagramma di schema della classe XDM Individual Profile.](../images/classes/individual-profile.png)
 
@@ -37,7 +37,7 @@ I profili possono variare da segnali comportamentali anonimi (come i cookie del 
 >
 >I nomi di diversi gruppi di campi sono stati modificati. Per ulteriori informazioni, consulta il documento sugli aggiornamenti del nome del gruppo di campi [](../field-groups/name-updates.md).
 
-L&#39;Adobe fornisce diversi gruppi di campi standard da utilizzare con la classe [!DNL XDM Individual Profile]. Di seguito è riportato un elenco di alcuni gruppi di campi comunemente utilizzati per la classe:
+Adobe fornisce diversi gruppi di campi standard da utilizzare con la classe [!DNL XDM Individual Profile]. Di seguito è riportato un elenco di alcuni gruppi di campi comunemente utilizzati per la classe:
 
 * [[!UICONTROL Consensi e preferenze]](../field-groups/profile/consents.md)
 * [[!UICONTROL Dettagli demografici]](../field-groups/profile/demographic-details.md)
@@ -50,6 +50,6 @@ L&#39;Adobe fornisce diversi gruppi di campi standard da utilizzare con la class
 * [[!UICONTROL Componenti persona aziendale XDM]](../field-groups/profile/business-person-components.md)\*
 * [[!UICONTROL Dettagli persona aziendale XDM]](../field-groups/profile/business-person-details.md)\*
 
-*\*Questo gruppo di campi è disponibile solo per le organizzazioni con accesso all&#39;edizione B2B di Adobe Real-time Customer Data Platform.*
+*\*Questo gruppo di campi è disponibile solo per le organizzazioni con accesso a B2B edition di Adobe Real-Time Customer Data Platform.*
 
 Per un elenco completo di tutti i gruppi di campi compatibili per [!DNL XDM Individual Profile], consulta l&#39;archivio GitHub [XDM](https://github.com/adobe/xdm/tree/master/components/fieldgroups/profile).

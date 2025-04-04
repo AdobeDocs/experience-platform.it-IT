@@ -6,10 +6,10 @@ user-guide-description: Utilizza l’apprendimento automatico per sviluppare, ad
 feature: Data Science Workspace
 solution: Experience Platform
 role: User, Developer
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '225'
-ht-degree: 32%
+source-wordcount: '227'
+ht-degree: 33%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 32%
    * [Esperimenti](api/experiments.md)
    * [Modelli](api/models.md)
    * [MLServices](api/mlservices.md)
-   * [Approfondimenti](api/insights.md)
+   * [Insight](api/insights.md)
    * [Appendice](api/appendix.md)
 * Ricette predefinite {#pre-built-recipes}
    * [Ricetta per consigli sui prodotti](pre-built-recipes/product-recommendations.md)
@@ -43,7 +43,7 @@ ht-degree: 32%
 * Authoring del modello {#authoring}
    * [SDK di authoring modelli](authoring/sdk.md)
    * [Creare una tubazione di feature](authoring/feature-pipeline.md)
-   * [Creazione di modelli con Platform SDK (Python)](authoring/platform-sdk.md)
+   * [Creazione di modelli con Experience Platform SDK (Python)](authoring/platform-sdk.md)
    * [Accesso ai dati Python](authoring/python.md)
    * [Accesso ai dati Spark](authoring/spark.md)
 * Esercitazioni modello e ricetta {#models-recipes}
@@ -60,9 +60,9 @@ ht-degree: 32%
    * [Punteggio di un modello (API)](models-recipes/score-model-api.md)
    * [Ottimizzare un modello](models-recipes/optimize-model.md)
    * [Arricchire il profilo cliente in tempo reale con informazioni sull’apprendimento automatico](models-recipes/enrich-profile.md)
-   * [Publish a model as a service (interfaccia utente)](models-recipes/publish-model-service-ui.md)
-   * [Publish a model as a service (API)](models-recipes/publish-model-service-api.md)
+   * [Pubblicare un modello come servizio (UI)](models-recipes/publish-model-service-ui.md)
+   * [Pubblicare un modello come servizio (API)](models-recipes/publish-model-service-api.md)
    * [Pianificazione dell’apprendimento automatico e del punteggio in un servizio (interfaccia utente)](models-recipes/schedule-models-ui.md)
 * [Guida alla risoluzione dei problemi](troubleshooting-guide.md)
 * [Riferimento API](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/)
-* [Note sulla versione della piattaforma](https://experienceleague.adobe.com/it/docs/experience-platform/release-notes/latest)
+* [Note sulla versione di Experience Platform](https://experienceleague.adobe.com/it/docs/experience-platform/release-notes/latest)

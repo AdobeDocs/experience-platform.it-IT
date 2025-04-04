@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;servizio query;servizio query;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query
+keywords: Experience Platform;servizio query;servizio query;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query
 title: Caso di utilizzo di esempio per Adobe Experience Platform Query Service
 description: Un esempio end-to-end per dimostrare la versatilità e i vantaggi di Adobe Experience Platform Query Service.
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
-source-git-commit: 38689125a43ad0b1a12a00efe6800bb310d7557c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '695'
+source-wordcount: '696'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Questa dimostrazione di flusso di lavoro si basa su diversi servizi di Adobe Exp
 * [Segmentazione](../../segmentation/home.md)
 * [Destinazioni](../../destinations/home.md)
 
-L&#39;esempio di abbandono della navigazione è incentrato sull&#39;utilizzo dei dati dell&#39;Adobe [!DNL Analytics] per la creazione di un particolare pubblico actionable. Il pubblico viene perfezionato per includere tutti i clienti che hanno navigato nel sito web negli ultimi quattro giorni ma non hanno effettuato un acquisto. A ogni profilo del pubblico viene quindi assegnato lo SKU più costoso risultante dal modello di comportamento del cliente.
+L&#39;esempio dell&#39;abbandono della navigazione è incentrato sull&#39;utilizzo dei dati di Adobe [!DNL Analytics] per creare un pubblico specifico utilizzabile. Il pubblico viene perfezionato per includere tutti i clienti che hanno navigato nel sito web negli ultimi quattro giorni ma non hanno effettuato un acquisto. A ogni profilo del pubblico viene quindi assegnato lo SKU più costoso risultante dal modello di comportamento del cliente.
 
 La query stessa è molto prescrittiva e include solo dati che soddisfano i criteri del caso d’uso per la definizione del segmento. Questo migliora le prestazioni riducendo al minimo la quantità di [!DNL Analytics] dati in fase di elaborazione. Inoltre, ordina i dati in base al prezzo dal più alto al più basso e sceglie lo SKU più costoso che l’utente stava navigando.
 
@@ -57,7 +57,7 @@ order by price desc)D;
 
 ## [!DNL Query Service] esempio di abbandono navigazione con adobe analytics {#video-example}
 
-La presentazione video riportata di seguito fornisce un caso d&#39;uso olistico e reale per i dati Experienci Platform incentrati sulle integrazioni di [!DNL Query Service] e Adobe Analytics.
+La presentazione video riportata di seguito fornisce un caso d&#39;uso olistico e reale per i dati di Experience Platform incentrati sulle integrazioni di [!DNL Query Service] e Adobe Analytics.
 
 >[!VIDEO](https://video.tv.adobe.com/v/342533?quality=12&learn=on)
 
@@ -69,7 +69,7 @@ Le funzionalità fornite da [!DNL Query Service] hanno molti scopi. Puoi utilizz
 
 Inoltre, includendo nella query una logica che soddisfi condizioni ricorrenti o statiche, [!DNL Query Service] estrae il carico di una segmentazione complessa.
 
-Adobe Experience Platform fornisce un archivio di dati e gli strumenti necessari per attivare i dati in modo efficiente e affidabile. Mantenendo i dati all’interno di Platform, consente di derivare gli attributi durante l’esecuzione di altri processi ed elimina la necessità di esportare i dati in strumenti di terze parti per la manipolazione e l’elaborazione. Tali costi generali di elaborazione possono influire notevolmente sulla timeline di un progetto quando si tratta di centinaia di attributi o campagne. Questo offre agli addetti al marketing un’unica posizione per accedere ai dati e creare campagne, nonché un mezzo molto dinamico per segmentare e personalizzare i messaggi.
+Adobe Experience Platform fornisce un archivio di dati e gli strumenti necessari per attivare i dati in modo efficiente e affidabile. Mantenendo i dati all’interno di Experience Platform, consente di derivare gli attributi durante l’esecuzione di altri processi ed elimina la necessità di esportare i dati in strumenti di terze parti per la manipolazione e l’elaborazione. Tali costi generali di elaborazione possono influire notevolmente sulla timeline di un progetto quando si tratta di centinaia di attributi o campagne. Questo offre agli addetti al marketing un’unica posizione per accedere ai dati e creare campagne, nonché un mezzo molto dinamico per segmentare e personalizzare i messaggi.
 
 ## Passaggi successivi
 

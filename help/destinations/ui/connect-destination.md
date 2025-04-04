@@ -3,9 +3,9 @@ title: Creare una nuova connessione di destinazione
 type: Tutorial
 description: Scopri come connettersi a una destinazione in Adobe Experience Platform, abilitare gli avvisi e impostare azioni di marketing per la destinazione connessa.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1144'
+source-wordcount: '1145'
 ht-degree: 0%
 
 ---
@@ -47,13 +47,13 @@ Prima di poter inviare dati sul pubblico a una destinazione, devi impostare una 
 
    Selezionare **[!UICONTROL Configura nuova destinazione]** per stabilire una nuova connessione alla destinazione.
 
-   ![Schermata dell&#39;interfaccia utente di Experience Platform in cui è visualizzato un elenco delle destinazioni disponibili ed è evidenziato il controllo Configura nuova destinazione.](../assets/ui/connect-destinations/configure-new-destination.png)
+   ![Schermata dell&#39;interfaccia utente di Experience Platform che mostra un elenco di destinazioni disponibili ed evidenzia il controllo Configura nuova destinazione.](../assets/ui/connect-destinations/configure-new-destination.png)
 
 ## Autenticarsi nella destinazione {#authenticate}
 
 Il primo passaggio nella connessione a una destinazione consiste nell’eseguire l’autenticazione nella piattaforma di destinazione.
 
-A seconda della destinazione a cui ti stai connettendo, potresti essere reindirizzato alla pagina del partner di destinazione per l’autenticazione oppure ti potrebbe essere richiesto di immettere le credenziali di autenticazione direttamente nel flusso di lavoro di Platform. Di seguito è riportato un esempio di input necessario per l&#39;autenticazione in una destinazione [!DNL Amazon S3]. Istruzioni dettagliate sull&#39;input richiesto vengono fornite in ogni pagina della documentazione di destinazione (vedere, ad esempio, la sezione di autenticazione per [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) e per [[!DNL Facebook]](/help/destinations/catalog/social/facebook.md#authenticate)).
+A seconda della destinazione a cui ti stai connettendo, è possibile che venga visualizzata la pagina del partner di destinazione per l’autenticazione o che ti venga richiesto di immettere le credenziali di autenticazione direttamente nel flusso di lavoro di Experience Platform. Di seguito è riportato un esempio di input necessario per l&#39;autenticazione in una destinazione [!DNL Amazon S3]. Istruzioni dettagliate sull&#39;input richiesto vengono fornite in ogni pagina della documentazione di destinazione (vedere, ad esempio, la sezione di autenticazione per [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) e per [[!DNL Facebook]](/help/destinations/catalog/social/facebook.md#authenticate)).
 
 **[!DNL Amazon S3]parametri di autenticazione obbligatori e facoltativi**
 
@@ -105,7 +105,7 @@ Alcune destinazioni basate su file supportano l’attivazione del pubblico per c
 
 ## Seleziona azioni di marketing {#select-marketing-actions}
 
-1. Seleziona le azioni di marketing applicabili ai dati da esportare nella destinazione. Le azioni di marketing indicano l’intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra azioni di marketing definite dall’Adobe oppure creare un’azione di marketing personalizzata. Per ulteriori informazioni sulle azioni di marketing, consulta la pagina [panoramica dei criteri di utilizzo dei dati](../../data-governance/policies/overview.md).
+1. Seleziona le azioni di marketing applicabili ai dati da esportare nella destinazione. Le azioni di marketing indicano l’intento per il quale i dati verranno esportati nella destinazione. Puoi selezionare tra le azioni di marketing definite da Adobe oppure creare azioni di marketing personalizzate. Per ulteriori informazioni sulle azioni di marketing, consulta la pagina [panoramica dei criteri di utilizzo dei dati](../../data-governance/policies/overview.md).
 
    ![Viene evidenziata la finestra di dialogo Configura nuova destinazione con le azioni di marketing disponibili. Sono evidenziati anche i controlli disponibili per completare il flusso di lavoro Connetti a destinazione.](../assets/ui/connect-destinations/governance.png)
 

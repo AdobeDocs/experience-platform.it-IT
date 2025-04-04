@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Panoramica dei modelli dati di settore
 description: Scopri i modelli di dati standardizzati per vari verticali del settore che possono essere costruiti utilizzando i componenti standard Experience Data Model (XDM).
 exl-id: 8fa9a610-36b5-470f-ad63-f2a4a060e0f1
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '350'
 ht-degree: 0%
 
 ---
@@ -24,9 +24,9 @@ Per guidare la tua strategia di modellazione dei dati in base al tuo particolare
 
 ## Prerequisiti
 
-Per leggere gli ERD a cui si fa riferimento in questa guida, è necessario avere una buona conoscenza di come i componenti XDM interagiscono per formare gli schemi e come gli schemi XDM funzionano in Experience Platform nel suo complesso. Prima di continuare, assicurati di aver letto la seguente documentazione:
+Per leggere gli ERD a cui si fa riferimento in questa guida, è necessario avere una buona conoscenza di come i componenti XDM interagiscono per formare gli schemi e di come gli schemi XDM funzionano in Experience Platform nel suo complesso. Prima di continuare, assicurati di aver letto la seguente documentazione:
 
-* [Panoramica del sistema XDM](../../home.md): scopri come XDM funziona nell&#39;ecosistema della piattaforma.
+* [Panoramica del sistema XDM](../../home.md): scopri come funziona XDM nell&#39;ecosistema Experience Platform.
 * [Nozioni di base sulla composizione dello schema](../../schema/composition.md): scopri come i componenti XDM (come i gruppi di campi dello schema, le classi e i tipi di dati) contribuiscono alla struttura di uno schema e al ruolo dei campi di identità.
 
 È inoltre consigliabile consultare la [guida alle best practice per la modellazione dei dati](../../schema/best-practices.md) per le linee guida generali sulla mappatura dei dati su XDM.

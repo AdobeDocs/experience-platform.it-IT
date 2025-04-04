@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;Applicazione dei criteri;Imposizione automatica;Imposizione basata su API;governance dei dati;testing
+keywords: Experience Platform;home;argomenti popolari;Applicazione dei criteri;Applicazione automatica;Imposizione basata su API;governance dei dati;testing
 solution: Experience Platform
 title: Imporre i criteri di utilizzo dei dati utilizzando l’API del servizio criteri
 type: Tutorial
 description: Dopo aver creato le etichette di utilizzo dei dati per i dati e aver creato i criteri di utilizzo per le azioni di marketing su tali etichette, è possibile utilizzare l’API Servizio criteri per valutare se un’azione di marketing eseguita su un set di dati o su un gruppo arbitrario di etichette costituisce una violazione dei criteri. Puoi quindi configurare i tuoi protocolli interni per gestire le violazioni dei criteri in base alla risposta API.
 exl-id: 093db807-c49d-4086-a676-1426426b43fd
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '998'
+source-wordcount: '999'
 ht-degree: 2%
 
 ---
@@ -26,10 +26,10 @@ In questo documento vengono descritti i passaggi per l&#39;utilizzo dell&#39;API
 
 Questo tutorial richiede una buona conoscenza dei seguenti concetti chiave coinvolti nell’applicazione dei criteri di utilizzo dei dati:
 
-* [Governance dei dati](../home.md): framework tramite il quale [!DNL Platform] impone la conformità all&#39;utilizzo dei dati.
+* [Governance dei dati](../home.md): framework tramite il quale [!DNL Experience Platform] impone la conformità all&#39;utilizzo dei dati.
    * [Etichette di utilizzo dati](../labels/overview.md): le etichette di utilizzo dati vengono applicate ai set di dati (e/o ai singoli campi all&#39;interno di tali set di dati), specificando restrizioni per l&#39;utilizzo dei dati.
    * [Criteri di utilizzo dati](../policies/overview.md): i criteri di utilizzo dati sono regole che descrivono i tipi di azioni di marketing consentiti o limitati per determinati set di etichette di utilizzo dati.
-* [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza di [!DNL Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza di [!DNL Experience Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 Prima di iniziare questo tutorial, consulta la [guida per gli sviluppatori](../api/getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all&#39;API [!DNL Policy Service], incluse le intestazioni richieste e la lettura delle chiamate API di esempio.
 
@@ -376,4 +376,4 @@ In caso di esito positivo, la risposta restituisce l’URL per l’azione di mar
 
 Dopo aver letto questo documento, hai verificato la presenza di violazioni dei criteri durante l’esecuzione di un’azione di marketing su un set di dati o su un set di etichette di utilizzo dei dati. Utilizzando i dati restituiti nelle risposte API, puoi impostare i protocolli all’interno dell’applicazione Experience per applicare in modo appropriato le violazioni dei criteri quando si verificano.
 
-Per informazioni sul modo in cui Platform fornisce automaticamente l&#39;applicazione dei criteri per i segmenti attivati, consulta la guida sull&#39;[applicazione automatica](./auto-enforcement.md).
+Per informazioni sul modo in cui Experience Platform fornisce automaticamente l&#39;applicazione dei criteri per i segmenti attivati, consulta la guida sull&#39;[applicazione automatica](./auto-enforcement.md).

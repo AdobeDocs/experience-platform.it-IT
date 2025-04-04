@@ -3,9 +3,9 @@ title: Panoramica di Pendo Source
 description: Scopri come collegare Pendo a Adobe Experience Platform utilizzando le API o l’interfaccia utente sfruttando i webhook
 badge: Beta
 exl-id: 376f18ef-1eea-4c42-8041-6fadb5906e9b
-source-git-commit: 8de45a54607bed17fd79bbed693666beb09c0502
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '347'
+source-wordcount: '354'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 >
 >L&#39;origine [!DNL Pendo] è in versione beta. Per ulteriori informazioni sull&#39;utilizzo di origini con etichetta beta, leggere la [panoramica delle origini](../../home.md#terms-and-conditions).
 
-Adobe Experience Platform consente di acquisire i dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
+Adobe Experience Platform consente di acquisire dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Experience Platform. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 
 Experience Platform fornisce supporto per l’acquisizione di dati da applicazioni di analisi di terze parti. Il supporto per i provider di analisi include [!DNL Pendo].
 
@@ -38,16 +38,16 @@ Un account [!DNL Pendo]. Se non ne hai già una, vedi la pagina [[!DNL Pendo] re
 
 ### Configura webhook [!DNL Pendo] {#set-up-webhook}
 
-Dopo aver creato correttamente il flusso di dati, devi impostare un webhook per informare Platform sugli eventi [!DNL Pendo]. I webhook di [!DNL Pendo] possono inviare notifiche in tempo reale ad altri servizi quando si verificano determinati eventi e inviare tali informazioni all&#39;origine [!DNL Pendo]. Per ulteriori informazioni, consulta le esercitazioni su [ottenere l&#39;URL dell&#39;endpoint di streaming](../../tutorials/ui/create/analytics/pendo-webhook.md#get-streaming-endpoint) e [configurare un [!DNL Pendo] webhook](../../tutorials/ui/create/analytics/pendo-webhook.md#set-up-webhook).
+Dopo aver creato correttamente il flusso di dati, devi impostare un webhook per informare Experience Platform in merito a [!DNL Pendo] eventi. I webhook di [!DNL Pendo] possono inviare notifiche in tempo reale ad altri servizi quando si verificano determinati eventi e inviare tali informazioni all&#39;origine [!DNL Pendo]. Per ulteriori informazioni, consulta le esercitazioni su [ottenere l&#39;URL dell&#39;endpoint di streaming](../../tutorials/ui/create/analytics/pendo-webhook.md#get-streaming-endpoint) e [configurare un [!DNL Pendo] webhook](../../tutorials/ui/create/analytics/pendo-webhook.md#set-up-webhook).
 
-## Connessione di [!DNL Pendo] alla piattaforma {#connect-to-platform}
+## Connessione di [!DNL Pendo] ad Experience Platform {#connect-to-platform}
 
-La documentazione seguente fornisce informazioni su come creare un connettore di streaming [!DNL Pendo] per connettersi a [!DNL Platform] utilizzando le API o l&#39;interfaccia utente:
+La documentazione seguente fornisce informazioni su come creare un connettore di streaming [!DNL Pendo] per connettersi a [!DNL Experience Platform] utilizzando le API o l&#39;interfaccia utente:
 
-### Connetti [!DNL Pendo] a Platform tramite API {#connect-to-platform-using-api}
+### Connetti [!DNL Pendo] ad Experience Platform tramite API {#connect-to-platform-using-api}
 
-* [Crea una connessione di origine per portare  [!DNL Pendo]  dati a Platform utilizzando le API.](../../tutorials/api/create/analytics/pendo-webhook.md)
+* [Crea una connessione di origine per portare  [!DNL Pendo]  dati ad Experience Platform utilizzando le API.](../../tutorials/api/create/analytics/pendo-webhook.md)
 
-### Connetti [!DNL Pendo] a Platform tramite l&#39;interfaccia utente {#connect-to-platform-using-ui}
+### Connetti [!DNL Pendo] ad Experience Platform tramite l&#39;interfaccia utente {#connect-to-platform-using-ui}
 
-* [Crea una connessione di origine per portare  [!DNL Pendo]  dati a Platform utilizzando l&#39;interfaccia utente](../../tutorials/ui/create/analytics/pendo-webhook.md)
+* [Crea una connessione di origine per portare  [!DNL Pendo]  dati ad Experience Platform utilizzando l&#39;interfaccia utente](../../tutorials/ui/create/analytics/pendo-webhook.md)

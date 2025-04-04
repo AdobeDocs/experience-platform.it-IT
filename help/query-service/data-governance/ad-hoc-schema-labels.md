@@ -2,9 +2,9 @@
 title: Supporto del controllo degli accessi basato su attributi per schemi ad hoc
 description: Guida per limitare l’accesso ai campi dati negli schemi ad hoc generati tramite Adobe Experience Platform Query Service.
 exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1013'
+source-wordcount: '1020'
 ht-degree: 2%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 2%
 
 Tutti i dati introdotti in Adobe Experience Platform sono incapsulati da schemi Experience Data Model (XDM) e possono essere soggetti a restrizioni di utilizzo definite dall’organizzazione o da normative legali.
 
-Se non viene specificato alcuno schema, viene generato automaticamente uno schema ad hoc eseguendo una query CTAS tramite Query Service. Spesso è necessario limitare l’utilizzo di determinati campi o set di dati di schemi ad hoc per controllare l’accesso sia ai dati personali sensibili che alle informazioni personali. Adobe Experience Platform facilita questo controllo di accesso consentendoti di etichettare i campi dello schema tramite l’interfaccia utente di Platform utilizzando la funzionalità di controllo di accesso basato su attributi.
+Se non viene specificato alcuno schema, viene generato automaticamente uno schema ad hoc eseguendo una query CTAS tramite Query Service. Spesso è necessario limitare l’utilizzo di determinati campi o set di dati di schemi ad hoc per controllare l’accesso sia ai dati personali sensibili che alle informazioni personali. Adobe Experience Platform facilita questo controllo di accesso consentendoti di etichettare i campi dello schema tramite l’interfaccia utente di Experience Platform utilizzando la funzionalità di controllo di accesso basato su attributi.
 
-Le etichette possono essere applicate in qualsiasi momento, offrendo flessibilità nella scelta di come gestire i dati. Tuttavia, è consigliabile etichettare i dati non appena vengono acquisiti in Platform o non appena i dati diventano disponibili per l’utilizzo in Platform.
+Le etichette possono essere applicate in qualsiasi momento, offrendo flessibilità nella scelta di come gestire i dati. Tuttavia, è consigliabile etichettare i dati non appena vengono acquisiti in Experience Platform o non appena i dati diventano disponibili per l’utilizzo in Experience Platform.
 
 L’etichettatura basata su schema è un componente importante del controllo dell’accesso basato su attributi per gestire meglio l’accesso concesso a utenti o gruppi di utenti. Adobe Experience Platform consente di limitare l’accesso a qualsiasi campo di uno schema ad hoc tramite la creazione e l’applicazione di etichette.
 
@@ -25,8 +25,8 @@ Questo documento fornisce un tutorial per gestire l’accesso ai dati sensibili 
 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Experience Data Model (XDM) System](../../xdm/home.md): framework standardizzato in base al quale Experience Platform organizza i dati sull&#39;esperienza del cliente.
-   * [[!DNL Schema Editor]](../../xdm/ui/overview.md): scopri come creare e gestire schemi e altre risorse nell’interfaccia utente di Platform.
+* [Experience Data Model (XDM) System](../../xdm/home.md): framework standardizzato tramite il quale Experience Platform organizza i dati sull&#39;esperienza del cliente.
+   * [[!DNL Schema Editor]](../../xdm/ui/overview.md): scopri come creare e gestire schemi e altre risorse nell’interfaccia utente di Experience Platform.
 * [[!DNL Data Governance]](../../data-governance/home.md): scopri come [!DNL Data Governance] ti consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all&#39;utilizzo dei dati.
 * [Controllo dell&#39;accesso basato su attributi](../../access-control/abac/overview.md): il controllo dell&#39;accesso basato su attributi è una funzionalità di Adobe Experience Platform che consente agli amministratori di controllare l&#39;accesso a oggetti specifici e/o funzionalità basate su attributi. Gli attributi possono essere metadati aggiunti a un oggetto, ad esempio un’etichetta aggiunta a un campo schema ad hoc o normale. Un amministratore definisce i criteri di accesso che includono attributi per gestire le autorizzazioni di accesso degli utenti.
 
@@ -34,15 +34,15 @@ Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Expe
 
 Una volta eseguita la query e generati i risultati, viene generato automaticamente uno schema ad hoc che viene aggiunto all’inventario degli schemi.
 
-Per aggiungere un&#39;etichetta dati, passa alla scheda Sfoglia del dashboard [!UICONTROL Schemi] selezionando [!UICONTROL Schemi] nella barra a sinistra dell&#39;interfaccia utente di Platform. Viene visualizzato l’inventario degli schemi.
+Per aggiungere un&#39;etichetta dati, passa alla scheda Sfoglia del dashboard [!UICONTROL Schemi] selezionando [!UICONTROL Schemi] nella barra a sinistra dell&#39;interfaccia utente di Experience Platform. Viene visualizzato l’inventario degli schemi.
 
 >[!NOTE]
 >
 >Gli schemi ad hoc non vengono visualizzati per impostazione predefinita nell’inventario degli schemi.
 
-## Scopri gli schemi ad hoc nell’inventario degli schemi dell’interfaccia utente di Platform {#discover-ad-hoc-schemas}
+## Scopri gli schemi ad hoc nell’inventario degli schemi dell’interfaccia utente di Experience Platform {#discover-ad-hoc-schemas}
 
-Per abilitare la visualizzazione degli schemi ad hoc nell&#39;interfaccia utente di Platform, selezionare l&#39;icona del filtro (![Icona del filtro.](/help/images/icons/filter.png)) a sinistra del campo di ricerca, quindi seleziona **[!UICONTROL Mostra schemi ad hoc] nella barra a sinistra visualizzata.
+Per abilitare la visualizzazione degli schemi ad hoc nell&#39;interfaccia utente di Experience Platform, seleziona l&#39;icona del filtro (![Icona del filtro.](/help/images/icons/filter.png)) a sinistra del campo di ricerca, quindi seleziona **[!UICONTROL Mostra schemi ad hoc] nella barra a sinistra visualizzata.
 
 ![Nella barra a sinistra delle opzioni del filtro del dashboard Schema è abilitato l&#39;interruttore &#39;Mostra schema ad hoc&#39;.](../images/data-governance/adhoc-schema-toggle.png)
 

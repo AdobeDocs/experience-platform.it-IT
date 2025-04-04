@@ -5,7 +5,7 @@ title: Creare un BLOB di Azure o una connessione Source Amazon S3 nell’interfa
 type: Tutorial
 description: Scopri come creare una connessione di origine Azure Blob o Amazon S3 utilizzando l’interfaccia utente di Adobe Experience Platform.
 exl-id: de2db0cb-3ce4-46d1-96c4-00f779f81670
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '144'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 I connettori Source in Adobe Experience Platform consentono di acquisire dati di origine esterna in base a una pianificazione.
 
-Le origini di archiviazione cloud possono inserire i tuoi dati in [!DNL Platform] senza dover scaricare, formattare o caricare. I dati acquisiti possono essere formattati come XDM JSON, XDM Parquet o delimitati. Ogni passaggio del processo viene integrato nel flusso di lavoro Origini. [!DNL Platform] consente di inserire dati da [!DNL Azure Blob] e [!DNL Amazon S3] tramite batch.
+Le origini di archiviazione cloud possono inserire i tuoi dati in [!DNL Experience Platform] senza dover scaricare, formattare o caricare. I dati acquisiti possono essere formattati come XDM JSON, XDM Parquet o delimitati. Ogni passaggio del processo viene integrato nel flusso di lavoro Origini. [!DNL Experience Platform] consente di inserire dati da [!DNL Azure Blob] e [!DNL Amazon S3] tramite batch.
 
 Per istruzioni dettagliate sull&#39;utilizzo del connettore di origine [!DNL Azure Blob], leggere la [[!DNL Azure Blob] guida del connettore di origine](./blob.md).
 

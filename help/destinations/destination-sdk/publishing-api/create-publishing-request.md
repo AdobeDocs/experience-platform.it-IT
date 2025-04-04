@@ -2,9 +2,9 @@
 description: Scopri come formattare una chiamata API per inviare una richiesta di pubblicazione di destinazione tramite Adobe Experience Platform Destination SDK.
 title: Creare una richiesta di pubblicazione di destinazione
 exl-id: 913be9de-a699-4756-885d-b3761ec729cb
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '448'
+source-wordcount: '449'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Devi utilizzare questo endpoint API solo se invii una destinazione prodotta (pubblica), che dovrà essere utilizzata da altri clienti Experience Platform. Se crei una destinazione privata per uso personale, non è necessario inviare formalmente la destinazione utilizzando l’API di pubblicazione.
+>Devi utilizzare questo endpoint API solo se invii una destinazione prodotta (pubblica), per essere utilizzata da altri clienti Experience Platform. Se crei una destinazione privata per uso personale, non è necessario inviare formalmente la destinazione utilizzando l’API di pubblicazione.
 
 >[!IMPORTANT]
 >
@@ -23,8 +23,8 @@ Dopo aver configurato e testato la destinazione, puoi inviarla ad Adobe per la r
 
 Utilizza l’endpoint API per la pubblicazione delle destinazioni per inviare una richiesta di pubblicazione quando:
 
-* In qualità di partner di Destination SDK, desideri rendere la tua destinazione prodotta disponibile in tutte le organizzazioni di Experienci Platform per tutti i clienti di Experienci Platform da utilizzare;
-* Hai apportato *qualsiasi aggiornamento* alle tue configurazioni. Gli aggiornamenti della configurazione vengono rispecchiati nella destinazione solo dopo l’invio di una nuova richiesta di pubblicazione, approvata dal team di Experienci Platform.
+* In qualità di partner Destination SDK, desideri rendere la tua destinazione prodotta disponibile in tutte le organizzazioni Experience Platform per tutti i clienti Experience Platform da utilizzare;
+* Hai apportato *qualsiasi aggiornamento* alle tue configurazioni. Gli aggiornamenti della configurazione vengono rispecchiati nella destinazione solo dopo l’invio di una nuova richiesta di pubblicazione, approvata dal team di Experience Platform.
 
 >[!IMPORTANT]
 >
@@ -65,7 +65,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | Parametro | Tipo | Descrizione |
 |---------|----------|------|
 | `destinationId` | Stringa | ID di destinazione della configurazione di destinazione che si sta inviando per la pubblicazione. Ottenere l&#39;ID di destinazione di una configurazione di destinazione utilizzando la chiamata API [per recuperare una configurazione di destinazione](../authoring-api/destination-configuration/retrieve-destination-configuration.md). |
-| `destinationAccess` | Stringa | Utilizza `ALL` per far apparire la tua destinazione nel catalogo per tutti i clienti di Experience Platform. |
+| `destinationAccess` | Stringa | Utilizza `ALL` per far apparire la tua destinazione nel catalogo per tutti i clienti Experience Platform. |
 
 {style="table-layout:auto"}
 
@@ -79,7 +79,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 201 con i detta
 
 ## Gestione degli errori API
 
-Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
+Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Experience Platform.
 
 ## Passaggi successivi
 

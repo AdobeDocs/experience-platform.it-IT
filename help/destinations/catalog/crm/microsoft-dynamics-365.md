@@ -1,13 +1,13 @@
 ---
-keywords: crm;CRM;destinazioni crm;Microsoft Dynamics 365;Microsoft Dynamics 365 destinazione crm
+keywords: destinazione crm;CRM;crm;Microsoft Dynamics 365;destinazione crm Microsoft Dynamics 365
 title: Connessione Microsoft Dynamics 365
 description: La destinazione Microsoft Dynamics 365 consente di esportare i dati dell'account e attivarli in Microsoft Dynamics 365 in base alle esigenze aziendali.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2019'
-ht-degree: 1%
+source-wordcount: '2038'
+ht-degree: 2%
 
 ---
 
@@ -27,15 +27,15 @@ In qualità di addetto al marketing, puoi fornire esperienze personalizzate ai t
 
 ## Prerequisiti {#prerequisites}
 
-### Experience Platform prerequisiti {#prerequisites-in-experience-platform}
+### Prerequisiti di Experience Platform {#prerequisites-in-experience-platform}
 
 Prima di attivare i dati nella destinazione [!DNL Dynamics 365], è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) e [tipi di pubblico](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) creati in [!DNL Experience Platform].
 
-Se hai bisogno di indicazioni sugli stati del pubblico, consulta la documentazione di Adobe per il gruppo di campi dello schema [Dettagli appartenenza a pubblico](/help/xdm/field-groups/profile/segmentation.md).
+Se hai bisogno di indicazioni sugli stati del pubblico, consulta la documentazione di Adobe per il gruppo di campi per lo schema [Dettagli appartenenza pubblico](/help/xdm/field-groups/profile/segmentation.md).
 
 ### [!DNL Microsoft Dynamics 365] prerequisiti {#prerequisites-destination}
 
-Per esportare i dati da Platform al tuo account [!DNL Dynamics 365], tieni presente i seguenti prerequisiti in [!DNL Dynamics 365]:
+Per esportare i dati da Experience Platform al tuo account [!DNL Dynamics 365], tieni presente i seguenti prerequisiti in [!DNL Dynamics 365]:
 
 #### Devi avere un account [!DNL Microsoft Dynamics 365] {#prerequisites-account}
 
@@ -43,7 +43,7 @@ Vai alla pagina [!DNL Dynamics 365] [prova](https://dynamics.microsoft.com/en-us
 
 #### Crea campo in [!DNL Dynamics 365] {#prerequisites-custom-field}
 
-Creare il campo personalizzato di tipo `Simple` con tipo di dati del campo `Single Line of Text` che l&#39;Experience Platform utilizzerà per aggiornare lo stato del pubblico entro [!DNL Dynamics 365].
+Creare il campo personalizzato di tipo `Simple` con tipo di dati del campo `Single Line of Text` che Experience Platform utilizzerà per aggiornare lo stato del pubblico entro [!DNL Dynamics 365].
 
 Per ulteriori informazioni, consulta la documentazione di [!DNL Dynamics 365] [Creare o modificare un campo (attributo)](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1).
 
@@ -94,7 +94,7 @@ Nella pagina [Limiti delle richieste e allocazioni](https://docs.microsoft.com/e
 
 Questa sezione descrive tutti i tipi di pubblico che puoi esportare in questa destinazione.
 
-Questa destinazione supporta l&#39;attivazione di tutti i tipi di pubblico generati tramite l&#39;Experience Platform [Servizio di segmentazione](../../../segmentation/home.md).
+Questa destinazione supporta l&#39;attivazione di tutti i tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md).
 
 ## Tipo e frequenza di esportazione {#export-type-frequency}
 
@@ -102,7 +102,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
-| Tipo di esportazione | **[!UICONTROL Basato su profilo]** | <ul><li>Stai esportando tutti i membri di un pubblico, insieme ai campi di schema desiderati *(ad esempio: indirizzo e-mail, numero di telefono, cognome)*, in base al mapping dei campi.</li><li> Ogni stato del pubblico in [!DNL Dynamics 365] viene aggiornato con lo stato del pubblico corrispondente da Platform, in base al valore **[!UICONTROL ID mappatura]** fornito durante il passaggio [pianificazione del pubblico](#schedule-audience-export-example).</li></ul> |
+| Tipo di esportazione | **[!UICONTROL Basato su profilo]** | <ul><li>Stai esportando tutti i membri di un pubblico, insieme ai campi di schema desiderati *(ad esempio: indirizzo e-mail, numero di telefono, cognome)*, in base al mapping dei campi.</li><li> Ogni stato del pubblico in [!DNL Dynamics 365] viene aggiornato con lo stato del pubblico corrispondente da Experience Platform, in base al valore **[!UICONTROL ID mappatura]** fornito durante il passaggio [pianificazione del pubblico](#schedule-audience-export-example).</li></ul> |
 | Frequenza di esportazione | **[!UICONTROL Streaming]** | <ul><li>Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni sulle [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
@@ -120,7 +120,7 @@ All&#39;interno di **[!UICONTROL Destinazioni]** > **[!UICONTROL Catalogo]**, ce
 ### Autenticarsi nella destinazione {#authenticate}
 
 Per eseguire l&#39;autenticazione nella destinazione, selezionare **[!UICONTROL Connetti alla destinazione]**.
-![Schermata dell&#39;interfaccia utente di Platform che mostra come eseguire l&#39;autenticazione.](../../assets/catalog/crm/microsoft-dynamics-365/authenticate-destination.png)
+![Schermata dell&#39;interfaccia utente di Experience Platform che mostra come eseguire l&#39;autenticazione.](../../assets/catalog/crm/microsoft-dynamics-365/authenticate-destination.png)
 
 Compila i campi obbligatori di seguito. Per ulteriori informazioni, consulta la sezione [Raccolta credenziali Dynamics 365](#gather-credentials).
 * **[!UICONTROL ID client]**: l&#39;ID client [!DNL Dynamics 365] per l&#39;applicazione [!DNL Azure Active Directory].
@@ -134,7 +134,7 @@ Se i dettagli forniti sono validi, nell&#39;interfaccia utente viene visualizzat
 ### Inserire i dettagli della destinazione {#destination-details}
 
 Per configurare i dettagli per la destinazione, compila i campi obbligatori e facoltativi seguenti. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
-![Schermata dell&#39;interfaccia utente di Platform che mostra i dettagli della destinazione.](../../assets/catalog/crm/microsoft-dynamics-365/destination-details.png)
+![Schermata dell&#39;interfaccia utente di Experience Platform con i dettagli della destinazione.](../../assets/catalog/crm/microsoft-dynamics-365/destination-details.png)
 
 * **[!UICONTROL Nome]**: un nome con cui riconoscerai questa destinazione in futuro.
 * **[!UICONTROL Descrizione]**: una descrizione che ti aiuterà a identificare questa destinazione in futuro.
@@ -157,17 +157,17 @@ Leggi [Attivare profili e tipi di pubblico nelle destinazioni di esportazione de
 
 ### Considerazioni sulla mappatura ed esempio {#mapping-considerations-example}
 
-Per inviare correttamente i dati sul pubblico da Adobe Experience Platform alla destinazione [!DNL Dynamics 365], è necessario eseguire il passaggio di mappatura dei campi. La mappatura consiste nella creazione di un collegamento tra i campi dello schema Experience Data Model (XDM) nell’account Platform e i corrispondenti equivalenti dalla destinazione. Per mappare correttamente i campi XDM ai campi di destinazione [!DNL Dynamics 365], effettua le seguenti operazioni:
+Per inviare correttamente i dati sul pubblico da Adobe Experience Platform alla destinazione [!DNL Dynamics 365], è necessario eseguire il passaggio di mappatura dei campi. La mappatura consiste nella creazione di un collegamento tra i campi dello schema Experience Data Model (XDM) nell’account Experience Platform e i corrispondenti equivalenti dalla destinazione. Per mappare correttamente i campi XDM ai campi di destinazione [!DNL Dynamics 365], effettua le seguenti operazioni:
 
 1. Nel passaggio **[!UICONTROL Mapping]**, seleziona **[!UICONTROL Aggiungi nuovo mapping]**. Viene visualizzata una nuova riga di mappatura.
-   ![Esempio di schermata dell&#39;interfaccia utente di Platform per aggiungere una nuova mappatura.](../../assets/catalog/crm/microsoft-dynamics-365/add-new-mapping.png)
+   ![Esempio di schermata dell&#39;interfaccia utente di Experience Platform per aggiungere una nuova mappatura.](../../assets/catalog/crm/microsoft-dynamics-365/add-new-mapping.png)
 
 1. Nella finestra **[!UICONTROL Seleziona campo di origine]**, scegli la categoria **[!UICONTROL Seleziona spazio dei nomi identità]** e seleziona `contactid`.
-   ![Esempio di schermata dell&#39;interfaccia utente di Platform per la mappatura di Source.](../../assets/catalog/crm/microsoft-dynamics-365/source-mapping.png)
+   ![Esempio di schermata dell&#39;interfaccia utente di Experience Platform per la mappatura di Source.](../../assets/catalog/crm/microsoft-dynamics-365/source-mapping.png)
 
 1. Nella finestra **[!UICONTROL Seleziona campo di destinazione]**, seleziona il tipo di campo di destinazione a cui vuoi mappare il campo di origine.
    * **[!UICONTROL Seleziona lo spazio dei nomi delle identità]**: seleziona questa opzione per mappare il campo di origine a uno spazio dei nomi delle identità dall&#39;elenco.
-     ![Schermata dell&#39;interfaccia utente di Platform che mostra il mapping di Target per contactid.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
+     ![Schermata dell&#39;interfaccia utente di Experience Platform che mostra il mapping di Target per contactid.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
 
    * Aggiungi la seguente mappatura tra lo schema del profilo XDM e l&#39;istanza [!DNL Dynamics 365]:
 
@@ -176,7 +176,7 @@ Per inviare correttamente i dati sul pubblico da Adobe Experience Platform alla 
      | `contactid` | `contactid` | Sì |
 
    * **[!UICONTROL Seleziona attributi personalizzati]**: seleziona questa opzione per mappare il campo di origine a un attributo personalizzato definito nel campo **[!UICONTROL Nome attributo]**. Per un elenco completo degli attributi supportati, consulta la [[!DNL Dynamics 365] documentazione](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1#entity-properties).
-     ![Schermata dell&#39;interfaccia utente di Platform che mostra la mappatura di Target per l&#39;e-mail.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-email.png)
+     ![Schermata dell&#39;interfaccia utente di Experience Platform che mostra la mappatura di Target per l&#39;e-mail.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-email.png)
 
      >[!IMPORTANT]
      >
@@ -193,11 +193,11 @@ Per inviare correttamente i dati sul pubblico da Adobe Experience Platform alla 
 
    * Di seguito è riportato un esempio che utilizza queste mappature:
 
-   ![Esempio di schermata dell&#39;interfaccia utente di Platform che mostra le mappature di Target.](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png)
+   ![Esempio di schermata dell&#39;interfaccia utente di Experience Platform che mostra le mappature di Target.](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png)
 
 ### Esempio di esportazione e pianificazione di un pubblico {#schedule-audience-export-example}
 
-Nel passaggio [[!UICONTROL Pianifica esportazione pubblico]](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) del flusso di lavoro di attivazione, devi mappare manualmente i tipi di pubblico di Platform all&#39;attributo del campo personalizzato in [!DNL Dynamics 365].
+Nel passaggio [[!UICONTROL Pianifica esportazione pubblico]](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) del flusso di lavoro di attivazione, devi mappare manualmente i tipi di pubblico di Experience Platform all&#39;attributo del campo personalizzato in [!DNL Dynamics 365].
 
 A questo scopo, seleziona ogni pubblico, quindi immetti l&#39;attributo del campo personalizzato corrispondente da [!DNL Dynamics 365] nel campo **[!UICONTROL ID mappatura]**.
 
@@ -206,25 +206,25 @@ A questo scopo, seleziona ogni pubblico, quindi immetti l&#39;attributo del camp
 >Il valore utilizzato per **[!UICONTROL ID mappatura]** deve corrispondere esattamente al nome dell&#39;attributo del campo personalizzato creato in [!DNL Dynamics 365]. Consulta la [[!DNL Dynamics 365] documentazione](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1) per informazioni su come trovare gli attributi dei campi personalizzati.
 
 Di seguito è riportato un esempio:
-![Esempio di schermata dell&#39;interfaccia utente di Platform che mostra l&#39;esportazione pianificata del pubblico.](../../assets/catalog/crm/microsoft-dynamics-365/schedule-segment-export.png)
+![Esempio di schermata dell&#39;interfaccia utente di Experience Platform che mostra l&#39;esportazione pianificata del pubblico.](../../assets/catalog/crm/microsoft-dynamics-365/schedule-segment-export.png)
 
 ## Convalidare l’esportazione dei dati {#exported-data}
 
 Per verificare di aver impostato correttamente la destinazione, segui i passaggi seguenti:
 
 1. Seleziona **[!UICONTROL Destinazioni]** > **[!UICONTROL Sfoglia]** per passare all&#39;elenco delle destinazioni.
-   ![Schermata dell&#39;interfaccia utente di Platform che mostra le destinazioni di navigazione.](../../assets/catalog/crm/microsoft-dynamics-365/browse-destinations.png)
+   ![Schermata dell&#39;interfaccia utente di Experience Platform che mostra le destinazioni di navigazione.](../../assets/catalog/crm/microsoft-dynamics-365/browse-destinations.png)
 
 1. Selezionare la destinazione e verificare che lo stato sia **[!UICONTROL abilitato]**.
-   ![Schermata dell&#39;interfaccia utente di Platform che mostra l&#39;esecuzione del flusso di dati delle destinazioni.](../../assets/catalog/crm/microsoft-dynamics-365/destination-dataflow-run.png)
+   ![Schermata dell&#39;interfaccia utente di Experience Platform che mostra le destinazioni dell&#39;esecuzione del flusso di dati.](../../assets/catalog/crm/microsoft-dynamics-365/destination-dataflow-run.png)
 
 1. Passa alla scheda **[!DNL Activation data]**, quindi seleziona un nome di pubblico.
-   ![Esempio di schermata dell&#39;interfaccia utente di Platform che mostra i dati di attivazione delle destinazioni.](../../assets/catalog/crm/microsoft-dynamics-365/destinations-activation-data.png)
+   ![Esempio di schermata dell&#39;interfaccia utente di Experience Platform che mostra i dati di attivazione delle destinazioni.](../../assets/catalog/crm/microsoft-dynamics-365/destinations-activation-data.png)
 
 1. Controlla il riepilogo del pubblico e assicurati che il conteggio dei profili corrisponda al conteggio creato all’interno del pubblico.
-   ![Esempio di schermata dell&#39;interfaccia utente di Platform che mostra il pubblico.](../../assets/catalog/crm/microsoft-dynamics-365/segment.png)
+   ![Esempio di schermata dell&#39;interfaccia utente di Experience Platform che mostra il pubblico.](../../assets/catalog/crm/microsoft-dynamics-365/segment.png)
 
-1. Accedi al sito Web [!DNL Dynamics 365], quindi passa alla pagina [!DNL Customers] > [!DNL Contacts] e controlla se i profili del pubblico sono stati aggiunti. È possibile vedere che ogni stato del pubblico in [!DNL Dynamics 365] è stato aggiornato con lo stato del pubblico corrispondente da Platform, in base al valore **[!UICONTROL ID mappatura]** fornito durante il passaggio [pianificazione del pubblico](#schedule-audience-export-example).
+1. Accedi al sito Web [!DNL Dynamics 365], quindi passa alla pagina [!DNL Customers] > [!DNL Contacts] e controlla se i profili del pubblico sono stati aggiunti. È possibile vedere che ogni stato del pubblico in [!DNL Dynamics 365] è stato aggiornato con lo stato del pubblico corrispondente da Experience Platform, in base al valore **[!UICONTROL ID mappatura]** fornito durante il passaggio [pianificazione del pubblico](#schedule-audience-export-example).
    ![Schermata dell&#39;interfaccia utente di Dynamics 365 che mostra la pagina Contatti con stati di pubblico aggiornati.](../../assets/catalog/crm/microsoft-dynamics-365/contacts.png)
 
 ## Utilizzo dei dati e governance {#data-usage-governance}
@@ -237,9 +237,9 @@ Tutte le destinazioni [!DNL Adobe Experience Platform] sono conformi ai criteri 
 
 Durante la verifica di un&#39;esecuzione del flusso di dati, se viene visualizzato il seguente messaggio di errore: `Bad request reported while pushing events to the destination. Please contact the administrator and try again.`
 
-![Schermata dell&#39;interfaccia utente di Platform che mostra un errore di richiesta non valida.](../../assets/catalog/crm/microsoft-dynamics-365/error.png)
+![Schermata dell&#39;interfaccia utente di Experience Platform che mostra un errore di richiesta non valida.](../../assets/catalog/crm/microsoft-dynamics-365/error.png)
 
-Per correggere questo errore, verifica che l&#39;**[!UICONTROL ID mappatura]** fornito in [!DNL Dynamics 365] per il pubblico di Platform sia valido ed esista in [!DNL Dynamics 365].
+Per correggere questo errore, verifica che l&#39;**[!UICONTROL ID mappatura]** fornito in [!DNL Dynamics 365] per il pubblico Experience Platform sia valido ed esista in [!DNL Dynamics 365].
 
 ## Risorse aggiuntive {#additional-resources}
 

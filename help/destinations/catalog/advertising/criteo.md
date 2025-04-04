@@ -1,12 +1,12 @@
 ---
 keywords: pubblicità; criteri;
 title: Connessione critica
-description: Criteo potenzia la pubblicità di fiducia e di impatto per offrire esperienze più ricche a ogni consumatore attraverso l'internet aperto. Con il set di dati di e-commerce più grande al mondo e l’intelligenza artificiale migliore della classe, Criteo assicura che ogni punto di contatto nel percorso sia personalizzato per raggiungere i clienti con l’annuncio giusto, al momento giusto.
+description: Criteo potenzia la pubblicità affidabile e di impatto per offrire esperienze più ricche a ogni consumatore attraverso l’intera Internet. Con il set di dati di e-commerce più grande al mondo e l’intelligenza artificiale migliore della categoria, Criteo assicura che ogni punto di contatto nel percorso di acquisto sia personalizzato per raggiungere la clientela con l’annuncio giusto, al momento giusto.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: e594e473ac78663203c9254623fe8e324985fa39
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1016'
-ht-degree: 3%
+source-wordcount: '1017'
+ht-degree: 12%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 3%
 >
 >Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti da Criteo. Per richieste di informazioni o richieste di aggiornamento, contatta direttamente Criteo [qui](mailto:criteoTechnicalPartnerships@criteo.com).
 
-Criteo potenzia la pubblicità di fiducia e di impatto per offrire esperienze più ricche a ogni consumatore attraverso l&#39;internet aperto. Con il set di dati di e-commerce più grande al mondo e l’intelligenza artificiale migliore della classe, Criteo assicura che ogni punto di contatto nel percorso sia personalizzato per raggiungere i clienti con l’annuncio giusto, al momento giusto.
+Criteo potenzia la pubblicità affidabile e di impatto per offrire esperienze più ricche a ogni consumatore attraverso l’intera Internet. Con il set di dati di e-commerce più grande al mondo e l’intelligenza artificiale migliore della categoria, Criteo assicura che ogni punto di contatto nel percorso di acquisto sia personalizzato per raggiungere la clientela con l’annuncio giusto, al momento giusto.
 
 ## Prerequisiti {#prerequisites}
 
@@ -39,7 +39,7 @@ Il criterio supporta l’attivazione delle identità descritte nella tabella seg
 
 | Identità di destinazione | Descrizione | Considerazioni |
 | --- | --- | --- |
-| `email_sha256` | Indirizzi e-mail con hash con algoritmo SHA-256 | Gli indirizzi e-mail con hash SHA-256 e testo normale sono supportati da Adobe Experience Platform. Se il campo di origine contiene attributi senza hash, seleziona l&#39;opzione [!UICONTROL Applica trasformazione] per fare in modo che Platform esegua automaticamente l&#39;hash dei dati all&#39;attivazione. |
+| `email_sha256` | Indirizzi e-mail con hash con algoritmo SHA-256 | Gli indirizzi e-mail con hash SHA-256 e testo normale sono supportati da Adobe Experience Platform. Se il campo di origine contiene attributi senza hash, seleziona l&#39;opzione [!UICONTROL Applica trasformazione] per fare in modo che Experience Platform esegua automaticamente l&#39;hashing dei dati all&#39;attivazione. |
 | `gum_id` | Identificatore cookie [!DNL GUM] criterio | [!DNL GUM IDs] consente ai client di mantenere una corrispondenza tra il proprio sistema di identificazione utente e l&#39;identificazione utente di Criteo ([!DNL UID]). Se il tipo di identificatore è `gum_id`, è necessario includere anche un parametro aggiuntivo, [!DNL GUM Caller ID]. Rivolgiti al team del tuo account Criteo per [!DNL GUM Caller ID] appropriato o per ottenere ulteriori informazioni su questa sincronizzazione di [!DNL GUM ID], se necessario. |
 
 ## Tipo e frequenza di esportazione {#export-type-frequency}

@@ -3,9 +3,9 @@ title: Panoramica dell’estensione API Snapchat Conversions
 description: Utilizza la conversione Snapchat per inviare i dati evento lato server a Snap.
 last-substantial-update: 2025-01-20T00:00:00Z
 exl-id: 1c2d7243-5bcd-40a0-8515-9ab72613c5f3
-source-git-commit: 7cece312a2f019d48653dbd208cc8b7593ab0ee3
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '964'
+source-wordcount: '966'
 ht-degree: 2%
 
 ---
@@ -79,7 +79,7 @@ Per ulteriori informazioni sulla creazione di elementi dati, consulta la [docume
 
 ## Creare regole per inviare eventi di conversione a Snap {#create-snap-rules}
 
-[Le regole](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule) vengono utilizzate per attivare le estensioni in Platform. Questa sezione illustra come creare regole all’interno della proprietà di inoltro degli eventi per inviare eventi di conversione a Snap utilizzando l’estensione API Conversioni.
+[Le regole](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule) vengono utilizzate per attivare le estensioni in Experience Platform. Questa sezione illustra come creare regole all’interno della proprietà di inoltro degli eventi per inviare eventi di conversione a Snap utilizzando l’estensione API Conversioni.
 
 ### Crea una nuova regola
 
@@ -201,4 +201,4 @@ Se riscontri problemi con il tuo **Punteggio qualità evento**, consulta ulterio
 
 ## Passaggi successivi {#next-steps}
 
-Questa guida illustra come inviare dati evento lato server a **[!DNL Snap]** utilizzando l&#39;estensione **[!DNL Snap Conversions API]**. Per ulteriori informazioni sulle funzionalità di inoltro degli eventi in Platform, consulta la [Panoramica sull&#39;inoltro degli eventi](../../../ui/event-forwarding/overview.md).
+Questa guida illustra come inviare dati evento lato server a **[!DNL Snap]** utilizzando l&#39;estensione **[!DNL Snap Conversions API]**. Per ulteriori informazioni sulle funzionalità di inoltro degli eventi in Experience Platform, consulta la [Panoramica sull&#39;inoltro degli eventi](../../../ui/event-forwarding/overview.md).

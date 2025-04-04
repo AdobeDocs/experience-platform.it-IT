@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;servizio catalogo;catalogo;servizio catalogo;Catalog service;Catalog
+keywords: Experience Platform;home;argomenti popolari;servizio catalogo;catalogo;servizio catalogo;;home;popular topic;catalog service;catalog service;catalog service;Catalog service;Catalog
 solution: Experience Platform
 title: Guida API di Catalog Service
 description: L’API Catalog Service consente agli sviluppatori di gestire i metadati del set di dati in Adobe Experience Platform. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
 exl-id: 812fcdae-ed0e-4f2b-84d7-26f2f79e71b9
-source-git-commit: 07451b8ab4bcb7ca43ad0c8a821478b2c9682894
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '588'
 ht-degree: 25%
@@ -21,7 +21,7 @@ Questa guida per sviluppatori descrive i passaggi per iniziare a utilizzare l’
 
 [!DNL Catalog] tiene traccia dei metadati per diversi tipi di risorse e operazioni in [!DNL Experience Platform]. Questa guida per gli sviluppatori richiede una buona conoscenza dei vari servizi [!DNL Experience Platform] coinvolti nella creazione e gestione di queste risorse:
 
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): framework standardizzato tramite il quale [!DNL Platform] organizza i dati sull&#39;esperienza del cliente.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): framework standardizzato tramite il quale [!DNL Experience Platform] organizza i dati sull&#39;esperienza del cliente.
 * [Acquisizione in batch](../../ingestion/batch-ingestion/overview.md): in che modo [!DNL Experience Platform] acquisisce e memorizza i dati dai file di dati, ad esempio CSV e Parquet.
 * [Acquisizione in streaming](../../ingestion/streaming-ingestion/overview.md): in che modo [!DNL Experience Platform] acquisisce e archivia dati da dispositivi lato client e lato server in tempo reale.
 
@@ -33,19 +33,19 @@ Questa guida fornisce esempi di chiamate API per illustrare come formattare le r
 
 ## Raccogliere i valori per le intestazioni richieste
 
-Per effettuare chiamate alle API [!DNL Platform], devi prima completare l&#39;[esercitazione di autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
+Per effettuare chiamate alle API [!DNL Experience Platform], devi prima completare l&#39;[esercitazione di autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
 
 * Autorizzazione: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-Tutte le risorse in [!DNL Experience Platform] sono isolate in specifiche sandbox virtuali. Tutte le richieste alle API [!DNL Platform] richiedono un&#39;intestazione che specifichi il nome della sandbox in cui verrà eseguita l&#39;operazione:
+Tutte le risorse in [!DNL Experience Platform] sono isolate in specifiche sandbox virtuali. Tutte le richieste alle API [!DNL Experience Platform] richiedono un&#39;intestazione che specifichi il nome della sandbox in cui verrà eseguita l&#39;operazione:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulle sandbox in [!DNL Platform], consulta la [documentazione di panoramica sulle sandbox](../../sandboxes/home.md).
+>Per ulteriori informazioni sulle sandbox in [!DNL Experience Platform], consulta la [documentazione di panoramica sulle sandbox](../../sandboxes/home.md).
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione aggiuntiva:
 
@@ -53,7 +53,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’
 
 ## Best practice per le chiamate API [!DNL Catalog]
 
-Quando si eseguono richieste di GET all&#39;API [!DNL Catalog], è consigliabile includere parametri di query nelle richieste in modo da restituire solo gli oggetti e le proprietà necessarie. Le richieste non filtrate possono causare payload di risposta di dimensioni superiori a 3 GB, rallentando le prestazioni complessive.
+Quando si eseguono richieste GET all&#39;API [!DNL Catalog], è consigliabile includere parametri di query nelle richieste per restituire solo gli oggetti e le proprietà necessari. Le richieste non filtrate possono causare payload di risposta di dimensioni superiori a 3 GB, rallentando le prestazioni complessive.
 
 È possibile visualizzare oggetti specifici includendo il relativo ID nel percorso della richiesta oppure utilizzare parametri di query come `properties` e `limit` per filtrare le risposte. I filtri possono essere passati come intestazioni e come parametri di query, con quelli passati come parametri di query che hanno la precedenza. Per ulteriori informazioni, vedere il documento relativo al filtro dei dati del catalogo [1.](filter-data.md)
 

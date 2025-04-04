@@ -2,9 +2,9 @@
 description: Scopri come configurare le impostazioni di consegna della destinazione per le destinazioni create con Destination SDK, per indicare dove vanno i dati esportati e quale regola di autenticazione viene utilizzata nella posizione in cui verranno recapitati i dati.
 title: Consegna della destinazione
 exl-id: ade77b6b-4b62-4b17-a155-ef90a723a4ad
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '564'
 ht-degree: 2%
 
 ---
@@ -48,7 +48,7 @@ Quando configuri le impostazioni di consegna di destinazione, puoi utilizzare i 
 
 | Parametro | Tipo | Descrizione |
 |---------|----------|------|
-| `authenticationRule` | Stringa | Indica come [!DNL Platform] deve connettersi alla destinazione. Valori supportati:<ul><li>`CUSTOMER_AUTHENTICATION`: utilizzare questa opzione se i clienti di Platform accedono al sistema tramite uno dei metodi di autenticazione descritti [qui](customer-authentication.md).</li><li>`PLATFORM_AUTHENTICATION`: utilizzare questa opzione se è presente un Adobe di autenticazione globale tra e la destinazione e il cliente [!DNL Platform] non deve fornire credenziali di autenticazione per connettersi alla destinazione. In questo caso, è necessario creare un oggetto credenziali utilizzando la configurazione [credentials API](../../credentials-api/create-credential-configuration.md). </li><li>`NONE`: utilizzare questa opzione se non è richiesta alcuna autenticazione per inviare dati alla piattaforma di destinazione. </li></ul> |
+| `authenticationRule` | Stringa | Indica come [!DNL Experience Platform] deve connettersi alla destinazione. Valori supportati:<ul><li>`CUSTOMER_AUTHENTICATION`: utilizzare questa opzione se i clienti Experience Platform accedono al sistema tramite uno dei metodi di autenticazione descritti [qui](customer-authentication.md).</li><li>`PLATFORM_AUTHENTICATION`: utilizzare questa opzione se esiste un sistema di autenticazione globale tra Adobe e la destinazione e il cliente [!DNL Experience Platform] non deve fornire credenziali di autenticazione per connettersi alla destinazione. In questo caso, è necessario creare un oggetto credenziali utilizzando la configurazione [credentials API](../../credentials-api/create-credential-configuration.md). </li><li>`NONE`: utilizzare questa opzione se non è richiesta alcuna autenticazione per inviare dati alla piattaforma di destinazione. </li></ul> |
 | `destinationServerId` | Stringa | `instanceId` del [server di destinazione](../../authoring-api/destination-server/create-destination-server.md) in cui si desidera esportare i dati. |
 | `deliveryMatchers.type` | Stringa | <ul><li>Durante la configurazione della consegna di destinazione per le destinazioni basate su file, impostare sempre questa opzione su `SOURCE`.</li><li>Durante la configurazione della consegna di destinazione per una destinazione di streaming, la sezione `deliveryMatchers` non è richiesta.</li></ul> |
 | `deliveryMatchers.value` | Stringa | <ul><li>Durante la configurazione della consegna di destinazione per le destinazioni basate su file, impostare sempre questa opzione su `batch`.</li><li>Durante la configurazione della consegna di destinazione per una destinazione di streaming, la sezione `deliveryMatchers` non è richiesta.</li></ul> |

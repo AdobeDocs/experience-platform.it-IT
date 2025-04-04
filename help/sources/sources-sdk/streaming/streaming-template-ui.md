@@ -1,11 +1,11 @@
 ---
-title: Modello self-service della documentazione per l’interfaccia utente di Streaming SDK
+title: Modello self-service di documentazione per interfaccia utente Streaming SDK
 description: Scopri come portare dati in streaming da un’origine a Adobe Experience Platform utilizzando l’interfaccia utente.
 exl-id: 82254be0-fa31-4114-a0ec-179a990e0904
 badge: Beta
-source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1187'
+source-wordcount: '1194'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 *Per iniziare, aggiorna i metadati (titolo e descrizione) nella parte superiore della pagina. Ignora tutte le istanze di UICONTROL in questa pagina. Questo tag aiuta i nostri processi di traduzione automatica a tradurre correttamente la pagina nelle diverse lingue supportate. Dopo l&#39;invio aggiungeremo i tag alla documentazione.*
 
-Questo tutorial descrive i passaggi per creare un connettore di origine *YOURSOURCE* tramite l&#39;interfaccia utente di Platform.
+Questo tutorial illustra i passaggi per la creazione di un connettore di origine *YOURSOURCE* tramite l&#39;interfaccia utente di Experience Platform.
 
 ## Panoramica
 
@@ -37,7 +37,7 @@ Questo tutorial descrive i passaggi per creare un connettore di origine *YOURSOU
 
 ### Raccogli le credenziali richieste
 
-Per connettere *YOURSOURCE* a Platform, è necessario fornire i valori per le proprietà di connessione seguenti:
+Per connettere *YOURSOURCE* ad Experience Platform, è necessario fornire i valori per le proprietà di connessione seguenti:
 
 | Credenziali | Descrizione | Esempio |
 | --- | --- | --- |
@@ -49,11 +49,11 @@ Per ulteriori informazioni su queste credenziali, vedere la documentazione relat
 
 ### Integra *YOURSOURCE* con il tuo webhook
 
-*L&#39;SDK di streaming richiede che l&#39;origine sia in grado di supportare i webhook per comunicare con Experience Platform. In questa sezione è necessario specificare i passaggi che gli utenti dovranno seguire per integrare YOURSOURCE con un webhook.*
+*Streaming SDK richiede che l&#39;origine supporti i webhook per comunicare con Experience Platform. In questa sezione è necessario specificare i passaggi che gli utenti dovranno seguire per integrare YOURSOURCE con un webhook.*
 
 ## Connetti il tuo account *YOURSOURCE*
 
-Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Nella schermata [!UICONTROL Catalogo] sono visualizzate diverse origini con cui è possibile creare un account.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Nella schermata [!UICONTROL Catalogo] sono visualizzate diverse origini con cui è possibile creare un account.
 
 Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
 
@@ -61,13 +61,13 @@ Nella categoria **Streaming** selezionare *YOURSOURCE*, quindi **[!UICONTROL Agg
 
 >[!TIP]
 >
->Di seguito sono riportati alcuni esempi di schermate. Durante la creazione della documentazione, sostituisci le immagini con le schermate della sorgente effettiva. È possibile utilizzare lo stesso motivo e colore di marcatura, nonché gli stessi nomi di file. Assicurati che la schermata acquisisca l’intera schermata dell’interfaccia utente di Platform. Per informazioni su come caricare le schermate, consulta la guida in [invio della documentazione per la revisione](../documentation/github.md).
+>Di seguito sono riportati alcuni esempi di schermate. Durante la creazione della documentazione, sostituisci le immagini con le schermate della sorgente effettiva. È possibile utilizzare lo stesso motivo e colore di marcatura, nonché gli stessi nomi di file. Assicurati che la schermata acquisisca l’intera schermata dell’interfaccia utente di Experience Platform. Per informazioni su come caricare le schermate, consulta la guida in [invio della documentazione per la revisione](../documentation/github.md).
 
-![Catalogo origini Experienci Platform](../assets/streaming/catalog.png)
+![Catalogo origini Experience Platform](../assets/streaming/catalog.png)
 
 ## Selezionare i dati
 
-Viene visualizzato il passaggio **[!UICONTROL Seleziona dati]**, che fornisce un&#39;interfaccia per la selezione dei dati da inserire in Platform.
+Viene visualizzato il passaggio **[!UICONTROL Seleziona dati]**, che fornisce un&#39;interfaccia per la selezione dei dati da portare in Experience Platform.
 
 * La parte sinistra dell’interfaccia è un browser che ti consente di visualizzare i flussi di dati disponibili all’interno del tuo account;
 * La parte destra dell’interfaccia consente di visualizzare in anteprima fino a 100 righe di dati da un file JSON.
@@ -94,13 +94,13 @@ Al termine, selezionare **[!UICONTROL Avanti]**.
 
 Viene visualizzato il passaggio [!UICONTROL Mappatura] che fornisce un&#39;interfaccia per mappare i campi sorgente dallo schema sorgente ai campi XDM di destinazione appropriati nello schema di destinazione.
 
-Platform fornisce consigli intelligenti per campi mappati automaticamente in base allo schema o al set di dati di destinazione selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi d’uso. In base alle tue esigenze, puoi scegliere di mappare i campi direttamente o utilizzare le funzioni di preparazione dati per trasformare i dati sorgente in modo da derivare valori calcolati o calcolati. Per i passaggi completi sull&#39;utilizzo dell&#39;interfaccia mapper e dei campi calcolati, consulta la [guida dell&#39;interfaccia utente della preparazione dati](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html).
+Experience Platform fornisce consigli intelligenti per campi mappati automaticamente in base allo schema o al set di dati di destinazione selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi d’uso. In base alle tue esigenze, puoi scegliere di mappare i campi direttamente o utilizzare le funzioni di preparazione dati per trasformare i dati sorgente in modo da derivare valori calcolati o calcolati. Per i passaggi completi sull&#39;utilizzo dell&#39;interfaccia mapper e dei campi calcolati, consulta la [guida dell&#39;interfaccia utente della preparazione dati](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html).
 
 Una volta mappati correttamente i dati di origine, seleziona **[!UICONTROL Avanti]**.
 
 ![Passaggio di mappatura del flusso di lavoro di origine.](../assets/streaming/mapping.png)
 
-## Controlla
+## Rivisione
 
 Viene visualizzato il passaggio **[!UICONTROL Rivedi]**, che consente di rivedere il nuovo flusso di dati prima che venga creato. I dettagli sono raggruppati nelle seguenti categorie:
 
@@ -123,7 +123,7 @@ Per recuperare l&#39;endpoint di streaming, vai alla pagina [!UICONTROL Attivit�
 
 *I flussi di lavoro per i passaggi rimanenti della creazione di un flusso di dati sono modulari. In caso di chiamate specifiche che si desidera effettuare per quanto riguarda la propria origine, vedere la sezione Risorse aggiuntive di seguito.*
 
-Seguendo questa esercitazione, hai stabilito una connessione al tuo account *YOURSOURCE*. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per inserire dati in Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html).
+Seguendo questa esercitazione, hai stabilito una connessione al tuo account *YOURSOURCE*. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per inserire dati in Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html).
 
 ## Risorse aggiuntive
 

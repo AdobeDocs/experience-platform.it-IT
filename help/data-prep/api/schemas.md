@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;preparazione dati;guida api;schemi;
+keywords: Experience Platform;home;argomenti popolari;preparazione dati;guida api;;home;popular topic;data prep;api guide;schemas;
 solution: Experience Platform
 title: Endpoint API per gli schemi
-description: Puoi utilizzare l’endpoint "/schemas" nell’API di Adobe Experience Platform per recuperare, creare e aggiornare in modo programmatico gli schemi da utilizzare con Mapper in Platform.
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+description: Puoi utilizzare l’endpoint "/schemas" nell’API di Adobe Experience Platform per recuperare, creare e aggiornare in modo programmatico gli schemi da utilizzare con Mapper in Experience Platform.
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '619'
 ht-degree: 4%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 4%
 
 # Endpoint &quot;schema&quot;
 
-Gli schemi possono essere utilizzati con Mapper per garantire che i dati acquisiti in Adobe Experience Platform corrispondano a quelli che desideri acquisire. È possibile utilizzare l&#39;endpoint `/schemas` per creare, elencare e ottenere schemi personalizzati a livello di programmazione da utilizzare con Mapper in Platform.
+Gli schemi possono essere utilizzati con Mapper per garantire che i dati acquisiti in Adobe Experience Platform corrispondano a quelli che desideri acquisire. È possibile utilizzare l&#39;endpoint `/schemas` per creare, elencare e ottenere schemi personalizzati a livello di programmazione da utilizzare con Mapper in Experience Platform.
 
 >[!NOTE]
 >
->Gli schemi creati utilizzando questo endpoint vengono utilizzati esclusivamente con i set di mappatura e mappatura. Per creare schemi accessibili da altri servizi Platform, leggere la [Guida per gli sviluppatori del registro degli schemi](../../xdm/api/schemas.md).
+>Gli schemi creati utilizzando questo endpoint vengono utilizzati esclusivamente con i set di mappatura e mappatura. Per creare schemi accessibili da altri servizi Experience Platform, leggere la [Guida per gli sviluppatori del registro degli schemi](../../xdm/api/schemas.md).
 
 ## Ottieni tutti gli schemi
 
-È possibile recuperare un elenco di tutti gli schemi Mapper disponibili per l&#39;organizzazione effettuando una richiesta GET all&#39;endpoint `/schemas`.
+Per recuperare un elenco di tutti gli schemi Mapper disponibili per l&#39;organizzazione, eseguire una richiesta GET all&#39;endpoint `/schemas`.
 
 **Formato API**
 
@@ -132,7 +132,7 @@ La seguente risposta restituisce lo stato HTTP 200 con un elenco degli schemi ri
 
 ## Crea uno schema
 
-Per creare uno schema in base al quale eseguire la convalida, eseguire una richiesta POST all&#39;endpoint `/schemas`. Esistono tre modi per creare uno schema: inviare uno [schema JSON](https://json-schema.org/), utilizzare dati di esempio o fare riferimento a uno schema XDM esistente.
+È possibile creare uno schema su cui eseguire la convalida effettuando una richiesta POST all&#39;endpoint `/schemas`. Esistono tre modi per creare uno schema: inviare uno [schema JSON](https://json-schema.org/), utilizzare dati di esempio o fare riferimento a uno schema XDM esistente.
 
 ```http
 POST /schemas

@@ -5,10 +5,10 @@ breadcrumb-title: Guida alle dashboard
 user-guide-description: Scopri come visualizzare i dati in Experience Platform tramite dashboard personalizzabili.
 feature: Dashboards
 role: Developer,User
-source-git-commit: cb3cc06a31c0390d9b1f152c2186da3847647f64
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 41%
+source-wordcount: '143'
+ht-degree: 44%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 41%
 * [Autorizzazioni di accesso al dashboard](permissions.md)
 * [Inventario dei dashboard](inventory.md)
 * [Dashboard standard](standard-dashboards.md)
-* [Scarica dashboard in PDF](download.md)
+* [Scaricare le dashboard in PDF](download.md)
 * SQL Insights: modalità pro query {#sql-insights-query-pro-mode}
    * [Panoramica](sql-insights-query-pro-mode/overview.md)
    * Modelli di Data Distiller {#templates}
@@ -57,10 +57,10 @@ ht-degree: 41%
 * Casi di utilizzo di Insights {#insights-use-cases}
    * [Analisi del consenso](insights-use-cases/consent-analysis.md)
 * Modelli di dati disponibili {#data-models}
-   * [Modello dati Real-time Customer Data Platform Insights B2B edition](data-models/cdp-insights-data-model-b2b.md)
-   * [Edizione B2C del modello dati di Real-time Customer Data Platform Insights](data-models/cdp-insights-data-model-b2c.md)
+   * [Modello dati Real-Time Customer Data Platform Insights B2B edition](data-models/cdp-insights-data-model-b2b.md)
+   * [Edizione B2C del modello dati di Real-Time Customer Data Platform Insights](data-models/cdp-insights-data-model-b2c.md)
 * Integrazioni di applicazioni {#integrations}
    * [Power BI](integrations/power-bi.md)
 * [Eseguire query sui set di dati del dashboard](query.md)
-* [Visualizza SQL approfondimento](view-sql.md)
-* [Note sulla versione della piattaforma](https://experienceleague.adobe.com/it/docs/experience-platform/release-notes/latest)
+* [Visualizza insight SQL](view-sql.md)
+* [Note sulla versione di Experience Platform](https://experienceleague.adobe.com/it/docs/experience-platform/release-notes/latest)

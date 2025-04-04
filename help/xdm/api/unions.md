@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;api;API;XDM;XDM system;Experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;schema Registry;union;unioni;unioni;segmentMembership;timeSeriesEvents;
+keywords: Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;Experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;union;Union;Unions;segmentMembership;timeSeriesEvents;
 solution: Experience Platform
 title: Endpoint API Unions
 description: L’endpoint /unions nell’API Schema Registry consente di gestire in modo programmatico gli schemi di unione XDM nell’applicazione Experience.
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
-source-git-commit: 3da2e8f66f08a7bb9533795f7854ad583734911c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '899'
+source-wordcount: '900'
 ht-degree: 2%
 
 ---
@@ -31,13 +31,13 @@ L&#39;array `timeSeriesEvents` è un elenco di eventi di serie temporali correla
 
 ### Mappa di appartenenza al segmento
 
-La mappa `segmentMembership` memorizza i risultati della valutazione di una definizione di segmento. Quando i processi di segmentazione vengono eseguiti correttamente utilizzando l&#39;[API di segmentazione](https://www.adobe.io/experience-platform-apis/references/segmentation/), la mappa viene aggiornata. `segmentMembership` memorizza anche eventuali tipi di pubblico pre-valutati che vengono acquisiti in Platform, consentendo l&#39;integrazione con altre soluzioni come Adobe Audience Manager. Per ulteriori informazioni, consulta l&#39;esercitazione sulla [creazione di tipi di pubblico tramite API](../../segmentation/tutorials/create-a-segment.md).
+La mappa `segmentMembership` memorizza i risultati della valutazione di una definizione di segmento. Quando i processi di segmentazione vengono eseguiti correttamente utilizzando l&#39;[API di segmentazione](https://www.adobe.io/experience-platform-apis/references/segmentation/), la mappa viene aggiornata. `segmentMembership` memorizza anche eventuali tipi di pubblico pre-valutati che vengono acquisiti in Experience Platform, consentendo l&#39;integrazione con altre soluzioni come Adobe Audience Manager. Per ulteriori informazioni, consulta l&#39;esercitazione sulla [creazione di tipi di pubblico tramite API](../../segmentation/tutorials/create-a-segment.md).
 
 ## Recuperare un elenco di unioni {#list}
 
 Quando si imposta il tag `union` su uno schema, [!DNL Schema Registry] aggiunge automaticamente lo schema all&#39;unione per la classe su cui si basa lo schema. Se non esiste alcuna unione per la classe in questione, viene creata automaticamente una nuova unione. `$id` per l&#39;unione è simile allo standard `$id` di altre risorse [!DNL Schema Registry], con l&#39;unica differenza che è seguito da due trattini bassi e dalla parola &quot;unione&quot; (`__union`).
 
-È possibile visualizzare un elenco di unioni disponibili effettuando una richiesta GET all&#39;endpoint `/tenant/unions`.
+Per visualizzare un elenco dei sindacati disponibili, devi eseguire una richiesta GET all&#39;endpoint `/tenant/unions`.
 
 **Formato API**
 
@@ -91,7 +91,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 (OK) e un a
 
 ## Cercare un’unione {#lookup}
 
-È possibile visualizzare un&#39;unione specifica eseguendo una richiesta di GET che includa `$id` e, a seconda dell&#39;intestazione Accept, alcuni o tutti i dettagli dell&#39;unione.
+È possibile visualizzare un&#39;unione specifica eseguendo una richiesta GET che include `$id` e, a seconda dell&#39;intestazione Accept, alcuni o tutti i dettagli dell&#39;unione.
 
 >[!NOTE]
 >

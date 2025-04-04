@@ -4,10 +4,10 @@ title: Guida all’interfaccia utente per gli avvisi
 description: Scopri come gestire gli avvisi nell’interfaccia utente di Experience Platform.
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
-source-git-commit: 2e0fc17fee9b1586b4c2b44c326e2c305c127fad
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '797'
-ht-degree: 3%
+source-wordcount: '798'
+ht-degree: 7%
 
 ---
 
@@ -41,7 +41,7 @@ Selezionare i puntini di sospensione (**...**) accanto al nome di una regola e u
 
 >[!NOTE]
 >
-> Per assegnare un avviso a un ID utente Adobe, un indirizzo e-mail esterno o un elenco di gruppi e-mail, devi essere un amministratore.
+> Per assegnare un avviso a un ID utente di Adobe, un indirizzo e-mail esterno o un elenco di gruppi e-mail, devi essere un amministratore.
 
 Nella scheda **[!UICONTROL Sfoglia]** sono elencate le regole disponibili che possono attivare un avviso.
 
@@ -51,7 +51,7 @@ Selezionare i puntini di sospensione (**...**) accanto al nome di una regola. In
 
 ![Selezionare i puntini di sospensione per visualizzare il menu a discesa. L&#39;opzione [!UICONTROL Gestisci sottoscrittori avvisi] è evidenziata.](../images/alerts/ui/manage-alert-subscribers.png)
 
-Viene visualizzata la pagina [!UICONTROL Gestisci abbonati agli avvisi]. Per assegnare le notifiche a utenti specifici, inserisci il loro ID utente Adobe, l’indirizzo e-mail esterno o un elenco di gruppi e-mail, quindi premi Invio.
+Viene visualizzata la pagina [!UICONTROL Gestisci abbonati agli avvisi]. Per assegnare le notifiche a utenti specifici, immetti il loro ID utente Adobe, l’indirizzo e-mail esterno o un elenco di gruppi e-mail, quindi premi Invio.
 
 >[!NOTE]
 >
@@ -92,14 +92,14 @@ Le soglie di avviso possono essere personalizzate per i seguenti tipi di avviso:
 | Tipo di avviso | Parametro personalizzato |
 |---|---|
 | Ritardo processo segmento | Soglia di ritardo |
-| Ritardo esportazione segmento | Soglia di ritardo |
+| Ritardo dell’esportazione del segmento | Soglia di ritardo |
 | Ritardo esecuzione flusso destinazione | Soglia di ritardo |
-| Ritardo esecuzione flusso servizio identità | Soglia di ritardo |
-| Ritardo esecuzione flusso profilo | Soglia di ritardo |
+| Ritardo di esecuzione del flusso di Identity Service | Soglia di ritardo |
+| Ritardo esecuzione flusso profili | Soglia di ritardo |
 | Ritardo esecuzione flusso origini | Soglia di ritardo |
 | Ritardo esecuzione query | Soglia di ritardo |
-| Frequenza di salto attivazione superata | Soglia di errore |
-| Frequenza errori di acquisizione origini superata | Soglia di errore |
+| Tasso di attivazione ignorata superato | Soglia di errore |
+| Tasso di errori di acquisizione delle origini superato | Soglia di errore |
 
 Selezionare i puntini di sospensione (**...**) accanto al nome di una regola. In un elenco a discesa vengono visualizzati i controlli. Seleziona **[!UICONTROL Modifica]**.
 
@@ -125,4 +125,4 @@ Seleziona un avviso elencato e nella barra a destra vengono visualizzati ulterio
 
 ## Passaggi successivi
 
-Questo documento fornisce una panoramica su come visualizzare e gestire gli avvisi nell’interfaccia utente di Platform. Per ulteriori informazioni sulle funzionalità del servizio, consulta la panoramica su [Observability Insights](../home.md).
+Questo documento fornisce una panoramica su come visualizzare e gestire gli avvisi nell’interfaccia utente di Experience Platform. Per ulteriori informazioni sulle funzionalità del servizio, consulta la panoramica su [Observability Insights](../home.md).

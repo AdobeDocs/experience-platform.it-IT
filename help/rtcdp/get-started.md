@@ -1,21 +1,21 @@
 ---
-keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
-title: Guida introduttiva a Real-time Customer Data Platform
+keywords: RTCDP;CDP;Real-Time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
+title: Guida introduttiva a Real-Time Customer Data Platform
 description: Utilizza questo scenario di esempio per la configurazione dell’implementazione di Adobe Real-time Customer Data Platform.
 feature: Get Started, Use Cases
 exl-id: 9f775d33-27a1-4a49-a4c5-6300726a531b
-source-git-commit: 82535ec3ac2dd27e685bb591fdf661d3ab5dd2c9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2325'
+source-wordcount: '2326'
 ht-degree: 1%
 
 ---
 
-# Guida introduttiva a Real-time Customer Data Platform
+# Guida introduttiva a Real-Time Customer Data Platform
 
-Questa guida introduttiva illustra un esempio di implementazione di Real-time Customer Data Platform (Real-Time CDP). Puoi utilizzarlo come esempio quando configuri la tua implementazione. Sebbene questa guida mostri esempi specifici, contiene collegamenti a informazioni aggiuntive che è possibile utilizzare durante la creazione della configurazione.
+Questa guida introduttiva illustra un esempio di implementazione di Real-Time Customer Data Platform (Real-Time CDP). Puoi utilizzarlo come esempio quando configuri la tua implementazione. Sebbene questa guida mostri esempi specifici, contiene collegamenti a informazioni aggiuntive che è possibile utilizzare durante la creazione della configurazione.
 
-Questo esempio mostra la potenza di Real-time Customer Data Platform, con tecnologia Adobe Experience Platform, per:
+Questo esempio mostra la potenza di Real-Time Customer Data Platform, con tecnologia Adobe Experience Platform, per:
 
 * Acquisire dati da più origini
 * Uniscili in un singolo [!DNL real-time customer profile]
@@ -119,7 +119,7 @@ Questo contenuto personalizzato consente a Sarah di trovare rapidamente gli elem
 
 Sarah si distrae e lascia il sito, terminando la sua sessione. Luma può utilizzare i suoi dati in Adobe Experience Platform per aiutarla a riportarla al sito.
 
-Real-time Customer Data Platform, con tecnologia Adobe Experience Platform, è progettato per la gestione della customer experience. Consente alle organizzazioni di:
+Real-Time Customer Data Platform, con tecnologia Adobe Experience Platform, è progettato per la gestione della customer experience. Consente alle organizzazioni di:
 
 * Semplificare l&#39;integrazione e l&#39;attivazione dei dati
 * Gestire l’utilizzo di dati noti e sconosciuti
@@ -134,7 +134,7 @@ Il team di Luma dispone di tutti i dati comportamentali e dei clienti in un’un
 Possono acquisire dati da tutte le seguenti origini:
 
 * Dati delle soluzioni Adobe Experience Cloud esistenti
-* Fonti non basate su Adobi, come il programma fedeltà di Luma, call center e dati di sistema del punto vendita
+* Origini non Adobe, come il programma fedeltà di Luma, il call center e i dati di sistema del punto vendita
 * Dati in streaming in tempo reale da origini dati Luma
 * Dati in tempo reale da soluzioni Adobe (non sono necessari nuovi tag)
 
@@ -142,7 +142,7 @@ Tutti questi dati provenienti da origini diverse vengono uniti in un unico profi
 
 ## Configurazione di un’origine dati
 
-Utilizza [!DNL Real-Time Customer Data Platform] per inserire nuove origini di dati in Platform. Real-Time CDP include un catalogo di origini dati che possono essere aggiunte al profilo in modo rapido e semplice.
+Utilizza [!DNL Real-Time Customer Data Platform] per inserire nuove origini di dati in Experience Platform. Real-Time CDP include un catalogo di origini dati che possono essere aggiunte al profilo in modo rapido e semplice.
 
 ![immagine](assets/luma-source-cat.png)
 
@@ -193,7 +193,7 @@ Tutte le informazioni di profilo di Luma su Sarah vengono visualizzate. Ciò inc
 
 | Categoria | Descrizione |
 |---|---|
-| Identità | Mostra le identità collegate in [!DNL Platform] dalle interazioni di Sarah con Luma su canali e dispositivi. Viene visualizzato il suo ECID dal sito web. La sua identità include anche l’ECID dalla sua app mobile, il suo ID e-mail, un ID del sistema di gestione delle relazioni con i clienti dal set di dati [!DNL Microsoft Dynamics] aggiunto di recente e un ID fedeltà passato in Adobe Experience Platform dal sistema fedeltà Luma. |
+| Identità | Mostra le identità collegate in [!DNL Experience Platform] dalle interazioni di Sarah con Luma su canali e dispositivi. Viene visualizzato il suo ECID dal sito web. La sua identità include anche l’ECID dalla sua app mobile, il suo ID e-mail, un ID del sistema di gestione delle relazioni con i clienti dal set di dati [!DNL Microsoft Dynamics] aggiunto di recente e un ID fedeltà passato in Adobe Experience Platform dal sistema fedeltà Luma. |
 | Eventi | Mostra tutti i dati di interazione di Sarah con il brand Luma. Questo include l’articolo che ha appena visualizzato, tutto ciò che ha visto in passato, le e-mail che ha ricevuto, le sue interazioni con il call center e su quale canale e dispositivo si sono verificate ognuna di queste interazioni. |
 
 Il profilo Real-Time CDP riduce il flusso di lavoro del team di marketing Luma da settimane a minuti e offre possibilità di personalizzazione basate su questa visualizzazione a 360 gradi per il cliente. Il profilo unisce i dati comportamentali di quando ha navigato sul sito prima di accedere, con il suo profilo cliente esistente, creando una visualizzazione completa di Sarah.
@@ -238,7 +238,7 @@ Dopo aver aggiunto il pubblico &quot;Abbandoni del carrello regali&quot;, puoi v
 Seleziona **[!UICONTROL Invia a destinazioni]**.
 
 In Real-Time CDP, Luma può agire direttamente sui propri tipi di pubblico a scopo di personalizzazione.\
-Qui vediamo tutte le destinazioni disponibili per l’invio di questa destinazione da parte di Luma, sia per le soluzioni Adobi che per quelle non Adobi:
+Qui vediamo tutte le destinazioni disponibili per l’invio di questa destinazione da parte di Luma, sia per le soluzioni Adobe che per quelle non Adobe:
 
 ![immagine](assets/luma-dest.png)
 

@@ -1,18 +1,18 @@
 ---
-title: Registrazione lato client per i dati A4T in Platform Web SDK
-description: Scopri come abilitare la registrazione lato client per Adobe Analytics for Target (A4T) utilizzando l’SDK web di Experience Platform.
-seo-title: Client-side logging for A4T data in the Platform Web SDK
+title: Registrazione lato client dei dati A4T in Experience Platform Web SDK
+description: Scopri come abilitare la registrazione lato client per Adobe Analytics for Target (A4T) utilizzando Experience Platform Web SDK.
+seo-title: Client-side logging for A4T data in the Experience Platform Web SDK
 seo-description: Learn how to enable client-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
 keywords: target;a4t;logging;web sdk;experience;platform;
 exl-id: 7071d7e4-66e0-4ab5-a51a-1387bbff1a6d
-source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1085'
+source-wordcount: '1090'
 ht-degree: 0%
 
 ---
 
-# Registrazione lato client per i dati A4T in Platform Web SDK
+# Registrazione lato client dei dati A4T in Experience Platform Web SDK
 
 ## Panoramica {#overview}
 
@@ -28,7 +28,7 @@ Questo documento illustra i passaggi per impostare la registrazione A4T lato cli
 
 ## Prerequisiti {#prerequisites}
 
-Questa esercitazione presuppone che tu abbia familiarità con i concetti e i processi fondamentali relativi all’utilizzo dell’SDK web a scopo di personalizzazione. Per un&#39;introduzione, consulta la seguente documentazione:
+Questo tutorial presuppone che tu abbia familiarità con i concetti e i processi fondamentali relativi all’utilizzo di Web SDK a scopo di personalizzazione. Per un&#39;introduzione, consulta la seguente documentazione:
 
 * [Configurazione del Web SDK](/help/web-sdk/commands/configure/overview.md)
 * [Invio di eventi](/help/web-sdk/commands/sendevent/overview.md)
@@ -36,7 +36,7 @@ Questa esercitazione presuppone che tu abbia familiarità con i concetti e i pro
 
 ## Configurare la registrazione lato client di Analytics {#set-up-client-side-logging}
 
-Le seguenti sottosezioni descrivono come abilitare la registrazione lato client di Analytics per l’implementazione dell’SDK web.
+Le sottosezioni seguenti descrivono come abilitare la registrazione lato client di Analytics per l’implementazione di Web SDK.
 
 ### Abilita registrazione lato client di Analytics {#enable-analytics-client-side-logging}
 
@@ -44,7 +44,7 @@ Per considerare abilitata la registrazione lato client di Analytics per l&#39;im
 
 ![Configurazione dello stream di dati di Analytics disabilitata](../assets/disable-analytics-datastream.png)
 
-### Recupera i dati [!DNL A4T] dall&#39;SDK e inviali ad Analytics {#a4t-to-analytics}
+### Recupera i dati di [!DNL A4T] da SDK e inviali ad Analytics {#a4t-to-analytics}
 
 Per il corretto funzionamento di questo metodo di reporting, è necessario inviare i dati correlati a [!DNL A4T] recuperati dal comando [`sendEvent`](/help/web-sdk/commands/sendevent/overview.md) nell&#39;hit di Analytics.
 
@@ -227,9 +227,9 @@ Le seguenti sottosezioni mostrano come implementare la registrazione lato client
 
 ### Attività del Compositore esperienza basato su moduli {#form-based-composer}
 
-È possibile utilizzare Web SDK per controllare l&#39;esecuzione delle proposte dalle attività [Compositore esperienza basato su Adobe Target Form](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html).
+Puoi utilizzare il Web SDK per controllare l&#39;esecuzione delle proposte dalle attività del [Compositore esperienza basato su Adobe Target Form](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html).
 
-Quando richiedi proposte per un ambito decisionale specifico, la proposta restituita contiene il token Analytics appropriato. Si consiglia di concatenare il comando Platform Web SDK `sendEvent` e di eseguire iterazioni nelle proposte restituite per eseguirle durante la raccolta dei token di Analytics contemporaneamente.
+Quando richiedi proposte per un ambito decisionale specifico, la proposta restituita contiene il token Analytics appropriato. Si consiglia di concatenare il comando `sendEvent` di Experience Platform Web SDK e di eseguire iterazioni nelle proposte restituite per eseguirle durante la raccolta dei token di Analytics contemporaneamente.
 
 È possibile attivare un comando `sendEvent` per un ambito di attività del Compositore esperienza basato su moduli come riportato di seguito:
 
@@ -421,12 +421,12 @@ function getClickAnalyticsPayload(proposition) {
 
 #### Riepilogo dell’implementazione {#implementation-summary}
 
-In sintesi, quando si applicano attività del Compositore esperienza basato su moduli con Platform Web SDK, è necessario eseguire i seguenti passaggi:
+In sintesi, quando si applicano attività del Compositore esperienza basato su moduli con Experience Platform Web SDK, è necessario eseguire i seguenti passaggi:
 
 1. Invia un evento che recupera le offerte delle attività del Compositore esperienza basato su moduli;
 1. Applica le modifiche al contenuto della pagina;
 1. Invia l&#39;evento di notifica `decisioning.propositionDisplay`;
-1. Raccogli i token di visualizzazione di Analytics dalla risposta SDK e crea un payload per l’hit di Analytics;
+1. Raccogli i token di visualizzazione di Analytics dalla risposta di SDK e crea un payload per l’hit di Analytics;
 1. Invia il payload ad Analytics utilizzando l&#39;[API di inserimento dati](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md);
 1. Se nelle proposte distribuite sono presenti metriche di clic, i listener di clic devono essere configurati in modo che, quando viene eseguito un clic, invii l&#39;evento di notifica `decisioning.propositionInteract`. Il gestore `onBeforeEventSend` deve essere configurato in modo che quando si intercettano `decisioning.propositionInteract` eventi, si verifichino le seguenti azioni:
    1. Raccolta dei token di analisi dei clic da `xdm._experience.decisioning.propositions`
@@ -467,13 +467,13 @@ alloy("sendEvent", {
 
 ### Attività del Compositore esperienza visivo {#visual-experience-composer-acitivties}
 
-L&#39;SDK Web consente di gestire le offerte create con [Compositore esperienza visivo](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html).
+Il Web SDK consente di gestire le offerte create con [Compositore esperienza visivo](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html).
 
 >[!NOTE]
 >
 >I passaggi per l&#39;implementazione di questo caso d&#39;uso sono molto simili a quelli per [attività del Compositore esperienza basato su moduli](#form-based-composer). Per ulteriori informazioni, consulta la sezione precedente.
 
-Quando è abilitato il rendering automatico, puoi raccogliere i token di Analytics dalle proposte che sono state eseguite sulla pagina. Si consiglia di concatenare il comando Platform Web SDK `sendEvent` e di eseguire l&#39;iterazione delle proposte restituite per filtrare quelle di cui l&#39;SDK Web ha tentato il rendering.
+Quando è abilitato il rendering automatico, puoi raccogliere i token di Analytics dalle proposte che sono state eseguite sulla pagina. Si consiglia di concatenare il comando di Experience Platform Web SDK `sendEvent` e di eseguire un&#39;iterazione delle proposte restituite per filtrare quelle di cui il Web SDK ha tentato il rendering.
 
 **Esempio**
 
@@ -540,4 +540,4 @@ alloy("configure", {
 
 ## Passaggi successivi {#next-steps}
 
-Questa guida tratta la registrazione lato client per i dati A4T nell’SDK per web. Per ulteriori informazioni su come gestire i dati A4T nell&#39;Edge Network, consulta la guida alla [registrazione lato server](server-side.md).
+Questa guida tratta la registrazione lato client dei dati A4T nel Web SDK. Per ulteriori informazioni su come gestire i dati A4T in Edge Network, consulta la guida alla [registrazione lato server](server-side.md).

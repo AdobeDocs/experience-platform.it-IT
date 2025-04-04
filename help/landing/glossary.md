@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Glossario di Adobe Experience Platform
 description: Un glossario di terminologia importante in Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '7996'
+source-wordcount: '8009'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ## A
 
-**Controllo degli accessi**: il controllo degli accessi basato sul ruolo consente agli amministratori di assegnare l&#39;accesso e le autorizzazioni agli utenti di Experience Platform. Le autorizzazioni includono la possibilità di visualizzare e/o utilizzare funzioni di Experience Platform, ad esempio la creazione di sandbox, la definizione di schemi e la gestione di set di dati.
+**Controllo degli accessi**: il controllo degli accessi basato sul ruolo consente agli amministratori di assegnare l&#39;accesso e le autorizzazioni agli utenti di Experience Platform. Le autorizzazioni includono la possibilità di visualizzare e/o utilizzare le funzioni di Experience Platform, ad esempio la creazione di sandbox, la definizione di schemi e la gestione di set di dati.
 
 **ID chiave di accesso**: un ID chiave di accesso è un identificatore univoco associato a una chiave di accesso segreta [!DNL Amazon] S3. L&#39;ID della chiave di accesso e la chiave di accesso segreta vengono utilizzati insieme per firmare le richieste di [!DNL Amazon Web Services] (AWS).
 
@@ -25,9 +25,9 @@ ht-degree: 0%
 
 **Attività**: in [!DNL Offer Decisioning] un&#39;attività contiene la logica utilizzata per determinare la selezione di un&#39;offerta.
 
-**Amministratore**: uno o più utenti dell&#39;organizzazione che possono configurare e personalizzare le autorizzazioni, ad Experience Platform in Adobe Admin Console.
+**Amministratore**: uno o più utenti dell&#39;organizzazione che possono configurare e personalizzare le autorizzazioni per Experience Platform in Adobe Admin Console.
 
-**Adobe Admin Console**: Adobe Admin Console fornisce una posizione centrale per la gestione delle adesioni ai prodotti Adobe e dell&#39;accesso per la tua organizzazione. Tramite la console, gli amministratori possono concedere a gruppi di utenti le autorizzazioni di accesso per varie funzionalità di Platform, ad esempio &quot;Gestisci set di dati&quot;, &quot;Visualizza set di dati&quot; o &quot;Gestisci profili&quot;.
+**Adobe Admin Console**: Adobe Admin Console fornisce una posizione centrale per la gestione delle adesioni ai prodotti Adobe e dell&#39;accesso per la tua organizzazione. Tramite la console, gli amministratori possono concedere a gruppi di utenti le autorizzazioni di accesso per varie funzionalità di Experience Platform, ad esempio &quot;Gestisci set di dati&quot;, &quot;Visualizza set di dati&quot; o &quot;Gestisci profili&quot;.
 
 **Adobe Experience Platform**: Adobe Experience Platform standardizza dati e contenuti a livello aziendale, fornendo profili di consumatori in tempo reale, abilitando la scienza dei dati e accelerando la velocità dei contenuti per stimolare la personalizzazione dell&#39;esperienza nel percorso del cliente.
 
@@ -35,19 +35,19 @@ ht-degree: 0%
 
 **Servizio di segmentazione di Adobe Experience Platform**: consente di creare segmenti e generare tipi di pubblico dai dati del profilo cliente in tempo reale. Questi tipi di pubblico possono quindi essere esportati nei propri set di dati all’interno del Data Lake.
 
-**Adobe Intelligent Services**: i servizi intelligenti come Attribution AI e IA per l&#39;analisi dei clienti sono modelli basati sull&#39;apprendimento automatico e sull&#39;intelligenza artificiale appositamente creati e che richiedono l&#39;esecuzione e il funzionamento di Experience Platform.
+**Adobe Intelligent Services**: i servizi intelligenti come IA per l&#39;attribuzione e IA per l&#39;analisi dei clienti sono modelli di apprendimento automatico basati sull&#39;intelligenza artificiale appositamente creati e che richiedono l&#39;esecuzione e il funzionamento di Experience Platform.
 
-**Adobe I/O**: Adobe I/O fa parte di Experience Platform e fornisce l&#39;accesso a tutto ciò di cui gli sviluppatori hanno bisogno per integrare, estendere e personalizzare Platform, inclusi API, eventi, console per sviluppatori e strumenti utili.
+**Adobe I/O**: Adobe I/O fa parte di Experience Platform e fornisce l&#39;accesso a tutto ciò di cui gli sviluppatori hanno bisogno per integrare, estendere e personalizzare Experience Platform, inclusi API, eventi, console per sviluppatori e strumenti utili.
 
-**Adobe Sensei**: Adobe Sensei è il framework di intelligence che attiva Experience Platform. Fornisce inoltre una serie di servizi di intelligenza artificiale che consentono ai brand di migliorare la loro capacità di fornire ai clienti esperienze personalizzate in tempo reale.
+**Adobe Sensei**: Adobe Sensei è il framework di intelligence che alimenta Experience Platform. Fornisce inoltre una serie di servizi di intelligenza artificiale che consentono ai brand di migliorare la loro capacità di fornire ai clienti esperienze personalizzate in tempo reale.
 
 **Bucket Amazon S3**: [!DNL Amazon S3] bucket sono i contenitori fondamentali per i dati memorizzati nell&#39;ecosistema [!DNL Amazon]. I bucket contengono oggetti, ogni oggetto viene memorizzato e recuperato utilizzando una chiave univoca assegnata dagli sviluppatori.
 
-**Connettore Amazon S3**: il connettore [!DNL Amazon] S3 consente ai clienti Experience Platform di connettersi e accedere in modo sicuro ai dati di [!DNL Amazon] S3.
+**Connettore Amazon S3**: il connettore [!DNL Amazon] S3 consente ai clienti di Experience Platform di connettersi e accedere in modo sicuro ai dati di [!DNL Amazon] S3.
 
 **APA**: [[!DNL Australia Privacy Act (Privacy Act)]](https://www.oaic.gov.au/privacy/the-privacy-act) promuove e protegge la privacy degli individui e regola il modo in cui le agenzie governative australiane e l&#39;organizzazione gestiscono le informazioni personali. [!DNL Privacy Act] include i principi applicabili alle organizzazioni del settore privato. Ad esempio, gli utenti hanno il diritto di comprendere il motivo per cui le informazioni personali vengono raccolte e come verranno utilizzate, la possibilità di accedere ai loro dati, cancellarli e correggerli.
 
-**Aggiungi strategia di salvataggio**: la strategia di salvataggio &quot;aggiungi&quot; è un&#39;opzione utilizzata quando si specificano dati di terze parti da acquisire tramite una connessione e si aggiungono nuovi dati o righe alla fine del set di dati. Le righe precedentemente acquisite rimangono intatte e solo le righe create dall’ultima esecuzione pianificata vengono acquisite in Experience Platform. Tutte le righe modificate nel sistema di origine rimangono invariate all&#39;Experience Platform.
+**Aggiungi strategia di salvataggio**: la strategia di salvataggio &quot;aggiungi&quot; è un&#39;opzione utilizzata quando si specificano dati di terze parti da acquisire tramite una connessione e si aggiungono nuovi dati o righe alla fine del set di dati. Le righe precedentemente acquisite rimangono intatte e solo le righe create dall’ultima esecuzione pianificata vengono acquisite in Experience Platform. Tutte le righe modificate nel sistema di origine rimangono invariate in Experience Platform.
 
 **Array**: gli array vengono utilizzati per gli elementi ordinati con lo stesso tipo di dati.
 
@@ -55,9 +55,9 @@ ht-degree: 0%
 
 **Attributi**: gli attributi sono caratteristiche specificate che rappresentano un profilo.
 
-**Unione attributi**: quando si definisce un criterio di unione utilizzando Real-Time Customer Profile API, l&#39;oggetto `attributeMerge` indica il modo in cui il criterio di unione assegnerà priorità agli attributi di profilo in caso di conflitti di dati. Equivale a selezionare un [!UICONTROL metodo di unione] durante la definizione di un criterio di unione nell&#39;interfaccia utente di Platform.
+**Unione attributi**: quando si definisce un criterio di unione utilizzando Real-Time Customer Profile API, l&#39;oggetto `attributeMerge` indica il modo in cui il criterio di unione assegnerà priorità agli attributi di profilo in caso di conflitti di dati. Equivale a selezionare un [!UICONTROL metodo di unione] durante la definizione di un criterio di unione nell&#39;interfaccia utente di Experience Platform.
 
-**Attribution AI**: [!DNL Attribution AI] è un servizio intelligente basato su Adobe Sensei che fornisce funzionalità algoritmiche di attribuzione multicanale nell&#39;intero ciclo di vita del cliente.
+**IA per l&#39;attribuzione**: [!DNL Attribution AI] è un servizio intelligente basato su Adobe Sensei che fornisce funzionalità algoritmiche di attribuzione multicanale per l&#39;intero ciclo di vita del cliente.
 
 **Pubblico**: un pubblico è il set risultante di profili che soddisfano i criteri di una definizione di segmento.
 
@@ -69,11 +69,11 @@ ht-degree: 0%
 
 **Backfill**: per le origini pianificate, l&#39;opzione di backfill consente l&#39;acquisizione di dati storici.
 
-**Periodo di backfill**: il periodo di backfill è un&#39;opzione che consente di impostare il periodo di tempo per l&#39;acquisizione di dati storici di terze parti tramite una connessione di origine. Selezionando un periodo di backfill di &quot;per sempre&quot; acquisirà l’intera cronologia dei dati sorgente in Experience Platform.
+**Periodo di backfill**: il periodo di backfill è un&#39;opzione che consente di impostare il periodo di tempo per l&#39;acquisizione di dati storici di terze parti tramite una connessione di origine. Selezionando un periodo di retrocompilazione di &quot;per sempre&quot;, l’intera cronologia dei dati sorgente verrà acquisita in Experience Platform.
 
 **Batch**: un batch è un insieme di dati raccolti in un periodo di tempo ed elaborati insieme come una singola unità. I set di dati sono composti da più batch.
 
-**ID batch**: un ID batch è un identificatore generato dall&#39;Adobe per un batch di dati.
+**ID batch**: un ID batch è un identificatore generato da Adobe per un batch di dati.
 
 **Acquisizione batch**: l&#39;acquisizione batch ti consente di acquisire dati in Experience Platform come file batch. I batch sono unità di dati costituite da uno o più file da acquisire come una singola unità.
 
@@ -87,7 +87,7 @@ ht-degree: 0%
 
 **Limitazione**: in [!DNL Offer Decisioning], nelle regole di decisione viene utilizzato il limite (noto anche come limite di frequenza) per definire quante volte viene presentata un&#39;offerta. Esistono due tipi di limite: uno indica quante volte un’offerta può essere proposta al pubblico target combinato (denominato &quot;limite globale&quot;) e l’altro indica quante volte un’offerta può essere proposta allo stesso utente finale (denominato &quot;limite del profilo&quot;).
 
-**Catalogo**: nel contesto di origini e destinazioni, un catalogo è una raccolta con connessioni disponibili ad applicazioni Adobe e tecnologie di terze parti. Da non confondere con [!DNL Catalog Service].
+**Catalogo**: nel contesto delle origini e delle destinazioni, un catalogo è una raccolta con connessioni disponibili alle applicazioni Adobe e alle tecnologie di terze parti. Da non confondere con [!DNL Catalog Service].
 
 **[!DNL Catalog Service]**: [!DNL Catalog Service] (talvolta denominato [!DNL Catalog]) è il sistema di registrazione per la posizione e la derivazione dei dati in Adobe Experience Platform. Mentre tutti i dati acquisiti in Experience Platform vengono memorizzati nel data lake come file e directory, [!DNL Catalog] contiene i metadati e le descrizioni di tali file e directory a scopo di ricerca, monitoraggio e governance dei dati.
 
@@ -155,17 +155,17 @@ ht-degree: 0%
 
 **Elemento dati**: nel contesto dei tag, un elemento dati è un puntatore utilizzato all&#39;interno di regole ed estensioni per puntare a dati specifici presenti nel dispositivo client.
 
-**Acquisizione dei dati**: l&#39;acquisizione dei dati è il processo di aggiunta di dati da un&#39;origine all&#39;Experience Platform. I dati possono essere acquisiti in Platform in diversi modi, tra cui streaming, batch o aggiunti tramite connettori di origine.
+**Acquisizione dei dati**: l&#39;acquisizione dei dati è il processo di aggiunta di dati da un&#39;origine ad Experience Platform. I dati possono essere acquisiti in Experience Platform in diversi modi, tra cui streaming, batch o aggiunti tramite connettori di origini.
 
 **Livello dati**: nel contesto dei tag, un livello dati è una struttura di dati esistente sul dispositivo client che contiene metadati sul contesto in cui viene visualizzata una pagina o una schermata.
 
 **Governance dei dati**: la governance dei dati include le strategie e le tecnologie utilizzate per garantire la conformità dei dati alle normative e alle politiche organizzative relative all&#39;utilizzo dei dati.
 
-**Partner di integrazione dei dati**: i partner di integrazione dei dati semplificano e automatizzano il caricamento e la trasformazione di grandi volumi di dati da oltre 200 origini all&#39;Experience Platform senza scrivere codice.
+**Partner di integrazione dei dati**: i partner di integrazione dei dati semplificano e automatizzano il caricamento e la trasformazione di grandi volumi di dati da oltre 200 origini ad Experience Platform senza scrivere codice.
 
 **Etichette set di dati**: è possibile aggiungere etichette di utilizzo dati ai set di dati. Tutti i campi all’interno di tale set di dati ereditano le etichette del set di dati.
 
-**Data Science Workspace**: [!DNL Data Science Workspace] in Experience Platform consente ai clienti di creare modelli di apprendimento automatico utilizzando i dati nelle applicazioni Platform e Adobe per creare segmenti intelligenti, generare informazioni approfondite e fornire previsioni, consentendo di migliorare notevolmente le esperienze digitali degli utenti finali.
+**Data Science Workspace**: [!DNL Data Science Workspace] in Experience Platform consente ai clienti di creare modelli di apprendimento automatico utilizzando i dati nelle applicazioni Experience Platform e Adobe per creare segmenti intelligenti, generare informazioni approfondite e fornire previsioni, consentendo di migliorare notevolmente le esperienze digitali degli utenti finali.
 
 **Origine dati**: un&#39;origine dati è un&#39;origine dei dati designata dall&#39;utente. Esempi di un’origine dati sono un’app mobile, eventi di profilo e/o esperienza, eventi di profilo del sito web o un CRM.
 
@@ -177,13 +177,13 @@ ht-degree: 0%
 
 **Etichette di utilizzo dati**: le etichette di utilizzo dati consentono di categorizzare i dati che riflettono considerazioni relative alla privacy e condizioni contrattuali conformi alle normative e ai criteri aziendali. Le etichette di utilizzo dei dati aggiunte a un set di dati vengono ereditate o applicate a tutti i campi all’interno di tale set di dati. Le etichette di utilizzo dei dati possono essere applicate direttamente ai campi.
 
-**Flusso di dati**: un flusso di dati è una pipeline virtuale di dati che fluisce in Platform da un&#39;origine e in uscita verso le destinazioni.
+**Flusso di dati**: un flusso di dati è una pipeline virtuale di dati che fluisce in Experience Platform da un&#39;origine e in uscita verso le destinazioni.
 
-**Esecuzione del flusso di dati**: un&#39;esecuzione del flusso di dati è un flusso di dati che termina in Experience Platform in base a una pianificazione specificata dall&#39;utente.
+**Esecuzione flusso di dati**: un&#39;esecuzione flusso di dati è un flusso di dati che arriva in Experience Platform in base a una pianificazione specificata dall&#39;utente.
 
 **Set di dati**: un set di dati è un costrutto di archiviazione e gestione per una raccolta di dati, in genere una tabella, che contiene uno schema (colonne) e campi (righe).
 
-**ID set di dati**: identificatore generato dall&#39;Adobe per un set di dati acquisito.
+**ID set di dati**: identificatore generato da Adobe per un set di dati acquisito.
 
 **Output del set di dati**: l&#39;output del set di dati fornisce un meccanismo per determinare quale opzione &quot;Crea tabella come selezionata&quot; verrà utilizzata per una particolare esecuzione di [!DNL Query Service].
 
@@ -191,11 +191,11 @@ ht-degree: 0%
 
 **Colonna delta**: una colonna delta consente di selezionare un campo dati di origine per rappresentare una marca temporale per l&#39;acquisizione incrementale.
 
-**Strategia di salvataggio delta**: la strategia di salvataggio delta è un&#39;opzione per acquisire dati di terze parti tramite una connessione di origine. L’opzione consente all’utente di specificare che le righe di dati di origine nuove o modificate vengono acquisite in Experience Platform. Alla fine del set di dati vengono aggiunte nuove righe e quelle modificate vengono aggiornate nel set di dati in Experience Platform.
+**Strategia di salvataggio delta**: la strategia di salvataggio delta è un&#39;opzione per acquisire dati di terze parti tramite una connessione di origine. L’opzione consente all’utente di specificare che le righe di dati di origine nuove o modificate vengono acquisite in Experience Platform. Vengono aggiunte nuove righe alla fine del set di dati e le righe modificate vengono aggiornate nel set di dati in Experience Platform.
 
-**Descrittore**: in Experience Data Model (XDM), un descrittore è un set aggiuntivo di metadati relativi allo schema che descrive un comportamento specifico per un campo. I descrittori possono essere utilizzati da Experience Platform per comprendere il comportamento dello schema desiderato, ad esempio la relazione tra due schemi.
+**Descrittore**: in Experience Data Model (XDM), un descrittore è un set aggiuntivo di metadati relativi allo schema che descrive un comportamento specifico per un campo. I descrittori possono essere utilizzati da Experience Platform per comprendere il comportamento previsto dello schema, ad esempio la relazione tra due schemi.
 
-**Destinazione**: una destinazione è un termine generale per qualsiasi endpoint, ad esempio un&#39;applicazione di Adobe, una piattaforma pubblicitaria, un servizio di archiviazione cloud o un servizio di marketing, in cui viene attivato e recapitato un pubblico.
+**Destinazione**: una destinazione è un termine generale per qualsiasi endpoint, ad esempio un&#39;applicazione Adobe, una piattaforma pubblicitaria, un servizio di archiviazione cloud o un servizio di marketing, in cui viene attivato e recapitato un pubblico.
 
 **Categoria di destinazione**: una categoria di destinazione è un raggruppamento di destinazioni con caratteristiche simili.
 
@@ -213,7 +213,7 @@ ht-degree: 0%
 
 **Azione di marketing targeting e-mail**: azione di marketing che utilizza i dati nelle campagne di targeting e-mail.
 
-**Codice di incorporamento**: nel contesto dei tag, il codice di incorporamento è un tag script inserito nel HTML in un sito o in un ambiente. Il codice di incorporamento indica al browser dove recuperare la build.
+**Codice di incorporamento**: nel contesto dei tag, il codice di incorporamento è un tag script inserito in HTML in un sito o in un ambiente. Il codice di incorporamento indica al browser dove recuperare la build.
 
 **Enumerazione**: un&#39;enumerazione (enum) è un campo XDM vincolato a un set di valori predefiniti.
 
@@ -239,7 +239,7 @@ ht-degree: 0%
 
 **Estensione**: nel contesto dei tag, un&#39;estensione è un pacchetto di funzionalità aggiunto a una proprietà tag. Un’estensione si concentra solitamente su una particolare soluzione di marketing o analisi e fornisce gli strumenti necessari per distribuire tale tecnologia in un ambiente client.
 
-**Pacchetto di estensione**: nel contesto dei tag, un pacchetto di estensione è un file ZIP creato e caricato da uno sviluppatore di estensioni che fornisce tutto il necessario affinché gli utenti dei tag possano installare l&#39;estensione all&#39;interno della propria proprietà. Un pacchetto di estensione contiene un manifesto che specifica le informazioni sull’estensione, le HTML/JavaScript necessarie agli utenti finali per configurare il comportamento dell’estensione tag e l’eseguibile JavaScript consegnato all’ambiente client (se necessario).
+**Pacchetto di estensione**: nel contesto dei tag, un pacchetto di estensione è un file ZIP creato e caricato da uno sviluppatore di estensioni che fornisce tutto il necessario affinché gli utenti dei tag possano installare l&#39;estensione all&#39;interno della propria proprietà. Un pacchetto di estensione contiene un manifesto che specifica le informazioni sull’estensione, il HTML/JavaScript necessario agli utenti finali per configurare il comportamento dell’estensione tag e l’eseguibile JavaScript consegnato all’ambiente client (se necessario).
 
 ## F
 
@@ -259,7 +259,7 @@ ht-degree: 0%
 
 ## G
 
-**Recinto geografico**: un recinto geografico virtuale è un confine geografico virtuale, definito dalla tecnologia GPS o RFID, che consente al software di attivare una risposta quando un dispositivo mobile entra o esce da una determinata area.
+**Recinto geografico**: un recinto geografico virtuale è un confine geografico virtuale, definito dalla tecnologia GPS o RFID, che consente al software di attivare una risposta quando un dispositivo mobile entra in una determinata area o ne esce.
 
 **RGPD (Regolamento generale sulla protezione dei dati)**: il regolamento generale sulla protezione dei dati (RGPD) è un quadro giuridico che definisce le linee guida per la raccolta e l&#39;elaborazione di informazioni personali di persone all&#39;interno dell&#39;Unione europea (UE). Il RGPD stabilisce i principi per la gestione dei dati e i diritti dei singoli e copre tutte le aziende che trattano dati di cittadini dell’UE.
 
@@ -297,15 +297,15 @@ ht-degree: 0%
 
 **Etichetta di utilizzo dati I2**: l&#39;etichetta di utilizzo dati `I2` viene utilizzata per classificare i dati che possono essere utilizzati in combinazione con altri dati per identificare o contattare indirettamente una persona specifica.
 
-**Organizzazione IMS**: un&#39;organizzazione IMS (a volte indicata come organizzazione IMS) è il nome utilizzato per identificare un&#39;azienda o un gruppo specifico all&#39;interno di un&#39;azienda in tutti i prodotti Adobe. Gli amministratori possono configurare e gestire l’accesso e le autorizzazioni delle funzioni per gli utenti di un’organizzazione.
+**Organizzazione IMS**: un&#39;organizzazione IMS (a volte indicata come organizzazione IMS) è il nome utilizzato per identificare un&#39;azienda o un gruppo specifico all&#39;interno di un&#39;azienda nei vari prodotti Adobe. Gli amministratori possono configurare e gestire l’accesso e le autorizzazioni delle funzioni per gli utenti di un’organizzazione.
 
 **Acquisizione**: vedi l&#39;acquisizione dei dati.
 
-**Pianificazione acquisizione**: una pianificazione dell&#39;acquisizione fornisce opzioni basate sul tempo per l&#39;acquisizione da un&#39;origine all&#39;Experience Platform.
+**Pianificazione dell&#39;acquisizione**: una pianificazione dell&#39;acquisizione fornisce opzioni basate sul tempo per l&#39;acquisizione da un&#39;origine in Experience Platform.
 
 **Funzione di input**: una funzione di input è specificata nella mappatura delle caratteristiche ed è utilizzata da un modello di apprendimento automatico per effettuare previsioni.
 
-**[!DNL Intelligent Services]**: [!DNL Intelligent Services] come [!DNL Attribution AI] e [!DNL Customer AI] sono modelli basati sull&#39;intelligenza artificiale e sull&#39;apprendimento automatico che richiedono l&#39;esecuzione di Experience Platform (o di applicazioni basate su Platform come Adobe Real-time Customer Data Platform) e il loro funzionamento.
+**[!DNL Intelligent Services]**: [!DNL Intelligent Services] come [!DNL Attribution AI] e [!DNL Customer AI] sono modelli basati sull&#39;apprendimento automatico e sull&#39;intelligenza artificiale che richiedono l&#39;esecuzione e il funzionamento di Experience Platform (o di applicazioni basate su Experience Platform come Adobe Real-Time Customer Data Platform).
 
 **Impostazione destinazione basata su interessi o personalizzazione**: il targeting basato su interessi, noto anche come personalizzazione, si verifica se vengono soddisfatte le tre condizioni seguenti:
 
@@ -315,9 +315,9 @@ ht-degree: 0%
 
 ## J
 
-**[!DNL JupyterLab]**: interfaccia open-source basata su Web per il progetto [!DNL Jupyter] integrata nell&#39;interfaccia utente di Platform.
+**[!DNL JupyterLab]**: interfaccia open-source basata su Web per il progetto [!DNL Jupyter] integrata nell&#39;interfaccia utente di Experience Platform.
 
-**[!DNL Jupyter Notebook]**: Integrato con JupyterLab, Jupyter Notebooks consente di eseguire operazioni di pulizia e trasformazione dei dati, simulazione numerica, modellazione statistica, visualizzazione dei dati, apprendimento automatico e altro ancora sui dati Experienci Platform in diversi linguaggi quali Python, Scala e PySpark.
+**[!DNL Jupyter Notebook]**: Integrato con JupyterLab, Jupyter Notebooks consente di eseguire operazioni di pulizia e trasformazione dei dati, simulazione numerica, modellazione statistica, visualizzazione dei dati, apprendimento automatico e altro ancora sui dati Experience Platform in diversi linguaggi quali Python, Scala e PySpark.
 
 ## K
 
@@ -339,11 +339,11 @@ ht-degree: 0%
 
 **Mappatura**: la mappatura dei dati è il processo di mappatura dei campi dei dati di origine ai campi di destinazione correlati in una destinazione.
 
-**Azione di marketing**: nel framework di governance dei dati, un&#39;azione di marketing (nota anche come caso di utilizzo di marketing) è un&#39;azione intrapresa da un consumatore di dati Experience Platform, per la quale è necessario verificare la presenza di violazioni dei criteri di utilizzo dei dati.
+**Azione di marketing**: nel framework di governance dei dati, un&#39;azione di marketing (nota anche come caso di utilizzo di marketing) è un&#39;azione eseguita da un consumatore di dati di Experience Platform, per la quale è necessario verificare la presenza di violazioni dei criteri di utilizzo dei dati.
 
-**Metodo di unione**: quando si definisce un criterio di unione utilizzando l&#39;interfaccia utente di Platform, il metodo di unione specifica il modo in cui assegnare la priorità ai frammenti di dati quando si verifica un conflitto. Quando si utilizza l&#39;API Real-Time Customer Profile per definire un criterio di unione, il metodo di unione viene determinato utilizzando l&#39;oggetto `attributeMerge`.
+**Metodo di unione**: quando si definisce un criterio di unione utilizzando l&#39;interfaccia utente di Experience Platform, il metodo di unione specifica il modo in cui assegnare la priorità ai frammenti di dati quando si verifica un conflitto. Quando si utilizza l&#39;API Real-Time Customer Profile per definire un criterio di unione, il metodo di unione viene determinato utilizzando l&#39;oggetto `attributeMerge`.
 
-**Criterio di unione**: i criteri di unione sono regole utilizzate da Experience Platform per determinare come i frammenti di dati dei clienti provenienti da più origini verranno combinati per creare un singolo profilo. Quando si verifica un conflitto di dati, il criterio di unione determina i dati a cui assegnare la priorità per l’inclusione nel profilo.
+**Criterio di unione**: i criteri di unione sono regole utilizzate da Experience Platform per determinare come combinare i frammenti di dati dei clienti provenienti da più origini per creare un singolo profilo. Quando si verifica un conflitto di dati, il criterio di unione determina i dati a cui assegnare la priorità per l’inclusione nel profilo.
 
 **MHMDAa**: [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&amp;full=true) migliora i diritti di privacy per i consumatori relativi ai dati di integrità. Impone la divulgazione, il consenso dei consumatori e i diritti di cancellazione per i dati sanitari e vieta la vendita di dati sanitari senza autorizzazione. Inoltre, la legge rende illegale l&#39;uso di recinti geografici intorno alle strutture sanitarie.
 
@@ -391,9 +391,9 @@ ht-degree: 0%
 
 **Posizionamenti**: per posizionamento si intende la posizione e/o il contesto in cui un’offerta viene visualizzata da un utente finale.
 
-**Area di lavoro criteri**: area di lavoro nell&#39;interfaccia utente di Platform che consente agli amministratori dei dati di visualizzare e gestire le etichette e i criteri di utilizzo dei dati per l&#39;organizzazione.
+**Area di lavoro criteri**: area di lavoro nell&#39;interfaccia utente di Experience Platform che consente agli amministratori dei dati di visualizzare e gestire le etichette e i criteri di utilizzo dei dati per la tua organizzazione.
 
-**Criterio**: un criterio di utilizzo dati è una regola che specifica azioni di marketing soggette a restrizioni in base all&#39;applicazione di etichette di utilizzo applicate ai dati di Platform.
+**Criterio**: un criterio di utilizzo dati è una regola che specifica azioni di marketing soggette a restrizioni in base all&#39;applicazione di etichette di utilizzo applicate ai dati di Experience Platform.
 
 **Applicazione dei criteri**: consente di applicare criteri di utilizzo dei dati con azioni di marketing applicate per impedire operazioni sui dati che costituiscono violazioni dei criteri all&#39;interno di un&#39;organizzazione.
 
@@ -433,11 +433,11 @@ ht-degree: 0%
 
 ## R
 
-**Real-time Customer Data Platform**: Adobe Real-time Customer Data Platform (Real-Time CDP) riunisce dati noti e sconosciuti dei clienti per creare profili cliente affidabili con integrazione semplificata, segmentazione intelligente e attivazione in tempo reale nel percorso di clienti digitali.
+**Real-Time Customer Data Platform**: Adobe Real-Time Customer Data Platform (Real-Time CDP) riunisce dati noti e sconosciuti dei clienti per creare profili cliente affidabili con integrazione semplificata, segmentazione intelligente e attivazione in tempo reale nel percorso di clienti digitali.
 
 **Profilo cliente in tempo reale**: Profilo cliente in tempo reale (talvolta denominato Profilo) fornisce una visualizzazione olistica di ogni singolo cliente combinando dati provenienti da più canali, inclusi online, offline, CRM e di terze parti. Il profilo ti consente di consolidare i dati dei clienti in singoli profili, offrendo account fruibili e con marca temporale per ogni interazione con il cliente.
 
-**Ricetta**: una ricetta è il termine Adobe per una specifica di modello ed è un contenitore di livello superiore che rappresenta processi di apprendimento automatico specifici, algoritmi di intelligenza artificiale, logica di elaborazione e parametri di configurazione necessari per generare ed eseguire un modello addestrato e quindi contribuire a risolvere problemi di business specifici.
+**Ricetta**: una ricetta è il termine di Adobe per una specifica di modello ed è un contenitore di livello superiore che rappresenta processi di apprendimento automatico specifici, algoritmi di intelligenza artificiale, logica di elaborazione e parametri di configurazione necessari per generare ed eseguire un modello addestrato e quindi contribuire a risolvere problemi di business specifici.
 
 **Record**: un record è costituito da dati che persistono come righe in un set di dati.
 
@@ -449,7 +449,7 @@ ht-degree: 0%
 
 **Risorsa**: nel contesto dei tag, una risorsa è un termine generico che fa riferimento alle opzioni che l&#39;utente tagsa può configurare all&#39;interno dell&#39;ambiente client, inclusi estensioni, elementi dati e regole.
 
-**Controllo dell&#39;accesso basato sul ruolo**: il controllo dell&#39;accesso basato sul ruolo consente agli amministratori di assegnare l&#39;accesso e le autorizzazioni agli utenti di Experience Platform. Le autorizzazioni includono la possibilità di visualizzare e/o utilizzare funzioni di Experience Platform, ad esempio la creazione di sandbox, la definizione di schemi e la gestione di set di dati.
+**Controllo dell&#39;accesso basato sul ruolo**: il controllo dell&#39;accesso basato sul ruolo consente agli amministratori di assegnare l&#39;accesso e le autorizzazioni agli utenti di Experience Platform. Le autorizzazioni includono la possibilità di visualizzare e/o utilizzare le funzioni di Experience Platform, ad esempio la creazione di sandbox, la definizione di schemi e la gestione di set di dati.
 
 **Regola**: nel contesto dei tag, una regola è una raccolta di componenti che definiscono un set specifico di eventi, condizioni e azioni da raggruppare in modo logico.
 
@@ -461,7 +461,7 @@ ht-degree: 0%
 
 **Dati di esempio**: i dati di esempio sono un&#39;anteprima di un file di dati, in genere le prime 100 righe, che fornisce a un data scientist o a un ingegnere un&#39;idea dello schema o dei dati presenti nel file di dati.
 
-**Sandbox**: una sandbox è un costrutto virtuale che suddivide una singola istanza Platform in un ambiente virtuale separato, al fine di agevolare lo sviluppo e l&#39;evoluzione delle applicazioni di esperienza digitale.
+**Sandbox**: una sandbox è un costrutto virtuale che suddivide una singola istanza di Experience Platform in un ambiente virtuale separato, al fine di agevolare lo sviluppo e l&#39;evoluzione delle applicazioni di esperienza digitale.
 
 **Ripristino sandbox**: con un ripristino sandbox vengono eliminati tutti i dati, inclusi dati, profili e segmenti all&#39;interno di una sandbox. I ripristini delle sandbox possono influire sui dati connessi a destinazioni interne o esterne.
 
@@ -475,7 +475,7 @@ ht-degree: 0%
 
 **Gruppo di campi dello schema**: in Experience Data Model (XDM), un gruppo di campi dello schema consente agli utenti di estendere i campi riutilizzabili per definire uno o più attributi da includere in uno schema.
 
-**Libreria schemi**: la libreria schemi contiene le risorse XDM standard del settore rese disponibili da Adobe, nonché le risorse personalizzate definite dall&#39;organizzazione.
+**Libreria schemi**: la libreria schemi contiene le risorse XDM standard disponibili in Adobe e le risorse personalizzate definite dall&#39;organizzazione.
 
 **Schema Registry**: Schema Registry fornisce un&#39;interfaccia utente e un&#39;API RESTful utilizzate per visualizzare e gestire tutte le risorse relative allo schema nella Raccolta schemi.
 
@@ -499,7 +499,7 @@ ht-degree: 0%
 
 **Segmentazione**: la segmentazione è il processo di suddivisione di un ampio gruppo di clienti, potenziali clienti o consumatori in gruppi più piccoli che condividono attributi simili e rispondono in modo simile a specifiche strategie di marketing.
 
-**Sensei ML Framework**: Sensei ML Framework è un framework di apprendimento automatico unificato che sfrutta i dati Experienci Platform per consentire ai data scientist di sviluppare servizi di intelligence basati su apprendimento automatico in modo più veloce, scalabile e riutilizzabile.
+**Sensei ML Framework**: Sensei ML Framework è un framework di machine learning (ML) unificato che sfrutta i dati di Experience Platform per consentire ai data scientist di sviluppare servizi di intelligence basati su ML in modo più rapido, scalabile e riutilizzabile.
 
 **Etichette sensibili (&quot;S&quot;)**: le etichette sensibili (&quot;S&quot;) vengono utilizzate per categorizzare i dati ritenuti sensibili, ad esempio diversi tipi di dati comportamentali o geografici che si desidera contrassegnare come sensibili.
 
@@ -511,7 +511,7 @@ ht-degree: 0%
 
 **Etichetta di utilizzo dati S2**: un&#39;etichetta di utilizzo dati `S2` viene utilizzata per classificare i dati che possono essere utilizzati per determinare un&#39;area recinto geografico definita in modo ampio.
 
-**Source**: un&#39;origine è un termine generale per qualsiasi connettore di input in Platform. Vedi anche: Connettore Source
+**Source**: un&#39;origine è un termine generale per qualsiasi connettore di input in Experience Platform. Vedi anche: Connettore Source
 
 **Attributo Source**: un attributo di origine è un campo nel set di dati di origine. Gli attributi Source sono mappati sui campi schema di destinazione.
 
@@ -521,11 +521,11 @@ ht-degree: 0%
 
 **Connettore Source**: i connettori Source (noti anche come origini) consentono agli utenti di acquisire facilmente dati da più origini, consentendo la strutturazione, l&#39;etichettatura e il miglioramento dei dati tramite i servizi Experience Platform. I dati possono essere acquisiti da diverse origini, ad esempio archiviazione basata su cloud, software di terze parti e sistemi di gestione delle relazioni con i clienti.
 
-**Connessione in streaming**: una connessione in streaming è un endpoint univoco fornito da Adobe e associato alla tua organizzazione per lo streaming dei dati in Experience Platform.
+**Connessione in streaming**: una connessione in streaming è un endpoint univoco fornito da Adobe e associato alla tua organizzazione per lo streaming di dati in Experience Platform.
 
 **Spazio dei nomi identità standard**: gli spazi dei nomi identità standard sono spazi dei nomi identità predefiniti forniti da Adobe, che rappresentano soluzioni standard del settore comunemente utilizzate per identificare i clienti.
 
-**Acquisizione in streaming**: l&#39;acquisizione in streaming ti consente di inviare dati da dispositivi lato client e lato server all&#39;Experience Platform in tempo reale.
+**Acquisizione in streaming**: l&#39;acquisizione in streaming ti consente di inviare dati da dispositivi lato client e lato server ad Experience Platform in tempo reale.
 
 **Segmentazione in streaming**: la segmentazione in streaming è un processo di selezione dati continuo che aggiorna i segmenti in risposta all&#39;attività dell&#39;utente. Dopo aver generato e salvato un segmento, la definizione del segmento viene applicata ai dati in arrivo in [!DNL Real-Time Customer Profile]. Le aggiunte e le rimozioni dei segmenti vengono elaborate regolarmente, garantendo la rilevanza del pubblico di destinazione.
 
@@ -565,7 +565,7 @@ ht-degree: 0%
 
 **Profilo individuale XDM**: XDM [!DNL Individual Profile] è una classe basata su record che costituisce una singola rappresentazione degli attributi sia dei soggetti identificati che parzialmente identificati. I profili altamente identificati possono essere utilizzati per comunicazioni personali o impegni mirati e possono contenere informazioni personali dettagliate come nome, genere, data di nascita, posizione e informazioni di contatto, inclusi numeri di telefono e indirizzi e-mail.
 
-**Sistema XDM**: il sistema XDM rappresenta il framework che rende operativi gli schemi XDM da utilizzare nei servizi di Experience Platform a valle.
+**Sistema XDM**: il sistema XDM rappresenta il framework che rende operativi gli schemi XDM da utilizzare nei servizi Experience Platform a valle.
 
 ## Y
 

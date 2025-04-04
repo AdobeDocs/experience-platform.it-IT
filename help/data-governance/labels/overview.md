@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica delle etichette di utilizzo dei dati
 description: Scopri come le etichette di utilizzo dei dati vengono utilizzate per contribuire a rafforzare la conformità alla governance dei dati in Adobe Experience Platform.
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
-source-git-commit: 5d34781e06c0fa8bfd2e52f73e336d92d16192f6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '787'
+source-wordcount: '789'
 ht-degree: 16%
 
 ---
@@ -24,11 +24,11 @@ Questo documento fornisce una panoramica delle etichette di utilizzo dei dati in
 
 ## Informazioni sulle etichette di utilizzo dati
 
-Le etichette di utilizzo dei dati ti consentono di categorizzare set di dati e campi in base ai criteri di governance applicabili a tali dati. Le etichette possono essere applicate in qualsiasi momento, offrendo flessibilità nella scelta di come gestire i dati. Le best practice incoraggiano l&#39;assegnazione delle etichette non appena vengono acquisite in [!DNL Experience Platform] o non appena i dati diventano disponibili per l&#39;utilizzo in [!DNL Platform].
+Le etichette di utilizzo dei dati ti consentono di categorizzare set di dati e campi in base ai criteri di governance applicabili a tali dati. Le etichette possono essere applicate in qualsiasi momento, offrendo flessibilità nella scelta di come gestire i dati. Le best practice incoraggiano l&#39;assegnazione delle etichette non appena vengono acquisite in [!DNL Experience Platform] o non appena i dati diventano disponibili per l&#39;utilizzo in [!DNL Experience Platform].
 
 Le etichette di utilizzo dei dati applicate a livello di set di dati vengono propagate a tutti i campi del set di dati. Le etichette possono anche essere applicate direttamente ai singoli campi (intestazioni di colonna) in un set di dati, senza propagazione.
 
-[!DNL Platform] fornisce diverse etichette di utilizzo dei dati &quot;core&quot; pronte all&#39;uso, che coprono un&#39;ampia varietà di restrizioni comuni applicabili alla governance dei dati. Per ulteriori informazioni su queste etichette e sui criteri di governance che rappresentano, consulta la guida su [etichette di utilizzo dei dati di base](reference.md).
+[!DNL Experience Platform] fornisce diverse etichette di utilizzo dei dati &quot;core&quot; pronte all&#39;uso, che coprono un&#39;ampia varietà di restrizioni comuni applicabili alla governance dei dati. Per ulteriori informazioni su queste etichette e sui criteri di governance che rappresentano, consulta la guida su [etichette di utilizzo dei dati di base](reference.md).
 
 Oltre alle etichette fornite da Adobe, puoi anche definire etichette personalizzate per la tua organizzazione. Per ulteriori informazioni, vedere la sezione relativa alla gestione di [etichette](#manage-labels).
 
@@ -38,13 +38,13 @@ Tutti i segmenti di pubblico creati da [Adobe Experience Platform Segmentation S
 
 Oltre a ereditare le etichette a livello di set di dati, per impostazione predefinita i segmenti ereditano tutte le etichette a livello di campo dai set di dati associati. Pertanto, puoi identificare più facilmente quali attributi devono essere esclusi dai segmenti e impedire loro di ereditare le etichette dai campi esclusi.
 
-Per ulteriori informazioni sul funzionamento dell&#39;imposizione automatica in Platform, consulta la panoramica su [applicazione automatica dei criteri](../enforcement/auto-enforcement.md).
+Per ulteriori informazioni sul funzionamento dell&#39;imposizione automatica in Experience Platform, vedere la panoramica sull&#39;[applicazione automatica dei criteri](../enforcement/auto-enforcement.md).
 
 ### Ereditarietà da controlli esportazione dati Adobe Audience Manager
 
 [!DNL Experience Platform] può condividere segmenti con Adobe Audience Manager. Qualsiasi controllo sull&#39;esportazione dei dati applicato ai segmenti di Audience Manager viene convertito in etichette e azioni di marketing equivalenti riconosciute dalla governance dei dati di [!DNL Experience Platform].
 
-Per informazioni sul mapping di specifici controlli sull&#39;esportazione dei dati alle etichette di utilizzo dei dati in [!DNL Platform], consultare la [documentazione di Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
+Per informazioni sul mapping di specifici controlli sull&#39;esportazione dei dati alle etichette di utilizzo dei dati in [!DNL Experience Platform], consultare la [documentazione di Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
 
 ## Gestione delle etichette di utilizzo dei dati in [!DNL Experience Platform] {#manage-labels}
 
@@ -61,7 +61,7 @@ L&#39;area di lavoro **[!UICONTROL Criteri]** nell&#39;interfaccia utente [!DNL 
 
 >[!IMPORTANT]
 >
->Le etichette non possono più essere applicate ai campi a livello di set di dati. Questo flusso di lavoro è stato dichiarato obsoleto a favore dell’applicazione di etichette a livello di schema. Eventuali etichette applicate in precedenza a livello di oggetto del set di dati continueranno a essere supportate tramite l’interfaccia utente di Platform fino al 31 maggio 2024. Per garantire che le etichette siano coerenti in tutti gli schemi, tutte le etichette precedentemente associate ai campi a livello di set di dati devono essere migrate a livello di schema da te nel corso dell’anno successivo. Per istruzioni su come eseguire questa operazione, consulta la sezione sulla [migrazione delle etichette applicate in precedenza](../e2e.md#migrate-labels).
+>Le etichette non possono più essere applicate ai campi a livello di set di dati. Questo flusso di lavoro è stato dichiarato obsoleto a favore dell’applicazione di etichette a livello di schema. Eventuali etichette applicate in precedenza a livello di oggetto set di dati continueranno a essere supportate tramite l’interfaccia utente di Experience Platform fino al 31 maggio 2024. Per garantire che le etichette siano coerenti in tutti gli schemi, tutte le etichette precedentemente associate ai campi a livello di set di dati devono essere migrate a livello di schema da te nel corso dell’anno successivo. Per istruzioni su come eseguire questa operazione, consulta la sezione sulla [migrazione delle etichette applicate in precedenza](../e2e.md#migrate-labels).
 
 ### Utilizzo delle API
 

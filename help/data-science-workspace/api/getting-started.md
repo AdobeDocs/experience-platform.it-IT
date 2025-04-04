@@ -5,10 +5,10 @@ title: Guida API di apprendimento automatico di Sensei
 description: L’API di apprendimento automatico di Sensei consente agli sviluppatori di eseguire operazioni CRUD su varie risorse di Data Science Workspace. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
 role: Developer
 exl-id: d51d0eb2-b1e9-4cc1-889a-9487395703b0
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '255'
-ht-degree: 13%
+ht-degree: 14%
 
 ---
 
@@ -32,11 +32,11 @@ Questa guida per gli sviluppatori descrive i passaggi necessari per iniziare a u
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-Tutte le risorse in [!DNL Experience Platform] sono isolate in specifiche sandbox virtuali. Tutte le richieste alle API [!DNL Platform] richiedono un&#39;intestazione che specifichi il nome della sandbox in cui verrà eseguita l&#39;operazione:
+Tutte le risorse in [!DNL Experience Platform] sono isolate in specifiche sandbox virtuali. Tutte le richieste alle API [!DNL Experience Platform] richiedono un&#39;intestazione che specifichi il nome della sandbox in cui verrà eseguita l&#39;operazione:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-Per ulteriori informazioni sulle sandbox in [!DNL Platform], consulta la [documentazione di panoramica sulle sandbox](../../sandboxes/home.md).
+Per ulteriori informazioni sulle sandbox in [!DNL Experience Platform], consulta la [documentazione di panoramica sulle sandbox](../../sandboxes/home.md).
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione aggiuntiva:
 
@@ -48,7 +48,7 @@ Dopo aver raccolto le credenziali di autenticazione richieste, puoi passare alle
 
 * [Motori](./engines.md)
 * [Esperimenti](./experiments.md)
-* [Approfondimenti](./insights.md)
+* [Insight](./insights.md)
 * [MLInstance (ricette)](./mlinstances.md)
 * [MLServices](./mlservices.md)
 * [Modelli](./models.md)

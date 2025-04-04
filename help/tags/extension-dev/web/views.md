@@ -1,11 +1,11 @@
 ---
 title: Visualizzazioni nelle estensioni web
-description: Scopri come definire le viste per i moduli libreria nelle estensioni Web Adobe Experience Platform
+description: 'Scopri come definire le viste per i moduli libreria nelle estensioni Web Adobe Experience Platform '
 exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
-source-git-commit: 41efcb14df44524b58be2293d2b943bd890c1621
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2061'
-ht-degree: 98%
+source-wordcount: '2063'
+ht-degree: 96%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Ogni evento, condizione, azione o tipo di elemento dati può offrire una vista mediante la quale l’utente potrà specificare alcune impostazioni. L’estensione può anche avere una [vista di livello superiore per la configurazione dell’estensione](../configuration.md), mediante la quale gli utenti possono specificare impostazioni globali per tutta l’estensione. Il processo di creazione è identico per tutti i tipi di vista.
 
@@ -148,9 +148,9 @@ L’oggetto `options` deve contenere una singola proprietà booleana: `tokenize`
 
 È probabile che nelle viste siano presenti campi modulo in cui gli utenti vorrebbero sfruttare alcuni elementi dati. Ad esempio, se la vista include un campo di testo in cui si deve immettere il nome di un prodotto, potrebbe non avere senso digitarvi un valore hardcoded. Sarà invece preferibile usare un valore dinamico (determinato in fase di esecuzione), e questo sarà possibile tramite l’utilizzo di un elemento dati.
 
-Ad esempio, supponiamo di voler creare un’estensione che invia un beacon per tenere traccia di una conversione. Supponiamo inoltre che uno dei dati che il beacon invia sia un nome di prodotto. La vista della nostra estensione che consente all’utente di configurare il beacon avrà probabilmente un campo di testo per il nome del prodotto. In genere sarà megliio evitare che l’utente di Platform debba immettere un nome di prodotto statico come “Calzone Oven XL”, perché il nome del prodotto dipenderà dalla pagina da cui verrà inviato il beacon. In situazioni di questo tipo si può ricorrere all’utilizzo di un elemento dati.
+Ad esempio, supponiamo di voler creare un’estensione che invia un beacon per tenere traccia di una conversione. Supponiamo inoltre che uno dei dati che il beacon invia sia un nome di prodotto. La vista della nostra estensione che consente all’utente di configurare il beacon avrà probabilmente un campo di testo per il nome del prodotto. In genere non avrebbe molto senso per l’utente di Experience Platform immettere un nome di prodotto statico come &quot;Calzone Oven XL&quot;, perché il nome del prodotto dipenderà dalla pagina da cui verrà inviato il beacon. In situazioni di questo tipo si può ricorrere all’utilizzo di un elemento dati.
 
-Se un utente desidera utilizzare l’elemento dati denominato `productname` per il valore del nome del prodotto, può digitare il nome dell’elemento dati racchiuso tra simboli di percentuale (`%productname%`). Il nome dell’elemento dati racchiuso tra segni di percentuale è detto “token elemento dati”. Gli utenti di Platform hanno spesso familiarità con questo costrutto. L’estensione, a sua volta, dovrà salvare il token di elemento dati nell’oggetto `settings` esportato. L’oggetto impostazioni si presenterà quindi così:
+Se un utente desidera utilizzare l’elemento dati denominato `productname` per il valore del nome del prodotto, può digitare il nome dell’elemento dati racchiuso tra simboli di percentuale (`%productname%`). Il nome dell’elemento dati racchiuso tra segni di percentuale è detto “token elemento dati”. Gli utenti di Experience Platform hanno spesso familiarità con questo costrutto. L’estensione, a sua volta, dovrà salvare il token di elemento dati nell’oggetto `settings` esportato. L’oggetto impostazioni si presenterà quindi così:
 
 ```js
 {

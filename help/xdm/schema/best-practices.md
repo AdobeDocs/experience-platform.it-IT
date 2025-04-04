@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;schema;schema;enum;identità primaria;identità primaria;profilo individuale XDM;evento esperienza;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;progettazione schema;best practice
+keywords: Experience Platform;home;argomenti popolari;schema;schema;enum;identità primaria;identità primaria;profilo individuale XDM;evento esperienza;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevent;progettazione schema;best practice
 solution: Experience Platform
 title: Best Practice Per La Modellazione Dei Dati
 description: Questo documento fornisce un’introduzione agli schemi Experience Data Model (XDM) e ai blocchi predefiniti, ai principi e alle best practice per la composizione degli schemi da utilizzare in Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: b144a93374fc627f9001b80695cad3f17e28a6fe
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3214'
+source-wordcount: '3224'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ Poiché XDM è estremamente versatile e personalizzabile dalla progettazione, è
 
 ## Introduzione
 
-Prima di leggere questa guida, controlla [Panoramica del sistema XDM](../home.md) per un&#39;introduzione di alto livello a XDM e al suo ruolo nell&#39;Experience Platform.
+Prima di leggere questa guida, controlla [Panoramica del sistema XDM](../home.md) per un&#39;introduzione di alto livello a XDM e al suo ruolo in Experience Platform.
 
 Poiché questa guida si concentra esclusivamente su considerazioni chiave relative alla progettazione dello schema, si consiglia vivamente di leggere le [nozioni di base sulla composizione dello schema](./composition.md) per le spiegazioni dettagliate dei singoli elementi dello schema menzionati in questa guida.
 
@@ -28,24 +28,24 @@ Poiché questa guida si concentra esclusivamente su considerazioni chiave relati
 L’approccio consigliato per la progettazione del modello dati da utilizzare in Experience Platform può essere riassunto come segue:
 
 1. Comprendi i casi d’uso aziendali per i tuoi dati.
-1. Identifica le origini di dati primarie da inserire in Platform per affrontare tali casi d’uso.
-1. Identifica eventuali fonti di dati secondari che potrebbero essere di interesse. Ad esempio, se attualmente solo una business unit dell’organizzazione è interessata a trasferire i propri dati su Platform, anche una simile business unit potrebbe essere interessata a trasferire dati simili in futuro. L’analisi di queste origini secondarie consente di standardizzare il modello dati dell’intera organizzazione.
+1. Identifica le origini di dati primarie da inserire in Experience Platform per affrontare tali casi d’uso.
+1. Identifica eventuali fonti di dati secondari che potrebbero essere di interesse. Ad esempio, se attualmente solo una business unit dell’organizzazione è interessata a trasferire i propri dati in Experience Platform, anche una simile business unit potrebbe essere interessata a trasferire dati simili in futuro. L’analisi di queste origini secondarie consente di standardizzare il modello dati dell’intera organizzazione.
 1. Creare un diagramma di relazione tra entità (ERD) di alto livello per le origini dati identificate.
-1. Converti l’ERD di alto livello in ERD incentrato sulla piattaforma (inclusi profili, eventi di esperienza ed entità di ricerca).
+1. Converti l’ERD di alto livello in un ERD incentrato su Experience Platform (inclusi profili, eventi di esperienza ed entità di ricerca).
 
-I passaggi relativi all’identificazione delle origini dati applicabili necessari per eseguire i casi di utilizzo aziendali variano da organizzazione a organizzazione. Mentre il resto delle sezioni di questo documento si concentrano sugli ultimi passaggi dell’organizzazione e della costruzione di un’ERD dopo l’identificazione delle sorgenti di dati, le spiegazioni dei vari componenti del diagramma possono orientare le decisioni su quali delle sorgenti di dati migrare a Platform.
+I passaggi relativi all’identificazione delle origini dati applicabili necessari per eseguire i casi di utilizzo aziendali variano da organizzazione a organizzazione. Mentre il resto delle sezioni di questo documento si concentrano sugli ultimi passaggi dell’organizzazione e della costruzione di un’ERD dopo l’identificazione delle origini dati, le spiegazioni dei vari componenti del diagramma possono orientare le decisioni su quali delle origini dati migrare ad Experience Platform.
 
 ## Creare un ERD di alto livello {#create-an-erd}
 
-Dopo aver determinato le origini dati da inserire in Platform, crea un ERD di alto livello per guidare il processo di mappatura dei dati sugli schemi XDM.
+Dopo aver determinato le origini dati da inserire in Experience Platform, crea un ERD di alto livello per guidare il processo di mappatura dei dati sugli schemi XDM.
 
-L’esempio seguente rappresenta un’ERD semplificata per un’azienda che desidera inserire dati in Platform. Il diagramma evidenzia le entità essenziali che devono essere ordinate in classi XDM, inclusi account cliente, hotel e diversi eventi di e-commerce comuni.
+L’esempio seguente rappresenta un’ERD semplificata per un’azienda che desidera inserire dati in Experience Platform. Il diagramma evidenzia le entità essenziali che devono essere ordinate in classi XDM, inclusi account cliente, hotel e diversi eventi di e-commerce comuni.
 
 ![Diagramma relazionale di entità che evidenzia le entità essenziali da ordinare in classi XDM per l&#39;acquisizione dei dati.](../images/best-practices/erd.png)
 
 ## Ordinare le entità in categorie di profili, ricerche ed eventi {#sort-entities}
 
-Dopo aver creato un’ERD per identificare le entità essenziali da inserire in Platform, queste entità devono essere ordinate in categorie di profilo, ricerca ed eventi:
+Dopo aver creato un’ERD per identificare le entità essenziali da inserire in Experience Platform, queste entità devono essere ordinate in categorie di profilo, ricerca ed eventi:
 
 | Categoria | Descrizione |
 | --- | --- |
@@ -79,7 +79,7 @@ Se un’entità contiene attributi relativi a un singolo cliente, è molto proba
 
 #### Tracciamento dei dati nel tempo {#track-data}
 
-Se desideri analizzare il modo in cui determinati attributi all’interno di un’entità cambiano nel tempo, è molto probabile che si tratti di un’entità evento. Ad esempio, l’aggiunta di elementi di prodotto a un carrello può essere tracciata come evento aggiuntivo al carrello in Platform:
+Se desideri analizzare il modo in cui determinati attributi all’interno di un’entità cambiano nel tempo, è molto probabile che si tratti di un’entità evento. Ad esempio, l’aggiunta di elementi di prodotto a un carrello può essere tracciata come evento aggiuntivo al carrello in Experience Platform:
 
 | ID cliente | Tipo | ID prodotto | Quantità | Timestamp |
 | --- | --- | --- | --- | --- |
@@ -113,7 +113,7 @@ Ad esempio, un’azienda desidera creare un pubblico in base al numero di acquis
 
 >[!CAUTION]
 >
->Experience Platform al momento non esegue l’aggregazione automatica dei valori, anche se questa operazione è pianificata per le versioni future. Se scegli di utilizzare valori aggregati, devi eseguire i calcoli esternamente prima di inviare i dati a Platform.
+>Al momento Experience Platform non esegue l’aggregazione automatica dei valori, anche se questa è pianificata per le versioni future. Se scegli di utilizzare valori aggregati, devi eseguire i calcoli esternamente prima di inviare i dati ad Experience Platform.
 
 #### Cardinalità {#cardinality}
 
@@ -204,20 +204,20 @@ Se non sei sicuro se un particolare campo sia necessario da includere in uno sch
 
 ### Campi di identità {#identity-fields}
 
-Ad Experience Platform, i campi XDM contrassegnati come identità vengono utilizzati per unire informazioni su singoli clienti provenienti da più origini dati. Anche se uno schema può avere più campi contrassegnati come identità, è necessario definire una singola identità primaria affinché lo schema possa essere abilitato per l&#39;utilizzo in [!DNL Real-Time Customer Profile]. Per informazioni più dettagliate sul caso d&#39;uso di questi campi, consulta la sezione sui [campi di identità](./composition.md#identity) nelle nozioni di base sulla composizione dello schema.
+In Experience Platform, i campi XDM contrassegnati come identità vengono utilizzati per unire informazioni su singoli clienti provenienti da più origini dati. Anche se uno schema può avere più campi contrassegnati come identità, è necessario definire una singola identità primaria affinché lo schema possa essere abilitato per l&#39;utilizzo in [!DNL Real-Time Customer Profile]. Per informazioni più dettagliate sul caso d&#39;uso di questi campi, consulta la sezione sui [campi di identità](./composition.md#identity) nelle nozioni di base sulla composizione dello schema.
 
 Durante la progettazione degli schemi, eventuali chiavi primarie nelle tabelle del database relazionale sono probabilmente candidate per le identità primarie. Altri esempi di campi di identità applicabili sono gli indirizzi e-mail dei clienti, i numeri di telefono, gli ID account e [ECID](../../identity-service/features/ecid.md).
 
-### Adobe di gruppi di campi dello schema dell’applicazione {#adobe-application-schema-field-groups}
+### Gruppi di campi dello schema dell’applicazione Adobe {#adobe-application-schema-field-groups}
 
-L’Experience Platform fornisce diversi gruppi di campi di schema XDM predefiniti per l’acquisizione di dati relativi alle seguenti applicazioni Adobe:
+Experience Platform fornisce diversi gruppi di campi di schema XDM predefiniti per l’acquisizione di dati relativi alle seguenti applicazioni Adobe:
 
 * Adobe Analytics
 * Adobe Audience Manager
 * Adobe Campaign
 * Adobe Target
 
-Ad esempio, puoi utilizzare il gruppo di campi ](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) del modello [[!UICONTROL Adobe Analytics ExperienceEvent] per mappare campi specifici di [!DNL Analytics] agli schemi XDM. A seconda delle applicazioni di Adobe che utilizzi, nei tuoi schemi dovresti utilizzare i gruppi di campi forniti dall’Adobe.
+Ad esempio, puoi utilizzare il gruppo di campi ](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) del modello [[!UICONTROL Adobe Analytics ExperienceEvent] per mappare campi specifici di [!DNL Analytics] agli schemi XDM. A seconda delle applicazioni Adobe che utilizzi, nei tuoi schemi dovresti usare questi gruppi di campi forniti da Adobe.
 
 ![Un diagramma schema del [!UICONTROL modello Adobe Analytics ExperienceEvent].](../images/best-practices/analytics-field-group.png)
 
@@ -231,7 +231,7 @@ Per Adobe Analytics, ECID è l’identità primaria predefinita. Se un valore EC
 
 ## Campi di convalida dei dati {#data-validation-fields}
 
-Quando si acquisiscono i dati nel data lake, la convalida dei dati viene applicata solo per i campi vincolati. Per convalidare un particolare campo durante un’acquisizione batch, è necessario contrassegnare il campo come vincolato nello schema XDM. Per evitare che dati errati vengano acquisiti in Platform, ti consigliamo di definire i criteri per la convalida a livello di campo quando crei gli schemi.
+Quando si acquisiscono i dati nel data lake, la convalida dei dati viene applicata solo per i campi vincolati. Per convalidare un particolare campo durante un’acquisizione batch, è necessario contrassegnare il campo come vincolato nello schema XDM. Per evitare che dati errati vengano acquisiti in Experience Platform, ti consigliamo di definire i criteri per la convalida a livello di campo quando crei gli schemi.
 
 >[!IMPORTANT]
 >
@@ -245,17 +245,17 @@ Per impostare vincoli per un campo specifico, selezionare il campo dall&#39;Edit
 
 Di seguito è riportata una raccolta di suggerimenti per mantenere l&#39;integrità dei dati durante la creazione di uno schema.
 
-* **Considera le identità primarie**: per Adobe come Web SDK, Mobile SDK, Adobe Analytics e Adobe Journey Optimizer, il campo `identityMap` spesso funge da identità primaria. Evita di designare campi aggiuntivi come identità primarie per tale schema.
+* **Considera le identità primarie**: per prodotti Adobe come Web SDK, Mobile SDK, Adobe Analytics e Adobe Journey Optimizer, il campo `identityMap` spesso funge da identità primaria. Evita di designare campi aggiuntivi come identità primarie per tale schema.
 * **Assicurarsi che `_id` non sia utilizzato come identità**: il campo `_id` negli schemi Experience Event non può essere utilizzato come identità in quanto è destinato all&#39;univocità dei record.
 * **Imposta vincoli di lunghezza**: è consigliabile impostare lunghezze minime e massime nei campi contrassegnati come identità. Un avviso viene attivato se si tenta di assegnare uno spazio dei nomi personalizzato a un campo di identità senza soddisfare i vincoli di lunghezza minima e massima. Queste limitazioni contribuiscono a mantenere la coerenza e la qualità dei dati.
 * **Applica pattern per valori coerenti**: se i valori di identità seguono un pattern specifico, è necessario utilizzare l&#39;impostazione **[!UICONTROL Pattern]** per applicare questo vincolo. Questa impostazione può includere solo regole come cifre, lettere maiuscole o minuscole o combinazioni di caratteri specifiche. Utilizza espressioni regolari per far corrispondere i pattern nelle stringhe.
-* **Limita le eVar negli schemi di Analytics**: in genere, uno schema di Analytics deve avere un solo eVar designato come identità. Se intendi utilizzare più di un eVar come identità, devi verificare nuovamente se la struttura dati può essere ottimizzata.
+* **Limita le eVar negli schemi di Analytics**: in genere, uno schema di Analytics deve avere un solo eVar designato come identità. Se intendi utilizzare più di un’eVar come identità, devi verificare nuovamente se la struttura dati può essere ottimizzata.
 * **Assicurare l&#39;univocità di un campo selezionato**: il campo scelto deve essere univoco rispetto all&#39;identità primaria nello schema. In caso contrario, non contrassegnarlo come identità. Ad esempio, se più clienti possono fornire lo stesso indirizzo e-mail, lo spazio dei nomi non è un’identità adatta. Questo principio si applica anche ad altri spazi dei nomi di identità come i numeri di telefono. Se si contrassegna un campo non univoco come identità, si potrebbe verificare una compressione indesiderata del profilo.
 * **Verifica lunghezza minima stringa**: tutti i campi stringa devono contenere almeno un carattere, poiché i valori stringa non devono mai essere vuoti. I valori Null per i campi non obbligatori, tuttavia, sono accettabili.
 
 ## Passaggi successivi
 
-Questo documento illustra le linee guida generali e le best practice per la progettazione del modello dati, ad Experience Platform. Per riepilogare:
+Questo documento illustra le linee guida generali e le best practice per la progettazione del modello dati per Experience Platform. Per riepilogare:
 
 * Prima di creare gli schemi, utilizza un approccio discendente che consiste nell’ordinare le tabelle di dati in categorie di profilo, ricerca ed eventi.
 * Spesso esistono diversi approcci e opzioni per la progettazione di schemi per scopi diversi.

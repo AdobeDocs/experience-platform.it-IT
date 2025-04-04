@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;recuperare batch non riusciti;batch non riusciti;inserimento batch;inserimento batch;batch non riusciti;Recuperare batch non riusciti;Recuperare batch non riusciti;Scaricare batch non riusciti;scaricare batch non riusciti;
+keywords: Experience Platform;home;argomenti popolari;recuperare batch non riusciti;batch non riusciti;inserimento batch;inserimento batch;batch non riusciti;ottenere batch non riusciti;scaricare batch non riusciti;scaricare batch non riusciti;
 solution: Experience Platform
 title: Recupero dei batch non riusciti tramite l’API di accesso ai dati
 type: Tutorial
 description: Questa esercitazione descrive i passaggi necessari per recuperare informazioni su un batch non riuscito utilizzando le API di acquisizione dati.
 exl-id: 5fb9f28d-091e-4124-8d8e-b8a675938d3a
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '643'
 ht-degree: 14%
@@ -14,7 +14,7 @@ ht-degree: 14%
 
 # Recupero di batch non riusciti tramite l’API di accesso ai dati
 
-Adobe Experience Platform fornisce due metodi per caricare e acquisire i dati. È possibile utilizzare l&#39;acquisizione in batch, che consente di inserire i dati utilizzando vari tipi di file (ad esempio CSV), oppure l&#39;acquisizione in streaming, che consente di inserire i dati in [!DNL Platform] utilizzando endpoint di streaming in tempo reale.
+Adobe Experience Platform fornisce due metodi per caricare e acquisire i dati. È possibile utilizzare l&#39;acquisizione in batch, che consente di inserire i dati utilizzando vari tipi di file (ad esempio CSV), oppure l&#39;acquisizione in streaming, che consente di inserire i dati in [!DNL Experience Platform] utilizzando endpoint di streaming in tempo reale.
 
 Questo tutorial descrive i passaggi necessari per recuperare informazioni su un batch non riuscito utilizzando le API [!DNL Data Ingestion].
 
@@ -31,19 +31,19 @@ Questo tutorial fornisce esempi di chiamate API per dimostrare come formattare l
 
 ### Raccogliere i valori per le intestazioni richieste
 
-Per effettuare chiamate alle API [!DNL Platform], devi prima completare l&#39;[esercitazione di autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
+Per effettuare chiamate alle API [!DNL Experience Platform], devi prima completare l&#39;[esercitazione di autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-Tutte le risorse in [!DNL Experience Platform], incluse quelle appartenenti a [!DNL Schema Registry], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API [!DNL Platform] richiedono un&#39;intestazione che specifichi il nome della sandbox in cui verrà eseguita l&#39;operazione:
+Tutte le risorse in [!DNL Experience Platform], incluse quelle appartenenti a [!DNL Schema Registry], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API [!DNL Experience Platform] richiedono un&#39;intestazione che specifichi il nome della sandbox in cui verrà eseguita l&#39;operazione:
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulle sandbox in [!DNL Platform], consulta la [documentazione di panoramica sulle sandbox](../../sandboxes/home.md).
+>Per ulteriori informazioni sulle sandbox in [!DNL Experience Platform], consulta la [documentazione di panoramica sulle sandbox](../../sandboxes/home.md).
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione aggiuntiva:
 

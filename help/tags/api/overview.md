@@ -2,10 +2,10 @@
 title: Guida dell’API di Reactor
 description: L’API di Reactor consente agli sviluppatori di gestire in modo programmatico tutte le risorse per i tag in Adobe Experience Platform. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
 exl-id: 153eab11-db08-499e-80d1-c56f254372ce
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1079'
-ht-degree: 94%
+source-wordcount: '1080'
+ht-degree: 92%
 
 ---
 
@@ -99,7 +99,7 @@ Per informazioni su come gestire gli eventi di controllo nell’API, consulta la
 
 ## Callback
 
-Un callback è un messaggio che Platform invia a un host URL ogni volta che viene generato un nuovo evento di audit. Per informazioni su come gestire i callback nell’API, consulta la [guida dell’endpoint “callbacks”](./endpoints/callbacks.md).
+Un callback è un messaggio che Experience Platform invia a un host URL ogni volta che viene generato un nuovo evento di audit. Per informazioni su come gestire i callback nell’API, consulta la [guida dell’endpoint “callbacks”](./endpoints/callbacks.md).
 
 ## Note
 

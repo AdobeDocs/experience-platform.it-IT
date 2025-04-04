@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica del connettore Source FTP
 description: Scopri come collegare un server FTP a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: a6186fad-8a7b-4103-80c7-a522ff69fe9e
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 Adobe Experience Platform fornisce connettività nativa per i provider di cloud come AWS, [!DNL Google Cloud Platform] e [!DNL Azure], consentendo di portare i dati da questi sistemi.
 
-Le origini di archiviazione cloud possono inserire i tuoi dati in [!DNL Platform] senza dover scaricare, formattare o caricare. I dati acquisiti possono essere formattati come XDM JSON, XDM Parquet o delimitati. Ogni passaggio del processo viene integrato nel flusso di lavoro Origini. [!DNL Platform] consente di inserire dati da un server FTP o SFTP tramite batch.
+Le origini di archiviazione cloud possono inserire i tuoi dati in [!DNL Experience Platform] senza dover scaricare, formattare o caricare. I dati acquisiti possono essere formattati come XDM JSON, XDM Parquet o delimitati. Ogni passaggio del processo viene integrato nel flusso di lavoro Origini. [!DNL Experience Platform] consente di inserire dati da un server FTP o SFTP tramite batch.
 
 >[!IMPORTANT]
 >
@@ -40,9 +40,9 @@ Di seguito è riportato un elenco di vincoli di cui è necessario tenere conto p
 - Caratteri di percorso URL non validi non consentiti. I punti di codice come `\uE000`, sebbene validi nei nomi di file NTFS, non sono caratteri Unicode validi. Inoltre, alcuni caratteri ASCII o Unicode, come i caratteri di controllo (da 0x00 a 0x1F, \u0081, ecc.), non sono consentiti. Per le regole che regolano le stringhe Unicode in HTTP/1.1, vedere [RFC 2616, Sezione 2.2: Regole di base](https://www.ietf.org/rfc/rfc2616.txt) e [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
 - Non sono consentiti i seguenti nomi di file: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, carattere punto (.) e due caratteri punto (..).
 
-## Connetti FTP a [!DNL Platform]
+## Connetti FTP a [!DNL Experience Platform]
 
-La documentazione seguente fornisce informazioni su come connettere un server FTP a [!DNL Platform] tramite API o l&#39;interfaccia utente:
+La documentazione seguente fornisce informazioni su come connettere un server FTP a [!DNL Experience Platform] tramite API o l&#39;interfaccia utente:
 
 ### Utilizzo delle API di
 

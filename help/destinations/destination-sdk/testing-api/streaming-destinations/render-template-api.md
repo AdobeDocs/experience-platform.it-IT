@@ -2,9 +2,9 @@
 description: Scopri come utilizzare l’API di test di destinazione per convalidare l’output nella destinazione di streaming in base al modello di trasformazione del messaggio.
 title: Convalidare la struttura del profilo esportato
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '794'
 ht-degree: 1%
 
 ---
@@ -1066,8 +1066,8 @@ Una risposta errata restituisce lo stato HTTP 400 insieme alle descrizioni degli
 
 ## Gestione degli errori API {#api-error-handling}
 
-Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](../../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
+Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](../../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Experience Platform.
 
 ## Passaggi successivi {#next-steps}
 
-Dopo aver letto questo documento, ora sai come utilizzare il modello di trasformazione dei messaggi per generare profili esportati che corrispondono al formato di dati previsto della destinazione. Leggi [come utilizzare Destination SDK per configurare la destinazione](../../guides/configure-destination-instructions.md) per capire in che modo questo passaggio si inserisce nel processo di configurazione della destinazione.
+Dopo aver letto questo documento, ora sai come utilizzare il modello di trasformazione dei messaggi per generare profili esportati che corrispondono al formato di dati previsto della destinazione. Leggi [come utilizzare Destination SDK per configurare la tua destinazione](../../guides/configure-destination-instructions.md) per capire in che modo questo passaggio si inserisce nel processo di configurazione della tua destinazione.

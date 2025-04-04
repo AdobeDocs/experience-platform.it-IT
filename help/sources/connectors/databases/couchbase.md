@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;couchbase;Couchbase
+keywords: Experience Platform;home;argomenti popolari;couchbase;Couchbase;;home;popular topic;couchbase;Couchbase
 solution: Experience Platform
 title: Panoramica del connettore Source Couchbase
 description: Scopri come collegare Couchbase a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 4b1cc352-3b1a-4015-baee-b1d42c15a400
-source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 0%
@@ -23,15 +23,15 @@ Adobe Experience Platform fornisce connettività nativa per i provider di databa
 
 Prima di utilizzare i connettori di origine, è necessario aggiungere un elenco di indirizzi IP a un elenco consentiti. La mancata aggiunta all’elenco consentiti degli indirizzi IP specifici per l’area geografica potrebbe causare errori o prestazioni non ottimali durante l’utilizzo delle origini. Per ulteriori informazioni, vedere la pagina [elenco consentiti indirizzo IP](../../ip-address-allow-list.md).
 
-La documentazione seguente fornisce informazioni su come connettere [!DNL Couchbase] a [!DNL Platform] tramite API o l&#39;interfaccia utente:
+La documentazione seguente fornisce informazioni su come connettere [!DNL Couchbase] a [!DNL Experience Platform] tramite API o l&#39;interfaccia utente:
 
-## Connetti [!DNL Couchbase] a [!DNL Platform] tramite API
+## Connetti [!DNL Couchbase] a [!DNL Experience Platform] tramite API
 
 - [Creare una connessione a Couchbase base utilizzando l’API del servizio Flow](../../tutorials/api/create/databases/couchbase.md)
 - [Esplorare le tabelle di dati utilizzando l’API del servizio Flusso](../../tutorials/api/explore/tabular.md)
 - [Creare un flusso di dati per un’origine di database utilizzando l’API del servizio Flusso](../../tutorials/api/collect/database-nosql.md)
 
-## Connetti [!DNL Couchbase] a [!DNL Platform] tramite l&#39;interfaccia utente
+## Connetti [!DNL Couchbase] a [!DNL Experience Platform] tramite l&#39;interfaccia utente
 
 - [Creare una connessione sorgente Couchbase nell’interfaccia utente](../../tutorials/ui/create/databases/couchbase.md)
 - [Creare un flusso di dati per una connessione di origine al database nell’interfaccia utente](../../tutorials/ui/dataflow/databases.md)

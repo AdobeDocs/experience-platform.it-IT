@@ -1,16 +1,16 @@
 ---
-title: Acquisisci i dati dei pagamenti dal tuo account di Stripe per Experience Platform utilizzando l’interfaccia utente di.
-description: Scopri come acquisire i dati dei pagamenti dall’account di Stripe a Experience Platform utilizzando l’interfaccia utente.
+title: Acquisisci i dati dei pagamenti dall’account Stripe ad Experience Platform utilizzando l’interfaccia utente di.
+description: Scopri come acquisire i dati dei pagamenti dall’account Stripe ad Experience Platform utilizzando l’interfaccia utente.
 badge: Beta
 exl-id: f20c5935-a7c0-4387-b29e-73e78cab4972
-source-git-commit: dd9afe650f4c83b3877f980acac66e703e9ae5d8
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1657'
+source-wordcount: '1658'
 ht-degree: 3%
 
 ---
 
-# Acquisire i dati dei pagamenti dall&#39;account [!DNL Stripe] per Experience Platform utilizzando l&#39;interfaccia utente
+# Acquisire i dati dei pagamenti dall&#39;account [!DNL Stripe] ad Experience Platform utilizzando l&#39;interfaccia utente
 
 >[!NOTE]
 >
@@ -33,7 +33,7 @@ Leggi la [[!DNL Stripe] panoramica](../../../../connectors/payments/stripe.md) p
 
 ## Connetti il tuo account [!DNL Stripe] {#connect}
 
-Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
 
 Nella categoria *Pagamenti*, selezionare **[!DNL Stripe]**, quindi **[!UICONTROL Configura]**.
 
@@ -41,9 +41,9 @@ Nella categoria *Pagamenti*, selezionare **[!DNL Stripe]**, quindi **[!UICONTROL
 >
 >Le origini nel catalogo delle origini visualizzano l&#39;opzione **[!UICONTROL Configura]** quando un&#39;origine specificata non dispone ancora di un account autenticato. Quando esiste un account autenticato, questa opzione diventa **[!UICONTROL Aggiungi dati]**.
 
-![Catalogo origini nell&#39;interfaccia utente di Experience Platform, con la scheda Stripe origine selezionata.](../../../../images/tutorials/create/stripe/catalog.png)
+![Catalogo delle origini nell&#39;interfaccia utente di Experience Platform, con la scheda di origine di Stripe selezionata.](../../../../images/tutorials/create/stripe/catalog.png)
 
-Viene visualizzata la pagina **[!UICONTROL Connetti account di Stripe]**. In questa pagina è possibile utilizzare credenziali nuove o esistenti.
+Viene visualizzata la pagina **[!UICONTROL Connetti account Stripe]**. In questa pagina è possibile utilizzare credenziali nuove o esistenti.
 
 >[!BEGINTABS]
 
@@ -141,7 +141,7 @@ Al termine, selezionare **[!UICONTROL Avanti]** per continuare.
 
 ## Mappare i campi su uno schema XDM {#mapping}
 
-Viene visualizzato il passaggio **[!UICONTROL Mapping]**. Utilizza l’interfaccia di mappatura per mappare i dati di origine sui campi dello schema appropriati prima di acquisire tali dati in Experience Platform. Per una guida dettagliata sull&#39;utilizzo dell&#39;interfaccia di mappatura, leggere la [Guida dell&#39;interfaccia utente della preparazione dati](../../../../../data-prep/ui/mapping.md) per ulteriori informazioni.
+Viene visualizzato il passaggio **[!UICONTROL Mapping]**. Utilizza l’interfaccia di mappatura per mappare i dati di origine sui campi dello schema appropriati prima di acquisirli in Experience Platform. Per una guida dettagliata sull&#39;utilizzo dell&#39;interfaccia di mappatura, leggere la [Guida dell&#39;interfaccia utente della preparazione dati](../../../../../data-prep/ui/mapping.md) per ulteriori informazioni.
 
 ![Interfaccia di mappatura del flusso di lavoro di origine.](../../../../images/tutorials/create/stripe/mapping.png)
 
@@ -182,7 +182,7 @@ Dopo aver rivisto il flusso di dati, seleziona **[!UICONTROL Fine]** e attendi c
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, è stato creato un flusso di dati per portare i dati dei pagamenti dall&#39;origine [!DNL Stripe] all&#39;Experience Platform. Per ulteriori risorse, consulta la documentazione descritta di seguito.
+Seguendo questa esercitazione, è stato creato un flusso di dati per trasferire i dati dei pagamenti dall&#39;origine [!DNL Stripe] ad Experience Platform. Per ulteriori risorse, consulta la documentazione descritta di seguito.
 
 ### Monitorare il flusso di dati
 

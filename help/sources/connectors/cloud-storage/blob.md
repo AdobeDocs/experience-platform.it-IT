@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica del connettore Source BLOB di Azure
 description: Scopri come collegare BLOB di Azure a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 62adc74f-3570-42c7-9ae6-3ddbc09eccc7
-source-git-commit: 8877e7dceeebfb1d4f31b63fef4544a69c72b38e
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '443'
 ht-degree: 0%
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 # Connettore BLOB di Azure
 
-Adobe Experience Platform fornisce connettività nativa per i provider di cloud come AWS, [!DNL Google Cloud Platform] e [!DNL Azure]. È possibile inserire i dati da questi sistemi in [!DNL Platform].
+Adobe Experience Platform fornisce connettività nativa per i provider di cloud come AWS, [!DNL Google Cloud Platform] e [!DNL Azure]. È possibile inserire i dati da questi sistemi in [!DNL Experience Platform].
 
-Le origini di archiviazione cloud possono inserire i tuoi dati in [!DNL Platform] senza dover scaricare, formattare o caricare. I dati acquisiti possono essere formattati come XDM JSON, XDM Parquet o delimitati. Ogni passaggio del processo viene integrato nel flusso di lavoro Origini. [!DNL Platform] consente di inserire dati da [!DNL Azure Blob] tramite batch.
+Le origini di archiviazione cloud possono inserire i tuoi dati in [!DNL Experience Platform] senza dover scaricare, formattare o caricare. I dati acquisiti possono essere formattati come XDM JSON, XDM Parquet o delimitati. Ogni passaggio del processo viene integrato nel flusso di lavoro Origini. [!DNL Experience Platform] consente di inserire dati da [!DNL Azure Blob] tramite batch.
 
 ## ELENCO CONSENTITI di indirizzo IP
 
@@ -23,7 +23,7 @@ Prima di utilizzare i connettori di origine, è necessario aggiungere un elenco 
 
 >[!IMPORTANT]
 >
->L&#39;origine [!DNL Azure Blob] non supporta la connettività della stessa area per Experience Platform. Se l&#39;istanza [!DNL Azure] utilizza la stessa area di rete di Experience Platform, non è possibile stabilire una connessione alle origini Experience Platform. Attualmente, è supportata solo la connettività tra aree geografiche.
+>L&#39;origine [!DNL Azure Blob] non supporta la connettività della stessa area ad Experience Platform. Se l&#39;istanza di [!DNL Azure] utilizza la stessa area di rete di Experience Platform, non è possibile stabilire una connessione alle origini di Experience Platform. Attualmente, è supportata solo la connettività tra aree geografiche.
 
 ## Vincoli di denominazione per file e directory
 
@@ -36,7 +36,7 @@ Di seguito è riportato un elenco di vincoli di cui è necessario tenere conto p
 - Caratteri di percorso URL non validi non consentiti. I punti di codice come `\uE000`, sebbene validi nei nomi di file NTFS, non sono caratteri Unicode validi. Inoltre, alcuni caratteri ASCII o Unicode, come i caratteri di controllo (da 0x00 a 0x1F, \u0081, ecc.), non sono consentiti. Per le regole che regolano le stringhe Unicode in HTTP/1.1, vedere [RFC 2616, Sezione 2.2: Regole di base](https://www.ietf.org/rfc/rfc2616.txt) e [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
 - Non sono consentiti i seguenti nomi di file: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, carattere punto (.) e due caratteri punto (..).
 
-## Connetti [!DNL Azure Blob] a [!DNL Platform]
+## Connetti [!DNL Azure Blob] a [!DNL Experience Platform]
 
 La documentazione seguente fornisce informazioni su come collegare BLOB di Azure a Adobe Experience Platform utilizzando le API o l’interfaccia utente:
 

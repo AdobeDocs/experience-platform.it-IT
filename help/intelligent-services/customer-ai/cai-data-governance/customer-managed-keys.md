@@ -3,9 +3,9 @@ keywords: insights;customer ai;customer ai insights;AAI query service;customer a
 title: Chiavi gestite dal cliente in IA per l’analisi dei clienti.
 description: Scopri come impostare le chiavi gestite dal cliente per IA per l’analisi dei clienti.
 exl-id: 12746c5c-094a-4d49-8d3a-7641fe0ec02a
-source-git-commit: 1a7babf104b2146bad4a336b9e0abd5a32c88999
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '163'
+source-wordcount: '164'
 ht-degree: 0%
 
 ---
@@ -20,4 +20,4 @@ IA per l&#39;analisi dei clienti fornisce ai clienti di [Healthcare Shield](http
 >
 >[!DNL Customer Managed Keys] sono attualmente disponibili solo per le organizzazioni che hanno acquistato il componente aggiuntivo [!DNL Healthcare Shield or Privacy & Security Shield].
 
-Tutti i dati utilizzati da Platform sono crittografati in transito e inattivi per proteggere i dati, con o senza CMK. Per informazioni sulla crittografia di Adobe Experience Platform, leggere la documentazione su [Crittografia dati](../../../landing/governance-privacy-security/encryption.md).
+Tutti i dati utilizzati da Experience Platform sono crittografati in transito e inattivi per proteggerli, con o senza CMK. Per informazioni sulla crittografia di Adobe Experience Platform, leggere la documentazione su [Crittografia dati](../../../landing/governance-privacy-security/encryption.md).

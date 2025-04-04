@@ -1,22 +1,22 @@
 ---
 solution: Experience Platform
-title: Confronto tra Edge Network e hub
+title: Confronto tra rete Edge e hub
 description: Scopri i diversi percorsi di elaborazione disponibili per Adobe Experience Platform.
-source-git-commit: 08a63fb854fe1c2aa83e7a7f74df4c02580e4d4c
+exl-id: 3e9c63d2-c798-44b4-870d-bf1551f29690
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '711'
-ht-degree: 2%
+source-wordcount: '713'
+ht-degree: 3%
 
 ---
 
+# Confronto tra rete Edge e hub
 
-# Confronto tra Edge Network e hub
-
-Adobe Experience Platform è il sistema più potente, flessibile e aperto sul mercato per la creazione e la gestione di soluzioni complete che guidano la customer experience. Puoi utilizzare Experience Platform per centralizzare e standardizzare i dati e i contenuti dei clienti da qualsiasi sistema e applicare tecniche di data science e apprendimento automatico al fine di migliorare la progettazione e la consegna di esperienze personalizzate. Di conseguenza, Platform dispone di diversi modi per elaborare i dati, consentendo di valutarli nel miglior modo possibile.
+Adobe Experience Platform è il sistema più potente, flessibile e aperto sul mercato per la creazione e la gestione di soluzioni complete che guidano la customer experience. Puoi utilizzare Experience Platform per centralizzare e standardizzare i dati e i contenuti dei clienti da qualsiasi sistema e applicare tecniche di data science e apprendimento automatico al fine di migliorare la progettazione e la consegna di esperienze personalizzate. Di conseguenza, Experience Platform dispone di diversi modi per elaborare i dati, consentendo di valutarli nel miglior modo possibile.
 
 ## Tipi di server
 
-Su Platform, i dati possono essere elaborati in due percorsi diversi: Adobe Experience Platform hub per flussi di lavoro in batch e in streaming e Edge Network per esperienze in tempo reale.
+Su Experience Platform, i dati possono essere elaborati in due percorsi diversi: Adobe Experience Platform hub per flussi di lavoro in batch e in streaming e Edge Network per esperienze in tempo reale.
 
 ### Hub Adobe Experience Platform
 

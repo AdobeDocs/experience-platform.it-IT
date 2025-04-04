@@ -2,10 +2,10 @@
 title: Panoramica di Adobe Experience Platform Assurance
 description: Adobe Experience Platform Assurance consente di controllare, provare, simulare e convalidare il modo in cui raccogli i dati o distribuisci le esperienze all’interno delle tue applicazioni mobili.
 exl-id: e887f5f6-3db0-4521-be2d-20ef3d08e7d0
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '808'
-ht-degree: 100%
+source-wordcount: '809'
+ht-degree: 95%
 
 ---
 
@@ -43,7 +43,7 @@ Inizia subito con poche righe di codice. Per le app mobili, Assurance utilizza A
 
 ### Connessione senza problemi
 
-Con Assurance, è possibile connettere l’app a Platform in modo semplice e affidabile. Non è necessario utilizzare proxy di rete, [MiTM](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) e altri tipi di meccanismi: per connettere l’app ad Assurance è sufficiente scansionare un codice QR o premere un pulsante.
+Con Assurance, collegare l’app ad Experience Platform è semplice e affidabile. Non è necessario utilizzare proxy di rete, [MiTM](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) e altri tipi di meccanismi: per connettere l’app ad Assurance è sufficiente scansionare un codice QR o premere un pulsante.
 
 ![](./images/index/no-hassle-connection.png)
 
@@ -67,7 +67,7 @@ Assurance consente di controllare gli eventi SDK non elaborati generati da Adobe
 
 ### Adobe Analytics
 
-La vista Adobe Analytics > Eventi di Analytics è una vista mirata che mostra gli eventi relativi alla tua implementazione di Adobe Analytics per dispositivi mobili. La vista a elenco mostra gli eventi del ciclo di vita o dell’azione/stato, lo “stato” post-elaborazione, insieme ai dettagli dell’evento richiesti in una vista con un formato speciale. Lo stato post-elaborazione mostra il modo in cui l’evento è stato elaborato da Adobe Analytics dopo l’applicazione delle regole di elaborazione all’evento.
+La vista Adobe Analytics > Eventi di Analytics è una vista mirata che mostra gli eventi relativi alla tua implementazione di Adobe Analytics per dispositivi mobili. La vista a elenco mostra gli eventi del ciclo di vita o dell’azione/stato, &quot;stato&quot; post-elaborato, insieme ai dettagli dell’evento richiesti in una vista con un formato speciale. Lo stato post-elaborazione mostra il modo in cui l’evento è stato elaborato da Adobe Analytics dopo l’applicazione delle regole di elaborazione all’evento.
 
 ### Adobe Analytics per contenuti in streaming
 

@@ -4,9 +4,9 @@ title: Attivare i tipi di pubblico nelle destinazioni basate su file utilizzando
 description: Scopri come utilizzare l’API del servizio Flusso per esportare i file con profili qualificati nelle destinazioni dell’archiviazione cloud.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: df7b9bb0c5dc4348e8be7a0ea93296e24bc0fb1d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4760'
+source-wordcount: '4763'
 ht-degree: 3%
 
 ---
@@ -51,9 +51,9 @@ Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Expe
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): framework standardizzato tramite il quale [!DNL Experience Platform] organizza i dati sull&#39;esperienza del cliente.
 * [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] consente di creare tipi di pubblico e generarli in [!DNL Adobe Experience Platform] dai dati di [!DNL Real-Time Customer Profile].
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza [!DNL Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza [!DNL Experience Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per attivare i dati nelle destinazioni basate su file in Platform.
+Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per attivare i dati nelle destinazioni basate su file in Experience Platform.
 
 ### Autorizzazioni richieste {#permissions}
 
@@ -67,13 +67,13 @@ Questo tutorial fornisce esempi di chiamate API per dimostrare come formattare l
 
 ### Raccogli i valori per le intestazioni obbligatorie e facoltative {#gather-values-headers}
 
-Per effettuare chiamate alle API [!DNL Platform], devi prima completare l&#39;[esercitazione di autenticazione Experience Platform](https://www.adobe.com/go/platform-api-authentication-en). Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
+Per effettuare chiamate alle API [!DNL Experience Platform], devi prima completare l&#39;[esercitazione di autenticazione di Experience Platform](https://www.adobe.com/go/platform-api-authentication-en). Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
 
 * Autorizzazione: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-Le risorse in [!DNL Experience Platform] possono essere isolate in specifiche sandbox virtuali. Nelle richieste alle API [!DNL Platform], puoi specificare il nome e l&#39;ID della sandbox in cui verrà eseguita l&#39;operazione. Si tratta di parametri facoltativi.
+Le risorse in [!DNL Experience Platform] possono essere isolate in specifiche sandbox virtuali. Nelle richieste alle API [!DNL Experience Platform], puoi specificare il nome e l&#39;ID della sandbox in cui verrà eseguita l&#39;operazione. Si tratta di parametri facoltativi.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -326,7 +326,7 @@ Segui i passaggi seguenti per configurare un flusso di dati di esportazione del 
 
 ![Passaggi per attivare i tipi di pubblico che evidenziano il passaggio corrente in cui si trova l&#39;utente](/help/destinations/assets/api/file-based-segment-export/step2.png)
 
-Dopo aver deciso la destinazione in cui esportare i tipi di pubblico, devi creare una connessione sorgente. La [connessione di origine](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) rappresenta la connessione all&#39;[archivio profili di Experience Platform interno](/help/profile/home.md#profile-data-store).
+Dopo aver deciso la destinazione in cui esportare i tipi di pubblico, devi creare una connessione sorgente. La [connessione di origine](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) rappresenta la connessione all&#39;[archivio profili Experience Platform](/help/profile/home.md#profile-data-store) interno.
 
 >[!BEGINSHADEBOX]
 
@@ -3477,7 +3477,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/idnamespace/i
 
 +++ Visualizza le identità disponibili da utilizzare nello schema di input
 
-La risposta restituisce le identità utilizzabili durante la creazione dello schema di input. Questa risposta restituisce sia gli spazi dei nomi di identità [standard](/help/identity-service/features/namespaces.md#standard) che quelli [personalizzati](/help/identity-service/features/namespaces.md#manage-namespaces) configurati in Experience Platform.
+La risposta restituisce le identità utilizzabili durante la creazione dello schema di input. Tieni presente che questa risposta restituisce sia [spazi dei nomi di identità standard](/help/identity-service/features/namespaces.md#standard) che [personalizzati](/help/identity-service/features/namespaces.md#manage-namespaces) che hai configurato in Experience Platform.
 
 ```json
 [
@@ -3742,7 +3742,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Risposta con schema di esempio**
 
-Inspect la risposta ottenuta durante l’esecuzione della chiamata precedente. È necessario analizzare in profondità la risposta per trovare l&#39;oggetto `targetSpec.attributes.partnerSchema.jsonSchema`
+Esamina la risposta ottenuta durante l’esecuzione della chiamata precedente. È necessario analizzare in profondità la risposta per trovare l&#39;oggetto `targetSpec.attributes.partnerSchema.jsonSchema`
 
 +++ Risposta per ottenere lo schema partner per lo schema di output
 
@@ -4514,7 +4514,7 @@ Per aggiungere una [azione di marketing](/help/data-governance/api/marketing-act
 >
 >L&#39;intestazione `If-Match` è obbligatoria quando si effettua una richiesta `PATCH`. Il valore di questa intestazione è la versione univoca del flusso di dati che desideri aggiornare. Il valore etag viene aggiornato a ogni aggiornamento riuscito di un’entità di flusso come flusso di dati, connessione di destinazione e altre.
 >
-> Per ottenere la versione più recente del valore etag, esegui una richiesta di GET all&#39;endpoint `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}`, dove `{ID}` è l&#39;ID del flusso di dati che desideri aggiornare.
+> Per ottenere la versione più recente del valore etag, esegui una richiesta GET all&#39;endpoint `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}`, dove `{ID}` è l&#39;ID del flusso di dati che desideri aggiornare.
 >
 > Assicurarsi di racchiudere il valore dell&#39;intestazione `If-Match` tra virgolette doppie, come negli esempi seguenti, quando si eseguono `PATCH` richieste.
 
@@ -4583,7 +4583,7 @@ Per aggiungere una [chiave obbligatoria](/help/destinations/ui/activate-batch-pr
 >
 >L&#39;intestazione `If-Match` è obbligatoria quando si effettua una richiesta `PATCH`. Il valore di questa intestazione è la versione univoca del flusso di dati che desideri aggiornare. Il valore etag viene aggiornato a ogni aggiornamento riuscito di un’entità di flusso come flusso di dati, connessione di destinazione e altre.
 >
-> Per ottenere la versione più recente del valore etag, esegui una richiesta di GET all&#39;endpoint `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}`, dove `{ID}` è l&#39;ID del flusso di dati che desideri aggiornare.
+> Per ottenere la versione più recente del valore etag, esegui una richiesta GET all&#39;endpoint `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}`, dove `{ID}` è l&#39;ID del flusso di dati che desideri aggiornare.
 >
 > Assicurarsi di racchiudere il valore dell&#39;intestazione `If-Match` tra virgolette doppie, come negli esempi seguenti, quando si eseguono `PATCH` richieste.
 
@@ -4662,7 +4662,7 @@ Per aggiungere una [chiave di deduplicazione](/help/destinations/ui/activate-bat
 >
 >L&#39;intestazione `If-Match` è obbligatoria quando si effettua una richiesta `PATCH`. Il valore di questa intestazione è la versione univoca del flusso di dati che desideri aggiornare. Il valore etag viene aggiornato a ogni aggiornamento riuscito di un’entità di flusso come flusso di dati, connessione di destinazione e altre.
 >
-> Per ottenere la versione più recente del valore etag, esegui una richiesta di GET all&#39;endpoint `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}`, dove `{ID}` è l&#39;ID del flusso di dati che desideri aggiornare.
+> Per ottenere la versione più recente del valore etag, esegui una richiesta GET all&#39;endpoint `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}`, dove `{ID}` è l&#39;ID del flusso di dati che desideri aggiornare.
 >
 > Assicurarsi di racchiudere il valore dell&#39;intestazione `If-Match` tra virgolette doppie, come negli esempi seguenti, quando si eseguono `PATCH` richieste.
 
@@ -4817,11 +4817,11 @@ Nella documentazione di riferimento API sono disponibili informazioni sui [vari 
 
 ## Gestione degli errori API {#api-error-handling}
 
-Gli endpoint API in questa esercitazione seguono i principi generali dei messaggi di errore API di Experience Platform. Per ulteriori informazioni sull&#39;interpretazione delle risposte di errore, consultare [codici di stato API](/help/landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](/help/landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
+Gli endpoint API in questa esercitazione seguono i principi generali dei messaggi di errore API di Experience Platform. Per ulteriori informazioni sull&#39;interpretazione delle risposte di errore, consultare [codici di stato API](/help/landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](/help/landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Experience Platform.
 
 ## Passaggi successivi {#next-steps}
 
-Seguendo questa esercitazione, Platform è stato connesso correttamente a una delle destinazioni di archiviazione cloud preferite e hai impostato un flusso di dati per la rispettiva destinazione per esportare i tipi di pubblico. Per ulteriori dettagli, vedi le pagine seguenti, ad esempio come modificare i flussi di dati esistenti utilizzando l’API del servizio Flusso:
+Seguendo questa esercitazione, hai connesso correttamente Experience Platform a una delle destinazioni di archiviazione cloud preferite e hai impostato un flusso di dati per la rispettiva destinazione per esportare i tipi di pubblico. Per ulteriori dettagli, vedi le pagine seguenti, ad esempio come modificare i flussi di dati esistenti utilizzando l’API del servizio Flusso:
 
 * [Panoramica sulle destinazioni](../home.md)
 * [Panoramica del catalogo delle destinazioni](../catalog/overview.md)

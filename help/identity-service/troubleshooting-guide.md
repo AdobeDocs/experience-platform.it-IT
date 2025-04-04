@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Guida alla risoluzione dei problemi del servizio Identity
 description: Questo documento contiene le risposte alle domande più frequenti sul servizio Adobe Experience Platform Identity e una guida alla risoluzione dei problemi relativi agli errori più comuni.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2165'
+source-wordcount: '2168'
 ht-degree: 0%
 
 ---
 
 # Guida alla risoluzione dei problemi di Identity Service
 
-Questo documento contiene le risposte alle domande frequenti su Adobe Experience Platform [!DNL Identity Service] e una guida alla risoluzione dei problemi relativi agli errori più comuni. Per domande e risoluzione dei problemi relativi alle API [!DNL Platform] in generale, consulta la [guida alla risoluzione dei problemi API di Adobe Experience Platform](../landing/troubleshooting.md).
+Questo documento contiene le risposte alle domande frequenti su Adobe Experience Platform [!DNL Identity Service] e una guida alla risoluzione dei problemi relativi agli errori più comuni. Per domande e risoluzione dei problemi relativi alle API [!DNL Experience Platform] in generale, consulta la [guida alla risoluzione dei problemi API di Adobe Experience Platform](../landing/troubleshooting.md).
 
 I dati che identificano un singolo cliente sono spesso frammentati tra i vari dispositivi e sistemi utilizzati per interagire con il tuo marchio. [!DNL Identity Service] riunisce queste identità frammentate, facilitando una comprensione completa del comportamento del cliente in modo da poter fornire esperienze digitali di impatto in tempo reale. Per ulteriori informazioni, consulta [Panoramica del servizio Identity](./home.md).
 
@@ -77,7 +77,7 @@ Gli spazi dei nomi di identità standard sono spazi dei nomi disponibili per tut
 
 ## Dove posso trovare l’elenco degli spazi dei nomi di identità disponibili per la mia organizzazione?
 
-Utilizzando l&#39;API [Identity Service](https://www.adobe.io/experience-platform-apis/references/identity-service), puoi elencare tutti gli spazi dei nomi di identità disponibili per la tua organizzazione effettuando una richiesta di GET all&#39;endpoint `/idnamespace/identities`. Per ulteriori informazioni, consulta la sezione su [elenco degli spazi dei nomi disponibili](./api/list-namespaces.md) nella panoramica dell&#39;API del servizio Identity.
+Utilizzando l&#39;[API del servizio Identity](https://www.adobe.io/experience-platform-apis/references/identity-service), puoi elencare tutti gli spazi dei nomi di identità disponibili per la tua organizzazione effettuando una richiesta GET all&#39;endpoint `/idnamespace/identities`. Per ulteriori informazioni, consulta la sezione su [elenco degli spazi dei nomi disponibili](./api/list-namespaces.md) nella panoramica dell&#39;API del servizio Identity.
 
 ## Come si crea uno spazio dei nomi personalizzato per l’organizzazione?
 
@@ -89,7 +89,7 @@ Nelle chiamate API viene fatto riferimento alle identità tramite l’identità 
 
 ## In che modo il servizio Identity gestisce le informazioni personali (PII, personally identifiable information)?
 
-Identity Service dispone di spazi dei nomi standard per supportare l’acquisizione di valori di identità con hash per numeri di telefono e e-mail. Tuttavia, sei responsabile dell’hashing dei valori. Per ulteriori informazioni sull&#39;hashing dei dati acquisiti in Platform, consulta la [[!DNL Data Prep] guida alle funzioni di mappatura](../data-prep/functions.md#hashing).
+Identity Service dispone di spazi dei nomi standard per supportare l’acquisizione di valori di identità con hash per numeri di telefono e e-mail. Tuttavia, sei responsabile dell’hashing dei valori. Per ulteriori informazioni sull&#39;hashing dei dati acquisiti in Experience Platform, consulta la [[!DNL Data Prep] guida alle funzioni di mappatura](../data-prep/functions.md#hashing).
 
 ## Ci sono considerazioni quando si esegue l’hashing di identità basate su PII?
 
@@ -115,7 +115,7 @@ Internal solutions|Preferred|Common
 
 ## Perché non posso accedere alla pagina o alle API del grafo delle identità?
 
-L&#39;amministratore di Platform deve fornire l&#39;autorizzazione `view-identity-graph` per poter visualizzare i dati del grafico delle identità. Senza questa autorizzazione, riceverai un messaggio di autorizzazione negata nella pagina del visualizzatore del grafico delle identità e quando chiami le API di Platform. Per ulteriori informazioni sulle autorizzazioni, vedere la [panoramica sul controllo degli accessi](../access-control/home.md).
+L&#39;amministratore di Experience Platform deve richiedere l&#39;autorizzazione `view-identity-graph` per poter visualizzare i dati del grafico delle identità. Senza questa autorizzazione, riceverai un messaggio di autorizzazione negata nella pagina del visualizzatore del grafico delle identità e quando chiami le API di Experience Platform. Per ulteriori informazioni sulle autorizzazioni, vedere la [panoramica sul controllo degli accessi](../access-control/home.md).
 
 ## Risoluzione dei problemi
 
@@ -216,7 +216,7 @@ Questo messaggio di errore viene visualizzato quando all&#39;organizzazione non 
 }
 ```
 
-In caso di errore, il token di accesso non è valido. I token di accesso scadono ogni 24 ore e devono essere rigenerati per continuare a utilizzare le API [!DNL Platform]. Per istruzioni sulla generazione di nuovi token di accesso, consulta l&#39;[esercitazione sull&#39;autenticazione](https://www.adobe.com/go/platform-api-authentication-en).
+In caso di errore, il token di accesso non è valido. I token di accesso scadono ogni 24 ore e devono essere rigenerati per continuare a utilizzare le API [!DNL Experience Platform]. Per istruzioni sulla generazione di nuovi token di accesso, consulta l&#39;[esercitazione sull&#39;autenticazione](https://www.adobe.com/go/platform-api-authentication-en).
 
 ### Token del servizio di autorizzazione non valido
 
@@ -228,7 +228,7 @@ In caso di errore, il token di accesso non è valido. I token di accesso scadono
 }
 ```
 
-In caso di errore, il token di accesso non è valido. I token di accesso scadono ogni 24 ore e devono essere rigenerati per continuare a utilizzare le API [!DNL Platform]. Per istruzioni sulla generazione di nuovi token di accesso, consulta l&#39;[esercitazione sull&#39;autenticazione](https://www.adobe.com/go/platform-api-authentication-en).
+In caso di errore, il token di accesso non è valido. I token di accesso scadono ogni 24 ore e devono essere rigenerati per continuare a utilizzare le API [!DNL Experience Platform]. Per istruzioni sulla generazione di nuovi token di accesso, consulta l&#39;[esercitazione sull&#39;autenticazione](https://www.adobe.com/go/platform-api-authentication-en).
 
 ### Il token utente non dispone di un contesto di prodotto valido
 
@@ -266,7 +266,7 @@ Quando [!DNL Identity Service] persiste un&#39;identità, all&#39;ID dell&#39;id
 
 Questo messaggio di errore viene visualizzato quando all&#39;organizzazione non sono state assegnate le autorizzazioni appropriate per [!DNL Identity Service]. Per risolvere il problema, contatta l’amministratore di sistema.
 
-### Errore interno del server
+### Errore del server interno
 
 ```json
 {
@@ -276,11 +276,11 @@ Questo messaggio di errore viene visualizzato quando all&#39;organizzazione non 
 }
 ```
 
-Questo errore viene visualizzato quando si verifica un&#39;eccezione imprevista nell&#39;esecuzione di una chiamata del servizio [!DNL Platform]. Si consiglia di programmare le chiamate automatizzate in modo da ritentare le richieste più volte a intervalli temporizzati quando si riceve questo errore. Se il problema persiste, contattare l&#39;amministratore di sistema.
+Questo errore viene visualizzato quando si verifica un&#39;eccezione imprevista nell&#39;esecuzione di una chiamata del servizio [!DNL Experience Platform]. Si consiglia di programmare le chiamate automatizzate in modo da ritentare le richieste più volte a intervalli temporizzati quando si riceve questo errore. Se il problema persiste, contattare l&#39;amministratore di sistema.
 
 ## Codici di errore di acquisizione batch
 
-[!DNL Identity Service] acquisisce i dati di identità dai dati di record e serie temporali caricati in [!DNL Platform] mediante acquisizione in batch. Poiché l’acquisizione batch è un processo asincrono, è necessario visualizzare i dettagli di un batch per visualizzare gli errori. Gli errori si accumulano con l’avanzamento del batch fino al suo completamento.
+[!DNL Identity Service] acquisisce i dati di identità dai dati di record e serie temporali caricati in [!DNL Experience Platform] mediante acquisizione in batch. Poiché l’acquisizione batch è un processo asincrono, è necessario visualizzare i dettagli di un batch per visualizzare gli errori. Gli errori si accumulano con l’avanzamento del batch fino al suo completamento.
 
 Di seguito è riportato un elenco di messaggi di errore relativi a [!DNL Identity Service] che è possibile incontrare quando si utilizza l&#39;[API di acquisizione batch](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/).
 

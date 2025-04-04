@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creare e modificare le classi nell’interfaccia utente
 description: Scopri come creare e modificare le classi nell’interfaccia utente di Experience Platform.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: 02b709c01347c1d03f870132dff437b97f239a9c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1689'
+source-wordcount: '1692'
 ht-degree: 5%
 
 ---
@@ -20,25 +20,25 @@ ht-degree: 5%
 
 In Adobe Experience Platform, la classe di uno schema definisce gli aspetti comportamentali dei dati che lo schema conterrà (record o serie temporali). Inoltre, le classi descrivono il minor numero di proprietà comuni che tutti gli schemi basati su tale classe dovrebbero includere e forniscono un modo per unire più set di dati compatibili.
 
-Adobe fornisce diverse classi standard (&quot;core&quot;) di Experience Data Model (XDM), tra cui [XDM Individual Profile](../../classes/individual-profile.md) e [XDM ExperienceEvent](../../classes/experienceevent.md). Oltre a queste classi principali, puoi anche creare classi personalizzate per descrivere casi d’uso più specifici per la tua organizzazione.
+Adobe fornisce diverse classi standard (&quot;core&quot;) Experience Data Model (XDM), tra cui [XDM Individual Profile](../../classes/individual-profile.md) e [XDM ExperienceEvent](../../classes/experienceevent.md). Oltre a queste classi principali, puoi anche creare classi personalizzate per descrivere casi d’uso più specifici per la tua organizzazione.
 
 Questo documento fornisce una panoramica su come creare, modificare e gestire le classi personalizzate nell’interfaccia utente di Experience Platform.
 
 ## Prerequisiti {#prerequisites}
 
-Questa guida richiede una buona conoscenza del sistema XDM. Per un&#39;introduzione al ruolo di XDM all&#39;interno dell&#39;ecosistema Experience Platform e alle [nozioni di base sulla composizione dello schema](../../schema/composition.md), consulta la [panoramica di XDM](../../home.md) per scoprire come le classi contribuiscono agli schemi XDM.
+Questa guida richiede una buona conoscenza del sistema XDM. Per un&#39;introduzione al ruolo di XDM nell&#39;ecosistema Experience Platform e alle [nozioni di base sulla composizione dello schema](../../schema/composition.md), consulta la [panoramica di XDM](../../home.md) per scoprire come le classi contribuiscono agli schemi XDM.
 
 Sebbene non sia necessario per questa guida, è consigliabile seguire anche l&#39;esercitazione su [composizione di uno schema nell&#39;interfaccia utente](../../tutorials/create-schema-ui.md) per acquisire familiarità con le varie funzionalità dell&#39;Editor di schema.
 
 ## Introduzione {#getting-started}
 
-Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Schemi]** nell&#39;area di navigazione a sinistra per aprire l&#39;area di lavoro [!UICONTROL Schemi], quindi seleziona la scheda **[!UICONTROL Classi]**. Viene visualizzato un elenco delle classi disponibili.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Schemi]** nell&#39;area di navigazione a sinistra per aprire l&#39;area di lavoro [!UICONTROL Schemi], quindi seleziona la scheda **[!UICONTROL Classi]**. Viene visualizzato un elenco delle classi disponibili.
 
 ![Numero di classi all&#39;interno della scheda [!UICONTROL Classi] dell&#39;area di lavoro [!UICONTROL Schemi] [!UICONTROL Classi] e [!UICONTROL Schemi] evidenziati.](../../images/ui/resources/classes/available-classes.png)
 
 ## Filtra classi {#filter}
 
-L’elenco delle classi viene filtrato automaticamente in base alla modalità di creazione. L&#39;impostazione predefinita visualizza le classi definite da Adobe. Puoi anche filtrare l’elenco per visualizzare quelli creati dall’organizzazione. Selezionare il pulsante di opzione per scegliere tra le opzioni [!UICONTROL Standard] e [!UICONTROL Personalizzato]. L&#39;opzione [!UICONTROL Standard] mostra le entità create da Adobe e l&#39;opzione [!UICONTROL Custom] mostra le entità create all&#39;interno dell&#39;organizzazione.
+L’elenco delle classi viene filtrato automaticamente in base alla modalità di creazione. L’impostazione predefinita visualizza le classi definite da Adobe. Puoi anche filtrare l’elenco per visualizzare quelli creati dall’organizzazione. Selezionare il pulsante di opzione per scegliere tra le opzioni [!UICONTROL Standard] e [!UICONTROL Personalizzato]. L&#39;opzione [!UICONTROL Standard] mostra le entità create da Adobe e l&#39;opzione [!UICONTROL Custom] mostra le entità create all&#39;interno dell&#39;organizzazione.
 
 ![Scheda [!UICONTROL Classi] dell&#39;area di lavoro [!UICONTROL Schemi] con [!UICONTROL Standard] e [!UICONTROL Personalizzato] evidenziati.](../../images/ui/resources/classes/standard-and-custom-classes.png)
 
@@ -48,7 +48,7 @@ L’elenco delle classi viene filtrato automaticamente in base alla modalità di
 
 ## Crea una nuova classe {#create}
 
-Esistono due metodi per creare una classe nell&#39;interfaccia utente di Platform, tramite **[!UICONTROL Crea classe]** o **[!UICONTROL Crea schema]**.
+Esistono due metodi per creare una classe nell&#39;interfaccia utente di Experience Platform, tramite **[!UICONTROL Crea classe]** o **[!UICONTROL Crea schema]**.
 
 ### Crea classe
 
@@ -156,6 +156,6 @@ Per ulteriori informazioni, consulta la guida su [creazione e modifica di schemi
 
 ## Passaggi successivi {#next-steps}
 
-Questo documento illustra come creare e modificare le classi utilizzando l’interfaccia utente di Platform. Per ulteriori informazioni sulle funzionalità dell&#39;area di lavoro [!UICONTROL Schemi], vedere la panoramica dell&#39;area di lavoro [[!UICONTROL Schemi]](../overview.md).
+Questo documento illustra come creare e modificare le classi utilizzando l’interfaccia utente di Experience Platform. Per ulteriori informazioni sulle funzionalità dell&#39;area di lavoro [!UICONTROL Schemi], vedere la panoramica dell&#39;area di lavoro [[!UICONTROL Schemi]](../overview.md).
 
 Per informazioni su come gestire le classi utilizzando l&#39;API Schema Registry, vedere la [guida dell&#39;endpoint delle classi](../../api/classes.md).

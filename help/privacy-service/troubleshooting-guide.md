@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guida alla risoluzione dei problemi di Privacy Service
 description: Questo documento fornisce le risposte alle domande frequenti su Privacy Service, nonché informazioni sugli errori più comuni riscontrati nell’API.
 exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
-source-git-commit: c6507a39ba5ae5ca6aa2bf02cf8844a4592152ac
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1028'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -63,13 +63,13 @@ L&#39;array contiene due oggetti, che rappresentano i singoli utenti identificat
 Per ulteriori informazioni su come fornire informazioni sull&#39;identità utente, consulta la guida su [dati di identità per le richieste di privacy](identity-data.md).
 
 
-## Posso usare [!DNL Privacy Service] per pulire i dati accidentalmente inviati a [!DNL Platform]?
+## Posso usare [!DNL Privacy Service] per pulire i dati accidentalmente inviati a [!DNL Experience Platform]?
 
-L&#39;Adobe non supporta l&#39;utilizzo di [!DNL Privacy Service] per la cancellazione dei dati inviati accidentalmente a un prodotto. [!DNL Privacy Service] è progettato per aiutarti a rispettare gli obblighi relativi alle richieste di accesso o cancellazione da parte dell&#39;interessato (o del consumatore). Qualsiasi altro utilizzo di Privacy Service per la pulizia o la manutenzione dei dati non è supportato o consentito.
+Adobe non supporta l&#39;utilizzo di [!DNL Privacy Service] per la cancellazione dei dati inviati accidentalmente a un prodotto. [!DNL Privacy Service] è progettato per aiutarti a rispettare gli obblighi relativi alle richieste di accesso o cancellazione da parte dell&#39;interessato (o del consumatore). Qualsiasi altro utilizzo di Privacy Service per la pulizia o la manutenzione dei dati non è supportato o consentito.
 
 Le richieste di accesso a dati personali sono soggette a scadenza e vengono completate in base alla normativa sulla privacy applicabile. l&#39;invio di richieste che non sono richieste di accesso o di cancellazione dell&#39;interessato/consumatore influisce su tutti i clienti [!DNL Privacy Service] e sulla capacità di [!DNL Privacy Service] di supportare le tempistiche legali appropriate. È ora disponibile un limite massimo di caricamento giornaliero per evitare abusi del servizio.
 
-Contatta il team del tuo account di Adobe per coordinare e rimuovere eventuali problemi di PII o dati.
+Contatta il team del tuo account Adobe per coordinarti e rimuovere eventuali problemi di PII o dati.
 
 ## Come posso ottenere informazioni sullo stato della mia richiesta di accesso a dati personali o del mio lavoro?
 
@@ -81,7 +81,7 @@ Per recuperare lo stato di un particolare processo utilizzando l&#39;API [!DNL P
 
 ### Utilizzo dell’interfaccia utente
 
-Tutte le richieste di processo attive sono elencate nel widget **[!UICONTROL Richieste di processo]** nel dashboard dell&#39;interfaccia utente [!DNL Privacy Service]. Lo stato di ogni richiesta di processo viene visualizzato nella colonna **[!UICONTROL Stato]**. Per ulteriori informazioni sulla visualizzazione delle richieste di processi nell&#39;interfaccia utente, consulta la [guida utente Privacy Service](ui/user-guide.md).
+Tutte le richieste di processo attive sono elencate nel widget **[!UICONTROL Richieste di processo]** nel dashboard dell&#39;interfaccia utente [!DNL Privacy Service]. Lo stato di ogni richiesta di processo viene visualizzato nella colonna **[!UICONTROL Stato]**. Per ulteriori informazioni sulla visualizzazione delle richieste di processi nell&#39;interfaccia utente, consulta la [guida utente di Privacy Service](ui/user-guide.md).
 
 ## Come posso scaricare i risultati dei miei processi sulla privacy completati?
 
@@ -111,4 +111,4 @@ Nella tabella seguente vengono descritti alcuni errori comuni in [!DNL Privacy S
 | Sono necessari l’accesso e le autorizzazioni. | Per utilizzare [!DNL Privacy Service] sono necessari l&#39;accesso e le autorizzazioni. Contatta l’amministratore per ottenere l’accesso. |
 | Si è verificato un problema durante l’upload e l’archiviazione dei dati di accesso. | Quando si verifica questo errore, ricarica i dati di accesso e riprova. |
 | Il carico di lavoro è stato superato per il limite di frequenza documenti corrente. | In questo caso, riduci il tasso di invio e riprova. |
-| Troppe richieste<br>(errori HTTP 429) | Se i modelli di invio superano il limite monitorato di processi consentiti per l’interessato, verrà visualizzato un errore HTTP 429 in risposta al traffico continuo dall’organizzazione. Privacy Service è destinato al trattamento delle richieste di privacy delle persone interessate. Non deve essere utilizzato per la pulizia dei dati. Se ricevi errori HTTP 429, i limiti di limitazione e di richiesta vengono implementati per proteggere gli Adobi da abusi che potrebbero mettere a rischio il lavoro di conformità legittimo.<br>Metodi alternativi per ridurre al minimo i dati sono forniti da [l&#39;impostazione delle pianificazioni di scadenza dei set di dati](../hygiene/ui/dataset-expiration.md) e l&#39;utilizzo della [funzionalità di eliminazione record](../hygiene/ui/record-delete.md). Per ulteriori informazioni su come applicare queste funzionalità, consulta la relativa documentazione. |
+| Troppe richieste<br>(errori HTTP 429) | Se i modelli di invio superano il limite monitorato di processi consentiti per l’interessato, verrà visualizzato un errore HTTP 429 in risposta al traffico continuo dall’organizzazione. Privacy Service è destinato al trattamento delle richieste di privacy degli interessati. Non deve essere utilizzato per la pulizia dei dati. Se ricevi errori HTTP 429, i limiti di limitazione e di richiesta vengono implementati per proteggere Adobe da abusi che potrebbero mettere a rischio il lavoro di conformità legittimo.<br>Metodi alternativi per ridurre al minimo i dati sono forniti da [l&#39;impostazione delle pianificazioni di scadenza dei set di dati](../hygiene/ui/dataset-expiration.md) e l&#39;utilizzo della [funzionalità di eliminazione record](../hygiene/ui/record-delete.md). Per ulteriori informazioni su come applicare queste funzionalità, consulta la relativa documentazione. |

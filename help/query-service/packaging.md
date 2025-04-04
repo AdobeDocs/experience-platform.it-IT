@@ -2,9 +2,9 @@
 title: Packaging servizio query
 description: Il documento seguente illustra il pacchetto di funzionalità e prodotti disponibili per Query Service ed evidenzia le differenze tra query ad hoc e batch.
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '980'
+source-wordcount: '987'
 ht-degree: 2%
 
 ---
@@ -15,19 +15,19 @@ Questo documento illustra i diversi tipi di funzionalità di creazione pacchetti
 
 Adobe Experience Platform Query Service può essere diviso in due funzionalità in base ai modelli di query che possono essere eseguiti:
 
-- **Le query ad hoc** sono query SQL utilizzate per esplorare i set di dati acquisiti per la verifica, la convalida, la sperimentazione e così via. Queste query non riscrivono i dati nel data lake di Platform.
-- **Le query batch** sono query SQL utilizzate per eseguire l&#39;elaborazione post-acquisizione dei set di dati acquisiti. Queste query puliscono, modellano, manipolano e arricchiscono i dati, i cui risultati vengono riscritti nel data lake di Platform. Queste query possono essere pianificate, gestite e monitorate come processi batch.
+- **Le query ad hoc** sono query SQL utilizzate per esplorare i set di dati acquisiti per la verifica, la convalida, la sperimentazione e così via. Queste query non riscrivono i dati nel data lake di Experience Platform.
+- **Le query batch** sono query SQL utilizzate per eseguire l&#39;elaborazione post-acquisizione dei set di dati acquisiti. Queste query puliscono, modellano, manipolano e arricchiscono i dati, i cui risultati vengono riscritti nel data lake di Experience Platform. Queste query possono essere pianificate, gestite e monitorate come processi batch.
 
 Le funzionalità di Query Service sono fornite con i seguenti prodotti e componenti aggiuntivi:
 
-- **Applicazioni basate su Platform** (Adobe Real-time Customer Data Platform, Adobe Customer Journey Analytics e Adobe Journey Optimizer): l&#39;accesso a Query Service per eseguire query ad hoc viene fornito sin dall&#39;inizio con ogni variante e livello di applicazioni basate su Platform.
+- **Applicazioni basate su Experience Platform** (Adobe Real-Time Customer Data Platform, Adobe Customer Journey Analytics e Adobe Journey Optimizer): l&#39;accesso a Query Service per eseguire query ad hoc viene fornito sin dall&#39;inizio con ogni variante e livello delle applicazioni basate su Experience Platform.
 - **[!DNL Data Distiller]** (pacchetto del componente aggiuntivo che può essere acquistato con Adobe Real-Time CDP, Customer Journey Analytics e Adobe Journey Optimizer): l&#39;accesso a Query Service per eseguire query batch è fornito con [!DNL Data Distiller].
 
 ## Diritti {#entitlements}
 
 La tabella seguente illustra i principali diritti di Query Service in base al modo in cui vengono inclusi nel pacchetto:
 
-| Autenticazione servizio query | Pacchetto di applicazioni basate su piattaforma | Pacchetto con [!DNL Data Distiller] |
+| Autenticazione servizio query | Pacchetto di applicazioni basate su Experience Platform | Pacchetto con [!DNL Data Distiller] |
 |---|---|---|
 | Pattern di query supportato | Solo query ad hoc | Query batch |
 | Caso d’uso supportato | <ul><li>Esplorazione&#x200B;</li><li>Individuazione dati&#x200B;</li><li>Convalida dei dati</li><li>Sperimentazione</li></ul> | <ul><li>Pulizia</li><li>Forma</li><li>Manipolazione</li><li>Arricchimento</li></ul> |
@@ -80,7 +80,7 @@ Per creare Data Distiller [SQL Insights](./data-distiller/sql-insights/overview.
 
 ## Supporto sandbox {#sandbox-support}
 
-Le sandbox sono partizioni virtuali all’interno di una singola istanza di Experience Platform. Ogni istanza di Platform supporta più sandbox di produzione e non di produzione, ognuna delle quali mantiene la propria libreria di risorse Platform. Le sandbox non di produzione consentono di testare le funzioni, eseguire esperimenti e creare configurazioni personalizzate senza influire sulle sandbox di produzione. Per ulteriori informazioni sulle sandbox, consulta la [panoramica sulle sandbox](../sandboxes/home.md). Tutti i diritti di Query Service sono condivisi tra tutte le sandbox.
+Le sandbox sono partizioni virtuali all’interno di una singola istanza di Experience Platform. Ogni istanza di Experience Platform supporta più sandbox di produzione e non di produzione, ognuna delle quali mantiene la propria libreria di risorse Experience Platform. Le sandbox non di produzione consentono di testare le funzioni, eseguire esperimenti e creare configurazioni personalizzate senza influire sulle sandbox di produzione. Per ulteriori informazioni sulle sandbox, consulta la [panoramica sulle sandbox](../sandboxes/home.md). Tutti i diritti di Query Service sono condivisi tra tutte le sandbox.
 
 ## Passaggi successivi
 

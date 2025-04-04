@@ -5,7 +5,7 @@ title: Importare una composizione in pacchetti utilizzando l’API di apprendime
 type: Tutorial
 description: Questa esercitazione utilizza l’API di apprendimento automatico di Sensei per creare un motore, noto anche come ricetta nell’interfaccia utente di.
 exl-id: c8dde30b-5234-448d-a597-f1c8d32f23d4
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1018'
 ht-degree: 3%
@@ -41,7 +41,7 @@ Questa esercitazione richiede un file di composizione in pacchetti sotto forma d
 
 - `{DOCKER_URL}`: indirizzo URL di un&#39;immagine Docker di un servizio intelligente.
 
-Questo tutorial richiede di aver completato l&#39;esercitazione [Autenticazione per Adobe Experience Platform](https://www.adobe.com/go/platform-api-authentication-en) per effettuare correttamente le chiamate alle API [!DNL Platform]. Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
+Questo tutorial richiede di aver completato l&#39;esercitazione [Autenticazione per Adobe Experience Platform](https://www.adobe.com/go/platform-api-authentication-en) per effettuare correttamente le chiamate alle API [!DNL Experience Platform]. Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
 
 - `{ACCESS_TOKEN}`: il valore del token Bearer specifico fornito dopo l&#39;autenticazione.
 - `{ORG_ID}`: credenziali organizzazione trovate nell&#39;integrazione univoca di Adobe Experience Platform.

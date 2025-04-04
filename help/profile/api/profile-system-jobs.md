@@ -5,9 +5,9 @@ type: Documentation
 description: Adobe Experience Platform consente di eliminare un set di dati o un batch dall’archivio profili per rimuovere i dati Profilo cliente in tempo reale che non sono più necessari o che sono stati aggiunti per errore. A tal fine è necessario utilizzare l’API di profilo per creare un processo di sistema del profilo o eliminare una richiesta.
 role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: 16778d0edbad4539a4ff5084a2f22ca5f08e83ec
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2020'
+source-wordcount: '2022'
 ht-degree: 2%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->I seguenti endpoint possono variare tra le implementazioni di Adobe Experience Platform in esecuzione su Microsoft Azure e Amazon Web Services (AWS). Un Experience Platform in esecuzione su AWS è attualmente disponibile per un numero limitato di clienti. Per ulteriori informazioni sull&#39;infrastruttura Experience Platform supportata, consulta l&#39;[panoramica sul cloud multiplo di Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
+>I seguenti endpoint possono variare tra le implementazioni di Adobe Experience Platform in esecuzione su Microsoft Azure e Amazon Web Services (AWS). Experience Platform in esecuzione su AWS è attualmente disponibile per un numero limitato di clienti. Per ulteriori informazioni sull&#39;infrastruttura Experience Platform supportata, consulta la [Panoramica multi-cloud di Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
-Adobe Experience Platform consente di acquisire dati da più origini e di creare profili affidabili per i singoli clienti. I dati acquisiti in [!DNL Platform] sono memorizzati in [!DNL Data Lake] e se i set di dati sono stati abilitati per il profilo, tali dati vengono memorizzati anche nell&#39;archivio dati [!DNL Real-Time Customer Profile]. Talvolta può essere necessario eliminare i dati di profilo associati a un set di dati dall’archivio Profili per rimuovere i dati non più necessari o che sono stati aggiunti per errore. È necessario utilizzare l&#39;API [!DNL Real-Time Customer Profile] per creare un processo di sistema [!DNL Profile] o &quot;richiesta di eliminazione&quot;.
+Adobe Experience Platform consente di acquisire dati da più origini e di creare profili affidabili per i singoli clienti. I dati acquisiti in [!DNL Experience Platform] sono memorizzati in [!DNL Data Lake] e se i set di dati sono stati abilitati per il profilo, tali dati vengono memorizzati anche nell&#39;archivio dati [!DNL Real-Time Customer Profile]. Talvolta può essere necessario eliminare i dati di profilo associati a un set di dati dall’archivio Profili per rimuovere i dati non più necessari o che sono stati aggiunti per errore. È necessario utilizzare l&#39;API [!DNL Real-Time Customer Profile] per creare un processo di sistema [!DNL Profile] o &quot;richiesta di eliminazione&quot;.
 
 >[!NOTE]
 >
@@ -38,7 +38,7 @@ Puoi anche utilizzare parametri di query facoltativi per filtrare l’elenco del
 
 >[!AVAILABILITY]
 >
->I seguenti parametri di query sono disponibili **solo** quando si utilizza Platform in Microsoft Azure.
+>I seguenti parametri di query sono disponibili **solo** quando si utilizza Experience Platform in Microsoft Azure.
 >
 >Quando si utilizza questo endpoint su AWS, i primi 100 processi di sistema vengono restituiti in ordine decrescente, in base alla data di creazione.
 
@@ -208,7 +208,7 @@ In caso di esito positivo, la risposta restituisce un array contenente un oggett
 
 ## Creare una richiesta di eliminazione {#create-a-delete-request}
 
-L&#39;avvio di una nuova richiesta di eliminazione viene eseguito tramite una richiesta POST all&#39;endpoint `/systems/jobs`, in cui l&#39;ID del set di dati o del batch da eliminare viene fornito nel corpo della richiesta.
+L&#39;avvio di una nuova richiesta di eliminazione viene eseguito tramite una richiesta POST all&#39;endpoint `/systems/jobs`, dove l&#39;ID del set di dati o del batch da eliminare viene fornito nel corpo della richiesta.
 
 ### Eliminare un set di dati e i dati del profilo associati
 
@@ -502,7 +502,7 @@ In caso di esito positivo, la risposta restituisce i dettagli della richiesta di
 
 >[!AVAILABILITY]
 >
->La funzionalità seguente è **only** disponibile quando si utilizza Platform in Microsoft Azure.
+>La funzionalità seguente è **only** disponibile quando si utilizza Experience Platform in Microsoft Azure.
 
 Se si tenta di avviare una richiesta di eliminazione per un batch di set di dati Record, si verifica un errore a 400 livelli, simile al seguente:
 

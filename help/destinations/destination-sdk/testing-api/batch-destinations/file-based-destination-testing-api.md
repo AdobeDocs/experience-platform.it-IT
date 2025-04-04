@@ -2,9 +2,9 @@
 description: Questa pagina spiega come utilizzare l’endpoint API /testing/destinationInstance per verificare se la destinazione basata su file è configurata correttamente e per verificare l’integrità dei flussi di dati alla destinazione configurata.
 title: Test della destinazione basata su file con profili di esempio
 exl-id: 75f76aec-245b-4f07-8871-c64a710db9f6
-source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '831'
 ht-degree: 2%
 
 ---
@@ -27,9 +27,9 @@ Prima di continuare, consulta la [guida introduttiva](../../getting-started.md) 
 
 Prima di poter utilizzare l&#39;endpoint `/testing/destinationInstance`, verificare di soddisfare le seguenti condizioni:
 
-* Hai già una destinazione basata su file creata tramite la Destination SDK e la puoi visualizzare nel [catalogo delle destinazioni](../../../ui/destinations-workspace.md).
-* Nell’interfaccia utente di Experience Platform è stato creato almeno un flusso di attivazione per la destinazione.
-* Per eseguire correttamente la richiesta API, è necessario disporre dell’ID dell’istanza di destinazione corrispondente all’istanza di destinazione da testare. Ottieni dall’URL l’ID dell’istanza di destinazione da utilizzare nella chiamata API per la navigazione di una connessione con la destinazione nell’interfaccia utente di Platform.
+* Hai già una destinazione basata su file creata tramite Destination SDK e la puoi visualizzare nel [catalogo delle destinazioni](../../../ui/destinations-workspace.md).
+* Hai creato almeno un flusso di attivazione per la tua destinazione nell’interfaccia utente di Experience Platform.
+* Per eseguire correttamente la richiesta API, è necessario disporre dell’ID dell’istanza di destinazione corrispondente all’istanza di destinazione da testare. Ottieni dall’URL l’ID dell’istanza di destinazione da utilizzare nella chiamata API per la navigazione di una connessione con la destinazione nell’interfaccia utente di Experience Platform.
 
   ![Immagine dell&#39;interfaccia utente che mostra come ottenere l&#39;ID dell&#39;istanza di destinazione dall&#39;URL.](../../assets/testing-api/get-destination-instance-id.png)
 * *Facoltativo*: se desideri testare la configurazione di destinazione con un profilo di esempio aggiunto alla chiamata API, utilizza l&#39;endpoint [/sample-profiles](file-based-sample-profile-generation-api.md) per generare un profilo di esempio in base allo schema di origine esistente. Se non fornisci un profilo di esempio, l’API ne genererà uno e lo restituirà nella risposta.
@@ -238,7 +238,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 insieme al 
 
 ## Gestione degli errori API {#api-error-handling}
 
-Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](../../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
+Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](../../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Experience Platform.
 
 ## Passaggi successivi
 
@@ -246,4 +246,4 @@ Dopo aver letto questo documento, ora sai come verificare la configurazione dell
 
 Se hai ricevuto una risposta API valida, la destinazione funziona correttamente. Se desideri visualizzare informazioni più dettagliate sul flusso di attivazione, puoi utilizzare la proprietà `results` dalla risposta a [visualizza risultati dettagliati dell&#39;attivazione](file-based-destination-results-api.md).
 
-Se stai creando una destinazione pubblica, ora puoi [inviare la configurazione di destinazione](../../guides/submit-destination.md) all&#39;Adobe per la revisione.
+Se stai creando una destinazione pubblica, ora puoi [inviare la configurazione di destinazione](../../guides/submit-destination.md) ad Adobe per la revisione.

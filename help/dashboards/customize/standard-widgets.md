@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform;interfaccia utente;dashboard;dashboard;profili;segmenti;destinazioni;utilizzo licenze;user interface;UI;dashboards;dashboard;profiles;segments;destinations
+keywords: Experience Platform;interfaccia utente;dashboard;dashboard;profili;segmenti;destinazioni;utilizzo licenze;;user interface;UI;dashboards;dashboard;profiles;segments;destinations
 title: Widget dashboard standard
 description: Questa guida fornisce istruzioni dettagliate per aggiungere widget standard alle dashboard di Adobe Experience Platform.
 exl-id: 37353e73-b207-444a-b2b5-a20a3628086b
-source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '436'
+source-wordcount: '438'
 ht-degree: 0%
 
 ---
 
 # Aggiungere widget standard alle dashboard
 
-In Adobe Experience Platform puoi visualizzare e interagire con i dati della tua organizzazione utilizzando più dashboard. È inoltre possibile aggiornare alcune dashboard aggiungendo nuovi widget alla vista dashboard. In questo Adobe viene fornita una selezione di widget standard che è possibile scegliere di aggiungere alle dashboard.
+In Adobe Experience Platform puoi visualizzare e interagire con i dati della tua organizzazione utilizzando più dashboard. È inoltre possibile aggiornare alcune dashboard aggiungendo nuovi widget alla vista dashboard. Adobe fornisce una selezione di widget standard che puoi scegliere di aggiungere alle dashboard.
 
-I dashboard [[!UICONTROL Profili]](../guides/profiles.md#default-widgets), [[!UICONTROL Tipi di pubblico]](../guides/audiences.md#default-widgets) e [[!UICONTROL Destinazioni]](../guides/destinations.md#default-widgets) hanno ciascuno un widget predefinito al momento della creazione di una nuova istanza Platform. Questa guida fornisce istruzioni dettagliate per aggiungere widget standard per personalizzare le dashboard [!UICONTROL Profili], [!UICONTROL Tipi di pubblico] e [!UICONTROL Destinazioni] nell&#39;interfaccia utente di Platform.
+I dashboard [[!UICONTROL Profili]](../guides/profiles.md#default-widgets), [[!UICONTROL Tipi di pubblico]](../guides/audiences.md#default-widgets) e [[!UICONTROL Destinazioni]](../guides/destinations.md#default-widgets) presentano ognuno un widget predefinito al momento della creazione di una nuova istanza di Experience Platform. Questa guida fornisce istruzioni dettagliate per aggiungere widget standard per personalizzare le dashboard [!UICONTROL Profili], [!UICONTROL Tipi di pubblico] e [!UICONTROL Destinazioni] nell&#39;interfaccia utente di Experience Platform.
 
 >[!NOTE]
 >
@@ -28,7 +28,7 @@ Questa guida richiede l&#39;accesso alla [!UICONTROL libreria Widget] in Experie
 
 ## Guida introduttiva ai widget standard {#standard-widgets}
 
-All&#39;interno della libreria di widget, la scheda **[!UICONTROL Standard]** contiene widget creati per Adobe, suddivisi in categorie in base ai dashboard disponibili.
+All&#39;interno della libreria di widget, la scheda **[!UICONTROL Standard]** contiene widget creati da Adobe, suddivisi in categorie in base alle dashboard disponibili.
 
 La categoria selezionata corrisponde al dashboard da cui è stata immessa la libreria di widget. In altre parole, se hai selezionato la libreria dei widget dal dashboard [!UICONTROL Profili], viene selezionata la categoria [!UICONTROL Profili] e le altre categorie sono disattivate.
 

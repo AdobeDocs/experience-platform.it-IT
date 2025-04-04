@@ -2,9 +2,9 @@
 title: Esempi di set di dati
 description: I set di dati di esempio di Query Service consentono di eseguire query esplorative sui big data con tempi di elaborazione notevolmente ridotti a scapito della precisione delle query. Questa guida fornisce informazioni su come gestire gli esempi per l’elaborazione approssimativa delle query
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
-source-git-commit: 5f2b44c364183b7becf69f491b41e9d5558accc2
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '633'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ Per utilizzare le funzionalità di elaborazione delle query approssimative di cr
 
 >[!NOTE]
 >
->Devi abilitare il flag di sessione ogni volta che accedi a Platform.
+>Devi abilitare il flag di sessione ogni volta che accedi ad Experience Platform.
 
 ![Editor query con il comando &#39;SET aqp=true;&#39; evidenziato.](../images/key-concepts/set-session-flag.png)
 

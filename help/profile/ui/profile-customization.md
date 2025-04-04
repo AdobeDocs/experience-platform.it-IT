@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;profilo;profilo cliente in tempo reale;interfaccia utente;personalizzazione;dettagli profilo;dettagli profilo;dettagli
+keywords: Experience Platform;profilo;profilo cliente in tempo reale;interfaccia utente;personalizzazione;dettagli profilo;dettagli;;profile;real-time customer profile;user interface;UI;customization;profile details;details
 title: Personalizzazione dei dettagli del profilo nell’interfaccia utente
 description: Questa guida fornisce istruzioni dettagliate per personalizzare il modo in cui i dati Real-Time Customer Profile vengono visualizzati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 76cf8420-cc50-4a56-9f6d-5bfc01efcdb3
-source-git-commit: 69ac6d3f98675df11183082ecbbb49d18ddb57af
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1394'
+source-wordcount: '1395'
 ht-degree: 0%
 
 ---
 
 # Personalizzazione dettagli [!DNL Real-Time Customer Profile] {#profile-detail-customization}
 
-Nell&#39;interfaccia utente di Adobe Experience Platform è possibile visualizzare e interagire con i dati di [!DNL Real-Time Customer Profile] sotto forma di profili cliente. Le informazioni di profilo visualizzate nell’interfaccia utente di sono state unite da più frammenti di profilo per formare un’unica vista per ogni singolo cliente. Ciò include dettagli quali attributi di base, identità collegate e preferenze di canale. I campi predefiniti visualizzati nei profili possono anche essere modificati a livello organizzativo per visualizzare gli attributi [!DNL Profile] preferiti. Questa guida fornisce istruzioni dettagliate per personalizzare la modalità di visualizzazione dei dati [!DNL Profile] nell&#39;interfaccia utente di Platform.
+Nell&#39;interfaccia utente di Adobe Experience Platform è possibile visualizzare e interagire con i dati di [!DNL Real-Time Customer Profile] sotto forma di profili cliente. Le informazioni di profilo visualizzate nell’interfaccia utente di sono state unite da più frammenti di profilo per formare un’unica vista per ogni singolo cliente. Ciò include dettagli quali attributi di base, identità collegate e preferenze di canale. I campi predefiniti visualizzati nei profili possono anche essere modificati a livello organizzativo per visualizzare gli attributi [!DNL Profile] preferiti. Questa guida fornisce istruzioni dettagliate per personalizzare la modalità di visualizzazione dei dati [!DNL Profile] nell&#39;interfaccia utente di Experience Platform.
 
 Per una guida completa all&#39;interfaccia utente dei profili, visita la [guida all&#39;interfaccia utente dei profili](user-guide.md).
 
@@ -74,7 +74,7 @@ Dopo il salvataggio, si torna alla scheda **[!UICONTROL Dettagli]** in cui sono 
 
 ## Aggiungi una nuova scheda {#add-a-new-card}
 
-Per personalizzare ulteriormente l’aspetto dei profili in Experience Platform, puoi scegliere di aggiungere nuove schede al dashboard e selezionare gli attributi che desideri visualizzare su tali schede. Per iniziare, selezionare **[!UICONTROL Modifica dashboard]** nella scheda **[!UICONTROL Dettagli]**.
+Per personalizzare ulteriormente l’aspetto dei profili all’interno di Experience Platform, puoi scegliere di aggiungere nuove schede al dashboard e selezionare gli attributi che desideri visualizzare su tali schede. Per iniziare, selezionare **[!UICONTROL Modifica dashboard]** nella scheda **[!UICONTROL Dettagli]**.
 
 ![Il pulsante Personalizza dettagli profilo è evidenziato.](../images/profile-customization/customize-profile-details.png)
 

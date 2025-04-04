@@ -4,9 +4,9 @@ title: Modificare le connessioni di destinazione utilizzando l’API del servizi
 type: Tutorial
 description: Scopri come modificare vari componenti di una connessione di destinazione utilizzando l’API del servizio Flusso.
 exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
-source-git-commit: 2a72f6886f7a100d0a1bf963eedaed8823a7b313
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1605'
+source-wordcount: '1609'
 ht-degree: 5%
 
 ---
@@ -30,23 +30,23 @@ Questo tutorial richiede un ID del flusso di dati valido. Se non disponi di un I
 Questo tutorial richiede anche una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
 * [Destinazioni](../home.md): [!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l&#39;attivazione diretta dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
-* [Sandbox](../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Sandbox](../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Experience Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per aggiornare correttamente il flusso di dati utilizzando l&#39;API [!DNL Flow Service].
 
 ### Lettura delle chiamate API di esempio {#reading-sample-api-calls}
 
-Questo tutorial fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere le chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di Experience Platform.
+Questo tutorial fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di Experience Platform.
 
 ### Raccogliere i valori per le intestazioni richieste {#gather-values-for-required-headers}
 
-Per effettuare chiamate alle API di Platform, devi prima completare l&#39;[esercitazione di autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento del tutorial di autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di Experience Platform, come mostrato di seguito:
+Per effettuare chiamate alle API di Experience Platform, devi prima completare l&#39;[esercitazione di autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento del tutorial di autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di Experience Platform, come mostrato di seguito:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Tutte le risorse in Experience Platform, incluse quelle appartenenti a [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API di Platform richiedono un’intestazione che specifichi il nome della sandbox in cui verrà eseguita l’operazione:
+Tutte le risorse in Experience Platform, incluse quelle appartenenti a [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API di Experience Platform richiedono un’intestazione che specifichi il nome della sandbox in cui verrà eseguita l’operazione:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -60,13 +60,13 @@ Tutte le richieste che contengono un payload (`POST`, `PUT`, `PATCH`) richiedono
 
 ## Cerca dettagli flusso di dati {#look-up-dataflow-details}
 
-Il primo passaggio nella modifica della connessione di destinazione consiste nel recuperare i dettagli del flusso di dati utilizzando il tuo ID flusso. È possibile visualizzare i dettagli correnti di un flusso di dati esistente effettuando una richiesta GET all&#39;endpoint `/flows`.
+Il primo passaggio nella modifica della connessione di destinazione consiste nel recuperare i dettagli del flusso di dati utilizzando il tuo ID flusso. Per visualizzare i dettagli correnti di un flusso di dati esistente, effettua una richiesta GET all&#39;endpoint `/flows`.
 
 >[!TIP]
 >
 >Puoi utilizzare l’interfaccia utente di Experience Platform per ottenere l’ID del flusso di dati desiderato per una destinazione. Vai a **[!UICONTROL Destinazioni]** > **[!UICONTROL Sfoglia]**, seleziona il flusso di dati di destinazione desiderato e individua l&#39;ID di destinazione nella barra a destra. L’ID di destinazione è il valore che utilizzerai come ID di flusso nel passaggio successivo.
 >
-> ![Ottieni l&#39;ID di destinazione tramite l&#39;interfaccia utente Experience Platform](/help/destinations/assets/api/edit-destination/get-destination-id.png)
+> ![Ottieni l&#39;ID di destinazione tramite l&#39;interfaccia utente di Experience Platform](/help/destinations/assets/api/edit-destination/get-destination-id.png)
 
 >[!BEGINSHADEBOX]
 
@@ -183,7 +183,7 @@ Per aggiornare i componenti di una connessione di destinazione, eseguire una ric
 >
 >L&#39;intestazione `If-Match` è obbligatoria quando si effettua una richiesta `PATCH`. Il valore di questa intestazione è la versione univoca della connessione di destinazione che desideri aggiornare. Il valore etag viene aggiornato a ogni aggiornamento riuscito di un’entità di flusso come flusso di dati, connessione di destinazione e altre.
 >
-> Per ottenere la versione più recente del valore etag, eseguire una richiesta di GET all&#39;endpoint `/targetConnections/{TARGET_CONNECTION_ID}`, dove `{TARGET_CONNECTION_ID}` è l&#39;ID di connessione di destinazione che si desidera aggiornare.
+> Per ottenere la versione più recente del valore etag, eseguire una richiesta GET all&#39;endpoint `/targetConnections/{TARGET_CONNECTION_ID}`, dove `{TARGET_CONNECTION_ID}` è l&#39;ID di connessione di destinazione che si desidera aggiornare.
 >
 > Assicurarsi di racchiudere il valore dell&#39;intestazione `If-Match` tra virgolette doppie, come negli esempi seguenti, quando si eseguono `PATCH` richieste.
 
@@ -235,7 +235,7 @@ curl -X PATCH \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce l’ID connessione di destinazione e un Etag aggiornato. È possibile verificare l&#39;aggiornamento effettuando una richiesta di GET all&#39;API [!DNL Flow Service] e fornendo l&#39;ID di connessione di destinazione.
+In caso di esito positivo, la risposta restituisce l’ID connessione di destinazione e un Etag aggiornato. È possibile verificare l&#39;aggiornamento effettuando una richiesta GET all&#39;API [!DNL Flow Service] e fornendo l&#39;ID di connessione di destinazione.
 
 ```json
 {
@@ -275,7 +275,7 @@ curl -X PATCH \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce l’ID connessione di destinazione e un tag aggiornato. È possibile verificare l&#39;aggiornamento effettuando una richiesta di GET all&#39;API [!DNL Flow Service] e fornendo l&#39;ID di connessione di destinazione.
+In caso di esito positivo, la risposta restituisce l’ID connessione di destinazione e un tag aggiornato. È possibile verificare l&#39;aggiornamento effettuando una richiesta GET all&#39;API [!DNL Flow Service] e fornendo l&#39;ID di connessione di destinazione.
 
 ```json
 {
@@ -317,7 +317,7 @@ curl -X PATCH \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce l’ID connessione di destinazione e un tag aggiornato. È possibile verificare l&#39;aggiornamento effettuando una richiesta di GET all&#39;API [!DNL Flow Service] e fornendo l&#39;ID di connessione di destinazione.
+In caso di esito positivo, la risposta restituisce l’ID connessione di destinazione e un tag aggiornato. È possibile verificare l&#39;aggiornamento effettuando una richiesta GET all&#39;API [!DNL Flow Service] e fornendo l&#39;ID di connessione di destinazione.
 
 ```json
 {
@@ -342,7 +342,7 @@ Ricorda che hai ottenuto l&#39;ID di connessione di base in un [passaggio preced
 >
 >L&#39;intestazione `If-Match` è obbligatoria quando si effettua una richiesta `PATCH`. Il valore di questa intestazione corrisponde alla versione univoca della connessione di base che si desidera aggiornare. Il valore etag viene aggiornato a ogni aggiornamento riuscito di un’entità di flusso come flusso di dati, connessione di base e altre.
 >
-> Per ottenere la versione più recente del valore Etag, eseguire una richiesta di GET all&#39;endpoint `/connections/{BASE_CONNECTION_ID}`, dove `{BASE_CONNECTION_ID}` è l&#39;ID connessione di base che si desidera aggiornare.
+> Per ottenere la versione più recente del valore Etag, eseguire una richiesta GET all&#39;endpoint `/connections/{BASE_CONNECTION_ID}`, dove `{BASE_CONNECTION_ID}` è l&#39;ID connessione di base che si desidera aggiornare.
 >
 > Assicurarsi di racchiudere il valore dell&#39;intestazione `If-Match` tra virgolette doppie, come negli esempi seguenti, quando si eseguono `PATCH` richieste.
 
@@ -394,7 +394,7 @@ curl -X PATCH \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce l’ID della connessione di base e un tag aggiornato. È possibile verificare l&#39;aggiornamento effettuando una richiesta di GET all&#39;API [!DNL Flow Service] e fornendo l&#39;ID connessione di base.
+In caso di esito positivo, la risposta restituisce l’ID della connessione di base e un tag aggiornato. È possibile verificare l&#39;aggiornamento effettuando una richiesta GET all&#39;API [!DNL Flow Service] e fornendo l&#39;ID connessione di base.
 
 ```json
 {
@@ -436,7 +436,7 @@ curl -X PATCH \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce l’ID della connessione di base e un tag aggiornato. È possibile verificare l&#39;aggiornamento effettuando una richiesta di GET all&#39;API [!DNL Flow Service] e fornendo l&#39;ID connessione di base.
+In caso di esito positivo, la risposta restituisce l’ID della connessione di base e un tag aggiornato. È possibile verificare l&#39;aggiornamento effettuando una richiesta GET all&#39;API [!DNL Flow Service] e fornendo l&#39;ID connessione di base.
 
 ```json
 {
@@ -451,7 +451,7 @@ In caso di esito positivo, la risposta restituisce l’ID della connessione di b
 
 ## Gestione degli errori API {#api-error-handling}
 
-Gli endpoint API in questa esercitazione seguono i principi generali dei messaggi di errore API di Experience Platform. Per ulteriori informazioni sull&#39;interpretazione delle risposte di errore, consultare [codici di stato API](/help/landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](/help/landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
+Gli endpoint API in questa esercitazione seguono i principi generali dei messaggi di errore API di Experience Platform. Per ulteriori informazioni sull&#39;interpretazione delle risposte di errore, consultare [codici di stato API](/help/landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](/help/landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Experience Platform.
 
 ## Passaggi successivi {#next-steps}
 

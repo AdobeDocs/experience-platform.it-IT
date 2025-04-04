@@ -1,11 +1,11 @@
 ---
-keywords: twitter;Twitter;twitter tag sito universale;Twitter tag sito universale;Twitter tag UWT;Twitter uwt;twitter uwt
-title: Estensione tag twitter per sito Web universale
-description: L'estensione Twitter Universal Website Tag è una destinazione pubblicitaria in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità dell’estensione, consulta la pagina dell’estensione nell’Adobe Exchange.
+keywords: twitter;Twitter;tag sito universale twitter;tag sito universale Twitter;tag sito universale Twitter;tag UWT Twitter;uwt twitter uwt
+title: Estensione tag per sito web Twitter Universal
+description: L'estensione tag Twitter Universal Website è una destinazione pubblicitaria in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità dell’estensione, consulta la pagina dell’estensione su Adobe Exchange.
 exl-id: 51ee94f7-e44a-4192-b684-3d7838af4359
-source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '441'
 ht-degree: 4%
 
 ---
@@ -16,15 +16,15 @@ ht-degree: 4%
 
 [!DNL Twitter Universal Website Tag] fornisce azioni per inviare beacon al tag UWT di Twitter.
 
-[!DNL Twitter Universal Website Tag] è un&#39;estensione pubblicitaria in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità dell&#39;estensione, vedi [Tracciamento conversione](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html) nella documentazione del Twitter.
+[!DNL Twitter Universal Website Tag] è un&#39;estensione pubblicitaria in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità dell&#39;estensione, vedi [Tracciamento conversione](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html) nella documentazione di Twitter.
 
-Questa destinazione è un’estensione tag. Per ulteriori informazioni sul funzionamento delle estensioni tag in Platform, consulta la [panoramica sulle estensioni tag](../launch-extensions/overview.md).
+Questa destinazione è un’estensione tag. Per ulteriori informazioni sul funzionamento delle estensioni tag in Experience Platform, consulta la [panoramica sulle estensioni tag](../launch-extensions/overview.md).
 
-![Estensione tag Twitter per sito Web universale](../../assets/catalog/advertising/twitter-uwt/catalog.png)
+![Estensione tag per siti Web universali Twitter](../../assets/catalog/advertising/twitter-uwt/catalog.png)
 
 ## Prerequisiti {#prerequisites}
 
-Questa estensione è disponibile nel catalogo [!DNL Destinations] per tutti i clienti che hanno acquistato Platform.
+Questa estensione è disponibile nel catalogo [!DNL Destinations] per tutti i clienti che hanno acquistato Experience Platform.
 
 Per utilizzare questa estensione, è necessario accedere ai tag in Adobe Experience Platform. I tag sono offerti ai clienti di Adobe Experience Cloud come funzionalità inclusa a valore aggiunto. Contatta l&#39;amministratore dell&#39;organizzazione per ottenere l&#39;accesso ai tag e chiedi loro di concederti l&#39;autorizzazione **[!UICONTROL manage_properties]** in modo da poter installare le estensioni.
 
@@ -32,7 +32,7 @@ Per utilizzare questa estensione, è necessario accedere ai tag in Adobe Experie
 
 Per installare l&#39;estensione [!DNL Twitter Universal Website Tag]:
 
-Nell&#39;interfaccia [Platform](https://platform.adobe.com/), vai a **[!UICONTROL Destinazioni]** > **[!UICONTROL Catalogo]**.
+Nell&#39;interfaccia [Experience Platform](https://platform.adobe.com/), vai a **[!UICONTROL Destinazioni]** > **[!UICONTROL Catalogo]**.
 
 Seleziona l’estensione dal catalogo o utilizza la barra di ricerca.
 
@@ -56,6 +56,6 @@ Puoi configurare, aggiornare ed eliminare le estensioni nell’interfaccia utent
 
 >[!TIP]
 >
->Se l&#39;estensione è già installata in una delle tue proprietà, nell&#39;interfaccia utente di Platform verrà comunque visualizzato **[!UICONTROL Installa]** per l&#39;estensione. Avvia il flusso di lavoro di installazione come descritto in [Installa estensione](#install-extension) per configurare o eliminare l&#39;estensione.
+>Se l&#39;estensione è già installata in una delle tue proprietà, nell&#39;interfaccia utente di Experience Platform viene comunque visualizzato **[!UICONTROL Installa]** per l&#39;estensione. Avvia il flusso di lavoro di installazione come descritto in [Installa estensione](#install-extension) per configurare o eliminare l&#39;estensione.
 
 Per aggiornare l&#39;estensione, consulta la guida al [processo di aggiornamento dell&#39;estensione](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) nella documentazione dei tag.

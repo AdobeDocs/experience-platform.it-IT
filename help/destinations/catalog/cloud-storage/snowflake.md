@@ -4,13 +4,13 @@ description: Esporta dati nel tuo account Snowflake utilizzando inserzioni priva
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 2893356e36fde4759ffe76e01296fcb8811ab8e7
+exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '675'
+source-wordcount: '676'
 ht-degree: 6%
 
 ---
-
 
 # Connessione Snowflake {#snowflake-destination}
 
@@ -99,7 +99,7 @@ Leggi [Attivare profili e tipi di pubblico nelle destinazioni di esportazione de
 
 La destinazione Snowflake supporta la mappatura degli attributi del profilo agli attributi personalizzati.
 
-![Immagine dell&#39;interfaccia utente di Platform che mostra la schermata di mappatura per la destinazione Snowflake.](../../assets/catalog/cloud-storage/snowflake/mapping.png)
+![Immagine dell&#39;interfaccia utente di Experience Platform che mostra la schermata di mappatura per la destinazione Snowflake.](../../assets/catalog/cloud-storage/snowflake/mapping.png)
 
 Gli attributi di destinazione vengono creati automaticamente in Snowflake utilizzando il nome di attributo specificato nel campo **[!UICONTROL Nome attributo]**.
 

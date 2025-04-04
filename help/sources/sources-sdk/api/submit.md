@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;origini;connettori;sorgente connettori;sorgenti sdk;sdk;SDK
+keywords: Experience Platform;home;argomenti popolari;origini;connettori;source connectors;sources sdk;sdk;SDK
 title: Invia il tuo Source
-description: Il documento seguente illustra come verificare e testare una nuova origine utilizzando l’API del servizio Flusso e integrare una nuova origine tramite Origini self-service (SDK batch).
+description: Il documento seguente illustra come verificare e testare una nuova origine utilizzando l’API del servizio Flusso e integrare una nuova origine tramite Origini self-service (Batch SDK).
 exl-id: 9e945ba1-51b6-40a9-b92f-e0a52b3f92fa
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '823'
+source-wordcount: '829'
 ht-degree: 0%
 
 ---
 
 # Invia l&#39;origine
 
-Il passaggio finale per integrare la nuova origine in Adobe Experience Platform utilizzando Self-Serve Sources (SDK batch) consiste nel testare l’origine per la verifica. In caso di esito positivo, puoi inviare la nuova sorgente contattando il rappresentante dell’Adobe.
+L’ultimo passaggio per integrare la nuova origine in Adobe Experience Platform utilizzando Origini self-service (Batch SDK) consiste nel testare l’origine per la verifica. In caso di esito positivo, puoi inviare la nuova sorgente contattando il rappresentante Adobe.
 
 Nel documento seguente vengono descritti i passaggi necessari per verificare ed eseguire il debug dell&#39;origine utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introduzione
 
-* Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida in [guida introduttiva alle API di Platform](../../../landing/api-guide.md).
-* Per informazioni su come generare le credenziali per le API di Platform, consulta l&#39;esercitazione su [autenticazione e accesso alle API di Experience Platform](../../../landing/api-authentication.md).
-* Per informazioni sulla configurazione di [!DNL Postman] per le API di Platform, consulta l&#39;esercitazione su [configurazione della console per sviluppatori e  [!DNL Postman]](../../../landing/postman.md).
+* Per informazioni su come effettuare correttamente chiamate alle API di Experience Platform, consulta la guida introduttiva [alle API di Experience Platform](../../../landing/api-guide.md).
+* Per informazioni su come generare le credenziali per le API Experience Platform, consulta l&#39;esercitazione su [autenticazione e accesso alle API Experience Platform](../../../landing/api-authentication.md).
+* Per informazioni sulla configurazione di [!DNL Postman] per le API di Experience Platform, consulta l&#39;esercitazione su [configurazione della console per sviluppatori e  [!DNL Postman]](../../../landing/postman.md).
 * Per facilitare il processo di test e debug, scarica la raccolta di verifica delle [origini self-service e l&#39;ambiente qui](../assets/sdk-verification.zip) e segui i passaggi descritti di seguito.
 
 ## Verifica l’origine
@@ -59,10 +59,10 @@ Una volta forniti i parametri di autenticazione e di specifica dell’origine, p
 
 | Parametro | Descrizione | Esempio |
 | --- | --- | --- |
-| `x-api-key` | Identificatore univoco utilizzato per autenticare le chiamate alle API Experience Platform. Per informazioni su come recuperare `x-api-key`, consulta il tutorial su [autenticazione e accesso alle API Experience Platform](../../../landing/api-authentication.md). | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
+| `x-api-key` | Identificatore univoco utilizzato per autenticare le chiamate alle API di Experience Platform. Per informazioni su come recuperare `x-api-key`, consulta il tutorial su [autenticazione e accesso alle API di Experience Platform](../../../landing/api-authentication.md). | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
 | `x-gw-ims-org-id` | Entità aziendale che può possedere o concedere in licenza prodotti e servizi e consentire l&#39;accesso ai propri membri. Per istruzioni su come recuperare le informazioni di `x-gw-ims-org-id`, consulta il tutorial su [come configurare la console per sviluppatori e  [!DNL Postman]](../../../landing/postman.md). | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
-| `authorizationToken` | Il token di autorizzazione necessario per completare le chiamate alle API Experience Platform. Per informazioni su come recuperare `authorizationToken`, consulta il tutorial su [autenticazione e accesso alle API Experience Platform](../../../landing/api-authentication.md). | `Bearer authorizationToken` |
-| `schemaId` | Per utilizzare i dati sorgente in Platform, è necessario creare uno schema di destinazione che strutturi i dati sorgente in base alle tue esigenze. Per i passaggi dettagliati su come creare uno schema XDM di destinazione, consulta l&#39;esercitazione su [creazione di uno schema utilizzando l&#39;API](../../../xdm/api/schemas.md). | `https://ns.adobe.com/{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
+| `authorizationToken` | Il token di autorizzazione necessario per completare le chiamate alle API di Experience Platform. Per informazioni su come recuperare `authorizationToken`, consulta il tutorial su [autenticazione e accesso alle API di Experience Platform](../../../landing/api-authentication.md). | `Bearer authorizationToken` |
+| `schemaId` | Affinché i dati sorgente possano essere utilizzati in Experience Platform, è necessario creare uno schema di destinazione per strutturare i dati sorgente in base alle tue esigenze. Per i passaggi dettagliati su come creare uno schema XDM di destinazione, consulta l&#39;esercitazione su [creazione di uno schema utilizzando l&#39;API](../../../xdm/api/schemas.md). | `https://ns.adobe.com/{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
 | `schemaVersion` | Versione univoca corrispondente allo schema. | `application/vnd.adobe.xed-full-notext+json; version=1` |
 | `schemaAltId` | `meta:altId` restituito insieme a `schemaId` durante la creazione di un nuovo schema. | `_{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
 | `dataSetId` | Per i passaggi dettagliati su come creare un set di dati di destinazione, consulta l&#39;esercitazione su [creazione di un set di dati utilizzando l&#39;API](../../../catalog/api/create-dataset.md). | `5f3c3cedb2805c194ff0b69a` |
@@ -82,10 +82,10 @@ Viene visualizzata l&#39;interfaccia [!DNL Runner], che consente di configurare 
 
 >[!NOTE]
 >
->È possibile disabilitare **Elimina flusso** dall&#39;elenco di controllo dell&#39;ordine di esecuzione se si preferisce utilizzare il dashboard di monitoraggio delle origini nell&#39;interfaccia utente di Platform. Tuttavia, una volta terminato il test, devi assicurarti che i flussi di test vengano eliminati.
+>È possibile disabilitare **Elimina flusso** dall&#39;elenco di controllo dell&#39;ordine di esecuzione se si preferisce utilizzare il dashboard di monitoraggio delle origini nell&#39;interfaccia utente di Experience Platform. Tuttavia, una volta terminato il test, devi assicurarti che i flussi di test vengano eliminati.
 
 ![run-collection](../assets/run-collection.png)
 
 ## Invia l&#39;origine
 
-Una volta che la tua sorgente è in grado di completare l’intero flusso di lavoro, puoi procedere a contattare il rappresentante del tuo Adobe e inviare la sorgente per l’integrazione.
+Una volta che la tua sorgente è in grado di completare l’intero flusso di lavoro, puoi procedere a contattare il tuo rappresentante Adobe e inviare la sorgente per l’integrazione.

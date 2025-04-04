@@ -1,9 +1,10 @@
 ---
 title: Connettere il copilota GitHub e il codice Visual Studio a Query Service
 description: Scopri come connettere GitHub Copilot e Visual Studio Code con Adobe Experience Platform Query Service.
-source-git-commit: f0c5b311721497bf2a14ca49dc5f1c9653e85efc
+exl-id: c5b71cc8-1d30-48c0-a8e2-135445a66639
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1366'
+source-wordcount: '1378'
 ht-degree: 0%
 
 ---
@@ -22,11 +23,11 @@ Questo documento descrive i passaggi necessari per connettere [!DNL GitHub Copil
 
 Questa guida richiede che tu abbia già accesso a un account GitHub e che ti sia registrato per [!DNL GitHub Copilot]. Puoi [registrarti dal sito Web GitHub](https://github.com/github-copilot/signup). Sono inoltre necessari [!DNL VS Code]. Puoi [scaricare [!DNL VS Code] dal loro sito Web ufficiale](https://code.visualstudio.com/download).
 
-Dopo aver installato [!DNL VS Code] e attivato l&#39;abbonamento a [!DNL Copilot], acquisisci le credenziali di connessione, ad Experience Platform. Queste credenziali si trovano nella scheda [!UICONTROL Credenziali] dell&#39;area di lavoro [!UICONTROL Query] nell&#39;interfaccia utente di Platform. Leggi la guida alle credenziali per [scopri come trovare questi valori nell&#39;interfaccia utente di Platform](../ui/credentials.md). Contatta l&#39;amministratore dell&#39;organizzazione se al momento non hai accesso all&#39;area di lavoro [!UICONTROL Query].
+Dopo aver installato [!DNL VS Code] e attivato la sottoscrizione a [!DNL Copilot], acquisisci le credenziali di connessione per Experience Platform. Queste credenziali si trovano nella scheda [!UICONTROL Credenziali] dell&#39;area di lavoro [!UICONTROL Query] nell&#39;interfaccia utente di Experience Platform. Leggi la guida alle credenziali per [scopri come trovare questi valori nell&#39;interfaccia utente di Experience Platform](../ui/credentials.md). Contatta l&#39;amministratore dell&#39;organizzazione se al momento non hai accesso all&#39;area di lavoro [!UICONTROL Query].
 
 ### Estensioni [!DNL Visual Studio Code] richieste {#required-extensions}
 
-Le seguenti estensioni [!DNL Visual Studio Code] sono necessarie per gestire ed eseguire query sui database SQL di Platform direttamente nell&#39;editor di codice. Scarica e installa queste estensioni.
+Le seguenti estensioni [!DNL Visual Studio Code] sono necessarie per gestire in modo efficace ed eseguire query sui database Experience Platform SQL direttamente all&#39;interno dell&#39;editor di codice. Scarica e installa queste estensioni.
 
 - [SQLTools](https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools): utilizzare l&#39;estensione SQLTools per gestire ed eseguire query su più database SQL. Include funzionalità quali query runner, SQL formatter ed Esplora connessioni, con supporto per driver aggiuntivi per aumentare la produttività degli sviluppatori. Per ulteriori informazioni, vedere la panoramica di Visual Studio Marketplace.
 - [SQLTools PostgreSQL/Cockroach Driver](https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools-driver-pg): questa estensione consente di connettersi, eseguire query e gestire database PostgreSQL e CockroachDB direttamente nell&#39;editor di codice.
@@ -48,17 +49,17 @@ Verrà visualizzato **[!DNL Connection Assistant]**. Selezionare il driver di da
 
 ### Impostazioni di connessione di input {#input-connection-settings}
 
-Viene visualizzata la visualizzazione [!DNL Connection Settings]. Immettere le credenziali di connessione a Platform nei campi appropriati di SQL Tools [!DNL Connection Assistant]. I valori richiesti sono illustrati nella tabella seguente.
+Viene visualizzata la visualizzazione [!DNL Connection Settings]. Immettere le credenziali di connessione Experience Platform nei campi appropriati degli SQL Tools [!DNL Connection Assistant]. I valori richiesti sono illustrati nella tabella seguente.
 
 | Proprietà | Descrizione |
 | --- |--- |
 | [!DNL Connection name] | Fornire un &quot;[!DNL Connection name]&quot; come `Prod_MySQL_Server` descrittivo e indicante chiaramente lo scopo (ad esempio, un ambiente di produzione per un server MySQL). Le best practice includono:<br><ul><li>Attenersi alle convenzioni di denominazione della propria organizzazione per assicurarsi che sia univoca all’interno del sistema.</li><li>Mantieni la concisione per mantenere la chiarezza ed evitare confusione con altre connessioni.</li><li>Includi nel nome i dettagli rilevanti sulla funzione o sull’ambiente della connessione.</li></ul> |
-| [!DNL Connect using] | Utilizzare l&#39;opzione **[!DNL Server and Port]** per specificare l&#39;indirizzo del server (nome host) e il numero di porta per stabilire una connessione diretta a Platform |
-| [!DNL Server address] | Immetti il valore **[!UICONTROL Host]** fornito nelle credenziali di Platform Postgres, ad esempio `acmeprod.platform-query.adobe.io`. |
-| [!DNL Port] | Questo valore è in genere `80` per i servizi Platform. |
-| [!DNL Database] | Immetti il valore **[!UICONTROL Database]** fornito nelle credenziali di Platform Postgres, ad esempio `prod:all`. |
-| [!DNL Username] | Questa proprietà fa riferimento al tuo ID organizzazione. Immetti il valore **[!UICONTROL Nome utente]** fornito nelle credenziali di Platform Postgres. |
-| [!DNL Password] | Questa proprietà è il token di accesso. Immetti il valore **[!UICONTROL Password]** fornito nelle credenziali di Platform Postgres. |
+| [!DNL Connect using] | Utilizzare l&#39;opzione **[!DNL Server and Port]** per specificare l&#39;indirizzo del server (nome host) e il numero di porta per stabilire una connessione diretta ad Experience Platform |
+| [!DNL Server address] | Immetti il valore **[!UICONTROL Host]** fornito nelle credenziali Experience Platform Postgres, ad esempio `acmeprod.platform-query.adobe.io`. |
+| [!DNL Port] | Questo valore è in genere `80` per i servizi Experience Platform. |
+| [!DNL Database] | Immetti il valore **[!UICONTROL Database]** fornito nelle credenziali Experience Platform Postgres, ad esempio `prod:all`. |
+| [!DNL Username] | Questa proprietà fa riferimento al tuo ID organizzazione. Immetti il valore **[!UICONTROL Nome utente]** fornito nelle credenziali Experience Platform Postgres. |
+| [!DNL Password] | Questa proprietà è il token di accesso. Immetti il valore **[!UICONTROL Password]** fornito nelle credenziali Experience Platform Postgres. |
 
 ![Area di lavoro dell&#39;Assistente connessione con diverse impostazioni evidenziate.](../images/clients/github-copilot/connection-settings.png)
 
@@ -90,7 +91,7 @@ L&#39;area di lavoro [!DNL VS Code] viene visualizzata con un suggerimento di [!
 
 ## Guida rapida di [!DNL GitHub Copilot]
 
-Una volta connesso all&#39;istanza Platform, puoi utilizzare [!DNL Copilot] come assistente alla codifica AI per scrivere il codice più rapidamente e con maggiore sicurezza. Questa sezione descrive le sue funzioni chiave e come utilizzarle.
+Una volta connesso all&#39;istanza Experience Platform, puoi utilizzare [!DNL Copilot] come assistente alla codifica AI per scrivere il codice più rapidamente e con maggiore sicurezza. Questa sezione descrive le sue funzioni chiave e come utilizzarle.
 
 ## Guida introduttiva a [!DNL GitHub Copilot] {#get-started-with-copilot}
 
@@ -150,4 +151,4 @@ Puoi utilizzare un’interfaccia di chat più tradizionale con una barra lateral
 
 ## Passaggi successivi
 
-È ora possibile eseguire query sui database Platform direttamente dall&#39;editor di codice e utilizzare i suggerimenti di codice basati sull&#39;intelligenza artificiale di [!DNL GitHub Copilot] per semplificare la scrittura e l&#39;ottimizzazione delle query SQL. Per ulteriori informazioni su come scrivere ed eseguire query, consultare la [guida per l&#39;esecuzione delle query](../best-practices/writing-queries.md).
+È ora possibile eseguire query sui database Experience Platform direttamente dall&#39;editor di codice e utilizzare i suggerimenti di codice basati sull&#39;intelligenza artificiale di [!DNL GitHub Copilot] per semplificare la scrittura e l&#39;ottimizzazione delle query SQL. Per ulteriori informazioni su come scrivere ed eseguire query, consultare la [guida per l&#39;esecuzione delle query](../best-practices/writing-queries.md).

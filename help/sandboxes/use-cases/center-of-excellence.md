@@ -1,15 +1,15 @@
 ---
-title: Abilitare un centro di eccellenza utilizzando gli strumenti sandbox
+title: Abilitare un centro di eccellenza utilizzando gli strumenti di sandbox
 description: Abilita un centro di eccellenza utilizzando gli strumenti sandbox creando un pacchetto "sandbox d’oro" per standardizzare le best practice su più sandbox.
 exl-id: 6f242ad5-bb02-4a6d-b255-d196dd5fe4b8
-source-git-commit: d4df5606228347b5fb69fdaa24c637c329099895
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '881'
-ht-degree: 7%
+source-wordcount: '882'
+ht-degree: 8%
 
 ---
 
-# Abilitare un centro di eccellenza utilizzando gli strumenti sandbox
+# Abilitare un centro di eccellenza utilizzando gli strumenti di sandbox
 
 Abilita un centro di eccellenza utilizzando gli strumenti sandbox creando un pacchetto &quot;sandbox d’oro&quot; per standardizzare le best practice su più sandbox.
 
@@ -37,7 +37,7 @@ Quando prevedi di creare un centro di eccellenza all’interno della tua organiz
 - Crea una sandbox con tutte le configurazioni rilevanti e convalidate da impostare come sandbox d’oro.
 - Se necessario, ottieni l’input delle parti interessate e il consenso sugli standard di base.
 
-### Funzionalità dell’interfaccia utente, componenti della piattaforma e prodotti di Experience Cloud che utilizzerai {#ui-functionality-and-elements}
+### Funzionalità dell’interfaccia utente, componenti di Experience Platform e prodotti Experience Cloud che utilizzerai {#ui-functionality-and-elements}
 
 Per implementare correttamente questo caso d’uso, devi utilizzare più aree di Adobe Experience Platform. Assicurati di disporre delle [autorizzazioni di controllo dell&#39;accesso basate su attributi](../../access-control/abac/overview.md) necessarie per tutte queste aree, oppure chiedi all&#39;amministratore di sistema di concederti le autorizzazioni necessarie.
 
@@ -73,7 +73,7 @@ Ora che la sandbox contiene le configurazioni degli oggetti della linea di base,
 
 ### Importare il pacchetto nelle sandbox pertinenti
 
-Una volta creato il pacchetto, puoi importarlo nelle sandbox pertinenti. La best practice prevede di importare un pacchetto contenente un’intera sandbox in una sandbox vuota. Utilizzando gli strumenti sandbox, puoi [importare facilmente un intero pacchetto sandbox](../../sandboxes/ui/sandbox-tooling.md#import-the-entire-sandbox-package) in una sandbox direttamente all&#39;interno di Experience Platform.
+Una volta creato il pacchetto, puoi importarlo nelle sandbox pertinenti. La best practice prevede di importare un pacchetto contenente un’intera sandbox in una sandbox vuota. Utilizzando gli strumenti sandbox, puoi [importare facilmente un intero pacchetto sandbox](../../sandboxes/ui/sandbox-tooling.md#import-the-entire-sandbox-package) in una sandbox direttamente in Experience Platform.
 
 ### Condivisione di pacchetti tra organizzazioni
 

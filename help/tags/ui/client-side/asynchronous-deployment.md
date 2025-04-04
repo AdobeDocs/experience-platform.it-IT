@@ -2,9 +2,9 @@
 title: Implementazione asincrona
 description: Scopri come implementare in modo asincrono le librerie tag di Adobe Experience Platform nel tuo sito web.
 exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1045'
+source-wordcount: '1046'
 ht-degree: 98%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Per gli utenti di Adobe Experience Cloud, assumono sempre maggiore importanza sia le prestazioni, sia la possibilità di implementare le librerie JavaScript richieste dai prodotti Adobe senza che questo comporti alcun blocco del sistema. Strumenti come [[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/) consigliano agli utenti di modificare le modalità di implementazione delle librerie Adobe nei loro siti. Questo articolo spiega come utilizzare le librerie JavaScript di Adobe in modo asincrono.
 
@@ -106,4 +106,4 @@ I tag dispongono di un pulsante per attivare il caricamento asincrono quando si 
    <script type="text/javascript">_satellite.pageBottom();</script>
    ```
 
-   Questo codice comunica a Platform che il parser del browser ha raggiunto il fondo della pagina. Poiché probabilmente i tag non saranno ancora caricati e in esecuzione in questo momento, la chiamata a `_satellite.pageBottom()` restituisce un errore e il tipo di evento Page Bottom potrebbe non comportarsi come previsto.
+   Questo codice comunica ad Experience Platform che il parser del browser ha raggiunto il fondo della pagina. Poiché probabilmente i tag non saranno ancora caricati e in esecuzione in questo momento, la chiamata a `_satellite.pageBottom()` restituisce un errore e il tipo di evento Page Bottom potrebbe non comportarsi come previsto.

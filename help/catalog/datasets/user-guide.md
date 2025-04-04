@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente dei set di dati
 description: Scopri come eseguire azioni comuni quando si lavora con i set di dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 5184f714d6bd8fb6e202a5ca6eea2d52a7169ae6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4105'
+source-wordcount: '4108'
 ht-degree: 4%
 
 ---
@@ -22,7 +22,7 @@ La presente guida utente richiede una buona conoscenza dei seguenti componenti d
 * [Set di dati](overview.md): il costrutto di archiviazione e gestione per la persistenza dei dati in [!DNL Experience Platform].
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): framework standardizzato tramite il quale [!DNL Experience Platform] organizza i dati sull&#39;esperienza del cliente.
    * [Nozioni di base sulla composizione dello schema](../../xdm/schema/composition.md): scopri i blocchi predefiniti di base degli schemi XDM, inclusi i principi chiave e le best practice nella composizione dello schema.
-   * [Editor schema](../../xdm/tutorials/create-schema-ui.md): scopri come creare schemi XDM personalizzati utilizzando [!DNL Schema Editor] nell&#39;interfaccia utente di [!DNL Platform].
+   * [Editor schema](../../xdm/tutorials/create-schema-ui.md): scopri come creare schemi XDM personalizzati utilizzando [!DNL Schema Editor] nell&#39;interfaccia utente di [!DNL Experience Platform].
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): garantire la conformità a normative, restrizioni e criteri relativi all&#39;utilizzo dei dati dei clienti.
 
@@ -57,7 +57,7 @@ La presente guida utente richiede una buona conoscenza dei seguenti componenti d
 
 Nell&#39;interfaccia utente [!DNL Experience Platform], seleziona **[!UICONTROL Set di dati]** nell&#39;area di navigazione a sinistra per aprire il dashboard **[!UICONTROL Set di dati]**. Il dashboard elenca tutti i set di dati disponibili per l’organizzazione. Vengono visualizzati i dettagli di ciascun set di dati elencato, tra cui il nome, lo schema a cui il set di dati aderisce e lo stato dell’esecuzione dell’acquisizione più recente.
 
-![L&#39;interfaccia utente di Platform con l&#39;elemento Set di dati evidenziato nella barra di navigazione a sinistra.](../images/datasets/user-guide/browse-datasets.png)
+![L&#39;interfaccia utente di Experience Platform con l&#39;elemento Set di dati evidenziato nella barra di navigazione a sinistra.](../images/datasets/user-guide/browse-datasets.png)
 
 Seleziona il nome di un set di dati dalla scheda [!UICONTROL Sfoglia] per accedere alla relativa schermata **[!UICONTROL Attività set di dati]** e visualizzare i dettagli del set di dati selezionato. La scheda attività include un grafico che mostra il tasso di utilizzo dei messaggi e un elenco di batch con esito positivo o negativo.
 
@@ -168,7 +168,7 @@ La finestra di dialogo [!UICONTROL Gestisci tag] può anche rimuovere i tag esis
 
 Una volta aggiunto un tag a un set di dati, i set di dati possono essere filtrati in base al tag corrispondente. Per ulteriori informazioni, consulta la sezione su come [filtrare i set di dati per tag](#enable-profile).
 
-Per ulteriori informazioni su come classificare gli oggetti business per individuare e classificare più facilmente gli oggetti, vedere la guida alla [gestione delle tassonomie dei metadati](../../administrative-tags/ui/managing-tags.md). Questa guida spiega come gli utenti con le autorizzazioni giuste possono creare tag predefiniti, assegnarli a categorie e gestire tutte le operazioni CRUD correlate nell’interfaccia utente di Platform.
+Per ulteriori informazioni su come classificare gli oggetti business per individuare e classificare più facilmente gli oggetti, vedere la guida alla [gestione delle tassonomie dei metadati](../../administrative-tags/ui/managing-tags.md). Questa guida spiega come gli utenti con le autorizzazioni giuste possono creare tag predefiniti, assegnarli a categorie e gestire tutte le operazioni CRUD correlate nell’interfaccia utente di Experience Platform.
 
 ### (Beta) Imposta i criteri di conservazione dei dati {#data-retention-policy}
 
@@ -176,7 +176,7 @@ Per ulteriori informazioni su come classificare gli oggetti business per individ
 > 
 >Le impostazioni di conservazione dei dati sono attualmente in versione beta e sono disponibili solo in una **versione limitata** per alcune organizzazioni. L’interfaccia utente potrebbe non riflettere la funzione descritta di seguito.
 
-Gestisci le impostazioni di scadenza e conservazione dei set di dati utilizzando il menu delle azioni in linea dalla scheda [!UICONTROL Sfoglia] dell&#39;area di lavoro [!UICONTROL Set di dati]. Puoi utilizzare questa funzione per configurare per quanto tempo i dati vengono conservati nel data lake e nell’archivio profili. La data di scadenza si basa su quando i dati sono stati acquisiti in Platform e sul periodo di conservazione configurato.
+Gestisci le impostazioni di scadenza e conservazione dei set di dati utilizzando il menu delle azioni in linea dalla scheda [!UICONTROL Sfoglia] dell&#39;area di lavoro [!UICONTROL Set di dati]. Puoi utilizzare questa funzione per configurare per quanto tempo i dati vengono conservati nel data lake e nell’archivio profili. La data di scadenza si basa su quando i dati sono stati acquisiti in Experience Platform e sul periodo di conservazione configurato.
 
 >[!TIP]
 >
@@ -419,7 +419,7 @@ Se si desidera eliminare il batch, selezionare **[!UICONTROL Elimina batch]** in
 
 ## Passaggi successivi
 
-Questa guida utente fornisce istruzioni per l&#39;esecuzione di azioni comuni durante l&#39;utilizzo dei set di dati nell&#39;interfaccia utente [!DNL Experience Platform]. Per i passaggi relativi all&#39;esecuzione di flussi di lavoro [!DNL Platform] comuni che coinvolgono set di dati, fare riferimento alle seguenti esercitazioni:
+Questa guida utente fornisce istruzioni per l&#39;esecuzione di azioni comuni durante l&#39;utilizzo dei set di dati nell&#39;interfaccia utente [!DNL Experience Platform]. Per i passaggi relativi all&#39;esecuzione di flussi di lavoro [!DNL Experience Platform] comuni che coinvolgono set di dati, fare riferimento alle seguenti esercitazioni:
 
 * [Creare un set di dati utilizzando le API](create.md)
 * [Eseguire query sui dati del set di dati utilizzando l’API di accesso ai dati](../../data-access/home.md)

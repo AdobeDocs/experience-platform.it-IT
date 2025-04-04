@@ -2,22 +2,22 @@
 title: Integrazione del registro di controllo di Query Service
 description: I registri di audit di Query Service conservano i record relativi a varie azioni dell’utente per formare un audit trail per la risoluzione dei problemi o il rispetto delle politiche aziendali di gestione dei dati e dei requisiti normativi. Questa esercitazione fornisce una panoramica delle funzioni del registro di controllo specifiche di Query Service.
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '930'
+source-wordcount: '935'
 ht-degree: 1%
 
 ---
 
 # Integrazione del registro di controllo di [!DNL Query Service]
 
-L&#39;integrazione del registro di controllo di Adobe Experience Platform [!DNL Query Service] fornisce record delle azioni utente correlate alle query. I registri di audit sono uno strumento essenziale per la risoluzione dei problemi e il rispetto delle politiche aziendali di gestione dei dati e dei requisiti normativi. La funzionalità ti consente di restituire un registro delle azioni per molti tipi di eventi, nonché di filtrare ed esportare i record. È possibile accedere ai registri tramite l&#39;interfaccia utente di Platform o l&#39;[API di query di controllo](https://www.adobe.io/experience-platform-apis/references/audit-query/) e scaricarli in formato CSV o JSON.
+L&#39;integrazione del registro di controllo di Adobe Experience Platform [!DNL Query Service] fornisce record delle azioni utente correlate alle query. I registri di audit sono uno strumento essenziale per la risoluzione dei problemi e il rispetto delle politiche aziendali di gestione dei dati e dei requisiti normativi. La funzionalità ti consente di restituire un registro delle azioni per molti tipi di eventi, nonché di filtrare ed esportare i record. È possibile accedere ai registri tramite l&#39;interfaccia utente di Experience Platform o l&#39;[API di query di controllo](https://www.adobe.io/experience-platform-apis/references/audit-query/) e scaricarli in formato CSV o JSON.
 
-Per ulteriori informazioni sull&#39;interfaccia utente dei registri di controllo, consulta il [documento di panoramica dei registri di controllo](../../landing/governance-privacy-security/audit-logs/overview.md). Per ulteriori informazioni sull&#39;esecuzione di chiamate alle API di Platform, consulta la [guida dell&#39;API dei registri di controllo](../../landing/api-guide.md).
+Per ulteriori informazioni sull&#39;interfaccia utente dei registri di controllo, consulta il [documento di panoramica dei registri di controllo](../../landing/governance-privacy-security/audit-logs/overview.md). Per ulteriori informazioni sull&#39;esecuzione di chiamate alle API di Experience Platform, consulta la [guida dell&#39;API dei registri di controllo](../../landing/api-guide.md).
 
 ## Prerequisiti
 
-Per visualizzare il dashboard del registro di controllo nell&#39;interfaccia utente di Platform, è necessario che sia abilitata l&#39;autorizzazione [!DNL Data Governance] [!UICONTROL Visualizza registro attività utente]. L&#39;autorizzazione è abilitata tramite l&#39;Adobe [Admin Console](https://adminconsole.adobe.com/). Se non disponi dei privilegi di amministratore per abilitare questa autorizzazione, contatta l’amministratore della tua organizzazione. Consulta la documentazione sul controllo degli accessi per [istruzioni complete sull&#39;aggiunta di autorizzazioni tramite Admin Console](../../access-control/home.md).
+Per visualizzare il dashboard del registro di controllo nell&#39;interfaccia utente di Experience Platform, è necessario che sia abilitata l&#39;autorizzazione [!DNL Data Governance] [!UICONTROL Visualizza registro attività utente]. L&#39;autorizzazione è abilitata tramite Adobe [Admin Console](https://adminconsole.adobe.com/). Se non disponi dei privilegi di amministratore per abilitare questa autorizzazione, contatta l’amministratore della tua organizzazione. Consulta la documentazione sul controllo degli accessi per [istruzioni complete sull&#39;aggiunta di autorizzazioni tramite Admin Console](../../access-control/home.md).
 
 ## [!DNL Query Service] categorie del registro di controllo {#audit-log-categories}
 
@@ -33,9 +33,9 @@ Le categorie del registro di controllo fornite da [!DNL Query Service] sono le s
 
 Per eseguire un controllo di audit per le attività [!DNL Query Service], seleziona **[!UICONTROL Audit]** dal menu di navigazione a sinistra, seguito dall&#39;icona funnel (![Icona filtro.](/help/images/icons/filter.png)) per visualizzare un elenco di controlli filtro per limitare i risultati.
 
-![Dashboard del registro di controllo dell&#39;interfaccia utente di Platform con &quot;Audits&quot; nella navigazione a sinistra e controlli filtro evidenziati.](../images/audit-log/filter-controls.png)
+![Dashboard del registro di controllo dell&#39;interfaccia utente di Experience Platform con &quot;Audits&quot; nella navigazione a sinistra e controlli filtro evidenziati.](../images/audit-log/filter-controls.png)
 
-Dalla scheda [!UICONTROL Audit] della dashboard [!UICONTROL Registro attività], è possibile filtrare tutte le azioni di Platform registrate in base a una qualsiasi delle categorie [!DNL Query Service]. I risultati del registro possono essere ulteriormente filtrati in base al periodo di tempo in cui sono stati eseguiti, all’azione/funzione intrapresa o all’utente che ha eseguito la query. Consulta la documentazione del registro di controllo per [istruzioni complete su come filtrare i registri in base a categoria, azione, utente e stato](../../landing/governance-privacy-security/audit-logs/overview.md#managing-audit-logs-in-the-ui).
+Dalla scheda [!UICONTROL Audits] dashboard [!UICONTROL Registro attività], è possibile filtrare tutte le azioni Experience Platform registrate in base a una qualsiasi delle categorie [!DNL Query Service]. I risultati del registro possono essere ulteriormente filtrati in base al periodo di tempo in cui sono stati eseguiti, all’azione/funzione intrapresa o all’utente che ha eseguito la query. Consulta la documentazione del registro di controllo per [istruzioni complete su come filtrare i registri in base a categoria, azione, utente e stato](../../landing/governance-privacy-security/audit-logs/overview.md#managing-audit-logs-in-the-ui).
 
 I dati del registro di controllo restituiti contengono le seguenti informazioni su tutte le query che soddisfano i criteri di filtro selezionati.
 

@@ -1,12 +1,12 @@
 ---
 keywords: profilo rtcdp;profili rtcdp;rtcdp identità;criteri di unione rtcdp;real-time customer profile
 title: Informazioni su Real-Time Customer Profile in Real-Time CDP
-description: Scopri come Adobe Real-time Customer Data Platform ti consente di promuovere esperienze coordinate, coerenti e rilevanti per i tuoi clienti utilizzando Real-Time Customer Profile.
+description: Scopri come Adobe Real-Time Customer Data Platform ti consente di promuovere esperienze coordinate, coerenti e rilevanti per i tuoi clienti utilizzando Real-Time Customer Profile.
 feature: Get Started, Profiles
 exl-id: de70948c-ffc1-49d3-a57c-25ad415752ff
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '454'
+source-wordcount: '457'
 ht-degree: 1%
 
 ---
@@ -21,9 +21,9 @@ Real-Time Customer Profile consente di visualizzare una visualizzazione olistica
 
 Real-Time CDP è basato su Experience Platform e utilizza molte delle funzioni e caratteristiche principali di Experience Platform, inclusa la creazione di profili. Queste visualizzazioni aggregate di un singolo cliente riuniscono i dati provenienti dai diversi canali di marketing e dai diversi sistemi attualmente utilizzati dalla tua organizzazione per archiviare i dati dei clienti.
 
-## Miglioramenti del profilo per Real-Time CDP, edizione B2B
+## Miglioramenti del profilo per Real-Time CDP, B2B edition
 
-Oltre alle funzionalità di profilo supportate da Real-Time CDP, è possibile utilizzare Real-Time CDP, B2B Edition per sfogliare informazioni importanti associate a un singolo utente, ad esempio un account e opportunità. Per ulteriori informazioni sui miglioramenti dei profili per Real-Time CDP, edizione B2B, inizia leggendo la [guida alla navigazione dei profili](profile-browse.md).
+Oltre alle funzionalità di profilo supportate da Real-Time CDP, puoi utilizzare Real-Time CDP, B2B edition per sfogliare informazioni importanti associate a un singolo utente, ad esempio un account e opportunità. Per ulteriori informazioni sui miglioramenti apportati al profilo per Real-Time CDP, B2B edition, consulta la [guida alla navigazione del profilo](profile-browse.md).
 
 ## Identità e spazi dei nomi delle identità
 
@@ -31,11 +31,11 @@ Man mano che i dati dei clienti si uniscono, vengono uniti in un unico profilo t
 
 ## Criteri di unione
 
-Quando si riuniscono i dati dei clienti, i criteri di unione sono le regole utilizzate da Platform per determinare come assegnare la priorità ai dati e quali dati verranno combinati per creare tale vista unificata. Per ulteriori informazioni sui criteri di unione, vedere [panoramica dei criteri di unione](merge-policies.md).
+Quando si riuniscono i dati dei clienti, i criteri di unione sono le regole utilizzate da Experience Platform per determinare il modo in cui i dati verranno prioritari e quali dati verranno combinati per creare tale vista unificata. Per ulteriori informazioni sui criteri di unione, vedere [panoramica dei criteri di unione](merge-policies.md).
 
 ## Visualizzatore profili
 
-Platform consente di visualizzare facilmente i profili dei clienti e cercare profili specifici utilizzando vari attributi. Per informazioni dettagliate su come visualizzare i profili in Platform, consulta la [panoramica sulla navigazione dei profili](profile-browse.md).
+Experience Platform consente di visualizzare facilmente i profili dei clienti e cercare profili specifici utilizzando vari attributi. Per informazioni dettagliate su come visualizzare i profili in Experience Platform, consulta la [panoramica sulla navigazione dei profili](profile-browse.md).
 
 ## Passaggi successivi
 

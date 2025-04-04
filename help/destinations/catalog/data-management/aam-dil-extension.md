@@ -1,11 +1,11 @@
 ---
-keywords: estensione Audience Manager DIL;audience manager destinazione;estensione dil
+keywords: estensione Audience Manager DIL;destinazione audience manager;estensione dil
 title: Estensione Audience Manager DIL
-description: L’estensione Audience Manager DIL è una destinazione DMP (Data Management Platform) in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità dell’estensione, consulta la pagina dell’estensione nell’Adobe Exchange.
+description: L'estensione Audience Manager DIL è una destinazione di Data Management Platform (DMP) in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità dell’estensione, consulta la pagina dell’estensione su Adobe Exchange.
 exl-id: 7e1099de-0650-4ee2-b746-721afe194097
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '514'
 ht-degree: 3%
 
 ---
@@ -16,15 +16,15 @@ ht-degree: 3%
 
 Si tratta dell’estensione Adobe Audience Manager Data Integration Library (implementazione lato client). Nota: questa estensione non è destinata all&#39;inoltro lato server (SSF) dei dati di Adobe Analytics. Per SSF, utilizza l’estensione Adobe Analytics. Importante: a partire dalla versione 8.0, DIL ha una dipendenza rigida dal servizio ID [!DNL Experience Cloud], versione 3.3 o successiva. Implementare il servizio ID [!DNL Experience Cloud] e DIL per le funzionalità complete di integrazione dei dati di [!DNL Audience Manager].
 
-[!DNL Audience Manager] DIL è un&#39;estensione di Data Management Platform (DMP) in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità dell&#39;estensione, consulta la [pagina dell&#39;estensione di Audience Manager](../../../tags/extensions/client/audience-manager/overview.md) nella documentazione dei tag.
+[!DNL Audience Manager] DIL è un&#39;estensione di Data Management Platform (DMP) in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità dell&#39;estensione, consulta la [pagina dell&#39;estensione Audience Manager](../../../tags/extensions/client/audience-manager/overview.md) nella documentazione dei tag.
 
-Questa destinazione è un’estensione tag. Per ulteriori informazioni sul funzionamento delle estensioni in Platform, consulta la [panoramica sulle estensioni tag](../launch-extensions/overview.md).
+Questa destinazione è un’estensione tag. Per ulteriori informazioni sul funzionamento delle estensioni in Experience Platform, consulta la [panoramica sulle estensioni tag](../launch-extensions/overview.md).
 
 ![Estensione Audience Manager DIL](../../assets/catalog/data-management-platform/aam-dil-extension/configure.png)
 
 ## Prerequisiti {#prerequisites}
 
-Questa estensione è disponibile nel catalogo [!DNL Destinations] per tutti i clienti che hanno acquistato Platform.
+Questa estensione è disponibile nel catalogo [!DNL Destinations] per tutti i clienti che hanno acquistato Experience Platform.
 
 Per utilizzare questa estensione, è necessario accedere ai tag in Adobe Experience Platform. I tag sono offerti ai clienti di Adobe Experience Cloud come funzionalità inclusa a valore aggiunto. Contatta l&#39;amministratore dell&#39;organizzazione per ottenere l&#39;accesso ai tag e chiedi loro di concederti l&#39;autorizzazione **[!UICONTROL manage_properties]** in modo da poter installare le estensioni.
 
@@ -32,7 +32,7 @@ Per utilizzare questa estensione, è necessario accedere ai tag in Adobe Experie
 
 Per installare l&#39;estensione DIL [!DNL Audience Manager]:
 
-Nell&#39;interfaccia [Platform](https://platform.adobe.com/), vai a **[!UICONTROL Destinazioni]** > **[!UICONTROL Catalogo]**.
+Nell&#39;interfaccia [Experience Platform](https://platform.adobe.com/), vai a **[!UICONTROL Destinazioni]** > **[!UICONTROL Catalogo]**.
 
 Seleziona l’estensione dal catalogo o utilizza la barra di ricerca.
 
@@ -42,7 +42,7 @@ Seleziona la proprietà in cui desideri installare l’estensione. Puoi anche cr
 
 Il flusso di lavoro illustra i passaggi necessari per completare l’installazione.
 
-Per informazioni sulle opzioni di configurazione dell&#39;estensione, consulta la [pagina dell&#39;estensione di Audience Manager](../../../tags/extensions/client/audience-manager/overview.md) nella documentazione dei tag.
+Per informazioni sulle opzioni di configurazione dell&#39;estensione, consulta la [pagina dell&#39;estensione Audience Manager](../../../tags/extensions/client/audience-manager/overview.md) nella documentazione dei tag.
 
 Puoi anche installare l&#39;estensione direttamente nell&#39;[interfaccia utente di Data Collection](https://experience.adobe.com/it#/data-collection/). Per ulteriori informazioni, consulta la guida in [aggiunta di una nuova estensione](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension).
 

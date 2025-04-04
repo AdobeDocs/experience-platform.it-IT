@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;origini;connettori;sorgente connettori;sorgenti sdk;sdk;SDK
+keywords: Experience Platform;home;argomenti popolari;origini;connettori;source connectors;sources sdk;sdk;SDK
 solution: Experience Platform
 title: Utilizzare l’interfaccia web GitHub per creare una pagina della documentazione sulle origini
 description: Questo documento descrive come utilizzare l’interfaccia web GitHub per creare la documentazione e inviare una richiesta di pull (PR).
 exl-id: 84b4219c-b3b2-4d0a-9a65-f2d5cd989f95
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: '565'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Questo documento descrive come utilizzare l’interfaccia web GitHub per creare 
 
 >[!TIP]
 >
->I seguenti documenti della guida introduttiva di Adobe possono essere utilizzati per supportare ulteriormente la procedura di documentazione: <ul><li>[Installare gli strumenti di creazione Git e Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[Configurazione locale dell&#39;archivio Git per la documentazione](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[Flusso di lavoro contributi GitHub per modifiche principali](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
+>Per supportare ulteriormente il processo di documentazione, puoi utilizzare i seguenti documenti della guida per i collaboratori di Adobe: <ul><li>[Installare gli strumenti di creazione Git e Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[Configurazione locale dell&#39;archivio Git per la documentazione](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[Flusso di lavoro contributi GitHub per modifiche principali](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
 
 ## Configurare l’ambiente GitHub
 
@@ -45,7 +45,7 @@ Viene visualizzata una cartella delle origini CRM esistenti. Per aggiungere la d
 
 ![create-new-file](../assets/create-new-file.png)
 
-Denomina il file di origine `YOURSOURCE.md` dove YOURSOURCE è il nome dell&#39;origine in Platform. Ad esempio, se la società è ACME CRM, il nome file deve essere `acme-crm.md`.
+Denomina il file di origine `YOURSOURCE.md` dove YOURSOURCE è il nome dell&#39;origine in Experience Platform. Ad esempio, se la società è ACME CRM, il nome file deve essere `acme-crm.md`.
 
 ![git-interface](../assets/git-interface.png)
 
@@ -67,11 +67,11 @@ Una volta eseguito il commit del file, puoi aprire una richiesta di pull (PR) pe
 
 ![confronto-pr](../assets/compare-pr.png)
 
-Assicurati che i rami di base e di confronto siano corretti. Aggiungi una nota alla PR, descrivendo l&#39;aggiornamento, quindi seleziona **Crea richiesta di pull**. Verrà aperta una PR per unire il ramo di lavoro nel ramo principale dell’archivio di Adobi.
+Assicurati che i rami di base e di confronto siano corretti. Aggiungi una nota alla PR, descrivendo l&#39;aggiornamento, quindi seleziona **Crea richiesta di pull**. Verrà aperto un PR per unire il ramo di lavoro nel ramo principale dell’archivio Adobe.
 
 >[!TIP]
 >
->Lascia selezionata la casella di controllo **Consenti modifiche da parte dei responsabili della manutenzione** per garantire che il team della documentazione di Adobe possa apportare modifiche alla PR.
+>Lascia selezionata la casella di controllo **Consenti modifiche da parte dei responsabili della manutenzione** per garantire che il team di documentazione di Adobe possa apportare modifiche alla PR.
 
 ![create-pr](../assets/create-pr.png)
 

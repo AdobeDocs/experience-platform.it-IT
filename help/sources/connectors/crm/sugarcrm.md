@@ -3,16 +3,16 @@ title: Panoramica di SugarCRM Source
 description: Scopri come collegare SugarCRM a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 last-substantial-update: 2023-08-23T00:00:00Z
 exl-id: 03fbc4e9-974d-494e-8463-756c96665fd5
-source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '363'
 ht-degree: 0%
 
 ---
 
 # [!DNL SugarCRM]
 
-Adobe Experience Platform consente di acquisire i dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
+Adobe Experience Platform consente di acquisire dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Experience Platform. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 
 Experience Platform fornisce supporto per l’acquisizione di dati da un’applicazione CRM di terze parti. Il supporto per i provider di gestione delle relazioni con i clienti include [!DNL SugarCRM].
 
@@ -38,15 +38,15 @@ Prima di poter creare una connessione di origine [!DNL SugarCRM], è necessario 
 
 * Un nome utente e un account API univoci, separati da tutti gli account utente associati al processo di marketing o vendita. Questa combinazione univoca di nome utente e account deve disporre di autorizzazioni di accesso API. Per ulteriori informazioni sul processo di configurazione di un account, vedere la documentazione di [[!DNL SugarMarket RESTFUL API]](https://market.apidocs.sugarcrm.com/#intro).
 
-## Connetti [!DNL SugarCRM Accounts & Contacts] a Platform
+## Connetti [!DNL SugarCRM Accounts & Contacts] ad Experience Platform
 
-* [Crea una connessione di origine per portare [!DNL SugarCRM Accounts & Contacts] dati a Platform tramite API](../../tutorials/api/create/crm/sugarcrm-accounts-contacts.md).
-* [Crea una connessione di origine per portare [!DNL SugarCRM Accounts & Contacts] dati a Platform utilizzando l&#39;interfaccia utente](../../tutorials/ui/create/crm/sugarcrm-accounts-contacts.md).
+* [Crea una connessione di origine per portare [!DNL SugarCRM Accounts & Contacts] dati ad Experience Platform tramite API](../../tutorials/api/create/crm/sugarcrm-accounts-contacts.md).
+* [Crea una connessione di origine per portare [!DNL SugarCRM Accounts & Contacts] dati ad Experience Platform utilizzando l&#39;interfaccia utente](../../tutorials/ui/create/crm/sugarcrm-accounts-contacts.md).
 * [Creare un flusso di dati per un’origine CRM utilizzando l’API del servizio Flusso](../../tutorials/api/collect/crm.md)
 
 
-## Connetti [!DNL SugarCRM Events] a Platform
+## Connetti [!DNL SugarCRM Events] ad Experience Platform
 
-* [Crea una connessione di origine per portare [!DNL SugarCRM Events] dati a Platform tramite API](../../tutorials/ui/create/crm/sugarcrm-events.md).
-* [Crea una connessione di origine per portare [!DNL SugarCRM Events] dati a Platform utilizzando l&#39;interfaccia utente](../../tutorials/ui/create/crm/sugarcrm-events.md).
+* [Crea una connessione di origine per portare [!DNL SugarCRM Events] dati ad Experience Platform tramite API](../../tutorials/ui/create/crm/sugarcrm-events.md).
+* [Crea una connessione di origine per portare [!DNL SugarCRM Events] dati ad Experience Platform utilizzando l&#39;interfaccia utente](../../tutorials/ui/create/crm/sugarcrm-events.md).
 * [Creare un flusso di dati per una connessione di origine CRM nell’interfaccia utente](../../tutorials/ui/dataflow/crm.md)

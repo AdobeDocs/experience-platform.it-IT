@@ -1,6 +1,6 @@
 ---
 title: Panoramica video del profilo cliente in tempo reale
-description: Questo video offre informazioni di base su Real-Time Customer Profile in Adobe Experience Platform e illustra come sfogliare i profili nell’interfaccia utente di Platform.
+description: Questo video offre informazioni di base su Real-Time Customer Profile in Adobe Experience Platform e illustra come esplorare i profili nell’interfaccia utente di Experience Platform.
 product: experience platform
 type: Documentation
 solution: Experience Platform
@@ -9,9 +9,9 @@ audience: all
 doc-type: video
 activity: understand
 exl-id: cdc91194-771f-4026-808f-97d70db436d9
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '117'
+source-wordcount: '118'
 ht-degree: 3%
 
 ---
@@ -22,6 +22,6 @@ Questo video offre informazioni di base su Real-Time Customer Profile in Adobe E
 
 >[!NOTE]
 >
->L’interfaccia utente di Experience Platform viene aggiornata frequentemente e potrebbe essere cambiata dopo la registrazione del video. Per informazioni aggiornate, fare riferimento alla [Guida dell&#39;interfaccia utente del profilo](../ui/user-guide.md).
+>L’interfaccia utente di Experience Platform viene aggiornata frequentemente e potrebbe essere cambiata dopo la registrazione di questo video. Per informazioni aggiornate, fare riferimento alla [Guida dell&#39;interfaccia utente del profilo](../ui/user-guide.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/27251?quality=12&learn=on&captions=eng)

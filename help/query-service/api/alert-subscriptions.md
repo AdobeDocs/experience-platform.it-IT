@@ -4,16 +4,16 @@ title: Endpoint sottoscrizioni avvisi
 description: Questa guida fornisce esempi di richieste HTTP e risposte per le varie chiamate API che puoi effettuare all’endpoint di abbonamenti agli avvisi con l’API Query Service.
 role: Developer
 exl-id: 30ac587a-2286-4a52-9199-7a2a8acd5362
-source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3204'
+source-wordcount: '3217'
 ht-degree: 2%
 
 ---
 
 # Endpoint &quot;Alert Subscriptions&quot;
 
-Adobe Experience Platform Query Service consente di ricevere avvisi sia per le query ad hoc che per quelle pianificate. Gli avvisi possono essere ricevuti tramite e-mail, nell’interfaccia di Platform o in entrambe le modalità. Il contenuto della notifica è lo stesso per gli avvisi e-mail in-Platform.
+Adobe Experience Platform Query Service consente di ricevere avvisi sia per le query ad hoc che per quelle pianificate. Gli avvisi possono essere ricevuti via e-mail, nell’interfaccia utente di Experience Platform o in entrambi i casi. Il contenuto della notifica è lo stesso per gli avvisi e gli avvisi e-mail in Experience Platform.
 
 ## Introduzione
 
@@ -79,7 +79,7 @@ Di seguito è riportato un elenco dei parametri di query disponibili per l&#39;e
 | `orderby` | Campo che specifica l&#39;ordine dei risultati. I campi supportati sono `created` e `updated`. Anteporre il nome della proprietà con `+` per crescente e `-` per decrescente. Il valore predefinito è `-created`. Il segno più (`+`) deve essere preceduto da un carattere di escape con `%2B`. Ad esempio `%2Bcreated` è il valore per un ordine creato crescente. |
 | `pagesize` | Utilizza questo parametro per controllare il numero di record che desideri recuperare dalla chiamata API per pagina. Il limite predefinito è impostato al massimo di 50 record per pagina. |
 | `page` | Indicare il numero di pagina dei risultati restituiti per i quali si desidera visualizzare i record. |
-| `property` | Filtra i risultati in base ai campi selezionati. I filtri **devono** avere escape HTML. Le virgole vengono utilizzate per combinare più set di filtri. Le seguenti proprietà consentono l’applicazione di filtri: <ul><li>id</li><li>assetId</li><li>stato</li><li>alertType</li></ul> Gli operatori supportati sono `==` (uguale a). Ad esempio, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` restituirà l&#39;avviso con un ID corrispondente. |
+| `property` | Filtra i risultati in base ai campi selezionati. I filtri **devono** essere con escape HTML. Le virgole vengono utilizzate per combinare più set di filtri. Le seguenti proprietà consentono l’applicazione di filtri: <ul><li>id</li><li>assetId</li><li>stato</li><li>alertType</li></ul> Gli operatori supportati sono `==` (uguale a). Ad esempio, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` restituirà l&#39;avviso con un ID corrispondente. |
 
 **Richiesta**
 
@@ -165,16 +165,16 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 e l&#39;arr
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `alerts.assetId` | ID della query che ha associato l’avviso a una determinata query. |
-| `alerts.id` | Nome dell&#39;avviso. Questo nome viene generato dal servizio Avvisi e utilizzato nel dashboard Avvisi. Il nome dell&#39;avviso è costituito dalla cartella in cui è memorizzato l&#39;avviso, da `alertType` e dall&#39;ID di flusso. Le informazioni sugli avvisi disponibili sono disponibili nella [documentazione del dashboard degli avvisi di Platform](../../observability/alerts/ui.md). |
+| `alerts.id` | Nome dell&#39;avviso. Questo nome viene generato dal servizio Avvisi e utilizzato nel dashboard Avvisi. Il nome dell&#39;avviso è costituito dalla cartella in cui è memorizzato l&#39;avviso, da `alertType` e dall&#39;ID di flusso. Le informazioni sugli avvisi disponibili sono disponibili nella [documentazione del dashboard degli avvisi di Experience Platform](../../observability/alerts/ui.md). |
 | `alerts.status` | L&#39;avviso ha quattro valori di stato: `enabled`, `enabling`, `disabled` e `disabling`. Un avviso è l’ascolto attivo degli eventi, messo in pausa per utilizzi futuri mantenendo tutti gli abbonati e le impostazioni rilevanti, oppure la transizione tra questi stati. |
-| `alerts.alertType` | Tipo di avviso. Sono disponibili cinque stati di avviso per le query pianificate, anche se sono disponibili solo quattro stati di avviso per le query ad hoc. L&#39;avviso `quarantine` è disponibile solo per le query pianificate. Inoltre, è possibile impostare l&#39;avviso `delay` solo dall&#39;interfaccia utente di Platform. Per questo motivo `delay` non è descritto qui. Gli avvisi disponibili sono: <ul><li>`start`: notifica a un utente l&#39;avvio dell&#39;esecuzione della query.</li><li>`success`: invia una notifica all&#39;utente al completamento della query.</li><li>`failure`: invia una notifica all&#39;utente se la query non riesce.</li><li>`quarantine`: si attiva quando una query pianificata viene messa in quarantena.</li></ul> |
+| `alerts.alertType` | Tipo di avviso. Sono disponibili cinque stati di avviso per le query pianificate, anche se sono disponibili solo quattro stati di avviso per le query ad hoc. L&#39;avviso `quarantine` è disponibile solo per le query pianificate. Inoltre, è possibile impostare l&#39;avviso `delay` solo dall&#39;interfaccia utente di Experience Platform. Per questo motivo `delay` non è descritto qui. Gli avvisi disponibili sono: <ul><li>`start`: notifica a un utente l&#39;avvio dell&#39;esecuzione della query.</li><li>`success`: invia una notifica all&#39;utente al completamento della query.</li><li>`failure`: invia una notifica all&#39;utente se la query non riesce.</li><li>`quarantine`: si attiva quando una query pianificata viene messa in quarantena.</li></ul> |
 | `alerts._links` | Fornisce informazioni sui metodi e gli endpoint disponibili che possono essere utilizzati per recuperare, aggiornare, modificare o eliminare informazioni relative a questo ID avviso. |
 | `_page` | L&#39;oggetto contiene proprietà che descrivono l&#39;ordine, la dimensione, il numero totale di pagine e la pagina corrente. |
 | `_links` | L’oggetto contiene riferimenti URI che possono essere utilizzati per ottenere la pagina successiva o precedente delle risorse. |
 
 ## Recuperare le informazioni sulla sottoscrizione dell’avviso per una particolare query o ID pianificazione {#retrieve-all-alert-subscriptions-by-id}
 
-Recuperare le informazioni sulla sottoscrizione dell&#39;avviso per un ID di query o un ID di pianificazione specifico effettuando una richiesta di GET all&#39;endpoint `/alert-subscriptions/{QUERY_ID}` o `/alert-subscriptions/{SCHEDULE_ID}`.
+Recuperare le informazioni sulla sottoscrizione dell&#39;avviso per un ID di query o un ID di pianificazione specifico effettuando una richiesta GET all&#39;endpoint `/alert-subscriptions/{QUERY_ID}` o `/alert-subscriptions/{SCHEDULE_ID}`.
 
 **Formato API**
 
@@ -294,15 +294,15 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 e l’array
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `assetId` | L’avviso è associato a questo ID. L’ID può essere un ID query o un ID pianificazione. |
-| `id` | Nome dell&#39;avviso. Questo nome viene generato dal servizio Avvisi e utilizzato nel dashboard Avvisi. Il nome dell&#39;avviso è costituito dalla cartella in cui è memorizzato l&#39;avviso, da `alertType` e dall&#39;ID di flusso. Le informazioni sugli avvisi disponibili sono disponibili nella [documentazione del dashboard degli avvisi di Platform](../../observability/alerts/ui.md). |
+| `id` | Nome dell&#39;avviso. Questo nome viene generato dal servizio Avvisi e utilizzato nel dashboard Avvisi. Il nome dell&#39;avviso è costituito dalla cartella in cui è memorizzato l&#39;avviso, da `alertType` e dall&#39;ID di flusso. Le informazioni sugli avvisi disponibili sono disponibili nella [documentazione del dashboard degli avvisi di Experience Platform](../../observability/alerts/ui.md). |
 | `status` | L&#39;avviso ha quattro valori di stato: `enabled`, `enabling`, `disabled` e `disabling`. Un avviso è l’ascolto attivo degli eventi, messo in pausa per utilizzi futuri mantenendo tutti gli abbonati e le impostazioni rilevanti, oppure la transizione tra questi stati. |
 | `alertType` | Ogni avviso può avere tre tipi diversi di avviso. Sono: <ul><li>`start`: notifica a un utente l&#39;avvio dell&#39;esecuzione della query.</li><li>`success`: invia una notifica all&#39;utente al completamento della query.</li><li>`failure`: invia una notifica all&#39;utente se la query non riesce.</li></ul> |
-| `subscriptions.emailNotifications` | Un array di Adobi di indirizzi e-mail registrati per gli utenti che si sono abbonati a ricevere e-mail per l’avviso. |
-| `subscriptions.inContextNotifications` | Un array di Adobi di indirizzi e-mail registrati per gli utenti che si sono abbonati alle notifiche dell’interfaccia utente per l’avviso. |
+| `subscriptions.emailNotifications` | Un array di indirizzi e-mail registrati da Adobe per gli utenti abbonati a ricevere e-mail per l’avviso. |
+| `subscriptions.inContextNotifications` | Un array di indirizzi e-mail registrati da Adobe per gli utenti che si sono abbonati alle notifiche dell’interfaccia utente per l’avviso. |
 
 ## Recuperare le informazioni di sottoscrizione degli avvisi per una query o un ID pianificazione e un tipo di avviso specifici {#get-alert-info-by-id-and-alert-type}
 
-Recuperare le informazioni sulla sottoscrizione degli avvisi per un ID e un tipo di avviso specifici effettuando una richiesta di GET all&#39;endpoint `/alert-subscriptions/{QUERY_ID}/{ALERT_TYPE}`. Questo è applicabile sia agli ID query che a quelli pianificati.
+Recuperare le informazioni sulla sottoscrizione degli avvisi per un ID e un tipo di avviso specifici effettuando una richiesta GET all&#39;endpoint `/alert-subscriptions/{QUERY_ID}/{ALERT_TYPE}`. Questo è applicabile sia agli ID query che a quelli pianificati.
 
 **Formato API**
 
@@ -331,7 +331,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce lo stato HTTP 200 e tutti gli avvisi a cui è abbonato. Ciò include l’ID dell’avviso, il tipo di avviso, gli ID e-mail registrati dell’Adobe dell’abbonato e il relativo canale di notifica preferito.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 e tutti gli avvisi a cui è abbonato. Questo include l’ID dell’avviso, il tipo di avviso, gli ID e-mail registrati di Adobe dell’abbonato e il relativo canale di notifica preferito.
 
 ```json
 {
@@ -382,10 +382,10 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 e tutti gli
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `assetId` | ID della query che ha associato l’avviso a una determinata query. |
-| `alertType` | Tipo di avviso. Sono disponibili cinque stati di avviso per le query pianificate, anche se sono disponibili solo quattro stati di avviso per le query ad hoc. L&#39;avviso `quarantine` è disponibile solo per le query pianificate. Inoltre, è possibile impostare l&#39;avviso `delay` solo dall&#39;interfaccia utente di Platform. Per questo motivo `delay` non è descritto qui. Gli avvisi disponibili sono: <ul><li>`start`: notifica a un utente l&#39;avvio dell&#39;esecuzione della query.</li><li>`success`: invia una notifica all&#39;utente al completamento della query.</li><li>`failure`: invia una notifica all&#39;utente se la query non riesce.</li><li>`quarantine`: si attiva quando una query pianificata viene messa in quarantena.</li></ul> |
-| `subscriptions` | Oggetto utilizzato per trasmettere gli ID e-mail registrati dell’Adobe associati agli avvisi e i canali in cui gli utenti riceveranno gli avvisi. |
-| `subscriptions.inContextNotifications` | Un array di Adobi di indirizzi e-mail registrati per gli utenti che si sono abbonati alle notifiche dell’interfaccia utente per l’avviso. |
-| `subscriptions.emailNotifications` | Un array di Adobi di indirizzi e-mail registrati per gli utenti che si sono abbonati a ricevere e-mail per l’avviso. |
+| `alertType` | Tipo di avviso. Sono disponibili cinque stati di avviso per le query pianificate, anche se sono disponibili solo quattro stati di avviso per le query ad hoc. L&#39;avviso `quarantine` è disponibile solo per le query pianificate. Inoltre, è possibile impostare l&#39;avviso `delay` solo dall&#39;interfaccia utente di Experience Platform. Per questo motivo `delay` non è descritto qui. Gli avvisi disponibili sono: <ul><li>`start`: notifica a un utente l&#39;avvio dell&#39;esecuzione della query.</li><li>`success`: invia una notifica all&#39;utente al completamento della query.</li><li>`failure`: invia una notifica all&#39;utente se la query non riesce.</li><li>`quarantine`: si attiva quando una query pianificata viene messa in quarantena.</li></ul> |
+| `subscriptions` | Oggetto utilizzato per trasmettere gli ID e-mail registrati di Adobe associati agli avvisi e i canali in cui gli utenti riceveranno gli avvisi. |
+| `subscriptions.inContextNotifications` | Un array di indirizzi e-mail registrati da Adobe per gli utenti che si sono abbonati alle notifiche dell’interfaccia utente per l’avviso. |
+| `subscriptions.emailNotifications` | Un array di indirizzi e-mail registrati da Adobe per gli utenti abbonati a ricevere e-mail per l’avviso. |
 
 ## Recuperare un elenco di tutti gli avvisi a cui è abbonato un utente {#get-alert-subscription-list}
 
@@ -399,11 +399,11 @@ GET /alert-subscriptions/user-subscriptions/{EMAIL_ID}
 
 | Elemento “parameters” | Descrizione |
 | -------- | ----------- |
-| `{EMAIL_ID}` | Un indirizzo e-mail registrato su un account di Adobe viene utilizzato per identificare gli utenti abbonati agli avvisi. |
+| `{EMAIL_ID}` | Un indirizzo e-mail registrato su un account Adobe viene utilizzato per identificare gli utenti abbonati agli avvisi. |
 | `orderby` | Campo che specifica l&#39;ordine dei risultati. I campi supportati sono `created` e `updated`. Anteporre il nome della proprietà con `+` per crescente e `-` per decrescente. Il valore predefinito è `-created`. Il segno più (`+`) deve essere preceduto da un carattere di escape con `%2B`. Ad esempio `%2Bcreated` è il valore per un ordine creato crescente. |
 | `pagesize` | Utilizza questo parametro per controllare il numero di record che desideri recuperare dalla chiamata API per pagina. Il limite predefinito è impostato al massimo di 50 record per pagina. |
 | `page` | Indicare il numero di pagina dei risultati restituiti per i quali si desidera visualizzare i record. |
-| `property` | Filtra i risultati in base ai campi selezionati. I filtri **devono** avere escape HTML. Le virgole vengono utilizzate per combinare più set di filtri. Le seguenti proprietà consentono il filtraggio: <ul><li>id</li><li>assetId</li><li>stato</li><li>alertType</li></ul> Gli operatori supportati sono `==` (uguale a). Ad esempio, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` restituirà l&#39;avviso con un ID corrispondente. |
+| `property` | Filtra i risultati in base ai campi selezionati. I filtri **devono** essere con escape HTML. Le virgole vengono utilizzate per combinare più set di filtri. Le seguenti proprietà consentono il filtraggio: <ul><li>id</li><li>assetId</li><li>stato</li><li>alertType</li></ul> Gli operatori supportati sono `==` (uguale a). Ad esempio, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` restituirà l&#39;avviso con un ID corrispondente. |
 
 **Richiesta**
 
@@ -512,11 +512,11 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 e l’array
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `name` | Nome dell&#39;avviso. Questo nome viene generato dal servizio Avvisi e utilizzato nel dashboard Avvisi. Il nome dell&#39;avviso è costituito dalla cartella in cui è memorizzato l&#39;avviso, da `alertType` e dall&#39;ID di flusso. Le informazioni sugli avvisi disponibili sono disponibili nella [documentazione del dashboard degli avvisi di Platform](../../observability/alerts/ui.md). |
+| `name` | Nome dell&#39;avviso. Questo nome viene generato dal servizio Avvisi e utilizzato nel dashboard Avvisi. Il nome dell&#39;avviso è costituito dalla cartella in cui è memorizzato l&#39;avviso, da `alertType` e dall&#39;ID di flusso. Le informazioni sugli avvisi disponibili sono disponibili nella [documentazione del dashboard degli avvisi di Experience Platform](../../observability/alerts/ui.md). |
 | `assetId` | ID della query che ha associato l’avviso a una determinata query. |
 | `status` | L&#39;avviso ha quattro valori di stato: `enabled`, `enabling`, `disabled` e `disabling`. Un avviso è l’ascolto attivo degli eventi, messo in pausa per utilizzi futuri mantenendo tutti gli abbonati e le impostazioni rilevanti, oppure la transizione tra questi stati. |
-| `alertType` | Tipo di avviso. Sono disponibili cinque stati di avviso per le query pianificate, anche se sono disponibili solo quattro stati di avviso per le query ad hoc. L&#39;avviso `quarantine` è disponibile solo per le query pianificate. Inoltre, è possibile impostare l&#39;avviso `delay` solo dall&#39;interfaccia utente di Platform. Per questo motivo `delay` non è descritto qui. Gli avvisi disponibili sono: <ul><li>`start`: notifica a un utente l&#39;avvio dell&#39;esecuzione della query.</li><li>`success`: invia una notifica all&#39;utente al completamento della query.</li><li>`failure`: invia una notifica all&#39;utente se la query non riesce.</li><li>`quarantine`: si attiva quando una query pianificata viene messa in quarantena.</li></ul> |
-| `subscriptions` | Oggetto utilizzato per trasmettere gli ID e-mail registrati dell’Adobe associati agli avvisi e i canali in cui gli utenti riceveranno gli avvisi. |
+| `alertType` | Tipo di avviso. Sono disponibili cinque stati di avviso per le query pianificate, anche se sono disponibili solo quattro stati di avviso per le query ad hoc. L&#39;avviso `quarantine` è disponibile solo per le query pianificate. Inoltre, è possibile impostare l&#39;avviso `delay` solo dall&#39;interfaccia utente di Experience Platform. Per questo motivo `delay` non è descritto qui. Gli avvisi disponibili sono: <ul><li>`start`: notifica a un utente l&#39;avvio dell&#39;esecuzione della query.</li><li>`success`: invia una notifica all&#39;utente al completamento della query.</li><li>`failure`: invia una notifica all&#39;utente se la query non riesce.</li><li>`quarantine`: si attiva quando una query pianificata viene messa in quarantena.</li></ul> |
+| `subscriptions` | Oggetto utilizzato per trasmettere gli ID e-mail registrati di Adobe associati agli avvisi e i canali in cui gli utenti riceveranno gli avvisi. |
 | `subscriptions.inContextNotifications` | Valore booleano che determina il modo in cui gli utenti ricevono le notifiche di avviso. Un valore `true` conferma che gli avvisi devono essere forniti tramite l&#39;interfaccia utente. Un valore `false` garantisce che gli utenti non ricevano notifiche tramite tale canale. |
 | `subscriptions.emailNotifications` | Valore booleano che determina il modo in cui gli utenti ricevono le notifiche di avviso. Un valore `true` conferma che gli avvisi devono essere forniti tramite e-mail. Un valore `false` garantisce che gli utenti non ricevano notifiche tramite tale canale. |
 
@@ -526,7 +526,7 @@ Per creare un avviso e sottoscrivere un utente per riceverlo, effettuare una ric
 
 >[!IMPORTANT]
 >
->Puoi trasmettere fino a cinque ID e-mail registrati come Adobe in una singola richiesta. Per segnalare un avviso a più di cinque utenti, è necessario effettuare richieste successive.
+>Puoi trasmettere fino a cinque ID e-mail registrati di Adobe in una singola richiesta. Per segnalare un avviso a più di cinque utenti, è necessario effettuare richieste successive.
 
 **Formato API**
 
@@ -560,9 +560,9 @@ curl -X POST https://platform.adobe.io/data/foundation/query/alert-subscriptions
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `assetId` | L’avviso è associato a questo ID. L’ID può essere un ID query o un ID pianificazione. |
-| `alertType` | Tipo di avviso. Sono disponibili cinque stati di avviso per le query pianificate, anche se sono disponibili solo quattro stati di avviso per le query ad hoc. L&#39;avviso `quarantine` è disponibile solo per le query pianificate. Inoltre, è possibile impostare l&#39;avviso `delay` solo dall&#39;interfaccia utente di Platform. Per questo motivo `delay` non è descritto qui. Gli avvisi disponibili sono: <ul><li>`start`: notifica a un utente l&#39;avvio dell&#39;esecuzione della query.</li><li>`success`: invia una notifica all&#39;utente al completamento della query.</li><li>`failure`: invia una notifica all&#39;utente se la query non riesce.</li><li>`quarantine`: si attiva quando una query pianificata viene messa in quarantena.</li></ul> |
-| `subscriptions` | Oggetto utilizzato per trasmettere gli ID e-mail registrati dell’Adobe associati agli avvisi e i canali in cui gli utenti riceveranno gli avvisi. |
-| `subscriptions.emailIds` | Un array di indirizzi e-mail per identificare gli utenti che devono ricevere gli avvisi. Gli indirizzi e-mail **devono** essere registrati in un account di Adobe. |
+| `alertType` | Tipo di avviso. Sono disponibili cinque stati di avviso per le query pianificate, anche se sono disponibili solo quattro stati di avviso per le query ad hoc. L&#39;avviso `quarantine` è disponibile solo per le query pianificate. Inoltre, è possibile impostare l&#39;avviso `delay` solo dall&#39;interfaccia utente di Experience Platform. Per questo motivo `delay` non è descritto qui. Gli avvisi disponibili sono: <ul><li>`start`: notifica a un utente l&#39;avvio dell&#39;esecuzione della query.</li><li>`success`: invia una notifica all&#39;utente al completamento della query.</li><li>`failure`: invia una notifica all&#39;utente se la query non riesce.</li><li>`quarantine`: si attiva quando una query pianificata viene messa in quarantena.</li></ul> |
+| `subscriptions` | Oggetto utilizzato per trasmettere gli ID e-mail registrati di Adobe associati agli avvisi e i canali in cui gli utenti riceveranno gli avvisi. |
+| `subscriptions.emailIds` | Un array di indirizzi e-mail per identificare gli utenti che devono ricevere gli avvisi. Gli indirizzi e-mail **devono** essere registrati in un account Adobe. |
 | `subscriptions.inContextNotifications` | Valore booleano che determina il modo in cui gli utenti ricevono le notifiche di avviso. Un valore `true` conferma che gli avvisi devono essere forniti tramite l&#39;interfaccia utente. Un valore `false` garantisce che gli utenti non ricevano notifiche tramite tale canale. |
 | `subscriptions.emailNotifications` | Valore booleano che determina il modo in cui gli utenti ricevono le notifiche di avviso. Un valore `true` conferma che gli avvisi devono essere forniti tramite e-mail. Un valore `false` garantisce che gli utenti non ricevano notifiche tramite tale canale. |
 
@@ -613,7 +613,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 202 (Accettato)
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `id` | Nome dell&#39;avviso. Questo nome viene generato dal servizio Avvisi e utilizzato nel dashboard Avvisi. Il nome dell&#39;avviso è costituito dalla cartella in cui è memorizzato l&#39;avviso, da `alertType` e dall&#39;ID di flusso. Le informazioni sugli avvisi disponibili sono disponibili nella [documentazione del dashboard degli avvisi di Platform](../../observability/alerts/ui.md). |
+| `id` | Nome dell&#39;avviso. Questo nome viene generato dal servizio Avvisi e utilizzato nel dashboard Avvisi. Il nome dell&#39;avviso è costituito dalla cartella in cui è memorizzato l&#39;avviso, da `alertType` e dall&#39;ID di flusso. Le informazioni sugli avvisi disponibili sono disponibili nella [documentazione del dashboard degli avvisi di Experience Platform](../../observability/alerts/ui.md). |
 | `_links` | Fornisce informazioni sui metodi e gli endpoint disponibili che possono essere utilizzati per recuperare, aggiornare, modificare o eliminare informazioni relative a questo ID avviso. |
 
 ## Attivare o disattivare un avviso {#enable-or-disable-alert}
@@ -629,7 +629,7 @@ PATCH /alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 
 | Elemento “parameters” | Descrizione |
 | -------- | ----------- |
-| `ALERT_TYPE` | Tipo di avviso. Sono disponibili cinque stati di avviso per le query pianificate, anche se sono disponibili solo quattro stati di avviso per le query ad hoc. L&#39;avviso `quarantine` è disponibile solo per le query pianificate. Inoltre, è possibile impostare l&#39;avviso `delay` solo dall&#39;interfaccia utente di Platform. Per questo motivo `delay` non è descritto qui. Gli avvisi disponibili sono: <ul><li>`start`: notifica a un utente l&#39;avvio dell&#39;esecuzione della query.</li><li>`success`: invia una notifica all&#39;utente al completamento della query.</li><li>`failure`: invia una notifica all&#39;utente se la query non riesce.</li><li>`quarantine`: si attiva quando una query pianificata viene messa in quarantena.</li></ul>È necessario specificare il tipo di avviso corrente nello spazio dei nomi dell&#39;endpoint per modificarlo. |
+| `ALERT_TYPE` | Tipo di avviso. Sono disponibili cinque stati di avviso per le query pianificate, anche se sono disponibili solo quattro stati di avviso per le query ad hoc. L&#39;avviso `quarantine` è disponibile solo per le query pianificate. Inoltre, è possibile impostare l&#39;avviso `delay` solo dall&#39;interfaccia utente di Experience Platform. Per questo motivo `delay` non è descritto qui. Gli avvisi disponibili sono: <ul><li>`start`: notifica a un utente l&#39;avvio dell&#39;esecuzione della query.</li><li>`success`: invia una notifica all&#39;utente al completamento della query.</li><li>`failure`: invia una notifica all&#39;utente se la query non riesce.</li><li>`quarantine`: si attiva quando una query pianificata viene messa in quarantena.</li></ul>È necessario specificare il tipo di avviso corrente nello spazio dei nomi dell&#39;endpoint per modificarlo. |
 | `QUERY_ID` | Identificatore univoco della query da aggiornare. |
 | `SCHEDULE_ID` | Identificatore univoco della query pianificata da aggiornare. |
 
@@ -673,7 +673,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `id` | Nome dell&#39;avviso. Questo nome viene generato dal servizio Avvisi e utilizzato nel dashboard Avvisi. Il nome dell&#39;avviso è costituito dalla cartella in cui è memorizzato l&#39;avviso, da `alertType` e dall&#39;ID di flusso. Le informazioni sugli avvisi disponibili sono disponibili nella [documentazione del dashboard degli avvisi di Platform](../../observability/alerts/ui.md). |
+| `id` | Nome dell&#39;avviso. Questo nome viene generato dal servizio Avvisi e utilizzato nel dashboard Avvisi. Il nome dell&#39;avviso è costituito dalla cartella in cui è memorizzato l&#39;avviso, da `alertType` e dall&#39;ID di flusso. Le informazioni sugli avvisi disponibili sono disponibili nella [documentazione del dashboard degli avvisi di Experience Platform](../../observability/alerts/ui.md). |
 | `assetId` | L’avviso è associato a questo ID. L’ID può essere un ID query o un ID pianificazione. |
 | `alertType` | Ogni avviso può avere tre tipi diversi di avviso. Sono: <ul><li>`start`: notifica a un utente l&#39;avvio dell&#39;esecuzione della query.</li><li>`success`: invia una notifica all&#39;utente al completamento della query.</li><li>`failure`: invia una notifica all&#39;utente se la query non riesce.</li></ul> |
 | `status` | L&#39;avviso ha quattro valori di stato: `enabled`, `enabling`, `disabled` e `disabling`. Un avviso è l’ascolto attivo degli eventi, messo in pausa per utilizzi futuri mantenendo tutti gli abbonati e le impostazioni rilevanti, oppure la transizione tra questi stati. |
@@ -689,7 +689,7 @@ DELETE /alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 
 | Elemento “parameters” | Descrizione |
 | -------- | ----------- |
-| `ALERT_TYPE` | Tipo di avviso. Sono disponibili cinque stati di avviso per le query pianificate, anche se sono disponibili solo quattro stati di avviso per le query ad hoc. L&#39;avviso `quarantine` è disponibile solo per le query pianificate. Inoltre, è possibile impostare l&#39;avviso `delay` solo dall&#39;interfaccia utente di Platform. Per questo motivo `delay` non è descritto qui. Gli avvisi disponibili sono: <ul><li>`start`: notifica a un utente l&#39;avvio dell&#39;esecuzione della query.</li><li>`success`: invia una notifica all&#39;utente al completamento della query.</li><li>`failure`: invia una notifica all&#39;utente se la query non riesce.</li><li>`quarantine`: si attiva quando una query pianificata viene messa in quarantena.</li></ul> La richiesta DELETE si applica solo al tipo di avviso specifico fornito. |
+| `ALERT_TYPE` | Tipo di avviso. Sono disponibili cinque stati di avviso per le query pianificate, anche se sono disponibili solo quattro stati di avviso per le query ad hoc. L&#39;avviso `quarantine` è disponibile solo per le query pianificate. Inoltre, è possibile impostare l&#39;avviso `delay` solo dall&#39;interfaccia utente di Experience Platform. Per questo motivo `delay` non è descritto qui. Gli avvisi disponibili sono: <ul><li>`start`: notifica a un utente l&#39;avvio dell&#39;esecuzione della query.</li><li>`success`: invia una notifica all&#39;utente al completamento della query.</li><li>`failure`: invia una notifica all&#39;utente se la query non riesce.</li><li>`quarantine`: si attiva quando una query pianificata viene messa in quarantena.</li></ul> La richiesta DELETE si applica solo al tipo di avviso specifico fornito. |
 | `QUERY_ID` | Identificatore univoco della query da aggiornare. |
 | `SCHEDULE_ID` | Identificatore univoco della query pianificata da aggiornare. |
 

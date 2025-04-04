@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;mappare csv;mappare file csv;mappare file csv a xdm;mappare csv a xdm;guida interfaccia utente;
+keywords: Experience Platform;home;argomenti popolari;mappare il file csv;mappare il file csv su xdm;mappare il file csv su xdm;guida dell'interfaccia utente;
 solution: Experience Platform
 title: Mappare un file CSV a uno schema XDM esistente
 type: Tutorial
 description: Questo tutorial illustra come mappare un file CSV a uno schema XDM esistente utilizzando l’interfaccia utente di Adobe Experience Platform.
 exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1018'
 ht-degree: 1%
@@ -18,14 +18,14 @@ ht-degree: 1%
 >
 >Questo documento illustra come mappare un file CSV a uno schema XDM esistente. Per informazioni su come utilizzare lo strumento di consigli per gli schemi generati dall&#39;intelligenza artificiale (attualmente in versione beta), consulta il documento su [mappatura di un file CSV utilizzando i consigli di apprendimento automatico](./recommendations.md).
 
-Per acquisire i dati CSV in [!DNL Adobe Experience Platform], i dati devono essere mappati su uno schema [!DNL Experience Data Model] (XDM). Questo tutorial illustra come mappare un file CSV a uno schema XDM utilizzando l&#39;interfaccia utente [!DNL Platform].
+Per acquisire i dati CSV in [!DNL Adobe Experience Platform], i dati devono essere mappati su uno schema [!DNL Experience Data Model] (XDM). Questo tutorial illustra come mappare un file CSV a uno schema XDM utilizzando l&#39;interfaccia utente [!DNL Experience Platform].
 
 ## Introduzione
 
-Questo tutorial richiede una buona conoscenza dei seguenti componenti di [!DNL Platform]:
+Questo tutorial richiede una buona conoscenza dei seguenti componenti di [!DNL Experience Platform]:
 
-- [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md): framework standardizzato tramite il quale [!DNL Platform] organizza i dati sull&#39;esperienza del cliente.
-- [Acquisizione batch](../../batch-ingestion/overview.md): metodo con cui [!DNL Platform] acquisisce i dati dai file di dati forniti dall&#39;utente.
+- [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md): framework standardizzato tramite il quale [!DNL Experience Platform] organizza i dati sull&#39;esperienza del cliente.
+- [Acquisizione batch](../../batch-ingestion/overview.md): metodo con cui [!DNL Experience Platform] acquisisce i dati dai file di dati forniti dall&#39;utente.
 - [Preparazione dati di Adobe Experience Platform](../../batch-ingestion/overview.md): suite di funzionalità che consente di mappare e trasformare i dati acquisiti per adeguarli agli schemi XDM. La documentazione sulle [funzioni di preparazione dati](../../../data-prep/functions.md) è particolarmente rilevante per la mappatura dello schema.
 
 Questo tutorial richiede anche di aver già creato un set di dati in cui acquisire i dati CSV. Per i passaggi relativi alla creazione di un set di dati nell&#39;interfaccia utente, consulta l&#39;[esercitazione sull&#39;acquisizione dei dati](../ingest-batch-data.md).
@@ -64,7 +64,7 @@ La sezione **[!UICONTROL Dati di esempio]** viene visualizzata dopo il caricamen
 
 Viene visualizzato il passaggio **[!UICONTROL Mapping]**. Le colonne del file CSV sono elencate in **[!UICONTROL Campo Source]**, con i campi dello schema XDM corrispondenti elencati in **[!UICONTROL Campo di destinazione]**.
 
-[!DNL Platform] fornisce automaticamente consigli intelligenti per i campi mappati automaticamente in base allo schema di destinazione o al set di dati selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi d’uso.
+[!DNL Experience Platform] fornisce automaticamente consigli intelligenti per i campi mappati automaticamente in base allo schema di destinazione o al set di dati selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi d’uso.
 
 ![](../../images/tutorials/map-a-csv-file/mapping-with-suggestions.png)
 
@@ -120,7 +120,7 @@ Una volta mappato e creato il file CSV, puoi monitorare i dati che vengono acqui
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai mappato correttamente un file CSV flat su uno schema XDM e lo hai acquisito in [!DNL Platform]. Questi dati possono ora essere utilizzati dai servizi [!DNL Platform] downstream come [!DNL Real-Time Customer Profile]. Per ulteriori informazioni, vedere la panoramica di [[!DNL Real-Time Customer Profile]](../../../profile/home.md).
+Seguendo questa esercitazione, hai mappato correttamente un file CSV flat su uno schema XDM e lo hai acquisito in [!DNL Experience Platform]. Questi dati possono ora essere utilizzati dai servizi [!DNL Experience Platform] downstream come [!DNL Real-Time Customer Profile]. Per ulteriori informazioni, vedere la panoramica di [[!DNL Real-Time Customer Profile]](../../../profile/home.md).
 
 >[!TIP]
 >

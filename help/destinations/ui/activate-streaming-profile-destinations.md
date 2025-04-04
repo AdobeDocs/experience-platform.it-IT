@@ -4,9 +4,9 @@ type: Tutorial
 description: Scopri come attivare i dati sul pubblico disponibili in Adobe Experience Platform inviando tipi di pubblico a destinazioni basate su profili di streaming.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '765'
 ht-degree: 1%
 
 ---
@@ -58,7 +58,7 @@ Per selezionare i tipi di pubblico che si desidera attivare nella destinazione, 
 Puoi scegliere tra più tipi di pubblico, a seconda della loro origine:
 
 * **[!UICONTROL Servizio di segmentazione]**: tipi di pubblico generati in Experience Platform dal servizio di segmentazione. Per ulteriori dettagli, consulta la [documentazione di Audience Portal](../../segmentation/ui/audience-portal.md).
-* **[!UICONTROL Caricamento personalizzato]**: pubblico generato al di fuori di Experience Platform e caricato in Platform come file CSV. Per ulteriori informazioni sui tipi di pubblico esterni, consulta la documentazione su [importazione di un pubblico](../../segmentation/ui/audience-portal.md#import-audience).
+* **[!UICONTROL Caricamento personalizzato]**: pubblico generato al di fuori di Experience Platform e caricato in Experience Platform come file CSV. Per ulteriori informazioni sui tipi di pubblico esterni, consulta la documentazione su [importazione di un pubblico](../../segmentation/ui/audience-portal.md#import-audience).
 * Altri tipi di pubblico, provenienti da altre soluzioni Adobe, ad esempio [!DNL Audience Manager].
 
 ![Immagine che evidenzia la selezione delle caselle di controllo nel passaggio Seleziona tipi di pubblico del flusso di lavoro di attivazione.](../assets/ui/activate-streaming-profile-destinations/select-audiences.png)
@@ -81,7 +81,7 @@ Nel passaggio **[!UICONTROL Mappatura]**, seleziona gli attributi del profilo ch
 
 1. Per aggiungere altri campi, ripetere i passaggi da 1 a 3, quindi selezionare **[!UICONTROL Avanti]**.
 
-## Controlla {#review}
+## Rivisione {#review}
 
 Nella pagina **[!UICONTROL Rivedi]** puoi visualizzare un riepilogo della selezione. Seleziona **[!UICONTROL Annulla]** per interrompere il flusso, **[!UICONTROL Indietro]** per modificare le impostazioni oppure **[!UICONTROL Fine]** per confermare la selezione e iniziare a inviare dati alla destinazione.
 
@@ -89,7 +89,7 @@ Nella pagina **[!UICONTROL Rivedi]** puoi visualizzare un riepilogo della selezi
 
 ### Valutazione dei criteri di consenso {#consent-policy-evaluation}
 
-[La valutazione dei criteri di consenso](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) non è attualmente supportata nelle esportazioni nelle tre destinazioni Enterprise: Amazon Kinesis, Azure Event Hubs e HTTP API.
+[La valutazione dei criteri di consenso](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) non è attualmente supportata nelle esportazioni verso le tre destinazioni Enterprise: Amazon Kinesis, Azure Event Hubs e HTTP API.
 
 Ciò significa che i profili che non hanno acconsentito alla destinazione *sono inclusi* nelle esportazioni verso queste tre destinazioni.
 

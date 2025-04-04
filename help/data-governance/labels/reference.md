@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;governance dei dati;etichetta di utilizzo dati api;servizio criteri api;etichette di utilizzo dati supportate;etichette contratto;etichette identità;etichette sensibili
+keywords: Experience Platform;home;argomenti popolari;governance dei dati;etichetta di utilizzo dati api;api servizio criteri;etichette di utilizzo dati supportate;etichette contratto;etichette identità;etichette sensibili
 solution: Experience Platform
 title: Glossario delle etichette di utilizzo dati
 description: Questo documento illustra tutte le etichette di utilizzo dei dati attualmente supportate da Adobe Experience Platform.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 6f3f08203242843ce703de5e4546a537dff82270
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2254'
+source-wordcount: '2257'
 ht-degree: 7%
 
 ---
@@ -61,8 +61,8 @@ Un tipo di dati che si può considerare sensibile può essere diversi tipi di da
 | --- | --- |
 | **S1** | Dati che specificano la latitudine e la longitudine utilizzati per determinare la posizione esatta di un dispositivo. |
 | **S2** | Dati che possono essere utilizzati per determinare un’area recintata in modo ampio. |
-| **PSPD** | I dati personali sensibili consentiti (PSPD) si riferiscono a dati che, ai sensi del contratto, sono consentiti dall’Adobe per il caricamento di dati considerati &quot;sensibili&quot;, &quot;categorie speciali di dati&quot; o termini simili utilizzati dalle leggi applicabili. Ciò esclude specificamente le informazioni sanitarie protette (PHI) e altri dati sanitari regolamentati. |
-| **RHD** | Dati che si riferiscono a informazioni protette sulla salute (PHI) o informazioni su un paziente che l&#39;essere Adobe può contrattualmente caricare. |
+| **PSPD** | I dati personali sensibili consentiti (PSPD) si riferiscono a dati che Adobe consente contrattualmente di caricare e che sono considerati &quot;sensibili&quot;, &quot;categorie speciali di dati&quot; o termini simili utilizzati dalle leggi applicabili. Ciò esclude specificamente le informazioni sanitarie protette (PHI) e altri dati sanitari regolamentati. |
+| **RHD** | Dati che si riferiscono a informazioni protette sulla salute (PHI) o informazioni su un paziente che Adobe ti consente contrattualmente di caricare. |
 
 ## Etichette per ecosistemi partner {#partner}
 
@@ -72,7 +72,7 @@ Questa etichetta viene utilizzata per determinare l’utilizzo dei dati dei pote
 
 | Etichetta | Definizione |
 | --- | --- |
-| **Terze parti** | I dati di terze parti sono dati forniti da un fornitore di dati di terze parti. Un fornitore di dati di terze parti è un’entità che ha concluso un accordo con l’organizzazione che ti autorizza ad accedere ai dati di terze parti, utilizzarli, visualizzarli e trasmetterli insieme a Platform. |
+| **Terze parti** | I dati di terze parti sono dati forniti da un fornitore di dati di terze parti. Un fornitore di dati di terze parti è un’entità che ha concluso un accordo con l’organizzazione che ti autorizza ad accedere ai dati di terze parti, utilizzarli, visualizzarli e trasmetterli insieme ad Experience Platform. |
 | **Arricchimento di terze parti** | Dati raccolti da un’organizzazione terza che non è direttamente correlata alla persona interessata. L’etichetta deve essere applicata ai dati di terze parti utilizzati per arricchire i profili di prime parti. |
 | **Prospezione di terze parti** | Dati raccolti da un’organizzazione terza che non è direttamente correlata alla persona interessata. L’etichetta deve essere applicata ai dati di terze parti utilizzati nella parte superiore della ricerca di funnel per clienti nuovi. |
 
@@ -124,7 +124,7 @@ In ultima analisi, spetta a te interpretare l’etichetta e come viene applicato
 
 IAB: 3. Selezione, consegna e reporting degli annunci: la raccolta di informazioni e la combinazione con le informazioni raccolte in precedenza, per selezionare e distribuire annunci pubblicitari per te e per misurare la consegna e l’efficacia di tali annunci. Ciò include l’utilizzo di informazioni raccolte in precedenza sui tuoi interessi per selezionare annunci, elaborare dati su quali annunci sono stati mostrati, con quale frequenza sono stati mostrati, quando e dove sono stati mostrati e se hai intrapreso azioni relative all’annuncio, incluso ad esempio la selezione di un annuncio o l’acquisto. Questo non include Personalization, che è la raccolta e l’elaborazione di informazioni sull’utilizzo di questo servizio per personalizzare successivamente pubblicità e/o contenuti per te in altri contesti, come siti web o app, nel tempo.
 
-DAA: gli annunci comportamentali online non includono le attività di Prime parti, Consegna di annunci o Generazione di rapporti sugli annunci, né la pubblicità contestuale (ad esempio, la pubblicità basata sul contenuto della pagina web visitata, la visita corrente di un consumatore a una pagina web o una query di ricerca).
+DAA: la pubblicità comportamentale online non include le attività di Prime parti, Consegna degli annunci o Generazione di rapporti sugli annunci, o la pubblicità contestuale (ad esempio, la pubblicità basata sul contenuto della pagina web visitata, la visita corrente di un consumatore a una pagina web o una query di ricerca).
 
 #### C7 {#c7}
 
@@ -150,8 +150,8 @@ Alcuni criteri di governance dei dati limitano l’utilizzo di dati di identità
 
 #### C11 {#c11}
 
-Adobe Experience Platform Segment Match consente di abbinare i tipi di pubblico generati da Platform con le preferenze di privacy e consenso, facilitando l’arricchimento dei profili e le informazioni a valle. L&#39;etichetta C11 indica i dati che non devono essere utilizzati nei processi [!DNL Segment Match]. Dopo aver determinato i set di dati e/o i campi da escludere da Segment Match e aggiunto di conseguenza l’etichetta C11, l’etichetta viene applicata automaticamente dal flusso di lavoro Segment Match.
+Adobe Experience Platform Segment Match consente di abbinare i tipi di pubblico generati da Experience Platform con le preferenze di privacy e consenso, facilitando l’arricchimento dei profili e le informazioni a valle. L&#39;etichetta C11 indica i dati che non devono essere utilizzati nei processi [!DNL Segment Match]. Dopo aver determinato i set di dati e/o i campi da escludere da Segment Match e aggiunto di conseguenza l’etichetta C11, l’etichetta viene applicata automaticamente dal flusso di lavoro Segment Match.
 
 #### C12 {#c12}
 
-I dati con questa etichetta non possono essere esportati da Platform in alcun modo. I campi etichettati C12 sono esclusi dai download CSV, dal consumo API e dai flussi di lavoro di attivazione.
+I dati con questa etichetta non possono essere esportati da Experience Platform in alcun modo. I campi etichettati C12 sono esclusi dai download CSV, dal consumo API e dai flussi di lavoro di attivazione.

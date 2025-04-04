@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Elaborazione delle richieste di privacy nel data lake
 description: Adobe Experience Platform Privacy Service elabora le richieste dei clienti di accedere ai propri dati personali, rinunciarvi o cancellarli, come stabilito dalle normative legali e organizzative sulla privacy. Questo documento descrive i concetti essenziali relativi all’elaborazione delle richieste di privacy per i dati dei clienti memorizzati nel data lake.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1429'
+source-wordcount: '1430'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ Questo documento descrive i concetti essenziali relativi all’elaborazione dell
 
 >[!NOTE]
 >
->Questa guida descrive solo come effettuare richieste di privacy per il data lake in Experience Platform. Se prevedi anche di effettuare richieste di privacy per l&#39;archivio dati Profilo cliente in tempo reale, oltre a questa esercitazione fai riferimento alla guida sull&#39;[elaborazione delle richieste di privacy per il profilo](../profile/privacy.md).
+>Questa guida descrive solo come effettuare richieste di accesso ai dati personali per il data lake in Experience Platform. Se prevedi anche di effettuare richieste di privacy per l&#39;archivio dati Profilo cliente in tempo reale, oltre a questa esercitazione fai riferimento alla guida sull&#39;[elaborazione delle richieste di privacy per il profilo](../profile/privacy.md).
 >
 >Per i passaggi su come effettuare richieste di privacy per altre applicazioni Adobe Experience Cloud, consulta la [documentazione di Privacy Service](../privacy-service/experience-cloud-apps.md).
 
@@ -34,7 +34,7 @@ Prima di leggere questa guida, è consigliabile avere una buona conoscenza dei s
 
 ## Comprendere gli spazi dei nomi delle identità {#namespaces}
 
-Adobe Experience Platform [!DNL Identity Service] esegue il bridging dei dati di identità del cliente tra sistemi e dispositivi. [!DNL Identity Service] utilizza gli spazi dei nomi di identità per fornire contesto ai valori di identità tramite la relazione con il rispettivo sistema di origine. Uno spazio dei nomi può rappresentare un concetto generico come un indirizzo e-mail (&quot;E-mail&quot;) o associare l’identità a un’applicazione specifica, come un Adobe Advertising Cloud ID (&quot;AdCloud&quot;) o un Adobe Target ID (&quot;TNTID&quot;).
+Adobe Experience Platform [!DNL Identity Service] esegue il bridging dei dati di identità del cliente tra sistemi e dispositivi. [!DNL Identity Service] utilizza gli spazi dei nomi di identità per fornire contesto ai valori di identità tramite la relazione con il rispettivo sistema di origine. Uno spazio dei nomi può rappresentare un concetto generico come un indirizzo e-mail (&quot;E-mail&quot;) o associare l’identità a un’applicazione specifica, ad esempio un Adobe Advertising Cloud ID (&quot;AdCloud&quot;) o un Adobe Target ID (&quot;TNTID&quot;).
 
 [!DNL Identity Service] mantiene un archivio di spazi dei nomi di identità definiti a livello globale (standard) e definiti dall&#39;utente (personalizzati). Gli spazi dei nomi standard sono disponibili per tutte le organizzazioni (ad esempio, &quot;E-mail&quot; e &quot;ECID&quot;), mentre l’organizzazione può anche creare spazi dei nomi personalizzati in base alle sue esigenze specifiche.
 
@@ -200,11 +200,11 @@ curl -X POST \
 
 >[!IMPORTANT]
 >
->Platform elabora le richieste di accesso a dati personali in tutte le [sandbox](../sandboxes/home.md) appartenenti alla tua organizzazione. Di conseguenza, qualsiasi intestazione `x-sandbox-name` inclusa nella richiesta viene ignorata dal sistema.
+>Experience Platform elabora le richieste di privacy in tutte le [sandbox](../sandboxes/home.md) appartenenti alla tua organizzazione. Di conseguenza, qualsiasi intestazione `x-sandbox-name` inclusa nella richiesta viene ignorata dal sistema.
 
 ## Elaborazione richiesta di eliminazione
 
-Quando [!DNL Experience Platform] riceve una richiesta di eliminazione da [!DNL Privacy Service], [!DNL Platform] invia una conferma a [!DNL Privacy Service] che la richiesta è stata ricevuta e che i dati interessati sono stati contrassegnati per l&#39;eliminazione. I record vengono quindi rimossi dal data lake entro sette giorni. Durante tale finestra di sette giorni, i dati vengono eliminati in modo non permanente e non sono quindi accessibili da alcun servizio [!DNL Platform].
+Quando [!DNL Experience Platform] riceve una richiesta di eliminazione da [!DNL Privacy Service], [!DNL Experience Platform] invia una conferma a [!DNL Privacy Service] che la richiesta è stata ricevuta e che i dati interessati sono stati contrassegnati per l&#39;eliminazione. I record vengono quindi rimossi dal data lake entro sette giorni. Durante tale finestra di sette giorni, i dati vengono eliminati in modo non permanente e non sono quindi accessibili da alcun servizio [!DNL Experience Platform].
 
 Se nella richiesta di accesso a dati personali hai incluso anche `ProfileService` o `identity`, i dati associati verranno gestiti separatamente. Per ulteriori informazioni, vedere la sezione relativa all&#39;elaborazione di [richieste di eliminazione per il profilo](../profile/privacy.md#delete).
 

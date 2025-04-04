@@ -3,20 +3,20 @@ solution: Experience Platform
 title: Supporto di browser e lingue per l’interfaccia utente di Experience Platform
 description: Adobe Experience Platform è il sistema più potente, flessibile e aperto sul mercato per la creazione e la gestione di soluzioni complete che guidano la customer experience. Experience Platform consente alle organizzazioni di centralizzare e standardizzare i dati e i contenuti dei clienti da qualsiasi sistema, e di applicare tecniche di data science e apprendimento automatico al fine di migliorare la progettazione e la consegna di esperienze personalizzate.
 exl-id: 1b74aede-55df-4e81-8360-e49d1932b373
-source-git-commit: 9c46f2eeb563009da52acb629796ee9992136343
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '253'
 ht-degree: 10%
 
 ---
 
-# Supporto di browser e lingue per l’interfaccia utente di Experience Platform
+# Browser e lingue supportati dall’interfaccia utente di Experience Platform
 
 L’interfaccia utente di Adobe Experience Platform è progettata per supportare più browser e lingue.
 
 ## Supporto browser
 
-L&#39;interfaccia utente di Platform è progettata per funzionare in modo ottimale nelle **versioni più recenti** di Google Chrome, Safari, Firefox e Microsoft Edge. Potresti riscontrare dei problemi durante l’utilizzo di alcune funzioni nelle versioni precedenti dei browser.
+L&#39;interfaccia utente di Experience Platform è progettata per funzionare in modo ottimale nelle **versioni più recenti** di Google Chrome, Safari, Firefox e Microsoft Edge. Potresti riscontrare dei problemi durante l’utilizzo di alcune funzioni nelle versioni precedenti dei browser.
 
 | Sistema operativo | Browser supportati |
 |---|---|
@@ -32,7 +32,7 @@ I seguenti sistemi operativi e browser non sono supportati:
 
 ## Supporto delle lingue
 
-L’interfaccia utente di Platform è attualmente disponibile nelle seguenti lingue:
+L’interfaccia utente di Experience Platform è attualmente disponibile nelle seguenti lingue:
 
 * Inglese
 * Francese

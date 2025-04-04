@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;api;Attribute-Based Access Control;attribute-based access control
+keywords: Experience Platform;home;argomenti popolari;api;Attribute-Based Access Control;attribute-based access control;attribute-based access control
 solution: Experience Platform
 title: Endpoint API prodotti
 description: L’endpoint /products nell’API di controllo dell’accesso basato su attributi consente di gestire in modo programmatico i prodotti in Adobe Experience Platform.
 role: Developer
 exl-id: 44ee9a9d-7a13-4d59-a1a9-97764dbd3763
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '514'
 ht-degree: 4%
 
 ---
@@ -26,7 +26,7 @@ L’endpoint API utilizzato in questa guida fa parte dell’API di controllo deg
 
 ## Recuperare un elenco di prodotti autorizzati {#list}
 
-È possibile recuperare un elenco di prodotti autorizzati effettuando una richiesta GET all&#39;endpoint `/products`.
+Per recuperare un elenco di prodotti autorizzati, eseguire una richiesta GET all&#39;endpoint `/products`.
 
 **Formato API**
 
@@ -70,7 +70,7 @@ In caso di esito positivo, la risposta restituisce un elenco di prodotti autoriz
 
 ## Cercare categorie di autorizzazioni per ID prodotto
 
-Per cercare le categorie di autorizzazione per un determinato prodotto, è possibile effettuare una richiesta di GET all&#39;endpoint `/products/{PRODUCT_ID}/categories` specificando l&#39;ID prodotto.
+Per cercare le categorie di autorizzazione per un determinato prodotto, è possibile effettuare una richiesta GET all&#39;endpoint `/products/{PRODUCT_ID}/categories` specificando l&#39;ID prodotto.
 
 **Formato API**
 
@@ -145,7 +145,7 @@ In caso di esito positivo, la risposta restituisce le categorie di autorizzazion
 
 ## Cercare i set di autorizzazioni per ID prodotto
 
-Per cercare i set di autorizzazioni per un determinato prodotto, è possibile effettuare una richiesta di GET all&#39;endpoint `/products/{PRODUCT_ID}/permission-sets` specificando l&#39;ID prodotto.
+Per cercare i set di autorizzazioni per un determinato prodotto, è possibile effettuare una richiesta GET all&#39;endpoint `/products/{PRODUCT_ID}/permission-sets` specificando l&#39;ID prodotto.
 
 **Formato API**
 
@@ -240,6 +240,6 @@ In caso di esito positivo, la risposta restituisce i set di autorizzazioni assoc
 | `id` | ID corrispondente del set di autorizzazioni sottoposto a query. |
 | `name` | Nome corrispondente del set di autorizzazioni sottoposto a query. |
 | `category` | La categoria di autorizzazioni disponibile. |
-| `permissions` | Le autorizzazioni includono la possibilità di visualizzare e/o utilizzare le funzioni di Platform, ad esempio la creazione di sandbox, la definizione di schemi e la gestione di set di dati. |
+| `permissions` | Le autorizzazioni includono la possibilità di visualizzare e/o utilizzare le funzioni di Experience Platform, ad esempio la creazione di sandbox, la definizione di schemi e la gestione di set di dati. |
 | `permissions.resource` | La risorsa o l&#39;oggetto a cui un soggetto può o non può accedere. Le risorse possono essere file, applicazioni, server o anche API. |
 | `permissions.actions` | Azione consentita a un oggetto per una risorsa su cui è stata eseguita una query. I valori possibili includono: `view`, `read`, `create`, `edit` e `delete` |

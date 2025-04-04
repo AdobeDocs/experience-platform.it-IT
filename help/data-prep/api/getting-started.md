@@ -3,9 +3,9 @@ keywords: Experience Platform;preparazione dati;api preparazione dati;risoluzion
 title: Guida introduttiva all’API di preparazione dati
 description: Scopri i concetti chiave e le funzionalità di base necessari per utilizzare gli endpoint API della preparazione dati per eseguire operazioni CRUD di base da utilizzare con Mapper.
 exl-id: 027e6fbe-9a0d-420b-8d67-659ca7f5ec22
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '187'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ L&#39;utilizzo della guida per sviluppatori richiede una buona conoscenza dei va
 - [[!DNL Adobe Experience Platform Data Ingestion]](../../ingestion/home.md): i metodi tramite i quali i dati possono essere inviati a [!DNL Experience Platform].
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): framework standardizzato tramite il quale [!DNL Experience Platform] organizza i dati sull&#39;esperienza del cliente.
 
-Per effettuare correttamente le chiamate agli endpoint API [!DNL Data Prep], leggi la guida [guida introduttiva alle API di Platform](../../landing/api-guide.md) per scoprire le intestazioni richieste e come leggere le chiamate API di esempio.
+Per effettuare correttamente le chiamate agli endpoint API [!DNL Data Prep], consulta la guida [guida introduttiva alle API di Experience Platform](../../landing/api-guide.md) per scoprire le intestazioni richieste e come leggere le chiamate API di esempio.
 
 ## Passaggi successivi
 

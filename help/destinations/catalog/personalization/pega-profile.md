@@ -3,9 +3,9 @@ title: Connettore profilo Pega
 description: Utilizza il connettore di profilo Pega per Amazon S3 in Adobe Experience Platform per esportare dati di profilo completi o incrementali, o entrambi, nell’archiviazione cloud Amazon S3. In Pega Customer Decision Hub, è possibile pianificare i processi di dati in Customer Profile Designer per importare periodicamente i dati del profilo dallo storage Amazon S3.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: f422f21b-174a-4b93-b05d-084b42623314
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1115'
+source-wordcount: '1116'
 ht-degree: 4%
 
 ---
@@ -39,8 +39,8 @@ Un addetto al marketing desidera che in [!DNL Pega Customer Decision Hub] siano 
 Prima di poter utilizzare questa destinazione per esportare i dati da Adobe Experience Platform e importare i profili in [!DNL Pega Customer Decision Hub], è necessario soddisfare i seguenti prerequisiti:
 
 * Configurare il bucket [!DNL Amazon S3] e il percorso della cartella da utilizzare per l&#39;esportazione e l&#39;importazione di file di dati.
-* Configurare la chiave di accesso [!DNL Amazon S3] e la chiave segreta [!DNL Amazon S3]: In [!DNL Amazon S3], generare una coppia `access key - secret access key` per concedere l&#39;accesso Platform all&#39;account [!DNL Amazon S3].
-* Per connettere ed esportare correttamente i dati nel percorso di archiviazione [!DNL Amazon S3], creare un utente di Gestione identità e accesso (IAM) per [!DNL Platform] in [!DNL Amazon S3] e assegnare autorizzazioni quali `s3:DeleteObject`, `s3:GetBucketLocation`, `s3:GetObject`, `s3:ListBucket`, `s3:PutObject`, `s3:ListMultipartUploadParts`
+* Configura la chiave di accesso [!DNL Amazon S3] e la chiave segreta [!DNL Amazon S3]: In [!DNL Amazon S3], genera una coppia `access key - secret access key` per concedere l&#39;accesso Experience Platform al tuo account [!DNL Amazon S3].
+* Per connettere ed esportare correttamente i dati nel percorso di archiviazione [!DNL Amazon S3], creare un utente di Gestione identità e accesso (IAM) per [!DNL Experience Platform] in [!DNL Amazon S3] e assegnare autorizzazioni quali `s3:DeleteObject`, `s3:GetBucketLocation`, `s3:GetObject`, `s3:ListBucket`, `s3:PutObject`, `s3:ListMultipartUploadParts`
 * Assicurarsi che l&#39;istanza [!DNL Pega Customer Decision Hub] sia aggiornata alla versione 8.8 o successiva.
 
 ## Identità supportate {#supported-identities}
@@ -117,7 +117,7 @@ Nel passaggio **[!UICONTROL Mappatura]**, puoi selezionare l&#39;attributo e i c
 
 ## Convalidare l’esportazione dei dati {#exported-data}
 
-Per [!DNL Pega Profile Connector] destinazioni, [!DNL Platform] crea un file `.csv` nel percorso di archiviazione Amazon S3 fornito. Per ulteriori informazioni sui file, vedere [Attivare i dati del pubblico nelle destinazioni di esportazione dei profili batch](../../ui/activate-batch-profile-destinations.md) nell&#39;esercitazione di attivazione del pubblico.
+Per [!DNL Pega Profile Connector] destinazioni, [!DNL Experience Platform] crea un file `.csv` nel percorso di archiviazione Amazon S3 fornito. Per ulteriori informazioni sui file, vedere [Attivare i dati del pubblico nelle destinazioni di esportazione dei profili batch](../../ui/activate-batch-profile-destinations.md) nell&#39;esercitazione di attivazione del pubblico.
 
 Importazione dei dati di profilo da S3 completata. I dati vengono inseriti nell&#39;archivio dati di profilo [!DNL Pega Customer]. I dati importati del profilo cliente possono essere convalidati in [!DNL Pega Customer Profile Designer], come illustrato nella figura seguente.
 ![Immagine della schermata dell&#39;interfaccia utente in cui è possibile convalidare i dati del profilo di Adobe nel profilo cliente Designer](../../assets/catalog/personalization/pega-profile/pega-profile-data.png)

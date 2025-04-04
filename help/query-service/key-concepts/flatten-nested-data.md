@@ -3,9 +3,9 @@ keywords: Experience Platform;servizio query;servizio query;strutture dati nidif
 title: Appiattire le strutture di dati nidificati da utilizzare con gli strumenti di business intelligence
 description: Questo documento spiega come appiattire gli schemi XDM per tutte le tabelle e le viste durante una sessione quando si utilizzano strumenti BI di terze parti con Query Service.
 exl-id: 7e534c0a-db6c-463e-85da-88d7b2534ece
-source-git-commit: 5f2b44c364183b7becf69f491b41e9d5558accc2
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '857'
+source-wordcount: '858'
 ht-degree: 0%
 
 ---
@@ -22,11 +22,11 @@ L&#39;impostazione `FLATTEN` richiama la struttura di ciascun campo foglia nella
 
 L&#39;utilizzo dell&#39;impostazione `FLATTEN` richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Sistema XDM](../../xdm/home.md): una panoramica di alto livello di XDM e della relativa implementazione in Experience Platform.
+* [Sistema XDM](../../xdm/home.md): panoramica di alto livello di XDM e della relativa implementazione in Experience Platform.
 
-   * [Creare uno schema ad hoc](../../xdm/tutorials/ad-hoc.md): uno schema XDM con campi a cui viene assegnato un namespace per l&#39;utilizzo solo da un singolo set di dati, viene definito schema ad hoc. Gli schemi ad hoc vengono utilizzati in vari flussi di lavoro di acquisizione dati, ad Experience Platform per la creazione di alcuni tipi di connessioni sorgente.
+   * [Creare uno schema ad hoc](../../xdm/tutorials/ad-hoc.md): uno schema XDM con campi a cui viene assegnato un namespace per l&#39;utilizzo solo da un singolo set di dati, viene definito schema ad hoc. Gli schemi ad hoc vengono utilizzati in vari flussi di lavoro di acquisizione dati per Experience Platform e nella creazione di alcuni tipi di connessioni sorgente.
 
-* [Sandbox](../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Sandbox](../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Experience Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 * [Strutture di dati nidificate](./nested-data-structures.md): questo documento fornisce esempi di come creare, elaborare o trasformare set di dati con tipi di dati complessi, incluse strutture di dati nidificate.
 

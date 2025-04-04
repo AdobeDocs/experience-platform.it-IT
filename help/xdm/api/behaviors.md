@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;schema registry;behavior;behavior;behaviors;behaviors;
+keywords: Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;Experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;schema registry;comportamento;comportamento;comportamenti;comportamenti;
 solution: Experience Platform
 title: Endpoint API per i comportamenti
 description: L’endpoint /behaviors nell’API Schema Registry consente di recuperare tutti i comportamenti disponibili nel contenitore globale.
 exl-id: 3b45431f-1d55-4279-8b62-9b27863885ec
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '417'
+source-wordcount: '419'
 ht-degree: 3%
 
 ---
 
 # Endpoint &quot;Behaviors&quot;
 
-In Experience Data Model (XDM), i comportamenti definiscono la natura dei dati descritti da uno schema. Ogni classe XDM deve fare riferimento a un comportamento specifico che verrà ereditato da tutti gli schemi che utilizzano tale classe. Per quasi tutti i casi di utilizzo in Platform, sono disponibili due comportamenti:
+In Experience Data Model (XDM), i comportamenti definiscono la natura dei dati descritti da uno schema. Ogni classe XDM deve fare riferimento a un comportamento specifico che verrà ereditato da tutti gli schemi che utilizzano tale classe. Per quasi tutti i casi di utilizzo in Experience Platform, sono disponibili due comportamenti:
 
 * **[!UICONTROL Record]**: fornisce informazioni sugli attributi di un oggetto. Un soggetto potrebbe essere un&#39;organizzazione o un individuo.
 * **[!UICONTROL Serie temporale]**: fornisce un&#39;istantanea del sistema nel momento in cui un oggetto record ha eseguito un&#39;azione direttamente o indirettamente.
 
 >[!NOTE]
 >
->In Platform, in alcuni casi è necessario utilizzare uno schema che non utilizza nessuno dei comportamenti di cui sopra. Per questi casi, è disponibile un terzo comportamento &quot;ad hoc&quot;. Per ulteriori informazioni, consulta il tutorial su [creazione di uno schema ad hoc](../tutorials/ad-hoc.md).
+>In Experience Platform, in alcuni casi, è necessario utilizzare uno schema che non utilizza nessuno dei comportamenti di cui sopra. Per questi casi, è disponibile un terzo comportamento &quot;ad hoc&quot;. Per ulteriori informazioni, consulta il tutorial su [creazione di uno schema ad hoc](../tutorials/ad-hoc.md).
 >
 >Per informazioni più generali sui comportamenti dei dati in termini di influenza sulla composizione dello schema, consulta la guida sulle [nozioni di base sulla composizione dello schema](../schema/composition.md).
 
@@ -32,7 +32,7 @@ L&#39;endpoint utilizzato in questa guida fa parte dell&#39;[[!DNL Schema Regist
 
 ## Recuperare un elenco di comportamenti {#list}
 
-Per recuperare un elenco di tutti i comportamenti disponibili, effettuare una richiesta GET all&#39;endpoint `/behaviors`.
+Per recuperare un elenco di tutti i comportamenti disponibili, eseguire una richiesta GET all&#39;endpoint `/behaviors`.
 
 **Formato API**
 

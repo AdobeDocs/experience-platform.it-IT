@@ -2,16 +2,16 @@
 title: Migrazione da Data Lake a Gen2
 description: Scopri le nuove funzioni fornite dalla migrazione di Data Lake a Gen2 in Adobe Experience Platform.
 exl-id: 56d9c77a-d7eb-498d-994f-b15d150dedb7
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '288'
 ht-degree: 0%
 
 ---
 
 # Migrazione di Adobe Experience Platform Data Lake a Gen2
 
-Adobe Experience Platform sta eseguendo la migrazione al Data Lake Gen2. Si tratta di una nuova generazione di data lake che offre agli utenti di Platform vantaggi quali la replica geografica, controlli di accesso basati sui ruoli (RBAC) più precisi e una migliore scalabilità.
+Adobe Experience Platform sta eseguendo la migrazione al Data Lake Gen2. Si tratta di una nuova generazione di data lake che offre agli utenti di Experience Platform vantaggi quali la replica geografica, controlli di accesso basati sui ruoli (RBAC, role-based access control) più precisi e una migliore scalabilità.
 
 ## Impatto utente
 
@@ -24,6 +24,6 @@ Durante la migrazione del Data Lake da Adobe da Gen1 a Gen 2, gli utenti potrann
 - **Servizio di segmentazione**: impossibile attivare i tipi di pubblico derivati dalla segmentazione **batch** durante la migrazione. I tipi di pubblico derivati dalla segmentazione **streaming** non saranno interessati.
 - **Customer Journey Analytics**: i dati dei report di Customer Journey Analytics potrebbero non essere aggiornati e non verranno aggiornati durante la migrazione, poiché i batch non vengono acquisiti nel Data Lake.
 
-## Comunicazione agli utenti di Platform
+## Comunicazione agli utenti di Experience Platform
 
-L’Adobe contatterà gli amministratori di sistema per discutere in dettaglio l’impatto della migrazione e confermare le date e le ore di migrazione per organizzazioni specifiche.
+Adobe contatterà gli amministratori di sistema per discutere in dettaglio l’impatto della migrazione e confermare le date e gli orari della migrazione per organizzazioni specifiche.

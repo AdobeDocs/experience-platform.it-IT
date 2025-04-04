@@ -1,10 +1,10 @@
 ---
-description: Scopri come aggiornare un flusso di dati di origini esistenti nell’interfaccia utente di Experience Platform.
+description: Scopri come aggiornare un flusso di dati di origini esistente nell’interfaccia utente di Experience Platform.
 title: Aggiornare un flusso di dati di connessione Source nell’interfaccia utente
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
-source-git-commit: c3082a8769f317407197b3fd05b36cfe00b36470
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '768'
 ht-degree: 8%
 
 ---
@@ -17,8 +17,8 @@ Leggi questa esercitazione per i passaggi su come aggiornare un flusso di dati e
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Experience Platform:
 
-* [Origini](../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
-* [Sandbox](../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Origini](../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Experience Platform.
+* [Sandbox](../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Experience Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 ## Aggiornare i flussi di dati {#update-dataflows}
 
@@ -69,7 +69,7 @@ La finestra di dialogo **[!UICONTROL Modifica pianificazione]** offre opzioni pe
 
 ![Finestra popup che consente di modificare la pianificazione di acquisizione del flusso di dati.](../../images/tutorials/update-dataflows/edit_schedule.png)
 
-### Disattiva flusso di dati
+### Disabilita flusso di dati
 
 Puoi disattivare il flusso di dati utilizzando lo stesso menu a discesa. Per disabilitare il flusso di dati, seleziona **[!UICONTROL Disabilita flusso di dati]**.
 
@@ -79,7 +79,7 @@ Selezionare [!UICONTROL Disattiva] dalla finestra popup visualizzata.
 
 ![Finestra popup in cui confermare di voler disabilitare il flusso di dati.](../../images/tutorials/update-dataflows/disable_dataflow.png)
 
-Se e quando in seguito riabiliti questo flusso di dati, Experience Platform pianifica automaticamente le esecuzioni di backfill per coprire il periodo durante il quale il flusso di dati è stato disabilitato. Experienci Platform Ad esempio, se il flusso di dati è stato configurato per essere eseguito su base oraria ed è stato disabilitato per 48 ore, al momento della riabilitazione del flusso di dati verranno eseguite 48 esecuzioni di backfill per elaborare gli intervalli persi.
+Se e quando in seguito riabiliti questo flusso di dati, Experience Platform pianificherà automaticamente le esecuzioni di backfill per coprire il periodo durante il quale il flusso di dati è stato disabilitato. Ad esempio, se il flusso di dati è stato configurato per essere eseguito ogni ora ed è stato disabilitato per 48 ore, al momento della riabilitazione del flusso di dati Experience Platform creerà 48 esecuzioni di backfill per elaborare gli intervalli mancanti.
 
 ## Passaggi successivi
 

@@ -2,10 +2,10 @@
 title: Supporto di Content Security Policy (CSP)
 description: Scopri come gestire le restrizioni CSP (Content Security Policy, criteri per la sicurezza dei contenuti) durante l’integrazione del sito web con i tag in Adobe Experience Platform.
 exl-id: 9232961e-bc15-47e1-aa6d-3eb9b865ac23
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1074'
-ht-degree: 98%
+source-wordcount: '1076'
+ht-degree: 97%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 I Criteri sulla sicurezza dei contenuti (CSP) sono una funzione di sicurezza che aiuta a prevenire attacchi alla vulnerabilità cross-site scripting (XSS). Questo accade quando il browser viene indotto a eseguire contenuti dannosi che sembrano avere origini affidabili, ma provengono in realtà da una posizione diversa. I CSP consentono al browser di verificare (per conto dell’utente) che lo script provenga effettivamente da una sorgente affidabile.
 
@@ -82,7 +82,7 @@ I CSP disattivano gli script in linea per impostazione predefinita e devono pert
 
 >[!NOTE]
 >
->La specifica CSP contiene dettagli per una terza opzione che utilizza gli hash, ma questo approccio non è compatibile con sistemi di gestione dei tag come tag. Per ulteriori informazioni sulle limitazioni dell’utilizzo degli hash in Platform, consulta la [guida Subresource Integrity (SRI)](./sri.md).
+>La specifica CSP contiene dettagli per una terza opzione che utilizza gli hash, ma questo approccio non è compatibile con sistemi di gestione dei tag come tag. Per ulteriori informazioni sulle limitazioni dell&#39;utilizzo degli hash in Experience Platform, consulta la [guida all&#39;integrità della sottorisorsa (SRI)](./sri.md).
 
 ### Consentire per nonce {#nonce}
 
@@ -158,4 +158,4 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com 'unsafe-inline'
 
 Una volta letto questo documento, sarai in grado di configurare l’intestazione CSP per accettare il file della libreria tag e gli script in linea.
 
-Come ulteriore misura di sicurezza, puoi scegliere inoltre di utilizzare l’integrità della sottorisorsa (SRI) per convalidare le build della libreria recuperate. Tuttavia, questa funzione presenta alcune limitazioni importanti se utilizzata con sistemi di gestione dei tag come tag. Per ulteriori informazioni, consulta la guida sulla [compatibilità SRI in Platform](./sri.md).
+Come ulteriore misura di sicurezza, puoi scegliere inoltre di utilizzare l’integrità della sottorisorsa (SRI) per convalidare le build della libreria recuperate. Tuttavia, questa funzione presenta alcune limitazioni importanti se utilizzata con sistemi di gestione dei tag come tag. Per ulteriori informazioni, consulta la guida sulla compatibilità di [SRI in Experience Platform](./sri.md).

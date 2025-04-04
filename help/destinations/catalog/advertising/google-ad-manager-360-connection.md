@@ -2,9 +2,9 @@
 title: (Beta) [!DNL Google Ad Manager 360] connessione
 description: Google Ad Manager 360 è una piattaforma di ad serving di Google che offre agli editori i mezzi per gestire la visualizzazione di annunci sui loro siti web, tramite video e app mobili.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 21b76877e8b36d6b844d9c0726a2347b1fab170e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1217'
+source-wordcount: '1221'
 ht-degree: 6%
 
 ---
@@ -54,7 +54,7 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 
 | Origine pubblico | Supportato | Descrizione |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite il servizio di segmentazione [Experience Platform](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
 | Caricamenti personalizzati | ✓ | Tipi di pubblico [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
@@ -74,13 +74,13 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 ### Inserimento nell’elenco Consentiti {#allow-listing}
 
-L&#39;inserimento nell&#39;elenco Consentiti è obbligatorio prima di configurare la prima destinazione [!DNL Google Ad Manager 360] in Platform. Prima di creare la destinazione, assicurati di completare il processo di inserimento nell’elenco Consentiti descritto di seguito.
+L&#39;inserimento nell&#39;elenco Consentiti è obbligatorio prima di configurare la prima destinazione [!DNL Google Ad Manager 360] in Experience Platform. Prima di creare la destinazione, assicurati di completare il processo di inserimento nell’elenco Consentiti descritto di seguito.
 
 >[!NOTE]
 >
->L&#39;eccezione a questa regola è per i clienti [Audience Manager](https://docs.adobe.com/content/help/it-IT/experience-cloud/user-guides/home.translate.html) esistenti. Se hai già creato una connessione a questa destinazione Google in Audience Manager, non è necessario ripetere nuovamente la procedura di inserimento nell’elenco Consentiti e puoi procedere ai passaggi successivi.
+>L&#39;eccezione a questa regola è per i clienti [Audience Manager](https://docs.adobe.com/content/help/it-IT/experience-cloud/user-guides/home.translate.html) esistenti. Se hai già creato una connessione a questa destinazione di Google in Audience Manager, non è necessario eseguire nuovamente il processo di inserimento nell’elenco Consentiti e puoi procedere ai passaggi successivi.
 
-1. Segui i passaggi descritti nella [documentazione di Google Ad Manager](https://support.google.com/admanager/answer/3289669?hl=en) per aggiungere un Adobe come piattaforma di gestione dati collegata (DMP).
+1. Segui i passaggi descritti nella [documentazione di Google Ad Manager](https://support.google.com/admanager/answer/3289669?hl=en) per aggiungere Adobe come piattaforma di gestione dati collegata (DMP).
 2. Nell&#39;interfaccia [!DNL Google Ad Manager], vai a **[!UICONTROL Amministratore]** > **[!UICONTROL Impostazioni globali]** > **[!UICONTROL Impostazioni di rete]** e abilita il cursore **[!UICONTROL Accesso API]**.
 
 
@@ -96,8 +96,8 @@ Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;ese
 
 Per eseguire l&#39;autenticazione nella destinazione, compilare i campi obbligatori e selezionare **[!UICONTROL Connetti alla destinazione]**.
 
-* **[!UICONTROL ID chiave di accesso]**: una stringa alfanumerica di 61 caratteri utilizzata per autenticare l&#39;account [!DNL Google Cloud Storage] in Platform.
-* **[!UICONTROL Chiave di accesso segreta]**: una stringa con codifica base64 di 40 caratteri utilizzata per autenticare l&#39;account [!DNL Google Cloud Storage] in Platform.
+* **[!UICONTROL ID chiave di accesso]**: stringa alfanumerica di 61 caratteri utilizzata per autenticare l&#39;account [!DNL Google Cloud Storage] in Experience Platform.
+* **[!UICONTROL Chiave di accesso segreta]**: una stringa con codifica base64 di 40 caratteri utilizzata per autenticare l&#39;account [!DNL Google Cloud Storage] in Experience Platform.
 
 Per ulteriori informazioni su questi valori, consulta la guida delle [chiavi HMAC di Google Cloud Storage](https://cloud.google.com/storage/docs/authentication/hmackeys#overview). Per i passaggi su come generare il proprio ID chiave di accesso e la propria chiave di accesso segreta, consulta la [[!DNL Google Cloud Storage] panoramica sull&#39;origine](/help/sources/connectors/cloud-storage/google-cloud-storage.md).
 
@@ -118,7 +118,7 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
 * **[!UICONTROL Tipo di account]**: selezionare un&#39;opzione, a seconda dell&#39;account [!DNL Google]:
    * Usa `AdX buyer` per [!DNL Google AdX]
    * Usa `DFP by Google` per [!DNL DoubleClick] per gli editori
-* **[!UICONTROL Aggiungi ID pubblico al nome del pubblico]**: seleziona questa opzione per fare in modo che il nome del pubblico in Google Ad Manager 360 includa l&#39;ID pubblico dell&#39;Experience Platform, come segue: `Audience Name (Audience ID)`.
+* **[!UICONTROL Aggiungi ID pubblico al nome del pubblico]**: seleziona questa opzione per fare in modo che il nome del pubblico in Google Ad Manager 360 includa l&#39;ID pubblico da Experience Platform, come segue: `Audience Name (Audience ID)`.
 
 ### Abilita avvisi {#enable-alerts}
 
@@ -139,8 +139,8 @@ Nel passaggio di mappatura identità puoi visualizzare le seguenti mappature pre
 
 | Mappatura precompilata | Descrizione |
 |---------|----------|
-| `ECID` -> `ppid` | Questa è l’unica mappatura precompilata modificabile dall’utente. È possibile selezionare qualsiasi attributo o spazio dei nomi dell&#39;identità da Platform e mapparlo su `ppid`. |
-| `metadata.segment.alias` -> `list_id` | Mappa i nomi degli Experienci Platform di pubblico agli ID del pubblico nella piattaforma Google. |
+| `ECID` -> `ppid` | Questa è l’unica mappatura precompilata modificabile dall’utente. È possibile selezionare qualsiasi attributo o spazio dei nomi dell&#39;identità da Experience Platform e mapparlo su `ppid`. |
+| `metadata.segment.alias` -> `list_id` | Associa i nomi del pubblico di Experience Platform agli ID del pubblico nella piattaforma Google. |
 | `iif(${segmentMembership.ups.seg_id.status}=="exited", "1","0")` -> `delete` | Indica alla piattaforma Google quando rimuovere gli utenti non qualificati dai segmenti. |
 
 Queste mappature sono richieste da [!DNL Google Ad Manager 360] e vengono create automaticamente da Adobe Experience Platform per tutte le connessioni [!DNL Google Ad Manager 360].
@@ -153,7 +153,7 @@ Per verificare se i dati sono stati esportati correttamente, controlla il bucket
 
 ## Risoluzione dei problemi {#troubleshooting}
 
-Nel caso in cui si verifichino errori durante l’utilizzo di questa destinazione e si debba contattare Adobe o Google, tieni a portata di mano i seguenti ID.
+Nel caso riscontrassi errori durante l’utilizzo di questa destinazione e avessi bisogno di contattare Adobe o Google, tieni a portata di mano i seguenti ID.
 
 Questi sono gli ID account Google di Adobe:
 

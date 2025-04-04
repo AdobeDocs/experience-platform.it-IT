@@ -4,16 +4,16 @@ feature: Customer AI
 title: Criteri di governance per IA per l’analisi dei clienti
 description: Adobe Experience Platform offre diversi servizi e strumenti che ti consentono di controllare in modo affidabile i dati delle esperienze raccolte.
 exl-id: be3eca3a-0ea1-4b84-9454-675a4f9ac71e
-source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '189'
+source-wordcount: '190'
 ht-degree: 0%
 
 ---
 
 # Criteri di governance in IA per l’analisi dei clienti
 
-Dopo aver completato il flusso di lavoro per creare un modello e inviare la configurazione del modello, l&#39;[applicazione dei criteri](/help/data-governance/enforcement/auto-enforcement.md) controlla se sono presenti violazioni. Se si verifica una violazione dei criteri, viene visualizzato un messaggio a comparsa che indica che uno o più criteri sono stati violati. In questo modo, le operazioni sui dati e le azioni di marketing in Platform saranno conformi ai criteri di utilizzo dei dati.
+Dopo aver completato il flusso di lavoro per creare un modello e inviare la configurazione del modello, l&#39;[applicazione dei criteri](/help/data-governance/enforcement/auto-enforcement.md) controlla se sono presenti violazioni. Se si verifica una violazione dei criteri, viene visualizzato un messaggio a comparsa che indica che uno o più criteri sono stati violati. In questo modo, le operazioni sui dati e le azioni di marketing in Experience Platform saranno conformi ai criteri di utilizzo dei dati.
 
 ![Un popover che visualizza informazioni sulla violazione dei criteri](../images/user-guide/policy-violation-popover-cai.png).
 

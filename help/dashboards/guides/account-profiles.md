@@ -2,9 +2,9 @@
 title: Dashboard dei profili account
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale puoi visualizzare informazioni importanti sui profili dell’account B2B della tua organizzazione.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: a0b762cb89f45313724187ce36b80b2f3d0548eb
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2397'
+source-wordcount: '2401'
 ht-degree: 4%
 
 ---
@@ -17,7 +17,7 @@ In questo documento viene fornita una panoramica delle funzionalità della dashb
 
 ## Introduzione
 
-Devi avere diritto a [Adobe Real-time Customer Data Platform B2B edition](../../rtcdp/b2b-overview.md) per accedere alla dashboard [!UICONTROL Profili account] B2B.
+Devi avere diritto a [Adobe Real-Time Customer Data Platform B2B edition](../../rtcdp/b2b-overview.md) per accedere alla dashboard [!UICONTROL Profili account] B2B.
 
 ## Dati dei profili account {#data}
 
@@ -31,9 +31,9 @@ I dati di profilo nello snapshot mostrano i dati esattamente come vengono visual
 
 ## Esplora il dashboard [!UICONTROL Profili account] {#explore}
 
-Per passare alla dashboard [!UICONTROL Profili account] nell&#39;interfaccia utente di Platform, selezionare **[!UICONTROL Profili]** in [!UICONTROL Account] nel pannello di navigazione a sinistra.
+Per passare alla dashboard [!UICONTROL Profili account] nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Profili]** in [!UICONTROL Account] nel pannello di navigazione a sinistra.
 
-![L&#39;interfaccia utente di Platform con i profili account nella barra di navigazione a sinistra è evidenziata e la scheda Panoramica è visualizzata.](../images/account-profiles/account-profiles-dashboard.png)
+![L&#39;interfaccia utente di Experience Platform con i profili dell&#39;account nella barra di navigazione a sinistra è evidenziata e la scheda Panoramica è visualizzata.](../images/account-profiles/account-profiles-dashboard.png)
 
 Dal dashboard [!UICONTROL Profili account], puoi [sfogliare i profili account acquisiti nell&#39;organizzazione](#browse-account-profiles) oppure [visualizzare tutti i dati del profilo account in modo immediato utilizzando i widget](#standard-widgets).
 
@@ -61,7 +61,7 @@ Seleziona [!UICONTROL ID profilo] dai risultati visualizzati nella scheda [!UICO
 
 ![Scheda Sfoglia profili account con i risultati visualizzati e l&#39;ID profilo evidenziato.](../images/account-profiles/account-profiles-browse-tab.png)
 
-Le informazioni sul profilo account visualizzate nella scheda [!UICONTROL Dettagli] sono state unite da più frammenti di profilo per formare un&#39;unica visualizzazione del singolo account. Per ulteriori informazioni sulle funzionalità di visualizzazione dei profili dell&#39;account nell&#39;interfaccia utente di Platform, consulta la documentazione su [esplorazione dei profili dell&#39;account in Adobe Real-time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles).
+Le informazioni sul profilo account visualizzate nella scheda [!UICONTROL Dettagli] sono state unite da più frammenti di profilo per formare un&#39;unica visualizzazione del singolo account. Per ulteriori informazioni sulle funzionalità di visualizzazione dei profili dell&#39;account nell&#39;interfaccia utente di Experience Platform, consulta la documentazione su [esplorazione dei profili dell&#39;account in Adobe Real-Time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles).
 
 ## Widget standard {#standard-widgets}
 
@@ -70,7 +70,7 @@ Le informazioni sul profilo account visualizzate nella scheda [!UICONTROL Dettag
 >title="Panoramica sui clienti per account"
 >abstract="Questo widget drill-through fornisce informazioni sulla struttura dei dati B2B. Consente di identificare quanti profili account non hanno profili cliente collegati o hanno uno o più profili cliente associati.<ul><li>Clienti diretti: sono profili cliente collegati direttamente a un account tramite il percorso `personComponents`.</li><li>Clienti indiretti: sono profili cliente collegati a un account tramite il percorso `Account-Person`.</li></ul>"
 
-Adobe fornisce widget standard che puoi utilizzare per visualizzare diverse metriche correlate ai profili del tuo account.
+Adobe fornisce widget standard che puoi utilizzare per visualizzare diverse metriche relative ai profili del tuo account.
 
 >[!IMPORTANT]
 >
@@ -103,7 +103,7 @@ Il widget [!UICONTROL Profili account aggiunti] utilizza un grafico a linee per 
 
 >[!NOTE]
 >
->Le informazioni di [!UICONTROL Clienti per account] e i relativi grafici drill-through ([!UICONTROL Dettagli clienti per account], [!UICONTROL Panoramica opportunità per account], [!UICONTROL Dettagli opportunità per account]) non sono interessati da filtri di data globali eventualmente impostati.
+>I [!UICONTROL Clienti per panoramica account] insight e i relativi grafici drill-through ([!UICONTROL Clienti per dettagli account], [!UICONTROL Panoramica opportunità per account], [!UICONTROL Dettagli opportunità per account]) non sono interessati da filtri di data globali eventualmente impostati.
 
 Il grafico [!UICONTROL Clienti per account] fornisce un riepilogo degli account in base ai tipi di clienti. Visualizza una tabella a quattro righe che classifica i conti come clienti diretti o indiretti o senza. Fornisce il numero totale di conti per ogni categoria. Il grafico consente di identificare la distribuzione dei conti con clienti diretti e indiretti.
 
@@ -129,7 +129,7 @@ Per passare dal drill-through al dashboard Profili account e viceversa, selezion
 
 ![Visualizzazione drill-through nel dashboard Profili account con il menu a discesa di navigazione evidenziato.](../images/account-profiles/navigation-dropdown.png)
 
-Per ulteriori informazioni sui drill-through nell&#39;interfaccia utente di Platform, consulta la [guida drill-through](../sql-insights-query-pro-mode/drill-through.md).
+Per ulteriori informazioni sui drill-through nell&#39;interfaccia utente di Experience Platform, consulta la [guida drill-through](../sql-insights-query-pro-mode/drill-through.md).
 
 #### [!UICONTROL Dettagli clienti per account] {#customers-per-account-detail}
 
@@ -167,7 +167,7 @@ Il widget [!UICONTROL Nuove opportunità per ruolo persona] visualizza il numero
 
 >[!NOTE]
 >
->L&#39;errore [!UICONTROL Nessun dato trovato] o [!UICONTROL Impossibile caricare] si verifica quando la tabella del bridge &#39;Opportunity-Person&#39; non viene utilizzata nello schema. Se la tua informazione mostra uno di questi errori, controlla lo schema di unione e assicurati che il gruppo di campi &quot;Opportunità-Persona&quot; acquisisca i dati.
+>L&#39;errore [!UICONTROL Nessun dato trovato] o [!UICONTROL Impossibile caricare] si verifica quando la tabella del bridge &#39;Opportunity-Person&#39; non viene utilizzata nello schema. Se il tuo insight presenta uno di questi errori, controlla lo schema di unione e assicurati che il gruppo di campi &quot;Opportunità-Persona&quot; acquisisca i dati.
 
 ![Il widget Nuove opportunità per ruolo persona.](../images/account-profiles/new-opportunities-by-person-role.png)
 
@@ -233,7 +233,7 @@ Il menu a discesa all’interno del widget consente di selezionare il modello di
 
 Se viene visualizzato un widget *[!UICONTROL Impossibile caricare. Riprova.]* poiché non sono disponibili dati per l&#39;entità B2B. Ad esempio, il widget visualizzato di seguito [!UICONTROL Nuove opportunità per ruolo persona] mostra il messaggio &quot;[!UICONTROL Impossibile caricare. Riprova.]&quot; poiché questa sandbox non dispone di dati di opportunità disponibili.
 
-![Errore Impossibile caricare l&#39;approfondimento.](../images/account-profiles/unable-to-load.png)
+![Errore Impossibile caricare insight.](../images/account-profiles/unable-to-load.png)
 
 Per risolvere il problema, è necessario acquisire nella sandbox i dati dell&#39;entità B2B, ad esempio i dati di *persona opportunità*. Dopo 48 ore, i dati vengono riflessi nei widget.
 

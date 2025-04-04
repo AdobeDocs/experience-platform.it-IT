@@ -4,10 +4,10 @@ user-guide-title: Guida al profilo cliente in tempo reale
 user-guide-description: Unisci i dati dei clienti per creare una visualizzazione unificata delle interazioni dei clienti nei diversi canali.
 feature: Profiles
 role: User
-source-git-commit: e7af4992b1a2d4c9ada89dea474ce8e5412313f9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '132'
-ht-degree: 27%
+source-wordcount: '133'
+ht-degree: 33%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 27%
    * [Anteprima stato campione ([!DNL Profile] anteprima)](api/preview-sample-status.md)
    * [[!DNL Profile] processi di sistema (richieste di eliminazione)](api/profile-system-jobs.md)
 * Interfaccia utente profilo {#ui}
-   * [Guida dell&#39;interfaccia utente di [!DNL Profile]](ui/user-guide.md)
+   * [Guida dell&#39;interfaccia utente della [!DNL Profile]](ui/user-guide.md)
    * [Personalizzazione dettagli [!DNL Profile]](ui/profile-customization.md)
    * [Profili potenziale cliente](ui/prospect-profile.md)
 * Attributi calcolati {#computed-attributes}
@@ -54,4 +54,4 @@ ht-degree: 27%
 * [Elaborazione della richiesta di accesso a dati personali](privacy.md)
 * [Guida alla risoluzione dei problemi di [!DNL Profile]](troubleshooting.md)
 * [Riferimento API profilo](https://www.adobe.com/go/profile-apis-en)
-* [Note sulla versione della piattaforma](https://experienceleague.adobe.com/it/docs/experience-platform/release-notes/latest)
+* [Note sulla versione di Experience Platform](https://experienceleague.adobe.com/it/docs/experience-platform/release-notes/latest)

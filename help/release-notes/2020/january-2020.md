@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 exl-id: e488a50c-2a87-4649-b3a4-f9d45cb12fcb
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '890'
-ht-degree: 14%
+ht-degree: 25%
 
 ---
 
@@ -25,7 +25,7 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
 ## Sistema [!DNL Experience Data Model] (XDM)  {#xdm}
 
-Standardizzazione e interoperabilità sono concetti chiave alla base di [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), guidato da Adobe, è un tentativo di standardizzare i dati sull&#39;esperienza del cliente e definire schemi per la gestione della customer experience.
+Standardizzazione e interoperabilità sono concetti chiave alla base di [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), gestito da Adobe, è un tentativo di standardizzare i dati sull&#39;esperienza del cliente e definire schemi per la gestione della customer experience.
 
 XDM è una specifica documentata pubblicamente progettata per migliorare la potenza delle esperienze digitali. Fornisce strutture e definizioni comuni per qualsiasi applicazione per comunicare con i servizi su Adobe Experience Platform. Aderendo agli standard XDM, tutti i dati sulla customer experience possono essere incorporati in una rappresentazione comune che fornisce informazioni in modo più veloce e integrato. Puoi ottenere approfondimenti importanti dalle azioni della clientela, definire i tipi di pubblico della clientela attraverso i segmenti e utilizzare gli attributi della clientela a scopo di personalizzazione.
 
@@ -44,27 +44,27 @@ Per ulteriori informazioni sull&#39;utilizzo di XDM con l&#39;API [!DNL Schema R
 
 ## [!DNL Privacy Service] {#privacy}
 
-Nuove norme legali e organizzative danno agli utenti il diritto di accedere ai propri dati personali o di cancellarli dagli archivi di dati su richiesta. Adobe Experience Platform [!DNL Privacy Service] fornisce un&#39;API RESTful e un&#39;interfaccia utente che consentono di gestire queste richieste di dati dei clienti. Con [!DNL Privacy Service] è possibile inviare richieste di accesso ed eliminazione di dati personali o privati dei clienti dalle applicazioni Adobe Experience Cloud, facilitando la conformità automatica alle normative legali e organizzative sulla privacy.
+Nuove norme legali e organizzative danno agli utenti il diritto di accedere ai propri dati personali o di cancellarli dagli archivi di dati su richiesta. Adobe Experience Platform [!DNL Privacy Service] fornisce un’API RESTful e un’interfaccia utente per aiutarti a gestire le richieste di dati dalla clientela. Con [!DNL Privacy Service] puoi inviare richieste di accesso e cancellare dati della clientela personali o privati dalle applicazioni Adobe Experience Cloud, facilitando la conformità automatica alle normative legali e organizzative sulla privacy.
 
 **Nuove funzioni**
 
 | Funzione | Descrizione |
 |--- | ---|
-| [!DNL Privacy Service] rebranding | Il servizio precedentemente denominato &quot;GDPR Service&quot; è stato rinominato [!DNL Privacy Service] in quanto è cresciuto fino a supportare altre normative oltre al GDPR. |
+| Rebranding di [!DNL Privacy Service] | Il servizio precedentemente denominato “GDPR Service” è stato rinominato [!DNL Privacy Service] in quanto è stato esteso per supportare anche altre normative oltre al GDPR. |
 | Nuovi endpoint API | Il percorso di base per l&#39;API [!DNL Privacy Service] è stato aggiornato da `/data/privacy/gdpr` a `/data/core/privacy/jobs`. |
-| Nuova proprietà `regulation` richiesta | Quando si creano nuovi processi nell&#39;API [!DNL Privacy Service], è necessario fornire una proprietà `regulation` nel payload della richiesta per indicare in quale regolamento tenere traccia del processo. I valori accettati sono `gdpr` e `ccpa`. |
-| Supporto per [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] ora accetta le richieste di accesso/eliminazione dall&#39;Adobe [!DNL Primetime Authentication], utilizzando `primetimeAuthentication` come valore di prodotto. |
+| Nuova proprietà `regulation` obbligatoria | Quando si creano nuovi processi nell’API di [!DNL Privacy Service], è necessario fornire una proprietà `regulation` nel payload della richiesta per indicare in quale regolamento tenere traccia del processo. I valori accettati sono `gdpr` e `ccpa`. |
+| Supporto per [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] ora accetta le richieste di accesso/eliminazione da Adobe [!DNL Primetime Authentication], utilizzando `primetimeAuthentication` come valore di prodotto. |
 | Miglioramenti all’interfaccia utente di Privacy Service | Pagine di tracciamento del lavoro separate per le normative RGPD e CCPA. Nuovo **Tipo di regolamento **a discesa per passare dai dati di tracciamento per RGPD e CCPA e viceversa. |
 
 **Problemi noti**
 
 * Nessuna
 
-Per ulteriori informazioni su [!DNL Privacy Service], leggere la [panoramica Privacy Service](../../privacy-service/home.md).
+Per ulteriori informazioni su [!DNL Privacy Service], leggere la [panoramica di Privacy Service](../../privacy-service/home.md).
 
 ## Origini {#sources}
 
-Adobe Experience Platform può acquisire dati da origini esterne e allo stesso tempo consentire di strutturare, etichettare e migliorare tali dati utilizzando i servizi [!DNL Platform]. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, software di terze parti e sistema CRM.
+Adobe Experience Platform può acquisire dati da origini esterne e allo stesso tempo consentire di strutturare, etichettare e migliorare tali dati utilizzando i servizi [!DNL Experience Platform]. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, software di terze parti e sistema di gestione delle relazioni con i clienti.
 
 [!DNL Experience Platform] fornisce un&#39;API RESTful e un&#39;interfaccia utente interattiva che consente di configurare facilmente le connessioni di origine per vari provider di dati. Queste connessioni di origine consentono di autenticarti e connetterti a sistemi di archiviazione esterni e servizi di gestione delle relazioni con i clienti, impostare i tempi per le esecuzioni dell’acquisizione e gestire la velocità effettiva di acquisizione dei dati.
 

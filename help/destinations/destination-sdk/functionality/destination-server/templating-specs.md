@@ -2,9 +2,9 @@
 description: Scopri come formattare le richieste HTTP inviate all’endpoint. Utilizza l’endpoint /authoring/destination-servers per configurare le specifiche di modello del server di destinazione in Adobe Experience Platform Destination SDK.
 title: Specifiche di modello per le destinazioni create con Destination SDK
 exl-id: 066781c8-0af0-4958-b62f-194c6ba13f3a
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '512'
 ht-degree: 2%
 
 ---
@@ -39,7 +39,7 @@ Consulta la tabella seguente per informazioni dettagliate sui tipi di integrazio
 
 ## Configurare una specifica di modello {#configure-template-spec}
 
-L&#39;Adobe utilizza un linguaggio di modelli simile a [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) per trasformare i campi dallo schema XDM in un formato supportato dalla destinazione.
+Adobe utilizza un linguaggio per modelli simile a [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) per trasformare i campi dallo schema XDM in un formato supportato dalla tua destinazione.
 
 ![Configurazione modello evidenziata](../../assets/functionality/destination-server/template-configuration.png)
 
@@ -71,7 +71,7 @@ Di seguito è riportato un esempio di modello di richiesta HTTP con la descrizio
 |---|---|---|
 | `httpMethod` | Stringa | *Obbligatorio.* Il metodo che Adobe utilizzerà nelle chiamate al server. Metodi supportati: `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
 | `templatingStrategy` | Stringa | *Obbligatorio.* Utilizza `PEBBLE_V1`. |
-| `value` | Stringa | *Obbligatorio.* Questa stringa è la versione con escape carattere del modello che formatta le richieste HTTP inviate da Platform nel formato previsto dalla destinazione. <br> Per informazioni su come scrivere il modello, leggere la sezione su [utilizzo del modello](message-format.md#using-templating). <br> Per ulteriori informazioni sull&#39;escape di caratteri, fare riferimento allo standard JSON [RFC, sezione sette](https://tools.ietf.org/html/rfc8259#section-7). <br> Per un esempio di trasformazione semplice, fare riferimento alla trasformazione [attributi di profilo](message-format.md#attributes). |
+| `value` | Stringa | *Obbligatorio.* Questa stringa è la versione con escape carattere del modello che formatta le richieste HTTP inviate da Experience Platform nel formato previsto dalla destinazione. <br> Per informazioni su come scrivere il modello, leggere la sezione su [utilizzo del modello](message-format.md#using-templating). <br> Per ulteriori informazioni sull&#39;escape di caratteri, fare riferimento allo standard JSON [RFC, sezione sette](https://tools.ietf.org/html/rfc8259#section-7). <br> Per un esempio di trasformazione semplice, fare riferimento alla trasformazione [attributi di profilo](message-format.md#attributes). |
 | `contentType` | Stringa | *Obbligatorio.* Il tipo di contenuto accettato dal server. A seconda del tipo di output prodotto dal modello di trasformazione, può essere uno qualsiasi dei [tipi di contenuto dell&#39;applicazione HTTP supportati](https://www.iana.org/assignments/media-types/media-types.xhtml#application). Nella maggior parte dei casi, questo valore deve essere impostato su `application/json`. |
 
 {style="table-layout:auto"}
@@ -82,6 +82,6 @@ Dopo aver letto questo articolo, dovresti conoscere meglio cos’è una specific
 
 Per ulteriori informazioni sugli altri componenti del server di destinazione, consulta i seguenti articoli:
 
-* [Specifiche del server per le destinazioni create con Destination SDK](server-specs.md)
+* [Specifiche server per le destinazioni create con Destination SDK](server-specs.md)
 * [Formato del messaggio](message-format.md)
 * [Configurazione formattazione file](file-formatting.md)

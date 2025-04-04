@@ -3,9 +3,9 @@ title: Creare una connessione Pendo Source nell’interfaccia utente
 description: Scopri come creare una connessione sorgente Pendo utilizzando l’interfaccia utente di Adobe Experience Platform.
 badge: Beta
 exl-id: defdec30-42af-43c8-b2eb-7ce98f7871e3
-source-git-commit: 8de45a54607bed17fd79bbed693666beb09c0502
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1193'
+source-wordcount: '1206'
 ht-degree: 1%
 
 ---
@@ -51,25 +51,25 @@ Prima di creare una connessione di origine [!DNL Pendo], è necessario specifica
 
 Per ulteriori informazioni, leggere la [[!DNL Pendo] guida sui webhook](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks).
 
-### Crea uno schema di Platform per [!DNL Pendo] {#create-platform-schema}
+### Crea uno schema Experience Platform per [!DNL Pendo] {#create-platform-schema}
 
-Devi anche assicurarti di creare prima uno schema Platform da utilizzare per la tua origine. Consulta il tutorial su [creazione di uno schema di Platform](../../../../../xdm/schema/composition.md) per i passaggi completi sulla creazione di uno schema.
+Devi anche assicurarti di creare prima uno schema Experience Platform da utilizzare per la tua origine. Consulta il tutorial su [creazione di uno schema Experience Platform](../../../../../xdm/schema/composition.md) per i passaggi completi sulla creazione di uno schema.
 
-![Interfaccia utente di Platform che mostra uno schema di esempio per Pendo.](../../../../images/tutorials/create/analytics-pendo-webhook/schema.png)
+![Interfaccia utente di Experience Platform con uno schema di esempio per Pendo.](../../../../images/tutorials/create/analytics-pendo-webhook/schema.png)
 
 ## Connetti il tuo account [!DNL Pendo] {#connect-account}
 
-Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini] e visualizzare un catalogo delle origini disponibili in Experience Platform.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini] e visualizzare un catalogo delle origini disponibili in Experience Platform.
 
 Utilizza il menu *[!UICONTROL Categorie]* per filtrare le origini per categoria. In alternativa, immettere un nome di origine nella barra di ricerca per trovare un&#39;origine specifica dal catalogo.
 
 Vai alla categoria [!UICONTROL Analytics] per visualizzare la scheda di origine [!DNL Pendo]. Per iniziare, selezionare **[!UICONTROL Aggiungi dati]**.
 
-![Catalogo di origine dell&#39;interfaccia utente di Platform con la scheda Pendo.](../../../../images/tutorials/create/analytics-pendo-webhook/catalog.png)
+![Catalogo di origine dell&#39;interfaccia utente di Experience Platform con la scheda Pendo.](../../../../images/tutorials/create/analytics-pendo-webhook/catalog.png)
 
 ## Selezionare i dati {#select-data}
 
-Viene visualizzato il passaggio **[!UICONTROL Seleziona dati]**, che fornisce un&#39;interfaccia per la selezione dei dati da inserire in Platform.
+Viene visualizzato il passaggio **[!UICONTROL Seleziona dati]**, che fornisce un&#39;interfaccia per la selezione dei dati da portare in Experience Platform.
 
 * La parte sinistra dell’interfaccia è un browser che ti consente di visualizzare i flussi di dati disponibili all’interno del tuo account;
 * La parte destra dell’interfaccia consente di visualizzare in anteprima fino a 100 righe di dati da un file JSON.
@@ -96,7 +96,7 @@ Al termine, selezionare **[!UICONTROL Avanti]**.
 
 Viene visualizzato il passaggio [!UICONTROL Mappatura] che fornisce un&#39;interfaccia per mappare i campi sorgente dallo schema sorgente ai campi XDM di destinazione appropriati nello schema di destinazione.
 
-Platform fornisce consigli intelligenti per campi mappati automaticamente in base allo schema o al set di dati di destinazione selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi d’uso. In base alle tue esigenze, puoi scegliere di mappare i campi direttamente o utilizzare le funzioni di preparazione dati per trasformare i dati sorgente in modo da derivare valori calcolati o calcolati. Per i passaggi completi sull&#39;utilizzo dell&#39;interfaccia mapper e dei campi calcolati, consulta la [guida dell&#39;interfaccia utente della preparazione dati](../../../../../data-prep/ui/mapping.md).
+Experience Platform fornisce consigli intelligenti per campi mappati automaticamente in base allo schema o al set di dati di destinazione selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi d’uso. In base alle tue esigenze, puoi scegliere di mappare i campi direttamente o utilizzare le funzioni di preparazione dati per trasformare i dati sorgente in modo da derivare valori calcolati o calcolati. Per i passaggi completi sull&#39;utilizzo dell&#39;interfaccia mapper e dei campi calcolati, consulta la [guida dell&#39;interfaccia utente della preparazione dati](../../../../../data-prep/ui/mapping.md).
 
 Le mappature elencate di seguito sono obbligatorie e devono essere configurate prima di procedere alla fase [!UICONTROL Revisione].
 
@@ -108,7 +108,7 @@ Una volta mappati correttamente i dati di origine, seleziona **[!UICONTROL Avant
 
 ![Passaggio di mappatura del flusso di lavoro di origine.](../../../../images/tutorials/create/analytics-pendo-webhook/mapping.png)
 
-## Controlla {#review}
+## Rivisione {#review}
 
 Viene visualizzato il passaggio **[!UICONTROL Rivedi]**, che consente di rivedere il nuovo flusso di dati prima che venga creato. I dettagli sono raggruppati nelle seguenti categorie:
 
@@ -144,11 +144,11 @@ Una volta creato il webhook, passare alla pagina delle impostazioni del webhook 
 
 >[!TIP]
 >
->È possibile iscriversi a diverse categorie di eventi per determinare il tipo di eventi che si desidera inviare dall&#39;istanza [!DNL Pendo] a Platform. Per ulteriori informazioni sui diversi eventi, consulta la [[!DNL Pendo] documentazione](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks#create-a-webhook-0-4).
+>È possibile sottoscrivere diverse categorie di eventi per determinare il tipo di eventi che si desidera inviare dall&#39;istanza [!DNL Pendo] ad Experience Platform. Per ulteriori informazioni sui diversi eventi, consulta la [[!DNL Pendo] documentazione](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks#create-a-webhook-0-4).
 
 ## Passaggi successivi {#next-steps}
 
-Seguendo questa esercitazione hai configurato correttamente un flusso di dati in streaming per portare i tuoi dati di [!DNL Pendo] all&#39;Experience Platform. Per monitorare i dati che vengono acquisiti, consulta la guida su [monitoraggio dei flussi di dati in streaming tramite l&#39;interfaccia utente di Platform](../../monitor-streaming.md).
+Seguendo questa esercitazione hai configurato correttamente un flusso di dati in streaming per portare i tuoi dati [!DNL Pendo] in Experience Platform. Per monitorare i dati che vengono acquisiti, consulta la guida su [monitoraggio dei flussi di dati in streaming tramite l&#39;interfaccia utente di Experience Platform](../../monitor-streaming.md).
 
 ## Risorse aggiuntive {#additional-resources}
 
@@ -162,15 +162,15 @@ Per verificare la corretta configurazione dell&#39;origine e l&#39;acquisizione 
 
 ![Schermata dell&#39;interfaccia utente di Pendo che mostra la cronologia delle chat](../../../../images/tutorials/create/analytics-pendo-webhook/pendo-events.png)
 
-* Nell&#39;interfaccia utente di Platform, selezionare **[!UICONTROL Visualizza flussi di dati]** accanto al menu della scheda [!DNL Pendo] nel catalogo delle origini. Selezionare **[!UICONTROL Anteprima set di dati]** per verificare i dati acquisiti per i webhook configurati in [!DNL Pendo].
+* Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Visualizza flussi di dati]** accanto al menu della scheda [!DNL Pendo] nel catalogo delle origini. Selezionare **[!UICONTROL Anteprima set di dati]** per verificare i dati acquisiti per i webhook configurati in [!DNL Pendo].
 
-![Schermata dell&#39;interfaccia utente di Platform che mostra gli eventi acquisiti](../../../../images/tutorials/create/analytics-pendo-webhook/platform-dataset.png)
+![Schermata dell&#39;interfaccia utente di Experience Platform che mostra gli eventi acquisiti](../../../../images/tutorials/create/analytics-pendo-webhook/platform-dataset.png)
 
 ### Errori e risoluzione problemi {#errors-and-troubleshooting}
 
 Durante il controllo di un&#39;esecuzione del flusso di dati, è possibile che venga visualizzato il seguente messaggio di errore: `The message can't be validated ... uniqueID:expected minLength:1, actual 0].`
 
-![Schermata dell&#39;interfaccia utente di Platform che mostra l&#39;errore.](../../../../images/tutorials/create/analytics-pendo-webhook/error.png)
+![Schermata dell&#39;interfaccia utente di Experience Platform che mostra l&#39;errore.](../../../../images/tutorials/create/analytics-pendo-webhook/error.png)
 
 Per correggere questo errore, è necessario verificare che il mapping *uniqueID* sia stato configurato. Per ulteriori informazioni, consulta la sezione [Mapping](#mapping).
 

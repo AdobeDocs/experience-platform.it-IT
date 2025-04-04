@@ -4,9 +4,9 @@ feature: Attribution AI
 title: Analisi dei punteggi di attribuzione tramite Query Service
 description: Scopri come utilizzare Adobe Experience Platform Query Service per analizzare i punteggi di Attribution AI.
 exl-id: 35d7f6f2-a118-4093-8dbc-cb020ec35e90
-source-git-commit: 66d20dc1141ff33211635ba74d320350f8b27fb7
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '590'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,11 @@ Ogni riga nei dati rappresenta una conversione, in cui le informazioni per i pun
 | ---------------------- | ------ |
 | Nome punto di contatto | `touchpointsDetail. touchpointName` |
 | Canale punto di contatto | `touchpointsDetail.touchPoint.mediaChannel` |
-| Punteggi algoritmici Attribution AI punto di contatto | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
+| Punteggi algoritmici di IA per l’attribuzione dei punti di contatto | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
 
 ## Ricerca dei percorsi dei dati
 
-Nell&#39;interfaccia utente di Adobe Experience Platform, seleziona **[!UICONTROL Set di dati]** nell&#39;area di navigazione a sinistra. Viene visualizzata la pagina **[!UICONTROL Set di dati]**. Quindi, seleziona la scheda **[!UICONTROL Sfoglia]** e trova il set di dati di output per i punteggi delle Attribution AI.
+Nell&#39;interfaccia utente di Adobe Experience Platform, seleziona **[!UICONTROL Set di dati]** nell&#39;area di navigazione a sinistra. Viene visualizzata la pagina **[!UICONTROL Set di dati]**. Quindi, seleziona la scheda **[!UICONTROL Sfoglia]** e trova il set di dati di output per i punteggi di IA per l&#39;attribuzione.
 
 ![Accesso al modello](./images/aai-query/datasets_browse.png)
 
@@ -45,7 +45,7 @@ Utilizzando lo schema di punteggio, puoi selezionare o cercare un valore. Una vo
 
 ## Servizio query di accesso
 
-Per accedere a Query Service dall&#39;interfaccia utente di Platform, inizia selezionando **[!UICONTROL Query]** nell&#39;area di navigazione a sinistra, quindi seleziona la scheda **[!UICONTROL Sfoglia]**. Viene caricato un elenco delle query salvate in precedenza.
+Per accedere a Query Service dall&#39;interfaccia utente di Experience Platform, inizia selezionando **[!UICONTROL Query]** nell&#39;area di navigazione a sinistra, quindi seleziona la scheda **[!UICONTROL Sfoglia]**. Viene caricato un elenco delle query salvate in precedenza.
 
 ![ricerca servizio query](./images/aai-query/query_tab.png)
 
@@ -153,7 +153,7 @@ Le query seguenti possono essere utilizzate come modello per diversi scenari di 
         conversionName, tp_count DESC
 ```
 
-### Esempi di generazione di approfondimenti
+### Esempi di generazione Insight
 
 **Suddivisione unità incrementale per punto di contatto e data di conversione (all&#39;interno di una finestra di conversione)**
 
@@ -305,7 +305,7 @@ Questa query appiattisce la colonna struct in più colonne singole ed esplora le
 
 >[!TIP]
 >
-> In questo esempio, devi sostituire `{COLUMN_NAME}` oltre a `_tenantId` e `your_score_output_dataset`. La variabile `COLUMN_NAME` può accettare i valori dei nomi di colonna pass-through facoltativi (colonne di reporting) aggiunti durante la configurazione del modello di Attribution AI. Rivedi lo schema di output del punteggio per trovare i valori `{COLUMN_NAME}` necessari per completare la query.
+> In questo esempio, devi sostituire `{COLUMN_NAME}` oltre a `_tenantId` e `your_score_output_dataset`. La variabile `COLUMN_NAME` può accettare i valori dei nomi di colonna pass-through facoltativi (colonne di reporting) aggiunti durante la configurazione del modello di IA per l&#39;attribuzione. Rivedi lo schema di output del punteggio per trovare i valori `{COLUMN_NAME}` necessari per completare la query.
 
 ```sql
 SELECT 

@@ -2,9 +2,9 @@
 description: Scopri come configurare le impostazioni di esportazione dei file per le destinazioni create con Destination SDK.
 title: Configurazione batch
 exl-id: 0ffbd558-a83c-4c3d-b4fc-b6f7a23a163a
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1058'
 ht-degree: 2%
 
 ---
@@ -13,12 +13,12 @@ ht-degree: 2%
 
 Utilizza le opzioni di configurazione batch in Destination SDK per consentire agli utenti di personalizzare i nomi dei file esportati e configurare la pianificazione dell’esportazione in base alle loro preferenze.
 
-Quando crei destinazioni basate su file tramite Destination SDK, puoi configurare la denominazione file predefinita e le pianificazioni di esportazione, oppure puoi dare agli utenti la possibilità di configurare queste impostazioni dall’interfaccia utente di Platform. Ad esempio, puoi configurare comportamenti quali:
+Quando crei destinazioni basate su file tramite Destination SDK, puoi configurare la denominazione dei file e le pianificazioni di esportazione predefinite oppure puoi dare agli utenti la possibilità di configurare queste impostazioni dall’interfaccia utente di Experience Platform. Ad esempio, puoi configurare comportamenti quali:
 
 * Includere informazioni specifiche nel nome del file, ad esempio ID pubblico, ID destinazione o informazioni personalizzate.
-* Consente agli utenti di personalizzare la denominazione dei file dall’interfaccia utente di Platform.
+* Consente agli utenti di personalizzare la denominazione dei file dall’interfaccia utente di Experience Platform.
 * Configura le esportazioni di file in modo che avvengano a intervalli di tempo impostati.
-* Definisci le opzioni di denominazione dei file e di personalizzazione della pianificazione di esportazione che gli utenti possono visualizzare nell’interfaccia utente di Platform.
+* Definisci le opzioni di denominazione dei file e di personalizzazione della pianificazione di esportazione che gli utenti possono visualizzare nell’interfaccia utente di Experience Platform.
 
 Le impostazioni di configurazione batch fanno parte della configurazione di destinazione per le destinazioni basate su file.
 
@@ -29,7 +29,7 @@ Per capire dove questo componente si inserisce in un&#39;integrazione creata con
 * [Creare una configurazione di destinazione](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [Aggiornare una configurazione di destinazione](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-Questo articolo descrive tutte le opzioni di configurazione batch supportate che puoi utilizzare per la tua destinazione e mostra cosa vedranno i clienti nell’interfaccia utente di Platform.
+Questo articolo descrive tutte le opzioni di configurazione batch supportate che puoi utilizzare per la tua destinazione e mostra cosa vedranno i clienti nell’interfaccia utente di Experience Platform.
 
 >[!IMPORTANT]
 >
@@ -95,7 +95,7 @@ I valori impostati qui vengono visualizzati nel passaggio [Pianifica esportazion
 | `allowedScheduleFrequency` | Elenco | Definisce la frequenza di esportazione dei file disponibile per i clienti. Valori supportati:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> |
 | `defaultFrequency` | Enumerazione | Definisce la frequenza di esportazione predefinita dei file. Valori supportati:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> Il valore predefinito è `DAILY`. |
 | `defaultStartTime` | Stringa | Definisce l&#39;ora di inizio predefinita per l&#39;esportazione del file. Utilizza il formato file a 24 ore. Il valore predefinito è &quot;00:00&quot;. |
-| `filenameConfig.allowedFilenameAppendOptions` | Stringa | *Richiesto*. Elenco delle macro di nomi file disponibili tra cui gli utenti possono scegliere. Questo determina quali elementi vengono aggiunti ai nomi dei file esportati (ID pubblico, nome organizzazione, data e ora di esportazione e altri). Quando si imposta `defaultFilename`, assicurarsi di evitare la duplicazione delle macro. <br><br>Valori supportati: <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>Indipendentemente dall&#39;ordine in cui si definiscono le macro, l&#39;interfaccia utente di Experience Platform le visualizzerà sempre nell&#39;ordine presentato qui. <br><br> Se `defaultFilename` è vuoto, l&#39;elenco `allowedFilenameAppendOptions` deve contenere almeno una macro. |
+| `filenameConfig.allowedFilenameAppendOptions` | Stringa | *Richiesto*. Elenco delle macro di nomi file disponibili tra cui gli utenti possono scegliere. Questo determina quali elementi vengono aggiunti ai nomi dei file esportati (ID pubblico, nome organizzazione, data e ora di esportazione e altri). Quando si imposta `defaultFilename`, assicurarsi di evitare la duplicazione delle macro. <br><br>Valori supportati: <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>Indipendentemente dall’ordine in cui si definiscono le macro, nell’interfaccia utente di Experience Platform queste vengono sempre visualizzate nell’ordine presentato qui. <br><br> Se `defaultFilename` è vuoto, l&#39;elenco `allowedFilenameAppendOptions` deve contenere almeno una macro. |
 | `filenameConfig.defaultFilenameAppendOptions` | Stringa | *Richiesto*. Macro dei nomi di file predefiniti preselezionate che gli utenti possono deselezionare.<br><br> Le macro in questo elenco sono un sottoinsieme di quelle definite in `allowedFilenameAppendOptions`. |
 | `filenameConfig.defaultFilename` | Stringa | *Facoltativo*. Definisce le macro dei nomi di file predefiniti per i file esportati. Non possono essere sovrascritti dagli utenti. <br><br>Qualsiasi macro definita da `allowedFilenameAppendOptions` verrà aggiunta dopo le macro `defaultFilename`. <br><br>Se `defaultFilename` è vuoto, definire almeno una macro in `allowedFilenameAppendOptions`. |
 | `segmentGroupingEnabled` | Booleano | Definisce se i tipi di pubblico attivati devono essere esportati in uno o più file, in base al criterio di unione [del pubblico](../../../../profile/merge-policies/overview.md). Valori supportati: <ul><li>`true`: esporta un file per criterio di unione.</li><li>`false`: esporta un file per pubblico, indipendentemente dal criterio di unione. Questo è il comportamento predefinito. È possibile ottenere lo stesso risultato omettendo completamente questo parametro.</li></ul> |
@@ -113,9 +113,9 @@ Utilizzare le macro di configurazione dei nomi di file per definire i nomi di fi
 | Macro | Etichetta interfaccia utente | Descrizione | Esempio |
 |---|---|---|---|
 | `DESTINATION` | [!UICONTROL Destinazione] | Nome della destinazione nell’interfaccia utente. | Amazon S3 |
-| `SEGMENT_ID` | [!UICONTROL ID segmento] | ID pubblico univoco generato dalla piattaforma | ce5c5482-2813-4a80-99bc-57113f6acde2 |
-| `SEGMENT_NAME` | [!UICONTROL Nome segmento] | Nome del pubblico definito dall&#39;utente | Abbonato VIP |
-| `DESTINATION_INSTANCE_ID` | [!UICONTROL ID destinazione] | ID univoco generato dalla piattaforma dell’istanza di destinazione | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
+| `SEGMENT_ID` | [!UICONTROL ID segmento] | ID pubblico univoco generato da Experience Platform | ce5c5482-2813-4a80-99bc-57113f6acde2 |
+| `SEGMENT_NAME` | [!UICONTROL Nome segmento] | Nome del pubblico definito dall&#39;utente | abbonato VIP |
+| `DESTINATION_INSTANCE_ID` | [!UICONTROL ID destinazione] | ID univoco generato da Experience Platform dell’istanza di destinazione | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
 | `DESTINATION_INSTANCE_NAME` | [!UICONTROL Nome destinazione] | Nome definito dall&#39;utente dell&#39;istanza di destinazione. | La mia destinazione Advertising 2022 |
 | `ORGANIZATION_NAME` | [!UICONTROL Nome organizzazione] | Nome dell’organizzazione del cliente in Adobe Experience Platform. | Nome organizzazione |
 | `SANDBOX_NAME` | [!UICONTROL Nome Sandbox] | Nome della sandbox utilizzato dal cliente. | prod |

@@ -1,16 +1,17 @@
 ---
-title: Configurare le chiavi gestite dal cliente con AWS tramite l’interfaccia utente di Platform
+title: Configurare le chiavi gestite dal cliente con AWS tramite l’interfaccia utente di Experience Platform
 description: Scopri come configurare l’app CMK con il nome della risorsa Amazon (ARN) e inviare l’ID della chiave di crittografia a Adobe Experience Platform.
-source-git-commit: e67aed9e8072bcd531d5aa6ce5b631c910a1812a
+exl-id: f0e38a60-d448-4975-977e-1367fca10515
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1246'
+source-wordcount: '1263'
 ht-degree: 0%
 
 ---
 
-# Configurare le chiavi gestite dal cliente con AWS tramite l’interfaccia utente di Platform
+# Configurare le chiavi gestite dal cliente con AWS tramite l’interfaccia utente di Experience Platform
 
-Utilizza questa guida per abilitare le chiavi gestite dal cliente (CMK) per le istanze di Platform in hosting su AWS tramite l’interfaccia utente di Platform.
+Utilizza questa guida per abilitare le chiavi gestite dal cliente (CMK) per le istanze di Experience Platform in hosting su AWS tramite l’interfaccia utente di Experience Platform.
 
 >[!IMPORTANT]
 >
@@ -40,11 +41,11 @@ Per integrare la chiave AWS con Experience Platform, devi modificare il JSON nel
 }
 ```
 
-Nell&#39;esempio precedente, tutte le risorse (`"Resource": "*"`) all&#39;interno dello stesso account (`Principal.AWS`) possono accedere alla chiave. Questo criterio consente ai servizi dell&#39;account di eseguire operazioni di crittografia e decrittografia limitate all&#39;account specificato. Per concedere all’account single-tenant di Platform l’accesso a questa chiave, aggiungi nuove istruzioni al criterio predefinito di AWS. Puoi ottenere i criteri JSON richiesti dall’interfaccia utente di Platform e applicarli alla chiave KMS di AWS per stabilire una connessione sicura con Adobe Experience Platform.
+Nell&#39;esempio precedente, tutte le risorse (`"Resource": "*"`) all&#39;interno dello stesso account (`Principal.AWS`) possono accedere alla chiave. Questo criterio consente ai servizi dell&#39;account di eseguire operazioni di crittografia e decrittografia limitate all&#39;account specificato. Per concedere all’account Experience Platform a tenant singolo l’accesso a questa chiave, aggiungi nuove istruzioni al criterio predefinito di AWS. Puoi ottenere i criteri JSON richiesti dall’interfaccia utente di Experience Platform e applicarli alla chiave KMS di AWS per stabilire una connessione sicura con Adobe Experience Platform.
 
-Nell&#39;interfaccia utente di Platform, vai alla sezione **[!UICONTROL Amministrazione]** nella barra di navigazione a sinistra e seleziona **[!UICONTROL Crittografia]**. Nell&#39;area di lavoro [!UICONTROL Configurazione crittografia], selezionare **[!UICONTROL Configura]** nella scheda [!UICONTROL Chiavi gestite dal cliente].
+Nell&#39;interfaccia utente di Experience Platform, vai alla sezione **[!UICONTROL Amministrazione]** nella barra di navigazione a sinistra e seleziona **[!UICONTROL Crittografia]**. Nell&#39;area di lavoro [!UICONTROL Configurazione crittografia], selezionare **[!UICONTROL Configura]** nella scheda [!UICONTROL Chiavi gestite dal cliente].
 
-![L&#39;area di lavoro di configurazione di Platform Encryption con Configurazione evidenziata nella scheda Chiavi gestite dal cliente.](../../../images/governance-privacy-security/key-management-service/encryption-configuration.png)
+![L&#39;area di lavoro di configurazione di Experience Platform Encryption con Configurazione evidenziata nella scheda Chiavi gestite dal cliente.](../../../images/governance-privacy-security/key-management-service/encryption-configuration.png)
 
 Viene visualizzata la [!UICONTROL configurazione chiavi gestite dal cliente]. Copiare l&#39;oggetto `statement` dal criterio CMK KMS visualizzato in [!UICONTROL Customer Managed Keys] [!UICONTROL Encryption Configuration].
 
@@ -159,9 +160,9 @@ Selezionare **[!DNL Finish]** per confermare il criterio aggiornato e creare la 
 
 Viene visualizzata l&#39;area di lavoro [!DNL Customer Managed Keys] aggiornata dell&#39;AWS [!DNL Key Management Service].
 
-### Aggiungere i dettagli della chiave di crittografia AWS alla piattaforma
+### Aggiungere i dettagli della chiave di crittografia di AWS ad Experience Platform
 
-Quindi, per abilitare la crittografia, aggiungi il nome risorsa Amazon (ARN) della chiave alla [!UICONTROL configurazione di chiavi gestite dal cliente] della piattaforma. Dalla sezione [!DNL Customer Managed Keys] di AWS, seleziona l&#39;alias della nuova chiave dall&#39;elenco in [!DNL Key Management Service].
+Quindi, per abilitare la crittografia, aggiungi il nome risorsa Amazon (ARN) della chiave alla [!UICONTROL configurazione di chiavi gestite dal cliente] di Experience Platform. Dalla sezione [!DNL Customer Managed Keys] di AWS, seleziona l&#39;alias della nuova chiave dall&#39;elenco in [!DNL Key Management Service].
 
 ![L&#39;area di lavoro Chiavi gestite dal cliente di AWS KMS con il nuovo alias chiave evidenziato.](../../../images/governance-privacy-security/key-management-service/customer-managed-keys-on-aws.png)
 
@@ -172,17 +173,17 @@ Seleziona l’icona Copia per copiare l’ARN. Viene visualizzata una finestra d
 
 ![Dettagli chiave della chiave gestita dal cliente AWS KMS con ARN evidenziato.](../../../images/governance-privacy-security/key-management-service/keys-details-arn.png)
 
-Ora torna all&#39;interfaccia utente di Platform [!UICONTROL Customer Managed Keys configuration]. Nella sezione **[!UICONTROL Aggiungi dettagli chiave di crittografia AWS]**, aggiungi un **[!UICONTROL nome configurazione]** e la **[!UICONTROL chiave KMS ARN]** copiata dall&#39;interfaccia utente di AWS.
+Ora torna alla [!UICONTROL configurazione chiavi gestite dal cliente] dell&#39;interfaccia utente di Experience Platform. Nella sezione **[!UICONTROL Aggiungi dettagli chiave di crittografia AWS]**, aggiungi un **[!UICONTROL nome configurazione]** e la **[!UICONTROL chiave KMS ARN]** copiata dall&#39;interfaccia utente di AWS.
 
-![L&#39;area di lavoro di configurazione della crittografia della piattaforma con il nome della configurazione e la chiave KMS ARN è evidenziata nella sezione Aggiungi dettagli chiave di crittografia AWS.](../../../images/governance-privacy-security/key-management-service/add-encryption-key-details.png)
+![L&#39;area di lavoro di configurazione di Experience Platform Encryption con il nome della configurazione e la chiave KMS ARN è evidenziata nella sezione Aggiungi dettagli chiave di crittografia AWS.](../../../images/governance-privacy-security/key-management-service/add-encryption-key-details.png)
 
 Quindi, seleziona **[!UICONTROL SALVA]** per inviare il nome della configurazione, la chiave KMS ARN e avviare la convalida della chiave.
 
-![L&#39;area di lavoro di configurazione della crittografia della piattaforma con Salva evidenziato.](../../../images/governance-privacy-security/key-management-service/save.png)
+![Area di lavoro di configurazione di Experience Platform Encryption con Salva evidenziato.](../../../images/governance-privacy-security/key-management-service/save.png)
 
 Sei tornato all&#39;area di lavoro [!UICONTROL Configurazioni crittografia]. Lo stato della configurazione della crittografia viene visualizzato nella parte inferiore della scheda **[!UICONTROL Chiavi gestite dal cliente]**.
 
-![L&#39;area di lavoro Configurazioni crittografia nell&#39;interfaccia utente di Platform con Elaborazione evidenziata nella scheda Chiavi gestite dal cliente.](../../../images/governance-privacy-security/key-management-service/configuration-status.png)
+![Area di lavoro Configurazioni crittografia nell&#39;interfaccia utente di Experience Platform con Elaborazione evidenziata nella scheda Chiavi gestite dal cliente.](../../../images/governance-privacy-security/key-management-service/configuration-status.png)
 
 Una volta convalidata la chiave, gli identificatori di Vault chiave vengono aggiunti al data lake e agli archivi dati del profilo per tutte le sandbox.
 
@@ -198,7 +199,7 @@ Una volta convalidata la chiave, gli identificatori di Vault chiave vengono aggi
 
 Di seguito sono riportate le considerazioni principali per la revoca della chiave:
 
-- La revoca o la disattivazione della chiave renderà i dati di Platform inaccessibili. Questa azione è irreversibile e deve essere eseguita con cautela.
+- La revoca o la disattivazione della chiave renderà inaccessibili i dati di Experience Platform. Questa azione è irreversibile e deve essere eseguita con cautela.
 - Considera le timeline di propagazione quando l’accesso alle chiavi di crittografia viene revocato. Gli archivi dati primari diventano inaccessibili in pochi minuti o in 24 ore. Gli archivi di dati memorizzati nella cache o transitori diventano inaccessibili entro sette giorni.
 
 Per revocare una chiave, accedi all’area di lavoro del servizio di gestione delle chiavi di AWS. Nella sezione **[!DNL Customer managed keys]** sono visualizzate tutte le chiavi disponibili per il tuo account AWS. Seleziona l’alias della chiave dall’elenco.
@@ -209,7 +210,7 @@ Vengono visualizzati i dettagli della chiave. Per disattivare la chiave, selezio
 
 ![Dettagli della chiave AWS nell&#39;interfaccia utente di AWS KMS con le azioni chiave e l&#39;opzione Disattiva evidenziate.](../../../images/governance-privacy-security/key-management-service/disable-key.png)
 
-Viene visualizzata una finestra di dialogo di conferma. Seleziona **[!DNL Disable key]** per confermare la scelta. L’impatto della disattivazione della chiave dovrebbe riflettersi nelle applicazioni Platform e nell’interfaccia utente entro circa cinque minuti.
+Viene visualizzata una finestra di dialogo di conferma. Seleziona **[!DNL Disable key]** per confermare la scelta. L’impatto della disattivazione della chiave dovrebbe riflettersi nelle applicazioni Experience Platform e nell’interfaccia utente entro circa cinque minuti.
 
 >[!NOTE]
 >
@@ -217,11 +218,11 @@ Viene visualizzata una finestra di dialogo di conferma. Seleziona **[!DNL Disabl
 
 ![Finestra di dialogo Disattiva chiave con chiave di disattivazione evidenziata.](../../../images/governance-privacy-security/key-management-service/disable-key-dialog.png)
 
-In alternativa, se la chiave viene utilizzata in altri servizi, puoi rimuovere l’accesso, ad Experience Platform direttamente dal criterio chiave. Seleziona **[!UICONTROL Modifica]** nella sezione **[!DNL Key Policy]**.
+In alternativa, se la chiave viene utilizzata in altri servizi, puoi rimuovere l’accesso per Experience Platform direttamente dal criterio chiave. Seleziona **[!UICONTROL Modifica]** nella sezione **[!DNL Key Policy]**.
 
 ![La sezione dei dettagli della chiave AWS con Modifica evidenziata nella sezione Criteri chiave.](../../../images/governance-privacy-security/key-management-service/edit-key-policy.png)
 
-Viene visualizzata la pagina **[!DNL Edit key policy]**. Evidenzia ed elimina l’istruzione dei criteri, copiata dall’interfaccia utente di Platform, per rimuovere le autorizzazioni per l’app Chiavi gestite dal cliente. Quindi, selezionare **[!DNL Save changes]** per completare il processo.
+Viene visualizzata la pagina **[!DNL Edit key policy]**. Evidenzia ed elimina l’istruzione dei criteri, copiata dall’interfaccia utente di Experience Platform, per rimuovere le autorizzazioni per l’app Chiavi gestite dal cliente. Quindi, selezionare **[!DNL Save changes]** per completare il processo.
 
 ![L&#39;area di lavoro Modifica criteri chiave in AWS con l&#39;istruzione JSON object e Salva modifiche evidenziate.](../../../images/governance-privacy-security/key-management-service/delete-statement-and-save-changes.png)
 

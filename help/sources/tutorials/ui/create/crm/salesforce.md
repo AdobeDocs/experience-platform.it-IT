@@ -1,23 +1,23 @@
 ---
-title: Collegare l’account Salesforce utilizzando l’interfaccia utente di Experience Platform
-description: Scopri come collegare il tuo account Salesforce e portare i tuoi dati di gestione delle relazioni con i clienti a Experience Platform utilizzando l’interfaccia utente.
+title: Collegare l’account Salesforce tramite l’interfaccia utente di Experience Platform
+description: Scopri come collegare il tuo account Salesforce e inserire i dati CRM in Experience Platform utilizzando l’interfaccia utente.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: ae322ee421edd73cd5a3fb8499267cd417491318
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '935'
+source-wordcount: '936'
 ht-degree: 2%
 
 ---
 
-# Connetti il tuo account [!DNL Salesforce] ad Experience Platform utilizzando l&#39;interfaccia utente
+# Connetti il tuo account [!DNL Salesforce] ad Experience Platform tramite l&#39;interfaccia utente
 
-Questo tutorial illustra i passaggi necessari per collegare l&#39;account [!DNL Salesforce] e trasferire i dati di gestione delle relazioni con i clienti a Adobe Experience Platform utilizzando l&#39;interfaccia utente di Experience Platform.
+Questo tutorial illustra i passaggi necessari per collegare l&#39;account [!DNL Salesforce] e trasferire i dati di gestione delle relazioni con i clienti a Adobe Experience Platform tramite l&#39;interfaccia utente di Experience Platform.
 
 ## Introduzione
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): framework standardizzato in base al quale Experience Platform organizza i dati sull&#39;esperienza del cliente.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): framework standardizzato tramite il quale Experience Platform organizza i dati sull&#39;esperienza del cliente.
    * [Nozioni di base sulla composizione dello schema](../../../../../xdm/schema/composition.md): scopri i blocchi predefiniti di base degli schemi XDM, inclusi i principi chiave e le best practice nella composizione dello schema.
    * [Esercitazione sull&#39;editor di schemi](../../../../../xdm/tutorials/create-schema-ui.md): scopri come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;editor di schemi.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
@@ -59,11 +59,11 @@ Per ulteriori informazioni sull&#39;utilizzo di OAuth per [!DNL Salesforce], leg
 
 >[!ENDTABS]
 
-Dopo aver raccolto le credenziali richieste, puoi seguire i passaggi seguenti per collegare l&#39;account [!DNL Salesforce] all&#39;Experience Platform.
+Dopo aver raccolto le credenziali richieste, puoi seguire i passaggi seguenti per collegare l&#39;account [!DNL Salesforce] ad Experience Platform.
 
 ## Connetti il tuo account [!DNL Salesforce]
 
-Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
 
 Selezionare **[!DNL Salesforce]** nella categoria *[!UICONTROL CRM]*, quindi selezionare **[!UICONTROL Aggiungi dati]**.
 
@@ -127,4 +127,4 @@ Il resto del flusso di lavoro rimarrà invariato. L’unica avvertenza è che ig
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai stabilito una connessione al tuo account [!DNL Salesforce]. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per inserire dati in [!DNL Platform]](../../dataflow/crm.md).
+Seguendo questa esercitazione, hai stabilito una connessione al tuo account [!DNL Salesforce]. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per inserire dati in [!DNL Experience Platform]](../../dataflow/crm.md).

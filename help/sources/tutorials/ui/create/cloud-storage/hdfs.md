@@ -3,12 +3,12 @@ keywords: Experience Platform;home;argomenti popolari;Apache HDFS;HDFS;hdfs
 solution: Experience Platform
 title: Creare una connessione Source Apache HDFS nell’interfaccia utente
 type: Tutorial
-description: Scopri come creare una connessione sorgente del file system distribuito di Hadoop Apache utilizzando l’interfaccia utente di Adobe Experience Platform.
+description: Scopri come creare una connessione sorgente del file system distribuito di Apache Hadoop utilizzando l’interfaccia utente di Adobe Experience Platform.
 exl-id: 3b8bf210-13b6-44e6-9090-152998f67452
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '487'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -18,11 +18,11 @@ ht-degree: 1%
 >
 >Il connettore HDFS [!DNL Apache] è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la [Panoramica origini](../../../../home.md#terms-and-conditions).
 
-I connettori Source in [!DNL Adobe Experience Platform] consentono di acquisire dati di origine esterna in base a una pianificazione. Questo tutorial descrive i passaggi necessari per autenticare un connettore di origine [!DNL Apache Hadoop Distributed File System] (di seguito &quot;HDFS&quot;) tramite l&#39;interfaccia utente [!DNL Platform].
+I connettori Source in [!DNL Adobe Experience Platform] consentono di acquisire dati di origine esterna in base a una pianificazione. Questo tutorial descrive i passaggi necessari per autenticare un connettore di origine [!DNL Apache Hadoop Distributed File System] (di seguito &quot;HDFS&quot;) tramite l&#39;interfaccia utente [!DNL Experience Platform].
 
 ## Introduzione
 
-Questo tutorial richiede una buona conoscenza dei seguenti componenti di [!DNL Platform]:
+Questo tutorial richiede una buona conoscenza dei seguenti componenti di [!DNL Experience Platform]:
 
 - [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): framework standardizzato tramite il quale [!DNL Experience Platform] organizza i dati sull&#39;esperienza del cliente.
    - [Nozioni di base sulla composizione dello schema](../../../../../xdm/schema/composition.md): scopri i blocchi predefiniti di base degli schemi XDM, inclusi i principi chiave e le best practice nella composizione dello schema.
@@ -41,7 +41,7 @@ Per autenticare il connettore di origine HDFS, è necessario fornire i valori pe
 
 ## Collegare l&#39;account HDFS
 
-Dopo aver raccolto le credenziali richieste, è possibile eseguire la procedura seguente per collegare l&#39;account HDFS a [!DNL Platform].
+Dopo aver raccolto le credenziali richieste, è possibile eseguire la procedura seguente per collegare l&#39;account HDFS a [!DNL Experience Platform].
 
 Accedi a [Adobe Experience Platform](https://platform.adobe.com), quindi seleziona **[!UICONTROL Origini]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro **[!UICONTROL Origini]**. Nella schermata **[!UICONTROL Catalogo]** sono visualizzate diverse origini per le quali è possibile creare un account con.
 
@@ -67,4 +67,4 @@ Per connettere un account esistente, selezionare l&#39;account HDFS con cui si d
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, è stata stabilita una connessione all&#39;account HDFS. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per portare i dati dall&#39;archiviazione cloud in [!DNL Platform]](../../dataflow/batch/cloud-storage.md).
+Seguendo questa esercitazione, è stata stabilita una connessione all&#39;account HDFS. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per portare i dati dall&#39;archiviazione cloud in [!DNL Experience Platform]](../../dataflow/batch/cloud-storage.md).

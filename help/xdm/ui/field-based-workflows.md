@@ -2,24 +2,24 @@
 title: Flussi di lavoro basati sui campi nell’Editor di schema
 description: Scopri come aggiungere singolarmente i campi dai gruppi di campi esistenti agli schemi Experience Data Model (XDM).
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1301'
+source-wordcount: '1305'
 ht-degree: 0%
 
 ---
 
 # Flussi di lavoro basati sui campi nell’Editor di schema
 
-Adobe Experience Platform fornisce un solido set di [gruppi di campi](../schema/composition.md#field-group) standardizzati da utilizzare negli schemi Experience Data Model (XDM). La struttura e la semantica di questi gruppi di campi sono attentamente personalizzate per soddisfare un’ampia varietà di casi di utilizzo di segmentazione e altre applicazioni a valle in Platform. Puoi anche definire gruppi di campi personalizzati per soddisfare esigenze aziendali specifiche.
+Adobe Experience Platform fornisce un solido set di [gruppi di campi](../schema/composition.md#field-group) standardizzati da utilizzare negli schemi Experience Data Model (XDM). La struttura e la semantica di questi gruppi di campi sono attentamente personalizzate per soddisfare un’ampia varietà di casi di utilizzo di segmentazione e altre applicazioni a valle in Experience Platform. Puoi anche definire gruppi di campi personalizzati per soddisfare esigenze aziendali specifiche.
 
 Quando aggiungi un gruppo di campi a uno schema, quest’ultimo eredita tutti i campi contenuti in tale gruppo. Tuttavia, ora puoi aggiungere singoli campi allo schema senza dover includere altri campi del gruppo di campi associato che non necessariamente utilizzi.
 
-Questa guida descrive i diversi metodi per aggiungere singoli campi a uno schema nell’interfaccia utente di Platform.
+Questa guida descrive i diversi metodi per aggiungere singoli campi a uno schema nell’interfaccia utente di Experience Platform.
 
 ## Prerequisiti
 
-Questa esercitazione presuppone che tu abbia familiarità con la [composizione degli schemi XDM](../schema/composition.md) e con le modalità di utilizzo dell&#39;Editor di schema nell&#39;interfaccia utente di Platform. Per continuare, è necessario avviare il processo di [creazione di un nuovo schema](./resources/schemas.md) e di assegnazione a una classe standard prima di continuare con questa guida.
+Questa esercitazione presuppone che tu abbia familiarità con la [composizione degli schemi XDM](../schema/composition.md) e con le modalità di utilizzo dell&#39;Editor di schema nell&#39;interfaccia utente di Experience Platform. Per continuare, è necessario avviare il processo di [creazione di un nuovo schema](./resources/schemas.md) e di assegnazione a una classe standard prima di continuare con questa guida.
 
 ## Rimuovi i campi aggiunti dai gruppi di campi standard {#remove-field-group}
 
@@ -111,4 +111,4 @@ Per ulteriori informazioni sull&#39;aggiunta di campi personalizzati, vedere [Cr
 
 ## Passaggi successivi
 
-Questa guida descrive i nuovi flussi di lavoro basati sui campi per l’Editor di schema nell’interfaccia utente di Platform. Per ulteriori informazioni sulla gestione degli schemi nell&#39;interfaccia utente, vedere [Panoramica dell&#39;interfaccia utente](./overview.md).
+Questa guida descrive i nuovi flussi di lavoro basati sui campi per l’Editor di schema nell’interfaccia utente di Experience Platform. Per ulteriori informazioni sulla gestione degli schemi nell&#39;interfaccia utente, vedere [Panoramica dell&#39;interfaccia utente](./overview.md).

@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform - Marzo 2023
 description: Note sulla versione di Adobe Experience Platform di marzo 2023.
 exl-id: 3f4d764a-77cd-4e4a-ae11-e97a23006a53
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2079'
-ht-degree: 99%
+source-wordcount: '2081'
+ht-degree: 97%
 
 ---
 
@@ -47,7 +47,7 @@ Adobe Experience Platform fornisce una suite di tecnologie che consente di racco
 
 | Funzione | Descrizione |
 | --- | --- |
-| Nuovo flusso di lavoro con avvio rapido per l’API Conversions di Meta (Beta) | Accedi ai nuovi flussi di lavoro di avvio rapido nella “Guida introduttiva” dalla schermata iniziale della Raccolta dati. Il [flusso di lavoro di avvio rapido per l’API Conversions di Meta](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html#quick-start) consente alla clientela di raccogliere e inoltrare rapidamente a Meta i dati dell’evento lato server per le conversioni di annunci in alcuni semplici passaggi. |
+| Nuovo flusso di lavoro con avvio rapido per l’API Conversions di Meta (Beta) | Accedi ai nuovi flussi di lavoro di avvio rapido nella “Guida introduttiva” dalla schermata iniziale della Raccolta dati. Il [flusso di lavoro di avvio rapido per l’API Conversions di Meta](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=it#quick-start) consente alla clientela di raccogliere e inoltrare rapidamente a Meta i dati dell’evento lato server per le conversioni di annunci in alcuni semplici passaggi. |
 | Nuovo flusso di lavoro di avvio rapido per l’SDK Mobile (Beta) | Accedi ai nuovi flussi di lavoro di avvio rapido nella “Guida introduttiva” dalla schermata iniziale della Raccolta dati. Il [flusso di lavoro di avvio rapido per l’SDK Mobile](https://developer.adobe.com/client-sdks/documentation/) consente di implementare rapidamente l’SDK Mobile e di convalidare gli eventi mobili di base in pochi semplici passaggi. |
 | Estensione [!DNL Braze] per l’inoltro degli eventi | L’estensione [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=it) per l’inoltro degli eventi consente di sfruttare i dati acquisiti nella rete Edge di Adobe Experience Platform e di inviarli a [!DNL Braze] in forma di eventi lato server che utilizzano le API User Track di [!DNL Braze]. |
 | Estensione [!DNL Epsilon] per l’inoltro degli eventi | L’estensione [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/overview.html?lang=it) consente di sfruttare l’inoltro degli eventi per acquisire informazioni sugli eventi nella rete Edge di Adobe Experience Platform e inviarle a [!DNL Epsilon] utilizzando l’API dell’evento di [!DNL Epsilon]. |
@@ -147,11 +147,11 @@ XDM è una specifica open-source che fornisce strutture e definizioni comuni (sc
 
 {style="table-layout:auto"}
 
-Per ulteriori informazioni su XDM in Platform, consulta la [Panoramica sul sistema XDM](../../xdm/home.md).
+Per ulteriori informazioni su XDM in Experience Platform, consulta la [Panoramica del sistema XDM](../../xdm/home.md).
 
-## Servizio query {#query-service}
+## Query Service {#query-service}
 
-Il Servizio query consente di utilizzare SQL standard per eseguire query sui dati in Adobe Experience Platform.[!DNL Data Lake] Puoi unire qualsiasi set di dati dal data lake e acquisire i risultati della query sotto forma di nuovo set di dati da utilizzare nel reporting, in Data Science Workspace o da acquisire nel profilo cliente in tempo reale.
+Il Servizio query consente di utilizzare SQL standard per eseguire query sui dati in Adobe Experience Platform [!DNL Data Lake]. Puoi unire qualsiasi set di dati dal data lake e acquisire i risultati della query sotto forma di nuovo set di dati da utilizzare nel reporting, in Data Science Workspace o da acquisire nel profilo cliente in tempo reale.
 
 **Funzioni aggiornate**
 
@@ -193,7 +193,7 @@ Per ulteriori informazioni su [!DNL Segmentation Service], consulta la [Panorami
 
 ## Origini {#sources}
 
-Adobe Experience Platform può acquisire dati da origini esterne e consente di strutturarli, etichettarli e migliorarli utilizzando i servizi di Platform. Puoi acquisire dati da diverse origini, ad esempio da applicazioni Adobe, dall’archiviazione basata su cloud, da software di terze parti e dal sistema CRM.
+Adobe Experience Platform può acquisire dati da origini esterne e consente di strutturarli, etichettarli e migliorarli utilizzando i servizi di Experience Platform. Puoi acquisire dati da diverse origini, ad esempio da applicazioni Adobe, dall’archiviazione basata su cloud, da software di terze parti e dal sistema CRM.
 
 Experience Platform fornisce un’API RESTful e un’interfaccia utente interattiva per impostare facilmente le connessioni di origine per vari provider di dati. Queste connessioni di origine consentono di autenticarti e connetterti a sistemi di archiviazione esterni e servizi di gestione delle relazioni con i clienti, impostare i tempi per le esecuzioni dell’acquisizione e gestire la velocità effettiva di acquisizione dei dati.
 

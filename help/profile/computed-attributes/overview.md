@@ -2,9 +2,9 @@
 title: Panoramica degli attributi calcolati
 description: Gli attributi calcolati sono funzioni per aggregare i dati a livello di evento negli attributi a livello di profilo. Queste funzioni vengono calcolate automaticamente in modo che possano essere utilizzate in segmentazione, attivazione e personalizzazione.
 exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
-source-git-commit: 03f1dfab768e98ef4959d605cc3ead25bb5eb238
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1154'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ Personalization basato sul comportamento degli utenti è un requisito chiave aff
 
 Gli attributi calcolati consentono di convertire rapidamente i dati comportamentali del profilo in valori aggregati a livello di profilo senza dipendere dalle risorse tecniche per:
 
-- Abilitazione della personalizzazione mirata uno-a-uno o in batch con attivazione degli aggregati comportamentali per le destinazioni Real-time Customer Data Platform e l’utilizzo in Adobe Journey Optimizer
+- Abilitazione della personalizzazione mirata uno-a-uno o in batch con attivazione degli aggregati comportamentali per le destinazioni Real-Time Customer Data Platform e l’utilizzo in Adobe Journey Optimizer
 - Segmentazione del pubblico semplificata con archiviazione di aggregati comportamentali come attributi di profilo
 - Standardizzazione dei dati comportamentali aggregati del profilo da utilizzare su piattaforme e app diverse
 - Migliore gestione dei dati con consolidamento dei dati dei vecchi eventi di profilo in informazioni comportamentali significative
@@ -32,13 +32,13 @@ I casi d’uso di esempio includono:
 - Compressione di più tipi di pubblico basati su eventi in un gruppo più compatto di attributi calcolati
 - Nuovo targeting degli utenti non autenticati fuori sede utilizzando ID partner recenti da eventi
 
-Questa guida ti aiuterà a comprendere meglio il ruolo degli attributi calcolati in Platform, oltre a spiegare le nozioni di base degli attributi calcolati.
+Questa guida ti aiuterà a comprendere meglio il ruolo degli attributi calcolati all’interno di Experience Platform, oltre a spiegare le nozioni di base degli attributi calcolati.
 
 ## Informazioni sugli attributi calcolati
 
 Adobe Experience Platform consente di importare e unire facilmente i dati provenienti da più origini per generare [!DNL Real-Time Customer Profiles]. Ogni profilo contiene informazioni importanti relative a un individuo, come le informazioni di contatto, le preferenze e la cronologia degli acquisti, fornendo una visualizzazione a 360 gradi del cliente.
 
-Alcune delle informazioni raccolte nel profilo sono facilmente comprensibili durante la lettura diretta dei campi di dati (ad esempio, &quot;nome&quot;), mentre altri dati richiedono l’esecuzione di più calcoli o l’affidamento su altri campi e valori per generare le informazioni (ad esempio, &quot;totale acquisti per tutta la durata della vita&quot;). Per semplificare la comprensione immediata di questi dati, [!DNL Platform] consente di creare attributi calcolati che eseguono automaticamente questi riferimenti e calcoli, restituendo il valore nel campo appropriato.
+Alcune delle informazioni raccolte nel profilo sono facilmente comprensibili durante la lettura diretta dei campi di dati (ad esempio, &quot;nome&quot;), mentre altri dati richiedono l’esecuzione di più calcoli o l’affidamento su altri campi e valori per generare le informazioni (ad esempio, &quot;totale acquisti per tutta la durata della vita&quot;). Per semplificare la comprensione immediata di questi dati, [!DNL Experience Platform] consente di creare attributi calcolati che eseguono automaticamente questi riferimenti e calcoli, restituendo il valore nel campo appropriato.
 
 Gli attributi calcolati includono la creazione di un’espressione, o &quot;regola&quot;, che funziona sui dati in arrivo e memorizza il valore risultante in un attributo di profilo. Le espressioni possono essere definite in più modi diversi, consentendoti di specificare su quali eventi aggregare, funzioni di aggregazione o le durate del lookback.
 
@@ -48,7 +48,7 @@ Gli attributi calcolati consentono di definire gli aggregati di eventi in modo a
 
 | Funzione | Descrizione | Tipi di dati supportati | Esempio di utilizzo |
 | -------- | ----------- | -------------------- | ------------- |
-| SOMMA | Funzione che **somma** il valore specificato per gli eventi qualificati. | Interi, numeri, lunghezze | Somma di tutti gli acquisti degli ultimi 7 giorni |
+| SUM | Funzione che **somma** il valore specificato per gli eventi qualificati. | Interi, numeri, lunghezze | Somma di tutti gli acquisti degli ultimi 7 giorni |
 | CONTEGGIO | Funzione che **conta** il numero di eventi che si sono verificati per la regola specificata. | N/D | Numero di acquisti negli ultimi 3 mesi |
 | MIN | Funzione che trova il valore **minimum** per gli eventi qualificati. | Interi, Numeri, Lunghi, Marca temporale | Dati del primo acquisto negli ultimi 7 giorni<br/>Importo minimo dell&#39;ordine nelle ultime 4 settimane |
 | MAX | Funzione che trova il valore **maximum** per gli eventi qualificati. | Interi, Numeri, Lunghi, Marca temporale | Ultimi dati di acquisto negli ultimi 7 giorni<br/>Importo massimo ordine nelle ultime 4 settimane |

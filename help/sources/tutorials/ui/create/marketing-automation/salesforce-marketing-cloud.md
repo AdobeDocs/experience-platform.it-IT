@@ -1,10 +1,10 @@
 ---
-title: Collega il tuo account di Marketing Cloud Salesforce ad Experience Platform tramite l’interfaccia utente
-description: Scopri come collegare il tuo account di Marketing Cloud Salesforce ad Experience Platform tramite l’interfaccia utente.
+title: Collegare l’account Marketing Cloud di Salesforce ad Experience Platform tramite l’interfaccia utente
+description: Scopri come collegare il tuo account Marketing Cloud di Salesforce ad Experience Platform tramite l’interfaccia utente.
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
-source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '509'
+source-wordcount: '511'
 ht-degree: 2%
 
 ---
@@ -26,11 +26,11 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di Experie
    * [Esercitazione sull&#39;editor di schemi](../../../../../xdm/tutorials/create-schema-ui.md): scopri come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;editor di schemi.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
-Se disponi già di un account [!DNL Salesforce Marketing Cloud], puoi saltare il resto di questo documento e passare all&#39;esercitazione su [come Experience Platform dei dati di automazione marketing tramite l&#39;interfaccia utente](../../dataflow/marketing-automation.md).
+Se disponi già di un account [!DNL Salesforce Marketing Cloud], puoi saltare il resto di questo documento e passare all&#39;esercitazione su [portare dati di automazione marketing in Experience Platform utilizzando l&#39;interfaccia utente](../../dataflow/marketing-automation.md).
 
 ### Raccogli le credenziali richieste
 
-Per accedere al tuo account [!DNL Salesforce Marketing Cloud] su Platform, devi fornire i seguenti valori:
+Per accedere al tuo account [!DNL Salesforce Marketing Cloud] su Experience Platform, devi fornire i seguenti valori:
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
@@ -46,15 +46,15 @@ Per ulteriori informazioni sull&#39;autenticazione per [!DNL Salesforce Marketin
 >
 >L&#39;acquisizione di oggetti personalizzati non è attualmente supportata dall&#39;integrazione di origine [!DNL Salesforce Marketing Cloud].
 
-Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Il [!UICONTROL catalogo] presenta diverse origini supportate da Experience Platform.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Il [!UICONTROL catalogo] visualizza diverse origini supportate da Experience Platform.
 
 È possibile selezionare la categoria appropriata dall&#39;elenco delle categorie. Puoi anche utilizzare la barra di ricerca per filtrare in base a un’origine specifica.
 
-Nella categoria [!UICONTROL Automazione marketing], selezionare **[!UICONTROL Marketing Cloud Salesforce]**, quindi **[!UICONTROL Configurazione]**.
+Nella categoria [!UICONTROL Automazione marketing], selezionare **[!UICONTROL Salesforce Marketing Cloud]**, quindi **[!UICONTROL Configurazione]**.
 
-![Catalogo origini con origine Marketing Cloud Salesforce selezionata.](../../../../images/tutorials/create/salesforce-marketing-cloud/catalog.png)
+![Catalogo delle origini con l&#39;origine Marketing Cloud di Salesforce selezionata.](../../../../images/tutorials/create/salesforce-marketing-cloud/catalog.png)
 
-Viene visualizzata la pagina **[!UICONTROL Connetti al Marketing Cloud Salesforce]**. In questa pagina è possibile creare un nuovo account o utilizzare un account esistente.
+Viene visualizzata la pagina **[!UICONTROL Connetti a Salesforce Marketing Cloud]**. In questa pagina è possibile creare un nuovo account o utilizzare un account esistente.
 
 ### Nuovo account
 
@@ -62,14 +62,14 @@ Per creare un nuovo account, seleziona **[!UICONTROL Nuovo account]** e fornisci
 
 Al termine, selezionare **[!UICONTROL Connetti all&#39;origine]** e quindi attendere un po&#39; di tempo per stabilire la nuova connessione.
 
-![La nuova interfaccia dell&#39;account in cui è possibile autenticare un nuovo account per il Marketing Cloud Salesforce.](../../../../images/tutorials/create/salesforce-marketing-cloud/new.png)
+![La nuova interfaccia dell&#39;account in cui è possibile autenticare un nuovo account per Salesforce Marketing Cloud.](../../../../images/tutorials/create/salesforce-marketing-cloud/new.png)
 
 ### Account esistente
 
 Se disponi già di un account, seleziona **[!UICONTROL Account esistente]**, quindi seleziona l&#39;account che desideri utilizzare dall&#39;elenco visualizzato.
 
-![Interfaccia account esistente in cui è possibile effettuare la selezione da un elenco di account di Marketing Cloud Salesforce esistenti.](../../../../images/tutorials/create/salesforce-marketing-cloud/existing.png)
+![Interfaccia account esistente in cui è possibile effettuare la selezione da un elenco di account Salesforce Marketing Cloud esistenti.](../../../../images/tutorials/create/salesforce-marketing-cloud/existing.png)
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai stabilito una connessione tra il tuo account [!DNL Salesforce Marketing Cloud] e l&#39;Experience Platform. Ora puoi continuare con l&#39;esercitazione successiva e [creare un flusso di dati per inserire i dati di automazione marketing in Experience Platform](../../dataflow/marketing-automation.md).
+Seguendo questa esercitazione, hai stabilito una connessione tra il tuo account [!DNL Salesforce Marketing Cloud] e Experience Platform. Ora puoi continuare con l&#39;esercitazione successiva e [creare un flusso di dati per inserire i dati di automazione marketing in Experience Platform](../../dataflow/marketing-automation.md).

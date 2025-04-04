@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;argomenti popolari;Applicazione delle policy;applicazione basata su API;governance dei dati
 solution: Experience Platform
 title: Endpoint API per i criteri di governance dei dati
-description: I criteri di governance dei dati sono regole adottate dall’organizzazione che descrivono i tipi di azioni di marketing che possono essere eseguiti o meno sui dati di Experience Platform. L’endpoint /policies viene utilizzato per tutte le chiamate API relative alla visualizzazione, alla creazione, all’aggiornamento o all’eliminazione dei criteri di governance dei dati.
+description: I criteri di governance dei dati sono regole adottate dall’organizzazione che descrivono i tipi di azioni di marketing che possono essere eseguiti o meno sui dati all’interno di Experience Platform. L’endpoint /policies viene utilizzato per tutte le chiamate API relative alla visualizzazione, alla creazione, all’aggiornamento o all’eliminazione dei criteri di governance dei dati.
 role: Developer
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1863'
+source-wordcount: '1864'
 ht-degree: 3%
 
 ---
@@ -18,7 +18,7 @@ I criteri di governance dei dati sono regole che descrivono i tipi di azioni di 
 
 >[!IMPORTANT]
 >
->I criteri di governance non devono essere confusi con i criteri di controllo dell’accesso, che determinano gli attributi di dati specifici a cui possono accedere alcuni utenti di Platform nella tua organizzazione. Per informazioni dettagliate su come gestire in modo programmatico i criteri di controllo di accesso, consultare la guida dell&#39;endpoint `/policies` per [Access Control API](../../access-control/abac/api/policies.md).
+>I criteri di governance non devono essere confusi con i criteri di controllo dell’accesso, che determinano gli attributi di dati specifici a cui possono accedere alcuni utenti di Experience Platform nella tua organizzazione. Per informazioni dettagliate su come gestire in modo programmatico i criteri di controllo di accesso, consultare la guida dell&#39;endpoint `/policies` per [Access Control API](../../access-control/abac/api/policies.md).
 
 ## Introduzione
 
@@ -26,7 +26,7 @@ L&#39;endpoint API utilizzato in questa guida fa parte dell&#39;[[!DNL Policy Se
 
 ## Recuperare un elenco di criteri {#list}
 
-È possibile elencare tutti i criteri `core` o `custom` effettuando una richiesta di GET rispettivamente a `/policies/core` o `/policies/custom`.
+È possibile elencare tutti i criteri `core` o `custom` effettuando una richiesta GET rispettivamente a `/policies/core` o `/policies/custom`.
 
 **Formato API**
 
@@ -274,7 +274,7 @@ Ad esempio, per definire un criterio che impedisca l&#39;esecuzione di un&#39;az
 | `operands` | Matrice di oggetti, in cui ogni oggetto rappresenta una singola etichetta o una coppia aggiuntiva di proprietà `operator` e `operands`. La presenza di etichette e/o operazioni in un array `operands` viene risolta come true o false in base al valore della proprietà `operator` di pari livello. |
 | `label` | Nome di una singola etichetta di utilizzo dati che si applica al criterio. |
 
-È possibile creare un nuovo criterio personalizzato effettuando una richiesta POST all&#39;endpoint `/policies/custom`.
+Per creare un nuovo criterio personalizzato, eseguire una richiesta POST all&#39;endpoint `/policies/custom`.
 
 **Formato API**
 
@@ -478,7 +478,7 @@ In caso di esito positivo, la risposta restituisce i dettagli del criterio aggio
 >
 >Puoi aggiornare solo i criteri personalizzati. Se desideri abilitare o disabilitare i criteri di base, consulta la sezione su [aggiornamento dell&#39;elenco dei criteri di base abilitati](#update-enabled-core).
 
-È possibile aggiornare una parte specifica di un criterio utilizzando una richiesta PATCH. A differenza delle richieste PUT che riscrivono il criterio, le richieste PATCH aggiornano solo le proprietà specificate nel corpo della richiesta. Questa funzione risulta particolarmente utile quando si desidera abilitare o disabilitare un criterio, in quanto è necessario fornire solo il percorso della proprietà appropriata (`/status`) e il relativo valore (`ENABLED` o `DISABLED`).
+Una parte specifica di un criterio può essere aggiornata utilizzando una richiesta PATCH. A differenza delle richieste di PUT che riscrivono il criterio, le richieste di PATCH aggiornano solo le proprietà specificate nel corpo della richiesta. Questa funzione risulta particolarmente utile quando si desidera abilitare o disabilitare un criterio, in quanto è necessario fornire solo il percorso della proprietà appropriata (`/status`) e il relativo valore (`ENABLED` o `DISABLED`).
 
 >[!NOTE]
 >
@@ -580,7 +580,7 @@ Per eliminare un criterio personalizzato, devi includere `id` nel percorso di un
 
 >[!WARNING]
 >
->Una volta eliminati, i criteri non possono essere recuperati. È consigliabile [eseguire una richiesta di ricerca (GET)](#lookup) prima di visualizzare il criterio e confermare che si tratta del criterio corretto da rimuovere.
+>Una volta eliminati, i criteri non possono essere recuperati. È consigliabile [eseguire una richiesta di ricerca (GET)](#lookup) per visualizzare i criteri e confermare che si tratta dei criteri corretti da rimuovere.
 
 **Formato API**
 
@@ -607,7 +607,7 @@ curl -X DELETE \
 
 In caso di esito positivo, la risposta restituisce lo stato HTTP 200 (OK) con un corpo vuoto.
 
-Per confermare l’eliminazione, prova a cercare (GET) nuovamente il criterio. Se il criterio è stato eliminato correttamente, dovrebbe essere visualizzato un errore HTTP 404 (Non trovato).
+Per confermare l’eliminazione, prova a cercare nuovamente (GET) il criterio. Se il criterio è stato eliminato correttamente, dovrebbe essere visualizzato un errore HTTP 404 (Non trovato).
 
 ## Recuperare un elenco di criteri di base abilitati {#list-enabled-core}
 

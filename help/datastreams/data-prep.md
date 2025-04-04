@@ -2,16 +2,16 @@
 title: Preparazione dei dati per la raccolta dati
 description: Scopri come mappare i dati su uno schema evento Experience Data Model (XDM) durante la configurazione di uno stream di dati per Adobe Experience Platform Web e Mobile SDK.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: e90bd5abe502a7638ae54fca5eb0f051a925a2d8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1199'
-ht-degree: 59%
+source-wordcount: '1203'
+ht-degree: 53%
 
 ---
 
 # Preparazione dei dati per la raccolta dati
 
-La preparazione dati è un servizio di Adobe Experience Platform che consente di mappare, trasformare e convalidare i dati da e per [Experience Data Model (XDM)](../xdm/home.md). Durante la configurazione di uno [stream di dati](./overview.md), puoi utilizzare le funzionalità di preparazione dati per mappare i dati di origine su XDM quando li invii alla rete Edge di Platform.
+La preparazione dati è un servizio di Adobe Experience Platform che consente di mappare, trasformare e convalidare i dati da e per [Experience Data Model (XDM)](../xdm/home.md). Durante la configurazione di un [flusso di dati](./overview.md) abilitato per Experience Platform, puoi utilizzare le funzionalità di preparazione dati per mappare i dati di origine su XDM durante l&#39;invio ad Experience Platform Edge Network.
 
 Tutti i dati inviati da una pagina web devono pervenire ad Experience Platform come XDM. Esistono 3 modi per tradurre i dati da un livello dati su pagina a XDM accettato da Experience Platform:
 
@@ -52,7 +52,7 @@ Per una dimostrazione rapida del processo di preparazione dei dati per la raccol
 
 ## [!UICONTROL Selezionare i dati] {#select-data}
 
-Dopo aver completato la configurazione di base per uno stream di dati, seleziona **[!UICONTROL Salva e Aggiungi mappatura]** e verrà visualizzato il passaggio **[!UICONTROL Seleziona dati]**. Da qui, devi fornire un oggetto JSON di esempio che rappresenta la struttura dei dati che intendi inviare a Platform.
+Dopo aver completato la configurazione di base per uno stream di dati, seleziona **[!UICONTROL Salva e Aggiungi mappatura]** e verrà visualizzato il passaggio **[!UICONTROL Seleziona dati]**. Da qui, devi fornire un oggetto JSON campione che rappresenti la struttura dei dati che intendi inviare ad Experience Platform.
 
 Per acquisire proprietà direttamente dal livello dati, l’oggetto JSON deve avere una singola proprietà principale `data`. Le sottoproprietà dell&#39;oggetto `data` devono quindi essere costruite in modo da eseguire il mapping alle proprietà del livello dati che si desidera acquisire. Seleziona la sezione seguente per visualizzare un esempio di oggetto JSON formattato correttamente con una radice `data`.
 
@@ -162,7 +162,7 @@ Per acquisire proprietà da un elemento dati di un oggetto XDM, all’oggetto JS
 
 ## [!UICONTROL Mappatura]
 
-Viene visualizzato il passaggio di **[!UICONTROL mappatura]**, consentendoti di mappare i campi nei dati di origine su quelli dello schema dell’evento di destinazione in Platform. Da qui puoi configurare la mappatura in due modi:
+Viene visualizzato il passaggio **[!UICONTROL Mappatura]**, che consente di mappare i campi nei dati di origine a quelli dello schema dell&#39;evento di destinazione in Experience Platform. Da qui puoi configurare la mappatura in due modi:
 
 * [Crea regole di mappatura](#create-mapping) per questo flusso di dati tramite un processo manuale.
 * [Importare regole di mappatura](#import-mapping) da un flusso di dati esistente.

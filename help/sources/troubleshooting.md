@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Risoluzione dei problemi relativi alle origini
 description: Questo documento fornisce le risposte alle domande più frequenti sulle origini in Adobe Experience Platform.
 exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
-source-git-commit: 583eb70235174825dd542b95463784638bdef235
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '748'
+source-wordcount: '749'
 ht-degree: 0%
 
 ---
 
 # Guida alla risoluzione dei problemi relativi alle origini
 
-Questo documento fornisce le risposte alle domande più frequenti sulle origini in Adobe Experience Platform. Per domande e risoluzione dei problemi relativi ad altri servizi [!DNL Platform], inclusi quelli incontrati in tutte le API [!DNL Platform], fare riferimento alla [guida alla risoluzione dei problemi di Experience Platform](../landing/troubleshooting.md).
+Questo documento fornisce le risposte alle domande più frequenti sulle origini in Adobe Experience Platform. Per domande e risoluzione dei problemi relativi ad altri servizi [!DNL Experience Platform], inclusi quelli incontrati in tutte le API [!DNL Experience Platform], fare riferimento alla [Guida alla risoluzione dei problemi di Experience Platform](../landing/troubleshooting.md).
 
 ## Domande frequenti
 
@@ -67,7 +67,7 @@ Tutte le origini dell’acquisizione batch supportano l’acquisizione parziale.
 
 ### Quando dovrei usare l’acquisizione parziale?
 
-L&#39;acquisizione parziale deve essere utilizzata se **non** ha vincoli, ad esempio l&#39;acquisizione dell&#39;intero file in Platform. In alternativa, utilizza l’acquisizione parziale se non ti dispiace acquisire dati che potrebbero contenere errori al suo interno.
+L&#39;acquisizione parziale deve essere utilizzata se **non** ha vincoli, ad esempio l&#39;acquisizione dell&#39;intero file in Experience Platform. In alternativa, utilizza l’acquisizione parziale se non ti dispiace acquisire dati che potrebbero contenere errori al suo interno.
 
 ### Qual è la soglia tipica per gli errori di acquisizione parziale?
 

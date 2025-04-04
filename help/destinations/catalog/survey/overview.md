@@ -3,10 +3,10 @@ keywords: Destinazioni sondaggio;sondaggio;prevedere;inistante;sondaggi d'interc
 title: Panoramica sulle destinazioni dei sondaggi
 description: Le piattaforme di sondaggio rilevano gli eventi dei sondaggi, acquisiscono il feedback dei clienti in tempo reale attraverso elementi di dati e condividono i dati con Adobe Experience Platform.
 exl-id: 0358a73b-9f4a-4362-a7ed-e49ece6e5f02
-source-git-commit: 57d3e136902201f9ba9bd2f427ebe0f876900671
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '100'
-ht-degree: 2%
+source-wordcount: '101'
+ht-degree: 1%
 
 ---
 
@@ -18,7 +18,7 @@ Le piattaforme di sondaggio rilevano gli eventi dei sondaggi, acquisiscono il fe
 
 ## Destinazioni di sondaggio supportate {#supported-destinations}
 
-Attualmente, Platform supporta le destinazioni elencate di seguito. Per informazioni su come connettersi a queste destinazioni, consulta i singoli collegamenti:
+Al momento, Experience Platform supporta le destinazioni elencate di seguito. Per informazioni su come connettersi a queste destinazioni, consulta i singoli collegamenti:
 
 **Connettori di destinazione**
 

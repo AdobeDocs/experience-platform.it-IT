@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Scadenza dati profilo pseudonimo
 description: Questo documento fornisce indicazioni generali sulla configurazione della scadenza dei dati per i profili pseudonimi in Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: 9d38fdae0fc65048d02a4337375004edafedd1b6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1065'
+source-wordcount: '1068'
 ht-degree: 6%
 
 ---
@@ -37,7 +37,7 @@ Un profilo viene considerato per la scadenza dei dati pseudonimi se soddisfa le 
 
 ## Accesso {#access}
 
-La scadenza dei dati del profilo pseudonimo non può essere configurata tramite l’interfaccia utente o le API di Platform. Per abilitare questa funzione, è necessario contattare il supporto tecnico. Quando si contatta l’assistenza, includere le seguenti informazioni:
+La scadenza dei dati del profilo pseudonimo non può essere configurata tramite l’interfaccia utente o le API di Experience Platform. Per abilitare questa funzione, è necessario contattare il supporto tecnico. Quando si contatta l’assistenza, includere le seguenti informazioni:
 
 - Gli spazi dei nomi delle identità da considerare per le eliminazioni di profili pseudonimi.
    - Ad esempio: solo `ECID`, solo `AAID` o una combinazione di `ECID` e `AAID`.
@@ -75,11 +75,11 @@ Puoi utilizzare la scadenza dei dati del profilo pseudonimo e la scadenza dei da
 
 Devi **sempre** impostare la scadenza dei dati di Experience Event nei set di dati, in base alle tue esigenze di conservazione dei dati sui tuoi clienti noti. Una volta impostata la scadenza dei dati di Experience Event, puoi utilizzare la scadenza dei dati di profilo pseudonimo per rimuovere automaticamente i profili pseudonimi. In genere, il periodo di scadenza dei dati per i profili pseudonimi è inferiore al periodo di scadenza dei dati per gli eventi esperienza.
 
-Per un caso d’uso tipico, puoi impostare la scadenza dei dati Experience Event in base ai valori dei dati utente noti e impostare la scadenza dei dati del profilo pseudonimo su una durata molto più breve per limitare l’impatto dei profili pseudonimi sulla conformità della licenza di Platform.
+Per un caso d’uso tipico, puoi impostare la scadenza dei dati Experience Event in base ai valori dei dati utente noti e impostare la scadenza dei dati del profilo pseudonimo su una durata molto più breve per limitare l’impatto dei profili pseudonimi sulla conformità della licenza Experience Platform.
 
 ### Quali utenti dovrebbero utilizzare la scadenza dei dati dei profili pseudonimi?
 
-- Se utilizzi Web SDK per inviare dati direttamente a Platform.
+- Se utilizzi Web SDK per inviare dati direttamente ad Experience Platform.
 - Se disponi di un sito web che serve in massa clienti non autenticati.
 - Se nei set di dati sono presenti conteggi di profilo eccessivi e hai confermato che tali conteggi sono dovuti a uno spazio dei nomi di identità anonimo basato su cookie.
    - Per determinare ciò, è necessario utilizzare il rapporto di sovrapposizione dello spazio dei nomi delle identità. Ulteriori informazioni su questo report sono disponibili nella sezione [report di sovrapposizione identità](./api/preview-sample-status.md#identity-overlap-report) della guida dell&#39;API per l&#39;anteprima dello stato di esempio.

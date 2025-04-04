@@ -1,12 +1,12 @@
 ---
 keywords: mobile;mobile engagement destinations;LINE;LINE mobile engagement destinations;LINE mobile engagement destination
 title: Connessione LINE
-description: La destinazione LINE ti consente di aggiungere profili al pubblico di Platform e di fornire esperienze personalizzate agli utenti connessi.
+description: La destinazione LINE ti consente di aggiungere profili al pubblico di Experience Platform e di fornire esperienze personalizzate agli utenti connessi.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1190'
+source-wordcount: '1198'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 [[!DNL LINE]](https://line.me/en/) è una piattaforma di comunicazione popolare che collega persone, servizi e informazioni ed è cresciuta da un&#39;app di chat a un hub per l&#39;intrattenimento, il social e le attività quotidiane.
 
-Questa [!DNL Adobe Experience Platform] [destinazione](/help/destinations/home.md) sfrutta l&#39;API [[!DNL LINE] Messaging](https://developers.line.biz/en/reference/messaging-api/). Puoi attivare profili dai tipi di pubblico di Experience Platform come connessioni all&#39;interno di [!DNL LINE] per le tue esigenze aziendali.
+Questa [!DNL Adobe Experience Platform] [destinazione](/help/destinations/home.md) sfrutta l&#39;API [[!DNL LINE] Messaging](https://developers.line.biz/en/reference/messaging-api/). Puoi attivare i profili dai tipi di pubblico di Experience Platform come connessioni all&#39;interno di [!DNL LINE] per le tue esigenze aziendali.
 
 [!DNL LINE] utilizza i token Bearer come meccanismo di autenticazione per comunicare con l&#39;API di messaggistica [!DNL LINE]. Le istruzioni per l&#39;autenticazione nell&#39;istanza [!DNL LINE] sono riportate di seguito, nella sezione [Autentica nella destinazione](#authenticate).
 
@@ -29,7 +29,7 @@ In qualità di addetto al marketing, puoi indirizzare l&#39;attività agli utent
 
 ### [!DNL LINE] prerequisiti {#prerequisites-destination}
 
-Per esportare i dati da Platform al tuo account [!DNL LINE], tieni presente i seguenti prerequisiti in [!DNL LINE]:
+Per esportare i dati da Experience Platform al tuo account [!DNL LINE], tieni presente i seguenti prerequisiti in [!DNL LINE]:
 
 #### Devi avere un account [!DNL LINE] {#prerequisites-account}
 
@@ -40,7 +40,7 @@ Se non ne hai già uno, devi registrarti e creare un account [!DNL LINE]. Per cr
 
 #### Raccogliere [!DNL LINE channel access token (long-lived)] dalla console per sviluppatori [!DNL LINE] {#gather-credentials}
 
-Per consentire a Platform di accedere alle risorse [!DNL LINE], è necessario *[!DNL Channel access token (long-lived)]* dal canale [!DNL LINE] *Messaging API* desiderato.
+Per consentire ad Experience Platform di accedere alle risorse [!DNL LINE], è necessario *[!DNL Channel access token (long-lived)]* dal canale [!DNL LINE] *API di messaggistica* desiderato.
 
 1. Accedi con il tuo account [!DNL LINE] alla [[!DNL LINE] Console sviluppatori](https://developers.line.biz/console).
 1. Accedere all&#39;elenco *[!DNL Providers]*, quindi selezionare *[!DNL Provider]* di interesse e infine selezionare il canale *API di messaggistica* per accedere alle relative impostazioni. Se accedi alla console per sviluppatori per la prima volta, segui la [[!DNL LINE] documentazione](https://developers.line.biz/en/docs/messaging-api/getting-started/) per completare i passaggi necessari per creare un provider.
@@ -85,7 +85,7 @@ All&#39;interno di **[!UICONTROL Destinazioni]** > **[!UICONTROL Catalogo]**, ce
 ### Autenticarsi nella destinazione {#authenticate}
 
 Per eseguire l&#39;autenticazione nella destinazione, selezionare **[!UICONTROL Connetti alla destinazione]**.
-![Schermata dell&#39;interfaccia utente di Platform che mostra come eseguire l&#39;autenticazione.](../../assets/catalog/mobile-engagement/line/authenticate-destination.png)
+![Schermata dell&#39;interfaccia utente di Experience Platform che mostra come eseguire l&#39;autenticazione.](../../assets/catalog/mobile-engagement/line/authenticate-destination.png)
 
 Compila i campi obbligatori di seguito.
 * **[!UICONTROL Token Bearer]**: [!DNL LINE Channel access token (long-lived)] dalla console per sviluppatori [!DNL LINE]. Consulta la sezione [raccogliere le credenziali](#gather-credentials).
@@ -95,7 +95,7 @@ Se i dettagli forniti sono validi, nell&#39;interfaccia utente viene visualizzat
 ### Inserire i dettagli della destinazione {#destination-details}
 
 Per configurare i dettagli per la destinazione, compila i campi obbligatori e facoltativi seguenti. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
-![Schermata dell&#39;interfaccia utente di Platform che mostra i dettagli della destinazione.](../../assets/catalog/mobile-engagement/line/destination-details.png)
+![Schermata dell&#39;interfaccia utente di Experience Platform con i dettagli della destinazione.](../../assets/catalog/mobile-engagement/line/destination-details.png)
 
 * **[!UICONTROL Nome]**: un nome con cui riconoscerai questa destinazione in futuro.
 * **[!UICONTROL Descrizione]**: una descrizione che ti aiuterà a identificare questa destinazione in futuro.
@@ -118,7 +118,7 @@ Leggi [Attivare profili e tipi di pubblico nelle destinazioni di esportazione de
 
 ### Mappare attributi e identità {#map}
 
-Per inviare correttamente i dati sul pubblico da Adobe Experience Platform alla destinazione [!DNL LINE], è necessario eseguire il passaggio di mappatura dei campi. La mappatura consiste nella creazione di un collegamento tra i campi dello schema Experience Data Model (XDM) nell’account Platform e i corrispondenti equivalenti dalla destinazione. Per mappare correttamente i campi XDM ai campi di destinazione [!DNL LINE], effettua le seguenti operazioni:
+Per inviare correttamente i dati sul pubblico da Adobe Experience Platform alla destinazione [!DNL LINE], è necessario eseguire il passaggio di mappatura dei campi. La mappatura consiste nella creazione di un collegamento tra i campi dello schema Experience Data Model (XDM) nell’account Experience Platform e i corrispondenti equivalenti dalla destinazione. Per mappare correttamente i campi XDM ai campi di destinazione [!DNL LINE], effettua le seguenti operazioni:
 
 A seconda dell’identità di origine, è necessario mappare i seguenti spazi dei nomi dell’identità di destinazione:
 
@@ -128,14 +128,14 @@ A seconda dell’identità di origine, è necessario mappare i seguenti spazi de
 | ID utente LINE | `UserID` | `LineId` |
 
 Se le identità di destinazione sono *ID utente LINE*, sarà necessario quanto segue:
-![Esempio di schermata dell&#39;interfaccia utente di Platform che mostra la mappatura di Target quando si utilizzano gli ID utente LINE per le identità di destinazione.](../../assets/catalog/mobile-engagement/line/mappings-userid.png)
+![Esempio di schermata dell&#39;interfaccia utente di Experience Platform che mostra la mappatura di Target quando si utilizzano gli ID utente LINE per le identità di destinazione.](../../assets/catalog/mobile-engagement/line/mappings-userid.png)
 
 Se l&#39;identità di destinazione è *ID per inserzionisti(IFA)*, sarà necessario quanto segue:
-![Esempio di schermata dell&#39;interfaccia utente di Platform che mostra la mappatura di Target quando si utilizza un ID per gli inserzionisti (IFA) per le identità di destinazione.](../../assets/catalog/mobile-engagement/line/mappings-idfa.png)
+![Esempio di schermata dell&#39;interfaccia utente di Experience Platform che mostra la mappatura di Target quando si utilizza un ID per gli inserzionisti (IFA) per le identità di destinazione.](../../assets/catalog/mobile-engagement/line/mappings-idfa.png)
 
 ## Convalidare l’esportazione dei dati {#exported-data}
 
-Dopo un&#39;esportazione dei dati riuscita in Experience Platform, la destinazione [!DNL LINE] crea un nuovo pubblico in [!DNL LINE] utilizzando il nome del pubblico selezionato.
+Dopo l&#39;esportazione dei dati da Experience Platform, la destinazione [!DNL LINE] crea un nuovo pubblico in [!DNL LINE] utilizzando il nome di pubblico selezionato.
 
 Per verificare di aver impostato correttamente la destinazione, segui i passaggi seguenti:
 

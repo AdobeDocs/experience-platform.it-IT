@@ -4,9 +4,9 @@ title: Guida alla risoluzione dei problemi dei profili cliente in tempo reale
 type: Documentation
 description: Questo documento fornisce le risposte alle domande più frequenti su Real-Time Customer Profile, nonché una guida alla risoluzione dei problemi relativi agli errori più comuni durante l’utilizzo dei dati del profilo con Adobe Experience Platform.
 exl-id: 0b340025-093b-41e4-8053-969a8e80e889
-source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '964'
+source-wordcount: '968'
 ht-degree: 1%
 
 ---
@@ -25,15 +25,15 @@ Di seguito è riportato un elenco di risposte alle domande più frequenti su Rea
 
 Il profilo accetta sia i dati **record** che quelli della **serie temporale**, purché i dati in questione contengano almeno un valore di identità che associa i dati a una singola persona univoca.
 
-Come tutti i servizi di Platform, il profilo richiede che i suoi dati siano strutturati semanticamente in uno schema Experience Data Model (XDM). A sua volta, questo schema deve avere una **identità primaria** definita ed essere abilitato per l&#39;utilizzo nel profilo.
+Come tutti i servizi di Experience Platform, il profilo richiede che i suoi dati siano strutturati semanticamente in uno schema Experience Data Model (XDM). A sua volta, questo schema deve avere una **identità primaria** definita ed essere abilitato per l&#39;utilizzo nel profilo.
 
 Se non conosci XDM, inizia con [Panoramica XDM](../xdm/home.md) per ulteriori informazioni. Quindi, consulta la guida utente XDM per i passaggi su come [impostare i campi di identità](../xdm/tutorials/create-schema-ui.md#identity-field) e [abilitare uno schema per il profilo](../xdm/tutorials/create-schema-ui.md#profile).
 
 ### Dove vengono memorizzati i dati del profilo?
 
-Real-Time Customer Profile mantiene il proprio archivio dati (denominato &quot;archivio profili&quot;), separato dal Data Lake che contiene altri dati di Platform acquisiti.
+Real-Time Customer Profile mantiene il proprio archivio dati (denominato &quot;archivio profili&quot;), separato dal Data Lake che contiene altri dati Experience Platform acquisiti.
 
-### Se ho già acquisito i dati in Platform, posso renderli disponibili nell’archivio Profili?
+### Se ho già acquisito i dati in Experience Platform, posso renderli disponibili nell’archivio Profili?
 
 Se i dati sono stati acquisiti in un set di dati non di profilo, devi acquisirli nuovamente in un set di dati abilitato per il profilo per renderli disponibili nell’archivio Profili. È possibile abilitare un set di dati esistente per il profilo, tuttavia tutti i dati acquisiti prima di tale configurazione non verranno ancora visualizzati nell’archivio dei profili.
 
@@ -57,7 +57,7 @@ Puoi anche visualizzare un elenco dei tuoi tipi di pubblico nella scheda **[!UIC
 
 ## Codici di errore
 
-Di seguito è riportato un elenco di messaggi di errore che possono verificarsi quando si lavora con l’API Profilo cliente in tempo reale. Se l&#39;errore riscontrato non è elencato qui, è possibile trovarlo nella [Guida alla risoluzione dei problemi di Platform](../landing/troubleshooting.md) generale.
+Di seguito è riportato un elenco di messaggi di errore che possono verificarsi quando si lavora con l’API Profilo cliente in tempo reale. Se l&#39;errore riscontrato non è elencato qui, è possibile trovarlo nella [guida generale alla risoluzione dei problemi di Experience Platform](../landing/troubleshooting.md).
 
 ### Impossibile cercare lo schema dell’attributo calcolato per il percorso specificato
 

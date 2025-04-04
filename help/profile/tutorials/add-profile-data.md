@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione dei problemi;API;abilitare profilo;abilitare profilo;abilitare profilo
+keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione dei problemi;API;abilitare profilo;abilitare profilo
 title: Aggiungere dati al profilo cliente in tempo reale
 type: Tutorial
 description: Questa esercitazione illustra i passaggi necessari per aggiungere dati a Real-Time Customer Profile.
 exl-id: c2df224b-bf3d-4994-aa3a-9e9f4a6a726c
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '452'
 ht-degree: 0%
@@ -24,7 +24,7 @@ I dati acquisiti in [!DNL Experience Platform] per l&#39;utilizzo da parte di [!
 
 ## Aggiungere dati tramite l’acquisizione batch
 
-Tutti i dati caricati in [!DNL Platform] tramite l&#39;acquisizione batch vengono caricati in singoli set di dati. Prima che i dati possano essere utilizzati da [!DNL Real-Time Customer Profile], il set di dati in questione deve essere configurato in modo specifico. Per istruzioni complete, consulta l&#39;esercitazione su [configurazione di un set di dati per il profilo e il servizio Identity](dataset-configuration.md).
+Tutti i dati caricati in [!DNL Experience Platform] tramite l&#39;acquisizione batch vengono caricati in singoli set di dati. Prima che i dati possano essere utilizzati da [!DNL Real-Time Customer Profile], il set di dati in questione deve essere configurato in modo specifico. Per istruzioni complete, consulta l&#39;esercitazione su [configurazione di un set di dati per il profilo e il servizio Identity](dataset-configuration.md).
 
 Una volta configurato il set di dati, puoi iniziare a acquisirvi i dati. Consulta la [guida per gli sviluppatori per l’acquisizione batch](../../ingestion/batch-ingestion/api-overview.md) per i passaggi dettagliati su come caricare i file in formati diversi.
 

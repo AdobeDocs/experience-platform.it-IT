@@ -2,10 +2,10 @@
 title: Panoramica dell’estensione Adobe Experience Cloud Identity Service
 description: Scopri l’estensione tag Adobe Experience Cloud Identity Service in Adobe Experience Platform.
 exl-id: 9bfcb666-a3f1-46ad-8678-2c63738da2b2
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '792'
-ht-degree: 97%
+source-wordcount: '793'
+ht-degree: 95%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 97%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Usa questa guida di riferimento per informazioni sulla configurazione dell’estensione Adobe Experience Cloud ID e sulle opzioni disponibili quando utilizzi questa estensione per generare una regola.
 
@@ -49,7 +49,7 @@ Fai clic su **[!UICONTROL Aggiungi]** per escludere un altro percorso.
 
 Utilizza le opzioni di consenso per determinare se richiedere ai visitatori il consenso ai servizi Adobe sul sito e se creare cookie per tracciare l&#39;attività dei visitatori.
 
-Opt In il punto di riferimento centralizzato per tutte le librerie lato client della soluzione Platform per determinare se i cookie possono essere creati sul dispositivo o sul browser di un utente quando visita il sito. Opt In non fornisce supporto per raccogliere o memorizzare le preferenze di consenso dell&#39;utente.
+Opt In è il punto di riferimento centralizzato per tutte le librerie lato client della soluzione Experience Platform per determinare se i cookie possono essere creati sul dispositivo o sul browser di un utente quando visita il sito. Opt In non fornisce supporto per raccogliere o memorizzare le preferenze di consenso dell&#39;utente.
 
 **Abilitare Opt In?**
 

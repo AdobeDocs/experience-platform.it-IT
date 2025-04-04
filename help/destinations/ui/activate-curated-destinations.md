@@ -3,9 +3,9 @@ title: Attiva i tipi di pubblico nelle destinazioni curate in base agli identifi
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico da Adobe Experience Platform alle destinazioni TV e audio connesse e ad altre integrazioni tramite il RampID LiveRamp.
 exl-id: 37e5bab9-588f-40b3-b65b-68f1a4b868f1
-source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '660'
+source-wordcount: '662'
 ht-degree: 0%
 
 ---
@@ -70,13 +70,13 @@ Per attivare i tipi di pubblico in destinazioni curate basate su RampID LiveRamp
 
 A tale scopo, utilizzare la destinazione **[!DNL LiveRamp - Onboarding]**.
 
-![Experience Platform di immagine dell&#39;interfaccia utente che mostra la scheda LiveRamp - Onboarding destinazione](../assets/ui/activate-curated-destinations-liveramp/liveramp-onboarding-catalog.png)
+![Immagine dell&#39;interfaccia utente di Experience Platform che mostra la scheda LiveRamp - Onboarding destinazione](../assets/ui/activate-curated-destinations-liveramp/liveramp-onboarding-catalog.png)
 
 Per informazioni su come configurare la destinazione [!DNL LiveRamp - Onboarding] ed esportare i tipi di pubblico da Experience Platform, consulta la documentazione della destinazione [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md).
 
 >[!IMPORTANT]
 >
->Durante l&#39;esportazione dei file nella destinazione [!DNL LiveRamp - Onboarding], Platform genera un file CSV per ogni [ID del criterio di unione](../../profile/merge-policies/overview.md). Per informazioni dettagliate su come convalidare l&#39;esportazione dei dati in LiveRamp, consulta la documentazione della destinazione [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md).
+>Durante l&#39;esportazione dei file nella destinazione [!DNL LiveRamp - Onboarding], Experience Platform genera un file CSV per ogni [ID del criterio di unione](../../profile/merge-policies/overview.md). Per informazioni dettagliate su come convalidare l&#39;esportazione dei dati in LiveRamp, consulta la documentazione della destinazione [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md).
 
 
 Dopo aver esportato correttamente i tipi di pubblico in LiveRamp, continua con il [passaggio 2](#distribution).
@@ -91,7 +91,7 @@ Dopo aver [convalidato](../catalog/advertising/liveramp-onboarding.md#exported-d
 
 È possibile attivare i tipi di pubblico (esportati nel [passaggio 1](#onboarding)) utilizzando la destinazione **[!DNL LiveRamp - Distribution]**.
 
-![Immagine dell&#39;interfaccia utente di Experience Platform che mostra la scheda LiveRamp - Distribution destination](../assets/ui/activate-curated-destinations-liveramp/liveramp-distribution-catalog.png)
+![Immagine dell&#39;interfaccia utente di Experience Platform che mostra la scheda LiveRamp - Destinazione di distribuzione](../assets/ui/activate-curated-destinations-liveramp/liveramp-distribution-catalog.png)
 
 Per informazioni su come configurare la destinazione **[!DNL LiveRamp - Distribution]** e attivare i tipi di pubblico esportati nel [passaggio 1](#onboarding), leggere la documentazione della destinazione [[!DNL LiveRamp - Distribution]](../catalog/advertising/liveramp-distribution.md).
 
@@ -103,11 +103,11 @@ Quando configuri la destinazione **[!DNL LiveRamp - Distribution]**, devi creare
 
 >[!TIP]
 >
->Per la denominazione della destinazione, l&#39;Adobe consiglia di usare questo formato: `LiveRamp - Downstream Destination Name`. Questo modello di denominazione consente di identificare rapidamente le destinazioni nella scheda [Sfoglia](../ui/destinations-workspace.md#browse) dell&#39;area di lavoro delle destinazioni.
+>Per la denominazione della destinazione, Adobe consiglia di usare questo formato: `LiveRamp - Downstream Destination Name`. Questo modello di denominazione consente di identificare rapidamente le destinazioni nella scheda [Sfoglia](../ui/destinations-workspace.md#browse) dell&#39;area di lavoro delle destinazioni.
 ><br>
 >Esempio: `LiveRamp - Roku`.
 
-![Schermata dell&#39;interfaccia utente di Platform che mostra più destinazioni LiveRamp.](../assets/ui/activate-curated-destinations-liveramp/liveramp-naming.png)
+![Schermata dell&#39;interfaccia utente di Experience Platform che mostra più destinazioni LiveRamp.](../assets/ui/activate-curated-destinations-liveramp/liveramp-naming.png)
 
 ## Dati esportati / Convalida esportazione dati {#exported-data}
 

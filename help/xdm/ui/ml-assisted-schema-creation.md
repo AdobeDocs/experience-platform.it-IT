@@ -2,9 +2,10 @@
 title: Creazione di schemi assistiti da apprendimento automatico
 description: Scopri come creare schemi nell’interfaccia utente di Experience Platform.
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: f1db409a2af34ac66c81d7e5a11ee1bc8e5f4c9c
+exl-id: 6b14caed-a3ad-4834-8fa8-8d67dce6290e
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '997'
 ht-degree: 2%
 
 ---
@@ -31,7 +32,7 @@ Questa guida spiega come creare schemi utilizzando algoritmi di apprendimento au
 
 ## Passa al flusso di lavoro Crea schema {#navigate-to-schema-creation-workflow}
 
-Nell&#39;area di navigazione a sinistra dell&#39;interfaccia utente di Platform, seleziona l&#39;area di lavoro **[!UICONTROL Schemi]**. Viene visualizzata l&#39;area di lavoro **[!UICONTROL Schemi]**. Seleziona **[!UICONTROL Crea schema]** per aggiungere un nuovo schema per avviare un flusso di lavoro di creazione schema.
+Nell&#39;area di navigazione a sinistra dell&#39;interfaccia utente di Experience Platform, seleziona l&#39;area di lavoro **[!UICONTROL Schemi]**. Viene visualizzata l&#39;area di lavoro **[!UICONTROL Schemi]**. Seleziona **[!UICONTROL Crea schema]** per aggiungere un nuovo schema per avviare un flusso di lavoro di creazione schema.
 
 ![Area di lavoro Schemi con Schema nell&#39;area di navigazione a sinistra e Crea schema evidenziati.](../images/ui/ml-schema-creation/schemas-workspace-create-schema.png)
 

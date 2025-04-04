@@ -2,18 +2,18 @@
 keywords: Experience Platform;profilo;profilo cliente in tempo reale;criteri di unione;interfaccia utente;interfaccia utente;timestamp ordinato;precedenza set di dati
 title: Panoramica sui criteri di unione
 type: Documentation
-description: Adobe Experience Platform consente di unire frammenti di dati provenienti da più origini e di combinarli per ottenere una visualizzazione completa dei singoli clienti. Quando si riuniscono questi dati, i criteri di unione sono le regole utilizzate da Platform per determinare come i dati avranno priorità e quali saranno combinati per creare la vista unificata.
+description: Adobe Experience Platform consente di unire frammenti di dati provenienti da più origini e di combinarli per ottenere una visualizzazione completa dei singoli clienti. Quando si riuniscono questi dati, i criteri di unione sono le regole utilizzate da Experience Platform per determinare il modo in cui i dati avranno priorità e quali saranno combinati per creare la vista unificata.
 exl-id: a8ef527a-cfee-4129-9973-e8a212a3ad1e
-source-git-commit: 5e8bbdf5b7b07c31a36730c86b177fce6041e319
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1285'
+source-wordcount: '1289'
 ht-degree: 1%
 
 ---
 
 # Panoramica sui criteri di unione
 
-Adobe Experience Platform consente di unire frammenti di dati provenienti da più origini e di combinarli in modo da ottenere una visualizzazione completa di ciascuno dei singoli clienti. Quando si riuniscono questi dati, i criteri di unione sono le regole utilizzate da [!DNL Platform] per determinare la priorità dei dati e i dati che verranno combinati per creare una visualizzazione unificata.
+Adobe Experience Platform consente di unire frammenti di dati provenienti da più origini e di combinarli in modo da ottenere una visualizzazione completa di ciascuno dei singoli clienti. Quando si riuniscono questi dati, i criteri di unione sono le regole utilizzate da [!DNL Experience Platform] per determinare la priorità dei dati e i dati che verranno combinati per creare una visualizzazione unificata.
 
 Utilizzando le API RESTful o l’interfaccia utente di, puoi creare nuovi criteri di unione, gestire i criteri esistenti e impostare un criterio di unione predefinito per la tua organizzazione. Questo documento fornisce una panoramica dei criteri di unione e del ruolo che svolgono all’interno di Experience Platform.
 
@@ -22,14 +22,14 @@ Utilizzando le API RESTful o l’interfaccia utente di, puoi creare nuovi criter
 Questa guida richiede una buona conoscenza di diverse importanti funzionalità di [!DNL Experience Platform]. Prima di seguire questa guida e lavorare con i criteri di unione, consulta la documentazione relativa ai seguenti servizi:
 
 * [Profilo cliente in tempo reale](../home.md): fornisce un profilo consumatore unificato in tempo reale basato su dati aggregati provenienti da più origini.
-* [Servizio Adobe Experience Platform Identity](../../identity-service/home.md): abilita il profilo cliente in tempo reale collegando le identità da diverse origini dati acquisite in [!DNL Platform].
-* [Experience Data Model (XDM)](../../xdm/home.md): framework standardizzato tramite il quale [!DNL Platform] organizza i dati sull&#39;esperienza del cliente.
+* [Servizio Adobe Experience Platform Identity](../../identity-service/home.md): abilita il profilo cliente in tempo reale collegando le identità da diverse origini dati acquisite in [!DNL Experience Platform].
+* [Experience Data Model (XDM)](../../xdm/home.md): framework standardizzato tramite il quale [!DNL Experience Platform] organizza i dati sull&#39;esperienza del cliente.
 
 ## Informazioni sui criteri di unione
 
-Adobe Experience Platform consente di unire frammenti di dati provenienti da più origini e di combinarli in modo da ottenere una visualizzazione completa e unificata di ciascuno dei singoli clienti. Quando si riuniscono questi dati, i criteri di unione sono le regole utilizzate da Platform per determinare come i dati avranno priorità e quali saranno combinati per creare tale vista unificata.
+Adobe Experience Platform consente di unire frammenti di dati provenienti da più origini e di combinarli in modo da ottenere una visualizzazione completa e unificata di ciascuno dei singoli clienti. Quando si riuniscono questi dati, i criteri di unione sono le regole utilizzate da Experience Platform per determinare il modo in cui i dati verranno prioritari e quali dati verranno combinati per creare tale vista unificata.
 
-Ad esempio, se un cliente interagisce con il tuo marchio su più canali, la tua organizzazione avrà più frammenti di profilo relativi a quel singolo cliente che appaiono in più set di dati. Quando questi frammenti vengono acquisiti in Platform, vengono uniti per creare un unico profilo per quel cliente.
+Ad esempio, se un cliente interagisce con il tuo marchio su più canali, la tua organizzazione avrà più frammenti di profilo relativi a quel singolo cliente che appaiono in più set di dati. Quando questi frammenti vengono acquisiti in Experience Platform, vengono uniti per creare un unico profilo per quel cliente.
 
 Quando i dati provenienti da più origini sono in conflitto (ad esempio, un frammento elenca il cliente come &quot;singolo&quot; mentre l’altro lo elenca come &quot;sposato&quot;), il criterio di unione determina quali informazioni includere nel profilo dell’individuo.
 
@@ -54,7 +54,7 @@ Per creare un criterio di unione utilizzando **[!UICONTROL Precedenza set di dat
 
 ### Timestamp ordinato {#timestamp-ordered}
 
-Quando i record di profilo vengono acquisiti in Experience Platform, al momento dell’acquisizione viene ottenuta una marca temporale di sistema che viene aggiunta al record. Quando **[!UICONTROL Timestamp ordinato]** è selezionato come metodo di unione per un criterio di unione, i profili vengono uniti in base alla marca temporale del sistema. In altre parole, l’unione viene eseguita in base alla marca temporale di quando il record è stato acquisito in Platform.
+Man mano che i record di profilo vengono acquisiti in Experience Platform, al momento dell’acquisizione si ottiene una marca temporale di sistema che viene aggiunta al record. Quando **[!UICONTROL Timestamp ordinato]** è selezionato come metodo di unione per un criterio di unione, i profili vengono uniti in base alla marca temporale del sistema. In altre parole, l’unione viene eseguita in base alla marca temporale di quando il record è stato acquisito in Experience Platform.
 
 ## Unione identità {#id-stitching}
 
@@ -67,7 +67,7 @@ Per ulteriori informazioni sulle identità e sul loro ruolo nella generazione di
 
 ## Criterio di unione predefinito {#default-merge-policy}
 
-Un’organizzazione può creare un criterio di unione predefinito da utilizzare per l’unione di frammenti di profilo. Questo consente agli utenti di selezionare facilmente il criterio predefinito durante l’esecuzione di azioni come la visualizzazione dei profili dei clienti o la creazione di tipi di pubblico, in Experience Platform. Nella maggior parte dei casi, a meno che non venga specificato un altro criterio di unione, verrà utilizzato quello predefinito.
+Un’organizzazione può creare un criterio di unione predefinito da utilizzare per l’unione di frammenti di profilo. Questo consente agli utenti di selezionare facilmente il criterio predefinito durante l’esecuzione di azioni in Experience Platform, ad esempio la visualizzazione dei profili dei clienti o la creazione di tipi di pubblico. Nella maggior parte dei casi, a meno che non venga specificato un altro criterio di unione, verrà utilizzato quello predefinito.
 
 Ogni organizzazione può creare più criteri di unione correlati a una singola classe di schema XDM, ma è possibile dichiarare un solo criterio di unione predefinito per ogni classe. Ad esempio, l&#39;organizzazione potrebbe disporre di un criterio di unione predefinito correlato alla classe [!DNL XDM Individual Profile] e di un criterio di unione predefinito diverso per una classe Product Inventory personalizzata.
 
@@ -79,4 +79,4 @@ Se si crea un nuovo criterio di unione e lo si imposta come predefinito, il crit
 
 ## Passaggi successivi
 
-Dopo aver letto questa guida, saprai cosa sono i criteri di unione e il ruolo che svolgono all’interno di Experience Platform. Per iniziare a utilizzare i criteri di unione nell&#39;interfaccia utente di Experience Platform, consulta la [guida dell&#39;interfaccia utente dei criteri di unione](ui-guide.md). Per utilizzare i criteri di unione tramite API, visita la [guida dell&#39;endpoint API per i criteri di unione](../api/merge-policies.md).
+Dopo aver letto questa guida, ora sai cosa sono i criteri di unione e il ruolo che svolgono all’interno di Experience Platform. Per iniziare a utilizzare i criteri di unione nell&#39;interfaccia utente di Experience Platform, consulta la [guida dell&#39;interfaccia utente dei criteri di unione](ui-guide.md). Per utilizzare i criteri di unione tramite API, visita la [guida dell&#39;endpoint API per i criteri di unione](../api/merge-policies.md).

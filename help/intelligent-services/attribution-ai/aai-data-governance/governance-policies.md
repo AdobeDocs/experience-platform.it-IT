@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;guida utente;attribuzione ai;argomenti popolari;controlli di accesso;creare un modello;
+keywords: Experience Platform;guida utente;attribuzione ai;argomenti comuni;controlli di accesso;creare un modello;
 feature: Attribution AI
-title: Politiche di governance per l’Attribution AI
+title: Criteri di governance per IA per l’attribuzione
 description: Adobe Experience Platform offre diversi servizi e strumenti che ti consentono di controllare in modo affidabile i dati delle esperienze raccolte.
 exl-id: 448b10c8-8eac-41cb-9b77-66aa283c0a9d
-source-git-commit: eba23d39ade399f7df058da103fbd54883dc5b65
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '193'
+source-wordcount: '194'
 ht-degree: 0%
 
 ---
 
-# Politiche di governance in Attribution AI
+# Criteri di governance in IA per l’attribuzione
 
-Una volta eseguito il flusso di lavoro per creare un modello e inviare la configurazione del modello, l&#39;[applicazione dei criteri](../../../data-governance/enforcement/auto-enforcement.md) controlla se ci sono violazioni. Se si verifica una violazione dei criteri, viene visualizzato un messaggio a comparsa che indica che uno o più criteri sono stati violati. In questo modo, le operazioni sui dati e le azioni di marketing in Platform saranno conformi ai criteri di utilizzo dei dati.
+Una volta eseguito il flusso di lavoro per creare un modello e inviare la configurazione del modello, l&#39;[applicazione dei criteri](../../../data-governance/enforcement/auto-enforcement.md) controlla se ci sono violazioni. Se si verifica una violazione dei criteri, viene visualizzato un messaggio a comparsa che indica che uno o più criteri sono stati violati. In questo modo, le operazioni sui dati e le azioni di marketing in Experience Platform saranno conformi ai criteri di utilizzo dei dati.
 
 ## Popover violazione criteri
 

@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione dei problemi;API;consenso;preferenze;Preferenze;privacyOptOuts;marketingPreferences;optOutType;baseDiElaborazione;consenso;consenso;consenso
+keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione dei problemi;API;consenso;preferenze;Preferenze;privacyOptOut;marketingPreferences;optOutType;basisOfProcessing;consenso;consenso;consenso
 title: Tipo di dati Consensi e preferenze
 description: Il tipo di dati Consenso per privacy, Personalization e Preferenze di marketing ha lo scopo di supportare la raccolta di autorizzazioni e preferenze del cliente generate dalle piattaforme di gestione del consenso (CMP, Consent Management Platforms) e da altre origini dalle operazioni sui dati.
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 7a2b6c1033ad9e78b049857b9b4e6fc3708ed36c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2332'
+source-wordcount: '2334'
 ht-degree: 0%
 
 ---
@@ -38,13 +38,13 @@ Una preferenza è un’opzione che consente al cliente di specificare in che mod
 * **Preferenze Personalization**: preferenze relative al modo in cui il brand deve personalizzare le esperienze consegnate a un cliente.
 * **Preferenze di marketing**: preferenze relative alla possibilità per un marchio di contattare un cliente tramite vari canali.
 
-La schermata seguente mostra come la struttura del tipo di dati è rappresentata nell’interfaccia utente di Platform:
+La schermata seguente mostra come la struttura del tipo di dati è rappresentata nell’interfaccia utente di Experience Platform:
 
 ![](../images/data-types/consents.png)
 
 >[!TIP]
 >
->Consulta la guida su [esplorazione delle risorse XDM](../ui/explore.md) in per i passaggi su come cercare qualsiasi risorsa XDM e ispezionarne la struttura nell&#39;interfaccia utente di Platform.
+>Consulta la guida su [esplorazione delle risorse XDM](../ui/explore.md) in per i passaggi su come cercare qualsiasi risorsa XDM e ispezionarne la struttura nell&#39;interfaccia utente di Experience Platform.
 
 Il seguente codice JSON mostra un esempio del tipo di dati che il tipo di dati [!UICONTROL Consensi e preferenze] può elaborare. Le informazioni sull’uso specifico di ciascuno di questi campi sono fornite nelle sezioni seguenti.
 
@@ -86,7 +86,7 @@ Il seguente codice JSON mostra un esempio del tipo di dati che il tipo di dati [
 
 >[!TIP]
 >
->Puoi generare dati JSON di esempio per qualsiasi schema XDM definito in Experience Platform per aiutare a visualizzare in che modo devono essere mappati i dati sul consenso dei clienti e sulle preferenze. Per ulteriori informazioni, consulta la seguente documentazione:
+>Puoi generare dati JSON di esempio per qualsiasi schema XDM definito in Experience Platform al fine di aiutare a visualizzare come mappare i dati sul consenso dei clienti e sulle preferenze. Per ulteriori informazioni, consulta la seguente documentazione:
 >
 >* [Genera dati di esempio nell&#39;interfaccia utente](../ui/sample.md)
 >* [Genera dati di esempio nell&#39;API](../api/sample-data.md)
@@ -267,7 +267,7 @@ Consulta l&#39;esercitazione sulla [creazione di uno schema nell&#39;interfaccia
 
 ## Gestione delle modifiche di consenso e preferenze
 
-Quando un cliente cambia il proprio consenso o le proprie preferenze sul sito Web, le modifiche devono essere raccolte e applicate immediatamente tramite [Adobe Experience Platform Web SDK](../../web-sdk/commands/setconsent.md). Se un cliente rinuncia alla raccolta dei dati, tutta la raccolta dei dati deve cessare immediatamente. Se un cliente rinuncia alla personalizzazione, significa che non dovrebbe essere presente alcuna personalizzazione nella pagina successiva in cui visita.
+Quando un cliente modifica il proprio consenso o le proprie preferenze sul sito Web, le modifiche devono essere raccolte e applicate immediatamente tramite [Adobe Experience Platform Web SDK](../../web-sdk/commands/setconsent.md). Se un cliente rinuncia alla raccolta dei dati, tutta la raccolta dei dati deve cessare immediatamente. Se un cliente rinuncia alla personalizzazione, significa che non dovrebbe essere presente alcuna personalizzazione nella pagina successiva in cui visita.
 
 ## Appendice {#appendix}
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Query Editor
 description: L’editor delle query è uno strumento interattivo fornito da Adobe Experience Platform Query Service che consente di scrivere, convalidare ed eseguire query per i dati sull’esperienza del cliente all’interno dell’interfaccia utente di Experience Platform. L’editor delle query supporta lo sviluppo di query per l’analisi e l’esplorazione dei dati e consente di eseguire query interattive a scopo di sviluppo, nonché query non interattive per popolare i set di dati in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: ae189e2f6d303043e32e6ca658161bcdf4c28dc6
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2682'
+source-wordcount: '2683'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Query Editor è uno strumento interattivo fornito da Adobe Experience Platform Query Service che consente di scrivere, convalidare ed eseguire query per i dati sull&#39;esperienza del cliente nell&#39;interfaccia utente [!DNL Experience Platform]. L&#39;editor delle query supporta lo sviluppo di query per l&#39;analisi e l&#39;esplorazione dei dati e consente di eseguire query interattive a scopo di sviluppo e query non interattive per popolare i set di dati in [!DNL Experience Platform].
 
-Per ulteriori informazioni sui concetti e le funzionalità di Query Service, vedere [Panoramica di Query Service](../home.md). Per ulteriori informazioni su come esplorare l&#39;interfaccia utente di Query Service su [!DNL Platform], vedere [Panoramica dell&#39;interfaccia utente di Query Service](./overview.md).
+Per ulteriori informazioni sui concetti e le funzionalità di Query Service, vedere [Panoramica di Query Service](../home.md). Per ulteriori informazioni su come esplorare l&#39;interfaccia utente di Query Service su [!DNL Experience Platform], vedere [Panoramica dell&#39;interfaccia utente di Query Service](./overview.md).
 
 ## Introduzione {#getting-started}
 
@@ -97,7 +97,7 @@ L’editor delle query può contenere un massimo di 50.000 righe. Puoi scegliere
 
 >[!NOTE]
 >
->Poiché l’interfaccia utente di Platform può supportare fino a 1000 righe, il passaggio di un valore LIMIT superiore a 1000 viene ignorato.
+>Poiché l’interfaccia utente di Experience Platform può supportare fino a 1000 righe, il passaggio di un valore LIMIT superiore a 1000 viene ignorato.
 
 ![Editor query con elenco a discesa Conteggio risultati evidenziato.](../images/ui/query-editor/result-count.png)
 
@@ -258,4 +258,4 @@ Il video seguente illustra come eseguire query nell’interfaccia di Adobe Exper
 
 ## Passaggi successivi
 
-Ora che si conoscono le funzionalità disponibili nell&#39;editor delle query e si conosce come esplorare l&#39;applicazione, è possibile iniziare a creare query personalizzate direttamente in [!DNL Platform]. Per ulteriori informazioni sull&#39;esecuzione di query SQL sui set di dati in [!DNL Data Lake], vedere la guida in [esecuzione di query](../best-practices/writing-queries.md).
+Ora che si conoscono le funzionalità disponibili nell&#39;editor delle query e si conosce come esplorare l&#39;applicazione, è possibile iniziare a creare query personalizzate direttamente in [!DNL Experience Platform]. Per ulteriori informazioni sull&#39;esecuzione di query SQL sui set di dati in [!DNL Data Lake], vedere la guida in [esecuzione di query](../best-practices/writing-queries.md).

@@ -2,9 +2,9 @@
 title: Autenticazione e accesso all’API di Reactor
 description: Scopri come iniziare a utilizzare l’API di Reactor, compresi i passaggi per generare le credenziali di accesso richieste.
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
-source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '908'
+source-wordcount: '912'
 ht-degree: 47%
 
 ---
@@ -43,15 +43,15 @@ Dopo aver creato un progetto, seleziona **Add API** (Aggiungi API) nella scherma
 
 ![](../images/api/getting-started/add-api-button.png)
 
-Viene visualizzata la schermata **Add an API** (Aggiungi un’API). Seleziona **API di Experience Platform Launch** dall&#39;elenco delle API disponibili prima di selezionare **Avanti**.
+Viene visualizzata la schermata **Add an API** (Aggiungi un’API). Seleziona **Experience Platform Launch API** dall&#39;elenco delle API disponibili prima di selezionare **Next**.
 
 ![](../images/api/getting-started/add-launch-api.png)
 
-Quindi, seleziona il tipo di autenticazione per generare token di accesso e accedere all’API Experience Platform.
+Quindi, seleziona il tipo di autenticazione per generare token di accesso e accedere all’API di Experience Platform.
 
 >[!IMPORTANT]
 >
->Selezionare il metodo **[!UICONTROL OAuth Server-to-Server]**, in quanto questo sarà l&#39;unico metodo supportato per gli spostamenti in avanti. Il metodo **[!UICONTROL Service Account (JWT)]** è obsoleto. Anche se le integrazioni che utilizzano il metodo di autenticazione JWT continueranno a funzionare fino al 1° gennaio 2025, Adobe consiglia vivamente di migrare le integrazioni esistenti al nuovo metodo server-to-server OAuth prima di tale data. Ulteriori informazioni nella sezione [!BADGE Obsoleto]{type=negative}[Generare un token web JSON (JWT)](/help/landing/api-authentication.md#jwt) nell&#39;esercitazione sull&#39;autenticazione API di Platform.
+>Selezionare il metodo **[!UICONTROL OAuth Server-to-Server]**, in quanto questo sarà l&#39;unico metodo supportato per gli spostamenti in avanti. Il metodo **[!UICONTROL Service Account (JWT)]** è obsoleto. Anche se le integrazioni che utilizzano il metodo di autenticazione JWT continueranno a funzionare fino al 1° gennaio 2025, Adobe consiglia vivamente di migrare le integrazioni esistenti al nuovo metodo server-to-server OAuth prima di tale data. Ulteriori informazioni nella sezione [!BADGE Obsoleto]{type=negative}[Generare un token web JSON (JWT)](/help/landing/api-authentication.md#jwt) nell&#39;esercitazione di autenticazione API di Experience Platform.
 
 Seleziona **Avanti** per continuare.
 
@@ -69,7 +69,7 @@ Seleziona i profili di prodotto desiderati dall’elenco, quindi seleziona **Sav
 
 ### Raccogli le credenziali {#gather-credentials}
 
-Una volta aggiunta l&#39;API al progetto, nella pagina **[!UICONTROL Experience Platform API]** per il progetto vengono visualizzate le credenziali seguenti, necessarie in tutte le chiamate alle API Experience Platform:
+Una volta aggiunta l&#39;API al progetto, nella pagina **[!UICONTROL API Experience Platform]** per il progetto vengono visualizzate le credenziali seguenti, necessarie in tutte le chiamate alle API Experience Platform:
 
 * `{API_KEY}` ([!UICONTROL ID client])
 * `{ORG_ID}` ([!UICONTROL ID organizzazione])
@@ -78,7 +78,7 @@ Una volta aggiunta l&#39;API al progetto, nella pagina **[!UICONTROL Experience 
 
 ### Generare un token di accesso {#generate-access-token}
 
-Il passaggio successivo consiste nel generare una credenziale `{ACCESS_TOKEN}` da utilizzare nelle chiamate API di Platform. A differenza dei valori per `{API_KEY}` e `{ORG_ID}`, è necessario generare un nuovo token ogni 24 ore per continuare a utilizzare le API di Platform.
+Il passaggio successivo consiste nel generare una credenziale `{ACCESS_TOKEN}` da utilizzare nelle chiamate API di Experience Platform. A differenza dei valori per `{API_KEY}` e `{ORG_ID}`, è necessario generare un nuovo token ogni 24 ore per continuare a utilizzare le API di Experience Platform.
 
 >[!TIP]
 >
@@ -99,7 +99,7 @@ Viene generato un nuovo token di accesso, e un pulsante consente di copiarlo neg
 
 #### Generazione automatica dei token {#auto-token}
 
-Puoi inoltre utilizzare un ambiente e una raccolta Postman per generare i token di accesso. Per ulteriori informazioni, leggere la sezione relativa all&#39;utilizzo di [Postman per l&#39;autenticazione e il test delle chiamate API](/help/landing/api-authentication.md#use-postman) nella guida di Experience Platform per l&#39;autenticazione API.
+Puoi inoltre utilizzare un ambiente e una raccolta Postman per generare i token di accesso. Per ulteriori informazioni, leggere la sezione relativa all&#39;utilizzo di [Postman per l&#39;autenticazione e il test delle chiamate API](/help/landing/api-authentication.md#use-postman) nella guida all&#39;autenticazione API di Experience Platform.
 
 ## Verifica credenziali API {#test-api-credentials}
 
@@ -115,7 +115,7 @@ Una volta confermato il funzionamento delle credenziali di accesso, continua a e
 
 ## Lettura delle chiamate API di esempio {#read-sample-api-calls}
 
-Ogni guida dell’endpoint fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere chiamate API di esempio](../../landing/api-guide.md#sample-api) nella guida introduttiva per le API di Platform.
+Ogni guida dell’endpoint fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere chiamate API di esempio](../../landing/api-guide.md#sample-api) nella guida introduttiva per le API di Experience Platform.
 
 ## Passaggi successivi {#next-steps}
 

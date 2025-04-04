@@ -5,7 +5,7 @@ title: Creare un criterio di governance dei dati nell’API
 type: Tutorial
 description: Scopri come creare un criterio di governance dei dati utilizzando l’API del servizio criteri.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1199'
 ht-degree: 3%
@@ -26,10 +26,10 @@ Questo documento fornisce un tutorial dettagliato per la creazione di un criteri
 
 Questo tutorial richiede una buona conoscenza dei seguenti concetti chiave coinvolti nella creazione e nella valutazione delle policy:
 
-* [Governance dei dati di Adobe Experience Platform](../home.md): framework tramite il quale [!DNL Platform] impone la conformità all&#39;utilizzo dei dati.
+* [Governance dei dati di Adobe Experience Platform](../home.md): framework tramite il quale [!DNL Experience Platform] impone la conformità all&#39;utilizzo dei dati.
    * [Etichette di utilizzo dati](../labels/overview.md): le etichette di utilizzo dati vengono applicate ai campi dati XDM, specificando restrizioni per l&#39;accesso ai dati.
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): framework standardizzato tramite il quale [!DNL Platform] organizza i dati sull&#39;esperienza del cliente.
-* [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza di [!DNL Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): framework standardizzato tramite il quale [!DNL Experience Platform] organizza i dati sull&#39;esperienza del cliente.
+* [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza di [!DNL Experience Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 Prima di iniziare questo tutorial, consulta la [guida per gli sviluppatori](../api/getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all&#39;API [!DNL Policy Service], incluse le intestazioni richieste e la lettura delle chiamate API di esempio.
 

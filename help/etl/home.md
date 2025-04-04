@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;ETL;etl;etl integrazioni;etl integrazioni;ETL integrazioni;Home;popular topic;ETL;etl;etl;etl integrazioni;ETL integrazioni
+keywords: Experience Platform;home;argomenti popolari;ETL;etl;etl integrazioni;ETL integrazioni;;home;popular topic;ETL;etl;etl;etl integrazioni;ETL integrazioni
 solution: Experience Platform
 title: Sviluppo di integrazioni ETL per Adobe Experience Platform
-description: La guida all’integrazione di ETL illustra i passaggi generali per la creazione di connettori sicuri e a elevate prestazioni, ad Experience Platform per l’acquisizione di dati in Platform.
+description: La guida all’integrazione di ETL illustra i passaggi generali per la creazione di connettori sicuri e a elevate prestazioni per Experience Platform e l’acquisizione di dati in Experience Platform.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3977'
+source-wordcount: '3978'
 ht-degree: 3%
 
 ---
 
 # Sviluppo di integrazioni ETL per Adobe Experience Platform
 
-La guida all&#39;integrazione di ETL illustra i passaggi generali per la creazione di connettori sicuri e a elevate prestazioni per [!DNL Experience Platform] e l&#39;acquisizione di dati in [!DNL Platform].
+La guida all&#39;integrazione di ETL illustra i passaggi generali per la creazione di connettori sicuri e a elevate prestazioni per [!DNL Experience Platform] e l&#39;acquisizione di dati in [!DNL Experience Platform].
 
 
 - [[!DNL Catalog]](https://www.adobe.io/experience-platform-apis/references/catalog/)
 - [[!DNL Data Access]](https://www.adobe.io/experience-platform-apis/references/data-access/)
 - [[!DNL Batch Ingestion]](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
 - [[!DNL Streaming Ingestion]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
-- [Autenticazione e autorizzazione per le API Experience Platform](https://www.adobe.com/go/platform-api-authentication-en)
+- [Autenticazione e autorizzazione per le API di Experience Platform](https://www.adobe.com/go/platform-api-authentication-en)
 - [[!DNL Schema Registry]](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 
 Questa guida include anche esempi di chiamate API da utilizzare durante la progettazione di un connettore ETL, con collegamenti alla documentazione che descrive ogni servizio [!DNL Experience Platform] e maggiori dettagli sull&#39;utilizzo della relativa API.
@@ -35,12 +35,12 @@ Il seguente diagramma fornisce una panoramica generale dell&#39;integrazione dei
 
 ## Componenti Adobe Experience Platform
 
-Nelle integrazioni del connettore ETL sono coinvolti più componenti di Experience Platform. L’elenco seguente illustra diversi componenti e funzionalità chiave:
+Nelle integrazioni del connettore ETL sono coinvolti più componenti Experience Platform. L’elenco seguente illustra diversi componenti e funzionalità chiave:
 
-- **Adobe di Identity Management System (IMS)** - Fornisce il framework per l&#39;autenticazione ai servizi Adobe.
+- **Adobe Identity Management System (IMS)** - Fornisce il framework per l&#39;autenticazione ai servizi Adobe.
 - **Organizzazione IMS** - Entità aziendale che può possedere o concedere in licenza prodotti e servizi e consentire l&#39;accesso ai propri membri.
 - **Utente IMS** - Membri di un&#39;organizzazione IMS. La relazione tra organizzazione e utente è variabile da molti a molti.
-- **[!DNL Sandbox]** - Partizione virtuale di una singola istanza [!DNL Platform] per lo sviluppo e l&#39;evoluzione delle applicazioni di esperienza digitale.
+- **[!DNL Sandbox]** - Partizione virtuale di una singola istanza [!DNL Experience Platform] per lo sviluppo e l&#39;evoluzione delle applicazioni di esperienza digitale.
 - **Individuazione dati** - Registra i metadati dei dati acquisiti e trasformati in [!DNL Experience Platform].
 - **[!DNL Data Access]** - Fornisce agli utenti un&#39;interfaccia per accedere ai propri dati in [!DNL Experience Platform].
 - **[!DNL Data Ingestion]** - Invia dati a [!DNL Experience Platform] con [!DNL Data Ingestion] API.
@@ -56,19 +56,19 @@ Questa guida fornisce esempi di chiamate API per illustrare come formattare le r
 
 ### Raccogliere i valori per le intestazioni richieste
 
-Per effettuare chiamate alle API [!DNL Platform], devi prima completare l&#39;[esercitazione di autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
+Per effettuare chiamate alle API [!DNL Experience Platform], devi prima completare l&#39;[esercitazione di autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
 
 - Autorizzazione: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-Tutte le risorse in [!DNL Experience Platform] sono isolate in specifiche sandbox virtuali. Tutte le richieste alle API [!DNL Platform] richiedono un&#39;intestazione che specifichi il nome della sandbox in cui verrà eseguita l&#39;operazione:
+Tutte le risorse in [!DNL Experience Platform] sono isolate in specifiche sandbox virtuali. Tutte le richieste alle API [!DNL Experience Platform] richiedono un&#39;intestazione che specifichi il nome della sandbox in cui verrà eseguita l&#39;operazione:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulle sandbox in [!DNL Platform], consulta la [documentazione di panoramica sulle sandbox](../sandboxes/home.md).
+>Per ulteriori informazioni sulle sandbox in [!DNL Experience Platform], consulta la [documentazione di panoramica sulle sandbox](../sandboxes/home.md).
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione aggiuntiva:
 
@@ -78,7 +78,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’
 
 Per iniziare, un utente ETL accede all&#39;interfaccia utente di [!DNL Experience Platform] e crea set di dati per l&#39;acquisizione utilizzando un connettore standard o un connettore push-service.
 
-Nell’interfaccia utente, l’utente crea il set di dati di output selezionando uno schema di set di dati. La scelta dello schema dipende dal tipo di dati (record o serie temporali) acquisiti in [!DNL Platform]. Facendo clic sulla scheda Schemi nell’interfaccia utente, l’utente potrà visualizzare tutti gli schemi disponibili, incluso il tipo di comportamento supportato dallo schema.
+Nell’interfaccia utente, l’utente crea il set di dati di output selezionando uno schema di set di dati. La scelta dello schema dipende dal tipo di dati (record o serie temporali) acquisiti in [!DNL Experience Platform]. Facendo clic sulla scheda Schemi nell’interfaccia utente, l’utente potrà visualizzare tutti gli schemi disponibili, incluso il tipo di comportamento supportato dallo schema.
 
 Nello strumento ETL, l’utente inizierà a progettare le trasformazioni di mappatura dopo aver configurato la connessione appropriata (utilizzando le credenziali). Si presume che nello strumento ETL siano già installati [!DNL Experience Platform] connettori (processo non definito in questa Guida all&#39;integrazione).
 
@@ -198,7 +198,7 @@ Il formato della risposta dipende dal tipo di intestazione Accept inviata nella 
 
 | Accetta | Descrizione |
 | ------ | ----------- |
-| `application/vnd.adobe.xed-id+json` | Elencare (GET) richieste, titoli, ID e versioni |
+| `application/vnd.adobe.xed-id+json` | Richieste, titoli, ID e versioni di elenchi (GET) |
 | `application/vnd.adobe.xed-full+json; version={major version}` | $refs e allOf risolto, con titoli e descrizioni |
 | `application/vnd.adobe.xed+json; version={major version}` | Raw con $ref e allOf, con titoli e descrizioni |
 | `application/vnd.adobe.xed-notext+json; version={major version}` | Raw con $ref e allOf, nessun titolo o descrizione |
@@ -759,7 +759,7 @@ Quando si utilizzano i profili snapshot, lo strumento ETL dovrà scegliere l&#39
 
 La ripetizione in batch e la rielaborazione dei dati possono essere necessarie nei casi in cui un client rilevi che negli ultimi &quot;n&quot; giorni i dati elaborati da ETL non si sono verificati come previsto o i dati sorgente stessi potrebbero non essere corretti.
 
-A tale scopo, gli amministratori dei dati del client utilizzeranno l&#39;interfaccia utente [!DNL Platform] per rimuovere i batch contenenti dati danneggiati. Successivamente, sarà probabilmente necessario eseguire nuovamente l’ETL, popolandolo nuovamente con dati corretti. Se l’origine stessa contiene dati danneggiati, il data engineer/amministratore dovrà correggere i batch di origine e riacquisire i dati (in Adobe Experience Platform o tramite connettori ETL).
+A tale scopo, gli amministratori dei dati del client utilizzeranno l&#39;interfaccia utente [!DNL Experience Platform] per rimuovere i batch contenenti dati danneggiati. Successivamente, sarà probabilmente necessario eseguire nuovamente l’ETL, popolandolo nuovamente con dati corretti. Se l’origine stessa contiene dati danneggiati, il data engineer/amministratore dovrà correggere i batch di origine e riacquisire i dati (in Adobe Experience Platform o tramite connettori ETL).
 
 In base al tipo di dati generato, sarà il data engineer a scegliere di rimuovere un singolo batch o tutti i batch da determinati set di dati. I dati verranno rimossi/archiviati in base alle linee guida di [!DNL Experience Platform].
 
@@ -781,7 +781,7 @@ Per i batch di origine, dipenderà nuovamente dalle preferenze del client e dal 
 
 Il rinvio è un processo in cui i dati di input non sono ancora abbastanza completi da essere inviati ai processi a valle, ma possono essere utilizzati in futuro. I clienti determineranno la propria tolleranza individuale alla finitura dei dati per una corrispondenza futura rispetto al costo dell’elaborazione per informare la decisione di mettere da parte i dati e rielaborarli nella successiva esecuzione della trasformazione, sperando che possano essere arricchiti e riconciliati/uniti in un momento futuro all’interno della finestra di conservazione. Questo ciclo è in corso fino a quando la riga non viene elaborata a sufficienza o si ritiene che sia troppo obsoleta per continuare a investire in. Ogni iterazione genera dati differiti che sono un superset di tutti i dati differiti delle iterazioni precedenti.
 
-Al momento Adobe Experience Platform non identifica i dati differiti, pertanto le implementazioni client devono basarsi sulle configurazioni manuali ETL e Dataset per creare un altro set di dati in [!DNL Platform] che rispecchia il set di dati di origine e può essere utilizzato per conservare i dati differiti. In questo caso, i dati differiti saranno simili ai dati snapshot. In ogni esecuzione della trasformazione ETL, i dati di origine verranno uniti ai dati differiti e inviati per l’elaborazione.
+Al momento Adobe Experience Platform non identifica i dati differiti, pertanto le implementazioni client devono basarsi sulle configurazioni manuali ETL e Dataset per creare un altro set di dati in [!DNL Experience Platform] che rispecchia il set di dati di origine e può essere utilizzato per conservare i dati differiti. In questo caso, i dati differiti saranno simili ai dati snapshot. In ogni esecuzione della trasformazione ETL, i dati di origine verranno uniti ai dati differiti e inviati per l’elaborazione.
 
 ## Changelog
 

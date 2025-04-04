@@ -2,9 +2,9 @@
 title: Creare una connessione in streaming API HTTP tramite l’interfaccia utente
 description: Questa guida dell’interfaccia utente ti aiuterà a creare una connessione in streaming utilizzando Adobe Experience Platform.
 exl-id: 7932471c-a9ce-4dd3-8189-8bc760ced5d6
-source-git-commit: de721d204cda8e55c72ac5f530b89b2275d94306
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1000'
+source-wordcount: '1003'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe E
 
 ## Creare una connessione in streaming
 
-Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Nella schermata [!UICONTROL Catalogo] sono visualizzate diverse origini con cui è possibile creare un account.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Nella schermata [!UICONTROL Catalogo] sono visualizzate diverse origini con cui è possibile creare un account.
 
 Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
 
@@ -66,7 +66,7 @@ Con i dati caricati, puoi utilizzare il lato destro dell’interfaccia per visua
 
 ## Mappare i campi dati su uno schema XDM
 
-Viene visualizzato il passaggio [!UICONTROL Mappatura] che fornisce un&#39;interfaccia per mappare i dati di origine su un set di dati di Platform.
+Viene visualizzato il passaggio [!UICONTROL Mappatura] che fornisce un&#39;interfaccia per mappare i dati di origine su un set di dati di Experience Platform.
 
 L&#39;origine [!DNL HTTP API] supporta l&#39;acquisizione di file JSON. I file JSON non richiedono la configurazione manuale se sono contrassegnati come XDM-complaints. In caso contrario, devi configurare esplicitamente la mappatura.
 
@@ -120,7 +120,7 @@ Dopo aver fornito i dettagli per il flusso di dati, seleziona **[!UICONTROL Avan
 
 ![dettagli flusso di dati](../../../../images/tutorials/create/http/dataflow-detail.png)
 
-## Controlla
+## Rivisione
 
 Viene visualizzato il passaggio **[!UICONTROL Rivedi]**, che consente di rivedere i dettagli del flusso di dati prima che venga creato. I dettagli sono raggruppati nelle seguenti categorie:
 
@@ -141,4 +141,4 @@ Una volta creata la connessione, viene visualizzata la pagina dei dettagli delle
 
 Seguendo questa esercitazione, è stata creata una connessione HTTP di streaming che consente di utilizzare l&#39;endpoint di streaming per accedere a diverse API [!DNL Data Ingestion]. Per istruzioni su come creare una connessione in streaming nell&#39;API, consulta l&#39;[esercitazione sulla creazione di una connessione in streaming](../../../api/create/streaming/http.md).
 
-Per informazioni su come inviare dati a Platform in streaming, leggi l&#39;esercitazione su [dati di streaming serie temporale](../../../../../ingestion/tutorials/streaming-time-series-data.md) o l&#39;esercitazione su [dati di streaming record](../../../../../ingestion/tutorials/streaming-record-data.md).
+Per informazioni su come inviare dati ad Experience Platform in streaming, leggi l&#39;esercitazione su [dati di streaming serie temporale](../../../../../ingestion/tutorials/streaming-time-series-data.md) o l&#39;esercitazione su [dati di streaming record](../../../../../ingestion/tutorials/streaming-record-data.md).

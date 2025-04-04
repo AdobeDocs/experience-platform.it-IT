@@ -2,9 +2,9 @@
 title: Creare set di dati derivati con SQL
 description: Scopri come utilizzare SQL per creare un set di dati derivato abilitato per il profilo e come utilizzare il set di dati per Real-time Customer Profile e Segmentation Service.
 exl-id: bb1a1d8d-4662-40b0-857a-36efb8e78746
-source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1235'
+source-wordcount: '1238'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 Scopri come utilizzare le query SQL per manipolare e trasformare i dati dai set di dati esistenti per creare un set di dati derivato abilitato per Profilo. Questo flusso di lavoro fornisce un metodo alternativo efficiente per creare set di dati derivati per i casi di utilizzo aziendali di Profilo cliente in tempo reale.
 
-Questo documento illustra varie estensioni SQL convenienti che generano un set di dati derivato da utilizzare con Real-Time Customer Profile. Il flusso di lavoro semplifica il processo che altrimenti dovrebbe essere completato tramite varie chiamate API o interazioni dell’interfaccia utente di Platform.
+Questo documento illustra varie estensioni SQL convenienti che generano un set di dati derivato da utilizzare con Real-Time Customer Profile. Il flusso di lavoro semplifica il processo che altrimenti dovrebbe essere completato tramite varie chiamate API o interazioni nell’interfaccia utente di Experience Platform.
 
 In genere, la generazione e la pubblicazione di un set di dati derivato per Real-Time Customer Profile richiede i seguenti passaggi:
 
@@ -35,7 +35,7 @@ Query Service consente di eseguire tutte le azioni elencate sopra utilizzando qu
 >
 >La query SQL fornita di seguito presuppone l&#39;utilizzo di uno spazio dei nomi preesistente.
 
-Utilizza una query Create Table as Select (CTAS) per creare un set di dati, assegnare tipi di dati, impostare un’identità primaria, creare uno schema e contrassegnarlo come abilitato per il profilo. L’istruzione SQL di esempio seguente crea un set di dati e lo rende disponibile per Real-time Customer Data Platform (Real-Time CDP). La query SQL verrà eseguita nel formato illustrato nell&#39;esempio seguente:
+Utilizza una query Create Table as Select (CTAS) per creare un set di dati, assegnare tipi di dati, impostare un’identità primaria, creare uno schema e contrassegnarlo come abilitato per il profilo. L’istruzione SQL di esempio seguente crea un set di dati e lo rende disponibile per Real-Time Customer Data Platform (Real-Time CDP). La query SQL verrà eseguita nel formato illustrato nell&#39;esempio seguente:
 
 ```sql
 CREATE TABLE <your_table_name> [IF NOT EXISTS] (fieldname <your_data_type> primary identity namespace <your_namespace>, [field_name2 <your_data_type>]) [WITH(LABEL='PROFILE')];
@@ -51,7 +51,7 @@ MAP <data_type, data_type>
 ARRAY <data_type>
 ```
 
-In alternativa, i set di dati possono essere abilitati anche per il profilo tramite l’interfaccia utente di Platform. Per ulteriori informazioni su come contrassegnare un set di dati come abilitato per il profilo, consulta [abilitare un set di dati per la documentazione del profilo cliente in tempo reale](../../../catalog/datasets/user-guide.md#enable-profile).
+In alternativa, i set di dati possono essere abilitati anche per il profilo tramite l’interfaccia utente di Experience Platform. Per ulteriori informazioni su come contrassegnare un set di dati come abilitato per il profilo, consulta [abilitare un set di dati per la documentazione del profilo cliente in tempo reale](../../../catalog/datasets/user-guide.md#enable-profile).
 
 Nella query di esempio seguente, il set di dati `decile_table` viene creato con `id` come colonna di identità primaria e ha lo spazio dei nomi `IDFA`. Inoltre, dispone di un campo denominato `decile1Month` del tipo di dati mappa. La tabella creata (`decile_table`) è abilitata per il profilo.
 
@@ -178,7 +178,7 @@ Si può vedere dall&#39;esempio che `table_with_a_decile` è stato abilitato per
 
 ### Creare un gruppo di campi con SQL
 
-È ora possibile creare i gruppi di campi mediante SQL. Alternativa all’utilizzo dell’Editor di schema nell’interfaccia utente di Platform o all’esecuzione di una chiamata API al Registro di sistema dello schema.
+È ora possibile creare i gruppi di campi mediante SQL. Alternativa all’utilizzo dell’Editor di schema nell’interfaccia utente di Experience Platform o all’esecuzione di una chiamata API al Registro di sistema dello schema.
 
 Di seguito è riportato un esempio di istruzione per creare un gruppo di campi.
 

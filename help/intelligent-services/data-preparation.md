@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Preparare i dati per l’utilizzo in Intelligent Services
 description: Affinché Intelligent Services possa scoprire informazioni provenienti dai dati degli eventi di marketing, i dati devono essere arricchiti semanticamente e mantenuti in una struttura standard. Per ottenere questo risultato, Intelligent Services utilizza gli schemi Experience Data Model (XDM).
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
-source-git-commit: 87a8ad253abb219662034652b5f8c4fabfa40484
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2823'
+source-wordcount: '2827'
 ht-degree: 0%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 0%
 
 Affinché [!DNL Intelligent Services] possa scoprire informazioni dai dati degli eventi di marketing, i dati devono essere arricchiti semanticamente e mantenuti in una struttura standard. [!DNL Intelligent Services] sfrutta [!DNL Experience Data Model] schemi (XDM) per ottenere questo risultato. In particolare, tutti i set di dati utilizzati in [!DNL Intelligent Services] devono essere conformi allo schema XDM Consumer ExperienceEvent (CEE) o utilizzare il connettore Adobe Analytics. Inoltre, IA per l’analisi dei clienti supporta il connettore Adobe Audience Manager.
 
-Questo documento fornisce indicazioni generali sulla mappatura dei dati degli eventi di marketing da più canali allo schema CEE, delineando informazioni su campi importanti all’interno dello schema per aiutarti a determinare come mappare in modo efficace i dati alla relativa struttura. Se prevedi di utilizzare i dati di Adobe Analytics, consulta la sezione per [Preparazione dati di Adobe Analytics](#analytics-data). Se prevedi di utilizzare i dati di Adobe Audience Manager (solo IA per l&#39;analisi dei clienti), consulta la sezione per [Adobe Audience Manager data preparation](#AAM-data).
+Questo documento fornisce indicazioni generali sulla mappatura dei dati degli eventi di marketing da più canali allo schema CEE, delineando informazioni su campi importanti all’interno dello schema per aiutarti a determinare come mappare in modo efficace i dati alla relativa struttura. Se prevedi di utilizzare i dati di Adobe Analytics, consulta la sezione per [Preparazione dati di Adobe Analytics](#analytics-data). Se prevedi di utilizzare i dati di Adobe Audience Manager (solo IA per l&#39;analisi dei clienti), consulta la sezione per la [preparazione dei dati di Adobe Audience Manager](#AAM-data).
 
 ## Requisiti dei dati
 
 [!DNL Intelligent Services] richiedono quantità diverse di dati storici a seconda dell&#39;obiettivo creato. I dati preparati per **all** [!DNL Intelligent Services] devono comunque includere percorsi/eventi di clienti positivi e negativi. La presenza di eventi negativi e positivi migliora la precisione e l&#39;accuratezza del modello.
 
-Ad esempio, se utilizzi IA per l’analisi dei clienti per prevedere la propensione all’acquisto di un prodotto, il modello di IA per l’analisi dei clienti richiede sia esempi di percorsi di acquisto riusciti che esempi di percorsi non riusciti. Questo perché durante la formazione sul modello, IA per l’analisi dei clienti cerca di capire quali eventi e percorsi portano a un acquisto. Sono incluse anche le azioni intraprese dai clienti che non hanno effettuato l’acquisto, ad esempio da un utente che ha interrotto il percorso per aggiungere un articolo al carrello. Questi clienti possono mostrare comportamenti simili, tuttavia, IA per l’analisi dei clienti può fornire informazioni approfondite e approfondire le principali differenze e i fattori che portano a un punteggio di propensione più elevato. Allo stesso modo, Attribution AI richiede entrambi i tipi di eventi e percorsi per visualizzare metriche quali l’efficacia dei punti di contatto, i percorsi di conversione principali e i raggruppamenti per posizione dei punti di contatto.
+Ad esempio, se utilizzi IA per l’analisi dei clienti per prevedere la propensione all’acquisto di un prodotto, il modello di IA per l’analisi dei clienti richiede sia esempi di percorsi di acquisto riusciti che esempi di percorsi non riusciti. Questo perché durante la formazione sul modello, IA per l’analisi dei clienti cerca di capire quali eventi e percorsi portano a un acquisto. Sono incluse anche le azioni intraprese dai clienti che non hanno effettuato l’acquisto, ad esempio da un utente che ha interrotto il percorso per aggiungere un articolo al carrello. Questi clienti possono mostrare comportamenti simili, tuttavia, IA per l’analisi dei clienti può fornire informazioni approfondite e approfondire le principali differenze e i fattori che portano a un punteggio di propensione più elevato. Analogamente, IA per l’attribuzione richiede sia tipi di eventi che percorsi per visualizzare metriche quali l’efficacia dei punti di contatto, i percorsi di conversione principali e i raggruppamenti per posizione dei punti di contatto.
 
 Per ulteriori esempi e informazioni sui requisiti dei dati storici, visita la sezione [Customer AI](./customer-ai/data-requirements.md#data-requirements) o [Attribution AI](./attribution-ai/input-output.md#data-requirements) relativa ai requisiti dei dati storici nella documentazione di input/output.
 
@@ -37,19 +37,19 @@ Il processo di preparazione varia a seconda che i dati siano memorizzati in Adob
 
 ### Preparazione dati esterni
 
-Se i dati sono memorizzati al di fuori di Experience Platform, devi mappare i dati ai campi richiesti e rilevanti in uno schema [Consumer ExperienceEvent](#cee-schema). Questo schema può essere potenziato con gruppi di campi personalizzati per acquisire meglio i dati dei clienti. Una volta eseguito il mapping, puoi creare un set di dati utilizzando lo schema Consumer ExperienceEvent e [acquisire i dati in Platform](../ingestion/home.md). È quindi possibile selezionare il set di dati CEE durante la configurazione di [!DNL Intelligent Service].
+Se i dati sono archiviati all&#39;esterno di Experience Platform, è necessario mappare i dati ai campi richiesti e rilevanti in uno [schema ExperienceEvent consumer](#cee-schema). Questo schema può essere potenziato con gruppi di campi personalizzati per acquisire meglio i dati dei clienti. Una volta eseguito il mapping, puoi creare un set di dati utilizzando lo schema Consumer ExperienceEvent e [acquisire i dati in Experience Platform](../ingestion/home.md). È quindi possibile selezionare il set di dati CEE durante la configurazione di [!DNL Intelligent Service].
 
-A seconda dei [!DNL Intelligent Service] che desideri utilizzare, potrebbero essere necessari campi diversi. È consigliabile aggiungere dati a un campo se si dispone dei dati disponibili. Per ulteriori informazioni sui campi obbligatori, visita la [Guida ai requisiti dati di ](./attribution-ai/input-output.md) o [Attribution AI](./customer-ai/data-requirements.md).
+A seconda dei [!DNL Intelligent Service] che desideri utilizzare, potrebbero essere necessari campi diversi. È consigliabile aggiungere dati a un campo se si dispone dei dati disponibili. Per ulteriori informazioni sui campi obbligatori, visita la [Guida ai dati di Attribution](./attribution-ai/input-output.md) o [Customer AI](./customer-ai/data-requirements.md).
 
 ### Preparazione dei dati di Adobe Analytics {#analytics-data}
 
-IA per l’analisi dei clienti e Attribution AI supportano in modo nativo i dati di Adobe Analytics. Per utilizzare i dati di Adobe Analytics, segui i passaggi descritti nella documentazione per configurare un [connettore di origine di Analytics](../sources/tutorials/ui/create/adobe-applications/analytics.md).
+Customer AI e Attribution AI supportano in modo nativo i dati di Adobe Analytics. Per utilizzare i dati di Adobe Analytics, segui i passaggi descritti nella documentazione per configurare un [connettore di origine di Analytics](../sources/tutorials/ui/create/adobe-applications/analytics.md).
 
 Una volta che il connettore di origine effettua lo streaming dei dati in Experience Platform, puoi selezionare Adobe Analytics come origine dati seguito da un set di dati durante la configurazione dell’istanza. Tutti i gruppi di campi dello schema e i singoli campi richiesti vengono creati automaticamente durante la configurazione della connessione. Non è necessario effettuare operazioni di ETL (Extract, Transform, Load, cioè Estrai, Trasforma, Carica) dei set di dati nel formato CEE.
 
 Se confronti i dati trasmessi tramite il connettore di origine di Adobe Analytics su Adobe Experience Platform con quelli di Adobe Analytics, potresti notare alcune discrepanze. Il connettore Source di Analytics potrebbe rilasciare righe durante la trasformazione in uno schema Experience Data Model (XDM). Ci possono essere diversi motivi per cui l’intera riga non è adatta alla trasformazione, tra cui marche temporali mancanti, ID persona mancanti, ID persona non validi o grandi, valori analitici non validi e altro ancora.
 
-Per ulteriori informazioni ed esempi, consulta la documentazione di [confronto dei dati di Adobe Analytics e di Customer Journey Analytics](https://www.adobe.com/go/compare-aa-data-to-cja-data). Questo articolo è progettato per aiutarti a diagnosticare e risolvere tali differenze in modo che tu e il tuo team possiate utilizzare i dati di Adobe Experience Platform per Intelligent Services senza problemi di integrità dei dati.
+Per ulteriori informazioni ed esempi, consulta la documentazione di [confronto dei dati di Adobe Analytics e Customer Journey Analytics](https://www.adobe.com/go/compare-aa-data-to-cja-data). Questo articolo è progettato per aiutarti a diagnosticare e risolvere tali differenze in modo che tu e il tuo team possiate utilizzare i dati di Adobe Experience Platform per Intelligent Services senza problemi di integrità dei dati.
 
 In Adobe Experience Platform Query Services, esegui i seguenti record totali tra le marche temporali di inizio e fine per query channel.typeAtSource per trovare il conteggio per canali di marketing.
 
@@ -65,11 +65,11 @@ GROUP BY channel.typeAtSource
 
 >[!IMPORTANT]
 >
->Il connettore Adobe Analytics impiega fino a quattro settimane per eseguire la retrocompilazione dei dati. Se hai impostato di recente una connessione, verifica che il set di dati abbia la lunghezza minima dei dati richiesta per il cliente o l’Attribution AI. Controlla le sezioni dei dati storici in [IA per l&#39;analisi dei clienti](./customer-ai/data-requirements.md#data-requirements) o [Attribution AI](./attribution-ai/input-output.md#data-requirements) e verifica di disporre di dati sufficienti per l&#39;obiettivo di previsione.
+>Il connettore Adobe Analytics impiega fino a quattro settimane per eseguire la retrocompilazione dei dati. Se hai impostato di recente una connessione, verifica che il set di dati abbia la lunghezza minima dei dati richiesta per IA per l’attribuzione o per la gestione dei clienti. Controlla le sezioni dei dati storici in [IA per l&#39;analisi dei clienti](./customer-ai/data-requirements.md#data-requirements) o [IA per l&#39;attribuzione](./attribution-ai/input-output.md#data-requirements) e verifica di disporre di dati sufficienti per l&#39;obiettivo di previsione.
 
 ### Preparazione dei dati di Adobe Audience Manager (solo IA per l’analisi dei clienti) {#AAM-data}
 
-IA per l’analisi dei clienti supporta in modo nativo i dati di Adobe Audience Manager. Per utilizzare i dati di Audience Manager, seguire i passaggi descritti nella documentazione per configurare un [connettore di origine di Audience Manager](../sources/tutorials/ui/create/adobe-applications/audience-manager.md).
+IA per l’analisi dei clienti supporta in modo nativo i dati di Adobe Audience Manager. Per utilizzare i dati di Audience Manager, segui i passaggi descritti nella documentazione per configurare un [connettore di origine Audience Manager](../sources/tutorials/ui/create/adobe-applications/audience-manager.md).
 
 Una volta che il connettore di origine effettua lo streaming dei dati in Experience Platform, puoi selezionare Adobe Audience Manager come origine dati seguito da un set di dati durante la configurazione di Customer AI. Tutti i gruppi di campi dello schema e i singoli campi vengono creati automaticamente durante la configurazione della connessione. Non è necessario effettuare operazioni di ETL (Extract, Transform, Load, cioè Estrai, Trasforma, Carica) dei set di dati nel formato CEE.
 
@@ -79,7 +79,7 @@ Una volta che il connettore di origine effettua lo streaming dei dati in Experie
 
 ### [!DNL Experience Platform] preparazione dati
 
-Se i dati sono già memorizzati in [!DNL Platform] e non vengono trasmessi tramite i connettori di origine di Adobe Analytics o Adobe Audience Manager (solo IA per l&#39;analisi dei clienti), segui la procedura riportata di seguito. È comunque consigliabile comprendere lo schema CEE.
+Se i dati sono già memorizzati in [!DNL Experience Platform] e non vengono trasmessi tramite i connettori di origine di Adobe Analytics o Adobe Audience Manager (solo IA per l&#39;analisi dei clienti), segui la procedura riportata di seguito. È comunque consigliabile comprendere lo schema CEE.
 
 1. Rivedi la struttura dello schema [Consumer ExperienceEvent](#cee-schema) e determina se i dati possono essere mappati ai relativi campi.
 2. Contatta i servizi Adobe Consulting per aiutarti a mappare i tuoi dati sullo schema e a acquisirli in [!DNL Intelligent Services], oppure [segui i passaggi descritti in questa guida](#mapping) se desideri mappare i dati da solo.
@@ -108,7 +108,7 @@ Anche se l&#39;utilizzo di tutti i campi chiave è fortemente consigliato, sono 
 
 * [Un campo di identità principale](#identity)
 * [xdm:timestamp](#timestamp)
-* [xdm:channel](#channel) (obbligatorio solo per le Attribution AI)
+* [xdm:channel](#channel) (obbligatorio solo per IA per l&#39;attribuzione)
 
 #### Identità primaria {#identity}
 
@@ -118,7 +118,7 @@ Devi determinare il campo migliore da utilizzare come identità primaria in base
 
 >[!NOTE]
 >
->L’ID Experience Cloud (ECID) è noto anche come MCID e continua a essere utilizzato nei namespace.
+>L’Experience Cloud ID (ECID) è anche noto come MCID e continua a essere utilizzato nei namespace.
 
 * &quot;email&quot;
 * &quot;phone&quot;
@@ -156,7 +156,7 @@ Questo campo rappresenta il datetime in cui si è verificato l&#39;evento. Quest
 
 >[!NOTE]
 >
->Questo campo è obbligatorio solo quando si utilizzano Attribution AI.
+>Questo campo è obbligatorio solo quando si utilizza IA per l’attribuzione.
 
 Questo campo rappresenta il canale di marketing relativo all’ExperienceEvent. Il campo include informazioni sul tipo di canale, il tipo di supporto e il tipo di posizione.
 
@@ -321,7 +321,7 @@ Se disponi di un abbonamento a [!DNL Adobe Experience Platform] e desideri mappa
 
 >[!NOTE]
 >
->I passaggi seguenti richiedono un abbonamento a Experience Platform. Se non hai accesso a Platform, passa alla sezione [passaggi successivi](#next-steps).
+>I passaggi seguenti richiedono un abbonamento ad Experience Platform. Se non hai accesso ad Experience Platform, passa alla sezione [passaggi successivi](#next-steps).
 
 Questa sezione descrive il flusso di lavoro per la mappatura e l&#39;acquisizione di dati in Experience Platform da utilizzare in [!DNL Intelligent Services], inclusi i collegamenti alle esercitazioni per i passaggi dettagliati.
 
@@ -343,7 +343,7 @@ Dopo aver creato e salvato lo schema, puoi creare un nuovo set di dati basato su
 * [Crea un set di dati nell&#39;interfaccia utente](../catalog/datasets/user-guide.md#create) (segui il flusso di lavoro per utilizzare uno schema esistente)
 * [Creare un set di dati nell’API](../catalog/datasets/create.md)
 
-Una volta creato il set di dati, è possibile trovarlo nell&#39;interfaccia utente di Platform nell&#39;area di lavoro **[!UICONTROL Set di dati]**.
+Una volta creato il set di dati, è possibile trovarlo nell&#39;interfaccia utente di Experience Platform all&#39;interno dell&#39;area di lavoro **[!UICONTROL Set di dati]**.
 
 ![](images/data-preparation/dataset-location.png)
 
@@ -355,11 +355,11 @@ Se acquisisci dati da un file CSV locale, puoi passare alla sezione successiva s
 
 #### Mappare e acquisire dati {#ingest}
 
-Dopo aver creato uno schema CEE e un set di dati, puoi iniziare a mappare le tabelle di dati sullo schema e acquisire tali dati in Platform. Consulta l&#39;esercitazione su [mappatura di un file CSV a uno schema XDM](../ingestion/tutorials/map-csv/overview.md) per i passaggi su come eseguire questa operazione nell&#39;interfaccia utente. Puoi utilizzare il seguente [file JSON di esempio](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) per testare il processo di acquisizione prima di utilizzare i tuoi dati.
+Dopo aver creato uno schema CEE e un set di dati, puoi iniziare a mappare le tabelle di dati sullo schema e acquisire tali dati in Experience Platform. Consulta l&#39;esercitazione su [mappatura di un file CSV a uno schema XDM](../ingestion/tutorials/map-csv/overview.md) per i passaggi su come eseguire questa operazione nell&#39;interfaccia utente. Puoi utilizzare il seguente [file JSON di esempio](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) per testare il processo di acquisizione prima di utilizzare i tuoi dati.
 
 Una volta popolato un set di dati, è possibile utilizzarlo per acquisire file di dati aggiuntivi.
 
-Se i dati sono archiviati in un&#39;applicazione di terze parti supportata, puoi anche scegliere di creare un [connettore di origine](../sources/home.md) per acquisire i dati degli eventi di marketing in [!DNL Platform] in tempo reale.
+Se i dati sono archiviati in un&#39;applicazione di terze parti supportata, puoi anche scegliere di creare un [connettore di origine](../sources/home.md) per acquisire i dati degli eventi di marketing in [!DNL Experience Platform] in tempo reale.
 
 ## Passaggi successivi {#next-steps}
 

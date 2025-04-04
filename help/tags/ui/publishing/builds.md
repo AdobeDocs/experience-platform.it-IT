@@ -2,10 +2,10 @@
 title: Build
 description: Scopri il concetto di build e come queste funzionano in Adobe Experience Platform.
 exl-id: af899282-aa2d-4395-8dbd-18d91be3f041
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '784'
-ht-degree: 97%
+source-wordcount: '791'
+ht-degree: 86%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 97%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Una build è il set di file contenente tutto il codice che viene eseguito sul dispositivo client.
 
@@ -56,15 +56,15 @@ Per completare una build, seleziona una libreria e fai clic sull&#39;opzione Bui
 
 La minimizzazione riduce i costi di larghezza di banda e migliora la velocità eliminando i dati non necessari per l&#39;esecuzione da un file.
 
-Per migliorare le prestazioni, Platform consente di minimizzare qualsiasi cosa, tra cui:
+Per migliorare le prestazioni, Experience Platform consente di minimizzare qualsiasi cosa, tra cui:
 
 * La libreria tag principale
 * Il codice modulo fornito dagli sviluppatori di estensioni come parte di un’estensione
-* Il codice personalizzato fornito dagli utenti di Platform 
+* Il codice personalizzato fornito dagli utenti di Experience Platform
 
 >[!NOTE]
 >
->Se il codice modulo e il codice personalizzato sono già ridotti, Platform li minimizza nuovamente. Questa seconda minimizzazione non fornisce vantaggi aggiuntivi, ma non causa danni e rende Platform meno complesso e di facile gestione.
+>Se il codice modulo e il codice personalizzato sono già ridotti, Experience Platform li minimizza nuovamente. Questa seconda minimizzazione non fornisce vantaggi aggiuntivi, ma non causa danni e rende Experience Platform meno complesso e di facile gestione.
 
 Eventuale codice lato client fornito fa riferimento alla versione minimizzata del codice. Questo è visibile nei nomi dei file che seguono la convenzione di denominazione standard per i file minimizzati:
 
@@ -74,7 +74,7 @@ Se desideri visualizzare il codice non minimizzato, rimuovi .min dal nome file:
 
 `launch-%environment_id%.js`
 
-Se uno sviluppatore di estensioni fornisce codici minimizzati con la propria estensione, Platform non fornisce codice non minimizzato nella build non minimizzata. Analogamente, se un utente di Platform inserisce un codice minimizzato in una casella di codice personalizzata, tale codice viene comunque minimizzato in una build non minimizzata. Platform non annulla alcuna minimizzazione.
+Se uno sviluppatore di estensioni fornisce codici minimizzati con la propria estensione, Experience Platform non fornisce codice non minimizzato nella build non minimizzata. Analogamente, se un utente di Experience Platform inserisce un codice ridotto in una casella di codice personalizzata, tale codice viene ancora ridotto in una build non minimizzata. Experience Platform non annulla alcuna minimizzazione.
 
 Per ulteriori informazioni sulla minimizzazione, consulta [questo articolo su Stackpath](https://blog.stackpath.com/glossary/minification/).
 

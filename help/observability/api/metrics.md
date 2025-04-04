@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Endpoint API delle metriche
 description: Scopri come recuperare le metriche di osservabilità in Experience Platform utilizzando l’API Observability Insights.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: bd5018a2d867d0483f3f2f0c45e356ea69a01801
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1278'
 ht-degree: 4%
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 # Endpoint &quot;metrics&quot;
 
-Le metriche di osservabilità forniscono informazioni approfondite sulle statistiche di utilizzo, le tendenze storiche e gli indicatori di prestazioni per varie funzioni di Adobe Experience Platform. L&#39;endpoint `/metrics` in [!DNL Observability Insights API] consente di recuperare in modo programmatico i dati delle metriche per l&#39;attività dell&#39;organizzazione in [!DNL Platform].
+Le metriche di osservabilità forniscono informazioni approfondite sulle statistiche di utilizzo, le tendenze storiche e gli indicatori di prestazioni per varie funzioni di Adobe Experience Platform. L&#39;endpoint `/metrics` in [!DNL Observability Insights API] consente di recuperare in modo programmatico i dati delle metriche per l&#39;attività dell&#39;organizzazione in [!DNL Experience Platform].
 
 >[!NOTE]
 >
@@ -175,7 +175,7 @@ In caso di esito positivo, la risposta restituisce i punti dati risultanti per l
 | `metric` | Il nome di una delle metriche fornite nella richiesta. |
 | `filters` | Configurazione del filtro per la metrica specificata. |
 | `datapoints` | Matrice i cui oggetti rappresentano i risultati della metrica e dei filtri specificati. Il numero di oggetti nell’array dipende dalle opzioni di filtro fornite nella richiesta. Se non sono stati forniti filtri, l’array conterrà solo un singolo oggetto che rappresenta tutti i set di dati. |
-| `groupBy` | Se nella proprietà `filter` per una metrica sono stati specificati più set di dati e l&#39;opzione `groupBy` è stata impostata su true nella richiesta, questo oggetto conterrà l&#39;ID del set di dati a cui si applica la proprietà `dps` corrispondente.<br><br>Se questo oggetto appare vuoto nella risposta, la proprietà `dps` corrispondente si applica a tutti i set di dati forniti nell&#39;array `filters` (o a tutti i set di dati in [!DNL Platform] se non sono stati forniti filtri). |
+| `groupBy` | Se nella proprietà `filter` per una metrica sono stati specificati più set di dati e l&#39;opzione `groupBy` è stata impostata su true nella richiesta, questo oggetto conterrà l&#39;ID del set di dati a cui si applica la proprietà `dps` corrispondente.<br><br>Se questo oggetto appare vuoto nella risposta, la proprietà `dps` corrispondente si applica a tutti i set di dati forniti nell&#39;array `filters` (o a tutti i set di dati in [!DNL Experience Platform] se non sono stati forniti filtri). |
 | `dps` | I dati restituiti per la metrica, il filtro e l’intervallo di tempo specificati. Ogni chiave in questo oggetto rappresenta una marca temporale con un valore corrispondente per la metrica specificata. Il periodo di tempo tra ciascun punto dati dipende dal valore `granularity` specificato nella richiesta. |
 
 {style="table-layout:auto"}
@@ -186,7 +186,7 @@ La sezione seguente contiene informazioni aggiuntive sull&#39;utilizzo dell&#39;
 
 ### Metriche disponibili {#available-metrics}
 
-Nelle tabelle seguenti sono elencate tutte le metriche esposte da [!DNL Observability Insights], suddivise per il servizio [!DNL Platform]. Ogni metrica include una descrizione e un parametro di query dell’ID accettato.
+Nelle tabelle seguenti sono elencate tutte le metriche esposte da [!DNL Observability Insights], suddivise per il servizio [!DNL Experience Platform]. Ogni metrica include una descrizione e un parametro di query dell’ID accettato.
 
 >[!NOTE]
 >
@@ -279,8 +279,8 @@ Nella tabella seguente sono elencati i diversi codici di errore che possono esse
 | --- | --- | --- |
 | `INSGHT-1000-400` | Payload di richiesta non valido | Si è verificato un errore nel payload della richiesta. Assicurati di avere la stessa formattazione del payload mostrata [sopra](#v2). Questo errore può essere attivato da uno dei motivi seguenti:<ul><li>Campi obbligatori mancanti come `aggregator`</li><li>Metriche non valide</li><li>La richiesta contiene un aggregatore non valido</li><li>Una data di inizio segue una data di fine</li></ul> |
 | `INSGHT-1001-400` | Query delle metriche non riuscita | Si è verificato un errore durante il tentativo di eseguire una query sul database delle metriche a causa di una richiesta non valida o perché la query stessa non è analizzabile. Prima di riprovare, assicurati che la richiesta sia formattata correttamente. |
-| `INSGHT-1001-500` | Query delle metriche non riuscita | Si è verificato un errore durante il tentativo di eseguire una query sul database delle metriche a causa di un errore del server. Riprova e, se il problema persiste, contatta l’assistenza Adobe. |
-| `INSGHT-1002-500` | Errore di servizio | Impossibile elaborare la richiesta a causa di un errore interno. Riprova e, se il problema persiste, contatta l’assistenza Adobe. |
+| `INSGHT-1001-500` | Query delle metriche non riuscita | Si è verificato un errore durante il tentativo di eseguire una query sul database delle metriche a causa di un errore del server. Riprova e, se il problema persiste, contatta il supporto Adobe. |
+| `INSGHT-1002-500` | Errore di servizio | Impossibile elaborare la richiesta a causa di un errore interno. Riprova e, se il problema persiste, contatta il supporto Adobe. |
 | `INSGHT-1003-401` | Errore di convalida della sandbox | Impossibile elaborare la richiesta a causa di un errore di convalida della sandbox. Prima di riprovare a eseguire la richiesta, verifica che il nome della sandbox fornito nell&#39;intestazione `x-sandbox-name` rappresenti una sandbox valida e abilitata per la tua organizzazione. |
 
 {style="table-layout:auto"}

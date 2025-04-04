@@ -1,21 +1,21 @@
 ---
 description: Scopri come configurare le specifiche del server di destinazione in Adobe Experience Platform Destination SDK tramite l’endpoint "/authoring/destination-servers".
-title: Specifiche del server per le destinazioni create con Destination SDK
+title: Specifiche server per le destinazioni create con Destination SDK
 exl-id: 62202edb-a954-42ff-9772-863cea37a889
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2739'
+source-wordcount: '2753'
 ht-degree: 2%
 
 ---
 
-# Specifiche del server per le destinazioni create con Destination SDK
+# Specifiche server per le destinazioni create con Destination SDK
 
-Le specifiche del server di destinazione definiscono il tipo di piattaforma di destinazione che riceverà i dati da Adobe Experience Platform e i parametri di comunicazione tra Platform e la destinazione. Ad esempio:
+Le specifiche del server di destinazione definiscono il tipo di piattaforma di destinazione che riceverà i dati da Adobe Experience Platform e i parametri di comunicazione tra Experience Platform e la destinazione. Ad esempio:
 
-* Una specifica del server di destinazione [streaming](#streaming-example) definisce l&#39;endpoint del server HTTP che riceverà i messaggi HTTP da Platform. Per informazioni su come configurare la formattazione delle chiamate HTTP all&#39;endpoint, leggere la pagina delle specifiche dei [modelli](templating-specs.md).
-* Una specifica del server di destinazione [Amazon S3](#s3-example) definisce il nome e il percorso del bucket [!DNL S3] in cui Platform esporterà i file.
-* Una specifica del server di destinazione [SFTP](#sftp-example) definisce il nome host, la directory radice, la porta di comunicazione e il tipo di crittografia del server SFTP in cui Platform esporterà i file.
+* Una specifica del server di destinazione [streaming](#streaming-example) definisce l&#39;endpoint del server HTTP che riceverà i messaggi HTTP da Experience Platform. Per informazioni su come configurare la formattazione delle chiamate HTTP all&#39;endpoint, leggere la pagina delle specifiche dei [modelli](templating-specs.md).
+* Una specifica del server di destinazione [Amazon S3](#s3-example) definisce il nome e il percorso del bucket [!DNL S3] in cui Experience Platform esporterà i file.
+* Una specifica del server di destinazione [SFTP](#sftp-example) definisce il nome host, la directory radice, la porta di comunicazione e il tipo di crittografia del server SFTP in cui Experience Platform esporterà i file.
 
 Per capire dove questo componente si inserisce in un&#39;integrazione creata con Destination SDK, consulta il diagramma nella documentazione delle [opzioni di configurazione](../configuration-options.md) oppure vedi le seguenti pagine di panoramica sulla configurazione di destinazione:
 
@@ -46,7 +46,7 @@ Quando [crea](../../authoring-api/destination-server/create-destination-server.m
 
 ## Campi hardcoded e template {#templatized-fields}
 
-Durante la creazione di un server di destinazione tramite Destination SDK, è possibile definire i valori dei parametri di configurazione codificandoli nella configurazione o utilizzando campi modello. I campi con modello consentono di leggere i valori forniti dall’utente dall’interfaccia utente di Platform.
+Quando crei un server di destinazione tramite Destination SDK, puoi definire i valori dei parametri di configurazione codificandoli nella configurazione o utilizzando campi modello. I campi con modello consentono di leggere i valori forniti dall’utente dall’interfaccia utente di Experience Platform.
 
 I parametri del server di destinazione hanno due campi configurabili. Queste opzioni determinano se si utilizzano valori hardcoded o template.
 
@@ -59,11 +59,11 @@ I parametri del server di destinazione hanno due campi configurabili. Queste opz
 
 ### Quando utilizzare campi hardcoded e campi con modelli
 
-Sia i campi hardcoded che i campi template hanno un proprio uso nella Destination SDK, a seconda del tipo di integrazione che si sta creando.
+Sia i campi hardcoded che i campi template hanno un proprio utilizzo in Destination SDK, a seconda del tipo di integrazione che stai creando.
 
 **Connessione alla destinazione senza l&#39;input dell&#39;utente**
 
-Quando gli utenti [si connettono alla destinazione](../../../ui/connect-destination.md) nell&#39;interfaccia utente di Platform, è possibile gestire il processo di connessione di destinazione senza l&#39;input degli utenti.
+Quando gli utenti [si connettono alla destinazione](../../../ui/connect-destination.md) nell&#39;interfaccia utente di Experience Platform, è possibile che si desideri gestire il processo di connessione di destinazione senza il relativo input.
 
 A questo scopo, puoi codificare i parametri di connessione della piattaforma di destinazione nelle specifiche del server. Quando si utilizzano valori di parametri hardcoded nella configurazione del server di destinazione, la connessione tra Adobe Experience Platform e la piattaforma di destinazione viene gestita senza alcun input da parte dell’utente.
 
@@ -83,13 +83,13 @@ Nell&#39;esempio seguente, un partner crea un server di destinazione Data Landin
 }
 ```
 
-Di conseguenza, quando gli utenti seguono l&#39;[esercitazione sulla connessione di destinazione](../../../ui/connect-destination.md), non visualizzeranno un [passaggio di autenticazione](../../../ui/connect-destination.md#authenticate). L’autenticazione viene invece gestita da Platform, come illustrato nell’immagine seguente.
+Di conseguenza, quando gli utenti seguono l&#39;[esercitazione sulla connessione di destinazione](../../../ui/connect-destination.md), non visualizzeranno un [passaggio di autenticazione](../../../ui/connect-destination.md#authenticate). L’autenticazione viene invece gestita da Experience Platform, come illustrato nell’immagine seguente.
 
-![Immagine dell&#39;interfaccia utente che mostra la schermata di autenticazione tra Platform e una destinazione DLZ.](../../assets/functionality/destination-server/server-spec-hardcoded.png)
+![Immagine dell&#39;interfaccia utente che mostra la schermata di autenticazione tra Experience Platform e una destinazione DLZ.](../../assets/functionality/destination-server/server-spec-hardcoded.png)
 
 **Connessione alla destinazione con l&#39;input dell&#39;utente**
 
-Quando la connessione tra Platform e la destinazione deve essere stabilita in base a un input specifico dell’utente nell’interfaccia utente di Platform, ad esempio la selezione di un endpoint API o la fornitura di un valore di campo, puoi utilizzare i campi modello nelle specifiche del server per leggere l’input dell’utente e connettersi alla piattaforma di destinazione.
+Quando la connessione tra Experience Platform e la destinazione deve essere stabilita in base a un input specifico dell’utente nell’interfaccia utente di Experience Platform, ad esempio la selezione di un endpoint API o la fornitura di un valore di campo, puoi utilizzare i campi con modelli nelle specifiche del server per leggere l’input dell’utente e connettersi alla piattaforma di destinazione.
 
 Nell&#39;esempio seguente, un partner crea un&#39;integrazione [in tempo reale (streaming)](#streaming-example) e il campo `url.value` utilizza il parametro `{{customerData.region}}` modello per personalizzare parte dell&#39;endpoint API in base all&#39;input dell&#39;utente.
 
@@ -106,7 +106,7 @@ Nell&#39;esempio seguente, un partner crea un&#39;integrazione [in tempo reale (
 }
 ```
 
-Per consentire agli utenti di selezionare un valore dall&#39;interfaccia utente di Platform, il parametro `region` deve essere definito anche nella [configurazione di destinazione](../../authoring-api/destination-configuration/create-destination-configuration.md) come campo dati cliente, come illustrato di seguito:
+Per consentire agli utenti di selezionare un valore dall&#39;interfaccia utente di Experience Platform, il parametro `region` deve essere definito anche nella [configurazione di destinazione](../../authoring-api/destination-configuration/create-destination-configuration.md) come campo dati cliente, come illustrato di seguito:
 
 ```json
 "customerDataFields":[
@@ -151,10 +151,10 @@ L’esempio seguente mostra un esempio di configurazione del server di destinazi
 
 | Parametro | Tipo | Descrizione |
 |---|---|---|
-| `name` | Stringa | *Obbligatorio.* Rappresenta un nome descrittivo del server, visibile solo agli Adobi. Questo nome non è visibile ai partner o ai clienti. Esempio: `Moviestar destination server`. |
+| `name` | Stringa | *Obbligatorio.* Rappresenta un nome descrittivo del server, visibile solo ad Adobe. Questo nome non è visibile ai partner o ai clienti. Esempio: `Moviestar destination server`. |
 | `destinationServerType` | Stringa | *Obbligatorio.* Imposta questo su `URL_BASED` per le destinazioni di streaming. |
-| `templatingStrategy` | Stringa | *Obbligatorio.* <ul><li>Usa `PEBBLE_V1` se nel campo `value` utilizzi un campo con modello invece di un valore hardcoded. Utilizzare questa opzione se si dispone di un endpoint come `https://api.moviestar.com/data/{{customerData.region}}/items`, in cui gli utenti devono selezionare l&#39;area dell&#39;endpoint dall&#39;interfaccia utente di Platform. </li><li> Utilizzare `NONE` se non è necessaria alcuna trasformazione modellata sul lato Adobe, ad esempio se si dispone di un endpoint come: `https://api.moviestar.com/data/items` </li></ul> |
-| `value` | Stringa | *Obbligatorio.* Inserire l&#39;indirizzo dell&#39;endpoint API a cui l&#39;Experience Platform deve connettersi. |
+| `templatingStrategy` | Stringa | *Obbligatorio.* <ul><li>Usa `PEBBLE_V1` se nel campo `value` utilizzi un campo con modello invece di un valore hardcoded. Utilizzare questa opzione se si dispone di un endpoint come: `https://api.moviestar.com/data/{{customerData.region}}/items`, in cui gli utenti devono selezionare l&#39;area dell&#39;endpoint dall&#39;interfaccia utente di Experience Platform. </li><li> Usa `NONE` se non è necessaria alcuna trasformazione modellata sul lato Adobe, ad esempio se hai un endpoint come: `https://api.moviestar.com/data/items` </li></ul> |
+| `value` | Stringa | *Obbligatorio.* Inserire l&#39;indirizzo dell&#39;endpoint API a cui Experience Platform deve connettersi. |
 
 {style="table-layout:auto"}
 
@@ -185,7 +185,7 @@ L’esempio seguente mostra un esempio di configurazione del server di destinazi
 |---|---|---|
 | `name` | Stringa | Il nome del server di destinazione. |
 | `destinationServerType` | Stringa | Imposta questo valore in base alla piattaforma di destinazione. Per esportare i file in un bucket [!DNL Amazon S3], impostarlo su `FILE_BASED_S3`. |
-| `fileBasedS3Destination.bucket.templatingStrategy` | Stringa | *Richiesto*. Impostare questo valore in base al tipo di valore utilizzato nel campo `bucket.value`.<ul><li>Se desideri che gli utenti inseriscano il proprio nome di bucket nell&#39;interfaccia utente Experience Platform, imposta questo valore su `PEBBLE_V1`. In questo caso, è necessario formattare il campo `value` per leggere un valore dai [campi dati cliente](../destination-configuration/customer-data-fields.md) compilati dall&#39;utente. Questo caso d’uso è illustrato nell’esempio precedente.</li><li>Se per l&#39;integrazione utilizzi un nome di bucket hardcoded, ad esempio `"bucket.value":"MyBucket"`, imposta questo valore su `NONE`.</li></ul> |
+| `fileBasedS3Destination.bucket.templatingStrategy` | Stringa | *Richiesto*. Impostare questo valore in base al tipo di valore utilizzato nel campo `bucket.value`.<ul><li>Se desideri che gli utenti inseriscano il proprio nome di bucket nell&#39;interfaccia utente di Experience Platform, imposta questo valore su `PEBBLE_V1`. In questo caso, è necessario formattare il campo `value` per leggere un valore dai [campi dati cliente](../destination-configuration/customer-data-fields.md) compilati dall&#39;utente. Questo caso d’uso è illustrato nell’esempio precedente.</li><li>Se per l&#39;integrazione utilizzi un nome di bucket hardcoded, ad esempio `"bucket.value":"MyBucket"`, imposta questo valore su `NONE`.</li></ul> |
 | `fileBasedS3Destination.bucket.value` | Stringa | Nome del bucket [!DNL Amazon S3] che deve essere utilizzato da questa destinazione. Può trattarsi di un campo modello che leggerà il valore dai [campi dati cliente](../destination-configuration/customer-data-fields.md) compilati dall&#39;utente (come mostrato nell&#39;esempio precedente) o di un valore hardcoded, ad esempio `"value":"MyBucket"`. |
 | `fileBasedS3Destination.path.templatingStrategy` | Stringa | *Richiesto*. Impostare questo valore in base al tipo di valore utilizzato nel campo `path.value`.<ul><li>Se desideri che gli utenti inseriscano il proprio percorso nell&#39;interfaccia utente di Experience Platform, imposta questo valore su `PEBBLE_V1`. In questo caso, è necessario formattare il campo `path.value` per leggere un valore dai [campi dati cliente](../destination-configuration/customer-data-fields.md) compilati dall&#39;utente. Questo caso d’uso è illustrato nell’esempio precedente.</li><li>Se per l&#39;integrazione si utilizza un percorso hardcoded, ad esempio `"bucket.value":"/path/to/MyBucket"`, impostare questo valore su `NONE`.</li></ul> |
 | `fileBasedS3Destination.path.value` | Stringa | Percorso del bucket [!DNL Amazon S3] da utilizzare per questa destinazione. Può trattarsi di un campo modello che leggerà il valore dai [campi dati cliente](../destination-configuration/customer-data-fields.md) compilati dall&#39;utente (come mostrato nell&#39;esempio precedente) o di un valore hardcoded, ad esempio `"value":"/path/to/MyBucket"`. |
@@ -221,9 +221,9 @@ L’esempio seguente mostra un esempio di configurazione del server di destinazi
 |---|---|---|
 | `name` | Stringa | Il nome del server di destinazione. |
 | `destinationServerType` | Stringa | Imposta questo valore in base alla piattaforma di destinazione. Per esportare i file in una destinazione [!DNL SFTP], impostarla su `FILE_BASED_SFTP`. |
-| `fileBasedSFTPDestination.rootDirectory.templatingStrategy` | Stringa | *Richiesto*. Impostare questo valore in base al tipo di valore utilizzato nel campo `rootDirectory.value`.<ul><li>Se si desidera che gli utenti inseriscano il proprio percorso di directory principale nell&#39;interfaccia utente di Experience Platform, impostare questo valore su `PEBBLE_V1`. In questo caso, è necessario formattare il campo `rootDirectory.value` per leggere un valore fornito dall&#39;utente dai [campi dati cliente](../destination-configuration/customer-data-fields.md) compilati dall&#39;utente. Questo caso d’uso è illustrato nell’esempio precedente.</li><li>Se per l&#39;integrazione si utilizza un percorso di directory principale hardcoded, ad esempio `"rootDirectory.value":"Storage/MyDirectory"`, impostare questo valore su `NONE`.</li></ul> |
+| `fileBasedSFTPDestination.rootDirectory.templatingStrategy` | Stringa | *Richiesto*. Impostare questo valore in base al tipo di valore utilizzato nel campo `rootDirectory.value`.<ul><li>Se desideri che gli utenti inseriscano il proprio percorso di directory principale nell&#39;interfaccia utente di Experience Platform, imposta questo valore su `PEBBLE_V1`. In questo caso, è necessario formattare il campo `rootDirectory.value` per leggere un valore fornito dall&#39;utente dai [campi dati cliente](../destination-configuration/customer-data-fields.md) compilati dall&#39;utente. Questo caso d’uso è illustrato nell’esempio precedente.</li><li>Se per l&#39;integrazione si utilizza un percorso di directory principale hardcoded, ad esempio `"rootDirectory.value":"Storage/MyDirectory"`, impostare questo valore su `NONE`.</li></ul> |
 | `fileBasedSFTPDestination.rootDirectory.value` | Stringa | Percorso della directory che ospiterà i file esportati. Può trattarsi di un campo modello che leggerà il valore dai [campi dati cliente](../destination-configuration/customer-data-fields.md) compilati dall&#39;utente (come mostrato nell&#39;esempio precedente) o di un valore hardcoded, ad esempio `"value":"Storage/MyDirectory"` |
-| `fileBasedSFTPDestination.hostName.templatingStrategy` | Stringa | *Richiesto*. Impostare questo valore in base al tipo di valore utilizzato nel campo `hostName.value`.<ul><li>Se desideri che gli utenti inseriscano il proprio nome host nell&#39;interfaccia utente Experience Platform, imposta questo valore su `PEBBLE_V1`. In questo caso, è necessario formattare il campo `hostName.value` per leggere un valore fornito dall&#39;utente dai [campi dati cliente](../destination-configuration/customer-data-fields.md) compilati dall&#39;utente. Questo caso d’uso è illustrato nell’esempio precedente.</li><li>Se per l&#39;integrazione si utilizza un nome host hardcoded, ad esempio `"hostName.value":"my.hostname.com"`, impostare questo valore su `NONE`.</li></ul> |
+| `fileBasedSFTPDestination.hostName.templatingStrategy` | Stringa | *Richiesto*. Impostare questo valore in base al tipo di valore utilizzato nel campo `hostName.value`.<ul><li>Se desideri che gli utenti inseriscano il proprio nome host nell&#39;interfaccia utente di Experience Platform, imposta questo valore su `PEBBLE_V1`. In questo caso, è necessario formattare il campo `hostName.value` per leggere un valore fornito dall&#39;utente dai [campi dati cliente](../destination-configuration/customer-data-fields.md) compilati dall&#39;utente. Questo caso d’uso è illustrato nell’esempio precedente.</li><li>Se per l&#39;integrazione si utilizza un nome host hardcoded, ad esempio `"hostName.value":"my.hostname.com"`, impostare questo valore su `NONE`.</li></ul> |
 | `fileBasedSFTPDestination.hostName.value` | Stringa | Il nome host del server SFTP. Può trattarsi di un campo modello che leggerà il valore dai [campi dati cliente](../destination-configuration/customer-data-fields.md) compilati dall&#39;utente (come mostrato nell&#39;esempio precedente) o di un valore hardcoded, ad esempio `"hostName.value":"my.hostname.com"`. |
 | `port` | Intero | Porta del file server SFTP. |
 | `encryptionMode` | Stringa | Indica se utilizzare la crittografia file. Valori supportati: <ul><li>PGP</li><li>Nessuna</li></ul> |
@@ -285,7 +285,7 @@ Nell&#39;esempio seguente viene illustrato un esempio di configurazione del serv
 |---|---|---|
 | `name` | Stringa | Nome della connessione di destinazione. |
 | `destinationServerType` | Stringa | Imposta questo valore in base alla piattaforma di destinazione. Per [!DNL Azure Blob Storage] destinazioni, impostare su `FILE_BASED_AZURE_BLOB`. |
-| `fileBasedAzureBlobDestination.path.templatingStrategy` | Stringa | *Richiesto*. Impostare questo valore in base al tipo di valore utilizzato nel campo `path.value`.<ul><li>Se si desidera che gli utenti immettano il proprio [!DNL Azure Blob] [URI dell&#39;account di archiviazione](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction) nell&#39;interfaccia utente di Experience Platform, impostare questo valore su `PEBBLE_V1`. In questo caso, è necessario formattare il campo `path.value` per leggere il valore dai [campi dati cliente](../destination-configuration/customer-data-fields.md) compilati dall&#39;utente. Questo caso d’uso è illustrato nell’esempio precedente.</li><li>Se per l&#39;integrazione si utilizza un percorso hardcoded, ad esempio `"path.value": "https://myaccount.blob.core.windows.net/"`, impostare questo valore su `NONE`. |
+| `fileBasedAzureBlobDestination.path.templatingStrategy` | Stringa | *Richiesto*. Impostare questo valore in base al tipo di valore utilizzato nel campo `path.value`.<ul><li>Se si desidera che gli utenti immettano il proprio [!DNL Azure Blob] [URI account di archiviazione](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction) nell&#39;interfaccia utente di Experience Platform, impostare questo valore su `PEBBLE_V1`. In questo caso, è necessario formattare il campo `path.value` per leggere il valore dai [campi dati cliente](../destination-configuration/customer-data-fields.md) compilati dall&#39;utente. Questo caso d’uso è illustrato nell’esempio precedente.</li><li>Se per l&#39;integrazione si utilizza un percorso hardcoded, ad esempio `"path.value": "https://myaccount.blob.core.windows.net/"`, impostare questo valore su `NONE`. |
 | `fileBasedAzureBlobDestination.path.value` | Stringa | Percorso dell&#39;archivio [!DNL Azure Blob]. Può trattarsi di un campo modello che leggerà il valore dai [campi dati cliente](../destination-configuration/customer-data-fields.md) compilati dall&#39;utente (come mostrato nell&#39;esempio precedente) o di un valore hardcoded, ad esempio `https://myaccount.blob.core.windows.net/`. |
 | `fileBasedAzureBlobDestination.container.templatingStrategy` | Stringa | *Richiesto*. Impostare questo valore in base al tipo di valore utilizzato nel campo `container.value`.<ul><li>Se desideri che gli utenti inseriscano il proprio [!DNL Azure Blob] [nome contenitore](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction) nell&#39;interfaccia utente di Experience Platform, imposta questo valore su `PEBBLE_V1`. In questo caso, è necessario formattare il campo `container.value` per leggere il valore dai [campi dati cliente](../destination-configuration/customer-data-fields.md) compilati dall&#39;utente. Questo caso d’uso è illustrato nell’esempio precedente.</li><li>Se per l&#39;integrazione si utilizza un nome di contenitore hardcoded, ad esempio `"path.value: myContainer"`, impostare questo valore su `NONE`. |
 | `fileBasedAzureBlobDestination.container.value` | Stringa | Nome del contenitore di archiviazione BLOB di Azure da utilizzare per questa destinazione. Può trattarsi di un campo modello che leggerà il valore dai [campi dati cliente](../destination-configuration/customer-data-fields.md) compilati dall&#39;utente (come mostrato nell&#39;esempio precedente) o di un valore hardcoded, ad esempio `myContainer`. |
@@ -294,7 +294,7 @@ Nell&#39;esempio seguente viene illustrato un esempio di configurazione del serv
 
 ## Server di destinazione [!DNL Data Landing Zone] ([!DNL DLZ]) {#dlz-example}
 
-Questo server di destinazione consente di esportare i file contenenti i dati di Platform in un archivio [[!DNL Data Landing Zone]](../../../catalog/cloud-storage/data-landing-zone.md).
+Questo server di destinazione consente di esportare i file contenenti dati di Experience Platform in un archivio [[!DNL Data Landing Zone]](../../../catalog/cloud-storage/data-landing-zone.md).
 
 Nell&#39;esempio seguente viene illustrato un esempio di configurazione del server di destinazione per una destinazione [!DNL Data Landing Zone] ([!DNL DLZ]).
 
@@ -323,7 +323,7 @@ Nell&#39;esempio seguente viene illustrato un esempio di configurazione del serv
 
 ## Server di destinazione [!DNL Google Cloud Storage] {#gcs-example}
 
-Questo server di destinazione ti consente di esportare i file contenenti i dati di Platform nel tuo account [!DNL Google Cloud Storage].
+Questo server di destinazione ti consente di esportare i file contenenti dati di Experience Platform nel tuo account [!DNL Google Cloud Storage].
 
 Nell&#39;esempio seguente viene illustrato un esempio di configurazione del server di destinazione per una destinazione [!DNL Google Cloud Storage].
 

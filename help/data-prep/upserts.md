@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;preparazione dati;preparaz
 title: Inviare Aggiornamenti Parziali Delle Righe A Real-Time Customer Profile Tramite La Preparazione Dei Dati
 description: Scopri come inviare aggiornamenti parziali delle righe a Real-Time Customer Profile utilizzando la preparazione dati.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: d62a61f44b27c0be882b5f29bfad5e423af7a1ca
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1360'
+source-wordcount: '1361'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->* L’acquisizione dei messaggi di aggiornamento entità di Experience Data Model (XDM) (con operazioni JSON PATCH) per gli aggiornamenti del profilo tramite l’ingresso DCS è stata dichiarata obsoleta. In alternativa, segui i passaggi descritti in questa guida.
+>* L’acquisizione dei messaggi di aggiornamento entità di Experience Data Model (XDM) (con operazioni PATCH JSON) per gli aggiornamenti del profilo tramite l’ingresso DCS è stata dichiarata obsoleta. In alternativa, segui i passaggi descritti in questa guida.
 >
 >* Puoi anche utilizzare l&#39;origine API HTTP per [acquisire dati non elaborati nell&#39;ingresso DCS](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection) e specificare le mappature di dati necessarie per trasformare i dati in messaggi conformi a XDM per gli aggiornamenti del profilo.
 >
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Utilizzare gli upsert di streaming in [!DNL Data Prep] per inviare aggiornamenti di riga parziali ai dati [!DNL Real-Time Customer Profile], creando e stabilendo nuovi collegamenti di identità con una singola richiesta API.
 
-Con gli aggiornamenti in streaming, è possibile mantenere il formato dei dati durante la traduzione in [!DNL Real-Time Customer Profile] richieste PATCH durante l&#39;acquisizione. In base agli input forniti, [!DNL Data Prep] ti consente di inviare un singolo payload API e tradurre i dati sia alle richieste [!DNL Real-Time Customer Profile] PATCH che a quelle [!DNL Identity Service] CREATE.
+Gli aggiornamenti in streaming consentono di mantenere il formato dei dati durante la traduzione in [!DNL Real-Time Customer Profile] richieste PATCH durante l&#39;acquisizione. In base agli input forniti, [!DNL Data Prep] consente di inviare un singolo payload API e tradurre i dati sia in [!DNL Real-Time Customer Profile] richieste PATCH che in [!DNL Identity Service] richieste CREATE.
 
 [!DNL Data Prep] utilizza i parametri di intestazione per distinguere tra inserti e inserti successivi. Tutte le righe che utilizzano i upsert devono avere un&#39;intestazione. Puoi utilizzare i upsert con o senza descrittori di identità. Se utilizzi upsert con identità, devi seguire i passaggi di configurazione descritti nella sezione relativa alla [configurazione del set di dati di identità](#configure-the-identity-dataset). Se utilizzi server upsert senza identità, non è necessario fornire configurazioni di identità nella richiesta. Leggi la sezione su [aggiornamenti in streaming senza identità](#payload-without-identity-configuration) per ulteriori informazioni.
 
@@ -39,7 +39,7 @@ Questa panoramica richiede una buona conoscenza dei seguenti componenti di Adobe
 * [[!DNL Data Prep]](./home.md): [!DNL Data Prep] consente ai data engineer di mappare, trasformare e convalidare i dati da e verso Experience Data Model (XDM).
 * [[!DNL Identity Service]](../identity-service/home.md): Ottieni una migliore visualizzazione dei singoli clienti e del loro comportamento collegando le identità tra dispositivi e sistemi.
 * [Profilo cliente in tempo reale](../profile/home.md): fornisce un profilo cliente unificato in tempo reale basato su dati aggregati provenienti da più origini.
-* [Origini](../sources/home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
+* [Origini](../sources/home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Experience Platform.
 
 ## Usa gli aggiornamenti in streaming in [!DNL Data Prep] {#streaming-upserts-in-data-prep}
 

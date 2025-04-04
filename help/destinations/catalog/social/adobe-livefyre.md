@@ -1,11 +1,11 @@
 ---
 keywords: livefyre;estensione livefyre
 title: Estensione Adobe Livefyre
-description: L'Adobe dell'estensione Livefyre è una destinazione social in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità dell’estensione, consulta la pagina dell’estensione nell’Adobe Exchange.
+description: L’estensione Adobe Livefyre è una destinazione social in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità dell’estensione, consulta la pagina dell’estensione su Adobe Exchange.
 exl-id: a134c144-e7b8-4d48-8c90-5999e5ceb8a0
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '443'
 ht-degree: 3%
 
 ---
@@ -16,23 +16,23 @@ ht-degree: 3%
 
 Adobe Livefyre ti consente di scoprire, organizzare e pubblicare un flusso costante di contenuti generati dagli utenti sul tuo sito web per creare esperienze autentiche e altamente personalizzate.
 
-L&#39;Adobe Livefyre è un&#39;estensione per social network in Adobe Experience Platform. Per ulteriori informazioni sull&#39;Adobe Livefyre, leggere la [Guida all&#39;implementazione di Livefyre](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html).
+Adobe Livefyre è un’estensione per social network in Adobe Experience Platform. Per ulteriori informazioni su Adobe Livefyre, consulta la [Guida all&#39;implementazione di Livefyre](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html).
 
-Questa destinazione è un’estensione tag. Per ulteriori informazioni sul funzionamento delle estensioni tag in Platform, consulta la [panoramica sulle estensioni tag](../launch-extensions/overview.md).
+Questa destinazione è un’estensione tag. Per ulteriori informazioni sul funzionamento delle estensioni tag in Experience Platform, consulta la [panoramica sulle estensioni tag](../launch-extensions/overview.md).
 
-![Estensione Livefyre Adobe](../../assets/catalog/social/adobe-livefyre/catalog.png)
+![Estensione Adobe Livefyre](../../assets/catalog/social/adobe-livefyre/catalog.png)
 
 ## Prerequisiti {#prerequisites}
 
-Questa estensione è disponibile nel catalogo [!DNL Destinations] per tutti i clienti che hanno acquistato Platform.
+Questa estensione è disponibile nel catalogo [!DNL Destinations] per tutti i clienti che hanno acquistato Experience Platform.
 
 Per utilizzare questa estensione, è necessario accedere ai tag in Adobe Experience Platform. I tag sono offerti ai clienti di Adobe Experience Cloud come funzionalità inclusa a valore aggiunto. Contatta l&#39;amministratore dell&#39;organizzazione per ottenere l&#39;accesso ai tag e chiedi loro di concederti l&#39;autorizzazione **[!UICONTROL manage_properties]** in modo da poter installare le estensioni.
 
 ## Installa estensione {#install-extension}
 
-Per installare l’estensione Adobe Livefyre:
+Per installare l&#39;estensione Adobe Livefyre:
 
-Nell&#39;interfaccia [Platform](https://platform.adobe.com/), vai a **[!UICONTROL Destinazioni]** > **[!UICONTROL Catalogo]**.
+Nell&#39;interfaccia [Experience Platform](https://platform.adobe.com/), vai a **[!UICONTROL Destinazioni]** > **[!UICONTROL Catalogo]**.
 
 Seleziona l’estensione dal catalogo o utilizza la barra di ricerca.
 

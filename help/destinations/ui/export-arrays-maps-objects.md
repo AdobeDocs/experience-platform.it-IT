@@ -3,9 +3,9 @@ title: Esportazione di array, mappe e oggetti da Real-Time CDP
 type: Tutorial
 description: Scopri come esportare array, mappe e oggetti da Real-Time CDP a destinazioni di archiviazione cloud.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 2d59a92d7ff1e0be7977a90df460190a3b417809
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1095'
+source-wordcount: '1096'
 ht-degree: 13%
 
 ---
@@ -42,7 +42,7 @@ Ottieni le informazioni più importanti sulle funzionalità in questa sezione e 
 * È possibile esportare array, mappe e oggetti nelle destinazioni di archiviazione cloud in `JSON` e `Parquet` file. Per le destinazioni di personalizzazione enterprise e edge, il tipo di dati esportato è `JSON`. Sono supportati gli utenti e i potenziali tipi di pubblico, ma non i tipi di pubblico dell’account.
 * Per le destinazioni dell&#39;archiviazione cloud basata su file, *è possibile* esportare array, mappe e oggetti in file CSV, ma solo utilizzando la funzionalità dei campi calcolati e concatenandoli in una stringa utilizzando la funzione `array_to_string`.
 
-## Array e altri tipi di oggetti in Platform {#arrays-strings-other-objects}
+## Array e altri tipi di oggetti in Experience Platform {#arrays-strings-other-objects}
 
 In Experience Platform puoi utilizzare [schemi XDM](/help/xdm/home.md) per gestire diversi tipi di campi. Prima di aggiungere il supporto per le esportazioni di array, era possibile esportare campi di tipo coppia chiave-valore semplici, come le stringhe, da Experience Platform nelle destinazioni desiderate. Un esempio di questo campo precedentemente supportato per l&#39;esportazione è `personalEmail.address`:`johndoe@acme.org`.
 

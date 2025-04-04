@@ -4,9 +4,9 @@ description: Zeta Marketing Platform (ZMP) è un sistema basato su cloud che con
 hide: true
 hidefromtoc: true
 exl-id: 291ee60c-aa81-4f1e-9df2-9905a8eeb612
-source-git-commit: 0c3c192105146dd949e9b11f8925bf4f9d7c15c0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1352'
+source-wordcount: '1356'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 Zeta Marketing Platform (ZMP) è un sistema basato su cloud che consente di acquisire, crescere e mantenere i clienti in modo più efficiente, grazie all’intelligenza (dati proprietari e AI). Per ulteriori dettagli, fare riferimento a [Zeta Global](https://zetaglobal.com/).
 
-Con il connettore Zeta Marketing Platform disponibile in Adobe Experience Platform, puoi sincronizzare facilmente i tipi di pubblico da Experience Platform a ZMP.
+Con il connettore Zeta Marketing Platform disponibile in Adobe Experience Platform, puoi sincronizzare facilmente i tipi di pubblico da Experience Platform allo ZMP.
 
 >[!IMPORTANT]
 >
@@ -31,14 +31,14 @@ Un addetto al marketing vuole creare profili di pubblico univoci, identificare i
 
 ### Eseguire il targeting degli utenti con annunci pubblicitari {#use-case-target-users}
 
-Un inserzionista mira a indirizzare gli utenti all’interno di tipi di pubblico specifici tramite il Demand Side Platform Zeta (DSP), in quanto tali utenti interagiscono con i loro marchi. Per ulteriori informazioni sull&#39;DSP Zeta, fai clic [qui](https://knowledgebase.zetaglobal.com/pug/).
+Un inserzionista mira a indirizzare gli utenti all’interno di tipi di pubblico specifici tramite Zeta Demand Side Platform (DSP), in quanto tali utenti interagiscono con i loro marchi. Per ulteriori informazioni su Zeta DSP, fai clic [qui](https://knowledgebase.zetaglobal.com/pug/).
 
 ## Prerequisiti {#prerequisites}
 
 ### Prerequisiti per la piattaforma Zeta Marketing
 
 * Prima di impostare una nuova connessione alla destinazione Zeta Marketing Platform, è necessario creare un elenco di clienti vuoto nell’account Zeta Marketing Platform. Devi scegliere uno di questi elenchi di clienti come destinazione designata per ricevere il pubblico Adobe Experience Platform che intendi inviare. Puoi creare un elenco clienti vuoto nello ZMP seguendo le istruzioni [qui](https://knowledgebase.zetaglobal.com/kb/creating-audiences#CreatingAudiences-CreatingaCustomerList).
-* Anche se Adobe Experience Platform consente l’attivazione di più tipi di pubblico a una particolare istanza di destinazione ZMP, è obbligatorio che ogni istanza di destinazione ZMP riceva un solo pubblico di Experience Platform. Per gestire più tipi di pubblico dall’Experience Platform, crea altre istanze di destinazione ZMP per ciascun pubblico e seleziona un elenco di clienti diverso dal menu a discesa. Questo approccio assicura che i tipi di pubblico ZMP di destinazione non vengano sovrascritti. Per ulteriori dettagli, vedi [Inserisci i dettagli della destinazione](#destination-details).
+* Sebbene Adobe Experience Platform consenta l’attivazione di più tipi di pubblico a una particolare istanza di destinazione ZMP, è obbligatorio che ogni istanza di destinazione ZMP riceva un solo pubblico Experience Platform. Per gestire più tipi di pubblico da Experience Platform, crea altre istanze di destinazione ZMP per ciascun pubblico e seleziona un elenco di clienti diverso dal menu a discesa. Questo approccio assicura che i tipi di pubblico ZMP di destinazione non vengano sovrascritti. Per ulteriori dettagli, vedi [Inserisci i dettagli della destinazione](#destination-details).
 * Utilizza le seguenti credenziali per configurare la destinazione:
    * Nome utente: **api**
    * Password: la chiave API REST ZMP. Puoi trovare la tua chiave REST API accedendo al tuo account ZMP e passando alla sezione **Impostazioni** > **Integrazioni** > **Chiavi e app**. Per ulteriori dettagli, consulta la [documentazione ZMP](https://knowledgebase.zetaglobal.com/kb/integrations).
@@ -53,7 +53,7 @@ Un inserzionista mira a indirizzare gli utenti all’interno di tipi di pubblico
 | Identità di destinazione | Descrizione | Considerazioni | Note |
 ---------|----------|----------|----------|
 | uid | ID univoco utilizzato da ZMP per differenziare i profili dei clienti | Obbligatorio | Scegliere lo spazio dei nomi dell&#39;identità standard `Email` se si desidera identificare profili univoci utilizzando i relativi indirizzi e-mail. In alternativa, puoi scegliere di mappare lo spazio dei nomi personalizzato su `uid` se i profili cliente non hanno un messaggio e-mail. |
-| email_md5_id | Invia un messaggio e-mail MD5 che rappresenta ogni profilo cliente | Facoltativo | Scegli questa identità di destinazione quando intendi identificare in modo univoco i profili dei clienti utilizzando i valori e-mail MD5. È essenziale che gli indirizzi e-mail siano già in formato MD5 nell’Experience Platform, in quanto Platform non converte il testo normale in MD5. In questo scenario, impostare `uid` (obbligatorio) sugli stessi valori di e-mail MD5 o su un altro spazio dei nomi di identità appropriato. |
+| email_md5_id | Invia un messaggio e-mail MD5 che rappresenta ogni profilo cliente | Facoltativo | Scegli questa identità di destinazione quando intendi identificare in modo univoco i profili dei clienti utilizzando i valori e-mail MD5. È essenziale che gli indirizzi e-mail siano già in formato MD5 in Experience Platform, in quanto Experience Platform non converte il testo normale in MD5. In questo scenario, impostare `uid` (obbligatorio) sugli stessi valori di e-mail MD5 o su un altro spazio dei nomi di identità appropriato. |
 
 {style="table-layout:auto"}
 
@@ -63,13 +63,13 @@ Questa sezione descrive il tipo di pubblico che puoi esportare in questa destina
 
 | Origine pubblico | Supportato | Descrizione |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite il servizio di segmentazione [Experience Platform](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
 | Caricamenti personalizzati | X | Tipi di pubblico [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
-> Man mano che i singoli membri vengono aggiunti o rimossi dal pubblico di Platform, gli aggiornamenti verranno inviati allo ZMP per garantire che l’elenco dei clienti di destinazione sia sincronizzato di conseguenza.
+> Man mano che i singoli membri vengono aggiunti o rimossi dal pubblico di Experience Platform, gli aggiornamenti verranno inviati allo ZMP per garantire che l’elenco dei clienti di destinazione sia sincronizzato di conseguenza.
 
 ## Tipo e frequenza di esportazione {#export-type-frequency}
 
@@ -104,7 +104,7 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
 * **[!UICONTROL Nome]**: un nome con cui riconoscerai questa destinazione in futuro.
 * **[!UICONTROL Descrizione]**: una descrizione che ti aiuterà a identificare questa destinazione in futuro.
 * **[!UICONTROL ID sito account ZMP]**: **ID sito** ZMP a cui desideri inviare i tipi di pubblico. Per visualizzare l&#39;ID sito, vai alla sezione **Impostazioni** > **Integrazioni** > **Chiavi e app**. Ulteriori informazioni sono disponibili [qui](https://knowledgebase.zetaglobal.com/kb/integrations).
-* **[!UICONTROL Segmento ZMP]**: il segmento dell&#39;elenco clienti nell&#39;account ID sito ZMP che desideri aggiornare con il pubblico di Platform.
+* **[!UICONTROL Segmento ZMP]**: il segmento dell&#39;elenco clienti nell&#39;account ID sito ZMP che desideri aggiornare con il pubblico di Experience Platform.
 
 ### Abilita avvisi {#enable-alerts}
 
@@ -131,7 +131,7 @@ Selezione dei campi di origine:
 
 Selezione dei campi di destinazione:
 * (Obbligatorio) Seleziona `uid` come identità di destinazione per la quale mappi uno spazio dei nomi dell&#39;identità di origine.
-* (Facoltativo) Selezionare `email_md5_id` come identità di destinazione per la quale è stato mappato lo spazio dei nomi dell&#39;identità di origine che rappresenta i valori di posta elettronica md5. È essenziale che gli indirizzi e-mail siano già in formato MD5 nell’Experience Platform, in quanto Platform non converte il testo normale in MD5
+* (Facoltativo) Selezionare `email_md5_id` come identità di destinazione per la quale è stato mappato lo spazio dei nomi dell&#39;identità di origine che rappresenta i valori di posta elettronica md5. È essenziale che gli indirizzi e-mail siano già in formato MD5 in Experience Platform, in quanto Experience Platform non converte il testo normale in MD5
 * Se necessario, seleziona eventuali mappature di destinazione aggiuntive.
 
 ![Mappatura identità](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-mapping-example.png)

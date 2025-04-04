@@ -3,9 +3,9 @@ title: Creare una connessione Source Customer.io e un flusso di dati nell’inte
 description: Scopri come creare una connessione di origine Customer.io utilizzando l’interfaccia utente di Adobe Experience Platform.
 badge: Beta
 exl-id: 7655a34c-808a-46e3-94e3-022a433755a4
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1213'
+source-wordcount: '1225'
 ht-degree: 1%
 
 ---
@@ -53,25 +53,25 @@ Prima di creare una connessione di origine [!DNL Customer.io], è necessario spe
 }
 ```
 
-### Crea uno schema di Platform per [!DNL Customer.io] {#create-platform-schema}
+### Crea uno schema Experience Platform per [!DNL Customer.io] {#create-platform-schema}
 
-Devi anche assicurarti di creare uno schema Platform da utilizzare per la tua origine. Consulta il tutorial su [creazione di uno schema di Platform](../../../../../xdm/schema/composition.md) per i passaggi completi sulla creazione di uno schema.
+Devi anche assicurarti di creare uno schema Experience Platform da utilizzare per la tua origine. Consulta il tutorial su [creazione di uno schema Experience Platform](../../../../../xdm/schema/composition.md) per i passaggi completi sulla creazione di uno schema.
 
-![Schermata dell&#39;interfaccia utente di Platform che mostra un esempio di schema per Customer.io](../../../../images/tutorials/create/marketing-automation/customerio-webhook/schema.png)
+![Schermata dell&#39;interfaccia utente di Experience Platform che mostra un esempio di schema per Customer.io](../../../../images/tutorials/create/marketing-automation/customerio-webhook/schema.png)
 
 ## Connetti il tuo account [!DNL Customer.io] {#connect-account}
 
-Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini] e visualizzare un catalogo delle origini disponibili in Experience Platform.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini] e visualizzare un catalogo delle origini disponibili in Experience Platform.
 
 Utilizza il menu *[!UICONTROL Categorie]* per filtrare le origini per categoria. In alternativa, immettere un nome di origine nella barra di ricerca per trovare un&#39;origine specifica dal catalogo.
 
 Vai alla categoria [!UICONTROL Automazione marketing] per visualizzare la scheda di origine [!DNL Customer.io]. Per iniziare, selezionare **[!UICONTROL Aggiungi dati]**.
 
-![Schermata dell&#39;interfaccia utente di Platform per il catalogo con scheda Customer.io](../../../../images/tutorials/create/marketing-automation/customerio-webhook/catalog.png)
+![Schermata dell&#39;interfaccia utente di Experience Platform per il catalogo con la scheda Customer.io](../../../../images/tutorials/create/marketing-automation/customerio-webhook/catalog.png)
 
 ## Selezionare i dati {#select-data}
 
-Viene visualizzato il passaggio **[!UICONTROL Seleziona dati]**, che fornisce un&#39;interfaccia per la selezione dei dati da inserire in Platform.
+Viene visualizzato il passaggio **[!UICONTROL Seleziona dati]**, che fornisce un&#39;interfaccia per la selezione dei dati da portare in Experience Platform.
 
 * La parte sinistra dell’interfaccia è un browser che ti consente di visualizzare i flussi di dati disponibili all’interno del tuo account;
 * La parte destra dell’interfaccia consente di visualizzare in anteprima fino a 100 righe di dati da un file JSON.
@@ -98,7 +98,7 @@ Al termine, selezionare **[!UICONTROL Avanti]**.
 
 Viene visualizzato il passaggio [!UICONTROL Mappatura] che fornisce un&#39;interfaccia per mappare i campi sorgente dallo schema sorgente ai campi XDM di destinazione appropriati nello schema di destinazione.
 
-Platform fornisce consigli intelligenti per campi mappati automaticamente in base allo schema o al set di dati di destinazione selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi d’uso. In base alle tue esigenze, puoi scegliere di mappare i campi direttamente o utilizzare le funzioni di preparazione dati per trasformare i dati sorgente in modo da derivare valori calcolati o calcolati. Per i passaggi completi sull&#39;utilizzo dell&#39;interfaccia mapper e dei campi calcolati, consulta la [guida dell&#39;interfaccia utente della preparazione dati](../../../../../data-prep/ui/mapping.md).
+Experience Platform fornisce consigli intelligenti per campi mappati automaticamente in base allo schema o al set di dati di destinazione selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi d’uso. In base alle tue esigenze, puoi scegliere di mappare i campi direttamente o utilizzare le funzioni di preparazione dati per trasformare i dati sorgente in modo da derivare valori calcolati o calcolati. Per i passaggi completi sull&#39;utilizzo dell&#39;interfaccia mapper e dei campi calcolati, consulta la [guida dell&#39;interfaccia utente della preparazione dati](../../../../../data-prep/ui/mapping.md).
 
 Tutte le mappature elencate di seguito sono obbligatorie e devono essere configurate prima di procedere alla fase [!UICONTROL Revisione].
 
@@ -120,7 +120,7 @@ Una volta mappati correttamente i dati di origine, seleziona **[!UICONTROL Avant
 
 ![Passaggio di mappatura del flusso di lavoro di origine.](../../../../images/tutorials/create/marketing-automation/customerio-webhook/mapping.png)
 
-## Controlla {#review}
+## Rivisione {#review}
 
 Viene visualizzato il passaggio **[!UICONTROL Rivedi]**, che consente di rivedere il nuovo flusso di dati prima che venga creato. I dettagli sono raggruppati nelle seguenti categorie:
 
@@ -156,11 +156,11 @@ Nell&#39;interfaccia utente di [!DNL Customer.io], immettere l&#39;[URL webhook]
 
 >[!TIP]
 >
->Puoi abbonarti a diversi eventi per il tuo webhook di reporting. Ogni messaggio di evento verrà acquisito in Platform quando viene soddisfatto il criterio di attivazione di un evento di azione [!DNL Customer.io]. Per ulteriori informazioni sui diversi eventi, consulta la [[!DNL Customer.io] documentazione eventi](https://customer.io/docs/webhooks/#events).
+>Puoi abbonarti a diversi eventi per il tuo webhook di reporting. Ogni messaggio degli eventi verrà acquisito in Experience Platform quando viene soddisfatto il criterio di attivazione di un evento di azione [!DNL Customer.io]. Per ulteriori informazioni sui diversi eventi, consulta la [[!DNL Customer.io] documentazione eventi](https://customer.io/docs/webhooks/#events).
 
 ## Passaggi successivi {#next-steps}
 
-Seguendo questa esercitazione hai configurato correttamente un flusso di dati in streaming per portare i tuoi dati di [!DNL Customer.io] all&#39;Experience Platform. Per monitorare i dati che vengono acquisiti, consulta la guida su [monitoraggio dei flussi di dati in streaming tramite l&#39;interfaccia utente di Platform](../../monitor-streaming.md).
+Seguendo questa esercitazione hai configurato correttamente un flusso di dati in streaming per portare i tuoi dati [!DNL Customer.io] in Experience Platform. Per monitorare i dati che vengono acquisiti, consulta la guida su [monitoraggio dei flussi di dati in streaming tramite l&#39;interfaccia utente di Experience Platform](../../monitor-streaming.md).
 
 ## Risorse aggiuntive {#additional-resources}
 
@@ -178,6 +178,6 @@ Per verificare la corretta configurazione dell&#39;origine e l&#39;acquisizione 
 
 ![Schermata dell&#39;interfaccia utente di Customer.io con i registri attività](../../../../images/tutorials/create/marketing-automation/customerio-webhook/activity-logs.png)
 
-* Nell&#39;interfaccia utente di Platform, selezionare **[!UICONTROL Visualizza flussi di dati]** accanto al menu della scheda [!DNL Customer.io] nel catalogo delle origini. Selezionare **[!UICONTROL Anteprima set di dati]** per verificare i dati acquisiti per gli eventi selezionati in [!DNL Customer.io].
+* Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Visualizza flussi di dati]** accanto al menu della scheda [!DNL Customer.io] nel catalogo delle origini. Selezionare **[!UICONTROL Anteprima set di dati]** per verificare i dati acquisiti per gli eventi selezionati in [!DNL Customer.io].
 
-![Schermata dell&#39;interfaccia utente di Platform che mostra gli eventi acquisiti](../../../../images/tutorials/create/marketing-automation/customerio-webhook/platform-dataset.png)
+![Schermata dell&#39;interfaccia utente di Experience Platform che mostra gli eventi acquisiti](../../../../images/tutorials/create/marketing-automation/customerio-webhook/platform-dataset.png)

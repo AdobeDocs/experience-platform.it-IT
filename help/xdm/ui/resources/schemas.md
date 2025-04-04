@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creare e modificare gli schemi nell’interfaccia utente
 description: Scopri le nozioni di base sulla creazione e la modifica degli schemi nell’interfaccia utente di Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 9691ce1ca560acce7a9512df7eb92e61962bc467
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4072'
+source-wordcount: '4075'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ Questa guida richiede una buona conoscenza del sistema XDM. Per un&#39;introduzi
 
 >[!NOTE]
 >
->Questa sezione illustra come creare manualmente un nuovo schema nell’interfaccia utente. Se si acquisiscono dati CSV in Platform, è possibile utilizzare gli algoritmi di Machine Learning (ML) per **generare uno schema da dati CSV di esempio**. Questo flusso di lavoro corrisponde al formato dei dati e crea automaticamente un nuovo schema basato sulla struttura e sul contenuto del file CSV. Per ulteriori informazioni su questo flusso di lavoro, consulta la [Guida alla creazione di schemi assistiti da ML](../ml-assisted-schema-creation.md).
+>Questa sezione illustra come creare manualmente un nuovo schema nell’interfaccia utente. Se si acquisiscono dati CSV in Experience Platform, è possibile utilizzare gli algoritmi di Machine Learning (ML) per **generare uno schema dai dati CSV di esempio**. Questo flusso di lavoro corrisponde al formato dei dati e crea automaticamente un nuovo schema basato sulla struttura e sul contenuto del file CSV. Per ulteriori informazioni su questo flusso di lavoro, consulta la [Guida alla creazione di schemi assistiti da ML](../ml-assisted-schema-creation.md).
 
 Nell&#39;area di lavoro [!UICONTROL Schemi], seleziona **[!UICONTROL Crea schema]** nell&#39;angolo in alto a destra.
 
@@ -342,7 +342,7 @@ Per completare il processo, selezionare **[!UICONTROL Salva]** per salvare lo sc
 
 ![](../../images/ui/resources/schemas/profile-enabled.png)
 
-Lo schema è ora abilitato per l’utilizzo in Real-Time Customer Profile. Quando Platform acquisisce i dati in set di dati basati su questo schema, questi verranno incorporati nei dati del profilo amalgamati.
+Lo schema è ora abilitato per l’utilizzo in Real-Time Customer Profile. Quando Experience Platform acquisisce i dati in set di dati basati su questo schema, questi verranno incorporati nei dati del profilo amalgamati.
 
 ## Modifica dei nomi visualizzati per i campi schema {#display-names}
 
@@ -388,7 +388,7 @@ Dopo aver confermato la modifica della classe, l’area di lavoro verrà reimpos
 
 ## Passaggi successivi {#next-steps}
 
-Questo documento illustra le nozioni di base sulla creazione e la modifica di schemi nell’interfaccia utente di Platform. Si consiglia vivamente di rivedere l&#39;[esercitazione per la creazione di schemi](../../tutorials/create-schema-ui.md) per un flusso di lavoro completo per la creazione di uno schema completo nell&#39;interfaccia utente, inclusa la creazione di gruppi di campi personalizzati e tipi di dati for casi d’uso univoci.
+Questo documento illustra le nozioni di base sulla creazione e la modifica di schemi nell’interfaccia utente di Experience Platform. Si consiglia vivamente di rivedere l&#39;[esercitazione per la creazione di schemi](../../tutorials/create-schema-ui.md) per un flusso di lavoro completo per la creazione di uno schema completo nell&#39;interfaccia utente, inclusa la creazione di gruppi di campi personalizzati e tipi di dati for casi d’uso univoci.
 
 Per ulteriori informazioni sulle funzionalità dell&#39;area di lavoro [!UICONTROL Schemi], vedere la panoramica dell&#39;area di lavoro [[!UICONTROL Schemi]](../overview.md).
 

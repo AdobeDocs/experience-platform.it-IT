@@ -2,10 +2,10 @@
 title: Ripubblicare una libreria
 description: Scopri come ripubblicare una libreria di tag precedente in Adobe Experience Platform.
 exl-id: 026b01f2-a93d-4e8a-9ed2-47c4f011e70f
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '648'
-ht-degree: 93%
+source-wordcount: '651'
+ht-degree: 81%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 93%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Le cinque librerie più recenti pubblicate nell&#39;ambiente di produzione su una proprietà Web sono disponibili per un recupero successivo. Questa funzione è utile quando si trova un bug nella libreria di produzione e occorre eseguire immediatamente il rollback allo stato valido.
 
@@ -37,7 +37,7 @@ Quando crei un ambiente di sviluppo o di gestione temporanea, la build precedent
 
 Queste cinque build più recenti nell&#39;ambiente di produzione sono quelle disponibili per il recupero.
 
-Quando ripubblichi una libreria precedente, Platform aggiorna il collegamento dell’ambiente in modo che faccia riferimento a una di queste build precedenti che non è ancora stata pulita. Platform invia inoltre una richiesta di eliminazione alla cache dei nodi edge CDN per indicare che la libreria è stata aggiornata e che è necessario recuperare una nuova copia dall’origine.
+Quando ripubblichi una libreria precedente, Experience Platform aggiorna il collegamento dell&#39;ambiente in modo che faccia riferimento a una di queste build precedenti che non è ancora stata pulita.  Experience Platform invia inoltre una richiesta di eliminazione alla cache dei nodi edge CDN per indicare che la libreria è stata aggiornata e che è necessario recuperare una nuova copia dall’origine.
 
 Questo significa che quando si ripubblica una libreria precedente:
 
@@ -47,7 +47,7 @@ Questo significa che quando si ripubblica una libreria precedente:
 
 Esamina lo scenario in cui esegui il roll back a causa di un problema con una regola specifica. La revisione della regola attualmente in produzione potrebbe, ad esempio, essere precedente a tre revisioni. Quando visualizzi questa regola nell’interfaccia utente per correggerla, vengono comunque riportate le ultime modifiche salvate, anziché le modifiche attualmente in produzione.
 
-Per questo motivo, Platform notifica che una proprietà è in stato di ripubblicazione per ricordare che ciò che visualizzi nell’interfaccia utente di Data Collection è un po’ più lontano dalla produzione rispetto al solito. Questa notifica può essere eliminata e viene visualizzata una volta per ogni sessione del browser la prima volta che visualizzi la proprietà.
+Per questo motivo, Experience Platform notifica che una proprietà è in stato di ripubblicazione per ricordare che ciò che visualizzi nell’interfaccia utente di Data Collection è un po’ più lontano dalla produzione rispetto al solito. Questa notifica può essere eliminata e viene visualizzata una volta per ogni sessione del browser la prima volta che visualizzi la proprietà.
 
 ### Come ripubblicare una libreria precedente
 

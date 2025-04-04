@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;Marketo Engage;marketo;Marketo;mapping
+keywords: Experience Platform;home;argomenti popolari;Marketo Engage;marketo engagement;Marketo;mapping
 solution: Experience Platform
-title: Campi di mappatura per il Source del Marketo Engage
+title: Mappatura dei campi per Marketo Engage Source
 description: Le tabelle seguenti contengono le mappature tra i campi dei set di dati Marketo e i campi XDM corrispondenti.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 3084ed50f3665c7b33863f3a1aab4236c182c503
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '891'
 ht-degree: 2%
 
 ---
@@ -21,7 +21,7 @@ Le tabelle seguenti contengono le mappature tra i campi dei nove set di dati [!D
 
 ## Attività {#activities}
 
-L&#39;origine [!DNL Marketo] ora supporta attività standard aggiuntive. Per utilizzare le attività standard, è necessario aggiornare lo schema utilizzando l&#39;[utilità di generazione automatica dello schema](../marketo/marketo-namespaces.md) perché se si crea un nuovo flusso di dati `activities` senza aggiornare lo schema, i modelli di mappatura non avranno esito positivo in quanto i nuovi campi di destinazione non saranno presenti nello schema. Se scegli di non aggiornare lo schema, puoi comunque creare un nuovo flusso di dati e ignorare eventuali errori. Tuttavia, eventuali campi nuovi o aggiornati non verranno acquisiti in Platform.
+L&#39;origine [!DNL Marketo] ora supporta attività standard aggiuntive. Per utilizzare le attività standard, è necessario aggiornare lo schema utilizzando l&#39;[utilità di generazione automatica dello schema](../marketo/marketo-namespaces.md) perché se si crea un nuovo flusso di dati `activities` senza aggiornare lo schema, i modelli di mappatura non avranno esito positivo in quanto i nuovi campi di destinazione non saranno presenti nello schema. Se scegli di non aggiornare lo schema, puoi comunque creare un nuovo flusso di dati e ignorare eventuali errori. Tuttavia, eventuali campi nuovi o aggiornati non verranno acquisiti in Experience Platform.
 
 Per ulteriori informazioni sulla classe XDM e sui gruppi di campi XDM, leggi la documentazione sulla [classe XDM Experience Event](../../../../xdm/classes/experienceevent.md).
 
@@ -415,4 +415,4 @@ Per ulteriori informazioni sulla classe XDM, leggi la [Panoramica profilo indivi
 
 ## Passaggi successivi
 
-La lettura di questo documento fornisce informazioni approfondite sulla relazione di mappatura tra i set di dati [!DNL Marketo] e i campi XDM corrispondenti. Guarda l&#39;esercitazione sulla [creazione di una [!DNL Marketo] connessione di origine](../../../tutorials/ui/create/adobe-applications/marketo.md) per completare il flusso di dati di [!DNL Marketo].
+Dopo aver letto questo documento, hai acquisito insight sulla relazione di mappatura tra i set di dati [!DNL Marketo] e i campi XDM corrispondenti. Guarda l&#39;esercitazione sulla [creazione di una [!DNL Marketo] connessione di origine](../../../tutorials/ui/create/adobe-applications/marketo.md) per completare il flusso di dati di [!DNL Marketo].

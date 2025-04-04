@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica del connettore Source Apache HDFS
 description: Scopri come collegare Apache HDFS a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 1f156f7b-a19d-4dcf-a51d-ab6cb396d8f7
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 0%
@@ -34,9 +34,9 @@ Di seguito è riportato un elenco di vincoli di cui è necessario tenere conto p
 - Caratteri di percorso URL non validi non consentiti. I punti di codice come `\uE000`, sebbene validi nei nomi di file NTFS, non sono caratteri Unicode validi. Inoltre, alcuni caratteri ASCII o Unicode, come i caratteri di controllo (da 0x00 a 0x1F, \u0081, ecc.), non sono consentiti. Per le regole che regolano le stringhe Unicode in HTTP/1.1, vedere [RFC 2616, Sezione 2.2: Regole di base](https://www.ietf.org/rfc/rfc2616.txt) e [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
 - Non sono consentiti i seguenti nomi di file: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, carattere punto (.) e due caratteri punto (..).
 
-## Connetti [!DNL Apache] HDFS a [!DNL Platform]
+## Connetti [!DNL Apache] HDFS a [!DNL Experience Platform]
 
-La documentazione seguente fornisce informazioni su come collegare [!DNL Apache] HDFS a [!DNL Platform] utilizzando le API o l&#39;interfaccia utente:
+La documentazione seguente fornisce informazioni su come collegare [!DNL Apache] HDFS a [!DNL Experience Platform] utilizzando le API o l&#39;interfaccia utente:
 
 ### Utilizzo delle API
 

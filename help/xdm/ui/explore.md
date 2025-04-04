@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;ui;interfaccia utente;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;data model;esplorare;classe;gruppo di campi;tipo di dati;schema;
+keywords: Experience Platform;home;argomenti popolari;ui;interfaccia utente;XDM;sistema XDM;Experience data model;Experience data model;Experience Data Model;data model;data model;esplorare;classe;gruppo di campi;tipo di dati;schema;
 solution: Experience Platform
 title: Esplorare le risorse dello schema nell’interfaccia utente
 description: Scopri come esplorare schemi, classi, gruppi di campi di schema e tipi di dati esistenti nell’interfaccia utente di Experience Platform.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: 5f9fdc9eff4d8bba049c03058d24e80e9b89e953
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1357'
+source-wordcount: '1360'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Questo tutorial illustra i passaggi necessari per esplorare schemi, classi, grup
 
 ## Cercare una risorsa schema {#lookup}
 
-Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Schemi]** nell&#39;area di navigazione a sinistra. L&#39;area di lavoro [!UICONTROL Schemi] fornisce una scheda **[!UICONTROL Sfoglia]** per esplorare tutti gli schemi dell&#39;organizzazione, insieme a schede dedicate aggiuntive per esplorare rispettivamente **[!UICONTROL Classi]**, **[!UICONTROL Gruppi di campi]**, **[!UICONTROL Tipi di dati]** e **[!UICONTROL Relazioni]**.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Schemi]** nell&#39;area di navigazione a sinistra. L&#39;area di lavoro [!UICONTROL Schemi] fornisce una scheda **[!UICONTROL Sfoglia]** per esplorare tutti gli schemi dell&#39;organizzazione, insieme a schede dedicate aggiuntive per esplorare rispettivamente **[!UICONTROL Classi]**, **[!UICONTROL Gruppi di campi]**, **[!UICONTROL Tipi di dati]** e **[!UICONTROL Relazioni]**.
 
 ![Area di lavoro Schemi con diverse schede evidenziate.](../images/ui/explore/tabs.png)
 
@@ -63,7 +63,7 @@ Tutti i campi di tipo oggetto contenenti sottoproprietà vengono compressi per i
 
 ### Indicatore di classe e gruppo di campi standard {#standard-class-and-field-group-indicator}
 
-Nell&#39;Editor schema, le classi e i gruppi di campi standard (generati da Adobi) sono indicati con l&#39;icona lucchetto (![Un&#39;icona lucchetto.](/help/images/icons/lock-closed.png). Il lucchetto viene visualizzato nella barra a sinistra accanto al nome della classe o del gruppo di campi, nonché accanto a qualsiasi campo nel diagramma dello schema che fa parte di una risorsa generata dal sistema.
+Nell&#39;Editor schema, le classi e i gruppi di campi standard (generati da Adobe) sono indicati con l&#39;icona lucchetto (![Un&#39;icona lucchetto.](/help/images/icons/lock-closed.png). Il lucchetto viene visualizzato nella barra a sinistra accanto al nome della classe o del gruppo di campi, nonché accanto a qualsiasi campo nel diagramma dello schema che fa parte di una risorsa generata dal sistema.
 
 ![Editor schema con l&#39;icona lucchetto evidenziata](../images/ui/explore/schema-editor-padlock-icon.png)
 
@@ -73,7 +73,7 @@ Consulta la documentazione [Aggiungere campi personalizzati ai gruppi di campi s
 
 Alcuni nomi di campo sono preceduti da un trattino basso, ad esempio `_repo` e `_id`. Questi rappresentano segnaposto per i campi che il sistema genera e assegna automaticamente quando i dati vengono acquisiti.
 
-Di conseguenza, la maggior parte di questi campi deve essere esclusa dalla struttura dei dati al momento dell’acquisizione in Platform. L&#39;eccezione principale a questa regola è il campo [`_{TENANT_ID}`](../api/getting-started.md#know-your-tenant_id), in cui tutti i campi XDM creati nell&#39;organizzazione devono essere namespace.
+Di conseguenza, la maggior parte di questi campi deve essere esclusa dalla struttura dei dati al momento dell’acquisizione in Experience Platform. L&#39;eccezione principale a questa regola è il campo [`_{TENANT_ID}`](../api/getting-started.md#know-your-tenant_id), in cui tutti i campi XDM creati nell&#39;organizzazione devono essere namespace.
 
 ### Tipi di dati {#data-types}
 
@@ -107,7 +107,7 @@ I campi di identità sono evidenziati nell&#39;area di lavoro con un&#39;icona d
 
 >[!NOTE]
 >
->Per ulteriori informazioni sui campi di identità e sulla loro relazione con i servizi Platform a valle, consulta la guida su [definizione dei campi di identità](./fields/identity.md).
+>Per ulteriori informazioni sui campi di identità e sulla loro relazione con i servizi Experience Platform a valle, consulta la guida su [definizione dei campi di identità](./fields/identity.md).
 
 ### Campi di relazione {#relationship}
 

@@ -2,10 +2,10 @@
 title: Note sulla versione per tag e inoltro eventi
 description: Le più recenti note sulla versione relative ai tag e all’inoltro di eventi in Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: e300e57df998836a8c388511b446e90499185705
-workflow-type: ht
-source-wordcount: '771'
-ht-degree: 100%
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+workflow-type: tm+mt
+source-wordcount: '773'
+ht-degree: 93%
 
 ---
 
@@ -54,13 +54,13 @@ Sono state rilasciate nuove estensioni:
 
 ## 26 ottobre 2022
 
-* **Gestione dei dati sensibili per gli stream di dati**: gli stream di dati ora sfruttano diverse tecnologie Platform per gestire in modo appropriato i dati sensibili in base a normative quali l’Health Insurance Portability and Accountability Act (HIPAA). Per ulteriori informazioni, consulta la sezione sulla [gesstione dei dati sensibili negli stream di dati](../../datastreams/overview.md#sensitive).
+* **Gestione dei dati sensibili per i flussi di dati**: i flussi di dati ora sfruttano diverse tecnologie Experience Platform per gestire in modo appropriato i dati sensibili in base a normative quali l&#39;Health Insurance Portability and Accountability Act (HIPAA). Per ulteriori informazioni, consulta la sezione sulla [gesstione dei dati sensibili negli stream di dati](../../datastreams/overview.md#sensitive).
 * Estensione **[!DNL Splunk]per l’inoltro eventi**: è ora possibile inviare dati a [!DNL Splunk] utilizzando un’estensione per l’[inoltro eventi](../ui/event-forwarding/overview.md). Per ulteriori informazioni, consulta [[!DNL Splunk] - Panoramica dell’estensione](../extensions/server/splunk/overview.md).
-* Estensione **[!DNL Zendesk]per l’inoltro eventi**: è ora possibile inviare dati a [!DNL Zendesk] utilizzando un’estensione [inoltro eventi](../ui/event-forwarding/overview.md). Per ulteriori informazioni, consulta la [[!DNL Zendesk] panoramica delle estensioni](../extensions/server/zendesk/overview.md).
+* Estensione **[!DNL Zendesk]per l’inoltro eventi**: è ora possibile inviare dati a [!DNL Zendesk] utilizzando un’estensione per l’[inoltro eventi](../ui/event-forwarding/overview.md). Per ulteriori informazioni, consulta la [[!DNL Zendesk] panoramica delle estensioni](../extensions/server/zendesk/overview.md).
 
 ## 28 settembre 2022
 
-* **Integrazione con barra di navigazione a sinistra di Adobe Experience Platform**: tutte le funzionalità che in precedenza erano esclusive dell’interfaccia utente della raccolta dati (inclusi tag e inoltro eventi) sono ora disponibili anche tramite la barra di navigazione a sinistra nell’interfaccia utente di Experience Platform, nella categoria **[!UICONTROL Raccolta dati]**. Questo elimina la necessità di passare da un’interfaccia utente all’altra quando si utilizzano le funzionalità di raccolta dati in Platform.
+* **Integrazione con barra di navigazione a sinistra di Adobe Experience Platform**: tutte le funzionalità che in precedenza erano esclusive dell’interfaccia utente della raccolta dati (inclusi tag e inoltro eventi) sono ora disponibili anche tramite la barra di navigazione a sinistra nell’interfaccia utente di Experience Platform, nella categoria **[!UICONTROL Raccolta dati]**. Questo elimina la necessità di passare da un’interfaccia utente all’altra quando si lavora con le funzionalità di raccolta dati in Experience Platform.
 * **Attribuzione utente in tag e inoltro eventi**: quando si elencano le proprietà disponibili in tag e inoltro eventi, per ogni proprietà elencata viene visualizzato l’ultimo aggiornamento e chi l’ha effettuato.
 * **[[!DNL Snap Conversions API] estensione](https://exchange.adobe.com/apps/ec/108550) per l’inoltro eventi**: è ora possibile inviare dati a [!DNL Snapchat Conversions API] utilizzando un’estensione [inoltro eventi](../../tags/ui/event-forwarding/overview.md). Per ulteriori informazioni su come autenticarsi e utilizzare l’API, consulta la [[!DNL Snapchat Marketing API] documentazione](https://marketingapi.snapchat.com/docs/conversion.html?lang=it).
 

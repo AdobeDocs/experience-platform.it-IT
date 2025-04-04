@@ -1,20 +1,20 @@
 ---
-title: Note sulla versione di Adobe Experience Platform - Ottobre 2020
+title: Note sulla versione di Adobe Experience Platform di ottobre 2020
 description: Note sulla versione di Adobe Experience Platform di ottobre 2020.
 doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 exl-id: 89f5e2bd-8892-4d3f-a3fe-5433bb5ece7a
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1017'
-ht-degree: 15%
+ht-degree: 16%
 
 ---
 
 # Note sulla versione di Adobe Experience Platform
 
-**Data di rilascio: 14 ottobre 2020**
+**Data di rilascio: giovedì 14 ottobre 2020**
 
 - [Preparazione dei dati](#data-prep)
 - [Profilo cliente in tempo reale](#profile)
@@ -48,7 +48,7 @@ Per ulteriori informazioni su [!DNL Real-Time Customer Profile], inclusi tutoria
 
 ## Servizio di segmentazione {#segmentation}
 
-Il servizio di segmentazione di Adobe Experience Platform fornisce un&#39;interfaccia utente e un&#39;API RESTful che consentono di creare segmenti e generare tipi di pubblico dai dati di [!DNL Real-Time Customer Profile]. Questi segmenti vengono configurati e gestiti centralmente in [!DNL Platform], rendendoli facilmente accessibili da qualsiasi applicazione Adobe.
+Il servizio di segmentazione di Adobe Experience Platform fornisce un&#39;interfaccia utente e un&#39;API RESTful che consentono di creare segmenti e generare tipi di pubblico dai dati di [!DNL Real-Time Customer Profile]. Questi segmenti vengono configurati e gestiti centralmente in [!DNL Experience Platform], rendendoli facilmente accessibili da qualsiasi applicazione Adobe.
 
 [!DNL Segmentation Service] definisce un particolare sottoinsieme di profili descrivendo i criteri che distinguono un gruppo di persone commerciabile all’interno della tua clientela. I segmenti possono essere basati su dati dei record (ad esempio informazioni demografiche) o su eventi della serie temporale che rappresentano le interazioni della clientela con il tuo marchio.
 
@@ -62,7 +62,7 @@ Per ulteriori informazioni su [!DNL Segmentation Service], consulta la [Panorami
 
 ## Origini {#sources}
 
-Adobe Experience Platform può acquisire dati da origini esterne e allo stesso tempo consentire di strutturare, etichettare e migliorare tali dati utilizzando i servizi [!DNL Platform]. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, software di terze parti e sistema CRM.
+Adobe Experience Platform può acquisire dati da origini esterne e allo stesso tempo consentire di strutturare, etichettare e migliorare tali dati utilizzando i servizi [!DNL Experience Platform]. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, software di terze parti e sistema di gestione delle relazioni con i clienti.
 
 [!DNL Experience Platform] fornisce un&#39;API RESTful e un&#39;interfaccia utente interattiva che consente di configurare facilmente le connessioni di origine per vari provider di dati. Queste connessioni di origine consentono di autenticarti e connetterti a sistemi di archiviazione esterni e servizi di gestione delle relazioni con i clienti, impostare i tempi per le esecuzioni dell’acquisizione e gestire la velocità effettiva di acquisizione dei dati.
 
@@ -70,7 +70,7 @@ Adobe Experience Platform può acquisire dati da origini esterne e allo stesso t
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Supporto dell’autenticazione SSH per SFTP | Puoi collegare il tuo account SFTP a [!DNL Platform] utilizzando le chiavi RSA/DSA Open SSH. Per ulteriori informazioni, consulta la [panoramica SFTP](../../sources/connectors/cloud-storage/sftp.md). |
+| Supporto dell’autenticazione SSH per SFTP | Puoi collegare il tuo account SFTP a [!DNL Experience Platform] utilizzando le chiavi RSA/DSA Open SSH. Per ulteriori informazioni, consulta la [panoramica SFTP](../../sources/connectors/cloud-storage/sftp.md). |
 | Miglioramenti UX | È possibile abilitare il set di dati per [!DNL Profile] durante il processo di acquisizione dei dati. Per ulteriori informazioni, consulta l&#39;esercitazione sul flusso di lavoro [per l&#39;archiviazione cloud](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md). |
 
 Per ulteriori informazioni sulle origini, vedere [panoramica delle origini](../../sources/home.md).
@@ -85,7 +85,7 @@ Adobe Experience Platform consente ai team che si occupano delle operazioni di m
 
 #### Schema
 
-Aggiorna l’usabilità e il flusso di lavoro e fornisce informazioni predefinite, standardizzazione e trasparenza dei campi chiave nelle composizioni dello schema. Espone la derivazione dei dati per la combinazione di singoli modelli di dati rappresentati come &quot;schema di unione&quot;, fornendo informazioni approfondite sulla struttura e sugli ingredienti al Profilo cliente in tempo reale.
+Aggiorna l’usabilità e il flusso di lavoro e fornisce informazioni predefinite, standardizzazione e trasparenza dei campi chiave nelle composizioni dello schema. Espone la derivazione dei dati per la combinazione di singoli modelli di dati rappresentati come &quot;schema di unione&quot;, fornendo insight nella struttura e negli ingredienti a Real-Time Customer Profile.
 
 - Aggiornamento flusso di lavoro schema
    - Utilizza le scelte rapide per il tipo più comune di schemi XDM, con impostazioni automatizzate nell’editor schema e consigli per il gruppo di campi dello schema in base agli obiettivi
@@ -113,6 +113,6 @@ Il visualizzatore di profilo intuitivo e personalizzabile consente di comprender
 
 #### Monitoraggio
 
-Assicura la trasparenza del flusso di dati e fornisce informazioni sullo stato del traffico di dati nel sistema dai connettori di origine, fornendo un’actionability più self-service e più rapida per la risoluzione dei problemi.
+Assicura la trasparenza del flusso di dati e fornisce ad insight informazioni sullo stato del traffico di dati nel sistema dai connettori di origine, fornendo un’actionability più self-service e più rapida per la risoluzione dei problemi.
 
 - Monitora tutte le esecuzioni del flusso e visualizza una vista dettagliata di ciascuna esecuzione, incluso lo stato di completamento, la durata dell’esecuzione, l’elenco dei file elaborati, gli errori e la diagnostica actionable

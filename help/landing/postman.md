@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;Adobe Experience Platform;guida api;guida api piattaforma;introduzione a piattaforma;guida per sviluppatori
+keywords: Experience Platform;home;argomenti popolari;Adobe Experience Platform;guida api;guida api piattaforma;introduzione alla piattaforma;guida per sviluppatori
 solution: Experience Platform
 title: Postman in Adobe Experience Platform
-description: Questo documento contiene i passaggi che descrivono come impostare un ambiente Postman, importare raccolte Postman e un elenco delle raccolte disponibili per ciascun servizio Platform.
+description: Questo documento contiene i passaggi che descrivono come impostare un ambiente Postman, importare raccolte Postman e un elenco delle raccolte disponibili per ciascun servizio Experience Platform.
 role: Developer
 feature: API
 exl-id: a09b3875-97f5-47f1-a562-52decbce67b1
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '524'
 ht-degree: 0%
 
 ---
 
 # Postman in Adobe Experience Platform
 
-Postman è una piattaforma di collaborazione per lo sviluppo di API che consente di configurare ambienti con variabili preimpostate, condividere raccolte API, semplificare le richieste CRUD e altro ancora. La maggior parte dei servizi API di Platform dispone di raccolte Postman che possono essere utilizzate per facilitare l’esecuzione di chiamate API.
+Postman è una piattaforma di collaborazione per lo sviluppo di API che consente di configurare ambienti con variabili preimpostate, condividere raccolte API, semplificare le richieste CRUD e altro ancora. La maggior parte dei servizi API di Experience Platform dispone di raccolte Postman che possono essere utilizzate per facilitare l’esecuzione di chiamate API.
 
-## Come impostare un ambiente Postman, ad Experience Platform
+## Come impostare un ambiente Postman per Experience Platform
 
 La seguente guida video illustra la creazione e la configurazione dell’ambiente Postman. Un ambiente Postman contiene tutte le intestazioni necessarie per effettuare chiamate API alle varie raccolte fornite di seguito. Dopo la configurazione, ogni volta che un valore scade (ad esempio `ACCESS_TOKEN`) puoi aggiornare il valore corrente nell&#39;ambiente e questo nuovo valore viene utilizzato in tutte le raccolte.
 
@@ -25,7 +25,7 @@ La seguente guida video illustra la creazione e la configurazione dell’ambient
 
 ## Raccolte Postman {#collections}
 
-Per trovare una cartella contenente tutte le raccolte Postman disponibili, visita l&#39;[archivio GitHub di Experience Platform Postman](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform). In alternativa, un collegamento alla raccolta Postman si trova in ogni singolo file swagger nella [documentazione di riferimento API](https://www.adobe.com/go/platform-api-reference-en) sull&#39;Adobe I/O.
+È possibile trovare una cartella contenente tutte le raccolte Postman disponibili visitando l&#39;[archivio GitHub degli esempi di Experience Platform Postman](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform). In alternativa, è possibile trovare un collegamento alla raccolta Postman in ogni singolo file swagger nella [documentazione di riferimento API](https://www.adobe.com/go/platform-api-reference-en) su Adobe I/O.
 
 Per scaricare una raccolta Postman, seleziona **[!DNL Raw]** dalla pagina GitHub per caricare il file JSON non elaborato in una nuova scheda. Quindi, fare clic con il pulsante destro del mouse e selezionare **[!DNL Save as]** per salvare il file in una destinazione locale di propria scelta.
 
@@ -61,4 +61,4 @@ Il video seguente utilizza la [raccolta Postman del servizio Identity Management
 
 ## Passaggi successivi
 
-Questo documento illustra ambienti, raccolte e come importare le raccolte di Postman. Ora che hai Postman pronto, visita la [Guida introduttiva alla piattaforma](api-guide.md) per informazioni sulle intestazioni richieste, esempi e un elenco di [guide API](api-guide.md#api-guides) disponibili per ogni servizio Platform.
+Questo documento illustra ambienti, raccolte e come importare le raccolte di Postman. Ora che hai Postman pronto, visita la [guida introduttiva di Experience Platform](api-guide.md) per informazioni sulle intestazioni richieste, esempi e un elenco di [guide API](api-guide.md#api-guides) disponibili per ogni servizio Experience Platform.

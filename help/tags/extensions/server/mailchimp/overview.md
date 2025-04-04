@@ -7,10 +7,10 @@ level: Beginner
 role: User, Developer, Admin
 topic: Integrations
 exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '1267'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >  
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html) come riferimento consolidato delle modifiche terminologiche.
+>Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html) come riferimento consolidato delle modifiche terminologiche.
 
 L&#39;estensione Mailchimp [event forwarding](../../../ui/event-forwarding/overview.md) invia eventi all&#39;API Mailchimp Marketing che può attivare le e-mail per campagne di marketing, percorsi o transazioni Mailchimp.
 
@@ -103,17 +103,17 @@ L&#39;estensione è ora installata e configurata per l&#39;utilizzo nella propri
 
 ## Raccolta dati
 
-Quando si utilizza questa estensione in una [regola](../../../ui/managing-resources/rules.md), esistono diversi valori di dati che l&#39;estensione invia a Mailchimp con ogni evento. Per un&#39;implementazione tipica, è possibile configurare l&#39;estensione [Adobe Experience Platform Web SDK](../../client/web-sdk/overview.md) per inviare tali dati a [!DNL Platform Edge Network] per l&#39;utilizzo da parte dell&#39;estensione nella proprietà di inoltro degli eventi.
+Quando si utilizza questa estensione in una [regola](../../../ui/managing-resources/rules.md), esistono diversi valori di dati che l&#39;estensione invia a Mailchimp con ogni evento. Per un&#39;implementazione tipica, è possibile configurare l&#39;estensione [Adobe Experience Platform Web SDK](../../client/web-sdk/overview.md) per inviare tali dati a [!DNL Experience Platform Edge Network] per l&#39;utilizzo da parte dell&#39;estensione nella proprietà di inoltro degli eventi.
 
 I dati richiesti da questa estensione possono essere inviati da Web SDK come dati XDM (utilizzando l&#39;oggetto [`xdm`](/help/web-sdk/commands/sendevent/xdm.md)) o come dati non XDM (utilizzando l&#39;oggetto [`data`](/help/web-sdk/commands/sendevent/data.md)).
 
-Ad esempio, se un cliente effettua un acquisto o si registra per un evento sul sito, puoi inviare un’e-mail di conferma tramite Mailchimp con questa estensione. Dopo aver inviato le informazioni richieste da Web SDK all’Edge Network, l’estensione attiva l’e-mail con Mailchimp.
+Ad esempio, se un cliente effettua un acquisto o si registra per un evento sul sito, puoi inviare un’e-mail di conferma tramite Mailchimp con questa estensione. Dopo aver inviato le informazioni richieste da Web SDK ad Edge Network, l’estensione attiva l’e-mail con Mailchimp.
 
 ![Aggiungi configurazione azione evento](../../../images/extensions/server/mailchimp/action-configurations.png)
 
 ### Elementi dati
 
-La schermata nella sezione precedente mostra i dati che puoi inviare con ogni evento da questa estensione a Mailchimp. Dopo aver configurato Web SDK per inviare questi dati all’Edge Network, puoi creare elementi dati nella proprietà di inoltro degli eventi in modo che l’estensione possa accedere a tali valori.
+La schermata nella sezione precedente mostra i dati che puoi inviare con ogni evento da questa estensione a Mailchimp. Dopo aver configurato Web SDK per l’invio di questi dati ad Edge Network, puoi creare elementi di dati nella proprietà di inoltro degli eventi in modo che l’estensione possa accedere a tali valori.
 
 La tabella seguente fornisce maggiori dettagli per ciascun valore possibile.
 
@@ -140,7 +140,7 @@ Ora puoi utilizzare questa estensione e l’azione Aggiungi evento per attivare 
 
 ## Convalida dei dati
 
-Quando si lavora con estensioni di inoltro eventi, l&#39;[Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) è molto utile. Nella sezione Registri, in Registri di Edge puoi visualizzare le richieste effettuate dalle regole di inoltro degli eventi dopo che sono state attivate. Le schermate seguenti mostrano una richiesta all’API Mailchimp da parte dell’estensione.
+Quando si lavora con estensioni di inoltro eventi, [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) è molto utile. Nella sezione Registri, in Registri di Edge puoi visualizzare le richieste effettuate dalle regole di inoltro degli eventi dopo che sono state attivate. Le schermate seguenti mostrano una richiesta all’API Mailchimp da parte dell’estensione.
 
 ![Adobe Experience Platform Debugger](../../../images/extensions/server/mailchimp/debugger-edge-logs.png)
 

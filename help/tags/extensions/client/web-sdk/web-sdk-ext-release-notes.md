@@ -2,16 +2,16 @@
 title: Note sulla versione dell’estensione Adobe Experience Platform Web SDK
 description: Estensione tag Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 8fd86a170433c4eb07a7370dbd3aa2cb3ef10922
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2580'
+source-wordcount: '2583'
 ht-degree: 29%
 
 ---
 
 # Note sulla versione dell’estensione Adobe Experience Platform Web SDK
 
-Questo documento descrive le note sulla versione dell’estensione tag Adobe Experience Platform Web SDK. Per le ultime note sulla versione di SDK, consulta le [note sulla versione di Platform Web SDK](/help/web-sdk/release-notes.md).
+Questo documento descrive le note sulla versione dell’estensione tag Adobe Experience Platform Web SDK. Per le ultime note sulla versione di SDK, consulta le [note sulla versione di Experience Platform Web SDK](/help/web-sdk/release-notes.md).
 
 ## Versione 2.29.0 - 5 marzo 2025
 
@@ -337,7 +337,7 @@ Contiene la versione 2.3.0 della libreria dell’SDK per web di Adobe Experience
 
 ## Versione 2.2.0 - venerdì 1 ottobre 2020
 
-- Quando si tentava di creare un oggetto XDM da schemi sandbox, si verificavano problemi di autenticazione. L’API che chiama Platform ora riconosce gli ambienti e agli utenti vengono presentati solo gli schemi che possono modificare.
+- Quando si tentava di creare un oggetto XDM da schemi sandbox, si verificavano problemi di autenticazione. L’API che chiama Experience Platform ora riconosce gli ambienti e gli utenti possono quindi visualizzare solo gli schemi che possono modificare.
 - Quando si utilizza l&#39;elemento dati `identityMap`, gli spazi dei nomi vengono ora precompilati in un menu a discesa e non è più necessario compilarli manualmente.
 - È stata rivista l’interfaccia utente per l’elemento dati `xdmObject`. Nella nuova interfaccia è possibile vedere quali campi sono stati compilati, senza dover accedere a ciascun elemento nell’oggetto.
 
@@ -353,7 +353,7 @@ Contiene la versione 2.3.0 della libreria dell’SDK per web di Adobe Experience
 - È supportata la possibilità di ignorare l’ID del set di dati nell’azione `sendEvent`.
 - È stato aggiunto un nuovo elemento dati di tipo `IdentityMap` che può essere utilizzato per compilare la voce `identityMap` nell’elemento dati di oggetti XDM che è ora abilitato e nell’azione `setConsent`.
 - È supportato il passaggio di una mappa di identità nell’azione `setConsent`.
-- È supportata la scelta di una sandbox di Platform nell’elemento dati di oggetti XDM.
+- È supportata la scelta di una sandbox di Experience Platform nell’elemento dati di oggetti XDM.
 
 ## Versione 1.0.0, mercoledì 26 maggio 2020
 
@@ -366,7 +366,7 @@ Contiene la versione 2.3.0 della libreria dell’SDK per web di Adobe Experience
 - Modifiche relative a `Get Decisions`:
    - È stato rimosso il comando `getDecisions`.
    - È stata aggiunta un’opzione `scopes` al comando `sendEvent`. Le decisioni vengono restituite nella promessa risolta `sendEvent`.
-   - È stato aggiunto un ambito integrato `__view__` che darà luogo alla restituzione di offerte di visualizzazione ampia della pagina (ad esempio le offerte VEC in Target).
+   - È stato aggiunto un ambito incorporato `__view__` che darà luogo alla restituzione di offerte di visualizzazione ampia della pagina (ad esempio le offerte VEC in Target).
 Tali decisioni vengono restituite dal comando `sendEvent` solo se `renderDecisions` è impostato su false.
    - È stato aggiunto un evento `Decisions Received` che viene attivato quando le decisioni diventano disponibili.
 - Sono state unite più notifiche di personalizzazione in una singola chiamata server.

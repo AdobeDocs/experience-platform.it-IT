@@ -3,16 +3,16 @@ description: Scopri come monitorare i flussi di dati durante la segmentazione ut
 title: Monitorare i flussi di dati per i tipi di pubblico nell’interfaccia utente
 type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1862'
+source-wordcount: '1864'
 ht-degree: 4%
 
 ---
 
 # Monitorare i flussi di dati per il pubblico nell’interfaccia utente
 
-Il servizio di segmentazione consente di creare tipi di pubblico tramite definizioni di segmenti o altre origini dai dati di [!DNL Real-Time Customer Profile]. Platform fornisce flussi di dati per monitorare in modo trasparente questo flusso di dati dalle origini alle destinazioni.
+Il servizio di segmentazione consente di creare tipi di pubblico tramite definizioni di segmenti o altre origini dai dati di [!DNL Real-Time Customer Profile]. Experience Platform fornisce flussi di dati per monitorare in modo trasparente questo flusso di dati dalle origini alle destinazioni.
 
 Utilizza il dashboard di monitoraggio per visualizzare una rappresentazione visiva dell’attività dei dati all’interno di un pubblico, incluso lo stato della segmentazione dei dati. Leggi il tutorial per istruzioni su come utilizzare il dashboard di monitoraggio per monitorare la segmentazione dei dati utilizzando l’interfaccia utente di Experience Platform, che consente di monitorare lo stato dei processi di attivazione, valutazione ed esportazione del pubblico.
 
@@ -20,13 +20,13 @@ Utilizza il dashboard di monitoraggio per visualizzare una rappresentazione visi
 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-- [Flussi dati](../home.md): i flussi dati sono una rappresentazione dei processi di dati che spostano i dati in Platform. I flussi di dati sono configurati tra servizi diversi, consentendo di spostare i dati dai connettori di origine ai set di dati di destinazione, a [!DNL Identity] e [!DNL Profile] e a [!DNL Destinations].
+- [Flussi dati](../home.md): i flussi dati sono una rappresentazione dei processi di dati che spostano i dati in Experience Platform. I flussi di dati sono configurati tra servizi diversi, consentendo di spostare i dati dai connettori di origine ai set di dati di destinazione, a [!DNL Identity] e [!DNL Profile] e a [!DNL Destinations].
    - [Esecuzioni flusso di dati](../../sources/notifications.md): le esecuzioni del flusso di dati sono i processi pianificati ricorrenti in base alla configurazione della frequenza dei flussi di dati selezionati.
 - [Segmentazione](../../segmentation/home.md): la segmentazione ti consente di creare tipi di pubblico dai dati del tuo Profilo cliente in tempo reale.
    - [Processi di attivazione](../../destinations/ui/activation-overview.md): viene utilizzato un processo di attivazione per attivare il pubblico in una destinazione specificata.
    - [Processi di valutazione](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment): un processo di valutazione è un processo asincrono che valuta il pubblico.
    - [Processi di esportazione](../../segmentation/api/export-jobs.md): un processo di esportazione è un processo asincrono utilizzato per rendere persistenti i membri del pubblico nei set di dati.
-- [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza di [!DNL Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+- [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza di [!DNL Experience Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 ## Dashboard di monitoraggio dei tipi di pubblico {#monitoring-audiences-dashboard}
 

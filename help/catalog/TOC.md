@@ -4,10 +4,10 @@ user-guide-title: Guida al catalogo e ai set di dati
 user-guide-description: Esplora la derivazione dei dati, i metadati, le descrizioni dei file, le directory e i set di dati all’interno del Data Lake e scopri di più sul sistema del servizio del Catalogo.
 feature: Catalog
 role: Developer
-source-git-commit: 74b6e5f10f7532745180760adf1d96bc57e7b590
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '123'
-ht-degree: 33%
+source-wordcount: '124'
+ht-degree: 42%
 
 ---
 
@@ -34,8 +34,8 @@ ht-degree: 33%
    * [Creare e popolare un set di dati utilizzando le API](datasets/create.md)
    * [Abilitare un set di dati per profilo e identità](datasets/enable-for-profile.md)
    * [Abilitare un set di dati per gli aggiornamenti del profilo (upsert)](datasets/enable-upsert.md)
-   * [Conservazione del set di dati di Experience Event nel data lake](datasets/experience-event-dataset-retention-ttl-guide.md)
+   * [Conservazione del set di dati dell’evento esperienza nel data lake](datasets/experience-event-dataset-retention-ttl-guide.md)
 * [Elaborazione della richiesta di accesso a dati personali nel Data Lake](privacy.md)
 * [Riferimento API](https://www.adobe.io/experience-platform-apis/references/catalog/)
 * [Domande frequenti](catalog-faq.md)
-* [Note sulla versione della piattaforma](https://experienceleague.adobe.com/it/docs/experience-platform/release-notes/latest)
+* [Note sulla versione di Experience Platform](https://experienceleague.adobe.com/it/docs/experience-platform/release-notes/latest)

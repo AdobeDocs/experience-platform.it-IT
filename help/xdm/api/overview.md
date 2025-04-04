@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;api;API;XDM;XDM system;Experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;
+keywords: Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;Experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;
 solution: Experience Platform
 title: Guida API del registro dello schema
 description: L’API Schema Registry consente agli sviluppatori di gestire in modo programmatico tutti gli schemi e le relative risorse Experience Data Model (XDM) all’interno di Adobe Experience Platform. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
-source-git-commit: 6e58f070c0a25d7434f1f165543f92ec5a081e66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1141'
+source-wordcount: '1144'
 ht-degree: 5%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 5%
 
 [!DNL Schema Registry] viene utilizzato per accedere alla libreria di schemi in Adobe Experience Platform, fornendo un&#39;interfaccia utente e un&#39;API RESTful da cui tutte le risorse della libreria disponibili sono accessibili.
 
-L’API Schema Registry fornisce diversi endpoint che consentono di gestire in modo programmatico tutti gli schemi e le relative risorse Experience Data Model (XDM) disponibili in Platform. Sono inclusi quelli definiti da Adobe, [!DNL Experience Platform] partner e fornitori di cui utilizzi le applicazioni.
+L’API Schema Registry fornisce diversi endpoint che consentono di gestire in modo programmatico tutti gli schemi e le relative risorse Experience Data Model (XDM) disponibili in Experience Platform. Sono inclusi quelli definiti da Adobe, dai partner [!DNL Experience Platform] e dai fornitori di cui utilizzi le applicazioni.
 
 Questi endpoint sono descritti di seguito. Per informazioni dettagliate, consulta le guide dei singoli endpoint e fai riferimento alla [guida introduttiva](./getting-started.md) per informazioni importanti sulle intestazioni richieste, sulla lettura delle chiamate API di esempio e altro ancora.
 
@@ -27,7 +27,7 @@ Per visualizzare tutti gli endpoint disponibili e le operazioni CRUD, visita il 
 
 ## Schemi
 
-Gli schemi XDM rappresentano e convalidano la struttura e il formato dei dati acquisiti in Platform. Uno schema è composto da una classe e da zero o più gruppi di campi dello schema. È possibile creare, visualizzare, modificare ed eliminare schemi utilizzando l&#39;endpoint `/schemas`. Per informazioni su come utilizzare questo endpoint, consulta la [guida dell&#39;endpoint degli schemi](./schemas.md).
+Gli schemi XDM rappresentano e convalidano la struttura e il formato dei dati acquisiti in Experience Platform. Uno schema è composto da una classe e da zero o più gruppi di campi dello schema. È possibile creare, visualizzare, modificare ed eliminare schemi utilizzando l&#39;endpoint `/schemas`. Per informazioni su come utilizzare questo endpoint, consulta la [guida dell&#39;endpoint degli schemi](./schemas.md).
 
 Per una guida dettagliata su come creare manualmente uno schema completo nell&#39;API Schema Registry, inclusa la creazione e l&#39;aggiunta di gruppi di campi e tipi di dati, consulta l&#39;esercitazione [Creazione schema API](../tutorials/create-schema-api.md).
 
@@ -59,7 +59,7 @@ I descrittori sono insiemi di metadati assegnati a campi specifici all’interno
 
 ## Unioni
 
-Platform consente di comporre schemi per casi d’uso specifici, ma consente anche di comporre un’&quot;unione&quot; di schemi appartenenti a una classe specifica. Uno schema di unione aggrega i campi di tutti gli schemi che condividono la stessa classe in un’unica rappresentazione. Attivando uno schema da utilizzare con [Real-Time Customer Profile](../../profile/home.md), tale schema viene incluso nell&#39;unione per la classe specifica. Di conseguenza, gli schemi di unione non possono essere modificati direttamente e possono essere interessati solo dall’inclusione o esclusione di schemi da utilizzare nel profilo.
+Experience Platform consente di comporre schemi per casi d’uso specifici, ma consente anche di comporre un’&quot;unione&quot; di schemi appartenenti a una classe specifica. Uno schema di unione aggrega i campi di tutti gli schemi che condividono la stessa classe in un’unica rappresentazione. Attivando uno schema da utilizzare con [Real-Time Customer Profile](../../profile/home.md), tale schema viene incluso nell&#39;unione per la classe specifica. Di conseguenza, gli schemi di unione non possono essere modificati direttamente e possono essere interessati solo dall’inclusione o esclusione di schemi da utilizzare nel profilo.
 
 Per informazioni su come visualizzare le unioni nell&#39;API del Registro di sistema dello schema, consulta la [guida dell&#39;endpoint &quot;unions&quot;](./unions.md).
 

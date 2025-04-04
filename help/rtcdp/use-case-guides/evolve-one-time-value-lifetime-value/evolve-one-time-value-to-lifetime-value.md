@@ -3,9 +3,9 @@ title: Valorizzazione del cliente una tantum in base al valore del ciclo di vita
 description: Scopri come creare campagne personalizzate per offrire i migliori prodotti o servizi complementari in base agli attributi, al comportamento e agli acquisti precedenti di un cliente specifico.
 feature: Use Cases
 exl-id: 45f72b5e-a63b-44ac-a186-28bac9cdd442
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3179'
+source-wordcount: '3181'
 ht-degree: 2%
 
 ---
@@ -33,7 +33,7 @@ Considera questi clienti che visitano le tue proprietà e acquistano occasionalm
 
 Considerando che internamente hai definito un obiettivo e un obiettivo di business per aumentare la brand loyalty. Questo può tradursi nell’esecuzione di un caso d’uso per stimolare il coinvolgimento e la fedeltà dei clienti.
 
-Per ottenere questo risultato, la tecnologia necessaria è costituita dalle due app di Experience Platform [Real-Time CDP](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=it) e [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=it). Di seguito sono elencati vari elementi di funzionalità e interfaccia utente delle due app che utilizzerai durante l’implementazione del caso d’uso.
+Per ottenere questo risultato, la tecnologia necessaria è costituita dalle due app Experience Platform [Real-Time CDP](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=it) e [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=it). Di seguito sono elencati vari elementi di funzionalità e interfaccia utente delle due app che utilizzerai durante l’implementazione del caso d’uso.
 
 >[!TIP]
 >
@@ -52,7 +52,7 @@ Per ottenere questo risultato, la tecnologia necessaria è costituita dalle due 
 
 ## Architettura Real-Time CDP e Journey Optimizer
 
-Di seguito è riportata una panoramica dell’architettura di alto livello dei vari componenti di Real-Time CDP e Journey Optimizer. Questo diagramma mostra il modo in cui i dati fluiscono attraverso le due app di Experience Platform, dalla raccolta dati al punto in cui vengono attivati tramite percorsi o campagne verso le destinazioni, per ottenere il caso d’uso descritto in questa pagina.
+Di seguito è riportata una panoramica dell’architettura di alto livello dei vari componenti di Real-Time CDP e Journey Optimizer. Questo diagramma mostra il modo in cui i dati fluiscono attraverso le due app Experience Platform, dalla raccolta dati al punto in cui vengono attivati tramite percorsi o campagne verso le destinazioni, per ottenere il caso d’uso descritto in questa pagina.
 
 ![Panoramica visiva di alto livello dell&#39;architettura.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/architecture-diagram.png){zoomable="yes"}
 
@@ -137,7 +137,7 @@ Lo schema di attributi del cliente è rappresentato da una classe [!UICONTROL XD
 
 #### Schema transazioni digitali cliente {#customer-digital-transactions-schema}
 
-Questo schema viene utilizzato per strutturare e fare riferimento ai dati dell’evento che costituisce l’attività del cliente che si verifica sul sito web o su altre piattaforme digitali associate. Questi dati vengono generalmente acquisiti in [!DNL Adobe Experience Platform] tramite [Web SDK](/help/web-sdk/home.md) e sono necessari per fare riferimento ai vari eventi di navigazione e conversione utilizzati per l&#39;attivazione di percorsi, per l&#39;analisi dettagliata dei clienti online e per funzionalità di segmentazione avanzate.
+Questo schema viene utilizzato per strutturare e fare riferimento ai dati dell’evento che costituisce l’attività del cliente che si verifica sul sito web o su altre piattaforme digitali associate. Questi dati vengono generalmente acquisiti in [!DNL Adobe Experience Platform] tramite [Web SDK](/help/web-sdk/home.md) ed è necessario per fare riferimento ai vari eventi di navigazione e conversione utilizzati per l&#39;attivazione di percorsi, per l&#39;analisi dettagliata dei clienti online e per le funzionalità di segmentazione avanzate.
 
 ![Schema transazioni digitali cliente con gruppi di campi evidenziati](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/customer-digital-transactions-schema.png)
 
@@ -210,7 +210,7 @@ External Source System Audit Attributes è un tipo di dati standard Experience D
 
 #### Schema transazioni cliente offline {#customer-offline-transactions-schema}
 
-Questo schema viene utilizzato per strutturare e fare riferimento ai dati dell’evento che costituisce l’attività del cliente che si verifica su piattaforme al di fuori del sito web. Questi dati vengono generalmente acquisiti in [!DNL Adobe Experience Platform] da un POS (o sistema simile) e il più delle volte inviati in streaming a Platform tramite una connessione API. Leggi informazioni sull&#39;[acquisizione batch](/help/ingestion/batch-ingestion/getting-started.md). Il suo scopo è quello di fare riferimento ai vari eventi di conversione offline utilizzati per attivare percorsi, analisi approfondite dei clienti online e offline e funzionalità di segmentazione avanzate.
+Questo schema viene utilizzato per strutturare e fare riferimento ai dati dell’evento che costituisce l’attività del cliente che si verifica su piattaforme al di fuori del sito web. Questi dati vengono generalmente acquisiti in [!DNL Adobe Experience Platform] da un POS (o sistema simile) e il più delle volte inviati in streaming ad Experience Platform tramite una connessione API. Leggi informazioni sull&#39;[acquisizione batch](/help/ingestion/batch-ingestion/getting-started.md). Il suo scopo è quello di fare riferimento ai vari eventi di conversione offline utilizzati per attivare percorsi, analisi approfondite dei clienti online e offline e funzionalità di segmentazione avanzate.
 
 ![Schema transazioni cliente offline con gruppi di campi evidenziati](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/customer-offline-transactions-schema.png)
 
@@ -240,9 +240,9 @@ External Source System Audit Attributes è un tipo di dati standard Experience D
 >
 >Questa è un&#39;implementazione facoltativa se si utilizza [!DNL Adobe Analytics Data Connector].
 
-Questo schema viene utilizzato per strutturare e fare riferimento ai dati dell’evento che costituisce l’attività del cliente che si verifica sul sito web o su altre piattaforme digitali associate. Questo schema è simile allo schema Customer Digital Transactions ma differisce in quanto può essere utilizzato quando Web SDK non è un’opzione per la raccolta di dati. È quindi possibile utilizzare questo schema quando si utilizza [!DNL Adobe Analytics Data Connector] per inviare i dati online a [!DNL Adobe Experience Platform] come flusso di dati primario o secondario.
+Questo schema viene utilizzato per strutturare e fare riferimento ai dati dell’evento che costituisce l’attività del cliente che si verifica sul sito web o su altre piattaforme digitali associate. Questo schema è simile allo schema Customer Digital Transactions ma differisce in quanto può essere utilizzato quando Web SDK non è un&#39;opzione per la raccolta dei dati. È quindi possibile utilizzare questo schema quando si utilizza [!DNL Adobe Analytics Data Connector] per inviare i dati online a [!DNL Adobe Experience Platform] come flusso di dati primario o secondario.
 
-![Adobe schema connettore Web con gruppi di campi evidenziati](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/adobe-web-schema.png)
+![Schema connettore Web Adobe con gruppi di campi evidenziati](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/adobe-web-schema.png)
 
 Lo schema del connettore Web [!DNL Adobe] è rappresentato da una classe [!UICONTROL XDM ExperienceEvent], che include i seguenti gruppi di campi:
 
@@ -300,7 +300,7 @@ Questo caso d’uso richiede la creazione di due tipi di pubblico per definire a
 
 * Per informazioni su come creare un pubblico, consulta la [Guida dell&#39;interfaccia utente di Audience Service](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
 * Per informazioni su come comporre [tipi di pubblico](/help/segmentation/home.md), consulta la [guida dell&#39;interfaccia utente per la composizione del pubblico](/help/segmentation/ui/audience-composition.md).
-* Per informazioni su come creare tipi di pubblico tramite le definizioni dei segmenti derivate da Platform, consulta la [guida dell&#39;interfaccia utente di Audience Builder](/help/segmentation/ui/segment-builder.md).
+* Per informazioni su come creare tipi di pubblico tramite le definizioni dei segmenti derivate da Experience Platform, consulta la [guida dell&#39;interfaccia utente di Audience Builder](/help/segmentation/ui/segment-builder.md).
 
 In particolare, devi creare e utilizzare due tipi di pubblico in diversi passaggi del caso d’uso, come illustrato nell’immagine seguente.
 

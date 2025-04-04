@@ -1,16 +1,16 @@
 ---
-title: Collegare l’account RainFocus a Experience Platform utilizzando l’interfaccia utente
-description: Scopri come collegare il tuo account RainFocus a Experience Platform utilizzando l’interfaccia utente.
+title: Collegare l’account RainFocus ad Experience Platform tramite l’interfaccia utente
+description: Scopri come collegare il tuo account RainFocus ad Experience Platform utilizzando l’interfaccia utente.
 badge: Beta
 exl-id: a349e37e-9f2c-47ff-8360-ccbe578dce27
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '988'
+source-wordcount: '989'
 ht-degree: 1%
 
 ---
 
-# Connetti il tuo account [!DNL RainFocus] ad Experience Platform utilizzando l&#39;interfaccia utente
+# Connetti il tuo account [!DNL RainFocus] ad Experience Platform tramite l&#39;interfaccia utente
 
 >[!NOTE]
 >
@@ -26,14 +26,14 @@ Questo tutorial illustra i passaggi necessari per collegare l&#39;account [!DNL 
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): framework standardizzato in base al quale Experience Platform organizza i dati sull&#39;esperienza del cliente.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): framework standardizzato tramite il quale Experience Platform organizza i dati sull&#39;esperienza del cliente.
    * [Nozioni di base sulla composizione dello schema](../../../../../xdm/schema/composition.md): scopri i blocchi predefiniti di base degli schemi XDM, inclusi i principi chiave e le best practice nella composizione dello schema.
    * [Esercitazione sull&#39;editor di schemi](../../../../../xdm/tutorials/create-schema-ui.md): scopri come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;editor di schemi.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
 ### Prerequisiti
 
-Prima di connettere l&#39;account [!DNL RainFocus] ad Experience Platform, è necessario completare le seguenti attività preliminari:
+Prima di poter connettere l&#39;account [!DNL RainFocus] ad Experience Platform, è necessario completare le seguenti attività preliminari:
 
 * [Raccogli le credenziali richieste](../../../../connectors/analytics/rainfocus.md#gather-required-credentials)
 * [Creare uno schema XDM e definire il campo di identità](../../../../connectors/analytics/rainfocus.md#create-an-xdm-schema-and-define-the-identity-field)
@@ -41,9 +41,9 @@ Prima di connettere l&#39;account [!DNL RainFocus] ad Experience Platform, è ne
 
 Una volta completata la configurazione dei prerequisiti, puoi procedere con i passaggi descritti di seguito.
 
-## Collega il tuo account RainFocus a Experience Platform
+## Collegare l’account RainFocus ad Experience Platform
 
-Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro origini. Nella schermata *[!UICONTROL Catalogo]* sono visualizzate diverse origini con cui è possibile creare un account.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro origini. Nella schermata *[!UICONTROL Catalogo]* sono visualizzate diverse origini con cui è possibile creare un account.
 
 Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
 
@@ -53,7 +53,7 @@ Nella categoria *[!UICONTROL Analytics]*, selezionare **[!UICONTROL Esperienza R
 
 ## Selezionare i dati
 
-Viene visualizzato il passaggio Seleziona dati, che fornisce un’interfaccia per la selezione dei dati da portare all’Experience Platform.
+Viene visualizzato il passaggio Seleziona dati, che fornisce un’interfaccia per la selezione dei dati da portare in Experience Platform.
 
 * La parte sinistra dell’interfaccia è un browser che ti consente di visualizzare i flussi di dati disponibili all’interno del tuo account;
 * La parte destra dell’interfaccia consente di visualizzare in anteprima fino a 100 righe di dati da un file JSON.
@@ -82,13 +82,13 @@ Al termine, selezionare **[!UICONTROL Avanti]**.
 
 Viene visualizzato il passaggio Mappatura, che fornisce un’interfaccia per mappare i campi sorgente dallo schema sorgente ai campi XDM di destinazione appropriati nello schema di destinazione.
 
-Questo Experience Platform fornisce consigli intelligenti per campi mappati automaticamente in base allo schema o al set di dati di destinazione selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi d’uso. In base alle tue esigenze, puoi scegliere di mappare i campi direttamente o utilizzare le funzioni di preparazione dati per trasformare i dati sorgente in modo da derivare valori calcolati o calcolati. Per i passaggi completi sull&#39;utilizzo dell&#39;interfaccia mapper e dei campi calcolati, consulta la [guida dell&#39;interfaccia utente della preparazione dati](../../../../../data-prep/ui/mapping.md).
+Experience Platform fornisce consigli intelligenti per campi mappati automaticamente in base allo schema o al set di dati di destinazione selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi d’uso. In base alle tue esigenze, puoi scegliere di mappare i campi direttamente o utilizzare le funzioni di preparazione dati per trasformare i dati sorgente in modo da derivare valori calcolati o calcolati. Per i passaggi completi sull&#39;utilizzo dell&#39;interfaccia mapper e dei campi calcolati, consulta la [guida dell&#39;interfaccia utente della preparazione dati](../../../../../data-prep/ui/mapping.md).
 
 Una volta mappati correttamente i dati di origine, seleziona **[!UICONTROL Avanti]**.
 
 ![Passaggio di mappatura del flusso di lavoro di origine.](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-mappings.png)
 
-## Controlla
+## Rivisione
 
 Viene visualizzato il passaggio **Rivedi**, che consente di rivedere il nuovo flusso di dati prima che venga creato. I dettagli sono raggruppati nelle seguenti categorie:
 
@@ -117,7 +117,7 @@ Una volta completato il flusso di dati e recuperato l&#39;URL dell&#39;endpoint 
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai stabilito una connessione per l&#39;origine [!DNL RainFocus], che ti consente di eseguire lo streaming dei dati di analisi e gestione degli eventi su Experience Platform.
+Seguendo questa esercitazione, hai stabilito una connessione per l&#39;origine [!DNL RainFocus], che ti consente di inviare i dati di analisi e gestione degli eventi ad Experience Platform.
 
 ## Risorse aggiuntive
 

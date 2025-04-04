@@ -2,24 +2,24 @@
 keywords: Experience Platform;home;argomenti popolari
 solution: Experience Platform
 title: Nozioni di base sulle API di Experience Platform
-description: Questo documento fornisce una breve panoramica di alcune delle tecnologie e sintassi sottostanti coinvolte con le API Experience Platform.
+description: Questo documento fornisce una breve panoramica di alcune delle tecnologie e sintassi sottostanti coinvolte con le API di Experience Platform.
 role: Developer
 feature: API
 exl-id: cd69ba48-f78c-4da5-80d1-efab5f508756
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '508'
 ht-degree: 1%
 
 ---
 
 # Nozioni di base sulle API di Experience Platform
 
-Le API Adobe Experience Platform utilizzano diverse tecnologie e sintassi di base importanti da comprendere per gestire in modo efficace le risorse [!DNL Platform] basate su JSON. Questo documento fornisce una breve panoramica di queste tecnologie, nonché collegamenti verso la documentazione esterna per ulteriori informazioni.
+Le API Adobe Experience Platform utilizzano diverse tecnologie e sintassi di base importanti da comprendere per gestire in modo efficace le risorse [!DNL Experience Platform] basate su JSON. Questo documento fornisce una breve panoramica di queste tecnologie, nonché collegamenti verso la documentazione esterna per ulteriori informazioni.
 
 ## Puntatore JSON {#json-pointer}
 
-Il puntatore JSON è una sintassi stringa standardizzata ([RFC 6901](https://tools.ietf.org/html/rfc6901)) per l&#39;identificazione di valori specifici nei documenti JSON. Un puntatore JSON è una stringa di token separati da `/` caratteri che specificano le chiavi di oggetto o gli indici di matrice e i token possono essere una stringa o un numero. Le stringhe di puntatore JSON vengono utilizzate in molte operazioni PATCH per le API [!DNL Platform], come descritto più avanti in questo documento. Per ulteriori informazioni sul puntatore JSON, consulta la [documentazione Panoramica puntatore JSON](https://rapidjson.org/md_doc_pointer.html).
+Il puntatore JSON è una sintassi stringa standardizzata ([RFC 6901](https://tools.ietf.org/html/rfc6901)) per l&#39;identificazione di valori specifici nei documenti JSON. Un puntatore JSON è una stringa di token separati da `/` caratteri che specificano le chiavi di oggetto o gli indici di matrice e i token possono essere una stringa o un numero. Le stringhe puntatore JSON vengono utilizzate in molte operazioni PATCH per le API [!DNL Experience Platform], come descritto più avanti in questo documento. Per ulteriori informazioni sul puntatore JSON, consulta la [documentazione Panoramica puntatore JSON](https://rapidjson.org/md_doc_pointer.html).
 
 ### Esempio di oggetto schema JSON
 
@@ -98,7 +98,7 @@ Il JSON seguente rappresenta uno schema XDM semplificato i cui campi possono ess
 
 ## Patch JSON {#json-patch}
 
-Molte operazioni PATCH per le API [!DNL Platform] accettano oggetti Patch JSON per i payload di richiesta. La patch JSON è un formato standardizzato ([RFC 6902](https://tools.ietf.org/html/rfc6902)) per la descrizione delle modifiche apportate a un documento JSON. Consente di definire aggiornamenti parziali di JSON senza dover inviare l’intero documento nel corpo di una richiesta.
+Molte operazioni PATCH per le API [!DNL Experience Platform] accettano oggetti Patch JSON per i payload di richiesta. La patch JSON è un formato standardizzato ([RFC 6902](https://tools.ietf.org/html/rfc6902)) per la descrizione delle modifiche apportate a un documento JSON. Consente di definire aggiornamenti parziali di JSON senza dover inviare l’intero documento nel corpo di una richiesta.
 
 ### Esempio di oggetto Patch JSON
 
@@ -109,7 +109,7 @@ Molte operazioni PATCH per le API [!DNL Platform] accettano oggetti Patch JSON p
 }
 ```
 
-* `op`: tipo di operazione patch. Sebbene la patch JSON supporti diversi tipi di operazioni, non tutte le operazioni PATCH nelle API [!DNL Platform] sono compatibili con ogni tipo di operazione. I tipi di operazioni disponibili sono:
+* `op`: tipo di operazione patch. Sebbene la patch JSON supporti diversi tipi di operazioni, non tutte le operazioni PATCH nelle API [!DNL Experience Platform] sono compatibili con ogni tipo di operazione. I tipi di operazioni disponibili sono:
    * `add`
    * `remove`
    * `replace`
@@ -126,4 +126,4 @@ Lo schema JSON è un formato utilizzato per descrivere e convalidare la struttur
 
 ## Passaggi successivi
 
-In questo documento sono state introdotte alcune delle tecnologie e sintassi necessarie per la gestione delle risorse basate su JSON per [!DNL Experience Platform]. Per ulteriori informazioni sull&#39;utilizzo delle API di Platform, incluse le best practice, consulta la [guida introduttiva](api-guide.md). Per le risposte alle domande frequenti, fare riferimento alla [Guida alla risoluzione dei problemi di Platform](troubleshooting.md).
+In questo documento sono state introdotte alcune delle tecnologie e sintassi necessarie per la gestione delle risorse basate su JSON per [!DNL Experience Platform]. Per ulteriori informazioni sull&#39;utilizzo delle API di Experience Platform, incluse le best practice, consulta la [guida introduttiva](api-guide.md). Per le risposte alle domande frequenti, fare riferimento alla [Guida alla risoluzione dei problemi di Experience Platform](troubleshooting.md).

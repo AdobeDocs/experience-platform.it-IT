@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida alle credenziali di Query Service
 description: Adobe Experience Platform Query Service fornisce un’interfaccia utente che può essere utilizzata per scrivere ed eseguire query, visualizzare le query eseguite in precedenza e accedere a quelle salvate dagli utenti della tua organizzazione.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 569f8f96a1039e52ac374e2eb07fd96ad8138edd
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1828'
+source-wordcount: '1830'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ Adobe Experience Platform Query Service consente di connettersi con client ester
 
 >[!NOTE]
 >
->Il pannello Credenziali non è disponibile automaticamente per tutti gli utenti. Contatta il team del tuo account di Adobe per richiedere che la scheda [!UICONTROL Credenziali] sia inclusa nell&#39;area di lavoro del servizio query se necessario. Se richiesto, questo cambiamento riguarda l’intera organizzazione ed è condotto dal team di progettazione di Adobe. Non si tratta di un’impostazione controllata dagli utenti.
+>Il pannello Credenziali non è disponibile automaticamente per tutti gli utenti. Contatta il team del tuo account Adobe per richiedere che la scheda [!UICONTROL Credenziali] sia inclusa nell&#39;area di lavoro del servizio query se necessario. Se richiesto, la modifica interessa l’intera organizzazione ed è eseguita dal team di progettazione di Adobe. Non si tratta di un’impostazione controllata dagli utenti.
 
 ## Credenziali in scadenza {#expiring-credentials}
 
@@ -32,25 +32,25 @@ Adobe Experience Platform Query Service consente di connettersi con client ester
 
 La sezione **[!UICONTROL Credenziali in scadenza]** fornisce le seguenti informazioni:
 
-- **[!UICONTROL Host]**: nome dell&#39;host a cui connettere il client. Incorpora il nome dell’organizzazione, come visualizzato nella barra multifunzione superiore dell’interfaccia utente di Platform.
+- **[!UICONTROL Host]**: nome dell&#39;host a cui connettere il client. Questo incorpora il nome dell’organizzazione come visualizzato nella barra multifunzione superiore dell’interfaccia utente di Experience Platform.
 - **[!UICONTROL Porta]**: numero di porta dell&#39;host a cui connettersi.
 - **[!UICONTROL Database]**: nome del database a cui connettere un client.
 - **[!UICONTROL Nome utente]**: nome utente utilizzato per connettersi a Query Service.
 - **[!UICONTROL Password]**: password utilizzata per la connessione a Query Service. Le password nell’interfaccia utente sono state sottoposte a hashing per motivi di sicurezza. Selezionare l&#39;icona Copia (![Icona Copia.](/help/images/icons/copy.png)) per copiare le credenziali complete senza hash negli Appunti.
 - **[!UICONTROL Comando PSQL]**: comando che ha inserito automaticamente tutte le informazioni rilevanti per la connessione a Query Service tramite PSQL nella riga di comando.
-- **[!UICONTROL Scadenza]**: data e ora di scadenza delle credenziali. La durata di validità predefinita del token è di 24 ore, ma può essere modificata nelle impostazioni avanzate dell’Admin Console.
+- **[!UICONTROL Scadenza]**: data e ora di scadenza delle credenziali. La durata di validità predefinita del token è di 24 ore, ma può essere modificata nelle impostazioni avanzate di Admin Console.
 
 >[!TIP]
 >
->Per modificare la durata della sessione per la connessione delle credenziali in scadenza a Query Service, passa all&#39;[Admin Console](https://adminconsole.adobe.com/) e seleziona le seguenti opzioni sullo schermo: **Impostazioni** > **Privacy e sicurezza** > **Impostazioni autenticazione** > **Impostazioni avanzate** > **Durata massima sessione**.
+>Per modificare la durata della sessione per la connessione delle credenziali in scadenza a Query Service, passa a [Admin Console](https://adminconsole.adobe.com/) e seleziona le seguenti opzioni sullo schermo: **Impostazioni** > **Privacy e sicurezza** > **Impostazioni autenticazione** > **Impostazioni avanzate** > **Durata massima sessione**.
 >
->![Scheda Impostazioni Admin Console con Privacy e sicurezza, Impostazioni autenticazione e Durata massima sessione evidenziate.](../images/ui/credentials/max-session-life.png)
+>![Scheda Impostazioni di Admin Console con Privacy e sicurezza, Impostazioni autenticazione e Durata massima sessione evidenziate.](../images/ui/credentials/max-session-life.png)
 >
->Per ulteriori informazioni sulle [impostazioni avanzate](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) offerte da Admin Console, consulta la documentazione dell&#39;Adobe.
+>Per ulteriori informazioni sulle [Impostazioni avanzate](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) offerte da Admin Console, consulta la Guida di Adobe.
 
-### Connettersi ai dati di Customer Journey Analytics nelle sessioni di query {#connect-to-customer-journey-analytics}
+### Connettersi ai dati Customer Journey Analytics nelle sessioni di query {#connect-to-customer-journey-analytics}
 
-Utilizza l&#39;estensione Customer Journey Analytics BI con Power BI o Tableau per accedere alle [visualizzazioni dati](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/data-views) del tuo Customer Journey Analytics con SQL. Integrando Query Service con l’estensione BI, puoi accedere alle visualizzazioni dati direttamente all’interno delle sessioni di Query Service. Questa integrazione semplifica le funzionalità degli strumenti BI che utilizzano Query Service come interfaccia PostgreSQL. Questa funzionalità elimina la necessità di duplicare le visualizzazioni dati negli strumenti di business intelligence, garantisce la coerenza dei rapporti tra le piattaforme e semplifica l&#39;integrazione dei dati di Customer Journey Analytics con altre origini nelle piattaforme di business intelligence.
+Utilizza l&#39;estensione Customer Journey Analytics BI con Power BI o Tableau per accedere alle [visualizzazioni dati](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/data-views) di Customer Journey Analytics con SQL. Integrando Query Service con l’estensione BI, puoi accedere alle visualizzazioni dati direttamente all’interno delle sessioni di Query Service. Questa integrazione semplifica le funzionalità degli strumenti BI che utilizzano Query Service come interfaccia PostgreSQL. Questa funzionalità elimina la necessità di duplicare le visualizzazioni dati negli strumenti di business intelligence, garantisce la coerenza dei rapporti tra le piattaforme e semplifica l&#39;integrazione dei dati Customer Journey Analytics con altre origini nelle piattaforme di business intelligence.
 
 Consulta la documentazione per scoprire come [connettere Query Service a diverse applicazioni client desktop](../clients/overview.md), ad esempio [Power BI](../clients/power-bi.md) o [Tableau](../clients/tableau.md)
 
@@ -58,15 +58,15 @@ Consulta la documentazione per scoprire come [connettere Query Service a diverse
 >
 >Per utilizzare questa funzionalità sono necessari un progetto Workspace di Customer Journey Analytics e una visualizzazione dati.
 
-Per accedere ai dati di Customer Journey Analytics in Power BI o Tableau, selezionare il menu a discesa [!UICONTROL Database], quindi selezionare `prod:cja` tra le opzioni disponibili. Copiare quindi i parametri delle credenziali [!DNL Postgres] (Host, Porta, Database, Nome utente e altri) da utilizzare nella configurazione di Power BI o Tableau.
+Per accedere ai dati di Customer Journey Analytics in Power BI o Tableau, selezionare il menu a discesa [!UICONTROL Database], quindi selezionare `prod:cja` tra le opzioni disponibili. Copiare quindi i parametri delle credenziali [!DNL Postgres] (Host, Porta, Database, Nome utente e altri) da utilizzare nella configurazione Power BI o Tableau.
 
 ![Scheda Credenziali di Query Service con il menu a discesa del database evidenziato.](../images/ui/credentials/database-dropdown.png)
 
 >[!NOTE]
 >
->Quando si collega Power BI o Tableau al Customer Journey Analytics, viene utilizzata l’adesione &quot;sessioni simultanee&quot; di Query Service. Se sono necessarie sessioni e query aggiuntive, è possibile acquistare un componente aggiuntivo per il pacchetto di utenti di query ad hoc per ottenere cinque sessioni simultanee aggiuntive e una query concorrente aggiuntiva.
+>Quando si collega Power BI o Tableau a Customer Journey Analytics, viene utilizzato il diritto &quot;sessioni simultanee&quot; di Query Service. Se sono necessarie sessioni e query aggiuntive, è possibile acquistare un componente aggiuntivo per il pacchetto di utenti di query ad hoc per ottenere cinque sessioni simultanee aggiuntive e una query concorrente aggiuntiva.
 
-Puoi anche accedere ai dati del Customer Journey Analytics direttamente da Query Editor o Postgres CLI. A tale scopo, fare riferimento al database `cja` durante la scrittura della query. Per ulteriori informazioni su come scrivere, eseguire e salvare le query, vedere la [guida all&#39;authoring delle query](./user-guide.md#query-authoring) di Query Editor.
+Puoi anche accedere ai dati Customer Journey Analytics direttamente da Query Editor o Postgres CLI. A tale scopo, fare riferimento al database `cja` durante la scrittura della query. Per ulteriori informazioni su come scrivere, eseguire e salvare le query, vedere la [guida all&#39;authoring delle query](./user-guide.md#query-authoring) di Query Editor.
 
 Per istruzioni complete sull&#39;accesso alle visualizzazioni dati di Customer Journey Analytics con SQL, consulta la [BI extension guide](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension).
 
@@ -99,7 +99,7 @@ In Adobe Developer Console sono ora configurate tutte le autorizzazioni necessar
 
 ### Genera credenziali {#generate-credentials}
 
-Per creare un set di credenziali senza scadenza, torna all&#39;interfaccia utente di Platform e seleziona **[!UICONTROL Query]** dalla navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Query]. Quindi, selezionare la scheda **[!UICONTROL Credenziali]** seguita da **[!UICONTROL Genera credenziali]**.
+Per creare un set di credenziali senza scadenza, torna all&#39;interfaccia utente di Experience Platform e seleziona **[!UICONTROL Query]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Query]. Quindi, selezionare la scheda **[!UICONTROL Credenziali]** seguita da **[!UICONTROL Genera credenziali]**.
 
 ![Dashboard delle query con la scheda Credenziali e l&#39;opzione Genera credenziali evidenziate.](../images/ui/credentials/generate-credentials.png)
 
@@ -144,7 +144,7 @@ Dopo aver fornito tutti i dettagli richiesti, seleziona **[!UICONTROL Aggiorna a
 
 ## Utilizzare le credenziali per connettersi ai client esterni {#use-credential-to-connect}
 
-Puoi utilizzare le credenziali in scadenza o non in scadenza per connetterti con client esterni, ad esempio Aqua Data Studio, Looker o Power BI. Il metodo di input per queste credenziali varia a seconda del client esterno. Per istruzioni specifiche sull’utilizzo di queste credenziali, consulta la documentazione del client esterno.
+Puoi utilizzare le credenziali in scadenza o non in scadenza per connetterti con client esterni, come Aqua Data Studio, Looker o Power BI. Il metodo di input per queste credenziali varia a seconda del client esterno. Per istruzioni specifiche sull’utilizzo di queste credenziali, consulta la documentazione del client esterno.
 
 L’immagine indica la posizione di ciascun parametro trovato nell’interfaccia utente, ad eccezione della password delle credenziali senza scadenza. Anche se le credenziali senza scadenza vengono fornite dai relativi file di configurazione JSON, puoi visualizzare le credenziali in scadenza nella scheda **Credenziali** nell&#39;interfaccia utente.
 

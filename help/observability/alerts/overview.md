@@ -4,9 +4,9 @@ title: Panoramica degli avvisi
 description: Scopri gli avvisi di Adobe Experience Platform, inclusa la struttura della definizione delle regole di avviso.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: 829d7da1dc53486eba1cdceddb7888b578e1c137
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '804'
 ht-degree: 3%
 
 ---
@@ -19,13 +19,13 @@ ht-degree: 3%
 
 Adobe Experience Platform ti consente di abbonarti agli avvisi basati su eventi relativi alle attività di Adobe Experience Platform. Gli avvisi riducono o eliminano la necessità di eseguire il polling dell&#39;[[!DNL Observability Insights] API](../api/overview.md) per verificare se un processo è stato completato, se è stata raggiunta una determinata fase cardine in un flusso di lavoro o se si sono verificati errori.
 
-Quando viene raggiunto un determinato set di condizioni nelle operazioni di Platform (ad esempio un potenziale problema quando il sistema supera una soglia), Platform può inviare messaggi di avviso a tutti gli utenti dell’organizzazione che si sono iscritti a tali condizioni. Questi messaggi possono ripetersi in un intervallo di tempo predefinito fino alla risoluzione dell&#39;avviso.
+Quando viene raggiunto un determinato set di condizioni nelle operazioni di Experience Platform (ad esempio un potenziale problema quando il sistema supera una soglia), Experience Platform può inviare messaggi di avviso a tutti gli utenti dell’organizzazione che si sono iscritti a tali condizioni. Questi messaggi possono ripetersi in un intervallo di tempo predefinito fino alla risoluzione dell&#39;avviso.
 
 Questo documento fornisce una panoramica degli avvisi in Adobe Experience Platform, inclusa la struttura della definizione delle regole di avviso.
 
 ## Avvisi una tantum e avvisi ripetuti
 
-Gli avvisi di Platform possono essere inviati una sola volta oppure possono essere ripetuti in un intervallo predefinito finché non vengono risolti. I casi di utilizzo di ciascuna di queste opzioni sono destinati a differire nei seguenti modi:
+Gli avvisi di Experience Platform possono essere inviati una sola volta oppure possono essere ripetuti in un intervallo predefinito finché non vengono risolti. I casi di utilizzo di ciascuna di queste opzioni sono destinati a differire nei seguenti modi:
 
 | Avviso una tantum | Avviso ripetuto |
 | --- | --- |
@@ -53,20 +53,20 @@ Un avviso può essere suddiviso nei seguenti componenti:
 
 Gli avvisi possono essere ricevuti e gestiti tramite due canali:
 
-* [Eventi Adobe I/O](#events)
-* [Interfaccia utente di Platform](#ui)
+* [Adobe I/O Events](#events)
+* [Interfaccia utente di Experience Platform](#ui)
 
 ### Eventi I/O {#events}
 
-Gli avvisi possono essere inviati a un webhook configurato per facilitare l’automazione efficiente del monitoraggio delle attività. Per ricevere avvisi tramite webhook, devi registrarlo per gli avvisi di Platform in Adobe Developer Console. Per i passaggi specifici, consulta la guida su [abbonamento a notifiche evento Adobe I/O](./subscribe.md).
+Gli avvisi possono essere inviati a un webhook configurato per facilitare l’automazione efficiente del monitoraggio delle attività. Per ricevere gli avvisi tramite webhook, devi registrarlo per gli avvisi di Experience Platform in Adobe Developer Console. Per i passaggi specifici, consulta la guida su [abbonamento alle notifiche degli eventi di Adobe I/O](./subscribe.md).
 
-### Interfaccia utente di Platform {#ui}
+### Interfaccia utente di Experience Platform {#ui}
 
-L’interfaccia utente di Platform consente di visualizzare gli avvisi ricevuti e gestire le regole degli avvisi. Il video seguente fornisce un’introduzione a queste funzionalità.
+L’interfaccia utente di Experience Platform ti consente di visualizzare gli avvisi ricevuti e di gestire le regole degli avvisi. Il video seguente fornisce un’introduzione a queste funzionalità.
 
 >[!VIDEO](https://video.tv.adobe.com/v/336218?quality=12&learn=on)
 
-Per utilizzare gli avvisi nell’interfaccia utente di Platform, è necessario disporre delle seguenti autorizzazioni di controllo degli accessi abilitate tramite Adobe Admin Console:
+Per lavorare con gli avvisi nell’interfaccia utente di Experience Platform, è necessario disporre delle seguenti autorizzazioni di controllo degli accessi abilitate tramite Adobe Admin Console:
 
 | Autorizzazione | Descrizione |
 | --- | --- |
@@ -81,7 +81,7 @@ Per utilizzare gli avvisi nell’interfaccia utente di Platform, è necessario d
 
 >[!NOTE]
 >
->Per ulteriori informazioni su come gestire le autorizzazioni in Platform, consulta la [documentazione sul controllo degli accessi](../../access-control/ui/overview.md).
+>Per ulteriori informazioni su come gestire le autorizzazioni in Experience Platform, consulta la [documentazione sul controllo degli accessi](../../access-control/ui/overview.md).
 
 Con l&#39;autorizzazione Visualizza avvisi, è possibile visualizzare gli avvisi ricevuti selezionando l&#39;icona a forma di campana (![icona campana](/help/images/icons/bell.png)) nell&#39;angolo in alto a destra.
 
@@ -95,4 +95,4 @@ Inoltre, la scheda [!UICONTROL Avvisi] nell&#39;interfaccia utente consente ai s
 
 ## Passaggi successivi
 
-Una volta letto questo documento, potrai conoscere gli avvisi di Platform e il loro ruolo nell’ecosistema di Platform. Per informazioni su come ricevere e gestire gli avvisi, consulta la documentazione del processo collegata a in questa panoramica.
+Una volta letto questo documento, potrai conoscere gli avvisi di Experience Platform e il loro ruolo nell’ecosistema Experience Platform. Per informazioni su come ricevere e gestire gli avvisi, consulta la documentazione del processo collegata a in questa panoramica.

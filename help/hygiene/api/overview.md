@@ -3,9 +3,9 @@ title: Guida dell’API di igiene dei dati
 description: Scopri come correggere o eliminare in modo programmatico i dati personali memorizzati dai clienti in Adobe Experience Platform.
 role: Developer
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '446'
 ht-degree: 6%
 
 ---
@@ -34,7 +34,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’
 
 ### Lettura delle chiamate API di esempio
 
-Questo documento fornisce un esempio di chiamata API per dimostrare come formattare le richieste. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere le chiamate API di esempio](../../landing/api-guide.md#sample-api) nella guida introduttiva per le API di Experience Platform.
+Questo documento fornisce un esempio di chiamata API per dimostrare come formattare le richieste. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere chiamate API di esempio](../../landing/api-guide.md#sample-api) nella guida introduttiva per le API di Experience Platform.
 
 ## Scadenze dei set di dati
 
@@ -57,4 +57,4 @@ L&#39;organizzazione è limitata a una quota mensile predeterminata di processi 
 
 ## Passaggi successivi
 
-Questa guida illustra come gestire le richieste del ciclo di vita dei dati utilizzando le chiamate API. Per informazioni su come eseguire queste azioni nell&#39;interfaccia utente di Platform, consulta la [guida dell&#39;interfaccia utente del ciclo di vita dei dati](../ui/overview.md).
+Questa guida illustra come gestire le richieste del ciclo di vita dei dati utilizzando le chiamate API. Per informazioni su come eseguire queste azioni nell&#39;interfaccia utente di Experience Platform, consulta la [guida dell&#39;interfaccia utente del ciclo di vita dei dati](../ui/overview.md).

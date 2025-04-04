@@ -1,15 +1,15 @@
 ---
-title: Configurare il supporto per la messaggistica Web in-app in Web SDK
+title: Configurare il supporto per la messaggistica in-app web in Web SDK
 description: Scopri come configurare l’estensione tag Web SDK per supportare la messaggistica in-app web.
 exl-id: 90a19ef4-e94c-4f16-a26a-8919ad2dbd6f
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '969'
 ht-degree: 0%
 
 ---
 
-# Configurare il supporto per la messaggistica Web in-app in Web SDK
+# Configurare il supporto per la messaggistica in-app web in Web SDK
 
 I messaggi in-app sono notifiche che puoi inviare agli utenti all’interno dell’applicazione web, guidandoli verso punti di interesse specifici.
 
@@ -19,7 +19,7 @@ Utilizzando i messaggi in-app, puoi interagire in modo efficace con il pubblico 
 
 >[!IMPORTANT]
 >
->La messaggistica Web in-app è una funzionalità di [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=it) che utilizza l&#39;SDK Web per distribuire il contenuto personalizzato.
+>La messaggistica Web in-app è una funzionalità di [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=it) che utilizza il Web SDK per distribuire il contenuto personalizzato.
 >
 >Per istruzioni dettagliate su come configurare la campagna di messaggistica in-app Web, consulta la [documentazione di Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html).
 
@@ -28,7 +28,7 @@ Utilizzando i messaggi in-app, puoi interagire in modo efficace con il pubblico 
 
 ### Versione estensione tag Web SDK {#extension-version}
 
-La funzionalità di messaggistica in-app per web richiede la versione più recente dell’estensione tag SDK per web.
+La funzionalità di messaggistica in-app per web richiede la versione più recente dell’estensione tag Web SDK.
 
 ### Configurare un CSP per la messaggistica in-app web {#csp}
 
@@ -42,25 +42,25 @@ Per ulteriori informazioni sulla configurazione di un CSP, consulta la [document
 
 ## Configurare la messaggistica Web in-app utilizzando l’estensione tag Web SDK {#tag-extension}
 
-Consulta la [pagina di configurazione dell&#39;estensione tag Web SDK](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) per capire dove si trovano le impostazioni descritte di seguito.
+Fare riferimento alla [pagina di configurazione dell&#39;estensione tag Web SDK](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) per individuare le impostazioni descritte di seguito.
 
-Dopo aver [installato](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#install-the-web-sdk-tag-extension) l&#39;estensione tag Web SDK, segui i passaggi seguenti per configurare l&#39;estensione per la messaggistica in-app Web.
+Dopo aver [installato](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#install-the-web-sdk-tag-extension) l&#39;estensione tag Web SDK, eseguire la procedura seguente per configurare l&#39;estensione per la messaggistica in-app Web.
 
-Nella sezione **[!UICONTROL Personalization]**, seleziona l&#39;opzione **[!UICONTROL Abilita archiviazione personalizzazione]**. Questa opzione consente all’SDK web di tenere traccia delle esperienze viste dall’utente nei vari caricamenti di pagina.
+Nella sezione **[!UICONTROL Personalization]**, seleziona l&#39;opzione **[!UICONTROL Abilita archiviazione personalizzazione]**. Questa opzione consente al Web SDK di tenere traccia delle esperienze viste dall’utente nei vari caricamenti di pagina.
 
 ![Immagine che mostra l&#39;opzione di archiviazione per la personalizzazione nella pagina di configurazione dell&#39;estensione tag.](assets/web-in-app-messaging/enable-personalization-storage.png)
 
 
 La messaggistica in-app Web supporta due tipi di trigger:
 
-* [Invio di dati a Platform](#send-data-platform)
+* [Invio di dati ad Experience Platform](#send-data-platform)
 * [Attivazione manuale dei messaggi](#manual-trigger)
 
 Consulta le sezioni seguenti per configurare l’estensione tag Web SDK in base ai trigger che desideri utilizzare.
 
-### Passaggi di configurazione per il trigger **[!UICONTROL Send data to Platform]** {#send-data-platform}
+### Passaggi di configurazione per il trigger **[!UICONTROL Invia dati ad Experience Platform]** {#send-data-platform}
 
-Seleziona la proprietà tag che contiene l&#39;estensione Web SDK e [crea una nuova regola](../../tags/ui/managing-resources/rules.md##create-a-rule) con le seguenti impostazioni:
+Selezionare la proprietà tag che contiene l&#39;estensione Web SDK e [creare una nuova regola](../../tags/ui/managing-resources/rules.md##create-a-rule) con le impostazioni seguenti:
 
 1. **[!UICONTROL Estensione]**: [!UICONTROL Core]
 2. **[!UICONTROL Tipo evento]**: [!UICONTROL Libreria caricata (parte superiore della pagina)]
@@ -101,7 +101,7 @@ Il processo di configurazione è ora completato e il messaggio è pronto per ess
 
 ### Passaggi di configurazione per l&#39;utilizzo di trigger manuali {#manual-trigger}
 
-Seleziona la proprietà tag che contiene l&#39;estensione Web SDK e [crea una nuova regola](../../tags/ui/managing-resources/rules.md##create-a-rule) con le seguenti impostazioni:
+Selezionare la proprietà tag che contiene l&#39;estensione Web SDK e [creare una nuova regola](../../tags/ui/managing-resources/rules.md##create-a-rule) con le impostazioni seguenti:
 
 1. **[!UICONTROL Estensione]**: [!UICONTROL Core]
 2. **[!UICONTROL Tipo evento]**: [!UICONTROL Fare clic]
@@ -140,9 +140,9 @@ Dopo aver aggiunto la regola alla libreria, seleziona **[!UICONTROL Salva e gene
 
 Il processo di configurazione è ora completato e il messaggio è pronto per essere mostrato agli utenti.
 
-## Configurare la messaggistica Web in-app utilizzando la libreria JavaScript dell’SDK per web {#js-library}
+## Configurare la messaggistica Web in-app utilizzando la libreria Web SDK JavaScript {#js-library}
 
-In alternativa all’utilizzo dell’estensione tag Web SDK, puoi anche configurare la messaggistica Web in-app direttamente dalla libreria JavaScript dell’SDK web.
+In alternativa all’utilizzo dell’estensione tag Web SDK, puoi anche configurare la messaggistica Web in-app direttamente dalla libreria Web SDK JavaScript.
 
 
 
@@ -150,7 +150,7 @@ I messaggi web in-app provenienti da Adobe Journey Optimizer possono essere visu
 
 ### Metodo 1: recuperare automaticamente il contenuto di personalizzazione {#automatic}
 
-Per fare in modo che Web SDK recuperi automaticamente il contenuto di personalizzazione al caricamento della pagina, utilizza il comando `sendEvent`, come illustrato nell&#39;esempio seguente.
+Per fare in modo che Web SDK recuperi automaticamente il contenuto di personalizzazione al caricamento della pagina, utilizzare il comando `sendEvent`, come illustrato nell&#39;esempio seguente.
 
 ```js
   alloy("sendEvent", {
@@ -182,7 +182,7 @@ In questo esempio, il contenuto di personalizzazione viene visualizzato quando u
 
 È possibile scegliere di mostrare i messaggi in-app agli utenti per un numero di volte impostato o ogni volta che visitano una pagina, tramite l&#39;opzione di configurazione `personalizationStorageEnabled`.
 
-Nella configurazione di [Web SDK](../commands/configure/overview.md) impostare l&#39;opzione `personalizationStorageEnabled` in base alle proprie esigenze:
+Nella [configurazione di Web SDK](../commands/configure/overview.md) impostare l&#39;opzione `personalizationStorageEnabled` in base alle proprie esigenze:
 
 * `personalizationStorageEnabled: true` attiva il messaggio in-app con la frequenza definita nella [campagna Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html#configure-inapp).
 * `personalizationStorageEnabled: false` attiva il messaggio in-app a ogni caricamento di pagina.

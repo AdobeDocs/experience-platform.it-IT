@@ -2,9 +2,9 @@
 title: Impostare le identità primarie in un set di dati ad hoc
 description: Adobe Experience Platform Query Service consente di impostare un’identità o un’identità primaria per i campi di set di dati dello schema ad hoc direttamente tramite il comando SQL ALTER TABLE. Nel documento viene illustrato come utilizzare il comando ALTER TABLE per impostare un'identità primaria o secondaria.
 exl-id: b8e6b87e-c6e5-4688-a936-a3a1510a3c5b
-source-git-commit: d9c3ccdf0c0e191af1ab18e894688f301378156d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '447'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ Per etichettare le colonne del set di dati come identità primaria o secondaria 
 
 ## Aggiungere vincoli {#add-constraints}
 
-Il comando `ALTER TABLE` consente di etichettare una colonna di set di dati come identità di una persona e quindi di utilizzare tale etichetta come identità primaria aggiornando i metadati associati tramite SQL. Questa funzione è particolarmente utile quando i set di dati vengono creati tramite SQL anziché direttamente da uno schema tramite l’interfaccia utente di Platform. Il comando può essere utilizzato per garantire che le operazioni sui dati in Platform siano conformi ai criteri di utilizzo dei dati.
+Il comando `ALTER TABLE` consente di etichettare una colonna di set di dati come identità di una persona e quindi di utilizzare tale etichetta come identità primaria aggiornando i metadati associati tramite SQL. Questa funzione è particolarmente utile quando i set di dati vengono creati tramite SQL anziché direttamente da uno schema tramite l’interfaccia utente di Experience Platform. Il comando può essere utilizzato per garantire che le operazioni sui dati in Experience Platform siano conformi ai criteri di utilizzo dei dati.
 
 **Esempi**
 

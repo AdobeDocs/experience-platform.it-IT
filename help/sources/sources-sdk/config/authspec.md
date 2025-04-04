@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;origini;connettori;source 
 title: Configurare le specifiche di autenticazione per le origini self-service (Batch SDK)
 description: Questo documento fornisce una panoramica delle configurazioni da preparare per utilizzare le origini self-service (Batch SDK).
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
-source-git-commit: 8517532f991413a239e0da890bf53b1bf5b621f0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '772'
 ht-degree: 3%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 Le specifiche di autenticazione definiscono il modo in cui gli utenti di Adobe Experience Platform possono connettersi all’origine.
 
-L&#39;array `authSpec` contiene informazioni sui parametri di autenticazione necessari per connettere un&#39;origine a Platform. Qualsiasi origine può supportare più tipi diversi di autenticazione.
+L&#39;array `authSpec` contiene informazioni sui parametri di autenticazione necessari per connettere un&#39;origine ad Experience Platform. Qualsiasi origine può supportare più tipi diversi di autenticazione.
 
 ## Specifiche di autenticazione
 
@@ -340,4 +340,4 @@ Di seguito è riportato un esempio di specifica di autenticazione completata che
 
 ## Passaggi successivi
 
-Con le specifiche di autenticazione compilate, puoi procedere alla configurazione delle specifiche di origine per l’origine che desideri integrare in Platform. Per ulteriori informazioni, vedere il documento sulla [configurazione delle specifiche di origine](./sourcespec.md).
+Con le specifiche di autenticazione compilate, puoi procedere alla configurazione delle specifiche di origine per l’origine che desideri integrare in Experience Platform. Per ulteriori informazioni, vedere il documento sulla [configurazione delle specifiche di origine](./sourcespec.md).

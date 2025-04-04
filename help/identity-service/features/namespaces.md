@@ -2,10 +2,10 @@
 title: Panoramica dello spazio dei nomi dell’identità
 description: Scopri gli spazi dei nomi delle identità in Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1858'
-ht-degree: 16%
+source-wordcount: '1860'
+ht-degree: 17%
 
 ---
 
@@ -85,16 +85,16 @@ In Experience Platform sono disponibili i seguenti tipi di identità:
 | ID dispositivo | Gli ID dispositivo identificano dispositivi hardware, come IDFA (iPhone e iPad), GAID (Android) e RIDA (Roku), e possono essere condivisi da più persone nelle famiglie. |
 | Indirizzo e-mail | Gli indirizzi e-mail sono spesso associati a una singola persona e possono quindi essere utilizzati per identificarla tra canali diversi. Le identità di questo tipo includono informazioni personali (PII, personally identifiable information). Indicazione a [!DNL Identity Service] per gestire il valore in modo sensibile. |
 | Identificatore non di persone | Gli ID non personali vengono utilizzati per memorizzare identificatori che richiedono spazi dei nomi ma non sono collegati a un cluster di persone. Ad esempio, uno SKU prodotto, i dati relativi a prodotti organizzazioni o archivi. |
-| ID partner | <ul><li>Gli ID partner sono identificatori utilizzati dai partner di dati per rappresentare le persone. Gli ID partner sono spesso pseudonimi in modo da non rivelare la vera identità di una persona e possono essere probabilistici. In Real-time Customer Data Platform, gli ID partner vengono utilizzati principalmente per l’attivazione estesa del pubblico e l’arricchimento dei dati e non per la creazione di collegamenti del grafico delle identità.</li><li>I grafici delle identità non vengono generati durante l’acquisizione di un’identità che include uno spazio dei nomi di identità specificato come tipo di ID partner.</li><li>La mancata acquisizione dei dati dei partner utilizzando il tipo di identità ID partner potrebbe comportare il raggiungimento di limitazioni del grafico del sistema per Identity Service, nonché l’unione indesiderata di profili.</li><ul> |
+| ID partner | <ul><li>Gli ID partner sono identificatori utilizzati dai partner di dati per rappresentare le persone. Gli ID partner sono spesso pseudonimi in modo da non rivelare la vera identità di una persona e possono essere probabilistici. In Real-Time Customer Data Platform, gli ID partner vengono utilizzati principalmente per l’attivazione estesa del pubblico e l’arricchimento dei dati e non per la creazione di collegamenti del grafico delle identità.</li><li>I grafici delle identità non vengono generati durante l’acquisizione di un’identità che include uno spazio dei nomi di identità specificato come tipo di ID partner.</li><li>La mancata acquisizione dei dati dei partner utilizzando il tipo di identità ID partner potrebbe comportare il raggiungimento di limitazioni del grafico del sistema per Identity Service, nonché l’unione indesiderata di profili.</li><ul> |
 | Numero di telefono | I numeri di telefono sono spesso associati a una singola persona e possono quindi essere utilizzati per identificare tale persona su canali diversi. Le identità di questo tipo includono PII. Questo indica a [!DNL Identity Service] di gestire il valore in modo sensibile. |
 
 {style="table-layout:auto"}
 
 ### Spazi dei nomi standard {#standard}
 
-In Experience Platform sono disponibili diversi spazi dei nomi di identità per tutte le organizzazioni. Questi sono noti come spazi dei nomi standard e sono visibili utilizzando l&#39;API [!DNL Identity Service] o tramite l&#39;interfaccia utente di Platform.
+Experience Platform fornisce diversi spazi dei nomi di identità disponibili per tutte le organizzazioni. Questi sono noti come spazi dei nomi standard e sono visibili utilizzando l&#39;API [!DNL Identity Service] o tramite l&#39;interfaccia utente di Experience Platform.
 
-I seguenti spazi dei nomi standard sono forniti per l’utilizzo da parte di tutte le organizzazioni all’interno di Platform:
+I seguenti spazi dei nomi standard sono forniti per l’utilizzo da parte di tutte le organizzazioni all’interno di Experience Platform:
 
 | Nome visualizzato | Descrizione |
 | ------------ | ----------- |
@@ -110,7 +110,7 @@ I seguenti spazi dei nomi standard sono forniti per l’utilizzo da parte di tut
 | Telefono | Uno spazio dei nomi che rappresenta un numero di telefono. Questo tipo di spazio dei nomi è spesso associato a una singola persona e può quindi essere utilizzato per identificarla tra canali diversi. |
 | Telefono (E.164) | Uno spazio dei nomi che rappresenta i numeri di telefono non elaborati con hash nel formato E.164. Il formato E.164 include un segno più (`+`), un codice internazionale di chiamata del paese, un indicativo di località locale e un numero di telefono. Esempio: `(+)(country code)(area code)(phone number)`. |
 | Telefono (SHA256) | Spazio dei nomi che rappresenta i numeri di telefono che devono essere sottoposti a hashing utilizzando SHA256. È necessario rimuovere simboli, lettere ed eventuali zeri iniziali. È inoltre necessario aggiungere come prefisso il codice di chiamata del paese. |
-| Telefono (SHA256_E.164) | Uno spazio dei nomi che rappresenta i numeri di telefono non elaborati con hash che devono essere eseguiti utilizzando sia il formato SHA256 che il formato E.164. |
+| Telefono (SHA256_E.164) | Uno spazio dei nomi che rappresenta numeri di telefono non elaborati che devono essere sottoposti a hashing utilizzando sia il formato SHA256 che il formato E.164. |
 | TNTID | Uno spazio dei nomi che rappresenta Adobe Target. Per ulteriori informazioni, consulta il seguente documento su [Target](https://docs.adobe.com/content/help/it-IT/experience-cloud/user-guides/home.translate.html). |
 | AID di Windows | Spazio dei nomi che rappresenta un ID di Advertising Windows. Per ulteriori informazioni, vedere il seguente documento in [Windows Advertising ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041). |
 

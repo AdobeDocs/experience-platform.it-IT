@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;servizio query;servizio query;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query
+keywords: Experience Platform;servizio query;servizio query;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query service;query
 title: Guida introduttiva di Adobe Experience Platform Query Service
 description: Suddivisione dei passaggi necessari per utilizzare completamente Adobe Experience Platform Query Service
 exl-id: 36ab9354-23f9-4cb8-bcd4-00fe076386ab
-source-git-commit: 705d58fad98c6c021220a4b1c5fc85541d6572bb
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '243'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ Dopo aver eseguito il provisioning dell&#39;organizzazione per Adobe Experience 
 
 Questo video [tutorial sull&#39;acquisizione dei dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) fornisce una panoramica sulla creazione di un set di dati, sulla mappatura di un set di dati in uno schema, sull&#39;aggiunta di dati al set di dati e sulla conferma dell&#39;acquisizione. La [documentazione panoramica sull&#39;acquisizione](../../ingestion/home.md) completa questa sezione e fornisce informazioni più approfondite e collegamenti ad altre risorse di apprendimento.
 
-Dopo aver acquisito i dati in Adobe Experience Platform, puoi iniziare a lavorare con [!DNL Query Service] utilizzando [[!DNL Query Editor] nell&#39;interfaccia utente di Platform](../ui/user-guide.md) o la [[!DNL Query Service] API](../api/getting-started.md). La documentazione completa sull’utilizzo di ciascuno di questi strumenti è disponibile nelle rispettive sezioni.
+Dopo aver acquisito i dati in Adobe Experience Platform, puoi iniziare a lavorare con [!DNL Query Service] utilizzando [[!DNL Query Editor] nell&#39;interfaccia utente di Experience Platform](../ui/user-guide.md) o la [[!DNL Query Service] API](../api/getting-started.md). La documentazione completa sull’utilizzo di ciascuno di questi strumenti è disponibile nelle rispettive sezioni.
 
 ## Passaggi successivi
 
@@ -26,7 +26,7 @@ Questo documento descrive i prerequisiti necessari per utilizzare le funzionalit
 - [Sintassi SQL in Query Service](../sql/syntax.md)
 - [Creare set di dati derivati con SQL](../data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
 
-In alternativa, per ulteriori informazioni sui vantaggi dell&#39;elaborazione dei dati in Platform tramite Query Service, guarda la [presentazione abbandonata del caso d&#39;uso esplorazione](../use-cases/abandoned-browse.md#video-example).
+In alternativa, per ulteriori informazioni sui vantaggi offerti dall&#39;elaborazione dei dati in Query Service in Experience Platform, guarda la [presentazione abbandonata del caso d&#39;uso Sfoglia](../use-cases/abandoned-browse.md#video-example).
 
 Le risorse seguenti sono utili per comprendere meglio [!DNL Query Service]:
 

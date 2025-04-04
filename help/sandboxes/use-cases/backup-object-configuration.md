@@ -1,15 +1,15 @@
 ---
-title: Eseguire il backup delle configurazioni degli oggetti utilizzando gli strumenti sandbox
+title: Eseguire il backup delle configurazioni degli oggetti utilizzando gli strumenti di sandbox
 description: Per ripristinare in modo sicuro le sandbox e aggiungere il supporto per il controllo delle versioni, esegui il backup delle configurazioni degli oggetti (o dei metadati) utilizzando pacchetti di strumenti sandbox. I pacchetti di backup impediscono la perdita di configurazioni critiche come schemi, set di dati e tipi di pubblico, soprattutto durante le iterazioni di sviluppo.
 exl-id: cccbaaf1-ee68-4a00-9a44-aa5db4a83a14
-source-git-commit: d4df5606228347b5fb69fdaa24c637c329099895
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1166'
-ht-degree: 3%
+source-wordcount: '1167'
+ht-degree: 4%
 
 ---
 
-# Eseguire il backup delle configurazioni degli oggetti utilizzando gli strumenti sandbox
+# Eseguire il backup delle configurazioni degli oggetti utilizzando gli strumenti di sandbox
 
 Per ripristinare in modo sicuro le sandbox e aggiungere il supporto per il controllo delle versioni, esegui il backup delle configurazioni degli oggetti (o dei metadati) utilizzando pacchetti di strumenti sandbox. I pacchetti di backup impediscono la perdita di configurazioni critiche come schemi, set di dati e tipi di pubblico, soprattutto durante le iterazioni di sviluppo.
 
@@ -30,7 +30,7 @@ Quando si prevede di creare un pacchetto di backup personalizzato all&#39;intern
 - A seconda dei metadati dell&#39;ambito di cui si desidera eseguire il backup, assicurarsi di aver compreso come [aggiungere manualmente oggetti a un pacchetto](../ui/sandbox-tooling.md#add-object-to-a-new-package) o come [esportare un&#39;intera sandbox](../ui/sandbox-tooling.md#export-an-entire-sandbox).
 - Assicurati di avere accesso agli strumenti sandbox nella tua organizzazione con le autorizzazioni corrette.
 
-### Funzionalità dell’interfaccia utente, componenti della piattaforma e prodotti di Experience Cloud che utilizzerai {#ui-functionality-and-elements}
+### Funzionalità dell’interfaccia utente, componenti di Experience Platform e prodotti Experience Cloud che utilizzerai {#ui-functionality-and-elements}
 
 Per implementare correttamente questo caso d’uso, devi utilizzare più aree di Adobe Experience Platform. Assicurati di disporre delle [autorizzazioni di controllo dell&#39;accesso basate su attributi](../../access-control/abac/overview.md) necessarie per tutte queste aree, oppure chiedi all&#39;amministratore di sistema di concederti le autorizzazioni necessarie.
 
@@ -85,7 +85,7 @@ Per eseguire il backup completo della sandbox, segui la [guida agli strumenti de
 
 ##### Creazione di un pacchetto con più oggetti
 
-Ad Experience Platform, seleziona **[!UICONTROL Sandbox]** nel menu di navigazione a sinistra, quindi seleziona **[!UICONTROL Pacchetti]**. Per iniziare a creare un nuovo pacchetto, seleziona **[!UICONTROL Crea pacchetto]** dall&#39;angolo in alto a destra.
+In Experience Platform, seleziona **[!UICONTROL Sandbox]** nell&#39;area di navigazione a sinistra, quindi seleziona **[!UICONTROL Pacchetti]**. Per iniziare a creare un nuovo pacchetto, seleziona **[!UICONTROL Crea pacchetto]** dall&#39;angolo in alto a destra.
 
 ![Scheda Pacchetti nel dashboard delle sandbox con l&#39;opzione Crea pacchetto evidenziata.](../images/use-cases/create-package.png)
 
@@ -125,4 +125,4 @@ Ora che hai reimpostato la sandbox, puoi utilizzare il pacchetto di backup creat
 
 Esplora altri casi d’uso abilitati tramite gli strumenti sandbox:
 
-- [Abilitare un centro di eccellenza utilizzando gli strumenti sandbox](./center-of-excellence.md)
+- [Abilitare un centro di eccellenza utilizzando gli strumenti di sandbox](./center-of-excellence.md)

@@ -5,10 +5,10 @@ title: Creare una connessione HP Vertica Source nell’interfaccia utente
 type: Tutorial
 description: Scopri come creare una connessione sorgente HP Vertica utilizzando l’interfaccia utente di Adobe Experience Platform.
 exl-id: d7315ad4-9250-4e66-be33-016efabb512e
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '485'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 1%
 >
 > Il connettore HP [!DNL Vertica] è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la [Panoramica origini](../../../../home.md#terms-and-conditions).
 
-I connettori Source in Adobe Experience Platform consentono di acquisire dati di origine esterna in base a una pianificazione. Questo tutorial illustra i passaggi per la creazione di un connettore di origine HP [!DNL Vertica] tramite l&#39;interfaccia utente [!DNL Platform].
+I connettori Source in Adobe Experience Platform consentono di acquisire dati di origine esterna in base a una pianificazione. Questo tutorial illustra i passaggi per la creazione di un connettore di origine HP [!DNL Vertica] tramite l&#39;interfaccia utente [!DNL Experience Platform].
 
 ## Introduzione
 
@@ -43,7 +43,7 @@ Per ulteriori informazioni su come iniziare, consulta [questo documento HP [!DNL
 
 ## Connetti il tuo account HP [!DNL Vertica]
 
-Dopo aver raccolto le credenziali richieste, puoi seguire i passaggi seguenti per collegare l&#39;account HP [!DNL Vertica] a [!DNL Platform].
+Dopo aver raccolto le credenziali richieste, puoi seguire i passaggi seguenti per collegare l&#39;account HP [!DNL Vertica] a [!DNL Experience Platform].
 
 Accedi a [Adobe Experience Platform](https://platform.adobe.com), quindi seleziona **[!UICONTROL Origini]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro **[!UICONTROL Origini]**. Nella schermata **[!UICONTROL Catalogo]** sono visualizzate diverse origini per le quali è possibile creare un account con.
 
@@ -69,4 +69,4 @@ Per connettere un account esistente, seleziona l&#39;account HP [!DNL Vertica] c
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai stabilito una connessione con il tuo account HP [!DNL Vertica]. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per inserire dati in [!DNL Platform]](../../dataflow/databases.md).
+Seguendo questa esercitazione, hai stabilito una connessione con il tuo account HP [!DNL Vertica]. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per inserire dati in [!DNL Experience Platform]](../../dataflow/databases.md).

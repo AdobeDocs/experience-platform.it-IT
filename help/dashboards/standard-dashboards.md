@@ -2,9 +2,9 @@
 title: Dashboard standard
 description: Scopri come creare e gestire dashboard personalizzate che consentono di creare, aggiungere e modificare widget personalizzati per visualizzare le metriche chiave.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1624'
+source-wordcount: '1625'
 ht-degree: 3%
 
 ---
@@ -22,7 +22,7 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 
 ## Creare un dashboard personalizzato
 
-Per creare un dashboard personalizzato, passa innanzitutto all’inventario del dashboard. Seleziona **[!UICONTROL Dashboard]** dalla navigazione a sinistra dell&#39;interfaccia utente di Platform, seguito da **[!UICONTROL Crea dashboard]**.
+Per creare un dashboard personalizzato, passa innanzitutto all’inventario del dashboard. Seleziona **[!UICONTROL Dashboard]** dalla navigazione a sinistra dell&#39;interfaccia utente di Experience Platform, seguito da **[!UICONTROL Crea dashboard]**.
 
 ![Inventario dashboard con dashboard nel menu di navigazione a sinistra ed evidenziata l&#39;opzione &quot;Crea dashboard&quot;.](./images/standard-dashboards/create-dashboard.png)
 
@@ -64,7 +64,7 @@ Viene visualizzata l&#39;area di lavoro del compositore widget. Quindi, selezion
 
 #### Seleziona modello dati {#select-data-model}
 
-Viene visualizzata la finestra di dialogo [!UICONTROL Seleziona modello dati]. Seleziona un modello dati dalla colonna a sinistra per visualizzare un elenco di anteprima di tutte le tabelle disponibili. Il modello dati preconfigurato per Real-time Customer Data Platform è denominato [!UICONTROL CDPInsights].
+Viene visualizzata la finestra di dialogo [!UICONTROL Seleziona modello dati]. Seleziona un modello dati dalla colonna a sinistra per visualizzare un elenco di anteprima di tutte le tabelle disponibili. Il modello dati preconfigurato per Real-Time Customer Data Platform è denominato [!UICONTROL CDPInsights].
 
 >[!TIP]
 >
@@ -152,7 +152,7 @@ I widget possono essere ridisposti e ridimensionati mentre si trovano in questa 
 
 ![Dashboard definito dall&#39;utente con widget personalizzato e pulsante Salva evidenziato.](./images/standard-dashboards/user-defined-dashboard.png)
 
-Per garantire che ogni query per un dashboard di approfondimenti di Adobe Real-time Customer Data Platform disponga di risorse sufficienti per essere eseguita in modo efficiente, l’API tiene traccia dell’utilizzo delle risorse assegnando slot di concorrenza a ogni query. Il sistema può elaborare fino a quattro query simultanee, pertanto sono disponibili quattro slot di query simultanee in un dato momento. Le query vengono inserite in una coda in base agli slot di concorrenza, quindi attendi nella coda fino a quando non sono disponibili abbastanza slot di concorrenza.
+Per garantire che ogni query per un dashboard di approfondimenti di Adobe Real-Time Customer Data Platform disponga di risorse sufficienti per essere eseguita in modo efficiente, l’API tiene traccia dell’utilizzo delle risorse assegnando slot di concorrenza a ogni query. Il sistema può elaborare fino a quattro query simultanee, pertanto sono disponibili quattro slot di query simultanee in un dato momento. Le query vengono inserite in una coda in base agli slot di concorrenza, quindi attendi nella coda fino a quando non sono disponibili abbastanza slot di concorrenza.
 
 ### Modificare, duplicare o eliminare un widget {#duplicate}
 
@@ -172,7 +172,7 @@ Quindi, seleziona i puntini di sospensione in alto a destra del widget che desid
 
 >[!NOTE]
 >
->La duplicazione consente di personalizzare gli attributi di un approfondimento per creare un widget univoco senza dover iniziare da zero. Se si duplica un widget, questo viene visualizzato nel dashboard personalizzato. Puoi quindi selezionare i puntini di sospensione del nuovo widget, seguiti da **[!UICONTROL Modifica]**, per personalizzare le informazioni.
+>La duplicazione consente di personalizzare gli attributi di un insight per creare un widget univoco senza dover iniziare da zero. Se si duplica un widget, questo viene visualizzato nel dashboard personalizzato. Puoi quindi selezionare i puntini di sospensione del nuovo widget, seguiti da **[!UICONTROL Modifica]**, per personalizzare insight.
 
 ## Passaggi successivi e risorse aggiuntive
 
@@ -180,6 +180,6 @@ La lettura di questo documento consente di comprendere meglio come creare un das
 
 Per scoprire le metriche e le visualizzazioni preconfigurate disponibili per i dashboard [profili](./guides/profiles.md#standard-widgets), [segmenti](./guides/audiences.md#standard-widgets) e [destinazioni](./guides/destinations.md#standard-widgets), consulta l&#39;elenco dei widget standard nella rispettiva documentazione.
 
-Per approfondire la comprensione delle dashboard in Experience Platform, guarda il video seguente:
+Per approfondire la conoscenza delle dashboard in Experience Platform, guarda il video seguente:
 
 >[!VIDEO](https://video.tv.adobe.com/v/3409637?quality=12&learn=on)

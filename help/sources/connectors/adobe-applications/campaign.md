@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;Adobe Campaign Managed Cloud Services;campagna;campaign managed services
 title: Adobe Campaign Managed Cloud Services
-description: Scopri come collegare Cloud Service gestiti di Campaign a Platform utilizzando l’interfaccia utente
+description: Scopri come collegare Campaign Managed Cloud Services ad Experience Platform utilizzando l’interfaccia utente
 exl-id: 8f18bf73-ebf1-4b4e-a12b-964faa0e24cc
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '743'
+source-wordcount: '747'
 ht-degree: 1%
 
 ---
 
 # Adobe Campaign Managed Cloud Services
 
-Adobe Experience Platform consente di acquisire i dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
+Adobe Experience Platform consente di acquisire dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Experience Platform. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 
 Adobe Campaign Managed Cloud Services fornisce una piattaforma Managed Services per la progettazione di customer experience cross-channel e un ambiente per l’orchestrazione visiva delle campagne, la gestione delle interazioni in tempo reale e l’esecuzione cross-channel. Per ulteriori informazioni, visita la [documentazione di Adobe Campaign v8](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html?lang=it).
 
@@ -20,7 +20,7 @@ Il codice sorgente di Adobe Campaign Managed Cloud Services consente di portare 
 
 ## Prerequisiti
 
-Prima di poter creare una connessione sorgente per l’Experience Platform di Campaign v8, è necessario soddisfare i seguenti prerequisiti:
+Prima di poter creare una connessione sorgente per portare Campaign v8 in Experience Platform, devi completare i seguenti prerequisiti:
 
 * [Configurare l’importazione del registro eventi utilizzando la console client di Adobe Campaign](#view-delivery-and-tracking-log-data)
 * [Creare uno schema XDM ExperienceEvent](#create-a-schema)
@@ -70,9 +70,9 @@ Per istruzioni dettagliate su come creare uno schema, consulta la guida su [crea
 
 Infine, devi creare un set di dati per gli schemi. Per istruzioni dettagliate su come creare un set di dati, consulta la guida su [creazione di un set di dati nell&#39;interfaccia utente](../../../catalog/datasets/user-guide.md).
 
-## Creare una connessione sorgente Adobe Campaign Managed Cloud Services utilizzando l’interfaccia utente di Platform
+## Creare una connessione sorgente Adobe Campaign Managed Cloud Services utilizzando l’interfaccia utente di Experience Platform
 
-Dopo aver effettuato l’accesso ai registri dati nella console client di Campaign, creato uno schema e un set di dati, ora puoi procedere con la creazione di una connessione di origine per portare i dati di Campaign Managed Services su Platform.
+Dopo aver effettuato l’accesso ai registri dati nella console client di Campaign, creato uno schema e un set di dati, ora puoi procedere con la creazione di una connessione di origine per portare i dati di Campaign Managed Services in Experience Platform.
 
 Per istruzioni dettagliate su come trasferire i dati dei registri di consegna e di tracciamento di Campaign v8 in Experience Platform, consulta la guida in [creazione di una connessione sorgente di Campaign Managed Services nell’interfaccia utente](../../tutorials/ui/create/adobe-applications/campaign.md).
 

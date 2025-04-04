@@ -3,7 +3,7 @@ keywords: destinazioni;destinazione;pagina dettagli destinazioni;pagina dettagli
 title: Visualizzare i dettagli della destinazione
 description: La pagina dei dettagli di una singola destinazione fornisce una panoramica dei dettagli della destinazione. I dettagli della destinazione includono il nome della destinazione, l’ID, i tipi di pubblico mappati sulla destinazione e i controlli per modificare l’attivazione e abilitare e disabilitare il flusso di dati.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 47d0e2a7fae973edfda035d046f66c88d34bf8b2
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1286'
 ht-degree: 0%
@@ -18,13 +18,13 @@ Nell’interfaccia utente di Adobe Experience Platform, puoi visualizzare e moni
 
 >[!NOTE]
 >
->La pagina dei dettagli delle destinazioni fa parte dell&#39;area di lavoro [!UICONTROL Destinazioni] in [!DNL Platform] [!DNL UI]. Per ulteriori informazioni, consulta la panoramica dell&#39;area di lavoro [[!UICONTROL Destinazioni]](./destinations-workspace.md).
+>La pagina dei dettagli delle destinazioni fa parte dell&#39;area di lavoro [!UICONTROL Destinazioni] in [!DNL Experience Platform] [!DNL UI]. Per ulteriori informazioni, consulta la panoramica dell&#39;area di lavoro [[!UICONTROL Destinazioni]](./destinations-workspace.md).
 
 ## Visualizzare i dettagli della destinazione {#view-details}
 
 Per visualizzare ulteriori dettagli su una destinazione esistente, segui la procedura riportata di seguito. Puoi trovare l’ID di destinazione di una destinazione, l’utente che ha creato la destinazione, quando è stata creata e altre informazioni.
 
-1. Accedi a [interfaccia utente Experience Platform](https://platform.adobe.com/) e seleziona **[!UICONTROL Destinazioni]** dalla barra di navigazione a sinistra. Seleziona **[!UICONTROL Sfoglia]** dall&#39;intestazione superiore per visualizzare le destinazioni esistenti.
+1. Accedi all&#39;[interfaccia utente di Experience Platform](https://platform.adobe.com/) e seleziona **[!UICONTROL Destinazioni]** dalla barra di navigazione a sinistra. Seleziona **[!UICONTROL Sfoglia]** dall&#39;intestazione superiore per visualizzare le destinazioni esistenti.
 
    ![Sfoglia destinazioni](../assets/ui/details-page/browse-destinations.png)
 
@@ -82,7 +82,7 @@ La scheda [!UICONTROL Esecuzioni flusso di dati] fornisce dati metrici sul fluss
 
 >[!NOTE]
 >
->* La funzionalità di monitoraggio delle destinazioni è attualmente supportata per tutte le destinazioni nell&#39;Experience Platform *eccetto* le destinazioni [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), [Personalizzazione personalizzata](/help/destinations/catalog/personalization/custom-personalization.md) e [Tipi di pubblico Experienci Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md).
+>* La funzionalità di monitoraggio delle destinazioni è attualmente supportata per tutte le destinazioni in Experience Platform *ad eccezione* delle destinazioni [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), [Personalizzazione personalizzata](/help/destinations/catalog/personalization/custom-personalization.md) e [Experience Cloud Audiences](/help/destinations/catalog/adobe/experience-cloud-audiences.md).
 >* Per le destinazioni [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md) e [HTTP API](/help/destinations/catalog/streaming/http-destination.md), vengono stimate le metriche relative alle identità escluse, non riuscite e attivate. Volumi più elevati di dati di attivazione consentono una maggiore precisione delle metriche.
 
 ![Il flusso di dati esegue la visualizzazione](../assets/ui/details-page/dataflow-runs.png)

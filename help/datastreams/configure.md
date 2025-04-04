@@ -2,10 +2,10 @@
 title: Creare e configurare gli stream di dati
 description: Scopri come collegare l’integrazione Web SDK lato client con altri prodotti Adobe e destinazioni di terze parti.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2817'
-ht-degree: 51%
+source-wordcount: '2822'
+ht-degree: 48%
 
 ---
 
@@ -103,7 +103,7 @@ Per visualizzare le opzioni di configurazione avanzate, selezionare **[!UICONTRO
 | [!UICONTROL Tipo di accesso] | Definisce il tipo di autenticazione accettato dalla rete Edge per lo stream di dati. <ul><li>**[!UICONTROL Autenticazione mista]**: quando è selezionata questa opzione, la rete Edge accetta sia richieste autenticate che non autenticate. Seleziona questa opzione quando intendi utilizzare Web SDK o l’[SDK Mobile](https://developer.adobe.com/client-sdks/home/), insieme all’[API del server](../server-api/overview.md). </li><li>**[!UICONTROL Solo autenticate]**: quando è selezionata questa opzione, la rete Edge accetta solo richieste autenticate. Seleziona questa opzione quando intendi utilizzare solo l’API del server e desideri impedire l’elaborazione di richieste non autenticate da parte della rete Edge.</li></ul> |
 | [!UICONTROL Media Analytics] | Abilita l&#39;elaborazione dei dati di tracciamento streaming per l&#39;integrazione Edge Network tramite SDK Experience Platform o [API Media Edge](https://developer.adobe.com/cja-apis/docs/endpoints/media-edge/getting-started/). Scopri di più su Media Analytics nella [documentazione](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=it). |
 
-Da qui, se stai configurando uno stream di dati per Experience Platform, segui il tutorial sulla [Preparazione dei dati per la raccolta dati](./data-prep.md) per mappare i dati su uno schema di eventi di Platform prima di tornare a questa guida. Diversamente, seleziona **[!UICONTROL Salva]** e passa alla sezione successiva.
+Da qui, se stai configurando lo stream di dati per Experience Platform, segui l&#39;esercitazione su [Preparazione per la raccolta dati](./data-prep.md) per mappare i dati a uno schema di eventi Experience Platform prima di tornare a questa guida. Diversamente, seleziona **[!UICONTROL Salva]** e passa alla sezione successiva.
 
 ## Visualizzare i dettagli dello stream di dati {#view-details}
 
@@ -160,7 +160,7 @@ Questo servizio controlla se e il modo in cui i dati vengono inviati ad Adobe Au
 
 >[!IMPORTANT]
 >
->Quando abiliti uno stream di dati per Platform, prendi nota della sandbox Platform attualmente in uso, come mostrato nella barra multifunzione superiore dell’interfaccia utente.
+>Quando abiliti un flusso di dati per Experience Platform, prendi nota della sandbox di Experience Platform che stai utilizzando, come mostrato nella barra multifunzione superiore dell’interfaccia utente.
 >
 >![Sandbox selezionata](assets/configure/platform-sandbox.png)
 >
@@ -172,8 +172,8 @@ Il servizio controlla se e in che modo i dati vengono inviati ad Adobe Experienc
 
 | Impostazione | Descrizione |
 |---| --- |
-| [!UICONTROL Set di dati di evento] | **(Obbligatorio)** Seleziona il set di dati di Platform a cui verranno trasmessi in streaming i dati dell’evento cliente. Lo schema deve utilizzare la [classe XDM ExperienceEvent](../xdm/classes/experienceevent.md). Per aggiungere altri set di dati, seleziona **[!UICONTROL Aggiungi set di dati di evento]**. |
-| [!UICONTROL Set di dati di profilo] | Seleziona il set di dati di Platform a cui verranno inviati i dati attributo del cliente. Lo schema deve utilizzare la [classe Profilo XDM individuale](../xdm/classes/individual-profile.md). |
+| [!UICONTROL Set di dati di evento] | **(Obbligatorio)** Seleziona il set di dati di Experience Platform a cui verranno trasmessi i dati dell&#39;evento cliente. Lo schema deve utilizzare la [classe XDM ExperienceEvent](../xdm/classes/experienceevent.md). Per aggiungere altri set di dati, seleziona **[!UICONTROL Aggiungi set di dati di evento]**. |
+| [!UICONTROL Set di dati di profilo] | Seleziona il set di dati di Experience Platform a cui verranno inviati i dati degli attributi del cliente. Lo schema deve utilizzare la [classe Profilo XDM individuale](../xdm/classes/individual-profile.md). |
 | [!UICONTROL Offer Decisioning] | Abilita Offer Decisioning per le implementazioni di Web SDK. Per ulteriori dettagli sull&#39;implementazione, consulta la guida sull&#39;[utilizzo di Offer Decisioning con Web SDK](../web-sdk/personalization/offer-decisioning/offer-decisioning-overview.md).<br><br>Per ulteriori informazioni sulle funzionalità di Offer Decisioning, consulta la [documentazione di Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/get-started-decision/starting-offer-decisioning.html?lang=it). |
 | [!UICONTROL Segmentazione Edge] | Abilita la [segmentazione Edge](../segmentation/methods/edge-segmentation.md) per questo flusso di dati. Quando [Web SDK](../web-sdk/home.md) o [Edge Network Server API](../server-api/overview.md) invia dati tramite uno stream di dati con segmentazione Edge abilitata, tutte le appartenenze aggiornate al pubblico per il profilo in questione vengono rimandate nella risposta.<br><br>Puoi utilizzare questa opzione in combinazione con **[!UICONTROL Destinazioni Personalization]** per casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva tramite [destinazioni Edge](../destinations/ui/activate-edge-personalization-destinations.md) o [!DNL Offer Decisioning]. |
 | [!UICONTROL Destinazioni di personalizzazione] | Quando viene abilitata dopo aver attivato la casella di controllo della [!UICONTROL segmentazione Edge], questa opzione consente allo stream di dati di connettersi alle destinazioni di personalizzazione, ad esempio la [Personalizzazione personalizzata](../destinations/catalog/personalization/custom-personalization.md).<br><br>Per i passaggi specifici sulla [configurazione delle destinazioni di personalizzazione](../destinations/ui/activate-edge-personalization-destinations.md), consulta la documentazione delle destinazioni. |

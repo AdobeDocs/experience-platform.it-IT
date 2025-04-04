@@ -2,9 +2,9 @@
 title: Pianificazioni query
 description: Scopri come automatizzare l’esecuzione di query pianificate, eliminare o disabilitare una pianificazione di query e utilizzare le opzioni di pianificazione disponibili tramite l’interfaccia utente di Adobe Experience Platform.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: db0ba3bb32b5458ab3a32525c3c63939fe804ab4
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2027'
+source-wordcount: '2028'
 ht-degree: 0%
 
 ---
@@ -113,7 +113,7 @@ La tabella seguente spiega i tipi di avviso per le query supportati:
 
 >[!NOTE]
 >
->Se scegli di impostare un avviso di [!UICONTROL Ritardo esecuzione query], devi impostare il tempo di ritardo desiderato in minuti nell&#39;interfaccia utente di Platform. Immetti la durata in minuti. Il ritardo massimo è di 24 ore (1440 minuti).
+>Se scegli di impostare un avviso di [!UICONTROL Ritardo esecuzione query], devi impostare il ritardo desiderato in minuti nell&#39;interfaccia utente di Experience Platform. Immetti la durata in minuti. Il ritardo massimo è di 24 ore (1440 minuti).
 
 Per una panoramica degli avvisi in Adobe Experience Platform, inclusa la struttura della definizione delle regole di avviso, vedere la [panoramica degli avvisi](../../observability/alerts/overview.md). Per informazioni sulla gestione degli avvisi e delle regole di avviso nell&#39;interfaccia utente di Adobe Experience Platform, vedere la [guida dell&#39;interfaccia utente degli avvisi](../../observability/alerts/ui.md).
 
@@ -153,7 +153,7 @@ Nella tabella seguente vengono fornite le descrizioni di ogni colonna disponibil
 |---------------------|----------------------------------|
 | [!UICONTROL ID esecuzione query] | Visualizza un identificatore univoco per ogni esecuzione di query, che consente di tenere traccia e fare riferimento a singole esecuzioni delle query pianificate. |
 | [!UICONTROL Inizio esecuzione query] | Indica la data e l’ora di inizio dell’esecuzione della query, per aiutarti a monitorare l’inizio di ogni esecuzione. |
-| [!UICONTROL Esecuzione query completata] | Mostra la data e l’ora di completamento dell’esecuzione della query, per fornire informazioni approfondite sulla durata e sullo stato dell’esecuzione. |
+| [!UICONTROL Esecuzione query completata] | Mostra la data e l’ora di completamento dell’esecuzione della query, per fornire ad insight la durata e lo stato dell’esecuzione. |
 | [!UICONTROL Stato] | Visualizza lo stato corrente dell&#39;esecuzione della query, ad esempio `Completed,` `Running,` o `Failed,` per valutare rapidamente il risultato. |
 | [!UICONTROL Set di dati] | Elenca i set di dati utilizzati nell’esecuzione della query, per mostrare quali origini dati sono state coinvolte nell’esecuzione. |
 | [!UICONTROL Calcola ore] | Mostra il tempo di calcolo utilizzato per ogni esecuzione della query, misurato in ore. Questo consente di tenere traccia dell’utilizzo delle risorse e di ottimizzare le prestazioni delle query. |

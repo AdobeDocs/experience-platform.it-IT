@@ -1,11 +1,11 @@
 ---
 title: Eliminazioni nel servizio Identity
-description: Questo documento fornisce una panoramica dei vari meccanismi che puoi utilizzare per eliminare i dati di identità in Experience Platform e per fornire chiarezza su come i grafici di identità possono essere interessati.
+description: Questo documento fornisce una panoramica dei vari meccanismi che puoi utilizzare per eliminare i dati di identità in Experience Platform e fornire chiarezza su come i grafici di identità possono essere interessati.
 exl-id: 0619d845-71c1-4699-82aa-c6436815d5b3
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1198'
-ht-degree: 0%
+source-wordcount: '1201'
+ht-degree: 1%
 
 ---
 
@@ -15,11 +15,11 @@ Il servizio Adobe Experience Platform Identity genera grafici delle identità co
 
 I grafici delle identità vengono utilizzati da Real-Time Customer Profile per creare una visualizzazione completa e unica degli attributi e dei comportamenti dei clienti, consentendo di fornire esperienze digitali personali e di impatto in tempo reale, alle persone e non ai dispositivi.
 
-Questo documento fornisce una panoramica dei vari meccanismi che puoi utilizzare per eliminare i dati di identità in Experience Platform e per fornire chiarezza su come i grafici di identità possono essere interessati.
+Questo documento fornisce una panoramica dei vari meccanismi che puoi utilizzare per eliminare i dati di identità in Experience Platform e fornire chiarezza su come i grafici di identità possono essere interessati.
 
 ## Introduzione
 
-Il documento seguente fa riferimento alle seguenti caratteristiche di Experience Platform:
+Il documento seguente fa riferimento alle seguenti funzioni di Experience Platform:
 
 * [Identity Service](../home.md): ottieni una migliore visione dei singoli clienti e del loro comportamento collegando le identità tra dispositivi e sistemi.
    * [Grafico delle identità](./identity-graph-viewer.md): un grafico delle identità è una mappa delle relazioni tra identità diverse per un particolare cliente, che fornisce una rappresentazione visiva di come il cliente interagisce con il brand attraverso canali diversi.
@@ -31,13 +31,13 @@ Il documento seguente fa riferimento alle seguenti caratteristiche di Experience
 
 ## Eliminazioni di identità singole
 
-Le singole richieste di eliminazione delle identità consentono di eliminare un’identità all’interno di un grafico, con conseguente rimozione dei collegamenti associati a una singola identità utente associata a uno spazio dei nomi dell’identità. Puoi utilizzare i meccanismi forniti da [Privacy Service](../../privacy-service/home.md) per casi d&#39;uso quali richieste di eliminazione dei dati da parte dei clienti e conformità alle normative sulla privacy, come il Regolamento generale sulla protezione dei dati (RGPD).
+Le singole richieste di eliminazione delle identità consentono di eliminare un’identità all’interno di un grafico, con conseguente rimozione dei collegamenti associati a una singola identità utente associata a uno spazio dei nomi dell’identità. Puoi utilizzare i meccanismi forniti da [Privacy Service](../../privacy-service/home.md) per casi d&#39;uso quali le richieste dei clienti di eliminare i dati e di conformarsi alle normative sulla privacy come il Regolamento generale sulla protezione dei dati (RGPD).
 
 Le sezioni seguenti descrivono i meccanismi utilizzabili per le singole richieste di eliminazione delle identità in Experience Platform.
 
 ### Eliminazione di una singola identità in Privacy Service
 
-Privacy Service elabora le richieste dei clienti di accedere ai propri dati personali, rinunciarvi o eliminarli, in base a quanto stabilito dalle normative sulla privacy, come il Regolamento generale sulla protezione dei dati (RGPD) e il California Consumer Privacy Act (CCPA). Con Privacy Service, puoi inviare richieste di processi utilizzando l’API o l’interfaccia utente. Quando Experience Platform riceve una richiesta di eliminazione da Privacy Service, Platform invia una conferma a Privacy Service che la richiesta è stata ricevuta e i dati interessati sono stati contrassegnati per l’eliminazione. L’eliminazione della singola identità si basa sullo spazio dei nomi e/o sul valore ID fornito. Inoltre, l’eliminazione avviene per tutte le sandbox associate a una determinata organizzazione. Per ulteriori informazioni, consulta la guida sull&#39;elaborazione delle richieste di privacy [in Identity Service](../privacy.md).
+Privacy Service elabora le richieste dei clienti di accedere ai propri dati personali, rinunciarvi o eliminarli, in base a quanto stabilito dalle normative sulla privacy, come il Regolamento generale sulla protezione dei dati (RGPD) e il California Consumer Privacy Act (CCPA). Con Privacy Service, puoi inviare richieste di processi utilizzando l’API o l’interfaccia utente. Quando Experience Platform riceve una richiesta di eliminazione da Privacy Service, Experience Platform invia una conferma a Privacy Service che la richiesta è stata ricevuta e i dati interessati sono stati contrassegnati per l’eliminazione. L’eliminazione della singola identità si basa sullo spazio dei nomi e/o sul valore ID fornito. Inoltre, l’eliminazione avviene per tutte le sandbox associate a una determinata organizzazione. Per ulteriori informazioni, consulta la guida sull&#39;elaborazione delle richieste di privacy [in Identity Service](../privacy.md).
 
 La tabella seguente fornisce una suddivisione dell’eliminazione di una singola identità in Privacy Service:
 
@@ -56,7 +56,7 @@ Le sezioni seguenti descrivono i meccanismi che possono essere utilizzati per el
 
 ### Eliminazione del set di dati in Catalog Service
 
-Puoi utilizzare Catalog Service per inviare richieste di eliminazione di set di dati. Per ulteriori informazioni su come eliminare i set di dati con Catalog Service, leggere la guida sull&#39;[eliminazione di oggetti tramite l&#39;API Catalog Service](../../catalog/api/delete-object.md). In alternativa, puoi utilizzare l’interfaccia utente di Platform per inviare richieste di eliminazione di set di dati. Per ulteriori informazioni, leggere la [guida utente per i set di dati](../../catalog/datasets/user-guide.md#delete-a-dataset).
+Puoi utilizzare Catalog Service per inviare richieste di eliminazione di set di dati. Per ulteriori informazioni su come eliminare i set di dati con Catalog Service, leggere la guida sull&#39;[eliminazione di oggetti tramite l&#39;API Catalog Service](../../catalog/api/delete-object.md). In alternativa, puoi utilizzare l’interfaccia utente di Experience Platform per inviare richieste di eliminazione di set di dati. Per ulteriori informazioni, leggere la [guida utente per i set di dati](../../catalog/datasets/user-guide.md#delete-a-dataset).
 
 ### Scadenze del set di dati nell’igiene dei dati
 
@@ -66,7 +66,7 @@ La tabella seguente fornisce una suddivisione delle differenze tra l’eliminazi
 
 | Eliminazione set di dati | Servizio catalogo | Igiene dei dati |
 | --- | --- | --- |
-| Casi d’uso accettati | Elimina i set di dati completi e le informazioni sull’identità associate in Platform. | Gestione dei dati memorizzati in Experience Platform. |
+| Casi d’uso accettati | Elimina i set di dati completi e le informazioni sulle identità associate in Experience Platform. | Gestione dei dati memorizzati in Experience Platform. |
 | Latenza stimata | Days | Days |
 | Servizi interessati | L’eliminazione del set di dati tramite Catalog Service elimina i dati da Identity Service, Real-Time Customer Profile e data lake. | L’eliminazione del set di dati tramite igiene dei dati elimina i dati da Identity Service, Real-Time Customer Profile e data lake. |
 | Pattern di eliminazione | Elimina le identità collegate da Identity Service stabilite da un particolare set di dati. | Elimina le identità collegate da Identity Service stabilito da un particolare set di dati, in base alla pianificazione di scadenza. |
@@ -89,7 +89,7 @@ Di seguito è riportato uno schema dei potenziali impatti che le eliminazioni po
 
 ## Passaggi successivi
 
-In questo documento sono stati descritti i vari meccanismi che è possibile utilizzare per eliminare identità e set di dati in Experience Platform. Questo documento illustra inoltre come le eliminazioni di identità e set di dati possono influire sui grafici di identità. Per ulteriori informazioni su Identity Service, leggere la [Panoramica di Identity Service](../home.md).
+Questo documento descrive i vari meccanismi che puoi utilizzare per eliminare identità e set di dati su Experience Platform. Questo documento illustra inoltre come le eliminazioni di identità e set di dati possono influire sui grafici di identità. Per ulteriori informazioni su Identity Service, leggi la [panoramica su Identity Service](../home.md).
 
 <!--
 
@@ -97,7 +97,7 @@ You can use [Data hygiene](../hygiene/home.md) for data cleansing, removing anon
 
 ### Single identity deletion in the [!UICONTROL Data Hygiene] workspace
 
-The [[!UICONTROL Data Hygiene] workspace](../hygiene/ui/overview.md) in the Platform UI allows you to delete consumer records that are participating in Identity Service and Real-Time Customer Profile. For a comprehensive guide on using the [!UICONTROL Data Hygiene] workspace, see the tutorial on [deleting consumer records](../hygiene/ui/record-delete.md).
+The [[!UICONTROL Data Hygiene] workspace](../hygiene/ui/overview.md) in the Experience Platform UI allows you to delete consumer records that are participating in Identity Service and Real-Time Customer Profile. For a comprehensive guide on using the [!UICONTROL Data Hygiene] workspace, see the tutorial on [deleting consumer records](../hygiene/ui/record-delete.md).
 
 The table below provides a breakdown of differences between single identity deletion in Privacy Service and Data hygiene:
 

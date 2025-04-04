@@ -2,9 +2,9 @@
 title: Best practice per la gestione avanzata del ciclo di vita dei dati
 description: Scopri come gestire in modo efficiente le richieste di igiene dei dati in Adobe Experience Platform utilizzando l’interfaccia utente di Advanced Data Lifecycle Management e l’API di igiene dei dati. Questa guida descrive le best practice per massimizzare le identità per richiesta, specificare singoli set di dati e prestare attenzione alla limitazione delle API per evitare rallentamenti. Il documento include le linee guida per l’impostazione della pulizia automatica dei set di dati, le modalità di monitoraggio degli stati degli ordini di lavoro e i metodi dettagliati di recupero delle risposte. Segui queste procedure per semplificare l’elaborazione delle richieste e ottimizzare i tempi di risposta.
 exl-id: 75e2a97b-ce6c-4ebd-8fc8-597887f77037
-source-git-commit: 5174529d606ac0186ff3193790ada70a46c7e274
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '771'
 ht-degree: 0%
 
 ---
@@ -45,9 +45,9 @@ Imposta la pulizia automatica dei set di dati per dati di breve durata. Utilizza
 
 ## Monitorare lo stato di scadenza dell’ordine di lavoro e del set di dati {#monitor}
 
-È possibile monitorare in modo efficiente l&#39;avanzamento della gestione del ciclo di vita dei dati tramite l&#39;utilizzo di **eventi di I/O**. Un evento di I/O è un meccanismo che consente di ricevere notifiche in tempo reale su modifiche o aggiornamenti apportati a vari servizi all’interno di Platform.
+È possibile monitorare in modo efficiente l&#39;avanzamento della gestione del ciclo di vita dei dati tramite l&#39;utilizzo di **eventi di I/O**. Un evento di I/O è un meccanismo che consente di ricevere notifiche in tempo reale su modifiche o aggiornamenti apportati a vari servizi all’interno di Experience Platform.
 
-Gli avvisi di eventi di I/O possono essere inviati a un webhook configurato per consentire l’automazione del monitoraggio delle attività. Per ricevere avvisi tramite webhook, devi registrarlo per gli avvisi di Platform in Adobe Developer Console. Per istruzioni dettagliate, consulta la guida su [abbonamento a notifiche evento Adobe I/O](../observability/alerts/subscribe.md).
+Gli avvisi di eventi di I/O possono essere inviati a un webhook configurato per consentire l’automazione del monitoraggio delle attività. Per ricevere gli avvisi tramite webhook, devi registrarlo per gli avvisi di Experience Platform in Adobe Developer Console. Per istruzioni dettagliate, consulta la guida su [abbonamento a notifiche evento Adobe I/O](../observability/alerts/subscribe.md).
 
 Per recuperare e monitorare in modo efficace gli stati dei processi, utilizzare i metodi e le linee guida del ciclo di vita dei dati seguenti:
 
@@ -63,7 +63,7 @@ Per monitorare in modo efficiente l&#39;avanzamento delle attività del ciclo di
 
 Per informazioni approfondite sui singoli ordini di lavorazione, utilizzare il seguente approccio:
 
-- Effettuare una richiesta di GET all&#39;endpoint `/workorder/{work_order_id}` per dati di risposta dettagliati.
+- Effettuare una richiesta GET all&#39;endpoint `/workorder/{work_order_id}` per ottenere dati di risposta dettagliati.
 - Recuperare risposte specifiche per il prodotto e messaggi di successo.
 - Evita di utilizzare questo metodo per le normali attività di polling.
 

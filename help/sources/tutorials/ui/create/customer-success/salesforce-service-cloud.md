@@ -1,23 +1,23 @@
 ---
-title: Collegare l’account Salesforce Service Cloud utilizzando l’interfaccia utente di Experience Platform
-description: Scopri come collegare il tuo account Salesforce Service Cloud e portare a Experience Platform i dati di successo del cliente tramite l’interfaccia utente di.
+title: Collegare l’account Salesforce Service Cloud tramite l’interfaccia utente di Experience Platform
+description: Scopri come collegare il tuo account Salesforce Service Cloud e inserire i dati di successo dei clienti in Experience Platform utilizzando l’interfaccia utente di.
 exl-id: 38480a29-7852-46c6-bcea-5dc6bffdbd15
-source-git-commit: 7930a869627130a5db34780e64b809cda0c1e5f4
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '843'
+source-wordcount: '844'
 ht-degree: 3%
 
 ---
 
-# Connetti il tuo account [!DNL Salesforce Service Cloud] ad Experience Platform utilizzando l&#39;interfaccia utente
+# Connetti il tuo account [!DNL Salesforce Service Cloud] ad Experience Platform tramite l&#39;interfaccia utente
 
-Questo tutorial illustra i passaggi necessari per collegare l&#39;account [!DNL Salesforce Service Cloud] e inviare i dati di successo dei clienti a Adobe Experience Platform utilizzando l&#39;interfaccia utente di Experience Platform.
+Questo tutorial illustra i passaggi necessari per collegare l&#39;account [!DNL Salesforce Service Cloud] e inviare i dati di successo dei clienti a Adobe Experience Platform tramite l&#39;interfaccia utente di Experience Platform.
 
 ## Introduzione
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): framework standardizzato in base al quale Experience Platform organizza i dati sull&#39;esperienza del cliente.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): framework standardizzato tramite il quale Experience Platform organizza i dati sull&#39;esperienza del cliente.
    * [Nozioni di base sulla composizione dello schema](../../../../../xdm/schema/composition.md): scopri i blocchi predefiniti di base degli schemi XDM, inclusi i principi chiave e le best practice nella composizione dello schema.
    * [Esercitazione sull&#39;editor di schemi](../../../../../xdm/tutorials/create-schema-ui.md): scopri come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;editor di schemi.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
@@ -59,11 +59,11 @@ Per ulteriori informazioni sull&#39;utilizzo di OAuth per [!DNL Salesforce Servi
 
 >[!ENDTABS]
 
-Dopo aver raccolto le credenziali richieste, puoi seguire i passaggi seguenti per collegare l&#39;account [!DNL Salesforce Service Cloud] all&#39;Experience Platform.
+Dopo aver raccolto le credenziali richieste, puoi seguire i passaggi seguenti per collegare l&#39;account [!DNL Salesforce Service Cloud] ad Experience Platform.
 
 ## Connetti il tuo account [!DNL Salesforce Service Cloud]
 
-Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
 
 Selezionare **[!DNL Salesforce Service Cloud]** nella categoria *[!UICONTROL Customer success]*, quindi selezionare **[!UICONTROL Add data]**.
 
@@ -71,7 +71,7 @@ Selezionare **[!DNL Salesforce Service Cloud]** nella categoria *[!UICONTROL Cus
 >
 >Le origini nel catalogo delle origini visualizzano l&#39;opzione **[!UICONTROL Configura]** quando un&#39;origine specificata non dispone ancora di un account autenticato. Quando esiste un account autenticato, questa opzione diventa **[!UICONTROL Aggiungi dati]**.
 
-![Catalogo delle origini nell&#39;interfaccia utente di Experience Platform con la scheda sorgente di Salesforce Service Cloud selezionata.](../../../../images/tutorials/create/salesforce-service-cloud/catalog.png)
+![Catalogo delle origini nell&#39;interfaccia utente di Experience Platform con la scheda di origine di Salesforce Service Cloud selezionata.](../../../../images/tutorials/create/salesforce-service-cloud/catalog.png)
 
 Viene visualizzata la pagina **[!UICONTROL Connetti a Salesforce Service Cloud]**. In questa pagina è possibile utilizzare nuove credenziali o credenziali esistenti.
 
@@ -79,7 +79,7 @@ Viene visualizzata la pagina **[!UICONTROL Connetti a Salesforce Service Cloud]*
 
 Per utilizzare un account esistente, selezionare **[!UICONTROL Account esistente]**, quindi selezionare l&#39;account desiderato dall&#39;elenco visualizzato. Al termine, selezionare **[!UICONTROL Avanti]** per continuare.
 
-![Elenco di account autenticati di Salesforce Service Cloud già presenti nell&#39;organizzazione.](../../../../images/tutorials/create/salesforce-service-cloud/existing.png)
+![Elenco di account Salesforce Service Cloud autenticati già presenti nell&#39;organizzazione.](../../../../images/tutorials/create/salesforce-service-cloud/existing.png)
 
 ### Crea un nuovo account
 
@@ -121,4 +121,4 @@ Al termine, selezionare **[!UICONTROL Connetti all&#39;origine]**.
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai stabilito una connessione al tuo account [!DNL Salesforce Service Cloud]. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per inserire i dati di successo del cliente in Experience Platform](../../dataflow/customer-success.md).
+Seguendo questa esercitazione, hai stabilito una connessione al tuo account [!DNL Salesforce Service Cloud]. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per inserire dati di successo del cliente in Experience Platform](../../dataflow/customer-success.md).

@@ -1,11 +1,11 @@
 ---
 keywords: google universal analytics;Google Universal Analytics;Google universal analytics
 title: Estensione Google Universal Analytics
-description: L’estensione Google Universal Analytics è una destinazione di analisi in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità dell’estensione, consulta la pagina dell’estensione nell’Adobe Exchange.
+description: L’estensione Google Universal Analytics è una destinazione di analisi in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità dell’estensione, consulta la pagina dell’estensione su Adobe Exchange.
 exl-id: 72576a0f-f2da-46d6-a722-33a0cf17f2c4
-source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '454'
+source-wordcount: '458'
 ht-degree: 3%
 
 ---
@@ -14,17 +14,17 @@ ht-degree: 3%
 
 ## Panoramica {#overview}
 
-[!DNL Google Universal Analytics] consente di misurare il ROI degli annunci pubblicitari, nonché di tenere traccia di Flash, video e siti e applicazioni di social networking.
+[!DNL Google Universal Analytics] consente di misurare il ROI degli annunci pubblicitari, nonché di tenere traccia dei siti e delle applicazioni Flash, video e di social networking.
 
-[!DNL Google Universal Analytics] è un&#39;estensione di Analytics in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità dell&#39;estensione, vedere la pagina dell&#39;estensione nell&#39;[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102829.google-universal-analytics.html).
+[!DNL Google Universal Analytics] è un&#39;estensione di Analytics in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità dell&#39;estensione, vedere la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102829.google-universal-analytics.html).
 
-Questa destinazione è un’estensione tag. Per ulteriori informazioni sul funzionamento delle estensioni tag in Platform, consulta la [panoramica sulle estensioni tag](../launch-extensions/overview.md).
+Questa destinazione è un’estensione tag. Per ulteriori informazioni sul funzionamento delle estensioni tag in Experience Platform, consulta la [panoramica sulle estensioni tag](../launch-extensions/overview.md).
 
 ![Estensione Google Universal Analytics](../../assets/catalog/analytics/google-universal-analytics/catalog.png)
 
 ## Prerequisiti {#prerequisites}
 
-Questa estensione è disponibile nel catalogo [!DNL Destinations] per tutti i clienti che hanno acquistato Platform.
+Questa estensione è disponibile nel catalogo [!DNL Destinations] per tutti i clienti che hanno acquistato Experience Platform.
 
 Per utilizzare questa estensione, è necessario accedere ai tag in Adobe Experience Platform. I tag sono offerti ai clienti di Adobe Experience Cloud come funzionalità inclusa a valore aggiunto. Contatta l&#39;amministratore dell&#39;organizzazione per ottenere l&#39;accesso ai tag e chiedi loro di concederti l&#39;autorizzazione **[!UICONTROL manage_properties]** in modo da poter installare le estensioni.
 
@@ -32,7 +32,7 @@ Per utilizzare questa estensione, è necessario accedere ai tag in Adobe Experie
 
 Per installare l&#39;estensione [!DNL Google Universal Analytics]:
 
-Nell&#39;interfaccia [Platform](https://platform.adobe.com/), vai a **[!UICONTROL Destinazioni]** > **[!UICONTROL Catalogo]**.
+Nell&#39;interfaccia [Experience Platform](https://platform.adobe.com/), vai a **[!UICONTROL Destinazioni]** > **[!UICONTROL Catalogo]**.
 
 Seleziona l’estensione dal catalogo o utilizza la barra di ricerca.
 
@@ -42,7 +42,7 @@ Seleziona la proprietà in cui desideri installare l’estensione. Puoi anche cr
 
 Il flusso di lavoro illustra i passaggi necessari per completare l’installazione.
 
-Per informazioni sulle opzioni di configurazione dell&#39;estensione, vedere l&#39;Adobe Exchange [pagina dell&#39;estensione di Google Universal Analytics](https://exchange.adobe.com/experiencecloud.details.102829.google-universal-analytics.html).
+Per informazioni sulle opzioni di configurazione dell&#39;estensione, vedere la [pagina dell&#39;estensione di Google Universal Analytics](https://exchange.adobe.com/experiencecloud.details.102829.google-universal-analytics.html) su Adobe Exchange.
 
 Puoi anche installare l&#39;estensione direttamente nell&#39;[interfaccia utente di Data Collection](https://experience.adobe.com/it#/data-collection/). Per ulteriori informazioni, vedere la sezione relativa all&#39;[aggiunta di una nuova estensione](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) nella documentazione dei tag.
 
@@ -58,6 +58,6 @@ Puoi configurare, aggiornare ed eliminare le estensioni nell’interfaccia utent
 
 >[!TIP]
 >
->Se l&#39;estensione è già installata in una delle tue proprietà, nell&#39;interfaccia utente di Platform verrà comunque visualizzato **[!UICONTROL Installa]** per l&#39;estensione. Avvia il flusso di lavoro di installazione come descritto in [Installa estensione](#install-extension) per configurare o eliminare l&#39;estensione.
+>Se l&#39;estensione è già installata in una delle tue proprietà, nell&#39;interfaccia utente di Experience Platform viene comunque visualizzato **[!UICONTROL Installa]** per l&#39;estensione. Avvia il flusso di lavoro di installazione come descritto in [Installa estensione](#install-extension) per configurare o eliminare l&#39;estensione.
 
 Per aggiornare l&#39;estensione, consulta la guida al [processo di aggiornamento dell&#39;estensione](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) nella documentazione dei tag.

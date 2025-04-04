@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform di agosto 2023
 description: Note sulla versione di Adobe Experience Platform di agosto 2023.
 exl-id: c67dca3a-eccb-427e-8ab3-b69c51b57938
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1741'
-ht-degree: 43%
+source-wordcount: '1743'
+ht-degree: 40%
 
 ---
 
@@ -46,9 +46,9 @@ Per ulteriori informazioni, leggere la [panoramica di Real-Time CDP](../../rtcdp
 
 ## Controllo degli accessi basato su attributi {#abac}
 
-Il controllo degli accessi basato sugli attributi è una funzionalità di Adobe Experience Platform che offre ai brand attenti alla privacy una maggiore flessibilità per gestire l’accesso degli utenti. È possibile assegnare singoli oggetti, come campi e segmenti dello schema, ai ruoli utente. Questa funzione consente di concedere o revocare l’accesso a singoli oggetti per specifici utenti di Platform nell’organizzazione.
+Il controllo degli accessi basato sugli attributi è una funzionalità di Adobe Experience Platform che offre ai brand attenti alla privacy una maggiore flessibilità per gestire l’accesso degli utenti. È possibile assegnare singoli oggetti, come campi e segmenti dello schema, ai ruoli utente. Questa funzione ti consente di concedere o revocare l’accesso a singoli oggetti per specifici utenti di Experience Platform all’interno della tua organizzazione.
 
-Tramite il controllo dell’accesso basato su attributi, gli amministratori dell’organizzazione possono controllare l’accesso degli utenti a dati personali sensibili (SPD), informazioni personali (PII) e altri tipi di dati personalizzati in tutti i flussi di lavoro e le risorse di Platform. Gli amministratori possono definire ruoli utente con accesso solo a campi e dati specifici che corrispondono a tali campi.
+Tramite il controllo dell’accesso basato su attributi, gli amministratori dell’organizzazione possono controllare l’accesso degli utenti a, dati personali sensibili (SPD), informazioni personali (PII) e altri tipi di dati personalizzati in tutti i flussi di lavoro e le risorse di Experience Platform. Gli amministratori possono definire ruoli utente con accesso solo a campi e dati specifici che corrispondono a tali campi.
 
 **Funzioni nuove o aggiornate**
 
@@ -142,7 +142,7 @@ XDM è una specifica open-source che fornisce strutture e definizioni comuni (sc
 | Tipo di componente | Nome | Descrizione aggiornamento |
 | --- | --- | --- |
 | Estensione ([!UICONTROL Estensione completa Adobe Analytics ExperienceEvent]) | [[!UICONTROL Dati contestuali]](https://github.com/adobe/xdm/pull/1761/files) | [!UICONTROL Dati contestuali] ha aggiunto l&#39;oggetto mappa a [!UICONTROL Estensione completa Adobe Analytics ExperienceEvent] per fornire i dati contestuali per Adobe Analytics. |
-| Gruppo di campi | Multiplo | Diversi campi aggiunti a [[!UICONTROL Dettagli segmento evento arricchito]](https://github.com/adobe/xdm/pull/1760/files). |
+| Gruppo di campi | Multiple | Diversi campi aggiunti a [[!UICONTROL Dettagli segmento evento arricchito]](https://github.com/adobe/xdm/pull/1760/files). |
 
 {style="table-layout:auto"}
 
@@ -162,7 +162,7 @@ Per ulteriori informazioni, leggere la [Panoramica del servizio Identity](../../
 
 ## Servizio di segmentazione {#segmentation}
 
-[!DNL Segmentation Service] consente di segmentare i dati memorizzati in [!DNL Experience Platform] che si riferiscono ai singoli utenti (come clienti, potenziali clienti, utenti o organizzazioni) in tipi di pubblico. Puoi creare tipi di pubblico tramite definizioni di segmenti o altre origini dai tuoi dati di [!DNL Real-Time Customer Profile]. Questi tipi di pubblico sono configurati e gestiti centralmente in [!DNL Platform] e sono facilmente accessibili da qualsiasi soluzione Adobe.
+[!DNL Segmentation Service] consente di segmentare i dati memorizzati in [!DNL Experience Platform] che si riferiscono ai singoli utenti (come clienti, potenziali clienti, utenti o organizzazioni) in tipi di pubblico. Puoi creare tipi di pubblico tramite definizioni di segmenti o altre origini dai tuoi dati di [!DNL Real-Time Customer Profile]. Questi tipi di pubblico sono configurati e gestiti centralmente in [!DNL Experience Platform] e sono facilmente accessibili da qualsiasi soluzione Adobe.
 
 **Funzioni nuove o aggiornate**
 

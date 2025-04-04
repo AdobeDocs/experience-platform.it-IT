@@ -1,10 +1,10 @@
 ---
-description: Questa pagina esemplifica la chiamata API utilizzata per aggiornare una configurazione di destinazione esistente tramite il Adobe Experience Platform Destination SDK.
+description: Questa pagina esemplifica la chiamata API utilizzata per aggiornare una configurazione di destinazione esistente tramite Adobe Experience Platform Destination SDK.
 title: Aggiornare una configurazione di destinazione
 exl-id: d7f18689-9806-4f73-a63a-fa112569819c
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: 163c6f6bacfd6f0928b1053bd146a2d4fc4c74d0
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: '371'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ Questa pagina esemplifica la richiesta API e il payload che è possibile utilizz
 
 >[!TIP]
 >
->Qualsiasi operazione di aggiornamento sulle destinazioni pubbliche/di produzione è visibile solo dopo aver utilizzato l&#39;[API di pubblicazione](../../publishing-api/create-publishing-request.md) e aver inviato l&#39;aggiornamento per una revisione di Adobe.
+>Qualsiasi operazione di aggiornamento su destinazioni pubbliche/di produzione è visibile solo dopo aver utilizzato l&#39;[API di pubblicazione](../../publishing-api/create-publishing-request.md) e aver inviato l&#39;aggiornamento per la revisione Adobe.
 
 Per una descrizione dettagliata delle funzionalità di una configurazione di destinazione, leggi i seguenti articoli:
 
@@ -207,11 +207,11 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 
 ## Gestione degli errori API {#error-handling}
 
-Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](../../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
+Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](../../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Experience Platform.
 
 ## Passaggi successivi
 
-Dopo aver letto questo documento, sai come aggiornare una configurazione di destinazione tramite l&#39;endpoint API Destination SDK `/authoring/destinations`.
+Dopo aver letto questo documento, ora sai come aggiornare una configurazione di destinazione tramite l&#39;endpoint API `/authoring/destinations` di Destination SDK.
 
 Per ulteriori informazioni su cosa è possibile fare con questo endpoint, consulta i seguenti articoli:
 

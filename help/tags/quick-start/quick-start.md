@@ -2,10 +2,10 @@
 title: Guida rapida
 description: Scopri come iniziare a usare i tag in Adobe Experience Platform.
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
-source-git-commit: 8c881d99554a8694da79bdc29ad30ebbc870db20
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1521'
-ht-degree: 90%
+source-wordcount: '1522'
+ht-degree: 88%
 
 ---
 
@@ -37,7 +37,7 @@ Per istruzioni dettagliate su come creare gruppi e aggiungere utenti per i tag, 
 
 ## 2. Accedere
 
-Dopo aver aggiunto i diritti dei tag al tuo Adobe ID, devi accedere all’interfaccia utente di Experience Platform o all’interfaccia utente di Data Collection. Per eseguire questa operazione, passare direttamente alla [schermata di accesso Experience Cloud](https://experience.adobe.com/) e selezionare **[!UICONTROL Raccolta dati]** o **[!UICONTROL Experience Platform]**.
+Dopo aver aggiunto i diritti dei tag al tuo Adobe ID, devi accedere all’interfaccia utente di Experience Platform o di Data Collection. Per eseguire questa operazione, vai direttamente alla [schermata di accesso di Experience Cloud](https://experience.adobe.com/) e seleziona **[!UICONTROL Raccolta dati]** o **[!UICONTROL Experience Platform]**.
 
 >[!NOTE]
 >
@@ -55,7 +55,7 @@ Un’estensione è un’integrazione creata da Adobe o da un partner di Adobe ch
 
 Tutte le nuove proprietà hanno installata l&#39;[estensione Core](../extensions/client/core/overview.md). Le proprietà per dispositivi mobili sono dotate di estensioni aggiuntive. L’estensione Core è creata da Adobe per fornire un set predefinito solido di tipi di elementi dati per il livello di dati, e i tipi di eventi per le regole. La maggior parte delle azioni che desideri eseguire (ottenere un ECID, inviare un beacon [!DNL Adobe Analytics], caricare la global mbox [!DNL Target], ecc.) saranno disponibili grazie alle estensioni installate dal catalogo.
 
-Ciò che rende i tag in Platform davvero unici è che queste estensioni possono essere create da chiunque. Devi rilasciare un pixel di remarketing Facebook sul sito? Controlla l&#39;estensione creata da Facebook. Vuoi fare lo stesso per Twitter o Linked In? Utilizza le loro estensioni. Devi eseguire un sondaggio? Dai un&#39;occhiata a Question Pro o Foresee. Devi gestire la privacy e il consenso degli utenti finali, in ambito [!DNL GDPR]? Vedi se Evidon o Trust Arc fanno al caso tuo. Desideri visualizzare informazioni dettagliate sul comportamento dei singoli utenti sul tuo sito? Guarda Clicktale. Per ulteriori informazioni, vedere la sezione relativa all&#39;aggiunta di una nuova estensione [1.](../ui/managing-resources/extensions/overview.md#add-a-new-extension)
+Ciò che rende i tag in Experience Platform davvero unici è che queste estensioni possono essere create da chiunque. Devi rilasciare un pixel di remarketing Facebook sul sito? Controlla l&#39;estensione creata da Facebook. Vuoi fare lo stesso per Twitter o Linked In? Utilizza le loro estensioni. Devi eseguire un sondaggio? Dai un&#39;occhiata a Question Pro o Foresee. Devi gestire la privacy e il consenso degli utenti finali, in ambito [!DNL GDPR]? Vedi se Evidon o Trust Arc fanno al caso tuo. Desideri visualizzare informazioni dettagliate sul comportamento dei singoli utenti sul tuo sito? Guarda Clicktale. Per ulteriori informazioni, vedere la sezione relativa all&#39;aggiunta di una nuova estensione [1.](../ui/managing-resources/extensions/overview.md#add-a-new-extension)
 
 ## 5. Creare elementi dati e regole
 

@@ -2,9 +2,9 @@
 title: Connettere Data Landing Zone a Adobe Experience Platform utilizzando l’API del servizio Flow
 description: Scopri come collegare Adobe Experience Platform a Data Landing Zone utilizzando l’API del servizio Flusso.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: 1d4dd60180ef2a3cbf6dcd565c2f09dd575716b9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1410'
+source-wordcount: '1419'
 ht-degree: 4%
 
 ---
@@ -23,10 +23,10 @@ Questo tutorial illustra i passaggi necessari per creare una connessione di orig
 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Experience Platform:
 
-* [Origini](../../../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
-* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Origini](../../../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Experience Platform.
+* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Experience Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
-Questo tutorial richiede anche di leggere la guida su [guida introduttiva alle API di Platform](../../../../../landing/api-guide.md) per scoprire come eseguire l&#39;autenticazione nelle API di Platform e interpretare le chiamate di esempio fornite nella documentazione.
+Questo tutorial richiede anche di leggere la guida [guida introduttiva alle API di Experience Platform](../../../../../landing/api-guide.md) per scoprire come eseguire l&#39;autenticazione nelle API di Experience Platform e interpretare le chiamate di esempio fornite nella documentazione.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per creare correttamente una connessione di origine [!DNL Data Landing Zone] utilizzando l&#39;API [!DNL Flow Service].
 
@@ -150,7 +150,7 @@ A seconda del provider, una richiesta corretta restituisce quanto segue:
 | `SASToken` | Il token di firma di accesso condiviso per [!DNL Data Landing Zone]. Questa stringa contiene tutte le informazioni necessarie per autorizzare una richiesta. |
 | `storageAccountName` | Il nome dell&#39;account di archiviazione. |
 | `SASUri` | URI della firma di accesso condiviso per [!DNL Data Landing Zone]. Questa stringa è una combinazione dell&#39;URI di [!DNL Data Landing Zone] per il quale si sta eseguendo l&#39;autenticazione e del token SAS corrispondente. |
-| `expiryDate` | Data di scadenza del token SAS. È necessario aggiornare il token prima della data di scadenza per continuare a utilizzarlo nell&#39;applicazione per il caricamento di dati in [!DNL Data Landing Zone]. Se non aggiorni manualmente il token prima della data di scadenza indicata, questo verrà aggiornato automaticamente e fornirà un nuovo token quando viene eseguita la chiamata delle credenziali GET. |
+| `expiryDate` | Data di scadenza del token SAS. È necessario aggiornare il token prima della data di scadenza per continuare a utilizzarlo nell&#39;applicazione per il caricamento di dati in [!DNL Data Landing Zone]. Se non aggiorni manualmente il token prima della data di scadenza indicata, questo verrà aggiornato automaticamente e fornirà un nuovo token quando viene eseguita la chiamata delle credenziali di GET. |
 
 >[!TAB Risposta su AWS]
 
@@ -385,7 +385,7 @@ In caso di esito positivo, la risposta restituisce un array di file e cartelle p
 
 ## Anteprima della struttura e del contenuto del file della zona di destinazione
 
-Per controllare la struttura di un file nella zona di destinazione, esegui una richiesta di GET fornendo il percorso del file e digita come parametro di query.
+Per controllare la struttura di un file nella zona di destinazione, esegui una richiesta GET fornendo il percorso del file e digita come parametro di query.
 
 **Formato API**
 
@@ -479,7 +479,7 @@ In caso di esito positivo, la risposta restituisce la struttura del file oggetto
 
 ### Utilizza `determineProperties` per rilevare automaticamente le informazioni sulle proprietà di un file [!DNL Data Landing Zone]
 
-È possibile utilizzare il parametro `determineProperties` per rilevare automaticamente le informazioni sulle proprietà del contenuto del file di [!DNL Data Landing Zone] durante una chiamata di GET per esplorare il contenuto e la struttura dell&#39;origine.
+È possibile utilizzare il parametro `determineProperties` per rilevare automaticamente le informazioni sulle proprietà del contenuto del file di [!DNL Data Landing Zone] durante una chiamata GET per esplorare il contenuto e la struttura dell&#39;origine.
 
 #### `determineProperties` casi d&#39;uso
 
@@ -619,7 +619,7 @@ In caso di esito positivo, la risposta restituisce la struttura del file su cui 
 
 Una connessione di origine crea e gestisce la connessione all’origine esterna da cui vengono acquisiti i dati. Una connessione di origine è costituita da informazioni quali origine dati, formato dati e ID della connessione di origine necessari per creare un flusso di dati. Un&#39;istanza della connessione di origine è specifica di un tenant e di un&#39;organizzazione.
 
-Per creare una connessione di origine, effettuare una richiesta POST all&#39;endpoint `/sourceConnections` dell&#39;API [!DNL Flow Service].
+Per creare una connessione di origine, eseguire una richiesta POST all&#39;endpoint `/sourceConnections` dell&#39;API [!DNL Flow Service].
 
 
 **Formato API**
@@ -656,8 +656,8 @@ curl -X POST \
 | Proprietà | Descrizione |
 | --- | --- |
 | `name` | Nome della connessione di origine [!DNL Data Landing Zone]. |
-| `data.format` | Il formato dei dati che desideri inserire in Platform. |
-| `params.path` | Percorso del file da portare su Platform. |
+| `data.format` | Il formato dei dati che desideri portare in Experience Platform. |
+| `params.path` | Percorso del file da portare in Experience Platform. |
 | `connectionSpec.id` | ID della specifica di connessione corrispondente a [!DNL Data Landing Zone]. ID corretto: `26f526f2-58f4-4712-961d-e41bf1ccc0e8`. |
 
 **Risposta**
@@ -673,4 +673,4 @@ In caso di esito positivo, la risposta restituisce l&#39;identificatore univoco 
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai recuperato le credenziali di [!DNL Data Landing Zone], ne hai esplorato la struttura per trovare il file da portare in Platform e hai creato una connessione di origine per iniziare a portare i dati in Platform. Ora puoi passare alla prossima esercitazione, dove scoprirai come [creare un flusso di dati per portare i dati dell&#39;archiviazione cloud in Platform utilizzando l&#39;API [!DNL Flow Service] 2}.](../../collect/cloud-storage.md)
+Seguendo questa esercitazione, hai recuperato le credenziali di [!DNL Data Landing Zone], ne hai esplorato la struttura per trovare il file da portare in Experience Platform e hai creato una connessione di origine per iniziare a portare i tuoi dati in Experience Platform. Ora puoi passare alla prossima esercitazione, dove scoprirai come [creare un flusso di dati per portare i dati dell&#39;archiviazione cloud in Experience Platform utilizzando l&#39;API [!DNL Flow Service] 2}.](../../collect/cloud-storage.md)

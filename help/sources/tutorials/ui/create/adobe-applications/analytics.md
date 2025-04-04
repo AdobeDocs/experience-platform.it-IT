@@ -2,9 +2,9 @@
 title: Creare una connessione Adobe Analytics Source nell’interfaccia utente
 description: Scopri come creare una connessione sorgente Adobe Analytics nell’interfaccia utente per inserire i dati dei consumatori in Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 71932d6f743d8cf767ce4e088231e61e9c2160e0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2672'
+source-wordcount: '2676'
 ht-degree: 3%
 
 ---
@@ -17,15 +17,15 @@ Questo tutorial descrive i passaggi necessari per creare una connessione di orig
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Experience Platform:
 
-* [Experience Data Model (XDM) System](../../../../../xdm/home.md): framework standardizzato in base al quale Experience Platform organizza i dati sull&#39;esperienza del cliente.
+* [Experience Data Model (XDM) System](../../../../../xdm/home.md): framework standardizzato tramite il quale Experience Platform organizza i dati sull&#39;esperienza del cliente.
 * [Profilo cliente in tempo reale](../../../../../profile/home.md): fornisce un profilo consumatore unificato in tempo reale basato su dati aggregati provenienti da più origini.
-* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Experience Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 ### Terminologia chiave
 
 È importante comprendere i seguenti termini chiave utilizzati nel presente documento:
 
-* **Attributo standard**: gli attributi standard sono attributi predefiniti da Adobe. Contengono lo stesso significato per tutti i clienti e sono disponibili nei gruppi di campi dello schema [!DNL Analytics] e dei dati di origine [!DNL Analytics].
+* **Attributo standard**: gli attributi standard sono qualsiasi attributo predefinito da Adobe. Contengono lo stesso significato per tutti i clienti e sono disponibili nei gruppi di campi dello schema [!DNL Analytics] e dei dati di origine [!DNL Analytics].
 * **Attributo personalizzato**: gli attributi personalizzati sono qualsiasi attributo nella gerarchia delle variabili personalizzate in [!DNL Analytics]. Gli attributi personalizzati vengono utilizzati all’interno di un’implementazione di Adobe Analytics per acquisire informazioni specifiche in una suite di rapporti e possono differire nel loro utilizzo da una suite di rapporti all’altra. Gli attributi personalizzati includono eVar, prop ed elenchi. Per ulteriori informazioni sulle eVar, consulta la [[!DNL Analytics] documentazione sulle variabili di conversione](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html).
 * **Qualsiasi attributo nei gruppi di campi personalizzati**: gli attributi che provengono dai gruppi di campi creati dai clienti sono tutti definiti dall&#39;utente e non sono considerati né attributi standard né personalizzati.
 * **Nomi descrittivi**: i nomi descrittivi sono etichette fornite dall&#39;uomo per le variabili personalizzate in un&#39;implementazione [!DNL Analytics]. Per ulteriori informazioni sui nomi descrittivi, consulta la [[!DNL Analytics] documentazione sulle variabili di conversione](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html).
@@ -39,11 +39,11 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di Experie
 >* Un flusso di dati che esegue una retrocompilazione di 13 mesi dei dati storici della suite di rapporti nel data lake. Questo flusso di dati termina quando la retrocompilazione è completa.
 >* Flusso di dati che invia dati live al data lake e a [!DNL Real-Time Customer Profile]. Questo flusso di dati viene eseguito in modo continuo.
 
-Nell&#39;interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Nella schermata [!UICONTROL Catalogo] sono visualizzate diverse origini con cui è possibile creare un account.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Nella schermata [!UICONTROL Catalogo] sono visualizzate diverse origini con cui è possibile creare un account.
 
 Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. È inoltre possibile utilizzare la barra di ricerca per limitare le origini visualizzate.
 
-Nella categoria **[!UICONTROL Adobe applications]**, seleziona **[!UICONTROL Adobe Analytics]**, quindi seleziona **[!UICONTROL Aggiungi dati]**.
+Nella categoria **[!UICONTROL Applicazioni Adobe]**, seleziona **[!UICONTROL Adobe Analytics]**, quindi seleziona **[!UICONTROL Aggiungi dati]**.
 
 ![catalogo](../../../../images/tutorials/create/analytics/catalog.png)
 
@@ -57,7 +57,7 @@ Il passaggio **[!UICONTROL Dati aggiunta origine di Analytics]** fornisce un ele
 
 Una suite di rapporti è un contenitore di dati che costituisce la base del reporting [!DNL Analytics]. Un’organizzazione può avere molte suite di rapporti, ciascuna contenente set di dati diversi.
 
-Puoi acquisire suite di rapporti da qualsiasi area geografica (Stati Uniti, Regno Unito o Singapore) purché siano mappate sulla stessa organizzazione dell’istanza sandbox Experience Platform in cui viene creata la connessione di origine. Una suite di rapporti può essere acquisita utilizzando un solo flusso di dati attivo. Una suite di rapporti non selezionabile è già stata acquisita nella sandbox in uso o in un’altra sandbox.
+Puoi acquisire suite di rapporti da qualsiasi area geografica (Stati Uniti, Regno Unito o Singapore) purché siano mappate sulla stessa organizzazione dell’istanza sandbox di Experience Platform in cui viene creata la connessione di origine. Una suite di rapporti può essere acquisita utilizzando un solo flusso di dati attivo. Una suite di rapporti non selezionabile è già stata acquisita nella sandbox in uso o in un’altra sandbox.
 
 È possibile effettuare più connessioni in-bound per portare più suite di rapporti nella stessa sandbox. Se le suite di rapporti hanno schemi diversi per le variabili (ad esempio eVar o eventi), è necessario mapparle su campi specifici nei gruppi di campi personalizzati ed evitare conflitti di dati utilizzando [Preparazione dati](../../../../../data-prep/ui/mapping.md). Le suite di rapporti possono essere aggiunte solo a una singola sandbox.
 
@@ -115,7 +115,7 @@ La pagina [!UICONTROL Gruppo di campi dello schema del modello Adobe Analytics E
 
 ![anteprima-gruppo-campi](../../../../images/tutorials/create/analytics/field-group-preview.png)
 
-Platform rileva automaticamente i set di mappatura per eventuali conflitti di nomi descrittivi. Se non ci sono conflitti con i set di mappatura, seleziona **[!UICONTROL Avanti]** per continuare.
+Experience Platform rileva automaticamente i set di mappatura per eventuali conflitti di nomi descrittivi. Se non ci sono conflitti con i set di mappatura, seleziona **[!UICONTROL Avanti]** per continuare.
 
 ![mappatura](../../../../images/tutorials/create/analytics/mapping.png)
 
@@ -282,7 +282,7 @@ Viene visualizzato il passaggio **[!UICONTROL Dettagli flusso di dati]**, in cui
 
 ![dettagli flusso di dati](../../../../images/tutorials/create/analytics/dataflow-detail.png)
 
-### Controlla
+### Rivisione
 
 Viene visualizzato il passaggio [!UICONTROL Rivedi], che consente di rivedere il nuovo flusso di dati di Analytics prima che venga creato. I dettagli della connessione sono raggruppati per categorie, tra cui:
 
@@ -301,7 +301,7 @@ Viene visualizzato un elenco dei flussi di dati di Analytics esistenti nell’or
 
 ![Elenco dei flussi di dati Adobe Analytics esistenti nell&#39;organizzazione.](../../../../images/tutorials/create/analytics/select-target-dataset.png)
 
-La pagina [!UICONTROL Attività set di dati] fornisce informazioni sull&#39;avanzamento dei dati inviati da Analytics a Experience Platform. L’interfaccia visualizza metriche quali il totale dei record del mese precedente, il totale dei record acquisiti negli ultimi sette giorni e le dimensioni dei dati nel mese precedente.
+La pagina [!UICONTROL Attività set di dati] fornisce informazioni sull&#39;avanzamento dei dati inviati da Analytics ad Experience Platform. L’interfaccia visualizza metriche quali il totale dei record del mese precedente, il totale dei record acquisiti negli ultimi sette giorni e le dimensioni dei dati nel mese precedente.
 
 L’origine crea un’istanza di due flussi di set di dati. Un flusso rappresenta i dati di backfill e l’altro è per i dati live. I dati di backfill non sono configurati per l’acquisizione in Real-Time Customer Profile, ma vengono inviati al data lake per casi d’uso analitici e di data science.
 
@@ -322,7 +322,7 @@ Per eliminare il flusso di dati di Analytics, seleziona **[!UICONTROL Flussi di 
 
 ## Passaggi successivi e risorse aggiuntive
 
-Una volta creata la connessione, il flusso di dati viene creato automaticamente per contenere i dati in arrivo e popolare un set di dati con lo schema selezionato. Inoltre, avviene il recupero dei dati e acquisisce fino a 13 mesi di dati storici. Al termine dell&#39;acquisizione iniziale, [!DNL Analytics] dati e saranno utilizzati dai servizi Platform a valle come [!DNL Real-Time Customer Profile] e Segmentation Service. Per ulteriori informazioni, consulta i seguenti documenti:
+Una volta creata la connessione, il flusso di dati viene creato automaticamente per contenere i dati in arrivo e popolare un set di dati con lo schema selezionato. Inoltre, avviene il recupero dei dati e acquisisce fino a 13 mesi di dati storici. Al termine dell&#39;acquisizione iniziale, [!DNL Analytics] dati e saranno utilizzati dai servizi Experience Platform a valle come [!DNL Real-Time Customer Profile] e Segmentation Service. Per ulteriori informazioni, consulta i seguenti documenti:
 
 * [Panoramica di [!DNL Real-Time Customer Profile]](../../../../../profile/home.md)
 * [Panoramica di [!DNL Segmentation Service]](../../../../../segmentation/home.md)
@@ -333,6 +333,6 @@ Il seguente video ha lo scopo di chiarire come acquisire dati utilizzando il con
 
 >[!WARNING]
 >
-> L&#39;interfaccia utente [!DNL Platform] mostrata nel video seguente non è aggiornata. Per le schermate e le funzionalità più recenti dell’interfaccia utente, consulta la documentazione precedente.
+> L&#39;interfaccia utente [!DNL Experience Platform] mostrata nel video seguente non è aggiornata. Per le schermate e le funzionalità più recenti dell’interfaccia utente, consulta la documentazione precedente.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)

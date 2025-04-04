@@ -2,9 +2,9 @@
 title: Sfoglia ordini di lavoro del ciclo di vita dei dati
 description: Scopri come visualizzare e gestire gli ordini di lavoro del ciclo di vita dei dati esistenti nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '841'
+source-wordcount: '843'
 ht-degree: 27%
 
 ---
@@ -25,7 +25,7 @@ Questa guida illustra come visualizzare e gestire gli ordini di lavoro esistenti
 
 La prima volta che accedi all&#39;area di lavoro **[!UICONTROL Ciclo di vita dei dati]** nell&#39;interfaccia utente, viene visualizzato un elenco degli ordini di lavoro esistenti con i relativi dettagli di base.
 
-![Immagine che mostra l&#39;area di lavoro [!UICONTROL Ciclo di vita dei dati] nell&#39;interfaccia utente di Platform](../images/ui/browse/work-order-list.png)
+![Immagine che mostra l&#39;area di lavoro [!UICONTROL Ciclo di vita dei dati] nell&#39;interfaccia utente di Experience Platform](../images/ui/browse/work-order-list.png)
 
 Nell&#39;elenco vengono visualizzati solo gli ordini di lavorazione per una categoria alla volta. Seleziona **[!UICONTROL Consumer]** per visualizzare un elenco delle attività di eliminazione dei record e **[!UICONTROL Set di dati]** per visualizzare un elenco delle scadenze pianificate dei set di dati.
 
@@ -97,7 +97,7 @@ La pagina dei dettagli per la scadenza di un set di dati fornisce informazioni s
 
 ## Passaggi successivi
 
-Questa guida illustra come visualizzare e gestire gli ordini di lavoro esistenti relativi al ciclo di vita dei dati nell’interfaccia utente di Platform. Per informazioni sulla creazione di ordini di lavoro personalizzati, consultare la seguente documentazione:
+Questa guida illustra come visualizzare e gestire gli ordini di lavoro esistenti relativi al ciclo di vita dei dati nell’interfaccia utente di Experience Platform. Per informazioni sulla creazione di ordini di lavoro personalizzati, consultare la seguente documentazione:
 
 * [Gestire le scadenze dei set di dati](./dataset-expiration.md)
 * [Gestisci eliminazioni record](./record-delete.md)

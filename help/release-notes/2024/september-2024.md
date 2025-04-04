@@ -1,10 +1,11 @@
 ---
 title: Note sulla versione di Adobe Experience Platform di settembre 2024
 description: Note sulla versione di Adobe Experience Platform di settembre 2024.
-source-git-commit: eac613434f631cab567ab3fa6e30d33acac79d2f
+exl-id: e5b40712-2a54-4c6f-a4a1-2f078305da59
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2199'
-ht-degree: 100%
+source-wordcount: '2202'
+ht-degree: 97%
 
 ---
 
@@ -26,7 +27,7 @@ Aggiornamenti alle funzioni e alla documentazione esistenti in Adobe Experience 
 
 ## Avvisi {#alerts}
 
-Experience Platform consente di abbonarti agli avvisi basati su eventi per varie attività di Platform. Puoi abbonarti a diverse regole di avviso tramite la scheda [!UICONTROL Avvisi] nell’interfaccia utente di Platform e scegliere di ricevere messaggi di avviso all’interno dell’interfaccia utente stessa o tramite notifiche e-mail.
+Experience Platform ti consente di abbonarti agli avvisi basati su eventi per varie attività di Experience Platform. Puoi abbonarti a diverse regole di avviso tramite la scheda [!UICONTROL Avvisi] nell&#39;interfaccia utente di Experience Platform e scegliere di ricevere messaggi di avviso all&#39;interno dell&#39;interfaccia utente stessa o tramite notifiche e-mail.
 
 **Funzioni nuove o aggiornate**
 
@@ -49,7 +50,7 @@ Experience Platform fornisce più dashboard attraverso le quali è possibile vis
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Tabella dei componenti aggiuntivi per l’utilizzo delle licenze | Ottieni una visibilità granulare sull’utilizzo delle licenze e gestisci le risorse della piattaforma con tabelle dedicate per i prodotti principali e i componenti aggiuntivi. Monitora e analizza le metriche chiave per ciascun prodotto principale con visualizzazioni dettagliate a livello di sandbox. Le metriche dei componenti aggiuntivi si integrano facilmente con le metriche del prodotto principale, offrendo una visione completa dell’utilizzo. La visibilità migliorata consente di ottimizzare la gestione della licenza e di allineare le risorse alle esigenze organizzative. Per ulteriori informazioni, consulta la guida ](../../dashboards/guides/license-usage.md#overview-tab) dashboard per l’[[!UICONTROL Utilizzo licenze]. |
+| Tabella dei componenti aggiuntivi per l’utilizzo delle licenze | Ottieni una visibilità granulare sull’utilizzo delle licenze e gestisci le risorse Experience Platform con tabelle dedicate per i prodotti di base e i componenti aggiuntivi. Monitora e analizza le metriche chiave per ciascun prodotto principale con visualizzazioni dettagliate a livello di sandbox. Le metriche dei componenti aggiuntivi si integrano facilmente con le metriche del prodotto principale, offrendo una visione completa dell’utilizzo. La visibilità migliorata consente di ottimizzare la gestione della licenza e di allineare le risorse alle esigenze organizzative. Per ulteriori informazioni, consulta la guida ](../../dashboards/guides/license-usage.md#overview-tab) dashboard per l’[[!UICONTROL Utilizzo licenze]. |
 | Modalità query pro - Aggiornamenti del filtro globale | Migliora l’analisi con il nuovo filtro data della Modalità query pro. Perfeziona le informazioni con parametri di data dinamici nelle query SQL e filtra i dati per intervalli di tempo specifici. Scegli intervalli di date predefiniti o personalizzati con un’interfaccia utente intuitiva, mantenendo le dashboard pertinenti per tutti gli utenti. Semplifica i flussi di lavoro, mantieni la precisione e prendi decisioni tempestive. Per ulteriori informazioni, consulta la [guida sulla creazione dei filtri per data](../../dashboards/sql-insights-query-pro-mode/filters/global-filter.md). |
 | Modalità query pro - Analisi dettagliate | Approfondisci le informazioni con la funzione Analisi dettagliata della Modalità query pro e passa senza problemi dai grafici di alto livello alle dashboard dettagliate. Utilizza questa funzione per passare facilmente da riepiloghi ad analisi approfondite ed esplorare tendenze, comportamenti della clientela e KPI. I pass-through automatici dei filtri e le analisi dettagliate a più livelli mantengono i dati coerenti, garantendo un’esplorazione fluida. Semplifica i flussi di lavoro, mantieni il contesto e accelera le decisioni. Per ulteriori informazioni, consulta la [guida dettagliata sulla creazione dell’analisi dettagliata](../../dashboards/sql-insights-query-pro-mode/drill-through.md). |
 | Modalità query pro - Attributi di tabella avanzati | Utilizza gli attributi di tabella avanzati nella Modalità query pro per semplificare la visualizzazione dei dati, ottimizzare l’efficienza del flusso di lavoro e migliorare la chiarezza dei dati. Puoi aggiungere alle tabelle l’ordinamento, il ridimensionamento e l’impaginazione automatici direttamente dalle dashboard personalizzate. Ordina le colonne per assegnare la priorità ai dati chiave, ridimensionale per garantire una leggibilità ottimale e naviga facilmente in set di dati di grandi dimensioni senza modificare le query SQL. Consulta la guida &#39;[“Ulteriori informazioni](../../dashboards/sql-insights-query-pro-mode/view-more.md)” per scoprire come integrare queste funzioni e migliorare le informazioni sui dati. |

@@ -1,11 +1,11 @@
 ---
-title: Creare una connessione Amazon Kinesis Source utilizzando l’API del servizio Flusso
+title: Creare una connessione Amazon Kinesis Source utilizzando l’API del servizio Flow
 description: Scopri come collegare Adobe Experience Platform a un’origine Amazon Kinesis utilizzando l’API del servizio Flusso.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '726'
+source-wordcount: '732'
 ht-degree: 4%
 
 ---
@@ -14,18 +14,18 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->L&#39;origine [!DNL Amazon Kinesis] è disponibile nel catalogo delle origini per gli utenti che hanno acquistato Real-time Customer Data Platform Ultimate.
+>L&#39;origine [!DNL Amazon Kinesis] è disponibile nel catalogo delle origini per gli utenti che hanno acquistato Real-Time Customer Data Platform Ultimate.
 
-Questo tutorial illustra i passaggi necessari per connettere ad Experience Platform [!DNL Amazon Kinesis] (di seguito &quot;[!DNL Kinesis]&quot;) utilizzando l&#39;API [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Questo tutorial illustra i passaggi necessari per connettere [!DNL Amazon Kinesis] (di seguito &quot;[!DNL Kinesis]&quot;) ad Experience Platform, utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introduzione
 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Origini](../../../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi [!DNL Platform].
-* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza [!DNL Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Origini](../../../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi [!DNL Experience Platform].
+* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza [!DNL Experience Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per connettere correttamente [!DNL Kinesis] a Platform utilizzando l&#39;API [!DNL Flow Service].
+Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per connettere correttamente [!DNL Kinesis] ad Experience Platform utilizzando l&#39;API [!DNL Flow Service].
 
 ### Raccogli le credenziali richieste
 
@@ -33,22 +33,22 @@ Affinché [!DNL Flow Service] possa connettersi al tuo account [!DNL Amazon Kine
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
-| `accessKeyId` | L&#39;ID della chiave di accesso è la metà della coppia di chiavi di accesso utilizzata per autenticare l&#39;account [!DNL Kinesis] in Platform. |
-| `secretKey` | La chiave di accesso segreta è l&#39;altra metà della coppia di chiavi di accesso utilizzata per autenticare l&#39;account [!DNL Kinesis] in Platform. |
+| `accessKeyId` | L&#39;ID della chiave di accesso è la metà della coppia di chiavi di accesso utilizzata per autenticare l&#39;account [!DNL Kinesis] in Experience Platform. |
+| `secretKey` | La chiave di accesso segreta è l&#39;altra metà della coppia di chiavi di accesso utilizzata per autenticare l&#39;account [!DNL Kinesis] in Experience Platform. |
 | `region` | Area geografica del tuo account [!DNL Kinesis]. Per ulteriori informazioni sulle aree geografiche, consulta la guida sull&#39;[aggiunta di indirizzi IP all&#39;elenco consentiti](../../../../ip-address-allow-list.md). |
 | `connectionSpec.id` | La specifica di connessione restituisce le proprietà del connettore di un&#39;origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di origine. ID della specifica di connessione [!DNL Kinesis]: `86043421-563b-46ec-8e6c-e23184711bf6`. |
 
 Per ulteriori informazioni sulle chiavi di accesso [!DNL Kinesis] e su come generarle, consultare questa [[!DNL AWS] guida sulla gestione delle chiavi di accesso per gli utenti IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
-### Utilizzo delle API di Platform
+### Utilizzo delle API di Experience Platform
 
-Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida in [guida introduttiva alle API di Platform](../../../../../landing/api-guide.md).
+Per informazioni su come effettuare correttamente chiamate alle API di Experience Platform, consulta la guida introduttiva [alle API di Experience Platform](../../../../../landing/api-guide.md).
 
 ## Creare una connessione di base
 
 Il primo passaggio nella creazione di una connessione di origine consiste nell&#39;autenticare l&#39;origine [!DNL Kinesis] e generare un ID connessione di base. Un ID di connessione di base consente di esplorare e navigare tra i file dall’interno dell’origine e identificare elementi specifici da acquisire, incluse informazioni relative ai tipi di dati e ai formati.
 
-Per creare un ID di connessione di base, effettuare una richiesta POST all&#39;endpoint `/connections` fornendo le credenziali di autenticazione [!DNL Kinesis] come parte dei parametri della richiesta.
+Per creare un ID connessione di base, eseguire una richiesta POST all&#39;endpoint `/connections` fornendo le credenziali di autenticazione [!DNL Kinesis] come parte dei parametri della richiesta.
 
 **Formato API**
 
@@ -107,7 +107,7 @@ In caso di esito positivo, la risposta restituisce i dettagli della connessione 
 
 Una connessione di origine crea e gestisce la connessione all’origine esterna da cui vengono acquisiti i dati. Una connessione di origine è costituita da informazioni quali origine dati, formato dati e ID della connessione di origine necessari per creare un flusso di dati. Un&#39;istanza della connessione di origine è specifica di un tenant e di un&#39;organizzazione.
 
-Per creare una connessione di origine, effettuare una richiesta POST all&#39;endpoint `/sourceConnections` dell&#39;API [!DNL Flow Service].
+Per creare una connessione di origine, eseguire una richiesta POST all&#39;endpoint `/sourceConnections` dell&#39;API [!DNL Flow Service].
 
 **Formato API**
 

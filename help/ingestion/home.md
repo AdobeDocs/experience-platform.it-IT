@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;inserimento dati;posizione dati;posizione dati;gestione dati;gestione dati;derivazione;batch;dati acquisiti;home;popular topic;data ingestion;data location;Data Location;Data management;data management;Lineage;lineage;batch;Batch;ingested data
+keywords: Experience Platform;home;argomenti popolari;inserimento dati;posizione dati;posizione dati;gestione dati;gestione dati;derivazione;batch;dati acquisiti;;home;popular topic;data ingestion;data location;Data Location;Data management;data management;Lineage;lineage;batch;Batch;ingested data
 solution: Experience Platform
 title: Panoramica sull’acquisizione dei dati
-description: Questo documento illustra i tre modi principali in cui i dati vengono acquisiti in Platform, con collegamenti alla rispettiva documentazione di panoramica per informazioni più dettagliate.
+description: Questo documento illustra i tre modi principali in cui i dati vengono acquisiti in Experience Platform, con collegamenti alla rispettiva documentazione di panoramica per informazioni più dettagliate.
 exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '579'
 ht-degree: 3%
 
 ---
 
 # Panoramica sull’acquisizione dei dati
 
-Adobe Experience Platform riunisce dati provenienti da più origini per aiutare gli esperti di marketing a comprendere meglio il comportamento dei loro clienti. L’acquisizione dei dati di Adobe Experience Platform rappresenta i diversi metodi con cui Experience Platform acquisisce i dati da queste origini, nonché il modo in cui tali dati vengono mantenuti all’interno del Data Lake per l’utilizzo da parte dei servizi di Experience Platform a valle.
+Adobe Experience Platform riunisce dati provenienti da più origini per aiutare gli esperti di marketing a comprendere meglio il comportamento dei loro clienti. L’acquisizione dei dati di Adobe Experience Platform rappresenta i diversi metodi con cui Experience Platform acquisisce i dati da queste origini, nonché il modo in cui tali dati vengono memorizzati nel Data Lake per l’utilizzo da parte dei servizi Experience Platform a valle.
 
 Questo documento illustra i tre modi principali in cui i dati vengono acquisiti in Experience Platform, con collegamenti alla rispettiva documentazione di panoramica per informazioni più dettagliate.
 

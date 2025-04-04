@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;api;Attribute-Based Access Control;attribute-based access control
+keywords: Experience Platform;home;argomenti popolari;api;Attribute-Based Access Control;attribute-based access control;attribute-based access control
 solution: Experience Platform
 title: Endpoint API per i ruoli
 description: L’endpoint /roles nell’API di controllo dell’accesso basata su attributi consente di gestire in modo programmatico i ruoli in Adobe Experience Platform.
 role: Developer
 exl-id: 049f7a18-7d06-437b-8ce9-25d7090ba782
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1665'
-ht-degree: 6%
+source-wordcount: '1670'
+ht-degree: 7%
 
 ---
 
@@ -108,7 +108,7 @@ In caso di esito positivo, la risposta restituisce un elenco di ruoli dell’org
 | `roleType` | Il tipo designato del ruolo. I valori possibili per il tipo di ruolo sono: `user-defined` e `system-defined`. |
 | `permissionSets` | I set di autorizzazioni rappresentano un gruppo di autorizzazioni che un amministratore può applicare a un ruolo. Un amministratore può assegnare set di autorizzazioni a un ruolo, invece di assegnare singole autorizzazioni. In questo modo è possibile creare ruoli personalizzati da un ruolo predefinito contenente un gruppo di autorizzazioni. |
 | `sandboxes` | Questa proprietà visualizza all’interno dell’organizzazione le sandbox per le quali è stato eseguito il provisioning per un determinato ruolo. |
-| `subjectAttributes` | Attributi che indicano la correlazione tra un soggetto e le risorse Platform a cui hanno accesso. |
+| `subjectAttributes` | Attributi che indicano la correlazione tra un soggetto e le risorse Experience Platform a cui hanno accesso. |
 | `subjectAttributes.labels` | Visualizza le etichette di utilizzo dei dati applicate al ruolo sottoposto a query. |
 
 ## Cercare un ruolo {#lookup}
@@ -175,7 +175,7 @@ In caso di esito positivo, la risposta restituisce i dettagli per l’ID ruolo i
 | `roleType` | Il tipo designato del ruolo. I valori possibili per il tipo di ruolo sono: `user-defined` e `system-defined`. |
 | `permissionSets` | I set di autorizzazioni rappresentano un gruppo di autorizzazioni che un amministratore può applicare a un ruolo. Un amministratore può assegnare set di autorizzazioni a un ruolo, invece di assegnare singole autorizzazioni. In questo modo è possibile creare ruoli personalizzati da un ruolo predefinito contenente un gruppo di autorizzazioni. |
 | `sandboxes` | Questa proprietà visualizza all’interno dell’organizzazione le sandbox per le quali è stato eseguito il provisioning per un determinato ruolo. |
-| `subjectAttributes` | Attributi che indicano la correlazione tra un soggetto e le risorse Platform a cui hanno accesso. |
+| `subjectAttributes` | Attributi che indicano la correlazione tra un soggetto e le risorse Experience Platform a cui hanno accesso. |
 | `subjectAttributes.labels` | Visualizza le etichette di utilizzo dei dati applicate al ruolo sottoposto a query. |
 
 ## Cerca soggetti per ID ruolo
@@ -323,7 +323,7 @@ In caso di esito positivo, la risposta restituisce il ruolo appena creato, con i
 | `roleType` | Il tipo designato del ruolo. I valori possibili per il tipo di ruolo sono: `user-defined` e `system-defined`. |
 | `permissionSets` | I set di autorizzazioni rappresentano un gruppo di autorizzazioni che un amministratore può applicare a un ruolo. Un amministratore può assegnare set di autorizzazioni a un ruolo, invece di assegnare singole autorizzazioni. In questo modo è possibile creare ruoli personalizzati da un ruolo predefinito contenente un gruppo di autorizzazioni. |
 | `sandboxes` | Questa proprietà visualizza all’interno dell’organizzazione le sandbox per le quali è stato eseguito il provisioning per un determinato ruolo. |
-| `subjectAttributes` | Attributi che indicano la correlazione tra un soggetto e le risorse Platform a cui hanno accesso. |
+| `subjectAttributes` | Attributi che indicano la correlazione tra un soggetto e le risorse Experience Platform a cui hanno accesso. |
 | `subjectAttributes.labels` | Visualizza le etichette di utilizzo dei dati applicate al ruolo sottoposto a query. |
 
 ## Aggiornare un ruolo {#patch}
@@ -403,7 +403,7 @@ In caso di esito positivo, la risposta restituisce il ruolo aggiornato, inclusi 
 | `roleType` | Il tipo designato del ruolo. I valori possibili per il tipo di ruolo sono: `user-defined` e `system-defined`. |
 | `permissionSets` | I set di autorizzazioni rappresentano un gruppo di autorizzazioni che un amministratore può applicare a un ruolo. Un amministratore può assegnare set di autorizzazioni a un ruolo, invece di assegnare singole autorizzazioni. In questo modo è possibile creare ruoli personalizzati da un ruolo predefinito contenente un gruppo di autorizzazioni. |
 | `sandboxes` | Questa proprietà visualizza all’interno dell’organizzazione le sandbox per le quali è stato eseguito il provisioning per un determinato ruolo. |
-| `subjectAttributes` | Attributi che indicano la correlazione tra un soggetto e le risorse Platform a cui hanno accesso. |
+| `subjectAttributes` | Attributi che indicano la correlazione tra un soggetto e le risorse Experience Platform a cui hanno accesso. |
 | `subjectAttributes.labels` | Visualizza le etichette di utilizzo dei dati applicate al ruolo sottoposto a query. |
 
 ## Aggiornare un ruolo per ID ruolo {#put}
@@ -477,7 +477,7 @@ In caso di esito positivo, la risposta restituisce il ruolo aggiornato, inclusi 
 | `roleType` | Il tipo designato del ruolo. I valori possibili per il tipo di ruolo sono: `user-defined` e `system-defined`. |
 | `permissionSets` | I set di autorizzazioni rappresentano un gruppo di autorizzazioni che un amministratore può applicare a un ruolo. Un amministratore può assegnare set di autorizzazioni a un ruolo, invece di assegnare singole autorizzazioni. In questo modo è possibile creare ruoli personalizzati da un ruolo predefinito contenente un gruppo di autorizzazioni. |
 | `sandboxes` | Questa proprietà visualizza all’interno dell’organizzazione le sandbox per le quali è stato eseguito il provisioning per un determinato ruolo. |
-| `subjectAttributes` | Attributi che indicano la correlazione tra un soggetto e le risorse Platform a cui hanno accesso. |
+| `subjectAttributes` | Attributi che indicano la correlazione tra un soggetto e le risorse Experience Platform a cui hanno accesso. |
 | `subjectAttributes.labels` | Visualizza le etichette di utilizzo dei dati applicate al ruolo sottoposto a query. |
 
 ## Aggiorna oggetto per ID ruolo

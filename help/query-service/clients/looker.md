@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Connetti Looker a Query Service
 description: Questo documento illustra i passaggi per la connessione di Looker con Adobe Experience Platform Query Service.
 exl-id: 806e9077-533a-4546-b5ca-8124751957f5
-source-git-commit: b059a0191fbf2c3e5d2dfceb9802e2aaa429f7ed
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '406'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Da qui immettere i dettagli delle impostazioni di connessione elencate di seguit
 - **[!DNL Username and Password]:** Le credenziali di accesso che verranno utilizzate. Il nome utente sarà nel formato `ORG_ID@AdobeOrg`.
 - **SSL**: abilitare SSL per garantire una connessione protetta in rete.
 
-Per trovare le credenziali necessarie per connettere Looker con Query Service, accedi all&#39;interfaccia utente di Platform e seleziona **[!UICONTROL Query]** dalla barra di navigazione a sinistra, seguita da **[!UICONTROL Credenziali]**. Per ulteriori informazioni su come trovare le credenziali di **host**, **porta**, **database**, **nome utente** e **password**, leggere la [guida delle credenziali](../ui/credentials.md).
+Per trovare le credenziali necessarie per connettere Looker con Query Service, accedi all&#39;interfaccia utente di Experience Platform e seleziona **[!UICONTROL Query]** dalla barra di navigazione a sinistra, seguita da **[!UICONTROL Credenziali]**. Per ulteriori informazioni su come trovare le credenziali di **host**, **porta**, **database**, **nome utente** e **password**, leggere la [guida delle credenziali](../ui/credentials.md).
 
 ![Pagina Credenziali dell&#39;area di lavoro Query Experience Platform con le credenziali evidenziate e le credenziali in scadenza.](../images/clients/looker/query-service-credentials-page.png)
 

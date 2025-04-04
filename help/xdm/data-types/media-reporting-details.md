@@ -2,9 +2,9 @@
 title: Tipo di dati Dettagli di Media Reporting
 description: Scopri il tipo di dati Dettagli di Media Reporting Experience Data Model (XDM).
 exl-id: e8bf20a9-9ac0-4339-8200-5d6d9328ce3b
-source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '494'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->I campi indicati di seguito non vengono utilizzati direttamente per creare richieste. Al contrario, la raccolta di campi inviata a Adobe Experience Platform o Adobe Analytics viene assemblata dai dati della richiesta e le metriche vengono quindi incorporate o elaborate dall’infrastruttura del server. Anche se Platform raccoglie vari tipi di eventi utente, i rapporti restituiti all&#39;utente sono incentrati su eventi specifici, ad esempio `media.sessionStart`, `media.adStart` e `media.sessionComplete`. Ciò significa che, anche se trasmetti 12 tipi di eventi durante la raccolta, i rapporti presenteranno solo raggruppamenti basati sui cinque eventi elencati di seguito.
+>I campi indicati di seguito non vengono utilizzati direttamente per creare richieste. Al contrario, la raccolta di campi inviata a Adobe Experience Platform o Adobe Analytics viene assemblata dai dati della richiesta e le metriche vengono quindi incorporate o elaborate dall’infrastruttura del server. Mentre Experience Platform raccoglie vari tipi di eventi utente, i rapporti restituiti all&#39;utente sono incentrati su eventi specifici, ad esempio `media.sessionStart`, `media.adStart` e `media.sessionComplete`. Ciò significa che, anche se trasmetti 12 tipi di eventi durante la raccolta, i rapporti presenteranno solo raggruppamenti basati sui cinque eventi elencati di seguito.
 
 +++Selezionare per visualizzare un diagramma del tipo di dati [!UICONTROL Dettagli report multimediali].
 ![Diagramma del tipo di dati [!UICONTROL Dettagli report multimediali].](../images/data-types/media-reporting-details.png)

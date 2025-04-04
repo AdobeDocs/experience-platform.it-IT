@@ -2,9 +2,9 @@
 title: Filtrare I Dati A Livello Di Riga Per Un Source Utilizzando L’API Del Servizio Di Flusso
 description: Questo tutorial illustra i passaggi necessari per filtrare i dati a livello di origine utilizzando l’API del servizio Flow
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: e8e8914c41d7a083395b0bf53aaac8021fcf9e9a
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1820'
+source-wordcount: '1823'
 ht-degree: 5%
 
 ---
@@ -27,12 +27,12 @@ Leggi questa guida per i passaggi su come filtrare i dati a livello di riga per 
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Origini](../../home.md): [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini e consente di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi [!DNL Platform].
-* [Sandbox](../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza di [!DNL Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Origini](../../home.md): [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini e consente di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi [!DNL Experience Platform].
+* [Sandbox](../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza di [!DNL Experience Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
-### Utilizzo delle API di Platform
+### Utilizzo delle API di Experience Platform
 
-Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida in [guida introduttiva alle API di Platform](../../../landing/api-guide.md).
+Per informazioni su come effettuare correttamente chiamate alle API di Experience Platform, consulta la guida introduttiva [alle API di Experience Platform](../../../landing/api-guide.md).
 
 ## Filtrare i dati di origine {#filter-source-data}
 
@@ -42,7 +42,7 @@ Di seguito sono descritti i passaggi da eseguire per filtrare i dati a livello d
 
 Il primo passaggio per filtrare i dati a livello di riga per l&#39;origine consiste nel recuperare le specifiche di connessione dell&#39;origine e determinare gli operatori e la lingua supportati dall&#39;origine.
 
-Per recuperare la specifica di connessione di un&#39;origine specifica, effettuare una richiesta di GET all&#39;endpoint `/connectionSpecs` dell&#39;API [!DNL Flow Service] e fornire il nome della proprietà dell&#39;origine come parte dei parametri di query.
+Per recuperare la specifica di connessione di un&#39;origine specifica, eseguire una richiesta GET all&#39;endpoint `/connectionSpecs` dell&#39;API [!DNL Flow Service] e fornire il nome della proprietà dell&#39;origine come parte dei parametri di query.
 
 **Formato API**
 
@@ -155,7 +155,7 @@ Nell’esempio seguente, le condizioni vengono applicate solo ai dati selezionat
 
 ### Visualizzare l’anteprima dei dati {#preview-your-data}
 
-È possibile visualizzare l&#39;anteprima dei dati effettuando una richiesta di GET all&#39;endpoint `/explore` dell&#39;API [!DNL Flow Service] fornendo `filters` come parte dei parametri di query e specificando le condizioni di input di PQL in [!DNL Base64].
+È possibile visualizzare l&#39;anteprima dei dati effettuando una richiesta GET all&#39;endpoint `/explore` dell&#39;API [!DNL Flow Service] e fornendo `filters` come parte dei parametri di query e specificando le condizioni di input di PQL in [!DNL Base64].
 
 **Formato API**
 
@@ -591,7 +591,7 @@ In caso di esito positivo, la risposta restituisce i dettagli del flusso di dati
 
 ### Recuperare i dettagli della connessione sorgente
 
-Quindi, utilizzare l&#39;ID connessione di origine e inviare una richiesta di GET all&#39;endpoint `/sourceConnections` per recuperare i dettagli della connessione di origine.
+Quindi, utilizzare l&#39;ID della connessione di origine e inviare una richiesta GET all&#39;endpoint `/sourceConnections` per recuperare i dettagli della connessione di origine.
 
 **Formato API**
 
@@ -747,9 +747,9 @@ In caso di esito positivo, la risposta restituisce l’ID della connessione di o
 
 +++
 
-### Publish connessione sorgente
+### Pubblicare la connessione sorgente
 
-Con la connessione di origine aggiornata con le condizioni di filtro, ora puoi passare dallo stato di bozza e pubblicare la connessione di origine. A tale scopo, invia una richiesta POST all&#39;endpoint `/sourceConnections` e fornisci l&#39;ID della bozza della connessione di origine e un&#39;operazione di pubblicazione.
+Con la connessione di origine aggiornata con le condizioni di filtro, ora puoi passare dallo stato di bozza e pubblicare la connessione di origine. A questo scopo, invia una richiesta POST all&#39;endpoint `/sourceConnections` e fornisci l&#39;ID della bozza della connessione di origine e un&#39;operazione di pubblicazione.
 
 **Formato API**
 
@@ -791,7 +791,7 @@ In caso di esito positivo, la risposta restituisce l’ID della connessione di o
 
 +++
 
-### Publish connessione di destinazione
+### Pubblicare la connessione di destinazione
 
 Come nel passaggio precedente, per procedere e pubblicare il flusso di dati bozza devi pubblicare anche la connessione di destinazione. Effettuare una richiesta POST all&#39;endpoint `/targetConnections` e fornire l&#39;ID della bozza di connessione di destinazione che si desidera pubblicare, nonché un&#39;operazione di pubblicazione.
 
@@ -836,7 +836,7 @@ In caso di esito positivo, la risposta restituisce l’ID e l’e-mail corrispon
 +++
 
 
-### Publish il flusso di dati
+### Pubblicare il flusso di dati
 
 Con le connessioni di origine e di destinazione pubblicate entrambe, ora puoi procedere al passaggio finale e pubblicare il flusso di dati. Per pubblicare il flusso di dati, effettua una richiesta POST all&#39;endpoint `/flows` e fornisci l&#39;ID del flusso di dati e un&#39;operazione di pubblicazione.
 

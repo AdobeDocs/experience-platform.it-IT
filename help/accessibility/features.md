@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione dei problemi;API;profilo unificato;Profilo unificato;unificato;Profilo;rtcp;XDM
-title: Funzioni generali di accessibilità in Platform
+keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione dei problemi;API;profilo unificato;profilo unificato;unificato;Profilo;rtcp;XDM
+title: Funzioni generali di accessibilità in Experience Platform
 type: Documentation
 description: Scopri le funzioni generali di accessibilità supportate da Adobe Experience Platform, tra cui navigazione da tastiera, palette di colori e contrasto e supporto per la tecnologia di assistenza.
 exl-id: 4b7e2f2b-af51-4376-8a63-16c921cc7135
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '483'
 ht-degree: 0%
 
 ---
 
 # Funzioni di accessibilità in Experience Platform
 
-Adobe Experience Platform si impegna a fornire funzionalità accessibili e inclusive a tutti i singoli utenti, inclusi gli utenti che utilizzano dispositivi di assistenza come il software di riconoscimento vocale e gli assistenti vocali. Questo documento illustra le funzioni generali di accessibilità supportate da Platform, tra cui la navigazione da tastiera, la struttura semantica, un contrasto sufficiente tra elementi in primo piano ed elementi in background e il supporto per le tecnologie per l’accessibilità.
+Adobe Experience Platform si impegna a fornire funzionalità accessibili e inclusive a tutti i singoli utenti, inclusi gli utenti che utilizzano dispositivi di assistenza come il software di riconoscimento vocale e gli assistenti vocali. Questo documento illustra le funzioni generali di accessibilità supportate da Experience Platform, tra cui la navigazione da tastiera, la struttura semantica, un contrasto sufficiente tra elementi in primo piano ed elementi in background e il supporto per le tecnologie per l’accessibilità.
 
 ## Tecnologie assistive
 
@@ -29,13 +29,13 @@ I seguenti elementi di navigazione facilitano l’accessibilità:
 * Maiusc + Tab si sposta all&#39;indietro nell&#39;ordine di tabulazione.
 * I tasti Invio e Barra spaziatrice attivano gli elementi selezionati.
 * Il tasto Esc funge da pulsante di annullamento per chiudere una finestra di dialogo, se presente.
-* In Experience Platform, attorno a un elemento selezionato viene visualizzato un bordo blu con un’indicazione chiara dell’elemento dell’interfaccia attualmente attivo.
+* Experience Platform mostra un bordo blu intorno a un elemento selezionato per mostrare un’indicazione chiara dell’elemento dell’interfaccia attualmente attivo.
 
 ![Un bordo blu visualizzato intorno a un elemento selezionato per indicare che lo stato attivo è applicato.](images/profile-overview-tab.png)
 
 ## Palette di colori e contrasto
 
-Experience Platform si impegna per garantire la conformità a [WCAG 2.1 AA](https://www.w3.org/TR/WCAG/), inclusi i requisiti per il contrasto del colore. L’interfaccia utente di Experience Platform fornisce un contrasto sufficiente nell’applicazione per garantire un’esperienza di visualizzazione accessibile agli utenti ipovedenti o con deficienze cromatiche.
+Experience Platform si impegna per essere conforme a [WCAG 2.1 AA](https://www.w3.org/TR/WCAG/), inclusi i requisiti per il contrasto del colore. L’interfaccia utente di Experience Platform fornisce un contrasto sufficiente nell’applicazione per garantire un’esperienza di visualizzazione accessibile agli utenti ipovedenti o con deficienze cromatiche.
 
 ![La palette di colori e il contrasto presenti nella home page dell&#39;interfaccia utente di Experience Platform.](images/homepage.png)
 

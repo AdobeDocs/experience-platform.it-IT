@@ -3,9 +3,9 @@ keywords: destinazioni; domande; domande frequenti; FAQ; FAQ destinazioni
 title: Domande frequenti
 description: Risposte alle domande più frequenti sulle destinazioni Adobe Experience Platform
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1673'
+source-wordcount: '1675'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ## Panoramica {#overview}
 
-Questo documento fornisce le risposte alle domande frequenti sulle destinazioni di Adobe Experience Platform. Per domande e risoluzione dei problemi relativi ad altri servizi [!DNL Platform], inclusi quelli incontrati in tutte le API [!DNL Platform], fare riferimento alla [guida alla risoluzione dei problemi di Experience Platform](../landing/troubleshooting.md).
+Questo documento fornisce le risposte alle domande frequenti sulle destinazioni di Adobe Experience Platform. Per le domande e la risoluzione dei problemi relativi ad altri servizi [!DNL Experience Platform], inclusi quelli riscontrati in tutte le API [!DNL Experience Platform], fare riferimento alla [Guida alla risoluzione dei problemi di Experience Platform](../landing/troubleshooting.md).
 
 ## Domande generali sulle destinazioni {#general}
 
@@ -54,7 +54,7 @@ Per garantire che tutti i profili vengano inviati alla destinazione, devi creare
 
 +++Risposta
 
-No, non esiste alcuna dipendenza tra la destinazione dell&#39;Experience Platform e l&#39;istanza cliente del sistema di destinazione. Dal lato della ricezione, l’unica indicazione che il sistema di destinazione vedrebbe è che ha smesso di ricevere i dati sul pubblico.
+No, non esiste alcuna dipendenza tra la destinazione Experience Platform e l’istanza cliente del sistema target. Dal lato della ricezione, l’unica indicazione che il sistema di destinazione vedrebbe è che ha smesso di ricevere i dati sul pubblico.
 
 +++
 
@@ -107,10 +107,10 @@ Prima di poter inviare i tipi di pubblico a [!DNL Facebook], assicurati di soddi
 No. Poiché non si tratta di un’integrazione basata su pixel, non è necessario aggiungere pixel all’account dell’inserzionista.
 +++
 
-### Quanto tempo richiede Facebook per elaborare le informazioni da Adobe Experience Platform?
+### Quanto tempo ci vuole per elaborare le informazioni da Adobe Experience Platform?
 
 +++Risposta
-A marzo 2021, [!DNL Facebook Custom Audiences] ha bisogno di un&#39;ora per elaborare le informazioni ricevute da [!DNL Platform].
+A marzo 2021, [!DNL Facebook Custom Audiences] ha bisogno di un&#39;ora per elaborare le informazioni ricevute da [!DNL Experience Platform].
 +++
 
 ### Posso usare [!DNL Facebook Custom Audiences] per il targeting del pubblico in altre app [!DNL Facebook], come [!DNL Instagram]?
@@ -122,9 +122,9 @@ A marzo 2021, [!DNL Facebook Custom Audiences] ha bisogno di un&#39;ora per elab
 ### Differenza tra la connessione [!DNL Facebook Custom Audiences] e l&#39;estensione [!DNL Facebook Pixel]
 
 +++Risposta
-La connessione [!DNL Facebook Custom Audiences] utilizza identità [!DNL Platform] per l&#39;invio di tipi di pubblico a [!DNL Facebook], mentre la connessione [[!DNL Facebook Pixel] connessione](../destinations/catalog/advertising/facebook-pixel.md) utilizza il pixel [!DNL Facebook] integrato in un sito Web.
+La connessione [!DNL Facebook Custom Audiences] utilizza identità [!DNL Experience Platform] per l&#39;invio di tipi di pubblico a [!DNL Facebook], mentre la connessione [[!DNL Facebook Pixel] connessione](../destinations/catalog/advertising/facebook-pixel.md) utilizza il pixel [!DNL Facebook] integrato in un sito Web.
 
-Queste due integrazioni sono complementari; puoi utilizzare entrambe per garantire una migliore copertura del pubblico. Ad esempio, puoi utilizzare l&#39;estensione [!DNL Facebook Pixel] per cercare i visitatori del sito Web che non hanno creato un account, mentre [!DNL Facebook Custom Audiences] può aiutarti a individuare i clienti esistenti, in base alle identità di [!DNL Platform].
+Queste due integrazioni sono complementari; puoi utilizzare entrambe per garantire una migliore copertura del pubblico. Ad esempio, puoi utilizzare l&#39;estensione [!DNL Facebook Pixel] per cercare i visitatori del sito Web che non hanno creato un account, mentre [!DNL Facebook Custom Audiences] può aiutarti a individuare i clienti esistenti, in base alle identità di [!DNL Experience Platform].
 +++
 
 ### L&#39;integrazione di Adobe Experience Platform con [!DNL Facebook Custom Audiences] supporta l&#39;esclusione di utenti da un pubblico quando non sono più idonei per tale pubblico?**
@@ -147,10 +147,10 @@ Per spiegazioni dettagliate sui requisiti di corrispondenza ID, consulta [Requis
 [!DNL Facebook Custom Audiences] supporta l&#39;attivazione delle seguenti identità: e-mail con hash, numeri di telefono con hash, [!DNL GAID], [!DNL IDFA] e ID esterni personalizzati.
 +++
 
-### È possibile creare più destinazioni Facebook nell’interfaccia utente di Platform per account Facebook separati?
+### È possibile creare più destinazioni Facebook nell’interfaccia utente di Experience Platform per account Facebook separati?
 
 +++Risposta
-Sì. Una destinazione Facebook in Experience Platform corrisponde a 1:1 per un account annuncio in Facebook. Puoi creare una destinazione Facebook separata per ogni account Facebook Ad della tua azienda. Segui l&#39;[esercitazione sulla connessione di destinazione](/help/destinations/ui/connect-destination.md) e collegati a un account Facebook separato per ogni nuova destinazione Facebook nell&#39;interfaccia utente di Platform. Non esiste alcun limite al numero di account Facebook Ad a cui è possibile connettersi.
+Sì. Una destinazione Facebook in Experience Platform è 1:1 per un account annuncio in Facebook. Puoi creare una destinazione Facebook separata per ogni account pubblicitario Facebook della tua azienda. Segui il [tutorial sulla connessione di destinazione](/help/destinations/ui/connect-destination.md) e collegati a un account Facebook separato per ogni nuova destinazione Facebook nell&#39;interfaccia utente di Experience Platform. Non esiste alcun limite al numero di account di annunci Facebook a cui è possibile connettersi.
 +++
 
 ## Google Customer Match {#google-customer-match}
@@ -161,7 +161,7 @@ Sì. Una destinazione Facebook in Experience Platform corrisponde a 1:1 per un a
 Google richiede nomi di pubblico univoci. I numeri visualizzati sono [marche temporali UNIX](https://www.unixtimestamp.com/) e vengono aggiunti per mantenere univoci i nomi dei tipi di pubblico, se lo stesso pubblico è stato mappato a più destinazioni Google.
 +++
 
-## Tipi di pubblico di linkedIn corrispondenti {#linkedin}
+## LinkedIn - Tipi di pubblico corrispondenti {#linkedin}
 
 ### Devo aggiungere app o pixel al mio account pubblicitario [!DNL LinkedIn]?
 
@@ -172,9 +172,9 @@ No. Poiché non si tratta di un’integrazione basata su pixel, non è necessari
 ### Cosa devo fare prima di poter attivare i tipi di pubblico in [!DNL LinkedIn Matched Audiences]?
 
 +++Risposta
-Prima di poter utilizzare la destinazione [!UICONTROL LinkedIn Matched Audience], assicurati che il tuo account [!DNL LinkedIn Campaign Manager] disponga del livello di autorizzazione [!DNL Creative Manager] o superiore.
+Prima di poter utilizzare la destinazione [!UICONTROL LinkedIn MatchedAudience], assicurati che il tuo account [!DNL LinkedIn Campaign Manager] disponga del livello di autorizzazione [!DNL Creative Manager] o superiore.
 
-Per informazioni su come modificare le autorizzazioni utente di [!DNL LinkedIn Campaign Manager], consulta [Aggiungere, modificare e rimuovere le autorizzazioni utente per gli account Advertising](https://www.linkedin.com/help/lms/answer/5753) nella documentazione di LinkedIn.
+Per informazioni su come modificare le autorizzazioni utente di [!DNL LinkedIn Campaign Manager], consulta [Aggiungere, modificare e rimuovere le autorizzazioni utente sugli account Advertising](https://www.linkedin.com/help/lms/answer/5753) nella documentazione di LinkedIn.
 +++
 
 ### Come posso eseguire l&#39;hashing dei dati del pubblico prima di inviarli a [!DNL LinkedIn]?
@@ -199,12 +199,12 @@ Per spiegazioni dettagliate sui requisiti di corrispondenza ID, consulta [Requis
 +++Risposta
 No, [Web SDK](../web-sdk/home.md) non è necessario per attivare i tipi di pubblico in [Adobe Target](catalog/personalization/adobe-target-connection.md).
 
-Tuttavia, se [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html) viene utilizzato al posto di Web SDK, è supportata solo la personalizzazione della sessione successiva.
+Tuttavia, se si utilizza [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html) al posto di Web SDK, è supportata solo la personalizzazione della sessione successiva.
 
-Per i casi di utilizzo di [personalizzazione della stessa pagina e della pagina successiva](ui/activate-edge-personalization-destinations.md), è necessario utilizzare [Web SDK](../web-sdk/home.md) o [Edge Network Server API](../server-api/overview.md). Per ulteriori dettagli sull&#39;implementazione, consulta la documentazione sull&#39;[attivazione dei tipi di pubblico nelle destinazioni Edge](ui/activate-edge-personalization-destinations.md).
+Per [casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva](ui/activate-edge-personalization-destinations.md), è necessario utilizzare [Web SDK](../web-sdk/home.md) o l&#39;[API server Edge Network](../server-api/overview.md). Per ulteriori dettagli sull&#39;implementazione, consulta la documentazione sull&#39;[attivazione dei tipi di pubblico nelle destinazioni Edge](ui/activate-edge-personalization-destinations.md).
 +++
 
-### Esiste un limite al numero di attributi che posso inviare da Real-time Customer Data Platform ad Adobe Target o a una destinazione Personalization personalizzata?
+### Esiste un limite al numero di attributi che posso inviare da Real-time Customer Data Platform a Adobe Target o a una destinazione Personalization personalizzata?
 
 +++Risposta
 Sì, i casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva supportano un massimo di 30 attributi per sandbox, quando si attivano tipi di pubblico su destinazioni Adobe Target o Custom Personalization. Ulteriori informazioni sui guardrail di attivazione sono disponibili nella [documentazione sui guardrail](guardrails.md#edge-destinations-activation).
@@ -223,7 +223,7 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 ### Dopo aver creato un pubblico in Experience Platform, quanto tempo ci vorrà per rendere tale pubblico disponibile per i casi di utilizzo della segmentazione Edge?
 
 +++Risposta
-Le definizioni del pubblico vengono propagate all&#39;[Edge Network](../web-sdk/home.md) in un massimo di un&#39;ora. Tuttavia, se un pubblico viene attivato entro questa prima ora, alcuni visitatori che si sarebbero qualificati per tale pubblico potrebbero non essere presenti.
+Le definizioni del pubblico vengono propagate a [Edge Network](../web-sdk/home.md) in un massimo di un&#39;ora. Tuttavia, se un pubblico viene attivato entro questa prima ora, alcuni visitatori che si sarebbero qualificati per tale pubblico potrebbero non essere presenti.
 +++
 
 ### Dove posso visualizzare gli attributi attivati in Adobe Target?
@@ -235,16 +235,16 @@ Gli attributi saranno disponibili per l&#39;utilizzo in Target nelle offerte [JS
 ### È possibile creare una destinazione senza un flusso di dati e quindi aggiungere un flusso di dati alla stessa destinazione in un secondo momento?
 
 +++Risposta
-Attualmente questo non è supportato tramite l’interfaccia utente Destinazioni. Se hai bisogno di assistenza in questo caso, contatta il rappresentante del tuo Adobe.
+Attualmente questo non è supportato tramite l’interfaccia utente Destinazioni. Se hai bisogno di assistenza in questo caso, contatta il tuo rappresentante Adobe.
 +++
 
 ### Cosa succede se elimino una destinazione Adobe Target?
 
 +++Risposta
-Quando elimini una destinazione, tutti i tipi di pubblico e gli attributi mappati nella destinazione vengono eliminati da Adobe Target e rimossi anche dall’Edge Network.
+Quando elimini una destinazione, tutti i tipi di pubblico e gli attributi mappati nella destinazione vengono eliminati da Adobe Target e anche da Edge Network.
 +++
 
-### L’integrazione funziona utilizzando l’API del server Edge Network?
+### L’integrazione funziona utilizzando l’API server di Edge Network?
 
 +++Risposta
 Sì, l’API server di Edge Network funziona con la destinazione Personalization personalizzata. Poiché gli attributi del profilo possono contenere dati sensibili, per proteggere tali dati la destinazione Personalization personalizzata richiede l’utilizzo dell’API server di Edge Network per la raccolta dei dati. Inoltre, tutte le chiamate API devono essere effettuate in un [contesto autenticato](../server-api/authentication.md).

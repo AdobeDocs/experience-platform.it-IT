@@ -2,9 +2,9 @@
 title: Informazioni riservate e personali in XDM
 description: Scopri le considerazioni chiave relative alle informazioni personali sensibili (SPI) e alle informazioni personali identificabili (PII) in Experience Data Model (XDM).
 exl-id: 92a8b6ad-3c45-4772-8178-60f857ab13e2
-source-git-commit: 302dca9a9f834dba1fd3fdac15284ea4e2fba282
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '568'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Consulta il team legale per determinare quanto dati sensibili e personali devono
 
 XDM fornisce una varietà di gruppi di campi e tipi di dati standard per descrivere strutture di dati rilevanti e di uso comune per migliorare le esperienze dei clienti. Tuttavia, se una risorsa standard consigliata contiene campi con restrizioni che non desideri includere negli schemi, non è necessario utilizzare tale risorsa.
 
-Platform consente di definire gruppi di campi e tipi di dati personalizzati, garantendo il controllo completo sulla struttura dei dati nel caso in cui le risorse standard disponibili non soddisfino le tue esigenze. Per ulteriori informazioni su come definire queste risorse personalizzate, consulta la seguente documentazione:
+Experience Platform consente di definire gruppi di campi e tipi di dati personalizzati, garantendo così il controllo completo sulla struttura dei dati nel caso in cui le risorse standard disponibili non soddisfino le tue esigenze. Per ulteriori informazioni su come definire queste risorse personalizzate, consulta la seguente documentazione:
 
 * [Creare un gruppo di campi personalizzato](../ui/resources/field-groups.md#create)
 * [Creare un tipo di dati personalizzato](../ui/resources/data-types.md#create)

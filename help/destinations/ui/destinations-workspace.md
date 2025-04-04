@@ -3,7 +3,7 @@ keywords: piattaforma;destinazioni;area di lavoro;area di lavoro;interfaccia ute
 title: Area di lavoro destinazioni
 description: 'L’area di lavoro Destinazioni è costituita da cinque sezioni: Panoramica, Catalogo, Sfoglia, Account e Visualizzazione sistema. Sono descritte nelle sezioni seguenti.'
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 78168493d712d2ec0974b811d288902fd94f3e40
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1233'
 ht-degree: 0%
@@ -24,19 +24,19 @@ Nella scheda **[!UICONTROL Panoramica]** è visualizzata la dashboard [!UICONTRO
 
 >[!NOTE]
 >
->Se la tua organizzazione non ha ancora Experienci Platform e non dispone ancora di destinazioni attive, la dashboard [!UICONTROL Destinazioni] e la scheda [!UICONTROL Panoramica] non sono visibili. Se invece selezioni [!UICONTROL Destinazioni] dalla navigazione a sinistra, viene visualizzata la scheda [[!UICONTROL Catalogo]](#catalog).
+>Se la tua organizzazione ha poca esperienza con Experience Platform e non dispone ancora di destinazioni attive, la dashboard [!UICONTROL Destinazioni] e la scheda [!UICONTROL Panoramica] non sono visibili. Se invece selezioni [!UICONTROL Destinazioni] dalla navigazione a sinistra, viene visualizzata la scheda [[!UICONTROL Catalogo]](#catalog).
 
 ![Scheda Panoramica del dashboard Destinazioni.](../../dashboards/images/destinations/dashboard-overview.png)
 
 ## [!UICONTROL Catalogo] {#catalog}
 
-Nella scheda **[!UICONTROL Catalogo]** viene visualizzato un elenco di tutte le destinazioni disponibili in [!DNL Platform] a cui è possibile inviare i dati.
+Nella scheda **[!UICONTROL Catalogo]** viene visualizzato un elenco di tutte le destinazioni disponibili in [!DNL Experience Platform] a cui è possibile inviare i dati.
 
-L&#39;interfaccia utente di [!DNL Platform] fornisce diverse opzioni di ricerca e filtro nella pagina del catalogo delle destinazioni:
+L&#39;interfaccia utente di [!DNL Experience Platform] fornisce diverse opzioni di ricerca e filtro nella pagina del catalogo delle destinazioni:
 
 * Utilizza la funzionalità di ricerca nella pagina per individuare una destinazione specifica.
 * Filtra le destinazioni utilizzando il controllo [!UICONTROL Categorie].
-* Passa da [!UICONTROL Tutte le destinazioni] a [!UICONTROL Le mie destinazioni]. Quando selezioni **[!UICONTROL Tutte le destinazioni]**, vengono visualizzate tutte le [!DNL Platform] destinazioni disponibili. Quando selezioni **[!UICONTROL Le mie destinazioni]**, puoi visualizzare solo le destinazioni con le quali hai stabilito una connessione.
+* Passa da [!UICONTROL Tutte le destinazioni] a [!UICONTROL Le mie destinazioni]. Quando selezioni **[!UICONTROL Tutte le destinazioni]**, vengono visualizzate tutte le [!DNL Experience Platform] destinazioni disponibili. Quando selezioni **[!UICONTROL Le mie destinazioni]**, puoi visualizzare solo le destinazioni con le quali hai stabilito una connessione.
 * Selezionare per visualizzare i tipi **[!UICONTROL Connections]** e/o **[!UICONTROL Extensions]**. Per comprendere la differenza tra le due categorie, leggere [Tipi di destinazione e Categorie](../destination-types.md).
 
 ![Il catalogo delle destinazioni mostra alcune destinazioni per annunci pubblicitari e archiviazione cloud.](../assets/ui/workspace/catalog.png)

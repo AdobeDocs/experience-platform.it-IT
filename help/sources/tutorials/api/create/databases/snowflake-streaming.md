@@ -1,21 +1,21 @@
 ---
-title: Collegare l'account di streaming di Snowflake a Adobe Experience Platform
-description: Scopri come collegare Adobe Experience Platform a Streaming di Snowflake utilizzando l’API del servizio Flusso.
+title: Collegare l'account Snowflake Streaming a Adobe Experience Platform
+description: Scopri come collegare Adobe Experience Platform a Snowflake Streaming utilizzando l’API del servizio Flusso.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3fc225a4-746c-4a91-aa77-bbeb091ec364
-source-git-commit: 34b1676ebb5405d73cf37cd786d1e6c26cb8fdaa
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '845'
+source-wordcount: '852'
 ht-degree: 5%
 
 ---
 
-# Trasmetti i dati [!DNL Snowflake] all&#39;Experience Platform utilizzando l&#39;API [!DNL Flow Service]
+# Trasmetti i dati [!DNL Snowflake] ad Experience Platform utilizzando l&#39;API [!DNL Flow Service]
 
 >[!IMPORTANT]
 >
 >
-> L&#39;origine di streaming [!DNL Snowflake] è disponibile nell&#39;API per gli utenti che hanno acquistato Real-time Customer Data Platform Ultimate.
+> L&#39;origine di streaming [!DNL Snowflake] è disponibile nell&#39;API per gli utenti che hanno acquistato Real-Time Customer Data Platform Ultimate.
 
 Questo tutorial illustra i passaggi necessari per collegare e inviare dati dall&#39;account [!DNL Snowflake] a Adobe Experience Platform utilizzando l&#39;[[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
@@ -23,20 +23,20 @@ Questo tutorial illustra i passaggi necessari per collegare e inviare dati dall&
 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Origini](../../../../home.md): [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini e consente di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi [!DNL Platform].
-* [Sandbox](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza di [!DNL Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Origini](../../../../home.md): [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini e consente di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi [!DNL Experience Platform].
+* [Sandbox](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza di [!DNL Experience Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 Per la configurazione dei prerequisiti e informazioni sull&#39;origine di streaming [!DNL Snowflake]. Leggere la [[!DNL Snowflake] panoramica origine streaming](../../../../connectors/databases/snowflake-streaming.md).
 
-### Utilizzo delle API di Platform
+### Utilizzo delle API di Experience Platform
 
-Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida in [guida introduttiva alle API di Platform](../../../../../landing/api-guide.md).
+Per informazioni su come effettuare correttamente chiamate alle API di Experience Platform, consulta la guida introduttiva [alle API di Experience Platform](../../../../../landing/api-guide.md).
 
 ## Creare una connessione di base {#create-a-base-connection}
 
-Una connessione di base mantiene le informazioni tra l’origine e Platform, incluse le credenziali di autenticazione dell’origine, lo stato corrente della connessione e l’ID univoco della connessione di base. L’ID della connessione di base consente di esplorare e navigare tra i file dall’interno dell’origine e identificare gli elementi specifici che desideri acquisire, comprese le informazioni relative ai tipi di dati e ai formati.
+Una connessione di base mantiene le informazioni tra l’origine e Experience Platform, incluse le credenziali di autenticazione dell’origine, lo stato corrente della connessione e l’ID univoco della connessione di base. L’ID della connessione di base consente di esplorare e navigare tra i file dall’interno dell’origine e identificare gli elementi specifici che desideri acquisire, comprese le informazioni relative ai tipi di dati e ai formati.
 
-Per creare un ID di connessione di base, effettuare una richiesta POST all&#39;endpoint `/connections` fornendo le credenziali di autenticazione [!DNL Snowflake] come parte del corpo della richiesta.
+Per creare un ID di connessione di base, eseguire una richiesta POST all&#39;endpoint `/connections` fornendo le credenziali di autenticazione [!DNL Snowflake] come parte del corpo della richiesta.
 
 **Formato API**
 
@@ -86,7 +86,7 @@ curl -X POST \
 | --- | --- |
 | `auth.params.account` | Nome dell&#39;account di streaming [!DNL Snowflake]. |
 | `auth.params.database` | Il nome del database [!DNL Snowflake] da cui verranno estratti i dati. |
-| `auth.params.warehouse` | Nome del data warehouse [!DNL Snowflake]. Il data warehouse [!DNL Snowflake] gestisce il processo di esecuzione delle query per l&#39;applicazione. Ogni data warehouse è indipendente l’uno dall’altro e deve essere accessibile singolarmente quando si trasferiscono i dati su Platform. |
+| `auth.params.warehouse` | Nome del data warehouse [!DNL Snowflake]. Il data warehouse [!DNL Snowflake] gestisce il processo di esecuzione delle query per l&#39;applicazione. Ogni data warehouse è indipendente l’uno dall’altro e deve essere accessibile singolarmente quando si trasferiscono i dati ad Experience Platform. |
 | `auth.params.username` | Nome utente per l&#39;account di streaming [!DNL Snowflake]. |
 | `auth.params.schema` | (Facoltativo) Lo schema di database associato all&#39;account di streaming [!DNL Snowflake]. |
 | `auth.params.password` | Password per l&#39;account di streaming [!DNL Snowflake]. |
@@ -106,7 +106,7 @@ In caso di esito positivo, la risposta restituisce la connessione di base appena
 
 ## Esplora le tabelle di dati {#explore-your-data-tables}
 
-Utilizzare quindi l&#39;ID connessione di base per esplorare e spostarsi tra le tabelle dati dell&#39;origine effettuando una richiesta di GET all&#39;endpoint `/connections/{BASE_CONNECTION_ID}/explore?objectType=root` e fornendo l&#39;ID connessione di base come parametro.
+Utilizzare quindi l&#39;ID connessione di base per esplorare e spostarsi tra le tabelle dati dell&#39;origine effettuando una richiesta GET all&#39;endpoint `/connections/{BASE_CONNECTION_ID}/explore?objectType=root` e fornendo l&#39;ID connessione di base come parametro.
 
 **Formato API**
 
@@ -156,7 +156,7 @@ In caso di esito positivo, la risposta restituisce la struttura e il contenuto d
 
 Una connessione di origine crea e gestisce la connessione all’origine esterna da cui vengono acquisiti i dati.
 
-Per creare una connessione di origine, effettuare una richiesta POST all&#39;endpoint `/sourceConnections` dell&#39;API [!DNL Flow Service].
+Per creare una connessione di origine, eseguire una richiesta POST all&#39;endpoint `/sourceConnections` dell&#39;API [!DNL Flow Service].
 
 **Formato API**
 
@@ -195,7 +195,7 @@ curl -X POST \
 | --- | --- |
 | `baseConnectionId` | ID di connessione di base autenticato per l&#39;origine di streaming [!DNL Snowflake]. Questo ID è stato generato in un passaggio precedente. |
 | `connectionSpec.id` | ID della specifica di connessione per l&#39;origine di streaming [!DNL Snowflake]. |
-| `params.tableName` | Nome della tabella nel database [!DNL Snowflake] che si desidera portare in Platform. |
+| `params.tableName` | Nome della tabella nel database [!DNL Snowflake] che si desidera portare in Experience Platform. |
 | `params.timestampColumn` | Nome della colonna timestamp che verrà utilizzata per recuperare i valori incrementali. |
 | `params.backfill` | Flag booleano che determina se i dati vengono recuperati dall’inizio (0 epoca) o dal momento in cui viene avviata l’origine. Per ulteriori informazioni su questo valore, leggere la [[!DNL Snowflake] panoramica origine streaming](../../../../connectors/databases/snowflake-streaming.md). |
 | `params.timezoneValue` | Il valore del fuso orario indica l&#39;ora corrente del fuso orario da recuperare durante la query sul database [!DNL Snowflake]. Questo parametro deve essere fornito se la colonna timestamp nella configurazione è impostata su `TIMESTAMP_NTZ`. Se non specificato, per impostazione predefinita `timezoneValue` viene utilizzato il valore UTC. |
@@ -213,7 +213,7 @@ In caso di esito positivo, la risposta restituisce l’ID della connessione sorg
 
 ## Creare un flusso di dati
 
-Per creare un flusso di dati per inviare dati dall&#39;account tour [!DNL Snowflake] a Platform, è necessario effettuare una richiesta POST all&#39;endpoint `/flows` fornendo i seguenti valori:
+Per creare un flusso di dati per inviare dati dall&#39;account tour [!DNL Snowflake] ad Experience Platform, è necessario effettuare una richiesta POST all&#39;endpoint `/flows` fornendo i seguenti valori:
 
 >[!TIP]
 >

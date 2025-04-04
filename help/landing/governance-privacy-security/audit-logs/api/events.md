@@ -1,19 +1,19 @@
 ---
 title: Endpoint API per eventi di controllo
-description: Scopri come recuperare gli eventi di audit in Experience Platform utilizzando l’API di query di audit.
+description: Scopri come recuperare gli eventi di audit in Experience Platform utilizzando l’API Query di audit.
 role: Developer
 feature: Audits, API
 exl-id: c365b6d8-0432-41a5-9a07-44a995f69b7d
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '477'
 ht-degree: 2%
 
 ---
 
 # Endpoint “audit_events”
 
-I registri di audit vengono utilizzati per fornire dettagli sull’attività dell’utente per vari servizi e funzionalità. Ogni azione registrata contiene metadati che indicano il tipo di azione, la data e l’ora, l’ID e-mail dell’utente che l’ha eseguita e altri attributi relativi al tipo di azione. L&#39;endpoint `/audit/events` nell&#39;API [!DNL Audit Query] consente di recuperare in modo programmatico i dati evento per l&#39;attività dell&#39;organizzazione in [!DNL Platform].
+I registri di audit vengono utilizzati per fornire dettagli sull’attività dell’utente per vari servizi e funzionalità. Ogni azione registrata contiene metadati che indicano il tipo di azione, la data e l’ora, l’ID e-mail dell’utente che l’ha eseguita e altri attributi relativi al tipo di azione. L&#39;endpoint `/audit/events` nell&#39;API [!DNL Audit Query] consente di recuperare in modo programmatico i dati evento per l&#39;attività dell&#39;organizzazione in [!DNL Experience Platform].
 
 ## Introduzione
 
@@ -152,9 +152,9 @@ In caso di esito positivo, la risposta restituisce i punti dati risultanti per l
 | `imsOrgId` | ID dell’organizzazione in cui si è verificato l’evento. |
 | `permissionResource` | Il prodotto o la funzionalità che ha fornito l’autorizzazione eseguono l’azione. Una risorsa può essere una qualsiasi delle seguenti: <ul><li>`Activation` </li><li>`ActivationAssociation` </li><li>`AnalyticSource` </li><li>`AudienceManagerSource` </li><li>`BizibleSource` </li><li>`CustomerAttributeSource` </li><li>`Dataset` </li><li>`EnterpriseSource` </li><li>`LaunchSource` </li><li>`MarketoSource` </li><li>`ProductProfile` </li><li>`ProfileConfig` </li><li>`Sandbox` </li><li>`Schema` </li><li>`Segment` </li><li>`StreamingSource` </li></ul> |
 | `permissionType` | Tipo di autorizzazione coinvolto nell’azione. |
-| `assetType` | Tipo di risorsa Platform su cui è stata eseguita l’azione. |
-| `assetId` | Identificatore univoco della risorsa Platform su cui è stata eseguita l’azione. |
-| `assetName` | Nome della risorsa Platform su cui è stata eseguita l’azione. |
+| `assetType` | Tipo di risorsa Experience Platform su cui è stata eseguita l’azione. |
+| `assetId` | Identificatore univoco della risorsa Experience Platform su cui è stata eseguita l’azione. |
+| `assetName` | Nome della risorsa Experience Platform su cui è stata eseguita l’azione. |
 | `action` | Tipo di azione registrata per l’evento. Un’azione può essere una qualsiasi delle seguenti: <ul><li>`Add` </li><li>`Create` </li><li>`Dataset activate` </li><li>`Dataset remove` </li><li>`Delete` </li><li>`Disable for profile` </li><li>`Enable` </li><li>`Enable for profile` </li><li>`Profile activate` </li><li>`Profile remove` </li><li>`remove` </li><li>`reset` </li><li>`segment activate` </li><li>`segment remove` </li><li>`update` </li></ul> |
 | `status` | Stato dell’azione. Uno stato può essere uno dei seguenti: </li><li>`Allow` </li><li>`Deny` </li><li>`Failure` </li><li>`Success` </li></ul> |
 

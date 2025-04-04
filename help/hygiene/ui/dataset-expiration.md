@@ -2,9 +2,9 @@
 title: Scadenze automatizzate del set di dati
 description: Scopri come pianificare la scadenza di un set di dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '873'
 ht-degree: 18%
 
 ---
@@ -22,13 +22,13 @@ L&#39;area di lavoro [[!UICONTROL Ciclo di vita dati]](./overview.md) nell&#39;i
 >
 >Se un set di dati è impostato per la scadenza, è necessario modificare manualmente i flussi di dati che potrebbero acquisire dati in tale set di dati in modo che i flussi di lavoro a valle non vengano influenzati negativamente.
 
-Questo documento illustra come pianificare e automatizzare le scadenze dei set di dati nell’interfaccia utente di Platform.
+Questo documento illustra come pianificare e automatizzare le scadenze dei set di dati nell’interfaccia utente di Experience Platform.
 
 >[!NOTE]
 >
->La scadenza del set di dati non elimina attualmente i dati dall’Edge Network di Adobe Experience Platform. Tuttavia, non è possibile che i dati rimangano all’interno dell’Edge Network dopo la scadenza del set di dati. Questo perché il contratto di licenza del servizio di 15 giorni per la scadenza del set di dati si sovrappone al periodo di 14 giorni in cui i dati esistono all’interno dell’Edge Network prima di essere eliminati.
+>La scadenza del set di dati non elimina attualmente i dati da Adobe Experience Platform Edge Network. Tuttavia, non è possibile che i dati rimangano all’interno di Edge Network dopo la scadenza del set di dati impostato. Questo perché il contratto di licenza del servizio di 15 giorni per la scadenza del set di dati si sovrappone al periodo di 14 giorni in cui i dati esistono all’interno di Edge Network prima di essere eliminati.
 
-Advanced Data Lifecycle Management supporta le eliminazioni dei dataset tramite l&#39;[endpoint di scadenza del dataset](../api/dataset-expiration.md) e le eliminazioni degli ID (dati a livello di riga) utilizzando le identità primarie tramite l&#39;[endpoint workorder](../api/workorder.md). Puoi anche gestire le scadenze dei set di dati e le [eliminazioni di record](./record-delete.md) tramite l&#39;interfaccia utente di Platform. Per ulteriori informazioni, consulta la documentazione collegata.
+Advanced Data Lifecycle Management supporta le eliminazioni dei dataset tramite l&#39;[endpoint di scadenza del dataset](../api/dataset-expiration.md) e le eliminazioni degli ID (dati a livello di riga) utilizzando le identità primarie tramite l&#39;[endpoint workorder](../api/workorder.md). Puoi anche gestire le scadenze dei set di dati e le [eliminazioni di record](./record-delete.md) tramite l&#39;interfaccia utente di Experience Platform. Per ulteriori informazioni, consulta la documentazione collegata.
 
 >[!NOTE]
 >

@@ -2,10 +2,10 @@
 title: Panoramica dell’estensione Adobe Experience Platform Demo
 description: Scopri l’estensione Adobe Experience Platform Demo in Adobe Experience Platform.
 exl-id: 4bafa132-0d21-4140-ab46-f09cc20bce6f
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1069'
-ht-degree: 98%
+source-wordcount: '1071'
+ht-degree: 99%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 >[!NOTE]
 >
@@ -21,7 +21,7 @@ ht-degree: 98%
 
 Le funzioni di questa estensione verranno trasferite alla nuova estensione. Segue un rapido confronto delle funzioni correnti.
 
-| Estensione Platform Demo | SDK Web per Platform |
+| Estensione Experience Platform Demo | Experience Platform Web SDK |
 | ------------------ | ----------- |
 | Supporto di ID cliente personalizzati | Supporto di ID cliente personalizzati |
 | Interfaccia utente di mappatura lato client per XDM | ECID integrato (non è necessario usare visitor.js) |
