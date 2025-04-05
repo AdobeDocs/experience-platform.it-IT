@@ -2,9 +2,9 @@
 title: Guida all’implementazione per le regole di collegamento del grafico delle identità
 description: Scopri i passaggi consigliati da seguire per implementare i dati con le configurazioni delle regole di collegamento del grafico delle identità.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 83815c4911f867329d5fb7731763141d950f85bf
+source-git-commit: 45fdce7dc50b237edc511047ec150ecdd6adce50
 workflow-type: tm+mt
-source-wordcount: '1819'
+source-wordcount: '1835'
 ht-degree: 2%
 
 ---
@@ -15,10 +15,13 @@ ht-degree: 2%
 >
 >Le regole di collegamento del grafo delle identità sono attualmente a disponibilità limitata. Contatta il team del tuo account Adobe per informazioni su come accedere alla funzione nelle sandbox di sviluppo.
 
+>[!IMPORTANT]
+>
+>In questo documento si presuppone che stai avviando l’implementazione in una nuova sandbox senza alcun dato.
+
 Leggi questo documento per una guida dettagliata che puoi seguire durante l’implementazione dei dati con il servizio Adobe Experience Platform Identity.
 
 Descrizione dettagliata:
-
 
 1. [Prerequisiti completi per l’implementazione](#prerequisites-for-implementation)
 2. [Creare gli spazi dei nomi di identità necessari](#namespace)

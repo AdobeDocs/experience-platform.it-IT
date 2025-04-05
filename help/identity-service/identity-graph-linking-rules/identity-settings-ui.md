@@ -2,9 +2,9 @@
 title: Interfaccia utente per le impostazioni delle identità
 description: Scopri come utilizzare l’interfaccia utente delle impostazioni di identità.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 0b4d9a493df6125decc6c46ddcd404f0bb1c9c6a
+source-git-commit: 4c43813e234dd5d06c6b505652fca161b88971c9
 workflow-type: tm+mt
-source-wordcount: '641'
+source-wordcount: '644'
 ht-degree: 3%
 
 ---
@@ -71,7 +71,13 @@ Da qui, è necessario confermare quanto segue prima di procedere al passaggio fi
 
 ![Finestra di conferma con il pulsante &quot;conferma&quot; selezionato.](../images/rules/confirmation.png)
 
-Il passaggio finale è un altro messaggio di conferma che indica che i grafici esistenti saranno interessati dall&#39;algoritmo grafico **solo se i grafici vengono aggiornati dopo il salvataggio delle impostazioni** e che l&#39;identità primaria dei frammenti di evento nel profilo cliente in tempo reale non verrà aggiornata anche dopo le modifiche della priorità dello spazio dei nomi. Inoltre, ti viene comunicato che saranno necessarie fino a **sei ore** affinché le impostazioni nuove o aggiornate abbiano effetto. Per confermare, immetti il nome della sandbox, quindi seleziona **[!UICONTROL Conferma]**.
+### Conferma le impostazioni {#confirm-your-settings}
+
+>[!IMPORTANT]
+>
+>* Il passaggio finale è un altro messaggio di conferma che indica che i grafici esistenti saranno interessati dall&#39;algoritmo grafico **solo se i grafici vengono aggiornati dopo il salvataggio delle impostazioni** e che l&#39;identità primaria dei frammenti di evento nel profilo cliente in tempo reale non verrà aggiornata anche dopo le modifiche della priorità dello spazio dei nomi.
+>
+>* Inoltre, ti viene comunicato che saranno necessarie fino a **sei ore** affinché le impostazioni nuove o aggiornate abbiano effetto. Per confermare, immetti il nome della sandbox, quindi seleziona **[!UICONTROL Conferma]**.
 
 ![Finestra di conferma che visualizza un avviso relativo a un ritardo di sei ore prima dell&#39;elaborazione delle configurazioni.](../images/rules/complete.png)
 
