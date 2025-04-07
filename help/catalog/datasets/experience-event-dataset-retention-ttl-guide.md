@@ -2,9 +2,9 @@
 title: Gestire la conservazione dei set di dati di Experience Event nel Data Lake tramite TTL
 description: Scopri come valutare, impostare e gestire la conservazione dei set di dati di Experience Event nel data lake utilizzando le configurazioni Time-To-Live (TTL) con le API di Adobe Experience Platform. Questa guida spiega come la scadenza a livello di riga TTL supporti le regole di conservazione dei dati, ottimizzi l'efficienza dello storage e garantisca un'efficace gestione del ciclo di vita dei dati. Inoltre, fornisce casi d’uso e best practice per aiutarti ad applicare il TTL in modo efficace.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 767e9536862799e31d1ab5c77588d485f80c59e9
 workflow-type: tm+mt
-source-wordcount: '2341'
+source-wordcount: '2407'
 ht-degree: 0%
 
 ---
@@ -50,11 +50,13 @@ Prima di applicare un criterio di conservazione, valuta se il set di dati è un 
 
 Se i record storici sono essenziali per l’analisi a lungo termine o le operazioni aziendali, il TTL potrebbe non essere l’approccio corretto. L’analisi di questi fattori garantisce l’allineamento del TTL alle esigenze di conservazione dei dati senza influire negativamente sulla disponibilità dei dati.
 
-## Pianificare le query
+## Pianificare le query {#plan-queries}
 
-Prima di applicare il TTL, utilizza le query per analizzare le dimensioni e la rilevanza del set di dati. L’esecuzione di query mirate consente di determinare la quantità di dati da mantenere o rimuovere in diverse configurazioni TTL.
+Prima di applicare il TTL, è importante valutare la dimensione del set di dati e la rilevanza dei dati e valutare la quantità di dati storici da conservare. L’immagine seguente illustra l’intero processo di implementazione di TTL, dalla pianificazione delle query al monitoraggio dell’efficacia della conservazione.
 
-Ad esempio, la query SQL seguente conta il numero di record creati negli ultimi 30 giorni:
+![Flusso di lavoro visivo per l&#39;implementazione di TTL nei set di dati dell&#39;evento esperienza. I passaggi includono: valutare la durata dei dati e l&#39;impatto della rimozione, convalidare le impostazioni TTL con le query, configurare il TTL tramite l&#39;API Catalog Service, monitorare costantemente l&#39;impatto del TTL e apportare le modifiche necessarie.](../images/datasets/dataset-retention-ttl-guide/manage-experience-event-dataset-retention-in-the-data-lake.png)
+
+L’esecuzione di query mirate consente di determinare la quantità di dati da mantenere o rimuovere in diverse configurazioni TTL. Ad esempio, la query SQL seguente conta il numero di record creati negli ultimi 30 giorni:
 
 ```sql
 SELECT COUNT(1) FROM [datasetName] WHERE timestamp > date_sub(now(), INTERVAL 30 DAY);
