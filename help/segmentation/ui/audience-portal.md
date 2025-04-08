@@ -2,9 +2,9 @@
 title: Panoramica di Audience Portal
 description: Scopri come utilizzare Audience Portal per visualizzare, gestire e creare tipi di pubblico in Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: cfa8b24784ed24384131fe1248bb3f7dd41214c6
+source-git-commit: d80378d6ffc9598c21bc217c0577f611fe8671cc
 workflow-type: tm+mt
-source-wordcount: '4371'
+source-wordcount: '4413'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,9 @@ Audience Portal è un hub centrale, all’interno di Adobe Experience Platform, 
 
 In Audience Portal, puoi eseguire le seguenti attività:
 
-- [Visualizzare un elenco dei tipi di pubblico](#audience-list)
+>[!BEGINSHADEBOX]
+
+- [Visualizzare un elenco dei tipi di pubblico](#list)
    - [Utilizzare le azioni rapide per i tipi di pubblico](#quick-actions)
    - [Personalizza le proprietà visualizzate nell’elenco dei tipi di pubblico](#customize)
    - [Utilizzare filtri, cartelle e tag per organizzare i tipi di pubblico](#manage-audiences)
@@ -28,6 +30,8 @@ In Audience Portal, puoi eseguire le seguenti attività:
    - [Utilizza Federated Audience Composition per creare un pubblico utilizzando i dati del data warehouse esistente](#fac)
    - [Utilizzare Data Distiller per creare un pubblico](#data-distiller)
 - [Importare tipi di pubblico generati esternamente](#import-audience)
+
+>[!ENDSHADEBOX]
 
 Per aprire Audience Portal, seleziona la scheda **[!UICONTROL Sfoglia]** nella sezione Segmentazione.
 
@@ -64,7 +68,7 @@ Accanto a ogni pubblico è presente un’icona con i puntini di sospensione. Sel
 | [!UICONTROL Copia] | Servizio di segmentazione | Duplica il pubblico selezionato. Ulteriori informazioni su questa funzione sono disponibili nelle [Domande frequenti sulla segmentazione](../faq.md#copy). |
 | [!UICONTROL Applica etichette di accesso] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Gestisce le etichette di accesso che appartengono al pubblico. Per ulteriori informazioni sulle etichette di accesso, consulta la documentazione su [gestione delle etichette](../../access-control/abac/ui/labels.md). |
 | [!UICONTROL Pubblica] | Caricamento personalizzato, servizio di segmentazione | Pubblica il pubblico selezionato. Per ulteriori informazioni sulla gestione dello stato del ciclo di vita, consulta la sezione [stato del ciclo di vita nelle Domande frequenti sulla segmentazione](../faq.md#lifecycle-states). |
-| [!UICONTROL Disattivare] | Caricamento personalizzato, servizio di segmentazione | Disattiva il pubblico selezionato. Per ulteriori informazioni sulla gestione dello stato del ciclo di vita, consulta la sezione [stato del ciclo di vita nelle Domande frequenti sulla segmentazione](../faq.md#lifecycle-states). |
+| [!UICONTROL Disattivare] | Caricamento personalizzato, servizio di segmentazione | Disattiva il pubblico selezionato. Tieni presente che per disattivare un pubblico, **non può** essere attivato in **qualsiasi** destinazione (comprese le destinazioni non Experience Platform) o far parte di **qualsiasi** altro pubblico. Per ulteriori informazioni sulla gestione dello stato del ciclo di vita, consulta la sezione [stato del ciclo di vita nelle Domande frequenti sulla segmentazione](../faq.md#lifecycle-states). |
 | [!UICONTROL Elimina] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Elimina il pubblico selezionato. I tipi di pubblico utilizzati nelle destinazioni a valle o dipendenti in altri tipi di pubblico **non possono** essere eliminati. Per ulteriori informazioni sull&#39;eliminazione del pubblico, leggere le [domande frequenti sulla segmentazione](../faq.md#lifecycle-states). |
 | [!UICONTROL Aggiungi al pacchetto] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Sposta il pubblico da una sandbox all’altra. Per ulteriori informazioni su questa funzione, leggere la [guida agli strumenti della sandbox](../../sandboxes/ui/sandbox-tooling.md). |
 
@@ -199,7 +203,7 @@ Viene visualizzato l’elenco dei filtri disponibili.
 
 | Filtro | Descrizione |
 | ------ | ----------- |
-| [!UICONTROL Origin] | Consente di filtrare in base all’origine del pubblico. Le opzioni disponibili includono Segmentation Service (Servizio di segmentazione), Custom upload (Caricamento personalizzato), Audience composition (Composizione pubblico) e Audience Manager. |
+| [!UICONTROL Origin] | Consente di filtrare in base all’origine del pubblico. I valori possibili includono [Servizio di segmentazione](#segment-builder), [Caricamento personalizzato](#import-audience), [Composizione pubblico](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [Pubblico simile](../types/lookalike-audiences.md), [Composizione pubblico federato](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [Data Distiller](#data-distiller) e [AJO B2B](https://experienceleague.adobe.com/it/docs/journey-optimizer-b2b/user/guide-overview). |
 | [!UICONTROL Ha un tag] | Consente di filtrare per tag. È possibile selezionare tra **[!UICONTROL Ha qualsiasi tag]** e **[!UICONTROL Ha tutti i tag]**. Quando **[!UICONTROL ha qualsiasi tag]** è selezionato, i tipi di pubblico filtrati includeranno **qualsiasi** dei tag aggiunti. Quando **[!UICONTROL Contiene tutti i tag]** è selezionato, i tipi di pubblico filtrati devono includere **tutti** i tag aggiunti. |
 | [!UICONTROL Stato del ciclo di vita] | Consente di filtrare in base allo stato del ciclo di vita del pubblico. Le opzioni disponibili includono [!UICONTROL Eliminato], [!UICONTROL Bozza], [!UICONTROL Inattivo] e [!UICONTROL Pubblicato]. |
 | [!UICONTROL Frequenza aggiornamento] | Consente di filtrare in base alla frequenza di aggiornamento del pubblico (metodo di valutazione). Le opzioni disponibili includono [!UICONTROL Batch], [!UICONTROL Streaming] e [!UICONTROL Edge] |
