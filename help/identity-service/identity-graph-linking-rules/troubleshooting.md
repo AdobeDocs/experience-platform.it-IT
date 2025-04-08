@@ -2,9 +2,9 @@
 title: Guida alla risoluzione dei problemi per le regole di collegamento del grafico identità
 description: Scopri come risolvere i problemi comuni nelle regole di collegamento del grafico delle identità.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: 0e7911e21c546fb40cd51f03a5a6d6a2aa751dec
 workflow-type: tm+mt
-source-wordcount: '3286'
+source-wordcount: '3338'
 ht-degree: 0%
 
 ---
@@ -175,6 +175,10 @@ Questa query presuppone che:
 
 * Un’identità viene inviata da identityMap e un’altra identità da un descrittore di identità. **NOTA**: negli schemi Experience Data Model (XDM), il descrittore di identità è il campo contrassegnato come identità.
 * Il CRMID viene inviato tramite identityMap. Se il CRMID viene inviato come campo, rimuovere `key='Email'` dalla clausola WHERE.
+
+>[!NOTE]
+>
+>**Nell&#39;implementazione di WebSDK e nella duplicazione di ECID**: se il campo ECID è contrassegnato come identità (descrittore di identità) invece di identityMap, viene generato un secondo ECID in identityMap. Questa duplicazione può impedire a Real-Time Customer Profile di memorizzare eventi anonimi a causa della presenza di due ECID in un singolo evento.
 
 ## Problemi relativi al comportamento del grafico {#graph-behavior-related-issues}
 
