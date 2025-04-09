@@ -5,10 +5,10 @@ breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da diverse origini. Scopri come strutturare, etichettare e migliorare i dati già acquisiti.
 feature: Sources
 role: Developer
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 47f6251a190a12b86ec566e3ba72fa34a0bd028b
 workflow-type: tm+mt
-source-wordcount: '1064'
-ht-degree: 30%
+source-wordcount: '1070'
+ht-degree: 35%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 30%
 
 - [Panoramica sulle origini](home.md)
 - Connettori di origine disponibili {#connectors}
-   - Applicazioni Adobe {#adobe-applications}
+   - Applicazioni di Adobe {#adobe-applications}
       - [Origine classificazioni di Analytics](connectors/adobe-applications/classifications.md)
       - [Origine di Analytics](connectors/adobe-applications/analytics.md)
       - [Origine Audience Manager](connectors/adobe-applications/audience-manager.md)
@@ -95,6 +95,7 @@ ht-degree: 30%
    - Partner dati e identità {#data-partner}
       - [Acquisizione dei dati Acxiom](connectors/data-partners/acxiom-data-ingestion.md)
       - [Importazione di dati potenziali Acxiom](connectors/data-partners/acxiom-prospecting-data-import.md)
+      - [Profili utente Algolia](connectors/data-partners/algolia-user-profiles.md)
       - [Intento Bombora](connectors/data-partners/bombora.md)
       - [Intento Demandbase](connectors/data-partners/demandbase.md)
       - [Risoluzione Merkury Enterprise Identity](connectors/data-partners/merkury.md)
@@ -104,7 +105,7 @@ ht-degree: 30%
       - [Shopify Streaming](connectors/ecommerce/shopify-streaming.md)
    - Sistema locale {#local-system}
       - [Connettore caricamento file locale](connectors/local-system/local-file-upload.md)
-   - Automazione marketing {#marketing-automation}
+   - Marketing automation {#marketing-automation}
       - [Braze Currents](connectors/marketing-automation/braze.md)
       - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
       - [Customer.io](connectors/marketing-automation/customerio-webhook.md)
@@ -122,10 +123,10 @@ ht-degree: 30%
    - Protocolli {#protocols}
       - [Connettore OData generico](connectors/protocols/odata.md)
       - [Connettore API REST generico](connectors/protocols/generic-rest.md)
-   - Streaming di {#streaming}
+   - Streaming {#streaming}
       - [Connettore API HTTP](connectors/streaming/http.md)
 - Esercitazioni API {#api-tutorials}
-   - Crea una connessione di base {#create}
+   - Creare una connessione di base {#create}
       - Advertising {#advertising}
          - [Google Ads](tutorials/api/create/advertising/ads.md)
          - [Pinterest Ads](tutorials/api/create/advertising/pinterest-ads.md)
@@ -185,7 +186,7 @@ ht-degree: 30%
          - [COMMERCE SAP](tutorials/api/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
          - [Shopify Streaming](tutorials/api/create/ecommerce/shopify-streaming.md)
-      - Automazione marketing {#marketing-automation}
+      - Marketing automation {#marketing-automation}
          - [Chatlio](tutorials/api/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)
          - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
@@ -204,7 +205,7 @@ ht-degree: 30%
       - Protocolli {#protocols}
          - [OData generica](tutorials/api/create/protocols/odata.md)
          - [API REST generica](tutorials/api/create/protocols/generic-rest.md)
-      - Streaming di {#streaming}
+      - Streaming {#streaming}
          - [API HTTP](tutorials/api/create/streaming/http.md)
    - Esplora i dati {#explore}
       - [Esplora i dati pubblicitari](tutorials/api/explore/advertising.md)
@@ -217,7 +218,7 @@ ht-degree: 30%
       - [Esplora i dati di pagamento](tutorials/api/explore/payments.md)
       - [Esplora i dati del protocollo](tutorials/api/explore/protocols.md)
       - [Esplora tabelle dati](tutorials/api/explore/tabular.md)
-   - Raccogli dati {#collect}
+   - Raccogliere dati {#collect}
       - [Raccogliere dati pubblicitari](tutorials/api/collect/advertising.md)
       - [Raccogliere dati di archiviazione cloud](tutorials/api/collect/cloud-storage.md)
       - [Raccogliere dati CRM](tutorials/api/collect/crm.md)
@@ -239,9 +240,9 @@ ht-degree: 30%
    - [Acquisire dati crittografati](tutorials/api/encrypt-data.md)
    - [Salvare un flusso di dati come bozza](tutorials/api/draft.md)
    - [Applicare le etichette di accesso a un flusso di dati](tutorials/api/labels.md)
-- Tutorial dell&#39;interfaccia utente {#ui-tutorials}
-   - Crea una connessione di origine {#create}
-      - Applicazioni Adobe {#adobe-applications}
+- Tutorial sull’interfaccia utente {#ui-tutorials}
+   - Creare una connessione sorgente {#create}
+      - Applicazioni di Adobe {#adobe-applications}
          - [Adobe Analytics (dati suite di rapporti)](tutorials/ui/create/adobe-applications/analytics.md)
          - [Adobe Analytics (dati delle classificazioni)](tutorials/ui/create/adobe-applications/classifications.md)
          - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
@@ -309,6 +310,7 @@ ht-degree: 30%
       - Partner dati e identità {#data-partner}
          - [Acquisizione dei dati Acxiom](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
          - [Importazione di dati potenziali Acxiom](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
+         - [Profili utente Algolia](tutorials/ui/create/data-partners/algolia-user-profiles.md)
          - [Intento Bombora](tutorials/ui/create/data-partners/bombora.md)
          - [Intento Demandbase](tutorials/ui/create/data-partners/demandbase.md)
          - [Risoluzione Merkury Enterprise Identity](tutorials/ui/create/data-partners/merkury.md)
@@ -318,7 +320,7 @@ ht-degree: 30%
          - [Shopify Streaming](tutorials/ui/create/ecommerce/shopify-streaming.md)
       - Sistema locale {#local-system}
          - [Caricamento file locale](tutorials/ui/create/local-system/local-file-upload.md)
-      - Automazione marketing {#marketing-automation}
+      - Marketing automation {#marketing-automation}
          - [Braze Currents](tutorials/ui/create/marketing-automation/braze.md)
          - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/ui/create/marketing-automation/customerio-webhook.md)
@@ -337,7 +339,7 @@ ht-degree: 30%
          - [Stripe](tutorials/ui/create/payments/stripe.md)
       - Protocolli {#protocols}
          - [OData generica](tutorials/ui/create/protocols/odata.md)
-      - Streaming di {#streaming}
+      - Streaming {#streaming}
          - [API HTTP](tutorials/ui/create/streaming/http.md)
    - Configurare un flusso di dati {#dataflow}
       - [Flusso di dati della connessione Advertising](tutorials/ui/dataflow/advertising.md)
@@ -365,14 +367,14 @@ ht-degree: 30%
    - [Iscriversi agli avvisi delle origini](tutorials/ui/alerts.md)
    - [Salvare un flusso di dati come bozza](tutorials/ui/draft.md)
    - [Applicare le etichette di accesso a un flusso di dati](tutorials/ui/labels.md)
-- Origini self-service (SDK batch) {#sdk}
+- Origini self-service (SDK in batch) {#sdk}
    - [Panoramica](sources-sdk/overview.md)
-   - Configura la specifica di connessione {#config}
+   - Configurare le specifiche di connessione {#config}
       - [Opzioni di configurazione](sources-sdk/config/config.md)
       - [Configura specifica di autenticazione](sources-sdk/config/authspec.md)
       - [Configurare la specifica di origine](sources-sdk/config/sourcespec.md)
       - [Configura specifica di esplorazione](sources-sdk/config/explorespec.md)
-   - Guida dell&#39;API Self-Serve Sources (Batch SDK) {#self-serve-api}
+   - Guida API per origini self-service (Batch SDK) {#self-serve-api}
       - [Panoramica API di Self-Serve Sources (Batch SDK)](sources-sdk/api/api-overview.md)
       - [Introduzione](sources-sdk/api/getting-started.md)
       - [Creare una specifica di connessione](sources-sdk/api/create.md)
@@ -385,7 +387,7 @@ ht-degree: 30%
       - [Utilizza un editor di testo nell’ambiente locale per creare una pagina della documentazione delle sorgenti](sources-sdk/documentation/text-editor.md)
       - [Modello API self-service della documentazione](sources-sdk/documentation/template.md)
       - [Modello di interfaccia utente self-service della documentazione](sources-sdk/documentation/ui-template.md)
-   - SDK in streaming {#streaming-sdk}
+   - Streaming SDK {#streaming-sdk}
       - [Guida introduttiva alle origini self-service (Streaming SDK)](sources-sdk/streaming/getting-started.md)
       - [Creare una specifica di connessione per un&#39;origine di streaming](sources-sdk/streaming/create.md)
       - [Aggiornare una specifica di connessione per un&#39;origine di streaming](sources-sdk/streaming/update-connection-specs.md)
