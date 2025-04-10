@@ -3,9 +3,9 @@ title: Note sulla versione di Adobe Experience Platform - Gennaio 2024
 description: Note sulla versione di Adobe Experience Platform di gennaio 2024.
 exl-id: d4b3c5b2-3adb-41fd-91ad-f4c0f21d2325
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1662'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -43,9 +43,9 @@ Per iniziare a utilizzare i [!UICONTROL playbook di casi d’uso], leggi le segu
 
 ## Controllo degli accessi basato su attributi {#abac}
 
-Il controllo degli accessi basato sugli attributi è una funzionalità di Adobe Experience Platform che offre ai brand attenti alla privacy una maggiore flessibilità per gestire l’accesso degli utenti. È possibile assegnare singoli oggetti, come campi e segmenti dello schema, ai ruoli utente. Questa funzione ti consente di concedere o revocare l’accesso a singoli oggetti per specifici utenti di Experience Platform all’interno della tua organizzazione.
+Il controllo degli accessi basato sugli attributi è una funzionalità di Adobe Experience Platform che offre ai brand attenti alla privacy una maggiore flessibilità per gestire l’accesso degli utenti. È possibile assegnare singoli oggetti, come campi e segmenti dello schema, ai ruoli utente. Questa funzione consente di concedere o revocare l’accesso a singoli oggetti per specifici utenti di Experience Platform nella tua organizzazione.
 
-Tramite il controllo dell’accesso basato su attributi, gli amministratori dell’organizzazione possono controllare l’accesso degli utenti a, dati personali sensibili (SPD), informazioni personali (PII) e altri tipi di dati personalizzati in tutti i flussi di lavoro e le risorse di Experience Platform. Gli amministratori possono definire ruoli utente con accesso solo a campi e dati specifici che corrispondono a tali campi.
+Tramite il controllo dell’accesso basato su attributi, gli amministratori dell’organizzazione possono controllare l’accesso degli utenti ai dati personali sensibili (SPD), alle informazioni personali identificabili (PII) e ad altri tipi di dati personalizzati in tutti i flussi di lavoro e le risorse di Experience Platform. Gli amministratori possono definire ruoli utente con accesso solo a campi e dati specifici che corrispondono a tali campi.
 
 **Documentazione nuova o aggiornata**
 
@@ -79,7 +79,7 @@ Adobe Experience Platform fornisce più dashboard attraverso le quali è possibi
 
 | Funzione | Descrizione |
 | --- | --- |
-| Visualizza SQL | Ora puoi visualizzare le istruzioni SQL sottostanti i profili, i tipi di pubblico, le destinazioni e le informazioni personalizzate con l’interruttore Visualizza SQL, quindi eseguire la query su richiesta tramite l’editor di query. L’accesso a SQL che alimenta le informazioni di Real-time Customer Data Platform consente di comprendere la logica alla base dell’analisi del modello dati. Questa trasparenza rende i dati Real-time CDP di Adobe più accessibili, comprensibili e di impatto per il processo decisionale.<br>Ispirati all&#39;SQL di oltre 40 insights esistenti, crea nuove query che derivano informazioni univoche dai dati di Experience Platform in base alle tue esigenze aziendali. SQL è disponibile anche per gli approfondimenti su [Profili](../../dashboards/insights/profiles.md), [Tipi di pubblico](../../dashboards/insights/audiences.md) e [Destinazioni](../../dashboards/insights/destinations.md) nella documentazione di Experience League. Questi documenti evidenziano i casi d’uso aziendali a cui è possibile rispondere con gli approfondimenti standard. Per ulteriori informazioni, leggi la guida sulla [visualizzazione di approfondimenti SQL](../../dashboards/view-sql.md). |
+| Visualizza SQL | Ora puoi visualizzare le istruzioni SQL sottostanti i profili, i tipi di pubblico, le destinazioni e le informazioni personalizzate con l’interruttore Visualizza SQL, quindi eseguire la query su richiesta tramite l’editor di query. L’accesso a SQL che alimenta le informazioni di Real-time Customer Data Platform consente di comprendere la logica alla base dell’analisi del modello dati. Questa trasparenza rende i dati Real-time CDP di Adobe più accessibili, comprensibili e di impatto per il processo decisionale.<br>Puoi trarre spunto dall’SQL di oltre 40 insight esistenti per creare nuove query e ottenere informazioni esclusive dai dati di Experience Platform in base alle tue esigenze di business. SQL è disponibile anche per gli approfondimenti su [Profili](../../dashboards/insights/profiles.md), [Tipi di pubblico](../../dashboards/insights/audiences.md) e [Destinazioni](../../dashboards/insights/destinations.md) nella documentazione di Experience League. Questi documenti evidenziano i casi d’uso aziendali a cui è possibile rispondere con gli approfondimenti standard. Per ulteriori informazioni, leggi la guida sulla [visualizzazione di approfondimenti SQL](../../dashboards/view-sql.md). |
 
 {style="table-layout:auto"}
 
@@ -89,7 +89,7 @@ Per ulteriori informazioni sulle dashboard, tra cui come concedere le autorizzaz
 
 [!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 
-**Nuove destinazioni** {#new-destinations}
+**Nuove destinazioni** {#new-destinations} {#new-destinations}
 
 | Destinazione | Descrizione |
 | ----------- | ----------- |
@@ -97,7 +97,7 @@ Per ulteriori informazioni sulle dashboard, tra cui come concedere le autorizzaz
 
 {style="table-layout:auto"}
 
-**Funzionalità nuove o aggiornate** {#destinations-new-updated-functionality}
+**Funzionalità nuove o aggiornate** {#destinations-new-updated-functionality} {#destinations-new-updated-functionality}
 
 | Funzionalità | Descrizione |
 | ----------- | ----------- |
@@ -181,8 +181,8 @@ Experience Platform fornisce un’API RESTful e un’interfaccia utente interatt
 
 | Funzione | Descrizione |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} Origini [!DNL Oracle NetSuite] | Utilizza le integrazioni [!DNL Oracle NetSuite] nel catalogo delle origini per portare in Experience Platform i dati dai tuoi account [[!DNL Oracle NetSuite Activities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md) e [[!DNL Oracle NetSuite Entities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md). |
-| [!BADGE Beta]{type=Informative} Origine [!DNL Braze Currents]  | Utilizza l’integrazione [[!DNL Braze Currents]](../../sources/tutorials/ui/create/marketing-automation/braze.md) nel catalogo delle origini per portare in Experience Platform i dati dal tuo account [!DNL Braze]. |
+| [!BADGE Beta]{type=Informative}{type=Informative} Origini [!DNL Oracle NetSuite] | Utilizza le integrazioni [!DNL Oracle NetSuite] nel catalogo delle origini per portare in Experience Platform i dati dai tuoi account [[!DNL Oracle NetSuite Activities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md) e [[!DNL Oracle NetSuite Entities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md). |
+| [!BADGE Beta]{type=Informative}{type=Informative} Origine [!DNL Braze Currents]  | Utilizza l’integrazione [[!DNL Braze Currents]](../../sources/tutorials/ui/create/marketing-automation/braze.md) nel catalogo delle origini per portare in Experience Platform i dati dal tuo account [!DNL Braze]. |
 | Supporto per l’autenticazione con coppia di chiavi per l’origne batch [!DNL Snowflake] | Ora puoi utilizzare l’autenticazione con coppia di chiavi durante la creazione di un nuovo account [!DNL Snowflake] per i dati in batch. Per ulteriori informazioni, leggi la guida sulla [creazione di un account [!DNL Snowflake] tramite API](../../sources/tutorials/api/create/databases/snowflake.md) o la guida sulla [creazione di un account [!DNL Snowflake] tramite l’interfaccia utente](../../sources/tutorials/ui/create/databases/snowflake.md). |
 
 {style="table-layout:auto"}

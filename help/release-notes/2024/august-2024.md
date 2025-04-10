@@ -3,9 +3,9 @@ title: Note sulla versione di Adobe Experience Platform di agosto 2024
 description: Note sulla versione di Adobe Experience Platform di agosto 2024.
 exl-id: 153891e9-fd82-4894-a047-c8d82f214fef
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1565'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -29,9 +29,9 @@ Aggiornamenti alle funzioni e alla documentazione esistenti in Experience Platfo
 
 ## Controllo degli accessi basato su attributi {#abac}
 
-Il controllo degli accessi basato sugli attributi è una funzionalità di Adobe Experience Platform che offre ai brand attenti alla privacy una maggiore flessibilità per gestire l’accesso degli utenti. È possibile assegnare singoli oggetti, come campi e segmenti dello schema, ai ruoli utente. Questa funzione ti consente di concedere o revocare l’accesso a singoli oggetti per specifici utenti di Experience Platform all’interno della tua organizzazione.
+Il controllo degli accessi basato sugli attributi è una funzionalità di Adobe Experience Platform che offre ai brand attenti alla privacy una maggiore flessibilità per gestire l’accesso degli utenti. È possibile assegnare singoli oggetti, come campi e segmenti dello schema, ai ruoli utente. Questa funzione consente di concedere o revocare l’accesso a singoli oggetti per specifici utenti di Experience Platform nella tua organizzazione.
 
-Tramite il controllo dell’accesso basato su attributi, gli amministratori dell’organizzazione possono controllare l’accesso degli utenti ai dati personali sensibili (SPD), alle informazioni personali (PII) e ad altri tipi di dati personalizzati in tutti i flussi di lavoro e le risorse di Experience Platform. Gli amministratori possono definire ruoli utente con accesso solo a campi e dati specifici che corrispondono a tali campi.
+Tramite il controllo dell’accesso basato su attributi, gli amministratori dell’organizzazione possono controllare l’accesso degli utenti ai dati personali sensibili (SPD), alle informazioni personali identificabili (PII) e ad altri tipi di dati personalizzati in tutti i flussi di lavoro e le risorse di Experience Platform. Gli amministratori possono definire ruoli utente con accesso solo a campi e dati specifici che corrispondono a tali campi.
 
 **Nuova funzione**
 
@@ -95,7 +95,7 @@ XDM è una specifica open-source che fornisce strutture e definizioni comuni (sc
 
 {style="table-layout:auto"}
 
-Per ulteriori informazioni su XDM in Experience Platform, consulta la [Panoramica del sistema XDM](../../xdm/home.md).
+Per ulteriori informazioni su XDM in Experience Platform, consulta la [panoramica del sistema XDM](../../xdm/home.md).
 
 ## Identity Service {#identity-service}
 

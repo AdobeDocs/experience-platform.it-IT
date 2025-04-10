@@ -3,9 +3,9 @@ title: Note sulla versione di Adobe Experience Platform - Marzo 2024
 description: Note sulla versione di Adobe Experience Platform di marzo 2024.
 exl-id: cab47a76-04f3-48ec-82aa-d17645e4eb15
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1192'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -71,7 +71,7 @@ Per ulteriori informazioni sulla raccolta dati, consulta la [panoramica sulla ra
 
 [!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 
-**Destinazioni nuove e aggiornate** {#new-updated-destinations}
+**Destinazioni nuove e aggiornate** {#new-updated-destinations} {#new-updated-destinations}
 
 | Destinazione | Tipo | Descrizione |
 | ----------- | --------- | ----------- |
@@ -98,11 +98,11 @@ XDM è una specifica open-source che fornisce strutture e definizioni comuni (sc
 
 | Funzione | Descrizione |
 | --- | --- |
-| Supporto del tipo di dati per la mappa dell’interfaccia utente di Experience Platform | Personalizza ulteriormente la struttura dati Experience Data Model (XDM) definendo i campi mappa nell’interfaccia utente di Experience Platform. Ora puoi creare campi mappa nell’editor di schemi per modellare strutture di dati flessibili o archiviare in modo efficiente coppie chiave-valore. Seleziona “Mappa” dal menu a discesa Tipo quando definisci un nuovo campo per configurare i sottocampi e assegnarli ai gruppi di campo. I tipi di valori mappa supportati sono stringa e nemero intero.<br>![Editor di schemi in cui sono evidenziati i campi Tipo e Tipo di valore mappa.](../2024/assets/march/maps.png "Editor di schemi in cui sono evidenziati i campi Tipo e Tipo di valore mappa."){width="100" zoomable="yes"}<br> Per sapere come [definire i campi mappa nell’interfaccia utente](../../xdm/ui/fields/map.md), consulta la guida dell’interfaccia utente. |
+| Supporto del tipo di dati per la mappa dell’interfaccia utente di Experience Platform | Personalizza ulteriormente la struttura dati Experience Data Model (XDM) definendo i campi della mappa nell’interfaccia utente di Experience Platform. Ora puoi creare campi mappa nell’editor di schemi per modellare strutture di dati flessibili o archiviare in modo efficiente coppie chiave-valore. Seleziona “Mappa” dal menu a discesa Tipo quando definisci un nuovo campo per configurare i sottocampi e assegnarli ai gruppi di campo. I tipi di valori mappa supportati sono stringa e nemero intero.<br>![Editor di schemi in cui sono evidenziati i campi Tipo e Tipo di valore mappa.](../2024/assets/march/maps.png "Editor di schemi in cui sono evidenziati i campi Tipo e Tipo di valore mappa."){width="100" zoomable="yes"}<br> Per sapere come [definire i campi mappa nell’interfaccia utente](../../xdm/ui/fields/map.md), consulta la guida dell’interfaccia utente. |
 
 {style="table-layout:auto"}
 
-Per ulteriori informazioni su XDM in Experience Platform, consulta la [Panoramica del sistema XDM](../../xdm/home.md).
+Per ulteriori informazioni su XDM in Experience Platform, consulta la [panoramica del sistema XDM](../../xdm/home.md).
 
 ## Servizio di segmentazione {#segmentation}
 
@@ -126,8 +126,8 @@ Experience Platform fornisce un’API RESTful e un’interfaccia utente interatt
 
 | Funzione | Tipo | Descrizione |
 | --- | --- | --- |
-| [!BADGE Beta]{type=Informative} [!DNL Acxiom Data Ingestion] | Nuova | Utilizza l’origine [[!DNL Acxiom Data Ingestion] ](../../sources/tutorials/ui/create/data-partners/acxiom-data-ingestion.md)per acquisire i dati [!DNL Acxiom] in Real-time Customer Data Platform e arricchire i profili di prime parti. Puoi quindi utilizzare i profili di prime parti arricchiti da [!DNL Acxiom] per migliorare i tipi di pubblico e attivarli per vari canali di marketing. <br> ![Origine Acxiom Data Ingestion.](../2024/assets/march/acxiom-data-ingestion.png "Nuova origine Acxiom Data Ingestion."){width="100" zoomable="yes"} <br> Per informazioni su come iniziare, consulta la panoramica su [[!DNL Acxiom Data Ingestion] ](../../sources/connectors/data-partners/acxiom-data-ingestion.md). |
-| [!BADGE Beta]{type=Informative} [!DNL Stripe] | Nuova | Utilizza l’origine [[!DNL Stripe] ](../../sources/connectors/payments/stripe.md)per acquisire i dati ottenuti durante il flusso di acquisto dalla clientela in Experience Platform. Una volta acquisiti, puoi utilizzare questi dati per creare offerte personalizzate e attingere a informazioni di business più approfondite. <br> ![Origine Stripe.](../2024/assets/march/stripe.png "Nuova origine Stripe."){width="100" zoomable="yes"} <br> Per informazioni su come iniziare, consulta la panoramica su [[!DNL Stripe] ](../../sources/connectors/payments/stripe.md). |
+| [!BADGE Beta]{type=Informative}{type=Informative} [!DNL Acxiom Data Ingestion] | Nuova | Utilizza l’origine [[!DNL Acxiom Data Ingestion] ](../../sources/tutorials/ui/create/data-partners/acxiom-data-ingestion.md)per acquisire i dati [!DNL Acxiom] in Real-time Customer Data Platform e arricchire i profili di prime parti. Puoi quindi utilizzare i profili di prime parti arricchiti da [!DNL Acxiom] per migliorare i tipi di pubblico e attivarli per vari canali di marketing. <br> ![Origine Acxiom Data Ingestion.](../2024/assets/march/acxiom-data-ingestion.png "Nuova origine Acxiom Data Ingestion."){width="100" zoomable="yes"} <br> Per informazioni su come iniziare, consulta la panoramica su [[!DNL Acxiom Data Ingestion] ](../../sources/connectors/data-partners/acxiom-data-ingestion.md). |
+| [!BADGE Beta]{type=Informative}{type=Informative} [!DNL Stripe] | Nuova | Utilizza l’origine [[!DNL Stripe] ](../../sources/connectors/payments/stripe.md)per acquisire i dati ottenuti durante il flusso di acquisto dalla clientela in Experience Platform. Una volta acquisiti, puoi utilizzare questi dati per creare offerte personalizzate e attingere a informazioni di business più approfondite. <br> ![Origine Stripe.](../2024/assets/march/stripe.png "Nuova origine Stripe."){width="100" zoomable="yes"} <br> Per informazioni su come iniziare, consulta la panoramica su [[!DNL Stripe] ](../../sources/connectors/payments/stripe.md). |
 | Supporto di [!DNL Snowflake Streaming] nell’interfaccia utente | Nuova | È ora possibile utilizzare l’origine [[!DNL Snowflake Streaming] ](../../sources/tutorials/ui/create/databases/snowflake-streaming.md)nell’interfaccia utente di Experience Platform per eseguire lo streaming dei dati dal database [!DNL Snowflake]. <br> ![Origine Snowflake Streaming.](../2024/assets/march/snowflake-streaming.png "Nuova origine Snowflake Streaming."){width="100" zoomable="yes"} <br> Per informazioni su come iniziare, consulta la panoramica su [[!DNL Snowflake Streaming] ](../../sources/connectors/databases/snowflake-streaming.md). |
 
 {style="table-layout:auto"}
