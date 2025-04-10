@@ -5,7 +5,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: f0879683629ba10ed1b799e52f0adf332f079daf
 workflow-type: tm+mt
 source-wordcount: '1250'
-ht-degree: 93%
+ht-degree: 97%
 
 ---
 
@@ -47,13 +47,13 @@ Per ulteriori informazioni sulle dashboard, tra cui come concedere le autorizzaz
 
 | Destinazione | Descrizione |
 | --- | --- |
-| [Connessione a Demandbase People](/help/destinations/catalog/advertising/demandbase-people.md) | Utilizza la connessione [!DNL Demandbase People] per attivare profili per le campagne Demandbase per il targeting, la personalizzazione e l&#39;eliminazione del pubblico. |
-| [Connessione account Bombora](/help/destinations/catalog/advertising/bombora.md) | Utilizza la connessione [!DNL Bombora] per attivare profili per le campagne Bombora per il targeting, la personalizzazione e l&#39;eliminazione del pubblico, in base a [tipi di pubblico dell&#39;account](/help/segmentation/types/account-audiences.md). |
+| [Connessione Demandbase People](/help/destinations/catalog/advertising/demandbase-people.md) | Utilizza la connessione [!DNL Demandbase People] per attivare profili per le campagne Demandbase per il targeting del pubblico, la personalizzazione e la soppressione. |
+| [Connessione account Bombora](/help/destinations/catalog/advertising/bombora.md) | Utilizza la connessione [!DNL Bombora] per attivare profili per le campagne Bombora per il targeting del pubblico, la personalizzazione e la soppressione, in base ai [tipi di pubblico basati su account](/help/segmentation/types/account-audiences.md). |
 | Aggiornamento di [Airship Attributes](/help/destinations/catalog/mobile-engagement/airship-attributes.md) | A partire dal 25 marzo 2025, puoi visualizzare due schede **[!UICONTROL Airship Attributes]** affiancate nel catalogo delle destinazioni. Ciò è dovuto a un aggiornamento interno del servizio destinazioni. Il connettore della destinazione **[!UICONTROL Airship Attributes]** esistente è stato rinominato in **[!UICONTROL (Deprecated) Airship Attributes]** ed è ora disponibile una nuova scheda denominata **[!UICONTROL Airship Attributes]**. <br> Utilizza la connessione **[!UICONTROL Airship Attributes]** nel catalogo per i nuovi flussi di dati di attivazione. Se sono presenti flussi di dati attivi nella destinazione [!DNL (Deprecated) Airship Attributes], questi verranno aggiornati automaticamente e non è quindi richiesta alcuna azione da parte dell’utente. <br> Se si creano flussi di dati tramite [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/), è necessario aggiornare [!DNL flow spec ID] e [!DNL connection spec ID] ai seguenti valori: <ul><li> Flow spec ID: `a862e0be-966e-4e5a-80d3-1bb566461986`</li><li> Connection spec ID: `594bc002-4a47-49b7-8a98-ac0d21045502`</li> </ul> |
 
 {style="table-layout:auto"}
 
-**Funzionalità nuove o aggiornate** {#destinations-new-updated-functionality}
+**Funzionalità nuova o aggiornata** {#destinations-new-updated-functionality}
 
 | Funzione | Descrizione |
 | --- | --- |
@@ -66,7 +66,7 @@ Per ulteriori informazioni, leggi la [panoramica sulle destinazioni](../../desti
 
 ## Composizione di pubblico federato {#federated-audience-composition}
 
-Per informazioni sugli ultimi aggiornamenti di Federated Audience Composition, consulta le [note sulla versione dedicate](https://experienceleague.adobe.com/it/docs/federated-audience-composition/using/release-notes) qui.
+Per informazioni sugli ultimi aggiornamenti sulla Composizione di pubblico federato, consulta le specifiche [note sulla versione](https://experienceleague.adobe.com/it/docs/federated-audience-composition/using/release-notes).
 
 ## Servizio di segmentazione {#segmentation-service}
 
