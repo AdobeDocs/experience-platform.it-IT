@@ -1,45 +1,36 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;PostgreSQL;postgresql;PSQL;psql
-solution: Experience Platform
-title: Creare una connessione di base PostgreSQL utilizzando l’API del servizio Flusso
-type: Tutorial
-description: Scopri come connettere Adobe Experience Platform a PostgreSQL utilizzando l’API del servizio Flusso.
+title: Connettere PostgreSQL Ad Experience Platform Utilizzando L’API Del Servizio Di Flusso
+description: Scopri come collegare il tuo database  [!DNL PostgreSQL]  ad Experience Platform utilizzando le API.
 exl-id: 5225368a-08c1-421d-aec2-d50ad09ae454
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 5348158f6de9fea1a9fe186a14409afb7e7a376e
 workflow-type: tm+mt
-source-wordcount: '507'
-ht-degree: 5%
+source-wordcount: '744'
+ht-degree: 3%
 
 ---
 
 # Creare una connessione di base [!DNL PostgreSQL] utilizzando l&#39;API [!DNL Flow Service]
 
-Una connessione di base rappresenta la connessione autenticata tra un&#39;origine e Adobe Experience Platform.
-
-Questo tutorial illustra i passaggi necessari per creare una connessione di base per [!DNL PostgreSQL] utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
-
+Leggere questa guida per scoprire come collegare il database [!DNL PostgreSQL] a Adobe Experience Platform utilizzando [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Introduzione
 
-Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
+Questa guida richiede una buona conoscenza dei seguenti componenti di Experience Platform:
 
-* [Origini](../../../../home.md): [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini e consente di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi [!DNL Experience Platform].
-* [Sandbox](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza di [!DNL Experience Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Origini](../../../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Experience Platform.
+* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Experience Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per connettersi correttamente a [!DNL PostgreSQL] utilizzando l&#39;API [!DNL Flow Service].
 
+### Utilizzo delle API di Experience Platform
+
+Per informazioni su come effettuare correttamente chiamate alle API di Experience Platform, leggi la guida [guida introduttiva alle API di Experience Platform](../../../../../landing/api-guide.md).
+
 ### Raccogli le credenziali richieste
 
-Affinché [!DNL Flow Service] possa connettersi a [!DNL PostgreSQL], è necessario fornire la seguente proprietà di connessione:
+Per ulteriori informazioni sull&#39;autenticazione, leggere la [[!DNL PostgreSQL] panoramica](../../../../connectors/databases/postgres.md).
 
-| Credenziali | Descrizione |
-| ---------- | ----------- |
-| `connectionString` | Stringa di connessione associata all&#39;account [!DNL PostgreSQL]. Schema della stringa di connessione [!DNL PostgreSQL]: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
-| `connectionSpec.id` | La specifica di connessione restituisce le proprietà del connettore di un&#39;origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di origine. L&#39;ID della specifica di connessione per [!DNL PostgreSQL] è `74a1c565-4e59-48d7-9d67-7c03b8a13137`. |
-
-Per ulteriori informazioni su come ottenere una stringa di connessione, fare riferimento a questo [[!DNL PostgreSQL] documento](https://www.postgresql.org/docs/9.2/app-psql.html).
-
-#### Abilita crittografia SSL per la stringa di connessione
+### Abilita crittografia SSL per la stringa di connessione
 
 È possibile abilitare la crittografia SSL per la stringa di connessione [!DNL PostgreSQL] aggiungendo la stringa di connessione con le proprietà seguenti:
 
@@ -50,11 +41,11 @@ Per ulteriori informazioni su come ottenere una stringa di connessione, fare rif
 
 Di seguito è riportato un esempio di stringa di connessione [!DNL PostgreSQL] a cui è stata aggiunta la crittografia SSL: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD};EncryptionMethod=1;ValidateServerCertificate=1`.
 
-### Utilizzo delle API di Experience Platform
+## Connetti [!DNL PostgreSQL] ad Experience Platform su Azure {#azure}
 
-Per informazioni su come effettuare correttamente chiamate alle API di Experience Platform, consulta la guida introduttiva [alle API di Experience Platform](../../../../../landing/api-guide.md).
+Per informazioni su come collegare l&#39;account [!DNL PostgreSQL] ad Experience Platform su Azure, leggere la procedura riportata di seguito.
 
-## Creare una connessione di base
+### Creare una connessione di base {#azure-base}
 
 Una connessione di base mantiene le informazioni tra l’origine e Experience Platform, incluse le credenziali di autenticazione dell’origine, lo stato corrente della connessione e l’ID univoco della connessione di base. L’ID della connessione di base consente di esplorare e navigare tra i file dall’interno dell’origine e identificare gli elementi specifici che desideri acquisire, comprese le informazioni relative ai tipi di dati e ai formati.
 
@@ -66,32 +57,38 @@ Per creare un ID connessione di base, eseguire una richiesta POST all&#39;endpoi
 POST /connections
 ```
 
+>[!BEGINTABS]
+
+>[!TAB Autenticazione basata su chiave account]
+
 **Richiesta**
 
-La richiesta seguente crea una connessione di base per [!DNL PostgreSQL]:
+La richiesta seguente crea una connessione di base per [!DNL PostgreSQL] utilizzando l&#39;autenticazione basata su chiave account:
+
+Esempio di richiesta +++View
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Test connection for PostgreSQL",
-        "description": "Test connection for PostgreSQL",
-        "auth": {
-            "specName": "Connection String Based Authentication",
-            "params": {
-                "connectionString": "Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}"
-            }
-        },
-        "connectionSpec": {
-            "id": "74a1c565-4e59-48d7-9d67-7c03b8a13137",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "PostgreSQL base connection",
+      "description": "PostgreSQL base connection via connection string",
+      "auth": {
+          "specName": "Connection String Based Authentication",
+          "params": {
+              "connectionString": "Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}"
+          }
+      },
+      "connectionSpec": {
+          "id": "74a1c565-4e59-48d7-9d67-7c03b8a13137",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | Proprietà | Descrizione |
@@ -99,9 +96,13 @@ curl -X POST \
 | `auth.params.connectionString` | Stringa di connessione associata all&#39;account [!DNL PostgreSQL]. Schema della stringa di connessione [!DNL PostgreSQL]: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | ID della specifica di connessione [!DNL PostgreSQL]: `74a1c565-4e59-48d7-9d67-7c03b8a13137`. |
 
++++
+
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce l&#39;identificatore univoco (`id`) della connessione di base appena creata. Questo ID è necessario per esplorare il database [!DNL PostgreSQL] nell&#39;esercitazione successiva.
+In caso di esito positivo, la risposta restituisce l&#39;identificatore univoco (`id`) della connessione di base appena creata.
+
++++Visualizza esempio di risposta
 
 ```json
 {
@@ -110,9 +111,157 @@ In caso di esito positivo, la risposta restituisce l&#39;identificatore univoco 
 }
 ```
 
++++
+
+>[!TAB Autenticazione di base]
+
+**Richiesta**
+
+La richiesta seguente crea una connessione di base per [!DNL PostgreSQL] utilizzando l&#39;autenticazione di base:
+
+Esempio di richiesta +++View
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "PostgreSQL base connection",
+      "description": "PostgreSQL base connection via basic authentication",
+      "auth": {
+          "specName": "Basic Authentication",
+          "params": {
+              "server": "{SERVER}",
+              "port": "{PORT}",
+              "database": "{DATABASE}",
+              "username": "{USERNAME}",
+              "password": "{PASSWORD}",
+              "sslMode": "{SSL_MODE}"
+          }
+      },
+      "connectionSpec": {
+          "id": "74a1c565-4e59-48d7-9d67-7c03b8a13137",
+          "version": "1.0"
+      }
+  }'
+```
+
+| Proprietà | Descrizione |
+| ---| --- |
+| `auth.params.server` | Il nome o l&#39;indirizzo IP del database [!DNL PostgreSQL]. |
+| `auth.params.port` | Numero di porta del server di database. |
+| `auth.params.database` | Nome del database [!DNL PostgreSQL]. |
+| `auth.params.username` | Il nome utente associato all&#39;autenticazione del database [!DNL PostgreSQL]. |
+| `auth.params.password` | La password associata all&#39;autenticazione del database [!DNL PostgreSQL]. |
+| `auth.params.sslMode` | Il metodo con cui i dati vengono crittografati durante il trasferimento. I valori disponibili includono: `Disable`, `Allow`, `Prefer`, `Verify Ca` e `Verify Full`. |
+| `connectionSpec.id` | ID della specifica di connessione [!DNL PostgreSQL]: `74a1c565-4e59-48d7-9d67-7c03b8a13137`. |
+
++++
+
+**Risposta**
+
+In caso di esito positivo, la risposta restituisce l&#39;identificatore univoco (`id`) della connessione di base appena creata.
+
++++Visualizza esempio di risposta
+
+```json
+{
+    "id": "2c15b1c5-73bf-47ab-9098-0467fcd854d9",
+    "etag": "\"2600fc39-0000-0200-0000-67dd48f80000\""
+}
+```
+
++++
+
+>[!ENDTABS]
+
+## Connetti [!DNL PostgreSQL] ad Experience Platform su Amazon Web Services {#aws}
+
+>[!AVAILABILITY]
+>
+>Questa sezione si applica alle implementazioni di Experience Platform in esecuzione su Amazon Web Services (AWS). Experience Platform in esecuzione su AWS è attualmente disponibile per un numero limitato di clienti. Per ulteriori informazioni sull&#39;infrastruttura Experience Platform supportata, consulta la [Panoramica multi-cloud di Experience Platform](../../../../../landing/multi-cloud.md).
+
+Per informazioni su come collegare il database [!DNL PostgreSQL] ad Experience Platform su AWS, leggere la procedura seguente.
+
+### Creare una connessione di base {#aws-base}
+
+Per creare un ID connessione di base, eseguire una richiesta POST all&#39;endpoint `/connections` fornendo le credenziali di autenticazione [!DNL PostgreSQL] come parte dei parametri della richiesta.
+
+**Formato API**
+
+```https
+POST /connections
+```
+
+**Richiesta**
+
+La richiesta seguente crea una connessione di base per [!DNL PostgreSQL] per connettersi ad Experience Platform su AWS.
+
+Esempio di richiesta +++View
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "PostgreSQL base connection",
+      "description": "PostgreSQL base connection via basic authentication",
+      "auth": {
+          "specName": "Basic Authentication",
+          "params": {
+              "server": "{SERVER}",
+              "port": "{PORT}",
+              "database": "{DATABASE}",
+              "username": "{USERNAME}",
+              "password": "{PASSWORD}",
+              "sslMode": "{SSL_MODE}"
+          }
+      },
+      "connectionSpec": {
+          "id": "74a1c565-4e59-48d7-9d67-7c03b8a13137",
+          "version": "1.0"
+      }
+  }'
+```
+
+| Proprietà | Descrizione |
+| ---| --- |
+| `auth.params.server` | Il nome o l&#39;indirizzo IP del database [!DNL PostgreSQL]. |
+| `auth.params.port` | Numero di porta del server di database. |
+| `auth.params.database` | Nome del database [!DNL PostgreSQL]. |
+| `auth.params.username` | Il nome utente associato all&#39;autenticazione del database [!DNL PostgreSQL]. |
+| `auth.params.password` | La password associata all&#39;autenticazione del database [!DNL PostgreSQL]. |
+| `auth.params.sslMode` | Il metodo con cui i dati vengono crittografati durante il trasferimento. I valori disponibili includono: `Disable`, `Allow`, `Prefer`, `Verify Ca` e `Verify Full`. |
+| `connectionSpec.id` | ID della specifica di connessione [!DNL PostgreSQL]: `74a1c565-4e59-48d7-9d67-7c03b8a13137`. |
+
++++
+
+**Risposta**
+
+In caso di esito positivo, la risposta restituisce l&#39;identificatore univoco (`id`) della connessione di base appena creata.
+
++++Visualizza esempio di risposta
+
+```json
+{
+    "id": "2c15b1c5-73bf-47ab-9098-0467fcd854d9",
+    "etag": "\"2600fc39-0000-0200-0000-67dd48f80000\""
+}
+```
+
++++
+
 ## Passaggi successivi
 
-Seguendo questa esercitazione, è stata creata una connessione di base [!DNL PostgreSQL] utilizzando l&#39;API [!DNL Flow Service]. Puoi utilizzare questo ID connessione di base nelle seguenti esercitazioni:
+Dopo aver creato una connessione tra il database [!DNL PostgreSQL] e Experience Platform, è ora possibile procedere con i passaggi successivi e portare i dati di [!DNL PostgreSQL] in Experience Platform. Per ulteriori informazioni, consulta la seguente documentazione:
 
 * [Esplora la struttura e il contenuto delle tabelle dati utilizzando l&#39;API  [!DNL Flow Service] ](../../explore/tabular.md)
 * [Crea un flusso di dati per portare i dati del database ad Experience Platform utilizzando l&#39;API  [!DNL Flow Service] ](../../collect/database-nosql.md)
