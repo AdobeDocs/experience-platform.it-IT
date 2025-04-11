@@ -3,10 +3,10 @@ title: Esportare i set di dati nelle destinazioni di archiviazione cloud
 type: Tutorial
 description: Scopri come esportare i set di dati da Adobe Experience Platform nella posizione di archiviazione cloud preferita.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 5624dab337bcd27e28b4153459bb4e85fab22d6f
+source-git-commit: 29fb232ecfbd119ef84d62599fc79249513dca43
 workflow-type: tm+mt
-source-wordcount: '2594'
-ht-degree: 8%
+source-wordcount: '2703'
+ht-degree: 7%
 
 ---
 
@@ -14,15 +14,23 @@ ht-degree: 8%
 
 >[!AVAILABILITY]
 >
->* Questa funzionalità è disponibile per i clienti che hanno acquistato il pacchetto Real-Time CDP Prime o Ultimate, Adobe Journey Optimizer o il Customer Journey Analytics. Per ulteriori informazioni, contatta il rappresentante Adobe.
+>Questa funzionalità è disponibile per i clienti che hanno acquistato il pacchetto Real-Time CDP Prime o Ultimate, Adobe Journey Optimizer o Customer Journey Analytics. Per ulteriori informazioni, contatta il rappresentante Adobe.
 
-In questo articolo viene illustrato il flusso di lavoro necessario per esportare [set di dati](/help/catalog/datasets/overview.md) da Adobe Experience Platform nel percorso di archiviazione cloud preferito, ad esempio [!DNL Amazon S3], percorsi SFTP o [!DNL Google Cloud Storage] tramite l&#39;interfaccia utente di Experience Platform.
+>[!IMPORTANT]
+>
+>**Elemento azione**: la versione di Experience Platform](/help/release-notes/latest/latest.md#destinations) di [settembre 2024 ha introdotto l&#39;opzione per impostare una data `endTime` per i flussi di dati del set di dati di esportazione. Adobe ha inoltre introdotto una data di fine predefinita del 1° maggio 2025 per tutti i flussi di dati di esportazione del set di dati creati *prima della versione di settembre 2024*.
+>
+>Per uno qualsiasi di questi flussi di dati, devi aggiornare manualmente la data di fine nel flusso di dati prima della data di fine, altrimenti le esportazioni si fermeranno in tale data. Utilizza l’interfaccia utente di Experience Platform per visualizzare quali flussi di dati verranno impostati per l’interruzione il 1° maggio 2025.
+>
+>Per informazioni su come modificare la data di fine di un flusso di dati di esportazione del set di dati, consulta la [sezione di pianificazione](#scheduling).
 
-Puoi anche utilizzare le API Experience Platform per esportare i set di dati. Per ulteriori informazioni, consulta l&#39;esercitazione sull&#39;esportazione di [dataset API](/help/destinations/api/export-datasets.md).
+Questo articolo spiega il flusso di lavoro necessario per esportare [set di dati](/help/catalog/datasets/overview.md) da Adobe Experience Platform nel percorso di archiviazione cloud preferito, ad esempio [!DNL Amazon S3], percorsi SFTP o [!DNL Google Cloud Storage] tramite l&#39;interfaccia utente di Experience Platform.
+
+Puoi anche utilizzare le API di Experience Platform per esportare i set di dati. Per ulteriori informazioni, consulta l&#39;esercitazione sull&#39;esportazione di [dataset API](/help/destinations/api/export-datasets.md).
 
 ## Set di dati disponibili per l’esportazione {#datasets-to-export}
 
-I set di dati che puoi esportare variano in base all’applicazione di Experience Platform (Real-Time CDP, Adobe Journey Optimizer), al livello (Prime o Ultimate) ed eventuali componenti aggiuntivi acquistati (ad esempio, Data Distiller).
+I set di dati che puoi esportare variano in base all’applicazione Experience Platform (Real-Time CDP, Adobe Journey Optimizer), al livello (Prime o Ultimate) ed eventuali componenti aggiuntivi acquistati (ad esempio, Data Distiller).
 
 Utilizza la tabella seguente per capire quali tipi di set di dati puoi esportare in base all’applicazione, al livello di prodotto ed eventuali componenti aggiuntivi acquistati:
 
@@ -90,7 +98,7 @@ Al momento, puoi esportare i set di dati nelle destinazioni di archiviazione clo
 Alcune destinazioni basate su file nel catalogo Experience Platform supportano sia l’attivazione del pubblico che l’esportazione di set di dati.
 
 * Considera l’attivazione di tipi di pubblico quando desideri che i dati siano strutturati in profili raggruppati per interessi o qualifiche di pubblico.
-* In alternativa, puoi prendere in considerazione le esportazioni di set di dati quando desideri esportare set di dati non elaborati, che non sono raggruppati o strutturati in base agli interessi o alle qualifiche del pubblico. Puoi utilizzare questi dati per reporting, flussi di lavoro sulla scienza dei dati e molti altri casi d’uso. In qualità di amministratore, ingegnere dati o analista, ad esempio, puoi esportare i dati da Experience Platform per sincronizzarli con il data warehouse, utilizzarli in strumenti di analisi BI, in strumenti di ML cloud esterni o archiviarli nel sistema per esigenze di archiviazione a lungo termine.
+* In alternativa, puoi prendere in considerazione le esportazioni di set di dati quando desideri esportare set di dati non elaborati, che non sono raggruppati o strutturati in base agli interessi o alle qualifiche del pubblico. Puoi utilizzare questi dati per reporting, flussi di lavoro sulla scienza dei dati e molti altri casi d’uso. Ad esempio, in qualità di amministratore, data engineer o analista, puoi esportare i dati da Experience Platform per sincronizzarli con il tuo data warehouse, utilizzarli in strumenti di analisi BI, in strumenti di ML cloud esterni o archiviarli nel tuo sistema per esigenze di archiviazione a lungo termine.
 
 Questo documento contiene tutte le informazioni necessarie per esportare i set di dati. Se desideri attivare *tipi di pubblico* nell&#39;archiviazione cloud o nelle destinazioni di e-mail marketing, leggi [Attiva dati pubblico nelle destinazioni di esportazione del profilo batch](/help/destinations/ui/activate-batch-profile-destinations.md).
 
@@ -206,7 +214,7 @@ Dopo aver selezionato le macro desiderate, è possibile visualizzare un&#39;ante
 
 ![Anteprima del percorso della cartella evidenziata nella finestra modale della cartella personalizzata.](/help/destinations/assets/ui/export-datasets/custom-folder-path-preview.png)
 
-## Controlla {#review}
+## Rivisione {#review}
 
 Nella pagina **[!UICONTROL Rivedi]** puoi visualizzare un riepilogo della selezione. Seleziona **[!UICONTROL Annulla]** per interrompere il flusso, **[!UICONTROL Indietro]** per modificare le impostazioni oppure **[!UICONTROL Fine]** per confermare la selezione e iniziare a esportare i set di dati nella destinazione.
 
@@ -216,7 +224,7 @@ Nella pagina **[!UICONTROL Rivedi]** puoi visualizzare un riepilogo della selezi
 
 Durante l&#39;esportazione dei set di dati, Experience Platform crea uno o più file `.json` o `.parquet` nel percorso di archiviazione fornito. I nuovi file verranno archiviati nel percorso di archiviazione in base alla pianificazione di esportazione fornita.
 
-In Experience Platform viene creata una struttura di cartelle nel percorso di archiviazione specificato, in cui vengono depositati i file del set di dati esportati. Il modello di esportazione delle cartelle predefinito è illustrato di seguito, ma è possibile [personalizzare la struttura delle cartelle con le macro preferite](#edit-folder-path).
+Experience Platform crea una struttura di cartelle nel percorso di archiviazione specificato, dove deposita i file del set di dati esportati. Il modello di esportazione delle cartelle predefinito è illustrato di seguito, ma è possibile [personalizzare la struttura delle cartelle con le macro preferite](#edit-folder-path).
 
 >[!TIP]
 > 
@@ -247,7 +255,7 @@ Le esportazioni in file JSON sono supportate *solo in modalità compressa*. Le e
 
 Per rimuovere i set di dati da un flusso di dati esistente, effettua le seguenti operazioni:
 
-1. Accedi a [interfaccia utente Experience Platform](https://experience.adobe.com/platform/) e seleziona **[!UICONTROL Destinazioni]** dalla barra di navigazione a sinistra. Seleziona **[!UICONTROL Sfoglia]** dall&#39;intestazione superiore per visualizzare i flussi di dati di destinazione esistenti.
+1. Accedi all&#39;[interfaccia utente di Experience Platform](https://experience.adobe.com/platform/) e seleziona **[!UICONTROL Destinazioni]** dalla barra di navigazione a sinistra. Seleziona **[!UICONTROL Sfoglia]** dall&#39;intestazione superiore per visualizzare i flussi di dati di destinazione esistenti.
 
    ![Visualizzazione esplorazione di destinazione con una connessione di destinazione visualizzata e il resto offuscato.](../assets/ui/export-datasets/browse-dataset-connections.png)
 
@@ -269,7 +277,7 @@ Per rimuovere i set di dati da un flusso di dati esistente, effettua le seguenti
 
 ## Diritti di esportazione del set di dati {#licensing-entitlement}
 
-Consulta i documenti di descrizione del prodotto per capire la quantità di dati che hai diritto di esportare per ogni applicazione di Experience Platform all’anno. Ad esempio, puoi visualizzare la descrizione del prodotto Real-Time CDP [qui](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+Consulta i documenti di descrizione del prodotto per capire la quantità di dati che hai diritto di esportare per ogni applicazione Experience Platform all’anno. Ad esempio, puoi visualizzare la descrizione del prodotto Real-Time CDP [qui](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 I diritti all’esportazione di dati per diverse applicazioni non sono additivi. Ciò significa, ad esempio, che se acquisti Real-Time CDP Ultimate e Adobe Journey Optimizer Ultimate, il diritto all’esportazione del profilo sarà il più grande tra i due diritti, in base alle descrizioni del prodotto. Il volume di adesioni viene calcolato prendendo il numero totale di profili con licenza e moltiplicandolo per 500 KB per Real-Time CDP Prime o 700 KB per Real-Time CDP Ultimate per determinare il volume di dati a cui hai diritto.
 
@@ -293,7 +301,7 @@ Tieni presente le seguenti limitazioni per il rilascio di disponibilità general
 **È possibile generare un file senza una cartella se si salva solo in `/` come percorso della cartella? Inoltre, se non è necessario un percorso di cartella, in che modo verranno generati i file con nomi duplicati in una cartella o in un percorso?**
 
 +++Risposta
-A partire dalla versione di settembre 2024, è possibile personalizzare il nome della cartella e persino utilizzare `/` per esportare i file per tutti i set di dati nella stessa cartella. Adobe Questo non è consigliato per le destinazioni che esportano più set di dati, in quanto i nomi di file generati dal sistema che appartengono a set di dati diversi verranno combinati nella stessa cartella.
+A partire dalla versione di settembre 2024, è possibile personalizzare il nome della cartella e persino utilizzare `/` per esportare i file per tutti i set di dati nella stessa cartella. Adobe sconsiglia questo per le destinazioni che esportano più set di dati, in quanto i nomi dei file generati dal sistema che appartengono a set di dati diversi verranno combinati nella stessa cartella.
 +++
 
 **È possibile indirizzare il file manifesto a una cartella e i file di dati a un&#39;altra cartella?**
