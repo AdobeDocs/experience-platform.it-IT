@@ -3,13 +3,13 @@ title: Audience Builder in Real-Time Customer Data Platform
 description: Scopri come utilizzare Audience Builder in Real-Time Customer Data Platform per creare tipi di pubblico.
 feature: Get Started, Audiences
 badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-source-git-commit: b9099b123ae83eef6d470076dc2f8d143170a846
+exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
+source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
 workflow-type: tm+mt
-source-wordcount: '908'
+source-wordcount: '983'
 ht-degree: 0%
 
 ---
-
 
 # Audience Builder in Real-Time Customer Data Platform
 
@@ -18,6 +18,21 @@ Basato su Adobe Experience Platform, [!DNL Adobe Real-Time Customer Data Platfor
 ![Generatore di pubblico all&#39;interno della sezione Account.](../assets/segmentation/audience-builder/audience-builder.png){zoomable="yes"}
 
 ## Campi {#fields}
+
+>[!CONTEXTUALHELP]
+>id="platform_b2b_audiencebuilder_showfullxdmschema"
+>title="Mostra schema XDM completo"
+>abstract="Per impostazione predefinita, vengono visualizzati solo i campi che contengono dati. Abilita questa opzione per mostrare tutti i campi nello schema XDM."
+
+>[!CONTEXTUALHELP]
+>id="platform_b2b_audiencebuilder_showrelationselectors"
+>title="Mostra selettori di relazioni"
+>abstract="Per impostazione predefinita, vengono utilizzate le relazioni standard per l’organizzazione. Abilita questa opzione per visualizzare i selettori di relazione utilizzati."
+
+>[!CONTEXTUALHELP]
+>id="platform_b2b_audiencebuilder_showconstrainedfields"
+>title="Mostra campi vincolati"
+>abstract="Per impostazione predefinita, vengono visualizzati solo i campi privi di vincoli. Abilita questa opzione per mostrare i campi con vincoli."
 
 Quando utilizzi Audience Builder per gli account, puoi utilizzare gli attributi dell’account o i tipi di pubblico esistenti come campi del pubblico.
 
