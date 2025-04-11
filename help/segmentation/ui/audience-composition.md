@@ -6,7 +6,7 @@ exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
 source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
 source-wordcount: '2345'
-ht-degree: 11%
+ht-degree: 16%
 
 ---
 
@@ -49,7 +49,7 @@ L&#39;area di lavoro per la composizione del pubblico è composta da quattro div
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_audience"
 >title="Blocco di pubblico"
->abstract="Il blocco Pubblico consente di aggiungere i sottogruppi di pubblico che desideri utilizzare per comporre il nuovo pubblico."
+>abstract="Il blocco Pubblico consente di accedere ai tipi di pubblico secondari che desideri utilizzare per comporre un nuovo pubblico."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_merge_types"
@@ -152,7 +152,7 @@ Viene visualizzato un elenco di tipi di pubblico. Seleziona **[!UICONTROL Aggiun
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_exclude_attribute"
 >title="Escludi per attributo"
->abstract="Quando escludi per attributo, puoi escludere profili specifici dalla visualizzazione nella composizione in base agli attributi selezionati."
+>abstract="Quando escludi per attributo, puoi escludere profili specifici in modo che non compaiano nella composizione, in base agli attributi selezionati."
 
 Se escludi per attributo, puoi selezionare gli attributi da escludere selezionando l&#39;icona ![filtro](/help/images/icons/project-edit.png) nella sezione **[!UICONTROL Regola di esclusione]**. L’esclusione dell’attributo ti consente di escludere dal pubblico risultante tutti i profili che lo contengono.
 
@@ -319,17 +319,17 @@ Per aggiungere un blocco **[!UICONTROL Split]**, seleziona l&#39;icona **+**, se
 
 Quando dividi il pubblico, puoi dividerlo per percentuale o per attributo.
 
-### Dividi per percentuale {#split-percentage}
+### Dividere per percentuale {#split-percentage}
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split_percentage"
->title="Dividi per percentuale"
+>title="Dividere per percentuale"
 >abstract="Puoi suddividere in modo casuale il pubblico in più tipi di pubblico, in base al numero di percorsi e alle percentuali forniti."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split_persistent"
 >title="Suddivisione persistente"
->abstract="Per rendere persistente la suddivisione percentuale, abilita questa opzione e seleziona uno spazio dei nomi delle identità."
+>abstract="Per rendere persistente la suddivisione percentuale, abilita questa opzione e seleziona uno spazio dei nomi identità."
 
 Quando si suddivide in percentuale, il pubblico viene suddiviso in modo casuale, in base al numero di percorsi e alle percentuali fornite.
 
@@ -361,8 +361,8 @@ Inoltre, puoi abilitare l&#39;interruttore **[!UICONTROL Altri profili]** per cr
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_publish"
->title="Pubblica"
->abstract="Puoi pubblicare la tua composizione per creare i tipi di pubblico risultanti in Adobe Experience Platform."
+>title="Pubblicazione"
+>abstract="Puoi pubblicare la composizione per creare i tipi di pubblico risultanti in Adobe Experience Platform."
 
 >[!IMPORTANT]
 >
