@@ -3,7 +3,7 @@ title: Guida alla valutazione del pubblico flessibile
 description: Scopri come utilizzare la valutazione flessibile del pubblico per eseguire processi di segmentazione in batch su richiesta.
 role: Developer, User
 exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
-source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
+source-git-commit: 7084b05d1ae142016cb2158fd22d07a240385190
 workflow-type: tm+mt
 source-wordcount: '1063'
 ht-degree: 5%
@@ -387,3 +387,4 @@ Per una valutazione flessibile del pubblico sono supportati solo i tipi di pubbl
 Versioni di valutazione del pubblico flessibili che sono state create utilizzando l’API o il conteggio dell’interfaccia utente verso il limite massimo. Tuttavia, l&#39;esecuzione del processo di segmentazione batch giornaliera su base notturna **non** contribuisce a questo limite.
 
 +++
+
