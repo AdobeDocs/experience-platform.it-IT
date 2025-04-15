@@ -2,7 +2,7 @@
 title: Trasmettere dati dal database Snowflake ad Experience Platform utilizzando l’interfaccia utente
 description: Scopri come inviare dati dal database Snwoflake ad Experience Platform
 exl-id: 49d488f1-90d8-452a-9f3e-02afdcc79b09
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 04a1cecbacdaf0b701d3ef18d03497973a8f3263
 workflow-type: tm+mt
 source-wordcount: '1648'
 ht-degree: 3%
@@ -86,7 +86,7 @@ Utilizza la directory del database a sinistra dello schermo e seleziona la tabel
 
 ![Interfaccia di selezione dei dati con una tabella di database selezionata.](../../../../images/tutorials/create/snowflake-streaming/select-table.png)
 
-Quindi, seleziona il tipo di colonna timestamp della tabella. È possibile selezionare due tipi di colonne di marca temporale: `TIMESTAMP_NTZ` o `TIMESTAMP_LTZ`. Se si seleziona un tipo di colonna `TIMESTAMP_NTZ`, è necessario specificare anche un fuso orario. Le colonne devono avere un vincolo non null. Per ulteriori informazioni, leggere la sezione sulle [limitazioni e domande frequenti]
+Quindi, seleziona il tipo di colonna timestamp della tabella. È possibile selezionare due tipi di colonne di marca temporale: `TIMESTAMP_NTZ` o `TIMESTAMP_LTZ`. Se si seleziona un tipo di colonna `TIMESTAMP_NTZ`, è necessario specificare anche un fuso orario. Le colonne devono avere un vincolo non null. Per ulteriori informazioni, leggere la sezione sulle [limitazioni e domande frequenti](../../../../connectors/databases/snowflake-streaming.md#limitations-and-frequently-asked-questions).
 
 In questo passaggio puoi anche configurare le impostazioni di retrocompilazione. La retrocompilazione determina quali dati vengono inizialmente acquisiti. Se la retrocompilazione è abilitata, tutti i file correnti nel percorso specificato verranno acquisiti durante la prima acquisizione pianificata. In caso contrario, verranno acquisiti solo i file caricati tra la prima esecuzione dell’acquisizione e l’ora di inizio. I file caricati prima dell’ora di inizio non verranno acquisiti.
 
