@@ -6,9 +6,9 @@ user-guide-description: Scopri come distribuire e gestire i tag di analisi, mark
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7fe7bbf7f4566a567c08ef73b4b9b503ea140549
 workflow-type: tm+mt
-source-wordcount: '777'
+source-wordcount: '778'
 ht-degree: 44%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 44%
 * Introduzione {#get-started}
    * [Guida rapida](./quick-start/quick-start.md)
    * [Guide all&#39;implementazione](./quick-start/implementation-guides.md)
-* Guide dell&#39;interfaccia utente {#ui}
+* Guide dell’interfaccia utente {#ui}
    * [Panoramica](./ui/managing-resources/overview.md)
    * Estensioni {#extensions}
       * [Panoramica](./ui/managing-resources/extensions/overview.md)
@@ -47,7 +47,7 @@ ht-degree: 44%
    * [Self-hosting delle librerie](./ui/publishing/hosts/self-hosting-libraries.md)
    * [Ripubblicare una libreria](./ui/publishing/republish.md)
    * [Tag Experience Platform (Cina)](./ui/publishing/premium-cdn.md)
-* Informazioni sul lato client {#client-side}
+* Informazioni sulle operazioni lato client {#client-side}
    * [Panoramica](./ui/client-side/overview.md)
    * [Implementazione asincrona](./ui/client-side/asynchronous-deployment.md)
    * [Documentazione per gli oggetti Satellite](./ui/client-side/satellite-object.md)
@@ -80,7 +80,7 @@ ht-degree: 44%
       * [Adobe Analytics e Adobe Target](https://exchange.adobe.com/apps/ec/105363/6sense-for-analytics-and-target)
       * [Adobe Analytics e Microsoft Dynamics](https://exchange.adobe.com/apps/ec/102966)
       * [Adobe Analytics e Salesforce](https://exchange.adobe.com/apps/ec/101530)
-      * Stringa prodotto Adobe Analytics {#product-string}
+      * Adobe Analytics Product String {#product-string}
          * [Panoramica](./extensions/client/product-string/overview.md)
          * [Note sulla versione](./extensions/client/product-string/release-notes.md)
       * [Generatore di stringhe di prodotto Adobe Analytics](https://exchange.adobe.com/apps/ec/101461)
@@ -117,10 +117,10 @@ ht-degree: 44%
       * Adobe Media Analytics per audio e video {#media-analytics}
          * [Panoramica](./extensions/client/media-analytics/overview.md)
          * [Note sulla versione](./extensions/client/media-analytics/release-notes.md)
-      * Adobe Media Analytics (SDK 3.x) {#media-analytics-3x}
+      * Adobe Media Analytics (3.x SDK) {#media-analytics-3x}
          * [Panoramica](./extensions/client/media-analytics-3x/overview.md)
          * [Note sulla versione](./extensions/client/media-analytics-3x/release-notes.md)
-      * Privacy Adobe {#privacy}
+      * Privacy di Adobe {#privacy}
          * [Panoramica](./extensions/client/privacy/overview.md)
       * [Selettore suite di rapporti Adobe](https://exchange.adobe.com/apps/ec/100640)
       * Adobe Target {#target}
@@ -140,14 +140,14 @@ ht-degree: 44%
       * [Contesto umano Beemray](https://exchange.adobe.com/apps/ec/101063)
       * [Tracciamento eventi universali Bing Ads](https://exchange.adobe.com/apps/ec/100154)
       * [Ramo](https://exchange.adobe.com/apps/ec/101382)
-      * [!DNL BrightCove] tracciamento video {#brightcove}
+      * Tracciamento video [!DNL BrightCove] {#brightcove}
          * [Panoramica](./extensions/client/brightcove/overview.md)
          * [Note sulla versione](./extensions/client/brightcove/release-notes.md)
       * [MetricheTracciamentoChiamate](https://exchange.adobe.com/apps/ec/107695)
       * [Identificatore Source canale](https://exchange.adobe.com/apps/ec/101412)
       * [Esperienze Cheetah](https://exchange.adobe.com/apps/ec/102759)
       * [Clic](https://exchange.adobe.com/apps/ec/100082)
-      * Plug-in comuni di Analytics {#plugins}
+      * Plugin comuni di Analytics {#plugins}
          * [Panoramica](./extensions/client/plugins/overview.md)
          * [Note sulla versione](./extensions/client/plugins/release-notes.md)
       * [Concat](https://exchange.adobe.com/apps/ec/104690)
@@ -169,7 +169,7 @@ ht-degree: 44%
       * [InizioVedere](https://exchange.adobe.com/apps/ec/100164)
       * [Gainsight PX](https://exchange.adobe.com/apps/ec/103343)
       * [Coinvolgimento predittivo Genesys](https://exchange.adobe.com/apps/ec/106148)
-      * Livello dati Google {#google-data-layer}
+      * Google Data Layer {#google-data-layer}
          * [Panoramica](./extensions/client/google-data-layer/overview.md)
          * [Note sulla versione](./extensions/client/google-data-layer/release-notes.md)
       * [Tag del sito globale Google (gtag)](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag)
@@ -210,14 +210,16 @@ ht-degree: 44%
       * [Compositore XDM](https://exchange.adobe.com/apps/ec/106062)
       * [Tracciamento conversione testo](https://exchange.adobe.com/apps/ec/103174)
       * [[!DNL Youtube] Riproduzione](https://exchange.adobe.com/apps/ec/104160)
-      * [!DNL YouTube] tracciamento video {#youtube}
+      * Tracciamento video [!DNL YouTube] {#youtube}
          * [Panoramica](./extensions/client/youtube/overview.md)
          * [Note sulla versione](./extensions/client/youtube/release-notes.md)
-   * Estensioni di inoltro eventi (lato server) {#server}
+   * Estensioni di inoltro degli eventi (lato server) {#server}
       * [Panoramica](./extensions/server/overview.md)
       * Connettore Adobe Experience Platform Cloud {#cloud-connector}
          * [Panoramica](./extensions/server/cloud-connector/overview.md)
          * [Note sulla versione](./extensions/server/cloud-connector/release-notes.md)
+      * [!DNL Adform] {#adform}
+         * [Panoramica](./extensions/server/adform/overview.md)
       * [!DNL AWS] {#aws}
          * [Panoramica](./extensions/server/aws/overview.md)
       * [!DNL Braze] {#braze}
@@ -232,7 +234,7 @@ ht-degree: 44%
          * [Panoramica](./extensions/server/google-cloud-platform/overview.md)
       * [!DNL LinkedIn Conversions API] {#linkedin}
          * [Panoramica](./extensions/server/linkedin/overview.md)
-      * [!DNL Mailchimp] Edge {#mailchimp}
+      * Edge [!DNL Mailchimp] {#mailchimp}
          * [Panoramica](./extensions/server/mailchimp/overview.md)
       * [!DNL Meta Conversions API] {#meta}
          * [Panoramica](./extensions/server/meta/overview.md)
@@ -251,7 +253,7 @@ ht-degree: 44%
          * [Panoramica](./extensions/server/splunk/overview.md)
       * [!DNL Twitter] {#twitter}
          * [Panoramica](./extensions/server/twitter/overview.md)
-      * [!DNL Tiktok] API eventi Web {#tiktok}
+      * API di [!DNL Tiktok] eventi Web {#tiktok}
          * [Panoramica](./extensions/server/tiktok/overview.md)
       * [!DNL The Trade Desk] {#thetradedesk}
          * [Panoramica](./extensions/server/tradedesk/overview.md)
@@ -292,7 +294,7 @@ ht-degree: 44%
    * [Hosting di librerie di terze parti](./extension-dev/third-party-libraries.md)
    * [Variabile libera “turbine”](./extension-dev/turbine.md)
    * [Standard di compatibilità con le versioni precedenti](./extension-dev/backwards-compatibility.md)
-* API di Reactor {#api}
+* API Reactor {#api}
    * [Panoramica](./api/overview.md)
    * [Autenticazione e accesso all’API di Reactor](./api/getting-started.md)
    * Endpoint {#endpoints}
