@@ -1,6 +1,6 @@
 ---
-title: Guida alla valutazione del pubblico flessibile
-description: Scopri come utilizzare la valutazione flessibile del pubblico per eseguire processi di segmentazione in batch su richiesta.
+title: Guida flessibile alla valutazione del pubblico
+description: Scopri come utilizzare la valutazione flessibile del pubblico per eseguire processi batch Segmentazione on-demand.
 role: Developer, User
 exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
 source-git-commit: 7084b05d1ae142016cb2158fd22d07a240385190
@@ -10,15 +10,15 @@ ht-degree: 5%
 
 ---
 
-# Guida alla valutazione flessibile del pubblico
+# Guida flessibile alla valutazione del pubblico
 
 >[!AVAILABILITY]
 >
->La valutazione flessibile del pubblico è **only** disponibile nelle istanze di Experience Platform in esecuzione su [!DNL Microsoft Azure]. Per ulteriori informazioni sull&#39;infrastruttura Experience Platform supportata, consulta la [Panoramica multi-cloud di Experience Platform](../../landing/multi-cloud.md).
+>La valutazione flessibile del pubblico è **disponibile solo** sulle istanze di Experience Platform in esecuzione su [!DNL Microsoft Azure]. Per ulteriori informazioni sull&#39;infrastruttura Experience Platform supportata, vedere la [panoramica Experience Platform multi cloud](../../landing/multi-cloud.md).
 >
->Inoltre, la valutazione flessibile del pubblico è **solo** disponibile per l&#39;utilizzo con Real-Time CDP B2C Edition.
+>Inoltre, la valutazione flessibile del pubblico è **disponibile solo** per l&#39;uso con CDP in tempo reale B2C Edition.
 
-La valutazione flessibile del pubblico consente di eseguire un processo di segmentazione batch su richiesta. Con una valutazione flessibile del pubblico, puoi eseguire campagne ad hoc, comunicazioni just-in-time o altre attività che richiedono tempo.
+La valutazione flessibile dell&#39;audience consente di eseguire un batch Segmentazione job on-demand. Grazie alla valutazione flessibile del pubblico, puoi eseguire lanci di campagne annuncio-hoc, comunicazioni just-in-time o altre attività urgenti.
 
 ## Guardrail {#guardrails}
 
@@ -27,45 +27,45 @@ La valutazione flessibile del pubblico consente di eseguire un processo di segme
 >title="Limiti flessibili per la valutazione del pubblico"
 >abstract="È possibile valutare fino a 20 tipi di pubblico in un’unica esecuzione di valutazione del pubblico flessibile.<br/><br/>Inoltre, mentre il processo di valutazione viene eseguito il prima possibile, potrebbero verificarsi ritardi di sistema poiché le valutazioni su richiesta <b>non possono</b> essere eseguite contemporaneamente a un’altra valutazione su richiesta o in batch."
 
-Quando esegui una valutazione flessibile del pubblico, tieni presente le seguenti condizioni:
+Quando esegui una valutazione flessibile del pubblico, tieni presenti le seguenti condizioni:
 
-- Puoi utilizzare solo la valutazione flessibile del pubblico **due** al giorno per sandbox. Questo limite viene ripristinato alla mezzanotte (UTC).
-- Hai un **massimo** di 50 esecuzioni flessibili di valutazione del pubblico all&#39;anno per **sandbox di produzione**.
-- Hai un **massimo** di 100 esecuzioni flessibili di valutazione del pubblico all&#39;anno per sandbox **sviluppo**.
-- Tutti i tipi di pubblico **must** hanno origine &quot;Servizio di segmentazione&quot;.
-- Tutti i tipi di pubblico **devono** essere valutati utilizzando la segmentazione batch.
-- Tutti i tipi di pubblico **devono** essere basati sulle persone.
-- Puoi selezionare solo un massimo di 20 tipi di pubblico per ogni esecuzione di valutazione flessibile del pubblico.
+- Puoi utilizzare la valutazione **flessibile del pubblico solo due volte** al giorno per sandbox. Questo limite viene reimpostato a mezzanotte (UTC).
+- Hai un **massimo** di 50 esecuzioni flessibili di valutazione del pubblico all&#39;anno per sandbox **di produzione** .
+- Hai un **massimo** di 100 esecuzioni flessibili di valutazione del pubblico all&#39;anno per ogni **sandbox di sviluppo** .
+- Tutti i tipi di **pubblico devono** avere un&#39;origine di &quot;Servizio di segmentazione&quot;.
+- Tutti i tipi di pubblico devono **essere valutati** utilizzando Segmentazione batch.
+- Tutti i tipi di **pubblico devono** essere basati sulle persone.
+- Puoi selezionare solo un massimo di 20 tipi di pubblico per ogni esecuzione flessibile di valutazione.
 
 >[!NOTE]
 >
->È possibile acquistare ulteriori esecuzioni di valutazione del pubblico flessibili all’anno. Per ulteriori informazioni, contatta l’Assistenza clienti di Adobe.
+>Puoi acquistare ulteriori esecuzioni di valutazione flessibili del pubblico all&#39;anno. Per ulteriori informazioni, contatta Adobe Systems l&#39;Assistenza clienti.
 
 ## Accesso {#access}
 
-Per utilizzare la valutazione flessibile del pubblico, è necessario disporre delle seguenti autorizzazioni:
+Per utilizzare la valutazione flessibile del pubblico, devi disporre dei seguenti autorizzazione:
 
-- **[!UICONTROL Valuta il segmento in un pubblico]** nella sezione **[!DNL Profile Management]**.
+- **[!UICONTROL Valuta il segmento a un pubblico]** sotto la **[!DNL Profile Management]** sezione.
 
-Per ulteriori informazioni sul controllo degli accessi basato sui ruoli, leggere la [panoramica sul controllo degli accessi](../../access-control/home.md).
+Per ulteriori informazioni sul controllo accesso basato sui ruoli, leggere la panoramica](../../access-control/home.md) del [controllo accesso.
 
 ## Esecuzione di una valutazione flessibile del pubblico
 
-Puoi eseguire una valutazione flessibile del pubblico utilizzando le API o l’interfaccia utente di Experience Platform.
+Puoi eseguire una valutazione flessibile dell&#39;audience utilizzando le API Experience Platform o interfaccia.
 
 >[!BEGINTABS]
 
->[!TAB API di Experience Platform]
+>[!TAB API Experience Platform]
 
-Per eseguire una valutazione flessibile del pubblico nelle API di Experience Platform, è necessario creare un processo di segmentazione che contenga gli ID di tutte le definizioni di segmento (pubblico) che desideri valutare.
+Per eseguire una valutazione flessibile dell&#39;audience all&#39;interno delle API Experience Platform, devi creare un processo di segmento che contenga gli ID di tutte le definizioni di segmento (audience) che desideri valutare.
 
 >[!NOTE]
 >
->Puoi aggiungere solo un **massimo** di 20 ID di definizione segmento per chiamata API del processo di segmento.
+>Puoi aggiungere solo un **massimo** di 20 ID di definizione di segmento per ogni chiamata API del processo di segmento.
 
-Per creare un nuovo processo di segmento, devi eseguire una richiesta POST all&#39;endpoint `/segment/jobs` e includere gli ID delle definizioni dei segmenti nel corpo della richiesta.
+È possibile creare un nuovo processo di segmento effettuando una richiesta POST all&#39;endpoint `/segment/jobs` e includendo gli ID delle definizioni del segmento nel corpo del richiesta.
 
-+++Richiesta di esempio per la creazione di un nuovo processo di segmentazione
++++Un richiesta di esempio per la creazione di un nuovo processo segmento
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
@@ -86,13 +86,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `segmentId` | ID della definizione del segmento che desideri valutare. Queste definizioni dei segmenti possono appartenere a diversi criteri di unione. |
+| `segmentId` | ID della definizione del segmento che si desidera valutare. Queste definizioni di segmento possono appartenere a criteri di unione diversi. |
 
 +++
 
-In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informazioni sul processo di segmentazione appena creato.
+Una risposta corretta restituisce lo stato HTTP 200 con le informazioni sul processo di segmento appena creato.
 
-+++ Una risposta di esempio durante la creazione di un nuovo processo di segmentazione.
++++ Risposta di esempio durante la creazione di un nuovo processo segmento.
 
 ```json
 {
@@ -201,9 +201,9 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 
 +++
 
-Dopo aver creato il processo di segmentazione, puoi controllarne lo stato effettuando una richiesta GET all&#39;endpoint `/segment/jobs`, fornendo l&#39;ID del nuovo processo di segmentazione creato nel percorso della richiesta.
+Dopo aver creato il processo di segmento, puoi verificarne lo stato effettuando una richiesta GET all&#39;endpoint `/segment/jobs` , fornendo l&#39;ID del processo di segmento appena creato nel percorso richiesta.
 
-+++Richiesta di esempio per recuperare un processo di segmentazione
++++richiesta di esempio per recuperare un processo di segmento
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f \
@@ -215,10 +215,10 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/b31aed3d-b3b1-4
 
 +++
 
-In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informazioni dettagliate sul processo di segmentazione specificato.
+Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate sul processo di segmento specificato.
 
 
-+++ Risposta di esempio per recuperare un processo di segmentazione.
++++ Risposta di esempio per il recupero di un processo di segmento.
 
 ```json
 {
@@ -298,33 +298,33 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 
 +++
 
->[!TAB Interfaccia utente di Experience Platform]
+>[!TAB Experience Platform interfaccia]
 
-Per eseguire una valutazione flessibile del pubblico nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Tipi di pubblico]** nella sezione **[!UICONTROL Clienti]**.
+Per eseguire una valutazione flessibile dell&#39;audience all&#39;interno del interfaccia Experience Platform, seleziona **[!UICONTROL Audiences]** nella **[!UICONTROL sezione Clienti]** .
 
-![Il pulsante Tipi di pubblico nella sezione Clienti è evidenziato. Viene visualizzato il Portale pubblico per i profili dei clienti.](../images/methods/fae/audience-portal.png)
+![Vengono evidenziate le pulsante Audiences all&#39;interno della sezione Clienti. Viene visualizzato il Audience Portal per i profili dei clienti.](../images/methods/fae/audience-portal.png)
 
-Viene visualizzato il Portale dei tipi di pubblico, con un elenco di tutti i tipi di pubblico relativi all’organizzazione. In Audience Portal, puoi scegliere i tipi di pubblico da valutare e selezionare **[!UICONTROL Valuta pubblico]**.
+Viene visualizzato il portale del pubblico con un elenco di tutti i tipi di pubblico dell&#39;organizzazione. In Audience Portal, puoi scegliere i tipi di pubblico da valutare e selezionare **[!UICONTROL Valuta pubblico]**.
 
-![Sono selezionati i tipi di pubblico per i quali si desidera utilizzare la valutazione flessibile del pubblico.](../images/methods/fae/evaluate-audiences.png)
+![Vengono selezionati i tipi di pubblico per i quali desideri utilizzare la valutazione flessibile del pubblico.](../images/methods/fae/evaluate-audiences.png)
 
-Viene visualizzato il popover **[!UICONTROL Valuta i tipi di pubblico su richiesta]**, in cui viene visualizzato l&#39;elenco dei tipi di pubblico che verranno valutati con il processo di segmentazione su richiesta. Se un pubblico non è idoneo per la valutazione su richiesta, verrà rimosso automaticamente dal processo di valutazione. Verifica che i tipi di pubblico elencati siano quelli che desideri valutare.
+Viene visualizzato il **[!UICONTROL popover Valuta pubblico on-demand]** , con l&#39;elenco dei tipi di pubblico che verranno valutati con il processo di segmento su richiesta. Se un pubblico non è idoneo a essere valutato on-demand, verrà automaticamente rimosso dal lavoro di valutazione. Verifica che i tipi di pubblico elencati siano quelli che desideri valutare.
 
-![Vengono visualizzati i tipi di pubblico che possono essere valutati utilizzando la valutazione flessibile.](../images/methods/fae/evaluate-audiences-modal.png)
+![Vengono visualizzati i tipi di pubblico che possono essere valutati utilizzando una valutazione flessibile.](../images/methods/fae/evaluate-audiences-modal.png)
 
-Dopo aver confermato che sono elencati i tipi di pubblico corretti, puoi procedere con la richiesta e verrà avviata la valutazione flessibile del pubblico. È possibile visualizzare lo stato di questa valutazione del pubblico nella [visualizzazione di monitoraggio dei processi di valutazione](../../dataflows/ui/monitor-audiences.md#evaluation-job-details).
+Dopo aver confermato che sono elencati i tipi di pubblico corretti, puoi procedere con l&#39;richiesta e inizierà la valutazione flessibile del pubblico. Puoi visualizzare lo stato di questa valutazione del pubblico nella vista](../../dataflows/ui/monitor-audiences.md#evaluation-job-details) Monitoraggio del [processo di valutazione.
 
 >[!NOTE]
 >
->Lo stato del processo di segmentazione può essere segnalato come nello stato &quot;In coda&quot; all’interno del dashboard di monitoraggio. Per visualizzare lo stato più aggiornato del processo di segmentazione, effettua una richiesta GET all&#39;endpoint `/segment/jobs`, fornendo l&#39;ID del processo di segmentazione nel percorso della richiesta. Ulteriori informazioni sull’utilizzo di questo endpoint sono disponibili nella scheda API.
+>Lo stato del processo di segmento può essere riportato come nello stato &quot;In coda&quot; all&#39;interno del dashboard di monitoraggio. È possibile visualizzare lo stato più aggiornato del processo di segmento effettuando una richiesta GET all&#39;endpoint `/segment/jobs` , fornendo l&#39;ID del processo di segmento nel percorso richiesta. Ulteriori informazioni sull&#39;utilizzo di questo endpoint sono disponibili in API scheda.
 >
->Se esegui una valutazione flessibile del pubblico e vuoi che la valutazione attivi il pubblico in una destinazione, devi assicurarti che la frequenza sia impostata su **[!UICONTROL Dopo la valutazione del segmento]**. L&#39;esecuzione della valutazione flessibile del pubblico su tipi di pubblico già impostati per essere attivati [dopo la valutazione del segmento](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files), attiverà i tipi di pubblico al termine del processo di valutazione flessibile del pubblico, indipendentemente da eventuali processi di attivazione giornalieri precedenti.
+>Se esegui una valutazione flessibile del pubblico e desideri che la valutazione attivi il pubblico verso una destinazione, devi assicurarti che la frequenza sia impostata su **[!UICONTROL Dopo la valutazione]** del segmento. L&#39;esecuzione di una valutazione flessibile del pubblico sui tipi di pubblico che sono già impostati per essere attivati [dopo la valutazione](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) del segmento, attiverà i tipi di pubblico non appena termina il processo di valutazione del pubblico flessibile, indipendentemente da eventuali precedenti processi di attivazione giornaliera.
 
 >[!ENDTABS]
 
 ## Video {#video}
 
-Il video seguente illustra come accedere e utilizzare la valutazione flessibile del pubblico in Experience Platform.
+Il video seguente illustra come accesso e utilizzare la valutazione flessibile del pubblico in Experience Platform.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3453640?)
 
@@ -336,23 +336,23 @@ Nella sezione seguente sono elencate le domande frequenti relative alla valutazi
 
 +++ Risposta
 
-Puoi attivare un pubblico utilizzando la valutazione flessibile del pubblico subito dopo la sua creazione.
+È possibile attivare un pubblico utilizzando una valutazione flessibile del pubblico subito dopo la creazione.
 
 +++
 
-### È possibile eseguire la pianificazione con una valutazione flessibile del pubblico?
+### Posso eseguire la pianificazione con una valutazione flessibile del pubblico?
 
 +++ Risposta
 
-No, la pianificazione non è disponibile per l’utilizzo con la valutazione flessibile del pubblico.
+No, la programmazione non è disponibile per la valutazione flessibile del pubblico.
 
 +++
 
-### È necessario eseguire un processo di esportazione aggiuntivo quando si utilizza la valutazione flessibile del pubblico?
+### Devo eseguire un ulteriore processo di esportazione quando uso la valutazione flessibile del pubblico?
 
 +++ Risposta
 
-No, il processo di esportazione viene eseguito automaticamente dopo il completamento del processo di segmento corrispondente.
+No, il processo di esportazione viene eseguito automaticamente dopo aver completato il processo di segmento corrispondente.
 
 +++
 
@@ -360,31 +360,31 @@ No, il processo di esportazione viene eseguito automaticamente dopo il completam
 
 +++ Risposta
 
-Puoi utilizzare i tipi di pubblico in tutti i servizi a valle, comprese le destinazioni e i percorsi Adobe Journey Optimizer.
+Puoi usare i tipi di pubblico in tutti i servizi a valle, incluse le destinazioni e i percorsi Adobe Systems Ottimizzatore percorso.
 
 +++
 
-### Quando vengono ripristinati i limiti di valutazione del pubblico flessibile?
+### Quando vengono ripristinati i limiti flessibili di valutazione del pubblico?
 
 +++ Risposta
 
-Il limite giornaliero viene ripristinato alla mezzanotte (UTC). Il limite annuale viene reimpostato nella data dell’anniversario del contratto.
+Il limite giornaliero viene reimpostato a mezzanotte (UTC). Il limite annuale viene reimpostato alla data di scadenza del contratto.
 
 +++
 
-### Quali tipi di pubblico sono supportati con la valutazione flessibile del pubblico?
+### Quali tipi di pubblico sono supportati con una valutazione flessibile del pubblico?
 
 +++ Risposta
 
-Per una valutazione flessibile del pubblico sono supportati solo i tipi di pubblico con l’origine del servizio di segmentazione. Altri tipi di pubblico, come composizioni, caricamento personalizzato o Data Distiller, non sono supportati per una valutazione flessibile del pubblico.
+Solo i tipi di pubblico con l&#39;origine del servizio di segmentazione sono supportati per una valutazione flessibile del pubblico. Altri tipi di pubblico, come composizioni, caricamento personalizzato o Distiller dati, non sono supportati per una valutazione flessibile del pubblico.
 
 +++
 
-### Quali esecuzioni contribuiscono al conteggio flessibile delle esecuzioni di valutazione del pubblico?
+### Quali corse contribuiscono al conteggio flessibile delle corse di valutazione del pubblico?
 
 +++ Risposta
 
-Versioni di valutazione del pubblico flessibili che sono state create utilizzando l’API o il conteggio dell’interfaccia utente verso il limite massimo. Tuttavia, l&#39;esecuzione del processo di segmentazione batch giornaliera su base notturna **non** contribuisce a questo limite.
+Le esecuzioni di valutazione flessibili del pubblico create utilizzando l&#39;API o il interfaccia vengono conteggiate ai fini del limite massimo. Tuttavia, l&#39;esecuzione giornaliera di batch Segmentazione processi che viene eseguita su base **notturna non** contribuisce a questo limite.
 
 +++
 

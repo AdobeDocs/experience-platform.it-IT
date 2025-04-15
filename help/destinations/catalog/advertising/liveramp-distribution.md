@@ -54,7 +54,7 @@ Tramite la connessione [!DNL LiveRamp - Distribution] possono ora attivare i tip
 
 Prima di attivare i tipi di pubblico tramite la connessione [!DNL LiveRamp - Distribution], utilizza la connessione [LiveRamp - Onboarding](liveramp-onboarding.md) per esportare i tipi di pubblico di Experience Platform in LiveRamp.
 
-Dopo aver effettuato l&#39;onboarding dei tipi di pubblico in LiveRamp, continua il flusso di lavoro di attivazione dal passaggio [connettiti alla destinazione](#connect) per selezionare e configurare le piattaforme di destinazione di destinazione per l&#39;attivazione dei dati.
+Dopo aver effettuato l&#39;onboarding dei tipi di pubblico in LiveRamp, continua il workflow di attivazione dal [passaggio di connessione alla destinazione](#connect) per selezionare e configurare le piattaforme di destinazione destinazione per l&#39;attivazione dei dati.
 
 ## Connettersi alla destinazione {#connect}
 
@@ -168,7 +168,7 @@ Per configurare i dettagli per la destinazione, compila i campi seguenti.
 
 ![Immagine dell&#39;interfaccia utente di Experience Platform con i campi dei dati cliente per la destinazione Cardlytics.](../../assets/catalog/advertising/liveramp-distribution/LR_Cardlytics_DestSpecific.png)
 
-* **[!UICONTROL Nome client]**: il nome dell&#39;account dell&#39;inserzionista, che si desidera mostrare al partner di destinazione. Utilizza il nome della tua azienda. Non utilizzare spazi o caratteri speciali.
+* **[!UICONTROL Nome]** cliente: il tuo inserzionista account nome, come vorresti like che fosse mostrato al partner di destinazione. Utilizza il nome della tua azienda. Non utilizzare spazi o caratteri speciali.
 
 ### [!DNL Disney (Hulu/ESPN/ABC)] {#disney}
 
@@ -282,8 +282,8 @@ Per configurare i dettagli per la destinazione, compila i campi seguenti.
 ![Immagine dell&#39;interfaccia utente di Experience Platform con i campi dei dati cliente per la destinazione Nexxen.](../../assets/catalog/advertising/liveramp-distribution/LR_Nexxen_DestSpecific.png)
 
 * **[!UICONTROL Tipo di tariffa]**: il tipo di tariffa rappresenta il modo in cui l&#39;utilizzo dei dati deve essere fatturato. Tutte le tariffe 0,00$ devono essere a prezzo fisso. Se non sai con certezza quale tipo di tariffa utilizzare, contatta il rappresentante Nexxen.
-* **[!UICONTROL ID mercato]**: immettere l&#39;ID mercato numerico in cui creare il contratto dati Nexxen. Se stai facendo la sindacazione “AlwaysOn” in ogni mercato della piattaforma Nexxen, immetti -1.
-* **[!UICONTROL ID inserzionista]**: se invii dati a un singolo inserzionista nella piattaforma Nexxen, immetti l&#39;ID inserzionista numerico Nexxen. Se si desidera rendere i dati disponibili a tutti gli inserzionisti in un mercato o se questi segmenti sono &quot;AlwaysOn&quot;, immettere -1.
+* **[!UICONTROL ID]** mercato: inserire l&#39;ID mercato numerico in cui deve essere creato il contratto dati Nexxen. Se stai facendo la sindacazione “AlwaysOn” in ogni mercato della piattaforma Nexxen, immetti -1.
+* **[!UICONTROL ID inserzionista]**: se invii dati a un singolo inserzionista nella piattaforma Nexxen, inserisci l&#39;ID inserzionista numerico Nexxen. Se desideri rendere i dati disponibili a tutti gli inserzionisti di un mercato o se questi segmenti sono &quot;AlwaysOn&quot;, inserisci -1.
 * **[!UICONTROL E-mail di contatto]**: immetti l&#39;indirizzo e-mail che Nexxen deve utilizzare per inviare i dettagli del contratto dei dati. Probabilmente si tratta del tuo indirizzo e-mail, ma può anche essere un alias e-mail. Per più destinatari, separare utilizzando le virgole ( `email1@domain.com`, `email2@domain.com`).
 
 ### [!DNL One Fox] {#fox}
@@ -391,9 +391,9 @@ Per configurare i dettagli per la destinazione, compila i campi seguenti.
 
 Per configurare i dettagli per la destinazione, compila i campi seguenti.
 
-![Immagine dell&#39;interfaccia utente di Experience Platform con gli identificatori supportati per la destinazione TargetSpot.](../../assets/catalog/advertising/liveramp-distribution/LR_TargetSpot_DestSpecific.png)
+![Experience Platform immagine interfaccia che mostri gli identificatori supportati per la destinazione TargetSpot.](../../assets/catalog/advertising/liveramp-distribution/LR_TargetSpot_DestSpecific.png)
 
-* **[!UICONTROL Nome client]**: il nome dell&#39;account dell&#39;inserzionista, che si desidera mostrare al partner di destinazione. Utilizza il nome della tua azienda. Non utilizzare spazi o caratteri speciali.
+* **[!UICONTROL Nome]** cliente: il tuo inserzionista account nome, come vorresti like che fosse mostrato al partner di destinazione. Utilizza il nome della tua azienda. Non utilizzare spazi o caratteri speciali.
 
 ### [!DNL Teads] {#teads}
 

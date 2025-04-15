@@ -1,5 +1,5 @@
 ---
-title: Strumenti sandbox
+title: Utensili sandbox
 description: Esporta e importa facilmente le configurazioni Sandbox tra sandbox.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
 source-git-commit: 480785dc17ab27df5544524cf08baa9150fe426f
@@ -17,7 +17,7 @@ ht-degree: 7%
 
 Migliora la precisione della configurazione nelle sandbox ed esporta e importa facilmente le configurazioni sandbox tra sandbox con la funzione di strumenti sandbox. Utilizza gli strumenti sandbox per ridurre il time-to-value per il processo di implementazione e spostare le configurazioni corrette tra le sandbox.
 
-È possibile utilizzare la funzione degli strumenti sandbox per selezionare oggetti diversi ed esportarli in un pacchetto. Un pacchetto può essere costituito da uno o più oggetti. <!--or an entire sandbox.-->Tutti gli oggetti inclusi in un pacchetto devono appartenere alla stessa sandbox.
+È possibile utilizzare la funzione di strumenti sandbox per selezionare diversi oggetti ed esportarli in un pacchetto. Un pacchetto può essere costituito da uno o più oggetti. <!--or an entire sandbox.-->Tutti gli oggetti inclusi in un pacchetto devono provenire dalla stessa sandbox.
 
 ## Oggetti supportati per gli strumenti sandbox {#supported-objects}
 
@@ -30,10 +30,10 @@ Nella tabella seguente sono elencati [!DNL Adobe Real-Time Customer Data Platfor
 | Piattaforma | Oggetto | Dettagli |
 | --- | --- | --- |
 | Customer Data Platform | Origini | Le credenziali dell’account di origine non vengono replicate nella sandbox di destinazione per motivi di sicurezza e sarà necessario aggiornarle manualmente. Per impostazione predefinita, il flusso di dati di origine viene copiato in stato di bozza. |
-| Customer Data Platform | Tipi di pubblico | È supportato solo il tipo **[!UICONTROL Pubblico cliente]** **[!UICONTROL Servizio di segmentazione]**. Le etichette esistenti per il consenso e la governance verranno copiate nello stesso processo di importazione. Il sistema selezionerà automaticamente il criterio di unione predefinito nella sandbox di destinazione con la stessa classe XDM durante il controllo delle dipendenze dei criteri di unione. |
-| Customer Data Platform | Identità | Durante la creazione nella sandbox di destinazione, il sistema deduplica automaticamente gli spazi dei nomi di identità standard di Adobe. I tipi di pubblico possono essere copiati solo quando tutti gli attributi nelle regole del pubblico sono abilitati nello schema di unione. Gli schemi necessari devono prima essere spostati e abilitati per il profilo unificato. |
-| Customer Data Platform | Schemi | Le etichette esistenti per il consenso e la governance verranno copiate nello stesso processo di importazione. L’utente dispone della flessibilità necessaria per importare schemi senza l’opzione Profilo unificato abilitata. Il caso edge delle relazioni di schema non è incluso nel pacchetto. |
-| Customer Data Platform | Set di dati | I set di dati vengono copiati con l’impostazione di profilo unificato disabilitata per impostazione predefinita. |
+| Customer Data Platform | Tipi di pubblico | È supportato solo il **[!UICONTROL servizio]** di segmentazione del tipo **[!UICONTROL di pubblico]** del cliente. Le etichette esistenti per il consenso e la governance verranno copiate nello stesso processo di importazione. Il sistema selezionerà automaticamente il criterio di unione predefinito nella sandbox di destinazione con la stessa classe XDM durante il controllo delle dipendenze dei criteri di unione. |
+| Customer Data Platform | Identità | Durante la creazione nella sandbox di destinazione, il sistema deduplica automaticamente gli spazi dei nomi di identità standard di Adobe. I tipi di pubblico possono essere copiati solo quando tutti gli attributi nelle regole del pubblico sono abilitati nello schema di unione. Gli schemi necessari devono essere prima spostati e abilitati per il profilo unificato. |
+| Dati cliente Platform | Schemi | Le etichette esistenti per il consenso e la governance verranno copiate nello stesso processo di importazione. L&#39;utente ha la flessibilità di importare schemi senza abilitare l&#39;opzione Profilo unificato. I casi limite delle relazioni schema non sono inclusi nel pacchetto. |
+| Dati cliente Platform | Set di dati | I set di dati vengono copiati con l’impostazione di profilo unificato disabilitata per impostazione predefinita. |
 | Customer Data Platform | Criteri di consenso e governance | Aggiungi a un pacchetto i criteri personalizzati creati da un utente e spostali tra le diverse sandbox. |
 
 I seguenti oggetti vengono importati ma sono in stato bozza o disabilitato:
@@ -51,26 +51,26 @@ Nella tabella seguente sono elencati [!DNL Adobe Journey Optimizer] oggetti attu
 
 | Piattaforma | Oggetto | Dettagli |
 | --- | --- | --- |
-| [!DNL Adobe Journey Optimizer] | Pubblico | Un pubblico può essere copiato come oggetto dipendente dell’oggetto percorso. Puoi selezionare Crea un nuovo pubblico o riutilizzarne uno esistente nella sandbox di destinazione. |
+| [!DNL Adobe Journey Optimizer] | Pubblico | Un pubblico può essere copiato come oggetto dipendente dall&#39;oggetto percorso. Puoi selezionare Crea un nuovo pubblico o riutilizzane uno esistente nella sandbox di destinazione. |
 | [!DNL Adobe Journey Optimizer] | Schema | Gli schemi utilizzati nel percorso possono essere copiati come oggetti dipendenti. Puoi selezionare Crea un nuovo schema o riutilizzarne uno esistente nella sandbox di destinazione. |
 | [!DNL Adobe Journey Optimizer] | Criterio di unione | I criteri di unione utilizzati nel percorso possono essere copiati come oggetti dipendenti. Nella sandbox di destinazione **non puoi** creare un nuovo criterio di unione. Puoi utilizzarne solo uno esistente. |
-| [!DNL Adobe Journey Optimizer] | Percorso - dettagli area di lavoro | La rappresentazione del percorso nell’area di lavoro include gli oggetti del percorso, quali condizioni, azioni, eventi, tipi di pubblico letti e così via, che vengono copiati. L’attività Salta viene esclusa dalla copia. |
-| [!DNL Adobe Journey Optimizer] | Evento | Gli eventi e i dettagli dell’evento utilizzati nel percorso vengono copiati. Crea sempre una nuova versione nella sandbox di destinazione. |
+| [!DNL Adobe Journey Optimizer] | Viaggio - dettagli su tela | La rappresentazione del percorso nell&#39;area di lavoro include gli oggetti del percorso, ad esempio condizioni, azioni, eventi, tipi di pubblico letti e così via, che vengono copiati. L&#39;attività di salto è esclusa dalla copia. |
+| [!DNL Adobe Journey Optimizer] | Evento | Gli eventi e i dettagli degli eventi utilizzati nel viaggio vengono copiati. Creerà sempre una nuova versione nella sandbox destinazione. |
 | [!DNL Adobe Journey Optimizer] | Azione | I messaggi e-mail e push utilizzati nel percorso possono essere copiati come oggetti dipendenti. Le attività di azione del canale utilizzate nei campi del percorso, che vengono utilizzate per la personalizzazione nel messaggio, non vengono controllate per completezza. I blocchi di contenuto non vengono copiati.<br><br>È possibile copiare l&#39;azione di aggiornamento del profilo utilizzata nel percorso. Vengono copiati anche le azioni personalizzate e i dettagli delle azioni utilizzati nel percorso. Crea sempre una nuova versione nella sandbox di destinazione. |
 | [!DNL Adobe Journey Optimizer] | Percorso | L’aggiunta di un intero percorso a un pacchetto, copia la maggior parte degli oggetti da cui dipende il percorso, inclusi tipi di pubblico, schemi, eventi e azioni. |
 | [!DNL Adobe Journey Optimizer] | Modello di contenuto | Un modello di contenuto può essere copiato come oggetto dipendente dell&#39;oggetto percorso. I modelli autonomi consentono di riutilizzare facilmente i contenuti personalizzati nelle campagne e nei percorsi Journey Optimizer. |
 | [!DNL Adobe Journey Optimizer] | Frammento | Un frammento può essere copiato come oggetto dipendente dell’oggetto percorso. I frammenti sono componenti riutilizzabili a cui è possibile fare riferimento in una o più e-mail in campagne e percorsi Journey Optimizer. |
 | [!DNL Adobe Journey Optimizer] | Campagne | Le campagne possono essere copiate insieme a tutti gli elementi relativi al profilo, al pubblico, allo schema, ai messaggi in linea e agli oggetti dipendenti. Alcuni elementi non vengono copiati, ad esempio elementi decisionali, etichette di utilizzo dei dati e impostazioni della lingua. Per un elenco completo degli oggetti che non possono essere copiati, fare riferimento alla guida [esportazione di oggetti in un&#39;altra sandbox](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox). |
 
-Le superfici (ad esempio i predefiniti) non vengono copiate. Il sistema seleziona automaticamente la corrispondenza più simile possibile nella sandbox di destinazione in base al tipo di messaggio e al nome della superficie. Se nella sandbox di destinazione non è presente alcuna superficie, la copia della superficie avrà esito negativo e la copia del messaggio avrà esito negativo perché un messaggio richiede che una superficie sia disponibile per l’impostazione. In questo caso, affinché la copia funzioni, è necessario creare almeno una superficie per il canale destro del messaggio.
+Le superfici (ad esempio i predefiniti) non vengono copiate. Il sistema seleziona automaticamente la corrispondenza più simile possibile nella sandbox di destinazione in base al tipo di messaggio e al nome della superficie. Se nella sandbox di destinazione non è presente alcuna superficie, la copia della superficie avrà esito negativo e la copia del messaggio avrà esito negativo perché un messaggio richiede che una superficie sia disponibile per l’impostazione. In questo caso, è necessario creare almeno una superficie per il canale destro del messaggio affinché la copia funzioni.
 
-I tipi di identità personalizzati non sono supportati come oggetti dipendenti durante l’esportazione di un percorso.
+I tipi di identità personalizzati non sono supportati come oggetti dipendenti durante l&#39;esportazione di un percorso.
 
 ## Esportare oggetti in un pacchetto {#export-objects}
 
 >[!NOTE]
 >
->Tutte le azioni di esportazione vengono registrate nei registri di audit.
+>Tutte le azioni di esportazione vengono registrate nei registri di controllo.
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_remove_object"
@@ -95,13 +95,13 @@ Questo esempio documenta il processo di esportazione di uno schema e di aggiunta
 
 ### Aggiungi oggetto a un nuovo pacchetto {#add-object-to-new-package}
 
-Seleziona **[!UICONTROL Schemi]** dal menu di navigazione a sinistra, quindi seleziona la scheda **[!UICONTROL Sfoglia]**, in cui sono elencati gli schemi disponibili. Quindi, selezionare i puntini di sospensione (`...`) accanto allo schema selezionato e un menu a discesa visualizza i controlli. Seleziona **[!UICONTROL Aggiungi al pacchetto]** dal menu a discesa.
+Seleziona **[!UICONTROL Schemi]** dal menu di navigazione a sinistra, quindi seleziona la scheda **[!UICONTROL Sfoglia]**, in cui sono elencati gli schemi disponibili. Successivo, seleziona i puntini di sospensione (`...`) accanto allo schema selezionato, e un elenco a discesa visualizza i controlli. Seleziona **[!UICONTROL Aggiungi al pacchetto]** dal menu a discesa.
 
-![Elenco di schemi che mostrano il menu a discesa che evidenzia il controllo [!UICONTROL Aggiungi al pacchetto].](../images/ui/sandbox-tooling/add-to-package.png)
+![Elenco di schemi con il menu a discesa che evidenzia il [!UICONTROL controllo Aggiungi a pacchetto] .](../images/ui/sandbox-tooling/add-to-package.png)
 
-Dalla finestra di dialogo **[!UICONTROL Aggiungi al pacchetto]**, seleziona l&#39;opzione **[!UICONTROL Crea nuovo pacchetto]**. Fornisci un [!UICONTROL Nome] per il pacchetto e una [!UICONTROL Descrizione] facoltativa, quindi seleziona **[!UICONTROL Aggiungi]**.
+**[!UICONTROL Nella finestra di dialogo Aggiungi al pacchetto]**, selezionare l&#39;opzione **[!UICONTROL Crea nuovo pacchetto]**. Immetti un [!UICONTROL nome] per il pacchetto e un Descrizione] facoltativo[!UICONTROL , quindi seleziona **[!UICONTROL Aggiungi]**.
 
-![La finestra di dialogo [!UICONTROL Aggiungi al pacchetto] con [!UICONTROL Crea nuovo pacchetto] selezionato ed evidenziando [!UICONTROL Aggiungi].](../images/ui/sandbox-tooling/create-new-package.png)
+![La [!UICONTROL finestra di dialogo Aggiungi al pacchetto] con [!UICONTROL Crea nuovo pacchetto] selezionato ed evidenziando [!UICONTROL Aggiungi].](../images/ui/sandbox-tooling/create-new-package.png)
 
 Sei tornato all&#39;ambiente **[!UICONTROL Schemi]**. È ora possibile aggiungere altri oggetti al pacchetto creato seguendo i passaggi successivi elencati di seguito.
 
@@ -119,13 +119,13 @@ Viene elencato l&#39;elenco degli oggetti aggiunti al pacchetto. Per pubblicare 
 
 ![Elenco di oggetti nel pacchetto, con evidenziazione dell&#39;opzione [!UICONTROL Pubblica].](../images/ui/sandbox-tooling/publish-package.png)
 
-Seleziona **[!UICONTROL Pubblica]** per confermare la pubblicazione del pacchetto.
+Seleziona **[!UICONTROL Publish]** per confermare la pubblicazione del pacchetto.
 
-![Finestra di dialogo di conferma della pubblicazione del pacchetto, con evidenziazione dell&#39;opzione [!UICONTROL Pubblica].](../images/ui/sandbox-tooling/publish-package-confirmation.png)
+![Publish finestra di dialogo di conferma del pacchetto, evidenziando l&#39;opzione [!UICONTROL Publish] .](../images/ui/sandbox-tooling/publish-package-confirmation.png)
 
 >[!NOTE]
 >
->Una volta pubblicato, il contenuto del pacchetto non può essere modificato. Per evitare problemi di compatibilità, accertati che siano state selezionate tutte le risorse necessarie. Se è necessario apportare modifiche, è necessario creare un nuovo pacchetto.
+>Una volta pubblicato, il contenuto del pacchetto non può essere modificato. Per evitare problemi di compatibilità, assicurati che siano stati selezionati tutti i risorse necessari. Se è necessario apportare modifiche, è necessario creare un nuovo pacchetto.
 
 Sei tornato alla scheda **[!UICONTROL Pacchetti]** nell&#39;ambiente [!UICONTROL Sandbox], dove puoi vedere il nuovo pacchetto pubblicato.
 
@@ -137,11 +137,11 @@ Sei tornato alla scheda **[!UICONTROL Pacchetti]** nell&#39;ambiente [!UICONTROL
 >
 >Tutte le azioni di importazione vengono registrate nei registri di audit.
 
-Per importare il pacchetto in una sandbox di destinazione, passa alla scheda Sandbox **[!UICONTROL Sfoglia]** e seleziona l&#39;opzione più (+) accanto al nome della sandbox.
+Per importare il pacchetto in una sandbox destinazione, vai alla scheda Sandboxes **[!UICONTROL Sfoglia]** e seleziona l&#39;opzione più (+) accanto al nome della sandbox.
 
-![Sandbox **[!UICONTROL Sfoglia]** scheda che evidenzia la selezione del pacchetto di importazione.](../images/ui/sandbox-tooling/browse-sandboxes.png)
+![Le sandbox **[!UICONTROL Sfoglia]** scheda evidenziando la selezione del pacchetto di importazione.](../images/ui/sandbox-tooling/browse-sandboxes.png)
 
-Dal menu a discesa, seleziona il **[!UICONTROL Nome pacchetto]** da importare nella sandbox di destinazione. Aggiungi un **[!UICONTROL nome processo]**, che verrà utilizzato per il monitoraggio futuro. Per impostazione predefinita, il profilo unificato viene disabilitato quando vengono importati gli schemi del pacchetto. Attiva **Abilita gli schemi per il profilo** per abilitare questo, quindi seleziona **[!UICONTROL Successivo]**.
+Utilizzando il menu a discesa, seleziona il nome ]**del**[!UICONTROL  pacchetto da importare nella sandbox di destinazione. Aggiungi un **[!UICONTROL nome]** di processo, che verrà utilizzato per il monitoraggio futuro. Per impostazione predefinita, il profilo unificato viene disabilitato quando vengono importati gli schemi del pacchetto. Attiva **Abilita gli schemi per il profilo** per abilitare questo, quindi seleziona **[!UICONTROL Successivo]**.
 
 ![La pagina dei dettagli di importazione mostra la selezione a discesa [!UICONTROL Nome pacchetto]](../images/ui/sandbox-tooling/import-package-to-sandbox.png)
 
@@ -159,7 +159,7 @@ Per utilizzare un oggetto esistente, selezionare l&#39;icona della matita accant
 
 ![Nella pagina [!UICONTROL Oggetto pacchetto e dipendenze] è visualizzato l&#39;elenco delle risorse incluse nel pacchetto.](../images/ui/sandbox-tooling/package-objects-and-dependencies.png)
 
-Vengono visualizzate le opzioni per creare nuovi o utilizzare quelli esistenti. Seleziona **[!UICONTROL Usa esistente]**.
+Vengono visualizzate le opzioni per crearne di nuovo o per usarne uno esistente. Seleziona **[!UICONTROL Usa esistente]**.
 
 ![Pagina [!UICONTROL Oggetto pacchetto e dipendenze] contenente le opzioni dell&#39;oggetto dipendente [!UICONTROL Crea nuovo] e [!UICONTROL Usa esistente].](../images/ui/sandbox-tooling/use-existing-object.png)
 
@@ -167,7 +167,7 @@ Nella finestra di dialogo **[!UICONTROL Gruppo di campi]** viene visualizzato un
 
 ![Elenco di campi visualizzato nella finestra di dialogo [!UICONTROL Gruppo di campi], che evidenzia la selezione [!UICONTROL Salva]. ](../images/ui/sandbox-tooling/field-group-list.png)
 
-Sei tornato alla pagina [!UICONTROL Oggetto pacchetto e dipendenze]. Da qui, selezionare **[!UICONTROL Fine]** per completare l&#39;importazione del pacchetto.
+Si ritorna alla [!UICONTROL pagina Oggetto pacchetto e dipendenze] . Da qui, selezionare **[!UICONTROL Fine]** per completare l&#39;importazione del pacchetto.
 
 ![Nella pagina [!UICONTROL Oggetto pacchetto e dipendenze] è visualizzato l&#39;elenco delle risorse incluse nel pacchetto, con l&#39;evidenziazione di [!UICONTROL Fine].](../images/ui/sandbox-tooling/finish-object-dependencies.png)
 
@@ -196,17 +196,17 @@ Creazione del pacchetto completata. Selezionare **[!UICONTROL Pubblica]** per pu
 
 ![Elenco dei pacchetti sandbox che evidenziano il nuovo pacchetto pubblicato.](../images/ui/sandbox-tooling/publish-entire-sandbox-packages.png)
 
-Sei tornato alla scheda **[!UICONTROL Pacchetti]** nell&#39;ambiente [!UICONTROL Sandbox], dove puoi vedere il nuovo pacchetto pubblicato.
+Si ritorna alla **[!UICONTROL scheda Pacchetti]** nell&#39;ambiente [!UICONTROL Sandbox] , dove è possibile visualizzare il nuovo pacchetto pubblicato.
 
-### Importare l’intero pacchetto sandbox {#import-entire-sandbox-package}
+### Importa l&#39;intero pacchetto sandbox {#import-entire-sandbox-package}
 
 >[!NOTE]
 >
->Tutti gli oggetti verranno importati nella sandbox di destinazione come nuovi oggetti. È consigliabile importare un pacchetto sandbox completo in una sandbox vuota.
+>Tutti gli oggetti verranno importati nella sandbox del destinazione come nuovi oggetti. È buona norma importare un pacchetto sandbox completo in una sandbox vuota.
 
-Per importare il pacchetto in una sandbox di destinazione, passa alla scheda [!UICONTROL Sandbox] **[!UICONTROL Sfoglia]** e seleziona l&#39;opzione più (+) accanto al nome della sandbox.
+Per importare il pacchetto in una sandbox destinazione, vai al [!UICONTROL scheda Sandbox] **[!UICONTROL Sfoglia]** e seleziona l&#39;opzione più (+) accanto al nome della sandbox.
 
-![Sandbox **[!UICONTROL Sfoglia]** scheda che evidenzia la selezione del pacchetto di importazione.](../images/ui/sandbox-tooling/browse-entire-package-sandboxes.png)
+![Le sandbox **[!UICONTROL Sfoglia]** scheda evidenziando la selezione del pacchetto di importazione.](../images/ui/sandbox-tooling/browse-entire-package-sandboxes.png)
 
 Utilizzando il menu a discesa, seleziona la sandbox completa utilizzando il menu a discesa **[!UICONTROL Nome pacchetto]**. Aggiungi un **[!UICONTROL Nome processo]**, che verrà utilizzato per il monitoraggio futuro e una **[!UICONTROL Descrizione processo]** facoltativa, quindi seleziona **[!UICONTROL Successivo]**.
 
@@ -226,7 +226,7 @@ Attendere il completamento dell&#39;importazione. Il tempo necessario per il com
 
 Per visualizzare i dettagli importati, passare alla scheda [!UICONTROL Sandbox] **[!UICONTROL Processi]** e selezionare il pacchetto dall&#39;elenco. In alternativa, utilizza la barra di ricerca per cercare il pacchetto.
 
-![La scheda [!UICONTROL Processi] delle sandbox evidenzia la selezione del pacchetto di importazione.](../images/ui/sandbox-tooling/imports-tab.png)
+![La scheda Processi] sandbox [!UICONTROL evidenzia la selezione del pacchetto di importazione.](../images/ui/sandbox-tooling/imports-tab.png)
 
 <!--### View imported objects {#view-imported-objects}
 
@@ -240,9 +240,9 @@ Use the arrows to expand objects to view the full list of fields that have been 
 
 ![The sandboxes [!UICONTROL Imported objects] showing a list of objects imported into the package.](../images/ui/sandbox-tooling/expand-imported-objects.png)-->
 
-Seleziona **[!UICONTROL Visualizza riepilogo importazione]** dal riquadro dei dettagli a destra nella scheda **[!UICONTROL Processi]** nell&#39;ambiente Sandbox.
+Seleziona **[!UICONTROL Visualizza riepilogo]** dell&#39;importazione dal riquadro dei dettagli a destra nella **[!UICONTROL scheda Processi]** nell&#39;ambiente Sandbox.
 
-![La scheda sandbox [!UICONTROL Importazioni] evidenzia la selezione [!UICONTROL Visualizza dettagli importazione] nel riquadro di destra.](../images/ui/sandbox-tooling/view-import-details.png)
+![La scheda Importazioni sandbox  evidenzia la selezione dei dettagli] di [!UICONTROL importazione Visualizza nel riquadro di destra.](../images/ui/sandbox-tooling/view-import-details.png)
 
 La finestra di dialogo **[!UICONTROL Riepilogo importazione]** mostra un raggruppamento delle importazioni con avanzamento in percentuale.
 
@@ -252,11 +252,11 @@ La finestra di dialogo **[!UICONTROL Riepilogo importazione]** mostra un raggrup
 
 ![La finestra di dialogo [!UICONTROL Dettagli importazione] mostra un raggruppamento dettagliato delle importazioni.](../images/ui/sandbox-tooling/import-details.png)
 
-Al termine dell’importazione, viene ricevuta una notifica nell’interfaccia utente di Experience Platform. Puoi accedere a queste notifiche dall’icona degli avvisi. Se un processo non riesce, puoi passare alla risoluzione dei problemi da qui.
+Al termine dell’importazione, viene ricevuta una notifica nell’interfaccia utente di Experience Platform. Puoi accesso queste notifiche dall&#39;icona degli avvisi. Se un processo non riesce, puoi passare alla risoluzione dei problemi da qui.
 
 ## Esercitazione video
 
-Il video seguente illustra gli strumenti della sandbox e spiega come creare un nuovo pacchetto, pubblicarlo e importarlo.
+Il video seguente ha lo scopo di supportare la tua comprensione degli strumenti sandbox e descrive come creare un nuovo pacchetto, pubblicare un pacchetto e importare un pacchetto.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
 

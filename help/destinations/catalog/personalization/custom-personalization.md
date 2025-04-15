@@ -1,7 +1,7 @@
 ---
-keywords: personalizzazione personalizzata; destinazione; destinazione personalizzata di experience platform;
-title: Connessione di personalizzazione personalizzata
-description: Questa destinazione fornisce personalizzazione esterna, sistemi di gestione dei contenuti, server di annunci e altre applicazioni in esecuzione sul sito in modo da recuperare informazioni sul pubblico da Adobe Experience Platform. Questa destinazione fornisce una personalizzazione in tempo reale in base all’iscrizione al pubblico del profilo utente.
+keywords: personalizzazione personalizzati; destinazione; destinazione personalizzata Experience Platform;
+title: Connessione personalizzazione personalizzata
+description: Questa destinazione fornisce personalizzazione esterni, sistemi di gestione contenuto, server annuncio e altre applicazioni in esecuzione sul tuo sito un modo per recuperare informazioni sul pubblico dai Adobe Experience Platform. Questa destinazione fornisce personalizzazione in tempo reale in base all utente iscrizione del pubblico del profilo.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
 source-git-commit: 0f70e072402bca055b96195ded91816810759fc2
 workflow-type: tm+mt
@@ -11,48 +11,48 @@ ht-degree: 9%
 ---
 
 
-# Connessione di personalizzazione personalizzata {#custom-personalization-connection}
+# Connessione personalizzazione personalizzata {#custom-personalization-connection}
 
-## Registro modifiche destinazione {#changelog}
+## Changelog delle destinazioni {#changelog}
 
-| Mese di rilascio | Tipo di aggiornamento | Descrizione |
+| Mese di uscita | Tipo di aggiornamento | Descrizione |
 |---|---|---|
-| Maggio 2023 | Aggiornamento della funzionalità e della documentazione | A maggio 2023, la connessione **[!UICONTROL Personalizzazione personalizzata]** supporta la [personalizzazione basata su attributi](../../ui/activate-edge-personalization-destinations.md#map-attributes) ed è generalmente disponibile per tutti i clienti. |
+| Maggio 2023 | Aggiornamento di funzionalità e documentazione | A partire da maggio 2023, la **[!UICONTROL connessione personalizzazione]** personalizzata supporta [personalizzazione](../../ui/activate-edge-personalization-destinations.md#map-attributes) basate su attributi ed è disponibile a livello generale per tutti i clienti. |
 
 {style="table-layout:auto"}
 
 >[!IMPORTANT]
 >
->Gli attributi del profilo possono contenere dati sensibili. Per proteggere questi dati, è necessario utilizzare l&#39;[API server Edge Network](/help/server-api/overview.md) durante la configurazione della destinazione **[!UICONTROL Personalization]** personalizzata per la personalizzazione basata su attributi. Tutte le chiamate API server devono essere effettuate in un [contesto autenticato](../../../server-api/authentication.md).
+>Gli attributi del profilo possono contenere dati sensibili. Per proteggere questi dati, è necessario usare l&#39;API](/help/server-api/overview.md) del [server di rete Edge quando si configura la destinazione di personalizzazione **** personalizzata per personalizzazione basate su attributi. Tutte le chiamate API server devono essere effettuate in un [contesto](../../../server-api/authentication.md) autenticato.
 >
-><br>È possibile recuperare gli attributi del profilo tramite [Edge Network Server API](/help/server-api/overview.md) aggiungendo un&#39;integrazione lato server che utilizza lo stesso flusso di dati già in uso per l&#39;implementazione Web o Mobile SDK.
+><br>È possibile recuperare gli attributi del profilo tramite l&#39;API](/help/server-api/overview.md) del server di rete Edge aggiungendo un&#39;integrazione lato server che utilizza lo stesso flusso di dati già in uso per l&#39;SDK [Web o Mobile SDK implementazione.
 >
-><br>Se non segui i requisiti di cui sopra, la personalizzazione sarà basata solo sull&#39;iscrizione al pubblico.
+><br>Se non seguire i requisiti di cui sopra, personalizzazione si baserà solo sull&#39;iscrizione del pubblico.
 
 ## Panoramica {#overview}
 
-Configura questa destinazione per consentire alle piattaforme di personalizzazione esterne, ai sistemi di gestione dei contenuti, ai server di annunci e ad altre applicazioni in esecuzione sui siti web dei clienti di recuperare informazioni sul pubblico da Adobe Experience Platform.
+Configura questa destinazione per consentire alle piattaforme personalizzazione esterne, ai sistemi di gestione contenuto, ai server annuncio e ad altre applicazioni in esecuzione sui siti Web dei clienti di recuperare informazioni sul pubblico dai Adobe Experience Platform.
 
 ## Prerequisiti {#prerequisites}
 
-Questa destinazione richiede l’utilizzo di uno dei seguenti metodi di raccolta dati, a seconda dell’implementazione:
+Questa destinazione richiede l&#39;utilizzo di uno dei seguenti metodi di raccolta dati, a seconda delle implementazione:
 
-* Utilizza [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) se desideri raccogliere dati dal tuo sito Web.
-* Utilizza [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) se desideri raccogliere dati dalla tua app mobile.
-* Utilizza l&#39;[Edge Network Server API](../../../server-api/overview.md) se non utilizzi [Web SDK](/help/web-sdk/home.md) o [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) o se desideri personalizzare l&#39;esperienza utente in base agli attributi del profilo.
+* Utilizza Adobe Experience Platform [Web SDK](/help/web-sdk/home.md) per raccogliere dati dal tuo sito Web.
+* Utilizza l&#39;SDK [](https://developer.adobe.com/client-sdks/documentation/) di Adobe Experience Platform Mobile per raccogliere dati dal tuo app mobile.
+* Usa l&#39;API del [server di rete Edge se non usi [Web SDK](/help/web-sdk/home.md) o [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) o se desideri personalizzare il esperienza di utilizzo in base agli attributi del](../../../server-api/overview.md) profilo.
 
 >[!IMPORTANT]
 >
->Prima di creare una connessione di personalizzazione personalizzata, leggi la guida su come [attivare i dati sul pubblico nelle destinazioni di personalizzazione Edge](../../ui/activate-edge-personalization-destinations.md). Questa guida descrive i passaggi di configurazione richiesti per i casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva, su più componenti di Experience Platform.
+>Prima di creare una connessione personalizzazione personalizzata, leggi la guida su come attivare i dati del [pubblico nelle destinazioni Edge personalizzazione](../../ui/activate-edge-personalization-destinations.md). Questa guida illustra i passaggi di configurazione necessari per i casi d&#39;uso dei personalizzazione della stessa pagina e della pagina successiva, su più componenti Experience Platform.
 
-## Tipi di pubblico supportati {#supported-audiences}
+## Pubblico supportato {#supported-audiences}
 
-Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
+In questa sezione vengono descritti i tipi di pubblico che puoi esportare verso questa destinazione.
 
-| Origine pubblico | Supportato | Descrizione |
+| Origine del pubblico | Sostenuto | Descrizione |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite il servizio di segmentazione [Experience Platform](../../../segmentation/home.md). |
-| Caricamenti personalizzati | ✓ | Tipi di pubblico [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
+| [!DNL Segmentation Service] | ✓ | Audiences generati tramite il servizio](../../../segmentation/home.md) di segmentazione Experience Platform[. |
+| Caricamenti personalizzati | ✓ | [Audiences importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -60,8 +60,8 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
-| Tipo di esportazione | **[!DNL Profile request]** | Stai richiedendo per un singolo profilo tutti i tipi di pubblico mappati nella destinazione di personalizzazione personalizzata. È possibile impostare diverse destinazioni di personalizzazione personalizzata per diversi [flussi di dati di raccolta dati di Adobe](../../../datastreams/overview.md). |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni sulle [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo di esportazione | **[!DNL Profile request]** | Stai richiedendo un unico profilo a tutti i tipi di pubblico mappati nella destinazione personalizzazione personalizzata. È possibile configurare destinazioni personalizzazione personalizzate diverse [per diversi flussi](../../../datastreams/overview.md) di dati di raccolta dati Adobe Systems dati. |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni basate su API &quot;sempre attive&quot;. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l&#39;aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni sulle destinazioni in [](/help/destinations/destination-types.md#streaming-destinations)streaming. |
 
 ## Connettersi alla destinazione {#connect}
 
@@ -73,38 +73,38 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 
 >[!IMPORTANT]
 > 
->Per connettersi alla destinazione, sono necessarie le **[!UICONTROL Destinazioni visualizzazione]** e le **[!UICONTROL Autorizzazioni di gestione delle destinazioni]** [per il controllo degli accessi](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>Per connettersi alla destinazione, sono necessarie le **[!UICONTROL autorizzazioni](/help/access-control/home.md#permissions) Visualizza Destinazioni]** e **[!UICONTROL Gestisci destinazioni]** [accesso controllo. Leggi la panoramica](/help/access-control/ui/overview.md) sul [controllo accesso o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md).
+Per connetterti a questa destinazione, seguire i passaggi descritti nella esercitazione](../../ui/connect-destination.md) di configurazione della [destinazione.
 
 ### Parametri di connessione {#parameters}
 
-Durante la [configurazione](../../ui/connect-destination.md) di questa destinazione, è necessario fornire le seguenti informazioni:
+Durante [la configurazione di](../../ui/connect-destination.md) questa destinazione, è necessario fornire le seguenti informazioni:
 
-* **[!UICONTROL Nome]**: immettere il nome preferito per la destinazione.
-* **[!UICONTROL Descrizione]**: immetti una descrizione per la destinazione. Ad esempio, puoi indicare per quale campagna stai utilizzando questa destinazione. Questo campo è facoltativo.
-* **[!UICONTROL Alias di integrazione]**: questo valore viene inviato all&#39;SDK Web Experience Platform come nome di oggetto JSON.
-* **[!UICONTROL ID flusso di dati]**: determina in quale flusso di dati della raccolta dati i tipi di pubblico verranno inclusi nella risposta alla pagina. Il menu a discesa mostra solo gli stream di dati in cui è abilitata la configurazione della destinazione. Per ulteriori dettagli, vedere [Configurazione di uno stream di dati](../../../datastreams/overview.md).
+* **[!UICONTROL Nome]**: inserisci il nome che preferisci per questa destinazione.
+* **[!UICONTROL Descrizione]**: inserisci una descrizione della destinazione. Ad esempio, puoi indicare per quale campagna stai utilizzando questa destinazione. Questo campo è facoltativo.
+* **[!UICONTROL Alias]** di integrazione: questo valore viene inviato all&#39;SDK Web Experience Platform come nome oggetto JSON.
+* **[!UICONTROL ID flusso]** di dati: determina in quale flusso di dati raccolta dati il pubblico verrà incluso nella risposta alla pagina. Il menu a discesa mostra solo gli stream di dati in cui è abilitata la configurazione della destinazione. Per ulteriori informazioni, consulta [Configurazione di un flusso](../../../datastreams/overview.md) di dati.
 
-### Abilita avvisi {#enable-alerts}
+### Abilitare gli avvisi {#enable-alerts}
 
-Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati verso la tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento a destinazioni avvisi tramite l&#39;interfaccia utente](../../ui/alerts.md).
+È possibile abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati verso la destinazione. Seleziona un avviso dall&#39;elenco a cui iscriverti per ricevere notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida sulla [sottoscrizione agli avvisi relativi alle destinazioni utilizzando il interfaccia](../../ui/alerts.md).
 
-Dopo aver fornito i dettagli per la connessione di destinazione, seleziona **[!UICONTROL Avanti]**.
+Dopo aver fornito i dettagli per la connessione di destinazione, selezionare **[!UICONTROL Successivo]**.
 
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 
->Per attivare i dati, è necessario **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attiva destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizza segmenti]** [Autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>Per attivare i dati, sono necessarie le **[!UICONTROL autorizzazioni](/help/access-control/home.md#permissions) Visualizza Destinazioni]**, **[!UICONTROL Attiva destinazioni]**, **[!UICONTROL Profili]** Visualizza e **[!UICONTROL Segmenti]** [Visualizza accesso controllo. Leggi la panoramica](/help/access-control/ui/overview.md) sul [controllo accesso o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Leggi [Attiva profili e tipi di pubblico destinazioni di personalizzazione edge](../../ui/activate-edge-personalization-destinations.md) per le istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione.
+Leggi [Attivare profili e tipi di pubblico ai margini personalizzazione destinazioni](../../ui/activate-edge-personalization-destinations.md) per istruzioni su come attivare i tipi di pubblico verso questa destinazione.
 
 ## Dati esportati {#exported-data}
 
-Se utilizzi [Tag in Adobe Experience Platform](../../../tags/home.md) per distribuire Experience Platform Web SDK, utilizza la funzionalità [Invia evento completato](../../../tags/extensions/client/web-sdk/event-types.md) e l&#39;azione del codice personalizzato avrà una variabile `event.destinations` che puoi utilizzare per visualizzare i dati esportati.
+Se si utilizzano [tag in Adobe Experience Platform](../../../tags/home.md) per distribuire l&#39;SDK Web Experience Platform, utilizzare la funzionalità di invio evento completo](../../../tags/extensions/client/web-sdk/event-types.md) e l&#39;azione [codice personalizzato avrà una `event.destinations` variabile che è possibile utilizzare per visualizzare i dati esportati.
 
-Di seguito è riportato un valore di esempio per la variabile `event.destinations`:
+Ecco un esempio di valore per la `event.destinations` variabile:
 
 ```
 [
@@ -124,9 +124,9 @@ Di seguito è riportato un valore di esempio per la variabile `event.destination
 ]
 ```
 
-Se non utilizzi [Tag](/help/tags/home.md) per distribuire Experience Platform Web SDK, utilizza [risposte ai comandi](/help/web-sdk/commands/command-responses.md) per visualizzare i dati esportati.
+Se non si utilizzano [tag](/help/tags/home.md) per distribuire l&#39;SDK Web Experience Platform, utilizzare [le risposte](/help/web-sdk/commands/command-responses.md) dei comandi per visualizzare i dati esportati.
 
-È possibile analizzare la risposta JSON di Adobe Experience Platform per trovare l’alias di integrazione corrispondente dell’applicazione che si sta integrando con Adobe Experience Platform. Gli ID del pubblico possono essere trasmessi nel codice dell’applicazione come parametri di targeting. Di seguito è riportato un esempio di ciò che dovrebbe apparire specifico per la risposta di destinazione.
+La risposta JSON di Adobe Experience Platform può essere analizzata per trovare l&#39;alias di integrazione corrispondente del applicazione che si sta integrando con Adobe Experience Platform. Gli ID pubblico possono essere passati nel codice dell&#39;applicazione come parametri targeting. Di seguito è riportato un esempio di ciò che questo aspetto like specifico per la risposta alla destinazione.
 
 ```
 alloy("sendEvent", {
@@ -160,11 +160,11 @@ alloy("sendEvent", {
   });
 ```
 
-### Risposta di esempio per [!UICONTROL Personalization personalizzato con attributi]
+### Risposta di esempio per [!UICONTROL la personalizzazione personalizzata con attributi]
 
-Quando si utilizza **[!UICONTROL Personalization personalizzato con attributi]**, la risposta API sarà simile a quella riportata di seguito.
+Quando si utilizza **[!UICONTROL la personalizzazione personalizzata con attributi]**, la risposta dell&#39;API sarà simile a quella riportata di seguito.
 
-La differenza tra **[!UICONTROL Personalization personalizzato con attributi]** e **[!UICONTROL Personalization personalizzato]** è l&#39;inclusione della sezione `attributes` nella risposta API.
+La differenza tra **[!UICONTROL Personalizzazione personalizzata con attributi]** e Personalizzazione **** personalizzata consiste nell&#39;inclusione `attributes` della sezione nella risposta API.
 
 ```json
 [
@@ -192,6 +192,6 @@ La differenza tra **[!UICONTROL Personalization personalizzato con attributi]** 
 ]
 ```
 
-## Utilizzo dei dati e governance {#data-usage-governance}
+## Utilizzo e governance dei dati {#data-usage-governance}
 
-Tutte le destinazioni [!DNL Adobe Experience Platform] sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] applica la governance dei dati, leggere la [Panoramica sulla governance dei dati](../../../data-governance/home.md).
+Tutte le [!DNL Adobe Experience Platform] destinazioni sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] applica la governance dei dati, leggi la panoramica](../../../data-governance/home.md) sulla [governance dei dati.

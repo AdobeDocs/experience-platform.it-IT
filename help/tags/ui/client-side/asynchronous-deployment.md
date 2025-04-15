@@ -52,7 +52,7 @@ Questo indica al browser che, quando questo tag di script viene analizzato, deve
 
 Come descritto in precedenza, nelle implementazioni sincrone, il browser interrompe l’analisi e il rendering della pagina mentre viene caricata ed eseguita la libreria di tag di Adobe Experience Platform. Nelle distribuzioni asincrone, al contrario, il browser continua ad analizzare ed eseguire il rendering della pagina durante il caricamento della libreria. Occorre quindi considerare quando verrà completato il caricamento della libreria di tag, in relazione all’analisi e al rendering delle pagine.
 
-Innanzitutto, poiché il caricamento della libreria di tag può terminare prima o dopo l’analisi e l’esecuzione della pagina, non chiamare più `_satellite.pageBottom()` dal codice della pagina (`_satellite` sarà disponibile solo dopo che sarà stata caricata la libreria). Questa situazione è descritta in [Caricamento del codice di incorporamento di tag in modo asincrono](#loading-the-tags-embed-code-asynchronously).
+Innanzitutto, poiché il caricamento della libreria di tag può terminare prima o dopo l’analisi e l’esecuzione della pagina, non chiamare più `_satellite.pageBottom()` dal codice della pagina (`_satellite` sarà disponibile solo dopo che sarà stata caricata la libreria). Questa situazione è descritta in [Caricamento del codice da incorporare dei tag in modo asincrono](#loading-the-tags-embed-code-asynchronously).
 
 In secondo luogo, il caricamento della libreria di tag può terminare prima o dopo l’evento [`DOMContentLoaded`](https://developer.mozilla.org/it-IT/docs/Web/Events/DOMContentLoaded) del browser (DOM Ready).
 
@@ -77,18 +77,18 @@ Anche se questo ordine viene sempre applicato, alcune regole potrebbero essere e
 
 Quando applichi questi principi al tuo sito Web, prendi in considerazione quanto segue:
 
-* **Una regola che utilizza il tipo di evento Library Loaded potrebbe essere eseguita prima del caricamento completo del livello di dati.**  Questo può comportare l&#39;esecuzione delle azioni della regola con dati mancanti, perché i dati non erano ancora disponibili sulla pagina. Questi tipi di problemi possono essere attenuati modificando la configurazione delle regole. Ad esempio, invece di avere una regola attivata dal tipo di evento Library Loaded, potresti invece utilizzare i tipi di evento Custom Event o Direct Call, attivati dal codice della pagina al termine del caricamento del livello di dati.
+* **Una regola che utilizza il tipo di evento Library Loaded potrebbe essere eseguita prima del caricamento completo del livello dati.**  Questo può comportare l&#39;esecuzione delle azioni della regola con dati mancanti, perché i dati non erano ancora disponibili sulla pagina. Questi tipi di problemi possono essere attenuati modificando la configurazione delle regole. Ad esempio, invece di avere una regola attivata dal tipo di evento Library Loaded, potresti invece utilizzare i tipi di evento Custom Event o Direct Call, attivati dal codice della pagina al termine del caricamento del livello dati.
 * **Il tipo di evento Page Bottom, in particolare, non specifica il valore quando la libreria viene caricata in modo asincrono.**  Considera invece Library Loaded, DOM Ready, Window Loaded o altri tipi di eventi.
 
 Se noti che qualcosa non sta funzionando nel modo corretto, è probabile che si stiano verificando dei problemi di tempistica. Le implementazioni che richiedono tempistiche precise potrebbero dover utilizzare listener di eventi e il tipo di evento Custom Event o Direct Call per rendere le implementazioni più solide e coerenti.
 
-## Caricamento del codice di incorporamento dei tag in modo asincrono
+## Caricamento del codice da incorporare dei tag in modo asincrono
 
-I tag dispongono di un pulsante per attivare il caricamento asincrono quando si crea un codice di incorporamento durante la configurazione di un [ambiente](../publishing/environments.md). Puoi anche configurare un caricamento asincrono autonomamente:
+I tag dispongono di un pulsante per attivare il caricamento asincrono quando si crea un codice da incorporare durante la configurazione di un [ambiente](../publishing/environments.md). Puoi anche configurare un caricamento asincrono autonomamente:
 
 1. Aggiungi un attributo asincrono al tag `<script>` per caricare lo script in modo asincrono.
 
-   Nel caso del codice di incorporamento di tag, significa modificare quanto segue:
+   Nel caso del codice da incorporare dei tag, significa modificare quanto segue:
 
    ```markup
    <script src="//www.yoururl.com/launch-EN1a3807879cfd4acdc492427deca6c74e.min.js"></script>
@@ -106,4 +106,4 @@ I tag dispongono di un pulsante per attivare il caricamento asincrono quando si 
    <script type="text/javascript">_satellite.pageBottom();</script>
    ```
 
-   Questo codice comunica ad Experience Platform che il parser del browser ha raggiunto il fondo della pagina. Poiché probabilmente i tag non saranno ancora caricati e in esecuzione in questo momento, la chiamata a `_satellite.pageBottom()` restituisce un errore e il tipo di evento Page Bottom potrebbe non comportarsi come previsto.
+   Questo codice indica Experience Platform che il parser browser ha raggiunto la parte inferiore della pagina. Poiché probabilmente i tag non saranno ancora caricati e in esecuzione in questo momento, la chiamata a `_satellite.pageBottom()` restituisce un errore e il tipo di evento Page Bottom potrebbe non comportarsi come previsto.

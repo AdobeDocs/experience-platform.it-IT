@@ -1,6 +1,6 @@
 ---
-description: Scopri come utilizzare il dashboard di monitoraggio per monitorare i dati acquisiti dalle sorgenti.
-title: Monitorare i flussi di dati per le origini nell’interfaccia utente
+description: Scopri come utilizzare il dashboard di monitoraggio per monitorare i dati acquisiti dalle origini.
+title: Monitorare i flussi di dati per le origini nel interfaccia
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 11%
 
 >[!IMPORTANT]
 >
->Le origini di streaming, ad esempio l&#39;[origine API HTTP](../../sources/connectors/streaming/http.md), non sono attualmente supportate dal dashboard di monitoraggio. Al momento, è possibile utilizzare il dashboard solo per monitorare le origini batch.
+>Le origini di streaming, ad esempio l&#39;origine [](../../sources/connectors/streaming/http.md) API HTTP, non sono attualmente supportate dal dashboard di monitoraggio. Al momento, è possibile utilizzare il dashboard solo per monitorare le origini batch.
 
 Leggi questo documento per scoprire come utilizzare il dashboard di monitoraggio per monitorare i flussi di dati di origine nell’interfaccia utente di Experience Platform.
 
@@ -50,11 +50,11 @@ Nel dashboard di monitoraggio, seleziona [!UICONTROL Origini] dall&#39;intestazi
 
 ![Dashboard di monitoraggio con la scheda delle origini selezionata.](../assets/ui/monitor-sources/sources.png)
 
-Il grafico [!UICONTROL Tasso di acquisizione] visualizza il tasso di acquisizione dei dati in base all&#39;intervallo di tempo configurato. Per impostazione predefinita, nel dashboard di monitoraggio viene visualizzato il tasso di acquisizione delle ultime 24 ore. Per i passaggi su come configurare l&#39;intervallo di tempo, leggere la guida alla [configurazione dell&#39;intervallo di tempo di monitoraggio](monitor.md#configure-monitoring-time-frame).
+Il [!UICONTROL grafico della frequenza] di inserimento mostra la velocità di inserimento dei dati in base all&#39;intervallo di tempo configurato. Per impostazione predefinita, il dashboard di monitoraggio visualizza il tasso di inserimento delle ultime 24 ore. Per i passaggi su come configurare l&#39;intervallo di tempo, leggi la guida sulla [configurazione dei tempi](monitor.md#configure-monitoring-time-frame) di monitoraggio.
 
-Per impostazione predefinita, il grafico è abilitato alla visualizzazione. Per nascondere il grafico, selezionare **[!UICONTROL Metriche e grafici]** per disabilitare l&#39;attivazione e nascondere il grafico.
+Per impostazione predefinita, il grafico è abilitato per la visualizzazione. Per nascondere il grafico, selezionare **[!UICONTROL Metriche e grafici]** per disabilitare l&#39;interruttore e nascondere il grafico.
 
-![Grafico delle metriche del tasso di acquisizione.](../assets/ui/monitor-sources/metrics-graph.png)
+![Il grafico delle metriche del tasso di assimilazione.](../assets/ui/monitor-sources/metrics-graph.png)
 
 Nella parte inferiore del dashboard viene visualizzata una tabella che illustra il rapporto delle metriche correnti per tutti i flussi di dati di origine esistenti.
 
@@ -71,11 +71,11 @@ Nella parte inferiore del dashboard viene visualizzata una tabella che illustra 
 
 {style="table-layout:auto"}
 
-Puoi filtrare ulteriormente i dati utilizzando le opzioni fornite sopra la tabella delle metriche:
+Puoi filtrare ulteriormente i tuoi dati utilizzando le opzioni fornite sopra la tabella delle metriche:
 
 | Opzioni di filtro | Descrizione |
 | --- | --- |
-| Cerca | Utilizzare la barra di ricerca per filtrare la visualizzazione in base a un singolo tipo di origine. |
+| Cerca | Usa la barra dei ricerca per filtrare le visualizzazioni in base a un singolo tipo di origine. |
 | Origini | Seleziona **[!UICONTROL Origini]** per filtrare la visualizzazione e visualizzare i dati delle metriche in base al tipo di origine. Questa è la visualizzazione predefinita utilizzata dal dashboard di monitoraggio. |
 | Flussi di dati | Seleziona **[!UICONTROL Flussi dati]** per filtrare la visualizzazione e visualizzare i dati delle metriche per flusso di dati. |
 | Mostra solo errori | Seleziona **[!UICONTROL Mostra solo errori]** per filtrare la visualizzazione e visualizzare solo i flussi di dati che hanno segnalato errori di acquisizione. |
@@ -85,15 +85,15 @@ Puoi filtrare ulteriormente i dati utilizzando le opzioni fornite sopra la tabel
 
 Per monitorare i dati che vengono acquisiti in un flusso di dati specifico, seleziona l&#39;icona del filtro ![filter](/help/images/icons/filter-add.png) accanto a un&#39;origine.
 
-![Monitorare un flusso di dati specifico selezionando l&#39;icona del filtro accanto a una determinata origine.](../assets/ui/monitor-sources/monitor-dataflow.png)
+![Monitora un flusso di dati specifico selezionando l&#39;icona del filtro accanto a una determinata origine.](../assets/ui/monitor-sources/monitor-dataflow.png)
 
-La tabella delle metriche viene aggiornata con una tabella di flussi di dati attivi che corrispondono all’origine selezionata. Durante questo passaggio, puoi visualizzare ulteriori informazioni sui flussi di dati, tra cui il set di dati e il tipo di dati corrispondenti, nonché una marca temporale per indicare quando sono stati attivi per l’ultima volta.
+La tabella delle metriche viene aggiornata in una tabella dei flussi di dati attivi corrispondenti all&#39;origine selezionata. Durante questa fase, è possibile visualizzare informazioni aggiuntive sui flussi di dati, inclusi il set di dati e il tipo di dati corrispondenti, nonché un timestamp per indicare quando sono stati attivi l&#39;ultima volta.
 
-Per esaminare ulteriormente un flusso di dati, seleziona l&#39;icona filtro ![filter](/help/images/icons/filter-add.png) accanto a un flusso di dati.
+Per esaminare ulteriormente un flusso di dati, seleziona l&#39;icona ![del filtro accanto](/help/images/icons/filter-add.png) a un flusso di dati.
 
-![Tabella dei flussi di dati nel dashboard di monitoraggio.](../assets/ui/monitor-sources/select-dataflow.png)
+![La tabella dei flussi di dati nel dashboard di monitoraggio.](../assets/ui/monitor-sources/select-dataflow.png)
 
-Viene quindi visualizzata un’interfaccia che elenca tutte le iterazioni di esecuzione del flusso di dati selezionato.
+Successivo, si viene indirizzati a un&#39;interfaccia che elenca tutte le iterazioni di esecuzione del flusso di dati selezionato.
 
 Le esecuzioni del flusso di dati rappresentano un’istanza dell’esecuzione del flusso di dati. Ad esempio, se un flusso di dati è pianificato per essere eseguito ogni ora alle 09:00, alle 00:00 e alle 00:00, sono disponibili tre istanze di un flusso. Le esecuzioni del flusso sono specifiche per la tua particolare organizzazione.
 
@@ -112,21 +112,21 @@ Utilizza la pagina dei dettagli dell’esecuzione del flusso di dati per visuali
 | File totali | Numero totale di file nell’esecuzione del flusso di dati. |
 | Dimensione dei dati | Dimensione totale dei dati contenuti nell’esecuzione del flusso di dati. |
 | ID esecuzione flusso di dati | ID dell’iterazione di esecuzione del flusso di dati. |
-| ID organizzazione | ID dell’organizzazione in cui è stata creata l’esecuzione del flusso di dati. |
+| ID organizzazione | ID dell&#39;organizzazione in cui è stato creato il flusso di dati in cui è stato creato il flusso di dati. |
 | Stato | Stato dell’esecuzione del flusso di dati. |
 | Avvio dell’esecuzione flusso di dati | Un timestamp che indica quando è iniziata l’esecuzione del flusso di dati. |
 | Fine esecuzione flusso di dati | Un timestamp che indica quando è terminata l’esecuzione del flusso di dati. |
 | Set di dati | Set di dati utilizzato per creare il flusso di dati. |
 | Tipo di dati | Il tipo di dati che era nel flusso di dati. |
 | Acquisizione parziale | L’acquisizione in batch parziale consente di acquisire dati contenenti errori, fino a una determinata soglia configurabile. Questa funzione consente di acquisire correttamente in Experience Platform tutti i dati accurati, mentre tutti i dati errati vengono raggruppati separatamente con informazioni sul motivo della validità. Puoi abilitare l’acquisizione parziale durante il processo di creazione del flusso di dati. |
-| Diagnostica degli errori | La diagnostica degli errori indica all’origine di produrre diagnostica degli errori a cui puoi fare riferimento in seguito durante il monitoraggio dell’attività del set di dati e dello stato del flusso di dati. Puoi abilitare la diagnostica degli errori durante il processo di creazione del flusso di dati. |
-| Riepilogo errori | Dato un flusso di dati non riuscito, nel riepilogo degli errori vengono visualizzati un codice e una descrizione di errore che riepilogano il motivo per cui l’iterazione dell’esecuzione non è riuscita. |
+| Diagnostica degli errori | Errore diagnostica indica all&#39;origine di produrre una diagnostica degli errori a cui è possibile fare riferimento in seguito durante il monitoraggio dell&#39;attività del set di dati e dello stato del flusso di dati. È possibile abilitare la diagnostica degli errori durante il processo di creazione del flusso di dati. |
+| Riepilogo errori | Data un&#39;esecuzione del flusso di dati non riuscita, il riepilogo degli errori visualizza un codice di errore e una descrizione per riepilogare il motivo per cui l&#39;iterazione dell&#39;esecuzione non è riuscita. |
 
 {style="table-layout:auto"}
 
-Se il flusso di dati segnala errori, puoi scorrere verso il basso fino alla parte inferiore della pagina e utilizzare l&#39;interfaccia [!UICONTROL Errori di esecuzione flusso di dati].
+Se l&#39;esecuzione del flusso di dati segnala errori, è possibile scorrere verso il basso fino alla parte inferiore della pagina utilizzando l&#39;interfaccia [!UICONTROL Errori] di esecuzione del flusso di dati.
 
-Utilizzare la sezione [!UICONTROL Record non riusciti] per visualizzare le metriche nei record non acquisiti a causa di errori. Per visualizzare un report completo degli errori, selezionare **[!UICONTROL Anteprima diagnostica errori]**. Per scaricare una copia della diagnostica degli errori e del manifesto del file, selezionare **[!UICONTROL Scarica]**, quindi copiare la chiamata API di esempio da utilizzare con l&#39;API [!DNL Data Access].
+Utilizzare la [!UICONTROL sezione Record non riusciti] per visualizzare le metriche sui record che non sono stati acquisiti a causa di errori. Per visualizzare un report completo degli errori, selezionare **[!UICONTROL Anteprima diagnostica errori]**. Per scaricare una copia della diagnostica degli errori e del manifesto del file, selezionare **[!UICONTROL Scarica]**, quindi copiare la chiamata API di esempio da utilizzare con l&#39;API [!DNL Data Access].
 
 >[!NOTE]
 >

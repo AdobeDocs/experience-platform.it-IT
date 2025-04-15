@@ -32,19 +32,19 @@ Nelle sezioni seguenti viene descritto come impostare e configurare [!DNL Segmen
 
 ### Configurare i dati di identità e gli spazi dei nomi {#namespaces}
 
-Il primo passaggio per iniziare a utilizzare [!DNL Segment Match] consiste nell&#39;assicurarsi di acquisire dati in base agli spazi dei nomi di identità supportati.
+Il primo passo per iniziare [!DNL Segment Match] è assicurarsi di inserire dati negli spazi dei nomi delle identità supportati.
 
-Gli spazi dei nomi di identità sono un componente di [Adobe Experience Platform Identity Service](../../../identity-service/home.md). Ogni identità del cliente contiene uno spazio dei nomi associato che indica il contesto dell’identità. Ad esempio, uno spazio dei nomi può distinguere un valore di &quot;name<span>@email.com&quot; come indirizzo e-mail o &quot;443522&quot; come ID CRM numerico.
+Gli spazi dei nomi identità sono un componente del [servizio](../../../identity-service/home.md) Adobe Experience Platform Identity. A ogni identità del cliente è associato un namespace che indica il contesto dell&#39;identità. Ad esempio, un namespace può distinguere il valore &quot;nome<span>@email.com&quot; come indirizzo e-mail o &quot;443522&quot; come ID CRM numerico.
 
 Un’identità completa include un valore ID e uno spazio dei nomi. Quando si abbinano i dati dei record tra frammenti di profilo (ad esempio quando [!DNL Real-Time Customer Profile] unisce i dati di profilo), sia il valore di identità che lo spazio dei nomi devono corrispondere.
 
 Nel contesto di [!DNL Segment Match], gli spazi dei nomi vengono utilizzati nel processo di sovrapposizione durante la condivisione dei dati.
 
-L’elenco degli spazi dei nomi supportati è il seguente:
+L&#39;elenco dei namespace supportati è il seguente:
 
 | Namespace | Descrizione |
 | --------- | ----------- |
-| E-mail (SHA256, in minuscolo) | Uno spazio dei nomi per l’indirizzo e-mail con hash predefinito. I valori forniti in questo spazio dei nomi vengono convertiti in minuscolo prima dell’hashing con SHA256. Gli spazi iniziali e finali devono essere tagliati prima che un indirizzo e-mail venga normalizzato. Questa impostazione non può essere modificata retroattivamente. Experience Platform offre due metodi per supportare l&#39;hashing sulla raccolta dati, tramite [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) e tramite [preparazione dati](../../../data-prep/functions.md#hashing). |
+| E-mail (SHA256, in minuscolo) | Uno spazio dei nomi per l&#39;indirizzo e-mail con pre-hash. I valori forniti in questo spazio nomi vengono convertiti in minuscolo prima di eseguire l&#39;hashing con SHA256. Gli spazi iniziali e finali devono essere tagliati prima che un indirizzo e-mail venga normalizzato. Questa impostazione non può essere modificata retroattivamente. Experience Platform offre due metodi per supportare l&#39;hashing sulla raccolta dati, tramite [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) e tramite [preparazione dati](../../../data-prep/functions.md#hashing). |
 | Telefono (SHA256_E.164) | Uno spazio dei nomi che rappresenta numeri di telefono non elaborati che devono essere sottoposti a hashing utilizzando sia il formato SHA256 che il formato E.164. |
 | ECID | Uno spazio dei nomi che rappresenta un valore Experience Cloud ID (ECID). A questo spazio dei nomi possono fare riferimento anche i seguenti alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Per ulteriori informazioni, vedere [Panoramica ECID](../../../identity-service/features/ecid.md). |
 | Apple IDFA (ID per inserzionisti) | Spazio dei nomi che rappresenta l’ID di Apple per gli inserzionisti. Per ulteriori informazioni, consulta il seguente documento sugli [annunci basati su interessi](https://support.apple.com/en-us/HT202074). |
@@ -105,11 +105,11 @@ Puoi visualizzare un elenco delle connessioni con i partner esistenti nell&#39;i
 
 ![stabilire-connessione.png](./images/establish-connection.png)
 
-Per creare un nuovo [!UICONTROL ID connessione], seleziona **[!UICONTROL Rigenera]** in [!UICONTROL Impostazione condivisione], quindi seleziona l&#39;icona Copia accanto all&#39;ID appena generato.
+Per creare un nuovo [!UICONTROL ID] di connessione, selezionare **[!UICONTROL Rigenera]** in [!UICONTROL Impostazioni] condivisione, quindi selezionare l&#39;icona Copia accanto all&#39;ID appena generato.
 
 ![share-setting.png](./images/share-setting.png)
 
-Per connettere un partner utilizzando il relativo [!UICONTROL ID connessione], immettere il valore dell&#39;ID univoco nella casella di input in [!UICONTROL Partner connessione], quindi selezionare **[!UICONTROL Richiesta]**.
+Per connettere un partner utilizzando il relativo [!UICONTROL ID] di connessione, immettere il valore dell&#39;ID univoco nella casella di immissione sotto [!UICONTROL Connetti partner] e quindi selezionare **[!UICONTROL Richiedi]**.
 
 ![connect-partner.png](./images/connect-partner.png)
 
@@ -121,30 +121,30 @@ Per connettere un partner utilizzando il relativo [!UICONTROL ID connessione], i
 >abstract="I casi d’uso di marketing con restrizioni forniscono indicazioni ai partner per garantire che i segmenti condivisi vengano utilizzati correttamente in base alle restrizioni di governance dei dati."
 >text="Learn more in documentation"
 
-Un **feed** è un raggruppamento di dati (segmenti), le regole per l&#39;esposizione o l&#39;utilizzo di tali dati e le configurazioni che determinano la corrispondenza dei dati con i dati dei partner. Un feed può essere gestito in modo indipendente e scambiato con altri utenti di Experience Platform tramite [!DNL Segment Match].
+Un **feed** è un raggruppamento di dati (segmenti), le regole per il modo in cui tali dati possono essere esposti o utilizzati e le configurazioni che determinano la corrispondenza dei dati con i dati dei partner. Un feed può essere gestito in modo indipendente e scambiato con altri utenti Experience Platform tramite [!DNL Segment Match].
 
-Per creare un nuovo feed, selezionare **[!UICONTROL Crea feed]** dal dashboard [!UICONTROL Feed].
+Per creare una nuova feed, seleziona **[!UICONTROL Crea feed]** dal [!UICONTROL dashboard Feed] .
 
-![create-feed.png](./images/create-feed.png)
+![creare-feed.png](./images/create-feed.png)
 
-La configurazione di base di un feed include un nome, una descrizione e configurazioni relative a casi di utilizzo marketing e impostazioni di identità. Specifica un nome e una descrizione per il feed, quindi applica i casi di utilizzo di marketing da cui desideri escludere i dati. È possibile selezionare più casi d’uso da un elenco che include:
+La configurazione di base di un feed include un nome, una descrizione e configurazioni relative marketing casi d&#39;uso e le impostazioni di identità. Specifica un nome e una descrizione per il feed, quindi applica i casi di utilizzo di marketing da cui desideri escludere i dati. È possibile selezionare più casi d’uso da un elenco che include:
 
 * [!UICONTROL Analytics]
 * [!UICONTROL Combina con PII]
 * [!UICONTROL Targeting intersito]
 * [!UICONTROL Data Science]
 * [!UICONTROL Destinazione e-mail]
-* [!UICONTROL Esporta a terze parti]
+* [!UICONTROL Esporta in terze parti]
 * [!UICONTROL Pubblicità in loco]
 * [!UICONTROL Personalizzazione in loco]
 * [!UICONTROL Corrispondenza segmento]
 * [!UICONTROL Personalizzazione identità singola]
 
-Infine, seleziona gli spazi dei nomi di identità appropriati per il feed. Per informazioni sugli spazi dei nomi specifici supportati da [!DNL Segment Match], vedere la [tabella dei dati di identità e degli spazi dei nomi](#namespaces). Al termine, selezionare **[!UICONTROL Avanti]**.
+Infine, seleziona i namespace identità appropriati per il tuo feed. Per informazioni sugli spazi dei nomi specifici supportati da [!DNL Segment Match], vedere la [tabella](#namespaces) dei dati e degli spazi dei nomi di identità. Al termine, selezionare **[!UICONTROL Successivo]**.
 
-![condivisione del pubblico.png](./images/audience-sharing.png)
+![audience-sharing.png](./images/audience-sharing.png)
 
-Dopo aver stabilito le impostazioni del feed, seleziona i segmenti da condividere dall’elenco dei segmenti di prime parti. Puoi selezionare più segmenti dall’elenco e utilizzare la barra a destra per gestire l’elenco dei segmenti selezionati. Al termine, seleziona **[!UICONTROL Avanti]**.
+Una volta stabilite le impostazioni del feed, seleziona i segmenti che desideri condividere dall&#39;elenco dei segmenti di prime parti. Puoi selezionare più di un segmento dall&#39;elenco e utilizzare la barra destra per gestire l&#39;elenco dei segmenti selezionati. Al termine, selezionare **[!UICONTROL Successivo]**.
 
 ![select-segments.png](./images/select-segments.png)
 
@@ -199,7 +199,7 @@ Una volta accettato un feed condiviso, puoi iniziare a utilizzarlo per creare nu
 
 ## Passaggi successivi
 
-Leggendo questo documento, hai acquisito una conoscenza di [!DNL Segment Match], delle sue funzionalità e del relativo flusso di lavoro end-to-end. Per ulteriori informazioni su altri servizi di Platform, consulta i seguenti documenti:
+Leggendo questo documento, si è acquisita una comprensione di , delle [!DNL Segment Match]sue capacità e della sua workflow end-to-end. Consulta i seguenti documenti per ulteriori informazioni su altri servizi Platform:
 
 * [[!DNL Segmentation Service]](../../home.md)
 * [[!DNL Identity Service]](../../../identity-service/home.md)

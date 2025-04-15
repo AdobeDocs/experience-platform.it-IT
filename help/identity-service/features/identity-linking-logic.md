@@ -1,6 +1,6 @@
 ---
-title: Logica di collegamento del servizio Identity
-description: Scopri in che modo il servizio Identity collega identità diverse per creare una visualizzazione completa di un cliente.
+title: Logica di collegamento del servizio identità
+description: Scopri informazioni su come il servizio Identity collega identità diverse per creare una visione completa di un cliente.
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
 source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
@@ -16,113 +16,113 @@ ht-degree: 2%
 >title="Grafico simulato"
 >abstract="Le identità sono collegate quando lo spazio dei nomi identità e il valore dell’identità corrispondono."
 
-Quando lo spazio dei nomi dell’identità e i valori dell’identità corrispondono, viene stabilito un collegamento tra due identità.
+Un collegare tra due identità viene stabilito quando lo spazio dei nomi identità e i valori identità corrispondono.
 
-Esistono due tipi di identità collegate:
+Esistono due tipi di identità che vengono collegate:
 
-* **Record profilo**: queste identità provengono in genere da sistemi CRM.
-* **Eventi esperienza**: queste identità provengono in genere dall&#39;implementazione WebSDK o dall&#39;origine Adobe Analytics.
+* **Record** del profilo: queste identità provengono solitamente da sistemi CRM.
+* **Eventi** esperienza: queste identità provengono solitamente dall&#39;implementazione WebSDK o dall&#39;origine Adobe Analytics.
 
-## Significato semantico della creazione di collegamenti
+## Significato semantico di stabilire collegamenti
 
-Un’identità rappresenta un’entità del mondo reale. Se esiste un collegamento stabilito tra due identità, ciò significa che le due identità sono associate l’una all’altra. Di seguito sono riportati alcuni esempi che illustrano questo concetto:
+Un&#39;identità rappresenta un&#39;entità del mondo reale. Se c&#39;è un collegare stabilito tra due identità, ciò significa che le due identità sono associate l&#39;una all&#39;altra. Di seguito sono riportati alcuni esempi che illustrano questo concetto:
 
 | Azione | Collegamenti stabiliti | Significato |
 | --- | --- | --- |
-| Un utente finale accede utilizzando un computer. | CRMID ed ECID sono collegati tra loro. | Una persona (CRMID) possiede un dispositivo con un browser (ECID). |
-| Un utente finale naviga in modo anonimo utilizzando un iPhone. | IDFA è collegato a ECID. | Il dispositivo hardware Apple (IDFA), ad esempio un iPhone, è associato al browser (ECID). |
-| Un utente finale accede utilizzando Google Chrome e quindi Firefox. | Il CRMID è collegato a due diversi ECID. | Una persona (CRMID) è associata a 2 browser Web (**Nota**: ogni browser avrà il proprio ECID). |
-| Un ingegnere dati acquisisce un record CRM che include due campi contrassegnati come identità: CRMID e E-mail. | CRMID ed E-mail sono collegati. | All’indirizzo e-mail è associata una persona (CRMID). |
+| Un fine utente accede utilizzando un computer. | CRMID ed ECID sono collegati. | Una persona (CRMID) possiede un dispositivo con un browser (ECID). |
+| Un fine utente naviga in modo anonimo utilizzando un iPhone . | IDFA è collegato a ECID. | L&#39;dispositivo hardware Apple (IDFA), ad esempio un iPhone, è associato all&#39;browser (ECID). |
+| Un utente finale accede utilizzando Google Effetto cromatura e quindi Firefox. | CRMID è collegato a due ECID diversi. | Una persona (CRMID) è associata a 2 browser Web (**Nota**: ogni browser avrà il proprio ECID). |
+| Un ingegnere dei dati acquisisce un record CRM che include due campi contrassegnati come identità: CRMID ed E-mail. | CRMID ed E-mail sono collegati. | Una persona (CRMID) è associata all&#39;indirizzo e-mail. |
 
 ## Informazioni sulla logica di collegamento del servizio Identity
 
-Un’identità è costituita da uno spazio dei nomi dell’identità e da un valore di identità.
+Un&#39;identità è costituita da uno spazio dei nomi identità e da un valore identità.
 
-* Uno spazio dei nomi di identità è il contesto di un dato valore di identità a. Esempi comuni di spazi dei nomi di identità includono CRMID, E-mail e Telefono.
-* Un valore di identità è la stringa che rappresenta un’entità del mondo reale. Ad esempio: &quot;julien<span>@acme.com&quot; può essere un valore di identità per uno spazio dei nomi E-mail e 555-555-1234 può essere un valore di identità corrispondente per uno spazio dei nomi Telefono.
+* Un namespace identità è il contesto di un dato valore di identità. Esempi comuni di spazi dei nomi identità includono CRMID, Email e Phone.
+* Un valore di identità è la stringa che rappresenta un&#39;entità del mondo reale. Ad esempio: &quot;julien<span>@acme.com&quot; può essere un valore di identità per uno spazio dei nomi di posta elettronica e 555-555-1234 può essere un valore di identità corrispondente per uno spazio dei nomi Telefono.
 
 >[!TIP]
 >
->Lo spazio dei nomi dell’identità è importante perché senza di esso, il valore dell’identità perde il contesto e non avrà informazioni sufficienti per corrispondere correttamente alle identità.
+>The identity namespace is important because without it, then the identity value loses its context and will not have enough information to successfully match identities.
 
-Per una rappresentazione visiva del funzionamento della logica di collegamento del servizio Identity, consulta i seguenti diagrammi:
+See the following diagrams for a visual representation of how the Identity Service linking logic works:
 
 >[!BEGINTABS]
 
 >[!TAB Grafico esistente]
 
-Supponiamo di avere un grafo di identità esistente con tre identità collegate:
+Supponiamo di avere un grafico delle identità esistente con tre identità collegate:
 
-* TEL. (555)-555-1234
-* E-MAIL:julien<span>@acme.com
+* TELEFONO:(555)-555-1234
+* POSTA ELETTRONICAJULIEN<span>@acme.com
 * CRMID:60013ABC
 
-![grafico esistente](../images/identity-settings/existing-graph.png)
+![existing graph](../images/identity-settings/existing-graph.png)
 
->[!TAB Dati in arrivo]
+>[!TAB Incoming data]
 
-Una coppia di identità viene acquisita nel grafico e questa coppia contiene:
+A pair of identities are ingested into your graph and this pair contains:
 
 * CRMID:60013ABC
 * ECID:100066526
 
-![dati in arrivo](../images/identity-settings/incoming-data.png)
+![Dati in entrata](../images/identity-settings/incoming-data.png)
 
 >[!TAB Grafico aggiornato]
 
-Il servizio Identity riconosce che CRMID:60013ABC esiste già nel grafico, pertanto collega solo il nuovo ECID
+Identity Service riconosce che CRMID:60013ABC esiste già all&#39;interno del grafico e quindi collega solo il nuovo ECID
 
-![grafico aggiornato](../images/identity-settings/updated-graph.png)
+![Grafico aggiornato](../images/identity-settings/updated-graph.png)
 
 >[!ENDTABS]
 
 ## Scenario cliente
 
-In qualità di ingegnere dati, acquisisci il seguente set di dati CRM (record profilo) in Experience Platform.
+You are a data engineer and you ingest the following CRM dataset (Profile record) to Experience Platform.
 
 | CRMID** | Telefono* | E-mail* | Nome | Cognome |
 | --- | --- | --- | --- | --- |
 | 60013ABC | 555-555-1234 | julien<span>@acme.com | Julien | Smith |
-| 31260XYZ | 777-777-6890 | evan<span>@acme.com | Evan | Smith |
+| 31260XYZ | 777-777-6890 | evan<span>@acme.com | Evan | Fabbro |
 
 >[!NOTE]
 >
 >* `**` - Indica il campo contrassegnato come identità primaria.
 >* `*` - Indica il campo contrassegnato come identità secondaria.
 >
->Identity Service non distingue tra identità primaria e secondaria. Se un campo è contrassegnato come identità, verrà acquisito in Identity Service.
+>Il servizio identità non distingue tra identità primaria e secondaria. Se un campo è contrassegnato come identità, viene assimilato al servizio Identity.
 
-Hai anche implementato Web SDK e acquisito un set di dati Web SDK (Experience Event) con le seguenti tabelle di dati:
+Hai anche implementato WebSDK e inserito un dataset WebSDK (Experience Event) con le seguenti tabelle di dati:
 
-| Timestamp | Identità nell’evento* | Evento |
+| Timestamp | Identità nell&#39;evento* | Evento |
 | --- | --- | --- |
 | `t=1` | ECID:38652 | Visualizza home page |
-| `t=2` | ECID:38652, CRMID:31260XYZ | Cerca scarpe |
+| `t=2` | ECID:38652, CRMID:31260XYZ | Search per scarpe |
 | `t=3` | ECID:44675 | Visualizza home page |
 | `t=4` | ECID:44675, CRMID: 31260XYZ | Visualizza cronologia acquisti |
 
-L&#39;identità primaria di ogni evento verrà determinata in base a [modalità di configurazione dei tipi di elementi dati](../../tags/extensions/client/web-sdk/data-element-types.md).
+L&#39;identità principale per ogni evento sarà determinata in base alla [configurazione dei tipi di](../../tags/extensions/client/web-sdk/data-element-types.md) elementi dati.
 
 >[!NOTE]
 >
->* Se selezioni il CRMID come principale, gli eventi autenticati (eventi con mappa di identità contenente il CRMID e l’ECID) avranno un’identità primaria di CRMID. Per gli eventi non autenticati (gli eventi con la mappa di identità contenente solo ECID) avranno un’identità primaria di ECID. Adobe consiglia questa opzione.
+>* Se si seleziona CRMID come primario, gli eventi autenticati (eventi con mappa identità contenente CRMID ed ECID) avranno un&#39;identità primaria di CRMID. Per gli eventi non autenticati (eventi con la mappa di identità contenente solo ECID) avrà un&#39;identità primaria di ECID. Adobe Systems consiglia questa opzione.
 >
->* Se selezioni l’ECID come principale, indipendentemente dallo stato di autenticazione, l’ECID diventa l’identità principale.
+>* Se si seleziona ECID come primario, indipendentemente dallo stato di autenticazione, l&#39;ECID diventa l&#39;identità primaria.
 
 In questo esempio:
 
-* `t=1`, ha utilizzato un computer desktop (ECID:38652) e per visualizzare la home page in modo anonimo.
-* `t=2`, ha utilizzato lo stesso computer desktop, ha effettuato l&#39;accesso (CRMID:31260XYZ) e ha quindi cercato le scarpe.
-   * Una volta effettuato l’accesso, l’evento invia sia ECID che CRMID al servizio Identity.
-* `t=3`, ha utilizzato un computer portatile (ECID:44675) e ha navigato in modo anonimo.
-* `t=4`, ha utilizzato lo stesso computer portatile, ha effettuato l&#39;accesso (CRMID: 31260XYZ) e ha quindi visualizzato la cronologia degli acquisti.
+* `t=1`, utilizzato un computer desktop (ECID:38652) e per visualizzare la home page navigare in modo anonimo.
+* `t=2`, ha usato lo stesso computer desktop, ha effettuato l&#39;accesso (CRMID:31260XYZ) e poi ha cercato le scarpe.
+   * Una volta effettuato l&#39;accesso di un utente, l&#39;evento invia sia ECID che CRMID a Identity Service.
+* `t=3`, utilizzava un computer portatile (ECID:44675) e navigava in modo anonimo.
+* `t=4`, ha utilizzato lo stesso computer portatile, ha effettuato l&#39;accesso (CRMID: 31260XYZ) e quindi ha visualizzato la cronologia degli acquisti.
 
 
 >[!BEGINTABS]
 
 >[!TAB timestamp=0]
 
-In `timestamp=0`, si dispone di due grafici delle identità per due clienti diversi. Entrambi sono rappresentati da tre identità collegate.
+In , `timestamp=0`sono disponibili due grafici di identità per due clienti diversi. Entrambi sono rappresentati da tre identità collegate.
 
 | | CRMID | E-mail | Telefono |
 | --- | --- | --- | --- |
@@ -133,25 +133,25 @@ In `timestamp=0`, si dispone di due grafici delle identità per due clienti dive
 
 >[!TAB timestamp=1]
 
-In `timestamp=1`, un cliente utilizza un laptop per visitare il sito Web di e-commerce, visualizzare la home page e navigare in modo anonimo. Questo evento di navigazione anonimo è identificato come ECID:38652. Poiché il servizio Identity memorizza solo gli eventi con almeno due identità, queste informazioni non vengono memorizzate.
+In `timestamp=1`, un cliente utilizza un laptop per visita il e-commerce sito Web, visualizzare la home page e navigare in modo anonimo. Questo evento di esplorazione anonima è identificato come ECID:38652. Poiché il servizio Identity archivia solo gli eventi con almeno due identità, queste informazioni non vengono archiviate.
 
 ![timestamp-one](../images/identity-settings/timestamp-one.png)
 
 >[!TAB timestamp=2]
 
-In `timestamp=2`, un cliente utilizza lo stesso laptop per visitare il sito Web di e-commerce. Accedono con la combinazione di nome utente e password e cercano le scarpe. Identity Service identifica l’account del cliente quando effettua l’accesso perché corrisponde al suo identificatore CRMID: 31260XYZ. Inoltre, Identity Service mette in relazione ECID:38562 con CRMID:31260XYZ, poiché entrambi utilizzano lo stesso browser sullo stesso dispositivo.
+At `timestamp=2`, a customer uses the same laptop to visit your e-commerce website. They log in with their username and password combination and they browse for shoes. Identity Service identifica il account del cliente quando effettua l&#39;accesso perché corrisponde al CRMID: 31260XYZ. Inoltre, Identity Service correla ECID:38562 a CRMID:31260XYZ poiché entrambi utilizzano lo stesso browser sullo stesso dispositivo.
 
 ![timestamp-due](../images/identity-settings/timestamp-two.png)
 
 >[!TAB timestamp=3]
 
-In `timestamp=3` un cliente utilizza un tablet per visitare il sito Web di e-commerce e navigare in modo anonimo. Questo evento di navigazione anonimo è identificato come ECID:44675. Poiché il servizio Identity memorizza solo gli eventi con almeno due identità, queste informazioni non vengono memorizzate.
+At `timestamp=3` a customer uses a tablet to visit your e-commerce website and browse anonymously. Questo evento di esplorazione anonimo è identificato come ECID:44675. Since Identity Service only stores events with at least two identities, this information is not stored.
 
-![timestamp-tre](../images/identity-settings/timestamp-three.png)
+![timestamp-three](../images/identity-settings/timestamp-three.png)
 
 >[!TAB timestamp=4]
 
-In `timestamp=4`, un cliente utilizza lo stesso tablet, accede al proprio account (CRMID:31260XYZ) e visualizza la cronologia degli acquisti. Questo evento collega il relativo CRMID:31260XYZ all’identificatore del cookie assegnato all’attività di navigazione anonima, ECID:44675, e collega ECID:44675 al grafico delle identità del cliente 2.
+At `timestamp=4`, a customer uses the same tablet, logs in to their account (CRMID:31260XYZ) and views their purchase history. This event links their CRMID:31260XYZ to the cookie identifier assigned to anonymous browsing activity, ECID:44675, and links ECID:44675 to customer two&#39;s identity graph.
 
 ![timestamp-quattro](../images/identity-settings/timestamp-four.png)
 

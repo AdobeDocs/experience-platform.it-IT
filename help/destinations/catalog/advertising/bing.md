@@ -26,7 +26,7 @@ In qualità di addetto al marketing, desidero poter utilizzare i tipi di pubblic
 
 ## Identità supportate {#supported-identities}
 
-[!DNL Microsoft Bing] supporta l&#39;attivazione di tipi di pubblico in base alle identità mostrate nella tabella seguente. Ulteriori informazioni su [identità](/help/identity-service/features/namespaces.md).
+[!DNL Microsoft Bing] Supporta l&#39;attivazione dei tipi di pubblico in base alle identità mostrate nella tabella seguente. Scopri di più sulle [identità](/help/identity-service/features/namespaces.md).
 
 | Identità | Descrizione |
 |---|---|
@@ -53,7 +53,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
-| Tipo di esportazione | **[!UICONTROL Esportazione pubblico]** | Stai esportando tutti i membri di un pubblico nella destinazione [!DNL Microsoft Bing]. |
+| Tipo di esportazione | **[!UICONTROL Esportazione del pubblico]** | Stai esportando tutti i membri di un pubblico nella [!DNL Microsoft Bing] destinazione. |
 | Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni sulle [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -78,10 +78,10 @@ Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;ese
 
 ### Inserire i dettagli della destinazione {#parameters}
 
-Durante la [configurazione](../../ui/connect-destination.md) di questa destinazione, è necessario fornire le seguenti informazioni:
+Durante [la configurazione di](../../ui/connect-destination.md) questa destinazione, è necessario fornire le seguenti informazioni:
 
 * **[!UICONTROL Nome]**: un nome con cui riconoscerai questa destinazione in futuro.
-* **[!UICONTROL Descrizione]**: una descrizione che ti aiuterà a identificare questa destinazione in futuro.
+* **[!UICONTROL Descrizione]**: descrizione che ti aiuterà a identificare questa destinazione in futuro.
 * **[!UICONTROL ID account]**: il tuo [!DNL Bing Ads Customer ID] (CID). Il tuo CID è un numero intero, trovato nell&#39;URL quando accedi a [!DNL Microsoft Advertising].
 
 ### Abilita avvisi {#enable-alerts}

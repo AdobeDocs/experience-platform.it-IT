@@ -60,7 +60,7 @@ Per questa visualizzazione dashboard sono disponibili le metriche seguenti:
 | **[!UICONTROL Ultimo metodo di valutazione]** | Il metodo di valutazione del pubblico. Poiché è supportata solo la segmentazione batch, l&#39;unico valore possibile è **[!UICONTROL Batch]**. |
 | **[!UICONTROL Ultimi profili di valutazione]** | Il numero di profili valutati nell’ultimo processo di valutazione del pubblico. |
 | **[!UICONTROL Timestamp ultima attivazione]** | La data e l’ora di esecuzione dell’ultimo processo di attivazione del pubblico. |
-| **[!UICONTROL Stato ultima attivazione]** | Lo stato dell’ultimo processo di attivazione del pubblico. I valori possibili includono **[!UICONTROL Operazione riuscita]**, **[!UICONTROL Nessuna esecuzione]** e **[!UICONTROL Operazione non riuscita]**. |
+| **[!UICONTROL Stato ultima attivazione]** | Lo stato dell’ultimo processo di attivazione del pubblico. I valori possibili includono **[!UICONTROL Success]**, **[!UICONTROL No runs]** e **[!UICONTROL Failed]**. |
 | **[!UICONTROL Identità ultima attivazione]** | Il numero di identità attivate nell’ultimo processo di attivazione del pubblico. |
 | **[!UICONTROL Destinazione ultima attivazione]** | Il nome della destinazione a cui è stato attivato l’ultimo processo di attivazione del pubblico. |
 

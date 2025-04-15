@@ -1,7 +1,7 @@
 ---
 title: Eseguire trasformazioni sui dati esportati nelle destinazioni di archiviazione cloud utilizzando campi calcolati
 type: Tutorial
-description: Scopri come utilizzare la funzionalità dei campi calcolati per eseguire trasformazioni sui dati esportati nelle destinazioni dell’archiviazione cloud
+description: Come utilizzare la funzionalità dei campi calcolati per eseguire trasformazioni sui dati esportati verso destinazioni di archiviazione cloud
 exl-id: 1e14f964-4c03-4d0c-be8d-c3dcb48a335a
 source-git-commit: 14c672ef57e0b0247020075552c782ed18db8484
 workflow-type: tm+mt
@@ -28,19 +28,19 @@ disable additional URLs for a while
 
 >[!AVAILABILITY]
 >
->La funzionalità per eseguire trasformazioni sui dati esportati nelle destinazioni di archiviazione cloud è generalmente disponibile per le seguenti destinazioni: [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md), [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md), nonché per tutte le destinazioni di archiviazione cloud personalizzate create tramite [Destination SDK](/help/destinations/destination-sdk/overview.md) e create dai partner.
+>La funzionalità per eseguire trasformazioni sui dati esportati in cloud destinazioni di archiviazione è disponibile a livello generale per le seguenti destinazioni: , , , , [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md)[[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md)[[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md), , nonché per qualsiasi destinazione di archiviazione cloud creata da partner personalizzate create tramite [Destination SDK.](/help/destinations/destination-sdk/overview.md)[[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md)[[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)[[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
 
-Per eseguire varie trasformazioni sui dati esportati nelle destinazioni di archiviazione cloud, devi utilizzare la funzionalità dei campi calcolati nel passaggio di mappatura del flusso di lavoro di esportazione. Per informazioni dettagliate sui campi calcolati, visita le pagine collegate di seguito. Queste pagine includono un’introduzione ai campi calcolati nella preparazione dati e ulteriori informazioni su tutte le funzioni disponibili:
+Per eseguire varie trasformazioni sui dati esportati verso destinazioni di archiviazione cloud, è necessario utilizzare la funzionalità campi calcolati nella fase di mappatura del workflow di esportazione. Per informazioni dettagliate sui campi calcolati, visita le pagine collegate di seguito. Queste pagine includono un&#39;introduzione ai campi calcolati in Preparazione dati e ulteriori informazioni su tutte le funzioni disponibili:
 
-* [Guida e panoramica dell’interfaccia utente](/help/data-prep/ui/mapping.md#calculated-fields)
+* [interfaccia guida e panoramica](/help/data-prep/ui/mapping.md#calculated-fields)
 * [Funzioni di preparazione dati](/help/data-prep/functions.md)
 
 ## Prerequisiti {#prerequisites}
 
 Per utilizzare i campi calcolati per le trasformazioni dei dati:
 
-1. [Connetti](/help/destinations/ui/connect-destination.md) a una destinazione di archiviazione cloud desiderata. Quando ci si connette alla destinazione cloud desiderata, disattivare **[!UICONTROL Esporta array, mappe, oggetti]** [opzione](/help/destinations/ui/export-arrays-maps-objects.md##export-arrays-maps-objects-toggle).
-2. Segui i [passaggi di attivazione per le destinazioni dell&#39;archiviazione cloud](/help/destinations/ui/activate-batch-profile-destinations.md) e passa al passaggio [mappatura](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
+1. [Connettiti](/help/destinations/ui/connect-destination.md) a una destinazione di archiviazione cloud desiderata. Quando ci si connette alla destinazione cloud desiderata, disattivare l&#39;opzione **(/help/destinations/ui/export-arrays-maps-objects.md##export-arrays-maps-objects-toggle)Esporta array, mappe, oggetti]**[.
+2. Segui i [passaggi di attivazione per cloud le destinazioni](/help/destinations/ui/activate-batch-profile-destinations.md) di archiviazione e vai al passaggio di [mappatura](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) .
 
 ## Utilizzare i campi calcolati {#how-to-export-calculated-fields}
 
@@ -54,41 +54,41 @@ Per utilizzare i campi calcolati per le trasformazioni dei dati:
 >title="Aggiungere campi calcolati disabilitati"
 >abstract="Questo controllo è disabilitato, perché durante la configurazione della connessione di destinazione hai selezionato **Esporta array, mappe, oggetti** su *Attivato*. Per utilizzare i campi calcolati e le funzioni disponibili all’interno, imposta una nuova connessione di destinazione con l’opzione **Esporta array, mappe, oggetti** su *Disattivato*."
 
-Nel passaggio di mappatura del flusso di lavoro di attivazione per le destinazioni di archiviazione cloud, seleziona **[!UICONTROL Aggiungi campo calcolato]**.
+Nel passaggio di mappatura del workflow di attivazione per le destinazioni di archiviazione cloud, selezionare **[!UICONTROL Aggiungi campo]** calcolato.
 
 >[!TIP]
 >
->Il controllo **[!UICONTROL Aggiungi campo calcolato]** è disabilitato per le connessioni di destinazione in cui il controllo **[!UICONTROL Esporta matrici, mappe e oggetti]** è stato disattivato. [Ulteriori informazioni](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle).
+>Il **[!UICONTROL controllo Aggiungi campo calcolato]** è disabilitato per le connessioni di destinazione in cui è stato disattivato il **[!UICONTROL controllo Esporta matrici, mappe e oggetti]** . [Ulteriori informazioni](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle).
 
-![Aggiungi campo calcolato evidenziato nel passaggio di mappatura del flusso di lavoro di attivazione batch.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
+![Aggiungi il campo calcolato evidenziato nella fase di mappatura del workflow di attivazione batch.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
 
-Viene visualizzata una finestra modale in cui è possibile selezionare funzioni e campi per esportare gli attributi da Experience Platform.
+Si apre una finestra modale in cui è possibile selezionare le funzioni e i campi per esportare gli attributi dal Experience Platform.
 
-![Finestra modale della funzionalità del campo calcolato senza alcuna funzione ancora selezionata.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-2.png)
+![Finestra modale della funzionalità del campo calcolato senza alcuna funzione selezionata ancora.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-2.png)
 
-Ad esempio, utilizza la funzione `array_to_string` nel campo `organizations` come mostrato di seguito per esportare l&#39;array organization come stringa in un file CSV. Visualizza [ulteriori informazioni su questo e altri esempi più avanti](#array-to-string-function-export-arrays).
+Ad esempio, utilizza la `array_to_string` `organizations` funzione sul campo come mostrato di seguito per esportare l&#39;array organizations come stringa in un file CSV. [Visualizza ulteriori informazioni su questo e altri esempi più avanti](#array-to-string-function-export-arrays).
 
 ![Finestra modale della funzionalità del campo calcolato con la funzione array-to-string selezionata.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
 
-Seleziona **[!UICONTROL Salva]** per mantenere il campo calcolato e tornare al passaggio di mappatura.
+Selezionare **[!UICONTROL Salva]** per mantenere il campo calcolato e tornare al passaggio di mappatura.
 
-![Finestra modale della funzionalità del campo calcolato con la funzione matrice-stringa selezionata ed il controllo Salva evidenziato.](/help/destinations/assets/ui/export-arrays-calculated-fields/save-calculated-field.png)
+![Finestra modale della funzionalità del campo calcolato con la funzione array-to-string selezionata e il controllo Salva evidenziato.](/help/destinations/assets/ui/export-arrays-calculated-fields/save-calculated-field.png)
 
-Tornando al passaggio di mappatura del flusso di lavoro, compila il **[!UICONTROL campo di destinazione]** con il valore dell&#39;intestazione di colonna desiderata per questo campo nei file esportati.
+Indietro nella fase di mappatura del workflow, compilare il **[!UICONTROL campo]** Target con un valore dell&#39;intestazione di colonna desiderato per questo campo nei file esportati.
 
-![Passaggio di mapping con il campo di destinazione evidenziato.](/help/destinations/assets/ui/export-arrays-calculated-fields/fill-in-target-field.png)
+![Passaggio di mappatura con il campo destinazione evidenziato.](/help/destinations/assets/ui/export-arrays-calculated-fields/fill-in-target-field.png)
 
-![Seleziona campo di destinazione 2](/help/destinations/assets/ui/export-arrays-calculated-fields/target-field-filled-in.png)
+![Seleziona destinazione campo 2](/help/destinations/assets/ui/export-arrays-calculated-fields/target-field-filled-in.png)
 
-Al termine, seleziona **[!UICONTROL Avanti]** per procedere al passaggio successivo del flusso di lavoro di attivazione.
+Quando è pronto, selezionare **[!UICONTROL Successivo]** per procedere al passaggio successivo del workflow di attivazione.
 
-![Passaggio di mappatura con il campo di destinazione evidenziato e un valore di destinazione compilato.](/help/destinations/assets/ui/export-arrays-calculated-fields/select-next-to-proceed.png)
+![Passaggio di mappatura con il campo destinazione evidenziato e un valore destinazione compilato.](/help/destinations/assets/ui/export-arrays-calculated-fields/select-next-to-proceed.png)
 
-## Esempi di funzioni supportate per eseguire le trasformazioni dei dati {#supported-functions}
+## Funzioni supportate di esempio per eseguire trasformazioni di dati {#supported-functions}
 
-Tutte le [funzioni di preparazione dati](/help/data-prep/functions.md) documentate sono supportate quando si attivano i dati in destinazioni basate su file.
+Tutte le funzioni](/help/data-prep/functions.md) documentate [di Data Prep sono supportate quando si attivano i dati verso destinazioni basate su file.
 
-Le funzioni seguenti, specifiche per la gestione delle esportazioni di array o l’applicazione di hashing ai campi, sono documentate insieme ad esempi.
+Le funzioni riportate di seguito, specifiche per la gestione delle esportazioni di array o l&#39;applicazione dell&#39;hashing ai campi, sono documentate insieme agli esempi.
 
 * `array_to_string`
 * `flattenArray`
@@ -103,156 +103,156 @@ Le funzioni seguenti, specifiche per la gestione delle esportazioni di array o l
 * `first`
 * `last`
 
-## Esempi di funzioni utilizzate per eseguire le trasformazioni dei dati {#examples}
+## Esempi di funzioni utilizzate per eseguire trasformazioni di dati {#examples}
 
-Consulta gli esempi e ulteriori informazioni nelle sezioni seguenti per alcune delle funzioni elencate in precedenza. Per le altre funzioni elencate, consulta la [documentazione sulle funzioni generali nella sezione Preparazione dati](/help/data-prep/functions.md).
+Consulta esempi e ulteriori informazioni nelle sezioni seguenti per alcune delle funzioni sopra elencate. Per le altre funzioni elencate, fare riferimento alla documentazione relativa [alle funzioni generali nella sezione](/help/data-prep/functions.md) Preparazione dati.
 
-### Funzione `array_to_string` per esportare array {#array-to-string-function-export-arrays}
+### `array_to_string` Funzione per esportare gli array {#array-to-string-function-export-arrays}
 
-Utilizzare la funzione `array_to_string` per concatenare gli elementi di un array in una stringa utilizzando un separatore desiderato, ad esempio `_` o `|`. Questa funzione è utile quando si desidera esportare gli elementi di un array da Experience Platform in un file CSV.
+Utilizzare la `array_to_string` funzione per concatenare gli elementi di una matrice in una stringa, utilizzando un separatore desiderato, ad esempio `_` o `|`. Questa funzione è utile quando si desidera esportare gli elementi di un array da Experience Platform in un file CSV.
 
-Ad esempio, puoi combinare i seguenti campi XDM come mostrato nella schermata di mappatura utilizzando una sintassi `array_to_string('_',organizations)`:
+Ad esempio, è possibile combinare i seguenti campi XDM come mostrato nel schermata di mappatura utilizzando una `array_to_string('_',organizations)` sintassi:
 
-* Array `organizations`
-* `person.name.firstName` stringa
-* `person.name.lastName` stringa
-* `personalEmail.address` stringa
+* `organizations` array
+* `person.name.firstName` corda
+* `person.name.lastName` corda
+* `personalEmail.address` corda
 
-![Esempio di mapping che include la funzione array_to_string.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-array-to-string-function.png)
+![Esempio di mappatura con funzione array_to_string.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-array-to-string-function.png)
 
-In questo caso, il file di output si presenta come di seguito. Gli elementi dell&#39;array vengono concatenati in una singola stringa utilizzando il carattere `_`.
+In questo caso, il tuo file di output guarda like sotto. Si noti come gli elementi della matrice sono concatenati in una singola stringa utilizzando il `_` carattere.
 
 ```
 First_Name,Last_Name,Personal_Email,Organization
 John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':456,'orgName':'Superstar Inc','founded':2004,'latestInteraction':1692921600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
 ```
 
-### Funzione `filterArray` per esportare array filtrati {#filter-array}
+### `filterArray`Funzione per esportare array filtrati {#filter-array}
 
-Utilizzare la funzione `filterArray` per filtrare gli elementi di un array esportato. È possibile combinare questa funzione con la funzione `array_to_string` descritta in precedenza.
+Utilizzare questa `filterArray` funzione per filtrare gli elementi di un array esportato. È possibile combinare questa funzione con la `array_to_string` funzione descritta più avanti.
 
-Continuando con l&#39;oggetto array `organizations` dall&#39;alto, è possibile scrivere una funzione come `array_to_string('_', filterArray(organizations, org -> org.founded > 2021))`, che restituisce le organizzazioni con un valore per `founded` nell&#39;anno 2021 o più recente.
+Continuando con l&#39;oggetto array dall&#39;alto`organizations`, è possibile scrivere una funzione like `array_to_string('_', filterArray(organizations, org -> org.founded > 2021))`, che restituisce alle organizzazioni un valore per `founded` nell&#39;anno 2021 o più recente.
 
 ![Esempio della funzione filterArray.](/help/destinations/assets/ui/export-arrays-calculated-fields/filter-array-function.png)
 
-In questo caso, il file di output si presenta come di seguito. I due elementi dell&#39;array che soddisfano il criterio vengono concatenati in una singola stringa utilizzando il carattere `_`.
+In questo caso, il tuo file di output guarda like sotto. Si noti come i due elementi della matrice che soddisfano il criterio vengono concatenati in un&#39;unica stringa utilizzando il `_` carattere.
 
 ```
 John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
 ```
 
-### Funzione `transformArray` per esportare array trasformati {#transform-array}
+### `transformArray`Funzione per esportare gli array trasformati {#transform-array}
 
-Utilizzare la funzione `transformArray` per trasformare gli elementi di un array esportato. È possibile combinare questa funzione con la funzione `array_to_string` descritta in precedenza.
+Utilizzare la `transformArray` funzione per trasformare gli elementi di un array esportato. È possibile combinare questa funzione con la `array_to_string` funzione descritta più avanti.
 
-Continuando con l&#39;oggetto array `organizations` dall&#39;alto, è possibile scrivere una funzione come `array_to_string('_', transformArray(organizations, org -> ucase(org.orgName)))`, restituendo i nomi delle organizzazioni convertite in lettere maiuscole.
+Continuando con l&#39;oggetto array dall&#39;alto`organizations`, è possibile scrivere una funzione like `array_to_string('_', transformArray(organizations, org -> ucase(org.orgName)))`, restituendo i nomi delle organizzazioni convertiti tutti in maiuscolo.
 
 ![Esempio della funzione transformArray.](/help/destinations/assets/ui/export-arrays-calculated-fields/transform-array-function.png)
 
-In questo caso, il file di output si presenta come di seguito. I tre elementi dell&#39;array vengono trasformati e concatenati in una singola stringa utilizzando il carattere `_`.
+In questo caso, il tuo file di output guarda like sotto. Si noti come i tre elementi della matrice vengono trasformati e concatenati in una singola stringa utilizzando il `_` carattere.
 
 ```
 John,Doe,johndoe@acme.org,ACME INC_SUPERSTAR INC_ENERGY CORP
 ```
 
-### Funzione `iif` per esportare array {#iif-function-export-arrays}
+### `iif` Funzione per esportare gli array {#iif-function-export-arrays}
 
-Utilizzare la funzione `iif` per esportare gli elementi di un array in determinate condizioni. Ad esempio, continuando con l&#39;oggetto array `organizations` dall&#39;alto, è possibile scrivere una funzione condizionale semplice come `iif(organizations[0].equals("Marketing"), "isMarketing", "isNotMarketing")`.
+Utilizzare la `iif` funzione per esportare elementi di un array in determinate condizioni. Ad esempio, continuando con l&#39;oggetto array dall&#39;alto `organizations` , è possibile scrivere una semplice funzione condizionale like `iif(organizations[0].equals("Marketing"), "isMarketing", "isNotMarketing")`.
 
-![Esempio di mapping che include la funzione iif.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-iif-function.png)
+![Esempio di mappatura con funzione if.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-iif-function.png)
 
-In questo caso, il file di output si presenta come di seguito. In questo caso, il primo elemento dell’array è Marketing, quindi la persona è membro del reparto marketing.
+In questo caso, il tuo file di output guarda like sotto. In questo caso, il primo elemento della matrice è Marketing, quindi la persona è un membro del reparto marketing.
 
 ```
 `First_Name,Last_Name, Personal_Email, Is_Member_Of_Marketing_Dept
 John,Doe, johndoe@acme.org, "isMarketing"
 ```
 
-### Funzione `add_to_array` per esportare array {#add-to-array-function-export-arrays}
+### `add_to_array` Funzione per esportare gli array {#add-to-array-function-export-arrays}
 
-Utilizzare la funzione `add_to_array` per aggiungere elementi a un array esportato. È possibile combinare questa funzione con la funzione `array_to_string` descritta in precedenza.
+Utilizzare la `add_to_array` funzione per aggiungere elementi a un array esportato. È possibile combinare questa funzione con la `array_to_string` funzione descritta più avanti.
 
-Continuando con l&#39;oggetto array `organizations` dall&#39;alto, è possibile scrivere una funzione come `source: array_to_string('_', add_to_array(organizations,"2023"))`, restituendo le organizzazioni di cui una persona è membro nel 2023.
+Continuando con l&#39;oggetto array dall&#39;alto `organizations` , è possibile scrivere una funzione like `source: array_to_string('_', add_to_array(organizations,"2023"))`, restituendo le organizzazioni di cui una persona è membro nell&#39;anno 2023.
 
-![Esempio di mapping che include la funzione add_to_array.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-add-to-array-function.png)
+![Esempio di mappatura con funzione add_to_array.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-add-to-array-function.png)
 
-In questo caso, il file di output si presenta come di seguito. Nota come i tre elementi dell’array sono concatenati in una singola stringa utilizzando il carattere `_` e 2023 viene aggiunto alla fine della stringa.
+In questo caso, il tuo file di output guarda like sotto. Si noti come i tre elementi della matrice sono concatenati in una singola stringa usando il `_` carattere e 2023 viene anche aggiunto alla fine della stringa.
 
 ```
 `First_Name,Last_Name,Personal_Email,Organization_Member_2023
 John,Doe, johndoe@acme.org,"Marketing_Sales_Finance_2023"
 ```
 
-### Funzione `flattenArray` per esportare array appiattiti {#flatten-array}
+### `flattenArray`Funzione per esportare array appiattiti {#flatten-array}
 
-Utilizzare la funzione `flattenArray` per appiattire una matrice multidimensionale esportata. È possibile combinare questa funzione con la funzione `array_to_string` descritta in precedenza.
+Utilizzare la `flattenArray` funzione per appiattire un array multidimensionale esportato. È possibile combinare questa funzione con la `array_to_string` funzione descritta più avanti.
 
-Continuando con l&#39;oggetto array `organizations` dall&#39;alto, è possibile scrivere una funzione come `array_to_string('_', flattenArray(organizations))`. La funzione `array_to_string` appiattisce l&#39;array di input per impostazione predefinita in una stringa.
+Continuando con l&#39;oggetto array dall&#39;alto`organizations`, è possibile scrivere una funzione like `array_to_string('_', flattenArray(organizations))`. Si noti che la `array_to_string` funzione appiattisce l&#39;array di input per impostazione predefinita in una stringa.
 
-L&#39;output risultante è lo stesso della funzione `array_to_string` descritta più sopra.
+L&#39;output `array_to_string` risultante è lo stesso della funzione descritta più avanti.
 
-### Funzione `coalesce` per esportare array {#coalesce-function-export-arrays}
+### `coalesce` Funzione per esportare gli array {#coalesce-function-export-arrays}
 
-Utilizzare la funzione `coalesce` per accedere ed esportare il primo elemento non Null di un array in una stringa.
+Utilizzare questa `coalesce` funzione per accesso ed esportare il primo elemento non nullo di una matrice in una stringa.
 
-Ad esempio, puoi combinare i seguenti campi XDM come mostrato nella schermata di mappatura utilizzando una sintassi `coalesce(subscriptions.hasPromotion)` per restituire il primo `true` del valore `false` nell&#39;array:
+Ad esempio, è possibile combinare i seguenti campi XDM come mostrato nel schermata di mappatura utilizzando una `coalesce(subscriptions.hasPromotion)` sintassi per restituire il primo `true` valore della `false` matrice:
 
-* Array `"subscriptions.hasPromotion": [null, true, null, false, true]`
-* `person.name.firstName` stringa
-* `person.name.lastName` stringa
-* `personalEmail.address` stringa
+* `"subscriptions.hasPromotion": [null, true, null, false, true]` array
+* `person.name.firstName` corda
+* `person.name.lastName` corda
+* `personalEmail.address` corda
 
-![Esempio di mapping che include la funzione coalesce.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-coalesce-function.png)
+![Esempio di mappatura con funzione coalesce.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-coalesce-function.png)
 
-In questo caso, il file di output si presenta come di seguito. Il primo valore `true` non nullo nell&#39;array viene esportato nel file.
+In questo caso, il tuo file di output guarda like sotto. Si noti come il primo valore non nullo `true` della matrice viene esportato nel file.
 
 ```
 First_Name,Last_Name,hasPromotion
 John,Doe,true
 ```
 
-### Funzione `size_of` per esportare array {#sizeof-function-export-arrays}
+### `size_of` Funzione per esportare gli array {#sizeof-function-export-arrays}
 
-Utilizzare la funzione `size_of` per indicare quanti elementi esistono in un array. Ad esempio, se si dispone di un oggetto array `purchaseTime` con più marche temporali, è possibile utilizzare la funzione `size_of` per indicare quanti acquisti separati sono stati effettuati da una persona.
+Utilizzare la `size_of` funzione per indicare quanti elementi esistono in un array. Ad esempio, se si dispone di un `purchaseTime` oggetto matrice con più timestamp, è possibile utilizzare la `size_of` funzione per indicare quanti acquisti separati sono stati effettuati da una persona.
 
-Ad esempio, puoi combinare i seguenti campi XDM come mostrato nella schermata di mappatura.
+Ad esempio, puoi combinare i seguenti campi XDM, come mostrato nel schermata di mappatura.
 
-* Array `"purchaseTime": ["1538097126","1569633126,"1601255526","1632791526","1664327526"]` che indica cinque tempi di acquisto separati per il cliente
-* `personalEmail.address` stringa
+* `"purchaseTime": ["1538097126","1569633126,"1601255526","1632791526","1664327526"]` array che indica cinque tempi di acquisto separati da parte del cliente
+* `personalEmail.address` corda
 
-![Esempio di mapping che include la funzione size_of.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-size-of-function.png)
+![Esempio di mappatura con funzione size_of.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-size-of-function.png)
 
-In questo caso, il file di output si presenta come di seguito. Osserva come la seconda colonna indica il numero di elementi nell’array, corrispondente al numero di acquisti separati effettuati dal cliente.
+In questo caso, il tuo file di output guarda like sotto. Si noti come la seconda colonna indichi il numero di elementi nell&#39;array, corrispondente al numero di acquisti separati effettuati dal cliente.
 
 ```
 `Personal_Email,Times_Purchased
 johndoe@acme.org,"5"
 ```
 
-### Accesso all&#39;array basato su indice {#index-based-array-access}
+### accesso di array basati su Index {#index-based-array-access}
 
 >[!IMPORTANT]
 >
->A differenza delle altre funzioni descritte in questa pagina, per esportare singoli elementi di un array non è necessario ** per utilizzare il controllo **[!UICONTROL Campi calcolati]** nell&#39;interfaccia utente.
+>A differenza delle altre funzioni descritte in questa pagina, per esportare singoli elementi di una matrice non è *necessario* utilizzare il **[!UICONTROL controllo Campi]** calcolati nella interfaccia.
 
-È possibile accedere a un indice di un array per esportare un singolo elemento dall’array. Ad esempio, come nell&#39;esempio precedente per la funzione `size_of`, se si desidera accedere ed esportare solo la prima volta che un cliente ha acquistato un determinato prodotto, è possibile utilizzare `purchaseTime[0]` per esportare il primo elemento del timestamp, `purchaseTime[1]` per esportare il secondo elemento del timestamp, `purchaseTime[2]` per esportare il terzo elemento del timestamp e così via.
+È possibile accesso un indice di una matrice per esportare un singolo elemento dalla matrice. Ad esempio, simile all&#39;esempio precedente per la `size_of` funzione, se stai cercando di accesso ed esportare solo la prima volta che un cliente ha acquistato un determinato prodotto, puoi utilizzare `purchaseTime[0]` per esportare il primo elemento del timestamp, `purchaseTime[1]` per esportare il secondo elemento del timestamp, `purchaseTime[2]` per esportare il terzo elemento del timestamp,  E così via.
 
-![Esempio di mapping che mostra come è possibile accedere a un elemento di un array.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-index.png)
+![Esempio di mappatura che mostra come è possibile accedere a un elemento di un array.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-index.png)
 
-In questo caso, il file di output si presenta come di seguito, esportando la prima volta che il cliente ha effettuato un acquisto:
+In questo caso, il file di output ha like di seguito, esportando la prima volta che il cliente ha effettuato un acquisto:
 
 ```
 `Personal_Email,First_Purchase
 johndoe@acme.org,"1538097126"
 ```
 
-### `first` e `last` funzioni per esportare array {#first-and-last-functions-export-arrays}
+### `first` e `last` funzioni per esportare gli array {#first-and-last-functions-export-arrays}
 
-Utilizzare le funzioni `first` e `last` per esportare il primo o l&#39;ultimo elemento di un array. Ad esempio, continuando con l&#39;oggetto array `purchaseTime` con più marche temporali degli esempi precedenti, è possibile utilizzarle per le funzioni per esportare il primo o l&#39;ultimo acquisto effettuato da una persona.
+Utilizzare le `first` funzioni and `last` per esportare il primo o l&#39;ultimo elemento di una matrice. Ad esempio, continuando con l&#39;oggetto `purchaseTime` matrice con più timestamp degli esempi precedenti, è possibile utilizzarli per esportare la prima o l&#39;ultima ora di acquisto effettuata da una persona.
 
-![Esempio di mapping che include la prima e l&#39;ultima funzione.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-first-last-functions.png)
+![Esempio di mappatura con la prima e l&#39;ultima funzione.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-first-last-functions.png)
 
-In questo caso, il file di output si presenta come di seguito, esportando la prima e l’ultima volta che il cliente ha effettuato un acquisto:
+In questo caso, il file di output ha la like di seguito, esportando la prima e l&#39;ultima volta che il cliente ha effettuato un acquisto:
 
 ```
 `Personal_Email,First_Purchase, Last_Purchase
@@ -261,9 +261,9 @@ johndoe@acme.org,"1538097126","1664327526"
 
 ### Funzioni di hashing {#hashing-functions}
 
-Altre funzioni disponibili sono specifiche per l&#39;esportazione di array o elementi da un array. È possibile utilizzare le funzioni di hashing per eseguire l&#39;hashing degli attributi nei file esportati. Ad esempio, se negli attributi sono presenti informazioni di identificazione personale, puoi eseguire l’hashing di tali campi durante l’esportazione.
+Altre funzioni disponibili sono specifiche per l&#39;esportazione di array o elementi da un array. Potete utilizzare le funzioni di hashing per eseguire l&#39;hashing degli attributi nei file esportati. Ad esempio, se gli attributi contengono informazioni personali identificabili, è possibile eseguire l&#39;hashing di tali campi durante l&#39;esportazione.
 
-È possibile eseguire l&#39;hashing diretto dei valori stringa, ad esempio `md5(personalEmail.address)`. Se lo desideri, puoi anche eseguire l&#39;hashing di singoli elementi di campi array, supponendo che gli elementi nell&#39;array siano stringhe, come segue: `md5(purchaseTime[0])`
+È possibile eseguire direttamente l&#39;hashing dei valori stringa, ad esempio `md5(personalEmail.address)`. Se lo si desidera, è anche possibile eseguire l&#39;hashing di singoli elementi dei campi della matrice, supponendo che gli elementi nella matrice siano stringhe, like seguente: `md5(purchaseTime[0])`
 
 Le funzioni di hashing supportate sono:
 

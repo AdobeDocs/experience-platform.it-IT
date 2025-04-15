@@ -1,7 +1,7 @@
 ---
 keywords: Amazon Kinesis;destinazione cinesi;kinesis
-title: Connessione Amazon Kinesis
-description: Crea una connessione in uscita in tempo reale allo storage Amazon Kinesis per eseguire lo streaming dei dati da Adobe Experience Platform.
+title: Amazon connessione Kinesis
+description: Crea una connessione in uscita in tempo reale all'archiviazione Kinesis Amazon per lo streaming di dati da Adobe Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
@@ -48,7 +48,7 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 
 ## Tipo e frequenza di esportazione {#export-type-frequency}
 
-Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, consulta la tabella seguente.
+Per informazioni sul tipo e la frequenza di esportazione della destinazione, fare riferimento alla tabella seguente.
 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
@@ -71,7 +71,7 @@ Per connettersi ed esportare correttamente i dati nei flussi [!DNL Amazon Kinesi
 
 Queste autorizzazioni sono organizzate tramite la console [!DNL Kinesis] e vengono verificate da Experience Platform dopo aver configurato la destinazione Kinesis nell&#39;interfaccia utente di Experience Platform.
 
-Nell&#39;esempio seguente vengono visualizzati i diritti di accesso minimi necessari per esportare correttamente i dati in una destinazione [!DNL Kinesis].
+Nell&#39;esempio seguente vengono visualizzati i diritti accesso minimi necessari per esportare correttamente i dati in una [!DNL Kinesis] destinazione.
 
 ```json
 {
@@ -94,9 +94,9 @@ Nell&#39;esempio seguente vengono visualizzati i diritti di accesso minimi neces
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `kinesis:ListStreams` | Azione che elenca i flussi di dati di Amazon Kinesis. |
+| `kinesis:ListStreams` | Azione che elenca le Amazon Kinesis flussi di dati. |
 | `kinesis:PutRecord` | Azione che scrive un singolo record di dati in un flusso di dati Kinesis. |
-| `kinesis:PutRecords` | Azione che scrive più record di dati in un flusso di dati Kinesis in una singola chiamata. |
+| `kinesis:PutRecords` | Azione che consente di scrivere più record di dati in un flusso di dati Kinesis in una singola chiamata. |
 
 {style="table-layout:auto"}
 
@@ -169,10 +169,10 @@ Per istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione,
 Experience Platform ottimizza il comportamento di esportazione del profilo nella destinazione [!DNL Amazon Kinesis] per esportare i dati nella destinazione solo quando si sono verificati aggiornamenti rilevanti a un profilo in seguito alla qualificazione del pubblico o ad altri eventi significativi. I profili vengono esportati nella destinazione nelle seguenti situazioni:
 
 * L’aggiornamento del profilo è stato determinato da una modifica nell’appartenenza al pubblico per almeno uno dei tipi di pubblico mappati alla destinazione. Ad esempio, il profilo è idoneo per uno dei tipi di pubblico mappati sulla destinazione o è uscito da uno dei tipi di pubblico mappati sulla destinazione.
-* L&#39;aggiornamento del profilo è stato determinato da una modifica nella [mappa identità](/help/xdm/field-groups/profile/identitymap.md). Ad esempio, a un profilo che si era già qualificato per uno dei tipi di pubblico mappati sulla destinazione è stata aggiunta una nuova identità nell’attributo identity map.
-* L’aggiornamento del profilo è stato determinato da una modifica degli attributi per almeno uno degli attributi mappati alla destinazione. Ad esempio, uno degli attributi mappati sulla destinazione nel passaggio di mappatura viene aggiunto a un profilo.
+* L&#39;aggiornamento del profilo è stato determinato da una modifica nella [mappa](/help/xdm/field-groups/profile/identitymap.md) delle identità. Ad esempio, a un profilo che si era già qualificato per uno dei tipi di pubblico mappati alla destinazione è stata aggiunta una nuova identità nell&#39;attributo mappa identità.
+* L&#39;aggiornamento del profilo è stato determinato da una modifica degli attributi per almeno uno degli attributi mappati alla destinazione. Ad esempio, uno degli attributi mappati alla destinazione nella fase di mappatura viene aggiunto a un profilo.
 
-In tutti i casi descritti sopra, solo i profili in cui si sono verificati aggiornamenti rilevanti vengono esportati nella destinazione. Ad esempio, se un pubblico mappato al flusso di destinazione ha un centinaio di membri e cinque nuovi profili sono idonei per il segmento, l’esportazione nella destinazione è incrementale e include solo i cinque nuovi profili.
+In tutti i casi sopra descritti, solo i profili in cui si sono verificati aggiornamenti rilevanti vengono esportati nella destinazione. Ad esempio, se un pubblico mappato al flusso di destinazione ha un centinaio di membri e cinque nuovi profili si qualificano per il segmento, l&#39;esportazione verso la destinazione è incrementale e include solo i cinque nuovi profili.
 
 Tieni presente che tutti gli attributi mappati vengono esportati per un profilo, indipendentemente da dove si trovano le modifiche. Quindi, nell’esempio precedente, tutti gli attributi mappati per questi cinque nuovi profili verranno esportati anche se gli attributi stessi non sono stati modificati.
 
@@ -182,15 +182,15 @@ Per quanto riguarda i dati esportati per un determinato profilo, è importante c
 
 | Cosa determina un’esportazione di destinazione | Cosa è incluso nell’esportazione di destinazione |
 |---------|----------|
-| <ul><li>Gli attributi e i tipi di pubblico mappati fungono da spunto per un’esportazione di destinazione. Ciò significa che se uno dei tipi di pubblico mappati cambia stato (da `null` a `realized` o da `realized` a `exiting`) o se uno qualsiasi degli attributi mappati viene aggiornato, viene avviata un&#39;esportazione di destinazione.</li><li>Poiché al momento non è possibile mappare le identità alle destinazioni [!DNL Amazon Kinesis], le modifiche in qualsiasi identità su un determinato profilo determinano anche le esportazioni di destinazione.</li><li>Per modifica di un attributo si intende qualsiasi aggiornamento dell&#39;attributo, indipendentemente dal fatto che si tratti o meno dello stesso valore. Ciò significa che una sovrascrittura su un attributo è considerata una modifica anche se il valore stesso non è cambiato.</li></ul> | <ul><li>L&#39;oggetto `segmentMembership` include il pubblico mappato nel flusso di dati di attivazione, per il quale lo stato del profilo è cambiato a seguito di un evento di qualificazione o uscita dal pubblico. Tieni presente che altri tipi di pubblico non mappati per i quali il profilo si è qualificato possono far parte dell&#39;esportazione di destinazione, se tali tipi di pubblico appartengono allo stesso [criterio di unione](/help/profile/merge-policies/overview.md) del pubblico mappato nel flusso di dati di attivazione. </li><li>Sono incluse anche tutte le identità nell&#39;oggetto `identityMap` (Experience Platform attualmente non supporta la mappatura identità nella destinazione [!DNL Amazon Kinesis]).</li><li>Nell’esportazione della destinazione sono inclusi solo gli attributi mappati.</li></ul> |
+| <ul><li>Gli attributi e i tipi di pubblico mappati fungono da spunto per un’esportazione di destinazione. Ciò significa che se uno dei tipi di pubblico mappati cambia stato (da `null` a `realized` o da `realized` a `exiting`) o se uno qualsiasi degli attributi mappati viene aggiornato, viene avviata un&#39;esportazione di destinazione.</li><li>Poiché al momento non è possibile mappare le identità alle destinazioni [!DNL Amazon Kinesis], le modifiche in qualsiasi identità su un determinato profilo determinano anche le esportazioni di destinazione.</li><li>Per modifica di un attributo si intende qualsiasi aggiornamento dell&#39;attributo, indipendentemente dal fatto che si tratti o meno dello stesso valore. Ciò significa che una sovrascrittura su un attributo è considerata una modifica anche se il valore stesso non è cambiato.</li></ul> | <ul><li>L&#39;oggetto `segmentMembership` include il pubblico mappato nel flusso di dati di attivazione, per il quale lo stato del profilo è cambiato a seguito di un evento di qualificazione o uscita dal pubblico. Tieni presente che altri tipi di pubblico non mappati per i quali il profilo si è qualificato possono far parte dell&#39;esportazione di destinazione, se tali tipi di pubblico appartengono allo stesso [criterio di unione](/help/profile/merge-policies/overview.md) del pubblico mappato nel flusso di dati di attivazione. </li><li>Sono incluse anche tutte le identità nell&#39;oggetto `identityMap` (Experience Platform attualmente non supporta la mappatura identità nella destinazione [!DNL Amazon Kinesis]).</li><li>Solo gli attributi mappati sono inclusi nell&#39;esportazione della destinazione.</li></ul> |
 
 {style="table-layout:fixed"}
 
-Consideriamo ad esempio questo flusso di dati su una destinazione [!DNL Amazon Kinesis] in cui tre tipi di pubblico sono selezionati nel flusso di dati e quattro attributi sono mappati alla destinazione.
+Ad esempio, considera questo flusso di dati verso una [!DNL Amazon Kinesis] destinazione in cui nel flusso di dati vengono selezionati tre tipi di pubblico e quattro attributi vengono mappati alla destinazione.
 
-![Flusso di dati di destinazione Amazon Kinesis](../../assets/catalog/http/profile-export-example-dataflow.png)
+![Amazon Kinesis flusso di dati di destinazione](../../assets/catalog/http/profile-export-example-dataflow.png)
 
-Un&#39;esportazione di profilo nella destinazione può essere determinata da un profilo idoneo o in uscita da uno dei *tre segmenti mappati*. Tuttavia, nell&#39;esportazione dei dati, nell&#39;oggetto `segmentMembership` (vedi la sezione [Dati esportati](#exported-data) di seguito), potrebbero essere visualizzati altri tipi di pubblico non mappati, se quel particolare profilo è un membro di essi e se questi condividono lo stesso criterio di unione del pubblico che ha attivato l&#39;esportazione. Se un profilo è idoneo per il pubblico **Cliente con auto DeLorean** ma è anche membro del pubblico **Guardato &quot;Ritorno al futuro&quot;** e **Fantascienza**, anche questi altri due tipi di pubblico saranno presenti nell&#39;oggetto `segmentMembership` dell&#39;esportazione dati, anche se non sono mappati nel flusso di dati, se condividono lo stesso criterio di unione con il segmento **Cliente con auto DeLorean**.
+Un&#39;esportazione di profilo verso la destinazione può essere determinata da un profilo idoneo o in uscita da uno dei *tre segmenti* mappati. Tuttavia, nell&#39;esportazione dei dati, nell&#39;oggetto (vedere [la `segmentMembership` sezione Dati esportati](#exported-data) di seguito), potrebbero essere visualizzati altri tipi di pubblico non mappati, se quel particolare profilo ne è membro e se condividono lo stesso regola di unione del pubblico che ha attivato l&#39;esportazione. Se un profilo si qualifica per il **pubblico del Cliente con DeLorean Cars** ma è anche un membro del **pubblico di appassionati di film** e fantascienza **&quot;Indietro al futuro&quot;,** allora anche questi altri due pubblici saranno presenti nell&#39;oggetto dell&#39;esportazione `segmentMembership` dei dati, lineare se questi non sono mappati nel flusso di dati, se condividono lo stesso regola di fusione con il **segmento Cliente con DeLorean Cars**.
 
 Dal punto di vista degli attributi di profilo, eventuali modifiche ai quattro attributi mappati in precedenza determineranno un’esportazione di destinazione e uno qualsiasi dei quattro attributi mappati presenti nel profilo sarà presente nell’esportazione di dati.
 
@@ -200,7 +200,7 @@ Quando aggiungi un nuovo pubblico a una destinazione esistente o crei una nuova 
 
 ## Dati esportati {#exported-data}
 
-I dati di [!DNL Experience Platform] esportati arrivano nella destinazione di [!DNL Amazon Kinesis] in formato JSON. Ad esempio, l’esportazione seguente contiene un profilo idoneo per un determinato segmento, è membro di altri due segmenti ed è uscito da un altro segmento. L’esportazione include anche l’attributo del profilo nome, cognome, data di nascita e indirizzo e-mail personale. Le identità per questo profilo sono ECID e e-mail.
+I dati esportati [!DNL Experience Platform] arrivano nella destinazione [!DNL Amazon Kinesis] in formato JSON. Ad esempio, l’esportazione seguente contiene un profilo idoneo per un determinato segmento, è membro di altri due segmenti ed è uscito da un altro segmento. L’esportazione include anche l’attributo del profilo nome, cognome, data di nascita e indirizzo e-mail personale. Le identità per questo profilo sono ECID e e-mail.
 
 ```json
 {
@@ -298,12 +298,12 @@ Di seguito sono riportati ulteriori esempi di dati esportati, a seconda delle im
 
 ## Limiti e criteri per nuovi tentativi {#limits-retry-policy}
 
-Nel 95% dei casi, Experience Platform tenta di offrire una latenza di velocità effettiva inferiore a 10 minuti per i messaggi inviati con successo, con una frequenza inferiore a 10.000 richieste al secondo per ogni flusso di dati verso una destinazione HTTP.
+Nel 95% delle volte, Experience Platform tenta di offrire una latenza di throughput inferiore a 10 minuti per i messaggi inviati correttamente con una velocità inferiore a 10 mila richieste al secondo per ogni flusso di dati a una destinazione HTTP.
 
-In caso di richieste non riuscite alla destinazione API HTTP, Experience Platform memorizza le richieste non riuscite e tenta di inviarle all’endpoint due volte.
+In caso di richieste non riuscite alla destinazione API HTTP, Experience Platform archivia le richieste non riuscite e riprova due volte a inviare le richieste all&#39;endpoint.
 
 >[!MORELIKETHIS]
 >
->* [Connettiti ad Amazon Kinesis e attiva i dati utilizzando l&#39;API del servizio Flusso](../../api/streaming-destinations.md)
+>* [Connettersi a Amazon Kinesis e attivare i dati utilizzando l&#39;API di Flusso Service](../../api/streaming-destinations.md)
 >* [Destinazione hub eventi Azure](./azure-event-hubs.md)
 >* [Tipi e categorie di destinazione](../../destination-types.md)

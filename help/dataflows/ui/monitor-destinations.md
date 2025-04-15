@@ -7,7 +7,7 @@ exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '3626'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
@@ -88,16 +88,16 @@ Ogni singola esecuzione del flusso di dati mostra i seguenti dettagli:
 
 - **[!UICONTROL Inizio esecuzione flusso di dati]**: ora di inizio dell&#39;esecuzione del flusso di dati. Per le esecuzioni dei flussi di dati in streaming, Experience Platform acquisisce metriche basate sull’inizio dell’esecuzione dei flussi di dati, sotto forma di metriche orarie. Ciò significa che per l’esecuzione del flusso di dati in streaming, se un flusso di dati viene avviato, ad esempio, alle 22:30, la metrica mostra l’ora di inizio come 22:00 nell’interfaccia utente.
 - **[!UICONTROL Tempo di elaborazione]**: tempo necessario all&#39;elaborazione del flusso di dati.
-   - Per le esecuzioni di **[!UICONTROL completed]**, la metrica del tempo di elaborazione mostra sempre un&#39;ora.
-   - Per le esecuzioni di flussi di dati che si trovano ancora in uno stato di **[!UICONTROL elaborazione]**, la finestra per acquisire tutte le metriche rimane aperta per più di un&#39;ora, per elaborare tutte le metriche che corrispondono all&#39;esecuzione del flusso di dati. Ad esempio, un’esecuzione di un flusso di dati avviata alle 09:30 potrebbe rimanere in uno stato di elaborazione per un’ora e trenta minuti per acquisire ed elaborare tutte le metriche. Quindi, una volta che la finestra di elaborazione si chiude e lo stato dell&#39;esecuzione del flusso di dati diventa **completato**, il tempo di elaborazione visualizzato viene modificato in un&#39;ora.
-- **[!UICONTROL Profili ricevuti]**: numero totale di profili ricevuti nel flusso di dati.
+   - Per **[!UICONTROL le esecuzioni completate]** , la metrica del tempo di elaborazione indica sempre un&#39;ora.
+   - Per le esecuzioni del flusso di dati che sono ancora in uno **[!UICONTROL stato di elaborazione]** , la finestra per acquisire tutte le metriche rimane aperta per più di un&#39;ora, per elaborare tutte le metriche che corrispondono all&#39;esecuzione del flusso di dati. Ad esempio, un&#39;esecuzione del flusso di dati iniziata alle 9:30 potrebbe rimanere in uno stato di elaborazione per un&#39;ora e trenta minuti per acquisire ed elaborare tutte le metriche. Quindi, una volta chiusa la finestra di elaborazione e completato lo stato dell&#39;esecuzione degli aggiornamenti **** del flusso di dati, il tempo di elaborazione visualizzato viene modificato in un&#39;ora.
+- **[!UICONTROL Profili ricevuti]**: il numero totale di profili ricevuti nel flusso di dati.
 - **[!UICONTROL Identità attivate]**: numero totale di identità di profilo attivate correttamente nella destinazione selezionata durante l&#39;esecuzione del flusso di dati. Questa metrica include le identità create, aggiornate e rimosse dai tipi di pubblico esportati.
 - **[!UICONTROL Identità escluse]**: numero totale di identità di profilo escluse dall&#39;attivazione in base ad attributi mancanti e alla violazione del consenso.
 - **[!UICONTROL Identità non riuscite]** Il numero totale di identità di profilo non attivate nella destinazione a causa di errori.
 
   >[!IMPORTANT]
   >
-  > A partire da marzo 2025, Adobe sta implementando un aggiornamento per aumentare la precisione dei rapporti per le destinazioni di streaming. Questo miglioramento garantisce un migliore allineamento tra il reporting in Experience Platform e le piattaforme di destinazione.
+  > A partire da marzo 2025, Adobe implementerà un aggiornamento per aumentare la precisione dei rapporti per le destinazioni di streaming. Questo miglioramento garantisce un migliore allineamento tra il reporting in Experience Platform e le piattaforme di destinazione.
   >
   > Prima di questo aggiornamento, **[!UICONTROL Identità non riuscite]** includeva tutti i tentativi di attivazione. Dopo questo aggiornamento, nel conteggio totale viene incluso solo l’ultimo tentativo di attivazione.
   > 
@@ -164,10 +164,10 @@ Per le destinazioni batch, la scheda [!UICONTROL Flussi di dati in esecuzione] f
 
 ![Il flusso di dati esegue la visualizzazione per le destinazioni batch.](../assets/ui/monitor-destinations/dataflow-runs-batch.png)
 
-Ogni singola esecuzione del flusso di dati mostra i seguenti dettagli:
+Ogni singola esecuzione del flusso di dati mostra i dettagli seguenti:
 
-- **[!UICONTROL Inizio esecuzione flusso di dati]**: ora di inizio dell&#39;esecuzione del flusso di dati.
-- **[!UICONTROL Pubblico]**: il nome del pubblico associato a ogni esecuzione del flusso di dati.
+- **[!UICONTROL Avvio esecuzione del flusso di]** dati: l&#39;ora in cui è iniziata l&#39;esecuzione del flusso di dati.
+- **[!UICONTROL Pubblico]**: il nome del pubblico associato a ciascun flusso di dati eseguito.
 - **[!UICONTROL Tempo di elaborazione]**: tempo necessario per l&#39;elaborazione del flusso di dati.
 - **[!UICONTROL Profili ricevuti]**: numero totale di profili ricevuti nel flusso di dati. Questo valore viene aggiornato ogni 60 minuti.
 - **[!UICONTROL Identità attivate]**: numero totale di identità di profilo attivate correttamente nella destinazione selezionata durante l&#39;esecuzione del flusso di dati. Questa metrica include le identità create, aggiornate e rimosse dai tipi di pubblico esportati.
@@ -180,10 +180,10 @@ Per visualizzare i dettagli di un’esecuzione specifica del flusso di dati, sel
 >
 >Le esecuzioni del flusso di dati vengono generate in base alla frequenza di pianificazione del flusso di dati di destinazione. Viene eseguito un flusso di dati separato per ogni [criterio di unione](../../profile/merge-policies/overview.md) applicato a un pubblico.
 
-La pagina dei dettagli di un flusso di dati, oltre ai dettagli riportati nell’elenco dei flussi di dati, visualizza informazioni più specifiche su di esso:
+Nella pagina dei dettagli di un flusso di dati, oltre a quelli visualizzati nell&#39;elenco dei flussi di dati, vengono visualizzate informazioni più specifiche sul flusso di dati:
 
-- **[!UICONTROL Dimensione dei dati]**: dimensione del flusso di dati in fase di esportazione.
-- **[!UICONTROL File totali]**: numero totale di file esportati nel flusso di dati.
+- **[!UICONTROL Dimensione dei dati]**: la dimensione del flusso di dati che viene esportato.
+- **[!UICONTROL File]** totali: il numero totale di file esportati nel flusso di dati.
 - **[!UICONTROL Ultimo aggiornamento]**: ora dell&#39;ultimo aggiornamento del flusso di dati.
 
 ![Dettagli di esecuzione del flusso di dati per le destinazioni batch.](../assets/ui/monitor-destinations/dataflow-batch.png)
@@ -251,7 +251,7 @@ Il pannello **[!UICONTROL Activation]** visualizza un elenco di destinazioni che
 
 | Metrica | Tipo di destinazione |
 |--------------------------------------|-----------------------|
-| **[!UICONTROL Record ricevuti]** | Streaming e batch |
+| **[!UICONTROL Documenti ricevuti]** | Streaming e batch |
 | **[!UICONTROL Record attivati]** | Streaming e batch |
 | **[!UICONTROL Record non riusciti]** | Streaming |
 | **[!UICONTROL Record ignorati]** | Streaming e batch |
@@ -264,7 +264,7 @@ Il pannello **[!UICONTROL Activation]** visualizza un elenco di destinazioni che
 
 ![Dashboard di monitoraggio con tutte le destinazioni attivate evidenziate.](../assets/ui/monitor-destinations/dashboard-destinations.png)
 
-Puoi anche filtrare l’elenco delle destinazioni per visualizzare solo la categoria di destinazioni selezionata. Seleziona il menu a discesa **[!UICONTROL Destinazioni personali]** e la [categoria di destinazione](/help/destinations/destination-types.md#categories) a cui vuoi filtrare.
+È inoltre possibile filtrare l&#39;elenco di destinazioni per visualizzare solo la categoria di destinazioni selezionata. Selezionare l&#39;elenco **[!UICONTROL a discesa Le mie destinazioni]**, quindi selezionare la categoria](/help/destinations/destination-types.md#categories) di [destinazione in base alla quale si desidera filtrare.
 
 ![Filtra le destinazioni tramite il selettore a discesa](../assets/ui/monitor-destinations/dashboard-destinations-filter-dropdown.png)
 
@@ -337,9 +337,9 @@ La pagina dei dettagli di esecuzione del flusso di dati, oltre ai dettagli ripor
 - **[!UICONTROL ID organizzazione IMS]**: organizzazione a cui appartiene il flusso di dati.
 - **[!UICONTROL Ultimo aggiornamento]**: ora dell&#39;ultimo aggiornamento del flusso di dati.
 
-La pagina dei dettagli dispone anche di un interruttore per passare dagli errori di esecuzione del flusso di dati ai tipi di pubblico e viceversa. Questa opzione è disponibile solo per il flusso di dati eseguito in destinazioni batch e per la destinazione di streaming [Google Customer Match DV 360](/help/destinations/catalog/advertising/google-customer-match-dv360.md).
+La pagina dei dettagli ha anche un interruttore per passare tra gli errori di esecuzione del flusso di dati e il pubblico. Questa opzione è disponibile solo per le esecuzioni del flusso di dati in destinazioni batch e per la destinazione di streaming Google [Customer Match DV 360](/help/destinations/catalog/advertising/google-customer-match-dv360.md) .
 
-Nella visualizzazione errori di esecuzione del flusso di dati viene visualizzato un elenco di record con errori e di record ignorati. Vengono visualizzate informazioni sia per i record con errori che per quelli ignorati, inclusi il codice di errore, il conteggio delle identità e la descrizione. Per impostazione predefinita, nell&#39;elenco vengono visualizzati i record con errori. Per visualizzare i record ignorati, selezionare l&#39;opzione **[!UICONTROL Record ignorati]**.
+Nella vista Errori di esecuzione del flusso di dati viene visualizzato un elenco dei record che hanno avuto esito negativo e dei record che sono stati ignorati. Vengono visualizzate le informazioni relative ai record non riusciti e ignorati, inclusi il codice di errore, il conteggio delle identità e la descrizione. Per impostazione predefinita, nell&#39;elenco vengono visualizzati i record non riusciti. Per visualizzare i record ignorati, selezionare l&#39;opzione **[!UICONTROL Record ignorati]**.
 
 ![Le identità escluse vengono evidenziate nella visualizzazione di monitoraggio](../assets/ui/monitor-destinations/identities-excluded.png)
 

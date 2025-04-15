@@ -118,7 +118,7 @@ Per ulteriori informazioni sull&#39;aggiornamento rapido, leggere la [sezione su
 
 Una volta completati questi passaggi, puoi scegliere se salvare l’attributo calcolato come bozza o pubblicarlo immediatamente.
 
-![I pulsanti [!UICONTROL Salva come bozza] e [!UICONTROL Publish] sono evidenziati.](./images/ui/draft-or-publish.png)
+![I pulsanti [!UICONTROL Salva come bozza] e [!UICONTROL Pubblica] sono evidenziati.](./images/ui/draft-or-publish.png)
 
 ## Visualizzare i dettagli di un attributo calcolato {#view-details}
 

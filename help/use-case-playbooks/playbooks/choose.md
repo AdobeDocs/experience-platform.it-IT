@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: Scegli tra una selezione di playbook
-description: Scopri come scegliere il playbook corretto per il tuo caso d’uso abilitare i playbook.
+description: Scopri come scegliere il playbook giusto per il tuo caso d'uso Abilita i playbook.
 role: User
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
 source-git-commit: 1781aa552107b6ca1fed357c053a4f892960dc55
@@ -13,13 +13,13 @@ ht-degree: 88%
 
 # Scegli tra una selezione di playbook
 
-Per utilizzare un playbook, seleziona **[!UICONTROL Playbook]** dal menu di navigazione a sinistra. Sfoglia e utilizza le varie opzioni di ricerca e filtro disponibili nella pagina per selezionare e iniziare a utilizzare un playbook specifico.
+Per usare un playbook, seleziona **[!UICONTROL Playbook]** dall&#39;navigazione sinistra. Sfoglia e utilizza le varie opzioni di ricerca e filtro disponibili nella pagina per selezionare e iniziare a utilizzare un playbook specifico.
 
 ## Ricerca e filtro {#search-and-filter}
 
-Utilizza la finestra di ricerca e i filtri disponibili nella pagina per trovare e scegliere la playbook adatta al tuo caso d’uso.
+Usa la finestra ricerca e i filtri disponibili nella pagina per trovare e scegliere il playbook giusto per il tuo caso d&#39;uso.
 
-Ad esempio, puoi filtrare i playbook in base alla fase nel funnel di marketing che ti interessa: conversione, coinvolgimento o conservazione. Puoi anche filtrare i playbook visualizzati in base al settore di appartenenza o alla licenza del prodotto a cui hai accesso: Adobe Journey Optimizer o Real-Time CDP.
+Ad esempio, puoi filtrare i playbook in base alla fase nel funnel di marketing che ti interessa: conversione, coinvolgimento o conservazione. Puoi anche filtrare i playbook visualizzati in base al settore in cui ti trovi o al diritto al prodotto a cui hai accesso: Adobe Systems Journey Optimizer o CDP in tempo reale.
 
 ![Filtra i playbook per funnel di marketing, settore o prodotto](/help/use-case-playbooks/assets/playbooks/ui-guide/filter-by-funnel-industry-product.gif)
 

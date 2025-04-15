@@ -6,131 +6,128 @@ type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3413'
-ht-degree: 14%
+source-wordcount: '3398'
+ht-degree: 22%
 
 ---
 
 # Dashboard utilizzo licenze {#license-usage-dashboard}
 
 >[!CONTEXTUALHELP]
->id="testy-mctestface"
->title="Finestra di dialogo di prova che non deve essere visibile"
->abstract="L’oggetto {name} viene visualizzato il {date}."
+>
+[!CONTEXTUALHELP]
+id="platform_dashboards_licenseusage_core"
+title="Tabella dei prodotti principali"
+abstract="I prodotti principali elencati nella tabella hanno metriche, tracciamento dell’utilizzo e viste drill-through a livello di sandbox proprie. Questi prodotti principali forniscono le metriche chiave per il tracciamento ed eventuali componenti aggiuntivi sono inclusi in queste metriche."
 
->[!CONTEXTUALHELP]
->id="platform_dashboards_licenseusage_core"
->title="Tabella dei prodotti principali"
->abstract="I prodotti principali elencati nella tabella hanno metriche, tracciamento dell’utilizzo e viste drill-through a livello di sandbox proprie. Questi prodotti principali forniscono le metriche chiave per il tracciamento ed eventuali componenti aggiuntivi sono inclusi in queste metriche."
+[!CONTEXTUALHELP]
+id="platform_dashboards_licenseusage_addons"
+title="Tabella dei componenti aggiuntivi"
+abstract="Nella tabella Componenti aggiuntivi sono elencati i prodotti le cui quantità di licenze sono combinate con le metriche supportate dai prodotti principali. Questi componenti aggiuntivi non dispongono di metriche separate, ma migliorano il tracciamento dell’utilizzo dei prodotti principali a cui sono associati."
 
->[!CONTEXTUALHELP]
->id="platform_dashboards_licenseusage_addons"
->title="Tabella dei componenti aggiuntivi"
->abstract="Nella tabella Componenti aggiuntivi sono elencati i prodotti le cui quantità di licenze sono combinate con le metriche supportate dai prodotti principali. Questi componenti aggiuntivi non dispongono di metriche separate, ma migliorano il tracciamento dell’utilizzo dei prodotti principali a cui sono associati."
+[!CONTEXTUALHELP]
+id="platform_dashboards_licenseUsage"
+title="Dashboard utilizzo licenze"
+abstract="La dashboard utilizzo licenze offre informazioni approfondite sui prodotti Adobe Experience Platform acquistati. La panoramica della dashboard mostra le metriche principali dei prodotti, incluso l’utilizzo da parte dell’utente per ciascuna metrica principale e l’importo della licenza contrattuale. Nell’area di lavoro dei dettagli viene visualizzato un raggruppamento delle metriche per ciascun prodotto all’interno di sandbox specifiche."
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=it" text="Scadenze di set di dati automatizzate"
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
 
->[!CONTEXTUALHELP]
->id="platform_dashboards_licenseUsage"
->title="Dashboard utilizzo licenze"
->abstract="La dashboard utilizzo licenze offre informazioni approfondite sui prodotti Adobe Experience Platform acquistati. La panoramica della dashboard mostra le metriche principali dei prodotti, incluso l’utilizzo da parte dell’utente per ciascuna metrica principale e l’importo della licenza contrattuale. Nell’area di lavoro dei dettagli viene visualizzato un raggruppamento delle metriche per ciascun prodotto all’interno di sandbox specifiche."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=it" text="Scadenze di set di dati automatizzate"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
+[!CONTEXTUALHELP]
+id="platform_licenseusage"
+title="Dashboard utilizzo licenze"
+abstract="La dashboard utilizzo licenze offre informazioni approfondite sui prodotti Adobe Experience Platform acquistati. La panoramica della dashboard mostra le metriche principali dei prodotti, incluso l’utilizzo da parte dell’utente per ciascuna metrica principale e l’importo della licenza contrattuale. Nell’area di lavoro dei dettagli viene visualizzato un raggruppamento delle metriche per ciascun prodotto all’interno di sandbox specifiche."
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=it" text="Scadenze di set di dati automatizzate"
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
 
->[!CONTEXTUALHELP]
->id="platform_licenseusage"
->title="Dashboard utilizzo licenze"
->abstract="La dashboard utilizzo licenze offre informazioni approfondite sui prodotti Adobe Experience Platform acquistati. La panoramica della dashboard mostra le metriche principali dei prodotti, incluso l’utilizzo da parte dell’utente per ciascuna metrica principale e l’importo della licenza contrattuale. Nell’area di lavoro dei dettagli viene visualizzato un raggruppamento delle metriche per ciascun prodotto all’interno di sandbox specifiche."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=it" text="Scadenze di set di dati automatizzate"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
+[!CONTEXTUALHELP]
+id="platform_dashboards_licenseusage_predictedusage_computehours"
+title="Ore di calcolo previste"
+abstract="Le ore di calcolo misurano il tempo impiegato dai motori Query Service per leggere, elaborare e scrivere dati durante l’esecuzione di query batch.<br>L&#39;utilizzo potrebbe raggiungere la quantità concessa in licenza. Per valutare o ridurre l’utilizzo, passa a Query > Registro per rivedere la cronologia delle query. Se non hai accesso all’area di lavoro Query, contatta l’amministratore."
+additional-url="https://experience.adobe.com/#/platform/query/log.html" text="Area di lavoro registro query"
 
->[!CONTEXTUALHELP]
->id="platform_dashboards_licenseusage_predictedusage_computehours"
->title="Ore di calcolo previste"
->abstract="Le ore di calcolo misurano il tempo impiegato dai motori Query Service per leggere, elaborare e scrivere dati durante l’esecuzione di query batch.<br>L&#39;utilizzo potrebbe raggiungere la quantità concessa in licenza. Per valutare o ridurre l’utilizzo, passa a Query > Registro per rivedere la cronologia delle query. Se non hai accesso all’area di lavoro Query, contatta l’amministratore."
->additional-url="https://experience.adobe.com/#/platform/query/log.html" text="Area di lavoro registro query"
+[!CONTEXTUALHELP]
+id="platform_dashboards_licenseusage_predictedusage_addressableaudience"
+title="Pubblico indirizzabile previsto"
+abstract="L’Addressable Audience è l’insieme dei profili di persona in Real-Time Customer Profile che la tua organizzazione ha il diritto di coinvolgere. Questa metrica include sia profili direttamente identificabili che pseudonimi.<br>L&#39;utilizzo potrebbe raggiungere la quantità concessa in licenza. Per ridurre l’utilizzo, configura le scadenze dei dati di un set di dati o di un profilo pseudonimo."
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=it" text="Scadenze degli eventi esperienza"
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
 
->[!CONTEXTUALHELP]
->id="platform_dashboards_licenseusage_predictedusage_addressableaudience"
->title="Pubblico indirizzabile previsto"
->abstract="L’Addressable Audience è l’insieme dei profili di persona in Real-Time Customer Profile che la tua organizzazione ha il diritto di coinvolgere. Questa metrica include sia profili direttamente identificabili che pseudonimi.<br>L&#39;utilizzo potrebbe raggiungere la quantità concessa in licenza. Per ridurre l’utilizzo, configura le scadenze dei dati di un set di dati o di un profilo pseudonimo."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=it" text="Scadenze degli eventi esperienza"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
+[!CONTEXTUALHELP]
+id="platform_dashboards_licenseusage_predictedusage_engageableprofiles"
+title="Profili coinvolgibili previsti"
+abstract="I profili coinvolgibili sono profili di persona in Real-Time Customer Profile che la tua organizzazione ha tentato di coinvolgere utilizzando Journey Optimizer negli ultimi 12 mesi.<br>L&#39;utilizzo potrebbe raggiungere la quantità concessa in licenza. Per ridurre l’utilizzo, configura le scadenze dei dati di un set di dati o di un profilo pseudonimo."
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=it" text="Scadenze degli eventi esperienza"
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
 
->[!CONTEXTUALHELP]
->id="platform_dashboards_licenseusage_predictedusage_engageableprofiles"
->title="Profili coinvolgibili previsti"
->abstract="I profili coinvolgibili sono profili di persona in Real-Time Customer Profile che la tua organizzazione ha tentato di coinvolgere utilizzando Journey Optimizer negli ultimi 12 mesi.<br>L&#39;utilizzo potrebbe raggiungere la quantità concessa in licenza. Per ridurre l’utilizzo, configura le scadenze dei dati di un set di dati o di un profilo pseudonimo."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=it" text="Scadenze degli eventi esperienza"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
+[!CONTEXTUALHELP]
+id="platform_dashboards_licenseusage_predictedusage_businesspersonprofile"
+title="Profilo persona aziendale previsto"
+abstract="I Profili persona aziendale sono record in Real-Time Customer Profile che rappresentano singoli utenti in un contesto B2B.<br>L&#39;utilizzo potrebbe raggiungere la quantità concessa in licenza. Per ridurre l’utilizzo, configura le scadenze dei dati di un set di dati o di un profilo pseudonimo."
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=it" text="Scadenze degli eventi esperienza"
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
 
->[!CONTEXTUALHELP]
->id="platform_dashboards_licenseusage_predictedusage_businesspersonprofile"
->title="Profilo persona aziendale previsto"
->abstract="I Profili persona aziendale sono record in Real-Time Customer Profile che rappresentano singoli utenti in un contesto B2B.<br>L&#39;utilizzo potrebbe raggiungere la quantità concessa in licenza. Per ridurre l’utilizzo, configura le scadenze dei dati di un set di dati o di un profilo pseudonimo."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=it" text="Scadenze degli eventi esperienza"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
+[!CONTEXTUALHELP]
+id="platform_dashboards_licenseusage_predictedusage_corehours"
+title="Ore Core Previste"
+abstract="Le ore di base rappresentano il tempo di elaborazione impiegato nei servizi Experience Platform.<br>L&#39;utilizzo potrebbe raggiungere la quantità concessa in licenza. Per ridurre l’utilizzo, configura le scadenze dei dati di un set di dati o di un profilo pseudonimo."
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=it" text="Scadenze degli eventi esperienza"
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
 
->[!CONTEXTUALHELP]
->id="platform_dashboards_licenseusage_predictedusage_corehours"
->title="Ore Core Previste"
->abstract="Le ore di base rappresentano il tempo di elaborazione impiegato nei servizi Experience Platform.<br>L&#39;utilizzo potrebbe raggiungere la quantità concessa in licenza. Per ridurre l’utilizzo, configura le scadenze dei dati di un set di dati o di un profilo pseudonimo."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=it" text="Scadenze degli eventi esperienza"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
+[!CONTEXTUALHELP]
+id="platform_dashboards_licenseusage_predictedusage_totaldatavolume"
+title="Volume totale di dati previsto"
+abstract="Volume di dati totale è la quantità di dati disponibili in Real-Time Customer Profile da utilizzare nei flussi di lavoro di coinvolgimento e personalizzazione.<br>L&#39;utilizzo potrebbe raggiungere la quantità concessa in licenza. Per ridurre l’utilizzo, configura le scadenze dei dati di un set di dati o di un profilo pseudonimo."
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=it" text="Scadenze degli eventi esperienza"
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
 
->[!CONTEXTUALHELP]
->id="platform_dashboards_licenseusage_predictedusage_totaldatavolume"
->title="Volume totale di dati previsto"
->abstract="Volume di dati totale è la quantità di dati disponibili in Real-Time Customer Profile da utilizzare nei flussi di lavoro di coinvolgimento e personalizzazione.<br>L&#39;utilizzo potrebbe raggiungere la quantità concessa in licenza. Per ridurre l’utilizzo, configura le scadenze dei dati di un set di dati o di un profilo pseudonimo."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=it" text="Scadenze degli eventi esperienza"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
+[!CONTEXTUALHELP]
+id="platform_dashboards_licenseusage_predictedusage_cjaRowsAvailable"
+title="Righe CJA previste disponibili"
+abstract="Righe CJA disponibili si riferisce alla media giornaliera di righe di dati disponibili per l’analisi in Customer Journey Analytics.<br>L&#39;utilizzo potrebbe raggiungere la quantità concessa in licenza. Per ridurre l’utilizzo, configura le scadenze dei dati di un set di dati o di un profilo pseudonimo."
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=it" text="Scadenze degli eventi esperienza"
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
 
->[!CONTEXTUALHELP]
->id="platform_dashboards_licenseusage_predictedusage_cjaRowsAvailable"
->title="Righe CJA previste disponibili"
->abstract="Righe CJA disponibili si riferisce alla media giornaliera di righe di dati disponibili per l’analisi in Customer Journey Analytics.<br>L&#39;utilizzo potrebbe raggiungere la quantità concessa in licenza. Per ridurre l’utilizzo, configura le scadenze dei dati di un set di dati o di un profilo pseudonimo."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=it" text="Scadenze degli eventi esperienza"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
+[!CONTEXTUALHELP]
+id="platform_dashboards_licenseusage_exceededusage_addressableaudience"
+title="Pubblico indirizzabile previsto"
+abstract="L’Addressable Audience è l’insieme dei profili di persona in Real-Time Customer Profile che la tua organizzazione ha il diritto di coinvolgere. Questo include sia profili direttamente identificabili che pseudonimi.<br>L&#39;utilizzo ha superato la quantità concessa in licenza. Per ridurre l’utilizzo, configura le scadenze dei dati di un set di dati o di un profilo pseudonimo."
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=it" text="Scadenze degli eventi esperienza"
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
 
->[!CONTEXTUALHELP]
->id="platform_dashboards_licenseusage_exceededusage_addressableaudience"
->title="Pubblico indirizzabile previsto"
->abstract="L’Addressable Audience è l’insieme dei profili di persona in Real-Time Customer Profile che la tua organizzazione ha il diritto di coinvolgere. Questo include sia profili direttamente identificabili che pseudonimi.<br>L&#39;utilizzo ha superato la quantità concessa in licenza. Per ridurre l’utilizzo, configura le scadenze dei dati di un set di dati o di un profilo pseudonimo."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=it" text="Scadenze degli eventi esperienza"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
+[!CONTEXTUALHELP]
+id="platform_dashboards_licenseusage_exceededusage_engageableprofiles"
+title="Profili coinvolgibili previsti"
+abstract="I profili coinvolgibili sono profili di persona in Real-Time Customer Profile che la tua organizzazione ha tentato di coinvolgere utilizzando Journey Optimizer negli ultimi 12 mesi.<br>L&#39;utilizzo ha superato la quantità concessa in licenza. Per ridurre l’utilizzo, configura le scadenze dei dati di un set di dati o di un profilo pseudonimo."
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=it" text="Scadenze degli eventi esperienza"
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
 
->[!CONTEXTUALHELP]
->id="platform_dashboards_licenseusage_exceededusage_engageableprofiles"
->title="Profili coinvolgibili previsti"
->abstract="I profili coinvolgibili sono profili di persona in Real-Time Customer Profile che la tua organizzazione ha tentato di coinvolgere utilizzando Journey Optimizer negli ultimi 12 mesi.<br>L&#39;utilizzo ha superato la quantità concessa in licenza. Per ridurre l’utilizzo, configura le scadenze dei dati di un set di dati o di un profilo pseudonimo."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=it" text="Scadenze degli eventi esperienza"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
+[!CONTEXTUALHELP]
+id="platform_dashboards_licenseusage_exceededusage_businesspersonprofile"
+title="Profilo persona aziendale previsto"
+abstract="I Profili persona aziendale sono record in Real-Time Customer Profile che rappresentano singoli utenti in un contesto B2B.<br>L&#39;utilizzo ha superato la quantità concessa in licenza. Per ridurre l’utilizzo, configura le scadenze dei dati di un set di dati o di un profilo pseudonimo."
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=it" text="Scadenze degli eventi esperienza"
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
 
->[!CONTEXTUALHELP]
->id="platform_dashboards_licenseusage_exceededusage_businesspersonprofile"
->title="Profilo persona aziendale previsto"
->abstract="I Profili persona aziendale sono record in Real-Time Customer Profile che rappresentano singoli utenti in un contesto B2B.<br>L&#39;utilizzo ha superato la quantità concessa in licenza. Per ridurre l’utilizzo, configura le scadenze dei dati di un set di dati o di un profilo pseudonimo."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=it" text="Scadenze degli eventi esperienza"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
+[!CONTEXTUALHELP]
+id="platform_dashboards_licenseusage_exceededusage_corehours"
+title="Ore Core Previste"
+abstract="Le ore di base rappresentano il tempo di elaborazione impiegato nei servizi Experience Platform.<br>L&#39;utilizzo ha superato la quantità concessa in licenza. Per ridurre l’utilizzo, configura le scadenze dei dati di un set di dati o di un profilo pseudonimo."
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=it" text="Scadenze degli eventi esperienza"
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
 
->[!CONTEXTUALHELP]
->id="platform_dashboards_licenseusage_exceededusage_corehours"
->title="Ore Core Previste"
->abstract="Le ore di base rappresentano il tempo di elaborazione impiegato nei servizi Experience Platform.<br>L&#39;utilizzo ha superato la quantità concessa in licenza. Per ridurre l’utilizzo, configura le scadenze dei dati di un set di dati o di un profilo pseudonimo."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=it" text="Scadenze degli eventi esperienza"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
+[!CONTEXTUALHELP]
+id="platform_dashboards_licenseusage_exceededusage_totaldatavolume"
+title="Volume totale di dati previsto"
+abstract="Volume di dati totale è la quantità di dati disponibili in Real-Time Customer Profile da utilizzare nei flussi di lavoro di coinvolgimento e personalizzazione.<br>L&#39;utilizzo ha superato la quantità concessa in licenza. Per ridurre l’utilizzo, configura le scadenze dei dati di un set di dati o di un profilo pseudonimo."
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=it" text="Scadenze degli eventi esperienza"
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
 
->[!CONTEXTUALHELP]
->id="platform_dashboards_licenseusage_exceededusage_totaldatavolume"
->title="Volume totale di dati previsto"
->abstract="Volume di dati totale è la quantità di dati disponibili in Real-Time Customer Profile da utilizzare nei flussi di lavoro di coinvolgimento e personalizzazione.<br>L&#39;utilizzo ha superato la quantità concessa in licenza. Per ridurre l’utilizzo, configura le scadenze dei dati di un set di dati o di un profilo pseudonimo."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=it" text="Scadenze degli eventi esperienza"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
-
->[!CONTEXTUALHELP]
->id="platform_dashboards_licenseusage_exceededusage_cjaRowsAvailable"
->title="Righe CJA previste disponibili"
->abstract="Righe CJA disponibili si riferisce alla media giornaliera di righe di dati disponibili per l’analisi in Customer Journey Analytics.<br>L&#39;utilizzo ha superato la quantità concessa in licenza. Per ridurre l’utilizzo, configura le scadenze dei dati di un set di dati o di un profilo pseudonimo."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=it" text="Scadenze degli eventi esperienza"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
+[!CONTEXTUALHELP]
+id="platform_dashboards_licenseusage_exceededusage_cjaRowsAvailable"
+title="Righe CJA previste disponibili"
+abstract="Righe CJA disponibili si riferisce alla media giornaliera di righe di dati disponibili per l’analisi in Customer Journey Analytics.<br>L&#39;utilizzo ha superato la quantità concessa in licenza. Per ridurre l’utilizzo, configura le scadenze dei dati di un set di dati o di un profilo pseudonimo."
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=it" text="Scadenze degli eventi esperienza"
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
 
 Puoi visualizzare informazioni importanti sull&#39;utilizzo delle licenze della tua organizzazione tramite la dashboard [!UICONTROL Utilizzo licenze] di Adobe Experience Platform. Le informazioni visualizzate qui vengono acquisite durante un’istantanea giornaliera dell’istanza Experience Platform.
 
@@ -148,7 +145,7 @@ I dati in questo dashboard vengono visualizzati esattamente come apparivano nel 
 
 >[!NOTE]
 >
->La maggior parte delle metriche nel dashboard viene aggiornata ogni giorno, in base a un’istantanea dell’istanza di Experience Platform. [!UICONTROL Righe CJA disponibili] è un&#39;eccezione ed è aggiornato mensilmente. Le metriche etichettate con &quot;pacchetti&quot;, ad esempio [!UICONTROL Pacchetti utenti Adobe Query Service], [!UICONTROL Numero di pacchetti di ricchezza profilo] e [!UICONTROL Numero di pacchetti di segmentazione streaming], riflettono i diritti di licenza per le offerte di componenti aggiuntivi e non tengono traccia dell&#39;utilizzo corrente. Le modifiche apportate dopo lo snapshot non sono visibili fino allo snapshot successivo.
+La maggior parte delle metriche nel dashboard viene aggiornata ogni giorno, in base a un’istantanea dell’istanza di Experience Platform. [!UICONTROL Righe CJA disponibili] è un&#39;eccezione ed è aggiornato mensilmente. Le metriche etichettate con &quot;pacchetti&quot;, ad esempio [!UICONTROL Pacchetti utenti Adobe Query Service], [!UICONTROL Numero di pacchetti di ricchezza profilo] e [!UICONTROL Numero di pacchetti di segmentazione streaming], riflettono i diritti di licenza per le offerte di componenti aggiuntivi e non tengono traccia dell&#39;utilizzo corrente. Le modifiche apportate dopo lo snapshot non sono visibili fino allo snapshot successivo.
 
 ## Esplorazione del dashboard utilizzo licenze {#explore}
 
@@ -156,7 +153,7 @@ Per passare al dashboard utilizzo licenze nell&#39;interfaccia utente di Experie
 
 >[!NOTE]
 >
->Per impostazione predefinita, il dashboard utilizzo licenze non è attivato. Gli utenti devono disporre dell’autorizzazione &quot;View License Usage Dashboard&quot; (Visualizza dashboard utilizzo licenze) per visualizzare la dashboard. Per i passaggi relativi alla concessione delle autorizzazioni di accesso, fare riferimento alla [guida alle autorizzazioni del dashboard](../permissions.md).
+Per impostazione predefinita, il dashboard utilizzo licenze non è attivato. Gli utenti devono disporre dell’autorizzazione &quot;View License Usage Dashboard&quot; (Visualizza dashboard utilizzo licenze) per visualizzare la dashboard. Per i passaggi relativi alla concessione delle autorizzazioni di accesso, fare riferimento alla [guida alle autorizzazioni del dashboard](../permissions.md).
 
 ## Scheda [!UICONTROL Metriche] {#metrics-tab}
 
@@ -176,17 +173,17 @@ Utilizza l&#39;interruttore sandbox **[!UICONTROL Produzione]** o **[!UICONTROL 
 
 >[!NOTE]
 >
->Il reporting sui consumi è cumulativo per tipo di sandbox. Selezionando [!UICONTROL Produzione] o [!UICONTROL Sviluppo] viene visualizzato l&#39;utilizzo combinato in tutte le sandbox di quel tipo.
+Il reporting sui consumi è cumulativo per tipo di sandbox. Selezionando [!UICONTROL Produzione] o [!UICONTROL Sviluppo] viene visualizzato l&#39;utilizzo combinato in tutte le sandbox di quel tipo.
 
 ![La scheda Metriche della dashboard Utilizzo licenze visualizza un elenco di metriche, quantità di licenze e dati di utilizzo.](../images/license-usage/metrics-tab.png)
 
 >[!WARNING]
 >
->L’autorizzazione per visualizzare il dashboard utilizzo licenze deve essere specificata a livello di sandbox. Aggiungi le autorizzazioni a ogni singola sandbox per visualizzarle all’interno del dashboard. Questa limitazione verrà risolta in una versione futura. Nel frattempo, è disponibile la seguente soluzione alternativa:
+L’autorizzazione per visualizzare il dashboard utilizzo licenze deve essere specificata a livello di sandbox. Aggiungi le autorizzazioni a ogni singola sandbox per visualizzarle all’interno del dashboard. Questa limitazione verrà risolta in una versione futura. Nel frattempo, è disponibile la seguente soluzione alternativa:
 >
->1. Creare un profilo di prodotto in Adobe Admin Console.
->2. In Autorizzazione nella categoria Sandbox, aggiungi tutte le sandbox da visualizzare nel dashboard utilizzo licenze.
->3. Nella categoria Autorizzazione dashboard utente, aggiungi l’autorizzazione &quot;Visualizza dashboard utilizzo licenze&quot;.
+1. Creare un profilo di prodotto in Adobe Admin Console.
+2. In Autorizzazione nella categoria Sandbox, aggiungi tutte le sandbox da visualizzare nel dashboard utilizzo licenze.
+3. Nella categoria Autorizzazione dashboard utente, aggiungi l’autorizzazione &quot;Visualizza dashboard utilizzo licenze&quot;.
 
 ### Visualizzare i dettagli delle metriche {#view-metric-details}
 
@@ -230,31 +227,31 @@ La scheda **[!UICONTROL Prodotti]** presenta i dati di utilizzo della licenza ra
 
 >[!NOTE]
 >
->La [!UICONTROL quantità di licenza] per i componenti aggiuntivi è inclusa nella quantità totale di licenza del prodotto di base. I componenti aggiuntivi non vengono tracciati separatamente, ma migliorano le funzionalità dei prodotti associati. Ad esempio, se acquisti una confezione di cinque sandbox come componente aggiuntivo, l’importo viene aggiunto a quello del prodotto di base. La tabella dei componenti aggiuntivi mostra un [!UICONTROL importo licenza] specifico per il componente aggiuntivo, ma l&#39;utilizzo effettivo viene registrato attraverso il prodotto di base.
+La [!UICONTROL quantità di licenza] per i componenti aggiuntivi è inclusa nella quantità totale di licenza del prodotto di base. I componenti aggiuntivi non vengono tracciati separatamente, ma migliorano le funzionalità dei prodotti associati. Ad esempio, se acquisti una confezione di cinque sandbox come componente aggiuntivo, l’importo viene aggiunto a quello del prodotto di base. La tabella dei componenti aggiuntivi mostra un [!UICONTROL importo licenza] specifico per il componente aggiuntivo, ma l&#39;utilizzo effettivo viene registrato attraverso il prodotto di base.
 
 ![Scheda Prodotti della dashboard Utilizzo licenze con tabelle per i prodotti core e i componenti aggiuntivi.](../images/license-usage/products-tab.png)
 
 ### Utilizzo previsto {#predicted-usage}
 
->[!CONTEXTUALHELP]
->id="platform_dashboards_licenseUsage_prediction"
->title="Utilizzo previsto"
->abstract="Le previsioni si basano sull’utilizzo negli ultimi 6-7 mesi e vengono generate settimanalmente ogni venerdì. Tieni presente che le previsioni sull’utilizzo delle licenze sono approssimazioni basate sull’utilizzo passato. Sei responsabile della comprensione dell’utilizzo effettivo dell’organizzazione e di garantire che l’utilizzo non vada oltre l’ambito della licenza dell’organizzazione con Adobe. Per ridurre l’utilizzo, puoi configurare le scadenze dei dati di set di dati o profili pseudonimi per sandbox e set di dati."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=it" text="Scadenze di set di dati automatizzate"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
+[!CONTEXTUALHELP]
+id="platform_dashboards_licenseUsage_prediction"
+title="Utilizzo previsto"
+abstract="Le previsioni si basano sull’utilizzo negli ultimi 6-7 mesi e vengono generate settimanalmente ogni venerdì. Tieni presente che le previsioni sull’utilizzo delle licenze sono approssimazioni basate sull’utilizzo passato. Sei responsabile della comprensione dell’utilizzo effettivo dell’organizzazione e di garantire che l’utilizzo non vada oltre l’ambito della licenza dell’organizzazione con Adobe. Per ridurre l’utilizzo, puoi configurare le scadenze dei dati di set di dati o profili pseudonimi per sandbox e set di dati."
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=it" text="Scadenze di set di dati automatizzate"
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
 
->[!CONTEXTUALHELP]
->id="platform_licenseusage_prediction"
->title="Utilizzo previsto"
->abstract="Le previsioni si basano sull’utilizzo negli ultimi 6-7 mesi e vengono generate il 15 di ogni mese. Tieni presente che le previsioni sull’utilizzo delle licenze sono approssimazioni basate sull’utilizzo passato. Sei responsabile della comprensione dell’utilizzo effettivo dell’organizzazione e di garantire che l’utilizzo non vada oltre l’ambito della licenza dell’organizzazione con Adobe. Per ridurre l’utilizzo, puoi configurare le scadenze dei dati di set di dati o profili pseudonimi per sandbox e set di dati."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=it" text="Scadenze di set di dati automatizzate"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
+[!CONTEXTUALHELP]
+id="platform_licenseusage_prediction"
+title="Utilizzo previsto"
+abstract="Le previsioni si basano sull’utilizzo negli ultimi 6-7 mesi e vengono generate il 15 di ogni mese. Tieni presente che le previsioni sull’utilizzo delle licenze sono approssimazioni basate sull’utilizzo passato. Sei responsabile della comprensione dell’utilizzo effettivo dell’organizzazione e di garantire che l’utilizzo non vada oltre l’ambito della licenza dell’organizzazione con Adobe. Per ridurre l’utilizzo, puoi configurare le scadenze dei dati di set di dati o profili pseudonimi per sandbox e set di dati."
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=it" text="Scadenze di set di dati automatizzate"
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
 
 Gestire e ottimizzare in modo proattivo le risorse di gestione delle licenze con previsioni di utilizzo precise e aggiornate. La colonna [!UICONTROL Utilizzo previsto] prevede l&#39;utilizzo futuro delle licenze a livello di sandbox in tutte le sandbox di produzione e sviluppo per tutti i prodotti acquistati. Le previsioni ora vengono aggiornate settimanalmente, fornendo una previsione di sei settimane basata sui dati di utilizzo più recenti. Ogni previsione include sia un limite inferiore che un limite superiore per supportare una pianificazione informata.
 
 >[!IMPORTANT]
 >
->Le previsioni vengono aggiornate settimanalmente ogni venerdì. La data di aggiornamento è inclusa in un&#39;icona di informazioni (![Icona di informazioni.](../images/license-usage/info-icon.png)) sopra il titolo della colonna.
+Le previsioni vengono aggiornate settimanalmente ogni venerdì. La data di aggiornamento è inclusa in un&#39;icona di informazioni (![Icona di informazioni.](../images/license-usage/info-icon.png)) sopra il titolo della colonna.
 
 Visualizza un riepilogo dell&#39;utilizzo dei diritti di un prodotto dalla scheda [!UICONTROL Prodotto] nella tabella [!UICONTROL Prodotti principali].
 
@@ -262,7 +259,7 @@ Visualizza un riepilogo dell&#39;utilizzo dei diritti di un prodotto dalla sched
 
 >[!NOTE]
 >
->Tieni presente che le previsioni sull’utilizzo delle licenze sono approssimazioni basate sull’utilizzo passato. È tua responsabilità comprendere l’utilizzo effettivo dell’organizzazione e assicurarsi che non vada oltre l’ambito della licenza dell’organizzazione con Adobe.
+Tieni presente che le previsioni sull’utilizzo delle licenze sono approssimazioni basate sull’utilizzo passato. È tua responsabilità comprendere l’utilizzo effettivo dell’organizzazione e assicurarsi che non vada oltre l’ambito della licenza dell’organizzazione con Adobe.
 
 La percentuale di utilizzo previsto è determinata come segue:
 
@@ -272,7 +269,7 @@ La percentuale di utilizzo previsto è determinata come segue:
 
 >[!NOTE]
 >
->&quot;Quasi identici&quot; in questo contesto significa che i valori sono statisticamente significativi per due posizioni decimali (ad esempio, un limite inferiore di 0,342 e un limite superiore di 0,344 sono entrambi arrotondati al 34%).
+&quot;Quasi identici&quot; in questo contesto significa che i valori sono statisticamente significativi per due posizioni decimali (ad esempio, un limite inferiore di 0,342 e un limite superiore di 0,344 sono entrambi arrotondati al 34%).
 
 La funzione di utilizzo previsto supporta le metriche seguenti:
 
@@ -287,29 +284,29 @@ La funzione di utilizzo previsto supporta le metriche seguenti:
 
 >[!IMPORTANT]
 >
->A partire dal 20 agosto, i clienti con diritti per &#39;[!UICONTROL Ricchezza media profilo]&#39; e &#39;[!UICONTROL Archiviazione totale]&#39; hanno invece visualizzato &#39;[!UICONTROL Volume totale dati]&#39; nel dashboard Utilizzo licenze. Non vi sono state modifiche alle adesioni dei clienti, ma solo una semplificazione delle metriche di tracciamento. [!UICONTROL Il volume totale dei dati] rappresenta i dati disponibili nel profilo cliente in tempo reale per i flussi di lavoro di coinvolgimento e personalizzazione. Questa metrica semplificata ha migliorato la gestione e la misurazione dell’utilizzo di Real-Time Customer Profile. I clienti sono stati invitati a contattare il proprio rappresentante Adobe per ulteriori chiarimenti su questa modifica.
+A partire dal 20 agosto, i clienti con diritti per &#39;[!UICONTROL Ricchezza media profilo]&#39; e &#39;[!UICONTROL Archiviazione totale]&#39; hanno invece visualizzato &#39;[!UICONTROL Volume totale dati]&#39; nel dashboard Utilizzo licenze. Non vi sono state modifiche alle adesioni dei clienti, ma solo una semplificazione delle metriche di tracciamento. [!UICONTROL Il volume totale dei dati] rappresenta i dati disponibili nel profilo cliente in tempo reale per i flussi di lavoro di coinvolgimento e personalizzazione. Questa metrica semplificata ha migliorato la gestione e la misurazione dell’utilizzo di Real-Time Customer Profile. I clienti sono stati invitati a contattare il proprio rappresentante Adobe per ulteriori chiarimenti su questa modifica.
 
 Il dashboard utilizzo licenze riporta diverse metriche univoche applicabili a più prodotti dell’organizzazione. Le metriche disponibili sono:
 
 | Metrica | Descrizione |
 |---|---|
-| [!UICONTROL Dimensione Audience Activation] | Dimensione totale dei profili attivati in una destinazione basata su file in un anno. Nota: non sono inclusi i profili inviati tramite destinazioni di streaming. |
+| [!UICONTROL Dimensione Audience Activation] | Dimensione totale dei profili attivati in qualsiasi destinazione basata su file in un anno. Nota: non sono inclusi i profili inviati tramite le destinazioni di streaming. |
 | [!UICONTROL Pubblico di riferimento] | Il set di profili persona in Real-Time Customer Profile che la tua organizzazione è autorizzata a coinvolgere, inclusi sia i profili direttamente identificabili che quelli pseudonimi. Questi profili possono contenere attributi, comportamenti e dati di appartenenza ai segmenti. I volumi di profilo vengono calcolati utilizzando il grafo di identità deterministico predefinito di Adobe Experience Platform e sono considerati una feature condivisa. |
-| [!UICONTROL Pacchetti utenti servizio query ad hoc] | Componente aggiuntivo per aumentare il diritto degli utenti autorizzati di Query Service di altri cinque utenti di Query Service simultanei e di un’ulteriore query ad hoc in esecuzione simultanea per pacchetto. È possibile concedere in licenza più pacchetti utente di Ad Hoc Query aggiuntivi. |
+| [!UICONTROL Pacchetti utenti servizio query ad hoc] | Un componente aggiuntivo per aumentare il diritto di utenti simultanei autorizzati del Query Service a cinque ulteriori utenti e a un ulteriore query ad hoc per pacchetto in esecuzione contemporanea. È possibile concedere in licenza più pacchetti utente per query ad hoc aggiuntive. |
 | [!UICONTROL Ricchezza media profilo] | **Obsoleto** - Somma di tutti i dati di produzione archiviati nel servizio profili hub in qualsiasi momento, divisa per cinque volte il numero di profili di persona aziendale autorizzati. [!UICONTROL Ricchezza media profilo] è una caratteristica condivisa. |
-| [!UICONTROL Righe CJA Disponibili] | La media giornaliera delle righe di dati disponibili per l’analisi in Customer Journey Analytics. |
+| [!UICONTROL Righe CJA Disponibili] | Le righe medie giornaliere di dati disponibili per l’analisi in Customer Journey Analytics. |
 | [!UICONTROL Attributi calcolati] | Dati comportamentali aggregati del profilo basati su eventi di esperienza che vengono convertiti in un attributo di profilo e possono essere inclusi in un profilo persona. |
 | [!UICONTROL Pubblico consumer] | Il numero di profili di persona identificati come &quot;Pubblico consumatore&quot; nell’ordine cliente. |
 | [!UICONTROL Dimensione esportazione dati] | La quantità di dati inviati tramite le attivazioni dei set di dati in un anno. |
-| [!UICONTROL Esportazioni dati] | Dimensione totale dei set di dati che possono essere esportati (direttamente o indirettamente) in un anno in qualsiasi soluzione non Adobe. |
+| [!UICONTROL Esportazioni dati] | Dimensione totale dei set di dati che possono essere esportati in qualsiasi soluzione non Adobe (direttamente o indirettamente) in un anno. |
 | [!UICONTROL Archiviazione Data Lake] | Quantità utilizzata dell’archivio dati analitici in Adobe Experience Platform. |
 | [!UICONTROL Pubblico coinvolgibile] | Un gruppo di profili persona in Real-Time Customer Profile che hai tentato di coinvolgere negli ultimi 12 mesi utilizzando le funzionalità di authoring, decisione, consegna, sperimentazione o orchestrazione di Journey Optimizer. |
 | [!UICONTROL Tipi di pubblico simili] | Un pubblico consumer lookalike è un pubblico generato modellando un pubblico consumer esistente per identificare profili di persone con attributi o comportamenti simili. |
-| [!UICONTROL Numero di modelli AMM] | Un conteggio del modello di apprendimento automatico (integrato in Adobe Mix Modeler) utilizzato per misurare e/o prevedere un risultato specifico in base ai tuoi investimenti. |
-| [!UICONTROL Numero di sandbox] | Numero di separazioni logiche all’interno dell’istanza di qualsiasi servizio Adobe On-demand che accede ai dati e alle operazioni di isolamento di Adobe Experience Platform. |
+| [!UICONTROL Numero di modelli AMM] | Un conteggio del modello di apprendimento automatico (integrato in Adobe Mix Modeler) utilizzato per misurare e/o prevedere un risultato specifico in base agli investimenti effettuati. |
+| [!UICONTROL Numero di sandbox] | Numero di separazioni logiche all’interno dell’istanza di qualsiasi servizio on-demand di Adobe che accede a dati e operazioni isolate di Adobe Experience Platform. |
 | [!UICONTROL Numero di pacchetti Richness profilo] | Un aumento del volume totale di dati autorizzato di 25 KB per profilo per ogni pacchetto di ricchezza di profilo aggiuntivo. |
-| [!UICONTROL Ore di calcolo servizio query] | Misura del tempo impiegato dai motori di Query Service per leggere, elaborare e riscrivere i dati nel data lake quando viene eseguita una query batch. |
-| [!UICONTROL Segmentazione streaming n. di pacchetti] | I pacchetti aggiornano l’iscrizione al segmento per un profilo persona man mano che nuovi dati entrano nel servizio di segmentazione attraverso un flusso di streaming. L’iscrizione al segmento viene valutata in base agli attributi del profilo della persona corrente e al valore dell’evento corrente, senza tenere conto del comportamento storico. La segmentazione in streaming è una funzione condivisa. |
+| [!UICONTROL Ore di calcolo servizio query] | Misurazione del tempo impiegato dai motori di Query Service per leggere, elaborare e riscrivere i dati nel data lake quando viene eseguita una query in batch. |
+| [!UICONTROL Segmentazione streaming n. di pacchetti] | I pacchetti aggiornano l’appartenenza al segmento per un profilo persona quando nuovi dati entrano nel servizio di segmentazione tramite un flusso di streaming. L’appartenenza al segmento viene valutata in base agli attributi correnti del profilo della persona e al valore dell’evento corrente, senza tenere conto del comportamento storico. La segmentazione in streaming è una funzione condivisa. |
 | [!UICONTROL Volume di dati totale] | La quantità totale di dati disponibili per Real-Time Customer Profile da utilizzare nei flussi di lavoro di coinvolgimento. Per ulteriori informazioni, consulta le [domande frequenti sul volume totale dei dati](../../landing/license-usage-and-guardrails/total-data-volume.md). |
 | [!UICONTROL Volume totale di uscita dati] | Il volume annuo cumulativo di dati esportati da Adobe Experience Platform in data warehouse di terze parti. |
 
@@ -317,7 +314,7 @@ Il dashboard utilizzo licenze riporta diverse metriche univoche applicabili a pi
 
 >[!TIP]
 >
->È possibile controllare i diritti di licenza nell&#39;ordine di vendita per calcolare metriche quali l&#39;indennità di archiviazione.<br>Ad esempio,<ul><li>Indennità di archiviazione = numero di &quot;profili autorizzati&quot; nel contratto X Ricchezza media profilo</li></ul>
+È possibile controllare i diritti di licenza nell&#39;ordine di vendita per calcolare metriche quali l&#39;indennità di archiviazione.<br>Ad esempio,<ul><li>Indennità di archiviazione = numero di &quot;profili autorizzati&quot; nel contratto X Ricchezza media profilo</li></ul>
 
 La disponibilità di queste metriche e la definizione specifica di ciascuna di esse varia a seconda delle licenze acquistate dalla tua organizzazione. Per le definizioni dettagliate di ciascuna metrica, consulta l’appropriata documentazione di descrizione del prodotto:
 
@@ -332,7 +329,7 @@ La disponibilità di queste metriche e la definizione specifica di ciascuna di e
 
 >[!WARNING]
 >
->Il dashboard utilizzo licenze riporta solo l’ultima licenza fornita per la tua organizzazione. Se l’ultima licenza fornita per la tua organizzazione non viene visualizzata nella tabella precedente, è possibile che il dashboard utilizzo licenze non venga visualizzato correttamente. Il supporto per licenze aggiuntive e più licenze in una singola organizzazione è pianificato per una versione futura.
+Il dashboard utilizzo licenze riporta solo l’ultima licenza fornita per la tua organizzazione. Se l’ultima licenza fornita per la tua organizzazione non viene visualizzata nella tabella precedente, è possibile che il dashboard utilizzo licenze non venga visualizzato correttamente. Il supporto per licenze aggiuntive e più licenze in una singola organizzazione è pianificato per una versione futura.
 
 ## Passaggi successivi
 
