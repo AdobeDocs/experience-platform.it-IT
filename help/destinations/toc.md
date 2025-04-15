@@ -5,10 +5,10 @@ user-guide-description: Attiva i dati, noti e non, per campagne di marketing cro
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 66ebff274a5fb9255e284a2a38db780d64b45f2e
 workflow-type: tm+mt
-source-wordcount: '1282'
-ht-degree: 5%
+source-wordcount: '1290'
+ht-degree: 6%
 
 ---
 
@@ -33,10 +33,10 @@ ht-degree: 5%
    * [Eliminare i flussi di dati di destinazione](./api/delete-destination-dataflow.md)
    * [Esporta set di dati](/help/destinations/api/export-datasets.md)
    * [Ordinare e filtrare le risposte API per le destinazioni](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
-* Guide dell&#39;interfaccia utente {#ui}
+* Guide dell’interfaccia utente {#ui}
    * [Area di lavoro destinazioni](./ui/destinations-workspace.md)
    * [Creare una nuova connessione di destinazione](./ui/connect-destination.md)
-   * Attiva dati nelle destinazioni{#activate}
+   * Attivare i dati nelle destinazioni{#activate}
       * [Panoramica di Activation](./ui/activation-overview.md)
       * [Attiva i tipi di pubblico nelle destinazioni di esportazione del pubblico in streaming](./ui/activate-segment-streaming-destinations.md)
       * [Attivare i tipi di pubblico per le destinazioni di esportazione dei profili di streaming](./ui/activate-streaming-profile-destinations.md)
@@ -51,6 +51,7 @@ ht-degree: 5%
       * [(Beta) Utilizza l’ultimo attributo XDM del tempo di qualifica nelle nuove destinazioni di archiviazione cloud beta](./ui/activate-last-qualification-time.md)
       * [Esportare array, mappe e oggetti](/help/destinations/ui/export-arrays-maps-objects.md)
       * [Eseguire trasformazioni sui dati esportati nelle destinazioni di archiviazione cloud](/help/destinations/ui/data-transformations-calculated-fields.md)
+      * [Aggiornare la data di fine dei flussi di dati del set di dati di esportazione](/help/destinations/ui/update-end-date-export-dataflows.md)
    * [Visualizzare i dettagli della destinazione](./ui/destination-details-page.md)
    * [Aggiorna account di destinazione](./ui/update-accounts.md)
    * [Elimina account di destinazione](./ui/delete-destination-account.md)
@@ -59,9 +60,9 @@ ht-degree: 5%
    * [Monitorare i flussi di dati](./ui/monitor-dataflows.md)
    * [Configurare le opzioni di formattazione dei file per le destinazioni basate su file](./ui/batch-destinations-file-formatting-options.md)
    * [Iscriviti agli avvisi contestuali sulle destinazioni](ui/alerts.md)
-* Catalogo destinazioni {#catalog}
+* Catalogo delle destinazioni {#catalog}
    * [Panoramica del catalogo delle destinazioni](./catalog/overview.md)
-   * Destinazioni Adobe{#adobe}
+   * Destinazioni di Adobe{#adobe}
       * [Panoramica sulle destinazioni di Adobe](./catalog/adobe/overview.md)
       * [Tipi di pubblico di Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
       * [Connessione Marketo Engage](./catalog/adobe/marketo-engage.md)
@@ -69,7 +70,7 @@ ht-degree: 5%
       * [Connessione Marketo Measure Ultimate](./catalog/adobe/marketo-measure-ultimate.md)
       * [Condivisione del pubblico in Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
       * [Connessione Federated Audience Composition](https://www.adobe.com/go/destinations-federated-audience-composition)
-   * Destinazioni Advertising{#advertising}
+   * Destinazioni di Advertising{#advertising}
       * [(Beta) Distribuzione del pubblico di Acxiom](./catalog/advertising/acxiom-audience-distribution.md)
       * [Panoramica sulle destinazioni di Advertising](./catalog/advertising/overview.md)
       * [Connessione Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud-connection.md)
@@ -131,7 +132,7 @@ ht-degree: 5%
       * [Estensione SessionCam](./catalog/analytics/sessioncam.md)
       * [Estensione TMMData](./catalog/analytics/tmmdata.md)
       * [Estensione per il tracciamento delle conversioni di testo](./catalog/analytics/yext.md)
-   * Destinazioni archiviazione cloud {#cloud-storage}
+   * Destinazioni di archiviazione cloud {#cloud-storage}
       * [Panoramica delle destinazioni di archiviazione cloud](./catalog/cloud-storage/overview.md)
       * [Connessione Amazon Kinesis](./catalog/cloud-storage/amazon-kinesis.md)
       * [Connessione Amazon S3](./catalog/cloud-storage/amazon-s3.md)
@@ -143,13 +144,13 @@ ht-degree: 5%
       * [Connessione SFTP](./catalog/cloud-storage/sftp.md)
       * [Connessione Snowflake](./catalog/cloud-storage/snowflake.md)
       * [Indirizzi IP di cui è stato eseguito il inserisco nell&#39;elenco Consentiti per le destinazioni di archiviazione cloud basate su file](./catalog/cloud-storage/ip-address-allow-list.md)
-   * Destinazioni CRM (Customer Relationship Management) {#crm}
+   * Destinazioni di Customer Relationship Management (CRM) {#crm}
       * [Connessione Hubspot](./catalog/crm/hubspot.md)
       * [Connessione Salesforce CRM](./catalog/crm/salesforce.md)
       * [Connessione Microsoft Dynamics 365](./catalog/crm/microsoft-dynamics-365.md)
       * [Connessione di uscita](catalog/crm/outreach.md)
       * [Connessione Zendesk](catalog/crm/zendesk.md)
-   * Destinazioni piattaforma di gestione dati {#data-management}
+   * Destinazioni della piattaforma di gestione dati {#data-management}
       * [Panoramica sulle destinazioni di Data Management Platform (DMP)](./catalog/data-management/overview.md)
       * [Estensione Audience Manager DIL](./catalog/data-management/aam-dil-extension.md)
       * [Zeta Marketing Platform](/help/destinations/catalog/data-management/zeta-marketing-platform.md)
@@ -165,7 +166,7 @@ ht-degree: 5%
       * [Estensione Marketo](./catalog/email/marketo.md)
       * [Estensione Marketo Munchkin](./catalog/email/marketo-munchkin.md)
       * [Estensione PebblePost](./catalog/email/pebblepost.md)
-   * Destinazioni e-mail marketing {#email-marketing}
+   * Destinazioni di e-mail marketing {#email-marketing}
       * [Panoramica delle destinazioni di e-mail marketing](./catalog/email-marketing/overview.md)
       * [Connessione Adobe Campaign](./catalog/email-marketing/adobe-campaign.md)
       * [Connessione Adobe Campaign Managed Cloud Services](./catalog/email-marketing/adobe-campaign-managed-services.md)
@@ -180,7 +181,7 @@ ht-degree: 5%
       * [Connessione SendGrid](./catalog/email-marketing/sendgrid.md)
    * Estensioni tag {#launch-extensions}
       * [Panoramica dell’estensione tag](./catalog/launch-extensions/overview.md)
-   * Automazione marketing {#marketing-automation}
+   * Marketing automation {#marketing-automation}
       * [Profili partecipanti RainFocus](/help/destinations/catalog/marketing-automation/rainfocus.md)
    * Destinazioni di coinvolgimento mobile {#mobile-engagement}
       * [Panoramica delle destinazioni del coinvolgimento mobile](./catalog/mobile-engagement/overview.md)
@@ -242,7 +243,7 @@ ht-degree: 5%
          * [Formato del messaggio](./destination-sdk/functionality/destination-server/message-format.md)
          * [Funzioni di trasformazione supportate](./destination-sdk/functionality/destination-server/supported-functions.md)
          * [Configurazione formattazione file](./destination-sdk/functionality/destination-server/file-formatting.md)
-      * Componenti di configurazione di destinazione {#destination-configuration}
+      * Componenti di configurazione della destinazione {#destination-configuration}
          * [Configurazione autenticazione cliente](./destination-sdk/functionality/destination-configuration/customer-authentication.md)
          * [Autorizzazione OAuth2](./destination-sdk/functionality/destination-configuration/oauth2-authorization.md)
          * [Campi dati cliente](./destination-sdk/functionality/destination-configuration/customer-data-fields.md)
@@ -261,7 +262,7 @@ ht-degree: 5%
       * [Utilizzare Destination SDK per configurare una destinazione di streaming](./destination-sdk/guides/configure-destination-instructions.md)
       * [Utilizzare Destination SDK per configurare una destinazione basata su file](./destination-sdk/guides/configure-file-based-destination-instructions.md)
       * [Invia per la revisione di una destinazione creata in Destination SDK](./destination-sdk/guides/submit-destination.md)
-      * Configura destinazioni basate su file {#configure-file-based-destinations}
+      * Configurare destinazioni basate su file {#configure-file-based-destinations}
          * [Configurare le opzioni di formattazione del file](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)
          * [Configurare una destinazione Amazon S3 con opzioni di formattazione file predefinite e configurazione del nome file personalizzato](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
          * [Configurare una destinazione Amazon S3 con nome file personalizzato e opzioni di formattazione](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
@@ -270,7 +271,7 @@ ht-degree: 5%
          * [Configurare una destinazione Data Landing Zone (DLZ) con opzioni di formattazione del file personalizzate e configurazione del nome file personalizzato](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
          * [Configurare una destinazione SFTP con opzioni di formattazione file predefinite e configurazione del nome file personalizzato](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
          * [Configurare una destinazione basata su file per esportare i tipi di pubblico potenziali](/help/destinations/destination-sdk/guides/batch/configure-prospect-audience-destination.md)
-   * Riferimento API di authoring della destinazione {#authoring-api}
+   * Riferimento API per l’authoring delle destinazioni {#authoring-api}
       * [Riferimento API per Destination SDK (authoring di destinazione)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
       * Operazioni del server di destinazione {#server-operations}
          * [Creare una configurazione del server di destinazione](./destination-sdk/authoring-api/destination-server/create-destination-server.md)
@@ -282,7 +283,7 @@ ht-degree: 5%
          * [Recuperare una configurazione di destinazione](./destination-sdk/authoring-api/destination-configuration/retrieve-destination-configuration.md)
          * [Aggiornare una configurazione di destinazione](./destination-sdk/authoring-api/destination-configuration/update-destination-configuration.md)
          * [Eliminare una configurazione di destinazione](./destination-sdk/authoring-api/destination-configuration/delete-destination-configuration.md)
-   * Riferimento API metadati pubblico {#audience-template-api}
+   * Riferimento API per i metadati del pubblico {#audience-template-api}
       * [Creare un modello di pubblico](./destination-sdk/metadata-api/create-audience-template.md)
       * [Recuperare un modello di pubblico](./destination-sdk/metadata-api/retrieve-audience-template.md)
       * [Aggiornare un modello di pubblico](./destination-sdk/metadata-api/update-audience-template.md)
@@ -292,7 +293,7 @@ ht-degree: 5%
       * [Recuperare una configurazione di credenziali](./destination-sdk/credentials-api/retrieve-credential-configuration.md)
       * [Aggiornare una configurazione delle credenziali](./destination-sdk/credentials-api/update-credential-configuration.md)
       * [Eliminare una configurazione di credenziali](./destination-sdk/credentials-api/delete-credential-configuration.md)
-   * Riferimento API test di destinazione {#testing-api}
+   * Riferimento API per test di destinazione {#testing-api}
       * API di test della destinazione di streaming {#streaming-destinations}
          * [Panoramica dell’API di test della destinazione di streaming](./destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md)
          * [Generare profili di esempio in base a uno schema di origine](./destination-sdk/testing-api/streaming-destinations/sample-profile-generation-api.md)
