@@ -3,9 +3,10 @@ title: Collegare i profili utente di Algolia ad Experience Platform tramite l’
 description: Scopri come collegare gli utenti dell’Algolia interessati ad Experience Platform
 hide: true
 hidefromtoc: true
-source-git-commit: a55f0b37614bb43a66d7d2e9cf106484b4d6e8dc
+exl-id: d4c936a7-4983-4a12-a813-03b672116e44
+source-git-commit: 009866abc39b06c22b7bea758ce9fdfba8c72b00
 workflow-type: tm+mt
-source-wordcount: '1133'
+source-wordcount: '1137'
 ht-degree: 1%
 
 ---
@@ -53,13 +54,13 @@ Per utilizzare [!DNL Algolia], seleziona la scheda di origine **[!UICONTROL Algo
 
 ## Autenticazione
 
-### Account esistente
+### Usa un account esistente
 
 Per utilizzare un account esistente, selezionare **[!UICONTROL Account esistente]**, quindi selezionare l&#39;account [!DNL Algolia User Profiles] che si desidera utilizzare. Per continuare, selezionare **[!UICONTROL Avanti]**.
 
 ![Interfaccia account esistente.](../../../../images/tutorials/create/algolia/user-profiles/existing-account.png)
 
-### Nuovo account
+### Crea un nuovo account
 
 Se stai creando un nuovo account, seleziona **[!UICONTROL Nuovo account]**, quindi fornisci un nome, una descrizione facoltativa e [!DNL Algolia] credenziali. Al termine, selezionare **[!UICONTROL Connetti all&#39;origine]** e quindi attendere un po&#39; di tempo per stabilire la nuova connessione.
 
@@ -76,7 +77,7 @@ Dopo aver selezionato e visualizzato in anteprima i dati per l&#39;acquisizione,
 
 ![Passaggio di dati selezionato del flusso di lavoro.](../../../../images/tutorials/create/algolia/user-profiles/select-data.png)
 
-### Fornisci i dettagli del flusso di dati
+## Fornisci i dettagli del flusso di dati
 
 Se utilizzi un set di dati esistente, seleziona un set di dati associato a uno schema che utilizza il gruppo di campi [!DNL Algolia Profile].
 
@@ -86,13 +87,13 @@ Se stai creando un nuovo set di dati, seleziona uno schema che utilizza il grupp
 
 ![Il nuovo passaggio del set di dati del flusso di lavoro origini.](../../../../images/tutorials/create/algolia/user-profiles/dataflow-detail-new-dataset.png)
 
-### Mappare i campi dati su uno schema XDM
+## Mappare i campi dati su uno schema XDM
 
 Utilizza l’interfaccia di mappatura per mappare i dati di origine sui campi dello schema appropriati prima di acquisire i dati in Experience Platform.  Per ulteriori informazioni, leggere la [guida alla mappatura nell&#39;interfaccia utente](../../../../../data-prep/ui/mapping.md).
 
 ![Passaggio di mappatura del flusso di lavoro di origine.](../../../../images/tutorials/create/algolia/user-profiles/mapping.png)
 
-### Pianificazione esecuzioni dell’acquisizione
+## Pianificazione esecuzioni dell’acquisizione
 
 Quindi, utilizza l’interfaccia di pianificazione per definire la pianificazione dell’acquisizione del flusso di dati.
 
@@ -107,7 +108,7 @@ Quindi, utilizza l’interfaccia di pianificazione per definire la pianificazion
 | Ora di inizio | La marca temporale per l’esecuzione prevista, presentata in fuso orario UTC. |
 | Retrocompilazione | La retrocompilazione determina quali dati vengono inizialmente acquisiti. Se la retrocompilazione è abilitata, tutti i file correnti nel percorso specificato verranno acquisiti durante la prima acquisizione pianificata. Se la retrocompilazione è disattivata, verranno acquisiti solo i file caricati tra la prima esecuzione dell’acquisizione e l’ora di inizio. I file caricati prima dell’ora di inizio non verranno acquisiti. |
 
-### Verifica il flusso di dati
+## Verifica il flusso di dati
 
 Utilizza la pagina di revisione per un riepilogo del flusso di dati prima dell’acquisizione. I dettagli sono raggruppati nelle seguenti categorie:
 
