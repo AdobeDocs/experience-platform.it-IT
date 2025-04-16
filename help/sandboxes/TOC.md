@@ -27,7 +27,7 @@ ht-degree: 47%
    * [Gestione sandbox](api/sandboxes.md)
    * [Tipi di sandbox](api/types.md)
    * [Appendice](api/appendix.md)
-* API degli strumenti sandbox {#sandbox-tooling-api}
+* API strumenti sandbox {#sandbox-tooling-api}
    * [Panoramica](sandbox-tooling-api/overview.md)
    * [Introduzione](sandbox-tooling-api/getting-started.md)
    * [Pacchetti](sandbox-tooling-api/packages.md)
