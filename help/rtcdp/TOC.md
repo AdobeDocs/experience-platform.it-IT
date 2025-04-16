@@ -5,10 +5,10 @@ audience: user
 user-guide-title: Guida di Real-time Customer Data Platform
 user-guide-description: Riunisci dati noti e anonimi provenienti da più origini aziendali per creare profili cliente, tipi di pubblico da tali profili e attivare tali tipi di pubblico in destinazioni di terze parti.
 role: Admin
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 3b2645927e4760114298295e920e07a20df3fcbd
 workflow-type: tm+mt
-source-wordcount: '302'
-ht-degree: 64%
+source-wordcount: '307'
+ht-degree: 62%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 64%
       * [Caso d’uso di esempio](./b2b-use-case.md)
       * [Tutorial end-to-end](./b2b-tutorial.md)
       * [Guardrail per l’edizione B2B di Real-Time CDP](b2b-guardrails.md)
-* Audience Manager e Real-Time CDP {#evolution}
+* AUDIENCE MANAGER e REAL-TIME CDP {#evolution}
    * [Evoluzione da Audience Manager](aam-to-rtcdp.md)
 * Profili account {#account}
    * [Panoramica sul profilo account](accounts/account-profile-overview.md)
@@ -62,10 +62,10 @@ ht-degree: 64%
 * Profili {#profile}
    * [Panoramica sul profilo](profile/profile-overview.md)
    * [Sfoglia profilo](profile/profile-browse.md)
-* Servizi di IA/ML dell’Edizione B2B di Real-Time CDP {#b2b-cdp-ai-ml}
+* Servizi Real-Time CDP B2B edition AI/ML {#b2b-cdp-ai-ml}
    * [Account correlati](b2b-ai-ml-services/related-accounts.md)
    * [Lead per corrispondenza account](b2b-ai-ml-services/lead-to-account-matching.md)
-   * Punteggio predittivo di lead e account {#predictive-lead-and-account-scoring-intro}
+   * Punteggio del lead predittivo dell’account {#predictive-lead-and-account-scoring-intro}
       * [Panoramica sul punteggio predittivo di lead e account](b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
       * [Gestire il punteggio predittivo di lead e account](b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md)
 * Schemi {#schemas}
@@ -80,6 +80,7 @@ ht-degree: 64%
       * [Coinvolgi e acquisisci nuovi clienti senza dipendere dai cookie di terze parti](/help/rtcdp/partner-data/prospecting.md)
       * [Personalizzare le esperienze nel sito per visitatori sconosciuti utilizzando il riconoscimento dei visitatori supportato dai partner](/help/rtcdp/partner-data/onsite-personalization.md)
       * [Retargeting fuori sede di utenti non autenticati](./partner-data/offsite-retargeting.md)
+      * [Retargeting fuori sede di utenti non autenticati](./partner-data/unauthenticated-retargeting.md)
    * Arricchimento del profilo {#profile-enrichment}
       * [Integrare i profili di prime parti con gli attributi forniti dai partner](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
    * Approfondimenti personalizzati e coinvolgimento {#personalization-insights-engagement}
