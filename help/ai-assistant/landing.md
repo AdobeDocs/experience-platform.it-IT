@@ -3,9 +3,9 @@ title: Assistente AI nella documentazione del prodotto Adobe Experience Platform
 description: Introduzione all’Assistente IA in Adobe Experience Platform.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: eb62627e81f361d21026cba368802ebace4a8dde
+source-git-commit: 40c5162801b95d73ce70587f3abd87ad44fa0f01
 workflow-type: tm+mt
-source-wordcount: '1156'
+source-wordcount: '1159'
 ht-degree: 0%
 
 ---
@@ -41,6 +41,17 @@ Per iniziare, leggi il materiale incluso nei collegamenti riportati di seguito p
     <td align="center"><a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     </tr>
 </table>
+
+### Guida pratica per aumentare la produttività con AI Assistant
+
+>[!NOTE]
+>
+>Questa cartella di lavoro è stata aggiornata il 31 marzo 2025. Da allora, alcune funzionalità potrebbero essersi evolute o espanse. Inoltre, alcune funzioni a cui si fa riferimento in questa guida potrebbero essere ancora in accesso anticipato. Se scopri qualcosa che non è ancora disponibile nel tuo ambiente e ti interessa esplorarlo, contatta il team del tuo account Adobe per richiedere l’accesso anticipato.
+
+Leggi quanto segue per una guida pratica su come aumentare la produttività con AI Assistant.
+
+* [Migliora la tua produttività con AI Assistant](./assets/landing/ai-assistant-lab-workbook.pdf)
+
 
 ## Nuove funzioni
 
@@ -439,16 +450,6 @@ Guarda i video seguenti per ulteriori esempi di casi di utilizzo dell’Assisten
 * [Sblocca le informazioni operative con l&#39;Assistente AI](https://www.youtube.com/watch?v=fGgFwAOZle8)
 
 >[!ENDTABS]
-
-### Aumenta la produttività con AI Assistant
-
->[!NOTE]
->
->Questa cartella di lavoro è stata aggiornata il 31 marzo 2025. Da allora, alcune funzionalità potrebbero essersi evolute o espanse. Inoltre, alcune funzioni a cui si fa riferimento in questa guida potrebbero essere ancora in accesso anticipato. Se scopri qualcosa che non è ancora disponibile nel tuo ambiente e ti interessa esplorarlo, contatta il team del tuo account Adobe per richiedere l’accesso anticipato.
-
-Leggi quanto segue per una guida pratica su come aumentare la produttività con AI Assistant.
-
-* [Migliora la tua produttività con AI Assistant](./assets/landing/ai-assistant-lab-workbook.pdf)
 
 ## Passaggi successivi
 
