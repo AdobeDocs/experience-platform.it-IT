@@ -2,9 +2,9 @@
 description: Scopri come configurare lo schema partner per le destinazioni create con Destination SDK.
 title: Configurazione schema partner
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 30a237c7acf814722d384792366f95289dc3f34a
 workflow-type: tm+mt
-source-wordcount: '1949'
+source-wordcount: '1896'
 ht-degree: 3%
 
 ---
@@ -105,8 +105,8 @@ Per creare uno schema statico con attributi di profilo, definire gli attributi d
 | `profileRequired` | Booleano | Facoltativo | Utilizza `true` se gli utenti devono essere in grado di mappare gli attributi del profilo da Experience Platform agli attributi personalizzati sulla piattaforma di destinazione. |
 | `segmentRequired` | Booleano | Obbligatorio | Questo parametro è richiesto da Destination SDK e deve essere sempre impostato su `true`. |
 | `identityRequired` | Booleano | Obbligatorio | Impostato su `true` se gli utenti devono essere in grado di mappare [tipi di identità](identity-namespace-configuration.md) da Experience Platform agli attributi definiti nell&#39;array `profileFields`. |
-| `segmentNamespaceAllowList` | Array | Facoltativo | Definisce spazi dei nomi di pubblico specifici da cui gli utenti possono mappare i tipi di pubblico alla destinazione. Utilizza questo parametro per limitare gli utenti di Experience Platform all’esportazione dei tipi di pubblico solo dagli spazi dei nomi di pubblico definiti nell’array. Questo parametro non può essere utilizzato insieme a `segmentNamespaceDenyList`.<br> <br> Esempio: `"segmentNamespaceAllowList": ["AudienceManager"]` consentirà agli utenti di mappare solo i tipi di pubblico dallo spazio dei nomi `AudienceManager` a questa destinazione. <br> <br> Per consentire agli utenti di esportare qualsiasi pubblico nella tua destinazione, puoi ignorare questo parametro. <br> <br> Se nella configurazione mancano sia `segmentNamespaceAllowList` che `segmentNamespaceDenyList`, gli utenti potranno esportare solo i tipi di pubblico provenienti dal [servizio di segmentazione](../../../../segmentation/home.md). |
-| `segmentNamespaceDenyList` | Array | Facoltativo | Impedisce agli utenti di mappare i tipi di pubblico sulla destinazione, dagli spazi dei nomi dei tipi di pubblico definiti nell’array. Impossibile utilizzare insieme a `segmentNamespaceAllowed`. <br> <br> Esempio: `"segmentNamespaceDenyList": ["AudienceManager"]` impedirà agli utenti di mappare i tipi di pubblico dallo spazio dei nomi `AudienceManager` a questa destinazione. <br> <br> Per consentire agli utenti di esportare qualsiasi pubblico nella tua destinazione, puoi ignorare questo parametro. <br> <br> Se nella configurazione mancano sia `segmentNamespaceAllowed` che `segmentNamespaceDenyList`, gli utenti potranno esportare solo i tipi di pubblico provenienti dal [servizio di segmentazione](../../../../segmentation/home.md). <br> <br> Per consentire l&#39;esportazione di tutti i tipi di pubblico, indipendentemente dall&#39;origine, impostare `"segmentNamespaceDenyList":[]`. |
+| `segmentNamespaceAllowList` | Array | Facoltativo | Consente agli utenti di mappare solo i tipi di pubblico dagli spazi dei nomi definiti nell’array alla destinazione. <br><br> L&#39;utilizzo di questo parametro è sconsigliato nella maggior parte dei casi. Utilizza invece `"segmentNamespaceDenyList":[]` per consentire l&#39;esportazione di tutti i tipi di pubblico nella tua destinazione. <br><br> Se nella configurazione mancano sia `segmentNamespaceAllowList` che `segmentNamespaceDenyList`, gli utenti potranno esportare solo i tipi di pubblico provenienti dal [servizio di segmentazione](../../../../segmentation/home.md). <br><br>`segmentNamespaceAllowList` e `segmentNamespaceDenyList` si escludono a vicenda. |
+| `segmentNamespaceDenyList` | Array | Facoltativo | Impedisce agli utenti di mappare i tipi di pubblico dagli spazi dei nomi di pubblico definiti nell’array alla destinazione. <br><br>Adobe consiglia di consentire l&#39;esportazione di tutti i tipi di pubblico, indipendentemente dall&#39;origine, impostando `"segmentNamespaceDenyList":[]`. <br><br>Se nella configurazione mancano sia `segmentNamespaceAllowed` che `segmentNamespaceDenyList`, gli utenti potranno esportare solo i tipi di pubblico provenienti dal [servizio di segmentazione](../../../../segmentation/home.md). <br><br>`segmentNamespaceAllowList` e `segmentNamespaceDenyList` si escludono a vicenda. |
 
 {style="table-layout:auto"}
 
