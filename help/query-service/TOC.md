@@ -5,10 +5,10 @@ breadcrumb-title: Guida di Query Service
 user-guide-description: Utilizza il linguaggio SQL standard per eseguire query sui dati nel data lake in Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 5e8dccf91e8c83b4734b363539cfb911b5c2ae29
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 22%
+source-wordcount: '404'
+ht-degree: 27%
 
 ---
 
@@ -27,12 +27,13 @@ ht-degree: 22%
       - [Panoramica](data-distiller/derived-datasets/overview.md)
       - [Creare set di dati derivati con SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
       - [Creare set di dati derivati basati su decile](data-distiller/derived-datasets/decile-based-derived-attributes.md)
-   - SQL Insights per il reporting esteso dell&#39;app {#sql-insights}
+   - Approfondimenti SQL per il reporting esteso delle app {#sql-insights}
       - [Panoramica](data-distiller/sql-insights/overview.md)
       - [Modalità query pro](data-distiller/sql-insights/query-pro-mode.md)
+      - [Panoramica di Accelerated Store](data-distiller/sql-insights/accelerated-store-overview.md)
       - [Inviare query accelerate](data-distiller/sql-insights/send-accelerated-queries.md)
       - [Guida al modello dati per insights di reporting](data-distiller/sql-insights/reporting-insights-data-model.md)
-   - Pipeline di funzionalità IA/ML {#ml-feature-pipelines}
+   - Pipeline di funzioni IA/ML {#ml-feature-pipelines}
       - [Panoramica](data-distiller/ml-feature-pipelines/overview.md)
       - [Connetti a Jupyter Notebooks](data-distiller/ml-feature-pipelines/establish-connection.md)
       - [Analisi esplorativa dei dati](data-distiller/ml-feature-pipelines/exploratory-analysis.md)
@@ -45,7 +46,7 @@ ht-degree: 22%
    - [Ingegneria delle funzioni](advanced-statistics/feature-engineering.md)
    - [Modelli](advanced-statistics/models.md)
    - [Trasformazione delle feature](advanced-statistics/feature-transformation.md)
-   - Implementa modelli {#implement-models}
+   - Implementare modelli {#implement-models}
       - [Implementare modelli](advanced-statistics/implement-models/implement-models.md)
       - [Regressione](advanced-statistics/implement-models/regression.md)
       - [Classificazione](advanced-statistics/implement-models/classification.md)
@@ -53,7 +54,7 @@ ht-degree: 22%
    - Esempi {#examples}
       - [Filtraggio dei bot tramite statistiche e apprendimento automatico](advanced-statistics/examples/statistics-and-ml-bot-filtering.md)
       - [Prevedere l&#39;abbandono dei clienti utilizzando la regressione logistica basata su SQL](advanced-statistics/examples/predict-customer-churn.md)
-- Pubblico di Data Distiller {#data-distiller-audiences}
+- Tipi di pubblico di Data Distiller {#data-distiller-audiences}
    - [Creare tipi di pubblico esterni tramite SQL](data-distiller-audiences/overview.md)
 - Esempi {#use-cases}
    - [Panoramica](use-cases/overview.md)
