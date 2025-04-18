@@ -3,9 +3,9 @@ title: Attivare i tipi di pubblico per le destinazioni di esportazione dei profi
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico disponibili in Adobe Experience Platform inviandoli a destinazioni basate su profili in batch.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 500cad30178e6371c8d7431b032a67f6ed15a1d6
 workflow-type: tm+mt
-source-wordcount: '4454'
+source-wordcount: '4517'
 ht-degree: 11%
 
 ---
@@ -23,23 +23,23 @@ ht-degree: 11%
 
 ## Panoramica {#overview}
 
-Questo articolo illustra i workflow necessari per attivare i tipi di pubblico in Adobe Experience Platform di creare un batch di destinazioni basate su file di profilo, ad esempio l&#39;archiviazione cloud e le destinazioni marketing via e-mail.
+Questo articolo spiega il flusso di lavoro necessario per attivare i tipi di pubblico in Adobe Experience Platform per mettere in batch destinazioni basate su file di profilo, come l’archiviazione cloud e le destinazioni del marketing via e-mail.
 
 ## Prerequisiti {#prerequisites}
 
-Per attivare i tipi di pubblico verso le destinazioni, devi esserti connesso correttamente [a una destinazione](./connect-destination.md). Se non l&#39;hai già fatto, passa al [catalogo](../catalog/overview.md) delle destinazioni, sfoglia le destinazioni supportate e configura la destinazione che desideri utilizzare.
+Per attivare i tipi di pubblico nelle destinazioni, devi avere [connesso correttamente a una destinazione](./connect-destination.md). Se non lo hai già fatto, vai al [catalogo delle destinazioni](../catalog/overview.md), sfoglia le destinazioni supportate e configura la destinazione che desideri utilizzare.
 
 ## Formati di file supportati per l’esportazione {#supported-file-formats-export}
 
-Per l&#39;esportazione dei tipi di pubblico sono supportati i seguenti formati:
+Durante l’esportazione dei tipi di pubblico sono supportati i seguenti formati di file:
 
 * CSV
 * JSON
 * Parquet
 
-L&#39;esportazione dei file CSV offre maggiore flessibilità in termini di come si desidera strutturare i file esportati. Ulteriori informazioni sulla [configurazione della formattazione dei file per i file CSV](/help/destinations/ui/batch-destinations-file-formatting-options.md#file-configuration).
+L’esportazione di file CSV offre maggiore flessibilità in termini di struttura dei file esportati. Ulteriori informazioni sulla [configurazione della formattazione dei file per i file CSV](/help/destinations/ui/batch-destinations-file-formatting-options.md#file-configuration).
 
-Selezionare il formato di file desiderato per l&#39;esportazione quando [si crea una connessione alla destinazione](/help/destinations/ui/connect-destination.md) basata su file.
+Selezionare il formato di file desiderato per l&#39;esportazione durante [la creazione di una connessione alla destinazione basata su file](/help/destinations/ui/connect-destination.md).
 
 ## Seleziona la destinazione {#select-destination}
 
@@ -47,9 +47,9 @@ Selezionare il formato di file desiderato per l&#39;esportazione quando [si crea
 
    ![Immagine che evidenzia come accedere alla scheda del catalogo delle destinazioni.](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
 
-1. Seleziona **[!UICONTROL Attiva pubblico]** nel scheda corrispondente alla destinazione in cui desideri attivare il pubblico, come mostrato nell&#39;immagine seguente.
+1. Seleziona **[!UICONTROL Attiva pubblico]** nella scheda corrispondente alla destinazione in cui desideri attivare il pubblico, come illustrato nell&#39;immagine seguente.
 
-   ![Attiva il controllo del pubblico evidenziato nella pagina catalo.](../assets/ui/activate-batch-profile-destinations/activate-audiences-button.png)
+   ![Attiva il controllo dei tipi di pubblico evidenziato nella pagina del catalogo.](../assets/ui/activate-batch-profile-destinations/activate-audiences-button.png)
 
 1. Seleziona la connessione di destinazione da utilizzare per attivare i tipi di pubblico, quindi seleziona **[!UICONTROL Successivo]**.
 
@@ -63,7 +63,7 @@ Per selezionare i tipi di pubblico che si desidera attivare nella destinazione, 
 
 Puoi scegliere tra più tipi di pubblico, a seconda della loro origine:
 
-* **[!UICONTROL Servizio]** di segmentazione: Audiences generato in Experience Platform dal servizio di segmentazione. Per ulteriori informazioni, consulta la [documentazione](../../segmentation/ui/overview.md) Segmentazione.
+* **[!UICONTROL Servizio di segmentazione]**: tipi di pubblico generati in Experience Platform dal servizio di segmentazione. Per ulteriori dettagli, consulta la [documentazione sulla segmentazione](../../segmentation/ui/overview.md).
 * **[!UICONTROL Caricamento personalizzato]**: pubblico generato al di fuori di Experience Platform e caricato in Experience Platform come file CSV. Per ulteriori informazioni sui tipi di pubblico esterni, consulta la documentazione su [importazione di un pubblico](../../segmentation/ui/audience-portal.md#import-audience). La selezione dei tipi di pubblico provenienti da **[!UICONTROL Caricamenti personalizzati]** abilita automaticamente il passaggio [Seleziona attributi di arricchimento](#select-enrichment-attributes).
 * Altri tipi di pubblico, provenienti da altre soluzioni Adobe, ad esempio [!DNL Audience Manager].
 
@@ -71,11 +71,11 @@ Puoi scegliere tra più tipi di pubblico, a seconda della loro origine:
 >
 >Quando si attivano tipi di pubblico per caricamento personalizzati su destinazioni basate su file in batch, esiste un limite di 10 tipi di pubblico che è possibile attivare in un flusso di dati.
 
-![Vengono visualizzate caselle di controllo quando si selezionano uno o più tipi di pubblico da attivare.](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
+![Caselle di controllo visualizzate quando si selezionano uno o più tipi di pubblico da attivare.](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
 
 >[!TIP]
 >
->Per rimuovere i tipi di pubblico dai flussi di attivazione esistenti, utilizza la **[!UICONTROL pagina Activation dati]** . Per maggiori dettagli, leggi la sezione su come [rimuovere più tipi di pubblico dai flussi](../ui/destination-details-page.md#bulk-remove) di attivazione.
+>Per rimuovere i tipi di pubblico dai flussi di attivazione esistenti, utilizzare la pagina **[!UICONTROL Dati attivazione]**. Per ulteriori informazioni, consulta la sezione su come [rimuovere più tipi di pubblico dai flussi di attivazione](../ui/destination-details-page.md#bulk-remove).
 
 ## Pianificare l’esportazione del pubblico {#scheduling}
 
@@ -84,25 +84,35 @@ Puoi scegliere tra più tipi di pubblico, a seconda della loro origine:
 >title="Pianificazione"
 >abstract="Utilizza l’icona della matita per impostare il tipo di esportazione dei file (file completi o incrementali) e la frequenza di esportazione."
 
-[!DNL Adobe Experience Platform] esporta i dati per le destinazioni di e-mail marketing e archiviazione cloud come [tipi di file diversi](#supported-file-formats-export). **[!UICONTROL Nella pagina Pianificazione]** potete configurare i programmare e i nomi dei file per ciascun pubblico esportato.
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_schedule_weekly_messaging"
+>title="esportazioni settimanali"
+>abstract="Seleziona la data di inizio e le esportazioni successive avverranno in quel giorno della settimana fino alla data di fine selezionata."
 
-Experience Platform imposta automaticamente un programmare predefinito per ogni esportazione di file. È possibile modificare il programmare predefinito in base alle proprie esigenze, selezionando l&#39;icona a forma di matita accanto a ciascun programmare e definendo un programmare personalizzato.
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_schedule_monthly_messaging"
+>title="esportazioni mensili"
+>abstract="Seleziona la data di inizio; le esportazioni successive avranno luogo in tale data del mese fino alla data di fine selezionata. Per i mesi con meno di 30 o 31 giorni, l&#39;esportazione viene eseguita l&#39;ultimo giorno del mese."
 
-![Modifica controllo programmare evidenziato nel passaggio Pianificazione.](../assets/ui/activate-batch-profile-destinations/edit-default-schedule.png)
+[!DNL Adobe Experience Platform] esporta i dati per le destinazioni di e-mail marketing e archiviazione cloud come [tipi di file diversi](#supported-file-formats-export). Nella pagina **[!UICONTROL Pianificazione]** è possibile configurare la pianificazione e i nomi dei file per ogni pubblico che si sta esportando.
 
-Per modificare più pianificazioni contemporaneamente, seleziona i tipi di pubblico utilizzando le caselle di controllo sul lato sinistro dello schermo, quindi seleziona **[!UICONTROL Modifica programmare]**. I programmare configurati verranno quindi applicati a tutti i file esportati per i tipi di pubblico selezionati.
+Experience Platform imposta automaticamente una pianificazione predefinita per ogni esportazione di file. Puoi modificare la pianificazione predefinita in base alle tue esigenze, selezionando l’icona a forma di matita accanto a ogni pianificazione e definendo una pianificazione personalizzata.
+
+![Il controllo Modifica pianificazione è evidenziato nel passaggio Pianificazione.](../assets/ui/activate-batch-profile-destinations/edit-default-schedule.png)
+
+Per modificare più pianificazioni contemporaneamente, selezionare i tipi di pubblico utilizzando le caselle di controllo sul lato sinistro della schermata, quindi selezionare **[!UICONTROL Modifica pianificazione]**. La pianificazione configurata verrà quindi applicata a tutti i file esportati per i tipi di pubblico selezionati.
 
 ![Immagine dell&#39;interfaccia utente di Experience Platform che mostra l&#39;opzione Modifica pianificazione per più tipi di pubblico selezionati.](../assets/ui/activate-batch-profile-destinations/edit-schedule.png)
 
 >[!TIP]
 >
->Puoi modificare le pianificazioni di attivazione del pubblico per i **[!UICONTROL flussi di attivazione esistenti dalla pagina Activation dati]** . Per ulteriori informazioni, consulta la documentazione relativa [alle pianificazioni di](../ui/destination-details-page.md#bulk-edit-schedule) attivazione della modifica in serie.
+>Puoi modificare le pianificazioni di attivazione del pubblico per i flussi di attivazione esistenti dalla pagina **[!UICONTROL Dati di attivazione]**. Per informazioni dettagliate, consulta la documentazione sulle [pianificazioni di attivazione per la modifica in blocco](../ui/destination-details-page.md#bulk-edit-schedule).
 
 >[!IMPORTANT]
 >
->[!DNL Adobe Experience Platform] Divide automaticamente i file di esportazione in 5 milioni di record (righe) per file. Ogni riga rappresenta un profilo.
+>[!DNL Adobe Experience Platform] divide automaticamente i file di esportazione in 5 milioni di record (righe) per file. Ogni riga rappresenta un profilo.
 >
->Ai nomi dei file suddivisi viene aggiunto un numero che indica che il file fa parte di un&#39;esportazione più ampia, in quanto segue: `filename.csv`, `filename_2.csv`, `filename_3.csv`.
+>Ai nomi dei file suddivisi viene aggiunto un numero che indica che il file fa parte di un&#39;esportazione più grande: `filename.csv`, `filename_2.csv`, `filename_3.csv`.
 
 ### Esportare file completi {#export-full-files}
 
@@ -131,17 +141,18 @@ Seleziona **[!UICONTROL Esporta file completi]** per attivare l&#39;esportazione
    * **[!UICONTROL Una volta]**: pianifica un&#39;esportazione di file completa una tantum.
    * **[!UICONTROL Giornaliero]**: pianifica esportazioni di file completi una volta al giorno, ogni giorno, al momento specificato.
 
-2. Utilizza l&#39;interruttore **[!UICONTROL Ora]** per selezionare se l&#39;esportazione deve avvenire immediatamente dopo la valutazione del pubblico o su base pianificata, a un orario specificato. Quando si seleziona l&#39;opzione **[!UICONTROL Pianificato]** , è possibile utilizzare il selettore per scegliere l&#39;ora del giorno, in [!DNL UTC] formato, in cui deve avvenire l&#39;esportazione.
+2. Utilizza l&#39;interruttore **[!UICONTROL Ora]** per selezionare se l&#39;esportazione deve avvenire immediatamente dopo la valutazione del pubblico o su base pianificata, a un orario specificato. Quando selezioni l&#39;opzione **[!UICONTROL Pianificato]**, puoi utilizzare il selettore per scegliere l&#39;ora del giorno, in formato [!DNL UTC], in cui eseguire l&#39;esportazione.
 
-   Utilizzare l&#39;opzione **[!UICONTROL Valutazione dopo il segmento]** per eseguire il processo di attivazione immediatamente dopo il completamento del processo batch Segmentazione Experience Platform giornaliero. Questa opzione garantisce che, durante l&#39;esecuzione del processo di attivazione, i profili più aggiornati vengano esportati nella destinazione. Questo potrebbe comportare l&#39;esportazione di un pubblico più volte al giorno, in base alle tue azioni.
+   Utilizza l&#39;opzione **[!UICONTROL Dopo la valutazione del segmento]** per eseguire il processo di attivazione subito dopo il completamento del processo di segmentazione batch giornaliero di Experience Platform. Questa opzione assicura che, durante l’esecuzione del processo di attivazione, i profili più aggiornati vengano esportati nella destinazione. Questo potrebbe comportare l&#39;esportazione di un pubblico più volte al giorno, in base alle azioni.
 
    >[!IMPORTANT]
    >
-   >Se si esegue una [valutazione del pubblico](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation) su tipi di pubblico già impostati per essere attivati dopo la valutazione del segmento, i tipi di pubblico verranno attivati al termine del processo di valutazione del pubblico flessibile, indipendentemente da ogni processo di attivazione giornaliero precedente. Questo potrebbe comportare l&#39;esportazione dei tipi di pubblico più volte al giorno, in base alle tue azioni.
+   >Se si esegue una [valutazione del pubblico](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation) su tipi di pubblico già impostati per essere attivati dopo la valutazione del segmento, i tipi di pubblico verranno attivati al termine del processo di valutazione del pubblico flessibile, indipendentemente da ogni processo di attivazione giornaliero precedente. Questo potrebbe comportare l&#39;esportazione di tipi di pubblico più volte al giorno, in base alle azioni eseguite.
 
    <!-- Batch segmentation currently runs at {{insert time of day}} and lasts for an average {{x hours}}. Adobe reserves the right to modify this schedule. -->
 
-   ![Immagine evidenziando l&#39;opzione Valutazione dopo il segmento nel flusso di attivazione per le destinazioni batch.](../assets/ui/activate-batch-profile-destinations/after-segment-evaluation-option.png)Utilizzare l&#39;opzione **[!UICONTROL Pianificato]** per eseguire il processo di attivazione a un&#39;ora fissa. Questa opzione assicura che i dati del profilo di Experience Platform vengano esportati ogni giorno alla stessa ora. Tuttavia, i profili esportati potrebbero non essere quelli più aggiornati, a seconda che il processo di segmentazione batch sia stato completato prima dell’avvio del processo di attivazione.
+   ![Immagine che evidenzia l&#39;opzione di valutazione del segmento After nel flusso di attivazione per le destinazioni batch.](../assets/ui/activate-batch-profile-destinations/after-segment-evaluation-option.png)
+Utilizza l&#39;opzione **[!UICONTROL Pianificato]** per eseguire il processo di attivazione a un orario fisso. Questa opzione assicura che i dati del profilo di Experience Platform vengano esportati ogni giorno alla stessa ora. Tuttavia, i profili esportati potrebbero non essere quelli più aggiornati, a seconda che il processo di segmentazione batch sia stato completato prima dell’avvio del processo di attivazione.
 
    ![Immagine che evidenzia l&#39;opzione Pianificato nel flusso di attivazione per le destinazioni batch e che mostra il selettore dell&#39;ora.](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
 
@@ -149,7 +160,7 @@ Seleziona **[!UICONTROL Esporta file completi]** per attivare l&#39;esportazione
    >
    >Quando esegui la mappatura di un pubblico creato nelle ultime 24 ore e valutato tramite [segmentazione batch](../../segmentation/methods/batch-segmentation.md), imposta la pianificazione dell&#39;esportazione giornaliera in modo che inizi non prima del giorno successivo. In questo modo, il processo di valutazione batch giornaliero viene eseguito per primo e si esportano dati completi sul pubblico.
 
-3. Utilizza il **[!UICONTROL selettore Data]** per scegliere il giorno o l&#39;intervallo in cui deve avvenire l&#39;esportazione. Per le esportazioni giornaliere, la migliore pratica è quella di impostare la data di inizio e di fine in modo che l&#39;allineamento con la durata delle campagne nelle piattaforme a valle.
+3. Utilizza il selettore **[!UICONTROL Data]** per scegliere il giorno o l&#39;intervallo in cui eseguire l&#39;esportazione. Per le esportazioni giornaliere, si consiglia di impostare la data di inizio e la data di fine in base alla durata delle campagne nelle piattaforme a valle.
 
    >[!IMPORTANT]
    >
@@ -175,7 +186,7 @@ Selezionare **[!UICONTROL Esporta file incrementali]** per attivare un&#39;espor
 1. Utilizza il selettore **[!UICONTROL Frequenza]** per selezionare la frequenza di esportazione:
 
    * **[!UICONTROL Giornaliero]**: pianifica le esportazioni di file incrementali una volta al giorno, ogni giorno, al momento specificato.
-   * **[!UICONTROL Ogni ora]**: programmare esportazione incrementale dei file ogni 3, 6, 8 o 12 ore.
+   * **[!UICONTROL Oraria]**: pianifica le esportazioni di file incrementali ogni 3, 6, 8 o 12 ore.
 
 2. Utilizza il selettore **[!UICONTROL Ora]** per scegliere l&#39;ora del giorno, in formato [!DNL UTC], in cui eseguire l&#39;esportazione.
 
@@ -194,25 +205,25 @@ Selezionare **[!UICONTROL Esporta file incrementali]** per attivare un&#39;espor
 >title="Configurare il nome file"
 >abstract="Per le destinazioni basate su file, viene generato un nome di file univoco per pubblico. Utilizza l’editor dei nomi dei file per creare e modificare un nome di file univoco oppure mantieni il nome predefinito."
 
-Per la maggior parte delle destinazioni, i nomi di file predefiniti sono costituiti da nome di destinazione, ID pubblico e un indicatore di data e ora. Ad esempio, è possibile modificare i nomi dei file esportati per distinguere tra diverse campagne o per aggiungere ai file il tempo di esportazione dei dati. Si noti che alcuni sviluppatori di destinazioni potrebbero scegliere di visualizzare opzioni di aggiunta di nomi di file predefiniti diversi per le loro destinazioni.
+Per la maggior parte delle destinazioni, i nomi di file predefiniti sono costituiti dal nome della destinazione, dall’ID del pubblico e da un indicatore di data e ora. Ad esempio, puoi modificare i nomi dei file esportati per distinguere tra diverse campagne o per aggiungere ai file il tempo di esportazione dei dati. Tieni presente che alcuni sviluppatori di destinazione potrebbero scegliere di visualizzare diverse opzioni di aggiunta dei nomi di file predefiniti per le loro destinazioni.
 
-Per aprire una finestra modale e modificare i nomi dei file, seleziona l&#39;icona a forma di matita. File nomi sono limitati a 255 caratteri.
+Per aprire una finestra modale e modificare i nomi dei file, seleziona l’icona della matita. I nomi dei file non possono superare i 255 caratteri.
 
 >[!NOTE]
 >
->L&#39;immagine seguente mostra come i nomi dei file possono essere modificati per [!DNL Amazon S3] le destinazioni, ma il processo è identico per tutte le destinazioni batch (ad esempio SFTP, [!DNL Azure Blob Storage], o [!DNL Google Cloud Storage]).
+>L&#39;immagine seguente mostra come è possibile modificare i nomi dei file per le destinazioni [!DNL Amazon S3], ma il processo è identico per tutte le destinazioni batch (ad esempio SFTP, [!DNL Azure Blob Storage] o [!DNL Google Cloud Storage]).
 
-![Immagine evidenziando l&#39;icona a forma di matita, utilizzata per configurare i nomi dei file.](../assets/ui/activate-batch-profile-destinations/configure-name.png)
+![Immagine che evidenzia l&#39;icona della matita, utilizzata per configurare i nomi dei file.](../assets/ui/activate-batch-profile-destinations/configure-name.png)
 
-Nel editor nome file, è possibile selezionare diversi componenti da aggiungere al nome file.
+Nell’editor dei nomi di file puoi selezionare diversi componenti da aggiungere al nome del file.
 
-![Immagine visualizzando tutte le opzioni disponibili per i nomi dei file.](../assets/ui/activate-batch-profile-destinations/activate-workflow-configure-step-2.png)
+![Immagine che visualizza tutte le opzioni disponibili per il nome file.](../assets/ui/activate-batch-profile-destinations/activate-workflow-configure-step-2.png)
 
-Il nome di destinazione e l’ID del pubblico non possono essere rimossi dai nomi dei file. Oltre a queste opzioni, è possibile aggiungere le seguenti opzioni:
+Il nome di destinazione e l’ID del pubblico non possono essere rimossi dai nomi dei file. Oltre a queste opzioni, puoi aggiungere le seguenti opzioni:
 
-| Opzione File nome | Descrizione |
+| Opzione nome file | Descrizione |
 |---------|----------|
-| **[!UICONTROL Nome del pubblico]** | Nome del pubblico esportato. |
+| **[!UICONTROL Nome pubblico]** | Nome del pubblico esportato. |
 | **[!UICONTROL Data e ora]** | Selezionare se aggiungere un formato `MMDDYYYY_HHMMSS` o un timestamp UNIX a 10 cifre dell&#39;ora di generazione dei file. Scegliete una di queste opzioni se desiderate che i file abbiano un nome di file dinamico generato con ogni esportazione incrementale. |
 | **[!UICONTROL Testo personalizzato]** | Qualsiasi testo personalizzato che si desidera aggiungere ai nomi dei file. |
 | **[!UICONTROL ID destinazione]** | ID del flusso di dati di destinazione utilizzato per esportare il pubblico. |
@@ -230,15 +241,15 @@ Seleziona **[!UICONTROL Applica modifiche]** per confermare la selezione.
 
 >[!IMPORTANT]
 > 
->Se non si seleziona il **[!UICONTROL componente Data e ora]** , i nomi dei file saranno statici e il nuovo file esportato sovrascriverà il file precedente nella posizione di archiviazione a ogni esportazione. Quando si esegue un processo di importazione periodico da una posizione di archiviazione in una piattaforma marketing via e-mail, questa è l&#39;opzione consigliata.
+>Se non selezioni il componente **[!UICONTROL Data e ora]**, i nomi dei file saranno statici e il nuovo file esportato sovrascriverà il file precedente nel percorso di archiviazione con ogni esportazione. Questa è l’opzione consigliata quando si esegue un processo di importazione ricorrente da un percorso di archiviazione a una piattaforma di e-mail marketing.
 
-Una volta terminata la configurazione di tutti i tipi di pubblico, seleziona **[!UICONTROL Successivo]** per continuare.
+Dopo aver configurato tutti i tipi di pubblico, seleziona **[!UICONTROL Successivo]** per continuare.
 
 ## Mappatura {#mapping}
 
-In questo passaggio, è necessario selezionare gli attributi del profilo che si desidera aggiungere ai file esportati nella destinazione destinazione. Per selezionare gli attributi e le identità del profilo da esportare:
+In questo passaggio, devi selezionare gli attributi del profilo che desideri aggiungere ai file esportati nella destinazione di destinazione. Per selezionare gli attributi e le identità del profilo per l&#39;esportazione:
 
-1. **[!UICONTROL Nella pagina Mappatura]**, selezionare **[!UICONTROL Aggiungi nuova mappatura]**.
+1. Nella pagina **[!UICONTROL Mapping]**, seleziona **[!UICONTROL Aggiungi nuovo mapping]**.
 
    ![Aggiungi nuovo controllo campo evidenziato nel flusso di lavoro di mappatura.](../assets/ui/activate-batch-profile-destinations/add-new-field-mapping.png)
 
@@ -246,18 +257,18 @@ In questo passaggio, è necessario selezionare gli attributi del profilo che si 
 
    ![Selezionare il controllo del campo di origine evidenziato nel flusso di lavoro di mappatura.](../assets/ui/activate-batch-profile-destinations/select-source-field.png)
 
-1. **[!UICONTROL Nella pagina Seleziona campo]** sorgente, seleziona gli attributi e le identità del profilo che desideri includere nei file esportati nella destinazione, quindi scegli **[!UICONTROL Seleziona]**.
+1. Nella pagina **[!UICONTROL Seleziona campo di origine]**, seleziona gli attributi e le identità del profilo che desideri includere nei file esportati nella destinazione, quindi scegli **[!UICONTROL Seleziona]**.
 
    >[!TIP]
    > 
-   >È possibile utilizzare il campo ricerca per restringere la selezione, come mostrato nell&#39;immagine seguente.
+   >È possibile utilizzare il campo di ricerca per limitare la selezione, come illustrato nell&#39;immagine seguente.
 
    Utilizza l&#39;opzione **[!UICONTROL Mostra solo campi con dati]** per visualizzare solo i campi schema compilati con valori. Per impostazione predefinita, vengono visualizzati solo i campi schema compilati.
 
    ![Finestra modale che mostra gli attributi del profilo che possono essere esportati nella destinazione.](../assets/ui/activate-batch-profile-destinations/select-source-field-modal.png)
 
 
-1. Il campo selezionato per l&#39;esportazione viene ora visualizzato nella vista mappatura. Se lo si desidera, è possibile modificare il nome dell&#39;intestazione nel file esportato. A tale scopo, selezionare l&#39;icona nel campo destinazione.
+1. Il campo selezionato per l&#39;esportazione viene ora visualizzato nella vista di mappatura. Se lo desideri, puoi modificare il nome dell’intestazione nel file esportato. A questo scopo, seleziona l’icona nel campo di destinazione.
 
    ![Finestra modale che mostra gli attributi del profilo che possono essere esportati nella destinazione.](../assets/ui/activate-batch-profile-destinations/mapping-step-select-target-field.png)
 
@@ -275,13 +286,13 @@ In questo passaggio, è necessario selezionare gli attributi del profilo che si 
    >
    >Questa funzione è in versione beta ed è disponibile solo per alcuni clienti. Per richiedere l’accesso a questa funzione, contatta il rappresentante del tuo Adobe.
 
-   ![Registrazione che mostra il riordino dei campi di mappatura mediante trascinamento.](../assets/ui/activate-batch-profile-destinations/reorder-fields.gif)
+   ![Registrazione che mostra i campi di mappatura riordinati tramite trascinamento.](../assets/ui/activate-batch-profile-destinations/reorder-fields.gif)
 
-1. (Facoltativo) È possibile selezionare il campo esportato come [chiave obbligatoria o chiave [di deduplicazione](#deduplication-keys)](#mandatory-keys).
+1. (Facoltativo) Puoi selezionare il campo esportato come [chiave obbligatoria](#mandatory-keys) o [chiave di deduplicazione](#deduplication-keys).
 
    ![Finestra modale che mostra gli attributi del profilo che possono essere esportati nella destinazione.](../assets/ui/activate-batch-profile-destinations/select-mandatory-deduplication-key.png)
 
-1. Per aggiungere altri campi per l&#39;esportazione, ripeti i passaggi precedenti.
+1. Per aggiungere altri campi per l’esportazione, ripeti i passaggi precedenti.
 
 ### Attributi obbligatori {#mandatory-attributes}
 
@@ -290,13 +301,13 @@ In questo passaggio, è necessario selezionare gli attributi del profilo che si 
 >title="Informazioni sugli attributi obbligatori"
 >abstract="Seleziona gli attributi dello schema XDM che tutti i profili esportati devono includere. I profili senza la chiave obbligatoria non vengono esportati nella destinazione. Se non selezioni una chiave obbligatoria, vengono esportati tutti i profili qualificati, indipendentemente dagli attributi."
 
-Un attributo obbligatorio è una casella di controllo abilitata per utente che garantisce che tutti i record di profilo contengano l&#39;attributo selezionato. Ad esempio: tutti i profili esportati contengono un indirizzo e-mail.
+Un attributo obbligatorio è una casella di controllo abilitata dall’utente che garantisce che tutti i record di profilo contengano l’attributo selezionato. Ad esempio: tutti i profili esportati contengono un indirizzo e-mail.&#x200B;
 
-È possibile contrassegnare gli attributi come obbligatori per assicurarsi che [!DNL Experience Platform] vengano esportati solo i profili che includono l&#39;attributo specifico. Di conseguenza, può essere utilizzato come ulteriore forma di filtraggio. Contrassegnare un attributo come obbligatorio non **è** obbligatorio.
+È possibile contrassegnare gli attributi come obbligatori per assicurarsi che [!DNL Experience Platform] esporti solo i profili che includono l&#39;attributo specifico. Di conseguenza, può essere utilizzato come forma aggiuntiva di filtro. Contrassegnare un attributo come obbligatorio è **non** obbligatorio.
 
-Se non si seleziona un attributo obbligatorio, tutti i profili qualificati, indipendentemente dai relativi attributi.
+Se non si seleziona un attributo obbligatorio, vengono esportati tutti i profili qualificati, indipendentemente dai loro attributi.
 
-È consigliabile che uno degli attributi sia un [identificatore](../../destinations/catalog/email-marketing/overview.md#identity) univoco dello schema. Per ulteriori informazioni sugli attributi obbligatori, consulta la sezione relativa all&#39;identità nella documentazione relativa alle [destinazioni marketing](../../destinations/catalog/email-marketing/overview.md#identity) e-mail.
+È consigliabile che uno degli attributi sia un [identificatore univoco](../../destinations/catalog/email-marketing/overview.md#identity) dallo schema. Per ulteriori informazioni sugli attributi obbligatori, consulta la sezione Identità nella documentazione delle [Destinazioni di e-mail marketing](../../destinations/catalog/email-marketing/overview.md#identity).
 
 ### Chiavi di deduplicazione {#deduplication-keys}
 
@@ -305,11 +316,11 @@ Se non si seleziona un attributo obbligatorio, tutti i profili qualificati, indi
 >title="Informazioni sulle chiavi di deduplicazione"
 >abstract="Seleziona una chiave di deduplicazione per elimina più record dello stesso profilo nei file di esportazione. Come chiave di deduplicazione, seleziona un singolo spazio dei nomi o fino a due attributi di schema XDM. Se non selezioni una chiave di deduplicazione, i file di esportazione potrebbero contenere voci di profilo duplicate."
 
-Una chiave di deduplicazione è una chiave primaria definita da utente che determina l&#39;identità in base alla quale gli utenti desiderano che i loro profili vengano deduplicati.
+Una chiave di deduplicazione è una chiave primaria definita dall’utente che determina l’identità in base alla quale gli utenti desiderano deduplicare i propri profili&#x200B;
 
 Le chiavi di deduplicazione eliminano la possibilità di avere più record dello stesso profilo in un unico file di esportazione.
 
-Esistono tre modi per utilizzare le chiavi di deduplica in [!DNL Experience Platform]:
+In [!DNL Experience Platform] è possibile utilizzare le chiavi di deduplicazione in tre modi:
 
 * Utilizzo di un singolo spazio dei nomi delle identità come [!UICONTROL chiave di deduplicazione]
 * Utilizzo di un singolo attributo di profilo da un profilo [!DNL XDM] come [!UICONTROL chiave di deduplicazione]
@@ -399,9 +410,9 @@ Prendiamo in considerazione i due profili seguenti.
 
 Se non si utilizza alcuna deduplicazione, il file di esportazione conterrà le seguenti voci.
 
-| E-mail personale | firstName | cognome |
+| personalEmail | firstName | lastName |
 |---|---|---|
-| johndoe@example.com | John | Cerva |
+| johndoe@example.com | John | Doe |
 | johndoe@example.com | John | D |
 
 
@@ -409,7 +420,7 @@ Se non si utilizza alcuna deduplicazione, il file di esportazione conterrà le s
 
 Se si presuppone la deduplicazione da parte dello spazio dei nomi [!DNL Email], il file di esportazione conterrà le seguenti voci. Il profilo B è l’ultimo che si è qualificato per il pubblico, quindi è l’unico che viene esportato.
 
-| E-mail* | E-mail personale | firstName | cognome |
+| E-mail* | personalEmail | firstName | lastName |
 |---|---|---|---|
 | johndoe_2@example.com | johndoe@example.com | John | D |
 | doejohn_2@example.com | johndoe@example.com | John | D |
@@ -418,25 +429,25 @@ Se si presuppone la deduplicazione da parte dello spazio dei nomi [!DNL Email], 
 
 Se si presuppone la deduplicazione tramite l&#39;attributo `personal Email`, il file di esportazione conterrà la voce seguente. Il profilo B è l’ultimo che si è qualificato per il pubblico, quindi è l’unico che viene esportato.
 
-| e-mail personale* | firstName | cognome |
+| personalEmail* | firstName | lastName |
 |---|---|---|
 | johndoe@example.com | John | D |
 
 
-### Caso d&#39;uso di deduplicazione 4: deduplicazione basata su due attributi di profilo {#deduplication-use-case-4}
+### Caso di utilizzo 4: deduplicazione basata su due attributi di profilo {#deduplication-use-case-4}
 
-Supponendo la deduplicazione da parte della chiave `personalEmail + lastName`composita, il file di esportazione conterrebbe le seguenti voci.
+Se si presuppone la deduplicazione per la chiave composita `personalEmail + lastName`, il file di esportazione conterrà le voci seguenti.
 
-| e-mail personale* | cognome* | firstName |
+| personalEmail* | lastName* | firstName |
 |---|---|---|
 | johndoe@example.com | D | John |
-| johndoe@example.com | Cerva | John |
+| johndoe@example.com | Doe | John |
 
-Adobe Systems consiglia di selezionare un namespace identità, ad esempio un [!DNL CRM ID] indirizzo e-mail o un indirizzo e-mail, come chiave di deduplicazione, per garantire che tutti i record del profilo siano identificati in modo univoco.
+Adobe consiglia di selezionare uno spazio dei nomi di identità come [!DNL CRM ID] o un indirizzo e-mail come chiave di deduplicazione, per garantire che tutti i record di profilo siano identificati in modo univoco.
 
-### Comportamento di deduplica per profili con la stessa marca temporale {#deduplication-same-timestamp}
+### Comportamento di deduplicazione per profili con la stessa marca temporale {#deduplication-same-timestamp}
 
-Durante l’esportazione di profili in destinazioni basate su file, la deduplica garantisce che venga esportato un solo profilo quando più profili condividono la stessa chiave di deduplica e la stessa marca temporale di riferimento. Questa marca temporale rappresenta il momento in cui il iscrizione di pubblico o il grafico dell&#39;identità di un profilo sono stati aggiornati l&#39;ultima volta. Per ulteriori informazioni sulle modalità di aggiornamento ed esportazione dei profili, vedere il documento sul comportamento](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2) di esportazione dei [profili.
+Durante l’esportazione di profili in destinazioni basate su file, la deduplica garantisce che venga esportato un solo profilo quando più profili condividono la stessa chiave di deduplica e la stessa marca temporale di riferimento. Questa marca temporale rappresenta il momento in cui l’iscrizione al pubblico o il grafico delle identità di un profilo è stato aggiornato per l’ultima volta. Per ulteriori informazioni sull&#39;aggiornamento e l&#39;esportazione dei profili, vedere il documento [comportamento di esportazione dei profili](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
 
 #### Considerazioni chiave
 
@@ -449,21 +460,21 @@ Considera i seguenti dati, in cui la chiave di deduplicazione è la colonna `Ema
 | E-mail* | nome | cognome | timestamp |
 |---|---|---|---|  
 | `test1@test.com` | John | Morris | 2024-10-12T09:50 |
-| `test1@test.com` | John | Cerva | 2024-10-12T09:50 |
-| `test2@test.com` | Franco | Fabbro | 2024-10-12T09:50 |
+| `test1@test.com` | John | Doe | 2024-10-12T09:50 |
+| `test2@test.com` | Frank | Smith | 2024-10-12T09:50 |
 
 {style="table-layout:auto"}
 
 Dopo la deduplicazione, il file di esportazione conterrà:
 
-| E-mail* | first_name | last_name | timestamp |
+| E-mail* | nome | cognome | timestamp |
 |---|---|---|---|  
-| `test1@test.com` | John | Cerva | 2024-10-12T09:50 |
-| `test2@test.com` | Franco | Fabbro | 2024-10-12T09:50 |
+| `test1@test.com` | John | Doe | 2024-10-12T09:50 |
+| `test2@test.com` | Frank | Smith | 2024-10-12T09:50 |
 
 {style="table-layout:auto"}
 
-**Spiegazione**: Per `test1@test.com`, entrambi i profili condividono la stessa chiave di deduplicazione e lo stesso timestamp. L&#39;algoritmo ordina i valori delle `first_name` colonne e `last_name` in modo lessicografico. Poiché i nomi sono identici, il pareggio viene risolto usando la colonna, dove &quot;Doe&quot; viene prima di `last_name` &quot;Morris&quot;.
+**Spiegazione**: per `test1@test.com`, entrambi i profili condividono la stessa chiave di deduplicazione e la stessa marca temporale. L&#39;algoritmo ordina i valori delle colonne `first_name` e `last_name` in modo lessicografico. Poiché i nomi sono identici, il pareggio viene risolto utilizzando la colonna `last_name`, dove &quot;Doe&quot; precede &quot;Morris&quot;.
 
 **Affidabilità migliorata**: questo processo di deduplicazione aggiornato garantisce che le esecuzioni successive con le stesse coordinate producano sempre gli stessi risultati, migliorando la coerenza.
 
@@ -484,51 +495,51 @@ A causa di un limite noto, al momento non è possibile utilizzare la finestra **
 
 >[!NOTE]
 >
->Per cloud destinazioni di archiviazione, per impostazione predefinita vengono aggiunti alla mappatura i seguenti attributi:
+>Per le destinazioni dell’archiviazione cloud, i seguenti attributi vengono aggiunti alla mappatura per impostazione predefinita:
 >
 >* `segmentMembership.seg_namespace.seg_id.status`
 >* `segmentMembership.seg_namespace.seg_id.lastQualificationTime`
 
-File esportazioni variano nei seguenti modi, a seconda che `segmentMembership.seg_namespace.seg_id.status` sia stata selezionata:
+Le esportazioni di file variano nei modi seguenti, a seconda che sia selezionato `segmentMembership.seg_namespace.seg_id.status`:
 
-* Se il campo è selezionato, i `segmentMembership.seg_namespace.seg_id.status` file esportati includono **[!UICONTROL i membri attivi]** nello snapshot completo iniziale e i nuovi **[!UICONTROL membri attivi]** e **[!UICONTROL scaduti]** nelle esportazioni incrementali successive.
-* Se il campo non è selezionato, i `segmentMembership.seg_namespace.seg_id.status` file esportati includono solo **[!UICONTROL i membri attivi]** nello snapshot completo iniziale e nelle successive esportazioni incrementali.
+* Se il campo `segmentMembership.seg_namespace.seg_id.status` è selezionato, i file esportati includono **[!UICONTROL membri attivi]** nello snapshot completo iniziale e i nuovi **[!UICONTROL membri attivi]** e **[!UICONTROL membri scaduti]** nelle esportazioni incrementali successive.
+* Se il campo `segmentMembership.seg_namespace.seg_id.status` non è selezionato, i file esportati includono solo **[!UICONTROL membri attivi]** nello snapshot completo iniziale e nelle esportazioni incrementali successive.
 
-Ulteriori informazioni sul comportamento di esportazione dei [profili per le](/help/destinations/how-destinations-work/profile-export-behavior.md#file-based-destinations) destinazioni basate su file.
+Ulteriori informazioni sul comportamento di esportazione del profilo [per le destinazioni basate su file](/help/destinations/how-destinations-work/profile-export-behavior.md#file-based-destinations).
 
 #### Al momento non è possibile selezionare gli spazi dei nomi delle identità per le esportazioni
 
-La selezione dei namespace identità per l&#39;esportazione, come mostrato nell&#39;immagine seguente, non è attualmente supportata. La selezione di qualsiasi namespace identità per l&#39;esportazione genererà un errore nel passaggio Revisione ****.
+La selezione degli spazi dei nomi delle identità per l’esportazione, come illustrato nell’immagine seguente, non è attualmente supportata. Se si selezionano spazi dei nomi di identità per l&#39;esportazione, verrà generato un errore nel passaggio **[!UICONTROL Rivedi]**.
 
 ![Mappatura non supportata che mostra le esportazioni di identità.](../assets/ui/activate-batch-profile-destinations/unsupported-identity-mapping.png)
 
-Come soluzione temporanea, se è necessario aggiungere spazi dei nomi identità ai file esportati durante la versione beta, è possibile:
-* Usa le destinazioni di archiviazione cloud legacy per i flussi di dati in cui desideri includere gli spazi dei nomi identità nelle esportazioni
+Come soluzione alternativa temporanea, se devi aggiungere spazi dei nomi di identità ai file esportati durante la versione beta, puoi effettuare le seguenti operazioni:
+* Utilizza le destinazioni dell’archiviazione cloud legacy per i flussi di dati in cui desideri includere spazi dei nomi di identità nelle esportazioni
 * Carica le identità come attributi in Experience Platform, per poi esportarle nelle destinazioni dell’archiviazione cloud.
 
-## Selezionare gli attributi del profilo {#select-attributes}
+## Seleziona attributi profilo {#select-attributes}
 
 >[!IMPORTANT]
 > 
->Tutte le destinazioni di archiviazione cloud nel catalogo possono visualizzare un passaggio](#mapping) di mappatura] migliorato [[!UICONTROL che sostituisce il **[!UICONTROL passaggio Seleziona attributi]** descritto in questa sezione.
+>Tutte le destinazioni di archiviazione cloud nel catalogo possono visualizzare un [[!UICONTROL Mapping] passaggio](#mapping) migliorato che sostituisce il passaggio **[!UICONTROL Seleziona attributi]** descritto in questa sezione.
 >
->Questo **[!UICONTROL passaggio Seleziona attributi]** viene ancora visualizzato per le destinazioni Adobe Campaign, Oracle Responsys, Oracle Eloqua e Salesforce Marketing Cloud marketing via e-mail.
+>Questo passaggio **[!UICONTROL Seleziona attributi]** è ancora visualizzato per le destinazioni di e-mail marketing Adobe Campaign, Oracle Responsys, Oracle Eloqua e Salesforce Marketing Cloud.
 
-Per le destinazioni basate su profilo, è necessario selezionare gli attributi del profilo che si desidera inviare alla destinazione destinazione.
+Per le destinazioni basate su profili, devi selezionare gli attributi del profilo che desideri inviare alla destinazione target.
 
-1. **[!UICONTROL Nella pagina Seleziona attributi]** selezionare **[!UICONTROL Aggiungi nuovo campo]**.
+1. Nella pagina **[!UICONTROL Seleziona attributi]**, seleziona **[!UICONTROL Aggiungi nuovo campo]**.
 
-   ![Immagine evidenziando l&#39;pulsante Aggiungi nuovo campo.](../assets/ui/activate-batch-profile-destinations/add-new-field.png)
+   ![Immagine che evidenzia il pulsante Aggiungi nuovo campo.](../assets/ui/activate-batch-profile-destinations/add-new-field.png)
 
-2. Selezionare la freccia a destra della voce del **[!UICONTROL campo]** Schema.
+2. Selezionare la freccia a destra della voce **[!UICONTROL Campo schema]**.
 
-   ![Immagine evidenziando come selezionare un campo sorgente.](../assets/ui/activate-batch-profile-destinations/select-source-field.png)
+   ![Immagine che evidenzia come selezionare un campo di origine.](../assets/ui/activate-batch-profile-destinations/select-source-field.png)
 
-3. **[!UICONTROL Nella pagina Seleziona campo]**, seleziona gli attributi XDM o gli spazi dei nomi identità che desideri inviare alla destinazione, quindi scegli **[!UICONTROL Seleziona]**.
+3. Nella pagina **[!UICONTROL Seleziona campo]**, seleziona gli attributi XDM o gli spazi dei nomi di identità che desideri inviare alla destinazione, quindi scegli **[!UICONTROL Seleziona]**.
 
-   ![Immagine che vengono visualizzati i vari campi disponibili come campi di origine.](../assets/ui/activate-batch-profile-destinations/target-field-page.png)
+   ![Immagine che mostra i vari campi disponibili come campi di origine.](../assets/ui/activate-batch-profile-destinations/target-field-page.png)
 
-4. Per aggiungere altre mappature, ripetere i passaggi da uno a tre.
+4. Per aggiungere altre mappature, ripeti i passaggi da uno a tre.
 
 >[!NOTE]
 >
@@ -540,11 +551,11 @@ Per le destinazioni basate su profilo, è necessario selezionare gli attributi d
 >
 >A causa di un limite noto, al momento non è possibile utilizzare la finestra **[!UICONTROL Seleziona campo]** per aggiungere `segmentMembership.seg_namespace.seg_id.status` alle esportazioni di file. È invece necessario incollare manualmente il valore `xdm: segmentMembership.seg_namespace.seg_id.status` nel campo schema, come illustrato di seguito.
 >
->![Registrazione dello schermo che mostra il pubblico iscrizione soluzione alternativa nella fase di mappatura del workflow di attivazione.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
+>![Registrazione dello schermo che mostra la soluzione alternativa per l&#39;iscrizione al pubblico nel passaggio di mappatura del flusso di lavoro di attivazione.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
-File esportazioni variano nei seguenti modi, a seconda `segmentMembership.seg_namespace.seg_id.status` che sia selezionata:
-* Se il campo è selezionato, i `segmentMembership.seg_namespace.seg_id.status` file esportati includono **[!UICONTROL i membri attivi]** nello snapshot completo iniziale e **[!UICONTROL i membri attivi]** e **[!UICONTROL scaduti]** nelle esportazioni incrementali successive.
-* Se il campo non è selezionato, i `segmentMembership.seg_namespace.seg_id.status` file esportati includono solo **[!UICONTROL i membri attivi]** nello snapshot completo iniziale e nelle successive esportazioni incrementali.
+Le esportazioni di file variano nei modi seguenti, a seconda che sia selezionato `segmentMembership.seg_namespace.seg_id.status`:
+* Se il campo `segmentMembership.seg_namespace.seg_id.status` è selezionato, i file esportati includono **[!UICONTROL membri attivi]** nello snapshot completo iniziale e **[!UICONTROL membri attivi]** e **[!UICONTROL membri scaduti]** nelle esportazioni incrementali successive.
+* Se il campo `segmentMembership.seg_namespace.seg_id.status` non è selezionato, i file esportati includono solo **[!UICONTROL membri attivi]** nello snapshot completo iniziale e nelle esportazioni incrementali successive.
 
 ## Selezionare attributi di arricchimento {#select-enrichment-attributes}
 
@@ -565,11 +576,11 @@ Per selezionare gli attributi di arricchimento per ciascun pubblico esterno, seg
 
 1. Nella colonna **[!UICONTROL Attributi di arricchimento]** selezionare il pulsante ![Modifica](/help/images/icons/edit.png) (Modifica).
 1. Selezionare **[!UICONTROL Aggiungi attributo di arricchimento]**. Viene visualizzato un nuovo campo schema vuoto.
-   ![interfaccia&#39;immagine che mostra la schermata modale degli attributi di arricchimento.](../assets/ui/activate-batch-profile-destinations/add-enrichment-attribute.png)
-1. Selezionate la pulsante a destra del campo vuoto per aprire la schermata di selezione del campo.
-1. Seleziona gli attributi che desideri esportare per il pubblico.
-   ![interfaccia&#39;immagine che mostra l&#39;elenco degli attributi di arricchimento.](../assets/ui/activate-batch-profile-destinations/select-enrichment-attributes.png)
-1. Dopo aver aggiunto tutti gli attributi che desiderate esportare, selezionate **[!UICONTROL Salva e chiudete]**.
+   ![Immagine dell&#39;interfaccia utente che mostra la schermata modale degli attributi di arricchimento.](../assets/ui/activate-batch-profile-destinations/add-enrichment-attribute.png)
+1. Selezionare il pulsante a destra del campo vuoto per aprire la schermata di selezione dei campi.
+1. Seleziona gli attributi da esportare per il pubblico.
+   ![Immagine dell&#39;interfaccia utente che mostra l&#39;elenco degli attributi di arricchimento.](../assets/ui/activate-batch-profile-destinations/select-enrichment-attributes.png)
+1. Dopo aver aggiunto tutti gli attributi che desideri esportare, seleziona **[!UICONTROL Salva e chiudi]**.
 1. Ripeti questi passaggi per ogni pubblico esterno.
 
 Se desideri attivare tipi di pubblico esterni nelle destinazioni senza esportare alcun attributo, abilita l&#39;opzione **[!UICONTROL Escludi attributi di arricchimento]**. Questa opzione esporta i profili dai tipi di pubblico esterni, ma nessuno degli attributi corrispondenti viene inviato alla destinazione.
@@ -600,27 +611,28 @@ Nella pagina **[!UICONTROL Rivedi]** puoi visualizzare un riepilogo della selezi
 >title="Visualizzare i criteri di consenso applicabili"
 >abstract="Se l’organizzazione ha acquistato **Adobe Healthcare Shield** o **Adobe Privacy &amp; Security Shield**, seleziona **[!UICONTROL Visualizza i criteri di consenso applicabili]** per vedere quali criteri di consenso vengono applicati e quanti profili vengono inclusi di conseguenza nell’attivazione. Questa opzione è disabilitata se la tua azienda non ha accesso alle SKU menzionate qui sopra."
 
-Se l’organizzazione ha acquistato **Adobe Healthcare Shield** o **Adobe Privacy &amp; Security Shield**, seleziona **[!UICONTROL Visualizza i criteri di consenso applicabili]** per vedere quali criteri di consenso vengono applicati e quanti profili vengono inclusi di conseguenza nell’attivazione. Per ulteriori informazioni, leggi le informazioni sulla [valutazione](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) del consenso regola del consenso.
+Se l’organizzazione ha acquistato **Adobe Healthcare Shield** o **Adobe Privacy &amp; Security Shield**, seleziona **[!UICONTROL Visualizza i criteri di consenso applicabili]** per vedere quali criteri di consenso vengono applicati e quanti profili vengono inclusi di conseguenza nell’attivazione. Leggi informazioni sulla [valutazione dei criteri di consenso](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) per ulteriori informazioni.
 
-### Controlli regola sull&#39;utilizzo dei dati {#data-usage-policy-checks}
+### Controlli dei criteri di utilizzo dei dati {#data-usage-policy-checks}
 
-Nella fase di revisione ]**, Experience Platform verifica inoltre la presenza di eventuali violazioni dell&#39;utilizzo regola dell&#39;utilizzo**[!UICONTROL  dei dati. Di seguito è riportato un esempio in cui viene violato un regola. Non puoi completare il workflow di attivazione del pubblico finché non hai risolto la violazione. Per informazioni su come risolvere le violazioni dei criteri, leggere le [violazioni dei criteri di utilizzo dei dati](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) nella sezione relativa alla governance dei dati.
+Nel passaggio **[!UICONTROL Rivedi]**, Experience Platform controlla anche eventuali violazioni dei criteri di utilizzo dei dati. Di seguito è riportato un esempio di violazione di una policy. Non puoi completare il flusso di lavoro di attivazione del pubblico finché non hai risolto la violazione. Per informazioni su come risolvere le violazioni dei criteri, leggere le [violazioni dei criteri di utilizzo dei dati](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) nella sezione relativa alla governance dei dati.
 
-![Esempio di violazione della regola dei dati mostrato nel workflow di attivazione.](../assets/common/data-policy-violation.png)
+![Esempio di violazione dei criteri dei dati visualizzato nel flusso di lavoro di attivazione.](../assets/common/data-policy-violation.png)
 
-### Filtra tipi di pubblico {#filter-audiences}
+### Filtrare i tipi di pubblico {#filter-audiences}
 
-Inoltre, in questo passaggio puoi utilizzare i filtri disponibili nella pagina per visualizzare solo i tipi di pubblico la cui programmare o mappatura è stata aggiornata nell&#39;ambito di questo workflow. È inoltre possibile alternare le colonne della tabella che si desidera visualizzare.
+Inoltre, in questo passaggio puoi utilizzare i filtri disponibili nella pagina per visualizzare solo i tipi di pubblico la cui pianificazione o mappatura è stata aggiornata come parte di questo flusso di lavoro. Puoi anche scegliere quali colonne della tabella visualizzare.
 
-![Registrazione dello schermo che mostra i filtri di pubblico disponibili nella fase di revisione.](../assets/ui/activate-batch-profile-destinations/filter-audiences-batch-review.gif)
+![Registrazione dello schermo che mostra i filtri del pubblico disponibili nel passaggio di revisione.](../assets/ui/activate-batch-profile-destinations/filter-audiences-batch-review.gif)
 
 Se si è soddisfatti della selezione e non sono state rilevate violazioni dei criteri, selezionare **[!UICONTROL Fine]** per confermare la selezione e iniziare a inviare dati alla destinazione.
 
-## Verificare l&#39;attivazione del pubblico {#verify}
+## Verificare l’attivazione del pubblico {#verify}
 
-Quando si esportano i tipi di pubblico verso destinazioni di archiviazione cloud, Adobe Experience Platform crea un file o un file nel `.json``.parquet` percorso di `.csv`archiviazione fornito. Aspettati che un nuovo file venga creato nel tuo percorso di archiviazione in base al programmare impostato nel workflow. Il formato di file predefinito è mostrato di seguito, ma è possibile [modificare i componenti del nome](#file-names) file:`<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
+Durante l&#39;esportazione dei tipi di pubblico nelle destinazioni dell&#39;archiviazione cloud, Adobe Experience Platform crea un file `.csv`, `.json` o `.parquet` nel percorso di archiviazione fornito. È necessario creare un nuovo file nel percorso di archiviazione in base alla pianificazione impostata nel flusso di lavoro. Di seguito è riportato il formato di file predefinito, ma è possibile [modificare i componenti del nome di file](#file-names):
+`<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
-Ad esempio, se hai selezionato una frequenza di esportazione giornaliera, i file che riceverai per tre giorni consecutivi potrebbero essere like questo:
+Ad esempio, se hai selezionato una frequenza di esportazione giornaliera, i file che riceverai in tre giorni consecutivi potrebbero essere simili al seguente:
 
 ```console
 Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv
@@ -628,4 +640,4 @@ Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_202004090
 Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200410061130.csv
 ```
 
-La presenza di questi file nel percorso di archiviazione è la conferma della corretta attivazione. Per comprendere la struttura dei file esportati, è possibile [scaricare un file](../assets/common/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv) .csv di esempio. Questo file di esempio include gli attributi `person.firstname`del profilo , `person.lastname`, `person.gender`, `person.birthyear`e `personalEmail.address`.
+La presenza di questi file nel percorso di archiviazione conferma la riuscita dell’attivazione. Per comprendere la struttura dei file esportati, è possibile [scaricare un file .csv di esempio](../assets/common/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv). Questo file di esempio include gli attributi di profilo `person.firstname`, `person.lastname`, `person.gender`, `person.birthyear` e `personalEmail.address`.
