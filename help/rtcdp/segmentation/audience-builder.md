@@ -22,17 +22,17 @@ Basato su Adobe Experience Platform, [!DNL Adobe Real-Time Customer Data Platfor
 >[!CONTEXTUALHELP]
 >id="platform_b2b_audiencebuilder_showfullxdmschema"
 >title="Mostra schema XDM completo"
->abstract="Per impostazione predefinita, vengono visualizzati solo i campi che contengono dati. Attivare questa opzione per visualizzare tutti i campi dello schema XDM."
+>abstract="Per impostazione predefinita, vengono visualizzati solo i campi che contengono dati. Abilita questa opzione per mostrare tutti i campi nello schema XDM."
 
 >[!CONTEXTUALHELP]
 >id="platform_b2b_audiencebuilder_showrelationselectors"
->title="Selettori di relazioni Mostra"
->abstract="Per impostazione predefinita, vengono utilizzate le relazioni standard per l&#39;organizzazione. Abilita questa opzione per visualizzare i selettori di relazione utilizzati."
+>title="Mostra selettori di relazioni"
+>abstract="Per impostazione predefinita, vengono utilizzate le relazioni standard per l’organizzazione. Abilita questa opzione per visualizzare i selettori di relazione utilizzati."
 
 >[!CONTEXTUALHELP]
 >id="platform_b2b_audiencebuilder_showconstrainedfields"
 >title="Mostra campi vincolati"
->abstract="Per impostazione predefinita, vengono visualizzati solo i campi che non presentano vincoli. Abilita questa opzione per visualizzare i campi soggetti a vincoli."
+>abstract="Per impostazione predefinita, vengono visualizzati solo i campi privi di vincoli. Abilita questa opzione per mostrare i campi con vincoli."
 
 Quando utilizzi Audience Builder per gli account, puoi utilizzare gli attributi dell’account o i tipi di pubblico esistenti come campi del pubblico.
 
@@ -42,9 +42,9 @@ Quando utilizzi Audience Builder per gli account, puoi utilizzare gli attributi 
 
 >[!NOTE]
 >
->La **[!UICONTROL sezione Opzioni campo]** è attualmente in versione beta ed è disponibile solo per clienti selezionati. Contatta il Adobe Systems Servizio Clienti per ulteriori informazioni.
+>La sezione **[!UICONTROL Opzioni campo]** è attualmente in versione beta ed è disponibile solo per alcuni clienti. Per ulteriori informazioni, contatta l’Assistenza clienti di Adobe.
 
-Viene visualizzata la [!UICONTROL sezione Impostazioni] . In questa sezione è possibile aggiornare i campi visualizzati e la relazione tra di essi.
+Viene visualizzata la sezione [!UICONTROL Impostazioni]. In questa sezione è possibile aggiornare i campi visualizzati e la relazione tra di essi.
 
 Per le **[!UICONTROL opzioni campo]**, è possibile visualizzare solo i campi che contengono dati o lo schema XDM completo.
 
@@ -68,11 +68,11 @@ Se un attributo viene popolato da meno del 25% degli account, verrà visualizzat
 
 >[!NOTE]
 >
->I dati di riepilogo sono disponibili solo se l&#39;attributo appartiene allo schema Account, Persona o Opportunità. Inoltre, i valori principali vengono visualizzati solo se il campo non **** contiene troppi valori diversi e se i valori di tali campi vengono comunemente ripetuti.
+>I dati di riepilogo sono disponibili solo se l’attributo appartiene allo schema Account, Persona o Opportunità. Inoltre, i primi valori vengono visualizzati solo se il campo **non** contiene troppi valori diversi e se i valori di tali campi sono comunemente ripetuti.
 >
->Questi dati di riepilogo vengono aggiornati quotidianamente ****.
+>Questi dati di riepilogo vengono aggiornati **ogni giorno**.
 
-Per una guida più dettagliata su Audience Builder, leggi la guida](../../segmentation/ui/segment-builder.md){target="_blank"} utente [di Audience Builder.
+Per una guida più dettagliata su Audience Builder, consulta la [guida utente di Audience Builder](../../segmentation/ui/segment-builder.md){target="_blank"}.
 
 ### Tipi di pubblico {#audiences}
 
@@ -82,9 +82,9 @@ Puoi passare il cursore del mouse sull&#39;![icona informazioni](../../images/ic
 
 ![Vengono visualizzate le informazioni sul pubblico.](../assets/segmentation/audience-builder/audience-information.png){zoomable="yes"}
 
-## Area di lavoro per generatore di regole {#rule-builder-canvas}
+## Area di lavoro del generatore di regole {#rule-builder-canvas}
 
-Un pubblico creato in Audience Builder è un raccolta di regole utilizzate per descrivere le caratteristiche o i comportamenti chiave di un pubblico destinazione. Queste regole vengono create utilizzando l&#39;area di disegno regola Builder, situata al centro di Audience Builder.
+Un pubblico creato in Audience Builder è una raccolta di regole utilizzate per descrivere caratteristiche o comportamenti chiave di un pubblico target. Queste regole vengono create utilizzando l’area di lavoro del generatore di regole, che si trova al centro di Audience Builder.
 
 Per aggiungere una nuova regola alla definizione del segmento, trascina un riquadro dalla scheda **[!UICONTROL Campi]** e rilascialo nell&#39;area di lavoro del generatore di regole.
 
@@ -96,15 +96,15 @@ Per ulteriori informazioni sull&#39;utilizzo dell&#39;area di lavoro del generat
 
 Le regole del pubblico vengono valutate nell’ordine in cui sono elencate. Puoi utilizzare i contenitori per consentire un maggiore controllo sull’ordine di esecuzione, tramite l’utilizzo di query nidificate.
 
-Per ulteriori informazioni sui contenitori, consulta la documentazione](../../segmentation/ui/segment-builder.md#containers){target="_blank"} di [Segment Builder.
+Per ulteriori informazioni sui contenitori, consulta la [documentazione del Generatore di segmenti](../../segmentation/ui/segment-builder.md#containers){target="_blank"}.
 
 ## Proprietà pubblico {#properties}
 
-Nella **[!UICONTROL sezione Proprietà del pubblico]** sono visualizzate informazioni sull&#39;audience, inclusa una dimensione stimata dell&#39;audience. Puoi anche specificare dettagli sul pubblico, inclusi nome, descrizione e tag.
+La sezione **[!UICONTROL Proprietà pubblico]** visualizza informazioni sul pubblico, inclusa una stima della dimensione del pubblico. Puoi anche specificare dettagli sul pubblico, tra cui nome, descrizione e tag.
 
 ![La sezione delle proprietà del pubblico viene visualizzata per il pubblico in Audience Builder.](../assets/segmentation/audience-builder/audience-properties.png){width="300"}
 
-Gli **[!UICONTROL account qualificati]** indicano il numero effettivo di account che corrispondono alle regole del pubblico. Questo numero viene aggiornato ogni 24 ore, dopo l’esecuzione del processo di segmentazione.
+I **[!UICONTROL account qualificati]** indicano il numero effettivo di account che corrispondono alle regole del pubblico. Questo numero viene aggiornato ogni 24 ore, dopo l’esecuzione del processo di segmentazione.
 
 I **[!UICONTROL account stimati]** indicano il numero approssimativo di account in base al processo di esempio. Puoi aggiornare questo valore dopo aver aggiunto nuove regole o condizioni e aver selezionato **[!UICONTROL Aggiorna stima]**.
 

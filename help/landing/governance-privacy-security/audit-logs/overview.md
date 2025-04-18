@@ -44,9 +44,9 @@ La tabella seguente illustra le azioni per le quali le risorse vengono registrat
 
 | Risorsa | Azioni |
 | --- | --- |
-| [Controllo degli accessi regola (basato su attributi accesso controllo)](../../../access-control/home.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
-| [Account (Adobe Systems)](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
-| [Attribution AI istanza](../../../intelligent-services/attribution-ai/overview.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita</li><li>Disabilita</li></ul> |
+| [Criteri di controllo dell&#39;accesso (controllo dell&#39;accesso basato su attributi)](../../../access-control/home.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
+| [Account (Adobe)](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
+| [Istanza di IA per l&#39;attribuzione](../../../intelligent-services/attribution-ai/overview.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita</li><li>Disabilita</li></ul> |
 | [Registri di controllo](../../../landing/governance-privacy-security/audit-logs/overview.md) | <ul><li>Esporta</li></ul> |
 | [Classe](../../../xdm/schema/composition.md#class) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
 | Attributo calcolato | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
@@ -57,12 +57,12 @@ La tabella seguente illustra le azioni per le quali le risorse vengono registrat
 | [Destinazione](../../../destinations/home.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita</li><li>Disabilita</li><li>Attivazione set di dati</li><li>Rimozione set di dati</li><li>Attivazione profilo</li><li>Rimuovi profilo</li></ul> |
 | [Gruppo di campi](../../../xdm/schema/composition.md#field-group) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
 | [Grafico delle identità](../../../identity-service/features/identity-graph-viewer.md) | <ul><li>Visualizzazione</li></ul> |
-| [Namespace Identity](../../../identity-service/features/namespaces.md) | <ul><li>Creare</li><li>Aggiornamento</li></ul> |
-| [Unisci regola](../../../profile/merge-policies/overview.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
+| [Spazio dei nomi identità](../../../identity-service/features/namespaces.md) | <ul><li>Creare</li><li>Aggiornamento</li></ul> |
+| [Criterio di unione](../../../profile/merge-policies/overview.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
 | [Profilo di prodotto](../../../access-control/home.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
 | [Query](../../../query-service/ui/overview.md) | <ul><li>Esegui</li></ul> |
 | [Modello query](../../../query-service/ui/overview.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
-| [Ruolo (basato su attributi accesso controllo)](../../../access-control/home.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li><li>Aggiungi utente</li><li>Rimuovi utente</li></ul> |
+| [Ruolo (controllo dell&#39;accesso basato su attributi)](../../../access-control/home.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li><li>Aggiungi utente</li><li>Rimuovi utente</li></ul> |
 | [Sandbox](../../../sandboxes/home.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Ripristino</li><li>Elimina</li></ul> |
 | [Query pianificata](../../../query-service/ui/overview.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
 | [Schema](../../../xdm/schema/composition.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li><li>Attiva per profilo</li></ul> |
@@ -70,9 +70,9 @@ La tabella seguente illustra le azioni per le quali le risorse vengono registrat
 | [Flusso dati Source](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita</li><li>Disabilita</li><li>Attivazione set di dati</li><li>Rimozione set di dati</li><li>Attivazione profilo</li><li>Rimozione profilo</li></ul> |
 | [Ordine di lavoro](../../../hygiene/home.md) | <ul><li>Creare</li></ul> |
 
-## Accesso ai registri di controllo
+## Accesso ai registri di audit
 
-Quando la funzionalità è abilitata per l&#39;organizzazione, i registri di controllo vengono raccolti automaticamente quando si verifica l&#39;attività. Non è necessario abilitare manualmente la raccolta dei registri.
+Quando la funzione è abilitata per la tua organizzazione, i registri di audit vengono raccolti automaticamente quando si verifica un’attività. Non è necessario abilitare manualmente la raccolta dei registri.
 
 Per visualizzare ed esportare i registri di audit, è necessario disporre dell&#39;autorizzazione di controllo dell&#39;accesso **[!UICONTROL Visualizza registro attività utente]** concessa (nella categoria [!UICONTROL Governance dei dati]). Per informazioni su come gestire le singole autorizzazioni per le funzionalità di Experience Platform, consulta la [documentazione sul controllo degli accessi](../../../access-control/home.md).
 
@@ -83,25 +83,25 @@ Per visualizzare ed esportare i registri di audit, è necessario disporre dell&#
 >title="Istruzioni"
 >abstract="<ul><li>Seleziona <b>Audit</b> nel pannello di navigazione a sinistra. L’area di lavoro Audit mostra un elenco di registri registrati, ordinati per impostazione predefinita dalla più recente alla meno recente.</li>   <li> NOTA: i registri di audit vengono conservati per 365 giorni dopo i quali verranno cancellati dal sistema. Pertanto, puoi tornare indietro solo per un periodo massimo di 365 giorni. Se è necessario esaminare i dati più vecchi di 365 giorni, devi esportare i registri a cadenza regolare per soddisfare i requisiti dei criteri interni. </li><li>Seleziona un evento dall’elenco per visualizzarne i dettagli nella barra a destra. </li><li>Seleziona l’icona a imbuto (filtro) per visualizzare un elenco di filtri con cui limitare i risultati. Vengono visualizzati solo gli ultimi 1.000 record, a prescindere dai filtri selezionati. </li><li>Per esportare l’elenco corrente dei registri di audit, seleziona **Scarica registro**.</li><li>Per ulteriori informazioni su questa funzione, consulta la sezione <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=it">panoramica dei registri di audit</a> su Experience League.</li></ul>"
 
-Puoi visualizzare i registri di controllo per diverse funzioni di Experience Platform nell&#39;area di lavoro **[!UICONTROL Audit]** nell&#39;interfaccia utente di Experience Platform. L&#39;area di lavoro mostra un elenco di registri registrati, ordinati per impostazione predefinita dal più recente al meno recente.
+Puoi visualizzare i registri di controllo per diverse funzioni di Experience Platform nell&#39;area di lavoro **[!UICONTROL Audit]** nell&#39;interfaccia utente di Experience Platform. Nell’area di lavoro viene visualizzato un elenco dei registri registrati, per impostazione predefinita ordinati dal più recente al meno recente.
 
-![La dashboard Controlli evidenzia i controlli di audit nel menu a sinistra.](../../images/audit-logs/audits.png)
+![La dashboard Audit evidenzia Audit nel menu a sinistra.](../../images/audit-logs/audits.png)
 
-I registri di controllo vengono conservati per 365 giorni, dopodiché vengono eliminati dal sistema. Se hai bisogno di dati per più di 365 giorni, devi esportare i registri a cadenza regolare per soddisfare i requisiti delle politiche interne.
+I registri di audit vengono conservati per 365 giorni dopo i quali verranno eliminati dal sistema. Se hai bisogno di dati per più di 365 giorni, devi esportare i registri a cadenza regolare per soddisfare i requisiti delle politiche interne.
 
 Il metodo utilizzato per richiedere i registri di audit cambia il periodo di tempo consentito e il numero di record a cui potrai accedere. [L&#39;esportazione dei registri](#export-audit-logs) consente di tornare indietro di 365 giorni (a intervalli di 90 giorni) a un massimo di 10.000 record, dove come [interfaccia utente registro attività](#filter-audit-logs) in Experience Platform visualizza gli ultimi 90 giorni a un massimo di 1000 record.
 
 Seleziona un evento dall’elenco per visualizzarne i dettagli nella barra a destra.
 
-![Dashboard Controlli Registro attività scheda con il pannello Dettagli evento evidenziato.](../../images/audit-logs/select-event.png)
+![Controlla la scheda del registro attività della dashboard con il pannello dei dettagli dell&#39;evento evidenziato.](../../images/audit-logs/select-event.png)
 
-### Filtra registri di controllo
+### Filtrare i registri di audit
 
-Seleziona l&#39;icona funnel (![icona Filtra](/help/images/icons/filter.png)) per visualizzare un elenco di controlli filtro che consentono di limitare i risultati.
+Selezionare l&#39;icona funnel (![icona filtro](/help/images/icons/filter.png)) per visualizzare un elenco di controlli filtro che consentono di limitare i risultati.
 
 >[!NOTE]
 >
->Il interfaccia Experience Platform visualizza solo gli ultimi 90 giorni fino a un massimo di 1000 record, indipendentemente dai filtri applicati. Se hai bisogno di log oltre a questo limite (per un massimo di 365 giorni), dovrai [esportare i](#export-audit-logs) log di controllo.
+>Nell’interfaccia utente di Experience Platform vengono visualizzati solo gli ultimi 90 giorni e un massimo di 1000 record, indipendentemente dai filtri applicati. Se hai bisogno di registri oltre questo (fino a un massimo di 365 giorni), dovrai [esportare i registri di audit](#export-audit-logs).
 
 ![Dashboard dei controlli di audit con il registro attività filtrato evidenziato.](../../images/audit-logs/filters.png)
 
@@ -159,20 +159,20 @@ Puoi abilitare gli avvisi di audit per ricevere notifiche per le seguenti regole
 * Aggiornamento schema
 * Eliminazione schema
 
-Seleziona l&#39;avviso desiderato dall&#39;elenco per iscriverti e ricevere notifiche. Per ulteriori informazioni sugli avvisi, consulta la guida alla [sottoscrizione agli avvisi utilizzando il interfaccia](../../../observability/alerts/ui.md).
+Seleziona l’avviso desiderato dall’elenco per abbonarti e ricevere le notifiche. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento ad avvisi tramite l&#39;interfaccia utente](../../../observability/alerts/ui.md).
 
-## Gestione dei log di controllo nell&#39;API
+## Gestione dei registri di audit nell’API
 
-Tutte le azioni che puoi eseguire nel interfaccia possono essere eseguite anche utilizzando chiamate API. Per ulteriori informazioni, consulta il [documento di riferimento API](https://www.adobe.io/experience-platform-apis/references/audit-query/).
+Tutte le azioni che possono essere eseguite nell’interfaccia utente possono essere eseguite anche utilizzando le chiamate API. Per ulteriori informazioni, consulta il [documento di riferimento API](https://www.adobe.io/experience-platform-apis/references/audit-query/).
 
 ## Gestione dei registri di audit per Adobe Admin Console
 
 Per informazioni su come gestire i registri di audit per le attività in Adobe Admin Console, consulta il seguente [documento](https://helpx.adobe.com/enterprise/using/audit-logs.html).
 
-## Successivo passaggi e risorse aggiuntive
+## Passaggi successivi e risorse aggiuntive
 
-Questa guida spiega come gestire i registri di controllo in Experience Platform. Per ulteriori informazioni su come monitorare le attività di Experience Platform, consulta la documentazione relativa all&#39;osservabilità Insights](../../../observability/home.md) e [al monitoraggio dell&#39;assimilazione [](../../../ingestion/quality/monitor-data-ingestion.md)dei dati.
+Questa guida illustra come gestire i registri di audit in Experience Platform. Per ulteriori informazioni su come monitorare le attività di Experience Platform, consulta la documentazione su [Observability Insights](../../../observability/home.md) e [Monitoring data ingestion](../../../ingestion/quality/monitor-data-ingestion.md).
 
-Per migliorare la tua comprensione dei log di controllo in Experience Platform, guarda il seguente video:
+Per comprendere meglio i registri di audit in Experience Platform, guarda il video seguente:
 
 >[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)

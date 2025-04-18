@@ -1,6 +1,6 @@
 ---
-title: Crea una connessione Origine pannello Mixpanel nella interfaccia
-description: Scopri come creare una connessione sorgente al pannello Mixpanel utilizzando il interfaccia Adobe Experience Platform.
+title: Creare una connessione Source Mixpanel nell’interfaccia utente
+description: Scopri come creare una connessione sorgente Mixpanel utilizzando l’interfaccia utente di Adobe Experience Platform.
 exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
@@ -28,10 +28,10 @@ Per connettere [!DNL Mixpanel] ad Experience Platform, è necessario fornire i v
 
 | Credenziali | Descrizione | Esempio |
 | --- | --- | --- |
-| Nome utente | Il servizio account nome utente corrispondente al tuo [!DNL Mixpanel] account. Per ulteriori informazioni, vedere la documentazione](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account) relativa agli [[!DNL Mixpanel] account di servizio. | `Test8.6d4ee7.mp-service-account` |
-| Password | Il servizio account password che corrisponde alla tua [!DNL Mixpanel] account. | `dLlidiKHpCZtJhQDyN2RECKudMeTItX1` |
-| ID progetto | L&#39;ID del progetto [!DNL Mixpanel] . Questo ID è necessario per creare una connessione di origine. Per ulteriori informazioni, consulta la documentazione sulle [[!DNL Mixpanel] impostazioni del progetto e la [[!DNL Mixpanel] guida alla creazione e gestione dei progetti](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects).](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) | `2384945` |
-| Fuso orario | Il fuso orario corrispondente al [!DNL Mixpanel] progetto. Per creare una connessione di origine è necessario specificare il fuso orario. Per ulteriori informazioni, consulta la [documentazione sulle impostazioni del progetto Mixpanel](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings). | `Pacific Standard Time` |
+| Nome utente | Il nome utente dell&#39;account del servizio che corrisponde all&#39;account [!DNL Mixpanel]. Per ulteriori informazioni, consulta la [[!DNL Mixpanel] documentazione degli account del servizio](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account). | `Test8.6d4ee7.mp-service-account` |
+| Password | La password dell&#39;account del servizio che corrisponde all&#39;account [!DNL Mixpanel]. | `dLlidiKHpCZtJhQDyN2RECKudMeTItX1` |
+| ID Progetto | ID progetto [!DNL Mixpanel]. Questo ID è necessario per creare una connessione sorgente. Per ulteriori informazioni, vedere la [[!DNL Mixpanel] documentazione delle impostazioni del progetto](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) e la [[!DNL Mixpanel] guida alla creazione e alla gestione dei progetti](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects). | `2384945` |
+| Fuso orario | Fuso orario corrispondente al progetto [!DNL Mixpanel]. Per creare una connessione di origine è necessario specificare il fuso orario. Per ulteriori informazioni, consulta la [documentazione sulle impostazioni del progetto Mixpanel](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings). | `Pacific Standard Time` |
 
 Per ulteriori informazioni sull&#39;autenticazione dell&#39;origine [!DNL Mixpanel], vedere [[!DNL Mixpanel] panoramica origine](../../../../connectors/analytics/mixpanel.md).
 
@@ -49,15 +49,15 @@ Viene visualizzata la pagina **[!UICONTROL Connetti account Mixpanel]**. In ques
 
 ### Account esistente
 
-Per utilizzare un account esistente, seleziona il [!DNL Mixpanel] account con cui desideri creare un nuovo flusso di dati, quindi seleziona **[!UICONTROL Successivo]** per continuare.
+Per utilizzare un account esistente, seleziona l&#39;account [!DNL Mixpanel] con cui vuoi creare un nuovo flusso di dati, quindi seleziona **[!UICONTROL Successivo]** per continuare.
 
 ![esistente](../../../../images/tutorials/create/mixpanel-export-events/existing.png)
 
 ### Nuovo account
 
-Se si sta creando una nuova account, selezionare **[!UICONTROL Nuovo account]** e quindi fornire un nome, una descrizione facoltativa e le credenziali. Al termine, selezionare **[!UICONTROL Connetti all&#39;origine]** e attendere un certo tempo per stabilire la nuova connessione.
+Se stai creando un nuovo account, seleziona **[!UICONTROL Nuovo account]**, quindi fornisci un nome, una descrizione facoltativa e le tue credenziali. Al termine, selezionare **[!UICONTROL Connetti all&#39;origine]** e quindi attendere un po&#39; di tempo per stabilire la nuova connessione.
 
-![Nuovo](../../../../images/tutorials/create/mixpanel-export-events/new.png)
+![nuovo](../../../../images/tutorials/create/mixpanel-export-events/new.png)
 
 ## Selezionare l’ID del progetto e il fuso orario {#project-id-and-timezone}
 
@@ -77,23 +77,23 @@ Dopo alcuni istanti, l’interfaccia corretta viene aggiornata a un pannello di 
 
 ## Passaggi successivi
 
-Seguendo questo esercitazione, hai stabilito una connessione con il tuo [!DNL Mixpanel] account. Ora puoi passare alla esercitazione successiva e [configurare un flusso di dati per trasferire analisi dati in Experience Platform](../../dataflow/analytics.md).
+Seguendo questa esercitazione, hai stabilito una connessione al tuo account [!DNL Mixpanel]. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per inserire dati di analisi in Experience Platform](../../dataflow/analytics.md).
 
 ## Risorse aggiuntive {#additional-resources}
 
-Nelle sezioni seguenti vengono fornite risorse aggiuntive a cui è possibile fare riferimento quando si utilizza l&#39;origine [!DNL Mixpanel] .
+Le sezioni seguenti forniscono ulteriori risorse a cui è possibile fare riferimento quando si utilizza l&#39;origine [!DNL Mixpanel].
 
 ### Convalida {#validation}
 
-Di seguito vengono descritti i passaggi che è possibile eseguire per verificare di aver connesso correttamente l&#39;origine [!DNL Mixpanel] e che [!DNL Mixpanel] gli eventi vengono acquisiti in Experience Platform.
+Di seguito vengono descritti i passaggi che è possibile eseguire per verificare che la connessione all&#39;origine [!DNL Mixpanel] sia stata eseguita correttamente e che gli eventi [!DNL Mixpanel] vengano acquisiti in Experience Platform.
 
-Nella interfaccia Experience Platform selezionare **[!UICONTROL Dataset dalla barra navigazione]** sinistra per accesso&#39;area [!UICONTROL di lavoro Datadati] . Nella [!UICONTROL schermata Attività] dataset vengono visualizzati i dettagli delle esecuzioni.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Set di dati]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Set di dati]. Nella schermata [!UICONTROL Attività set di dati] vengono visualizzati i dettagli delle esecuzioni.
 
-![dataset-activity](../../../../images/tutorials/create/mixpanel-export-events/dataset-activity.png)
+![attività-set di dati](../../../../images/tutorials/create/mixpanel-export-events/dataset-activity.png)
 
-Successivo, selezionare l&#39;ID di esecuzione del flusso di dati del flusso di dati che si desidera visualizzare per visualizzare dettagli specifici sull&#39;esecuzione del flusso di dati.
+Quindi, seleziona l’ID di esecuzione del flusso di dati che desideri visualizzare per visualizzare dettagli specifici su tale esecuzione.
 
-![Monitoraggio del flusso di dati](../../../../images/tutorials/create/mixpanel-export-events/dataflow-monitoring.png)
+![monitoraggio dei flussi di dati](../../../../images/tutorials/create/mixpanel-export-events/dataflow-monitoring.png)
 
 Infine, seleziona **[!UICONTROL Anteprima set di dati]** per visualizzare i dati acquisiti.
 
