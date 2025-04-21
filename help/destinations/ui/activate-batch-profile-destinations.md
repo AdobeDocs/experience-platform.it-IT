@@ -3,7 +3,7 @@ title: Attivare i tipi di pubblico per le destinazioni di esportazione dei profi
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico disponibili in Adobe Experience Platform inviandoli a destinazioni basate su profili in batch.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 500cad30178e6371c8d7431b032a67f6ed15a1d6
+source-git-commit: 11961e291188d509609a036f41084f4487cab584
 workflow-type: tm+mt
 source-wordcount: '4517'
 ht-degree: 11%
@@ -87,12 +87,12 @@ Puoi scegliere tra più tipi di pubblico, a seconda della loro origine:
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule_weekly_messaging"
 >title="esportazioni settimanali"
->abstract="Seleziona la data di inizio e le esportazioni successive avverranno in quel giorno della settimana fino alla data di fine selezionata."
+>abstract="<sup>*</sup> Seleziona la data di inizio e le esportazioni successive avverranno in quel giorno della settimana fino alla data di fine selezionata."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule_monthly_messaging"
 >title="esportazioni mensili"
->abstract="Seleziona la data di inizio; le esportazioni successive avranno luogo in tale data del mese fino alla data di fine selezionata. Per i mesi con meno di 30 o 31 giorni, l&#39;esportazione viene eseguita l&#39;ultimo giorno del mese."
+>abstract="<sup>*</sup> Seleziona la data di inizio e le esportazioni successive avverranno in quella data del mese fino alla data di fine selezionata. Per i mesi con meno di 30 o 31 giorni, l&#39;esportazione viene eseguita l&#39;ultimo giorno del mese."
 
 [!DNL Adobe Experience Platform] esporta i dati per le destinazioni di e-mail marketing e archiviazione cloud come [tipi di file diversi](#supported-file-formats-export). Nella pagina **[!UICONTROL Pianificazione]** è possibile configurare la pianificazione e i nomi dei file per ogni pubblico che si sta esportando.
 
