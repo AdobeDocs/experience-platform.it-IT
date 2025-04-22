@@ -3,22 +3,14 @@ keywords: attributi dirigibile;destinazione dirigibile
 title: Connessione attributi dirigibili
 description: Trasmetti facilmente i dati del pubblico di Adobe a Airship come attributi del pubblico per il targeting all’interno di Airship.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7377b2ffecf59fdb5ca5449daf1387ae1586bd63
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1042'
 ht-degree: 2%
 
 ---
 
 # Connessione [!DNL Airship Attributes] {#airship-attributes-destination}
-
->[!IMPORTANT]
->
->* A partire dal 25 marzo 2025, è possibile visualizzare due schede [!DNL Airship Attributes] affiancate nel catalogo delle destinazioni. Ciò è dovuto a un aggiornamento interno al servizio destinazioni. Il connettore di destinazione [!DNL Airship Attributes] esistente è stato rinominato in **[!UICONTROL (obsoleto) Attributi dirigibili]** ed è ora disponibile una nuova scheda con il nome **[!UICONTROL Attributi dirigibili]**.
->* Utilizza la connessione **[!UICONTROL Attributi dirigibili]** nel catalogo per i nuovi flussi di dati di attivazione. Se sono presenti flussi di dati attivi per la destinazione **[!UICONTROL (Obsoleto) Attributi dirigibili]**, questi verranno aggiornati automaticamente, pertanto non è richiesta alcuna azione da parte dell&#39;utente.
->* Se si creano flussi di dati tramite l&#39;[API del servizio Flow](https://developer.adobe.com/experience-platform-apis/references/destinations/), è necessario aggiornare [!DNL flow spec ID] e [!DNL connection spec ID] ai valori seguenti:
->   * ID specifica di flusso: `a862e0be-966e-4e5a-80d3-1bb566461986`
->   * ID specifica di connessione: `594bc002-4a47-49b7-8a98-ac0d21045502`
 
 ## Panoramica {#overview}
 
