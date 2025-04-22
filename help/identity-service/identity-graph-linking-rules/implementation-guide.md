@@ -2,9 +2,9 @@
 title: Guida all’implementazione per le regole di collegamento del grafico delle identità
 description: Scopri i passaggi consigliati da seguire per implementare i dati con le configurazioni delle regole di collegamento del grafico delle identità.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 45fdce7dc50b237edc511047ec150ecdd6adce50
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '1835'
+source-wordcount: '1888'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,11 @@ ht-degree: 2%
 
 >[!AVAILABILITY]
 >
->Le regole di collegamento del grafo delle identità sono attualmente a disponibilità limitata. Contatta il team del tuo account Adobe per informazioni su come accedere alla funzione nelle sandbox di sviluppo.
+>Le regole di collegamento del grafico identità sono attualmente a disponibilità limitata e sono accessibili a tutti i clienti nelle sandbox di sviluppo.
+>
+>* **Requisiti per l&#39;attivazione**: la funzionalità rimarrà inattiva finché non avrai configurato e salvato [!DNL Identity Settings]. Senza questa configurazione, il sistema continuerà a funzionare normalmente, senza cambiamenti di comportamento.
+>* **Note importanti**: durante questa fase di disponibilità limitata, la segmentazione di Edge può produrre risultati imprevisti di iscrizione al segmento. Tuttavia, lo streaming e la segmentazione batch funzioneranno come previsto.
+>* **Passaggi successivi**: per informazioni su come abilitare questa funzione nelle sandbox di produzione, contatta il team del tuo account di Adobe.
 
 >[!IMPORTANT]
 >
@@ -33,7 +37,7 @@ Descrizione dettagliata:
 
 ## Prerequisiti per l’implementazione {#prerequisites-for-implementation}
 
-Questa sezione descrive i passaggi prerequisiti da completare prima di implementare le regole di collegamento del grafico delle identità ai dati.
+In questa sezione vengono descritti i passaggi preliminari che è necessario completare prima di implementare [!DNL Identity Graph Linking Rules] nei dati.
 
 ### Spazio dei nomi univoco
 
@@ -291,9 +295,9 @@ In questo esempio viene inoltre mostrato che Tom e Summer devono separare le ent
 
 ## Passaggi successivi
 
-Per ulteriori informazioni sulle regole di collegamento del grafico delle identità, consulta la documentazione seguente:
+Per ulteriori informazioni su [!DNL Identity Graph Linking Rules], leggere la seguente documentazione:
 
-* [Panoramica delle regole di collegamento del grafico delle identità](./overview.md)
+* [Panoramica di [!DNL Identity Graph Linking Rules]](./overview.md)
 * [Algoritmo di ottimizzazione delle identità](./identity-optimization-algorithm.md)
 * [Esempi di configurazioni del grafico](./example-configurations.md)
 * [Risoluzione dei problemi e domande frequenti](./troubleshooting.md)
