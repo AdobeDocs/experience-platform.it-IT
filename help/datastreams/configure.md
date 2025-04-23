@@ -2,7 +2,7 @@
 title: Creare e configurare gli stream di dati
 description: Scopri come collegare l’integrazione Web SDK lato client con altri prodotti Adobe e destinazioni di terze parti.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 637f7d68c0de93ede5ee808b68a0066f6abe52c9
 workflow-type: tm+mt
 source-wordcount: '2822'
 ht-degree: 48%
@@ -81,7 +81,7 @@ Le informazioni sul dispositivo e sull&#39;hardware utilizzano la stringa di arr
 
 Inoltre, accertati che nello schema esista ogni campo XDM desiderato. In caso contrario, puoi aggiungere allo schema il gruppo di campi `Environment Details` fornito da Adobe.
 
-### Configurare le opzioni avanzate {#@advanced-options}
+### Configurare le opzioni avanzate {#advanced-options}
 
 Per visualizzare le opzioni di configurazione avanzate, selezionare **[!UICONTROL Opzioni avanzate]**. Qui puoi configurare impostazioni aggiuntive per lo stream di dati, ad esempio offuscamento dell’IP, cookie dell’ID di prima parte e altro ancora.
 
