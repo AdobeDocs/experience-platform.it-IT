@@ -5,9 +5,9 @@ user-guide-description: Attiva i dati, noti e non, per campagne di marketing cro
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: df047593a14ce6683dc04a6ba6518e6d0810c43d
+source-git-commit: b456540a59c4b0455e8e1d52ed98d97454f8f61f
 workflow-type: tm+mt
-source-wordcount: '1282'
+source-wordcount: '1286'
 ht-degree: 6%
 
 ---
@@ -243,6 +243,7 @@ ht-degree: 6%
          * [Funzioni di trasformazione supportate](./destination-sdk/functionality/destination-server/supported-functions.md)
          * [Configurazione formattazione file](./destination-sdk/functionality/destination-server/file-formatting.md)
       * Componenti di configurazione della destinazione {#destination-configuration}
+         * [Configurare il tipo di dati del pubblico](./destination-sdk/functionality/destination-configuration/audience-data-type.md)
          * [Configurazione autenticazione cliente](./destination-sdk/functionality/destination-configuration/customer-authentication.md)
          * [Autorizzazione OAuth2](./destination-sdk/functionality/destination-configuration/oauth2-authorization.md)
          * [Campi dati cliente](./destination-sdk/functionality/destination-configuration/customer-data-fields.md)
