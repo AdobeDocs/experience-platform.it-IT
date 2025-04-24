@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;inserimento batch;inserimento batch;inserimento batch;inserimento;guida per sviluppatori;guida API;caricamento;acquisizione Parquet;acquisizione json;
+keywords: Experience Platform;home;argomenti popolari;inserimento batch;inserimento batch;inserimento batch;inserimento;guida per sviluppatori;guida API;caricare;acquisire Parquet;acquisire json;
 solution: Experience Platform
 title: Guida all’API per l’acquisizione in batch
 description: Questo documento fornisce una guida completa per gli sviluppatori che lavorano con le API di acquisizione batch per Adobe Experience Platform.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 0e484dffa38d454561f9d67c6bea92f426d3515d
 workflow-type: tm+mt
-source-wordcount: '2383'
+source-wordcount: '2435'
 ht-degree: 6%
 
 ---
@@ -27,7 +27,9 @@ Prima di continuare, controlla la [panoramica dell&#39;API di acquisizione batch
 
 >[!NOTE]
 >
->I seguenti passaggi sono applicabili ai file di piccole dimensioni (256 MB o meno). Se si riscontra un timeout del gateway o si richiedono errori di dimensioni del corpo, è necessario passare al caricamento di file di grandi dimensioni.
+>- I seguenti passaggi sono applicabili ai file di piccole dimensioni (256 MB o meno). Se si riscontra un timeout del gateway o si richiedono errori di dimensioni del corpo, è necessario passare al caricamento di file di grandi dimensioni.
+>
+>- Utilizza il JSON a riga singola invece del JSON su più righe come input per l’acquisizione batch. Il formato JSON a riga singola consente prestazioni migliori in quanto il sistema può dividere un file di input in più blocchi ed elaborarli in parallelo, mentre il formato JSON a riga multipla non può essere diviso. Ciò può ridurre in modo significativo i costi di elaborazione dei dati e migliorare la latenza dell’elaborazione batch.
 
 ### Crea batch
 
