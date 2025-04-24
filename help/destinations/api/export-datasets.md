@@ -4,9 +4,9 @@ title: Esportare i set di dati utilizzando l’API del servizio Flusso
 description: Scopri come utilizzare l’API del servizio Flusso per esportare i set di dati in determinate destinazioni.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 29fb232ecfbd119ef84d62599fc79249513dca43
+source-git-commit: 31631b03b6ff1e50e55c01e948fae5c29fd618dd
 workflow-type: tm+mt
-source-wordcount: '5151'
+source-wordcount: '5220'
 ht-degree: 3%
 
 ---
@@ -56,6 +56,13 @@ Al momento, puoi esportare i set di dati nelle destinazioni di archiviazione clo
 * [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog)
 * [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
 * [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
+
+## Prerequisiti {#prerequisites}
+
+Per esportare i set di dati, tieni presente i seguenti prerequisiti:
+
+* Per esportare i set di dati nelle destinazioni dell&#39;archiviazione cloud, è necessario avere [connesso a una destinazione](/help/destinations/ui/connect-destination.md). Se non lo hai già fatto, vai al [catalogo delle destinazioni](/help/destinations/catalog/overview.md), sfoglia le destinazioni supportate e configura la destinazione che desideri utilizzare.
+* I set di dati profilo devono essere abilitati per l’utilizzo in Real-Time Customer Profile. [Ulteriori informazioni](/help/ingestion/tutorials/ingest-batch-data.md#enable-for-profile) su come abilitare questa opzione.
 
 ## Introduzione {#get-started}
 
@@ -440,15 +447,15 @@ Per recuperare i set di dati idonei, l&#39;ID [!DNL connection spec] utilizzato 
 
 >[!ENDSHADEBOX]
 
-Una risposta corretta contiene un elenco di set di dati idonei per l’attivazione. Questi set di dati possono essere utilizzati durante la creazione della connessione di origine nel passaggio successivo.
+Una risposta corretta contiene un elenco di set di dati idonei per l’attivazione. Questi set di dati possono essere utilizzati durante la costruzione della connessione di origine nel passaggio successivo.
 
-Per informazioni sui vari parametri di risposta per ogni set di dati restituito, consulta la documentazione](https://developer.adobe.com/experience-platform-apis/references/catalog/#tag/Datasets/operation/listDatasets) per sviluppatori dell&#39;API [dei set di dati.
+Per informazioni sui vari parametri di risposta per ogni set di dati restituito, consulta la [documentazione per gli sviluppatori API dei set di dati](https://developer.adobe.com/experience-platform-apis/references/catalog/#tag/Datasets/operation/listDatasets).
 
-## Crea una connessione sorgente {#create-source-connection}
+## Creare una connessione sorgente {#create-source-connection}
 
-![Diagramma che mostra il passaggio 2 della workflow di esportazione dei set di dati](../assets/api/export-datasets/export-datasets-api-workflow-create-source-connection.png)
+![Diagramma che mostra il passaggio 2 nel flusso di lavoro per l&#39;esportazione dei set di dati](../assets/api/export-datasets/export-datasets-api-workflow-create-source-connection.png)
 
-Dopo aver recuperato l&#39;elenco dei set di dati che si desidera esportare, è possibile creare una connessione di origine utilizzando tali ID del set di dati.
+Dopo aver recuperato l’elenco dei set di dati da esportare, puoi creare una connessione di origine utilizzando tali ID.
 
 >[!BEGINSHADEBOX]
 
@@ -936,7 +943,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >
 >Per informazioni su come ottenere le credenziali di autenticazione richieste, fare riferimento alla sezione [autentica nella destinazione](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) della pagina della documentazione di destinazione di Azure Data Lake Gen 2(ADLS Gen2).
 
-Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi il commenti in linea nel richiesta quando copi e incolla il richiesta nel terminale scelto.
+Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
 
 ```shell {line-numbers="true" start-line="1" highlight="20"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -968,7 +975,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Risposta**
 
-+++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - Risposta di connessione di base
++++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - Risposta connessione di base
 
 ```json
 {
@@ -979,7 +986,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Data Landing Zone (DLZ)]
+>[!TAB Zona di destinazione dati(DLZ)]
 
 **Richiesta**
 
@@ -1620,14 +1627,14 @@ Utilizzando la specifica di cui sopra, puoi creare una richiesta di connessione 
 
 **Richiesta**
 
-+++[!DNL Amazon S3] - Target connessione richiesta
++++[!DNL Amazon S3] - Richiesta di connessione Target
 
 >[!TIP]
 >
->Per informazioni su come ottenere i parametri di destinazione richiesti, fare riferimento alla [sezione Compilare i dettagli](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) della destinazione della pagina della documentazione di [!DNL Amazon S3] destinazione.
->Per altri valori supportati di , vedi la documentazione di `datasetFileType`riferimento API.
+>Per informazioni su come ottenere i parametri di destinazione richiesti, fare riferimento alla sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) della pagina di documentazione della destinazione [!DNL Amazon S3].
+>Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
 
-Notare le righe evidenziate con commenti in linea nell&#39;esempio richiesta, che forniscono informazioni aggiuntive. Rimuovi il commenti in linea nel richiesta quando copi e incolla il richiesta nel terminale scelto.
+Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
 
 ```shell {line-numbers="true" start-line="1" highlight="19"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -1991,7 +1998,7 @@ La tabella seguente fornisce le descrizioni di tutti i parametri nella sezione `
 
 | Parametro | Descrizione |
 |---------|----------|
-| `exportMode` | Selezionate `"DAILY_FULL_EXPORT"` o `"FIRST_FULL_THEN_INCREMENTAL"`. Per ulteriori informazioni sulle due opzioni, fare riferimento a [esportare file](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) completi ed [esportare file](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) incrementali nella esercitazione di attivazione delle destinazioni batch. Le tre opzioni di esportazione disponibili sono: <br> **File completo - Una volta**: `"DAILY_FULL_EXPORT"` può essere usato solo in combinazione con`timeUnit`: e `interval`:`0``day` per un&#39;esportazione completa una tantum del set di dati. Le esportazioni giornaliere complete di set di dati non sono supportate. Se hai bisogno di esportazioni giornaliere, utilizza l’opzione di esportazione incrementale. <br> **Esportazioni incrementali giornaliere**: selezionare `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` e `interval`:`1` per le esportazioni incrementali giornaliere. <br> **Esportazioni orarie incrementali**: selezionare `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` e `interval`:`3`,`6`,`9` o `12` per le esportazioni orarie incrementali. |
+| `exportMode` | Selezionare `"DAILY_FULL_EXPORT"` o `"FIRST_FULL_THEN_INCREMENTAL"`. Per ulteriori informazioni sulle due opzioni, fare riferimento a [esporta file completi](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [esporta file incrementali](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) nell&#39;esercitazione di attivazione delle destinazioni batch. Le tre opzioni di esportazione disponibili sono: <br> **File completo - Una volta**: `"DAILY_FULL_EXPORT"` può essere utilizzato solo in combinazione con `timeUnit`:`day` e `interval`:`0` per un&#39;esportazione completa una tantum del set di dati. Le esportazioni giornaliere complete di set di dati non sono supportate. Se hai bisogno di esportazioni giornaliere, utilizza l’opzione di esportazione incrementale. <br> **Esportazioni incrementali giornaliere**: selezionare `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` e `interval`:`1` per le esportazioni incrementali giornaliere. <br> **Esportazioni orarie incrementali**: selezionare `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` e `interval`:`3`,`6`,`9` o `12` per le esportazioni orarie incrementali. |
 | `timeUnit` | Selezionare `day` o `hour` a seconda della frequenza con cui si desidera esportare i file del set di dati. |
 | `interval` | Selezionare `1` quando `timeUnit` è giorno e `3`,`6`,`9`,`12` quando l&#39;unità di tempo è `hour`. |
 | `startTime` | Data e ora in secondi UNIX in cui devono iniziare le esportazioni dei set di dati. |
@@ -2065,7 +2072,7 @@ La tabella seguente fornisce le descrizioni di tutti i parametri nella sezione `
 | `interval` | Selezionare `1` quando `timeUnit` è giorno e `3`,`6`,`9`,`12` quando l&#39;unità di tempo è `hour`. |
 | `startTime` | Data e ora in secondi UNIX in cui devono iniziare le esportazioni dei set di dati. |
 | `endTime` | La data e l’ora in secondi UNIX in cui devono terminare le esportazioni dei set di dati. |
-| `foldernameTemplate` | Specifica la struttura del nome della cartella prevista nel percorso di archiviazione in cui verranno depositati i file esportati. <ul><li><code>ID_SET_DATI</code> = <span>Identificatore univoco per il set di dati.</span></li><li><code>DESTINAZIONE</code> = <span>Nome della destinazione.</span></li><li><code>DATETIME</code> = <span>Data e ora formattate come yyyyMMdd_HHmmss.</span></li><li><code>ORA_ESPORTAZIONE</code> = <span>Ora pianificata per l&#39;esportazione dei dati formattata come `exportTime=YYYYMMDDHHMM`.</span></li><li><code>NOME_ISTANZA_DESTINAZIONE</code> = <span>Nome dell&#39;istanza specifica della destinazione.</span></li><li><code>DESTINATION_INSTANCE_ID</code> <span>= Identificatore univoco per il istanza di destinazione.</span></li><li><code>NOME_SANDBOX</code> <span>= Il nome dell&#39;ambiente sandbox.</span></li><li><code>NOME_ORGANIZZAZIONE</code> <span>= Il nome dell&#39;organizzazione.</span></li></ul> |
+| `foldernameTemplate` | Specifica la struttura del nome della cartella prevista nel percorso di archiviazione in cui verranno depositati i file esportati. <ul><li><code>ID_SET_DATI</code> = <span>Identificatore univoco per il set di dati.</span></li><li><code>DESTINAZIONE</code> = <span>Nome della destinazione.</span></li><li><code>DATETIME</code> = <span>Data e ora formattate come yyyyMMdd_HHmmss.</span></li><li><code>ORA_ESPORTAZIONE</code> = <span>Ora pianificata per l&#39;esportazione dei dati formattata come `exportTime=YYYYMMDDHHMM`.</span></li><li><code>NOME_ISTANZA_DESTINAZIONE</code> = <span>Nome dell&#39;istanza specifica della destinazione.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>Identificatore univoco per l&#39;istanza di destinazione.</span></li><li><code>NOME_SANDBOX</code> = <span>Nome dell&#39;ambiente sandbox.</span></li><li><code>NOME_ORGANIZZAZIONE</code> = <span>Nome dell&#39;organizzazione.</span></li></ul> |
 
 {style="table-layout:auto"}
 
@@ -2073,7 +2080,7 @@ La tabella seguente fornisce le descrizioni di tutti i parametri nella sezione `
 
 **Risposta**
 
-Flusso di dati +++Crea - Risposta
++++Crea flusso di dati - Risposta
 
 ```json
 {
@@ -2088,9 +2095,9 @@ Flusso di dati +++Crea - Risposta
 
 **Richiesta**
 
-+++Crea flusso di dati dataset verso la [!DNL Azure Data Lake Gen 2(ADLS Gen2)] destinazione - Richiesta
++++Crea flusso di dati del set di dati nella destinazione [!DNL Azure Data Lake Gen 2(ADLS Gen2)] - Richiesta
 
-Notare le righe evidenziate con commenti in linea nell&#39;esempio richiesta, che forniscono informazioni aggiuntive. Rimuovi il commenti in linea nel richiesta quando copi e incolla il richiesta nel terminale scelto.
+Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
 
 ```shell {line-numbers="true" start-line="1" highlight="12,22-25"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
@@ -2126,7 +2133,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-La tabella seguente fornisce le descrizioni di tutti i parametri nella sezione, che consente di personalizzare i `scheduleParams` tempi di esportazione, la frequenza, la posizione e altro ancora per le esportazioni del set di dati.
+La tabella seguente fornisce le descrizioni di tutti i parametri nella sezione `scheduleParams`, che consente di personalizzare i tempi di esportazione, la frequenza, la posizione e altro ancora per le esportazioni dei set di dati.
 
 | Parametro | Descrizione |
 |---------|----------|
@@ -2205,7 +2212,7 @@ La tabella seguente fornisce le descrizioni di tutti i parametri nella sezione `
 | `interval` | Selezionare `1` quando `timeUnit` è giorno e `3`,`6`,`9`,`12` quando l&#39;unità di tempo è `hour`. |
 | `startTime` | Data e ora in secondi UNIX in cui devono iniziare le esportazioni dei set di dati. |
 | `endTime` | La data e l’ora in secondi UNIX in cui devono terminare le esportazioni dei set di dati. |
-| `foldernameTemplate` | Specifica la struttura del nome della cartella prevista nel percorso di archiviazione in cui verranno depositati i file esportati. <ul><li><code>ID_SET_DATI</code> = <span>Identificatore univoco per il set di dati.</span></li><li><code>DESTINAZIONE</code> <span>= Il nome della destinazione.</span></li><li><code>DATETIME</code> <span>= La data e l&#39;ora formattate come yyyyMMdd_HHmmss.</span></li><li><code>ORA_ESPORTAZIONE</code> <span>= L&#39;ora pianificata per l&#39;esportazione dei dati formattata come `exportTime=YYYYMMDDHHMM`.</span></li><li><code>NOME_ISTANZA_DESTINAZIONE</code> <span>= Il nome del istanza specifico della destinazione.</span></li><li><code>DESTINATION_INSTANCE_ID</code> <span>= Identificatore univoco per il istanza di destinazione.</span></li><li><code>NOME_SANDBOX</code> = <span>Nome dell&#39;ambiente sandbox.</span></li><li><code>NOME_ORGANIZZAZIONE</code> = <span>Nome dell&#39;organizzazione.</span></li></ul> |
+| `foldernameTemplate` | Specifica la struttura del nome della cartella prevista nel percorso di archiviazione in cui verranno depositati i file esportati. <ul><li><code>ID_SET_DATI</code> = <span>Identificatore univoco per il set di dati.</span></li><li><code>DESTINAZIONE</code> = <span>Nome della destinazione.</span></li><li><code>DATETIME</code> = <span>Data e ora formattate come yyyyMMdd_HHmmss.</span></li><li><code>ORA_ESPORTAZIONE</code> = <span>Ora pianificata per l&#39;esportazione dei dati formattata come `exportTime=YYYYMMDDHHMM`.</span></li><li><code>NOME_ISTANZA_DESTINAZIONE</code> = <span>Nome dell&#39;istanza specifica della destinazione.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>Identificatore univoco per l&#39;istanza di destinazione.</span></li><li><code>NOME_SANDBOX</code> = <span>Nome dell&#39;ambiente sandbox.</span></li><li><code>NOME_ORGANIZZAZIONE</code> = <span>Nome dell&#39;organizzazione.</span></li></ul> |
 
 {style="table-layout:auto"}
 +++
@@ -2339,11 +2346,11 @@ La tabella seguente fornisce le descrizioni di tutti i parametri nella sezione `
 
 | Parametro | Descrizione |
 |---------|----------|
-| `exportMode` | Selezionate `"DAILY_FULL_EXPORT"` o `"FIRST_FULL_THEN_INCREMENTAL"`. Per ulteriori informazioni sulle due opzioni, fare riferimento a [esportare file](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) completi ed [esportare file](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) incrementali nella esercitazione di attivazione delle destinazioni batch. Le tre opzioni di esportazione disponibili sono: <br> **File completo - Una volta**: `"DAILY_FULL_EXPORT"` può essere usato solo in combinazione con`timeUnit`: e `interval`:`0``day` per un&#39;esportazione completa una tantum del set di dati. Le esportazioni giornaliere complete di set di dati non sono supportate. Se sono necessarie esportazioni giornaliere, utilizzate l&#39;opzione di esportazione incrementale. <br> **Esportazioni** giornaliere incrementali: selezionare `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day`, e `interval` :`1` per esportazioni incrementali giornaliere. <br> **Esportazioni** orarie incrementali: selezionare `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour`, e `interval` :`3`,`6`,`9`, o `12` per esportazioni incrementali orarie. |
-| `timeUnit` | Selezionare `day` o `hour` in base alla frequenza con cui si desidera esportare i file dei set di dati. |
-| `interval` | Selezionare `1` quando è giorno `timeUnit` e `3`,`6`,`9`,`12` quando l&#39;unità di tempo è `hour`. |
-| `startTime` | Data e ora, in secondi UNIX, in cui devono iniziare le esportazioni dei set di dati. |
-| `endTime` | Data e ora, in secondi UNIX, in cui le esportazioni del set di dati devono terminare. |
+| `exportMode` | Selezionare `"DAILY_FULL_EXPORT"` o `"FIRST_FULL_THEN_INCREMENTAL"`. Per ulteriori informazioni sulle due opzioni, fare riferimento a [esporta file completi](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [esporta file incrementali](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) nell&#39;esercitazione di attivazione delle destinazioni batch. Le tre opzioni di esportazione disponibili sono: <br> **File completo - Una volta**: `"DAILY_FULL_EXPORT"` può essere utilizzato solo in combinazione con `timeUnit`:`day` e `interval`:`0` per un&#39;esportazione completa una tantum del set di dati. Le esportazioni giornaliere complete di set di dati non sono supportate. Se hai bisogno di esportazioni giornaliere, utilizza l’opzione di esportazione incrementale. <br> **Esportazioni incrementali giornaliere**: selezionare `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` e `interval`:`1` per le esportazioni incrementali giornaliere. <br> **Esportazioni orarie incrementali**: selezionare `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` e `interval`:`3`,`6`,`9` o `12` per le esportazioni orarie incrementali. |
+| `timeUnit` | Selezionare `day` o `hour` a seconda della frequenza con cui si desidera esportare i file del set di dati. |
+| `interval` | Selezionare `1` quando `timeUnit` è giorno e `3`,`6`,`9`,`12` quando l&#39;unità di tempo è `hour`. |
+| `startTime` | Data e ora in secondi UNIX in cui devono iniziare le esportazioni dei set di dati. |
+| `endTime` | La data e l’ora in secondi UNIX in cui devono terminare le esportazioni dei set di dati. |
 | `foldernameTemplate` | Specifica la struttura del nome della cartella prevista nel percorso di archiviazione in cui verranno depositati i file esportati. <ul><li><code>ID_SET_DATI</code> = <span>Identificatore univoco per il set di dati.</span></li><li><code>DESTINAZIONE</code> = <span>Nome della destinazione.</span></li><li><code>DATETIME</code> = <span>Data e ora formattate come yyyyMMdd_HHmmss.</span></li><li><code>ORA_ESPORTAZIONE</code> = <span>Ora pianificata per l&#39;esportazione dei dati formattata come `exportTime=YYYYMMDDHHMM`.</span></li><li><code>NOME_ISTANZA_DESTINAZIONE</code> = <span>Nome dell&#39;istanza specifica della destinazione.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>Identificatore univoco per l&#39;istanza di destinazione.</span></li><li><code>NOME_SANDBOX</code> = <span>Nome dell&#39;ambiente sandbox.</span></li><li><code>NOME_ORGANIZZAZIONE</code> = <span>Nome dell&#39;organizzazione.</span></li></ul> |
 
 {style="table-layout:auto"}

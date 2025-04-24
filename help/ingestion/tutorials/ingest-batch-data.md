@@ -5,7 +5,7 @@ title: Inserire Dati In Experience Platform
 type: Tutorial
 description: Adobe Experience Platform consente di importare facilmente i dati come file batch sotto forma di file Parquet o dati conformi a uno schema Experience Data Model (XDM) noto.
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 31631b03b6ff1e50e55c01e948fae5c29fd618dd
 workflow-type: tm+mt
 source-wordcount: '1322'
 ht-degree: 0%
@@ -78,7 +78,7 @@ Nella scheda Info è presente anche un interruttore **[!UICONTROL Profilo]** uti
 
 ![Attività set di dati](../images/tutorials/ingest-batch-data/sample-dataset.png)
 
-## Abilita set di dati per [!DNL Real-Time Customer Profile]
+## Abilita set di dati per [!DNL Real-Time Customer Profile] {#enable-for-profile}
 
 I set di dati vengono utilizzati per acquisire i dati in [!DNL Experience Platform] e tali dati vengono utilizzati per identificare i singoli utenti e unire le informazioni provenienti da più origini. Queste informazioni unite sono denominate [!DNL Real-Time Customer Profile]. Affinché [!DNL Experience Platform] sappia quali informazioni includere in [!DNL Real-Time Profile], i set di dati possono essere contrassegnati per l&#39;inclusione utilizzando l&#39;interruttore **[!UICONTROL Profilo]**.
 
