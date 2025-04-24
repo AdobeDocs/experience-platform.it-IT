@@ -1,9 +1,9 @@
 ---
-title: Adobe Integrazione dell’estensione API per eventi web di TikTok
+title: Integrazione dell’estensione API per eventi web Adobe TikTok
 description: Questa API di eventi web di Adobe Experience Platform consente di condividere le interazioni del sito web direttamente con TikTok.
 last-substantial-update: 2023-09-26T00:00:00Z
 exl-id: 14b8e498-8ed5-4330-b1fa-43fd1687c201
-source-git-commit: 4ee895cb8371646fd2013e2a8f65c2ffdae95850
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
 source-wordcount: '1105'
 ht-degree: 2%
@@ -12,7 +12,7 @@ ht-degree: 2%
 
 # Panoramica dell&#39;estensione API per [!DNL TikTok] eventi Web
 
-L&#39;API degli eventi [!DNL TikTok] è un&#39;interfaccia protetta dell&#39;[Edge Network Server API](/help/server-api/overview.md) che consente di condividere informazioni con [!DNL TikTok] direttamente sulle azioni degli utenti sui siti Web. È possibile sfruttare le regole di inoltro degli eventi per inviare dati da [!DNL Adobe Experience Platform Edge Network] a [!DNL TikTok] utilizzando l&#39;estensione API per eventi Web [!DNL TikTok].
+L&#39;API degli eventi [!DNL TikTok] è un&#39;interfaccia protetta dell&#39;[API Edge Network](https://developer.adobe.com/data-collection-apis/docs/) che consente di condividere informazioni con [!DNL TikTok] direttamente sulle azioni degli utenti sui siti Web. È possibile sfruttare le regole di inoltro degli eventi per inviare dati da [!DNL Adobe Experience Platform Edge Network] a [!DNL TikTok] utilizzando l&#39;estensione API per eventi Web [!DNL TikTok].
 
 ## [!DNL TikTok] prerequisiti {#prerequisites}
 
@@ -52,7 +52,7 @@ Schermata di configurazione ![[!DNL TikTok] per l&#39;estensione API per eventi 
 
 Una volta configurati tutti gli elementi dati, puoi iniziare a creare regole di inoltro degli eventi che determinano quando e come verranno inviati gli eventi a [!DNL TikTok].
 
-Crea una nuova [regola](../../../ui/managing-resources/rules.md) nella proprietà di inoltro eventi. In **[!UICONTROL Azioni]**, aggiungi una nuova azione e imposta l&#39;estensione su **[!UICONTROL Estensione API TikTok Web Events]**. Per inviare eventi Edge Network a [!DNL TikTok], impostare **[!UICONTROL Tipo azione]** su **[!UICONTROL Invia evento API eventi Web TikTok].**
+Crea una nuova [regola](../../../ui/managing-resources/rules.md) nella proprietà di inoltro eventi. In **[!UICONTROL Azioni]**, aggiungi una nuova azione e imposta l&#39;estensione su **[!UICONTROL Estensione API TikTok Web Events]**. Per inviare eventi Edge Network a [!DNL TikTok], impostare **[!UICONTROL Action Type]** su **[!UICONTROL Send TikTok Web Events API Event].**
 
 ![Tipo di azione [!UICONTROL Invia evento API eventi Web TikTok] selezionato per una regola [!DNL TikTok] nell&#39;interfaccia utente di Data Collection.](../../../images/extensions/server/tiktok/select-action.png)
 
@@ -116,9 +116,9 @@ Utilizza i parametri delle proprietà per configurare altre proprietà supportat
 
 ## Deduplicazione degli eventi {#deduplication}
 
-[!DNL TikTok] pixel dovrà essere configurato per la deduplicazione se si utilizza sia l&#39;SDK di [!DNL TikTok] pixel che l&#39;estensione API di [!DNL TikTok] eventi Web per inviare gli stessi eventi a [!DNL TikTok].
+[!DNL TikTok] pixel dovrà essere configurato per la deduplicazione se si utilizza l&#39;estensione SDK di [!DNL TikTok] pixel e l&#39;estensione API di [!DNL TikTok] eventi Web per inviare gli stessi eventi a [!DNL TikTok].
 
-La deduplicazione non è necessaria se tipi di evento distinti vengono inviati dal client e dal server senza alcuna sovrapposizione. Per evitare effetti negativi sul reporting, è necessario assicurarsi che ogni singolo evento condiviso dall&#39;SDK di [!DNL TikTok] pixel e dall&#39;estensione API di [!DNL TikTok] eventi Web sia deduplicato.
+La deduplicazione non è necessaria se tipi di evento distinti vengono inviati dal client e dal server senza alcuna sovrapposizione. Per evitare effetti negativi sul reporting, è necessario assicurarsi che ogni singolo evento condiviso dal SDK di [!DNL TikTok] pixel e dall&#39;estensione API di [!DNL TikTok] eventi Web sia deduplicato.
 
 Quando invii eventi condivisi, accertati che ogni evento includa un ID pixel, un ID evento e un nome. Gli eventi duplicati che arrivano entro cinque minuti l’uno dall’altro verranno uniti. Se il campo dati era assente dal primo evento, verrà combinato con l’evento successivo. Eventuali eventi duplicati ricevuti entro 48 ore verranno rimossi.
 

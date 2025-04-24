@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform di agosto 2022
 description: Note sulla versione di Adobe Experience Platform di agosto 2022.
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 25697d341b2970eeb20d9f2507ee701ade8046d3
 workflow-type: tm+mt
-source-wordcount: '2012'
-ht-degree: 26%
+source-wordcount: '2014'
+ht-degree: 27%
 
 ---
 
@@ -94,7 +94,7 @@ Per ulteriori informazioni su [!DNL Data Prep], vedere la [[!DNL Data Prep] pano
 
 | Funzione | Descrizione |
 | ----------- | ----------- |
-| (Beta) Supporto della personalizzazione basata su attributi per le destinazioni di personalizzazione | Con la versione beta della personalizzazione basata su attributi, nel [catalogo di destinazione](../../destinations/catalog/overview.md) verranno visualizzate due nuove schede: <ul><li>**[!UICONTROL Adobe Target V2]**: questo connettore è attualmente in versione beta ed è disponibile solo per un numero selezionato di clienti. Oltre alla funzionalità fornita dalla scheda di Adobe Target V1, il connettore di Target V2 aggiunge un [passaggio di mappatura](/help/destinations/ui/activate-edge-personalization-destinations.md#map-attributes) al flusso di lavoro di attivazione, che consente di mappare gli attributi del profilo ad Adobe Target, abilitando la personalizzazione della stessa pagina basata su attributi e della pagina successiva.</li><li>**[!UICONTROL Personalization personalizzato con attributi]**: il connettore è attualmente in versione beta ed è disponibile solo per un numero selezionato di clienti. Oltre alla funzionalità fornita da **[!UICONTROL Personalization personalizzato]**, il connettore **[!UICONTROL Personalization personalizzato con attributi]** aggiunge un [passaggio di mappatura](../../destinations/ui/activate-edge-personalization-destinations.md#map-attributes) facoltativo al flusso di lavoro di attivazione, che consente di mappare gli attributi del profilo alla destinazione di personalizzazione personalizzata, abilitando la personalizzazione della stessa pagina e della pagina successiva basata su attributi.</li></ul> Gli attributi del profilo <br> possono contenere dati sensibili. Per proteggere questi dati, la destinazione **[!UICONTROL Personalization personalizzato con attributi]** richiede l&#39;utilizzo della [API server Edge Network](../../server-api/overview.md) per la raccolta dati. Inoltre, tutte le chiamate API server devono essere effettuate in un [contesto autenticato](../../server-api/authentication.md). |
+| (Beta) Supporto della personalizzazione basata su attributi per le destinazioni di personalizzazione | Con la versione beta della personalizzazione basata su attributi, nel [catalogo di destinazione](../../destinations/catalog/overview.md) verranno visualizzate due nuove schede: <ul><li>**[!UICONTROL Adobe Target V2]**: questo connettore è attualmente in versione beta ed è disponibile solo per un numero selezionato di clienti. Oltre alla funzionalità fornita dalla scheda di Adobe Target V1, il connettore di Target V2 aggiunge un [passaggio di mappatura](/help/destinations/ui/activate-edge-personalization-destinations.md#map-attributes) al flusso di lavoro di attivazione, che consente di mappare gli attributi del profilo ad Adobe Target, abilitando la personalizzazione della stessa pagina basata su attributi e della pagina successiva.</li><li>**[!UICONTROL Personalization personalizzato con attributi]**: il connettore è attualmente in versione beta ed è disponibile solo per un numero selezionato di clienti. Oltre alla funzionalità fornita da **[!UICONTROL Personalization personalizzato]**, il connettore **[!UICONTROL Personalization personalizzato con attributi]** aggiunge un [passaggio di mappatura](../../destinations/ui/activate-edge-personalization-destinations.md#map-attributes) facoltativo al flusso di lavoro di attivazione, che consente di mappare gli attributi del profilo alla destinazione di personalizzazione personalizzata, abilitando la personalizzazione della stessa pagina e della pagina successiva basata su attributi.</li></ul> Gli attributi del profilo <br> possono contenere dati sensibili. Per proteggere questi dati, la destinazione **[!UICONTROL Personalization personalizzato con attributi]** richiede l&#39;utilizzo dell&#39;[API Edge Network](https://developer.adobe.com/data-collection-apis/docs/getting-started/) per la raccolta dati. Inoltre, tutte le chiamate API di Edge Network devono essere effettuate in un [contesto autenticato](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication). |
 
 {style="table-layout:auto"}
 
@@ -137,7 +137,7 @@ XDM è una specifica open-source che fornisce strutture e definizioni comuni (sc
 
 {style="table-layout:auto"}
 
-Per ulteriori informazioni su XDM in Experience Platform, consulta la [Panoramica del sistema XDM](../../xdm/home.md).
+Per ulteriori informazioni su XDM in Experience Platform, consulta la [panoramica del sistema XDM](../../xdm/home.md).
 
 ## Profilo cliente in tempo reale {#profile}
 

@@ -2,9 +2,9 @@
 title: Migliora la raccolta dati con i dati meteo da DNL The Weather Channel
 description: Migliora i dati raccolti tramite flussi di dati con i dati meteo da DNL The Weather Channel.
 exl-id: 548dfca7-2548-46ac-9c7e-8190d64dd0a4
-source-git-commit: 041a1782442df5f08bb52e4e450734a51c7781ea
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '676'
 ht-degree: 68%
 
 ---
@@ -28,7 +28,7 @@ Sono disponibili tre tipi di dati da [!DNL The Weather Channel]:
 Prima di utilizzare i dati meteo, è necessario soddisfare i seguenti prerequisiti:
 
 * È necessario concedere in licenza i dati meteo che verranno utilizzati da [!DNL The Weather Channel]. Seguirà l’abilitazione del meteo sul tuo account.
-* I dati meteo sono disponibili solo attraverso stream di dati. Per utilizzare i dati meteo, è necessario utilizzare [!DNL Web SDK], [!DNL Mobile Edge Extension] o [Server API](../../server-api/overview.md) per includere tali dati.
+* I dati meteo sono disponibili solo attraverso stream di dati. Per utilizzare i dati meteo, è necessario utilizzare [!DNL Web SDK], [!DNL Mobile Edge Extension] o l&#39;[API Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/) per includere tali dati.
 * Lo stream di dati deve avere abilitata la funzione di [[!UICONTROL geolocalizzazione]](../configure.md#advanced-options).
 * Aggiungi il [gruppo di campi meteo](#schema-configuration) allo schema in uso.
 
@@ -66,7 +66,7 @@ In [!DNL Adobe Customer Journey Analytics], i dati meteo sono disponibili nel se
 
 ### Real-Time Customer Data Platform {#rtcdp}
 
-I dati meteo sono disponibili in [Real-time Customer Data Platform](../../rtcdp/overview.md), per l&#39;utilizzo in audience. I dati meteo sono collegati agli eventi.
+I dati meteo sono disponibili in [Real-Time Customer Data Platform](../../rtcdp/overview.md), per l&#39;utilizzo in audience. I dati meteo sono collegati agli eventi.
 
 ![Segment Builder che mostra gli eventi meteo](../assets/data-enrichment/weather/schema-builder.png)
 

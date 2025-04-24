@@ -3,9 +3,9 @@ keywords: destinazioni; domande; domande frequenti; FAQ; FAQ destinazioni
 title: Domande frequenti
 description: Risposte alle domande più frequenti sulle destinazioni Adobe Experience Platform
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '1675'
+source-wordcount: '1673'
 ht-degree: 0%
 
 ---
@@ -201,7 +201,7 @@ No, [Web SDK](../web-sdk/home.md) non è necessario per attivare i tipi di pubbl
 
 Tuttavia, se si utilizza [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html) al posto di Web SDK, è supportata solo la personalizzazione della sessione successiva.
 
-Per [casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva](ui/activate-edge-personalization-destinations.md), è necessario utilizzare [Web SDK](../web-sdk/home.md) o l&#39;[API server Edge Network](../server-api/overview.md). Per ulteriori dettagli sull&#39;implementazione, consulta la documentazione sull&#39;[attivazione dei tipi di pubblico nelle destinazioni Edge](ui/activate-edge-personalization-destinations.md).
+Per [casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva](ui/activate-edge-personalization-destinations.md), è necessario utilizzare [Web SDK](../web-sdk/home.md) o l&#39;[API Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/). Per ulteriori dettagli sull&#39;implementazione, consulta la documentazione sull&#39;[attivazione dei tipi di pubblico nelle destinazioni Edge](ui/activate-edge-personalization-destinations.md).
 +++
 
 ### Esiste un limite al numero di attributi che posso inviare da Real-time Customer Data Platform a Adobe Target o a una destinazione Personalization personalizzata?
@@ -244,10 +244,10 @@ Attualmente questo non è supportato tramite l’interfaccia utente Destinazioni
 Quando elimini una destinazione, tutti i tipi di pubblico e gli attributi mappati nella destinazione vengono eliminati da Adobe Target e anche da Edge Network.
 +++
 
-### L’integrazione funziona utilizzando l’API server di Edge Network?
+### L’integrazione funziona utilizzando l’API di Edge Network?
 
 +++Risposta
-Sì, l’API server di Edge Network funziona con la destinazione Personalization personalizzata. Poiché gli attributi del profilo possono contenere dati sensibili, per proteggere tali dati la destinazione Personalization personalizzata richiede l’utilizzo dell’API server di Edge Network per la raccolta dei dati. Inoltre, tutte le chiamate API devono essere effettuate in un [contesto autenticato](../server-api/authentication.md).
+Sì, l’API di Edge Network funziona con la destinazione Personalization personalizzata. Poiché gli attributi del profilo possono contenere dati sensibili, per proteggere tali dati la destinazione Personalization personalizzata richiede l’utilizzo dell’API Edge Network per la raccolta dei dati. Inoltre, tutte le chiamate API devono essere effettuate in un [contesto autenticato](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/).
 +++
 
 ### È possibile disporre di un solo criterio di unione attivo su Edge. Posso creare tipi di pubblico che utilizzano un criterio di unione diverso e inviarli comunque ad Adobe Target come pubblico in streaming?

@@ -3,9 +3,9 @@ title: Cercare gli attributi del profilo edge in tempo reale
 description: Scopri come cercare gli attributi del profilo Edge in tempo reale utilizzando la destinazione Personalization personalizzata e l’API di Edge Network
 type: Tutorial
 exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '1907'
+source-wordcount: '1911'
 ht-degree: 2%
 
 ---
@@ -30,7 +30,7 @@ Quando configuri il caso d’uso descritto in questa pagina, utilizzerai i segue
 * [Datastream](../../datastreams/overview.md): un datastream riceve i dati evento in arrivo da Web SDK e risponde con i dati del profilo Edge.
 * [Criteri di unione](../../segmentation/ui/segment-builder.md#merge-policies): verrà creato un criterio di unione [!UICONTROL Attivo su Edge] per garantire che i profili edge utilizzino i dati di profilo corretti.
 * [Connessione Personalization personalizzata](../catalog/personalization/custom-personalization.md): verrà configurata una nuova connessione di personalizzazione personalizzata che invierà gli attributi del profilo a Edge Network.
-* [API Edge Network](../../server-api/overview.md): utilizzerai la funzionalità dell&#39;API Edge Network [raccolta dati interattiva](../../server-api/interactive-data-collection.md) per recuperare rapidamente gli attributi del profilo dai profili edge.
+* [API Edge Network](https://developer.adobe.com/data-collection-apis/docs/): utilizzerai la funzionalità dell&#39;API Edge Network [raccolta dati interattiva](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) per recuperare rapidamente gli attributi del profilo dai profili edge.
 
 ## Guardrail prestazioni {#guardrails}
 
@@ -166,7 +166,7 @@ Il passaggio successivo consiste nel configurare la soluzione di personalizzazio
 
 >[!IMPORTANT]
 >
->Gli attributi del profilo possono contenere dati sensibili. Per proteggere questi dati, è necessario recuperare gli attributi del profilo tramite l&#39;[API Edge Network](../../server-api/overview.md). Inoltre, per autenticare le chiamate API, è necessario recuperare gli attributi del profilo tramite l&#39;endpoint [raccolta dati interattiva](../../server-api/interactive-data-collection.md) dell&#39;API Edge Network.
+>Gli attributi del profilo possono contenere dati sensibili. Per proteggere questi dati, è necessario recuperare gli attributi del profilo tramite l&#39;[API Edge Network](https://developer.adobe.com/data-collection-apis/docs/getting-started/). Inoltre, per autenticare le chiamate API, è necessario recuperare gli attributi del profilo tramite l&#39;endpoint [raccolta dati interattiva](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) dell&#39;API Edge Network.
 ><br>Se non segui i requisiti di cui sopra, la personalizzazione sarà basata solo sull’iscrizione al pubblico e gli attributi di profilo non saranno disponibili.
 
 Lo stream di dati configurato nel [passaggio 1](#create-datastream) è ora pronto per accettare i dati dell&#39;evento in arrivo e rispondere con le informazioni del profilo Edge.

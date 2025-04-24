@@ -3,9 +3,9 @@ title: Attivare i tipi di pubblico per Edge Personalization Destinations
 description: Scopri come attivare tipi di pubblico da Adobe Experience Platform a destinazioni di personalizzazione Edge per casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 25697d341b2970eeb20d9f2507ee701ade8046d3
 workflow-type: tm+mt
-source-wordcount: '1961'
+source-wordcount: '1964'
 ht-degree: 2%
 
 ---
@@ -150,9 +150,9 @@ Puoi scegliere tra più tipi di pubblico, a seconda della loro origine:
 
 >[!IMPORTANT]
 >
->Gli attributi del profilo possono contenere dati sensibili. Per proteggere questi dati, la destinazione **[!UICONTROL Personalization]** personalizzata richiede l&#39;utilizzo della [API server Edge Network](../../server-api/overview.md) durante la configurazione della destinazione per la personalizzazione basata su attributi. Tutte le chiamate API server devono essere effettuate in un [contesto autenticato](../../server-api/authentication.md).
+>Gli attributi del profilo possono contenere dati sensibili. Per proteggere questi dati, la destinazione **[!UICONTROL Personalization]** personalizzata richiede l&#39;utilizzo della [API Edge Network](https://developer.adobe.com/data-collection-apis/docs/) durante la configurazione della destinazione per la personalizzazione basata su attributi. Tutte le chiamate API di Edge Network devono essere effettuate in un [contesto autenticato](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/).
 >
-><br>Se per l&#39;integrazione si utilizza già Web SDK o Mobile SDK, è possibile recuperare gli attributi tramite l&#39;API server aggiungendo un&#39;integrazione lato server.
+><br>Se per l&#39;integrazione si sta già utilizzando Web SDK o Mobile SDK, è possibile recuperare gli attributi tramite l&#39;API Edge Network aggiungendo un&#39;integrazione lato server.
 >
 ><br>Se non segui i requisiti di cui sopra, la personalizzazione sarà basata solo sull&#39;iscrizione al pubblico.
 

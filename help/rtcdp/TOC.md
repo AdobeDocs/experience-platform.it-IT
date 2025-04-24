@@ -5,7 +5,7 @@ audience: user
 user-guide-title: Guida di Real-time Customer Data Platform
 user-guide-description: Riunisci dati noti e anonimi provenienti da più origini aziendali per creare profili cliente, tipi di pubblico da tali profili e attivare tali tipi di pubblico in destinazioni di terze parti.
 role: Admin
-source-git-commit: 3b2645927e4760114298295e920e07a20df3fcbd
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
 source-wordcount: '307'
 ht-degree: 62%
@@ -47,7 +47,7 @@ ht-degree: 62%
 * Guardrail {#guardrails}
    * [Panoramica sui guardrail di Real-Time CDP](guardrails/overview.md)
    * [Guardrail per l&#39;acquisizione dei dati](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
-   * [Guardrail per  [!DNL Edge Network Server API]](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/guardrails.html){target="_blank"}
+   * [Guardrail per  [!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/){target="_blank"}
    * [Guardrail per [!DNL Real-Time Customer Profile] dati e segmentazione](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=it){target="_blank"}
    * [Guardrail per [!DNL Identity Service] dati](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
    * [Guardrail per [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}

@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform - Marzo 2022
 description: Note sulla versione di Adobe Experience Platform di marzo 2022.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '1182'
-ht-degree: 16%
+source-wordcount: '1183'
+ht-degree: 20%
 
 ---
 
@@ -59,7 +59,7 @@ Per ulteriori informazioni su Real-Time CDP B2B edition, consulta la [panoramica
 
 ## Avvisi {#alerts}
 
-Experience Platform ti consente di abbonarti agli avvisi basati su eventi per varie attività di Experience Platform. Puoi abbonarti a diverse regole di avviso tramite la scheda [!UICONTROL Avvisi] nell&#39;interfaccia utente di Experience Platform e scegliere di ricevere messaggi di avviso all&#39;interno dell&#39;interfaccia utente stessa o tramite notifiche e-mail.
+Experience Platform consente di iscriverti agli avvisi basati su eventi per varie attività di Experience Platform. Puoi iscriverti a diverse regole di avviso tramite la scheda [!UICONTROL Avvisi] nell’interfaccia utente di Experience Platform e scegliere di ricevere messaggi di avviso nell’interfaccia stessa o tramite notifiche e-mail.
 
 **Funzioni aggiornate**
 
@@ -115,7 +115,7 @@ Experience Platform fornisce una suite di tecnologie che consente di raccogliere
 | Funzione | Descrizione |
 | --- | --- |
 | Impostazioni globali dello stream di dati | Ora puoi configurare diverse nuove impostazioni globali durante la configurazione di un flusso di dati: geolocalizzazione, cookie ID di prime parti e sincronizzazione ID di terze parti. Per ulteriori informazioni, consulta la sezione sulla [configurazione di uno stream di dati](../../datastreams/overview.md#create) nella guida dell&#39;interfaccia utente dello stream di dati. |
-| [API server Edge Network](../../server-api/overview.md) | L’API server consente ai clienti di interagire con Experience Platform Edge Network utilizzando un nuovo endpoint autenticato, per potenziare una varietà di casi di utilizzo di raccolta dati, personalizzazione, pubblicità e marketing. |
+| [API Edge Network](https://developer.adobe.com/data-collection-apis/docs/getting-started/) | L’API di Edge Network consente ai clienti di interagire con Experience Platform Edge Network utilizzando un nuovo endpoint autenticato, per potenziare una varietà di casi di utilizzo di raccolta dati, personalizzazione, pubblicità e marketing. |
 
 Per ulteriori informazioni sulla raccolta dati in Experience Platform, consulta la [panoramica sulla raccolta dati](../../collection/home.md).
 

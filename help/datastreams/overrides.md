@@ -1,33 +1,33 @@
 ---
 title: Configurare gli override dello stream di dati
-description: Scopri come configurare le sostituzioni dello stream di dati nell’interfaccia utente dello stream di dati e attivarle tramite l’SDK per web o l’SDK di Mobile.
+description: Scopri come configurare le sostituzioni dello stream di dati nell’interfaccia utente dello stream di dati e attivarle tramite Web SDK o Mobile SDK.
 exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
-source-git-commit: 17ed5f3c14d4787352f72d3d7721cbb6416d533e
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '1081'
+source-wordcount: '1083'
 ht-degree: 57%
 
 ---
 
 # Configurare gli override dello stream di dati
 
-Le sostituzioni dello stream di dati consentono di definire configurazioni aggiuntive per gli stream di dati, che vengono passati all’Edge Network tramite l’SDK per web o l’SDK di Mobile.
+Le sostituzioni dello stream di dati consentono di definire configurazioni aggiuntive per gli stream di dati, che vengono passati ad Edge Network tramite Web SDK o Mobile SDK.
 
 Questo consente di attivare comportamenti diversi dello stream di dati rispetto a quelli predefiniti, senza creare uno stream di dati o modificare le impostazioni esistenti.
 
 La sostituzione della configurazione dello stream di dati è un processo in due fasi:
 
 1. Innanzitutto, devi definire la sostituzione della configurazione dello stream di dati nella [pagina di configurazione dello stream di dati](configure.md).
-2. Quindi, devi inviare le sostituzioni all’Edge Network in uno dei seguenti modi:
+2. Quindi, devi inviare le sostituzioni ad Edge Network in uno dei seguenti modi:
    * Tramite i comandi `sendEvent` o `configure` [Web SDK](#send-overrides).
    * Tramite l&#39;estensione tag [Web SDK](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
-   * Tramite l&#39;API Mobile SDK [sendEvent](#send-overrides) o utilizzando [Rules](#send-overrides).
+   * Tramite l&#39;API [sendEvent](#send-overrides) di Mobile SDK o utilizzando [Regole](#send-overrides).
 
 Questo articolo spiega il processo di override della configurazione dello stream di dati end-to-end per ogni tipo di override supportato.
 
 >[!IMPORTANT]
 >
->Le sostituzioni dello stream di dati sono supportate solo per le integrazioni [Web SDK](../web-sdk/home.md) e [Mobile SDK](https://developer.adobe.com/client-sdks/home/). Le integrazioni [API server](../server-api/overview.md) non supportano attualmente le sostituzioni dello stream di dati.
+>Le sostituzioni dello stream di dati sono supportate solo per le integrazioni [Web SDK](../web-sdk/home.md) e [Mobile SDK](https://developer.adobe.com/client-sdks/home/). Le integrazioni [API Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/) non supportano attualmente le sostituzioni dello stream di dati.
 ><br>
 >Gli override dello stream di dati devono essere utilizzati quando è necessario inviare dati diversi a stream di dati diversi. Non utilizzare le sostituzioni dello stream di dati per i casi d’uso di personalizzazione o i dati di consenso.
 
@@ -43,11 +43,11 @@ Utilizzando gli override dello stream di dati, l’azienda può cambiare dinamic
 
 Un caso d’uso comune potrebbe essere l’invio di dati a un flusso di dati specifico per paese e anche a un flusso di dati globale in cui i clienti eseguono un’azione importante, ad esempio l’ordine o l’aggiornamento del profilo utente.
 
-**Differenziazione di profili e identità per diverse unità aziendali**
+**Differenziazione di profili e identità per diverse unità di business**
 
-Un’azienda con più business unit desidera utilizzare più Experienci Platform di sandbox per memorizzare i dati specifici di ogni business unit.
+Un’azienda con più business unit desidera utilizzare più sandbox Experience Platform per memorizzare dati specifici di ogni business unit.
 
-Invece di inviare dati a uno stream di dati predefinito, l’azienda può utilizzare gli override dello stream di dati per assicurarsi che ogni unità aziendale abbia il proprio stream di dati tramite cui ricevere i dati.
+Invece di inviare dati a uno stream di dati predefinito, l’azienda può utilizzare gli override dello stream di dati per assicurarsi che ogni unità di business abbia il proprio stream di dati tramite cui ricevere i dati.
 
 ## Configurare gli override dello stream di dati nell’interfaccia utente dello stream di dati {#configure-overrides}
 
@@ -68,7 +68,7 @@ Dopo aver creato lo stream di dati, modifica il servizio [Adobe Target](configur
 
 Dopo aver aggiunto gli override desiderati, salva le impostazioni dello stream di dati.
 
-Ora dovresti avere configurato gli override dello stream di dati di Adobe Target. Ora puoi [inviare le sostituzioni all&#39;Edge Network tramite Web SDK o Mobile SDK](#send-overrides).
+Ora dovresti avere configurato gli override dello stream di dati di Adobe Target. Ora puoi [inviare le sostituzioni ad Edge Network tramite Web SDK o Mobile SDK](#send-overrides).
 
 ### Override dello stream di dati per Adobe Analytics {#analytics-overrides}
 
@@ -82,7 +82,7 @@ Seleziona **[!UICONTROL Mostra modalità batch]** per attivare la modifica in ba
 
 Dopo aver aggiunto gli override desiderati, salva le impostazioni dello stream di dati.
 
-Ora gli override dello stream di dati di Adobe Analytics saranno configurati. Ora puoi [inviare le sostituzioni all&#39;Edge Network tramite Web SDK o Mobile SDK](#send-overrides).
+Ora gli override dello stream di dati di Adobe Analytics saranno configurati. Ora puoi [inviare le sostituzioni ad Edge Network tramite Web SDK o Mobile SDK](#send-overrides).
 
 ### Override di stream di dati per i set di dati evento di Experience Platform {#event-dataset-overrides}
 
@@ -94,7 +94,7 @@ Dopo aver creato lo stream di dati, modifica il servizio [Adobe Experience Platf
 
 Dopo aver aggiunto gli override desiderati, salva le impostazioni dello stream di dati.
 
-Ora dovresti aver configurato gli override dello stream di dati di Adobe Experience Platform. Ora puoi [inviare le sostituzioni all&#39;Edge Network tramite Web SDK o Mobile SDK](#send-overrides).
+Ora dovresti aver configurato gli override dello stream di dati di Adobe Experience Platform. Ora puoi [inviare le sostituzioni ad Edge Network tramite Web SDK o Mobile SDK](#send-overrides).
 
 ### Override dello stream di dati per i contenitori di sincronizzazione ID di terze parti {#container-overrides}
 
@@ -112,13 +112,13 @@ Quindi, utilizza la sezione **[!UICONTROL Override ID contenitore]** per aggiung
 
 Dopo aver aggiunto gli override desiderati, salva le impostazioni dello stream di dati.
 
-Ora gli override del contenitore di sincronizzazione ID saranno configurati. Ora puoi [inviare le sostituzioni all&#39;Edge Network tramite Web SDK o Mobile SDK](#send-overrides).
+Ora gli override del contenitore di sincronizzazione ID saranno configurati. Ora puoi [inviare le sostituzioni ad Edge Network tramite Web SDK o Mobile SDK](#send-overrides).
 
-## Inviare le sostituzioni all’Edge Network {#send-overrides}
+## Inviare le sostituzioni ad Edge Network {#send-overrides}
 
-Dopo aver configurato le sostituzioni dello stream di dati nell’interfaccia utente di Data Collection, puoi inviare le sostituzioni all’Edge Network tramite Web SDK o Mobile SDK.
+Dopo aver configurato le sostituzioni dello stream di dati nell’interfaccia utente di Data Collection, puoi inviare le sostituzioni ad Edge Network tramite Web SDK o Mobile SDK.
 
-* **Web SDK**: per istruzioni sull&#39;estensione dei tag ed esempi di codice della libreria JavaScript, vedi [sostituzioni della configurazione dello stream di dati](../web-sdk/commands/datastream-overrides.md#library).
+* **Web SDK**: vedere [sostituzioni della configurazione dello stream di dati](../web-sdk/commands/datastream-overrides.md#library) per istruzioni sull&#39;estensione dei tag ed esempi di codice della libreria JavaScript.
 * **Mobile SDK**: è possibile inviare le sostituzioni degli ID dello stream di dati utilizzando [sendEvent API](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-sendevent/) o utilizzando [Rules](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-rules/).
 
 ## Esempio di payload {#payload-example}

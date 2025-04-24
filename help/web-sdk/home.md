@@ -2,9 +2,9 @@
 title: Panoramica di Adobe Experience Platform Web Software Development Kit (SDK)
 description: Scopri come utilizzare Adobe Experience Platform Web SDK per integrare le funzionalità di Experience Platform nel tuo sito web.
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '601'
+source-wordcount: '602'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ Experience Platform Web SDK fa parte di Adobe Experience Platform Edge Network, 
 
 * **[Experience Platform Web SDK](#overview)**: libreria JavaScript ed estensione tag per semplificare la distribuzione della tecnologia Adobe.
 * **[Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/home/)**: estensione del SDK mobile v5 per la nuova metodologia di distribuzione.
-* **[API Edge Network](../server-api/overview.md)**: API lato server per casi di utilizzo di raccolta dati, personalizzazione, pubblicità e marketing. Puoi utilizzarlo su server, dispositivi IoT, set-top box e altri dispositivi.
+* **[API Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/)**: API lato server per casi di utilizzo di raccolta dati, personalizzazione, pubblicità e marketing. Puoi utilizzarlo su server, dispositivi IoT, set-top box e altri dispositivi.
 
 Edge Network fornisce la raccolta dati a bassa latenza, il computing collegabile e l’attivazione rapida dei dati su tutti i canali indirizzabili. Offre un unico SDK consolidato per canali web, mobili e lato server, inviando dati a un dominio Adobe comune (`adobedc.net`) e ricevendo un unico payload per la distribuzione di dati ed esperienze.
 
