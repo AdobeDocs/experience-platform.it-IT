@@ -1,15 +1,16 @@
 ---
-title: Retargeting fuori sede dei visitatori non autenticati
+title: Retargeting lato server non autenticato
 description: Scopri come effettuare il retargeting degli utenti non autenticati utilizzando gli ECID
 feature: Use Cases, Customer Acquisition
-source-git-commit: 672b15b0c36efbf3b7d62ec616f254fffe3dbb81
+exl-id: 008f4534-29e7-49b9-b0be-9e0c3962ee21
+source-git-commit: ba2154e84f24ddf4ec270121bdcbb6dd5d3dff42
 workflow-type: tm+mt
-source-wordcount: '640'
+source-wordcount: '639'
 ht-degree: 0%
 
 ---
 
-# Retargeting non autenticato {#unauthenticated-retargeting}
+# Retargeting lato server non autenticato {#unauthenticated-retargeting}
 
 Poiché i cookie di terze parti perdono efficacia, le aziende stanno passando a soluzioni senza cookie per il coinvolgimento e il retargeting personalizzati. Il retargeting fuori sede consente alle aziende di raggiungere gli utenti ad alto intento in base alle loro interazioni precedenti, senza affidarsi a JavaScript lato client.
 
