@@ -2,9 +2,9 @@
 title: Filtrare I Dati A Livello Di Riga Per Un Source Utilizzando L’API Del Servizio Di Flusso
 description: Questo tutorial illustra i passaggi necessari per filtrare i dati a livello di origine utilizzando l’API del servizio Flow
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 67abd5cda9cff1da8757ef691ebbf27e9a5550c5
 workflow-type: tm+mt
-source-wordcount: '1823'
+source-wordcount: '1825'
 ht-degree: 5%
 
 ---
@@ -15,11 +15,12 @@ ht-degree: 5%
 >
 >Il supporto per il filtro dei dati a livello di riga è attualmente disponibile solo per le seguenti origini:
 >
+>* [[Amazon Redshift]](../../connectors/databases/redshift.md)
 >* [[!DNL Google BigQuery]](../../connectors/databases/bigquery.md)
+>* [[!DNL Marketo Engage] attività standard](../../connectors/adobe-applications/marketo/marketo.md)
 >* [[!DNL Microsoft Dynamics]](../../connectors/crm/ms-dynamics.md)
 >* [[!DNL Salesforce]](../../connectors/crm/salesforce.md)
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
->* [[!DNL Marketo Engage] attività standard](../../connectors/adobe-applications/marketo/marketo.md)
 
 Leggi questa guida per i passaggi su come filtrare i dati a livello di riga per un&#39;origine utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
