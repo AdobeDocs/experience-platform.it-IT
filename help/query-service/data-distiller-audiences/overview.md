@@ -2,10 +2,10 @@
 title: Creare tipi di pubblico con SQL
 description: Scopri come utilizzare l’estensione del pubblico SQL in Data Distiller di Adobe Experience Platform per creare, gestire e pubblicare tipi di pubblico utilizzando i comandi SQL. Questa guida tratta tutti gli aspetti del ciclo di vita del pubblico, inclusa la creazione, l’aggiornamento e l’eliminazione di profili, e l’utilizzo di definizioni di pubblico basate sui dati per eseguire il targeting di destinazioni basate su file.
 exl-id: c35757c1-898e-4d65-aeca-4f7113173473
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9e16282f9f10733fac9f66022c521684f8267167
 workflow-type: tm+mt
-source-wordcount: '1485'
-ht-degree: 1%
+source-wordcount: '1833'
+ht-degree: 2%
 
 ---
 
@@ -100,6 +100,97 @@ Nell&#39;esempio seguente viene illustrato come aggiungere profili a un pubblico
 INSERT INTO Audience aud_test
 SELECT userId, orders, total_revenue, recency, frequency, monetization FROM customer_ds;
 ```
+
+### Sostituire i dati del pubblico (INSERT OVERWRITE) {#replace-audience}
+
+Utilizzare il comando `INSERT OVERWRITE INTO` per sostituire tutti i profili esistenti in un pubblico con i risultati di una nuova query SQL. Questo comando è utile per gestire i segmenti di pubblico dinamici, consentendoti di aggiornare completamente i contenuti di un pubblico in un singolo passaggio.
+
+>[!AVAILABILITY]
+>
+>Il comando `INSERT OVERWRITE INTO` è disponibile solo per i clienti Data Distiller. Per ulteriori informazioni sul componente aggiuntivo Data Distiller, contatta il tuo rappresentante Adobe.
+
+A differenza di [`INSERT INTO`](#add-profiles-to-audience), che si aggiunge al pubblico corrente, `INSERT OVERWRITE INTO` rimuove tutti i membri del pubblico esistenti e inserisce solo quelli restituiti dalla query. Questo offre maggiore controllo e flessibilità nella gestione dei tipi di pubblico che richiedono aggiornamenti frequenti o completi.
+
+Utilizza il seguente modello di sintassi per sovrascrivere un pubblico con un nuovo set di profili:
+
+```sql
+INSERT OVERWRITE INTO audience_name
+SELECT select_query
+```
+
+**Parametri**
+
+Nella tabella seguente sono illustrati i parametri necessari per il comando `INSERT OVERWRITE INTO`:
+
+| Parametro | Descrizione |
+|-----------|-------------|
+| `audience_name` | Il nome del pubblico creato con il comando `CREATE AUDIENCE`. |
+| `select_query` | Un&#39;istruzione `SELECT` che definisce i profili da includere nel pubblico. |
+
+**Esempio:**
+
+In questo esempio, il pubblico `audience_monthly_refresh` viene completamente sovrascritto con i risultati della query. Tutti i profili non restituiti dalla query vengono rimossi dal pubblico.
+
+>[!NOTE]
+>
+>Affinché le operazioni di sovrascrittura funzionino correttamente, è necessario che al pubblico sia associato un solo caricamento batch.
+
+```sql
+INSERT OVERWRITE INTO audience_monthly_refresh
+SELECT user_id FROM latest_transaction_summary WHERE total_spend > 100;
+```
+
+#### Comportamento di sovrascrittura del pubblico in Real-Time Customer Profile
+
+Quando sovrascrivi un pubblico, Real-Time Customer Profile applica la seguente logica per aggiornare l’iscrizione al profilo:
+
+- I profili visualizzati solo nel nuovo batch vengono contrassegnati come immessi.
+- I profili che esistevano solo nel batch precedente vengono contrassegnati come usciti.
+- I profili presenti in entrambi i batch vengono lasciati invariati (non viene eseguita alcuna operazione).
+
+In questo modo gli aggiornamenti del pubblico vengono rispecchiati accuratamente nei sistemi e nei flussi di lavoro a valle.
+
+**Scenario di esempio**
+
+Se un pubblico `A1` contiene in origine:
+
+| ID | NOME |
+|----|------|
+| A | Jack |
+| B | John |
+| C | Martha |
+
+E la query di sovrascrittura restituisce:
+
+| ID | NOME |
+|----|------|
+| A | Stewart |
+| C | Martha |
+
+Il pubblico aggiornato conterrà:
+
+| ID | NOME |
+|----|------|
+| A | Stewart |
+| C | Martha |
+
+Il profilo B viene rimosso, il profilo A viene aggiornato e il profilo C rimane invariato.
+
+Se la query di sovrascrittura include un nuovo profilo:
+
+| ID | NOME |
+|----|------|
+| A | Stewart |
+| C | Martha |
+| D | Chris |
+
+Il pubblico finale sarà:
+
+| ID | NOME |
+|----|------|
+| A | Stewart |
+| C | Martha |
+| D | Chris |
 
 ### Esempio di pubblico del modello RFM {#rfm-model-audience-example}
 
