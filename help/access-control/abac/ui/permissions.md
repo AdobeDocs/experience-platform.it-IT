@@ -6,7 +6,7 @@ exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
 source-wordcount: '1703'
-ht-degree: 12%
+ht-degree: 16%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 12%
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about"
 >title="Che cosa sono i ruoli?"
->abstract="I ruoli definiscono l’accesso di un amministratore, uno specialista o un utente finale alle risorse della tua organizzazione. Classifica gli utenti che interagiscono con l’istanza Experience Platform e sono gli elementi costitutivi dei criteri di controllo degli accessi. Un ruolo dispone di un determinato set di autorizzazioni e i membri dell’organizzazione possono essere assegnati a uno o più ruoli, a seconda dell’ambito di accesso di visualizzazione o scrittura necessario."
+>abstract="I ruoli definiscono l’accesso di un amministratore, uno specialista o un utente finale alle risorse della tua organizzazione. Categorizzano gli utenti che interagiscono con l’istanza di Experience Platform e sono gli elementi alla base dei criteri di controllo degli accessi. Un ruolo dispone di un determinato set di autorizzazioni e i membri dell’organizzazione possono essere assegnati a uno o più ruoli, a seconda dell’ambito di accesso di visualizzazione o scrittura necessario."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=it" text="Gestire i ruoli"
 
 >[!IMPORTANT]
@@ -123,8 +123,8 @@ Il video seguente ha lo scopo di aiutare a comprendere come creare un nuovo ruol
 >[!CONTEXTUALHELP]
 >id="platform_permissions_apicredentials_about"
 >title="Che cosa sono le credenziali API?"
->abstract="Le credenziali API vengono assegnate a ruoli per consentire a utenti e sviluppatori di accedere alle API di Experience Platform. Utilizzando le API di Experience Platform, puoi eseguire in modo programmatico operazioni CRUD (Create, Read, Update, Delete) di base sui dati, ad esempio la configurazione di attributi calcolati, l’accesso a dati/entità, l’esportazione di dati, l’eliminazione di dati o batch non necessari e altro ancora."
->additional-url="https://experienceleague.adobe.com/it/docs/experience-platform/landing/platform-apis/api-guide" text="Guida API di Experience Platform"
+>abstract="Le credenziali API vengono assegnate ai ruoli per concedere a utenti e sviluppatori l’accesso alle API di Experience Platform. Utilizzando le API di Experience Platform, puoi eseguire in modo programmatico operazioni CRUD (Create, Read, Update, Delete) di base sui dati, ad esempio la configurazione di attributi calcolati, l’accesso a dati/entità, l’esportazione di dati, l’eliminazione di dati o batch non necessari e altro ancora."
+>additional-url="https://experienceleague.adobe.com/it/docs/experience-platform/landing/platform-apis/api-guide" text="Guida delle API di Experience Platform"
 
 >[!IMPORTANT]
 >

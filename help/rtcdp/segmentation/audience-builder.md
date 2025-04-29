@@ -7,7 +7,7 @@ exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
 source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
 workflow-type: tm+mt
 source-wordcount: '983'
-ht-degree: 0%
+ht-degree: 8%
 
 ---
 
@@ -27,7 +27,7 @@ Basato su Adobe Experience Platform, [!DNL Adobe Real-Time Customer Data Platfor
 >[!CONTEXTUALHELP]
 >id="platform_b2b_audiencebuilder_showrelationselectors"
 >title="Mostra selettori di relazioni"
->abstract="Per impostazione predefinita, vengono utilizzate le relazioni standard per l’organizzazione. Abilita questa opzione per visualizzare i selettori di relazione utilizzati."
+>abstract="Per impostazione predefinita, vengono utilizzate le relazioni standard della tua organizzazione. Abilita questa opzione per mostrare i selettori di relazione utilizzati."
 
 >[!CONTEXTUALHELP]
 >id="platform_b2b_audiencebuilder_showconstrainedfields"

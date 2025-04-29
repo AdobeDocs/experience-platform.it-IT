@@ -7,7 +7,7 @@ exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
 source-wordcount: '1603'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -66,7 +66,7 @@ Viene visualizzata l&#39;area di lavoro Autorizzazioni per l&#39;interfaccia ute
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
 >title="Che cosa sono le etichette?"
->abstract="Le etichette consentono di categorizzare set di dati e campi in base ai criteri di utilizzo e di accesso applicati a tali dati. Adobe Experience Platform fornisce diverse etichette di utilizzo dei dati <strong>core</strong> definite da Adobe, che coprono un&#39;ampia varietà di restrizioni comuni applicabili alla governance dei dati. Ad esempio, le etichette <strong>S</strong> sensibili, come RHD (Regulated Health Data, dati sanitari regolamentati) consentono di categorizzare i dati riferiti alle informazioni sanitarie protette (PHI, Protected Health Information). Puoi anche definire etichette personalizzate che soddisfino le esigenze della tua organizzazione."
+>abstract="Le etichette consentono di categorizzare set di dati e campi in base ai criteri di utilizzo e di accesso applicati a tali dati. Adobe Experience Platform fornisce diverse etichette di utilizzo dei dati <strong>principali</strong> definite da Adobe che coprono un’ampia gamma di restrizioni comuni applicabili alla governance dei dati. Ad esempio, le etichette <strong>S</strong> sensibili, come RHD (Regulated Health Data, dati sanitari regolamentati) consentono di categorizzare i dati riferiti alle informazioni sanitarie protette (PHI, Protected Health Information). Puoi anche definire etichette personalizzate che soddisfino le esigenze della tua organizzazione."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=it#understanding-data-usage-labels" text="Panoramica sulle etichette di utilizzo dei dati"
 
 I ruoli sono modi per categorizzare i tipi di utenti che interagiscono con l’istanza Experience Platform e sono blocchi predefiniti delle policy di controllo degli accessi. Un ruolo dispone di un determinato set di autorizzazioni e i membri dell’organizzazione possono essere assegnati a uno o più ruoli, a seconda dell’ambito di accesso di cui hanno bisogno.

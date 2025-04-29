@@ -5,7 +5,7 @@ exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
 source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
 source-wordcount: '1888'
-ht-degree: 2%
+ht-degree: 6%
 
 ---
 
@@ -69,10 +69,10 @@ Se utilizzi il [connettore di origine Adobe Analytics](../../sources/tutorials/u
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_linkingrules_xdm"
->title="Assicurati di disporre di un singolo identificatore persona"
->abstract="Durante il processo di pre-implementazione, devi assicurarti che gli eventi autenticati che il tuo sistema invierà ad Experience Platform contengano sempre un **singolo** identificatore di persona, ad esempio un CRMID."
+>title="Assicurati di disporre di un identificatore unico della persona"
+>abstract="Durante il processo di pre-implementazione, devi assicurarti che gli eventi autenticati che il tuo sistema invierà ad Experience Platform contengano sempre un **unico** identificatore di persona, ad esempio un CRMID."
 
-Durante il processo di pre-implementazione, devi assicurarti che gli eventi autenticati che il tuo sistema invierà ad Experience Platform contengano sempre un **singolo** identificatore di persona, ad esempio un CRMID.
+Durante il processo di pre-implementazione, devi assicurarti che gli eventi autenticati che il tuo sistema invierà ad Experience Platform contengano sempre un **unico** identificatore di persona, ad esempio un CRMID.
 
 * (Consigliato) Eventi autenticati con un identificatore persona univoco.
 * (Non consigliato) Eventi autenticati con due identificatori di persona univoci. Se disponi di più di un identificatore persona univoco, potresti riscontrare una compressione indesiderata del grafico.

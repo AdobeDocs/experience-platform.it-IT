@@ -27,7 +27,7 @@ Questo articolo spiega il flusso di lavoro necessario per attivare i tipi di pub
 
 ## Prerequisiti {#prerequisites}
 
-Per attivare i tipi di pubblico verso le destinazioni, devi esserti connesso correttamente [a una destinazione](./connect-destination.md). Se non l&#39;hai già fatto, passa al [catalogo](../catalog/overview.md) delle destinazioni, sfoglia le destinazioni supportate e configura la destinazione che desideri utilizzare.
+Per attivare i tipi di pubblico nelle destinazioni, devi avere [connesso correttamente a una destinazione](./connect-destination.md). Se non lo hai già fatto, vai al [catalogo delle destinazioni](../catalog/overview.md), sfoglia le destinazioni supportate e configura la destinazione che desideri utilizzare.
 
 ## Seleziona la destinazione {#select-destination}
 
@@ -39,11 +39,11 @@ Per attivare i tipi di pubblico verso le destinazioni, devi esserti connesso cor
 
    ![Il controllo di attivazione è evidenziato nel catalogo delle destinazioni.](../assets/ui/activate-segment-streaming-destinations/activate-audiences-button.png)
 
-1. Seleziona la connessione di destinazione che desideri utilizzare per attivare i tipi di pubblico, quindi seleziona **[!UICONTROL Successivo]**.
+1. Seleziona la connessione di destinazione da utilizzare per attivare i tipi di pubblico, quindi seleziona **[!UICONTROL Successivo]**.
 
-   ![Una connessione di destinazione evidenziata nel passaggio Seleziona destinazione.](../assets/ui/activate-segment-streaming-destinations/select-destination.png)
+   ![Connessione di destinazione evidenziata nel passaggio Seleziona destinazione.](../assets/ui/activate-segment-streaming-destinations/select-destination.png)
 
-1. Passa alla sezione successiva per [selezionare i tipi di](#select-audiences) pubblico.
+1. Passa alla sezione successiva per [selezionare il pubblico](#select-audiences).
 
 ## Seleziona i tipi di pubblico {#select-audiences}
 
@@ -63,8 +63,8 @@ Puoi scegliere tra più tipi di pubblico, a seconda della loro origine:
 >
 >Questo passaggio si applica solo ad alcune destinazioni di streaming del pubblico. Se la destinazione non dispone di un passaggio **[!UICONTROL Mapping]**, passa alla [pianificazione del pubblico](#scheduling).
 >
->Quando si attivano tipi di pubblico su destinazioni di streaming, è necessario mappare anche *almeno uno spazio dei nomi delle identità di destinazione*, oltre agli attributi del profilo di destinazione. In caso contrario, i tipi di pubblico non verranno attivati sulla piattaforma di destinazione.
-> ![Immagine del passaggio di mappatura che mostra una mappatura obbligatoria dello spazio dei nomi identità.](../assets/ui/activate-segment-streaming-destinations/identity-mapping-mandatory.png) {zoomable="yes"}
+>Quando si attivano tipi di pubblico su destinazioni di streaming, è necessario mappare anche *almeno uno spazio dei nomi delle identità di destinazione*, oltre agli attributi del profilo di destinazione. In caso contrario, i tipi di pubblico non verranno attivati nella piattaforma di destinazione.
+> ![Immagine del passaggio di mappatura che mostra una mappatura obbligatoria dello spazio dei nomi delle identità.](../assets/ui/activate-segment-streaming-destinations/identity-mapping-mandatory.png) {zoomable="yes"}
 
 
 Alcune destinazioni di streaming del pubblico richiedono la selezione di attributi di origine o spazi dei nomi di identità da mappare come identità di destinazione nella destinazione.
@@ -77,11 +77,11 @@ Alcune destinazioni di streaming del pubblico richiedono la selezione di attribu
 
    ![Controllo del campo di origine selezionato evidenziato.](../assets/ui/activate-segment-streaming-destinations/select-source-field.png)
 
-1. **[!UICONTROL Nella pagina Seleziona campo]** di origine, utilizzare le **[!UICONTROL opzioni Seleziona attributi]** o Seleziona **[!UICONTROL spazio dei nomi]** identità per passare tra le due categorie di campi di origine disponibili. Tra gli attributi del profilo e i namespace identità disponibili [!DNL XDM] , seleziona quelli che desideri associare alla destinazione, quindi scegli **[!UICONTROL Seleziona]**.
+1. Nella pagina **[!UICONTROL Seleziona campo di origine]**, utilizza le opzioni **[!UICONTROL Seleziona attributi]** o **[!UICONTROL Seleziona spazio dei nomi identità]** per passare tra le due categorie di campi di origine disponibili. Dagli attributi di profilo [!DNL XDM] e dagli spazi dei nomi di identità disponibili, seleziona quelli che desideri mappare alla destinazione, quindi scegli **[!UICONTROL Seleziona]**.
 
-   Utilizzare l&#39;interruttore **[!UICONTROL Mostra campi solo con dati]** per visualizzare solo i campi dello schema compilati con valori. Per impostazione predefinita, vengono visualizzati solo i campi schema compilati.
+   Utilizza l&#39;opzione **[!UICONTROL Mostra solo campi con dati]** per visualizzare solo i campi schema compilati con valori. Per impostazione predefinita, vengono visualizzati solo i campi schema compilati.
 
-   ![Seleziona la pagina del campo sorgente che mostra diversi campi sorgente disponibili.](../assets/ui/activate-segment-streaming-destinations/select-source-field-modal.png)
+   ![Selezionare la pagina del campo di origine che mostra diversi campi di origine disponibili.](../assets/ui/activate-segment-streaming-destinations/select-source-field-modal.png)
 
 1. Selezionare il pulsante a destra della voce **[!UICONTROL Campo di destinazione]**.
 
@@ -93,14 +93,14 @@ Alcune destinazioni di streaming del pubblico richiedono la selezione di attribu
 
 1. Per aggiungere altre mappature, ripetere i passaggi da 1 a 5.
 
-### Applicar trasformazione {#apply-transformation}
+### Applica trasformazione {#apply-transformation}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_applytransformation"
->title="Applicar trasformazione"
+>title="Applica trasformazione"
 >abstract="Seleziona questa opzione quando utilizzi campi di origine senza hash per fare in modo che Adobe Experience Platform ne esegua automaticamente l’hashing all’attivazione."
 
-Quando si associano gli attributi di origine senza hashing ad destinazione attributi di cui la destinazione prevede di ricevere l&#39;hashing (ad esempio: `email_lc_sha256` o `phone_sha256`), selezionare l&#39;opzione **di trasformazione** Applica per fare in modo che Adobe Experience Platform automaticamente l&#39;hash degli attributi di origine all&#39;attivazione.
+Quando si esegue il mapping degli attributi di origine senza hash agli attributi di destinazione per i quali la destinazione prevede l&#39;hash (ad esempio: `email_lc_sha256` o `phone_sha256`), selezionare l&#39;opzione **Applica trasformazione** per fare in modo che Adobe Experience Platform esegua automaticamente l&#39;hash degli attributi di origine all&#39;attivazione.
 
 ![Applica controllo di trasformazione evidenziato nel passaggio di mappatura identità.](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
@@ -111,13 +111,13 @@ Quando si associano gli attributi di origine senza hashing ad destinazione attri
 >title="End date (Data di fine)"
 >abstract="L’aggiunta di una data di fine per la pianificazione dei tipi di pubblico non è disponibile."
 
-Per impostazione predefinita, la **[!UICONTROL pagina programmare]** pubblico mostra solo i nuovi tipi di pubblico selezionati che hai scelto nel flusso di attivazione corrente.
+Per impostazione predefinita, nella pagina **[!UICONTROL Pianificazione pubblico]** sono visualizzati solo i nuovi tipi di pubblico selezionati nel flusso di attivazione corrente.
 
-Per vedere tutti i tipi di pubblico attivati nella tua destinazione, utilizza l&#39;opzione di filtro e disattiva il **[!UICONTROL filtro Mostra nuovo pubblico]** .
+Per visualizzare tutti i tipi di pubblico attivati nella destinazione, utilizza l&#39;opzione di filtro e disabilita il filtro **[!UICONTROL Mostra solo nuovi tipi di pubblico]**.
 
 ![Tutti i tipi di pubblico](../assets/ui/activate-segment-streaming-destinations/all-audiences.png)
 
-1. **[!UICONTROL Nella pagina di programmare]** Pubblico, seleziona ciascun pubblico, quindi utilizza i selettori Data **[!UICONTROL di Inizia]** e **[!UICONTROL Data]** di fine per configurare l&#39;intervallo di tempo per l&#39;invio dei dati alla destinazione.
+1. Nella pagina **[!UICONTROL Pianificazione pubblico]**, seleziona ogni pubblico, quindi utilizza i selettori **[!UICONTROL Data inizio]** e **[!UICONTROL Data fine]** per configurare l&#39;intervallo di tempo per l&#39;invio dei dati alla destinazione.
 
    ![Filtro pianificazione pubblico evidenziato.](../assets/ui/activate-segment-streaming-destinations/audience-schedule.png)
 
@@ -137,7 +137,7 @@ Per vedere tutti i tipi di pubblico attivati nella tua destinazione, utilizza l&
 
 ## Rivisione {#review}
 
-**[!UICONTROL Nella pagina Revisione]**, puoi visualizzare un riepilogo della selezione. Selezionare **[!UICONTROL Annulla]** per interrompere il flusso **[!UICONTROL Indietro]** per modificare le impostazioni oppure **[!UICONTROL Fine]** per confermare la selezione e iniziare a inviare dati alla destinazione.
+Nella pagina **[!UICONTROL Rivedi]** puoi visualizzare un riepilogo della selezione. Seleziona **[!UICONTROL Annulla]** per interrompere il flusso, **[!UICONTROL Indietro]** per modificare le impostazioni oppure **[!UICONTROL Fine]** per confermare la selezione e iniziare a inviare dati alla destinazione.
 
 ![Riepilogo selezioni nel passaggio di revisione.](../assets/ui/activate-segment-streaming-destinations/review.png)
 
@@ -147,11 +147,11 @@ Se l’organizzazione ha acquistato **Adobe Healthcare Shield** o **Adobe Privac
 
 ### Controlli dei criteri di utilizzo dei dati {#data-usage-policy-checks}
 
-Nella fase di revisione ]**, Experience Platform verifica inoltre la presenza di eventuali violazioni dell&#39;utilizzo regola dell&#39;utilizzo**[!UICONTROL  dei dati. Di seguito è riportato un esempio in cui viene violato un regola. Non puoi completare il workflow di attivazione del pubblico finché non hai risolto la violazione. Per informazioni su come risolvere regola violazioni, leggi le informazioni sull&#39;utilizzo [regola le violazioni](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) dei dati nella sezione relativa alla documentazione sulla governance dei dati.
+Nel passaggio **[!UICONTROL Rivedi]**, Experience Platform controlla anche eventuali violazioni dei criteri di utilizzo dei dati. Di seguito è riportato un esempio di violazione di una policy. Non puoi completare il flusso di lavoro di attivazione del pubblico finché non hai risolto la violazione. Per informazioni su come risolvere le violazioni dei criteri, leggere le [violazioni dei criteri di utilizzo dei dati](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) nella sezione relativa alla governance dei dati.
 
-![Esempio di violazione della regola dei dati mostrato nel workflow di attivazione.](../assets/common/data-policy-violation.png)
+![Esempio di violazione dei criteri dei dati visualizzato nel flusso di lavoro di attivazione.](../assets/common/data-policy-violation.png)
 
-### Filtra tipi di pubblico {#filter-audiences}
+### Filtrare i tipi di pubblico {#filter-audiences}
 
 Inoltre, in questo passaggio puoi utilizzare i filtri disponibili nella pagina per visualizzare solo i tipi di pubblico la cui pianificazione o mappatura è stata aggiornata come parte di questo flusso di lavoro. Puoi anche scegliere quali colonne della tabella visualizzare.
 

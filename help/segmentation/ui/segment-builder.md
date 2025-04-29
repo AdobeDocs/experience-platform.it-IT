@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
 workflow-type: tm+mt
 source-wordcount: '5024'
-ht-degree: 7%
+ht-degree: 9%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 7%
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_showdeprecatedfields"
 >title="Mostra campi obsoleti"
->abstract="Per impostazione predefinita, i campi XDM obsoleti non vengono visualizzati. Abilita questa opzione per mostrare i campi XDM obsoleti."
+>abstract="Per impostazione predefinita, i campi XDM obsoleti non vengono visualizzati. Abilita questa opzione per visualizzare i campi XDM obsoleti."
 
 Gli elementi di base per le definizioni dei segmenti sono attributi ed eventi. Inoltre, gli attributi e gli eventi contenuti nei tipi di pubblico esistenti possono essere utilizzati come componenti per nuove definizioni.
 
@@ -359,7 +359,7 @@ Dopo aver selezionato **[!UICONTROL Annulla wrapping contenitore]**, il contenit
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
 >title="Criteri di unione"
->abstract="Un criterio di unione consente l’unione di set di dati diversi per formare il profilo. Experience Platform ha fornito un criterio di unione predefinito oppure puoi crearne uno nuovo in Profili. Scegli un criterio di unione che corrisponda allo scopo di marketing per questo pubblico."
+>abstract="Un criterio di unione consente l’unione di set di dati diversi per formare il profilo. Experience Platform fornisce un criterio di unione predefinito, ma puoi anche crearne uno nuovo in Profili. Scegli un criterio di unione che corrisponda allo scopo di marketing per questo pubblico."
 
 [!DNL Experience Platform] consente di unire dati provenienti da più origini e combinarli per ottenere una visualizzazione completa di ogni singolo cliente. Quando si riuniscono questi dati, i criteri di unione sono le regole utilizzate da [!DNL Experience Platform] per determinare la priorità dei dati e i dati che verranno combinati per creare un profilo.
 

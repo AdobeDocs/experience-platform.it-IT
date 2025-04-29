@@ -7,7 +7,7 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '3398'
-ht-degree: 22%
+ht-degree: 39%
 
 ---
 
@@ -42,90 +42,90 @@ additional-url="https://experienceleague.adobe.com/docs/experience-platform/prof
 [!CONTEXTUALHELP]
 id="platform_dashboards_licenseusage_predictedusage_computehours"
 title="Ore di calcolo previste"
-abstract="Le ore di calcolo misurano il tempo impiegato dai motori Query Service per leggere, elaborare e scrivere dati durante l’esecuzione di query batch.<br>L&#39;utilizzo potrebbe raggiungere la quantità concessa in licenza. Per valutare o ridurre l’utilizzo, passa a Query > Registro per rivedere la cronologia delle query. Se non hai accesso all’area di lavoro Query, contatta l’amministratore."
-additional-url="https://experience.adobe.com/#/platform/query/log.html" text="Area di lavoro registro query"
+abstract="Le ore di calcolo misurano il tempo impiegato dai motori del Query Service per leggere, elaborare e scrivere dati durante l’esecuzione di query batch.<br>L’utilizzo potrebbe raggiungere la quantità concessa in licenza. Per valutare o ridurre l’utilizzo, passa a Query > Registro per rivedere la cronologia delle query. Se non disponi dell’autorizzazione necessaria per accedere all’area di lavoro Query, contatta il tuo amministratore."
+additional-url="https://experience.adobe.com/#/platform/query/log.html?lang=it" text="Area di lavoro registro query"
 
 [!CONTEXTUALHELP]
 id="platform_dashboards_licenseusage_predictedusage_addressableaudience"
 title="Pubblico indirizzabile previsto"
-abstract="L’Addressable Audience è l’insieme dei profili di persona in Real-Time Customer Profile che la tua organizzazione ha il diritto di coinvolgere. Questa metrica include sia profili direttamente identificabili che pseudonimi.<br>L&#39;utilizzo potrebbe raggiungere la quantità concessa in licenza. Per ridurre l’utilizzo, configura le scadenze dei dati di un set di dati o di un profilo pseudonimo."
+abstract="Il pubblico indirizzabile è l’insieme dei profili di persona nel profilo cliente in tempo reale che la tua organizzazione è autorizzata a coinvolgere. Questa metrica include sia profili direttamente identificabili che pseudonimi.<br>L’utilizzo potrebbe raggiungere la quantità concessa in licenza. Per ridurre l’utilizzo, configura le scadenze del set di dati o del profilo pseudonimo."
 additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=it" text="Scadenze degli eventi esperienza"
 additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
 
 [!CONTEXTUALHELP]
 id="platform_dashboards_licenseusage_predictedusage_engageableprofiles"
-title="Profili coinvolgibili previsti"
-abstract="I profili coinvolgibili sono profili di persona in Real-Time Customer Profile che la tua organizzazione ha tentato di coinvolgere utilizzando Journey Optimizer negli ultimi 12 mesi.<br>L&#39;utilizzo potrebbe raggiungere la quantità concessa in licenza. Per ridurre l’utilizzo, configura le scadenze dei dati di un set di dati o di un profilo pseudonimo."
+title="Profili che potrebbero essere coinvolti previsti"
+abstract="I profili che potrebbero essere coinvolti sono profili di persona nel profilo cliente in tempo reale che la tua organizzazione ha tentato di coinvolgere utilizzando Journey Optimizer negli ultimi 12 mesi.<br>L’utilizzo potrebbe raggiungere la quantità concessa in licenza. Per ridurre l’utilizzo, configura le scadenze del set di dati o del profilo pseudonimo."
 additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=it" text="Scadenze degli eventi esperienza"
 additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
 
 [!CONTEXTUALHELP]
 id="platform_dashboards_licenseusage_predictedusage_businesspersonprofile"
 title="Profilo persona aziendale previsto"
-abstract="I Profili persona aziendale sono record in Real-Time Customer Profile che rappresentano singoli utenti in un contesto B2B.<br>L&#39;utilizzo potrebbe raggiungere la quantità concessa in licenza. Per ridurre l’utilizzo, configura le scadenze dei dati di un set di dati o di un profilo pseudonimo."
+abstract="I Profili persona aziendale sono record del profilo cliente in tempo reale che rappresentano singoli utenti in un contesto B2B.<br>L’utilizzo potrebbe raggiungere la quantità prevista dalla licenza. Per ridurre l’utilizzo, configura le scadenze del set di dati o del profilo pseudonimo."
 additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=it" text="Scadenze degli eventi esperienza"
 additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
 
 [!CONTEXTUALHELP]
 id="platform_dashboards_licenseusage_predictedusage_corehours"
-title="Ore Core Previste"
-abstract="Le ore di base rappresentano il tempo di elaborazione impiegato nei servizi Experience Platform.<br>L&#39;utilizzo potrebbe raggiungere la quantità concessa in licenza. Per ridurre l’utilizzo, configura le scadenze dei dati di un set di dati o di un profilo pseudonimo."
+title="Ore core previste"
+abstract="Le ore core rappresentano il tempo di elaborazione utilizzato da tutti i servizi Experience Platform.<br>L’utilizzo potrebbe raggiungere la quantità prevista dalla licenza. Per ridurre l’utilizzo, configura le scadenze del set di dati o del profilo pseudonimo."
 additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=it" text="Scadenze degli eventi esperienza"
 additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
 
 [!CONTEXTUALHELP]
 id="platform_dashboards_licenseusage_predictedusage_totaldatavolume"
-title="Volume totale di dati previsto"
-abstract="Volume di dati totale è la quantità di dati disponibili in Real-Time Customer Profile da utilizzare nei flussi di lavoro di coinvolgimento e personalizzazione.<br>L&#39;utilizzo potrebbe raggiungere la quantità concessa in licenza. Per ridurre l’utilizzo, configura le scadenze dei dati di un set di dati o di un profilo pseudonimo."
+title="Volume totale dati previsto"
+abstract="Il Volume totale dati è la quantità di dati disponibili nel profilo cliente in tempo reale da utilizzare nei flussi di lavoro di coinvolgimento e personalizzazione.<br>L’utilizzo potrebbe raggiungere la quantità prevista dalla licenza. Per ridurre l’utilizzo, configura le scadenze del set di dati o del profilo pseudonimo."
 additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=it" text="Scadenze degli eventi esperienza"
 additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
 
 [!CONTEXTUALHELP]
 id="platform_dashboards_licenseusage_predictedusage_cjaRowsAvailable"
-title="Righe CJA previste disponibili"
-abstract="Righe CJA disponibili si riferisce alla media giornaliera di righe di dati disponibili per l’analisi in Customer Journey Analytics.<br>L&#39;utilizzo potrebbe raggiungere la quantità concessa in licenza. Per ridurre l’utilizzo, configura le scadenze dei dati di un set di dati o di un profilo pseudonimo."
+title="Righe CJA disponibili previste"
+abstract="Le Righe CJA disponibili si riferiscono alla media giornaliera di righe di dati disponibili per l’analisi in Customer Journey Analytics.<br>L’utilizzo potrebbe raggiungere la quantità prevista dalla licenza. Per ridurre l’utilizzo, configura le scadenze del set di dati o del profilo pseudonimo."
 additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=it" text="Scadenze degli eventi esperienza"
 additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
 
 [!CONTEXTUALHELP]
 id="platform_dashboards_licenseusage_exceededusage_addressableaudience"
 title="Pubblico indirizzabile previsto"
-abstract="L’Addressable Audience è l’insieme dei profili di persona in Real-Time Customer Profile che la tua organizzazione ha il diritto di coinvolgere. Questo include sia profili direttamente identificabili che pseudonimi.<br>L&#39;utilizzo ha superato la quantità concessa in licenza. Per ridurre l’utilizzo, configura le scadenze dei dati di un set di dati o di un profilo pseudonimo."
+abstract="Il pubblico indirizzabile è l’insieme dei profili di persona nel profilo cliente in tempo reale che la tua organizzazione è autorizzata a coinvolgere. Questo include sia profili direttamente identificabili che pseudonimi.<br>L’utilizzo ha superato la quantità prevista dalla licenza. Per ridurre l’utilizzo, configura le scadenze del set di dati o del profilo pseudonimo."
 additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=it" text="Scadenze degli eventi esperienza"
 additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
 
 [!CONTEXTUALHELP]
 id="platform_dashboards_licenseusage_exceededusage_engageableprofiles"
-title="Profili coinvolgibili previsti"
-abstract="I profili coinvolgibili sono profili di persona in Real-Time Customer Profile che la tua organizzazione ha tentato di coinvolgere utilizzando Journey Optimizer negli ultimi 12 mesi.<br>L&#39;utilizzo ha superato la quantità concessa in licenza. Per ridurre l’utilizzo, configura le scadenze dei dati di un set di dati o di un profilo pseudonimo."
+title="Profili che potrebbero essere coinvolti previsti"
+abstract="I profili che potrebbero essere coinvolti sono profili di persona nel profilo cliente in tempo reale che la tua organizzazione ha tentato di coinvolgere utilizzando Journey Optimizer negli ultimi 12 mesi.<br>L’utilizzo ha superato la quantità prevista dalla licenza. Per ridurre l’utilizzo, configura le scadenze del set di dati o del profilo pseudonimo."
 additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=it" text="Scadenze degli eventi esperienza"
 additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
 
 [!CONTEXTUALHELP]
 id="platform_dashboards_licenseusage_exceededusage_businesspersonprofile"
 title="Profilo persona aziendale previsto"
-abstract="I Profili persona aziendale sono record in Real-Time Customer Profile che rappresentano singoli utenti in un contesto B2B.<br>L&#39;utilizzo ha superato la quantità concessa in licenza. Per ridurre l’utilizzo, configura le scadenze dei dati di un set di dati o di un profilo pseudonimo."
+abstract="I Profili persona aziendale sono record del profilo cliente in tempo reale che rappresentano singoli utenti in un contesto B2B.<br>L’utilizzo ha superato la quantità prevista dalla licenza. Per ridurre l’utilizzo, configura le scadenze del set di dati o del profilo pseudonimo."
 additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=it" text="Scadenze degli eventi esperienza"
 additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
 
 [!CONTEXTUALHELP]
 id="platform_dashboards_licenseusage_exceededusage_corehours"
-title="Ore Core Previste"
-abstract="Le ore di base rappresentano il tempo di elaborazione impiegato nei servizi Experience Platform.<br>L&#39;utilizzo ha superato la quantità concessa in licenza. Per ridurre l’utilizzo, configura le scadenze dei dati di un set di dati o di un profilo pseudonimo."
+title="Ore core previste"
+abstract="Le ore core rappresentano il tempo di elaborazione utilizzato da tutti i servizi Experience Platform.<br>L’utilizzo potrebbe raggiungere la quantità concessa in licenza. Per ridurre l’utilizzo, configura le scadenze del set di dati o del profilo pseudonimo."
 additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=it" text="Scadenze degli eventi esperienza"
 additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
 
 [!CONTEXTUALHELP]
 id="platform_dashboards_licenseusage_exceededusage_totaldatavolume"
-title="Volume totale di dati previsto"
-abstract="Volume di dati totale è la quantità di dati disponibili in Real-Time Customer Profile da utilizzare nei flussi di lavoro di coinvolgimento e personalizzazione.<br>L&#39;utilizzo ha superato la quantità concessa in licenza. Per ridurre l’utilizzo, configura le scadenze dei dati di un set di dati o di un profilo pseudonimo."
+title="Volume totale dati previsto"
+abstract="Il Volume totale dati è la quantità di dati disponibili nel profilo cliente in tempo reale da utilizzare nei flussi di lavoro di coinvolgimento e personalizzazione.<br>L’utilizzo potrebbe raggiungere la quantità concessa in licenza. Per ridurre l’utilizzo, configura le scadenze del set di dati o del profilo pseudonimo."
 additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=it" text="Scadenze degli eventi esperienza"
 additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
 
 [!CONTEXTUALHELP]
 id="platform_dashboards_licenseusage_exceededusage_cjaRowsAvailable"
-title="Righe CJA previste disponibili"
-abstract="Righe CJA disponibili si riferisce alla media giornaliera di righe di dati disponibili per l’analisi in Customer Journey Analytics.<br>L&#39;utilizzo ha superato la quantità concessa in licenza. Per ridurre l’utilizzo, configura le scadenze dei dati di un set di dati o di un profilo pseudonimo."
+title="Righe CJA disponibili previste"
+abstract="Le Righe CJA disponibili si riferiscono alla media giornaliera di righe di dati disponibili per l’analisi in Customer Journey Analytics.<br>L’utilizzo potrebbe raggiungere la quantità concessa in licenza. Per ridurre l’utilizzo, configura le scadenze del set di dati o del profilo pseudonimo."
 additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=it" text="Scadenze degli eventi esperienza"
 additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
 
@@ -236,14 +236,14 @@ La [!UICONTROL quantità di licenza] per i componenti aggiuntivi è inclusa nell
 [!CONTEXTUALHELP]
 id="platform_dashboards_licenseUsage_prediction"
 title="Utilizzo previsto"
-abstract="Le previsioni si basano sull’utilizzo negli ultimi 6-7 mesi e vengono generate settimanalmente ogni venerdì. Tieni presente che le previsioni sull’utilizzo delle licenze sono approssimazioni basate sull’utilizzo passato. Sei responsabile della comprensione dell’utilizzo effettivo dell’organizzazione e di garantire che l’utilizzo non vada oltre l’ambito della licenza dell’organizzazione con Adobe. Per ridurre l’utilizzo, puoi configurare le scadenze dei dati di set di dati o profili pseudonimi per sandbox e set di dati."
+abstract="Le previsioni si basano sull’utilizzo negli ultimi 6-7 mesi e vengono generate ogni venerdì su base settimanale. Tieni presente che le previsioni sull’utilizzo delle licenze sono approssimazioni basate sull’utilizzo passato. Sei responsabile della comprensione dell’utilizzo effettivo dell’organizzazione e di garantire che l’utilizzo non vada oltre l’ambito della licenza dell’organizzazione con Adobe. Per ridurre l’utilizzo, puoi configurare le scadenze del set di dati o del profilo pseudonimo di sandbox e set di dati."
 additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=it" text="Scadenze di set di dati automatizzate"
 additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
 
 [!CONTEXTUALHELP]
 id="platform_licenseusage_prediction"
 title="Utilizzo previsto"
-abstract="Le previsioni si basano sull’utilizzo negli ultimi 6-7 mesi e vengono generate il 15 di ogni mese. Tieni presente che le previsioni sull’utilizzo delle licenze sono approssimazioni basate sull’utilizzo passato. Sei responsabile della comprensione dell’utilizzo effettivo dell’organizzazione e di garantire che l’utilizzo non vada oltre l’ambito della licenza dell’organizzazione con Adobe. Per ridurre l’utilizzo, puoi configurare le scadenze dei dati di set di dati o profili pseudonimi per sandbox e set di dati."
+abstract="Le previsioni si basano sull’utilizzo negli ultimi 6-7 mesi e vengono generate il 15 di ogni mese. Tieni presente che le previsioni sull’utilizzo delle licenze sono approssimazioni basate sull’utilizzo passato. Sei responsabile della comprensione dell’utilizzo effettivo dell’organizzazione e di garantire che l’utilizzo non vada oltre l’ambito della licenza dell’organizzazione con Adobe. Per ridurre l’utilizzo, puoi configurare le scadenze del set di dati o del profilo pseudonimo di sandbox e set di dati."
 additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=it" text="Scadenze di set di dati automatizzate"
 additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
 

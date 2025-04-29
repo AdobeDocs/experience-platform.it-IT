@@ -7,7 +7,7 @@ exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '1769'
-ht-degree: 15%
+ht-degree: 16%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 15%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_description"
 >title="Integrare e applicare il consenso dei clienti nei dati di profilo"
->abstract="<h2>Descrizione</h2><p>Experience Platform ti consente di integrare i dati sul consenso raccolti dai clienti nei rispettivi profili. Puoi quindi impostare i criteri di consenso per determinare se tali dati possono essere inclusi nei segmenti attivati per determinate destinazioni.</p>"
+>abstract="<h2>Descrizione</h2><p>Con Experience Platform è possibile integrare i dati di consenso raccolti dalla clientela nei rispettivi profili. Puoi quindi impostare i criteri di consenso per determinare se tali dati possono essere inclusi nei segmenti attivati per determinate destinazioni.</p>"
 
 Questo documento illustra come utilizzare l&#39;area di lavoro **[!UICONTROL Criteri]** nell&#39;interfaccia utente di Adobe Experience Platform per creare e gestire i criteri di utilizzo dei dati.
 
