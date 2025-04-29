@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Scadenza dati profilo pseudonimo
 description: Questo documento fornisce indicazioni generali sulla configurazione della scadenza dei dati per i profili pseudonimi in Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: 07786ad7f43c66411e9e167c17daa2baf51a2661
+source-git-commit: aeb9d6636f0d843bf13d09bcb4c12754e2890046
 workflow-type: tm+mt
 source-wordcount: '1245'
 ht-degree: 4%
@@ -138,3 +138,4 @@ Per un caso d’uso tipico, puoi impostare la scadenza dei dati Experience Event
 ## Passaggi successivi
 
 Dopo aver letto questa guida, sai come visualizzare e creare le scadenze dei dati del profilo Pseudonimo. Per ulteriori informazioni sulla gestione dei dati su Experience Platform nel suo complesso, consulta la [Guida alle best practice per l&#39;adesione alla licenza di gestione dei dati](../landing/license-usage-and-guardrails/data-management-best-practices.md).
+
