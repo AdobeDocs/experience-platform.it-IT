@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Query Service
 description: Adobe Experience Platform Query Service fornisce un’interfaccia utente che può essere utilizzata per scrivere ed eseguire query, visualizzare le query eseguite in precedenza e accedere a quelle salvate dagli utenti della tua organizzazione.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 7e1eee48b45311f9ac358496e46ca8980df0112b
 workflow-type: tm+mt
-source-wordcount: '2276'
+source-wordcount: '2767'
 ht-degree: 1%
 
 ---
@@ -104,6 +104,50 @@ Quando si digita nell&#39;editor delle query, l&#39;editor completa automaticame
 
 ![Area di lavoro dell&#39;editor delle query.](../images/ui/overview/query-editor.png)
 
+### Scarica risultati query {#download-query-results}
+
+>[!AVAILABILITY]
+>
+>Le funzionalità di download sono disponibili solo per i clienti che dispongono del componente aggiuntivo Data Distiller. Per ulteriori informazioni su Data Distiller, contatta il tuo rappresentante Adobe.
+
+È ora possibile scaricare i risultati delle query direttamente dall’interfaccia utente di Query Editor. Dopo una corretta esecuzione della query, puoi scaricare l’output in formato CSV, XLSX o JSON. Questa funzionalità semplifica i flussi di lavoro per i team di marketing e analisi consentendo l’accesso immediato ai risultati delle query per l’analisi offline, il reporting e i processi basati su Excel.
+
+Per scaricare i risultati della query, seleziona **[!UICONTROL Scarica]** nell&#39;angolo superiore destro della scheda **[!UICONTROL Risultato]** di Query Editor. Quindi scegli **[!UICONTROL CSV]**, **[!UICONTROL XLSX]** o **[!UICONTROL JSON]** dal menu a discesa. Il file viene scaricato automaticamente nel computer locale.
+
+>[!NOTE]
+>
+>Il pulsante **[!UICONTROL Scarica]** viene visualizzato solo quando una query restituisce risultati. Se non viene restituito alcun record, nella scheda **[!UICONTROL Risultato]** viene visualizzato il messaggio &#39;Nessun risultato&#39; e l&#39;opzione di download è disabilitata.
+
+![Scheda dei risultati dell&#39;editor delle query con Download e menu a discesa evidenziati.](../images/ui/overview/download-results.png)
+
+>[!NOTE]
+>
+>Quando si apre un file CSV in Excel, è possibile che venga visualizzato il seguente avviso:<br>&quot;Possibile perdita di dati. Se si salva la cartella di lavoro nel formato delimitato da virgole (csv), alcune caratteristiche potrebbero andare perse. Per mantenere queste funzioni, salvatele in un formato di file Excel.&quot;<br>Tenere inoltre presente che la formattazione della data e dell&#39;ora può variare in base al tipo di file. I file CSV mantengono il formato mostrato nei risultati della query, mentre i file XLSX possono applicare automaticamente la formattazione localizzata in Excel.
+
+### Visualizza risultati a schermo intero {#view-results}
+
+Dopo aver eseguito una query corretta, seleziona **[!UICONTROL Visualizza risultati]** nella scheda **[!UICONTROL Risultato]** per aprire una visualizzazione a schermo intero tabulata dei risultati.
+
+La visualizzazione a schermo intero mostra l’output in una griglia ridimensionabile, semplificando la revisione di set di dati di grandi dimensioni e l’analisi tra colonne. Questa modalità di anteprima è particolarmente utile quando si analizzano tabelle di grandi dimensioni o si esaminano dettagli a livello di riga.
+
+>[!NOTE]
+>
+>L’anteprima è di sola lettura e non modifica la query o il set di dati.
+
+![Finestra di dialogo di anteprima a schermo intero con i risultati di visualizzazione selezionati.](../images/ui/overview/view-results-fullscreen.png)
+
+### Copia risultati {#copy-results}
+
+Utilizza la funzione di copia avanzata nell’editor delle query per copiare rapidamente i risultati delle query come valori separati da virgola (CSV). Incolla facilmente i dati copiati in applicazioni per fogli di calcolo come Excel per ulteriori analisi. Questa funzionalità migliora la leggibilità, mantiene la formattazione e semplifica i flussi di lavoro di convalida e reporting senza ricorrere a strumenti di terze parti.
+
+È possibile copiare i risultati della query dalla scheda [!UICONTROL Risultato] o dall&#39;anteprima dei risultati a schermo intero. Dalla scheda **[!UICONTROL Risultato]**, selezionare l&#39;icona Copia (![Icona Copia.](../../images/icons/copy.png)) per copiare tutti i risultati della query negli Appunti. Nella scheda Risultati editor query selezionare singole righe o utilizzare l&#39;intestazione di colonna della casella di controllo per selezionare tutte le righe. Seleziona una singola riga per abilitare l’icona Copia.
+
+![Scheda dei risultati dell&#39;editor delle query con l&#39;icona Copia evidenziata.](../images/ui/overview/query-editor-copy-icon.png)
+
+In alternativa, selezionare **[!UICONTROL Visualizza risultati]** per aprire l&#39;anteprima a schermo intero. In questa finestra di dialogo, selezionare singole righe o utilizzare la casella di controllo nell&#39;angolo superiore sinistro per selezionare tutte le righe, quindi selezionare l&#39;icona Copia (![Icona Copia.](../../images/icons/copy.png)) per copiare i dati selezionati.
+
+![La finestra di dialogo di anteprima a schermo intero con le righe dei risultati selezionate e l&#39;icona Copia evidenziata.](../images/ui/overview/results-copy.png)
+
 ## Query pianificate {#scheduled-queries}
 
 È possibile pianificare l&#39;esecuzione di query già salvate come modello con una frequenza regolare. Quando pianifichi una query, puoi scegliere la frequenza delle esecuzioni, la data di inizio e di fine, il giorno della settimana in cui viene eseguita la query pianificata e il set di dati in cui esportare la query. Le pianificazioni delle query vengono impostate mediante l&#39;Editor query.
@@ -113,8 +157,6 @@ Per informazioni su come pianificare una query tramite l&#39;interfaccia utente,
 Una volta pianificata, la query viene visualizzata nell&#39;elenco delle query pianificate nella scheda [!UICONTROL Query pianificate]. Per informazioni dettagliate sulla query, sulle esecuzioni, sul creatore e sugli intervalli, seleziona una query pianificata dall’elenco.
 
 ![Area di lavoro Query con la scheda Query pianificate evidenziata e visualizzazione delle righe delle pianificazioni delle query.](../images/ui/overview/scheduled-queries.png)
-
-<!--  -->
 
 | Colonna | Descrizione |
 | --- | --- |
