@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Best Practice Per La Modellazione Dei Dati
 description: Questo documento fornisce un’introduzione agli schemi Experience Data Model (XDM) e ai blocchi predefiniti, ai principi e alle best practice per la composizione degli schemi da utilizzare in Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7521273c0ea4383b7141e9d7a82953257ff18c34
 workflow-type: tm+mt
-source-wordcount: '3224'
+source-wordcount: '3236'
 ht-degree: 1%
 
 ---
@@ -251,7 +251,7 @@ Di seguito è riportata una raccolta di suggerimenti per mantenere l&#39;integri
 * **Applica pattern per valori coerenti**: se i valori di identità seguono un pattern specifico, è necessario utilizzare l&#39;impostazione **[!UICONTROL Pattern]** per applicare questo vincolo. Questa impostazione può includere solo regole come cifre, lettere maiuscole o minuscole o combinazioni di caratteri specifiche. Utilizza espressioni regolari per far corrispondere i pattern nelle stringhe.
 * **Limita le eVar negli schemi di Analytics**: in genere, uno schema di Analytics deve avere un solo eVar designato come identità. Se intendi utilizzare più di un’eVar come identità, devi verificare nuovamente se la struttura dati può essere ottimizzata.
 * **Assicurare l&#39;univocità di un campo selezionato**: il campo scelto deve essere univoco rispetto all&#39;identità primaria nello schema. In caso contrario, non contrassegnarlo come identità. Ad esempio, se più clienti possono fornire lo stesso indirizzo e-mail, lo spazio dei nomi non è un’identità adatta. Questo principio si applica anche ad altri spazi dei nomi di identità come i numeri di telefono. Se si contrassegna un campo non univoco come identità, si potrebbe verificare una compressione indesiderata del profilo.
-* **Verifica lunghezza minima stringa**: tutti i campi stringa devono contenere almeno un carattere, poiché i valori stringa non devono mai essere vuoti. I valori Null per i campi non obbligatori, tuttavia, sono accettabili.
+* **Verifica lunghezza minima stringa**: tutti i campi stringa devono contenere almeno un carattere, poiché i valori stringa non devono mai essere vuoti. I valori Null per i campi non obbligatori, tuttavia, sono accettabili. Per impostazione predefinita, ai nuovi campi stringa viene assegnata una lunghezza minima pari a uno.
 
 ## Passaggi successivi
 

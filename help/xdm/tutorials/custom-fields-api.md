@@ -2,9 +2,9 @@
 title: Definire i campi XDM nell’API del registro dello schema
 description: Scopri come definire campi diversi durante la creazione di risorse Experience Data Model (XDM) personalizzate nell’API Schema Registry.
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7521273c0ea4383b7141e9d7a82953257ff18c34
 workflow-type: tm+mt
-source-wordcount: '1189'
+source-wordcount: '1197'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ I campi [!UICONTROL String] sono indicati da `type: string`.
 Facoltativamente, puoi vincolare i tipi di valori che possono essere immessi per la stringa attraverso le seguenti proprietà aggiuntive:
 
 * `pattern`: un pattern regex da vincolare.
-* `minLength`: lunghezza minima per la stringa.
+* `minLength`: lunghezza minima per la stringa. Le stringhe ricevono un valore minimo di `1` per impostazione predefinita.
 * `maxLength`: lunghezza massima per la stringa.
 
 ```json
