@@ -3,9 +3,9 @@ title: Attivare i tipi di pubblico per le destinazioni di esportazione dei profi
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico disponibili in Adobe Experience Platform inviandoli a destinazioni basate su profili in batch.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 11961e291188d509609a036f41084f4487cab584
+source-git-commit: 6b91527afe172530597de30b9669b86ff0262e13
 workflow-type: tm+mt
-source-wordcount: '4517'
+source-wordcount: '4596'
 ht-degree: 11%
 
 ---
@@ -125,7 +125,7 @@ Per modificare più pianificazioni contemporaneamente, selezionare i tipi di pub
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
 >title="Attivare dopo la valutazione dei tipi di pubblico"
->abstract="L’attivazione viene eseguita subito dopo il completamento del processo di segmentazione giornaliera, affinché vengano esportati i profili più aggiornati."
+>abstract="<p>L’attivazione viene eseguita subito dopo il completamento del processo di segmentazione giornaliera, affinché vengano esportati i profili più aggiornati.</p><p>L&#39;opzione per esportare i profili dopo la valutazione del pubblico è <i>non</i> disponibile per la frequenza di esportazione settimanale e mensile.</p>"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_scheduled"
@@ -140,6 +140,8 @@ Seleziona **[!UICONTROL Esporta file completi]** per attivare l&#39;esportazione
 
    * **[!UICONTROL Una volta]**: pianifica un&#39;esportazione di file completa una tantum.
    * **[!UICONTROL Giornaliero]**: pianifica esportazioni di file completi una volta al giorno, ogni giorno, al momento specificato.
+   * **[!UICONTROL Settimanale]**: seleziona la data di inizio e le esportazioni successive avverranno in quel giorno della settimana fino alla data di fine selezionata.
+   * **[!UICONTROL Mensile]**: seleziona la data di inizio e le esportazioni successive avverranno in quella data del mese fino alla data di fine selezionata. Per i mesi con meno di 30 o 31 giorni, l&#39;esportazione viene eseguita l&#39;ultimo giorno del mese.
 
 2. Utilizza l&#39;interruttore **[!UICONTROL Ora]** per selezionare se l&#39;esportazione deve avvenire immediatamente dopo la valutazione del pubblico o su base pianificata, a un orario specificato. Quando selezioni l&#39;opzione **[!UICONTROL Pianificato]**, puoi utilizzare il selettore per scegliere l&#39;ora del giorno, in formato [!DNL UTC], in cui eseguire l&#39;esportazione.
 
@@ -187,6 +189,7 @@ Selezionare **[!UICONTROL Esporta file incrementali]** per attivare un&#39;espor
 
    * **[!UICONTROL Giornaliero]**: pianifica le esportazioni di file incrementali una volta al giorno, ogni giorno, al momento specificato.
    * **[!UICONTROL Oraria]**: pianifica le esportazioni di file incrementali ogni 3, 6, 8 o 12 ore.
+
 
 2. Utilizza il selettore **[!UICONTROL Ora]** per scegliere l&#39;ora del giorno, in formato [!DNL UTC], in cui eseguire l&#39;esportazione.
 
