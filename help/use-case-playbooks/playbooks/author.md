@@ -4,9 +4,9 @@ title: Scopri come creare e condividere i tuoi playbook utilizzando l’Assisten
 description: Come creare e condividere i tuoi playbook per casi d’uso.
 role: User
 exl-id: 0bc49710-ad9e-4509-b7e6-55f9b9037aa9
-source-git-commit: aa1e155fb8d71497958d0de1f6c10cf47e58dbf0
+source-git-commit: a910c922e9a51b60e276b0aac7e81e35d0a378fd
 workflow-type: tm+mt
-source-wordcount: '1113'
+source-wordcount: '1665'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Il framework segue un processo in tre fasi:
 
-1. **Acquisizione metadati**: utilizza l&#39;Assistente AI o il [modulo web] per acquisire i metadati del playbook.
+1. **Acquisizione metadati**: utilizza l&#39;Assistente AI o il modulo Web per acquisire i metadati del playbook.
 
 2. **Associazione tecnica**: aggiungi al playbook risorse tecniche specifiche, ad esempio percorsi o pubblico. Puoi mantenere il controllo completo sul processo di creazione del playbook nella sandbox di sviluppo, garantendo l’allineamento con gli schemi e altre strutture di dati univoche.
 
@@ -26,7 +26,7 @@ Il framework segue un processo in tre fasi:
 
 ## Creare un playbook
 
-Puoi creare un playbook in due modi: utilizzando l’Assistente AI o manualmente. Leggi le sezioni seguenti per scoprire come.
+Puoi creare un playbook in due modi: utilizzando l’Assistente AI o manualmente. Leggi le sezioni seguenti per scoprire come creare un playbook con AI Assistant.
 
 ### Panoramica playbook
 
@@ -40,9 +40,9 @@ Seleziona **[!UICONTROL Nuovo playbook]**, quindi seleziona **Genera playbook co
 
 ![Interfaccia playbook con l&#39;opzione &quot;Genera playbook con Assistente AI&quot; selezionata.](/help/use-case-playbooks/assets/playbooks/authoring/generate-playbook.png)
 
-Nel campo prompt, descrivi il caso d’uso.
+Utilizza il campo prompt per descrivere il caso d’uso. Ad esempio:
 
-**Esempio**: &quot;Coinvolgi i clienti ACME che hanno cercato scarpe da corsa ma non hanno completato l&#39;acquisto.&quot;
+&quot;Coinvolgi i clienti ACME che hanno navigato in scarpe da corsa ma non hanno completato l’acquisto.&quot;
 
 ![L&#39;interfaccia del playbook con l&#39;area del modulo Web evidenziata.](/help/use-case-playbooks/assets/playbooks/authoring/prompt.png)
 
@@ -114,7 +114,7 @@ L’Assistente AI può elaborare diverse strutture di prompt ed estrarre i detta
 
 &quot;Creare una campagna dal titolo &quot;Complete the Look&quot; (Completa l&#39;aspetto) per aumentare le vendite e la Customer Lifetime Value. La campagna incoraggia i clienti che hanno acquistato utensili per cucina o mobili a completare un acquisto complementare tramite consigli personalizzati e offerte correlate al loro acquisto. Inviare un messaggio ai clienti con le raccomandazioni sui prodotti. Se non effettua acquisti entro 7 giorni, riceve un secondo messaggio con consigli e offerte di prodotto. Utilizza le notifiche push e l’e-mail per contattare i clienti. Puoi rivolgerti ai clienti che hanno effettuato un acquisto negli ultimi 7 giorni nella categoria utensili da cucina o mobili e che non sono stati presi di mira negli ultimi 30 giorni. Come parte della campagna, vogliamo misurare i KPI come i clic (e-mail, app, sms, push), CTR, E-Wallet CTR, AOV Conversion.CLV Revenue, Total Purchase events (in-store, digital, call center).&quot;
 
-![Esempio 1 prompt](/help/use-case-playbooks/assets/playbooks/authoring/example-prompt.png)
+![Esempio di visualizzazione di un prompt lungo nella casella di immissione testo](/help/use-case-playbooks/assets/playbooks/authoring/long-prompt.png)
 
 **Esempio 2:**
 
@@ -126,20 +126,20 @@ Canali del progetto/punti di contatto: e-mail
 Pubblico di destinazione: clienti che si sono iscritti alle comunicazioni della newsletter di moda ACME.
 KPI target/Metriche di coinvolgimento/ROI: 1. Aumentare i ricavi dai prodotti. 2. Incentivare la fedeltà dei clienti.&quot;
 
-![Esempio 2 prompt](/help/use-case-playbooks/assets/playbooks/authoring/example-2-prompt.png)
+![Esempio di visualizzazione di un prompt organizzato nella casella di immissione testo](/help/use-case-playbooks/assets/playbooks/authoring/organized-list-prompt.png)
 
 **Esempio 3:**
 
 &quot;Spingi gli acquirenti a comprare i prodotti durante una campagna promozionale.
 Coinvolgi gli acquirenti durante una promozione in corso inviando comunicazioni appropriate tramite e-mail, SMS o notifiche push per acquistare i prodotti. Invia loro un promemoria e-mail dopo 24 ore se non sono coinvolti nella promozione.&quot;
 
-![Esempio 3 prompt](/help/use-case-playbooks/assets/playbooks/authoring/example-3-prompt.png)
+![Esempio di visualizzazione di un prompt conciso nella casella di immissione testo](/help/use-case-playbooks/assets/playbooks/authoring/concise-prompt.png)
 
 **Esempio 4:**
 
 &quot;Vendi scarpe ai giocatori delle scuole superiori.&quot;
 
-![Esempio 4 prompt](/help/use-case-playbooks/assets/playbooks/authoring/example-4-prompt.png)
+![Esempio di richiesta di una riga](/help/use-case-playbooks/assets/playbooks/authoring/one-liner-prompt.png)
 
 L’Assistente AI rimuove tutti i dettagli non necessari, ad esempio &quot;Nome progetto&quot; o &quot;Sfondo&quot;. Estrae gli elementi chiave come &quot;pubblico target&quot;, &quot;obiettivo della campagna&quot; e &quot;canale di marketing&quot; e funziona con qualsiasi stile di input.
 
@@ -157,6 +157,85 @@ Quando crei i playbook, presta attenzione alla lingua e al contenuto che includi
 
 Se un playbook viene segnalato come contenuto inappropriato o offensivo, viene automaticamente segnalato ad Adobe per la revisione. Adobe esamina quindi il contenuto contrassegnato e, se ritenuto inappropriato, ne riceve una notifica al cliente e la playbook viene rimossa.
 
+## Condivisione di playbook tra sandbox {#sharing-playbooks-sandboxes}
+
+Se l’organizzazione contiene più sandbox, non è necessario condividere manualmente i playbook tra di esse. Una volta creato e pubblicato un playbook in una sandbox, questo diventa disponibile in tutte le sandbox all’interno di tale organizzazione. Puoi quindi creare istanze di quel playbook in una qualsiasi delle altre sandbox.
+
+Se la playbook fa riferimento a campi non disponibili nello schema di unione di un’altra sandbox, è possibile che venga visualizzato un messaggio di errore durante il tentativo di creazione dell’istanza. Il messaggio richiama i campi mancanti, in modo da poter aggiornare lo schema in base alle esigenze.
+
+>[!IMPORTANT]
+>
+>La condivisione transitiva della playbook non è supportata. Se si condivide un playbook da un&#39;organizzazione a un&#39;altra e quindi lo si importa, non è possibile condividerlo nuovamente dall&#39;organizzazione ricevente a una terza organizzazione.
+
+## Condivisione dei playbook in più organizzazioni {#sharing-playbooks-organizations}
+
+Per condividere un playbook da un&#39;organizzazione all&#39;altra, eseguire la procedura seguente:
+
+* **Accedi all&#39;organizzazione di origine**: accedi all&#39;organizzazione contenente il playbook creato e vuoi condividerlo dalla scheda **[!UICONTROL Playbook]**.
+* **Pubblica il playbook**: se il playbook non è già pubblicato, è necessario pubblicarlo prima di condividerlo.
+
+>[!NOTE]
+>
+>È necessario stabilire una partnership tra le organizzazioni di origine e di destinazione per consentire la condivisione dei playbook. Scopri come [creare una richiesta di partnership organizzazione](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sharing-packages-across-orgs).
+
+* **Avvia la condivisione**: una volta pubblicato il playbook e stabilita una relazione, selezionare **[!UICONTROL Condividi playbook]**.
+* **Selezionare l&#39;organizzazione di destinazione**: scegliere l&#39;organizzazione con cui si desidera condividere il playbook quando richiesto.
+* **Conferma e condividi**: conferma la selezione. Riceverai messaggi di conferma che indicano che la condivisione è andata a buon fine.
+* ***Verifica l&#39;organizzazione di destinazione**: accedi all&#39;organizzazione di destinazione per verificare che il playbook sia disponibile.
+* **Importa playbook**: seleziona **[!UICONTROL Importa]** per inserire il playbook nell&#39;organizzazione di destinazione. Puoi visualizzarlo nella scheda **Playbook**.
+
+Se mancano campi nello schema di unione, una finestra di dialogo li evidenzia durante l’importazione.
+
+![Campi mancanti nello schema di unione elencato durante il processo di importazione](/help/use-case-playbooks/assets/playbooks/authoring/missing-fields.png)
+
+Se il playbook non viene visualizzato, assicurati che sia pubblicato e che la partnership con l’organizzazione sia attiva.
+
+## Autorizzazioni richieste
+
+Per accedere alla sandbox e utilizzare questa funzione, è necessario disporre delle seguenti autorizzazioni:
+
+* **Autorizzazioni sandbox**:
+
+Questi sono necessari per accedere all’ambiente sandbox in cui è presente la funzione:
+
+* **Gestisci sandbox**
+* **Visualizza sandbox**
+
+* **Autorizzazioni di condivisione pacchetti**:
+
+Queste autorizzazioni sono necessarie per la funzionalità di condivisione interna:
+
+* [**Gestisci pacchetto**](/help/sandboxes/ui/sandbox-tooling.md)
+* [**Condividi pacchetto**](/help/sandboxes/ui/sharing-packages-across-orgs.md)
+
+Queste autorizzazioni ti consentiranno di:
+
+* Inserisci l’ambiente sandbox
+* Accedere alla funzione all’interno della sandbox
+* Gestisci e condividi pacchetti secondo necessità
+
+Queste autorizzazioni si trovano nella sezione **[!UICONTROL Sandbox]** dell&#39;elenco delle autorizzazioni.
+
+![L&#39;elenco delle autorizzazioni con le autorizzazioni pertinenti evidenziate.](/help/use-case-playbooks/assets/playbooks/authoring/permissions.png)
+
+### Percorsi e oggetti correlati - autorizzazioni
+
+Durante la creazione di Percorsi che utilizzano i playbook, è probabile che si faccia riferimento ad altri oggetti come **Canali**, **Tipi di pubblico** e altre entità. Ognuno di questi ha un proprio set di autorizzazioni.
+
+Queste sono le autorizzazioni chiave per le azioni relative al Percorso, ad esempio:
+
+* **Visualizza percorso**
+* **Gestisci percorso**
+* Autorizzazioni relative a oggetti come tipi di pubblico e canali
+
+Saranno inoltre necessarie le seguenti autorizzazioni per il pubblico:
+
+* **Segmento letto**
+* **Profilo letto**
+* **Set di dati letto**
+
+Poiché i Percorsi sono altamente flessibili e possono coinvolgere molti oggetti interconnessi, le relative [autorizzazioni complete](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/privacy/high-low-permissions) sono documentate separatamente e possono variare in base al caso d&#39;uso specifico.
+
 ## Passaggi successivi
 
-Ora che sai come creare e pubblicare playbook utilizzando l&#39;Assistente AI, scopri come iniziare a utilizzare i playbook disponibili e scegli quello giusto per il tuo caso d&#39;uso da [Elenco playbook](/help/use-case-playbooks/playbooks/choose.md).
+Ora che sai come creare, pubblicare e condividere playbook utilizzando l&#39;Assistente AI, scopri come iniziare a utilizzare i playbook disponibili e scegli quello giusto per il tuo caso d&#39;uso da [Elenco playbook](/help/use-case-playbooks/playbooks/choose.md).
