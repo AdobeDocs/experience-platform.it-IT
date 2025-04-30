@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform - Aprile 2025
 description: Note sulla versione di Adobe Experience Platform di aprile 2025.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 7772e0b6f512c3854a03fb01580c80cc0cb41ba3
+source-git-commit: b7904761e4120170664b1b21482d3077ff5df57b
 workflow-type: tm+mt
-source-wordcount: '1706'
-ht-degree: 29%
+source-wordcount: '1899'
+ht-degree: 26%
 
 ---
 
@@ -31,6 +31,7 @@ Aggiornamenti alle funzioni e alla documentazione esistenti di Adobe Experience 
 - [Query Service](#query-service)
 - [Profilo cliente in tempo reale](#profile)
 - [Origini](#sources)
+- [Playbook di casi d’uso](#use-case-playbooks)
 
 ## Experience League {#experience-league}
 
@@ -152,3 +153,21 @@ Utilizza le origini in Experience Platform per acquisire dati da un’applicazio
 {style="table-layout:auto"}
 
 Per ulteriori informazioni, consulta la [panoramica sulle origini](../../sources/home.md).
+
+## Playbook di casi d’uso {#use-case-playbooks}
+
+I casi d’uso Playbook sono stati originariamente progettati per aiutare a superare le sfide quando si inizia con Real-Time Customer Data Platform o Adobe Journey Optimizer. Continuano a evolversi, consentendoti di affrontare rapidamente casi d’uso chiave per il marketing e fornire ispirazione e risorse predefinite per testare e passare alla produzione.
+
+I playbook di casi d’uso sono passati da uno strumento di individuazione a un framework collaborativo. Ora ti aiutano a creare, gestire e condividere i tuoi playbook tra organizzazioni diverse.
+
+**Funzioni aggiornate**
+
+| Funzione | Descrizione |
+| --- | --- |
+| [!BADGE Beta]{type=Informative} Autore e condividi i tuoi playbook | Un nuovo Playbook Authoring Framework consente di creare, gestire e condividere playbook personalizzati per casi d’uso. Ciò include il supporto per l’acquisizione dei metadati chiave, la modifica delle mappe del percorso e l’associazione delle risorse tecniche pertinenti. Puoi condividere i playbook tra organizzazioni per standardizzare gli approcci di marketing e mantenere la coerenza. |
+
+{style="table-layout:auto"}
+
+Per scoprire come creare e condividere i tuoi playbook, leggi il documento [Autore e condividi i tuoi playbook](/help/use-case-playbooks/playbooks/author.md).
+
+Per ulteriori informazioni, consulta la [Panoramica sui playbook di casi d&#39;uso](/help/use-case-playbooks/playbooks/overview.md), che fornisce una panoramica delle funzionalità dei playbook, del loro scopo e una dimostrazione end-to-end, tra cui come creare istanze e importare risorse generate in altri ambienti sandbox.
