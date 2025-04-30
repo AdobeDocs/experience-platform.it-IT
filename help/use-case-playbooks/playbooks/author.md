@@ -4,9 +4,9 @@ title: Scopri come creare e condividere i tuoi playbook utilizzando l’Assisten
 description: Come creare e condividere i tuoi playbook per casi d’uso.
 role: User
 exl-id: 0bc49710-ad9e-4509-b7e6-55f9b9037aa9
-source-git-commit: a910c922e9a51b60e276b0aac7e81e35d0a378fd
+source-git-commit: 401062fbea8845f16803edb72ccb14b75c3f8409
 workflow-type: tm+mt
-source-wordcount: '1665'
+source-wordcount: '1667'
 ht-degree: 0%
 
 ---
@@ -161,11 +161,11 @@ Se un playbook viene segnalato come contenuto inappropriato o offensivo, viene a
 
 Se l’organizzazione contiene più sandbox, non è necessario condividere manualmente i playbook tra di esse. Una volta creato e pubblicato un playbook in una sandbox, questo diventa disponibile in tutte le sandbox all’interno di tale organizzazione. Puoi quindi creare istanze di quel playbook in una qualsiasi delle altre sandbox.
 
-Se la playbook fa riferimento a campi non disponibili nello schema di unione di un’altra sandbox, è possibile che venga visualizzato un messaggio di errore durante il tentativo di creazione dell’istanza. Il messaggio richiama i campi mancanti, in modo da poter aggiornare lo schema in base alle esigenze.
+Se la playbook fa riferimento a campi non disponibili nello schema di unione della sandbox di destinazione o privi delle autorizzazioni necessarie, è possibile che venga visualizzato un messaggio di errore quando si tenta di creare l’istanza. Il messaggio richiama i campi mancanti e/o le autorizzazioni mancanti.
 
->[!IMPORTANT]
->
->La condivisione transitiva della playbook non è supportata. Se si condivide un playbook da un&#39;organizzazione a un&#39;altra e quindi lo si importa, non è possibile condividerlo nuovamente dall&#39;organizzazione ricevente a una terza organizzazione.
+Se mancano campi nello schema di unione, una finestra di dialogo li evidenzia durante l’importazione.
+
+![Campi mancanti nello schema di unione elencato durante il processo di importazione](/help/use-case-playbooks/assets/playbooks/authoring/missing-fields.png)
 
 ## Condivisione dei playbook in più organizzazioni {#sharing-playbooks-organizations}
 
@@ -181,14 +181,14 @@ Per condividere un playbook da un&#39;organizzazione all&#39;altra, eseguire la 
 * **Avvia la condivisione**: una volta pubblicato il playbook e stabilita una relazione, selezionare **[!UICONTROL Condividi playbook]**.
 * **Selezionare l&#39;organizzazione di destinazione**: scegliere l&#39;organizzazione con cui si desidera condividere il playbook quando richiesto.
 * **Conferma e condividi**: conferma la selezione. Riceverai messaggi di conferma che indicano che la condivisione è andata a buon fine.
-* ***Verifica l&#39;organizzazione di destinazione**: accedi all&#39;organizzazione di destinazione per verificare che il playbook sia disponibile.
+* **Verifica l&#39;organizzazione di destinazione**: accedi all&#39;organizzazione di destinazione per verificare che il playbook sia disponibile.
 * **Importa playbook**: seleziona **[!UICONTROL Importa]** per inserire il playbook nell&#39;organizzazione di destinazione. Puoi visualizzarlo nella scheda **Playbook**.
 
-Se mancano campi nello schema di unione, una finestra di dialogo li evidenzia durante l’importazione.
-
-![Campi mancanti nello schema di unione elencato durante il processo di importazione](/help/use-case-playbooks/assets/playbooks/authoring/missing-fields.png)
-
 Se il playbook non viene visualizzato, assicurati che sia pubblicato e che la partnership con l’organizzazione sia attiva.
+
+>[!IMPORTANT]
+>
+>La condivisione transitiva della playbook non è supportata. Se si condivide un playbook da un&#39;organizzazione a un&#39;altra e quindi lo si importa, non è possibile condividerlo nuovamente dall&#39;organizzazione ricevente a una terza organizzazione.
 
 ## Autorizzazioni richieste
 
