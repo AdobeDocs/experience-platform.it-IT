@@ -4,14 +4,22 @@ description: Note aggiornate sulla versione di Adobe Experience Platform Debugge
 keywords: debugger; estensione experience debugger;chrome;estensione;note sulla versione
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: e82cd0b24504f807f7511aae1f5a0c9d77a40f74
+source-git-commit: f32c4bbf48fce2ada7cf7b75efc82e28d1ec26ff
 workflow-type: tm+mt
-source-wordcount: '801'
-ht-degree: 98%
+source-wordcount: '850'
+ht-degree: 93%
 
 ---
 
 # Note sulla versione di Adobe Experience Platform Debugger
+
+## Versione 1.6.3 - 30 aprile 2025
+
+### Correzioni e miglioramenti
+
+* È stato risolto un problema a causa del quale Debugger impediva il funzionamento delle funzioni DTM e Launch.
+* È stato risolto un problema che impediva la visualizzazione degli hit post-elaborati di Analytics nei registri.
+* È stato risolto un problema che impediva la corretta visualizzazione dei dati nei registri in lingue non ASCII come il giapponese.
 
 ## Versione 1.6.2 - mercoledì 1 ottobre 2024
 
@@ -23,7 +31,7 @@ ht-degree: 98%
 
 ### Correzioni e miglioramenti
 
-* È stato risolto un problema che impediva agli utenti di aggiungere nuovi codici di incorporamento dei tag alle pagine senza di essi.
+* È stato risolto un problema che impediva agli utenti di aggiungere nuovi codici da incorporare dei tag alle pagine senza di essi.
 
 ## Versione 1.6.0 - 11 luglio 2024
 
