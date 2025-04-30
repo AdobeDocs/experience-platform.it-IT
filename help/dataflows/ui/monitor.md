@@ -2,9 +2,9 @@
 title: Panoramica del dashboard di monitoraggio
 description: Scopri come utilizzare il dashboard di monitoraggio nell’interfaccia utente di Adobe Experience Platform
 exl-id: 06ea5380-d66e-45ae-aa02-c8060667da4e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: cca405c58551a52a044ac513921298637974e88e
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '988'
 ht-degree: 0%
 
 ---
@@ -63,12 +63,6 @@ Seleziona **[!UICONTROL Cliente e account]** per aggiornare la dashboard e visua
 
 ![Tipo di dati di monitoraggio impostato su &quot;Cliente e account&quot;.](../assets/ui/monitor-overview/customer-account.png)
 
->[!TAB Potenziale]
-
-Seleziona **[!UICONTROL Prospect]** per aggiornare la dashboard e visualizzare le metriche sui dati di ricerca di potenziali clienti acquisiti in Experience Platform nel corso di un determinato periodo. **Nota**: è possibile visualizzare le attività dei tipi di dati prospect solo se si dispone di [diritti per i dati prospect](../../rtcdp/partner-data/prospecting.md).
-
-![Tipo di dati di monitoraggio impostato su &quot;Prospect&quot;.](../assets/ui/monitor-overview/prospect.png)
-
 >[!TAB Arricchimento del profilo account]
 
 Seleziona **[!UICONTROL Arricchimento profilo account]** per aggiornare il dashboard e visualizzare le metriche nei dati di arricchimento profilo. **Nota**: è possibile visualizzare le metriche di arricchimento del profilo account solo se si dispone dei diritti per [dati B2B](../../rtcdp/b2b-tutorial.md).
@@ -81,11 +75,11 @@ Utilizza l’intestazione superiore della dashboard per un’esperienza di monit
 
 >[!BEGINTABS]
 
->[!TAB Origini]
+>[!TAB Data lake]
 
-Seleziona **[!UICONTROL Origini]** per visualizzare le metriche sul tasso di acquisizione delle origini. Per ulteriori informazioni, consulta la guida su [monitoraggio dei dati delle origini](monitor-sources.md).
+Seleziona **[!UICONTROL Data lake]** per visualizzare le metriche sul tasso di acquisizione del data lake. Per ulteriori informazioni, consulta la guida sul [monitoraggio dell&#39;acquisizione del data lake](monitor-sources.md).
 
-![Dashboard di monitoraggio nell&#39;interfaccia utente con la scheda delle origini selezionata.](../assets/ui/monitor-overview/sources.png)
+![Dashboard di monitoraggio nell&#39;interfaccia utente con la scheda del data lake selezionata.](../assets/ui/monitor-overview/data-lake.png)
 
 >[!TAB Identità]
 
@@ -133,8 +127,12 @@ Al termine, selezionare **[!UICONTROL Applica]**.
 
 Una volta letto questo documento, potrai spostarti all’interno del dashboard di monitoraggio nell’interfaccia utente. Per informazioni su come monitorare i dati per uno specifico servizio Experience Platform, consulta la documentazione seguente:
 
-* [Monitorare i dati di origine](monitor-sources.md).
+* [Monitorare l&#39;acquisizione del data lake](monitor-sources.md).
 * [Monitora dati identità](monitor-identities.md).
 * [Monitorare i dati del profilo](monitor-profiles.md).
 * [Monitorare i dati del pubblico](monitor-audiences.md).
 * [Monitorare i dati delle destinazioni](monitor-destinations.md).
+
+<!-- >[!TAB Prospect]
+
+Select **[!UICONTROL Prospect]** to update your dashboard and display metrics on prospecting data that has been ingested to Experience Platform over the course of a given period. **Note**: You can only view prospect data type activities if you are [entitled to prospect data](../../rtcdp/partner-data/prospecting.md). -->
