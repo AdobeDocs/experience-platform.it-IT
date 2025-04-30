@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform - Aprile 2025
 description: Note sulla versione di Adobe Experience Platform di aprile 2025.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b7904761e4120170664b1b21482d3077ff5df57b
+source-git-commit: 3836b369d609448146a273fc6cf29061fd1ea422
 workflow-type: tm+mt
-source-wordcount: '1899'
-ht-degree: 26%
+source-wordcount: '2040'
+ht-degree: 29%
 
 ---
 
@@ -30,6 +30,7 @@ Aggiornamenti alle funzioni e alla documentazione esistenti di Adobe Experience 
 - [Identity Service](#identity)
 - [Query Service](#query-service)
 - [Profilo cliente in tempo reale](#profile)
+- [Sandbox](#sandboxes)
 - [Origini](#sources)
 - [Playbook di casi d’uso](#use-case-playbooks)
 
@@ -126,6 +127,20 @@ Adobe Experience Platform ti consente di promuovere esperienze coordinate, coere
 {style="table-layout:auto"}
 
 Per ulteriori informazioni sul profilo cliente in tempo reale, leggi la [panoramica sul profilo](../../profile/home.md)
+
+## Sandbox {#sandboxes}
+
+Adobe Experience Platform è stato progettato per arricchire le applicazioni di esperienza digitale su scala globale. Le aziende spesso eseguono più applicazioni di esperienza digitale in parallelo e devono occuparsi di sviluppo, test e distribuzione di tali applicazioni, garantendo al contempo la conformità operativa. Per rispondere a questa esigenza, Experience Platform fornisce sandbox che permettono di suddividere una singola istanza di Experience Platform in ambienti virtuali separati, utili per lo sviluppo e l’evoluzione delle applicazioni di esperienza digitale.
+
+**Funzioni nuove o aggiornate**
+
+| Funzione | Descrizione |
+| --- | --- |
+| Espansione del supporto per il plug-in degli strumenti sandbox | È ora possibile copiare le azioni personalizzate come oggetto dipendente durante la duplicazione di oggetti Percorso negli strumenti sandbox. Inoltre, puoi selezionare le azioni esistenti da riutilizzare nella sandbox di destinazione. Possono anche essere aggiunti a un pacchetto in modo indipendente. Per informazioni complete sugli oggetti Adobe Journey Optimizer supportati, leggere la [guida agli strumenti sandbox](../../sandboxes/ui/sandbox-tooling.md#adobe-journey-optimizer-objects). |
+
+{style="table-layout:auto"}
+
+Per ulteriori informazioni sulle sandbox, consulta la [panoramica sulle sandbox](../../sandboxes/home.md).
 
 ## Origini {#sources}
 

@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform - Aprile 2025
 description: Note sulla versione di Adobe Experience Platform di aprile 2025.
 exl-id: a3b1e2e8-d780-4e23-b323-37e1a631f716
-source-git-commit: 65e0f0f98006f55bc08ccf24499841413def7a16
+source-git-commit: 52f6995beeff05948958bc7349242e2744e2fb05
 workflow-type: tm+mt
-source-wordcount: '1899'
-ht-degree: 26%
+source-wordcount: '2040'
+ht-degree: 29%
 
 ---
 
@@ -30,6 +30,7 @@ Aggiornamenti alle funzioni e alla documentazione esistenti di Adobe Experience 
 - [Identity Service](#identity)
 - [Query Service](#query-service)
 - [Profilo cliente in tempo reale](#profile)
+- [Sandbox](#sandboxes)
 - [Origini](#sources)
 - [Playbook di casi d’uso](#use-case-playbooks)
 
@@ -127,6 +128,20 @@ Adobe Experience Platform ti consente di promuovere esperienze coordinate, coere
 
 Per ulteriori informazioni sul profilo cliente in tempo reale, leggi la [panoramica sul profilo](../../profile/home.md)
 
+## Sandbox {#sandboxes}
+
+Adobe Experience Platform è stato progettato per arricchire le applicazioni di esperienza digitale su scala globale. Le aziende spesso eseguono più applicazioni di esperienza digitale in parallelo e devono occuparsi di sviluppo, test e distribuzione di tali applicazioni, garantendo al contempo la conformità operativa. Per rispondere a questa esigenza, Experience Platform fornisce sandbox che permettono di suddividere una singola istanza di Experience Platform in ambienti virtuali separati, utili per lo sviluppo e l’evoluzione delle applicazioni di esperienza digitale.
+
+**Funzioni nuove o aggiornate**
+
+| Funzione | Descrizione |
+| --- | --- |
+| Espansione del supporto per il plug-in degli strumenti sandbox | È ora possibile copiare le azioni personalizzate come oggetto dipendente durante la duplicazione di oggetti Percorso negli strumenti sandbox. Inoltre, puoi selezionare le azioni esistenti da riutilizzare nella sandbox di destinazione. Possono anche essere aggiunti a un pacchetto in modo indipendente. Per informazioni complete sugli oggetti Adobe Journey Optimizer supportati, leggere la [guida agli strumenti sandbox](../../sandboxes/ui/sandbox-tooling.md#adobe-journey-optimizer-objects). |
+
+{style="table-layout:auto"}
+
+Per ulteriori informazioni sulle sandbox, consulta la [panoramica sulle sandbox](../../sandboxes/home.md).
+
 ## Origini {#sources}
 
 Experience Platform fornisce un’API RESTful e un’interfaccia utente interattiva per impostare facilmente le connessioni di origine per vari provider di dati. Queste connessioni di origine consentono di autenticarti e connetterti a sistemi di archiviazione esterni e servizi di gestione delle relazioni con i clienti, impostare i tempi per le esecuzioni dell’acquisizione e gestire la velocità effettiva di acquisizione dei dati.
@@ -156,15 +171,15 @@ Per ulteriori informazioni, consulta la [panoramica sulle origini](../../sources
 
 ## Playbook di casi d’uso {#use-case-playbooks}
 
-Use Case Playbooks were originally designed to help overcome challenges when getting started with Real-Time Customer Data Platform or Adobe Journey Optimizer. They continue to evolve, and now enable you to jumpstart key marketing use cases and provide inspiration and pre-built assets to test and move into production.
+I casi d’uso Playbook sono stati originariamente progettati per aiutare a superare le sfide quando si inizia con Real-Time Customer Data Platform o Adobe Journey Optimizer. Continuano a evolversi, consentendoti di affrontare rapidamente casi d’uso chiave per il marketing e fornire ispirazione e risorse predefinite per testare e passare alla produzione.
 
-Use Case Playbooks have transitioned from a discovery tool into a collaborative framework. Ora ti aiutano a creare, gestire e condividere i tuoi playbook tra organizzazioni diverse.
+I playbook di casi d’uso sono passati da uno strumento di individuazione a un framework collaborativo. Ora ti aiutano a creare, gestire e condividere i tuoi playbook tra organizzazioni diverse.
 
 **Funzioni aggiornate**
 
 | Funzione | Descrizione |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} Author and share your own playbooks | Un nuovo Playbook Authoring Framework consente di creare, gestire e condividere playbook personalizzati per casi d’uso. Ciò include il supporto per l’acquisizione dei metadati chiave, la modifica delle mappe del percorso e l’associazione delle risorse tecniche pertinenti. Puoi condividere i playbook tra organizzazioni per standardizzare gli approcci di marketing e mantenere la coerenza. |
+| [!BADGE Beta]{type=Informative} Autore e condividi i tuoi playbook | Un nuovo Playbook Authoring Framework consente di creare, gestire e condividere playbook personalizzati per casi d’uso. Ciò include il supporto per l’acquisizione dei metadati chiave, la modifica delle mappe del percorso e l’associazione delle risorse tecniche pertinenti. Puoi condividere i playbook tra organizzazioni per standardizzare gli approcci di marketing e mantenere la coerenza. |
 
 {style="table-layout:auto"}
 
