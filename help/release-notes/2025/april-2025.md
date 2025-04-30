@@ -1,10 +1,11 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Aprile 2025
 description: Note sulla versione di Adobe Experience Platform di aprile 2025.
-source-git-commit: d2ee1adb031af83569f7b226a8881297423fc257
+exl-id: a3b1e2e8-d780-4e23-b323-37e1a631f716
+source-git-commit: 7772e0b6f512c3854a03fb01580c80cc0cb41ba3
 workflow-type: tm+mt
-source-wordcount: '1663'
-ht-degree: 30%
+source-wordcount: '1706'
+ht-degree: 29%
 
 ---
 
@@ -50,6 +51,7 @@ Experience League è una piattaforma di apprendimento completa progettata per ai
 | Destinazione | Descrizione |
 | --- | --- |
 | [Sincronizzazione persona Marketo Engage](/help/destinations/catalog/adobe/marketo-engage-person-sync.md) | Adobe ha aggiornato la destinazione [!DNL Marketo Engage Person Sync] per risolvere un problema che interessava i clienti quando erano presenti più e-mail nella mappa delle identità. |
+| [(V2) Connessione pubblico in tempo reale Pega CDH](/help/destinations/catalog/personalization/pega-v2.md) | Utilizza la destinazione [!DNL (V2) Pega Customer Decision Hub Realtime Audience] in Adobe Experience Platform per inviare gli attributi del profilo e i dati sull&#39;iscrizione del pubblico a Pega Customer Decision Hub per prendere decisioni ottimali, quando nel tuo account Pega sono configurate più applicazioni Pega Customer Decision Hub. |
 
 **Funzionalità nuova o aggiornata** {#destinations-new-updated-functionality}
 
