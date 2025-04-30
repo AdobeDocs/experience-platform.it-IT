@@ -5,9 +5,9 @@ user-guide-description: Attiva i dati, noti e non, per campagne di marketing cro
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: b456540a59c4b0455e8e1d52ed98d97454f8f61f
+source-git-commit: 8a9320ae00fdb611e4fd0fdc9ba80e922273359e
 workflow-type: tm+mt
-source-wordcount: '1286'
+source-wordcount: '1292'
 ht-degree: 6%
 
 ---
@@ -203,7 +203,8 @@ ht-degree: 6%
       * [Estensione Gainsight](./catalog/personalization/gainsight.md)
       * [Estensione KickFire](./catalog/personalization/kickfire.md)
       * [Estensione Marketo Web Personalization](./catalog/personalization/marketo-web-personalization.md)
-      * [Connessione Pega Customer Decision Hub](./catalog/personalization/pega.md)
+      * [Connessione pubblico in tempo reale Pega CDH](./catalog/personalization/pega.md)
+      * [(V2) Connessione del pubblico in tempo reale Pega CDH](./catalog/personalization/pega-v2.md)
       * [Connessione profilo Pega](./catalog/personalization/pega-profile.md)
    * Destinazioni social{#social}
       * [Panoramica sulle destinazioni social](./catalog/social/overview.md)

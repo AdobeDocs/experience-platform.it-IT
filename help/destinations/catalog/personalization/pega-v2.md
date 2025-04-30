@@ -1,7 +1,7 @@
 ---
 title: (V2) Connessione del pubblico in tempo reale Pega CDH
 description: Utilizza la destinazione del pubblico in tempo reale Pega Customer Decision Hub in Adobe Experience Platform per inviare gli attributi del profilo e i dati sull’iscrizione del pubblico a Pega Customer Decision Hub per prendere decisioni sulle migliori azioni successive.
-source-git-commit: cc18f5c9445e5d08565cd5ac4bcbdb11ccbc1a31
+source-git-commit: a51f6bd189bc25018cf25e69fe23bc9f6b3372dd
 workflow-type: tm+mt
 source-wordcount: '1033'
 ht-degree: 3%
@@ -115,17 +115,21 @@ Di seguito è riportato un esempio di mapping di identità corretto durante l&#3
 ## Dati esportati / Convalida esportazione dati {#exported-data}
 
 In caso di esito positivo, l’iscrizione al pubblico per un profilo inserirebbe l’identificatore del pubblico, il nome e gli stati nell’archivio dati di iscrizione al pubblico di marketing Pega. I dati di iscrizione sono associati a un cliente che utilizza il profilo cliente Designer in [!DNL Pega Customer Decision Hub], come illustrato di seguito.
+
 ![Immagine della schermata dell&#39;interfaccia utente in cui è possibile associare i dati di iscrizione al pubblico di Adobe al cliente tramite il profilo cliente Designer](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
 
 I dati di iscrizione del pubblico vengono utilizzati nei criteri di coinvolgimento Designer per le azioni migliori successive di Pega, come illustrato di seguito.
-![Immagine della schermata dell&#39;interfaccia utente in cui è possibile aggiungere campi di iscrizione al pubblico come condizioni in Criteri di coinvolgimento di Pega Next-Best-Action Designer](../../assets/catalog/personalization/pega/pega-profile-designer-engagment.png)
+
+![Immagine della schermata dell&#39;interfaccia utente in cui è possibile aggiungere campi di iscrizione al pubblico come condizioni in Criteri di coinvolgimento di Pega Next-Best-Action Designer](../../assets/catalog/personalization/pega/pega-profile-designer-engagement.png)
 
 I campi dati di iscrizione del pubblico del cliente vengono aggiunti come predittori nei modelli adattivi, come mostrato di seguito.
+
 ![Immagine della schermata dell&#39;interfaccia utente in cui è possibile aggiungere campi di appartenenza al pubblico come predicatori nei modelli adattivi, utilizzando Prediction Studio](../../assets/catalog/personalization/pega/pega-profile-designer-adaptivemodel.png)
 
 ## Risorse aggiuntive {#additional-resources}
 
 Per ulteriori informazioni, fare riferimento alla seguente documentazione di [!DNL Pega]:
+
 * [Configurazione di una registrazione client OAuth 2.0](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html)
 * [Creazione di un&#39;esecuzione in tempo reale per i flussi di dati](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html)
 * [Gestire i record cliente in Customer Profile Designer](https://docs.pega.com/bundle/customer-decision-hub/page/customer-decision-hub/implement/profile-designer-data-management.html)
