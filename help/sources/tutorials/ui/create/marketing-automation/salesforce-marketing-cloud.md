@@ -2,9 +2,9 @@
 title: Collegare l’account Marketing Cloud di Salesforce ad Experience Platform tramite l’interfaccia utente
 description: Scopri come collegare il tuo account Marketing Cloud di Salesforce ad Experience Platform tramite l’interfaccia utente.
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7ff0709b62590bb80c1ed664368f28cdc4a950ea
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '548'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 >[!WARNING]
 >
->L&#39;origine [!DNL Salesforce Marketing Cloud] diventerà obsoleta alla fine di giugno 2025.
+>L&#39;origine [!DNL Salesforce Marketing Cloud] diventerà obsoleta a gennaio 2026. Una nuova fonte verrà rilasciata nel corso di quest&#39;anno come alternativa. Una volta rilasciata la nuova origine, è necessario pianificare la migrazione alla nuova origine creando nuove connessioni account e flussi di dati prima della fine di gennaio 2026.
 
 Questo tutorial illustra i passaggi necessari per collegare l&#39;account [!DNL Salesforce Marketing Cloud] a Adobe Experience Platform tramite l&#39;interfaccia utente.
 
