@@ -3,9 +3,9 @@ title: Note sulla versione di Adobe Experience Platform - Aprile 2024
 description: Note sulla versione di Adobe Experience Platform di aprile 2024.
 exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
 source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1896'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -52,7 +52,7 @@ Adobe Experience Platform fornisce una suite di tecnologie che consente di racco
 | Tipo | Funzione | Descrizione |
 | --- | --- | --- |
 | Estensioni | Estensione tag [!DNL Acxiom Anonymous Visitor Insights] | Scopri da dove provengono i visitatori del tuo sito web con [!DNL Acxiom's Visitor Insights]. Utilizzando la tecnologia di ricerca IP geografica, Acxiom può individuare la posizione dei browser anonimi. Una volta identificata, una ricerca nel database organizzato produce ulteriori informazioni che vengono rimandate al browser. I creatori di contenuti possono quindi adattare i loro contenuti in modo che corrispondano a questi punti dati, fornendo un’esperienza più personalizzata e coinvolgente per i visitatori, anche se hanno iniziato come estranei. |
-| Stream di dati | [Rilevamento bot Edge Network](../../datastreams/bot-detection.md) | Il traffico proveniente da entità non umane, come programmi automatizzati, scraper web, spider, scanner scriptati, può rendere più difficile identificare gli eventi che si verificano dai visitatori umani. Questo tipo di traffico può influenzare negativamente importanti metriche aziendali, portando a rapporti di traffico errati. <br>Rilevamento bot consente di identificare gli eventi generati da [Web SDK](../../web-sdk/home.md), [Mobile SDK](https://developer.adobe.com/client-sdks/home/) e [[!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/getting-started/) come generati da spider e bot noti. Configurando il rilevamento di bot per gli stream di dati, puoi identificare indirizzi IP, intervalli IP e intestazioni di richiesta specifici che desideri classificare come eventi bot. <br> L’identificazione del traffico da bot può fornire una misurazione più accurata dell’attività degli utenti sul sito o sull’app mobile. |
+| Stream di dati | [Rilevamento bot Edge Network](../../datastreams/bot-detection.md) | Il traffico proveniente da entità non umane, come programmi automatizzati, scraper web, spider, scanner scriptati, può rendere più difficile identificare gli eventi che si verificano dai visitatori umani. Questo tipo di traffico può influenzare negativamente importanti metriche aziendali, portando a rapporti di traffico errati. <br>Il rilevamento bot consente di identificare gli eventi generati da [Web SDK](../../web-sdk/home.md), [SDK Mobile](https://developer.adobe.com/client-sdks/home/) e [[!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/getting-started/) come generati da spider e bot noti. Configurando il rilevamento di bot per gli stream di dati, puoi identificare indirizzi IP, intervalli IP e intestazioni di richiesta specifici che desideri classificare come eventi bot. <br> L’identificazione del traffico da bot può fornire una misurazione più accurata dell’attività degli utenti sul sito o sull’app mobile. |
 | SDK mobile | Versione principale | Sono state rilasciate nuove versioni principali di SDK mobile per le seguenti piattaforme: iOS Mobile Core 5.x e estensioni compatibili di iOS, Android Mobile Core 3.x e estensioni compatibili di Android, React Native Core 6.x ed estensioni compatibili di React Native, Flutter Core 4.x ed estensioni compatibili di Flutter. Questa versione include diverse nuove funzioni e miglioramenti, tra cui il supporto SDK Android per Jetpack Compose, il supporto per esperienze basate su codice Adobe Journey Optimizer e la disponibilità generale dell’estensione di messaggistica di Adobe Journey Optimizer per Flutter. Per note sulla versione più dettagliate, consulta [Note sulla versione di SDK mobile](https://developer.adobe.com/client-sdks/home/release-notes/). |
 | SDK mobile | Privacy | A causa dell’aggiornamento della policy di Apple, a partire dal 1° maggio 2024, gli sviluppatori devono implementare nuove funzioni per la privacy per inviare il messaggio a App Store. Tutti i clienti Adobe che utilizzano l’SDK mobile devono effettuare l’aggiornamento alla versione 5.x dell’SDK se desiderano ricevere l’approvazione di App Store dopo il 1° maggio. |
 | SDK Roku | SDK Roku | La prima versione principale dell’SDK Roku è stata rilasciata con il supporto per contenuti in streaming per Edge Network di Experience Platform. |
@@ -69,7 +69,7 @@ Per ulteriori informazioni sulle raccolte dati dati, consulta la [panoramica sul
 
 [!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 
-**Funzionalità nuova o aggiornata** {#destinations-new-updated-functionality}
+**Funzionalità nuove o aggiornate** {#destinations-new-updated-functionality}
 
 | Funzionalità | Descrizione |
 | ----------- | ----------- |
