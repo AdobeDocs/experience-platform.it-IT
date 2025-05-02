@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Sintassi SQL in Query Service
 description: Questo documento descrive e spiega la sintassi SQL supportata da Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 5adc587a232e77f1136410f52ec207631b6715e3
+source-git-commit: a0b7cd9e406b4a140ef70f8d80cb27ba6817c0cd
 workflow-type: tm+mt
-source-wordcount: '4623'
+source-wordcount: '4649'
 ht-degree: 1%
 
 ---
@@ -110,17 +110,21 @@ SELECT * FROM table_to_be_queried SNAPSHOT AS OF end_snapshot_id;
 
 SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN start_snapshot_id AND end_snapshot_id;
 
-SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN HEAD AND start_snapshot_id;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN 'HEAD' AND start_snapshot_id;
 
-SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN end_snapshot_id AND TAIL;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN end_snapshot_id AND 'TAIL';
 
-SELECT * FROM (SELECT id FROM table_to_be_queried BETWEEN start_snapshot_id AND end_snapshot_id) C 
+SELECT * FROM (SELECT id FROM table_to_be_queried SNAPSHOT BETWEEN start_snapshot_id AND end_snapshot_id) C;
 
 (SELECT * FROM table_to_be_queried SNAPSHOT SINCE start_snapshot_id) a
   INNER JOIN 
 (SELECT * from table_to_be_joined SNAPSHOT AS OF your_chosen_snapshot_id) b 
   ON a.id = b.id;
 ```
+
+>[!NOTE]
+>
+>Quando si utilizza `HEAD` o `TAIL` in una clausola `SNAPSHOT`, è necessario racchiuderli tra apici (ad esempio, &#39;HEAD&#39;, &#39;TAIL&#39;). Se si utilizzano senza virgolette, si verifica un errore di sintassi.
 
 Nella tabella seguente viene illustrato il significato di ogni opzione di sintassi all&#39;interno della clausola SNAPSHOT.
 
@@ -130,7 +134,7 @@ Nella tabella seguente viene illustrato il significato di ogni opzione di sintas
 | `AS OF end_snapshot_id` | Legge i dati così come si trovavano nell’ID snapshot specificato (incluso). |
 | `BETWEEN start_snapshot_id AND end_snapshot_id` | Legge i dati tra gli ID snapshot iniziale e finale specificati. È esclusivo di `start_snapshot_id` e include `end_snapshot_id`. |
 | `BETWEEN HEAD AND start_snapshot_id` | Legge i dati dall&#39;inizio (prima del primo snapshot) all&#39;ID snapshot iniziale specificato (incluso). Si noti che questa opzione restituisce solo righe in `start_snapshot_id`. |
-| `BETWEEN end_snapshot_id AND TAIL` | Legge i dati da subito dopo il `end-snapshot_id` specificato alla fine del set di dati (escluso l&#39;ID snapshot). Ciò significa che se `end_snapshot_id` è l&#39;ultimo snapshot nel set di dati, la query restituirà zero righe perché non sono presenti snapshot oltre l&#39;ultimo snapshot. |
+| `BETWEEN end_snapshot_id AND TAIL` | Legge i dati da subito dopo il `end_snapshot_id` specificato alla fine del set di dati (escluso l&#39;ID snapshot). Ciò significa che se `end_snapshot_id` è l&#39;ultimo snapshot nel set di dati, la query restituirà zero righe perché non sono presenti snapshot oltre l&#39;ultimo snapshot. |
 | `SINCE start_snapshot_id INNER JOIN table_to_be_joined AS OF your_chosen_snapshot_id ON table_to_be_queried.id = table_to_be_joined.id` | Legge i dati a partire dall&#39;ID snapshot specificato da `table_to_be_queried` e li unisce ai dati da `table_to_be_joined` come in `your_chosen_snapshot_id`. Il join si basa sugli ID corrispondenti delle colonne ID delle due tabelle unite in join. |
 
 Una clausola `SNAPSHOT` funziona con un alias di tabella o tabella ma non sopra una sottoquery o vista. Una clausola `SNAPSHOT` funziona ovunque sia possibile applicare una query `SELECT` su una tabella.
@@ -141,7 +145,7 @@ Una clausola `SNAPSHOT` funziona con un alias di tabella o tabella ma non sopra 
 >
 >Se si esegue una query tra due ID snapshot, possono verificarsi i due scenari seguenti se lo snapshot iniziale è scaduto e il flag di comportamento di fallback facoltativo (`resolve_fallback_snapshot_on_failure`) è impostato:
 >
->- Se è impostato il flag di comportamento di fallback facoltativo, Query Service sceglie lo snapshot disponibile più recente, lo imposta come snapshot iniziale e restituisce i dati tra lo snapshot disponibile più recente e quello finale specificato. Questi dati sono **inclusivi** della prima istantanea disponibile.
+>- Se è impostato il flag di comportamento di fallback facoltativo, Query Service sceglie lo snapshot disponibile più recente, lo imposta come snapshot iniziale e restituisce i dati tra lo snapshot disponibile più recente e lo snapshot finale specificato. Questi dati sono **inclusivi** della prima istantanea disponibile.
 
 ### clausola WHERE
 

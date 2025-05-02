@@ -1,21 +1,21 @@
 ---
 title: Metrica volume dati totale
 description: Scopri la nuova metrica Volume totale dati e come sostituisce la precedente metrica di ricchezza media di profilo.
-hide: true
-hidefromtoc: true
-source-git-commit: 9aba85d4e5a481b0eff53e1d87311c395934f585
+exl-id: 4b21d25c-b82b-4d1a-83ce-b510f02fd160
+source-git-commit: 62f5ecf82df46284365e64d633c8242ac45567bc
 workflow-type: tm+mt
-source-wordcount: '459'
+source-wordcount: '593'
 ht-degree: 1%
 
 ---
 
-
 # Metrica del volume totale dei dati
 
-A partire dal 24 settembre 2024, la metrica Volume di dati totale sostituirà la metrica precedente Ricchezza media profilo.
+Il volume di dati totale sostituisce la metrica Ricchezza media profilo precedente come modo più semplice e spiegabile per monitorare l’utilizzo rispetto all’adesione all’archivio profili.
 
-Il volume di dati totale rappresenta la quantità totale di dati disponibili per Adobe Experience Platform Real-Time Customer Profile da utilizzare nei flussi di lavoro di coinvolgimento. Questo valore è equivalente alla metrica Pubblico di riferimento moltiplicata per la Ricchezza media del profilo.
+**Volume di dati totale = Pubblico indirizzabile × Ricchezza media profilo**
+
+Questa metrica riflette la quantità totale di dati archiviati nell&#39;**archivio profili** e disponibili per l&#39;utilizzo nei flussi di lavoro di coinvolgimento dei clienti in tempo reale. **not** include i dati archiviati nel **data lake**. Questa modifica fornisce una visualizzazione più mirata e trasparente dei dati rilevanti per la personalizzazione e il coinvolgimento basati su profili.
 
 ## Domande frequenti {#faq}
 
@@ -36,6 +36,16 @@ No. Potrai ancora usufruire dei vantaggi dei pacchetti di adesione acquistati in
 ### Perché vedo un valore diverso per il volume totale dei dati rispetto al mio diritto all’archivio profili?
 
 Il volume di dati totale rappresenta la quantità **totale** di dati disponibili per il profilo da utilizzare nei flussi di lavoro di coinvolgimento. La misurazione è stata aggiornata per essere più deterministica e spiegabile. La maggior parte degli utenti dovrebbe **non** vedere una modifica significativa tra il volume totale dei dati e l&#39;archiviazione totale dei profili. In caso di dubbi, crea un ticket con il rappresentante del servizio clienti.
+
+### Calcolo del volume totale dei dati Include lo storage Data Lake?
+
+Il volume totale dei dati viene calcolato con la seguente formula:
+
+**Volume di dati totale = Pubblico indirizzabile × Ricchezza media profilo**
+
+Questa metrica riflette la quantità totale di dati memorizzati nell’archivio profili disponibile per Real-Time Customer Profile da utilizzare nei flussi di lavoro di coinvolgimento. **not** include i dati archiviati nel data lake.
+
+In precedenza, alcune offerte legacy utilizzavano una metrica di &quot;archiviazione totale&quot; che combinava l’utilizzo sia dell’archivio profili che del Data Lake. Tuttavia, il volume totale dei dati è limitato solo all’archivio profili, fornendo una visualizzazione più mirata dei dati rilevanti per il coinvolgimento basato sul profilo.
 
 ### È necessario ricreare le modifiche per continuare a gestire la ricchezza media del profilo?
 

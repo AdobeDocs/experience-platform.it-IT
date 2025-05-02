@@ -4,10 +4,10 @@ title: Dashboard utilizzo licenze
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale è possibile visualizzare informazioni importanti sull’utilizzo delle licenze della tua organizzazione.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 62f5ecf82df46284365e64d633c8242ac45567bc
 workflow-type: tm+mt
-source-wordcount: '3398'
-ht-degree: 39%
+source-wordcount: '3442'
+ht-degree: 38%
 
 ---
 
@@ -307,7 +307,7 @@ Il dashboard utilizzo licenze riporta diverse metriche univoche applicabili a pi
 | [!UICONTROL Numero di pacchetti Richness profilo] | Un aumento del volume totale di dati autorizzato di 25 KB per profilo per ogni pacchetto di ricchezza di profilo aggiuntivo. |
 | [!UICONTROL Ore di calcolo servizio query] | Misurazione del tempo impiegato dai motori di Query Service per leggere, elaborare e riscrivere i dati nel data lake quando viene eseguita una query in batch. |
 | [!UICONTROL Segmentazione streaming n. di pacchetti] | I pacchetti aggiornano l’appartenenza al segmento per un profilo persona quando nuovi dati entrano nel servizio di segmentazione tramite un flusso di streaming. L’appartenenza al segmento viene valutata in base agli attributi correnti del profilo della persona e al valore dell’evento corrente, senza tenere conto del comportamento storico. La segmentazione in streaming è una funzione condivisa. |
-| [!UICONTROL Volume di dati totale] | La quantità totale di dati disponibili per Real-Time Customer Profile da utilizzare nei flussi di lavoro di coinvolgimento. Per ulteriori informazioni, consulta le [domande frequenti sul volume totale dei dati](../../landing/license-usage-and-guardrails/total-data-volume.md). |
+| [!UICONTROL Volume di dati totale] | La quantità totale di dati disponibili per Real-Time Customer Profile da utilizzare nei flussi di lavoro di coinvolgimento. Il volume totale dei dati è calcolato con la seguente formula: **Volume totale dei dati = Pubblico indirizzabile × Rendicità media del profilo**. Questa metrica riflette i dati memorizzati solo nell’archivio profili ed esclude l’archiviazione del data lake. Fornisce una visualizzazione più mirata dei dati rilevanti per il coinvolgimento basato sul profilo. Per ulteriori informazioni, consulta le [domande frequenti sul volume totale dei dati](../../landing/license-usage-and-guardrails/total-data-volume.md). |
 | [!UICONTROL Volume totale di uscita dati] | Il volume annuo cumulativo di dati esportati da Adobe Experience Platform in data warehouse di terze parti. |
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
