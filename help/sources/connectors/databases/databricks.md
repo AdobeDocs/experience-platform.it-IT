@@ -1,16 +1,22 @@
 ---
 title: Database di Azure
 description: Scopri i passaggi preliminari necessari per collegare i database di Azure ad Experience Platform.
+badgeUltimate: label="Ultimate" type="Positive"
+badgeBeta: label="Beta" type="Informative"
 last-substantial-update: 2025-04-29T00:00:00Z
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
-source-git-commit: 16de2879f5f5da533ce640d93871571f03aa74c2
+source-git-commit: 5637a12d5f9cc14b6cf3d88f018aa92de06ab739
 workflow-type: tm+mt
-source-wordcount: '575'
-ht-degree: 2%
+source-wordcount: '593'
+ht-degree: 3%
 
 ---
 
 # [!DNL Azure Databricks]
+
+>[!IMPORTANT]
+>
+>L&#39;origine [!DNL Azure Databricks] è disponibile nel catalogo delle origini per gli utenti che hanno acquistato Real-Time CDP Ultimate.
 
 [!DNL Azure Databricks] è una piattaforma basata su cloud progettata per l&#39;analisi dei dati, l&#39;apprendimento automatico e l&#39;intelligenza artificiale. È possibile utilizzare [!DNL Databricks] per l&#39;integrazione con [!DNL Azure] e fornire un ambiente olistico per la creazione, la distribuzione e la gestione di soluzioni di dati su larga scala.
 

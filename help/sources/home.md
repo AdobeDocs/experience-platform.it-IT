@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica dei connettori Source
 description: Adobe Experience Platform consente di acquisire dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Experience Platform. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 02fafc830e964bbfa94c125c2006f4998d9d193d
+source-git-commit: 5637a12d5f9cc14b6cf3d88f018aa92de06ab739
 workflow-type: tm+mt
 source-wordcount: '1559'
 ht-degree: 3%
@@ -32,6 +32,7 @@ Le seguenti origini sono disponibili solo per [clienti Adobe Real-Time Customer 
 
 - [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) [!BADGE Streaming]{type=Positive}
 - [[!DNL Amazon Redshift]](connectors/databases/redshift.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Azure Databricks]](connectors/databases/databricks.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) [!BADGE Streaming]{type=Positive}
 - [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Google BigQuery]](connectors/databases/bigquery.md) [!BADGE Batch]{type=Informative}
@@ -128,7 +129,6 @@ Experience Platform fornisce supporto per l’acquisizione di dati da un databas
 
 - [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md) [!BADGE Batch]{type=Informative}
-- [[!DNL Azure Databricks]](connectors/databases/databricks.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Azure Data Explorer]](connectors/databases/data-explorer.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Azure Table Storage]](connectors/databases/ats.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Couchbase]](connectors/databases/couchbase.md) [!BADGE Batch]{type=Informative}
