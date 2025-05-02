@@ -4,7 +4,7 @@ description: Note aggiornate sulla versione di Adobe Experience Platform Debugge
 keywords: debugger; estensione experience debugger;chrome;estensione;note sulla versione
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: f32c4bbf48fce2ada7cf7b75efc82e28d1ec26ff
+source-git-commit: a5af5c194bc6b3bf9a6e119a2f147efa85f263f0
 workflow-type: tm+mt
 source-wordcount: '850'
 ht-degree: 93%
@@ -17,7 +17,7 @@ ht-degree: 93%
 
 ### Correzioni e miglioramenti
 
-* È stato risolto un problema a causa del quale Debugger impediva il funzionamento delle funzioni DTM e Launch.
+* È stato risolto un problema a causa del quale Debugger impediva il funzionamento delle funzioni DTM e Tag.
 * È stato risolto un problema che impediva la visualizzazione degli hit post-elaborati di Analytics nei registri.
 * È stato risolto un problema che impediva la corretta visualizzazione dei dati nei registri in lingue non ASCII come il giapponese.
 
