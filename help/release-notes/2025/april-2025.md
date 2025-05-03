@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform - Aprile 2025
 description: Note sulla versione di Adobe Experience Platform di aprile 2025.
 exl-id: a3b1e2e8-d780-4e23-b323-37e1a631f716
-source-git-commit: 52f6995beeff05948958bc7349242e2744e2fb05
+source-git-commit: be9e1a995e62fa5a437be82aa15187815bbc5a9d
 workflow-type: tm+mt
-source-wordcount: '2040'
-ht-degree: 29%
+source-wordcount: '2147'
+ht-degree: 30%
 
 ---
 
@@ -25,6 +25,7 @@ ht-degree: 29%
 Aggiornamenti alle funzioni e alla documentazione esistenti di Adobe Experience Platform:
 
 - [Experience League](#experience-league)
+- [Raccolta dati](#data-collection)
 - [Destinazioni](#destinations)
 - [Experience Data Model](#xdm)
 - [Identity Service](#identity)
@@ -44,6 +45,18 @@ Experience League è una piattaforma di apprendimento completa progettata per ai
 
 {style="table-layout:auto"}
 
+## Raccolta dati {#data-collection}
+
+Adobe Experience Platform fornisce una suite di tecnologie che consente di raccogliere i dati sull’esperienza del cliente lato client e inviarli alla rete Edge di Adobe Experience Platform, per arricchirli, trasformarli e distribuirli a destinazioni Adobe o non Adobe.
+
+**Funzioni nuove o aggiornate**
+
+| Funzione | Descrizione |
+| --- | --- |
+| Estensione API per [!DNL Amazon] eventi Web | L&#39;estensione API per le conversioni di [!DNL Amazon] consente agli inserzionisti di condividere le interazioni del sito Web direttamente con [!DNL Amazon], fornendo una migliore attribuzione, affidabilità dei dati e ottimizzazione delle campagne. Questa estensione supporta l’inoltro degli eventi, che consente di inviare eventi di conversione come acquisti, aggiunte al carrello e altro ancora, garantendo al contempo la deduplicazione corretta per una generazione di rapporti accurata. Per ulteriori informazioni, consulta la [panoramica dell&#39;estensione Amazon](/help/tags/extensions/server/amazon/overview.md). |
+
+{style="table-layout:auto"}
+
 ## Destinazioni {#destinations}
 
 [!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
@@ -55,7 +68,7 @@ Experience League è una piattaforma di apprendimento completa progettata per ai
 | [Sincronizzazione persona Marketo Engage](/help/destinations/catalog/adobe/marketo-engage-person-sync.md) | Adobe ha aggiornato la destinazione [!DNL Marketo Engage Person Sync] per risolvere un problema che interessava i clienti quando erano presenti più e-mail nella mappa delle identità. |
 | [(V2) Connessione pubblico in tempo reale Pega CDH](/help/destinations/catalog/personalization/pega-v2.md) | Utilizza la destinazione [!DNL (V2) Pega Customer Decision Hub Realtime Audience] in Adobe Experience Platform per inviare gli attributi del profilo e i dati sull&#39;iscrizione del pubblico a Pega Customer Decision Hub per prendere decisioni ottimali, quando nel tuo account Pega sono configurate più applicazioni Pega Customer Decision Hub. |
 
-**Funzionalità nuova o aggiornata** {#destinations-new-updated-functionality}
+**Funzionalità nuove o aggiornate** {#destinations-new-updated-functionality}
 
 | Funzione | Descrizione |
 | --- | --- |
