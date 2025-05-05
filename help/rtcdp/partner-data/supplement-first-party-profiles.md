@@ -47,7 +47,7 @@ Se prendi in considerazione l’integrazione dei profili di prime parti con gli 
 
 Il tutorial video seguente illustra come integrare i tipi di pubblico di prime parti con gli attributi forniti dai partner:
 
->[!VIDEO](https://video.tv.adobe.com/v/3423075/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452465/?learn=on&captions=ita)
 
 ## Come utilizzare il caso d’uso: panoramica di alto livello {#achieve-the-use-case-high-level}
 

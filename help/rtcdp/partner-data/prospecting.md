@@ -55,7 +55,7 @@ Prima di espandere Real-Time CDP per coinvolgere e acquisire nuovi clienti, assi
 
 Il tutorial video seguente illustra come raggiungere e coinvolgere i potenziali tipi di pubblico:
 
->[!VIDEO](https://video.tv.adobe.com/v/3423071/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452866/?learn=on&captions=ita)
 
 ## Come utilizzare il caso d’uso: istruzioni dettagliate {#step-by-step-instructions}
 

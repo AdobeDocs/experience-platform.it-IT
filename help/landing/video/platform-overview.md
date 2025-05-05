@@ -20,4 +20,4 @@ Questo video offre una rapida introduzione ad Experience Platform e illustra alc
 
 Per ulteriori informazioni, leggere l&#39;[Experience Platform di panoramica](../home.md).
 
->[!VIDEO](https://video.tv.adobe.com/v/32797?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3428495?quality=12&learn=on&captions=ita)

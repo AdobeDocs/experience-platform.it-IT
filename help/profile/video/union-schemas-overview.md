@@ -25,4 +25,4 @@ Questo video offre informazioni di base sugli schemi di unione in Adobe Experien
 >
 >L’interfaccia utente di Experience Platform viene aggiornata frequentemente e potrebbe essere cambiata dopo la registrazione di questo video. Per informazioni aggiornate, consulta la [guida dell&#39;interfaccia utente degli schemi di unione](../ui/union-schema.md).
 
->[!VIDEO](https://video.tv.adobe.com/v/329940?quality=12&learn=on&captions=eng)
+>[!VIDEO](https://video.tv.adobe.com/v/342823?quality=12&learn=on&captions=ita)

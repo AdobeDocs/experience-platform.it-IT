@@ -64,7 +64,7 @@ Gli avvisi possono essere inviati a un webhook configurato per facilitare l’au
 
 L’interfaccia utente di Experience Platform ti consente di visualizzare gli avvisi ricevuti e di gestire le regole degli avvisi. Il video seguente fornisce un’introduzione a queste funzionalità.
 
->[!VIDEO](https://video.tv.adobe.com/v/336218?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3423920?quality=12&learn=on&captions=ita)
 
 Per lavorare con gli avvisi nell’interfaccia utente di Experience Platform, è necessario disporre delle seguenti autorizzazioni di controllo degli accessi abilitate tramite Adobe Admin Console:
 

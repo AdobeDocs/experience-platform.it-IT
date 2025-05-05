@@ -25,4 +25,4 @@ Il video seguente ha lo scopo di aiutarti a comprendere la creazione di segmenti
 >
 >L’interfaccia utente di Experience Platform viene aggiornata frequentemente e potrebbe essere cambiata dopo la registrazione di questo video. Per informazioni aggiornate, consulta la [guida di Segment Builder](../ui/segment-builder.md).
 
->[!VIDEO](https://video.tv.adobe.com/v/32179?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345108?quality=12&learn=on&captions=ita)

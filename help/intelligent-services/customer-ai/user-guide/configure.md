@@ -259,6 +259,6 @@ Il seguente video è progettato per comprendere il flusso di lavoro di configura
 >
 > Il seguente video non è aggiornato. Per informazioni aggiornate, consulta la documentazione.
 
->[!VIDEO](https://video.tv.adobe.com/v/32665?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36625?learn=on&quality=12&captions=ita)
 
 <!-- comment -->

@@ -18,4 +18,4 @@ ht-degree: 0%
 
 Dopo aver visto il video che mostra [un&#39;esperienza del cliente basata su Experience Platform](customer-experience.md), vai dietro le quinte per vedere come Adobe Experience Platform è stato utilizzato per alimentare questa esperienza.
 
->[!VIDEO](https://video.tv.adobe.com/v/28144?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39280?quality=12&learn=on&captions=ita)

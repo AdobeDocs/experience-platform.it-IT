@@ -90,7 +90,7 @@ Per le domande sulle informazioni operative, le risposte potrebbero non riflette
 
 Per ulteriori informazioni sulle informazioni operative di AI Assistant, guarda il video seguente:
 
->[!VIDEO](https://video.tv.adobe.com/v/3444031?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3444040?learn=on&enablevpops&captions=ita)
 
 ### Ambito della funzione {#feature-scope}
 

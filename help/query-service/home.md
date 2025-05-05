@@ -17,7 +17,7 @@ Adobe Experience Platform acquisisce dati da un’ampia varietà di origini. Una
 
 Puoi utilizzare Query Service per collegare il percorso di clienti online-offline e comprendere l’attribuzione omni-channel per il brand. Il video seguente mostra come un’azienda che si occupa di esperienze può utilizzare Query Service per risolvere casi d’uso chiave e come funziona Query Service.
 
->[!VIDEO](https://video.tv.adobe.com/v/29795?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39649?quality=12&learn=on&captions=ita)
 
 ## Utilizzo di Query Service {#usage}
 
@@ -66,4 +66,4 @@ Dopo aver letto questo documento, hai scoperto Query Service e come funziona all
 
 Per prepararti meglio all’esecuzione delle query, guarda il video seguente. Questo video offre suggerimenti e best practice per l’esecuzione di query nell’interfaccia dell’editor delle query, nei client PSQL, nelle soluzioni di business intelligence (BI) e nell’API HTTP.
 
->[!VIDEO](https://video.tv.adobe.com/v/29811?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39589?quality=12&learn=on&captions=ita)

@@ -62,7 +62,7 @@ Dopo aver esportato i tipi di pubblico, attivarli utilizzando la destinazione [[
 
 Guarda il video seguente per una spiegazione end-to-end del flusso di lavoro descritto in questa pagina.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425367)
+>[!VIDEO](https://video.tv.adobe.com/v/3452665?captions=ita)
 
 ### Passaggio 1: invia i tuoi tipi di pubblico da Experience Platform a LiveRamp, tramite la destinazione [!DNL LiveRamp - Onboarding] {#onboarding}
 

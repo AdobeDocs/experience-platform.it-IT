@@ -35,4 +35,4 @@ Dopo aver incluso tali campi nello schema nella sandbox di sviluppo, torna al fl
 
 Per ulteriori informazioni, guarda il video seguente per creare gruppi di campi schema.
 
->[!VIDEO](https://video.tv.adobe.com/v/27013/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3413602/?learn=on&captions=ita)

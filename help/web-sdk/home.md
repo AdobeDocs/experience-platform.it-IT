@@ -47,7 +47,7 @@ Un sistema Edge consolidato consente di gestire campagne pubblicitarie, di marke
 
 Guarda il video seguente per una panoramica del Adobe Experience Platform [!DNL Web SDK] e del [!DNL Edge Network].
 
->[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37267?quality=12&learn=on&captions=ita)
 
 ## Librerie sostituite dal Web SDK {#sdks}
 
@@ -64,7 +64,7 @@ Inoltre, introduce un nuovo endpoint che semplifica le richieste HTTP alle soluz
 
 Guarda il video seguente per vedere Adobe Experience Platform [!DNL Web SDK] e [!DNL Edge Network] in azione, utilizzando una singola chiamata per inviare dati a [!DNL Experience Platform], [!DNL Analytics], [!DNL Audience Manager] e [!DNL Target].
 
->[!VIDEO](https://video.tv.adobe.com/v/34148)
+>[!VIDEO](https://video.tv.adobe.com/v/3413666?captions=ita)
 
 ## Migrazione da librerie esistenti a Web SDK {#migrating-to-web-sdk}
 

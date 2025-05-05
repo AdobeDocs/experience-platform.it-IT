@@ -18,4 +18,4 @@ ht-degree: 0%
 
 Questo video offre una panoramica dell’integrazione di Adobe Experience Platform con applicazioni e funzionalità di Adobe Experience Cloud, come Adobe Analytics, Adobe Target, Adobe Campaign, Adobe Experience Manager, Attributi del cliente, Libreria tipi di pubblico e tag.
 
->[!VIDEO](https://video.tv.adobe.com/v/32553?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3432380?quality=12&learn=on&captions=ita)

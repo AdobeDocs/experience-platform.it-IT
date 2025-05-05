@@ -24,4 +24,4 @@ Questo video offre informazioni di base su Real-Time Customer Profile in Adobe E
 >
 >L’interfaccia utente di Experience Platform viene aggiornata frequentemente e potrebbe essere cambiata dopo la registrazione di questo video. Per informazioni aggiornate, fare riferimento alla [Guida dell&#39;interfaccia utente del profilo](../ui/user-guide.md).
 
->[!VIDEO](https://video.tv.adobe.com/v/27251?quality=12&learn=on&captions=eng)
+>[!VIDEO](https://video.tv.adobe.com/v/36266?quality=12&learn=on&captions=ita)

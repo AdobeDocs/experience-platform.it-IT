@@ -42,7 +42,7 @@ La transizione alle autorizzazioni Adobe Experience Platform prevede passaggi ag
 
 Il video seguente ha lo scopo di illustrare le credenziali di sviluppatori e API.
 
->[!VIDEO](https://video.tv.adobe.com/v/3426407/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446406/?learn=on&captions=ita)
 
 ## Passaggi successivi
 

@@ -64,7 +64,7 @@ Per implementare correttamente questo caso d’uso, devi utilizzare più aree di
 
 Il tutorial video seguente illustra come personalizzare le esperienze nel sito per visitatori sconosciuti:
 
->[!VIDEO](https://video.tv.adobe.com/v/3423076/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449260/?learn=on&captions=ita)
 
 ## Come utilizzare il caso d’uso: panoramica di alto livello {#achieve-the-use-case-high-level}
 

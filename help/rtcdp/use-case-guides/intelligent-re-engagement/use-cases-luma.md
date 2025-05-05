@@ -16,12 +16,12 @@ Scopri come Adobe ha adattato il caso di utilizzo del ricoinvolgimento intellige
 
 ## Implementazione
 
->[!VIDEO](https://video.tv.adobe.com/v/3425184/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454281/?quality=12&learn=on&captions=ita)
 
 ## Configurazione percorso
 
->[!VIDEO](https://video.tv.adobe.com/v/3427101/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453969/?quality=12&learn=on&captions=ita)
 
 ## Configurazione di pubblico e destinazione
 
->[!VIDEO](https://video.tv.adobe.com/v/3427451/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452919/?quality=12&learn=on&captions=ita)

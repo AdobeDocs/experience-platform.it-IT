@@ -59,5 +59,5 @@ Per ottenere l’accesso all’Assistente AI per l’Assistenza clienti, contatt
 
 Per ulteriori informazioni, guarda il video seguente e scopri come utilizzare l’Assistente all’intelligenza artificiale per l’Assistenza clienti per risolvere facilmente i problemi senza uscire dai flussi di lavoro.
 
->[!VIDEO](https://video.tv.adobe.com/v/3443183?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3443191?learn=on&captions=ita)
 

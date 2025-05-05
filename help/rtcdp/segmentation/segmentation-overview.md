@@ -48,7 +48,7 @@ Per iniziare a utilizzare IA per l&#39;analisi dei clienti, segui l&#39;[esercit
 
 Per ulteriori informazioni su Customer AI, inizia visitando la [Panoramica di Customer AI](../../intelligent-services/customer-ai/overview.md). Inoltre, il video seguente mostra come IA per l’analisi dei clienti arricchisce i profili dei clienti con dati di propensione basati su intelligenza artificiale e potenzia la segmentazione dei clienti e le attività di targeting.
 
->[!VIDEO](https://video.tv.adobe.com/v/40374/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/328477/?quality=12&learn=on&captions=ita)
 
 
 ## Passaggi successivi

@@ -29,7 +29,7 @@ Attribution AI supporta due categorie di punteggi, algoritmici e basati su regol
 
 Il video seguente è stato progettato per comprendere meglio il concetto di Attribution AI.
 
->[!VIDEO](https://video.tv.adobe.com/v/32667?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36617?learn=on&quality=12&captions=ita)
 
 ## Esempi di casi d’uso aziendali
 

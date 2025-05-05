@@ -18,4 +18,4 @@ ht-degree: 0%
 
 Questo video fornisce una panoramica dei ruoli, delle fasi e degli esiti chiave coinvolti in un progetto Adobe Experience Platform di successo.
 
->[!VIDEO](https://video.tv.adobe.com/v/32807?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3430447?quality=12&learn=on&captions=ita)

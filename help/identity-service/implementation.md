@@ -64,4 +64,4 @@ Il video seguente ha lo scopo di illustrare il servizio Identity. Questo video i
 >
 >L’interfaccia utente di Experience Platform mostrata nel video seguente non è aggiornata. Consulta la documentazione per le schermate e le funzionalità più recenti dell’interfaccia utente.
 
->[!VIDEO](https://video.tv.adobe.com/v/28167?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36264?quality=12&learn=on&captions=ita)

@@ -39,7 +39,7 @@ Poiché l&#39;invio di eventi di conversione coinvolge sia un&#39;implementazion
 
 Il video seguente fornisce un&#39;introduzione all&#39;estensione [!DNL Enhanced Conversions] e illustra i passaggi di implementazione ad alto livello:
 
->[!VIDEO](https://video.tv.adobe.com/v/3411365?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3416063?quality=12&learn=on&captions=ita)
 
 ## Inviare una conversione tramite i tag
 

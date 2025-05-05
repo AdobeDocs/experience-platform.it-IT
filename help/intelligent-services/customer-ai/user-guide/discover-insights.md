@@ -231,4 +231,4 @@ Questo documento illustra le informazioni fornite da un’istanza del servizio C
 
 Il video seguente illustra come utilizzare IA per l’analisi dei clienti per visualizzare l’output dei modelli e dei fattori influenti.
 
->[!VIDEO](https://video.tv.adobe.com/v/32666?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36624?learn=on&quality=12&captions=ita)

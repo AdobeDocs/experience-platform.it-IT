@@ -27,4 +27,4 @@ Se ti interessa la segmentazione in streaming utilizzando l&#39;API di segmentaz
 >
 >L’interfaccia utente di Experience Platform viene aggiornata frequentemente e potrebbe essere cambiata dopo la registrazione di questo video. Per informazioni aggiornate, consulta la [guida dell&#39;interfaccia utente di segmentazione in streaming](../methods/streaming-segmentation.md).
 
->[!VIDEO](https://video.tv.adobe.com/v/36184?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40069?quality=12&learn=on&captions=ita)

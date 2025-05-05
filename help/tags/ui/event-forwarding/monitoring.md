@@ -28,7 +28,7 @@ Questa guida presuppone che tu abbia acquistato l’inoltro di eventi e che tu a
 
 Il seguente video offre una panoramica generale della funzione di monitoraggio:
 
->[!VIDEO](https://video.tv.adobe.com/v/343999?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3411268?quality=12&learn=on&captions=ita)
 
 ## Selezione di proprietà e ambienti
 

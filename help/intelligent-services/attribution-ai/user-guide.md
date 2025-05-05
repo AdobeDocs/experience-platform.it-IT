@@ -273,4 +273,4 @@ Seguendo questa esercitazione, hai creato correttamente un’istanza del servizi
 
 Il video seguente illustra un flusso di lavoro end-to-end per la creazione di una nuova istanza in IA per l’attribuzione.
 
->[!VIDEO](https://video.tv.adobe.com/v/32668?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36623?learn=on&quality=12&captions=ita)

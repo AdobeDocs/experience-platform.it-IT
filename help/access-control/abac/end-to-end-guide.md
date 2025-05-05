@@ -247,4 +247,4 @@ Per ulteriori informazioni sul controllo degli accessi basato su attributi, vede
 
 Il video seguente ha lo scopo di illustrare il controllo degli accessi basato su attributi e illustra come configurare ruoli, risorse e criteri.
 
->[!VIDEO](https://video.tv.adobe.com/v/345641?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3451846?learn=on&captions=ita)

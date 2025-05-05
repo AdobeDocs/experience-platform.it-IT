@@ -195,4 +195,4 @@ Dopo aver filtrato i dati e aver visualizzato le informazioni appropriate, puoi 
 
 Il video seguente è progettato per aiutarti ad imparare a utilizzare la pagina Approfondimenti di Attribution AI per comprendere il ROI dei canali e delle campagne di marketing.
 
->[!VIDEO](https://video.tv.adobe.com/v/32669?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/345101?learn=on&quality=12&captions=ita)

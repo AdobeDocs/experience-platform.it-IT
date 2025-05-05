@@ -24,4 +24,4 @@ Questo video illustra le funzionalità principali di Experience Platform:
 1. Migliorare la consegna e la personalizzazione delle esperienze in tempo reale
 1. Ottenere la fiducia con la governance, la sicurezza e i controlli sulla privacy
 
->[!VIDEO](https://video.tv.adobe.com/v/32502?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3428507?quality=12&learn=on&captions=ita)

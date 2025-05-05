@@ -151,4 +151,4 @@ Seguendo questa esercitazione, hai creato correttamente un flusso di dati per po
 >
 > L’interfaccia utente di Experience Platform mostrata nel video seguente non è aggiornata. Per le schermate e le funzionalità più recenti dell’interfaccia utente, consulta la documentazione precedente.
 >
->[!VIDEO](https://video.tv.adobe.com/v/29711?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35478?quality=12&learn=on&captions=ita)

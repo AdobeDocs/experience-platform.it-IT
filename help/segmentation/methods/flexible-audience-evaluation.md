@@ -326,7 +326,7 @@ Dopo aver confermato che sono elencati i tipi di pubblico corretti, puoi procede
 
 Il video seguente illustra come accesso e utilizzare la valutazione flessibile del pubblico in Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/3453640?)
+>[!VIDEO](https://video.tv.adobe.com/v/3453648?&captions=ita)
 
 ## Domande frequenti {#faq}
 

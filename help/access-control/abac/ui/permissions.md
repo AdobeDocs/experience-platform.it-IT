@@ -116,7 +116,7 @@ Per rimuovere un utente da un ruolo, selezionare l&#39;icona **X** accanto al no
 
 Il video seguente ha lo scopo di aiutare a comprendere come creare un nuovo ruolo e come gestire gli utenti per tale ruolo.
 
->[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3423940/?learn=on&captions=ita)
 
 ## Gestire le credenziali API per un ruolo {#manage-api-credentials-for-role}
 

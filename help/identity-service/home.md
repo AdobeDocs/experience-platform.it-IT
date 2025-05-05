@@ -101,7 +101,7 @@ Un grafo di identità è una mappa di relazioni tra diversi spazi dei nomi di id
 
 Il video seguente ha lo scopo di aiutarti a comprendere le identità e i grafici di identità.
 
->[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3422773?quality=12&learn=on&captions=ita)
 
 ## Comprensione del ruolo del servizio Identity nell’infrastruttura Experience Platform
 

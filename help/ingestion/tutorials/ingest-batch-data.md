@@ -152,4 +152,4 @@ Per ulteriori informazioni sull&#39;acquisizione in batch, leggi la [panoramica 
 >
 >L&#39;interfaccia utente [!DNL Experience Platform] mostrata nel video seguente non è aggiornata. Per le schermate e le funzionalità più recenti dell’interfaccia utente, consulta la documentazione precedente.
 
->[!VIDEO](https://video.tv.adobe.com/v/27269?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/328610?quality=12&learn=on&captions=ita)
