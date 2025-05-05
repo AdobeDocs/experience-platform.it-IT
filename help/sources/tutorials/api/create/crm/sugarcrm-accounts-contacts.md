@@ -11,7 +11,7 @@ ht-degree: 2%
 
 # Creare una connessione di origine e un flusso di dati per [!DNL SugarCRM Accounts & Contacts] utilizzando l&#39;API del servizio Flusso
 
-Il seguente tutorial illustra i passaggi necessari per creare una connessione di origine [!DNL SugarCRM Accounts & Contacts] e un flusso di dati per portare i dati di account e contatti di [[!DNL SugarCRM]](https://www.sugarcrm.com/) a Adobe Experience Platform utilizzando l&#39;API [[!DNL Flow Service] 4}.](https://www.adobe.io/experience-platform-apis/references/flow-service/)
+Il seguente tutorial illustra i passaggi necessari per creare una connessione di origine [!DNL SugarCRM Accounts & Contacts] e un flusso di dati per portare i dati di account e contatti di [[!DNL SugarCRM]](https://www.sugarcrm.com/) a Adobe Experience Platform utilizzando l&#39;API [[!DNL Flow Service] 4&rbrace;.](https://www.adobe.io/experience-platform-apis/references/flow-service/)
 
 ## Introduzione
 

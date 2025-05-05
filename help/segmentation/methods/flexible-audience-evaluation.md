@@ -47,7 +47,7 @@ Per utilizzare la valutazione flessibile del pubblico, devi disporre dei seguent
 
 - **[!UICONTROL Valuta il segmento a un pubblico]** sotto la **[!DNL Profile Management]** sezione.
 
-Per ulteriori informazioni sul controllo accesso basato sui ruoli, leggere la panoramica](../../access-control/home.md) del [controllo accesso.
+Per ulteriori informazioni sul controllo accesso basato sui ruoli, leggere la panoramica[&#128279;](../../access-control/home.md) del controllo accesso.
 
 ## Esecuzione di una valutazione flessibile del pubblico
 
@@ -312,7 +312,7 @@ Viene visualizzato il **[!UICONTROL popover Valuta pubblico on-demand]** , con l
 
 ![Vengono visualizzati i tipi di pubblico che possono essere valutati utilizzando una valutazione flessibile.](../images/methods/fae/evaluate-audiences-modal.png)
 
-Dopo aver confermato che sono elencati i tipi di pubblico corretti, puoi procedere con l&#39;richiesta e inizierà la valutazione flessibile del pubblico. Puoi visualizzare lo stato di questa valutazione del pubblico nella vista](../../dataflows/ui/monitor-audiences.md#evaluation-job-details) Monitoraggio del [processo di valutazione.
+Dopo aver confermato che sono elencati i tipi di pubblico corretti, puoi procedere con l&#39;richiesta e inizierà la valutazione flessibile del pubblico. Puoi visualizzare lo stato di questa valutazione del pubblico nella vista[&#128279;](../../dataflows/ui/monitor-audiences.md#evaluation-job-details) Monitoraggio del processo di valutazione.
 
 >[!NOTE]
 >

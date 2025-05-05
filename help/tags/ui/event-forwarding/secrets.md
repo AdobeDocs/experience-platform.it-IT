@@ -17,10 +17,10 @@ I seguenti tipi di segreti sono attualmente supportati:
 
 | Tipo segreto | Descrizione |
 | --- | --- |
-| [!UICONTROL Google OAuth 2] | Contiene diversi attributi a supporto delle [specifiche di autenticazione OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) da utilizzare nell&#39;API](https://developers.google.com/google-ads/api/docs/oauth/overview) Google Ads e [nell&#39;API [](https://cloud.google.com/pubsub/docs/reference/service_apis_overview)Pub/Sub. Il sistema richiede le informazioni richieste, quindi gestisce il rinnovo di questi token per te in un intervallo specificato. |
+| [!UICONTROL Google OAuth 2] | Contiene diversi attributi a supporto delle [specifiche di autenticazione OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) da utilizzare nell&#39;API[&#128279;](https://developers.google.com/google-ads/api/docs/oauth/overview) Google Ads e nell&#39;API [&#128279;](https://cloud.google.com/pubsub/docs/reference/service_apis_overview)Pub/Sub. Il sistema richiede le informazioni richieste, quindi gestisce il rinnovo di questi token per te in un intervallo specificato. |
 | [!UICONTROL HTTP] | Contiene due attributi stringa rispettivamente per un nome utente e un password. |
 | [!UICONTROL [!DNL LinkedIn] OAuth 2] | Il sistema richiede le informazioni richieste, quindi gestisce il rinnovo di questi token per te in un intervallo specificato. |
-| [!UICONTROL OAuth 2] | Contiene diversi attributi per supportare il tipo](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) di concessione delle [credenziali client per le specifiche di [autenticazione OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749). Il sistema richiede le informazioni richieste, quindi gestisce il rinnovo di questi token per te in un intervallo specificato. |
+| [!UICONTROL OAuth 2] | Contiene diversi attributi per supportare il tipo[&#128279;](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) di concessione delle credenziali client per le specifiche di [autenticazione OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749). Il sistema richiede le informazioni richieste, quindi gestisce il rinnovo di questi token per te in un intervallo specificato. |
 | [!UICONTROL OAuth 2 JWT] | Contiene diversi attributi per supportare il profilo JWT (Web Token) per [le concessioni di autorizzazione](https://datatracker.ietf.org/doc/html/rfc7523#section-2.1) OAuth 2.0. Il sistema richiede le informazioni richieste, quindi gestisce il rinnovo di questi token per te in un intervallo specificato. |
 | [!UICONTROL Token] | Una singola stringa di caratteri che rappresenta un valore del token di autenticazione conosciuto e compreso da entrambi i sistemi. |
 
@@ -36,7 +36,7 @@ Questa guida fornisce una panoramica generale su come configurare i segreti per 
 
 In questa guida si presuppone che l&#39;utente abbia già familiarità con le modalità di gestire delle risorse per i tag e l&#39;inoltro degli eventi nella interfaccia, inclusa la creazione di un elemento dati e di un regola di inoltro degli eventi. Per presentazioni, consulta la guida alla [gestione delle risorse](../managing-resources/overview.md) .
 
-È inoltre necessario avere una conoscenza pratica del flusso di pubblicazione per i tag e l&#39;inoltro degli eventi, incluso come aggiungere risorse a un libreria e installare un versione nel sito Web per il test. Per ulteriori informazioni, consulta la panoramica](../publishing/overview.md) sulla [pubblicazione.
+È inoltre necessario avere una conoscenza pratica del flusso di pubblicazione per i tag e l&#39;inoltro degli eventi, incluso come aggiungere risorse a un libreria e installare un versione nel sito Web per il test. Per ulteriori informazioni, consulta la panoramica[&#128279;](../publishing/overview.md) sulla pubblicazione.
 
 ## Creare un segreto {#create}
 
@@ -77,7 +77,7 @@ Da qui, i passaggi per creare il segreto differiscono a seconda del tipo di segr
 * [[!UICONTROL OAuth 2]](#oauth2)
 * [[!UICONTROL OAuth 2 JWT]](#oauth2jwt)
 * [[!UICONTROL Google OAuth 2]](#google-oauth2)
-* [[! OAuth UICONTROL [!DNL LinkedIn] 2]](#linkedin-oauth2)
+* [[!UICONTROL OAuth [!DNL LinkedIn] 2]](#linkedin-oauth2)
 
 ### [!UICONTROL Token] {#token}
 
@@ -97,7 +97,7 @@ Per creare un segreto HTTP, selezionare **[!UICONTROL HTTP]** semplice dall&#39;
 
 ### [!UICONTROL OAuth 2] {#oauth2}
 
-Per creare un segreto OAuth 2, seleziona **[!UICONTROL OAuth 2]** dall&#39;elenco a **[!UICONTROL discesa Tipo]** . Nei campi riportati di seguito, fornisci l&#39;ID] client e [!UICONTROL il [[!UICONTROL segreto](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/)] client, nonché il URL](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) [del token per l&#39;integrazione OAuth. Il [!UICONTROL campo Token URL] nel interfaccia è una concatenazione tra l&#39;host del server di autorizzazione e il percorso del token.
+Per creare un segreto OAuth 2, seleziona **[!UICONTROL OAuth 2]** dall&#39;elenco a **[!UICONTROL discesa Tipo]** . Nei campi riportati di seguito, fornisci l&#39;ID&rbrack; client e [&#128279;](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/)il [[[!UICONTROL segreto]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/)] client, nonché il URL &lbrack;del token per l&#39;integrazione OAuth. Il [!UICONTROL campo Token URL] nel interfaccia è una concatenazione tra l&#39;host del server di autorizzazione e il percorso del token.
 
 ![Segreto di OAuth 2](../../images/ui/event-forwarding/secrets/oauth-secret-1.png)
 
@@ -105,7 +105,7 @@ In **[!UICONTROL Opzioni]** credenziali è possibile fornire altre opzioni di cr
 
 ![Opzioni relative alle credenziali](../../images/ui/event-forwarding/secrets/oauth-secret-2.png)
 
-Infine, puoi configurare il valore Offset **** Aggiorna per il segreto. Questo rappresenta il numero di secondi prima della scadenza del token che il sistema eseguirà un aggiornamento automatico. L&#39;ora equivalente in ore e minuti viene visualizzata a destra del campo e viene aggiornata automaticamente durante la digitazione.
+Infine, puoi configurare il valore Offset **&#x200B;**&#x200B;Aggiorna per il segreto. Questo rappresenta il numero di secondi prima della scadenza del token che il sistema eseguirà un aggiornamento automatico. L&#39;ora equivalente in ore e minuti viene visualizzata a destra del campo e viene aggiornata automaticamente durante la digitazione.
 
 ![Offset Aggiorna](../../images/ui/event-forwarding/secrets/oauth-secret-3.png)
 
@@ -131,7 +131,7 @@ Per creare un segreto JWT per OAuth 2, seleziona **[!UICONTROL OAuth 2 JWT]** da
 >
 >L&#39;unico [!UICONTROL algoritmo] attualmente supportato per la firma del JWT è RS256.
 
-Nei campi riportati di seguito, fornisci l&#39;emittente], [!UICONTROL l&#39;oggetto, [!UICONTROL il pubblico], [!UICONTROL le attestazioni] personalizzate, [!UICONTROL il TTL,] quindi seleziona l&#39;algoritmo  dal menu a discesa. Successivo, inserisci l&#39;ID della chiave privata e il [!UICONTROL URL [](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) del token per l&#39;integrazione OAuth.] Il [!UICONTROL campo Token URL] non è un campo obbligatorio. Se viene fornito un valore, il JWT viene scambiato con un token accesso. Il segreto verrà aggiornato in base all&#39;attributo `expires_in` della risposta e al [!UICONTROL valore di offset] Aggiorna. Se non viene fornito un valore, il segreto spinto all&#39;edge è il JWT. Il JWT verrà aggiornato in base ai [!UICONTROL valori TTL] e [!UICONTROL Aggiorna Offset] .
+Nei campi riportati di seguito, fornisci l&#39;emittente, l&#39;oggetto, [!UICONTROL il pubblico], [!UICONTROL le attestazioni] personalizzate, [!UICONTROL il TTL,] quindi seleziona l&#39;algoritmo  dal menu a discesa. Successivo, inserisci l&#39;ID della chiave privata e il URL [&#128279;](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) del token per l&#39;integrazione OAuth. Il [!UICONTROL campo Token URL] non è un campo obbligatorio. Se viene fornito un valore, il JWT viene scambiato con un token accesso. Il segreto verrà aggiornato in base all&#39;attributo `expires_in` della risposta e al [!UICONTROL valore di offset] Aggiorna. Se non viene fornito un valore, il segreto spinto all&#39;edge è il JWT. Il JWT verrà aggiornato in base ai [!UICONTROL valori TTL] e [!UICONTROL Aggiorna Offset] .
 
 ![La [!UICONTROL scheda segreta Crea] con una selezione di campi di input evidenziata.](../../images/ui/event-forwarding/secrets/oauth-jwt-information.png)
 
@@ -139,7 +139,7 @@ In **[!UICONTROL Opzioni]** credenziali è possibile fornire altre opzioni di cr
 
 ![Il [!UICONTROL segreto Crea] scheda evidenziando i [!UICONTROL campi della Opzioni] Credenziale.](../../images/ui/event-forwarding/secrets/oauth-jwt-credential-options.png)
 
-Infine, puoi configurare il valore Offset **** Aggiorna per il segreto. Questo rappresenta il numero di secondi prima della scadenza del token che il sistema eseguirà un aggiornamento automatico. L&#39;ora equivalente in ore e minuti viene visualizzata a destra del campo e viene aggiornata automaticamente durante la digitazione.
+Infine, puoi configurare il valore Offset **&#x200B;**&#x200B;Aggiorna per il segreto. Questo rappresenta il numero di secondi prima della scadenza del token che il sistema eseguirà un aggiornamento automatico. L&#39;ora equivalente in ore e minuti viene visualizzata a destra del campo e viene aggiornata automaticamente durante la digitazione.
 
 ![Il [!UICONTROL Crea Segreto] scheda evidenzia il [!UICONTROL campo Offset] Aggiorna.](../../images/ui/event-forwarding/secrets/oauth-jwt-refresh-offset.png)
 
@@ -190,7 +190,7 @@ Viene visualizzato un popover che informa che il segreto deve essere autorizzato
 
 Viene visualizzata una finestra di dialogo in cui viene richiesto di immettere le credenziali [!DNL LinkedIn] . Segui le istruzioni per concedere l&#39;inoltro degli eventi accesso ai tuoi dati.
 
-Una volta completato il processo di autorizzazione, si ritorna all&#39;scheda Segreti ]**, dove è possibile vedere il**[!UICONTROL  segreto appena creato. Qui puoi vedere lo stato del segreto e la data di scadenza.
+Una volta completato il processo di autorizzazione, si ritorna all&#39;scheda Segreti **, dove è possibile vedere il** segreto appena creato. Qui puoi vedere lo stato del segreto e la data di scadenza.
 
 ![Il [!UICONTROL Segreto] scheda evidenziando il segreto appena creato.](../../images/ui/event-forwarding/secrets/linkedin-new-secret.png)
 
@@ -242,7 +242,7 @@ Per eliminare un segreto esistente nell&#39;area  **[!UICONTROL di lavoro Segret
 
 ## Utilizzo dei segreti nell&#39;inoltro degli eventi
 
-Per utilizzare un segreto nell&#39;inoltro degli eventi, è innanzitutto necessario creare un [elemento](../managing-resources/data-elements.md) dati che faccia riferimento al segreto stesso. Dopo aver salvato l&#39;elemento dati, è possibile includerlo nelle regole](../managing-resources/rules.md) di inoltro degli [eventi e aggiungere tali regole a un [libreria](../publishing/libraries.md), che a sua volta può essere distribuito ai server di Adobe Systems come [versione](../publishing/builds.md).
+Per utilizzare un segreto nell&#39;inoltro degli eventi, è innanzitutto necessario creare un [elemento](../managing-resources/data-elements.md) dati che faccia riferimento al segreto stesso. Dopo aver salvato l&#39;elemento dati, è possibile includerlo nelle regole[&#128279;](../managing-resources/rules.md) di inoltro degli eventi e aggiungere tali regole a un [libreria](../publishing/libraries.md), che a sua volta può essere distribuito ai server di Adobe Systems come [versione](../publishing/builds.md).
 
 Quando crei l&#39;elemento dati, seleziona l&#39;estensione **[!UICONTROL core]** , quindi seleziona **[!UICONTROL Segreto]** per il tipo di elemento dati. Il pannello di destra si aggiorna e fornisce controlli a discesa per assegnare fino a tre segreti all&#39;elemento dati: uno rispettivamente per [!UICONTROL Sviluppo, [!UICONTROL Staging]] e [!UICONTROL Produzione].
 
@@ -252,7 +252,7 @@ Quando crei l&#39;elemento dati, seleziona l&#39;estensione **[!UICONTROL core]*
 >
 >Vengono visualizzati solo i segreti associati agli ambienti di sviluppo, gestione temporanea e produzione per i rispettivi elenchi a discesa.
 
-Assegnando più segreti a un singolo elemento dati e includendolo in un regola, è possibile modificare il valore dell&#39;elemento dati a seconda di dove si trova il libreria contenitore nel flusso](../publishing/publishing-flow.md) di [pubblicazione.
+Assegnando più segreti a un singolo elemento dati e includendolo in un regola, è possibile modificare il valore dell&#39;elemento dati a seconda di dove si trova il libreria contenitore nel flusso[&#128279;](../publishing/publishing-flow.md) di pubblicazione.
 
 ![Elemento dati con più segreti](../../images/ui/event-forwarding/secrets/multi-secret-data-element.png)
 

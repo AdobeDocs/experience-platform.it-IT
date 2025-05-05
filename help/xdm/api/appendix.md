@@ -75,52 +75,52 @@ Di seguito è riportato un confronto affiancato che mostra i campi relativi al c
   <tr>
   <td>
   <pre class=" language-json">
-{
-  "xdm:bornDate": {
+&lbrace;
+  "xdm:bornDate": &lbrace;
     "title": "Data di nascita",
     "type": "string",
     "format": "date"
-  },
-  "xdm:bornDayAndMonth": {
+  &rbrace;,
+  "xdm:bornDayAndMonth": &lbrace;
     "title": "Data di nascita",
     "type": "string",
     "pattern": "[0-1][0-9]-[0-9][0-9]"
-  },
-  "xdm:bornYear": {
+  &rbrace;,
+  "xdm:bornYear": &lbrace;
     "title": "Anno di nascita",
     "type": "integer",
     "minimum": 1
     "maximum": 32767
-  }
-}
+  &rbrace;
+&rbrace;
   </pre>
   </td>
   <td>
   <pre class=" language-json">
-{
-  "bornDate": {
+&lbrace;
+  "bornDate": &lbrace;
     "title": "Data di nascita",
     "type": "string",
     "format": "date",
     "meta:xdmField": "xdm:bornDate",
     "meta:xdmType": "date"
-  },
-  "bornDayAndMonth": {
+  &rbrace;,
+  "bornDayAndMonth": &lbrace;
     "title": "Data di nascita",
     "type": "string",
     "pattern": "[0-1][0-9]-[0-9][0-9]",
     "meta:xdmField": "xdm:bornDayAndMonth",
     "meta:xdmType": "string"
-  },
-  "bornYear": {
+  &rbrace;,
+  "bornYear": &lbrace;
     "title": "Anno di nascita",
     "type": "integer",
     "minimum": 1
     "maximum": 32767,
     "meta:xdmField": "xdm:bornYear",
     "meta:xdmType": "short"
-  }
-}
+  &rbrace;
+&rbrace;
       </pre>
   </td>
   </tr>

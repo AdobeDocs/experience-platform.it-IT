@@ -50,7 +50,7 @@ curl -X POST \
 | --- | --- |
 | `name` | Nome del set di dati da creare. |
 | `schemaRef.id` | Il valore URI `$id` per lo schema XDM su cui sarà basato il set di dati. |
-| `schemaRef.contentType` | Indica il formato e la versione dello schema. Per ulteriori informazioni, consulta la sezione sul controllo delle versioni dello schema [1} nella guida dell&#39;API XDM.](../../xdm/api/getting-started.md#versioning) |
+| `schemaRef.contentType` | Indica il formato e la versione dello schema. Per ulteriori informazioni, consulta la sezione sul controllo delle versioni dello schema [1&rbrace; nella guida dell&#39;API XDM.](../../xdm/api/getting-started.md#versioning) |
 
 >[!NOTE]
 >

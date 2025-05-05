@@ -624,4 +624,4 @@ In questo scenario, l’esecuzione del flusso non riuscirà e restituirà un mes
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato una coppia di chiavi di crittografia per i dati dell&#39;archiviazione cloud e un flusso di dati per acquisire i dati crittografati utilizzando [!DNL Flow Service API]. Per gli aggiornamenti sullo stato di completezza, errori e metriche del flusso di dati, leggi la guida sul [monitoraggio del flusso di dati tramite l&#39;API [!DNL Flow Service] 2}.](./monitor.md)
+Seguendo questa esercitazione, hai creato una coppia di chiavi di crittografia per i dati dell&#39;archiviazione cloud e un flusso di dati per acquisire i dati crittografati utilizzando [!DNL Flow Service API]. Per gli aggiornamenti sullo stato di completezza, errori e metriche del flusso di dati, leggi la guida sul [monitoraggio del flusso di dati tramite l&#39;API [!DNL Flow Service] 2&rbrace;.](./monitor.md)

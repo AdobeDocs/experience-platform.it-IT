@@ -130,7 +130,7 @@ Per un caso d’uso tipico, puoi impostare la scadenza dei dati Experience Event
 
 +++ Risposta
 
-- Il sistema di eliminazione ](../identity-service/guardrails.md) del servizio Identity [ &quot;first-in, first-out&quot; potrebbe eliminare gli ECID dal grafo delle identità, archiviati in Identity Service.
+- Il sistema di eliminazione [&#128279;](../identity-service/guardrails.md) del servizio Identity  &quot;first-in, first-out&quot; potrebbe eliminare gli ECID dal grafo delle identità, archiviati in Identity Service.
 - Se questo comportamento di eliminazione determina la memorizzazione di un profilo solo ECID nel profilo cliente in tempo reale (archivio profili), la scadenza dei dati del profilo pseudonimo eliminerà tale profilo dall’archivio profili.
 
 +++

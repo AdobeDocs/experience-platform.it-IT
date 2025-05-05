@@ -25,7 +25,7 @@ Crea un [Datastream](/help/tags/ui/event-forwarding/getting-started.md) e aggiun
 
 Per utilizzare l&#39;API di conversione è necessario un account **[!DNL Snapchat]** [Business Manager](https://business.snapchat.com/). Business Manager consente agli inserzionisti di integrare le attività di marketing di **[!DNL Snapchat]** nella propria azienda e con partner esterni. Consulta l&#39;**[!DNL Snapchat]** [articolo del Centro assistenza](https://businesshelp.snapchat.com/s/article/get-started?language=en_US) sulla creazione di un account di Business Manager, se non ne hai uno.
 
-È necessario configurare [!DNL [Snap Pixel]](https://businesshelp.snapchat.com/s/article/pixel-website-install?language=en_US) in Gestione annunci di Snapchat e disporre dell&#39;accesso per visualizzare `Pixel ID`. Il `Pixel ID` si trova nella sezione [!UICONTROL [Gestione eventi]](https://businesshelp.snapchat.com/s/article/events-manager?language=en_US).
+È necessario configurare [[!DNL [Snap Pixel]]](https://businesshelp.snapchat.com/s/article/pixel-website-install?language=en_US) in Gestione annunci di Snapchat e disporre dell&#39;accesso per visualizzare `Pixel ID`. Il `Pixel ID` si trova nella sezione [[!UICONTROL [Gestione eventi]]](https://businesshelp.snapchat.com/s/article/events-manager?language=en_US).
 
 È necessario un token API statico e di lunga durata. Per ottenere questo token, consulta la [[!DNL Snapchat] documentazione sulle conversioni API](https://developers.snap.com/api/marketing-api/Conversions-API/GetStarted#access-token).
 

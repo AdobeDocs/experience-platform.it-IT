@@ -77,13 +77,13 @@ Lo schema di riferimento &quot;[!DNL Hotels]&quot; è basato su una classe &quot
 
 >[!NOTE]
 >
->Per informazioni su come creare spazi dei nomi delle identità personalizzati, consulta la documentazione](../../identity-service/features/namespaces.md#manage-namespaces) del [servizio Identity.
+>Per informazioni su come creare spazi dei nomi delle identità personalizzati, consulta la documentazione[&#128279;](../../identity-service/features/namespaces.md#manage-namespaces) del servizio Identity.
 
 ## Crea un gruppo di campi relazione
 
 >[!NOTE]
 >
->Questo passaggio è necessario solo se lo schema di origine non dispone di un campo di tipo stringa dedicato da utilizzare come puntatore all&#39;identità primaria dello schema di riferimento. Se questo campo è già definito nello schema sorgente, andare al passaggio successivo della definizione di un campo](#relationship-field) di [relazione.
+>Questo passaggio è necessario solo se lo schema di origine non dispone di un campo di tipo stringa dedicato da utilizzare come puntatore all&#39;identità primaria dello schema di riferimento. Se questo campo è già definito nello schema sorgente, andare al passaggio successivo della definizione di un campo[&#128279;](#relationship-field) di relazione.
 
 Per definire una relazione tra due schemi, lo schema di origine deve disporre di un campo dedicato che indicherà l&#39;identità primaria dello schema di riferimento. È possibile aggiungere questo campo allo schema di origine creando un nuovo gruppo di campi dello schema o estendendone uno esistente.
 
@@ -111,7 +111,7 @@ Una volta definito un campo di riferimento dedicato, è possibile designarlo com
 >
 >Le relazioni possono essere supportate solo nei campi stringa o matrice di stringhe.
 
-Seleziona il `preferredHotel` campo nell&#39;area di lavoro, quindi seleziona **[!UICONTROL Aggiungi**[!UICONTROL  relazione ]**nella barra laterale Proprietà campo]**.
+Seleziona il `preferredHotel` campo nell&#39;area di lavoro, quindi seleziona **[!UICONTROL Aggiungi**&#x200B;[!UICONTROL &#x200B; relazione &#x200B;]&#x200B;**nella barra laterale Proprietà campo]**.
 
 ![L&#39;editor dello schema con la relazione Aggiungi evidenziata nella barra laterale delle proprietà del campo.](../images/tutorials/relationship/add-relationship.png)
 

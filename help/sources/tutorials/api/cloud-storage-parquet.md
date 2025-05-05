@@ -63,7 +63,7 @@ Ottenere e archiviare l&#39;identificatore univoco (`$id`) della connessione, qu
 
 Per poter utilizzare i dati di origine in [!DNL Experience Platform], è necessario creare uno schema di destinazione per strutturare i dati di origine in base alle proprie esigenze. Lo schema di destinazione viene quindi utilizzato per creare un set di dati [!DNL Experience Platform] in cui sono contenuti i dati di origine.
 
-Se si preferisce utilizzare l&#39;interfaccia utente in [!DNL Experience Platform], nell&#39;esercitazione dell&#39;editor di schemi [](../../../xdm/tutorials/create-schema-ui.md) vengono fornite istruzioni dettagliate per l&#39;esecuzione di azioni simili nell&#39;editor di schemi.
+Se si preferisce utilizzare l&#39;interfaccia utente in [!DNL Experience Platform], nell&#39;esercitazione dell&#39;editor di schemi [&#128279;](../../../xdm/tutorials/create-schema-ui.md) vengono fornite istruzioni dettagliate per l&#39;esecuzione di azioni simili nell&#39;editor di schemi.
 
 **Formato API**
 

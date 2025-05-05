@@ -42,7 +42,7 @@ Viene visualizzato il popover **[!UICONTROL Proprietà composizione]**. È possi
 
 Dopo aver aggiornato i dettagli della composizione, selezionate **[!UICONTROL Salva]** per confermare questi aggiornamenti. Viene rivisualizzata l&#39;area di disegno per la composizione del pubblico.
 
-L&#39;area di disegno per la composizione del pubblico è composta da quattro diversi tipi di blocchi: **[[!UICONTROL Audience,**[[!UICONTROL  Exclude ]](#exclude-block)**]](#audience-block)**, **[[!UICONTROL Rank]](#rank-block)** e **[[!UICONTROL Split]](#split-block)**.
+L&#39;area di disegno per la composizione del pubblico è composta da quattro diversi tipi di blocchi: **[&#128279;](#audience-block)Audience,**&#x200B;[[!UICONTROL &#x200B; Exclude &#x200B;]](#exclude-block)**&#x200B;**, **[[!UICONTROL Rank]](#rank-block)** e **[[!UICONTROL Split]](#split-block)**.
 
 ## [!UICONTROL Destinatari] {#audience-block}
 
@@ -103,7 +103,7 @@ Per aggiungere una regola personalizzata al blocco Pubblico, seleziona **[!UICON
 
 ![Il pulsante Genera regola è evidenziato.](../images/ui/audience-composition/select-build-rule.png)
 
-Viene visualizzato il Generatore di segmenti. Puoi utilizzare il Generatore di segmenti per creare un regola personalizzato per il pubblico da seguire. Ulteriori informazioni sull&#39;utilizzo di Segment Builder sono disponibili nella guida](./segment-builder.md) di [Segment Builder.
+Viene visualizzato il Generatore di segmenti. Puoi utilizzare il Generatore di segmenti per creare un regola personalizzato per il pubblico da seguire. Ulteriori informazioni sull&#39;utilizzo di Segment Builder sono disponibili nella guida[&#128279;](./segment-builder.md) di Segment Builder.
 
 ![Viene visualizzata la interfaccia Segment Builder (Generatore di segmenti).](../images/ui/audience-composition/segment-builder.png)
 

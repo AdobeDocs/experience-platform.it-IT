@@ -226,6 +226,7 @@ Per mappare correttamente i campi XDM ai campi di destinazione [!DNL (API) Sales
      | `xdm: person.name.firstName` | `Attribute: First Name` dall&#39;estensione dati [!DNL Salesforce Marketing Cloud] desiderata. | - |
 
    * Di seguito è riportato un esempio che utilizza queste mappature:
+
      ![Esempio di schermata dell&#39;interfaccia utente di Experience Platform che mostra le mappature di Target.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/mappings.png)
 
 Dopo aver fornito le mappature per la connessione di destinazione, seleziona **[!UICONTROL Avanti]**.

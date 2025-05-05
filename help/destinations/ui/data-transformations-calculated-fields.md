@@ -28,7 +28,7 @@ disable additional URLs for a while
 
 >[!AVAILABILITY]
 >
->La funzionalità per eseguire trasformazioni sui dati esportati in cloud destinazioni di archiviazione è disponibile a livello generale per le seguenti destinazioni: , , , , [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md)[[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md)[[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md), , nonché per qualsiasi destinazione di archiviazione cloud creata da partner personalizzate create tramite [Destination SDK.](/help/destinations/destination-sdk/overview.md)[[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md)[[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)[[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
+>La funzionalità per eseguire trasformazioni sui dati esportati in cloud destinazioni di archiviazione è disponibile a livello generale per le seguenti destinazioni: , , , , [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md) [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md) [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md), , nonché per qualsiasi destinazione di archiviazione cloud creata da partner personalizzate create tramite [Destination SDK.](/help/destinations/destination-sdk/overview.md) [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md) [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
 
 Per eseguire varie trasformazioni sui dati esportati verso destinazioni di archiviazione cloud, è necessario utilizzare la funzionalità campi calcolati nella fase di mappatura del workflow di esportazione. Per informazioni dettagliate sui campi calcolati, visita le pagine collegate di seguito. Queste pagine includono un&#39;introduzione ai campi calcolati in Preparazione dati e ulteriori informazioni su tutte le funzioni disponibili:
 
@@ -39,7 +39,7 @@ Per eseguire varie trasformazioni sui dati esportati verso destinazioni di archi
 
 Per utilizzare i campi calcolati per le trasformazioni dei dati:
 
-1. [Connettiti](/help/destinations/ui/connect-destination.md) a una destinazione di archiviazione cloud desiderata. Quando ci si connette alla destinazione cloud desiderata, disattivare l&#39;opzione **(/help/destinations/ui/export-arrays-maps-objects.md##export-arrays-maps-objects-toggle)Esporta array, mappe, oggetti]**[.
+1. [Connettiti](/help/destinations/ui/connect-destination.md) a una destinazione di archiviazione cloud desiderata. Quando ci si connette alla destinazione cloud desiderata, disattivare l&#39;opzione **(/help/destinations/ui/export-arrays-maps-objects.md##export-arrays-maps-objects-toggle)Esporta array, mappe, oggetti&rbrack;**&lbrack;.
 2. Segui i [passaggi di attivazione per cloud le destinazioni](/help/destinations/ui/activate-batch-profile-destinations.md) di archiviazione e vai al passaggio di [mappatura](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) .
 
 ## Utilizzare i campi calcolati {#how-to-export-calculated-fields}
@@ -86,7 +86,7 @@ Quando è pronto, selezionare **[!UICONTROL Successivo]** per procedere al passa
 
 ## Funzioni supportate di esempio per eseguire trasformazioni di dati {#supported-functions}
 
-Tutte le funzioni](/help/data-prep/functions.md) documentate [di Data Prep sono supportate quando si attivano i dati verso destinazioni basate su file.
+Tutte le funzioni[&#128279;](/help/data-prep/functions.md) documentate di Data Prep sono supportate quando si attivano i dati verso destinazioni basate su file.
 
 Le funzioni riportate di seguito, specifiche per la gestione delle esportazioni di array o l&#39;applicazione dell&#39;hashing ai campi, sono documentate insieme agli esempi.
 

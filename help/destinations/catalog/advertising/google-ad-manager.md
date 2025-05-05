@@ -14,7 +14,7 @@ ht-degree: 7%
 
 >[!IMPORTANT]
 >
-> Google sta rilasciando modifiche all&#39;API](https://developers.google.com/google-ads/api/docs/start) Google Ads, [a [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html?lang=it) e all&#39;API [](https://developers.google.com/display-video/api/guides/getting-started/overview) Display &amp; Video 360 al fine di supportare i requisiti relativi alla conformità e al consenso definiti dal [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_it) (DMA) nell&#39;Unione europea ([Norme](https://www.google.com/about/company/user-consent-policy/) sul consenso degli utenti dell&#39;UE). L&#39;applicazione di queste modifiche ai requisiti di consenso è attiva dal 6 marzo 2024.
+> Google sta rilasciando modifiche all&#39;API[&#128279;](https://developers.google.com/google-ads/api/docs/start) Google Ads, a [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html?lang=it) e all&#39;API [&#128279;](https://developers.google.com/display-video/api/guides/getting-started/overview) Display &amp; Video 360 al fine di supportare i requisiti relativi alla conformità e al consenso definiti dal [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_it) (DMA) nell&#39;Unione europea ([Norme](https://www.google.com/about/company/user-consent-policy/) sul consenso degli utenti dell&#39;UE). L&#39;applicazione di queste modifiche ai requisiti di consenso è attiva dal 6 marzo 2024.
 ><br/>
 >Per aderire al regola di consenso utente dell&#39;UE e continuare a creare elenchi di tipi di pubblico per gli utenti dello Spazio economico europeo (EEA), gli inserzionisti e i partner devono assicurarsi di trasmettere il consenso finale utente al momento del caricamento dei dati sul pubblico. In qualità di partner Google, Adobe fornisce gli strumenti necessari per soddisfare i requisiti di consenso ai sensi del regolamento DMA dell’Unione Europea.
 ><br/>
@@ -56,7 +56,7 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 
 | Origine pubblico | Sostenuto | Descrizione |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiences generati tramite il servizio](../../../segmentation/home.md) di segmentazione Experience Platform[. |
+| [!DNL Segmentation Service] | ✓ | Audiences generati tramite il servizio[&#128279;](../../../segmentation/home.md) di segmentazione Experience Platform. |
 | Caricamenti personalizzati | ✓ | Tipi di pubblico [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
@@ -80,8 +80,8 @@ Se stai cercando di creare la tua prima destinazione con [!DNL Google Ad Manager
 
 L&#39;inserimento nell&#39;elenco Consentiti è obbligatorio prima di configurare la prima destinazione [!DNL Google Ad Manager] in Experience Platform. Assicurati di completare la procedura di inserimento delle inserzioni consentite descritta di seguito, prima di creare la destinazione.
 
-1. Segui i passaggi descritti nella documentazione](https://support.google.com/admanager/answer/3289669?hl=en) di [Google Ad Manager per aggiungere Adobe Systems come Platform di gestione dei dati (DMP) collegato.
-2. Nell&#39;interfaccia[!DNL Google Ad Manager], vai su **[!UICONTROL Admin]** > **[!UICONTROL Global Impostazioni]** > **[!UICONTROL Network Impostazioni e abilita l&#39;cursore]****[!UICONTROL di accesso]** API.
+1. Segui i passaggi descritti nella documentazione[&#128279;](https://support.google.com/admanager/answer/3289669?hl=en) di Google Ad Manager per aggiungere Adobe Systems come Platform di gestione dei dati (DMP) collegato.
+2. Nell&#39;interfaccia[!DNL Google Ad Manager], vai su **[!UICONTROL Admin]** > **[!UICONTROL Global Impostazioni]** > **[!UICONTROL Network Impostazioni e abilita l&#39;cursore]**&#x200B;**[!UICONTROL di accesso]** API.
 
 ## Connettersi alla destinazione {#connect}
 

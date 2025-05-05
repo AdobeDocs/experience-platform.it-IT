@@ -284,7 +284,7 @@ Se il batch presenta uno o più errori e la diagnostica degli errori è abilitat
 >
 >Se la diagnostica degli errori non è disponibile, verrà visualizzato il seguente messaggio di errore:
 >
-```json
+>```json
 >{
 >       "errors": [{
 >               "code": "INGEST-1211-400",

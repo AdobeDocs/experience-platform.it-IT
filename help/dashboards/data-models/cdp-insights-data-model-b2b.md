@@ -60,7 +60,7 @@ La logica utilizzata per [!UICONTROL Nuovi account per settore] insight restitui
 
 L&#39;istruzione SQL che genera i [!UICONTROL nuovi account per settore] approfondimenti è visualizzata nella sezione comprimibile seguente.
 
-Query +++SQL
++++Query SQL
 
 ```sql
 WITH RankedIndustries AS (
@@ -101,7 +101,7 @@ La logica utilizzata per [!UICONTROL Nuovi account per tipo] insight restituisce
 
 L&#39;istruzione SQL che genera l&#39;approfondimento [!UICONTROL Nuovi account per tipo] è visualizzata nella sezione comprimibile seguente.
 
-Query +++SQL
++++Query SQL
 
 ```sql
 SELECT t.account_type,

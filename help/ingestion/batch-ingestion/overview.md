@@ -146,7 +146,7 @@ Puoi caricare i file utilizzando l’API Caricamento file di piccole dimensioni.
 
 >[!NOTE]
 >
->L’acquisizione batch può essere utilizzata per aggiornare in modo incrementale i dati nell’archivio profili. Per ulteriori informazioni, vedere la sezione relativa all&#39;aggiornamento di un batch](#patch-a-batch) nella [guida per gli sviluppatori per l&#39;acquisizione batch](api-overview.md).[
+>L’acquisizione batch può essere utilizzata per aggiornare in modo incrementale i dati nell’archivio profili. Per ulteriori informazioni, vedere la sezione relativa all&#39;aggiornamento di un batch[&#128279;](#patch-a-batch) nella [guida per gli sviluppatori per l&#39;acquisizione batch](api-overview.md).
 
 >[!INFO]
 >

@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## Cosa succede?
 
-La versione di Experience Platform](/help/release-notes/latest/latest.md#destinations) di [settembre 2024 ha introdotto l&#39;opzione di impostare una data `endTime` per i flussi di dati del set di dati di esportazione. Adobe ha inoltre introdotto una data di fine predefinita del 1° maggio 2025 per tutti i flussi di dati di esportazione del set di dati creati *prima della versione di settembre 2024*. Questi flussi di dati visualizzano attualmente un messaggio simile a quello mostrato di seguito.
+La versione di Experience Platform[&#128279;](/help/release-notes/latest/latest.md#destinations) di settembre 2024 ha introdotto l&#39;opzione di impostare una data `endTime` per i flussi di dati del set di dati di esportazione. Adobe ha inoltre introdotto una data di fine predefinita del 1° maggio 2025 per tutti i flussi di dati di esportazione del set di dati creati *prima della versione di settembre 2024*. Questi flussi di dati visualizzano attualmente un messaggio simile a quello mostrato di seguito.
 
 ![Notifica dell&#39;interfaccia utente sulla necessità di aggiornare la data di fine del flusso di dati del set di dati di esportazione.](/help/destinations/assets/ui/export-datasets/update-end-date.png)
 

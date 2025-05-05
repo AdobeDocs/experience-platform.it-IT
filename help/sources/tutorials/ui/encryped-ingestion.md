@@ -64,7 +64,7 @@ Viene visualizzata una pagina in cui sono elencate le coppie di chiavi di critto
 
 ![La pagina Coppie di chiavi, con &quot;chiave di crittografia&quot; selezionata come tipo di chiave e &quot;Crea chiave&quot; pulsante selezionata.](../../images/tutorials/edi/encryption_key_page.png)
 
-Successivo, scegli il tipo di chiave che vuoi impostare. Per creare una chiave di crittografia, selezionare **[!UICONTROL Chiave di crittografia, quindi Continua****.]**
+Successivo, scegli il tipo di chiave che vuoi impostare. Per creare una chiave di crittografia, selezionare **[!UICONTROL Chiave di crittografia, quindi Continua**&#x200B;**.]**
 
 ![Finestra di creazione della chiave, con la chiave di crittografia selezionata.](../../images/tutorials/edi/choose_encryption_key_type.png)
 
@@ -165,4 +165,4 @@ Puoi continuare a [apportare aggiornamenti al flusso di dati](../ui/update-dataf
 
 ## Passaggi successivi
 
-Leggendo questo documento, è ora possibile inserire dati crittografati dall&#39;origine batch di archiviazione cloud a Experience Platform. Per informazioni su come inserire dati crittografati utilizzando le API, leggi la guida sull&#39;inserimento [di dati crittografati tramite l&#39;API](../api/encrypt-data.md) [!DNL Flow Service] . Per informazioni generali sulle fonti su Experience Platform, leggi la panoramica](../../home.md) delle [fonti.
+Leggendo questo documento, è ora possibile inserire dati crittografati dall&#39;origine batch di archiviazione cloud a Experience Platform. Per informazioni su come inserire dati crittografati utilizzando le API, leggi la guida sull&#39;inserimento [di dati crittografati tramite l&#39;API](../api/encrypt-data.md) [!DNL Flow Service] . Per informazioni generali sulle fonti su Experience Platform, leggi la panoramica[&#128279;](../../home.md) delle fonti.

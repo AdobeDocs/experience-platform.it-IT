@@ -361,7 +361,7 @@ Puoi sostituire un intero tipo di dati tramite un’operazione PUT, essenzialmen
 
 >[!NOTE]
 >
->Se si desidera aggiornare solo una parte di un tipo di dati anziché sostituirla completamente, vedere la sezione relativa all&#39;aggiornamento di una parte di un tipo di dati](#patch).[
+>Se si desidera aggiornare solo una parte di un tipo di dati anziché sostituirla completamente, vedere la sezione relativa all&#39;aggiornamento di una parte di un tipo di dati[&#128279;](#patch).
 
 **Formato API**
 

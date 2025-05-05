@@ -22,7 +22,7 @@ A scopo dimostrativo, i passaggi di questa esercitazione comportano la creazione
 >
 >Se stai inserendo dati CSV in Experience Platform, puoi [mapparli a uno schema XDM creato da consigli](../../ingestion/tutorials/map-csv/recommendations.md) generati dall&#39;intelligenza artificiale (attualmente in versione beta) senza dover creare manualmente lo schema.
 >
->Se preferisci comporre uno schema utilizzando l&#39;API[!DNL Schema Registry], inizia leggendo la guida](../api/getting-started.md) per sviluppatori [[!DNL Schema Registry] prima di tentare il esercitazione sulla [creazione di uno schema utilizzando l&#39;API](create-schema-api.md).
+>Se preferisci comporre uno schema utilizzando l&#39;API[!DNL Schema Registry], inizia leggendo la guida[&#128279;](../api/getting-started.md) per sviluppatori [!DNL Schema Registry] prima di tentare il esercitazione sulla [creazione di uno schema utilizzando l&#39;API](create-schema-api.md).
 
 ## Introduzione
 
@@ -38,7 +38,7 @@ L&#39;area di lavoro [!UICONTROL Schemi] nell&#39;interfaccia utente [!DNL Exper
 
 Dopo aver effettuato l&#39;accesso a [!DNL Experience Platform], seleziona **[!UICONTROL Schemi]** nella barra di navigazione a sinistra per aprire l&#39;area di lavoro **[!UICONTROL Schemi]**. La scheda **[!UICONTROL Sfoglia]** visualizza un elenco di schemi (una rappresentazione di [!DNL Schema Library]) da visualizzare e personalizzare. L’elenco include il nome, il tipo, la classe e il comportamento (record o serie temporale) su cui è basato lo schema, nonché la data e l’ora dell’ultima modifica dello schema.
 
-Per ulteriori informazioni, consulta la guida sull&#39;esplorazione delle risorse XDM esistenti nell&#39;interfaccia utente](../ui/explore.md).[
+Per ulteriori informazioni, consulta la guida sull&#39;esplorazione delle risorse XDM esistenti nell&#39;interfaccia utente[&#128279;](../ui/explore.md).
 
 ## Creare e denominare uno schema {#create}
 
@@ -74,13 +74,13 @@ Questa esercitazione crea uno schema per acquisire i dati relativi ai membri di 
 
 &#x200B;La struttura di base dello schema (fornita dalla classe) viene visualizzata nell’area di lavoro per rivedere e verificare la struttura di classe e schema selezionata.
 
-Immettere un nome] visualizzato Schema intuitivo [!UICONTROL nel campo di testo. Successivo, immetti una descrizione appropriata che aiuti a identificare lo schema. Dopo aver esaminato la struttura dello schema e aver soddisfatto le impostazioni, selezionare **[!UICONTROL Fine]** per creare lo schema.
+Immettere un nome visualizzato Schema intuitivo nel campo di testo. Successivo, immetti una descrizione appropriata che aiuti a identificare lo schema. Dopo aver esaminato la struttura dello schema e aver soddisfatto le impostazioni, selezionare **[!UICONTROL Fine]** per creare lo schema.
 
-![La [!UICONTROL sezione Nome e revisione] dello schema] Crea workflow con il nome] visualizzato dello schema, [!UICONTROL l&#39;Descrizione e [!UICONTROL la [!UICONTROL fine] evidenziati.](../images/ui/resources/schemas/name-and-review.png)
+![La [!UICONTROL sezione Nome e revisione] dello schema] Crea workflow con il nome visualizzato dello schema, l&#39;Descrizione e [[!UICONTROL la [!UICONTROL fine] evidenziati.]](../images/ui/resources/schemas/name-and-review.png)
 
 ### Componi il tuo schema {#compose-your-schema}
 
-Viene visualizzato il [!DNL Schema Editor] file . Questa è la tela su cui comporrai il tuo schema. Lo schema omonimo viene creato automaticamente nella **[!UICONTROL sezione Struttura]** dell&#39;area di disegno quando arrivi nella editor, insieme ai campi standard inclusi nella classe base selezionata. La classe assegnata per lo schema è anche elencata nella **[!UICONTROL sezione Classe]** nella **** composizione.
+Viene visualizzato il [!DNL Schema Editor] file . Questa è la tela su cui comporrai il tuo schema. Lo schema omonimo viene creato automaticamente nella **[!UICONTROL sezione Struttura]** dell&#39;area di disegno quando arrivi nella editor, insieme ai campi standard inclusi nella classe base selezionata. La classe assegnata per lo schema è anche elencata nella **[!UICONTROL sezione Classe]** nella **&#x200B;**&#x200B;composizione.
 
 >[!NOTE]
 >
@@ -189,7 +189,7 @@ In **[!UICONTROL Assegna a]** è necessario selezionare un gruppo di campi a cui
 
 Al termine, selezionare **[!UICONTROL Applica]**.
 
-![L&#39;Editor schema con l&#39;oggetto Livello fedeltà aggiunto alle proprietà] del campo schema [!UICONTROL evidenziato.](../images/tutorials/create-schema/loyalty-tier-object.png)
+[L&#39;Editor schema con l&#39;oggetto Livello fedeltà aggiunto alle proprietà] del campo schema ![[!UICONTROL evidenziato.]](../images/tutorials/create-schema/loyalty-tier-object.png)
 
 Le modifiche vengono applicate e viene visualizzato l&#39;oggetto appena creato `loyaltyTier` . Poiché si tratta di un campo personalizzato, viene automaticamente nidificato all&#39;interno di un oggetto con lo spazio dei nomi dell&#39;ID tenant dell&#39;organizzazione, preceduto da un carattere di sottolineatura (`_tenantId` in questo esempio).
 
@@ -270,7 +270,7 @@ Dopo aver completato tutte le proprietà del campo, selezionare **[!UICONTROL Ap
 
 L&#39;oggetto `loyaltyTier` contiene ora diversi campi e rappresenta una struttura dati comune che potrebbe essere utile in altri schemi. Consente [!DNL Schema Editor] di applicare facilmente oggetti a più campi riutilizzabili convertendo la struttura di tali oggetti in tipi di dati.
 
-I tipi di dati consentono l&#39;utilizzo coerente di strutture a più campi e offrono maggiore flessibilità rispetto a un gruppo di campi perché possono essere utilizzati ovunque all&#39;interno di uno schema. A tale scopo, impostare il valore Type del campo **** su quello di qualsiasi tipo di dati definito in [!DNL Schema Registry].
+I tipi di dati consentono l&#39;utilizzo coerente di strutture a più campi e offrono maggiore flessibilità rispetto a un gruppo di campi perché possono essere utilizzati ovunque all&#39;interno di uno schema. A tale scopo, impostare il valore Type del campo **&#x200B;**&#x200B;su quello di qualsiasi tipo di dati definito in [!DNL Schema Registry].
 
 Per convertire l&#39;oggetto `loyaltyTier` a un tipo di dati, seleziona il `loyaltyTier` campo nell&#39;area di disegno, quindi seleziona **[!UICONTROL Converti in nuovo tipo]** di dati sul lato destro dell&#39;editor in **[!UICONTROL Proprietà campo]**.
 

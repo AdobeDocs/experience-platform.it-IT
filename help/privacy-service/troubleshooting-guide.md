@@ -77,7 +77,7 @@ Contatta il team del tuo account Adobe per coordinarti e rimuovere eventuali pro
 
 ### Mediante l’API
 
-Per recuperare lo stato di un particolare processo utilizzando l&#39;API [!DNL Privacy Service], effettuare una richiesta all&#39;endpoint radice (`GET /`), utilizzando l&#39;ID del processo nel percorso della richiesta. Per ulteriori dettagli, vedere la sezione relativa alla verifica dello stato di un processo](api/privacy-jobs.md#check-the-status-of-a-job) nella guida dell&#39;API [!DNL Privacy Service].[
+Per recuperare lo stato di un particolare processo utilizzando l&#39;API [!DNL Privacy Service], effettuare una richiesta all&#39;endpoint radice (`GET /`), utilizzando l&#39;ID del processo nel percorso della richiesta. Per ulteriori dettagli, vedere la sezione relativa alla verifica dello stato di un processo[&#128279;](api/privacy-jobs.md#check-the-status-of-a-job) nella guida dell&#39;API [!DNL Privacy Service].
 
 ### Utilizzo dell’interfaccia utente
 
@@ -91,7 +91,7 @@ L&#39;API [!DNL Privacy Service] e l&#39;interfaccia utente forniscono entrambi 
 
 Effettuare una richiesta all&#39;endpoint radice (`GET /`) nell&#39;API [!DNL Privacy Service], utilizzando l&#39;ID del processo di cui si desidera scaricare i risultati nel percorso della richiesta. Se lo stato del processo è completo, l&#39;API includerà un attributo `downloadURL` nel corpo della risposta. Questo attributo contiene un URL che puoi incollare nella barra degli indirizzi del browser per scaricare il file ZIP.
 
-Per ulteriori dettagli, vedere la sezione relativa alla ricerca di un processo in base al relativo ID](api/privacy-jobs.md#check-the-status-of-a-job) nella guida dell&#39;API [!DNL Privacy Service].[
+Per ulteriori dettagli, vedere la sezione relativa alla ricerca di un processo in base al relativo ID[&#128279;](api/privacy-jobs.md#check-the-status-of-a-job) nella guida dell&#39;API [!DNL Privacy Service].
 
 ### Utilizzo dell’interfaccia utente
 

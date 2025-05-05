@@ -71,7 +71,7 @@ Il corso di Data Science Area di lavoro è suddiviso in cinque lezioni.
 
 ## Passaggi successivi
 
-Dopo aver completato il corso di Area di lavoro Data Science, visita le guide](./api/getting-started.md) API di [Sensei Machine Learning per imparare a utilizzare le API RESTful per fare tutto ciò che hai appena imparato e altro ancora.
+Dopo aver completato il corso di Area di lavoro Data Science, visita le guide[&#128279;](./api/getting-started.md) API di Sensei Machine Learning per imparare a utilizzare le API RESTful per fare tutto ciò che hai appena imparato e altro ancora.
 
 
 

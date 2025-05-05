@@ -178,7 +178,7 @@ Questa sezione contiene informazioni supplementari per l&#39;utilizzo di [!DNL P
 
 ### Adobe di parametri di configurazione della soluzione {#config-params}
 
-Di seguito è riportato un elenco dei parametri di configurazione accettati per le soluzioni Adobe supportate, utilizzati durante la creazione di un&#39;istanza di un oggetto AdobePrivacy](#instantiate-the-privacy-js-library).[
+Di seguito è riportato un elenco dei parametri di configurazione accettati per le soluzioni Adobe supportate, utilizzati durante la creazione di un&#39;istanza di un oggetto AdobePrivacy[&#128279;](#instantiate-the-privacy-js-library).
 
 **Tutte le soluzioni**
 

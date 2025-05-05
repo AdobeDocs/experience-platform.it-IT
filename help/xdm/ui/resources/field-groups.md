@@ -34,11 +34,11 @@ Sebbene non sia necessario per questa guida, è consigliabile seguire l&#39;eser
 
 Per creare un nuovo gruppo di campi, occorre innanzitutto selezionare uno schema a cui aggiungere il gruppo di campi. È possibile scegliere di [creare un nuovo schema](./schemas.md#create) o [selezionare uno schema esistente da modificare](./schemas.md#edit).
 
-Una volta aperto lo schema nella [!DNL Schema Editor], selezionare **[!UICONTROL Aggiungi]** accanto alla sezione Gruppi] di [!UICONTROL campi nella barra sinistra.
+Una volta aperto lo schema nella [!DNL Schema Editor], selezionare **[!UICONTROL Aggiungi]** accanto alla sezione Gruppi di campi nella barra sinistra.
 
 ![](../../images/ui/resources/field-groups/add-field-group.png)
 
-Nella finestra di dialogo visualizzata, selezionare **[!UICONTROL Crea nuovo gruppo]** di campi. Qui è possibile specificare un Nome ]**visualizzato e**[!UICONTROL  un **[!UICONTROL Descrizione]** per il gruppo di campi. Al termine, selezionare **[!UICONTROL Aggiungi gruppi di]** campi.
+Nella finestra di dialogo visualizzata, selezionare **[!UICONTROL Crea nuovo gruppo]** di campi. Qui è possibile specificare un Nome **visualizzato e** un **[!UICONTROL Descrizione]** per il gruppo di campi. Al termine, selezionare **[!UICONTROL Aggiungi gruppi di]** campi.
 
 ![](../../images/ui/resources/field-groups/create-field-group.png)
 
@@ -58,7 +58,7 @@ L’elenco dei gruppi di campi disponibili viene prefiltrato in base alla modali
 >
 >Solo i gruppi di campi personalizzati definiti dall’organizzazione possono essere completamente modificati e personalizzati. Per i gruppi di campi di base definiti da Adobe, è possibile modificare solo i nomi visualizzati dei relativi campi nel contesto dei singoli schemi. Nell&#39;Editor schema sono indicati da un&#39;icona lucchetto (![Un&#39;icona lucchetto.](/help/images/icons/lock-closed.png)). Per ulteriori informazioni, consulta la sezione sulla [modifica dei nomi visualizzati per i campi dello schema](./schemas.md#display-names).
 >
->Una volta che un gruppo di campi personalizzato è stato salvato e utilizzato in uno schema per l&#39;assimilazione dei dati, in seguito è possibile apportare solo modifiche additive al gruppo di campi. Per ulteriori informazioni, vedere le regole dell&#39;evoluzione [](../../schema/composition.md#evolution) dello schema.
+>Una volta che un gruppo di campi personalizzato è stato salvato e utilizzato in uno schema per l&#39;assimilazione dei dati, in seguito è possibile apportare solo modifiche additive al gruppo di campi. Per ulteriori informazioni, vedere le regole dell&#39;evoluzione [&#128279;](../../schema/composition.md#evolution) dello schema.
 
 Per modificare un gruppo di campi esistente, è innanzitutto necessario aprire uno schema che utilizza il gruppo di campi all&#39;interno di [!DNL Schema Editor]. È possibile [selezionare uno schema esistente da modificare](./schemas.md#edit) oppure [creare un nuovo schema](./schemas.md#create) e aggiungere il gruppo di campi in questione.
 
@@ -92,6 +92,6 @@ Se lo stesso gruppo di campi è già utilizzato in altri schemi, i campi appena 
 
 ## Passaggi successivi {#next-steps}
 
-Questa guida illustra come creare e modificare i gruppi di campi utilizzando l’interfaccia utente di Experience Platform. Per ulteriori informazioni sulle funzionalità dell&#39;area [!UICONTROL di lavoro Schemi], vedere Cenni preliminari](../overview.md) sull&#39;area [[!UICONTROL di lavoro Schemi].
+Questa guida illustra come creare e modificare i gruppi di campi utilizzando l’interfaccia utente di Experience Platform. Per ulteriori informazioni sulle funzionalità dell&#39;area [!UICONTROL di lavoro Schemi], vedere Cenni preliminari[&#128279;](../overview.md) sull&#39;area [!UICONTROL di lavoro Schemi].
 
-Per informazioni su come gestire gruppi di campi utilizzando l&#39;API[!DNL Schema Registry], vedere la guida](../../api/field-groups.md) agli endpoint dei [gruppi di campi.
+Per informazioni su come gestire gruppi di campi utilizzando l&#39;API[!DNL Schema Registry], vedere la guida[&#128279;](../../api/field-groups.md) agli endpoint dei gruppi di campi.

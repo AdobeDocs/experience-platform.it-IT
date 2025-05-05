@@ -27,7 +27,7 @@ Per trovare le estensioni nell&#39;interfaccia di Experience Platform, passa a *
 
 ## Funzionamento delle estensioni tag {#how-extensions-work}
 
-Un&#39;estensione tag [](../../../tags/home.md#extensions) è un pacchetto di codice che migliora le funzionalità di un sito Web o di un&#39;app mobile. Ciò può includere l&#39;invio di dati evento non elaborati a una destinazione come [Google Analytics](/help/destinations/catalog/analytics/google-universal-analytics.md), ma possono anche servire altre funzioni.
+Un&#39;estensione tag [&#128279;](../../../tags/home.md#extensions) è un pacchetto di codice che migliora le funzionalità di un sito Web o di un&#39;app mobile. Ciò può includere l&#39;invio di dati evento non elaborati a una destinazione come [Google Analytics](/help/destinations/catalog/analytics/google-universal-analytics.md), ma possono anche servire altre funzioni.
 
 È importante distinguere tra estensioni di tag ed estensioni di inoltro eventi. Le estensioni visualizzate nell&#39;interfaccia utente delle destinazioni di Experience Platform sono *estensioni tag*. Per ulteriori informazioni sulle [differenze tra i tag e l&#39;inoltro degli eventi](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags), consulta la panoramica sull&#39;inoltro degli eventi.
 

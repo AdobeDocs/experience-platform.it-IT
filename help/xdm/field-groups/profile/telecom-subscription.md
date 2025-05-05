@@ -15,7 +15,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->I nomi di diversi gruppi di campi dello schema sono stati modificati. Per ulteriori informazioni, consulta il documento sugli aggiornamenti del nome del gruppo di campi [](../name-updates.md).
+>I nomi di diversi gruppi di campi dello schema sono stati modificati. Per ulteriori informazioni, consulta il documento sugli aggiornamenti del nome del gruppo di campi [&#128279;](../name-updates.md).
 
 [!UICONTROL Sottoscrizione telefonica] è un gruppo di campi dello schema standard per la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) che descrive il piano di abbonamento telefonico di un cliente, inclusi prezzi, pacchetti e abbonamenti a singoli prodotti.
 

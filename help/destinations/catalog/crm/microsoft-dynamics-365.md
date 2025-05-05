@@ -167,6 +167,7 @@ Per inviare correttamente i dati sul pubblico da Adobe Experience Platform alla 
 
 1. Nella finestra **[!UICONTROL Seleziona campo di destinazione]**, seleziona il tipo di campo di destinazione a cui vuoi mappare il campo di origine.
    * **[!UICONTROL Seleziona lo spazio dei nomi delle identità]**: seleziona questa opzione per mappare il campo di origine a uno spazio dei nomi delle identità dall&#39;elenco.
+
      ![Schermata dell&#39;interfaccia utente di Experience Platform che mostra il mapping di Target per contactid.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
 
    * Aggiungi la seguente mappatura tra lo schema del profilo XDM e l&#39;istanza [!DNL Dynamics 365]:
@@ -176,6 +177,7 @@ Per inviare correttamente i dati sul pubblico da Adobe Experience Platform alla 
      | `contactid` | `contactid` | Sì |
 
    * **[!UICONTROL Seleziona attributi personalizzati]**: seleziona questa opzione per mappare il campo di origine a un attributo personalizzato definito nel campo **[!UICONTROL Nome attributo]**. Per un elenco completo degli attributi supportati, consulta la [[!DNL Dynamics 365] documentazione](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1#entity-properties).
+
      ![Schermata dell&#39;interfaccia utente di Experience Platform che mostra la mappatura di Target per l&#39;e-mail.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-email.png)
 
      >[!IMPORTANT]

@@ -62,7 +62,7 @@ Inoltre, assicurati che [ambiti](https://help.salesforce.com/s/articleView?id=co
 * ``refresh_token``
 * ``offline_access``
 
-Infine, assicurati che la sovvenzione `password` sia abilitata nel tuo account [!DNL Salesforce]. Per informazioni sugli scenari speciali](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_username_password_flow.htm&amp;type=5), consulta la documentazione [!DNL Salesforce] [Flusso nome utente-password OAuth 2.0.
+Infine, assicurati che la sovvenzione `password` sia abilitata nel tuo account [!DNL Salesforce]. Per informazioni sugli scenari speciali[&#128279;](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_username_password_flow.htm&amp;type=5), consulta la documentazione [!DNL Salesforce] Flusso nome utente-password OAuth 2.0.
 
 >[!IMPORTANT]
 >
@@ -222,6 +222,7 @@ Per mappare correttamente i campi XDM ai campi di destinazione [!DNL (API) Sales
      | `xdm: personalEmail.address` | `Attribute: Email` | L’indirizzo e-mail del contatto. |
 
    * Di seguito è riportato un esempio che utilizza queste mappature:
+
      ![Esempio di schermata dell&#39;interfaccia utente di Experience Platform che mostra le mappature di Target.](../../assets/catalog/crm/salesforce/mappings-contacts.png)
 
    **Utilizzo dei lead**
@@ -238,6 +239,7 @@ Per mappare correttamente i campi XDM ai campi di destinazione [!DNL (API) Sales
      | `xdm: personalEmail.address` | `Attribute: Email` | Indirizzo e-mail del lead. |
 
    * Di seguito è riportato un esempio che utilizza queste mappature:
+
      ![Esempio di schermata dell&#39;interfaccia utente di Experience Platform che mostra le mappature di Target.](../../assets/catalog/crm/salesforce/mappings-leads.png)
 
 Dopo aver fornito le mappature per la connessione di destinazione, seleziona **[!UICONTROL Avanti]**.
@@ -288,17 +290,21 @@ Per verificare di aver impostato correttamente la destinazione, segui i passaggi
    **Utilizzo dei contatti**
 
    * Se hai selezionato *Contatti* all&#39;interno del segmento Experience Platform, passa alla pagina **[!DNL Apps]** > **[!DNL Contacts]**.
+
      ![Schermata di Salesforce CRM che mostra la pagina dei contatti con i profili del segmento.](../../assets/catalog/crm/salesforce/contacts.png)
 
    * Seleziona un *Contatto* e verifica se i campi sono aggiornati. È possibile vedere che ogni stato del pubblico in [!DNL Salesforce CRM] è stato aggiornato con lo stato del pubblico corrispondente da Experience Platform, in base al valore **[!UICONTROL ID mappatura]** fornito durante la [pianificazione del pubblico](#schedule-segment-export-example).
+
      ![Schermata di Salesforce CRM che mostra la pagina Dettagli contatto con gli stati aggiornati del pubblico.](../../assets/catalog/crm/salesforce/contact-info.png)
 
    **Utilizzo dei lead**
 
    * Se hai selezionato *Lead* nel segmento Experience Platform, passa alla pagina **[!DNL Apps]** > **[!DNL Leads]**.
+
      ![Schermata di Salesforce CRM che mostra la pagina Lead con i profili del segmento.](../../assets/catalog/crm/salesforce/leads.png)
 
    * Seleziona un *lead* e controlla se i campi sono aggiornati. È possibile vedere che ogni stato del pubblico in [!DNL Salesforce CRM] è stato aggiornato con lo stato del pubblico corrispondente da Experience Platform, in base al valore **[!UICONTROL ID mappatura]** fornito durante la [pianificazione del pubblico](#schedule-segment-export-example).
+
      ![Schermata di Salesforce CRM che mostra la pagina Dettagli lead con stati di pubblico aggiornati.](../../assets/catalog/crm/salesforce/lead-info.png)
 
 ## Utilizzo dei dati e governance {#data-usage-governance}

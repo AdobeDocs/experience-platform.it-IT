@@ -25,7 +25,7 @@ I tipi di pubblico dell’account possono essere utilizzati come input per le de
 
 Prima di iniziare a utilizzare i tipi di pubblico dell’account, esamina le differenze tra i diversi tipi di pubblico:
 
-- **Tipi di pubblico dell&#39;account**: un pubblico dell&#39;account è un pubblico creato utilizzando i dati del profilo **account**. I dati del profilo dell&#39;account possono essere usati per creare tipi di pubblico che destinazione le persone all&#39;interno degli account downstream. Per ulteriori informazioni sui profili account, leggi la panoramica](../../rtcdp/accounts/account-profile-overview.md) del [profilo account.
+- **Tipi di pubblico dell&#39;account**: un pubblico dell&#39;account è un pubblico creato utilizzando i dati del profilo **account**. I dati del profilo dell&#39;account possono essere usati per creare tipi di pubblico che destinazione le persone all&#39;interno degli account downstream. Per ulteriori informazioni sui profili account, leggi la panoramica[&#128279;](../../rtcdp/accounts/account-profile-overview.md) del profilo account.
 - **Tipi di** pubblico di persone: un pubblico di persone è un pubblico creato utilizzando **i dati del profilo del cliente** . I dati del profilo cliente possono essere utilizzati per creare tipi di pubblico mirati alla clientela della tua azienda. Per ulteriori informazioni sui profili cliente, leggere la [Panoramica del profilo cliente in tempo reale](../../profile/home.md).
 - **Pubblico potenziale**: un pubblico potenziale è un pubblico creato utilizzando i dati del profilo **prospect**. I dati del profilo del potenziale cliente possono essere utilizzati per creare tipi di pubblico da utenti non autenticati. Per ulteriori informazioni sui profili di potenziali clienti, leggere la [panoramica dei profili di potenziali clienti](../../profile/ui/prospect-profile.md).
 
@@ -203,7 +203,7 @@ Quando si utilizza account pubblico, il pubblico **deve** rispettare i seguenti 
    - Ciò significa che il pubblico **non può** avere più di cinque regole che compongono il pubblico.
 - Il numero massimo di entità incrociate utilizzabili è **5**.
    - Un’entità incrociata si verifica quando si passa da un’entità all’altra all’interno del pubblico. Ad esempio, passare da un account a una persona a un elenco di marketing.
-- Impossibile utilizzare le entità personalizzate **1}.**
+- Impossibile utilizzare le entità personalizzate **1&rbrace;.**
 - Il numero massimo di valori che è possibile controllare per un singolo campo è **50**.
    - Ad esempio, se hai un campo &quot;Nome città&quot;, puoi confrontare tale valore con 50 nomi di città.
 - Il pubblico dell&#39;account **non può** utilizzare `inSegment` eventi.

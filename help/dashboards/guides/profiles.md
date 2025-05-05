@@ -79,7 +79,7 @@ Per aprire l&#39;area di lavoro [!UICONTROL Profili] [!UICONTROL Dettagli], sele
 
 ![Scheda Sfoglia profili con ID profilo evidenziato.](../images/profiles/profile-id.png)
 
-L&#39;area [!UICONTROL di lavoro Dettagli] profili] [!UICONTROL mostra diversi widget preconfigurati che trasmettono informazioni specifiche per quel profilo. Queste informazioni ti consentono di comprendere gli attributi chiave del profilo a colpo d&#39;occhio. Puoi anche personalizzare l&#39;area [!UICONTROL di lavoro Dettagli] profili] [!UICONTROL creando i tuoi widget. Vedi la sezione su [come aggiungere widget](#add-widgets) per maggiori dettagli.
+L&#39;area [!UICONTROL di lavoro Dettagli] profili [!UICONTROL mostra diversi widget preconfigurati che trasmettono informazioni specifiche per quel profilo. Queste informazioni ti consentono di comprendere gli attributi chiave del profilo a colpo d&#39;occhio. Puoi anche personalizzare l&#39;area [!UICONTROL di lavoro Dettagli] profili] creando i tuoi widget. Vedi la sezione su [come aggiungere widget](#add-widgets) per maggiori dettagli.
 
 ![L&#39;area di lavoro [!UICONTROL Profili] [!UICONTROL Dettagli] con la scheda [!UICONTROL Dettagli] evidenziata.](../images/profiles/profile-details-workspace.png)
 
@@ -89,7 +89,7 @@ I widget dei dettagli del profilo preconfigurati sono i seguenti:
 
 #### Profilo cliente {#customer-profile}
 
-Il [!UICONTROL widget Profilo] cliente visualizza il nome e il cognome dei utente associati al profilo, nonché il relativo [!UICONTROL ID] profilo. Un ID profilo è un identificatore generato automaticamente associato a un tipo di identità e rappresenta un profilo. Per ulteriori informazioni sulle identità e sugli spazi dei nomi delle identità, vedere la panoramica](../../rtcdp/profile/identities-overview.md) delle [identità.
+Il [!UICONTROL widget Profilo] cliente visualizza il nome e il cognome dei utente associati al profilo, nonché il relativo [!UICONTROL ID] profilo. Un ID profilo è un identificatore generato automaticamente associato a un tipo di identità e rappresenta un profilo. Per ulteriori informazioni sulle identità e sugli spazi dei nomi delle identità, vedere la panoramica[&#128279;](../../rtcdp/profile/identities-overview.md) delle identità.
 
 ![Il widget del profilo cliente.](../images/profiles/customer-profile.png)
 
@@ -125,7 +125,7 @@ Il consenso del cliente e le preferenze di contatto sono argomenti complessi. Pe
 
 ### Aggiungi widget {#add-widgets}
 
-Per aggiungere widget personalizzati all&#39;area [!UICONTROL di lavoro Dettagli] profili][!UICONTROL , selezionare **[!UICONTROL Personalizza dettagli]** profilo.
+Per aggiungere widget personalizzati all&#39;area [!UICONTROL di lavoro Dettagli] profili, selezionare **[!UICONTROL Personalizza dettagli]** profilo.
 
 ![L&#39;area di lavoro Dettagli profili con [!UICONTROL l&#39;opzione Personalizza dettagli] profilo evidenziata.](../images/profiles/customize-profile-details.png)
 
@@ -217,7 +217,7 @@ Il modello di intelligenza artificiale che determina i punteggi di propensione v
 
 >[!NOTE]
 >
->Selezionare il menu a discesa immediatamente sotto il scheda panoramica per modificare il regola di unione che determina quali profili includere nell&#39;analisi. Per ulteriori dettagli, vedere la sezione relativa [ai criteri](#merge-policies) di unione o la panoramica](../../profile/merge-policies/overview.md) dei [regola di unione.
+>Selezionare il menu a discesa immediatamente sotto il scheda panoramica per modificare il regola di unione che determina quali profili includere nell&#39;analisi. Per ulteriori dettagli, vedere la sezione relativa [ai criteri](#merge-policies) di unione o la panoramica[&#128279;](../../profile/merge-policies/overview.md) dei regola di unione.
 
 Per passare alla pagina di informazioni dettagliate per il modello di intelligenza artificiale del cliente selezionato, seleziona **[!UICONTROL Visualizza dettagli]** del modello.
 
@@ -312,7 +312,7 @@ Il **[!UICONTROL widget Cambia]** conteggio profili visualizza il numero di prof
 
 >[!NOTE]
 >
->Il [!UICONTROL widget di modifica] del conteggio dei profili riflette il numero di profili aggiunti **dopo** l&#39;inserimento iniziale del profilo e la configurazione del store del profilo. In altre parole, se l&#39;organizzazione ha impostato il store profilo e ne ha assorbiti 4.000.000 il giorno 1, entro 24 ore la dashboard sarà disponibile, tuttavia il widget di modifica] del [!UICONTROL conteggio dei profili sarà impostato su 0. Questo metodo di conteggio consente di evitare un picco associato all’acquisizione iniziale dei profili nel sistema. Nei prossimi 30 giorni, la tua organizzazione acquisirà altri 1.000.000 di profili nell’archivio Profili. Una volta acquisita l&#39;istantanea successiva, il widget [!UICONTROL Modifica conteggio profili] mostrerebbe un totale di 1.000.000 profili aggiunti, mentre il widget [!UICONTROL Conteggio profili] mostrerebbe un totale di 5.000.000 profili.
+>Il [!UICONTROL widget di modifica] del conteggio dei profili riflette il numero di profili aggiunti **dopo** l&#39;inserimento iniziale del profilo e la configurazione del store del profilo. In altre parole, se l&#39;organizzazione ha impostato il store profilo e ne ha assorbiti 4.000.000 il giorno 1, entro 24 ore la dashboard sarà disponibile, tuttavia il widget di modifica del conteggio dei profili sarà impostato su 0. Questo metodo di conteggio consente di evitare un picco associato all’acquisizione iniziale dei profili nel sistema. Nei prossimi 30 giorni, la tua organizzazione acquisirà altri 1.000.000 di profili nell’archivio Profili. Una volta acquisita l&#39;istantanea successiva, il widget [!UICONTROL Modifica conteggio profili] mostrerebbe un totale di 1.000.000 profili aggiunti, mentre il widget [!UICONTROL Conteggio profili] mostrerebbe un totale di 5.000.000 profili.
 
 ![Il dashboard dei profili dell&#39;interfaccia utente di Experience Platform con il widget di modifica del conteggio dei profili evidenziato.](../images/profiles/profile-count-change.png)
 

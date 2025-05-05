@@ -109,7 +109,7 @@ Seleziona l&#39;evento **[!UICONTROL Visualizzazione pagina]** appena aggiunto. 
 
 Dopo aver aggiunto l’evento, devi aggiungere un attributo. Poiché stai lavorando con visitatori non autenticati, puoi aggiungere l’attributo calcolato appena creato. Questo attributo calcolato appena creato consente di collegare gli ID partner a un pubblico.
 
-Per aggiungere l&#39;attributo calcolato, in **[!UICONTROL Attributi]**, seleziona **[!UICONTROL Profilo individuale XDM]**, seguito dall&#39;ID tenant ](../../xdm/api/getting-started.md#know-your-tenant-id) della tua organizzazione.**[**, **[!UICONTROL SystemComputedAttributes]** e **[!UICONTROL PartnerID]**. Ora aggiungi **[!UICONTROL Valore]** dell&#39;attributo calcolato alla sezione degli attributi dell&#39;area di lavoro.
+Per aggiungere l&#39;attributo calcolato, in **[!UICONTROL Attributi]**, seleziona **[!UICONTROL Profilo individuale XDM]**, seguito dall&#39;ID tenant [&#128279;](../../xdm/api/getting-started.md#know-your-tenant-id) della tua organizzazione.**&#x200B;**, **[!UICONTROL SystemComputedAttributes]** e **[!UICONTROL PartnerID]**. Ora aggiungi **[!UICONTROL Valore]** dell&#39;attributo calcolato alla sezione degli attributi dell&#39;area di lavoro.
 
 ![Viene visualizzato il percorso della cartella per accedere all&#39;attributo calcolato.](../assets/offsite-retargeting/access-computed-attribute.png)
 

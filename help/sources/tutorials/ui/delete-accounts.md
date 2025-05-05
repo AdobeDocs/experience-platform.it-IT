@@ -63,4 +63,4 @@ Viene visualizzata una finestra di dialogo di conferma finale. Selezionare **[!U
 
 Seguendo questa esercitazione, hai utilizzato correttamente l&#39;area di lavoro **[!UICONTROL Sources]** per eliminare gli account esistenti.
 
-Per i passaggi su come eseguire queste operazioni a livello di programmazione utilizzando l&#39;API [!DNL Flow Service], fare riferimento al tutorial sull&#39;eliminazione di connessioni con l&#39;API del servizio Flusso](../../tutorials/api/delete.md)[
+Per i passaggi su come eseguire queste operazioni a livello di programmazione utilizzando l&#39;API [!DNL Flow Service], fare riferimento al tutorial sull&#39;eliminazione di connessioni con l&#39;API del servizio Flusso[&#128279;](../../tutorials/api/delete.md)

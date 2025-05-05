@@ -126,7 +126,7 @@ GET /mlServices?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{QUERY_PARAMETER}` | Uno dei parametri](./appendix.md#query) di query disponibili utilizzati per filtrare i [risultati. |
+| `{QUERY_PARAMETER}` | Uno dei parametri[&#128279;](./appendix.md#query) di query disponibili utilizzati per filtrare i risultati. |
 | `{VALUE}` | Valore del parametro di query precedente. |
 
 **Richiesta**

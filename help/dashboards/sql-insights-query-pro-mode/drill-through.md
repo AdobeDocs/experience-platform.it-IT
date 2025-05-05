@@ -24,7 +24,7 @@ Seleziona i puntini di sospensione nel grafico da analizzare, quindi seleziona *
 
 ![Grafico con il menu con i puntini di sospensione evidenziati da Modifica.](../images/sql-insights-query-pro-mode/drill-through-chart-edit.png)
 
-Nel pannello [!UICONTROL Proprietà] utilizza l&#39;interruttore per abilitare **[!UICONTROL Abilita drill-through]**, quindi utilizza il menu a discesa per selezionare il **[!UICONTROL dashboard di Target]**. Verificare che l&#39;interruttore per il filtro pass-through **[!UICONTROL 1} sia abilitato, quindi selezionare**[!UICONTROL  Salva e chiudi ]**.]**
+Nel pannello [!UICONTROL Proprietà] utilizza l&#39;interruttore per abilitare **[!UICONTROL Abilita drill-through]**, quindi utilizza il menu a discesa per selezionare il **[!UICONTROL dashboard di Target]**. Verificare che l&#39;interruttore per il filtro pass-through **[!UICONTROL 1&rbrace; sia abilitato, quindi selezionare**&#x200B;[!UICONTROL &#x200B; Salva e chiudi &#x200B;]&#x200B;**.]**
 
 ![Pannello delle proprietà del grafico con Attiva drill-through, dashboard di destinazione e pass-through filtro evidenziati.](../images/sql-insights-query-pro-mode/drill-through-chart-properties.png)
 

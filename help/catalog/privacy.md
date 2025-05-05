@@ -212,7 +212,7 @@ Se nella richiesta di accesso a dati personali hai incluso anche `ProfileService
 
 Dopo aver letto questo documento, ti vengono presentati i concetti importanti relativi all’elaborazione delle richieste di accesso a dati personali per il data lake. Si consiglia di continuare a leggere la documentazione fornita in questa guida per comprendere meglio come gestire i dati di identità e creare processi sulla privacy.
 
-Per informazioni sulla procedura di elaborazione delle richieste di accesso a dati personali per l&#39;archivio [!DNL Profile], vedere il documento sull&#39;elaborazione delle richieste di accesso a dati personali per Real-Time Customer Profile](../profile/privacy.md).[
+Per informazioni sulla procedura di elaborazione delle richieste di accesso a dati personali per l&#39;archivio [!DNL Profile], vedere il documento sull&#39;elaborazione delle richieste di accesso a dati personali per Real-Time Customer Profile[&#128279;](../profile/privacy.md).
 
 ## Appendice
 

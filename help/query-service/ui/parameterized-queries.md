@@ -20,11 +20,11 @@ Query Service supporta l&#39;utilizzo di query con parametri nell&#39;editor di 
 
 ## Prerequisiti
 
-Prima di continuare con questa guida, leggere la guida](./user-guide.md) all&#39;interfaccia dell&#39;editor [di query. La guida dell&#39;editor di query fornisce informazioni dettagliate su come scrivere, convalidare ed eseguire query per esperienza del cliente dati all&#39;interno dell&#39;interfaccia utente Experience Platform.
+Prima di continuare con questa guida, leggere la guida[&#128279;](./user-guide.md) all&#39;interfaccia dell&#39;editor di query. La guida dell&#39;editor di query fornisce informazioni dettagliate su come scrivere, convalidare ed eseguire query per esperienza del cliente dati all&#39;interno dell&#39;interfaccia utente Experience Platform.
 
 >[!NOTE]
 >
->Nell&#39;ambito della Adobe Experience Platform interfaccia, le query con parametri sono supportate solo al livello padre dei modelli in linea. Ciò significa che le query con parametri funzionano solo se utilizzate nel modello originale. I modelli secondari devono essere statici e non possono avere parametri dinamici. Per ulteriori informazioni, consulta la documentazione](../key-concepts/inline-templates.md) relativa [ai modelli in linea.
+>Nell&#39;ambito della Adobe Experience Platform interfaccia, le query con parametri sono supportate solo al livello padre dei modelli in linea. Ciò significa che le query con parametri funzionano solo se utilizzate nel modello originale. I modelli secondari devono essere statici e non possono avere parametri dinamici. Per ulteriori informazioni, consulta la documentazione[&#128279;](../key-concepts/inline-templates.md) relativa ai modelli in linea.
 
 ## Sintassi di query con parametri {#syntax}
 
@@ -47,7 +47,7 @@ SELECT
 
 Per creare la query con parametri nella interfaccia, passare all&#39;editor di query. Per ulteriori istruzioni, vedere la sezione sull&#39;accesso [all&#39;editor di](./user-guide.md#accessing-query-editor) query.
 
-Utilizza la premessa `'$'` per immettere un parametro di query nella query nell’editor di testo. Successivo, seleziona i parametri ]**della**[!UICONTROL  query scheda aggiungi il valore mancante per la chiave accanto alla [!UICONTROL console]. La query non può essere eseguita se si trascura di aggiungere un valore a una delle chiavi richieste. Un&#39;icona di avviso (![Icona di avviso.](/help/images/icons/alert.png)) viene visualizzato nella sezione Parametri di query accanto a qualsiasi campo di immissione del Valore] vuoto[!UICONTROL .
+Utilizza la premessa `'$'` per immettere un parametro di query nella query nell’editor di testo. Successivo, seleziona i parametri **della**&#x200B; query scheda aggiungi il valore mancante per la chiave accanto alla [!UICONTROL console]. La query non può essere eseguita se si trascura di aggiungere un valore a una delle chiavi richieste. Un&#39;icona di avviso (![Icona di avviso.](/help/images/icons/alert.png)) viene visualizzato nella sezione Parametri di query accanto a qualsiasi campo di immissione del Valore vuoto.
 
 >[!NOTE]
 >
@@ -61,7 +61,7 @@ Utilizza la premessa `'$'` per immettere un parametro di query nella query nell�
 
 ## Utilizzare i dettagli dei log di query per controllare i valori dei parametri {#check-parameter-values}
 
-Non è possibile salvare parametri all&#39;interno dei modelli poiché i valori utilizzati non sono persistenti. Tuttavia, è possibile controllare la pagina dei dettagli] del registro delle query per trovare i valori dei parametri utilizzati in un&#39;esecuzione [!UICONTROL di query. In questo caso, i log non indicano che si tratta di una query con parametri. Vedere la [documentazione](./query-logs.md) dei log delle query per istruzioni su come trovare i valori utilizzati.
+Non è possibile salvare parametri all&#39;interno dei modelli poiché i valori utilizzati non sono persistenti. Tuttavia, è possibile controllare la pagina dei dettagli del registro delle query per trovare i valori dei parametri utilizzati in un&#39;esecuzione di query. In questo caso, i log non indicano che si tratta di una query con parametri. Vedere la [documentazione](./query-logs.md) dei log delle query per istruzioni su come trovare i valori utilizzati.
 
 ![La visualizzazione dei log di query con l&#39;SQL di una query con parametri evidenziato nella sezione dettagli.](../images/ui/parameterized-queries/parameterized-query-logs.png)
 

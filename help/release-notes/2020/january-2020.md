@@ -54,7 +54,7 @@ Nuove norme legali e organizzative danno agli utenti il diritto di accedere ai p
 | Nuovi endpoint API | Il percorso di base per l&#39;API [!DNL Privacy Service] è stato aggiornato da `/data/privacy/gdpr` a `/data/core/privacy/jobs`. |
 | Nuova proprietà `regulation` obbligatoria | Quando si creano nuovi processi nell’API di [!DNL Privacy Service], è necessario fornire una proprietà `regulation` nel payload della richiesta per indicare in quale regolamento tenere traccia del processo. I valori accettati sono `gdpr` e `ccpa`. |
 | Supporto per [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] ora accetta le richieste di accesso/eliminazione da Adobe [!DNL Primetime Authentication], utilizzando `primetimeAuthentication` come valore di prodotto. |
-| Miglioramenti all’interfaccia utente di Privacy Service | Pagine di tracciamento del lavoro separate per le normative RGPD e CCPA. Nuovo **Tipo di regolamento **a discesa per passare dai dati di tracciamento per RGPD e CCPA e viceversa. |
+| Miglioramenti all’interfaccia utente di Privacy Service | Pagine di tracciamento del lavoro separate per le normative RGPD e CCPA. Nuovo **Tipo di regolamento &#x200B;** a discesa per passare dai dati di tracciamento per RGPD e CCPA e viceversa. |
 
 **Problemi noti**
 

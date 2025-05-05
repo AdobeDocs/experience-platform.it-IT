@@ -33,7 +33,7 @@ Per ulteriori informazioni sui casi d&#39;uso specifici di [!DNL Pinterest], con
 
 Per utilizzare questa estensione, è necessario disporre di un [!DNL Pinterest] [account aziendale](https://help.pinterest.com/en/business/article/get-a-business-account) valido. Vai alla [[!DNL Pinterest] pagina di registrazione](https://www.pinterest.com/business/create/) per registrarti e creare un account, se non ne hai già uno.
 
-Sarà inoltre necessario un account sviluppatore [!DNL Pinterest], che dovrà essere associato all&#39;account aziendale [!DNL Pinterest]. Per associare l&#39;account sviluppatore all&#39;account aziendale, fare riferimento all&#39;[[!DNL Pinterest ] account sviluppatore](https://developers.pinterest.com/account-setup/).
+Sarà inoltre necessario un account sviluppatore [!DNL Pinterest], che dovrà essere associato all&#39;account aziendale [!DNL Pinterest]. Per associare l&#39;account sviluppatore all&#39;account aziendale, fare riferimento all&#39;[[!DNL Pinterest &#x200B;] account sviluppatore](https://developers.pinterest.com/account-setup/).
 
 ### Raccogliere i dettagli di configurazione richiesti {#configuration-details}
 

@@ -22,7 +22,7 @@ Viene visualizzata la finestra di dialogo **[!UICONTROL Filtri]**. Da questa vis
 
 1. Seleziona un **[!UICONTROL pubblico]**: scegli il segmento di pubblico da analizzare (ad esempio, **Canada - Alberta**).
 2. Specifica un **[!UICONTROL criterio di unione]**: definisci il criterio di unione che determina il modo in cui le identità vengono combinate nel pubblico selezionato (nella schermata di esempio, viene selezionato il criterio **Basato sull&#39;ora predefinita**).
-3. Selezionare un&#39;identità **[!UICONTROL A]** e un&#39;identità **[!UICONTROL B]** per il confronto**: scegliere i due tipi di identità da confrontare. Nell&#39;esempio, **L&#39;identità A** è selezionata come &quot;crmId&quot; e **l&#39;identità B** è selezionata come &quot;e-mail&quot;.
+3. Selezionare un&#39;identità **[!UICONTROL A]** e un&#39;identità **[!UICONTROL B]** per il confronto&#x200B;**: scegliere i due tipi di identità da confrontare. Nell&#39;esempio, &#x200B;** L&#39;identità A **&#x200B; è selezionata come &quot;crmId&quot; e &#x200B;** l&#39;identità B** è selezionata come &quot;e-mail&quot;.
 4. **Imposta un intervallo di date**: scegli un intervallo predefinito come &quot;Oggi&quot; o imposta manualmente le date di inizio e di fine utilizzando i campi del calendario.
 
 ![La finestra di dialogo Filtri del dashboard Sovrapposizioni identità pubblico.](../../images/sql-insights-query-pro-mode/templates/audience-identity-overlaps-filters-dialog.png)

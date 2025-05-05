@@ -201,7 +201,7 @@ I seguenti parametri sono generalmente necessari quando si utilizza l’autentic
 
 {style="table-layout:auto"}
 
-Autenticazione chiave API +++View
++++Autenticazione chiave API View
 
 ```json
 {

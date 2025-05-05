@@ -279,7 +279,7 @@ La classe [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.m
 
 +++
 
-Modello +++Adobe Analytics ExperienceEvent (gruppo di campi)
++++Modello Adobe Analytics ExperienceEvent (gruppo di campi)
 
 Il gruppo di campi [Adobe Analytics ExperienceEvent](/help/xdm/field-groups/event/analytics-full-extension.md) acquisisce le metriche comuni raccolte da Adobe Analytics.
 

@@ -39,9 +39,9 @@ Viene visualizzata la [!UICONTROL finestra di dialogo Crea uno schema] . In ques
 
 ![Viene Crea una finestra di dialogo schema con le opzioni workflow e seleziona evidenziato.](../../images/ui/resources/schemas/create-a-schema-dialog.png)
 
-### [!BADGE ]{type=Informative} Beta Creazione manuale o assistita da ML di schemi {#manual-or-assisted}
+### &lbrace;type=Informative&rbrace; Beta Creazione manuale o assistita da ML di schemi {#manual-or-assisted}
 
-Per informazioni su come usare un algoritmo ML per consigliare una struttura di schema basata su un file CSV, vedi la guida](../ml-assisted-schema-creation.md) alla creazione di schemi assistita da [Machine Learning. Questa guida dell’interfaccia utente si concentra sul flusso di lavoro di creazione manuale.
+Per informazioni su come usare un algoritmo ML per consigliare una struttura di schema basata su un file CSV, vedi la guida[&#128279;](../ml-assisted-schema-creation.md) alla creazione di schemi assistita da Machine Learning. Questa guida dell’interfaccia utente si concentra sul flusso di lavoro di creazione manuale.
 
 ### Creazione manuale dello schema {#manual-creation}
 
@@ -71,9 +71,9 @@ Seleziona una riga per scegliere una classe, quindi seleziona **[!UICONTROL Succ
 
 Dopo aver selezionato una classe, viene visualizzata la [!UICONTROL sezione Nome e revisione] . In questa sezione vengono forniti un nome e una descrizione per identificare lo schema.La struttura di base dello schema (fornita dalla classe) viene visualizzata nell&#39;area di lavoro per consentirti di rivedere e verificare la struttura della classe e dello schema selezionata.
 
-Immettere un nome] visualizzato Schema intuitivo [!UICONTROL nel campo di testo. Successivo, immetti una descrizione appropriata che aiuti a identificare lo schema. Dopo aver esaminato la struttura dello schema e aver soddisfatto le impostazioni, selezionare **[!UICONTROL Fine]** per creare lo schema.
+Immettere un nome visualizzato Schema intuitivo nel campo di testo. Successivo, immetti una descrizione appropriata che aiuti a identificare lo schema. Dopo aver esaminato la struttura dello schema e aver soddisfatto le impostazioni, selezionare **[!UICONTROL Fine]** per creare lo schema.
 
-![La [!UICONTROL sezione Nome e revisione] dello schema] Crea workflow con il nome] visualizzato dello schema, [!UICONTROL l&#39;Descrizione e [!UICONTROL la [!UICONTROL fine] evidenziati.](../../images/ui/resources/schemas/name-and-review.png)
+![La [!UICONTROL sezione Nome e revisione] dello schema] Crea workflow con il nome visualizzato dello schema, l&#39;Descrizione e [[!UICONTROL la [!UICONTROL fine] evidenziati.]](../../images/ui/resources/schemas/name-and-review.png)
 
 Viene visualizzato l&#39;Editor di schema, con la struttura dello schema visualizzata nell&#39;area di disegno. Se lo si desidera, è ora possibile iniziare [ad aggiungere campi alla classe](../../ui/resources/classes.md#add-fields).
 
@@ -83,7 +83,7 @@ Viene visualizzato l&#39;Editor di schema, con la struttura dello schema visuali
 
 >[!NOTE]
 >
->Una volta che uno schema è stato salvato e utilizzato nell&#39;assimilazione dei dati, è possibile apportarvi solo modifiche aggiuntive. Per ulteriori informazioni, vedere le regole dell&#39;evoluzione [](../../schema/composition.md#evolution) dello schema.
+>Una volta che uno schema è stato salvato e utilizzato nell&#39;assimilazione dei dati, è possibile apportarvi solo modifiche aggiuntive. Per ulteriori informazioni, vedere le regole dell&#39;evoluzione [&#128279;](../../schema/composition.md#evolution) dello schema.
 
 Per modificare uno schema esistente, selezionare il **[!UICONTROL scheda Sfoglia]** , quindi selezionare il nome dello schema che si desidera modificare. È inoltre possibile utilizzare la barra ricerca per restringere l&#39;elenco delle opzioni disponibili.
 
@@ -113,7 +113,7 @@ Per comodità, l’Editor di schema fornisce un’opzione per passare dai nomi d
 
 ![Nell&#39;Editor schema sono evidenziati i nomi [!UICONTROL visualizzati Mostra dei campi] .](../../images/ui/resources/schemas/display-name-toggle.png)
 
-I nomi visualizzati per i gruppi di campi standard sono generati dal sistema ma possono essere personalizzati, come descritto nella sezione Nomi](#display-names) visualizzati[. I nomi visualizzati vengono riflessi in più viste interfaccia, incluse le mappe e le anteprime dei set di dati. L&#39;impostazione predefinita è disattivata e i nomi dei campi vengono visualizzati in base ai valori originali.
+I nomi visualizzati per i gruppi di campi standard sono generati dal sistema ma possono essere personalizzati, come descritto nella sezione Nomi[&#128279;](#display-names) visualizzati. I nomi visualizzati vengono riflessi in più viste interfaccia, incluse le mappe e le anteprime dei set di dati. L&#39;impostazione predefinita è disattivata e i nomi dei campi vengono visualizzati in base ai valori originali.
 
 ## Aggiungere gruppi di campi a uno schema {#add-field-groups}
 
@@ -123,7 +123,7 @@ I nomi visualizzati per i gruppi di campi standard sono generati dal sistema ma 
 
 Dopo aver aperto uno schema all&#39;interno di [!DNL Schema Editor], è possibile aggiungere campi allo schema tramite l&#39;utilizzo di gruppi di campi. Per iniziare, seleziona **[!UICONTROL Aggiungi]** accanto a **[!UICONTROL Gruppi di campi]** nella barra a sinistra.
 
-![Nell&#39;Editor schema è evidenziata la [!UICONTROL sezione Aggiungi] dai gruppi] di [!UICONTROL campi.](../../images/ui/resources/schemas/add-field-group-button.png)
+![Nell&#39;Editor schema è evidenziata la [!UICONTROL sezione Aggiungi] dai gruppi] di [[!UICONTROL campi.]](../../images/ui/resources/schemas/add-field-group-button.png)
 
 Viene visualizzata una finestra di dialogo contenente un elenco di gruppi di campi che è possibile selezionare per lo schema. Poiché i gruppi di campi sono compatibili solo con una classe, verranno elencati solo i gruppi di campi associati alla classe selezionata dello schema. Per impostazione predefinita, i gruppi di campi elencati sono ordinati in base alla popolarità di utilizzo all’interno dell’organizzazione.
 
@@ -135,7 +135,7 @@ Se conosci l’attività generale o l’area aziendale dei campi che desideri ag
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulle best practice per modellazione dati specifici del settore in XDM, consulta la documentazione sui modelli](../../schema/industries/overview.md) di [dati di settore.
+>Per ulteriori informazioni sulle best practice per modellazione dati specifici del settore in XDM, consulta la documentazione sui modelli[&#128279;](../../schema/industries/overview.md) di dati di settore.
 
 È inoltre possibile utilizzare la barra dei ricerca per individuare il gruppo di campi desiderato. I gruppi di campi il cui nome corrisponde alla query vengono visualizzati in cima all&#39;elenco. In **[!UICONTROL Campi]** standard vengono visualizzati i gruppi di campi contenenti i campi che descrivono gli attributi di dati desiderati.
 
@@ -261,7 +261,7 @@ Dopo aver selezionato il gruppo di campi dall&#39;elenco, selezionare **[!UICONT
 
 ![Campo Applica](../../images/ui/resources/schemas/apply-field.png)
 
-Il nuovo campo viene aggiunto al canvas e viene assegnato uno spazio dei nomi all&#39;ID](../../api/getting-started.md#know-your-tenant_id) tenant [per evitare conflitti con i campi XDM standard. Il gruppo di campi a cui è stato associato il nuovo campo viene visualizzato anche in **[!UICONTROL Gruppi]** di campi nella barra sinistra.
+Il nuovo campo viene aggiunto al canvas e viene assegnato uno spazio dei nomi all&#39;ID[&#128279;](../../api/getting-started.md#know-your-tenant_id) tenant per evitare conflitti con i campi XDM standard. Il gruppo di campi a cui è stato associato il nuovo campo viene visualizzato anche in **[!UICONTROL Gruppi]** di campi nella barra sinistra.
 
 ![Tenant ID](../../images/ui/resources/schemas/tenantId.png)
 
@@ -279,7 +279,7 @@ Continua configurando il campo come desiderato e selezionate **[!UICONTROL Appli
 
 ![ Applica essere selezionata per il nuovo campo.](../../images/ui/resources/schemas/assign-field-to-class-apply.png)
 
-Il nuovo campo viene aggiunto al canvas e viene assegnato uno spazio dei nomi all&#39;ID](../../api/getting-started.md#know-your-tenant_id) tenant [per evitare conflitti con i campi XDM standard. Selezionando il nome della classe nel barra sinistro si apre il nuovo campo come parte della struttura della classe.
+Il nuovo campo viene aggiunto al canvas e viene assegnato uno spazio dei nomi all&#39;ID[&#128279;](../../api/getting-started.md#know-your-tenant_id) tenant per evitare conflitti con i campi XDM standard. Selezionando il nome della classe nel barra sinistro si apre il nuovo campo come parte della struttura della classe.
 
 ![Nuovo campo applicato alla struttura della classe personalizzata, rappresentata nell&#39;area di disegno.](../../images/ui/resources/schemas/assign-field-to-class-applied.png)
 
@@ -388,8 +388,8 @@ Dopo aver confermato il cambio di classe, la tela verrà ripristinata e tutti i 
 
 ## Passaggi successivi {#next-steps}
 
-Questo documento ha trattato le nozioni di base per la creazione e la modifica di schemi nel interfaccia Experience Platform. Si consiglia vivamente di esaminare la esercitazione](../../tutorials/create-schema-ui.md) di creazione dello [schema per ottenere una workflow completa per la creazione di uno schema completo nel interfaccia, inclusa la creazione di gruppi di campi e tipi di dati personalizzati per casi di utilizzo specifici.
+Questo documento ha trattato le nozioni di base per la creazione e la modifica di schemi nel interfaccia Experience Platform. Si consiglia vivamente di esaminare la esercitazione[&#128279;](../../tutorials/create-schema-ui.md) di creazione dello schema per ottenere una workflow completa per la creazione di uno schema completo nel interfaccia, inclusa la creazione di gruppi di campi e tipi di dati personalizzati per casi di utilizzo specifici.
 
-Per ulteriori informazioni sulle funzionalità dell&#39;area [!UICONTROL di lavoro Schemi], vedere Cenni preliminari](../overview.md) sull&#39;area [[!UICONTROL di lavoro Schemi].
+Per ulteriori informazioni sulle funzionalità dell&#39;area [!UICONTROL di lavoro Schemi], vedere Cenni preliminari[&#128279;](../overview.md) sull&#39;area [!UICONTROL di lavoro Schemi].
 
 Per informazioni su come gestire gli schemi nell&#39;API [!DNL Schema Registry] , consulta la [guida](../../api/schemas.md) agli endpoint degli schemi.

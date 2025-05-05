@@ -246,7 +246,7 @@ Questo schema viene utilizzato per strutturare e fare riferimento ai dati dell�
 
 Lo schema del connettore Web [!DNL Adobe] è rappresentato da una classe [!UICONTROL XDM ExperienceEvent], che include i seguenti gruppi di campi:
 
-Modello +++Adobe Analytics ExperienceEvent (gruppo di campi)
++++Modello Adobe Analytics ExperienceEvent (gruppo di campi)
 
 [[!UICONTROL Estensione completa Adobe Analytics ExperienceEvent]](/help/xdm/field-groups/event/analytics-full-extension.md) è un gruppo di campi di schema standard che acquisisce metriche comuni raccolte da Adobe Analytics.
 

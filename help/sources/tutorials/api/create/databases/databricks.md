@@ -64,7 +64,7 @@ POST /connections
 
 La richiesta seguente crea una connessione di base per un&#39;origine [!DNL Databricks] utilizzando l&#39;autenticazione del token di accesso.
 
-Esempio di richiesta +++View
++++Esempio di richiesta View
 
 ```shell
 curl -X POST \

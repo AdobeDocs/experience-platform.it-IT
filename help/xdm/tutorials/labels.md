@@ -11,7 +11,7 @@ ht-degree: 8%
 
 # Gestire le etichette di utilizzo dei dati per uno schema
 
-Tutti i dati importati in Adobe Experience Platform sono vincolati dagli schemi XDM (Experience Data Model). Questi dati possono essere soggetti a restrizioni di utilizzo definite dalla tua organizzazione o da normative legali. A account tale scopo, il Experience Platform consente di limitare l&#39;utilizzo di determinati set di dati e campi mediante l&#39;uso di etichette](../../data-governance/labels/overview.md) di utilizzo dei [dati.
+Tutti i dati importati in Adobe Experience Platform sono vincolati dagli schemi XDM (Experience Data Model). Questi dati possono essere soggetti a restrizioni di utilizzo definite dalla tua organizzazione o da normative legali. A account tale scopo, il Experience Platform consente di limitare l&#39;utilizzo di determinati set di dati e campi mediante l&#39;uso di etichette[&#128279;](../../data-governance/labels/overview.md) di utilizzo dei dati.
 
 Un’etichetta applicata a un campo schema indica i criteri di utilizzo che si applicano ai dati contenuti in quel campo specifico.
 

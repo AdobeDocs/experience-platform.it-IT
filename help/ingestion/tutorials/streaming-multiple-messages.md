@@ -25,7 +25,7 @@ Questo tutorial richiede una buona conoscenza di Adobe Experience Platform [!DNL
 - [Panoramica sull&#39;acquisizione dei dati](../home.md): descrive i concetti fondamentali di [!DNL Experience Platform Data Ingestion], inclusi i metodi di acquisizione e i connettori dati.
 - [Panoramica sull&#39;acquisizione in streaming](../streaming-ingestion/overview.md): flusso di lavoro e blocchi predefiniti per l&#39;acquisizione in streaming, ad esempio connessioni in streaming, set di dati, [!DNL XDM Individual Profile] e [!DNL XDM ExperienceEvent].
 
-Questo tutorial richiede inoltre di aver completato l&#39;esercitazione di autenticazione a Adobe Experience Platform](https://www.adobe.com/go/platform-api-authentication-en) di [ per effettuare correttamente le chiamate alle API di [!DNL Experience Platform]. Il completamento del tutorial sull’autenticazione fornisce il valore per l’intestazione Authorization richiesta da tutte le chiamate API in questo tutorial. L’intestazione viene visualizzata nelle chiamate di esempio come segue:
+Questo tutorial richiede inoltre di aver completato l&#39;esercitazione di autenticazione a Adobe Experience Platform[&#128279;](https://www.adobe.com/go/platform-api-authentication-en) di  per effettuare correttamente le chiamate alle API di [!DNL Experience Platform]. Il completamento del tutorial sull’autenticazione fornisce il valore per l’intestazione Authorization richiesta da tutte le chiamate API in questo tutorial. L’intestazione viene visualizzata nelle chiamate di esempio come segue:
 
 - Autorizzazione: Bearer `{ACCESS_TOKEN}`
 

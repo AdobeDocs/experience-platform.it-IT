@@ -98,7 +98,7 @@ Ogni singola esecuzione del flusso di dati mostra i seguenti dettagli:
 * **[!UICONTROL Tasso]** di ingestione: il tasso di successo dei record inseriti in [!DNL Data Lake]. Questa metrica è applicabile quando [!UICONTROL l&#39;inserimento] parziale è abilitato.
 * **[!UICONTROL Stato]**: rappresenta lo stato in cui si trova il flusso di dati: [!UICONTROL completato] o [!UICONTROL in elaborazione]. [!UICONTROL Completato] significa che tutti i record per l&#39;esecuzione del flusso di dati corrispondente sono stati elaborati entro il periodo di un&#39;ora. [!UICONTROL Elaborazione] significa che l&#39;esecuzione del flusso di dati non è ancora terminata.
 
-La pagina Panoramica] dell&#39;esecuzione [!UICONTROL del flusso di dati contiene informazioni aggiuntive sul flusso di dati, ad esempio l&#39;ID di esecuzione del flusso di dati corrispondente, destinazione set di dati e l&#39;ID organizzazione.
+La pagina Panoramica dell&#39;esecuzione del flusso di dati contiene informazioni aggiuntive sul flusso di dati, ad esempio l&#39;ID di esecuzione del flusso di dati corrispondente, destinazione set di dati e l&#39;ID organizzazione.
 
 Un&#39;esecuzione del flusso con errori contiene anche il [!UICONTROL pannello Errori] di esecuzione del flusso di dati, che visualizza l&#39;errore specifico che ha portato all&#39;errore dell&#39;esecuzione, nonché il conteggio totale dei record non riusciti.
 

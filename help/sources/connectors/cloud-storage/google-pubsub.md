@@ -26,7 +26,7 @@ Questa sezione descrive i prerequisiti da completare prima di collegare l&#39;ac
 
 ### Crea account del servizio {#create-service-account}
 
-Un account del servizio **1} è un tipo di account spesso utilizzato da un&#39;applicazione o da un carico di lavoro di calcolo, anziché da una persona.** Un account di servizio è identificato dal relativo indirizzo e-mail, che è univoco per l’account.
+Un account del servizio **1&rbrace; è un tipo di account spesso utilizzato da un&#39;applicazione o da un carico di lavoro di calcolo, anziché da una persona.** Un account di servizio è identificato dal relativo indirizzo e-mail, che è univoco per l’account.
 
 * Da un lato, gli account del servizio sono **entità**. È possibile concedere agli account del servizio l&#39;accesso alle risorse [!DNL Google Cloud]. Ad esempio, è possibile concedere a un account di servizio il ruolo Amministratore di calcolo `(roles/compute.admin)` per un determinato progetto. Questo consente all’account del servizio di gestire le risorse del motore di calcolo in quel particolare progetto.
 * D&#39;altra parte, gli account del servizio sono anche risorse: è possibile concedere ad altri utenti/gruppi/ruoli l&#39;autorizzazione per accedere all&#39;account del servizio. Ad esempio, è possibile concedere a un utente il ruolo Utente account di servizio `(roles/iam.serviceAccountUser)` per un account di servizio per consentire all&#39;utente di associare tale account di servizio alle risorse. In alternativa, è possibile concedere a un utente il ruolo di amministratore dell&#39;account di servizio `(roles/iam.serviceAccountAdmin)` per consentire all&#39;utente di completare attività quali visualizzare, modificare, disabilitare ed eliminare l&#39;account di servizio.

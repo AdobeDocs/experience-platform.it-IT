@@ -65,7 +65,7 @@ POST /connections
 
 La richiesta seguente crea una connessione di base per [!DNL PostgreSQL] utilizzando l&#39;autenticazione basata su chiave account:
 
-Esempio di richiesta +++View
++++Esempio di richiesta View
 
 ```shell
 curl -X POST \
@@ -119,7 +119,7 @@ In caso di esito positivo, la risposta restituisce l&#39;identificatore univoco 
 
 La richiesta seguente crea una connessione di base per [!DNL PostgreSQL] utilizzando l&#39;autenticazione di base:
 
-Esempio di richiesta +++View
++++Esempio di richiesta View
 
 ```shell
 curl -X POST \
@@ -201,7 +201,7 @@ POST /connections
 
 La richiesta seguente crea una connessione di base per [!DNL PostgreSQL] per connettersi ad Experience Platform su AWS.
 
-Esempio di richiesta +++View
++++Esempio di richiesta View
 
 ```shell
 curl -X POST \

@@ -11,7 +11,7 @@ ht-degree: 3%
 
 # [!UICONTROL Dettagli membri della campagna aziendale XDM] gruppo di campi dello schema
 
-[!UICONTROL Dettagli membri della campagna aziendale XDM] è un gruppo di campi di schema standard per la [[!UICONTROL classe ] membri della campagna aziendale XDM](../../classes/b2b/business-campaign-members.md), che acquisisce informazioni dettagliate su una campagna aziendale.
+[!UICONTROL Dettagli membri della campagna aziendale XDM] è un gruppo di campi di schema standard per la [[!UICONTROL classe &#x200B;] membri della campagna aziendale XDM](../../classes/b2b/business-campaign-members.md), che acquisisce informazioni dettagliate su una campagna aziendale.
 
 ![Struttura del gruppo di campi Dettagli membri della campagna aziendale XDM come viene visualizzato nell&#39;interfaccia utente](../../images/field-groups/b2b/business-campaign-member-details.png)
 

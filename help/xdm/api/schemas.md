@@ -285,7 +285,7 @@ Puoi sostituire un intero schema tramite un’operazione PUT, essenzialmente ris
 
 >[!NOTE]
 >
->Se si desidera aggiornare solo una parte di uno schema anziché sostituirla completamente, vedere la sezione relativa all&#39;aggiornamento di una parte di uno schema](#patch).[
+>Se si desidera aggiornare solo una parte di uno schema anziché sostituirla completamente, vedere la sezione relativa all&#39;aggiornamento di una parte di uno schema[&#128279;](#patch).
 
 **Formato API**
 

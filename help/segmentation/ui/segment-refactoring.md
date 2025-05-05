@@ -32,7 +32,7 @@ Quando si applica un vincolo temporale a livello di quadro, è comunque possibil
 
 >[!NOTE]
 >
->Se sul quadro è presente un **solo** scheda, applicare il vincolo temporale al scheda equivale **** ad applicare il vincolo temporale a livello di quadro.
+>Se sul quadro è presente un **solo** scheda, applicare il vincolo temporale al scheda equivale **&#x200B;**&#x200B;ad applicare il vincolo temporale a livello di quadro.
 >
 >Se sono presenti più&#x200B;**schede nell&#39;area di disegno, l&#39;applicazione** del vincolo temporale al livello dell&#39;area di lavoro applicherà tale vincolo temporale a **tutte le** schede dell&#39;area di lavoro.
 

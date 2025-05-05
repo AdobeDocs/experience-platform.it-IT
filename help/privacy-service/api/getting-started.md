@@ -64,7 +64,7 @@ Il passaggio finale della configurazione consiste nel selezionare i profili di p
 
 >[!NOTE]
 >
-I profili di prodotto e le autorizzazioni granulari che forniscono vengono creati e gestiti dagli amministratori tramite Adobe Admin Console. Per ulteriori informazioni, consulta la guida sulle [autorizzazioni Privacy Service](../permissions.md).
+>I profili di prodotto e le autorizzazioni granulari che forniscono vengono creati e gestiti dagli amministratori tramite Adobe Admin Console. Per ulteriori informazioni, consulta la guida sulle [autorizzazioni Privacy Service](../permissions.md).
 
 Al termine, selezionare **[!UICONTROL Salva API configurata]**.
 

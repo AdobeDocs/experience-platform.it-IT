@@ -396,7 +396,7 @@ Puoi sostituire un’intera classe tramite un’operazione PUT, essenzialmente r
 
 >[!NOTE]
 >
->Se si desidera aggiornare solo una parte di una classe invece di sostituirla completamente, vedere la sezione relativa all&#39;aggiornamento di una parte di una classe](#patch).[
+>Se si desidera aggiornare solo una parte di una classe invece di sostituirla completamente, vedere la sezione relativa all&#39;aggiornamento di una parte di una classe[&#128279;](#patch).
 
 **Formato API**
 

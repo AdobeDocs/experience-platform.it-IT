@@ -188,4 +188,4 @@ Esempio di output con **[!UICONTROL false]** selezionata: `"male ","John","TestL
 
 ### Passaggi successivi {#next-steps}
 
-Dopo aver letto questo documento, ora sai come configurare le opzioni di esportazione dei file per i tuoi file di dati CSV per adattare il contenuto del file ai requisiti del tuo sistema di ricezione dei file a valle. Successivo, è possibile leggere il esercitazione](/help/destinations/ui/activate-batch-profile-destinations.md) di attivazione delle destinazioni basate su file per avviare l&#39;esportazione [dei file nella posizione di archiviazione cloud preferita.
+Dopo aver letto questo documento, ora sai come configurare le opzioni di esportazione dei file per i tuoi file di dati CSV per adattare il contenuto del file ai requisiti del tuo sistema di ricezione dei file a valle. Successivo, è possibile leggere il esercitazione[&#128279;](/help/destinations/ui/activate-batch-profile-destinations.md) di attivazione delle destinazioni basate su file per avviare l&#39;esportazione dei file nella posizione di archiviazione cloud preferita.

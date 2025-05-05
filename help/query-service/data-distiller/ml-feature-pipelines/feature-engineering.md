@@ -71,7 +71,7 @@ Numero di classi: 50000
 Con una query appropriata puoi raccogliere gli eventi nel set di dati in funzioni numeriche significative che possono essere utilizzate per addestrare un modello di tendenza. Di seguito sono riportati alcuni eventi di esempio:
 
 - **Numero di e-mail** inviate per scopi di marketing e ricevute dall&#39;utente.
-- Parte di queste e-mail aperte ****.
+- Parte di queste e-mail aperte **&#x200B;**.
 - Parte di queste e-mail in cui l&#39;utente **ha selezionato** il collegamento.
 - **Numero di prodotti** visualizzati.
 - Numero di **proposte con cui si è interagito**.
@@ -231,11 +231,11 @@ df_training_set.head()
 
 |  | userId | eventType | timestamp | subscriptionOccurred | emailsReceived | emailsOpened | e-mailClic | productsViewed | propositionInteracts | propositionIgnorato | webLinkClicks | minutes_Since_emailSent | minutes_Since_emailOpened | minutes_Since_emailClick | minutes_Since_productView | minutes_Since_propositionInteract | minutes_Since_propositionDismiss | minutes_Since_linkClick | random_row_number_for_user |
 | ---  |  --- |   ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---   | ---  |  ---  |  ---  |  --- |    
-| 0 | 02554909162592418347780983091131567290 | directMarketing.emailSent | 17/06/2023 13/0}59,086:44: | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Nessuna | NaN | 1 |
+| 0 | 02554909162592418347780983091131567290 | directMarketing.emailSent | 17/06/2023 13/0&rbrace;59,086:44: | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Nessuna | NaN | 1 |
 | 1 | 01130334080340815140184601481559659945 | directMarketing.emailOpened | 2023-06-19 06:01:55,366 | 0 | 1 | 3 | 0 | 1 | 0 | 0 | 0 | 1921,0 | 0,0 | NaN | 1703,0 | NaN | Nessuna | NaN | 1 |
-| 2 | 01708961660028351393477273586554010192 | web.formFilledOut | 19/06/2023 18/0}49,083:36: | 1 | 1 | 2 | 2 | 0 | 0 | 0 | 0 | 2365,0 | 26,0 | 1,0 | NaN | NaN | Nessuna | NaN | 7 |
+| 2 | 01708961660028351393477273586554010192 | web.formFilledOut | 19/06/2023 18/0&rbrace;49,083:36: | 1 | 1 | 2 | 2 | 0 | 0 | 0 | 0 | 2365,0 | 26,0 | 1,0 | NaN | NaN | Nessuna | NaN | 7 |
 | 3 | 01809182902320674899156240602124740853 | directMarketing.emailSent | 2023-06-21 19:17:12.535 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Nessuna | NaN | 1 |
-| 4 | 03441761949943678951106193028739001197 | directMarketing.emailSent | 21/06/2023 21/0}29,482:58: | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Nessuna | NaN | 1 |
+| 4 | 03441761949943678951106193028739001197 | directMarketing.emailSent | 21/06/2023 21/0&rbrace;29,482:58: | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Nessuna | NaN | 1 |
 
 {style="table-layout:auto"}
 

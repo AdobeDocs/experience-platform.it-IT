@@ -60,7 +60,7 @@ Una volta assegnati come sviluppatori, puoi iniziare a creare integrazioni in [A
 
 L’amministratore di Admin Console deve anche aggiungere te come utente allo stesso profilo di prodotto. Con l’accesso utente, puoi visualizzare nell’interfaccia utente il risultato delle operazioni API eseguite.
 
-Per ulteriori informazioni, consulta la guida sulla gestione dei gruppi di utenti in Admin Console](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html).[
+Per ulteriori informazioni, consulta la guida sulla gestione dei gruppi di utenti in Admin Console[&#128279;](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html).
 
 ## Generare una chiave API (ID client) e un ID organizzazione {#generate-credentials}
 
@@ -110,7 +110,7 @@ Nella schermata **[!UICONTROL Configura API]**, seleziona **[!UICONTROL AEP-Defa
 
 >[!IMPORTANT]
 >
-Per accedere a determinate funzioni di Experience Platform, è necessario disporre anche di un amministratore di sistema che conceda le autorizzazioni di controllo dell’accesso basate su attributi necessarie. Ulteriori informazioni nella sezione [Ottenere le autorizzazioni di controllo dell&#39;accesso basate su attributi necessarie](#get-abac-permissions).
+>Per accedere a determinate funzioni di Experience Platform, è necessario disporre anche di un amministratore di sistema che conceda le autorizzazioni di controllo dell’accesso basate su attributi necessarie. Ulteriori informazioni nella sezione [Ottenere le autorizzazioni di controllo dell&#39;accesso basate su attributi necessarie](#get-abac-permissions).
 
 ![Seleziona i profili di prodotto per la tua integrazione.](./images/api-authentication/select-product-profiles.png)
 
@@ -149,7 +149,7 @@ Il passaggio successivo consiste nel generare una credenziale `{ACCESS_TOKEN}` d
 
 >[!TIP]
 >
-Puoi inoltre utilizzare un ambiente e una raccolta Postman per generare i token di accesso. Per ulteriori informazioni, leggere la sezione relativa all&#39;utilizzo di [Postman per l&#39;autenticazione e il test delle chiamate API](#use-postman).
+>Puoi inoltre utilizzare un ambiente e una raccolta Postman per generare i token di accesso. Per ulteriori informazioni, leggere la sezione relativa all&#39;utilizzo di [Postman per l&#39;autenticazione e il test delle chiamate API](#use-postman).
 
 ## Crea e recupera le credenziali di autenticazione direttamente nella documentazione di riferimento dell’API {#get-credentials-functionality}
 
@@ -169,17 +169,17 @@ Quindi, utilizza il selettore a discesa per aprire la finestra delle credenziali
 
 >[!TIP]
 >
-Il blocco delle credenziali nella parte superiore della pagina rimane visualizzato quando navighi tra diverse pagine di endpoint nella documentazione di riferimento API di Experience Platform.
+>Il blocco delle credenziali nella parte superiore della pagina rimane visualizzato quando navighi tra diverse pagine di endpoint nella documentazione di riferimento API di Experience Platform.
 
 ## [!BADGE Deprecato]{type=negativo} genera un token web JSON (JWT) {#jwt}
 
 >[!WARNING]
 >
-Il metodo JWT per generare i token di accesso è stato dichiarato obsoleto. Tutte le nuove integrazioni devono essere create utilizzando il metodo di autenticazione server-to-server [OAuth](#select-oauth-server-to-server). Per continuare a funzionare, Adobe richiede anche la migrazione delle integrazioni esistenti al metodo OAuth entro il 30 giugno 2025. Leggi la seguente documentazione importante:
+>Il metodo JWT per generare i token di accesso è stato dichiarato obsoleto. Tutte le nuove integrazioni devono essere create utilizzando il metodo di autenticazione server-to-server [OAuth](#select-oauth-server-to-server). Per continuare a funzionare, Adobe richiede anche la migrazione delle integrazioni esistenti al metodo OAuth entro il 30 giugno 2025. Leggi la seguente documentazione importante:
 > 
-* [Guida alla migrazione per le applicazioni da JWT a OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
-* [Guida all&#39;implementazione per applicazioni nuove e vecchie con OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
-* [Vantaggi dell&#39;utilizzo del metodo delle credenziali server-to-server OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#why-oauth-server-to-server-credentials)
+>* [Guida alla migrazione per le applicazioni da JWT a OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
+>* [Guida all&#39;implementazione per applicazioni nuove e vecchie con OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
+>* [Vantaggi dell&#39;utilizzo del metodo delle credenziali server-to-server OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#why-oauth-server-to-server-credentials)
 
 +++ Visualizza informazioni obsolete
 
@@ -187,9 +187,9 @@ Il passaggio successivo consiste nel generare un token web JSON (JWT) in base al
 
 >[!IMPORTANT]
 >
-Ai fini di questa esercitazione, i passaggi seguenti descrivono come generare un JWT in Developer Console. Tuttavia, questo metodo di generazione dovrebbe essere utilizzato solo a fini di prova e valutazione.
+>Ai fini di questa esercitazione, i passaggi seguenti descrivono come generare un JWT in Developer Console. Tuttavia, questo metodo di generazione dovrebbe essere utilizzato solo a fini di prova e valutazione.
 >
-Per un uso regolare, il JWT deve essere generato automaticamente. Per ulteriori informazioni su come generare JWT a livello di programmazione, consulta la [guida all&#39;autenticazione dell&#39;account di servizio](https://www.adobe.io/developer-console/docs/guides/authentication/JWT/) su Adobe Developer.
+>Per un uso regolare, il JWT deve essere generato automaticamente. Per ulteriori informazioni su come generare JWT a livello di programmazione, consulta la [guida all&#39;autenticazione dell&#39;account di servizio](https://www.adobe.io/developer-console/docs/guides/authentication/JWT/) su Adobe Developer.
 
 Seleziona **[!UICONTROL Account di servizio (JWT)]** nel menu di navigazione a sinistra, quindi seleziona **[!UICONTROL Genera JWT]**.
 
@@ -227,7 +227,7 @@ curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
 
 >[!NOTE]
 >
-Puoi utilizzare la stessa chiave API, lo stesso segreto client e lo stesso JWT per generare un nuovo token di accesso per ogni sessione. Questo consente di automatizzare la generazione dei token di accesso nelle applicazioni.
+>Puoi utilizzare la stessa chiave API, lo stesso segreto client e lo stesso JWT per generare un nuovo token di accesso per ogni sessione. Questo consente di automatizzare la generazione dei token di accesso nelle applicazioni.
 
 **Risposta**
 
@@ -290,7 +290,7 @@ Se la risposta è simile a quella mostrata di seguito, le credenziali sono valid
 
 >[!IMPORTANT]
 >
-Anche se la chiamata precedente è sufficiente per testare le credenziali di accesso, non sarà possibile accedere a o modificare diverse risorse senza disporre delle autorizzazioni di controllo dell’accesso basate su attributi corretti. Ulteriori informazioni sono disponibili nella sezione **Ottenere le autorizzazioni di controllo dell&#39;accesso basate su attributi necessarie**.
+>Anche se la chiamata precedente è sufficiente per testare le credenziali di accesso, non sarà possibile accedere a o modificare diverse risorse senza disporre delle autorizzazioni di controllo dell’accesso basate su attributi corretti. Ulteriori informazioni sono disponibili nella sezione **Ottenere le autorizzazioni di controllo dell&#39;accesso basate su attributi necessarie**.
 
 ## Ottenere le autorizzazioni di controllo dell&#39;accesso basate su attributi necessarie {#get-abac-permissions}
 
@@ -330,7 +330,7 @@ Prima di poter creare integrazioni su Adobe Developer Console, il tuo account de
 
 >[!NOTE]
 >
-Solo gli amministratori di sistema possono visualizzare e gestire le credenziali API in Autorizzazioni.
+>Solo gli amministratori di sistema possono visualizzare e gestire le credenziali API in Autorizzazioni.
 
 ### Aggiungere sviluppatori al profilo di prodotto {#add-developers-to-product-profile}
 
@@ -360,7 +360,7 @@ Lo sviluppatore è stato aggiunto correttamente e viene visualizzato nella sched
 
 >[!NOTE]
 >
-Solo un amministratore di sistema può assegnare le API ai ruoli nell’interfaccia utente di Experience Platform.
+>Solo un amministratore di sistema può assegnare le API ai ruoli nell’interfaccia utente di Experience Platform.
 
 Per utilizzare ed eseguire operazioni sulle API di Experience Platform, un amministratore di sistema deve aggiungere le credenziali API oltre al set di autorizzazioni assegnato a un ruolo. Ulteriori informazioni nella sezione sulla gestione delle credenziali API [per un ruolo](../access-control/abac/ui/permissions.md#manage-api-credentials-for-a-role).
 

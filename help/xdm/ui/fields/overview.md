@@ -44,7 +44,7 @@ I passaggi necessari per aggiungere un campo variano a seconda che si stia aggiu
 
 ## Definire le proprietà di un campo {#define}
 
-Dopo aver selezionato l&#39;icona **più (+)**, nell&#39;area di lavoro verrà visualizzato un segnaposto per il campo senza titolo ****.
+Dopo aver selezionato l&#39;icona **più (+)**, nell&#39;area di lavoro verrà visualizzato un segnaposto per il campo senza titolo **&#x200B;**.
 
 ![Editor schema con un nuovo campo senza titolo evidenziato.](../../images/ui/fields/overview/new-field.png)
 

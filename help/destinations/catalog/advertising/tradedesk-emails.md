@@ -144,7 +144,7 @@ Per verificare che i dati vengano esportati correttamente da Experience Platform
 
 1. Selezionare innanzitutto la scheda **[!UICONTROL Dati]** e rivedere la sezione **[!UICONTROL Prime parti]**.
 2. Scorri verso il basso la pagina, sotto **[!UICONTROL Dati importati]**, troverai il **[!UICONTROL riquadro 1PD di Adobe]**.
-3. Fai clic sul riquadro**[!UICONTROL Adobe 1PD]** per visualizzare l&#39;elenco di tutti i tipi di pubblico attivati nella destinazione [!DNL Trade Desk] per l&#39;inserzionista. È inoltre possibile utilizzare la funzione di ricerca.
+3. Fai clic sul riquadro&#x200B;**[!UICONTROL Adobe 1PD]** per visualizzare l&#39;elenco di tutti i tipi di pubblico attivati nella destinazione [!DNL Trade Desk] per l&#39;inserzionista. È inoltre possibile utilizzare la funzione di ricerca.
 4. L&#39;ID segmento # di Experience Platform verrà visualizzato come Nome segmento nell&#39;interfaccia utente [!DNL Trade Desk].
 
 ## Utilizzo dei dati e governance {#data-usage-governance}

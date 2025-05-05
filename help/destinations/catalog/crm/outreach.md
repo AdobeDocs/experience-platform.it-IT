@@ -152,6 +152,7 @@ Per inviare correttamente i dati sul pubblico da Adobe Experience Platform alla 
 
 1. Nella finestra [!UICONTROL Seleziona campo di destinazione], seleziona il tipo di campo di destinazione a cui vuoi mappare il campo di origine.
    * **[!UICONTROL Seleziona lo spazio dei nomi delle identità]**: seleziona questa opzione per mappare il campo di origine a uno spazio dei nomi delle identità dall&#39;elenco.
+
      ![Schermata dell&#39;interfaccia utente di Experience Platform che mostra la mappatura di Target tramite OutreachId.](../../assets/catalog/crm/outreach/target-mapping.png)
 
    * Aggiungi la seguente mappatura tra lo schema del profilo XDM e l&#39;istanza [!DNL Outreach]:
@@ -161,6 +162,7 @@ Per inviare correttamente i dati sul pubblico da Adobe Experience Platform alla 
      | `Oid` | `OutreachId` | Sì |
 
    * **[!UICONTROL Seleziona attributi personalizzati]**: seleziona questa opzione per mappare il campo di origine a un attributo personalizzato definito nel campo [!UICONTROL Nome attributo]. Per un elenco completo degli attributi supportati, consulta la [[!DNL Outreach] documentazione del prospect](https://api.outreach.io/api/v2/docs#prospect).
+
      ![Schermata dell&#39;interfaccia utente di Experience Platform che mostra la mappatura di Target tramite LastName.](../../assets/catalog/crm/outreach/target-mapping-lastname.png)
 
    * Ad esempio, a seconda dei valori che desideri aggiornare, aggiungi la seguente mappatura tra lo schema del profilo XDM e l&#39;istanza [!DNL Outreach]:
@@ -171,6 +173,7 @@ Per inviare correttamente i dati sul pubblico da Adobe Experience Platform alla 
      | `person.name.lastName` | `lastName` |
 
    * Di seguito è riportato un esempio che utilizza queste mappature:
+
      ![Esempio di schermata dell&#39;interfaccia utente di Experience Platform che mostra le mappature di Target.](../../assets/catalog/crm/outreach/mappings.png)
 
 ### Esempio di esportazione e pianificazione di un pubblico {#schedule-segment-export-example}

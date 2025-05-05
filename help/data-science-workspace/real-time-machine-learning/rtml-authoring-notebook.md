@@ -23,7 +23,7 @@ ht-degree: 0%
 >
 >L&#39;apprendimento automatico in tempo reale non è ancora disponibile per tutti gli utenti. Questa funzione è in versione alpha ed è ancora in fase di test. Questo documento è soggetto a modifiche.
 
-La guida seguente descrive i passaggi necessari per versione un applicazione di Machine Learning in tempo reale. Utilizzando il modello di notebook ML Python in tempo ]**reale fornito Adobe Systems**[!UICONTROL , questa guida illustra training modello, la creazione di un DSL, la pubblicazione di DSL su Edge e il punteggio del richiesta. Man mano che si procede nell&#39;implementazione del modello di Machine Learning in tempo reale, è necessario modificare il modello per adattarlo alle esigenze del set di dati.
+La guida seguente descrive i passaggi necessari per versione un applicazione di Machine Learning in tempo reale. Utilizzando il modello di notebook ML Python in tempo **reale fornito Adobe Systems**, questa guida illustra training modello, la creazione di un DSL, la pubblicazione di DSL su Edge e il punteggio del richiesta. Man mano che si procede nell&#39;implementazione del modello di Machine Learning in tempo reale, è necessario modificare il modello per adattarlo alle esigenze del set di dati.
 
 ## Crea un notebook di Machine Learning in tempo reale
 
@@ -88,7 +88,7 @@ Inizia caricando i tuoi dati training.
 
 >[!NOTE]
 >
->Nel modello ML in tempo **reale, il set di dati](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance) CSV dell&#39;assicurazione**[auto viene acquisito da [!DNL Github].
+>Nel modello ML in tempo **reale, il set di dati[&#128279;](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance) CSV dell&#39;assicurazione**&#x200B;auto viene acquisito da [!DNL Github].
 
 ![Caricare training dati](../images/rtml/load_training.png)
 
@@ -294,7 +294,7 @@ In questa sezione viene descritta la creazione di una DSL. Stai per creare i nod
 >
 > È probabile che tu abbia più nodi in base al tipo di dati utilizzato. Nell&#39;esempio *seguente viene delineato un solo nodo nel modello ML in tempo* reale. Consultate la *sezione Real-time ML* templates *Node Authoring* per la cella di codice completa.
 
-Il nodo Pandas riportato di seguito viene utilizzato `"import": "map"` per importare il nome del metodo come stringa nei parametri, seguito dall&#39;immissione dei parametri come funzione mappa. L&#39;esempio seguente esegue questa operazione utilizzando `{'arg': {'dataLayerNull': 'notgiven', 'no': 'no', 'yes': 'yes', 'notgiven': 'notgiven'}}`. Una volta impostata la mappa, è possibile impostarla `inplace` come `True` o `False`. Imposta `inplace` come `True` o `False` in base al fatto che desideri applicare o meno la trasformazione. Per impostazione predefinita `"inplace": False` crea una nuova colonna. Il supporto per fornire un nuovo nome di colonna è impostato per essere aggiunto in una versione successiva. L&#39;ultima riga `cols` può essere un nome di una singola colonna o un elenco di colonne. Specificare le colonne a cui applicare la trasformazione. In questo esempio `leasing` è specificato. Per ulteriori informazioni sui nodi disponibili e su come usarli, visita la guida](./node-reference.md) di riferimento ai [nodi.
+Il nodo Pandas riportato di seguito viene utilizzato `"import": "map"` per importare il nome del metodo come stringa nei parametri, seguito dall&#39;immissione dei parametri come funzione mappa. L&#39;esempio seguente esegue questa operazione utilizzando `{'arg': {'dataLayerNull': 'notgiven', 'no': 'no', 'yes': 'yes', 'notgiven': 'notgiven'}}`. Una volta impostata la mappa, è possibile impostarla `inplace` come `True` o `False`. Imposta `inplace` come `True` o `False` in base al fatto che desideri applicare o meno la trasformazione. Per impostazione predefinita `"inplace": False` crea una nuova colonna. Il supporto per fornire un nuovo nome di colonna è impostato per essere aggiunto in una versione successiva. L&#39;ultima riga `cols` può essere un nome di una singola colonna o un elenco di colonne. Specificare le colonne a cui applicare la trasformazione. In questo esempio `leasing` è specificato. Per ulteriori informazioni sui nodi disponibili e su come usarli, visita la guida[&#128279;](./node-reference.md) di riferimento ai nodi.
 
 ```python
 # Renaming leasing column using Pandas Node
@@ -476,4 +476,4 @@ else:
 
 ## Passaggi successivi
 
-Seguendo la esercitazione precedente, è stato correttamente addestrato e caricato un modello ONNX nel modello di Machine Learning in tempo reale store. Inoltre, hai assegnato un punteggio e distribuito il tuo modello di Machine Learning in tempo reale. Per ulteriori informazioni sui nodi disponibili per l&#39;authoring dei modelli, visita la guida](./node-reference.md) di riferimento ai [nodi.
+Seguendo la esercitazione precedente, è stato correttamente addestrato e caricato un modello ONNX nel modello di Machine Learning in tempo reale store. Inoltre, hai assegnato un punteggio e distribuito il tuo modello di Machine Learning in tempo reale. Per ulteriori informazioni sui nodi disponibili per l&#39;authoring dei modelli, visita la guida[&#128279;](./node-reference.md) di riferimento ai nodi.

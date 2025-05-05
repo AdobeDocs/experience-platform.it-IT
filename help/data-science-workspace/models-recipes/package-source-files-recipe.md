@@ -25,7 +25,7 @@ Questo tutorial fornisce istruzioni su come creare un pacchetto dei file di orig
 Concetti da comprendere:
 
 - **Ricette**: una ricetta è il termine di Adobe Systems per una specifica del modello ed è un contenitore di primo livello che rappresenta uno specifico algoritmo di apprendimento automatico, intelligence artificiale o un insieme di algoritmi, logica di elaborazione e configurazione necessari per versione ed eseguire un modello addestrato e quindi aiutare a risolvere problemi aziendali specifici.
-- **** File Origine: singoli file nel progetto che contengono la logica per una ricetta.
+- **&#x200B;**&#x200B;File Origine: singoli file nel progetto che contengono la logica per una ricetta.
 
 ## Prerequisiti
 

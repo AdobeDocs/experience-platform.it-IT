@@ -251,7 +251,7 @@ Quindi, conferma i dettagli del flusso di dati e configura le impostazioni per l
 >
 >Puoi selezionare **[!UICONTROL Salva come bozza]** in qualsiasi momento per interrompere e salvare le modifiche apportate al flusso di dati.
 
-Viene visualizzato il passaggio di mappatura. Durante questa fase, puoi riconfigurare le configurazioni di mappatura del flusso di dati. Per una guida completa sulle funzioni di preparazione dei dati utilizzate per la mappatura, visita la guida](../../../data-prep/ui/mapping.md) interfaccia alla preparazione dei [dati.
+Viene visualizzato il passaggio di mappatura. Durante questa fase, puoi riconfigurare le configurazioni di mappatura del flusso di dati. Per una guida completa sulle funzioni di preparazione dei dati utilizzate per la mappatura, visita la guida[&#128279;](../../../data-prep/ui/mapping.md) interfaccia alla preparazione dei dati.
 
 ![Passaggio di mappatura per una bozza di flusso di dati.](../../images/tutorials/templates/mapping.png)
 

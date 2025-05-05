@@ -36,7 +36,7 @@ Per esportare i file su richiesta in destinazioni batch, è necessario avere [co
 
 ## Come esportare i file on-demand {#how-to-export-files-on-demand}
 
-1. Vai a **[!UICONTROL Connessioni > destinazioni]**, seleziona la scheda Sfoglia ]**e il simbolo del filtro per mostrare le**[!UICONTROL  connessioni esistenti alle destinazioni batch desiderate.
+1. Vai a **[!UICONTROL Connessioni > destinazioni]**, seleziona la scheda Sfoglia **e il simbolo del filtro per mostrare le** connessioni esistenti alle destinazioni batch desiderate.
 
    ![Immagine evidenziando come accedere al scheda di navigazione e filtrare i flussi di dati esistenti.](../assets/ui/activate-on-demand/browse-tab.png)
 
@@ -62,7 +62,7 @@ Per esportare i file su richiesta in destinazioni batch, è necessario avere [co
 
 Quando si utilizza il **[!UICONTROL controllo Export file,]** tenere presenti le considerazioni seguenti:
 
-* **[!UICONTROL Il file di esportazione ora]** funziona solo per i tipi di pubblico la cui programmare nel flusso di dati di attivazione batch si sovrappone alla data corrente. Sono inclusi i tipi di pubblico con pianificazioni che non hanno una data di fine (frequenza di esportazione di Una volta ]**) o in cui la data di**[!UICONTROL  fine non è ancora passata.
+* **[!UICONTROL Il file di esportazione ora]** funziona solo per i tipi di pubblico la cui programmare nel flusso di dati di attivazione batch si sovrappone alla data corrente. Sono inclusi i tipi di pubblico con pianificazioni che non hanno una data di fine (frequenza di esportazione di Una volta **) o in cui la data di** fine non è ancora passata.
 * Quando si aggiunge un pubblico a un flusso di dati esistente, attendere almeno **un&#39;ora** prima di usare il **[!UICONTROL controllo Esporta file ora]** .
 * Se si modifica il regola di unione di un pubblico o se si crea un pubblico che utilizza un nuovo regola di unione, attendere 24 ore prima di utilizzare il **[!UICONTROL controllo Esporta file ora]** .
 

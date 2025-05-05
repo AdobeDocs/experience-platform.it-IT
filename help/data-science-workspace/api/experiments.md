@@ -265,7 +265,7 @@ GET /experiments/{EXPERIMENT_ID}/runs?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAM
 | Parametro | Descrizione |
 | --- | --- |
 | `{EXPERIMENT_ID}` | Un ID esperimento valido. |
-| `{QUERY_PARAMETER}` | Uno dei parametri](./appendix.md#query) di query disponibili utilizzati per filtrare i [risultati. |
+| `{QUERY_PARAMETER}` | Uno dei parametri[&#128279;](./appendix.md#query) di query disponibili utilizzati per filtrare i risultati. |
 | `{VALUE}` | Valore del parametro di query precedente. |
 
 **Richiesta**

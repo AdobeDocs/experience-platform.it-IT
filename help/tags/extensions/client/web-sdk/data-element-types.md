@@ -34,7 +34,7 @@ Nell&#39;elemento dati [!UICONTROL Identity map], fornirai le seguenti informazi
 
 Non fornire [!DNL ECID] durante la creazione di una mappa di identità. Quando si utilizza l&#39;SDK, viene generato automaticamente un [!DNL ECID] nel server e incluso nella mappa delle identità.
 
-L&#39;elemento dati della mappa delle identità viene spesso utilizzato insieme al tipo ](#xdm-object) dell&#39;elemento dati [[!UICONTROL XDM] e al tipo di azione [[!UICONTROL Imposta consenso]](action-types.md#set-consent).
+L&#39;elemento dati della mappa delle identità viene spesso utilizzato insieme al tipo [&#128279;](#xdm-object) dell&#39;elemento dati [!UICONTROL XDM] e al tipo di azione [[!UICONTROL Imposta consenso]](action-types.md#set-consent).
 
 Ulteriori informazioni su [Servizio Adobe Experience Platform Identity](../../../../identity-service/home.md).
 

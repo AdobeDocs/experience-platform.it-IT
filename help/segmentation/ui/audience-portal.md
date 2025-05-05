@@ -55,14 +55,14 @@ Per impostazione predefinita, Audience Portal visualizza un elenco di tutti i ti
 
 Accanto a ogni pubblico è presente un’icona con i puntini di sospensione. Selezionando questa opzione viene visualizzato un elenco delle azioni rapide disponibili per il pubblico. Questo elenco di azioni è diverso in base all’origine del pubblico.
 
-![L&#39;elenco delle azioni rapide viene visualizzato per i tipi di pubblico con l&#39;origine della composizione] del [!UICONTROL pubblico.](../images/ui/audience-portal/browse-audience-composition-details.png)
+[L&#39;elenco delle azioni rapide viene visualizzato per i tipi di pubblico con l&#39;origine della composizione] del ![[!UICONTROL pubblico.]](../images/ui/audience-portal/browse-audience-composition-details.png)
 
 | Azione | Origini | Descrizione |
 | ------ | ------- | ----------- |
 | [!UICONTROL Modifica] | Servizio di segmentazione | Apre Segment Builder (Generatore di segmenti) per modificare il pubblico. Tieni presente che se il pubblico è stato creato tramite l&#39;API, **non** sarà in grado di modificarlo utilizzando Segment Builder. Per ulteriori informazioni sull&#39;utilizzo del Generatore di segmenti, consulta la [guida all&#39;interfaccia di Generatore di segmenti](./segment-builder.md). |
-| [!UICONTROL Composizione aperta] | Composizione del pubblico | Apre la composizione Pubblico per vedere il pubblico. Per ulteriori informazioni sulla composizione del pubblico, leggi la guida](./audience-composition.md) interfaccia alla composizione del [pubblico. |
+| [!UICONTROL Composizione aperta] | Composizione del pubblico | Apre la composizione Pubblico per vedere il pubblico. Per ulteriori informazioni sulla composizione del pubblico, leggi la guida[&#128279;](./audience-composition.md) interfaccia alla composizione del pubblico. |
 | [!UICONTROL Attiva nella destinazione] | Servizio di segmentazione | Attiva il pubblico in una destinazione. Per informazioni più dettagliate sull&#39;attivazione di un pubblico in una destinazione, leggere la [panoramica sull&#39;attivazione](../../destinations/ui/activation-overview.md). |
-| [!UICONTROL Condividi con i partner] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Condivide il tuo pubblico con altri utenti Experience Platform. Per ulteriori informazioni su questa funzione, leggi la panoramica](./segment-match/overview.md) di [Segment Match. |
+| [!UICONTROL Condividi con i partner] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Condivide il tuo pubblico con altri utenti Experience Platform. Per ulteriori informazioni su questa funzione, leggi la panoramica[&#128279;](./segment-match/overview.md) di Segment Match. |
 | [!UICONTROL Gestisci tag] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Gestisce i tag definiti dal utente che appartengono al pubblico. Per ulteriori informazioni su questa funzione, leggi la sezione su filtri [e assegnazione tag](#manage-audiences). |
 | [!UICONTROL Sposta nella cartella] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Gestisce la cartella a cui appartiene il pubblico. Per ulteriori informazioni su questa funzione, leggere la sezione relativa al filtro e all&#39;assegnazione di tag [1.](#manage-audiences) |
 | [!UICONTROL Copia] | Servizio di segmentazione | Duplica il pubblico selezionato. Ulteriori informazioni su questa funzione sono disponibili nelle [Domande frequenti sulla segmentazione](../faq.md#copy). |
@@ -70,11 +70,11 @@ Accanto a ogni pubblico è presente un’icona con i puntini di sospensione. Sel
 | [!UICONTROL Pubblica] | Caricamento personalizzato, servizio di segmentazione | Pubblica il pubblico selezionato. Per ulteriori informazioni sulla gestione dello stato del ciclo di vita, leggi la [sezione sullo stato del ciclo di vita delle domande frequenti](../faq.md#lifecycle-states) sulla segmentazione. |
 | [!UICONTROL Disattivare] | Caricamento personalizzato, servizio di segmentazione | Disattiva il pubblico selezionato. Tieni presente che per disattivare un pubblico, **non può** essere attivato in **qualsiasi** destinazione (comprese le destinazioni non Experience Platform) o far parte di **qualsiasi** altro pubblico. Per ulteriori informazioni sulla gestione dello stato del ciclo di vita, consulta la sezione [stato del ciclo di vita nelle Domande frequenti sulla segmentazione](../faq.md#lifecycle-states). |
 | [!UICONTROL Elimina] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Elimina il pubblico selezionato. I tipi di pubblico utilizzati nelle destinazioni a valle o dipendenti in altri tipi di pubblico **non possono** essere eliminati. Per ulteriori informazioni sull&#39;eliminazione del pubblico, leggere le [domande frequenti sulla segmentazione](../faq.md#lifecycle-states). |
-| [!UICONTROL Aggiungi al pacchetto] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Sposta il pubblico da una sandbox all’altra. Per ulteriori informazioni su questa funzione, leggi la guida](../../sandboxes/ui/sandbox-tooling.md) agli strumenti sandbox[. |
+| [!UICONTROL Aggiungi al pacchetto] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Sposta il pubblico da una sandbox all’altra. Per ulteriori informazioni su questa funzione, leggi la guida[&#128279;](../../sandboxes/ui/sandbox-tooling.md) agli strumenti sandbox. |
 
 >[!IMPORTANT]
 >
->Prima di eliminare il pubblico, assicurati che non venga **** utilizzato come componente in un pubblico basato su account o in Adobe Systems Journey Optimizer.
+>Prima di eliminare il pubblico, assicurati che non venga **&#x200B;**&#x200B;utilizzato come componente in un pubblico basato su account o in Adobe Systems Journey Optimizer.
 
 Nella parte superiore della pagina sono presenti le opzioni per aggiungere tutti i tipi di pubblico a un programmare, importare un pubblico, creare un nuovo pubblico e visualizzare un riepilogo della valutazione del pubblico.
 
@@ -221,13 +221,13 @@ Inoltre, puoi selezionare fino a 25 tipi di pubblico diversi ed eseguire varie a
 
 Quando applichi azioni collettive ai tipi di pubblico, si applicano le seguenti condizioni:
 
-- Puoi **** selezionare i tipi di pubblico da pagine diverse.
+- Puoi **&#x200B;**&#x200B;selezionare i tipi di pubblico da pagine diverse.
 - Non è **possibile** eliminare un pubblico che viene utilizzato in un&#39;attivazione di destinazione.
 - Se selezioni un filtro, i tipi di **pubblico selezionati verranno** reimpostati.
 
 #### Valutazione flessibile del pubblico {#flexible-audience-evaluation}
 
-La valutazione flessibile del pubblico ti consente di eseguire un Segmentazione lavoro on-demand. Per saperne di più sulla valutazione flessibile del pubblico, leggi la guida](../methods/flexible-audience-evaluation.md) alla [valutazione flessibile del pubblico.
+La valutazione flessibile del pubblico ti consente di eseguire un Segmentazione lavoro on-demand. Per saperne di più sulla valutazione flessibile del pubblico, leggi la guida[&#128279;](../methods/flexible-audience-evaluation.md) alla valutazione flessibile del pubblico.
 
 ## Dettagli del pubblico {#audience-details}
 
@@ -257,7 +257,7 @@ Selezionando **[!UICONTROL Applica etichette di accesso]** puoi gestire le etich
 
 ![Viene visualizzata la pagina dei dettagli del pubblico, con l&#39;pulsante [!UICONTROL Composizione] aperta evidenziata.](../images/ui/audience-portal/audience-details-open-composition.png)
 
-Selezionando **[!UICONTROL Composizione aperta]** puoi visualizzare il pubblico in Composizione pubblico. Per ulteriori informazioni sulla composizione del pubblico, leggi la guida](./audience-composition.md) all&#39;interfaccia [alla composizione del pubblico.
+Selezionando **[!UICONTROL Composizione aperta]** puoi visualizzare il pubblico in Composizione pubblico. Per ulteriori informazioni sulla composizione del pubblico, leggi la guida[&#128279;](./audience-composition.md) all&#39;interfaccia alla composizione del pubblico.
 
 >[!TAB Caricamento personalizzato]
 
@@ -319,7 +319,7 @@ La **[!UICONTROL sezione Destinazioni]** attivate mostra le destinazioni per le 
 
 >[!NOTE]
 >
-> Le destinazioni sono una funzionalità disponibile con [!DNL Adobe Real-Time Customer Data Platform], e consentono di esportare dati su piattaforme esterne. Per ulteriori informazioni sulle destinazioni, leggi la panoramica](../../destinations/home.md) delle [destinazioni. Per informazioni su come attivare un segmento verso una destinazione, vedi [Panoramica](../../destinations/ui/activation-overview.md) sull&#39;attivazione.
+> Le destinazioni sono una funzionalità disponibile con [!DNL Adobe Real-Time Customer Data Platform], e consentono di esportare dati su piattaforme esterne. Per ulteriori informazioni sulle destinazioni, leggi la panoramica[&#128279;](../../destinations/home.md) delle destinazioni. Per informazioni su come attivare un segmento verso una destinazione, vedi [Panoramica](../../destinations/ui/activation-overview.md) sull&#39;attivazione.
 
 ### Esempi di profilo {#profile-samples}
 
@@ -400,13 +400,13 @@ Puoi usare Adobe Systems composizione del pubblico federato per versione nuovi t
 
 Puoi usare l&#39;estensione SQL di Data Distiller per versione tipi di pubblico dal data lake. Questi dati includono entità di dimensione esistenti, come attributi del cliente o informazioni sul prodotto.
 
-Ulteriori informazioni su Data Distiller sono disponibili nella guida](../../query-service/data-distiller-audiences/overview.md) SQL di [creazione di tipi di pubblico.
+Ulteriori informazioni su Data Distiller sono disponibili nella guida[&#128279;](../../query-service/data-distiller-audiences/overview.md) SQL di creazione di tipi di pubblico.
 
 ## Importazione di un pubblico {#import-audience}
 
 >[!IMPORTANT]
 >
->Per importare un pubblico generato esternamente, devi **** disporre delle seguenti autorizzazioni: [!UICONTROL Visualizza segmenti], [!UICONTROL Gestisci segmenti] e [!UICONTROL Importa pubblico]. Per ulteriori informazioni su questi autorizzazione, leggere Cenni preliminari](../../access-control/home.md#permissions) sui [controlli accesso.
+>Per importare un pubblico generato esternamente, devi **&#x200B;**&#x200B;disporre delle seguenti autorizzazioni: [!UICONTROL Visualizza segmenti], [!UICONTROL Gestisci segmenti] e [!UICONTROL Importa pubblico]. Per ulteriori informazioni su questi autorizzazione, leggere Cenni preliminari[&#128279;](../../access-control/home.md#permissions) sui controlli accesso.
 
 Puoi selezionare **[!UICONTROL Importa pubblico]** per importare un pubblico generato esternamente.
 
@@ -420,7 +420,7 @@ Viene visualizzato il **[!UICONTROL workflow CSV]** per il pubblico Importa. Puo
 >
 >Il pubblico **generato dall&#39;esterno deve** essere in formato CSV, avere un **massimo** di 25 colonne ed essere inferiore a 1 GB.
 >
->Inoltre, non è possibile **** utilizzare spazi o trattini nella prima riga o nelle colonne associate del CSV.
+>Inoltre, non è possibile **&#x200B;**&#x200B;utilizzare spazi o trattini nella prima riga o nelle colonne associate del CSV.
 >
 >Ad esempio, il valore della prima riga può essere &quot;FirstName&quot; o &quot;First_Name&quot;, ma non può essere &quot;First Name&quot; o &quot;First-Name&quot;.
 
@@ -428,7 +428,7 @@ Dopo aver selezionato il file CSV da importare, viene visualizzato un elenco di 
 
 ![Vengono visualizzati dati di esempio per il pubblico generato esternamente.](../images/ui/audience-portal/import-audience-sample-data.png)
 
-Viene visualizzata la pagina Dettagli pubblico ****. Puoi aggiungere informazioni sul pubblico, inclusi nome, descrizione, identità primaria e valore dello spazio dei nomi identità.
+Viene visualizzata la pagina Dettagli pubblico **&#x200B;**. Puoi aggiungere informazioni sul pubblico, inclusi nome, descrizione, identità primaria e valore dello spazio dei nomi identità.
 
 Quando importi il pubblico generato esternamente, devi selezionare una delle colonne come campo di identità principale e specificare il valore dello spazio dei nomi. Tieni presente che tutti i campi rimanenti saranno considerati **attributi di** payload. Questi attributi sono considerati **non durevoli**, in quanto verranno associati a questo pubblico solo a scopo di personalizzazione e sono **non** connessi al profilo.
 

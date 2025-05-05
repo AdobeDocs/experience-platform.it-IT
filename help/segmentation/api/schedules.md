@@ -110,7 +110,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elen
 | `children.type` | Tipo di processo come stringa. I due tipi supportati sono &quot;batch_segmentation&quot; ed &quot;export&quot;. |
 | `children.properties` | Oggetto contenente proprietà aggiuntive correlate alla pianificazione. |
 | `children.properties.segments` | L&#39;utilizzo di `["*"]` garantisce l&#39;inclusione di tutti i segmenti. |
-| `children.schedule` | Stringa contenente la pianificazione del processo. È possibile programmare l&#39;esecuzione dei job solo una volta al giorno, pertanto non è possibile programmare l&#39;esecuzione di un job più di una volta in un periodo di 24 ore. Per ulteriori informazioni sulle pianificazioni cron, leggere l&#39;appendice nel formato di espressione cron [](#appendix). In questo esempio, &quot;0 0 1 * *&quot; significa che la pianificazione verrà eseguita ogni giorno all’1. |
+| `children.schedule` | Stringa contenente la pianificazione del processo. È possibile programmare l&#39;esecuzione dei job solo una volta al giorno, pertanto non è possibile programmare l&#39;esecuzione di un job più di una volta in un periodo di 24 ore. Per ulteriori informazioni sulle pianificazioni cron, leggere l&#39;appendice nel formato di espressione cron [&#128279;](#appendix). In questo esempio, &quot;0 0 1 * *&quot; significa che la pianificazione verrà eseguita ogni giorno all’1. |
 | `children.state` | Stringa contenente lo stato della pianificazione. I due stati supportati sono &quot;active&quot; e &quot;inactive&quot;. Per impostazione predefinita, lo stato è impostato su &quot;inattivo&quot;. |
 
 +++
@@ -156,7 +156,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | `type` | **Obbligatorio.** Il tipo di processo come stringa. I due tipi supportati sono &quot;batch_segmentation&quot; ed &quot;export&quot;. |
 | `properties` | **Obbligatorio.** Oggetto contenente proprietà aggiuntive relative alla pianificazione. |
 | `properties.segments` | **Obbligatorio quando `type` è uguale a &quot;batch_segmentation&quot;.** L&#39;utilizzo di `["*"]` garantisce l&#39;inclusione di tutti i segmenti. |
-| `schedule` | *Facoltativo.* Stringa contenente la pianificazione del processo. È possibile programmare l&#39;esecuzione dei job solo una volta al giorno, pertanto non è possibile programmare l&#39;esecuzione di un job più di una volta in un periodo di 24 ore. Per ulteriori informazioni sulle pianificazioni cron, leggere l&#39;appendice nel formato di espressione cron [](#appendix). In questo esempio, &quot;0 0 1 * *&quot; significa che la pianificazione verrà eseguita ogni giorno all’1. <br><br>Se questa stringa non viene fornita, verrà generata automaticamente una pianificazione generata dal sistema. |
+| `schedule` | *Facoltativo.* Stringa contenente la pianificazione del processo. È possibile programmare l&#39;esecuzione dei job solo una volta al giorno, pertanto non è possibile programmare l&#39;esecuzione di un job più di una volta in un periodo di 24 ore. Per ulteriori informazioni sulle pianificazioni cron, leggere l&#39;appendice nel formato di espressione cron [&#128279;](#appendix). In questo esempio, &quot;0 0 1 * *&quot; significa che la pianificazione verrà eseguita ogni giorno all’1. <br><br>Se questa stringa non viene fornita, verrà generata automaticamente una pianificazione generata dal sistema. |
 | `state` | *Facoltativo.* Stringa contenente lo stato della pianificazione. I due stati supportati sono &quot;active&quot; e &quot;inactive&quot;. Per impostazione predefinita, lo stato è impostato su &quot;inattivo&quot;. |
 
 +++
@@ -257,7 +257,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 | `type` | Tipo di processo come stringa. I due tipi supportati sono `batch_segmentation` e `export`. |
 | `properties` | Oggetto contenente proprietà aggiuntive correlate alla pianificazione. |
 | `properties.segments` | L&#39;utilizzo di `["*"]` garantisce l&#39;inclusione di tutti i segmenti. |
-| `schedule` | Stringa contenente la pianificazione del processo. È possibile programmare l&#39;esecuzione dei job solo una volta al giorno, pertanto non è possibile programmare l&#39;esecuzione di un job più di una volta in un periodo di 24 ore. Per ulteriori informazioni sulle pianificazioni cron, leggere l&#39;appendice nel formato di espressione cron [](#appendix). In questo esempio, &quot;0 0 1 * *&quot; significa che la pianificazione verrà eseguita ogni giorno all’1. |
+| `schedule` | Stringa contenente la pianificazione del processo. È possibile programmare l&#39;esecuzione dei job solo una volta al giorno, pertanto non è possibile programmare l&#39;esecuzione di un job più di una volta in un periodo di 24 ore. Per ulteriori informazioni sulle pianificazioni cron, leggere l&#39;appendice nel formato di espressione cron [&#128279;](#appendix). In questo esempio, &quot;0 0 1 * *&quot; significa che la pianificazione verrà eseguita ogni giorno all’1. |
 | `state` | Stringa contenente lo stato della pianificazione. I due stati supportati sono `active` e `inactive`. Per impostazione predefinita, lo stato è impostato su `inactive`. |
 
 +++
@@ -317,7 +317,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 204 (nessun con
 
 >[!TAB Aggiorna pianificazione cron]
 
-È possibile utilizzare un’operazione Patch JSON per aggiornare la pianificazione cron. Per aggiornare la pianificazione, dichiarare la proprietà `path` come `/schedule` e impostare `value` su una pianificazione cron valida. Per ulteriori informazioni sulla patch JSON, leggere la documentazione della patch [JSON](https://datatracker.ietf.org/doc/html/rfc6902). Per ulteriori informazioni sulle pianificazioni cron, leggere l&#39;appendice nel formato di espressione cron [](#appendix).
+È possibile utilizzare un’operazione Patch JSON per aggiornare la pianificazione cron. Per aggiornare la pianificazione, dichiarare la proprietà `path` come `/schedule` e impostare `value` su una pianificazione cron valida. Per ulteriori informazioni sulla patch JSON, leggere la documentazione della patch [JSON](https://datatracker.ietf.org/doc/html/rfc6902). Per ulteriori informazioni sulle pianificazioni cron, leggere l&#39;appendice nel formato di espressione cron [&#128279;](#appendix).
 
 >[!ENDTABS]
 

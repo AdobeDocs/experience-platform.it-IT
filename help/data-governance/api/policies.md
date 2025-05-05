@@ -382,7 +382,7 @@ Per aggiornare un criterio personalizzato esistente, devi fornire il relativo ID
 
 >[!NOTE]
 >
->Vedere la sezione relativa all&#39;aggiornamento di una parte di un criterio personalizzato](#patch) se si desidera aggiornare solo uno o più campi per un criterio, anziché sovrascriverlo.[
+>Vedere la sezione relativa all&#39;aggiornamento di una parte di un criterio personalizzato[&#128279;](#patch) se si desidera aggiornare solo uno o più campi per un criterio, anziché sovrascriverlo.
 
 **Formato API**
 
@@ -667,7 +667,7 @@ Per impostazione predefinita, solo i criteri di governance dei dati abilitati pa
 
 >[!NOTE]
 >
->Solo i criteri di base possono essere abilitati o disabilitati da questo endpoint. Per abilitare o disabilitare i criteri personalizzati, vedere la sezione relativa all&#39;aggiornamento di una parte di un criterio](#patch) in [.
+>Solo i criteri di base possono essere abilitati o disabilitati da questo endpoint. Per abilitare o disabilitare i criteri personalizzati, vedere la sezione relativa all&#39;aggiornamento di una parte di un criterio[&#128279;](#patch) in .
 
 **Formato API**
 

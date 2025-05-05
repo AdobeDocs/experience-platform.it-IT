@@ -158,7 +158,7 @@ In base alla risposta precedente, si può dedurre quanto segue:
 
 >[!NOTE]
 >
->Nella proprietà `schemaRef` per ogni set di dati, il numero di versione indica la versione secondaria più recente dello schema. Per ulteriori informazioni, consulta la sezione sul controllo delle versioni dello schema [1} nella guida dell&#39;API XDM.](../../xdm/api/getting-started.md#versioning)
+>Nella proprietà `schemaRef` per ogni set di dati, il numero di versione indica la versione secondaria più recente dello schema. Per ulteriori informazioni, consulta la sezione sul controllo delle versioni dello schema [1&rbrace; nella guida dell&#39;API XDM.](../../xdm/api/getting-started.md#versioning)
 
 ## Indice di offset iniziale dell&#39;elenco di risposte {#offset-starting-index}
 

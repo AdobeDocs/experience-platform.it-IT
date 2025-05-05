@@ -16,7 +16,7 @@ Adobe Experience Platform [!DNL Segmentation Service] consente di creare tipi di
 
 L&#39;API [!DNL Segmentation Service] fornisce più endpoint che consentono di gestire programmaticamente le operazioni di segmentazione in [!DNL Experience Platform]. Questo documento fornisce introduzioni di alto livello su ciascuno di questi endpoint e collegamenti alle relative guide degli endpoint associate per ulteriori dettagli. Prima di leggere le guide dei singoli endpoint, consulta la [guida introduttiva](./getting-started.md) per informazioni importanti sulle intestazioni richieste, sulla lettura di chiamate API di esempio e altro ancora.
 
-Per visualizzare tutti gli endpoint disponibili e le operazioni CRUD, consulta il riferimento API del servizio di segmentazione [](https://www.adobe.io/experience-platform-apis/references/segmentation/).
+Per visualizzare tutti gli endpoint disponibili e le operazioni CRUD, consulta il riferimento API del servizio di segmentazione [&#128279;](https://www.adobe.io/experience-platform-apis/references/segmentation/).
 
 ## Tipi di pubblico
 

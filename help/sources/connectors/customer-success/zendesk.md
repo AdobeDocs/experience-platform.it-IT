@@ -45,5 +45,5 @@ La documentazione seguente fornisce informazioni su come connettere [!DNL Zendes
 
 ## Connetti [!DNL Zendesk] ad Experience Platform tramite l&#39;interfaccia utente
 
-* [Crea una connessione di origine  [!DNL Zendesk ] nell&#39;interfaccia utente](../../tutorials/ui/create/customer-success/zendesk.md)
+* [Crea una connessione di origine  [!DNL Zendesk &#x200B;] nell&#39;interfaccia utente](../../tutorials/ui/create/customer-success/zendesk.md)
 * [Creare un flusso di dati per una connessione sorgente di successo del cliente nell’interfaccia utente](../../tutorials/ui/dataflow/customer-success.md)

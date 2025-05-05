@@ -59,7 +59,7 @@ Viene visualizzata la pagina **[!UICONTROL Regole di rilevamento bot]**.
 
 Dalla pagina Regole di rilevamento bot, puoi configurare il rilevamento bot utilizzando le seguenti funzionalità:
 
-* Utilizzo di [!DNL [IAB/ABC International Spiders and Bots List]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/).
+* Utilizzo di [[!DNL [IAB/ABC International Spiders and Bots List]]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/).
 * Creazione di regole di rilevamento bot personalizzate.
 
 ### Utilizzare l&#39;elenco internazionale Spiders e bot IAB/ABC {#iab-list}

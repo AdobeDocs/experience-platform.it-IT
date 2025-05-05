@@ -20,7 +20,7 @@ ht-degree: 0%
 >
 >Questa documentazione è destinata ai clienti esistenti con precedenti diritti a Data Science Area di lavoro.
 
-Il documento seguente contiene esempi su come accesso dati usando Python per l&#39;uso in Data Science Area di lavoro. Per informazioni sull&#39;accesso ai dati utilizzando i notebook JupyterLab, visita i dati accesso](../jupyterlab/access-notebook-data.md) la documentazione dei [notebook JupyterLab.
+Il documento seguente contiene esempi su come accesso dati usando Python per l&#39;uso in Data Science Area di lavoro. Per informazioni sull&#39;accesso ai dati utilizzando i notebook JupyterLab, visita i dati accesso[&#128279;](../jupyterlab/access-notebook-data.md) la documentazione dei notebook JupyterLab.
 
 ## Lettura di un dataset
 

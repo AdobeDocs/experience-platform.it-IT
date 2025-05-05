@@ -41,7 +41,7 @@ In questa sezione vengono descritti i tipi di pubblico che puoi esportare verso 
 
 | Origine del pubblico | Sostenuto | Descrizione |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiences generati tramite il servizio](../../../segmentation/home.md) di segmentazione Experience Platform[. |
+| [!DNL Segmentation Service] | ✓ | Audiences generati tramite il servizio[&#128279;](../../../segmentation/home.md) di segmentazione Experience Platform. |
 | Caricamenti personalizzati | ✓ | Tipi di pubblico [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
@@ -52,8 +52,8 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
-| Tipo di esportazione | **[!UICONTROL Basato su profilo]** | State esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto nella schermata di selezione degli attributi del profilo del workflow](../../ui/activate-batch-profile-destinations.md#select-attributes) di attivazione della [destinazione. |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l&#39;aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni sulle destinazioni in [](/help/destinations/destination-types.md#streaming-destinations)streaming. |
+| Tipo di esportazione | **[!UICONTROL Basato su profilo]** | State esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto nella schermata di selezione degli attributi del profilo del workflow[&#128279;](../../ui/activate-batch-profile-destinations.md#select-attributes) di attivazione della destinazione. |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l&#39;aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni sulle destinazioni in [&#128279;](/help/destinations/destination-types.md#streaming-destinations)streaming. |
 
 {style="table-layout:auto"}
 
@@ -124,7 +124,7 @@ Dopo aver fornito i dettagli per la connessione di destinazione, selezionare **[
 
 >[!IMPORTANT]
 > 
->* Per attivare i dati, sono necessarie le **[!UICONTROL autorizzazioni](/help/access-control/home.md#permissions) Visualizza Destinazioni]**, **[!UICONTROL Attiva destinazioni]**, **[!UICONTROL Profili]** Visualizza e **[!UICONTROL Segmenti]** [Visualizza accesso controllo. Leggi la panoramica](/help/access-control/ui/overview.md) sul [controllo accesso o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>* Per attivare i dati, sono necessarie le **[[!UICONTROL autorizzazioni]](/help/access-control/home.md#permissions) Visualizza Destinazioni&rbrack;**, **[!UICONTROL Attiva destinazioni]**, **[!UICONTROL Profili]** Visualizza e **[!UICONTROL Segmenti]** [Visualizza accesso controllo. Leggi la panoramica](/help/access-control/ui/overview.md) sul &lbrack;controllo accesso o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 >* [La valutazione dei criteri di consenso](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) non è attualmente supportata nelle esportazioni nella destinazione degli hub eventi di Azure. [Ulteriori informazioni](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
 
 Per istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione, consulta [Attiva dati pubblico nelle destinazioni di esportazione del profilo di streaming](../../ui/activate-streaming-profile-destinations.md).

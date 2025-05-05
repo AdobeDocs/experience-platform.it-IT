@@ -49,7 +49,7 @@ La logica utilizzata per il widget [!UICONTROL Conteggio profili] restituisce il
 
 L&#39;istruzione SQL che genera il widget [!UICONTROL Conteggio profili] è visualizzata nella sezione comprimibile seguente.
 
-Query +++SQL
++++Query SQL
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
@@ -69,7 +69,7 @@ La logica utilizzata per il widget [!UICONTROL Profili di identità singoli] for
 
 L&#39;istruzione SQL che genera il widget [!UICONTROL Profili di identità singoli] è visualizzata nella sezione comprimibile seguente.
 
-Query +++SQL
++++Query SQL
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
@@ -102,7 +102,7 @@ Il widget [!UICONTROL Profili per identità] visualizza il raggruppamento di ide
 
 L&#39;istruzione SQL che genera il widget [!UICONTROL Profili per identità] è visualizzata nella sezione comprimibile seguente.
 
-Query +++SQL
++++Query SQL
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
@@ -126,7 +126,7 @@ La logica utilizzata per il widget [!UICONTROL Profili di identità singola per 
 
 L&#39;istruzione SQL che genera i [!UICONTROL profili di identità singola per widget identità] è visualizzata nella sezione comprimibile seguente.
 
-Query +++SQL
++++Query SQL
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
@@ -165,7 +165,7 @@ La logica utilizzata per il widget [!UICONTROL Dimensione pubblico] restituisce 
 
 L&#39;istruzione SQL che genera il widget [!UICONTROL Dimensione pubblico] è visualizzata nella sezione comprimibile seguente.
 
-Query +++SQL
++++Query SQL
 
 ```sql
 SELECT
@@ -189,7 +189,7 @@ La logica utilizzata per il widget [!UICONTROL Tendenza modifica dimensione pubb
 
 L&#39;istruzione SQL che genera il widget [!UICONTROL Tendenza modifica dimensione pubblico] è visualizzata nella sezione comprimibile seguente.
 
-Query +++SQL
++++Query SQL
 
 ```sql
 SELECT date_key,
@@ -226,7 +226,7 @@ La logica utilizzata nel widget [!UICONTROL Destinazioni più utilizzate] elenca
 
 L&#39;istruzione SQL che genera il widget [!UICONTROL Destinazioni più utilizzate] è visualizzata nella sezione comprimibile seguente.
 
-Query +++SQL
++++Query SQL
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
@@ -251,7 +251,7 @@ La logica per il widget [!UICONTROL Tipi di pubblico attivati di recente] fornis
 
 L&#39;istruzione SQL che genera il widget [!UICONTROL Tipi di pubblico attivati di recente] è visualizzata nella sezione comprimibile seguente.
 
-Query +++SQL
++++Query SQL
 
 ```sql
 SELECT
@@ -295,7 +295,7 @@ La logica utilizzata nel widget [!UICONTROL Profili per identità] fornisce un r
 
 L&#39;istruzione SQL che genera il widget [!UICONTROL Profili per identità] è visualizzata nella sezione comprimibile seguente.
 
-Query +++SQL
++++Query SQL
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
@@ -331,7 +331,7 @@ La logica utilizzata nel widget [!UICONTROL Sovrapposizione identità] visualizz
 
 L&#39;istruzione SQL che genera il widget di sovrapposizione [!UICONTROL identità] è visualizzata nella sezione comprimibile seguente.
 
-Query +++SQL
++++Query SQL
 
 ```sql
 SELECT Sum(overlap_col1) overlap_col1,
@@ -400,7 +400,7 @@ La logica utilizzata nel widget [!UICONTROL Tipi di pubblico] della dashboard [!
 
 L&#39;istruzione SQL che genera il widget di sovrapposizione [!UICONTROL identità] è visualizzata nella sezione comprimibile seguente.
 
-Query +++SQL
++++Query SQL
 
 ```sql
 SELECT Sum(overlap_col1) overlap_col1,

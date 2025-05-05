@@ -87,7 +87,7 @@ node_model_score = ONNXNode(params={"features": ['browser', 'device', 'login_pag
 
 ### Panda {#pandas}
 
-Il seguente nodo Pandas consente di importare qualsiasi `pd.DataFrame` metodo o qualsiasi funzione generale di livello superiore dei panda. Per ulteriori informazioni sui metodi Pandas, visita la documentazione](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html) sui [metodi Pandas. Per ulteriori informazioni sulle funzioni di primo livello, visita la guida di riferimento API [Pandas per le funzioni](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html) generali.
+Il seguente nodo Pandas consente di importare qualsiasi `pd.DataFrame` metodo o qualsiasi funzione generale di livello superiore dei panda. Per ulteriori informazioni sui metodi Pandas, visita la documentazione[&#128279;](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html) sui metodi Pandas. Per ulteriori informazioni sulle funzioni di primo livello, visita la guida di riferimento API [Pandas per le funzioni](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html) generali.
 
 Il nodo seguente viene utilizzato `"import": "map"` per importare il nome del metodo come stringa nei parametri, seguito dall&#39;immissione dei parametri come funzione mappa. L&#39;esempio seguente esegue questa operazione utilizzando `{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}`. Una volta impostata la mappa, è possibile impostarla `inplace` come `True` o `False`. Imposta `inplace` come `True` o `False` in base al fatto che desideri applicare o meno la trasformazione. Per impostazione predefinita `"inplace": False` crea una nuova colonna. Il supporto per fornire un nuovo nome di colonna è impostato per essere aggiunto in una versione successiva. L&#39;ultima riga `cols` può essere un nome di una singola colonna o un elenco di colonne. Specificare le colonne a cui applicare la trasformazione. In questo esempio `device` è specificato.
 
@@ -127,7 +127,7 @@ msg6 = model_train.process(msg5)
 
 | Valore | Descrizione |
 | --- | --- |
-| tratti somatici | Funzioni di input per il modello (elenco di stringhe). <br>Ad esempio: `browser`, `device`, , `login_page`, `product_page``search_page` |
+| tratti somatici | Funzioni di input per il modello (elenco di stringhe). <br>Ad esempio: `browser`, `device`, , `login_page`, `product_page` `search_page` |
 | etichetta | Target nome colonna (stringa). |
 | modo | Treno/test (stringa). |
 | model_path | Percorso del modello di salvataggio locale in formato onnx. |
@@ -146,4 +146,4 @@ msg5 = splitter.process(msg4)
 
 ## Passaggi successivi
 
-Il passaggio successivo consiste nel creare nodi da utilizzare per assegnare un punteggio a un modello di Machine Learning in tempo reale. Per altre informazioni, visita la Guida](./rtml-authoring-notebook.md) all&#39;utente di [Appunti di Machine Learning in tempo reale.
+Il passaggio successivo consiste nel creare nodi da utilizzare per assegnare un punteggio a un modello di Machine Learning in tempo reale. Per altre informazioni, visita la Guida[&#128279;](./rtml-authoring-notebook.md) all&#39;utente di Appunti di Machine Learning in tempo reale.

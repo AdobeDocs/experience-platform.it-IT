@@ -44,7 +44,7 @@ La tabella seguente illustra diversi tipi di identità predefiniti comunemente u
 
 ## Qualificatori dello spazio dei nomi
 
-Quando si specifica un valore `namespace` nell&#39;API [!DNL Privacy Service], è necessario includere un qualificatore dello spazio dei nomi **** in un parametro `type` corrispondente. La tabella seguente illustra i diversi qualificatori dello spazio dei nomi accettati.
+Quando si specifica un valore `namespace` nell&#39;API [!DNL Privacy Service], è necessario includere un qualificatore dello spazio dei nomi **&#x200B;**&#x200B;in un parametro `type` corrispondente. La tabella seguente illustra i diversi qualificatori dello spazio dei nomi accettati.
 
 | Qualificatore | Definizione |
 | --------- | ---------- |

@@ -120,7 +120,7 @@ Nel pannello di destra vengono visualizzati nuovi controlli che consentono di co
 
 | Input | Descrizione |
 | --- | --- |
-| ID cliente | ID cliente [!DNL Google Ads]. Viene impostato automaticamente sull&#39;ID cliente immesso al momento dell&#39;installazione dell&#39;estensione [](#install-enhanced-conversions). |
+| ID cliente | ID cliente [!DNL Google Ads]. Viene impostato automaticamente sull&#39;ID cliente immesso al momento dell&#39;installazione dell&#39;estensione [&#128279;](#install-enhanced-conversions). |
 | ID conversione o etichetta di conversione | Valori di tracciamento ottenuti da [!DNL Google Ads] durante la configurazione del tracciamento delle conversioni. I valori iniziano con `AW-`.<br><br>Per informazioni dettagliate su come trovare questi valori, consulta la [[!DNL Google Ads] documentazione](https://support.google.com/tagmanager/answer/6105160?hl=en). |
 | ID transazione | Selezionare un elemento dati con lo stesso valore ID transazione [inviato dal lato client](#conversion-action-tags) utilizzando l&#39;estensione [!DNL Google Global Site Tag]. |
 

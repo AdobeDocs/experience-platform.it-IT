@@ -36,7 +36,7 @@ Prima di acquisire i dati in Experience Platform, devi innanzitutto creare uno s
 
 L’esercitazione precedente mostra come impostare i campi di identità per gli schemi. Un campo di identità rappresenta un campo che può essere utilizzato per identificare una singola persona correlata a un record o a un evento di serie temporale. I campi di identità sono un componente cruciale nel modo in cui i grafici di identità del cliente vengono costruiti in Experience Platform, il che influisce in ultima analisi sul modo in cui Real-Time Customer Profile unisce frammenti di dati diversi per ottenere una visualizzazione completa del cliente. Per ulteriori dettagli su come visualizzare i grafici delle identità in Experience Platform, consulta l&#39;esercitazione su [come utilizzare il visualizzatore del grafico delle identità](../identity-service/features/identity-graph-viewer.md).
 
-Devi abilitare lo schema per l’utilizzo in Real-Time Customer Profile in modo che i profili dei clienti possano essere costruiti dai dati in base allo schema. Per ulteriori informazioni, vedere la sezione relativa all&#39;abilitazione di uno schema per il profilo ](../xdm/ui/resources/schemas.md#profile) nella guida dell&#39;interfaccia utente degli schemi.[
+Devi abilitare lo schema per l’utilizzo in Real-Time Customer Profile in modo che i profili dei clienti possano essere costruiti dai dati in base allo schema. Per ulteriori informazioni, vedere la sezione relativa all&#39;abilitazione di uno schema per il profilo [&#128279;](../xdm/ui/resources/schemas.md#profile) nella guida dell&#39;interfaccia utente degli schemi.
 
 ## Inserire i dati in Experience Platform
 

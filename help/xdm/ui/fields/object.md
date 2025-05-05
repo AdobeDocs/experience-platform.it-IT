@@ -29,7 +29,7 @@ Per aggiungere un campo secondario, seleziona l’icona **più (+)** accanto al 
 
 Dopo aver configurato il sottocampo e selezionato **[!UICONTROL Applica]**, puoi continuare ad aggiungere campi all&#39;oggetto utilizzando lo stesso processo. È inoltre possibile aggiungere sottocampi che sono oggetti stessi, consentendo di nidificare i campi nel modo più profondo possibile.
 
-Dopo aver completato la costruzione dell&#39;oggetto, è possibile che si desideri riutilizzarne la struttura in classi e gruppi di campi diversi. In questo caso, è possibile scegliere di convertire l&#39;oggetto in un tipo di dati. Per ulteriori informazioni, vedere la sezione relativa alla conversione di oggetti in tipi di dati](../resources/data-types.md#convert) nella guida dell&#39;interfaccia utente dei tipi di dati.[
+Dopo aver completato la costruzione dell&#39;oggetto, è possibile che si desideri riutilizzarne la struttura in classi e gruppi di campi diversi. In questo caso, è possibile scegliere di convertire l&#39;oggetto in un tipo di dati. Per ulteriori informazioni, vedere la sezione relativa alla conversione di oggetti in tipi di dati[&#128279;](../resources/data-types.md#convert) nella guida dell&#39;interfaccia utente dei tipi di dati.
 
 ## Passaggi successivi
 

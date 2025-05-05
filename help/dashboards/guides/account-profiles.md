@@ -13,7 +13,7 @@ ht-degree: 4%
 
 L’interfaccia utente di Adobe Experience Platform fornisce una dashboard attraverso la quale puoi visualizzare informazioni importanti sui profili dell’account, acquisite durante un’istantanea giornaliera. Questa guida illustra come accedere e lavorare con il dashboard [!UICONTROL Profili account] nell&#39;interfaccia utente e fornisce ulteriori informazioni sulle visualizzazioni visualizzate nel dashboard.
 
-In questo documento viene fornita una panoramica delle funzionalità della dashboard [!UICONTROL Profili account] e vengono fornite informazioni dettagliate sulle informazioni standard disponibili. Per informazioni dettagliate complete sulle funzioni disponibili, consulta la [[!UICONTROL Guida dell&#39;interfaccia utente ]](../../rtcdp/accounts/account-profile-ui-guide.md).
+In questo documento viene fornita una panoramica delle funzionalità della dashboard [!UICONTROL Profili account] e vengono fornite informazioni dettagliate sulle informazioni standard disponibili. Per informazioni dettagliate complete sulle funzioni disponibili, consulta la [[!UICONTROL Guida dell&#39;interfaccia utente &#x200B;]](../../rtcdp/accounts/account-profile-ui-guide.md).
 
 ## Introduzione
 

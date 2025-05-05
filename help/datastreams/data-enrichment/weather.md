@@ -11,7 +11,7 @@ ht-degree: 68%
 
 # Migliora la raccolta dati con i dati meteo da [!DNL The Weather Channel]
 
-Adobe ha collaborato con [!DNL [The Weather Company]](https://www.ibm.com/weather) per portare il contesto aggiuntivo del meteo degli Stati Uniti ai dati raccolti tramite stream di dati. Puoi utilizzare questi dati per l’analisi, il targeting e la creazione di tipi di pubblico in Experience Platform.
+Adobe ha collaborato con [[!DNL [The Weather Company]]](https://www.ibm.com/weather) per portare il contesto aggiuntivo del meteo degli Stati Uniti ai dati raccolti tramite stream di dati. Puoi utilizzare questi dati per l’analisi, il targeting e la creazione di tipi di pubblico in Experience Platform.
 
 Sono disponibili tre tipi di dati da [!DNL The Weather Channel]:
 

@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->I nomi di diversi gruppi di campi dello schema sono stati modificati. Per ulteriori informazioni, consulta il documento sugli aggiornamenti del nome del gruppo di campi [](../name-updates.md).
+>I nomi di diversi gruppi di campi dello schema sono stati modificati. Per ulteriori informazioni, consulta il documento sugli aggiornamenti del nome del gruppo di campi [&#128279;](../name-updates.md).
 
 [!UICONTROL IdentityMap] è un gruppo di campi dello schema standard per la classe [[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md) e un gruppo di campi compatibile per la classe [[!UICONTROL XDM Individual Profile]](../../classes/individual-profile.md). Il gruppo di campi fornisce un singolo campo mappa che contiene un set di identità utente basate sullo spazio dei nomi.
 

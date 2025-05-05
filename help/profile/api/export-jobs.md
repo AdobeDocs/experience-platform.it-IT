@@ -442,7 +442,7 @@ La sezione seguente contiene informazioni aggiuntive relative ai processi di esp
 
 ### Ulteriori esempi di payload di esportazione
 
-La chiamata API di esempio mostrata nella sezione relativa all&#39;avvio di un processo di esportazione ](#initiate) crea un processo che contiene sia dati di profilo (record) che dati di evento (serie temporali). [ Questa sezione fornisce ulteriori esempi di payload di richiesta per limitare l’esportazione in modo che contenga un tipo di dati o l’altro.
+La chiamata API di esempio mostrata nella sezione relativa all&#39;avvio di un processo di esportazione [&#128279;](#initiate) crea un processo che contiene sia dati di profilo (record) che dati di evento (serie temporali).  Questa sezione fornisce ulteriori esempi di payload di richiesta per limitare l’esportazione in modo che contenga un tipo di dati o l’altro.
 
 Il seguente payload crea un processo di esportazione che contiene solo dati di profilo (nessun evento):
 

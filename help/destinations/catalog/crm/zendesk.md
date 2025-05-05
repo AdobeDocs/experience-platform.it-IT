@@ -131,6 +131,7 @@ Per mappare correttamente i campi XDM ai campi di destinazione [!DNL Zendesk], e
      | `xdm: person.name.firstName` | `xdm: first_name` | |
 
    * Di seguito è riportato un esempio che utilizza queste mappature:
+
      ![Esempio di schermata dell&#39;interfaccia utente di Experience Platform con mappature di attributi.](../../assets/catalog/crm/zendesk/mappings.png)
 
 >[!IMPORTANT]
@@ -159,7 +160,7 @@ Per verificare di aver impostato correttamente la destinazione, segui i passaggi
 1. Controlla il riepilogo del pubblico e assicurati che il conteggio dei profili corrisponda al conteggio all’interno del segmento.
    ![Esempio di schermata dell&#39;interfaccia utente di Experience Platform che mostra il segmento.](../../assets/catalog/crm/zendesk/segment.png)
 
-1. Accedi al sito Web [!DNL Zendesk], quindi passa alla pagina **[!UICONTROL Contatti]** per verificare se i profili del pubblico sono stati aggiunti. Questo elenco può essere configurato in modo da visualizzare le colonne per i campi aggiuntivi creati con il pubblico**[!UICONTROL ID mappatura]** e stati di pubblico.
+1. Accedi al sito Web [!DNL Zendesk], quindi passa alla pagina **[!UICONTROL Contatti]** per verificare se i profili del pubblico sono stati aggiunti. Questo elenco può essere configurato in modo da visualizzare le colonne per i campi aggiuntivi creati con il pubblico&#x200B;**[!UICONTROL ID mappatura]** e stati di pubblico.
    ![Schermata dell&#39;interfaccia utente di Zendesk che mostra la pagina Contatti con i campi aggiuntivi creati con il nome del pubblico.](../../assets/catalog/crm/zendesk/contacts.png)
 
 1. In alternativa, puoi eseguire il drill-down in una singola pagina di **[!UICONTROL Persona]** e controllare la sezione **[!UICONTROL Campi aggiuntivi]** che mostra il nome del pubblico e gli stati del pubblico.

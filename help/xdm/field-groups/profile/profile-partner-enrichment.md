@@ -13,7 +13,7 @@ ht-degree: 14%
 
 [!UICONTROL Arricchimento partner profili (esempio)] è un gruppo di campi di schema standard per la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). Utilizza questo gruppo di campi per fornire dati aggiuntivi relativi ad arricchimenti basati sui partner per i profili cliente.
 
-![Diagramma del gruppo di campi ] [!UICONTROL Arricchimento partner profilo (esempio).](../../images/field-groups/profile-partner-enrichment-sample.png)
+[Diagramma del gruppo di campi ] ![[!UICONTROL Arricchimento partner profilo (esempio).]](../../images/field-groups/profile-partner-enrichment-sample.png)
 
 | Nome visualizzato | Proprietà | Tipo di dati | Descrizione |
 |-----------------------------|------------------------|-----------|----------------------------------|

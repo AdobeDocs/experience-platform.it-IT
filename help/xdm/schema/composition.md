@@ -61,7 +61,7 @@ Per facilitare questo processo, i campi chiave all’interno degli schemi posson
 
 I campi comunemente contrassegnati come &quot;[!UICONTROL Identità]&quot; includono: indirizzo e-mail, numero di telefono, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=it)ID CRM o altri campi ID univoci. Considera eventuali identificatori univoci specifici per la tua organizzazione, in quanto potrebbero essere anche buoni campi &quot;[!UICONTROL Identità]&quot;.
 
-È importante pensare alle identità dei clienti durante la fase di pianificazione dello schema per garantire che i dati vengano riuniti per versione il profilo più solido possibile. Per altre informazioni su come le informazioni sull&#39;identità possono aiutarti a offrire esperienze digitali ai tuoi clienti, vedi Panoramica di [Identity Service](../../identity-service/home.md). Per suggerimenti sull&#39;utilizzo delle identità durante la creazione di uno schema](./best-practices.md#data-validation-fields), vedere il documento [sulle best practice per la modellazione dei dati.
+È importante pensare alle identità dei clienti durante la fase di pianificazione dello schema per garantire che i dati vengano riuniti per versione il profilo più solido possibile. Per altre informazioni su come le informazioni sull&#39;identità possono aiutarti a offrire esperienze digitali ai tuoi clienti, vedi Panoramica di [Identity Service](../../identity-service/home.md). Per suggerimenti sull&#39;utilizzo delle identità durante la creazione di uno schema[&#128279;](./best-practices.md#data-validation-fields), vedere il documento sulle best practice per la modellazione dei dati.
 
 Esistono due modi per inviare dati di identità a Experience Platform:
 
@@ -78,7 +78,7 @@ L&#39;inconveniente principale dell&#39;utilizzo di `identityMap` è che le iden
 >
 >Uno schema che utilizza `identityMap` può essere utilizzato come schema di origine in una relazione, ma non può essere utilizzato come schema di riferimento. Questo perché tutti gli schemi di riferimento devono avere un&#39;identità visibile che può essere mappata in un campo di riferimento all&#39;interno dello schema di origine. Per ulteriori informazioni sui requisiti degli schemi di origine e di riferimento, fare riferimento alla guida interfaccia sulle [relazioni](../tutorials/relationship-ui.md) .
 
-Tuttavia, le mappe di identità possono essere utili se è presente un numero variabile di identità per uno schema o se si inseriscono dati da origini che store le identità insieme (ad esempio [!DNL Airship] o Adobe Audience Manager). Inoltre, le mappe di identità sono necessarie se usi l&#39;SDK [](https://developer.adobe.com/client-sdks/home/)di Adobe Experience Platform Mobile.
+Tuttavia, le mappe di identità possono essere utili se è presente un numero variabile di identità per uno schema o se si inseriscono dati da origini che store le identità insieme (ad esempio [!DNL Airship] o Adobe Audience Manager). Inoltre, le mappe di identità sono necessarie se usi l&#39;SDK [&#128279;](https://developer.adobe.com/client-sdks/home/)di Adobe Experience Platform Mobile.
 
 Un esempio di mappa identità semplice potrebbe essere like seguente:
 
@@ -161,9 +161,9 @@ Experience Platform utilizza un approccio di composizione in cui i blocchi prede
 
 Gli schemi sono composti utilizzando la seguente formula:
 
-**Classe + Gruppo di campi schema&amp;ast; = Schema XDM**
+**Classe + Gruppo di campi schema&ast; = Schema XDM**
 
-&amp;ast; Uno schema è composto da una classe e da zero o più gruppi di campi schema. Ciò significa che è possibile comporre uno schema di set di dati senza utilizzare gruppi di campi.
+&ast; Uno schema è composto da una classe e da zero o più gruppi di campi schema. Ciò significa che è possibile comporre uno schema di set di dati senza utilizzare gruppi di campi.
 
 ### Classe {#class}
 
@@ -260,7 +260,7 @@ Un campo è il blocco di base di uno schema. I campi forniscono vincoli relativi
 
 >[!TIP]
 >
->Vedere l&#39;appendice [](#objects-v-freeform) per informazioni sui pro e i contro dell&#39;utilizzo di campi gratuito-form rispetto ai campi di tipo oggetto.
+>Vedere l&#39;appendice [&#128279;](#objects-v-freeform) per informazioni sui pro e i contro dell&#39;utilizzo di campi gratuito-form rispetto ai campi di tipo oggetto.
 
 Gli intervalli validi di questi tipi scalari possono essere ulteriormente vincolati a determinati modelli, formati, minimi/massimi o valori predefiniti. Utilizzando questi vincoli, è possibile rappresentare un&#39;ampia gamma di tipi di campi più specifici, tra cui:
 

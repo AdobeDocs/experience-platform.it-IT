@@ -39,7 +39,7 @@ Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conosce
 | ---------- | ----------- |
 | `connectionString` | Stringa di connessione utilizzata per la connessione all&#39;istanza di HP [!DNL Vertica]. Il modello di stringa di connessione per HP [!DNL Vertica] è `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
 
-Per ulteriori informazioni su come iniziare, consulta [questo documento HP [!DNL Vertica] 2}.](https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/ConnectingToVertica/ClientJDBC/CreatingAndConfiguringAConnection.htm)
+Per ulteriori informazioni su come iniziare, consulta [questo documento HP [!DNL Vertica] 2&rbrace;.](https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/ConnectingToVertica/ClientJDBC/CreatingAndConfiguringAConnection.htm)
 
 ## Connetti il tuo account HP [!DNL Vertica]
 
