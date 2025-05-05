@@ -3,17 +3,17 @@ title: Aggiornamento dei criteri di idoneità alla segmentazione
 description: Scopri gli aggiornamenti dei criteri di idoneità alla segmentazione che influenzano i tipi di pubblico che possono essere valutati utilizzando lo streaming e la segmentazione Edge.
 hide: true
 hidefromtoc: true
-source-git-commit: 0bbee2100ed6fdc0f40457965e195d07de6eb2a1
+exl-id: c91c0f75-9bc8-4fa7-9d27-9b07d0ea560c
+source-git-commit: e6deed1fe52a0a852f521100171323f0de23295b
 workflow-type: tm+mt
 source-wordcount: '371'
 ht-degree: 0%
 
 ---
 
-
 # Aggiornamento dei criteri di idoneità alla segmentazione
 
-A partire dal 24 settembre 2024, verranno effettuati due aggiornamenti che influiscono sull’idoneità alla segmentazione.
+A partire dal 23 maggio 2025, verranno effettuati due aggiornamenti che influiscono sull’idoneità alla segmentazione.
 
 1. Tipi di query di segmentazione in streaming e edge
 2. Criteri di unione per lo streaming e la segmentazione Edge
