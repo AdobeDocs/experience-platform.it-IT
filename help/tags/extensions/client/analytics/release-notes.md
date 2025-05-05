@@ -23,7 +23,7 @@ Di seguito è riportato un elenco delle note sulla versione dell’estensione ta
 
 **Caratteristiche**:
 
-* È stata aggiunta una nuova funzionalità che consente agli utenti di visualizzare e modificare una versione JSON dell&#39;[azione Imposta variabili](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/analytics/overview#set-variables). L&#39;estensione Adobe Web SDK include anche un&#39;azione per [compilare una variabile di analisi](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/web-sdk/data-element-types) fornendo JSON. Copiando i dati JSON dall’estensione AA all’estensione Web SDK, i clienti che eseguono la migrazione possono facilmente trasferire più impostazioni contemporaneamente, anziché aggiungere manualmente ogni variabile.
+* È stata aggiunta una nuova funzionalità che consente agli utenti di visualizzare e modificare una versione JSON dell&#39;[azione Imposta variabili](https://experienceleague.adobe.com/it/docs/experience-platform/tags/extensions/client/analytics/overview#set-variables). L&#39;estensione Adobe Web SDK include anche un&#39;azione per [compilare una variabile di analisi](https://experienceleague.adobe.com/it/docs/experience-platform/tags/extensions/client/web-sdk/data-element-types) fornendo JSON. Copiando i dati JSON dall’estensione AA all’estensione Web SDK, i clienti che eseguono la migrazione possono facilmente trasferire più impostazioni contemporaneamente, anziché aggiungere manualmente ogni variabile.
 
 ## 12 agosto 2024
 
@@ -61,7 +61,7 @@ Di seguito è riportato un elenco delle note sulla versione dell’estensione ta
 
 **Correzioni di bug**:
 
-* È stata aggiunta una gestione aggiuntiva degli errori per i browser con API [User-Agent client hints](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html) errate ad alta entropia.
+* È stata aggiunta una gestione aggiuntiva degli errori per i browser con API [User-Agent client hints](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html?lang=it) errate ad alta entropia.
 * Intestazione Content-Type [POST](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST) modificata per l&#39;utilizzo di `x-www-form-urlencoded` per impostazione predefinita.
 
 ## sabato 23 settembre 2022
@@ -218,7 +218,7 @@ Di seguito è riportato un elenco delle note sulla versione dell’estensione ta
 
 * Aggiornamento dell&#39;estensione Adobe Analytics per supportare DIL 9.2 per Audience Manager
 
-* Estensione aggiornata per supportare [AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html#version-2.15.0)
+* Estensione aggiornata per supportare [AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=it#version-2.15.0)
 * È stata rimossa la seguente casella di controllo perché non è più supportata: &quot;Do not attach the destination publishing IFRAME to the DOM or fire destinations&quot;
 
 ## 4 giugno 2019
@@ -227,7 +227,7 @@ Di seguito è riportato un elenco delle note sulla versione dell’estensione ta
 
 **Caratteristiche**:
 
-* Aggiornamento dell&#39;estensione [Adobe Analytics ad AppMeasurement 2.14.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html#version-2.14.0) che include una correzione a un problema clearVar noto
+* Aggiornamento dell&#39;estensione [Adobe Analytics ad AppMeasurement 2.14.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=it#version-2.14.0) che include una correzione a un problema clearVar noto
 * Aggiunta di un collegamento Exchange all&#39;estensione. L&#39;elenco di Exchange può essere raggiunto facendo clic sul menu a discesa e selezionando &quot;informazioni estensione&quot;
 
 **Correzioni di bug**:

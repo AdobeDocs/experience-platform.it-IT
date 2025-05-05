@@ -13,7 +13,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Prima di creare una connessione di origine [!DNL Marketo Engage] e un flusso di dati, è necessario verificare di aver [mappato l&#39;ID organizzazione Adobe](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html) in [!DNL Marketo]. Inoltre, devi anche assicurarti di aver completato [la compilazione automatica dei tuoi [!DNL Marketo] spazi dei nomi e schemi B2B](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) prima di creare una connessione di origine e un flusso di dati.
+>Prima di creare una connessione di origine [!DNL Marketo Engage] e un flusso di dati, è necessario verificare di aver [mappato l&#39;ID organizzazione Adobe](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=it) in [!DNL Marketo]. Inoltre, devi anche assicurarti di aver completato [la compilazione automatica dei tuoi [!DNL Marketo] spazi dei nomi e schemi B2B](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) prima di creare una connessione di origine e un flusso di dati.
 
 Questa esercitazione descrive i passaggi per la creazione di un connettore di origine [!DNL Marketo Engage] (di seguito &quot;[!DNL Marketo]&quot;) nell&#39;interfaccia utente per l&#39;inserimento di dati B2B in Adobe Experience Platform.
 

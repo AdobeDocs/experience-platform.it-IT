@@ -98,7 +98,7 @@ Per creare lo schema per i dati [!DNL RainFocus], leggere la documentazione segu
 >[!IMPORTANT]
 >
 >* Lo schema deve estendere la classe ExperienceEvent **XDM.**
->* Assicurati che lo schema includa una **identità primaria** ed sia **abilitato per il profilo**. Per ulteriori informazioni, consulta la guida su [definizione dei campi di identità nell&#39;interfaccia utente](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html)
+>* Assicurati che lo schema includa una **identità primaria** ed sia **abilitato per il profilo**. Per ulteriori informazioni, consulta la guida su [definizione dei campi di identità nell&#39;interfaccia utente](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html?lang=it)
 >* Puoi sostituire l’identità di esempio (e-mail) con un altro identificatore appropriato, ad esempio un messaggio e-mail sha256 o un ECID.
 
 ### Creare un profilo di integrazione in RainFocus {#create-an-integration-profile-in-rainfocus}
@@ -122,7 +122,7 @@ Quindi, fornisci le credenziali recuperate nel progetto Adobe Developer Portal:
 
 Dopo aver fornito le credenziali, selezionare **[!DNL Save]**. Il nuovo [!DNL Integration Profile] dovrebbe essere elencato nel dashboard [!DNL RainFocus].
 
-Seleziona [!DNL Integration Profile] appena creato per visualizzare un elenco di **tipi push** predefiniti già configurati. Questi sono i [Eventi esperienza](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html) che verranno inviati all&#39;Experience Platform quando si verificano.
+Seleziona [!DNL Integration Profile] appena creato per visualizzare un elenco di **tipi push** predefiniti già configurati. Questi sono i [Eventi esperienza](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html?lang=it) che verranno inviati all&#39;Experience Platform quando si verificano.
 
 ![Elenco dei tipi di push predefiniti nel dashboard RainFocus.](/help/sources/images/tutorials/create/rainfocus/rainfocus_integration-profile-setup.png)
 

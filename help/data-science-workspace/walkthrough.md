@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Questo documento fornisce una descrizione dei risultati di apprendimento attesi nel corso Area di lavoro di Data Science Adobe Experience Platform. Per visualizzare il corso, devi login a Experience League utilizzando il tuo Adobe ID.
 
-Il [corso](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw&amp;lang=it) Getting started with Data Science Area di lavoro for Data Scientists è progettato per i data scientist che desiderano imparare a utilizzare JupyterLab Notebooks per derivare informazioni dettagliate e query sui dati, creare set di dati abilitati al profilo pubblicare modelli di machine learning automatizzati e attivare informazioni approfondite di Machine Learning per applicazioni Adobe Systems e non Adobe Systems.
+Il [corso](https://experienceleague.adobe.com/?lang=it&recommended=ExperiencePlatform-U-1-2021.1.dsw&amp;lang=it) Getting started with Data Science Area di lavoro for Data Scientists è progettato per i data scientist che desiderano imparare a utilizzare JupyterLab Notebooks per derivare informazioni dettagliate e query sui dati, creare set di dati abilitati al profilo pubblicare modelli di machine learning automatizzati e attivare informazioni approfondite di Machine Learning per applicazioni Adobe Systems e non Adobe Systems.
 
 ## Prerequisiti del corso
 

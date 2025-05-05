@@ -30,7 +30,7 @@ Basato sulle API RESTful, [!DNL Experience Platform] espone tutte le funzionalit
 
 La documentazione di [!DNL Experience Platform] è fornita in più formati per diverse funzioni e applicazioni. Per ulteriori informazioni sui tipi di documentazione disponibili, visita la [panoramica sulla documentazione di Experience Platform](documentation/overview.md).
 
-Per ulteriori informazioni su un servizio [!DNL Experience Platform] specifico, tornare alla [pagina di destinazione della documentazione](https://experienceleague.adobe.com/docs/experience-platform.html) e selezionare la guida appropriata.
+Per ulteriori informazioni su un servizio [!DNL Experience Platform] specifico, tornare alla [pagina di destinazione della documentazione](https://experienceleague.adobe.com/docs/experience-platform.html?lang=it) e selezionare la guida appropriata.
 
 ### Documentazione per le applicazioni create su [!DNL Experience Platform]
 
@@ -40,8 +40,8 @@ Adobe ha creato più applicazioni sopra Experience Platform. La documentazione r
 * [[!DNL Real-Time Customer Data Platform (Real-Time CDP) B2B Edition]](../rtcdp/b2b-overview.md)
 * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=it)
 * [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=it)
-* [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html)
-* [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler/using/overview.html?lang=en)
+* [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html?lang=it)
+* [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler/using/overview.html?lang=it)
 
 Il video seguente descrive i casi di utilizzo di ogni applicazione basata su Experience Platform.
 

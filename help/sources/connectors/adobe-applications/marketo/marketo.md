@@ -31,7 +31,7 @@ Questo documento fornisce una panoramica del connettore di origine [!DNL Marketo
 
 ## Impostare Adobe Organization Mapping
 
-Prima di poter stabilire i set di mappatura per [!DNL Marketo Engage], è necessario configurare Adobe Organization Mapping. Per i passaggi dettagliati su come completare questa procedura, consulta la guida su [configurazione di Adobe Organization Mapping per [!DNL Marketo Engage]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html).
+Prima di poter stabilire i set di mappatura per [!DNL Marketo Engage], è necessario configurare Adobe Organization Mapping. Per i passaggi dettagliati su come completare questa procedura, consulta la guida su [configurazione di Adobe Organization Mapping per [!DNL Marketo Engage]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=it).
 
 ## Autentica il connettore [!DNL Marketo Engage]
 

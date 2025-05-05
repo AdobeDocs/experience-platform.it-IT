@@ -46,12 +46,12 @@ ht-degree: 62%
    * [Destinazioni nell’Edizione B2B di Real-Time CDP](destinations/b2b.md)
 * Guardrail {#guardrails}
    * [Panoramica sui guardrail di Real-Time CDP](guardrails/overview.md)
-   * [Guardrail per l&#39;acquisizione dei dati](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
+   * [Guardrail per l&#39;acquisizione dei dati](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html?lang=it){target="_blank"}
    * [Guardrail per  [!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/){target="_blank"}
    * [Guardrail per [!DNL Real-Time Customer Profile] dati e segmentazione](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=it){target="_blank"}
-   * [Guardrail per [!DNL Identity Service] dati](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
-   * [Guardrail per [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}
-   * [Guardrail per l&#39;attivazione dei dati tramite destinazioni](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html){target="_blank"}
+   * [Guardrail per [!DNL Identity Service] dati](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html?lang=it){target="_blank"}
+   * [Guardrail per [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html?lang=it){target="_blank"}
+   * [Guardrail per l&#39;attivazione dei dati tramite destinazioni](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html?lang=it){target="_blank"}
 * Identità {#identity}
    * [Identità e spazi dei nomi di identità](profile/identities-overview.md)
 * Criteri di unione {#merge-policies}

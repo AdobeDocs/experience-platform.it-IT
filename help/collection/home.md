@@ -23,7 +23,7 @@ La raccolta dei dati è supportata per le seguenti origini lato client:
 
 La raccolta dei dati si concentra sulla reperibilità e sull’accessibilità dei set di dati acquisiti, tra cui:
 
-* [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html)
+* [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html?lang=it)
 * [Tag](../tags/home.md)
 * [Stream di dati](../datastreams/overview.md)
 * [Inoltro eventi](../tags/ui/event-forwarding/overview.md)

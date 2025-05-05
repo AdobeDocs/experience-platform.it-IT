@@ -236,7 +236,7 @@ Sono inoltre necessarie le seguenti autorizzazioni per il pubblico:
 * **Profilo letto**
 * **Set di dati letto**
 
-Poiché i Percorsi sono altamente flessibili e possono coinvolgere molti oggetti interconnessi, le relative [autorizzazioni complete](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/privacy/high-low-permissions) sono documentate separatamente e possono variare in base al caso d&#39;uso specifico.
+Poiché i Percorsi sono altamente flessibili e possono coinvolgere molti oggetti interconnessi, le relative [autorizzazioni complete](https://experienceleague.adobe.com/it/docs/journey-optimizer/using/access-control/privacy/high-low-permissions) sono documentate separatamente e possono variare in base al caso d&#39;uso specifico.
 
 ## Passaggi successivi
 

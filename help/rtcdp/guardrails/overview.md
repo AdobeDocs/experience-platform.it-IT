@@ -30,7 +30,7 @@ Inizia qui e segui i collegamenti riportati di seguito per comprendere tutti i g
 
 >[!TIP]
 >
->Visita inoltre [i blueprint dell&#39;esperienza digitale](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html) per ulteriori informazioni, ad esempio [diagrammi di latenza end-to-end](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) per vari servizi Experience Platform.
+>Visita inoltre [i blueprint dell&#39;esperienza digitale](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=it) per ulteriori informazioni, ad esempio [diagrammi di latenza end-to-end](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=it#end-to-end-latency-diagrams) per vari servizi Experience Platform.
 
 ## Tipi di guardrail {#guardrail-types}
 
@@ -48,16 +48,16 @@ I due tipi di guardrail in tutte le aree e i servizi di Real-Time CDP sono:
 Inoltre, fare riferimento ai collegamenti di descrizione del prodotto riportati di seguito per informazioni su licenze e adesione in base all&#39;edizione e al livello Real-Time CDP acquistati:
 
 * [Tutte le descrizioni dei prodotti Adobe](https://helpx.adobe.com/it/legal/product-descriptions.html)
-* [Real-Time Customer Data Platform (pacchetti B2C Edition - Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (edizione B2P - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (pacchetti B2B edition - Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (pacchetti B2C Edition - Prime e Ultimate)](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (edizione B2P - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (pacchetti B2B edition - Prime e Ultimate)](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
 
 ## Guardrail per altre applicazioni Experience Platform  {#guardrails-other-aep-apps}
 
 Guardrail simili esistono per altre applicazioni Experience Platform. Per ulteriori informazioni, visitare i collegamenti riportati di seguito:
 
-* [Guardrail Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html?lang=en)
-* [Guardrail Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
+* [Guardrail Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html?lang=it)
+* [Guardrail Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html?lang=it)
 
 ## Passaggi successivi
 

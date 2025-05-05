@@ -1,8 +1,8 @@
 ---
 title: Edizione B2C del modello dati di Real-time Customer Data Platform Insights
 description: Scopri come utilizzare le query SQL con Real-time Customer Data Platform Insights Data Models (B2C Edition) per personalizzare i rapporti di Real-Time CDP per i casi d’uso di marketing e KPI.
-badgeB2B: label="Edizione B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="Edizione B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="Edizione B2B" type="Informative" url="https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2P: label="Edizione B2P" type="Informative" url="https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
 source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt

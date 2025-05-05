@@ -21,7 +21,7 @@ Per istruzioni specifiche per AWS, consulta la [Guida all&#39;installazione di A
 
 Per visualizzare e visitare la sezione [!UICONTROL Crittografia] in Adobe Experience Platform, è necessario aver creato un ruolo e assegnato l&#39;autorizzazione [!UICONTROL Gestione chiave gestita dal cliente] a tale ruolo. Qualsiasi utente con l&#39;autorizzazione [!UICONTROL Gestione chiave gestita dal cliente] può abilitare la CMK per la propria organizzazione.
 
-Per ulteriori informazioni sull&#39;assegnazione di ruoli e autorizzazioni in Experience Platform, consulta la [documentazione sulla configurazione delle autorizzazioni](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html).
+Per ulteriori informazioni sull&#39;assegnazione di ruoli e autorizzazioni in Experience Platform, consulta la [documentazione sulla configurazione delle autorizzazioni](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=it).
 
 Per abilitare CMK per le istanze Experience Platform ospitate da Azure, è necessario configurare l&#39;insieme di credenziali delle chiavi [[!DNL Azure] ](./azure-key-vault-config.md) con le impostazioni seguenti:
 

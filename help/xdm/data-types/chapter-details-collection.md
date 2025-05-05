@@ -21,9 +21,9 @@ ht-degree: 11%
 
 | Nome visualizzato | Proprietà | Tipo di dati | Obbligatorio | Descrizione |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|-----------|----------|---------------------------------------------------|
-| [[!UICONTROL Durata O Lunghezza Capitolo]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-length) | `length` | intero | Sì | La lunghezza del capitolo, in secondi. |
-| [[!UICONTROL Nome capitolo]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-name) | `friendlyName` | stringa | No | Nome del capitolo e/o del segmento. |
-| [[!UICONTROL Offset capitolo]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-offset) | `offset` | intero | Sì | Offset del capitolo all’interno del contenuto, in secondi dall’inizio. |
-| [[!UICONTROL Posizione capitolo]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-position) | `index` | intero | Sì | Posizione (indice, numero intero) del capitolo all’interno del contenuto. |
+| [[!UICONTROL Durata O Lunghezza Capitolo]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=it#chapter-length) | `length` | intero | Sì | La lunghezza del capitolo, in secondi. |
+| [[!UICONTROL Nome capitolo]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=it#chapter-name) | `friendlyName` | stringa | No | Nome del capitolo e/o del segmento. |
+| [[!UICONTROL Offset capitolo]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=it#chapter-offset) | `offset` | intero | Sì | Offset del capitolo all’interno del contenuto, in secondi dall’inizio. |
+| [[!UICONTROL Posizione capitolo]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=it#chapter-position) | `index` | intero | Sì | Posizione (indice, numero intero) del capitolo all’interno del contenuto. |
 
 {style="table-layout:auto"}

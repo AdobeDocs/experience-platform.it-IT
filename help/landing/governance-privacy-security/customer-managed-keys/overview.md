@@ -17,7 +17,7 @@ I dati memorizzati su Adobe Experience Platform vengono crittografati a riposo u
 
 >[!AVAILABILITY]
 >
->Adobe Experience Platform supporta le chiavi gestite dal cliente (CMK) per Microsoft Azure e Amazon Web Services (AWS). Experience Platform in esecuzione su AWS è attualmente disponibile per un numero limitato di clienti. Se l’implementazione viene eseguita su AWS, puoi utilizzare il servizio di gestione delle chiavi per la crittografia dei dati di Experience Platform. Per ulteriori informazioni sull&#39;infrastruttura supportata, vedere [Panoramica multi-cloud di Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
+>Adobe Experience Platform supporta le chiavi gestite dal cliente (CMK) per Microsoft Azure e Amazon Web Services (AWS). Experience Platform in esecuzione su AWS è attualmente disponibile per un numero limitato di clienti. Se l’implementazione viene eseguita su AWS, puoi utilizzare il servizio di gestione delle chiavi per la crittografia dei dati di Experience Platform. Per ulteriori informazioni sull&#39;infrastruttura supportata, vedere [Panoramica multi-cloud di Experience Platform](https://experienceleague.adobe.com/it/docs/experience-platform/landing/multi-cloud).
 >
 >Per informazioni sulla creazione e la gestione delle chiavi di crittografia in AWS KMS, consulta la [guida alla crittografia dei dati di AWS KMS](./aws/configure-kms.md). Per le implementazioni di Azure, vedere la [Guida alla configurazione di Azure Key Vault](./azure/azure-key-vault-config.md).
 
@@ -39,7 +39,7 @@ Per abilitare CMK, l&#39;ambiente di hosting della piattaforma ([!DNL Azure] o A
 
 Per visualizzare e accedere alla sezione [!UICONTROL Crittografia] in Adobe Experience Platform, è necessario aver creato un ruolo e aver assegnato a tale ruolo l&#39;autorizzazione [!UICONTROL Gestisci chiave gestita dal cliente].  Qualsiasi utente con l&#39;autorizzazione [!UICONTROL Gestisci chiave gestita dal cliente] può abilitare la CMK per la propria organizzazione.
 
-Per ulteriori informazioni sull&#39;assegnazione di ruoli e autorizzazioni in Experience Platform, consulta la [documentazione sulla configurazione delle autorizzazioni](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html).
+Per ulteriori informazioni sull&#39;assegnazione di ruoli e autorizzazioni in Experience Platform, consulta la [documentazione sulla configurazione delle autorizzazioni](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=it).
 
 ### Prerequisiti specifici di Azure
 
@@ -109,7 +109,7 @@ Ad esempio, il dashboard Profilo continuerà a visualizzare i dati dalla cache f
 
 >[!TIP]
 >
->Esistono due eccezioni specifiche per casi d’uso alla scadenza di sette giorni del set di dati su dati non primari (memorizzati nella cache/transitori). Per ulteriori informazioni su queste funzioni, consulta la relativa documentazione.<ul><li>[Abbreviazione URL Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=it#message-preset-sms)</li><li>[Proiezioni Edge](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html#edge-projections)</li></ul>
+>Esistono due eccezioni specifiche per casi d’uso alla scadenza di sette giorni del set di dati su dati non primari (memorizzati nella cache/transitori). Per ulteriori informazioni su queste funzioni, consulta la relativa documentazione.<ul><li>[Abbreviazione URL Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=it#message-preset-sms)</li><li>[Proiezioni Edge](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=it#edge-projections)</li></ul>
 
 ## Passaggi successivi
 

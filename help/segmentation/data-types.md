@@ -52,7 +52,7 @@ Come mostrato nella tabella seguente, i dati dell’evento vengono riprodotti ut
 
 I tipi di pubblico esterni possono essere utilizzati anche come componenti di una nuova definizione di segmento, aggiungendo le relative regole di attributo alle nuove definizioni di segmento.
 
-Attualmente, solo Adobe Audience Manager è supportato come pubblico esterno, con fonti aggiuntive abilitate in futuro. Ulteriori informazioni sull&#39;utilizzo dei tipi di pubblico di Adobe Audience Manager con Experience Platform sono disponibili nella [guida alla condivisione del pubblico all&#39;interno della documentazione di Adobe Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html).
+Attualmente, solo Adobe Audience Manager è supportato come pubblico esterno, con fonti aggiuntive abilitate in futuro. Ulteriori informazioni sull&#39;utilizzo dei tipi di pubblico di Adobe Audience Manager con Experience Platform sono disponibili nella [guida alla condivisione del pubblico all&#39;interno della documentazione di Adobe Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=it).
 
 ### Condivisione della definizione del segmento
 

@@ -16,14 +16,14 @@ Le istruzioni seguenti mostrano come utilizzare l’interfaccia web GitHub per c
 >[!TIP]
 >
 >Consulta anche la documentazione di supporto nella guida per i collaboratori di Adobe:
->* [Installare gli strumenti di creazione Git e Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)
->* [Configurazione locale dell&#39;archivio Git per la documentazione](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)
->* [Flusso di lavoro dei contributi GitHub per modifiche principali](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html).
+>* [Installare gli strumenti di creazione Git e Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=it)
+>* [Configurazione locale dell&#39;archivio Git per la documentazione](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=it)
+>* [Flusso di lavoro dei contributi GitHub per modifiche principali](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=it).
 
 ## Configurare l’ambiente di authoring GitHub {#set-up-environment}
 
 1. Nel browser, passa a `https://github.com/AdobeDocs/experience-platform.en`.
-2. Per [eseguire il fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository) dell&#39;archivio, fare clic su **Effettuare il fork** come illustrato di seguito. In questo modo viene creata una copia dell’archivio di Experienci Platform nel tuo account GitHub.
+2. Per [eseguire il fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=it#fork-the-repository) dell&#39;archivio, fare clic su **Effettuare il fork** come illustrato di seguito. In questo modo viene creata una copia dell’archivio di Experienci Platform nel tuo account GitHub.
 
    ![Archivio della documentazione di Fork Adobe](../assets/docs-framework/ssd-fork-repository.gif)
 
@@ -46,7 +46,7 @@ Le istruzioni seguenti mostrano come utilizzare l’interfaccia web GitHub per c
    >
    >Puoi chiudere la finestra del browser in qualsiasi momento e riaprirla in un secondo momento. Il tuo lavoro viene salvato automaticamente e ti aspetta quando riapri il browser.
 3. Copia il contenuto dall’editor markdown nel nuovo file in GitHub.
-4. Per qualsiasi schermata o immagine che intendi utilizzare, utilizza l&#39;interfaccia GitHub per caricare i file in `experience-platform.en/help/destinations/assets/catalog/[...]`, dove `[...]` è la categoria desiderata per la tua destinazione. Se ad Experience Platform si aggiunge una destinazione di personalizzazione, selezionare la categoria `personalization`. Devi collegare alle immagini dalla pagina che stai creando. Consulta [istruzioni su come collegare le immagini](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html#link-to-images).
+4. Per qualsiasi schermata o immagine che intendi utilizzare, utilizza l&#39;interfaccia GitHub per caricare i file in `experience-platform.en/help/destinations/assets/catalog/[...]`, dove `[...]` è la categoria desiderata per la tua destinazione. Se ad Experience Platform si aggiunge una destinazione di personalizzazione, selezionare la categoria `personalization`. Devi collegare alle immagini dalla pagina che stai creando. Consulta [istruzioni su come collegare le immagini](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=it#link-to-images).
 
    ![Carica immagine in GitHub](../assets/docs-framework/upload-image.gif)
 
@@ -82,4 +82,4 @@ Le istruzioni seguenti mostrano come utilizzare l’interfaccia web GitHub per c
 
 >[!TIP]
 >
->Per aggiungere immagini e collegamenti alla documentazione e per eventuali altre domande su Markdown, leggi [Utilizzo di Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html) nella guida alla scrittura collaborativa di Adobe.
+>Per aggiungere immagini e collegamenti alla documentazione e per eventuali altre domande su Markdown, leggi [Utilizzo di Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=it) nella guida alla scrittura collaborativa di Adobe.

@@ -199,7 +199,7 @@ Per spiegazioni dettagliate sui requisiti di corrispondenza ID, consulta [Requis
 +++Risposta
 No, [Web SDK](../web-sdk/home.md) non è necessario per attivare i tipi di pubblico in [Adobe Target](catalog/personalization/adobe-target-connection.md).
 
-Tuttavia, se si utilizza [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html) al posto di Web SDK, è supportata solo la personalizzazione della sessione successiva.
+Tuttavia, se si utilizza [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=it) al posto di Web SDK, è supportata solo la personalizzazione della sessione successiva.
 
 Per [casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva](ui/activate-edge-personalization-destinations.md), è necessario utilizzare [Web SDK](../web-sdk/home.md) o l&#39;[API Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/). Per ulteriori dettagli sull&#39;implementazione, consulta la documentazione sull&#39;[attivazione dei tipi di pubblico nelle destinazioni Edge](ui/activate-edge-personalization-destinations.md).
 +++
@@ -229,7 +229,7 @@ Le definizioni del pubblico vengono propagate a [Edge Network](../web-sdk/home.m
 ### Dove posso visualizzare gli attributi attivati in Adobe Target?
 
 +++Risposta
-Gli attributi saranno disponibili per l&#39;utilizzo in Target nelle offerte [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) e [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html).
+Gli attributi saranno disponibili per l&#39;utilizzo in Target nelle offerte [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html?lang=it) e [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=it).
 +++
 
 ### È possibile creare una destinazione senza un flusso di dati e quindi aggiungere un flusso di dati alla stessa destinazione in un secondo momento?

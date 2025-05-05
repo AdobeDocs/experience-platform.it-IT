@@ -245,7 +245,7 @@ if (discountHtml) {
 
 ### Accesso ai token di risposta di Adobe Target
 
-Il contenuto Personalization restituito da Adobe Target include [token di risposta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html), ovvero dettagli su attività, offerta, esperienza, profilo utente, informazioni geografiche e altro ancora. Questi dettagli possono essere condivisi con strumenti di terze parti o utilizzati per il debug. I token di risposta possono essere configurati nell’interfaccia utente di Adobe Target.
+Il contenuto Personalization restituito da Adobe Target include [token di risposta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=it), ovvero dettagli su attività, offerta, esperienza, profilo utente, informazioni geografiche e altro ancora. Questi dettagli possono essere condivisi con strumenti di terze parti o utilizzati per il debug. I token di risposta possono essere configurati nell’interfaccia utente di Adobe Target.
 
 Nell’azione Codice personalizzato, inclusa nella regola per la gestione dei dati di risposta, puoi accedere alle proposte di personalizzazione restituite dal server. A tale scopo, digita il seguente codice personalizzato:
 

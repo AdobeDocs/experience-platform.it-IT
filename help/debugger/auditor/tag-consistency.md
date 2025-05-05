@@ -21,6 +21,6 @@ I test di coerenza dei tag rilevano incoerenze tra tutte le pagine digitalizzate
 
 | Test | Spessore | Criteri | Consiglio |
 | --- | --- | --- | --- |
-| Adobe Analytics - Versione codice coerente | 5 | È stata trovata più di una versione del codice Analytics. | Sostituisci tutte le istanze di Analytics con la versione corrente.<br><br>[Informazioni aggiuntive](https://experienceleague.adobe.com/docs/analytics/implementation/home.html) |
+| Adobe Analytics - Versione codice coerente | 5 | È stata trovata più di una versione del codice Analytics. | Sostituisci tutte le istanze di Analytics con la versione corrente.<br><br>[Informazioni aggiuntive](https://experienceleague.adobe.com/docs/analytics/implementation/home.html?lang=it) |
 
 {style="table-layout:auto"}

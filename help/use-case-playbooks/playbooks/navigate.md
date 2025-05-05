@@ -57,7 +57,7 @@ Per creare istanze di playbook in Journey Optimizer, devi configurare le superfi
 
 ### Superficie del canale e-mail
 
-Passare a `Channels` nell&#39;interfaccia di Journey Optimizer. Se non sono già configurati, configura sottodomini e pool IP separati per le e-mail di marketing e la messaggistica transazionale. Si tratta di best practice per garantire che i messaggi transazionali, come le e-mail di conferma dell’ordine, arrivino ai clienti. Immetti nomi, indirizzi e-mail e impostazioni aggiuntive. Seleziona **Invia** in alto a destra della pagina per creare la superficie del canale di marketing. Leggi la documentazione su [come impostare le superfici dei canali di posta elettronica](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html).
+Passare a `Channels` nell&#39;interfaccia di Journey Optimizer. Se non sono già configurati, configura sottodomini e pool IP separati per le e-mail di marketing e la messaggistica transazionale. Si tratta di best practice per garantire che i messaggi transazionali, come le e-mail di conferma dell’ordine, arrivino ai clienti. Immetti nomi, indirizzi e-mail e impostazioni aggiuntive. Seleziona **Invia** in alto a destra della pagina per creare la superficie del canale di marketing. Leggi la documentazione su [come impostare le superfici dei canali di posta elettronica](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html?lang=it).
 
 ### Superficie del canale SMS
 

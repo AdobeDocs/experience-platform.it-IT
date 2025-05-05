@@ -77,7 +77,7 @@ Se un particolare processo è ancora in sospeso o ha restituito un errore, è po
 
 ## Dati della richiesta di accesso {#access-request-data}
 
-Quando vengono richieste informazioni sull’interessato, ogni servizio restituisce i dati in un formato coerente con il modo in cui memorizzano e utilizzano tali dati. Una volta che tutti i servizi hanno completato la richiesta, nei dettagli del processo viene fornito un URL del file di archivio .ZIP per consentire il download di questi dati. Per informazioni su [come scaricare i risultati dei processi per la privacy](https://experienceleague.adobe.com/docs/experience-platform/privacy/troubleshooting-guide.html?lang=en#how-do-i-download-the-results-of-my-completed-privacy-jobs%3F), consulta la guida alla risoluzione dei problemi.
+Quando vengono richieste informazioni sull’interessato, ogni servizio restituisce i dati in un formato coerente con il modo in cui memorizzano e utilizzano tali dati. Una volta che tutti i servizi hanno completato la richiesta, nei dettagli del processo viene fornito un URL del file di archivio .ZIP per consentire il download di questi dati. Per informazioni su [come scaricare i risultati dei processi per la privacy](https://experienceleague.adobe.com/docs/experience-platform/privacy/troubleshooting-guide.html?lang=it#how-do-i-download-the-results-of-my-completed-privacy-jobs%3F), consulta la guida alla risoluzione dei problemi.
 
 Di seguito sono riportati gli elementi principali della nota relativi alla gestione dell&#39;archivio dati:
 

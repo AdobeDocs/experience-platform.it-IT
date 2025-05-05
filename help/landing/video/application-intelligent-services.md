@@ -21,7 +21,7 @@ Questo video offre una panoramica dell’applicazione e dei servizi intelligenti
 Per ulteriori informazioni, utilizza i collegamenti per visitare la documentazione di ogni singola applicazione:
 
 * [[!DNL Customer Journey Analytics]](https://docs.adobe.com/content/help/it-IT/experience-cloud/user-guides/home.translate.html)
-* [Intelligent Services](https://experienceleague.adobe.com/docs/intelligent-services.html)
+* [Intelligent Services](https://experienceleague.adobe.com/docs/intelligent-services.html?lang=it)
 * [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journeys/using/journey-orchestration-home.html?lang=it)
 * [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning/using/offer-decisioning-home.html?lang=it)
 * [[!DNL Real-Time Customer Data Platform (Real-Time CDP)]](../../rtcdp/overview.md)

@@ -2,7 +2,7 @@
 keywords: profilo rtcdp;profili rtcdp;rtcdp identità;criteri di unione rtcdp;real-time customer profile
 title: Guida dell’interfaccia utente del profilo account
 description: Tramite l’utilizzo dei profili dell’account, Adobe Real-Time Customer Data Platform B2B edition consente di unificare le informazioni sull’account da più origini. Questa guida fornisce dettagli per interagire con i profili dell’account nell’interfaccia utente di Adobe Experience Platform.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Profiles, B2B
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3

@@ -19,8 +19,8 @@ Gli esempi SQL in questo documento sono query comunemente utilizzate con i dati 
 
 * [Connettore di origine di Adobe Analytics per la panoramica dei dati della suite di rapporti](../../sources/connectors/adobe-applications/mapping/analytics.md).
 * [La documentazione sulle mappature dei campi di Analytics](../../sources/connectors/adobe-applications/mapping/analytics.md) fornisce ulteriori informazioni sull&#39;acquisizione e la mappatura dei dati analitici da utilizzare con Query Service.
-* [Panoramica dell&#39;Attribution IQ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)
-* [Guida del pannello Attribuzione di Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html).
+* [Panoramica dell&#39;Attribution IQ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=it)
+* [Guida del pannello Attribuzione di Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html?lang=it).
 
 Una spiegazione dei parametri all&#39;interno della funzione `OVER()` è disponibile nella sezione [funzioni finestra](../sql/adobe-defined-functions.md#window-functions). Anche il [Glossario dei termini di Adobe Marketing e Commerce](https://business.adobe.com/glossary/index.html) può essere utile.
 

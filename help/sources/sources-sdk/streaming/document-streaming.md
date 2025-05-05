@@ -22,8 +22,8 @@ Questa guida alla documentazione include:
 
 * Un tutorial che puoi seguire per creare una pagina di documentazione per la nuova sorgente;
 * Un modello di documentazione da compilare per la nuova sorgente;
-* [Istruzioni sull&#39;utilizzo di Markdown per la scrittura della documentazione tecnica](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html);
-* [Istruzioni su come comprendere Adobe Markdown flavor](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions).
+* [Istruzioni sull&#39;utilizzo di Markdown per la scrittura della documentazione tecnica](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=it);
+* [Istruzioni su come comprendere Adobe Markdown flavor](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=it#custom-markdown-extensions).
 
 ## Prerequisiti
 

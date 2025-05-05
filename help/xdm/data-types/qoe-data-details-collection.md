@@ -23,9 +23,9 @@ La raccolta [!UICONTROL Dettagli dati QoE] è un tipo di dati XDM (Experience Da
 
 | Nome visualizzato | Proprietà | Tipo di dati | Obbligatorio | Descrizione |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------|-----------|-----------|---------------------------------------------------------------------------------------|
-| [[!UICONTROL Bitrate]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html#average-bitrate) | `bitrate` | intero | No | Il valore del bitrate (in kbps). |
-| [[!UICONTROL Frame rilasciati]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html#dropped-frames) | `droppedFrames` | intero | No | Numero totale di fotogrammi persi durante la riproduzione. |
-| [[!UICONTROL Frame al secondo]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html#frames-per-second) | `framesPerSecond` | intero | No | Frame rate del flusso corrente (in fotogrammi al secondo). |
-| [[!UICONTROL Ora Di Inizio]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html#time-to-start-1) | `timeToStart` | intero | No | Durata (in secondi) tra il caricamento del video e l’avvio. |
+| [[!UICONTROL Bitrate]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=it#average-bitrate) | `bitrate` | intero | No | Il valore del bitrate (in kbps). |
+| [[!UICONTROL Frame rilasciati]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=it#dropped-frames) | `droppedFrames` | intero | No | Numero totale di fotogrammi persi durante la riproduzione. |
+| [[!UICONTROL Frame al secondo]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=it#frames-per-second) | `framesPerSecond` | intero | No | Frame rate del flusso corrente (in fotogrammi al secondo). |
+| [[!UICONTROL Ora Di Inizio]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=it#time-to-start-1) | `timeToStart` | intero | No | Durata (in secondi) tra il caricamento del video e l’avvio. |
 
 {style="table-layout:auto"}

@@ -24,7 +24,7 @@ Con la generazione dello schema ML, puoi integrare rapidamente nuove origini dat
 
 Questo tutorial richiede una buona conoscenza dei requisiti per la creazione dello schema. Prima di continuare con questa guida, leggere la [Guida dell&#39;interfaccia utente per creare e modificare schemi](./resources/schemas.md).
 
-Questa guida spiega come creare schemi utilizzando algoritmi di apprendimento automatico (ML) per generare uno schema dai dati di esempio. Consulta la [guida manuale del flusso di lavoro per la creazione dello schema](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/resources/schemas#add-field-groups) per informazioni sulla creazione di schemi o il documento sui [flussi di lavoro basati sui campi nell&#39;Editor schema](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/field-based-workflows) per comprendere meglio il processo di creazione dello schema.
+Questa guida spiega come creare schemi utilizzando algoritmi di apprendimento automatico (ML) per generare uno schema dai dati di esempio. Consulta la [guida manuale del flusso di lavoro per la creazione dello schema](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/ui/resources/schemas#add-field-groups) per informazioni sulla creazione di schemi o il documento sui [flussi di lavoro basati sui campi nell&#39;Editor schema](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/ui/field-based-workflows) per comprendere meglio il processo di creazione dello schema.
 
 >[!NOTE]
 >
@@ -125,4 +125,4 @@ Viene visualizzato l’Editor di schema con lo schema appena creato visualizzato
 
 Dopo aver creato lo schema, puoi utilizzare l’Editor di schema per apportare ulteriori modifiche, se necessario. Il nuovo schema è ora pronto per essere integrato con le origini dati e utilizzato per l’analisi dei dati.
 
-Per ulteriori informazioni sull&#39;utilizzo dell&#39;Editor di schema, vedere la [Guida alla modifica di uno schema esistente](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/resources/schemas#edit).
+Per ulteriori informazioni sull&#39;utilizzo dell&#39;Editor di schema, vedere la [Guida alla modifica di uno schema esistente](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/ui/resources/schemas#edit).

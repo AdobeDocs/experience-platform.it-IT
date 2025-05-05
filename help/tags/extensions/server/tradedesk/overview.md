@@ -39,7 +39,7 @@ Seleziona **[!UICONTROL Estensioni]** nel menu di navigazione a sinistra. Nella 
 
 Nella schermata successiva, immetti l&#39;[!UICONTROL ID inserzionista] e facoltativamente un [!UICONTROL ID esercente]. Puoi incollare l’ID direttamente in questi input, oppure puoi utilizzare un elemento dati. Questi verranno utilizzati come valori predefiniti durante una chiamata evento all&#39;API Conversioni in tempo reale di [!DNL The Trade Desk]. Al termine, seleziona **[!UICONTROL Salva]**.
 
-Per scoprire come creare elementi dati e renderli disponibili per le estensioni nella proprietà tag, segui l&#39;esercitazione [Creare elementi dati](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/tags/create-data-elements).
+Per scoprire come creare elementi dati e renderli disponibili per le estensioni nella proprietà tag, segui l&#39;esercitazione [Creare elementi dati](https://experienceleague.adobe.com/it/docs/platform-learn/data-collection/tags/create-data-elements).
 
 ![Pagina di configurazione dell&#39;estensione [!DNL The Trade Desk] con i campi [!UICONTROL ID inserzionista] e [!UICONTROL ID esercente] evidenziati.](../../../images/extensions/server/tradedesk/configure-extension.png)
 

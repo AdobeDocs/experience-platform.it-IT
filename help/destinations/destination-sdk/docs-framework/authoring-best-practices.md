@@ -17,23 +17,23 @@ Questa pagina descrive le regole da seguire per [creare la documentazione di des
 
 ## Indicazioni generali {#general-guidance}
 
-* Durante la compilazione del [modello](./self-service-template.md) per la documentazione di destinazione, consulta la guida per i collaboratori di Adobe per informazioni su [collegamenti](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html), [tabelle](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#tables), [sintassi markdown supportata](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html), [istruzioni per la scrittura](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html) e altro ancora.
+* Durante la compilazione del [modello](./self-service-template.md) per la documentazione di destinazione, consulta la guida per i collaboratori di Adobe per informazioni su [collegamenti](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=it), [tabelle](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=it#tables), [sintassi markdown supportata](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=it), [istruzioni per la scrittura](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=it) e altro ancora.
 * Non includere osservazioni e stime nella documentazione del prodotto.
 * Nella documentazione di Experience Platform, gli autori di Adobe utilizzano **la formattazione in grassetto** per fare riferimento ai controlli dell&#39;interfaccia utente, come riportato di seguito:
-   * Vai a **[!UICONTROL Connessioni]** > **[!UICONTROL Destinazioni]** e seleziona la scheda **[!UICONTROL Catalogo]**. Visualizza un esempio di come i controlli dell&#39;interfaccia utente sono documentati in un [tutorial sulle destinazioni](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#select-destination).
+   * Vai a **[!UICONTROL Connessioni]** > **[!UICONTROL Destinazioni]** e seleziona la scheda **[!UICONTROL Catalogo]**. Visualizza un esempio di come i controlli dell&#39;interfaccia utente sono documentati in un [tutorial sulle destinazioni](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=it#select-destination).
 
 ## Stile di scrittura
 
 >[!IMPORTANT]
 >
->Leggi [Indicazioni sulla scrittura per la documentazione di Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html) prima di iniziare a creare la pagina della documentazione di destinazione.
+>Leggi [Indicazioni sulla scrittura per la documentazione di Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=it) prima di iniziare a creare la pagina della documentazione di destinazione.
 
 * Mantieni le tue frasi brevi e arriva rapidamente al punto. Se la tua frase è lunga più di 20 parole o utilizza più virgole, prendi in considerazione di suddividerla in frasi separate. Frasi di lunghezza superiore a 20 parole possono essere particolarmente difficili per i lettori.
 * Non siate eccessivamente educate. Evita di utilizzare &quot;per favore&quot; o &quot;gentilmente fare ...&quot; nella documentazione tecnica.
 
 ## Collegamento {#linking}
 
-Segui il modello di documentazione fornito e non modificare i collegamenti esistenti nel modello. Quando si includono nuovi collegamenti, leggere [Utilizzo dei collegamenti nella documentazione](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html) nella guida per i collaboratori.
+Segui il modello di documentazione fornito e non modificare i collegamenti esistenti nel modello. Quando si includono nuovi collegamenti, leggere [Utilizzo dei collegamenti nella documentazione](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=it) nella guida per i collaboratori.
 
 ## Linee guida per il branding {#branding}
 
@@ -43,7 +43,7 @@ Segui il modello di documentazione fornito e non modificare i collegamenti esist
 
 ## Immagini e schermate {#images-and-screenshots}
 
-* Per informazioni su [come collegarsi alle immagini](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#images), fare riferimento alla Guida per i collaboratori.
+* Per informazioni su [come collegarsi alle immagini](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=it#images), fare riferimento alla Guida per i collaboratori.
 * Quando utilizzi le schermate, accertati che queste acquisiscano l’intera schermata dell’interfaccia utente di Experience Platform.
 * Quando si marcano le immagini per evidenziare un determinato controllo o etichetta nella pagina, provare a seguire lo stile di markup utilizzato dal team di documentazione di Experience Platform. Osserva come la schermata basata sul profilo è evidenziata in [questa schermata](/help/destinations/catalog/cloud-storage/amazon-s3.md#export-type-frequency).
 * Utilizzare immagini in formato `png`.

@@ -25,17 +25,17 @@ La schermata Adobe Experience Platform Web SDK mostra informazioni sull’SDK we
 
 ## [!UICONTROL Analytics] {#section-f71dfcc22bb44c86bec328491606a482}
 
-La scheda [!UICONTROL Analytics] fornisce informazioni sull&#39;implementazione di [Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/home.html).
+La scheda [!UICONTROL Analytics] fornisce informazioni sull&#39;implementazione di [Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/home.html?lang=it).
 
 ## [!UICONTROL Target] {#section-988873ba5ede4317953193bd7ac5474c}
 
-Utilizza la schermata [!UICONTROL Target] per visualizzare [richieste Adobe Target](https://docs.adobe.com/content/help/it-IT/experience-cloud/user-guides/home.translate.html) o [mboxTrace](https://experienceleague.adobe.com/docs/target/using/activities/troubleshoot-activities/content-trouble.html#section_256FCF7C14BB435BA2C68049EF0BA99E) dettagli di risposta.
+Utilizza la schermata [!UICONTROL Target] per visualizzare [richieste Adobe Target](https://docs.adobe.com/content/help/it-IT/experience-cloud/user-guides/home.translate.html) o [mboxTrace](https://experienceleague.adobe.com/docs/target/using/activities/troubleshoot-activities/content-trouble.html?lang=it#section_256FCF7C14BB435BA2C68049EF0BA99E) dettagli di risposta.
 
 Per ulteriori informazioni, consulta la guida sull&#39;utilizzo di [Debugger per le implementazioni di Target](./target.md).
 
 ## [!UICONTROL Audience Manager] {#section-1d4484f8b46f457f859ba88039a9a585}
 
-Utilizza la scheda [[!UICONTROL Audience Manager]](https://docs.adobe.com/content/help/it-IT/experience-cloud/user-guides/home.translate.html) per visualizzare i dettagli di [eventi](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-event-calls/dcs-event-calls.html) in Adobe Audience Manager. Seleziona l’organizzazione per espanderla e visualizzare le informazioni.
+Utilizza la scheda [[!UICONTROL Audience Manager]](https://docs.adobe.com/content/help/it-IT/experience-cloud/user-guides/home.translate.html) per visualizzare i dettagli di [eventi](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-event-calls/dcs-event-calls.html?lang=it) in Adobe Audience Manager. Seleziona l’organizzazione per espanderla e visualizzare le informazioni.
 
 ## [!UICONTROL Tag Adobe Experience Platform] {#section-ee80a9c509f2462c89c1e5bd8d05d7c8}
 

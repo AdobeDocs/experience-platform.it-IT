@@ -12,7 +12,7 @@ ht-degree: 3%
 
 # Destinazione di Audience Analysis
 
-La destinazione di [!UICONTROL Audience Analysis] ti consente di arricchire i dati del pubblico di Adobe Experience Platform in [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=it). Puoi selezionare i tipi di pubblico da includere nei dati arricchiti risultanti. Le qualifiche del pubblico sono quindi disponibili come dimensioni nel reporting di [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html).
+La destinazione di [!UICONTROL Audience Analysis] ti consente di arricchire i dati del pubblico di Adobe Experience Platform in [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=it). Puoi selezionare i tipi di pubblico da includere nei dati arricchiti risultanti. Le qualifiche del pubblico sono quindi disponibili come dimensioni nel reporting di [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html?lang=it).
 
 >[!AVAILABILITY]
 >

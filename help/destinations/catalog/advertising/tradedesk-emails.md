@@ -88,7 +88,7 @@ La destinazione CRM [!DNL The Trade Desk] è un caricamento di file batch giorna
 
 ### Inserisci i dettagli della destinazione {#fill-in-details}
 
-Prima di poter inviare o attivare i dati sul pubblico a una destinazione, devi impostare una connessione alla tua piattaforma di destinazione. Durante la [configurazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) di questa destinazione, è necessario fornire le seguenti informazioni:
+Prima di poter inviare o attivare i dati sul pubblico a una destinazione, devi impostare una connessione alla tua piattaforma di destinazione. Durante la [configurazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=it) di questa destinazione, è necessario fornire le seguenti informazioni:
 
 * **[!UICONTROL Tipo di account]**: scegliere l&#39;opzione **[!UICONTROL Account esistente]**.
 * **[!UICONTROL Nome]**: un nome con cui riconoscerai questa destinazione in futuro.

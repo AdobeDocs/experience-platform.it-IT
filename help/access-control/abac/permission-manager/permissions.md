@@ -23,7 +23,7 @@ Utilizza query semplici in [!UICONTROL Gestione autorizzazioni] per creare rappo
 >id="platform_permission_manager"
 >title="Gestione autorizzazioni"
 >abstract="Utilizza i selettori a discesa nella pagina per ottenere rapporti sul livello di accesso di diversi livelli di granularità per utenti e ruoli."
-<!-- >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-manager/permissions.html" text="Permission manager" -->
+<!-- >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-manager/permissions.html?lang=it" text="Permission manager" -->
 
 Utilizzando il menu a discesa, selezionare l&#39;attributo **[!UICONTROL Utenti]**.
 

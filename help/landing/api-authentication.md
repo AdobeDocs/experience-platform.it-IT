@@ -52,7 +52,7 @@ Prima di creare integrazioni su Adobe Developer Console, il tuo account deve dis
 
 ### Accesso per sviluppatori {#gain-developer-access}
 
-Contatta un amministratore Admin Console della tua organizzazione per aggiungerti come sviluppatore a un profilo di prodotto Experience Platform. Per istruzioni specifiche su come [gestire l&#39;accesso degli sviluppatori per i profili di prodotto](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html), consulta la documentazione di Admin Console.
+Contatta un amministratore Admin Console della tua organizzazione per aggiungerti come sviluppatore a un profilo di prodotto Experience Platform. Per istruzioni specifiche su come [gestire l&#39;accesso degli sviluppatori per i profili di prodotto](https://helpx.adobe.com/it/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html), consulta la documentazione di Admin Console.
 
 Una volta assegnati come sviluppatori, puoi iniziare a creare integrazioni in [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Queste integrazioni sono una pipeline da app e servizi esterni alle API di Adobe.
 
@@ -60,7 +60,7 @@ Una volta assegnati come sviluppatori, puoi iniziare a creare integrazioni in [A
 
 L’amministratore di Admin Console deve anche aggiungere te come utente allo stesso profilo di prodotto. Con l’accesso utente, puoi visualizzare nell’interfaccia utente il risultato delle operazioni API eseguite.
 
-Per ulteriori informazioni, consulta la guida sulla gestione dei gruppi di utenti in Admin Console[&#128279;](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html).
+Per ulteriori informazioni, consulta la guida sulla gestione dei gruppi di utenti in Admin Console[&#128279;](https://helpx.adobe.com/it/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html).
 
 ## Generare una chiave API (ID client) e un ID organizzazione {#generate-credentials}
 

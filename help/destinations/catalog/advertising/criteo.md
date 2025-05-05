@@ -35,7 +35,7 @@ Criteo potenzia la pubblicità affidabile e di impatto per offrire esperienze pi
 
 ## Identità supportate {#supported-identities}
 
-Il criterio supporta l’attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
+Il criterio supporta l’attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=it#getting-started).
 
 | Identità di destinazione | Descrizione | Considerazioni |
 | --- | --- | --- |

@@ -13,7 +13,7 @@ ht-degree: 2%
 
 # Funzioni SQL definite dall&#39;Adobe in Query Service
 
-Le funzioni definite dall&#39;Adobe, in seguito denominate ADF, sono funzioni predefinite di Adobe Experience Platform Query Service che consentono di eseguire attività aziendali comuni sui dati [!DNL Experience Event]. Queste includono funzioni per [Sessionization](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) e [Attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html) simili a quelle disponibili in Adobe Analytics.
+Le funzioni definite dall&#39;Adobe, in seguito denominate ADF, sono funzioni predefinite di Adobe Experience Platform Query Service che consentono di eseguire attività aziendali comuni sui dati [!DNL Experience Event]. Queste includono funzioni per [Sessionization](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=it) e [Attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=it) simili a quelle disponibili in Adobe Analytics.
 
 Questo documento fornisce informazioni per le funzioni definite dall&#39;Adobe disponibili in [!DNL Query Service].
 
@@ -47,7 +47,7 @@ Quando si utilizzano dati [!DNL Experience Event] provenienti da siti Web, appli
 
 Questo raggruppamento, o sessionizzazione dei dati, consente di associare gli eventi per individuare più contesto sull’esperienza del cliente.
 
-Per ulteriori informazioni sulla sessionizzazione in Adobe Analytics, consulta la documentazione sulle [sessioni in base al contesto](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html).
+Per ulteriori informazioni sulla sessionizzazione in Adobe Analytics, consulta la documentazione sulle [sessioni in base al contesto](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=it).
 
 **Sintassi query**
 

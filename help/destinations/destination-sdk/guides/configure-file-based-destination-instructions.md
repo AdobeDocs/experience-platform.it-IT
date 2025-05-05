@@ -423,7 +423,7 @@ Dopo aver configurato la destinazione utilizzando gli endpoint di configurazione
 Come parte del processo di test della destinazione, devi utilizzare l’interfaccia utente di Experience Platform per creare tipi di pubblico, che attiverai nella destinazione. Fai riferimento alle due risorse seguenti per istruzioni su come creare tipi di pubblico in Experience Platform:
 
 * [Creare un pubblico - pagina della documentazione](/help/segmentation/ui/audience-portal.md#create-audience)
-* [Creare un pubblico - procedura dettagliata per i video](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
+* [Creare un pubblico - procedura dettagliata per i video](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=it)
 
 ## Passaggio 6: pubblicare la destinazione {#publish-destination}
 

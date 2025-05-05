@@ -78,7 +78,7 @@ Per istruzioni dettagliate sull&#39;esportazione dei set di dati in questa desti
 
 ## Convalidare l’esportazione dei dati {#exported-data}
 
-Per convalidare un&#39;esportazione di set di dati riuscita, puoi verificare che il set di dati sia stato correttamente eseguito nel tuo data warehouse di [Snowflake](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html).
+Per convalidare un&#39;esportazione di set di dati riuscita, puoi verificare che il set di dati sia stato correttamente eseguito nel tuo data warehouse di [Snowflake](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html?lang=it).
 
 ## Utilizzo dei dati e governance {#data-usage-governance}
 

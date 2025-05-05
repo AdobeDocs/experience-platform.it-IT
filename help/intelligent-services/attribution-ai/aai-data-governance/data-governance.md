@@ -22,10 +22,10 @@ L’integrazione tra IA per l’attribuzione e governance dei dati di Adobe Expe
 
 Le etichette di utilizzo dei dati e i criteri creati sui set di dati utilizzati da Experience Platform possono essere visualizzati nel flusso di lavoro di configurazione di IA per l’attribuzione. Queste etichette interrompono o avvisano gli utenti che utilizzano campi con etichetta.
 
-Questa integrazione consente di gestire la conformità in modo più efficiente. Gli amministratori dei dati della tua organizzazione possono impostare criteri per limitare l’utilizzo. Di conseguenza, puoi utilizzare dati conformi ai criteri definiti dagli amministratori dei dati. Per ulteriori informazioni, consulta la documentazione su [Etichette e criteri](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/data-governance.html).
+Questa integrazione consente di gestire la conformità in modo più efficiente. Gli amministratori dei dati della tua organizzazione possono impostare criteri per limitare l’utilizzo. Di conseguenza, puoi utilizzare dati conformi ai criteri definiti dagli amministratori dei dati. Per ulteriori informazioni, consulta la documentazione su [Etichette e criteri](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/data-governance.html?lang=it).
 
 Ulteriori informazioni su questa funzione sono disponibili qui:
 
 [Guida introduttiva di IA per l&#39;attribuzione](../../attribution-ai/getting-started.md)
-[Adobe Experience Platform e applicazioni](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html)
+[Adobe Experience Platform e applicazioni](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=it)
 [Diagrammi architettura Adobe Experience Cloud](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/experience-cloud.html?lang=it)

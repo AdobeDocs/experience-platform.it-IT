@@ -53,7 +53,7 @@ Il parametro della stringa di query include:
 
 La condivisione ID da dispositivo mobile a Web utilizza il parametro `adobe_mc`. Quando il parametro `adobe_mc` è presente e valido, il `ECID` della stringa di query viene aggiunto automaticamente alla mappa di identità nella prima richiesta effettuata all&#39;Edge Network. Tutte le interazioni di Edge Network successive utilizzeranno `ECID`.
 
-Per ulteriori informazioni su come passare gli ID visitatore da un&#39;app mobile a un WebView, consulta la documentazione su [gestione di WebViews](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/app-implementation/web-views.html#implementation).
+Per ulteriori informazioni su come passare gli ID visitatore da un&#39;app mobile a un WebView, consulta la documentazione su [gestione di WebViews](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/app-implementation/web-views.html?lang=it#implementation).
 
 ## Implementare la condivisione ID tra domini {#cross-domain-sharing}
 

@@ -127,4 +127,4 @@ I documenti seguenti forniscono ulteriori indicazioni sulle sfumature che circon
 * [Creare un account di servizio Adobe (JWT) nel portale Adobe Developer](https://developer.adobe.com/developer-console/docs/guides/authentication/ServiceAccountIntegration/)
 * [Creare uno schema nell’API](../../../../../xdm/tutorials/create-schema-api.md)
 * [Creare uno schema nell’interfaccia utente](../../../../../xdm/tutorials/create-schema-ui.md)
-* [Definisci i campi di identità nell&#39;interfaccia utente](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html)
+* [Definisci i campi di identità nell&#39;interfaccia utente](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html?lang=it)

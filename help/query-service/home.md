@@ -34,7 +34,7 @@ Per iniziare rapidamente a utilizzare le funzioni di Query Service, si consiglia
 
 ## Servizio query e servizi Experience Platform {#experience-platform-services}
 
-Query Service interagisce e può essere utilizzato con più servizi Experience Platform. Per trarre il massimo dalle funzionalità di Query Service, è necessario acquisire familiarità con questi servizi e con il modo in cui interagiscono con Query Service. La [pagina di destinazione della documentazione di Experience Platform](https://experienceleague.adobe.com/docs/experience-platform.html) fornisce riepiloghi e collegamenti alle funzionalità della piattaforma.
+Query Service interagisce e può essere utilizzato con più servizi Experience Platform. Per trarre il massimo dalle funzionalità di Query Service, è necessario acquisire familiarità con questi servizi e con il modo in cui interagiscono con Query Service. La [pagina di destinazione della documentazione di Experience Platform](https://experienceleague.adobe.com/docs/experience-platform.html?lang=it) fornisce riepiloghi e collegamenti alle funzionalità della piattaforma.
 
 ### [!DNL Data Science Workspace] {#data-science-workspace}
 

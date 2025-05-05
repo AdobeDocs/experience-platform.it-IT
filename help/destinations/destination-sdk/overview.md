@@ -32,7 +32,7 @@ Consulta la documentazione nei collegamenti riportati di seguito per iniziare ra
                 <li><a href="/help/destinations/destination-sdk/functionality/configuration-options.md">Spiegazione di tutte le opzioni di configurazione</a></li>
                 <li> Configurazione del server di destinazione - <a href="/help/destinations/destination-sdk/functionality/destination-server/server-specs.md">specifiche del server</a> e <a href="/help/destinations/destination-sdk/functionality/destination-server/templating-specs.md">specifiche del modello</a></li>
                 <li><a href="/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md">Campi dati del cliente e altri componenti di configurazione della destinazione</a></li>
-                <li><a href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">Modellazione e macro</a></li>
+                <li><a href="https://experienceleague.adobe.com/it/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">Modellazione e macro</a></li>
             </ul>
         </td>
         <td>
@@ -68,7 +68,7 @@ Consulta la documentazione nei collegamenti riportati di seguito per iniziare ra
                 <li><a href="/help/destinations/destination-sdk/guides/configure-destination-instructions.md">Configurare una guida end-to-end per la destinazione di streaming</a></li>
                 <li><a href="/help/destinations/destination-sdk/functionality/destination-server/message-format.md">Comprendere la trasformazione dei dati tramite modelli di Pebble</a> e <a href="/help/destinations/destination-sdk/functionality/destination-server/supported-functions.md">visualizzare le funzioni di modello supportate</a></li>
                 <li><a href="/help/destinations/destination-sdk/functionality/destination-configuration/aggregation-policy.md">Comprendere i criteri di aggregazione dei dati</a></li>
-                <li><a href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">Esempio di configurazione live</a></li>
+                <li><a href="https://experienceleague.adobe.com/it/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">Esempio di configurazione live</a></li>
                 <li><a href="/help/destinations/destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md">Verifica la destinazione di streaming</a></li>
             </ul>
         </td>

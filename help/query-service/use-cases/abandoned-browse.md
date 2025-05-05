@@ -25,7 +25,7 @@ Questo documento e la relativa presentazione video forniscono un flusso di lavor
 Questa dimostrazione di flusso di lavoro si basa su diversi servizi di Adobe Experience Platform. Se desideri procedere, ti consigliamo di comprendere bene le funzioni e i servizi seguenti:
 
 * Le [nozioni di base sulla composizione dello schema Experience Data Model (XDM)](../../xdm/schema/composition.md)
-* Come [creare set di dati e acquisire dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)
+* Come [creare set di dati e acquisire dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=it)
 * Come [acquisire dati utilizzando il connettore di origine di Adobe Analytics](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-adobe-analytics.html?lang=it)
 * [Segmentazione](../../segmentation/home.md)
 * [Destinazioni](../../destinations/home.md)

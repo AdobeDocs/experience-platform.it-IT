@@ -49,7 +49,7 @@ L’esercitazione seguente utilizza un modello di propensione all’acquisto Lum
 
 ### Creare lo schema di dati web Luma e acquisire i dati
 
-Per creare un modello, è necessario disporre di un set di dati in Experience Platform utilizzato per addestrare e valutare il modello. Il seguente tutorial video del corso [Data Science Workspace](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw&amp;lang=it) illustra come creare lo schema Luma e acquisire i dati utilizzati dal modello di propensione all’acquisto.
+Per creare un modello, è necessario disporre di un set di dati in Experience Platform utilizzato per addestrare e valutare il modello. Il seguente tutorial video del corso [Data Science Workspace](https://experienceleague.adobe.com/?lang=it&recommended=ExperiencePlatform-U-1-2021.1.dsw&amp;lang=it) illustra come creare lo schema Luma e acquisire i dati utilizzati dal modello di propensione all’acquisto.
 
 >[!VIDEO](https://video.tv.adobe.com/v/333312)
 

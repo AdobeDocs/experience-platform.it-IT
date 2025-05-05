@@ -30,7 +30,7 @@ Prima di poter creare una connessione sorgente per portare Campaign v8 in Experi
 
 >[!IMPORTANT]
 >
->Per visualizzare i dati di registro in Campaign, devi avere accesso alla console client di Adobe Campaign v8. Per informazioni su come scaricare e installare la console client, visita la [documentazione di Campaign v8](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html).
+>Per visualizzare i dati di registro in Campaign, devi avere accesso alla console client di Adobe Campaign v8. Per informazioni su come scaricare e installare la console client, visita la [documentazione di Campaign v8](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html?lang=it).
 
 Accedi all’istanza di Campaign v8 tramite la console client. Nella scheda [!DNL Explorer], selezionare [!DNL Administration], quindi [!DNL Configuration]. Selezionare [!DNL Data schemas], quindi applicare il filtro `broadLog` per il nome o l&#39;etichetta. Nell&#39;elenco visualizzato selezionare lo schema di origine dei registri di consegna dei destinatari con il nome `broadLogRcp`.
 

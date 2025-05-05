@@ -81,7 +81,7 @@ Il passaggio successivo consiste nel creare una definizione di segmento e genera
 * Abilita tutte le definizioni dei segmenti per la segmentazione pianificata.
 * Abilita le definizioni di segmenti specificate per la segmentazione in streaming.
 
-In alternativa, è disponibile anche un&#39;esercitazione video [per la generazione di segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-segments.html) per ulteriori informazioni.
+In alternativa, è disponibile anche un&#39;esercitazione video [per la generazione di segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-segments.html?lang=it) per ulteriori informazioni.
 
 ## Attivare il pubblico per una campagna e-mail {#activate-audience-for-campaign}
 

@@ -76,7 +76,7 @@ Imposta l’inoltro di eventi in Platform per inviare i dati sul comportamento d
 
 Assicurati che l’estensione per il retargeting fuori sede sia associata a una regola evento valida in Raccolta dati di Adobe Experience Platform. In genere, è necessario creare una regola globale per attivare azioni chiave, ad esempio `page load` o interazioni utente specifiche.
 
-Per ulteriori informazioni sulla configurazione dell&#39;estensione, consulta la documentazione di [Inoltro eventi](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/getting-started).
+Per ulteriori informazioni sulla configurazione dell&#39;estensione, consulta la documentazione di [Inoltro eventi](https://experienceleague.adobe.com/it/docs/experience-platform/tags/event-forwarding/getting-started).
 
 ## Altri casi d’uso {#other-use-cases}
 

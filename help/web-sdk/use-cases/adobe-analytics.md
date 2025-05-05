@@ -16,7 +16,7 @@ Experience Platform Web SDK può inviare dati ad Adobe Analytics tramite l’Edg
 
 * Aggiungi il gruppo di campi [**[!UICONTROL Adobe Analytics ExperienceEvent]**](../../xdm/field-groups/event/analytics-full-extension.md) allo schema, quindi utilizza l&#39;oggetto [`XDM`](../commands/sendevent/xdm.md).
 * Utilizzare l&#39;oggetto [`data`](../commands/sendevent/data.md) per inviare dati ad Adobe Analytics senza uno schema XDM.
-* Utilizza [variabili di dati di contesto](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/page-vars/contextdata) e [regole di elaborazione](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/c-processing-rules/c-processing-rules-configuration/processing-rules-about) generate automaticamente.
+* Utilizza [variabili di dati di contesto](https://experienceleague.adobe.com/it/docs/analytics/implementation/vars/page-vars/contextdata) e [regole di elaborazione](https://experienceleague.adobe.com/it/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/c-processing-rules/c-processing-rules-configuration/processing-rules-about) generate automaticamente.
 
 ## Usa l&#39;oggetto `XDM` {#use-xdm-object}
 
@@ -24,10 +24,10 @@ Se desideri utilizzare uno schema predefinito specifico per Adobe Analytics, puo
 
 Esistono due modi per inviare dati ad Adobe Analytics tramite Web SDK:
 
-* [Invia dati ad Adobe Analytics tramite l&#39;estensione tag Web SDK](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/web-sdk/web-sdk-tag-extension)
-* [Invia dati ad Adobe Analytics utilizzando la libreria JavaScript dell&#39;SDK Web](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/web-sdk/web-sdk-javascript-library)
+* [Invia dati ad Adobe Analytics tramite l&#39;estensione tag Web SDK](https://experienceleague.adobe.com/it/docs/analytics/implementation/aep-edge/web-sdk/web-sdk-tag-extension)
+* [Invia dati ad Adobe Analytics utilizzando la libreria JavaScript dell&#39;SDK Web](https://experienceleague.adobe.com/it/docs/analytics/implementation/aep-edge/web-sdk/web-sdk-javascript-library)
 
-Per un riferimento completo ai campi XDM e al modo in cui vengono mappati alle variabili di Adobe Analytics, consulta la sezione [Mappatura delle variabili oggetto XDM su Adobe Analytics](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/xdm-var-mapping) nella guida all&#39;implementazione di.
+Per un riferimento completo ai campi XDM e al modo in cui vengono mappati alle variabili di Adobe Analytics, consulta la sezione [Mappatura delle variabili oggetto XDM su Adobe Analytics](https://experienceleague.adobe.com/it/docs/analytics/implementation/aep-edge/xdm-var-mapping) nella guida all&#39;implementazione di.
 
 ## Usa l&#39;oggetto `data` {#use-data-object}
 
@@ -35,14 +35,14 @@ In alternativa all’utilizzo dell’oggetto XDM, puoi utilizzare l’oggetto da
 
 A seconda che si utilizzi AppMeasurement o l’estensione tag Analytics, consulta le seguenti guide per informazioni dettagliate su come migrare a Web SDK:
 
-* [Migrare dall&#39;estensione tag Adobe Analytics all&#39;estensione tag Web SDK](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/web-sdk/analytics-extension-to-web-sdk)
-* [Migrare da AppMeasurement a Web SDK](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/web-sdk/appmeasurement-to-web-sdk)
+* [Migrare dall&#39;estensione tag Adobe Analytics all&#39;estensione tag Web SDK](https://experienceleague.adobe.com/it/docs/analytics/implementation/aep-edge/web-sdk/analytics-extension-to-web-sdk)
+* [Migrare da AppMeasurement a Web SDK](https://experienceleague.adobe.com/it/docs/analytics/implementation/aep-edge/web-sdk/appmeasurement-to-web-sdk)
 
-Consulta la documentazione sulla mappatura delle variabili dell&#39;oggetto dati da [ad Adobe Analytics](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/data-var-mapping) nella guida all&#39;implementazione di Adobe Analytics per un riferimento completo ai campi dell&#39;oggetto dati e alla modalità di mappatura sulle variabili di Analytics.
+Consulta la documentazione sulla mappatura delle variabili dell&#39;oggetto dati da [ad Adobe Analytics](https://experienceleague.adobe.com/it/docs/analytics/implementation/aep-edge/data-var-mapping) nella guida all&#39;implementazione di Adobe Analytics per un riferimento completo ai campi dell&#39;oggetto dati e alla modalità di mappatura sulle variabili di Analytics.
 
 ## Utilizzare le variabili di dati di contesto {#use-context-data-variables}
 
-Tutte le variabili non mappate automaticamente sono disponibili come [variabili di dati di contesto](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/page-vars/contextdata). Puoi quindi utilizzare [regole di elaborazione](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/c-processing-rules/c-processing-rules-configuration/processing-rules-about) per mappare le variabili di dati di contesto alle variabili di Analytics. Ad esempio, se lo schema XDM era personalizzato come il seguente:
+Tutte le variabili non mappate automaticamente sono disponibili come [variabili di dati di contesto](https://experienceleague.adobe.com/it/docs/analytics/implementation/vars/page-vars/contextdata). Puoi quindi utilizzare [regole di elaborazione](https://experienceleague.adobe.com/it/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/c-processing-rules/c-processing-rules-configuration/processing-rules-about) per mappare le variabili di dati di contesto alle variabili di Analytics. Ad esempio, se lo schema XDM era personalizzato come il seguente:
 
 ```json
 {
@@ -84,7 +84,7 @@ a.x.objectarray.2.ad3 //600x50
 
 +++Come posso distinguere le chiamate di visualizzazione pagina dalle chiamate di tracciamento dei collegamenti nell’SDK per web?
 
-L&#39;AppMeasurement in Adobe Analytics utilizza chiamate di metodo separate per le visualizzazioni di pagina ([`t()` metodo](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/functions/t-method)) e le chiamate di tracciamento dei collegamenti ([`tl()` metodo](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/functions/tl-method)). L&#39;SDK Web fornisce invece solo il comando [`sendEvent`](../commands/sendevent/overview.md) per l&#39;invio di visualizzazioni di pagina e tracciamento dei collegamenti. I dati inclusi in un evento determinano se si tratta di [visualizzazione pagina](https://experienceleague.adobe.com/en/docs/analytics/components/metrics/page-views) o di [evento pagina](https://experienceleague.adobe.com/en/docs/analytics/components/metrics/page-events) in Adobe Analytics.
+L&#39;AppMeasurement in Adobe Analytics utilizza chiamate di metodo separate per le visualizzazioni di pagina ([`t()` metodo](https://experienceleague.adobe.com/it/docs/analytics/implementation/vars/functions/t-method)) e le chiamate di tracciamento dei collegamenti ([`tl()` metodo](https://experienceleague.adobe.com/it/docs/analytics/implementation/vars/functions/tl-method)). L&#39;SDK Web fornisce invece solo il comando [`sendEvent`](../commands/sendevent/overview.md) per l&#39;invio di visualizzazioni di pagina e tracciamento dei collegamenti. I dati inclusi in un evento determinano se si tratta di [visualizzazione pagina](https://experienceleague.adobe.com/it/docs/analytics/components/metrics/page-views) o di [evento pagina](https://experienceleague.adobe.com/it/docs/analytics/components/metrics/page-events) in Adobe Analytics.
 
 Per impostazione predefinita, tutti gli eventi sono considerati visualizzazioni di pagina in Adobe Analytics. Se desideri impostare un evento Web SDK su una chiamata di tracciamento dei collegamenti di Adobe Analytics, imposta i campi seguenti:
 
@@ -92,7 +92,7 @@ Per impostazione predefinita, tutti gli eventi sono considerati visualizzazioni 
 * **Oggetto dati**: `data.__adobe.analytics.linkName`, `data.__adobe.analytics.linkType` e `data.__adobe.analytics.linkURL`
 * **Dati contestuali**: non supportati
 
-Per ulteriori informazioni, vedere il metodo [`tl()`](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/functions/tl-method) nella guida all&#39;implementazione di Adobe Analytics.
+Per ulteriori informazioni, vedere il metodo [`tl()`](https://experienceleague.adobe.com/it/docs/analytics/implementation/vars/functions/tl-method) nella guida all&#39;implementazione di Adobe Analytics.
 
 Se si abilita [`clickCollectionEnabled`](../commands/configure/clickcollectionenabled.md) nel comando `configure`, questi campi verranno compilati automaticamente.
 

@@ -22,12 +22,12 @@ Questo connettore è disponibile nel catalogo delle destinazioni per i clienti c
 Per utilizzare questa connessione di destinazione, assicurati di avere accesso a:
 
 - [Adobe Experience Platform](https://experience.adobe.com/)
-- [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/). Con l&#39;accesso alla console per sviluppatori, puoi visualizzare le informazioni sull&#39;account del servizio e sulle credenziali necessarie per [completare la configurazione](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html#configure-the-extension) dell&#39;estensione in Adobe Commerce.
+- [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/). Con l&#39;accesso alla console per sviluppatori, puoi visualizzare le informazioni sull&#39;account del servizio e sulle credenziali necessarie per [completare la configurazione](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html?lang=it#configure-the-extension) dell&#39;estensione in Adobe Commerce.
 - [Adobe Commerce Cloud versione 2.4.4 o successiva](https://business.adobe.com/products/magento/magento-commerce.html)
 
 In Experience Platform, crea quanto segue:
 
-- [Schema](../../../xdm/schema/composition.md). Lo schema creato rappresenta i dati che intendi acquisire da Adobe Commerce. [Ulteriori informazioni](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/update-xdm.html) su come creare uno schema contenente gruppi di campi specifici di Commerce.
+- [Schema](../../../xdm/schema/composition.md). Lo schema creato rappresenta i dati che intendi acquisire da Adobe Commerce. [Ulteriori informazioni](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/update-xdm.html?lang=it) su come creare uno schema contenente gruppi di campi specifici di Commerce.
 - [Set di dati](../../../catalog/datasets/user-guide.md#create). Un set di dati è un costrutto di archiviazione e gestione per una raccolta di dati. Crea questo set di dati dallo schema creato in precedenza.
 - [Stream di dati](../../../datastreams/overview.md#create). ID che consente il flusso di dati da Adobe Experience Platform ad altri prodotti Adobe DX. Questo ID deve essere associato a un sito web specifico all’interno della tua istanza Adobe Commerce specifica. Quando crei questo flusso di dati, specifica lo schema XDM creato in precedenza.
 
@@ -71,7 +71,7 @@ Leggi [Attivare profili e tipi di pubblico nelle destinazioni delle richieste di
 
 ## Passaggi successivi in [!DNL Adobe Commerce]
 
-Dopo aver configurato la destinazione [!DNL Commerce] in Experience Platform, è necessario installare l&#39;estensione [!DNL Audience Activation] in [!DNL Commerce] e configurare [!DNL Commerce Admin] per importare i tipi di pubblico Real-Time CDP creati. Per ulteriori informazioni, consulta la [[!DNL Commerce] documentazione](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html).
+Dopo aver configurato la destinazione [!DNL Commerce] in Experience Platform, è necessario installare l&#39;estensione [!DNL Audience Activation] in [!DNL Commerce] e configurare [!DNL Commerce Admin] per importare i tipi di pubblico Real-Time CDP creati. Per ulteriori informazioni, consulta la [[!DNL Commerce] documentazione](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html?lang=it).
 
 ## Convalidare l’attivazione del pubblico in Commerce {#exported-data}
 

@@ -63,4 +63,4 @@ Seguendo questa esercitazione, hai creato un connettore sata per le classificazi
 
 * [Panoramica del connettore di origine di Adobe Analytics](../../../../connectors/adobe-applications/analytics.md)
 * [Creare una connessione di origine di Analytics per i dati della suite di rapporti nell’interfaccia utente](./analytics.md)
-* [Informazioni sulle classificazioni](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html)
+* [Informazioni sulle classificazioni](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html?lang=it)

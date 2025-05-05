@@ -159,12 +159,12 @@ La sezione **[!UICONTROL Monitoraggio]** ti consente di monitorare l&#39;acquisi
 
 ### [!UICONTROL Dati federati]
 
-La sezione **[!UICONTROL Modelli]** consente di progettare e creare modelli di dati e schemi che definiscono la struttura, le relazioni e i vincoli dei dati. Puoi trovare ulteriori informazioni sui modelli di dati e gli schemi nella [guida utente Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/datamodel/schemas).
+La sezione **[!UICONTROL Modelli]** consente di progettare e creare modelli di dati e schemi che definiscono la struttura, le relazioni e i vincoli dei dati. Puoi trovare ulteriori informazioni sui modelli di dati e gli schemi nella [guida utente Federated Audience Composition](https://experienceleague.adobe.com/it/docs/federated-audience-composition/using/config/datamodel/schemas).
 
 La sezione **[!UICONTROL Audit trail]** fornisce un record dettagliato e cronologico di tutte le azioni e gli eventi eseguiti nell&#39;ambiente in tempo reale. Puoi trovare ulteriori informazioni sull&#39;audit trail nella [guida utente Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/audit-trail/audit-trail).
 
 
-La sezione **[!UICONTROL Federated databases]** consente di connettere Adobe Experience Platform al data warehouse aziendale. Ulteriori informazioni sulla connessione ai database federati sono disponibili nella [guida utente Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/federated-db).
+La sezione **[!UICONTROL Federated databases]** consente di connettere Adobe Experience Platform al data warehouse aziendale. Ulteriori informazioni sulla connessione ai database federati sono disponibili nella [guida utente Federated Audience Composition](https://experienceleague.adobe.com/it/docs/federated-audience-composition/using/config/federated-db).
 
 ### [!UICONTROL Funzione Decisioni]
 

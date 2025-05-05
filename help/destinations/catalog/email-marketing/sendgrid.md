@@ -34,7 +34,7 @@ Prima di iniziare a configurare la destinazione sono necessari i seguenti elemen
 
 ![](../../assets/catalog/email-marketing/sendgrid/01-api-key.jpg)
 
-Prima di attivare i dati nella destinazione SendGrid, è necessario creare uno [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=it), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) e [segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) in [!DNL Experience Platform]. Consulta anche la sezione [limits](#limits) più avanti in questa pagina.
+Prima di attivare i dati nella destinazione SendGrid, è necessario creare uno [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=it), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=it) e [segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=it) in [!DNL Experience Platform]. Consulta anche la sezione [limits](#limits) più avanti in questa pagina.
 
 >[!IMPORTANT]
 >
@@ -98,7 +98,7 @@ Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;ese
 
 ### Inserire i dettagli della destinazione {#destination-details}
 
-Durante la [configurazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) di questa destinazione, è necessario fornire le seguenti informazioni:
+Durante la [configurazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=it) di questa destinazione, è necessario fornire le seguenti informazioni:
 
 * **[!UICONTROL Nome]**: il nome con cui riconoscerai questa destinazione in futuro.
 * **[!UICONTROL Descrizione]**: una descrizione facoltativa che ti aiuterà a identificare questa destinazione in futuro.

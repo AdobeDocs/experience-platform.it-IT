@@ -175,7 +175,7 @@ Il consenso `adID` rappresenta il consenso del cliente per l&#39;utilizzo di un 
 
 Per utilizzare il gruppo di campi [!UICONTROL Consensi e preferenze] per acquisire i dati sul consenso dai clienti, è necessario creare un set di dati basato su uno schema che contiene tale gruppo di campi.
 
-Consulta l&#39;esercitazione sulla [creazione di uno schema nell&#39;interfaccia utente](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) per i passaggi su come assegnare gruppi di campi ai campi. Dopo aver creato uno schema contenente un campo con il gruppo di campi [!UICONTROL Consensi e preferenze], consulta la sezione sulla [creazione di un set di dati](../../../catalog/datasets/user-guide.md#create) nella guida utente del set di dati, seguendo i passaggi per creare un set di dati con uno schema esistente.
+Consulta l&#39;esercitazione sulla [creazione di uno schema nell&#39;interfaccia utente](https://www.adobe.com/go/xdm-schema-editor-tutorial-en_it) per i passaggi su come assegnare gruppi di campi ai campi. Dopo aver creato uno schema contenente un campo con il gruppo di campi [!UICONTROL Consensi e preferenze], consulta la sezione sulla [creazione di un set di dati](../../../catalog/datasets/user-guide.md#create) nella guida utente del set di dati, seguendo i passaggi per creare un set di dati con uno schema esistente.
 
 >[!IMPORTANT]
 >

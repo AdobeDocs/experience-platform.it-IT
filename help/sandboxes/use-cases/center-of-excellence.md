@@ -46,7 +46,7 @@ Per implementare correttamente questo caso d’uso, devi utilizzare più aree di
 - [Set di dati](../../catalog/datasets/overview.md)
 - [Schemi](../../xdm//home.md)
 - [Tipi di pubblico](../../segmentation/home.md)
-- [Percorsi da Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/journey)
+- [Percorsi da Adobe Journey Optimizer](https://experienceleague.adobe.com/it/docs/journey-optimizer/using/orchestrate-journeys/journey)
 
 ## Come utilizzare il caso d’uso: panoramica di alto livello {#achieve-the-use-case-high-level}
 
@@ -89,7 +89,7 @@ Ora che il tuo pacchetto sandbox d’oro è pronto, hai creato un centro di ecce
 
 >[!NOTE]
 >
-> I passaggi precedenti seguono la procedura descritta nell’interfaccia utente di Experience Platform. È possibile seguire gli stessi passaggi utilizzando l’API attraverso vari endpoint. Per informazioni su come effettuare ogni richiesta tramite l&#39;API, consultare la `sandboxes` [guida dell&#39;endpoint](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/api/sandboxes#create) e la `packages` [guida dell&#39;endpoint](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/sandbox-tooling-api/packages).
+> I passaggi precedenti seguono la procedura descritta nell’interfaccia utente di Experience Platform. È possibile seguire gli stessi passaggi utilizzando l’API attraverso vari endpoint. Per informazioni su come effettuare ogni richiesta tramite l&#39;API, consultare la `sandboxes` [guida dell&#39;endpoint](https://experienceleague.adobe.com/it/docs/experience-platform/sandbox/api/sandboxes#create) e la `packages` [guida dell&#39;endpoint](https://experienceleague.adobe.com/it/docs/experience-platform/sandbox/sandbox-tooling-api/packages).
 
 ## Altri casi d’uso ottenuti tramite il supporto dei dati dei partner {#other-use-cases}
 

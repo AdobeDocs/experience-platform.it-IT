@@ -26,7 +26,7 @@ In Adobe Analytics, i dati personalizzati a livello di prodotto possono essere r
 
 Queste variabili sono denominate variabili di merchandising della sintassi di prodotto. Ciò consente la raccolta di informazioni, ad esempio un &quot;importo di sconto&quot; per prodotto o informazioni sulla &quot;posizione nella pagina&quot; del prodotto nei risultati di ricerca del cliente.
 
-Per ulteriori informazioni sull&#39;utilizzo della sintassi di prodotto, consulta la documentazione di Adobe Analytics su [implementazione di eVar tramite la sintassi di prodotto](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-product-syntax).
+Per ulteriori informazioni sull&#39;utilizzo della sintassi di prodotto, consulta la documentazione di Adobe Analytics su [implementazione di eVar tramite la sintassi di prodotto](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=it#implement-using-product-syntax).
 
 Le sezioni seguenti descrivono i campi XDM necessari per accedere alle variabili merchandising nel set di dati [!DNL Analytics]:
 
@@ -127,7 +127,7 @@ Nella generazione rapporti, gli ordini, i ricavi, le visualizzazioni dei prodott
 | ricerca interna:camicia estiva | 19,99 | 1 | 1 | 1 |
 | ricerca interna:cappello invernale | 12,99 | 1 | 1 | 1 |
 
-Per ulteriori informazioni sull&#39;utilizzo della sintassi per le variabili di conversione, consulta la documentazione di Adobe Analytics su [implementazione di eVar tramite la sintassi per le variabili di conversione](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-conversion-variable-syntax).
+Per ulteriori informazioni sull&#39;utilizzo della sintassi per le variabili di conversione, consulta la documentazione di Adobe Analytics su [implementazione di eVar tramite la sintassi per le variabili di conversione](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=it#implement-using-conversion-variable-syntax).
 
 Di seguito sono riportati i campi XDM per produrre la sintassi della variabile di conversione nel set di dati [!DNL Analytics]:
 

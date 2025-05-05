@@ -22,7 +22,7 @@ L’integrazione tra IA per l’analisi dei clienti e Governance dei dati di Ado
 
 Le etichette di utilizzo dei dati e i criteri creati sui set di dati utilizzati da Experience Platform possono essere visualizzati nel flusso di lavoro di configurazione di IA per l’analisi dei clienti. Queste etichette interrompono o avvisano gli utenti che utilizzano campi con etichetta.
 
-Questa integrazione consente di gestire la conformità in modo più efficiente. Gli amministratori dei dati della tua organizzazione possono impostare criteri per limitare l’utilizzo. Di conseguenza, puoi utilizzare dati conformi ai criteri definiti dagli amministratori dei dati. Per ulteriori informazioni, consulta la documentazione su [Etichette e criteri](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/data-governance.html).
+Questa integrazione consente di gestire la conformità in modo più efficiente. Gli amministratori dei dati della tua organizzazione possono impostare criteri per limitare l’utilizzo. Di conseguenza, puoi utilizzare dati conformi ai criteri definiti dagli amministratori dei dati. Per ulteriori informazioni, consulta la documentazione su [Etichette e criteri](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/data-governance.html?lang=it).
 
 ## Criterio di consenso {#consent-policy}
 
@@ -31,5 +31,5 @@ IA per l’analisi dei clienti rispetta le preferenze di consenso. Dopo aver [co
 Ulteriori informazioni su questa funzione sono disponibili qui:
 
 [Guida introduttiva di IA per l&#39;analisi dei clienti](../../customer-ai/getting-started.md)
-[Adobe Experience Platform e applicazioni](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html)
+[Adobe Experience Platform e applicazioni](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=it)
 [Diagrammi architettura Adobe Experience Cloud](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/experience-cloud.html?lang=it)

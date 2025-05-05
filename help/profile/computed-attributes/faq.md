@@ -99,4 +99,4 @@ Gli attributi calcolati derivano automaticamente le etichette di utilizzo dei da
 
 ## Come si utilizzano gli attributi calcolati con Adobe Journey Optimizer?
 
-Per utilizzare gli attributi calcolati nei percorsi, è necessario aggiungere il gruppo di campi `SystemComputedAttributes` all&#39;origine dati Experience Platform. Per ulteriori informazioni sulla configurazione dell&#39;origine dati Experience Platform, leggere la [guida all&#39;origine dati di Adobe Experience Platform](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html).
+Per utilizzare gli attributi calcolati nei percorsi, è necessario aggiungere il gruppo di campi `SystemComputedAttributes` all&#39;origine dati Experience Platform. Per ulteriori informazioni sulla configurazione dell&#39;origine dati Experience Platform, leggere la [guida all&#39;origine dati di Adobe Experience Platform](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html?lang=it).

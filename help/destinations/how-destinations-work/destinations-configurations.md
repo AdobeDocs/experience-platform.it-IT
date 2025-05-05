@@ -23,7 +23,7 @@ Questa pagina descrive o collega tutte le impostazioni di esportazione comuni e 
 
 ## Impostazioni di esportazione comuni tra i tipi di destinazione {#common-settings-across-destination-types}
 
-Il comportamento di esportazione della destinazione è coerente tra le destinazioni appartenenti a un tipo di destinazione per quanto riguarda *ciò che attiva un&#39;esportazione di destinazione* e *ciò che è incluso nelle esportazioni di destinazione*. Le esportazioni delle destinazioni vengono attivate dalle notifiche ricevute dal servizio [upstream Real-time Customer Profile](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html#adobe-experience-platform-%26-applications-detailed-architecture-diagram).
+Il comportamento di esportazione della destinazione è coerente tra le destinazioni appartenenti a un tipo di destinazione per quanto riguarda *ciò che attiva un&#39;esportazione di destinazione* e *ciò che è incluso nelle esportazioni di destinazione*. Le esportazioni delle destinazioni vengono attivate dalle notifiche ricevute dal servizio [upstream Real-time Customer Profile](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=it#adobe-experience-platform-%26-applications-detailed-architecture-diagram).
 
 Ciò che è incluso nelle esportazioni di destinazione varia leggermente tra i tipi di destinazione. Ulteriori informazioni sui [modelli comuni di comportamento di esportazione per tipo di destinazione](/help/destinations/how-destinations-work/profile-export-behavior.md). Queste impostazioni non possono essere modificate dagli sviluppatori o dagli utenti di Real-Time CDP.
 

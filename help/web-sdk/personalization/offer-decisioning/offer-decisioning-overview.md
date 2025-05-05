@@ -22,7 +22,7 @@ Adobe Experience Platform [!DNL Web SDK] può distribuire ed eseguire il renderi
 
 ## Terminologia
 
-Quando si lavora con Offer Decisioning, è importante comprendere la seguente terminologia. Per ulteriori informazioni e per visualizzare altri termini, visitare il [glossario di Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html).
+Quando si lavora con Offer Decisioning, è importante comprendere la seguente terminologia. Per ulteriori informazioni e per visualizzare altri termini, visitare il [glossario di Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html?lang=it).
 
 * **Ambiti decisionali:** Per Offer Decisioning, gli ambiti decisionali sono le stringhe con codifica Base64 di JSON contenenti gli ID di attività e posizionamento che il servizio offer decisioning deve utilizzare per proporre le offerte.
 
@@ -81,7 +81,7 @@ Per abilitare Offer Decisioning, effettua le seguenti operazioni:
    * Installare SDK tramite tag
 
       1. [Creare una proprietà tag](/help/tags/ui/administration/companies-and-properties.md)
-      1. [Aggiungi il codice di incorporamento](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
+      1. [Aggiungi il codice di incorporamento](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html?lang=it)
       1. Installa e configura l’estensione Experience Platform Web SDK con lo stream di dati creato selezionando la configurazione dal menu a discesa &quot;Stream di dati&quot;. Consulta la documentazione sulle [estensioni](/help/tags/ui/managing-resources/extensions/overview.md).
 
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
@@ -328,4 +328,4 @@ Per abilitare Offer Decisioning, effettua le seguenti operazioni:
 
 ## Limitazioni
 
-Alcuni vincoli di offerta non sono attualmente supportati con i flussi di lavoro mobili di Edge Network, ad esempio il limite. Il valore del campo Limite specifica quante volte un’offerta può essere presentata a tutti gli utenti. Per ulteriori dettagli, consulta [Documentazione su regole e vincoli di idoneità per le offerte](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility).
+Alcuni vincoli di offerta non sono attualmente supportati con i flussi di lavoro mobili di Edge Network, ad esempio il limite. Il valore del campo Limite specifica quante volte un’offerta può essere presentata a tutti gli utenti. Per ulteriori dettagli, consulta [Documentazione su regole e vincoli di idoneità per le offerte](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html?lang=it#eligibility).

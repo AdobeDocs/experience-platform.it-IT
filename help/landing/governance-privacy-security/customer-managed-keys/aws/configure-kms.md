@@ -13,13 +13,13 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Questo documento si applica alle implementazioni di Experience Platform in esecuzione su Amazon Web Services (AWS). Experience Platform in esecuzione su AWS è attualmente disponibile per un numero limitato di clienti. Per ulteriori informazioni sull&#39;infrastruttura Experience Platform supportata, consulta la [Panoramica multi-cloud di Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
+>Questo documento si applica alle implementazioni di Experience Platform in esecuzione su Amazon Web Services (AWS). Experience Platform in esecuzione su AWS è attualmente disponibile per un numero limitato di clienti. Per ulteriori informazioni sull&#39;infrastruttura Experience Platform supportata, consulta la [Panoramica multi-cloud di Experience Platform](https://experienceleague.adobe.com/it/docs/experience-platform/landing/multi-cloud).
 >
 >[Le chiavi gestite dal cliente](../overview.md) (CMK) su AWS sono supportate per Privacy e Security Shield, ma non sono disponibili per Healthcare Shield. CMK su Azure è supportato per Privacy e Security Shield e Healthcare Shield.
 
 Utilizza questa guida per proteggere i dati con il servizio Key Management Service (KMS) di Amazon Web Services (AWS) creando, gestendo e controllando le chiavi di crittografia per Adobe Experience Platform. Questa integrazione semplifica la conformità, semplifica le operazioni attraverso l&#39;automazione ed elimina la necessità di mantenere la propria infrastruttura di gestione delle chiavi.
 
-Per istruzioni specifiche per Customer Journey Analytics, consulta la [documentazione di Customer Journey Analytics CMK](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-privacy/cmk)
+Per istruzioni specifiche per Customer Journey Analytics, consulta la [documentazione di Customer Journey Analytics CMK](https://experienceleague.adobe.com/it/docs/analytics-platform/using/cja-privacy/cmk)
 
 >[!IMPORTANT]
 >

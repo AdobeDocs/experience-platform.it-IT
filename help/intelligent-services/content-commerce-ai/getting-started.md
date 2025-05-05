@@ -67,6 +67,6 @@ Questa guida fornisce esempi di chiamate API per illustrare come formattare le r
 
 Dopo aver ottenuto tutte le credenziali, è possibile impostare un processo di lavoro personalizzato per [!DNL Content tagging]. I documenti seguenti forniscono informazioni utili per comprendere il framework di estensibilità e la configurazione dell’ambiente.
 
-Per ulteriori informazioni su Extensibility Framework, leggere innanzitutto il documento [introduzione all&#39;estensibilità](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html). Questo documento illustra i prerequisiti e i requisiti di provisioning.
+Per ulteriori informazioni su Extensibility Framework, leggere innanzitutto il documento [introduzione all&#39;estensibilità](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html?lang=it). Questo documento illustra i prerequisiti e i requisiti di provisioning.
 
-Per ulteriori informazioni sulla configurazione di un ambiente per [!DNL Content tagging], leggere la guida di [configurazione di un ambiente per sviluppatori](https://experienceleague.adobe.com/docs/asset-compute/using/extend/setup-environment.html). Questo documento fornisce istruzioni di configurazione che consentono di sviluppare per il servizio Asset Compute.
+Per ulteriori informazioni sulla configurazione di un ambiente per [!DNL Content tagging], leggere la guida di [configurazione di un ambiente per sviluppatori](https://experienceleague.adobe.com/docs/asset-compute/using/extend/setup-environment.html?lang=it). Questo documento fornisce istruzioni di configurazione che consentono di sviluppare per il servizio Asset Compute.

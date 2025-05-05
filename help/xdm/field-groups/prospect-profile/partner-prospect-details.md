@@ -13,7 +13,7 @@ ht-degree: 11%
 
 [!UICONTROL Dettagli prospect partner (esempio)] è un gruppo di campi di schema standard per la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). [!UICONTROL Dettagli prospect partner (esempio)] fornisce un framework di esempio per vari dettagli relativi al profilo di un prospect. Questo framework semplifica il processo di organizzazione e gestione di diverse informazioni relative ai potenziali clienti.
 
-Questo gruppo di campi estende la [classe Prospect individuale](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/prospect.html) nel contesto di un partner.
+Questo gruppo di campi estende la [classe Prospect individuale](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/prospect.html?lang=it) nel contesto di un partner.
 
 ![Diagramma del [!UICONTROL gruppo di campi Dettagli prospect partner (esempio)].](../../images/field-groups/partner/partner-prospect-details-sample.png)
 
