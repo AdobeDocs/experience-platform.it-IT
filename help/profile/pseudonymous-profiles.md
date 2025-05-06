@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Scadenza dati profilo pseudonimo
 description: Questo documento fornisce indicazioni generali sulla configurazione della scadenza dei dati per i profili pseudonimi in Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: aeb9d6636f0d843bf13d09bcb4c12754e2890046
+source-git-commit: 8734b85914d965eebc2f8ccd8c09dd1ffede8cf9
 workflow-type: tm+mt
-source-wordcount: '1245'
+source-wordcount: '1264'
 ht-degree: 4%
 
 ---
@@ -43,8 +43,9 @@ Un profilo viene considerato per la scadenza dei dati pseudonimi se soddisfa le 
 >
 >- Gestione impostazioni profilo
 >- Visualizza profili
+>- Visualizzare gli spazi dei nomi delle identità
 >
->L&#39;autorizzazione **Gestione impostazioni profilo** consente di impostare le scadenze dei dati, mentre l&#39;autorizzazione **Visualizza profili** consente di visualizzare le scadenze dei dati.
+>L&#39;autorizzazione **Gestione impostazioni profilo** consente di impostare le scadenze dei dati, l&#39;autorizzazione **Visualizza profili** consente di visualizzare le scadenze dei dati e l&#39;autorizzazione **Visualizza spazi dei nomi delle identità** consente di visualizzare gli spazi dei nomi delle identità disponibili che è possibile utilizzare.
 >
 >Ulteriori informazioni sulle autorizzazioni in Experience Platform sono disponibili nella [panoramica sul controllo degli accessi](../access-control/home.md#permissions).
 
@@ -130,7 +131,7 @@ Per un caso d’uso tipico, puoi impostare la scadenza dei dati Experience Event
 
 +++ Risposta
 
-- Il sistema di eliminazione [&#128279;](../identity-service/guardrails.md) del servizio Identity  &quot;first-in, first-out&quot; potrebbe eliminare gli ECID dal grafo delle identità, archiviati in Identity Service.
+- Il sistema di eliminazione ](../identity-service/guardrails.md) del servizio Identity [ &quot;first-in, first-out&quot; potrebbe eliminare gli ECID dal grafo delle identità, archiviati in Identity Service.
 - Se questo comportamento di eliminazione determina la memorizzazione di un profilo solo ECID nel profilo cliente in tempo reale (archivio profili), la scadenza dei dati del profilo pseudonimo eliminerà tale profilo dall’archivio profili.
 
 +++
