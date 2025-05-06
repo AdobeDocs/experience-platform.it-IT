@@ -4,14 +4,20 @@ description: Note aggiornate sulla versione di Adobe Experience Platform Debugge
 keywords: debugger; estensione experience debugger;chrome;estensione;note sulla versione
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: a5af5c194bc6b3bf9a6e119a2f147efa85f263f0
+source-git-commit: c4048b83c916f4b3b4b5acb3cccb957b65ee25c8
 workflow-type: tm+mt
-source-wordcount: '850'
-ht-degree: 93%
+source-wordcount: '864'
+ht-degree: 92%
 
 ---
 
 # Note sulla versione di Adobe Experience Platform Debugger
+
+## Versione 1.6.4, mercoledì 6 maggio 2025
+
+### Correzioni e miglioramenti
+
+* È stato risolto un problema che impediva l’accesso a.
 
 ## Versione 1.6.3 - 30 aprile 2025
 
