@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform - Aprile 2025
 description: Note sulla versione di Adobe Experience Platform di aprile 2025.
 exl-id: a3b1e2e8-d780-4e23-b323-37e1a631f716
-source-git-commit: be9e1a995e62fa5a437be82aa15187815bbc5a9d
+source-git-commit: b0ed9e38dbc3b4a4f4f7cde5751c2edd35355b59
 workflow-type: tm+mt
-source-wordcount: '2147'
-ht-degree: 30%
+source-wordcount: '2197'
+ht-degree: 29%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 30%
 >Per le note sulla versione di altre applicazioni Adobe Experience Platform, consulta la seguente documentazione:
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/it/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/it/docs/journey-optimizer-b2b/user/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/it/docs/analytics-platform/using/releases/latest)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/it/docs/real-time-cdp-collaboration/using/latest)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Data di rilascio: mercoledì 29 aprile 2025**
 
@@ -41,7 +41,7 @@ Experience League è una piattaforma di apprendimento completa progettata per ai
 
 | Funzione | Descrizione |
 | --- | --- |
-| Home page personalizzata | Accedi e personalizza la tua home page personalizzata in [Experience League](https://experienceleague.adobe.com/it/home#). Accedi con le tue credenziali Adobe, quindi seleziona **[!UICONTROL Experience League]** dal menu principale per iniziare a ottimizzare la tua esperienza di apprendimento: <ul><li>**Segnalibri**: utilizza la funzionalità [!UICONTROL Segnalibri] per salvare e raccogliere le risorse preferite in un&#39;unica posizione. È possibile salvare una vasta gamma di contenuti, tra cui playlist, articoli e tutorial.</li><li>**Personalizza il tuo apprendimento**: migliora la tua esperienza di apprendimento aggiornando il tuo profilo Experience League con i ruoli, i settori, i prodotti e il livello di esperienza più adatti alle tue esigenze.</li><li>**Consigli**: visualizza i contenuti di apprendimento consigliati in base all&#39;attività recente.</li><li>**Visualizzato di recente**: utilizza la sezione [!UICONTROL Visualizzato di recente] per tornare rapidamente al contenuto visualizzato di recente, ad esempio documentazione e video.</li><li>**Risorse di apprendimento**: utilizza il pannello [!UICONTROL Tutte le risorse di apprendimento] per accedere a tutorial, documentazione, community, eventi e certificazioni.</li><li>**Novità**: visualizza la sezione [!UICONTROL Novità] per un flusso dei contenuti più recenti su Experience League.</li><li>**Guarda gli eventi passati on-demand**: guarda i flussi live registrati in precedenza su faretti di prodotto, casi d&#39;uso e tutorial con la sezione [!UICONTROL Guarda gli eventi passati on-demand].</li></ul><br> ![Home page personalizzata su Experience League.](../2025/assets/april/personalized-home-page.png "Home page personalizzata in Experience League."){width="250" align="center" zoomable="yes"} |
+| Home page personalizzata | Accedi e personalizza la tua home page personalizzata in [Experience League](https://experienceleague.adobe.com/en/home#). Accedi con le tue credenziali Adobe, quindi seleziona **[!UICONTROL Experience League]** dal menu principale per iniziare a ottimizzare la tua esperienza di apprendimento: <ul><li>**Segnalibri**: utilizza la funzionalità [!UICONTROL Segnalibri] per salvare e raccogliere le risorse preferite in un&#39;unica posizione. È possibile salvare una vasta gamma di contenuti, tra cui playlist, articoli e tutorial.</li><li>**Personalizza il tuo apprendimento**: migliora la tua esperienza di apprendimento aggiornando il tuo profilo Experience League con i ruoli, i settori, i prodotti e il livello di esperienza più adatti alle tue esigenze.</li><li>**Consigli**: visualizza i contenuti di apprendimento consigliati in base all&#39;attività recente.</li><li>**Visualizzato di recente**: utilizza la sezione [!UICONTROL Visualizzato di recente] per tornare rapidamente al contenuto visualizzato di recente, ad esempio documentazione e video.</li><li>**Risorse di apprendimento**: utilizza il pannello [!UICONTROL Tutte le risorse di apprendimento] per accedere a tutorial, documentazione, community, eventi e certificazioni.</li><li>**Novità**: visualizza la sezione [!UICONTROL Novità] per un flusso dei contenuti più recenti su Experience League.</li><li>**Guarda gli eventi passati on-demand**: guarda i flussi live registrati in precedenza su faretti di prodotto, casi d&#39;uso e tutorial con la sezione [!UICONTROL Guarda gli eventi passati on-demand].</li></ul><br> ![Home page personalizzata su Experience League.](../2025/assets/april/personalized-home-page.png "Home page personalizzata in Experience League."){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -53,6 +53,7 @@ Adobe Experience Platform fornisce una suite di tecnologie che consente di racco
 
 | Funzione | Descrizione |
 | --- | --- |
+| Estensione [!DNL Adform] | L&#39;estensione lato server di [!DNL Adform] consente ai brand di eseguire facilmente il retargeting dei tipi di pubblico fuori dal sito utilizzando gli ECID. Questa estensione lato server non dipende da cookie di terze parti o da ID alternativi dei cookie. Inoltre, poiché questa operazione viene eseguita interamente lato server, non sono necessari pixel aggiuntivi o altre modifiche lato client. Per ulteriori informazioni, vedere [Panoramica dell&#39;estensione Adform](/help/tags/extensions/server/adform/overview.md). |
 | Estensione API per [!DNL Amazon] eventi Web | L&#39;estensione API per le conversioni di [!DNL Amazon] consente agli inserzionisti di condividere le interazioni del sito Web direttamente con [!DNL Amazon], fornendo una migliore attribuzione, affidabilità dei dati e ottimizzazione delle campagne. Questa estensione supporta l’inoltro degli eventi, che consente di inviare eventi di conversione come acquisti, aggiunte al carrello e altro ancora, garantendo al contempo la deduplicazione corretta per una generazione di rapporti accurata. Per ulteriori informazioni, consulta la [panoramica dell&#39;estensione Amazon](/help/tags/extensions/server/amazon/overview.md). |
 
 {style="table-layout:auto"}
