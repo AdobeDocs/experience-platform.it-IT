@@ -48,6 +48,7 @@ Per installare e configurare l&#39;estensione API per conversioni [!DNL Reddit],
 3. Fornisci i seguenti dettagli di configurazione:
    - **ID pixel**: immettere l&#39;ID [!DNL Reddit Ads] pixel.
    - **Token di accesso di conversione**: immetti il token generato nell&#39;account [!DNL Reddit Ads] e al termine seleziona **[!UICONTROL Salva]**.
+
      ![Dettagli di configurazione per l&#39;estensione API Reddit Conversions, inclusi i campi per ID pixel e Token di accesso di conversione.](../../../images/extensions/server/reddit/reddit-capi-details.png)
 
 ## Configurare una regola di inoltro degli eventi {#config-rule}
@@ -127,6 +128,6 @@ Per ulteriori dettagli su [!DNL Reddit Ads], visita la [documentazione di Reddit
 
 Dopo aver letto questo documento, sarai in grado di configurare e utilizzare l&#39;estensione API Conversions di [!DNL Reddit]. Per ulteriori informazioni sulle funzionalità di inoltro degli eventi in Adobe Experience Platform, consulta la [panoramica sull&#39;inoltro degli eventi](../../../ui/event-forwarding/overview.md) o le risorse seguenti:
 
-- [Condividi chiavi di corrispondenza](https://business.reddithelp.com/s/article/about-attribution-matching-signals) e metadati dell&#39;evento [](https://business.reddithelp.com/s/article/about-event-metadata): scopri come condividere in modo efficace chiavi di corrispondenza e metadati dell&#39;evento.
+- [Condividi chiavi di corrispondenza](https://business.reddithelp.com/s/article/about-attribution-matching-signals) e metadati dell&#39;evento [&#128279;](https://business.reddithelp.com/s/article/about-event-metadata): scopri come condividere in modo efficace chiavi di corrispondenza e metadati dell&#39;evento.
 - [Deduplica eventi](https://business.reddithelp.com/s/article/event-deduplication): assicurati che il tracciamento degli eventi sia accurato tramite la deduplicazione degli eventi.
 - [Creare un token di accesso di conversione](https://business.reddithelp.com/helpcenter/s/article/conversion-access-token): eseguire la procedura seguente per creare un token di accesso di conversione per l&#39;autenticazione API sicura.
