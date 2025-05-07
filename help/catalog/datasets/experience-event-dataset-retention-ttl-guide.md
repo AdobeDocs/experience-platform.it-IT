@@ -2,9 +2,9 @@
 title: Gestire la conservazione dei set di dati di Experience Event nel Data Lake tramite TTL
 description: Scopri come valutare, impostare e gestire la conservazione dei set di dati di Experience Event nel data lake utilizzando le configurazioni Time-To-Live (TTL) con le API di Adobe Experience Platform. Questa guida spiega come la scadenza a livello di riga TTL supporti le regole di conservazione dei dati, ottimizzi l'efficienza dello storage e garantisca un'efficace gestione del ciclo di vita dei dati. Inoltre, fornisce casi d’uso e best practice per aiutarti ad applicare il TTL in modo efficace.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: 767e9536862799e31d1ab5c77588d485f80c59e9
+source-git-commit: 06b58d714047cb69f237469ecd548bb824e565ab
 workflow-type: tm+mt
-source-wordcount: '2407'
+source-wordcount: '2456'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Questa guida spiega come valutare, impostare e gestire il TTL utilizzando l’AP
 
 >[!IMPORTANT]
 >
-> TTL è progettato per ottimizzare la gestione del ciclo di vita dei dati e l&#39;efficienza dello storage. Non è uno strumento di conformità e non dovrebbe essere utilizzato per i requisiti normativi. La conformità richiede spesso strategie di governance dei dati più ampie.
+>TTL è progettato per ottimizzare la gestione del ciclo di vita dei dati e l&#39;efficienza dello storage. Non è uno strumento di conformità e non dovrebbe essere utilizzato per i requisiti normativi. La conformità richiede spesso strategie di governance dei dati più ampie.
 
 ## Perché utilizzare TTL per la gestione dei dati a livello di riga
 
@@ -33,14 +33,18 @@ Il TTL è utile per gestire dati sensibili al tempo che perdono rilevanza nel te
 >[!NOTE]
 >
 >La conservazione dei set di dati di Experience Event si applica ai dati evento memorizzati nel data lake. Se gestisci la conservazione in Real-Time Customer Data Platform, puoi utilizzare [Scadenza evento esperienza](../../profile/event-expirations.md) e [Scadenza profilo pseudonimo](../../profile/pseudonymous-profiles.md) insieme alle impostazioni di conservazione del data lake.
+
+Utilizza le configurazioni TTL per ottimizzare lo storage in base ai diritti. Anche se i dati dell’archivio profili (utilizzati in Real-Time CDP) possono essere considerati obsoleti e rimossi dopo 30 giorni, gli stessi dati evento nel data lake possono rimanere disponibili per 12-13 mesi (o più in base all’adesione) per i casi di utilizzo di Analytics e Data Distiller.
+
+>[!TIP]
 >
->Le configurazioni TTL consentono di ottimizzare lo storage in base ai diritti. Anche se i dati dell’archivio profili (utilizzati in Real-Time CDP) possono essere considerati obsoleti e rimossi dopo 30 giorni, gli stessi dati evento nel data lake possono rimanere disponibili per 12-13 mesi (o più in base all’adesione) per i casi di utilizzo di Analytics e Data Distiller.
+>I diritti si riferiscono alle quote di archiviazione e conservazione definite dall’abbonamento Adobe e dai contratti di licenza.
 
 ### Esempio di settore {#industry-example}
 
 Ad esempio, considera un servizio di streaming video che tiene traccia delle interazioni degli utenti, come visualizzazioni video, ricerche e consigli. Anche se i dati di coinvolgimento recenti sono fondamentali per la personalizzazione, i registri di attività più datati (ad esempio, le interazioni di più di un anno fa) perdono rilevanza. Utilizzando la scadenza a livello di riga, Experience Platform rimuove automaticamente i registri obsoleti, garantendo che solo i dati correnti e significativi vengano utilizzati per le analisi e i consigli.
 
-## Valuta idoneità TTL
+## Valuta idoneità TTL {#evaluate-ttl-suitability}
 
 Prima di applicare un criterio di conservazione, valuta se il set di dati è un buon candidato per la scadenza a livello di riga. Considera quanto segue:
 
@@ -50,9 +54,39 @@ Prima di applicare un criterio di conservazione, valuta se il set di dati è un 
 
 Se i record storici sono essenziali per l’analisi a lungo termine o le operazioni aziendali, il TTL potrebbe non essere l’approccio corretto. L’analisi di questi fattori garantisce l’allineamento del TTL alle esigenze di conservazione dei dati senza influire negativamente sulla disponibilità dei dati.
 
-## Pianificare le query {#plan-queries}
+## Best practice per l’impostazione del valore TTL {#best-practices}
 
-Prima di applicare il TTL, è importante valutare la dimensione del set di dati e la rilevanza dei dati e valutare la quantità di dati storici da conservare. L’immagine seguente illustra l’intero processo di implementazione di TTL, dalla pianificazione delle query al monitoraggio dell’efficacia della conservazione.
+Seleziona il valore TTL corretto per garantire che i criteri di conservazione dei set di dati di Experience Event bilancino la conservazione dei dati, l’efficienza dello storage e le esigenze di analisi. Un valore TTL troppo breve può causare la perdita di dati, mentre un valore troppo lungo può aumentare i costi di storage e l&#39;accumulo di dati non necessari. Assicurati che il TTL sia allineato allo scopo del set di dati tenendo in considerazione la frequenza con cui viene effettuato l’accesso ai dati e il tempo in cui rimangono rilevanti.
+
+La tabella seguente fornisce consigli comuni su TTL in base al tipo di set di dati e ai pattern di utilizzo:
+
+| Tipo di set di dati | TTL consigliato | Casi d’uso tipici |
+|-----------------------------|------------------------|-------------------|
+| Set di dati ad accesso frequente | 30-90 giorni | Registri di coinvolgimento degli utenti, dati di clickstream sul sito web, dati sulle prestazioni delle campagne a breve termine. |
+| Set di dati di archiviazione | 1 anno o più | Registri delle transazioni finanziarie, dati sulla conformità, analisi delle tendenze a lungo termine, set di dati di formazione per l’apprendimento automatico. |
+| Set di dati gestiti dall’app | Fino a 13 mesi | I set di dati gestiti dal sistema hanno restrizioni TTL predefinite, che vengono applicate automaticamente per rispettare i limiti imposti dal sistema. |
+| Set di dati gestiti dal cliente | 30 giorni - TTL massimo | Set di dati creati tramite l’interfaccia utente, le API o Data Distiller. Il TTL deve essere di almeno 30 giorni ed entro il TTL massimo definito. |
+
+Rivedere periodicamente le impostazioni TTL per assicurarsi che continuino ad essere allineate alle regole di storage, alle esigenze analitiche e ai requisiti aziendali.
+
+### Considerazioni chiave durante l’impostazione del valore TTL {#key-considerations}
+
+Segui queste best practice per garantire che le impostazioni TTL siano allineate alla strategia di conservazione dei dati:
+
+- Controlla regolarmente le modifiche TTL. Ogni aggiornamento TTL attiva un evento di audit. Utilizza i registri di audit per tenere traccia delle modifiche TTL a scopo di conformità, governance dei dati e risoluzione dei problemi.
+- Disattiva TTL se i dati devono essere conservati per un tempo indefinito. Per disabilitare il TTL, impostare `ttlValue` su `null`. Ciò impedisce la scadenza automatica e mantiene tutti i record in modo permanente. Prima di apportare questa modifica, è necessario considerare le implicazioni relative allo storage.
+
+## Limitazioni del TTL {#limitations}
+
+Tieni presente le seguenti limitazioni quando utilizzi TTL:
+
+- **La conservazione del set di dati Experience Event tramite TTL si applica alla scadenza a livello di riga**, non all&#39;eliminazione del set di dati. TTL rimuove i record in base a un periodo di conservazione definito, ma non elimina interi set di dati. Per rimuovere un set di dati, utilizzare l&#39;endpoint di scadenza [del set di dati](../../hygiene/api/dataset-expiration.md) o l&#39;eliminazione manuale.
+- **La configurazione TTL rimane attiva fino a quando non viene disabilitata in modo esplicito**. La configurazione rimane attiva finché non la disattivi. La disabilitazione di TTL interrompe la scadenza e garantisce che tutti i record nel set di dati vengano mantenuti.
+- **TTL non è uno strumento di conformità**. Mentre TTL ottimizza lo storage e la gestione del ciclo di vita, è necessario implementare strategie di governance più ampie per garantire la conformità alle normative.
+
+## Analizzare la dimensione e la rilevanza del set di dati prima di applicare il TTL {#analyze-dataset-size}
+
+Prima di applicare il TTL, utilizza le query per analizzare le dimensioni e la rilevanza del set di dati. Esegui query mirate (come il conteggio dei record all’interno di intervalli di date specifici) per visualizzare in anteprima l’impatto di vari valori TTL. Quindi utilizza queste informazioni per scegliere un periodo di conservazione ottimale che bilanci l’utilità dei dati e la convenienza economica.
 
 ![Flusso di lavoro visivo per l&#39;implementazione di TTL nei set di dati dell&#39;evento esperienza. I passaggi includono: valutare la durata dei dati e l&#39;impatto della rimozione, convalidare le impostazioni TTL con le query, configurare il TTL tramite l&#39;API Catalog Service, monitorare costantemente l&#39;impatto del TTL e apportare le modifiche necessarie.](../images/datasets/dataset-retention-ttl-guide/manage-experience-event-dataset-retention-in-the-data-lake.png)
 
@@ -72,13 +106,17 @@ Prima di poter valutare, impostare e gestire la conservazione dei set di dati di
 >
 >Questo documento descrive la scadenza a livello di riga, che elimina singole righe scadute all’interno di un set di dati mantenendo intatto il set di dati stesso. Non si applica alla scadenza del set di dati, che rimuove interi set di dati ed è gestito da una funzione separata. Per informazioni sulla scadenza a livello di set di dati, consulta la [documentazione API relativa alla scadenza del set di dati](../../hygiene/api/dataset-expiration.md).
 
-### Controllare le impostazioni TTL correnti
+### Verifica i vincoli TTL {#check-ttl-constraints}
 
-Per iniziare la gestione TTL, controlla innanzitutto le impostazioni TTL correnti. Effettuare una richiesta GET all&#39;endpoint `/ttl/{datasetId}` per recuperare le impostazioni TTL predefinite, massime e minime per un set di dati. Questo passaggio è necessario perché le regole TTL possono variare in base al tipo di set di dati.
+Utilizza l’endpoint API di igiene dei dati `/ttl/{DATASET_ID}` per pianificare le configurazioni TTL. Questo endpoint restituisce i valori TTL minimi e massimi supportati per l&#39;organizzazione, insieme a un valore consigliato (`defaultValue`) per il tipo di set di dati.
+
+Per ulteriori informazioni, consulta la documentazione dell&#39;[API di igiene dei dati](https://developer.adobe.com/experience-platform-apis/references/data-hygiene/#operation/getTtl) di Adobe Developer.
+
+Per [controllare il TTL attualmente applicato a un set di dati](#check-applied-ttl-values), effettuare una richiesta GET all&#39;endpoint `/dataSets/{DATASET_ID}` {API](https://developer.adobe.com/experience-platform-apis/references/catalog/) di Catalog Service [.
 
 >[!TIP]
 >
->L&#39;URL del gateway Experience Platform e il percorso di base per l&#39;API del servizio catalogo sono: `https://platform.adobe.io/data/foundation/catalog`.
+>L&#39;URL del gateway Experience Platform e il percorso di base per l&#39;API del servizio catalogo sono: `https://platform.adobe.io/data/foundation/catalog`. Percorso di base per l&#39;API di igiene dei dati: `https://platform.adobe.io/data/core/hygiene`
 
 **Formato API**
 
@@ -92,11 +130,11 @@ GET /ttl/{DATASET_ID}
 
 **Richiesta**
 
-La richiesta seguente recupera le impostazioni TTL dell’organizzazione per un particolare set di dati.
+La richiesta seguente recupera i vincoli TTL dell’organizzazione per un particolare set di dati.
 
 ```shell
 curl -X GET \
-  'https://platform.adobe.io/data/foundation/catalog/ttl/5ba9452f7de80408007fc52a' \
+  'https://platform.adobe.io/data/foundation/catalog/ttl/{DATASET_ID}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -106,51 +144,21 @@ curl -X GET \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce la configurazione TTL per il set di dati, inclusi i valori TTL predefiniti, massimi e minimi per l’archiviazione `adobe_lakeHouse` e `adobe_unifiedProfile`.
+In caso di esito positivo, la risposta restituisce i valori TTL consigliati, massimi e minimi in base ai diritti dell&#39;organizzazione, insieme a un valore TTL (`defaultValue`) suggerito per il set di dati. `defaultValue` è una durata TTL consigliata, fornita solo a scopo informativo. Non viene applicato a meno che non sia stato esplicitamente configurato da te. La risposta non include eventuali valori TTL personalizzati già impostati. Per visualizzare il TTL corrente per un set di dati, utilizzare l&#39;endpoint GET `/catalog/dataSets/{DATASET_ID}`.
 
 +++Seleziona per visualizzare la risposta
 
 ```json
 {
-    "67976f0b4878252ab887ccd9": {
-        "name": "Acme Sales Data",
-        "description": "This dataset contains sales transaction records for Acme Corporation.",
-        "imsOrg": "{ORG_ID}",
-        "sandboxId": "{SANDBOX_ID}",
-        "tags": {
-            "adobe/pqs/table": [
-                "acme_sales_20250127_113331_106"
-            ],
-            "adobe/siphon/table/format": [
-                "delta"
-            ]
-        },
-        "extensions": {
-            "adobe_lakeHouse": {  
-                "rowExpiration": {
-                    "defaultValue": "P12M",
-                    "maxValue": "P12M",
-                    "minValue": "P30D"
-                }
-            },
-            "adobe_unifiedProfile": {  
-                "rowExpiration": {
-                    "defaultValue": "P12M",
-                    "maxValue": "P12M",
-                    "minValue": "P7D"
-                }
-            }
-        },
-        "version": "1.0.0",
-        "created": 1737977611118,
-        "updated": 1737977611118,
-        "createdClient": "acme_data_pipeline",
-        "createdUser": "john.snow@acmecorp.com",
-        "updatedUser": "arya.stark@acmecorp.com",
-        "classification": {
-            "managedBy": "CUSTOMER"
-        }
+  "extensions": {
+    "adobe_lakeHouse": {
+      "rowExpiration": {
+        "defaultValue": "P12M",
+        "maxValue": "P12M",
+        "minValue": "P7D"
+      }
     }
+  }
 }
 ```
 
@@ -158,19 +166,65 @@ In caso di esito positivo, la risposta restituisce la configurazione TTL per il 
 
 | Proprietà | Descrizione |
 |--------------|-------------|
-| `defaultValue` | Periodo TTL predefinito applicato se non è impostato alcun TTL personalizzato. |
-| `maxValue` | Il TTL più lungo consentito per il set di dati. Se null, non esiste alcun limite massimo. |
-| `minValue` | Il TTL più breve consentito per garantire la conformità con i criteri di sistema. |
+| `defaultValue` | Valore TTL consigliato per il set di dati. Questo valore è **non** applicato automaticamente. Per rendere effettivo il valore TTL, è necessario impostarlo esplicitamente. |
+| `maxValue` | La durata TTL massima consentita dall’adesione della tua organizzazione. In genere, la durata è di 10 anni (`P10Y`). |
+| `minValue` | La durata TTL minima consentita dall’adesione della tua organizzazione. In genere, la durata è di 30 giorni (`P30D`). |
 
-<!-- Q) what is the default Max and Min values and are they system-imposed? -->
+### Controllare i valori TTL applicati {#check-applied-ttl-values}
 
-### Impostare il TTL per un set di dati {#set-ttl}
+Per verificare il valore TTL corrente applicato a un set di dati, utilizza la seguente chiamata API:
+
+```http
+GET /dataSets/{DATASET_ID}
+```
+
+Questa chiamata restituisce l&#39;attuale `ttlValue` (se impostato) nella sezione `extensions.adobe_lakeHouse.rowExpiration`.
+
+**Richiesta**
+
+La richiesta seguente recupera il valore TTL dell’organizzazione per un particolare set di dati.
+
+```shell
+curl -X GET \
+https://platform.adobe.io/data/foundation/catalog/dataSets/{DATASET_ID} \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Risposta**
+
+Una risposta corretta include l&#39;oggetto `extensions`, che contiene la configurazione TTL corrente applicata al set di dati. L’esempio di risposta seguente viene troncato per brevità.
+
+```json
+{
+    "{DATASET_ID}": {
+        "name": "Acme Sales Data",
+        "description": "This dataset contains sales transaction records for Acme Corporation.",
+        "imsOrg": "{ORG_ID}",
+        "sandboxId": "{SANDBOX_ID}",
+        "extensions": {
+            "adobe_lakeHouse": {
+            "rowExpiration": {
+                "ttlValue": "P3M",
+            }
+            }
+        }
+        ...
+    }
+}
+```
+
+### Impostare o aggiornare il TTL per un set di dati {#set-update-ttl}
 
 >[!IMPORTANT]
 >
->La scadenza delle righe può essere applicata solo ai set di dati evento che utilizzano uno schema di serie temporali. Prima di impostare il TTL, verifica che lo schema del set di dati estenda `https://ns.adobe.com/xdm/data/time-series` per verificare che la richiesta API abbia esito positivo. Utilizzare l&#39;API Schema Registry per recuperare i dettagli dello schema e verificare la proprietà `meta:extends`. Per informazioni su come eseguire questa operazione, consulta la [documentazione dell&#39;endpoint schema](../../xdm/api/schemas.md#lookup).
+>La scadenza a livello di riga basata su TTL può essere applicata solo ai set di dati evento che utilizzano uno schema di serie temporali. Sono inclusi i set di dati basati sulla classe XDM ExperienceEvent standard e gli schemi personalizzati che estendono lo schema della serie temporale (`https://ns.adobe.com/xdm/data/time-series`).
+>
+>Prima di applicare il TTL, utilizza l’API Schema Registry per verificare che lo schema del set di dati includa l’estensione corretta controllando la proprietà `meta:extends`. Per istruzioni su come eseguire questa operazione, consulta la [documentazione dell&#39;endpoint schema](../../xdm/api/schemas.md#lookup).
 
-Per configurare Conservazione set di dati di Experience Event per il set di dati, imposta un nuovo valore TTL effettuando una richiesta PATCH all&#39;endpoint `/v2/datasets/{ID}`.
+Puoi configurare Conservazione set di dati di Experience Event impostando un nuovo TTL o aggiornando un TTL esistente utilizzando lo stesso metodo API. Utilizza una richiesta PATCH all&#39;endpoint `/v2/datasets/{DATASET_ID}` per applicare o modificare il TTL.
 
 **Formato API**
 
@@ -184,15 +238,15 @@ PATCH /v2/datasets/{DATASET_ID}
 
 **Richiesta**
 
-Nell&#39;esempio di richiesta seguente, `ttlValue` è impostato su `P3M`. In questo modo i record più vecchi di tre mesi verranno eliminati automaticamente. È possibile modificare il periodo di conservazione in base alle esigenze aziendali utilizzando valori quali `P6M` per sei mesi o `P12M` per un anno.
+Nell&#39;esempio seguente, `ttlValue` è impostato su `P3M`. Ciò significa che i record più vecchi di tre mesi vengono eliminati automaticamente. Regolare il periodo di conservazione in base alle esigenze aziendali (ad esempio, `P6M` per sei mesi o `P12M` per un anno).
 
 ```shell
 curl -X PATCH \
   'https://platform.adobe.io/data/foundation/catalog/v2/datasets/{DATASET_ID}' \
-  -h 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -h 'Content-Type: application/json' \
-  -h 'x-api-key: {API_KEY}' \
-  -h 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -d '{
     "extensions": {
         "adobe_lakeHouse": {
@@ -204,93 +258,31 @@ curl -X PATCH \
 }
 ```
 
-**Risposta**
-
-In caso di esito positivo, la risposta mostra la configurazione TTL per il set di dati. Include dettagli sulle impostazioni di scadenza a livello di riga per l&#39;archiviazione `adobe_lakeHouse` e `adobe_unifiedProfile`.
-
-+++Seleziona per visualizzare la risposta
-
-```JSON
-{
-    "67976f0b4878252ab887ccd9": {
-        "name": "Acme Sales Data",
-        "description": "This dataset contains sales transaction records for Acme Corporation.",
-        "imsOrg": "{ORG_ID}",
-        "sandboxId": "{SANDBOX_ID}",
-        "tags": {
-            "adobe/pqs/table": [
-                "acme_sales_20250127_113331_106"
-            ],
-            "adobe/siphon/table/format": [
-                "delta"
-            ]
-        },
-        "extensions": {
-            "adobe_lakeHouse": {
-                "rowExpiration": {
-                "ttlValue": "P3M",
-                    "valueStatus": "custom",
-                    "setBy": "user",
-                    "updated": 1737977766499
-                }
-            },
-            "adobe_unifiedProfile": {  
-                "rowExpiration": {
-                    "ttlValue": "P3M",
-                    "valueStatus": "custom",
-                    "setBy": "user",
-                    "updated": 1737977766499
-                }
-            }
-        },
-        "version": "1.0.0",
-        "created": 1737977611118,
-        "updated": 1737977611118,
-        "createdClient": "acme_data_pipeline",
-        "createdUser": "john.snow@acmecorp.com",
-        "updatedUser": "arya.stark@acmecorp.com",
-        "classification": {
-            "managedBy": "CUSTOMER"
-        }
-    }
-}
-```
-
-+++
-
 | Proprietà | Descrizione |
 |----------------------------------|-------------|
-| `extensions` | Contenitore per metadati aggiuntivi correlati al set di dati. |
-| `extensions.adobe_lakeHouse` | Specifica le impostazioni relative all&#39;architettura di archiviazione, incluse le configurazioni di scadenza a livello di riga |
-| `rowExpiration` | L’oggetto contiene impostazioni TTL che definiscono il periodo di conservazione per il set di dati. |
-| `rowExpiration.ttlValue` | Definisce la durata prima della rimozione automatica dei record nel set di dati. Utilizza il formato del periodo ISO-8601 (ad esempio, `P3M` per 3 mesi o `P30D` per una settimana). |
-| `rowExpiration.valueStatus` | La stringa indica se l’impostazione TTL è un valore di sistema predefinito o un valore personalizzato impostato da un utente. I valori possibili sono: `default`, `custom`. |
-| `rowExpiration.setBy` | Specifica chi ha modificato per ultimo l’impostazione TTL. I valori possibili includono: `user` (impostato manualmente) o `service` (assegnato automaticamente). |
-| `rowExpiration.updated` | Il timestamp dell’ultimo aggiornamento TTL. Questo valore indica quando è stata apportata l’ultima modifica all’impostazione TTL. |
+| `rowExpiration.ttlValue` | Definisce la durata prima della rimozione automatica dei record nel set di dati. Utilizza il formato del periodo ISO-8601 (ad esempio, `P3M` per 3 mesi o `P30D` per 30 giorni). |
 
-### Come aggiornare il TTL {#update-ttl}
+**Risposta**
 
-Estendere o abbreviare il periodo di conservazione in base alle esigenze aziendali modificando il valore TTL. Ad esempio, se consideri la piattaforma di streaming video di cui sopra, la piattaforma può inizialmente impostare il TTL a tre mesi per garantire nuovi dati di coinvolgimento per la personalizzazione. Tuttavia, se la loro analisi mostra che i modelli di interazione più vecchi di tre mesi forniscono ancora informazioni utili, possono estendere il periodo TTL a sei mesi per conservare i record più vecchi per modelli di consigli migliori.
+In caso di esito positivo, la risposta restituisce un riferimento al set di dati aggiornato ma non include esplicitamente le impostazioni TTL. Per confermare la configurazione TTL, effettuare una richiesta di completamento `GET /dataSets/{DATASET_ID}`.
 
-Per modificare un valore TTL esistente, utilizzare il metodo `PATCH` sull&#39;endpoint `/v2/datasets/{DATASET_ID}`.
-
-#### Formato API
-
-```http
-PATCH /v2/datasets/{DATASET_ID}
+```JSON
+[
+  "@/dataSets/{DATASET_ID}"
+]
 ```
 
-**Richiesta**
+#### Scenario di esempio {#example-scenario}
 
-Nella richiesta seguente, il TTL viene aggiornato a sei mesi (`P6M`) estendendo il periodo di conservazione dei record prima dell&#39;eliminazione automatica.
+Considera una piattaforma di streaming video che inizialmente imposta il TTL a tre mesi per garantire nuovi dati di coinvolgimento per la personalizzazione. Tuttavia, se un’analisi successiva rivela che le interazioni meno recenti forniscono ancora informazioni utili, il TTL può essere esteso a sei mesi con la seguente richiesta:
 
 ```shell
 curl -X PATCH \
   'https://platform.adobe.io/data/foundation/catalog/v2/datasets/{DATASET_ID}' \
-  -h 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -h 'Content-Type: application/json' \
-  -h 'x-api-key: {API_KEY}' \
-  -h 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -d '{
     "extensions": {
         "adobe_lakeHouse": {
@@ -302,95 +294,41 @@ curl -X PATCH \
 }
 ```
 
-<!-- Q) For Clarity, should this example show both data stores being updated by expanding the example payload above? -->
-
-**Risposta**
-
-```JSON
-{  "extensions": {
-        "adobe_lakeHouse": {
-            "rowExpiration": {
-              "ttlValue": "P6M",
-              "valueStatus": "custom",
-              "setBy": "user",
-              "updated": "1737977766499"
-            }
-        },
-        "adobe_unifiedProfile": {
-            "rowExpiration": {
-                "ttlValue": "P3M",
-                "valueStatus": "custom",
-                "setBy": "user",
-                "updated": "17379754766355"
-            }
-        }
-    }
-}
-```
-
-## Best practice per l’impostazione del valore TTL {#best-practices}
-
-La scelta del valore TTL corretto è fondamentale per garantire che i criteri di conservazione dei set di dati di Experience Event bilancino la conservazione dei dati, l’efficienza dello storage e le esigenze di analisi. Un valore TTL troppo breve può causare la perdita di dati, mentre un valore troppo lungo può aumentare i costi di storage e l&#39;accumulo di dati non necessari. Assicurati che il TTL sia allineato allo scopo del set di dati tenendo in considerazione la frequenza con cui viene effettuato l’accesso ai dati e il tempo in cui rimangono rilevanti.
-
-La tabella seguente fornisce consigli comuni su TTL in base al tipo di set di dati e ai pattern di utilizzo:
-
-| Tipo di set di dati | TTL consigliato | Casi d’uso tipici |
-|-----------------------------|------------------------|-------------------|
-| Set di dati ad accesso frequente | 30-90 giorni | Registri di coinvolgimento degli utenti, dati di clickstream sul sito web, dati sulle prestazioni delle campagne a breve termine. |
-| Set di dati di archiviazione | 1 anno o più | Registri delle transazioni finanziarie, dati sulla conformità, analisi delle tendenze a lungo termine, set di dati di formazione per l’apprendimento automatico. |
-| Set di dati gestiti dall’app | Fino a 13 mesi | I set di dati gestiti dal sistema hanno restrizioni TTL predefinite, che vengono applicate automaticamente per rispettare i limiti imposti dal sistema. |
-| Set di dati gestiti dal cliente | 30 giorni - TTL massimo | Set di dati creati tramite l’interfaccia utente, le API o Data Distiller. Il TTL deve essere di almeno 30 giorni ed entro il TTL massimo definito. |
-
-Rivedere periodicamente le impostazioni TTL per assicurarsi che continuino ad essere allineate alle regole di storage, alle esigenze analitiche e ai requisiti aziendali.
-
-### Considerazioni chiave durante l’impostazione del valore TTL
-
-<!-- What are the default TTL limits for system-generated Profile Store and data lake datasets? -->
-
-<!-- Q) Are the limits: 90 days for data in the Profile store and 13 months for data in the data lake? This is true for Journey Optimizer. -->
-
-Segui queste best practice per garantire che le impostazioni TTL siano allineate alla strategia di conservazione dei dati:
-
-- Controlla regolarmente le modifiche TTL. Ogni aggiornamento TTL attiva un evento di audit. Utilizza i registri di audit per tenere traccia delle modifiche TTL a scopo di conformità, governance dei dati e risoluzione dei problemi.
-- Rimuovi TTL se i dati devono essere conservati per un tempo indefinito. Per disabilitare il TTL, impostare `ttlValue` su `null`. Ciò impedisce la scadenza automatica e mantiene tutti i record in modo permanente. Prima di apportare questa modifica, è necessario considerare le implicazioni relative allo storage.
-
-<!-- Q) Are there any specific system constraints or impacts of setting TTL to null? -->
-
-## Limitazioni del TTL {#limitations}
-
-Tieni presente le seguenti limitazioni quando utilizzi TTL:
-
-- **La conservazione del set di dati Experience Event tramite TTL si applica alla scadenza a livello di riga**, non all&#39;eliminazione del set di dati. TTL rimuove i record in base a un periodo di conservazione definito, ma non elimina interi set di dati. Per rimuovere un set di dati, utilizzare l&#39;endpoint di scadenza [del set di dati](../../hygiene/api/dataset-expiration.md) o l&#39;eliminazione manuale.
-- Impossibile rimuovere **TTL**. Solo aggiornato. Una volta applicato, il TTL non può essere eliminato, ma puoi [modificare il periodo di conservazione](#update-ttl) per estenderlo o ridurlo. Per conservare i dati a tempo indefinito, impostare un TTL sufficientemente lungo anziché tentare di rimuoverlo.
-- **TTL non è uno strumento di conformità**. TTL ottimizza lo storage e la gestione del ciclo di vita dei dati, ma non soddisfa i requisiti normativi di conservazione dei dati. Per la conformità, implementa strategie di governance dei dati più ampie.
-
 ## Domande frequenti sui criteri di conservazione dei set di dati {#faqs}
 
-Questa sezione fornisce le risposte alle domande più frequenti sui criteri di conservazione dei set di dati in Adobe Experience Platform.
+Queste domande frequenti riguardano domande pratiche sui processi di conservazione dei set di dati, sugli effetti immediati delle modifiche TTL, sulle opzioni di ripristino e sulle differenze tra i periodi di conservazione dei diversi servizi di Platform.
 
 ### A quali tipi di set di dati è possibile applicare le regole dei criteri di conservazione?
 
 +++Risposta
-Puoi applicare i criteri di conservazione ai set di dati creati utilizzando la classe XDM ExperienceEvent. Per i servizi di profilo, i criteri di conservazione sono applicabili solo ai set di dati Experience Event che sono stati abilitati per il profilo.
+È possibile applicare criteri di conservazione basati su TTL a qualsiasi set di dati che utilizza uno schema di serie temporali. Sono inclusi set di dati basati sulla classe ExperienceEvent XDM standard, nonché schemi personalizzati che estendono la classe Time Series XDM.
+
+La scadenza a livello di riga richiede le seguenti condizioni tecniche:
+
+- Lo schema deve estendere la classe base XDM Time Series.
+- Lo schema deve includere un campo timestamp, utilizzato per valutare la scadenza.
+- Il set di dati deve memorizzare dati a livello di evento, in genere utilizzando o estendendo la classe XDM ExperienceEvent.
+- Il set di dati deve essere registrato in Catalog Service, in quanto le impostazioni TTL vengono applicate tramite `extensions.adobe_lakeHouse.rowExpiration`.
+- I valori TTL devono utilizzare il formato di durata ISO-8601 (ad esempio `P30D`, `P6M`, `P1Y`).
 +++
 
 ### Quando il processo di conservazione del set di dati eliminerà i dati dai servizi del data lake?
 
 +++Risposta
-I TTL dei set di dati vengono valutati ed elaborati settimanalmente, eliminando tutti i record scaduti. Un evento è considerato scaduto se è stato acquisito in Experience Platform più di 30 giorni fa (data di acquisizione > 30 giorni) e la sua data evento supera il periodo di conservazione definito (TTL).
+I TTL dei set di dati vengono valutati ed elaborati ogni 30 giorni, eliminando tutti i record scaduti. Un evento è considerato scaduto se è stato acquisito in Experience Platform più di 30 giorni fa (data di acquisizione > 30 giorni) e la sua data evento supera il periodo di conservazione definito (TTL).
 +++
 
-### Quando il processo di conservazione del set di dati eliminerà i dati dai servizi profilo?
+<!-- ### How soon will the Dataset Retention job delete data from Profile services?
 
-+++Risposta
-Una volta impostati i criteri di conservazione, gli eventi esistenti in Experience Platform vengono immediatamente eliminati se la relativa marca temporale supera il periodo di conservazione (TTL). I nuovi eventi vengono eliminati dopo che il loro timestamp supera il periodo di conservazione.
++++Answer
+Once a retention policy is set, existing events that already exceed the newly defined TTL are immediately deleted. Newer events remain until their timestamps surpass the retention period.
 
-Ad esempio, se applichi un criterio di scadenza di 30 giorni il 15 maggio, si verifica quanto segue:
+For example, if you apply a 30-day expiration policy on May 15th, the following occurs:
 
-- I nuovi eventi ricevono una scadenza di 30 giorni al momento dell’acquisizione.
-- Gli eventi esistenti con una marca temporale precedente al 15 aprile vengono eliminati immediatamente.
-- Gli eventi esistenti con una marca temporale successiva al 15 aprile scadono 30 giorni dopo la loro marca temporale (ad esempio, un evento del 18 aprile verrebbe eliminato il 18 maggio).
-+++
+- New events receive a 30-day expiration as they are ingested.
+- Existing events with a timestamp older than April 15th are immediately deleted.
+- Existing events with a timestamp after April 15th are set to expire 30 days after their timestamp (for example, an event from April 18th would be deleted on May 18th).
++++ -->
 
 ### È possibile impostare diversi criteri di conservazione per il data lake e i servizi profilo?
 
@@ -410,6 +348,12 @@ Per l’utilizzo a livello di sandbox, consulta la dashboard Utilizzo licenze. P
 
 +++Risposta
 Puoi verificare l&#39;ultimo processo di conservazione dei dati controllandone la marca temporale nell&#39;[interfaccia utente di configurazione conservazione dei set di dati](./user-guide.md#data-retention-policy) o nella pagina Inventario dati.
+
+In alternativa, puoi effettuare una richiesta GET al seguente endpoint:
+
+`GET https://platform.adobe.io/data/foundation/catalog/dataSets/{DATASET_ID}`
+
+La risposta include la proprietà `extensions.adobe_lakeHouse.rowExpiration.lastCompleted`, che indica la marca temporale Unix (in millisecondi) di quando è stato completato il processo TTL più recente.
 
 Il reporting storico sull’utilizzo dei set di dati non è al momento disponibile.
 +++
