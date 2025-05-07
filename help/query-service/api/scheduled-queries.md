@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;servizio query;servizio query;query pianificate;query pianificate;query pianificate;
+keywords: Experience Platform;home;argomenti popolari;servizio query;servizio query;query pianificate;query pianificate;;home;popular topic;query service;Query service;scheduled queries;scheduled query;
 solution: Experience Platform
 title: Endpoint Schedules
 description: Le sezioni seguenti descrivono le varie chiamate API che è possibile effettuare per le query pianificate con l’API Query Service.
 role: Developer
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: a39fae1b72533261fb43e0acc95e50e5a6acd8df
 workflow-type: tm+mt
-source-wordcount: '1214'
+source-wordcount: '1224'
 ht-degree: 3%
 
 ---
@@ -42,7 +42,7 @@ Di seguito è riportato un elenco dei parametri di query disponibili per l&#39;e
 | `orderby` | Specifica il campo in base al quale ordinare i risultati. I campi supportati sono `created` e `updated`. Ad esempio, `orderby=created` ordinerà i risultati in base alla creazione in ordine crescente. L&#39;aggiunta di un `-` prima della creazione (`orderby=-created`) ordinerà gli elementi in base alla creazione in ordine decrescente. |
 | `limit` | Specifica il limite di dimensioni della pagina per controllare il numero di risultati inclusi in una pagina. (*Valore predefinito: 20*) |
 | `start` | Specifica una marca temporale in formato ISO per ordinare i risultati. Se non viene specificata una data di inizio, la chiamata API restituirà prima la query pianificata creata più datata, quindi continuerà a elencare i risultati più recenti.<br> Le marche temporali ISO consentono diversi livelli di granularità in data e ora. I timestamp ISO di base assumono il formato di: `2020-09-07` per esprimere la data 7 settembre 2020. Un esempio più complesso verrebbe scritto come `2022-11-05T08:15:30-05:00` e corrisponde al 5 novembre 2022, 8:15:30, ora standard orientale USA. È possibile fornire un fuso orario con scostamento UTC ed è indicato dal suffisso &quot;Z&quot; (`2020-01-01T01:01:01Z`). Se non viene fornito alcun fuso orario, per impostazione predefinita viene impostato su zero. |
-| `property` | Filtra i risultati in base ai campi. I filtri **devono** avere escape HTML. Le virgole vengono utilizzate per combinare più set di filtri. I campi supportati sono `created`, `templateId` e `userId`. L&#39;elenco degli operatori supportati è `>` (maggiore di), `<` (minore di) e `==` (uguale a). `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec`, ad esempio, restituirà tutte le query pianificate in cui l&#39;ID utente corrisponde a quello specificato. |
+| `property` | Filtra i risultati in base ai campi. I filtri **devono** essere con escape HTML. Le virgole vengono utilizzate per combinare più set di filtri. I campi supportati sono `created`, `templateId` e `userId`. L&#39;elenco degli operatori supportati è `>` (maggiore di), `<` (minore di) e `==` (uguale a). `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec`, ad esempio, restituirà tutte le query pianificate in cui l&#39;ID utente corrisponde a quello specificato. |
 
 **Richiesta**
 
@@ -158,10 +158,11 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `query.dbName` | Nome del database per il quale si sta creando una query pianificata. |
-| `query.sql` | La query SQL da creare. |
+| `query.dbName` | Nome del database in cui verrà eseguita la query pianificata. |
+| `query.sql` | La query SQL da eseguire sulla pianificazione definita. |
 | `query.name` | Nome della query pianificata. |
-| `schedule.schedule` | Pianificazione cron per la query. Per ulteriori informazioni sulle pianificazioni cron, leggere la documentazione relativa al formato di espressione cron [cron](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). In questo esempio, &quot;30 * * *&quot; significa che la query verrà eseguita ogni ora al segno dei 30 minuti.<br><br>In alternativa, è possibile utilizzare le seguenti espressioni abbreviate:<ul><li>`@once`: la query viene eseguita una sola volta.</li><li>`@hourly`: la query viene eseguita ogni ora all&#39;inizio dell&#39;ora. Equivale all&#39;espressione cron `0 * * * *`.</li><li>`@daily`: la query viene eseguita una volta al giorno a mezzanotte. Equivale all&#39;espressione cron `0 0 * * *`.</li><li>`@weekly`: la query viene eseguita una volta alla settimana, la domenica, a mezzanotte. Equivale all&#39;espressione cron `0 0 * * 0`.</li><li>`@monthly`: la query viene eseguita una volta al mese, il primo giorno del mese, a mezzanotte. Equivale all&#39;espressione cron `0 0 1 * *`.</li><li>`@yearly`: la query viene eseguita una volta all&#39;anno, il 1° gennaio, a mezzanotte. Equivale all&#39;espressione cron `1 0 0 1 1 *`. |
+| `query.description` | Descrizione facoltativa per la query pianificata. |
+| `schedule.schedule` | Pianificazione cron per la query. Consulta [Crontab.guru](https://crontab.guru/) per informazioni interattive su come creare, convalidare e comprendere le espressioni cron. In questo esempio, &quot;30 * * *&quot; significa che la query verrà eseguita ogni ora al segno dei 30 minuti.<br><br>In alternativa, è possibile utilizzare le seguenti espressioni abbreviate:<ul><li>`@once`: la query viene eseguita una sola volta.</li><li>`@hourly`: la query viene eseguita ogni ora all&#39;inizio dell&#39;ora. Equivale all&#39;espressione cron `0 * * * *`.</li><li>`@daily`: la query viene eseguita una volta al giorno a mezzanotte. Equivale all&#39;espressione cron `0 0 * * *`.</li><li>`@weekly`: la query viene eseguita una volta alla settimana, la domenica, a mezzanotte. Equivale all&#39;espressione cron `0 0 * * 0`.</li><li>`@monthly`: la query viene eseguita una volta al mese, il primo giorno del mese, a mezzanotte. Equivale all&#39;espressione cron `0 0 1 * *`.</li><li>`@yearly`: la query viene eseguita una volta all&#39;anno, il 1° gennaio, a mezzanotte. Equivale all&#39;espressione cron `0 0 1 1 *`. |
 | `schedule.startDate` | Data di inizio per la query pianificata, scritta come timestamp UTC. |
 
 **Risposta**
@@ -306,7 +307,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 
 ### Aggiorna i dettagli di una query pianificata specificata
 
-Per aggiornare i dettagli di una query pianificata specificata, eseguire una richiesta PATCH all&#39;endpoint `/schedules` e specificare il relativo ID nel percorso della richiesta.
+È possibile aggiornare i dettagli di una query pianificata specificata effettuando una richiesta PATCH all&#39;endpoint `/schedules` e fornendo il relativo ID nel percorso della richiesta.
 
 La richiesta PATCH supporta due percorsi diversi: `/state` e `/schedule/schedule`.
 
@@ -322,7 +323,7 @@ PATCH /schedules/{SCHEDULE_ID}
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | Valore `id` della query pianificata di cui si desidera eseguire il PATCH. |
+| `{SCHEDULE_ID}` | Il valore `id` della query pianificata che si desidera PATCH. |
 
 
 **Richiesta**
@@ -375,7 +376,7 @@ PATCH /schedules/{SCHEDULE_ID}
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | Valore `id` della query pianificata di cui si desidera eseguire il PATCH. |
+| `{SCHEDULE_ID}` | Il valore `id` della query pianificata che si desidera PATCH. |
 
 **Richiesta**
 
@@ -431,7 +432,7 @@ DELETE /schedules/{SCHEDULE_ID}
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | Valore `id` della query pianificata di cui si desidera eseguire il DELETE. |
+| `{SCHEDULE_ID}` | Il valore `id` della query pianificata che si desidera DELETE. |
 
 **Richiesta**
 
