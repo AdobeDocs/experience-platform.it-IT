@@ -2,9 +2,9 @@
 title: Guida all’implementazione per le regole di collegamento del grafico delle identità
 description: Scopri i passaggi consigliati da seguire per implementare i dati con le configurazioni delle regole di collegamento del grafico delle identità.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: d0380844eb8dd98bd7c349beb035cce4c7ccb44f
+source-git-commit: 1a6ca508f0f5e95ddad9014d6507a7a829592673
 workflow-type: tm+mt
-source-wordcount: '1886'
+source-wordcount: '1958'
 ht-degree: 6%
 
 ---
@@ -161,6 +161,8 @@ Nella simulazione del grafico, questa acquisizione potrebbe avere un aspetto sim
 
 >[!TAB Eventi autenticati senza identificatori di persona]
 
+In questo esempio, puoi presumere che il seguente evento sia stato inviato ad Experience Platform mentre John (l’utente finale) stava navigando nel tuo sito web mentre era autenticato. Tuttavia, nonostante l’autenticazione, Experience Platform non è in grado di identificare John a causa della mancanza di identificatori di persona nell’evento. Pertanto, questo evento viene interpretato come un utente anonimo che naviga nel sito web Adobe Business, invece di riconoscerlo come un’attività online associata specificamente a John.
+
 ```json
 {
     "_id": "test_id",
@@ -199,7 +201,7 @@ Se i dati lo richiedono, devi innanzitutto creare gli spazi dei nomi appropriati
 
 ## Usa strumento di simulazione grafico {#graph-simulation}
 
-Quindi, passa allo strumento di simulazione del grafico [&#128279;](./graph-simulation.md) nell&#39;area di lavoro dell&#39;interfaccia utente di Identity Service. Puoi utilizzare lo strumento di simulazione del grafico per simulare grafici di identità, creati con diverse configurazioni di spazio dei nomi e priorità dello spazio dei nomi univoche.
+Quindi, passa allo strumento di simulazione del grafico [](./graph-simulation.md) nell&#39;area di lavoro dell&#39;interfaccia utente di Identity Service. Puoi utilizzare lo strumento di simulazione del grafico per simulare grafici di identità, creati con diverse configurazioni di spazio dei nomi e priorità dello spazio dei nomi univoche.
 
 Creando diverse configurazioni, puoi utilizzare lo strumento di simulazione del grafico per scoprire e comprendere meglio in che modo l’algoritmo di ottimizzazione delle identità e alcune configurazioni possono influenzare il comportamento del grafico.
 
