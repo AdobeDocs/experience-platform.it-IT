@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica delle etichette di utilizzo dei dati
 description: Scopri come le etichette di utilizzo dei dati vengono utilizzate per contribuire a rafforzare la conformità alla governance dei dati in Adobe Experience Platform.
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 916eb01ea7878366620b859c1d6a667a88b850c9
 workflow-type: tm+mt
 source-wordcount: '789'
 ht-degree: 16%
@@ -44,7 +44,7 @@ Per ulteriori informazioni sul funzionamento dell&#39;imposizione automatica in 
 
 [!DNL Experience Platform] può condividere segmenti con Adobe Audience Manager. Qualsiasi controllo sull&#39;esportazione dei dati applicato ai segmenti di Audience Manager viene convertito in etichette e azioni di marketing equivalenti riconosciute dalla governance dei dati di [!DNL Experience Platform].
 
-Per informazioni sul mapping di specifici controlli sull&#39;esportazione dei dati alle etichette di utilizzo dei dati in [!DNL Experience Platform], consultare la [documentazione di Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=it#aam-data-export-control-in-aep).
+Per informazioni sul mapping di specifici controlli sull&#39;esportazione dei dati alle etichette di utilizzo dei dati in [!DNL Experience Platform], consultare la [documentazione di Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
 
 ## Gestione delle etichette di utilizzo dei dati in [!DNL Experience Platform] {#manage-labels}
 
@@ -57,7 +57,7 @@ Per informazioni sul mapping di specifici controlli sull&#39;esportazione dei da
 
 ### Utilizzo dell’interfaccia utente
 
-L&#39;area di lavoro **[!UICONTROL Criteri]** nell&#39;interfaccia utente [!DNL Experience Platform] consente di visualizzare e gestire le etichette core e personalizzate per l&#39;organizzazione. Puoi utilizzare l&#39;area di lavoro **[!UICONTROL Schemi]** per [applicare etichette agli schemi Experience Data Model (XDM)](../../xdm/tutorials/labels.md) oppure scoprire come [creare e gestire etichette personalizzate nell&#39;interfaccia utente **[!UICONTROL Criteri]](./user-guide.md) leggendo la guida utente delle etichette di utilizzo dei dati.
+L&#39;area di lavoro **[!UICONTROL Criteri]** nell&#39;interfaccia utente [!DNL Experience Platform] consente di visualizzare e gestire le etichette core e personalizzate per l&#39;organizzazione. Puoi utilizzare l&#39;area di lavoro **[!UICONTROL Schemi]** per [applicare etichette agli schemi Experience Data Model (XDM)](../../xdm/tutorials/labels.md) oppure scoprire come [creare e gestire etichette personalizzate nell&#39;interfaccia utente **[!UICONTROL Criteri]**](./user-guide.md) leggendo la guida utente delle etichette di utilizzo dei dati.
 
 >[!IMPORTANT]
 >

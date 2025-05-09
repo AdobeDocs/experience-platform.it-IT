@@ -2,9 +2,9 @@
 title: Gestire la conservazione dei set di dati di Experience Event nel Data Lake tramite TTL
 description: Scopri come valutare, impostare e gestire la conservazione dei set di dati di Experience Event nel data lake utilizzando le configurazioni Time-To-Live (TTL) con le API di Adobe Experience Platform. Questa guida spiega come la scadenza a livello di riga TTL supporti le regole di conservazione dei dati, ottimizzi l'efficienza dello storage e garantisca un'efficace gestione del ciclo di vita dei dati. Inoltre, fornisce casi d’uso e best practice per aiutarti ad applicare il TTL in modo efficace.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: 06b58d714047cb69f237469ecd548bb824e565ab
+source-git-commit: 13db0477c0f42d0808647937d40c25b47a270894
 workflow-type: tm+mt
-source-wordcount: '2456'
+source-wordcount: '2452'
 ht-degree: 0%
 
 ---
@@ -112,7 +112,7 @@ Utilizza l’endpoint API di igiene dei dati `/ttl/{DATASET_ID}` per pianificare
 
 Per ulteriori informazioni, consulta la documentazione dell&#39;[API di igiene dei dati](https://developer.adobe.com/experience-platform-apis/references/data-hygiene/#operation/getTtl) di Adobe Developer.
 
-Per [controllare il TTL attualmente applicato a un set di dati](#check-applied-ttl-values), effettuare una richiesta GET all&#39;endpoint `/dataSets/{DATASET_ID}` &lbrace;API[&#128279;](https://developer.adobe.com/experience-platform-apis/references/catalog/) di Catalog Service .
+Per [controllare il TTL attualmente applicato a un set di dati](#check-applied-ttl-values), effettuare una richiesta GET all&#39;endpoint `/dataSets/{DATASET_ID}` {API](https://developer.adobe.com/experience-platform-apis/references/catalog/) di Catalog Service [.
 
 >[!TIP]
 >
@@ -301,12 +301,12 @@ Queste domande frequenti riguardano domande pratiche sui processi di conservazio
 ### A quali tipi di set di dati è possibile applicare le regole dei criteri di conservazione?
 
 +++Risposta
-È possibile applicare criteri di conservazione basati su TTL a qualsiasi set di dati che utilizza uno schema di serie temporali. Sono inclusi set di dati basati sulla classe ExperienceEvent XDM standard, nonché schemi personalizzati che estendono la classe Time Series XDM.
+È possibile applicare criteri di conservazione basati su TTL a qualsiasi set di dati che utilizza il comportamento della serie temporale. Ciò include set di dati basati sulla classe XDM ExperienceEvent standard, nonché schemi personalizzati progettati per acquisire dati di serie temporali.
 
 La scadenza a livello di riga richiede le seguenti condizioni tecniche:
 
-- Lo schema deve estendere la classe base XDM Time Series.
-- Lo schema deve includere un campo timestamp, utilizzato per valutare la scadenza.
+- Lo schema deve essere progettato per acquisire dati di serie temporali.
+- Lo schema deve includere un campo timestamp utilizzato per valutare la scadenza.
 - Il set di dati deve memorizzare dati a livello di evento, in genere utilizzando o estendendo la classe XDM ExperienceEvent.
 - Il set di dati deve essere registrato in Catalog Service, in quanto le impostazioni TTL vengono applicate tramite `extensions.adobe_lakeHouse.rowExpiration`.
 - I valori TTL devono utilizzare il formato di durata ISO-8601 (ad esempio `P30D`, `P6M`, `P1Y`).
