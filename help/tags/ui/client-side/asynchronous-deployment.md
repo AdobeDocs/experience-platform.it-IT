@@ -106,4 +106,4 @@ I tag dispongono di un pulsante per attivare il caricamento asincrono quando si 
    <script type="text/javascript">_satellite.pageBottom();</script>
    ```
 
-   Questo codice indica Experience Platform che il parser browser ha raggiunto la parte inferiore della pagina. Poiché probabilmente i tag non saranno ancora caricati e in esecuzione in questo momento, la chiamata a `_satellite.pageBottom()` restituisce un errore e il tipo di evento Page Bottom potrebbe non comportarsi come previsto.
+   Questo codice comunica ad Experience Platform che il parser del browser ha raggiunto il fondo della pagina. Poiché probabilmente i tag non saranno ancora caricati e in esecuzione in questo momento, la chiamata a `_satellite.pageBottom()` restituisce un errore e il tipo di evento Page Bottom potrebbe non comportarsi come previsto.

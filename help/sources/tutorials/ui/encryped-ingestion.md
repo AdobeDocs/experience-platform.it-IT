@@ -16,27 +16,27 @@ ht-degree: 6%
 >
 >Il supporto per l’acquisizione di dati crittografati nell’interfaccia utente delle sorgenti è in versione beta. La funzione e la documentazione sono soggette a modifiche.
 
-È possibile inserire file e cartelle di dati crittografati in Adobe Experience Platform utilizzando cloud origini batch di archiviazione. Con l&#39;assimilazione di dati crittografati, è possibile sfruttare meccanismi di crittografia asimmetrica per trasferire in modo sicuro dati batch in Experience Platform. I meccanismi di crittografia asimmetrica supportati sono PGP e GPG.
+Puoi acquisire cartelle e file di dati crittografati in Adobe Experience Platform utilizzando origini batch di archiviazione cloud. Con l’acquisizione di dati crittografati, puoi sfruttare meccanismi di crittografia asimmetrica per trasferire in modo sicuro i dati batch in Experience Platform. I meccanismi di crittografia asimmetrica supportati sono PGP e GPG.
 
-Leggi questa guida per scoprire come inserire dati crittografati con origini batch di archiviazione cloud utilizzando interfaccia.
+Leggi questa guida per scoprire come acquisire dati crittografati con origini batch di archiviazione cloud utilizzando l’interfaccia utente.
 
 ## Introduzione
 
-Prima di continuare con questo esercitazione, leggere i seguenti documenti per comprendere meglio le seguenti Experience Platform caratteristiche e concetti.
+Prima di continuare con questa esercitazione, leggi i seguenti documenti per comprendere meglio le funzioni e i concetti di Experience Platform seguenti.
 
 * [Origini](../../home.md): utilizza le origini in Experience Platform per acquisire dati da un&#39;applicazione Adobe o da un&#39;origine dati di terze parti.
-* [Flussi dati](../../../dataflows/home.md): i flussi dati sono rappresentazioni dei processi di dati che spostano i dati in Experience Platform. Puoi usare l&#39;area di lavoro Origini per creare flussi di dati che inseriscono dati da una determinata origine a Experience Platform.
-* [Sandbox](../../../sandboxes/home.md): utilizza le sandbox in Experience Platform per creare partizioni virtuali tra le tue istanze Experience Platform e creare ambienti dedicati allo sviluppo o alla produzione.
+* [Flussi dati](../../../dataflows/home.md): i flussi dati sono rappresentazioni dei processi di dati che spostano i dati in Experience Platform. Puoi utilizzare l’area di lavoro origini per creare flussi di dati che acquisiscono dati da una determinata origine in Experience Platform.
+* [Sandbox](../../../sandboxes/home.md): utilizza le sandbox in Experience Platform per creare partizioni virtuali tra le istanze Experience Platform e creare ambienti dedicati allo sviluppo o alla produzione.
 
-### Schema di alto livello
+### Profilo di alto livello
 
-* Crea una coppia di chiavi di crittografia utilizzando l&#39;area di lavoro Origini nel interfaccia Experience Platform.
+* Crea una coppia di chiavi di crittografia utilizzando l’area di lavoro origini nell’interfaccia utente di Experience Platform.
    * Facoltativamente, puoi anche creare una coppia di chiavi di verifica dei segni personalizzata per fornire un ulteriore livello di sicurezza ai dati crittografati.
 * Utilizza la chiave pubblica della coppia di chiavi di crittografia per crittografare i dati.
 * Inserisci i dati crittografati nell’archiviazione cloud. Durante questo passaggio, devi anche assicurarti di disporre di un file di esempio dei tuoi dati nell’archiviazione cloud che possa essere utilizzato come riferimento per mappare i dati di origine su uno schema Experience Data Model (XDM).
 * Utilizza l’origine del batch di archiviazione cloud e inizia il processo di acquisizione dei dati nell’area di lavoro origini nell’interfaccia utente di Experience Platform.
 * Durante il processo di creazione della connessione di origine, fornisci l’ID della chiave che corrisponde alla chiave pubblica utilizzata per crittografare i dati.
-   * Se è stato utilizzato anche il meccanismo della coppia di chiavi di verifica del segno, è necessario fornire anche l&#39;ID della chiave di verifica del segno corrispondente ai dati crittografati.
+   * Se hai utilizzato anche il meccanismo di coppia di chiavi per la verifica dei segni, devi fornire anche l’ID della chiave per la verifica dei segni che corrisponde ai dati crittografati.
 * Procedi ai passaggi di creazione del flusso di dati.
 
 ## Creare una coppia di chiavi di crittografia {#create-an-encryption-key-pair}
@@ -50,21 +50,21 @@ Prima di continuare con questo esercitazione, leggere i seguenti documenti per c
 
 **Che cos&#39;è una coppia di chiavi di crittografia?**
 
-Una coppia di chiavi di crittografia è un meccanismo di crittografia asimmetrica costituito da una chiave pubblica e una chiave privata. La chiave pubblica viene utilizzata per crittografare i dati e la chiave privata viene quindi utilizzata per decrittografare tali dati.
+Una coppia di chiavi di crittografia è un meccanismo di crittografia asimmetrico costituito da una chiave pubblica e da una chiave privata. La chiave pubblica viene utilizzata per crittografare i dati e la chiave privata per decrittografarli.
 
-È possibile creare la coppia di chiavi di crittografia tramite il interfaccia Experience Platform. Una volta generato, riceverai una chiave pubblica e un ID chiave corrispondente. Utilizzare la chiave pubblica per crittografare i dati e quindi utilizzare l&#39;ID chiave per confermare l&#39;identità, quando si è in procinto di inserire i dati crittografati. La chiave privata va automaticamente a Experience Platform, dove viene archiviata in un vault sicuro, e verrà utilizzata solo quando i dati sono pronti per la decrittografia.
+Puoi creare la coppia di chiavi di crittografia tramite l’interfaccia utente di Experience Platform. Una volta generata, riceverai una chiave pubblica e un ID di chiave corrispondente. Utilizza la chiave pubblica per crittografare i dati e quindi utilizza l’ID della chiave per confermare la tua identità quando stai acquisendo i dati crittografati. La chiave privata viene inviata automaticamente ad Experience Platform, dove viene archiviata in un archivio protetto, e verrà utilizzata solo quando i dati sono pronti per la decrittografia.
 
 >[!ENDSHADEBOX]
 
-Nella interfaccia Experience Platform, passare all&#39;area di lavoro origini e quindi selezionare [!UICONTROL Coppie di] chiavi dall&#39;intestazione superiore.
+Nell&#39;interfaccia utente di Experience Platform, passa all&#39;area di lavoro origini e seleziona [!UICONTROL Coppie di chiavi] dall&#39;intestazione superiore.
 
 ![Catalogo delle origini con l&#39;intestazione &quot;Coppie di chiavi&quot; selezionata.](../../images/tutorials/edi/catalog.png)
 
-Viene visualizzata una pagina in cui sono elencate le coppie di chiavi di crittografia esistenti nell&#39;organizzazione. Questa pagina fornisce informazioni su titolo, ID, tipo, algoritmo di crittografia, scadenza e stato di una determinata chiave. Per creare una nuova coppia di chiavi, selezionate **[!UICONTROL Crea chiave]**.
+Viene visualizzata una pagina in cui sono elencate le coppie di chiavi di crittografia esistenti nell&#39;organizzazione. Questa pagina fornisce informazioni su titolo, ID, tipo, algoritmo di crittografia, scadenza e stato di una determinata chiave. Per creare una nuova coppia di chiavi, selezionare **[!UICONTROL Crea chiave]**.
 
-![La pagina Coppie di chiavi, con &quot;chiave di crittografia&quot; selezionata come tipo di chiave e &quot;Crea chiave&quot; pulsante selezionata.](../../images/tutorials/edi/encryption_key_page.png)
+![Pagina Coppie di chiavi, con &quot;chiave di crittografia&quot; selezionata come tipo di chiave e il pulsante &quot;crea chiave&quot; selezionato.](../../images/tutorials/edi/encryption_key_page.png)
 
-Successivo, scegli il tipo di chiave che vuoi impostare. Per creare una chiave di crittografia, selezionare **[!UICONTROL Chiave di crittografia, quindi Continua**&#x200B;**.]**
+Scegliere quindi il tipo di chiave che si desidera impostare. Per creare una chiave di crittografia, selezionare **[!UICONTROL Chiave di crittografia]**, quindi selezionare **[!UICONTROL Continua]**.
 
 ![Finestra di creazione della chiave, con la chiave di crittografia selezionata.](../../images/tutorials/edi/choose_encryption_key_type.png)
 
@@ -72,13 +72,13 @@ Fornisci un titolo e una passphrase per la chiave di crittografia. La passphrase
 
 ![Finestra di creazione della chiave di crittografia, in cui sono specificati un titolo e una passphrase.](../../images/tutorials/edi/create_encryption_key.png)
 
-In caso di esito positivo, viene visualizzata una nuova finestra in cui viene visualizzata la nuova chiave di crittografia, con titolo, chiave pubblica e ID della chiave. Usa il valore della chiave pubblica per crittografare i tuoi dati. In un passaggio successivo, utilizzerai l’ID chiave per dimostrare la tua identità al momento dell’acquisizione dei dati crittografati durante il processo di creazione del flusso di dati.
+In caso di esito positivo, viene visualizzata una nuova finestra in cui viene visualizzata la nuova chiave di crittografia, con titolo, chiave pubblica e ID della chiave. Utilizza il valore della chiave pubblica per crittografare i dati. In un passaggio successivo, utilizzerai l’ID chiave per dimostrare la tua identità al momento dell’acquisizione dei dati crittografati durante il processo di creazione del flusso di dati.
 
 ![Finestra in cui vengono visualizzate le informazioni sulla coppia di chiavi di crittografia appena creata.](../../images/tutorials/edi/encryption_key_details.png)
 
 Per visualizzare le informazioni su una chiave di crittografia esistente, selezionare i puntini di sospensione (`...`) accanto al titolo della chiave. Seleziona **[!UICONTROL Dettagli chiave]** per visualizzare la chiave pubblica e l&#39;ID chiave. In alternativa, per eliminare la chiave di crittografia, selezionare **[!UICONTROL Elimina]**.
 
-![Pagina delle coppie di chiavi, in cui viene visualizzato un elenco di chiavi di crittografia. I puntini di sospensione accanto a &quot;acme-encryption-key&quot; sono selezionati e il menu a discesa mostra le opzioni per visualizzare i dettagli della chiave o eliminare le chiavi.](../../images/tutorials/edi/configuration_options.png)
+![Pagina delle coppie di chiavi, in cui viene visualizzato un elenco di chiavi di crittografia. L&#39;ellissi accanto a &quot;chiave di crittografia acme&quot; è selezionato e nel menu a discesa vengono visualizzate le opzioni per visualizzare i dettagli della chiave o eliminare le chiavi.](../../images/tutorials/edi/configuration_options.png)
 
 ### Creare una chiave di verifica della firma {#create-a-sign-verification-key}
 
@@ -89,7 +89,7 @@ Per visualizzare le informazioni su una chiave di crittografia esistente, selezi
 
 >[!BEGINSHADEBOX]
 
-**Cos&#39;è una chiave di verifica del segno?**
+**Che cos&#39;è una chiave di verifica della firma?**
 
 Una chiave di verifica del segno è un altro meccanismo di crittografia che coinvolge una chiave privata e una chiave pubblica. In questo caso, puoi creare la coppia di chiavi di verifica della firma e utilizzare la chiave privata per firmare e fornire un ulteriore livello di crittografia ai dati. Quindi condividerai la chiave pubblica corrispondente con Experience Platform. Durante l’acquisizione, Experience Platform utilizzerà la chiave pubblica per verificare la firma associata alla chiave privata.
 
@@ -103,7 +103,7 @@ Quindi, fornisci un titolo e una chiave PGP con codifica [!DNL Base64] come chia
 
 ![Finestra Crea chiave di verifica della firma.](../../images/tutorials/edi/create_sign_verification_key.png)
 
-In caso di esito positivo, viene visualizzata una nuova finestra in cui è visualizzata la nuova chiave di verifica del segno, inclusi il titolo e l&#39;ID della chiave.
+In caso di esito positivo, viene visualizzata una nuova finestra in cui viene visualizzata la nuova chiave di verifica del segno, inclusi il titolo e l&#39;ID della chiave.
 
 ![Dettagli della chiave di verifica della firma appena creata.](../../images/tutorials/edi/sign_verification_key_details.png)
 
@@ -119,7 +119,7 @@ In caso di esito positivo, viene visualizzata una nuova finestra in cui è visua
 >title="Selezionare file di esempio"
 >abstract="Per creare una mappatura, è necessario acquisire un file di esempio durante l’acquisizione di dati crittografati."
 
-È possibile inserire dati crittografati utilizzando le seguenti origini batch di archiviazione cloud:
+Puoi acquisire dati crittografati utilizzando le seguenti origini batch di archiviazione cloud:
 
 * [[!DNL Amazon S3]](../ui/create/cloud-storage/s3.md)
 * [[!DNL Azure Blob]](../ui/create/cloud-storage/blob.md)
@@ -132,17 +132,17 @@ In caso di esito positivo, viene visualizzata una nuova finestra in cui è visua
 * [[!DNL Oracle Object Storage]](../ui/create/cloud-storage/oracle-object-storage.md)
 * [[!DNL SFTP]](../ui/create/cloud-storage/sftp.md)
 
-Esegui l&#39;autenticazione con l&#39;cloud l&#39;origine di archiviazione scelta. Durante il passaggio di selezione dei dati del workflow, selezionare il file crittografato o la cartella che si desidera ingerire e quindi attivare l&#39;interruttore **[!UICONTROL È il file crittografato]** .
+Autenticazione con l’origine dell’archiviazione cloud desiderata. Durante il passaggio di selezione dei dati del flusso di lavoro, seleziona il file o la cartella crittografati che desideri acquisire e quindi abilita l&#39;interruttore **[!UICONTROL Il file è crittografato]**.
 
-![Il passaggio &quot;seleziona i dati&quot; delle origini workflow, in cui viene selezionato un file di dati crittografati per l&#39;acquisizione.](../../images/tutorials/edi/select_data.png)
+![Il passaggio &quot;seleziona dati&quot; del flusso di lavoro origini, in cui viene selezionato un file di dati crittografato per l&#39;acquisizione.](../../images/tutorials/edi/select_data.png)
 
 Quindi, seleziona un file di esempio dai dati di origine. Poiché i dati sono crittografati, Experience Platform richiederà un file di esempio per creare uno schema XDM da mappare ai dati di origine.
 
-![L&#39;opzione &quot;Questo file è criptato?&quot; attivato e pulsante selezionato &quot;Seleziona file di esempio&quot;. ](../../images/tutorials/edi/select_sample_file.png)
+![Il file è crittografato? e il pulsante Seleziona file di esempio selezionato. ](../../images/tutorials/edi/select_sample_file.png)
 
-Dopo aver selezionato il file di esempio, configurare le impostazioni dei dati, ad esempio il formato di dati corrispondente, il delimitatore e il tipo di compressione. Attendere un certo tempo per il rendering completo dell&#39;interfaccia di anteprima, quindi selezionare **[!UICONTROL Salva]**.
+Dopo aver selezionato il file di esempio, configura le impostazioni dei dati, ad esempio il formato di dati, il delimitatore e il tipo di compressione corrispondenti. Attendere alcuni minuti per il rendering completo dell&#39;interfaccia di anteprima, quindi selezionare **[!UICONTROL Salva]**.
 
-![Viene selezionato un campione per l&#39;inserimento e l&#39;anteprima del file viene caricata completamente.](../../images/tutorials/edi/file_preview.png)
+![È stato selezionato un esempio per l&#39;acquisizione e l&#39;anteprima del file è completamente caricata.](../../images/tutorials/edi/file_preview.png)
 
 Da qui, utilizza il menu a discesa per selezionare il titolo della chiave pubblica dell’ID della chiave pubblica che corrisponde alla chiave pubblica utilizzata per crittografare i dati.
 
@@ -165,4 +165,4 @@ Puoi continuare a [apportare aggiornamenti al flusso di dati](../ui/update-dataf
 
 ## Passaggi successivi
 
-Leggendo questo documento, è ora possibile inserire dati crittografati dall&#39;origine batch di archiviazione cloud a Experience Platform. Per informazioni su come inserire dati crittografati utilizzando le API, leggi la guida sull&#39;inserimento [di dati crittografati tramite l&#39;API](../api/encrypt-data.md) [!DNL Flow Service] . Per informazioni generali sulle fonti su Experience Platform, leggi la panoramica[&#128279;](../../home.md) delle fonti.
+Una volta letto questo documento, puoi acquisire i dati crittografati dall’origine del batch di archiviazione cloud ad Experience Platform. Per informazioni su come acquisire dati crittografati utilizzando le API, leggere la guida in [acquisizione di dati crittografati tramite l&#39;API [!DNL Flow Service] API](../api/encrypt-data.md). Per informazioni generali sulle origini in Experience Platform, leggere la [panoramica sulle origini](../../home.md).

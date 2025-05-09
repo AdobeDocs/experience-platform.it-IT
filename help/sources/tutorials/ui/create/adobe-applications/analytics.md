@@ -26,9 +26,9 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di Experie
 È importante comprendere i seguenti termini chiave utilizzati nel presente documento:
 
 * **Attributo standard**: gli attributi standard sono qualsiasi attributo predefinito da Adobe. Contengono lo stesso significato per tutti i clienti e sono disponibili nei gruppi di campi dello schema [!DNL Analytics] e dei dati di origine [!DNL Analytics].
-* **Attributo personalizzato**: gli attributi personalizzati sono qualsiasi attributo nella gerarchia delle variabili personalizzate in [!DNL Analytics]. Gli attributi personalizzati vengono utilizzati all’interno di un’implementazione di Adobe Analytics per acquisire informazioni specifiche in una suite di rapporti e possono differire nel loro utilizzo da una suite di rapporti all’altra. Gli attributi personalizzati includono eVar, prop ed elenchi. Per ulteriori informazioni sulle eVar, consulta la [[!DNL Analytics] documentazione sulle variabili di conversione](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=it).
+* **Attributo personalizzato**: gli attributi personalizzati sono qualsiasi attributo nella gerarchia delle variabili personalizzate in [!DNL Analytics]. Gli attributi personalizzati vengono utilizzati all’interno di un’implementazione di Adobe Analytics per acquisire informazioni specifiche in una suite di rapporti e possono differire nel loro utilizzo da una suite di rapporti all’altra. Gli attributi personalizzati includono eVar, prop ed elenchi. Per ulteriori informazioni sulle eVar, consulta la [[!DNL Analytics] documentazione sulle variabili di conversione](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html).
 * **Qualsiasi attributo nei gruppi di campi personalizzati**: gli attributi che provengono dai gruppi di campi creati dai clienti sono tutti definiti dall&#39;utente e non sono considerati né attributi standard né personalizzati.
-* **Nomi descrittivi**: i nomi descrittivi sono etichette fornite dall&#39;uomo per le variabili personalizzate in un&#39;implementazione [!DNL Analytics]. Per ulteriori informazioni sui nomi descrittivi, consulta la [[!DNL Analytics] documentazione sulle variabili di conversione](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=it).
+* **Nomi descrittivi**: i nomi descrittivi sono etichette fornite dall&#39;uomo per le variabili personalizzate in un&#39;implementazione [!DNL Analytics]. Per ulteriori informazioni sui nomi descrittivi, consulta la [[!DNL Analytics] documentazione sulle variabili di conversione](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html).
 
 ## Creare una connessione sorgente con Adobe Analytics
 
@@ -85,7 +85,7 @@ Uno schema predefinito crea un nuovo schema per tuo conto, contenente il gruppo 
 
 ![schema-predefinito](../../../../images/tutorials/create/analytics/default-schema.png)
 
-Con uno schema personalizzato, è possibile scegliere qualsiasi schema disponibile per i dati [!DNL Analytics] , purché tale schema disponga del gruppo di [!DNL Adobe Analytics ExperienceEvent Template] campi. Per utilizzare uno schema personalizzato, selezionare **[!UICONTROL Schema]** personalizzato.
+Con uno schema personalizzato, è possibile scegliere qualsiasi schema disponibile per i dati [!DNL Analytics], purché tale schema abbia il gruppo di campi [!DNL Adobe Analytics ExperienceEvent Template]. Per utilizzare uno schema personalizzato, selezionare **[!UICONTROL Schema personalizzato]**.
 
 ![schema-personalizzato](../../../../images/tutorials/create/analytics/custom-schema.png)
 
@@ -93,11 +93,11 @@ La pagina [!UICONTROL Mapping] fornisce un&#39;interfaccia per mappare i campi d
 
 >[!TIP]
 >
->Nel menu di selezione dello schema vengono visualizzati solo gli schemi con il gruppo di campi [!DNL Adobe Analytics ExperienceEvent Template]. Gli altri schemi vengono omessi. Se non sono disponibili schemi appropriati per i dati della suite di rapporti, è necessario creare un nuovo schema. Per la procedura dettagliata alla creazione di schemi, vedere la guida alla [creazione e alla modifica di schemi in interfaccia](../../../../../xdm/ui/resources/schemas.md).
+>Nel menu di selezione dello schema vengono visualizzati solo gli schemi con il gruppo di campi [!DNL Adobe Analytics ExperienceEvent Template]. Gli altri schemi vengono omessi. Se non sono disponibili schemi appropriati per i dati della suite di rapporti, devi creare un nuovo schema. Per i passaggi dettagliati sulla creazione di schemi, consulta la guida su [creazione e modifica di schemi nell&#39;interfaccia utente](../../../../../xdm/ui/resources/schemas.md).
 
 ![select-schema](../../../../images/tutorials/create/analytics/select-schema.png)
 
-Nella [!UICONTROL sezione Campi] standard della mappa vengono visualizzati i pannelli relativi alle [!UICONTROL mappature standard applicate], [!UICONTROL alle] mappature standard non corrispondenti e [!UICONTROL alle mappature] personalizzate. Vedere la seguente tabella per informazioni specifiche relative a ciascuna categoria:
+Nella sezione [!UICONTROL Mapping di campi standard] sono visualizzati i pannelli per [!UICONTROL Mapping standard applicati], [!UICONTROL Mapping standard non corrispondenti] e [!UICONTROL Mapping personalizzati]. Per informazioni specifiche su ciascuna categoria, vedere la tabella seguente:
 
 | Mappa campi standard | Descrizione |
 | --- | --- |
@@ -200,25 +200,25 @@ Dopo aver completato le mappature per i dati della suite di rapporti [!DNL Analy
 
 >[!IMPORTANT]
 >
->Utilizza il filtro a livello di riga per applicare condizioni e stabilire quali dati **includere nell’acquisizione per il profilo**. Utilizza il filtro a livello di colonna per selezionare le colonne di dati che desideri **escludere per l&#39;assimilazione** del profilo.
+>Utilizza il filtro a livello di riga per applicare condizioni e stabilire quali dati **includere nell’acquisizione per il profilo**. Utilizza il filtro a livello di colonna per selezionare le colonne di dati da **escludere per l&#39;acquisizione del profilo**.
 
-È possibile filtrare i dati per [!DNL Profile] l&#39;inserimento a livello di riga e di colonna. Il filtro a livello di riga consente di definire criteri quali stringa contiene, è uguale a, inizia o termina con. È inoltre possibile utilizzare il filtro a livello di riga per unire le condizioni utilizzando `AND` e `OR` e negare le condizioni utilizzando `NOT`.
+È possibile filtrare i dati per l&#39;acquisizione di [!DNL Profile] a livello di riga e di colonna. Il filtro a livello di riga consente di definire criteri quali stringa contiene, è uguale a, inizia o termina con. È inoltre possibile utilizzare il filtro a livello di riga per unire le condizioni utilizzando `AND` e `OR` e negare le condizioni utilizzando `NOT`.
 
 Per filtrare i dati di [!DNL Analytics] a livello di riga, selezionare **[!UICONTROL Filtro righe]**.
 
 ![filtro righe](../../../../images/tutorials/create/analytics/row-filter.png)
 
-Utilizzare l&#39;barra sinistro per spostarsi nella gerarchia dello schema e selezionare l&#39;attributo dello schema desiderato per analizzare in profondità ulteriormente uno schema specifico.
+Utilizza la barra a sinistra per spostarti nella gerarchia dello schema e selezionare l’attributo dello schema desiderato per approfondire ulteriormente uno schema specifico.
 
-![barra sinistra](../../../../images/tutorials/create/analytics/left-rail.png)
+![barra a sinistra](../../../../images/tutorials/create/analytics/left-rail.png)
 
-Una volta identificato l&#39;attributo che si desidera configurare, selezionare e trascinare l&#39;attributo dalla barra sinistra al pannello dei filtri.
+Dopo aver identificato l’attributo da configurare, selezionalo e trascinalo dalla barra a sinistra al pannello di filtro.
 
-![pannello di filtraggio](../../../../images/tutorials/create/analytics/filtering-panel.png)
+![pannello-filtro](../../../../images/tutorials/create/analytics/filtering-panel.png)
 
-Per configurare condizioni diverse, seleziona **[!UICONTROL uguale]** , quindi seleziona una condizione dalla finestra a discesa visualizzata.
+Per configurare condizioni diverse, selezionare **[!UICONTROL è uguale a]**, quindi selezionare una condizione dalla finestra a discesa visualizzata.
 
-L&#39;elenco delle condizioni configurabili include:
+L’elenco delle condizioni configurabili include:
 
 * [!UICONTROL è uguale a]
 * [!UICONTROL è diverso da]
@@ -301,21 +301,21 @@ Viene visualizzato un elenco dei flussi di dati di Analytics esistenti nell’or
 
 ![Elenco dei flussi di dati Adobe Analytics esistenti nell&#39;organizzazione.](../../../../images/tutorials/create/analytics/select-target-dataset.png)
 
-La [!UICONTROL pagina Attività] dataset fornisce informazioni sullo stato di avanzamento dei dati inviati dal Analytics al Experience Platform. L&#39;interfaccia visualizza metriche quali il totale dei record nel mese precedente, il totale dei record acquisiti negli ultimi sette giorni e la dimensione dei dati nel mese precedente.
+La pagina [!UICONTROL Attività set di dati] fornisce informazioni sull&#39;avanzamento dei dati inviati da Analytics ad Experience Platform. L’interfaccia visualizza metriche quali il totale dei record del mese precedente, il totale dei record acquisiti negli ultimi sette giorni e le dimensioni dei dati nel mese precedente.
 
 L’origine crea un’istanza di due flussi di set di dati. Un flusso rappresenta i dati di backfill e l’altro è per i dati live. I dati di backfill non sono configurati per l’acquisizione in Real-Time Customer Profile, ma vengono inviati al data lake per casi d’uso analitici e di data science.
 
 Per ulteriori informazioni sulla retrocompilazione, sui dati live e sulle rispettive latenze, consulta la [Panoramica sull&#39;origine di Analytics](../../../../connectors/adobe-applications/analytics.md).
 
-![La pagina dell&#39;attività del set di dati per un dato destinazione un set di dati per Adobe Analytics dati.](../../../../images/tutorials/create/analytics/dataset-activity.png)
+![Pagina attività set di dati per un set di dati di destinazione specifico per i dati di Adobe Analytics.](../../../../images/tutorials/create/analytics/dataset-activity.png)
 
 >[!NOTE]
 >
->Nella pagina di attività del set di dati non vengono visualizzate informazioni sui batch poiché il connettore di origine Analytics è gestito interamente da Adobe Systems. È possibile monitorare il flusso dei dati esaminando le metriche relative ai record inseriti.
+>La pagina dell’attività del set di dati non visualizza informazioni sui batch, poiché il connettore di origine di Analytics è interamente gestito da Adobe. Puoi monitorare il flusso dei dati osservando le metriche relative ai record acquisiti.
 
-## Elimina il flusso di dati {#delete-dataflow}
+## Eliminare il flusso di dati {#delete-dataflow}
 
-Per eliminare il flusso di dati Analytics, selezionare **[!UICONTROL Flussi]** di dati dall&#39;intestazione superiore dell&#39;area di lavoro Sorgenti. Utilizzare la pagina dei flussi di dati per individuare il flusso di dati Analytics che si desidera eliminare e quindi selezionare i puntini di sospensione (`...`) accanto ad esso. Successivo, utilizza il menu a discesa e seleziona **[!UICONTROL Elimina]**.
+Per eliminare il flusso di dati di Analytics, seleziona **[!UICONTROL Flussi di dati]** dall&#39;intestazione superiore dell&#39;area di lavoro origini. Utilizzare la pagina Flussi dati per individuare il flusso di dati di Analytics che si desidera eliminare, quindi selezionare i puntini di sospensione (`...`) accanto ad esso. Quindi, utilizzare il menu a discesa e selezionare **[!UICONTROL Elimina]**.
 
 * Se elimini il flusso di dati live Analytics, verrà eliminato anche il relativo set di dati sottostante.
 * L’eliminazione del flusso di dati di backfill di Analytics non elimina il set di dati sottostante, ma interrompe il processo di backfill per la suite di rapporti corrispondente. Se elimini il flusso di dati di retrocompilazione, i dati acquisiti possono comunque essere visualizzati attraverso il set di dati.
@@ -335,4 +335,4 @@ Il seguente video ha lo scopo di chiarire come acquisire dati utilizzando il con
 >
 > L&#39;interfaccia utente [!DNL Experience Platform] mostrata nel video seguente non è aggiornata. Per le schermate e le funzionalità più recenti dell’interfaccia utente, consulta la documentazione precedente.
 
->[!VIDEO](https://video.tv.adobe.com/v/3430258?quality=12&learn=on&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)

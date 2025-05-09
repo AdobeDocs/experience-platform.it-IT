@@ -31,7 +31,7 @@ Sono disponibili due tipi di criteri:
 
 Questo documento fornisce una panoramica di alto livello dei criteri di utilizzo dei dati e fornisce collegamenti a ulteriore documentazione sull’utilizzo dei criteri nell’interfaccia utente o nell’API.
 
-## Azioni marketing {#marketing-actions}
+## Azioni di marketing {#marketing-actions}
 
 Le azioni di marketing, dette anche casi di utilizzo di marketing, nel contesto del framework di governance dei dati, sono azioni che un consumatore di dati [!DNL Experience Platform] può intraprendere, per le quali l&#39;organizzazione desidera limitare l&#39;utilizzo dei dati. Di conseguenza, i criteri di utilizzo dei dati sono definiti dai seguenti elementi:
 
@@ -57,7 +57,7 @@ Consulta l&#39;appendice di questo documento per un elenco delle [azioni di mark
 
 Experience Platform has the ability to share audiences with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager audiences are translated to equivalent marketing use cases recognized by Experience Platform Data Governance.
 
-For a reference on how specific Data Export Controls map to marketing actions in Experience Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html?lang=it).
+For a reference on how specific Data Export Controls map to marketing actions in Experience Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html).
 -->
 
 ## Gestione dei criteri di utilizzo dei dati {#manage}

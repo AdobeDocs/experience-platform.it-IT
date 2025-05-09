@@ -21,14 +21,14 @@ Questa guida richiede una buona conoscenza dei seguenti componenti di Experience
 * [Origini](../../../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Experience Platform.
 * [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): framework standardizzato tramite il quale Experience Platform organizza i dati sull&#39;esperienza del cliente.
    * [Nozioni di base sulla composizione dello schema](../../../../../xdm/schema/composition.md): scopri i blocchi predefiniti di base degli schemi XDM, inclusi i principi chiave e le best practice nella composizione dello schema.
-   * [Editor di schemi esercitazione](../../../../../xdm/tutorials/create-schema-ui.md): Scopri come creare schemi personalizzati utilizzando l&#39;interfaccia Editor Schema.
-* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono un singolo Experience Platform istanza in ambienti virtuali separati per aiutare a sviluppare ed evolvere applicazioni di esperienza digitale.
+   * [Esercitazione sull&#39;editor di schemi](../../../../../xdm/tutorials/create-schema-ui.md): scopri come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;editor di schemi.
+* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Experience Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
-## Connettere Adobe Campaign Cloud Services gestito a Experience Platform
+## Connettere Adobe Campaign Managed Cloud Services ad Experience Platform
 
-Nella interfaccia Experience Platform, selezionare **[!UICONTROL Origini]** dall&#39;navigazione sinistra per accesso&#39;area [!UICONTROL di lavoro Sorgenti] . Nella [!UICONTROL schermata Catalogo] vengono visualizzate numerose origini con cui è possibile creare un account.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Nella schermata [!UICONTROL Catalogo] sono visualizzate diverse origini con cui è possibile creare un account.
 
-Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. È inoltre possibile utilizzare la barra ricerca per restringere le sorgenti visualizzate.
+Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. È inoltre possibile utilizzare la barra di ricerca per limitare le origini visualizzate.
 
 Nella categoria **[!UICONTROL Applicazioni Adobe]**, selezionare **[!UICONTROL Adobe Campaign Managed Cloud Services]**, quindi **[!UICONTROL Aggiungi dati]**.
 
@@ -60,11 +60,11 @@ Viene visualizzato il passaggio [!UICONTROL Seleziona dati] che fornisce un&#39;
 | --- | --- |
 | istanza Adobe Campaign | Nome dell’istanza dell’ambiente Adobe Campaign in uso. |
 | Mappatura target | Gli oggetti tecnici utilizzati da Campaign per consegnare i messaggi e contengono tutte le impostazioni tecniche necessarie per inviare le consegne. |
-| Nome dello schema | Nome dell&#39;entità dello schema che si sta portando all Experience Platform. Opzioni includono Registro di consegna e Registro di tracciamento. |
+| Nome dello schema | Nome dell’entità schema che stai portando in Experience Platform. Le opzioni includono registro di consegna e registro di tracciamento. |
 
-![Interfaccia in cui è possibile configurare il istanza Adobe Campaign, il mapping dei destinazione e il nome dello schema.](../../../../images/tutorials/create/campaign/select-data.png)
+![Interfaccia in cui è possibile configurare l&#39;istanza Adobe Campaign, la mappatura di destinazione e il nome dello schema.](../../../../images/tutorials/create/campaign/select-data.png)
 
-Dopo aver fornito i valori per il istanza Campaign, il mapping del destinazione e il nome dello schema, la schermata viene aggiornata per visualizzare un&#39;anteprima dello schema e un set di dati di esempio. Al termine, selezionare **[!UICONTROL Successivo]**.
+Dopo aver fornito i valori per l’istanza Campaign, la mappatura del target e il nome dello schema, lo schermo si aggiorna per visualizzare un’anteprima dello schema e un set di dati di esempio. Al termine, selezionare **[!UICONTROL Avanti]**.
 
 ![Anteprima della gerarchia dello schema e campione del set di dati](../../../../images/tutorials/create/campaign/preview.png)
 
@@ -76,7 +76,7 @@ Per utilizzare un set di dati esistente, selezionare **[!UICONTROL Set di dati e
 
 Con un set di dati selezionato, fornisci un nome per il flusso di dati e una descrizione facoltativa.
 
-![Interfaccia per visualizzare l&#39;opzione del set di dati esistente.](../../../../images/tutorials/create/campaign/existing-dataset.png)
+![Interfaccia che visualizza l&#39;opzione del set di dati esistente.](../../../../images/tutorials/create/campaign/existing-dataset.png)
 
 ### Utilizza un nuovo set di dati
 
@@ -86,15 +86,15 @@ Per utilizzare un nuovo set di dati, selezionare **[!UICONTROL Nuovo set di dati
 
 ### Abilita avvisi
 
-Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati. Seleziona un avviso dall&#39;elenco per iscriverti e ricevere notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, vedere la guida alla [sottoscrizione agli avvisi origini utilizzando il interfaccia](../../alerts.md).
+Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati. Seleziona un avviso dall’elenco per iscriverti e ricevere notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento agli avvisi di origini tramite l&#39;interfaccia utente](../../alerts.md).
 
-Quando hai finito di fornire dettagli al flusso di dati, seleziona **[!UICONTROL Successivo]**.
+Dopo aver fornito i dettagli al flusso di dati, seleziona **[!UICONTROL Avanti]**.
 
-![Una selezione di diversi tipi di avvisi che puoi abilitare per il flusso di dati.](../../../../images/tutorials/create/campaign/alerts.png)
+![Selezione di diversi tipi di avviso che è possibile abilitare per il flusso di dati.](../../../../images/tutorials/create/campaign/alerts.png)
 
-### Mappatura dei campi dati a uno schema XDM
+### Mappare i campi dati su uno schema XDM
 
-Viene visualizzato il [!UICONTROL passaggio Mapping] , che fornisce un&#39;interfaccia per mappare i campi di origine dallo schema di origine ai destinazione campi XDM appropriati nello schema destinazione.
+Viene visualizzato il passaggio [!UICONTROL Mappatura] che fornisce un&#39;interfaccia per mappare i campi sorgente dallo schema sorgente ai campi XDM di destinazione appropriati nello schema di destinazione.
 
 Experience Platform fornisce consigli intelligenti per campi mappati automaticamente in base allo schema o al set di dati di destinazione selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi d’uso. In base alle tue esigenze, puoi scegliere di mappare i campi direttamente o utilizzare le funzioni di preparazione dati per trasformare i dati sorgente in modo da derivare valori calcolati o calcolati. Per i passaggi completi sull&#39;utilizzo dell&#39;interfaccia mapper e dei campi calcolati, consulta la [guida dell&#39;interfaccia utente della preparazione dati](../../../../../data-prep/ui/mapping.md).
 
@@ -125,13 +125,13 @@ Una volta creato il flusso di dati, puoi monitorare i dati che vengono acquisiti
 
 Per iniziare a visualizzare l&#39;attività del set di dati, seleziona **[!UICONTROL Flussi di dati]** nel catalogo delle origini.
 
-![La pagina del catalogo origini con l&#39;intestazione dei flussi di dati scheda selezionata.](../../../../images/tutorials/create/campaign/dataflows.png)
+![Pagina del catalogo delle origini con la scheda dell&#39;intestazione dei flussi di dati selezionata.](../../../../images/tutorials/create/campaign/dataflows.png)
 
-Successivo, seleziona il set di dati destinazione dall&#39;elenco dei flussi di dati visualizzati.
+Quindi, seleziona il set di dati di destinazione dall’elenco dei flussi di dati visualizzati.
 
-![Elenco di flussi di dati esistenti con i Adobe Campaign i log di recapito destinazione il set di dati selezionato.](../../../../images/tutorials/create/campaign/target-dataset.png)
+![Elenco dei flussi di dati esistenti con il set di dati di destinazione Registri di consegna di Adobe Campaign selezionato.](../../../../images/tutorials/create/campaign/target-dataset.png)
 
-Viene visualizzata la pagina dell&#39;attività del set di dati. Da qui, è possibile visualizzare informazioni sulle prestazioni del flusso di dati, tra cui velocità di assimilazione, batch riusciti e batch non riusciti.
+Viene visualizzata la pagina dell’attività del set di dati. Da qui puoi visualizzare informazioni sulle prestazioni del flusso di dati, tra cui il tasso di acquisizione, i batch riusciti e i batch non riusciti.
 
 Questa pagina offre anche un’interfaccia per aggiornare la descrizione dei metadati del flusso di dati, abilitare l’acquisizione parziale e la diagnostica degli errori, nonché aggiungere nuovi dati al set di dati.
 
@@ -145,7 +145,7 @@ Questa pagina offre anche un’interfaccia per aggiornare la descrizione dei met
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato correttamente un flusso di dati per portare i dati dei registri di consegna e di tracciamento di Campaign v8 in Experience Platform. I dati in entrata possono ora essere utilizzati dai servizi di Experience Platform downstream come [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i seguenti documenti:
+Seguendo questa esercitazione, hai creato correttamente un flusso di dati per portare i dati dei registri di consegna e di tracciamento di Campaign v8 in Experience Platform. I dati in arrivo possono ora essere utilizzati dai servizi Experience Platform a valle come [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i seguenti documenti:
 
 * [Panoramica di [!DNL Real-Time Customer Profile]](../../../../../profile/home.md)
 * [Panoramica di [!DNL Data Science Workspace]](../../../../../data-science-workspace/home.md)

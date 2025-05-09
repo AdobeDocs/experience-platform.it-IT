@@ -16,7 +16,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->Data Science Area di lavoro non è più disponibile per l&#39;acquisto.
+>Data Science Workspace non è più disponibile per l’acquisto.
 >
 >Questa documentazione è destinata ai clienti esistenti che dispongono di diritti precedenti su Data Science Workspace.
 
@@ -37,7 +37,7 @@ Se preferisci pubblicare un modello utilizzando le API di apprendimento automati
 
 ## Pubblicare un modello {#publish-a-model}
 
-In Adobe Experience Platform, seleziona **[!UICONTROL Modelli]** nella colonna di navigazione a sinistra, quindi seleziona la scheda **[!UICONTROL Sfoglia]** per elencare tutti i modelli esistenti. Seleziona il nome del modello che desideri pubblicare come servizio.
+In Adobe Experience Platform, seleziona **[!UICONTROL Modelli]** nella colonna di navigazione a sinistra, quindi seleziona la scheda **[!UICONTROL Sfoglia]** per elencare tutti i modelli esistenti. Seleziona il nome del modello da pubblicare come servizio.
 
 ![](../images/models-recipes/publish-model/browse_model.png)
 
@@ -67,11 +67,11 @@ Nella pagina di panoramica del servizio, seleziona **[!UICONTROL Punteggio]**.
 
 ![](../images/models-recipes/publish-model/score_service.png)
 
-Seleziona un set di dati di input appropriato per l&#39;esecuzione del punteggio, quindi seleziona **[!UICONTROL Successivo]**. Ti viene chiesto di eseguire lo stesso passaggio per il set di dati di punteggio. Dopo aver selezionato il set di dati di input e output, è possibile aggiornare le configurazioni.
+Seleziona un set di dati di input appropriato per l&#39;esecuzione del punteggio, quindi seleziona **[!UICONTROL Successivo]**. Ti viene chiesto di eseguire lo stesso passaggio per il set di dati di punteggio. Dopo aver selezionato il set di dati di input e di output, puoi aggiornare le configurazioni.
 
 ![](../images/models-recipes/publish-model/select_datasets.png)
 
-Quando un servizio viene creato, eredita le configurazioni di punteggio predefinite. È possibile rivedere queste configurazioni e regolarle secondo necessità facendo doppio clic sui valori. Una volta completate le configurazioni, selezionare **[!UICONTROL Fine]** per iniziare l&#39;esecuzione del punteggio.
+Quando viene creato, un servizio eredita le configurazioni di punteggio predefinite. Puoi rivedere queste configurazioni e regolarle in base alle esigenze facendo doppio clic sui valori. Una volta completate le configurazioni, selezionare **[!UICONTROL Fine]** per iniziare l&#39;esecuzione del punteggio.
 
 ![](../images/models-recipes/publish-model/scoring_configs.png)
 

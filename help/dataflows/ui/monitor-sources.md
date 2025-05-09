@@ -28,7 +28,7 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe E
 * [Profilo cliente in tempo reale](../../profile/home.md): fornisce un profilo consumatore unificato in tempo reale basato su dati aggregati provenienti da più origini.
 * [Sandbox](../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Experience Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
-## Utilizza il dashboard di monitoraggio per l’acquisizione del data lake
+## Utilizzare la dashboard di monitoraggio per l’acquisizione del data lake
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"

@@ -1,8 +1,8 @@
 ---
 title: Pubblico dell’account
 description: Scopri come creare e utilizzare i tipi di pubblico dell’account per eseguire il targeting dei profili dell’account nelle destinazioni a valle.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="Edizione B2P" type="Informative" url="https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2P: label="Edizione B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
 source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
@@ -25,8 +25,8 @@ I tipi di pubblico dell’account possono essere utilizzati come input per le de
 
 Prima di iniziare a utilizzare i tipi di pubblico dell’account, esamina le differenze tra i diversi tipi di pubblico:
 
-- **Tipi di pubblico dell&#39;account**: un pubblico dell&#39;account è un pubblico creato utilizzando i dati del profilo **account**. I dati del profilo dell&#39;account possono essere usati per creare tipi di pubblico che destinazione le persone all&#39;interno degli account downstream. Per ulteriori informazioni sui profili account, leggi la panoramica[&#128279;](../../rtcdp/accounts/account-profile-overview.md) del profilo account.
-- **Tipi di** pubblico di persone: un pubblico di persone è un pubblico creato utilizzando **i dati del profilo del cliente** . I dati del profilo cliente possono essere utilizzati per creare tipi di pubblico mirati alla clientela della tua azienda. Per ulteriori informazioni sui profili cliente, leggere la [Panoramica del profilo cliente in tempo reale](../../profile/home.md).
+- **Tipi di pubblico dell&#39;account**: un pubblico dell&#39;account è un pubblico creato utilizzando i dati del profilo **account**. I dati del profilo account possono essere utilizzati per creare tipi di pubblico mirati alle persone negli account a valle. Per ulteriori informazioni sui profili dell&#39;account, leggere la [panoramica del profilo dell&#39;account](../../rtcdp/accounts/account-profile-overview.md).
+- **Pubblico persone**: un pubblico persone è un pubblico creato utilizzando i dati del profilo **cliente**. I dati del profilo cliente possono essere utilizzati per creare tipi di pubblico mirati alla clientela della tua azienda. Per ulteriori informazioni sui profili cliente, leggere la [Panoramica del profilo cliente in tempo reale](../../profile/home.md).
 - **Pubblico potenziale**: un pubblico potenziale è un pubblico creato utilizzando i dati del profilo **prospect**. I dati del profilo del potenziale cliente possono essere utilizzati per creare tipi di pubblico da utenti non autenticati. Per ulteriori informazioni sui profili di potenziali clienti, leggere la [panoramica dei profili di potenziali clienti](../../profile/ui/prospect-profile.md).
 
 ## Accesso {#access}
@@ -59,11 +59,11 @@ Viene visualizzato il Generatore di segmenti. Gli attributi dell’account e i t
 
 Quando crei il pubblico dell&#39;account, tieni presente che gli eventi sono elencati in **[!UICONTROL Persone]**, anziché essere la loro scheda, poiché questi attributi sono associati alle persone.
 
-![Viene evidenziata la posizione in cui trovare gli eventi, che si trova all&#39;interno della [!UICONTROL cartella Persone] .](../images/types/account/attributes.png)
+![La posizione in cui trovare gli eventi, che si trova nella cartella [!UICONTROL Persone], è evidenziata.](../images/types/account/attributes.png)
 
-Sotto la [!UICONTROL scheda Audiences] , puoi aggiungere audience basate sulle persone create in precedenza a versione di creazione del tuo pubblico account.
+Nella scheda [!UICONTROL Tipi di pubblico] puoi aggiungere tipi di pubblico basati sulle persone creati in precedenza da utilizzare per la creazione del pubblico del tuo account.
 
-![Viene evidenziata la scheda Audiences all&#39;interno del Generatore di segmenti.](../images/types/account/audiences.png)
+![La scheda Tipi di pubblico nel Generatore di segmenti è evidenziata.](../images/types/account/audiences.png)
 
 Per ulteriori informazioni sull&#39;utilizzo del Generatore di segmenti, leggere la [Guida dell&#39;interfaccia utente del Generatore di segmenti](../ui/segment-builder.md).
 
@@ -87,7 +87,7 @@ Quando connetti l’account alla persona, puoi scegliere tra le seguenti opzioni
 
 | Opzione | Descrizione |
 | ------ | ----------- |
-| Rapporto diretto | La connessione diretta tra il account e la persona. Specifica a quali account ogni persona è collegata tramite la matrice di `accountID` valori nella `personComponents` matrice nello schema persona. Questo percorso è il più utilizzato. |
+| Relazione diretta | Il collegamento diretto tra l’account e la persona. Specifica gli account a cui ogni persona è collegata tramite l&#39;array di valori `accountID` nell&#39;array `personComponents` nello schema persona. Questo percorso è il più utilizzato. |
 | Relazione account-persona | Relazione tra l&#39;account e la persona, definita dall&#39;oggetto `accountPersonRelation`. Questo percorso consente inoltre a ogni persona di essere connessa a più account. Viene utilizzato quando l’organizzazione ha definito una tabella di relazione esplicita dai dati di origine. |
 | Relazione opportunità-persona | Relazione tra l&#39;opportunità e la persona, definita dall&#39;oggetto `opportunityPersonRelation`. Consente di collegare la persona a un account passando dalla persona-opportunità all’opportunità all’account. Questo consente di descrivere in quali aziende la persona è associata alle opportunità. |
 
@@ -112,7 +112,7 @@ Seleziona il pubblico da attivare, seguito da **[!UICONTROL Attiva nella destina
 
 ![Il pulsante [!UICONTROL Attiva nella destinazione] è evidenziato nel menu Azioni rapide per il pubblico selezionato.](../images/types/account/activate.png)
 
-Viene visualizzata la [!UICONTROL pagina Attiva destinazione] . Per ulteriori informazioni sul processo di attivazione, incluse le destinazioni supportate e i dettagli sulle mappature dei campi, leggi il [esercitazione attivare account audiences](/help/destinations/ui/activate-account-audiences.md) .
+Viene visualizzata la pagina [!UICONTROL Attiva destinazione]. Per ulteriori informazioni sul processo di attivazione, incluse le destinazioni supportate e i dettagli sulle mappature dei campi, consulta l&#39;esercitazione [attivare i tipi di pubblico dell&#39;account](/help/destinations/ui/activate-account-audiences.md).
 
 ## Passaggi successivi {#next-steps}
 
@@ -194,16 +194,16 @@ La sezione seguente fornisce informazioni aggiuntive sui tipi di pubblico dell�
 >title="Violazione vincolo"
 >abstract="Il pubblico viola un vincolo. Per ulteriori informazioni, leggi il documento collegato."
 
-Quando si utilizza account pubblico, il pubblico **deve** rispettare i seguenti vincoli:
+Quando si utilizzano i tipi di pubblico dell&#39;account, il pubblico **deve** rispettare i seguenti vincoli:
 
-- La finestra di lookback massima per gli eventi Esperienza è **di 30 giorni**.
+- L&#39;intervallo di lookback massimo per gli eventi esperienza è **30 giorni**.
 - La profondità massima dei contenitori nidificati è **5**.
    - Ciò significa che **non puoi** avere più di cinque contenitori nidificati durante la creazione del pubblico.
 - Il numero massimo di regole in un singolo contenitore è **5**.
    - Ciò significa che il pubblico **non può** avere più di cinque regole che compongono il pubblico.
 - Il numero massimo di entità incrociate utilizzabili è **5**.
    - Un’entità incrociata si verifica quando si passa da un’entità all’altra all’interno del pubblico. Ad esempio, passare da un account a una persona a un elenco di marketing.
-- Impossibile utilizzare le entità personalizzate **1&rbrace;.**
+- Impossibile utilizzare le entità personalizzate **1}.**
 - Il numero massimo di valori che è possibile controllare per un singolo campo è **50**.
    - Ad esempio, se hai un campo &quot;Nome città&quot;, puoi confrontare tale valore con 50 nomi di città.
 - Il pubblico dell&#39;account **non può** utilizzare `inSegment` eventi.

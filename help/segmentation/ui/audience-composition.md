@@ -26,9 +26,9 @@ ht-degree: 16%
 >
 >Questa guida spiega come creare tipi di pubblico utilizzando Composizione pubblico. Per informazioni su come creare tipi di pubblico tramite le definizioni dei segmenti utilizzando il Generatore di segmenti, consulta la [guida dell&#39;interfaccia utente del Generatore di segmenti](./segment-builder.md).
 
-Composizione pubblico fornisce un&#39;area di lavoro per versione e modificare i tipi di pubblico, utilizzando blocchi utilizzati per rappresentare azioni diverse.
+La funzione Composizione pubblico fornisce un’area di lavoro per creare e modificare i tipi di pubblico, utilizzando blocchi che rappresentano azioni diverse.
 
-![La composizione del pubblico interfaccia.](../images/ui/audience-composition/audience-composition.png)
+![Interfaccia utente per la composizione del pubblico.](../images/ui/audience-composition/audience-composition.png)
 
 Per modificare i dettagli della composizione, inclusi il titolo e la descrizione, selezionare il pulsante ![cursori](/help/images/icons/properties.png).
 
@@ -38,13 +38,13 @@ Viene visualizzato il popover **[!UICONTROL Proprietà composizione]**. È possi
 
 >[!NOTE]
 >
->Se non **dai** un titolo alla tua composizione, avrà un titolo di &quot;Composizione&quot; seguito dalla data e dall&#39;ora di creazione per impostazione predefinita. Inoltre, ogni composizione **deve** avere il proprio nome univoco.
+>Se **non** assegna un titolo alla composizione, per impostazione predefinita il titolo sarà &quot;Composizione&quot; seguito dalla data e dall&#39;ora di creazione. Inoltre, ogni composizione **deve** avere un proprio nome univoco.
 
-Dopo aver aggiornato i dettagli della composizione, selezionate **[!UICONTROL Salva]** per confermare questi aggiornamenti. Viene rivisualizzata l&#39;area di disegno per la composizione del pubblico.
+Dopo aver aggiornato i dettagli della composizione, seleziona **[!UICONTROL Salva]** per confermare questi aggiornamenti. L’area di lavoro per la composizione del pubblico viene nuovamente visualizzata.
 
-L&#39;area di disegno per la composizione del pubblico è composta da quattro diversi tipi di blocchi: **[&#128279;](#audience-block)Audience,**&#x200B;[[!UICONTROL &#x200B; Exclude &#x200B;]](#exclude-block)**&#x200B;**, **[[!UICONTROL Rank]](#rank-block)** e **[[!UICONTROL Split]](#split-block)**.
+L&#39;area di lavoro per la composizione del pubblico è composta da quattro diversi tipi di blocchi: **[[!UICONTROL Pubblico]](#audience-block)**, **[[!UICONTROL Escludi]](#exclude-block)**, **[[!UICONTROL Classifica]](#rank-block)** e **[[!UICONTROL Dividi]](#split-block)**.
 
-## [!UICONTROL Destinatari] {#audience-block}
+## [!UICONTROL Pubblico] {#audience-block}
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_audience"
@@ -70,11 +70,11 @@ Quando selezioni il blocco **[!UICONTROL Pubblico]**, nella barra a destra vengo
 
 Aggiungere tipi di pubblico al blocco Pubblico. selezionare **[!UICONTROL Aggiungi pubblico]**.
 
-![L&#39;pulsante Aggiungi pubblico è evidenziata.](../images/ui/audience-composition/select-add-audience.png)
+![Il pulsante Aggiungi pubblico è evidenziato.](../images/ui/audience-composition/select-add-audience.png)
 
 >[!IMPORTANT]
 >
->Tieni presente che **verranno visualizzati solo** i tipi di pubblico definiti con l&#39;regola di unione predefinita.
+>Tieni presente che verranno visualizzati **solo** tipi di pubblico definiti utilizzando il criterio di unione predefinito.
 >
 >Inoltre, è possibile utilizzare solo i tipi di pubblico **pubblicati** creati con Segment Builder. I tipi di pubblico creati mediante Composizione pubblico e quelli generati esternamente sono **non** disponibili.
 
@@ -82,15 +82,15 @@ Viene visualizzato un elenco di tipi di pubblico. Seleziona i tipi di pubblico d
 
 ![Viene visualizzato un elenco di tipi di pubblico. È possibile selezionare il pubblico da aggiungere da questa finestra di dialogo.](../images/ui/audience-composition/select-audience.png)
 
-I tipi di pubblico selezionati ora vengono visualizzati nel barra giusto quando viene selezionato il **[!UICONTROL blocco Pubblico]** . Da qui, è possibile modificare il tipo di unione dei tipi di pubblico combinati.
+I tipi di pubblico selezionati vengono ora visualizzati nella barra a destra quando è selezionato il blocco **[!UICONTROL Pubblico]**. Da qui, puoi modificare il tipo di unione dei tipi di pubblico combinati.
 
-![Vengono evidenziati i tipi di unione possibili per i tipi di pubblico.](../images/ui/audience-composition/merge-types.png)
+![I possibili tipi di unione per i tipi di pubblico sono evidenziati.](../images/ui/audience-composition/merge-types.png)
 
 | Tipo di unione | Descrizione |
 | ---------- | ----------- |
 | [!UICONTROL Union] | I tipi di pubblico vengono combinati in un unico pubblico. Equivale a un&#39;operazione OR. |
 | [!UICONTROL Intersection] | I tipi di pubblico vengono combinati e vengono aggiunti solo quelli condivisi in **tutti**. Equivale a un&#39;operazione AND. |
-| [!UICONTROL Escludi sovrapposizione] | I tipi di pubblico vengono combinati, con solo i tipi di pubblico condivisi in **uno, ma non tutti** vengono aggiunti. Questo sarebbe l&#39;equivalente di un&#39;operazione XOR. |
+| [!UICONTROL Escludi sovrapposizione] | I tipi di pubblico vengono combinati, con solo quelli condivisi in **uno, ma non tutti**. Equivale a un&#39;operazione XOR. |
 
 ### [!UICONTROL Genera regola] {#build-rule}
 
@@ -103,11 +103,11 @@ Per aggiungere una regola personalizzata al blocco Pubblico, seleziona **[!UICON
 
 ![Il pulsante Genera regola è evidenziato.](../images/ui/audience-composition/select-build-rule.png)
 
-Viene visualizzato il Generatore di segmenti. Puoi utilizzare il Generatore di segmenti per creare un regola personalizzato per il pubblico da seguire. Ulteriori informazioni sull&#39;utilizzo di Segment Builder sono disponibili nella guida[&#128279;](./segment-builder.md) di Segment Builder.
+Viene visualizzato il Generatore di segmenti. Puoi utilizzare il Generatore di segmenti per creare una regola personalizzata che il pubblico dovrà seguire. Ulteriori informazioni sull&#39;utilizzo del Generatore di segmenti sono disponibili nella [guida del Generatore di segmenti](./segment-builder.md).
 
-![Viene visualizzata la interfaccia Segment Builder (Generatore di segmenti).](../images/ui/audience-composition/segment-builder.png)
+![Viene visualizzata l&#39;interfaccia utente del Generatore di segmenti.](../images/ui/audience-composition/segment-builder.png)
 
-Dopo aver aggiunto un regola personalizzato, seleziona **[!UICONTROL Salva]** per aggiungere il regola al pubblico.
+Dopo aver aggiunto una regola personalizzata, seleziona **[!UICONTROL Salva]** per aggiungere la regola al pubblico.
 
 ![](../images/ui/audience-composition/custom-rule.png)
 
@@ -131,7 +131,7 @@ Per aggiungere un blocco **[!UICONTROL Escludi]**, seleziona l&#39;icona **+**, 
 
 Il blocco **[!UICONTROL Escludi]** è stato aggiunto. Quando questo blocco è selezionato, i dettagli sull’esclusione vengono visualizzati nella barra a destra. Questo include l’etichetta del blocco e il tipo di esclusione. È possibile escludere [per pubblico](#exclude-audience) o [per attributo](#exclude-attribute).
 
-![Il blocco Escludi, che evidenzia i due diversi tipi di esclusione disponibili.](../images/ui/audience-composition/exclude.png)
+![Il blocco Exclude, che evidenzia i due diversi tipi di esclusione disponibili.](../images/ui/audience-composition/exclude.png)
 
 ### Escludi per pubblico {#exclude-audience}
 
@@ -143,9 +143,9 @@ Se escludi per pubblico, puoi selezionare il pubblico da escludere selezionando 
 >
 >È possibile utilizzare solo i tipi di pubblico **pubblicati** creati con Segment Builder. I tipi di pubblico creati mediante Composizione pubblico e quelli generati esternamente sono **non** disponibili.
 
-Viene visualizzato un elenco di audience. Seleziona **[!UICONTROL Aggiungi]** per aggiungere il pubblico da escludere al blocco di esclusione.
+Viene visualizzato un elenco di tipi di pubblico. Seleziona **[!UICONTROL Aggiungi]** per aggiungere il pubblico da escludere al blocco di esclusione.
 
-![Viene visualizzato un elenco di audience. Da questa finestra di dialogo puoi selezionare il pubblico che desideri aggiungere.](../images/ui/audience-composition/select-audience.png)
+![Viene visualizzato un elenco di tipi di pubblico. È possibile selezionare il pubblico da aggiungere da questa finestra di dialogo.](../images/ui/audience-composition/select-audience.png)
 
 ### Escludi per attributo {#exclude-attribute}
 
@@ -206,11 +206,11 @@ Per selezionare il set di dati con cui arricchire il pubblico, seleziona l&#39;i
 
 Viene visualizzato il popover **[!UICONTROL Seleziona set di dati]**. Seleziona il set di dati da aggiungere per l&#39;arricchimento, seguito da **[!UICONTROL Seleziona]** per aggiungere il set di dati per l&#39;arricchimento.
 
-![Viene selezionato il set di dati scelto.](../images/ui/audience-composition/select-dataset.png)
+![Il set di dati scelto è selezionato.](../images/ui/audience-composition/select-dataset.png)
 
 >[!IMPORTANT]
 >
->Il set di dati **selezionato deve** soddisfare i seguenti criteri:
+>Il set di dati selezionato **deve** soddisfare i seguenti criteri:
 >
 >- Il set di dati **deve** essere di tipo record.
 >   - Il set di dati **non può** essere di tipo evento, generato dal sistema o contrassegnato per il profilo.
@@ -218,13 +218,13 @@ Viene visualizzato il popover **[!UICONTROL Seleziona set di dati]**. Seleziona 
 
 La sezione **[!UICONTROL Criteri di arricchimento]** è ora visualizzata nella barra a destra. In questa sezione è possibile selezionare la **[!UICONTROL chiave di join di Source]** e la **[!UICONTROL chiave di join del set di dati di arricchimento]**, che consente di collegare il set di dati di arricchimento al pubblico che si sta tentando di creare.
 
-![Viene evidenziata l&#39;area [!UICONTROL Criteri] di arricchimento.](../images/ui/audience-composition/enrichment-criteria.png)
+![L&#39;area [!UICONTROL Criteri di arricchimento] è evidenziata.](../images/ui/audience-composition/enrichment-criteria.png)
 
-Per selezionare la **[!UICONTROL chiave]** di partecipazione Origine, selezionare l&#39;icona del ![filtro](/help/images/icons/project-edit.png) .
+Per selezionare la **[!UICONTROL chiave di join di Source]**, selezionare l&#39;icona ![filter](/help/images/icons/project-edit.png).
 
-Viene **[!UICONTROL visualizzato il popover Seleziona un attributo]** di profilo. Selezionare l&#39;attributo di profilo che si desidera utilizzare come chiave di join di origine, quindi selezionare **[!UICONTROL Seleziona]** per scegliere tale attributo come chiave di join di origine.
+Viene visualizzato il popover **[!UICONTROL Seleziona un attributo di profilo]**. Seleziona l&#39;attributo di profilo che desideri utilizzare come chiave di join di origine, seguito da **[!UICONTROL Seleziona]** per scegliere tale attributo come chiave di join di origine.
 
-![L&#39;attributo che si desidera utilizzare come chiave di join sorgente viene evidenziato.](../images/ui/audience-composition/select-source-join-key.png)
+![L&#39;attributo che si desidera utilizzare come chiave di join di origine è evidenziato.](../images/ui/audience-composition/select-source-join-key.png)
 
 Per selezionare la chiave di join del set di dati **[!UICONTROL Enrichment]**, selezionare l&#39;icona ![filter](/help/images/icons/project-edit.png).
 
@@ -278,13 +278,13 @@ Per aggiungere un blocco **[!UICONTROL Classifica]**, seleziona l&#39;icona **+*
 
 Quando selezioni il blocco, i dettagli sulla classificazione vengono visualizzati nella barra a destra, tra cui l’etichetta del blocco, l’attributo in base al quale eseguire la classificazione, l’ordine di classificazione e un interruttore per limitare il numero di profili da classificare.
 
-![Il blocco di rango è evidenziato, così come i dettagli del blocco di rango.](../images/ui/audience-composition/rank.png)
+![Il blocco di classificazione è evidenziato, così come i dettagli del blocco di classificazione.](../images/ui/audience-composition/rank.png)
 
-Per selezionare l&#39;attributo in base al quale classificare il pubblico, seleziona l&#39;icona del ![filtro](/help/images/icons/project-edit.png) .
+Per selezionare l&#39;attributo in base al quale classificare i tipi di pubblico, seleziona l&#39;icona ![filtro](/help/images/icons/project-edit.png).
 
-![L&#39;icona del filtro viene evidenziata e mostra gli elementi da selezionare per accesso schermata di selezione degli attributi di profilo.](../images/ui/audience-composition/select-rank-attribute.png)
+![L&#39;icona del filtro è evidenziata e mostra cosa selezionare per accedere alla schermata di selezione degli attributi del profilo.](../images/ui/audience-composition/select-rank-attribute.png)
 
-Viene visualizzato un elenco di attributi del profilo. In questo popover, puoi selezionare il tipo di attributo in base al quale desideri classificare il pubblico. Seleziona **[!UICONTROL Seleziona]** per aggiungerlo al tuo blocco di classificazione. Nota che l&#39;attributo selezionato può **essere composto solo** da numeri.
+Viene visualizzato un elenco di attributi di profilo. In questo popover, puoi selezionare il tipo di attributo in base al quale classificare il pubblico. Seleziona **[!UICONTROL Seleziona]** per aggiungerlo al tuo blocco di classificazione. Tieni presente che l&#39;attributo selezionato può essere **solo** numeri.
 
 ![Viene visualizzato un elenco di attributi.](../images/ui/audience-composition/rank-attribute.png)
 
@@ -311,11 +311,11 @@ Inoltre, puoi limitare il numero di profili restituiti abilitando l&#39;interrut
 >title="Altri profili"
 >abstract="Il pulsante di attivazione Altri profili consente di creare un percorso aggiuntivo con i profili rimanenti che non corrispondono a nessuna delle condizioni specificate degli altri percorsi."
 
-Il **[!UICONTROL tipo di blocco diviso]** consente di suddividere il nuovo pubblico in vari sottotipi di pubblico. Puoi suddividere il pubblico in base a una percentuale o a un attributo.
+Il tipo di blocco **[!UICONTROL Dividi]** ti consente di suddividere il nuovo pubblico in vari sottogruppi. Puoi suddividere questo pubblico in base alla percentuale o a un attributo.
 
-Per aggiungere un **[!UICONTROL blocco diviso]** , selezionare l&#39;icona **+** , seguita da **[!UICONTROL Dividi]**.
+Per aggiungere un blocco **[!UICONTROL Split]**, seleziona l&#39;icona **+**, seguita da **[!UICONTROL Split]**.
 
-![L&#39;opzione Suddivisione è selezionata.](../images/ui/audience-composition/add-split-block.png)
+![L&#39;opzione Dividi è selezionata.](../images/ui/audience-composition/add-split-block.png)
 
 Quando dividi il pubblico, puoi dividerlo per percentuale o per attributo.
 
@@ -339,9 +339,9 @@ In alternativa, puoi anche fornire un’identità che renderebbe persistente la 
 
 ![La casella di controllo Dividi per identità è evidenziata. Viene inoltre evidenziato l&#39;elenco a discesa che consente di selezionare l&#39;identità in base alla quale dividere.](../images/ui/audience-composition/split-by-identity.png)
 
-### Suddivisione per attributo {#split-attribute}
+### Dividi per attributo {#split-attribute}
 
-Quando si suddivide per attributo, i tipi di pubblico vengono suddivisi in base agli attributi forniti. Per selezionare l&#39;attributo da dividere, selezionare il blocco **[!UICONTROL Dividi]**, seguito dall&#39;icona ![filtro](/help/images/icons/project-edit.png).
+Quando si divide per attributo, il pubblico viene diviso in base agli attributi forniti. Per selezionare l&#39;attributo da dividere, selezionare il blocco **[!UICONTROL Dividi]**, seguito dall&#39;icona ![filtro](/help/images/icons/project-edit.png).
 
 ![Il pulsante di filtro è selezionato e mostra come filtrare per attributo.](../images/ui/audience-composition/split-by-attribute.png)
 
@@ -349,13 +349,13 @@ Viene visualizzato un elenco di attributi di profilo. Seleziona il tipo di attri
 
 ![Viene visualizzato un elenco di attributi.](../images/ui/audience-composition/select-attribute.png)
 
-Dopo aver selezionato l&#39;attributo, puoi scegliere quali profili apparterranno a quale sottopubblico aggiungendo i valori nel **[!UICONTROL campo Valori]** .
+Dopo aver selezionato l&#39;attributo, puoi scegliere quali profili apparterranno a quale pubblico secondario aggiungendo i valori all&#39;interno del campo **[!UICONTROL Valori]**.
 
-![Vengono aggiunti i valori in cui si desidera dividere gli attributi.](../images/ui/audience-composition/attribute-split-values.png)
+![Vengono aggiunti i valori per i quali si desidera dividere gli attributi.](../images/ui/audience-composition/attribute-split-values.png)
 
-Inoltre, puoi abilitare l&#39;interruttore **[!UICONTROL Altri profili]** per creare un pubblico secondario che comprenda tutti i profili non selezionati.
+Inoltre, puoi abilitare l&#39;interruttore **[!UICONTROL Altri profili]** per creare un pubblico secondario composto da tutti i profili non selezionati.
 
-![L&#39;interruttore Altri profili è evidenziato.](../images/ui/audience-composition/split-other-profiles.png)
+![L&#39;opzione Altri profili è evidenziata.](../images/ui/audience-composition/split-other-profiles.png)
 
 ## Pubblicazione del pubblico {#publish}
 
@@ -370,7 +370,7 @@ Inoltre, puoi abilitare l&#39;interruttore **[!UICONTROL Altri profili]** per cr
 
 Dopo aver creato la composizione, puoi salvarla e pubblicarla selezionando **[!UICONTROL Pubblica]**.
 
-![Viene evidenziata la pulsante Publish, che mostra come salvare e pubblicare la composizione.](../images/ui/audience-composition/publish.png)
+![Il pulsante Pubblica è evidenziato e mostra come salvare e pubblicare la composizione.](../images/ui/audience-composition/publish.png)
 
 In caso di errori nella creazione del pubblico, viene visualizzato un avviso che informa su come risolvere il problema.
 

@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;home;argomenti popolari
 solution: Experience Platform
-title: Panoramica interfaccia Privacy Service
-description: Inizia a utilizzare l'interfaccia Privacy Service utente per coordinare e monitorare le richieste di privacy tra varie applicazioni Experience Cloud.
+title: Panoramica dell’interfaccia utente di Privacy Service
+description: Inizia a utilizzare l’interfaccia utente di Privacy Service per coordinare e monitorare le richieste di accesso a dati personali tra le varie applicazioni Experience Cloud.
 exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
 source-git-commit: dbdeabf9036f1736a5b43d9057e77b82baf915cd
 workflow-type: tm+mt
@@ -18,29 +18,29 @@ ht-degree: 20%
 >title="Richieste degli interessati"
 >abstract="Questo widget mostra il numero di richieste degli interessati inviate e completate che sono state elaborate da Privacy Service per un dato giorno. Per ulteriori informazioni sui processi di Privacy Service, seleziona **Richieste** nella barra di navigazione a sinistra."
 
-Il interfaccia Privacy Service consente di coordinare le richieste di privacy e conformità tra varie applicazioni Adobe Experience Cloud.
+L’interfaccia utente di Privacy Service consente di coordinare le richieste di privacy e conformità tra diverse applicazioni Adobe Experience Cloud.
 
 >[!NOTE]
 >
->Per informazioni sulla gestione programmatica delle richieste di conformità tramite l&#39;API Privacy Service, consulta la [guida](../api/overview.md) API Privacy Service. Per ulteriori informazioni, consulta il documento nessuna [gestione delle autorizzazioni](../permissions.md) Privacy Service.
+>Per informazioni sulla gestione delle richieste di conformità a livello di programmazione tramite l&#39;API Privacy Service, vedere la [guida dell&#39;API Privacy Service](../api/overview.md). Per ulteriori informazioni, vedere il documento n. [gestione delle autorizzazioni di Privacy Service](../permissions.md).
 
-## Accedi al [!DNL Privacy Service] interfaccia
+## Accedi all&#39;interfaccia utente [!DNL Privacy Service]
 
 >[!IMPORTANT]
 >
->Per effettuare l&#39;autenticazione al interfaccia, è necessario disporre di [!DNL Privacy Service] un Adobe ID.
+>È necessario disporre di un Adobe ID per l&#39;autenticazione nell&#39;interfaccia utente [!DNL Privacy Service].
 
-Per accesso il interfaccia, accedi a [Adobe Experience Cloud](https://experience.adobe.com/) e seleziona **[!UICONTROL Privacy interfaccia]** nel menu di accesso rapida.
+Per accedere all&#39;interfaccia utente, accedi a [Adobe Experience Cloud](https://experience.adobe.com/) e seleziona **[!UICONTROL Interfaccia utente Privacy]** nel menu di accesso rapido.
 
-![La dashboard Experience Cloud con la Privacy interfaccia evidenziata.](../images/ui-overview/quick-access.png)
+![Dashboard di Experience Cloud con interfaccia utente Privacy evidenziata.](../images/ui-overview/quick-access.png)
 
 
 ### Accesso da [!DNL Experience Platform]
 
-Se hai accesso al interfaccia Adobe Experience Platform, puoi anche accesso il [!DNL Privacy Service] interfaccia tramite l&#39;scheda **[!UICONTROL Richieste]** nella navigazione sinistra.
+Se hai accesso all&#39;interfaccia utente di Adobe Experience Platform, puoi anche accedere all&#39;interfaccia utente [!DNL Privacy Service] tramite la scheda **[!UICONTROL Richieste]** nel menu di navigazione a sinistra.
 
-![La Adobe Experience Platform interfaccia con le richieste evidenziate nella barra navigazione sinistra.](../images/ui-overview/platform.png)
+![L&#39;interfaccia utente di Adobe Experience Platform con le richieste evidenziate nella barra di navigazione a sinistra.](../images/ui-overview/platform.png)
 
 ## Passaggi successivi
 
-Ora che hai effettuato correttamente l&#39;accesso, fai riferimento alla [guida](user-guide.md) utente per i passaggi su come eseguire varie operazioni utilizzando il [!DNL Privacy Service] interfaccia.
+Dopo aver effettuato l&#39;accesso, fare riferimento alla [guida utente](user-guide.md) per i passaggi relativi all&#39;esecuzione di varie operazioni tramite l&#39;interfaccia utente [!DNL Privacy Service].

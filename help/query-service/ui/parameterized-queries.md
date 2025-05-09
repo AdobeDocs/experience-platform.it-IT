@@ -1,6 +1,6 @@
 ---
 title: Query con parametri
-description: Scopri come utilizzare le query con parametri nel interfaccia Adobe Experience Platform.
+description: Scopri come utilizzare le query con parametri nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
@@ -16,19 +16,19 @@ ht-degree: 11%
 >title="Query con parametri"
 >abstract="Utilizza le query con parametri per aggiungere valori di parametro al momento dell’esecuzione. Questo consente di lavorare con dati dinamici e riutilizzare le query per diversi casi d’uso. Utilizza la premessa `'$'` per immettere un parametro di query nella query nell’editor di testo. Quindi, aggiungi un valore per la chiave nella sezione dei parametri di query sotto l’editor."
 
-Query Service supporta l&#39;utilizzo di query con parametri nell&#39;editor di query. Con le query con parametri, è ora possibile utilizzare segnaposto per i parametri e aggiungere i valori dei parametri in fase di esecuzione. I segnaposto consentono di lavorare con dati dinamici in cui non si conoscono i valori fino all&#39;esecuzione dell&#39;istruzione. Puoi anche preparare le tue query in anticipo e riutilizzarle per scopi simili. Il riutilizzo delle query consente di risparmiare molto tempo in quanto si evita di creare query SQL distinte per ogni caso d&#39;uso.
+Query Service supporta l’utilizzo di query con parametri nell’editor delle query. Con le query con parametri, ora puoi utilizzare segnaposto per i parametri e aggiungere i valori dei parametri al momento dell’esecuzione. I segnaposto consentono di lavorare con dati dinamici in cui non si sa quali saranno i valori fino all’esecuzione dell’istruzione. Puoi anche preparare le query in anticipo e riutilizzarle per scopi simili. Il riutilizzo delle query consente di risparmiare tempo evitando di creare query SQL distinte per ogni caso d’uso.
 
 ## Prerequisiti
 
-Prima di continuare con questa guida, leggere la guida[&#128279;](./user-guide.md) all&#39;interfaccia dell&#39;editor di query. La guida dell&#39;editor di query fornisce informazioni dettagliate su come scrivere, convalidare ed eseguire query per esperienza del cliente dati all&#39;interno dell&#39;interfaccia utente Experience Platform.
+Prima di continuare con questa guida, leggere la [Guida dell&#39;interfaccia utente di Query Editor](./user-guide.md). La guida dell’editor delle query fornisce informazioni dettagliate su come scrivere, convalidare ed eseguire query per i dati sull’esperienza del cliente nell’interfaccia utente di Experience Platform.
 
 >[!NOTE]
 >
->Nell&#39;ambito della Adobe Experience Platform interfaccia, le query con parametri sono supportate solo al livello padre dei modelli in linea. Ciò significa che le query con parametri funzionano solo se utilizzate nel modello originale. I modelli secondari devono essere statici e non possono avere parametri dinamici. Per ulteriori informazioni, consulta la documentazione[&#128279;](../key-concepts/inline-templates.md) relativa ai modelli in linea.
+>Nell’interfaccia utente di Adobe Experience Platform, le query con parametri sono supportate solo a livello principale dei modelli in linea. Ciò significa che le query con parametri funzionano solo se utilizzate nel modello originale. I modelli figlio devono essere statici e non possono avere parametri dinamici. Per ulteriori informazioni, consulta la [documentazione sui modelli in linea](../key-concepts/inline-templates.md).
 
-## Sintassi di query con parametri {#syntax}
+## Sintassi delle query con parametri {#syntax}
 
-Le query con parametri utilizzano questo formato `'$YOUR_PARAMETER_NAME'` e possono essere concatenate utilizzando la notazione a punti. Di seguito è riportato un esempio di istruzione SQL che utilizza query con parametri.
+Le query con parametri utilizzano il formato `'$YOUR_PARAMETER_NAME'` e possono essere concatenate utilizzando la notazione del punto. Di seguito è riportato un esempio di istruzione SQL che utilizza query con parametri.
 
 ```sql
 INSERT INTO
@@ -43,40 +43,40 @@ SELECT
    CURRENT_TIMESTAMP change_ts;
 ```
 
-## Crea una query con parametri {#create}
+## Creare una query con parametri {#create}
 
-Per creare la query con parametri nella interfaccia, passare all&#39;editor di query. Per ulteriori istruzioni, vedere la sezione sull&#39;accesso [all&#39;editor di](./user-guide.md#accessing-query-editor) query.
+Per creare una query con parametri nell’interfaccia utente, passa all’editor delle query. Per ulteriori istruzioni, vedere la sezione relativa all&#39;accesso di [all&#39;editor di query](./user-guide.md#accessing-query-editor).
 
-Utilizza la premessa `'$'` per immettere un parametro di query nella query nell’editor di testo. Successivo, seleziona i parametri **della**&#x200B; query scheda aggiungi il valore mancante per la chiave accanto alla [!UICONTROL console]. La query non può essere eseguita se si trascura di aggiungere un valore a una delle chiavi richieste. Un&#39;icona di avviso (![Icona di avviso.](/help/images/icons/alert.png)) viene visualizzato nella sezione Parametri di query accanto a qualsiasi campo di immissione del Valore vuoto.
+Utilizza la premessa `'$'` per immettere un parametro di query nella query nell’editor di testo. Quindi, seleziona la scheda **[!UICONTROL Parametri query]** accanto alla [!UICONTROL Console] per aggiungere il valore mancante alla chiave. Impossibile eseguire la query se si omette di aggiungere un valore a una delle chiavi richieste. Icona di avviso (![Icona di avviso.](/help/images/icons/alert.png)) viene visualizzato nella sezione Parametri query accanto a qualsiasi campo di input [!UICONTROL Value] vuoto.
 
 >[!NOTE]
 >
->Se la query non accetta parametri, è comunque possibile immettere parametri non necessari all&#39;interno dell&#39;editor di query. L&#39;editor di query ignora tutte le coppie chiave-valore non necessarie e non hanno alcun effetto sull&#39;esecuzione o sui risultati della query.
+>Se la query non accetta parametri, è comunque possibile immettere parametri non necessari nell&#39;editor di query. L’editor delle query ignora tutte le coppie chiave-valore non necessarie e non ha alcun effetto sull’esecuzione o sui risultati della query.
 
-![Editor di query con una query con parametri e la sezione Parametri di query evidenziata.](../images/ui/parameterized-queries/parameterized-query.png)
+![Editor query con una query con parametri e la sezione Parametri query evidenziata.](../images/ui/parameterized-queries/parameterized-query.png)
 
 >[!TIP]
 >
->Per visualizzare l&#39;output della query, modificate le schede da [!UICONTROL Parametri] di query a [!UICONTROL Console] .
+>Modificare le schede da [!UICONTROL Parametri query] a [!UICONTROL Console] per visualizzare l&#39;output della console della query.
 
-## Utilizzare i dettagli dei log di query per controllare i valori dei parametri {#check-parameter-values}
+## Utilizzare i dettagli dei registri di query per verificare i valori dei parametri {#check-parameter-values}
 
-Non è possibile salvare parametri all&#39;interno dei modelli poiché i valori utilizzati non sono persistenti. Tuttavia, è possibile controllare la pagina dei dettagli del registro delle query per trovare i valori dei parametri utilizzati in un&#39;esecuzione di query. In questo caso, i log non indicano che si tratta di una query con parametri. Vedere la [documentazione](./query-logs.md) dei log delle query per istruzioni su come trovare i valori utilizzati.
+Non è possibile salvare i parametri all’interno dei modelli in quanto i valori utilizzati non sono persistenti. Tuttavia, è possibile controllare la pagina [!UICONTROL Dettagli registro query] per trovare i valori dei parametri utilizzati in un&#39;esecuzione di query. In questo caso, i registri non indicano che la query era con parametri. Per istruzioni su come trovare i valori utilizzati, consulta la [documentazione dei registri di query](./query-logs.md).
 
-![La visualizzazione dei log di query con l&#39;SQL di una query con parametri evidenziato nella sezione dettagli.](../images/ui/parameterized-queries/parameterized-query-logs.png)
+![La visualizzazione dei registri delle query con l&#39;istruzione SQL di una query con parametri è evidenziata nella sezione dei dettagli.](../images/ui/parameterized-queries/parameterized-query-logs.png)
 
 <!-- improve screenshot above ^ I am waiting for a scheduled run to complete -->
 
 ## Pianificare una query con parametri {#schedule}
 
-I valori dei parametri vengono salvati quando si programmare una query con parametri. Per programmare una query con parametri, seguire il processo tipico per creare una query pianificata come descritto nella guida per [creare un programmare](./query-schedules.md#create-schedule) di query, quindi immettere i valori dei parametri da utilizzare nell&#39;esecuzione della query. Questa sezione interfaccia è disponibile solo per le query con parametri. Vedere la sezione sull&#39;impostazione [dei parametri per una query](./query-schedules.md#set-parameters) parametrizzata pianificata per istruzioni specifiche.
+I valori dei parametri vengono salvati quando si pianifica una query con parametri. Per pianificare una query con parametri, seguire il processo tipico per creare una query pianificata come descritto nella guida per [creare una pianificazione di query](./query-schedules.md#create-schedule), quindi immettere i valori dei parametri da utilizzare nell&#39;esecuzione della query. Questa sezione dell’interfaccia utente viene visualizzata solo per le query con parametri. Per istruzioni specifiche, consulta la sezione sull&#39;impostazione di [parametri per una query con parametri pianificata](./query-schedules.md#set-parameters).
 
 >[!TIP]
 >
->Query Service supporta le istruzioni preparate mediante l&#39;utilizzo di query con parametri. Per ulteriori informazioni sulla sintassi SQL coinvolta, vedere la [guida](../sql/prepared-statements.md) alla sintassi delle istruzioni preparata.
+>Query Service supporta le istruzioni preparate tramite l’utilizzo di query con parametri. Per ulteriori informazioni sulla sintassi SQL interessata, vedere la [guida alla sintassi delle istruzioni preparate](../sql/prepared-statements.md).
 
 ## Passaggi successivi
 
-Leggendo questo documento, si è appreso come parametrizzare le query nel interfaccia Adobe Experience Platform e utilizzarle nelle esecuzioni di query pianificate. Il documento ha anche evidenziato come controllare i log per i valori dei parametri utilizzati nelle esecuzioni delle query.
+Dopo aver letto questo documento, hai imparato a parametrizzare le query nell’interfaccia utente di Adobe Experience Platform e a utilizzarle nelle esecuzioni pianificate delle query. Nel documento è anche evidenziato come verificare nei registri i valori dei parametri utilizzati nelle esecuzioni delle query.
 
-Successivo, si consiglia di leggere la guida al [monitoraggio delle query pianificate](./monitor-queries.md) per comprendere meglio lo stato di tutti i processi di query tramite il interfaccia Experience Platform.
+Ti consigliamo quindi di leggere la guida su [monitoraggio delle query pianificate](./monitor-queries.md) per comprendere meglio lo stato di tutti i processi di query tramite l&#39;interfaccia utente di Experience Platform.
