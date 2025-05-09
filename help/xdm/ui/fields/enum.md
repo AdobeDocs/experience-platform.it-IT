@@ -30,7 +30,7 @@ Quando [definisci un nuovo campo](./overview.md#define) nell&#39;interfaccia ute
 
 Questo documento illustra come definire le enumerazioni e i valori suggeriti nell&#39;area di lavoro dell&#39;interfaccia utente [!UICONTROL Schemi]. Per una rapida panoramica sulle enumerazioni e sui valori suggeriti, tra cui come configurarle nell’interfaccia utente e i relativi effetti a valle, guarda il video seguente:
 
->[!VIDEO](https://video.tv.adobe.com/v/3409501/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3413678/?quality=12&learn=on&captions=ita)
 
 ## Definire un&#39;enumerazione {#enum}
 
