@@ -46,7 +46,7 @@ Ottieni le informazioni più importanti sulle funzionalità in questa sezione e 
 
 In Experience Platform puoi utilizzare [schemi XDM](/help/xdm/home.md) per gestire diversi tipi di campi. Prima di aggiungere il supporto per le esportazioni di array, era possibile esportare campi di tipo coppia chiave-valore semplici, come le stringhe, da Experience Platform nelle destinazioni desiderate. Un esempio di questo campo precedentemente supportato per l&#39;esportazione è `personalEmail.address`:`johndoe@acme.org`.
 
-Altri tipi di campo in Experience Platform includono i campi array. Ulteriori informazioni sulla gestione dei campi array nell&#39;interfaccia utente di Experience Platform ](/help/xdm/ui/fields/array.md). [ È ora possibile esportare oggetti array come nell’esempio seguente.
+Altri tipi di campo in Experience Platform includono i campi array. Ulteriori informazioni sulla gestione dei campi array nell&#39;interfaccia utente di Experience Platform [&#128279;](/help/xdm/ui/fields/array.md).  È ora possibile esportare oggetti array come nell’esempio seguente.
 
 ```
 organizations = [{

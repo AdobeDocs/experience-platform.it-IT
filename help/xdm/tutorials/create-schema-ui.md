@@ -38,7 +38,7 @@ L&#39;area di lavoro [!UICONTROL Schemi] nell&#39;interfaccia utente [!DNL Exper
 
 Dopo aver effettuato l&#39;accesso a [!DNL Experience Platform], seleziona **[!UICONTROL Schemi]** nella barra di navigazione a sinistra per aprire l&#39;area di lavoro **[!UICONTROL Schemi]**. La scheda **[!UICONTROL Sfoglia]** visualizza un elenco di schemi (una rappresentazione di [!DNL Schema Library]) da visualizzare e personalizzare. L’elenco include il nome, il tipo, la classe e il comportamento (record o serie temporale) su cui è basato lo schema, nonché la data e l’ora dell’ultima modifica dello schema.
 
-Per ulteriori informazioni, consulta la guida sull&#39;esplorazione delle risorse XDM esistenti nell&#39;interfaccia utente](../ui/explore.md).[
+Per ulteriori informazioni, consulta la guida sull&#39;esplorazione delle risorse XDM esistenti nell&#39;interfaccia utente[&#128279;](../ui/explore.md).
 
 ## Creare e denominare uno schema {#create}
 
