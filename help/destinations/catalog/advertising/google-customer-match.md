@@ -3,9 +3,9 @@ keywords: Google customer match;Google customer match;Google Customer Match
 title: Connessione Customer Match di Google
 description: Google Customer Match consente di utilizzare i dati online e offline per raggiungere e coinvolgere nuovamente i clienti nelle proprietà possedute e gestite da Google, come Search, Shopping e Gmail.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 98d83e8d09b6e469daf515063e2887bfbf9b8be6
 workflow-type: tm+mt
-source-wordcount: '2046'
+source-wordcount: '2360'
 ht-degree: 2%
 
 ---
@@ -58,11 +58,15 @@ Alcune destinazioni in Experience Platform hanno determinate regole e obblighi p
 
 | Identità di destinazione | Descrizione | Considerazioni |
 |---|---|---|
-| GAID | GOOGLE ADVERTISING ID | Seleziona questa identità di destinazione quando l&#39;identità di origine è uno spazio dei nomi GAID. |
-| IDFA | Apple ID per inserzionisti | Selezionare questa identità di destinazione quando l&#39;identità di origine è uno spazio dei nomi IDFA. |
-| phone_sha256_e.164 | Numeri di telefono in formato E164, con hash con l’algoritmo SHA256 | I numeri di telefono con hash SHA256 e testo normale sono supportati da Adobe Experience Platform. Segui le istruzioni riportate nella sezione [Requisiti di corrispondenza ID](#id-matching-requirements-id-matching-requirements) e utilizza gli spazi dei nomi appropriati rispettivamente per i numeri di telefono con testo normale e con hash. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Applica trasformazione]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. |
-| email_lc_sha256 | Indirizzi e-mail con hash con algoritmo SHA256 | Adobe Experience Platform supporta sia gli indirizzi di posta elettronica in testo normale che quelli con hash SHA256. Segui le istruzioni riportate nella sezione [Requisiti di corrispondenza ID](#id-matching-requirements-id-matching-requirements) e utilizza gli spazi dei nomi appropriati rispettivamente per gli indirizzi e-mail in testo normale e con hash. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Applica trasformazione]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. |
-| user_id | ID utente personalizzati | Seleziona questa identità di destinazione quando l&#39;identità di origine è uno spazio dei nomi personalizzato. |
+| `GAID` | GOOGLE ADVERTISING ID | Seleziona questa identità di destinazione quando l&#39;identità di origine è uno spazio dei nomi GAID. |
+| `IDFA` | Apple ID per inserzionisti | Selezionare questa identità di destinazione quando l&#39;identità di origine è uno spazio dei nomi IDFA. |
+| `phone_sha256_e.164` | Numeri di telefono in formato E164, con hash con l’algoritmo SHA256 | I numeri di telefono con hash SHA256 e testo normale sono supportati da Adobe Experience Platform. Segui le istruzioni riportate nella sezione [Requisiti di corrispondenza ID](#id-matching-requirements-id-matching-requirements) e utilizza gli spazi dei nomi appropriati rispettivamente per i numeri di telefono con testo normale e con hash. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Applica trasformazione]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. |
+| `email_lc_sha256` | Indirizzi e-mail con hash con algoritmo SHA256 | Adobe Experience Platform supporta sia gli indirizzi di posta elettronica in testo normale che quelli con hash SHA256. Segui le istruzioni riportate nella sezione [Requisiti di corrispondenza ID](#id-matching-requirements-id-matching-requirements) e utilizza gli spazi dei nomi appropriati rispettivamente per gli indirizzi e-mail in testo normale e con hash. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Applica trasformazione]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. |
+| `user_id` | ID utente personalizzati | Seleziona questa identità di destinazione quando l&#39;identità di origine è uno spazio dei nomi personalizzato. |
+| `address_info_first_name` | Nome dell’utente | Questa identità di destinazione deve essere utilizzata insieme a `address_info_last_name`, `address_info_country_code` e `address_info_postal_code`, quando si desidera inviare i dati dell&#39;indirizzo postale alla destinazione. <br><br>Per assicurarsi che Google corrisponda all&#39;indirizzo, è necessario mappare tutti e quattro i campi degli indirizzi (`address_info_first_name`, `address_info_last_name`, `address_info_country_code` e `address_info_postal_code`) e assicurarsi che nessuno di questi campi sia mancante nei profili esportati. <br> Se un campo non è mappato o contiene dati mancanti, Google non corrisponderà all&#39;indirizzo. |
+| `address_info_last_name` | Cognome dell’utente | Questa identità di destinazione deve essere utilizzata insieme a `address_info_first_name`, `address_info_country_code` e `address_info_postal_code`, quando si desidera inviare i dati dell&#39;indirizzo postale alla destinazione. <br><br>Per assicurarsi che Google corrisponda all&#39;indirizzo, è necessario mappare tutti e quattro i campi degli indirizzi (`address_info_first_name`, `address_info_last_name`, `address_info_country_code` e `address_info_postal_code`) e assicurarsi che nessuno di questi campi sia mancante nei profili esportati. <br> Se un campo non è mappato o contiene dati mancanti, Google non corrisponderà all&#39;indirizzo. |
+| `address_info_country_code` | Codice paese indirizzo utente | Questa identità di destinazione deve essere utilizzata insieme a `address_info_first_name`, `address_info_last_name` e `address_info_postal_code`, quando si desidera inviare i dati dell&#39;indirizzo postale alla destinazione. <br><br>Per assicurarsi che Google corrisponda all&#39;indirizzo, è necessario mappare tutti e quattro i campi degli indirizzi (`address_info_first_name`, `address_info_last_name`, `address_info_country_code` e `address_info_postal_code`) e assicurarsi che nessuno di questi campi sia mancante nei profili esportati. <br> Se un campo non è mappato o contiene dati mancanti, Google non corrisponderà all&#39;indirizzo. <br><br>Formato accettato: codici paese a due lettere minuscole in formato [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). |
+| `address_info_postal_code` | Codice postale indirizzo utente | Questa identità di destinazione deve essere utilizzata insieme a `address_info_first_name`, `address_info_last_name` e `address_info_country_code`, quando si desidera inviare i dati dell&#39;indirizzo postale alla destinazione. <br><br>Per assicurarsi che Google corrisponda all&#39;indirizzo, è necessario mappare tutti e quattro i campi degli indirizzi (`address_info_first_name`, `address_info_last_name`, `address_info_country_code` e `address_info_postal_code`) e assicurarsi che nessuno di questi campi sia mancante nei profili esportati. <br> Se un campo non è mappato o contiene dati mancanti, Google non corrisponderà all&#39;indirizzo. |
 
 {style="table-layout:auto"}
 
@@ -146,13 +150,13 @@ Attribute source data is not automatically hashed. When your source field contai
 
 The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411786/?quality=12&learn=on&captions=ita) -->
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
 ## Panoramica video {#video-overview}
 
 Guarda il video seguente per una spiegazione dei vantaggi e di come attivare i dati per Google Customer Match.
 
->[!VIDEO](https://video.tv.adobe.com/v/326486?captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/38180/)
 
 ## Connettersi alla destinazione {#connect}
 
@@ -227,6 +231,10 @@ L&#39;hash dei dati di origine degli attributi non viene eseguito automaticament
 ## Monitorare la destinazione {#monitor-destination}
 
 Dopo la connessione alla destinazione e la definizione di un flusso di dati di destinazione, puoi utilizzare la [funzionalità di monitoraggio](/help/dataflows/ui/monitor-destinations.md) in Real-Time CDP per ottenere informazioni dettagliate sui record del profilo attivati nella destinazione in ogni esecuzione del flusso di dati.
+
+>[!IMPORTANT]
+>
+>Quando mappi le quattro identità di destinazione correlate all&#39;indirizzo (`address_info_first_name`, `address_info_last_name`, `address_info_country_code` e `address_info_postal_code`), vengono conteggiate come identità singole separate per ciascun profilo nella pagina di monitoraggio del flusso di dati.
 
 ## Verifica che l’attivazione del pubblico sia avvenuta correttamente {#verify-activation}
 
