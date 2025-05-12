@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform - Aprile 2025
 description: Note sulla versione di Adobe Experience Platform di aprile 2025.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: a79efc5d64862850d17cff0fd0633c73fd08207d
+source-git-commit: 6558046e9708267cd0ceda36e7c0bdba6b2f758a
 workflow-type: tm+mt
-source-wordcount: '2197'
-ht-degree: 94%
+source-wordcount: '2192'
+ht-degree: 93%
 
 ---
 
@@ -108,7 +108,7 @@ Utilizza Identity Service di Adobe Experience Platform per creare una panoramica
 
 | Funzione | Descrizione |
 | --- | --- |
-| [!BADGE Disponibilità limitata]{type=Informative} [!DNL Identity Graph Linking Rules] | Le regole di collegamento del grafo identità ora hanno una disponibilità limitata e sono accessibili a tutta la clientela nelle sandbox di sviluppo. <ul><li>**Requisiti per l’attivazione**: la funzione rimarrà inattiva finché non avrai configurato e salvato [!DNL Identity Settings]. Senza questa configurazione, il sistema continuerà a funzionare normalmente, senza cambiamenti di comportamento.</li><li>**Note importanti**: durante questa fase di disponibilità limitata, la segmentazione Edge può produrre risultati imprevisti di appartenenza al segmento. Tuttavia, la segmentazione in streaming e in batch funzionerà come previsto.</li><li>**Passaggi successivi**: per informazioni su come abilitare questa funzione nelle sandbox di produzione, contatta il team Adobe Account.</li></ul> |
+| [!BADGE Disponibilità limitata]{type=Informative} [!DNL Identity Graph Linking Rules] Le regole di collegamento del grafico identità sono ora accessibili a tutti i clienti nelle sandbox di sviluppo. <ul><li>**Requisiti per l’attivazione**: la funzione rimarrà inattiva finché non avrai configurato e salvato [!DNL Identity Settings]. Senza questa configurazione, il sistema continuerà a funzionare normalmente, senza cambiamenti di comportamento.</li><li>**Note importanti**: durante questa fase di disponibilità limitata, la segmentazione Edge può produrre risultati imprevisti di appartenenza al segmento. Tuttavia, la segmentazione in streaming e in batch funzionerà come previsto.</li><li>**Passaggi successivi**: per informazioni su come abilitare questa funzione nelle sandbox di produzione, contatta il team Adobe Account.</li></ul> |
 
 {style="table-layout:auto"}
 
