@@ -321,7 +321,7 @@ Il widget **[!UICONTROL Modifica conteggio profili]** visualizza il numero di pr
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilesaddedtrend"
 >title="Tendenza di modifica del conteggio dei profili"
->abstract="Questo widget visualizza il numero di profili uniti che sono stati aggiunti quotidianamente all’archivio dei profili negli ultimi 30 giorni, 90 giorni o 12 mesi. Il numero dipende anche dal criterio di unione selezionato applicato ai dati dei profili."
+>abstract="Questo widget visualizza il numero di profili uniti che sono stati aggiunti quotidianamente all’archivio dei profili negli ultimi 30 giorni, 90 giorni o 12 mesi. Il numero dipende anche dal criterio di unione selezionato applicato ai dati di profilo."
 
 Il widget **[!UICONTROL Tendenza di modifica del conteggio dei profili]** visualizza il numero totale di profili uniti che sono stati aggiunti all&#39;archivio profili ogni giorno negli ultimi 30 giorni, 90 giorni o 12 mesi. Questo numero viene aggiornato ogni giorno in cui viene acquisita l’istantanea, pertanto se si acquisiscono profili in Experience Platform, il numero di profili non viene riportato fino all’acquisizione dell’istantanea successiva. Il numero di profili aggiunti è il risultato dell’applicazione del criterio di unione selezionato ai dati del profilo per unire i frammenti di profilo in modo da formare un singolo profilo per ogni singolo utente.
 

@@ -25,7 +25,7 @@ In Adobe Experience Platform, puoi configurare i tempi di scadenza dei dati per 
 
 >[!CONTEXTUALHELP]
 >id="platform_profile_pseudonymousprofile_dataexpiration"
->title="Scadenza dei dati del profilo pseudonimo"
+>title="Scadenza dati profilo identificato da pseudonimo"
 >abstract="La scadenza dei dati del profilo pseudonimo rappresenta il numero di giorni in cui un profilo pseudonimo rimarrà in Adobe Experience Platform prima di essere rimosso. Questo valore deve essere impostato almeno su 1. Tieni presente che la rimozione del profilo pseudonimo potrebbe richiedere fino a tre giorni."
 
 Un profilo viene considerato per la scadenza dei dati pseudonimi se soddisfa le seguenti condizioni:
@@ -131,7 +131,7 @@ Per un caso d’uso tipico, puoi impostare la scadenza dei dati Experience Event
 
 +++ Risposta
 
-- Il sistema di eliminazione [&#128279;](../identity-service/guardrails.md) del servizio Identity  &quot;first-in, first-out&quot; potrebbe eliminare gli ECID dal grafo delle identità, archiviati in Identity Service.
+- Il sistema di eliminazione ](../identity-service/guardrails.md) del servizio Identity [ &quot;first-in, first-out&quot; potrebbe eliminare gli ECID dal grafo delle identità, archiviati in Identity Service.
 - Se questo comportamento di eliminazione determina la memorizzazione di un profilo solo ECID nel profilo cliente in tempo reale (archivio profili), la scadenza dei dati del profilo pseudonimo eliminerà tale profilo dall’archivio profili.
 
 +++

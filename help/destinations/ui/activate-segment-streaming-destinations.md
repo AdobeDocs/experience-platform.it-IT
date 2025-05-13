@@ -135,7 +135,7 @@ Per visualizzare tutti i tipi di pubblico attivati nella destinazione, utilizza 
 
 1. Seleziona **[!UICONTROL Avanti]** per passare alla pagina [!UICONTROL Rivedi].
 
-## Rivisione {#review}
+## Revisione {#review}
 
 Nella pagina **[!UICONTROL Rivedi]** puoi visualizzare un riepilogo della selezione. Seleziona **[!UICONTROL Annulla]** per interrompere il flusso, **[!UICONTROL Indietro]** per modificare le impostazioni oppure **[!UICONTROL Fine]** per confermare la selezione e iniziare a inviare dati alla destinazione.
 

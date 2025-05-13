@@ -38,7 +38,7 @@ L&#39;area di lavoro [!UICONTROL Schemi] nell&#39;interfaccia utente [!DNL Exper
 
 Dopo aver effettuato l&#39;accesso a [!DNL Experience Platform], seleziona **[!UICONTROL Schemi]** nella barra di navigazione a sinistra per aprire l&#39;area di lavoro **[!UICONTROL Schemi]**. La scheda **[!UICONTROL Sfoglia]** visualizza un elenco di schemi (una rappresentazione di [!DNL Schema Library]) da visualizzare e personalizzare. L’elenco include il nome, il tipo, la classe e il comportamento (record o serie temporale) su cui è basato lo schema, nonché la data e l’ora dell’ultima modifica dello schema.
 
-Per ulteriori informazioni, consulta la guida sull&#39;esplorazione delle risorse XDM esistenti nell&#39;interfaccia utente[&#128279;](../ui/explore.md).
+Per ulteriori informazioni, consulta la guida sull&#39;esplorazione delle risorse XDM esistenti nell&#39;interfaccia utente](../ui/explore.md).[
 
 ## Creare e denominare uno schema {#create}
 
@@ -409,11 +409,11 @@ Ora puoi seguire l&#39;esercitazione su [definizione di una relazione di schema 
 
 Nel video seguente viene illustrato come creare uno schema semplice nell&#39;interfaccia utente [!DNL Experience Platform].
 
->[!VIDEO](https://video.tv.adobe.com/v/3430219?quality=12&learn=on&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
 
 Il video seguente ha lo scopo di rafforzare la tua comprensione del lavoro con i gruppi di campo e le classi.
 
->[!VIDEO](https://video.tv.adobe.com/v/3413602?quality=12&learn=on&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/27013?quality=12&learn=on)
 
 ## Appendice
 

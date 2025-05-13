@@ -44,7 +44,7 @@ Per ulteriori informazioni sul funzionamento dell&#39;imposizione automatica in 
 
 [!DNL Experience Platform] può condividere segmenti con Adobe Audience Manager. Qualsiasi controllo sull&#39;esportazione dei dati applicato ai segmenti di Audience Manager viene convertito in etichette e azioni di marketing equivalenti riconosciute dalla governance dei dati di [!DNL Experience Platform].
 
-Per informazioni sul mapping di specifici controlli sull&#39;esportazione dei dati alle etichette di utilizzo dei dati in [!DNL Experience Platform], consultare la [documentazione di Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=it#aam-data-export-control-in-aep).
+Per informazioni sul mapping di specifici controlli sull&#39;esportazione dei dati alle etichette di utilizzo dei dati in [!DNL Experience Platform], consultare la [documentazione di Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
 
 ## Gestione delle etichette di utilizzo dei dati in [!DNL Experience Platform] {#manage-labels}
 

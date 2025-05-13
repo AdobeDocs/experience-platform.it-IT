@@ -132,8 +132,8 @@ La tabella seguente illustra i termini chiave relativi alla governance dei dati 
 
 Il video seguente ha lo scopo di aiutarti a comprendere il framework di governance dei dati.
 
->[!VIDEO](https://video.tv.adobe.com/v/35476?quality=12&enable10seconds=on&speedcontrol=on&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
 
 Il video seguente fornisce indicazioni su come applicare le etichette di utilizzo dei dati agli schemi o all’intero set di dati in Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/3422790/?learn=on&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/29709/?learn=on)
