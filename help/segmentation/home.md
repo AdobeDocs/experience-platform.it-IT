@@ -102,7 +102,7 @@ Per ulteriori informazioni sulla segmentazione Edge, consulta la [panoramica sul
 
 ## Accedere ai risultati della segmentazione
 
-Per informazioni su come accedere a un pubblico esportato, consulta l&#39;esercitazione sulla valutazione della definizione del segmento [](./tutorials/evaluate-a-segment.md).
+Per informazioni su come accedere a un pubblico esportato, consulta l&#39;esercitazione sulla valutazione della definizione del segmento [&#128279;](./tutorials/evaluate-a-segment.md).
 
 ## Metadati di definizione del segmento
 

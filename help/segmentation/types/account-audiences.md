@@ -203,7 +203,7 @@ Quando si utilizzano i tipi di pubblico dell&#39;account, il pubblico **deve** r
    - Ciò significa che il pubblico **non può** avere più di cinque regole che compongono il pubblico.
 - Il numero massimo di entità incrociate utilizzabili è **5**.
    - Un’entità incrociata si verifica quando si passa da un’entità all’altra all’interno del pubblico. Ad esempio, passare da un account a una persona a un elenco di marketing.
-- Impossibile utilizzare le entità personalizzate **1}.**
+- Impossibile utilizzare le entità personalizzate **1&rbrace;.**
 - Il numero massimo di valori che è possibile controllare per un singolo campo è **50**.
    - Ad esempio, se hai un campo &quot;Nome città&quot;, puoi confrontare tale valore con 50 nomi di città.
 - Il pubblico dell&#39;account **non può** utilizzare `inSegment` eventi.
