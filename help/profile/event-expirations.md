@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Scadenze degli eventi esperienza
 description: Questo documento fornisce indicazioni generali sulla configurazione dei tempi di scadenza per singoli eventi esperienza all’interno di un set di dati di Adobe Experience Platform.
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 71634a1dd0e0cd3f731272a179b4f1fe221eb046
 workflow-type: tm+mt
-source-wordcount: '858'
+source-wordcount: '884'
 ht-degree: 0%
 
 ---
@@ -47,6 +47,10 @@ Pertanto, se possibile, devi mantenere lo stesso valore di scadenza dell’event
 ## Domande frequenti {#faq}
 
 Nella sezione seguente sono elencate le domande frequenti relative alla scadenza dei dati di Experience Event:
+
+### Qual è la durata minima per la quale posso impostare una scadenza dei dati di Experience Event?
+
+La durata minima della scadenza dei dati di un evento esperienza è **un giorno**.
 
 ### Quali sono le differenze tra la scadenza dei dati di Experience Event e la scadenza dei dati di profilo pseudonimo?
 
