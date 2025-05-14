@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creare e modificare le classi nell’interfaccia utente
 description: Scopri come creare e modificare le classi nell’interfaccia utente di Experience Platform.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: a05ee385694b028b513e2fa632079e665ba815bb
 workflow-type: tm+mt
-source-wordcount: '1692'
+source-wordcount: '1691'
 ht-degree: 5%
 
 ---
@@ -120,7 +120,7 @@ Consulta la guida su [definizione dei campi nell&#39;interfaccia utente](../fiel
 
 Se in precedenza sono stati creati schemi che utilizzano questa classe, i campi appena aggiunti verranno visualizzati automaticamente in tali schemi.
 
-## Modificare una classe (#edit-a-class)
+## Modificare una classe {#edit-a-class}
 
 >[!NOTE]
 >
