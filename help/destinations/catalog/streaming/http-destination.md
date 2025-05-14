@@ -4,9 +4,9 @@ title: Connessione API HTTP
 description: Utilizza la destinazione API HTTP in Adobe Experience Platform per inviare i dati del profilo all’endpoint HTTP di terze parti per eseguire le tue analisi o eseguire qualsiasi altra operazione necessaria sui dati del profilo esportati da Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 2fa6997c043ef7ff24b1383dd8626cfe1cca4f54
+source-git-commit: d78b7a06318dabff5dac763068ca7c21a5a86633
 workflow-type: tm+mt
-source-wordcount: '2701'
+source-wordcount: '2692'
 ht-degree: 8%
 
 ---
@@ -71,13 +71,11 @@ Per utilizzare la destinazione API HTTP per esportare dati da Experience Platfor
 
 Se si desidera utilizzare [!DNL mTLS] con [!DNL HTTP API] destinazioni, l&#39;indirizzo del server inserito nella pagina [dettagli destinazione](#destination-details) deve avere [!DNL TLS] protocolli disabilitati e solo [!DNL mTLS] abilitati. Se il protocollo [!DNL TLS] 1.2 è ancora abilitato sull&#39;endpoint, non verrà inviato alcun certificato per l&#39;autenticazione client. Ciò significa che per utilizzare [!DNL mTLS] con la destinazione [!DNL HTTP API], l&#39;endpoint del server &quot;ricevente&quot; deve essere un endpoint di connessione abilitato solo per [!DNL mTLS].
 
-### Scarica certificato {#certificate}
+### Recupera e controlla i dettagli del certificato {#certificate}
 
-Se si desidera verificare che [!DNL Common Name] (CN) e [!DNL Subject Alternative Names] (SAN) eseguano un&#39;ulteriore convalida di terze parti, è possibile scaricare il certificato seguente:
+Se desideri esaminare i dettagli del certificato come [!DNL Common Name] (CN) e [!DNL Subject Alternative Names] (SAN) per un&#39;ulteriore convalida di terze parti, utilizza l&#39;API per recuperare il certificato ed estrarre tali campi dalla risposta.
 
-* [Certificato pubblico mTLS API HTTP](../../../landing/images/governance-privacy-security/encryption/destinations-public-certificate.zip)
-
-Puoi anche recuperare in modo sicuro i certificati pubblici effettuando una richiesta GET all’endpoint MTLS. Per ulteriori informazioni, consulta la [documentazione dell&#39;endpoint del certificato pubblico](../../../data-governance/mtls-api/public-certificate-endpoint.md).
+Per ulteriori informazioni, consulta la [documentazione dell&#39;endpoint del certificato pubblico](../../../data-governance/mtls-api/public-certificate-endpoint.md).
 
 ## Indirizzo IP inserisco nell&#39;elenco Consentiti {#ip-address-allowlist}
 

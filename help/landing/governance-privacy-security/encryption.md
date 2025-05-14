@@ -2,9 +2,9 @@
 title: Crittografia dei dati in Adobe Experience Platform
 description: Scopri come i dati vengono crittografati in transito e a riposo in Adobe Experience Platform.
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f6eaba4c0622318ba713c562ba0a4c20bba02338
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '849'
 ht-degree: 0%
 
 ---
@@ -48,14 +48,22 @@ Se desideri [utilizzare mTLS con le azioni personalizzate di Adobe Journey Optim
 
 >[!NOTE]
 >
->È tua responsabilità mantenere il certificato pubblico aggiornato. Assicurati di rivedere regolarmente il certificato, in particolare con l’approssimarsi della data di scadenza. Applica un segnalibro a questa pagina per mantenere la copia più recente nell’ambiente.
+>È tua responsabilità verificare che i sistemi utilizzino un certificato pubblico valido. Esamina regolarmente i certificati, soprattutto in base all’approssimarsi della data di scadenza. Utilizza l’API per recuperare e aggiornare i certificati prima della loro scadenza.
 
-Se desideri verificare il CN o la SAN per eseguire un’ulteriore convalida di terze parti, puoi scaricare i certificati pertinenti qui:
+Non vengono più forniti collegamenti diretti per il download dei certificati mTLS pubblici. Utilizzare invece l&#39;[endpoint certificato pubblico](../../data-governance/mtls-api/public-certificate-endpoint.md) per recuperare i certificati. Questo è l&#39;unico metodo supportato per accedere ai certificati pubblici correnti. In questo modo puoi ricevere sempre certificati validi e aggiornati per le integrazioni.
 
-- [Certificato pubblico Adobe Journey Optimizer](../images/governance-privacy-security/encryption/AJO-public-certificate.pem)
-- [Certificato pubblico del servizio Destinazioni](../images/governance-privacy-security/encryption/destinations-public-cert.pem).
+Le integrazioni che si basano sulla crittografia basata su certificati devono aggiornare i propri flussi di lavoro per supportare il recupero automatico dei certificati tramite l’API. L’utilizzo di collegamenti statici o aggiornamenti manuali può causare l’utilizzo di certificati scaduti o revocati, con conseguenti integrazioni non riuscite.
 
-Puoi anche recuperare in modo sicuro i certificati pubblici effettuando una richiesta GET all’endpoint MTLS. Per ulteriori informazioni, consulta la [documentazione dell&#39;endpoint del certificato pubblico](../../data-governance/mtls-api/public-certificate-endpoint.md).
+#### Automazione del ciclo di vita dei certificati {#certificate-lifecycle-automation}
+
+Adobe ora automatizza il ciclo di vita dei certificati per le integrazioni mTLS per migliorare l’affidabilità e prevenire interruzioni del servizio. I certificati pubblici sono:
+
+- Rilasciato 60 giorni prima della scadenza.
+- Revocato 30 giorni prima della scadenza.
+
+Questi intervalli continueranno a essere ridotti in linea con le [linee guida in evoluzione per il forum CA/B](https://www.digicert.com/blog/tls-certificate-lifetimes-will-officially-reduce-to-47-days), che mirano a ridurre la durata dei certificati a un massimo di 47 giorni.
+
+Se in precedenza hai utilizzato collegamenti in questa pagina per scaricare certificati, aggiorna il processo per recuperarli esclusivamente tramite l’API.
 
 ## Dati a riposo {#at-rest}
 
