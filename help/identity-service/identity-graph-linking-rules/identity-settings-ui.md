@@ -2,10 +2,10 @@
 title: Interfaccia utente per le impostazioni delle identità
 description: Scopri come utilizzare l’interfaccia utente delle impostazioni di identità.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
+source-git-commit: 44457b95b354e20808c1218ca3c8e698071f0528
 workflow-type: tm+mt
-source-wordcount: '697'
-ht-degree: 3%
+source-wordcount: '693'
+ht-degree: 13%
 
 ---
 
@@ -15,9 +15,9 @@ ht-degree: 3%
 >
 >Le regole di collegamento del grafico identità sono attualmente a disponibilità limitata e sono accessibili a tutti i clienti nelle sandbox di sviluppo.
 >
->* **Requisiti per l&#39;attivazione**: la funzionalità rimarrà inattiva finché non avrai configurato e salvato [!DNL Identity Settings]. Senza questa configurazione, il sistema continuerà a funzionare normalmente, senza cambiamenti di comportamento.
->* **Note importanti**: durante questa fase di disponibilità limitata, la segmentazione di Edge può produrre risultati imprevisti di iscrizione al segmento. Tuttavia, lo streaming e la segmentazione batch funzioneranno come previsto.
->* **Passaggi successivi**: per informazioni su come abilitare questa funzione nelle sandbox di produzione, contatta il team del tuo account di Adobe.
+>* **Requisiti per l’attivazione**: la funzione rimarrà inattiva finché non avrai configurato e salvato [!DNL Identity Settings]. Senza questa configurazione, il sistema continuerà a funzionare normalmente, senza cambiamenti di comportamento.
+>* **Note importanti**: durante questa fase di disponibilità limitata, la segmentazione Edge può produrre risultati imprevisti di appartenenza al segmento. Tuttavia, la segmentazione in streaming e in batch funzionerà come previsto.
+>* **Passaggi successivi**: per informazioni su come abilitare questa funzione nelle sandbox di produzione, contatta il team Adobe Account.
 
 Le impostazioni di identità sono una funzione dell’interfaccia utente di Adobe Experience Platform Identity Service che consente di designare spazi dei nomi univoci e configurare la priorità dello spazio dei nomi.
 
@@ -81,7 +81,7 @@ Da qui, è necessario confermare quanto segue prima di procedere al passaggio fi
 >
 >* Il passaggio finale è un altro messaggio di conferma che indica che i grafici esistenti saranno interessati dall&#39;algoritmo grafico **solo se i grafici vengono aggiornati dopo il salvataggio delle impostazioni** e che l&#39;identità primaria dei frammenti di evento nel profilo cliente in tempo reale non verrà aggiornata anche dopo le modifiche della priorità dello spazio dei nomi.
 >
->* Inoltre, ti viene comunicato che saranno necessarie fino a **sei ore** affinché le impostazioni nuove o aggiornate abbiano effetto. Per confermare, immetti il nome della sandbox, quindi seleziona **[!UICONTROL Conferma]**.
+>* L&#39;applicazione delle impostazioni nuove o aggiornate richiederà fino a **24 ore**. Per confermare, immetti il nome della sandbox, quindi seleziona **[!UICONTROL Conferma]**.
 
 ![Finestra di conferma che visualizza un avviso relativo a un ritardo di sei ore prima dell&#39;elaborazione delle configurazioni.](../images/rules/complete.png)
 
