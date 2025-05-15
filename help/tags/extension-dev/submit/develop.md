@@ -2,10 +2,10 @@
 title: Sviluppare un’estensione
 description: Questo documento fornisce una panoramica generale del processo di sviluppo delle estensioni tag, con collegamenti verso la documentazione che descrive i processi in maggior dettaglio.
 exl-id: fb2f7275-a5da-4a41-b915-822c71c02e5c
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: cfcc70d66a34fa51bf0e21525539ba88de7fc367
 workflow-type: tm+mt
-source-wordcount: '473'
-ht-degree: 92%
+source-wordcount: '462'
+ht-degree: 96%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 92%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Un’estensione tag può essere considerata come un (piccolo) prodotto con requisiti propri. È utile determinare in che modo un utente di Adobe Experience Platform potrebbe voler utilizzare l’estensione, e definire quindi di conseguenza le funzionalità e i tipi di eventi, condizioni, azioni ed elementi dati che tale estensione dovrà fornire.
 
@@ -24,7 +24,7 @@ Sulla base di queste informazioni, è possibile pianificare i componenti da forn
 Una volta delineato un piano, le guide seguenti saranno utili per comprendere il processo di sviluppo delle estensioni:
 
 * La [guida introduttiva](../getting-started.md) e altri documenti in **Sviluppo delle estensioni** accessibili dalla barra di navigazione a sinistra sono ottimi materiali di riferimento per comprendere le estensioni. Includono dettagli su cosa possono fare le estensioni, come vengono memorizzate e trasmesse le informazioni dell’utente tra l’estensione e Adobe Experience Platform, come il codice viene raggruppato in librerie, e come il codice dell’estensione viene interpretato e utilizzato in fase di esecuzione nel browser.
-* Il [video tutorial sulle estensioni](https://youtu.be/rxjtC9o4rl0) rappresenta un ottimo punto di partenza.
+<!-- * The [extension tutorial video](https://youtu.be/rxjtC9o4rl0) is a great place to start. -->
 * La playlist YouTube di [introduzione alle estensioni](https://www.youtube.com/playlist?list=PLOdw8u2F8CIgynzKrPEwCPuDxzHW1WP5m) spiega come creare pacchetti di estensione.
 * L’articolo [Understanding JSON Schema](https://spacetelescope.github.io/understanding-json-schema/index.html#) spiega lo schema JSON.
 * [Lint/Validator JSON](https://jsonlint.com/).
