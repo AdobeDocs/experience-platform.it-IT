@@ -3,9 +3,9 @@ title: Eseguire trasformazioni sui dati esportati nelle destinazioni di archivia
 type: Tutorial
 description: Scopri come utilizzare la funzionalità dei campi calcolati per eseguire trasformazioni sui dati esportati nelle destinazioni dell’archiviazione cloud
 exl-id: 1e14f964-4c03-4d0c-be8d-c3dcb48a335a
-source-git-commit: 14c672ef57e0b0247020075552c782ed18db8484
+source-git-commit: bd9efc1bcf6058827cc5c603b9976c9e42c7ec9e
 workflow-type: tm+mt
-source-wordcount: '1595'
+source-wordcount: '1625'
 ht-degree: 8%
 
 ---
@@ -16,15 +16,7 @@ ht-degree: 8%
 >id="platform_destinations_export_arrays_flat_files"
 >title="Aggiungere campi calcolati"
 >abstract="<p>Utilizza il controllo **Aggiungi campo calcolato** per eseguire varie trasformazioni sui dati esportati verso destinazioni di archiviazione cloud. Ad esempio, puoi applicare l’hashing ai dati, concatenare gli array in stringhe e altro ancora."
-
-<!--
-
-disable additional URLs for a while
-
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-maps-objects.html?lang=it#examples" text="Examples"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-maps-objects.html?lang=it#known-limitations" text="Known limitations"
-
--->
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/data-transformations-calculated-fields.html#examples" text="Esempi"
 
 >[!AVAILABILITY]
 >
@@ -53,6 +45,10 @@ Per utilizzare i campi calcolati per le trasformazioni dei dati:
 >id="platform_destinations_export_arrays_calculated_field_disabled"
 >title="Aggiungere campi calcolati disabilitati"
 >abstract="Questo controllo è disabilitato, perché durante la configurazione della connessione di destinazione hai selezionato **Esporta array, mappe, oggetti** su *Attivato*. Per utilizzare i campi calcolati e le funzioni disponibili all’interno, imposta una nuova connessione di destinazione con l’opzione **Esporta array, mappe, oggetti** su *Disattivato*."
+
+>[!IMPORTANT]
+>
+>Quando si utilizzano campi calcolati, oltre a qualsiasi funzione di trasformazione dei dati applicata, è necessario utilizzare anche la funzione `array_to_string` per concatenare i campi in una stringa.
 
 Nel passaggio di mappatura del flusso di lavoro di attivazione per le destinazioni di archiviazione cloud, seleziona **[!UICONTROL Aggiungi campo calcolato]**.
 
@@ -233,7 +229,7 @@ johndoe@acme.org,"5"
 
 >[!IMPORTANT]
 >
->A differenza delle altre funzioni descritte in questa pagina, per esportare singoli elementi di un array non è necessario **&#x200B; per utilizzare il controllo &#x200B;** [!UICONTROL Campi calcolati]** nell&#39;interfaccia utente.
+>A differenza delle altre funzioni descritte in questa pagina, per esportare singoli elementi di un array non è necessario ** per utilizzare il controllo **[!UICONTROL Campi calcolati]** nell&#39;interfaccia utente.
 
 È possibile accedere a un indice di un array per esportare un singolo elemento dall’array. Ad esempio, come nell&#39;esempio precedente per la funzione `size_of`, se si desidera accedere ed esportare solo la prima volta che un cliente ha acquistato un determinato prodotto, è possibile utilizzare `purchaseTime[0]` per esportare il primo elemento del timestamp, `purchaseTime[1]` per esportare il secondo elemento del timestamp, `purchaseTime[2]` per esportare il terzo elemento del timestamp e così via.
 
