@@ -2,9 +2,9 @@
 description: Scopri gli indirizzi IP che devi aggiungere al tuo inserisco nell'elenco Consentiti per utilizzare correttamente le origini Adobe Experience Platform.
 title: INSERIRE NELL'ELENCO CONSENTITI Indirizzo IP per origini
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-source-git-commit: 719f1bca20d5118de14ebe324675bb0aab6161e8
+source-git-commit: e2403b235b4cfee37761ebd683a1fb8662061406
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
@@ -290,6 +290,10 @@ Per consentire il flusso del traffico per il servizio di trasferimento dati per 
 
 ## INSERIRE NELL&#39;ELENCO CONSENTITI Indirizzi IP da per la connessione delle origini ad Experience Platform su [!DNL Amazon Web Services] (AWS) {#aws}
 
-Per collegare l’origine a Experience on AWS, aggiungi il seguente indirizzo IP al inserisco nell&#39;elenco Consentiti di:
+Per collegare l’origine a Experience on AWS, aggiungi il seguente indirizzo IP al inserisco nell&#39;elenco Consentiti di:.
 
-- `66.117.18.0/24`
+### VA6
+
+- `34.193.63.59`
+- `44.217.93.240`
+- `44.194.79.229`
