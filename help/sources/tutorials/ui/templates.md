@@ -15,7 +15,7 @@ ht-degree: 10%
 >[!CONTEXTUALHELP]
 >id="platform_sources_marketo_mapping"
 >title="Modelli per origini nell’interfaccia utente di Experience Platform"
->abstract="I modelli includono risorse generate automaticamente come schemi, set di dati, identità, regole di mappatura, spazi dei nomi delle identità e flussi di dati che è possibile utilizzare per importare dati da un’origine all’Experience Platform. Puoi aggiornare le risorse generate automaticamente per la personalizzazione in base ai tuoi casi d’uso."
+>abstract="I modelli includono risorse generate automaticamente come schemi, set di dati, identità, regole di mappatura, spazi dei nomi delle identità e flussi di dati che è possibile utilizzare per importare dati da un’origine a Experience Platform. Puoi aggiornare le risorse generate automaticamente per la personalizzazione in base ai tuoi casi d’uso."
 
 >[!IMPORTANT]
 >
