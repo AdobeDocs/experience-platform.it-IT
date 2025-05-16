@@ -2,9 +2,9 @@
 title: Note sulla versione di Adobe Experience Platform - Aprile 2025
 description: Note sulla versione di Adobe Experience Platform di aprile 2025.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 6558046e9708267cd0ceda36e7c0bdba6b2f758a
+source-git-commit: e0740ca9cd6e1d0b92d5504a2869ac03c28d4980
 workflow-type: ht
-source-wordcount: '2192'
+source-wordcount: '2069'
 ht-degree: 100%
 
 ---
@@ -30,7 +30,6 @@ Aggiornamenti alle funzioni e alla documentazione esistenti di Adobe Experience 
 - [Experience Data Model](#xdm)
 - [Identity Service](#identity)
 - [Query Service](#query-service)
-- [Profilo cliente in tempo reale](#profile)
 - [Sandbox](#sandboxes)
 - [Origini](#sources)
 - [Playbook di casi d’uso](#use-case-playbooks)
@@ -129,18 +128,6 @@ Eseguire query sui dati nel data lake di Adobe Experience Platform utilizzando S
 | Salvare gli output di modellazione predittiva utilizzando CREATE TABLE e INSERIT INTO | [Per salvare gli output di modellazione predittiva selezionati come nuove tabelle, utilizza CREATE TABLE AS SELECT; per inserirli in tabelle esistenti, utilizza INSERT INTO SELECT](../../query-service/advanced-statistics/models.md#predict). Se è abilitata la selezione avanzata delle colonne, i risultati intermedi come i vettori di caratteristiche e le probabilità possono anche essere salvati insieme alle previsioni finali. Per esempi di utilizzo, consulta la [documentazione sulla sintassi SQL](../../query-service/sql/syntax.md#create-table-as-select). |
 
 Per ulteriori informazioni su [!DNL Query Service], consulta la [[!DNL Query Service] panoramica](../../query-service/home.md).
-
-## Profilo cliente in tempo reale {#profile}
-
-Adobe Experience Platform ti consente di promuovere esperienze coordinate, coerenti e pertinenti per la tua clientela, indipendentemente da dove e quando interagisce con il tuo marchio. Con il Profilo cliente in tempo reale puoi avere una visione completa di ogni singolo cliente combinando dati provenienti da più canali, inclusi online, offline, CRM e di terze parti. Il profilo ti consente di consolidare i dati clienti in una visualizzazione unificata che offre un account utilizzabile e dotato di marca temporale per ogni interazione con il cliente.
-
-| Funzione | Descrizione |
-| ------- | ----------- |
-| Scadenza dati profilo identificato da pseudonimo | Gestisci la scadenza dei dati di profili identificati da pseudonimo nella dashboard Profilo. Per ulteriori informazioni su questa funzione e sui profili identificati da pseudonimi, consulta la [Guida alla scadenza dei dati del profilo identificato da pseudonimo](../../profile/pseudonymous-profiles.md). |
-
-{style="table-layout:auto"}
-
-Per ulteriori informazioni sul profilo cliente in tempo reale, leggi la [panoramica sul profilo](../../profile/home.md)
 
 ## Sandbox {#sandboxes}
 
