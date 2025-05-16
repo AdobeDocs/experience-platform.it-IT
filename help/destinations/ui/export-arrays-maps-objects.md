@@ -3,9 +3,9 @@ title: Esportazione di array, mappe e oggetti da Real-Time CDP
 type: Tutorial
 description: Scopri come esportare array, mappe e oggetti da Real-Time CDP a destinazioni di archiviazione cloud.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f7ff10dd6489842adb8de49b3f8634c20d77cc71
 workflow-type: tm+mt
-source-wordcount: '1096'
+source-wordcount: '1077'
 ht-degree: 13%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 13%
 >
 >La funzionalità per esportare array e altri oggetti complessi nelle destinazioni di archiviazione cloud è generalmente disponibile per le seguenti destinazioni: [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md), [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md).
 >
->Inoltre, puoi esportare i campi di tipo mappa nelle seguenti destinazioni: [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [HTTP API](/help/destinations/catalog/streaming/http-destination.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md).
+>È inoltre possibile esportare campi di tipo mappa nelle seguenti destinazioni: [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [API HTTP](/help/destinations/catalog/streaming/http-destination.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md).
 
 
 Scopri come esportare array, mappe e oggetti da Real-Time CDP in [destinazioni di archiviazione cloud](/help/destinations/catalog/cloud-storage/overview.md). Inoltre, puoi esportare i campi di tipo mappa in [destinazioni enterprise](/help/destinations/destination-types.md#advanced-enterprise-destinations) e in [destinazioni di personalizzazione edge](/help/destinations/destination-types.md#edge-personalization-destinations) limitate. Leggi questo documento per comprendere il flusso di lavoro di esportazione, i casi d’uso abilitati da questa funzionalità e le limitazioni note. Visualizza la tabella seguente per comprendere le funzionalità disponibili per tipo di destinazione.
@@ -28,7 +28,7 @@ Scopri come esportare array, mappe e oggetti da Real-Time CDP in [destinazioni d
 | Destinazioni di archiviazione cloud personalizzate create dai partner (destinazioni personalizzate basate su file create tramite Destination SDK) | No |
 | Destinazioni Enterprise (Amazon Kinesis, Azure Event Hubs, API HTTP) | Parzialmente. Puoi selezionare ed esportare oggetti di tipo mappa nel passaggio di mappatura del flusso di lavoro di attivazione. |
 | Destinazioni di streaming (ad esempio: Facebook, Braze, Google Customer Match e altro) | No |
-| Destinazioni di personalizzazione di Edge (Adobe Target) | Parzialmente. Puoi selezionare ed esportare oggetti di tipo mappa nel passaggio di mappatura del flusso di lavoro di attivazione. |
+| Destinazioni di personalizzazione Edge | No |
 
 {style="table-layout:auto"}
 
@@ -46,7 +46,7 @@ Ottieni le informazioni più importanti sulle funzionalità in questa sezione e 
 
 In Experience Platform puoi utilizzare [schemi XDM](/help/xdm/home.md) per gestire diversi tipi di campi. Prima di aggiungere il supporto per le esportazioni di array, era possibile esportare campi di tipo coppia chiave-valore semplici, come le stringhe, da Experience Platform nelle destinazioni desiderate. Un esempio di questo campo precedentemente supportato per l&#39;esportazione è `personalEmail.address`:`johndoe@acme.org`.
 
-Altri tipi di campo in Experience Platform includono i campi array. Ulteriori informazioni sulla gestione dei campi array nell&#39;interfaccia utente di Experience Platform [&#128279;](/help/xdm/ui/fields/array.md).  È ora possibile esportare oggetti array come nell’esempio seguente.
+Altri tipi di campo in Experience Platform includono i campi array. Ulteriori informazioni sulla gestione dei campi array nell&#39;interfaccia utente di Experience Platform ](/help/xdm/ui/fields/array.md). [ È ora possibile esportare oggetti array come nell’esempio seguente.
 
 ```
 organizations = [{
