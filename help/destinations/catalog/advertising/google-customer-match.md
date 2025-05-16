@@ -3,9 +3,9 @@ keywords: Google customer match;Google customer match;Google Customer Match
 title: Connessione Customer Match di Google
 description: Google Customer Match consente di utilizzare i dati online e offline per raggiungere e coinvolgere nuovamente i clienti nelle proprietà possedute e gestite da Google, come Search, Shopping e Gmail.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 98d83e8d09b6e469daf515063e2887bfbf9b8be6
+source-git-commit: ce205622260f4252d1a7db7c5011366fb2ed4d3c
 workflow-type: tm+mt
-source-wordcount: '2360'
+source-wordcount: '2410'
 ht-degree: 2%
 
 ---
@@ -137,6 +137,12 @@ Per informazioni sull&#39;acquisizione di indirizzi e-mail in Experience Platfor
 
 Se scegli di eseguire l’hash degli indirizzi e-mail da solo, assicurati di soddisfare i requisiti di Google, descritti nei collegamenti riportati sopra.
 
+### Requisiti di hashing del campo indirizzo {#address-field-hashing}
+
+Quando si mappano campi relativi agli indirizzi a [!DNL Google Customer Match], Experience Platform **inserisce automaticamente l&#39;hash** dei valori `address_info_first_name` e `address_info_last_name` prima di inviarli a Google. Questo hashing automatico è necessario per rispettare i requisiti di sicurezza e privacy di Google.
+
+**not** fornisce valori con hash preliminare per `address_info_first_name` o `address_info_last_name`. Se fornisci valori con hash già, il processo corrispondente avrà esito negativo.
+
 ### Utilizzo di spazi dei nomi personalizzati {#custom-namespaces}
 
 Prima di poter utilizzare lo spazio dei nomi `User_ID` per inviare dati a Google, assicurati di sincronizzare i tuoi identificatori utilizzando [!DNL gTag]. Per informazioni dettagliate, consulta la [documentazione ufficiale di Google](https://support.google.com/google-ads/answer/9199250).
@@ -150,13 +156,13 @@ Attribute source data is not automatically hashed. When your source field contai
 
 The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411786/?quality=12&learn=on&captions=ita) -->
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
 ## Panoramica video {#video-overview}
 
 Guarda il video seguente per una spiegazione dei vantaggi e di come attivare i dati per Google Customer Match.
 
->[!VIDEO](https://video.tv.adobe.com/v/326486?captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/38180/)
 
 ## Connettersi alla destinazione {#connect}
 
