@@ -54,7 +54,7 @@ Per creare un ID connessione di base, effettuare una richiesta POST all&#39;endp
 
 La richiesta seguente crea una connessione di base per [!DNL MySQL] utilizzando l&#39;autenticazione basata su stringa di connessione.
 
-Esempio di richiesta +++View
++++Esempio di richiesta View
 
 ```shell
 curl -X POST \
@@ -108,7 +108,7 @@ In caso di esito positivo, la risposta restituisce i dettagli della connessione 
 
 La richiesta seguente crea una connessione di base per un&#39;origine [!DNL MySQL] utilizzando l&#39;autenticazione di base.
 
-Esempio di richiesta +++View
++++Esempio di richiesta View
 
 ```shell
 curl -X POST \
@@ -186,7 +186,7 @@ POST /connections
 
 La richiesta seguente crea una connessione di base per [!DNL MySQL] per connettersi ad Experience Platform su AWS.
 
-Esempio di richiesta +++View
++++Esempio di richiesta View
 
 ```shell
 curl -X POST \
