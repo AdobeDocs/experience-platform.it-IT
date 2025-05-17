@@ -1,52 +1,180 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;MySQL;mysql
-solution: Experience Platform
-title: Crea una connessione di base  [!DNL MySQL]  utilizzando l'API del servizio Flusso
-type: Tutorial
-description: Scopri come connettere Adobe Experience Platform a MySQL utilizzando l’API del servizio Flusso.
+title: Connettere MySQL ad Experience Platform utilizzando l’API del servizio Flusso
+description: Scopri come collegare il database MySQL ad Experience Platform utilizzando le API.
 exl-id: 273da568-84ed-4a3d-bfea-0f5b33f1551a
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 659af23c6d05f184b745e13ab8545941f3892e7e
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '597'
 ht-degree: 5%
 
 ---
 
-# Creare una connessione di base [!DNL MySQL] utilizzando l&#39;API [!DNL Flow Service]
+# Connetti [!DNL MySQL] ad Experience Platform utilizzando l&#39;API [!DNL Flow Service]
 
-Una connessione di base rappresenta la connessione autenticata tra un&#39;origine e Adobe Experience Platform.
-
-Questo tutorial illustra i passaggi necessari per creare una connessione di base per [!DNL MySQL] utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Leggi questa guida per scoprire come collegare il tuo account [!DNL MySQL] a Adobe Experience Platform utilizzando [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Introduzione
 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Origini](../../../../home.md): [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini e consente di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi [!DNL Experience Platform].
-* [Sandbox](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza di [!DNL Experience Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Origini](../../../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Experience Platform.
+* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Experience Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per connettersi correttamente a [!DNL MySQL] utilizzando l&#39;API [!DNL Flow Service].
 
 ### Raccogli le credenziali richieste
 
-Affinché [!DNL Flow Service] possa connettersi all&#39;archivio [!DNL MySQL], è necessario fornire il valore per la seguente proprietà di connessione:
-
-| Credenziali | Descrizione |
-| ---------- | ----------- |
-| `connectionString` | La stringa di connessione [!DNL MySQL] associata al tuo account. Schema della stringa di connessione [!DNL MySQL]: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
-| `connectionSpec.id` | La specifica di connessione restituisce le proprietà del connettore di un&#39;origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di origine. L&#39;ID della specifica di connessione per [!DNL MySQL] è `26d738e0-8963-47ea-aadf-c60de735468a`. |
-
-Per ulteriori informazioni su come ottenere una stringa di connessione, fare riferimento a questo [[!DNL MySQL] documento](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html).
+Per informazioni sull&#39;autenticazione, leggere la [[!DNL MySQL] panoramica](../../../../connectors/databases/mysql.md#prerequisites).
 
 ### Utilizzo delle API di Experience Platform
 
-Per informazioni su come effettuare correttamente chiamate alle API di Experience Platform, consulta la guida introduttiva [alle API di Experience Platform](../../../../../landing/api-guide.md).
+Per informazioni su come effettuare correttamente chiamate alle API di Experience Platform, leggi la guida [guida introduttiva alle API di Experience Platform](../../../../../landing/api-guide.md).
 
-## Creare una connessione di base
+## Connetti [!DNL MySQL] ad Experience Platform su Azure {#azure}
 
-Una connessione di base mantiene le informazioni tra l’origine e Experience Platform, incluse le credenziali di autenticazione dell’origine, lo stato corrente della connessione e l’ID univoco della connessione di base. L’ID della connessione di base consente di esplorare e navigare tra i file dall’interno dell’origine e identificare gli elementi specifici che desideri acquisire, comprese le informazioni relative ai tipi di dati e ai formati.
+Per informazioni su come collegare l&#39;account [!DNL MySQL] ad Experience Platform su Azure, leggere la procedura seguente.
 
-Per creare un ID connessione di base, eseguire una richiesta POST all&#39;endpoint `/connections` fornendo le credenziali di autenticazione [!DNL MySQL] come parte dei parametri della richiesta.
+### Crea una connessione di base per [!DNL MySQL] in Experience Platform su Azure {#azure-base}
+
+Una connessione di base collega l’origine ad Experience Platform, memorizzando i dettagli di autenticazione, lo stato della connessione e un ID univoco. Utilizza questo ID per sfogliare i file sorgente e identificare elementi specifici da acquisire, compresi i relativi tipi di dati e formati.
+
+**Formato API**
+
+```https
+POST /connections
+```
+
+Per creare un ID connessione di base, effettuare una richiesta POST all&#39;endpoint `/connections` e fornire le credenziali di autenticazione [!DNL MySQL] come parte dei parametri della richiesta.
+
+>[!BEGINTABS]
+
+>[!TAB Autenticazione basata su stringa di connessione]
+
+**Richiesta**
+
+La richiesta seguente crea una connessione di base per [!DNL MySQL] utilizzando l&#39;autenticazione basata su stringa di connessione.
+
+Esempio di richiesta +++View
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "MySQL Base Connection to Experience Platform",
+      "description": "Via Connection String,
+      "auth": {
+          "specName": "Connection String Based Authentication",
+          "params": {
+              "connectionString": "Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}"
+          }
+      },
+      "connectionSpec": {
+          "id": "26d738e0-8963-47ea-aadf-c60de735468a",
+          "version": "1.0"
+      }
+  }'
+```
+
+| Proprietà | Descrizione |
+| --- | --- |
+| `auth.params.connectionString` | La stringa di connessione [!DNL MySQL] associata al tuo account. Schema della stringa di connessione [!DNL MySQL]: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+| `connectionSpec.id` | ID della specifica di connessione [!DNL MySQL]: `26d738e0-8963-47ea-aadf-c60de735468a`. |
+
++++
+
+**Risposta**
+
+In caso di esito positivo, la risposta restituisce i dettagli della connessione di base appena creata, incluso il relativo identificatore univoco (`id`).
+
++++Visualizza esempio di risposta
+
+```json
+{
+    "id": "1a444165-3439-4c16-8441-653439dc166a",
+    "etag": "\"5b04c219-0000-0200-0000-5e179c8f0000\""
+}
+```
+
++++
+
+>[!TAB Autenticazione di base]
+
+**Richiesta**
+
+La richiesta seguente crea una connessione di base per un&#39;origine [!DNL MySQL] utilizzando l&#39;autenticazione di base.
+
+Esempio di richiesta +++View
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "MySQL Base Connection to Experience Platform",
+      "description": "Via Basic Authentication",
+      "auth": {
+          "specName": "Basic Authentication",
+          "params": {
+              "server": "{SERVER}",
+              "database": "{DATABASE}",
+              "username": "{USERNAME}",
+              "password": "{PASSWORD}",
+              "sslMode": "{SSLMODE}"
+          }
+      },
+      "connectionSpec": {
+          "id": "26d738e0-8963-47ea-aadf-c60de735468a",
+          "version": "1.0"
+      }
+  }'
+```
+
+| Proprietà | Descrizione |
+| --- | --- |
+| `auth.params.server` | Il nome o l&#39;IP del database [!DNL MySQL]. |
+| `auth.params.database` | Nome del database. |
+| `auth.params.username` | Il nome utente che corrisponde al database. |
+| `auth.params.password` | La password che corrisponde al database. |
+| `auth.params.sslMode` | Il metodo con cui i dati vengono crittografati durante il trasferimento. |
+| `connectionSpec.id` | ID della specifica di connessione [!DNL MySQL]: `26d738e0-8963-47ea-aadf-c60de735468a`. |
+
++++
+
+**Risposta**
+
+In caso di esito positivo, la risposta restituisce i dettagli della connessione di base appena creata, incluso il relativo identificatore univoco (`id`).
+
++++Visualizza esempio di risposta
+
+```json
+{
+    "id": "025d4158-4113-403b-b551-e81724d3880c",
+    "etag": "\"ae004437-0000-0200-0000-67ee107e0000\""
+}
+```
+
++++
+
+>[!ENDTABS]
+
+## Connetti [!DNL MySQL] ad Experience Platform su Amazon Web Services {#aws}
+
+>[!AVAILABILITY]
+>
+>Questa sezione si applica alle implementazioni di Experience Platform in esecuzione su Amazon Web Services (AWS). Experience Platform in esecuzione su AWS è attualmente disponibile per un numero limitato di clienti. Per ulteriori informazioni sull&#39;infrastruttura Experience Platform supportata, consulta la [Panoramica multi-cloud di Experience Platform](../../../../../landing/multi-cloud.md).
+
+Per informazioni su come collegare il tuo account [!DNL MySQL] ad Experience Platform su AWS, leggi i passaggi seguenti.
+
+### Crea una connessione di base per [!DNL MySQL] su Experience Platform su AWS {#aws-base}
 
 **Formato API**
 
@@ -56,52 +184,64 @@ POST /connections
 
 **Richiesta**
 
-La richiesta seguente crea una connessione di base per [!DNL MySQL]:
+La richiesta seguente crea una connessione di base per [!DNL MySQL] per connettersi ad Experience Platform su AWS.
+
+Esempio di richiesta +++View
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "[!DNL MySQL] Test Connection",
-        "description": "[!DNL MySQL] Test Connection",
-        "auth": {
-            "specName": "Connection String Based Authentication",
-            "params": {
-                "connectionString": "Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}"
-            }
-        },
-        "connectionSpec": {
-            "id": "26d738e0-8963-47ea-aadf-c60de735468a",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "MySQL on Experience Platform AWS",
+      "description": "MySQL on Experience Platform AWS",
+      "auth": {
+          "specName": "Basic Authentication",
+          "params": {
+              "server": "{SERVER}",
+              "database": "{DATABASE}",
+              "username": "{USERNAME}",
+              "password": "{PASSWORD}",
+              "sslMode": "{SSLMODE}"
+          }
+      },
+      "connectionSpec": {
+          "id": "26d738e0-8963-47ea-aadf-c60de735468a",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | Proprietà | Descrizione |
-| --------- | ----------- |
-| `auth.params.connectionString` | La stringa di connessione [!DNL MySQL] associata al tuo account. Schema della stringa di connessione [!DNL MySQL]: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+| --- | --- |
+| `auth.params.server` | Il nome o l&#39;IP del database [!DNL MySQL]. |
+| `auth.params.database` | Nome del database. |
+| `auth.params.username` | Il nome utente che corrisponde al database. |
+| `auth.params.password` | La password che corrisponde al database. |
+| `auth.params.sslMode` | Il metodo con cui i dati vengono crittografati durante il trasferimento. |
 | `connectionSpec.id` | ID della specifica di connessione [!DNL MySQL]: `26d738e0-8963-47ea-aadf-c60de735468a`. |
+
++++
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce i dettagli della connessione di base appena creata, incluso il relativo identificatore univoco (`id`). Questo ID è necessario per esplorare il database nell’esercitazione successiva.
+In caso di esito positivo, la risposta restituisce i dettagli della connessione di base appena creata, incluso il relativo identificatore univoco (`id`).
+
++++Visualizza esempio di risposta
 
 ```json
 {
-    "id": "1a444165-3439-4c16-8441-653439dc166a",
-    "etag": "\"5b04c219-0000-0200-0000-5e179c8f0000\""
+    "id": "f847950c-1c12-4568-a550-d5312b16fdb8",
+    "etag": "\"0c0099f4-0000-0200-0000-67da91710000\""
 }
 ```
 
-## Passaggi successivi
++++
 
-Seguendo questa esercitazione, hai creato una connessione di base [!DNL MySQL] utilizzando l&#39;API [!DNL Flow Service]. Puoi utilizzare questo ID connessione di base nelle seguenti esercitazioni:
+## Crea un flusso di dati per [!DNL MySQL] dati
 
-* [Esplora la struttura e il contenuto delle tabelle dati utilizzando l&#39;API  [!DNL Flow Service] ](../../explore/tabular.md)
-* [Crea un flusso di dati per portare i dati del database ad Experience Platform utilizzando l&#39;API  [!DNL Flow Service] ](../../collect/database-nosql.md)
-
+Dopo aver connesso correttamente il database [!DNL MySQL], è ora possibile [creare un flusso di dati e acquisire dati dal database in Experience Platform](../../collect/database-nosql.md).

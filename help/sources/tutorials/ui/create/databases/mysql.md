@@ -1,20 +1,17 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;mysql;MySQL
-solution: Experience Platform
-title: Creare una connessione Source MySQL nell’interfaccia utente
-type: Tutorial
-description: Scopri come creare una connessione sorgente MySQL utilizzando l’interfaccia utente di Adobe Experience Platform.
+title: Connettere MySQL Ad Experience Platform Utilizzando L’Interfaccia Utente
+description: Scopri come collegare il database MySQL ad Experience Platform utilizzando l’interfaccia utente.
 exl-id: 75e74bde-6199-4970-93d2-f95ec3a59aa5
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 659af23c6d05f184b745e13ab8545941f3892e7e
 workflow-type: tm+mt
-source-wordcount: '411'
-ht-degree: 2%
+source-wordcount: '540'
+ht-degree: 0%
 
 ---
 
 # Crea una connessione sorgente [!DNL MySQL] nell&#39;interfaccia utente
 
-I connettori Source in Adobe Experience Platform consentono di acquisire dati di origine esterna in base a una pianificazione. Questo tutorial illustra i passaggi per la creazione di una connessione di origine [!DNL MySQL] tramite l&#39;interfaccia utente di Adobe Experience Platform.
+Leggere questa guida per scoprire come collegare il database [!DNL MySQL] a Adobe Experience Platform utilizzando l&#39;area di lavoro origini nell&#39;interfaccia utente di Experience Platform.
 
 ## Introduzione
 
@@ -29,36 +26,62 @@ Se disponi già di una connessione [!DNL MySQL], puoi saltare il resto del docum
 
 ### Raccogli le credenziali richieste
 
-Per accedere al tuo account [!DNL MySQL] su [!DNL Experience Platform], devi fornire il seguente valore:
+Per informazioni sull&#39;autenticazione, leggere la [[!DNL MySQL] panoramica](../../../../connectors/databases/mysql.md#prerequisites).
 
-| Credenziali | Descrizione |
-| ---------- | ----------- |
-| `connectionString` | La stringa di connessione [!DNL MySQL] associata al tuo account. Schema della stringa di connessione [!DNL MySQL]: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. Per ulteriori informazioni sulle stringhe di connessione e su come ottenerle, leggere il [[!DNL MySQL] documento](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html). |
+## Navigare nel catalogo delle origini
 
-## Connetti il tuo account [!DNL MySQL]
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro *[!UICONTROL Origini]*. Scegliere una categoria o utilizzare la barra di ricerca per trovare l&#39;origine.
 
-Dopo aver raccolto le credenziali richieste, puoi seguire i passaggi seguenti per collegare l&#39;account [!DNL MySQL] a [!DNL Experience Platform].
+Per connettersi a [!DNL MySQL], passare alla categoria *[!UICONTROL Database]*, selezionare la scheda di origine **[!UICONTROL MySQL]**, quindi selezionare **[!UICONTROL Configurazione]**.
 
-Accedi a [Adobe Experience Platform](https://platform.adobe.com), quindi seleziona **[!UICONTROL Origini]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro **[!UICONTROL Origini]**. Nella schermata **[!UICONTROL Catalogo]** sono visualizzate diverse origini per le quali è possibile creare un account con.
+>[!TIP]
+>
+>Le origini nel catalogo delle origini visualizzano l&#39;opzione **[!UICONTROL Configura]** quando un&#39;origine specificata non dispone ancora di un account autenticato. Una volta creato un account autenticato, questa opzione diventa **[!UICONTROL Aggiungi dati]**.
 
-Nella categoria **[!UICONTROL Database]** selezionare **[!UICONTROL MySQL]**. Se è la prima volta che usi questo connettore, seleziona **[!UICONTROL Configura]**. In caso contrario, selezionare **[!UICONTROL Aggiungi dati]** per creare un nuovo connettore [!DNL MySQL].
+![Catalogo origini con la scheda di origine MySQL selezionata.](../../../../images/tutorials/create/my-sql/catalog.png)
 
-![](../../../../images/tutorials/create/my-sql/catalog.png)
+## Usa un account esistente {#existing}
 
-Viene visualizzata la pagina **[!UICONTROL Connetti a MySQL]**. In questa pagina è possibile utilizzare nuove credenziali o credenziali esistenti.
+Per utilizzare un account esistente, selezionare **[!UICONTROL Account esistente]**, quindi selezionare l&#39;account [!DNL MySQL] che si desidera utilizzare.
 
-### Nuovo account
+![Interfaccia account esistente nel flusso di lavoro di origine con &quot;Account esistente&quot; selezionato.](../../../../images/tutorials/create/my-sql/existing.png)
 
-Se utilizzi nuove credenziali, seleziona **[!UICONTROL Nuovo account]**. Nel modulo di input visualizzato, fornire un nome, una descrizione facoltativa e le credenziali [!DNL MySQL]. Al termine, selezionare **[!UICONTROL Connetti]** e quindi attendere un po&#39; di tempo per stabilire la nuova connessione.
+## Crea un nuovo account {#new}
 
-![](../../../../images/tutorials/create/my-sql/new.png)
+Per creare un nuovo account, seleziona **[!UICONTROL Nuovo account]**, quindi specifica un nome e, facoltativamente, aggiungi una descrizione per l&#39;account.
 
-### Account esistente
+![Nuova interfaccia account nel flusso di lavoro di origine con un nome account e una descrizione facoltativa forniti.](../../../../images/tutorials/create/my-sql/new.png)
 
-Per connettere un account esistente, seleziona l&#39;account [!DNL MySQL] con cui desideri connetterti, quindi seleziona **[!UICONTROL Avanti]** per continuare.
+### Connettersi ad Experience Platform in Azure {#azure}
 
-![](../../../../images/tutorials/create/my-sql/existing.png)
+È possibile connettere il database [!DNL MySQL] ad Experience Platform su Azure utilizzando la chiave account o l&#39;autenticazione di base.
 
-## Passaggi successivi
+>[!BEGINTABS]
 
-Seguendo questa esercitazione, è stata stabilita una connessione all&#39;account MySQL. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per inserire dati in [!DNL Experience Platform]](../../dataflow/databases.md).
+>[!TAB Autenticazione chiave account]
+
+Per utilizzare l&#39;autenticazione della chiave dell&#39;account, selezionare **[!UICONTROL Autenticazione della chiave dell&#39;account]**, specificare la [stringa di connessione](../../../../connectors/databases/mysql.md#azure), quindi selezionare **[!UICONTROL Connetti all&#39;origine]**.
+
+![La nuova interfaccia account nel flusso di lavoro origini con &quot;Autenticazione chiave account&quot; selezionata.](../../../../images/tutorials/create/my-sql/account-key.png)
+
+>[!TAB Autenticazione di base]
+
+Per utilizzare l&#39;autenticazione di base, selezionare **[!UICONTROL Autenticazione di base]**, fornire i valori per le [credenziali di autenticazione](../../../../connectors/databases/mysql.md#azure), quindi selezionare **[!UICONTROL Connetti all&#39;origine]**.
+
+![La nuova interfaccia account nel flusso di lavoro origini con &quot;Autenticazione di base&quot; selezionata.](../../../../images/tutorials/create/my-sql/basic-auth.png)
+
+>[!ENDTABS]
+
+### Connettersi ad Experience Platform su Amazon Web Services (AWS) {#aws}
+
+>[!AVAILABILITY]
+>
+>Questa sezione si applica alle implementazioni di Experience Platform in esecuzione su Amazon Web Services (AWS). Experience Platform in esecuzione su AWS è attualmente disponibile per un numero limitato di clienti. Per ulteriori informazioni sull&#39;infrastruttura Experience Platform supportata, consulta la [Panoramica multi-cloud di Experience Platform](../../../../../landing/multi-cloud.md).
+
+Per creare un nuovo account [!DNL MySQL] e connettersi ad Experience Platform su AWS, verificare di essere in una sandbox VA6 e quindi fornire le [credenziali necessarie per l&#39;autenticazione](../../../../connectors/databases/mysql.md#aws).
+
+![La nuova interfaccia account nel flusso di lavoro origini per la connessione ad AWS.](../../../../images/tutorials/create/my-sql/aws.png)
+
+## Crea un flusso di dati per [!DNL MySQL] dati
+
+Dopo aver connesso correttamente il database [!DNL MySQL], è ora possibile [creare un flusso di dati e acquisire dati dal database in Experience Platform](../../dataflow/databases.md).
