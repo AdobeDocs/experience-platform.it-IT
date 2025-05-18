@@ -3,16 +3,16 @@ title: Panoramica di MySQL Source Connector
 description: Scopri come connettere MySQL a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 last-substantial-update: 2025-05-17T00:00:00Z
 exl-id: a18e8e69-880f-4bee-b339-726091d6f858
-source-git-commit: 7a5dae76c5b58b302b4f3295efc17f40dbb9b18b
+source-git-commit: f758479c37b72752bbb8a371de88bf653b2e6030
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '714'
 ht-degree: 0%
 
 ---
 
 # [!DNL MySQL]
 
-[!DNL MySQL] è un sistema di gestione di database relazionali open source utilizzato per archiviare e gestire dati strutturati. Organizza i dati in tabelle e utilizza SQL (Structured Query Language) per eseguire query e aggiornare le informazioni. [!DNL MySQL] è ampiamente utilizzato nelle applicazioni Web, supporta più piattaforme ed è noto per la velocità, l&#39;affidabilità e la facilità d&#39;uso. È ideale per qualsiasi tipo di attività, dai siti Web di piccole dimensioni ai sistemi aziendali su larga scala.
+[!DNL MySQL] è un sistema di gestione di database relazionali open source utilizzato per archiviare e gestire dati strutturati. Organizza i dati in tabelle e utilizza SQL (Structured Query Language) per eseguire query e aggiornare le informazioni. [!DNL MySQL] è ampiamente utilizzato nelle applicazioni Web, supporta più piattaforme ed è noto per la velocità, l&#39;affidabilità e la facilità d&#39;uso.
 
 È possibile utilizzare l&#39;origine [!DNL MySQL] per connettere l&#39;account e acquisire i dati dal database [!DNL MySQL] a Adobe Experience Platform.
 
@@ -48,12 +48,29 @@ Specificare i valori per le credenziali seguenti per connettere il database [!DN
 | Credenziali | Descrizione |
 | --- | --- |
 | `server` | Il nome o l&#39;indirizzo IP del database [!DNL MySQL]. |
-| `database` | Nome del database [!DNL MySQL] a cui si desidera connettersi. |
 | `username` | Il nome utente associato all&#39;autenticazione del database [!DNL MySQL]. |
 | `password` | La password associata all&#39;autenticazione del database [!DNL MySQL]. |
+| `database` | Nome del database [!DNL MySQL] a cui si desidera connettersi. |
 | `sslMode` | Il metodo [!DNL Secure Sockets Layer] (SSL) da applicare alla connessione. I valori disponibili sono: <ul><li>`DISABLED`: utilizzare questa opzione per disabilitare SSL. Se il server richiede una configurazione SSL, la connessione non riuscirà</li><li>`PREFERRED`: utilizzare questa opzione per preferire le connessioni SSL, dato che il server le supporta. Questa opzione consente anche le connessioni non SSL.</li><li>`REQUIRED`: utilizzare questa opzione per rendere obbligatorie le connessioni SSL. Se il server non supporta SSL, le connessioni non riusciranno.</li><li>`Verify-Ca`: utilizzare questa opzione per verificare i certificati del server quando le connessioni non riescono se il server non supporta SSL.</li><li>`Verify Identity`: utilizzare questa opzione per verificare i certificati del server con il nome dell&#39;host durante l&#39;interruzione delle connessioni se il server non supporta SSL.</li></ul> |
 
 >[!ENDTABS]
+
+### Autenticazione per Experience Platform su Amazon Web Services (AWS) {#aws}
+
+>[!AVAILABILITY]
+>
+>Questa sezione si applica alle implementazioni di Experience Platform in esecuzione su Amazon Web Services (AWS). Experience Platform in esecuzione su AWS è attualmente disponibile per un numero limitato di clienti. Per ulteriori informazioni sull&#39;infrastruttura Experience Platform supportata, consulta la [Panoramica multi-cloud di Experience Platform](../../../landing/multi-cloud.md).
+
+Per connettere [!DNL MySQL] ad Experience Platform su AWS è necessario fornire i valori per le credenziali seguenti.
+
+| Credenziali | Descrizione |
+| --- | --- |
+| `server` | Il nome o l&#39;IP del database [!DNL MySQL]. |
+| `username` | Nome del database. |
+| `password` | Il nome utente che corrisponde al database. |
+| `database` | La password che corrisponde al database. |
+| `sslMode` | Il metodo [!DNL Secure Sockets Layer] (SSL) da applicare alla connessione. I valori disponibili sono: <ul><li>`DISABLED`: utilizzare questa opzione per disabilitare SSL. Se il server richiede una configurazione SSL, la connessione non riuscirà</li><li>`PREFERRED`: utilizzare questa opzione per preferire le connessioni SSL, dato che il server le supporta. Questa opzione consente anche le connessioni non SSL.</li><li>`REQUIRED`: utilizzare questa opzione per rendere obbligatorie le connessioni SSL. Se il server non supporta SSL, le connessioni non riusciranno.</li><li>`Verify-Ca`: utilizzare questa opzione per verificare i certificati del server quando le connessioni non riescono se il server non supporta SSL.</li><li>`Verify Identity`: utilizzare questa opzione per verificare i certificati del server con il nome dell&#39;host durante l&#39;interruzione delle connessioni se il server non supporta SSL.</li></ul> |
+| `connectionSpec.id` | La specifica di connessione restituisce le proprietà del connettore di un&#39;origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di origine. L&#39;ID della specifica di connessione per [!DNL MySQL] è `26d738e0-8963-47ea-aadf-c60de735468a`. **Nota**: queste credenziali sono necessarie solo per la connessione tramite l&#39;API [!DNL Flow Service]. |
 
 ## Connetti [!DNL MySQL] ad Experience Platform tramite API
 
