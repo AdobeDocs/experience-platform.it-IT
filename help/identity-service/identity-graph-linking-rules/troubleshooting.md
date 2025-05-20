@@ -401,6 +401,6 @@ In generale, il test su una sandbox di sviluppo dovrebbe simulare i casi d’uso
 
 ### Come posso verificare che questa funzione funzioni come previsto?
 
-Utilizza lo strumento di simulazione del grafico [](./graph-simulation.md) per verificare che la funzione funzioni a un singolo livello di grafico.
+Utilizza lo strumento di simulazione del grafico [&#128279;](./graph-simulation.md) per verificare che la funzione funzioni a un singolo livello di grafico.
 
 Per convalidare la funzionalità a livello di sandbox, fai riferimento alla sezione [!UICONTROL Conteggio dei grafici con più spazi dei nomi] nel dashboard delle identità.
