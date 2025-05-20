@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida alle credenziali di Query Service
 description: Adobe Experience Platform Query Service fornisce un’interfaccia utente che può essere utilizzata per scrivere ed eseguire query, visualizzare le query eseguite in precedenza e accedere a quelle salvate dagli utenti della tua organizzazione.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: c8c04d79584093c8d13ffa205849e78ab04c0fc1
+source-git-commit: 264d3b12d8fd3bd100018513af1576b3de1cbb33
 workflow-type: tm+mt
-source-wordcount: '1885'
+source-wordcount: '1955'
 ht-degree: 5%
 
 ---
@@ -46,11 +46,11 @@ La sezione **[!UICONTROL Credenziali in scadenza]** fornisce le seguenti informa
 >
 >![Scheda Impostazioni di Admin Console con Privacy e sicurezza, Impostazioni autenticazione e Durata massima sessione evidenziate.](../images/ui/credentials/max-session-life.png)
 >
->Per ulteriori informazioni sulle [Impostazioni avanzate](https://helpx.adobe.com/it/enterprise/using/authentication-settings.html#advanced-settings) offerte da Admin Console, consulta la Guida di Adobe.
+>Per ulteriori informazioni sulle [Impostazioni avanzate](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) offerte da Admin Console, consulta la Guida di Adobe.
 
 ### Connettersi ai dati Customer Journey Analytics nelle sessioni di query {#connect-to-customer-journey-analytics}
 
-Utilizza l&#39;estensione Customer Journey Analytics BI con Power BI o Tableau per accedere alle [visualizzazioni dati](https://experienceleague.adobe.com/it/docs/analytics-platform/using/cja-dataviews/data-views) di Customer Journey Analytics con SQL. Integrando Query Service con l’estensione BI, puoi accedere alle visualizzazioni dati direttamente all’interno delle sessioni di Query Service. Questa integrazione semplifica le funzionalità degli strumenti BI che utilizzano Query Service come interfaccia PostgreSQL. Questa funzionalità elimina la necessità di duplicare le visualizzazioni dati negli strumenti di business intelligence, garantisce la coerenza dei rapporti tra le piattaforme e semplifica l&#39;integrazione dei dati Customer Journey Analytics con altre origini nelle piattaforme di business intelligence.
+Utilizza l&#39;estensione Customer Journey Analytics BI con Power BI o Tableau per accedere alle [visualizzazioni dati](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/data-views) di Customer Journey Analytics con SQL. Integrando Query Service con l’estensione BI, puoi accedere alle visualizzazioni dati direttamente all’interno delle sessioni di Query Service. Questa integrazione semplifica le funzionalità degli strumenti BI che utilizzano Query Service come interfaccia PostgreSQL. Questa funzionalità elimina la necessità di duplicare le visualizzazioni dati negli strumenti di business intelligence, garantisce la coerenza dei rapporti tra le piattaforme e semplifica l&#39;integrazione dei dati Customer Journey Analytics con altre origini nelle piattaforme di business intelligence.
 
 Consulta la documentazione per scoprire come [connettere Query Service a diverse applicazioni client desktop](../clients/overview.md), ad esempio [Power BI](../clients/power-bi.md) o [Tableau](../clients/tableau.md)
 
@@ -68,7 +68,7 @@ Per accedere ai dati di Customer Journey Analytics in Power BI o Tableau, selezi
 
 Puoi anche accedere ai dati Customer Journey Analytics direttamente da Query Editor o Postgres CLI. A tale scopo, fare riferimento al database `cja` durante la scrittura della query. Per ulteriori informazioni su come scrivere, eseguire e salvare le query, vedere la [guida all&#39;authoring delle query](./user-guide.md#query-authoring) di Query Editor.
 
-Per istruzioni complete sull&#39;accesso alle visualizzazioni dati di Customer Journey Analytics con SQL, consulta la [BI extension guide](https://experienceleague.adobe.com/it/docs/analytics-platform/using/cja-dataviews/bi-extension).
+Per istruzioni complete sull&#39;accesso alle visualizzazioni dati di Customer Journey Analytics con SQL, consulta la [BI extension guide](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension).
 
 ## Credenziali senza scadenza {#non-expiring-credentials}
 
@@ -146,6 +146,18 @@ Quando si modifica una credenziale senza scadenza, viene visualizzata una finest
 ![Finestra di dialogo Aggiorna account.](../images/ui/credentials/update-credentials.png)
 
 Dopo aver fornito tutti i dettagli richiesti, seleziona **[!UICONTROL Aggiorna account]** per completare l&#39;aggiornamento delle credenziali.
+
+### Migrare le credenziali a OAuth {#migrate-credentials}
+
+Se utilizzi credenziali JWT senza scadenza, è necessario migrare ciascuna di esse a OAuth Server-to-Server prima del 30 giugno 2025 per evitare interruzioni del servizio.
+
+>[!IMPORTANT]
+>
+>Le credenziali JWT cesseranno di funzionare dopo il 30 giugno 2025. Devi completare manualmente questa migrazione per mantenere l’autorizzazione.
+
+Per informazioni su come identificare le credenziali interessate e completare la migrazione, consulta la [guida alla migrazione da JWT a OAuth Server-to-Server credentials](./migrate-jwt-to-oauth.md) (Migrazione da JWT a OAuth Server-to-Server credentials guide).
+
+Per domande frequenti, consulta [Domande frequenti sulla migrazione](./migrate-jwt-to-oauth.md#faq).
 
 ## Utilizzare le credenziali per connettersi ai client esterni {#use-credential-to-connect}
 
