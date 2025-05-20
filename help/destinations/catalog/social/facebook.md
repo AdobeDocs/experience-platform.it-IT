@@ -3,9 +3,9 @@ keywords: connessione facebook;facebook connection;facebook destinations;faceboo
 title: Connessione Facebook
 description: Attiva profili per le campagne Facebook per il targeting, la personalizzazione e l’eliminazione del pubblico in base alle e-mail con hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: a2420f86e650ce1ca8a5dc01d9a29548663d3f7c
 workflow-type: tm+mt
-source-wordcount: '2091'
+source-wordcount: '2137'
 ht-degree: 6%
 
 ---
@@ -142,7 +142,7 @@ Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;ese
 
 Il video seguente illustra inoltre i passaggi per configurare una destinazione [!DNL Facebook] e attivare i tipi di pubblico.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411786/?quality=12&learn=on&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
@@ -157,7 +157,15 @@ Il video seguente illustra inoltre i passaggi per configurare una destinazione [
 
 ### Aggiorna credenziali di autenticazione {#refresh-authentication-credentials}
 
-I token di Facebook scadono ogni 60 giorni. Una volta scaduto il token, l’esportazione dei dati nella destinazione smette di funzionare. Per evitare questa situazione, eseguire nuovamente l&#39;autenticazione eseguendo le operazioni seguenti:
+I token di autenticazione di Facebook scadono ogni 60 giorni. Una volta scaduto il token, l’esportazione dei dati nella destinazione smette di funzionare.
+
+Puoi monitorare le date di scadenza del token dalla colonna **[!UICONTROL Data di scadenza account]** nelle schede **[!UICONTROL Account]** o **[!UICONTROL Sfoglia]**.
+
+![Colonna data di scadenza token account Facebook nella scheda Sfoglia](../../assets/catalog/social/facebook/account-expiration-browse.png)
+
+![Colonna data di scadenza token account Facebook nella scheda Account](../../assets/catalog/social/facebook/account-expiration-accounts.png)
+
+Per evitare che la scadenza dei token causi interruzioni nei flussi di dati di attivazione, esegui di nuovo l’autenticazione eseguendo i passaggi seguenti:
 
 1. Passa a **[!UICONTROL Destinazioni]** > **[!UICONTROL Account]**
 2. (Facoltativo) Utilizza i filtri disponibili nella pagina per visualizzare solo gli account Facebook.
