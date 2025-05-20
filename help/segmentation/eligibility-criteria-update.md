@@ -4,53 +4,87 @@ description: Scopri gli aggiornamenti dei criteri di idoneità alla segmentazion
 hide: true
 hidefromtoc: true
 exl-id: c91c0f75-9bc8-4fa7-9d27-9b07d0ea560c
-source-git-commit: e6deed1fe52a0a852f521100171323f0de23295b
+source-git-commit: eafb7337edacc5d2b2aa9c38540aff946c8d39c0
 workflow-type: tm+mt
-source-wordcount: '371'
-ht-degree: 0%
+source-wordcount: '582'
+ht-degree: 3%
 
 ---
 
 # Aggiornamento dei criteri di idoneità alla segmentazione
 
-A partire dal 23 maggio 2025, verranno effettuati due aggiornamenti che influiscono sull’idoneità alla segmentazione.
+>[!IMPORTANT]
+>
+>Tutte le definizioni di segmenti esistenti attualmente valutate utilizzando lo streaming o la segmentazione Edge continueranno a funzionare così come sono, a meno che non vengano modificate o aggiornate.
 
-1. Tipi di query di segmentazione in streaming e edge
-2. Criteri di unione per lo streaming e la segmentazione Edge
+A partire dal 20 maggio 2025, verranno effettuati tre aggiornamenti che influiscono sull’idoneità alla segmentazione.
 
-## Tipi di query
+1. Set di regole idoneo
+2. Idoneità all’intervallo temporale
+3. Inclusione di dati batch nei tipi di pubblico in streaming
+4. Criteri di unione attivi
 
-Qualsiasi definizione di segmento **nuova o modificata** che corrisponde ai seguenti tipi di query **non sarà più** valutata mediante streaming o segmentazione Edge. Verranno invece valutati utilizzando la segmentazione batch.
+## Set di regole {#ruleset}
+
+Qualsiasi definizione di segmento **nuova o modificata** che corrisponde ai seguenti set di regole **non sarà più** valutata mediante streaming o segmentazione Edge. Verranno invece valutati utilizzando la segmentazione batch.
 
 - Un singolo evento con una finestra temporale più lunga di 24 ore
    - Attiva un pubblico con tutti i profili che hanno visualizzato una pagina web negli ultimi 3 giorni.
 - Un singolo evento senza finestra temporale
    - Attiva un pubblico con tutti i profili che hanno visualizzato una pagina web.
 
-Se devi valutare una definizione di segmento utilizzando lo streaming o la segmentazione Edge che corrisponde al tipo di query aggiornato, puoi creare esplicitamente un batch e una query in streaming e combinarli utilizzando un segmento di segmenti.
+## Finestra temporale {#time-window}
 
-Ad esempio, se devi attivare un pubblico con tutti i profili che hanno visualizzato una pagina web negli ultimi 3 giorni utilizzando la segmentazione in streaming, puoi creare le seguenti query:
+Per valutare un pubblico con segmentazione in streaming, **deve** essere vincolato entro un intervallo di tempo di 24 ore.
 
-- Q1 (Streaming): tutti i profili che hanno visualizzato una pagina web nelle ultime 24 ore
-- Q2 (Batch): tutti i profili che hanno visualizzato una pagina web negli ultimi 3 giorni
+## Inclusione di dati batch nei tipi di pubblico in streaming {#include-batch-data}
 
-Poi, si possono combinare facendo riferimento al primo o al secondo trimestre.
+Prima di questo aggiornamento, era possibile creare una definizione di pubblico in streaming che combinasse origini dati in batch e in streaming. Tuttavia, con l’ultimo aggiornamento, la creazione di un pubblico con origini di dati in batch e in streaming verrà valutata utilizzando la segmentazione batch.
 
-Allo stesso modo, se devi attivare un pubblico con tutti i profili che hanno visualizzato una pagina web, puoi creare le seguenti query:
+Se devi valutare una definizione di segmento utilizzando la segmentazione in streaming o Edge che corrisponde al set di regole aggiornato, devi creare esplicitamente un batch e un set di regole in streaming e combinarli utilizzando un segmento di segmenti. Il set di regole batch **deve** essere basato su uno schema di profilo.
 
-- Q3 (Streaming): tutti i profili che hanno visualizzato una pagina web nelle ultime 24 ore
-- Q4 (Batch): tutti i profili che hanno visualizzato una pagina web.
+Ad esempio, supponiamo che tu abbia due tipi di pubblico, con un pubblico che ospita i dati dello schema del profilo e gli altri dati dello schema dell’evento dell’esperienza di alloggio:
 
-In seguito, è possibile combinarle facendo riferimento al terzo o al quarto trimestre.
+| Pubblico | Schema | Tipo di Source | Definizione query | ID pubblico |
+| -------- | ------ | ----------- | ---------------- | ----------- |
+| Residenti in California | Profilo | Batch | L&#39;indirizzo dell&#39;abitazione è nello stato della California | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
+| Pagamenti recenti | Evento esperienza | Streaming | Ha almeno un pagamento nelle ultime 24 ore | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
+
+Se desideri utilizzare il componente batch nel pubblico in streaming, devi fare riferimento al pubblico batch utilizzando un segmento di segmenti.
+
+Quindi, un set di regole di esempio che combinasse i due tipi di pubblico si presenterebbe come segue:
+
+```
+inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and 
+CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) 
+WHEN(<= 24 hours before now)])
+```
+
+Il pubblico risultante *sarà* valutato utilizzando la segmentazione in streaming, poiché sfrutta l&#39;appartenenza del pubblico batch facendo riferimento al componente pubblico batch.
+
+Tuttavia, se desideri combinare due tipi di pubblico con i dati dell&#39;evento, **non è possibile** semplicemente combinare i due eventi. È necessario creare entrambi i tipi di pubblico, quindi creare un altro pubblico che utilizza `inSegment` per fare riferimento a entrambi.
+
+Ad esempio, supponiamo che tu abbia due tipi di pubblico, entrambi contenenti i dati dello schema dell’evento esperienza:
+
+| Pubblico | Schema | Tipo di Source | Definizione query | ID pubblico |
+| -------- | ------ | ----------- | ---------------- | ----------- |
+| Abbandoni recenti | Evento esperienza | Batch | Ha almeno un evento di abbandono nelle ultime 24 ore | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
+| Pagamenti recenti | Evento esperienza | Streaming | Ha almeno un pagamento nelle ultime 24 ore | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
+
+In questa situazione, devi creare un terzo pubblico come segue:
+
+```
+inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and inSegment("9e1646bb-57ff-4309-ba59-17d6c5bab6a1")
+```
 
 >[!IMPORTANT]
 >
->Tutte le definizioni di segmenti esistenti che corrispondono ai tipi di query rimarranno valutate utilizzando lo streaming o la segmentazione Edge fino a quando non verranno modificate.
+>Tutte le definizioni di segmenti esistenti che corrispondono ai set di regole rimarranno valutate utilizzando lo streaming o la segmentazione Edge fino a quando non verranno modificate.
 >
 >Inoltre, tutte le definizioni di segmenti esistenti che attualmente soddisfano gli altri criteri di valutazione della segmentazione in streaming o Edge rimarranno valutate con la segmentazione in streaming o Edge.
 
-## Criterio di unione
+## Criterio di unione {#merge-policy}
 
 Qualsiasi definizione di segmento **nuova o modificata** idonea per lo streaming o la segmentazione Edge **deve** essere nel criterio di unione &quot;Attivo su Edge&quot;.
 
-Tutte le definizioni di segmenti esistenti valutate utilizzando lo streaming o la segmentazione Edge continueranno a funzionare così come sono.
+Se non è impostato alcun criterio di unione attivo, è necessario [configurare il criterio di unione](../profile/merge-policies/ui-guide.md#configure) e impostarlo per essere attivo sul server Edge.

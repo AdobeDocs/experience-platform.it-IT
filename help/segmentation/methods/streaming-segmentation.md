@@ -3,22 +3,108 @@ solution: Experience Platform
 title: Guida alla segmentazione in streaming
 description: Scopri la segmentazione in streaming, compresi cosa è, come creare un pubblico valutato utilizzando la segmentazione in streaming e come visualizzare i tipi di pubblico creati utilizzando la segmentazione in streaming.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: cd22213be0dbc2e5a076927e560f1b23b467b306
 workflow-type: tm+mt
-source-wordcount: '1256'
-ht-degree: 1%
+source-wordcount: '2013'
+ht-degree: 2%
 
 ---
 
 # Guida alla segmentazione in streaming
 
+>[!BEGINSHADEBOX]
+
+>[!NOTE]
+>
+>I criteri di idoneità per la segmentazione in streaming sono stati aggiornati il 20 maggio 2025.
+
++++Aggiornamenti di idoneità
+
+>[!IMPORTANT]
+>
+>Tutte le definizioni di segmenti esistenti attualmente valutate utilizzando lo streaming o la segmentazione Edge continueranno a funzionare così come sono, a meno che non vengano modificate o aggiornate.
+
+## Set di regole {#ruleset}
+
+Qualsiasi definizione di segmento **nuova o modificata** che corrisponde ai seguenti set di regole **non sarà più** valutata mediante streaming o segmentazione Edge. Verranno invece valutati utilizzando la segmentazione batch.
+
+- Un singolo evento con una finestra temporale più lunga di 24 ore
+   - Attiva un pubblico con tutti i profili che hanno visualizzato una pagina web negli ultimi 3 giorni.
+- Un singolo evento senza finestra temporale
+   - Attiva un pubblico con tutti i profili che hanno visualizzato una pagina web.
+
+## Finestra temporale {#time-window}
+
+Per valutare un pubblico con segmentazione in streaming, **deve** essere vincolato entro un intervallo di tempo di 24 ore.
+
+## Inclusione di dati batch nei tipi di pubblico in streaming {#include-batch-data}
+
+Prima di questo aggiornamento, era possibile creare una definizione di pubblico in streaming che combinasse origini dati in batch e in streaming. Tuttavia, con l’ultimo aggiornamento, la creazione di un pubblico con origini di dati in batch e in streaming verrà valutata utilizzando la segmentazione batch.
+
+Se devi valutare una definizione di segmento utilizzando la segmentazione in streaming o Edge che corrisponde al set di regole aggiornato, devi creare esplicitamente un batch e un set di regole in streaming e combinarli utilizzando un segmento di segmenti. Il set di regole batch **deve** essere basato su uno schema di profilo.
+
+Ad esempio, supponiamo che tu abbia due tipi di pubblico, con un pubblico che ospita i dati dello schema del profilo e gli altri dati dello schema dell’evento dell’esperienza di alloggio:
+
+| Pubblico | Schema | Tipo di Source | Definizione query | ID pubblico |
+| -------- | ------ | ----------- | ---------------- | ----------- |
+| Residenti in California | Profilo | Batch | L&#39;indirizzo dell&#39;abitazione è nello stato della California | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
+| Pagamenti recenti | Evento esperienza | Streaming | Ha almeno un pagamento nelle ultime 24 ore | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
+
+Se desideri utilizzare il componente batch nel pubblico in streaming, devi fare riferimento al pubblico batch utilizzando un segmento di segmenti.
+
+Quindi, un set di regole di esempio che combinasse i due tipi di pubblico si presenterebbe come segue:
+
+```
+inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and 
+CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) 
+WHEN(<= 24 hours before now)])
+```
+
+Il pubblico risultante *sarà* valutato utilizzando la segmentazione in streaming, poiché sfrutta l&#39;appartenenza del pubblico batch facendo riferimento al componente pubblico batch.
+
+Tuttavia, se desideri combinare due tipi di pubblico con i dati dell&#39;evento, **non è possibile** semplicemente combinare i due eventi. È necessario creare entrambi i tipi di pubblico, quindi creare un altro pubblico che utilizza `inSegment` per fare riferimento a entrambi.
+
+Ad esempio, supponiamo che tu abbia due tipi di pubblico, entrambi contenenti i dati dello schema dell’evento esperienza:
+
+| Pubblico | Schema | Tipo di Source | Definizione query | ID pubblico |
+| -------- | ------ | ----------- | ---------------- | ----------- |
+| Abbandoni recenti | Evento esperienza | Batch | Ha almeno un evento di abbandono nelle ultime 24 ore | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
+| Pagamenti recenti | Evento esperienza | Streaming | Ha almeno un pagamento nelle ultime 24 ore | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
+
+In questa situazione, devi creare un terzo pubblico come segue:
+
+```
+inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and inSegment("9e1646bb-57ff-4309-ba59-17d6c5bab6a1")
+```
+
+>[!IMPORTANT]
+>
+>Tutte le definizioni di segmenti esistenti che corrispondono ai set di regole rimarranno valutate utilizzando lo streaming o la segmentazione Edge fino a quando non verranno modificate.
+>
+>Inoltre, tutte le definizioni di segmenti esistenti che attualmente soddisfano gli altri criteri di valutazione della segmentazione in streaming o Edge rimarranno valutate con la segmentazione in streaming o Edge.
+
+## Criterio di unione {#merge-policy}
+
+Qualsiasi definizione di segmento **nuova o modificata** idonea per lo streaming o la segmentazione Edge **deve** essere nel criterio di unione &quot;Attivo su Edge&quot;.
+
+Se non è impostato alcun criterio di unione attivo, è necessario [configurare il criterio di unione](../../profile/merge-policies/ui-guide.md#configure) e impostarlo per essere attivo sul server Edge.
+
+
++++
+
+>[!ENDSHADEBOX]
+
 La segmentazione in streaming è la capacità di valutare i tipi di pubblico in Adobe Experience Platform in tempo quasi reale concentrandosi sulla ricchezza dei dati.
 
 Con la segmentazione in streaming, la qualificazione del pubblico ora avviene quando i dati in streaming arrivano in Experience Platform, alleviando la necessità di pianificare ed eseguire processi di segmentazione. Questo consente di valutare i dati trasmessi in Experience Platform, e di mantenere automaticamente aggiornata l’iscrizione al pubblico.
 
-## Tipi di query idonei {#query-types}
+## Set di regole idonei {#rulesets}
 
-Una query è idonea alla segmentazione in streaming se soddisfa uno dei criteri descritti nella tabella seguente.
+>[!IMPORTANT]
+>
+>Per utilizzare la segmentazione in streaming, **devi** utilizzare un criterio di unione &quot;Attivo su Edge&quot;. Per ulteriori informazioni sui criteri di unione, leggere la [panoramica dei criteri di unione](../../profile/merge-policies/overview.md).
+
+Un set di regole è idoneo per la segmentazione in streaming se soddisfa uno dei criteri descritti nella tabella seguente.
 
 >[!NOTE]
 >
@@ -29,33 +115,70 @@ Una query è idonea alla segmentazione in streaming se soddisfa uno dei criteri 
 | Singolo evento entro un intervallo di tempo inferiore a 24 ore | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo entro un intervallo di tempo inferiore a 24 ore. | `CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![Viene visualizzato un esempio di un singolo evento all&#39;interno di un intervallo di tempo relativo.](../images/methods/streaming/single-event.png) |
 | Solo profilo | Qualsiasi definizione di segmento che fa riferimento solo a un attributo di profilo. | `homeAddress.country.equals("US", false)` | ![Viene visualizzato un esempio di un attributo di profilo.](../images/methods/streaming/profile-attribute.png) |
 | Singolo evento con un attributo di profilo entro un intervallo di tempo relativo inferiore a 24 ore | Qualsiasi definizione di segmento che si riferisce a un singolo evento in arrivo, con uno o più attributi di profilo, e si verifica entro un intervallo di tempo relativo inferiore a 24 ore. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![Viene visualizzato un esempio di un singolo evento con un attributo di profilo all&#39;interno di un intervallo di tempo relativo.](../images/methods/streaming/single-event-with-profile-attribute.png) |
-| Segmento di segmenti | Qualsiasi definizione di segmento che contiene uno o più segmenti batch o in streaming. **Nota:** se si utilizza un segmento di segmenti, l&#39;annullamento del profilo avverrà **ogni 24 ore**. | `inSegment("a730ed3f-119c-415b-a4ac-27c396ae2dff") and inSegment("8fbbe169-2da6-4c9d-a332-b6a6ecf559b9")` | ![Viene visualizzato un esempio di segmento di segmenti.](../images/methods/streaming/segment-of-segments.png) |
-| Più eventi con un attributo di profilo | Qualsiasi definizione di segmento che fa riferimento a più eventi **nelle ultime 24 ore** e (facoltativamente) ha uno o più attributi di profilo. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("directMarketing.emailClicked", false)) WHEN(today), C1: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![Viene visualizzato un esempio di più eventi con un attributo di profilo.](../images/methods/streaming/multiple-events-with-profile-attribute.png) |
+| Più eventi entro un intervallo di tempo relativo di 24 ore | Qualsiasi definizione di segmento che fa riferimento a più eventi **nelle ultime 24 ore** e (facoltativamente) ha uno o più attributi di profilo. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("directMarketing.emailClicked", false)) WHEN(today), C1: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![Viene visualizzato un esempio di più eventi con un attributo di profilo.](../images/methods/streaming/multiple-events-with-profile-attribute.png) |
 
 Una definizione di segmento **non** sarà idonea per la segmentazione in streaming nei seguenti scenari:
 
 - La definizione del segmento include segmenti o caratteristiche di Adobe Audience Manager (AAM).
 - La definizione del segmento include più entità (query con più entità).
 - La definizione del segmento include una combinazione di un singolo evento e un evento `inSegment`.
-   - Tuttavia, se la definizione del segmento contenuta nell&#39;evento `inSegment` è solo di profilo, la definizione del segmento **sarà** abilitata per la segmentazione in streaming.
+   - Ad esempio, concatenando quanto segue in un singolo set di regole: `inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and  CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false))  WHEN(<= 24 hours before now)])`.
 - La definizione del segmento utilizza &quot;Ignora anno&quot; come parte dei vincoli di tempo.
 
 Tieni presente le seguenti linee guida applicabili alle query di segmentazione in streaming:
 
 | Tipo di query | Linea guida |
 | ---------- | -------- |
-| Query evento singolo | Non ci sono limiti all’intervallo di lookback. |
+| Set di regole per evento singolo | L&#39;intervallo di lookback è limitato a **un giorno**. |
 | Query con cronologia eventi | <ul><li>L&#39;intervallo di lookback è limitato a **un giorno**.</li><li>Tra gli eventi è presente una condizione di ordinamento temporale **must**.</li><li>Sono supportate le query con almeno un evento negato. L&#39;intero evento **non può** essere una negazione.</li></ul> |
 
 Se una definizione di segmento viene modificata in modo da non soddisfare più i criteri per la segmentazione in streaming, la definizione del segmento passerà automaticamente da &quot;Streaming&quot; a &quot;Batch&quot;.
 
 Inoltre, l’annullamento del riconoscimento del segmento, in modo simile alla qualificazione del segmento, avviene in tempo reale. Di conseguenza, se un pubblico non è più idoneo per un segmento, non sarà immediatamente qualificato. Ad esempio, se la definizione del segmento richiede &quot;Tutti gli utenti che hanno acquistato scarpe rosse nelle ultime tre ore&quot;, dopo tre ore tutti i profili che si sono inizialmente qualificati per la definizione del segmento non saranno qualificati.
 
+### Combinare tipi di pubblico {#combine-audiences}
+
+Per combinare i dati provenienti sia da origini batch che da origini in streaming, è necessario separare i componenti batch e in streaming in tipi di pubblico separati.
+
+Ad esempio, prendiamo in considerazione i due tipi di pubblico di esempio seguenti:
+
+| Pubblico | Schema | Tipo di Source | Definizione query | ID pubblico |
+| -------- | ------ | ----------- | ---------------- | ----------- |
+| Residenti in California | Profilo | Batch | L&#39;indirizzo dell&#39;abitazione è nello stato della California | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
+| Pagamenti recenti | Evento esperienza | Streaming | Ha almeno un pagamento nelle ultime 24 ore | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
+
+Se desideri utilizzare il componente batch nel pubblico in streaming, devi fare riferimento al pubblico batch utilizzando un segmento di segmenti.
+
+Quindi, un set di regole di esempio che combinasse i due tipi di pubblico si presenterebbe come segue:
+
+```
+inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and 
+CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) 
+WHEN(<= 24 hours before now)])
+```
+
+Il pubblico risultante *sarà* valutato utilizzando la segmentazione in streaming, poiché sfrutta l&#39;appartenenza del pubblico batch facendo riferimento al componente pubblico batch.
+
+Tuttavia, se desideri combinare due tipi di pubblico con i dati dell&#39;evento, **non è possibile** semplicemente combinare i due eventi. È necessario creare entrambi i tipi di pubblico, quindi creare un altro pubblico che utilizza `inSegment` per fare riferimento a entrambi.
+
+Ad esempio, supponiamo che tu abbia due tipi di pubblico, entrambi contenenti i dati dello schema dell’evento esperienza:
+
+| Pubblico | Schema | Tipo di Source | Definizione query | ID pubblico |
+| -------- | ------ | ----------- | ---------------- | ----------- |
+| Abbandoni recenti | Evento esperienza | Batch | Ha almeno un evento di abbandono nelle ultime 24 ore | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
+| Pagamenti recenti | Evento esperienza | Streaming | Ha almeno un pagamento nelle ultime 24 ore | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
+
+In questa situazione, devi creare un terzo pubblico come segue:
+
+```
+inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and inSegment("9e1646bb-57ff-4309-ba59-17d6c5bab6a1")
+```
+
 ## Crea pubblico {#create-audience}
 
 Puoi creare un pubblico valutato utilizzando la segmentazione in streaming utilizzando l’API del servizio di segmentazione o tramite Audience Portal nell’interfaccia utente.
 
-Una definizione di segmento può essere abilitata per lo streaming se corrisponde a uno dei [tipi di query idonei](#eligible-query-types).
+Una definizione di segmento può essere abilitata per lo streaming se corrisponde a uno dei [set di regole idonei](#eligible-rulesets).
 
 >[!BEGINTABS]
 
@@ -166,7 +289,7 @@ Viene visualizzata una finestra a comparsa. Seleziona **[!UICONTROL Genera regol
 
 ![Il pulsante Genera regole è evidenziato nel popover Crea pubblico.](../images/methods/streaming/select-build-rules.png)
 
-In Segment Builder (Generatore di segmenti), crea una definizione di segmento che corrisponda a uno dei [tipi di query idonei](#eligible-query-types). Se la definizione del segmento è idonea per la segmentazione in streaming, potrai selezionare **[!UICONTROL Streaming]** come **[!UICONTROL metodo di valutazione]**.
+In Segment Builder, crea una definizione di segmento corrispondente a uno dei [set di regole idonei](#eligible-rulesets). Se la definizione del segmento è idonea per la segmentazione in streaming, potrai selezionare **[!UICONTROL Streaming]** come **[!UICONTROL metodo di valutazione]**.
 
 ![Viene visualizzata la definizione del segmento. Il tipo di valutazione è evidenziato. La definizione del segmento può essere valutata utilizzando la segmentazione in streaming.](../images/methods/streaming/streaming-evaluation-method.png)
 
