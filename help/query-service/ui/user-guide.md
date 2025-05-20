@@ -312,7 +312,7 @@ Il video seguente illustra come eseguire query nell’interfaccia di Adobe Exper
 >
 >L’interfaccia utente rappresentata nel video è obsoleta, ma la logica utilizzata nel flusso di lavoro rimane la stessa.
 
->[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39842?quality=12&learn=on&captions=ita)
 
 ## Passaggi successivi
 
