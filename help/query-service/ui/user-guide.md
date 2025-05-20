@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Query Editor
 description: L’editor delle query è uno strumento interattivo fornito da Adobe Experience Platform Query Service che consente di scrivere, convalidare ed eseguire query per i dati sull’esperienza del cliente all’interno dell’interfaccia utente di Experience Platform. L’editor delle query supporta lo sviluppo di query per l’analisi e l’esplorazione dei dati e consente di eseguire query interattive a scopo di sviluppo, nonché query non interattive per popolare i set di dati in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: bf9de8c5358f1ab90dd5d70b0607dcfba7d1e2f5
 workflow-type: tm+mt
-source-wordcount: '2683'
+source-wordcount: '3360'
 ht-degree: 0%
 
 ---
@@ -234,11 +234,69 @@ La console fornisce informazioni sullo stato e sul funzionamento di Query Servic
 >
 >La console mostra solo gli errori derivanti dall’esecuzione di una query. Non mostra gli errori di convalida della query che si verificano prima dell’esecuzione di una query.
 
-### Risultati della query {#query-results}
+## Risultati della query {#query-results}
 
 Al termine di una query, i risultati vengono visualizzati nella scheda **[!UICONTROL Risultati]**, accanto alla scheda **[!UICONTROL Console]**. Questa visualizzazione mostra l&#39;output tabulare della query, visualizzando tra 50 e 1000 righe di risultati a seconda del [conteggio dei risultati](#result-count) scelto. Questa vista consente di verificare che la query produca l’output previsto. Per generare un set di dati con la query, rimuovere i limiti sulle righe restituite ed eseguire la query con `CREATE TABLE tablename AS SELECT` per generare un set di dati con l&#39;output. Per istruzioni su come generare un set di dati dai risultati delle query in Query Editor, consulta l&#39;[esercitazione sulla generazione di set di dati](./create-datasets.md).
 
 ![Scheda Risultati della console Editor query che visualizza i risultati dell&#39;esecuzione di una query.](../images/ui/query-editor/query-results.png)
+
+### Scarica risultati query {#download-query-results}
+
+>[!AVAILABILITY]
+>
+>Le funzionalità di download sono disponibili solo per i clienti che dispongono del componente aggiuntivo Data Distiller. Per ulteriori informazioni su Data Distiller, contatta il tuo rappresentante Adobe.
+
+Dopo aver eseguito una query corretta, scarica i risultati in formato CSV, XLSX o JSON da utilizzare nei flussi di lavoro di analisi, reporting o fogli di calcolo offline. Questa funzionalità semplifica i flussi di lavoro per i team di marketing e analisi consentendo l’accesso immediato ai risultati delle query per l’analisi offline, il reporting e i processi basati su Excel.
+
+Per scaricare i risultati della query, seleziona **[!UICONTROL Scarica]** nell&#39;angolo superiore destro della scheda **[!UICONTROL Risultato]** di Query Editor. Quindi scegli **[!UICONTROL CSV]**, **[!UICONTROL XLSX]** o **[!UICONTROL JSON]** dal menu a discesa. Il file viene scaricato automaticamente nel computer locale. Scegli il formato adatto al tuo caso d’uso: CSV per esportazioni leggere, XLSX per fogli di calcolo formattati o JSON per la gestione di dati strutturati.
+
+>[!NOTE]
+>
+>Se manca il pulsante **[!UICONTROL Scarica]**, controlla i risultati della query. Il pulsante viene visualizzato solo quando vengono restituiti record. Se non viene restituito alcun record, nella scheda **[!UICONTROL Risultato]** viene visualizzato il messaggio &#39;Nessun risultato&#39; e l&#39;opzione di download è disabilitata.
+
+![Scheda dei risultati dell&#39;editor delle query con Download e menu a discesa evidenziati.](../images/ui/overview/download-results.png)
+
+>[!NOTE]
+>
+>Quando si apre un file CSV in Excel, è possibile che venga visualizzato il seguente avviso:<br>&quot;Possibile perdita di dati. Se si salva la cartella di lavoro nel formato delimitato da virgole (csv), alcune caratteristiche potrebbero andare perse. Per mantenere queste funzioni, salvatele in un formato di file Excel.&quot;<br>Tenere inoltre presente che la formattazione della data e dell&#39;ora può variare in base al tipo di file. I file CSV mantengono il formato mostrato nei risultati della query, mentre i file XLSX possono applicare automaticamente la formattazione localizzata in Excel. Se viene visualizzato questo avviso, è possibile continuare in modo sicuro. Per mantenere la formattazione specifica di Excel, salvare il file come XLSX.
+
+### Visualizza risultati a schermo intero {#view-results}
+
+Dopo aver eseguito una query corretta, seleziona **[!UICONTROL Visualizza risultati]** nella scheda **[!UICONTROL Risultato]** per aprire una visualizzazione a schermo intero tabulata dei risultati.
+
+Utilizza l’anteprima a schermo intero per scansionare facilmente tabelle ampie e controllare i dettagli a livello di riga senza scorrimento orizzontale. La visualizzazione a schermo intero mostra l’output in una griglia ridimensionabile, semplificando la revisione di set di dati di grandi dimensioni e l’analisi tra colonne.
+
+>[!NOTE]
+>
+>L’anteprima è di sola lettura e non modifica la query o il set di dati.
+
+![Finestra di dialogo di anteprima a schermo intero con i risultati di visualizzazione selezionati.](../images/ui/overview/view-results-fullscreen.png)
+
+### Copia risultati {#copy-results}
+
+Utilizza la funzione di copia avanzata nell’editor delle query per copiare i risultati delle query come valori separati da virgole (CSV) e incollarli in strumenti per fogli di calcolo come Excel per la convalida o la generazione di rapporti immediati. Questa funzionalità migliora la leggibilità, mantiene la formattazione e semplifica i flussi di lavoro senza ricorrere a strumenti di terze parti.
+
+È possibile copiare i risultati della query dalla scheda [!UICONTROL Risultato] o dall&#39;anteprima dei risultati a schermo intero. Dalla scheda **[!UICONTROL Risultato]**, selezionare l&#39;icona Copia (![Icona Copia.](../../images/icons/copy.png)) per copiare tutti i risultati della query negli Appunti. Per abilitare l’icona Copia, seleziona innanzitutto una riga. Puoi selezionare singole righe o utilizzare la casella di controllo nella parte superiore per selezionare tutte le righe contemporaneamente.
+
+![Scheda dei risultati dell&#39;editor delle query con l&#39;icona Copia evidenziata.](../images/ui/overview/query-editor-copy-icon.png)
+
+In alternativa, selezionare **[!UICONTROL Visualizza risultati]** per aprire l&#39;anteprima a schermo intero. In questa finestra di dialogo, selezionare singole righe o utilizzare la casella di controllo nell&#39;angolo superiore sinistro per selezionare tutte le righe, quindi selezionare l&#39;icona Copia (![Icona Copia.](../../images/icons/copy.png)) per copiare i dati selezionati.
+
+![La finestra di dialogo di anteprima a schermo intero con le righe dei risultati selezionate e l&#39;icona Copia evidenziata.](../images/ui/overview/results-copy.png)
+
+### Tabella dei risultati legacy (disponibilità limitata) {#legacy-results-table}
+
+>[!AVAILABILITY]
+>
+>La tabella dei risultati legacy è disponibile solo per alcuni utenti mediante un flag di funzione e potrebbe non essere visualizzata nell’esperienza dell’editor di query corrente. Se il tuo team utilizza flussi di lavoro basati sul trascinamento per selezionare, contatta il rappresentante Adobe per richiedere l’accesso.
+
+La versione precedente dell’editor delle query è destinata agli utenti che si basano su flussi di lavoro dei dati flessibili e manuali, come il controllo qualità o la revisione basata su fogli di calcolo.
+
+Supporta la selezione di trascinamento nativa basata su browser, in modo da poter evidenziare e copiare qualsiasi parte dell’output, incluse singole celle o blocchi, utilizzando il comportamento di selezione standard. Questo è in contrasto con la tabella avanzata, che utilizza la selezione di righe strutturate e azioni di copia dedicate.
+
+I dati copiati sono delimitati da tabulazioni, pertanto quando li incollate in strumenti come Excel, le colonne rimangono allineate e leggibili. Le intestazioni di colonna sono incluse anche quando si trascina la selezione sulla riga di intestazione.
+
+![Visualizzazione dei risultati nell&#39;editor legacy con evidenziazione del trascinamento per la selezione.](../images/ui/query-editor/legacy-results-table.png)
 
 ## Esempi {#examples}
 
@@ -254,7 +312,7 @@ Il video seguente illustra come eseguire query nell’interfaccia di Adobe Exper
 >
 >L’interfaccia utente rappresentata nel video è obsoleta, ma la logica utilizzata nel flusso di lavoro rimane la stessa.
 
->[!VIDEO](https://video.tv.adobe.com/v/39842?quality=12&learn=on&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
 ## Passaggi successivi
 
