@@ -2,10 +2,10 @@
 description: Scopri come utilizzare il dashboard di monitoraggio per monitorare i dati acquisiti nel data lake.
 title: Monitorare l’acquisizione del data lake
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: f671188fbc694b0d2d808577265f91788cb0d8e9
+source-git-commit: 75970d41a316c97d98ebf6cefd3bfa0e58173030
 workflow-type: tm+mt
-source-wordcount: '1303'
-ht-degree: 10%
+source-wordcount: '1458'
+ht-degree: 9%
 
 ---
 
@@ -15,7 +15,9 @@ ht-degree: 10%
 >
 >Le origini di streaming, ad esempio l&#39;[origine API HTTP](../../sources/connectors/streaming/http.md), non sono attualmente supportate dal dashboard di monitoraggio. Al momento, è possibile utilizzare il dashboard solo per monitorare le origini batch.
 
-Leggi questo documento per scoprire come utilizzare il dashboard di monitoraggio per monitorare l’acquisizione del data lake nell’interfaccia utente di Experience Platform.
+Puoi utilizzare il dashboard di monitoraggio nell’interfaccia utente di Adobe Experience Platform per recuperare metriche relative ai processi di acquisizione e conservazione dei dati nel data lake. Utilizza i grafici nell’interfaccia per monitorare le tendenze di acquisizione e conservazione nel tempo e riepilogare le prestazioni in tutti i flussi di dati di origine.
+
+Leggi questo documento per scoprire come utilizzare il dashboard di monitoraggio per monitorare tutte le elaborazioni di dati nel data lake, inclusi sia l’acquisizione che la conservazione.
 
 ## Introduzione {#get-started}
 
@@ -60,6 +62,7 @@ Nella parte inferiore del dashboard viene visualizzata una tabella che illustra 
 | --- | --- |
 | Record ricevuti | Numero totale di record ricevuti da una determinata origine. |
 | Record acquisiti | Numero totale di record acquisiti nel data lake. |
+| Record eliminati | Numero totale di record eliminati a causa delle impostazioni di conservazione del data lake o delle modifiche apportate alle operazioni di acquisizione dei dati. |
 | Record ignorati | Numero totale di record ignorati. Un record ignorato si riferisce a campi che sono stati ignorati perché non erano necessari per l’acquisizione. Ad esempio, se crei un flusso di dati di origini con acquisizione parziale abilitata, puoi configurare una soglia di tasso di errore accettabile. Durante il processo di acquisizione, i record dei campi non obbligatori, come i campi di identità, vengono ignorati se rientrano nella soglia di errore. |
 | Record con errori | Numero totale di record che non è stato possibile acquisire a causa di errori. |
 | Tasso acquisiti | La percentuale di record acquisiti in base al numero totale di record ricevuti. |
@@ -79,7 +82,19 @@ Puoi filtrare ulteriormente i dati utilizzando le opzioni fornite sopra la tabel
 
 {style="table-layout:auto"}
 
+Per personalizzare la visualizzazione delle colonne, selezionare l&#39;icona delle impostazioni delle colonne ![icona-colonna](/help/images/icons/column-settings.png).
+
+![Dashboard di monitoraggio con l&#39;icona delle impostazioni delle colonne selezionata.](../assets/ui/monitor-sources/edit-columns.png)
+
+Utilizzare quindi la finestra *[!UICONTROL Personalizza tabella]* per selezionare le colonne che si desidera visualizzare nel dashboard. Al termine, selezionare **[!UICONTROL Applica]**.
+
+![Finestra popup di personalizzazione colonna nel dashboard di monitoraggio.](../assets/ui/monitor-sources/customize-table.png)
+
 Per monitorare i dati che vengono acquisiti in un flusso di dati specifico, seleziona l&#39;icona del filtro ![filter](/help/images/icons/filter-add.png) accanto a un&#39;origine.
+
+>[!TIP]
+>
+>È possibile utilizzare il dashboard di monitoraggio per monitorare le metriche di eliminazione dei dati per i record eliminati utilizzando i criteri di conservazione dei dati. Per ulteriori informazioni sulla conservazione dei dati, leggere la guida sull&#39;[impostazione dei criteri di conservazione dei dati](../../catalog/datasets/user-guide.md#data-retention-policy).
 
 ![Monitorare un flusso di dati specifico selezionando l&#39;icona del filtro accanto a una determinata origine.](../assets/ui/monitor-sources/monitor-dataflow.png)
 
