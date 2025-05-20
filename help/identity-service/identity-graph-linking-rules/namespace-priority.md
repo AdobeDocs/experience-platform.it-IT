@@ -2,10 +2,10 @@
 title: Priorità dello spazio dei nomi
 description: Scopri la priorità dello spazio dei nomi in Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 0bf62f5f527d50b59ed84cc0ad98200cf25b4c8e
+source-git-commit: 579489e711858c3e80ca5d14eb4ad9187ecf80f8
 workflow-type: tm+mt
-source-wordcount: '2162'
-ht-degree: 5%
+source-wordcount: '2102'
+ht-degree: 2%
 
 ---
 
@@ -15,14 +15,6 @@ ht-degree: 5%
 >id="platform_identities_namespacepriority"
 >title="Priorità dello spazio dei nomi"
 >abstract="La priorità dello spazio dei nomi determina il modo in cui i collegamenti vengono rimossi dal grafico delle identità."
-
->[!AVAILABILITY]
->
->Le regole di collegamento del grafico identità sono attualmente a disponibilità limitata e sono accessibili a tutti i clienti nelle sandbox di sviluppo.
->
->* **Requisiti per l’attivazione**: la funzione rimarrà inattiva finché non avrai configurato e salvato [!DNL Identity Settings]. Senza questa configurazione, il sistema continuerà a funzionare normalmente, senza cambiamenti di comportamento.
->* **Note importanti**: durante questa fase di disponibilità limitata, la segmentazione Edge può produrre risultati imprevisti di appartenenza al segmento. Tuttavia, la segmentazione in streaming e in batch funzionerà come previsto.
->* **Passaggi successivi**: per informazioni su come abilitare questa funzione nelle sandbox di produzione, contatta il team Adobe Account.
 
 Ogni implementazione del cliente è unica e personalizzata per soddisfare gli obiettivi di una particolare organizzazione e, come tale, l’importanza di un dato spazio dei nomi varia da cliente a cliente. Esempi reali includono:
 
@@ -73,13 +65,13 @@ La priorità dello spazio dei nomi può essere configurata utilizzando l&#39;[in
 
 ## Utilizzo priorità dello spazio dei nomi
 
-Attualmente, la priorità dello spazio dei nomi influenza il comportamento del sistema di Real-Time Customer Profile. Il diagramma seguente illustra questo concetto. Per ulteriori informazioni, consultare la guida in [Adobe Experience Platform e diagrammi dell&#39;architettura delle applicazioni](https://experienceleague.adobe.com/it/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
+Attualmente, la priorità dello spazio dei nomi influenza il comportamento del sistema di Real-Time Customer Profile. Il diagramma seguente illustra questo concetto. Per ulteriori informazioni, consultare la guida in [Adobe Experience Platform e diagrammi dell&#39;architettura delle applicazioni](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
 
 ![Diagramma dell&#39;ambito dell&#39;applicazione con priorità dello spazio dei nomi](../images/namespace-priority/application-scope.png)
 
-## Servizio Identity: algoritmo di ottimizzazione delle identità
+## Servizio Identity: Algoritmo di ottimizzazione delle identità
 
-Per strutture di grafo relativamente complesse, la priorità dello spazio dei nomi svolge un ruolo importante nel garantire che i collegamenti corretti vengano rimossi quando si verificano scenari di collasso del grafo. Per ulteriori informazioni, leggere la [panoramica dell&#39;algoritmo di ottimizzazione delle identità](../identity-graph-linking-rules/identity-optimization-algorithm.md).
+Per strutture di grafo relativamente complesse, la priorità dello spazio dei nomi svolge un ruolo importante nel garantire che i collegamenti corretti vengano rimossi quando si verificano scenari di collasso del grafo. Per ulteriori informazioni, leggere la [Panoramica dell&#39;algoritmo di ottimizzazione delle identità](../identity-graph-linking-rules/identity-optimization-algorithm.md).
 
 ## Real-Time Customer Profile: determinazione dell’identità primaria per gli eventi esperienza
 
@@ -216,12 +208,13 @@ In un dato evento, assicurati che tutti gli spazi dei nomi che rappresentano un&
 
 * **Applicabilità evento**: questo comportamento si applica solo agli eventi inviati direttamente a Edge Network (come WebSDK e Mobile SDK). Gli eventi acquisiti dall&#39;[hub Experience Platform](../../landing/edge-and-hub-comparison.md), ad esempio quelli acquisiti con l&#39;origine API HTTP, altre origini di streaming e origini batch, non sono soggetti a questa limitazione.
 * **Specificità della segmentazione di Edge**: questo comportamento è specifico della segmentazione Edge. La segmentazione in batch e in streaming sono servizi separati valutati sull’hub e non seguono lo stesso processo. Per ulteriori informazioni, consulta la [guida alla segmentazione Edge](../../segmentation/methods/edge-segmentation.md).
-* Per ulteriori informazioni, leggere le pagine [Diagrammi di architettura di Adobe Experience Platform e applicazioni](https://experienceleague.adobe.com/it/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram) e [Edge Network e confronto hub](../../landing/edge-and-hub-comparison.md).
+* Per ulteriori informazioni, leggere le pagine [Diagrammi di architettura di Adobe Experience Platform e applicazioni](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram) e [Edge Network e confronto hub](../../landing/edge-and-hub-comparison.md).
 
 #### Applicazioni Edge Network
 
 Per garantire che le applicazioni su Edge Network abbiano accesso al profilo Edge senza indugio, assicurati che i tuoi eventi includano `primary=true` su CRMID. Questo assicura disponibilità immediata senza attendere aggiornamenti del grafo delle identità dall’hub.
 
 * Le applicazioni su Edge Network come Adobe Target, Offer Decisioning e Destinazioni Personalization personalizzate continueranno a dipendere dall’identità principale negli eventi per accedere ai profili da Edge Profile.
-* Leggi il [diagramma dell&#39;architettura di Experience Platform Web SDK e Edge Network](https://experienceleague.adobe.com/it/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment) per ulteriori informazioni sul comportamento di Edge Network.
-* Per ulteriori informazioni su come configurare l&#39;identità primaria in Web SDK[&#128279;](../../web-sdk/identity/overview.md), leggere la documentazione sui [tipi di elementi dati](../../tags/extensions/client/web-sdk/data-element-types.md) e i dati di identità in Web SDK.
+* Leggi il [diagramma dell&#39;architettura di Experience Platform Web SDK e Edge Network](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment) per ulteriori informazioni sul comportamento di Edge Network.
+* Per ulteriori informazioni su come configurare l&#39;identità primaria in Web SDK](../../web-sdk/identity/overview.md), leggere la documentazione sui [tipi di elementi dati](../../tags/extensions/client/web-sdk/data-element-types.md) e i [dati di identità in Web SDK.
+* Assicurati che l’ECID sia incluso nell’evento esperienza. Se l&#39;ECID manca, verrà aggiunto al payload dell&#39;evento con `primary=true`, il che potrebbe portare a risultati imprevisti.

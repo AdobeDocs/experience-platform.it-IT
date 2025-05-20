@@ -1,23 +1,15 @@
 ---
-title: Guida all’implementazione per le regole di collegamento del grafico delle identità
-description: Scopri i passaggi consigliati da seguire per implementare i dati con le configurazioni delle regole di collegamento del grafico delle identità.
+title: Guida All’Implementazione Per Le Regole Di Collegamento Del Grafico Di Identità
+description: Scopri i passaggi consigliati da seguire per l’implementazione dei dati con le configurazioni delle regole di collegamento del grafico identità.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 1a6ca508f0f5e95ddad9014d6507a7a829592673
+source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
 workflow-type: tm+mt
-source-wordcount: '1958'
-ht-degree: 9%
+source-wordcount: '1864'
+ht-degree: 6%
 
 ---
 
-# Guida all’implementazione per le regole di collegamento del grafico delle identità
-
->[!AVAILABILITY]
->
->Le regole di collegamento del grafico identità sono attualmente a disponibilità limitata e sono accessibili a tutti i clienti nelle sandbox di sviluppo.
->
->* **Requisiti per l’attivazione**: la funzione rimarrà inattiva finché non avrai configurato e salvato [!DNL Identity Settings]. Senza questa configurazione, il sistema continuerà a funzionare normalmente, senza cambiamenti di comportamento.
->* **Note importanti**: durante questa fase di disponibilità limitata, la segmentazione Edge può produrre risultati imprevisti di appartenenza al segmento. Tuttavia, la segmentazione in streaming e in batch funzionerà come previsto.
->* **Passaggi successivi**: per informazioni su come abilitare questa funzione nelle sandbox di produzione, contatta il team Adobe Account.
+# Guida all&#39;implementazione per [!DNL Identity Graph Linking Rules]
 
 >[!IMPORTANT]
 >
@@ -29,7 +21,7 @@ Descrizione dettagliata:
 
 1. [Prerequisiti completi per l’implementazione](#prerequisites-for-implementation)
 2. [Creare gli spazi dei nomi di identità necessari](#namespace)
-3. [Utilizza lo strumento di simulazione del grafico per acquisire familiarità con l’algoritmo di ottimizzazione delle identità](#graph-simulation)
+3. [Utilizzare lo strumento di simulazione del grafico per acquisire familiarità con l&#39;algoritmo di ottimizzazione delle identità](#graph-simulation)
 4. [Utilizza l’interfaccia utente delle impostazioni di identità per designare gli spazi dei nomi univoci e configurare le classificazioni di priorità per i tuoi spazi dei nomi](#identity-settings)
 5. [Creare uno schema Experience Data Model (XDM)](#schema)
 6. [Creare un set di dati](#dataset)
@@ -201,7 +193,7 @@ Se i dati lo richiedono, devi innanzitutto creare gli spazi dei nomi appropriati
 
 ## Usa strumento di simulazione grafico {#graph-simulation}
 
-Quindi, passa allo strumento di simulazione del grafico [&#128279;](./graph-simulation.md) nell&#39;area di lavoro dell&#39;interfaccia utente di Identity Service. Puoi utilizzare lo strumento di simulazione del grafico per simulare grafici di identità, creati con diverse configurazioni di spazio dei nomi e priorità dello spazio dei nomi univoche.
+Quindi, passa allo strumento di simulazione del grafico [](./graph-simulation.md) nell&#39;area di lavoro dell&#39;interfaccia utente di Identity Service. Puoi utilizzare lo strumento di simulazione del grafico per simulare grafici di identità, creati con diverse configurazioni di spazio dei nomi e priorità dello spazio dei nomi univoche.
 
 Creando diverse configurazioni, puoi utilizzare lo strumento di simulazione del grafico per scoprire e comprendere meglio in che modo l’algoritmo di ottimizzazione delle identità e alcune configurazioni possono influenzare il comportamento del grafico.
 
@@ -300,7 +292,7 @@ In questo esempio viene inoltre mostrato che Tom e Summer devono separare le ent
 Per ulteriori informazioni su [!DNL Identity Graph Linking Rules], leggere la seguente documentazione:
 
 * [Panoramica di [!DNL Identity Graph Linking Rules]](./overview.md)
-* [Algoritmo di ottimizzazione delle identità](./identity-optimization-algorithm.md)
+* [Algoritmo di ottimizzazione identità](./identity-optimization-algorithm.md)
 * [Esempi di configurazioni del grafico](./example-configurations.md)
 * [Risoluzione dei problemi e domande frequenti](./troubleshooting.md)
 * [Priorità dello spazio dei nomi](./namespace-priority.md)

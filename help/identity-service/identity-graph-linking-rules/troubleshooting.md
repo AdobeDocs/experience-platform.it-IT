@@ -2,22 +2,14 @@
 title: Guida alla risoluzione dei problemi per le regole di collegamento del grafico identità
 description: Scopri come risolvere i problemi comuni nelle regole di collegamento del grafico delle identità.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
+source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
 workflow-type: tm+mt
-source-wordcount: '3375'
+source-wordcount: '3285'
 ht-degree: 0%
 
 ---
 
 # Guida alla risoluzione dei problemi per [!DNL Identity Graph Linking Rules]
-
->[!AVAILABILITY]
->
->Le regole di collegamento del grafico identità sono attualmente a disponibilità limitata e sono accessibili a tutti i clienti nelle sandbox di sviluppo.
->
->* **Requisiti per l&#39;attivazione**: la funzionalità rimarrà inattiva finché non avrai configurato e salvato [!DNL Identity Settings]. Senza questa configurazione, il sistema continuerà a funzionare normalmente, senza cambiamenti di comportamento.
->* **Note importanti**: durante questa fase di disponibilità limitata, la segmentazione di Edge può produrre risultati imprevisti di iscrizione al segmento. Tuttavia, lo streaming e la segmentazione batch funzioneranno come previsto.
->* **Passaggi successivi**: per informazioni su come abilitare questa funzione nelle sandbox di produzione, contatta il team del tuo account di Adobe.
 
 Durante il test e la convalida di [!DNL Identity Graph Linking Rules], potrebbero verificarsi alcuni problemi relativi all&#39;acquisizione dei dati e al comportamento del grafico. Leggere questo documento per scoprire come risolvere alcuni problemi comuni che potrebbero verificarsi durante l&#39;utilizzo di [!DNL Identity Graph Linking Rules].
 
@@ -262,18 +254,18 @@ ORDER BY timestamp desc
 
 >[!ENDTABS]
 
-### L&#39;algoritmo di ottimizzazione delle identità non funziona come previsto
+### L’algoritmo di ottimizzazione identità non funziona come previsto
 
 **Risoluzione dei problemi**
 
-Consulta la documentazione sull&#39;[algoritmo di ottimizzazione delle identità](./identity-optimization-algorithm.md) e i tipi di strutture di grafo supportati.
+Consulta la documentazione su [Algoritmo di ottimizzazione delle identità](./identity-optimization-algorithm.md) e i tipi di strutture di grafo supportati.
 
 * Per esempi di strutture di grafo supportate, consulta la [guida alla configurazione del grafo](./example-configurations.md).
 * È inoltre possibile leggere la [guida all&#39;implementazione](./implementation-guide.md#appendix) per esempi di strutture di grafico non supportate. Esistono due scenari possibili:
    * Non esiste un singolo spazio dei nomi in tutti i profili.
    * Si verifica uno scenario [&quot;ID pendente&quot;](./implementation-guide.md#dangling-loginid-scenario). In questo scenario, il servizio Identity non è in grado di determinare se l’ID penzolante è associato a una qualsiasi delle entità persona nei grafici.
 
-Puoi anche utilizzare lo strumento di simulazione del grafico [nell&#39;interfaccia utente](./graph-simulation.md) per simulare eventi e configurare le impostazioni univoche dello spazio dei nomi e della priorità dello spazio dei nomi. Questo può aiutarti a capire come dovrebbe comportarsi l’algoritmo di ottimizzazione delle identità.
+Puoi anche utilizzare lo strumento di simulazione del grafico [nell&#39;interfaccia utente](./graph-simulation.md) per simulare eventi e configurare le impostazioni univoche dello spazio dei nomi e della priorità dello spazio dei nomi. Questa operazione può essere utile per comprendere il comportamento dell’algoritmo di ottimizzazione delle identità in una linea di base.
 
 Se i risultati della simulazione corrispondono alle aspettative di comportamento del grafico, puoi verificare se le [impostazioni identità](./identity-settings-ui.md) corrispondono alle impostazioni configurate nella simulazione.
 
@@ -328,15 +320,15 @@ Puoi utilizzare la seguente query nel set di dati di esportazione dello snapshot
 
 Questa sezione contiene un elenco di risposte alle domande frequenti su [!DNL Identity Graph Linking Rules].
 
-## Algoritmo di ottimizzazione delle identità {#identity-optimization-algorithm}
+## Algoritmo di ottimizzazione identità {#identity-optimization-algorithm}
 
-Leggi questa sezione per le risposte alle domande frequenti sull&#39;[algoritmo di ottimizzazione delle identità](./identity-optimization-algorithm.md).
+Leggi questa sezione per le risposte alle domande frequenti sull&#39;[Algoritmo di ottimizzazione delle identità](./identity-optimization-algorithm.md).
 
 ### Ho un CRMID per ciascuna delle mie unità aziendali (CRMID B2C, CRMID B2B), ma non ho uno spazio dei nomi univoco tra tutti i miei profili. Cosa succede se contrassegno B2C CRMID e B2B CRMID come univoci e abilito le impostazioni di identità?
 
 Questo scenario non è supportato. Pertanto, è possibile che i grafici si riducano nei casi in cui un utente utilizza il proprio CRMID B2C per accedere e un altro utente utilizza il proprio CRMID B2B per accedere. Per ulteriori informazioni, consulta la sezione sul [requisito dello spazio dei nomi per singola persona](./implementation-guide.md#single-person-namespace-requirement) nella pagina di implementazione.
 
-### L’algoritmo di ottimizzazione delle identità corregge i grafici compressi esistenti?
+### L’algoritmo di ottimizzazione delle identità &quot;corregge&quot; i grafici compressi esistenti?
 
 I grafici compressi esistenti saranno interessati dall’algoritmo del grafico (&quot;fissi&quot;) solo se vengono aggiornati dopo il salvataggio delle nuove impostazioni.
 
@@ -389,7 +381,7 @@ No. La priorità dello spazio dei nomi si applica solo ai set di dati Experience
 
 ### Come funziona questa funzione insieme ai guardrail del grafo delle identità di 50 identità per grafo? La priorità dello spazio dei nomi influisce su questo guardrail definito dal sistema?
 
-L’algoritmo di ottimizzazione dell’identità verrà applicato per primo per garantire la rappresentazione dell’entità della persona. In seguito, se il grafo tenta di superare il [guardrail del grafo delle identità](../guardrails.md) (50 identità per grafo), verrà applicata questa logica. La priorità dello spazio dei nomi non influisce sulla logica di eliminazione del guardrail identità/grafico 50.
+L’algoritmo di ottimizzazione identità verrà applicato per primo per garantire la rappresentazione dell’entità della persona. In seguito, se il grafo tenta di superare il [guardrail del grafo delle identità](../guardrails.md) (50 identità per grafo), verrà applicata questa logica. La priorità dello spazio dei nomi non influisce sulla logica di eliminazione del guardrail identità/grafico 50.
 
 ## Test
 
@@ -409,6 +401,6 @@ In generale, il test su una sandbox di sviluppo dovrebbe simulare i casi d’uso
 
 ### Come posso verificare che questa funzione funzioni come previsto?
 
-Utilizza lo strumento di simulazione del grafico [&#128279;](./graph-simulation.md) per verificare che la funzione funzioni a un singolo livello di grafico.
+Utilizza lo strumento di simulazione del grafico [](./graph-simulation.md) per verificare che la funzione funzioni a un singolo livello di grafico.
 
 Per convalidare la funzionalità a livello di sandbox, fai riferimento alla sezione [!UICONTROL Conteggio dei grafici con più spazi dei nomi] nel dashboard delle identità.

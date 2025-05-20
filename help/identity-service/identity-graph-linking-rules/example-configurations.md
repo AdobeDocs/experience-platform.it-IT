@@ -1,11 +1,11 @@
 ---
 title: Esempi di configurazioni dei grafici
-description: Scopri gli scenari di grafico comuni che potresti incontrare quando utilizzi le regole di collegamento del grafico delle identità e i dati di identità.
+description: Scopri gli scenari di grafico comuni che potresti incontrare quando utilizzi le regole di collegamento del grafico identità e i dati di identità.
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
+source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
 workflow-type: tm+mt
-source-wordcount: '2849'
-ht-degree: 9%
+source-wordcount: '2759'
+ht-degree: 6%
 
 ---
 
@@ -15,14 +15,6 @@ ht-degree: 9%
 >id="platform_identities_algorithmconfiguration"
 >title="Configurazione algoritmo"
 >abstract="Configura uno spazio dei nomi univoco e una priorità dello spazio dei nomi personalizzata in base alle identità acquisite."
-
->[!AVAILABILITY]
->
->Le regole di collegamento del grafico identità sono attualmente a disponibilità limitata e sono accessibili a tutti i clienti nelle sandbox di sviluppo.
->
->* **Requisiti per l’attivazione**: la funzione rimarrà inattiva finché non avrai configurato e salvato [!DNL Identity Settings]. Senza questa configurazione, il sistema continuerà a funzionare normalmente, senza cambiamenti di comportamento.
->* **Note importanti**: durante questa fase di disponibilità limitata, la segmentazione Edge può produrre risultati imprevisti di appartenenza al segmento. Tuttavia, la segmentazione in streaming e in batch funzionerà come previsto.
->* **Passaggi successivi**: per informazioni su come abilitare questa funzione nelle sandbox di produzione, contatta il team Adobe Account.
 
 >[!NOTE]
 >
@@ -771,7 +763,7 @@ CRMID: Tom, ECID: 111
 Per ulteriori informazioni su [!DNL Identity Graph Linking Rules], leggere la seguente documentazione:
 
 * [Panoramica di [!DNL Identity Graph Linking Rules]](./overview.md)
-* [Algoritmo di ottimizzazione delle identità](./identity-optimization-algorithm.md)
+* [Algoritmo di ottimizzazione identità](./identity-optimization-algorithm.md)
 * [Guida all’implementazione](./implementation-guide.md)
 * [Risoluzione dei problemi e domande frequenti](./troubleshooting.md)
 * [Priorità dello spazio dei nomi](./namespace-priority.md)

@@ -1,28 +1,20 @@
 ---
-title: Algoritmo di ottimizzazione delle identità
+title: Algoritmo di ottimizzazione identità
 description: Scopri l’algoritmo di ottimizzazione delle identità in Identity Service.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: df89afb7131c57b9400788ce30c420b9830c022e
+source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
 workflow-type: tm+mt
-source-wordcount: '1617'
-ht-degree: 9%
+source-wordcount: '1527'
+ht-degree: 4%
 
 ---
 
-# Algoritmo di ottimizzazione delle identità {#identity-optimization-algorithm}
+# Algoritmo di ottimizzazione identità {#identity-optimization-algorithm}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_uniquenamespace"
 >title="Spazio dei nomi univoco"
 >abstract="Un grafico non può avere due identità con uno spazio dei nomi univoco. Se un grafico tenta di superare questo limite, vengono mantenuti i collegamenti più recenti e rimossi quelli più vecchi."
-
->[!AVAILABILITY]
->
->Le regole di collegamento del grafico identità sono attualmente a disponibilità limitata e sono accessibili a tutti i clienti nelle sandbox di sviluppo.
->
->* **Requisiti per l’attivazione**: la funzione rimarrà inattiva finché non avrai configurato e salvato [!DNL Identity Settings]. Senza questa configurazione, il sistema continuerà a funzionare normalmente, senza cambiamenti di comportamento.
->* **Note importanti**: durante questa fase di disponibilità limitata, la segmentazione Edge può produrre risultati imprevisti di appartenenza al segmento. Tuttavia, la segmentazione in streaming e in batch funzionerà come previsto.
->* **Passaggi successivi**: per informazioni su come abilitare questa funzione nelle sandbox di produzione, contatta il team Adobe Account.
 
 L’algoritmo di ottimizzazione delle identità è un algoritmo grafico sul servizio Identity che garantisce che un grafico delle identità sia rappresentativo di una singola persona e, pertanto, impedisce l’unione indesiderata di identità sul profilo cliente in tempo reale.
 
@@ -36,7 +28,7 @@ Uno spazio dei nomi univoco determina i collegamenti che vengono rimossi in caso
 
 Un singolo profilo unito e il grafico delle identità corrispondente devono rappresentare un singolo individuo (entità persona). Un singolo individuo è solitamente rappresentato da CRMID e/o ID di accesso. L’aspettativa è che non ci siano due individui (CRMID) uniti in un singolo profilo o grafico.
 
-È necessario specificare quali spazi dei nomi rappresentano un’entità persona in Identity Service utilizzando l’algoritmo di ottimizzazione delle identità. Ad esempio, se un database di gestione delle relazioni con i clienti definisce un account utente da associare a un singolo identificatore CRMID e a un singolo indirizzo e-mail, le impostazioni di identità per questa sandbox saranno simili alle seguenti:
+È necessario specificare quali spazi dei nomi rappresentano un’entità persona nel servizio Identity utilizzando l’algoritmo di ottimizzazione delle identità. Ad esempio, se un database di gestione delle relazioni con i clienti definisce un account utente da associare a un singolo identificatore CRMID e a un singolo indirizzo e-mail, le impostazioni di identità per questa sandbox saranno simili alle seguenti:
 
 * Spazio dei nomi CRMID = univoco
 * Spazio dei nomi e-mail = univoco
@@ -66,9 +58,9 @@ Al momento dell’acquisizione di nuove identità, Identity Service controlla se
 * Acquisisci l’evento più recente tenendo conto della priorità dello spazio dei nomi.
 * Rimuove il collegamento che unirebbe due entità persona dal livello grafico appropriato.
 
-## Dettagli dell’algoritmo di ottimizzazione delle identità
+## Dettagli algoritmo di ottimizzazione identità
 
-Quando il vincolo dello spazio dei nomi univoco viene violato, l’algoritmo di ottimizzazione dell’identità &quot;riprodurrà&quot; i collegamenti e ricostruirà il grafico da zero.
+Quando il vincolo dello spazio dei nomi univoco viene violato, l’Algoritmo di ottimizzazione delle identità &quot;riprodurrà&quot; i collegamenti e ricostruirà il grafico da zero.
 
 * I collegamenti sono ordinati in base al seguente ordine:
    * Ultimo evento.
@@ -80,7 +72,7 @@ Quando il vincolo dello spazio dei nomi univoco viene violato, l’algoritmo di 
 
 ## Scenari di esempio per l’algoritmo di ottimizzazione delle identità
 
-La sezione seguente illustra il comportamento dell’algoritmo di ottimizzazione delle identità, in scenari come il dispositivo condiviso o l’acquisizione di dati con la stessa marca temporale.
+La sezione seguente illustra il comportamento dell’algoritmo di ottimizzazione delle identità in scenari quali la condivisione del dispositivo o l’acquisizione di dati con la stessa marca temporale.
 
 ### Dispositivo condiviso
 
@@ -100,7 +92,7 @@ In questo esempio, sia CRMID che E-mail sono designati come spazi dei nomi univo
 
 * `timestamp=1`: Jane accede al tuo sito Web di e-commerce utilizzando un laptop. Jane è rappresentata dal suo CRMID e dal suo Email, mentre il browser web sul suo laptop che usa è rappresentato da un ECID.
 * `timestamp=2`: John accede al tuo sito Web di e-commerce utilizzando lo stesso laptop. John è rappresentato dal suo CRMID e dalla sua Email, mentre il browser web che ha usato è già rappresentato da un ECID. Poiché lo stesso ECID è collegato a due grafici diversi, Identity Service è in grado di sapere che questo dispositivo (laptop) è condiviso.
-* Tuttavia, a causa della configurazione univoca dello spazio dei nomi che imposta un massimo di uno spazio dei nomi CRMID e di uno spazio dei nomi E-mail per grafico, l’algoritmo di ottimizzazione dell’identità divide il grafico in due.
+* Tuttavia, a causa della configurazione univoca dello spazio dei nomi che imposta un massimo di uno spazio dei nomi CRMID e di uno spazio dei nomi E-mail per grafico, l’algoritmo di ottimizzazione delle identità divide il grafico in due.
    * Infine, poiché John è l&#39;ultimo utente autenticato, l&#39;ECID che rappresenta il laptop, rimane collegato al suo grafo invece di quello di Jane.
 
 ![caso dispositivo condiviso uno](../images/identity-settings/shared-device-case-one.png)
@@ -117,7 +109,7 @@ In questo esempio, lo spazio dei nomi CRMID è designato come spazio dei nomi un
 * `timestamp=1`: Jane accede al tuo sito Web di e-commerce utilizzando un laptop. È rappresentata dal suo CRMID, e il browser web sul laptop è rappresentato dall&#39;ECID.
 * `timestamp=2`: John accede al tuo sito Web di e-commerce utilizzando lo stesso laptop. È rappresentato dal suo CRMID e il browser web che utilizza è rappresentato dallo stesso ECID.
    * Questo evento collega due CRMID indipendenti allo stesso ECID, superando il limite configurato di un CRMID.
-   * Di conseguenza, l&#39;algoritmo di ottimizzazione delle identità rimuove il collegamento precedente, che in questo caso è il CRMID di Jane, collegato in `timestamp=1`.
+   * Di conseguenza, l&#39;algoritmo di ottimizzazione identità rimuove il collegamento precedente, che in questo caso è il CRMID di Jane, collegato in `timestamp=1`.
    * Tuttavia, anche se il CRMID di Jane non esisterà più come grafico sul servizio Identity, persisterà ancora come profilo sul Profilo cliente in tempo reale. Questo perché un grafo di identità deve contenere almeno due identità collegate e, come risultato della rimozione dei collegamenti, il CRMID di Jane non ha più un&#39;altra identità a cui collegarsi.
 
 ![shared-device-case-two](../images/identity-settings/shared-device-case-two.png)
@@ -143,7 +135,7 @@ In questo esempio, gli spazi dei nomi CRMID e E-mail sono designati come univoci
    * Questo diventa quindi una violazione della configurazione dello spazio dei nomi univoco, in quanto crea un singolo grafico con due spazi dei nomi CRMID.
    * Di conseguenza, l&#39;algoritmo di ottimizzazione delle identità elimina il collegamento precedente, che in questo caso è il collegamento tra l&#39;identità di Jane con lo spazio dei nomi CRMID e l&#39;identità con il test<span>@test.
 
-Con l’algoritmo di ottimizzazione dell’identità, i valori di identità errati, come e-mail o numeri di telefono falsi, non vengono propagati attraverso diversi grafici di identità.
+Con l’algoritmo di ottimizzazione delle identità, i valori di identità errati, come e-mail o numeri di telefono falsi, non vengono propagati attraverso diversi grafici di identità.
 
 ![e-mail non valida](../images/identity-settings/bad-email.png)
 

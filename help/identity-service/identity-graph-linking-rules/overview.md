@@ -1,11 +1,11 @@
 ---
 title: Regole di collegamento del grafico delle identità
-description: Scopri le regole di collegamento del grafico delle identità in Identity Service.
+description: Scopri le regole di collegamento del grafico identità in Identity Service.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
+source-git-commit: 0aefcfbbbed675a08d9e3023b9f667ec59874e46
 workflow-type: tm+mt
-source-wordcount: '1497'
-ht-degree: 11%
+source-wordcount: '1547'
+ht-degree: 4%
 
 ---
 
@@ -14,33 +14,89 @@ ht-degree: 11%
 >[!CONTEXTUALHELP]
 >id="platform_identities_linkingrules_overview"
 >title="Regole di collegamento del grafo delle identità"
->abstract="Per evitare queste unioni indesiderate, puoi utilizzare le configurazioni fornite tramite le regole di collegamento del grafo delle identità e consentire una personalizzazione accurata per i tuoi utenti."
+>abstract="Per evitare queste unioni indesiderate, puoi utilizzare le configurazioni fornite tramite le Regole di collegamento del grafico identità e consentire una personalizzazione accurata per i tuoi utenti."
 
->[!AVAILABILITY]
+>[!IMPORTANT]
 >
->Le regole di collegamento del grafico identità sono attualmente a disponibilità limitata e sono accessibili a tutti i clienti nelle sandbox di sviluppo.
->
->* **Requisiti per l’attivazione**: la funzione rimarrà inattiva finché non avrai configurato e salvato [!DNL Identity Settings]. Senza questa configurazione, il sistema continuerà a funzionare normalmente, senza cambiamenti di comportamento.
->* **Note importanti**: durante questa fase di disponibilità limitata, la segmentazione Edge può produrre risultati imprevisti di appartenenza al segmento. Tuttavia, la segmentazione in streaming e in batch funzionerà come previsto.
->* **Passaggi successivi**: per informazioni su come abilitare questa funzione nelle sandbox di produzione, contatta il team Adobe Account.
+>Se disponi di una sandbox esistente che, dopo aver abilitato le impostazioni di identità, richiede che i grafici compressi non vengano compressi (&quot;corretti&quot;), contatta il team del tuo account di Adobe.
 
 Con il servizio Adobe Experience Platform Identity e il profilo cliente in tempo reale, è facile presumere che i dati siano acquisiti perfettamente e che tutti i profili uniti rappresentino una singola persona tramite un identificatore di persona, come un CRMID. Tuttavia, esistono scenari possibili in cui alcuni dati potrebbero tentare di unire più profili disparati in un unico profilo (&quot;compressione del grafico&quot;). Per evitare queste unioni indesiderate, puoi utilizzare le configurazioni fornite tramite [!DNL Identity Graph Linking Rules] e consentire una personalizzazione accurata per i tuoi utenti.
-
-Per ulteriori informazioni sull&#39;utilizzo di [!DNL Identity Graph Linking Rules], guarda il seguente video:
-
->[!VIDEO](https://video.tv.adobe.com/v/3448280/?learn=on&enablevpops&captions=ita)
 
 ## Introduzione
 
 I seguenti documenti sono essenziali per comprendere [!DNL Identity Graph Linking Rules].
 
-* [Algoritmo di ottimizzazione delle identità](./identity-optimization-algorithm.md)
+* [Algoritmo di ottimizzazione identità](./identity-optimization-algorithm.md)
 * [Guida all’implementazione](./implementation-guide.md)
 * [Esempi di configurazioni del grafico](./example-configurations.md)
 * [Risoluzione dei problemi e domande frequenti](./troubleshooting.md)
 * [Priorità dello spazio dei nomi](./namespace-priority.md)
 * [Interfaccia utente simulazione grafico](./graph-simulation.md)
 * [Interfaccia utente per le impostazioni delle identità](./identity-settings-ui.md)
+
+## Raccolta video
+
+Guarda i video seguenti per scoprire alcuni degli aspetti fondamentali delle regole di collegamento del grafico delle identità.
+
+<!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
+<div class="columns">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Identity Graph Linking Rules: Overview">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops" title="Regole di collegamento del grafico di identità: panoramica" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3429845/?format=jpeg&nocache=1732633205780" alt="Regole di collegamento del grafico di identità: panoramica"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops" target="_blank" rel="referrer" title="Regole di collegamento del grafico di identità: panoramica">Regole di collegamento del grafico delle identità: panoramica</a>
+                    </p>
+                    <p class="is-size-6">Guarda questo video per una panoramica delle regole di collegamento del grafico delle identità e scopri come utilizzare questa funzionalità per evitare la compressione del grafico.</p>
+                </div>
+                <div style="display: flex; flex-direction; row;">
+                  <a href="https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Osserva</span>
+                  </a>
+                  <a href="./overview.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Letto</span>
+                  </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Identity Graph Linking Rules: Identity Settings">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops" title="Regole di collegamento del grafico identità: Impostazioni identità" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441066/?format=jpeg&nocache=1732633205785" alt="Regole di collegamento del grafico identità: Impostazioni identità"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops" target="_blank" rel="referrer" title="Regole di collegamento del grafico identità: Impostazioni identità">Regole di collegamento del grafico delle identità: Impostazioni identità</a>
+                    </p>
+                    <p class="is-size-6">Guarda questo video per scoprire come configurare le impostazioni di identità e creare grafici di identità e profili cliente di alta qualità per applicazioni Adobe Experience Platform come Real-Time CDP, Adobe Journey Optimizer e Customer Journey Analytics.</p>
+                </div>
+                <div style="display: flex; flex-direction: row;">
+                  <a href="https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Osserva</span>
+                  </a>
+                  <a href="identity-settings-ui.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Letto</span>
+                  </a>
+                </div>            
+            </div>
+        </div>
+    </div>
+</div>
 
 ## Scenari di collasso dei grafici {#graph-collapse-scenarios}
 
@@ -108,11 +164,11 @@ Con [!DNL Identity Graph Linking Rules] è possibile:
 | --- | --- |
 | Spazio dei nomi univoco | Uno spazio dei nomi univoco è uno spazio dei nomi delle identità che è stato impostato per essere distinto all’interno del contesto di un grafo delle identità. Puoi configurare uno spazio dei nomi in modo che sia univoco utilizzando l’interfaccia utente. Una volta definito uno spazio dei nomi come univoco, un grafo può avere una sola identità che lo contiene. |
 | Priorità dello spazio dei nomi | La priorità dello spazio dei nomi si riferisce all’importanza relativa degli spazi dei nomi rispetto agli altri. La priorità dello spazio dei nomi è configurabile tramite l’interfaccia utente. Puoi classificare gli spazi dei nomi in un dato grafico delle identità. Una volta abilitata, la priorità dei nomi verrà utilizzata in vari scenari, ad esempio per l’input dell’algoritmo di ottimizzazione delle identità e per la determinazione dell’identità primaria dei frammenti di evento esperienza. |
-| Algoritmo di ottimizzazione delle identità | L’algoritmo di ottimizzazione delle identità garantisce che le linee guida create configurando uno spazio dei nomi e priorità dello spazio dei nomi univoci vengano applicate in un dato grafico delle identità. |
+| Algoritmo di ottimizzazione identità | L’algoritmo di ottimizzazione delle identità garantisce che le linee guida create configurando uno spazio dei nomi e priorità dello spazio dei nomi univoci vengano applicate in un dato grafico delle identità. |
 
 ### Spazio dei nomi univoco {#unique-namespace}
 
-Puoi configurare uno spazio dei nomi in modo che sia univoco utilizzando l’area di lavoro dell’interfaccia utente per le impostazioni delle identità. In questo modo, informa l’algoritmo di ottimizzazione dell’identità che un dato grafo può avere una sola identità che contiene tale spazio dei nomi univoco. Questo impedisce l’unione di due identificatori di persona diversi all’interno dello stesso grafico.
+Puoi configurare uno spazio dei nomi in modo che sia univoco utilizzando l’area di lavoro dell’interfaccia utente per le impostazioni delle identità. In questo modo, informa l’algoritmo di ottimizzazione delle identità che un dato grafo può avere una sola identità che contiene quello spazio dei nomi univoco. Questo impedisce l’unione di due identificatori di persona diversi all’interno dello stesso grafico.
 
 Considera lo scenario seguente:
 
@@ -129,7 +185,7 @@ Se CRMID è stato configurato come uno spazio dei nomi univoco, l’algoritmo di
 
 Se non configuri uno spazio dei nomi univoco, potresti riscontrare unioni di grafici indesiderate, ad esempio due identità con lo stesso spazio dei nomi CRMID, ma valori di identità diversi (scenari come questi spesso rappresentano due entità persona diverse nello stesso grafico).
 
-Devi configurare uno spazio dei nomi univoco per informare l’algoritmo di ottimizzazione dell’identità in modo da applicare limitazioni ai dati di identità acquisiti in un dato grafo di identità.
+Devi configurare uno spazio dei nomi univoco per informare l’algoritmo di ottimizzazione delle identità in modo da applicare limitazioni ai dati di identità acquisiti in un dato grafico delle identità.
 
 ### Priorità dello spazio dei nomi {#namespace-priority}
 
@@ -157,7 +213,7 @@ Per ulteriori informazioni, leggere la guida sulla [priorità dello spazio dei n
 
 Per ulteriori informazioni su [!DNL Identity Graph Linking Rules], leggere la seguente documentazione:
 
-* [Algoritmo di ottimizzazione delle identità](./identity-optimization-algorithm.md)
+* [Algoritmo di ottimizzazione identità](./identity-optimization-algorithm.md)
 * [Guida all’implementazione](./implementation-guide.md)
 * [Esempi di configurazioni del grafico](./example-configurations.md)
 * [Risoluzione dei problemi e domande frequenti](./troubleshooting.md)

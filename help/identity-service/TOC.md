@@ -5,10 +5,10 @@ breadcrumb-title: Guida del servizio Experience Platform Identity
 user-guide-description: Collega le identità dei clienti su più dispositivi e sistemi per offrire esperienze digitali personalizzate.
 feature: Identities
 role: Admin,Developer
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
 workflow-type: tm+mt
 source-wordcount: '145'
-ht-degree: 38%
+ht-degree: 33%
 
 ---
 
@@ -22,12 +22,12 @@ ht-degree: 38%
    - [Logica di collegamento dell’identità](./features/identity-linking-logic.md)
    - [Visualizzatore del grafico delle identità](./features/identity-graph-viewer.md)
    - [Eliminazioni nel servizio Identity](./features/deletion.md)
-   - Regole di collegamento del grafo delle identità {#identity-graph-linking-rules}
+   - Regole di collegamento del grafico delle identità {#identity-graph-linking-rules}
       - [Panoramica delle funzioni](./identity-graph-linking-rules/overview.md)
-      - [Algoritmo di ottimizzazione delle identità](./identity-graph-linking-rules/identity-optimization-algorithm.md)
-      - [Guida all’implementazione per le regole di collegamento del grafico delle identità](./identity-graph-linking-rules/implementation-guide.md)
+      - [Algoritmo di ottimizzazione identità](./identity-graph-linking-rules/identity-optimization-algorithm.md)
+      - [Guida all’implementazione per le regole di collegamento del grafico di identità](./identity-graph-linking-rules/implementation-guide.md)
       - [Esempio di configurazioni del grafico](./identity-graph-linking-rules/example-configurations.md)
-      - [Risoluzione dei problemi relativi alle regole di collegamento del grafo delle identità](./identity-graph-linking-rules/troubleshooting.md)
+      - [Risoluzione dei problemi relativi alle regole di collegamento del grafico delle identità](./identity-graph-linking-rules/troubleshooting.md)
       - [Priorità dello spazio dei nomi](./identity-graph-linking-rules/namespace-priority.md)
       - [Interfaccia utente simulazione grafico](./identity-graph-linking-rules/graph-simulation.md)
       - [Interfaccia utente per le impostazioni delle identità](./identity-graph-linking-rules/identity-settings-ui.md)

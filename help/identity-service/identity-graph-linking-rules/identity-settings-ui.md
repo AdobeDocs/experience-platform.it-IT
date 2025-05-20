@@ -2,22 +2,18 @@
 title: Interfaccia utente per le impostazioni delle identità
 description: Scopri come utilizzare l’interfaccia utente delle impostazioni di identità.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 44457b95b354e20808c1218ca3c8e698071f0528
+source-git-commit: 0aefcfbbbed675a08d9e3023b9f667ec59874e46
 workflow-type: tm+mt
-source-wordcount: '693'
-ht-degree: 13%
+source-wordcount: '627'
+ht-degree: 2%
 
 ---
 
 # Interfaccia utente per le impostazioni delle identità
 
->[!AVAILABILITY]
+>[!IMPORTANT]
 >
->Le regole di collegamento del grafico identità sono attualmente a disponibilità limitata e sono accessibili a tutti i clienti nelle sandbox di sviluppo.
->
->* **Requisiti per l’attivazione**: la funzione rimarrà inattiva finché non avrai configurato e salvato [!DNL Identity Settings]. Senza questa configurazione, il sistema continuerà a funzionare normalmente, senza cambiamenti di comportamento.
->* **Note importanti**: durante questa fase di disponibilità limitata, la segmentazione Edge può produrre risultati imprevisti di appartenenza al segmento. Tuttavia, la segmentazione in streaming e in batch funzionerà come previsto.
->* **Passaggi successivi**: per informazioni su come abilitare questa funzione nelle sandbox di produzione, contatta il team Adobe Account.
+>Se disponi di una sandbox esistente che, dopo aver abilitato le impostazioni di identità, richiede che i grafici compressi non vengano compressi (&quot;corretti&quot;), contatta il team del tuo account di Adobe.
 
 Le impostazioni di identità sono una funzione dell’interfaccia utente di Adobe Experience Platform Identity Service che consente di designare spazi dei nomi univoci e configurare la priorità dello spazio dei nomi.
 
@@ -28,7 +24,7 @@ Leggi questa guida per scoprire come configurare le impostazioni di identità ne
 Prima di iniziare a utilizzare le impostazioni di identità, leggi i seguenti documenti:
 
 * [[!DNL Identity Graph Linking Rules]](./overview.md)
-* [Algoritmo di ottimizzazione delle identità](./identity-optimization-algorithm.md)
+* [Algoritmo di ottimizzazione identità](./identity-optimization-algorithm.md)
 * [Guida all’implementazione](./implementation-guide.md)
 * [Esempi di configurazioni del grafico](./example-configurations.md)
 * [Priorità dello spazio dei nomi](./namespace-priority.md)
@@ -61,7 +57,7 @@ Per configurare la priorità dello spazio dei nomi, seleziona uno spazio dei nom
 
 Per designare uno spazio dei nomi univoco, selezionare la casella di controllo [!UICONTROL Univoco per grafico] che corrisponde a tale spazio dei nomi. Puoi selezionare **fino a un massimo di tre spazi dei nomi univoci** per la configurazione delle impostazioni di identità.
 
-Una volta stabiliti gli spazi dei nomi univoci, i grafici non saranno più in grado di avere più identità che contengono uno spazio dei nomi univoco. Ad esempio, se hai designato CRMID come spazio dei nomi univoco, un grafo può avere una sola identità con lo spazio dei nomi CRMID. Per ulteriori informazioni, leggere la [panoramica dell&#39;algoritmo di ottimizzazione delle identità](./identity-optimization-algorithm.md#unique-namespace).
+Una volta stabiliti gli spazi dei nomi univoci, i grafici non saranno più in grado di avere più identità che contengono uno spazio dei nomi univoco. Ad esempio, se hai designato CRMID come spazio dei nomi univoco, un grafo può avere una sola identità con lo spazio dei nomi CRMID. Per ulteriori informazioni, leggere la [Panoramica dell&#39;algoritmo di ottimizzazione delle identità](./identity-optimization-algorithm.md#unique-namespace).
 
 Al termine delle configurazioni, seleziona **[!UICONTROL Avanti]** per continuare.
 
@@ -90,7 +86,7 @@ Da qui, è necessario confermare quanto segue prima di procedere al passaggio fi
 Per ulteriori informazioni su [!DNL Identity Graph Linking Rules], leggere la seguente documentazione:
 
 * [Panoramica di [!DNL Identity Graph Linking Rules]](./overview.md)
-* [Algoritmo di ottimizzazione delle identità](./identity-optimization-algorithm.md)
+* [Algoritmo di ottimizzazione identità](./identity-optimization-algorithm.md)
 * [Guida all’implementazione](./implementation-guide.md)
 * [Esempi di configurazioni del grafico](./example-configurations.md)
 * [Risoluzione dei problemi e domande frequenti](./troubleshooting.md)
