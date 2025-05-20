@@ -257,7 +257,7 @@ Al termine dell’importazione, viene ricevuta una notifica nell’interfaccia u
 
 Il video seguente illustra gli strumenti della sandbox e spiega come creare un nuovo pacchetto, pubblicarlo e importarlo.
 
->[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446095/?learn=on&captions=ita)
 
 ## Passaggi successivi
 
