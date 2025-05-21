@@ -2,10 +2,10 @@
 title: Connessione SFTP
 description: Crea una connessione in uscita al server SFTP per esportare periodicamente file di dati delimitati da Adobe Experience Platform.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 45f22addbff9ec81d64e9e756e4c27e8af4b477d
 workflow-type: tm+mt
-source-wordcount: '1095'
-ht-degree: 8%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -69,6 +69,18 @@ Questa destinazione supporta le esportazioni di set di dati. Per informazioni co
 Durante l&#39;esportazione di *dati sul pubblico*, Experience Platform crea un file `.csv`, `parquet` o `.json` nel percorso di archiviazione fornito. Per ulteriori informazioni sui file, consulta la sezione [formati di file supportati per l&#39;esportazione](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) nell&#39;esercitazione di Audience Activation.
 
 Durante l&#39;esportazione di *set di dati*, Experience Platform crea un file `.parquet` o `.json` nel percorso di archiviazione fornito. Per ulteriori informazioni sui file, consulta la sezione [Verifica dell&#39;esportazione dei set di dati](../../ui/export-datasets.md#verify) nell&#39;esercitazione sull&#39;esportazione dei set di dati.
+
+## Requisiti di connessione al server SFTP {#sftp-connection-requirements}
+
+Per garantire un’esportazione dei dati corretta, devi configurare il server SFTP di destinazione in modo da consentire un numero sufficiente di connessioni simultanee. Se il server SFTP limita il numero di connessioni simultanee, si potrebbero verificare errori nei processi di esportazione, in particolare quando si esportano più tipi di pubblico o set di dati contemporaneamente.
+
+**Consiglio**
+Per prestazioni ottimali, il server SFTP deve consentire almeno una connessione simultanea per ogni pubblico o set di dati da esportare. Come minimo, il server deve supportare almeno il 30% del numero totale di tipi di pubblico o set di dati pianificati per l’esportazione contemporaneamente.
+
+**Esempio**\
+Se pianifichi esportazioni simultanee per 100 tipi di pubblico o set di dati, il server SFTP deve consentire almeno 30 connessioni simultanee.
+
+La corretta configurazione dei limiti di connessione del server SFTP consente di evitare esportazioni non riuscite e garantisce la consegna affidabile dei dati da Adobe Experience Platform.
 
 ## Connettersi alla destinazione {#connect}
 
