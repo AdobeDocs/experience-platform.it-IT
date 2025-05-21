@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente dei set di dati
 description: Scopri come eseguire azioni comuni quando si lavora con i set di dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 52412c5d6231e10fc875d16971dbd8cbfb116d21
+source-git-commit: f66e85ee5fb3fdaf7036b131f9689082d9d96127
 workflow-type: tm+mt
-source-wordcount: '4143'
-ht-degree: 4%
+source-wordcount: '4237'
+ht-degree: 5%
 
 ---
 
@@ -100,7 +100,7 @@ L’interfaccia utente dei set di dati ora offre una raccolta di azioni in linea
 * [[!UICONTROL Gestione dei dati ed etichette di accesso]](#manage-and-enforce-data-governance)
 * [[!UICONTROL Abilita profilo unificato]](#enable-profile)
 * [[!UICONTROL Gestione tag]](#manage-tags)
-* [(Beta) [!UICONTROL Imposta criteri di conservazione dei dati]](#data-retention-policy)
+* [[!UICONTROL Imposta criteri di conservazione dei dati]](#data-retention-policy)
 * [[!UICONTROL Sposta in cartelle]](#move-to-folders)
 * [[!UICONTROL Elimina]](#delete).
 
@@ -174,13 +174,15 @@ Una volta aggiunto un tag a un set di dati, i set di dati possono essere filtrat
 
 Per ulteriori informazioni su come classificare gli oggetti business per individuare e classificare più facilmente gli oggetti, vedere la guida alla [gestione delle tassonomie dei metadati](../../administrative-tags/ui/managing-tags.md). Questa guida spiega come gli utenti con le autorizzazioni giuste possono creare tag predefiniti, assegnarli a categorie e gestire tutte le operazioni CRUD correlate nell’interfaccia utente di Experience Platform.
 
-### (Beta) Imposta i criteri di conservazione dei dati {#data-retention-policy}
-
->[!AVAILABILITY]
-> 
->Le impostazioni di conservazione dei dati sono attualmente in versione beta e sono disponibili solo in una **versione limitata** per alcune organizzazioni. L’interfaccia utente potrebbe non riflettere la funzione descritta di seguito.
+### Imposta criteri di conservazione dei dati {#data-retention-policy}
 
 Gestisci le impostazioni di scadenza e conservazione dei set di dati utilizzando il menu delle azioni in linea dalla scheda [!UICONTROL Sfoglia] dell&#39;area di lavoro [!UICONTROL Set di dati]. Puoi utilizzare questa funzione per configurare per quanto tempo i dati vengono conservati nel data lake e nell’archivio profili. La data di scadenza si basa su quando i dati sono stati acquisiti in Experience Platform e sul periodo di conservazione configurato.
+
+>[!IMPORTANT]
+>
+>Per applicare o aggiornare le regole di conservazione per un set di dati ExperienceEvent, il ruolo utente deve includere l&#39;autorizzazione **Gestisci set di dati**. Questo controllo dell’accesso basato sul ruolo garantisce che solo gli utenti autorizzati possano modificare le impostazioni di conservazione dei set di dati.
+>
+>Per ulteriori informazioni sull&#39;assegnazione delle autorizzazioni in Adobe Experience Platform, vedere [Panoramica sul controllo degli accessi](../../access-control/home.md#platform-permissions).
 
 >[!TIP]
 >
@@ -216,7 +218,7 @@ Il grafico mostra la distribuzione degli eventi di esperienza tra vari periodi d
 
 >[!NOTE]
 >
->Il grafico di distribuzione di Experience Event è specifico per il set di dati e riflette solo i dati del set di dati selezionato.
+>Il grafico di distribuzione di Experience Event è specifico per il set di dati selezionato e riflette solo i relativi dati. Si applica esclusivamente ai dati memorizzati nel data lake.
 
 ![Viene visualizzata la finestra di dialogo Imposta conservazione dei dati con il grafico di distribuzione degli eventi esperienza.](../images/datasets/user-guide/visual-forecast.png)
 
@@ -226,7 +228,9 @@ Una volta completata la configurazione, seleziona **[!UICONTROL Salva]** per con
 >
 >Una volta applicate le regole di conservazione dei dati, tutti i dati precedenti al numero di giorni definiti dal valore di scadenza vengono eliminati definitivamente e non possono essere recuperati.
 
-Dopo aver configurato le impostazioni di conservazione, utilizza l’interfaccia utente di monitoraggio per verificare che le modifiche siano state eseguite dal sistema. L’interfaccia utente di monitoraggio fornisce una vista centralizzata dell’attività di conservazione dei dati in tutti i set di dati. Da qui è possibile tenere traccia dell&#39;esecuzione dei job, esaminare la quantità di dati eliminati e verificare che i criteri di conservazione funzionino come previsto. Questa visibilità supporta la governance, la conformità e l&#39;efficiente gestione del ciclo di vita dei dati.
+Dopo aver configurato le impostazioni di conservazione, utilizza l’interfaccia utente di monitoraggio per verificare che le modifiche siano state eseguite dal sistema. L’interfaccia utente di monitoraggio fornisce una vista centralizzata dell’attività di conservazione dei dati in tutti i set di dati. Da qui è possibile tenere traccia dell&#39;esecuzione dei job, esaminare la quantità di dati eliminati e verificare che i criteri di conservazione funzionino come previsto.
+
+Per scoprire come i criteri di conservazione si applicano nei diversi servizi, consulta le guide dedicate su [Conservazione dei set di dati di eventi di esperienza nel profilo](../../profile/event-expirations.md) e [Conservazione dei set di dati di eventi di esperienza nel data lake](./experience-event-dataset-retention-ttl-guide.md). Questa visibilità supporta la governance, la conformità e l&#39;efficiente gestione del ciclo di vita dei dati.
 
 Per informazioni su come utilizzare il dashboard di monitoraggio per tenere traccia dei flussi di dati di origine nell&#39;interfaccia utente di Experience Platform, consulta [Monitorare i flussi di dati per le origini nella documentazione dell&#39;interfaccia utente](../../dataflows/ui/monitor-sources.md).
 
@@ -234,15 +238,15 @@ Per informazioni su come utilizzare il dashboard di monitoraggio per tenere trac
 
 Per ulteriori informazioni sulle regole che definiscono gli intervalli di date di scadenza dei set di dati e sulle best practice per la configurazione dei criteri di conservazione dei dati, consulta la [pagina delle domande frequenti](../catalog-faq.md).
 
-#### (Beta) Maggiore visibilità dei periodi di conservazione e delle metriche di archiviazione {#retention-and-storage-metrics}
+#### Maggiore visibilità dei periodi di conservazione e delle metriche di archiviazione {#retention-and-storage-metrics}
 
-Per gli utenti beta sono disponibili quattro nuove colonne che forniscono maggiore visibilità sulla gestione dei dati: **[!UICONTROL Archiviazione Data Lake]**, **[!UICONTROL Conservazione Data Lake]**, **[!UICONTROL Archiviazione profili]** e **[!UICONTROL Conservazione profili]**. Queste metriche mostrano la quantità di storage utilizzata dai dati e il relativo periodo di conservazione sia nel data lake che nel servizio profilo.
+Quattro nuove colonne forniscono maggiore visibilità nella gestione dei dati: **[!UICONTROL Archiviazione Data Lake]**, **[!UICONTROL Conservazione Data Lake]**, **[!UICONTROL Archiviazione profili]** e **[!UICONTROL Conservazione profili]**. Queste metriche mostrano la quantità di storage utilizzata dai dati e il relativo periodo di conservazione sia nel data lake che nel servizio profilo.
 
-Questa maggiore visibilità consente di prendere decisioni informate e gestire i costi di storage in modo più efficace. Ordina i set di dati per dimensione di archiviazione per identificare quelli più grandi nella sandbox corrente. Queste informazioni supportano anche una migliore governance e aiutano a comprendere il ciclo di vita dei dati e l’utilizzo delle autorizzazioni.
+Questa maggiore visibilità consente di prendere decisioni informate e gestire i costi di storage in modo più efficace. Ordina i set di dati per dimensione di archiviazione per identificare quelli più grandi nella sandbox corrente. Queste informazioni supportano le best practice per la gestione dei dati e garantiscono la conformità con i diritti concessi in licenza.
 
 ![Scheda Sfoglia dell&#39;area di lavoro Set di dati con le quattro nuove colonne di archiviazione e conservazione evidenziate.](../images/datasets/user-guide/storage-and-retention-columns.png)
 
-La tabella seguente fornisce una panoramica delle nuove metriche di conservazione e archiviazione disponibili nella versione beta. Descrive lo scopo di ogni colonna e il modo in cui supporta la gestione della conservazione e dello storage dei dati.
+La tabella seguente fornisce una panoramica delle nuove metriche di conservazione e archiviazione. Descrive lo scopo di ogni colonna e il modo in cui supporta la gestione della conservazione e dello storage dei dati.
 
 | Titolo colonna | Descrizione |
 |---|---|
@@ -252,6 +256,8 @@ La tabella seguente fornisce una panoramica delle nuove metriche di conservazion
 | [!UICONTROL Conservazione profilo] | Il periodo di conservazione corrente per i set di dati profilo. Puoi aggiornare questo valore per controllare per quanto tempo vengono conservati i dati del profilo. |
 
 {style="table-layout:auto"}
+
+Per agire sulle informazioni provenienti dalle metriche di archiviazione e conservazione, consulta la [guida alle best practice per le licenze di gestione dei dati](../../landing/license-usage-and-guardrails/data-management-best-practices.md). Puoi utilizzarlo per gestire i dati che acquisisci e conservi, applicare filtri e regole di scadenza e controllare la crescita dei dati per rimanere entro i limiti di utilizzo concessi in licenza.
 
 ### Sposta in cartelle {#move-to-folders}
 
