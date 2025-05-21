@@ -78,7 +78,7 @@ Utilizza la tabella seguente per capire quali tipi di set di dati puoi esportare
 
 Guarda il video seguente per una spiegazione end-to-end del flusso di lavoro descritto in questa pagina, i vantaggi dell’utilizzo della funzionalità di esportazione dei set di dati e alcuni casi d’uso consigliati.
 
->[!VIDEO](https://video.tv.adobe.com/v/3424392/)
+>[!VIDEO](https://video.tv.adobe.com/v/3448826?captions=ita)
 
 ## Destinazioni supportati {#supported-destinations}
 
