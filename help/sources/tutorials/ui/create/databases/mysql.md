@@ -2,14 +2,14 @@
 title: Connettere MySQL Ad Experience Platform Utilizzando L’Interfaccia Utente
 description: Scopri come collegare il database MySQL ad Experience Platform utilizzando l’interfaccia utente.
 exl-id: 75e74bde-6199-4970-93d2-f95ec3a59aa5
-source-git-commit: 659af23c6d05f184b745e13ab8545941f3892e7e
+source-git-commit: f4200ca71479126e585ac76dd399af4092fdf683
 workflow-type: tm+mt
 source-wordcount: '540'
 ht-degree: 0%
 
 ---
 
-# Crea una connessione sorgente [!DNL MySQL] nell&#39;interfaccia utente
+# Connetti [!DNL MySQL] ad Experience Platform tramite l&#39;interfaccia utente
 
 Leggere questa guida per scoprire come collegare il database [!DNL MySQL] a Adobe Experience Platform utilizzando l&#39;area di lavoro origini nell&#39;interfaccia utente di Experience Platform.
 

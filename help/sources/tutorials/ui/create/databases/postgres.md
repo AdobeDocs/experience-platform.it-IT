@@ -2,9 +2,9 @@
 title: Connettere PostgreSQL Ad Experience Platform Utilizzando L’Interfaccia Utente
 description: Scopri come collegare il database PostgreSQL ad Experience Platform utilizzando l’area di lavoro delle origini nell’interfaccia utente di Experience Platform.
 exl-id: e556d867-a1eb-4900-b8a9-189666a4f3f1
-source-git-commit: 8cabf1cb86993fdde37d0b9d957f6c8ec23bb237
+source-git-commit: f4200ca71479126e585ac76dd399af4092fdf683
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: '653'
 ht-degree: 0%
 
 ---
@@ -43,19 +43,20 @@ Di seguito è riportato un esempio di stringa di connessione [!DNL PostgreSQL] a
 
 Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro *[!UICONTROL Origini]*. Selezionare la categoria appropriata nel pannello *[!UICONTROL Categorie]* In alternativa, utilizzare la barra di ricerca per passare all&#39;origine specifica che si desidera utilizzare.
 
-Per utilizzare [!DNL PostgreSQL], selezionare la scheda di origine **[!UICONTROL PostgreSQL]** in *[!UICONTROL Database]*, quindi selezionare **[!UICONTROL Configurazione]**.
+Per utilizzare [!DNL PostgreSQL], selezionare la scheda di origine **[!UICONTROL PostgreSQL DB]** in *[!UICONTROL Database]*, quindi selezionare **[!UICONTROL Configurazione]**.
 
 >[!TIP]
 >
 >Le origini nel catalogo delle origini visualizzano l&#39;opzione **[!UICONTROL Configura]** quando un&#39;origine specificata non dispone ancora di un account autenticato. Una volta creato un account autenticato, questa opzione diventa **[!UICONTROL Aggiungi dati]**.
 
+![Catalogo delle origini con la scheda di origine PostgreSQL selezionata.](../../../../images/tutorials/create/postgresql/catalog.png)
 
 
 ## Usa un account esistente {#existing}
 
 Per utilizzare un account esistente, selezionare **[!UICONTROL Account esistente]**, quindi selezionare l&#39;account [!DNL PostgreSQL] che si desidera utilizzare.
 
-![Interfaccia account esistente del flusso di lavoro origini.](../../../../images/tutorials/create/postgresql/catalog.png)
+![Interfaccia account esistente del flusso di lavoro origini.](../../../../images/tutorials/create/postgresql/existing.png)
 
 ## Crea un nuovo account {#create}
 
@@ -63,7 +64,7 @@ Se non disponi di un account esistente, devi crearne uno nuovo fornendo le crede
 
 Per creare un nuovo account, seleziona **[!UICONTROL Nuovo account]**, quindi specifica un nome e, facoltativamente, aggiungi una descrizione per l&#39;account.
 
-![Nuova interfaccia account nel flusso di lavoro di origine con un nome account e una descrizione facoltativa forniti.](../../../../images/tutorials/create/postgresql/existing.png)
+![Nuova interfaccia account nel flusso di lavoro di origine con un nome account e una descrizione facoltativa forniti.](../../../../images/tutorials/create/postgresql/new.png)
 
 ### Connettersi ad Experience Platform in Azure {#azure}
 
@@ -93,7 +94,7 @@ Per utilizzare l&#39;autenticazione di base, selezionare **[!UICONTROL Autentica
 
 Per creare un nuovo account [!DNL PostgreSQL] e connettersi ad Experience Platform su AWS, verificare di essere in una sandbox VA6 e quindi fornire le [credenziali necessarie per l&#39;autenticazione](../../../../connectors/databases/postgres.md#aws).
 
-![La nuova interfaccia account nel flusso di lavoro origini per la connessione ad AWS.](../../../../images/tutorials/create/postgresql/basic-auth.png)
+![La nuova interfaccia account nel flusso di lavoro origini per la connessione ad AWS.](../../../../images/tutorials/create/postgresql/aws.png)
 
 ## Crea un flusso di dati per i dati di [!DNL PostgreSQL]
 

@@ -2,9 +2,9 @@
 title: Connettere MySQL ad Experience Platform utilizzando l’API del servizio Flusso
 description: Scopri come collegare il database MySQL ad Experience Platform utilizzando le API.
 exl-id: 273da568-84ed-4a3d-bfea-0f5b33f1551a
-source-git-commit: 659af23c6d05f184b745e13ab8545941f3892e7e
+source-git-commit: b73ced639100c95f6c62be92d4796a206a688958
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '607'
 ht-degree: 5%
 
 ---
@@ -54,7 +54,7 @@ Per creare un ID connessione di base, effettuare una richiesta POST all&#39;endp
 
 La richiesta seguente crea una connessione di base per [!DNL MySQL] utilizzando l&#39;autenticazione basata su stringa di connessione.
 
-+++Esempio di richiesta View
+Esempio di richiesta +++View
 
 ```shell
 curl -X POST \
@@ -108,7 +108,7 @@ In caso di esito positivo, la risposta restituisce i dettagli della connessione 
 
 La richiesta seguente crea una connessione di base per un&#39;origine [!DNL MySQL] utilizzando l&#39;autenticazione di base.
 
-+++Esempio di richiesta View
+Esempio di richiesta +++View
 
 ```shell
 curl -X POST \
@@ -124,11 +124,12 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params": {
-              "server": "{SERVER}",
-              "database": "{DATABASE}",
-              "username": "{USERNAME}",
-              "password": "{PASSWORD}",
-              "sslMode": "{SSLMODE}"
+              "server": "localhost",
+              "port": "443",
+              "database": "mysql-acme",
+              "username": "acme",
+              "password": "xxxx",
+              "sslMode": "DISABLED"
           }
       },
       "connectionSpec": {
@@ -186,7 +187,7 @@ POST /connections
 
 La richiesta seguente crea una connessione di base per [!DNL MySQL] per connettersi ad Experience Platform su AWS.
 
-+++Esempio di richiesta View
+Esempio di richiesta +++View
 
 ```shell
 curl -X POST \
@@ -202,11 +203,12 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params": {
-              "server": "{SERVER}",
-              "database": "{DATABASE}",
-              "username": "{USERNAME}",
-              "password": "{PASSWORD}",
-              "sslMode": "{SSLMODE}"
+              "server": "localhost",
+              "port": "443",
+              "database": "mysql-acme",
+              "username": "acme",
+              "password": "xxxx",
+              "sslMode": "false"
           }
       },
       "connectionSpec": {
@@ -222,7 +224,7 @@ curl -X POST \
 | `auth.params.database` | Nome del database. |
 | `auth.params.username` | Il nome utente che corrisponde al database. |
 | `auth.params.password` | La password che corrisponde al database. |
-| `auth.params.sslMode` | Il metodo con cui i dati vengono crittografati durante il trasferimento. |
+| `auth.params.sslMode` | Valore booleano che controlla se SSL è applicato o meno, a seconda del supporto del server. Il valore predefinito di questa configurazione è `false`. |
 | `connectionSpec.id` | ID della specifica di connessione [!DNL MySQL]: `26d738e0-8963-47ea-aadf-c60de735468a`. |
 
 +++
