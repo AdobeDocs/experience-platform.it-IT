@@ -5,9 +5,9 @@ feature: Customer AI
 title: Creare segmenti di clienti con punteggi previsti
 description: Al termine di un’esecuzione di previsione, i punteggi di propensione previsti vengono utilizzati automaticamente dai profili. L’arricchimento dei profili con i punteggi di IA per l’analisi dei clienti consente di creare segmenti di clienti per trovare tipi di pubblico in base ai loro punteggi di tendenza. Questa sezione descrive i passaggi da seguire per creare segmenti con il Generatore di segmenti.
 exl-id: ac81f798-f599-4a8d-af25-c00c92e74b4e
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '337'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Al termine di un’esecuzione di previsione, i punteggi di propensione previsti 
 
 Nell&#39;interfaccia utente di Experience Platform, fai clic su **[!UICONTROL Segmenti]** nell&#39;area di navigazione a sinistra, quindi fai clic su **[!UICONTROL Crea segmento]**.
 
-![](../images/user-guide/segments_new.png)
+![Schermata della pagina Segmenti nell&#39;interfaccia utente di Experience Platform che mostra l&#39;opzione per la creazione di un nuovo segmento.](../images/user-guide/segments_new.png)
 
 Viene visualizzato il **Generatore di segmenti**. Dalla colonna sinistra **[!UICONTROL Campi]** e nella scheda **[!UICONTROL Attributi]**, fai clic sulla cartella denominata **[!UICONTROL Profilo individuale XDM]**, quindi fai clic sulla cartella con lo spazio dei nomi della tua organizzazione. La cartella denominata **[!UICONTROL IA per l&#39;analisi dei clienti]** contiene i risultati delle esecuzioni delle previsioni e prende il nome dall&#39;istanza a cui appartengono i punteggi. Fai clic su una cartella di istanze per accedere ai risultati dell’istanza desiderata.
 

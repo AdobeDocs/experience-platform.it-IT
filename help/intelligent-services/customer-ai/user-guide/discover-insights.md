@@ -5,9 +5,9 @@ feature: Customer AI
 title: Scopri gli approfondimenti con IA per l’analisi dei clienti
 description: Questo documento funge da guida per l’interazione con le informazioni approfondite sull’istanza del servizio nell’interfaccia utente di IA per l’analisi dei clienti di Intelligent Services.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
 workflow-type: tm+mt
-source-wordcount: '2099'
+source-wordcount: '2449'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ Per utilizzare le informazioni per IA per l’analisi dei clienti, è necessario
 
 Nell&#39;interfaccia utente di [!DNL Adobe Experience Platform], selezionare **[!UICONTROL Servizi]** nell&#39;area di navigazione a sinistra. Verrà visualizzato il browser *Servizi* in cui sono visualizzati i servizi intelligenti disponibili. Nel contenitore di IA per l&#39;analisi dei clienti, seleziona **[!UICONTROL Apri]**.
 
-![Accesso all&#39;istanza](../images/insights/navigate-to-service.png)
+![Passa all&#39;istanza del servizio IA per l&#39;analisi dei clienti nell&#39;interfaccia utente di Adobe Experience Platform.](../images/insights/navigate-to-service.png)
 
 Viene visualizzata la pagina del servizio Customer AI. In questa pagina vengono elencate le istanze del servizio di IA per l’analisi dei clienti e vengono visualizzate informazioni su di esse, tra cui il nome dell’istanza, il tipo di propensione, la frequenza di esecuzione dell’istanza e lo stato dell’ultimo aggiornamento.
 
@@ -34,17 +34,17 @@ Viene visualizzata la pagina del servizio Customer AI. In questa pagina vengono 
 >
 >Solo le istanze del servizio che hanno completato le esecuzioni con punteggio di successo dispongono di approfondimenti.
 
-![Crea istanza](../images/insights/dashboard.png)
+![Dashboard di IA per l&#39;analisi dei clienti che mostra un elenco di istanze del servizio con i relativi dettagli.](../images/insights/dashboard.png)
 
 Seleziona un nome di istanza del servizio per iniziare.
 
-![Crea istanza](../images/insights/click-the-name.png)
+![Schermata che mostra il processo di selezione del nome di un&#39;istanza del servizio nel dashboard di Customer AI.](../images/insights/click-the-name.png)
 
 Viene quindi visualizzata la pagina Approfondimenti per l&#39;istanza del servizio con l&#39;opzione di selezionare **[!UICONTROL Punteggi più recenti]** o **[!UICONTROL Riepilogo prestazioni]**. La scheda predefinita **[!UICONTROL Ultimi punteggi]** fornisce visualizzazioni dei dati. Le visualizzazioni e ciò che puoi fare con i dati sono spiegati più dettagliatamente in questa guida.
 
 La scheda **[!UICONTROL Riepilogo prestazioni]** mostra i tassi di abbandono o di conversione effettivi per ogni bucket di propensione. Per ulteriori informazioni, consulta la sezione sulle [metriche di riepilogo delle prestazioni](#performance-metrics).
 
-![pagina installazione](../images/insights/landing_page_insights.png)
+![Pagina di destinazione di approfondimenti di Customer AI con varie visualizzazioni e opzioni per l&#39;esplorazione di approfondimenti.](../images/insights/landing_page_insights.png)
 
 ## Dettagli dell’istanza del servizio
 
@@ -61,39 +61,39 @@ Per visualizzare una panoramica dei dettagli dell&#39;istanza del servizio all&#
 - **[!UICONTROL Frequenza di esecuzione]**: la frequenza con cui viene eseguito un punteggio e quando.
 - **[!UICONTROL Definizione punteggio]**: panoramica rapida dell&#39;obiettivo configurato per questa istanza.
 
-![](../images/user-guide/service-instance-panel.png)
+![Pannello dell&#39;istanza del servizio che mostra dettagli quali nome, descrizione, frequenza di punteggio e altre opzioni di configurazione.](../images/user-guide/service-instance-panel.png)
 
 >[!NOTE]
 >
 >Se l’esecuzione di un punteggio non riesce, viene visualizzato un messaggio di errore. Il messaggio di errore è elencato in **Dettagli ultima esecuzione** nella barra a destra, visibile solo per le esecuzioni non riuscite.
 
-![messaggio di esecuzione non riuscito](../images/insights/failed-run.png)
+![Messaggio di errore visualizzato per un&#39;esecuzione con punteggio non riuscito in IA per l&#39;analisi dei clienti.](../images/insights/failed-run.png)
 
 ### Mostra più informazioni a discesa
 
 Il secondo modo per visualizzare ulteriori dettagli per un’istanza del servizio si trova all’interno della pagina Approfondimenti. Seleziona **[!UICONTROL Mostra altro]** in alto a destra per popolare un elenco a discesa. Vengono elencati dettagli quali la definizione del punteggio, quando è stata creata, il tipo di propensione e i set di dati utilizzati. Per ulteriori informazioni su una delle proprietà elencate, visita [Configurazione di un&#39;istanza di IA per l&#39;analisi dei clienti](./configure.md).
 
-![mostra altro](../images/insights/landing-show-more.png)
+![Il popover di anteprima del set di dati di IA per l&#39;analisi dei clienti mostra più set di dati con una chiave codificata a colori per facilitarne l&#39;identificazione.](../images/insights/landing-show-more.png)
 
 ### Popover di anteprima del set di dati di IA per l’analisi dei clienti
 
 Se IA per l&#39;analisi dei clienti utilizza più set di dati, viene fornito un collegamento ipertestuale con etichetta **[!UICONTROL Multipli]** seguito dal numero di set di dati tra parentesi quadre `()`.
 
-![più set di dati](../images/insights/insights-multi-datasets.png)
+![Anteprima di più set di dati con una chiave codificata a colori per identificare facilmente i set di dati utilizzati in IA per l&#39;analisi dei clienti.](../images/insights/insights-multi-datasets.png)
 
 Selezionando il collegamento più set di dati si apre il popover di anteprima del set di dati di IA per l’analisi dei clienti. Ogni colore nell’anteprima rappresenta un set di dati come mostrato dalla chiave colore a sinistra delle colonne del set di dati. In questo esempio, è possibile vedere che solo il **Set di dati 1** contiene la colonna `PROP1`.
 
-![mostra altro](../images/insights/dataset-preview.png)
+![Visualizzazione del popover di anteprima del set di dati con ulteriori dettagli per l&#39;istanza selezionata.](../images/insights/dataset-preview.png)
 
 ### Modificare un’istanza
 
 Per modificare un&#39;istanza, seleziona **[!UICONTROL Modifica]** nell&#39;area di navigazione in alto a destra.
 
-![fare clic sul pulsante Modifica](../images/insights/edit-button.png)
+![Pulsante Modifica nell&#39;interfaccia di IA per l&#39;analisi dei clienti.](../images/insights/edit-button.png)
 
 Viene visualizzata la finestra di dialogo di modifica, che consente di modificare il nome, la descrizione, lo stato e la frequenza di punteggio dell’istanza. Per confermare le modifiche e chiudere la finestra di dialogo, seleziona **[!UICONTROL Salva]** nell&#39;angolo in basso a destra.
 
-![modifica popover](../images/insights/edit-instance.png)
+![Il popover Modifica istanza mostra le opzioni per modificare il nome, la descrizione, lo stato e la frequenza di punteggio di un&#39;istanza di IA per l&#39;analisi dei clienti.](../images/insights/edit-instance.png)
 
 ### Altre azioni
 
@@ -104,7 +104,7 @@ Il pulsante **[!UICONTROL Altre azioni]** si trova nella navigazione in alto a d
 - **[!UICONTROL Punteggi di accesso]**: selezionando **[!UICONTROL Punteggi di accesso]** viene aperta una finestra di dialogo che fornisce un collegamento ai [punteggi di download per l&#39;esercitazione di IA per l&#39;analisi dei clienti](./download-scores.md). La finestra di dialogo fornisce inoltre l&#39;ID del set di dati necessario per effettuare chiamate API.
 - **[!UICONTROL Visualizza cronologia esecuzioni]**: viene visualizzata una finestra di dialogo contenente un elenco di tutte le esecuzioni di punteggio associate all&#39;istanza del servizio.
 
-![altre azioni](../images/insights/more-actions.png)
+![Elenco a discesa Altre azioni che mostra opzioni quali Clona, Elimina, Punteggi di accesso e Visualizza cronologia di esecuzione.](../images/insights/more-actions.png)
 
 ## Riepilogo punteggio {#scoring-summary}
 
@@ -114,33 +114,33 @@ Il riepilogo del punteggio mostra il numero totale di profili con punteggio e li
 >
 >Se si tratta di un punteggio di propensione alla conversione, i punteggi alti vengono visualizzati in verde e i punteggi bassi in rosso. Se prevedi una propensione all’abbandono, questo viene capovolto, i punteggi alti sono in rosso e i punteggi bassi in verde. Il bucket medio rimane giallo indipendentemente dal tipo di propensione scelto.
 
-![riepilogo punteggio](../images/insights/scoring-summary.png)
+![Visualizzazione dei profili con punteggio, suddivisi in categorie, ad alta, media e bassa propensione, ciascuna rappresentata da un colore distinto.](../images/insights/scoring-summary.png)
 
 Puoi passare il cursore del mouse su qualsiasi colore dell’anello per visualizzare informazioni aggiuntive, ad esempio la percentuale e il numero totale di profili appartenenti a un bucket.
 
-![](../images/insights/scoring-ring.png)
+![Visualizzazione dell&#39;anello di punteggio che mostra la distribuzione dei profili nei bucket di alta, media e bassa propensione.](../images/insights/scoring-ring.png)
 
 ## Distribuzione dei punteggi
 
 La scheda **[!UICONTROL Distribuzione dei punteggi]** fornisce un riepilogo visivo della popolazione in base al punteggio. I colori visualizzati nella scheda [!UICONTROL Distribuzione dei punteggi] rappresentano il tipo di punteggio tendenza generato. Passando il puntatore del mouse su una delle distribuzioni di punteggio, viene visualizzato il conteggio esatto che appartiene a tale distribuzione.
 
-![distribuzione dei punteggi](../images/insights/distribution-of-scores.png)
+![Visualizzazione che mostra la distribuzione dei punteggi tra diversi bucket di propensione in Customer AI.](../images/insights/distribution-of-scores.png)
 
 ## Fattori di influenza
 
 Per ogni bucket di punteggio, viene generata una scheda che mostra i primi 10 fattori influenti per tale bucket. I fattori influenti forniscono ulteriori dettagli sul motivo per cui i clienti appartengono a vari bucket di punteggio.
 
-![Fattori di influenza](../images/insights/influential-factors.png)
+![Visualizzazione dei fattori di influenza per ogni bucket di propensione, con evidenziazione dei primi 10 fattori che influenzano il comportamento del cliente.](../images/insights/influential-factors.png)
 
 ### Espansioni dei fattori di influenza
 
 Passando il puntatore del mouse su uno qualsiasi dei principali fattori influenti i dati vengono ulteriormente suddivisi. Viene fornita una panoramica del motivo per cui alcuni profili appartengono a un bucket di propensione. A seconda del fattore, è possibile che vengano forniti valori numerici, categorici o booleani. L’esempio seguente visualizza i valori categorici per regione.
 
-![schermata di approfondimento](../images/insights/drilldown.png)
+![Visualizzazione drill-down che mostra un raggruppamento dettagliato dei fattori influenti per un bucket di propensione selezionato.](../images/insights/drilldown.png)
 
 Inoltre, utilizzando i drill-down, puoi confrontare un fattore di distribuzione se si verifica in due o più bucket di propensione e creare segmenti più specifici con questi valori. L’esempio seguente illustra il primo caso d’uso:
 
-![](../images/insights/drilldown-compare.png)
+![Confronto dei fattori di distribuzione tra i bucket di propensione, evidenziando le differenze nei fattori influenti.](../images/insights/drilldown-compare.png)
 
 Puoi notare che i profili con bassa propensione alla conversione hanno meno probabilità di aver effettuato una visita recente alle pagine web adobe.com. Il fattore &quot;Giorni dall’ultima visita web&quot; ha una copertura solo dell’8% rispetto al 26% nei profili a media propensione. Utilizzando questi numeri, puoi confrontare la distribuzione del fattore all’interno di ciascun bucket. Queste informazioni possono essere utilizzate per dedurre che l’attualità in webvisit non è influente tanto nel bucket di bassa propensione quanto nel bucket di media propensione.
 
@@ -152,9 +152,9 @@ Se si seleziona il pulsante **[!UICONTROL Crea segmento]** in uno qualsiasi dei 
 >
 >Il pulsante **[!UICONTROL Crea segmento]** è disponibile solo se Real-Time Customer Profile è abilitato per il set di dati. Per ulteriori informazioni su come abilitare Real-Time Customer Profile, visitare la [Panoramica del profilo cliente in tempo reale](../../../rtcdp/overview.md).
 
-![Fai clic su Crea segmento](../images/insights/influential-factors-create-segment.png)
+![Pulsante per creare un segmento da fattori influenti negli approfondimenti di Customer AI.](../images/insights/influential-factors-create-segment.png)
 
-![Crea un segmento](../images/insights/create-segment.png)
+![Pulsante per creare un segmento da fattori influenti negli approfondimenti di Customer AI.](../images/insights/create-segment.png)
 
 Il generatore di segmenti viene utilizzato per definire un segmento. Quando si seleziona **[!UICONTROL Crea segmento]** dalla pagina Approfondimenti, IA per l&#39;analisi dei clienti aggiunge automaticamente le informazioni sui bucket selezionati al segmento. Per completare la creazione del segmento, compila i contenitori **Nome** e **Descrizione** che si trovano nella barra a destra dell&#39;interfaccia utente del Generatore di segmenti. Dopo aver assegnato un nome e una descrizione al segmento, seleziona **[!UICONTROL Salva]** in alto a destra.
 
@@ -162,27 +162,27 @@ Il generatore di segmenti viene utilizzato per definire un segmento. Quando si s
 >
 >Poiché i punteggi di tendenza vengono scritti nel singolo profilo, sono disponibili nel Generatore di segmenti come qualsiasi altro attributo di profilo. Quando passi al Generatore di segmenti per creare nuovi segmenti, puoi visualizzare tutti i vari punteggi di tendenza nello spazio dei nomi IA per l’analisi dei clienti.
 
-![Compilazione segmento](../images/insights/segment-saving.png)
+![Interfaccia di salvataggio del segmento che visualizza i campi per inserire il nome e la descrizione del segmento prima del salvataggio.](../images/insights/segment-saving.png)
 
 Per visualizzare il nuovo segmento nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Segmenti]** nel menu di navigazione a sinistra. Viene visualizzata la pagina **[!UICONTROL Sfoglia]** in cui sono visualizzati tutti i segmenti disponibili.
 
-![Tutti i tuoi segmenti](../images/insights/Segments-dashboard.png)
+![Dashboard dei segmenti che visualizza un elenco di tutti i segmenti disponibili nell&#39;interfaccia utente di Experience Platform.](../images/insights/Segments-dashboard.png)
 
 ## Prestazioni storiche {#historical-performance}
 
 La scheda **[!UICONTROL Riepilogo prestazioni]** mostra i tassi di abbandono o di conversione effettivi, separati in ciascuno dei bucket di propensione valutati da IA per l&#39;analisi dei clienti.
 
-![Scheda Riepilogo prestazioni](../images/insights/summary_tab.png)
+![Scheda Riepilogo prestazioni che mostra i tassi di abbandono o di conversione nei diversi bucket di propensione, con opzioni per filtrare per intervallo di date e visualizzare i risultati delle singole esecuzioni di punteggio.](../images/insights/summary_tab.png)
 
 Inizialmente vengono visualizzate solo le tariffe previste (linee tratteggiate). Le percentuali previste vengono visualizzate quando non si è verificata un’esecuzione di punteggio e i dati non sono ancora disponibili. Tuttavia, una volta superata una finestra di risultati, il tasso previsto viene sostituito con un tasso effettivo (linea continua).
 
 Passando il puntatore del mouse sulle righe vengono visualizzati la data e il tasso effettivo/previsto per quel giorno in quel periodo fisso.
 
-![Esempio di bucket](../images/insights/churn_tab.png)
+![Visualizzazione dei bucket di propensione di abbandono che mostra la distribuzione dei profili tra le categorie di propensione alta, media e bassa.](../images/insights/churn_tab.png)
 
 Puoi filtrare l’intervallo di tempo per la frequenza prevista ed effettiva visualizzata. Seleziona l&#39;**icona calendario** ![icona](/help/images/icons/calendar.png)quindi seleziona un nuovo intervallo di date. I risultati in ciascun bucket vengono aggiornati per essere visualizzati entro il nuovo intervallo di date.
 
-![Selettore data](../images/insights/date_selector.png)
+![Selettore data che mostra le opzioni per filtrare i risultati in base a un intervallo di date specifico.](../images/insights/date_selector.png)
 
 ### Percentuali di esecuzione del punteggio individuale
 
@@ -190,7 +190,7 @@ Nella parte inferiore della scheda **[!UICONTROL Riepilogo prestazioni]** vengon
 
 A seconda che si preveda l&#39;abbandono o la conversione, il grafico [!UICONTROL Distribuzione dei punteggi] visualizza la distribuzione dei profili abbandonati/convertiti e non abbandonati/non convertiti in ogni incremento.
 
-![punteggio individuale](../images/insights/scoring_tab.png)
+![Visualizzazione dei singoli risultati di esecuzione del punteggio che mostra la distribuzione dei profili tra categorie abbandonate/convertite e non abbandonate/non convertite.](../images/insights/scoring_tab.png)
 
 ## Valutazione del modello {#model-evaluation}
 
@@ -198,7 +198,7 @@ Oltre a tenere traccia nel tempo dei risultati previsti ed effettivi nella sched
 
 ### Grafico lift
 
-![grafico lift](../images/user-guide/lift-chart.png)
+![Grafico di incremento che mostra il miglioramento del modello predittivo rispetto al targeting casuale. Valori elevati di incremento iniziale del decile indicano un modello forte.](../images/user-guide/lift-chart.png)
 
 Il grafico lift misura il miglioramento nell’utilizzo di un modello predittivo invece del targeting casuale.
 
@@ -209,7 +209,7 @@ Gli indicatori dei modelli di alta qualità includono:
 
 ### Grafico dei guadagni
 
-![grafico dei guadagni](../images/user-guide/gains-chart.png)
+![Grafico dei guadagni che illustra la percentuale cumulativa di risultati positivi ottenuti eseguendo il targeting di utenti ad alta propensione rispetto al targeting casuale.](../images/user-guide/gains-chart.png)
 
 Il grafico dei guadagni cumulativi misura la percentuale di risultati positivi rilevati con punteggi al di sopra di una certa soglia. Dopo aver ordinato i clienti in base al punteggio di tendenza da alto a basso, la popolazione è divisa in decili - 10 gruppi di uguali dimensioni. Un modello perfetto catturerebbe tutti i risultati positivi nei decili con il punteggio più alto. Un metodo di targeting casuale di base acquisisce risultati positivi in proporzione alle dimensioni del gruppo: il targeting del 30% degli utenti catturerebbe il 30% dei risultati.
 
@@ -231,4 +231,4 @@ Questo documento illustra le informazioni fornite da un’istanza del servizio C
 
 Il video seguente illustra come utilizzare IA per l’analisi dei clienti per visualizzare l’output dei modelli e dei fattori influenti.
 
->[!VIDEO](https://video.tv.adobe.com/v/36624?learn=on&quality=12&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/32666?learn=on&quality=12)

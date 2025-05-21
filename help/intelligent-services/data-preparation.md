@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Preparare i dati per l’utilizzo in Intelligent Services
 description: Affinché Intelligent Services possa scoprire informazioni provenienti dai dati degli eventi di marketing, i dati devono essere arricchiti semanticamente e mantenuti in una struttura standard. Per ottenere questo risultato, Intelligent Services utilizza gli schemi Experience Data Model (XDM).
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
 workflow-type: tm+mt
-source-wordcount: '2827'
+source-wordcount: '2951'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,7 @@ Lo schema CEE, come tutti gli schemi ExperienceEvent XDM, acquisisce lo stato de
 
 [!DNL Intelligent Services] utilizza diversi campi chiave all&#39;interno di questo schema per generare informazioni dai dati degli eventi di marketing, che possono essere trovati a livello principale ed espansi per mostrare i relativi sottocampi richiesti.
 
-![](./images/data-preparation/schema-expansion.gif)
+![Demo dell&#39;espansione dello schema nell&#39;interfaccia utente di Adobe Experience Platform, con visualizzazione dei dettagli di navigazione e dei sottocampi.](./images/data-preparation/schema-expansion.gif)
 
 Come tutti gli schemi XDM, il gruppo di campi dello schema CEE è estensibile. In altre parole, è possibile aggiungere campi aggiuntivi al gruppo di campi CEE e, se necessario, è possibile includere varianti diverse in più schemi.
 
@@ -134,19 +134,19 @@ Se non sai quale campo utilizzare come identità principale, contatta i servizi 
 
 Per impostare un&#39;identità primaria, passare allo schema dalla scheda **[!UICONTROL Schemi]** e selezionare il collegamento ipertestuale del nome dello schema per aprire **[!DNL Schema Editor]**.
 
-![Passa allo schema](./images/data-preparation/navigate_schema.png)
+![Navigazione allo schema nell&#39;interfaccia utente di Adobe Experience Platform.](./images/data-preparation/navigate_schema.png)
 
 Quindi, passa al campo che desideri impostare come identità principale e selezionalo. Viene visualizzato il menu **[!UICONTROL Proprietà campo]** per tale campo.
 
-![Selezionare il campo](./images/data-preparation/find_field.png)
+![Processo di selezione del campo desiderato nell&#39;interfaccia utente di Adobe Experience Platform.](./images/data-preparation/find_field.png)
 
 Nel menu **[!UICONTROL Proprietà campo]**, scorri verso il basso fino a trovare la casella di controllo **[!UICONTROL Identità]**. Dopo aver selezionato la casella, viene visualizzata l&#39;opzione per impostare l&#39;identità selezionata come **[!UICONTROL identità primaria]**. Seleziona anche questa casella.
 
-![Seleziona la casella di controllo](./images/data-preparation/set_primary_identity.png)
+![Casella di controllo per impostare l&#39;identità primaria nell&#39;interfaccia utente di Adobe Experience Platform.](./images/data-preparation/set_primary_identity.png)
 
 Successivamente, devi fornire uno spazio dei nomi **[!UICONTROL Identity]** dall&#39;elenco di spazi dei nomi predefiniti nel menu a discesa. In questo esempio, lo spazio dei nomi ECID è selezionato poiché è in uso un ID Adobe Audience Manager `mcid.id`. Seleziona **[!UICONTROL Applica]** per confermare gli aggiornamenti, quindi seleziona **[!UICONTROL Salva]** nell&#39;angolo in alto a destra per salvare le modifiche allo schema.
 
-![Salva le modifiche](./images/data-preparation/select_namespace.png)
+![Menu a discesa che mostra la selezione dello spazio dei nomi ECID nell&#39;interfaccia utente di Adobe Experience Platform.](./images/data-preparation/select_namespace.png)
 
 #### xdm:timestamp {#timestamp}
 
@@ -160,7 +160,7 @@ Questo campo rappresenta il datetime in cui si è verificato l&#39;evento. Quest
 
 Questo campo rappresenta il canale di marketing relativo all’ExperienceEvent. Il campo include informazioni sul tipo di canale, il tipo di supporto e il tipo di posizione.
 
-![](./images/data-preparation/channel.png)
+![Diagramma che mostra la struttura del campo xdm:channel, inclusi i sottocampi type, mediaType e mediaAction.](./images/data-preparation/channel.png)
 
 **Esempio di schema**
 
@@ -198,7 +198,7 @@ I restanti campi chiave sono descritti in questa sezione. Anche se questi campi 
 
 Questo campo è un array di articoli che rappresentano i prodotti selezionati da un cliente, inclusi SKU prodotto, nome, prezzo e quantità.
 
-![](./images/data-preparation/productListItems.png)
+![Il campo xdm:productListItems, inclusi i sottocampi SKU, name, currencyCode, quantity e priceTotal.](./images/data-preparation/productListItems.png)
 
 **Esempio di schema**
 
@@ -227,7 +227,7 @@ Per informazioni complete su ciascuno dei sottocampi richiesti per `xdm:productL
 
 Questo campo contiene informazioni specifiche di Commerce su ExperienceEvent, tra cui il numero dell’ordine di acquisto e le informazioni sul pagamento.
 
-![](./images/data-preparation/commerce.png)
+![Struttura del campo xdm:commerce, inclusi i sottocampi quali ordine, acquisti e pagamenti.](./images/data-preparation/commerce.png)
 
 **Esempio di schema**
 
@@ -265,7 +265,7 @@ Per informazioni complete su ciascuno dei sottocampi richiesti per `xdm:commerce
 
 Questo campo rappresenta i dettagli web relativi all’ExperienceEvent, ad esempio l’interazione, i dettagli della pagina e il referente.
 
-![](./images/data-preparation/web.png)
+![Il campo xdm:web, inclusi i sottocampi come webPageDetails e webReferrer.](./images/data-preparation/web.png)
 
 **Esempio di schema**
 
@@ -295,7 +295,7 @@ Per informazioni complete su ciascuno dei sottocampi richiesti per `xdm:productL
 
 Questo campo contiene informazioni relative alle attività di marketing che sono attive con il punto di contatto.
 
-![](./images/data-preparation/marketing.png)
+![Struttura del campo xdm:marketing, inclusi i sottocampi trackingCode, campaignGroup e campaignName.](./images/data-preparation/marketing.png)
 
 **Esempio di schema**
 

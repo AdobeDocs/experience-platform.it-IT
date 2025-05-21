@@ -5,9 +5,9 @@ feature: Customer AI
 title: Scaricare i punteggi in Customer AI
 description: IA per l’analisi dei clienti consente di scaricare i punteggi nel formato file Parquet.
 exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
 workflow-type: tm+mt
-source-wordcount: '962'
+source-wordcount: '987'
 ht-degree: 3%
 
 ---
@@ -31,11 +31,11 @@ Attualmente, esistono due modi per scaricare i punteggi di Customer AI:
 
 Nell&#39;istanza del servizio per Customer AI Insights, fai clic sul menu a discesa *Altre azioni* nella navigazione in alto a destra, quindi seleziona **[!UICONTROL Punteggi di accesso]**.
 
-![altre azioni](../images/insights/more-actions.png)
+![Menu a discesa Altre azioni che mostra l&#39;opzione &quot;Punteggi di accesso&quot;.](../images/insights/more-actions.png)
 
 Viene visualizzata una nuova finestra di dialogo contenente un collegamento alla documentazione relativa al download dei punteggi e l’ID del set di dati per l’istanza corrente. Copia l’ID del set di dati negli Appunti e procedi al passaggio successivo.
 
-![ID set di dati](../images/download-scores/access-scores.png)
+![Finestra di dialogo Punteggi di accesso che mostra l&#39;ID del set di dati per l&#39;istanza corrente.](../images/download-scores/access-scores.png)
 
 ## Recuperare l’ID batch {#retrieve-your-batch-id}
 
@@ -236,7 +236,6 @@ La risposta contiene un array di dati che può avere una singola voce o un elenc
 | --------- | ----------- |
 | `_links.self.href` | URL della richiesta di GET utilizzato per scaricare un file nella directory. |
 
-
 Copiare il valore `href` per qualsiasi oggetto file nell&#39;array `data`, quindi procedere al passaggio successivo.
 
 ## Scaricare i dati del file
@@ -271,13 +270,13 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 >[!TIP]
 >
->Prima di effettuare la richiesta di GET, accertati di trovarti nella directory o nella cartella corretta in cui vuoi salvare il file.
+>Prima di effettuare la richiesta GET, accertati di trovarti nella directory o nella cartella corretta in cui vuoi salvare il file.
 
 **Risposta**
 
 La risposta scarica il file richiesto nella directory corrente. In questo esempio il nome del file è &quot;filename.parquet&quot;.
 
-![Terminale](../images/download-scores/response.png)
+![Esempio di risposta terminale che mostra una chiamata API riuscita.](../images/download-scores/response.png)
 
 ## Scaricare un segmento configurato con Customer AI {#segment}
 

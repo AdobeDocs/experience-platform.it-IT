@@ -6,9 +6,9 @@ title: Requisiti dei dati in Customer AI
 topic-legacy: Getting started
 description: Scopri di più sugli eventi, gli input e gli output richiesti utilizzati da Customer AI.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
 workflow-type: tm+mt
-source-wordcount: '2551'
+source-wordcount: '2552'
 ht-degree: 1%
 
 ---
@@ -49,8 +49,8 @@ IA per l’analisi dei clienti funziona analizzando i seguenti set di dati per p
 
 - Dati di Adobe Analytics tramite il [connettore di origine di Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
 - Dati Adobe Audience Manager tramite il [connettore di origine Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)
-- [Set di dati evento esperienza](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html?lang=it)
-- [Set di dati evento esperienza del consumatore](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html?lang=it#cee-schema)
+- [Set di dati evento esperienza](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html)
+- [Set di dati evento esperienza del consumatore](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html#cee-schema)
 
 Puoi aggiungere più set di dati da origini diverse se ciascuno di essi condivide lo stesso tipo di identità (spazio dei nomi), ad esempio un ECID. Per ulteriori informazioni sull&#39;aggiunta di più set di dati, visita la [guida utente di IA per l&#39;analisi dei clienti](../customer-ai/user-guide/configure.md).
 
@@ -213,7 +213,7 @@ IA per l’analisi dei clienti genera diversi attributi per singoli profili rite
 
 Puoi trovare il set di dati di output nell&#39;area di lavoro **Set di dati** di Experience Platform. Tutti i set di dati di output di IA per l&#39;analisi dei clienti iniziano con il nome **Punteggi di IA per l&#39;analisi dei clienti - NAME_OF_APP**. Analogamente, tutti gli schemi di output di IA per l&#39;analisi dei clienti iniziano con il nome **Schema di IA per l&#39;analisi dei clienti - Name_of_app**.
 
-![Nome dei set di dati di output in Customer AI](./images/user-guide/cai-schema-name-of-app.png)
+![Convenzione di denominazione per i set di dati di output in IA per l&#39;analisi dei clienti.](./images/user-guide/cai-schema-name-of-app.png)
 
 La tabella seguente descrive i vari attributi trovati nell’output di Customer AI:
 

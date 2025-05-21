@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;guida introduttiva;ia cliente;argomenti popolari;input ia cliente;output ia cliente;risoluzione dei problemi ia cliente;errori ia cliente;customer ai
+keywords: Experience Platform;guida introduttiva;customer ai;argomenti più comuni;input di customer ai;output di customer ai;risoluzione dei problemi di customer ai;customer ai errors
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Risoluzione dei problemi di IA per l’analisi dei clienti
 description: Trova le risposte agli errori comuni in IA per l’analisi dei clienti.
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-source-git-commit: 32c1affecb4cf58412eb91fd90e1a13f4bc43541
+source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
 workflow-type: tm+mt
-source-wordcount: '1755'
+source-wordcount: '1780'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 IA per l’analisi dei clienti visualizza gli errori quando l’apprendimento del modello, il punteggio e la configurazione non riescono. Nella sezione **[!UICONTROL Istanze del servizio]**, una colonna per **[!UICONTROL STATO ULTIMA ESECUZIONE]** visualizza uno dei seguenti messaggi: **[!UICONTROL Operazione completata]**, **[!UICONTROL Problema di formazione]** e **[!UICONTROL Operazione non riuscita]**.
 
-![stato ultima esecuzione](./images/errors/last-run-status.png)
+![Stato ultima esecuzione che mostra esito positivo, problema di formazione o errore.](./images/errors/last-run-status.png)
 
 Se viene visualizzato **[!UICONTROL Non riuscito]** o **[!UICONTROL Problema di formazione]**, puoi selezionare lo stato di esecuzione per aprire un pannello laterale. Il pannello laterale contiene **[!UICONTROL Stato ultima esecuzione]** e **[!UICONTROL Dettagli ultima esecuzione]**. **[!UICONTROL Dettagli ultima esecuzione]** contiene informazioni sul motivo per cui l&#39;esecuzione non è riuscita. Nel caso in cui Customer AI non sia in grado di fornire dettagli sull’errore, contatta il supporto con il codice di errore fornito.
 
@@ -27,13 +27,13 @@ Se viene visualizzato **[!UICONTROL Non riuscito]** o **[!UICONTROL Problema di 
 
 Gli errori di caricamento in modalità incognito di Google Chrome sono presenti a causa di aggiornamenti nelle impostazioni di protezione in modalità incognito di Google Chrome. Il problema è stato affrontato attivamente con Chrome per rendere experience.adobe.com un dominio affidabile.
 
-![Immagine di errore](./images/errors/error.PNG){width=500}
+![Immagine di errore che mostra un esempio di un messaggio di errore di IA per l&#39;analisi dei clienti.](./images/errors/error.PNG){width=500}
 
 ### Correzione consigliata
 
 Per risolvere questo problema è necessario aggiungere experience.adobe.com come sito che può sempre utilizzare i cookie. Per iniziare, passa a **chrome://settings/cookies**. Quindi, scorri verso il basso fino alla sezione **Comportamenti personalizzati**, quindi seleziona il pulsante **Aggiungi** accanto a &quot;Siti che possono sempre utilizzare i cookie&quot;. Nel popover visualizzato, copia e incolla `[*.]experience.adobe.com`, quindi seleziona la casella di controllo **Includi cookie di terze parti** su questo sito. Al termine, seleziona **Aggiungi** e ricarica Customer AI in incognito.
 
-![correzione consigliata](./images/errors/cookies2.gif)
+![Animazione che mostra i passaggi per aggiungere experience.adobe.com come sito che può sempre utilizzare i cookie nelle impostazioni di Chrome.](./images/errors/cookies2.gif)
 
 ## La qualità del modello è scarsa
 
