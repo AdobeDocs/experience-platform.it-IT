@@ -3,9 +3,9 @@ title: Esportare i set di dati nelle destinazioni di archiviazione cloud
 type: Tutorial
 description: Scopri come esportare i set di dati da Adobe Experience Platform nella posizione di archiviazione cloud preferita.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 8b2b40be94bb35f0c6117bfc1d51f8ce282f2b29
+source-git-commit: b423e51e3e048a5dd7c2c15f80c8c1fcf5c2657b
 workflow-type: tm+mt
-source-wordcount: '2732'
+source-wordcount: '2722'
 ht-degree: 7%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 7%
 
 >[!IMPORTANT]
 >
->**Elemento azione**: la versione di Experience Platform[&#128279;](/help/release-notes/latest/latest.md#destinations) di settembre 2024 ha introdotto l&#39;opzione per impostare una data `endTime` per i flussi di dati del set di dati di esportazione. Adobe ha inoltre introdotto una data di fine predefinita del 1° settembre 2025 per tutti i flussi di dati di esportazione del set di dati creati *prima della versione di settembre 2024*.
+>**Elemento azione**: la versione di Experience Platform](/help/release-notes/latest/latest.md#destinations) di [settembre 2024 ha introdotto l&#39;opzione per impostare una data `endTime` per i flussi di dati del set di dati di esportazione. Adobe ha inoltre introdotto una data di fine predefinita del 1° settembre 2025 per tutti i flussi di dati di esportazione del set di dati creati *prima della versione di settembre 2024*.
 >
 >Per uno qualsiasi di questi flussi di dati, devi aggiornare manualmente la data di fine nel flusso di dati prima della data di fine, altrimenti le esportazioni si fermeranno in tale data. Utilizza l’interfaccia utente di Experience Platform per visualizzare quali flussi di dati verranno impostati per l’interruzione il 1° settembre 2025.
 >
@@ -50,16 +50,16 @@ Utilizza la tabella seguente per capire quali tipi di set di dati puoi esportare
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><ul><li>Set di dati di profili ed eventi di esperienza creati nell’interfaccia utente di Experience Platform dopo l’acquisizione o la raccolta di dati tramite Origini, Web SDK, Mobile SDK, Connettore dati di Analytics e Audience Manager.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=it#profile-attribute-datasets">Set di dati snapshot profilo generato dal sistema</a>.</li></td>
+    <td><ul><li>Set di dati di profili ed eventi di esperienza creati nell’interfaccia utente di Experience Platform dopo l’acquisizione o la raccolta di dati tramite Origini, Web SDK, Mobile SDK, Connettore dati di Analytics e Audience Manager.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets">Set di dati snapshot profilo generato dal sistema</a>.</li></td>
   </tr>
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
     <td>Prime</td>
-    <td>Consulta la documentazione di <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=it#datasets"> Adobe Journey Optimizer</a>.</td>
+    <td>Consulta la documentazione di <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a>.</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td>Consulta la documentazione di <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=it#datasets"> Adobe Journey Optimizer</a>.</td>
+    <td>Consulta la documentazione di <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a>.</td>
   </tr>
   <tr>
     <td>Customer Journey Analytics</td>
@@ -78,7 +78,7 @@ Utilizza la tabella seguente per capire quali tipi di set di dati puoi esportare
 
 Guarda il video seguente per una spiegazione end-to-end del flusso di lavoro descritto in questa pagina, i vantaggi dell’utilizzo della funzionalità di esportazione dei set di dati e alcuni casi d’uso consigliati.
 
->[!VIDEO](https://video.tv.adobe.com/v/3448826?captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/3424392/)
 
 ## Destinazioni supportati {#supported-destinations}
 
@@ -280,7 +280,7 @@ Per rimuovere i set di dati da un flusso di dati esistente, effettua le seguenti
 
 ## Diritti di esportazione del set di dati {#licensing-entitlement}
 
-Consulta i documenti di descrizione del prodotto per capire la quantità di dati che hai diritto di esportare per ogni applicazione Experience Platform all’anno. Ad esempio, puoi visualizzare la descrizione del prodotto Real-Time CDP [qui](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+Consulta i documenti di descrizione del prodotto per capire la quantità di dati che hai diritto di esportare per ogni applicazione Experience Platform all’anno. Ad esempio, puoi visualizzare la descrizione del prodotto Real-Time CDP [qui](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 I diritti all’esportazione di dati per diverse applicazioni non sono additivi. Ciò significa, ad esempio, che se acquisti Real-Time CDP Ultimate e Adobe Journey Optimizer Ultimate, il diritto all’esportazione del profilo sarà il più grande tra i due diritti, in base alle descrizioni del prodotto. Il volume di adesioni viene calcolato prendendo il numero totale di profili con licenza e moltiplicandolo per 500 KB per Real-Time CDP Prime o 700 KB per Real-Time CDP Ultimate per determinare il volume di dati a cui hai diritto.
 
@@ -294,7 +294,6 @@ Tieni presente le seguenti limitazioni per il rilascio di disponibilità general
 
 * Experience Platform può esportare più file anche per set di dati di piccole dimensioni. L’esportazione dei set di dati è progettata per l’integrazione tra sistemi e ottimizzata per le prestazioni, pertanto il numero di file esportati non è personalizzabile.
 * I nomi di file esportati non sono attualmente personalizzabili.
-* I set di dati creati tramite API non sono attualmente disponibili per l’esportazione.
 * L’interfaccia utente non ti blocca attualmente l’eliminazione di un set di dati in fase di esportazione in una destinazione. Non eliminare i set di dati da esportare nelle destinazioni. [Rimuovere il set di dati](#remove-dataset) da un flusso di dati di destinazione prima di eliminarlo.
 * Le metriche di monitoraggio per le esportazioni di set di dati sono attualmente combinate con i numeri per le esportazioni di profili, pertanto non riflettono i numeri di esportazione effettivi.
 * I dati con una marca temporale precedente ai 365 giorni sono esclusi dalle esportazioni dei set di dati. Per ulteriori informazioni, visualizza [guardrail per esportazioni di set di dati pianificate](/help/destinations/guardrails.md#guardrails-for-scheduled-dataset-exports)
