@@ -2,9 +2,9 @@
 title: Note sulla versione dell’estensione Adobe Experience Platform Web SDK
 description: Estensione tag Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 5dc5e11962abf760692e0cb424cdd863d1905e87
 workflow-type: tm+mt
-source-wordcount: '2583'
+source-wordcount: '2652'
 ht-degree: 29%
 
 ---
@@ -12,6 +12,24 @@ ht-degree: 29%
 # Note sulla versione dell’estensione Adobe Experience Platform Web SDK
 
 Questo documento descrive le note sulla versione dell’estensione tag Adobe Experience Platform Web SDK. Per le ultime note sulla versione di SDK, consulta le [note sulla versione di Experience Platform Web SDK](/help/web-sdk/release-notes.md).
+
+## Versione 2.30.0, giovedì 21 maggio 2025
+
+**Nuove funzioni**
+
+- Ora puoi specificare un elemento dati quando abiliti i cookie di terze parti.
+- Sono stati aggiunti dei pulsanti di cancellazione ai campi del codice.
+- Contiene [versione 2.27.0](../../../../web-sdk/release-notes.md#2-27-0) di Adobe Experience Platform Web SDK.
+
+**Correzioni e miglioramenti**
+
+- È stata aggiunta la convalida per impedire l&#39;impostazione `onBeforeLinkClickSend` quando il raggruppamento di eventi è abilitato.
+
+## Versione 2.29.1, venerdì 8 maggio 2025
+
+**Correzioni e miglioramenti**
+
+- È stato risolto un problema a causa del quale le impostazioni non venivano salvate quando si faceva clic immediatamente su &quot;salva&quot; dopo la modifica.
 
 ## Versione 2.29.0 - 5 marzo 2025
 
@@ -370,7 +388,7 @@ Contiene la versione 2.3.0 della libreria dell’SDK per web di Adobe Experience
 Tali decisioni vengono restituite dal comando `sendEvent` solo se `renderDecisions` è impostato su false.
    - È stato aggiunto un evento `Decisions Received` che viene attivato quando le decisioni diventano disponibili.
 - Sono state unite più notifiche di personalizzazione in una singola chiamata server.
-- È stato risolto un problema in ID unione eventi a causa del quale veniva reimpostato ogni volta che si faceva riferimento all’elemento dati.
+- È stato risolto un problema nell’ID unione eventi a causa del quale veniva reimpostato ogni volta che si faceva riferimento all’elemento dati.
 - L’azione `setCustomerIds` è stata rinominata `syncIdentity`.
 - È stato aggiunto un comando `getIdentity`. Per il momento questo può essere utilizzato solo tramite codice personalizzato.
 - L&#39;abilitazione del debug con `_satellite` ora abilita il debug in Adobe Experience Platform Web SDK.
