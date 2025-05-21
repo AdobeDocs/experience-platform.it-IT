@@ -307,5 +307,5 @@ Il seguente video ha lo scopo di chiarire come acquisire dati utilizzando il con
 >
 > L&#39;interfaccia utente [!DNL Experience Platform] mostrata nel video seguente non è aggiornata. Per le schermate e le funzionalità più recenti dell’interfaccia utente, consulta la documentazione precedente.
 
->[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3430258?quality=12&learn=on&captions=ita)
 
