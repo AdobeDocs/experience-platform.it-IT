@@ -2,9 +2,9 @@
 title: Interfaccia utente per le impostazioni delle identità
 description: Scopri come utilizzare l’interfaccia utente delle impostazioni di identità.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 6efd9c8fd1acce08027905f2e3c005a88a429a12
+source-git-commit: 808562ac7b3bf91c4d133bc1d2106cfc3b0c9c84
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '646'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Se disponi di una sandbox esistente che, dopo aver abilitato le impostazioni di identità, richiede che i grafici compressi non vengano compressi (&quot;corretti&quot;), contatta il team del tuo account di Adobe.
+>[!DNL Identity Graph Linking Rules] è ora generalmente disponibile. Se disponi di una sandbox esistente che, dopo aver abilitato le impostazioni di identità, richiede che i grafici compressi non vengano compressi (&quot;corretti&quot;), contatta il supporto Adobe.
 
 Le impostazioni di identità sono una funzione dell’interfaccia utente di Adobe Experience Platform Identity Service che consente di designare spazi dei nomi univoci e configurare la priorità dello spazio dei nomi.
 

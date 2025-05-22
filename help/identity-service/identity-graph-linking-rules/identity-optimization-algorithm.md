@@ -2,9 +2,9 @@
 title: Algoritmo di ottimizzazione identità
 description: Scopri l’algoritmo di ottimizzazione delle identità in Identity Service.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
+source-git-commit: 0587ddf1012adb13e6d399953839735f73fe151e
 workflow-type: tm+mt
-source-wordcount: '1527'
+source-wordcount: '1580'
 ht-degree: 4%
 
 ---
@@ -49,7 +49,7 @@ Gli spazi dei nomi in Identity Service hanno un ordine di importanza relativo im
 
 Per informazioni approfondite sulla priorità dello spazio dei nomi e sulle relative funzionalità e utilizzi completi, leggere la [guida sulla priorità dello spazio dei nomi](./namespace-priority.md).
 
-![livelli del grafico e priorità dello spazio dei nomi](../images/namespace-priority/graph-layers.png)
+![I livelli del grafico e la priorità dello spazio dei nomi.](../images/namespace-priority/graph-layers.png "I livelli del grafico e la priorità dello spazio dei nomi."){zoomable="yes"}
 
 ## Processo {#process}
 
@@ -68,7 +68,7 @@ Quando il vincolo dello spazio dei nomi univoco viene violato, l’Algoritmo di 
 * Il grafico verrà ristabilito in base all’ordine indicato sopra. Se l’aggiunta del collegamento viola il vincolo del limite (ad esempio, il grafico contiene due o più identità con uno spazio dei nomi univoco), i collegamenti vengono rimossi.
 * Il grafico risultante sarà quindi conforme al vincolo dello spazio dei nomi univoco configurato.
 
-![Diagramma che visualizza l&#39;algoritmo di ottimizzazione delle identità.](../images/ido_algorithm.png)
+![Diagramma che visualizza l&#39;algoritmo di ottimizzazione delle identità.](../images/ido_algorithm.png "Diagramma che visualizza l&#39;algoritmo di ottimizzazione delle identità."){zoomable="yes"}
 
 ## Scenari di esempio per l’algoritmo di ottimizzazione delle identità
 
@@ -95,7 +95,7 @@ In questo esempio, sia CRMID che E-mail sono designati come spazi dei nomi univo
 * Tuttavia, a causa della configurazione univoca dello spazio dei nomi che imposta un massimo di uno spazio dei nomi CRMID e di uno spazio dei nomi E-mail per grafico, l’algoritmo di ottimizzazione delle identità divide il grafico in due.
    * Infine, poiché John è l&#39;ultimo utente autenticato, l&#39;ECID che rappresenta il laptop, rimane collegato al suo grafo invece di quello di Jane.
 
-![caso dispositivo condiviso uno](../images/identity-settings/shared-device-case-one.png)
+![Caso uno del dispositivo condiviso.](../images/identity-settings/shared-device-case-one.png "Caso uno del dispositivo condiviso."){zoomable="yes"}
 
 >[!TAB Esempio due]
 
@@ -112,7 +112,7 @@ In questo esempio, lo spazio dei nomi CRMID è designato come spazio dei nomi un
    * Di conseguenza, l&#39;algoritmo di ottimizzazione identità rimuove il collegamento precedente, che in questo caso è il CRMID di Jane, collegato in `timestamp=1`.
    * Tuttavia, anche se il CRMID di Jane non esisterà più come grafico sul servizio Identity, persisterà ancora come profilo sul Profilo cliente in tempo reale. Questo perché un grafo di identità deve contenere almeno due identità collegate e, come risultato della rimozione dei collegamenti, il CRMID di Jane non ha più un&#39;altra identità a cui collegarsi.
 
-![shared-device-case-two](../images/identity-settings/shared-device-case-two.png)
+![Caso due del dispositivo condiviso.](../images/identity-settings/shared-device-case-two.png "Caso due del dispositivo condiviso."){zoomable="yes"}
 
 >[!ENDTABS]
 
@@ -137,7 +137,7 @@ In questo esempio, gli spazi dei nomi CRMID e E-mail sono designati come univoci
 
 Con l’algoritmo di ottimizzazione delle identità, i valori di identità errati, come e-mail o numeri di telefono falsi, non vengono propagati attraverso diversi grafici di identità.
 
-![e-mail non valida](../images/identity-settings/bad-email.png)
+![Diagramma di una cattiva acquisizione di e-mail.](../images/identity-settings/bad-email.png "Diagramma di un&#39;acquisizione di e-mail non valida."){zoomable="yes"}
 
 ## Associazione evento anonimo
 
@@ -154,7 +154,7 @@ Per comprendere meglio il funzionamento dell’associazione anonima degli eventi
       * Prima dell&#39;accesso iniziale prima di `timestamp=1`; e
       * Tutte le attività che lui o Nora hanno svolto durante la navigazione anonima tra il primo e il secondo accesso di Kevin.
 
-![anon-event-association](../images/identity-settings/anon-event-association.png)
+![Diagramma dell&#39;associazione anonima degli eventi.](../images/identity-settings/anon-event-association.png "Diagramma dell&#39;associazione anonima degli eventi."){zoomable="yes"}
 
 
 ## Passaggi successivi

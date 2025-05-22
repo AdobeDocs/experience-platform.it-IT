@@ -2,10 +2,10 @@
 title: Guida All’Implementazione Per Le Regole Di Collegamento Del Grafico Di Identità
 description: Scopri i passaggi consigliati da seguire per l’implementazione dei dati con le configurazioni delle regole di collegamento del grafico identità.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
+source-git-commit: 0587ddf1012adb13e6d399953839735f73fe151e
 workflow-type: tm+mt
-source-wordcount: '1864'
-ht-degree: 6%
+source-wordcount: '1955'
+ht-degree: 5%
 
 ---
 
@@ -41,7 +41,7 @@ Assicurati che lo spazio dei nomi univoco con la priorità più elevata sia semp
 
 Se non disponi di uno spazio dei nomi univoco per rappresentare gli identificatori delle persone, potresti ottenere un grafico che collega più identificatori delle persone allo stesso ECID. In questo esempio, sia B2BCRM che B2CCRM sono collegati allo stesso ECID allo stesso tempo. Questo grafico suggerisce che Tom, usando il suo account di accesso B2C, ha condiviso un dispositivo con Summer, usando il suo account di accesso B2B. Tuttavia, il sistema riconoscerà che si tratta di un profilo (compressione del grafico).
 
-![Uno scenario grafico in cui due identificatori di persona sono collegati allo stesso ECID.](../images/graph-examples/multi_namespaces.png)
+![Uno scenario grafico in cui due identificatori di persona sono collegati allo stesso ECID.](../images/graph-examples/multi_namespaces.png "Uno scenario grafico in cui due identificatori di persona sono collegati allo stesso ECID."){zoomable="yes"}
 
 +++
 
@@ -49,7 +49,7 @@ Se non disponi di uno spazio dei nomi univoco per rappresentare gli identificato
 
 Dato uno spazio dei nomi univoco, (in questo caso un CRMID invece di due spazi dei nomi diversi), Identity Service è in grado di distinguere l’identificatore della persona più recente associato all’ECID. In questo esempio, poiché esiste un CRMID univoco, Identity Service è in grado di riconoscere uno scenario di &quot;dispositivo condiviso&quot;, in cui due entità condividono lo stesso dispositivo.
 
-![Uno scenario di grafico dei dispositivi condiviso, in cui due identificatori di persona sono collegati allo stesso ECID, ma il collegamento precedente viene rimosso.](../images/graph-examples/crmid_only_multi.png)
+![Uno scenario di grafico dei dispositivi condiviso, in cui due identificatori di persona sono collegati allo stesso ECID, ma il collegamento precedente viene rimosso.](../images/graph-examples/crmid_only_multi.png "Uno scenario di grafico dei dispositivi condiviso, in cui due identificatori di persona sono collegati allo stesso ECID, ma il collegamento precedente viene rimosso."){zoomable="yes"}
 
 +++
 
@@ -149,7 +149,7 @@ Pertanto, è consigliabile inviare solo un identificatore di persona con i tuoi 
 
 Nella simulazione del grafico, questa acquisizione potrebbe avere un aspetto simile a:
 
-![L&#39;interfaccia utente di simulazione del grafico con un grafico di esempio sottoposto a rendering.](../images/implementation/example-graph.png)
+![L&#39;interfaccia utente di simulazione del grafico con un grafico di esempio di cui è stato eseguito il rendering.](../images/implementation/example-graph.png "L&#39;interfaccia utente di simulazione del grafico con un grafico di esempio sottoposto a rendering."){zoomable="yes"}
 
 >[!TAB Eventi autenticati senza identificatori di persona]
 
@@ -193,7 +193,7 @@ Se i dati lo richiedono, devi innanzitutto creare gli spazi dei nomi appropriati
 
 ## Usa strumento di simulazione grafico {#graph-simulation}
 
-Quindi, passa allo strumento di simulazione del grafico [&#128279;](./graph-simulation.md) nell&#39;area di lavoro dell&#39;interfaccia utente di Identity Service. Puoi utilizzare lo strumento di simulazione del grafico per simulare grafici di identità, creati con diverse configurazioni di spazio dei nomi e priorità dello spazio dei nomi univoche.
+Quindi, passa allo strumento di simulazione del grafico [](./graph-simulation.md) nell&#39;area di lavoro dell&#39;interfaccia utente di Identity Service. Puoi utilizzare lo strumento di simulazione del grafico per simulare grafici di identità, creati con diverse configurazioni di spazio dei nomi e priorità dello spazio dei nomi univoche.
 
 Creando diverse configurazioni, puoi utilizzare lo strumento di simulazione del grafico per scoprire e comprendere meglio in che modo l’algoritmo di ottimizzazione delle identità e alcune configurazioni possono influenzare il comportamento del grafico.
 
@@ -201,7 +201,7 @@ Creando diverse configurazioni, puoi utilizzare lo strumento di simulazione del 
 
 Per avere un&#39;idea migliore del comportamento del grafico, passa alla [interfaccia utente delle impostazioni delle identità](./identity-settings-ui.md) nell&#39;area di lavoro dell&#39;interfaccia utente di Identity Service. Per accedere all&#39;interfaccia utente delle impostazioni delle identità, seleziona **[!UICONTROL Identità]** nell&#39;area di navigazione a sinistra, quindi seleziona **[!UICONTROL Impostazioni]**.
 
-![Pagina di esplorazione delle identità con il pulsante Impostazioni evidenziato.](../images/implementation/settings.png)
+![La pagina di esplorazione delle identità con il pulsante Impostazioni evidenziato.](../images/implementation/settings.png "Pagina di esplorazione delle identità con il pulsante Impostazioni evidenziato."){zoomable="yes"}
 
 Utilizza l’interfaccia utente delle impostazioni di identità per designare gli spazi dei nomi univoci e configurare gli spazi dei nomi in ordine di priorità. Una volta completata l’applicazione delle impostazioni, attendi almeno sei ore prima di poter procedere all’acquisizione dei dati, poiché sono necessarie almeno sei ore affinché le nuove impostazioni vengano applicate al servizio Identity.
 
@@ -249,11 +249,11 @@ Utilizza il dashboard delle identità per ottenere informazioni sullo stato dei 
 
 Selezionare i puntini di sospensione (`...`), quindi selezionare **[!UICONTROL Visualizza altri]** per ulteriori informazioni e per verificare che non siano presenti grafici compressi.
 
-![Dashboard delle identità nell&#39;area di lavoro dell&#39;interfaccia utente di Identity Service.](../images/implementation/identity_dashboard.png)
+![Dashboard delle identità nell&#39;area di lavoro dell&#39;interfaccia utente di Identity Service.](../images/implementation/identity_dashboard.png "Dashboard delle identità nell&#39;area di lavoro dell&#39;interfaccia utente di Identity Service."){zoomable="yes"}
 
 Utilizzare la finestra visualizzata per visualizzare informazioni sui grafici compressi. In questo esempio, sia e-mail che telefono sono contrassegnati come spazio dei nomi univoco, pertanto, non vi sono grafici compressi nella sandbox.
 
-![Finestra popup per grafici con più identità.](../images/implementation/graphs.png)
+![Finestra popup per grafici con più identità.](../images/implementation/graphs.png "Finestra popup per grafici con più identità."){zoomable="yes"}
 
 ## Appendice {#appendix}
 
@@ -269,13 +269,13 @@ Il grafico seguente simula uno scenario di loginID &quot;penzolante&quot;. In qu
 
 In questo esempio, `{loginID: ID_C}` viene lasciato scollegato da un CRMID. Pertanto, l’entità persona a cui deve essere associato questo loginID rimane ambigua.
 
-![Esempio di un grafico con uno scenario di loginID &quot;pendente&quot;.](../images/graph-examples/dangling_example.png)
+![Esempio di un grafico con uno scenario di loginID &quot;pendente&quot;.](../images/graph-examples/dangling_example.png "Esempio di un grafico con uno scenario loginID oscillante."){zoomable="yes"}
 
 >[!TAB loginID collegato a un CRMID]
 
 In questo esempio, `{loginID: ID_C}` è collegato a `{CRMID: Tom}`. Pertanto, il sistema è in grado di rilevare che questo loginID è associato a Tom.
 
-![LoginID collegato a un CRMID.](../images/graph-examples/id_c_tom.png)
+![LoginID è collegato a un CRMID.](../images/graph-examples/id_c_tom.png "LoginID collegato a un CRMID."){zoomable="yes"}
 
 >[!TAB loginID è collegato a un altro CRMID]
 
@@ -283,7 +283,7 @@ In questo esempio, `{loginID: ID_C}` è collegato a `{CRMID: Summer}`. Pertanto,
 
 In questo esempio viene inoltre mostrato che Tom e Summer devono separare le entità persona che condividono un dispositivo, rappresentato da `{ECID: 111}`.
 
-![LoginID collegato a un altro CRMID.](../images/graph-examples/id_c_summer.png)
+![LoginID è collegato a un altro CRMID.](../images/graph-examples/id_c_summer.png "LoginID collegato a un altro CRMID."){zoomable="yes"}
 
 >[!ENDTABS]
 

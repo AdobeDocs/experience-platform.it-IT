@@ -2,9 +2,9 @@
 title: Guida alla risoluzione dei problemi per le regole di collegamento del grafico identità
 description: Scopri come risolvere i problemi comuni nelle regole di collegamento del grafico delle identità.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
+source-git-commit: c9b5de33de91b93f179b4720f692eb876e94df72
 workflow-type: tm+mt
-source-wordcount: '3285'
+source-wordcount: '3295'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Durante il test e la convalida di [!DNL Identity Graph Linking Rules], potrebber
 
 Il diagramma seguente è una rappresentazione semplificata del modo in cui i dati fluiscono in Adobe Experience Platform e Applications. Utilizza questo diagramma come riferimento per comprendere meglio i contenuti di questa pagina.
 
-![Diagramma del flusso dell&#39;acquisizione dei dati in Identity Service.](../images/troubleshooting/dataflow_in_identity.png)
+![Diagramma del flusso dell’acquisizione dei dati in Identity Service.](../images/troubleshooting/dataflow_in_identity.png "Diagramma del flusso dell&#39;acquisizione dei dati in Identity Service."){zoomable="yes"}
 
 È importante notare i seguenti fattori:
 
@@ -401,6 +401,6 @@ In generale, il test su una sandbox di sviluppo dovrebbe simulare i casi d’uso
 
 ### Come posso verificare che questa funzione funzioni come previsto?
 
-Utilizza lo strumento di simulazione del grafico [&#128279;](./graph-simulation.md) per verificare che la funzione funzioni a un singolo livello di grafico.
+Utilizza lo strumento di simulazione del grafico [](./graph-simulation.md) per verificare che la funzione funzioni a un singolo livello di grafico.
 
 Per convalidare la funzionalità a livello di sandbox, fai riferimento alla sezione [!UICONTROL Conteggio dei grafici con più spazi dei nomi] nel dashboard delle identità.

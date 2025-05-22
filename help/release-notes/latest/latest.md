@@ -2,9 +2,9 @@
 title: Note sulla versione di Adobe Experience Platform - Maggio 2025
 description: Note sulla versione di Adobe Experience Platform di maggio 2025.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 8f1538efc96c8dc47a505511ec7f064b07f124c8
+source-git-commit: ad9ec9c3177c25e2207b67b4c939c3f6fa97883f
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1171'
 ht-degree: 51%
 
 ---
@@ -84,7 +84,7 @@ Utilizza Identity Service di Adobe Experience Platform per creare una panoramica
 
 | Funzione | Descrizione |
 | --- | --- |
-| Introduzione a [!DNL Identity Graph Linking Rules] | [!DNL Identity Graph Linking Rules] è progettato per aiutarti a mantenere accurati i profili dei clienti per il marketing personalizzato evitando la compressione del grafico.<ul><li>Utilizza lo strumento [Simulazione grafico](../../identity-service/identity-graph-linking-rules/graph-simulation.md) per testare e convalidare le configurazioni.</li><li>Consulta la [dashboard delle identità](../../identity-service/identity-graph-linking-rules/implementation-guide.md#validate-your-graphs) per monitorare eventuali istanze di compressione del grafico nell&#39;organizzazione.</li><li>Per iniziare, leggere la [[!DNL Identity Graph Linking Rules] guida all&#39;implementazione](../../identity-service/identity-graph-linking-rules/implementation-guide.md).</li></ul> **Nota**: verranno apportate modifiche ai dati finché non configurerai manualmente le impostazioni di identità. |
+| [!DNL Identity Graph Linking Rules] | [!DNL Identity Graph Linking Rules] è ora generalmente disponibile. [!DNL Identity Graph Linking Rules] evita il &quot;collasso del grafico&quot;, garantendo profili cliente distinti e precisi per il marketing personalizzato in Experience Platform &amp; Applications. Le caratteristiche principali includono:<ul><li>[Strumento di simulazione grafico](../../identity-service/identity-graph-linking-rules/graph-simulation.md): Esplorare l&#39;algoritmo e verificare le configurazioni delle impostazioni di identità.</li><li> [Impostazioni identità](../../identity-service/identity-graph-linking-rules/identity-settings-ui.md): Configura spazi dei nomi univoci e imposta le priorità.</li><li>[Dashboard identità](../../identity-service/identity-graph-linking-rules/implementation-guide.md#validate-your-graphs): monitora i grafici e convalida le impostazioni di identità.</li></ul> **Nota**: i dati non verranno modificati finché non configuri manualmente le impostazioni di identità. |
 
 {style="table-layout:auto"}
 
