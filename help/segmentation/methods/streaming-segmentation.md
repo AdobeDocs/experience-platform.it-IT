@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guida alla segmentazione in streaming
 description: Scopri la segmentazione in streaming, compresi cosa è, come creare un pubblico valutato utilizzando la segmentazione in streaming e come visualizzare i tipi di pubblico creati utilizzando la segmentazione in streaming.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: cd22213be0dbc2e5a076927e560f1b23b467b306
+source-git-commit: 8523ba35eab80a7496e17cb0ceb3e46a78dd6058
 workflow-type: tm+mt
-source-wordcount: '2013'
+source-wordcount: '2022'
 ht-degree: 2%
 
 ---
@@ -140,6 +140,8 @@ Inoltre, l’annullamento del riconoscimento del segmento, in modo simile alla q
 
 Per combinare i dati provenienti sia da origini batch che da origini in streaming, è necessario separare i componenti batch e in streaming in tipi di pubblico separati.
 
+### Attributo profilo ed evento esperienza {#profile-and-event}
+
 Ad esempio, prendiamo in considerazione i due tipi di pubblico di esempio seguenti:
 
 | Pubblico | Schema | Tipo di Source | Definizione query | ID pubblico |
@@ -159,7 +161,9 @@ WHEN(<= 24 hours before now)])
 
 Il pubblico risultante *sarà* valutato utilizzando la segmentazione in streaming, poiché sfrutta l&#39;appartenenza del pubblico batch facendo riferimento al componente pubblico batch.
 
-Tuttavia, se desideri combinare due tipi di pubblico con i dati dell&#39;evento, **non è possibile** semplicemente combinare i due eventi. È necessario creare entrambi i tipi di pubblico, quindi creare un altro pubblico che utilizza `inSegment` per fare riferimento a entrambi.
+### Più eventi esperienza {#two-events}
+
+Se vuoi combinare più tipi di pubblico con i dati dell&#39;evento, **non puoi** semplicemente combinare gli eventi. È necessario creare un pubblico per ogni evento, quindi creare un altro pubblico che utilizza `inSegment` per fare riferimento a tutti i tipi di pubblico.
 
 Ad esempio, supponiamo che tu abbia due tipi di pubblico, entrambi contenenti i dati dello schema dell’evento esperienza:
 

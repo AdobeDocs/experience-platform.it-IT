@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Scadenze degli eventi esperienza
 description: Questo documento fornisce indicazioni generali sulla configurazione dei tempi di scadenza per singoli eventi esperienza all’interno di un set di dati di Adobe Experience Platform.
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: 05479dcfd1a375b3589ce212168f324aa72af4ba
+source-git-commit: e85122a0f6acf2f3cb3960d89faa70220692ac23
 workflow-type: tm+mt
-source-wordcount: '872'
+source-wordcount: '885'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,8 @@ ht-degree: 0%
 In Adobe Experience Platform puoi configurare i tempi di scadenza per tutti gli eventi esperienza acquisiti in un set di dati abilitato per [Profilo cliente in tempo reale](./home.md). Questo ti consente di rimuovere automaticamente dall’archivio profili i dati che non sono più validi o utili per i tuoi casi d’uso.
 
 Per informazioni su come gestire le scadenze degli eventi esperienza nei set di dati, consulta la [guida dell&#39;interfaccia utente del set di dati](../catalog/datasets/user-guide.md#data-retention-policy).
+
+![Finestra di dialogo che visualizza la conservazione del set di dati e le impostazioni disponibili.](./images/event-expirations/set-data-retention-dialog.png) {width="500" zoomable="yes"}
 
 >[!IMPORTANT]
 >
