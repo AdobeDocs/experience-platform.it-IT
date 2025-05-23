@@ -165,7 +165,7 @@ Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;ese
 
 Il video seguente illustra inoltre i passaggi per configurare una destinazione [!DNL Facebook] e attivare i tipi di pubblico.
 
->[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
+>[!VIDEO](https://video.tv.adobe.com/v/3411786/?quality=12&learn=on&captions=ita)
 
 >[!NOTE]
 >
