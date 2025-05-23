@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Nozioni di base sulla composizione dello schema
 description: Scopri gli schemi Experience Data Model (XDM) e gli elementi di base, i principi e le best practice per la composizione di schemi in Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: dcb6770d739d0da5cfa339584a769f5311a8c7e1
 workflow-type: tm+mt
-source-wordcount: '4373'
+source-wordcount: '4350'
 ht-degree: 8%
 
 ---
@@ -55,24 +55,24 @@ Sia gli schemi record che le serie temporali contengono una mappa di identità (
 >title="Identità negli schemi"
 >abstract="Le identità sono campi chiave di uno schema che possono essere utilizzati per identificare un soggetto, ad esempio un indirizzo e-mail o un ID di marketing. Questi campi vengono utilizzati per creare il grafo delle identità per ogni singolo utente e generare profili cliente. Per ulteriori informazioni sulle identità negli schemi, consulta la documentazione."
 
-Gli schemi vengono utilizzati per acquisire i dati in Experience Platform. Questi dati possono essere utilizzati in più servizi per creare una singola vista unificata di una singola entità. Pertanto, durante la progettazione di schemi per le identità dei clienti, è importante considerare quali campi possono essere utilizzati per identificare un soggetto, indipendentemente da dove possono provenire i dati.
+Gli schemi definiscono la struttura dei dati acquisiti in Experience Platform. Questi dati alimentano più servizi all’interno della Platform e aiutano a creare un’unica vista unificata di ogni individuo. Quindi, durante la progettazione degli schemi, considera con attenzione quali campi contrassegnare come identità: questi controllano il modo in cui i profili vengono uniti nei diversi set di dati.
 
 Per facilitare questo processo, i campi chiave all’interno degli schemi possono essere contrassegnati come identità. Al momento dell&#39;acquisizione dei dati, i dati contenuti in tali campi vengono inseriti nel &quot;[!UICONTROL grafo identità]&quot; dell&#39;utente. È quindi possibile accedere ai dati del grafico da [[!DNL Real-Time Customer Profile]](../../profile/home.md) e altri servizi Experience Platform per fornire una visualizzazione combinata di ogni singolo cliente.
 
 I campi comunemente contrassegnati come &quot;[!UICONTROL Identità]&quot; includono: indirizzo e-mail, numero di telefono, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=it), ID CRM o altri campi ID univoci. Considera eventuali identificatori univoci specifici dell&#39;organizzazione, in quanto potrebbero essere validi anche per i campi &quot;[!UICONTROL Identity]&quot;.
 
-È importante considerare le identità dei clienti durante la fase di pianificazione dello schema per garantire che i dati vengano raccolti per creare il profilo più solido possibile. Per ulteriori informazioni su come le informazioni sulle identità possono aiutarti a fornire esperienze digitali ai tuoi clienti, consulta la [Panoramica del servizio Identity](../../identity-service/home.md). Consulta il documento sulle best practice per la modellazione dati per [suggerimenti sull&#39;utilizzo delle identità durante la creazione di uno schema](./best-practices.md#data-validation-fields).
+Per ulteriori informazioni su come le informazioni sulle identità possono aiutarti a fornire esperienze digitali ai tuoi clienti, consulta la [Panoramica del servizio Identity](../../identity-service/home.md). Consulta il documento sulle best practice per la modellazione dati per [suggerimenti sull&#39;utilizzo delle identità durante la creazione di uno schema](./best-practices.md#data-validation-fields).
 
 Esistono due modi per inviare dati di identità ad Experience Platform:
 
 1. Aggiunta di descrittori di identità ai singoli campi tramite l&#39;[interfaccia utente dell&#39;editor di schemi](../ui/fields/identity.md) o utilizzando l&#39;[API del Registro di sistema dello schema](../api/descriptors.md#create)
-1. Utilizzo di un campo [`identityMap`](#identityMap)
+2. Utilizzo di un campo [`identityMap`](#identityMap)
 
 #### `identityMap` {#identityMap}
 
 `identityMap` è un campo di tipo mappa che descrive i vari valori di identità di un individuo, insieme ai relativi spazi dei nomi associati. Questo campo può essere utilizzato per fornire informazioni sull’identità per gli schemi, anziché definire valori di identità all’interno della struttura dello schema stesso.
 
-L&#39;inconveniente principale dell&#39;utilizzo di `identityMap` è che le identità diventano incorporate nei dati e di conseguenza meno visibili. Se acquisisci dati non elaborati, devi invece definire singoli campi di identità all’interno della struttura dello schema effettiva.
+L&#39;inconveniente principale dell&#39;utilizzo di `identityMap` è che i valori di identità sono nidificati e potrebbero essere più difficili da utilizzare negli strumenti che si aspettano campi di identità di livello superiore, come il Generatore di segmenti o alcune integrazioni di terze parti.
 
 >[!NOTE]
 >
@@ -129,17 +129,17 @@ La tabella seguente suddivide le modifiche supportate durante la modifica di sch
 
 | Modifiche supportate | Modifiche che causano interruzioni (non supportato) |
 | --- | --- |
-| <ul><li>Aggiunta di nuovi campi alla risorsa</li><li>Impostazione di un campo obbligatorio come facoltativo</li><li>Introduzione di nuovi campi obbligatori*</li><li>Modifica del nome visualizzato e della descrizione della risorsa</li><li>Abilitazione dello schema per la partecipazione al profilo</li></ul> | <ul><li>Rimozione dei campi definiti in precedenza</li><li>Ridenominazione o ridefinizione di campi esistenti</li><li>Rimozione o limitazione dei valori di campo precedentemente supportati</li><li>Spostamento dei campi esistenti in una posizione diversa nella struttura</li><li>Eliminazione dello schema</li><li>Disabilitazione dello schema dalla partecipazione al profilo</li></ul> |
+| <ul><li>Aggiunta di nuovi campi alla risorsa</li><li>Impostazione di un campo obbligatorio come facoltativo</li><li>Introduzione di nuovi campi obbligatori*</li><li>Modifica del nome visualizzato e della descrizione della risorsa</li><li>Abilitazione dello schema per la partecipazione al profilo</li></ul> | <ul><li>Rimozione dei campi definiti in precedenza</li><li>Ridenominazione o ridefinizione di campi esistenti</li><li>Rimozione o limitazione dei valori di campo precedentemente supportati</li><li>Spostamento dei campi esistenti in una posizione diversa nella struttura</li><li>Eliminazione dello schema</li><li>Disabilitazione dello schema dalla partecipazione al profilo</li><li>Modifica del campo dell’identità primaria in uno schema abilitato per Profilo e che ha acquisito dati</li></ul> |
 
 \**Fare riferimento alla sezione seguente per importanti considerazioni relative all&#39;impostazione di [nuovi campi obbligatori](#post-ingestion-required-fields).*
 
 ### Campi obbligatori
 
-I singoli campi dello schema possono essere [contrassegnati come obbligatori](../ui/fields/required.md), il che significa che qualsiasi record acquisito deve contenere i dati in tali campi per superare la convalida. Ad esempio, l’impostazione del campo di identità principale di uno schema come richiesto può contribuire a garantire che tutti i record acquisiti partecipino a Real-Time Customer Profile. Allo stesso modo, l’impostazione di un campo marca temporale come richiesto garantisce che tutti gli eventi delle serie temporali siano conservati in modo cronologico.
+I singoli campi dello schema possono essere [contrassegnati come obbligatori](../ui/fields/required.md), il che significa che qualsiasi record acquisito deve contenere i dati in tali campi per superare la convalida. Ad esempio, l’impostazione del campo di identità principale di uno schema come richiesto può contribuire a garantire che tutti i record acquisiti partecipino a Real-Time Customer Profile. Analogamente, l’impostazione obbligatoria di un campo marca temporale assicura che tutti gli eventi delle serie temporali siano conservati in modo cronologico.
 
 >[!IMPORTANT]
 >
->Indipendentemente dal fatto che un campo dello schema sia obbligatorio o meno, Experience Platform non accetta `null` o valori vuoti per nessun campo acquisito. Se non è presente alcun valore per un particolare campo in un record o in un evento, la chiave per tale campo deve essere esclusa dal payload di acquisizione.
+>Indipendentemente dal fatto che un campo dello schema sia obbligatorio o meno, Experience Platform non accetta `null` o valori vuoti per nessun campo acquisito. Se non è presente alcun valore per un particolare campo in un record o in un evento, la chiave di tale campo deve essere esclusa dal payload di acquisizione.
 
 #### Impostazione dei campi come richiesto dopo l’acquisizione {#post-ingestion-required-fields}
 
@@ -163,7 +163,7 @@ Gli schemi vengono composti utilizzando la seguente formula:
 
 **Gruppo campi classe + schema;ast; = Schema XDM**
 
-&ast;Uno schema è composto da una classe e da zero o più gruppi di campi dello schema. Ciò significa che è possibile comporre uno schema di set di dati senza utilizzare affatto i gruppi di campi.
+&amp;ast;Uno schema è composto da una classe e da zero o più gruppi di campi dello schema. Ciò significa che è possibile comporre uno schema di set di dati senza utilizzare affatto i gruppi di campi.
 
 ### Classe {#class}
 

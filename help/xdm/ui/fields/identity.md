@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Definire i campi di identità nell’interfaccia utente
 description: Scopri come definire un campo di identità nell’interfaccia utente di Experience Platform.
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 3570197ca6cff95368b4facb034386e793033fe2
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '665'
 ht-degree: 6%
 
 ---
@@ -46,7 +46,7 @@ Al termine, selezionare **[!UICONTROL Applica]** per applicare la modifica allo 
 
 >[!IMPORTANT]
 >
->Se è già impostato un campo di identità principale, puoi modificare il campo di identità principale nello schema seguendo la procedura descritta sopra. Tuttavia, per rendere effettiva la modifica, devi disabilitare e quindi riabilitare tutti i set di dati associati nel profilo.
+>Una volta che uno schema è abilitato per l&#39;utilizzo in Real-Time Customer Profile e i dati sono stati acquisiti, **non puoi modificare il campo dell&#39;identità primaria**. Se si tenta di eseguire questa operazione, verrà generato un errore di convalida. Se devi utilizzare un’identità primaria diversa, devi creare un nuovo schema e un nuovo set di dati con la configurazione di identità aggiornata.
 
 ![](../../images/ui/fields/special/identity-config.png)
 
@@ -63,4 +63,3 @@ Se hai definito un&#39;identità primaria per lo schema, ora puoi procedere con 
 Questa guida illustra come definire un campo di identità nell’interfaccia utente. Man mano che i dati vengono acquisiti utilizzando questo schema, i grafici di identità del cliente si aggiorneranno per riflettere i campi di identità dello schema. Per informazioni su come esplorare il grafico privato della tua organizzazione nell&#39;interfaccia utente, consulta la guida del [visualizzatore del grafico delle identità](../../../identity-service/features/identity-graph-viewer.md).
 
 Per informazioni su come definire altri tipi di campi XDM in [!DNL Schema Editor], consulta la panoramica su [definizione dei campi nell&#39;interfaccia utente](./overview.md#special).
-
