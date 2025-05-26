@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform - Maggio 2025
 description: Note sulla versione di Adobe Experience Platform di maggio 2025.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 3f143c34d31483e91e176b1c69d82db38a8bc6b5
+source-git-commit: cf88ed1082085fac28553dcc7c7be27c517adb22
 workflow-type: tm+mt
-source-wordcount: '1333'
-ht-degree: 83%
+source-wordcount: '1368'
+ht-degree: 81%
 
 ---
 
@@ -69,6 +69,7 @@ Per ulteriori informazioni, consulta la [panoramica sulla preparazione dei dati]
 | Funzione | Descrizione |
 | --- | --- |
 | [Aggiornamento e supporto del pubblico personalizzato di Facebook](../../destinations/catalog/social/facebook.md) per gli identificatori relativi agli indirizzi | A partire dal 23 maggio 2025 e per tutto il mese di giugno 2025, potresti vedere temporaneamente due schede di destinazione **[!DNL Facebook Custom Audience]** nel catalogo delle destinazioni, per un massimo di alcune ore. Ciò è dovuto a un aggiornamento interno al servizio delle destinazioni e al supporto di nuovi campi per un targeting migliore e la corrispondenza con i profili sulle proprietà di Facebook. Per informazioni dettagliate sui nuovi campi relativi all&#39;indirizzo, consulta la sezione [identità supportate](#supported-identities). <br><br>Se vedi una scheda con l&#39;etichetta **[!UICONTROL (Nuovo) pubblico personalizzato Facebook]**, usa questa scheda per i nuovi flussi di dati di attivazione. I flussi di dati esistenti verranno aggiornati automaticamente, pertanto non è richiesta alcuna azione da parte tua. Eventuali modifiche apportate ai flussi di dati esistenti durante questo periodo verranno mantenute dopo l’aggiornamento. Al termine dell&#39;aggiornamento, la scheda di destinazione **[!UICONTROL (Nuovo) Pubblico personalizzato di Facebook]** verrà rinominata **[!DNL Facebook Custom Audience]**. <br><br>Se si creano flussi di dati utilizzando l&#39;[API del servizio di flusso](https://developer.adobe.com/experience-platform-apis/references/destinations/), è necessario aggiornare [!DNL flow spec ID] e [!DNL connection spec ID] ai valori seguenti: <ul><li>Flow spec ID: `bb181d00-58d7-41ba-9c15-9689fdc831d3`</li><li>Connection spec ID: `c8b97383-2d65-4b7a-9913-db0fbfc71727`</li></ul> |
+| Supporto ID mobile advertising per la destinazione [Google Customer Match + Display &amp; Video 360](../../destinations/catalog/advertising/google-customer-match-dv360.md#supported-identities) | Ora puoi attivare i tipi di pubblico nella destinazione [Google Customer Match + Display &amp; Video 360](../../destinations/catalog/advertising/google-customer-match-dv360.md#supported-identities) in base agli ID mobile advertising, ad esempio [!DNL GAID] e [!DNL IDFA]. |
 | Supporto di identificatori aggiuntivi per [Google Customer Match](../../destinations/catalog/advertising/google-customer-match.md) | La destinazione Google Customer Match ora supporta la mappatura dei campi correlati all’indirizzo per migliorare le percentuali di corrispondenza nella piattaforma di Google. <br><br>Per assicurarti che Google faccia corrispondere l’indirizzo, devi mappare tutti e quattro i campi degli indirizzi (`address_info_first_name`, `address_info_last_name`, `address_info_country_code` e `address_info_postal_code`) e assicurarti che in nessuno di questi campi manchino i dati nei profili esportati. <br> Se un campo non è mappato o contiene dati mancanti, Google non farà corrispondere l’indirizzo. |
 | Colonna di scadenza account per le connessioni [Facebook](../../destinations/catalog/social/facebook.md) | Ora puoi visualizzare le date di scadenza del token dell’account Facebook nelle schede [Sfoglia](../../destinations/ui/destinations-workspace.md#browse) e [Account](../../destinations/ui/destinations-workspace.md#accounts). |
 | Esportare set di dati creati dall’API | Ora puoi esportare i set di dati creati dall’API. È stata rimossa la limitazione precedente in cui solo i set di dati creati nell’interfaccia utente erano disponibili per l’esportazione. Ulteriori informazioni sull’[esportazione dei set di dati](../../destinations/ui/export-datasets.md). |
