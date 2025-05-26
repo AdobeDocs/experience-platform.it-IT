@@ -1,10 +1,10 @@
 ---
-keywords: estensione inoltro eventi;twitter;estensione inoltro eventi twitter
-title: Estensione di inoltro eventi di twitter
-description: Questa estensione per l’inoltro di eventi Adobe Experience Platform consente di acquisire gli eventi nel Twitter in base ai requisiti aziendali.
+keywords: estensione inoltro eventi;twitter;twitter estensione inoltro eventi
+title: Estensione di inoltro eventi Twitter
+description: Questa estensione per l’inoltro di eventi Adobe Experience Platform consente di acquisire eventi in Twitter in base a esigenze aziendali.
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: 54c240e5-6160-4654-ac5b-6afa8d99a765
-source-git-commit: 4ee895cb8371646fd2013e2a8f65c2ffdae95850
+source-git-commit: 374c140a5db678adfa2e038b69478ad8c7f8dc95
 workflow-type: tm+mt
 source-wordcount: '1048'
 ht-degree: 3%
@@ -13,15 +13,15 @@ ht-degree: 3%
 
 # Estensione [!DNL Twitter] per l’inoltro degli eventi
 
-[[!DNL Twitter]](https://twitter.com/i/flow/login) è un servizio di social media e social network online, in cui gli utenti pubblicano e interagiscono con messaggi di 280 caratteri, noti come tweet. Gli utenti possono interagire con il Twitter utilizzando un browser, un software front-end per dispositivi mobili o a livello di programmazione tramite le relative [API](https://developer.twitter.com/en/docs/twitter-api)
+[[!DNL Twitter]](https://twitter.com/i/flow/login) è un servizio di social media e social network online, in cui gli utenti pubblicano e interagiscono con messaggi di 280 caratteri, noti come tweet. Gli utenti possono interagire con Twitter utilizzando un browser, un software front-end per dispositivi mobili o a livello di programmazione tramite le sue [API](https://developer.twitter.com/en/docs/twitter-api)
 
-L&#39;estensione [inoltro eventi](../../../ui/event-forwarding/overview.md) dell&#39;API per le conversioni Web di [!DNL Twitter] consente di sfruttare i dati acquisiti nell&#39;Edge Network di Adobe Experience Platform e di inviarli a [!DNL Twitter]. Questo documento descrive i casi di utilizzo dell&#39;estensione, come installarla e come integrarne le funzionalità nell&#39;inoltro degli eventi [rules](../../../ui/managing-resources/rules.md).
+L&#39;estensione [inoltro eventi](../../../ui/event-forwarding/overview.md) dell&#39;API per le conversioni Web di [!DNL Twitter] consente di sfruttare i dati acquisiti in Adobe Experience Platform Edge Network e di inviarli a [!DNL Twitter]. Questo documento descrive i casi di utilizzo dell&#39;estensione, come installarla e come integrarne le funzionalità nell&#39;inoltro degli eventi [rules](../../../ui/managing-resources/rules.md).
 
 [!DNL Twitter] richiede [OAuth 1.0](https://developer.twitter.com/en/docs/authentication/oauth-1-0a) per l&#39;autenticazione con l&#39;API [!DNL Twitter] [!DNL Web Conversions].
 
 ## Casi d’uso
 
-Questa estensione deve essere utilizzata se si desidera utilizzare i dati dell&#39;Edge Network in [!DNL Twitter] per sfruttare le funzionalità di analisi dei clienti e targeting.
+Questa estensione deve essere utilizzata se si desidera utilizzare i dati di Edge Network in [!DNL Twitter] per sfruttare le funzionalità di analisi dei clienti e targeting.
 
 Ad esempio, considera un team di marketing in un’organizzazione. Il team acquisisce i dati dell&#39;evento di interazione dell&#39;utente dal sito Web come dati dell&#39;evento dal sito Web e li carica in [!DNL Twitter] utilizzando questa estensione di inoltro degli eventi.
 
@@ -41,11 +41,11 @@ L&#39;API per le conversioni web di [!DNL Twitter] ha un limite di velocità di 
 
 ### Raccogliere i dettagli di configurazione richiesti {#configuration-details}
 
-Per connettere l&#39;Experience Platform a [!DNL Twitter], sono necessari i seguenti input:
+Per connettere Experience Platform a [!DNL Twitter], sono necessari i seguenti input:
 
 | Tipo di chiave | Descrizione |
 | --- | --- |
-| Chiave consumer | &#x200B; La chiave API dell&#39;app per accedere all&#39;API [!DNL Twitter]. Consulta la documentazione di [!DNL Twitter] su [chiavi e segreti API](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret). | |
+| Chiave consumer | &#x200B; La chiave API dell&#39;app per accedere all&#39;API [!DNL Twitter]. Consulta la documentazione di [!DNL Twitter] su [chiavi e segreti API](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret). |
 | Segreto consumer | Il segreto API consente all&#39;app di accedere all&#39;API [!DNL Twitter]. Consulta la documentazione di [!DNL Twitter] su [chiavi e segreti API](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret). |
 | Segreto token | Il segreto del token senza scadenza dell&#39;app, utilizzato per l&#39;autenticazione nell&#39;API [!DNL Twitter] tramite OAuth. Consulta la documentazione di [!DNL Twitter] su [come ottenere i token di accesso all&#39;uso](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens). |
 | Token di accesso | Token di accesso dell&#39;app senza scadenza, utilizzato per l&#39;autenticazione nell&#39;API [!DNL Twitter] tramite OAuth. Consulta la documentazione di [!DNL Twitter] su [come ottenere i token di accesso all&#39;uso](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens). |
@@ -79,7 +79,7 @@ Schermata di configurazione ![[!DNL Twitter] per l&#39;estensione [!DNL Twitter]
 
 Una volta configurati tutti gli elementi dati, puoi iniziare a creare regole di inoltro degli eventi che determinano quando e come verranno inviati gli eventi a [!DNL Twitter].
 
-Crea una nuova [regola](../../../ui/managing-resources/rules.md) nella proprietà di inoltro eventi. In **[!UICONTROL Azioni]**, aggiungi una nuova azione e imposta l&#39;estensione su **[!UICONTROL Twitter]**. Per inviare eventi Edge Network a [!DNL Twitter], impostare **[!UICONTROL Tipo azione]** su **[!UICONTROL Invia conversione Web].**
+Crea una nuova [regola](../../../ui/managing-resources/rules.md) nella proprietà di inoltro eventi. In **[!UICONTROL Azioni]** aggiungere una nuova azione e impostare l&#39;estensione su **[!UICONTROL Twitter]**. Per inviare eventi Edge Network a [!DNL Twitter], impostare **[!UICONTROL Tipo azione]** su **[!UICONTROL Invia conversione Web].**
 
 Dopo la selezione, vengono visualizzati controlli aggiuntivi per configurare ulteriormente l’evento. È necessario mappare le proprietà evento [!DNL Twitter] agli elementi dati creati in precedenza. Per ulteriori informazioni, vedere [[!DNL Twitter] API per conversioni Web](https://developer.twitter.com/en/docs/twitter-ads-api/measurement/api-reference/conversions).
 

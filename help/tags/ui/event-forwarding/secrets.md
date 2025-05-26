@@ -2,10 +2,10 @@
 title: Configurazione dei segreti nell’inoltro degli eventi
 description: Scopri come configurare i segreti nell’interfaccia utente per l’autenticazione negli endpoint utilizzati nelle proprietà di inoltro degli eventi.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 592acdd45b1db5da95430b4e707cd9a2c18c1645
+source-git-commit: 374c140a5db678adfa2e038b69478ad8c7f8dc95
 workflow-type: tm+mt
-source-wordcount: '2426'
-ht-degree: 3%
+source-wordcount: '2577'
+ht-degree: 2%
 
 ---
 
@@ -17,10 +17,11 @@ Sono attualmente supportati i seguenti tipi di segreto:
 
 | Tipo di segreto | Descrizione |
 | --- | --- |
+| [!UICONTROL Amazon OAuth 2] | Abilita l&#39;autenticazione protetta con i servizi [!DNL Amazon]. Il sistema memorizza in modo sicuro il token e ne gestisce il rinnovo a intervalli specificati. |
 | [!UICONTROL Google OAuth 2] | Contiene diversi attributi per supportare la specifica di autenticazione [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) da utilizzare nelle [API Google Ads](https://developers.google.com/google-ads/api/docs/oauth/overview) e [API Pub/Sub](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). Il sistema richiede le informazioni richieste, quindi gestisce il rinnovo di questi token per te in un intervallo specificato. |
 | [!UICONTROL HTTP] | Contiene due attributi di stringa rispettivamente per nome utente e password. |
 | [!UICONTROL [!DNL LinkedIn] OAuth 2] | Il sistema richiede le informazioni richieste, quindi gestisce il rinnovo di questi token per te in un intervallo specificato. |
-| [!UICONTROL OAuth 2] | Contiene diversi attributi per supportare il tipo di concessione delle credenziali client [&#128279;](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) per la specifica di autenticazione [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749). Il sistema richiede le informazioni richieste, quindi gestisce il rinnovo di questi token per te in un intervallo specificato. |
+| [!UICONTROL OAuth 2] | Contiene diversi attributi per supportare il tipo di concessione delle credenziali client [](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) per la specifica di autenticazione [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749). Il sistema richiede le informazioni richieste, quindi gestisce il rinnovo di questi token per te in un intervallo specificato. |
 | [!UICONTROL OAuth 2 JWT] | Contiene diversi attributi per supportare il profilo JSON Web Token (JWT) per [le autorizzazioni OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc7523#section-2.1) concesse. Il sistema richiede le informazioni richieste, quindi gestisce il rinnovo di questi token per te in un intervallo specificato. |
 | [!UICONTROL Token] | Una singola stringa di caratteri che rappresenta un valore del token di autenticazione noto e compreso da entrambi i sistemi. |
 
@@ -78,6 +79,7 @@ Da qui, i passaggi per creare il segreto variano a seconda del tipo di segreto c
 * [[!UICONTROL OAuth 2 JWT]](#oauth2jwt)
 * [[!UICONTROL Google OAuth 2]](#google-oauth2)
 * [[!UICONTROL [!DNL LinkedIn] OAuth 2]](#linkedin-oauth2)
+* [[!UICONTROL [!DNL Amazon] OAuth 2]](#amazon-oauth2)
 
 ### [!UICONTROL Token] {#token}
 
@@ -186,7 +188,7 @@ Per creare un segreto OAuth 2 [!DNL LinkedIn], seleziona **[!UICONTROL [!DNL Lin
 
 Viene visualizzato un messaggio che informa che il segreto deve essere autorizzato manualmente tramite [!DNL LinkedIn]. Seleziona **[!UICONTROL Crea e autorizza segreto con[!DNL LinkedIn]]** per continuare.
 
-![[!DNL LinkedIn] elemento a comparsa autorizzazione che evidenzia [!UICONTROL Crea e autorizza segreto con [!DNL LinkedIn]].](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
+![Popover di autorizzazione LinkedIn che evidenzia il pulsante &quot;Crea e autorizza segreto con LinkedIn&quot;.](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
 
 Viene visualizzata una finestra di dialogo in cui viene richiesto di immettere le credenziali [!DNL LinkedIn]. Segui le istruzioni per concedere l’accesso ai tuoi dati con inoltro eventi.
 
@@ -194,7 +196,7 @@ Una volta completato il processo di autorizzazione, si torna alla scheda **[!UIC
 
 ![La scheda [!UICONTROL Segreto] evidenzia il segreto appena creato.](../../images/ui/event-forwarding/secrets/linkedin-new-secret.png)
 
-#### Autorizza nuovamente un segreto OAuth 2 [!DNL LinkedIn]
+#### Autorizza nuovamente un segreto OAuth 2] [!UICONTROL [!DNL LinkedIn]
 
 >IMPORTANTE
 >
@@ -209,6 +211,22 @@ Sei stato reindirizzato alla scheda [!UICONTROL Segreti]. I segreti elencati in 
 ![Scheda [!UICONTROL Segreto] che evidenzia [!UICONTROL Autenticazione richiesta]per il segreto [!DNL LinkedIn].](../../images/ui/event-forwarding/secrets/linkedin-reauthorization.png)
 
 Viene visualizzata una finestra di dialogo in cui viene richiesto di immettere le credenziali [!DNL LinkedIn]. Segui le istruzioni per autorizzare nuovamente il segreto.
+
+### [!UICONTROL [!DNL Amazon] OAuth 2] {#amazon-oauth2}
+
+Per creare un segreto OAuth 2 [!DNL Amazon], seleziona **[!UICONTROL [!DNL Amazon]OAuth 2]** dal menu a discesa **[!UICONTROL Tipo]**. Selezionare **[!UICONTROL Crea segreto]**.
+
+![Scheda [!UICONTROL Crea segreto] con il campo [!UICONTROL Tipo] evidenziato.](../../images/ui/event-forwarding/secrets/amazon-oauth.png)
+
+Viene visualizzato un messaggio che informa che il segreto deve essere autorizzato manualmente tramite [!DNL Amazon]. Seleziona **[!UICONTROL Crea e autorizza segreto con[!DNL Amazon]]** per continuare.
+
+![Il popover di autorizzazione di Amazon evidenzia il pulsante &quot;Crea e autorizza segreto con Amazon&quot;.](../../images/ui/event-forwarding/secrets/amazon-authorization.png)
+
+Viene visualizzata una finestra di dialogo in cui viene richiesto di immettere le credenziali [!DNL Amazon]. Segui le istruzioni per concedere l’accesso ai tuoi dati con inoltro eventi.
+
+Una volta completato il processo di autorizzazione, si torna alla scheda **[!UICONTROL Segreti]**, dove è possibile visualizzare il segreto appena creato. Qui puoi vedere lo stato del segreto e la data di scadenza.
+
+![La scheda [!UICONTROL Segreto] evidenzia il segreto appena creato.](../../images/ui/event-forwarding/secrets/amazon-new-secret.png)
 
 ## Modifica un segreto
 
