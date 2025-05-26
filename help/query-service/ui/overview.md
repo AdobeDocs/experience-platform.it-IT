@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Query Service
 description: Adobe Experience Platform Query Service fornisce un’interfaccia utente che può essere utilizzata per scrivere ed eseguire query, visualizzare le query eseguite in precedenza e accedere a quelle salvate dagli utenti della tua organizzazione.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 62e481925df33ddfae6f630c900febbb027a2059
+source-git-commit: 0553b8bc62d54c3ab98c60b16840ce730d9ed5c0
 workflow-type: tm+mt
 source-wordcount: '2467'
 ht-degree: 1%
@@ -176,7 +176,7 @@ La scheda **[!UICONTROL Registro]** fornisce un elenco delle query eseguite in p
 | **[!UICONTROL Client]** | Client utilizzato per la query. |
 | **[!UICONTROL Creato da]** | Nome della persona che ha creato la query. |
 
->
+>[!NOTE]
 >
 >Selezionare l&#39;icona della matita (![Un&#39;icona della matita.](/help/images/icons/edit.png)) da qualsiasi riga del registro query per passare all&#39;editor query. La query è precompilata per facilitarne la modifica.
 
