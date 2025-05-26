@@ -21,7 +21,7 @@ Sono attualmente supportati i seguenti tipi di segreto:
 | [!UICONTROL Google OAuth 2] | Contiene diversi attributi per supportare la specifica di autenticazione [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) da utilizzare nelle [API Google Ads](https://developers.google.com/google-ads/api/docs/oauth/overview) e [API Pub/Sub](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). Il sistema richiede le informazioni richieste, quindi gestisce il rinnovo di questi token per te in un intervallo specificato. |
 | [!UICONTROL HTTP] | Contiene due attributi di stringa rispettivamente per nome utente e password. |
 | [!UICONTROL [!DNL LinkedIn] OAuth 2] | Il sistema richiede le informazioni richieste, quindi gestisce il rinnovo di questi token per te in un intervallo specificato. |
-| [!UICONTROL OAuth 2] | Contiene diversi attributi per supportare il tipo di concessione delle credenziali client [](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) per la specifica di autenticazione [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749). Il sistema richiede le informazioni richieste, quindi gestisce il rinnovo di questi token per te in un intervallo specificato. |
+| [!UICONTROL OAuth 2] | Contiene diversi attributi per supportare il tipo di concessione delle credenziali client [&#128279;](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) per la specifica di autenticazione [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749). Il sistema richiede le informazioni richieste, quindi gestisce il rinnovo di questi token per te in un intervallo specificato. |
 | [!UICONTROL OAuth 2 JWT] | Contiene diversi attributi per supportare il profilo JSON Web Token (JWT) per [le autorizzazioni OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc7523#section-2.1) concesse. Il sistema richiede le informazioni richieste, quindi gestisce il rinnovo di questi token per te in un intervallo specificato. |
 | [!UICONTROL Token] | Una singola stringa di caratteri che rappresenta un valore del token di autenticazione noto e compreso da entrambi i sistemi. |
 
@@ -196,7 +196,7 @@ Una volta completato il processo di autorizzazione, si torna alla scheda **[!UIC
 
 ![La scheda [!UICONTROL Segreto] evidenzia il segreto appena creato.](../../images/ui/event-forwarding/secrets/linkedin-new-secret.png)
 
-#### Autorizza nuovamente un segreto OAuth 2] [!UICONTROL [!DNL LinkedIn]
+#### Autorizza nuovamente un segreto OAuth 2 [!DNL LinkedIn]
 
 >IMPORTANTE
 >
