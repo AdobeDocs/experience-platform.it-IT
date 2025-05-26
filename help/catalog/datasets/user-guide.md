@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente dei set di dati
 description: Scopri come eseguire azioni comuni quando si lavora con i set di dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: f66e85ee5fb3fdaf7036b131f9689082d9d96127
+source-git-commit: 132024313dbe0d83c9af22d30927a01e32c9d94f
 workflow-type: tm+mt
 source-wordcount: '4237'
 ht-degree: 5%
@@ -180,7 +180,7 @@ Gestisci le impostazioni di scadenza e conservazione dei set di dati utilizzando
 
 >[!IMPORTANT]
 >
->Per applicare o aggiornare le regole di conservazione per un set di dati ExperienceEvent, il ruolo utente deve includere l&#39;autorizzazione **Gestisci set di dati**. Questo controllo dell’accesso basato sul ruolo garantisce che solo gli utenti autorizzati possano modificare le impostazioni di conservazione dei set di dati.
+>Per applicare o aggiornare le regole di conservazione per un set di dati ExperienceEvent, il ruolo utente deve includere l&#39;autorizzazione **[!UICONTROL Gestisci set di dati]**. Questo controllo dell’accesso basato sul ruolo garantisce che solo gli utenti autorizzati possano modificare le impostazioni di conservazione dei set di dati.
 >
 >Per ulteriori informazioni sull&#39;assegnazione delle autorizzazioni in Adobe Experience Platform, vedere [Panoramica sul controllo degli accessi](../../access-control/home.md#platform-permissions).
 
