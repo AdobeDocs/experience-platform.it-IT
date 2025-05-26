@@ -5,7 +5,7 @@ exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
 source-git-commit: c9b5de33de91b93f179b4720f692eb876e94df72
 workflow-type: tm+mt
 source-wordcount: '1600'
-ht-degree: 7%
+ht-degree: 9%
 
 ---
 
@@ -13,8 +13,8 @@ ht-degree: 7%
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_linkingrules_overview"
->title="Regole di collegamento del grafo delle identità"
->abstract="Per evitare queste unioni indesiderate, puoi utilizzare le configurazioni fornite tramite le Regole di collegamento del grafico identità e consentire una personalizzazione accurata per i tuoi utenti."
+>title="Regole di collegamento del grafo identità"
+>abstract="Per evitare queste unioni indesiderate, puoi utilizzare le configurazioni fornite tramite le regole di collegamento del grafo identità e consentire una personalizzazione accurata per i tuoi utenti."
 
 >[!IMPORTANT]
 >
@@ -26,7 +26,7 @@ Con il servizio Adobe Experience Platform Identity e il profilo cliente in tempo
 
 I seguenti documenti sono essenziali per comprendere [!DNL Identity Graph Linking Rules].
 
-* [Algoritmo di ottimizzazione identità](./identity-optimization-algorithm.md)
+* [Algoritmo di ottimizzazione delle identità](./identity-optimization-algorithm.md)
 * [Guida all’implementazione](./implementation-guide.md)
 * [Esempi di configurazioni del grafico](./example-configurations.md)
 * [Risoluzione dei problemi e domande frequenti](./troubleshooting.md)
@@ -40,12 +40,12 @@ Guarda i video seguenti per scoprire alcuni degli aspetti fondamentali delle reg
 
 <!-- CARDS
 {target = _blank}
-* https://experienceleague.adobe.com/it/docs/platform-learn/tutorials/identities/graph-linking-rules/overview
-* https://experienceleague.adobe.com/it/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation 
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/overview
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation 
 
     {description = Learn how to use the graph simulator to test out identity graph linking rules.}
 
-* https://experienceleague.adobe.com/it/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings
     {description = Learn how to enable and configure identity graph linking rules to build accurate customer profiles}
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
@@ -55,7 +55,7 @@ Guarda i video seguenti per scoprire alcuni degli aspetti fondamentali delle reg
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/it/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" title="Panoramica delle regole di collegamento del grafo delle identità" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448280/?format=jpeg&nocache=1747851655227&captions=ita" alt="Panoramica delle regole di collegamento del grafo delle identità"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448250/?format=jpeg&nocache=1747851655227" alt="Panoramica delle regole di collegamento del grafo delle identità"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -78,7 +78,7 @@ Guarda i video seguenti per scoprire alcuni degli aspetti fondamentali delle reg
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/it/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" title="Regole di collegamento del grafico delle identità - Simulazione del grafico" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444051/?format=jpeg&nocache=1747851655237&captions=ita" alt="Regole di collegamento del grafico delle identità - Simulazione del grafico"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444032/?format=jpeg&nocache=1747851655237" alt="Regole di collegamento del grafico delle identità - Simulazione del grafico"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -100,7 +100,7 @@ Guarda i video seguenti per scoprire alcuni degli aspetti fondamentali delle reg
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/it/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" title="Regole di collegamento del grafo delle identità - Impostazioni identità" target="_blank" rel="referrer">
+                    <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" title="Regole di collegamento del grafo delle identità - Impostazioni identità" target="_blank" rel="referrer">
                         <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3458487/?format=jpeg&nocache=1747851655218" alt="Regole di collegamento del grafo delle identità - Impostazioni identità"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
@@ -109,11 +109,11 @@ Guarda i video seguenti per scoprire alcuni degli aspetti fondamentali delle reg
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/it/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" title="Regole di collegamento del grafo delle identità - Impostazioni identità">Regole di collegamento del grafo delle identità - Impostazioni identità</a>
+                        <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" title="Regole di collegamento del grafo delle identità - Impostazioni identità">Regole di collegamento del grafo delle identità - Impostazioni identità</a>
                     </p>
                     <p class="is-size-6">Scopri come abilitare e configurare le regole di collegamento del grafico delle identità per creare profili cliente precisi</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/it/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Osserva</span>
                 </a>
             </div>
@@ -189,7 +189,7 @@ Con [!DNL Identity Graph Linking Rules] è possibile:
 | --- | --- |
 | Spazio dei nomi univoco | Uno spazio dei nomi univoco è uno spazio dei nomi delle identità che è stato impostato per essere distinto all’interno del contesto di un grafo delle identità. Puoi configurare uno spazio dei nomi in modo che sia univoco utilizzando l’interfaccia utente. Una volta definito uno spazio dei nomi come univoco, un grafo può avere una sola identità che lo contiene. |
 | Priorità dello spazio dei nomi | La priorità dello spazio dei nomi si riferisce all’importanza relativa degli spazi dei nomi rispetto agli altri. La priorità dello spazio dei nomi è configurabile tramite l’interfaccia utente. Puoi classificare gli spazi dei nomi in un dato grafico delle identità. Una volta abilitata, la priorità dei nomi verrà utilizzata in vari scenari, ad esempio per l’input dell’algoritmo di ottimizzazione delle identità e per la determinazione dell’identità primaria dei frammenti di evento esperienza. |
-| Algoritmo di ottimizzazione identità | L’algoritmo di ottimizzazione delle identità garantisce che le linee guida create configurando uno spazio dei nomi e priorità dello spazio dei nomi univoci vengano applicate in un dato grafico delle identità. |
+| Algoritmo di ottimizzazione delle identità | L’algoritmo di ottimizzazione delle identità garantisce che le linee guida create configurando uno spazio dei nomi e priorità dello spazio dei nomi univoci vengano applicate in un dato grafico delle identità. |
 
 ### Spazio dei nomi univoco {#unique-namespace}
 
@@ -238,7 +238,7 @@ Per ulteriori informazioni, leggere la guida sulla [priorità dello spazio dei n
 
 Per ulteriori informazioni su [!DNL Identity Graph Linking Rules], leggere la seguente documentazione:
 
-* [Algoritmo di ottimizzazione identità](./identity-optimization-algorithm.md)
+* [Algoritmo di ottimizzazione delle identità](./identity-optimization-algorithm.md)
 * [Guida all’implementazione](./implementation-guide.md)
 * [Esempi di configurazioni del grafico](./example-configurations.md)
 * [Risoluzione dei problemi e domande frequenti](./troubleshooting.md)

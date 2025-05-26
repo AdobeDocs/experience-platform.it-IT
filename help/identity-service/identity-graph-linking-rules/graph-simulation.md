@@ -5,7 +5,7 @@ exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
 source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
 workflow-type: tm+mt
 source-wordcount: '1446'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -14,13 +14,13 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphsimulation"
 >title="Simulazione del grafico"
->abstract="Simulare grafici per comprendere come Identity Service collega le identità e come funziona l’algoritmo di ottimizzazione delle identità."
+>abstract="Simula grafici per comprendere come Identity Service collega le identità e come funziona l’algoritmo di ottimizzazione delle identità."
 
 [!DNL Graph Simulation] è uno strumento nell&#39;interfaccia utente di Identity Service che consente di simulare il comportamento di un grafo delle identità in base a una combinazione specifica di identità e alla configurazione dell&#39;[algoritmo di ottimizzazione delle identità](./identity-optimization-algorithm.md).
 
 Per ulteriori informazioni sull&#39;utilizzo dell&#39;interfaccia [!DNL Graph Simulation] nell&#39;area di lavoro dell&#39;interfaccia utente di Identity Service, guarda il video seguente:
 
->[!VIDEO](https://video.tv.adobe.com/v/3444051/?learn=on&enablevpops&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/3444032/?learn=on&enablevpops)
 
 Leggi questo documento per scoprire come utilizzare [!DNL Graph Simulation] per comprendere meglio il comportamento del grafo delle identità e il funzionamento dell&#39;algoritmo del grafo.
 
@@ -177,7 +177,7 @@ Nel grafico di esempio seguente, esiste una linea tratteggiata tra `{Email: tom@
 Dopo aver letto questo documento, saprai come utilizzare lo strumento [!DNL Graph Simulation] per comprendere meglio come vengono trattati i dati di identità in base a un particolare set di regole e configurazioni. Per ulteriori informazioni, leggere i seguenti documenti:
 
 * [Panoramica di [!DNL Identity Graph Linking Rules]](./overview.md)
-* [Algoritmo di ottimizzazione identità](./identity-optimization-algorithm.md)
+* [Algoritmo di ottimizzazione delle identità](./identity-optimization-algorithm.md)
 * [Guida all’implementazione](./implementation-guide.md)
 * [Risoluzione dei problemi e domande frequenti](./troubleshooting.md)
 * [Esempi di configurazioni del grafico](./example-configurations.md)
