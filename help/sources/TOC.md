@@ -5,9 +5,9 @@ breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da diverse origini. Scopri come strutturare, etichettare e migliorare i dati già acquisiti.
 feature: Sources
 role: Developer
-source-git-commit: 7b1dbec504ba11983958c3452878cf410b2a490c
+source-git-commit: dbcfd7bfbf2f2d8268d3d8b5748f75ec9f186597
 workflow-type: tm+mt
-source-wordcount: '1075'
+source-wordcount: '1078'
 ht-degree: 35%
 
 ---
@@ -242,6 +242,7 @@ ht-degree: 35%
    - [Acquisire dati crittografati](tutorials/api/encrypt-data.md)
    - [Salvare un flusso di dati come bozza](tutorials/api/draft.md)
    - [Applicare le etichette di accesso a un flusso di dati](tutorials/api/labels.md)
+   - [Usa endpoint privati](tutorials/api/private-link.md)
 - Tutorial sull’interfaccia utente {#ui-tutorials}
    - Creare una connessione sorgente {#create}
       - Applicazioni di Adobe {#adobe-applications}
