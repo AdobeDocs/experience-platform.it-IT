@@ -6,9 +6,9 @@ user-guide-description: Scopri come distribuire e gestire i tag di analisi, mark
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 28eb48ec9fb7c9c5a5927c8582960cbd99199613
+source-git-commit: a2d93b5c13194707e8a87d633e47d0446b9afabd
 workflow-type: tm+mt
-source-wordcount: '780'
+source-wordcount: '782'
 ht-degree: 44%
 
 ---
@@ -217,6 +217,7 @@ ht-degree: 44%
       * [Panoramica](./extensions/server/overview.md)
       * Connettore Adobe Experience Platform Cloud {#cloud-connector}
          * [Panoramica](./extensions/server/cloud-connector/overview.md)
+         * [Certificati mTLS](./extensions/server/cloud-connector/mtls.md)
          * [Note sulla versione](./extensions/server/cloud-connector/release-notes.md)
       * [!DNL Adform] {#adform}
          * [Panoramica](./extensions/server/adform/overview.md)
