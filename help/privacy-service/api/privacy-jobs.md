@@ -2,17 +2,23 @@
 keywords: Experience Platform;home;argomenti popolari
 solution: Experience Platform
 title: Endpoint API per processi di privacy
-description: Scopri come gestire i processi sulla privacy per le applicazioni Experience Cloud utilizzando l’API Privacy Service.
+description: Scopri come gestire i processi sulla privacy per le applicazioni Experience Cloud utilizzando l’API di Privacy Service.
 role: Developer
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 26a50f21c1ebebf485eaf62712bd02de3406cceb
+source-git-commit: ec99b2a8f772e77d0a3957fc35b8cea112b91cba
 workflow-type: tm+mt
-source-wordcount: '1810'
+source-wordcount: '1861'
 ht-degree: 2%
 
 ---
 
 # Endpoint &quot;privacy jobs&quot;
+
+>[!IMPORTANT]
+>
+>Per supportare il numero crescente di leggi sulla privacy dello stato negli Stati Uniti, Privacy Service sta modificando i valori `regulation_type`. Utilizza i nuovi valori che includono abbreviazioni di stato (ad esempio, `ucpa_ut_usa`) a partire dal **12 giugno 2025**. I valori meno recenti (ad esempio, `ucpa_usa`) cessano di funzionare dopo il **28 luglio 2025**.
+>
+>Aggiorna le integrazioni prima di questa scadenza per evitare errori di richiesta.
 
 Questo documento illustra come lavorare con i processi relativi alla privacy utilizzando le chiamate API. In particolare, riguarda l&#39;utilizzo dell&#39;endpoint `/job` nell&#39;API [!DNL Privacy Service]. Prima di leggere questa guida, consulta la [guida introduttiva](./getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all&#39;API, incluse le intestazioni richieste e la lettura delle chiamate API di esempio.
 
@@ -26,7 +32,7 @@ Questo documento illustra come lavorare con i processi relativi alla privacy uti
 
 **Formato API**
 
-Questo formato di richiesta utilizza un parametro di query `regulation` sull&#39;endpoint `/jobs`, quindi inizia con un punto interrogativo (`?`) come mostrato di seguito. Quando vengono elencate le risorse, l’API Privacy Service restituisce fino a 1000 processi e impagina la risposta. Utilizzare altri parametri di query (`page`, `size` e filtri di data) per filtrare la risposta. È possibile separare più parametri utilizzando il simbolo commerciale (`&`).
+Questo formato di richiesta utilizza un parametro di query `regulation` sull&#39;endpoint `/jobs`, quindi inizia con un punto interrogativo (`?`) come mostrato di seguito. Quando vengono elencate le risorse, l’API di Privacy Service restituisce fino a 1000 processi e impagina la risposta. Utilizzare altri parametri di query (`page`, `size` e filtri di data) per filtrare la risposta. È possibile separare più parametri utilizzando il simbolo commerciale (`&`).
 
 >[!TIP]
 >
@@ -42,7 +48,7 @@ GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={ST
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{REGULATION}` | Tipo di regolamento per cui eseguire la query. I valori accettati includono: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa_usa`</li><li>`cpra_usa`</li><li>`ctdpa_usa`</li><li>`dpdpa`</li><li>`fdbr_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`icdpa_usa`</li><li>`lgpd_bra`</li><li>`mcdpa_usa`</li><li>`mhmda_usa`</li><li>`ndpa_usa`</li><li>`nhpa_usa`</li><li>`njdpa_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_usa`</li><li>`pdpa_tha`</li><li>`ql25`</li><li>`tdpsa_usa`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>Per ulteriori informazioni sulle normative sulla privacy rappresentate dai valori sopra riportati, consulta la panoramica sulle [normative supportate](../regulations/overview.md). |
+| `{REGULATION}` | Tipo di regolamento per cui eseguire la query. I valori accettati includono: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa_co_usa`</li><li>`cpra_ca_usa`</li><li>`ctdpa_ct_usa`</li><li>`dpdpa`</li><li>`fdbr_fl_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`icdpa_ia_usa`</li><li>`lgpd_bra`</li><li>`mcdpa_mn_usa`</li><li>`mcdpa_mt_usa`</li><li>`mhmda_wa_usa`</li><li>`ndpa_ne_usa`</li><li>`nhpa_nh_usa`</li><li>`njdpa_nj_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_or_usa`</li><li>`pdpa_tha`</li><li>`ql25`</li><li>`tdpsa_tx_usa`</li><li>`tipa_tn_usa`</li><li>`ucpa_ut_usa`</li><li>`vcdpa_va_usa`</li></ul><br>Per ulteriori informazioni sulle normative sulla privacy rappresentate dai valori sopra riportati, consulta la panoramica sulle [normative supportate](../regulations/overview.md). |
 | `{PAGE}` | Pagina di dati da visualizzare, utilizzando la numerazione basata su 0. Il valore predefinito è `0`. |
 | `{SIZE}` | Il numero di risultati da visualizzare su ogni pagina. Il valore predefinito è `100` e il massimo è `1000`. Se si supera il valore massimo, l’API restituisce un errore 400 codici. |
 | `{status}` | Il comportamento predefinito consiste nell’includere tutti gli stati. Se si specifica un tipo di stato, la richiesta restituisce solo i processi di privacy che corrispondono a tale tipo di stato. I valori accettati includono: <ul><li>`processing`</li><li>`complete`</li><li>`error`</li></ul> |
@@ -76,15 +82,15 @@ Per recuperare il successivo set di risultati in una risposta impaginata, è nec
 
 >[!IMPORTANT]
 >
->Privacy Service è destinato solo alle richieste degli interessati e dei diritti dei consumatori. Qualsiasi altro utilizzo di Privacy Service per la pulizia o la manutenzione dei dati non è supportato o consentito. Adobe ha l’obbligo giuridico di adempiere tali obblighi in modo tempestivo. Di conseguenza, il test di carico su Privacy Service non è consentito in quanto si tratta di un ambiente di sola produzione e crea un backlog inutile di richieste di privacy valide.
+>Privacy Service è destinato solo agli interessati e alle richieste dei diritti dei consumatori. Qualsiasi altro utilizzo di Privacy Service per la pulizia o la manutenzione dei dati non è supportato o consentito. Adobe ha l’obbligo legale di soddisfarli in modo tempestivo. Di conseguenza, il test di carico su Privacy Service non è consentito in quanto si tratta di un ambiente di sola produzione e crea un backlog inutile di richieste di privacy valide.
 >
->È ora disponibile un limite massimo di caricamento giornaliero per evitare abusi del servizio. Se gli utenti rilevano un abuso del sistema, l’accesso al servizio verrà disattivato. Successivamente si terrà una riunione con i Privacy Service per discutere le loro azioni e l&#39;uso accettabile di tali strumenti.
+>È ora disponibile un limite massimo di caricamento giornaliero per evitare abusi del servizio. Se gli utenti rilevano un abuso del sistema, l’accesso al servizio verrà disattivato. Successivamente si terrà una riunione con i due partner per discutere le loro azioni e l&#39;uso accettabile di Privacy Service.
 
 Prima di creare una nuova richiesta di lavoro, devi raccogliere informazioni di identificazione sulle persone interessate a cui desideri accedere, eliminare o rinunciare alla vendita dei dati. Una volta ottenuti i dati richiesti, questi devono essere forniti nel payload di una richiesta POST all&#39;endpoint `/jobs`.
 
 >[!NOTE]
 >
->Le applicazioni Adobe Experience Cloud compatibili utilizzano valori diversi per identificare le persone interessate. Per ulteriori informazioni sugli identificatori richiesti per le applicazioni, consulta la guida su [applicazioni Privacy Service e Experience Cloud](../experience-cloud-apps.md). Per indicazioni più generali su come determinare quali ID inviare a [!DNL Privacy Service], consulta il documento su [dati di identità nelle richieste di privacy](../identity-data.md).
+>Le applicazioni Adobe Experience Cloud compatibili utilizzano valori diversi per identificare le persone interessate. Per ulteriori informazioni sugli identificatori richiesti per le applicazioni, consulta la guida sulle [applicazioni Privacy Service e Experience Cloud](../experience-cloud-apps.md). Per indicazioni più generali su come determinare quali ID inviare a [!DNL Privacy Service], consulta il documento su [dati di identità nelle richieste di privacy](../identity-data.md).
 
 L&#39;API [!DNL Privacy Service] supporta due tipi di richieste di processi per dati personali:
 
@@ -369,4 +375,4 @@ Nella tabella seguente sono elencate le diverse categorie possibili di stato dei
 
 ## Passaggi successivi
 
-È ora possibile creare e monitorare i processi relativi alla privacy utilizzando l&#39;API [!DNL Privacy Service]. Per informazioni su come eseguire le stesse attività utilizzando l&#39;interfaccia utente, vedere la [panoramica dell&#39;interfaccia utente Privacy Service](../ui/overview.md).
+È ora possibile creare e monitorare i processi relativi alla privacy utilizzando l&#39;API [!DNL Privacy Service]. Per informazioni su come eseguire le stesse attività utilizzando l&#39;interfaccia utente, vedere [Panoramica dell&#39;interfaccia utente di Privacy Service](../ui/overview.md).
