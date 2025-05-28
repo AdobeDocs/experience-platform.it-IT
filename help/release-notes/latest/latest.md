@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform - Maggio 2025
 description: Note sulla versione di Adobe Experience Platform di maggio 2025.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: cf88ed1082085fac28553dcc7c7be27c517adb22
+source-git-commit: 6ab9302a40547349c8d0390baafd8591ed6859e1
 workflow-type: tm+mt
-source-wordcount: '1368'
-ht-degree: 81%
+source-wordcount: '1530'
+ht-degree: 77%
 
 ---
 
@@ -25,6 +25,7 @@ ht-degree: 81%
 
 Aggiornamenti alle funzioni e alla documentazione esistenti di Adobe Experience Platform:
 
+- [Assistente IA](#ai-assistant)
 - [Servizio catalogo](#catalog-service)
 - [Preparazione dei dati](#data-prep)
 - [Destinazioni](#destinations)
@@ -33,6 +34,18 @@ Aggiornamenti alle funzioni e alla documentazione esistenti di Adobe Experience 
 - [Sandbox](#sandboxes)
 - [Servizio di segmentazione](#segmentation-service)
 - [Origini](#sources)
+
+## Assistente IA {#ai-assistant}
+
+L’Assistente IA in Adobe Experience Platform è un’esperienza di conversazione che puoi utilizzare per accelerare i flussi di lavoro nelle applicazioni Adobe. È possibile utilizzare l’Assistente IA per accrescere la conoscenza del prodotto, risolvere i problemi o eseguire ricerche nelle informazioni e trovare approfondimenti operativi. L’Assistente IA supporta Experience Platform, Real-time Customer Data Platform, Adobe Journey Optimizer e Customer Journey Analytics.
+
+**Funzioni aggiornate**
+
+| Funzione | Descrizione |
+| --- | --- |
+| Disponibilità generale dell&#39;agente di supporto del prodotto | È ora possibile utilizzare l’agente di supporto del prodotto in AI Assistant per risolvere facilmente i problemi senza uscire dai flussi di lavoro. Gli amministratori del supporto nella tua organizzazione ora possono utilizzare l’agente di supporto del prodotto per creare i ticket di supporto al cliente, completi dei dettagli di contesto e sessione derivanti dalle interazioni con l’assistente di intelligenza artificiale. <br><br>L&#39;accesso all&#39;agente di supporto del prodotto è disponibile fino al 30 novembre 2025. Contatta il rappresentante del tuo account Adobe per richiedere la licenza dell’agente di supporto del prodotto e continuare a utilizzare la funzione dopo questa data. Per ulteriori informazioni, leggere la [documentazione dell&#39;agente di supporto del prodotto](../../ai-assistant/new-features/customer-support.md). |
+
+Per ulteriori informazioni, consulta la [panoramica dell’Assistente IA](../../ai-assistant/landing.md).
 
 ## Servizio catalogo {#catalog-service}
 
