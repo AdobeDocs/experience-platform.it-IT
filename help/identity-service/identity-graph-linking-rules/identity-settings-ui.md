@@ -2,10 +2,10 @@
 title: Interfaccia utente per le impostazioni delle identità
 description: Scopri come utilizzare l’interfaccia utente delle impostazioni di identità.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 808562ac7b3bf91c4d133bc1d2106cfc3b0c9c84
+source-git-commit: 38d331bd9265f25a3aebdcbd20ae5fc30a93e960
 workflow-type: tm+mt
-source-wordcount: '646'
-ht-degree: 2%
+source-wordcount: '665'
+ht-degree: 3%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->[!DNL Identity Graph Linking Rules] è ora generalmente disponibile. Se disponi di una sandbox esistente che, dopo aver abilitato le impostazioni di identità, richiede che i grafici compressi non vengano compressi (&quot;corretti&quot;), contatta il supporto Adobe.
+>[!DNL Identity Graph Linking Rules] è ora generalmente disponibile. Se disponi di una sandbox esistente che richiede la decompressione (&quot;correzione&quot;) dei grafici compressi dopo aver abilitato le impostazioni di identità, contatta il team dell’account Adobe o il servizio di assistenza Adobe.
 
 Le impostazioni di identità sono una funzione dell’interfaccia utente di Adobe Experience Platform Identity Service che consente di designare spazi dei nomi univoci e configurare la priorità dello spazio dei nomi.
 
@@ -28,7 +28,7 @@ Leggi questa guida per scoprire come configurare le impostazioni di identità ne
 Prima di iniziare a utilizzare le impostazioni di identità, leggi i seguenti documenti:
 
 * [[!DNL Identity Graph Linking Rules]](./overview.md)
-* [Algoritmo di ottimizzazione identità](./identity-optimization-algorithm.md)
+* [Algoritmo di ottimizzazione delle identità](./identity-optimization-algorithm.md)
 * [Guida all’implementazione](./implementation-guide.md)
 * [Esempi di configurazioni del grafico](./example-configurations.md)
 * [Priorità dello spazio dei nomi](./namespace-priority.md)
@@ -82,6 +82,8 @@ Da qui, è necessario confermare quanto segue prima di procedere al passaggio fi
 >* Il passaggio finale è un altro messaggio di conferma che indica che i grafici esistenti saranno interessati dall&#39;algoritmo grafico **solo se i grafici vengono aggiornati dopo il salvataggio delle impostazioni** e che l&#39;identità primaria dei frammenti di evento nel profilo cliente in tempo reale non verrà aggiornata anche dopo le modifiche della priorità dello spazio dei nomi.
 >
 >* L&#39;applicazione delle impostazioni nuove o aggiornate richiederà fino a **24 ore**. Per confermare, immetti il nome della sandbox, quindi seleziona **[!UICONTROL Conferma]**.
+>
+>* I dati non verranno modificati finché non salvi le impostazioni di identità.
 
 ![Finestra di conferma che visualizza un avviso relativo a un ritardo di sei ore prima dell&#39;elaborazione delle configurazioni.](../images/rules/complete.png)
 
@@ -90,7 +92,7 @@ Da qui, è necessario confermare quanto segue prima di procedere al passaggio fi
 Per ulteriori informazioni su [!DNL Identity Graph Linking Rules], leggere la seguente documentazione:
 
 * [Panoramica di [!DNL Identity Graph Linking Rules]](./overview.md)
-* [Algoritmo di ottimizzazione identità](./identity-optimization-algorithm.md)
+* [Algoritmo di ottimizzazione delle identità](./identity-optimization-algorithm.md)
 * [Guida all’implementazione](./implementation-guide.md)
 * [Esempi di configurazioni del grafico](./example-configurations.md)
 * [Risoluzione dei problemi e domande frequenti](./troubleshooting.md)
