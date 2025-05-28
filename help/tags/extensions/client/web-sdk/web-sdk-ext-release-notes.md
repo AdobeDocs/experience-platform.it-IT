@@ -2,16 +2,23 @@
 title: Note sulla versione dell’estensione Adobe Experience Platform Web SDK
 description: Estensione tag Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 5dc5e11962abf760692e0cb424cdd863d1905e87
+source-git-commit: 03cc702eced26453b5923bb63739c0cb739e8c8f
 workflow-type: tm+mt
-source-wordcount: '2652'
-ht-degree: 29%
+source-wordcount: '2677'
+ht-degree: 28%
 
 ---
 
 # Note sulla versione dell’estensione Adobe Experience Platform Web SDK
 
 Questo documento descrive le note sulla versione dell’estensione tag Adobe Experience Platform Web SDK. Per le ultime note sulla versione di SDK, consulta le [note sulla versione di Experience Platform Web SDK](/help/web-sdk/release-notes.md).
+
+
+## Versione 2.30.1, mercoledì 27 maggio 2025
+
+**Correzioni e miglioramenti**
+
+- È stato risolto un problema che causava l’arresto anomalo della visualizzazione della variabile di aggiornamento se non era impostata alcuna sandbox predefinita per un’organizzazione.
 
 ## Versione 2.30.0, giovedì 21 maggio 2025
 
