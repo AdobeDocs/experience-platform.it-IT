@@ -2,9 +2,9 @@
 title: Panoramica dell’estensione Cloud Connector
 description: Scopri l’estensione di inoltro degli eventi Cloud Connector in Adobe Experience Platform.
 exl-id: f3713652-ac32-4171-8dda-127c8c235849
-source-git-commit: 3b9ff1d41c698feadd0215ab562f87747aaa91a1
+source-git-commit: e832694fed5dbb86b5ed544473d6a79e500a6222
 workflow-type: tm+mt
-source-wordcount: '1715'
+source-wordcount: '1716'
 ht-degree: 79%
 
 ---
@@ -126,7 +126,7 @@ arc.ruleStash.[EXTENSION-NAME-HERE].responses.[RESPONSE-KEY-HERE]
 arc.ruleStash.adobe-cloud-connector.reponses.productDetails 
 ```
 
-## Usa Mutual Transport Layer Security [!DNL mTLS] nelle regole di inoltro degli eventi {#mtls-rules}
+## Aggiungere una regola di Mutual Transport Layer Security ([!DNL mTLS]) alla libreria di inoltro eventi {#mtls-rules}
 
 Il certificato [!DNL mTLS] è una credenziale digitale che prova l&#39;identità di un server o di un client nelle comunicazioni protette. Quando si utilizza l&#39;API del servizio [!DNL mTLS], questi certificati consentono di verificare e crittografare le interazioni con l&#39;inoltro eventi di Adobe Experience Platform. Questo processo non solo protegge i dati, ma garantisce anche che ogni connessione provenga da un partner fidato.
 
@@ -134,7 +134,7 @@ Il certificato [!DNL mTLS] è una credenziale digitale che prova l&#39;identità
 
 Per installare l&#39;estensione, [crea una proprietà di inoltro eventi](../../../ui/event-forwarding/overview.md#properties) o seleziona una proprietà esistente da modificare.
 
-Seleziona **[!UICONTROL Estensioni]** nel pannello a sinistra. Nella scheda **[!UICONTROL Catalogo]**, seleziona la scheda API **[!UICONTROL Adobe Cloud Connector]** Conversioni in tempo reale, quindi seleziona **[!UICONTROL Installa]**.
+Seleziona **[!UICONTROL Estensioni]** nel pannello a sinistra. Nella scheda **[!UICONTROL Catalogo]**, seleziona la scheda **[!UICONTROL Adobe Cloud Connector]**, quindi seleziona **[!UICONTROL Installa]**.
 
 ![Il catalogo delle estensioni mostra la scheda delle estensioni [!DNL Adobe Cloud Connector] che evidenzia l&#39;installazione.](../../../images/extensions/server/cloud-connector/install-extension.png)
 
@@ -142,7 +142,7 @@ Seleziona **[!UICONTROL Estensioni]** nel pannello a sinistra. Nella scheda **[!
 
 >[!NOTE]
 >
->Per configurare una regola per l&#39;utilizzo di [!DNL mTLS], è necessario disporre di Adobe Cloud Connector versione 1.2.4 o successiva.
+>Per configurare una regola per l&#39;utilizzo di [!DNL mTLS], è necessario che sia installato Adobe Cloud Connector versione 1.2.4 o successiva.
 
 Dopo aver installato l&#39;estensione, puoi creare una regola di Inoltro eventi che utilizza [!DNL mTLS] e aggiungerla alla libreria.
 
@@ -150,7 +150,7 @@ Crea una nuova [regola](../../../ui/managing-resources/rules.md) di inoltro even
 
 ![Visualizzazione delle regole di proprietà di inoltro eventi, con i campi necessari per aggiungere una configurazione dell&#39;azione della regola di inoltro eventi evidenziati.](../../../images/extensions/server/cloud-connector/event-action.png)
 
-Dopo aver effettuato la selezione, verranno visualizzati controlli aggiuntivi per configurare i metodi e la destinazione per la richiesta [!DNL mTLS]. Per abilitare l&#39;utilizzo dei certificati attivi negli ambienti, selezionare **[!UICONTROL Attiva in[!DNL mTLS]]**, quindi selezionare **[!UICONTROL Mantieni modifiche]** per salvare la regola.
+Dopo aver effettuato la selezione, verranno visualizzati controlli aggiuntivi per configurare il metodo e la destinazione per la richiesta [!DNL mTLS]. Per abilitare l&#39;utilizzo dei certificati attivi negli ambienti, selezionare **[!UICONTROL Attiva in[!DNL mTLS]]**, quindi selezionare **[!UICONTROL Mantieni modifiche]** per salvare la regola.
 
 ![Visualizzazione delle regole di proprietà di inoltro eventi, con i campi di controllo aggiuntivi e mantieni le modifiche evidenziate.](../../../images/extensions/server/cloud-connector/save-rule.png)
 
@@ -160,6 +160,6 @@ La nuova regola è ora pronta. Seleziona **[!UICONTROL Salva nella libreria]**, 
 
 ## Passaggi successivi
 
-Questa guida illustra come impostare le regole mTLS nell’inoltro degli eventi. Per ulteriori dettagli sulla configurazione di mTLS per un ambiente, consulta la [guida Mutual Transport Layer Security [!DNL mTLS] guida](../cloud-connector/mtls.md).
+Questa guida illustra come impostare le regole mTLS nell’inoltro degli eventi. Per ulteriori dettagli sulla configurazione di mTLS per un ambiente, fare riferimento alla [guida Mutual Transport Layer Security ([!DNL mTLS])](../cloud-connector/mtls.md).
 
 Per ulteriori informazioni sulle funzionalità di inoltro degli eventi in Experience Platform, consulta la [panoramica sull&#39;inoltro degli eventi](../../../ui/event-forwarding/overview.md).

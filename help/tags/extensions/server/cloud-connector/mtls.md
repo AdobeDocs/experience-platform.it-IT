@@ -1,14 +1,15 @@
 ---
 title: Panoramica di Mutual Transport Layer Security (mTLS)
 description: Scopri come utilizzare mTLS per recuperare in modo sicuro i certificati pubblici rilasciati da Adobe per l’inoltro degli eventi.
-source-git-commit: 3b9ff1d41c698feadd0215ab562f87747aaa91a1
+exl-id: e8ee8655-213d-4d2a-93d4-d62824b53b1d
+source-git-commit: ab16cc3f70ec54460c7c4834e665c828d75d4d9e
 workflow-type: tm+mt
-source-wordcount: '637'
-ht-degree: 1%
+source-wordcount: '638'
+ht-degree: 2%
 
 ---
 
-# Panoramica di Mutual Transport Layer Security [!DNL mTLS]
+# Panoramica di Mutual Transport Layer Security ([!DNL mTLS])
 
 Associa i certificati Mutual Transport Layer Security ([!DNL mTLS]) nell&#39;interfaccia utente [!UICONTROL Ambienti] per assumere il controllo della sicurezza dell&#39;estensione. Il certificato [!DNL mTLS] è una credenziale digitale che prova l&#39;identità di un server o di un client nelle comunicazioni protette. Quando si utilizza l&#39;API del servizio [!DNL mTLS], questi certificati consentono di verificare e crittografare le interazioni con l&#39;inoltro eventi di Adobe Experience Platform. Questo processo non solo protegge i dati, ma garantisce anche che ogni connessione provenga da un partner fidato.
 
@@ -48,14 +49,14 @@ Per visualizzare i dettagli del certificato per un ambiente, seleziona la scheda
 
 Vengono visualizzati i seguenti dettagli del certificato:
 
-| Ambiente | Descrizione |
+| Nome campo | Descrizione |
 | --- | --- |
 | Certificato | Dettagli del certificato, tra cui:<ul><li>**Nome**: nome del certificato.</li><li>**Data di creazione**: la data di creazione del certificato.</li><li>**Stato**: lo stato corrente del certificato:<ul><li>**Corrente**: il certificato è in uso.</li><li>**Obsoleto**: il certificato non è in uso ma non è ancora scaduto. Può essere comunque selezionato per l&#39;uso.</li><li>**Scaduto**: il certificato è scaduto, non è disponibile e non è più disponibile per l&#39;uso.</li></ul></ul> |
 | Scade | Data di scadenza del certificato. |
 | Variable Name | Nome della variabile del certificato. |
 | Stato | Lo stato corrente del certificato:<ul><li>**Depositato**: il certificato è stato distribuito correttamente ed è attivo.</li><li>**Distribuzione**: è in corso la distribuzione del certificato.</li><li>**È necessaria la distribuzione**: questo stato viene visualizzato quando si seleziona un certificato obsoleto.</li></ul> |
 
-![Pagina Modifica ambiente di sviluppo, evidenziando [!UICONTROL Dettagli certificato].](../../../images/extensions/server/cloud-connector/create-environment.png)
+![Pagina Modifica ambiente di sviluppo, evidenziando [!UICONTROL Dettagli certificato].](../../../images/extensions/server/cloud-connector/certificate-details.png)
 
 ### Selezionare e distribuire un certificato obsoleto {#deploy-obsolete-certificate}
 
