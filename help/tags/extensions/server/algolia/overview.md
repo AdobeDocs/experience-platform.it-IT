@@ -171,5 +171,5 @@ Per informazioni dettagliate su come eseguire il debug dell&#39;implementazione 
 
 - [[!DNL Algolia] Documentazione API approfondimenti](https://www.algolia.com/doc/rest-api/insights/)
 - [[!DNL Algolia] Documentazione eventi](https://www.algolia.com/doc/guides/sending-events/getting-started/)
-- [[!DNL Adobe Experience Platform] Documentazione sull&#39;inoltro degli eventi](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html)
+- [[!DNL Adobe Experience Platform] Documentazione sull&#39;inoltro degli eventi](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=it)
 - [[!DNL Algolia] Panoramica delle funzionalità IA](https://www.algolia.com/products/ai-search/)
