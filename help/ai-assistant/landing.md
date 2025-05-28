@@ -31,14 +31,14 @@ Per iniziare, leggi il materiale incluso nei collegamenti riportati di seguito p
     <div><strong>Migliora il tuo apprendimento</strong><br/>Scopri, risolvi i problemi e amplia la tua conoscenza dei prodotti senza interrompere i flussi di lavoro.</div>
     </td>
     <td>
-    <a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="./assets/landing/ai-videos.png" style="width:100%;max-height:100%"></a>
+    <a href="https://experienceleague.adobe.com/it/playlists/experience-platform-get-started-with-ai-assistant"><img src="./assets/landing/ai-videos.png" style="width:100%;max-height:100%"></a>
     <div><strong>Visita la playlist video dell'Assistente di intelligenza artificiale</strong><br/>Scopri le numerose sfide e i casi d'uso che puoi affrontare con l'Assistente di intelligenza artificiale.</div>
     </td>
   </tr>
   <tr style="border: 0;">
     <td align="center"><a href="./home.md"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     <td align="center"><a href="./home.md#product-knowledge"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
-    <td align="center"><a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
+    <td align="center"><a href="https://experienceleague.adobe.com/it/playlists/experience-platform-get-started-with-ai-assistant"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     </tr>
 </table>
 
@@ -460,9 +460,9 @@ Sfoglia i collegamenti riportati di seguito per comprendere meglio i casi d’us
 <a href="./home.md" target="_blank">Documentazione</a> - <a href="./ui-guide.md" target="_blank">Guida interfaccia utente</a> - <a href="./access.md" target="_blank">Accesso all'Assistente IA</a> - <a href="./privacy.md" target="_blank">Privacy, sicurezza e governance</a> - <a href="./faq.md" target="_blank">Domande frequenti</a>
 </td>
 <td><strong>Adobe Journey Optimizer</strong><br/>
-<a href="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/get-started/ai-assistant" target="_blank">Documentazione</a>
+<a href="https://experienceleague.adobe.com/it/docs/journey-optimizer/using/get-started/ai-assistant" target="_blank">Documentazione</a>
 </td>
 <td><strong>Customer Journey Analytics</strong><br/>
-<a href="https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant" target="_blank">Documentazione</a>
+<a href="https://experienceleague.adobe.com/it/docs/analytics-platform/using/ai-assistant" target="_blank">Documentazione</a>
 </td>
 </tr></table>
