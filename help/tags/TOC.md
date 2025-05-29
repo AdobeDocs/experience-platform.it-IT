@@ -6,9 +6,9 @@ user-guide-description: Scopri come distribuire e gestire i tag di analisi, mark
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: a2d93b5c13194707e8a87d633e47d0446b9afabd
+source-git-commit: 3434fd13ba4ca58f27834e75b045af079c18c64c
 workflow-type: tm+mt
-source-wordcount: '782'
+source-wordcount: '783'
 ht-degree: 44%
 
 ---
@@ -221,6 +221,8 @@ ht-degree: 44%
          * [Note sulla versione](./extensions/server/cloud-connector/release-notes.md)
       * [!DNL Adform] {#adform}
          * [Panoramica](./extensions/server/adform/overview.md)
+      * [!DNL Algolia] {#algolia}
+         * [Panoramica](./extensions/server/algolia/overview.md)
       * [!DNL Amazon] {#amazon}
          * [Panoramica](./extensions/server/amazon/overview.md)
       * [!DNL AWS] {#aws}
