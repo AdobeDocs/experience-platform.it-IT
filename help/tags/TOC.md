@@ -6,9 +6,9 @@ user-guide-description: Scopri come distribuire e gestire i tag di analisi, mark
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 3434fd13ba4ca58f27834e75b045af079c18c64c
+source-git-commit: f038927d6a19db5e0187ccefd76d9ecc9df91b6a
 workflow-type: tm+mt
-source-wordcount: '783'
+source-wordcount: '785'
 ht-degree: 44%
 
 ---
@@ -133,6 +133,8 @@ ht-degree: 44%
       * [Advertising Cloud](https://exchange.adobe.com/apps/ec/100640)
       * [Informazioni su risorse AEM](https://exchange.adobe.com/apps/ec/103406)
       * [Notificatore JS AirBrake](https://exchange.adobe.com/apps/ec/103342)
+      * [!DNL Algolia] approfondimenti {#algolia-insights}
+         * [Panoramica](./extensions/client/algolia/overview.md)
       * [Ampiezza](https://exchange.adobe.com/apps/ec/108010)
       * [Apollo QAX](https://exchange.adobe.com/apps/ec/105068)
       * [Tag principale inserzionista Awin](https://exchange.adobe.com/apps/ec/103176)
