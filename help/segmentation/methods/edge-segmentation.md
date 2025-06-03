@@ -2,9 +2,9 @@
 title: Guida alla segmentazione di Edge
 description: Scopri come utilizzare la segmentazione Edge per valutare i tipi di pubblico in Experience Platform istantaneamente al limite, abilitando casi di utilizzo di personalizzazione della pagina stessa e successiva.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: a741fdb4393863dbc011c03c733e27572da0ae6c
 workflow-type: tm+mt
-source-wordcount: '1154'
+source-wordcount: '1116'
 ht-degree: 2%
 
 ---
@@ -33,7 +33,6 @@ Una query può essere valutata con segmentazione Edge se soddisfa uno qualsiasi 
 | Solo profilo | Qualsiasi definizione di segmento che fa riferimento solo a un attributo di profilo. | `homeAddress.country.equals("US", false)` | ![Viene visualizzato un esempio di un attributo di profilo.](../images/methods/edge/profile-attribute.png) |
 | Singolo evento con un attributo di profilo entro un intervallo di tempo relativo inferiore a 24 ore | Qualsiasi definizione di segmento che si riferisce a un singolo evento in arrivo, con uno o più attributi di profilo, e si verifica entro un intervallo di tempo relativo inferiore a 24 ore. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![Viene visualizzato un esempio di un singolo evento con un attributo di profilo all&#39;interno di un intervallo di tempo relativo.](../images/methods/edge/single-event-with-profile-attribute.png) |
 | Segmento di segmenti | Qualsiasi definizione di segmento che contiene uno o più segmenti batch o edge. **Nota:** se si utilizza un segmento di segmenti, l&#39;annullamento del profilo avverrà **ogni 24 ore**. | `inSegment("a730ed3f-119c-415b-a4ac-27c396ae2dff") and inSegment("8fbbe169-2da6-4c9d-a332-b6a6ecf559b9")` | ![Viene visualizzato un esempio di segmento di segmenti.](../images/methods/edge/segment-of-segments.png) |
-| Più eventi con un attributo di profilo | Qualsiasi definizione di segmento che fa riferimento a più eventi **nelle ultime 24 ore** e (facoltativamente) ha uno o più attributi di profilo. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("directMarketing.emailClicked", false)) WHEN(today), C1: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![Viene visualizzato un esempio di più eventi con un attributo di profilo.](../images/methods/edge/multiple-events-with-profile-attribute.png) |
 
 Inoltre, la definizione del segmento **deve** essere associata a un criterio di unione attivo sul server Edge. Per ulteriori informazioni sui criteri di unione, leggere la [guida ai criteri di unione](../../profile/api/merge-policies.md).
 
