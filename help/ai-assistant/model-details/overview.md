@@ -1,29 +1,29 @@
 ---
-title: Schede Modello Per Trasparenza Modello IA In Adobe Experience Platform
-description: Scopri di più sui modelli di schede in Adobe Experience Platform.
+title: Dettagli Del Modello Per La Trasparenza Del Modello Di Intelligenza Artificiale In Adobe Experience Platform
+description: Scopri i dettagli del modello in Adobe Experience Platform.
 hide: true
 hidefromtoc: true
 exl-id: 74a8ef82-cff9-4a7e-95c8-f915eb664eda
-source-git-commit: dddd699f231d54ee44b33f86a5c9e59c0aedc30c
+source-git-commit: 6623c7dad0fc4ddb7cb79e8f474b824915f130fc
 workflow-type: tm+mt
 source-wordcount: '3171'
 ht-degree: 0%
 
 ---
 
-# Schede modello per trasparenza modello AI in Adobe Experience Platform
+# Dettagli del modello per la trasparenza del modello di IA in Adobe Experience Platform
 
-Una scheda modello di IA è il formato standard tramite il quale viene comunicata la trasparenza del modello di IA. Le schede modello forniscono informazioni complete sul modello sottostante su cui è basato un determinato strumento di intelligenza artificiale. Le schede modello includono informazioni quali lo scopo di uno strumento di intelligenza artificiale, i dati di formazione, le metriche delle prestazioni, le limitazioni e le considerazioni etiche. Puoi utilizzare la trasparenza fornita dalle schede modello per comprendere meglio le funzionalità e i limiti del modello, nonché per promuovere meglio un uso responsabile ed equo dell’intelligenza artificiale.
+Un dettaglio del modello di IA è il formato standard tramite il quale viene comunicata la trasparenza del modello di IA. I dettagli del modello forniscono informazioni complete sul modello sottostante su cui è basato un determinato strumento di intelligenza artificiale. I dettagli del modello includono informazioni quali lo scopo di uno strumento di intelligenza artificiale, i dati di formazione, le metriche delle prestazioni, le limitazioni e le considerazioni etiche. Puoi utilizzare la trasparenza fornita dai dettagli del modello per comprendere meglio le funzionalità e i limiti del modello, nonché per promuovere in modo migliore un uso responsabile ed equo dell’intelligenza artificiale.
 
-Le schede modello sono pubbliche e hanno lo scopo di migliorare la comprensione da parte dei clienti attuali e potenziali dei modelli di intelligenza artificiale utilizzati da Adobe. Le schede modello sono generalmente statiche. Tuttavia, esistono diversi aspetti dei modelli di intelligenza artificiale che possono cambiare nel tempo, tra cui derivazione, parzialità e altri attributi di trasparenza.
+I dettagli del modello sono pubblici e sono intesi a migliorare la comprensione, sia attuale che futura, dei modelli di intelligenza artificiale utilizzati da Adobe. I dettagli del modello sono generalmente statici. Tuttavia, esistono diversi aspetti dei modelli di intelligenza artificiale che possono cambiare nel tempo, tra cui derivazione, parzialità e altri attributi di trasparenza.
 
-Leggi questo documento per scoprire di più sui modelli di schede in Adobe Experience Platform.
+Leggi questo documento per scoprire i dettagli del modello in Adobe Experience Platform.
 
-## Sezioni modello scheda {#model-card-sections}
+## Sezioni dei dettagli del modello {#model-detail-sections}
 
-Una scheda modello è composta da una varietà di sezioni diverse, ciascuna incentrata su un particolare aspetto del modello di intelligenza artificiale.
+Un dettaglio del modello è composto da una varietà di sezioni diverse, ciascuna incentrata su un particolare aspetto del modello di intelligenza artificiale.
 
-Leggi quanto segue per una guida sulle diverse sezioni di una scheda modello, incluse le informazioni sulle domande a cui sono indirizzati.
+Leggete quanto segue per una guida sulle diverse sezioni di un modello, incluse le informazioni sulle domande che trattano.
 
 ### Panoramica del modello {#model-overview}
 
