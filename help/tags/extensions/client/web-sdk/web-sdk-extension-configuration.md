@@ -2,10 +2,10 @@
 title: Configurare l’estensione tag Web SDK
 description: Scopri come configurare l’estensione tag Experience Platform Web SDK nell’interfaccia utente Tag.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 57b29c396531ee18c79fad7cce068ff3adf5f2a2
 workflow-type: tm+mt
-source-wordcount: '2875'
-ht-degree: 4%
+source-wordcount: '2965'
+ht-degree: 3%
 
 ---
 
@@ -42,7 +42,7 @@ Quando si crea una build di Web SDK personalizzata, questa viene utilizzata da t
 >[!IMPORTANT]
 >
 >La disabilitazione dei componenti di Web SDK può interrompere l&#39;implementazione esistente. Ogni volta che disattivi un componente, accertati di testare a fondo l’implementazione per assicurarti che tutte le funzionalità necessarie funzionino come previsto.
->Quando disattivi un componente, non puoi più modificarne le impostazioni.
+>>Quando disattivi un componente, non puoi più modificarne le impostazioni.
 
 Per creare una build personalizzata di Web SDK utilizzando l’estensione tag Web SDK, segui la procedura riportata di seguito.
 
@@ -117,11 +117,9 @@ Questa sezione ti consente di definire il comportamento del Web SDK quando si tr
 * **[!UICONTROL Usa cookie di terze parti]**: quando questa opzione è abilitata, Web SDK tenta di memorizzare un identificatore utente in un cookie di terze parti. In caso di esito positivo, l’utente viene identificato come un singolo utente mentre si sposta tra più domini, anziché essere identificato come un utente separato su ciascun dominio. Se questa opzione è abilitata, SDK potrebbe non essere ancora in grado di memorizzare l’identificatore utente in un cookie di terze parti se il browser non supporta i cookie di terze parti o è stato configurato dall’utente per non consentire i cookie di terze parti. In questo caso, SDK memorizza l’identificatore solo nel dominio di prime parti.
 
   >[!IMPORTANT]
-  >&#x200B;>I cookie di terze parti non sono compatibili con la funzionalità [ID dispositivo di prima parte](../../../../web-sdk/identity/first-party-device-ids.md) in Web SDK.
-
-Puoi utilizzare gli ID dispositivo di prime parti oppure cookie di terze parti, ma non puoi utilizzare entrambe le funzioni contemporaneamente.
+  >>I cookie di terze parti non sono compatibili con la funzionalità [ID dispositivo di prima parte](../../../../web-sdk/identity/first-party-device-ids.md) in Web SDK.
+  >>Puoi utilizzare gli ID dispositivo di prime parti oppure cookie di terze parti, ma non puoi utilizzare entrambe le funzioni contemporaneamente.
   >
-
 ## Configurare le impostazioni di personalizzazione {#personalization}
 
 Questa sezione ti consente di configurare come nascondere determinate parti di una pagina durante il caricamento del contenuto personalizzato. In questo modo i visitatori potranno vedere solo la pagina personalizzata.
@@ -142,7 +140,7 @@ Per utilizzare il frammento pre-hiding, copiarlo e incollarlo nell&#39;elemento 
 
 >[!IMPORTANT]
 >
->Quando si utilizza il frammento pre-hiding, Adobe consiglia di utilizzare la stessa regola [!DNL CSS] utilizzata dallo stile [pre-hiding](#prehiding-style).
+Quando si utilizza il frammento pre-hiding, Adobe consiglia di utilizzare la stessa regola [!DNL CSS] utilizzata dallo stile [pre-hiding](#prehiding-style).
 
 ## Configurare le impostazioni di raccolta dati {#data-collection}
 
@@ -155,6 +153,11 @@ Gestisci le impostazioni di configurazione della raccolta dati. Impostazioni sim
    * **[!UICONTROL Nessun raggruppamento di eventi]**: i dati di tracciamento dei collegamenti vengono inviati ad Adobe in eventi separati. I clic sui collegamenti inviati in eventi separati possono aumentare l’utilizzo contrattuale dei dati inviati a Adobe Experience Platform.
    * **[!UICONTROL Raggruppamento eventi tramite archiviazione sessione]**: archivia i dati di tracciamento dei collegamenti nell&#39;archiviazione sessione fino all&#39;evento pagina successivo. Nella pagina seguente, i dati di tracciamento dei collegamenti e i dati di visualizzazione della pagina memorizzati vengono inviati ad Adobe contemporaneamente. Adobe consiglia di abilitare questa impostazione durante il tracciamento dei collegamenti interni.
    * **[!UICONTROL Raggruppamento eventi tramite oggetto locale]**: memorizzare i dati di tracciamento dei collegamenti in un oggetto locale fino all&#39;evento della pagina successivo. Se un visitatore passa a una nuova pagina, i dati di tracciamento dei collegamenti andranno persi. Questa impostazione è particolarmente utile nel contesto delle applicazioni a pagina singola.
+
+  Quando scegli il raggruppamento di eventi con archiviazione sessione o un oggetto locale e invii dati a Real-Time CDP, Customer Journey Analytics, Adobe Journey Optimizer o Mix Modeler, devi aggiornare le regole di assegnazione tag. Assicurati che ogni evento di visualizzazione della pagina mappi esplicitamente sia il nome della pagina (come stringa) che il valore di visualizzazione della pagina (come numero intero, in genere 1) all’oggetto XDM prima di inviare i dati ad Adobe.
+
+  Se invii dati ad Adobe Analytics, questi valori vengono inclusi automaticamente e non è necessaria alcuna configurazione aggiuntiva.
+
 * **[!UICONTROL Raccogli clic su un collegamento esterno]**: casella di controllo che abilita la raccolta di collegamenti esterni.
 * **[!UICONTROL Raccogliere i clic sul collegamento di download]**: casella di controllo che abilita la raccolta dei collegamenti di download.
 * **[!UICONTROL Qualificatore collegamento di download]**: espressione regolare che qualifica un URL collegamento come collegamento di download.
@@ -168,7 +171,7 @@ Gestisci le impostazioni di configurazione della raccolta dati. Impostazioni sim
 
 >[!TIP]
 >
->Il campo **[!UICONTROL Il prima del clic sul collegamento invia]** è un callback obsoleto visibile solo per le proprietà per le quali è già configurato. Equivale al tag [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) nella libreria JavaScript. Utilizza il callback **[!UICONTROL Proprietà clic filtro]** per filtrare o modificare i dati dei clic oppure utilizza il callback **[!UICONTROL Attivato prima dell&#39;invio dell&#39;evento]** per filtrare o modificare il payload complessivo inviato ad Adobe. Se sono impostati sia il callback **[!UICONTROL Proprietà clic filtro]** che il callback **[!UICONTROL Attivato prima del clic collegamento invia]**, verrà eseguito solo il callback **[!UICONTROL Proprietà clic filtro]**.
+Il campo **[!UICONTROL Il prima del clic sul collegamento invia]** è un callback obsoleto visibile solo per le proprietà per le quali è già configurato. Equivale al tag [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) nella libreria JavaScript. Utilizza il callback **[!UICONTROL Proprietà clic filtro]** per filtrare o modificare i dati dei clic oppure utilizza il callback **[!UICONTROL Attivato prima dell&#39;invio dell&#39;evento]** per filtrare o modificare il payload complessivo inviato ad Adobe. Se sono impostati sia il callback **[!UICONTROL Proprietà clic filtro]** che il callback **[!UICONTROL Attivato prima del clic collegamento invia]**, verrà eseguito solo il callback **[!UICONTROL Proprietà clic filtro]**.
 
 ## Configurare le impostazioni della raccolta di file multimediali {#media-collection}
 
@@ -202,7 +205,7 @@ In alternativa al passaggio delle sostituzioni tramite un comando Web SDK, puoi 
 
 >[!IMPORTANT]
 >
->Le sostituzioni dello stream di dati devono essere configurate in base all’ambiente. Gli ambienti di sviluppo, staging e produzione hanno tutti sostituzioni separate. Puoi copiare le impostazioni tra di esse utilizzando le opzioni dedicate mostrate nella schermata seguente.
+Le sostituzioni dello stream di dati devono essere configurate in base all’ambiente. Gli ambienti di sviluppo, staging e produzione hanno tutti sostituzioni separate. Puoi copiare le impostazioni tra di esse utilizzando le opzioni dedicate mostrate nella schermata seguente.
 
 ![Immagine che mostra le sostituzioni della configurazione dello stream di dati tramite la pagina dell&#39;estensione tag di Web SDK.](assets/datastream-overrides.png)
 
