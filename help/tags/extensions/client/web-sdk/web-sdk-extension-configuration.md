@@ -42,7 +42,7 @@ Quando si crea una build di Web SDK personalizzata, questa viene utilizzata da t
 >[!IMPORTANT]
 >
 >La disabilitazione dei componenti di Web SDK può interrompere l&#39;implementazione esistente. Ogni volta che disattivi un componente, accertati di testare a fondo l’implementazione per assicurarti che tutte le funzionalità necessarie funzionino come previsto.
->>Quando disattivi un componente, non puoi più modificarne le impostazioni.
+>&#x200B;>Quando disattivi un componente, non puoi più modificarne le impostazioni.
 
 Per creare una build personalizzata di Web SDK utilizzando l’estensione tag Web SDK, segui la procedura riportata di seguito.
 
@@ -117,9 +117,10 @@ Questa sezione ti consente di definire il comportamento del Web SDK quando si tr
 * **[!UICONTROL Usa cookie di terze parti]**: quando questa opzione è abilitata, Web SDK tenta di memorizzare un identificatore utente in un cookie di terze parti. In caso di esito positivo, l’utente viene identificato come un singolo utente mentre si sposta tra più domini, anziché essere identificato come un utente separato su ciascun dominio. Se questa opzione è abilitata, SDK potrebbe non essere ancora in grado di memorizzare l’identificatore utente in un cookie di terze parti se il browser non supporta i cookie di terze parti o è stato configurato dall’utente per non consentire i cookie di terze parti. In questo caso, SDK memorizza l’identificatore solo nel dominio di prime parti.
 
   >[!IMPORTANT]
-  >>I cookie di terze parti non sono compatibili con la funzionalità [ID dispositivo di prima parte](../../../../web-sdk/identity/first-party-device-ids.md) in Web SDK.
-  >>Puoi utilizzare gli ID dispositivo di prime parti oppure cookie di terze parti, ma non puoi utilizzare entrambe le funzioni contemporaneamente.
+  >&#x200B;>I cookie di terze parti non sono compatibili con la funzionalità [ID dispositivo di prima parte](../../../../web-sdk/identity/first-party-device-ids.md) in Web SDK.
+  >&#x200B;>Puoi utilizzare gli ID dispositivo di prime parti oppure cookie di terze parti, ma non puoi utilizzare entrambe le funzioni contemporaneamente.
   >
+
 ## Configurare le impostazioni di personalizzazione {#personalization}
 
 Questa sezione ti consente di configurare come nascondere determinate parti di una pagina durante il caricamento del contenuto personalizzato. In questo modo i visitatori potranno vedere solo la pagina personalizzata.
@@ -140,7 +141,7 @@ Per utilizzare il frammento pre-hiding, copiarlo e incollarlo nell&#39;elemento 
 
 >[!IMPORTANT]
 >
-Quando si utilizza il frammento pre-hiding, Adobe consiglia di utilizzare la stessa regola [!DNL CSS] utilizzata dallo stile [pre-hiding](#prehiding-style).
+>Quando si utilizza il frammento pre-hiding, Adobe consiglia di utilizzare la stessa regola [!DNL CSS] utilizzata dallo stile [pre-hiding](#prehiding-style).
 
 ## Configurare le impostazioni di raccolta dati {#data-collection}
 
@@ -171,7 +172,7 @@ Gestisci le impostazioni di configurazione della raccolta dati. Impostazioni sim
 
 >[!TIP]
 >
-Il campo **[!UICONTROL Il prima del clic sul collegamento invia]** è un callback obsoleto visibile solo per le proprietà per le quali è già configurato. Equivale al tag [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) nella libreria JavaScript. Utilizza il callback **[!UICONTROL Proprietà clic filtro]** per filtrare o modificare i dati dei clic oppure utilizza il callback **[!UICONTROL Attivato prima dell&#39;invio dell&#39;evento]** per filtrare o modificare il payload complessivo inviato ad Adobe. Se sono impostati sia il callback **[!UICONTROL Proprietà clic filtro]** che il callback **[!UICONTROL Attivato prima del clic collegamento invia]**, verrà eseguito solo il callback **[!UICONTROL Proprietà clic filtro]**.
+>Il campo **[!UICONTROL Il prima del clic sul collegamento invia]** è un callback obsoleto visibile solo per le proprietà per le quali è già configurato. Equivale al tag [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) nella libreria JavaScript. Utilizza il callback **[!UICONTROL Proprietà clic filtro]** per filtrare o modificare i dati dei clic oppure utilizza il callback **[!UICONTROL Attivato prima dell&#39;invio dell&#39;evento]** per filtrare o modificare il payload complessivo inviato ad Adobe. Se sono impostati sia il callback **[!UICONTROL Proprietà clic filtro]** che il callback **[!UICONTROL Attivato prima del clic collegamento invia]**, verrà eseguito solo il callback **[!UICONTROL Proprietà clic filtro]**.
 
 ## Configurare le impostazioni della raccolta di file multimediali {#media-collection}
 
@@ -205,7 +206,7 @@ In alternativa al passaggio delle sostituzioni tramite un comando Web SDK, puoi 
 
 >[!IMPORTANT]
 >
-Le sostituzioni dello stream di dati devono essere configurate in base all’ambiente. Gli ambienti di sviluppo, staging e produzione hanno tutti sostituzioni separate. Puoi copiare le impostazioni tra di esse utilizzando le opzioni dedicate mostrate nella schermata seguente.
+>Le sostituzioni dello stream di dati devono essere configurate in base all’ambiente. Gli ambienti di sviluppo, staging e produzione hanno tutti sostituzioni separate. Puoi copiare le impostazioni tra di esse utilizzando le opzioni dedicate mostrate nella schermata seguente.
 
 ![Immagine che mostra le sostituzioni della configurazione dello stream di dati tramite la pagina dell&#39;estensione tag di Web SDK.](assets/datastream-overrides.png)
 
