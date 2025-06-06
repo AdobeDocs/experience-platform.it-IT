@@ -4,9 +4,9 @@ description: Scopri il modello di intelligenza artificiale utilizzato per IA per
 hide: true
 hidefromtoc: true
 exl-id: b2eeb1d2-3c2b-40a0-b5cd-91e99d99a906
-source-git-commit: 6623c7dad0fc4ddb7cb79e8f474b824915f130fc
+source-git-commit: a7b69cd11ccbd9950cafa73dba51be1d67924bfe
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1016'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,8 @@ ht-degree: 0%
 
 ## Formazione sui modelli {#model-training}
 
-* **Dati di formazione e pre-elaborazione**: il set di dati di formazione per ciascun cliente proviene direttamente dai propri dati in Adobe Experience Platform. Ciò include le interazioni storiche del cliente, i record transazionali, i registri di coinvolgimento comportamentale e le informazioni demografiche raccolte e memorizzate nell’istanza Adobe Experience Platform. Il set di dati sfrutta i dati specifici del cliente nell’arco temporale scelto, acquisendo le tendenze stagionali uniche e i pattern di coinvolgimento. Prima dell’utilizzo, il set di dati di ciascun cliente viene sottoposto a una pre-elaborazione personalizzata in base alle sue caratteristiche, che include la gestione del valore mancante, la codifica per categorie, la scalabilità delle funzioni, il rilevamento dei dati anomali e la progettazione delle funzioni per garantire una qualità e un’usabilità ottimali per il caso d’uso specifico
+* **Dati di formazione e pre-elaborazione**: il set di dati di formazione per ciascun cliente proviene direttamente dai propri dati in Adobe Experience Platform. Ciò include le interazioni storiche del cliente, i record transazionali, i registri di coinvolgimento comportamentale e le informazioni demografiche raccolte e memorizzate nell’istanza Adobe Experience Platform. Il set di dati sfrutta i dati specifici del cliente nell’arco temporale scelto, acquisendo le tendenze stagionali uniche e i pattern di coinvolgimento. Prima dell’utilizzo, il set di dati di ciascun cliente viene sottoposto a una pre-elaborazione personalizzata in base alle sue caratteristiche, che include la gestione del valore mancante, la codifica per categorie, la scalabilità delle funzioni, il rilevamento dei dati anomali e la progettazione delle funzioni per garantire una qualità e un’usabilità ottimali per il caso d’uso specifico.
+   * I dati dei consumatori utilizzati per la formazione non vengono utilizzati per diversi clienti.
 * **Specifiche di formazione**: il modello sfrutta [!DNL LightGBM] utilizzando [!DNL GBM], ottimizzato per i dati strutturati. Viene addestrato sulle sequenze storiche di eventi dei clienti per identificare i modelli comportamentali predittivi.
 * **Framework di formazione**: il modello è stato sviluppato utilizzando [!DNL LightGBM] e [!DNL scikit-learn] ed è addestrato sull&#39;infrastruttura cloud di IA per l&#39;Adobe.
 * **Infrastruttura di formazione**: [!DNL Databricks] cluster.
@@ -64,7 +65,7 @@ ht-degree: 0%
 
 * **Distribuzione del modello**: il modello è ospitato sui servizi di intelligenza artificiale di Adobe Experience Platform e integrato con varie applicazioni Adobe. È disponibile tramite endpoint API e consente di accedere facilmente a previsioni in tempo reale ed elaborazione batch attraverso i flussi di lavoro di marketing e coinvolgimento dei consumatori.
 * **Monitoraggio del modello**: il modello viene monitorato continuamente tramite il monitoraggio del modello per visualizzare la deriva dalla configurazione dell&#39;addestramento. I riavvolgimenti periodici (una volta ogni 3 mesi) vengono eseguiti automaticamente.
-* **Data modello**: il modello viene riqualificato una volta ogni diversi mesi (al massimo una volta ogni 6 mesi) utilizzando dati aggiornati sulle interazioni con i consumatori per garantire una rilevanza costante. La riqualificazione periodica aiuta a mitigare la deriva dei dati e le fluttuazioni stagionali che potrebbero influire sull’accuratezza predittiva.
+* **Aggiornamento modello**: il modello viene riqualificato una volta ogni diversi mesi (al massimo una volta ogni 6 mesi) utilizzando dati aggiornati sulle interazioni con il consumatore per garantire una rilevanza costante. La riqualificazione periodica aiuta a mitigare la deriva dei dati e le fluttuazioni stagionali che potrebbero influire sull’accuratezza predittiva.
 
 ## Spiegabilità {#explainability}
 

@@ -4,9 +4,9 @@ description: Scopri il modello di IA per l’Assistente all’intelligenza artif
 hide: true
 hidefromtoc: true
 exl-id: ca157945-5f74-45d0-9d40-c65d09a8e80d
-source-git-commit: a8cc7c6f202cdd2786a69e548810b3957d69fdb3
+source-git-commit: a7b69cd11ccbd9950cafa73dba51be1d67924bfe
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '639'
 ht-degree: 0%
 
 ---
@@ -46,13 +46,13 @@ WHERE
 
 ## Valutazione del modello {#model-evaluation}
 
-* **Metriche e procedure di valutazione**: il modello viene valutato con precisione. Ad esempio, di tutte le [!DNL NL2SQL] richieste, quante restituiscono i risultati SQL corretti. Il processo di valutazione è una combinazione di corrispondenza basata su regole (standardizzazione SQL e quindi corrispondenza diretta delle stringhe SQL), risolutore SQL basato su LLM e valutazione umana.
+* **Metriche e procedure di valutazione**: il modello viene valutato esaminando le [!DNL NL2SQL] richieste e valutando quante di esse producono i risultati SQL corretti. Il processo di valutazione è una combinazione di corrispondenza basata su regole (standardizzazione SQL e quindi corrispondenza diretta delle stringhe SQL), risolutore SQL basato su LLM e valutazione umana.
 * **Dati di valutazione e pre-elaborazione**: utilizziamo set aperti per il test di regressione e abbiamo anche progetti di annotazione settimanali per monitorare le prestazioni del modello attraverso il traffico cliente reale campionato.
 
 ## Distribuzione del modello {#model-deployment}
 
 * **Monitoraggio del modello**: il modello base è ospitato da [!DNL Azure].
-* **Aggiornamento modello**: il modello viene aggiornato regolarmente, su base settimanale, tramite l&#39;espansione della banca domande. Il modello viene aggiornato anche attraverso nuove strategie e istruzioni di richiesta, quando necessario.
+* **Aggiornamento modello**: Adobe Experience Platform AI Assistant Operational Insights Natural Language to SQL Model viene aggiornato regolarmente (settimanalmente) tramite l&#39;espansione della banca domande. Il modello viene aggiornato anche attraverso nuove strategie e istruzioni di richiesta, quando necessario.
 
 ## Equità e parzialità {#fairness-and-bias}
 
