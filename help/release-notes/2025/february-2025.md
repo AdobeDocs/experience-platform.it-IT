@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform - Febbraio 2025
 description: Note sulla versione di Adobe Experience Platform di febbraio 2025.
 exl-id: 734a9484-516e-4dd7-9503-8fcdc50cbaac
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: c8fe5f05b7dcef7db2ae44d5b6575e123cbd014d
 workflow-type: tm+mt
-source-wordcount: '1645'
-ht-degree: 97%
+source-wordcount: '1677'
+ht-degree: 96%
 
 ---
 
@@ -54,7 +54,7 @@ Il servizio catalogo è il sistema di registrazione per la posizione e la deriva
 
 | Funzione | Descrizione |
 | --- | --- |
-| Nuovo endpoint API | Gestisci i metadati del set di dati di Adobe Experience Platform in modo più efficiente con il nuovo [endpoint API /v2/dataSets/{DATASET_ID} del servizio catalogo](../../catalog/api/update-object.md#patch-v2-notation). Puoi aggiornare facilmente attributi di set di dati complessi e nidificati in modo approfondito, poiché il sistema crea automaticamente livelli di percorso mancanti per risparmiare tempo, limitare i passaggi manuali e ridurre al minimo gli errori. |
+| Nuovo endpoint API | Gestisci i metadati del set di dati di Adobe Experience Platform in modo più efficiente con il nuovo [endpoint API /v2/dataSets/{DATASET_ID} di Catalog Service](../../catalog/api/update-object.md#patch-v2-notation). Puoi aggiornare facilmente attributi di set di dati complessi e nidificati in modo approfondito, poiché il sistema crea automaticamente livelli di percorso mancanti per risparmiare tempo, limitare i passaggi manuali e ridurre al minimo gli errori. |
 
 {style="table-layout:auto"}
 
@@ -101,7 +101,7 @@ Per ulteriori informazioni, consulta la [panoramica sulla preparazione dei dati]
 
 {style="table-layout:auto"}
 
-**Correzioni di problemi e miglioramenti** {#destinations-fixes-and-enhancements}
+**Correzioni e miglioramenti** {#destinations-fixes-and-enhancements}
 
 - È stato risolto un problema negli strumenti di test di Destination SDK. Alcuni clienti o partner hanno riscontrato problemi con lo [strumento di generazione del profilo di esempio](/help/destinations/destination-sdk/testing-api/streaming-destinations/sample-profile-generation-api.md) a causa di un formato non supportato quando lo schema utilizzato per la generazione dei profili includeva tipi di dati con un selettore `No format`.
 - È stato risolto un problema che si verificava durante l’aggiornamento delle specifiche di `targetConnection` delle destinazioni tramite l’API del servizio Flusso. In alcuni casi, l’operazione PATCH si comportava in modo simile a un’operazione POST, danneggiando i flussi di dati esistenti. Questo problema è ora risolto e tutta la clientela può utilizzare l’API del servizio Flusso per aggiornare le proprie specifiche `targetConnection`. [Ulteriori informazioni](/help/destinations/api/edit-destination.md#patch-target-connection).
@@ -117,7 +117,7 @@ Per ulteriori informazioni, leggi la [panoramica sulle destinazioni](../../desti
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Divisione persistente | La composizione del pubblico ora supporta le suddivisioni persistenti. Puoi fare in modo che i tipi di pubblico suddivisi rimangano costanti quando si suddividono per profilo, aggiungendo uno spazio dei nomi delle identità al blocco di suddivisione. Ulteriori informazioni su questa funzione sono disponibili nella [documentazione sulla composizione del pubblico](../../segmentation/ui/audience-composition.md). |
+| Suddivisione persistente | La composizione del pubblico ora supporta le suddivisioni persistenti. Puoi fare in modo che i tipi di pubblico suddivisi rimangano costanti quando vengono suddivisi per profilo, aggiungendo al blocco di suddivisione uno spazio dei nomi delle identità. Ulteriori informazioni su questa funzione sono disponibili nella [documentazione sulla composizione del pubblico](../../segmentation/ui/audience-composition.md). |
 
 Per ulteriori informazioni su [!DNL Segmentation Service], consulta la [Panoramica sulla segmentazione](../../segmentation/home.md).
 
@@ -132,6 +132,7 @@ Utilizza le origini in Experience Platform per acquisire dati da un’applicazio
 | Funzione | Descrizione |
 | --- | --- |
 | Supporto per le visualizzazioni in [!DNL Microsoft Dynamics] | È ora possibile acquisire `"entityType": "view"` utilizzando l’origine [!DNL Microsoft Dynamics]. Per ulteriori informazioni, consulta la guida sulla [connessione di un’origine  [!DNL Microsoft Dynamics]  ad Experience Platform](../../sources/tutorials/api/create/crm/ms-dynamics.md). |
+| Inserire nell&#39;elenco Consentiti Nuovi indirizzi IP da | Per utilizzare correttamente le origini Experience Platform, aggiungi i seguenti indirizzi IP al tuo inserisco nell&#39;elenco Consentiti di.<br></br>**VA7**<ul><li>`48.211.4.136/29`</li><li>`48.211.4.144/28`</li><li>`48.211.4.160/29`</li><li>`40.84.85.144/28`</li><li>`40.84.85.192/28`</li></ul>**AUS5**<ul><li>`20.213.194.144/29`</li><li>`20.227.120.32/27`</li></ul> <br></br>Per ulteriori informazioni, leggere la [guida alla inserisce nell&#39;elenco Consentiti dell&#39;indirizzo IP di origine](../../sources/ip-address-allow-list.md). |
 
 {style="table-layout:auto"}
 
