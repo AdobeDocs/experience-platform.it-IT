@@ -4,9 +4,9 @@ description: Scopri come creare una connessione di origine e un flusso di dati p
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-09-24T00:00:00Z
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '820'
+source-wordcount: '841'
 ht-degree: 1%
 
 ---
@@ -86,6 +86,10 @@ Per ulteriori informazioni sulla gestione di ruoli e privilegi, fare riferimento
       * Impossibile utilizzare `TIMESTAMP_TZ` in una colonna timestamp o in una mappatura.
 
 ## Passaggi successivi
+
+>[!NOTE]
+>
+>Dopo aver creato o aggiornato un flusso di dati in streaming, è necessaria una breve pausa di 5 minuti nell’acquisizione dei dati per evitare potenziali istanze di perdita o perdita di dati.
 
 Il seguente tutorial illustra i passaggi necessari per collegare l&#39;origine di streaming [!DNL Snowflake] ad Experience Platform utilizzando l&#39;API:
 

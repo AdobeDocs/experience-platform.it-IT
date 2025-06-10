@@ -3,9 +3,9 @@ title: Panoramica di Google PubSub Source
 description: Scopri come collegare Google PubSub a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 7c78173d-2639-47cb-8935-77fb7841a121
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '857'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Questa sezione descrive i prerequisiti da completare prima di collegare l&#39;ac
 
 ### Crea account del servizio {#create-service-account}
 
-Un account del servizio **1&rbrace; è un tipo di account spesso utilizzato da un&#39;applicazione o da un carico di lavoro di calcolo, anziché da una persona.** Un account di servizio è identificato dal relativo indirizzo e-mail, che è univoco per l’account.
+Un account del servizio **1} è un tipo di account spesso utilizzato da un&#39;applicazione o da un carico di lavoro di calcolo, anziché da una persona.** Un account di servizio è identificato dal relativo indirizzo e-mail, che è univoco per l’account.
 
 * Da un lato, gli account del servizio sono **entità**. È possibile concedere agli account del servizio l&#39;accesso alle risorse [!DNL Google Cloud]. Ad esempio, è possibile concedere a un account di servizio il ruolo Amministratore di calcolo `(roles/compute.admin)` per un determinato progetto. Questo consente all’account del servizio di gestire le risorse del motore di calcolo in quel particolare progetto.
 * D&#39;altra parte, gli account del servizio sono anche risorse: è possibile concedere ad altri utenti/gruppi/ruoli l&#39;autorizzazione per accedere all&#39;account del servizio. Ad esempio, è possibile concedere a un utente il ruolo Utente account di servizio `(roles/iam.serviceAccountUser)` per un account di servizio per consentire all&#39;utente di associare tale account di servizio alle risorse. In alternativa, è possibile concedere a un utente il ruolo di amministratore dell&#39;account di servizio `(roles/iam.serviceAccountAdmin)` per consentire all&#39;utente di completare attività quali visualizzare, modificare, disabilitare ed eliminare l&#39;account di servizio.
@@ -82,6 +82,10 @@ Abilita **[!DNL exactly one delivery]**. Questa configurazione informa [!DNL Goo
 >È possibile creare un solo flusso di dati di origine per ogni sottoscrizione [!DNL Google PubSub]. Il riutilizzo di un abbonamento, anche tra sandbox diverse, comporta la perdita di dati.
 
 ## Connetti [!DNL Google PubSub] ad Experience Platform
+
+>[!NOTE]
+>
+>Dopo aver creato o aggiornato un flusso di dati in streaming, è necessaria una breve pausa di 5 minuti nell’acquisizione dei dati per evitare potenziali istanze di perdita o perdita di dati.
 
 La documentazione seguente fornisce informazioni su come connettere [!DNL Google PubSub] ad Experience Platform tramite API o tramite l&#39;interfaccia utente:
 

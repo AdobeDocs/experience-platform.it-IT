@@ -5,9 +5,9 @@ title: Creare un flusso di dati in streaming per i dati non elaborati utilizzand
 type: Tutorial
 description: Questo tutorial illustra i passaggi necessari per recuperare i dati in streaming e inviarli ad Experience Platform utilizzando i connettori e le API di origine.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '1180'
+source-wordcount: '1208'
 ht-degree: 3%
 
 ---
@@ -190,7 +190,7 @@ curl -X POST \
 | --- | --- |
 | `name` | Nome del set di dati da creare. |
 | `schemaRef.id` | URI `$id` per lo schema XDM su cui sarà basato il set di dati. |
-| `schemaRef.contentType` | Versione dello schema. Questo valore deve essere impostato su `application/vnd.adobe.xed-full-notext+json;version=1`, che restituisce la versione secondaria più recente dello schema. Per ulteriori informazioni, consulta la sezione sul controllo delle versioni dello schema [1&rbrace; nella guida dell&#39;API XDM.](../../../../xdm/api/getting-started.md#versioning) |
+| `schemaRef.contentType` | Versione dello schema. Questo valore deve essere impostato su `application/vnd.adobe.xed-full-notext+json;version=1`, che restituisce la versione secondaria più recente dello schema. Per ulteriori informazioni, consulta la sezione sul controllo delle versioni dello schema [1} nella guida dell&#39;API XDM.](../../../../xdm/api/getting-started.md#versioning) |
 
 **Risposta**
 
@@ -414,6 +414,10 @@ In caso di esito positivo, la risposta restituisce un elenco di specifiche del f
 ```
 
 ## Creare un flusso di dati
+
+>[!NOTE]
+>
+>Dopo aver creato o aggiornato un flusso di dati in streaming, è necessaria una breve pausa di 5 minuti nell’acquisizione dei dati per evitare potenziali istanze di perdita o perdita di dati.
 
 L’ultimo passaggio per la raccolta dei dati in streaming è la creazione di un flusso di dati. A questo punto sono stati preparati i seguenti valori obbligatori:
 
