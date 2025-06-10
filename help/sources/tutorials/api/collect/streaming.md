@@ -190,7 +190,7 @@ curl -X POST \
 | --- | --- |
 | `name` | Nome del set di dati da creare. |
 | `schemaRef.id` | URI `$id` per lo schema XDM su cui sarà basato il set di dati. |
-| `schemaRef.contentType` | Versione dello schema. Questo valore deve essere impostato su `application/vnd.adobe.xed-full-notext+json;version=1`, che restituisce la versione secondaria più recente dello schema. Per ulteriori informazioni, consulta la sezione sul controllo delle versioni dello schema [1} nella guida dell&#39;API XDM.](../../../../xdm/api/getting-started.md#versioning) |
+| `schemaRef.contentType` | Versione dello schema. Questo valore deve essere impostato su `application/vnd.adobe.xed-full-notext+json;version=1`, che restituisce la versione secondaria più recente dello schema. Per ulteriori informazioni, consulta la sezione sul controllo delle versioni dello schema [1&rbrace; nella guida dell&#39;API XDM.](../../../../xdm/api/getting-started.md#versioning) |
 
 **Risposta**
 
