@@ -4,7 +4,7 @@ description: Scopri il modello di intelligenza artificiale utilizzato per IA per
 hide: true
 hidefromtoc: true
 exl-id: b2eeb1d2-3c2b-40a0-b5cd-91e99d99a906
-source-git-commit: a7b69cd11ccbd9950cafa73dba51be1d67924bfe
+source-git-commit: 8230c71c9b7896dfb71506632754d48583d0dc21
 workflow-type: tm+mt
 source-wordcount: '1016'
 ht-degree: 0%
@@ -53,7 +53,7 @@ ht-degree: 0%
 * **Dati di formazione e pre-elaborazione**: il set di dati di formazione per ciascun cliente proviene direttamente dai propri dati in Adobe Experience Platform. Ciò include le interazioni storiche del cliente, i record transazionali, i registri di coinvolgimento comportamentale e le informazioni demografiche raccolte e memorizzate nell’istanza Adobe Experience Platform. Il set di dati sfrutta i dati specifici del cliente nell’arco temporale scelto, acquisendo le tendenze stagionali uniche e i pattern di coinvolgimento. Prima dell’utilizzo, il set di dati di ciascun cliente viene sottoposto a una pre-elaborazione personalizzata in base alle sue caratteristiche, che include la gestione del valore mancante, la codifica per categorie, la scalabilità delle funzioni, il rilevamento dei dati anomali e la progettazione delle funzioni per garantire una qualità e un’usabilità ottimali per il caso d’uso specifico.
    * I dati dei consumatori utilizzati per la formazione non vengono utilizzati per diversi clienti.
 * **Specifiche di formazione**: il modello sfrutta [!DNL LightGBM] utilizzando [!DNL GBM], ottimizzato per i dati strutturati. Viene addestrato sulle sequenze storiche di eventi dei clienti per identificare i modelli comportamentali predittivi.
-* **Framework di formazione**: il modello è stato sviluppato utilizzando [!DNL LightGBM] e [!DNL scikit-learn] ed è addestrato sull&#39;infrastruttura cloud di IA per l&#39;Adobe.
+* **Framework di formazione**: il modello è stato sviluppato utilizzando [!DNL LightGBM] e [!DNL scikit-learn] ed è ospitato nell&#39;infrastruttura cloud di Adobe AI.
 * **Infrastruttura di formazione**: [!DNL Databricks] cluster.
 
 ## Valutazione del modello {#model-evaluation}
