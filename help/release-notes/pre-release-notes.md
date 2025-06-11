@@ -120,7 +120,7 @@ La composizione di pubblico federato consente alle aziende di comporre i dati pe
 
 | Nuova funzionalità | Descrizione |
 | ----------- | ----------- |
-| Funzionalità di preparazione HIPAA | La Federated Audience Composition è ora compatibile con HIPAA. Per ulteriori informazioni sulle misure di privacy e sicurezza di Federated Audience Composition, leggi [privacy e sicurezza in Panoramica di Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/privacy-security). Per ulteriori informazioni sulla conformità HIPAA per i prodotti Experience Platform in generale, leggere la [Panoramica su prodotti e servizi HIPAA e Adobe](https://www.adobe.com/trust/compliance/hipaa-ready.html). |
+| Funzionalità di preparazione HIPAA | La Federated Audience Composition è ora compatibile con HIPAA. Per ulteriori informazioni sulle misure di privacy e sicurezza di Federated Audience Composition, leggi [privacy e sicurezza in Panoramica di Federated Audience Composition](https://experienceleague.adobe.com/it/docs/federated-audience-composition/using/start/privacy-security). Per ulteriori informazioni sulla conformità HIPAA per i prodotti Experience Platform in generale, leggere la [Panoramica su prodotti e servizi HIPAA e Adobe](https://www.adobe.com/trust/compliance/hipaa-ready.html). |
 
 Per ulteriori informazioni, consulta la [documentazione sulla composizione di pubblico federato](https://experienceleague.adobe.com/it/docs/federated-audience-composition/using/home).
 
@@ -132,7 +132,7 @@ Nuove normative legali e organizzative danno agli utenti il diritto di accedere 
 
 | Funzione | Descrizione |
 |--- | ---|
-| Supporto per le leggi sulla privacy in Tennessee e Minnesota | Privacy Service ora supporta il Tennessee Information Protection Act (`tipa_tn_usa`) e il Minnesota Consumer Data Privacy Act (`mcdpa_mn_usa`). Puoi elaborare le richieste di accesso ed eliminazione in conformità a queste nuove normative a livello di stato. Per ulteriori dettagli, consulta la [Panoramica sulle normative](https://experienceleague.adobe.com/en/docs/experience-platform/privacy/regulations/overview). |
+| Supporto per le leggi sulla privacy in Tennessee e Minnesota | Privacy Service ora supporta il Tennessee Information Protection Act (`tipa_tn_usa`) e il Minnesota Consumer Data Privacy Act (`mcdpa_mn_usa`). Puoi elaborare le richieste di accesso ed eliminazione in conformità a queste nuove normative a livello di stato. Per ulteriori dettagli, consulta la [Panoramica sulle normative](https://experienceleague.adobe.com/it/docs/experience-platform/privacy/regulations/overview). |
 
 Per ulteriori informazioni sul servizio, consulta la [panoramica di Privacy Service](../privacy-service/home.md).
 
