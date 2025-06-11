@@ -5,10 +5,10 @@ breadcrumb-title: Guida del servizio Experience Platform Identity
 user-guide-description: Collega le identità dei clienti su più dispositivi e sistemi per offrire esperienze digitali personalizzate.
 feature: Identities
 role: Admin,Developer
-source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
+source-git-commit: 6690854048324567f9a8a1f000bd10f45d7c8340
 workflow-type: tm+mt
-source-wordcount: '145'
-ht-degree: 33%
+source-wordcount: '144'
+ht-degree: 36%
 
 ---
 
@@ -24,9 +24,9 @@ ht-degree: 33%
    - [Eliminazioni nel servizio Identity](./features/deletion.md)
    - Regole di collegamento del grafico delle identità {#identity-graph-linking-rules}
       - [Panoramica delle funzioni](./identity-graph-linking-rules/overview.md)
-      - [Algoritmo di ottimizzazione identità](./identity-graph-linking-rules/identity-optimization-algorithm.md)
+      - [Algoritmo di ottimizzazione delle identità](./identity-graph-linking-rules/identity-optimization-algorithm.md)
       - [Guida all’implementazione per le regole di collegamento del grafico di identità](./identity-graph-linking-rules/implementation-guide.md)
-      - [Esempio di configurazioni del grafico](./identity-graph-linking-rules/example-configurations.md)
+      - [Guida alle configurazioni](./identity-graph-linking-rules/example-configurations.md)
       - [Risoluzione dei problemi relativi alle regole di collegamento del grafico delle identità](./identity-graph-linking-rules/troubleshooting.md)
       - [Priorità dello spazio dei nomi](./identity-graph-linking-rules/namespace-priority.md)
       - [Interfaccia utente simulazione grafico](./identity-graph-linking-rules/graph-simulation.md)
