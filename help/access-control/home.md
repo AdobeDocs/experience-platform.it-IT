@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica sul controllo degli accessi
 description: Il controllo degli accessi per Adobe Experience Platform viene fornito tramite Adobe Admin Console. Questa funzionalità sfrutta i profili di prodotto in Admin Console, che collegano gli utenti con autorizzazioni e sandbox.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 6a466770495b226f890ab67b21c5cb027fd46e02
 workflow-type: tm+mt
-source-wordcount: '3818'
+source-wordcount: '3851'
 ht-degree: 0%
 
 ---
@@ -131,7 +131,7 @@ La tabella seguente illustra le autorizzazioni disponibili per Experience Platfo
 | [!DNL Adobe Mix Modeler] | [!UICONTROL Visualizza configurazioni modelli Adobe Mix Modeler] | Accesso in sola lettura alle configurazioni dei modelli. |
 | [!DNL Adobe Mix Modeler] | [!UICONTROL Gestione configurazioni piani modelli Adobe Mix Modeler] | Possibilità di visualizzare e modificare le configurazioni dei piani. |
 | [!DNL Adobe Mix Modeler] | [!UICONTROL Visualizza configurazioni piani modelli Adobe Mix Modeler] | Accesso in sola lettura alle configurazioni dei piani. |
-| [!DNL AI Assistant] | [!UICONTROL Abilita Assistente IA] | Possibilità di porre le domande [[!DNL [AI assistant]]](../ai-assistant/access.md). |
+| [!DNL AI Assistant] | [!UICONTROL Abilita Assistente IA] | Possibilità di porre le domande [!DNL [AI assistant]](../ai-assistant/access.md). |
 | [!DNL AI Assistant] | [!UICONTROL Visualizza informazioni operative] | Accesso per ottenere risposte alle [query Operational Insights](../ai-assistant/home.md##operational-insights). |
 | [!DNL AI Assistant] | [!UICONTROL Genera contenuto] | Consente agli utenti di generare contenuto utilizzando [!DNL AI Assistant]. |
 | [!DNL AI Assistant] | [!UICONTROL Gestire il Brand Kit] | Consente agli utenti di creare le linee guida per il marchio utilizzando [!DNL AI Assistant]. |
@@ -193,10 +193,11 @@ La tabella seguente illustra le autorizzazioni disponibili per Experience Platfo
 | [!DNL Customer Managed Keys] | [!UICONTROL Gestione chiavi gestite dal cliente] | Accesso per visualizzare e configurare le chiavi gestite dal cliente. |
 | [!DNL Dashboards] | [!UICONTROL Visualizza dashboard utilizzo licenze] | Accesso in sola lettura per visualizzare il dashboard utilizzo licenze. |
 | [!DNL Dashboards] | [!UICONTROL Gestione dashboard standard] | Aggiungi attributi personalizzati non ancora presenti nel data warehouse. |
-| [!DNL Dashboards] | [!UICONTROL Visualizza dashboard standard] | Accesso in sola lettura per visualizzare il dashboard utilizzo licenze. |
+| [!DNL Dashboards] | [!UICONTROL Visualizza dashboard standard] | Accesso in sola lettura ai dashboard Profili, Destinazioni e Segmenti. Consente inoltre di accedere alle dashboard nella barra di navigazione a sinistra e nella scheda Inventario dashboard e integrazioni. |
 | [!DNL Dashboards] | [!UICONTROL Gestione dashboard personalizzati] | Accesso per creare o modificare un dashboard. |
 | [!DNL Dashboards] | [!UICONTROL Visualizza dashboard personalizzati] | Accesso in sola lettura alle dashboard definite dall&#39;utente. |
 | [!DNL Dashboards] | [!UICONTROL Gestione pianificazioni report] | Possibilità di creare pianificazioni. |
+| [!DNL Dashboards] | [!UICONTROL Esporta dati dashboard] | Controlla la capacità di un utente di esportare dati tabulari dai dashboard in modalità query pro. |
 | [!DNL Data Collection] | [!UICONTROL Gestisci flussi di dati] | Accesso per leggere, creare e modificare gli stream di dati. |
 | [!DNL Data Collection] | [!UICONTROL Visualizza flussi di dati] | Accesso in sola lettura agli stream di dati. |
 | [!DNL Data Governance] | [!UICONTROL Gestisci etichette di utilizzo] | Accesso per leggere, creare ed eliminare le etichette di utilizzo. |
