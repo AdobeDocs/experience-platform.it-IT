@@ -2,9 +2,9 @@
 title: Panoramica di Salesforce Source Connector
 description: Scopri come collegare Salesforce a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: 1665c15c39667521bb74cca216694cf6b46bf26b
+source-git-commit: d8d9303e358c66c4cd891d6bf59a801c09a95f8e
 workflow-type: tm+mt
-source-wordcount: '1599'
+source-wordcount: '1635'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >È ora possibile utilizzare l&#39;origine [!DNL Salesforce] quando si esegue Adobe Experience Platform su Amazon Web Services (AWS). Experience Platform in esecuzione su AWS è attualmente disponibile per un numero limitato di clienti. Per ulteriori informazioni sull&#39;infrastruttura Experience Platform supportata, consulta la [Panoramica multi-cloud di Experience Platform](../../../landing/multi-cloud.md).
+
+>[!WARNING]
+>
+>L&#39;autenticazione di base per l&#39;origine [!DNL Salesforce] diventerà obsoleta a gennaio 2026. È necessario passare all&#39;autenticazione delle credenziali client OAuth 2 per continuare a utilizzare l&#39;origine e l&#39;acquisizione dei dati dall&#39;account [!DNL Salesforce] in Experience Platform.
 
 Adobe Experience Platform consente di acquisire dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Experience Platform. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 
@@ -249,7 +253,7 @@ La tabella seguente contiene valori di esempio e informazioni aggiuntive sul pop
 | `TENANT_ID` | ID utilizzato per garantire che le risorse create abbiano lo spazio dei nomi corretto e siano contenute all’interno dell’organizzazione. | `b2bcdpproductiontest` |
 | `PLATFORM_URL` | L’endpoint URL a cui stai effettuando chiamate API. Questo valore è fisso ed è sempre impostato su: `http://platform.adobe.io/`. | `http://platform.adobe.io/` |
 | `munchkinId` | ID univoco dell&#39;account [!DNL Marketo]. Per informazioni su come recuperare `munchkinId`, consulta il tutorial su [autenticazione dell&#39;istanza](../adobe-applications/marketo/marketo-auth.md). [!DNL Marketo]  | `123-ABC-456` |
-| `sfdc_org_id` | L&#39;ID organizzazione per l&#39;account [!DNL Salesforce]. Per ulteriori informazioni sull&#39;acquisizione dell&#39;ID organizzazione [!DNL Salesforce], consulta la [[!DNL Salesforce] guida](https://help.salesforce.com/articleView?id=000325251&amp;type=1&amp;mode=1) seguente. | `00D4W000000FgYJUA0` |
+| `sfdc_org_id` | L&#39;ID organizzazione per l&#39;account [!DNL Salesforce]. Per ulteriori informazioni sull&#39;acquisizione dell&#39;ID organizzazione [!DNL Salesforce], consulta la [[!DNL Salesforce] guida](https://help.salesforce.com/articleView?id=000325251&type=1&mode=1) seguente. | `00D4W000000FgYJUA0` |
 | `has_abm` | Valore booleano che indica se sei abbonato a [!DNL Marketo Account-Based Marketing]. | `false` |
 | `has_msi` | Valore booleano che indica se sei abbonato a [!DNL Marketo Sales Insight]. | `false` |
 
