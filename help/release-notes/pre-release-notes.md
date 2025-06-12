@@ -3,10 +3,10 @@ title: Note pre-release di Experience Platform
 description: Un’anteprima delle ultime note sulla versione di Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: c34c41d384fbc4f309dffa8bba97a0f6f3468efc
+source-git-commit: c716bac1db556fe7a47462e38ee64d7b46bbefcc
 workflow-type: tm+mt
-source-wordcount: '1480'
-ht-degree: 42%
+source-wordcount: '1299'
+ht-degree: 45%
 
 ---
 
@@ -23,8 +23,8 @@ ht-degree: 42%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/it/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/it/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/it/docs/analytics-platform/using/releases/latest)
->- [Composizione di pubblico federato](https://experienceleague.adobe.com/it/docs/federated-audience-composition/using/release-notes)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Composizione di pubblico federato](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/it/docs/real-time-cdp-collaboration/using/latest)
 
 **Data di rilascio: giovedì 18 giugno 2025**
@@ -38,7 +38,6 @@ Nuove funzioni e aggiornamenti alle funzioni esistenti in Adobe Experience Platf
 - [Destinazioni](#destinations)
 - [Composizione di pubblico federato](#fac)
 - [Privacy Service](#privacy-service)
-- [Query Service](#query-service)
 - [Sandbox](#sandboxes)
 - [Origini](#sources)
 
@@ -120,7 +119,7 @@ La composizione di pubblico federato consente alle aziende di comporre i dati pe
 
 | Nuova funzionalità | Descrizione |
 | ----------- | ----------- |
-| Funzionalità di preparazione HIPAA | La Federated Audience Composition è ora compatibile con HIPAA. Per ulteriori informazioni sulle misure di privacy e sicurezza di Federated Audience Composition, leggi [privacy e sicurezza in Panoramica di Federated Audience Composition](https://experienceleague.adobe.com/it/docs/federated-audience-composition/using/start/privacy-security). Per ulteriori informazioni sulla conformità HIPAA per i prodotti Experience Platform in generale, leggere la [Panoramica su prodotti e servizi HIPAA e Adobe](https://www.adobe.com/trust/compliance/hipaa-ready.html). |
+| Funzionalità di preparazione HIPAA | La Federated Audience Composition è ora compatibile con HIPAA. Per ulteriori informazioni sulle misure di privacy e sicurezza di Federated Audience Composition, leggi [privacy e sicurezza in Panoramica di Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/privacy-security). Per ulteriori informazioni sulla conformità HIPAA per i prodotti Experience Platform in generale, leggere la [Panoramica su prodotti e servizi HIPAA e Adobe](https://www.adobe.com/trust/compliance/hipaa-ready.html). |
 
 Per ulteriori informazioni, consulta la [documentazione sulla composizione di pubblico federato](https://experienceleague.adobe.com/it/docs/federated-audience-composition/using/home).
 
@@ -132,30 +131,9 @@ Nuove normative legali e organizzative danno agli utenti il diritto di accedere 
 
 | Funzione | Descrizione |
 |--- | ---|
-| Supporto per le leggi sulla privacy in Tennessee e Minnesota | Privacy Service ora supporta il Tennessee Information Protection Act (`tipa_tn_usa`) e il Minnesota Consumer Data Privacy Act (`mcdpa_mn_usa`). Puoi elaborare le richieste di accesso ed eliminazione in conformità a queste nuove normative a livello di stato. Per ulteriori dettagli, consulta la [Panoramica sulle normative](https://experienceleague.adobe.com/it/docs/experience-platform/privacy/regulations/overview). |
+| Supporto per le leggi sulla privacy in Tennessee e Minnesota | Privacy Service ora supporta il Tennessee Information Protection Act (`tipa_tn_usa`) e il Minnesota Consumer Data Privacy Act (`mcdpa_mn_usa`). Puoi elaborare le richieste di accesso ed eliminazione in conformità a queste nuove normative a livello di stato. Per ulteriori dettagli, consulta la [Panoramica sulle normative](https://experienceleague.adobe.com/en/docs/experience-platform/privacy/regulations/overview). |
 
 Per ulteriori informazioni sul servizio, consulta la [panoramica di Privacy Service](../privacy-service/home.md).
-
-## Query Service {#query-service}
-
-Eseguire query sui dati nel data lake di Adobe Experience Platform utilizzando SQL standard con Query Service. Combina facilmente i set di dati e generane di nuovi dai risultati delle query per abilitare i rapporti, i flussi di lavoro della scienza dei dati o facilitare l’acquisizione nel profilo cliente in tempo reale.
-
-**Nuove funzioni**
-
-| Funzione | Descrizione |
-| --- | --- |
-| Funzioni statistiche avanzate | **Intersezione di sketch theta**: nuova funzione per calcolare le intersezioni dei set utilizzando gli schizzi theta per operazioni di conteggio e impostazione valori univoci approssimativi. **Istogrammi KLL**: sono state migliorate le funzionalità degli istogrammi utilizzando schizzi KLL (Kth small, L large, Elementi grandi) per la stima quantile e l&#39;analisi della distribuzione. Queste funzioni sono disponibili per i clienti di Data Distiller. |
-| Libreria modelli SQL | È ora disponibile una libreria completa di modelli SQL per i casi d’uso comuni. Questa funzione accelera lo sviluppo delle query fornendo modelli di best practice per pattern di analisi frequenti, consentendo ai clienti di Data Distiller di implementare analisi complesse in modo più efficiente. |
-
-**Funzioni aggiornate**
-
-| Funzione | Descrizione |
-| --- | --- |
-| Esempio di modellazione RFM | È stato aggiunto un esempio completo di modellazione Recency, Frequency, Monetary (RFM) per i clienti Data Distiller. Include documentazione dettagliata e guide all’implementazione per la segmentazione del cliente e l’analisi del valore utilizzando le tecniche RFM. |
-
-{style="table-layout:auto"}
-
-Per ulteriori informazioni su [!DNL Query Service], consulta la [[!DNL Query Service] panoramica](../query-service/home.md).
 
 ## Sandbox {#sandboxes}
 
