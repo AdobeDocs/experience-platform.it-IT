@@ -2,9 +2,9 @@
 title: Domande frequenti sui tipi di pubblico
 description: Trova le risposte alle domande più frequenti su tipi di pubblico e altri concetti correlati alla segmentazione.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: 92b70dc6d6085067f11d43436bc74d64bce72dd0
 workflow-type: tm+mt
-source-wordcount: '4842'
+source-wordcount: '4837'
 ht-degree: 2%
 
 ---
@@ -43,7 +43,7 @@ I dati associati a questa colonna di identità primaria sono i dati **only** all
 
 Tutti gli altri dati all&#39;interno del pubblico generato esternamente sono considerati **attributi payload**. Questi attributi possono essere utilizzati **solo** per la personalizzazione e l&#39;arricchimento durante l&#39;attivazione e sono **non** associati a un profilo. Tuttavia, questi attributi vengono memorizzati nel data lake.
 
-Anche se è possibile fare riferimento al pubblico generato esternamente durante la creazione di tipi di pubblico utilizzando il Generatore di segmenti, non è possibile utilizzare i singoli attributi di profilo **1&rbrace;.**
+Anche se è possibile fare riferimento al pubblico generato esternamente durante la creazione di tipi di pubblico utilizzando il Generatore di segmenti, non è possibile utilizzare i singoli attributi di profilo **1}.**
 
 ### Posso riconciliare i dati del pubblico generato esternamente con un profilo esistente in Experience Platform?
 
@@ -120,7 +120,7 @@ Gli attributi di arricchimento sono attributi che provengono da un set di dati e
 
 | Canale di attivazione | Tipi di pubblico da caricamento personalizzato CSV | Tipi di pubblico da Composizione pubblico |
 | --- | --- | --- |
-| Destinazioni Real-Time CDP | È possibile attivare sia gli attributi del payload che i tipi di pubblico. | È possibile attivare solo il pubblico. Impossibile attivare gli attributi di arricchimento **&#x200B;**. |
+| Destinazioni Real-Time CDP | È possibile attivare sia gli attributi del payload che i tipi di pubblico. | È possibile attivare solo il pubblico. Impossibile attivare gli attributi di arricchimento ****. |
 | Campagne Adobe Journey Optimizer | Non è possibile attivare né gli attributi del pubblico né quelli del payload. | È possibile attivare sia gli attributi di pubblico che quelli di arricchimento. |
 
 ## Stati del ciclo di vita {#lifecycle-states}
@@ -404,7 +404,7 @@ Nella sezione seguente sono elencate le domande relative alla segmentazione in s
 
 ### La segmentazione in streaming &quot;unqualification&quot; (non qualificazione) si verifica anche in tempo reale?
 
-Nella maggior parte dei casi, l’annullamento della qualifica per segmentazione in streaming avviene in tempo reale. Tuttavia, i segmenti di streaming che utilizzano segmenti di segmenti non **&#x200B;**&#x200B;sono idonei in tempo reale, ma vengono annullati dopo 24 ore.
+Nella maggior parte dei casi, l’annullamento della qualifica per segmentazione in streaming avviene in tempo reale. Tuttavia, i segmenti di streaming che utilizzano segmenti di segmenti non **** sono idonei in tempo reale, ma vengono annullati dopo 24 ore.
 
 ### Su quali dati funziona la segmentazione in streaming?
 
@@ -430,4 +430,4 @@ Di conseguenza, se noti che il numero in &quot;Ultimi X giorni&quot; è zero e a
 
 ### Ci sono limiti ai dati inviati in streaming?
 
-Affinché i dati in streaming possano essere utilizzati nella segmentazione in streaming, **deve** essere presente una spaziatura tra gli eventi in streaming. Se troppi eventi vengono inviati in streaming nello stesso secondo, Experience Platform tratterà questi eventi come dati generati da bot e verranno scartati. Come best practice, è necessario disporre di **almeno** cinque secondi tra i dati dell&#39;evento per garantire che vengano utilizzati correttamente.
+Quando utilizzi la segmentazione Edge o in streaming, accertati che gli eventi per ciascun profilo siano distanziati. Se troppi eventi vengono inviati in streaming nello stesso secondo, Experience Platform tratterà questi eventi come dati generati da bot e verranno scartati. Come best practice, è necessario disporre di **almeno** cinque secondi tra i dati dell&#39;evento per garantire che vengano utilizzati correttamente.

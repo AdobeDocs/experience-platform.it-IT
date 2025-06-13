@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guida alla segmentazione in streaming
 description: Scopri la segmentazione in streaming, compresi cosa è, come creare un pubblico valutato utilizzando la segmentazione in streaming e come visualizzare i tipi di pubblico creati utilizzando la segmentazione in streaming.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 4a8d509286c92a76a897be663a68709bb3b71391
+source-git-commit: 6935cee30adb59d52db6c6fed7036f81b54edd52
 workflow-type: tm+mt
 source-wordcount: '2022'
 ht-degree: 2%
@@ -169,7 +169,7 @@ Ad esempio, supponiamo che tu abbia due tipi di pubblico, entrambi contenenti i 
 
 | Pubblico | Schema | Tipo di Source | Definizione query | ID pubblico |
 | -------- | ------ | ----------- | ---------------- | ----------- |
-| Abbandoni recenti | Evento esperienza | Batch | Ha almeno un evento di abbandono nelle ultime 24 ore | `7deb246a-49b4-4687-95f9-6316df049948` |
+| Abbandoni recenti | Evento esperienza | Batch | Ha almeno un evento di abbandono nelle ultime 48 ore | `7deb246a-49b4-4687-95f9-6316df049948` |
 | Pagamenti recenti | Evento esperienza | Streaming | Ha almeno un pagamento nelle ultime 24 ore | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
 
 In questa situazione, devi creare un terzo pubblico come segue:
