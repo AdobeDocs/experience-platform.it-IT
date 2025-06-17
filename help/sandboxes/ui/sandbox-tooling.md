@@ -2,10 +2,10 @@
 title: Strumenti sandbox
 description: Esporta e importa facilmente le configurazioni Sandbox tra sandbox.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 208c9c47b4bde211506867cf59b8743556db7fc8
+source-git-commit: b5330e10dc8b395d1ef299073182c836f5c3af7f
 workflow-type: tm+mt
-source-wordcount: '2678'
-ht-degree: 7%
+source-wordcount: '3414'
+ht-degree: 5%
 
 ---
 
@@ -59,7 +59,7 @@ Nella tabella seguente sono elencati [!DNL Adobe Journey Optimizer] oggetti attu
 | [!DNL Adobe Journey Optimizer] | Azioni personalizzate |  | Le azioni personalizzate possono essere aggiunte a un pacchetto in modo indipendente. Una volta assegnata a un percorso, un’azione personalizzata non può più essere modificata. Per apportare aggiornamenti alle azioni personalizzate, devi: <ul><li>spostare le azioni personalizzate prima di eseguire la migrazione di un percorso</li><li>aggiorna le configurazioni (come intestazioni di richiesta, parametri di query e autenticazione) per le azioni personalizzate dopo la migrazione</li><li>esegui la migrazione degli oggetti percorso con le azioni personalizzate aggiunte durante il primo passaggio</li></ul> |
 | [!DNL Adobe Journey Optimizer] | Modello di contenuto | | Un modello di contenuto può essere copiato come oggetto dipendente dell&#39;oggetto percorso. I modelli autonomi consentono di riutilizzare facilmente i contenuti personalizzati nelle campagne e nei percorsi Journey Optimizer. |
 | [!DNL Adobe Journey Optimizer] | Frammento | Tutti i frammenti nidificati. | Un frammento può essere copiato come oggetto dipendente dell’oggetto percorso. I frammenti sono componenti riutilizzabili a cui è possibile fare riferimento in una o più e-mail in campagne e percorsi Journey Optimizer. |
-| [!DNL Adobe Journey Optimizer] | Campagne | I seguenti oggetti utilizzati nella campagna vengono copiati come oggetti dipendenti: <ul><li>Campagne</li><li>Tipi di pubblico</li><li>Schemi</li><li>Modelli di contenuto</li><li>Frammenti</li><li>Messaggio/Contenuto</li><li>Configurazione dei canali</li><li>Oggetti decisionali unificati</li><li>Impostazioni/varianti esperimento</li></ul> | <ul><li>Le campagne possono essere copiate insieme a tutti gli elementi relativi al profilo, al pubblico, allo schema, ai messaggi in linea e agli oggetti dipendenti. Alcuni elementi non vengono copiati, ad esempio le etichette di utilizzo dei dati e le impostazioni della lingua. Per un elenco completo degli oggetti che non possono essere copiati, fare riferimento alla guida [esportazione di oggetti in un&#39;altra sandbox](https://experienceleague.adobe.com/it/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox).</li><li>Se esiste una configurazione identica, il sistema rileva e riutilizza automaticamente un oggetto di configurazione del canale esistente nella sandbox di destinazione. Se non viene trovata alcuna configurazione corrispondente, la configurazione del canale viene ignorata durante l’importazione e gli utenti devono aggiornare manualmente le impostazioni del canale nella sandbox di destinazione per questo percorso.</li><li>Gli utenti possono riutilizzare gli esperimenti e i tipi di pubblico esistenti nella sandbox di destinazione come oggetti dipendenti delle campagne selezionate.</li></ul> |
+| [!DNL Adobe Journey Optimizer] | Campagne | I seguenti oggetti utilizzati nella campagna vengono copiati come oggetti dipendenti: <ul><li>Campagne</li><li>Tipi di pubblico</li><li>Schemi</li><li>Modelli di contenuto</li><li>Frammenti</li><li>Messaggio/Contenuto</li><li>Configurazione dei canali</li><li>Oggetti decisionali unificati</li><li>Impostazioni/varianti esperimento</li></ul> | <ul><li>Le campagne possono essere copiate insieme a tutti gli elementi relativi al profilo, al pubblico, allo schema, ai messaggi in linea e agli oggetti dipendenti. Alcuni elementi non vengono copiati, ad esempio le etichette di utilizzo dei dati e le impostazioni della lingua. Per un elenco completo degli oggetti che non possono essere copiati, fare riferimento alla guida [esportazione di oggetti in un&#39;altra sandbox](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox).</li><li>Se esiste una configurazione identica, il sistema rileva e riutilizza automaticamente un oggetto di configurazione del canale esistente nella sandbox di destinazione. Se non viene trovata alcuna configurazione corrispondente, la configurazione del canale viene ignorata durante l’importazione e gli utenti devono aggiornare manualmente le impostazioni del canale nella sandbox di destinazione per questo percorso.</li><li>Gli utenti possono riutilizzare gli esperimenti e i tipi di pubblico esistenti nella sandbox di destinazione come oggetti dipendenti delle campagne selezionate.</li></ul> |
 
 Le superfici (ad esempio i predefiniti) non vengono copiate. Il sistema seleziona automaticamente la corrispondenza più simile possibile nella sandbox di destinazione in base al tipo di messaggio e al nome della superficie. Se nella sandbox di destinazione non è presente alcuna superficie, la copia della superficie avrà esito negativo e la copia del messaggio avrà esito negativo perché un messaggio richiede che una superficie sia disponibile per l’impostazione. In questo caso, affinché la copia funzioni, è necessario creare almeno una superficie per il canale destro del messaggio.
 
@@ -253,11 +253,99 @@ La finestra di dialogo **[!UICONTROL Riepilogo importazione]** mostra un raggrup
 
 Al termine dell’importazione, viene ricevuta una notifica nell’interfaccia utente di Experience Platform. Puoi accedere a queste notifiche dall’icona degli avvisi. Se un processo non riesce, puoi passare alla risoluzione dei problemi da qui.
 
+## Trasferimento degli aggiornamenti delle configurazioni di oggetti iterativi tra sandbox tramite strumenti sandbox {#move-configs}
+
+È possibile utilizzare gli strumenti sandbox per trasferire le configurazioni degli oggetti tra sandbox diverse. In precedenza, per poter essere trasferiti ad altre sandbox, gli aggiornamenti della configurazione degli oggetti (come schemi, gruppi di campi e tipi di dati) dovevano essere ricreati o importati manualmente. Con questa funzionalità, puoi utilizzare gli strumenti sandbox per accelerare i flussi di lavoro e ridurre i potenziali errori trasferendo facilmente gli aggiornamenti della configurazione tra diverse sandbox.
+
+![Diagramma che mostra il modo in cui gli aggiornamenti vengono spostati tra le sandbox.](../images/ui/sandbox-tooling/move-updates-diagram.png)
+
+>[!TIP]
+>
+> Prima di tentare di trasferire le configurazioni dell’oggetto tra sandbox diverse, assicurati di disporre dei seguenti prerequisiti.
+>
+>- Le autorizzazioni appropriate per accedere agli strumenti sandbox.
+>- Un oggetto appena creato o aggiornato (ad esempio uno schema) nella sandbox di origine.
+
+>[!BEGINSHADEBOX]
+
+### Tipi di oggetto supportati per l&#39;operazione di aggiornamento
+
+Di seguito sono riportati i tipi di oggetto supportati per l&#39;aggiornamento:
+
+- Schemi
+- Gruppi di campi
+- Tipi di dati
+
+| Aggiornamenti supportati | Aggiornamenti non supportati |
+| --- | --- |
+| <ul><li>Aggiunta di nuovi campi o gruppi di campi alla risorsa.</li><li>Impostazione di un campo obbligatorio come facoltativo.</li><li>Introduzione di nuovi campi obbligatori.</li><li>Introduzione di un nuovo campo di relazione.</li><li>Introduzione di un nuovo campo di identità.</li><li>Modifica del nome visualizzato e della descrizione della risorsa.</li></ul> | <ul><li>Rimozione dei campi definiti in precedenza.</li><li>Ridefinizione dei campi esistenti quando lo schema è abilitato per Real-Time Customer Profile.</li><li>Rimozione o limitazione dei valori dei campi precedentemente supportati.</li><li>Spostamento dei campi esistenti in una posizione diversa nella struttura dello schema: questo comando crea un nuovo campo nella sandbox di destinazione, ma il campo precedente non viene rimosso.</li><li>Abilitazione o disabilitazione dello schema per la partecipazione al profilo: questa operazione verrà ignorata nel confronto delle differenze.</li><li>Etichette per il controllo degli accessi.</li></ul> |
+
+>[!ENDSHADEBOX]
+
+Segui i passaggi seguenti per scoprire come utilizzare gli strumenti sandbox per trasferire le configurazioni degli oggetti tra diverse sandbox.
+
+### Oggetti importati in precedenza
+
+Segui questi passaggi se il caso d’uso coinvolge oggetti esistenti nella sandbox di origine che richiedono aggiornamenti della configurazione, dopo essere già stati assemblati e importati in altre sandbox.
+
+Innanzitutto, aggiorna l’oggetto nella sandbox di origine. Ad esempio, passa all&#39;area di lavoro **[!UICONTROL Schemi]**, seleziona lo schema e aggiungi un nuovo gruppo di campi.
+
+![Area di lavoro dello schema con uno schema aggiornato.](../images/ui/sandbox-tooling/update-schema.png)
+
+Dopo aver aggiornato lo schema, passa a **[!UICONTROL Sandbox]**, seleziona **[!UICONTROL Pacchetti]**, quindi individua il pacchetto esistente.
+
+![Interfaccia strumenti sandbox con un pacchetto selezionato](../images/ui/sandbox-tooling/select-package.png)
+
+Utilizza l’interfaccia dei pacchetti per verificare le modifiche. Seleziona **[!UICONTROL Controlla aggiornamenti]** per visualizzare eventuali modifiche agli artefatti nel pacchetto. Quindi, seleziona **[!UICONTROL Visualizza diff]** per ricevere un riepilogo dettagliato di tutte le modifiche eseguite sugli artefatti.
+
+![Interfaccia del pacchetto con il pulsante di visualizzazione differenze selezionato.](../images/ui/sandbox-tooling/view-diff.png)
+
+Viene visualizzata l&#39;interfaccia [!UICONTROL Visualizza diff]. Per informazioni sugli artefatti di origine e di destinazione e sulle modifiche da applicare, consulta questo pedaggio.
+
+![Riepilogo delle modifiche.](../images/ui/sandbox-tooling/summary-of-changes.png)
+
+Durante questo passaggio, puoi anche selezionare [!UICONTROL Riepiloga con IA] per un riepilogo dettagliato di tutte le modifiche.
+
+![Riepilogo con IA abilitata.](../images/ui/sandbox-tooling/ai-summary.png)
+
+Al termine dell&#39;operazione, selezionare **[!UICONTROL Aggiorna pacchetto]**, quindi selezionare **[!UICONTROL Conferma]** nella finestra popup visualizzata. Una volta completato il processo, puoi aggiornare la pagina e selezionare **[!UICONTROL Visualizza cronologia]** per verificare la versione del pacchetto.
+
+![Finestra di conferma.](../images/ui/sandbox-tooling/confirm-changes.png)
+
+Per importare le modifiche, torna alla directory [!UICONTROL Pacchetti] e seleziona i puntini di sospensione (`...`) accanto al pacchetto, quindi seleziona **[!UICONTROL Importa pacchetto]**. Experience Platform seleziona automaticamente [!UICONTROL Aggiorna oggetti esistenti]. Verificare le modifiche, quindi selezionare **[!UICONTROL Fine]**.
+
+>[!NOTE]
+>
+>Tutti gli oggetti dipendenti vengono aggiornati automaticamente nella sandbox di destinazione come parte di questo flusso di lavoro.
+
+![Interfaccia dell&#39;obiettivo di importazione.](../images/ui/sandbox-tooling/import-objective.png)
+
+Per convalidare ulteriormente il processo di importazione, accedi alla sandbox di destinazione e visualizza manualmente l’oggetto aggiornato all’interno di tale sandbox.
+
+### Oggetti creati manualmente nella sandbox di destinazione
+
+Segui questi passaggi se il tuo caso d’uso prevede l’applicazione di modifiche alla configurazione a oggetti creati manualmente in sandbox separate.
+
+Innanzitutto, crea e pubblica un nuovo pacchetto con l’oggetto aggiornato.
+
+Quindi, importa il pacchetto nella sandbox di destinazione che contiene gli oggetti che desideri aggiornare. Durante il processo di importazione, selezionare **[!UICONTROL Aggiorna oggetti esistenti]**, quindi utilizzare il Navigatore oggetti per selezionare manualmente gli oggetti di destinazione a cui si desidera applicare gli aggiornamenti.
+
+>[!NOTE]
+>
+>- È facoltativo selezionare una mappatura di destinazione in una sandbox diversa per gli oggetti dipendenti. Se non è selezionato alcun elemento, ne viene creato uno nuovo.
+>- Per lo spazio dei nomi delle identità, il sistema rileva automaticamente se è necessario creare una nuova identità se una esistente deve essere riutilizzata nella sandbox di destinazione.
+
+![Interfaccia dell&#39;obiettivo di importazione con segnaposto per gli oggetti di destinazione da aggiornare.](../images/ui/sandbox-tooling/update-existing-objects.png)
+
+Dopo aver identificato gli oggetti di destinazione da aggiornare, selezionare **[!UICONTROL Fine]**.
+
+![Oggetti di destinazione selezionati.](../images/ui/sandbox-tooling/add-updated-objects.png)
+
 ## Esercitazione video
 
 Il video seguente illustra gli strumenti della sandbox e spiega come creare un nuovo pacchetto, pubblicarlo e importarlo.
 
->[!VIDEO](https://video.tv.adobe.com/v/3446095/?learn=on&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
 
 ## Passaggi successivi
 
