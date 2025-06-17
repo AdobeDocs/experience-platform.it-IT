@@ -138,8 +138,8 @@ Se scegli di eseguire l’hash degli indirizzi e-mail da solo, assicurati di sod
 >[!NOTE]
 >
 >I dati degli spazi dei nomi senza hash vengono automaticamente sottoposti a hashing da [!DNL Experience Platform] al momento dell&#39;attivazione.
->> L&#39;hash dei dati di origine degli attributi non viene eseguito automaticamente. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Applica trasformazione]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione.
->> L&#39;opzione **[!UICONTROL Applica trasformazione]** viene visualizzata solo quando si selezionano gli attributi come campi di origine. Non viene visualizzato quando si scelgono gli spazi dei nomi.
+>&#x200B;> L&#39;hash dei dati di origine degli attributi non viene eseguito automaticamente. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Applica trasformazione]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione.
+>&#x200B;> L&#39;opzione **[!UICONTROL Applica trasformazione]** viene visualizzata solo quando si selezionano gli attributi come campi di origine. Non viene visualizzato quando si scelgono gli spazi dei nomi.
 
 ![Applica controllo di trasformazione evidenziato nel passaggio di mappatura.](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
