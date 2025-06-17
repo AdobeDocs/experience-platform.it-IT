@@ -4,9 +4,9 @@ description: Scopri i diversi tipi di implementazione che è possibile configura
 hide: true
 hidefromtoc: true
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: f793dbda0520366b3ee69b3aa0f912b005957561
+source-git-commit: 2a5c8b3bd58d3659d0fcf519407b180bf5f091b4
 workflow-type: tm+mt
-source-wordcount: '1999'
+source-wordcount: '1951'
 ht-degree: 7%
 
 ---
@@ -17,11 +17,6 @@ ht-degree: 7%
 >id="platform_identities_algorithmconfiguration"
 >title="Configurazione algoritmo"
 >abstract="Configura uno spazio dei nomi univoco e una priorità dello spazio dei nomi personalizzata in base alle identità acquisite."
-
->[!NOTE]
->
->* &quot;CRMID&quot; e &quot;loginID&quot; sono spazi dei nomi personalizzati. In questo documento, &quot;CRMID&quot; è un identificatore di persona e &quot;loginID&quot; è un identificatore di accesso associato a una determinata persona.
->* Per simulare gli scenari del grafico di esempio descritti in questo documento, devi innanzitutto creare due spazi dei nomi personalizzati, uno con il simbolo di identità &quot;CRMID&quot; e un altro con il simbolo di identità &quot;loginID&quot;. I simboli di identità fanno distinzione tra maiuscole e minuscole.
 
 Per informazioni sui diversi tipi di implementazione che è possibile configurare utilizzando [!DNL Identity Graph Linking Rules], leggere questo documento.
 
@@ -43,9 +38,9 @@ Prima di passare al seguente documento, assicurati di acquisire familiarità con
 
 ## Implementazioni di base {#basic-implementations}
 
->[!TIP]
+>[!NOTE]
 >
->Devi creare uno spazio dei nomi personalizzato per più dispositivi per &quot;CRMID&quot; per completare gli esercizi di implementazione di base riportati di seguito.
+>Per completare le implementazioni seguenti, devi creare uno spazio dei nomi personalizzato con il simbolo di identità (distinzione maiuscole/minuscole) di: `CRMID`.
 
 Leggere questa sezione per le implementazioni di base di [!DNL Identity Graph Linking Rules].
 
@@ -90,7 +85,7 @@ Simula la seguente configurazione in Simulazione grafico. Puoi creare eventi per
 
 **Dispositivo condiviso (PC)**
 
-**Modalità testo:**
+**Modalità testo**
 
 ```json
 CRMID: John, ECID: 111
@@ -112,7 +107,7 @@ Il browser del computer desktop utilizzato da entrambi per visitare la piattafor
 
 **Dispositivo condiviso (dispositivo mobile)**
 
-**Modalità testo:**
+**Modalità testo**
 
 ```json
 CRMID: John, ECID: 111, IDFA: a-b-c
@@ -129,19 +124,23 @@ In questo grafico, John e Jane sono entrambi rappresentati dai rispettivi CRMID.
 
 ## Implementazioni intermedie {#intermediate-implementations}
 
+>[!TIP]
+>
+>Un&#39;identità **non univoca** è un&#39;identità associata a uno spazio dei nomi non univoco.
+
 Leggere questa sezione per le implementazioni intermedie di [!DNL Identity Graph Linking Rules].
 
 ### Caso d’uso: i dati includono identità non univoche
 
->[!TIP]
+>[!NOTE]
 >
->* Un&#39;identità **non univoca** è un&#39;identità associata a uno spazio dei nomi non univoco.
->
->* Devi creare spazi dei nomi personalizzati per più dispositivi per &quot;CRMID&quot; e &quot;Hash&quot; per completare gli esercizi di implementazione intermedi di seguito. &quot;CCHash&quot; è uno spazio dei nomi personalizzato che rappresenta un numero di carta di credito con hash.
+>Per completare le implementazioni di seguito, devi creare i seguenti spazi dei nomi personalizzati con i simboli di identità (distinzione maiuscole/minuscole) di:
+>* `CRMID`
+>* `CCHash` (spazio dei nomi personalizzato che rappresenta un numero di carta di credito con hash).
 
 Immagina di essere un architetto di dati che lavora per una banca commerciale che emette carte di credito. Il team marketing ha indicato di voler includere in un profilo la cronologia delle transazioni con carta di credito passate. Questo grafico delle identità potrebbe essere simile al seguente.
 
-**Modalità testo:**
+**Modalità testo**
 
 ```json
 CRMID: John, CChash: 1111-2222 
@@ -177,7 +176,7 @@ Simulare le seguenti configurazioni in Simulazione grafico. Puoi creare eventi p
 
 >[!TAB Dispositivo condiviso]
 
-**Modalità testo:**
+**Modalità testo**
 
 ```json
 CRMID: John, CChash: 1111-2222
@@ -194,7 +193,7 @@ CRMID: Jane, ECID:123
 
 Due utenti finali diversi si iscrivono al tuo sito web di e-commerce con la stessa carta di credito. Il team marketing vuole evitare il collasso del grafico assicurandosi che la carta di credito sia associata a un solo profilo.
 
-**Modalità testo:**
+**Modalità testo**
 
 ```json
 CRMID: John, CChash: 1111-2222
@@ -211,7 +210,7 @@ CRMID: Jane, ECID:456
 
 A causa di dati non puliti, in Experience Platform viene acquisito un numero di carta di credito non valido.
 
-**Modalità testo:**
+**Modalità testo**
 
 ```json
 CRMID: John, CChash: undefined
@@ -228,9 +227,11 @@ CRMID: Jill, CChash: undefined
 
 ### Caso d’uso: i dati includono CRMID con e senza hash
 
->[!TIP]
+>[!NOTE]
 >
->Devi creare spazi dei nomi personalizzati per più dispositivi per &quot;CRMID&quot; e &quot;CRMIDhash&quot; per completare gli esercizi di implementazione intermedi di seguito.
+>Per completare le implementazioni di seguito, devi creare spazi dei nomi personalizzati con i simboli di identità (con distinzione tra maiuscole e minuscole) di:
+>* `CRMID`
+>* `CRMIDhash`
 
 Stai acquisendo sia un CRMID senza hash (offline) che un CRMID con hash (online). L&#39;aspettativa è che esista una relazione diretta tra CRMID non hash e hash. Quando un utente finale esplora con un account autenticato, l’identificatore CRMID con hash viene inviato insieme all’ID dispositivo (rappresentato in Identity Service come ECID).
 
@@ -255,7 +256,7 @@ Simulare le seguenti configurazioni in Simulazione grafico. Puoi creare eventi p
 
 John e Jane condividono un dispositivo.
 
-**Modalità testo:**
+**Modalità testo**
 
 ```json
 CRMID: John, CRMIDhash: John
@@ -270,7 +271,7 @@ CRMIDhash: Jane, ECID: 111
 
 A causa di errori nel processo di hashing, viene generato un CRMID con hashing non univoco che viene inviato al servizio Identity.
 
-**Modalità testo:**
+**Modalità testo**
 
 ```json
 CRMID: John, CRMIDhash: aaaa
@@ -342,6 +343,10 @@ Email: jane@g, ECID: 111
 
 ### Caso d’uso: i dati includono tre spazi dei nomi univoci
 
+>[!NOTE]
+>
+>Per completare le implementazioni seguenti, devi creare uno spazio dei nomi personalizzato con il simbolo di identità (distinzione maiuscole/minuscole) di: `CRMID`.
+
 Il cliente definisce un&#39;entità a persona singola come segue:
 
 * Un utente finale a cui è assegnato un CRMID.
@@ -399,13 +404,15 @@ Leggere questa sezione per le implementazioni avanzate di [!DNL Identity Graph L
 
 ### Caso d’uso: è necessario il supporto per più linee di business
 
->[!TIP]
+>[!NOTE]
 >
->Devi creare spazi dei nomi personalizzati per più dispositivi per &quot;CRMID&quot; e &quot;loginID&quot; per completare gli esercizi di implementazione avanzati riportati di seguito.
+>Per completare le implementazioni di seguito, devi creare spazi dei nomi personalizzati con i simboli di identità (con distinzione tra maiuscole e minuscole) di:
+>* `CRMID`
+>* `loginID`
 
 Gli utenti finali hanno due account diversi, un account personale e un account aziendale. Ogni account è identificato da un ID diverso. In questo scenario, un grafico tipico si presenta come segue:
 
-**Modalità testo***
+**Modalità testo**
 
 ```json
 CRMID: John, loginID: JohnPersonal
@@ -427,12 +434,7 @@ Configurate le seguenti impostazioni nell&#39;interfaccia Simulazione grafico (G
 
 **Grafico simulato**
 
-+++Seleziona per visualizzare il grafico simulato
-
 ![Un grafo delle identità per un utente finale con un indirizzo di posta elettronica aziendale e personale.](../images/configs/advanced/advanced.png)
-
-+++
-
 
 **Esercizio**
 
@@ -457,6 +459,8 @@ loginID: JanePersonal, ECID: 111
 
 >[!TAB Dati non validi inviati a Real-Time CDP]
 
+**Modalità testo**
+
 ```json
 CRMID: John, loginID: JohnPersonal
 CRMID: John, loginID: error
@@ -472,9 +476,12 @@ loginID: JanePersonal, ECID: 222
 
 ### Caso d’uso: implementazioni complesse che richiedono più spazi dei nomi
 
->[!TIP]
+>[!NOTE]
 >
->Devi creare spazi dei nomi personalizzati per più dispositivi per &quot;CRMID&quot;, &quot;loyaltyID&quot;, &quot;thirdPartyID&quot; e &quot;orderID&quot; per completare gli esercizi di implementazione avanzati riportati di seguito.
+>Per completare le implementazioni di seguito, devi creare spazi dei nomi personalizzati con i simboli di identità (con distinzione tra maiuscole e minuscole) di:
+>* `CRMID`
+>* `loyaltyID`
+>* `thirdPartyID`
 
 Sei una società di media e intrattenimento e i tuoi utenti finali hanno i seguenti elementi:
 
@@ -499,8 +506,8 @@ Configurate le seguenti impostazioni nell&#39;interfaccia Simulazione grafico (G
 | Nome visualizzato | Simbolo di identità | Tipo di identità | Univoco per grafico | Priorità dello spazio dei nomi |
 | --- | --- | --- | --- | --- |
 | CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
-| loyaltyID | loyaltyID | CROSS_DEVICE | | 2 |
-| E-mail | E-mail | E-mail | | 3 |
+| loyaltyID | loyaltyID | CROSS_DEVICE | ✔️ | 2 |
+| E-mail | E-mail | E-mail | ✔️ | 3 |
 | thirdPartyID | thirdPartyID | CROSS_DEVICE | | 4 |
 | orderID | orderID | CROSS_DEVICE | | 5 |
 | ECID | ECID | COOKIE | | 6 |

@@ -2,10 +2,10 @@
 title: Guida All’Implementazione Per Le Regole Di Collegamento Del Grafico Di Identità
 description: Scopri i passaggi consigliati da seguire per l’implementazione dei dati con le configurazioni delle regole di collegamento del grafico identità.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 0587ddf1012adb13e6d399953839735f73fe151e
+source-git-commit: a9c9543783eb85dcaadef64b1c0deb84f850d40e
 workflow-type: tm+mt
-source-wordcount: '1955'
-ht-degree: 5%
+source-wordcount: '1956'
+ht-degree: 6%
 
 ---
 
@@ -35,7 +35,7 @@ In questa sezione vengono descritti i passaggi preliminari che è necessario com
 
 #### Requisito dello spazio dei nomi per singola persona {#single-person-namespace-requirement}
 
-Assicurati che lo spazio dei nomi univoco con la priorità più elevata sia sempre presente in ogni profilo. In questo modo il servizio Identity è in grado di rilevare l’identificatore di persona appropriato in un dato grafico.
+Assicurati che lo spazio dei nomi univoco con la priorità più elevata sia sempre presente in ogni profilo noto. In questo modo il servizio Identity è in grado di rilevare l’identificatore di persona appropriato in un dato grafico.
 
 +++Seleziona questa opzione per visualizzare un esempio di grafico senza uno spazio dei nomi con un singolo identificatore di persona
 
@@ -193,7 +193,7 @@ Se i dati lo richiedono, devi innanzitutto creare gli spazi dei nomi appropriati
 
 ## Usa strumento di simulazione grafico {#graph-simulation}
 
-Quindi, passa allo strumento di simulazione del grafico [&#128279;](./graph-simulation.md) nell&#39;area di lavoro dell&#39;interfaccia utente di Identity Service. Puoi utilizzare lo strumento di simulazione del grafico per simulare grafici di identità, creati con diverse configurazioni di spazio dei nomi e priorità dello spazio dei nomi univoche.
+Quindi, passa allo strumento di simulazione del grafico [](./graph-simulation.md) nell&#39;area di lavoro dell&#39;interfaccia utente di Identity Service. Puoi utilizzare lo strumento di simulazione del grafico per simulare grafici di identità, creati con diverse configurazioni di spazio dei nomi e priorità dello spazio dei nomi univoche.
 
 Creando diverse configurazioni, puoi utilizzare lo strumento di simulazione del grafico per scoprire e comprendere meglio in che modo l’algoritmo di ottimizzazione delle identità e alcune configurazioni possono influenzare il comportamento del grafico.
 
@@ -292,7 +292,7 @@ In questo esempio viene inoltre mostrato che Tom e Summer devono separare le ent
 Per ulteriori informazioni su [!DNL Identity Graph Linking Rules], leggere la seguente documentazione:
 
 * [Panoramica di [!DNL Identity Graph Linking Rules]](./overview.md)
-* [Algoritmo di ottimizzazione identità](./identity-optimization-algorithm.md)
+* [Algoritmo di ottimizzazione delle identità](./identity-optimization-algorithm.md)
 * [Esempi di configurazioni del grafico](./example-configurations.md)
 * [Risoluzione dei problemi e domande frequenti](./troubleshooting.md)
 * [Priorità dello spazio dei nomi](./namespace-priority.md)
