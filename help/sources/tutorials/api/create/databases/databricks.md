@@ -4,10 +4,10 @@ description: Scopri come collegare i database di Azure ad Experience Platform ut
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 exl-id: c3974bab-8e67-49a1-b1a5-d453cf7bfd1d
-source-git-commit: 0c8ff1029beee3f58cbf536b11b40551b6f6c2ed
+source-git-commit: 9df2f9cc70876834aa635d50d548a882f45e3190
 workflow-type: tm+mt
-source-wordcount: '528'
-ht-degree: 2%
+source-wordcount: '534'
+ht-degree: 3%
 
 ---
 
@@ -48,6 +48,8 @@ Specificare i valori per le credenziali seguenti per connettere [!DNL Databricks
 | `database` | Il nome del database nel delta lake. |
 | `connectionSpec.Id` | L&#39;ID della specifica di connessione restituisce le proprietà del connettore di origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di origine. ID della specifica di connessione per [!DNL Databricks]: `e9d7ec6b-0873-4e57-ad21-b3a7c65e310b`. |
 
+Per ulteriori informazioni, consulta la [[!DNL Azure Databricks] panoramica](../../../../connectors/databases/databricks.md).
+
 ## Creare una connessione di base
 
 Una connessione di base mantiene le informazioni tra l’origine e Experience Platform, incluse le credenziali di autenticazione dell’origine, lo stato corrente della connessione e l’ID univoco della connessione di base. L’ID della connessione di base consente di esplorare e navigare tra i file dall’interno dell’origine e identificare gli elementi specifici che desideri acquisire, comprese le informazioni relative ai tipi di dati e ai formati.
@@ -64,7 +66,7 @@ POST /connections
 
 La richiesta seguente crea una connessione di base per un&#39;origine [!DNL Databricks] utilizzando l&#39;autenticazione del token di accesso.
 
-+++Esempio di richiesta View
+Esempio di richiesta +++View
 
 ```shell
 curl -X POST \

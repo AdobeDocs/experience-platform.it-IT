@@ -5,9 +5,9 @@ breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da diverse origini. Scopri come strutturare, etichettare e migliorare i dati già acquisiti.
 feature: Sources
 role: Developer
-source-git-commit: dbcfd7bfbf2f2d8268d3d8b5748f75ec9f186597
+source-git-commit: 9df2f9cc70876834aa635d50d548a882f45e3190
 workflow-type: tm+mt
-source-wordcount: '1078'
+source-wordcount: '1080'
 ht-degree: 35%
 
 ---
@@ -166,12 +166,12 @@ ht-degree: 35%
          - [Amazon Redshift](tutorials/api/create/databases/redshift.md)
          - [Hive Apache su Azure HDInsights](tutorials/api/create/databases/hive.md)
          - [Apache Spark su Azure HDInsights](tutorials/api/create/databases/spark.md)
-         - [Database di Azure](tutorials/api/create/databases/databricks.md)
+         - [Azure Databricks](tutorials/api/create/databases/databricks.md)
          - [Azure Data Explorer](tutorials/api/create/databases/data-explorer.md)
          - [Azure Synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
          - [Azure Table Storage](tutorials/api/create/databases/ats.md)
          - [Couchbase](tutorials/api/create/databases/couchbase.md)
-         - [BigQuery Google](tutorials/api/create/databases/bigquery.md)
+         - [Google BigQuery](tutorials/api/create/databases/bigquery.md)
          - [GreenPlum](tutorials/api/create/databases/greenplum.md)
          - [HP Vertica](tutorials/api/create/databases/hp-vertica.md)
          - [IBM DB2](tutorials/api/create/databases/ibm-db2.md)
@@ -293,6 +293,7 @@ ht-degree: 35%
          - [Amazon Redshift](tutorials/ui/create/databases/redshift.md)
          - [Hive Apache su Azure HDInsights](tutorials/ui/create/databases/hive.md)
          - [Apache Spark su Azure HDInsights](tutorials/ui/create/databases/spark.md)
+         - [Azure Databricks](tutorials/ui/create/databases/databricks.md)
          - [Azure Data Explorer](tutorials/ui/create/databases/data-explorer.md)
          - [Azure Synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azure Table Storage](tutorials/ui/create/databases/ats.md)

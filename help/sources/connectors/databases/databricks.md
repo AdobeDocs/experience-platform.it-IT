@@ -1,13 +1,13 @@
 ---
-title: Database di Azure
+title: Azure Databricks
 description: Scopri i passaggi preliminari necessari per collegare i database di Azure ad Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
-last-substantial-update: 2025-04-29T00:00:00Z
+last-substantial-update: 2025-06-17T00:00:00Z
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
-source-git-commit: c466c30bddf4e67117c88072bea00818d755e408
+source-git-commit: 11ec772f2b877ceac820f2b8a06ac27377e9b2e9
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '616'
 ht-degree: 3%
 
 ---
@@ -44,7 +44,7 @@ GET /data/foundation/connectors/landingzone/credentials?type=dlz_databricks_sour
 
 La richiesta seguente recupera le credenziali per l&#39;Experience Platform [!DNL Azure Blob Storage].
 
-+++Esempio di richiesta View
+Esempio di richiesta +++View
 
 ```shell
 curl -X GET \
@@ -102,7 +102,7 @@ POST /data/foundation/connectors/landingzone/credentials?type=dlz_databricks_sou
 
 La richiesta seguente aggiorna le credenziali per [!DNL Azure Blob Storage].
 
-+++Esempio di richiesta View
+Esempio di richiesta +++View
 
 ```shell
 curl -X POST \
@@ -161,6 +161,9 @@ fs.azure.sas.{CONTAINER_NAME}.{STORAGE-ACCOUNT}.blob.core.windows.net {SAS-TOKEN
 
 ![Interfaccia utente di Database in Azure.](../../images/tutorials/create/databricks/databricks-ui.png)
 
-## Connetti [!DNL Databricks] ad Experience Platform tramite API
+## Connetti [!DNL Databricks] ad Experience Platform
 
-Ora che hai completato i passaggi preliminari, puoi passare alla guida su [connessione dell&#39;account  [!DNL Databricks] ad Experience Platform tramite l&#39;API](../../tutorials/api/create/databases/databricks.md).
+Ora che hai completato i passaggi preliminari, puoi procedere e collegare il tuo account [!DNL Databricks] ad Experience Platform:
+
+* [Connettersi tramite l’API](../../tutorials/api/create/databases/databricks.md)
+* [Connettersi tramite l’area di lavoro origini nell’interfaccia utente](../../tutorials/ui/create/databases/databricks.md)
