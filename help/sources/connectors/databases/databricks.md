@@ -44,7 +44,7 @@ GET /data/foundation/connectors/landingzone/credentials?type=dlz_databricks_sour
 
 La richiesta seguente recupera le credenziali per l&#39;Experience Platform [!DNL Azure Blob Storage].
 
-Esempio di richiesta +++View
++++Esempio di richiesta View
 
 ```shell
 curl -X GET \
@@ -102,7 +102,7 @@ POST /data/foundation/connectors/landingzone/credentials?type=dlz_databricks_sou
 
 La richiesta seguente aggiorna le credenziali per [!DNL Azure Blob Storage].
 
-Esempio di richiesta +++View
++++Esempio di richiesta View
 
 ```shell
 curl -X POST \
