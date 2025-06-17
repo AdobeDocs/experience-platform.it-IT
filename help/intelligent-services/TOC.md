@@ -5,10 +5,10 @@ user-guide-title: Guida di Intelligent Services
 breadcrumb-title: Guida di Intelligent Services
 user-guide-description: Utilizza i servizi di intelligenza artificiale per generare valutazioni, scoprire informazioni approfondite e creare segmenti dai dati degli eventi di marketing.
 role: User
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: c5ca8c8e13c5bf889a8ed4d67f00e955aea56e75
 workflow-type: tm+mt
-source-wordcount: '137'
-ht-degree: 37%
+source-wordcount: '143'
+ht-degree: 46%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 37%
 
 - [Panoramica su Intelligent Services](home.md)
 - [Preparare i dati da utilizzare in Intelligent Services](data-preparation.md)
-- IA per l&#39;attribuzione {#attribution-ai}
+- IA per l’attribuzione {#attribution-ai}
    - [Panoramica](attribution-ai/overview.md)
    - [Guida introduttiva di Attribution AI](attribution-ai/getting-started.md)
    - [Ingresso e uscita](attribution-ai/input-output.md)
@@ -27,23 +27,24 @@ ht-degree: 37%
    - Governance dei dati {#aai-data-governance}
       - [Controlli di accesso](attribution-ai/aai-data-governance/access-controls.md)
       - [Registri di audit](attribution-ai/aai-data-governance/audit-logs.md)
-      - [Chiavi gestite dal cliente](attribution-ai/aai-data-governance/customer-managed-keys.md)
+      - [Chiavi gestite dalla clientela](attribution-ai/aai-data-governance/customer-managed-keys.md)
       - [Governance dei dati](attribution-ai/aai-data-governance/data-governance.md)
       - [Criteri di governance](attribution-ai/aai-data-governance/governance-policies.md)
    - [Analizzare i punteggi utilizzando Query Service](attribution-ai/aai-query-service.md)
    - [Risoluzione dei problemi di errore](attribution-ai/troubleshooting.md)
-- Assegnazione tag contenuto {#content-commerce-ai}
+- Assegnazione di tag ai contenuti {#content-commerce-ai}
    - [Panoramica](content-commerce-ai/overview.md)
    - [Introduzione](content-commerce-ai/getting-started.md)
-   - API di assegnazione tag contenuto{#api}
+   - API per l’assegnazione tag dei contenuti{#api}
       - [Assegnazione di tag colore](content-commerce-ai/api/color-tagging.md)
       - [Assegnazione tag parole chiave](content-commerce-ai/api/keyword-tagging.md)
       - [Presenza di testo e riconoscimento ottico dei caratteri](content-commerce-ai/api/optical-character-recognition.md)
-- IA per l&#39;analisi dei clienti {#customer-ai}
+- IA per l’analisi dei clienti {#customer-ai}
    - [Panoramica](customer-ai/overview.md)
    - [Guida introduttiva ad IA per l’analisi dei clienti](customer-ai/getting-started.md)
    - [Requisiti dei dati](customer-ai/data-requirements.md)
-   - Guide dell&#39;interfaccia utente{#user-guide}
+   - [Dettagli del modello Punteggio tendenza Customer AI](customer-ai/model-detail.md)
+   - Guide dell’interfaccia utente{#user-guide}
       - [Configurare un’istanza](customer-ai/user-guide/configure.md)
       - [Scopri informazioni](customer-ai/user-guide/discover-insights.md)
       - [Creare segmenti utilizzando i punteggi di Customer AI](customer-ai/user-guide/create-segment.md)
@@ -52,7 +53,7 @@ ht-degree: 37%
    - Governance dei dati {#cai-data-governance}
       - [Controlli di accesso](customer-ai/cai-data-governance/access-controls.md)
       - [Registri di audit](customer-ai/cai-data-governance/audit-logs.md)
-      - [Chiavi gestite dal cliente](customer-ai/cai-data-governance/customer-managed-keys.md)
+      - [Chiavi gestite dalla clientela](customer-ai/cai-data-governance/customer-managed-keys.md)
       - [Governance dei dati](customer-ai/cai-data-governance/data-governance.md)
       - [Criteri di governance](customer-ai/cai-data-governance/governance-policies.md)
 - [Note sulla versione di Experience Platform](https://experienceleague.adobe.com/it/docs/experience-platform/release-notes/latest)
