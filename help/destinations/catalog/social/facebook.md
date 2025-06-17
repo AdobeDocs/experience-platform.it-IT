@@ -3,9 +3,9 @@ keywords: connessione facebook;facebook connection;facebook destinations;faceboo
 title: Connessione Facebook
 description: Attiva profili per le campagne Facebook per il targeting, la personalizzazione e l’eliminazione del pubblico in base alle e-mail con hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 09146fac0719b62c6c2ec1b6c3aa66cb80c1698a
+source-git-commit: dd725b4d383bbcd93e68c81d4fe5182d6086e9be
 workflow-type: tm+mt
-source-wordcount: '2843'
+source-wordcount: '2690'
 ht-degree: 5%
 
 ---
@@ -13,14 +13,6 @@ ht-degree: 5%
 # Connessione [!DNL Facebook]
 
 ## Panoramica {#overview}
-
->[!IMPORTANT]
->
->* A partire dal 23 maggio 2025 e per tutto il mese di giugno 2025, potresti vedere temporaneamente due schede di destinazione **[!DNL Facebook Custom Audience]** nel catalogo delle destinazioni, per un massimo di alcune ore. Ciò è dovuto a un aggiornamento interno al servizio delle destinazioni e al supporto di nuovi campi per un targeting migliore e la corrispondenza con i profili sulle proprietà di Facebook. Per informazioni dettagliate sui nuovi campi relativi all&#39;indirizzo, consulta la sezione [identità supportate](#supported-identities).
->* Se vedi una scheda con l&#39;etichetta **[!UICONTROL (Nuovo) Pubblico personalizzato Facebook]**, utilizza questa scheda per i nuovi flussi di dati di attivazione. I flussi di dati esistenti verranno aggiornati automaticamente, pertanto non è richiesta alcuna azione da parte tua. Eventuali modifiche apportate ai flussi di dati esistenti durante questo periodo verranno mantenute dopo l’aggiornamento. Al termine dell&#39;aggiornamento, la scheda di destinazione **[!UICONTROL (Nuovo) Pubblico personalizzato di Facebook]** verrà rinominata **[!DNL Facebook Custom Audience]**.
->* Se si creano flussi di dati utilizzando l&#39;[API del servizio Flusso](https://developer.adobe.com/experience-platform-apis/references/destinations/), è necessario aggiornare [!DNL flow spec ID] e [!DNL connection spec ID] ai valori seguenti:
->   * Flow spec ID: `bb181d00-58d7-41ba-9c15-9689fdc831d3`
->   * Connection spec ID: `c8b97383-2d65-4b7a-9913-db0fbfc71727`
 
 Attiva profili per le campagne [!DNL Facebook] per il targeting, la personalizzazione e l&#39;eliminazione del pubblico in base alle e-mail con hash.
 
@@ -146,8 +138,8 @@ Se scegli di eseguire l’hash degli indirizzi e-mail da solo, assicurati di sod
 >[!NOTE]
 >
 >I dati degli spazi dei nomi senza hash vengono automaticamente sottoposti a hashing da [!DNL Experience Platform] al momento dell&#39;attivazione.
-> L&#39;hash dei dati di origine degli attributi non viene eseguito automaticamente. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Applica trasformazione]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione.
-> L&#39;opzione **[!UICONTROL Applica trasformazione]** viene visualizzata solo quando si selezionano gli attributi come campi di origine. Non viene visualizzato quando si scelgono gli spazi dei nomi.
+>> L&#39;hash dei dati di origine degli attributi non viene eseguito automaticamente. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Applica trasformazione]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione.
+>> L&#39;opzione **[!UICONTROL Applica trasformazione]** viene visualizzata solo quando si selezionano gli attributi come campi di origine. Non viene visualizzato quando si scelgono gli spazi dei nomi.
 
 ![Applica controllo di trasformazione evidenziato nel passaggio di mappatura.](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
@@ -165,7 +157,7 @@ Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;ese
 
 Il video seguente illustra inoltre i passaggi per configurare una destinazione [!DNL Facebook] e attivare i tipi di pubblico.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411786/?quality=12&learn=on&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
