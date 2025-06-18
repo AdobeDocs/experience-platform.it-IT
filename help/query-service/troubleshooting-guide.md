@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Domande frequenti su Query Service e Data Distiller
 description: Questo documento contiene domande e risposte comuni relative a Query Service e Data Distiller. Gli argomenti includono esportazione di dati, strumenti di terze parti ed errori PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: cd4734b2d837bc04e1de015771a74a48ff37173f
 workflow-type: tm+mt
-source-wordcount: '5029'
+source-wordcount: '5055'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ Una possibile causa è la funzione di completamento automatico. La funzione elab
 ### Posso usare [!DNL Postman] per l&#39;API Query Service?
 
 +++Risposta
-Sì, puoi visualizzare e interagire con tutti i servizi API di Adobe utilizzando [!DNL Postman] (un&#39;applicazione gratuita di terze parti). Consultare la [[!DNL Postman] guida all&#39;installazione](https://video.tv.adobe.com/v/36258?captions=ita) per istruzioni dettagliate sulla configurazione di un progetto in Adobe Developer Console e l&#39;acquisizione di tutte le credenziali necessarie per l&#39;utilizzo con [!DNL Postman]. Consulta la documentazione ufficiale per [istruzioni su come avviare, eseguire e condividere [!DNL Postman] le raccolte](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
+Sì, puoi visualizzare e interagire con tutti i servizi API di Adobe utilizzando [!DNL Postman] (un&#39;applicazione gratuita di terze parti). Consultare la [[!DNL Postman] guida all&#39;installazione](https://video.tv.adobe.com/v/28832) per istruzioni dettagliate sulla configurazione di un progetto in Adobe Developer Console e l&#39;acquisizione di tutte le credenziali necessarie per l&#39;utilizzo con [!DNL Postman]. Consulta la documentazione ufficiale per [istruzioni su come avviare, eseguire e condividere [!DNL Postman] le raccolte](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Esiste un limite al numero massimo di righe restituite da una query tramite l’interfaccia utente?
@@ -717,12 +717,18 @@ and timestamp < to_timestamp('2022-07-23');
 Il costrutto MERGE INTO SQL non è supportato da Data Distiller o Query Service.
 +++
 
-## Query ITAS
+## Query ITAS {#itas-queries}
 
 ### Cosa sono le query ITAS?
 
 +++Risposta
 Le query INSERT INTO sono denominate query ITAS. Si noti che le query CREATE TABLE sono denominate query CTAS.
++++
+
+### Query Service supporta le operazioni di aggiornamento ed eliminazione?
+
++++Risposta
+No, Query Service non supporta operazioni di aggiornamento o eliminazione. Supporta solo le operazioni di sola aggiunta utilizzando ITAS.
 +++
 
 ## Strumenti di terze parti {#third-party-tools}

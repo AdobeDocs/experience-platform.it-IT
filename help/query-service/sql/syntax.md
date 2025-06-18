@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Sintassi SQL in Query Service
 description: Questo documento descrive e spiega la sintassi SQL supportata da Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: a0b7cd9e406b4a140ef70f8d80cb27ba6817c0cd
+source-git-commit: cd4734b2d837bc04e1de015771a74a48ff37173f
 workflow-type: tm+mt
-source-wordcount: '4649'
+source-wordcount: '4686'
 ht-degree: 1%
 
 ---
@@ -336,11 +336,15 @@ Le seguenti limitazioni si applicano quando si utilizza `TRANSFORM` con `CREATE 
 
 Il comando `INSERT INTO` è definito come segue:
 
+>[!IMPORTANT]
+>
+>Query Service supporta **operazioni di sola accodamento** tramite il motore ITAS. `INSERT INTO` è l&#39;unico comando di manipolazione dati supportato. Le operazioni **update** e **delete** non sono disponibili. Per riflettere le modifiche apportate ai dati, inserire nuovi record che rappresentino lo stato desiderato.
+
 ```sql
 INSERT INTO table_name select_query
 ```
 
-| Elemento “parameters” | Descrizione |
+| Parametri | Descrizione |
 | ----- | ----- |
 | `table_name` | Nome della tabella in cui si desidera inserire la query. |
 | `select_query` | Un&#39;istruzione `SELECT`. La sintassi della query `SELECT` si trova nella sezione [SELECT queries](#select-queries). |
@@ -387,7 +391,7 @@ Il comando `DROP TABLE` elimina una tabella esistente ed elimina la directory as
 DROP TABLE [IF EXISTS] [db_name.]table_name
 ```
 
-| Elemento “parameters” | Descrizione |
+| Parametri | Descrizione |
 | ------ | ------ |
 | `IF EXISTS` | Se specificato, non viene generata alcuna eccezione se la tabella **non** esiste. |
 
@@ -407,7 +411,7 @@ Il comando `DROP DATABASE` elimina il database da un&#39;istanza.
 DROP DATABASE [IF EXISTS] db_name
 ```
 
-| Elemento “parameters” | Descrizione |
+| Parametri | Descrizione |
 | ------ | ------ |
 | `IF EXISTS` | Se specificato, non viene generata alcuna eccezione se il database **non** esiste. |
 
@@ -419,7 +423,7 @@ Il comando `DROP SCHEMA` elimina uno schema esistente.
 DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 ```
 
-| Elemento “parameters” | Descrizione |
+| Parametri | Descrizione |
 | ------ | ------ |
 | `IF EXISTS` | Se questo parametro è specificato e lo schema **non** esiste, non viene generata alcuna eccezione. |
 | `RESTRICT` | Il valore predefinito per la modalità. Se specificato, lo schema viene eliminato solo se **non** contiene tabelle. |
@@ -435,7 +439,7 @@ La sintassi seguente definisce una query `CREATE VIEW` per un set di dati. Quest
 CREATE VIEW view_name AS select_query
 ```
 
-| Elemento “parameters” | Descrizione |
+| Parametri | Descrizione |
 | ------ | ------ |
 | `view_name` | Nome della visualizzazione da creare. |
 | `select_query` | Un&#39;istruzione `SELECT`. La sintassi della query `SELECT` si trova nella sezione [SELECT queries](#select-queries). |
@@ -457,7 +461,7 @@ CREATE VIEW db_name.schema_name.view_name AS select_query
 CREATE OR REPLACE VIEW db_name.schema_name.view_name AS select_query
 ```
 
-| Elemento “parameters” | Descrizione |
+| Parametri | Descrizione |
 | ------ | ------ |
 | `db_name` | Nome del database. |
 | `schema_name` | Nome dello schema. |
@@ -496,7 +500,7 @@ La sintassi seguente definisce una query `DROP VIEW`:
 DROP VIEW [IF EXISTS] view_name
 ```
 
-| Elemento “parameters” | Descrizione |
+| Parametri | Descrizione |
 | ------ | ------ |
 | `IF EXISTS` | Se specificato, non viene generata alcuna eccezione se la visualizzazione **not** esiste. |
 | `view_name` | Nome della visualizzazione da eliminare. |
@@ -828,7 +832,7 @@ Il comando `SET` imposta una proprietà e restituisce il valore di una propriet�
 SET property_key = property_value
 ```
 
-| Elemento “parameters” | Descrizione |
+| Parametri | Descrizione |
 | ------ | ------ |
 | `property_key` | Nome della proprietà che si desidera elencare o modificare. |
 | `property_value` | Il valore con cui si desidera impostare la proprietà. |
@@ -978,7 +982,7 @@ Il comando `DECLARE` consente a un utente di creare un cursore che può essere u
 DECLARE name CURSOR FOR query
 ```
 
-| Elemento “parameters” | Descrizione |
+| Parametri | Descrizione |
 | ------ | ------ |
 | `name` | Nome del cursore da creare. |
 | `query` | Comando `SELECT` o `VALUES` che fornisce le righe che devono essere restituite dal cursore. |
@@ -993,7 +997,7 @@ Se l&#39;istruzione `PREPARE` che ha creato l&#39;istruzione ha specificato alcu
 EXECUTE name [ ( parameter ) ]
 ```
 
-| Elemento “parameters” | Descrizione |
+| Parametri | Descrizione |
 | ------ | ------ |
 | `name` | Nome dell&#39;istruzione preparata da eseguire. |
 | `parameter` | Valore effettivo di un parametro per l&#39;istruzione preparata. Deve essere un&#39;espressione che restituisce un valore compatibile con il tipo di dati di questo parametro, come determinato al momento della creazione dell&#39;istruzione preparata. Se sono presenti più parametri per l&#39;istruzione preparata, vengono separati da virgole. |
@@ -1012,7 +1016,7 @@ Per definire il formato della risposta, utilizzare la parola chiave `FORMAT` con
 EXPLAIN FORMAT { TEXT | JSON } statement
 ```
 
-| Elemento “parameters” | Descrizione |
+| Parametri | Descrizione |
 | ------ | ------ |
 | `FORMAT` | Utilizzare il comando `FORMAT` per specificare il formato di output. Le opzioni disponibili sono `TEXT` o `JSON`. L&#39;output non testuale contiene le stesse informazioni del formato di output del testo, ma è più semplice da analizzare per i programmi. Il valore predefinito di questo parametro è `TEXT`. |
 | `statement` | Qualsiasi istruzione `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS` o `CREATE MATERIALIZED VIEW AS` di cui si desidera visualizzare il piano di esecuzione. |
@@ -1044,7 +1048,7 @@ Il comando `FETCH` recupera le righe utilizzando un cursore creato in precedenza
 FETCH num_of_rows [ IN | FROM ] cursor_name
 ```
 
-| Elemento “parameters” | Descrizione |
+| Parametri | Descrizione |
 | ------ | ------ |
 | `num_of_rows` | Numero di righe da recuperare. |
 | `cursor_name` | Nome del cursore da cui si stanno recuperando le informazioni. |
@@ -1061,7 +1065,7 @@ Facoltativamente, puoi specificare un elenco di tipi di dati dei parametri. Se i
 PREPARE name [ ( data_type [, ...] ) ] AS SELECT
 ```
 
-| Elemento “parameters” | Descrizione |
+| Parametri | Descrizione |
 | ------ | ------ |
 | `name` | Nome dell&#39;istruzione preparata. |
 | `data_type` | I tipi di dati dei parametri dell&#39;istruzione preparata. Se il tipo di dati di un parametro non è elencato, è possibile dedurlo dal contesto. Se devi aggiungere più tipi di dati, puoi aggiungerli in un elenco separato da virgole. |
@@ -1099,7 +1103,7 @@ SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
 
 Ulteriori informazioni sui parametri di query SELECT standard sono disponibili nella [sezione di query SELECT](#select-queries). In questa sezione sono elencati solo i parametri esclusivi del comando `SELECT INTO`.
 
-| Elemento “parameters” | Descrizione |
+| Parametri | Descrizione |
 | ------ | ------ |
 | `TEMPORARY` o `TEMP` | Un parametro facoltativo. Se il parametro è specificato, la tabella creata è una tabella temporanea. |
 | `UNLOGGED` | Un parametro facoltativo. Se si specifica il parametro, la tabella creata è una tabella non registrata. Ulteriori informazioni sulle tabelle non registrate sono disponibili nella [[!DNL PostgreSQL] documentazione](https://www.postgresql.org/docs/current/sql-createtable.html). |
@@ -1122,7 +1126,7 @@ SHOW name
 SHOW ALL
 ```
 
-| Elemento “parameters” | Descrizione |
+| Parametri | Descrizione |
 | ------ | ------ |
 | `name` | Nome del parametro di runtime di cui si desidera ottenere informazioni. I valori possibili per il parametro runtime includono i seguenti valori:<br>`SERVER_VERSION`: questo parametro mostra il numero di versione del server.<br>`SERVER_ENCODING`: questo parametro mostra la codifica del set di caratteri lato server.<br>`LC_COLLATE`: questo parametro mostra l&#39;impostazione delle impostazioni locali del database per le regole di confronto (ordinamento testo).<br>`LC_CTYPE`: questo parametro mostra l&#39;impostazione delle impostazioni locali del database per la classificazione dei caratteri.<br>`IS_SUPERUSER`: questo parametro indica se il ruolo corrente dispone di privilegi di utente avanzato. |
 | `ALL` | Mostra i valori di tutti i parametri di configurazione con le relative descrizioni. |
@@ -1152,7 +1156,7 @@ COPY query
     [  WITH FORMAT 'format_name']
 ```
 
-| Elemento “parameters” | Descrizione |
+| Parametri | Descrizione |
 | ------ | ------ |
 | `query` | La query da copiare. |
 | `format_name` | Formato in cui copiare la query. `format_name` può essere uno di `parquet`, `csv` o `json`. Il valore predefinito è `parquet`. |
@@ -1209,7 +1213,7 @@ ALTER TABLE table_name DROP CONSTRAINT PRIMARY IDENTITY ( column_name )
 ALTER TABLE table_name DROP CONSTRAINT IDENTITY ( column_name )
 ```
 
-| Elemento “parameters” | Descrizione |
+| Parametri | Descrizione |
 | ------ | ------ |
 | `table_name` | Nome della tabella che si sta modificando. |
 | `column_name` | Nome della colonna a cui si sta aggiungendo un vincolo. |
@@ -1295,7 +1299,7 @@ ALTER TABLE table_name REMOVE SCHEMA database_name.schema_name
 
 **Parametri**
 
-| Elemento “parameters” | Descrizione |
+| Parametri | Descrizione |
 | ------ | ------ |
 | `table_name` | Nome della tabella che si sta modificando. |
 | `column_name` | Nome della colonna che si desidera aggiungere. |
