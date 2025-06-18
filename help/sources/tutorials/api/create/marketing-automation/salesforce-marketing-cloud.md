@@ -143,7 +143,7 @@ POST /connections
 
 La richiesta seguente crea una connessione di base per [!DNL Salesforce Service Cloud] per connettersi ad Experience Platform su AWS.
 
-Esempio di richiesta +++View
++++Esempio di richiesta View
 
 ```shell
 curl -X POST \
