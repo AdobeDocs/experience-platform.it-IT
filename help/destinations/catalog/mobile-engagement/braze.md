@@ -4,14 +4,23 @@ title: Connessione di brasatura
 description: Braze è una piattaforma completa per il coinvolgimento dei clienti che offre esperienze pertinenti e memorabili tra i clienti e i marchi che amano.
 last-substantial-update: 2024-08-20T00:00:00Z
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 37e78035f2656a3693a771ab5a9622f5446a4c9d
 workflow-type: tm+mt
-source-wordcount: '1125'
-ht-degree: 2%
+source-wordcount: '1230'
+ht-degree: 3%
 
 ---
 
 # Connessione [!DNL Braze]
+
+>[!IMPORTANT]
+>
+>* A partire dal 19 giugno 2025, è possibile visualizzare due schede **[!DNL Braze]** affiancate nel catalogo delle destinazioni. Ciò è dovuto a un aggiornamento interno del servizio destinazioni. Il connettore di destinazione [!DNL Braze] esistente è stato rinominato in **[!UICONTROL (Obsoleto) Braze]** ed è ora disponibile una nuova scheda con il nome **[!UICONTROL Braze]**.
+>* Utilizza la connessione **[!UICONTROL Braze]** nel catalogo per i nuovi flussi di dati di attivazione. Se sono presenti flussi di dati attivi per la destinazione **[!UICONTROL (obsoleto) Braze]**, verranno aggiornati automaticamente, pertanto non è richiesta alcuna azione da parte dell&#39;utente.
+>* Se si creano flussi di dati tramite l&#39;[API del servizio Flow](https://developer.adobe.com/experience-platform-apis/references/destinations/), è necessario aggiornare [!DNL flow spec ID] e [!DNL connection spec ID] ai valori seguenti:
+>   * Flow spec ID: `cb7919bd-69aa-462d-bcc0-db7cdc7fdf51`
+>   * Connection spec ID: `ab957205-5a78-4393-b901-b930ed548220`
+
 
 ## Panoramica {#overview}
 
