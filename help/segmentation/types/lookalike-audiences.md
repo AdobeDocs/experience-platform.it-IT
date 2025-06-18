@@ -3,18 +3,26 @@ solution: Experience Platform
 title: Tipi di pubblico simili
 description: Scopri come eseguire il targeting di nuovi tipi di pubblico di alto valore in Adobe Experience Platform utilizzando tipi di pubblico simili.
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: d978437479bedd0f943a6d68de78073f318cccb5
 workflow-type: tm+mt
-source-wordcount: '2193'
+source-wordcount: '2299'
 ht-degree: 9%
 
 ---
 
 # Guida ai tipi di pubblico simili
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
 >Informazioni e tipi di pubblico simili sono disponibili solo nella **edizione B2C**.
+
+>[!IMPORTANT]
+>
+>Gli approfondimenti simili e i tipi di pubblico simili vengono disabilitati automaticamente per gli ambienti che mostrano un utilizzo ridotto. Per basso utilizzo si intende che non vengono visualizzate informazioni simili negli ultimi tre mesi o che non viene creato un nuovo pubblico simile negli ultimi sei mesi.
+>
+>Se le informazioni simili sono disabilitate per il tuo ambiente, puoi richiedere l’accesso inviando un’e-mail al team di Assistenza clienti di Adobe, incluso l’ID organizzazione e i dettagli dell’ambiente nel messaggio.
+>
+>Dopo aver ricevuto la conferma dall’Assistenza clienti di Adobe, approfondimenti simili e tipi di pubblico verranno abilitati in tutte le sandbox nell’ambiente.
 
 In Adobe Experience Platform, i tipi di pubblico per similarità forniscono informazioni intelligenti su ciascuno dei tipi di pubblico, sfruttando le informazioni basate sull’apprendimento automatico per identificare e indirizzare i clienti di alto valore con le campagne di marketing.
 
@@ -75,7 +83,9 @@ I seguenti diritti si applicano all’utilizzo di tipi di pubblico simili:
 
 I pacchetti di componenti aggiuntivi, che saranno disponibili in un secondo momento, aumentano le adesioni per le sandbox di produzione di 20 tipi di pubblico simili per pacchetto.
 
-Per confermare se hai accesso a tipi di pubblico simili, contatta il tuo rappresentante Adobe.
+## Accesso {#access}
+
+Per confermare se hai accesso a tipi di pubblico simili, seleziona un pubblico all&#39;interno del Portale pubblico e controlla se la scheda **[!UICONTROL Informazioni simili]** è visibile.
 
 ## Visualizzare informazioni simili {#view}
 
