@@ -5,10 +5,10 @@ hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="Informative"
 exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: b78f36ed20d5a08036598fa2a1da7dd066c401fa
 workflow-type: tm+mt
-source-wordcount: '676'
-ht-degree: 6%
+source-wordcount: '1054'
+ht-degree: 4%
 
 ---
 
@@ -20,7 +20,27 @@ ht-degree: 6%
 
 ## Panoramica {#overview}
 
-Esporta dati nel tuo account Snowflake utilizzando inserzioni private.
+Utilizza il connettore di destinazione Snowflake per esportare i dati nell&#39;istanza Snowflake di Adobe, quindi condividili con la tua istanza tramite [inserzioni private](https://other-docs.snowflake.com/en/collaboration/collaboration-listings-about).
+
+Leggi le sezioni seguenti per scoprire come funziona la destinazione Snowflake e come i dati vengono trasferiti tra Adobe e Snowflake.
+
+### Funzionamento della condivisione dei dati in Snowflake {#data-sharing}
+
+Questa destinazione utilizza una condivisione dati [!DNL Snowflake], il che significa che nessun dato viene fisicamente esportato o trasferito alla tua istanza di Snowflake. Al contrario, Adobe ti consente di accedere in sola lettura a una live table ospitata nell’ambiente Snowflake di Adobe. Puoi eseguire query su questa tabella condivisa direttamente dal tuo account Snowflake, ma non sei il proprietario della tabella e non puoi modificarla o conservarla oltre il periodo di conservazione specificato. Adobe gestisce completamente il ciclo di vita e la struttura della tabella condivisa.
+
+La prima volta che condividi i dati dall’istanza Snowflake di Adobe alla tua, ti viene richiesto di accettare l’inserzione privata da Adobe.
+
+### Conservazione dei dati e Time-to-Live (TTL) {#ttl}
+
+Tutti i dati condivisi tramite questa integrazione hanno un TTL (Time-to-Live) fisso di sette giorni. Sette giorni dopo l’ultima esportazione, la tabella condivisa scade automaticamente e diventa inaccessibile, indipendentemente dal fatto che il flusso di dati sia ancora attivo. Se devi conservare i dati per più di sette giorni, devi copiare il contenuto in una tabella di tua proprietà nella tua istanza di Snowflake prima della scadenza del TTL.
+
+### Comportamento aggiornamento pubblico {#audience-update-behavior}
+
+Se il pubblico viene valutato in [modalità batch](../../../segmentation/methods/batch-segmentation.md), i dati nella tabella condivisa vengono aggiornati ogni 24 ore. Ciò significa che può trascorrere un ritardo di 24 ore tra le modifiche nell’appartenenza al pubblico e il momento in cui tali modifiche vengono riportate nella tabella condivisa.
+
+### Logica di esportazione incrementale {#incremental-export}
+
+Quando un flusso di dati viene eseguito per un pubblico per la prima volta, esegue una retrocompilazione e condivide tutti i profili attualmente qualificati. Dopo questa retrocompilazione iniziale, solo gli aggiornamenti incrementali vengono rispecchiati nella tabella condivisa. Ciò significa profili che vengono aggiunti o rimossi dal pubblico. Questo approccio garantisce aggiornamenti efficienti e mantiene aggiornata la tabella condivisa.
 
 ## Prerequisiti {#prerequisites}
 
@@ -67,13 +87,20 @@ Per eseguire l&#39;autenticazione nella destinazione, selezionare **[!UICONTROL 
 
 ### Inserire i dettagli della destinazione {#destination-details}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_snowflake_accountID"
+>title="Immetti l&#39;ID del tuo account Snowflake"
+>abstract="Se l&#39;account è collegato a un&#39;organizzazione, utilizzare questo formato: `OrganizationName.AccountName`<br><br> Se l&#39;account non è collegato a un&#39;organizzazione, utilizzare questo formato:`AccountName`"
+
 Per configurare i dettagli per la destinazione, compila i campi obbligatori e facoltativi seguenti. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 
 ![Schermata di esempio che mostra come compilare i dettagli per la destinazione](../../assets/catalog/cloud-storage/snowflake/configure-destination-details.png)
 
 * **[!UICONTROL Nome]**: un nome con cui riconoscerai questa destinazione in futuro.
 * **[!UICONTROL Descrizione]**: una descrizione che ti aiuterà a identificare questa destinazione in futuro.
-* **[!UICONTROL ID account Snowflake]**: ID account Snowflake. Esempio: `adobe-123456`.
+* **[!UICONTROL ID account Snowflake]**: ID account Snowflake. Utilizza il seguente formato ID account, a seconda che l’account sia collegato o meno a un’organizzazione:
+   * Se l&#39;account è collegato a un&#39;organizzazione:`OrganizationName.AccountName`.
+   * Se l&#39;account non è collegato a un&#39;organizzazione:`AccountName`.
 * **[!UICONTROL Conferma account]**: attiva la conferma ID account Snowflake per confermare che l&#39;ID account è corretto e appartiene a te.
 
 >[!IMPORTANT]
