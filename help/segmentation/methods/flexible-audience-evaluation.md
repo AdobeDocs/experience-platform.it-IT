@@ -3,9 +3,9 @@ title: Guida alla valutazione del pubblico flessibile
 description: Scopri come utilizzare la valutazione flessibile del pubblico per eseguire processi di segmentazione in batch su richiesta.
 role: Developer, User
 exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
-source-git-commit: 9aa638903eaf9bf29ce1da3d62f8e69c15ffe50a
+source-git-commit: 7a0a98ea035892943a0e9a9a2b059701f6f1f612
 workflow-type: tm+mt
-source-wordcount: '1084'
+source-wordcount: '1140'
 ht-degree: 5%
 
 ---
@@ -326,7 +326,7 @@ Dopo aver confermato che sono elencati i tipi di pubblico corretti, puoi procede
 
 Il video seguente illustra come accedere e utilizzare la valutazione flessibile del pubblico in Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/3453648?&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/3453640?)
 
 ## Domande frequenti {#faq}
 
@@ -396,3 +396,10 @@ Versioni di valutazione del pubblico flessibili che sono state create utilizzand
 
 +++
 
+### È necessario valutare tutti i tipi di pubblico dipendenti quando si valuta il pubblico principale con una valutazione flessibile del pubblico?
+
++++ Risposta
+
+No. La valutazione flessibile del pubblico valuterà automaticamente tutti i tipi di pubblico dipendenti. Ad esempio, se il pubblico A dipende dal pubblico B, devi valutare solo il pubblico B. La valutazione flessibile del pubblico valuterà automaticamente il pubblico A e quindi il pubblico B.
+
++++
