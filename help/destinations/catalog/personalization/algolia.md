@@ -1,7 +1,7 @@
 ---
 title: Algola
 description: Utilizza questo connettore per attivare i tipi di pubblico in Algolia per la personalizzazione e l’utilizzo in ricerche e consigli. Puoi quindi utilizzare il connettore di origine del profilo utente di Algolia per importare i profili in Real-Time CDP per creare tipi di pubblico avanzati.
-source-git-commit: 2205ba48a6c17b8f34c4796c1777bfc53a6a7fe5
+source-git-commit: 01e8739952ce2f56eaafcbb0731fb88d5961b21d
 workflow-type: tm+mt
 source-wordcount: '1052'
 ht-degree: 3%
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->Il connettore di destinazione [!DNL Algolia] e la pagina della documentazione vengono creati e gestiti dal team di Algolia Integration Services. Per richieste di informazioni o richieste di aggiornamento, contattale all&#39;indirizzo [adobe-algolia-solutions@algolia.com](adobe-algolia-solutions@algolia.com).
+>Il connettore di destinazione [!DNL Algolia] e la pagina della documentazione vengono creati e gestiti dal team di Algolia Integration Services. Per richieste di informazioni o richieste di aggiornamento, contattale all&#39;indirizzo [adobe-algolia-solutions@algolia.com](mailto:adobe-algolia-solutions@algolia.com).
 
 Utilizza la connessione di destinazione [!DNL Algolia] per inviare il pubblico di Adobe Experience Platform in Algolia per ricerche personalizzate e consigli. Prima di poter utilizzare il connettore di destinazione [!DNL Algolia], è necessario configurare il connettore di origine [[!DNL Algolia User Profiles]](/help/sources/connectors/data-partners/algolia-user-profiles.md). Durante l’esercitazione di configurazione del connettore di origine, verrà creata l’identità Token utente Algolia. Questa identità è necessaria per la mappatura quando configuri il connettore di destinazione.
 
@@ -119,9 +119,9 @@ Dopo aver fornito i dettagli per la connessione di destinazione, seleziona **[!U
 >[!IMPORTANT]
 > 
 >* Per attivare i dati, è necessario **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attiva destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizza segmenti]** [Autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
->* Per esportare le identità, è necessario disporre dell&#39;autorizzazione di controllo di accesso [Visualizza grafico identità](https://experienceleague.adobe.com/it/docs/experience-platform/access-control/home#permissions).
+>* Per esportare le identità, è necessario disporre dell&#39;autorizzazione di controllo di accesso [Visualizza grafico identità](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions).
 
-Leggi [Attivare profili e tipi di pubblico nelle destinazioni di esportazione del pubblico di streaming](https://experienceleague.adobe.com/it/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations) per le istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione.
+Leggi [Attivare profili e tipi di pubblico nelle destinazioni di esportazione del pubblico di streaming](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations) per le istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione.
 
 ### Mappare attributi e identità {#mapping-attributes-identities}
 
