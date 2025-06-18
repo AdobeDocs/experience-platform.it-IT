@@ -16,7 +16,7 @@ ht-degree: 17%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_description"
 >title="Gestire l’utilizzo dei dati in Experience Platform"
->abstract="<h2>Descrizione</h2><p>Il framework della governance dei dati in Experience Platform consente di etichettare gli attributi e i set di dati in base alle restrizioni di utilizzo dei dati e di impostare criteri che identifichino e rispettino tali restrizioni per azioni di marketing specifiche.</p>"
+>abstract="<h2>Descrizione</h2><p>Il framework della governance dei dati in Experience Platform consente di etichettare attributi e schemi in base a restrizioni di utilizzo dei dati e di impostare criteri che identifichino e rispettino tali restrizioni per azioni di marketing specifiche.</p>"
 
 Questa guida utente descrive i passaggi per l&#39;utilizzo delle etichette di utilizzo dei dati nell&#39;interfaccia utente [!DNL Experience Platform].
 
@@ -24,7 +24,7 @@ Questa guida utente descrive i passaggi per l&#39;utilizzo delle etichette di ut
 
 Per applicare le etichette ai dati, è necessario disporre dell&#39;autorizzazione **[!UICONTROL Gestisci etichette di utilizzo]** per l&#39;utilizzo nella sandbox di produzione predefinita denominata &quot;prod&quot;. Per creare un’etichetta personalizzata, devi anche disporre di diritti di amministrazione sul profilo del prodotto. Ogni organizzazione dispone di un solo elenco di etichette applicabili. **impossibile** eliminare le etichette. È invece possibile rimuoverli dai set di dati o dai campi a cui sono applicati.
 
-Per ulteriori informazioni su come assegnare un&#39;autorizzazione, vedere la guida su come [configurare le autorizzazioni](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=it) o la [panoramica sul controllo degli accessi](../../access-control/home.md). Se non hai accesso ad Admin Console per la tua organizzazione, contatta l’amministratore della tua organizzazione.
+Per ulteriori informazioni su come assegnare un&#39;autorizzazione, vedere la guida su come [configurare le autorizzazioni](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) o la [panoramica sul controllo degli accessi](../../access-control/home.md). Se non hai accesso ad Admin Console per la tua organizzazione, contatta l’amministratore della tua organizzazione.
 
 ## Gestire le etichette a livello di schema
 
@@ -112,8 +112,8 @@ L&#39;opzione **[!UICONTROL Mostra etichette ereditate]** è attivata per impost
 >[!NOTE]
 >
 >Le etichette applicate prima che la funzione di etichettatura del set di dati diventasse obsoleta possono essere rimosse dal set di dati individuando il set di dati pertinente e selezionando l’icona Annulla sull’etichetta.
->![Scheda Governance dei dati dell&#39;area di lavoro Set di dati con un&#39;etichetta eliminabile evidenziata.](../images/labels/remove-governance-labels.png)
->Consulta la documentazione per le istruzioni su [come migrare le etichette applicate in precedenza dal set di dati al livello dello schema](../e2e.md#migrate-labels).
+>>![Scheda Governance dei dati dell&#39;area di lavoro Set di dati con un&#39;etichetta eliminabile evidenziata.](../images/labels/remove-governance-labels.png)
+>>Consulta la documentazione per le istruzioni su [come migrare le etichette applicate in precedenza dal set di dati al livello dello schema](../e2e.md#migrate-labels).
 
 ## Gestire le etichette personalizzate {#manage-custom-labels}
 
@@ -156,4 +156,4 @@ Ora puoi anche definire i criteri di utilizzo dei dati in base alle etichette ap
 
 The following video is intended to support your understanding of Data Governance, and outlines how to apply labels to a dataset and individual fields.
 
->[!VIDEO](https://video.tv.adobe.com/v/3422790?quality=12&enable10seconds=on&speedcontrol=on&captions=ita) -->
+>[!VIDEO](https://video.tv.adobe.com/v/29709?quality=12&enable10seconds=on&speedcontrol=on) -->
