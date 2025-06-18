@@ -112,8 +112,8 @@ L&#39;opzione **[!UICONTROL Mostra etichette ereditate]** è attivata per impost
 >[!NOTE]
 >
 >Le etichette applicate prima che la funzione di etichettatura del set di dati diventasse obsoleta possono essere rimosse dal set di dati individuando il set di dati pertinente e selezionando l’icona Annulla sull’etichetta.
->>![Scheda Governance dei dati dell&#39;area di lavoro Set di dati con un&#39;etichetta eliminabile evidenziata.](../images/labels/remove-governance-labels.png)
->>Consulta la documentazione per le istruzioni su [come migrare le etichette applicate in precedenza dal set di dati al livello dello schema](../e2e.md#migrate-labels).
+>&#x200B;>![Scheda Governance dei dati dell&#39;area di lavoro Set di dati con un&#39;etichetta eliminabile evidenziata.](../images/labels/remove-governance-labels.png)
+>&#x200B;>Consulta la documentazione per le istruzioni su [come migrare le etichette applicate in precedenza dal set di dati al livello dello schema](../e2e.md#migrate-labels).
 
 ## Gestire le etichette personalizzate {#manage-custom-labels}
 
