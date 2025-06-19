@@ -5,9 +5,9 @@ user-guide-description: Attiva i dati, noti e non, per campagne di marketing cro
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 5f23cb06a4c0bcd988bfcf981e473094ef7b0064
+source-git-commit: 75dec8987827a84cf791ed08f725baed5a8865ae
 workflow-type: tm+mt
-source-wordcount: '1294'
+source-wordcount: '1293'
 ht-degree: 6%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 6%
    * [Elimina account di destinazione](./api/delete-destination-account.md)
    * [Eliminare i flussi di dati di destinazione](./api/delete-destination-dataflow.md)
    * [Esporta set di dati](/help/destinations/api/export-datasets.md)
-   * [Ordinare e filtrare le risposte API per le destinazioni](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=it#use-cases)
+   * [Ordinare e filtrare le risposte API per le destinazioni](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Guide dell’interfaccia utente {#ui}
    * [Area di lavoro destinazioni](./ui/destinations-workspace.md)
    * [Creare una nuova connessione di destinazione](./ui/connect-destination.md)
@@ -67,7 +67,7 @@ ht-degree: 6%
       * [Connessione Marketo Engage](./catalog/adobe/marketo-engage.md)
       * [(Beta) Connessione Marketo Engage Person Sync](./catalog/adobe/marketo-engage-person-sync.md)
       * [Connessione Marketo Measure Ultimate](./catalog/adobe/marketo-measure-ultimate.md)
-      * [Condivisione del pubblico in Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=it)
+      * [Condivisione del pubblico in Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
       * [Connessione Federated Audience Composition](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Destinazioni di Advertising{#advertising}
       * [(Beta) Distribuzione del pubblico di Acxiom](./catalog/advertising/acxiom-audience-distribution.md)
@@ -91,7 +91,7 @@ ht-degree: 6%
       * [Connessione Google Ad Manager](./catalog/advertising/google-ad-manager.md)
       * [(Beta) Connessione Google Ad Manager 360](./catalog/advertising/google-ad-manager-360-connection.md)
       * [Connessione Customer Match di Google](./catalog/advertising/google-customer-match.md)
-      * [(Beta) Google Customer Match + connessione DV360](./catalog/advertising/google-customer-match-dv360.md)
+      * [Google Customer Match + connessione DV360](./catalog/advertising/google-customer-match-dv360.md)
       * [Google Display e connessione Video 360](./catalog/advertising/google-dv360.md)
       * [Estensione Google gtag](./catalog/advertising/gtag-advertising.md)
       * [Estensione tag LinkedIn Insight](./catalog/advertising/linkedin.md)
