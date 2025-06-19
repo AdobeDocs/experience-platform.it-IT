@@ -1,38 +1,80 @@
 ---
-title: Endpoint API ordine di lavoro
+title: Registra richieste di eliminazione (endpoint ordine di lavoro)
 description: L’endpoint /workorder nell’API di igiene dei dati consente di gestire in modo programmatico le attività di eliminazione per le identità.
-badgeBeta: label="Beta" type="Informative"
 role: Developer
-badge: Beta
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: bf819d506b0ee6f3aba6850f598ee46f16695dfa
+source-git-commit: d569b1d04fa76e0a0e48364a586e8a1a773b9bf2
 workflow-type: tm+mt
-source-wordcount: '1278'
+source-wordcount: '1505'
 ht-degree: 2%
 
 ---
 
-# Endpoint ordine di lavoro {#work-order-endpoint}
+# Registra richieste di eliminazione (endpoint ordine di lavoro) {#work-order-endpoint}
 
 L&#39;endpoint `/workorder` nell&#39;API di igiene dei dati consente di gestire programmaticamente le richieste di eliminazione dei record in Adobe Experience Platform.
 
 >[!IMPORTANT]
 > 
->La funzionalità di eliminazione dei record è attualmente disponibile in Beta ed è disponibile solo in una **versione limitata**. Non è disponibile per tutti i clienti. Le richieste di cancellazione dei record sono disponibili solo per le organizzazioni nella versione limitata.
->
 >Le eliminazioni di record devono essere utilizzate per la pulizia dei dati, la rimozione di dati anonimi o la minimizzazione dei dati. Sono **not** da utilizzare per le richieste di diritti degli interessati (conformità) in relazione alle normative sulla privacy come il Regolamento generale sulla protezione dei dati (RGPD). Per tutti i casi di utilizzo di conformità, utilizzare [Adobe Experience Platform Privacy Service](../../privacy-service/home.md).
 
 ## Introduzione
 
-L’endpoint utilizzato in questa guida fa parte dell’API di igiene dei dati. Prima di continuare, controlla la [panoramica](./overview.md) per trovare i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e le informazioni importanti sulle intestazioni necessarie per effettuare correttamente le chiamate a qualsiasi API Experience Platform.
+L’endpoint utilizzato in questa guida fa parte dell’API di igiene dei dati. Prima di continuare, controlla la [panoramica](./overview.md) per trovare i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e le informazioni importanti sulle intestazioni necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
+
+## Quote e timeline di elaborazione {#quotas}
+
+Registra Le richieste di cancellazione sono soggette ai limiti di invio giornalieri e mensili degli identificatori, determinati in base al diritto alla licenza della tua organizzazione. Questi limiti si applicano sia alle richieste di eliminazione basate su API che su interfaccia utente.
+
+>[!NOTE]
+>
+>Puoi inviare fino a **1.000.000 identificatori al giorno**, ma solo se lo consente la quota mensile rimanente. Se il limite mensile è inferiore a 1 milione, le richieste giornaliere non possono superare tale limite.
+
+### Diritto invio mensile per prodotto {#quota-limits}
+
+La tabella seguente illustra i limiti di invio degli identificatori per prodotto e livello di adesione. Per ogni prodotto, il limite mensile è il minore tra due valori: un limite fisso di identificazione o una soglia basata su percentuale associata al volume di dati concesso in licenza.
+
+| Prodotto | Descrizione diritto | Limite mensile (scegliendo il valore minore) |
+|----------|-------------------------|---------------------------------|
+| REAL-TIME CDP o ADOBE JOURNEY OPTIMIZER | Senza il componente aggiuntivo Privacy and Security Shield o Healthcare Shield | 2.000.000 identificatori o il 5% del pubblico indirizzabile |
+| REAL-TIME CDP o ADOBE JOURNEY OPTIMIZER | Con il componente aggiuntivo Privacy and Security Shield o Healthcare Shield | 15.000.000 identificatori o il 10% del pubblico indirizzabile |
+| Customer Journey Analytics | Senza il componente aggiuntivo Privacy and Security Shield o Healthcare Shield | 2.000.000 identificatori o 100 identificatori per milione di righe CJA di diritto |
+| Customer Journey Analytics | Con il componente aggiuntivo Privacy and Security Shield o Healthcare Shield | 15.000.000 identificatori o 200 identificatori per milione di righe CJA di diritto |
+
+>[!NOTE]
+>
+> La maggior parte delle organizzazioni avrà limiti mensili inferiori in base al proprio pubblico indirizzabile effettivo o ai diritti di riga di CJA.
+
+Le quote vengono reimpostate il primo giorno di ogni mese di calendario. La quota non utilizzata **non** viene riportata.
+
+>[!NOTE]
+>
+>Le quote si basano sui diritti mensili concessi in licenza dalla tua organizzazione per **identificatori inviati**. Queste non vengono applicate dai guardrail di sistema, ma possono essere monitorate e riviste.
+>
+>Eliminazione record è un **servizio condiviso**. Il limite mensile riflette il diritto più alto tra Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics ed eventuali componenti aggiuntivi Shield applicabili.
+
+### Elaborazione dei timeline per l’invio degli identificatori {#sla-processing-timelines}
+
+Dopo l’invio, le richieste di eliminazione dei record vengono messe in coda ed elaborate in base al livello di adesione.
+
+| Descrizione del prodotto e della licenza | Durata coda | Tempo di elaborazione massimo (SLA) |
+|------------------------------------------------------------------------------------|---------------------|-------------------------------|
+| Senza il componente aggiuntivo Privacy and Security Shield o Healthcare Shield | Fino a 15 giorni | 30 giorni |
+| Con il componente aggiuntivo Privacy and Security Shield o Healthcare Shield | In genere 24 ore | 15 giorni |
+
+Se l’organizzazione richiede limiti più elevati, contatta il rappresentante Adobe per una revisione dell’adesione.
+
+>[!TIP]
+>
+>Per verificare l&#39;utilizzo o il livello di adesione corrente, vedere la [Guida di riferimento della quota](../api/quota.md).
 
 ## Creare una richiesta di eliminazione record {#create}
 
-Per eliminare una o più identità da un singolo set di dati o da tutti i set di dati, effettua una richiesta POST all&#39;endpoint `/workorder`.
+È possibile eliminare una o più identità da un singolo set di dati o da tutti i set di dati effettuando una richiesta POST all&#39;endpoint `/workorder`.
 
->[!IMPORTANT]
-> 
->Esistono limiti diversi per il numero totale di eliminazioni di record di identità univoci che possono essere inviate ogni mese. Questi limiti sono basati sul contratto di licenza. Le organizzazioni che hanno acquistato tutte le edizioni di Adobe Real-time Customer Data Platform e Adobe Journey Optimizer possono inviare fino a 100.000 record di identità eliminati ogni mese. Le organizzazioni che hanno acquistato **Adobe Healthcare Shield** o **Adobe Privacy &amp; Security Shield** possono inviare fino a 600.000 record di identità eliminati ogni mese.<br>Una singola [richiesta di eliminazione record tramite l&#39;interfaccia utente](../ui/record-delete.md) consente di inviare contemporaneamente 10.000 ID. Il metodo API per eliminare i record consente di inviare contemporaneamente 100.000 ID.<br>È consigliabile inviare il maggior numero possibile di ID per richiesta, fino al limite di ID. Quando intendi eliminare un volume elevato di ID, devi evitare di inviare un volume basso o un singolo ID per richiesta di cancellazione del record.
+>[!TIP]
+>
+>Ogni richiesta di eliminazione del record inviata tramite l&#39;API può includere fino a **100.000 identità**. Per massimizzare l’efficienza, invia il maggior numero possibile di identità per richiesta ed evita invii di volumi ridotti, ad esempio ordini di lavoro con ID singolo.
 
 **Formato API**
 
@@ -130,7 +172,7 @@ In caso di esito positivo, la risposta restituisce i dettagli dell’eliminazion
 
 ## Recuperare lo stato di un&#39;eliminazione record {#lookup}
 
-Dopo aver [creato una richiesta di eliminazione record](#create), puoi controllarne lo stato utilizzando una richiesta GET.
+Dopo aver [creato una richiesta di eliminazione record](#create), puoi verificarne lo stato utilizzando una richiesta GET.
 
 **Formato API**
 

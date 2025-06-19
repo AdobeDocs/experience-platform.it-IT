@@ -3,9 +3,9 @@ title: Endpoint API quota
 description: L’endpoint /quota nell’API di igiene dei dati consente di monitorare l’utilizzo di Advanced Data Lifecycle Management rispetto ai limiti di quota mensili dell’organizzazione per ogni tipo di processo.
 role: Developer
 exl-id: 91858a13-e5ce-4b36-a69c-9da9daf8cd66
-source-git-commit: 48a83e2b615fc9116a93611a5e6a8e7f78cb4dee
+source-git-commit: 4d34ae1885f8c4b05c7bb4ff9de9c0c0e26154bd
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '492'
 ht-degree: 2%
 
 ---
@@ -14,10 +14,7 @@ ht-degree: 2%
 
 L&#39;endpoint `/quota` nell&#39;API di igiene dei dati consente di monitorare l&#39;utilizzo di Advanced Data Lifecycle Management rispetto ai limiti di quota dell&#39;organizzazione per ogni tipo di processo.
 
-Le quote vengono applicate per ogni tipo di processo del ciclo di vita dei dati nei seguenti modi:
-
-* Le eliminazioni e gli aggiornamenti dei record sono limitati a un determinato numero di richieste al mese.
-* Le scadenze dei set di dati hanno un limite fisso per il numero di processi attivi simultaneamente, indipendentemente da quando verranno eseguite.
+L’utilizzo delle quote viene monitorato per ogni tipo di processo del ciclo di vita dei dati. I limiti di quota effettivi dipendono dai diritti dell&#39;organizzazione e possono essere rivisti periodicamente. Le scadenze dei set di dati sono soggette a un limite rigido sul numero di processi attivi simultaneamente.
 
 ## Introduzione
 
@@ -25,11 +22,19 @@ L’endpoint utilizzato in questa guida fa parte dell’API di igiene dei dati. 
 
 * Collegamenti alla documentazione correlata
 * Guida alla lettura delle chiamate API di esempio in questo documento
-* Informazioni importanti sulle intestazioni necessarie per effettuare chiamate a qualsiasi API Experience Platform
+* Informazioni importanti sulle intestazioni necessarie per effettuare chiamate a qualsiasi API di Experience Platform
+
+## Quote e timeline di elaborazione {#quotas}
+
+Le richieste di cancellazione dei record sono soggette a quote e aspettative a livello di servizio in base al diritto alla licenza. Questi limiti si applicano sia alle richieste di eliminazione basate su API che su interfaccia utente.
+
+>[!TIP]
+> 
+>In questo documento viene illustrato come eseguire query sull&#39;utilizzo in base ai limiti basati sui diritti. Per una descrizione completa dei livelli di quota, dei diritti di eliminazione dei record e del comportamento di SLA, vedere i documenti [Eliminazione record basata sull&#39;interfaccia utente](../ui/record-delete.md#quotas) o[Eliminazione record basata su API](./workorder.md#quotas).
 
 ## Elenca quote {#list}
 
-È possibile visualizzare le informazioni sulle quote della propria organizzazione effettuando una richiesta di GET all&#39;endpoint `/quota`.
+È possibile visualizzare le informazioni sulle quote della propria organizzazione effettuando una richiesta GET all&#39;endpoint `/quota`.
 
 **Formato API**
 
@@ -70,13 +75,13 @@ In caso di esito positivo, la risposta restituisce i dettagli delle quote del ci
       "name": "dailyConsumerDeleteIdentitiesQuota",
       "description": "The consumed number of deleted identities in all workorder requests for the organization for today.",
       "consumed": 0,
-      "quota": 600000
+      "quota": 1000000
     },
     {
       "name": "monthlyConsumerDeleteIdentitiesQuota",
       "description": "The consumed number of deleted identities in all workorder requests for the organization for this month.",
       "consumed": 841,
-      "quota": 600000
+      "quota": 2000000
     },
     {
       "name": "monthlyUpdatedFieldIdentitiesQuota",
@@ -89,7 +94,5 @@ In caso di esito positivo, la risposta restituisce i dettagli delle quote del ci
 ```
 
 | Proprietà | Descrizione |
-| --- | --- |
+| -------- | ------- |
 | `quotas` | Elenca le informazioni sulla quota per ogni tipo di processo del ciclo di vita dei dati. Ogni oggetto quota contiene le proprietà seguenti:<ul><li>`name`: tipo di processo del ciclo di vita dei dati:<ul><li>`expirationDatasetQuota`: scadenze set di dati</li><li>`deleteIdentityWorkOrderDatasetQuota`: eliminazioni record</li></ul></li><li>`description`: descrizione del tipo di processo del ciclo di vita dei dati.</li><li>`consumed`: numero di processi di questo tipo eseguiti nel periodo corrente. Il nome dell&#39;oggetto indica il periodo di quota.</li><li>`quota`: l&#39;assegnazione per questo tipo di processo per la tua organizzazione. Per le eliminazioni e gli aggiornamenti dei record, la quota rappresenta il numero di processi che è possibile eseguire per ogni periodo mensile. Per le scadenze dei set di dati, la quota rappresenta il numero di processi che possono essere attivi contemporaneamente in un dato momento.</li></ul> |
-
-{style="table-layout:auto"}

@@ -1,24 +1,20 @@
 ---
-title: Elimina record
+title: Registra richieste di eliminazione (flusso di lavoro interfaccia utente)
 description: Scopri come eliminare i record nell’interfaccia utente di Adobe Experience Platform.
-badgeBeta: label="Beta" type="Informative"
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 07e09cfe2e2c3ff785caf0b310cbe2f2cc381c17
 workflow-type: tm+mt
-source-wordcount: '1574'
-ht-degree: 8%
+source-wordcount: '1797'
+ht-degree: 7%
 
 ---
 
-# Elimina record {#record-delete}
+# Registrare le richieste di eliminazione (flusso di lavoro dell’interfaccia utente) {#record-delete}
 
 Utilizza l&#39;area di lavoro [[!UICONTROL Ciclo di vita dati]](./overview.md) per eliminare i record in Adobe Experience Platform in base alle loro identità primarie. Questi record possono essere associati a singoli consumatori o a qualsiasi altra entità inclusa nel grafico delle identità.
 
 >[!IMPORTANT]
-> 
->La funzionalità di eliminazione dei record è attualmente disponibile in Beta ed è disponibile solo in una **versione limitata**. Non è disponibile per tutti i clienti. Le richieste di cancellazione dei record sono disponibili solo per le organizzazioni nella versione limitata.
-> 
-> 
+>
 >Le eliminazioni di record devono essere utilizzate per la pulizia dei dati, la rimozione di dati anonimi o la minimizzazione dei dati. Sono **not** da utilizzare per le richieste di diritti degli interessati (conformità) in relazione alle normative sulla privacy come il Regolamento generale sulla protezione dei dati (RGPD). Per tutti i casi di utilizzo di conformità, utilizzare [Adobe Experience Platform Privacy Service](../../privacy-service/home.md).
 
 ## Prerequisiti {#prerequisites}
@@ -134,13 +130,59 @@ Per aggiungere altre identità, selezionare l&#39;icona più (![A icona più.](/
 
 ![Flusso di lavoro per la creazione di richieste con l&#39;icona più e l&#39;icona Aggiungi identità evidenziate.](../images/ui/record-delete/more-identities.png)
 
+## Quote e timeline di elaborazione {#quotas}
+
+Registra Le richieste di cancellazione sono soggette ai limiti di invio giornalieri e mensili degli identificatori, determinati in base al diritto alla licenza della tua organizzazione. Questi limiti si applicano sia alle richieste di eliminazione basate su API che su interfaccia utente.
+
+>[!NOTE]
+>
+>Puoi inviare fino a **1.000.000 identificatori al giorno**, ma solo se lo consente la quota mensile rimanente. Se il limite mensile è inferiore a 1 milione, le richieste giornaliere non possono superare tale limite.
+
+### Diritto invio mensile per prodotto {#quota-limits}
+
+La tabella seguente illustra i limiti di invio degli identificatori per prodotto e livello di adesione. Per ogni prodotto, il limite mensile è il minore tra due valori: un limite fisso di identificazione o una soglia basata su percentuale associata al volume di dati concesso in licenza.
+
+| Prodotto | Descrizione diritto | Limite mensile (scegliendo il valore minore) |
+|----------|-------------------------|---------------------------------|
+| REAL-TIME CDP o ADOBE JOURNEY OPTIMIZER | Senza il componente aggiuntivo Privacy and Security Shield o Healthcare Shield | 2.000.000 identificatori o il 5% del pubblico indirizzabile |
+| REAL-TIME CDP o ADOBE JOURNEY OPTIMIZER | Con il componente aggiuntivo Privacy and Security Shield o Healthcare Shield | 15.000.000 identificatori o il 10% del pubblico indirizzabile |
+| Customer Journey Analytics | Senza il componente aggiuntivo Privacy and Security Shield o Healthcare Shield | 2.000.000 identificatori o 100 identificatori per milione di righe CJA di diritto |
+| Customer Journey Analytics | Con il componente aggiuntivo Privacy and Security Shield o Healthcare Shield | 15.000.000 identificatori o 200 identificatori per milione di righe CJA di diritto |
+
+>[!NOTE]
+>
+> La maggior parte delle organizzazioni avrà limiti mensili inferiori in base al proprio pubblico indirizzabile effettivo o ai diritti di riga di CJA.
+
+Le quote vengono reimpostate il primo giorno di ogni mese di calendario. La quota non utilizzata **non** viene riportata.
+
+>[!NOTE]
+>
+>Le quote si basano sui diritti mensili concessi in licenza dalla tua organizzazione per **identificatori inviati**. Queste non vengono applicate dai guardrail di sistema, ma possono essere monitorate e riviste.
+>
+>Eliminazione record è un **servizio condiviso**. Il limite mensile riflette il diritto più alto tra Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics ed eventuali componenti aggiuntivi Shield applicabili.
+
+### Elaborazione dei timeline per l’invio degli identificatori {#sla-processing-timelines}
+
+Dopo l’invio, le richieste di eliminazione dei record vengono messe in coda ed elaborate in base al livello di adesione.
+
+| Descrizione del prodotto e della licenza | Durata coda | Tempo di elaborazione massimo (SLA) |
+|------------------------------------------------------------------------------------|---------------------|-------------------------------|
+| Senza il componente aggiuntivo Privacy and Security Shield o Healthcare Shield | Fino a 15 giorni | 30 giorni |
+| Con il componente aggiuntivo Privacy and Security Shield o Healthcare Shield | In genere 24 ore | 15 giorni |
+
+Se l’organizzazione richiede limiti più elevati, contatta il rappresentante Adobe per una revisione dell’adesione.
+
+>[!TIP]
+>
+>Per verificare l&#39;utilizzo o il livello di adesione corrente, vedere la [Guida di riferimento della quota](../api/quota.md).
+
 ## Inviare la richiesta {#submit}
 
 Dopo aver aggiunto le identità alla richiesta, in **[!UICONTROL Impostazioni richiesta]**, fornisci un nome e una descrizione facoltativa per la richiesta prima di selezionare **[!UICONTROL Invia]**.
 
->[!IMPORTANT]
-> 
->Esistono limiti diversi per il numero totale di eliminazioni di record di identità univoci che possono essere inviate ogni mese. Questi limiti sono basati sul contratto di licenza. Le organizzazioni che hanno acquistato tutte le edizioni di Adobe Real-Time Customer Data Platform o Adobe Journey Optimizer possono inviare fino a 100.000 record di identità eliminati ogni mese. Le organizzazioni che hanno acquistato **Adobe Healthcare Shield** o **Adobe Privacy &amp; Security Shield** possono inviare fino a 600.000 record di identità eliminati ogni mese.<br>Una richiesta di eliminazione di un singolo record tramite l&#39;interfaccia utente consente di inviare contemporaneamente 10.000 ID. Il metodo [API per eliminare i record](../api/workorder.md#create) consente di inviare contemporaneamente 100.000 ID.<br>È consigliabile inviare il maggior numero possibile di ID per richiesta, fino al limite di ID. Quando intendi eliminare un volume elevato di ID, devi evitare di inviare un volume basso o un singolo ID per richiesta di cancellazione del record.
+>[!TIP]
+>
+>Puoi inviare fino a 10.000 identità per richiesta tramite l’interfaccia utente. Per inviare volumi più grandi (fino a 100.000 ID per richiesta), utilizza il [metodo API](../api/workorder.md#create).
 
 ![I campi [!UICONTROL Name] e [!UICONTROL Description] dell&#39;impostazione della richiesta sono evidenziati da [!UICONTROL Submit].](../images/ui/record-delete/submit.png)
 
