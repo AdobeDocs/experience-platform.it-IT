@@ -4,9 +4,9 @@ description: Scopri come creare un nuovo account Enterprise con Azure o utilizza
 role: Developer
 feature: Privacy
 exl-id: 670e3ca3-a833-4b28-9ad4-73685fa5d74d
-source-git-commit: f4100506947da7584de5b9fb42946ac877c8c102
+source-git-commit: c920f78363ee5f040964dbd3a0d0815474094b07
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '675'
 ht-degree: 0%
 
 ---
@@ -56,6 +56,14 @@ Quindi, abilita il controllo degli accessi basato sul ruolo di Azure per l’ins
 Se l&#39;insieme di credenziali delle chiavi è configurato per limitare l&#39;accesso pubblico a determinate reti virtuali o disabilitare completamente l&#39;accesso pubblico, è necessario concedere a [!DNL Microsoft] un&#39;eccezione firewall.
 
 Selezionare **[!DNL Networking]** nel menu di navigazione a sinistra. In **[!DNL Firewalls and virtual networks]**, selezionare la casella di controllo **[!DNL Allow trusted Microsoft services to bypass this firewall]**, quindi selezionare **[!DNL Apply]**.
+
+>[!NOTE]
+>
+>Se l&#39;insieme di credenziali delle chiavi utilizza un accesso di rete limitato, Adobe consiglia di aggiungere il seguente indirizzo IP statico: `20.88.123.53`. L’aggiunta di questo indirizzo IP consente ai servizi Adobe di monitorare la connettività in modo più efficace e di fornire avvisi nella piattaforma quando vengono rilevati problemi di accesso.
+>
+>Per ulteriori informazioni su quando inserire nell&#39;elenco Consentiti l&#39;indirizzo IP di Adobe, su come funzionano gli avvisi e su come rispondere alle notifiche di errori di accesso alle chiavi, vedere [Configurare gli avvisi e l&#39;accesso IP per Azure CMK](./alerts-and-ip-access.md).
+>
+>Se l&#39;insieme di credenziali delle chiavi è già configurato per consentire l&#39;accesso alla rete pubblica, non sono necessarie ulteriori azioni.
 
 ![Scheda [!DNL Networking] di [!DNL Microsoft Azure] con [!DNL Networking] e [!DNL Allow trusted Microsoft surfaces to bypass this firewall] eccezione evidenziata.](../../../images/governance-privacy-security/customer-managed-keys/networking.png)
 
