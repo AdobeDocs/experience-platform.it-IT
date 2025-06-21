@@ -85,8 +85,8 @@ Aggiungi l&#39;azione **[!UICONTROL Clic]** alla regola di tag per inviare gli e
 >[!NOTE]
 >
 >Se sono inclusi sia `queryID` che `position`, l&#39;evento viene classificato come **ID oggetto selezionati dopo la ricerca**. In caso contrario, viene classificato come evento **ID oggetto selezionato**.
->><br>
->>Se l&#39;elemento dati non fornisce `indexName`, verrà utilizzato il **nome indice predefinito** al momento dell&#39;invio dell&#39;evento.
+>&#x200B;><br>
+>&#x200B;>Se l&#39;elemento dati non fornisce `indexName`, verrà utilizzato il **nome indice predefinito** al momento dell&#39;invio dell&#39;evento.
 
 ![](../../../images/extensions/client/algolia/clicked.png)
 
@@ -105,8 +105,8 @@ Aggiungi l&#39;azione **[!UICONTROL Convertito]** alla regola di tag per inviare
 >[!NOTE]
 >
 >Se l&#39;elemento dati contiene `queryId`, l&#39;evento viene classificato come **Convertito dopo la ricerca**. In caso contrario, verrà classificato come evento **Convertito**.
->><br>
->>Se l&#39;elemento dati non fornisce `indexName`, verrà utilizzato il **nome indice predefinito** al momento dell&#39;invio dell&#39;evento.
+>&#x200B;><br>
+>&#x200B;>Se l&#39;elemento dati non fornisce `indexName`, verrà utilizzato il **nome indice predefinito** al momento dell&#39;invio dell&#39;evento.
 
 ![](../../../images/extensions/client/algolia/converted.png)
 
@@ -125,10 +125,10 @@ Aggiungi l&#39;azione **[!UICONTROL Aggiunto al carrello]** alla regola di tag p
 >[!NOTE]
 >
 >Se l&#39;elemento dati contiene `queryId`, l&#39;evento verrà classificato come **Aggiunto agli ID dell&#39;oggetto carrello dopo la ricerca**. In caso contrario, verrà classificato come evento **Aggiunto agli ID dell&#39;oggetto carrello**.
->><br>
->>Se l&#39;elemento dati non fornisce `indexName`, verrà utilizzato il **nome indice predefinito** al momento dell&#39;invio dell&#39;evento.
->><br>
->>Se gli elementi dati predefiniti non soddisfano le tue esigenze, puoi creare un elemento dati personalizzato per restituire i dettagli dell’evento desiderati.
+>&#x200B;><br>
+>&#x200B;>Se l&#39;elemento dati non fornisce `indexName`, verrà utilizzato il **nome indice predefinito** al momento dell&#39;invio dell&#39;evento.
+>&#x200B;><br>
+>&#x200B;>Se gli elementi dati predefiniti non soddisfano le tue esigenze, puoi creare un elemento dati personalizzato per restituire i dettagli dell’evento desiderati.
 
 ![](../../../images/extensions/client/algolia/added-to-cart.png)
 
@@ -147,10 +147,10 @@ Aggiungi l&#39;azione **[!UICONTROL Acquistato]** alla regola di tag per inviare
 >[!NOTE]
 >
 >Se l&#39;elemento dati contiene `queryId`, l&#39;evento verrà classificato come **ID oggetto acquistato dopo la ricerca**. In caso contrario, verrà classificato come evento **ID oggetto acquistato**.
->><br>
->>Se l&#39;elemento dati non fornisce `indexName`, verrà utilizzato il **nome indice predefinito** al momento dell&#39;invio dell&#39;evento.
->><br>
->>Se gli elementi dati predefiniti non soddisfano le tue esigenze, puoi creare un elemento dati personalizzato per restituire i dettagli dell’evento desiderati.
+>&#x200B;><br>
+>&#x200B;>Se l&#39;elemento dati non fornisce `indexName`, verrà utilizzato il **nome indice predefinito** al momento dell&#39;invio dell&#39;evento.
+>&#x200B;><br>
+>&#x200B;>Se gli elementi dati predefiniti non soddisfano le tue esigenze, puoi creare un elemento dati personalizzato per restituire i dettagli dell’evento desiderati.
 
 ![](../../../images/extensions/client/algolia/purchased.png)
 
