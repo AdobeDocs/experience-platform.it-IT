@@ -1,10 +1,8 @@
 ---
 title: Guida alle configurazioni delle regole di collegamento del grafico di identità
 description: Scopri i diversi tipi di implementazione che è possibile configurare utilizzando le Regole di collegamento del grafico di identità.
-hide: true
-hidefromtoc: true
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: 2a5c8b3bd58d3659d0fcf519407b180bf5f091b4
+source-git-commit: 54a50cd3e122df7f653c06232e0598fa878eeac5
 workflow-type: tm+mt
 source-wordcount: '1951'
 ht-degree: 7%
@@ -136,7 +134,7 @@ Leggere questa sezione per le implementazioni intermedie di [!DNL Identity Graph
 >
 >Per completare le implementazioni di seguito, devi creare i seguenti spazi dei nomi personalizzati con i simboli di identità (distinzione maiuscole/minuscole) di:
 >* `CRMID`
->* `CCHash` (spazio dei nomi personalizzato che rappresenta un numero di carta di credito con hash).
+>* `CChash` (spazio dei nomi personalizzato che rappresenta un numero di carta di credito con hash).
 
 Immagina di essere un architetto di dati che lavora per una banca commerciale che emette carte di credito. Il team marketing ha indicato di voler includere in un profilo la cronologia delle transazioni con carta di credito passate. Questo grafico delle identità potrebbe essere simile al seguente.
 
@@ -482,6 +480,7 @@ loginID: JanePersonal, ECID: 222
 >* `CRMID`
 >* `loyaltyID`
 >* `thirdPartyID`
+>* `orderID`
 
 Sei una società di media e intrattenimento e i tuoi utenti finali hanno i seguenti elementi:
 
