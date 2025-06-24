@@ -2,9 +2,9 @@
 title: Panoramica del connettore Source SFTP
 description: Scopri come collegare un server SFTP a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 4816a6b627dc6551e351bfe3cdc4bc8c8ea8b17e
 workflow-type: tm+mt
-source-wordcount: '1226'
+source-wordcount: '1215'
 ht-degree: 0%
 
 ---
@@ -23,9 +23,9 @@ Leggere questo documento per i passaggi preliminari da completare per connettere
 
 Leggere questa sezione per i passaggi preliminari da completare per connettere correttamente l&#39;origine [!DNL SFTP] ad Experience Platform.
 
-### ELENCO CONSENTITI di indirizzo IP
+### Indirizzo IP inserisco nell&#39;elenco Consentiti
 
-Prima di utilizzare i connettori di origine, è necessario aggiungere un elenco di indirizzi IP a un elenco consentiti. La mancata aggiunta all’elenco consentiti degli indirizzi IP specifici per l’area geografica potrebbe causare errori o prestazioni non ottimali durante l’utilizzo delle origini. Per ulteriori informazioni, vedere la pagina [elenco consentiti indirizzo IP](../../ip-address-allow-list.md).
+Prima di utilizzare i connettori di origine, è necessario aggiungere un elenco di indirizzi IP a un inserisco nell&#39;elenco Consentiti di. La mancata aggiunta di indirizzi IP specifici per l’area geografica al elenco Consentiti può causare errori o non prestazioni durante l’utilizzo delle origini. Per ulteriori informazioni, vedere la pagina [Indirizzo IP/inserisco nell&#39;elenco Consentiti di](../../ip-address-allow-list.md).
 
 ### Vincoli di denominazione per file e directory
 
@@ -183,7 +183,7 @@ Specificare i valori appropriati per le credenziali seguenti per autenticare il 
 | `port` | Porta del server [!DNL SFTP] a cui ti stai connettendo. Se non specificato, il valore predefinito è `22`. |
 | `username` | Il nome utente con accesso al server [!DNL SFTP]. |
 | `password` | La password per il server [!DNL SFTP]. |
-| `privateKeyContent` | Il contenuto della chiave privata SSH con codifica Base64. Il tipo di chiave OpenSSH deve essere classificato come RSA o DSA. |
+| `privateKeyContent` | Contenuto della chiave privata SSH con codifica Base64. I tipi di chiave OpenSSH supportati sono `ed25519`, `RSA` e `DSA`. |
 | `passPhrase` | La passphrase o password per decrittografare la chiave privata se il file di chiave o il contenuto della chiave è protetto da una passphrase. Se PrivateKeyContent è protetto da password, questo parametro deve essere utilizzato con la passphrase di PrivateKeyContent come valore. |
 | `maxConcurrentConnections` | Questo parametro consente di specificare un limite massimo per il numero di connessioni simultanee che Experience Platform creerà durante la connessione al server SFTP. Devi impostare questo valore su un valore inferiore al limite impostato da SFTP. **Nota**: quando questa impostazione è abilitata per un account SFTP esistente, influirà solo sui flussi di dati futuri e non su quelli esistenti. |
 | `folderPath` | Percorso della cartella a cui desideri fornire l’accesso. Origine [!DNL SFTP], è possibile specificare il percorso della cartella per specificare l&#39;accesso utente alla sottocartella desiderata. |
