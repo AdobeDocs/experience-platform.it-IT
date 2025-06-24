@@ -2,12 +2,12 @@
 title: Intento Demandbase
 description: Scopri l’origine di Intento Demandbase su Experience Platform.
 last-substantial-update: 2025-03-26T00:00:00Z
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=it#rtcdp-editions newtab=true"
-badgeB2P: label="Edizione B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=it#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="Edizione B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: 62dd27e0-b846-4c04-977f-8a3ab99bc464
-source-git-commit: a1af85c6b76cc7bded07ab4acaec9c3213a94397
+source-git-commit: 5757bc84a9aeec18eb5fe21d6f02160b2ba55166
 workflow-type: tm+mt
-source-wordcount: '1475'
+source-wordcount: '1480'
 ht-degree: 1%
 
 ---
@@ -71,6 +71,7 @@ Lo schema [!DNL Demandbase] è denominato **Company Intent Weekly**. Si tratta d
 | `duration_type` | STRINGA | TRUE | SÌ | Tipo di durata. In genere, questo valore può essere giornaliero, settimanale o mensile a seconda della durata di rollup scelta. Per questo esempio di dati, il valore è `week`. |
 | `keyword_set_id` | STRINGA | TRUE | SÌ | ID del set di parole chiave. È univoco per ogni cliente. |
 | `keyword_set` | STRINGA | TRUE | SÌ | Nome del set di parole chiave. |
+| `keyword` | STRINGA | TRUE | | Parola chiave Intent. |
 | `is_trending` | STRINGA | TRUE | | Stato corrente di una determinata tendenza. Lo stato di tendenza è misurato come incremento dell’attività intent nell’ultima settimana rispetto alle medie delle sette settimane precedenti. |
 | `intent_strength` | ENUM[STRINGA] | TRUE | | Misurazione quantificata della forza dell&#39;intento. I valori accettati includono: `HIGH`, `MED` e `LOW`. |
 | `num_people_researching` | NUMERO INTERO | TRUE | | Numero di persone appartenenti a `company_id` che hanno cercato la parola chiave negli ultimi sette giorni. |
