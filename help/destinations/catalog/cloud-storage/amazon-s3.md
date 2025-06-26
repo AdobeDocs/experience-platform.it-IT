@@ -2,10 +2,10 @@
 title: Connessione Amazon S3
 description: Crea una connessione in uscita allo storage Amazon Web Services (AWS) S3 per esportare periodicamente file di dati CSV da Adobe Experience Platform nei bucket S3.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7aff8d9eafb699133e90d3af8ef24f3135f3cade
 workflow-type: tm+mt
-source-wordcount: '1503'
-ht-degree: 16%
+source-wordcount: '1818'
+ht-degree: 13%
 
 ---
 
@@ -87,7 +87,7 @@ Per eseguire l&#39;autenticazione nella destinazione, compilare i campi obbligat
 * Autenticazione chiave di accesso e chiave segreta
 * Autenticazione del ruolo assunta
 
-#### Autenticazione chiave di accesso e chiave segreta
+#### Autenticazione con chiave di accesso S3 e chiave segreta
 
 Utilizza questo metodo di autenticazione quando desideri inserire la chiave di accesso e la chiave segreta di Amazon S3 per consentire ad Experience Platform di esportare dati nelle proprietà di Amazon S3.
 
@@ -98,21 +98,103 @@ Utilizza questo metodo di autenticazione quando desideri inserire la chiave di a
 
   ![Immagine che mostra un esempio di chiave PGP formattata correttamente nell&#39;interfaccia utente.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
-#### Ruolo assunto {#assumed-role-authentication}
+#### Autenticazione con ruolo S3 assunto {#assumed-role-authentication}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_assumed_role"
 >title="Autenticazione del ruolo assunta"
 >abstract="Utilizza questo tipo di autenticazione se preferisci non condividere le chiavi dell’account e le chiavi segrete con Adobe. Al contrario, Experience Platform si connette alla posizione Amazon S3 utilizzando l’accesso basato sul ruolo. Incolla l’ARN del ruolo creato in AWS per l’utente Adobe. Il pattern è simile a `arn:aws:iam::800873819705:role/destinations-role-customer` "
 
-![Immagine dei campi obbligatori quando si seleziona l&#39;autenticazione del ruolo assunta.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png)
-
 Utilizza questo tipo di autenticazione se preferisci non condividere le chiavi dell’account e le chiavi segrete con Adobe. Al contrario, Experience Platform si connette alla tua posizione Amazon S3 utilizzando l’accesso basato sui ruoli.
 
-A questo scopo, devi creare nella console AWS un utente presunto per Adobe con le [autorizzazioni necessarie](#minimum-permissions-iam-user) per scrivere nei bucket Amazon S3. Crea un&#39;entità **[!UICONTROL attendibile]** in AWS con l&#39;account Adobe **[!UICONTROL 670664943635]**. Per ulteriori informazioni, consulta la [documentazione di AWS sulla creazione di ruoli](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
+![Immagine dei campi obbligatori quando si seleziona l&#39;autenticazione del ruolo assunta.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png)
 
-* **[!DNL Role]**: incolla l&#39;ARN del ruolo creato in AWS per l&#39;utente Adobe. Il modello è simile a `arn:aws:iam::800873819705:role/destinations-role-customer`.
+* **[!DNL Role]**: incolla l&#39;ARN del ruolo creato in AWS per l&#39;utente Adobe. Il modello è simile a `arn:aws:iam::800873819705:role/destinations-role-customer`. Per istruzioni dettagliate su come configurare correttamente l’accesso S3, consulta i passaggi seguenti.
 * **[!UICONTROL Chiave di crittografia]**: facoltativamente, è possibile allegare la chiave pubblica in formato RSA per aggiungere la crittografia ai file esportati. Visualizza un esempio di chiave di crittografia formattata correttamente nell’immagine seguente.
+
+A questo scopo, devi creare nella console AWS un ruolo presunto per Adobe con le [autorizzazioni necessarie](#minimum-permissions-iam-user) per scrivere nei bucket Amazon S3.
+
+**Crea un criterio con le autorizzazioni richieste**
+
+1. Apri la console AWS e vai a IAM > Criteri > Crea criterio.
+2. Seleziona Editor criteri > JSON e aggiungi le autorizzazioni seguenti.
+
+   ```json
+   {
+       "Version": "2012-10-17",
+       "Statement": [
+           {
+               "Sid": "VisualEditor0",
+               "Effect": "Allow",
+               "Action": [
+                   "s3:PutObject",
+                   "s3:GetObject",
+                   "s3:DeleteObject",
+                   "s3:GetBucketLocation",
+                   "s3:ListMultipartUploadParts"
+               ],
+               "Resource": "arn:aws:s3:::bucket/folder/*"
+           },
+           {
+               "Sid": "VisualEditor1",
+               "Effect": "Allow",
+               "Action": [
+                   "s3:ListBucket"
+               ],
+               "Resource": "arn:aws:s3:::bucket"
+           }
+       ]
+   }
+   ```
+
+3. Nella pagina successiva immettere un nome per il criterio e salvarlo come riferimento. Questo nome di criterio è necessario per la creazione del ruolo nel passaggio successivo.
+
+**Crea un ruolo utente nel tuo account cliente S3**
+
+1. Apri la console AWS e vai a IAM > Ruoli > Crea nuovo ruolo.
+2. Seleziona **Tipo di entità attendibile** > **Account AWS**
+3. Seleziona **Un account AWS** > **Un altro account AWS** e immetti l&#39;ID account Adobe: `670664943635`
+4. Aggiungere le autorizzazioni utilizzando il criterio creato in precedenza
+5. Immettere un nome di ruolo, ad esempio `destinations-role-customer`. Il nome della mansione deve essere considerato riservato, come una password. Può contenere fino a 64 caratteri e può contenere caratteri alfanumerici e i seguenti caratteri speciali: `+=,.@-_`. Verifica quindi che:
+   * L&#39;ID account Adobe `670664943635` è presente nella sezione **[!UICONTROL Seleziona entità attendibili]**
+   * Il criterio creato in precedenza è presente in **[!UICONTROL Riepilogo criteri autorizzazioni]**
+
+**Assegna ad Adobe il ruolo**
+
+Dopo aver creato il ruolo in AWS, devi fornire il ruolo ARN ad Adobe. L&#39;ARN segue questo pattern: `arn:aws:iam::800873819705:role/destinations-role-customer`
+
+Puoi trovare l’ARN nella pagina principale dopo aver creato il ruolo nella console AWS. Utilizzerai questo ARN durante la creazione della destinazione.
+
+**Verificare le autorizzazioni del ruolo e le relazioni di trust**
+
+Assicurati che il tuo ruolo disponga della seguente configurazione:
+
+* **Autorizzazioni**: il ruolo deve disporre delle autorizzazioni per accedere a S3 (accesso completo o autorizzazioni minime fornite nel passaggio **Crea un criterio con le autorizzazioni richieste** sopra)
+* **Relazioni di trust**: il ruolo deve avere l&#39;account Adobe radice (`670664943635`) nelle relazioni di trust
+
+**Alternativa: limita a un utente Adobe specifico (facoltativo)**
+
+Se preferisci non consentire l’intero account Adobe, puoi limitare l’accesso solo allo specifico utente Adobe. A tale scopo, modificare il criterio di attendibilità con la seguente configurazione:
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::670664943635:user/destinations-adobe-user"
+            },
+            "Action": "sts:AssumeRole",
+            "Condition": {}
+        }
+    ]
+}
+```
+
+Per ulteriori informazioni, consulta la [documentazione di AWS sulla creazione di ruoli](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
+
+
 
 ### Inserire i dettagli della destinazione {#destination-details}
 
