@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform di ottobre 2021
 description: Note sulla versione di Adobe Experience Platform di ottobre 2021.
 exl-id: 8f8bcb24-6478-4281-9362-9559158384af
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2e41a1716e057cd33e4635c11ba9c3cfc185418a
 workflow-type: tm+mt
-source-wordcount: '463'
-ht-degree: 26%
+source-wordcount: '433'
+ht-degree: 28%
 
 ---
 
@@ -59,6 +59,5 @@ Experience Platform fornisce un’API RESTful e un’interfaccia utente interatt
 | --- | --- |
 | [!DNL Amazon S3] miglioramenti all&#39;origine | È ora possibile utilizzare il parametro `s3SessionToken` per connettere l&#39;account [!DNL Amazon S3] ad Experience Platform utilizzando credenziali di sicurezza temporanee. Questo token consente di fornire agli utenti in ambienti non attendibili l&#39;accesso temporaneo a breve termine alle risorse [!DNL Amazon S3]. Per ulteriori informazioni, consulta la [[!DNL Amazon S3] documentazione](../../sources/connectors/cloud-storage/s3.md#prerequisites). |
 | [!DNL Generic REST API] (Beta) | È ora possibile creare una connessione di origine [!DNL Generic REST API] utilizzando l&#39;[[!DNL Flow Service] API](../../sources/tutorials/api/create/protocols/generic-rest.md) per portare dati da un&#39;applicazione REST generica ad Experience Platform. Per ulteriori informazioni, vedere [[!DNL Generic REST API] panoramica](../../sources/connectors/protocols/generic-rest.md). |
-| [!DNL Zoho CRM] (Beta) | È ora possibile creare una connessione di origine [!DNL Zoho CRM] utilizzando l&#39;[[!DNL Flow Service] API](../../sources/tutorials/api/create/crm/zoho.md) o l&#39;[interfaccia utente](../../sources/tutorials/ui/create/crm/zoho.md) per portare dati dall&#39;account [!DNL Zoho CRM] ad Experience Platform. Per ulteriori informazioni, vedere [[!DNL Zoho CRM] panoramica](../../sources/connectors/crm/zoho.md). |
 
 Per ulteriori informazioni sulle origini, vedere [panoramica delle origini](../../sources/home.md).

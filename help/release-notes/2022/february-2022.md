@@ -2,7 +2,7 @@
 title: Note sulla versione di Adobe Experience Platform - Febbraio 2022
 description: Note sulla versione di Adobe Experience Platform di febbraio 2022.
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2e41a1716e057cd33e4635c11ba9c3cfc185418a
 workflow-type: tm+mt
 source-wordcount: '1018'
 ht-degree: 18%
@@ -33,7 +33,7 @@ Adobe Experience Platform fornisce più [!DNL dashboards] tramite i quali è pos
 
 | Funzione | Descrizione |
 | --- | --- |
-| Nuovi widget di destinazioni standard | I seguenti widget standard consentono di visualizzare diverse metriche correlate alle destinazioni.<ul><li>Segmenti attivati di recente per destinazione. Questo widget mostra i primi cinque segmenti attivati più di recente in ordine decrescente in base alla destinazione scelta.</li><li>Tendenza dimensione pubblico. Questo widget rappresenta la relazione del conteggio dei profili in un periodo di tempo per un segmento mappato su tale account di destinazione.</li><li>Segmenti non mappati per identità. Questo widget elenca i primi cinque segmenti non mappati classificati per conteggio di identità decrescente per una determinata destinazione e identità.</li><li>Segmenti mappati per identità. Questo widget elenca i primi cinque segmenti mappati. I segmenti vengono ordinati da alto a basso in base al rispettivo numero di ID di origine che corrispondono all’ID di destinazione selezionato dal menu a discesa del widget.</li><li>Pubblico comune. Questo widget fornisce un elenco dei primi cinque segmenti attivati nell’account di destinazione scelto nella parte superiore della pagina e nella destinazione selezionata nel menu a discesa del widget.</li></ul> Per ulteriori informazioni sui widget standard disponibili, consulta la documentazione del dashboard [destinazioni.](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html?lang=it#standard-widgets). |
+| Nuovi widget di destinazioni standard | I seguenti widget standard consentono di visualizzare diverse metriche correlate alle destinazioni.<ul><li>Segmenti attivati di recente per destinazione. Questo widget mostra i primi cinque segmenti attivati più di recente in ordine decrescente in base alla destinazione scelta.</li><li>Tendenza dimensione pubblico. Questo widget rappresenta la relazione del conteggio dei profili in un periodo di tempo per un segmento mappato su tale account di destinazione.</li><li>Segmenti non mappati per identità. Questo widget elenca i primi cinque segmenti non mappati classificati per conteggio di identità decrescente per una determinata destinazione e identità.</li><li>Segmenti mappati per identità. Questo widget elenca i primi cinque segmenti mappati. I segmenti vengono ordinati da alto a basso in base al rispettivo numero di ID di origine che corrispondono all’ID di destinazione selezionato dal menu a discesa del widget.</li><li>Pubblico comune. Questo widget fornisce un elenco dei primi cinque segmenti attivati nell’account di destinazione scelto nella parte superiore della pagina e nella destinazione selezionata nel menu a discesa del widget.</li></ul> Per ulteriori informazioni sui widget standard disponibili, consulta la documentazione del dashboard [destinazioni.](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#standard-widgets). |
 
 Per ulteriori informazioni su [!DNL Dashboards], consulta la [[!DNL Dashboards] panoramica](../../dashboards/home.md).
 
@@ -47,7 +47,7 @@ Experience Platform fornisce una suite di tecnologie che consente di raccogliere
 | --- | --- |
 | Flusso di lavoro dell’interfaccia utente migliorato per la configurazione dello stream di dati | Il flusso di lavoro per la creazione di un nuovo stream di dati nell’interfaccia utente di Data Collection è stato aggiornato. Quando si aggiungono servizi a un flusso di dati, nell’elenco delle opzioni verranno inclusi solo i servizi a cui hai accesso. Per ulteriori informazioni, consulta la guida sulla [configurazione di uno stream di dati](../../datastreams/overview.md). |
 | Preparazione dei dati per la raccolta dati | Se utilizzi Adobe Experience Platform Web SDK, ora puoi sfruttare le funzionalità di preparazione dati per mappare i dati su Experience Data Model (XDM) sul lato server. Per ulteriori informazioni, consulta la sezione sulla [preparazione dati per la raccolta dati](../../datastreams/data-prep.md) nella guida sugli stream di dati. |
-| ID di dispositivi di prime parti | Ora è possibile inviare i propri ID dispositivo all’Edge Network di Adobe Experience Platform durante la raccolta dei dati dei clienti tramite Experience Platform Web SDK, fornendo una soluzione per le recenti restrizioni del browser sulla durata dei cookie di terze parti. Per ulteriori informazioni, consulta la guida su [ID dispositivo di prime parti](../../web-sdk/identity/first-party-device-ids.md). |
+| ID dispositivo di prime parti | Ora è possibile inviare i propri ID dispositivo all’Edge Network di Adobe Experience Platform durante la raccolta dei dati dei clienti tramite Experience Platform Web SDK, fornendo una soluzione per le recenti restrizioni del browser sulla durata dei cookie di terze parti. Per ulteriori informazioni, consulta la guida su [ID dispositivo di prime parti](../../web-sdk/identity/first-party-device-ids.md). |
 
 Per ulteriori informazioni sulla raccolta dati in Experience Platform, consulta la [panoramica sulla raccolta dati](../../collection/home.md).
 
@@ -85,6 +85,6 @@ Experience Platform fornisce un’API RESTful e un’interfaccia utente interatt
 
 | Funzione | Descrizione |
 | --- | --- |
-| Sorgenti Beta che passano a GA | Le seguenti sorgenti sono state promosse dalla versione beta a GA: <ul><li>[[!DNL Mailchimp Campaigns]](../../sources/connectors/marketing-automation/mailchimp.md)</li><li>[[!DNL Mailchimp Members]](../../sources/connectors/marketing-automation/mailchimp.md)</li><li>[[!DNL Zoho CRM]](../../sources/connectors/crm/zoho.md)</li></ul> |
+| Sorgenti Beta che passano a GA | Le seguenti sorgenti sono state promosse dalla versione beta a GA: <ul><li>[[!DNL Mailchimp Campaigns]](../../sources/connectors/marketing-automation/mailchimp.md)</li><li>[[!DNL Mailchimp Members]](../../sources/connectors/marketing-automation/mailchimp.md)</li></ul> |
 
 Per ulteriori informazioni sulle origini, vedere [panoramica delle origini](../../sources/home.md).

@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform di novembre 2022
 description: Note sulla versione di Adobe Experience Platform di novembre 2022.
 exl-id: 1048cfae-6e7a-4d05-a004-c5c095a17fc4
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2e41a1716e057cd33e4635c11ba9c3cfc185418a
 workflow-type: tm+mt
-source-wordcount: '456'
-ht-degree: 58%
+source-wordcount: '312'
+ht-degree: 63%
 
 ---
 
@@ -45,18 +45,4 @@ XDM è una specifica open-source che fornisce strutture e definizioni comuni (sc
 
 {style="table-layout:auto"}
 
-Per ulteriori informazioni su XDM in Experience Platform, consulta la [Panoramica del sistema XDM](../../xdm/home.md).
-
-## Origini {#sources}
-
-Adobe Experience Platform può acquisire dati da origini esterne e allo stesso tempo strutturare, etichettare e migliorare tali dati utilizzando i servizi di Experience Platform. Puoi acquisire dati da diverse origini, ad esempio da applicazioni Adobe, dall’archiviazione basata su cloud, da software di terze parti e dal sistema CRM.
-
-Experience Platform fornisce un’API RESTful e un’interfaccia utente interattiva per impostare facilmente le connessioni di origine per vari provider di dati. Queste connessioni di origine consentono di autenticarti e connetterti a sistemi di archiviazione esterni e servizi di gestione delle relazioni con i clienti, impostare i tempi per le esecuzioni dell’acquisizione e gestire la velocità effettiva di acquisizione dei dati.
-
-**Funzioni aggiornate**
-
-| Funzione | Descrizione |
-| --- | --- | 
-| Disponibilità Beta dell’origine Oracle Service Cloud | Utilizza l’origine Oracle Service Cloud per acquisire i dati dall’account Oracle Service Cloud ad Experience Platform. Per ulteriori informazioni, consulta la documentazione sull&#39;[origine Oracle Service Cloud](../../sources/connectors/customer-success/oracle-service-cloud.md). |
-
-Per ulteriori informazioni sulle origini, consulta la [panoramica sulle origini](../../sources/home.md).
+Per ulteriori informazioni su XDM in Experience Platform, consulta la [panoramica del sistema XDM](../../xdm/home.md).

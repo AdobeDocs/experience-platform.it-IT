@@ -6,10 +6,10 @@ last-update: April 13, 2020
 author: ens71067
 keywords: note sulla versione;
 exl-id: 0f68c71e-3c9d-453b-a953-1cd1b6ca2e35
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 104db777446b19fa9e3ea7538ae1dda6f51a00b1
 workflow-type: tm+mt
-source-wordcount: '985'
-ht-degree: 28%
+source-wordcount: '972'
+ht-degree: 29%
 
 ---
 
@@ -130,8 +130,7 @@ Adobe Experience Platform può acquisire dati da origini esterne e allo stesso t
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Supporto API e interfaccia utente per i database | Nuovi connettori di origine per [!DNL Apache Spark] (su HDInsights), [!DNL Azure Synapse Analytics], [!DNL Azure Table Storage], [!DNL Hive] (su HDInsights) e [!DNL Phoenix]. |
-| Supporto API e interfaccia utente per applicazioni basate su pagamenti | Nuovi connettori di origine per [!DNL PayPal]. |
+| Supporto API e interfaccia utente per i database | Nuovi connettori di origine per [!DNL Apache Spark] (su HDInsights), [!DNL Azure Synapse Analytics], [!DNL Azure Table Storage] e [!DNL Hive]. |
 | Supporto di API e interfaccia utente per applicazioni basate su protocolli | Nuovi connettori di origine per [!DNL Generic OData]. |
 
 **Problemi noti**

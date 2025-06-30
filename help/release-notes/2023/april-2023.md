@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform - Aprile 2023
 description: Note sulla versione di Adobe Experience Platform di aprile 2023.
 exl-id: 7b501467-99a7-4aee-ae86-66c851250ecf
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2e41a1716e057cd33e4635c11ba9c3cfc185418a
 workflow-type: tm+mt
-source-wordcount: '2040'
-ht-degree: 97%
+source-wordcount: '2010'
+ht-degree: 96%
 
 ---
 
@@ -95,7 +95,7 @@ Adobe Experience Platform fornisce una suite di tecnologie che consente di racco
 
 {style="table-layout:auto"}
 
-**Correzioni di problemi e miglioramenti** {#destinations-fixes-and-enhancements}
+**Correzioni e miglioramenti** {#destinations-fixes-and-enhancements}
 
 - È stato risolto un problema nelle metriche di reporting **Identità escluse** per esportazioni di destinazioni basate su file. La clientela riceveva tutti gli ID esportati dall’esportazione attivata come previsto. Tuttavia, la metrica di reporting **Identità escluse** nell’interfaccia utente mostrava erroneamente un numero elevato di identità escluse a causa di un conteggio errato di identità che non dovevano mai essere esportate. (PLAT-149774)
 - È stato risolto un problema nel passaggio **Pianificazione** del flusso di lavoro di attivazione. Per le destinazioni che richiedono un ID di mappatura, la clientela non era in grado di aggiungere un ID di mappatura per i segmenti aggiunti alle connessioni di destinazione esistenti. (PLAT-148808)
@@ -115,7 +115,7 @@ XDM è una specifica open-source che fornisce strutture e definizioni comuni (sc
 
 | Funzione | Descrizione |
 | --- | --- |
-| Attivare/disattivare nomi visualizzati | L’Editor di schema ora fornisce un’opzione per passare dai nomi di campo originali a quelli in forma leggibile.<br>![Editor di schema con l’attivazione/disattivazione del nome visualizzato evidenziata.](../../xdm/images/ui/resources/schemas/display-name-toggle.png "Attivazione/disattivazione nome visualizzato nell’Editor schema"){width="100" zoomable="yes"}<br>Questa flessibilità migliora l’individuazione del campo e la modifica degli schemi. I nomi visualizzati per i gruppi di campi standard sono generati dal sistema, ma possono anche essere personalizzati tramite l’interfaccia utente, se necessario. Per ulteriori informazioni, consulta la [documentazione sull’attivazione/disattivazione del nome visualizzato](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html?lang=it#display-name-toggle). |
+| Attivare/disattivare nomi visualizzati | L’Editor di schema ora fornisce un’opzione per passare dai nomi originali dei campi ai corrispondenti nomi visualizzati, più leggibili.<br>![Editor di schema con l’attivazione/disattivazione del nome visualizzato evidenziata.](../../xdm/images/ui/resources/schemas/display-name-toggle.png "Attivazione/disattivazione nome visualizzato nell’Editor schema"){width="100" zoomable="yes"}<br>Questa flessibilità migliora l’individuazione del campo e la modifica degli schemi. I nomi visualizzati per i gruppi di campi standard sono generati dal sistema, ma possono anche essere personalizzati tramite l’interfaccia utente, se necessario. Per ulteriori informazioni, consulta la [documentazione sull’attivazione/disattivazione del nome visualizzato](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html?lang=it#display-name-toggle). |
 
 {style="table-layout:auto"}
 
@@ -193,7 +193,6 @@ Experience Platform fornisce un’API RESTful e un’interfaccia utente interatt
 | Supporto API per filtrare i dati a livello di riga per l’origine del sistema CRM Salesforce. | Utilizza gli operatori logici e di confronto per filtrare i dati a livello di riga per l’origine CRM di Salesforce. Per ulteriori informazioni, consulta la guida su come [filtrare i dati per un’origine utilizzando l’API](../../sources/tutorials/api/filter.md). |
 | Disponibilità in versione beta di Shopify Streaming | L’[origine Shopify Streaming](../../sources/connectors/ecommerce/shopify-streaming.md) è ora disponibile in versione beta. Utilizza l’origine Shopify Streaming per inviare dati dall’account dei partner di Shopify a Experience Platform. |
 | Disponibilità generale dell’integrazione OneTrust | L’[origine dell’integrazione OneTrust](../../sources/connectors/consent-and-preferences/onetrust.md) è ora disponibile per tutti. Utilizza l’origine dell’integrazione OneTrust per portare a Experience Platform i dati di consenso e preferenze dall’account dell’integrazione di OneTrust. |
-| Disponibilità generale del servizio Oracle Cloud | L’[origine del servizio Oracle Cloud](../../sources/connectors/customer-success/oracle-service-cloud.md) è ora disponibile per tutti. Utilizza l’origine del servizio Oracle Cloud per portare i dati di tale servizio su Experience Platform. |
 
 {style="table-layout:auto"}
 
