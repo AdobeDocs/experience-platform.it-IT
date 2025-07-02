@@ -2,9 +2,9 @@
 title: Registra richieste di eliminazione (flusso di lavoro interfaccia utente)
 description: Scopri come eliminare i record nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 07e09cfe2e2c3ff785caf0b310cbe2f2cc381c17
+source-git-commit: 9ee5225c7494c28023c26181dfe626780133bb5d
 workflow-type: tm+mt
-source-wordcount: '1797'
+source-wordcount: '1848'
 ht-degree: 7%
 
 ---
@@ -45,19 +45,28 @@ Viene visualizzato il flusso di lavoro per la creazione delle richieste. Per imp
 
 ## Seleziona set di dati {#select-dataset}
 
-Il passaggio successivo consiste nel determinare se eliminare record da un singolo set di dati o da tutti i set di dati. Se questa opzione non è disponibile, passare alla sezione [Specificare le identità](#provide-identities) della guida.
+Il passaggio successivo consiste nel determinare se eliminare record da un singolo set di dati o da tutti i set di dati. A seconda della configurazione dell’organizzazione, l’opzione di selezione del set di dati potrebbe non essere disponibile. Se non trovi questa opzione, continua con la sezione [Fornisci identità](#provide-identities) della guida.
 
-Nella sezione **[!UICONTROL Dettagli record]**, utilizza il pulsante di scelta per selezionare tra un set di dati specifico e tutti i set di dati. Se si sceglie **[!UICONTROL Seleziona set di dati]**, procedere con la selezione dell&#39;icona del database (![Icona del database](/help/images/icons/database.png)) per aprire una finestra di dialogo contenente un elenco dei set di dati disponibili. Seleziona il set di dati desiderato dall&#39;elenco seguito da **[!UICONTROL Fine]**.
+Nella sezione **[!UICONTROL Dettagli record]**, seleziona un pulsante di scelta per scegliere un set di dati specifico o tutti i set di dati.
+
+Per eliminare da un set di dati specifico, selezionare **[!UICONTROL Seleziona set di dati]**, quindi selezionare l&#39;icona del database (![Icona del database](/help/images/icons/database.png)). Nella finestra di dialogo visualizzata, scegli un set di dati e seleziona **[!UICONTROL Fine]** per confermare.
 
 ![Finestra di dialogo [!UICONTROL Seleziona set di dati] con un set di dati selezionato ed evidenziato [!UICONTROL Fine].](../images/ui/record-delete/select-dataset.png)
 
-Per eliminare record da tutti i set di dati, selezionare **[!UICONTROL Tutti i set di dati]**.
+Per eliminare da tutti i set di dati, selezionare **[!UICONTROL Tutti i set di dati]**. Questa opzione aumenta l’ambito dell’operazione e richiede di fornire tutti i tipi di identità pertinenti.
 
 ![Finestra di dialogo [!UICONTROL Seleziona set di dati] con l&#39;opzione [!UICONTROL Tutti i set di dati] selezionata.](../images/ui/record-delete/all-datasets.png)
 
->[!NOTE]
+>[!WARNING]
 >
->Se si seleziona l&#39;opzione **[!UICONTROL Tutti i set di dati]**, l&#39;operazione di eliminazione potrebbe richiedere più tempo e non risultare in un&#39;eliminazione accurata dei record.
+>Selezionando **[!UICONTROL Tutti i set di dati]**, l&#39;operazione viene estesa a tutti i set di dati dell&#39;organizzazione. Ogni set di dati può utilizzare un tipo di identità primaria diverso. Devi fornire **tutti i tipi di identità richiesti** per garantire una corrispondenza accurata.
+>
+>Se manca un tipo di identità, alcuni record potrebbero essere ignorati durante l’eliminazione. Questa operazione può rallentare l&#39;elaborazione e portare a **risultati parziali**.
+
+Ogni set di dati in Experience Platform supporta un solo tipo di identità principale.
+
+* Quando si elimina da un **set di dati singolo**, tutte le identità nella richiesta devono utilizzare lo **stesso tipo**.
+* Quando si eliminano da **tutti i set di dati**, è possibile includere **più tipi di identità**, poiché set di dati diversi possono fare affidamento su identità primarie diverse.&quot;
 
 ## Fornire identità {#provide-identities}
 
@@ -80,8 +89,6 @@ Come tutti i campi di identità in Experience Platform, uno spazio dei nomi di i
 >Se non conosci lo spazio dei nomi delle identità per un particolare set di dati, puoi trovarlo nell’interfaccia utente di Experience Platform. Nell&#39;area di lavoro **[!UICONTROL Set di dati]** selezionare il set di dati in questione dall&#39;elenco. Nella pagina dei dettagli del set di dati, passa il cursore sul nome dello schema del set di dati nella barra a destra. Lo spazio dei nomi dell’identità viene visualizzato insieme al nome e alla descrizione dello schema.
 >
 >![Dashboard dei set di dati con un set di dati selezionato e una finestra di dialogo schema aperta dal pannello dei dettagli del set di dati. L&#39;ID primario del set di dati è evidenziato.](../images/ui/record-delete/dataset-primary-identity.png)
-
-Se elimini record da un singolo set di dati, tutte le identità fornite devono avere lo stesso tipo, in quanto un set di dati può avere un solo spazio dei nomi delle identità. Se elimini da tutti i set di dati, puoi includere più tipi di identità in quanto set di dati diversi possono avere identità primarie diverse.
 
 Esistono due opzioni per fornire le identità quando si eliminano i record:
 
