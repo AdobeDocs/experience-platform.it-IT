@@ -4,8 +4,8 @@ description: Con il connettore di destinazione Google Customer Match + Display &
 exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
 source-git-commit: feb3077daf8b3632ff00b57099195523bbeac358
 workflow-type: tm+mt
-source-wordcount: '2252'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -24,12 +24,12 @@ Con la funzionalità introdotta di recente di poter utilizzare [!DNL Customer Ma
 >[!IMPORTANT]
 >
 > Google sta rilasciando modifiche all&#39;API [Google Ads](https://developers.google.com/google-ads/api/docs/start), [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html?lang=it) e all&#39;API [Display &amp; Video 360](https://developers.google.com/display-video/api/guides/getting-started/overview) per supportare i requisiti relativi alla conformità e al consenso definiti nel [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_it) (DMA) nell&#39;Unione Europea ([EU User Consent Policy](https://www.google.com/about/company/user-consent-policy/)). L’applicazione di queste modifiche ai requisiti di consenso è attiva dal 6 marzo 2024.
-> &#x200B;><br/>
-> &#x200B;>Per aderire alla politica di consenso degli utenti dell’UE e continuare a creare elenchi di pubblico per gli utenti dello Spazio economico europeo (SEE), gli inserzionisti e i partner devono assicurarsi di trasmettere il consenso degli utenti finali durante il caricamento dei dati sul pubblico. In qualità di partner Google, Adobe fornisce gli strumenti necessari per soddisfare i requisiti di consenso ai sensi del regolamento DMA dell’Unione Europea.
-> &#x200B;><br/>
-> &#x200B;>I clienti che hanno acquistato Adobe Privacy &amp; Security Shield e hanno configurato un [criterio di consenso](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) per filtrare i profili non autorizzati non devono intraprendere alcuna azione.
-> &#x200B;><br/>
-> &#x200B;>I clienti che non hanno acquistato Adobe Privacy &amp; Security Shield devono utilizzare le funzionalità [segment definition](../../../segmentation/home.md#segment-definitions) all&#39;interno di [Segment Builder](../../../segmentation/ui/segment-builder.md) per filtrare i profili non autorizzati e continuare a utilizzare senza interruzioni le destinazioni Real-Time CDP Google esistenti.
+> ><br/>
+> >Per aderire alla politica di consenso degli utenti dell’UE e continuare a creare elenchi di pubblico per gli utenti dello Spazio economico europeo (SEE), gli inserzionisti e i partner devono assicurarsi di trasmettere il consenso degli utenti finali durante il caricamento dei dati sul pubblico. In qualità di partner Google, Adobe fornisce gli strumenti necessari per soddisfare i requisiti di consenso ai sensi del regolamento DMA dell’Unione Europea.
+> ><br/>
+> >I clienti che hanno acquistato Adobe Privacy &amp; Security Shield e hanno configurato un [criterio di consenso](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) per filtrare i profili non autorizzati non devono intraprendere alcuna azione.
+> ><br/>
+> >I clienti che non hanno acquistato Adobe Privacy &amp; Security Shield devono utilizzare le funzionalità [segment definition](../../../segmentation/home.md#segment-definitions) all&#39;interno di [Segment Builder](../../../segmentation/ui/segment-builder.md) per filtrare i profili non autorizzati e continuare a utilizzare senza interruzioni le destinazioni Real-Time CDP Google esistenti.
 
 ## Quando utilizzare questa destinazione
 
@@ -141,7 +141,7 @@ Esistono due metodi per attivare i numeri di telefono in [!DNL Google Customer M
 
 >[!NOTE]
 >
->Impossibile attivare nella destinazione [!DNL Google Customer Match + DV360] i numeri di telefono acquisiti nello spazio dei nomi `Phone`.
+>Impossibile attivare nella destinazione `Phone` i numeri di telefono acquisiti nello spazio dei nomi [!DNL Google Customer Match + DV360].
 
 ### Requisiti di hashing delle e-mail {#hashing-requirements}
 
@@ -171,14 +171,14 @@ Attribute source data is not automatically hashed. When your source field contai
 
 The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411786/?quality=12&learn=on&captions=ita) -->
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
 ## Connettersi alla destinazione {#connect}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gcm_dv360_accountID"
 >title="Collegare account Google e Adobe"
->abstract="Assicurati che l’ID account Google che immetti qui sia già collegato al tuo account Adobe. Se disponi di un account manager Google con più account client e intendi esportare i dati da Experience Platform a un account client specifico, devi collegare l’account cliente con l’account Adobe e inserire qui l’ID account."
+>abstract="Assicurati che l’ID account Google che immetti qui sia già collegato al tuo account Adobe. Se disponi di un account manager Google con più account cliente e intendi esportare i dati da Experience Platform a un account cliente specifico, collega l’account cliente con quello di Adobe e inserisci l’ID account qui."
 
 >[!IMPORTANT]
 > 

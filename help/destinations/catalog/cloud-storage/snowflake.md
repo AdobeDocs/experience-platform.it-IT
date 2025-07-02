@@ -7,8 +7,8 @@ badgeBeta: label="Beta" type="Informative"
 exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
 source-git-commit: b78f36ed20d5a08036598fa2a1da7dd066c401fa
 workflow-type: tm+mt
-source-wordcount: '1054'
-ht-degree: 4%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -89,8 +89,8 @@ Per eseguire l&#39;autenticazione nella destinazione, selezionare **[!UICONTROL 
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_snowflake_accountID"
->title="Immetti l&#39;ID del tuo account Snowflake"
->abstract="Se l&#39;account è collegato a un&#39;organizzazione, utilizzare questo formato: `OrganizationName.AccountName`<br><br> Se l&#39;account non è collegato a un&#39;organizzazione, utilizzare questo formato:`AccountName`"
+>title="Immetti il tuo ID account Snowflake"
+>abstract="Se l’account è collegato a un’organizzazione, utilizza questo formato: `OrganizationName.AccountName`<br><br> Se invece l’account non è collegato a un’organizzazione, utilizza questo formato: `AccountName`"
 
 Per configurare i dettagli per la destinazione, compila i campi obbligatori e facoltativi seguenti. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 
