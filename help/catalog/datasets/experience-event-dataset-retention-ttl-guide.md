@@ -2,9 +2,9 @@
 title: Gestire la conservazione dei set di dati di Experience Event nel Data Lake tramite TTL
 description: Scopri come valutare, impostare e gestire la conservazione dei set di dati di Experience Event nel data lake utilizzando le configurazioni Time-To-Live (TTL) con le API di Adobe Experience Platform. Questa guida spiega come la scadenza a livello di riga TTL supporti le regole di conservazione dei dati, ottimizzi l'efficienza dello storage e garantisca un'efficace gestione del ciclo di vita dei dati. Inoltre, fornisce casi d’uso e best practice per aiutarti ad applicare il TTL in modo efficace.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: 13db0477c0f42d0808647937d40c25b47a270894
+source-git-commit: 65a132609bc30233ac9f7efbe1981d4f75f3acb9
 workflow-type: tm+mt
-source-wordcount: '2452'
+source-wordcount: '2458'
 ht-degree: 0%
 
 ---
@@ -112,7 +112,7 @@ Utilizza l’endpoint API di igiene dei dati `/ttl/{DATASET_ID}` per pianificare
 
 Per ulteriori informazioni, consulta la documentazione dell&#39;[API di igiene dei dati](https://developer.adobe.com/experience-platform-apis/references/data-hygiene/#operation/getTtl) di Adobe Developer.
 
-Per [controllare il TTL attualmente applicato a un set di dati](#check-applied-ttl-values), effettuare una richiesta GET all&#39;endpoint `/dataSets/{DATASET_ID}` &lbrace;API[&#128279;](https://developer.adobe.com/experience-platform-apis/references/catalog/) di Catalog Service .
+Per [controllare il TTL attualmente applicato a un set di dati](#check-applied-ttl-values), effettuare una richiesta GET all&#39;endpoint [ {API](https://developer.adobe.com/experience-platform-apis/references/catalog/) di Catalog Service `/dataSets/{DATASET_ID}`.
 
 >[!TIP]
 >
@@ -333,7 +333,7 @@ For example, if you apply a 30-day expiration policy on May 15th, the following 
 ### È possibile impostare diversi criteri di conservazione per il data lake e i servizi profilo?
 
 +++Risposta
-Sì, puoi impostare diversi criteri di conservazione per il data lake e i servizi profilo. Tuttavia, il periodo di conservazione per il profilo non deve essere inferiore a quello impostato per il data lake.
+Sì, puoi impostare diversi criteri di conservazione per il data lake e i servizi profilo. Il periodo di conservazione per l’archivio profili può essere più breve o più lungo del periodo di conservazione del data lake, a seconda delle esigenze della tua organizzazione.
 +++
 
 ### Come posso verificare l’utilizzo del set di dati corrente?
