@@ -112,7 +112,7 @@ Utilizza l’endpoint API di igiene dei dati `/ttl/{DATASET_ID}` per pianificare
 
 Per ulteriori informazioni, consulta la documentazione dell&#39;[API di igiene dei dati](https://developer.adobe.com/experience-platform-apis/references/data-hygiene/#operation/getTtl) di Adobe Developer.
 
-Per [controllare il TTL attualmente applicato a un set di dati](#check-applied-ttl-values), effettuare una richiesta GET all&#39;endpoint [ {API](https://developer.adobe.com/experience-platform-apis/references/catalog/) di Catalog Service `/dataSets/{DATASET_ID}`.
+Per [controllare il TTL attualmente applicato a un set di dati](#check-applied-ttl-values), effettuare una richiesta GET all&#39;endpoint [ &lbrace;API](https://developer.adobe.com/experience-platform-apis/references/catalog/) di Catalog Service `/dataSets/{DATASET_ID}`.
 
 >[!TIP]
 >
