@@ -3,9 +3,9 @@ title: Attivare i tipi di pubblico per le destinazioni di esportazione dei profi
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico disponibili in Adobe Experience Platform inviandoli a destinazioni basate su profili in batch.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 6b91527afe172530597de30b9669b86ff0262e13
+source-git-commit: 13adf42a23458d10e217d216d8fe79e8ce33376d
 workflow-type: tm+mt
-source-wordcount: '4596'
+source-wordcount: '4595'
 ht-degree: 13%
 
 ---
@@ -348,7 +348,7 @@ Prendiamo in considerazione i due profili seguenti.
   "identityMap": {
     "Email": [
       {
-        "id": "johndoe_1@example.com"
+        "id": "johndoe@example.com"
       },
       {
         "id": "doejohn_1@example.com"
@@ -382,7 +382,7 @@ Prendiamo in considerazione i due profili seguenti.
   "identityMap": {
     "Email": [
       {
-        "id": "johndoe_2@example.com"
+        "id": "johndoe@example.com"
       },
       {
         "id": "doejohn_2@example.com"
@@ -425,7 +425,7 @@ Se si presuppone la deduplicazione da parte dello spazio dei nomi [!DNL Email], 
 
 | E-mail* | personalEmail | firstName | lastName |
 |---|---|---|---|
-| johndoe_2@example.com | johndoe@example.com | John | D |
+| johndoe@example.com | johndoe@example.com | John | D |
 | doejohn_2@example.com | johndoe@example.com | John | D |
 
 ### Caso di utilizzo 3: deduplicazione basata su un singolo attributo di profilo {#deduplication-use-case-3}
@@ -450,7 +450,7 @@ Adobe consiglia di selezionare uno spazio dei nomi di identità come [!DNL CRM I
 
 ### Comportamento di deduplicazione per profili con la stessa marca temporale {#deduplication-same-timestamp}
 
-Durante l’esportazione di profili in destinazioni basate su file, la deduplica garantisce che venga esportato un solo profilo quando più profili condividono la stessa chiave di deduplica e la stessa marca temporale di riferimento. Questa marca temporale rappresenta il momento in cui l’iscrizione al pubblico o il grafico delle identità di un profilo è stato aggiornato per l’ultima volta. Per ulteriori informazioni sull&#39;aggiornamento e l&#39;esportazione dei profili, vedere il documento [comportamento di esportazione dei profili](https://experienceleague.adobe.com/it/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
+Durante l’esportazione di profili in destinazioni basate su file, la deduplica garantisce che venga esportato un solo profilo quando più profili condividono la stessa chiave di deduplica e la stessa marca temporale di riferimento. Questa marca temporale rappresenta il momento in cui l’iscrizione al pubblico o il grafico delle identità di un profilo è stato aggiornato per l’ultima volta. Per ulteriori informazioni sull&#39;aggiornamento e l&#39;esportazione dei profili, vedere il documento [comportamento di esportazione dei profili](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
 
 #### Considerazioni chiave
 
@@ -554,9 +554,10 @@ Per le destinazioni basate su profili, devi selezionare gli attributi del profil
 >
 >A causa di un limite noto, al momento non è possibile utilizzare la finestra **[!UICONTROL Seleziona campo]** per aggiungere `segmentMembership.seg_namespace.seg_id.status` alle esportazioni di file. È invece necessario incollare manualmente il valore `xdm: segmentMembership.seg_namespace.seg_id.status` nel campo schema, come illustrato di seguito.
 >
->![Registrazione dello schermo che mostra la soluzione alternativa per l&#39;iscrizione al pubblico nel passaggio di mappatura del flusso di lavoro di attivazione.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
+>![Registrazione dello schermo che mostra la soluzione alternativa per l&#39;iscrizione al pubblico nel passaggio di mappatura del flusso di lavoro di attivazione.](../assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
 Le esportazioni di file variano nei modi seguenti, a seconda che sia selezionato `segmentMembership.seg_namespace.seg_id.status`:
+
 * Se il campo `segmentMembership.seg_namespace.seg_id.status` è selezionato, i file esportati includono **[!UICONTROL membri attivi]** nello snapshot completo iniziale e **[!UICONTROL membri attivi]** e **[!UICONTROL membri scaduti]** nelle esportazioni incrementali successive.
 * Se il campo `segmentMembership.seg_namespace.seg_id.status` non è selezionato, i file esportati includono solo **[!UICONTROL membri attivi]** nello snapshot completo iniziale e nelle esportazioni incrementali successive.
 
@@ -592,7 +593,7 @@ Se desideri attivare tipi di pubblico esterni nelle destinazioni senza esportare
 
 Seleziona **[!UICONTROL Avanti]** per passare al passaggio [Rivedi](#review).
 
-## Revisione {#review}
+## Rivedi {#review}
 
 >[!NOTE]
 > 
@@ -632,7 +633,7 @@ Se si è soddisfatti della selezione e non sono state rilevate violazioni dei cr
 
 ## Verificare l’attivazione del pubblico {#verify}
 
-Durante l&#39;esportazione dei tipi di pubblico nelle destinazioni dell&#39;archiviazione cloud, Adobe Experience Platform crea un file `.csv`, `.json` o `.parquet` nel percorso di archiviazione fornito. È necessario creare un nuovo file nel percorso di archiviazione in base alla pianificazione impostata nel flusso di lavoro. Di seguito è riportato il formato di file predefinito, ma è possibile [modificare i componenti del nome di file](#file-names):
+Durante l&#39;esportazione dei tipi di pubblico nelle destinazioni dell&#39;archiviazione cloud, Adobe Experience Platform crea un file `.csv`, `.json` o `.parquet` nel percorso di archiviazione fornito. È necessario creare un nuovo file nel percorso di archiviazione in base alla pianificazione impostata nel flusso di lavoro. Di seguito è riportato il formato di file predefinito, ma è possibile [modificare i componenti del nome di file](#configure-file-names):
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
 Ad esempio, se hai selezionato una frequenza di esportazione giornaliera, i file che riceverai in tre giorni consecutivi potrebbero essere simili al seguente:
