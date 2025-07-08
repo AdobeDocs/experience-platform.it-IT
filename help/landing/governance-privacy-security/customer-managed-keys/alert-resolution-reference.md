@@ -1,9 +1,10 @@
 ---
 title: Riferimento risoluzione avviso CMK
 description: Identifica, risolve e risolve i problemi relativi agli avvisi comuni generati da errori di configurazione della chiave gestita dal cliente (CMK) in Adobe Experience Platform. Utilizzare questa guida per seguire istruzioni chiare e dettagliate e ripristinare l'accesso con chiave sicura.
-source-git-commit: 0d9cc046956dd380bb8816f0d8bf497bbad6140b
+exl-id: ffe2eadc-dfb5-418b-a201-2c20dcc9cfe4
+source-git-commit: e8cfed9ebd50cf50f03e232755eddef1cb8c0d3b
 workflow-type: tm+mt
-source-wordcount: '918'
+source-wordcount: '904'
 ht-degree: 0%
 
 ---
@@ -22,11 +23,7 @@ Le sezioni seguenti descrivono i tipi di avvisi che possono essere attivati dai 
 
 ## Accesso chiave disabilitato {#key-access-disabled}
 
-Questo avviso indica che Adobe Experience Platform non è in grado di accedere alla CMK configurata perché la chiave è disabilitata o resa inaccessibile da problemi di configurazione delle chiavi correlati.
-
->[!IMPORTANT]
->
->In questo caso, Adobe CMK tratta il problema di accesso come una rimozione mirata e rimuoverà tutti i dati associati alla tua organizzazione in base al tuo SLA.
+Questo avviso indica che Adobe Experience Platform non è in grado di accedere alla CMK configurata perché la chiave è disabilitata o inaccessibile a causa della relativa configurazione. In tali casi, il sistema considera la condizione come una rimozione intenzionale dell’accesso chiave.
 
 ### Quando si verifica
 
