@@ -2,9 +2,9 @@
 title: Pianificazioni query
 description: Scopri come automatizzare l’esecuzione di query pianificate, eliminare o disabilitare una pianificazione di query e utilizzare le opzioni di pianificazione disponibili tramite l’interfaccia utente di Adobe Experience Platform.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 04b804b81b605040c74db040bc5118e0392ddd32
 workflow-type: tm+mt
-source-wordcount: '2028'
+source-wordcount: '2181'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,24 @@ Puoi automatizzare l’esecuzione delle query creando pianificazioni di query. L
 >
 >È possibile aggiungere una pianificazione solo a una query già creata e salvata.
 
-Tutte le query pianificate vengono aggiunte all&#39;elenco nella scheda [!UICONTROL Query pianificate]. Da tale area di lavoro è possibile monitorare lo stato di tutti i processi di query pianificati tramite l’interfaccia utente. Nella scheda [!UICONTROL Query pianificate] puoi trovare informazioni importanti sull&#39;esecuzione della query e iscriverti agli avvisi. Le informazioni disponibili includono lo stato, i dettagli della pianificazione e i messaggi/codici di errore in caso di errore di esecuzione. Per ulteriori informazioni, vedere il documento [Monitorare le query pianificate](./monitor-queries.md).
+## Requisiti dell’account per le query pianificate {#technical-account-user-requirements}
 
-Questo flusso di lavoro descrive il processo di pianificazione nell’interfaccia utente di Query Service. Per informazioni su come aggiungere pianificazioni utilizzando l&#39;API, leggere la [guida dell&#39;endpoint per le query pianificate](../api/scheduled-queries.md).
+Per un’esecuzione affidabile delle query pianificate, Adobe consiglia agli amministratori di effettuare il provisioning di un account tecnico (utilizzando le credenziali server-to-server OAuth) per la creazione di query pianificate. È possibile creare query pianificate anche con un account utente personale, ma le query create in questo modo cesseranno di essere in esecuzione se l&#39;accesso dell&#39;utente viene rimosso o disabilitato.
+
+Per informazioni dettagliate sulla configurazione degli account tecnici e sull&#39;assegnazione delle autorizzazioni necessarie, vedere i prerequisiti della [Guida alle credenziali](./credentials.md#prerequisites) e l&#39;autenticazione API [.](../../landing/api-authentication.md)
+
+Per ulteriori informazioni sulla creazione e la configurazione di un account tecnico, consulta:
+
+- [Configurazione di Developer Console](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman): istruzioni dettagliate per la configurazione di Adobe Developer Console e l&#39;ottenimento delle credenziali OAuth.
+- [Configurazione end-to-end dell&#39;account tecnico](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup): procedura dettagliata completa per la creazione e la configurazione di un account tecnico in Adobe Experience Platform.
+
+Se utilizzi solo l’interfaccia utente di Query Service, assicurati di disporre delle autorizzazioni necessarie o coordinati con un amministratore che gestisce gli account tecnici. Tutte le query pianificate vengono aggiunte all&#39;elenco nella scheda [!UICONTROL Query pianificate], in cui è possibile monitorare lo stato, i dettagli della pianificazione e i messaggi di errore per tutti i processi di query pianificati, nonché sottoscrivere avvisi. Per ulteriori informazioni sul monitoraggio e la gestione delle query, vedere il documento [monitoraggio delle query pianificate](./monitor-queries.md).
+
+Questo flusso di lavoro descrive il processo di pianificazione nell’interfaccia utente di Query Service. Per informazioni su come aggiungere pianificazioni utilizzando l&#39;API, consulta la [guida dell&#39;endpoint per le query pianificate](../api/scheduled-queries.md).
+
+>[!NOTE]
+>
+>Utilizza un account tecnico per garantire che le query pianificate continuino a essere eseguite anche se gli utenti lasciano l’organizzazione o se i loro ruoli cambiano. Se possibile, scegli un account tecnico per l’automazione ininterrotta delle query.
 
 ## Creare una pianificazione di query {#create-schedule}
 
@@ -163,7 +178,6 @@ Nella tabella seguente vengono fornite le descrizioni di ogni colonna disponibil
 >[!NOTE]
 >
 >I dati delle ore di calcolo sono disponibili a partire dal 08/15/2024. I dati precedenti a questa data vengono visualizzati come &#39;Non disponibile&#39;.
-
 
 Per informazioni complete su come monitorare lo stato di tutti i processi di query tramite l&#39;interfaccia utente, vedere la [guida monitoraggi pianificati per query](./monitor-queries.md#inline-actions).
 

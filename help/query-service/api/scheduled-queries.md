@@ -5,18 +5,32 @@ title: Endpoint Schedules
 description: Le sezioni seguenti descrivono le varie chiamate API che è possibile effettuare per le query pianificate con l’API Query Service.
 role: Developer
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: a39fae1b72533261fb43e0acc95e50e5a6acd8df
+source-git-commit: 10c0c5c639226879b1ca25391fc4a1006cf40003
 workflow-type: tm+mt
-source-wordcount: '1224'
-ht-degree: 3%
+source-wordcount: '1410'
+ht-degree: 2%
 
 ---
 
 # Endpoint Schedules
 
+Scopri come creare, gestire e monitorare le query pianificate a livello di programmazione utilizzando l’API di pianificazione di Query Service con informazioni ed esempi dettagliati.
+
+## Requisiti e prerequisiti
+
+Puoi creare query pianificate utilizzando un account tecnico (autenticato tramite le credenziali server-to-server OAuth) o un account utente personale (token utente). Tuttavia, Adobe consiglia vivamente di utilizzare un account tecnico per garantire l’esecuzione ininterrotta e sicura delle query pianificate, in particolare per i carichi di lavoro a lungo termine o di produzione.
+
+Le query create con un account utente personale avranno esito negativo se l&#39;accesso dell&#39;utente viene revocato o se l&#39;account è disabilitato. Gli account tecnici forniscono maggiore stabilità perché non sono legati allo status lavorativo o ai diritti di accesso di un singolo utente.
+
+>[!IMPORTANT]
+>
+>Considerazioni importanti durante la gestione delle query pianificate:<ul><li>Le query pianificate avranno esito negativo se l’account (tecnico o utente) utilizzato per crearle perde l’accesso o le autorizzazioni.</li><li>Le query pianificate devono essere disattivate prima di essere eliminate tramite l’API o l’interfaccia utente.</li><li>La pianificazione a tempo indeterminato senza una data di fine non è supportata. È sempre necessario specificare una data di fine.</li></ul>
+
+Per informazioni dettagliate sui requisiti dell&#39;account, sulla configurazione delle autorizzazioni e sulla gestione delle query pianificate, vedere la [documentazione sulle pianificazioni delle query](../ui/query-schedules.md#technical-account-user-requirements). Per istruzioni dettagliate sulla creazione e la configurazione di un account tecnico, consultare [Configurazione di Developer Console](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman) e [Configurazione completa dell&#39;account tecnico](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup).
+
 ## Chiamate API di esempio
 
-Ora che sai quali intestazioni utilizzare, puoi iniziare ad effettuare chiamate all&#39;API [!DNL Query Service]. Le sezioni seguenti descrivono le varie chiamate API che è possibile effettuare utilizzando l&#39;API [!DNL Query Service]. Ogni chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
+Dopo aver configurato le intestazioni di autenticazione necessarie (consulta la [guida all&#39;autenticazione API](../../landing/api-authentication.md)), puoi iniziare ad effettuare chiamate all&#39;API [!DNL Query Service]. Le sezioni seguenti illustrano varie chiamate API in formati generali, richieste di esempio che includono le intestazioni richieste e risposte di esempio.
 
 ### Recuperare un elenco di query pianificate
 
