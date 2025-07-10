@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Segment Builder
 description: Il Generatore di segmenti nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro avanzata che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica di regole, ad esempio le tessere trascinate utilizzate per rappresentare le proprietà dei dati.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 7be3e6c143d792113a0d623e2d12d6710a3be70c
+source-git-commit: 152ec3ca36a69bea79b8ed3c33dd21bd9479171f
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '5128'
+ht-degree: 10%
 
 ---
 
@@ -58,7 +58,7 @@ Questi blocchi predefiniti sono disponibili nella sezione **[!UICONTROL Fields]*
 
 ### Attributi
 
-La scheda **[!UICONTROL Attributi]** consente di sfogliare gli attributi [!DNL Profile] appartenenti alla classe [!DNL XDM Individual Profile]. Ogni cartella può essere espansa per visualizzare attributi aggiuntivi, dove ogni attributo è una sezione che può essere trascinata nell’area di lavoro del generatore di regole al centro dell’area di lavoro. L&#39;area di lavoro del generatore di regole [&#128279;](#rule-builder-canvas) viene discussa più avanti in questa guida.
+La scheda **[!UICONTROL Attributi]** consente di sfogliare gli attributi [!DNL Profile] appartenenti alla classe [!DNL XDM Individual Profile]. Ogni cartella può essere espansa per visualizzare attributi aggiuntivi, dove ogni attributo è una sezione che può essere trascinata nell’area di lavoro del generatore di regole al centro dell’area di lavoro. L&#39;area di lavoro del generatore di regole [](#rule-builder-canvas) viene discussa più avanti in questa guida.
 
 ![La sezione degli attributi dei campi del Generatore di segmenti è evidenziata.](../images/ui/segment-builder/attributes.png)
 
@@ -324,7 +324,7 @@ L&#39;elenco dei vincoli di tempo disponibili per questa operazione differisce d
 >[!NOTE]
 >
 >Quando si utilizza il vincolo di tempo &quot;After&quot; (Dopo), quest’ultimo evento può verificarsi più del tempo elencato all’interno del vincolo di tempo. >
->&#x200B;>Ad esempio, se disponi di un evento Visualizzazione pagina e di un evento Pagamento e tra questi due eventi si inserisce il vincolo di tempo &quot;Dopo 1 ora&quot;, si qualificherà una definizione del segmento con un evento Pagamento 2 ore dopo l’evento Visualizzazione pagina.
+>>Ad esempio, se disponi di un evento Visualizzazione pagina e di un evento Pagamento e tra questi due eventi si inserisce il vincolo di tempo &quot;Dopo 1 ora&quot;, si qualificherà una definizione del segmento con un evento Pagamento 2 ore dopo l’evento Visualizzazione pagina.
 >
 >Inoltre, questi due vincoli temporali possono essere utilizzati in coordinamento tra loro.
 >
@@ -390,7 +390,7 @@ Per selezionare un criterio di unione per la definizione del segmento, seleziona
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_estimatedprofiles"
 >title="Profili stimati"
->abstract="I profili stimati indicano un numero approssimativo di profili, in base al processo campione, che sarebbero idonei per le regole di definizione del segmento. Ciò significa che i dati di esempio sono proiettati sul set di profili più ampio, con un risultato stimato che può differire dal numero effettivo di profili qualificati. L’esempio di profilo stimato ha un intervallo di affidabilità del 95%. <br><br>Questo numero viene aggiornato quando il processo campione viene aggiornato, ovvero quando si verifica una modifica maggiore del 5% nei dati del cliente o l’ultimo processo campione è antecedente a 7 giorni."
+>abstract="I profili stimati indicano un numero approssimativo di profili, in base al processo di esempio, che sarebbero idonei per le regole di definizione del segmento."
 
 Durante la creazione di una definizione del segmento, la sezione **[!UICONTROL Proprietà pubblico]** sul lato destro dell&#39;area di lavoro visualizza una stima delle dimensioni della definizione del segmento risultante, che consente di regolare la definizione del segmento secondo necessità prima di creare il pubblico stesso.
 
@@ -400,7 +400,10 @@ Il timestamp per i profili qualificati indica il processo di valutazione del seg
 
 **[!UICONTROL Profili stimati]** indica un numero **approssimativo** di profili, in base al **processo di esempio**. Ciò significa che i dati di esempio sono proiettati sul set di profili più ampio, con un risultato stimato che può differire dal numero effettivo di profili qualificati. Il campione di profilo stimato ha un intervallo di affidabilità del 95%.
 
-Questo numero viene aggiornato quando il processo di esempio viene aggiornato, che si verifica quando c’è una modifica superiore al 5% nei dati del cliente o l’ultimo processo di esempio è più vecchio di 7 giorni.&quot;
+Questo numero viene aggiornato in due scenari:
+
+1. Si è verificata una modifica superiore al 5% nei dati del cliente oppure l’ultimo processo di esempio risale a più di sette giorni prima.
+2. Le regole del pubblico sono state modificate o rimosse.
 
 Selezionando la bolla di informazioni si ottiene la soglia di errore e il tempo del processo di campionamento più recente.
 
