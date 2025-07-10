@@ -3,9 +3,9 @@ title: Note sulla versione di Adobe Experience Platform di giugno 2025
 description: Note sulla versione di Adobe Experience Platform di giugno 2025.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: c78dc0e83976499403e066b314a0889df803c976
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1665'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -177,7 +177,7 @@ Experience Platform fornisce un’API RESTful e un’interfaccia utente interatt
 | Funzione | Descrizione |
 | --- | --- |
 | Supporto interfaccia utente [!BADGE Beta]{type=Informative} per [!DNL Azure Databricks] | Ora puoi connettere il tuo account [!DNL Azure Databricks] a Experience Platform utilizzando l’area di lavoro delle origini nell’interfaccia utente. Per ulteriori informazioni, consulta la guida sulla [connessione [!DNL Databricks]  a Experience Platform nell’interfaccia utente](../../sources/connectors/databases/databricks.md). |
-| Supporto per nuovo tipo di autenticazione per [!DNL Azure Synapse Analytics] | [!DNL Azure Synapse Analytics] supporterà ora anche l’autenticazione con l’entità principale del servizio, oltre all’autenticazione con stringa di connessione esistente. Per ulteriori informazioni, leggere la [[!DNL Azure Synapse Analytics] panoramica sull&#39;autenticazione](../../sources/connectors/databases/synapse-analytics.md). |
+| Supporto per nuovo tipo di autenticazione per [!DNL Azure Synapse Analytics] | [!DNL Azure Synapse Analytics] supporterà ora anche l’autenticazione con l’entità principale del servizio, oltre all’autenticazione con stringa di connessione esistente. Per ulteriori informazioni, consulta la [[!DNL Azure Synapse Analytics] panoramica sull’autenticazione](../../sources/connectors/databases/synapse-analytics.md). |
 | Obsolescenza dell’autenticazione di base per [!DNL Salesforce] | L’autenticazione di base per [Salesforce CRM](../../sources/connectors/crm/salesforce.md) e [Salesforce Service Cloud](../../sources/connectors/customer-success/salesforce-service-cloud.md) diventerà obsoleta entro gennaio 2026. La clientela deve effettuare la migrazione all’autenticazione OAuth 2.0 per mantenere la connettività. Questa modifica interessa entrambi i connettori di origine e garantisce una maggiore sicurezza e conformità agli standard di autenticazione di Salesforce. |
 
 {style="table-layout:auto"}
