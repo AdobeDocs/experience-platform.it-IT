@@ -58,7 +58,7 @@ Questi blocchi predefiniti sono disponibili nella sezione **[!UICONTROL Fields]*
 
 ### Attributi
 
-La scheda **[!UICONTROL Attributi]** consente di sfogliare gli attributi [!DNL Profile] appartenenti alla classe [!DNL XDM Individual Profile]. Ogni cartella può essere espansa per visualizzare attributi aggiuntivi, dove ogni attributo è una sezione che può essere trascinata nell’area di lavoro del generatore di regole al centro dell’area di lavoro. L&#39;area di lavoro del generatore di regole [](#rule-builder-canvas) viene discussa più avanti in questa guida.
+La scheda **[!UICONTROL Attributi]** consente di sfogliare gli attributi [!DNL Profile] appartenenti alla classe [!DNL XDM Individual Profile]. Ogni cartella può essere espansa per visualizzare attributi aggiuntivi, dove ogni attributo è una sezione che può essere trascinata nell’area di lavoro del generatore di regole al centro dell’area di lavoro. L&#39;area di lavoro del generatore di regole [&#128279;](#rule-builder-canvas) viene discussa più avanti in questa guida.
 
 ![La sezione degli attributi dei campi del Generatore di segmenti è evidenziata.](../images/ui/segment-builder/attributes.png)
 
@@ -324,7 +324,7 @@ L&#39;elenco dei vincoli di tempo disponibili per questa operazione differisce d
 >[!NOTE]
 >
 >Quando si utilizza il vincolo di tempo &quot;After&quot; (Dopo), quest’ultimo evento può verificarsi più del tempo elencato all’interno del vincolo di tempo. >
->>Ad esempio, se disponi di un evento Visualizzazione pagina e di un evento Pagamento e tra questi due eventi si inserisce il vincolo di tempo &quot;Dopo 1 ora&quot;, si qualificherà una definizione del segmento con un evento Pagamento 2 ore dopo l’evento Visualizzazione pagina.
+>&#x200B;>Ad esempio, se disponi di un evento Visualizzazione pagina e di un evento Pagamento e tra questi due eventi si inserisce il vincolo di tempo &quot;Dopo 1 ora&quot;, si qualificherà una definizione del segmento con un evento Pagamento 2 ore dopo l’evento Visualizzazione pagina.
 >
 >Inoltre, questi due vincoli temporali possono essere utilizzati in coordinamento tra loro.
 >
