@@ -1,15 +1,20 @@
 ---
 title: Customer Match Google + Display e connessione Video 360
 description: Con il connettore di destinazione Google Customer Match + Display & Video 360, puoi utilizzare i dati online e offline di Experience Platform per raggiungere e coinvolgere nuovamente i clienti nelle proprietà possedute e gestite da Google, come Search, Shopping, Gmail e YouTube.
+badge: Disponibilità limitata
 exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
-source-git-commit: feb3077daf8b3632ff00b57099195523bbeac358
+source-git-commit: efdec64dee4c5857d0df008c2d1242674f9d0b49
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2348'
+ht-degree: 5%
 
 ---
 
 # Connessione [!DNL Google Customer Match + Display & Video 360]
+
+>[!NOTE]
+>
+>**Disponibilità limitata del connettore Google Customer Match + DV360**<br> Poiché stiamo attraversando l&#39;intero ciclo di vita della maturità di questa integrazione con Google, stiamo vedendo dati che indicano debolezze nell&#39;implementazione che devono essere corrette prima che possa verificarsi un&#39;adozione più ampia. Dati questi problemi, Adobe ha ridotto la visibilità di questa destinazione a un numero limitato di clienti. Siamo in attive conversazioni con Google per migliorare l&#39;esperienza del prodotto. Sappiamo che questa potrebbe essere una notizia deludente, ma riteniamo che sia l&#39;approccio responsabile per garantire un&#39;esperienza affidabile e di alta qualità per i nostri clienti.</br>
 
 Utilizzare questa destinazione per attivare gli elenchi [[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) basati su PII di prime parti direttamente nelle proprietà [!DNL Google Display & Video 360] come [!DNL Search], [!DNL YouTube], [!DNL Gmail] e [!DNL Google Display Network].
 
@@ -24,12 +29,12 @@ Con la funzionalità introdotta di recente di poter utilizzare [!DNL Customer Ma
 >[!IMPORTANT]
 >
 > Google sta rilasciando modifiche all&#39;API [Google Ads](https://developers.google.com/google-ads/api/docs/start), [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html?lang=it) e all&#39;API [Display &amp; Video 360](https://developers.google.com/display-video/api/guides/getting-started/overview) per supportare i requisiti relativi alla conformità e al consenso definiti nel [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_it) (DMA) nell&#39;Unione Europea ([EU User Consent Policy](https://www.google.com/about/company/user-consent-policy/)). L’applicazione di queste modifiche ai requisiti di consenso è attiva dal 6 marzo 2024.
-> &#x200B;><br/>
-> &#x200B;>Per aderire alla politica di consenso degli utenti dell’UE e continuare a creare elenchi di pubblico per gli utenti dello Spazio economico europeo (SEE), gli inserzionisti e i partner devono assicurarsi di trasmettere il consenso degli utenti finali durante il caricamento dei dati sul pubblico. In qualità di partner Google, Adobe fornisce gli strumenti necessari per soddisfare i requisiti di consenso ai sensi del regolamento DMA dell’Unione Europea.
-> &#x200B;><br/>
-> &#x200B;>I clienti che hanno acquistato Adobe Privacy &amp; Security Shield e hanno configurato un [criterio di consenso](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) per filtrare i profili non autorizzati non devono intraprendere alcuna azione.
-> &#x200B;><br/>
-> &#x200B;>I clienti che non hanno acquistato Adobe Privacy &amp; Security Shield devono utilizzare le funzionalità [segment definition](../../../segmentation/home.md#segment-definitions) all&#39;interno di [Segment Builder](../../../segmentation/ui/segment-builder.md) per filtrare i profili non autorizzati e continuare a utilizzare senza interruzioni le destinazioni Real-Time CDP Google esistenti.
+> ><br/>
+> >Per aderire alla politica di consenso degli utenti dell’UE e continuare a creare elenchi di pubblico per gli utenti dello Spazio economico europeo (SEE), gli inserzionisti e i partner devono assicurarsi di trasmettere il consenso degli utenti finali durante il caricamento dei dati sul pubblico. In qualità di partner Google, Adobe fornisce gli strumenti necessari per soddisfare i requisiti di consenso ai sensi del regolamento DMA dell’Unione Europea.
+> ><br/>
+> >I clienti che hanno acquistato Adobe Privacy &amp; Security Shield e hanno configurato un [criterio di consenso](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) per filtrare i profili non autorizzati non devono intraprendere alcuna azione.
+> ><br/>
+> >I clienti che non hanno acquistato Adobe Privacy &amp; Security Shield devono utilizzare le funzionalità [segment definition](../../../segmentation/home.md#segment-definitions) all&#39;interno di [Segment Builder](../../../segmentation/ui/segment-builder.md) per filtrare i profili non autorizzati e continuare a utilizzare senza interruzioni le destinazioni Real-Time CDP Google esistenti.
 
 ## Quando utilizzare questa destinazione
 
@@ -171,7 +176,7 @@ Attribute source data is not automatically hashed. When your source field contai
 
 The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411786/?quality=12&learn=on&captions=ita) -->
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
 ## Connettersi alla destinazione {#connect}
 
