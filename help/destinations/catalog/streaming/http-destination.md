@@ -4,10 +4,10 @@ title: Connessione API HTTP
 description: Utilizza la destinazione API HTTP in Adobe Experience Platform per inviare i dati del profilo all’endpoint HTTP di terze parti per eseguire le tue analisi o eseguire qualsiasi altra operazione necessaria sui dati del profilo esportati da Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 678f80445212edc1edd3f4799999990ddcc2a039
+source-git-commit: b757f61a46930f08fe05be4c0f701113597567a4
 workflow-type: tm+mt
-source-wordcount: '2690'
-ht-degree: 8%
+source-wordcount: '2746'
+ht-degree: 7%
 
 ---
 
@@ -45,7 +45,7 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, consulta la tabella seguente.
 
 | Elemento | Tipo | Note |
----------|----------|---------|
+| ---------|----------|---------|
 | Tipo di esportazione | **[!UICONTROL Basato su profilo]** | Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto nella schermata di mappatura del [flusso di lavoro di attivazione della destinazione](../../ui/activate-segment-streaming-destinations.md#mapping). |
 | Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni sulle [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
@@ -58,6 +58,7 @@ Per utilizzare la destinazione API HTTP per esportare dati da Experience Platfor
 * È necessario disporre di un endpoint HTTP che supporti l’API REST.
 * L&#39;endpoint HTTP deve supportare lo schema del profilo di Experience Platform. Nella destinazione API HTTP non è supportata alcuna trasformazione in uno schema di payload di terze parti. Consulta la sezione [dati esportati](#exported-data) per un esempio dello schema di output di Experience Platform.
 * L&#39;endpoint HTTP deve supportare le intestazioni.
+* L’endpoint HTTP deve rispondere entro 2 secondi per garantire la corretta elaborazione dei dati ed evitare errori di timeout.
 
 >[!TIP]
 >
@@ -363,3 +364,7 @@ Di seguito sono riportati ulteriori esempi di dati esportati, a seconda delle im
 Nel 95% dei casi, Experience Platform tenta di offrire una latenza di velocità effettiva inferiore a 10 minuti per i messaggi inviati con successo, con una frequenza inferiore a 10.000 richieste al secondo per ogni flusso di dati verso una destinazione HTTP.
 
 In caso di richieste non riuscite alla destinazione API HTTP, Experience Platform memorizza le richieste non riuscite e tenta di inviarle all’endpoint due volte.
+
+## Risoluzione dei problemi {#troubleshooting}
+
+Per garantire una distribuzione affidabile dei dati ed evitare problemi di timeout, assicurati che l&#39;endpoint HTTP risponda entro 2 secondi alle richieste di Experience Platform, come specificato nella sezione [prerequisiti](#prerequisites). Le risposte che richiedono più tempo genereranno errori di timeout.
