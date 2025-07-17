@@ -2,9 +2,9 @@
 title: Connettere Adobe Analytics Ad Experience Platform
 description: Scopri come importare i dati della suite di rapporti di Adobe Analytics in Experience Platform
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 086777a09eec17c94a7e0a5d2db58e4a1f6b523f
+source-git-commit: d6a290b9891b3507d531a595a5428955c7e9ee90
 workflow-type: tm+mt
-source-wordcount: '2731'
+source-wordcount: '2750'
 ht-degree: 3%
 
 ---
@@ -26,7 +26,7 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di Experie
 È importante comprendere i seguenti termini chiave utilizzati nel presente documento:
 
 * **Attributo standard**: gli attributi standard sono qualsiasi attributo predefinito da Adobe. Contengono lo stesso significato per tutti i clienti e sono disponibili nei gruppi di campi Dati di origine e Schema di Analytics.
-* **Attributo personalizzato**: gli attributi personalizzati sono qualsiasi attributo nella gerarchia delle variabili personalizzate in Analytics. Gli attributi personalizzati vengono utilizzati all’interno di un’implementazione di Adobe Analytics per acquisire informazioni specifiche in una suite di rapporti e possono differire nel loro utilizzo da una suite di rapporti all’altra. Gli attributi personalizzati includono eVar, prop ed elenchi. Per ulteriori informazioni sulle eVar, consulta la [documentazione di Analytics sulle variabili di conversione](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=it).
+* **Attributo personalizzato**: gli attributi personalizzati sono qualsiasi attributo nella gerarchia delle variabili personalizzate in Analytics. Gli attributi personalizzati vengono utilizzati all’interno di un’implementazione di Adobe Analytics per acquisire informazioni specifiche in una suite di rapporti e possono differire nel loro utilizzo da una suite di rapporti all’altra. Gli attributi personalizzati includono eVar, prop ed elenchi. Per ulteriori informazioni sulle eVar, consulta la [documentazione di Analytics sulle variabili di conversione](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html).
 * **Qualsiasi attributo nei gruppi di campi personalizzati**: gli attributi che provengono dai gruppi di campi creati dai clienti sono tutti definiti dall&#39;utente e non sono considerati né attributi standard né personalizzati.
 
 ## Navigare nel catalogo delle origini
@@ -260,7 +260,7 @@ Viene visualizzato il passaggio **[!UICONTROL Dettagli flusso di dati]**, in cui
 
 ![Interfaccia dettagli flusso di dati. del flusso di lavoro di acquisizione.](../../../../images/tutorials/create/analytics/dataflow-detail.png)
 
-### Revisione
+### Rivedi
 
 Viene visualizzato il passaggio [!UICONTROL Rivedi], che consente di rivedere il nuovo flusso di dati di Analytics prima che venga creato. I dettagli della connessione sono raggruppati per categorie, tra cui:
 
@@ -287,6 +287,10 @@ Per ulteriori informazioni sulla retrocompilazione, sui dati live e sulle rispet
 
 ## Eliminare il flusso di dati {#delete-dataflow}
 
+>[!NOTE]
+>
+>Non puoi disabilitare un flusso di dati di Analytics. Per arrestare il flusso di dati di Analytics, devi **eliminare** completamente il flusso di dati.
+
 Per eliminare il flusso di dati di Analytics, seleziona **[!UICONTROL Flussi di dati]** dall&#39;intestazione superiore dell&#39;area di lavoro origini. Utilizzare la pagina Flussi dati per individuare il flusso di dati di Analytics che si desidera eliminare, quindi selezionare i puntini di sospensione (`...`) accanto ad esso. Quindi, utilizzare il menu a discesa e selezionare **[!UICONTROL Elimina]**.
 
 * Se elimini il flusso di dati live Analytics, verrà eliminato anche il relativo set di dati sottostante.
@@ -307,5 +311,5 @@ Il seguente video ha lo scopo di chiarire come acquisire dati utilizzando il con
 >
 > L&#39;interfaccia utente [!DNL Experience Platform] mostrata nel video seguente non è aggiornata. Per le schermate e le funzionalità più recenti dell’interfaccia utente, consulta la documentazione precedente.
 
->[!VIDEO](https://video.tv.adobe.com/v/3430258?quality=12&learn=on&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
 
