@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Panoramica dei connettori Source
 description: Adobe Experience Platform consente di acquisire dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Experience Platform. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 2e4df13bae9f4afa24f761e650790704da44da90
+source-git-commit: 952fc2fac819c545304aca4505208fe59841097f
 workflow-type: tm+mt
-source-wordcount: '1554'
-ht-degree: 3%
+source-wordcount: '1640'
+ht-degree: 8%
 
 ---
 
@@ -26,19 +26,7 @@ Con Experience Platform, puoi centralizzare i dati raccolti da origini diverse e
 <div id="recs-overview-body-5"></div>
 <div id="recs-overview-body-6"></div>
 
-## Origini aziendali avanzate {#advanced-enterprise-sources}
-
-Le seguenti origini sono disponibili solo per [clienti Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
-
-- [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) [!BADGE Streaming]{type=Positive}
-- [[!DNL Amazon Redshift]](connectors/databases/redshift.md) [!BADGE Batch]{type=Informative}
-- [[!DNL Azure Databricks]](connectors/databases/databricks.md) [!BADGE Batch]{type=Informative}
-- [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) [!BADGE Streaming]{type=Positive}
-- [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) [!BADGE Batch]{type=Informative}
-- [[!DNL Google BigQuery]](connectors/databases/bigquery.md) [!BADGE Batch]{type=Informative}
-- [[!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md) [!BADGE Streaming]{type=Positive}
-- [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) [!BADGE Streaming]{type=Positive}
-- [[!DNL Snowflake]](connectors/databases/snowflake.md) [!BADGE Batch]{type=Informative}
+>[!BEGINSHADEBOX]
 
 ## Sorgenti create da Adobe e dai partner {#adobe-and-partner-built-sources}
 
@@ -46,157 +34,239 @@ Alcuni dei connettori nel catalogo origini di Experience Platform sono generati 
 
 Per i connettori creati e gestiti dal partner, ciò significa che potrebbe essere necessario risolvere i problemi con il connettore dal team partner (metodo di contatto fornito nella nota nella pagina della documentazione). Per i problemi relativi ai connettori creati e gestiti da Adobe, contatta il rappresentante Adobe o l’Assistenza clienti.
 
-## Categorie di origini
+>[!ENDSHADEBOX]
 
-Le origini in Experience Platform sono raggruppate nelle seguenti categorie:
+## Catalogo origini
+
+Leggere le sezioni seguenti per un elenco di tutte le origini disponibili nel catalogo delle origini.
 
 ### Applicazioni di Adobe {#adobe-applications}
 
-Experience Platform consente di acquisire i dati da altre applicazioni Adobe, tra cui Adobe Analytics e Adobe Audience Manager. Per ulteriori informazioni, consulta i seguenti documenti correlati:
+Experience Platform consente di acquisire i dati da altre applicazioni Adobe, tra cui Adobe Analytics e Adobe Audience Manager. Per ulteriori informazioni, leggere i seguenti documenti correlati:
 
-- [Panoramica origine Adobe Audience Manager](connectors/adobe-applications/audience-manager.md)
+- [Adobe Audience Manager](connectors/adobe-applications/audience-manager.md)
    - [Creare una connessione sorgente Adobe Audience Manager nell’interfaccia utente](./tutorials/ui/create/adobe-applications/audience-manager.md)
-- [Panoramica sull’origine dati delle classificazioni di Adobe Analytics](connectors/adobe-applications/classifications.md)
+- [Dati classificazioni Adobe Analytics](connectors/adobe-applications/classifications.md)
    - [Creare una connessione origine dati per le classificazioni di Adobe Analytics nell’interfaccia utente](./tutorials/ui/create/adobe-applications/classifications.md)
-- [Panoramica dell’origine dati della suite di rapporti di Adobe Analytics](connectors/adobe-applications/analytics.md)
+- [Dati suite di rapporti Adobe Analytics](connectors/adobe-applications/analytics.md)
    - [Creare una connessione sorgente Adobe Analytics nell’interfaccia utente](./tutorials/ui/create/adobe-applications/analytics.md)
-- [Panoramica origine Adobe Campaign Managed Cloud Services](connectors/adobe-applications/campaign.md)
+- [Adobe Campaign Managed Cloud Services](connectors/adobe-applications/campaign.md)
    - [Creare una connessione sorgente Adobe Campaign Managed Cloud Services nell’interfaccia utente](./tutorials/ui/create/adobe-applications/campaign.md)
-- [Panoramica sull’origine di Adobe Commerce](connectors/adobe-applications/commerce.md)
-- [Panoramica dell’origine di raccolta dati di Adobe](connectors/adobe-applications/data-collection.md)
+- [Adobe Commerce](connectors/adobe-applications/commerce.md)
+- [Raccolta dati di Adobe](connectors/adobe-applications/data-collection.md)
    - [Creare una connessione sorgente Attributi del cliente nell’interfaccia utente](./tutorials/ui/create/adobe-applications/customer-attributes.md)
-- [Panoramica dell&#39;origine [!DNL Marketo Engage]](connectors/adobe-applications/marketo/marketo.md)
+- [[!DNL Marketo Engage]](connectors/adobe-applications/marketo/marketo.md)
    - [Crea una connessione di origine  [!DNL Marketo Engage]  nell&#39;interfaccia utente](./tutorials/ui/create/adobe-applications/marketo.md)
    - [Crea una connessione di origine e un flusso di dati  [!DNL Marketo Engage]  per i dati attività personalizzati](./tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
 
+### Origini aziendali avanzate {#advanced-enterprise-sources}
+
+Le seguenti origini sono disponibili solo per [clienti Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+
+| Origine | Categoria | Tipo di acquisizione | Cloud |
+| --- | --- | --- | --- |
+| [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) | Archiviazione cloud | Streaming | Azure, AWS |
+| [[!DNL Amazon Redshift]](connectors/databases/redshift.md) | Database | Batch | Azure, AWS |
+| [[!DNL Azure Databricks]](connectors/databases/databricks.md) | Database | Batch | Azure |
+| [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) | Archiviazione cloud | Streaming | Azure, AWS |
+| [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) | Database | Batch | Azure |
+| [[!DNL Google BigQuery]](connectors/databases/bigquery.md) | Database | Batch | Azure |
+| [[!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md) | Archiviazione cloud | Streaming | Azure |
+| [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) | Database | Streaming | Azure, AWS |
+| [[!DNL Snowflake]](connectors/databases/snowflake.md) | Database | Batch | Azure, AWS |
+
+{style="table-layout:auto"}
+
 ### Advertising {#advertising}
 
-Experience Platform fornisce supporto per l’acquisizione di dati da un sistema pubblicitario di terze parti. Per ulteriori informazioni su connettori di origine specifici, consulta i seguenti documenti correlati:
+Per acquisire i dati pubblicitari in Experience Platform, puoi utilizzare le seguenti origini.
 
-- [Google Ads](connectors/advertising/ads.md) [!BADGE Batch]{type=Informative}
+| Origine | Tipo di acquisizione | Cloud |
+| --- | --- | --- |
+| [Google Ads](connectors/advertising/ads.md) | Batch | Azure |
+
+{style="table-layout:auto"}
 
 ### Analytics {#analytics}
 
-Experience Platform fornisce supporto per l’acquisizione dei dati da una piattaforma di analisi di terze parti. Per ulteriori informazioni, leggere i seguenti documenti correlati:
+Per acquisire i dati analitici in Experience Platform, puoi utilizzare le seguenti origini.
 
-- [[!DNL Mixpanel]](connectors/analytics/mixpanel.md) [!BADGE Batch]{type=Informative}
-- [[!DNL Pendo]](connectors/analytics/pendo-webhook.md) [!BADGE Streaming]{type=Positive}
-- [[!DNL RainFocus]](connectors/analytics/rainfocus.md) [!BADGE Streaming]{type=Positive}
+| Origine | Tipo di acquisizione | Cloud |
+| --- | --- | --- |
+| [[!DNL Mixpanel]](connectors/analytics/mixpanel.md) | Batch | Azure |
+| [[!DNL Pendo]](connectors/analytics/pendo-webhook.md) | Streaming | Azure |
+| [[!DNL RainFocus]](connectors/analytics/rainfocus.md) | Streaming | Azure |
+
+{style="table-layout:auto"}
 
 ### Archiviazione cloud {#cloud-storage}
 
 Le origini di archiviazione cloud possono inserire i tuoi dati in Experience Platform senza dover scaricare, formattare o caricare. I dati acquisiti possono essere formattati come XDM JSON, XDM Parquet o delimitati. Ogni passaggio del processo viene integrato nel flusso di lavoro Origini tramite l’interfaccia utente di. Per ulteriori informazioni, consulta i seguenti documenti correlati:
 
-- [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md) [!BADGE Batch]{type=Informative}
-- [[!DNL Azure Blob]](connectors/cloud-storage/blob.md) [!BADGE Batch]{type=Informative}
-- [[!DNL Amazon S3]](connectors/cloud-storage/s3.md) [!BADGE Batch]{type=Informative}
-- [[!DNL Apache HDFS]](connectors/cloud-storage/hdfs.md) [!BADGE Batch]{type=Informative}
-- [[!DNL Azure File Storage]](connectors/cloud-storage/azure-file-storage.md) [!BADGE Batch]{type=Informative}
-- [[!DNL Data Landing Zone]](connectors/cloud-storage/data-landing-zone.md) [!BADGE Batch]{type=Informative}
-- [[!DNL FTP]](connectors/cloud-storage/ftp.md) [!BADGE Batch]{type=Informative}
-- [[!DNL Google Cloud Storage]](connectors/cloud-storage/google-cloud-storage.md) [!BADGE Batch]{type=Informative}
-- [[!DNL Oracle Object Storage]](connectors/cloud-storage/oracle-object-storage.md) [!BADGE Batch]{type=Informative}
-- [[!DNL SFTP]](connectors/cloud-storage/sftp.md) [!BADGE Batch]{type=Informative}
+Per acquisire i dati dall’archiviazione cloud in Experience Platform, puoi utilizzare le seguenti origini.
+
+| Origine | Tipo di acquisizione | Cloud |
+| --- | --- | --- |
+| [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md) | Batch | Azure |
+| [[!DNL Azure Blob]](connectors/cloud-storage/blob.md) | Batch | Azure |
+| [[!DNL Amazon S3]](connectors/cloud-storage/s3.md) | Batch | Azure, AWS |
+| [[!DNL Apache HDFS]](connectors/cloud-storage/hdfs.md) | Batch | Azure |
+| [[!DNL Azure File Storage]](connectors/cloud-storage/azure-file-storage.md) | Batch | Azure |
+| [[!DNL Data Landing Zone]](connectors/cloud-storage/data-landing-zone.md) | Batch | Azure, AWS |
+| [[!DNL FTP]](connectors/cloud-storage/ftp.md) | Batch | Azure |
+| [[!DNL Google Cloud Storage]](connectors/cloud-storage/google-cloud-storage.md) | Batch | Azure |
+| [[!DNL Oracle Object Storage]](connectors/cloud-storage/oracle-object-storage.md) | Batch | Azure |
+| [[!DNL SFTP]](connectors/cloud-storage/sftp.md) | Batch | Azure |
+
+{style="table-layout:auto"}
 
 ### Consenso e preferenze {#consent}
 
-Experience Platform fornisce supporto per l’acquisizione dei dati da una piattaforma di gestione delle preferenze e del consenso di terze parti. Per ulteriori informazioni, consulta i seguenti documenti correlati:
+Per acquisire i dati su consenso e preferenze in Experience Platform, puoi utilizzare le seguenti origini.
 
-- [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md) [!BADGE Batch]{type=Informative}
+| Origine | Tipo di acquisizione | Cloud |
+| --- | --- | --- |
+| [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md) | Batch | Azure |
+
+{style="table-layout:auto"}
 
 ### Gestione delle relazioni con i clienti (CRM) {#customer-relationship-management}
 
 I sistemi di gestione delle relazioni con i clienti forniscono dati che possono aiutare a costruire relazioni con i clienti, creando a sua volta fedeltà e incentivandone la fidelizzazione. Experience Platform fornisce supporto per l&#39;acquisizione di dati CRM da [!DNL Microsoft Dynamics 365] e [!DNL Salesforce]. Per ulteriori informazioni, consulta i seguenti documenti correlati:
 
-- [[!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md) [!BADGE Batch]{type=Informative}
-- [[!DNL Salesforce]](connectors/crm/salesforce.md) [!BADGE Batch]{type=Informative}
-- [[!DNL SugarCRM]](connectors/crm/sugarcrm.md) [!BADGE Batch]{type=Informative}
-- [[!DNL Veeva CRM]](connectors/crm/veeva.md) [!BADGE Batch]{type=Informative}
+Per acquisire i dati CRM in Experience Platform puoi utilizzare le seguenti origini.
+
+| Origine | Tipo di acquisizione | Cloud |
+| --- | --- | --- |
+| [[!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md) | Batch | Azure |
+| [[!DNL Salesforce]](connectors/crm/salesforce.md) | Batch | Azure, AWS |
+| [[!DNL SugarCRM]](connectors/crm/sugarcrm.md) | Batch | Azure |
+| [[!DNL Veeva CRM]](connectors/crm/veeva.md) | Batch | Azure |
+
+{style="table-layout:auto"}
 
 ### Customer Success {#customer-success}
 
-Experience Platform fornisce supporto per l’acquisizione di dati da un’applicazione di successo per clienti di terze parti. Per ulteriori informazioni, consulta i seguenti documenti correlati:
+Puoi utilizzare le seguenti origini per acquisire i dati di successo dei clienti in Experience Platform.
 
-- [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md) [!BADGE Batch]{type=Informative}
-- [[!DNL ServiceNow]](connectors/customer-success/servicenow.md) [!BADGE Batch]{type=Informative}
-- [[!DNL Zendesk]](connectors/customer-success/zendesk.md) [!BADGE Batch]{type=Informative}
+| Origine | Tipo di acquisizione | Cloud |
+| --- | --- | --- |
+| [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md) | Batch | Azure |
+| [[!DNL ServiceNow]](connectors/customer-success/servicenow.md) | Batch | Azure |
+| [[!DNL Zendesk]](connectors/customer-success/zendesk.md) | Batch | Azure |
+
+{style="table-layout:auto"}
 
 ### Database {#database}
 
 Experience Platform fornisce supporto per l’acquisizione di dati da un database di terze parti. Per ulteriori informazioni su connettori di origine specifici, consulta i seguenti documenti correlati:
 
-- [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md) [!BADGE Batch]{type=Informative}
-- [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md) [!BADGE Batch]{type=Informative}
-- [[!DNL Azure Data Explorer]](connectors/databases/data-explorer.md) [!BADGE Batch]{type=Informative}
-- [[!DNL Azure Table Storage]](connectors/databases/ats.md) [!BADGE Batch]{type=Informative}
-- [[!DNL GreenPlum]](connectors/databases/greenplum.md) [!BADGE Batch]{type=Informative}
-- [[!DNL HP Vertica]](connectors/databases/hp-vertica.md) [!BADGE Batch]{type=Informative}
-- [[!DNL IBM DB2]](connectors/databases/ibm-db2.md) [!BADGE Batch]{type=Informative}
-- [[!DNL MariaDB]](connectors/databases/mariadb.md) [!BADGE Batch]{type=Informative}
-- [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md) [!BADGE Batch]{type=Informative}
-- [[!DNL MySQL]](connectors/databases/mysql.md) [!BADGE Batch]{type=Informative}
-- [[!DNL Oracle]](connectors/databases/oracle.md) [!BADGE Batch]{type=Informative}
-- [[!DNL PostgreSQL]](connectors/databases/postgres.md) [!BADGE Batch]{type=Informative}
-- [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) [!BADGE Batch]{type=Informative}
+Per acquisire i dati dal database ad Experience Platform, puoi utilizzare le seguenti origini.
+
+| Origine | Tipo di acquisizione | Cloud |
+| --- | --- | --- |
+| [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md) | Batch | Azure |
+| [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md) | Batch | Azure |
+| [[!DNL Azure Data Explorer]](connectors/databases/data-explorer.md) | Batch | Azure |
+| [[!DNL Azure Table Storage]](connectors/databases/ats.md) | Batch | Azure |
+| [[!DNL GreenPlum]](connectors/databases/greenplum.md) | Batch | Azure |
+| [[!DNL HP Vertica]](connectors/databases/hp-vertica.md) | Batch | Azure |
+| [[!DNL IBM DB2]](connectors/databases/ibm-db2.md) | Batch | Azure |
+| [[!DNL MariaDB]](connectors/databases/mariadb.md) | Batch | Azure |
+| [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md) | Batch | Azure |
+| [[!DNL MySQL]](connectors/databases/mysql.md) | Batch | Azure, AWS |
+| [[!DNL Oracle]](connectors/databases/oracle.md) | Batch | Azure |
+| [[!DNL PostgreSQL]](connectors/databases/postgres.md) | Batch | Azure, AWS |
+| [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) | Batch | Azure |
+
+{style="table-layout:auto"}
 
 ### Partner di dati e identità {#data-partner}
 
-Experience Platform fornisce supporto per l’acquisizione dei dati da un partner dati e identità. Per ulteriori informazioni su connettori di origine specifici, consulta i seguenti documenti correlati:
+Puoi utilizzare le seguenti origini per acquisire dati e dati dei partner di identità in Experience Platform.
 
-- [[!DNL Acxiom Data Ingestion]](connectors/data-partners/acxiom-data-ingestion.md) [!BADGE Batch]{type=Informative}
-- [[!DNL Acxiom Prospecting Data Import]](connectors/data-partners/acxiom-prospecting-data-import.md) [!BADGE Batch]{type=Informative}
-- [[!DNL Algolia User Profiles]](connectors/data-partners/algolia-user-profiles.md) [!BADGE Batch]{type=Informative}
-- [[!DNL Bombora Intent]](connectors/data-partners/bombora.md) [!BADGE Batch]{type=Informative}
-- [[!DNL Demandbase Intent]](connectors/data-partners/demandbase.md) [!BADGE Batch]{type=Informative}
-- [[!DNL Merkury Enterprise Identity Resolution]](connectors/data-partners/merkury.md) [!BADGE Batch]{type=Informative}
+| Origine | Tipo di acquisizione | Cloud |
+| --- | --- | --- |
+| [[!DNL Acxiom Data Ingestion]](connectors/data-partners/acxiom-data-ingestion.md) | Batch | Azure |
+| [[!DNL Acxiom Prospecting Data Import]](connectors/data-partners/acxiom-prospecting-data-import.md) | Batch | Azure |
+| [[!DNL Algolia User Profiles]](connectors/data-partners/algolia-user-profiles.md) | Batch | Azure |
+| [[!DNL Bombora Intent]](connectors/data-partners/bombora.md) | Batch | Azure |
+| [[!DNL Demandbase Intent]](connectors/data-partners/demandbase.md) | Batch | Azure |
+| [[!DNL Merkury Enterprise Identity Resolution]](connectors/data-partners/merkury.md) | Batch | Azure |
 
-### eCommerce {#ecommerce}
+{style="table-layout:auto"}
 
-Experience Platform fornisce supporto per l’acquisizione di dati da un sistema di e-commerce di terze parti. Per ulteriori informazioni su connettori di origine specifici, consulta i seguenti documenti correlati:
+### e-commerce {#ecommerce}
 
-- [[!DNL SAP Commerce]](connectors/ecommerce/sap-commerce.md) [!BADGE Batch]{type=Informative}
-- [[!DNL Shopify]](connectors/ecommerce/shopify.md) [!BADGE Batch]{type=Informative}
-- [[!DNL Shopify]](connectors/ecommerce/shopify-streaming.md) [!BADGE Streaming]{type=Positive}
+Per acquisire i dati di e-commerce in Experience Platform, puoi utilizzare le seguenti origini.
+
+| Origine | Tipo di acquisizione | Cloud |
+| --- | --- | --- |
+| [[!DNL SAP Commerce]](connectors/ecommerce/sap-commerce.md) | Batch | Azure |
+| [[!DNL Shopify]](connectors/ecommerce/shopify.md) | Batch | Azure |
+| [[!DNL Shopify]](connectors/ecommerce/shopify-streaming.md) | Streaming | Azure |
+
+{style="table-layout:auto"}
 
 ### Sistema locale {#local-system}
 
-Experience Platform fornisce supporto per l’acquisizione dei dati dal sistema locale. Per ulteriori informazioni su connettori di origine specifici, consulta i seguenti documenti correlati:
+Per acquisire i dati dal sistema locale ad Experience Platform, puoi utilizzare le seguenti origini.
 
-- [Caricamento di file locali](connectors/local-system/local-file-upload.md)
+| Origine | Tipo di acquisizione | Cloud |
+| --- | --- | --- |
+| [Caricamento file locale](connectors/local-system/local-file-upload.md) | Batch | Azure |
+
+{style="table-layout:auto"}
 
 ### Marketing Automation {#marketing-automation}
 
-Experience Platform fornisce supporto per l’acquisizione dei dati da un sistema di automazione del marketing di terze parti. Per ulteriori informazioni su connettori di origine specifici, consulta i seguenti documenti correlati:
+Per acquisire i dati di automazione marketing in Experience Platform, puoi utilizzare le seguenti origini.
 
-- [[!DNL Braze]](connectors/marketing-automation/braze.md) [!BADGE Streaming]{type=Positive}
-- [[!DNL Chatlio]](connectors/marketing-automation/chatlio-webhook.md) [!BADGE Streaming]{type=Positive}
-- [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md) [!BADGE Streaming]{type=Positive}
-- [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md) [!BADGE Batch]{type=Informative}
-- [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md) [!BADGE Batch]{type=Informative}
-- [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md) [!BADGE Batch]{type=Informative}
-- [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) [!BADGE Batch]{type=Informative}
-- [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) [!BADGE Batch]{type=Informative}
-- [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) [!BADGE Batch]{type=Informative}
+| Origine | Tipo di acquisizione | Cloud |
+| --- | --- | --- |
+| [[!DNL Braze]](connectors/marketing-automation/braze.md) | Streaming | Azure |
+| [[!DNL Chatlio]](connectors/marketing-automation/chatlio-webhook.md) | Streaming | Azure |
+| [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md) | Streaming | Azure |
+| [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md) | Batch | Azure |
+| [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md) | Batch | Azure |
+| [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md) | Batch | Azure |
+| [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) | Batch | Azure |
+| [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) | Batch | Azure |
+| [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) | Batch | Azure, AWS |
+
+{style="table-layout:auto"}
 
 ### Pagamenti {#payments}
 
-Experience Platform fornisce supporto per l’acquisizione dei dati da un sistema di pagamenti di terze parti. Per ulteriori informazioni su connettori di origine specifici, consulta i seguenti documenti correlati:
+Per acquisire i dati dei pagamenti in Experience Platform, puoi utilizzare le seguenti origini.
 
-- [[!DNL Square]](connectors/payments/square.md) [!BADGE Batch]{type=Informative}
-- [[!DNL Stripe]](connectors/payments/stripe.md) [!BADGE Batch]{type=Informative}
+| Origine | Tipo di acquisizione | Cloud |
+| --- | --- | --- |
+| [[!DNL Square]](connectors/payments/square.md) | Batch | Azure |
+| [[!DNL Stripe]](connectors/payments/stripe.md) | Batch | Azure |
+
+{style="table-layout:auto"}
 
 ### Streaming {#streaming}
 
-Experience Platform fornisce supporto per l’acquisizione di dati da origini di streaming. Per ulteriori informazioni su connettori di origine specifici, consulta i seguenti documenti correlati:
+Per inviare dati ad Experience Platform, puoi utilizzare le seguenti origini.
 
-- [[!DNL HTTP API]](connectors/streaming/http.md) [!BADGE Streaming]{type=Positive}
+| Origine | Tipo di acquisizione | Supporto cloud |
+| --- | --- | --- |
+| [[!DNL HTTP API]](connectors/streaming/http.md) | Streaming | Azure, AWS |
+
+{style="table-layout:auto"}
 
 ### Protocolli {#protocols}
 
-Experience Platform fornisce supporto per l’acquisizione di dati da un sistema di protocolli di terze parti. Per ulteriori informazioni su connettori di origine specifici, consulta i seguenti documenti correlati:
+Per acquisire i dati del protocollo in Experience Platform, puoi utilizzare le seguenti origini.
 
-- [[!DNL Generic OData]](connectors/protocols/odata.md) [!BADGE Batch]{type=Informative}
-- [[!DNL Generic REST API]](connectors/protocols/generic-rest.md) [!BADGE Batch]{type=Informative}
+| Origine | Tipo di acquisizione | Supporto cloud |
+| --- | --- | --- |
+| [[!DNL Generic OData]](connectors/protocols/odata.md) | Batch | Azure |
+| [[!DNL Generic REST API]](connectors/protocols/generic-rest.md) | Batch | Azure |
+
+{style="table-layout:auto"}
 
 ## Controllo degli accessi per le origini nell’acquisizione dei dati
 
