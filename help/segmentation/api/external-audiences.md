@@ -3,13 +3,13 @@ title: Endpoint API per tipi di pubblico esterni
 description: Scopri come utilizzare l’API per tipi di pubblico esterni per creare, aggiornare, attivare ed eliminare i tipi di pubblico esterni da Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: 74fa66e78ac36c8007eb89e8c271d989845c96f0
+exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
+source-git-commit: 3acadf73b5c82d6f5f0f1eaec41387bec897558d
 workflow-type: tm+mt
-source-wordcount: '2312'
-ht-degree: 5%
+source-wordcount: '2405'
+ht-degree: 4%
 
 ---
-
 
 # Endpoint &quot;external audiences&quot;
 
@@ -381,7 +381,7 @@ Per avviare l’acquisizione di un pubblico, effettua una richiesta POST all’e
 **Formato API**
 
 ```http
-POST /external-audience/{AUDIENCE_ID}/run
+POST /external-audience/{AUDIENCE_ID}/runs
 ```
 
 **Richiesta**
@@ -391,7 +391,7 @@ La seguente richiesta attiva un’acquisizione eseguita per il pubblico esterno.
 +++ Una richiesta di esempio per avviare un’acquisizione di pubblico.
 
 ```shell
-curl -X POST https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1435-4180-97a5-58af4aa285ab/run \
+curl -X POST https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1435-4180-97a5-58af4aa285ab/runs \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
@@ -442,6 +442,10 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con dettagl
 +++
 
 ## Recuperare lo stato di acquisizione di un pubblico specifico {#retrieve-ingestion-status}
+
+>[!NOTE]
+>
+>Per utilizzare il seguente endpoint, è necessario disporre sia di `audienceId` del pubblico esterno che del `runId` dell’ID esecuzione dell’acquisizione. Puoi ottenere `audienceId` da una chiamata all&#39;endpoint `GET /external-audiences/operations/{OPERATION_ID}` e `runId` da una precedente chiamata riuscita dell&#39;endpoint `POST /external-audience/{AUDIENCE_ID}/runs`.
 
 Per recuperare lo stato di un’acquisizione di pubblico, effettua una richiesta GET al seguente endpoint e allo stesso tempo fornisce sia l’ID del pubblico che gli ID di esecuzione.
 
@@ -514,9 +518,13 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con dettagl
 
 +++
 
-## Elencare gli stati di acquisizione del pubblico {#list-ingestion-statuses}
+## Elencare esecuzioni dell’acquisizione del pubblico {#list-ingestion-runs}
 
-Per recuperare tutti gli stati di acquisizione per il pubblico esterno selezionato, effettua una richiesta GET al seguente endpoint e fornisci l’ID del pubblico. È possibile includere più parametri, separati da e commerciali (`&`).
+>[!NOTE]
+>
+>Per utilizzare il seguente endpoint, è necessario disporre di `audienceId` del pubblico esterno. Puoi ottenere `audienceId` da una chiamata all&#39;endpoint `GET /external-audiences/operations/{OPERATION_ID}` riuscita.
+
+Per recuperare tutte le esecuzioni dell’acquisizione per il pubblico esterno selezionato, effettua una richiesta GET al seguente endpoint e fornisci l’ID del pubblico. È possibile includere più parametri, separati da e commerciali (`&`).
 
 **Formato API**
 
@@ -534,16 +542,16 @@ GET /external-audience/{AUDIENCE_ID}/runs?{QUERY_PARAMETERS}
 | Parametro | Descrizione | Esempio |
 | --------- | ----------- | ------- |
 | `limit` | Numero massimo di elementi restituiti nella risposta. Questo valore può essere compreso tra 1 e 40. Per impostazione predefinita, il limite è impostato su 20. | `limit=30` |
-| `sortBy` | Ordine in cui vengono ordinati gli elementi restituiti. È possibile ordinare per `name` o per `ingestionTime`. Inoltre, puoi aggiungere un segno `-` per ordinare in base all&#39;ordine **discendente** invece che **ascendente**. Per impostazione predefinita, gli elementi sono ordinati per `ingestionTime` in ordine decrescente. | `sortBy=name` |
-| `property` | Un filtro per determinare quali esecuzioni dell’acquisizione del pubblico vengono visualizzate. Puoi filtrare in base alle seguenti proprietà: <ul><li>`name`: consente di filtrare in base al nome del pubblico. Se si utilizza questa proprietà, è possibile eseguire il confronto utilizzando `=`, `!=`, `=contains` o `!=contains`. </li><li>`ingestionTime`: consente di filtrare in base al tempo di acquisizione. Se si utilizza questa proprietà, è possibile eseguire il confronto utilizzando `>=` o `<=`.</li><li>`status`: consente di filtrare in base allo stato dell’esecuzione dell’acquisizione. Se si utilizza questa proprietà, è possibile eseguire il confronto utilizzando `=`, `!=`, `=contains` o `!=contains`. </li></ul> | `property=ingestionTime<1683669114845`<br/>`property=name=demo_audience`<br/>`property=status=SUCCESS` |
+| `sortBy` | Ordine in cui vengono ordinati gli elementi restituiti. È possibile ordinare per `name` o per `createdAt`. Inoltre, puoi aggiungere un segno `-` per ordinare in base all&#39;ordine **discendente** invece che **ascendente**. Per impostazione predefinita, gli elementi sono ordinati per `createdAt` in ordine decrescente. | `sortBy=name` |
+| `property` | Un filtro per determinare quali esecuzioni dell’acquisizione del pubblico vengono visualizzate. Puoi filtrare in base alle seguenti proprietà: <ul><li>`name`: consente di filtrare in base al nome del pubblico. Se si utilizza questa proprietà, è possibile eseguire il confronto utilizzando `=`, `!=`, `=contains` o `!=contains`. </li><li>`createdAt`: consente di filtrare in base al tempo di acquisizione. Se si utilizza questa proprietà, è possibile eseguire il confronto utilizzando `>=` o `<=`.</li><li>`status`: consente di filtrare in base allo stato dell’esecuzione dell’acquisizione. Se si utilizza questa proprietà, è possibile eseguire il confronto utilizzando `=`, `!=`, `=contains` o `!=contains`. </li></ul> | `property=createdAt<1683669114845`<br/>`property=name=demo_audience`<br/>`property=status=SUCCESS` |
 
 +++
 
 **Richiesta**
 
-La richiesta seguente recupera tutti gli stati di acquisizione per il pubblico esterno.
+La richiesta seguente recupera tutte le esecuzioni dell’acquisizione per il pubblico esterno.
 
-+++ Una richiesta di esempio per ottenere un elenco degli stati di acquisizione del pubblico.
++++ Un esempio di richiesta per ottenere un elenco di esecuzioni dell’acquisizione di pubblico.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1435-4180-97a5-58af4aa285ab/runs \
@@ -557,9 +565,9 @@ curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elenco degli stati di acquisizione per il pubblico esterno specificato.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elenco di esecuzioni di acquisizione per il pubblico esterno specificato.
 
-+++ Una risposta di esempio quando recuperi un elenco degli stati di acquisizione del pubblico.
++++ Una risposta di esempio quando recuperi un elenco delle esecuzioni dell’acquisizione del pubblico.
 
 ```json
 {
@@ -573,19 +581,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elen
             "dataFilterStartTime": 764245635,
             "dataFilterEndTime": 3456788568,
             "createdAt": 1785678909,
-            "createdBy": "{USER_NAME}",
-            "details": [
-                {
-                    "stage": "DATASET_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                },
-                {
-                    "stage": "PROFILE_STORE_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                }
-            ]
+            "createdBy": "{USER_NAME}"
         },
         {
             "audienceName": "Sample external audience 2",
@@ -596,19 +592,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elen
             "dataFilterStartTime": 764245635,
             "dataFilterEndTime": 3456788568,
             "createdAt": 1749324248,
-            "createdBy": "{USER_ID}",
-            "details": [
-                {
-                    "stage": "DATASET_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                },
-                {
-                    "stage": "PROFILE_STORE_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                }
-            ]
+            "createdBy": "{USER_ID}"
         }
     ],
     "_page": {
@@ -627,6 +611,10 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elen
 +++
 
 ## Eliminare un pubblico esterno {#delete-audience}
+
+>[!NOTE]
+>
+>Per utilizzare il seguente endpoint, è necessario disporre di `audienceId` del pubblico esterno. Puoi ottenere `audienceId` da una chiamata all&#39;endpoint `GET /external-audiences/operations/{OPERATION_ID}` riuscita.
 
 Per eliminare un pubblico esterno, effettua una richiesta DELETE al seguente endpoint e fornisci l’ID del pubblico.
 
