@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guida all’interfaccia utente di Audiences
 description: La funzione di composizione del pubblico nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro ricca che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica dei tipi di pubblico per la tua organizzazione.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: 65a3b5b904a9dfc6a2fbc09ab869e5642e088363
 workflow-type: tm+mt
-source-wordcount: '2345'
+source-wordcount: '2362'
 ht-degree: 16%
 
 ---
@@ -310,6 +310,10 @@ Inoltre, puoi limitare il numero di profili restituiti abilitando l&#39;interrut
 >id="platform_segmentation_ao_split_otherprofiles_text"
 >title="Altri profili"
 >abstract="Il pulsante di attivazione Altri profili consente di creare un percorso aggiuntivo con i profili rimanenti che non corrispondono a nessuna delle condizioni specificate degli altri percorsi."
+
+>[!NOTE]
+>
+>Per utilizzare il blocco **[!UICONTROL Dividi]**, **devi** avere almeno 10 profili nel pubblico.
 
 Il tipo di blocco **[!UICONTROL Dividi]** ti consente di suddividere il nuovo pubblico in vari sottogruppi. Puoi suddividere questo pubblico in base alla percentuale o a un attributo.
 
