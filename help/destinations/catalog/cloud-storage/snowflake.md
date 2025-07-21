@@ -5,10 +5,10 @@ hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="Informative"
 exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
-source-git-commit: b78f36ed20d5a08036598fa2a1da7dd066c401fa
+source-git-commit: dca3762169d2a469948ee7e877213697f4c444b6
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1126'
+ht-degree: 6%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## Panoramica {#overview}
 
-Utilizza il connettore di destinazione Snowflake per esportare i dati nell&#39;istanza Snowflake di Adobe, quindi condividili con la tua istanza tramite [inserzioni private](https://other-docs.snowflake.com/en/collaboration/collaboration-listings-about).
+Utilizza il connettore di destinazione Snowflake per esportare i dati nell&#39;istanza Snowflake di Adobe, che Adobe condivide con la tua istanza tramite [inserzioni private](https://other-docs.snowflake.com/en/collaboration/collaboration-listings-about).
 
 Leggi le sezioni seguenti per scoprire come funziona la destinazione Snowflake e come i dati vengono trasferiti tra Adobe e Snowflake.
 
@@ -29,6 +29,8 @@ Leggi le sezioni seguenti per scoprire come funziona la destinazione Snowflake e
 Questa destinazione utilizza una condivisione dati [!DNL Snowflake], il che significa che nessun dato viene fisicamente esportato o trasferito alla tua istanza di Snowflake. Al contrario, Adobe ti consente di accedere in sola lettura a una live table ospitata nell’ambiente Snowflake di Adobe. Puoi eseguire query su questa tabella condivisa direttamente dal tuo account Snowflake, ma non sei il proprietario della tabella e non puoi modificarla o conservarla oltre il periodo di conservazione specificato. Adobe gestisce completamente il ciclo di vita e la struttura della tabella condivisa.
 
 La prima volta che condividi i dati dall’istanza Snowflake di Adobe alla tua, ti viene richiesto di accettare l’inserzione privata da Adobe.
+
+![Schermata che mostra la schermata di accettazione dell&#39;inserzione privata di Snowflake](../../assets/catalog/cloud-storage/snowflake/snowflake-accept-listing.png)
 
 ### Conservazione dei dati e Time-to-Live (TTL) {#ttl}
 
@@ -51,12 +53,12 @@ Prima di configurare la connessione Snowflake, accertati di soddisfare i seguent
 
 ## Tipi di pubblico supportati {#supported-audiences}
 
-Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
+Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione. Le due tabelle seguenti indicano i tipi di pubblico supportati dal connettore, per _origine pubblico_ e _tipi di profilo inclusi nel pubblico_:
 
 | Origine pubblico | Supportato | Descrizione |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Caricamenti personalizzati | ✓ | Tipi di pubblico [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
+| Tutte le altre origini del pubblico | ✓ | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> |
 
 {style="table-layout:auto"}
 
