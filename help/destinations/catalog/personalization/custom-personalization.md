@@ -3,9 +3,9 @@ keywords: personalizzazione personalizzata; destinazione; destinazione personali
 title: Connessione di personalizzazione personalizzata
 description: Questa destinazione fornisce personalizzazione esterna, sistemi di gestione dei contenuti, server di annunci e altre applicazioni in esecuzione sul sito in modo da recuperare informazioni sul pubblico da Adobe Experience Platform. Questa destinazione fornisce una personalizzazione in tempo reale in base all’iscrizione al pubblico del profilo utente.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 25697d341b2970eeb20d9f2507ee701ade8046d3
+source-git-commit: c037e75da7fa419051a7e38b365a5b6b3a1fc346
 workflow-type: tm+mt
-source-wordcount: '964'
+source-wordcount: '960'
 ht-degree: 9%
 
 ---
@@ -67,7 +67,7 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_custom_personalization_datastream"
->title="Informazioni sugli ID di stream di dati"
+>title="Informazioni sugli stream di dati"
 >abstract="Questa opzione determina in quale stream di dati di raccolta dati verranno inclusi i tipi di pubblico nella risposta alla pagina. Il menu a discesa mostra solo gli stream di dati in cui è abilitata la configurazione della destinazione. Prima di poter configurare la destinazione, devi configurare uno stream di dati."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=it" text="Scopri come configurare uno stream di dati"
 
@@ -84,7 +84,7 @@ Durante la [configurazione](../../ui/connect-destination.md) di questa destinazi
 * **[!UICONTROL Nome]**: immettere il nome preferito per la destinazione.
 * **[!UICONTROL Descrizione]**: immetti una descrizione per la destinazione. Ad esempio, puoi indicare per quale campagna stai utilizzando questa destinazione. Questo campo è facoltativo.
 * **[!UICONTROL Alias di integrazione]**: questo valore viene inviato al SDK Web Experience Platform come nome di oggetto JSON.
-* **[!UICONTROL ID flusso di dati]**: determina in quale flusso di dati della raccolta dati i tipi di pubblico verranno inclusi nella risposta alla pagina. Il menu a discesa mostra solo gli stream di dati in cui è abilitata la configurazione della destinazione. Per ulteriori dettagli, vedere [Configurazione di uno stream di dati](../../../datastreams/overview.md).
+* **[!UICONTROL Datastream]**: determina in quale flusso di dati della raccolta dati i tipi di pubblico verranno inclusi nella risposta alla pagina. Il menu a discesa mostra solo gli stream di dati in cui è abilitata la configurazione della destinazione. Per ulteriori dettagli, vedere [Configurazione di uno stream di dati](../../../datastreams/overview.md).
 
 ### Abilita avvisi {#enable-alerts}
 
