@@ -3,9 +3,9 @@ title: Creare una nuova connessione di destinazione
 type: Tutorial
 description: Scopri come connettersi a una destinazione in Adobe Experience Platform, abilitare gli avvisi e impostare azioni di marketing per la destinazione connessa.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 59ff77ff9f4a6fe147b5d8231fd3caa2550ae20e
 workflow-type: tm+mt
-source-wordcount: '1145'
+source-wordcount: '1176'
 ht-degree: 0%
 
 ---
@@ -50,6 +50,11 @@ Prima di poter inviare dati sul pubblico a una destinazione, devi impostare una 
    ![Schermata dell&#39;interfaccia utente di Experience Platform che mostra un elenco di destinazioni disponibili ed evidenzia il controllo Configura nuova destinazione.](../assets/ui/connect-destinations/configure-new-destination.png)
 
 ## Autenticarsi nella destinazione {#authenticate}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_account_name"
+>title="Nome account"
+>abstract="Immetti un nome che ti aiuterà a identificare facilmente questo account di destinazione in futuro. Questa funzione è particolarmente utile se disponi di più connessioni allo stesso tipo di destinazione."
 
 Il primo passaggio nella connessione a una destinazione consiste nell’eseguire l’autenticazione nella piattaforma di destinazione.
 
