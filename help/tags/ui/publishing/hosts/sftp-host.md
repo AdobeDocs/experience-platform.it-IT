@@ -2,10 +2,10 @@
 title: Host SFTP
 description: Scopri come configurare i tag in Adobe Experience Platform per distribuire le build della libreria a un server SFTP protetto e con hosting autonomo.
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: a077d3a1b14d9b7786d3181a556c49e940a42c2f
 workflow-type: tm+mt
-source-wordcount: '880'
-ht-degree: 34%
+source-wordcount: '815'
+ht-degree: 37%
 
 ---
 
@@ -37,31 +37,15 @@ La chiave privata viene utilizzata per crittografare la chiave pubblica. Dovrai 
 
 ### Inserire nell&#39;elenco Consentiti indirizzi IP Experience Platform
 
->[!IMPORTANT]
->
-> Il 23 giugno 2025, Adobe Launch aggiorna gli indirizzi IP esterni utilizzati per supportare il tipo di host SFTP e la funzionalità API di callback. Per continuare a utilizzare una di queste funzionalità, assicurati che le regole del firewall consentano il traffico dai nuovi indirizzi IP.
->
-> Per mantenere un accesso ininterrotto, consigliamo di aggiungere ora i nuovi IP e rimuovere quelli vecchi dopo il 23 giugno 2025.
->
->**Indirizzi IP precedenti:**
-> * `184.72.239.68`
-> * `23.20.85.113`
-> * `54.226.193.184`
->
->**Nuovi indirizzi IP:**
-> * `34.227.138.75 `
-> * `44.194.43.191`
-> * `3.215.163.18`
-
 Per consentire ad Experience Platform di raggiungere e connettersi al server SFTP, potrebbe essere necessario approvare un set di indirizzi IP da utilizzare all’interno del firewall aziendale. Questi indirizzi IP sono:
 
-* `184.72.239.68`
-* `23.20.85.113`
-* `54.226.193.184`
+* `34.227.138.75`
+* `44.194.43.191`
+* `3.215.163.18`
 
 >[!NOTE]
 >
->La struttura delle build di tag è cambiata nel tempo. Utilizzano internamente dei collegamenti simbolici (symlink) per mantenere la compatibilità con le versioni precedenti, affinché i codici precedentemente incorporati possano continuare a funzionare anche con la struttura di build più recente. Per poter essere utilizzato come destinazione valida per le build di tag, il server SFTP deve supportare l’utilizzo di symlink.
+>La struttura delle build di tag è cambiata nel tempo. Utilizzano internamente dei collegamenti simbolici (symlink) per mantenere la compatibilità con le versioni precedenti, affinché i precedenti codici da incorporare possano continuare a funzionare anche con la struttura di build più recente. Per poter essere utilizzato come destinazione valida per le build di tag, il server SFTP deve supportare l’utilizzo di symlink.
 
 Per informazioni più dettagliate, consulta il seguente articolo Medium su [come configurare i server SFTP per distribuire una build](https://medium.com/launch-by-adobe/configuring-an-sftp-server-for-use-with-adobe-launch-bc626027e5a6).
 
