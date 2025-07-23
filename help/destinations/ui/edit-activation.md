@@ -4,9 +4,9 @@ title: Modifica flussi di dati di attivazione
 type: Tutorial
 description: Segui i passaggi descritti in questo articolo per modificare un flusso di dati di attivazione esistente in Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: b8f3443c1e574505f7fd0ca8a5ae91801da4cbef
+source-git-commit: 24951f7680f134beb64c7679a94bac9b18042af1
 workflow-type: tm+mt
-source-wordcount: '814'
+source-wordcount: '857'
 ht-degree: 0%
 
 ---
@@ -19,10 +19,9 @@ In Adobe Experience Platform, puoi configurare vari componenti dei flussi di dat
 * [Aggiungi ulteriori tipi di pubblico](#add-audiences) ai flussi di dati di attivazione
 * [Modificare attributi e identità mappati](#edit-mapped-attributes)
 * [Modifica la pianificazione di attivazione e la frequenza di esportazione](#edit-schedule-frequency)
-* [Aggiungi set di dati aggiuntivi](#add-datasets) ai flussi di lavoro di attivazione
+* [Aggiungi set di dati aggiuntivi](#add-datasets) al flusso di lavoro di attivazione
+* [Applica etichette di accesso](#apply-access-labels) ai dati esportati
 * [Modifica nomi e descrizioni](#edit-names-descriptions) per i flussi di dati di attivazione
-
-<!-- * [Apply access labels](#apply-access-labels) to exported data; -->
 
 ## Sfoglia flussi di dati di attivazione {#browse-activation-dataflows}
 
@@ -100,8 +99,6 @@ Il flusso di lavoro di attivazione varia leggermente a seconda del tipo di desti
 * [Attiva i tipi di pubblico nelle destinazioni di esportazione del profilo batch](./activate-batch-profile-destinations.md) (ad esempio, Amazon S3 o Oracle Eloqua);
 * [Attiva i tipi di pubblico nelle destinazioni di esportazione del profilo di streaming](./activate-streaming-profile-destinations.md) (ad esempio, API HTTP o Amazon Kinesis).
 
-
-
 ## Aggiungere set di dati a un flusso di dati di attivazione {#add-datasets}
 
 Seleziona **[!UICONTROL Esporta set di dati]** nella barra a destra per selezionare set di dati aggiuntivi da esportare nella destinazione. Questa opzione consente di accedere al [flusso di lavoro di esportazione del set di dati](export-datasets.md).
@@ -112,13 +109,11 @@ Seleziona **[!UICONTROL Esporta set di dati]** nella barra a destra per selezion
 
 ![Immagine dell&#39;interfaccia utente di Experience Platform che mostra l&#39;opzione di esecuzione del flusso di dati Esporta set di dati.](../assets/ui/edit-activation/export-datasets.png)
 
+## Applicare le etichette di accesso {#apply-access-labels}
 
+Selezionare **[!UICONTROL Applica etichette di accesso]** per modificare le etichette di utilizzo dei dati per i dati esportati. Per ulteriori informazioni, consulta la [documentazione delle etichette di utilizzo dei dati](../../data-governance/labels/overview.md).
 
-<!-- ## Apply access labels {#apply-access-labels}
-
-Select **[!UICONTROL Apply access labels]** to edit the data usage labels for the exported data. See the [data usage labels documentation](../../data-governance/labels/overview.md) to learn more.
-
-![Experience Platform UI image showing the Export datasets dataflow run option.](../assets/ui/edit-activation/apply-access-labels.png) -->
+![Immagine dell&#39;interfaccia utente di Experience Platform che mostra l&#39;opzione di esecuzione del flusso di dati Esporta set di dati.](../assets/ui/edit-activation/apply-access-labels.png)
 
 ## Modifica nomi e descrizioni dei flussi di dati di attivazione {#edit-names-descriptions}
 
