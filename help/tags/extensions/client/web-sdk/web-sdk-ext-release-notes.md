@@ -2,17 +2,29 @@
 title: Note sulla versione dell’estensione Adobe Experience Platform Web SDK
 description: Estensione tag Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 03cc702eced26453b5923bb63739c0cb739e8c8f
+source-git-commit: cf8912aea5c46b3414486f638b92eebf556528a9
 workflow-type: tm+mt
-source-wordcount: '2677'
+source-wordcount: '2733'
 ht-degree: 28%
 
 ---
 
-# Note sulla versione dell’estensione Adobe Experience Platform Web SDK
+
+# Note sulla versione dell’estensione Web SDK
 
 Questo documento descrive le note sulla versione dell’estensione tag Adobe Experience Platform Web SDK. Per le ultime note sulla versione di SDK, consulta le [note sulla versione di Experience Platform Web SDK](/help/web-sdk/release-notes.md).
 
+## Versione 2.31.0 - venerdì 24 luglio 2025
+
+**Nuove funzioni**
+
+- Contiene [versione 2.28.0](../../../../web-sdk/release-notes.md#2-28-0) di Adobe Experience Platform Web SDK.
+
+**Correzioni e miglioramenti**
+
+- È stato risolto un problema che causava la generazione di un errore quando veniva abilitata la sostituzione di uno stream di dati tramite un elemento dati.
+- È stato risolto un problema a causa del quale sostituzioni vuote di `idSyncContainerId` generavano un errore.
+- Durante la risoluzione degli elementi dati multimediali, l’oggetto evento è ora incluso.
 
 ## Versione 2.30.1, mercoledì 27 maggio 2025
 

@@ -3,18 +3,31 @@ title: Note sulla versione di Adobe Experience Platform Web SDK
 description: Note sulla versione più recente di Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;note sulla versione;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 5dc5e11962abf760692e0cb424cdd863d1905e87
+source-git-commit: cf8912aea5c46b3414486f638b92eebf556528a9
 workflow-type: tm+mt
-source-wordcount: '2355'
+source-wordcount: '2438'
 ht-degree: 5%
 
 ---
 
 
-# Note sulla versione
+# Note sulla versione di Web SDK
 
 Questo documento illustra le note sulla versione di Adobe Experience Platform Web SDK.
 Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [note sulla versione dell&#39;estensione tag Web SDK](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Versione 2.28.0 - venerdì 24 luglio 2025
+
+**Nuove funzioni**
+
+- È stato aggiunto il supporto per le regole di squalifica di Adobe Journey Optimizer.
+
+**Correzioni e miglioramenti**
+
+- È stato corretto un errore nel [tracciatore di Media Analytics](commands/getmediaanalyticstracker.md) a causa del quale la proprietà `length` dell&#39;oggetto multimediale accettava erroneamente tipi di dati non validi.
+- È stata migliorata la gestione degli errori [gestione delle identità](identity/overview.md) per elaborare correttamente i rifiuti delle promesse quando la ricerca delle identità non riesce.
+- È stato risolto un problema che impediva il rendering di [contenuto di personalizzazione](personalization/rendering-personalization-content.md) con elementi di contenuto HTML, a causa di un errore relativo a un elemento `renderStatusHandler` mancante.
+- Correzione della mappa attività [raccolta URL](commands/configure/clickcollectionenabled.md) per la gestione corretta degli URL non HTTP.
 
 ## Versione 2.27.0, mercoledì 20 maggio 2025
 
@@ -97,7 +110,7 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 - È stato risolto un problema che impediva l&#39;inizializzazione dei dettagli del collegamento Activity Map quando veniva chiamato l&#39;hook di monitoraggio `onInstanceConfigured`.
 - È stato risolto un problema a causa del quale le destinazioni dei cookie non venivano impostate sul percorso corretto.
 - È stato risolto un problema del cliente relativo alla chiamata a ha.
-- È stato risolto un problema che causava il mancato funzionamento di [sendEvent](commands/sendevent/overview.md) chiamate a causa di una codifica URL non valida nel parametro `adobe_mc`.
+- È stato risolto un problema che causava il mancato funzionamento di `adobe_mc`sendEvent[ chiamate a causa di una codifica URL non valida nel parametro ](commands/sendevent/overview.md).
 
 ## Versione 2.21.1 - venerdì 18 luglio 2024
 
@@ -306,7 +319,7 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 - Le preferenze di consenso, quando ricevute, vengono sottoposte a hashing e memorizzate nell’archiviazione locale per un’integrazione ottimizzata tra CMP, Experience Platform Web SDK e Experience Platform Edge Network. Se stai raccogliendo le preferenze di consenso, ti invitiamo ora a chiamare `setConsent` a ogni caricamento di pagina.
 - Sono stati aggiunti due [hook di monitoraggio](https://github.com/adobe/alloy/wiki/Monitoring-Hooks), `onCommandResolved` e `onCommandRejected`.
 - Correzione bug: gli eventi di notifica dell’interazione Personalization contenevano informazioni duplicate sulla stessa attività quando un utente passava a una nuova vista di app a pagina singola, tornava alla vista originale e faceva clic su un elemento idoneo per la conversione.
-- Correzione bug: se il primo evento inviato da SDK fosse impostato su `true`, [`sendBeacon`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) verrebbe utilizzato per inviare l&#39;evento, causando un errore relativo a un&#39;identità non stabilita.`documentUnloading`
+- Correzione bug: se il primo evento inviato da SDK fosse impostato su `documentUnloading`, `true`[`sendBeacon` verrebbe utilizzato per inviare l&#39;evento, causando un errore relativo a un&#39;identità non stabilita.](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon)
 
 ## Versione 2.3.0 - novembre 2020
 
