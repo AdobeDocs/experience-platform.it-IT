@@ -4,9 +4,9 @@ description: Un’anteprima delle ultime note sulla versione di Adobe Experience
 hide: true
 hidefromtoc: true
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: fddefb7de85b5dcb8c8721e14d04efc0567ccae4
+source-git-commit: 7e91181f71b84fdaf04a39e003cbbd415827e282
 workflow-type: tm+mt
-source-wordcount: '1358'
+source-wordcount: '1387'
 ht-degree: 22%
 
 ---
@@ -56,6 +56,7 @@ Nuove funzioni e aggiornamenti alle funzioni esistenti in Adobe Experience Platf
 | Informazioni sullo stream di dati migliorate per le destinazioni edge | Le informazioni migliorate nella barra a destra per le destinazioni Adobe Target e Custom Personalization ora visualizzano il nome dello stream di dati, fornendo una visibilità più chiara nelle configurazioni dello stream di dati associato e riducendo la confusione durante l’esame dei flussi di dati esistenti. Il selettore **[!UICONTROL ID Datastream]** nella schermata di configurazione di destinazione è stato aggiornato a **[!UICONTROL Datastream]** per una maggiore chiarezza nell&#39;interfaccia utente. |
 | Visibilità delle azioni di marketing nella selezione della destinazione | Le azioni di marketing vengono ora visualizzate nella barra a destra della scheda **[!UICONTROL Sfoglia]** di destinazione e nella pagina **[!UICONTROL Il flusso di dati viene eseguito]**, fornendo una visibilità immediata delle modifiche apportate alle azioni di marketing senza dover passare alla pagina di visualizzazione. Questo miglioramento migliora l’esperienza utente rendendo più semplice verificare le configurazioni delle azioni di marketing durante la configurazione della destinazione. |
 | (Versione beta limitata) Modifica le azioni di marketing per le destinazioni | Ora puoi modificare le azioni di marketing per le destinazioni esistenti. Questa funzionalità è in versione beta limitata. Per richiedere l’accesso, contatta il rappresentante Adobe. |
+| (Versione beta limitata) Modifica destinazioni | Ora puoi modificare la configurazione di destinazione dopo averla creata. Questa funzionalità è in versione beta limitata. Per richiedere l’accesso, contatta il rappresentante Adobe. |
 | Nomi account e descrizioni per le connessioni di destinazione | È ora possibile aggiungere nomi e descrizioni di account durante la connessione alle destinazioni, consentendo una migliore gestione delle destinazioni con più account. |
 
 **Correzioni**
