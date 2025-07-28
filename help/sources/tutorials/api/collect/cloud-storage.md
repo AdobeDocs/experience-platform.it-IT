@@ -5,9 +5,9 @@ title: Creare un flusso di dati per le origini di archiviazione cloud utilizzand
 type: Tutorial
 description: Questo tutorial illustra i passaggi necessari per recuperare i dati da un’archiviazione cloud di terze parti e inviarli ad Experience Platform utilizzando i connettori e le API di origine.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: b184319f6c5f5430a5ae1e9de4728b5074bca9b8
 workflow-type: tm+mt
-source-wordcount: '1756'
+source-wordcount: '1792'
 ht-degree: 3%
 
 ---
@@ -81,7 +81,8 @@ curl -X POST \
       },
       "params": {
           "path": "/acme/summerCampaign/account.csv",
-          "type": "file"
+          "type": "file",
+          "cdcEnabled": true
       },
       "connectionSpec": {
           "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
@@ -100,6 +101,7 @@ curl -X POST \
 | `data.properties.compressionType` | (Facoltativo) Proprietà che definisce il tipo di file compresso da acquisire. I tipi di file compressi supportati sono: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip` e `tar`. **Nota**: la proprietà `compressionType` può essere utilizzata solo durante l&#39;acquisizione di file delimitati o JSON. |
 | `params.path` | Percorso del file di origine a cui si sta effettuando l&#39;accesso. Questo parametro punta a un singolo file o a un&#39;intera cartella.  **Nota**: è possibile utilizzare un asterisco al posto del nome del file per specificare l&#39;acquisizione di un&#39;intera cartella. Ad esempio: `/acme/summerCampaign/*.csv` acquisirà l&#39;intera cartella `/acme/summerCampaign/`. |
 | `params.type` | Tipo di file del file di dati di origine che si sta acquisendo. Utilizzare il tipo `file` per acquisire un singolo file e il tipo `folder` per acquisire un&#39;intera cartella. |
+| `params.cdcEnabled` | Valore booleano che indica se l&#39;acquisizione della cronologia delle modifiche è abilitata o meno. Questa proprietà è supportata dalle seguenti origini di archiviazione cloud: <ul><li>[!DNL Azure Blob]</li><li>[!DNL Data Landing Zone]</li><li>[!DNL Google Cloud Storage]</li><li>[!DNL SFTP]</li></ul> Per ulteriori informazioni, leggere la guida sull&#39;utilizzo di [modifica acquisizione dati nelle origini](../change-data-capture.md). |
 | `connectionSpec.id` | ID della specifica di connessione associato all’origine di archiviazione cloud specifica. Per un elenco degli ID delle specifiche di connessione, vedere [appendice](#appendix). |
 
 **Risposta**

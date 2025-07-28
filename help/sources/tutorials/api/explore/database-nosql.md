@@ -1,13 +1,11 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;database di terze parti;database flow service
-solution: Experience Platform
 title: Esplorare un database utilizzando l’API del servizio Flusso
 description: Questa esercitazione utilizza l’API del servizio Flusso per esplorare il contenuto e la struttura di file di un database di terze parti.
 exl-id: 94935492-a7be-48dc-8089-18476590bf98
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 46e1a62e558a209ffed4a693cfd71ad5e76d7d98
 workflow-type: tm+mt
-source-wordcount: '561'
-ht-degree: 10%
+source-wordcount: '386'
+ht-degree: 7%
 
 ---
 
@@ -19,38 +17,18 @@ Questa esercitazione utilizza l&#39;API [!DNL Flow Service] per esplorare il con
 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Origini](../../../home.md): [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini e consente di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi [!DNL Experience Platform].
-* [Sandbox](../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza di [!DNL Experience Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Origini](../../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Experience Platform.
+* [Sandbox](../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Experience Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per connettersi correttamente a un database di terze parti tramite l&#39;API [!DNL Flow Service].
 
-### Raccogli le credenziali richieste
+### Utilizzo delle API di Experience Platform
 
-Questo tutorial richiede una connessione valida con il database di terze parti da cui desideri acquisire i dati. Una connessione valida include l&#39;ID di specifica di connessione e l&#39;ID di connessione del database. Ulteriori informazioni sulla creazione di una connessione al database e sul recupero di questi valori sono disponibili nella [panoramica dei connettori di origine](./../../../home.md#database).
-
-### Lettura delle chiamate API di esempio
-
-Questo tutorial fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere chiamate API di esempio](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform].
-
-### Raccogliere i valori per le intestazioni richieste
-
-Per effettuare chiamate alle API [!DNL Experience Platform], devi prima completare l&#39;[esercitazione di autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento del tutorial di autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le chiamate API E[!DNL xperience Experience Platform], come illustrato di seguito:
-
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {ORG_ID}`
-
-Tutte le risorse in [!DNL Experience Platform], incluse quelle appartenenti a [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API [!DNL Experience Platform] richiedono un&#39;intestazione che specifichi il nome della sandbox in cui verrà eseguita l&#39;operazione:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione di tipo multimediale aggiuntiva:
-
-* `Content-Type: application/json`
+Per informazioni su come effettuare correttamente chiamate alle API di Experience Platform, consulta la guida introduttiva [alle API di Experience Platform](../../../../landing/api-guide.md).
 
 ## Esplora le tabelle di dati
 
-Utilizzando l’ID di connessione per il database, puoi esplorare le tabelle di dati eseguendo le richieste di GET. Utilizzare la seguente chiamata per trovare il percorso della tabella da controllare o acquisire in [!DNL Experience Platform].
+Utilizzando l’ID di connessione per il database, puoi esplorare le tabelle di dati eseguendo le richieste di GET. Utilizza la seguente chiamata per trovare il percorso della tabella da ispezionare o acquisire in Experience Platform.
 
 **Formato API**
 
@@ -75,7 +53,7 @@ curl -X GET \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce una matrice di tabelle dal database. Individuare la tabella che si desidera inserire in [!DNL Experience Platform] e prendere nota della relativa proprietà `path`, in quanto è necessario fornirla nel passaggio successivo per esaminarne la struttura.
+In caso di esito positivo, la risposta restituisce una matrice di tabelle dal database. Individua la tabella da inserire in Experience Platform e prendi nota della relativa proprietà `path`, in quanto è necessario fornirla nel passaggio successivo per esaminarne la struttura.
 
 ```json
 [
@@ -146,10 +124,14 @@ In caso di esito positivo, la risposta restituisce la struttura della tabella sp
                 }
             }
         ]
+    },
+    "data": [],
+    "cdcMetadata": {
+      "columnDetected": true
     }
 }
 ```
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai esplorato il database, trovato il percorso della tabella da acquisire in [!DNL Experience Platform] e ottenuto informazioni relative alla sua struttura. Puoi utilizzare queste informazioni nella prossima esercitazione per [raccogliere dati dal database e inserirli in Experience Platform](../collect/database-nosql.md).
+Seguendo questa esercitazione, hai esplorato il database, trovato il percorso della tabella da acquisire in Experience Platform e ottenuto informazioni relative alla sua struttura. Puoi utilizzare queste informazioni nella prossima esercitazione per [raccogliere dati dal database e inserirli in Experience Platform](../collect/database-nosql.md).
