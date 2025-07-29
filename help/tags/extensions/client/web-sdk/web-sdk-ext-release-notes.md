@@ -2,10 +2,10 @@
 title: Note sulla versione dell’estensione Adobe Experience Platform Web SDK
 description: Estensione tag Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: cf8912aea5c46b3414486f638b92eebf556528a9
+source-git-commit: 99a2bb12fb0ed8b6bb9001d25f2bddc17201c8cf
 workflow-type: tm+mt
-source-wordcount: '2733'
-ht-degree: 28%
+source-wordcount: '2801'
+ht-degree: 27%
 
 ---
 
@@ -25,6 +25,11 @@ Questo documento descrive le note sulla versione dell’estensione tag Adobe Exp
 - È stato risolto un problema che causava la generazione di un errore quando veniva abilitata la sostituzione di uno stream di dati tramite un elemento dati.
 - È stato risolto un problema a causa del quale sostituzioni vuote di `idSyncContainerId` generavano un errore.
 - Durante la risoluzione degli elementi dati multimediali, l’oggetto evento è ora incluso.
+
+**Problemi noti**
+
+- A seguito del rilascio della versione v2.31.0, è stato identificato un problema con il processo [build](/help/web-sdk/install/create-custom-build.md) dei componenti personalizzati. Mentre le build personalizzate continuano a funzionare, tutti i componenti sono attualmente inclusi nella build, dando luogo a un pacchetto di dimensioni intere indipendentemente dalla selezione dei componenti. È in fase di sviluppo una correzione per questo problema. Se ti affidi alla selezione di componenti personalizzati per ridurre al minimo le dimensioni della build, si consiglia di attendere una versione futura.
+
 
 ## Versione 2.30.1, mercoledì 27 maggio 2025
 

@@ -3,9 +3,9 @@ title: Note sulla versione di Adobe Experience Platform Web SDK
 description: Note sulla versione più recente di Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;note sulla versione;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: cf8912aea5c46b3414486f638b92eebf556528a9
+source-git-commit: 99a2bb12fb0ed8b6bb9001d25f2bddc17201c8cf
 workflow-type: tm+mt
-source-wordcount: '2438'
+source-wordcount: '2486'
 ht-degree: 5%
 
 ---
@@ -28,6 +28,10 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 - È stata migliorata la gestione degli errori [gestione delle identità](identity/overview.md) per elaborare correttamente i rifiuti delle promesse quando la ricerca delle identità non riesce.
 - È stato risolto un problema che impediva il rendering di [contenuto di personalizzazione](personalization/rendering-personalization-content.md) con elementi di contenuto HTML, a causa di un errore relativo a un elemento `renderStatusHandler` mancante.
 - Correzione della mappa attività [raccolta URL](commands/configure/clickcollectionenabled.md) per la gestione corretta degli URL non HTTP.
+
+**Problemi noti**
+
+- Il processo [build personalizzata](/help/web-sdk/install/create-custom-build.md) che utilizza `npx @adobe/alloy` non funziona attualmente come previsto nella versione 2.28.0. Tutti i componenti sono inclusi nella build generata, indipendentemente dai moduli selezionati. Questo problema non influisce sul file JavaScript standard disponibile sulla rete CDN. È in corso una correzione.
 
 ## Versione 2.27.0, mercoledì 20 maggio 2025
 
