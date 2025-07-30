@@ -1,13 +1,13 @@
 ---
 title: Pubblico dell’account
 description: Scopri come creare e utilizzare i tipi di pubblico dell’account per eseguire il targeting dei profili dell’account nelle destinazioni a valle.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="Edizione B2P" type="Informative" url="https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2P: label="Edizione B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: 1e508ec11b6d371524c87180a41e05ffbacc2798
 workflow-type: tm+mt
-source-wordcount: '1495'
-ht-degree: 21%
+source-wordcount: '1528'
+ht-degree: 20%
 
 ---
 
@@ -20,6 +20,10 @@ ht-degree: 21%
 Con la segmentazione dell’account, Adobe Experience Platform ti consente di rendere l’esperienza di segmentazione del marketing completamente semplice e sofisticata, dal pubblico basato sulle persone a quello basato sull’account.
 
 I tipi di pubblico dell’account possono essere utilizzati come input per le destinazioni basate su account, consentendoti di eseguire il targeting delle persone all’interno di tali account nei servizi a valle. Ad esempio, puoi utilizzare i tipi di pubblico basati sull&#39;account per recuperare i record di tutti gli account che **non** hanno informazioni di contatto per qualsiasi persona con il titolo di Chief Operating Officer (COO) o Chief Marketing Officer (CMO).
+
+>[!NOTE]
+>
+>Come parte dell’aggiornamento dell’architettura B2B, le stime delle dimensioni del pubblico per i tipi di pubblico con entità B2B ora vengono calcolate con precisione esatta. Queste stime sono disponibili durante l’anteprima e forniscono informazioni più precise e affidabili per i tipi di pubblico che coinvolgono complesse relazioni B2B. <br>Per ulteriori informazioni, leggere la [Panoramica sugli aggiornamenti dell&#39;architettura di Real-Time CDP B2B edition](../../rtcdp/b2b-architecture-upgrade.md).
 
 ## Terminologia {#terminology}
 
@@ -126,8 +130,8 @@ La sezione seguente fornisce informazioni aggiuntive sui tipi di pubblico dell�
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_eventLookbackWindow"
->title="Errore intervallo massimo di lookback"
->abstract="L’intervallo massimo di lookback per gli eventi esperienza è di 30 giorni."
+>title="Intervallo di lookback"
+>abstract="Utilizza l’intervallo di lookback per visualizzare la cronologia completa degli eventi a livello di persona."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_combinationMaxDepth"
@@ -196,18 +200,19 @@ La sezione seguente fornisce informazioni aggiuntive sui tipi di pubblico dell�
 
 Quando si utilizzano i tipi di pubblico dell&#39;account, il pubblico **deve** rispettare i seguenti vincoli:
 
-- L&#39;intervallo di lookback massimo per gli eventi esperienza è **30 giorni**.
 - La profondità massima dei contenitori nidificati è **5**.
    - Ciò significa che **non puoi** avere più di cinque contenitori nidificati durante la creazione del pubblico.
 - Il numero massimo di regole in un singolo contenitore è **5**.
    - Ciò significa che il pubblico **non può** avere più di cinque regole che compongono il pubblico.
 - Il numero massimo di entità incrociate utilizzabili è **5**.
    - Un’entità incrociata si verifica quando si passa da un’entità all’altra all’interno del pubblico. Ad esempio, passare da un account a una persona a un elenco di marketing.
-- Impossibile utilizzare le entità personalizzate **1&rbrace;.**
 - Il numero massimo di valori che è possibile controllare per un singolo campo è **50**.
    - Ad esempio, se hai un campo &quot;Nome città&quot;, puoi confrontare tale valore con 50 nomi di città.
-- Il pubblico dell&#39;account **non può** utilizzare `inSegment` eventi.
 - Il pubblico dell&#39;account **non può** utilizzare eventi sequenziali.
 - I tipi di pubblico dell&#39;account **non possono** utilizzare le mappe.
 - La profondità massima degli array nidificati è **5**.
 - Il numero massimo di oggetti nidificati è **10**.
+
+<!-- - The maximum lookback window for Experience Events is **30 days**. -->
+<!-- - Account audiences **cannot** use `inSegment` events. -->
+<!-- - Custom entities **cannot** be used. -->
