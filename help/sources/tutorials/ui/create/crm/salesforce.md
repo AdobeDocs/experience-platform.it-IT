@@ -2,16 +2,16 @@
 title: Collegare l’account Salesforce tramite l’interfaccia utente di Experience Platform
 description: Scopri come collegare il tuo account Salesforce e inserire i dati CRM in Experience Platform utilizzando l’interfaccia utente.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: eab6303a3b420d4622185316922d242a4ce8a12d
+source-git-commit: 56307d8457ba6d0046ad80a7c97405220aa6161c
 workflow-type: tm+mt
-source-wordcount: '972'
+source-wordcount: '1003'
 ht-degree: 2%
 
 ---
 
 # Connetti il tuo account [!DNL Salesforce] ad Experience Platform tramite l&#39;interfaccia utente
 
-Questo tutorial illustra i passaggi necessari per collegare l&#39;account [!DNL Salesforce] e trasferire i dati di gestione delle relazioni con i clienti a Adobe Experience Platform tramite l&#39;interfaccia utente di Experience Platform.
+Leggi questa guida per scoprire come collegare il tuo account [!DNL Salesforce] e inserire i tuoi dati di gestione delle relazioni con i clienti in Adobe Experience Platform utilizzando l&#39;interfaccia utente di Experience Platform.
 
 ## Introduzione
 
@@ -58,6 +58,7 @@ Per ulteriori informazioni sull&#39;autenticazione, consultare [questa [!DNL Sal
 | ID client | L’ID client viene utilizzato insieme al segreto client come parte dell’autenticazione OAuth2. Insieme, l&#39;ID client e il segreto client consentono all&#39;applicazione di funzionare per conto dell&#39;account identificando l&#39;applicazione in [!DNL Salesforce]. |
 | Segreto client | Il segreto client viene utilizzato insieme all’ID client come parte dell’autenticazione OAuth2. Insieme, l&#39;ID client e il segreto client consentono all&#39;applicazione di funzionare per conto dell&#39;account identificando l&#39;applicazione in [!DNL Salesforce]. |
 | Versione API | Versione REST API dell&#39;istanza [!DNL Salesforce] in uso. Il valore della versione API deve essere formattato con un decimale. Ad esempio, se utilizzi la versione API `52`, devi immettere il valore come `52.0`. Se questo campo viene lasciato vuoto, Experience Platform utilizzerà automaticamente l’ultima versione disponibile. |
+| Includi oggetti eliminati | Valore booleano utilizzato per determinare se includere i record soft eliminati. Se è impostato su true, i record eliminati temporaneamente possono essere inclusi nella query [!DNL Salesforce] e acquisiti dall&#39;account in Experience Platform. Se non si specifica la configurazione, il valore predefinito è `false`. |
 
 Per ulteriori informazioni sull&#39;utilizzo di OAuth per [!DNL Salesforce], leggere la [[!DNL Salesforce] guida sui flussi di autorizzazione OAuth](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5).
 
@@ -67,13 +68,13 @@ Dopo aver raccolto le credenziali richieste, puoi seguire i passaggi seguenti pe
 
 ## Connetti il tuo account [!DNL Salesforce]
 
-Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
+Nell&#39;interfaccia utente di Experience Platform, passa a **[!UICONTROL Origini]** dal menu a sinistra per aprire l&#39;area di lavoro [!UICONTROL Origini]. Utilizzare il catalogo a sinistra per sfogliare le categorie o la barra di ricerca per trovare rapidamente l&#39;origine che si desidera connettere.
 
 Selezionare **[!DNL Salesforce]** nella categoria *[!UICONTROL CRM]*, quindi selezionare **[!UICONTROL Aggiungi dati]**.
 
 >[!TIP]
 >
->Le origini nel catalogo delle origini visualizzano l&#39;opzione **[!UICONTROL Configura]** quando un&#39;origine specificata non dispone ancora di un account autenticato. Quando esiste un account autenticato, questa opzione diventa **[!UICONTROL Aggiungi dati]**.
+>Nel catalogo delle origini, vedrai **[!UICONTROL Configurazione]** se non è connesso alcun account, oppure **[!UICONTROL Aggiungi dati]** se un account è già autenticato.
 
 ![Catalogo delle origini nell&#39;interfaccia utente di Experience Platform con la scheda di origine di Salesforce selezionata.](../../../../images/tutorials/create/salesforce/catalog.png)
 
@@ -116,10 +117,11 @@ Per le credenziali client OAuth 2, selezionare **[!UICONTROL Credenziali client 
 * ID client
 * Segreto client
 * Versione API
+* Includi oggetti di eliminazione
 
 Al termine, selezionare **[!UICONTROL Connetti all&#39;origine]**.
 
-![Interfaccia OAuth per la creazione dell&#39;account Salesforce.](../../../../images/tutorials/create/salesforce/oauth2.png)
+![Interfaccia OAuth per la creazione dell&#39;account Salesforce.](../../../../images/tutorials/create/salesforce/oauth.png)
 
 >[!ENDTABS]
 

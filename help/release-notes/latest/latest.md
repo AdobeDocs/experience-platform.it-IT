@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform di luglio 2025
 description: Note sulla versione di Adobe Experience Platform di luglio 2025.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: ec87cb1c8755f52233a5725aa3bb0c80a135d60c
+source-git-commit: 2a8d5576ea937cdda70f10218b5eec35613fd264
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1623'
+ht-degree: 25%
 
 ---
 
@@ -28,11 +28,11 @@ Nuove funzioni e aggiornamenti alle funzioni esistenti in Adobe Experience Platf
 
 - [Capacità](#capacity)
 - [Destinazioni](#destinations)
-- [Acquisizione dei dati](#ingestion)
-- [Query Service](#query-service)
+- [Acquisizione dei dati](#data-ingestion)
+- [Servizio query]&#x200B;(#query-service
 - [Edizione B2B di Real-Time CDP](#b2b)
 - [Sandbox](#sandboxes)
-- [Servizio di segmentazione](#segmentation)
+- [Servizio di segmentazione](#segmentation-service)
 - [Origini](#sources)
 
 ## Capacità {#capacity}
@@ -155,5 +155,6 @@ Experience Platform fornisce un’API RESTful e un’interfaccia utente interatt
 | Funzione | Descrizione |
 | --- | --- |
 | Supporto per l&#39;acquisizione di dati di modifica in origini selezionate tramite l&#39;API [!DNL Flow Service] | Ora puoi creare flussi di dati che abilitano l’acquisizione di dati di modifica per l’acquisizione incrementale utilizzando i connettori di origine. Questa funzionalità consente ai clienti di inserire il tipo di dati Change per l’acquisizione incrementale, migliorando l’aggiornamento dei dati e riducendo il sovraccarico di elaborazione. Per ulteriori informazioni, leggere la documentazione su [utilizzo dell&#39;acquisizione dati di modifica per le origini](../../sources/tutorials/api/change-data-capture.md) |
+| Supporto per l&#39;eliminazione temporanea di record in [!DNL Salesforce] | L&#39;origine [!DNL Salesforce] ora supporta l&#39;inclusione di record eliminati tramite un parametro `includeDeletedObjects` facoltativo. Se impostato su true, i clienti possono includere record eliminati soft nelle query [!DNL Salesforce] e inserire tali record in Experience Platform. Per ulteriori informazioni, consulta la [[!DNL Salesforce] documentazione sulle origini.](../../sources/connectors/crm/salesforce.md) |
 
 Per ulteriori informazioni, consulta la [panoramica sulle origini](../../sources/home.md).

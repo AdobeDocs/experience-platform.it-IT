@@ -2,9 +2,9 @@
 title: Connettere Salesforce Ad Experience Platform Utilizzando L’API Del Servizio Flusso
 description: Scopri come collegare Adobe Experience Platform a un account Salesforce utilizzando l’API del servizio Flow.
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: eab6303a3b420d4622185316922d242a4ce8a12d
+source-git-commit: 56307d8457ba6d0046ad80a7c97405220aa6161c
 workflow-type: tm+mt
-source-wordcount: '1118'
+source-wordcount: '1175'
 ht-degree: 3%
 
 ---
@@ -63,6 +63,7 @@ Per connettere l&#39;account [!DNL Salesforce] a [!DNL Flow Service] utilizzando
 | `clientId` | L’ID client viene utilizzato insieme al segreto client come parte dell’autenticazione OAuth2. Insieme, l&#39;ID client e il segreto client consentono all&#39;applicazione di funzionare per conto dell&#39;account identificando l&#39;applicazione in [!DNL Salesforce]. |
 | `clientSecret` | Il segreto client viene utilizzato insieme all’ID client come parte dell’autenticazione OAuth2. Insieme, l&#39;ID client e il segreto client consentono all&#39;applicazione di funzionare per conto dell&#39;account identificando l&#39;applicazione in [!DNL Salesforce]. |
 | `apiVersion` | Versione REST API dell&#39;istanza [!DNL Salesforce] in uso. Il valore della versione API deve essere formattato con un decimale. Ad esempio, se utilizzi la versione API `52`, devi immettere il valore come `52.0`. Se questo campo viene lasciato vuoto, Experience Platform utilizzerà automaticamente l’ultima versione disponibile. Questo valore è obbligatorio per l&#39;autenticazione delle credenziali client OAuth2. |
+| `includeDeletedObjects` | Valore booleano utilizzato per determinare se includere i record soft eliminati. Se è impostato su true, i record eliminati temporaneamente possono essere inclusi nella query [!DNL Salesforce] e acquisiti dall&#39;account in Experience Platform. Se non si specifica la configurazione, il valore predefinito è `false`. |
 | `connectionSpec.id` | La specifica di connessione restituisce le proprietà del connettore di un&#39;origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di origine. ID della specifica di connessione per [!DNL Salesforce]: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
 Per ulteriori informazioni sull&#39;utilizzo di OAuth per [!DNL Salesforce], leggere la [[!DNL Salesforce] guida sui flussi di autorizzazione OAuth](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5).
@@ -162,7 +163,8 @@ curl -X POST \
             "environmentUrl": "https://acme-enterprise-3126.my.salesforce.com",
             "clientId": "xxxx",
             "clientSecret": "xxxx",
-            "apiVersion": "60.0"
+            "apiVersion": "60.0",
+            "includeDeletedObjects": true
         }
       },
       "connectionSpec": {
@@ -178,6 +180,7 @@ curl -X POST \
 | `auth.params.clientId` | ID client associato all&#39;account [!DNL Salesforce]. |
 | `auth.params.clientSecret` | Il segreto client associato al tuo account [!DNL Salesforce]. |
 | `auth.params.apiVersion` | Versione REST API dell&#39;istanza [!DNL Salesforce] in uso. |
+| `auth.params.includeDeletedObjects` | Valore booleano utilizzato per determinare se includere o meno i record soft eliminati. |
 | `connectionSpec.id` | ID della specifica di connessione [!DNL Salesforce]: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
 +++
