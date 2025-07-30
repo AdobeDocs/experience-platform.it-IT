@@ -131,7 +131,7 @@ Una volta mappate le suite di rapporti, puoi utilizzare questi campi appena mapp
 >id="platform_segmentation_segmentbuilder_externalaudiences"
 >title="Pubblico esterno"
 >abstract="I tipi di pubblico importati tramite la scheda Tipi di pubblico ora vengono visualizzati automaticamente tramite Audience Portal. I tipi di pubblico acquisiti da Audience Manager, Customer Journey Analytics, Segment Match e altre integrazioni personalizzate sono immediatamente disponibili, senza prima effettuare la configurazione in Segment Builder. A partire dal 1° settembre 2025, tutti i tipi di pubblico vengono recuperati esclusivamente tramite Ricerca unificata e il flusso di lavoro precedente non è più supportato."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/audience-portal#list" text="Audience Portal"
+>additional-url="https://experienceleague.adobe.com/it/docs/experience-platform/segmentation/ui/audience-portal#list" text="Audience Portal"
 
 >[!NOTE]
 >
